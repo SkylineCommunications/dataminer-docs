@@ -19,7 +19,7 @@ In some cases, users that tried to sign in could be redirected to a blue error p
 
 ### 15 July 2025 - Enhancement - Remote Access & Live Sharing - Stability and performance improvements
 
-Stability and performance improvements have been implemented, which should make the remote access features more stable.
+Stability and performance improvements have been implemented, which will make the remote access features more stable.
 
 ### 30 June 2025 - Fix - Catalog - Grid view rendered incorrectly
 
