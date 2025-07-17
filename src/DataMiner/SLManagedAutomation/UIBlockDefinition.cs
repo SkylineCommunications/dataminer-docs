@@ -185,7 +185,7 @@ namespace Skyline.DataMiner.Automation
 		/// UIBlockDefinition numericBlock = new UIBlockDefinition();
 		/// 
 		/// numericBlock.Type = UIBlockType.Numeric;
-		/// numericBlock.InitialValue = "10;true;Discreet 2";
+		/// numericBlock.InitialValue = "23.567891";
 		/// numericBlock.DestVar = "num";
 		/// numericBlock.WantsOnChange = true;
 		/// numericBlock.Row = 0;
@@ -196,7 +196,6 @@ namespace Skyline.DataMiner.Automation
 		/// numericBlock.RangeLow = 5;
 		/// numericBlock.RangeStep = 5;
 		/// numericBlock.Decimals = 6;
-		/// numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
 		/// 
 		/// uib.AppendBlock(numericBlock);
 		/// </code>
@@ -237,6 +236,7 @@ namespace Skyline.DataMiner.Automation
 		/// <para>Default: <c>false</c>.</para>
 		/// <para>Available from DataMiner 9.5.6 onwards.</para>
 		/// <para>Applicable only when <see cref="Type"/> is set to DropDown.</para>
+		/// <para>From DataMiner 10.X.X onwards wit the new UI of the Dropdown in Web, DisplayFilter is always enabled.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -254,8 +254,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The ID of the parameter that has to be displayed in the dialog box item.</value>
 		/// <remarks>
-		/// <para>Applicable only when <see cref="Type"/> is set to Parameter or Numeric.</para>
-		/// <para>For a dialog box item of type Numeric, this property allows to have a checkbox with multiple discrete values. In case multiple discrete values are defined, separate these with a semicolon (';'). If you do not want any checkbox, but only the numeric box, then leave this property empty.</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to Parameter.</para>
 		/// <para>For a dialog box item of type Parameter, the ID syntax is as follows: DmaID/ElementID:ParamID[:index]</para>
 		/// </remarks>
 		/// <example>
@@ -348,11 +347,11 @@ namespace Skyline.DataMiner.Automation
 		public bool IsEnabled { get; set; }
 
 		/// <summary>
-		/// Gets or sets a value indicating whether users are able to enter multiple lines of text.
+		/// Gets or sets a value indicating whether users are able to enter multiple lines of text or display text on multiple lines.
 		/// </summary>
-		/// <value><c>true</c> if users are able to enter multiple lines of text; otherwise, <c>false</c>.</value>
+		/// <value><c>true</c> if users are able to enter multiple lines of text or display text on multiple lines; otherwise, <c>false</c>.</value>
 		/// <remarks>
-		/// <para>Applicable only when <see cref="Type"/> is set to TextBox.</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to TextBox or StaticText. For StaticText, if IsMultiline is false, but the text contains a newline, the StaticText will put the text on multiple lines.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -375,17 +374,21 @@ namespace Skyline.DataMiner.Automation
 		/// <para>This feature is available for interactive Automation scripts executed in a web environment. 
 		/// The following UIBlockTypes are supported:
 		/// 	<list type="bullet">
-		/// 		<item><term>TextBox</term></item>
-		/// 		<item><term>Numeric</term></item>
-		/// 		<item><term>Dropdown</term></item>
-		/// 		<item><term>Checkbox</term></item>
-		/// 		<item><term>CheckboxList</term></item>
-		/// 		<item><term>RadiobuttonList</term></item>
-		/// 		<item><term>Calendar</term></item>
-		/// 		<item><term>Time</term></item>
-		/// 		<item><term>Treeview</term></item>
+		/// 		<item>TextBox</item>
+		/// 		<item>Numeric</item>
+		/// 		<item>Dropdown</item>
+		/// 		<item>Checkbox</item>
+		/// 		<item>CheckboxList</item>
+		/// 		<item>RadiobuttonList</item>
+		/// 		<item>Calendar</item>
+		/// 		<item>Time</item>
+		/// 		<item>Treeview</item>
 		/// 	</list>
 		/// </para>
+		/// <para>With the UI changes from 10.5.X.X, this feature also works for:</para>
+		/// 	<list type="bullet">
+		/// 		<item>PasswordBox</item>
+		/// 	</list>
 		/// </remarks>
 		public bool IsReadOnly { get; set; }
 
@@ -552,7 +555,7 @@ namespace Skyline.DataMiner.Automation
 		/// UIBlockDefinition numericBlock = new UIBlockDefinition();
 		/// 
 		/// numericBlock.Type = UIBlockType.Numeric;
-		/// numericBlock.InitialValue = "10;true;Discreet 2";
+		/// numericBlock.InitialValue = "23.567891";
 		/// numericBlock.DestVar = "num";
 		/// numericBlock.WantsOnChange = true;
 		/// numericBlock.Row = 0;
@@ -563,7 +566,6 @@ namespace Skyline.DataMiner.Automation
 		/// numericBlock.RangeLow = 5;
 		/// numericBlock.RangeStep = 5;
 		/// numericBlock.Decimals = 6;
-		/// numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
 		/// 
 		/// uib.AppendBlock(numericBlock);
 		/// </code>
@@ -582,7 +584,7 @@ namespace Skyline.DataMiner.Automation
 		/// UIBlockDefinition numericBlock = new UIBlockDefinition();
 		/// 
 		/// numericBlock.Type = UIBlockType.Numeric;
-		/// numericBlock.InitialValue = "10;true;Discreet 2";
+		/// numericBlock.InitialValue = "23.567891";
 		/// numericBlock.DestVar = "num";
 		/// numericBlock.WantsOnChange = true;
 		/// numericBlock.Row = 0;
@@ -593,7 +595,6 @@ namespace Skyline.DataMiner.Automation
 		/// numericBlock.RangeLow = 5;
 		/// numericBlock.RangeStep = 5;
 		/// numericBlock.Decimals = 6;
-		/// numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
 		/// 
 		/// uib.AppendBlock(numericBlock);
 		/// </code>
@@ -612,7 +613,7 @@ namespace Skyline.DataMiner.Automation
 		/// UIBlockDefinition numericBlock = new UIBlockDefinition();
 		/// 
 		/// numericBlock.Type = UIBlockType.Numeric;
-		/// numericBlock.InitialValue = "10;true;Discreet 2";
+		/// numericBlock.InitialValue = "23.567891";
 		/// numericBlock.DestVar = "num";
 		/// numericBlock.WantsOnChange = true;
 		/// numericBlock.Row = 0;
@@ -623,7 +624,6 @@ namespace Skyline.DataMiner.Automation
 		/// numericBlock.RangeLow = 5;
 		/// numericBlock.RangeStep = 5;
 		/// numericBlock.Decimals = 6;
-		/// numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
 		/// 
 		/// uib.AppendBlock(numericBlock);
 		/// </code>
@@ -1089,7 +1089,6 @@ namespace Skyline.DataMiner.Automation
 		/// numericBlock.RangeLow = 5;
 		/// numericBlock.RangeStep = 5;
 		/// numericBlock.Decimals = 6;
-		/// numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
 		/// 
 		/// string result = numericBlock.ToCode();
 		/// 
@@ -1106,7 +1105,6 @@ namespace Skyline.DataMiner.Automation
 		/// // align-ver=Top
 		/// // initial = 5
 		/// // destvar=num
-		/// // extra = Discreet 1; Discreet 2;Discreet 3
 		/// // onchange=true
 		/// // [/UI]
 		/// </code>
