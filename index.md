@@ -27,7 +27,7 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
     <a href="/solutions/solution_index.html" title="DataMiner Solutions" target="_self"><img src="images/Docs_DMSolutions.svg" style="width:100%"></a>
   </div>
   <div class="columnhome">
-    <a href="/release-notes/DataMiner_General_RNs_index.html" title="DataMiner Release Notes" target="_self"><img src="images/Docs_DataminerReleaseNotes.svg" style="width:100%"></a>
+    <a href="/tutorials/Tutorials.html" title="DataMiner Tutorials" target="_self"><img src="images/Docs_DataMinerTutorials.svg" style="width:100%"></a>
   </div>
 </div>
 
@@ -40,6 +40,6 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
     <a href="/develop/index.html" title="Developer Documentation" target="_self"><img src="images/Docs_DeveloperDocumentation.svg" style="width:100%"></a>
   </div>
   <div class="columnhome">
-    <a href="/tutorials/Tutorials.html" title="DataMiner Tutorials" target="_self"><img src="images/Docs_DataMinerTutorials.svg" style="width:100%"></a>
+    <a href="/release-notes/DataMiner_General_RNs_index.html" title="DataMiner Release Notes" target="_self"><img src="images/Docs_DataminerReleaseNotes.svg" style="width:100%"></a>
   </div>
 </div>
