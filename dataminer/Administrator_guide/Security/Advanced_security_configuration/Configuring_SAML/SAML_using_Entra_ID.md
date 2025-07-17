@@ -66,11 +66,11 @@ To set up external authentication, you first need to create an enterprise applic
 
    1. Under *Reply URL*, specify the following URL(s), replacing ``dataminer.example.com`` with the IP address or DNS name of your DataMiner System (note the trailing "/"):
 
-      - From DataMiner 10.3.5 onwards:
+      #### [From DataMiner 10.3.5 onwards](#tab/tabid-5)
 
         - ``https://dataminer.example.com/API/``
 
-      - For older DataMiner versions only:
+      #### [For older DataMiner versions only](#tab/tabid-6)
 
         - ``https://dataminer.example.com/root/``
 
@@ -86,7 +86,7 @@ To set up external authentication, you first need to create an enterprise applic
 
         - ``https://dataminer.example.com/``
 
-      - If the DMA is connected to dataminer.services, also add the following URLs, replacing `<dms-dns-name>` with the DNS name of the DataMiner System and `<organization-name>` with the name of the organization
+   1. **If the DMA is connected to dataminer.services**, also add the following URLs, replacing `<dms-dns-name>` with the DNS name of the DataMiner System and `<organization-name>` with the name of the organization
 
         - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/API/`
 
@@ -117,7 +117,7 @@ To set up external authentication, you first need to create an enterprise applic
 
 1. Copy the following template into *spMetadata.xml*:
 
-   - From DataMiner 10.3.5 onwards:
+   #### [From DataMiner 10.3.5 onwards](#tab/tabid-7)
 
      ```xml
      <?xml version="1.0" encoding="UTF-8"?>
@@ -128,7 +128,7 @@ To set up external authentication, you first need to create an enterprise applic
      </md:EntityDescriptor>
      ```
 
-   - Older DataMiner versions:
+   #### [Older DataMiner versions](#tab/tabid-8)
 
      ```xml
      <?xml version="1.0" encoding="UTF-8"?>
@@ -145,7 +145,7 @@ To set up external authentication, you first need to create an enterprise applic
      </md:EntityDescriptor>
      ```
 
-   - For a DMA connected to dataminer.services, add the three following additional bindings within the `<md:SPSSODescriptor>` element:
+1. **If the DMA is connected to dataminer.services**, also add the three following additional bindings within the `<md:SPSSODescriptor>` element:
 
      ```xml
        <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
