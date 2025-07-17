@@ -1,7 +1,4 @@
 items:
-- name: DataMiner Overview
-  topicUid: DataMiner_index
-  items:
   - name: About DataMiner
     topicUid: Overview_About_DataMiner
     href: About_DataMiner/toc.yml

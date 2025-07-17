@@ -2,7 +2,7 @@
 uid: DataMiner_index
 ---
 
-# DataMiner Overview
+# DataMiner overview
 
 ## Get to know DataMiner
 
