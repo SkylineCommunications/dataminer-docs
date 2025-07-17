@@ -80,7 +80,7 @@ The tool currently supports the following task types:
 
 ### 1. **Getting Started**
 
-1. Navigate to the DoD Tool home page
+1. Navigate to the DoD Tool home page (https://dod.skyline.be). Only available for skyline employees.
 2. Sign in using your Azure AD credentials
 3. Access tasks through the main interface
 
