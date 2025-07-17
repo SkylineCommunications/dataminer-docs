@@ -49,13 +49,13 @@ An Automation script included in the package helps with both the installation of
 
 1. Open the *GV AMPP Manager* app.
 
-1. In the app, click the cogwheel ![cogwheel](~/user-guide/images/GV_AMPP_Manager_Configuration_page.png) icon in the sidebar to open the *Setup* page.
+1. In the app, click the cogwheel ![cogwheel](~/dataminer/images/GV_AMPP_Manager_Configuration_page.png) icon in the sidebar to open the *Setup* page.
 
    This page provides initial instructions and a link to download and install the Microsoft .NET 8.0 Hosting Bundle, in case this is not installed yet.
 
 1. Click the *Configure* button to launch the configuration script.
 
-   ![AMPP Setup Script](~/user-guide/images/GVAMPP_Setup_Script.png)
+   ![AMPP Setup Script](~/dataminer/images/GVAMPP_Setup_Script.png)
 
 1. In the *Dialog* window, provide the following information:
 

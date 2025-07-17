@@ -6,7 +6,7 @@ uid: VSAT_EPM_Topology
 
 The EPM topology navigation menu can be used to access the collector elements' main KPIs.
 
-![Topology](~/user-guide/images/VSAT_EPM_Topology.png)<br>
+![Topology](~/dataminer/images/VSAT_EPM_Topology.png)<br>
 *Topology navigation menu in DataMiner Cube (version 10.2.10)*
 
 ## Topology chain

@@ -12,7 +12,7 @@ Expected duration: 15 minutes.
 > See also:
 >
 > - [Configuring a custom operator for a query](xref:GQI_Custom_Operator)
-> - [Kata #5: Transform data with GQI](https://community.dataminer.services/courses/kata-5/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Kata #5: Transform data with GQI](https://community.dataminer.services/courses/kata-5/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
 > [!NOTE]
 > This tutorial uses DataMiner version 10.3.9.
@@ -55,7 +55,7 @@ Expected duration: 15 minutes.
 
 1. Go to the C# code of the imported Automation script by clicking the C# icon.
 
-   ![C# icon](~/user-guide/images/GQI_code.png)
+   ![C# icon](~/dataminer/images/GQI_code.png)
 
 > [!NOTE]
 > If certain types cannot be found in the file, verify if the *Skyline.DataMiner.Dev.Automation* NuGet package has the correct version. Go to *Tools* > *NuGet Package Manager* > *Manage NuGet Packages for Solution*. Select *Skyline.DataMiner.Dev.Automation*, and verify whether the version installed for the current project is at least *10.3.2*.
@@ -133,7 +133,7 @@ This is the first step to implement the custom operator.
 
 1. In the *Data* pane on the right, go to *Queries* and click the "+" icon to create a query.
 
-   ![+ icon to create query](~/user-guide/images/GQI_create_query.png)
+   ![+ icon to create query](~/dataminer/images/GQI_create_query.png)
 
 1. Select a data source that has at least two columns containing datetime values.
 

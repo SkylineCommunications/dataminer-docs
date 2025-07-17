@@ -24,8 +24,8 @@ The latest **mbgNMS installation package** can be downloaded using the link belo
 ![Upgrading](~/develop/images/mbgNMS_Upgrading_across_major_versions.png)
 
 > [!IMPORTANT]
-> If you are using an older DataMiner version and you want to upgrade to a DataMiner version that does not immediately follow your current version, see [**Best practices when upgrading across major versions**](https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Agents/Upgrading_a_DMA/Preparing_to_upgrade_a_DataMiner_Agent.html#best-practices-when-upgrading-across-major-versions).  
-> Please also make sure the system meets the following [**Prerequisite Checks**](https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Agents/Upgrading_a_DMA/Preparing_to_upgrade_a_DataMiner_Agent.html#prerequisite-checks) before upgrading.
+> If you are using an older DataMiner version and you want to upgrade to a DataMiner version that does not immediately follow your current version, see [**Best practices when upgrading across major versions**](https://docs.dataminer.services/dataminer/Administrator_guide/DataMiner_Agents/Upgrading_a_DMA/Preparing_to_upgrade_a_DataMiner_Agent.html#best-practices-when-upgrading-across-major-versions).  
+> Please also make sure the system meets the following [**Prerequisite Checks**](https://docs.dataminer.services/dataminer/Administrator_guide/DataMiner_Agents/Upgrading_a_DMA/Preparing_to_upgrade_a_DataMiner_Agent.html#prerequisite-checks) before upgrading.
 
 ## Content
 

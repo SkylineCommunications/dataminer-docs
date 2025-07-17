@@ -40,7 +40,7 @@ You can define a custom sort order for the IP address column by implementing a c
 
 "Redirecting" a sort operator means changing an incoming sort operator in your query, and modifying it so it sorts on a different column. For example, if someone sorts a query on column A, you can intercept this with a custom operator to change it to a sort operation on column B.
 
-![Redirect sort operation diagram](~/user-guide/images/GQI_redirect_sort.png)
+![Redirect sort operation diagram](~/dataminer/images/GQI_redirect_sort.png)
 
 For the IP address example, you can change the sort operation on the IP address column to another column that contains an "IP address ranking". This IP address ranking will be a column that, when sorted using the default GQI sort order, will result in the desired order for your IP address column.
 

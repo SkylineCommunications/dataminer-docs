@@ -8,7 +8,7 @@ On the Planned Maintenance tool's *Configuration* page, you find two essential c
 
 The ***Resource Types* table** delimits the supported resources.
 
-![Configuring resources](~/user-guide/images/Configuring_resources2.png)
+![Configuring resources](~/dataminer/images/Configuring_resources2.png)
 
 To configure a new PLM resource type:
 
@@ -25,7 +25,7 @@ To configure a new PLM resource type:
 
 The ***Resource Subscribers* table** allows the PLM tool to reference both table and standalone parameters for the specified protocol.
 
-![Configuring resources 2](~/user-guide/images/Configuring_resources.png)
+![Configuring resources 2](~/dataminer/images/Configuring_resources.png)
 
 To configure a new PLM resource subscriber:
 

@@ -11,7 +11,7 @@ The Interactive Automation Script Toolkit (or “IAS Toolkit” in short) is a l
 > [!TIP]
 > For more information on its **main features**, and the **different versions**, see [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit).
 >
-> See also: [Kata #10: Create a simple interactive script](https://community.dataminer.services/courses/kata-10/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #10: Create a simple interactive script](https://community.dataminer.services/courses/kata-10/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
 To choose your version of the IAS Toolkit, the first thing you need to know is the [version of DataMiner](xref:Interactive_Automation_Script_Toolkit#versions) where you want your script to run. As DataMiner keeps improving, so does its support for newer, more advanced IAS components.
 

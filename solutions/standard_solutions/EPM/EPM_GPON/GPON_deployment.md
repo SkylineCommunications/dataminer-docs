@@ -42,11 +42,11 @@ To deploy the xPON branch of the EPM Solution:
 
      For instance:
 
-     ![xPON view structure](~/user-guide/images/EPM_GPON_views.png)
+     ![xPON view structure](~/dataminer/images/EPM_GPON_views.png)
 
      You can adjust the view names as you see fit, as long as the appropriate hierarchical structure is maintained. There will be a direct mapping between the views you created and the corresponding EPM topology. For example:
 
-     ![xPON topology](~/user-guide/images/EPM_GPON_Topology.png)
+     ![xPON topology](~/dataminer/images/EPM_GPON_Topology.png)
 
      - **Service provider** is usually your company's name
 

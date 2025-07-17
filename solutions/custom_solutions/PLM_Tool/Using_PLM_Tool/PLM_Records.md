@@ -18,4 +18,4 @@ When a one-time PLM activity transitions from the *Active* status to *Completed*
 
 This dedicated table acts as a repository, storing information and providing a comprehensive historical record of completed or inactive maintenance events. This functionality ensures that each significant status change is accurately recorded and tracked within the PLM system.
 
-![Planned Maintenance records](~/user-guide/images/Planned_Maintenance_Records.png)
+![Planned Maintenance records](~/dataminer/images/Planned_Maintenance_Records.png)
