@@ -67,6 +67,12 @@ When, in the *Agents* section of *System Center*, you select a DaaS system, from
 
 Also, when there are any DaaS systems in the cluster to which you are connected, you will no longer be able to click the *Add* and *Remove* buttons.
 
+#### Popup windows containing an embedded Microsoft Edge browser window will now include an additional warning [ID 43131]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When DataMiner Cube is using the Microsoft Edge (WebView2) browser engine to display embedded webpages, popup windows containing an embedded web page will now show a banner saying that embedding a Microsoft Edge browser window within a popup window is not fully supported.
+
 #### Security: User permission 'General > View > Add/remove elements' renamed to 'Add/remove items (elements, services, etc.)' [ID 43215]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
