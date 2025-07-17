@@ -18,7 +18,7 @@ Improvements have been made to the startup and shutdown of the DxM, which improv
 
 Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
 
-#### 1 April 2025 - Enhancement - Dependencies updated [ID 42657]
+#### 1 April 2025 - Enhancement - Orchestrator 1.7.5 - Dependencies updated [ID 42657]
 
 Several dependencies have been updated.
 
