@@ -50,6 +50,15 @@ For more information on the `<Interactivity>` tag, see [Automation scripts: New 
 
 ### Enhancements
 
+#### Relational anomaly detection: Suggestion event values will now include parameter labels [ID 42933]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a label was assigned to a parameter instance in a relational anomaly detection (RAD) parameter group, from now on, that label will be added to the value of every suggestion event that is generated whenever a relational anomaly is detected for that parameter in question.
+
+- If a label was assigned to the parameter, the value of the suggestion event will have the following syntax: `Relational anomaly: {ParameterGroupName} (ParameterLabel)`.
+- If no label was assigned to the parameter, the value of the suggestion event will have the following syntax: `Relational anomaly: {ParameterGroupName}`.
+
 #### System Center - Agents: 'Agent cluster' section no longer visible when selecting a DaaS system [ID 43110]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
