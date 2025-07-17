@@ -11,7 +11,7 @@ uid: DataMiner_index
     <a href="/dataminer/About_DataMiner/Overview_About_DataMiner.html" title="About DataMiner" target="_self"><img src="~/dataminer/images/About_DataMiner.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/dataminer/Getting_started/Getting_started.html" title="Getting Started" target="_self"><img src="~/dataminer/images/Getting_Started.svg" style="width:100%"></a>
+    <a href="/dataminer/Getting_started/Getting_Started.html" title="Getting Started" target="_self"><img src="~/dataminer/images/Getting_Started.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Professional_services/Professional_services.html" title="Professional Services" target="_self"><img src="~/dataminer/images/Professional_Services.svg" style="width:100%"></a>
