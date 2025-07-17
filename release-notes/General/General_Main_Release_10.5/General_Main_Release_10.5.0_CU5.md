@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_CU5
 ---
 
-# General Main Release 10.5.0 CU5 - Preview
+# General Main Release 10.5.0 CU5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -22,22 +22,6 @@ uid: General_Main_Release_10.5.0_CU5
 From now on, each time a DataMiner upgrade is performed, all TXF files will be automatically removed from the `C:\Skyline DataMiner\Scripts\` folder.
 
 When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying.
-
-#### GQI DxM: Enhanced installation [ID 43063]
-
-<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
-
-A number of enhancements have been made to the installation procedure of the GQI DxM.
-
-For example, during the installation, the following notice will no longer appear: `Could not stop the following processes (60s): DataMiner GQI`.
-
-#### GQI DxM: Enhanced life cycle behavior for ad hoc data sources and custom operators [ID 43186]
-
-<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
-
-Up to now, when an error occurred in the `OnInit` life cycle method, the `OnDestroy` life cycle method would still be called to clean up resources.
-
-From now on, when something goes wrong during the `OnInit` life cycle method, the `OnDestroy` life cycle method will no longer be called.
 
 ### Fixes
 
@@ -56,14 +40,6 @@ From now on, if the maximum cache size is reached, old model information might g
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
 
 When multiple conditional alarm templates had been combined into an alarm template group, up to now, the resulting group template could fail to properly apply its conditions.
-
-#### SLDataGateway could stop working because of issues caused by TPL tasks [ID 42846]
-
-<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
-
-In some cases, SLDataGateway could stop working because of issues caused by TPL tasks.
-
-The number of TPL tasks has now been reduced, especially when writing trend data to the database.
 
 #### Error 'The object exporter specified was not found' would get logged upon DMA startup [ID 42927]
 
@@ -106,6 +82,8 @@ From now on, when you publish an Automation script via DIS, its name will be val
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
 
 In some cases, both GQI DxM and SLHelper could leak memory, especially when executing GQI queries with GQI extensions (i.e. ad hoc data source or custom operators) that throw exceptions from their life cycle methods.
+
+See also: [GQI DxM - Life cycle: OnDestroy method would incorrectly be called when an error occurred in the OnInit method [ID 43186]](xref:Web_apps_Feature_Release_10.5.8#gqi-dxm---life-cycle-ondestroy-method-would-incorrectly-be-called-when-an-error-occurred-in-the-oninit-method-id-43186)
 
 #### Protocols: Problem when polling an SNMP table using the partialSnmp option in combination with the multipleGetBulk option [ID 43034]
 
@@ -168,22 +146,6 @@ When a service was deleted, in some cases, it would only be fully deleted on the
 
 Also, when a service was renamed, in some cases, all DataMiner Agents except the one hosting it could start to experience issues because the old service had not been properly deleted.
 
-#### GQI DxM: Problem when setting up an SLNet connection for a GQI query to be executed without user context [ID 43128]
-
-<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
-
-When the GQI DxM had to set up an SLNet connection within an ad hoc data source for a GQI query to be executed without user context, up to now, the following error would be thrown:
-
-`Cannot clone non-authenticated or non-regular connections.`
-
-From now on, when such an SLNet connection has to be set up, the GQI DxM will set up a system connection with Administrator privileges.
-
-#### GQI: Deserialization issue when querying DOM instances via the GQI DxM [ID 43132]
-
-<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
-
-When querying DOM instances with service definition fields via the GQI DxM, up to now, the `ServiceDefinitionFieldDescriptor` would not deserialize correctly coming from SLNet, causing an exception to be thrown in GQI.
-
 #### Web.config file could contain an outdated configuration [ID 43159]
 
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
@@ -191,3 +153,21 @@ When querying DOM instances with service definition fields via the GQI DxM, up t
 In some cases, the `C:\Skyline DataMiner\Webpages\API\Web.config` file could contain an outdated configuration, causing the Web Services API to not start up, and the web apps to throw the following error:
 
 `The type initializer for 'Skyline.DataMiner.Web.Common.v1.TransportAgnosticInterface' threw an exception.`
+
+#### Service & Resource Management: Problem while scheduling resources [ID 43295]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 [CU0] -->
+
+In DataMiner 10.5.6, improvements had been made to the Resource Manager caching, introducing throttling to reduce latency. However, under specific conditions, this throttling could cause the SRM scheduler to become unresponsive. This happened when asynchronous and synchronous booking tasks competed for limited cache access slots, exhausting the available thread pool and preventing progress.
+
+#### No history alarms shown when data was being migrated or replicated from separate Cassandra setup to STaaS [ID 43325]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 [CU0] -->
+
+While a DataMiner storage setup was migrated or replicated where each DMA had its own Cassandra database, no history alarms were shown.
+
+#### SLNet memory leak and Agent disconnects caused by ClusterEndpointsManager issue [ID 43370] [ID 43384]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 [CU0] -->
+
+A problem in ClusterEndpointsManager could cause a memory leak in the SLNet process and could cause DataMiner Agents to disconnect. To prevent this, it is now possible to disable the ClusterEndpointsManager by disabling the *ClusterEndpointsManager* soft-launch option on each DataMiner Agent in the cluster. However, note that it is not possible to migrate to BrokerGateway while this option is disabled.

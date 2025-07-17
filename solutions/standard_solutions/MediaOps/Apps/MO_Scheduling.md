@@ -28,6 +28,8 @@ The following pages are available in the Scheduling app:
 
 - ![App Configuration](~/solutions/images/Scheduling_App_Configuration.png) **App Configuration**: Allows you to configure general [app-wide settings](xref:MO_S_App_Configuration).
 
+- ![Recurring Job View](~/solutions/images/RecurringJobView.png) **Recurring Job View**: Allows you to manage [recurring jobs](xref:SCH_Recurring).
+
 - ![About](~/solutions/images/Scheduling_About.png) **About**: Provides information on the **version** of the MediaOps package.
 
 ## Jobs

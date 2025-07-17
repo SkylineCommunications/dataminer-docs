@@ -2,19 +2,17 @@
 uid: Web_apps_Feature_Release_10.5.8
 ---
 
-# DataMiner web apps Feature Release 10.5.8 – Preview
+# DataMiner web apps Feature Release 10.5.8
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.4.0 [CU17] and 10.5.0 [CU5].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.5.8](xref:General_Feature_Release_10.5.8).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.5.8](xref:Cube_Feature_Release_10.5.8).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -22,7 +20,7 @@ uid: Web_apps_Feature_Release_10.5.8
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-To prevent dropdown boxes in interactive Automation scripts to get loaded with too much data, it is now possible to filter the data that is loaded into a dropdown box.
+To prevent dropdown boxes in interactive Automation scripts from getting loaded with too much data, it is now possible to filter the data that is loaded into a dropdown box.
 
 Note that this feature will only work if you use the redesigned `UIBlockType.DropDown` component. To use this redesigned component, add the following argument to the URL of the dashboard or low-code app:
 
@@ -117,6 +115,14 @@ Up to now, certain component settings would automatically get saved in a dashboa
 
 From now on, these automatically saved component settings will only get saved in a dashboard or low-code code when you are in edit mode.
 
+#### GQI DxM: Enhanced installation [ID 43063]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+A number of enhancements have been made to the installation procedure of the GQI DxM.
+
+For example, during the installation, the following notice will no longer appear: `Could not stop the following processes (60s): DataMiner GQI`.
+
 #### Web apps: Email address of Skyline support has been changed to <support@dataminer.services> [ID 43093]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
@@ -185,6 +191,14 @@ When, in a *Line & area chart* component, you had changed the name of the Y axis
 
 In some cases, components used in a low-code app could cause a user's web browser to leak memory.
 
+#### GQI: GQI DxM and SLHelper could leak memory [ID 43028]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+In some cases, both GQI DxM and SLHelper could leak memory, especially when executing GQI queries with GQI extensions (i.e. ad hoc data source or custom operators) that throw exceptions from their life cycle methods.
+
+See also: [GQI DxM - Life cycle: OnDestroy method would incorrectly be called when an error occurred in the OnInit method [ID 43186]](#gqi-dxm---life-cycle-ondestroy-method-would-incorrectly-be-called-when-an-error-occurred-in-the-oninit-method-id-43186)
+
 #### Web Services API: SLHelper would incorrectly be used to process GQI queries when GQI DxM had been enabled in Web.config [ID 43046]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
@@ -215,6 +229,16 @@ When the *app.config.json* file of a published app did not contain an ID, up to 
 
 When a query was processed by the GQI DxM, the result set of the query would contain incorrect column statistics for boolean columns, causing those columns to not be filterable in *Query filter* components.
 
+#### GQI DxM: Problem when setting up an SLNet connection for a GQI query to be executed without user context [ID 43128]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+When the GQI DxM had to set up an SLNet connection within an ad hoc data source for a GQI query to be executed without user context, up to now, the following error would be thrown:
+
+`Cannot clone non-authenticated or non-regular connections.`
+
+From now on, when such an SLNet connection has to be set up, the GQI DxM will set up a system connection with Administrator privileges.
+
 #### Dashboards app & Low-Code Apps - Timeline component: Timeline items would incorrectly shift when you clicked 'Lock timeline to now' [ID 43130]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
@@ -222,6 +246,12 @@ When a query was processed by the GQI DxM, the result set of the query would con
 When, in the *Timeline* component, you clicked *Lock timeline to now*, the default timezone configured in the `C:\Skyline DataMiner\users\ClientSettings.json` file would incorrectly not be taken into account, causing the timeline items to shift to UTC time.
 
 The same issue would occur when you double-clicked the left mouse button while holding the CTRL key pressed.
+
+#### GQI: Deserialization issue when querying DOM instances via the GQI DxM [ID 43132]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+When querying DOM instances with service definition fields via the GQI DxM, up to now, the `ServiceDefinitionFieldDescriptor` would not deserialize correctly coming from SLNet, causing an exception to be thrown in GQI.
 
 #### Dashboards app & Low-Code Apps: Problem when adding a DOM module to a component [ID 43142]
 
@@ -251,8 +281,26 @@ From now on, whether the above-mentioned components are configured to visualize 
 1. If no data selection instructions could be found in the URL, select the first item if such an option is supported and enabled.
 1. Preserve the current selection when the data is refetched.
 
+#### GQI DxM - Life cycle: OnDestroy method would incorrectly be called when an error occurred in the OnInit method [ID 43186]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+Up to now, when an error occurred in the `OnInit` life cycle method, the `OnDestroy` life cycle method would still be called to clean up resources.
+
+From now on, when something goes wrong in the `OnInit` life cycle method, the `OnDestroy` life cycle method will no longer be called.
+
 #### Dashboards app & Low-Code Apps - GQI: Problem when a query was refetched [ID 43195]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
 When a query was refetched immediately after the data had been loaded, in some cases, the dashboard or low-code app could become unresponsive.
+
+#### GQI DxM: Admin connection would incorrectly be allowed to expire [ID 43290]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 [CU0] -->
+
+If the GQI DxM is used with an admin connection, its underlying persistent system connection is used to handle any requests or subscriptions towards SLNet.
+
+Up to now, when the admin connection had been idle for at least 1 minute after being used, the underlying system connection would automatically close the admin connection, causing the GQI DxM to unsubscribe from NATS and close all sessions and extension workers.
+
+From now on, the admin connection will no longer expire, and will no longer be automatically closed by the underlying system connection.

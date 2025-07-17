@@ -9,6 +9,7 @@ uid: SchemaReference
 |[Protocol](xref:SchemaProtocol)|Connector XML schema.|
 |[Automation script](xref:SchemaAutomationScript)|Automation script XML schema.|
 |[Functions](xref:SchemaFunctions)|Functions XML schema.|
+|[DataMiner](xref:SchemaDataMiner)|DataMiner XML schema.|
 |[Hyperlinks](xref:SchemaHyperlinks)|Hyperlinks XML schema.|
 |[LogSettings](xref:SchemaLogSettings)|LogSettings XML schema.|
 |[NuGetStagesConfig](xref:SchemaNuGetStagesConfig)|XML schema for NuGet-related stages of the CI/CD pipeline for custom solution repositories.|

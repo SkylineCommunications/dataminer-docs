@@ -14,7 +14,7 @@ To do so, set the *Trap IP Sources* parameter to the IP address corresponding wi
 
 This could for example be the IP address of an SNMP manager that aggregates traps for many devices, or it could be the IP address corresponding to a single device. In the screenshot below, the loopback address is used, meaning that the traps come from the DataMiner Agent itself.
 
-![Smart Trap Processor IP Sources](~/user-guide/images/TrapProcessor_IPSources.png)
+![Smart Trap Processor IP Sources](~/dataminer/images/TrapProcessor_IPSources.png)
 
 You can also specify multiple IP addresses, using a comma as separator.
 
@@ -24,7 +24,7 @@ When a trap source IP has been configured, proceed to the rest of the processing
 
 The rules defined in the Rules Table determine which traps from the source are processed to be displayed and monitored in the *Processed Traps* table and *Heartbeat Traps* table.
 
-![Trap Processor Rules Table](~/user-guide/images/TrapProcessor_RulesTable.png)
+![Trap Processor Rules Table](~/dataminer/images/TrapProcessor_RulesTable.png)
 
 - **Rule Status**: If a row should be considered when processing a trap, set this to *Enabled*; otherwise, set it to *Disabled*.
 
@@ -123,7 +123,7 @@ The source name definition can also utilize binding placeholders rather than a h
 > [!NOTE]
 > You do not have to configure this table for traps to be processed properly. It is especially useful if a single trap processor element is used to process traps for more than one device.
 
-![Trap Processor Source Name Table](~/user-guide/images/TrapProcessor_SourceNameTable.png)
+![Trap Processor Source Name Table](~/dataminer/images/TrapProcessor_SourceNameTable.png)
 
 - **Priority**: The priority for the source name rule. The received trap will be processed according to the first matching source name rule.
 
@@ -152,7 +152,7 @@ The value you specify should describe the device or system corresponding to the 
 > [!NOTE]
 > You do not have to configure this table for traps to be processed properly
 
-![Trap Processor Source IP Name Table](~/user-guide/images/TrapProcessor_SourceIPNameTable.png)
+![Trap Processor Source IP Name Table](~/dataminer/images/TrapProcessor_SourceIPNameTable.png)
 
 - **IP Address**: The IP address from which the traps must originate. This needs to match at least one of the IP addresses defined in the [*Trap IP Sources* parameter](#trap-ip-sources-configuration).
 
@@ -164,7 +164,7 @@ The value you specify should describe the device or system corresponding to the 
 
 In the auto-clear section, you can configure parameters that will determine the maximum number of rows and the maximum time that traps will remain in the *Processed Traps* table.
 
-![Auto Clear Settings](~/user-guide/images/TrapProcessor_AutoClear.png)
+![Auto Clear Settings](~/dataminer/images/TrapProcessor_AutoClear.png)
 
 - **Event Cleanup Timer**: The interval at which the cleanup logic runs for the event tables.
 

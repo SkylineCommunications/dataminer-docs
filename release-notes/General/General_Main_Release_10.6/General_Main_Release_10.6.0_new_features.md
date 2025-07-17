@@ -702,7 +702,7 @@ The SLNet message `EditConnection`, which can be used to edit a connection from 
 
 <!-- MR 10.6.0 - FR 10.5.8 -->
 
-To prevent dropdown boxes in interactive Automation scripts to get loaded with too much data, it is now possible to filter the data that is loaded into a dropdown box.
+To prevent dropdown boxes in interactive Automation scripts from getting loaded with too much data, it is now possible to filter the data that is loaded into a dropdown box.
 
 For an example showing how to implement a dropdown box filter in an interactive Automation script, see [Interactive Automation scripts: Filtering values in a redesigned UI component 'DropDown' [ID 42845]](xref:Web_apps_Feature_Release_10.5.8#interactive-automation-scripts-filtering-values-in-a-redesigned-ui-component-dropdown-id-42845).
 
@@ -802,3 +802,80 @@ new ExecuteScriptMessage
 When an `ExecuteScriptMessage` is sent, an `ExecuteScriptResponseMessage` will be returned. The information is returned in an `EntryPointResult.Result` property of type `RequestScriptInfoOutput`.
 
 This message should not be used to request the information in an Automation script.
+
+#### Automation script and QAction dependencies can now also be uploaded to the 'DllImport\\SolutionLibraries' folder [ID 43108]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Up to now, the `UploadScriptDependencyMessage` was only able to upload Automation script and QAction dependencies to the `C:\Skyline DataMiner\Scripts\DllImport` folder. From now on, it will also be able to upload those dependencies to the `C:\Skyline DataMiner\ProtocolScripts\DllImport\SolutionLibraries` folder.
+
+See the following example. The `UploadScriptDependencyMessage` now has a `DependencyFolder` property, which allows you to specify the destination of the dependency to be uploaded.
+
+```csharp
+var uploadDependencyMessage = new UploadScriptDependencyMessage()
+{
+  Bytes = bytes,
+  DependencyName = name,
+  Path = string.Empty, // Subfolders within the destination can be specified here
+  DependencyFolder = ScriptDependencyFolder.SolutionLibraries // Default is 'ScriptDependencyFolder.ScriptImports'
+};
+```
+
+After a dependency has been uploaded, all scripts using that dependency will be recompiled.
+
+> [!NOTE]
+> For QActions in protocols, the relevant SLScripting process must be restarted before the new DLL will get loaded.
+
+#### SLNet: 'TraceId' property added to ClientRequestMessage & extended logging [ID 43187]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+The `ClientRequestMessage` class has been extended with a new `TraceInfo` class, which has one `TraceId` property of type string. In a later phase, this property will be used to track requests across multiple modules (e.g. queries coming from ad hoc data sources).
+
+CrudLoggerProxy logging will also support trace IDs for CRUD operations by the following managers:
+
+- AppPackageContentManager
+- BaseFunctionManager
+- BaseProfileManager
+- BPAManager
+- ClusterEndpointsManager
+- ClusterManager
+- ConfigurationManager
+- DOMManager
+- IncrementManager
+- JobManager
+- MigrationManager
+- ModuleSettingsManager
+- NATSCustodianManager
+- SRMServiceStateManager
+- TicketingManager
+- UserDefinableApiManager
+- VisualManager
+
+Examples of CRUD operation log entries with a trace ID:
+
+```txt
+2025/07/02 13:19:14.170|SLNet.exe|CrudLoggerProxy|INF|3|6|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Object: SectionDefinition, Forced: False, User: DOMAIN\UserName, Action: Creating CustomSectionDefinition[IDQ1XPM7DXBIL9YXKWZZ,c74e85be-2c1d-4002-aaba-a3b7d712fe3a].
+
+2025/07/02 13:19:14.457|SLNet.exe|CrudLoggerProxy|INF|3|6|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Object: SectionDefinition, Forced: False, User: DOMAIN\UserName, Action: Created CustomSectionDefinition[IDQ1XPM7DXBIL9YXKWZZ,c74e85be-2c1d-4002-aaba-a3b7d712fe3a].
+```
+
+Also, the trace ID will be logged for the following messages:
+
+- slow client messages (in *SLNet.txt* and *SLSlowClientMessages.txt*)
+
+  ```txt
+  2025/07/02 13:19:34.715|SLNet.exe|LogSlowClientMessage|INF|0|252|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] [Facade.HandleMessage] 60908.7999ms were needed to handle Cube (FirstName LastName @ GTC-USERNAME) => Diagnostic Request: Hang ()
+  ```
+
+- incoming messages in SLNet (in *SLNet.txt* and *SLNet\FacadeHandleMessage.txt*)
+
+  ```txt
+  2025-07-02 15:05:04.329|277|Facade.HandleMessage|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Incoming (RTManagerGUI.exe (FirstName LastName @ GTC-USERNAME)): Skyline.DataMiner.Net.Messages.ManagerStoreCreateRequest`1[Skyline.DataMiner.Net.Apps.DataMinerObjectModel.DomDefinition]
+  ```
+
+The logging of a DOM manager will now also contain a line indicating the start of status transitions. This will be logged on information level 3, i.e. the same type and level as regular CRUD actions:
+
+```txt
+2025/07/02 15:05:11.110|SLNet.exe|HandleStatusTransitionRequest|INF|3|269|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Handling status transition with ID 'new_to_closed' for instance with ID '1ff720a3-0aa2-4548-8b51-d8b975e19ea4'.
+```

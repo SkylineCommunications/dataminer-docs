@@ -19,7 +19,7 @@ This is the missing Validator check you will be adding in this tutorial: When th
 Expected duration: 15 minutes.
 
 > [!TIP]
-> See also: [Kata #23: Contributing to the DIS Validator](https://community.dataminer.services/courses/kata-23) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #23: Contributing to the DIS Validator](https://community.dataminer.services/courses/kata-23) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
 ## Prerequisites
 

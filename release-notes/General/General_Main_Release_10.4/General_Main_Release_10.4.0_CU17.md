@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.4.0_CU17
 ---
 
-# General Main Release 10.4.0 CU17 - Preview
+# General Main Release 10.4.0 CU17
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -30,14 +30,6 @@ When you create an Automation script, apart from an XML file containing the actu
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
 
 When multiple conditional alarm templates had been combined into an alarm template group, up to now, the resulting group template could fail to properly apply its conditions.
-
-#### SLDataGateway could stop working because of issues caused by TPL tasks [ID 42846]
-
-<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
-
-In some cases, SLDataGateway could stop working because of issues caused by TPL tasks.
-
-The number of TPL tasks has now been reduced, especially when writing trend data to the database.
 
 #### Error 'The object exporter specified was not found' would get logged upon DMA startup [ID 42927]
 
@@ -109,3 +101,9 @@ When an element had masked alarms, the alarm status of the parameters in questio
 When a service was deleted, in some cases, it would only be fully deleted on the DataMiner Agent that hosted it.
 
 Also, when a service was renamed, in some cases, all DataMiner Agents except the one hosting it could start to experience issues because the old service had not been properly deleted.
+
+#### No history alarms shown when data was being migrated or replicated from separate Cassandra setup to STaaS [ID 43325]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 [CU0] -->
+
+While a DataMiner storage setup was migrated or replicated where each DMA had its own Cassandra database, no history alarms were shown.

@@ -11,6 +11,9 @@ The main principle to keep in mind is that the documentation in the Catalog shou
 
 As the documentation shown in the Catalog should be concise and not include a lot of technical details, you can add a link (see *documentation_url* in the [Manifest file](xref:Register_Catalog_Item#manifest-file)) to direct users to more detailed documentation. For substantial solutions developed by Skyline, this technical documentation is typically located under [DataMiner Solutions](xref:solution_index). For smaller items, this could be a link to markdown pages in the public source code repository. If the source code is open source, you can also provide a link using the *source_code_url* field in the [Manifest file](xref:Register_Catalog_Item#manifest-file).
 
+> [!NOTE]
+> For more details regarding connector documentation, please refer to [our connector documentation guidelines](xref:Connector_help_pages).
+
 ## Catalog item documentation structure
 
 When you create documentation for an item in the Catalog, focus on showcasing the value of the item in a concise and engaging way, while keeping the technical details to a minimum. Use this structure to ensure clarity and consistency, and make sure to [include visuals](#visuals) in your text:
@@ -117,29 +120,26 @@ When you create documentation for an item in the Catalog, focus on showcasing th
 
 **Format:** Use concise bullet points, limited to information that is strictly necessary.
 
-**applicable requirements**:
+**Applicable requirements**: Mention the following requirements if they apply for the package:
 
-For most of the items below, you can evaluate if there is a maximum and/or minimum version.
-
-- DataMiner version
-- DxM version
-- Licenses (for example, DOM, SRM)
-- Web version
-- DataMiner Cube version
-- Soft-launch options
+- **Minimum/Maximum DataMiner version**:
+  - Only mention the minimum DataMiner version if it is a [**currently supported** DataMiner version](xref:Software_support_life_cycles).
+  - Mention **both the Feature Release and Main Release version**. As users can be on the Main Release or on the Feature Release track, only adding one of these will be a problem for users who are on the other track.
+  - If the DataMiner **Web** version or **Cube** version requirement is different from the server version, mention this separately.
+- **Minimum/Maximum DxM version**
+- **Licenses** (for example, DOM, SRM)
+- **Soft-launch options**
 - Requirements for components included in the package
 
 **Do's:**
 
 - Clearly list **essential requirements** (for example, software versions, API access).
 - Be direct and **specific** about version numbers, required permissions, or additional licenses needed for the item to work.
-- If there is a specific DataMiner version dependency, make sure to include **both Main and Feature Release**. If the cumulative update of the Main Release is irrelevant, you can leave it out (e.g. "DataMiner 10.2.5/10.3.0").
 
 **Don'ts:**
 
 - Avoid **installation or configuration steps**. Link to comprehensive documentation instead.
 - Avoid listing every **small technical dependency**. Focus only on the essentials.
-- If the minimum required DataMiner version for the Catalog item is **below the [currently supported DataMiner versions](xref:Software_support_life_cycles)**, do not mention it.
 
 ## Technical Reference section
 

@@ -50,6 +50,6 @@ To add a new page to the documentation:
 
    ![Add new page to toc.yml file](~/contributing/images/New_page_TOC.gif)
 
-1. Check if there are any smaller content overviews that also need to be updated with a link. For example, if you add something in the user guide, usually there is a page at a higher level in the guide that gives an overview of all underlying pages. Add a link to your new page on that page. See [Links and cross-references](xref:CTB_Markdown_Syntax#links-and-cross-references).
+1. Check if there are any smaller content overviews that also need to be updated with a link, for example on a page at a higher level in the table of contents. See [Links and cross-references](xref:CTB_Markdown_Syntax#links-and-cross-references).
 
 1. When your page is ready, [create a pull request](xref:CTB_Creating_PR).
