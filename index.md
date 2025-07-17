@@ -21,7 +21,7 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
 
 <div class="row">
   <div class="columnhome">
-    <a href="/user-guide/DataMiner_index.html" title="DataMiner Overview" target="_self"><img src="images/Docs_DataminerOverview.svg" style="width:100%"></a>
+    <a href="/dataminer/DataMiner_index.html" title="DataMiner Overview" target="_self"><img src="images/Docs_DataminerOverview.svg" style="width:100%"></a>
   </div>
   <div class="columnhome">
     <a href="/solutions/solution_index.html" title="DataMiner Solutions" target="_self"><img src="images/Docs_DMSolutions.svg" style="width:100%"></a>

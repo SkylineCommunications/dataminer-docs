@@ -8,4 +8,4 @@ uid: Accessing_Ping_Monitoring
 
 1. Select *PING Monitor* to start using the application.
 
-   ![PING Monitor](~/user-guide/images/Ping_Monitor.png)
+   ![PING Monitor](~/dataminer/images/Ping_Monitor.png)

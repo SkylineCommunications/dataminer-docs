@@ -40,7 +40,7 @@ To access the TAG Management application:
 
 1. Select *TAG Management* to start using the application.
 
-   ![TAG Management](~/user-guide/images/TAG_application.png)
+   ![TAG Management](~/dataminer/images/TAG_application.png)
 
 > [!NOTE]
 > This application enhances the functionality of existing TAG MCM and MCS elements on your DMA. If these elements have not been configured yet, [add the necessary elements](xref:Adding_elements) using the [appropriate protocols](https://docs.dataminer.services/connector/doc/TAG_Video_Systems_MBC-7000.html).

@@ -49,7 +49,7 @@ In this part, you will learn how to set up an organization in GitHub and SonarCl
 Expected duration: 20 minutes.
 
 > [!TIP]
-> See also: [Kata #49: Set up your development environment in GitHub](https://community.dataminer.services/courses/kata-49/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #49: Set up your development environment in GitHub](https://community.dataminer.services/courses/kata-49/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
 ### Step 1: Create a GitHub Organization
 

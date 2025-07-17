@@ -107,11 +107,11 @@ All methods discussed above are called at some point during the GQI life cycle, 
 
 The following flowchart illustrates the GQI life cycle when a query is created:
 
-![GQI query creation life cycle](~/user-guide/images/GQICreateQuery.png)
+![GQI query creation life cycle](~/dataminer/images/GQICreateQuery.png)
 
 The following flowchart illustrates the GQI life cycle when a query is fetched:
 
-![GQI query fetching life cycle](~/user-guide/images/GQIFetchQuery.png)
+![GQI query fetching life cycle](~/dataminer/images/GQIFetchQuery.png)
 
 ##### Objects
 

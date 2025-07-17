@@ -8,10 +8,10 @@ The sidebar on the left of the Asset Management application contains buttons tha
 
 | Button | Page description |
 |--|--|
-| ![Asset overview](~/user-guide/images/Asset_Overview_Icon.png) | Opens the [*Asset overview* page](#the-asset-overview-page), which displays an overview of all your assets. You can use the query filter to quickly locate specific items. This page serves as the initial landing page upon accessing the application. |
-| ![QR code](~/user-guide/images/QR_code_Icon.png) | Opens the [*QR code* page](#the-qr-code-page), which provides an overview of all URLs. On this page, you can create all QR codes simultaneously, which you can then attach to the corresponding devices. |
-| ![Complete assets overview](~/user-guide/images/Complete_Assets_Overview_Icon.png) | Opens the [*Complete assets overview* page](#the-complete-assets-overview-page), which displays an overview of assets, with a bulk update option available via a pre-designed Excel sheet. |
-| ![Alarm history page](~/user-guide/images/Alarm_History_Overview_Icon.png) | Opens the [*Alarm history* page](#the-alarm-history-page), which provides an overview of all asset alarms monitored in your DataMiner System. |
+| ![Asset overview](~/dataminer/images/Asset_Overview_Icon.png) | Opens the [*Asset overview* page](#the-asset-overview-page), which displays an overview of all your assets. You can use the query filter to quickly locate specific items. This page serves as the initial landing page upon accessing the application. |
+| ![QR code](~/dataminer/images/QR_code_Icon.png) | Opens the [*QR code* page](#the-qr-code-page), which provides an overview of all URLs. On this page, you can create all QR codes simultaneously, which you can then attach to the corresponding devices. |
+| ![Complete assets overview](~/dataminer/images/Complete_Assets_Overview_Icon.png) | Opens the [*Complete assets overview* page](#the-complete-assets-overview-page), which displays an overview of assets, with a bulk update option available via a pre-designed Excel sheet. |
+| ![Alarm history page](~/dataminer/images/Alarm_History_Overview_Icon.png) | Opens the [*Alarm history* page](#the-alarm-history-page), which provides an overview of all asset alarms monitored in your DataMiner System. |
 
 > [!IMPORTANT]
 > The [asset detail report pages](#asset-detail-reports) are not accessible via the sidebar.
@@ -26,7 +26,7 @@ The *Asset overview* page consists of the following main components:
 
 - [Filter pane](#the-filter-pane) (3)
 
-![Asset overview page](~/user-guide/images/Asset_Overview_Page.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.4.3*
+![Asset overview page](~/dataminer/images/Asset_Overview_Page.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.4.3*
 
 ### Overview of all assets
 
@@ -36,7 +36,7 @@ Assets are defined based on various parameters such as categories, status indica
 
 Within the table, clicking the ellipsis button ("...") in the second column opens a context menu that allows you to **edit or delete any of the existing assets**, as well as **access an asset's [detail report page](#asset-detail-reports)**.
 
-![Context menu](~/user-guide/images/Context_Menu_Assets.png)<br/>*Table component in DataMiner 10.4.3*
+![Context menu](~/dataminer/images/Context_Menu_Assets.png)<br/>*Table component in DataMiner 10.4.3*
 
 > [!IMPORTANT]
 > To gain access to an asset's detail report page, you first need to [modify the asset URLs](xref:Installing_Asset_Management#modifying-the-asset-urls) to use your personal system.
@@ -47,15 +47,15 @@ The header bar is only available in the *Asset overview* tab. In this header bar
 
 | Icon | Name | Description |
 |--|--|--|
-| ![Add assets](~/user-guide/images/Add_Asset.png) | Add asset | Allows you to create an asset, specifying general asset, DataMiner, accounting, SLA, and location information. Because the asset object relies on other DOM definitions, certain information can be selected directly from a dropdown list, e.g. category, status, building, floor, and more. |
-| ![Add categories](~/user-guide/images/Add_Categories.png) | Categories | Allows you to add new categories by specifying a category name and ID, or review the existing list of categories in a panel to the right. To delete or modify any of the categories, click the ellipsis button ("...") next to the category and select *Delete* or *Edit*. |
-| ![Add status indicators](~/user-guide/images/Status_Indicators.png) | Status indicators | Allows you to add new status indicators, or review the existing list of status indicators. To delete or modify any of the status indicators, click the ellipsis button ("...") next to the status indicator and select *Delete* or *Edit*. |
-| ![Add buildings](~/user-guide/images/Add_Buildings.png) | Buildings | Allows you to add new buildings, or review the existing list of buildings. To delete or modify any of the buildings, click the ellipsis button ("...") next to the building and select *Delete* or *Edit*. |
-| ![Add floors](~/user-guide/images/Add_Floors.png) | Floor | Allows you to add new floors, or review the existing list of floors. To delete or modify any of the floors, click the ellipsis button ("...") next to the floor and select *Delete* or *Edit*. |
-| ![Add rooms](~/user-guide/images/Add_Rooms.png) | Room | Allows you to add new rooms, or review the existing list of rooms. To delete or modify any of the rooms, click the ellipsis button ("...") next to the room and select *Delete* or *Edit*. |
-| ![Add aisles](~/user-guide/images/Add_Aisles.png) | Aisle | Allows you to add new aisles, or review the existing list of aisles. To delete or modify any of the aisles, click the ellipsis button ("...") next to the aisle and select *Delete* or *Edit*. |
-| ![Add racks](~/user-guide/images/Add_Racks.png) | Rack | Allows you to add new racks, or review the existing list of racks. To delete or modify any of the racks, click the ellipsis button ("...") next to the rack and select *Delete* or *Edit*. |
-| ![Add slots](~/user-guide/images/Add_Slots.png) | Slots | Allows you to add new slots, or review the existing list of slots. To delete or modify any of the slots, click the ellipsis button ("...") next to the slot and select *Delete* or *Edit*. |
+| ![Add assets](~/dataminer/images/Add_Asset.png) | Add asset | Allows you to create an asset, specifying general asset, DataMiner, accounting, SLA, and location information. Because the asset object relies on other DOM definitions, certain information can be selected directly from a dropdown list, e.g. category, status, building, floor, and more. |
+| ![Add categories](~/dataminer/images/Add_Categories.png) | Categories | Allows you to add new categories by specifying a category name and ID, or review the existing list of categories in a panel to the right. To delete or modify any of the categories, click the ellipsis button ("...") next to the category and select *Delete* or *Edit*. |
+| ![Add status indicators](~/dataminer/images/Status_Indicators.png) | Status indicators | Allows you to add new status indicators, or review the existing list of status indicators. To delete or modify any of the status indicators, click the ellipsis button ("...") next to the status indicator and select *Delete* or *Edit*. |
+| ![Add buildings](~/dataminer/images/Add_Buildings.png) | Buildings | Allows you to add new buildings, or review the existing list of buildings. To delete or modify any of the buildings, click the ellipsis button ("...") next to the building and select *Delete* or *Edit*. |
+| ![Add floors](~/dataminer/images/Add_Floors.png) | Floor | Allows you to add new floors, or review the existing list of floors. To delete or modify any of the floors, click the ellipsis button ("...") next to the floor and select *Delete* or *Edit*. |
+| ![Add rooms](~/dataminer/images/Add_Rooms.png) | Room | Allows you to add new rooms, or review the existing list of rooms. To delete or modify any of the rooms, click the ellipsis button ("...") next to the room and select *Delete* or *Edit*. |
+| ![Add aisles](~/dataminer/images/Add_Aisles.png) | Aisle | Allows you to add new aisles, or review the existing list of aisles. To delete or modify any of the aisles, click the ellipsis button ("...") next to the aisle and select *Delete* or *Edit*. |
+| ![Add racks](~/dataminer/images/Add_Racks.png) | Rack | Allows you to add new racks, or review the existing list of racks. To delete or modify any of the racks, click the ellipsis button ("...") next to the rack and select *Delete* or *Edit*. |
+| ![Add slots](~/dataminer/images/Add_Slots.png) | Slots | Allows you to add new slots, or review the existing list of slots. To delete or modify any of the slots, click the ellipsis button ("...") next to the slot and select *Delete* or *Edit*. |
 
 > [!NOTE]
 >
@@ -84,7 +84,7 @@ The *QR code* page provides an overview of active asset URLs, which can be used 
 > [!IMPORTANT]
 > To gain access to an asset's detail report page, you first need to [modify the asset URLs](xref:Installing_Asset_Management#modifying-the-asset-urls) to use your personal system.
 
-![QR Code](~/user-guide/images/Asset_Management_QR_Code.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.3.12*
+![QR Code](~/dataminer/images/Asset_Management_QR_Code.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.3.12*
 
 These URLs can be used to **generate QR codes** that will redirect you to the asset's detail report page when you scan them, gaining access to detailed information.
 
@@ -140,7 +140,7 @@ The *Complete assets overview* page allows you to **ingest data in bulk**, elimi
 
 The *Alarm history* page provides a comprehensive overview of all asset alarms monitored within your DataMiner System. You can easily filter alarms based on specific elements using the filter tool located in the top-right corner of the alarm table component.
 
-![Alarm history page](~/user-guide/images/Asset_Management_Alarm_History_Page.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.3.12*
+![Alarm history page](~/dataminer/images/Asset_Management_Alarm_History_Page.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.3.12*
 
 ## Asset detail reports
 
@@ -153,23 +153,23 @@ On every asset detail report page, you can find the following information:
 
 - General information
 
-  ![General information](~/user-guide/images/General_Information.png)<br/>*Table component in DataMiner 10.3.12*
+  ![General information](~/dataminer/images/General_Information.png)<br/>*Table component in DataMiner 10.3.12*
 
 - Accounting information
 
-  ![Accounting information](~/user-guide/images/Accounting_Information.png)<br/>*Table component in DataMiner 10.3.12*
+  ![Accounting information](~/dataminer/images/Accounting_Information.png)<br/>*Table component in DataMiner 10.3.12*
 
 - Location information
 
-  ![Location information](~/user-guide/images/Location_Information.png)<br/>*Node edge graph component in DataMiner 10.3.12*
+  ![Location information](~/dataminer/images/Location_Information.png)<br/>*Node edge graph component in DataMiner 10.3.12*
 
 - Linked cards if applicable
 
-  ![Linked cards](~/user-guide/images/Linked_Cards.png)<br/>*Table component in DataMiner 10.3.12*
+  ![Linked cards](~/dataminer/images/Linked_Cards.png)<br/>*Table component in DataMiner 10.3.12*
 
   > [!NOTE]
   > To ensure this table displays the parent-child relationship between a chassis and its associated cards, if applicable, adhere to the following format when implementing the asset number: `CHASSISNUMBER.CARDNUMBER`.
 
 If the asset is monitored in DataMiner, you can access its monitoring card by clicking the *Open monitoring card* button at the top of the page.
 
-![Open monitoring card](~/user-guide/images/Open_Monitoring_Card.png)
+![Open monitoring card](~/dataminer/images/Open_Monitoring_Card.png)

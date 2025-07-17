@@ -14,17 +14,17 @@ If you are interested in customer examples, visit our [use case section](https:/
 
 Explore our series of short demonstration videos in our Dojo use case and video library:
 
-- [Main features of the Meinberg Network Management System (mbgNMS)](https://www.youtube.com/watch?v=OCNc-ha8Sps) ![Video](~/user-guide/images/video_Duo.png)
+- [Main features of the Meinberg Network Management System (mbgNMS)](https://www.youtube.com/watch?v=OCNc-ha8Sps) ![Video](~/dataminer/images/video_Duo.png)
 
-- [Meinberg NMS Dashboards Module](https://www.youtube.com/watch?v=wYYcneoKpIc) ![Video](~/user-guide/images/video_Duo.png)
+- [Meinberg NMS Dashboards Module](https://www.youtube.com/watch?v=wYYcneoKpIc) ![Video](~/dataminer/images/video_Duo.png)
 
-- [Meinberg NMS - Discovery and Provisioning (1/4)](https://www.youtube.com/watch?v=y-Qx0d-v3HU) ![Video](~/user-guide/images/video_Duo.png)
+- [Meinberg NMS - Discovery and Provisioning (1/4)](https://www.youtube.com/watch?v=y-Qx0d-v3HU) ![Video](~/dataminer/images/video_Duo.png)
 
-- [Meinberg NMS - Monitoring and Control (2/4)](https://www.youtube.com/watch?v=Lk4Ho1G_qB0) ![Video](~/user-guide/images/video_Duo.png)
+- [Meinberg NMS - Monitoring and Control (2/4)](https://www.youtube.com/watch?v=Lk4Ho1G_qB0) ![Video](~/dataminer/images/video_Duo.png)
 
-- [Meinberg NMS - Configuration Management (3/4)](https://www.youtube.com/watch?v=iVMKKs8R5Jo) ![Video](~/user-guide/images/video_Duo.png)
+- [Meinberg NMS - Configuration Management (3/4)](https://www.youtube.com/watch?v=iVMKKs8R5Jo) ![Video](~/dataminer/images/video_Duo.png)
 
-- [Meinberg NMS - Firmware Management (4/4)](https://www.youtube.com/watch?v=lzfUajhtZ3w) ![Video](~/user-guide/images/video_Duo.png)
+- [Meinberg NMS - Firmware Management (4/4)](https://www.youtube.com/watch?v=lzfUajhtZ3w) ![Video](~/dataminer/images/video_Duo.png)
 
 - [Meinberg Network Management System (mbgNMS)](https://community.dataminer.services/use-case/meinberg-network-management-system-mbgnms/) (use case)
 

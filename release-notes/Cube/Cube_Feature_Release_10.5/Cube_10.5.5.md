@@ -31,7 +31,7 @@ All EPM integration functionality that previously required the *CPEIntegration* 
 
 The most prominent new EPM integration feature is the Topology pane, which is also known as the **Topology app**. It is available via a new *Topology* button in the Cube sidebar, if the system contains at least one correctly configured EPM Manager element (as detailed below). Clicking the button will open a pane where you can select the front-end EPM Manager (in case more than one is available), select the topology chain, drill down to any of the topology levels in that chain, and open a card representing the data of the selected item. When you navigate between (docked) EPM cards, the filter selection will be updated to match the displayed card.
 
-![Topology app](~/user-guide/images/EPMIntegration_Topology_app.png)
+![Topology app](~/dataminer/images/EPMIntegration_Topology_app.png)
 
 To make sure the Topology app is available, the following configuration is needed:
 
@@ -49,7 +49,7 @@ To make sure the Topology app is available, the following configuration is neede
 
 If an EPM object in the topology is masked, you can get information on who masked it and when via the *Masking info* option in the hamburger menu of the Topology app:
 
-![Masking info option](~/user-guide/images/EPMIntegration_Masking_info.png)
+![Masking info option](~/dataminer/images/EPMIntegration_Masking_info.png)
 
 ##### System Type and System Name properties
 
