@@ -28,7 +28,7 @@ With the DataMiner Low-Code Apps module, you can create custom applications that
 - [Chaining actions](xref:Tutorial_Apps_Chaining_Actions)
 - [Using the stepper component in a low-code app](xref:TutorialStepper)
 - [Styling a table component](xref:Tutorial_Apps_Style_A_Table)
-- [Using the maps component in a low-code app](xref:TutorialMaps)
+- [Using the maps component in a low-code app](xref:MapsTutorial)
 - [Getting started with the grid component](xref:Tutorial_Apps_Grid)
 - [Leveraging feeds in a web component](xref:Tutorial_Dashboards_Feeds_Web_Component)
 - [Creating a visually appealing and user-friendly low-code app](xref:Tutorial_App_Design)

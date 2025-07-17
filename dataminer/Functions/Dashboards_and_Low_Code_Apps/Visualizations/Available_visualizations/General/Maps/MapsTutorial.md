@@ -1,5 +1,5 @@
 ---
-uid: TutorialMaps
+uid: MapsTutorial
 ---
 
 # Using the maps component in a low-code app

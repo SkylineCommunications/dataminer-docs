@@ -378,7 +378,7 @@ items:
               - name: Styling a table component
                 topicUid: Tutorial_Apps_Style_A_Table
               - name: Using the maps component in a low-code app
-                topicUid: TutorialMaps
+                topicUid: MapsTutorial
               - name: Getting started with the grid component
                 topicUid: Tutorial_Apps_Grid
               - name: Leveraging feeds in a web component
