@@ -270,12 +270,6 @@ This tool has now been adapted to make sure the `is_write_index` flag of the ali
 
 ### Fixes
 
-#### SLProtocol would leak memory when an element was restarted [ID 42697] [ID 43300]
-
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
-
-When you restarted an element that had previously been stopped, up to now, SLProtocol would leak memory.
-
 #### SLManagedScripting: The same dependency would be loaded multiple times by different connectors [ID 42779]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
