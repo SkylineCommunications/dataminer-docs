@@ -229,7 +229,7 @@ When an error was thrown while setting up the Repository API connections between
 
 #### StorageModule DcM would fail to read an element XML file [ID 43350]
 
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In some rare cases, the StorageModule DcM would fail to read an element XML file because that file was being used by another process.
 
