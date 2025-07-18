@@ -14,6 +14,8 @@ https://aadcdn.msftauth.net/*
 https://dataminerservices.b2clogin.com/*
 https://*.dataminer.services/*
 https://*.skyline.be/*
+https://cdnjs.cloudflare.com/*
+https://stackpath.bootstrapcdn.com/*
 ```
 
 > [!NOTE]
