@@ -4,288 +4,191 @@ uid: LCA_Style_guide
 
 # Dashboards and Low-Code Apps style guide
 
-Use this guide as a basis to build or improve dashboards and low-code apps. These best practices will allow you to create intuitive, visually appealing dashboards and apps, and they will allow users to experience consistent behavior across different dashboards and apps. Note that many of the best practices will only be applicable for low-code apps, as dashboards have more limited possibilities.
-
-> [!TIP]
-> See also:
->
-> - [Kata #19: Transform low-code apps into visual delights](https://community.dataminer.services/courses/kata-19/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-> - Tutorial: [Creating a visually appealing and user-friendly low-code app](xref:Tutorial_App_Design)
+Use this documentation as a basis to build or improve Dashboards and Low-Code Apps. These rules will allow you to create intuitive, visually appealing solutions, and they will allow users to experience consistent behavior across different Dashboards and Low-Code Apps. Note that many of the rules will only be applicable for Low-Code Apps, as Dashboards have more limited possibilities.
 
 > [!NOTE]
-> If you come across something that has not been added to this style guide yet:
->
-> 1. Investigate what the best possible solution would be, ensuring consistency across the app and across the different available solutions.
-> 1. If you have any doubt, check with <rens.ampe@skyline.be>.
-> 1. [Create a pull request](xref:CTB_Quick_Edit) to update this documentation.
+> If you come across something that has not been added to this style guide yet: [Create a pull request](xref:CTB_Quick_Edit) to update this documentation.
 
-## Colors/themes
+## Themes
 
-- When you create a new app or dashboard, it essential to start from a good **theme**. The same themes exist across the Dashboards and Low-Code Apps module within a DMS. The themes are primarily managed in the Dashboards app. If the theme you want to use does not exist yet, start by **duplicating a theme in the Dashboards app** that has a similar look and feel to what you have in mind, and then fine-tune it. In a low-code app, you can then select this theme on page level. Use the same theme for every page.
+- When choosing the main color for a Low-Code App, **ensure there is enough contrast** in header, sidebar and buttons.
 
-  > [!TIP]
-  > See also: [Creating a new dashboard theme](xref:Configuring_the_dashboard_layout#creating-a-new-dashboard-theme)
+- When creating a new Low-Code App or Dashboard, always start from one of our default themes: **Skyline Light - White or Skyline Dark**. (From version 10.5.4)
 
-- Each theme **must** have a component style with a transparent background. Use this component style for titles, images, and buttons.
+  - Only **use customization on component themes for minor adjustments**, such as removing padding inside a Maps component.
 
-  ![Transparent theme](~/user-guide/images/LCA_Style_Guide_Theme_Transparent.png)
+  - Use that theme **consistently on every page and panel**.
 
-- When you define a background color for pages/panels (as part of the theme), never use full white (#FFFFFF) or full black (#000000). Here are some good default colors:
+  - Always use the default component style, except for **titles, images, buttons, and our basic controls**, which **should use the transparent component style**.
 
-   |☀️  Light background |🌙 Dark background|
-   |---------------------|----------------|
-   |#F4F4F5              |#1E2530         |
+  - These default themes include our carefully chosen **data colors**. If you need to add colors to the color set, make sure they are **complementary (in the color theory sense) to the existing ones** as much as possible.
 
-- Make sure the background color of your component style is different from the page/panel background. This way, components can easily be distinguished from the background. This can be used for query filters, tables, timelines, etc. (anything but titles, images, and buttons). Generally, it is best to choose a slightly lighter color than that of the page/panel background. Here are some good default colors:
+- The colors for data on your page must be used consistently, so **that the same color is always used to represent the same data**. The best way to achieve this is by using [conditional colors](xref:LowCodeApps_Layout#creating-a-new-theme-for-a-low-code-app-page) as part of the theme.
 
-   |☀️  Light background |🌙 Dark background|
-   |------------------|----------------|
-   |#FDFDFD           |#272E38        |
-   |![Component light style](~/user-guide/images/LCA_Style_Guide_Component_Style_Light.png)|![Component dark style](~/user-guide/images/LCA_Style_Guide_Component_Style_Dark.png)|
+## Templates
 
-- When you pick colors for pages, panels, buttons, grids, and tables, there **must** be enough contrast between text and icons and their background. Otherwise, users will have trouble seeing the text and icons.
+- Use our carefully chosen set of **interface colors designed to enhance usability and readability**. These are also used in our default themes. 1st, 2nd and 3rd labels suggest combinations, but you can mix and match as needed.
 
-   |👍 Good |👎 Bad |
-   |------|-----|
-   |![Good contrast](~/user-guide/images/LCA_Style_Guide_Contrast_Good.png)|![Bad contrast](~/user-guide/images/LCA_Style_Guide_Contrast_Bad.png)|
+| Purpose (used in theme) | Skyline Light - White  | Skyline Dark |
+|--|--|--|
+| 1st background (component background) | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#FDFDFD" stroke="#C5C6C8"/></svg> #FDFDFD | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#23272F" stroke="#C5C6C8"/></svg> #23272F |
+| 2nd background | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#F6F6F6" stroke="#C5C6C8"/></svg> #F6F6F6 | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#1C2129" stroke="#C5C6C8"/></svg> #1C2129 |
+| Background (page background) | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#EFF0F0" stroke="#C5C6C8"/></svg> #EFF0F0 | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#151A22" stroke="#C5C6C8"/></svg> #151A22 |
+| 2nd background hover | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#E8E8E9" stroke="#C5C6C8"/></svg> #E8E8E9 | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#30353C" stroke="#C5C6C8"/></svg> #30353C |
+| 1st border (component border) | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#E1E1E2" stroke="#C5C6C8"/></svg> #E1E1E2 | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#383C43" stroke="#C5C6C8"/></svg> #383C43 |
+| 2nd border | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#D3D4D5" stroke="#C5C6C8"/></svg> #D3D4D5 | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#44484E" stroke="#C5C6C8"/></svg> #44484E |
+| 1st border hover | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#C5C6C8" stroke="#C5C6C8"/></svg> #C5C6C8 | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#4F5258" stroke="#C5C6C8"/></svg> #4F5258 |
+| 2nd border hover | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#B8BABC" stroke="#C5C6C8"/></svg> #B8BABC | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#5B5E64" stroke="#C5C6C8"/></svg> #5B5E64 |
+| Disabled text | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#A0A2A6" stroke="#C5C6C8"/></svg> #A0A2A6 | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#727579" stroke="#C5C6C8"/></svg> #727579 |
+| Quiet text | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#727579" stroke="#C5C6C8"/></svg> #727579 | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#A0A2A6" stroke="#C5C6C8"/></svg> #A0A2A6 |
+| Subtle text | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#44484E" stroke="#C5C6C8"/></svg> #44484E | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#CECFD1" stroke="#C5C6C8"/></svg> #CECFD1 |
+| Default text (text) | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#151A22" stroke="#C5C6C8"/></svg> #151A22 | <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#FDFDFD" stroke="#C5C6C8"/></svg> #FDFDFD |
 
-- When you pick the main color for a low-code app, also make sure there is enough contrast. When you select an app color, the app itself will determine what the color of the text is, based on the selected background color. Be sure to pick a color that results in enough contrast between the text and background color, especially in the pages menu on the left, as this will be a slightly darker color than the selected app color.
+- If you need a selected state or call to action, use your Low-Code App's **main color or <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16" fill="none"><rect x="0.5" y="0.5" width="12" height="12" rx="2.5" fill="#2563EB" stroke="#C5C6C8"/></svg> #2563EB**.
 
-   |👍 Good |👎 Bad |
-   |------|-----|
-   |![Good app color](~/user-guide/images/LCA_Style_Guide_App_Color_Good.png)|![Bad app color](~/user-guide/images/LCA_Style_Guide_App_Color_Bad.png)|
+  - Selected state: Use it as border and add a background overlay using the same color at 10% opacity.
 
-- The colors for states in tables and charts **must** be used consistently, so that the same color is always used to represent the same state. To best way to achieve this in charts is by using [conditional colors](xref:LowCodeApps_Layout#creating-a-new-theme-for-a-low-code-app-page) as part of the theme, which allows you to map a display label to a specific color consistently across components.
+  - Call to action: Use it as background and use the default text color (light or dark based on your main color) as text color.
 
-   ![State color](~/user-guide/images/LCA_Style_Guide_Color_State.png)
+- Do not use any fonts other than the default one.
 
-- Limit the number of colors that you use in a dashboard or app. Avoid making it too colorful or too monotone.
+- You can have a **maximum of 3 actions** in your template. If you have more, add them after a 3 dots menu.
 
-- Picking good colors to start from is often a challenge. One way to approach this is to pick some colors from a layout you find online, like this sample below:
+- **Use tooltips on layers** or add title attributes to your HTML layers.
 
-   |Sample UI | Color palette | Resulting app with same color palette|
-   |----------|---------------|-----------------------|
-   |![Sample UI](~/user-guide/images/LCA_Style_Guide_Sample_UI.webp)|![Color palette](~/user-guide/images/LCA_Style_Guide_Color_Palette.png)|![Sample UI result](~/user-guide/images/LCA_Style_Guide_Sample_UI_Result.png)|
+- If your template does not have fixed dimensions in your visualization, **make sure it is responsive**. Use CSS flexbox, container queries, text-overflow...
+
+> [!TIP]
+> Creating a template from scratch? Get inspired on [Dribbble](https://dribbble.com/search/shots/popular/product-design?q=cards), sketch and structure it in parts using [Figma](https://figma.com), then write your HTML/CSS layers in [Codepen](http://codepen.io/).
 
 ## Layout
 
-- Make sure components on a page/panel are aligned vertically and horizontally.
+- Make sure components on a page/panel are **aligned vertically and horizontally**.
 
-   | 👍 Good | 👎 Bad |
-   |------|-----|
-   |![Good alignment](~/user-guide/images/LCA_Style_Guide_Alignment_Good.png)|![Bad alignment](~/user-guide/images/LCA_Style_Guide_Alignment_Bad.png)|
+- Always **use a 50-column grid** for your page layout.
 
-- Use consistent spacing and a consistent margin on the left and right edge of each page in a low-code app. Avoid stretching components to the edge of the page with no spacing.
+- Give every page **one column of the page grid as spacing on the left and right** edge.
 
-- Make sure the available space is used, so there are no large empty areas on a page. At the same time , do not clutter the interface with too much information. In a low-code app, you can hide additional information on panels instead.
+- Use **consistent spacing** between components.
 
-- Try to limit the number of different font styles and font sizes.
+- **Do not clutter the interface** with too much information. Think about whether your user is technical, so you can show more, or a user like management, who needs a simpler interface.
 
-- Adjust the size of components to fit the information they contain. This means you should for example avoid very large ring/state components or very small tables and timelines.
+- Use the fit to view option **when everything fits on one**.
 
-- You **must** ensure that your layout has been tested on different screen sizes before you publish a low-code app. Make sure it also works on a smaller screen like a laptop and not only on big monitors.
+- **Adjust the size of components to fit the information** they contain. This means you should for example avoid very large ring/state components or very small tables and timelines that are filled with data.
+
+- You should know which devices you are creating for, so you need to **test your layout on different screen resolutions** before publishing a Low-Code App.
 
 ## Navigation
 
-In order to have consistent navigation, we recommend applying the following order for navigation in a low-code app:
+- **Use the sidebar** for your navigation.
 
-1. Sidebar: Main navigation to the different pages defined in the app.
+- If you have too many pages in your sidebar or want to show the same data in another way. **Use the header bar as tabs** where the buttons open hidden pages.
 
-   ![Navigation via sidebar](~/user-guide/images/LCA_Style_Guide_Navigation_Pages.png)
+> [!NOTE]
+> Exception: When up to two components fill the entire page with no margins, you can place action buttons on the left side of the header bar, just do not use them as tabs.
 
-   > [!NOTE]
-   > Use a side panel to show additional information for each item on a page.
+- If you are using the header bar as tabs, make sure you **show a title on each page** or **use a circle icon that is filled** on the selected page.
 
-1. Header bar: Navigation within a page.
+- Place the about page **at the bottom** of the sidebar and **use the info circle icon**.
 
-   This can open up a hidden page, in which case it makes sense to change the title of each page so users know where they are.
-
-   ![Navigation via menubar](~/user-guide/images/LCA_Style_Guide_Navigation_Menu.gif)
-
-> [!IMPORTANT]
-> It is generally **not** advised to use buttons for navigation.
+- If your app has more than 10 pages (including sidebar and header tabs), **add an overview page**. It should highlight key data and provide quick links.
 
 ## Panels
 
-- Panels in a low-code app should primarily be used to show additional information about an item selected on a page. This can for example be a DOM form or additional details/metadata that were not shown on the original page.
+- Show **additional information in a side panel on the right** for each item on a page.
 
-- Panels can be shown on the left or the right of the screen or as a pop-up window. Try to always show a panel in the same location in an app, with the same width, etc. As a default, we recommend showing DOM forms in a pop-up window and showing additional information about a selected table row in a side panel on the right.
+- If your panel updates based on a selection, **add a title** with the selected item's name.
 
-  ![Form pop-up window](~/user-guide/images/LCA_Style_Guide_Form_Popup.gif)
+- Show **forms in a pop-up** panel.
 
-- Every panel should have a close button in the top-right corner. This can be in the menu bar or it can be a separate button.
+- Always choose the **same width** in your actions if you are using the same panel more than once.
+
+- Every panel should have a **close button in the top-right corner**. Close icon is enough, no need to add a label.
+
+- If you have too much information in one panel, you can split it into multiple panels and **use the header bar as tabs**.
+
+- **Use the “As overlay” option** when opening a panel.
+
+- Do not use panels as pages
+
+## Actions
+
+- Only include **one access point** for a certain action per page/panel.
+
+- **Confirm** important data change actions with a notification.
 
 ## Components
 
-### Titles
+- Make sure you **choose the right visualization** for your data.
 
-- Titles are optional on pages, depending on whether users will need more context information about what they are looking at.
+- Make sure you add **[a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message)** that guides your user.
 
-- Avoid repeating the app name as a title on an app's pages.
+### Title (Web component)
 
-- Do not use a background color for titles.
+- Titles are optional on pages, depending on whether users will need **more context information** about what they are looking at.
 
-- Do not make the titles too big: the focus should be on the content of the page.
+- Start from this title:
 
-- We recommend adding a title to a page as a web component instead of just text. For example:
+```html
+<div style="height: 100%; display: flex; flex-direction: column; justify-content: center; font-family: Segoe UI,Segoe UI Web Regular,Segoe UI Symbol,Helvetica Neue,BBAlpha Sans,S60 Sans,Arial,sans-serif;">
+  <H1 style="color: #151A22; margin: 0; font-weight: 400; font-size: 24px">People</H1>
+  <p style="color: #44484E; margin: 0; font-weight: 400; font-size: 16px">
+  An overview of all managed people.
+  </p>
+</div>
+```
 
-  - HTML code:
+- **Do not repeat the Low-Code App name** as a title on a page.
 
-    ```html
-    <div style="height:100%;display:flex;flex-direction:column;justify-content:center">
-      <H1 style="color: rgb(20,33,42); font-family:'Segoe UI Light','Segoe UI Web Light','Segoe UI Web Regular','Segoe UI',Arial,sans-serif;margin:0;font-weight:100;font-size:24px">
-        <b>People</b>
-      </H1>
-      <p style="color: rgb(20,33,42,0.7); font-family:'Segoe UI Light','Segoe UI Web Light','Segoe UI Web Regular','Segoe UI','Segoe UI Symbol',HelveticaNeue-Light,'Helvetica Neue',Arial,sans-serif;margin:0;font-weight:600;font-size:16px">
-      An overview of all managed people
-      </p>
-    </div>
-    ```
+- Do not make the titles **too big**.
 
-  - Result:
+- Use **the same title styles** in the whole Low-Code App.
 
-    ![Good title](~/user-guide/images/LCA_Style_Guide_Title_Good.png)
+- Place titles in the exact **same place on every page**.
+
+- **Do not add icons** in your title.
 
 ### Buttons
 
-[Buttons](xref:DashboardButton) can trigger different actions on a page or panel. Here are some things to keep in mind when you add buttons:
+- Label your buttons with **enough context** so users understand exactly what the action will do.
 
-- Use short labels.
+- **Add an icon** whenever possible.
 
-- Add an icon to a button whenever possible. This will make it easier for users to see at a glance what the button is for.
+### Images
 
-- Make sure buttons have a transparent background.
+- Do not add customer logos.
 
-   | 👍 Good | 👎 Bad |
-   |------|-----|
-   |![Good button](~/user-guide/images/LCA_Style_Guide_Button_Good.png)|![Bad button](~/user-guide/images/LCA_Style_Guide_Button_Bad.png)|
+- Do not add unnecessary images.
 
-### Images/icons
+- **Only use dynamic images** with a web component on a page or HTML tool in templates.
 
-- Do not add customer logos to apps. While these may look useful for marketing purposes, they usually take up space without adding much value.
+### Forms (DOM & IAS components)
 
-- If you want to add an image to an HTML component or a table/grid template, you can convert the image to a data URI using a [converter](https://www.site24x7.com/tools/image-to-datauri.html). This way, you can include the image in the HTML code. Only do this for small images.
+- Make sure forms are always shown **in a pop-up panel**.
 
-  ```html
-  <img height="45px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACWAAAAlgCAYAAAAMTQxuAAAgAElEQVR4nOzcTWjl+13H8c//JPecPgjNXOhBrGBRMvjAhEDNCS2ziJPWhSBuPCCYhc3Cdjrj6bkLTTbKwZmgEp0UtVgE4S7Vi+suurkglj5QfEYoCIK1VlsSWmpzTe/Mz83l0nqfZjJJfv//Oa/X/s/v/d9/+CYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ....  />
-  ```
+- Place any **form actions**, such as 'Save' or 'Delete', **at the bottom of the form**.
 
-- When you use emojis inside text or HTML, keep in mind that these can look different depending on the machine where they are shown.
+- **Enable “Fit to view”** option on a pop-up panel with a form.
 
-  ![Emoji](~/user-guide/images/LCA_Style_Guide_Emoji.png)
+- Make sure labels are shown above the inputs in DOM forms by **setting the pop-up width to 35%**.
 
-### DOM forms
-
-When you include a [DOM form](xref:DashboardForm) in a low-code app, keep the following best practices in mind:
-
-- Make sure forms are shown in the same manner in all the apps you build: either in a pop-up window or in a side panel.
-
-- Use the *As overlay* option to [open the pop-up window or panel](xref:LowCodeApps_event_config#opening-a-panel-of-the-app), so that the focus will be there instead of on the background.
-
-- Add any form actions, like *save* or *delete*, in the header bar of the pop-up window or panel.
-
-- In the configuration of the panel showing a form, the *Fit to view* option **must** always be enabled. This will make sure the form adapts to the available screen size of the user.
-
-- When you [configure the event to open the panel](xref:LowCodeApps_event_config#opening-a-panel-of-the-app), set the width to at most 35 %. This will make sure the labels of the form are shown above the inputs, which may make them easier to read.
-
-- If the DOM instance shown in the form has states, show a stepper component at the top showing the current state of the instance.
-
-   ![Stepper](~/user-guide/images/LCA_Style_Guide_Form_Stepper.png)
-
-- When a user performs an action on a form (e.g. saving or updating), it is good practice to show them a notification with the result of the action:
-
-   ![Notification](~/user-guide/images/LCA_Style_Guide_Form_Notification.gif)
-
-Here is a good example of a DOM form with a stepper component inside a panel with a save and close button:
-
-![Example DOM form](~/user-guide/images/LCA_Style_Guide_Form_Good.png)
+- If the DOM instance shown in the form has states, **show a stepper component at the top** showing the current state of the instance.
 
 ### Tables
 
-To display multiple records, usually, a table is used. Keep the following guidelines in mind when you add a [table](xref:DashboardTable):
+- **Limit the number of columns** so all columns shown fit the screen size you're creating a Low-Code App for. Show additional information in a panel.
 
-- Tables should only contain the most relevant data. Try to limit the number of columns.
+- **Add a component title** to your table mentioning which kind of data it is.
 
-- It is generally good practice to add a title to the table component (via *Component* > *Layout* > *Title*) to indicate what the content of the table is.
+- Do not show IDs.
 
-- Do not show GUIDs in a table column, even if this data is part of your GQI query. You should hide these by using a filter on the columns that are shown.
+- **Rename your column titles** to straightforward, clear but concise names.
 
-- Make sure the tables in your apps or dashboards have the same look and feel.
+- If you need a selected state, make sure it's **clear on the full row**.
 
-- The *Empty result message* **must** be customized so that it clearly states why no data is shown in the table. The default message is not user-friendly.
+- Add actions in the **first or last column** of your table.
 
-   | 👍 Good | 👎 Bad |
-   |------|-----|
-   | ![Good empty table message](~/user-guide/images/LCA_Style_Guide_Table_Empty_Good.png) | ![Bad empty table message](~/user-guide/images/LCA_Style_Guide_Table_Empty_Bad.png) |
+- Use **49px row height**.
 
-  > [!TIP]
-  > See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message)
-
-- Use the template editor to add a visual indication to the first column to clearly show which row is selected:
-
-  ![Good Table Actions](~/user-guide/images/LCA_Style_Guide_Table_Select.gif)
-
-  > [!TIP]
-  > See also: [Styling a table component](xref:Tutorial_Apps_Style_A_Table)
-
-- When you add actions to a table (e.g. to edit a row), you can add icons to the first column or in the last column. However, if you use the last column, it can occur that the table quick filter blocks access to the last column of the first row of a table. The first column is therefore preferred. If you add more than 3 actions, add them in a [context menu](xref:LowCodeApps_event_config#showing-a-context-menu).
-
-   | 👍 Good | 👎 Bad |
-   |------|-----|
-   | ![Good table actions](~/user-guide/images/LCA_Style_Guide_Table_Actions_Good.png) | ![Bad table actions](~/user-guide/images/LCA_Style_Guide_Table_Actions_Bad.png) |
-
-- Use the [template editor](xref:Template_Editor) for each column:
-
-  - To add icons to the column where relevant.
-
-  - To increase the row height. To make the table content easier to read, we recommend a height of about 46 px instead of the default row height.
-
-  For example:
-
-  ![Good table](~/user-guide/images/LCA_Style_Guide_Table_Good.png)
-
-- When you use HTML inside a table template, there **must** be an **outer HTML element** with a title attribute (with the same value as the table cell); otherwise, if you do not specify a title attribute, the HTML will show up as a tooltip:
-
-  | 👍 Good | 👎 Bad |
-  |--|--|
-  | `<span title="{Name}" style="font-weight:500">{Name}</span >` | `<span style="font-weight:500">{Name}</span >` |
-  | ![Good table template](~/user-guide/images/LCA_Style_Guide_Table_Template_Good.png) | ![Bad table template](~/user-guide/images/LCA_Style_Guide_Table_Template_Bad.png) |
-
-### Grids
-
-In some cases, a grid can be used instead of a table to display multiple records. Keep the following guidelines in mind for the use of a [grid](xref:DashboardGrid):
-
-- Only use a grid instead of a table in case you need very specific visuals with horizontal and/or vertical rows. Otherwise, it makes more sense to use a table, as this comes with sorting and filtering options out of the box.
-
-  Here are some examples where it makes sense to use a grid:
-
-  - To create a button panel.
-
-    ![Control surface](~/user-guide/images/LCA_Style_Guide_Control_Surface.png)
-
-  - For button-style filters:
-
-    | Horizontal filter |
-    |-------------------|
-    |![Grid filter horizontal](~/user-guide/images/LCA_Style_Guide_Grid_Filter_Horizontal.png)|
-
-    | Vertical Filter |
-    |-----------------|
-    |![Grid filter vertical](~/user-guide/images/LCA_Style_Guide_Grid_Filter_Vertical.png)|
-
-  - To summarize/visualize items in a more creative way:
-
-    ![Grid summary](~/user-guide/images/LCA_Style_Guide_Grid_Summary.png)
-
-- As with tables, the *Empty result message* **must** be customized so that it clearly states why no data is shown in the table, because the default message is not user-friendly. See [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message).
-
-- Like for a table, when you use HTML inside a grid template, there **must** be an **outer HTML element** with a title attribute (with the same value as the grid cell); otherwise, if you do not specify a title attribute, the HTML will show up as a tooltip.
-
-## Low-code app examples
-
-The following apps can give you some inspiration to create your own user-friendly low-code apps:
-
-- [People & Organizations](https://ziine.skyline.be/app/06951cc4-5695-4f6c-a49b-55582d72f611/People%20Overview)
-- [Media Asset Management Orchestration](https://ziine.skyline.be/app/6b56efeb-abad-4298-bf59-8f5ba6bf3750/Overview)
-- [Techex Tx Core](https://ziine.skyline.be/app/299c8d59-bb34-4d58-b994-d56bf022fb95/Infrastructure)
-- [Penalty Box](https://ziine.skyline.be/app/5b6adee8-ed7c-44ce-aabb-aba0de4b5ee6/Severity)
+- Only use icons next to values if the **icon changes based on the value**.
