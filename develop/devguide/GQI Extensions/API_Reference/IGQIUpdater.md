@@ -19,7 +19,7 @@ It allows adding, removing, and updating rows, or updating individual cells.
 
 ### void AddRow(GQIRow)
 
-Adds a new row to the query result.
+Adds a new row to the query result. If a row with the same row key already exists, all cells will be updated instead. This method effectively acts as an *add or update* mechanism.
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Removes an existing row from the query result.
 
 ### void UpdateRow(GQIRow)
 
-Updates the cells of an existing row in the query result.
+Updates all cells of an existing row in the query result. If the specified row does not exist yet, the update will be queued and applied once the row is added.
 
 #### Parameters
 
