@@ -274,6 +274,30 @@ When migrating data from Elasticsearch to OpenSearch, at some point, the *ReInde
 
 This tool has now been adapted to make sure the `is_write_index` flag of the aliases is not reset during the migration process.
 
+#### Video thumbnails: New fitMode parameter [ID 43388]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In URLs of video thumbnails, it is now possible to pass a *fitMode* parameter, which will indicate how the image should be displayed.
+
+These are the possible values:
+
+| fitMode | Description |
+|---------|-------------|
+| fill    | The image will completely cover the container. It may crop parts of the image, but it ensures no empty space. |
+| fit     | The image will be fully visible inside the container while maintaining aspect ratio. There may be empty space if aspect ratios differ. |
+| stretch | The image will stretch to exactly fill the container, ignoring aspect ratio. This may cause distortion. |
+| center  | The image will retain its original size and will be aligned at the center. It may overflow or be cropped. |
+| shrink  | The image will behave like *fill* or *center*, whichever results in a smaller image. It will only scale down if needed. |
+
+Default value: fill
+
+Example:
+
+```txt
+https://myDMA/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true&fitMode=center
+```
+
 ### Fixes
 
 #### SLManagedScripting: The same dependency would be loaded multiple times by different connectors [ID 42779]
