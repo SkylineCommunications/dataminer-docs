@@ -45,6 +45,17 @@ Actions will now be numbered hierarchically to allow easier referencing when lin
 
 - 2
 
+#### Low-Code Apps - 'Launching a script' event: New option to disable 'Script started' information events [ID 43245]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, in a low-code app, you are configuring a *Launching a script* event, it is now possible to indicate that no *Script started* information event should be generated whenever the Automation script is executed.
+
+1. Click the *Show settings* button.
+1. Disable the *Generate an information event when launching the script* setting.
+
+By default, this setting will be enabled.
+
 ## Changes
 
 ### Enhancements
