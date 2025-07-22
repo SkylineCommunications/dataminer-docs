@@ -1,0 +1,172 @@
+items:
+- name: About dataminer.services
+  topicUid: about_dataminer_services
+  items:
+  - name: Logging on to dataminer.services
+    topicUid: Logging_on_to_dataminer_services
+  - name: dataminer.services home page
+    topicUid: dataminer_services_home_page
+  - name: Linking your DataMiner account to your dataminer.services account
+    topicUid: Linking_your_DataMiner_and_dataminer_services_account
+  - name: Changing the email address associated with your dataminer.services account
+    topicUid: Change_email_dataminer_services_account
+  - name: Cloud data storage policies
+    topicUid: Cloud_data_storage_policies
+  - name: DataMiner Cloud Pack
+    topicUid: DataMiner_Cloud_Pack
+- name: Connecting your DataMiner System to dataminer.services
+  topicUid: Connecting_your_DataMiner_System_to_the_cloud
+  items:
+  - name: Requirements
+    topicUid: Connect_to_cloud_requirements
+  - name: Connecting to dataminer.services
+    topicUid: Connect_to_dataminer_services
+  - name: Connecting to dataminer.services via proxy server
+    topicUid: Connect_to_cloud_via_proxy
+  - name: Connecting to dataminer.services with a DMZ setup
+    topicUid: Connect_to_cloud_with_DMZ
+- name: Collaboration
+  items:
+  - name: About the Collaboration app
+    topicUid: About_the_Collaboration_app
+  - name: Accessing the Collaboration app
+    topicUid: Accessing_the_Collaboration_app
+  - name: Overview of the user interface
+    topicUid: Overview_of_the_user_interface
+  - name: My projects
+    topicUid: My_projects
+    items:
+    - name: List of projects
+      topicUid: List_of_projects
+    - name: List of tasks linked to a project
+      topicUid: List_of_tasks_linked_to_a_project
+    - name: Board view
+      topicUid: Board_view
+    - name: Report view
+      topicUid: Report_view
+    - name: Creating a new task under the current project
+      topicUid: Creating_a_new_task_under_the_current_project
+    - name: Consulting or editing a task
+      topicUid: Consulting_or_editing_a_task
+  - name: My tasks
+    topicUid: My_tasks
+  - name: Collaboration Reference
+    topicUid: Collaboration_Reference
+    items:
+    - name: Project-related notifications
+      topicUid: Project-related_notifications
+    - name: Statuses
+      topicUid: Statuses
+- name: Catalog
+  items:
+  - name: About the Catalog app
+    topicUid: About_the_Catalog_app
+  - name: Looking up an item in the Catalog
+    topicUid: Looking_up_an_item_in_the_catalog
+  - name: Deploying a Catalog item to your system
+    topicUid: Deploying_a_catalog_item
+  - name: Registering a Catalog item
+    topicUid: Register_Catalog_Item
+  - name: Changing the publishing state of a Catalog item
+    topicUid: Change_Catalog_Publishing_State
+  - name: Deleting a Catalog item
+    topicUid: Deleting_a_catalog_item
+  - name: Downloading a Catalog item with the API
+    topicUid: Downloading_a_catalog_item
+  - name: Tutorials
+    items:
+    - name: Registering a new connector in the Catalog
+      topicUid: Tutorial_Register_Catalog_Item
+    - name: Registering a new version of a connector in the Catalog
+      topicUid: Tutorial_Register_Catalog_Version
+    - name: Registering a new version of a connector in the Catalog using a GitHub Action
+      topicUid: Tutorial_Register_Catalog_Version_GitHub_Actions
+- name: Sharing
+  items:
+  - name: About the Sharing app
+    topicUid: About_the_Sharing_app
+  - name: Accessing the Sharing app
+    topicUid: Accessing_the_Sharing_app
+  - name: Managing your shares
+    topicUid: Managing_your_shares
+- name: Remote access
+  items:
+  - name: About remote access
+    topicUid: About_Remote_Access
+  - name: Finding the remote access URL
+    topicUid: Cloud_Remote_Access_URL
+  - name: Accessing DataMiner web apps remotely
+    topicUid: Accessing_web_apps_remotely
+  - name: Accessing your DMS remotely with DataMiner Cube
+    topicUid: Accessing_DMS_remotely_with_Cube
+- name: Community
+  topicUid: Community
+- name: Admin
+  items:
+  - name: About the Admin app
+    topicUid: About_the_Admin_app
+  - name: Accessing the Admin app
+    topicUid: Accessing_the_Admin_app
+  - name: Creating an organization
+    topicUid: Creating_an_organization
+  - name: Getting your organization verified
+    topicUid: CloudConnectionVerification
+  - name: Managing dataminer.services users
+    topicUid: Managing_dataminer_services_users
+    items:
+    - name: Giving users access to dataminer.services features
+      topicUid: Giving_users_access_to_cloud_features
+    - name: Changing the role of a dataminer.services user
+      topicUid: Changing_the_role_of_a_dataminer_services_user
+  - name: Controlling remote access
+    topicUid: Controlling_remote_access
+  - name: Consulting dataminer.services audit logs
+    topicUid: Auditing
+  - name: Granting admin consent for Teams Chat Integration
+    topicUid: Granting_admin_consent
+  - name: Controlling performance and usage data offloads
+    topicUid: Controlling_cloudfeed_data_offloads
+  - name: Managing the nodes of a DMS connected to dataminer.services
+    topicUid: Managing_cloud-connected_nodes
+  - name: Managing dataminer.services keys
+    topicUid: Managing_dataminer_services_keys
+  - name: Viewing information on DataMiner Systems
+    topicUid: Viewing_info_on_DMS
+  - name: Viewing information on deployments
+    topicUid: Viewing_info_on_deployments
+  - name: Viewing information on shares
+    topicUid: Viewing_info_on_shares
+  - name: Viewing information on system usage
+    topicUid: Viewing_info_on_system_usage
+- name: ChatOps
+  items:
+  - name: About ChatOps
+    topicUid: About_ChatOps
+  - name: DataMiner Teams bot
+    topicUid: DataMiner_Teams_bot
+  - name: Chat integration
+    topicUid: Microsoft_Teams_Chat_Integration
+  - name: Tutorials
+    items:
+    - name: Hello World
+      topicUid: ChatOps_Tutorials_Custom_Command_Hello_World
+    - name: Chat notifications
+      topicUid: ChatOps_Tutorials_Chat_Notification
+    - name: Adaptive Card notifications with custom buttons
+      topicUid: ChatOps_Tutorials_Custom_Buttons
+- name: Advanced configuration
+  items:
+  - name: Customizing the dataminer.services endpoint configuration
+    topicUid: Custom_cloud_endpoint_configuration
+  - name: Disabling artifact deployments locally
+    topicUid: Disabling_artifact_deployments
+  - name: Disabling Remote Access and Live Sharing locally
+    topicUid: Disabling_Remote_Access_and_Live_Sharing
+  - name: Disabling reports and notifications offloading
+    topicUid: Disable_Offloading_Reports_and_Notifications
+  - name: Disabling the bot feature locally
+    topicUid: Disabling_bot_locally
+  - name: Disconnecting from dataminer.services
+    topicUid: Disconnecting_from_dataminer.services
+  - name: Enabling kernel response buffering for DataMiner APIGateway
+    topicUid: Enabling_kernel_response_buffering

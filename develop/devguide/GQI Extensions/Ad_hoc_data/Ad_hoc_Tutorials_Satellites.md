@@ -9,7 +9,7 @@ In this tutorial, you will learn how you can create a GQI data source that can b
 Expected duration: 15 minutes.
 
 > [!TIP]
-> See also: [Kata #4: Build your first GQI](https://community.dataminer.services/courses/kata-4/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #4: Build your first GQI](https://community.dataminer.services/courses/kata-4/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
 > [!NOTE]
 > This tutorial uses DataMiner version 10.3.0.
@@ -42,7 +42,7 @@ Expected duration: 15 minutes.
 
 1. Go to the C# code of the imported Automation script by clicking the C# icon.
 
-   ![C# icon](~/user-guide/images/GQI_code.png)
+   ![C# icon](~/dataminer/images/GQI_code.png)
 
 > [!NOTE]
 > If certain types cannot be found in the file, verify if the *Skyline.DataMiner.Dev.Automation* NuGet package has the correct version. Go to *Tools* > *NuGet Package Manager* > *Manage NuGet Packages for Solution*. Select *Skyline.DataMiner.Dev.Automation*, and verify whether the version installed for the current project is at least *10.2.4*.
@@ -89,7 +89,7 @@ Expected duration: 15 minutes.
 
 1. To publish your changes, go to the XML file and click *Publish* in the top left corner.
 
-   ![Publish option](~/user-guide/images/GQI_publish.png)
+   ![Publish option](~/dataminer/images/GQI_publish.png)
 
 ## Step 4: Use the data source
 
@@ -97,7 +97,7 @@ Expected duration: 15 minutes.
 
 1. In the *Data* pane on the right, go to *Queries* and click the "+" icon to create a query.
 
-   ![+ icon to create query](~/user-guide/images/GQI_create_query.png)
+   ![+ icon to create query](~/dataminer/images/GQI_create_query.png)
 
 1. Select *Get ad hoc data* and select *Satellites* as *Data source* option.
 

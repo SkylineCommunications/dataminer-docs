@@ -29,7 +29,7 @@ To access the Asset Management application:
 
 1. Select *Asset Management* to start using the application.
 
-   ![Asset Management](~/user-guide/images/Asset_Management_Icon.png)
+   ![Asset Management](~/dataminer/images/Asset_Management_Icon.png)
 
 > [!TIP]
 > See also: [Use case: Asset Management](https://community.dataminer.services/use-case/asset-management/) on DataMiner Dojo
@@ -48,7 +48,7 @@ To gain access to the [asset detail reports](xref:Working_with_Asset_Management#
 
    A page with a table component listing all asset URLs is displayed.
 
-   ![Asset Management](~/user-guide/images/Asset_Management_url_Overview.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.4.3*
+   ![Asset Management](~/dataminer/images/Asset_Management_url_Overview.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.4.3*
 
 1. In edit mode, navigate to *Data > Queries > Assets all* in the configuration pane to the right.
 
@@ -56,11 +56,11 @@ To gain access to the [asset detail reports](xref:Working_with_Asset_Management#
 
 1. Scroll down to the *Concatenate* method used to specify the URL in the query.
 
-   ![Asset Management](~/user-guide/images/Asset_Management_url.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.4.3*
+   ![Asset Management](~/dataminer/images/Asset_Management_url.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.4.3*
 
 1. Select the information specified below *Concatenate*, and replace `slc-h79-g04.skyline.local` with your own DMA in the *Format* field.
 
-   ![Asset Management](~/user-guide/images/Asset_Management_Change_url.png)
+   ![Asset Management](~/dataminer/images/Asset_Management_Change_url.png)
 
 1. Click the pencil icon again to stop editing the query.
 
@@ -148,7 +148,7 @@ To make sure the application looks as it was intended, modify the theme before y
 
 1. To save your theme, click *Create* in the lower right corner.
 
-   ![Asset Management theme](~/user-guide/images/Asset_Management_Theme.png)<br/>*New theme pop-up window in DataMiner 10.4.3*
+   ![Asset Management theme](~/dataminer/images/Asset_Management_Theme.png)<br/>*New theme pop-up window in DataMiner 10.4.3*
 
 ### Applying the new theme
 
@@ -162,4 +162,4 @@ To make sure the application looks as it was intended, modify the theme before y
 
 1. Repeat these steps for the *Asset detail report*, *QR code*, *Complete assets overview*, and *Alarm history* pages.
 
-1. Click the ![Publish](~/user-guide/images/AppPublishIcon.png) button in the header bar to publish the app.
+1. Click the ![Publish](~/dataminer/images/AppPublishIcon.png) button in the header bar to publish the app.

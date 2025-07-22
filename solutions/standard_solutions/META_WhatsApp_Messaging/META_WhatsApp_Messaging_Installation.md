@@ -38,7 +38,7 @@ Before [installing the *META WhatsApp Messaging* connector](#installing-the-meta
 
    Your app will be loaded in the App Dashboard.
 
-   ![App in META Developers Account](~/user-guide/images/META_WhatsApp_Messaging_MetaRegister.png)
+   ![App in META Developers Account](~/dataminer/images/META_WhatsApp_Messaging_MetaRegister.png)
 
 > [!TIP]
 > See also: [App Type Creation Flow](https://developers.facebook.com/docs/development/create-an-app/other-app-types)
@@ -62,7 +62,7 @@ Before [installing the *META WhatsApp Messaging* connector](#installing-the-meta
 
 1. Confirm the business email address.
 
-![META Business Account](~/user-guide/images/META_WhatsApp_Messaging_BusinessAccount.png)
+![META Business Account](~/dataminer/images/META_WhatsApp_Messaging_BusinessAccount.png)
 
 ### Add WhatsApp to your app and send a test message
 
@@ -87,7 +87,7 @@ Before [installing the *META WhatsApp Messaging* connector](#installing-the-meta
 
 1. Save the *Phone number identifier* and the *WhatsApp Business Account ID*, which you can find right below the sender's number.
 
-![META App](~/user-guide/images/META_WhatsApp_Messaging_MetaApp.png)
+![META App](~/dataminer/images/META_WhatsApp_Messaging_MetaApp.png)
 
 ### Create a system user
 
@@ -117,7 +117,7 @@ Before [installing the *META WhatsApp Messaging* connector](#installing-the-meta
 
 1. After the token is generated, copy it and store it securely. You will need this token when [configuring the connector](xref:Using_META_WhatsApp_Messaging).
 
-![META Business Account](~/user-guide/images/META_WhatsApp_Messaging_UserToken.png)
+![META Business Account](~/dataminer/images/META_WhatsApp_Messaging_UserToken.png)
 
 ## Installing the 'META WhatsApp Messaging' connector
 

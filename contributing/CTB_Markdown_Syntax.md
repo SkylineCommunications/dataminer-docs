@@ -240,7 +240,7 @@ See [System components](xref:BasicConcepts#system-components).
 
 ## Images
 
-To add an image, first place the image in the correct folder in the repository. For example, to add an image for the user guide section of the documentation, add the image in the folder "user-guide/images".
+To add an image, first place the image in the correct folder in the repository. For example, to add an image for the "DataMiner overview" section of the documentation, add the image in the folder "dataminer/images".
 
 To then display the image in the text, use the following syntax:
 
@@ -251,7 +251,7 @@ To then display the image in the text, use the following syntax:
 For example:
 
 ```md
-![Awards](~/dataminer-overview/images/awards.png)
+![Awards](~/dataminer/images/awards.png)
 ```
 
 > [!NOTE]

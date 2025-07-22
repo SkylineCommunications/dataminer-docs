@@ -31,9 +31,9 @@ From now on, after informing the user by means of a message box, DIS will automa
 
 - Unicode (UTF-8 with signature) - Codepage 65001
 
-#### DIS user guide now in HTML5 format \[ID 12250\]
+#### DIS documentation now in HTML5 format \[ID 12250\]
 
-DIS now ships with a user guide in HTML5 format instead of in PDF format.
+DIS now ships with documentation in HTML5 format instead of in PDF format.
 
 #### Protocol tag shortcut menus \[ID 12253\]
 

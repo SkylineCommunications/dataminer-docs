@@ -17,4 +17,4 @@ You can customize the monitoring frequency to meet your specific requirements, r
 > See also:
 >
 > - [Ping Monitoring use case](https://community.dataminer.services/use-case/ping-monitoring/) for several use cases and application highlights
-> - [Ping Monitoring - DataMiner Use Case Demo](https://www.youtube.com/watch?v=LpYbxc0jIro) for a visual guide ![Video](~/user-guide/images/video_Duo.png)
+> - [Ping Monitoring - DataMiner Use Case Demo](https://www.youtube.com/watch?v=LpYbxc0jIro) for a visual guide ![Video](~/dataminer/images/video_Duo.png)

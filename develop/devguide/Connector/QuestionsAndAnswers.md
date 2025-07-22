@@ -15,7 +15,7 @@ uid: QuestionsAndAnswers
   
     The result of this is the content of 1.3.6.1.2.1.2.2.1.1, the first row, first column. GetNext requests are performed until the OID in the response exceeds the range of table OID.
 
-    **GetNext + MultipleGet**
+    **GetNext + MultipleGet (column-based)**
 
     Implementation: Define an SNMP tag on the table parameter and on the column parameters.
 

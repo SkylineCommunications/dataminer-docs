@@ -11,7 +11,7 @@ You can also apply the instructions in this tutorial (with limited syntax change
 > [!TIP]
 > See also:
 >
-> - [Kata #22: How to make a connector CI/CD pipeline](https://community.dataminer.services/courses/kata-22/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Kata #22: How to make a connector CI/CD pipeline](https://community.dataminer.services/courses/kata-22/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 > - [Registering a new version of a connector in the Catalog using a GitHub Action](xref:Tutorial_Register_Catalog_Version_GitHub_Actions)
 
 Expected duration: 20 minutes.

@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsHttpImplementing
+description: To periodically request information from a device via HTTP, the approach is very similar to serial communication.
 ---
 
 # Implementing HTTP communication

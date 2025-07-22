@@ -45,8 +45,14 @@ uid: solution_index
     <a href="/solutions/product_solutions/EVS_Cerebrum/EVS_Cerebrum.html" title="EVS Cerebrum" target="_self"><img src="~/solutions/images/EVS_Cerebrum.svg" style="width:100%"></a>
   </div>
   <div class="column">
+    <a href="/solutions/product_solutions/GVAMPP/GVAMPP_Manager_Overview.html" title="Grass Valley AMPP Manager app" target="_self"><img src="~/solutions/images/GV_AMPP_Manager_app.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
     <a href="/solutions/product_solutions/Nevion_Video_IPath/NevionVideoIPath_Overview.html" title="Nevion Video IPath app" target="_self"><img src="~/solutions/images/Nevion_Video_IPath.svg" style="width:100%"></a>
   </div>
+</div>
+
+<div class="row"> 
   <div class="column">
     <a href="/solutions/product_solutions/TAG/TAG_Overview.html" title="Tag Management app" target="_self"><img src="~/solutions/images/Tag_Management.svg" style="width:100%"></a>
   </div>

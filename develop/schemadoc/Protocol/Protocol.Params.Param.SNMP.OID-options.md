@@ -50,7 +50,7 @@ Specifies that the "multipleGetBulk" table retrieval method should be used. Refe
 
 When polling large SNMP tables, you can use the partialSNMP:x option to fetch only "x" rows at a time. This allows you to perform sets in-between and to prevent timeout errors.
 
-The get method can be getNext + multipleGet ("bulk"), multipleGetNext or multipleGetBulk. If the protocol type is snmpV1 and you specified multipleGetBulk, then multipleGetNext will be used.
+The get method can be **GetNext + MultipleGet (column-based)**, **MultipleGetNext** or **MultipleGetBulk**. If the protocol type is snmpV1 and you specified `multipleGetBulk`, then `multipleGetNext` will be used.
 
 Example:
 
