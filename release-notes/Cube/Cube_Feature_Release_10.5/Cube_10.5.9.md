@@ -141,8 +141,20 @@ Up to now, in some cases, when you checked card-specific alarm tab settings conf
 
 Also, when, in the *Settings* window, you went to *Alarm Console > Card-specific*, up to now, the *Card types* list would not show the card types that had been enforced on group level.
 
+#### Logging: Problem with SPI event log entries not getting transmitted to the DataMiner Agent [ID 43344]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, SPI event log entries (e.g. "Cube Connection") would not get transmitted to the DataMiner Agent.
+
 #### Trending: Y-axis labels of histogram charts would incorrectly be displayed in the middle of the Y axis [ID 43348]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In histogram charts, in some cases, the Y-axis label would incorrectly be displayed in the middle of the Y axis instead of at the top.
+
+#### Trending: Problem when loading a trend graph of an EPM KPI [ID 43354]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some rare cases, a trend graph of an EPM KPI would incorrectly not get loaded.
