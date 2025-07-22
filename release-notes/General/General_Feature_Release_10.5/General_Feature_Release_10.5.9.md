@@ -519,3 +519,11 @@ After an element had been swarmed, in some cases, that element would incorrectly
 When a relational anomaly or a multivariate pattern is detected, suggestion events are generated for all parameters in the corresponding relational anomaly group or all parameters associated with the multivariate pattern, and then those events are grouped into an incident.
 
 Up to now, When the DataMiner Agent that detected the relation anomaly or the multivariate pattern was also the incident tracking leader, in some cases, a deadlock could occur while grouping the suggestion events that had been generated.
+
+#### Certain log files would have their maximum size incorrectly set to 0 [ID 43403]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some rare cases, certain log files could have their maximum size incorrectly set to 0, causing them to start a new file each time an entry was added.
+
+From now on, by default, all log files will have their maximum size set to 10 MB.
