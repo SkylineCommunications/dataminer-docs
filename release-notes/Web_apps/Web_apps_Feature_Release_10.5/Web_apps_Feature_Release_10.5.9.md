@@ -56,6 +56,12 @@ When, in a low-code app, you are configuring a *Launching a script* event, it is
 
 By default, this setting will be enabled.
 
+#### Dashboards app & Low-Code Apps - Maps component: Conditional line coloring [ID 43377]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In the *Layout* pane of the *Maps* component, a *Conditional coloring* option has now been added. This will allow you to highlight lines based on a condition.
+
 ## Changes
 
 ### Enhancements
