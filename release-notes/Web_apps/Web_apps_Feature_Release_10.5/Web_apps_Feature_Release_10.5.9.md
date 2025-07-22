@@ -216,6 +216,12 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
+#### Low-Code Apps: Problem when two tables with the same query fed the selected row to the same form [ID 43317]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When two tables with the same query fed the selected row to the same form, up to now, when you had entered some data into the form after selecting a row in the first table, the fields in that form would incorrectly be refetched when you selected either a row in the second table or another DOM definition.
+
 #### Low-Code Apps - Interactive Automation script component: Problem with redesigned `UIBlockType.StaticText` component [ID 43337]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
