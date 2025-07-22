@@ -404,6 +404,12 @@ Logging has been adjusted to not spam if multiple SNMP Managers send to the same
 Failed resolving authoritative context ID for SNMP Manager
 ```
 
+#### Swarming: Problem when redundancy groups contained DVE child elements acting as primary or backup elements [ID 43286]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When Swarming was enabled, in some rare cases, SLDMS and SLDataMiner could get into a deadlock when the system contained redundancy groups in which DVE child elements acted as primary or backup elements.
+
 #### BrokerGateway: GetConnectionDetails call would incorrectly not return any destinations [ID 43292]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
@@ -453,3 +459,12 @@ From now on, if a DOM definition field does not have a default value defined, al
 <!-- Not added to MR 10.6.0 -->
 
 After an element had been swarmed, in some cases, that element would incorrectly be stuck in the Swarming state.
+
+#### SLAnalytics: Problem when grouping suggestion events generated after detecting a relational anomaly or a multivariate pattern [ID 43379]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+When a relational anomaly or a multivariate pattern is detected, suggestion events are generated for all parameters in the corresponding relational anomaly group or all parameters associated with the multivariate pattern, and then those events are grouped into an incident.
+
+Up to now, When the DataMiner Agent that detected the relation anomaly or the multivariate pattern was also the incident tracking leader, in some cases, a deadlock could occur while grouping the suggestion events that had been generated.
