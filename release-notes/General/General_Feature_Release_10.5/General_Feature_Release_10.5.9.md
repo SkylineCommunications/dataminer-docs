@@ -268,7 +268,7 @@ The first time DataMiner starts up after having been upgraded to version 10.6.0/
 
 Also, a number of smaller changes have been made:
 
-- The response to a `GetRADParameterGroupInfo` message now includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging.
+- The response to a `GetRADParameterGroupInfoMessage` now includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging.
 - Instances of (direct) view column parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will now automatically be translated to the base table parameters.
 - DVE child parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will now automatically be translated to the parent parameters.
 - Security has been added to all RAD messages. From now on, you will no longer be able to edit, remove or retrieve information about groups that contain parameters of elements to which you do not have access. The `GetRADParameterGroupsMessage` will still return all groups though.
@@ -324,6 +324,18 @@ Example:
 ```txt
 https://myDMA/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true&fitMode=center
 ```
+
+#### Relational anomaly detection: New default values for 'Anomaly threshold' and 'Minimum anomaly duration' [ID 43400]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+When you add a new relational anomaly parameter group using either the *RAD Manager* app or the RAD API, from now on, the default values of the following settings will be the following:
+
+| Setting | New default value |
+|---------|---------|
+| Anomaly threshold | 6 |
+| Minimum anomaly duration | 15 minutes |
 
 ### Fixes
 

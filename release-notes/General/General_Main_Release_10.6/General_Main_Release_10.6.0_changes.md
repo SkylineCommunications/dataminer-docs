@@ -365,23 +365,6 @@ If the database consists of a single node at the time of index creation, an inde
 
 Because of a number of enhancements, overall performance has increased when creating or editing bookings, especially on systems with a large number of resources.
 
-#### Relational anomaly detection: Configuration moved from XML file to database [ID 43320]
-
-<!-- MR 10.6.0 - FR 10.5.9 -->
-
-Up to now, the configuration settings of the relational anomaly detection feature were stored in `C:\Skyline DataMiner\Analytics\RelationalAnomalyDetection.xml`. From now on, these settings will be stored in the *ai_rad_models_v2* database table instead.
-
-As a result, all configuration will have to be done using either the *RAD Manager* app or the RAD API.
-
-The first time DataMiner starts up after having been upgraded to version 10.6.0/10.5.9, all configuration settings will automatically be migrated from the *RelationalAnomalyDetection.xml* file to the *ai_rad_models_v2* database table.
-
-Also, a number of smaller changes have been made:
-
-- The response to a `GetRADParameterGroupInfo` message now includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging.
-- Instances of (direct) view column parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will now automatically be translated to the base table parameters.
-- DVE child parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will now automatically be translated to the parent parameters.
-- Security has been added to all RAD messages. From now on, you will no longer be able to edit, remove or retrieve information about groups that contain parameters of elements to which you do not have access. The `GetRADParameterGroupsMessage` will still return all groups though.
-
 #### Proactive cap detection: Enhanced detection of predicted data range breaches [ID 43338]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
