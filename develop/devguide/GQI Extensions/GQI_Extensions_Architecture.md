@@ -9,7 +9,7 @@ The GQI DxM consists of several processes that work together to handle GQI reque
 ![Architecture](../../images/GQIArchitecture.png)
 <br>*GQI process overview as of 10.5.9*
 
-## Parent process
+## Core process
 
 **Process name:** `DataMiner GQI.exe` (Windows Service)
 
@@ -22,8 +22,7 @@ When a query uses GQI extensions (like ad hoc data sources or custom operators),
 ## Child processes
 
 **Process name:** `DataMiner GQI.ExtensionsWorker.Automation.exe`
-
-Each extension library runs in its own child process, providing isolation and modularity. You can identify which extension a child process is handling by checking the command line arguments in Task Manager.
+Each extension library runs in its own child process, providing isolation and modularity. You can identify which extension a child process is responsible for by checking the command line arguments in Task Manager.
 
 - **Technology:** .NET Framework 4
 
