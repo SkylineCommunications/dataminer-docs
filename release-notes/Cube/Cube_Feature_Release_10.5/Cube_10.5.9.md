@@ -97,6 +97,16 @@ Because of a number of enhancements, overall performance has increased when load
 
 In DataMiner Cube, up to now, when the Microsoft Edge (WebView2) browser engine was used to display embedded webpages, it was not possible to enter CTRL+F in order to search for a particular text string. This has now been made possible.
 
+#### Properties: Enhanced visualization of element and service properties [ID 43409]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+A number of enhancements have been made to the way in which element and service properties are displayed in the *Properties* window.
+
+- All datetime values are now displayed in UTC time. They will no longer be converted to client time.
+- The *Created* and *Created by* values will now be displayed as one single value.
+- The *Modified* and *Modified by* values will now be displayed as one single value.
+
 ### Fixes
 
 #### System Center - SNMP forwarding: 'Resend all active alarms every' option would incorrectly be set to 0 [ID 43206]
@@ -158,3 +168,9 @@ In histogram charts, in some cases, the Y-axis label would incorrectly be displa
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In some rare cases, a trend graph of an EPM KPI would incorrectly not get loaded.
+
+#### Trending: Trend prediction data would incorrectly be requested when 'Trend prediction' setting was disabled [ID 43414]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When the *Trend prediction* setting had been disabled in the *System settings > Analytics config* section of *System Center*, up to now, Cube would incorrectly still request trend prediction data when you opened a trend graph.
