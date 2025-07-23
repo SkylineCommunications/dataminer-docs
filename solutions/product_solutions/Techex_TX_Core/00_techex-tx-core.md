@@ -8,7 +8,7 @@ The Techex TX Core platform (formerly MW Core) manages TXEdges (formerly MW Edge
 
 In this context, the Techex TX Core package offers a solution for end-to-end monitoring and orchestration of the TX Core platform and TX Edges from a single pane of glass. This network orchestration solution package is still an MVP and may not cover the full feature set of the TX Core and TX Edge products. It allows users to deploy a package for off-the-shelf monitoring and orchestration of the Techex TX Core platform.
 
-![Techex TX Core](~/user-guide/images/techex-txcore-demo.gif)
+![Techex TX Core](../../user-guide/images/techex-txcore-demo.gif)
 
 ## Key features
 
