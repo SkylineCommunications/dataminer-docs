@@ -251,3 +251,9 @@ When you cancelled the generation of a PDF report by closing the preview window,
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In some cases, an NullReference exception could be thrown when you shared a dashboard.
+
+#### Dashboards app: Button panel component would incorrectly start to flicker when it received an update [ID 43412]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a dashboard containing a *Button panel* component was embedded in DataMiner Cube, the *Button panel* component would incorrectly start to flicker when it received an update.
