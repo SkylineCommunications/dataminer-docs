@@ -10,11 +10,10 @@ uid: techex-tx-core-install
 - DataMiner 10.4.8/10.5.0 or higher
 - DataMiner System using [STaaS](xref:STaaS) or [dedicated clustered storage](xref:Dedicated_clustered_storage)
 - The [GenericInterface](xref:Overview_of_Soft_Launch_Options#genericinterface) soft-launch option must be enabled.
-- [Techex MWCore connector](https://catalog.dataminer.services/details/838c9515-69fd-4405-9284-822cb8bd5686)
 
 ## Deploying the DataMiner Techex TX Core app
 
-1. Look up the [*Techex TX Core* package](https://catalog.dataminer.services/details/d9ec570f-a625-40c1-a6fa-c9b4f15416cd) in the Catalog.
+1. Look up the [*Techex TX Core* package](https://catalog.dataminer.services/details/3db5e1b5-9d22-44f6-bf6c-7c6c205f8c13) in the Catalog.
 
 1. Click the *Deploy* button.
 
