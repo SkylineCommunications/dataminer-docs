@@ -14,7 +14,7 @@ The NetInsight Nimbra Vision product is designed to provide management and orche
 
 In this context, the DataMiner Nimbra Vision solution is a valuable asset for anyone using Nimbra products. It is not intended to replace any Nimbra product but rather to offer features that simplify the orchestration of end-to-end services on a Nimbra MSR network.
 
-![NetInsight Nimbra Vision](~/user-guide/images/netinsight-nimbra-vision-demo.gif)
+![NetInsight Nimbra Vision](../../user-guide/images/netinsight-nimbra-vision-demo.gif)
 
 ## Key features
 
@@ -29,13 +29,11 @@ The DataMiner Nimbra Vision solution provides not only a comprehensive view of a
 
 ## Solution components
 
-This solution consists of the following artifacts:
+The solution package contains the following artifacts:
 
 | Artifact name | Artifact type     | Location |
 |-------------|---------------------|------    |
 | NetInsight Nimbra Vision | Connector    | [Catalog](https://catalog.dataminer.services/details/e48af0b9-b52c-4106-b0e0-22c44ead85f5) |
 | NetInsight Nimbra Vision | Visio    | [Catalog](https://catalog.dataminer.services/details/9bf706bd-93a3-421f-ba1c-c2620f5e072d)    |
-| Nimbra Vision app | Low-code app | [Catalog](https://catalog.dataminer.services) |
+| Nimbra Vision app | Low-code app | [Catalog](https://catalog.dataminer.services/details/d9ec570f-a625-40c1-a6fa-c9b4f15416cd) |
 | Source code | Automation | [GitHub](https://github.com/SkylineCommunications/NIS-AS-NimbraVisionScripts) |
-
-Please head over to [NetInsight Nimbra Vision Architecture](xref:netinsight-nimbra-vision-architecture) to get more details on the architecture of this solution.
