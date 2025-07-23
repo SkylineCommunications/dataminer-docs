@@ -337,6 +337,17 @@ When you add a new relational anomaly parameter group using either the *RAD Mana
 | Anomaly threshold | 6 |
 | Minimum anomaly duration | 15 minutes |
 
+#### Relational anomaly detection: Enhanced logging when swarming elements [ID 43415]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+Up to now, when an element of which no parameter was included in any of the RAD parameter groups was swarmed, the following error would be logged:
+
+`ERR|0|Parameter XXX/YYYY is currently swarming to another hosting agent: RAD groups including this parameter are no longer supported`
+
+From now on, this error will only be logged when at least one parameter of the swarmed element is included in a RAD parameter group.
+
 ### Fixes
 
 #### SLManagedScripting: The same dependency would be loaded multiple times by different connectors [ID 42779]
