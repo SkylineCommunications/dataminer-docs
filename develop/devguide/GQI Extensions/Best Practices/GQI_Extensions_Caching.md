@@ -19,9 +19,9 @@ Avoid caching when:
 
 ## How To Add Caching
 
-Adding caching to a GQI extension is not natively supported by the framework and must be implemented manually. The most common approach is to use in-memory caching with static variables (for example a `ConcurrentDictionary`) to share data between queries and operators within the same precompiled script.
+Adding caching to a GQI extension is not natively supported by the framework and must be implemented manually. The most common approach is to use in-memory caching with static variables (for example a `ConcurrentDictionary`) to share data between queries and operators within the same extension library.
 
-Because each precompiled script runs in its own process, this static cache is process-local. It won’t be shared across multiple compiled scripts or across DataMiner agents. If you need to share cached data beyond a single process, you must use a different approach, for example file-based caching.
+Because each extensions library runs in its own process, this static cache is process-local. It won’t be shared across multiple extensions libraries or across DataMiner agents. If you need to share cached data beyond a single process, you must use a different approach, for example file-based caching, DOM-based caching, ...
 
 ## Key Considerations When Caching
 
