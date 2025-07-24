@@ -55,7 +55,7 @@ For DataMiner data, caching per security group is the most common and efficient 
 
 Benifits of caching per security group:
 - enforces access control (no cross-group data leaks).
-- improvides performance and reduces memory consumption by sharing results within a group.
+- improves performance and reduces memory consumption by sharing results within a group.
 
 ### Memory consumption
 
