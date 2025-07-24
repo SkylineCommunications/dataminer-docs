@@ -379,6 +379,14 @@ When migrating data from Elasticsearch to OpenSearch, at some point, the *ReInde
 
 This tool has now been adapted to make sure the `is_write_index` flag of the aliases is not reset during the migration process.
 
+#### Trend predictions with prediction intervals spanning the full data range will no longer be shown [ID 43399]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+From now on, trend predictions with prediction intervals spanning the full data range (i.e. based on `RangeLow` and `RangeHigh`) will no longer be shown.
+
+Such intervals indicate highly unpredictable data behavior, offering little to no meaningful forecasting value.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]

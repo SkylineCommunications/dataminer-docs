@@ -325,6 +325,14 @@ Example:
 https://myDMA/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true&fitMode=center
 ```
 
+#### Trend predictions with prediction intervals spanning the full data range will no longer be shown [ID 43399]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+From now on, trend predictions with prediction intervals spanning the full data range (i.e. based on `RangeLow` and `RangeHigh`) will no longer be shown.
+
+Such intervals indicate highly unpredictable data behavior, offering little to no meaningful forecasting value.
+
 #### Relational anomaly detection: New default values for 'Anomaly threshold' and 'Minimum anomaly duration' [ID 43400]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
