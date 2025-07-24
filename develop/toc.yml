@@ -1098,10 +1098,11 @@ items:
             topicUid: GQI_TimeRangeMetadata
       - name: Best practices
         topicUid: GQI_Extensions_Best_Practices
+        items:
+          - name: Caching
+            topicUid: GQI_Extensions_Caching
       - name: Logging
         topicUid: GQI_Extensions_Logging
-      - name: Caching
-        topicUid: GQI_Extensions_Caching
   - name: User-Defined APIs
     topicUid: DMI_User-DefinedAPIs
     items:

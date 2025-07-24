@@ -98,4 +98,4 @@ Proper concurrency management ensures reliable, consistent caching behavior with
 
 ## Example
 
-For a full, detailed example implementation of an ad hoc data source with caching, concurrency handling, and security group support, please see the [Scaling Ad hoc Data Source](xref:Scaling_Ad_hoc_Data_Source_Full_Example) page.
+For a full, detailed example implementation of an ad hoc data source with caching, concurrency handling, and security group support, please see the [Scaling Ad hoc Data Source](xref:Scaling_Ad_hoc_Data_Source) page.
