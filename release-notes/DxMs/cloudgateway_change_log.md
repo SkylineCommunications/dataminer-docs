@@ -6,7 +6,7 @@ uid: cloudgateway_change_log
 
 #### 24 July 2025 - Fix - CloudGateway 2.17.11 - Falsly reporting connectivity warnings due to incomplete validation
 
-An issue introduced in CloudGateway 2.17.4 has been resolved where the connection to dataminer.services was only validated by IP without falling back on DNS like it would before. This fallback is needed on systems where the firewall is configured to allow traffic based on DNS instead of by IP.
+An issue introduced in CloudGateway 2.17.5 has been resolved where the connection to dataminer.services was only validated by IP without falling back on DNS like it would before. This fallback is needed on systems where the firewall is configured to allow traffic based on DNS instead of by IP.
 
 #### 07 July 2025 - Fix - CloudGateway 2.17.10 - Unhandled exception while setting up connection could cause a DxM restart
 
