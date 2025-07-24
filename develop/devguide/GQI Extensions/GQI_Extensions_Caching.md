@@ -6,7 +6,6 @@ uid: GQI_Extensions_Caching
 
 When working with **ad hoc data sources** and/or **custom operators**, each query creates a new instance of the data source and for each row the HandleRow method gets called. If constructing the data or handling the data is resource-intensive (e.g., multiple API calls, heavy calculations), scalability becomes critical. Multiple users may query the same data concurrently, so optimizing performance is key.
 
-
 ## When To Use Caching
 
 Caching is recommended when:
@@ -18,21 +17,51 @@ Avoid caching when:
 - Accuracy must always be real-time (e.g. live status, alarms).
 - The dataset is very small and fast to compute (caching adds unnecessary complexity).
 
+## How To Add Caching
+
+Adding caching to a GQI extension is not natively supported by the framework and must be implemented manually. The most common approach is to use in-memory caching with static variables (for example a `ConcurrentDictionary`) to share data between queries and operators within the same precompiled script.
+
+Because each precompiled script runs in its own process, this static cache is process-local. It won’t be shared across multiple compiled scripts or across DataMiner agents. If you need to share cached data beyond a single process, you must use a different approach, for example file-based caching.
+
 ## Key Considerations When Caching
 
-Understanding these considerations helps you avoid common mistakes such as assuming that static caches are shared across all scripts or neglecting how quickly memory usage can grow. By carefully planning aspects like cache scope, memory limits, invalidation strategies, and concurrency handling, you ensure that your caching approach improves performance without introducing data leaks, stale results, or race conditions. Ultimately, the right caching strategy balances performance, freshness, and security to meet your system’s specific needs.
+- [**Cache lifetime**](#cache-lifetime): Know which objects can safely be cached and which framework dependencies must never be stored statically.
+When adding caching to GQI extensions, there are several aspects you should evaluate:
+- [**Respect Access Control**](#respect-access-control): Ensure cached data does not leak between users or groups.
+- [**Memory consumption**](#memory-consumption): Understand how the size and number of cache entries affect memory usage.  
+- [**Cache invalidation**](#cache-invalidation): Plan how and when to refresh or clear cached data.
+- [**Concurrency**](#concurrency): Handle simultaneous cache access safely to avoid race conditions or duplicate work.
 
-### Caching Per Security Group
+### Cache Lifetime
 
-Caching per security group ensures that access control is respected, as each group only sees the data they are permitted to view. It also prevents accidental data leaks that could occur if a single shared cache were used for all users. Additionally, this approach improves performance by allowing users in the same group to share cached results rather than recomputing them individually.
+Caching in GQI extensions is **not natively supported** by the framework, meaning you must handle all cache management manually in your extension logic. Understanding the lifetime of your cache and the objects involved is crucial to avoid subtle issues.
 
-In summary, caching per security group:
+##### What can be cached
+
+- Your own data models or query results.
+- Serializable data or computed values:
+
+##### What cannot be cached
+
+- Framework-provided dependencies like GQIDMS or IGQILogger:
+These are tied to the lifetime of a specific extension instance and must not be stored in static variables or reused between instances.
+- Any object that holds open connections, handles, or stateful resources provided by the framework.
+
+### Respect Access Control
+
+When implementing caching, it’s essential to ensure that users only see the data they are allowed to access. The caching strategy you choose must align with your access control requirements to prevent data leaks or exposure of sensitive information.
+
+For DataMiner data, caching per security group is the most common and efficient way to respect access control. It allows users within the same group to share cached results while ensuring data is isolated from other groups. However, depending on the use case, you may not need group-level caching at all (e.g., when data is already public) or you might need an even finer-grained approach (e.g., per user).
+
+Benifits of caching per security group:
 - enforces access control (no cross-group data leaks).
 - improvides performance and reduces memory consumption by sharing results within a group.
 
 ### Memory consumption
 
-Caching per security group can quickly increase memory usage, especially in environments with many unique security groups or large datasets per group. Each cache entry holds a copy of the results for that group, so memory usage scales with the number of groups and the size of each dataset.  
+While caching can greatly improve performance, it always comes at the cost of additional memory usage. The total memory footprint grows with both the size of each cached dataset and the number of distinct cache entries being stored.
+
+A common example is caching per security group rather than per individual user. This approach is far more efficient than user-level caching, but it can still consume significant memory if your environment contains many groups or if each group’s dataset is large. Even when using a single global cache (not per group), similar problems can occur if the dataset itself is sizable or if stale entries are left in memory too long.
 
 To prevent excessive memory growth:
 - **Set limits** on the maximum number of groups cached at once.  
@@ -66,16 +95,7 @@ To handle concurrency safely:
 
 Proper concurrency management ensures reliable, consistent caching behavior without wasting resources or causing data corruption.
 
-## Static Cache Scope
-
-Each compiled script containing GQI extensions runs in its own process. This means that a static `ConcurrentDictionary` will only share data between the data sources and operators within that process. If you have multiple precompiled scripts that need to share a cache, they must be placed into the same project or precompiled library. Otherwise, each script will maintain its own independent cache instance.
-
-This has significant implications for your caching strategy:
-
-- You cannot rely on a static cache to be shared globally across all scripts or processes.
-- If cache sharing is required between different precompiled scripts, consider combining the 2 scripts into 1 precompiled script.
-
 
 ## Example
 
-For a full, detailed example implementation of an ad hoc data source with caching, concurrency handling, and security group support, please see the [Scaling Ad hoc Data Source](./Scaling_Ad_hoc_Data_Source_Full_Example.md) page.
+For a full, detailed example implementation of an ad hoc data source with caching, concurrency handling, and security group support, please see the [Scaling Ad hoc Data Source](xref:Scaling_Ad_hoc_Data_Source_Full_Example) page.
