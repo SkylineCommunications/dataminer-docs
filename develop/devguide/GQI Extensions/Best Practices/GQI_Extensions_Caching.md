@@ -25,8 +25,9 @@ Because each precompiled script runs in its own process, this static cache is pr
 
 ## Key Considerations When Caching
 
-- [**Cache lifetime**](#cache-lifetime): Know which objects can safely be cached and which framework dependencies must never be stored statically.
 When adding caching to GQI extensions, there are several aspects you should evaluate:
+
+- [**Cache lifetime**](#cache-lifetime): Know which objects can safely be cached and which framework dependencies must never be stored statically.
 - [**Respect Access Control**](#respect-access-control): Ensure cached data does not leak between users or groups.
 - [**Memory consumption**](#memory-consumption): Understand how the size and number of cache entries affect memory usage.  
 - [**Cache invalidation**](#cache-invalidation): Plan how and when to refresh or clear cached data.
