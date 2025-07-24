@@ -968,6 +968,8 @@ items:
   - name: GQI extensions
     topicUid: GQI_Extensions
     items:
+      - name: Extension libraries
+        topicUid: GQI_Extension_Libraries
       - name: Ad hoc data sources
         topicUid: GQI_Ad_hoc_data_sources
         items:

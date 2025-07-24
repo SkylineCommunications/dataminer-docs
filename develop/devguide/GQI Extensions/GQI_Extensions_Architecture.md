@@ -22,7 +22,7 @@ When a query uses GQI extensions (like ad hoc data sources or custom operators),
 ## Child processes
 
 **Process name:** `DataMiner GQI.ExtensionsWorker.Automation.exe`
-Each extension library runs in its own child process, providing isolation and modularity. You can identify which extension a child process is responsible for by checking the command line arguments in Task Manager.
+Each [extension library](xref:GQI_Extension_Libraries) runs in its own child process, providing isolation and modularity. You can identify which extension a child process is responsible for by checking the command line arguments in Task Manager.
 
 - **Technology:** .NET Framework 4
 
