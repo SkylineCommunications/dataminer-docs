@@ -4,34 +4,31 @@ uid: SNMP_Managers_xml
 
 # SNMP Managers.xml
 
-The file *SNMP Managers.xml* is used for the configuration of remote SNMP Managers.
+The file *SNMP Managers.xml* is used for the configuration of remote SNMP Managers and is located in the following folder: `C:\Skyline DataMiner\`.
 
-- This file is located in the following folder:
+Note that this file is only partially synchronized in a DMS. The [Configuration](xref:SNMP.Configuration) section of this file is not synced. Each DMA only reads the entry in this section that matches its own DataMiner ID.
 
-  `C:\Skyline DataMiner\`
+> [!IMPORTANT]
+> To implement any manual changes to *SNMP Managers.xml*, first stop the DMA and then restart it after your changes have been saved.
 
-- For each DataMiner Agent in the DMS, the *\<Configuration>* section of this file contains an *\<Agent>* tag with the following subtags:
+## Configuration section
 
-  - *\<AuthoritativeEngineID>*: The engine ID used by the DMA for northbound SNMP traffic.
+For each DataMiner Agent in the DMS, the [Configuration](xref:SNMP.Configuration) section of this file contains an [Agent](xref:SNMP.Configuration.Agent) tag with the following subtags:
 
-  - *\<EngineBoots>*: The number of engine restarts of the DMA.
+- [AuthoritativeEngineID](xref:SNMP.Configuration.Agent.AuthoritativeEngineID): The engine ID used by the DMA for northbound SNMP traffic.
+- [EngineBoots](xref:SNMP.Configuration.Agent.EngineBoots): The number of engine restarts of the DMA.
+
+For more information about the use of AuthoritativeEngineID and EngineBoots, refer to [About snmpEngineID, snmpEngineBoots, snmpEngineTime and timeliness](xref:ConnectionsSnmpSnmpv3#about-snmpengineid-snmpengineboots-snmpenginetime-and-timeliness).
 
   > [!NOTE]
   > It is possible to change the engine ID using the SLNetClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme care. See [Modifying the engine ID of a DMA](xref:SLNetClientTest_modifying_engine_id).
 
-- This file is only partially synchronized in a DMS. The *\<Configuration>* section of this file is not synced. Each DMA only reads the entry in this section that matches its own DataMiner ID.
+## SnmpManagers section
 
-- Each *\<SnmpManager>* tag can have a *codepage* attribute, which makes it possible to select a code page. Its value is an integer. For example:
+This section contains the configuration of the SNMP managers: third party systems to which DataMiner has to forward SNMP notifications. 
 
-  | Attribute configuration | Description            |
-  |---------------------------|------------------------|
-  | codepage="65001"          | Equals unicode="true"  |
-  | codepage="0"              | Equals unicode="false" |
-
-  For a list of all possible code pages, see <https://msdn.microsoft.com/en-us/library/windows/desktop/dd317756(v=vs.85).aspx>.
-
-> [!IMPORTANT]
-> To implement any manual changes to *SNMP Managers.xml*, first stop the DMA and then restart it after your changes have been saved.
+For more information about SNMP managers, refer to [About SNMP Managers](xref:About_SNMP_managers).
+For more information about how to configure SNMP managers, refer to [Configuring an SNMP manager in DataMiner Cube](xref:Configuring_an_SNMP_manager_in_DataMiner_Cube).
 
 ## Example of the \<Configuration> section in the SNMP Managers.xml file
 
