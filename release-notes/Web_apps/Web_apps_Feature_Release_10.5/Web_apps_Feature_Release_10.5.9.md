@@ -257,3 +257,9 @@ In some cases, an NullReference exception could be thrown when you shared a dash
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 When a dashboard containing a *Button panel* component was embedded in DataMiner Cube, the *Button panel* component would incorrectly start to flicker when it received an update.
+
+#### Low-Code Apps: List of possible actions to be configured for a component would no longer be correct after changing the visual [ID 43423]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, while editing a low-code app, you changed the visual of a component, the list of possible actions to be configured for that component would no longer be correct.
