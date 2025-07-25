@@ -176,6 +176,20 @@ When a DOM definition field does not have a default value defined, by default, n
 
 From now on, if a DOM definition field does not have a default value defined, all fields of that type will be empty when displayed on a form.
 
+#### Failover: DMS call DMS_VERIFY_CLIENT_COOKIE would incorrectly be sent to the offline agent [ID 43397]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In a Failover setup using a shared hostname, the DMS call `DMS_VERIFY_CLIENT_COOKIE` would incorrectly be sent to the offline agent instead of the online agent.
+
+From now on, whenever the offline agent receives a `DMS_VERIFY_CLIENT_COOKIE` call, it will forward it to the online agent.
+
+#### SLDataMiner.txt log file entries could incorrectly contain a placeholder instead of the actual name of the function [ID 43398]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In the *SLDataMiner.txt* log file, log entries could incorrectly contain the `__FUNCTION__` placeholder instead of the actual name of the function in question.
+
 #### Certain log files would have their maximum size incorrectly set to 0 [ID 43403]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
