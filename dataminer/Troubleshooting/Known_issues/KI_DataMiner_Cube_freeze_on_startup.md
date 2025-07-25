@@ -32,6 +32,7 @@ All versions of the DataMiner Cube desktop application (DataMinerCube.exe).
 
 - For binaries signed after 2024-07-01, this is with a certificate from DigiCert that will attempt to access the following URLs as well:
 
+  - <http://ocsp.digicert.com/>
   - <http://crl3.digicert.com/>
   - <http://crl4.digicert.com/>
 
@@ -91,6 +92,7 @@ Background articles:
   127.0.0.1   crl.comodoca.com
   127.0.0.1   ocsp.sectigo.com
   127.0.0.1   crl.sectigo.com
+  127.0.0.1   ocsp.digicert.com
   127.0.0.1   crl3.digicert.com
   127.0.0.1   crl4.digicert.com
   ```
