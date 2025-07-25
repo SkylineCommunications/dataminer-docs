@@ -107,6 +107,15 @@ A number of enhancements have been made to the way in which element and service 
 - The *Created* and *Created by* values will now be displayed as one single value.
 - The *Modified* and *Modified by* values will now be displayed as one single value.
 
+#### Default web browser engine will now be Edge instead of Chromium [ID 43429]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+From now on, in DataMiner Cube, the default web browser engine will be Edge instead of Chromium.
+
+- In *System Center > System settings > Plugins*, it will no longer be possible to select Chromium as default web browser engine.
+- If, in any visual overview, there are shapes in which the *UseChrome* option is specified, this option will now be disregarded. The shapes in question will use Edge instead.
+
 ### Fixes
 
 #### System Center - SNMP forwarding: 'Resend all active alarms every' option would incorrectly be set to 0 [ID 43206]
