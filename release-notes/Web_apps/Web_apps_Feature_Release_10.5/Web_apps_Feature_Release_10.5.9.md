@@ -252,6 +252,14 @@ When you cancelled the generation of a PDF report by closing the preview window,
 
 In some cases, an NullReference exception could be thrown when you shared a dashboard.
 
+#### Visual Overview in web apps: Visual Overview component would incorrectly show a page other than the default page [ID 43375]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, in a dashboard or a low-code app, a Visual Overview component was linked to another Visual Overview component, in some cases, that first component would incorrectly show a page other than the default page.
+
+Also, in some cases, a Visual Overview component could keep on loading a page when the object reference was fed by another component.
+
 #### Dashboards app: Button panel component would incorrectly start to flicker when it received an update [ID 43412]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
