@@ -799,6 +799,8 @@ items:
             topicUid: DOM_DomInstanceHistorySettings
           - name: StorageSettings
             topicUid: DOM_StorageSettings
+          - name: DomInstanceNetworkAttachmentSettings
+            topicUid: DOM_DomInstanceNetworkAttachmentSettings
       - name: DOM events
         topicUid: DOM_events
       - name: DOM history
