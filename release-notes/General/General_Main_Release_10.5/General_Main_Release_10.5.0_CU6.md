@@ -280,3 +280,9 @@ From now on, if a DOM definition field does not have a default value defined, al
 In some rare cases, certain log files could have their maximum size incorrectly set to 0, causing them to start a new file each time an entry was added.
 
 From now on, by default, all log files will have their maximum size set to 10 MB.
+
+#### Failover: Problem when synchronizing the ClusterEndpoints.json files on large systems [ID 43407]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+In large DataMiner Systems, in some cases, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely.
