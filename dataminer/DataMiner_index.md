@@ -57,7 +57,7 @@ uid: DataMiner_index
 
 <div class="row"> 
   <div class="column">
-    <a href="/dataminer/Legal/Terms_of_Sale.html" title="Legal" target="_self"><img src="~/dataminer/images/Legal.svg" style="width:100%"></a>
+    <a href="/dataminer/Legal/Commercial_Terms/Terms_of_Sale.html" title="Legal" target="_self"><img src="~/dataminer/images/Legal.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/FAQ/FAQs.html" title="FAQ" target="_self"><img src="~/dataminer/images/FAQ.svg" style="width:100%"></a>
