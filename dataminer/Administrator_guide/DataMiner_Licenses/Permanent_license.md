@@ -16,7 +16,7 @@ For a permanent license for a DataMiner Agent, the following procedure applies:
 
 1. Email a copy of the file *request.lic*, located in the folder `C:\Skyline DataMiner\`, to <dataminer.licensing@skyline.be>.
 
-1. Wait until you receive the *dataminer.lic* file from Skyline
+1. Wait until you receive the *dataminer.lic* file from Skyline.
 
 1. Copy the file to the folder `C:\Skyline DataMiner\`.
 
