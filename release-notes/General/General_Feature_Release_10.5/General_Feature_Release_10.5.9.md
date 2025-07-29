@@ -486,12 +486,6 @@ Logging has been adjusted to not spam if multiple SNMP Managers send to the same
 Failed resolving authoritative context ID for SNMP Manager
 ```
 
-#### Swarming: Problem when redundancy groups contained DVE child elements acting as primary or backup elements [ID 43286]
-
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
-
-When Swarming was enabled, in some rare cases, SLDMS and SLDataMiner could get into a deadlock when the system contained redundancy groups in which DVE child elements acted as primary or backup elements.
-
 #### BrokerGateway: GetConnectionDetails call would incorrectly not return any destinations [ID 43292]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
