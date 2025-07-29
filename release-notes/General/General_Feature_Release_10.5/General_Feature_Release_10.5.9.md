@@ -586,3 +586,10 @@ From now on, by default, all log files will have their maximum size set to 10 MB
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
 In large DataMiner Systems, in some cases, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely.
+
+#### Swarming: Hosting agent cache in SLDataMiner could get out of sync after an element had been swarmed [ID 43434]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+After an element had been swarmed, in some rare cases, the hosting agent cache in SLDataMiner could get out of sync.
