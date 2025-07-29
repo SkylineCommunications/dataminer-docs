@@ -158,6 +158,20 @@ The logging of a DOM manager will now also contain a line indicating the start o
 2025/07/02 15:05:11.110|SLNet.exe|HandleStatusTransitionRequest|INF|3|269|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Handling status transition with ID 'new_to_closed' for instance with ID '1ff720a3-0aa2-4548-8b51-d8b975e19ea4'.
 ```
 
+#### Trap forwarding: Traps can now be forwarded to target elements of which a specific hostname was configured in the port settings [ID 43347]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+SLSNMPManager is now capable of forwarding traps to target elements of which a specific hostname was configured in the port settings.
+
+If the hostname cannot be resolved to an IP address, an error alarm with the following message will be generated on the target element:
+
+`Could not resolve destination host to an IP: polling host=<hostname>, or failed to set the destination address. <ERROR>`
+
+Example:
+
+`Could not resolve destination host to an IP: polling host=localhost123, or failed to set the destination address. Host to IP failure. Error : 11001. [WSAHOST_NOT_FOUND]`
+
 ## Changes
 
 ### Enhancements
