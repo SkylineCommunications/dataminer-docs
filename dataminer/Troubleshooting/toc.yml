@@ -201,6 +201,8 @@ items:
             topicUid: Cassandra_expired_blocking_SSTables
           - name: Element fails to start because of database failure
             topicUid: Cassandra_General_DB_Failure
+      - name: Troubleshooting – DaaS
+        topicUid: Troubleshooting_DaaS
       - name: Troubleshooting – dataminer.services
         items:
           - name: Investigating dataminer.services connection issues
