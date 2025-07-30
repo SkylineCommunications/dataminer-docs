@@ -983,6 +983,8 @@ items:
             items:
               - name: Forwarding dummy data to the GQI
                 topicUid: Forwarding_dummy_data_to_GQI
+              - name: Optimizing sort operations
+                topicUid: GQI_Ad_hoc_Optimizing_sort_operations
               - name: Scaling an ad hoc data source
                 topicUid: Scaling_Ad_hoc_Data_Source
           - name: Tutorials
