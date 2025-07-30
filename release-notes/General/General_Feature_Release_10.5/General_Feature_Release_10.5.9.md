@@ -607,7 +607,7 @@ In large DataMiner Systems, in some cases, an issue could occur when the *Cluste
 
 #### SLAnalytics - Pattern matching: Problem when retrieving the streaming matches [ID 43419]
 
-<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
 When a linked pattern was created on elements hosted on different DataMiner Agents, in some cases, the `getPatternMatchMessage` would not return the correct number of streaming matches.
 

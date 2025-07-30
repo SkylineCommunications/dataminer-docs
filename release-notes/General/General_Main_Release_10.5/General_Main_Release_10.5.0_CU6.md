@@ -306,3 +306,9 @@ From now on, by default, all log files will have their maximum size set to 10 MB
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
 In large DataMiner Systems, in some cases, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely.
+
+#### SLAnalytics - Pattern matching: Problem when retrieving the streaming matches [ID 43419]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a linked pattern was created on elements hosted on different DataMiner Agents, in some cases, the `getPatternMatchMessage` would not return the correct number of streaming matches.
