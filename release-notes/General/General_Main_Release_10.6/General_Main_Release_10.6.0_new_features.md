@@ -797,33 +797,6 @@ After a dependency has been uploaded, all scripts using that dependency will be 
 > [!NOTE]
 > For QActions in protocols, the relevant SLScripting process must be restarted before the new DLL will get loaded.
 
-#### DataMiner Object Models: Attachments can now be uploaded to a network share [ID 43114]
-
-<!-- MR 10.6.0 - FR 10.5.9 -->
-
-In `ModuleSettings`, `DomManagerSettings` now contains a new `DomInstanceNetworkAttachmentSettings` class that allows you to save DOM instance attachments to a network share instead of to the *Documents* module.
-
-The `DomInstanceNetworkAttachmentSettings` class contains the following properties:
-
-- `NetworkSharePath` (string)
-
-  The UNC path to a network share.
-
-  This path has to start with "\\\\", and cannot contain any characters that are illegal in path specifications.
-
-- `CredentialId` (GUID)
-
-  The GUID of the credential containing the username and password of the user account that will be used to add the attachment to the network share.
-
-  - This credential, stored in the credential library, must be of type `UserNameAndPasswordCredential`.
-  - The user has to have read/write access to the network share. If the user is a domain user or a local Windows user, the user name must be preceded by the domain/host name (e.g. MYDOMAIN\myuser or MYPC\myuser).
-
-> [!NOTE]
->
-> - When you create or update a `DomInstanceNetworkAttachmentSettings` entry with a `NetworkSharePath` and a `CredentialId`, the system will check whether you have access to the credential.
-> - Once a `DomInstanceNetworkAttachmentSettings` entry has made made, any user with permission to create or update DOM instances will be allowed to add attachments to the network share in question, even if they do not have direct access to the share.
-> - By default, the size of the attachments is limited to 20 MB. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#documentsmaxsize).
-
 #### SLNet: 'TraceId' property added to ClientRequestMessage & extended logging [ID 43187]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
