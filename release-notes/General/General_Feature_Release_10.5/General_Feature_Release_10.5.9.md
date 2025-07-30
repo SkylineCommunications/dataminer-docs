@@ -532,11 +532,11 @@ In some cases, a run-time error could be thrown when a DVE child element was del
 
 When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
 
-#### Problem when loading initial parameter data for replicated elements [ID 43339]
+#### Problem when loading initial parameter data for remote elements [ID 43339]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-In some cases, client applications like DataMiner Cube would fail to load initial parameter data for replicated elements.
+In some cases, client applications like DataMiner Cube would fail to load initial parameter data for remote elements.
 
 #### Swarming: An element being swarmed would briefly run on the old DMA as well as on the new DMA [ID 43345]
 
@@ -604,6 +604,12 @@ From now on, by default, all log files will have their maximum size set to 10 MB
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
 In large DataMiner Systems, in some cases, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely.
+
+#### SLAnalytics - Pattern matching: Problem when retrieving the streaming matches [ID 43419]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+When a linked pattern was created on elements hosted on different DataMiner Agents, in some cases, the `getPatternMatchMessage` would not return the correct number of streaming matches.
 
 #### Swarming: Hosting agent cache in SLDataMiner could get out of sync after an element had been swarmed [ID 43434]
 
