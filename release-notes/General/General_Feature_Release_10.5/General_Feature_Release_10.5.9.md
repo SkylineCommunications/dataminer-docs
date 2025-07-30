@@ -532,6 +532,12 @@ In some cases, a run-time error could be thrown when a DVE child element was del
 
 When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
 
+#### Problem when loading initial parameter data for replicated elements [ID 43339]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, client applications like DataMiner Cube would fail to load initial parameter data for replicated elements.
+
 #### Swarming: An element being swarmed would briefly run on the old DMA as well as on the new DMA [ID 43345]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
