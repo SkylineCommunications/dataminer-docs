@@ -146,6 +146,12 @@ Although the upgrade would succeed in the background, no information regarding t
 
 In OpenSearch, in some cases, queries with a limit could cause scroll contexts to linger. From now on, queries with a limit will be properly tracked and cleaned up.
 
+#### SNMP elements could get stuck in slow poll mode [ID 43216]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, SNMP elements could get stuck in slow poll mode because they would fail to recover after connectivity was restored.
+
 #### Failover: Primary IP address could incorrectly be set to the IP address of the online agent [ID 43257]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->

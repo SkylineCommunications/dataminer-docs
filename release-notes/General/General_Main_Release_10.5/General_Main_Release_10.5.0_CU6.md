@@ -201,6 +201,12 @@ As BrokerGateway is started alongside the Microsoft Windows operating system, in
 
 To prevent being unaware of certain IP addresses, from now on, BrokerGateway will not only refresh its IP address cache every 5 minutes, it will also refresh that cache each time it detects a network adapter update.
 
+#### SNMP elements could get stuck in slow poll mode [ID 43216]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, SNMP elements could get stuck in slow poll mode because they would fail to recover after connectivity was restored.
+
 #### Failover: Primary IP address could incorrectly be set to the IP address of the online agent [ID 43257]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
