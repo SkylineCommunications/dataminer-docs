@@ -650,7 +650,7 @@ items:
             topicUid: Importing_a_query
       - name: Logging
         topicUid: Dashboards_and_Low_Code_Apps_Logging
-      - name: Style Guide
+      - name: Style guide
         topicUid: LCA_Style_guide
       - name: Frequently asked questions
         topicUid: Dashboards_and_Low_Code_Apps_FAQ
