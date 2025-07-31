@@ -704,3 +704,9 @@ When a linked pattern was created on elements hosted on different DataMiner Agen
 <!-- Not added to MR 10.6.0 -->
 
 After an element had been swarmed, in some rare cases, the hosting agent cache in SLDataMiner could get out of sync.
+
+#### SLAnalytics - Automatic incident tracking: Problem due to an incorrect internal state [ID 43451]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+In some cases, an incorrect internal state in the automatic incident tracking feature could cause the SLAnalytics process to stop working.
