@@ -62,6 +62,16 @@ By default, this setting will be enabled.
 
 In the *Layout* pane of the *Maps* component, a *Conditional coloring* option has now been added. This will allow you to highlight lines based on a condition.
 
+#### Dashboards app & Low-Code Apps: New 'Component name' setting [ID 43453]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Every component now has a new *Configuration name* setting, which can be found in the *Layout > General* tab.
+
+The new setting will allow you to assign a special name to a component. This will make it easier to identify components when configuring a dashboard or a low-code app. When you leave this setting empty, as before, the name of the component will be *[type of visualization]*, followed by a sequence number. For example, "Table 1" or "List 2".
+
+Although this component name will appear in different places to refer to the component in question, it will merely be used as an alias. It will have no impact whatsoever with regard to component functionality.
+
 ## Changes
 
 ### Enhancements
