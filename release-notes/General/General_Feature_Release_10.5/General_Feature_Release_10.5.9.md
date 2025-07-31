@@ -343,6 +343,14 @@ Up to now, when an element of which no parameter was included in any of the RAD 
 
 From now on, this error will only be logged when at least one parameter of the swarmed element is included in a RAD parameter group.
 
+#### DataMiner Object Models: Updating the display value of an enum is now allowed [ID 43452]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Up to now, it was not possible to change the display name of an enum entry when the enum was being used by a DOM instance, despite it having no effect on the underlying enum value or DOM behavior.
+
+This limitation has now been removed. From now on, it will be allowed to update the display name of an enum entry, even if the enum is being used by DOM instances.
+
 ### Fixes
 
 #### SLManagedScripting: The same dependency would be loaded multiple times by different connectors [ID 42779]

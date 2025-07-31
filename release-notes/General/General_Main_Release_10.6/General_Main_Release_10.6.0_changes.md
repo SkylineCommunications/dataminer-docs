@@ -387,6 +387,14 @@ From now on, trend predictions with prediction intervals spanning the full data 
 
 Such intervals indicate highly unpredictable data behavior, offering little to no meaningful forecasting value.
 
+#### DataMiner Object Models: Updating the display value of an enum is now allowed [ID 43452]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Up to now, it was not possible to change the display name of an enum entry when the enum was being used by a DOM instance, despite it having no effect on the underlying enum value or DOM behavior.
+
+This limitation has now been removed. From now on, it will be allowed to update the display name of an enum entry, even if the enum is being used by DOM instances.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
