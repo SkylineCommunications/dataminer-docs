@@ -271,3 +271,11 @@ When a dashboard containing a *Button panel* component was embedded in DataMiner
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 When, while editing a low-code app, you changed the visual of a component, the list of possible actions to be configured for that component would no longer be correct.
+
+#### Dashboards app: PDFs would fail to get generated when a browser tab was closed [ID 43449]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Each open browser tab has its own WebSocket channel. When such a channel is closed, the Web API checks whether certain resources need to be cleaned up.
+
+Up to now, when a single channel was closed, all temporary PDF files would incorrectly be removed for all connections. As a result, if any PDF was being generated when a channel was closed, that generation would fail.
