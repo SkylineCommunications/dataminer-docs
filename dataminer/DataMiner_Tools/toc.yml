@@ -78,6 +78,8 @@ items:
         topicUid: Verify_ASP_Net_Version
       - name: VerifyClusterPorts.dmupgrade
         topicUid: VerifyClusterPortsdmupgrade
+      - name: VerifyGRPCConnection.dmupgrade
+        topicUid: VerifyGRPCConnectiondmupgrade
       - name: Verify Elastic Storage Type
         topicUid: Verify_Elastic_Storage_Type
       - name: Verify NATS Cluster
