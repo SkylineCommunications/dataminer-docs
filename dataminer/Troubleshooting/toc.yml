@@ -286,6 +286,8 @@ items:
             topicUid: KI_NATS_not_starting_special_chars
           - name: Upgrade fails because of VerifyClusterPort.dll prerequisite
             topicUid: KI_Upgrade_fails_VerifyClusterPorts_prerequisite
+          - name: Upgrade fails because of VerifyGRPCConnection.dll prerequisite
+            topicUid: KI_Upgrade_fails_VerifyGRPCConnection_prerequisite
           - name: DataMiner Cube freeze on startup
             topicUid: KI_DataMiner_Cube_freeze_on_startup
           - name: Migration of Ticketing data from Cassandra to Elasticsearch fails

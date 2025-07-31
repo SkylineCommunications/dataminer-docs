@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | July 31, 2025 |
 | [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | | July 15, 2025 |
 | [SRM scheduler unresponsive](xref:KI_SRM_scheduler_unresponsive) | DataMiner 10.5.6 and 10.5.7 | | July 4, 2025|
 | [SLProtocol RTE because of element stuck in slow poll mode](xref:KI_SLProtocol_RTE_after_slow_poll_timeout) | From DataMiner 10.4.0 [CU11] onwards | | June 16, 2025 |
