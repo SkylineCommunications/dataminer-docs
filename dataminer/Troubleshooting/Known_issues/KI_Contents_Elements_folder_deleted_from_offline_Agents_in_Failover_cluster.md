@@ -16,14 +16,14 @@ This issue is triggered by a specific sequence of events:
 
 1. Because of a naming conflict in the cluster, an entry with only `<INVALID NAME>` is created in the DVE element info in the database.
 
-1. This entry causes DataMiner to try and delete DVE child elements from the cluster.
+1. This entry causes DataMiner to attempt to delete DVE child elements from the cluster.
 
-1. On offline Agents, this results in the full `C:\Skyline DataMiner\Elements` folder being deleted instead of just specific DVEs.
+1. On offline Agents, this results in the entire `C:\Skyline DataMiner\Elements` folder being deleted instead of just the specific DVEs.
 
 > [!NOTE]
 >
-> - This issue is more likely to occur if the `noElementPrefix` option is used, which removes the parent element name from DVE names and therefore increases the chance of name conflicts.
-> - Entries in the database like `<INVALID NAME> element name`, i.e. also containing the element name besides `<INVALID NAME>`, do not trigger this issue.
+> - This issue is more likely to occur if the `noElementPrefix` option is used, as this removes the parent element name from DVE names and increases the chance of name conflicts.
+> - Entries in the database like `<INVALID NAME> element name` (i.e. also containing the element name in addition to `<INVALID NAME>`) do not trigger this issue.
 
 ## Fix
 
