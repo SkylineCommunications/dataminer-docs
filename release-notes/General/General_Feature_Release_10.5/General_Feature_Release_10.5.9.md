@@ -353,7 +353,7 @@ In some cases, the same dependency would be loaded multiple times by different c
 
 #### DataMiner would fail to create the necessary Windows users [ID 42819]
 
-<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 When, for example, a new DataMiner Agent had been added to the DataMiner System, since DataMiner 10.4.0 [CU4]/10.4.7, DataMiner would fail to create the necessary Windows users.
 
