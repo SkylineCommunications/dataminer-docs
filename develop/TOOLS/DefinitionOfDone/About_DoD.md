@@ -2,27 +2,71 @@
 uid: About_DoD
 ---
 
-# Definition of Done (DoD) Tool
+# Definition of Done (DoD) tool
 
-## Overview
+The Definition of Done tool is a web application designed to automate and streamline the process of managing task completion workflows. It ensures all required steps are clearly outlined, tracked, documented, and completed to maintain quality standards in development projects.
 
-The Definition of Done Tool is a web application designed to automate and streamline the process of managing task completion workflows. It ensures that all required steps are clearly outlined, tracked, documented and completed to maintain high-quality standards in development projects. While enforcing quality, it also helps you work faster and more easily by providing you with many handy links and automated features simplifying the process of task completion and adhering to procedures.
+Additionally, the tool supports efficient work by providing convenient links and automated features that simplify task completion and adherence to procedures.
 
 ## Purpose
 
 This tool helps development teams by:
 
-- **Automating task workflow management** - Ensures all required steps are completed before marking a task as done
-- **Improving quality assurance** - Provides structured checklists and validation processes
-- **Enhancing team collaboration** - Integrates with Microsoft Teams and other collaboration tools
-- **Streamlining documentation** - Automatically generates and organizes project documentation
-- **Tracking time and progress** - Built-in time registration and progress monitoring
+- **Automating task workflow management** to ensure all required steps are completed before marking a task as done.
 
-## Key Features
+- **Improving quality assurance** through structured checklists and validation processes.
 
-![Definition of Done Tool - Main View](../../images/DoD%20View.png)
+- **Enhancing team collaboration** via integration with Microsoft Teams and other collaboration tools.
 
-### 📋 1. Clipboard & URL Management
+- **Streamlining documentation** by automatically generating and organizing project documentation.
+
+- **Tracking time and progress** through built-in time registration and progress monitoring features.
+
+## Accessing the DoD tool
+
+1. Navigate to the [DoD tool home page](https://dod.skyline.be) (available to Skyline employees only).
+
+1. Sign in with your Azure AD credentials.
+
+You can now access tasks through the [main interface](#user-interface).
+
+## Using the DoD tool
+
+### Working with tasks
+
+1. On the DoD tool home page, enter a task ID and click the blue *Open* button, or navigate directly to `https://dod.skyline.be/task/{taskId}`.
+
+1. Review the automatically generated DoD checklist.
+
+1. Update the status of each DoD step by selecting *TODO*, *DONE*, or *SKIP STEP*.
+
+1. In the *Guard* column, assign responsible team members to each step.
+
+1. In the *Comment* column, provide additional context or reasons when skipping steps.
+
+### Managing checklist items
+
+- Click the "+" button to **duplicate** DoD steps and assign more guards.
+
+- Use the delete button to **remove** any of the duplicated steps.
+
+- **Edit** comments inline or click the pencil icon for more comfortable multiline editing.
+
+- Select *SKIP STEP* from the *Status* dropdown menu to **skip** any of the DoD steps; with proper reasoning.
+
+<!--To do: Review *User interface* section and further restructure page (ELS)-->
+
+### User interface
+
+#### Main Interface
+
+- **Task Header** - Quick task information and actions
+- **Checklist Table** - Comprehensive view of all task requirements
+- **Smart Action Bar** - One-click access to integrated tools
+
+![Definition of Done tool - Main View](~/develop/images/DoD_View.png)
+
+- (1) Clipboard & URL management
 
 - **Task Link** - Seamless navigation to collaboration
 - **Task URL Copying** - Quick copying of task URLs for sharing
@@ -76,40 +120,6 @@ The tool currently supports the following task types:
 - **New Driver Feature** - Adding new features to existing connector
 - **Driver Issue** - Bug fixes and issue resolution in existing connector
 
-## How to Use the Tool
+## Getting support
 
-### 1. **Getting Started**
-
-1. Navigate to the DoD Tool home page (https://dod.skyline.be). Only available for skyline employees.
-2. Sign in using your Azure AD credentials
-3. Access tasks through the main interface
-
-### 2. **Working with Tasks**
-
-1. **Open a Task**: Fill in a task ID and click "Open" or Navigate to `/task/{taskId}`
-2. **Review Checklist**: Examine the automatically generated DoD steps
-3. **Update Status**: Change status of DoD steps (TODO ? DONE/SKIPPED)
-4. **Assign Guards**: Select responsible team members for each DoD steps
-5. **Add Comments**: Provide additional context or skip reasons
-
-### 3. **Managing Checklist Items**
-
-1. **Add Steps**: Click the + button to duplicate DoD steps in case you want to involve more guards.
-2. **Delete Steps**: Use the delete button to remove unnecessary duplicated steps
-3. **Edit Comments**: Quick edit the comment directly within the main interface or click the pencil icon to edit multi-lines comments in a more confortable way.
-4. **Skip Items**: Use the Status dropdown to skip steps with proper reasoning
-
-## User Interface Features
-
-### Main Interface
-
-- **Task Header** - Quick task information and actions
-- **Checklist Table** - Comprehensive view of all task requirements
-- **Smart Action Bar** - One-click access to integrated tools
-
-## Getting Support
-
-For technical issues or feature requests:
-
-1. Contact the development team through Teams.
-2. Contact the development team through email.
+For technical issues or feature requests, contact the development team via Microsoft Teams or email.
