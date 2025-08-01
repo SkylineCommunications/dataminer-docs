@@ -12,13 +12,16 @@ All Failover systems.
 
 This issue is triggered by a specific sequence of events:
 
-1. A DVE parent element (with current or historical DVEs) is removed or migrated.
+1. A DVE parent element is removed or migrated.
 
-1. Because of a naming conflict in the cluster, an entry with only `<INVALID NAME>` is created in the DVE element info in the database.
+   > [!NOTE]
+   > The issue may also occur if the DVE parent element no longer generates DVEs, but has generated DVEs in the past.
 
-1. This entry causes DataMiner to attempt to delete DVE child elements from the cluster.
+1. Because of a naming conflict in the cluster, an entry containing only `<INVALID NAME>` is created in the DVE element info in the database.
 
-1. On offline Agents, this results in the entire `C:\Skyline DataMiner\Elements` folder being deleted instead of just the specific DVEs.
+1. As a result, DataMiner attempts to delete the DVE child elements from the cluster.
+
+1. On offline Agents, this causes the entire `C:\Skyline DataMiner\Elements` folder to be deleted instead of only the specific DVEs.
 
 > [!NOTE]
 >
