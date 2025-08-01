@@ -10,18 +10,18 @@ All Failover systems.
 
 ## Cause
 
-This issue is triggered by a specific sequence of events:
+This issue only occurs under a specific set of conditions:
 
 1. A DVE parent element is removed or migrated.
 
    > [!NOTE]
    > The issue may also occur if the DVE parent element no longer generates DVEs, but has generated DVEs in the past.
 
-1. Because of a naming conflict in the cluster, an entry containing only `<INVALID NAME>` is created in the DVE element info in the database.
+1. A naming conflict in the cluster leads to the creation of an entry containing only `<INVALID NAME>` in the DVE element info in the database.
 
-1. As a result, DataMiner attempts to delete the DVE child elements from the cluster.
+1. If this entry exists, DataMiner may attempt to delete DVE child elements from the cluster.
 
-1. On offline Agents, this causes the entire `C:\Skyline DataMiner\Elements` folder to be deleted instead of only the specific DVEs.
+1. On offline Agents, this may result in all contents of the `C:\Skyline DataMiner\Elements` folder being deleted, instead of only the intended DVEs.
 
 > [!NOTE]
 >
@@ -46,7 +46,7 @@ No fix is available yet.
 
 ## Description
 
-On offline Agents in a Failover cluster, the `C:\Skyline DataMiner\Elements` folder may be partially or fully emptied. In some cases, no elements remain.
+In Failover clusters, the `C:\Skyline DataMiner\Elements` folder on offline Agents may be unexpectedly cleared, sometimes leaving no elements behind. This can happen in rare cases where specific conditions related to DVE element handling and naming conflicts are met.
 
 To detect whether this has occurred:
 
