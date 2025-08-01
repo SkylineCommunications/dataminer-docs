@@ -69,9 +69,11 @@ The GQI DxM comprises multiple processes that work together to handle GQI reques
 
 ## Configuration
 
-Below you can find an overview of the different settings you can configure in the file `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.custom.json`.
+The GQI DxM can be configured via json configuration files. The default configuration can be found in `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.json`. Do **not** use this file to change settings because it will be overwritten whenever a new version of the GQI DxM is installed.
 
-Do not edit the file *appsettings.json*, because that file gets overwritten when a new version of the GQI DxM is installed.
+To change configuration settings, create a new configuration file named `appsettings.custom.json` in `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.json` if it does not exist yet.
+
+Below you can find an overview of the settings that can be configured in this file.
 
 ### Logging
 

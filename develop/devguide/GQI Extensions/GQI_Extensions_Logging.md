@@ -104,6 +104,47 @@ Example:
 
 ***
 
+## Changing the minimum log level
+
+The minimum log level determines which log entries are included in the log files based on their [log level](xref:GQI_GQILogLevel). This can be used to increase or decrease the amount of log entries for example while debugging without having to edit the code.
+
+### [GQI DxM](#tab/gqi-dxm)
+
+The minimum log level is determined by a combination of
+
+1. The global [GQI extension settings](xref:GQI_Logging#changing-the-minimum-log-level)
+1. The [MinimumLogLevel](xref:GQI_IGQILogger#properties) property of the extension instance
+
+By default, both of these are set to the `Information` log level.
+
+> [!NOTE]
+> The effective minimum log level will be the highest of these. For example, if the minimum log level in the global settings is set to `Warning` and the minimum log level on the extension instance is set to `Debug`, then only log entries with level `Warning` or higher will be logged.
+
+The global minimum log level for GQI extensions can be configured in the [application settings](xref:GQI_DxM#configuration):
+
+```json
+{
+  "GQIOptions": {
+    "Extensions": {
+      "Logging": {
+        "MinimumLogLevel": "Debug"
+      }
+    }
+  }
+}
+```
+
+### [GQI in SLHelper](#tab/gqi-slhelper)
+
+The minimum log level is determined by a combination of
+
+1. The global [GQI log settings](xref:GQI_Logging#changing-the-minimum-log-level)
+1. The [MinimumLogLevel](xref:GQI_IGQILogger#properties) property of the extension instance
+
+By default, the global minimum log level is set to the `Information` log level. This global minimum log level can be dynamically overwritten for each individual extension instance by modifying the [MinimumLogLevel](xref:GQI_IGQILogger#properties) property.
+
+***
+
 ## Example
 
 The following example showcases a custom operator that logs every cell value of a specified column.
