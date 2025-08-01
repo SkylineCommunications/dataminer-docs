@@ -30,6 +30,8 @@ It incorporates both internal processes and partner-specific actions and respons
 
 1. Award notification & next steps: Communicate the results. If awarded, initiate the contract process. If not, conduct a debrief if relevant.
 
+![Skyline bid management workflow](~/dataminer/images/Skyline_Bid_Management.png)
+
 ## Timeline
 
 Each cycle necessitates expert input to ensure optimal preparation prior to final submission. Accordingly, steps 1 through 8 generally require an average time frame of 4 to 6 weeks to complete.
