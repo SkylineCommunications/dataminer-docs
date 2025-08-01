@@ -14,7 +14,7 @@ The EPM Solution makes use of the following components:
 
 - [System connectors](#system-connectors): These connectors are designed to operate as peripherals within the EPM Solution.
 
-![EPM VSAT architecture](~/user-guide/images/EPM_VSAT_architecture.png)
+![EPM VSAT architecture](~/dataminer/images/EPM_VSAT_architecture.png)
 
 ## Collector connectors
 

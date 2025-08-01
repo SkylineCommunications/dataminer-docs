@@ -12,4 +12,4 @@ The tool's flexible nature allows the definition of resources for any parameter 
 
 This solution empowers users to create, edit, and delete maintenance events directly from the protocol interface or a low-code app.
 
-![Planned Maintenance tool home page](~/user-guide/images/PLM_main_page_new.png)
+![Planned Maintenance tool home page](~/dataminer/images/PLM_main_page_new.png)

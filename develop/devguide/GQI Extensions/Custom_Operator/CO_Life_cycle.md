@@ -11,7 +11,7 @@ The simplified diagram below shows in what order each GQI life cycle method is c
 > [!NOTE]
 > In practice, the life cycle methods that will be called depend on various conditions. Refer to the [detailed life cycle overview](#detailed-life-cycle-overview) for a complete overview.
 
-![Custom operator life cycle](~/user-guide/images/GQI_CustomOperatorLifeCycle.png)
+![Custom operator life cycle](~/dataminer/images/GQI_CustomOperatorLifeCycle.png)
 
 ## When is a custom operator instance created?
 
@@ -46,7 +46,7 @@ The life cycle methods that are called on a custom operator instance depend on t
 
 The following diagram shows a complete overview of all possible life cycle paths.
 
-![Custom operator life cycle](~/user-guide/images/GQI_CustomOperatorLifeCycle2.png)
+![Custom operator life cycle](~/dataminer/images/GQI_CustomOperatorLifeCycle2.png)
 
 ### OnInit
 

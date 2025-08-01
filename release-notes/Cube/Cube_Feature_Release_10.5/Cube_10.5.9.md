@@ -50,6 +50,15 @@ For more information on the `<Interactivity>` tag, see [Automation scripts: New 
 
 ### Enhancements
 
+#### Relational anomaly detection: Suggestion event values will now include parameter labels [ID 42933]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a label was assigned to a parameter instance in a relational anomaly detection (RAD) parameter group, from now on, that label will be added to the value of every suggestion event that is generated whenever a relational anomaly is detected for that parameter in question.
+
+- If a label was assigned to the parameter, the value of the suggestion event will have the following syntax: `Relational anomaly: {ParameterGroupName} (ParameterLabel)`.
+- If no label was assigned to the parameter, the value of the suggestion event will have the following syntax: `Relational anomaly: {ParameterGroupName}`.
+
 #### System Center - Agents: 'Agent cluster' section no longer visible when selecting a DaaS system [ID 43110]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -58,11 +67,23 @@ When, in the *Agents* section of *System Center*, you select a DaaS system, from
 
 Also, when there are any DaaS systems in the cluster to which you are connected, you will no longer be able to click the *Add* and *Remove* buttons.
 
+#### Popup windows containing an embedded Microsoft Edge browser window will now include an additional warning [ID 43131]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When DataMiner Cube is using the Microsoft Edge (WebView2) browser engine to display embedded webpages, popup windows containing an embedded web page will now show a banner saying that embedding a Microsoft Edge browser window within a popup window is not fully supported.
+
 #### Security: User permission 'General > View > Add/remove elements' renamed to 'Add/remove items (elements, services, etc.)' [ID 43215]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 As the *Add/remove elements* user permission in *General > Views* allows users to also add or remove other items, including services, measurement points, service templates, redundancy groups, redundancy templates, etc., this user permission has now been renamed to *Add/remove items (elements, services, etc.)*.
+
+#### Alarm Console: Enhanced performance when loading alarms into a linked alarm tab [ID 43218]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Because of a number of enhancements, overall performance has increased when loading alarms into a linked alarm tab, especially on systems with a large number of correlation alarms or a large number of base alarms.
 
 #### Profiles module: Enhanced performance when loading profiles [ID 43235]
 
@@ -75,6 +96,36 @@ Because of a number of enhancements, overall performance has increased when load
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In DataMiner Cube, up to now, when the Microsoft Edge (WebView2) browser engine was used to display embedded webpages, it was not possible to enter CTRL+F in order to search for a particular text string. This has now been made possible.
+
+#### Properties: Enhanced visualization of element and service properties [ID 43409]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+A number of enhancements have been made to the way in which element and service properties are displayed in the *Properties* window.
+
+- All datetime values are now displayed in UTC time. They will no longer be converted to client time.
+- The *Created* and *Created by* values will now be displayed as one single value.
+- The *Modified* and *Modified by* values will now be displayed as one single value.
+
+#### Credentials library: Passwords in credentials of type 'Username and password' will no longer be limited in size [ID 43422]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Up to now, credentials of type *Username and password* allowed passwords up to 43 characters.
+
+From now on, passwords in this type of credentials will no longer be limited in size, allowing for stronger and more secure authentication.
+
+> [!NOTE]
+> This change only applies to credentials of type *Username and password*. Other credentials that include a password (e.g. credentials of type *SNMPv3*) will still only support passwords up to 43 characters.
+
+#### Default web browser engine will now be Edge instead of Chromium [ID 43429]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+From now on, in DataMiner Cube, the default web browser engine will be Edge instead of Chromium.
+
+- In *System Center > System settings > Plugins*, it will no longer be possible to select Chromium as default web browser engine.
+- If, in any visual overview, there are shapes in which the *UseChrome* option is specified, this option will now be disregarded. The shapes in question will use Edge instead.
 
 ### Fixes
 
@@ -120,8 +171,34 @@ Up to now, in some cases, when you checked card-specific alarm tab settings conf
 
 Also, when, in the *Settings* window, you went to *Alarm Console > Card-specific*, up to now, the *Card types* list would not show the card types that had been enforced on group level.
 
+#### Logging: Problem with SPI event log entries not getting transmitted to the DataMiner Agent [ID 43344]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, SPI event log entries (e.g. "Cube Connection") would not get transmitted to the DataMiner Agent.
+
 #### Trending: Y-axis labels of histogram charts would incorrectly be displayed in the middle of the Y axis [ID 43348]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In histogram charts, in some cases, the Y-axis label would incorrectly be displayed in the middle of the Y axis instead of at the top.
+
+#### Trending: Problem when loading a trend graph of an EPM KPI [ID 43354]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some rare cases, a trend graph of an EPM KPI would incorrectly not get loaded.
+
+#### Visual Overview: Element, service or view updates would incorrectly cause embedded visual overviews to refresh [ID 43395]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Up to now, when a element, service or view was updated, in some cases, visual overviews embedded in the visual overview linked to the element, service or view would incorrectly be fully refreshed.
+
+From now on, embedded visual overviews will only be fully refreshed when the referenced object was changed.
+
+#### Trending: Trend prediction data would incorrectly be requested when 'Trend prediction' setting was disabled [ID 43414]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When the *Trend prediction* setting had been disabled in the *System settings > Analytics config* section of *System Center*, up to now, Cube would incorrectly still request trend prediction data when you opened a trend graph.

@@ -12,7 +12,7 @@ Improvements have been made to the shutdown of the DxM, which improves the upgra
 
 ​Rapid file changes in *DataMiner.xml* could cause a problem in CoreGateway, causing the DxM to restart.
 
-#### 1 April 2025 - Enhancement - Dependencies updated [ID 42655]
+#### 1 April 2025 - Enhancement - CoreGateway 2.14.12 - Dependencies updated [ID 42655]
 
 Several dependencies have been updated.
 

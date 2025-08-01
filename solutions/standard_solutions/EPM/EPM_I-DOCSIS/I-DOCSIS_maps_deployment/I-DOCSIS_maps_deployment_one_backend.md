@@ -13,7 +13,7 @@ To deploy the Integrated DOCSIS EPM maps to a DataMiner System with one element 
 
 1. Make sure that the *elementVar* field of all passive layers contains the card variable used in the Skyline EPM Platform Visio drawing:
 
-   ![Verify if the elementVar field contains the card variable](~/user-guide/images/EPM_I_DOCSIS_maps_deployment_maps_config_one_backend.png)
+   ![Verify if the elementVar field contains the card variable](~/dataminer/images/EPM_I_DOCSIS_maps_deployment_maps_config_one_backend.png)
 
 1. Verify on the relation layer that the *DataMinerID* and *ElementID* tags contain the DataMiner ID and element ID of the back-end element.
 

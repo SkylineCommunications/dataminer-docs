@@ -45,6 +45,33 @@ Actions will now be numbered hierarchically to allow easier referencing when lin
 
 - 2
 
+#### Low-Code Apps - 'Launching a script' event: New option to disable 'Script started' information events [ID 43245]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, in a low-code app, you are configuring a *Launching a script* event, it is now possible to indicate that no *Script started* information event should be generated whenever the Automation script is executed.
+
+1. Click the *Show settings* button.
+1. Disable the *Generate an information event when launching the script* setting.
+
+By default, this setting will be enabled.
+
+#### Dashboards app & Low-Code Apps - Maps component: Conditional line coloring [ID 43377]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In the *Layout* pane of the *Maps* component, a *Conditional coloring* option has now been added. This will allow you to highlight lines based on a condition.
+
+#### Dashboards app & Low-Code Apps: New 'Component name' setting [ID 43453]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Every component now has a new *Configuration name* setting, which can be found in the *Layout > General* tab.
+
+The new setting will allow you to assign a special name to a component. This will make it easier to identify components when configuring a dashboard or a low-code app. When you leave this setting empty, as before, the name of the component will be *[type of visualization]*, followed by a sequence number. For example, "Table 1" or "List 2".
+
+Although this component name will appear in different places to refer to the component in question, it will merely be used as an alias. It will have no impact whatsoever with regard to component functionality.
+
 ## Changes
 
 ### Enhancements
@@ -99,6 +126,14 @@ The NATS request timeout has been increased from 1 minute to 5 minutes.
 
 Also, when a timeout occurs, the error added to the web logs will now include the message that timed out.
 
+#### GQI DxM will now include invalid session IDs in HeartbeatResponse or CloseSessionResponse messages [ID 43294]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a client (e.g. the Web Services API) sent a `HeartbeatRequest` or a `CloseSessionRequest` with invalid session IDs to the GQI DxM, up to now, the GQI DxM would return an error.
+
+From now on, instead of returning an error, the GQI DxM will return a `HeartbeatResponse` or `CloseSessionResponse` that contains the invalid session IDs. This will allows the client to react accordingly without having to parse any error message.
+
 #### Dashboards app & Low-Code Apps - Timeline component: Group order will now be preserved [ID 43296]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -120,6 +155,42 @@ From now on, the connection worker process has references to all assemblies that
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 The user menu in the header bar of the DataMiner landing page (e.g. `https://myDMA/root/`) has been redesigned.
+
+#### DataMiner landing page: Theme selection [ID 43332]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+On the DataMiner landing page (e.g. `https://myDMA/root/`), you can now select one of the following themes:
+
+- Light (i.e. the default theme)
+- Dark
+- System (i.e. the theme set in the browser)
+
+Currently, the theme selector is only available when you add the following argument to the URL of the landing page:
+
+`?showAdvancedSettings=true`
+
+#### DataMiner landing page: DataMiner icon in header bar will now show the name of the DMS instead of the URL of the landing page [ID 43341]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In the header bar of the DataMiner landing page (e.g. `https://myDMA/root/`), the DataMiner icon on the left will now show the name of the DMS* instead of the URL of the landing page.
+
+\**If not applicable, the DataMiner icon will show the name of the DMA instead.*
+
+#### Web apps: Enhanced performance when starting a web app [ID 43364]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Because of a number of enhancements, overall performance has increased when starting a web app.
+
+For example, information that does not frequently change (e.g. alarm colors) will now be cached in the web API. It will no longer be fetched each time a web app is opened.
+
+#### Web API will no longer send any heartbeats to the GQI DxM to keep invalid GQI sessions alive [ID 43374]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+From now on, when a GQI session is marked as invalid by the GQI DxM, the web API will no longer send any heartbeats to the GQI DxM in order to keep that session alive.
 
 ### Fixes
 
@@ -154,3 +225,67 @@ When the redesigned UI components were used in an Interactive Automation script 
 Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
 
 `?useNewIASInputComponents=true`
+
+#### Low-Code Apps: Problem when two tables with the same query fed the selected row to the same form [ID 43317]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When two tables with the same query fed the selected row to the same form, up to now, when you had entered some data into the form after selecting a row in the first table, the fields in that form would incorrectly be refetched when you selected either a row in the second table or another DOM definition.
+
+#### Low-Code Apps - Interactive Automation script component: Problem with redesigned `UIBlockType.StaticText` component [ID 43337]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Since DataMiner versions 10.4.0 [CU16]/10.5.0 [CU4]/10.5.7, the redesigned `UIBlockType.StaticText` component would no longer work when its `Text` property had not been set.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
+#### GQI DxM: Persistent system connection would no longer be able to recover when closed [ID 43343]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When the app settings of the GQI DxM are changed, in some cases, the persistent system connection will reconnect. However, up to now, the reference to that persistent system connection was not updated in the ConnectionManager, causing any subsequent query requests made by the system user to throw an `Attempted to use a closed connection` error. The GQI DxM would always be able to recover by itself though, as it periodically checked whether the connections in the ConnectionManager were still alive.
+
+As, since DataMiner version 10.5.0 [CU5]/10.5.8 [CU0], this connection check is no longer performed, the ConnectionManager will now automatically clear the reference to the persistent system connection when it detect that it has been closed, and will, when a new query request arrives, either retrieve the new persistent system connection reference or trigger a reconnect if no connection exists yet.
+
+#### Dashboards app: Some changes to a dashboard would no longer be saved after cancelling the generation of a PDF report [ID 43358]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When you cancelled the generation of a PDF report by closing the preview window, and then entered edit mode, up to now, some changes made to the dashboard in question would incorrectly no longer be saved.
+
+#### Dashboards app: Problem when sharing a dashboard [ID 43367]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, an NullReference exception could be thrown when you shared a dashboard.
+
+#### Visual Overview in web apps: Visual Overview component linked to another component would incorrectly show a page other than the default page when the reference changed [ID 43375]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, in a dashboard or a low-code app, a component was linked to Visual Overview component (e.g. a dropdown box containing references to visual overviews), in some cases, the Visual Overview component would incorrectly show a page other than the default page when another reference was selected in the linked component.
+
+Also, in some cases, the page selector of a Visual Overview component could keep on loading when the visual overview reference was fed by another component.
+
+#### Dashboards app: Button panel component would incorrectly start to flicker when it received an update [ID 43412]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a dashboard containing a *Button panel* component was embedded in DataMiner Cube, the *Button panel* component would incorrectly start to flicker when it received an update.
+
+#### Low-Code Apps: List of possible actions to be configured for a component would no longer be correct after changing the visual [ID 43423]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, while editing a low-code app, you changed the visual of a component, the list of possible actions to be configured for that component would no longer be correct.
+
+#### Dashboards app: PDFs would fail to get generated when a browser tab was closed [ID 43449]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Each open browser tab has its own WebSocket channel. When such a channel is closed, the Web API checks whether certain resources need to be cleaned up.
+
+Up to now, when a single channel was closed, all temporary PDF files would incorrectly be removed for all connections. As a result, if any PDF was being generated when a channel was closed, that generation would fail.

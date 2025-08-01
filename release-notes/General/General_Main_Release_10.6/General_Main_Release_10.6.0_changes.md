@@ -359,22 +359,41 @@ In OpenSearch, indexing will now use the `auto_expand_replicas` setting.
 
 If the database consists of a single node at the time of index creation, an index will be made that has no replicas (minimum number of replicas is set to 0). If, at a later stage, nodes are then added to or removed from the cluster, replicas will automatically be assigned up to a maximum of 2 (maximum number of replicas is set to 2).
 
-#### Relational anomaly detection: Configuration moved from XML file to database [ID 43320]
+#### Service & Resource Management: Enhanced performance when creating or editing bookings [ID 43254]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-Up to now, the configuration settings of the relational anomaly detection feature were stored in `C:\Skyline DataMiner\Analytics\RelationalAnomalyDetection.xml`. From now on, these settings will be stored in the *ai_rad_models_v2* database table instead.
+Because of a number of enhancements, overall performance has increased when creating or editing bookings, especially on systems with a large number of resources.
 
-As a result, all configuration will have to be done using either the *RAD Manager* app or the RAD API.
+#### Proactive cap detection: Enhanced detection of predicted data range breaches [ID 43338]
 
-The first time DataMiner starts up after having been upgraded to version 10.6.0/10.5.9, all configuration settings will automatically be migrated from the *RelationalAnomalyDetection.xml* file to the *ai_rad_models_v2* database table.
+<!-- MR 10.6.0 - FR 10.5.9 -->
 
-Also, a number of smaller changes have been made:
+The decision when to trigger a proactive detection suggestion event for a future data range breach (e.g. predicted 100% between ... and ...) has been fine-tuned. This will prevent suggestion events from being generated for parameters with values near or on the data range that should not be considered problematic.
 
-- The response to a `GetRADParameterGroupInfo` message now includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging.
-- Instances of (direct) view column parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will now automatically be translated to the base table parameters.
-- DVE child parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will now automatically be translated to the parent parameters.
-- Security has been added to all RAD messages. From now on, you will no longer be able to edit, remove or retrieve information about groups that contain parameters of elements to which you do not have access. The `GetRADParameterGroupsMessage` will still return all groups though.
+#### Migration from ElasticSearch to OpenSearch: is_write_index flag of the aliases will no longer be reset [ID 43369]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+When migrating data from Elasticsearch to OpenSearch, at some point, the *ReIndexElasticSearchIndexes* tool needs to be used to re-index the data.
+
+This tool has now been adapted to make sure the `is_write_index` flag of the aliases is not reset during the migration process.
+
+#### Trend predictions with prediction intervals spanning the full data range will no longer be shown [ID 43399]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+From now on, trend predictions with prediction intervals spanning the full data range (i.e. based on `RangeLow` and `RangeHigh`) will no longer be shown.
+
+Such intervals indicate highly unpredictable data behavior, offering little to no meaningful forecasting value.
+
+#### DataMiner Object Models: Updating the display value of an enum is now allowed [ID 43452]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Up to now, it was not possible to change the display name of an enum entry when the enum was being used by a DOM instance, despite it having no effect on the underlying enum value or DOM behavior.
+
+This limitation has now been removed. From now on, it will be allowed to update the display name of an enum entry, even if the enum is being used by DOM instances.
 
 ### Fixes
 
@@ -428,7 +447,7 @@ In systems with many trended parameters, an SLNet memory leak could occur whenev
 
 At startup, up to now, the ModelHost DxM would stop working when it failed to retrieve a proxy endpoint. From now on, when it fails to retrieve a proxy endpoint, it will retry until it succeeds.
 
-#### Alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service [ID 42724]
+#### Alarm with a source other than 'DataMiner' could incorrectly impact the alarm severity of a service [ID 42724]
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 

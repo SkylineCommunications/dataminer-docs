@@ -12,7 +12,7 @@ Expected duration: 15 minutes.
 > This tutorial uses DataMiner version 10.3.4.
 
 > [!TIP]
-> See also: [Kata #35: Interact with your DMS using an ad hoc data source](https://community.dataminer.services/courses/kata-35/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #35: Interact with your DMS using an ad hoc data source](https://community.dataminer.services/courses/kata-35/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
 ## Prerequisites
 

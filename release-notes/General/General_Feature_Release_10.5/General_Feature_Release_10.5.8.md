@@ -87,13 +87,6 @@ For detailed information about the changes included in those versions, refer to 
 
 ### Fixes
 
-#### Swarming: Information on where elements are being hosted could be incorrect [ID 42691]
-
-<!-- MR 10.6.0 - FR 10.5.8 -->
-<!-- Not added to MR 10.6.0 -->
-
-In some rare cases, on certain DataMiner Agents in the cluster, the information on where element are being hosted could be incorrect, especially after multiple hosting agent updates had been processed simultaneously.
-
 #### Problem when combining conditional monitoring templates into an alarm template group [ID 42839]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
@@ -239,3 +232,9 @@ In DataMiner 10.5.6, improvements had been made to the Resource Manager caching,
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 [CU0] -->
 
 While a DataMiner storage setup was migrated or replicated where each DMA had its own Cassandra database, no history alarms were shown.
+
+#### SLNet memory leak and Agent disconnects caused by ClusterEndpointsManager issue [ID 43370] [ID 43384]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 [CU0] -->
+
+A problem in ClusterEndpointsManager could cause a memory leak in the SLNet process and could cause DataMiner Agents to disconnect. To prevent this, it is now possible to disable the ClusterEndpointsManager by disabling the *ClusterEndpointsManager* soft-launch option on each DataMiner Agent in the cluster. However, note that it is not possible to migrate to BrokerGateway while this option is disabled.

@@ -131,9 +131,138 @@ The logging of a DOM manager will now also contain a line indicating the start o
 2025/07/02 15:05:11.110|SLNet.exe|HandleStatusTransitionRequest|INF|3|269|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Handling status transition with ID 'new_to_closed' for instance with ID '1ff720a3-0aa2-4548-8b51-d8b975e19ea4'.
 ```
 
+#### Service & Resource Management: Support for capacity ranges [ID 43335]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Resource capacity ranges are now supported. To that end, profile parameters can now be of type "range".
+
+A resource can have one capacity range per profile parameter. This range can be either fully booked or partially booked.
+
+- If a range is partially booked, other bookings can book the unbooked part of the range as long as the bookings do not overlap.
+- The same range can be booked by two overlapping bookings on condition that the same reference string is used and that the range is identical in both bookings. `GetEligibleResources` has been updated to take this into account.
+
+##### Examples
+
+Scenario: A Resource has a capacity range parameter with a range from 100 to 200.
+
+Example 1:
+
+- If a booking books the entire range without a reference string, no other overlapping bookings can book that resource while requesting that same capacity range.
+- `GetEligibleResources` will not return that resource if asked for that capacity range with an overlapping time range.
+
+Example 2:
+
+- If a booking books the range from 100 to 110, another booking can book that range from 110 to 200, etc.
+- `GetEligibleResources` will return that resource, specifying the available range from 110 to 200.
+
+Example 3:
+
+- If a booking books the range from 100 to 110 with reference string "Example 3", another booking can book the same range from 100 to 110 if it uses the same "Example 3" reference.
+- `GetEligibleResources` wil return the entire range if "Example 3" is provided as reference.
+
+##### Creating a range parameter
+
+This is how you can create a range parameter.
+
+```csharp
+var rangeCapacityParameter= new ProfileParameter
+{
+  ID = Guid.NewGuid(),
+  Categories = ProfileParameterCategory.Capacity,
+  Name = "Range Parameter",
+  Type = ProfileParameter.ParameterType.Range,
+};
+profileHelper.ProfileParameters.Create(rangeCapacityParameter);
+```
+
+##### Creating a resource with a capacity range
+
+This is how you can add range 100 to 1000 to a resource.
+
+```csharp
+var capacities = new List<MultiResourceCapacity>
+{
+  new MultiResourceCapacity
+  {
+    CapacityProfileID = rangeCapacityParameter.ID,
+    Value = new CapacityParameterValue(100, 1000),
+  }
+};
+
+var resource = new Resource(Guid.NewGuid())
+{
+  Name = "Resource",
+  Mode = ResourceMode.Available,
+  Capacities = capacities,
+  MaxConcurrency = 10
+};
+
+resourceManager.AddOrUpdateResources(resource);
+```
+
+##### Booking a range
+
+This is how you can book the range from 100 to 150 of a specified resource.
+
+```csharp
+var resourceUsage = new ResourceUsageDefinition(resource.ID)
+{
+  RequiredCapacities = new List<MultiResourceCapacityUsage>
+  {
+    new MultiResourceCapacityUsage
+    {
+      CapacityProfileID = rangeCapacityParameter.ID,
+      RangeStart = 100,
+      DecimalQuantity = 50
+    }
+  }
+};
+
+booking.ResourcesInReservationInstance.Add(resourceUsage);
+```
+
+##### Checking which resources have a specific range available
+
+This is how you can check which resources have a specific range available.
+
+```csharp
+var requiredCapacities = new List<MultiResourceCapacityUsage>()
+{
+  new MultiResourceCapacityUsage(rangeCapacityParameter, 100, 50)
+};
+
+var requiredCapabilities = new List<ResourceCapabilityUsage>();
+
+result = resourceManager.GetEligibleResourcesWithUsageInfo(now, now.AddHours(1), requiredCapacities, requiredCapabilities);
+```
+
+#### Trap forwarding: Traps can now be forwarded to target elements of which a specific hostname was configured in the port settings [ID 43347]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+SLSNMPManager is now capable of forwarding traps to target elements of which a specific hostname was configured in the port settings.
+
+If the hostname cannot be resolved to an IP address, an error alarm with the following message will be generated on the target element:
+
+`Could not resolve destination host to an IP: polling host=<hostname>, or failed to set the destination address. <ERROR>`
+
+Example:
+
+`Could not resolve destination host to an IP: polling host=localhost123, or failed to set the destination address. Host to IP failure. Error : 11001. [WSAHOST_NOT_FOUND]`
+
 ## Changes
 
 ### Enhancements
+
+#### SLDataGateway will now check all Cassandra, OpenSearch and Elasticsearch certificates on a daily basis [ID 41793]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+SLDataGateway will now check all Cassandra, OpenSearch and Elasticsearch certificates on a daily basis.
+
+- If a certificate is set to expire within 30 days, a notice alarm will be created.
+- If a certificate is set to expire within 7 days, an error alarm will be created.
 
 #### Failover: NATS cluster state will now be visible in DataMiner Cube's Failover Status window [ID 42250] [ID 43169]
 
@@ -187,6 +316,12 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### Service & Resource Management: Enhanced performance when creating or editing bookings [ID 43254]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Because of a number of enhancements, overall performance has increased when creating or editing bookings, especially on systems with a large number of resources.
+
 #### SLAnalytics: Reduced memory usage because of enhanced management of parameters with constant values [ID 43266]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
@@ -204,6 +339,16 @@ When an infinite loop is detected, the following will be returned:
 - When the `splitErrors` option is set to false, the error message `INFINITE LOOP` will be returned.
 - When the `splitErrors` option is set to true, the values will be returned.
 
+#### Automation: An error message will now appear when a script import operation fails [ID 43316]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, in the *Automation* module, you imported an Automation script, up to now, you would not receive any feedback about whether or not the import operation had been successful. Only after checking the Cube logs would you be able to find out that an import operation had failed.
+
+From now on, the following error message will appear whenever an exception is thrown while an Automation script is being imported:
+
+`Something went wrong. Please check the Cube and Automation logging for more information.`
+
 #### Relational anomaly detection: Configuration moved from XML file to database [ID 43320]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
@@ -216,10 +361,16 @@ The first time DataMiner starts up after having been upgraded to version 10.6.0/
 
 Also, a number of smaller changes have been made:
 
-- The response to a `GetRADParameterGroupInfo` message now includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging.
+- The response to a `GetRADParameterGroupInfoMessage` now includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging.
 - Instances of (direct) view column parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will now automatically be translated to the base table parameters.
 - DVE child parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will now automatically be translated to the parent parameters.
 - Security has been added to all RAD messages. From now on, you will no longer be able to edit, remove or retrieve information about groups that contain parameters of elements to which you do not have access. The `GetRADParameterGroupsMessage` will still return all groups though.
+
+#### Proactive cap detection: Enhanced detection of predicted data range breaches [ID 43338]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+The decision when to trigger a proactive detection suggestion event for a future data range breach (e.g. predicted 100% between ... and ...) has been fine-tuned. This will prevent suggestion events from being generated for parameters with values near or on the data range that should not be considered problematic.
 
 #### DataMiner upgrade: BPA tests 'Check Agent Presence Test In NATS' and 'Verify NATS is Running' replaced by 'Verify NATS Cluster' [ID 43359]
 
@@ -229,19 +380,96 @@ The BPA tests *Check Agent Presence Test In NATS* (which was renamed to *Nats co
 
 This means that, from now on, during a DataMiner upgrade, the *Verify NATS Cluster* test will be installed and any existing instances of the deprecated *Check Agent Presence Test In NATS* and *Verify NATS is Running* tests will be removed.
 
-### Fixes
-
-#### SLProtocol would leak memory when an element was restarted [ID 42697] [ID 43300]
+#### SLDataGateway: Enhanced caching of TTL overrides for the trend data of specific protocols or protocol versions [ID 43362]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When you restarted an element that had previously been stopped, up to now, SLProtocol would leak memory.
+A number of enhancements have been made to the mechanism that is used to cache TTL overrides for the trend data of specific protocols or protocol versions in SLDataGateway, especially for Cassandra and Cassandra Cluster databases.
+
+#### Migration from ElasticSearch to OpenSearch: is_write_index flag of the aliases will no longer be reset [ID 43369]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+When migrating data from Elasticsearch to OpenSearch, at some point, the *ReIndexElasticSearchIndexes* tool needs to be used to re-index the data.
+
+This tool has now been adapted to make sure the `is_write_index` flag of the aliases is not reset during the migration process.
+
+#### Video thumbnails: New fitMode parameter [ID 43388]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In URLs of video thumbnails, it is now possible to pass a *fitMode* parameter, which will indicate how the image should be displayed.
+
+These are the possible values:
+
+| fitMode | Description |
+|---------|-------------|
+| fill    | The image will completely cover the container. It may crop parts of the image, but it ensures no empty space. |
+| fit     | The image will be fully visible inside the container while maintaining aspect ratio. There may be empty space if aspect ratios differ. |
+| stretch | The image will stretch to exactly fill the container, ignoring aspect ratio. This may cause distortion. |
+| center  | The image will retain its original size and will be aligned at the center. It may overflow or be cropped. |
+| shrink  | The image will behave like *fill* or *center*, whichever results in a smaller image. It will only scale down if needed. |
+
+Default value: fill
+
+Example:
+
+```txt
+https://myDMA/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true&fitMode=center
+```
+
+#### Trend predictions with prediction intervals spanning the full data range will no longer be shown [ID 43399]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+From now on, trend predictions with prediction intervals spanning the full data range (i.e. based on `RangeLow` and `RangeHigh`) will no longer be shown.
+
+Such intervals indicate highly unpredictable data behavior, offering little to no meaningful forecasting value.
+
+#### Relational anomaly detection: New default values for 'Anomaly threshold' and 'Minimum anomaly duration' [ID 43400]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+When you add a new relational anomaly parameter group using either the *RAD Manager* app or the RAD API, from now on, the default values of the following settings will be the following:
+
+| Setting | New default value |
+|---------|---------|
+| Anomaly threshold | 6 |
+| Minimum anomaly duration | 15 minutes |
+
+#### Relational anomaly detection: Enhanced logging when swarming elements [ID 43415]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+Up to now, when an element of which no parameter was included in any of the RAD parameter groups was swarmed, the following error would be logged:
+
+`ERR|0|Parameter XXX/YYYY is currently swarming to another hosting agent: RAD groups including this parameter are no longer supported`
+
+From now on, this error will only be logged when at least one parameter of the swarmed element is included in a RAD parameter group.
+
+#### DataMiner Object Models: Updating the display value of an enum is now allowed [ID 43452]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Up to now, it was not possible to change the display name of an enum entry when the enum was being used by a DOM instance, despite it having no effect on the underlying enum value or DOM behavior.
+
+This limitation has now been removed. From now on, it will be allowed to update the display name of an enum entry, even if the enum is being used by DOM instances.
+
+### Fixes
 
 #### SLManagedScripting: The same dependency would be loaded multiple times by different connectors [ID 42779]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In some cases, the same dependency would be loaded multiple times by different connectors. From now on, if multiple connectors attempt to load the same dependency at the same time, it will only be loaded once.
+
+#### DataMiner would fail to create the necessary Windows users [ID 42819]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, for example, a new DataMiner Agent had been added to the DataMiner System, since DataMiner 10.4.0 [CU4]/10.4.7, DataMiner would fail to create the necessary Windows users.
 
 #### Problem when a connector had been modified on a system running multiple SLScripting processes [ID 42877]
 
@@ -328,6 +556,12 @@ As BrokerGateway is started alongside the Microsoft Windows operating system, in
 
 To prevent being unaware of certain IP addresses, from now on, BrokerGateway will not only refresh its IP address cache every 5 minutes, it will also refresh that cache each time it detects a network adapter update.
 
+#### SNMP elements could get stuck in slow poll mode [ID 43216]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, SNMP elements could get stuck in slow poll mode because they would fail to recover after connectivity was restored.
+
 #### AnnounceHostingAgentEvent instances could linger around in the cache after a remote agent had reconnected [ID 43230]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
@@ -349,6 +583,22 @@ Also, from now on, the primary IP address of the offline agent will be set to ei
 
 When a DataMiner Agent that did not have Swarming enabled was started without a *db.xml* file present, up to now, the start-up process would fail abruptly because of an unhandled exception in SLNet. From now on, it will fail gracefully.
 
+#### SNMP managers could get stuck in 'not responding' ping mode [ID 43278]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a northbound SNMP manager configured to send inform messages exhausts all its retries, it enters ping mode. At this point, it generates a "not responding" timeout alarm, and sends a ping inform message to the endpoint to check whether it is up and running again.
+
+Up to now, when an SNMP manager was in ping mode, it could, in some cases, stop sending further ping inform messages to the endpoint.
+
+From now on, when the first ping inform message is unsuccessful, a new ping inform message will be scheduled. Additionally, the following entry will be logged at information log level 1 (in which %s will be replaced by the name of the SNMP manager):
+
+```txt
+Adding a ping message for SNMP Manager %s. Too long since last ping was sent. Retrying...
+Logging has been adjusted to not spam if multiple SNMP Managers send to the same IP/Port:
+Failed resolving authoritative context ID for SNMP Manager
+```
+
 #### BrokerGateway: GetConnectionDetails call would incorrectly not return any destinations [ID 43292]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
@@ -369,6 +619,27 @@ In some cases, a run-time error could be thrown when a DVE child element was del
 
 When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
 
+#### Problem when loading initial parameter data for remote elements [ID 43339]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, client applications like DataMiner Cube would fail to load initial parameter data for remote elements.
+
+#### Swarming: An element being swarmed would briefly run on the old DMA as well as on the new DMA [ID 43345]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+In some cases, when an element was being swarmed, for a short while, the element in question would incorrectly run on the old DMA as well as on the new DMA.
+
+#### StorageModule DcM would fail to read an element XML file [ID 43350]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some rare cases, the StorageModule DcM would fail to read an element XML file because that file was being used by another process.
+
+From now on, it will try up to three times to read an element XML file that is being used by another process.
+
 #### Fields of type datetime would incorrectly not be empty when the DOM definition field did not have a default value defined [ID 43351]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -376,3 +647,66 @@ When an error was thrown while setting up the Repository API connections between
 When a DOM definition field does not have a default value defined, by default, no value should be displayed. However, up to now, when the default time zone had been changed in the *ClientSettings.json* file, fields of type datetime would incorrectly contain the value "01/01/1970 - DefaultTimezone".
 
 From now on, if a DOM definition field does not have a default value defined, all fields of that type will be empty when displayed on a form.
+
+#### Swarming: Element would incorrectly be stuck in the Swarming state after being swarmed [ID 43360]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+After an element had been swarmed, in some cases, that element would incorrectly be stuck in the Swarming state.
+
+#### SLAnalytics: Problem when grouping suggestion events generated after detecting a relational anomaly or a multivariate pattern [ID 43379]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+When a relational anomaly or a multivariate pattern is detected, suggestion events are generated for all parameters in the corresponding relational anomaly group or all parameters associated with the multivariate pattern, and then those events are grouped into an incident.
+
+Up to now, When the DataMiner Agent that detected the relation anomaly or the multivariate pattern was also the incident tracking leader, in some cases, a deadlock could occur while grouping the suggestion events that had been generated.
+
+#### Failover: DMS call DMS_VERIFY_CLIENT_COOKIE would incorrectly be sent to the offline agent [ID 43397]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In a Failover setup using a shared hostname, the DMS call `DMS_VERIFY_CLIENT_COOKIE` would incorrectly be sent to the offline agent instead of the online agent.
+
+From now on, whenever the offline agent receives a `DMS_VERIFY_CLIENT_COOKIE` call, it will forward it to the online agent.
+
+#### SLDataMiner.txt log file entries could incorrectly contain a placeholder instead of the actual name of the function [ID 43398]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In the *SLDataMiner.txt* log file, log entries could incorrectly contain the `__FUNCTION__` placeholder instead of the actual name of the function in question.
+
+#### Certain log files would have their maximum size incorrectly set to 0 [ID 43403]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some rare cases, certain log files could have their maximum size incorrectly set to 0, causing them to start a new file each time an entry was added.
+
+From now on, by default, all log files will have their maximum size set to 10 MB.
+
+#### Failover: Problem when synchronizing the ClusterEndpoints.json files on large systems [ID 43407]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+In large DataMiner Systems, in some cases, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely.
+
+#### SLAnalytics - Pattern matching: Problem when retrieving the streaming matches [ID 43419]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a linked pattern was created on elements hosted on different DataMiner Agents, in some cases, the `getPatternMatchMessage` would not return the correct number of streaming matches.
+
+#### Swarming: Hosting agent cache in SLDataMiner could get out of sync after an element had been swarmed [ID 43434]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+After an element had been swarmed, in some rare cases, the hosting agent cache in SLDataMiner could get out of sync.
+
+#### SLAnalytics - Automatic incident tracking: Problem due to an incorrect internal state [ID 43451]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, an incorrect internal state in the automatic incident tracking feature could cause the SLAnalytics process to stop working.

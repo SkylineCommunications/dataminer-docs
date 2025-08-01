@@ -11,7 +11,7 @@ The simplified diagram below shows in what order each GQI life cycle method is c
 > [!NOTE]
 > In practice, the life cycle methods that will be called depend on various conditions. Refer to the [detailed life cycle overview](#detailed-life-cycle-overview) for a complete overview.
 
-![Ad hoc data source life cycle](~/user-guide/images/GQI_AdHocDataSourceLifeCycle.png)
+![Ad hoc data source life cycle](~/dataminer/images/GQI_AdHocDataSourceLifeCycle.png)
 
 ## When is an ad hoc data source instance created?
 
@@ -50,7 +50,7 @@ The life cycle methods that are called on an ad hoc data source instance depend 
 
 The following diagram shows a complete overview of all possible life cycle paths.
 
-![Ad hoc data source life cycle](~/user-guide/images/GQI_AdHocDataSourceLifeCycle2.png)
+![Ad hoc data source life cycle](~/dataminer/images/GQI_AdHocDataSourceLifeCycle2.png)
 
 ### OnInit
 

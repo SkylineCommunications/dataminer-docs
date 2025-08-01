@@ -444,7 +444,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
@@ -455,47 +455,15 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 42429: MR 10.6.0 - FR 10.5.5 -->
 <!-- RNs 42480: MR 10.6.0 - FR 10.5.5 -->
 <!-- RNs 42602: MR 10.6.0 - FR 10.5.6 -->
+<!-- RNs 43320: MR 10.6.0 - FR 10.5.9 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
 Whenever the relation is broken, RAD will detect this and generate suggestion events for each parameter instance in the group where a broken relation was detected. These suggestion events will then be grouped into a single incident so that it is shown on a single line in the Alarm Console. When you clear such an incident, all its base alarms (i.e. the suggestion events created by Relational anomaly detection) will also be cleared.
 
-##### Configuration file
+##### Configuring the parameter groups
 
-Per DataMiner Agent, the above-mentioned parameter groups must be configured in the `C:\Skyline DataMiner\Analytics\RelationalAnomalyDetection.xml` file. This file will be read when SLAnalytics starts up, when RAD is enabled or re-enabled, or when a *ReloadMadConfigurationMessage* is sent.
-
-The configuration file must be formatted as follows.
-
-```xml
-<?xml version="1.0" ?>
-  <RelationalAnomalyDetection>
-    <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]" minimumAnomalyDuration="[THRESHOLD2]">
-      <Instance>[INSTANCE1]</Instance>
-      <Instance>[INSTANCE2]</Instance>
-      [... one <Instance> tag per parameter in the group]
-    </Group>
-    [... one <Group> tag per group of parameters that should be monitored by RAD]
-</RelationalAnomalyDetection>
-```
-
-**Group arguments**
-
-| Argument | Description |
-|---|---|
-| `name`         | The name of the parameter group.<br>This name must be unique, and will be used when a suggestion event is generated for the group in question. |
-| `updateModel`  | Indicates whether RAD should update its internal model of the relation between the parameters in the group.<br>- If set to "false", RAD will only do an initial training based on the data available at startup.<br>- If set to "true", RAD will update the model each time new data comes in. |
-| `anomalyScore` | Optional argument that can be used to specify the suggestion event generation threshold.<br>By default, this value will be set to 3. Higher values will result in less suggestion events, lower values will result in more suggestion events. |
-| `minimumAnomalyDuration` | Optional argument that specifies the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly. Default value: 5<br>- When `minimumAnomalyDuration` is set to a value greater than 5, the deviating behavior will need to last longer before an anomaly event is triggered.<br>- `minimumAnomalyDuration` can be set to a non-default value, for example, to filter out noise events caused by a single, short, harmless outlying value in the data.<br>- If `minimumAnomalyDuration` is either not set or set to a value less than or equal to 5, an anomaly event will be generated as soon as values deviate sufficiently from the RAD model. |
-
-**Parameter instance formats**
-
-In each `Instance`, you can specify either a single-value parameter or a table parameter by using one of the following formats:
-
-- Single-value parameter: [DataMinerID]/[ElementID]/[ParameterID]
-- Table parameter: [DataMinerID]/[ElementID]/[ParameterID]/[PrimaryKey]
-
-> [!NOTE]
-> When you add a new parameter group, an error message will appear when that parameter group contains an invalid group name, an invalid number of parameters, an invalid anomaly threshold, or an invalid minimum anomaly duration value.
+All configuration settings are stored in the *ai_rad_models_v2* database table, and have to be managed using either the *RAD Manager* app or the RAD API.
 
 ##### Average trending
 
@@ -525,7 +493,7 @@ The following API messages can be used to create, retrieve and remove RAD parame
 |---------|----------|
 | AddRADParameterGroupMessage     | Creates a new RAD parameter group.<br>If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated. |
 | GetRADDataMessage               | Retrieves the anomaly scores over a specified time range of historical data. |
-| GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular RAD parameter group. |
+| GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular RAD parameter group.<br>The response to a `GetRADParameterGroupInfoMessage` includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging. |
 | GetRADParameterGroupsMessage    | Retrieves a list of all RAD parameter groups that have been configured. |
 | RemoveRADParameterGroupMessage  | Deletes a RAD parameter group. |
 | RetrainRADModelMessage          | Retrains the RAD model over a specified time range. |
@@ -534,6 +502,9 @@ The following API messages can be used to create, retrieve and remove RAD parame
 >
 > - Names of RAD parameter groups will be processed case-insensitive.
 > - When a Relational Anomaly Detection (RAD) parameter group is deleted, all open suggestion events associated with that parameter group will automatically be cleared.
+> - Instances of (direct) view column parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will automatically be translated to the base table parameters.
+> - DVE child parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will automatically be translated to the parent parameters.
+> - Security has been added to all RAD messages. You will not be able to edit, remove or retrieve information about groups that contain parameters of elements to which you do not have access. The `GetRADParameterGroupsMessage` will return all groups though.
 > - The following messages have been deprecated: *AddMADParameterGroupMessage*, *GetMADParameterGroupInfoMessage*, *RemoveMADParameterGroupMessage*, and *RetrainMADModelMessage*.
 
 #### SLNetClientTest tool: Element process ID information [ID 42013]
@@ -879,3 +850,123 @@ The logging of a DOM manager will now also contain a line indicating the start o
 ```txt
 2025/07/02 15:05:11.110|SLNet.exe|HandleStatusTransitionRequest|INF|3|269|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Handling status transition with ID 'new_to_closed' for instance with ID '1ff720a3-0aa2-4548-8b51-d8b975e19ea4'.
 ```
+
+#### Service & Resource Management: Support for capacity ranges [ID 43335]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Resource capacity ranges are now supported. To that end, profile parameters can now be of type "range".
+
+A resource can have one capacity range per profile parameter. This range can be either fully booked or partially booked.
+
+- If a range is partially booked, other bookings can book the unbooked part of the range as long as the bookings do not overlap.
+- The same range can be booked by two overlapping bookings on condition that the same reference string is used and that the range is identical in both bookings. `GetEligibleResources` has been updated to take this into account.
+
+##### Examples
+
+Scenario: A Resource has a capacity range parameter with a range from 100 to 200.
+
+Example 1:
+
+- If a booking books the entire range without a reference string, no other overlapping bookings can book that resource while requesting that same capacity range.
+- `GetEligibleResources` will not return that resource if asked for that capacity range with an overlapping time range.
+
+Example 2:
+
+- If a booking books the range from 100 to 110, another booking can book that range from 110 to 200, etc.
+- `GetEligibleResources` will return that resource, specifying the available range from 110 to 200.
+
+Example 3:
+
+- If a booking books the range from 100 to 110 with reference string "Example 3", another booking can book the same range from 100 to 110 if it uses the same "Example 3" reference.
+- `GetEligibleResources` wil return the entire range if "Example 3" is provided as reference.
+
+##### Creating a range parameter
+
+This is how you can create a range parameter.
+
+```csharp
+var rangeCapacityParameter= new ProfileParameter
+{
+  ID = Guid.NewGuid(),
+  Categories = ProfileParameterCategory.Capacity,
+  Name = "Range Parameter",
+  Type = ProfileParameter.ParameterType.Range,
+};
+profileHelper.ProfileParameters.Create(rangeCapacityParameter);
+```
+
+##### Creating a resource with a capacity range
+
+This is how you can add range 100 to 1000 to a resource.
+
+```csharp
+var capacities = new List<MultiResourceCapacity>
+{
+  new MultiResourceCapacity
+  {
+    CapacityProfileID = rangeCapacityParameter.ID,
+    Value = new CapacityParameterValue(100, 1000),
+  }
+};
+
+var resource = new Resource(Guid.NewGuid())
+{
+  Name = "Resource",
+  Mode = ResourceMode.Available,
+  Capacities = capacities,
+  MaxConcurrency = 10
+};
+
+resourceManager.AddOrUpdateResources(resource);
+```
+
+##### Booking a range
+
+This is how you can book the range from 100 to 150 of a specified resource.
+
+```csharp
+var resourceUsage = new ResourceUsageDefinition(resource.ID)
+{
+  RequiredCapacities = new List<MultiResourceCapacityUsage>
+  {
+    new MultiResourceCapacityUsage
+    {
+      CapacityProfileID = rangeCapacityParameter.ID,
+      RangeStart = 100,
+      DecimalQuantity = 50
+    }
+  }
+};
+
+booking.ResourcesInReservationInstance.Add(resourceUsage);
+```
+
+##### Checking which resources have a specific range available
+
+This is how you can check which resources have a specific range available.
+
+```csharp
+var requiredCapacities = new List<MultiResourceCapacityUsage>()
+{
+  new MultiResourceCapacityUsage(rangeCapacityParameter, 100, 50)
+};
+
+var requiredCapabilities = new List<ResourceCapabilityUsage>();
+
+result = resourceManager.GetEligibleResourcesWithUsageInfo(now, now.AddHours(1), requiredCapacities, requiredCapabilities);
+```
+
+#### Trap forwarding: Traps can now be forwarded to target elements of which a specific hostname was configured in the port settings [ID 43347]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+SLSNMPManager is now capable of forwarding traps to target elements of which a specific hostname was configured in the port settings.
+
+If the hostname cannot be resolved to an IP address, an error alarm with the following message will be generated on the target element:
+
+`Could not resolve destination host to an IP: polling host=<hostname>, or failed to set the destination address. <ERROR>`
+
+Example:
+
+`Could not resolve destination host to an IP: polling host=localhost123, or failed to set the destination address. Host to IP failure. Error : 11001. [WSAHOST_NOT_FOUND]`

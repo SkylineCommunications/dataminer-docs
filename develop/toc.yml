@@ -971,6 +971,8 @@ items:
       - name: Ad hoc data sources
         topicUid: GQI_Ad_hoc_data_sources
         items:
+          - name: Creating an ad hoc data source
+            topicUid: Ad_hoc_Creation
           - name: Building blocks
             topicUid: Ad_hoc_Building_blocks
           - name: Life cycle
@@ -992,6 +994,8 @@ items:
       - name: Custom operators
         topicUid: GQI_Custom_Operator
         items:
+          - name: Creating a custom operator
+            topicUid: CO_Creation
           - name: Building blocks
             topicUid: CO_Building_blocks
           - name: Life cycle
@@ -4012,6 +4016,334 @@ items:
             topicUid: LogSettings-FileElementType.Levels-info
         - name: '@name'
           topicUid: LogSettings-FileElementType-name
+  - name: DataMiner schema
+    topicUid: SchemaDataMiner
+    items:
+    - name: DataMiner
+      topicUid: DataMiner
+      items:
+      - name: '@disableElementIP'
+        topicUid: DataMiner-disableElementIP
+      - name: '@elementid'
+        topicUid: DataMiner-elementid
+      - name: '@id'
+        topicUid: DataMiner-id
+      - name: '@licenseNotice'
+        topicUid: DataMiner-licenseNotice
+      - name: '@protocolVisioLnk'
+        topicUid: DataMiner-protocolVisioLnk
+      - name: '@readElementData'
+        topicUid: DataMiner-readElementData
+      - name: '@readProperties'
+        topicUid: DataMiner-readProperties
+      - name: '@safeMode'
+        topicUid: DataMiner-safeMode
+      - name: '@storeLastPollTimes'
+        topicUid: DataMiner-storeLastPollTimes
+      - name: '@useAgentBinding'
+        topicUid: DataMiner-useAgentBinding
+      - name: AlarmSocket
+        topicUid: DataMiner.AlarmSocket
+        items:
+        - name: '@port'
+          topicUid: DataMiner.AlarmSocket-port
+      - name: AzureAD
+        topicUid: DataMiner.AzureAD
+        items:
+        - name: '@clientId'
+          topicUid: DataMiner.AzureAD-clientId
+        - name: '@clientSecret'
+          topicUid: DataMiner.AzureAD-clientSecret
+        - name: '@objectId'
+          topicUid: DataMiner.AzureAD-objectId
+        - name: '@password'
+          topicUid: DataMiner.AzureAD-password
+        - name: '@tenantId'
+          topicUid: DataMiner.AzureAD-tenantId
+        - name: '@username'
+          topicUid: DataMiner.AzureAD-username
+      - name: ClearableAlarmStormProtection
+        topicUid: DataMiner.ClearableAlarmStormProtection
+        items:
+        - name: '@max'
+          topicUid: DataMiner.ClearableAlarmStormProtection-max
+        - name: '@min'
+          topicUid: DataMiner.ClearableAlarmStormProtection-min
+      - name: Colors
+        topicUid: DataMiner.Colors
+        items:
+        - name: Color
+          topicUid: DataMiner.Colors.Color
+          items:
+          - name: '@type'
+            topicUid: DataMiner.Colors.Color-type
+          - name: '@value'
+            topicUid: DataMiner.Colors.Color-value
+      - name: Crowd
+        topicUid: DataMiner.Crowd
+        items:
+        - name: '@application'
+          topicUid: DataMiner.Crowd-application
+        - name: '@host'
+          topicUid: DataMiner.Crowd-host
+        - name: '@password'
+          topicUid: DataMiner.Crowd-password
+      - name: DaaS
+        topicUid: DataMiner.DaaS
+        items:
+        - name: '@enabled'
+          topicUid: DataMiner.DaaS-enabled
+      - name: DataMinerGuid
+        topicUid: DataMiner.DataMinerGuid
+      - name: DMA
+        topicUid: DataMiner.DMA
+        items:
+        - name: '@publicDNS'
+          topicUid: DataMiner.DMA-publicDNS
+        - name: DMAName
+          topicUid: DataMiner.DMA.DMAName
+          items:
+          - name: '@mode'
+            topicUid: DataMiner.DMA.DMAName-mode
+        - name: Location1
+          topicUid: DataMiner.DMA.Location1
+        - name: Location2
+          topicUid: DataMiner.DMA.Location2
+        - name: Location3
+          topicUid: DataMiner.DMA.Location3
+      - name: ExternalAuthentication
+        topicUid: DataMiner.ExternalAuthentication
+        items:
+        - name: '@autoproxy'
+          topicUid: DataMiner.ExternalAuthentication-autoproxy
+        - name: '@host'
+          topicUid: DataMiner.ExternalAuthentication-host
+        - name: '@ipMetadata'
+          topicUid: DataMiner.ExternalAuthentication-ipMetadata
+        - name: '@password'
+          topicUid: DataMiner.ExternalAuthentication-password
+        - name: '@port'
+          topicUid: DataMiner.ExternalAuthentication-port
+        - name: '@sharedSecret'
+          topicUid: DataMiner.ExternalAuthentication-sharedSecret
+        - name: '@spMetadata'
+          topicUid: DataMiner.ExternalAuthentication-spMetadata
+        - name: '@timeout'
+          topicUid: DataMiner.ExternalAuthentication-timeout
+        - name: '@type'
+          topicUid: DataMiner.ExternalAuthentication-type
+        - name: '@username'
+          topicUid: DataMiner.ExternalAuthentication-username
+        - name: AutomaticUserCreation
+          topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation
+          items:
+          - name: '@enabled'
+            topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation-enabled
+          - name: EmailClaim
+            topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation.EmailClaim
+          - name: Givenname
+            topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation.Givenname
+          - name: Groups
+            topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation.Groups
+            items:
+            - name: '@claims'
+              topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation.Groups-claims
+          - name: PreferredLoginClaim
+            topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation.PreferredLoginClaim
+          - name: Surname
+            topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation.Surname
+      - name: ID
+        topicUid: DataMiner.ID
+        items:
+        - name: Views
+          topicUid: DataMiner.ID.Views
+          items:
+          - name: '@current'
+            topicUid: DataMiner.ID.Views-current
+          - name: '@currentOwn'
+            topicUid: DataMiner.ID.Views-currentOwn
+      - name: IP
+        topicUid: DataMiner.IP
+        items:
+        - name: '@skipMAC'
+          topicUid: DataMiner.IP-skipMAC
+        - name: VirtualIPFrom
+          topicUid: DataMiner.IP.VirtualIPFrom
+        - name: VirtualIPMask
+          topicUid: DataMiner.IP.VirtualIPMask
+        - name: VirtualIPTo
+          topicUid: DataMiner.IP.VirtualIPTo
+      - name: LDAP
+        topicUid: DataMiner.LDAP
+        items:
+        - name: '@auth'
+          topicUid: DataMiner.LDAP-auth
+        - name: '@host'
+          topicUid: DataMiner.LDAP-host
+        - name: '@namingContext'
+          topicUid: DataMiner.LDAP-namingContext
+        - name: '@nonDomainLDAP'
+          topicUid: DataMiner.LDAP-nonDomainLDAP
+        - name: '@notifications'
+          topicUid: DataMiner.LDAP-notifications
+        - name: '@password'
+          topicUid: DataMiner.LDAP-password
+        - name: '@port'
+          topicUid: DataMiner.LDAP-port
+        - name: '@referralConfigured'
+          topicUid: DataMiner.LDAP-referralConfigured
+        - name: '@useForFullName'
+          topicUid: DataMiner.LDAP-useForFullName
+        - name: '@username'
+          topicUid: DataMiner.LDAP-username
+        - name: '@useSSL'
+          topicUid: DataMiner.LDAP-useSSL
+        - name: Group
+          topicUid: DataMiner.LDAP.Group
+          items:
+          - name: Classname
+            topicUid: DataMiner.LDAP.Group.Classname
+          - name: DescriptionField
+            topicUid: DataMiner.LDAP.Group.DescriptionField
+          - name: DistinguishedField
+            topicUid: DataMiner.LDAP.Group.DistinguishedField
+          - name: Filter
+            topicUid: DataMiner.LDAP.Group.Filter
+          - name: NameField
+            topicUid: DataMiner.LDAP.Group.NameField
+        - name: QueryTimeout
+          topicUid: DataMiner.LDAP.QueryTimeout
+        - name: User
+          topicUid: DataMiner.LDAP.User
+          items:
+          - name: AccountNameField
+            topicUid: DataMiner.LDAP.User.AccountNameField
+          - name: Classname
+            topicUid: DataMiner.LDAP.User.Classname
+          - name: DescriptionField
+            topicUid: DataMiner.LDAP.User.DescriptionField
+          - name: DisplayNameField
+            topicUid: DataMiner.LDAP.User.DisplayNameField
+          - name: EmailField
+            topicUid: DataMiner.LDAP.User.EmailField
+          - name: Filter
+            topicUid: DataMiner.LDAP.User.Filter
+          - name: MobileField
+            topicUid: DataMiner.LDAP.User.MobileField
+          - name: PagerField
+            topicUid: DataMiner.LDAP.User.PagerField
+          - name: PhoneField
+            topicUid: DataMiner.LDAP.User.PhoneField
+      - name: Logging
+        topicUid: DataMiner.Logging
+        items:
+        - name: DaysToKeep
+          topicUid: DataMiner.Logging.DaysToKeep
+        - name: Debug
+          topicUid: DataMiner.Logging.Debug
+        - name: Error
+          topicUid: DataMiner.Logging.Error
+        - name: Info
+          topicUid: DataMiner.Logging.Info
+      - name: MobileGateway
+        topicUid: DataMiner.MobileGateway
+        items:
+        - name: IP
+          topicUid: DataMiner.MobileGateway.IP
+        - name: UserName
+          topicUid: DataMiner.MobileGateway.UserName
+      - name: NetworkAdapters
+        topicUid: DataMiner.NetworkAdapters
+        items:
+        - name: MAC
+          topicUid: DataMiner.NetworkAdapters.MAC
+      - name: PollSocket
+        topicUid: DataMiner.PollSocket
+        items:
+        - name: '@allowSets'
+          topicUid: DataMiner.PollSocket-allowSets
+        - name: '@port'
+          topicUid: DataMiner.PollSocket-port
+      - name: ProcessOptions
+        topicUid: DataMiner.ProcessOptions
+        items:
+        - name: '@portProcesses'
+          topicUid: DataMiner.ProcessOptions-portProcesses
+        - name: '@protocolProcesses'
+          topicUid: DataMiner.ProcessOptions-protocolProcesses
+        - name: '@scriptingProcesses'
+          topicUid: DataMiner.ProcessOptions-scriptingProcesses
+        - name: SeparateProcesses
+          topicUid: DataMiner.ProcessOptions.SeparateProcesses
+          items:
+          - name: Protocols
+            topicUid: DataMiner.ProcessOptions.SeparateProcesses.Protocols
+            items:
+            - name: Protocol
+              topicUid: DataMiner.ProcessOptions.SeparateProcesses.Protocols.Protocol
+              items:
+              - name: Name
+                topicUid: DataMiner.ProcessOptions.SeparateProcesses.Protocols.Protocol.Name
+      - name: QOS
+        topicUid: DataMiner.QOS
+      - name: SMTP
+        topicUid: DataMiner.SMTP
+        items:
+        - name: From
+          topicUid: DataMiner.SMTP.From
+        - name: Helo
+          topicUid: DataMiner.SMTP.Helo
+        - name: Host
+          topicUid: DataMiner.SMTP.Host
+        - name: HostPort
+          topicUid: DataMiner.SMTP.HostPort
+        - name: LoginMethod
+          topicUid: DataMiner.SMTP.LoginMethod
+        - name: MaxSubjectLength
+          topicUid: DataMiner.SMTP.MaxSubjectLength
+        - name: Password
+          topicUid: DataMiner.SMTP.Password
+        - name: User
+          topicUid: DataMiner.SMTP.User
+      - name: SNMP
+        topicUid: DataMiner.SNMP
+        items:
+        - name: '@enableDataMinerAgentPolling'
+          topicUid: DataMiner.SNMP-enableDataMinerAgentPolling
+        - name: '@informCacheSize'
+          topicUid: DataMiner.SNMP-informCacheSize
+        - name: '@port'
+          topicUid: DataMiner.SNMP-port
+        - name: '@readCommunity'
+          topicUid: DataMiner.SNMP-readCommunity
+        - name: '@writeCommunity'
+          topicUid: DataMiner.SNMP-writeCommunity
+      - name: SnmpTrapDistribution
+        topicUid: DataMiner.SnmpTrapDistribution
+      - name: SNMPv1
+        topicUid: DataMiner.SNMPv1
+        items:
+        - name: '@trapPort'
+          topicUid: DataMiner.SNMPv1-trapPort
+      - name: SNMPv2
+        topicUid: DataMiner.SNMPv2
+        items:
+        - name: '@trapPort'
+          topicUid: DataMiner.SNMPv2-trapPort
+      - name: SNMPv3
+        topicUid: DataMiner.SNMPv3
+        items:
+        - name: '@generateNoticeOnIncorrectTrapReceived'
+          topicUid: DataMiner.SNMPv3-generateNoticeOnIncorrectTrapReceived
+        - name: '@trapPort'
+          topicUid: DataMiner.SNMPv3-trapPort
+      - name: Telnet
+        topicUid: DataMiner.Telnet
+        items:
+        - name: '@active'
+          topicUid: DataMiner.Telnet-active
+      - name: WarningThreshold
+        topicUid: DataMiner.WarningThreshold
   - name: NuGet stages schema
     topicUid: SchemaNuGetStagesConfig
     items:

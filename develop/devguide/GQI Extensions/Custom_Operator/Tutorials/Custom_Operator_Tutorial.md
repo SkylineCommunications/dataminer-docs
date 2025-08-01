@@ -173,7 +173,7 @@ This tutorial includes three use cases demonstrating different strategies to opt
 
 With a large data set, you may want to filter your results to avoid retrieving millions of rows each time you run your custom operator. Imagine you are only interested in individuals aged 70 or older.
 
-![Filter by age](~/user-guide/images/tutorial_2_query_1.png)
+![Filter by age](~/dataminer/images/tutorial_2_query_1.png)
 
 | Name | Age | Income   | Expenses | Balance   |
 | ---- | --- | -------- | -------- | --------- |
@@ -184,7 +184,7 @@ Results are now only displayed for subjects aged 70 or older. However, while the
 
 To expedite the process, we recommend **filtering as early as possible**. This approach prevents the need to generate results for all individuals before filtering by age. Even if the data source efficiently filters on *Age* (e.g. using internal SQL queries), the framework cannot filter directly on the data source because the custom operator is defined first.
 
-![Prioritizing age filtering](~/user-guide/images/tutorial_2_query_2.png)
+![Prioritizing age filtering](~/dataminer/images/tutorial_2_query_2.png)
 
 #### Optimize your custom operator: adjusting the order of operations
 
@@ -227,12 +227,12 @@ public IGQIQueryNode Optimize(IGQIOperatorNode currentNode, IGQICoreOperator nex
 
 Use the `Forward` method to execute age filtering before defining the custom operator, resulting in improved query execution.
 
-![Filter on age faster](~/user-guide/images/tutorial_2_query_1_to_2.png)
+![Filter on age faster](~/dataminer/images/tutorial_2_query_1_to_2.png)
 
 > [!NOTE]
 > In certain cases, you can further accelerate this process by completely removing the filter operator and filtering natively.
 >
-> ![filter natively](~/user-guide/images/tutorial_2_query_2_to_3.png)
+> ![filter natively](~/dataminer/images/tutorial_2_query_2_to_3.png)
 
 ### Use case: Filter by 'Balance'
 
@@ -248,7 +248,7 @@ Two issues arise:
 
   The optimized query now looks like this:
 
-  ![filter by balance](~/user-guide/images/tutorial_2_query_5.png)
+  ![filter by balance](~/dataminer/images/tutorial_2_query_5.png)
 
   You cannot filter on the *Balance* column until calculations are performed and results are generated.
 
@@ -292,7 +292,7 @@ public IGQIQueryNode Optimize(IGQIOperatorNode currentNode, IGQICoreOperator nex
 
 This ensures that if a filter depends on the new *Balance* column, it will not run first but wait until the calculations have been added to the column.
 
-![OptimizeForFilter](~/user-guide/images/tutorial_2_query_6.png)
+![OptimizeForFilter](~/dataminer/images/tutorial_2_query_6.png)
 
 Once you have optimized you custom operator, you will get the expected results:
 
@@ -304,7 +304,7 @@ Once you have optimized you custom operator, you will get the expected results:
 
 Imagine you want to identify an individual even after the original entries in the *Name* column have been replaced with initials.
 
-![filter by 'name'](~/user-guide/images/tutorial_2_query_7.png)
+![filter by 'name'](~/dataminer/images/tutorial_2_query_7.png)
 
 If you filter on a specific name, e.g. Luiz Nevaeh, you get the following result:
 

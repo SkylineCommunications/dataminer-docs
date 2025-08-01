@@ -32,19 +32,59 @@ When an infinite loop is detected, the following will be returned:
 - When the `splitErrors` option is set to false, the error message `INFINITE LOOP` will be returned.
 - When the `splitErrors` option is set to true, the values will be returned.
 
-### Fixes
-
-#### SLProtocol would leak memory when an element was restarted [ID 42697] [ID 43300]
+#### Automation: An error message will now appear when a script import operation fails [ID 43316]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When you restarted an element that had previously been stopped, up to now, SLProtocol would leak memory.
+When, in the *Automation* module, you imported an Automation script, up to now, you would not receive any feedback about whether or not the import operation had been successful. Only after checking the Cube logs would you be able to find out that an import operation had failed.
+
+From now on, the following error message will appear whenever an exception is thrown while an Automation script is being imported:
+
+`Something went wrong. Please check the Cube and Automation logging for more information.`
+
+#### SLDataGateway: Enhanced caching of TTL overrides for the trend data of specific protocols or protocol versions [ID 43362]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+A number of enhancements have been made to the mechanism that is used to cache TTL overrides for the trend data of specific protocols or protocol versions in SLDataGateway, especially for Cassandra and Cassandra Cluster databases.
+
+#### Video thumbnails: New fitMode parameter [ID 43388]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In URLs of video thumbnails, it is now possible to pass a *fitMode* parameter, which will indicate how the image should be displayed.
+
+These are the possible values:
+
+| fitMode | Description |
+|---------|-------------|
+| fill    | The image will completely cover the container. It may crop parts of the image, but it ensures no empty space. |
+| fit     | The image will be fully visible inside the container while maintaining aspect ratio. There may be empty space if aspect ratios differ. |
+| stretch | The image will stretch to exactly fill the container, ignoring aspect ratio. This may cause distortion. |
+| center  | The image will retain its original size and will be aligned at the center. It may overflow or be cropped. |
+| shrink  | The image will behave like *fill* or *center*, whichever results in a smaller image. It will only scale down if needed. |
+
+Default value: fill
+
+Example:
+
+```txt
+https://myDMA/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true&fitMode=center
+```
+
+### Fixes
 
 #### SLManagedScripting: The same dependency would be loaded multiple times by different connectors [ID 42779]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In some cases, the same dependency would be loaded multiple times by different connectors. From now on, if multiple connectors attempt to load the same dependency at the same time, it will only be loaded once.
+
+#### DataMiner would fail to create the necessary Windows users [ID 42819]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, for example, a new DataMiner Agent had been added to the DataMiner System, since DataMiner 10.4.0 [CU4]/10.4.7, DataMiner would fail to create the necessary Windows users.
 
 #### Problem when a connector had been modified on a system running multiple SLScripting processes [ID 42877]
 
@@ -112,6 +152,12 @@ Although the upgrade would succeed in the background, no information regarding t
 
 In OpenSearch, in some cases, queries with a limit could cause scroll contexts to linger. From now on, queries with a limit will be properly tracked and cleaned up.
 
+#### SNMP elements could get stuck in slow poll mode [ID 43216]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, SNMP elements could get stuck in slow poll mode because they would fail to recover after connectivity was restored.
+
 #### Failover: Primary IP address could incorrectly be set to the IP address of the online agent [ID 43257]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -132,6 +178,20 @@ In some cases, a run-time error could be thrown when a DVE child element was del
 
 When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
 
+#### Problem when loading initial parameter data for remote elements [ID 43339]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, client applications like DataMiner Cube would fail to load initial parameter data for remote elements.
+
+#### StorageModule DcM would fail to read an element XML file [ID 43350]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some rare cases, the StorageModule DcM would fail to read an element XML file because that file was being used by another process.
+
+From now on, it will try up to three times to read an element XML file that is being used by another process.
+
 #### Fields of type datetime would incorrectly not be empty when the DOM definition field did not have a default value defined [ID 43351]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -139,3 +199,31 @@ When an error was thrown while setting up the Repository API connections between
 When a DOM definition field does not have a default value defined, by default, no value should be displayed. However, up to now, when the default time zone had been changed in the *ClientSettings.json* file, fields of type datetime would incorrectly contain the value "01/01/1970 - DefaultTimezone".
 
 From now on, if a DOM definition field does not have a default value defined, all fields of that type will be empty when displayed on a form.
+
+#### Failover: DMS call DMS_VERIFY_CLIENT_COOKIE would incorrectly be sent to the offline agent [ID 43397]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In a Failover setup using a shared hostname, the DMS call `DMS_VERIFY_CLIENT_COOKIE` would incorrectly be sent to the offline agent instead of the online agent.
+
+From now on, whenever the offline agent receives a `DMS_VERIFY_CLIENT_COOKIE` call, it will forward it to the online agent.
+
+#### SLDataMiner.txt log file entries could incorrectly contain a placeholder instead of the actual name of the function [ID 43398]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In the *SLDataMiner.txt* log file, log entries could incorrectly contain the `__FUNCTION__` placeholder instead of the actual name of the function in question.
+
+#### Certain log files would have their maximum size incorrectly set to 0 [ID 43403]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some rare cases, certain log files could have their maximum size incorrectly set to 0, causing them to start a new file each time an entry was added.
+
+From now on, by default, all log files will have their maximum size set to 10 MB.
+
+#### SLAnalytics - Automatic incident tracking: Problem due to an incorrect internal state [ID 43451]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, an incorrect internal state in the automatic incident tracking feature could cause the SLAnalytics process to stop working.
