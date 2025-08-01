@@ -123,6 +123,9 @@ items:
         topicUid: Deal_Registration
       - name: Bidding DataMiner
         topicUid: Bidding_DataMiner
+        items:
+          - name: Skyline bid management
+            topicUid: Skyline_Bid_Management
       - name: Partner responsibilities
         items:
           - name: Support level roles
