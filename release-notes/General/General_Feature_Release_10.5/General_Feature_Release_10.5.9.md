@@ -457,6 +457,18 @@ Up to now, it was not possible to change the display name of an enum entry when 
 
 This limitation has now been removed. From now on, it will be allowed to update the display name of an enum entry, even if the enum is being used by DOM instances.
 
+#### Improved logging in case STaaS system is not registered [ID 43455]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+To allow easier troubleshooting, logging has now been improved in case a DataMiner System using STaaS is not correctly registered on dataminer.services.
+
+#### Exception when RAD (sub)group is added with anomaly threshold of 0 [ID 43459]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+When a relational anomaly group or subgroup is added with the AddRADParameterGroupMessage or AddRADSubgroupMessage with anomaly threshold set to 0, an exception will now be thrown. Previously, the exception for this invalid configuration was silently ignored and the anomaly threshold was set to the default value of 3.0.
+
 ### Fixes
 
 #### SLManagedScripting: The same dependency would be loaded multiple times by different connectors [ID 42779]
@@ -710,9 +722,3 @@ After an element had been swarmed, in some rare cases, the hosting agent cache i
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In some cases, an incorrect internal state in the automatic incident tracking feature could cause the SLAnalytics process to stop working.
-
-##### Improved logging in case STaaS system is not registered [ID 43455]
-
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
-
-To allow easier troubleshooting, logging has now been improved in case a DataMiner System using STaaS is not correctly registered on dataminer.services.

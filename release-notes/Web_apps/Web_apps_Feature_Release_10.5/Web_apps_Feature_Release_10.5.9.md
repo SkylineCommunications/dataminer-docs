@@ -262,4 +262,3 @@ When a dashboard containing a *Button panel* component was embedded in DataMiner
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 When, while editing a low-code app, you changed the visual of a component, the list of possible actions to be configured for that component would no longer be correct.
-
