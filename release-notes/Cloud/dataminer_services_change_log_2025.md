@@ -9,6 +9,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 04 August 2025 - Enhancement - A DaaS can use the url of a soft deleted system
+
+It is now supported to create a DaaS with a url that is used by a system that is still in soft-deleted state.
+
+### 04 August 2025 - New Feature - DMS Usage overview
+
+A owner or administrator of a DMS is now able to see the usage of its system on a "Usage" page for the DMS in question in the Admin app.
+
 ### 16 July 2025 - Enhancement - Startup and upgrade progress displayed when remotely accessing Cube
 
 From now on, if you remotely access the Cube desktop app while the DataMiner System is starting up or while an upgrade is in progress, the progress will be displayed instead of an error. Upgrading the DataMiner System while remotely accessing Cube will also no longer disconnect the session but will instead show the upgrade progress.
