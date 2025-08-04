@@ -31,4 +31,4 @@ Previously, when processing spectrum traces using the connectors Cisco CBR-8 CCA
 
 #### Cisco CBR-8 CCAP UTSC: Improved trace updates [ID 43387]
 
-To ensure that the spectrum trace is updated smoothly, measurement points are now buffered and then sequentially de-buffered to update the UI.
+To ensure that the spectrum trace is updated smoothly, traces are now buffered and then sequentially de-buffered to update the UI.
