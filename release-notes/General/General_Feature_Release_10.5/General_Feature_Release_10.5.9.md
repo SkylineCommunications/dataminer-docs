@@ -667,6 +667,12 @@ From now on, if a DOM definition field does not have a default value defined, al
 
 After an element had been swarmed, in some cases, that element would incorrectly be stuck in the Swarming state.
 
+#### Swarming: Synchronization issues caused by SLDMS accepting outdated notifications [ID 43373]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+In systems where swarming was enabled, it could occur that SLDMS accepted outdated notifications about element changes, which could lead to synchronization issues between different SLDMS instances, such as race conditions and missing information.
+
 #### SLAnalytics: Problem when grouping suggestion events generated after detecting a relational anomaly or a multivariate pattern [ID 43379]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
