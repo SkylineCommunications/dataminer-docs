@@ -30,4 +30,10 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards app: PDFs would fail to get generated when a browser tab was closed [ID 43449] [ID 43475]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 - note that 43475 reverts the RN in 10.5.9, and it was then added again in 10.5.10 without a separate record -->
+
+Each open browser tab has its own WebSocket channel. When such a channel is closed, the Web API checks whether certain resources need to be cleaned up.
+
+Up to now, when a single channel was closed, all temporary PDF files would incorrectly be removed for all connections. As a result, if any PDF was being generated when a channel was closed, that generation would fail.
