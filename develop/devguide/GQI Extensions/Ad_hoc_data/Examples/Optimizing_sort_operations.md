@@ -8,11 +8,11 @@ This example shows how you can optimize a sort operation by intercepting the sor
 
 ## Use case
 
-**Given**: An ad hoc data source called `EventDataSource` that fetches events from an SQL database.
+This example uses an ad hoc data source called `EventDataSource` that fetches events from an SQL database.
 
-**Goal**: Optimize the ad hoc data source such that *if* the events are sorted in a query, the sort operation is done on the database directly to maximize performance.
+The goal is to optimize the ad hoc data source so that when the events are sorted in a query, the sort operation is done on the database directly to maximize performance.
 
-This is the current implementation without sort optimization:
+This is the starting implementation without sort optimization:
 
 ```csharp
 using System;
@@ -64,9 +64,27 @@ public sealed class EventDataSource : IGQIDataSource, IGQIOnPrepareFetch
 
 To implement the sort optimization, take the following steps:
 
-1. Add a private field `_sortOperator` of type [IGQISortOperator](xref:GQI_IGQISortOperator) where a sort operator can be stored.
-2. [Implement](#implementing-the-optimize-life-cycle-method) the [IGQIOptimizableDataSource](xref:GQI_IGQIOptimizableDataSource) for the `EventDataSource` class to intercept potential sort operators and store them in the `sortOperator` field.
-3. [Extend](#extending-the-onpreparefetch-life-cycle-method) the [OnPrepareFetch](xref:Ad_hoc_Life_cycle#onpreparefetch) life cycle method to apply the sort operator stored in the `sortOperator` field.
+1. Add a private field `_sortOperator` of type [IGQISortOperator](xref:GQI_IGQISortOperator), where a sort operator can be stored.
+
+1. Implement the [IGQIOptimizableDataSource](xref:GQI_IGQIOptimizableDataSource) for the `EventDataSource` class to intercept potential sort operators and store them in the `sortOperator` field:
+
+   1. Use the [Optimize](xref:Ad_hoc_Life_cycle#optimize) life cycle method defined on the [IGQIOptimizableDataSource](xref:GQI_IGQIOptimizableDataSource#igqiquerynode-optimizeigqidatasourcenode-currentnode-igqicoreoperator-nextoperator) building block interface to intercept operators that are applied directly to the ad hoc data source.
+
+   1. Use the [IsSortOperator](xref:GQI_IGQICoreBlock#bool-issortoperatorout-igqisortoperator-sortoperator) method on the `nextOperator` argument to check whether the next operator is a sort operator.
+
+      - If `true`: Store the sort operator in the `_sortOperator` field to optimize later in the life cycle. Return the `currentNode` without appending the sort operator to remove the operator from the query and transfer the responsibility of applying the sort operation to the data source.
+      - If `false`: Append the `nextOperator` to the `currentNode` and return the result. This tells the GQI framework that the operator should still be applied after the data is received from the data source. This would also be the default behavior in case the [IGQIOptimizableDataSource](xref:GQI_IGQIOptimizableDataSource) were not implemented.
+
+1. Extend the [OnPrepareFetch](xref:Ad_hoc_Life_cycle#onpreparefetch) life cycle method to apply the sort operator stored in the `sortOperator` field:
+
+   1. Add an `ORDER BY` clause to the SQL statement for each [sort field](xref:GQI_IGQISortOperator#properties) in the sort operator to apply the sort operation on the database. To construct the `ORDER BY` clause, each [sort field](xref:GQI_IGQISortField) needs to be translated into valid SQL:
+
+      - Map the [sort column](xref:GQI_IGQIColumn) back to its corresponding database column name using the `_columns` field.
+      - Map the [sort direction](xref:GQI_GQISortDirection) to either `ASC` or `DESC`
+
+   1. Join all translated sort fields together with `", "` and append them to the SQL statement.
+
+This will be the result:
 
 ```csharp
 ...
@@ -136,26 +154,6 @@ public sealed class EventDataSource : IGQIDataSource, IGQIOnPrepareFetch, IGQIOp
     ...
 }
 ```
-
-### Implementing the Optimize life cycle method
-
-Use the [Optimize](xref:Ad_hoc_Life_cycle#optimize) life cycle method defined on the [IGQIOptimizableDataSource](xref:GQI_IGQIOptimizableDataSource#igqiquerynode-optimizeigqidatasourcenode-currentnode-igqicoreoperator-nextoperator) building block interface to intercept operators that are applied directly to the ad hoc data source.
-
-Use the [IsSortOperator](xref:GQI_IGQICoreBlock#bool-issortoperatorout-igqisortoperator-sortoperator) method on the `nextOperator` argument to check whether the next operator is a sort operator.
-
-- If `true`: Store the sort operator in the `_sortOperator` field to optimize later in the life cycle. Return the `currentNode` without appending the sort operator to remove the operator from the query and transfer the responsability of applying the sort operation to our data source.
-- If `false`: Append the `nextOperator` to the `currentNode` and return the result. This tells the GQI framework that the operator should still be applied after receiving the data from our data source. This is also the default behavior if we would not implement the [IGQIOptimizableDataSource](xref:GQI_IGQIOptimizableDataSource).
-
-### Extending the OnPrepareFetch life cycle method
-
-In the [OnPrepareFetch](xref:Ad_hoc_Life_cycle#onpreparefetch) life cycle method, if a sort operator was stored in the `_sortOperator` field, add an `ORDER BY` clause to the SQL statement for each [sort field](xref:GQI_IGQISortOperator#properties) in the sort operator to apply the sort operation on the database.
-
-To construct the `ORDER BY` clause, each [sort field](xref:GQI_IGQISortField) needs to be translated into valid SQL:
-
-- Map the [sort column](xref:GQI_IGQIColumn) back to its corresponding database column name using the `_columns` field.
-- Map the [sort direction](xref:GQI_GQISortDirection) to either `ASC` or `DESC`
-
-Finally, all translated sort fields can be joined together with `", "` and appended to the SQL statement.
 
 ## See also
 

@@ -42,11 +42,8 @@ Called when an optimizable operator is appended directly to the ad hoc data sour
 
 - [IGQICoreOperator](xref:GQI_IGQICoreOperator) `nextOperator`: A reference to the next operator.
 
-#### Examples
-
-- [Optimizing sort operations](xref:GQI_Ad_hoc_Optimizing_sort_operations)
-
 #### See also
 
 - The [ad hoc data source life cycle](xref:Ad_hoc_Life_cycle).
 - The [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator) to optimize custom operators.
+- Example: [Optimizing sort operations](xref:GQI_Ad_hoc_Optimizing_sort_operations).
