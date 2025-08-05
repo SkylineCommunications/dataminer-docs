@@ -47,9 +47,9 @@ It is not yet possible to configure time-to-live (TTL) values for STaaS. In the 
 | Data type                | TTL          |
 |--------------------------|:------------:|
 | Real-time trending       | 7 days       |
-| Average trending (short) | 3 months     |
-| Average trending (medium)| 2 years      |
-| Average trending (long)  | 10 years     |
+| Average trending (short – 5 min.) | 3 months     |
+| Average trending (medium – 1 hour)| 2 years      |
+| Average trending (long – 1 day)  | 10 years     |
 | State changes            | 5 years      |
 | Spectrum traces          | 1 year       |
 | Alarm events             | 1 year       |
