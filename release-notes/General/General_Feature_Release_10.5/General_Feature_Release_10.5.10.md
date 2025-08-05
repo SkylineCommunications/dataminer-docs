@@ -47,3 +47,9 @@ The folder `C:\Skyline DataMiner\Webpages\Public\` will now be synced between Da
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.9 -->
 
 In some cases, a problem could occur in SLDataMiner when the connection type of an element changed. To prevent this, the validation of SNMPv3 usernames has now been improved.
+
+#### Slow handling of concurrent requests to retrieve or update bookings [ID 43450]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+When a lot of concurrent requests had to be processed by the Repository API in the background, e.g. to retrieve or update bookings, this could cause thread starvation in SLDataGateway, causing these requests to be handled much more slowly than usual.

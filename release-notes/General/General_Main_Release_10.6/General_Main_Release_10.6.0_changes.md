@@ -464,3 +464,9 @@ At startup, up to now, the ModelHost DxM would stop working when it failed to re
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
 In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.
+
+#### Slow handling of concurrent requests to retrieve or update bookings [ID 43450]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+When a lot of concurrent requests had to be processed by the Repository API in the background, e.g. to retrieve or update bookings, this could cause thread starvation in SLDataGateway, causing these requests to be handled much more slowly than usual.
