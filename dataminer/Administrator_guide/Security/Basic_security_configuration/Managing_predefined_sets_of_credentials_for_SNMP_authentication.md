@@ -33,3 +33,4 @@ When you have applied changes to a set of credentials, do not forget to click th
 >
 > - Credentials are synchronized throughout the DMS.
 > - If a set of credentials is deleted or edited while it is in use by an active element, that element will be restarted automatically.
+> - For credentials that include a password (e.g. SNMPv3 credentials), the password can be up to 43 characters long. From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43422-->, credentials of type *Username and password* allow passwords of any length.
