@@ -28,3 +28,7 @@ In addition, users will now be able to configure the *PNM Bulk Data Transfer Con
 #### Cisco CBR-8 CCAP UTSC/Generic SFTP Client: Improved spectrum capture process [ID 43237]
 
 Previously, when processing spectrum traces using the connectors Cisco CBR-8 CCAP UTSC and Generic SFTP Client, it could occur that it was not clear when all trace results were processed. To improve this, after a capture is triggered, the element using the Cisco CBR-8 CCAP UTSC connector will now wait for the duration that combines the configured free run duration, the repeat period, and a configurable delay. This will ensure that every capture file is safely written to the local storage on the DataMiner Agent where the spectrum capture was taken.
+
+#### Cisco CBR-8 CCAP UTSC: Improved trace updates [ID 43387]
+
+To ensure that the spectrum trace is updated smoothly, traces are now buffered and then sequentially de-buffered to update the UI.

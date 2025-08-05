@@ -197,7 +197,7 @@ In the next step, you will need to be able to take ownership of an alarm. If you
 
    1. Add a *Filter* operator.
 
-   1. Configure the filter with the column *Is Active* and select the *Value* check box.
+   1. Configure the filter with the column *Is Active* and select the *Value* checkbox.
 
       This way, the filter will be applied for alarms for which the *Is Active* property is equal to true.
 

@@ -80,7 +80,7 @@ This means that, from now on, during a DataMiner upgrade, the *Verify NATS Clust
 
 #### SLDataGateway: Enhanced caching of TTL overrides for the trend data of specific protocols or protocol versions [ID 43362]
 
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 A number of enhancements have been made to the mechanism that is used to cache TTL overrides for the trend data of specific protocols or protocol versions in SLDataGateway, especially for Cassandra and Cassandra Cluster databases.
 
@@ -107,6 +107,12 @@ Example:
 ```txt
 https://myDMA/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true&fitMode=center
 ```
+
+#### Improved logging in case STaaS system is not registered [ID 43455]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+To allow easier troubleshooting, logging has now been improved in case a DataMiner System using STaaS is not correctly registered on dataminer.services.
 
 ### Fixes
 
@@ -201,6 +207,12 @@ As BrokerGateway is started alongside the Microsoft Windows operating system, in
 
 To prevent being unaware of certain IP addresses, from now on, BrokerGateway will not only refresh its IP address cache every 5 minutes, it will also refresh that cache each time it detects a network adapter update.
 
+#### SNMP elements could get stuck in slow poll mode [ID 43216]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, SNMP elements could get stuck in slow poll mode because they would fail to recover after connectivity was restored.
+
 #### Failover: Primary IP address could incorrectly be set to the IP address of the online agent [ID 43257]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -231,12 +243,6 @@ Logging has been adjusted to not spam if multiple SNMP Managers send to the same
 Failed resolving authoritative context ID for SNMP Manager
 ```
 
-#### Swarming: Problem when redundancy groups contained DVE child elements acting as primary or backup elements [ID 43286]
-
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
-
-When Swarming was enabled, in some rare cases, SLDMS and SLDataMiner could get into a deadlock when the system contained redundancy groups in which DVE child elements acted as primary or backup elements.
-
 #### BrokerGateway: GetConnectionDetails call would incorrectly not return any destinations [ID 43292]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
@@ -257,6 +263,12 @@ In some cases, a run-time error could be thrown when a DVE child element was del
 
 When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
 
+#### Problem when loading initial parameter data for remote elements [ID 43339]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, client applications like DataMiner Cube would fail to load initial parameter data for remote elements.
+
 #### StorageModule DcM would fail to read an element XML file [ID 43350]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -272,6 +284,12 @@ From now on, it will try up to three times to read an element XML file that is b
 When a DOM definition field does not have a default value defined, by default, no value should be displayed. However, up to now, when the default time zone had been changed in the *ClientSettings.json* file, fields of type datetime would incorrectly contain the value "01/01/1970 - DefaultTimezone".
 
 From now on, if a DOM definition field does not have a default value defined, all fields of that type will be empty when displayed on a form.
+
+#### Swarming: Synchronization issues caused by SLDMS accepting outdated notifications [ID 43373]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+In systems where swarming was enabled, it could occur that SLDMS accepted outdated notifications about element changes, which could lead to synchronization issues between different SLDMS instances, such as race conditions and missing information.
 
 #### Failover: DMS call DMS_VERIFY_CLIENT_COOKIE would incorrectly be sent to the offline agent [ID 43397]
 
@@ -300,3 +318,15 @@ From now on, by default, all log files will have their maximum size set to 10 MB
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
 In large DataMiner Systems, in some cases, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely.
+
+#### SLAnalytics - Pattern matching: Problem when retrieving the streaming matches [ID 43419]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a linked pattern was created on elements hosted on different DataMiner Agents, in some cases, the `getPatternMatchMessage` would not return the correct number of streaming matches.
+
+#### SLAnalytics - Automatic incident tracking: Problem due to an incorrect internal state [ID 43451]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, an incorrect internal state in the automatic incident tracking feature could cause the SLAnalytics process to stop working.

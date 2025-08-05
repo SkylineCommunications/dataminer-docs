@@ -387,6 +387,20 @@ From now on, trend predictions with prediction intervals spanning the full data 
 
 Such intervals indicate highly unpredictable data behavior, offering little to no meaningful forecasting value.
 
+#### DataMiner Object Models: Updating the display value of an enum is now allowed [ID 43452]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Up to now, it was not possible to change the display name of an enum entry when the enum was being used by a DOM instance, despite it having no effect on the underlying enum value or DOM behavior.
+
+This limitation has now been removed. From now on, it will be allowed to update the display name of an enum entry, even if the enum is being used by DOM instances.
+
+#### Exception when RAD (sub)group is added with anomaly threshold of 0 [ID 43459]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+When a relational anomaly group or subgroup is added with the AddRADParameterGroupMessage or AddRADSubgroupMessage with anomaly threshold set to 0, an exception will now be thrown. Previously, the exception for this invalid configuration was silently ignored and the anomaly threshold was set to the default value of 3.0.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]

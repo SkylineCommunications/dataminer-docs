@@ -201,6 +201,8 @@ items:
             topicUid: Cassandra_expired_blocking_SSTables
           - name: Element fails to start because of database failure
             topicUid: Cassandra_General_DB_Failure
+      - name: Troubleshooting – DaaS
+        topicUid: Troubleshooting_DaaS
       - name: Troubleshooting – dataminer.services
         items:
           - name: Investigating dataminer.services connection issues
@@ -248,6 +250,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Contents of Elements folder deleted from offline Agents in Failover cluster
+            topicUid: KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster
           - name: DataMiner startup issue with one or more DcMs not running
             topicUid: KI_Startup_issue_DcM_not_running
           - name: SRM scheduler unresponsive

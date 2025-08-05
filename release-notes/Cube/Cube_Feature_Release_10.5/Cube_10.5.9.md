@@ -107,6 +107,17 @@ A number of enhancements have been made to the way in which element and service 
 - The *Created* and *Created by* values will now be displayed as one single value.
 - The *Modified* and *Modified by* values will now be displayed as one single value.
 
+#### Credentials library: Passwords in credentials of type 'Username and password' will no longer be limited in size [ID 43422]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Up to now, credentials of type *Username and password* allowed passwords up to 43 characters.
+
+From now on, passwords in this type of credentials will no longer be limited in size, allowing for stronger and more secure authentication.
+
+> [!NOTE]
+> This change only applies to credentials of type *Username and password*. Other credentials that include a password (e.g. credentials of type *SNMPv3*) will still only support passwords up to 43 characters.
+
 #### Default web browser engine will now be Edge instead of Chromium [ID 43429]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -191,3 +202,9 @@ From now on, embedded visual overviews will only be fully refreshed when the ref
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 When the *Trend prediction* setting had been disabled in the *System settings > Analytics config* section of *System Center*, up to now, Cube would incorrectly still request trend prediction data when you opened a trend graph.
+
+#### 'Replicated' status not shown correctly in Properties window [ID 43473]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Because of an issue with the translation key, the "Replicated" status for a replicated object in DataMiner was not displayed correctly in the *Properties* window. Instead, the text "Common_Replicated" was displayed regardless of which language was selected for the Cube UI.

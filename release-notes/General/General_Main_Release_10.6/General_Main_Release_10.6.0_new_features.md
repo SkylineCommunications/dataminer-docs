@@ -797,33 +797,6 @@ After a dependency has been uploaded, all scripts using that dependency will be 
 > [!NOTE]
 > For QActions in protocols, the relevant SLScripting process must be restarted before the new DLL will get loaded.
 
-#### DataMiner Object Models: Attachments can now be uploaded to a network share [ID 43114]
-
-<!-- MR 10.6.0 - FR 10.5.9 -->
-
-In `ModuleSettings`, `DomManagerSettings` now contains a new `DomInstanceNetworkAttachmentSettings` class that allows you to save DOM instance attachments to a network share instead of to the *Documents* module.
-
-The `DomInstanceNetworkAttachmentSettings` class contains the following properties:
-
-- `NetworkSharePath` (string)
-
-  The UNC path to a network share.
-
-  This path has to start with "\\\\", and cannot contain any characters that are illegal in path specifications.
-
-- `CredentialId` (GUID)
-
-  The GUID of the credential containing the username and password of the user account that will be used to add the attachment to the network share.
-
-  - This credential, stored in the credential library, must be of type `UserNameAndPasswordCredential`.
-  - The user has to have read/write access to the network share. If the user is a domain user or a local Windows user, the user name must be preceded by the domain/host name (e.g. MYDOMAIN\myuser or MYPC\myuser).
-
-> [!NOTE]
->
-> - When you create or update a `DomInstanceNetworkAttachmentSettings` entry with a `NetworkSharePath` and a `CredentialId`, the system will check whether you have access to the credential.
-> - Once a `DomInstanceNetworkAttachmentSettings` entry has made made, any user with permission to create or update DOM instances will be allowed to add attachments to the network share in question, even if they do not have direct access to the share.
-> - By default, the size of the attachments is limited to 20 MB. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#documentsmaxsize).
-
 #### SLNet: 'TraceId' property added to ClientRequestMessage & extended logging [ID 43187]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
@@ -877,3 +850,123 @@ The logging of a DOM manager will now also contain a line indicating the start o
 ```txt
 2025/07/02 15:05:11.110|SLNet.exe|HandleStatusTransitionRequest|INF|3|269|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Handling status transition with ID 'new_to_closed' for instance with ID '1ff720a3-0aa2-4548-8b51-d8b975e19ea4'.
 ```
+
+#### Service & Resource Management: Support for capacity ranges [ID 43335]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Resource capacity ranges are now supported. To that end, profile parameters can now be of type "range".
+
+A resource can have one capacity range per profile parameter. This range can be either fully booked or partially booked.
+
+- If a range is partially booked, other bookings can book the unbooked part of the range as long as the bookings do not overlap.
+- The same range can be booked by two overlapping bookings on condition that the same reference string is used and that the range is identical in both bookings. `GetEligibleResources` has been updated to take this into account.
+
+##### Examples
+
+Scenario: A Resource has a capacity range parameter with a range from 100 to 200.
+
+Example 1:
+
+- If a booking books the entire range without a reference string, no other overlapping bookings can book that resource while requesting that same capacity range.
+- `GetEligibleResources` will not return that resource if asked for that capacity range with an overlapping time range.
+
+Example 2:
+
+- If a booking books the range from 100 to 110, another booking can book that range from 110 to 200, etc.
+- `GetEligibleResources` will return that resource, specifying the available range from 110 to 200.
+
+Example 3:
+
+- If a booking books the range from 100 to 110 with reference string "Example 3", another booking can book the same range from 100 to 110 if it uses the same "Example 3" reference.
+- `GetEligibleResources` wil return the entire range if "Example 3" is provided as reference.
+
+##### Creating a range parameter
+
+This is how you can create a range parameter.
+
+```csharp
+var rangeCapacityParameter= new ProfileParameter
+{
+  ID = Guid.NewGuid(),
+  Categories = ProfileParameterCategory.Capacity,
+  Name = "Range Parameter",
+  Type = ProfileParameter.ParameterType.Range,
+};
+profileHelper.ProfileParameters.Create(rangeCapacityParameter);
+```
+
+##### Creating a resource with a capacity range
+
+This is how you can add range 100 to 1000 to a resource.
+
+```csharp
+var capacities = new List<MultiResourceCapacity>
+{
+  new MultiResourceCapacity
+  {
+    CapacityProfileID = rangeCapacityParameter.ID,
+    Value = new CapacityParameterValue(100, 1000),
+  }
+};
+
+var resource = new Resource(Guid.NewGuid())
+{
+  Name = "Resource",
+  Mode = ResourceMode.Available,
+  Capacities = capacities,
+  MaxConcurrency = 10
+};
+
+resourceManager.AddOrUpdateResources(resource);
+```
+
+##### Booking a range
+
+This is how you can book the range from 100 to 150 of a specified resource.
+
+```csharp
+var resourceUsage = new ResourceUsageDefinition(resource.ID)
+{
+  RequiredCapacities = new List<MultiResourceCapacityUsage>
+  {
+    new MultiResourceCapacityUsage
+    {
+      CapacityProfileID = rangeCapacityParameter.ID,
+      RangeStart = 100,
+      DecimalQuantity = 50
+    }
+  }
+};
+
+booking.ResourcesInReservationInstance.Add(resourceUsage);
+```
+
+##### Checking which resources have a specific range available
+
+This is how you can check which resources have a specific range available.
+
+```csharp
+var requiredCapacities = new List<MultiResourceCapacityUsage>()
+{
+  new MultiResourceCapacityUsage(rangeCapacityParameter, 100, 50)
+};
+
+var requiredCapabilities = new List<ResourceCapabilityUsage>();
+
+result = resourceManager.GetEligibleResourcesWithUsageInfo(now, now.AddHours(1), requiredCapacities, requiredCapabilities);
+```
+
+#### Trap forwarding: Traps can now be forwarded to target elements of which a specific hostname was configured in the port settings [ID 43347]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+SLSNMPManager is now capable of forwarding traps to target elements of which a specific hostname was configured in the port settings.
+
+If the hostname cannot be resolved to an IP address, an error alarm with the following message will be generated on the target element:
+
+`Could not resolve destination host to an IP: polling host=<hostname>, or failed to set the destination address. <ERROR>`
+
+Example:
+
+`Could not resolve destination host to an IP: polling host=localhost123, or failed to set the destination address. Host to IP failure. Error : 11001. [WSAHOST_NOT_FOUND]`

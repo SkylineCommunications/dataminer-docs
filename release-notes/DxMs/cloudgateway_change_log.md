@@ -4,6 +4,10 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 24 July 2025 - Fix - CloudGateway 2.17.11 - Incorrect connectivity warnings due to incomplete validation
+
+An issue was introduced in CloudGateway 2.17.5 where the connection to dataminer.services was only validated by IP address, without falling back to DNS as expected. On systems where the firewall is configured to allow traffic based on DNS rather than IP, this could result in incorrect connectivity warnings in the Admin app. This issue has now been resolved.
+
 #### 07 July 2025 - Fix - CloudGateway 2.17.10 - Unhandled exception while setting up connection could cause a DxM restart
 
 When an exception was encountered while setting up the connection, this could cause the CloudGateway DxM to stop working correctly and then restart.
