@@ -11,5 +11,4 @@ uid: Skyline_DataMiner_Core_InterAppCalls_Range_1.1
 
 ### New feature - Enhanced performance
 
-Performance of InterApp calls has been enhanced by using the GetElementReference method instead of the GetElement (IDms).
-This results in reduced SLNet calls improving the performance of InterApp calls.
+Performance of InterApp calls has been enhanced by using the GetElementReference method instead of GetElement (IDms). This results in reduced SLNet calls, improving the performance of InterApp calls.
