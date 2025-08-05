@@ -34,7 +34,11 @@ uid: General_Feature_Release_10.5.10
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### 'Webpages\Public' folder now synced between DataMiner Agents [ID 43458]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+The folder `C:\Skyline DataMiner\Webpages\Public\` will now be synced between DataMiner Agents in a cluster. As a consequence, files that are installed in this folder can now also be included in the companion files of a DataMiner app package.
 
 ### Fixes
 
