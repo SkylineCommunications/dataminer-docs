@@ -122,12 +122,6 @@ To allow easier troubleshooting, logging has now been improved in case a DataMin
 
 In some cases, the same dependency would be loaded multiple times by different connectors. From now on, if multiple connectors attempt to load the same dependency at the same time, it will only be loaded once.
 
-#### DataMiner would fail to create the necessary Windows users [ID 42819]
-
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
-
-When, for example, a new DataMiner Agent had been added to the DataMiner System, since DataMiner 10.4.0 [CU4]/10.4.7, DataMiner would fail to create the necessary Windows users.
-
 #### Problem when a connector had been modified on a system running multiple SLScripting processes [ID 42877]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
