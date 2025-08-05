@@ -42,4 +42,8 @@ The folder `C:\Skyline DataMiner\Webpages\Public\` will now be synced between Da
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### SLDataMiner issue after connection type of element changed [ID 43249]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.9 -->
+
+In some cases, a problem could occur in SLDataMiner when the connection type of an element changed. To prevent this, the validation of SNMPv3 usernames has now been improved.
