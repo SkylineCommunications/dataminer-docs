@@ -13,7 +13,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 In the Admin app, the usage for unmanaged objects will now be displayed if you are using at least DataMiner 10.5.5/10.6.0 and DataMiner SupportAssistant 1.7.3. The data will also be available for export.
 
-### 5 August 2025 - TBD - TBD
+### 05 August 2025 - Enhancement - A DaaS can use the url of a soft deleted system
+
+It is now supported to create a DaaS with a url that is used by a system that is still in soft-deleted state.
+
+### 05 August 2025 - New Feature - DMS Usage overview
+
+A owner or administrator of a DMS is now able to see the usage of its system on a "Usage" page for the DMS in question in the Admin app.
 
 ### 16 July 2025 - Enhancement - Startup and upgrade progress displayed when remotely accessing Cube
 
