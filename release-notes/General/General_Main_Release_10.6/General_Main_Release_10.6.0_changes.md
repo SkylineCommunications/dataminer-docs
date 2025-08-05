@@ -470,3 +470,9 @@ In some cases, an alarm with a source other than "DataMiner" could incorrectly i
 <!-- MR 10.6.0 - FR 10.5.10 -->
 
 When a lot of concurrent requests had to be processed by the Repository API in the background, e.g. to retrieve or update bookings, this could cause thread starvation in SLDataGateway, causing these requests to be handled much more slowly than usual.
+
+#### Failed upgrade action because of duplicate keys for SNMPv3 elements [ID 43477]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+In some cases, it could occur that the SyncInfo file contained duplicate keys for SNMPv3 elements, which would cause upgrade actions to fail with the following error message: `UpgradeAction failed:System.ArgumentException: An item with the same key has already been added.`
