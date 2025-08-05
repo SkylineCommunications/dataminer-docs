@@ -56,6 +56,6 @@ When a lot of concurrent requests had to be processed by the Repository API in t
 
 #### Failed upgrade action because of duplicate keys for SNMPv3 elements [ID 43477]
 
-<!-- MR 10.6.0 - FR 10.5.10 -->
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.9 -->
 
 In some cases, it could occur that the SyncInfo file contained duplicate keys for SNMPv3 elements, which would cause upgrade actions to fail with the following error message: `UpgradeAction failed:System.ArgumentException: An item with the same key has already been added.`
