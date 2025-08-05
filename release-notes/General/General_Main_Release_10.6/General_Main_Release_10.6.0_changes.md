@@ -395,6 +395,12 @@ Up to now, it was not possible to change the display name of an enum entry when 
 
 This limitation has now been removed. From now on, it will be allowed to update the display name of an enum entry, even if the enum is being used by DOM instances.
 
+#### 'Webpages\Public' folder now synced between DataMiner Agents [ID 43458]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+The folder `C:\Skyline DataMiner\Webpages\Public\` will now be synced between DataMiner Agents in a cluster. As a consequence, files that are installed in this folder can now also be included in the companion files of a DataMiner app package.
+
 #### Exception when RAD (sub)group is added with anomaly threshold of 0 [ID 43459]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
