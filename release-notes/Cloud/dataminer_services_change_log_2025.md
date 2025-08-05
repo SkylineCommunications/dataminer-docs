@@ -13,6 +13,8 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 In the Admin app, the usage for unmanaged objects will now be displayed if you are using at least DataMiner 10.5.5/10.6.0 and DataMiner SupportAssistant 1.7.3. The data will also be available for export.
 
+### 5 August 2025 - TBD - TBD
+
 ### 16 July 2025 - Enhancement - Startup and upgrade progress displayed when remotely accessing Cube
 
 From now on, if you remotely access the Cube desktop app while the DataMiner System is starting up or while an upgrade is in progress, the progress will be displayed instead of an error. Upgrading the DataMiner System while remotely accessing Cube will also no longer disconnect the session but will instead show the upgrade progress.
