@@ -6408,9 +6408,7 @@ items:
         - name: Viewing test results
           topicUid: Viewing_test_results
     - name: Definition of Done (DoD)
-      items:
-        - name: About DoD
-          topicUid: About_DoD
+      topicUid: About_DoD
     - name: Third-party Tools
       topicUid: ThirdPartyTools
       items:
