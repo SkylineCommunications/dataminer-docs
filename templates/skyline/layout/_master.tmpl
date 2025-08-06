@@ -151,13 +151,22 @@
     </footer>
 
     <script type="text/javascript">
-      const embedFlag = new URLSearchParams(window.location.search)?.get('embed') ?? '';
+      const params = new URLSearchParams(window.location.search);
+      const embedFlag = params?.get('embed') ?? '';
       if (embedFlag === 'true') {
         document.querySelector('head base')?.setAttribute('target', '_parent');
         document.body.classList.add('embed');
       } else {
         document.querySelector('head base')?.removeAttribute('target');
         document.body.classList.remove('embed');
+      }
+      const searchQuery = params?.get('search') ?? '';
+      if (searchQuery) {
+        var searchResults = document.getElementById('search-results-new');
+        if (searchResults) {
+          document.getElementById("main").style.display = "none";
+          searchResults.style.display = "block";
+        }
       }
     </script>
   </body>

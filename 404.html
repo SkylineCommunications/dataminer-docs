@@ -35,7 +35,7 @@
 
             const fallback = document.createElement('iframe');
             fallback.id = 'search-results';
-            fallback.src = `/?embed=true&q=${errorPath}`;
+            fallback.src = `/?embed=true&search=${errorPath}`;
             document.body.append(fallback);
         }
     </script>

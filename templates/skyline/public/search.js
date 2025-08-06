@@ -11,7 +11,7 @@ function initSearch() {
   tryHandleURL();
 
   function tryHandleURL() {
-    const searchQuery = new URLSearchParams(window.location.search)?.get('q') ?? '';
+    const searchQuery = new URLSearchParams(window.location.search)?.get('search') ?? '';
     if (!searchQuery)
       return;
 
