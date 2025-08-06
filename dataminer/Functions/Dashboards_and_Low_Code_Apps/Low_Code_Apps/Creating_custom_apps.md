@@ -9,9 +9,13 @@ uid: Creating_custom_apps
 
 ## Creating a new low-code app
 
-1. Go to the [DataMiner landing page](xref:Accessing_the_web_apps).
+1. Go to the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page).
 
-1. If no apps exist yet, click *Create a new app*. Otherwise, hover the mouse pointer over the *Other apps* section and click the "+" button next to *Other apps*.
+1. To add a new app:
+
+   - From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->: If no apps exist yet, click *Create your first app*. Otherwise, click *Create app*.
+
+   - Prior to DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9: If no apps exist yet, click *Create a new app*. Otherwise, hover the mouse pointer over the *Other apps* section and click the "+" button next to *Other apps*.
 
 1. Specify the name of your new app in the header bar, instead of the default name "New application".
 
@@ -43,11 +47,12 @@ From DataMiner 10.3.0 [CU10]/10.4.1 onwards<!-- RN 37698+37724 -->, it is possib
 
 ### Duplicating an app from the DataMiner landing page
 
-1. Go to the [DataMiner landing page](xref:Accessing_the_web_apps).
+1. Go to the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page).
 
-1. Hover over the app you want to duplicate until you see the ellipsis ("...") button.
+1. Click the ellipsis ("...") button next to the app you want to duplicate and select *Duplicate*.
 
-1. Click the ellipsis button to open the context menu, and select *Duplicate*.
+   > [!NOTE]
+   > Prior to DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9<!--RN 43226-->, the ellipsis button only appears when you hover over the app icon.
 
 The most recently published app version will now be duplicated. If the app has not yet been published, its draft version will be duplicated instead.
 

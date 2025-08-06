@@ -8,9 +8,12 @@ You can begin editing a low-code app from within the app or from the DataMiner l
 
 From the DataMiner **landing page** (supported from DataMiner 10.3.0 [CU10]/10.4.0 onwards<!-- RN 37830 -->):
 
-1. Hover the mouse pointer over the app icon until you see the ellipsis ("...") button.
+1. Click the ellipsis ("...") button next to the app you want to edit.
 
-1. Click the ellipsis button and select *Edit*.
+   > [!NOTE]
+   > Prior to DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9<!--RN 43226-->, the ellipsis button only appears when you hover over the app icon.
+
+1. Select *Edit*.
 
 From **within an application**:
 
