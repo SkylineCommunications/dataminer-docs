@@ -34,6 +34,18 @@ When something goes wrong while the `ModuleSettings` are saved, the `TraceData` 
 |--|--|
 | InvalidModuleId | The module ID does not meet the requirements. The *InvalidModuleId* property contains the module ID that is invalid. The *ModuleIdValidationResult* contains the exact reason why the ID was deemed invalid. |
 | InvalidPermissions | The user does not have permission to do this action. |
+| InvalidDomManagerSettings | The provided DOM Manager settings are incorrect. Refer to [DomManagerSettingsErrorData](xref:DomManagerSettingsErrorData) for extra details. |
+
+### DomManagerSettingsErrorData
+
+When some of the provided settings are incorrect when saving the `ModuleSettings`, the `TraceData` will contain a `ModuleSettingsManagerErrorData` error with `ErrorReason` set to `InvalidDomManagerSettings`. In `DomManagerSettingsErrorData` more details will be available.
+
+The following `Reasons` could cause this type of error:
+
+| Reason | Description |
+|--|--|
+| InvalidCredentialPermissions | The user does not have permission to the credential referenced in `DomInstanceNetworkAttachmentSettings`, the credential is not of type `UserNameAndPasswordCredential` or the credential referenced does not exist. |
+| InvalidNetworkSharePath | The NetworkSharePath in `DomInstanceNetworkAttachmentSettings` is invalid, a network share path needs to start with and should not contain illegal characters. Both the `CredentialId` and the `NetworkSharePath` need to be filled in. `InvalidNetworkSharePath` contains the invalid network share path |
 
 ## Available settings
 

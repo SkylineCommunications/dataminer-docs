@@ -4,12 +4,12 @@ uid: DOM_DomInstanceNetworkAttachmentSettings
 
 # DomInstanceNetworkAttachmentSettings
 
-The `DomInstanceNetworkAttachmentSettings` object is introduced in DataMiner version 10.5.9/10.6.0<!--RN43114--> and contains the settings related to how attachments are saved linked to a `DomInstance`. [The DOM helper class page](xref:DomHelper_class#attachments) contains more info about attachments. It currently contains settings to change the default location where attachments for DOM are saved from the `C:\Skyline DataMiner\Documents` folder to a network share of your choosing.
+The `DomInstanceNetworkAttachmentSettings` object is introduced in DataMiner version 10.5.10/10.6.0<!-- RN 43114 --> and contains the settings related to how attachments are saved linked to a `DomInstance`. [The DOM helper class page](xref:DomHelper_class#attachments) contains more info about attachments. It currently contains settings to change the default location where attachments for DOM are saved from the `C:\Skyline DataMiner\Documents` folder to a network share of your choosing.
 
 >[!NOTE]
 >
 > - When configuring a DOM module to save attachments to a network share. It is validated that the user creating/updating the `ModuleSettings` has permission to access the credential. Once this is set up, any user that permissions to create/update a `DomInstance` can now save attachments to the network share under the configured user.
-> - When configuring a DOM module to save attachments to a network share, no migration is done of existing attachments. They will remain existing in the `C:\Skyline DataMiner\Documents` folder, but will not work anymore. You can easily copy them over or move them to the network share, the folder structure is the same.
+> - When configuring a DOM module to save attachments to a network share, no migration is done of existing attachments. They will remain existing in the `C:\Skyline DataMiner\Documents` folder, but will not work anymore. You can easily copy them over or move them to the network share, the folder structure is the same. Likewise, when removing the configuration to save attachments to a network share, no migration is done of attachments available on the previously configured network share.
 
 |Property |Type   |Description |
 |---------|-------|------------|
