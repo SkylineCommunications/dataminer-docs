@@ -4,7 +4,15 @@ uid: Accessing_the_web_apps
 
 # Accessing the web apps
 
-You can access all DataMiner web apps via the **DataMiner landing page**, which you open in your web browser.
+You can access [all DataMiner web apps](#available-web-apps) via the DataMiner landing page, which you open in your web browser.
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>
+    Did you know that, depending on the configuration and version of your DMS, you can access certain web apps from the <a href="xref:DataMiner_Cube_sidebar#apps-pane" style="color: #657AB7;"><i>Apps</i> pane</a> in DataMiner Cube as well?
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
 
 ## DataMiner landing page
 
@@ -27,9 +35,9 @@ To access the DataMiner landing page:
 
 1. On the landing page, select the app you want to open. See [Available web apps](#available-web-apps).
 
-![Landing page](~/dataminer/images/DataMiner_Landing_Page2.png)<br>*DataMiner landing page in DataMiner 10.5.9*
+   ![Landing page](~/dataminer/images/DataMiner_Landing_Page2.png)<br>*DataMiner landing page in DataMiner 10.5.9*
 
-In the top-left corner of the landing page, click the DataMiner icon or waffle icon (depending on your DataMiner version <!--RN 43024-->) to open a compact overview of the available web apps. From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, next to this icon, the name of the DMS is shown. In the case of a standalone DMA, the DMA name is shown instead.
+In the top-left corner of the landing page, click the **DataMiner icon** or waffle icon (depending on your DataMiner version<!--RN 43024-->) to open a compact overview of the available web apps. From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, next to this icon, the **name of the DMS** is shown. In the case of a standalone DMA, the DMA name is shown instead.
 
 From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, you can customize the **DataMiner landing page theme**:
 
@@ -70,14 +78,6 @@ To access a **compact overview of all available web apps**:
 - From within a web app: Click the waffle icon in the top-left corner of the app.
 
 This overview allows you to easily switch between web apps. Additionally, from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, a quick filter box is available to help you narrow down the apps, and a *dataminer.services* button provides direct access to the dataminer.services home page.
-
-<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
-  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
-    <b>💡 TIPS TO TAKE FLIGHT</b><br>
-    Did you know that, depending on the configuration and version of your DMS, you can access certain web apps from the <a href="xref:DataMiner_Cube_sidebar#apps-pane" style="color: #657AB7;"><i>Apps</i> pane</a> in DataMiner Cube as well?
-  </div>
-  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
-</div>
 
 ## Installing a web app as a standalone app
 
