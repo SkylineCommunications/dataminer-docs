@@ -44,9 +44,18 @@ The folder `C:\Skyline DataMiner\Webpages\Public\` will now be synced between Da
 
 #### SLDataMiner issue after connection type of element changed [ID 43249]
 
-<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.9 -->
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 In some cases, a problem could occur in SLDataMiner when the connection type of an element changed. To prevent this, the validation of SNMPv3 usernames has now been improved.
+
+#### GQI DxM: MessageBroker/SLNet not reconnected immediately after app settings change [ID 43386]
+
+<!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When the app settings for the GQI DxM are modified, the MessageBroker and SLNet connection of the DxM will now be restored immediately. Previously, the reconnect only happened either after functionality attempted to access the connection or when the automatic reconnection was triggered, which happens once per minute. This will prevent the following possible issues that could previously occur:
+
+- When GQI DxM functionality attempted to use the MessageBroker connection while it was disconnected, a deadlock situation could occur that blocked MessageBroker subscriptions.
+- When you changed the GQI app settings while a reconnect was already progress, the connection could use a combination of old and new settings.
 
 #### Slow handling of concurrent requests to retrieve or update bookings [ID 43450]
 
@@ -56,6 +65,6 @@ When a lot of concurrent requests had to be processed by the Repository API in t
 
 #### Failed upgrade action because of duplicate keys for SNMPv3 elements [ID 43477]
 
-<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.9 -->
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 In some cases, it could occur that the SyncInfo file contained duplicate keys for SNMPv3 elements, which would cause upgrade actions to fail with the following error message: `UpgradeAction failed:System.ArgumentException: An item with the same key has already been added.`
