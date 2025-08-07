@@ -722,3 +722,9 @@ After an element had been swarmed, in some rare cases, the hosting agent cache i
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In some cases, an incorrect internal state in the automatic incident tracking feature could cause the SLAnalytics process to stop working.
+
+#### Memory issues caused by file offloads on a STaaS system [ID 43471]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+When a system using STaaS switched back from file storage to database storage after it had not been able to reach the database for some time, this could cause too much data to be pushed at the same time, causing memory issues on the DMA.
