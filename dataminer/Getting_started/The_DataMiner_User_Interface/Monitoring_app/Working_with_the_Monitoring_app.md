@@ -6,7 +6,7 @@ uid: Working_with_the_Monitoring_app
 
 The Monitoring app is a web application featuring a user interface similar to that of DataMiner Cube. The app allows you to monitor a DataMiner System from any modern browser. Depending on the size of the screen used to view the app, the app layout can be adjusted in order to allow optimal use of the available space.
 
-You can access the Monitoring app via the [DataMiner landing page](xref:Accessing_the_web_apps) or from the [*Apps* pane](xref:DataMiner_Cube_sidebar#apps-pane) in DataMiner Cube (from DataMiner 10.2.9/10.3.0 onwards<!-- RN 33944 -->).
+You can access the Monitoring app via the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page) or from the [*Apps* pane](xref:DataMiner_Cube_sidebar#apps-pane) in DataMiner Cube (from DataMiner 10.2.9/10.3.0 onwards<!-- RN 33944 -->).
 
 The user interface consists of four main components:
 

@@ -4,7 +4,9 @@ uid: LowCodeApps_organizing_landing_page
 
 # Organizing the apps on the landing page in sections
 
-It is possible to organize the apps on the Low-Code Apps landing page in different sections. However, at present this is only possibly by changing the configuration of the apps in JSON.
+It is possible to organize the apps on the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page) in different sections. However, at present this is only possibly by changing the configuration of the apps in JSON.
+
+![Organizing apps](~/dataminer/images/Organizing_Apps.gif)<br>*DataMiner landing page in DataMiner 10.5.9*
 
 To do so:
 
