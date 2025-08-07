@@ -262,3 +262,9 @@ When a dashboard containing a *Button panel* component was embedded in DataMiner
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 When, while editing a low-code app, you changed the visual of a component, the list of possible actions to be configured for that component would no longer be correct.
+
+#### GQI DxM installation failed because of missing dependencies [ID 43500]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+If the latest .NET 8 hosting bundle was not installed first, it could occur that installing the GQI DxM failed because of missing dependency DLLs. To prevent this, the missing dependencies are now included in the GQI DxM installer.
