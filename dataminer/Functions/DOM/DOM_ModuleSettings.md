@@ -34,7 +34,7 @@ When something goes wrong while the `ModuleSettings` are saved, the `TraceData` 
 |--|--|
 | InvalidModuleId | The module ID does not meet the requirements. The *InvalidModuleId* property contains the module ID that is invalid. The *ModuleIdValidationResult* contains the exact reason why the ID was deemed invalid. |
 | InvalidPermissions | The user does not have permission to do this action. |
-| InvalidDomManagerSettings | The provided DOM Manager settings are incorrect. Refer to [DomManagerSettingsErrorData](xref:DomManagerSettingsErrorData) for extra details. |
+| InvalidDomManagerSettings | Some validation step failed for the DOM manager related settings. Refer to [DomManagerSettingsErrorData](xref:DomManagerSettingsErrorData) for extra details. |
 
 ### DomManagerSettingsErrorData
 
