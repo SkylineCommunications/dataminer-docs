@@ -17,6 +17,7 @@ This Feature Release of the DataMiner web applications contains the same new fea
 ## Highlights
 
 - [DataMiner landing page redesigned [ID 43353]](#dataminer-landing-page-redesigned-id-43115-id-43226-id-43261-id-43303-id-43332-id-43341-id-43353)
+- [Dashboards app & Low-Code Apps: New 'Component name' setting [ID 43453]](#dashboards-app--low-code-apps-new-component-name-setting-id-43453)
 
 ## New features
 
