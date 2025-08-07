@@ -17,7 +17,7 @@ Possible prompts are the following:
 
 ![Interactive Prompt](~/dataminer/images/pdf_processing_interactive_prompt_tool_prompt.png)
 
-![Interactive Prompt Response](~/solutions/images/processing_pdf_documents_using_AI/pdf_processing_interactive_prompt_tool_response.png)
+![Interactive Prompt Response](~/dataminer/images/pdf_processing_interactive_prompt_tool_response.png)
 
 ## Satellite Parameter Extractor
 
@@ -32,4 +32,3 @@ To process the pdf file, the app will first use Document Intelligence to convert
 
 Based on the response of the model, a DOM instance is created that represents the Satellite Feed. The app allows to open the result and to compare the mapped values with the raw values extracted in the first step of the process.
 
-![Satellite Parameter Extractor](~/dataminer/images/pdf_processing_AI_Satellite_Feed.png)

@@ -28,7 +28,7 @@ The sample package uses a combination of OCR (Optical Character Recognition) & L
 
 This app uses a predefined prompt in the background to process Satellite parameters from PDF documents. The user simply uploads a PDF file and the system will use the AI tools to process the information in the document and create a new Satellite Feed instance from it in [DOM](https://docs.dataminer.services/solutions/Advanced_Modules/DOM/DOM.html?q=dataminer%20object%20mo).
 
- ![Satellite Parameter Extractor App](~/solutions/images/processing_pdf_documents_using_AI/pdf_processing_AI_Satellite_Feed_Ingest.png)
+ ![Satellite Parameter Extractor App](~/dataminer/images/pdf_processing_AI_Satellite_Feed_Ingest.png)
 
 ### Interactive File Prompt App
 
@@ -36,4 +36,4 @@ This is very basic app which allows the user to write any prompt and upload a fi
 
 The tool can be used for any use-case, going from asking the tool to tell a joke, to uploading a document and ask the tool to get some data from the document (see the example below).
 
- ![Interactive File Prompt App](~/solutions/images/processing_pdf_documents_using_AI/pdf_processing_interactive_prompt_tool_prompt.png)
+ ![Interactive File Prompt App](~/dataminer/images/pdf_processing_interactive_prompt_tool_prompt.png)
