@@ -4,7 +4,7 @@ uid: MO_S_App_Configuration
 
 # App settings
 
-On the *App Configuration* page, you can configure several app-wide settings:
+On the *App Configuration* page, you can configure several app-wide settings.
 
 ![App Configuration](~/solutions/images/Scheduling_AppConfiguration.png)
 
@@ -19,9 +19,10 @@ This allows you to define default values that are applicable to every user that 
 ![App Configuration Job Defaults](~/solutions/images/Scheduling_AppConfiguration_JobDefaults.png)
 
 The following values can be configured:
-- **Pre-roll**: the default amount of time before the job starts that is reserved to set up the resources.
-- **Post-roll**: the default amount of time after the job ends to tear down the resources.
-- **Desired State**: the default state in which new jobs are created.
+
+- **Pre-roll**: The default amount of time before the job starts, which is reserved to set up the resources.
+- **Post-roll**: The default amount of time after the job ends to tear down the resources.
+- **Desired State**: The default state in which new jobs are created.
 
 ## Configure System Properties
 
@@ -30,5 +31,3 @@ This allows you to define **additional metadata** to use in your jobs. These pro
 ## Reference Types
 
 If you want your jobs to be able to reference internal MediaOps entities or external generic entities, you can define the additional entities in this section. The references are very generic, enabling you to reference a vast array of different types of entities.
-
-<!-- TODO: Add screenshots with examples -->
