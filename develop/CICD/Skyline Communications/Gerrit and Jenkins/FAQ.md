@@ -239,7 +239,7 @@ However, be aware that in general a code review phase is required and therefore 
    ![](~/develop/images/SourceTree_CreateTag.png)<br>
    *Creating a tag for a commit in SourceTree*
 
-1. Specify the tag name (e.g. "1.0.0.9"), ensure that the *Specified commit* option is selected and select the check box *Push tag*, so that the tag also gets pushed to the remote repository.
+1. Specify the tag name (e.g. "1.0.0.9"), ensure that the *Specified commit* option is selected and select the checkbox *Push tag*, so that the tag also gets pushed to the remote repository.
 
    ![](~/develop/images/SourceTree_CreateTagWindow.png)<br>
    *Creating a tag for a commit in SourceTree*
@@ -272,7 +272,7 @@ Suppose you were working on a new version 1.0.0.3 and now you realize that you n
    ![](~/develop/images/SourceTree_BranchCreated.png)<br>
    *New local range*
 
-1. Now you also need to push this new range to the remote. To do this, click the *Push* button and, in the pop-up window, select the check box for the new branch and click *Push*.
+1. Now you also need to push this new range to the remote. To do this, click the *Push* button and, in the pop-up window, select the checkbox for the new branch and click *Push*.
 
    ![](~/develop/images/SourceTree_PushRange.png)<br>
    *Pushing a new range in SourceTree*
@@ -312,11 +312,11 @@ At this point, you have introduced the new branch with the changes you have made
    *1.0.0.X branch is pointing to the commit for the 1.0.0.2 tag*
 
    > [!NOTE]
-   > Pushing a reset is not allowed by default. To enable this, go to *Tools* &gt; *Options*, select the *Git* tab and make sure the check box for the *Enable Force Push* option is checked.
+   > Pushing a reset is not allowed by default. To enable this, go to *Tools* &gt; *Options*, select the *Git* tab and make sure the checkbox for the *Enable Force Push* option is checked.
    >
    > ![](~/develop/images/EnableForcePush.png)
 
-1. To push, click the *Push* button and make sure the *Force Push* check box is selected. Then click *Push*.
+1. To push, click the *Push* button and make sure the *Force Push* checkbox is selected. Then click *Push*.
 
    ![](~/develop/images/ForcePush.png)<br>
    *“Force Push” option*
@@ -387,7 +387,7 @@ Suppose for example that you have committed and pushed changes to the 1.0.0.X ra
    ![](~/develop/images/DestructiveOperation00078.png)<br>
    *Confirmation window for hard reset mode*
 
-1. At this point, you should see that the head of your local 1.0.0.X branch is pointing to the commit for the 1.0.0.2 tag. However, the head of origin/1.0.0.X is not. This is because you first need to push. To push, select the *Push* button and make sure the *Force Push* check box is checked. Then click *Push*.
+1. At this point, you should see that the head of your local 1.0.0.X branch is pointing to the commit for the 1.0.0.2 tag. However, the head of origin/1.0.0.X is not. This is because you first need to push. To push, select the *Push* button and make sure the *Force Push* checkbox is checked. Then click *Push*.
 
 1. In the confirmation box, click *Yes* to confirm.
 

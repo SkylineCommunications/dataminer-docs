@@ -97,6 +97,36 @@ Because of a number of enhancements, overall performance has increased when load
 
 In DataMiner Cube, up to now, when the Microsoft Edge (WebView2) browser engine was used to display embedded webpages, it was not possible to enter CTRL+F in order to search for a particular text string. This has now been made possible.
 
+#### Properties: Enhanced visualization of element and service properties [ID 43409]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+A number of enhancements have been made to the way in which element and service properties are displayed in the *Properties* window.
+
+- All datetime values are now displayed in UTC time. They will no longer be converted to client time.
+- The *Created* and *Created by* values will now be displayed as one single value.
+- The *Modified* and *Modified by* values will now be displayed as one single value.
+
+#### Credentials library: Passwords in credentials of type 'Username and password' will no longer be limited in size [ID 43422]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Up to now, credentials of type *Username and password* allowed passwords up to 43 characters.
+
+From now on, passwords in this type of credentials will no longer be limited in size, allowing for stronger and more secure authentication.
+
+> [!NOTE]
+> This change only applies to credentials of type *Username and password*. Other credentials that include a password (e.g. credentials of type *SNMPv3*) will still only support passwords up to 43 characters.
+
+#### Default web browser engine will now be Edge instead of Chromium [ID 43429]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+From now on, in DataMiner Cube, the default web browser engine will be Edge instead of Chromium.
+
+- In *System Center > System settings > Plugins*, it will no longer be possible to select Chromium as default web browser engine.
+- If, in any visual overview, there are shapes in which the *UseChrome* option is specified, this option will now be disregarded. The shapes in question will use Edge instead.
+
 ### Fixes
 
 #### System Center - SNMP forwarding: 'Resend all active alarms every' option would incorrectly be set to 0 [ID 43206]
@@ -158,3 +188,23 @@ In histogram charts, in some cases, the Y-axis label would incorrectly be displa
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In some rare cases, a trend graph of an EPM KPI would incorrectly not get loaded.
+
+#### Visual Overview: Element, service or view updates would incorrectly cause embedded visual overviews to refresh [ID 43395]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Up to now, when a element, service or view was updated, in some cases, visual overviews embedded in the visual overview linked to the element, service or view would incorrectly be fully refreshed.
+
+From now on, embedded visual overviews will only be fully refreshed when the referenced object was changed.
+
+#### Trending: Trend prediction data would incorrectly be requested when 'Trend prediction' setting was disabled [ID 43414]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When the *Trend prediction* setting had been disabled in the *System settings > Analytics config* section of *System Center*, up to now, Cube would incorrectly still request trend prediction data when you opened a trend graph.
+
+#### 'Replicated' status not shown correctly in Properties window [ID 43473]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Because of an issue with the translation key, the "Replicated" status for a replicated object in DataMiner was not displayed correctly in the *Properties* window. Instead, the text "Common_Replicated" was displayed regardless of which language was selected for the Cube UI.

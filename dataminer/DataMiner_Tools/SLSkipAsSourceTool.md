@@ -18,9 +18,9 @@ A window similar to the following example will be displayed:
 
 On the right, the tool displays an output status window. On the left, it displays a tree view with all the network interfaces and the assigned IP addresses.
 
-If *SkipAsSource* is enabled for an IP address, the check box in front of this address is selected. When a Failover DMA goes online, DataMiner should add the virtual IP address and mark all other IP addresses on the same interface with *SkipAsSource=true*, which means that only the check box for the virtual IP addresses should not be selected. For non-Failover Agents or offline Failover Agents, the check box should not be selected.
+If *SkipAsSource* is enabled for an IP address, the checkbox in front of this address is selected. When a Failover DMA goes online, DataMiner should add the virtual IP address and mark all other IP addresses on the same interface with *SkipAsSource=true*, which means that only the checkbox for the virtual IP addresses should not be selected. For non-Failover Agents or offline Failover Agents, the checkbox should not be selected.
 
-If you made sure to run the tool as administrator, you can manually change the selection of the check boxes and click *Apply Changes* to execute the changes.
+If you made sure to run the tool as administrator, you can manually change the selection of the checkboxes and click *Apply Changes* to execute the changes.
 
 For reference, this is the Failover setup (in DataMiner 10.1.0) corresponding with the example above:
 
