@@ -15,7 +15,7 @@ The latest **mbgNMS installation package** can be downloaded using the link belo
 > [!TIP]
 > Refer to the [Meinberg NMS manual](https://community.dataminer.services/download/slc_um_meinberg_nms_rev000-pdf-2/) and release notes for detailed instructions.
 
-- Latest release: [Meinberg Element Manager 1.4.1](https://community.dataminer.services/download/meinberg-element-manager-1-4-1/)
+- Latest release: [Meinberg Element Manager 1.4.1 CU1](https://community.dataminer.services/download/meinberg-element-manager-1-4-1-cu1/)
 
 - Release notes: [Release notes mbgNMS 1.4.1](xref:MbgNMS_1.4.1)
 
