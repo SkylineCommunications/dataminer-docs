@@ -79,7 +79,7 @@ The UserDefinableApiEndpoint module is responsible for handling API triggers for
 
 The CloudGateway module is responsible for connecting a DataMiner System to dataminer.services. It manages the identity towards dataminer.services and ensures a secure connection.
 
-This DxM is included in DataMiner upgrade packages from DataMiner 10.5.9/10.6.0 onwards<!--RN 43205-->.
+This DxM is included in DataMiner upgrade packages from DataMiner 10.5.9/10.6.0 onwards<!--RN 43205-->. However, the DxM will only be upgraded if an older version is found on the DMA. If no older version is found, it will not be installed.
 
 ### CloudFeed
 
