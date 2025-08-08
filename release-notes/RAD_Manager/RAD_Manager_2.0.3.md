@@ -16,7 +16,7 @@ Various improvements have been made to the caching mechanism of the *Get Relatio
 
 A time range picker has been added above the parameter trend graph, allowing the user to show more than one week of trend data on the trend graph.
 
-### Bug fixes
+### Fixes
 
 #### Anomaly score graph time range not aligned with trend graph time range [ID 42838]
 

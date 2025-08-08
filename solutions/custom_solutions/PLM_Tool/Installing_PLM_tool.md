@@ -22,7 +22,7 @@ uid: Installing_PLM_tool
 
    Once the package has been installed, you can access the *DataMiner Planned Maintenance Tool* low-code app at `http(s)://[DMA name]/root`.
 
-   ![EPL PLM app](~/user-guide/images/EPM_PLM_app.png)
+   ![EPL PLM app](~/dataminer/images/EPM_PLM_app.png)
 
 > [!NOTE]
 > To update the Planned Maintenance tool, redeploy the [*DataMiner Planned Maintenance Tool* package](https://catalog.dataminer.services/details/package/6010). The tool will be updated, but no new PLM element will be created, as one should already exist in your DMS.
@@ -31,7 +31,7 @@ uid: Installing_PLM_tool
 
 1. In Cube, locate the *Planned Maintenance Tool* element under the *DataMiner Planned Maintenance* view.
 
-   ![PLM_Element](~/user-guide/images/PLM_Element.png)
+   ![PLM_Element](~/dataminer/images/PLM_Element.png)
 
    > [!NOTE]
    > Optionally, you can rename the element and view, and change their location in the surveyor.

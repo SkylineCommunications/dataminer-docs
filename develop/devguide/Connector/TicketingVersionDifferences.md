@@ -13,7 +13,7 @@ In DataMiner 10.0.13, multiple important changes are introduced in the Ticketing
 
 > [!CAUTION]
 >
-> - The Ticketing app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/user-guide/images/EOL_Duo.png)
+> - The Ticketing app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
 > - The Ticketing app is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 ## Ticketing with indexing vs. with Cassandra

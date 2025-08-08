@@ -22,6 +22,9 @@ This is most easily handled using [Visual Studio 2022 solution filters (*.slnf)]
 
 ### Using dotnet-cli
 
+> [!NOTE]
+> The examples below use explicit parameter names (e.g. `-p:CatalogPublishKeyName="DATAMINER_TOKEN"`), which allows you to use any environment variable name. When you omit these parameters, the SDK uses the default key name configured in your project's .csproj file.
+
 #### Default call
 
 By default, the following call is used to release every package in a solution to the same organization with the same version:

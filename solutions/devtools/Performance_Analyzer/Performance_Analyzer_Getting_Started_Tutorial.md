@@ -12,7 +12,7 @@ Expected duration: 25 minutes.
 > The content and screenshots for this tutorial have been created using DataMiner version 10.5.4.
 
 > [!TIP]
-> See also: [Kata #62: Introduction to Performance Analyzer](https://community.dataminer.services/courses/kata-62/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #62: Introduction to Performance Analyzer](https://community.dataminer.services/courses/kata-62/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
 ## Prerequisites
 
@@ -54,7 +54,7 @@ To start this tutorial, you will need to follow the steps below to set up an exa
 
    1. Execute the command `git clone https://github.com/SkylineCommunications/SLC-GQIDS-Kata-PerformanceAnalyzerKataExercise.git`.
 
-      ![Performance Analyzer getting started clone the repository](~/user-guide/images/performance_analyzer_getting_started_clone_the_repository.png)
+      ![Performance Analyzer getting started clone the repository](~/dataminer/images/performance_analyzer_getting_started_clone_the_repository.png)
 
 1. Open the solution in Visual Studio:
 
@@ -66,11 +66,11 @@ To start this tutorial, you will need to follow the steps below to set up an exa
 
    1. Open *PerformanceAnalyzerKataExercise.xml*.
 
-      ![Performance Analyzer getting started open GQIDS XML](~/user-guide/images/performance_analyzer_getting_started_open_gqids_xml.png)
+      ![Performance Analyzer getting started open GQIDS XML](~/dataminer/images/performance_analyzer_getting_started_open_gqids_xml.png)
 
    1. Click *Publish*.
 
-      ![Performance Analyzer getting started publish the GQIDS](~/user-guide/images/performance_analyzer_getting_started_publish_the_gqi.png)
+      ![Performance Analyzer getting started publish the GQIDS](~/dataminer/images/performance_analyzer_getting_started_publish_the_gqi.png)
 
 ## Step 2: Create a low-code app
 
@@ -86,29 +86,29 @@ In this step, you will create a low-code app to visualize the performance issue 
 
    1. In the *Data* pane on the right, go to *Queries* and click the "+" icon to create a query.
 
-      ![+ icon to create query](~/user-guide/images/GQI_create_query.png)
+      ![+ icon to create query](~/dataminer/images/GQI_create_query.png)
 
    1. Optionally, specify a custom name for the query, e.g. *Employees Table*.
 
    1. Select *Get ad hoc data* and then *Employees Table*.
 
-      ![Performance Analyzer getting started select a query](~/user-guide/images/performance_analyzer_getting_started_select_query.png)
+      ![Performance Analyzer getting started select a query](~/dataminer/images/performance_analyzer_getting_started_select_query.png)
 
 1. Drag the new query to the page.
 
-   ![Performance Analyzer getting started add a query to page](~/user-guide/images/performance_analyzer_getting_started_add_query_to_page.png)
+   ![Performance Analyzer getting started add a query to page](~/dataminer/images/performance_analyzer_getting_started_add_query_to_page.png)
 
 1. [Select a table visualization](xref:Apply_Visualization) for the component.
 
-   ![Performance Analyzer getting started visualize the query as table](~/user-guide/images/performance_analyzer_getting_started_visualize_query.png)
+   ![Performance Analyzer getting started visualize the query as table](~/dataminer/images/performance_analyzer_getting_started_visualize_query.png)
 
 1. Optionally, drag the edges of the table component to adjust its size, until it looks like this:
 
-   ![Performance Analyzer getting started final edit](~/user-guide/images/performance_analyzer_getting_started_final_lca_edit.png)
+   ![Performance Analyzer getting started final edit](~/dataminer/images/performance_analyzer_getting_started_final_lca_edit.png)
 
 1. Publish the low-code app using the button in the top-right corner.
 
-   ![Performance Analyzer getting started publish the LCA](~/user-guide/images/performance_analyzer_getting_started_publish_the_app.png)
+   ![Performance Analyzer getting started publish the LCA](~/dataminer/images/performance_analyzer_getting_started_publish_the_app.png)
 
 At this point, you will be notice that the table takes a while to load, without any obvious reason. Trying to figure out the cause of this issue can be a daunting task, so this is where the Performance Analyzer will prove very helpful.
 
@@ -131,11 +131,11 @@ At this point, you will be notice that the table takes a while to load, without 
 
    1. Add a `collector` field of type `PerformanceCollector` and initialize it in the constructor of the `DatabaseController` class.
 
-      ![Performance Analyzer getting started collector setup](~/user-guide/images/performance_analyzer_getting_started_collector_setup.png)
+      ![Performance Analyzer getting started collector setup](~/dataminer/images/performance_analyzer_getting_started_collector_setup.png)
 
    1. Wrap the bodies of all methods with `using` statement with the `PerformanceTracker` instance, using the `collector` from the previous step.
 
-      ![Performance Analyzer getting started collector setup](~/user-guide/images/performance_analyzer_getting_started_tracker_setup.png)
+      ![Performance Analyzer getting started collector setup](~/dataminer/images/performance_analyzer_getting_started_tracker_setup.png)
 
 1. Publish the GQIDS in the same way as in [step 1](#step-1-set-up-the-example-solution).
 
@@ -156,17 +156,17 @@ As the Performance Analyzer has now been implemented in the solution, you will n
 
 1. From the root page of your DataMiner System, open the *Performance Analyzer* low-code app.
 
-   ![Performance Analyzer getting started collector setup](~/user-guide/images/performance_analyzer_getting_started_open_lca.png)
+   ![Performance Analyzer getting started collector setup](~/dataminer/images/performance_analyzer_getting_started_open_lca.png)
 
 1. Analyze the performance of your low-code app: By taking a look at the *Metrics* table, you can see that the biggest chunk of time is spent on the *DatabaseController.Process* method.
 
-   ![Performance Analyzer getting started initial investigation](~/user-guide/images/performance_analyzer_getting_started_initial_investigation.png)
+   ![Performance Analyzer getting started initial investigation](~/dataminer/images/performance_analyzer_getting_started_initial_investigation.png)
 
 1. Double click the *DatabaseCollector.Process* row.
 
    You will see that the processing is happening sequentially. This means that the performance of your app could be improved by processing employees in parallel instead.
 
-   ![Performance Analyzer getting started sequential processing](~/user-guide/images/performance_analyzer_getting_started_sequential_processing.png)
+   ![Performance Analyzer getting started sequential processing](~/dataminer/images/performance_analyzer_getting_started_sequential_processing.png)
 
 ## Step 6: Improve the implementation of the Process method
 

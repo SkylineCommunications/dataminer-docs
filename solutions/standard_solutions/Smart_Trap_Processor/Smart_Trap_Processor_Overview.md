@@ -16,4 +16,4 @@ With this tool, you can specify which traps to capture, filter, transform, and d
 > [!NOTE]
 > This tool supports SNMPv1 and SNMPv2, but SNMPv3 is currently not supported.
 
-![Smart Trap Processor home page](~/user-guide/images/TrapProcessor_Overview.png)
+![Smart Trap Processor home page](~/dataminer/images/TrapProcessor_Overview.png)

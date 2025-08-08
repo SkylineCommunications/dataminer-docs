@@ -45,8 +45,14 @@ uid: solution_index
     <a href="/solutions/product_solutions/EVS_Cerebrum/EVS_Cerebrum.html" title="EVS Cerebrum" target="_self"><img src="~/solutions/images/EVS_Cerebrum.svg" style="width:100%"></a>
   </div>
   <div class="column">
+    <a href="/solutions/product_solutions/GVAMPP/GVAMPP_Manager_Overview.html" title="Grass Valley AMPP Manager app" target="_self"><img src="~/solutions/images/GV_AMPP_Manager_app.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
     <a href="/solutions/product_solutions/Nevion_Video_IPath/NevionVideoIPath_Overview.html" title="Nevion Video IPath app" target="_self"><img src="~/solutions/images/Nevion_Video_IPath.svg" style="width:100%"></a>
   </div>
+</div>
+
+<div class="row"> 
   <div class="column">
     <a href="/solutions/product_solutions/NetInsight_Nimbra_Vision/00_netinsight-nimbra-vision.html" title="NetInsight Nimbra Vision app" target="_self"><img src="~/solutions/images/NetInsight_Nimbra_Vision.svg" style="width:100%"></a>
   </div>
@@ -79,14 +85,18 @@ uid: solution_index
     <a href="/solutions/custom_solutions/DITT/Dataminer_IT_Tool_Overview.html" title="IT Tools" target="_self"><img src="~/solutions/images/DataMiner_IT_Tools.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/solutions/custom_solutions/PLM_Tool/DataMiner_PLM_Tool_Overview.html" title="PLM tool" target="_self"><img src="~/solutions/images/PLM.svg" style="width:100%"></a>
+    <a href="/solutions/custom_solutions/Health_Check_tool/Dataminer_Health_Check_Tool.html" title="Health Check tool" target="_self"><img src="~/solutions/images/DataMiner_Health_Check.svg" style="width:100%"></a>
   </div>
 </div>
 
 <div class="row"> 
   <div class="column">
+    <a href="/solutions/custom_solutions/PLM_Tool/DataMiner_PLM_Tool_Overview.html" title="PLM tool" target="_self"><img src="~/solutions/images/PLM.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/solutions/custom_solutions/Regression_Test_Management/Regression_Test_Management.html" title="Regression Test Management" target="_self"><img src="~/solutions/images/Regression_Test_Management.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
     <a href="/solutions/custom_solutions/Vecima_Remote_PHY_Monitor/Remote_PHY_Monitoring.html" title="Remote PHY Monitoring" target="_self"><img src="~/solutions/images/Remote_PHY_Monitoring.svg" style="width:100%"></a>
   </div>
 </div>
-
-<!-- Todo: Add DataMiner Health Check Tool -->

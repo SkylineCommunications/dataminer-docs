@@ -4,7 +4,21 @@ uid: orchestrator_change_log
 
 # Orchestrator change log
 
-#### 1 April 2025 - Enhancement - Dependencies updated [ID 42657]
+#### 1 July 2025 - Fix - Orchestrator 1.7.8 - Deploying the Orchestrator DxM from the Admin app removes the Orchestrator DxM
+
+An issue introduced in Orchestrator 1.7.6 made it impossible to upgrade or downgrade the DxM from the [Admin app](https://admin.dataminer.services). Trying to do so would cause the DxM to be uninstalled, leaving the server in a state where none of the DxMs could be updated from the Admin app.
+
+This issue is fixed in Orchestrator 1.7.8. However, to upgrade any servers running Orchestrator 1.7.6 or 1.7.7 to this version (or higher versions), you will need to install the [DataMiner Cloud Pack 3.3.3](https://community.dataminer.services/dataminer-cloud-pack/).
+
+#### 24 June 2025 - Enhancement - Orchestrator 1.7.7 - Improved upgrade process
+
+Improvements have been made to the startup and shutdown of the DxM, which improves the upgrade process.
+
+#### 17 June 2025 - Enhancement - Orchestrator 1.7.6 - Improved upgrade process
+
+Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
+
+#### 1 April 2025 - Enhancement - Orchestrator 1.7.5 - Dependencies updated [ID 42657]
 
 Several dependencies have been updated.
 

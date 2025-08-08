@@ -2,10 +2,7 @@
 uid: MediaOps_1.3.1
 ---
 
-# MediaOps 1.3.1 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MediaOps 1.3.1
 
 ## New features
 
@@ -70,8 +67,24 @@ To improve performance, the MediaOps Solution now requires the use of the [GQI D
 
 While actions are being executed in the Scheduling app, the icons that execute those actions (e.g. the pencil icon to open the edit job panel and the icons in the edit job panel) will now temporarily be disabled. This will prevent users from clicking action items multiple times while actions are still ongoing.
 
+#### Fit to view option now enabled for optimal screen usage [ID 43259]
+
+On all main pages of the MediaOps apps, the *Fit to view* option has now been enabled, ensuring optimal usage of the available space on the screen. This way, tables and timeline components will be able to take up more space on screens with larger resolutions (e.g. 4K).
+
+#### Resource Studio: Resource property values limited to 150 characters [ID 43269]
+
+To prevent possible reduced performance when large text values are saved for resource properties, updates to resource properties are now limited to a maximum of 150 characters.
+
+#### Scheduling: Job edit panels now larger [ID 43270]
+
+To ensure optimal usage of the available space on the screen, the job edit panels in the Scheduling app now have a width of 90% instead of the previous 75%. In addition, the height of the workflow section has been increased to allow for larger workflows.
+
 ### Fixes
 
 #### Resource Studio: Downgrading resource concurrency could cause sync issue [ID 43031]
 
 When the concurrency of a resource was downgraded, this could result in conflicts for future jobs or bookings, which could in turn cause an incorrect concurrency to be visualized in Resource Studio, because the concurrency could not be lowered in DataMiner. Now when changing the concurrency will cause a conflict, the user will be prompted to confirm whether to proceed and jobs or bookings may be pushed into quarantine as a result.
+
+#### Scheduling: Duplicating a job did not duplicate the node configurations [ID 43189]
+
+When a job was duplicated in the Scheduling app, the new job still used the same node configurations as the original job instead of a duplicate of the configurations.

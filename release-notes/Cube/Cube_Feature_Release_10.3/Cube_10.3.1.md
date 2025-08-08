@@ -52,7 +52,7 @@ Using a filter that results in less than 100 resources is recommended to avoid d
 A converter has also been created in the client that will convert a profile parameter name to the ID of the found object. For this, the format [ProfileParameter:xxx,ID] should be used, replacing "xxx" with the name of the capacity/capability profile parameter.
 
 > [!NOTE]
-> For examples, refer to [YAxisResource session variable examples](xref:YAxisResource_Shape_Data_Examples) in the user guide.
+> For examples, refer to [YAxisResource session variable examples](xref:YAxisResource_Shape_Data_Examples).
 
 > [!TIP]
 > See also: [Service & Resource Management: Exposers for resource capacities and capabilities](xref:General_Feature_Release_10.3.1#service--resource-management-exposers-for-resource-capacities-and-capabilities-id-34841)

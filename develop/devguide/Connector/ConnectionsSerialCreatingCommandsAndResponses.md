@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSerialCreatingCommandsAndResponses
+description: A serial communication protocol specification implemented by a device typically defines a number of commands and responses.
 ---
 
 # Creating commands and responses

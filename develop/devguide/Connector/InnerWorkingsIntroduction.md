@@ -1,5 +1,6 @@
 ---
 uid: InnerWorkingsIntroduction
+description: To have a good understanding of the inner workings of a protocol, it is important to have a deeper understanding of some of the DataMiner processes.
 ---
 
 # Introduction

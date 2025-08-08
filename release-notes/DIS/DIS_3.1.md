@@ -4,6 +4,42 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.11
+
+### New features
+
+#### IDE
+
+##### Updated DIS dependencies [ID 43233]
+
+DIS now uses:
+
+- [Skyline.DataMiner.CICD.DMApp.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Automation) version 2.1.1
+- [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol) version 2.1.1
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common/1.2.0-bravo) version 1.1.2
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 1.3.3
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.3
+- [Skyline.DataMiner.Core.ArtifactDownloader](https://www.nuget.org/packages/Skyline.DataMiner.Core.ArtifactDownloader) version 2.2.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.5.7.2
+- [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol/1.1.0-bravo) version 1.0.15
+- [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) version 1.0.0.4
+
+### Fixes
+
+#### IDE
+
+##### Text editor window would open empty when an XML file was closed [ID 43217]
+
+When an XML file was being closed while a *.cs* file was still open, DIS would try to re-open the XML file, causing the text editor of the XML file to open empty.
+
+Also, the check that determines whether the opened file belongs to a DataMiner-specific solution (e.g. an Automation script solution, a connector solution, etc.) has been updated. From now on, as soon as DIS detects that the project is using the `Skyline.DataMiner.Sdk` SDK, it will consider this a DataMiner-specific solution.
+
+##### Problem when switching branches [ID 43234]
+
+Up to now, when DIS switched branches in a repository that contains a large DataMiner solution, an exception could be thrown when an attempt was made to determine the type of project.
+
+From now on, when the project type could not be determined because the project was not fully loaded yet after a branch switch, the method that determines the project type will no longer throw an exception. Instead, it will return false.
+
 ## DIS 3.1.10
 
 ### New features

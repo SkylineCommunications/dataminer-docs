@@ -14,7 +14,7 @@ To access the application:
 
 The UI of the EVS Cerebrum app consists of five main components:
 
-![Low-Code App buttons](~/user-guide/images/EVS_Cerebrum_UI.png)
+![Low-Code App buttons](~/dataminer/images/EVS_Cerebrum_UI.png)
 
 **Levels** (1): All available levels for a selected destination, including the connected source, if applicable.
 
@@ -40,11 +40,11 @@ The UI of the EVS Cerebrum app consists of five main components:
 
 - To access an overview of the established route connections, navigate to the *Routes* page.
 
-  ![*Routes* page](~/user-guide/images/Routes_page.png)
+  ![*Routes* page](~/dataminer/images/Routes_page.png)
 
   The *Routes* table lists each destination level along with its corresponding source level.
 
   > [!NOTE]
   > Hover the mouse pointer over the table to access easy filtering.
   >
-  > ![Easy filtering](~/user-guide/images/Easy_Filtering.png)
+  > ![Easy filtering](~/dataminer/images/Easy_Filtering.png)

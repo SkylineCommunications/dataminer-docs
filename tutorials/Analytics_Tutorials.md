@@ -19,3 +19,4 @@ DataMiner Analytics, also known as [DataMiner Augmented Operations](xref:Stack_A
 | [Creating an anomaly overview dashboard](xref:Creating_Anomaly_Overview_Dashboard) | Create a dashboard that shows an overview of behavioral change event data. |
 | [Using trend patterns to detect backup failures](xref:trend_patterns_backup_failures)| Create a dashboard that allows you to check whether recent backups have occurred, based on trend patterns. |
 | [Fine-tuning incident tracking in your system](xref:Incident_Tracking_Configuration_Tutorial)| Learn how to enable, disable, tweak, and add rules for alarm grouping. |
+| [Working with relational anomaly detection](xref:Relational_Anomaly_Detection_Tutorial) | Use DataMiner's relational anomaly detection feature to monitor the power outputs of all amplifiers in a DAB transmitter to ensure they remain in sync. |

@@ -9,7 +9,7 @@ In this tutorial, you will learn how to get started with the Smart Trap Processo
 Expected duration: 30 minutes.
 
 > [!TIP]
-> See also: [Kata #48: Smart Trap Processor tool](https://community.dataminer.services/courses/kata-48/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #48: Smart Trap Processor tool](https://community.dataminer.services/courses/kata-48/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
 ## Prerequisites
 
@@ -45,9 +45,9 @@ This tutorial consists of the following steps:
    - An **element** named *Smart Trap Processor*.
    - An **element** named *Trap Simulator*.
 
-   ![Surveyor view](~/user-guide/images/TrapProcessor_SurveyorView.png)
+   ![Surveyor view](~/dataminer/images/TrapProcessor_SurveyorView.png)
 
-1. Browse to the [landing page of your DMA](xref:Accessing_custom_apps), and check if the *Smart Trap Processor* app is available.
+1. Browse to the [landing page of your DMA](xref:Accessing_the_web_apps), and check if the *Smart Trap Processor* app is available.
 
 ## Step 2: Configure the Trap IP Sources
 
@@ -59,7 +59,7 @@ Before the incoming traps can be processed as desired, you will need to configur
 
    This parameter needs to be set to the IP address corresponding with the source of the SNMP traps sent to the DataMiner System, which in the case of this demo setup is the system itself. In real setups, you can specify more than one IP address if needed, using a comma as separator.
 
-![Smart Trap Processor IP Sources](~/user-guide/images/TrapProcessor_IPSources.png)
+![Smart Trap Processor IP Sources](~/dataminer/images/TrapProcessor_IPSources.png)
 
 ## Step 3: Configure the Rules Table
 
@@ -90,7 +90,7 @@ The rules defined in the *Rules Table* determine which traps from the source are
 
 1. Change the **Rule Type** of the new row to *Heartbeat*, set the **Heartbeat Interval** to *10 minutes*, and change **Binding 1 Filter** to `*Heartbeat`.
 
-![Trap Processor Rules Table](~/user-guide/images/TrapProcessor_RulesTable.png)
+![Trap Processor Rules Table](~/dataminer/images/TrapProcessor_RulesTable.png)
 
 > [!TIP]
 > For more information about the parameters in this table, see [Configuring processing rules](xref:Processor_configuration)
@@ -110,7 +110,7 @@ In this step, you will configure the names that will be used for the *Source Nam
    - Set the **Source Name** to `$1`.
    - Leave the **Binding 1-20 Filters** empty.
 
-![Trap Processor Source Name Table](~/user-guide/images/TrapProcessor_SourceNameTable.png)
+![Trap Processor Source Name Table](~/dataminer/images/TrapProcessor_SourceNameTable.png)
 
 ## Step 5: Configure the Source IP Name Table
 
@@ -125,7 +125,7 @@ In this step, you will configure the values that will be used for the *Source IP
    - Set the **IP Address** to `127.0.0.1`.
    - Set the **Source IP Name** to `Trap Test`.
 
-![Trap Processor Source IP Name Table](~/user-guide/images/TrapProcessor_SourceIPNameTable.png)
+![Trap Processor Source IP Name Table](~/dataminer/images/TrapProcessor_SourceIPNameTable.png)
 
 ## Step 6: Send traps via the trap simulator
 
@@ -133,7 +133,7 @@ In this step, you will configure the values that will be used for the *Source IP
 
    On the element card, you will see 8 different traps that have been pre-configured for the purpose of this tutorial.
 
-   ![Trap Processor Simulator](~/user-guide/images/TrapProcessor_Simulator.png)
+   ![Trap Processor Simulator](~/dataminer/images/TrapProcessor_Simulator.png)
 
 1. In the first row, click **Send Trap**.
 
@@ -199,7 +199,7 @@ Traps come in different formats. Instead of the trap OID specifying if a trap is
 
 1. Go to the app and take a look at the *Processed Messages Table* to confirm if the trap has been processed.
 
-   ![Trap Processor Processed Messages](~/user-guide/images/TrapProcessor_ProcessMessages.png)
+   ![Trap Processor Processed Messages](~/dataminer/images/TrapProcessor_ProcessMessages.png)
 
 1. In the *Trap Simulator* element in DataMiner Cube, click *Send Trap* in the **eighth** row.
 

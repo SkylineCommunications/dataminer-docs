@@ -14,19 +14,19 @@ If you are interested in customer examples, visit our [use case section](https:/
 
 Explore our series of short demonstration videos in our Dojo use case and video library:
 
-- [Main features of the Meinberg Network Management System (mbgNMS) - DataMiner Dojo](https://community.dataminer.services/video/main-features-of-the-meinberg-network-management-system-mbgnms/) (video)
+- [Main features of the Meinberg Network Management System (mbgNMS)](https://www.youtube.com/watch?v=OCNc-ha8Sps) ![Video](~/dataminer/images/video_Duo.png)
 
-- [Meinberg NMS Dashboards Module - DataMiner Dojo](https://community.dataminer.services/video/meinberg-nms-dashboards-module/) (video)
+- [Meinberg NMS Dashboards Module](https://www.youtube.com/watch?v=wYYcneoKpIc) ![Video](~/dataminer/images/video_Duo.png)
 
-- [Meinberg NMS - Discovery and Provisioning (1/4) - DataMiner Dojo](https://community.dataminer.services/video/meinberg-nms-discovery-and-provisioning-1-4/) (video)
+- [Meinberg NMS - Discovery and Provisioning (1/4)](https://www.youtube.com/watch?v=y-Qx0d-v3HU) ![Video](~/dataminer/images/video_Duo.png)
 
-- [Meinberg NMS - Monitoring and Control (2/4) - DataMiner Dojo](https://community.dataminer.services/video/meinberg-nms-monitoring-and-control-2-4/) (video)
+- [Meinberg NMS - Monitoring and Control (2/4)](https://www.youtube.com/watch?v=Lk4Ho1G_qB0) ![Video](~/dataminer/images/video_Duo.png)
 
-- [Meinberg NMS - Configuration Management (3/4) - DataMiner Dojo](https://community.dataminer.services/video/meinberg-nms-monitoring-and-control-3-4/) (video)
+- [Meinberg NMS - Configuration Management (3/4)](https://www.youtube.com/watch?v=iVMKKs8R5Jo) ![Video](~/dataminer/images/video_Duo.png)
 
-- [Meinberg NMS - Firmware Management (4/4) - DataMiner Dojo](https://community.dataminer.services/video/meinberg-nms-discovery-and-provisioning-4-4/) (video)
+- [Meinberg NMS - Firmware Management (4/4)](https://www.youtube.com/watch?v=lzfUajhtZ3w) ![Video](~/dataminer/images/video_Duo.png)
 
-- [Meinberg Network Management System (mbgNMS) - DataMiner Dojo](https://community.dataminer.services/use-case/meinberg-network-management-system-mbgnms/) (use case)
+- [Meinberg Network Management System (mbgNMS)](https://community.dataminer.services/use-case/meinberg-network-management-system-mbgnms/) (use case)
 
 ## Info sheets
 
@@ -42,4 +42,4 @@ Explore our series of short demonstration videos in our Dojo use case and video 
 
 ## Manual
 
-![pdf](~/develop/images/mbgNMS_pdf.svg) [**SLC_UM_Meinberg_NMS_REV011.pdf**](https://community.dataminer.services/download/slc_um_meinberg_nms_rev000-pdf-2)
+![pdf](~/develop/images/mbgNMS_pdf.svg) [**SLC_UM_Meinberg_NMS.pdf**](https://community.dataminer.services/download/slc_um_meinberg_nms_rev000-pdf-2)

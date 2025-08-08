@@ -39,11 +39,11 @@ To deploy the Integrated DOCSIS branch of the EPM Solution:
 
      For example:
 
-     ![Integrated DOCSIS view structure](~/user-guide/images/I-DOCSIS_view_structure.png)
+     ![Integrated DOCSIS view structure](~/dataminer/images/I-DOCSIS_view_structure.png)
 
      You can adjust the view names as you see fit, as long as the appropriate hierarchical structure is maintained. There will be a direct mapping between the views you created and the corresponding EPM topology. For example:
 
-     ![Integrated DOCSIS topology](~/user-guide/images/I-DOCSIS_topology.png)
+     ![Integrated DOCSIS topology](~/dataminer/images/I-DOCSIS_topology.png)
 
    - In addition, within the Service Provider view, add the following set of views, structured as shown below:
 
@@ -101,4 +101,4 @@ To deploy the Integrated DOCSIS branch of the EPM Solution:
 
       - To configure the directory settings for multiple back-end elements at the same time, you can use the [multiple set](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements) feature.
 
-1. Configure the CMTS elements using the script *EPM_I_DOCSIS_AddNewCcapCmPair*. See [Creating CCAP/CM Pair](https://docs.dataminer.services/user-guide/Standard_Apps/EPM/EPM_I-DOCSIS/I-DOCSIS_Create_CCAP_CM_pair.html).
+1. Configure the CMTS elements using the script *EPM_I_DOCSIS_AddNewCcapCmPair*. See [Creating CCAP/CM Pair](https://docs.dataminer.services/dataminer/Standard_Apps/EPM/EPM_I-DOCSIS/I-DOCSIS_Create_CCAP_CM_pair.html).

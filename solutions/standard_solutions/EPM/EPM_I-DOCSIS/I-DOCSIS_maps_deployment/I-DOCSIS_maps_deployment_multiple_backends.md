@@ -13,7 +13,7 @@ To deploy the Integrated DOCSIS EPM maps to a DataMiner System with multiple ele
 
 1. Make sure that the *elementVar* field of all passive layers contains the name of the card variable (without the initial underscore) used in the Skyline EPM Platform Visio drawing:
 
-   ![Verify if the elementVar field contains the card variable](~/user-guide/images/EPM_I_DOCSIS_maps_deployment_maps_config_one_backend.png)
+   ![Verify if the elementVar field contains the card variable](~/dataminer/images/EPM_I_DOCSIS_maps_deployment_maps_config_one_backend.png)
 
 1. Create a relation layer per back-end element. You can copy one of the existing layers in the configuration file and paste it until you match the number of back-end elements in the DMS. For example, if the DMS has 11 back-end elements, you need to create 11 relation layers in the map configuration file.
 
