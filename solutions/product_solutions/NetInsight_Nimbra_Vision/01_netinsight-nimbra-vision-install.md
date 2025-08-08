@@ -36,7 +36,7 @@ To access the NetInsight Nimbra Vision application:
 
 1. Select *NetInsight Nimbra Vision* to start using the application.
 
-![NetInsight Nimbra Vision](../../user-guide/images/netinsight-nimbra-vision-openapp.png)
+![NetInsight Nimbra Vision](~/solutions/images/netinsight-nimbra-vision-openapp.png)
 
 > [!NOTE]
 > This application enhances the functionality of existing NetInsight Nimbra Vision elements on your DMA. If these elements have not been configured yet, [add the necessary elements](#dataminer-element-configuration) using the [appropriate connectors](https://catalog.dataminer.services/details/e48af0b9-b52c-4106-b0e0-22c44ead85f5).
@@ -45,7 +45,7 @@ To access the NetInsight Nimbra Vision application:
 
 The solution package installs the latest version of the NetInsight Nimbra Vision connector. You can also choose to install a specific version of the connector from the Catalog. However, note that the minimum required version of the connector is 1.0.1.1.
 
-When you have [created the elements](xref:Adding_elements) using this connector, specify the username and password on their Configuration page so requests can be authenticated. In addition, as this connector uses the HTTP protocol with [subscriptions](#subscriptions), you must **allow the Nimbra Vision platform to send asynchronous messages** to your DataMiner element.
+When you have [created the elements](xref:Adding_elements) using this connector, specify the username and password on their Configuration page so requests can be authenticated. In addition, as this connector uses the HTTP protocol with subscriptions, you must **allow the Nimbra Vision platform to send asynchronous messages** to your DataMiner element.
 
 ### Subscriptions configuration
 

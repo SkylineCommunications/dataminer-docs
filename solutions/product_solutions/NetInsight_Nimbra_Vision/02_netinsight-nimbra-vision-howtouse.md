@@ -12,7 +12,7 @@ Provides a easy way to user to monitor and manage scheduled circuit/services in 
 
 The page header offers quick access to schedule *J2K* and *E-Line* services. A *Plan Circuit* button is also available in the top-right corner. The button opens a window where you can select the preferred service type, capacity, interfaces, start time, and end time.
 
-![Nimbra Services](../../user-guide/images/netinsight-nimbra-vision-scheduled.png)
+![Nimbra Services](~/solutions/images/netinsight-nimbra-vision-scheduled.png)
 
 ### Ad hoc services
 
@@ -24,22 +24,22 @@ The *connect* option immediately triggers the start of the circuit, which then r
 
 JXS and SRT services are currently being implemented and will be supported in an upcoming version.
 
-![J2K Adhoc service](../../user-guide/images/netinsight-nimbra-vision-adhocpanel.png)
+![J2K Adhoc service](~/solutions/images/netinsight-nimbra-vision-adhocpanel.png)
 
 ## Monitoring
 
 On this page, you get an overview of the Nimbra nodes orchestrated by Nimbra Vision, allowing them to easily monitor the state of interfaces on these nodes and track any active alarms.
 
-![Monitoring](../../user-guide/images/netinsight-nimbra-vision-monitoring.png)
+![Monitoring](~/solutions/images/netinsight-nimbra-vision-monitoring.png)
 
 ## Nimbra interfaces
 
 Here you can inspect the network interfaces of the Nimbra nodes, identifying their status as well as current and historical transmission rates.
 
-![Nimbra Interfaces](../../user-guide/images/netinsight-nimbra-vision-interfaces.png)
+![Nimbra Interfaces](~/solutions/images/netinsight-nimbra-vision-interfaces.png)
 
 ## Network overview
 
 This page offers an overview of Nimbra's network topology.
 
-![Network Topology](../../user-guide/images/netinsight-nimbra-vision-networktopology.png)
+![Network Topology](~/solutions/images/netinsight-nimbra-vision-networktopology.png)

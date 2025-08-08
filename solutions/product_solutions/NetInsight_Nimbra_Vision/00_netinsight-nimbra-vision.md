@@ -14,7 +14,7 @@ The NetInsight Nimbra Vision product is designed to provide management and orche
 
 In this context, the DataMiner Nimbra Vision solution is a valuable asset for anyone using Nimbra products. It is not intended to replace any Nimbra product but rather to offer features that simplify the orchestration of end-to-end services on a Nimbra MSR network.
 
-![NetInsight Nimbra Vision](../../user-guide/images/netinsight-nimbra-vision-demo.gif)
+![NetInsight Nimbra Vision](~/solutions/images/netinsight-nimbra-vision-demo.gif)
 
 ## Key features
 
