@@ -26,7 +26,11 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### GQI DxM: Improved performance when handling extensions [ID 43479]
+
+<!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+An enhancement has been implemented to the way the GQI DxM deals with extensions. This will improve performance and also prevent possible performance issues in case a large number of active GQI extension libraries are used, for example when many extension libraries are activated by the Copilot DxM.
 
 ### Fixes
 
