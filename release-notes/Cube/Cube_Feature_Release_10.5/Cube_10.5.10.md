@@ -22,6 +22,12 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
+#### Improved alarm storm notification [ID 43326]
+
+<!-- 41655: MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+The notification shown in Cube when an alarm storm is triggered has been improved. Previously, it only mentioned the number of alarms with a specific description that had entered Cube. Now the notification will also mention the protocols of the alarms. The same also goes for the tooltip shown for an alarm storm. In addition, the alarm details card for the alarm storm alarm will now also include a list of the protocols of the alarms involved. Finally, the total count of the alarms mentioned in the notification and used to determine when to enter or leave an alarm storm has also been improved, taking up to 20 alarms from the existing alarm tree into account.
+
 #### Security enhancements [ID 43483]
 
 <!-- 41655: MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
