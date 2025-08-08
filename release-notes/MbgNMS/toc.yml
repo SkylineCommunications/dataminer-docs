@@ -1,6 +1,10 @@
 items:
   - name: MbgNMS 1.4.1
-    topicUid: MbgNMS_1.4.1
+    items:
+    - name: New features and changes
+      topicUid: MbgNMS_1.4.1
+    - name: Addendum CU1
+      topicUid: MbgNMS_1.4.1_CU1
   - name: MbgNMS 1.4.0
     topicUid: MbgNMS_1.4.0
   - name: MbgNMS 1.3.1
