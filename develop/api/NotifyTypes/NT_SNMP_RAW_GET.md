@@ -146,3 +146,10 @@ else
 
 - If the "multiple get" Boolean (settings[5]) is false, separate SNMP messages will be used to poll each OID, and if the "multiple get" Boolean (settings[5]) is true, a single SNMP message will be used to poll the OIDs.<!-- RN 20727 -->
 - Retrieving SNMP data using this method does not affect the timeout state of the element.
+- From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43273-->, infinite loop protection is available for NT_SNMP_RAW_GET.
+
+  When an infinite loop is detected, the following will be returned:
+
+  - When the `splitErrors` option is set to false, the error message `INFINITE LOOP` will be returned.
+
+  - When the `splitErrors` option is set to true, the values will be returned.
