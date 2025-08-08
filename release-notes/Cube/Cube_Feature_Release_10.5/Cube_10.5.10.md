@@ -42,6 +42,12 @@ A number of security enhancements have been made.
 
 On an element card, it could occur that no expander was shown to open the pages under *General Parameters*, so that you had to double-click to see those instead. The expander will now be shown again.
 
+#### Trending: Starting gap incorrectly filled [ID 43484]
+
+In some cases, it could occur that the gap at the starting point of a trend graph was incorrectly filled, causing the trend curve to expand unnecessarily when zooming out.
+
+This has now been fixed by ensuring that the gap’s starting point is accurately identified and data is properly inserted, maintaining consistent and reliable trend visualization.
+
 #### Exceptions when aborting actions from Visual page while using WebView2 browser [ID 43494]
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
