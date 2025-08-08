@@ -59,3 +59,9 @@ This has now been fixed by ensuring that the gap’s starting point is accuratel
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 When the WebView2 browser was used in Cube, exceptions could be shown in case an action was aborted, for example when quickly opening and closing pop-up windows in an embedded browser from a Visual page. These exceptions will now instead be logged in the debug logging.
+
+#### Alarm data not included in element migration [ID 43497]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+When elements were migrated between DataMiner Agents via the Element Migration window in System Center, it could occur that alarm data was not included in the migration. Now the alarm data will be properly included in the migration again.
