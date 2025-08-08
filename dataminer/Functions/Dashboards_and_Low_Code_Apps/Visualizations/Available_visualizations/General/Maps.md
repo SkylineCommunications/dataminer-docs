@@ -99,11 +99,11 @@ The following actions are available:
 
 - *Fetch the data*: This action fetches the data from the component again.
 
-- *Pan to view*: This action pans to a certain location. The coordinates for this action can be static or dynamic (using the *Link to data* option).
+- *Pan to view*: This action pans to a certain location. The coordinates for this action can be static or dynamic (using the *Link to* option).
 
-- *Set zoom level*: This action zooms to a certain level on the map. The zoom level can be static or dynamic (using the *Link to data* option).
+- *Set zoom level*: This action zooms to a certain level on the map. The zoom level can be static or dynamic (using the *Link to* option).
 
-- *Overlay actions*: Using app actions, different types of overlays can be shown on the map. The supported overlay types are .kml, .kmz and .geoJSON. The source of the overlay needs to be specified in an input (which can also be received using the *Link to data* option), and it can be either a local source, specified by a relative path in the `C:\Skyline DataMiner\Maps` folder, or a web source, specified by a public URL that hosts the overlay. The following overlay actions are available:
+- *Overlay actions*: Using app actions, different types of overlays can be shown on the map. The supported overlay types are .kml, .kmz and .geoJSON. The source of the overlay needs to be specified in an input (which can also be received using the *Link to* option), and it can be either a local source, specified by a relative path in the `C:\Skyline DataMiner\Maps` folder, or a web source, specified by a public URL that hosts the overlay. The following overlay actions are available:
 
   - *Open overlay*
 
