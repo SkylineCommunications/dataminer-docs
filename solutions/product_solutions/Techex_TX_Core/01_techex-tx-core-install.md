@@ -30,7 +30,7 @@ To access the Techex TX Core app:
 
 1. Select *Techex TX Core* to start using the application.
 
-![Techex TX Core app](~/user-guide/images/techex-txcore-app.png)
+![Techex TX Core app](~/solutions/images/techex-txcore-app.png)
 
 > [!NOTE]
 > This application enhances the functionality of existing TX Core elements on your DMA. If these elements have not been configured yet, [add and configure the necessary elements](#dataminer-element-configuration) using the Techex MWCore connector.
