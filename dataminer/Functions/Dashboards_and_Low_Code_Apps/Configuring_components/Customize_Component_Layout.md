@@ -8,6 +8,12 @@ Each component in a dashboard or low-code app has a number of default options. B
 
 1. Select the component and go to the ***Layout*** pane on the right.
 
+1. In the ***General*** section, you can configure basic component information:
+
+   - *Title*: Enter a custom title that appears in the top-left corner of the component.
+
+   - *Configuration name*: Available from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43453-->. Enter a custom name for the component. Using a custom name can make it easier to identify components when configuring a dashboard or low-code app. When you leave this setting empty, the default name consists of the type of visualization followed by a sequence number (e.g. `Table 3`).
+
 1. In the ***Styles*** section, you can then change the component theme in different ways:
 
    - To **change the component theme** to one of the different existing component themes for your current dashboard or low-code app theme, click the current theme and select a different theme in the drop-down list.
