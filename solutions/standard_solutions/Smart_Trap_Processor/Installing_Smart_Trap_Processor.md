@@ -22,7 +22,7 @@ uid: Installing_Smart_Trap_Processor
 
    Once the package has been installed, you can access the *Smart Trap Processor* low-code app at `http(s)://[DMA name]/root`.
 
-   ![Smart Trap Processor app](~/user-guide/images/TrapProcessor_Access.png)
+   ![Smart Trap Processor app](~/dataminer/images/TrapProcessor_Access.png)
 
 > [!NOTE]
 >

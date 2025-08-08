@@ -6,7 +6,7 @@ uid: Overview_TAG_App
 
 The DataMiner TAG Management application allows you to monitor and control individual TAG MCM devices and Media Control Systems (MCS).
 
-![Tag Management app](~/user-guide/images/Tag_Management_app.png)
+![Tag Management app](~/dataminer/images/Tag_Management_app.png)
 
 The TAG Management app seamlessly identifies the device type installed in the system and presents data from either a single MCS or all available MCM elements within the deployed DataMiner System, without the need for any additional user configuration.
 
@@ -28,4 +28,4 @@ For more information about how to install the package, see [Installing the TAG M
 The TAG Management app contains three main pages containing information on the TAG devices. For more information about the user interface and the available functionalities, see [Using the Tag Management application](xref:How_to_TAG_App).
 
 > [!TIP]
-> See also: [Use case: TAG VS – Tech Partner Integration](https://community.dataminer.services/use-case/tag-vs-tech-partner-integration/).
+> See also: [Use case: TAG VS – TAG Management app](https://community.dataminer.services/use-case/tag-vs-tag-management-app/).

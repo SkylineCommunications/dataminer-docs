@@ -29,7 +29,7 @@ uid: Installing_Ping_Monitoring
   > - See also:
   >
   >   - [Working with elements in DataMiner](xref:Element_cards)
-  >   - [Creating a ping element](xref:Adding_elements) ![Video](~/user-guide/images/video_Duo.png)
+  >   - [Creating a ping element](xref:Adding_elements) ![Video](~/dataminer/images/video_Duo.png)
 
 - Depending on your DataMiner version, you may need to enable the following soft-launch options:
 

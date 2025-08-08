@@ -75,7 +75,7 @@ This means that you will need to create a [system key](xref:Managing_dataminer_s
 
 1. Configure the key with a label of your choice and the permission *Register catalog items*.
 
-   ![Organization Key](~/user-guide/images/tutorial_catalog_registration_create_org_key.png)
+   ![Organization Key](~/dataminer/images/tutorial_catalog_registration_create_org_key.png)
 
 1. Copy the key so you can use it later.
 

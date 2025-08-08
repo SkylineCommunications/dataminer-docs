@@ -10,7 +10,7 @@ To access the application:
 
 1. Select *Nevion Video IPath* to start using the application.
 
-   ![Nevion Video IPath](~/user-guide/images/NevionAppLogo.png)
+   ![Nevion Video IPath](~/dataminer/images/NevionAppLogo.png)
 
 ## The Nevion Video IPath interface
 
@@ -18,14 +18,14 @@ The sidebar on the left of the Nevion Video IPath application contains two butto
 
 | Button | Page description |
 |:--:|--|
-| ![Connect](~/user-guide/images/Nevion_Connect.png) | Opens the [*Connect* page](#connect-page), which displays profiles, sources, and destinations. The connection between a source and a destination establishes a service. |
-| ![Services](~/user-guide/images/Nevion_Services.png) | Opens the [*Services* page](#services-page), which provides an overview of all available services. |
+| ![Connect](~/dataminer/images/Nevion_Connect.png) | Opens the [*Connect* page](#connect-page), which displays profiles, sources, and destinations. The connection between a source and a destination establishes a service. |
+| ![Services](~/dataminer/images/Nevion_Services.png) | Opens the [*Services* page](#services-page), which provides an overview of all available services. |
 
 ## Connect page
 
 The *Connect* page allows you to establish a connection between sources and destinations.
 
-![Overview page](~/user-guide/images/Nevion_OverviewPage.png)
+![Overview page](~/dataminer/images/Nevion_OverviewPage.png)
 
 To establish a connection:
 
@@ -49,9 +49,9 @@ To establish a connection:
 
 The *Services* page provides an overview of the services in the system, which correspond to established connections between sources and destinations. With the X button for each service in the overview, you can quickly delete a service.
 
-![Overview page](~/user-guide/images/Nevion_ServicesPage.png)
+![Overview page](~/dataminer/images/Nevion_ServicesPage.png)
 
 > [!NOTE]
 > Hover the mouse pointer over the table to access easy filtering.
 >
-> ![Easy filtering](~/user-guide/images/Nevion_ServicesHover.png)
+> ![Easy filtering](~/dataminer/images/Nevion_ServicesHover.png)

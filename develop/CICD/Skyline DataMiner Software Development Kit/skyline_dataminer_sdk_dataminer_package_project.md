@@ -100,9 +100,12 @@ For the SDK to be able to download the referenced items from the Catalog, config
       }
       ```
 
-## Executing additional code on installation
+> [!TIP]
+> Alternatively, you can configure the token using the default environment variable. For more information, see [Publishing manually](#publishing-manually).
 
-Open the `$SCRIPTNAME$.cs` file to write custom installation code. Common actions include creating elements, services, or views.
+## Executing additional code during installation
+
+To execute custom code during installation, open the `$SCRIPTNAME$.cs` file and add your logic there. This can be used for actions such as creating elements, services, or views.
 
 > [!TIP]
 > Type `clGetDms` in the .cs file and press Tab twice to insert a snippet that gives you access to the *IDms* classes, making DataMiner manipulation easier.
@@ -119,9 +122,34 @@ string setupContentPath = installer.GetSetupContentDirectory();
 
 ## Publishing to the Catalog
 
-By default, a project is created with support for publishing to the Catalog. You can publish your artifact manually through Visual Studio or by setting up a CI/CD workflow.
+By default, a project is created with support for publishing to the Catalog. You can publish your artifact manually through Visual Studio or by setting up a CI/CD workflow. To ensure high quality, Skyline only publishes Catalog items through CI/CD.
 
 ### Publishing manually
+
+You can manually publish a Catalog item using either the [.NET CLI](#using-the-net-cli-with-an-environment-variable) or [Visual Studio's publish functionality](#using-visual-studio-with-a-user-secret).
+
+#### Using the .NET CLI with an environment variable
+
+When working in a collaborative environment, it is typically considered a best practice to work with environment variables.
+
+You can use a `dotnet` command to publish your Catalog item:
+
+```bash
+$env:DATAMINER_TOKEN = "MyOrgKey"
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
+```
+
+You can also choose to leave the default `CatalogPublishKeyName` in the .csproj file and add a system variable in Windows (through [Powershell](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.5#set-environment-variables-with-setenvironmentvariable) or the [System Control Panel](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.5#set-environment-variables-in-the-system-control-panel), e.g. `[Environment]::SetEnvironmentVariable("skyline__sdk__dataminertoken", "MyOrgKey", "Machine"))`.
+
+By doing so, you can omit `CatalogDefaultDownloadKeyName` and `CatalogPublishKeyName`, and simplify the command:
+
+```bash
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version."
+```
+
+#### Using Visual Studio with a User Secret
+
+You can also publish your artifact via [Visual Studio's default publish functionality](https://learn.microsoft.com/en-us/dotnet/core/tutorials/publishing-with-visual-studio), using a User Secret. This is convenient when managing multiple projects with different registration keys.
 
 1. Obtain an **organization key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
 
@@ -173,6 +201,19 @@ There are two ways to change the version of a package:
      ```xml
      <Version>1.0.1</Version>
      ```
+
+### Updating Catalog item details
+
+To update only the **Catalog item details**, you can re-publish an already existing version. The Catalog does not allow the re-publishing of an existing version artifact, so the artifact will not be updated (i.e. the existing version will remain unchanged in the Catalog). However, the Catalog item details will be updated. This includes the details provided in the **manifest.yml** and the **readme**.
+
+If you have set the default key name as a system environment variable (see above), you can run the following command:
+
+```bash
+dotnet publish -p:Version="1.0.0"
+```
+
+> [!NOTE]
+> When `Version` is not included in the command, it will default to the value defined in the `<Version>` tag in the .csproj file.
 
 ### Publishing to the Catalog with the basic CI/CD workflow
 

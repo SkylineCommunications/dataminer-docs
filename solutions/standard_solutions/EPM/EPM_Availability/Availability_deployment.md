@@ -61,7 +61,7 @@ To deploy the Availability branch of the EPM Solution:
 
 1. In the front-end visual overview, click the *Set* button next to *Import* to begin the provisioning.
 
-   ![Configuration page front-end element](~/user-guide/images/Availability_FrontEnd_Configuration.png)
+   ![Configuration page front-end element](~/dataminer/images/Availability_FrontEnd_Configuration.png)
 
    > [!NOTE]
    > If you cannot see the Topology app in between the Surveyor and Activity modules in Cube, close and reopen DataMiner Cube. If this has no effect, and you are using a DataMiner Cube version prior to DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- RN 42221 -->, make sure the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) is enabled. If you are using a recent DataMiner version or the option is enabled, and the app is still not shown, restart DataMiner.

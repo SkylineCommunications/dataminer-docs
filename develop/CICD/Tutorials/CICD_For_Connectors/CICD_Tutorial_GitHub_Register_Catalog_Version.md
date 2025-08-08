@@ -102,7 +102,7 @@ To securely store sensitive information like the API token, you will need to add
 
    1. Configure the key with a label of your choice and the permission *Register catalog items*.
 
-      ![Organization Key](~/user-guide/images/tutorial_catalog_registration_create_org_key.png)
+      ![Organization Key](~/dataminer/images/tutorial_catalog_registration_create_org_key.png)
 
    1. Copy the key so you can use it later.
 
@@ -113,7 +113,7 @@ To securely store sensitive information like the API token, you will need to add
 
 1. In the sidebar on the left, select *Secrets and variables* > *Actions*, and then click the *New repository secret* button.
 
-   ![New repository secret button](~/user-guide/images/tutorial_catalog_registration_new_secret.png)
+   ![New repository secret button](~/dataminer/images/tutorial_catalog_registration_new_secret.png)
 
 1. Specify the name `API_TOKEN`, and add the organization key you copied earlier as the value.
 

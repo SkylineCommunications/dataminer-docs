@@ -111,19 +111,63 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Gets or sets the maximum timestamp.
 		/// </summary>
-		/// <value>The maximum timestamp.</value>
+		/// <value>The maximum allowed timestamp. If <c>null</c>, no upper limit is enforced.</value>
 		/// <remarks>
+		/// <para>This setting can be applied via the <see cref="AutomationDateTimeUpDownOptions"/>, <see cref="AutomationDateTimePickerOptions"/>, and <see cref="AutomationTimePickerOptions"/> when the <see cref="Type"/> is set to <see href="xref:UIBlockTypesOverview#time">Time</see>.</para>
 		/// <para>Default: <c>DateTime.MaxValue</c>.</para>
+		/// <note type="note">Available from DataMiner 10.5.9/10.6.0 onwards (RN 43014). A <see cref="DateTimeKind"/> will be taken into account on the DateTime of the Maximum. This can be set using <see cref="DateTime.SpecifyKind"/> :
+		/// 	 <list type="bullet">
+		///   		<item><description><see cref="DateTimeKind.Unspecified"/>: Based on the client's local time. This is the default behavior. This is also the behavior prior to 10.5.9/10.6.0 regardless of DateTimeKind.</description></item>
+		///   		<item><description><see cref="DateTimeKind.Local"/>: Based on the server's local time, then adjusted to the client's local time.</description></item>
+		///   		<item><description><see cref="DateTimeKind.Utc"/>: Interpreted as UTC, then adjusted to the client's local time. Using UTC is recommended to have full consistency regardless of the server and client time zone.</description></item>
+		/// 	</list>
+		/// </note> <!-- RN 43014 -->
 		/// </remarks>
+		/// <example>
+		/// <code>
+		/// var timeComponent = new UIBlockDefinition
+		/// {
+		///     Type = UIBlockType.Time,
+		///     ConfigOptions = new AutomationDateTimeUpDownOptions()
+		///     {
+		///         Maximum = new DateTime(2025, 5, 15, 20, 30, 0)
+		///     },
+		///     DestVar = "TimeComponent"
+		/// };
+		/// uib.AppendBlock(timeComponent);
+		/// </code>
+		/// </example>
 		public DateTime? Maximum { get; set; }
 
 		/// <summary>
 		/// Gets or sets the minimum timestamp.
 		/// </summary>
-		/// <value>The minimum timestamp.</value>
+		/// <value>The minimum allowed timestamp. If <c>null</c>, no lower limit is enforced.</value>
 		/// <remarks>
+		/// <para>This setting can be applied via the <see cref="AutomationDateTimeUpDownOptions"/>, <see cref="AutomationDateTimePickerOptions"/>, and <see cref="AutomationTimePickerOptions"/> when the <see cref="Type"/> is set to <see href="xref:UIBlockTypesOverview#time">Time</see>.</para>
 		/// <para>Default: <c>DateTime.MinValue</c>.</para>
+		/// <note type="note">Available from DataMiner 10.5.9/10.6.0 onwards (RN 43014). A <see cref="DateTimeKind"/> will be taken into account on the DateTime of the Minimum. This can be set using <see cref="DateTime.SpecifyKind"/> :
+		/// 	 <list type="bullet">
+		///   		<item><description><see cref="DateTimeKind.Unspecified"/>: Based on the client's local time. This is the default behavior. This is also the behavior prior to 10.5.9/10.6.0 regardless of DateTimeKind.</description></item>
+		///   		<item><description><see cref="DateTimeKind.Local"/>: Based on the server's local time, then adjusted to the client's local time.</description></item>
+		///   		<item><description><see cref="DateTimeKind.Utc"/>: Interpreted as UTC, then adjusted to the client's local time. Using UTC is recommended to have full consistency regardless of the server and client time zone.</description></item>
+		/// 	</list>
+		/// </note> <!-- RN 43014 -->
 		/// </remarks>
+		/// <example>
+		/// <code>
+		/// var timeComponent = new UIBlockDefinition
+		/// {
+		///     Type = UIBlockType.Time,
+		///     ConfigOptions = new AutomationDateTimeUpDownOptions()
+		///     {
+		///         Minimum = new DateTime(2025, 5, 10, 12, 30, 0)
+		///     },
+		///     DestVar = "TimeComponent"
+		/// };
+		/// uib.AppendBlock(timeComponent);
+		/// </code>
+		/// </example>
 		public DateTime? Minimum { get; set; }
 
 		/// <summary>

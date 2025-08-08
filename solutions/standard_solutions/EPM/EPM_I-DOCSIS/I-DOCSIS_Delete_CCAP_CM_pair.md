@@ -12,17 +12,17 @@ To delete a CCAP/CM pair manually:
 
 1. Note down the ID of the element (indicated in green below) and the DMA name (indicated in yellow below).
 
-   ![Element editor](~/user-guide/images/Delete_propertiesOfElement.png)
+   ![Element editor](~/dataminer/images/Delete_propertiesOfElement.png)
 
 1. In the Surveyor, select the *EPM BE* view.
 
-   ![EPM BE view](~/user-guide/images/Delete_BEFind.png)
+   ![EPM BE view](~/dataminer/images/Delete_BEFind.png)
 
 1. On the view card, navigate to *Below this view* > *Elements*.
 
 1. Use the filter box above the elements table to search for the DMA name you noted down earlier (indicated in yellow below).
 
-   ![Find BE element host](~/user-guide/images/Delete_SearchHost.png)
+   ![Find BE element host](~/dataminer/images/Delete_SearchHost.png)
 
 1. Right-click the first row, and select *Open in new card*.
 
@@ -30,7 +30,7 @@ To delete a CCAP/CM pair manually:
 
 1. In the table, look up the element ID you noted down earlier (indicated in green below), and click *Delete*.
 
-   ![Delete BE registration](~/user-guide/images/Delete_BEDeleteRegistration.png)
+   ![Delete BE registration](~/dataminer/images/Delete_BEDeleteRegistration.png)
 
 1. In the Surveyor, select the *EPM FE* element
 
@@ -38,7 +38,7 @@ To delete a CCAP/CM pair manually:
 
 1. In the table, look up the element ID you noted down earlier (indicated in green below), and click *Delete*.
 
-   ![Delete FE registration](~/user-guide/images/Delete_FEDeleteRegistration.png)
+   ![Delete FE registration](~/dataminer/images/Delete_FEDeleteRegistration.png)
 
 1. In the Surveyor, right-click the element you want to remove, and select *Delete*.
 

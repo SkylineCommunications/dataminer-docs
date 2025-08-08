@@ -38,7 +38,7 @@ keywords: low-code, low code, lowcode
 | [Chaining actions](xref:Tutorial_Apps_Chaining_Actions) | Perform consecutive actions in a low-code app. |
 | [Using the stepper component in a low-code app](xref:TutorialStepper) | Add and configure a stepper component in a low-code app to help with managing incidents and their different states. |
 | [Styling a table component](xref:Tutorial_Apps_Style_A_Table) | Style a table component in a low-code app using GQI queries and the Template Editor. |
-| [Using the maps component in a low-code app](xref:TutorialMaps) | Add and configure a maps component in a low-code app to visualize cell towers, their connections, and their coverage. |
+| [Using the maps component in a low-code app](xref:MapsTutorial) | Add and configure a maps component in a low-code app to visualize cell towers, their connections, and their coverage. |
 | [Getting started with the grid component](xref:Tutorial_Apps_Grid) | Getting started with a grid component in a low-code app using GQI queries and the Template Editor. |
 | [Leveraging feeds in a web component](xref:Tutorial_Dashboards_Feeds_Web_Component) | Embed another webpage or HTML content directly into your dashboard using a web component. |
 | [Creating a visually appealing and user-friendly low-code app](xref:Tutorial_App_Design) | Create an intuitive, visually appealing, and user-friendly low-code app, learning about best practices in low-code app design. |

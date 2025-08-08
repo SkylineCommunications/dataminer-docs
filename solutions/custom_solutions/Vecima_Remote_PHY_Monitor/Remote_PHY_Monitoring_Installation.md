@@ -52,11 +52,11 @@ You can now go to `http(s)://[DMA name]/root` and start using the Remote PHY Mon
 
 - R-PHY Monitoring
 
-  ![R-PHY Monitoring](~/user-guide/images/R-PHY_Monitoring.png)
+  ![R-PHY Monitoring](~/dataminer/images/R-PHY_Monitoring.png)
 
 - R-PHY Analog & RF
 
-  ![R-PHY Analog & RF](~/user-guide/images/R-PHY_Analog_RF.png)
+  ![R-PHY Analog & RF](~/dataminer/images/R-PHY_Analog_RF.png)
 
 > [!NOTE]
 > If you want to **update** an existing installation of the Remote PHY Monitoring Solution, you can do so by going to the [*Remote PHY Monitoring* package](https://catalog.dataminer.services/details/package/5557) in the Catalog and deploying it. The steps that follow after this deployment in the procedure above are not needed for an update.

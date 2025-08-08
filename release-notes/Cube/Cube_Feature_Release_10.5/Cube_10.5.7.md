@@ -2,10 +2,12 @@
 uid: Cube_Feature_Release_10.5.7
 ---
 
-# DataMiner Cube Feature Release 10.5.7 – Preview
+# DataMiner Cube Feature Release 10.5.7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.4.0 [CU16] and 10.5.0 [CU4].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,37 +16,7 @@ uid: Cube_Feature_Release_10.5.7
 
 ## Highlights
 
-- [Cube search box now supports fuzzy matching [ID 42911]](#cube-search-box-now-supports-fuzzy-matching-id-42911)
-- [System Center: New Automation tab in Logging section [ID 42737]](#system-center-new-automation-tab-in-logging-section-id-42737)
-
-## New features
-
-#### System Center: New Automation tab in Logging section [ID 42737]
-
-<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
-
-In DataMiner feature version 10.5.6, Automation script log files were introduced. These log files can now be consulted in DataMiner Cube. To do so, in Cube, open *System Center*, and go to *Logging > Automation*.
-
-On the left, you will find a list of all Automation scripts available on the system, grouped per DataMiner Agent.
-
-- Right-clicking a script in the list will open a shortcut menu with two options: *Open* and *Open previous*. If there is no previous log file, the latter option will not be available.
-- To set the log levels for one or more Automation scripts on a particular DataMiner Agent, open the *Log settings* pane at the top of the *Automation* tab, select the files\*, set the log levels, and click *Apply levels*.
-
-\**To select more than one script, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive scripts, click the first one in the list and then click the last one while holding down the Shift key.*
-
-> [!NOTE]
-> When you open an Automation script in the *Automation* module, you can access the script's log file by clicking the *View Log* button or by right-clicking inside the script's contents and selecting *View log* from the shortcut menu. Note that this will only be possible if you have permission to view log files.
-
-#### Cube search box now supports fuzzy matching [ID 42911]
-
-<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
-
-The search box in the middle of the Cube header bar now supports fuzzy matching.
-
-Search results will now account for diacritic similarities within the same alphabet (e.g. "é" with will match "e"). However, transliteration is not supported. Typos or substitutions with the closest corresponding letters (e.g. "ø" vs. "o" or "graphic" vs. "grafic") will not yield any results.
-
-> [!NOTE]
-> For Japanese characters to be processed properly, your Windows system needs to support Japanese text rendering.
+- [Improved search [ID 42911]](#improved-search-id-42911)
 
 ## Changes
 
@@ -63,6 +35,15 @@ From now on, users will get more feedback when a DataMiner version mismatch is d
 - The logging of the DataMiner Cube desktop app will now explicitly indicate when a "version not found" error was caused by a system-wide installation conflict.
 
 - The error message displayed on the screen will now explicitly say that a version mismatch was detected and that an update is required. Also, users will be referred to the [DataMiner Cube deployment methods](xref:DataMiner_Cube_deployment_methods) documentation page for more details.
+
+#### Improved search [ID 42911]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+An improvement has been implemented to the search engine in DataMiner Cube, so that diacritic similarities within the same alphabet will now be taken into account when text is entered in the search box (e.g. "é" with will match "e"). However, transliteration is not supported. Typos or substitutions with the closest corresponding letters (e.g. "ø" vs. "o" or "graphic" vs. "grafic") will not yield any results.
+
+> [!NOTE]
+> For Japanese characters to be processed properly, your Windows system needs to support Japanese text rendering.
 
 #### DataMiner Cube desktop app: Clicking 'Check for updates' will now always let users download the latest app version of the chosen update track [ID 42939]
 

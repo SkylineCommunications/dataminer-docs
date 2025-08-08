@@ -1,0 +1,40 @@
+items:
+  - name: About DataMiner
+    topicUid: Overview_About_DataMiner
+    href: About_DataMiner/toc.yml
+  - name: Getting started
+    topicUid: Getting_Started
+    href: Getting_started/toc.yml
+  - name: Professional services
+    topicUid: Professional_services
+    href: Professional_services/toc.yml
+  - name: Operator guide
+    topicUid: Operator_guide
+    href: Operator_guide/toc.yml
+  - name: Administrator guide
+    topicUid: Administrator_guide
+    href: Administrator_guide/toc.yml
+  - name: Functions
+    topicUid: Overview_Functions
+    href: Functions/toc.yml
+  - name: Frameworks
+    topicUid: DataMiner_Frameworks
+    href: Frameworks/toc.yml
+  - name: dataminer.services
+    topicUid: dataminer_services
+    href: dataminer_services/toc.yml
+  - name: Tools
+    topicUid: DataMinerTools
+    href: DataMiner_Tools/toc.yml
+  - name: Troubleshooting
+    topicUid: Part6Troubleshooting
+    href: Troubleshooting/toc.yml
+  - name: Reference
+    topicUid: Part7Reference
+    href: Reference/toc.yml
+  - name: Legal
+    topicUid: Terms_of_Sale
+    href: Legal/toc.yml
+  - name: Frequently asked questions
+    topicUid: FAQs
+    href: FAQ/toc.yml

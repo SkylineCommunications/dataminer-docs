@@ -9,15 +9,16 @@ uid: General_Main_Release_10.6.0_new_features
 
 ## Highlights
 
-- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314-id-42535)
+- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314-id-42535-id-43196)
 
 ## New features
 
-#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535]
+#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 <!-- RN 42314: MR 10.6.0 - FR 10.5.4 -->
 <!-- RN 42535: MR 10.6.0 - FR 10.5.5 -->
+<!-- RN 43196: MR 10.6.0 - FR 10.5.9 -->
 
 From now on, you can enable the Swarming feature in a DataMiner System in order to be able to swarm [elements](xref:SwarmingElements) from one DataMiner Agent to another Agent in the same cluster. Prior to this, this feature is available in preview if the *Swarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
@@ -116,6 +117,13 @@ public class Script
   }
 }
 ```
+
+An information event will be generated when an element was successfully swarmed. Example:
+
+`Swarmed from <DmaName> (<DmaId>) to <DmaName> (<DmaId>) by <UserName>`
+
+> [!NOTE]
+> When the source DMA is no longer available or unknown, the information event will be shortened to `Swarmed to <DmaName> (<DmaId>) by <UserName>`.
 
 #### Retrieving additional logging from a DataMiner System [ID 40766]
 
@@ -436,7 +444,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
@@ -447,47 +455,15 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 42429: MR 10.6.0 - FR 10.5.5 -->
 <!-- RNs 42480: MR 10.6.0 - FR 10.5.5 -->
 <!-- RNs 42602: MR 10.6.0 - FR 10.5.6 -->
+<!-- RNs 43320: MR 10.6.0 - FR 10.5.9 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
 Whenever the relation is broken, RAD will detect this and generate suggestion events for each parameter instance in the group where a broken relation was detected. These suggestion events will then be grouped into a single incident so that it is shown on a single line in the Alarm Console. When you clear such an incident, all its base alarms (i.e. the suggestion events created by Relational anomaly detection) will also be cleared.
 
-##### Configuration file
+##### Configuring the parameter groups
 
-Per DataMiner Agent, the above-mentioned parameter groups must be configured in the `C:\Skyline DataMiner\Analytics\RelationalAnomalyDetection.xml` file. This file will be read when SLAnalytics starts up, when RAD is enabled or re-enabled, or when a *ReloadMadConfigurationMessage* is sent.
-
-The configuration file must be formatted as follows.
-
-```xml
-<?xml version="1.0" ?>
-  <RelationalAnomalyDetection>
-    <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]" minimumAnomalyDuration="[THRESHOLD2]">
-      <Instance>[INSTANCE1]</Instance>
-      <Instance>[INSTANCE2]</Instance>
-      [... one <Instance> tag per parameter in the group]
-    </Group>
-    [... one <Group> tag per group of parameters that should be monitored by RAD]
-</RelationalAnomalyDetection>
-```
-
-**Group arguments**
-
-| Argument | Description |
-|---|---|
-| `name`         | The name of the parameter group.<br>This name must be unique, and will be used when a suggestion event is generated for the group in question. |
-| `updateModel`  | Indicates whether RAD should update its internal model of the relation between the parameters in the group.<br>- If set to "false", RAD will only do an initial training based on the data available at startup.<br>- If set to "true", RAD will update the model each time new data comes in. |
-| `anomalyScore` | Optional argument that can be used to specify the suggestion event generation threshold.<br>By default, this value will be set to 3. Higher values will result in less suggestion events, lower values will result in more suggestion events. |
-| `minimumAnomalyDuration` | Optional argument that specifies the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly. Default value: 5<br>- When `minimumAnomalyDuration` is set to a value greater than 5, the deviating behavior will need to last longer before an anomaly event is triggered.<br>- `minimumAnomalyDuration` can be set to a non-default value, for example, to filter out noise events caused by a single, short, harmless outlying value in the data.<br>- If `minimumAnomalyDuration` is either not set or set to a value less than or equal to 5, an anomaly event will be generated as soon as values deviate sufficiently from the RAD model. |
-
-**Parameter instance formats**
-
-In each `Instance`, you can specify either a single-value parameter or a table parameter by using one of the following formats:
-
-- Single-value parameter: [DataMinerID]/[ElementID]/[ParameterID]
-- Table parameter: [DataMinerID]/[ElementID]/[ParameterID]/[PrimaryKey]
-
-> [!NOTE]
-> When you add a new parameter group, an error message will appear when that parameter group contains an invalid group name, an invalid number of parameters, an invalid anomaly threshold, or an invalid minimum anomaly duration value.
+All configuration settings are stored in the *ai_rad_models_v2* database table, and have to be managed using either the *RAD Manager* app or the RAD API.
 
 ##### Average trending
 
@@ -517,7 +493,7 @@ The following API messages can be used to create, retrieve and remove RAD parame
 |---------|----------|
 | AddRADParameterGroupMessage     | Creates a new RAD parameter group.<br>If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated. |
 | GetRADDataMessage               | Retrieves the anomaly scores over a specified time range of historical data. |
-| GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular RAD parameter group. |
+| GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular RAD parameter group.<br>The response to a `GetRADParameterGroupInfoMessage` includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging. |
 | GetRADParameterGroupsMessage    | Retrieves a list of all RAD parameter groups that have been configured. |
 | RemoveRADParameterGroupMessage  | Deletes a RAD parameter group. |
 | RetrainRADModelMessage          | Retrains the RAD model over a specified time range. |
@@ -526,6 +502,9 @@ The following API messages can be used to create, retrieve and remove RAD parame
 >
 > - Names of RAD parameter groups will be processed case-insensitive.
 > - When a Relational Anomaly Detection (RAD) parameter group is deleted, all open suggestion events associated with that parameter group will automatically be cleared.
+> - Instances of (direct) view column parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will automatically be translated to the base table parameters.
+> - DVE child parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will automatically be translated to the parent parameters.
+> - Security has been added to all RAD messages. You will not be able to edit, remove or retrieve information about groups that contain parameters of elements to which you do not have access. The `GetRADParameterGroupsMessage` will return all groups though.
 > - The following messages have been deprecated: *AddMADParameterGroupMessage*, *GetMADParameterGroupInfoMessage*, *RemoveMADParameterGroupMessage*, and *RetrainMADModelMessage*.
 
 #### SLNetClientTest tool: Element process ID information [ID 42013]
@@ -560,12 +539,6 @@ If multiple settings indicate that the element should be running in isolation mo
 >
 > - If, in DataMiner Cube, you specified that a particular element had to run in isolation mode, the boolean property `RunInIsolationMode` will be true. In some cases, this boolean `RunInIsolationMode` property will be false, while the above-mentioned `RunInIsolationModeConfig` property will be set to "Protocol". In that case, the element will be running in isolation mode because it was configured to do on protocol level.
 > - See also [Elements can now be configured to run in isolation mode [ID 41757]](#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757)
-
-#### Failover: NATS cluster state will now be visible in DataMiner Cube's Failover Status window [ID 42250]
-
-<!-- MR 10.6.0 - FR 10.5.7 -->
-
-In DataMiner Cube, the NATS cluster state will now be visible in the *Failover Status* window. This state will indicate whether NATS communication between main agent and backup agent is up and running and whether the *clusterEndpoints.json* file is synchronized between the two agents.
 
 #### New NotifyProtocol call NT_CLEAR_PARAMETER [ID 42397]
 
@@ -700,18 +673,44 @@ The SLNet message `EditConnection`, which can be used to edit a connection from 
 
 <!-- MR 10.6.0 - FR 10.5.8 -->
 
-To prevent dropdown boxes in interactive Automation scripts to get loaded with too much data, it is now possible to filter the data that is loaded into a dropdown box.
+To prevent dropdown boxes in interactive Automation scripts from getting loaded with too much data, it is now possible to filter the data that is loaded into a dropdown box.
 
 For an example showing how to implement a dropdown box filter in an interactive Automation script, see [Interactive Automation scripts: Filtering values in a redesigned UI component 'DropDown' [ID 42845]](xref:Web_apps_Feature_Release_10.5.8#interactive-automation-scripts-filtering-values-in-a-redesigned-ui-component-dropdown-id-42845).
 
 > [!IMPORTANT]
 > This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
 
+#### Automation scripts: New Interactivity tag [ID 42954]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Up to now, Automation scripts using the IAS Interactive Toolkit required a special comment or code snippet in order to be recognized as interactive. From now on, you will be able to define the interactive behavior of an Automation script by adding an `<Interactivity>` tag in the header of the script. See the following example.
+
+```xml
+<DMSScript xmlns="http://www.skyline.be/automation">
+  ...  
+  <Interactivity>Always</Interactivity>
+  ...
+  <Script>
+    ...
+  </Script>
+</DMSScript>
+```
+
+Possible values:
+
+| Value | Description |
+|-------|-------------|
+| Auto     | Like before, an attempt will be made to automatically detect the interactive behavior of the script. |
+| Never    | The script will never show any UI element. |
+| Optional | The script will be interactive when it needs to be. |
+| Always   | The script will always be interactive. |
+
 #### Automation: New OnRequestScriptInfo entry point [ID 42969]
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
-In an Automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other Automation scripts (or any other code) to request information about the script in question, for example which parameter values are required for a particular profile parameter.
+In an Automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other Automation scripts (or any other code) to request information about the script in question, for example to find out which profile parameter values a script needs in order to orchestrate a device.
 
 ##### Using the entry point
 
@@ -722,7 +721,7 @@ To use the entry point, add a method with the following signature to the script:
 public RequestScriptInfoOutput OnRequestScriptInfoRequest(IEngine engine, RequestScriptInfoInput inputData)
 ```
 
-Both `RequestScriptInfoInput` and `RequestScriptInfoOutput` have a `Data` property of type `Dictionary<string, string>`, which can be used to exchange information between the script and other code. It is strongly recommended to keep the passed data below 20 MB (i.e. 10 million characters). If larger chunks need to be passed, a reference to that information should be passed instead.
+Both `RequestScriptInfoInput` and `RequestScriptInfoOutput` have a `Data` property of type `Dictionary<string, string>`, which can be used to exchange information between the script and other code. We strongly recommend keeping the passed data below 20 MB (i.e. 10 million characters). If larger chunks need to be passed, a reference to that information should be passed instead.
 
 It is allowed to pass null as input data and to return null as output data.
 
@@ -774,3 +773,200 @@ new ExecuteScriptMessage
 When an `ExecuteScriptMessage` is sent, an `ExecuteScriptResponseMessage` will be returned. The information is returned in an `EntryPointResult.Result` property of type `RequestScriptInfoOutput`.
 
 This message should not be used to request the information in an Automation script.
+
+#### Automation script and QAction dependencies can now also be uploaded to the 'DllImport\\SolutionLibraries' folder [ID 43108]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Up to now, the `UploadScriptDependencyMessage` was only able to upload Automation script and QAction dependencies to the `C:\Skyline DataMiner\Scripts\DllImport` folder. From now on, it will also be able to upload those dependencies to the `C:\Skyline DataMiner\ProtocolScripts\DllImport\SolutionLibraries` folder.
+
+See the following example. The `UploadScriptDependencyMessage` now has a `DependencyFolder` property, which allows you to specify the destination of the dependency to be uploaded.
+
+```csharp
+var uploadDependencyMessage = new UploadScriptDependencyMessage()
+{
+  Bytes = bytes,
+  DependencyName = name,
+  Path = string.Empty, // Subfolders within the destination can be specified here
+  DependencyFolder = ScriptDependencyFolder.SolutionLibraries // Default is 'ScriptDependencyFolder.ScriptImports'
+};
+```
+
+After a dependency has been uploaded, all scripts using that dependency will be recompiled.
+
+> [!NOTE]
+> For QActions in protocols, the relevant SLScripting process must be restarted before the new DLL will get loaded.
+
+#### SLNet: 'TraceId' property added to ClientRequestMessage & extended logging [ID 43187]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+The `ClientRequestMessage` class has been extended with a new `TraceInfo` class, which has one `TraceId` property of type string. In a later phase, this property will be used to track requests across multiple modules (e.g. queries coming from ad hoc data sources).
+
+CrudLoggerProxy logging will also support trace IDs for CRUD operations by the following managers:
+
+- AppPackageContentManager
+- BaseFunctionManager
+- BaseProfileManager
+- BPAManager
+- ClusterEndpointsManager
+- ClusterManager
+- ConfigurationManager
+- DOMManager
+- IncrementManager
+- JobManager
+- MigrationManager
+- ModuleSettingsManager
+- NATSCustodianManager
+- SRMServiceStateManager
+- TicketingManager
+- UserDefinableApiManager
+- VisualManager
+
+Examples of CRUD operation log entries with a trace ID:
+
+```txt
+2025/07/02 13:19:14.170|SLNet.exe|CrudLoggerProxy|INF|3|6|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Object: SectionDefinition, Forced: False, User: DOMAIN\UserName, Action: Creating CustomSectionDefinition[IDQ1XPM7DXBIL9YXKWZZ,c74e85be-2c1d-4002-aaba-a3b7d712fe3a].
+
+2025/07/02 13:19:14.457|SLNet.exe|CrudLoggerProxy|INF|3|6|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Object: SectionDefinition, Forced: False, User: DOMAIN\UserName, Action: Created CustomSectionDefinition[IDQ1XPM7DXBIL9YXKWZZ,c74e85be-2c1d-4002-aaba-a3b7d712fe3a].
+```
+
+Also, the trace ID will be logged for the following messages:
+
+- slow client messages (in *SLNet.txt* and *SLSlowClientMessages.txt*)
+
+  ```txt
+  2025/07/02 13:19:34.715|SLNet.exe|LogSlowClientMessage|INF|0|252|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] [Facade.HandleMessage] 60908.7999ms were needed to handle Cube (FirstName LastName @ GTC-USERNAME) => Diagnostic Request: Hang ()
+  ```
+
+- incoming messages in SLNet (in *SLNet.txt* and *SLNet\FacadeHandleMessage.txt*)
+
+  ```txt
+  2025-07-02 15:05:04.329|277|Facade.HandleMessage|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Incoming (RTManagerGUI.exe (FirstName LastName @ GTC-USERNAME)): Skyline.DataMiner.Net.Messages.ManagerStoreCreateRequest`1[Skyline.DataMiner.Net.Apps.DataMinerObjectModel.DomDefinition]
+  ```
+
+The logging of a DOM manager will now also contain a line indicating the start of status transitions. This will be logged on information level 3, i.e. the same type and level as regular CRUD actions:
+
+```txt
+2025/07/02 15:05:11.110|SLNet.exe|HandleStatusTransitionRequest|INF|3|269|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Handling status transition with ID 'new_to_closed' for instance with ID '1ff720a3-0aa2-4548-8b51-d8b975e19ea4'.
+```
+
+#### Service & Resource Management: Support for capacity ranges [ID 43335]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Resource capacity ranges are now supported. To that end, profile parameters can now be of type "range".
+
+A resource can have one capacity range per profile parameter. This range can be either fully booked or partially booked.
+
+- If a range is partially booked, other bookings can book the unbooked part of the range as long as the bookings do not overlap.
+- The same range can be booked by two overlapping bookings on condition that the same reference string is used and that the range is identical in both bookings. `GetEligibleResources` has been updated to take this into account.
+
+##### Examples
+
+Scenario: A Resource has a capacity range parameter with a range from 100 to 200.
+
+Example 1:
+
+- If a booking books the entire range without a reference string, no other overlapping bookings can book that resource while requesting that same capacity range.
+- `GetEligibleResources` will not return that resource if asked for that capacity range with an overlapping time range.
+
+Example 2:
+
+- If a booking books the range from 100 to 110, another booking can book that range from 110 to 200, etc.
+- `GetEligibleResources` will return that resource, specifying the available range from 110 to 200.
+
+Example 3:
+
+- If a booking books the range from 100 to 110 with reference string "Example 3", another booking can book the same range from 100 to 110 if it uses the same "Example 3" reference.
+- `GetEligibleResources` wil return the entire range if "Example 3" is provided as reference.
+
+##### Creating a range parameter
+
+This is how you can create a range parameter.
+
+```csharp
+var rangeCapacityParameter= new ProfileParameter
+{
+  ID = Guid.NewGuid(),
+  Categories = ProfileParameterCategory.Capacity,
+  Name = "Range Parameter",
+  Type = ProfileParameter.ParameterType.Range,
+};
+profileHelper.ProfileParameters.Create(rangeCapacityParameter);
+```
+
+##### Creating a resource with a capacity range
+
+This is how you can add range 100 to 1000 to a resource.
+
+```csharp
+var capacities = new List<MultiResourceCapacity>
+{
+  new MultiResourceCapacity
+  {
+    CapacityProfileID = rangeCapacityParameter.ID,
+    Value = new CapacityParameterValue(100, 1000),
+  }
+};
+
+var resource = new Resource(Guid.NewGuid())
+{
+  Name = "Resource",
+  Mode = ResourceMode.Available,
+  Capacities = capacities,
+  MaxConcurrency = 10
+};
+
+resourceManager.AddOrUpdateResources(resource);
+```
+
+##### Booking a range
+
+This is how you can book the range from 100 to 150 of a specified resource.
+
+```csharp
+var resourceUsage = new ResourceUsageDefinition(resource.ID)
+{
+  RequiredCapacities = new List<MultiResourceCapacityUsage>
+  {
+    new MultiResourceCapacityUsage
+    {
+      CapacityProfileID = rangeCapacityParameter.ID,
+      RangeStart = 100,
+      DecimalQuantity = 50
+    }
+  }
+};
+
+booking.ResourcesInReservationInstance.Add(resourceUsage);
+```
+
+##### Checking which resources have a specific range available
+
+This is how you can check which resources have a specific range available.
+
+```csharp
+var requiredCapacities = new List<MultiResourceCapacityUsage>()
+{
+  new MultiResourceCapacityUsage(rangeCapacityParameter, 100, 50)
+};
+
+var requiredCapabilities = new List<ResourceCapabilityUsage>();
+
+result = resourceManager.GetEligibleResourcesWithUsageInfo(now, now.AddHours(1), requiredCapacities, requiredCapabilities);
+```
+
+#### Trap forwarding: Traps can now be forwarded to target elements of which a specific hostname was configured in the port settings [ID 43347]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+SLSNMPManager is now capable of forwarding traps to target elements of which a specific hostname was configured in the port settings.
+
+If the hostname cannot be resolved to an IP address, an error alarm with the following message will be generated on the target element:
+
+`Could not resolve destination host to an IP: polling host=<hostname>, or failed to set the destination address. <ERROR>`
+
+Example:
+
+`Could not resolve destination host to an IP: polling host=localhost123, or failed to set the destination address. Host to IP failure. Error : 11001. [WSAHOST_NOT_FOUND]`

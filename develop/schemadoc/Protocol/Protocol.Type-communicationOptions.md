@@ -28,7 +28,7 @@ In the Microsoft Platform protocol, for instance, this option can prevent hangin
 
 Obsolete. This option is not needed if connection type "HTTP" is used.
 
-Specify this option if the device uses chunked HTTP encoding. Only applicable for connections of type "serial" or "serial single".
+Specify this option if the device uses chunked transfer encoding. Only applicable for connections of type "serial" or "serial single".
 
 ### closeConnectionOnResponse
 
@@ -195,7 +195,7 @@ See also [Configuring a smart-serial connection as a server](xref:ConnectionsSma
 SNMP traps will be assigned to elements based on the trap’s agentaddress binding (1.3.6.1.3.1057.1).
 
 > [!IMPORTANT]
-> To activate this feature on system level, add the following line in DataMiner.xml: `<DataMiner useAgentBinding="true">`.
+> To activate this feature on system level, set the [useAgentBinding](xref:DataMiner-useAgentBinding) to `true` in *DataMiner.xml*.
 
 ## Examples
 
