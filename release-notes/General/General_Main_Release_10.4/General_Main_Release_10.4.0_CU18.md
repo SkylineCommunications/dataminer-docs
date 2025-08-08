@@ -178,12 +178,6 @@ In some cases, a run-time error could be thrown when a DVE child element was del
 
 When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
 
-#### Problem when loading initial parameter data for remote elements [ID 43339]
-
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 but reverted by 43517-->
-
-In some cases, client applications like DataMiner Cube would fail to load initial parameter data for remote elements.
-
 #### StorageModule DcM would fail to read an element XML file [ID 43350]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
