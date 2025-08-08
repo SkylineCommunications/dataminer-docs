@@ -79,6 +79,8 @@ The UserDefinableApiEndpoint module is responsible for handling API triggers for
 
 The CloudGateway module is responsible for connecting a DataMiner System to dataminer.services. It manages the identity towards dataminer.services and ensures a secure connection.
 
+This DxM is included in DataMiner upgrade packages from DataMiner 10.5.9/10.6.0 onwards<!--RN 43205-->. However, the DxM will only be upgraded if an older version is found on the DMA. If no older version is found, it will not be installed.
+
 ### CloudFeed
 
 The CloudFeed module is responsible for offloading data towards dataminer.services. This setting can be controlled in the [Admin app](xref:Controlling_cloudfeed_data_offloads). Among the data that is offloaded are alarm events, change point events, SRM events, element configuration events, and feedback events.
