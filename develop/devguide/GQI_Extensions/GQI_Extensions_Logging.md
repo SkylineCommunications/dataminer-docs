@@ -104,6 +104,63 @@ Example:
 
 ***
 
+## Changing the minimum log level
+
+The minimum log level determines which log entries are included in the log files based on their [log level](xref:GQI_GQILogLevel). This can be used to increase or decrease the number of log entries without having to edit the code, for example while debugging.
+
+### [GQI DxM](#tab/gqi-dxm)
+
+The minimum log level is the highest level of the following two:
+
+- The **global** minimum log level that applies to all GQI extensions. This can be configured in the [application settings](xref:GQI_DxM#configuration) using the `MinimumLogLevel` property. For example:
+
+  ```json
+  {
+    "GQIOptions": {
+      "Extensions": {
+        "Logging": {
+          "MinimumLogLevel": "Debug"
+        }
+      }
+    }
+  }
+  ```
+
+  The default level is `Information`.
+
+- The **instance-specific** minimum log level. This can be configured at runtime in the extension implementation using the [MinimumLogLevel](xref:GQI_IGQILogger#properties) property of the logger. For example:
+
+  ```csharp
+  public OnInitOutputArgs OnInit(OnInitInputArgs args)
+  {
+    _logger = args.Logger;
+    _logger.MinimumLogLevel = GQILogLevel.Debug;
+    ...
+  }
+  ```
+
+  The default level is `Information`.
+
+> [!TIP]
+> To get log entries at the `Debug` level, set both the global and instance-specific minimum log level to `Debug` or lower. If either is higher (e.g. `Information`), you will only get log entries for that level and above. For an overview of the log levels, refer to [Minimum log level](xref:GQI_Logging#minimum-log-level).
+
+### [GQI in SLHelper](#tab/gqi-slhelper)
+
+The **default** minimum log level for extensions is determined by the global minimum log level for GQI. This can be configured using the `serilog:minimum-level` key in the [application settings](xref:GQI_Logging#changing-the-minimum-log-level). The default level is `Information`.
+
+You can overwrite the default minimum log level at runtime for each individual extension instance by modifying the [MinimumLogLevel](xref:GQI_IGQILogger#properties) property of the logger. For example:
+
+```csharp
+  public OnInitOutputArgs OnInit(OnInitInputArgs args)
+  {
+    _logger = args.Logger;
+    _logger.MinimumLogLevel = GQILogLevel.Debug;
+    ...
+  }
+```
+
+***
+
 ## Example
 
 The following example showcases a custom operator that logs every cell value of a specified column.
