@@ -60,7 +60,7 @@ From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, when you change the minimum
 
 ### Changing the minimum log level
 
-Below, you can find how to change the log level for the GQI logic itself. In order to change the minimum log level for GQI extensions, see [GQI extension logging](xref:GQI_Extensions_Logging#changing-the-minimum-log-level).
+Below, you can find how to change the log level for the GQI logic itself. For GQI in SLHelper, this also sets the default minimum log level for GQI extensions. See [GQI extension logging](xref:GQI_Extensions_Logging#changing-the-minimum-log-level) for more details on how to change the minimum log level for extensions.
 
 #### [GQI DxM](#tab/gqi-dxm)
 

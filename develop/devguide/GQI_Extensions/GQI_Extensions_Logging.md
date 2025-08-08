@@ -110,38 +110,56 @@ The minimum log level determines which log entries are included in the log files
 
 ### [GQI DxM](#tab/gqi-dxm)
 
-The minimum log level is determined by a combination of:
+The minimum log level is determined by the highest level of:
 
-- The global [GQI extension settings](xref:GQI_Logging#changing-the-minimum-log-level).
-- The [MinimumLogLevel](xref:GQI_IGQILogger#properties) property of the extension instance.
+- The **global** minimum log level that applies to all GQI extensions.
+  This can be configured in the [application settings](xref:GQI_DxM#configuration) using the `MinimumLogLevel` property. For example:
 
-By default, both of these are set to the `Information` log level.
-
-> [!NOTE]
-> The effective minimum log level will be the highest of these two. For example, if the minimum log level in the global settings is set to `Warning`, and the minimum log level on the extension instance is set to `Debug`, then only log entries with level `Warning` or higher will be logged.
-
-The global minimum log level for GQI extensions can be configured in the [application settings](xref:GQI_DxM#configuration). For example:
-
-```json
-{
-  "GQIOptions": {
-    "Extensions": {
-      "Logging": {
-        "MinimumLogLevel": "Debug"
+  ```json
+  {
+    "GQIOptions": {
+      "Extensions": {
+        "Logging": {
+          "MinimumLogLevel": "Debug"
+        }
       }
     }
   }
-}
-```
+  ```
+
+  The default level is `Information`.
+
+- The **instance-specific** minimum log level.
+  This can be configured at runtime in the extension implementation using the [MinimumLogLevel](xref:GQI_IGQILogger#properties) property of the logger. For example:
+
+  ```csharp
+  public OnInitOutputArgs OnInit(OnInitInputArgs args)
+  {
+    _logger = args.Logger;
+    _logger.MinimumLogLevel = GQILogLevel.Debug;
+    ...
+  }
+  ```
+
+  The default level is `Information`.
+
+> [!TIP]
+> To get log entries at the `Debug` level, set both the global and instance-specific minimum log level to `Debug` or lower. If either is higher (e.g. `Information`), you will only get log entries for that level and above.
 
 ### [GQI in SLHelper](#tab/gqi-slhelper)
 
-The minimum log level is determined by a combination of:
+The **default** minimum log level for extensions is determined by the global minimum log level for GQI. This can be configured using the `serilog:minimum-level` key in the [application settings](xref:GQI_Logging#changing-the-minimum-log-level). The default level is `Information`.
 
-- The global [GQI log settings](xref:GQI_Logging#changing-the-minimum-log-level).
-- The [MinimumLogLevel](xref:GQI_IGQILogger#properties) property of the extension instance.
+You can overwrite the default minimum log level at runtime for each individual extension instance by modifying the [MinimumLogLevel](xref:GQI_IGQILogger#properties) property of the logger. For example:
 
-By default, the global minimum log level is set to the `Information` log level. You can dynamically overwrite this global minimum log level for each individual extension instance by modifying the [MinimumLogLevel](xref:GQI_IGQILogger#properties) property.
+```csharp
+  public OnInitOutputArgs OnInit(OnInitInputArgs args)
+  {
+    _logger = args.Logger;
+    _logger.MinimumLogLevel = GQILogLevel.Debug;
+    ...
+  }
+```
 
 ***
 
