@@ -70,7 +70,7 @@ This JSON object has to have the following structure:
   ```
 
   > [!NOTE]
-  > You can find the ID of each component in the lower right corner of the component while in edit mode.
+  > You can find the ID of each component in the lower right corner of the component while in edit mode. However, if a custom configuration name has been set for the component, the ID will not be displayed.
 
 ### URL-encoded equivalents
 

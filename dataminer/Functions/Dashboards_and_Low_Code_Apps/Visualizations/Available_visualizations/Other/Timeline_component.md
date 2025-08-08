@@ -38,7 +38,7 @@ This component allows you to visualize and manage bookings, events, and other ti
 
    1. To make sure users can see which group is selected, you can add a table component displaying the selected group:
 
-      1. Go to *Components* > *Timeline #* > *Selected groups* > *Tables* in the *Data* pane, and drag it onto an empty section of the dashboard or low-code app page. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, use *Feeds > Timeline # > Selected groups > Query rows* in the *Data* pane instead.
+      1. Go to *Components* > *Timeline* > *Selected groups* > *Tables* in the *Data* pane, and drag it onto an empty section of the dashboard or low-code app page. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, use *Feeds > Timeline > Selected groups > Query rows* in the *Data* pane instead.
   
       1. Hover the mouse pointer over the component and click the ![visualization](~/dataminer/images/DashboardsX_visualizations00095.png) icon.
 
@@ -46,7 +46,7 @@ This component allows you to visualize and manage bookings, events, and other ti
 
    1. To make sure users can see which item is selected, you can add a table component displaying the selected item:
 
-      1. Go to *Components* > *Timeline #* > *Selected items* > *Tables* in the *Data* pane, and drag it onto an empty section of the dashboard or low-code app page. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, use *Feeds > Timeline # > Selected items > Query rows* in the *Data* pane instead.
+      1. Go to *Components* > *Timeline* > *Selected items* > *Tables* in the *Data* pane, and drag it onto an empty section of the dashboard or low-code app page. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, use *Feeds > Timeline > Selected items > Query rows* in the *Data* pane instead.
 
       1. Hover the mouse pointer over the component and click the ![visualization](~/dataminer/images/DashboardsX_visualizations00095.png) icon.
 
@@ -84,7 +84,7 @@ This component allows you to visualize and manage bookings, events, and other ti
      > [!NOTE]
      > To add a [time range component](xref:DashboardTimeRange) to the dashboard or low-code app that displays the time range configured for the timeline component<!--RN 33287-->:
      >
-     > 1. Select *Timeline # > Viewport > Timespans* in the *Components* section of the *Data* pane. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12, this data source can be found in the *Feeds* section of the *Data* pane.
+     > 1. Select *Timeline > Viewport > Timespans* in the *Components* section of the *Data* pane. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12, this data source can be found in the *Feeds* section of the *Data* pane.
      > 1. Drag it onto an empty section of the dashboard or low-code app page.
      >
      > When you manually adjust the time range by zooming in or out, or by moving across the timeline component, the time range displayed in the time range component will automatically be adjusted.
@@ -176,7 +176,7 @@ This component allows you to visualize and manage bookings, events, and other ti
 
   - If the number of items exceeds the size of the component, a scrollbar appears when you hover over the component, allowing you to **navigate up or down** through the items.
 
-- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select an item in the timeline**, it will by default be highlighted with a blue border and a light-blue background. This can for instance be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Timeline #* > *Selected groups* / *Selected time ranges*) is used in a linked component, clearly indicating which data is driving the content in the linked component.
+- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select an item in the timeline**, it will by default be highlighted with a blue border and a light-blue background. This can for instance be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Timeline* > *Selected groups* / *Selected time ranges*) is used in a linked component, clearly indicating which data is driving the content in the linked component.
 
 ## Configuring events and actions
 
