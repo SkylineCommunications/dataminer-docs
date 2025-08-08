@@ -81,7 +81,7 @@ Your text input should look like this:
 
    !["Link to feed" icon in DataMiner 10.4.1](~/dataminer/images/Dashboards_Tutorial_Controls_Feeds_Query_Link.jpg)
 
-   Clicking the icon opens the *Link to feed* dialog (or *Link to data* in recent DataMiner versions), which will ask for a specific feed or data, the type, and a property.
+   Clicking the icon opens the *Link to* dialog, which will ask for a specific feed or data, the type, and a property.
 
 1. Specify the necessary info in the dialog:
 

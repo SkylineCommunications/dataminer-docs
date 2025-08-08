@@ -102,7 +102,7 @@ To use a *Filter* operator in a GQI query:
 
 1. Choose the filter method you want to use
 
-1. Under *Value*, click the *Link to data* icon and select a data source from the dropdown list.
+1. Under *Value*, click the link icon and select a data source from the dropdown list.
 
 1. Set *Empty data shows* to `everything`.
 
