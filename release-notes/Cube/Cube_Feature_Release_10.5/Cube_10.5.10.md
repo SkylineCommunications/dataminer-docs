@@ -36,4 +36,8 @@ A number of security enhancements have been made.
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### No expander shown for General Parameters pages on element card [ID 43480]
+
+<!-- 41655: MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+On an element card, it could occur that no expander was shown to open the pages under *General Parameters*, so that you had to double-click to see those instead. The expander will now be shown again.
