@@ -22,7 +22,9 @@ This object currently contains settings to change the default location where att
 
 For example: `\\CompanyServer\DomAttachments`
 
-Contains the UNC path to the network share. It needs to start with `\\` and cannot contain any characters that are illegal for a path (e.g. "<") or strings that allow directory traversal (e.g. "../"). When the path is left empty, attachments are saved to the `C:\Skyline DataMiner\Documents` folder; this is the default behavior.
+Contains the UNC path to the network share. It needs to start with `\\` and cannot contain any characters that are illegal for a path (e.g. "<") or strings that allow directory traversal (e.g. "../").
+
+When the path is left empty, attachments are saved to the `C:\Skyline DataMiner\Documents` folder. This is the default behavior.
 
 Can only be used in combination with [CredentialId](#credentialid).
 
