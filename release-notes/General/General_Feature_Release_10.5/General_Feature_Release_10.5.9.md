@@ -131,6 +131,112 @@ The logging of a DOM manager will now also contain a line indicating the start o
 2025/07/02 15:05:11.110|SLNet.exe|HandleStatusTransitionRequest|INF|3|269|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Handling status transition with ID 'new_to_closed' for instance with ID '1ff720a3-0aa2-4548-8b51-d8b975e19ea4'.
 ```
 
+#### Service & Resource Management: Support for capacity ranges [ID 43335]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Resource capacity ranges are now supported. To that end, profile parameters can now be of type "range".
+
+A resource can have one capacity range per profile parameter. This range can be either fully booked or partially booked.
+
+- If a range is partially booked, other bookings can book the unbooked part of the range as long as the bookings do not overlap.
+- The same range can be booked by two overlapping bookings on condition that the same reference string is used and that the range is identical in both bookings. `GetEligibleResources` has been updated to take this into account.
+
+##### Examples
+
+Scenario: A Resource has a capacity range parameter with a range from 100 to 200.
+
+Example 1:
+
+- If a booking books the entire range without a reference string, no other overlapping bookings can book that resource while requesting that same capacity range.
+- `GetEligibleResources` will not return that resource if asked for that capacity range with an overlapping time range.
+
+Example 2:
+
+- If a booking books the range from 100 to 110, another booking can book that range from 110 to 200, etc.
+- `GetEligibleResources` will return that resource, specifying the available range from 110 to 200.
+
+Example 3:
+
+- If a booking books the range from 100 to 110 with reference string "Example 3", another booking can book the same range from 100 to 110 if it uses the same "Example 3" reference.
+- `GetEligibleResources` wil return the entire range if "Example 3" is provided as reference.
+
+##### Creating a range parameter
+
+This is how you can create a range parameter.
+
+```csharp
+var rangeCapacityParameter= new ProfileParameter
+{
+  ID = Guid.NewGuid(),
+  Categories = ProfileParameterCategory.Capacity,
+  Name = "Range Parameter",
+  Type = ProfileParameter.ParameterType.Range,
+};
+profileHelper.ProfileParameters.Create(rangeCapacityParameter);
+```
+
+##### Creating a resource with a capacity range
+
+This is how you can add range 100 to 1000 to a resource.
+
+```csharp
+var capacities = new List<MultiResourceCapacity>
+{
+  new MultiResourceCapacity
+  {
+    CapacityProfileID = rangeCapacityParameter.ID,
+    Value = new CapacityParameterValue(100, 1000),
+  }
+};
+
+var resource = new Resource(Guid.NewGuid())
+{
+  Name = "Resource",
+  Mode = ResourceMode.Available,
+  Capacities = capacities,
+  MaxConcurrency = 10
+};
+
+resourceManager.AddOrUpdateResources(resource);
+```
+
+##### Booking a range
+
+This is how you can book the range from 100 to 150 of a specified resource.
+
+```csharp
+var resourceUsage = new ResourceUsageDefinition(resource.ID)
+{
+  RequiredCapacities = new List<MultiResourceCapacityUsage>
+  {
+    new MultiResourceCapacityUsage
+    {
+      CapacityProfileID = rangeCapacityParameter.ID,
+      RangeStart = 100,
+      DecimalQuantity = 50
+    }
+  }
+};
+
+booking.ResourcesInReservationInstance.Add(resourceUsage);
+```
+
+##### Checking which resources have a specific range available
+
+This is how you can check which resources have a specific range available.
+
+```csharp
+var requiredCapacities = new List<MultiResourceCapacityUsage>()
+{
+  new MultiResourceCapacityUsage(rangeCapacityParameter, 100, 50)
+};
+
+var requiredCapabilities = new List<ResourceCapabilityUsage>();
+
+result = resourceManager.GetEligibleResourcesWithUsageInfo(now, now.AddHours(1), requiredCapacities, requiredCapabilities);
+```
+
 #### Trap forwarding: Traps can now be forwarded to target elements of which a specific hostname was configured in the port settings [ID 43347]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
@@ -351,6 +457,18 @@ Up to now, it was not possible to change the display name of an enum entry when 
 
 This limitation has now been removed. From now on, it will be allowed to update the display name of an enum entry, even if the enum is being used by DOM instances.
 
+#### Improved logging in case STaaS system is not registered [ID 43455]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+To allow easier troubleshooting, logging has now been improved in case a DataMiner System using STaaS is not correctly registered on dataminer.services.
+
+#### Exception when RAD (sub)group is added with anomaly threshold of 0 [ID 43459]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+When a relational anomaly group or subgroup is added with the AddRADParameterGroupMessage or AddRADSubgroupMessage with anomaly threshold set to 0, an exception will now be thrown. Previously, the exception for this invalid configuration was silently ignored and the anomaly threshold was set to the default value of 3.0.
+
 ### Fixes
 
 #### SLManagedScripting: The same dependency would be loaded multiple times by different connectors [ID 42779]
@@ -358,12 +476,6 @@ This limitation has now been removed. From now on, it will be allowed to update 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In some cases, the same dependency would be loaded multiple times by different connectors. From now on, if multiple connectors attempt to load the same dependency at the same time, it will only be loaded once.
-
-#### DataMiner would fail to create the necessary Windows users [ID 42819]
-
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
-
-When, for example, a new DataMiner Agent had been added to the DataMiner System, since DataMiner 10.4.0 [CU4]/10.4.7, DataMiner would fail to create the necessary Windows users.
 
 #### Problem when a connector had been modified on a system running multiple SLScripting processes [ID 42877]
 
@@ -513,12 +625,6 @@ In some cases, a run-time error could be thrown when a DVE child element was del
 
 When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
 
-#### Problem when loading initial parameter data for remote elements [ID 43339]
-
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
-
-In some cases, client applications like DataMiner Cube would fail to load initial parameter data for remote elements.
-
 #### Swarming: An element being swarmed would briefly run on the old DMA as well as on the new DMA [ID 43345]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
@@ -548,6 +654,12 @@ From now on, if a DOM definition field does not have a default value defined, al
 <!-- Not added to MR 10.6.0 -->
 
 After an element had been swarmed, in some cases, that element would incorrectly be stuck in the Swarming state.
+
+#### Swarming: Synchronization issues caused by SLDMS accepting outdated notifications [ID 43373]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+In systems where swarming was enabled, it could occur that SLDMS accepted outdated notifications about element changes, which could lead to synchronization issues between different SLDMS instances, such as race conditions and missing information.
 
 #### SLAnalytics: Problem when grouping suggestion events generated after detecting a relational anomaly or a multivariate pattern [ID 43379]
 
@@ -598,3 +710,15 @@ When a linked pattern was created on elements hosted on different DataMiner Agen
 <!-- Not added to MR 10.6.0 -->
 
 After an element had been swarmed, in some rare cases, the hosting agent cache in SLDataMiner could get out of sync.
+
+#### SLAnalytics - Automatic incident tracking: Problem due to an incorrect internal state [ID 43451]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, an incorrect internal state in the automatic incident tracking feature could cause the SLAnalytics process to stop working.
+
+#### Memory issues caused by file offloads on a STaaS system [ID 43471]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+When a system using STaaS switched back from file storage to database storage after it had not been able to reach the database for some time, this could cause too much data to be pushed at the same time, causing memory issues on the DMA.

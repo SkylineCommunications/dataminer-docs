@@ -108,6 +108,12 @@ Example:
 https://myDMA/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true&fitMode=center
 ```
 
+#### Improved logging in case STaaS system is not registered [ID 43455]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+To allow easier troubleshooting, logging has now been improved in case a DataMiner System using STaaS is not correctly registered on dataminer.services.
+
 ### Fixes
 
 #### SLManagedScripting: The same dependency would be loaded multiple times by different connectors [ID 42779]
@@ -115,12 +121,6 @@ https://myDMA/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/vi
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In some cases, the same dependency would be loaded multiple times by different connectors. From now on, if multiple connectors attempt to load the same dependency at the same time, it will only be loaded once.
-
-#### DataMiner would fail to create the necessary Windows users [ID 42819]
-
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
-
-When, for example, a new DataMiner Agent had been added to the DataMiner System, since DataMiner 10.4.0 [CU4]/10.4.7, DataMiner would fail to create the necessary Windows users.
 
 #### Problem when a connector had been modified on a system running multiple SLScripting processes [ID 42877]
 
@@ -263,12 +263,6 @@ In some cases, a run-time error could be thrown when a DVE child element was del
 
 When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
 
-#### Problem when loading initial parameter data for remote elements [ID 43339]
-
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
-
-In some cases, client applications like DataMiner Cube would fail to load initial parameter data for remote elements.
-
 #### StorageModule DcM would fail to read an element XML file [ID 43350]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -284,6 +278,12 @@ From now on, it will try up to three times to read an element XML file that is b
 When a DOM definition field does not have a default value defined, by default, no value should be displayed. However, up to now, when the default time zone had been changed in the *ClientSettings.json* file, fields of type datetime would incorrectly contain the value "01/01/1970 - DefaultTimezone".
 
 From now on, if a DOM definition field does not have a default value defined, all fields of that type will be empty when displayed on a form.
+
+#### Swarming: Synchronization issues caused by SLDMS accepting outdated notifications [ID 43373]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+In systems where swarming was enabled, it could occur that SLDMS accepted outdated notifications about element changes, which could lead to synchronization issues between different SLDMS instances, such as race conditions and missing information.
 
 #### Failover: DMS call DMS_VERIFY_CLIENT_COOKIE would incorrectly be sent to the offline agent [ID 43397]
 
@@ -318,3 +318,15 @@ In large DataMiner Systems, in some cases, an issue could occur when the *Cluste
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
 When a linked pattern was created on elements hosted on different DataMiner Agents, in some cases, the `getPatternMatchMessage` would not return the correct number of streaming matches.
+
+#### SLAnalytics - Automatic incident tracking: Problem due to an incorrect internal state [ID 43451]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, an incorrect internal state in the automatic incident tracking feature could cause the SLAnalytics process to stop working.
+
+#### Memory issues caused by file offloads on a STaaS system [ID 43471]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+When a system using STaaS switched back from file storage to database storage after it had not been able to reach the database for some time, this could cause too much data to be pushed at the same time, causing memory issues on the DMA.

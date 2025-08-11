@@ -26,8 +26,27 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### GQI DxM: Improved performance when handling extensions [ID 43479]
+
+<!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+An enhancement has been implemented to the way the GQI DxM deals with extensions. This will improve performance and also prevent possible performance issues in case a large number of active GQI extension libraries are used, for example when many extension libraries are activated by the Copilot DxM.
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### GQI DxM: MessageBroker/SLNet not reconnected immediately after app settings change [ID 43386]
+
+<!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When the app settings for the GQI DxM are modified, the MessageBroker and SLNet connection of the DxM will now be restored immediately. Previously, the reconnect only happened either after functionality attempted to access the connection or when the automatic reconnection was triggered, which happens once per minute. This will prevent the following possible issues that could previously occur:
+
+- When GQI DxM functionality attempted to use the MessageBroker connection while it was disconnected, a deadlock situation could occur that blocked MessageBroker subscriptions.
+- When you changed the GQI app settings while a reconnect was already progress, the connection could use a combination of old and new settings.
+
+#### Dashboards app: PDFs would fail to get generated when a browser tab was closed [ID 43449] [ID 43475]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 - note that 43475 reverts the RN in 10.5.9, and it was then added again in 10.5.10 without a separate record -->
+
+Each open browser tab has its own WebSocket channel. When such a channel is closed, the Web API checks whether certain resources need to be cleaned up.
+
+Up to now, when a single channel was closed, all temporary PDF files would incorrectly be removed for all connections. As a result, if any PDF was being generated when a channel was closed, that generation would fail.

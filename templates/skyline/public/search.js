@@ -8,6 +8,30 @@ function initSearch() {
 
   createSearchResultsNewHtml();
   initEventHandlersCloseOpenSearch();
+  tryHandleURL();
+
+  function tryHandleURL() {
+    const searchQuery = new URLSearchParams(window.location.search)?.get('search') ?? '';
+    if (!searchQuery)
+      return;
+
+    const words = new Set(searchQuery
+      .split('/')
+      .slice(-1)
+      .map(part => part.replace(/\.[^/.]+$/, '').replace(/[_\-]/g, ' ').replace(/([A-Z][a-z])/g, ' $1'))
+      .filter(Boolean)
+      .join(' ')
+      .toLowerCase()
+      .split(/\s+/));
+
+    if (!words.size)
+      return;
+
+    const query = Array.from(words).join(' ');
+    showSearch(true);
+    document.getElementById("search-input").value = query;
+    doGetHttpRequest(query);
+  }
 
   function debounce(func, wait, immediate) {
     var timeout;

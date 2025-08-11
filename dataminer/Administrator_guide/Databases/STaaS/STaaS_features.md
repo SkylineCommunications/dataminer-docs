@@ -47,9 +47,9 @@ It is not yet possible to configure time-to-live (TTL) values for STaaS. In the 
 | Data type                | TTL          |
 |--------------------------|:------------:|
 | Real-time trending       | 7 days       |
-| Average trending (short) | 3 months     |
-| Average trending (medium)| 2 years      |
-| Average trending (long)  | 10 years     |
+| Average trending (short – default 5 min.) | 3 months     |
+| Average trending (medium – default 1 hour)| 2 years      |
+| Average trending (long – default 2 hours)  | 10 years     |
 | State changes            | 5 years      |
 | Spectrum traces          | 1 year       |
 | Alarm events             | 1 year       |
@@ -100,6 +100,6 @@ In addition, the following **other limitations** currently apply:
 
   - The [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement) tag is not supported.
 
-  - [Indexed logger tables](xref:AdvancedLoggerTablesImplementation#indexed-logger-tables) can be created and read from the database, but advanced search queries with GQI are not supported.
+  - [Indexed logger tables](xref:AdvancedLoggerTablesImplementation#indexed-logger-tables) can be created and read from the database, but search queries with GQI are not supported.
 
   - [DirectConnection logger tables](xref:AdvancedLoggerTablesDefiningDirectConnectionTable) are not supported.

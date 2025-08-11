@@ -14,7 +14,7 @@ DataMiner 10.5.6 includes improvements to the Resource Manager caching, introduc
 
 ## Fix
 
-No fix is available yet.<!--43295-->
+Install DataMiner 10.5.8/10.6.0 or higher. <!--RN 43295-->
 
 ## Description
 

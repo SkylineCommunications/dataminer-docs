@@ -395,6 +395,18 @@ Up to now, it was not possible to change the display name of an enum entry when 
 
 This limitation has now been removed. From now on, it will be allowed to update the display name of an enum entry, even if the enum is being used by DOM instances.
 
+#### 'Webpages\Public' folder now synced between DataMiner Agents [ID 43458]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+The folder `C:\Skyline DataMiner\Webpages\Public\` will now be synced between DataMiner Agents in a cluster. As a consequence, files that are installed in this folder can now also be included in the companion files of a DataMiner app package.
+
+#### Exception when RAD (sub)group is added with anomaly threshold of 0 [ID 43459]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+When a relational anomaly group or subgroup is added with the AddRADParameterGroupMessage or AddRADSubgroupMessage with anomaly threshold set to 0, an exception will now be thrown. Previously, the exception for this invalid configuration was silently ignored and the anomaly threshold was set to the default value of 3.0.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
@@ -452,3 +464,9 @@ At startup, up to now, the ModelHost DxM would stop working when it failed to re
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
 In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.
+
+#### Slow handling of concurrent requests to retrieve or update bookings [ID 43450]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+When a lot of concurrent requests had to be processed by the Repository API in the background, e.g. to retrieve or update bookings, this could cause thread starvation in SLDataGateway, causing these requests to be handled much more slowly than usual.
