@@ -45,7 +45,7 @@ The following `Reasons` can be mentioned for this type of error:
 | Reason | Description |
 |--|--|
 | InvalidCredentialPermissions | The user does not have permission to the credential referenced in [DomInstanceNetworkAttachmentSettings](xref:DOM_DomInstanceNetworkAttachmentSettings), the credential is not of type `UserNameAndPasswordCredential`, or the referenced credential does not exist. |
-| InvalidNetworkSharePath | The NetworkSharePath in [DomInstanceNetworkAttachmentSettings](xref:DOM_DomInstanceNetworkAttachmentSettings) is invalid, a network share path needs to start with and should not contain illegal characters. Both the `CredentialId` and the `NetworkSharePath` need to be filled in. `InvalidNetworkSharePath` contains the invalid network share path |
+| InvalidNetworkSharePath | The `NetworkSharePath` in [DomInstanceNetworkAttachmentSettings](xref:DOM_DomInstanceNetworkAttachmentSettings) is invalid. A network share path needs to start with `\\` and must not contain illegal characters. Both the `CredentialId` and the `NetworkSharePath` need to be filled in. `InvalidNetworkSharePath` contains the invalid network share path. |
 
 ## Available settings
 
