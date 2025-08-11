@@ -24,7 +24,7 @@ When you double-click any source or destination, you will be redirected to the *
 
 ![Source Summary](~/solutions/images/techex-txcore-source.png)
 
-## End to end view
+## End-to-end view
 
 What sets this app apart is the end-to-end view. DataMiner automatically calculates the connectivity of each service across multiple TX Edge instances, allowing you to track your streams from their source all the way to their final destination. Controls have also been incorporated to stop and resume streams or trigger failover.
 
