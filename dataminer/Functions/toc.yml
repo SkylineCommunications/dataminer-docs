@@ -1299,9 +1299,7 @@ items:
       - name: API events
         topicUid: UD_APIs_Events
       - name: Troubleshooting
-        items:
-          - name: Troubleshooting User-Defined APIs
-            topicUid: UD_APIs_Troubleshooting
+        topicUid: UD_APIs_Troubleshooting
       - name: Tutorials
         topicUid: UD_APIs_Tutorials
         items:
