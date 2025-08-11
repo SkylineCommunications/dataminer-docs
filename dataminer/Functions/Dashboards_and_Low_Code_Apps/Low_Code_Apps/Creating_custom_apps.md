@@ -19,14 +19,14 @@ uid: Creating_custom_apps
 
      - Otherwise, select the tab where you want the app to appear, and click *Create app*. To add the app without assigning it to a specific section, open the *All apps* tab before creating the app.
 
-     > [!NOTE]
-     > To organize your app in a newly created section, see [Organizing the apps on the landing page in sections](xref:owCodeApps_organizing_landing_page).
-
    - Prior to DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9:
 
      - If no apps exist yet, click *Create a new app*.
 
      - Otherwise, hover the mouse pointer over the *Other apps* section and click the "+" button next to *Other apps*.
+
+   > [!NOTE]
+   > To organize your app in a newly created section, see [Organizing the apps on the landing page in sections](xref:owCodeApps_organizing_landing_page).
 
 1. Specify the name of your new app in the header bar, instead of the default name "New application".
 
