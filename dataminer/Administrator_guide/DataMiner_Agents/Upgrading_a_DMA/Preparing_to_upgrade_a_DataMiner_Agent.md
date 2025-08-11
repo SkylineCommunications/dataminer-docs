@@ -143,6 +143,8 @@ When you upload a DataMiner upgrade, several prerequisite checks are automatical
 
 The following prerequisite checks are currently available:
 
+- [Verify gRPC Connection](xref:VerifyGRPCConnectiondmupgrade): Verifies whether all DataMiner Agents in the cluster can communicate via gRPC over HTTPS port 443 and none of the Agents currently have a non-default network configuration.
+
 - [Verify .NET Version](xref:Verify_ASP_Net_Version): Verifies whether the Microsoft ASP.NET 8.0 Hosting Bundle is installed. From DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 37969-->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_Version): Verifies whether the minimum required version is installed for all DxMs in the system. From DataMiner 10.2.0 [CU6]/10.2.8 onwards, this prerequisite is available by default and runs automatically when you upgrade.

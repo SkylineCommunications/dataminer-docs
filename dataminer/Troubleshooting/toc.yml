@@ -250,6 +250,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Upgrade fails because of VerifyGRPCConnection.dll prerequisite
+            topicUid: KI_Upgrade_fails_VerifyGRPCConnection_prerequisite
           - name: Contents of Elements folder deleted from offline Agents in Failover cluster
             topicUid: KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster
           - name: DataMiner startup issue with one or more DcMs not running
@@ -286,8 +288,6 @@ items:
             topicUid: KI_NATS_not_starting_special_chars
           - name: Upgrade fails because of VerifyClusterPort.dll prerequisite
             topicUid: KI_Upgrade_fails_VerifyClusterPorts_prerequisite
-          - name: Upgrade fails because of VerifyGRPCConnection.dll prerequisite
-            topicUid: KI_Upgrade_fails_VerifyGRPCConnection_prerequisite
           - name: DataMiner Cube freeze on startup
             topicUid: KI_DataMiner_Cube_freeze_on_startup
           - name: Migration of Ticketing data from Cassandra to Elasticsearch fails
