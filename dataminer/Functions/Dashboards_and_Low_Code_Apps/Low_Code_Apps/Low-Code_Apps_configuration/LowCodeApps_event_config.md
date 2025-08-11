@@ -61,7 +61,7 @@ To use this output as data:
 
 1. Set *Type* to `Script outputs`.
 
-1. Select the desired property name from the *Property* dropdown list.
+1. Enter the desired property name.
 
 1. Select *Link*.
 
