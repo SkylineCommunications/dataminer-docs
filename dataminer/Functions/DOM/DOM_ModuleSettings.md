@@ -34,17 +34,17 @@ When something goes wrong while the `ModuleSettings` are saved, the `TraceData` 
 |--|--|
 | InvalidModuleId | The module ID does not meet the requirements. The *InvalidModuleId* property contains the module ID that is invalid. The *ModuleIdValidationResult* contains the exact reason why the ID was deemed invalid. |
 | InvalidPermissions | The user does not have permission to do this action. |
-| InvalidDomManagerSettings | Some validation step failed for the DOM manager related settings. Refer to [DomManagerSettingsErrorData](xref:DOM_ModuleSettings#dommanagersettingserrordata) for extra details. |
+| InvalidDomManagerSettings | A validation step failed for the settings related to the DOM manager. Refer to [DomManagerSettingsErrorData](xref:DOM_ModuleSettings#dommanagersettingserrordata) for extra details. |
 
 ### DomManagerSettingsErrorData
 
-When some of the provided settings are incorrect when saving the `ModuleSettings`, the `TraceData` will contain a `ModuleSettingsManagerErrorData` error with `ErrorReason` set to `InvalidDomManagerSettings`. In `DomManagerSettingsErrorData` more details will be available.
+When some of the provided settings are incorrect when the `ModuleSettings` are saved, the `TraceData` will contain a `ModuleSettingsManagerErrorData` error with `ErrorReason` set to `InvalidDomManagerSettings`. In `DomManagerSettingsErrorData`, more details will be available.
 
-The following `Reasons` could cause this type of error:
+The following `Reasons` can be mentioned for this type of error:
 
 | Reason | Description |
 |--|--|
-| InvalidCredentialPermissions | The user does not have permission to the credential referenced in [DomInstanceNetworkAttachmentSettings](xref:DOM_DomInstanceNetworkAttachmentSettings), the credential is not of type `UserNameAndPasswordCredential` or the credential referenced does not exist. |
+| InvalidCredentialPermissions | The user does not have permission to the credential referenced in [DomInstanceNetworkAttachmentSettings](xref:DOM_DomInstanceNetworkAttachmentSettings), the credential is not of type `UserNameAndPasswordCredential`, or the referenced credential does not exist. |
 | InvalidNetworkSharePath | The NetworkSharePath in [DomInstanceNetworkAttachmentSettings](xref:DOM_DomInstanceNetworkAttachmentSettings) is invalid, a network share path needs to start with and should not contain illegal characters. Both the `CredentialId` and the `NetworkSharePath` need to be filled in. `InvalidNetworkSharePath` contains the invalid network share path |
 
 ## Available settings
