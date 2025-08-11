@@ -152,7 +152,7 @@ Additional configuration is possible in the URL:
 
 - From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43388-->, you can specify how the image in a video thumbnail should be displayed by adding the **fitMode** parameter to the URL. The possible values are:
 
-  - `fill`: The image will completely cover the container. It may crop parts of the image, but it ensures no empty space. *(default)*
+  - `fill`: The image will completely cover the container. It may crop parts of the image, but it ensures that there is no empty space. *(default)*
 
   - `fit`: The image will be fully visible inside the container while maintaining aspect ratio. There may be empty space if aspect ratios differ.
 
