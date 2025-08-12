@@ -665,7 +665,6 @@ items:
           - name: Dashboard URL options
             topicUid: Dashboard_URL_options
       - name: Creating and configuring dashboards
-        topicUid: Creating_and_configuring_dashboards1
         items:
           - name: Creating a new dashboard
             topicUid: Creating_a_new_dashboard
