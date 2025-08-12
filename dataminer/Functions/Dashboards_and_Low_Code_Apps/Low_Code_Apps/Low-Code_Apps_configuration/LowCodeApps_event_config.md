@@ -51,6 +51,23 @@ To configure an event to launch a script:
 > [!IMPORTANT]
 > From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!-- RN 39027 -->, linking a script parameter to empty data (or to an empty feed, prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->) will fill it with an empty array. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
 
+From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43222-->, the output of an Automation script can be used in the post actions of a *Launch a script* action. See [Configuring another action for the same event](#configuring-another-action-for-the-same-event).
+
+To use this output as data:
+
+1. If available, click the link icon in the action configuration.
+
+1. Navigate to the *Action* tab.
+
+1. Set *Type* to `Script outputs`.
+
+1. Enter the desired property name.
+
+1. Select *Link*.
+
+> [!NOTE]
+> If a referenced key does not exist in the output, an empty string is returned by default.
+
 ## Navigating to a URL
 
 To configure an event to navigate to a URL:
@@ -314,6 +331,12 @@ Available from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38548-->. To configu
 After you have configured an action, you can click *Upon completion* to configure another action that should occur as soon as the previous action is completed.
 
 Alternatively, you can configure another action that should happen at the same time with the *Add action* button in the lower right corner.
+
+From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43222-->, all actions are numbered hierarchically. For example:
+
+![Numbered hierarchically](~/dataminer/images/Actions_Numbered_Hierarchically.png)<br>*Actions configuration window in DataMiner 10.5.9*
+
+These numbers make it easier, for example, to reference actions when [linking Automation script output data](#launching-a-script).
 
 ## Removing an action
 
