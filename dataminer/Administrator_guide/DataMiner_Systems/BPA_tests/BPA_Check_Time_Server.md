@@ -2,82 +2,80 @@
 uid: BPA_Check_Time_Server
 ---
 
-# Check Time Server BPA
+# Check Time Server
 
-## Best Practice
+DataMiner relies on the server time to synchronize data. For this reason, the time of DataMiner Agents in a cluster must be synchronized using an NTP server.
 
-DataMiner relies on the server time to synchronize data.
-For this reason, the time of DataMiner Agents in a cluster must be synchronized using an NTP server.
 This test will check if the NTP server settings are configured correctly and all the DataMiner Agents use the same NTP server to get their time.
 
-## Meta data
+## Metadata
 
-* Name: Check Time Server
-* Description: "BPA test to check NTP server settings of all DMAs in a cluster."
-* Author: Skyline Communications
-* Default schedule: Every day
+- Name: Check Time Server
+- Description: BPA test to check NTP server settings of all DMAs in a cluster.
+- Author: Skyline Communications
+- Default schedule: Every day
 
 ## Results
 
 ### Success
 
-For all successful responses the detailed results will contain the NTP server per agent, e.g.:
+- For all successful responses, the detailed results will contain the NTP server per Agent, for example:
 
-"Agent {agentName} (id: {dma id}) uses time server '{NTP server name}'."
+  `Agent {agentName} (id: {dma id}) uses time server '{NTP server name}'.`
 
-1. The cluster only exists of one agent (this always succeeds):
+- In case the cluster only consists of one Agent (this always succeeds):
 
-"All agents in the cluster use the same NTP server ([timeserver]).""
+  `All agents in the cluster use the same NTP server ([timeserver]).`
 
-2. If all DataMiner Agents are configured correctly and use the same NTP server:
+- If all DataMiner Agents are configured correctly and use the same NTP server:
 
-"All DMAs use the same time server ([timeserver])."
-
+  `All DMAs use the same time server ([timeserver]).`
 
 ### Error
 
 For all errors:
-- The outcome is 'IssuesDetected'.
-- The impact is 'Synchronization of the DMS might be compromised'.
-- The CorrectiveAction is 'Make sure the NTP servers are correctly set up and synchronized'.
 
-1. An unexpected exception occurred while retrieving the NTP server details (no results at all):
+- The outcome is `IssuesDetected`.
+- The impact is `Synchronization of the DMS might be compromised`.
+- The corrective action is `Make sure the NTP servers are correctly set up and synchronized`.
 
-ResultMessage: "Test was not executed: not all agents in the cluster could be reached."
-Detailed results: "Invoking the check cluster-wide did not return a result."
+The following errors are possible:
 
-2. Not all agents returned a successful response:
+- An unexpected exception occurred while retrieving the NTP server details (no results at all):
 
-ResultMessage: "Test was not executed: not all agents in the cluster could be reached."
-Detailed results: 
-"Could not retrieve the information of the following agents: 
-- [Agent x]: [Error]
-...
-"
+  - Result message: `Test was not executed: not all agents in the cluster could be reached.`
+  - Detailed results: `Invoking the check cluster-wide did not return a result.`
 
-3. Not all NTP servers are reachable:
+- Not all Agents returned a successful response:
 
-ResultMessage: "Not all NTP servers are reachable.".
-Detailed results:
-"Agent {agentName} (id: {dma id}) uses NTP server '{NTP server name}'. The Stratum of this server is 0. Stratum 0 indicates the configured NTP server cannot distribute time."
-(one line for each agent)
+  - Result message: `Test was not executed: not all agents in the cluster could be reached.`
+  - Detailed results:
 
+    ```txt
+    Could not retrieve the information of the following agents: 
+    - [Agent x]: [Error]
+    ...
+    ```
 
-4. No DMA has an NTP server configured.
-ResultMessage: "No agent in the cluster has an NTP server configured."
-Detailed results:
-"Agent {agentName} (id: {dma id}) uses NTP server: 'None'"
+- Not all NTP servers are reachable:
 
+  - Result message: `Not all NTP servers are reachable.`.
+  - Detailed results: `Agent {agentName} (id: {dma id}) uses NTP server '{NTP server name}'. The Stratum of this server is 0. Stratum 0 indicates the configured NTP server cannot distribute time.` (one line for each Agent)
+
+- No DMA has an NTP server configured.
+
+  - Result message: `No agent in the cluster has an NTP server configured.`
+  - Detailed results: `Agent {agentName} (id: {dma id}) uses NTP server: 'None'`
 
 ### Not Executed
 
-These are the messages that can appear when the test fails to execute for unexpected reasons, and cannot provide a conclusive report because of this:
+When the test fails to execute for unexpected reasons and cannot provide a conclusive report because of this, the following message will be shown:
 
-* "Could not execute test (*[message]*)" (on unexpected exceptions). 
+`Could not execute test (*[message]*)`
 
-In the message above, the exception message is included (e.g. "Access Denied"). The test result details contain the full exception text, if available.
+In the message above, the exception message is included (e.g. `Access Denied`). The test result details contain the full exception text, if available.
 
 ## Limitations
 
-* This BPA test can only be run in a DataMiner cluster.
-* Offline failover agents are not checked.
+- This BPA test can only be run in a DataMiner cluster.
+- Offline Failover Agents are not checked.
