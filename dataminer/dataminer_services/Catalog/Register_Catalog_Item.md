@@ -1,5 +1,6 @@
 ---
 uid: Register_Catalog_Item
+keywords: catalog, registration, manifest, upload, publish
 ---
 
 # Registering a Catalog item
