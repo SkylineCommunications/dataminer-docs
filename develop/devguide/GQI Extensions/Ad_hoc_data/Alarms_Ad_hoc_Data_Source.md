@@ -2,9 +2,9 @@
 uid: Alarms_Ad_hoc_Data_Source
 ---
 
-# Fetching alarms in an ad hoc data source
+# Fetching alarms using Repository API
 
-When you want to do additional custom processing on alarms you can do so by using Repository API. This is an API with read access on alarms and with support for all sorts of filtering.
+When you want to do additional custom processing on alarms you can do so by using Repository API. This is an API with read access on alarms and with support for all sorts of filtering, sorting and limiting the amount of alarms fetched.
 
 ```csharp
 using System;
@@ -32,6 +32,18 @@ public class AlarmsDataSource : IGQIDataSource, IGQIOnInit, IGQIInputArguments, 
     private IDatabaseRepositoryRegistry _registry;
     private IAlarmRepository _repository;
     private IEnumerable<Alarm> _alarms;
+
+    private const int LIMIT = 1_000_000;
+    private const int TIMEOUT = 120_000;
+    private const int PAGE_SIZE = 10_000;
+
+    private static GQIColumn Severity = new GQIStringColumn("Severity");
+    private static GQIColumn Element = new GQIStringColumn("Element");
+    private static GQIColumn Parameter = new GQIStringColumn("Parameter");
+    private static GQIColumn Value = new GQIStringColumn("Value");
+    private static GQIColumn Time = new GQIDateTimeColumn("Time");
+    private static GQIColumn RootID = new GQIStringColumn("Root ID");
+    private static GQIColumn ID = new GQIStringColumn("ID");
 
     public OnInitOutputArgs OnInit(OnInitInputArgs args)
     {
@@ -61,13 +73,13 @@ public class AlarmsDataSource : IGQIDataSource, IGQIOnInit, IGQIInputArguments, 
     {
         return new GQIColumn[]
         {
-            new GQIStringColumn("Severity"),
-            new GQIStringColumn("Element"),
-            new GQIStringColumn("Parameter"),
-            new GQIStringColumn("Value"),
-            new GQIDateTimeColumn("Time"),
-            new GQIStringColumn("Root ID"),
-            new GQIStringColumn("ID"),
+            Severity,
+            Element,
+            Parameter,
+            Value,
+            Time,
+            RootID,
+            ID,
         };
     }
 
@@ -79,12 +91,12 @@ public class AlarmsDataSource : IGQIDataSource, IGQIOnInit, IGQIInputArguments, 
 
         var filter = CreateFilter();
 
-        var query = filter.Limit(1_000_000)
+        var query = filter.Limit(LIMIT)
             .OrderByDescending(AlarmExposers.TimeOfArrival);
 
         _alarms = _repository.CreateReadQuery(query)
-            .SetTimeout(120_000)
-            .SetPageSize(10_000)
+            .SetTimeout(TIMEOUT)
+            .SetPageSize(PAGE_SIZE)
             .Execute();
 
         return default;
@@ -92,8 +104,6 @@ public class AlarmsDataSource : IGQIDataSource, IGQIOnInit, IGQIInputArguments, 
 
     public GQIPage GetNextPage(GetNextPageInputArgs args)
     {
-        _logger.Debug($"Read next page.");
-
         var rows = _alarms.Take(1_000).Select(CreateRow).ToArray();
         return new GQIPage(rows)
         {

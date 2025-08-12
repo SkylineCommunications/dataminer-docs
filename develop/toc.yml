@@ -985,7 +985,7 @@ items:
                 topicUid: Forwarding_dummy_data_to_GQI
               - name: Scaling an ad hoc data source
                 topicUid: Scaling_Ad_hoc_Data_Source
-              - name: Fetching alarms in an ad hoc data source
+              - name: Fetching alarms using Repository API
                 topicUid: Alarms_Ad_hoc_Data_Source
           - name: Tutorials
             items:
