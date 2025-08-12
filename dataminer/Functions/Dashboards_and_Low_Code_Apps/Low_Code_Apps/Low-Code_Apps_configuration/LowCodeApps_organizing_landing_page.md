@@ -8,23 +8,29 @@ It is possible to organize the apps on the [DataMiner landing page](xref:Accessi
 
 ![Organizing apps](~/dataminer/images/Organizing_Apps.gif)<br>*DataMiner landing page in DataMiner 10.5.9*
 
-At present, it is only possible to create new sections by changing the configuration of the apps in JSON. However, from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, you can add new apps to existing sections directly from the DataMiner landing page.
+At present, it is only possible to [create new sections](#creating-a-new-app-under-an-existing-section) by changing the configuration of the apps in JSON. However, you can [add new apps to existing sections](#creating-a-new-app-under-an-existing-section) directly from the DataMiner landing page.
 
-From these versions onwards, the low-code apps that have been added to sections are displayed in separate category tabs, each with a quick filter box at the top.
+## Creating a new app under an existing section
 
-## Creating new apps under an existing section
+To create a new app in an existing section on the DataMiner landing page:
 
-Available from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->.
+- From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->:
 
-To add a new app under an existing section on the DataMiner landing page:
+  1. Open the tab in which you want the app to appear.
 
-1. Select the tab corresponding to the section where you want the app to appear.
+  1. In the top-right corner of the low-code apps section, click *Create app*.
 
-1. Click *Create app* in the top-right corner of the low-code apps section.
+     The app will be added to the selected section automatically.
 
-   The app will be placed in that section automatically.
+- In previous versions:
 
-## Adding apps to a new section
+  1. Hover over the title of the section where you want to add the app.
+
+  1. Click the "+" icon.
+
+     The app will be added to the selected section automatically.
+
+## Adding an app to a new section
 
 To add a low-code app to a new section that will appear on the DataMiner landing page, follow the procedure below:
 
