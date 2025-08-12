@@ -12,11 +12,11 @@ Before migrating from Gerrit to GitHub:
 
 - Make sure Git is installed.
 
-- Make sure SLC SE Repository Manager is installed.
+- Make sure SLC SE Repo Manager is installed.
 
 - Make sure that GitHub has a starter workflow available (see [SkylineCommunications/.github workflow-templates](https://github.com/SkylineCommunications/.github/tree/main/workflow-templates)) for the type of repository you are moving (connector, Automation script, install package, custom solution, etc.).
 
-- Use the SLC SE Repository Manager to check if the repository you are attempting to migrate has not already been migrated.
+- Use the SLC SE Repo Manager to check if the repository you are attempting to migrate has not already been migrated.
 
 ## Migration Steps
 
@@ -40,7 +40,7 @@ Follow these steps to migrate your repository from Gerrit to GitHub:
    git push -u origin2 --tags
    ```
 
-1. In the SLC SE Repository Manager, right-click your repository and select *Migration Info*.
+1. In the SLC SE Repo Manager, right-click your repository and select *Migration Info*.
 
 1. Fill in the *Migration Location* with your equivalent of `https://github.com/SkylineCommunications/<GitHubRepositoryName>`.
 

@@ -16,4 +16,4 @@ The most important of the tools for developers is **[DataMiner Integration Studi
 > [!NOTE]
 >
 > - For more information on other DataMiner tools, see [DataMiner tools](xref:DataMinerTools).
-> - For more information on other CI/CD-related activities (SLC SE Repository Manager, Git, Gerrit, Jenkins, GitHub, GitHub Actions workflows), refer to our [CI/CD documentation](xref:CICD).
+> - For more information on other CI/CD-related activities (SLC SE Repo Manager, Git, Gerrit, Jenkins, GitHub, GitHub Actions workflows), refer to our [CI/CD documentation](xref:CICD).

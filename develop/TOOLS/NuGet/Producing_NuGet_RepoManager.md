@@ -2,7 +2,7 @@
 uid: Producing_NuGet_RepoManager
 ---
 
-# Producing NuGet packages via SLC SE Repository Manager
+# Producing NuGet packages via SLC SE Repo Manager
 
 > [!IMPORTANT]
 > This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.

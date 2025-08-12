@@ -25,7 +25,7 @@ Currently, the pipeline consists of the following stages:
 
 ## Loading Jenkinsfile
 
-When a new Git repository is created using the SLC SE Repository Manager tool, the repository initially contains a .gitignore file and a Jenkinsfile. This Jenkinsfile in turn refers to another "master" Jenkins file. During this stage, the Jenkinsfile gets loaded.
+When a new Git repository is created using the SLC SE Repo Manager tool, the repository initially contains a .gitignore file and a Jenkinsfile. This Jenkinsfile in turn refers to another "master" Jenkins file. During this stage, the Jenkinsfile gets loaded.
 
 ## Declarative checkout from SCM
 

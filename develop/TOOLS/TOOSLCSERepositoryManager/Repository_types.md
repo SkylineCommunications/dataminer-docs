@@ -7,9 +7,9 @@ uid: Repository_types
 > [!IMPORTANT]
 > This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
 
-The SLC SE Repository Manager has different tabs for the different repository types:
+The SLC SE Repo Manager has different tabs for the different repository types:
 
-![SLC SE Repository Manager](~/develop/images/repoManagerRepoTypes.png)
+![SLC SE Repo Manager](~/develop/images/repoManagerRepoTypes.png)
 
 The following subsections provide more information about the different tabs.
 

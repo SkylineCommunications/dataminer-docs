@@ -17,9 +17,9 @@ Regarding protocol development:
 
 - [How do I start the development of a new range of an existing protocol?](#how-do-i-start-the-development-of-a-new-range-of-an-existing-protocol)
 
-- [I'm still busy developing but I want to push my work to the remote repository so I have a backup on Gerrit. How do I do this?](#im-still-busy-developing-but-i-want-to-push-my-work-to-the-remote-repository-so-i-have-a-backup-on-gerrit-how-do-i-do-this)
+- [I am still busy developing but I want to push my work to the remote repository so I have a backup on Gerrit. How do I do this?](#i-am-still-busy-developing-but-i-want-to-push-my-work-to-the-remote-repository-so-i-have-a-backup-on-gerrit-how-do-i-do-this)
 
-- [I'm still busy developing but I want to push my work to the remote repository to let the pipeline run. How do I this?](#im-still-busy-developing-but-i-want-to-push-my-work-to-the-remote-repository-to-let-the-pipeline-run-how-do-i-this)
+- [I am still busy developing but I want to push my work to the remote repository to let the pipeline run. How do I this?](#i-am-still-busy-developing-but-i-want-to-push-my-work-to-the-remote-repository-to-let-the-pipeline-run-how-do-i-this)
 
 - [Where do I provide the protocol development checklist?](#where-do-i-provide-the-protocol-development-checklist)
 
@@ -49,7 +49,7 @@ Regarding Gerrit code review:
 
 To start the development of a new protocol (version 1.0.0.1), perform the following steps:
 
-1. As a Skyline employee, open the SLC SE Repository Manager tool.
+1. As a Skyline employee, open the SLC SE Repo Manager tool.
 
 1. Click the *Create Repository* button. Provide the name of the vendor and data source and click the *Create* button.
 
@@ -57,11 +57,11 @@ To start the development of a new protocol (version 1.0.0.1), perform the follow
    > The name of the data source should start with the name of the vendor.
 
    ![](~/develop/images/SLCSERepoManager_CreateRepo.png)<br>
-   *SLC SE Repository Manager: Creating a repository*
+   *SLC SE Repo Manager: Creating a repository*
 
 1. In the confirmation box, click *Yes*.
 
-   The SLC SE Repository Manager tool will automatically clone the remote repository to your configured folder.
+   The SLC SE Repo Manager tool will automatically clone the remote repository to your configured folder.
 
 1. Create a new DataMiner protocol Visual Studio solution in the local repository folder.
 
@@ -99,14 +99,14 @@ To start the development of a new protocol (version 1.0.0.1), perform the follow
 1. Implement your work, performing as many commits as you want.
 
    > [!NOTE]
-   > Performing a commit only updates your local repository. In case you want to push your work in progress to Gerrit to have a backup on the server, see [I'm still busy developing but I want to push my work to the remote repository so I have a backup on Gerrit. How do I do this?](#im-still-busy-developing-but-i-want-to-push-my-work-to-the-remote-repository-so-i-have-a-backup-on-gerrit-how-do-i-do-this).
+   > Performing a commit only updates your local repository. In case you want to push your work in progress to Gerrit to have a backup on the server, see [I am still busy developing but I want to push my work to the remote repository so I have a backup on Gerrit. How do I do this?](#i-am-still-busy-developing-but-i-want-to-push-my-work-to-the-remote-repository-so-i-have-a-backup-on-gerrit-how-do-i-do-this).
 
 > [!TIP]
 > See also: Learning path "System Dev - CI/CD, git, Gerrit" on LinkedIn Learning, Section "Tutorial Protocol Development":  CI/CD HowTo - Start a new Protocol Development.
 
 ### How do I start the development of a new version in an existing range of an existing protocol?
 
-1. As a Skyline employee, open the SLC SE Repository Manager tool.
+1. As a Skyline employee, open the SLC SE Repo Manager tool.
 
 1. Navigate to the vendor in the tree control and verify whether your data source is already listed under that vendor.
 
@@ -115,11 +115,11 @@ To start the development of a new protocol (version 1.0.0.1), perform the follow
 1. If the data source you will work on was not yet listed, click the *Create Repository* button, specify the name of the vendor and data source and click *Create*.
 
    ![](~/develop/images/SLCSERepoManager_CreateRepoExisting.png)<br>
-   *SLC SE Repository Manager: Creating a repository*
+   *SLC SE Repo Manager: Creating a repository*
 
 1. A confirmation message will be displayed, stating that the protocol was found on SVN and asking if you want to convert this into a Git repository. Click *Yes* to confirm.
 
-   The SLC SE Repository Manager tool will automatically clone the repository.
+   The SLC SE Repo Manager tool will automatically clone the repository.
 
 1. Open the repository in SourceTree.
 
@@ -200,7 +200,7 @@ To push this to the remote Git repository so you have a backup on the server (wi
 ![](~/develop/images/SourceTree_PushToServer.png)<br>
 *Pushing work to the remote repository using SourceTree*
 
-Alternatively, you can choose to push your work into Gerrit as work in progress, so that it will not introduce a code review. You can do this in the SLC SE Repository Manager tool. Select the repository in the tree control and click the *Push* button, then select the desired range and click the *Push for Work in Progress* button.
+Alternatively, you can choose to push your work into Gerrit as work in progress, so that it will not introduce a code review. You can do this in the SLC SE Repo Manager tool. Select the repository in the tree control and click the *Push* button, then select the desired range and click the *Push for Work in Progress* button.
 
 > [!NOTE]
 > Be aware that you when you push for work in progress, your commits will be squashed into a single commit. In case this is not something you want, for example because you may want to return to some specific commit, then push your work the remote Git repository using SourceTree.
@@ -208,7 +208,7 @@ Alternatively, you can choose to push your work into Gerrit as work in progress,
 ![](~/develop/images/SLCSERepoManager_PushWIP.png)<br>
 *Pushing work into Gerrit as work in progress*
 
-### I'm still busy developing but I want to push my work to the remote repository to let the pipeline run. How do I this?
+### I am still busy developing but I want to push my work to the remote repository to let the pipeline run. How do I this?
 
 This means your development is still work in progress.
 
@@ -233,7 +233,7 @@ As a Skyline employee, include the protocol development checklist next to the pr
 
 As a Skyline employee, in Sourcetree, you can immediately push commits to a range branch in the remote Git repository.
 
-However, be aware that in general a code review phase is required and therefore you will typically push to Gerrit via the SLC SE Repository Manager tool. Only push immediately to Git if you are sure no code review is required for the items you will push, for example when you want to push the checklist.
+However, be aware that in general a code review phase is required and therefore you will typically push to Gerrit via the SLC SE Repo Manager tool. Only push immediately to Git if you are sure no code review is required for the items you will push, for example when you want to push the checklist.
 
 ### I finished development. How do I create a tag for the new version?
 
@@ -438,10 +438,10 @@ Then create a new development branch for your development and push it so other d
 
 This means you have some work committed and want this work to be reviewed.
 
-1. As a Skyline employee, open the SLC SE Repository Manager tool, select the protocol you want to push for review in the tree control and select the *Push Repository* button.
+1. As a Skyline employee, open the SLC SE Repo Manager tool, select the protocol you want to push for review in the tree control and select the *Push Repository* button.
 
    ![](~/develop/images/SLCSERepoManager_PushRepo.png)<br>
-   *Pushing a repository in SLC SE Repository Manager*
+   *Pushing a repository in SLC SE Repo Manager*
 
 1. Select the branch you will eventually merge your work into and click the *Push for Gerrit Review* button.
 
@@ -545,7 +545,7 @@ When someone has assigned a code review to you in Gerrit, you will receive an em
 1. Using the SLC SE Repository manager tool, send the new commit for code review.
 
    ![](~/develop/images/SLCSERepoManager_PushForReview2.png)<br>
-   *Sending a commit for code review in SLC SE Repository Manager*
+   *Sending a commit for code review in SLC SE Repo Manager*
 
    This will now create a new patch set for the reviewer to review in Gerrit.
 

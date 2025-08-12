@@ -9,7 +9,7 @@ uid: Creating_a_repository_for_an_install_package
 
 An install package is defined through a manifest XML file. This manifest provides information about the install package such as its name, version and content (e.g. protocols, Automation scripts, Visio files).
 
-On the *Packages* tab of the SLC SE Repository Manager, you can create a new repository for an install package.
+On the *Packages* tab of the SLC SE Repo Manager, you can create a new repository for an install package.
 
 ![](~/develop/images/TOOProtocolDevelopmentWithCICD00071.jpg)
 
