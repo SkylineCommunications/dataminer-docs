@@ -22,9 +22,9 @@ bool result = DmsElementId.TryParse(dmaEidString, out var dmaEid);
 
 #### Fix - Fixed implementation of IsVersionHigher method of IDma interface [ID 43446]
 
-The implementation of the IsVersionHigher method (IDma), has been corrected so that it now correctly compares the version of the Agent with the specified version.
+The implementation of the IsVersionHigher (IDma) method has been corrected so that it now correctly compares the version of the Agent with the specified version.
 
-This method verifies if the provided version number is higher than the DataMiner Agent version. Note that this method only supports the formats "V.W.X.Y" or "V.W.X.Y-CUZ" where V, W, X, Y and Z are numbers, the CU is ignored in the comparison. The method returns **true** if the specified version number is higher than the version of this DataMiner Agent; otherwise, **false<** is returned.
+This method verifies if the provided version number is higher than the DataMiner Agent version. Note that this method only supports the formats "V.W.X.Y" or "V.W.X.Y-CUZ" where V, W, X, Y, and Z are numbers. The CU is ignored in the comparison. The method returns **true** if the specified version number is higher than the version of this DataMiner Agent; otherwise, **false<** is returned.
 
 Example usage:
 
@@ -39,7 +39,7 @@ var isHigher = agent.IsVersionHigher(version);
 
 #### New feature - Added monitor methods to standalone parameter interfaces
 
-The `IDmsStandaloneParameter` and `IDmsStandaloneParameter<T>` have been extended with the following methods to allow monitoring value changes:
+The `IDmsStandaloneParameter` and `IDmsStandaloneParameter<T>` interfaces have been extended with the following methods to allow the monitoring of value changes:
 
 - `IDmsStandaloneParameter` interface:
   - `void StopValueMonitor(string sourceId, bool force = false)`
