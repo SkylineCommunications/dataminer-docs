@@ -159,6 +159,8 @@ items:
           - name: Check Deprecated DLL Usage
             topicUid: BPA_Check_Deprecated_DLL_Usage
           - name: Database Security
+            topicUid: BPA_Check_Time_Server
+          - name: Check Time Server
             topicUid: BPA_Database_Security
           - name: DataMiner Agent Minimum Requirements
             topicUid: BPA_Minimum_Requirements_Check
