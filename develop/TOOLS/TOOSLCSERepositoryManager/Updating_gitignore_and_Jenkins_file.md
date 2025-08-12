@@ -19,5 +19,5 @@ The upgrade currently performs the following actions:
 
 - Adding a versioning TXT file, so the repo manager knows if the current config files of your active branch and repo are up to date.
 
-![SLC SE Repository Manager updating .gitignore and Jenkins file](~/develop/images/SLC_SE_Repo_Manager_updating.png)<br>
-*SLC SE Repository Manager updating .gitignore and Jenkins file*
+![SLC SE Repo Manager updating .gitignore and Jenkins file](~/develop/images/SLC_SE_Repo_Manager_updating.png)<br>
+*SLC SE Repo Manager updating .gitignore and Jenkins file*

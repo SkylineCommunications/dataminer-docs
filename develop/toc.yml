@@ -6168,7 +6168,7 @@ items:
         topicUid: High-level_overview
       - name: Components
         items:
-        - name: SLC SE Repository Manager
+        - name: SLC SE Repo Manager
           topicUid: TOOSLCSERepositoryManager
           items:
           - name: Cloning a repository
@@ -6378,7 +6378,7 @@ items:
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
           items:
-            - name: Producing NuGet packages via SLC SE Repository Manager
+            - name: Producing NuGet packages via SLC SE Repo Manager
               topicUid: Producing_NuGet_RepoManager
             - name: Producing NuGet packages via GitHub
               topicUid: Producing_NuGet_GitHub

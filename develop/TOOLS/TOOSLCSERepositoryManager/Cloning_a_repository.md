@@ -4,12 +4,15 @@ uid: Cloning_a_repository
 
 # Cloning a repository
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees.
+
 To clone a repository from the Gerrit server that is hosting the Git repositories, select an item in the tree control and click the *Clone Repository* button. This will clone the selected repository into the folder mentioned above the tree control.
 
 For example, in the tree control below, the *Skyline Panel Manager* protocol has been selected. When the *Clone Repository* button is clicked, the repository will be cloned into the folder `C:\GIT\Protocols\Skyline\Skyline Panel Manager`.
 
 ![](~/develop/images/SLCSERepoManager_CloneRepo.png)<br>
-*SLC SE Repository Manager: Cloning a repository*
+*SLC SE Repo Manager: Cloning a repository*
 
 The folder `C:\GIT` is the default local GIT root folder. When a repository is cloned, subfolders are created in this root folder. For example, for the item selected in the example above, the following subfolders will be created: *Protocols*, *Skyline* and *Skyline Panel Manager*.
 
