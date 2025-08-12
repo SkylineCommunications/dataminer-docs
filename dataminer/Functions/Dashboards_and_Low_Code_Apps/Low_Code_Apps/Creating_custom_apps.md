@@ -17,7 +17,7 @@ uid: Creating_custom_apps
 
      - If no apps exist yet, click *Create your first app*.
 
-     - Otherwise, select the tab where you want the app to appear, and click *Create app*. To add the app without assigning it to a specific section, open the *All apps* tab before creating the app.
+     - Otherwise, select the tab where you want the app to appear, and click *Create app*. To add the app without assigning it to a specific section, open the *All apps* tab or the *Other apps* tab before creating the app.
 
    - Prior to DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9:
 
