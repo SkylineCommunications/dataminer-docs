@@ -4,7 +4,7 @@ uid: Accessing_the_web_apps
 
 # Accessing the web apps
 
-You can access [all DataMiner web apps](#available-web-apps) via the DataMiner landing page, which you open in your web browser.
+You can access [all DataMiner web apps](#available-web-apps) via the DataMiner landing page.
 
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
