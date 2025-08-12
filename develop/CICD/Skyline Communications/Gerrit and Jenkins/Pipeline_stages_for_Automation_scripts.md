@@ -4,6 +4,9 @@ uid: Pipeline_stages_for_Automation_scripts
 
 # Pipeline stages for Automation scripts
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
 Currently, the pipeline consists of the following stages:
 
 - [Loading Jenkinsfile](#loading-jenkinsfile)

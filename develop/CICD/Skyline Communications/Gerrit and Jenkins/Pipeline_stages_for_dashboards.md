@@ -2,6 +2,9 @@
 uid: Pipeline_stages_for_dashboards
 ---
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
 # Pipeline stages for dashboards
 
 Currently, the pipeline consists of the following stages:

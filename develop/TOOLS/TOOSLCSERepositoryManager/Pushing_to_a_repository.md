@@ -4,6 +4,9 @@ uid: Pushing_to_a_repository
 
 # Pushing to a repository
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees.
+
 After you have performed commits on your local repository, you will want to push these commits to the server.
 
 To do so:

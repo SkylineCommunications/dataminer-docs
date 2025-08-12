@@ -4,6 +4,9 @@ uid: Pipeline_stages_for_install_packages
 
 # Pipeline stages for install packages
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
 Currently, the pipeline consists of the following stages:
 
 ## Loading Jenkinsfile

@@ -4,6 +4,9 @@ uid: Git_protocol_repositories
 
 # Git protocol repositories
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
 ## Range branches and tags
 
 Each protocol is stored in a dedicated Git repository on Gerrit. Different branches exist for each version range branch (e.g. 1.0.0.X, 1.0.1.X, 2.0.0.X, etc.) and each released version will result in a tag in the Git repository. Consider the following image representing the branches and tags for an example protocol Git repository:

@@ -4,6 +4,9 @@ uid: Jenkins
 
 # Jenkins
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
 The Jenkins build server (<https://jenkins.skyline.be>) will execute a pipeline run as soon as you perform a push to a Git repository hosted on Gerrit.
 
 When you log in to Jenkins, you will see a folder structure that is organized as follows:

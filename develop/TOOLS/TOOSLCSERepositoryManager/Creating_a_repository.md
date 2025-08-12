@@ -4,6 +4,9 @@ uid: Creating_a_repository
 
 # Creating a repository
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees.
+
 ## Connector repository
 
 In order to create a new repository for a connector, click the *Create repository* button in the *Protocols* tab. This will open the *Create New Repository* pop-up window, where you can provide the name of the vendor and data source.
@@ -59,7 +62,7 @@ In order to create a new repository for a connector, click the *Create repositor
 
 ## Other repository types
 
-The SLC SE Repo Manager has different tabs for other repository types: *Visios*, *Custom Solutions*, *Functions*, *Automation Scripts*, *Dashboards*, *Examples*, *Packages*, and *Files*.
+The SLC SE Repository Manager has different tabs for other repository types: *Visios*, *Custom Solutions*, *Functions*, *Automation Scripts*, *Dashboards*, *Examples*, *Packages*, and *Files*.
 
 ![](~/develop/images/SLCSERepoManager_Create_Files.png)<br>
 *SLC SE Repository Manager: Creating a Files repository with Constraint, Category, and Name*

@@ -4,6 +4,9 @@ uid: Pipeline_stages_for_functions
 
 # Pipeline stages for functions
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
 Currently, the pipeline for function development consists of the following stages:
 
 - [Loading Jenkinsfile](#loading-jenkinsfile)

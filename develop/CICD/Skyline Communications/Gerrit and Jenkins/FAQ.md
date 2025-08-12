@@ -4,6 +4,9 @@ uid: FAQ
 
 # FAQ
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
 In this section, you can find answers to a number of frequently asked questions.
 
 Regarding protocol development:
@@ -46,7 +49,7 @@ Regarding Gerrit code review:
 
 To start the development of a new protocol (version 1.0.0.1), perform the following steps:
 
-1. Open the SLC SE Repository Manager tool (part of the Time Registration tool).
+1. As a Skyline employee, open the SLC SE Repository Manager tool.
 
 1. Click the *Create Repository* button. Provide the name of the vendor and data source and click the *Create* button.
 
@@ -103,7 +106,7 @@ To start the development of a new protocol (version 1.0.0.1), perform the follow
 
 ### How do I start the development of a new version in an existing range of an existing protocol?
 
-1. Open the SLC SE Repository Manager tool.
+1. As a Skyline employee, open the SLC SE Repository Manager tool.
 
 1. Navigate to the vendor in the tree control and verify whether your data source is already listed under that vendor.
 
@@ -174,7 +177,7 @@ To start the development of a new protocol (version 1.0.0.1), perform the follow
 
 This is very similar to creating a new version in an existing range branch. Before you create your Gerrit task branch, perform the following steps:
 
-1. Check out the range branch for which you want to create a new branch. For example, if you need to create a 2.0.1.X branch, first check out the 2.0.0.X range branch.
+1. As a Skyline employee, check out the range branch for which you want to create a new branch. For example, if you need to create a 2.0.1.X branch, first check out the 2.0.0.X range branch.
 
 1. Create the new range branch, for example 2.0.1.X.
 
@@ -188,9 +191,9 @@ This is very similar to creating a new version in an existing range branch. Befo
 
 1. Create your task branch based on the newly created range branch and start development.
 
-### I'm still busy developing but I want to push my work to the remote repository so I have a backup on Gerrit. How do I do this?
+### I am still busy developing but I want to push my work to the remote repository so I have a backup on Gerrit. How do I do this?
 
-For your development, you will typically have created a branch with name *DCP\<TaskID>_\<Description>* (e.g. DCP1234_FixLayout).
+For your development, as a Skyline employee, you will typically have created a branch with name *DCP\<TaskID>_\<Description>* (e.g. DCP1234_FixLayout).
 
 To push this to the remote Git repository so you have a backup on the server (without initiating a code review), click the *Push* button in SourceTree. Select your task branch and click *Push*.
 
@@ -209,11 +212,11 @@ Alternatively, you can choose to push your work into Gerrit as work in progress,
 
 This means your development is still work in progress.
 
-Because every push to the remote Git repository triggers a run of the pipeline in Jenkins, you can perform the exact same steps as in [I'm still busy developing but I want to push my work to the remote repository so I have a backup on Gerrit. How do I do this?](#im-still-busy-developing-but-i-want-to-push-my-work-to-the-remote-repository-so-i-have-a-backup-on-gerrit-how-do-i-do-this)
+Because every push to the remote Git repository triggers a run of the pipeline in Jenkins, as a Skyline employee, you can perform the exact same steps as in [I am still busy developing but I want to push my work to the remote repository so I have a backup on Gerrit. How do I do this?](#i-am-still-busy-developing-but-i-want-to-push-my-work-to-the-remote-repository-so-i-have-a-backup-on-gerrit-how-do-i-do-this)
 
 ### Where do I provide the protocol development checklist?
 
-The protocol development checklist should be included next to the protocol Visual Studio solution in the Git repository.
+As a Skyline employee, include the protocol development checklist next to the protocol Visual Studio solution in the Git repository.
 
 1. Download the checklist from [Dojo](https://community.dataminer.services/documentation/protocol-development-checklists/).
 
@@ -228,13 +231,13 @@ The protocol development checklist should be included next to the protocol Visua
 
 ### I only have a very small fix to perform and therefore I do not require it to go through code review. Is this possible?
 
-In Sourcetree, you can immediately push commits to a range branch in the remote Git repository.
+As a Skyline employee, in Sourcetree, you can immediately push commits to a range branch in the remote Git repository.
 
 However, be aware that in general a code review phase is required and therefore you will typically push to Gerrit via the SLC SE Repository Manager tool. Only push immediately to Git if you are sure no code review is required for the items you will push, for example when you want to push the checklist.
 
 ### I finished development. How do I create a tag for the new version?
 
-1. In the commit overview in SourceTree, select the commit for which you would like to create a tag, right-click, and select *Tag* in the context menu.
+1. As a Skyline employee, in the commit overview in SourceTree, select the commit for which you would like to create a tag, right-click, and select *Tag* in the context menu.
 
    ![](~/develop/images/SourceTree_CreateTag.png)<br>
    *Creating a tag for a commit in SourceTree*
@@ -251,7 +254,7 @@ However, be aware that in general a code review phase is required and therefore 
 
 ### I started a new minor version but now it appears that my additional changes introduce a major change. How do I fix this?
 
-Suppose you started development on a task and assumed that the new version was going to be a new minor version. After you have performed some commits and pushed these to the remote Git repository, the Jenkins pipeline suddenly indicates that a new commit pushed results in a major change. After you verify with the major change request team, they confirm that a new major range is indeed required.
+As a Skyline employee, suppose you started development on a task and assumed that the new version was going to be a new minor version. After you have performed some commits and pushed these to the remote Git repository, the Jenkins pipeline suddenly indicates that a new commit pushed results in a major change. After you verify with the major change request team, they confirm that a new major range is indeed required.
 
 How can you now fix your Git repository?
 
@@ -343,9 +346,9 @@ Suppose for example that you have committed and pushed changes to the 1.0.0.X ra
 ![](~/develop/images/ChangeInTheWrongRange.png)<br>
 *Changes pushed to 1.0.0.X range*
 
-1. Perform a checkout of the branch you want to work on (in this example 1.0.1.X) and make sure this is your active branch.
+1. As a Skyline employee, perform a checkout of the branch you want to work on (in this example 1.0.1.X) and make sure this is your active branch.
 
-1. Now you need to apply the commits on the correct 1.0.1.X branch in the same order as you applied them on the 1.0.0.X branch. To do this, you will apply cherry picking. Select the first commit (in the example *feature 1*) right-click and select *Cherry Pick* in the context menu:
+1. Now you need to apply the commits on the correct 1.0.1.X branch in the same order as you applied them on the 1.0.0.X branch. To do this, you will apply cherry-picking. Select the first commit (in the example *feature 1*) right-click and select *Cherry Pick* in the context menu:
 
    ![](~/develop/images/CherryPick.png)<br>
    *Cherry pick a commit*
@@ -353,7 +356,7 @@ Suppose for example that you have committed and pushed changes to the 1.0.0.X ra
 1. In the pop-up window, click *OK*.
 
    ![](~/develop/images/ConfirmCherryPicking.png)<br>
-   *Confirm cherry picking*
+   *Confirm cherry-picking*
 
 1. Repeat this for all the commits you want to have on the current branch.
 
@@ -396,16 +399,16 @@ Suppose for example that you have committed and pushed changes to the 1.0.0.X ra
 
 ### I want to apply a fix to multiple ranges. How do I do this?
 
-Suppose you created a fix in a specific range that would also be useful in a number of other ranges. To apply a specific commit from a branch to other branches, you can use a technique referred to as cherry picking.
+Suppose you created a fix in a specific range that would also be useful in a number of other ranges. To apply a specific commit from a branch to other branches, you can use a technique referred to as cherry-picking.
 
 For example, suppose you created a commit in range 1.0.1.X and you want to apply the same fix in 1.0.2.X.
 
 ![](~/develop/images/FixedBranch.png)<br>
 *Fix in range 1.0.1.X*
 
-1. First, perform a checkout of the branch you want to include the commit (in this example 1.0.2.X).
+1. As a Skyline employee, first perform a checkout of the branch where you want to include the commit (in this example 1.0.2.X).
 
-1. Then select the commit you want to cherry pick, right-click and select *Cherry Pick* in the context menu.
+1. Select the commit you want to cherry-pick, right-click and select *Cherry Pick* in the context menu.
 
    ![](~/develop/images/CherryPickFix.png)<br>
    *Cherry pick a fix*
@@ -413,18 +416,18 @@ For example, suppose you created a commit in range 1.0.1.X and you want to apply
 1. In the pop-up window, click *OK*.
 
    ![](~/develop/images/ConfirmCherryPicking00080.png)<br>
-   *Confirm cherry picking*
+   *Confirm cherry-picking*
 
 Now you will see that the change has been committed to the 1.0.2.X branch.
 
 ![](~/develop/images/FixCommittedToBranch.png)<br>
 *Fix in range 1.0.2.X*
 
-At this point you can either cherry pick another commit or continue development (e.g. create a new version on the 1.0.2.X range for this specific fix).
+At this point you can either cherry-pick another commit or continue development (e.g. create a new version on the 1.0.2.X range for this specific fix).
 
 ### How can I work in parallel with other developers?
 
-In case you want to work on a protocol that is already being worked on by another developer, make sure to first communicate with the other developer to avoid merge conflicts later on as much as possible (e.g. agree upon different parameter ranges to use, different QActions, etc.).
+As a Skyline employee, in case you want to work on a protocol that is already being worked on by another developer, make sure to first communicate with the other developer to avoid merge conflicts later on as much as possible (e.g. agree upon different parameter ranges to use, different QActions, etc.).
 
 Then create a new development branch for your development and push it so other developers are aware that you are working on that protocol.
 
@@ -435,7 +438,7 @@ Then create a new development branch for your development and push it so other d
 
 This means you have some work committed and want this work to be reviewed.
 
-1. Open the SLC SE Repository Manager tool, select the protocol you want to push for review in the tree control and select the *Push Repository* button.
+1. As a Skyline employee, open the SLC SE Repository Manager tool, select the protocol you want to push for review in the tree control and select the *Push Repository* button.
 
    ![](~/develop/images/SLCSERepoManager_PushRepo.png)<br>
    *Pushing a repository in SLC SE Repository Manager*
@@ -469,7 +472,7 @@ This means you have some work committed and want this work to be reviewed.
 
 When someone has assigned a code review to you in Gerrit, you will receive an email to notify you. To do the code review, perform the following steps:
 
-1. In Gerrit, on the review dashboard page, select the new entry in the *Incoming reviews* section.
+1. As a Skyline employee, in Gerrit, on the review dashboard page, select the new entry in the *Incoming reviews* section.
 
    ![](~/develop/images/GerritIncomingReviews.png)<br>
    *Incoming reviews in Gerrit*
@@ -520,7 +523,7 @@ When someone has assigned a code review to you in Gerrit, you will receive an em
 
 ### I received an email notifying me that a code review failed. How do I continue?
 
-1. In Gerrit, on the review dashboard page, click the reviewed item.
+1. As a Skyline employee, in Gerrit, on the review dashboard page, click the reviewed item.
 
    ![](~/develop/images/GerritReviewedItem.png)<br>
    *Reviewed item in Gerrit*
@@ -552,7 +555,7 @@ When someone has assigned a code review to you in Gerrit, you will receive an em
 
 ### I received an email notifying me that a code review succeeded. How do I continue?
 
-1. In Gerrit, on the review page of your item you will now see a *Ready to submit* notification. Click the *SUBMIT* button.
+1. As a Skyline employee, in Gerrit, on the review page of your item you will now see a *Ready to submit* notification. Click the *SUBMIT* button.
 
    ![](~/develop/images/GerritReadyToSubmit.png)<br>
    *Ready to submit notification in Gerrit*

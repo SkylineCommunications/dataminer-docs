@@ -9,7 +9,7 @@ uid: Producing_NuGet_RepoManager
 
 Enable the NuGet-related stages:
 
-1. In the SLC SE Repo manager, go to the [*Custom Solutions* tab](xref:Repository_types#custom-solutions).
+1. As a Skyline employee, open the SLC SE Repo manager and go to the [*Custom Solutions* tab](xref:Repository_types#custom-solutions).
 
 1. Click the *NuGet* button in the lower right corner to add another *JenkinsNuGetConfiguration.xml* file that allows you to enable and configure NuGet-related stages in the pipeline, including enabling or disabling the creation, signing, and publishing of NuGet packages.
 
