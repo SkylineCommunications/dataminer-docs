@@ -4,9 +4,35 @@ uid: LowCodeApps_organizing_landing_page
 
 # Organizing the apps on the landing page in sections
 
-It is possible to organize the apps on the Low-Code Apps landing page in different sections. However, at present this is only possibly by changing the configuration of the apps in JSON.
+It is possible to organize the apps on the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page) in different sections.
 
-To do so:
+![Organizing apps](~/dataminer/images/Organizing_Apps.gif)<br>*DataMiner landing page in DataMiner 10.5.9*
+
+At present, it is only possible to [create new sections](#creating-a-new-app-under-an-existing-section) by changing the configuration of the apps in JSON. However, you can [add new apps to existing sections](#creating-a-new-app-under-an-existing-section) directly from the DataMiner landing page.
+
+## Creating a new app under an existing section
+
+To create a new app in an existing section on the DataMiner landing page:
+
+- From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->:
+
+  1. Open the tab in which you want the app to appear.
+
+  1. In the top-right corner of the low-code apps section, click *Create app*.
+
+     The app will be added to the selected section automatically.
+
+- In previous versions:
+
+  1. Hover over the title of the section where you want to add the app.
+
+  1. Click the "+" icon.
+
+     The app will be added to the selected section automatically.
+
+## Adding an app to a new section
+
+To add a low-code app to a new section that will appear on the DataMiner landing page, follow the procedure below:
 
 1. On the DMA, go to the app folder: `C:\Skyline DataMiner\applications\[APP_ID]`
 

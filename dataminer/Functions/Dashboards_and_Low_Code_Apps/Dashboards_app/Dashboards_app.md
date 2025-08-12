@@ -6,7 +6,7 @@ uid: newR_D
 
 With the Dashboards app, you can make, manage, and view dashboards that can display a wealth of information about the monitored system. You can [share your dashboards](xref:Sharing_a_dashboard) with just about anyone via dataminer.services, or [create a PDF report](xref:Generating_a_report_based_on_a_dashboard_Cube) based on them.
 
-You can access the Dashboards app via the [DataMiner landing page](xref:Accessing_the_web_apps) or from the [*Apps* pane](xref:DataMiner_Cube_sidebar#apps-pane) in DataMiner Cube (from DataMiner 10.2.9/10.3.0 onwards<!-- RN 33944 -->).
+You can access the Dashboards app via the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page) or from the [*Apps* pane](xref:DataMiner_Cube_sidebar#apps-pane) in DataMiner Cube (from DataMiner 10.2.9/10.3.0 onwards<!-- RN 33944 -->).
 
 ![Dashboards app](~/dataminer/images/Dashboards_app.png)<br>*Dashboards app in DataMiner 10.4.5*
 
