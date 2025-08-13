@@ -168,6 +168,8 @@ items:
             topicUid: BPA_Firewall_Configuration
           - name: HTTPS Configuration
             topicUid: BPA_Https_Configuration
+          - name: Large Alarm Trees
+            topicUid: BPA_LargeAlarmTrees
           - name: NATS cluster verification
             topicUid: BPA_Check_Agent_Presence
           - name: Password Strength
