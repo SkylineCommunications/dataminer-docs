@@ -6,7 +6,7 @@ uid: BPA_LargeAlarmTrees
 
 This BPA test is executed on one DMA per cluster. It will fetch active alarm trees and check if any are getting too large. If this is the case, it could have a serious impact on several DataMiner processes, so you will have to take the necessary [corrective actions](xref:Best_practices_for_assigning_alarm_severity_levels#keep-alarm-trees-from-growing-too-large).
 
-This BPA test is available from DataMiner 10.5.9<!-- RN 42952 --> onwards. You can [run it in System Center](xref:Running_BPA_tests) on the *Agents > BPA* tab.
+This BPA test is available from DataMiner 10.5.9/10.6.0 onwards.<!-- RN 42952 --> You can [run it in System Center](xref:Running_BPA_tests) on the *Agents > BPA* tab.
 
 ## Metadata
 
