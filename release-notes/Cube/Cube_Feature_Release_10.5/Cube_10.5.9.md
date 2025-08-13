@@ -14,10 +14,6 @@ This Feature Release of the DataMiner Cube client application contains the same 
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.5.9](xref:General_Feature_Release_10.5.9).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.5.9](xref:Web_apps_Feature_Release_10.5.9).
 
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
 
 #### System Center: New Automation tab in Logging section [ID 42737] [ID 43144]

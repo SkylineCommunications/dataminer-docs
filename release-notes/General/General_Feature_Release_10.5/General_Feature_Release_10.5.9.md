@@ -22,10 +22,6 @@ uid: General_Feature_Release_10.5.9
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.5.9](xref:Web_apps_Feature_Release_10.5.9).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
 
 #### Automation scripts: New Interactivity tag [ID 42954]
