@@ -45,4 +45,4 @@ To add a DataMiner Agent to a DMS running STaaS:
 1. Optionally, if the new DMA is not intended to host the CloudGateway DxM, you can safely uninstall it.
 
    > [!NOTE]
-   > In this case, the Admin app will still display connection information indicating that CloudGateway is not running. To remove this invalid state, contact Skyline support.
+   > In this case, the Admin app will still display connection information indicating that CloudGateway is not running. To remove this invalid state, [contact DataMiner Support](xref:Contacting_tech_support).
