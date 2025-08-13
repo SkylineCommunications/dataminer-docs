@@ -26,7 +26,7 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 In DataMiner Feature Release version 10.5.6, Automation script log files were introduced. These log files can now be consulted in DataMiner Cube. To do so, in Cube, open *System Center*, and go to *Logging > Automation*.
 
-On the left, you will find a list of all Automation scripts available on the system. Click an Automation script to expand it and display the DataMiner Agents on which it is available. Select a DMA to open the log file for that script on that specific Agent. The Agent you are currently connected to is shown in italic.
+On the left, you will find a list of all Automation scripts available on the system. Click an Automation script to expand it and display the DataMiner Agents on which it is available. Select a DMA to open the log file for that script on that specific Agent. The Agent you are currently connected to is shown in italics.
 
 - Right-clicking a DMA in the list will open a shortcut menu with two options: *Open* and *Open previous*. If there is no previous log file, the latter option will not be available.
 
