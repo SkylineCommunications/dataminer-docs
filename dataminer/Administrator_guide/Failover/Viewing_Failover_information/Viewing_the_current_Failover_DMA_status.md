@@ -72,7 +72,7 @@ The Failover *Status* window displays status parameters for both DMAs.
 
   "Failing" means that the database server is probably not running or that there is a configuration issue.
 
-<!-- - **NATS communication**: Indicates whether the NATS communication between the Agents is OK and if the clusterEndpoints.json file is in sync between the two Agents. Displayed from DataMiner 10.5.7/10.6.0 onwards. --> <!-- RN 42250, reverted by 43145 -->
+- **NATS communication**: Indicates whether the NATS communication between the Agents is OK and if the *clusterEndpoints.json* file is in sync between the two Agents. Displayed from DataMiner 10.5.7/10.6.0 onwards<!-- RN 43169-->.
 
 > [!NOTE]
 >
