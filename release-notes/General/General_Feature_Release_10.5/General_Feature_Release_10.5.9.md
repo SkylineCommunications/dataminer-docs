@@ -2,10 +2,7 @@
 uid: General_Feature_Release_10.5.9
 ---
 
-# General Feature Release 10.5.9 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# General Feature Release 10.5.9
 
 > [!IMPORTANT]
 >

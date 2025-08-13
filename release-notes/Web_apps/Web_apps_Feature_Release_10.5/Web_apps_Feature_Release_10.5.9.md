@@ -2,10 +2,7 @@
 uid: Web_apps_Feature_Release_10.5.9
 ---
 
-# DataMiner web apps Feature Release 10.5.9 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.5.9
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.4.0 [CU18] and 10.5.0 [CU6].
 
