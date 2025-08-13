@@ -28,6 +28,34 @@ uid: General_Feature_Release_10.5.10
 
 ## New features
 
+#### DataMiner Object Models: Attachments can now be uploaded to a network share [ID 43114] [ID 43366]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+In `ModuleSettings`, `DomManagerSettings` now contains a new `DomInstanceNetworkAttachmentSettings` class that allows you to save DOM instance attachments to a network share instead of to the *Documents* module.
+
+The `DomInstanceNetworkAttachmentSettings` class contains the following properties:
+
+- `NetworkSharePath` (string)
+
+  The UNC path to the network share where the attachments should be saved.
+
+  This path has to start with `\\` and cannot contain any characters that are illegal for a path (e.g. "<") or strings that allow directory traversal (e.g. "../").
+
+  When the path is left empty, attachments are saved to the `C:\Skyline DataMiner\Documents` folder. This is the default behavior.
+
+- `CredentialId` (GUID)
+
+  The ID of the credentials in the credentials library that will be used to add the attachment to the network share.
+
+  These credentials must be of type *Username and password credentials* and must be the credentials of a user that has read/write access to the path defined in `NetworkSharePath`. In case you have a Windows network share, you need to add the domain name (for a domain user) or hostname (for a local user) in front of the username (e.g. "MYPC\userName").
+
+> [!NOTE]
+>
+> - When a DOM module is configured to save attachments to a network share, the system will validate whether the user creating/updating the `ModuleSettings` has permission to access the credentials. Once this is set up, any user that has permissions to create or update a `DomInstance` can save attachments to the network share under the configured user.
+> - When a DOM module is configured to save attachments to a network share, no migration is done of existing attachments. They will continue to exist in the `C:\Skyline DataMiner\Documents` folder, but will no longer work. You can copy them over or move them to the network share; the folder structure is the same. Likewise, when removing the configuration to save attachments to a network share, no migration is done of attachments available on the previously configured network share.
+> - By default, the size of the attachments is limited to 20 MB. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#documentsmaxsize).
+
 #### gRPC now used by default for communication between DataMiner Agents [ID 43190] [ID 43260] [ID 43305] [ID 43331] [ID 43435] [ID 43506]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
