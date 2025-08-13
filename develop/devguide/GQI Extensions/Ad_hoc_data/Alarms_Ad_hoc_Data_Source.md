@@ -2,9 +2,9 @@
 uid: Alarms_Ad_hoc_Data_Source
 ---
 
-# Fetching alarms using Repository API
+# Fetching alarms using the Repository API
 
-When you want to do additional custom processing on alarms you can do so by using Repository API. This is an API with read access on alarms and with support for all sorts of filtering, sorting and limiting the amount of alarms fetched.
+When you want to do additional custom processing on alarms, you can do so by using the Repository API. This is an API with read access on alarms and with support for all sorts of alarm filtering, alarm sorting, and limiting of the number of the retrieved alarms.
 
 ```csharp
 using System;
