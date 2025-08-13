@@ -17,17 +17,21 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-In DataMiner feature version 10.5.6, Automation script log files were introduced. These log files can now be consulted in DataMiner Cube. To do so, in Cube, open *System Center*, and go to *Logging > Automation*.
+In DataMiner Feature Release version 10.5.6, Automation script log files were introduced. These log files can now be consulted in DataMiner Cube. To do so, in Cube, open *System Center*, and go to *Logging > Automation*.
 
-On the left, you will find a list of all Automation scripts available on the system, grouped per DataMiner Agent.
+On the left, you will find a list of all Automation scripts available on the system. Click an Automation script to expand it and display the DataMiner Agents on which it is available. Select a DMA to open the log file for that script on that specific Agent. The Agent you are currently connected to is shown in italics.
 
-- Right-clicking a script in the list will open a shortcut menu with two options: *Open* and *Open previous*. If there is no previous log file, the latter option will not be available.
-- To set the log levels for one or more Automation scripts on a particular DataMiner Agent, open the *Log settings* pane at the top of the *Automation* tab, select the files\*, set the log levels, and click *Apply levels*.
+- Right-clicking a DMA in the list will open a shortcut menu with two options: *Open* and *Open previous*. If there is no previous log file, the latter option will not be available.
 
-\**To select more than one script, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive scripts, click the first one in the list and then click the last one while holding down the Shift key.*
+- To set the log levels for one or more DMAs for a particular Automation script, expand the script in the list, select the DMA or DMAs you want to configure, open the *Log settings* section at the top of the *Automation* tab, select *Override log levels*, set the log levels, and click *Apply levels*.
+
+  You can adjust log levels for multiple items at once:
+
+  - Select non-consecutive items: Hold down the Ctrl key while selecting each item.
+  - Select consecutive items: Click the first item, then hold the Shift key and click the last item.
 
 > [!NOTE]
-> When you open an Automation script in the *Automation* module, you can access the script's log file by clicking the *View Log* button or by right-clicking inside the script's contents and selecting *View log* from the shortcut menu. Note that this will only be possible if you have permission to view log files.
+> When you open an Automation script in the *Automation* module, you can access the script's log file by clicking the *View log* button while the script is open, or by right-clicking the script in the pane on the left and selecting *View log* from the shortcut menu. Note that this will only be possible if you have permission to view log files.
 
 #### Automation: Cube now supports Automation scripts with an Interactivity tag [ID 43149]
 
