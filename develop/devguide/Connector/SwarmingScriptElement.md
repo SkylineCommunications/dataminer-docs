@@ -133,3 +133,10 @@ public class Script
   }
 }
 ```
+
+From DataMiner 10.5.9/10.6.0 onwards<!--RN 43196-->, an information event will be generated when an element was successfully swarmed. Example:
+
+`Swarmed from <DmaName> (<DmaId>) to <DmaName> (<DmaId>) by <UserName>`
+
+> [!NOTE]
+> When the source DMA is no longer available or unknown, the information event will be shortened to `Swarmed to <DmaName> (<DmaId>) by <UserName>`.
