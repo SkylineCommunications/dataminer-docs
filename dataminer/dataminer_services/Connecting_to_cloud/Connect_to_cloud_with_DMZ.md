@@ -98,6 +98,8 @@ From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dat
 1. Also copy `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds` from the node to the DMZ. 
 1. On the DMZ, open `SLCloud.xml` and verify that the `Credentials` path matches the destination location of the copied `.creds` file.
 
+***
+
 > [!IMPORTANT]
 > This manual configuration will only work if **automatic NATS configuration** is turned off.  
 > If automatic configuration is enabled, credentials may change over time, breaking communication with the DMZ.  
