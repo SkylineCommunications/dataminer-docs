@@ -26,6 +26,12 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
+#### Monitoring app: Navigation from Visual Overview now goes to Visual page instead of Data page [ID 43430]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When a shape linked to an element, service, or view was clicked in Visual Overview in the Monitoring app, it opened the Data page for the object instead of the Visual page. Now it will open the Visual page, so that the Monitoring app now has the same behavior as Cube.
+
 #### GQI DxM: Improved performance when handling extensions [ID 43479]
 
 <!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
@@ -45,7 +51,7 @@ When the app settings for the GQI DxM are modified, the MessageBroker and SLNet 
 
 #### Dashboards app: PDFs would fail to get generated when a browser tab was closed [ID 43449] [ID 43475]
 
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 - note that 43475 reverts the RN in 10.5.9, and it was then added again in 10.5.10 without a separate record -->
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 - note that 43475 reverts the RN in 10.4.0 CU18/10.5.0 CU6/10.5.9, and it was then added again in the current versions without a separate record -->
 
 Each open browser tab has its own WebSocket channel. When such a channel is closed, the Web API checks whether certain resources need to be cleaned up.
 
