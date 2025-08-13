@@ -987,6 +987,8 @@ items:
                 topicUid: GQI_Ad_hoc_Optimizing_sort_operations
               - name: Scaling an ad hoc data source
                 topicUid: Scaling_Ad_hoc_Data_Source
+              - name: Fetching alarms using the Repository API
+                topicUid: Alarms_Ad_hoc_Data_Source
           - name: Tutorials
             items:
               - name: Building a GQI data source that fetches satellites
