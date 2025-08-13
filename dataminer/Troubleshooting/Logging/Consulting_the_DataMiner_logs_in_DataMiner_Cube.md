@@ -18,8 +18,7 @@ The page consists of four tabs:
 
 - *Elements*: See [Elements logging](xref:Elements_logging).
 
-<!-- - *Automation*: See [Automation logging](xref:Automation_logging). (Available from DataMiner Cube ... onwards.) -->
-<!-- RN 42737, reverted by 43121 -->
+- *Automation*: See [Automation logging](xref:Automation_logging) (available from DataMiner Cube 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43144-->).
 
 > [!NOTE]
 >
