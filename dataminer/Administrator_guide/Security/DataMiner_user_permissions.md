@@ -196,9 +196,9 @@ Permission to access the data pages of a service.
 
 ### General \> Views
 
-#### General \> Views \> Add / remove elements
+#### General \> Views \> Add / remove items (elements, services, etc.)
 
-Permission to add and remove elements and services to and from views.
+Available from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43215-->. Permission to add and remove items, such as elements and services, to and from views. (Available as *General* > *Views* > *Add / remove elements* in earlier DataMiner versions.)
 
 #### General \> Views \> Add / remove views
 
