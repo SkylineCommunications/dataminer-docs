@@ -101,9 +101,9 @@ In DataMiner Cube, up to now, when the Microsoft Edge (WebView2) browser engine 
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-A number of enhancements have been made to the way in which element and service properties are displayed in the *Properties* window.
+A number of enhancements have been made to the way element and service properties are displayed in the *Properties* window.
 
-- All datetime values are now displayed in UTC time. They will no longer be converted to client time.
+- All date and time values are now displayed with the value received from the server, which is local time for elements and UTC for services. They will no longer be converted to client time.
 - The *Created* and *Created by* values will now be displayed as one single value.
 - The *Modified* and *Modified by* values will now be displayed as one single value.
 
