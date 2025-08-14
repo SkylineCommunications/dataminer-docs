@@ -283,7 +283,7 @@ If the database consists of a single node at the time of index creation, an inde
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-From now on, an information event will be generated when an element was successfully swarmed.
+From now on, an information event will be generated when an element has been successfully swarmed.
 
 Example:
 

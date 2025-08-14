@@ -29,7 +29,7 @@ To swarm elements in DataMiner Cube:
 
 1. Click *Swarm*.
 
-   From DataMiner 10.5.9/10.6.0 onwards<!--RN 43196-->, an information event will be generated when an element was successfully swarmed. Example:
+   From DataMiner 10.5.9/10.6.0 onwards<!--RN 43196-->, an information event will be generated when an element has been successfully swarmed. Example:
 
    `Swarmed from <DmaName> (<DmaId>) to <DmaName> (<DmaId>) by <UserName>`
 
