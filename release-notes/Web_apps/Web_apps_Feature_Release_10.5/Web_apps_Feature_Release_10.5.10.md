@@ -57,7 +57,11 @@ Each open browser tab has its own WebSocket channel. When such a channel is clos
 
 Up to now, when a single channel was closed, all temporary PDF files would incorrectly be removed for all connections. As a result, if any PDF was being generated when a channel was closed, that generation would fail.
 
-#### Dashboard components rendered twice when generating PDF [ID 43490]
+#### Dashboards app: PDF generation stuck because line chart received unexpected data points [ID 43472]
+
+In some cases, it could occur that a line chart in a PDF received unexpected data points from the server, which caused the chart to never be marked as finished. When a PDF was generated of such a chart, the PDF creation process never completed, never resulting in a finished PDF.
+
+#### Dashboards app: Dashboard components rendered twice when generating PDF [ID 43490]
 
 <!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
 
