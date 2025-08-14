@@ -56,3 +56,9 @@ When the app settings for the GQI DxM are modified, the MessageBroker and SLNet 
 Each open browser tab has its own WebSocket channel. When such a channel is closed, the Web API checks whether certain resources need to be cleaned up.
 
 Up to now, when a single channel was closed, all temporary PDF files would incorrectly be removed for all connections. As a result, if any PDF was being generated when a channel was closed, that generation would fail.
+
+#### Dashboard components rendered twice when generating PDF [ID 43490]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When a PDF was generated based on a dashboard, it could occur that some components were rendered twice, because they were interpreted both as a feed and as a regular component, which caused the generation time to take much longer than necessary. Now if a component is in the regular components group, it will not also be added in the feed components group, reducing the time it takes to generate the PDF.
