@@ -62,7 +62,7 @@ DataMiner requires the necessary endpoint information and keys to make use of th
 
 3. Upload the file using the configuration page on either the Interactive Prompt Tool or Satellite Parameter Extractor application. The interactive automation will automatically store the file in the right location to be accessible by the scripts used in the apps.
 
-![Configuration](~/dateminer/images/pdf_processing_AI_configuration.png)
+![Configuration](~/dataminer/images/pdf_processing_AI_configuration.png)
 
 > [!CAUTION]
 > At the moment, this automation will store the secrets file as a plain json file within the folder structure of your DataMiner system. Be aware that everyone with direct access to the system machine or with access to Automation will be able to access the credentials.
