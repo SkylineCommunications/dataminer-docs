@@ -64,7 +64,7 @@ To set up external authentication, you first need to create an enterprise applic
 
       If your DMS consists of DMAs accessible via different URLs or IP addresses, choose one URL or IP address to use as the entity ID.
 
-      In case of a **DaaS system**, the ``https://<dms-dns-name>-<organization-name>.on.dataminer.services`` can be used as the entity ID.
+      In case of a **DaaS system**, ``https://<dms-dns-name>-<organization-name>.on.dataminer.services`` can be used as the entity ID.
 
    1. Under *Reply URL*, specify the following URL(s), replacing ``dataminer.example.com`` with the IP address or DNS name of your DataMiner System (note the trailing "/"):
 
@@ -162,7 +162,7 @@ To set up external authentication, you first need to create an enterprise applic
 
 1. Replace [ENTITYID] with the URL or IP address you specified as the *Entity ID* while setting up the Microsoft Entra ID Enterprise application.
 
-   In case of a **DaaS system**, the ``https://<dms-dns-name>-<organization-name>.on.dataminer.services`` can be used as the entity ID.
+   In case of a **DaaS system**, ``https://<dms-dns-name>-<organization-name>.on.dataminer.services`` can be used as the entity ID.
 
 1. Replace ``https://dataminer.example.com`` with the IP address or the DNS name of your DataMiner System. The specified URL(s) must match the *Reply URL* you specified while setting up the Microsoft Entra ID Enterprise application.
 
