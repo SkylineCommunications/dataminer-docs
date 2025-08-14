@@ -397,9 +397,9 @@ items:
     - name: PDF processing using AI
       topicUid: processing_pdf_documents
       items: 
-      - name: Installing & configuring the apps
+      - name: Installing and configuring the apps
         topicUid: installing_processing_pdf_documents
-      - name: Usage of the apps
+      - name: Using the apps
         topicUid: using_the_apps_processing_pdf_documents
       - name: Implementation details
         topicUid: implementation_details_the_apps_processing_pdf_documents

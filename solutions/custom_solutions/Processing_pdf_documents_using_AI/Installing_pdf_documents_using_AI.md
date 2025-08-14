@@ -2,49 +2,54 @@
 uid: installing_processing_pdf_documents
 ---
 
-# Installing & configuring the solution
+# Installing and configuring the solution
 
 ## Prerequisites
 
 - DataMiner version 10.5.8 or higher
+- DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
-## Pricing
+## Deploying the sample solution
 
-The applications part of this package will consume DataMiner credits, based on the level of usage of the apps. The DataMiner credits will be deducted monthly based on the metered usage. More information about the pricing of DataMiner usage-based services can be found in the [DataMiner Pricing Overview](https://docs.dataminer.services/dataminer-overview/Pricing/Pricing_Usage_based_service.html).
+1. Go to the [Processing PDF documents using AI](https://catalog.dataminer.services/details/cb4988f9-f3e5-45b7-aade-144f21e9755a) package in the Catalog.
 
-## Support
+1. Click the *Deploy* button.
 
-For additional help or to discuss additional use-cases, reach out to [Skyline Product Marketing](mailto:team.product.marketing@skyline.be).
+1. Select the target DataMiner System and confirm the deployment.
 
-## Deploy the Sample Solution
+   The package will be pushed to the DataMiner System.
 
-1. Lookup the [Package](https://catalog.dataminer.services/details/cb4988f9-f3e5-45b7-aade-144f21e9755a) from the Catalog.
-2. Click the Deploy button to install button.
-3. Select the target DataMiner System and confirm the deployment. The package will be pushed to the DataMiner System.
+## Setting up cloud services in Azure
 
-## Setup Cloud Services in Azure
+To make use of the cloud services required by the sample applications, you will need an Azure subscription and resource group, and you will need to deploy the following resources in it:
 
-To make use of the cloud services required by the sample applications, you will need an Azure subscription and resource group and deploy the following resources in it:
+- [Azure OpenAI](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.CognitiveServicesOpenAI?tab=Overview): 
 
-1. [Azure OpenAI](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.CognitiveServicesOpenAI?tab=Overview): follow the step on the [Microsoft Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal).
+  To deploy this, follow the steps in the [Microsoft Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal).
 
-    - Make sure to complete the steps related to [Deploy a model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal#deploy-a-model).
-    - For the configurations of the model, please choose gpt-4o as a model (used in this sample, but others can be used). Next to that you are free to choose a name (e.g. openai-pdf-processing-sample), use Standard as a deployment type and leave the advanced options as default.
-    - After that you should be able to see your deployed model on the Azure AI Foundry.
+  - Make sure to complete the steps related to [deploying a model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal#deploy-a-model).
+  - For the configuration of the model, select **gpt-4o** as a model (used in this sample, but others can be used). You can choose the name freely (e.g. `openai-pdf-processing-sample`), use *Standard* as the deployment type, and leave the advanced options set to the default.
 
-2. [Document Intelligence](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.CognitiveServicesFormRecognizer?tab=Overview): follow the step on the [Microsoft Documentation](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/how-to-guides/create-document-intelligence-resource?view=doc-intel-4.0.0). No additional setup required.
+  When this is done, you should be able to see your deployed model in the Azure AI Foundry.
+
+- [Document Intelligence](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.CognitiveServicesFormRecognizer?tab=Overview):
+
+  To deploy this, follow the steps in the [Microsoft Documentation](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/how-to-guides/create-document-intelligence-resource?view=doc-intel-4.0.0). No additional setup is required.
 
 > [!NOTE]
-> For non-productions trials, feel free to contact [Skyline Product Marketing](mailto:team.product.marketing@skyline.be) to get secrets to connect to pre-configured AI services by Skyline.
+>
+> - For non-productions trials, feel free to contact [Skyline Product Marketing](mailto:team.product.marketing@skyline.be) to get secrets to connect to pre-configured AI services by Skyline.
+> - The sample applications use [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/) to connect to cloud AI services in Azure. Semantic Kernel is a open-source development kit for integrating AI models and it is perfectly possible to integrate with other models than the onces used in this sample, see [Chat completion using Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/concepts/ai-services/chat-completion/?tabs=csharp-AzureOpenAI%2Cpython-AzureOpenAI%2Cjava-AzureOpenAI&pivots=programming-language-csharp).
 
-> [!NOTE]
-> The sample applications use [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/) to connect to cloud AI services in Azure. Semantic Kernel is a open-source development kit for integrating AI models and it is perfectly possible to integrate with other models than the onces used in this sample, see [Chat completion using Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/concepts/ai-services/chat-completion/?tabs=csharp-AzureOpenAI%2Cpython-AzureOpenAI%2Cjava-AzureOpenAI&pivots=programming-language-csharp).
-
-## Configurations in DataMiner
+## Configuring DataMiner to use the AI services
 
 DataMiner requires the necessary endpoint information and keys to make use of the AI services in Azure. To configure this, both the Interactive Prompt Tool app and the Satellite Parameter Extractor app contain a configuration page where a file can be uploaded with the required information.
 
-1. Create a json file called `secrets.json` (you can also find this file in the documents folder after installing the package). `{YOUR-OPEN-AI-ENDPOINT}` and `{YOUR-OPEN-AI-KEY}` are the ones found in the [Azure Portal](https://portal.azure.com/), while the `{YOUR-MODEL-NAME}` is the name configured on [Azure AI Foundry](https://ai.azure.com/) (e.g., such as openai-pdf-processing-sample in the example above).
+1. Create a JSON file called `secrets.json`.
+
+   You can find an example of this file in the Documents folder after installing the package.
+
+   This file must have the following structure:
 
     ```json
     {
@@ -56,13 +61,18 @@ DataMiner requires the necessary endpoint information and keys to make use of th
     }
     ```
 
-2. Open one of the two apps that come with the package deployed in an earlier step. Go to `http(s)://[DMA name]/root`. Select *Interactive Prompt Tool* and *Satellite Feed Ingest*  to start using the applications.
+   - For `{YOUR-OPEN-AI-ENDPOINT}` and `{YOUR-OPEN-AI-KEY}`, use the values from the [Azure Portal](https://portal.azure.com/)
+   - For `{YOUR-MODEL-NAME}`, use the name configured on [Azure AI Foundry](https://ai.azure.com/) (e.g. `openai-pdf-processing-sample` if you used the example name mentioned above).
 
-![Processing PDF documents Apps](~/dataminer/images/pdf_processing_AI_Apps.png)
+1. Open one of the two apps that were installed when you deployed the package by going to the [DataMiner landing page](xref:Accessing_the_web_apps) and selecting either *Interactive Prompt Tool* or *Satellite Feed Ingest*.
 
-3. Upload the file using the configuration page on either the Interactive Prompt Tool or Satellite Parameter Extractor application. The interactive automation will automatically store the file in the right location to be accessible by the scripts used in the apps.
+   ![Processing PDF documents Apps](~/dataminer/images/pdf_processing_AI_Apps.png)
 
-![Configuration](~/dataminer/images/pdf_processing_AI_configuration.png)
+1. Upload the file using the configuration page of the app.
+
+   ![Configuration](~/dataminer/images/pdf_processing_AI_configuration.png)
+
+   This will automatically store the file in the right location so that the scripts used in the apps can access it.
 
 > [!CAUTION]
-> At the moment, this automation will store the secrets file as a plain json file within the folder structure of your DataMiner system. Be aware that everyone with direct access to the system machine or with access to Automation will be able to access the credentials.
+> At the moment, this will store the secrets file as a plain JSON file within the folder structure of your DataMiner System. Be aware that everyone with direct access to the system machine or with access to Automation will be able to access the credentials.
