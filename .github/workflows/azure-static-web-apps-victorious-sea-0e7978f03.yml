@@ -14,7 +14,7 @@ jobs:
     runs-on: windows-latest
     name: Build Job
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true
       - name: Install DocFX
@@ -45,7 +45,7 @@ jobs:
     needs: build_job
     name: Deploy Job to Storage account
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: release
           path: .
@@ -85,7 +85,7 @@ jobs:
     needs: build_job
     name: Deploy Job to SA with SWA and FD
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: release
           path: .

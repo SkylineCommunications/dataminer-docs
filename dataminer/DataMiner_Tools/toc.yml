@@ -78,6 +78,8 @@ items:
         topicUid: Verify_ASP_Net_Version
       - name: VerifyClusterPorts.dmupgrade
         topicUid: VerifyClusterPortsdmupgrade
+      - name: VerifyGRPCConnection.dmupgrade
+        topicUid: VerifyGRPCConnectiondmupgrade
       - name: Verify Elastic Storage Type
         topicUid: Verify_Elastic_Storage_Type
       - name: Verify NATS Cluster
@@ -259,6 +261,8 @@ items:
             topicUid: SLNetClientTest_comparing_views_on_two_dmas
           - name: Configuring how long alarm statistics are kept in memory
             topicUid: SLNetClientTest_configuring_how_long_alarm_statistics
+          - name: Configuring server-side search to include all custom properties
+            topicUid: SLNetClientTest_including_all_custom_properties
           - name: Configuring SMTP
             topicUid: SLNetClientTest_configuring_SMTP
           - name: Configuring the frequency of smart baseline calculations

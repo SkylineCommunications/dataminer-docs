@@ -65,7 +65,7 @@ The tutorial consists of the following steps:
 
 1. Click the ... button in the top-right corner and select *Share*.
 
-1. Select *URL*, select the *Embed* and *Use uncompressed URL parameters* check boxes, and click *Copy*.
+1. Select *URL*, select the *Embed* and *Use uncompressed URL parameters* checkboxes, and click *Copy*.
 
    You have now copied the basic embed URL of your new dashboard. This can for instance look like this:
 

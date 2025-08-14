@@ -9,7 +9,7 @@ uid: Producing_NuGet
 
 Automatic creation and publishing of NuGet packages is supported via the Skyline CI/CD pipelines on Jenkins and GitHub:
 
-- [Producing NuGet packages via SLC SE Repository Manager](xref:Producing_NuGet_RepoManager)
+- [Producing NuGet packages via SLC SE Repo Manager](xref:Producing_NuGet_RepoManager)
 
 - [Producing NuGet packages via GitHub](xref:Producing_NuGet_GitHub)
 
@@ -27,7 +27,7 @@ The rules below mainly focus on NuGet packages that are published to nuget.org. 
 - NuGet needs to be signed, as only signed packages can be published on nuget.org
 
   > [!NOTE]
-  > If the NuGet is created via [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager), the pipeline will take care of signing and publishing.
+  > If the NuGet is created via [SLC SE Repo Manager](xref:TOOSLCSERepositoryManager), the pipeline will take care of signing and publishing.
 
 ### Project type
 
@@ -200,4 +200,4 @@ For an example, refer to [DataMinerSystem.Common](https://www.nuget.org/packages
 
 ### PackageLicenseFile and PackageIcon
 
-When NuGet packages are created via the [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager), the manager will automatically add the default license and icon file.
+When NuGet packages are created via the [SLC SE Repo Manager](xref:TOOSLCSERepositoryManager), the manager will automatically add the default license and icon file.

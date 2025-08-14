@@ -865,3 +865,17 @@ a.backtotoplink:hover
   padding: 15px;
   border-bottom: 1px solid #ddd;
 }
+
+body.embed {
+  footer,
+  header {
+    display: none !important;
+  }
+
+  #search-results-new {
+    margin-top: 16px !important;
+    #search-box, #filters {
+      display: none !important;
+    }
+  }
+}

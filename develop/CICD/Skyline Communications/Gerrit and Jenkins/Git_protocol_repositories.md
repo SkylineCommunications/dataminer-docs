@@ -4,6 +4,9 @@ uid: Git_protocol_repositories
 
 # Git protocol repositories
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
 ## Range branches and tags
 
 Each protocol is stored in a dedicated Git repository on Gerrit. Different branches exist for each version range branch (e.g. 1.0.0.X, 1.0.1.X, 2.0.0.X, etc.) and each released version will result in a tag in the Git repository. Consider the following image representing the branches and tags for an example protocol Git repository:
@@ -50,6 +53,6 @@ This also means that when you create branches on your local repository, for exam
 
 For more information about Git, refer to <https://git-scm.com/>.
 
-In order to easily create new repositories on Gerrit, clone existing repositories from Gerrit to your local machine or push for Gerrit code review, the SLC SE Repository Manager tool is available, which is part of the Time Registration tool. See [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager#slc-se-repository-manager).
+In order to easily create new repositories on Gerrit, clone existing repositories from Gerrit to your local machine or push for Gerrit code review, the SLC SE Repo Manager tool is available, which is part of the Time Registration tool. See [SLC SE Repo Manager](xref:TOOSLCSERepositoryManager).
 
 To work on your local repository, you can use the tool SourceTree. See [SourceTree](xref:TOOSourceTree#sourcetree).

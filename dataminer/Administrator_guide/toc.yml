@@ -158,6 +158,8 @@ items:
             topicUid: BPA_Cassandra_DB_Size
           - name: Check Deprecated DLL Usage
             topicUid: BPA_Check_Deprecated_DLL_Usage
+          - name: Check Time Server
+            topicUid: BPA_Check_Time_Server
           - name: Database Security
             topicUid: BPA_Database_Security
           - name: DataMiner Agent Minimum Requirements
@@ -166,6 +168,8 @@ items:
             topicUid: BPA_Firewall_Configuration
           - name: HTTPS Configuration
             topicUid: BPA_Https_Configuration
+          - name: Large Alarm Trees
+            topicUid: BPA_LargeAlarmTrees
           - name: NATS cluster verification
             topicUid: BPA_Check_Agent_Presence
           - name: Password Strength

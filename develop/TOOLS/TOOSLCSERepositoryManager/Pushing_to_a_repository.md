@@ -4,6 +4,9 @@ uid: Pushing_to_a_repository
 
 # Pushing to a repository
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees.
+
 After you have performed commits on your local repository, you will want to push these commits to the server.
 
 To do so:
@@ -19,7 +22,7 @@ To do so:
    - If your pushed work is still work in progress and you therefore do not want a code review to be performed on it, choose *Push for Work in Progress*.
 
 ![](~/develop/images/SLCSERepoManager_Push.png)<br>
-*SLC SE Repository Manager: Pushing to a repository*
+*SLC SE Repo Manager: Pushing to a repository*
 
 > [!NOTE]
 > When you push commits to the server, the commits will be squashed (merged) into a single commit. This avoids multiple code review items being generated in Gerrit.

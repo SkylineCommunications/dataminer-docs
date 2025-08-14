@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://docs.dataminer.services/sitemap.xml

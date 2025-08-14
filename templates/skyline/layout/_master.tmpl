@@ -5,12 +5,14 @@
 <!DOCTYPE html>
 <html {{#_lang}}lang="{{_lang}}"{{/_lang}}>
   <head>
+    <meta name="google-site-verification" content="ll1R456EfxaLOHJITFDcZmHsnxtDEqNkiSl8gQhyVLo" />
     <meta charset="utf-8">
     {{#redirect_url}}
       <meta http-equiv="refresh" content="0;URL='{{redirect_url}}'">
     {{/redirect_url}}
     {{^redirect_url}}
       <title>{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}} {{#_appTitle}}| {{_appTitle}} {{/_appTitle}}</title>
+      <base>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}} {{#_appTitle}}| {{_appTitle}} {{/_appTitle}}">
       <meta name="generator" content="docfx {{_docfxVersion}}">
@@ -148,6 +150,26 @@
 		<div><span class="pull-right"><a class="backtotoplink" href="#top">Back to top</a></span></div>
       </div>
     </footer>
+
+    <script type="text/javascript">
+      const params = new URLSearchParams(window.location.search);
+      const embedFlag = params?.get('embed') ?? '';
+      if (embedFlag === 'true') {
+        document.querySelector('head base')?.setAttribute('target', '_parent');
+        document.body.classList.add('embed');
+      } else {
+        document.querySelector('head base')?.removeAttribute('target');
+        document.body.classList.remove('embed');
+      }
+      const searchQuery = params?.get('search') ?? '';
+      if (searchQuery) {
+        var searchResults = document.getElementById('search-results-new');
+        if (searchResults) {
+          document.getElementById("main").style.display = "none";
+          searchResults.style.display = "block";
+        }
+      }
+    </script>
   </body>
   {{/redirect_url}}
 </html>

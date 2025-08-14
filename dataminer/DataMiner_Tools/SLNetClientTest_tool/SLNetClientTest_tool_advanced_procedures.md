@@ -15,6 +15,7 @@ The procedures below can be applied to troubleshoot issues. However, be very car
 - [Clearing alarms from the SLNet event cache](xref:SLNetClientTest_clear_from_event_cache)
 - [Comparing the views on two Agents in a DMS](xref:SLNetClientTest_comparing_views_on_two_dmas)
 - [Configuring how long alarm statistics are kept in memory](xref:SLNetClientTest_configuring_how_long_alarm_statistics)
+- [Configuring server-side search to include all custom properties](xref:SLNetClientTest_including_all_custom_properties)
 - [Configuring SMTP](xref:SLNetClientTest_configuring_SMTP)
 - [Configuring the frequency of smart baseline calculations](xref:SLNetClientTest_configuring_frequency_smart_baseline)
 - [Configuring trend caching](xref:SLNetClientTest_configuring_trend_caching)

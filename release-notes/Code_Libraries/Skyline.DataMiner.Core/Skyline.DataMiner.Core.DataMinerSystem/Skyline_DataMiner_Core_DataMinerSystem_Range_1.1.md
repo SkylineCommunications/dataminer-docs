@@ -7,12 +7,53 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.3.4
+
+#### New feature - Added TryParse methods to DmsElementId and DmsServiceId structs [ID 43535]
+
+The DmsElementId and DmsServiceId structures have been extended with a TryParse method.
+
+Example usage:
+
+```csharp
+string dmaEidString = "208/13";
+bool result = DmsElementId.TryParse(dmaEidString, out var dmaEid);
+```
+
+#### Fix - Fixed implementation of IsVersionHigher method of IDma interface [ID 43446]
+
+The implementation of the IsVersionHigher (IDma) method has been corrected so that it now correctly compares the version of the Agent with the specified version.
+
+This method verifies if the provided version number is higher than the DataMiner Agent version. Note that this method only supports the formats "V.W.X.Y" or "V.W.X.Y-CUZ" where V, W, X, Y, and Z are numbers. The CU is ignored in the comparison. The method returns **true** if the specified version number is higher than the version of this DataMiner Agent; otherwise, **false** is returned.
+
+Example usage:
+
+```csharp
+string version = "10.0.3.0-CU0";
+
+var agent = dms.GetAgent();
+var isHigher = agent.IsVersionHigher(version);
+```
+
+### 1.1.3.3
+
+#### New feature - Added monitor methods to standalone parameter interfaces
+
+The `IDmsStandaloneParameter` and `IDmsStandaloneParameter<T>` interfaces have been extended with the following methods to allow the monitoring of value changes:
+
+- `IDmsStandaloneParameter` interface:
+  - `void StopValueMonitor(string sourceId, bool force = false)`
+  - `void StopValueMonitor(string sourceId, TimeSpan subscribeTimeout, bool force = false)`
+- `IDmsStandaloneParameter<T>` interface:
+  - `void StartValueMonitor(string sourceId, Action<ParamValueChange<T>> onChange)`
+  - `void StartValueMonitor(string sourceId, Action<ParamValueChange<T>> onChange, TimeSpan subscribeTimeout)`
+
 ### 1.1.3.2
 
 > [!IMPORTANT]
 > In this version, **new monitors** have been added to support **usage outside of protocols** (e.g. in Automation scripts or ad hoc data sources). These allow external code to subscribe to state, name, or alarm level changes without relying on SLProtocol. However, subscriptions created using these monitors **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system. Only monitors on *IDms*, *IDmsElement*, and *IDmsTable* are supported for now. If you need monitor support elsewhere, please reach out to request it.
 
-#### New feature – Monitor support for non-protocol use cases
+#### New feature - Monitor support for non-protocol use cases
 
 The *IDms*, *IDmsElement*, and *IDmsTable* interfaces have been extended with new `Start*Monitor` and `Stop*Monitor` methods, enabling stateful event subscriptions **outside of protocols** (e.g. in ad hoc data sources or external integrations). These are alternative APIs for monitoring DataMiner behavior in custom contexts without direct use of SLProtocol. This extension provides flexible, lightweight monitoring capabilities for many integration scenarios outside the traditional protocol-based flow.
 

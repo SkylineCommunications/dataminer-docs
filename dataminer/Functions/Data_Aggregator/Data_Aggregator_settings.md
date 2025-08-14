@@ -178,6 +178,7 @@ The GQI queries themselves should be configured in separate JSON files. See [Con
          "Id": "a86aa3ec-3607-4a34-89a0-3289d069d019",
          "Name": "Query 1",
          "Type": 0,
+         "Contract": 1,
          "LastUpdated": "2024-02-11T23:50:31.0277984Z",
          "Arguments": {}
        },
@@ -189,9 +190,14 @@ The GQI queries themselves should be configured in separate JSON files. See [Con
        ]
    }
    ```
-   
+
    > [!IMPORTANT]
-   > Do **NOT** configure the `LastUpdated` or the `Arguments` fields as these are managed by DataMiner DataAggregator itself.
+   >
+   > - Do **NOT** configure the `LastUpdated` or the `Arguments` fields as these are managed by DataMiner DataAggregator itself.
+   > - When setting the `Contract` value:
+   >
+   >   - Use `"Contract": 0` for queries that should be executed via CoreGateway and SLHelper.
+   >   - Use `"Contract": 1` for queries that should be executed via the GQI DxM.
 
 1. After modifying *Helper.json*, restart the DataMiner DataAggregator service (e.g. using Windows Task Manager).
 

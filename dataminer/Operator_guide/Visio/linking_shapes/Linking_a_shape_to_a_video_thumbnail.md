@@ -150,6 +150,24 @@ Additional configuration is possible in the URL:
   #https://dma.local/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true
   ```
 
+- From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43388-->, you can specify how the image in a video thumbnail should be displayed by adding the **fitMode** parameter to the URL. The possible values are:
+
+  - `fill`: The image will completely cover the container. It may crop parts of the image, but it ensures that there is no empty space. *(default)*
+
+  - `fit`: The image will be fully visible inside the container while maintaining aspect ratio. There may be empty space if aspect ratios differ.
+
+  - `stretch`: The image will stretch to exactly fill the container, ignoring aspect ratio. This may cause distortion.
+
+  - `center`: The image will retain its original size and will be aligned at the center. It may overflow or be cropped.
+
+  - `shrink`: The image will behave like `fill` or `center`, whichever results in a smaller image. It will only scale down if needed.
+
+  Example:
+
+  ```txt
+  #https://dma.local/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true&fitMode=center
+  ```
+
 ## Allowed paths in case of connection via DataMiner proxy
 
 If a client does not have direct access to the video server, it can request a video feed via the DataMiner Agent acting as a proxy server.

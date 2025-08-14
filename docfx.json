@@ -83,7 +83,8 @@
           "develop/schemadoc/Protocol/images/**",
           "develop/schemadoc/Automation/images/**",
           "staticwebapp.config.json",
-          "404.html"
+          "404.html",
+          "robots.txt"
         ]
       }
     ],
