@@ -12,6 +12,7 @@ The Maps component is fully available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/
 
 > [!NOTE]
 >
+> - To display the map, the machine running the browser must have internet access.
 > - To use the Maps component, the host servers for DataMiner Maps have to be configured in the file `C:\Skyline DataMiner\Maps\ServerConfig.xml`. If this file does not exist, it will be created automatically when you use a Maps component for the first time. To change the configuration, see [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
 > - This component currently only supports **Google Maps** ("gmaps") as the [Maps provider](xref:Configuring_the_DataMiner_Maps_host_servers).
 
