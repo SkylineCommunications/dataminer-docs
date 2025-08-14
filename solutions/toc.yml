@@ -401,3 +401,13 @@ items:
         topicUid: Remote_PHY_Monitoring_components
       - name: Restricting access to Remote PHY Monitoring
         topicUid: Remote_PHY_Monitoring_Access_Restriction
+    - name: PDF processing using AI
+      topicUid: processing_pdf_documents
+      items: 
+      - name: Installing and configuring the apps
+        topicUid: installing_processing_pdf_documents
+      - name: Using the apps
+        topicUid: using_the_apps_processing_pdf_documents
+      - name: Implementation details
+        topicUid: implementation_details_the_apps_processing_pdf_documents
+
