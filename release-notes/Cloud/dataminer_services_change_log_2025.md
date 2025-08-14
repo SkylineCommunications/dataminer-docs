@@ -11,8 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### TDB - Enhancement - Admin - Unmanaged Objects Usage visibility and export posibility
 
-In the admin app, the usage for Unmanaged Objects will now be displayed if your dataminer has at least version 10.5.5.0-CU0 and DataMiner SupportAssistant 1.7.3.
-The data will also be available for export.
+In the Admin app, the usage for unmanaged objects will now be displayed if you are using at least DataMiner 10.5.5 and DataMiner SupportAssistant 1.7.3. The data will also be available for export.
 
 ### 16 July 2025 - Enhancement - Startup and upgrade progress displayed when remotely accessing Cube
 
