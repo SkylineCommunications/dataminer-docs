@@ -118,7 +118,7 @@ public class Script
 }
 ```
 
-An information event will be generated when an element was successfully swarmed. Example:
+An information event will be generated when an element has been successfully swarmed. Example:
 
 `Swarmed from <DmaName> (<DmaId>) to <DmaName> (<DmaId>) by <UserName>`
 
