@@ -32,6 +32,9 @@ Remember to **compile the script as a library**. You can configure this in your 
 </DMSScript>
 ```
 
+> [!CAUTION]
+> Do **not** use dots (`.`) in your library name. This can potentially cause the error `GQI error: Could not create instance of datasource`.
+
 ## Do not use Skyline.DataMiner.Automation
 
 Never use references to the Skyline.DataMiner.Automation namespace in your GQI extension code.
