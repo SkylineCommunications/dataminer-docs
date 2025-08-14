@@ -20,6 +20,8 @@ Defines a DOM field that stores one or more options from a list of pre-determine
 
 It is possible to add additional discrete options after the descriptor was created, but it is not possible to remove or update options that are already in use. If a situation like this would occur, see [Removing an enum entry from a GenericEnumFieldDescriptor](xref:DOM_Remove_Enum_Entry).
 
+However, from DataMiner 10.5.9/10.6.0 onwards<!--RN 43452-->, you can update the display value of an existing enum entry, even if it is already in use by DOM instances. Changing the display value does not affect the underlying enum value or the behavior of existing DOM instances.
+
 ## Defining the FieldDescriptor
 
 To enable multiple values, set the `FieldType` to `List<GenericEnum<int>>`.
