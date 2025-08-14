@@ -57,7 +57,15 @@ Each open browser tab has its own WebSocket channel. When such a channel is clos
 
 Up to now, when a single channel was closed, all temporary PDF files would incorrectly be removed for all connections. As a result, if any PDF was being generated when a channel was closed, that generation would fail.
 
+#### Dashboards/Low-Code Apps: Components sharing GQI sessions could interrupt each other [ID 43470]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When different components in a dashboard or low-code-app used the same query, one component could interrupt the data retrieval for the other component, leading to GQI visualizations that were stuck in a loading state.
+
 #### Dashboards app: PDF generation stuck because line chart received unexpected data points [ID 43472]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
 
 In some cases, it could occur that a line chart in a PDF received unexpected data points from the server, which caused the chart to never be marked as finished. When a PDF was generated of such a chart, the PDF creation process never completed, never resulting in a finished PDF.
 
