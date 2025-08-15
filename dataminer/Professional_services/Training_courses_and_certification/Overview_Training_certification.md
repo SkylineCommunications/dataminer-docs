@@ -79,7 +79,7 @@ To prepare effectively for the exam:
 
 - Practice questions: use the quiz at the end of the course to practice. The quiz randomly selects 10 questions out of a pool of questions.
 
-  - [DataMiner Fundamentals quiz](https://community.dataminer.services/courses/dataminer-operator/quizzes/dataminer-fundamentals/)
+  - [DataMiner Fundamentals quiz](https://community.dataminer.services/courses/dataminer-fundamentals/quizzes/dataminer-fundamentals/)
   - [DataMiner Configurator quiz](https://community.dataminer.services/courses/dataminer-administrator/quizzes/dataminer-configurator/)
 
 - Schedule check-ins with your examiner via the booking page if you have any questions.
