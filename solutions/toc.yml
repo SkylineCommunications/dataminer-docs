@@ -333,17 +333,6 @@ items:
         topicUid: Installing_Asset_Management
       - name: Working with the Asset Management app
         topicUid: Working_with_Asset_Management
-    - name: DataMiner IT Tools (DITT)
-      topicUid: Dataminer_IT_Tool_Overview
-      items:
-      - name: Installing DITT
-        topicUid: Installing_DITT
-      - name: Working with DITT
-        topicUid: Working_with_DITT
-      - name: Opening PuTTY using DITT
-        topicUid: Open_Putty_with_DITT
-      - name: Implementing DITT in a visual overview
-        topicUid: Implementing_DITT_in_Visio
     - name: DataMiner Health Check Tool
       topicUid: DataMiner_Health_Check_Tool
       items:
@@ -355,6 +344,26 @@ items:
         topicUid: DataMiner_Health_Check_Usage
       - name: Health Check Tool Dashboards
         topicUid: DataMiner_Health_Dashboards
+    - name: DataMiner IT Tools (DITT)
+      topicUid: Dataminer_IT_Tool_Overview
+      items:
+      - name: Installing DITT
+        topicUid: Installing_DITT
+      - name: Working with DITT
+        topicUid: Working_with_DITT
+      - name: Opening PuTTY using DITT
+        topicUid: Open_Putty_with_DITT
+      - name: Implementing DITT in a visual overview
+        topicUid: Implementing_DITT_in_Visio
+    - name: PDF processing using AI
+      topicUid: processing_pdf_documents
+      items: 
+      - name: Installing and configuring the apps
+        topicUid: installing_processing_pdf_documents
+      - name: Using the apps
+        topicUid: using_the_apps_processing_pdf_documents
+      - name: Implementation details
+        topicUid: implementation_details_the_apps_processing_pdf_documents
     - name: DataMiner Planned Maintenance (PLM) tool
       topicUid: DataMiner_PLM_Tool_Overview
       items:
@@ -394,13 +403,3 @@ items:
         topicUid: Remote_PHY_Monitoring_components
       - name: Restricting access to Remote PHY Monitoring
         topicUid: Remote_PHY_Monitoring_Access_Restriction
-    - name: PDF processing using AI
-      topicUid: processing_pdf_documents
-      items: 
-      - name: Installing and configuring the apps
-        topicUid: installing_processing_pdf_documents
-      - name: Using the apps
-        topicUid: using_the_apps_processing_pdf_documents
-      - name: Implementation details
-        topicUid: implementation_details_the_apps_processing_pdf_documents
-
