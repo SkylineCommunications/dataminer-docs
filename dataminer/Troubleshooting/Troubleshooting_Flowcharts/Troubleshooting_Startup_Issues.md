@@ -296,10 +296,9 @@ DataMiner is unable to establish a connection to the database. This can be cause
    - UN (or up/normal): The node is running fine.
    - DN: The node is down. In some cases, this can mean data loss is occurring.
 
-1. If the node is up or you do not have access to the database server, check if you can connect with Cassandra using the DevCenter tool.
+1. If the node is up or you do not have access to the database server, check if you can connect with Cassandra using a query tool of your choice.
 
-   - You can find this tool in `C:\Program Files\Cassandra\DevCenter\Run DevCenter` (if storage per DMA is used instead of dedicated clustered storage), or it can be downloaded from the Apache or DataStax websites.
-   - You can find the IP of the database in *DB.xml*, in the *DBServer* tag.
+   You can find the IP of the database in *DB.xml*, in the *DBServer* tag.
 
    If you can connect to Cassandra:
 
