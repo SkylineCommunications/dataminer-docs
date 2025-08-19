@@ -16,7 +16,17 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
-*No new features have been added yet.*
+#### Profiles and Resources modules now support resource capacity ranges [ID 43438]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+DataMiner Cube now supports resource capacity ranges.
+
+- In the *Profiles* module, you can now create and edit parameters of type "Range", and when you configure a profile instance, you can now configure the value and requested capacity of such a parameter of type "Range".
+
+- In the *Resources* module, you can now configure the supported range capacity of a resource.
+
+See also: [Service & Resource Management: Support for capacity ranges [ID 43335]](xref:General_Feature_Release_10.5.9#service--resource-management-support-for-capacity-ranges-id-43335)
 
 ## Changes
 
