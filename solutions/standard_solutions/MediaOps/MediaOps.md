@@ -15,7 +15,7 @@ The MediaOps applications include the following features:
 
 ## MediaOps applications
 
-The following applications are included in the MediaOps package:
+After [installing dataminer.MediaOps](xref:MO_Installation), the following applications will be available:
 
 <div class="row">
   <div class="column">
@@ -31,9 +31,6 @@ The following applications are included in the MediaOps package:
   <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Scheduling.html" title="Scheduling" target="_self"><img src="~/solutions/images/mo_Scheduling.svg" style="width:100%"></a>
   </div>
 </div>
-
-> [!TIP]
-> To deploy the MediaOps package, go to the [MediaOps Standard Solution](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) in the Catalog. Make sure to first read the installation information on that page before you deploy the package.
 
 <!-- 
 [For later]: ## Building upon the standard applications
