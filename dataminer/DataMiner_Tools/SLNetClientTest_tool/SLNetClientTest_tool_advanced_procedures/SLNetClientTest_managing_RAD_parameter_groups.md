@@ -27,9 +27,9 @@ From DataMiner 10.5.4/10.6.0 onwards<!--RN 42181-->, it is possible to manage [r
 
    - *AddRADParameterGroupMessage*:
 
-     - *GroupInfo* > *AnomalyThreshold*: Optional. Defines the threshold for suggestion event generation. A higher value results in fewer suggestion events, a lower value results in more. If not specified, the default value 3 is used.
+     - *GroupInfo* > *AnomalyThreshold*: Optional. Defines the threshold for suggestion event generation. A higher value results in fewer suggestion events, a lower value results in more. If not specified, the default value `6` is used (`3` in versions prior to DataMiner 10.5.9/10.6.0<!--RN 43400-->).
 
-     - *GroupInfo* > *MinimumAnomalyDuration*: Optional. The minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly. If not specified, the default value 5 is used.
+     - *GroupInfo* > *MinimumAnomalyDuration*: Optional. The minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly. If not specified, the default value `15` is used (`5` in versions prior to DataMiner 10.5.9/10.6.0<!--RN 43400-->).
 
      - *GroupInfo* > *Name*: The name of the parameter group.
 
