@@ -76,6 +76,18 @@ We recommend uploading the package prior to the maintenance window for the upgra
 
 The folder `C:\Skyline DataMiner\Webpages\Public\` will now be synced between DataMiner Agents in a cluster. As a consequence, files that are installed in this folder can now also be included in the companion files of a DataMiner app package.
 
+#### DxMs upgraded [ID 43557]
+
+<!-- RN 43557: MR 10.6.0 - FR 10.5.10 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner CloudGateway 2.17.11
+
+The CloudGateway DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, they will not be installed.
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
 ### Fixes
 
 #### SLDataMiner issue after connection type of element changed [ID 43249]
