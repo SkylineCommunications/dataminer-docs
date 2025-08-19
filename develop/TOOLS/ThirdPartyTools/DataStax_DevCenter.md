@@ -14,7 +14,6 @@ Older DataMiner installers included this tool, but recent DataMiner installers (
 
 > [!TIP]
 >
-> - To download this tool, see [Downloading DataStax DevCenter](https://downloads.datastax.com/#devcenter).
 > - To install this tool, see [Installing DataStax DevCenter](https://docs.datastax.com/en/archived/developer/devcenter/doc/devcenter/dcInstallation.html).
 > - For general information on how to use this tool, see [Using DataStax DevCenter](https://docs.datastax.com/en/archived/developer/devcenter/doc/devcenter/dcToc.html).
 
