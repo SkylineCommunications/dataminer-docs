@@ -113,3 +113,9 @@ This DxM exists in tandem with service-specific [middleware](xref:Nuget_Communic
 
 > [!TIP]
 > See also: [OpenConfig Middleware](xref:DSI_OpenConfig_Middleware)
+
+### Data API
+
+The Data API module provides an HTTP interface that accepts requests with a JSON-formatted body. When required, it creates an element to store values extracted from the JSON payload.
+
+The Data API module, in combination with the Data Aggregator, is required for the Data Sources module. For more details, see [Data Sources](xref:Data_Sources).
