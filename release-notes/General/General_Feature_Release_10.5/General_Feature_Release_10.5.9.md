@@ -25,7 +25,7 @@ uid: General_Feature_Release_10.5.9
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-A new BPA test named "Large Alarm Trees" is now available. This test will retrieve the active alarm trees and check if any are getting too large, because excessively large alarm trees can potentially have a negative impact on your DataMiner System. If any large alarm trees are found, so you will need to take the necessary [corrective actions](xref:Best_practices_for_assigning_alarm_severity_levels#keep-alarm-trees-from-growing-too-large).
+A new BPA test named "Large Alarm Trees" is now available. This test will retrieve the active alarm trees and check if any are getting too large, because excessively large alarm trees can potentially have a negative impact on your DataMiner System. If any large alarm trees are found, you will need to take the necessary [corrective actions](xref:Best_practices_for_assigning_alarm_severity_levels#keep-alarm-trees-from-growing-too-large).
 
 The BPA test is available in System Center on the *Agents > BPA* tab.
 
@@ -283,7 +283,7 @@ If the database consists of a single node at the time of index creation, an inde
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-From now on, an information event will be generated when an element was successfully swarmed.
+From now on, an information event will be generated when an element has been successfully swarmed.
 
 Example:
 

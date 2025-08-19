@@ -43,30 +43,6 @@ From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 42003-->, to verify tha
 > [!NOTE]
 > If you encounter issues when trying to enable the GQI DxM, refer to [GQI DxM repair](xref:Investigating_Web_Issues#gqi-dxm-repair)
 
-## Architecture
-
-The GQI DxM comprises multiple processes that work together to handle GQI requests and execute these efficiently. This architecture ensures modularity, scalability, and efficient communication between the different components.
-
-- **Parent process** (DataMiner GQI.exe - Windows Service)
-
-  The parent process serves as the main entry point for all GQI operations, managing the core functionality, such as query sessions, the built-in data sources and operators, and execution of the query requests. When a query utilizes GQI extensions (ad hoc data sources or custom operators), the parent process spawns one or more child processes to handle these extensions.
-
-  - Technology: .NET 8.
-  - Communication: Connects to the DataMiner Agent via gRPC (APIGateway).
-
-- **Child processes** (DataMiner GQI.ExtensionsWorker.Automation.exe)
-
-  Each extension (per library) runs within its own child process, ensuring isolation and modularity. In Task Manager, you can determine the specific extension a child process is executing by checking the command line arguments.
-
-  - Technology: .NET Framework 4.
-
-- **Communication process** (DataMiner GQI.ExtensionsWorker.SLNet.exe)
-
-  The communication process facilitates communication between GQI extensions and the DataMiner Agent through SLNet. All extensions for a given user utilize the same SLNet connection, optimizing resource usage.
-
-  - Technology: .NET Framework 4.
-  - Communication: Connects to the DataMiner Agent via IPC (SLNet).
-
 ## Configuration
 
 The GQI DxM can be configured via JSON configuration files. The default configuration can be found in `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.json`. Do **not** use this file to change settings, because it will be overwritten whenever a new version of the GQI DxM is installed.
