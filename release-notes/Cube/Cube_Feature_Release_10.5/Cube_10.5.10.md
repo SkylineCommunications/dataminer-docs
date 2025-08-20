@@ -91,3 +91,9 @@ When the WebView2 browser was used in Cube, exceptions could be shown in case an
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 When elements were migrated between DataMiner Agents via the Element Migration window in System Center, it could occur that alarm data was not included in the migration. Now the alarm data will be properly included in the migration again.
+
+#### System Center: Problem when performing a DataMiner upgrade while being connected to a DMA in a Failover system based on hostname [ID 43513]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+When, in System Center, you performed a DataMiner upgrade while Cube was connected to a DataMiner Agent that was part of a Failover system based on hostname, up to now, the upgrade could fail to start after the package had been uploaded.
