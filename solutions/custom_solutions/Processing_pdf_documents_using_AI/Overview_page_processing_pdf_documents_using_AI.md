@@ -10,9 +10,9 @@ This sample package shows how cloud AI tools, such as OCR (Optical Character Rec
 
 Here are some examples of **use cases**:
 
-- Processing PDF documents to extract parameters from them (implemented in this example package)
-- Processing order information from unstructured text such as emails
-- Processing incident information from unstructured text
+- Processing PDF documents to extract parameters from them (implemented in this example package).
+- Processing order information from unstructured text such as emails.
+- Processing incident information from unstructured text.
 
 > [!TIP]
 > Feel free to [contact us](mailto:team.product.marketing@skyline.be) with additional use cases.

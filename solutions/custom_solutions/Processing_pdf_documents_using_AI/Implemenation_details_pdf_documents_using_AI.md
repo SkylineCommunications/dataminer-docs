@@ -30,7 +30,7 @@ The *Load From File* button launches an interactive Automation script *SLC-TextA
 
 1. Process the file using the Document Intelligence AI service.
 
-   The AI service will return markdown formatted text to the script.
+   The AI service will return Markdown-formatted text to the script.
 
 1. Provide the Markdown-formatted text from the document to the LLM together with a predefined prompt.
 
@@ -42,6 +42,6 @@ The *Load From File* button launches an interactive Automation script *SLC-TextA
 
 1. Use the results from the LLM models to create two DOM instances.
 
-   The script will create one instance that contain the raw values for the extracted parameters from the document (not shown in the app) and another containing the mapped results.
+   The script will create one instance containing the raw values for the extracted parameters from the document (not shown in the app) and another containing the mapped results.
 
 1. Visualize a list of the processed documents (on the left), together with an embedded view of the PDF and the mapped parameters extracted from the parameters (on the right).
