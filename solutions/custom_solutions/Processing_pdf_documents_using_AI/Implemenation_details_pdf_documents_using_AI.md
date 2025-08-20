@@ -2,7 +2,7 @@
 uid: implementation_details_the_apps_processing_pdf_documents
 ---
 
-# Implementation Details
+# Implementation details
 
 This page explains in detail how the sample applications have been built. This way, you will easily be able to start from this sample to build your own solution that leverages LLM models to transform unstructured data from within DataMiner.
 
