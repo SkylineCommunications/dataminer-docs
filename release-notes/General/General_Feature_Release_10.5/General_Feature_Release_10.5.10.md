@@ -108,6 +108,12 @@ When Swarming was enabled, in some rare cases, SLDMS and SLDataMiner could get i
 
 When a lot of concurrent requests had to be processed by the Repository API in the background, e.g. to retrieve or update bookings, this could cause thread starvation in SLDataGateway, causing these requests to be handled much more slowly than usual.
 
+#### SLDataGateway: Problem when NULL values were written to indexed logger tables [ID 43456]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, a `NullReference` exception would be thrown in SLDataGateway when NULL values were written to indexed logger tables.
+
 #### Failed upgrade action because of duplicate keys for SNMPv3 elements [ID 43477]
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->

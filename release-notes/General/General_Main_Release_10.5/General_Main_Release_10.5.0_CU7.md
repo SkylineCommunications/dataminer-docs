@@ -31,6 +31,12 @@ In some cases, a problem could occur in SLDataMiner when the connection type of 
 
 When Swarming was enabled, in some rare cases, SLDMS and SLDataMiner could get into a deadlock when the system contained redundancy groups in which DVE child elements acted as primary or backup elements.
 
+#### SLDataGateway: Problem when NULL values were written to indexed logger tables [ID 43456]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, a `NullReference` exception would be thrown in SLDataGateway when NULL values were written to indexed logger tables.
+
 #### Failed upgrade action because of duplicate keys for SNMPv3 elements [ID 43477]
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.9 -->
