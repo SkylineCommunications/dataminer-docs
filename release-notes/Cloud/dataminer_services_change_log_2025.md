@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### TDB - Enhancement - Admin - Unmanaged Objects Usage visibility and export posibility
+### 18 August 2025 - Enhancement - Admin - Unmanaged Objects Usage visibility and export posibility
 
-In the Admin app, the usage for unmanaged objects will now be displayed if you are using at least DataMiner 10.5.5 and DataMiner SupportAssistant 1.7.3. The data will also be available for export.
+In the Admin app, the usage for unmanaged objects will now be displayed if you are using at least DataMiner 10.5.5/10.6.0 and DataMiner SupportAssistant 1.7.3. The data will also be available for export.
 
 ### 16 July 2025 - Enhancement - Startup and upgrade progress displayed when remotely accessing Cube
 
