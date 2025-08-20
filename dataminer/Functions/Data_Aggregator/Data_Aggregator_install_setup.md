@@ -60,3 +60,6 @@ Data Aggregator does not necessarily have to be installed on a server running a 
   However, the DxM will only be upgraded if an older version is already installed on the DMA. If no older version is found, it will not be installed.
 
 - Alternatively, you can **manually update** Data Aggregator [via the dataminer.services Admin app](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions).
+
+  > [!NOTE]
+  > When upgrading the Data Aggregator module from version 2.x.x to 3.0.0 or higher, and if your prior installation included configured GQI queries, a one-time migration process using a [Data Aggregator Migrator](xref:Data_Aggregator_Migrators#upgrading-from-version-2xx) is necessary.
