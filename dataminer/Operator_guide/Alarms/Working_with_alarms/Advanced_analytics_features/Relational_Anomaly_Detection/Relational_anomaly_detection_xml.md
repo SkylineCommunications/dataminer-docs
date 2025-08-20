@@ -7,7 +7,7 @@ uid: Relational_anomaly_detection_xml
 > [!IMPORTANT]
 > From DataMiner 10.5.9/10.6.0 onwards<!--RN 43320-->, RAD configuration settings are no longer stored in the *RelationalAnomalyDetection.xml* file, and all configuration must be done using either the [RAD Manager](xref:RAD_manager) or the [RAD API](xref:RAD_API). **The procedure below only applies to versions prior to DataMiner 10.5.9/10.6.0.**
 
-Up to DataMiner 10.5.8, the parameter groups that are monitored by *relational anomaly detection* are specified in the configuration file `C:\Skyline DataMiner\Analytics\RelationalAnomalyDetection.xml`. Each DMA has a separate configuration file specifying the groups that are monitored by that DMA. In the file on a given DMA, you can only specify parameters hosted on that DMA.
+In Feature Release versions up to DataMiner 10.5.8, the parameter groups that are monitored by *relational anomaly detection* are specified in the configuration file `C:\Skyline DataMiner\Analytics\RelationalAnomalyDetection.xml`. Each DMA has a separate configuration file specifying the groups that are monitored by that DMA. In the file on a given DMA, you can only specify parameters hosted on that DMA.
 
 To add a new parameter group, follow these steps.
 
