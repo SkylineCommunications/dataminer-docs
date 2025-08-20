@@ -38,6 +38,16 @@ See also: [Service & Resource Management: Support for capacity ranges [ID 43335]
 
 The notification shown in Cube when an alarm storm is triggered has been improved. Previously, it only mentioned the number of alarms with a specific description that had entered Cube. Now the notification will also mention the protocols of the alarms. The same also goes for the tooltip shown for an alarm storm. In addition, the alarm details card for the alarm storm alarm will now also include a list of the protocols of the alarms involved. Finally, the total count of the alarms mentioned in the notification and used to determine when to enter or leave an alarm storm has also been improved, taking up to 20 alarms from the existing alarm tree into account.
 
+#### Automation, Correlation & Scheduler apps: 'Send email' action now allows you to select a private dashboard [ID 43394]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+In a *Send email* action, it is now possible to select a private dashboard provided you have access to it.
+
+If you try to edit a *Send email* action linked to a private dashboard you do not have access to, the following error message will appear. However, you will be allowed to replace it by a dashboard you do have access to.
+
+`This dashboard doesn't exist or you don't have access.`
+
 #### Security enhancements [ID 43483]
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
