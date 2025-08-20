@@ -158,6 +158,10 @@ After you have migrated to BrokerGateway, there are two different ways you can g
 
 - Follow the same procedure as when you [run the migration manually](#running-the-migration-manually), but use the `uninstall` command instead of the `install` command. In this case, the same restrictions apply as for the migration: this must happen on all DataMiner Agents in the cluster at the same time.
 
+## Data Aggregator
+
+[Data Aggregator](xref:Data_Aggregator_DxM) can connect to multiple DMS. When a specific DMS is migrated to BrokerGateway, any Data Aggregator configuration that connects to this DMS must be manually [updated](xref:Data_Aggregator_settings#dms-with-brokergateway).
+
 ## FAQ
 
 ### Can I run a cluster with both SLNet-managed NATS and BrokerGateway-managed NATS?
