@@ -6,8 +6,6 @@ uid: Data_Aggregator_DxM
 
 The Data Aggregator module is available as a DxM ([DataMiner Extension Module](xref:DataMinerExtensionModules)) that can be used to schedule GQI queries to run periodically at fixed times, dates, or intervals. It can connect to multiple DataMiner Systems and combine the results of the GQI queries executed per DMS into one result. This result can then be exported to a CSV file or made available over a WebSocket connection.
 
-This DxM is included in DataMiner upgrade packages from DataMiner 10.5.9/10.6.0 onwards<!--RN 43334-->. However, the DxM will only be upgraded if an older version is found on the DMA. If no older version is found, it will not be installed.
-
 - [Installation and setup](xref:Data_Aggregator_install_setup)
 
 - [Settings overview](xref:Data_Aggregator_settings)
