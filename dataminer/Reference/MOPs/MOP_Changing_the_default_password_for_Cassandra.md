@@ -41,7 +41,7 @@ The previous requirements are met.
     create role newUserName with superuser=true and login=true and password='newUserPassword’;
     ```
 
-1. Edit the localhost connection to use the new username and password, and confirm that this works.
+1. Reconnect using the new username and password, and confirm that this works.
 
 1. Optionally, remove the old "root" user. To do so, first make sure the database connection uses the new credentials, and then use the following command:
 
