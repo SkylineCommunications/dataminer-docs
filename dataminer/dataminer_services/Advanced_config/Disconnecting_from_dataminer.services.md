@@ -1,6 +1,7 @@
 ---
 uid: Disconnecting_from_dataminer.services
 keywords: disconnect from the cloud
+reviewer: Alexander Verkest
 ---
 
 # Disconnecting from dataminer.services

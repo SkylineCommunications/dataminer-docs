@@ -1,5 +1,6 @@
 ---
 uid: Managing_your_shares
+reviewer: Alexander Verkest
 ---
 
 # Managing your shares

@@ -1,6 +1,7 @@
 ---
 uid: CloudConnectionVerification
 keywords: cloud organization, cloud connection
+reviewer: Alexander Verkest
 ---
 
 # Getting your organization verified
