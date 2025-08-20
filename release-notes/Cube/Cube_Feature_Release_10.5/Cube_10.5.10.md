@@ -48,6 +48,12 @@ If you try to edit a *Send email* action linked to a private dashboard you do no
 
 `This dashboard doesn't exist or you don't have access.`
 
+#### Trending: Enhanced performance when loading trend graphs [ID 43433]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+Because of a number of enhancements, overall performance has increased when loading trend graphs.
+
 #### Security enhancements [ID 43483]
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
