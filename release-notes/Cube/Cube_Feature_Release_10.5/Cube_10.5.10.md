@@ -60,6 +60,12 @@ Because of a number of enhancements, overall performance has increased when load
 
 A number of security enhancements have been made.
 
+#### Data Display: Enhanced error handling when saving and loading matrix crosspoints over gRPC connections [ID 43516]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+Overall error handling has been improved when saving and loading crosspoints of matrix parameters over gRPC connections.
+
 ### Fixes
 
 #### Dummy placeholders not accepted in redundancy group configuration [ID 43464]

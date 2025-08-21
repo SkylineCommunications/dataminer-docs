@@ -38,6 +38,14 @@ When a shape linked to an element, service, or view was clicked in Visual Overvi
 
 An enhancement has been implemented to the way the GQI DxM deals with extensions. This will improve performance and also prevent possible performance issues in case a large number of active GQI extension libraries are used, for example when many extension libraries are activated by the Copilot DxM.
 
+#### Low-Code Apps: 'Settings' option in '...' menu renamed to 'Permissions' [ID 43536]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, when you opened the "..." menu in the upper-right corner of a low-code app, you could select *Settings* to open the *Application settings* window.
+
+As this window allows you to set the user permissions of the app in question, the menu option has now been renamed from *Settings* to *Permissions*.
+
 ### Fixes
 
 #### GQI DxM: MessageBroker/SLNet not reconnected immediately after app settings change [ID 43386]
