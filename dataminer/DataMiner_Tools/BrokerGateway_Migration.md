@@ -15,6 +15,8 @@ Note that prior to DataMiner 10.5.0 [CU4]/10.5.7, this migration requires a Data
 
 From DataMiner 10.6.0 onwards, this migration will happen automatically during a DataMiner upgrade.
 
+After the migration, you may need to [update your Data Aggregator configuration](#updating-the-data-aggregator-configuration).
+
 ## Prerequisites
 
 Before you start the migration, the entire cluster must have been running smoothly for some time. This means that all DataMiner Agents in the cluster must be online and function together for at least 15 minutes. To confirm that the DMS is ready to be migrated, run the [Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites) BPA.
@@ -157,6 +159,10 @@ After you have migrated to BrokerGateway, there are two different ways you can g
 - Download and run the package [NATSMigrationRollback.dmupgrade](https://community.dataminer.services/download/natsmigrationrollback-dmupgrade/).
 
 - Follow the same procedure as when you [run the migration manually](#running-the-migration-manually), but use the `uninstall` command instead of the `install` command. In this case, the same restrictions apply as for the migration: this must happen on all DataMiner Agents in the cluster at the same time.
+
+## Updating the Data Aggregator configuration
+
+[Data Aggregator](xref:Data_Aggregator_DxM) can connect to multiple DataMiner Systems. When a specific DMS is migrated to BrokerGateway, any Data Aggregator configuration that connects to this DMS must be [manually updated](xref:Data_Aggregator_settings#dms-with-brokergateway).
 
 ## FAQ
 
