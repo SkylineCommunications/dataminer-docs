@@ -142,7 +142,7 @@ Use this documentation as a basis to build or improve dashboards and low-code ap
 
 - Make sure you **choose the right visualization** for your data.
 
-- Make sure you add **[a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message)** that guides your user.
+- If the data displayed by a component depend on a query, make sure you add **[a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message)** that helps the user in case the query returns no results.
 
 ### Title (Web component)
 
