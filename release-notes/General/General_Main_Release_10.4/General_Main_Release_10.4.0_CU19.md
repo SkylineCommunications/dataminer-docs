@@ -42,3 +42,9 @@ In some cases, it could occur that the SyncInfo file contained duplicate keys fo
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 Up to now, when multiple NATSCustodian calls tried to retrieve the NATS credentials simultaneously, in some cases, those credentials could get corrupted.
+
+#### Problem with gRPC connections [ID 43542]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+In some cases, a deadlock could occur in the `Grpc.Net.Client` library, causing active gRPC connections to get stuck.
