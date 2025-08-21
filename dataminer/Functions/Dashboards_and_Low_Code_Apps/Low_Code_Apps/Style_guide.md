@@ -108,7 +108,7 @@ Use this documentation as a basis to build or improve dashboards and low-code ap
   > [!NOTE]
   > When up to two components fill an entire page with no margins, you can place action buttons on the left side of the header bar. Just do not use them as tabs.
 
-- If you are using the header bar as tabs, make sure you **show a title on each page** or **use a circle icon that is filled** on the selected page.
+- If you are using buttons in the header bar as tabs, make sure you **show a title on each page** or **use a circle icon that is filled** on the selected page.
 
 - Place the "About" page **at the bottom** of the sidebar and **use the info circle icon**.
 
