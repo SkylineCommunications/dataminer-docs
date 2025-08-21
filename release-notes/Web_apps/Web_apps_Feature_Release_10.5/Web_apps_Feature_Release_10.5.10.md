@@ -90,3 +90,9 @@ In some cases, it could occur that a line chart in a PDF received unexpected dat
 <!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
 
 When a PDF was generated based on a dashboard, it could occur that some components were rendered twice, because they were interpreted both as a feed and as a regular component, which caused the generation time to take much longer than necessary. Now if a component is in the regular components group, it will not also be added in the feed components group, reducing the time it takes to generate the PDF.
+
+#### DataMiner landing page: Certain letters in the DMS name would be cut off when using Firefox [ID 43563]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When you opened the DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`) in Mozilla Firefox, up to now, certain letters in the DMS name would be cut off, especially letters with descenders like g, j, q, p, or y.
