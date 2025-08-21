@@ -28,12 +28,20 @@ This BPA test is available on demand. You can [run it in System Center](xref:Run
 
 ### Error
 
-- Unable to find existing services in Windows Registry.
-- Service \<servicename\> v\<version\> uses \<dll name\> file version \<dll version\>. It must be at least version 3.0.0. Please update this DxM to the latest version.
-- ClusterEndpoints.json file does not exist at C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json.
-- Unable to find IgnitionValue for endpoint \<endpoint\>.
-- IgnitionValue for endpoint \<endpoint\> is null.
-- Exception while reading C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json. \<exception\>
+- **Unable to find existing services in Windows Registry:**
+  The NAS/NATS services could not be located.
+  Verify that the NAS/NATS services are installed. If they are missing, install them via [SLEndpointTool](xref:Investigating_NATS_Issues#remaining-steps).  
+- **Service \<servicename\> v\<version\> uses \<dll name\> file version \<dll version\>. It must be at least version 3.0.0. Please update this DxM to the latest version:**
+  The service is running with an outdated DLL. A minimum version of 3.0.0 is required.
+  Upgrade the affected DxMs to the latest version via the [Admin app](xref:Managing_cloud-connected_nodes#Upgrading nodes to the latest DxM versions).
+- **ClusterEndpoints.json file does not exist at C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json:**
+  The file C:\Skyline DataMiner\Configurations\ClusterEndpoints.json is missing.
+  Restart the entire DMS to regenerate the file on each DMA.
+- **Unable to find IgnitionValue for endpoint \<endpoint\>/IgnitionValue for endpoint \<endpoint\> is null:**
+  The ClusterEndpoints.json file does not contain the required IgnitionValue data.
+  Delete the existing ClusterEndpoints.json file and restart the DMS to recreate it.
+- **Exception while reading C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json:**
+  Check if another process has placed a lock on the file and release it if necessary.
 
 ### Warning
 
