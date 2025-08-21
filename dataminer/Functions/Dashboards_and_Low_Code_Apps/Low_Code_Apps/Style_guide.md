@@ -5,7 +5,7 @@ reviewer: Rens Ampe
 
 # Dashboards and Low-Code Apps style guide
 
-Use this documentation as a basis to build or improve dashboards and low-code apps. This guide will allow you to create intuitive, visually appealing solutions, ensuring that users experience consistent behavior across different dashboards and low-code apps. Note that many things will only be applicable for low-code apps, as dashboards have more limited possibilities.
+Use this documentation as a basis to build or improve dashboards and low-code apps. This guide will allow you to create intuitive, visually appealing solutions, ensuring that users experience consistent behavior across different dashboards and low-code apps. For DevOps Engineers at Skyline, adhering to this style guide is mandatory. Note that many things will only be applicable for low-code apps, as dashboards have more limited possibilities.
 
 > [!NOTE]
 > If you come across something that has not been added to this style guide yet, [create a pull request](xref:CTB_Quick_Edit) to update this documentation.
