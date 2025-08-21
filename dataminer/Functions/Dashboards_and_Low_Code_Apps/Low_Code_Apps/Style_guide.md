@@ -142,11 +142,15 @@ Use this documentation as a basis to build or improve dashboards and low-code ap
 
 - Make sure you **choose the right visualization** for your data.
 
+  For example, if your data is event-based, show it on a timeline, or if your data is location-based, show it on a map.
+
 - If the data displayed by a component depend on a query, make sure you add **[a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message)** that helps the user in case the query returns no results.
 
-### Title (Web component)
+### Titles
 
-- Titles are optional on pages, depending on whether users will need **more context information** about what they are looking at.
+- You can add a title to a page by using a web component. This is optional, depending on whether users will need **more context information** about what they are looking at.
+
+  For example, most one-page apps will not need a title, but if a page uses buttons in the header bar as tabs, a title tends to be needed.
 
 - Start from this title:
 
@@ -177,7 +181,7 @@ Use this documentation as a basis to build or improve dashboards and low-code ap
 
 ### Images
 
-- Do not add customer logos.
+- Avoid adding logos.
 
 - Do not add unnecessary images.
 
