@@ -46,6 +46,14 @@ Up to now, when you opened the "..." menu in the upper-right corner of a low-cod
 
 As this window allows you to set the user permissions of the app in question, the menu option has now been renamed from *Settings* to *Permissions*.
 
+#### Dashboards app: A notice will now appear when a PDF report is being generated in a browser tab [ID 43548]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When a PDF report is being generated in a particular browser tab, from now on, the following notice will appear:
+
+`Please keep this tab active to ensure the PDF is generated correctly.`
+
 ### Fixes
 
 #### GQI DxM: MessageBroker/SLNet not reconnected immediately after app settings change [ID 43386]
