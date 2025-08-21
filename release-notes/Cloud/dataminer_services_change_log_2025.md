@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 18 August 2025 - Enhancement - Admin - Unmanaged objects usage visibility and export possibility
+
+In the Admin app, the usage for unmanaged objects will now be displayed if you are using at least DataMiner 10.5.5/10.6.0 and DataMiner SupportAssistant 1.7.3. The data will also be available for export.
+
 ### 16 July 2025 - Enhancement - Startup and upgrade progress displayed when remotely accessing Cube
 
 From now on, if you remotely access the Cube desktop app while the DataMiner System is starting up or while an upgrade is in progress, the progress will be displayed instead of an error. Upgrading the DataMiner System while remotely accessing Cube will also no longer disconnect the session but will instead show the upgrade progress.

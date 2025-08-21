@@ -38,6 +38,22 @@ When a shape linked to an element, service, or view was clicked in Visual Overvi
 
 An enhancement has been implemented to the way the GQI DxM deals with extensions. This will improve performance and also prevent possible performance issues in case a large number of active GQI extension libraries are used, for example when many extension libraries are activated by the Copilot DxM.
 
+#### Low-Code Apps: 'Settings' option in '...' menu renamed to 'Permissions' [ID 43536]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, when you opened the "..." menu in the upper-right corner of a low-code app, you could select *Settings* to open the *Application settings* window.
+
+As this window allows you to set the user permissions of the app in question, the menu option has now been renamed from *Settings* to *Permissions*.
+
+#### Dashboards app: A notice will now appear when a PDF report is being generated in a browser tab [ID 43548]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When a PDF report is being generated in a particular browser tab, from now on, the following notice will appear:
+
+`Please keep this tab active to ensure the PDF is generated correctly.`
+
 ### Fixes
 
 #### GQI DxM: MessageBroker/SLNet not reconnected immediately after app settings change [ID 43386]
@@ -56,3 +72,27 @@ When the app settings for the GQI DxM are modified, the MessageBroker and SLNet 
 Each open browser tab has its own WebSocket channel. When such a channel is closed, the Web API checks whether certain resources need to be cleaned up.
 
 Up to now, when a single channel was closed, all temporary PDF files would incorrectly be removed for all connections. As a result, if any PDF was being generated when a channel was closed, that generation would fail.
+
+#### Dashboards/Low-Code Apps: Components sharing GQI sessions could interrupt each other [ID 43470]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When different components in a dashboard or low-code-app used the same query, one component could interrupt the data retrieval for the other component, leading to GQI visualizations that were stuck in a loading state.
+
+#### Dashboards app: PDF generation stuck because line chart received unexpected data points [ID 43472]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+In some cases, it could occur that a line chart in a PDF received unexpected data points from the server, which caused the chart to never be marked as finished. When a PDF was generated of such a chart, the PDF creation process never completed, never resulting in a finished PDF.
+
+#### Dashboards app: Dashboard components rendered twice when generating PDF [ID 43490]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When a PDF was generated based on a dashboard, it could occur that some components were rendered twice, because they were interpreted both as a feed and as a regular component, which caused the generation time to take much longer than necessary. Now if a component is in the regular components group, it will not also be added in the feed components group, reducing the time it takes to generate the PDF.
+
+#### DataMiner landing page: Certain letters in the DMS name would be cut off when using Firefox [ID 43563]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When you opened the DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`) in Mozilla Firefox, up to now, certain letters in the DMS name would be cut off, especially letters with descenders like g, j, q, p, or y.

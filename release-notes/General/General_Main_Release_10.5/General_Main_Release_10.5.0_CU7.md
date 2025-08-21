@@ -25,8 +25,26 @@ uid: General_Main_Release_10.5.0_CU7
 
 In some cases, a problem could occur in SLDataMiner when the connection type of an element changed. To prevent this, the validation of SNMPv3 usernames has now been improved.
 
+#### Swarming: Problem when redundancy groups contained DVE child elements acting as primary or backup elements [ID 43286] [ID 43492]
+
+<!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When Swarming was enabled, in some rare cases, SLDMS and SLDataMiner could get into a deadlock when the system contained redundancy groups in which DVE child elements acted as primary or backup elements.
+
+#### SLDataGateway: Problem when NULL values were written to indexed logger tables [ID 43456]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, a `NullReference` exception would be thrown in SLDataGateway when NULL values were written to indexed logger tables.
+
 #### Failed upgrade action because of duplicate keys for SNMPv3 elements [ID 43477]
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.9 -->
 
 In some cases, it could occur that the SyncInfo file contained duplicate keys for SNMPv3 elements, which would cause upgrade actions to fail with the following error message: `UpgradeAction failed:System.ArgumentException: An item with the same key has already been added.`
+
+#### SLNet-managed NATS solution: Problem when multiple calls accessed the NATS credentials simultaneously [ID 43504]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, when multiple NATSCustodian calls tried to retrieve the NATS credentials simultaneously, in some cases, those credentials could get corrupted.

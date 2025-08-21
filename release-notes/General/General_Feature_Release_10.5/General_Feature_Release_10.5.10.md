@@ -76,6 +76,18 @@ We recommend uploading the package prior to the maintenance window for the upgra
 
 The folder `C:\Skyline DataMiner\Webpages\Public\` will now be synced between DataMiner Agents in a cluster. As a consequence, files that are installed in this folder can now also be included in the companion files of a DataMiner app package.
 
+#### DxMs upgraded [ID 43557]
+
+<!-- RN 43557: MR 10.6.0 - FR 10.5.10 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner CloudGateway 2.17.11
+
+The CloudGateway DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, they will not be installed.
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
 ### Fixes
 
 #### SLDataMiner issue after connection type of element changed [ID 43249]
@@ -84,14 +96,39 @@ The folder `C:\Skyline DataMiner\Webpages\Public\` will now be synced between Da
 
 In some cases, a problem could occur in SLDataMiner when the connection type of an element changed. To prevent this, the validation of SNMPv3 usernames has now been improved.
 
+#### Swarming: Problem when redundancy groups contained DVE child elements acting as primary or backup elements [ID 43286] [ID 43492]
+
+<!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When Swarming was enabled, in some rare cases, SLDMS and SLDataMiner could get into a deadlock when the system contained redundancy groups in which DVE child elements acted as primary or backup elements.
+
 #### Slow handling of concurrent requests to retrieve or update bookings [ID 43450]
 
 <!-- MR 10.6.0 - FR 10.5.10 -->
 
 When a lot of concurrent requests had to be processed by the Repository API in the background, e.g. to retrieve or update bookings, this could cause thread starvation in SLDataGateway, causing these requests to be handled much more slowly than usual.
 
+#### SLDataGateway: Problem when NULL values were written to indexed logger tables [ID 43456]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, a `NullReference` exception would be thrown in SLDataGateway when NULL values were written to indexed logger tables.
+
+#### Swarming: Problem when trying to retrieve an element from the SLNet event cache while it was being swarmed [ID 43461]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+<!-- Not added to MR 10.6.0 -->
+
+In some rare cases, an error could occur when trying to retrieve an element from the SLNet event cache while it was being swarmed.
+
 #### Failed upgrade action because of duplicate keys for SNMPv3 elements [ID 43477]
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 In some cases, it could occur that the SyncInfo file contained duplicate keys for SNMPv3 elements, which would cause upgrade actions to fail with the following error message: `UpgradeAction failed:System.ArgumentException: An item with the same key has already been added.`
+
+#### SLNet-managed NATS solution: Problem when multiple calls accessed the NATS credentials simultaneously [ID 43504]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, when multiple NATSCustodian calls tried to retrieve the NATS credentials simultaneously, in some cases, those credentials could get corrupted.

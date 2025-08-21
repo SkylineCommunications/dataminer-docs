@@ -693,11 +693,11 @@ In some rare cases, certain log files could have their maximum size incorrectly 
 
 From now on, by default, all log files will have their maximum size set to 10 MB.
 
-#### Failover: Problem when synchronizing the ClusterEndpoints.json files on large systems [ID 43407]
+#### SLNet memory leak caused by ClusterEndpoint.json sync [ID 43407]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
-In large DataMiner Systems, in some cases, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely.
+In large DataMiner Systems, especially in clusters with Failover Agents, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely. This could lead to a serious memory leak in SLNet, causing DataMiner Agents to disconnect frequently.
 
 #### SLAnalytics - Pattern matching: Problem when retrieving the streaming matches [ID 43419]
 

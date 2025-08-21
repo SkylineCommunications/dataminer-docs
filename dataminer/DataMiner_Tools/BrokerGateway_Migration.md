@@ -7,13 +7,15 @@ uid: BrokerGateway_Migration
 From DataMiner 10.5.0 [CU2]/10.5.5 onwards<!-- RN 42573 -->, you can migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) using the "NATSMigration" tool. Prior to this, starting from DataMiner 10.5.0/10.5.2, this feature is available in [soft launch](xref:SoftLaunchOptions).
 
 > [!IMPORTANT]
-> To be able to start this migration, the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft-launch option may not be disabled on any DataMiner Agent in the cluster. From DataMiner 10.5.0 [CU5]/10.5.8 onwards<!-- RN 43370 -->, this option can be disabled to prevent possible issues on systems where no migration is planned.
+> To be able to start this migration, the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft-launch option may not be disabled on any DataMiner Agent in the cluster. In DataMiner 10.5.0 [CU5]/10.5.8<!-- RN 43370 -->, this option can be disabled to prevent possible issues on systems where no migration is planned.
 
 Once the [prerequisites](#prerequisites) are met, you can either [run an automatic migration](#running-an-automatic-migration) or [run the migration manually](#running-the-migration-manually).
 
 Note that prior to DataMiner 10.5.0 [CU4]/10.5.7, this migration requires a DataMiner restart.<!-- RN 42930 -->
 
 From DataMiner 10.6.0 onwards, this migration will happen automatically during a DataMiner upgrade.
+
+After the migration, you may need to [update your Data Aggregator configuration](#updating-the-data-aggregator-configuration).
 
 ## Prerequisites
 
@@ -157,6 +159,10 @@ After you have migrated to BrokerGateway, there are two different ways you can g
 - Download and run the package [NATSMigrationRollback.dmupgrade](https://community.dataminer.services/download/natsmigrationrollback-dmupgrade/).
 
 - Follow the same procedure as when you [run the migration manually](#running-the-migration-manually), but use the `uninstall` command instead of the `install` command. In this case, the same restrictions apply as for the migration: this must happen on all DataMiner Agents in the cluster at the same time.
+
+## Updating the Data Aggregator configuration
+
+[Data Aggregator](xref:Data_Aggregator_DxM) can connect to multiple DataMiner Systems. When a specific DMS is migrated to BrokerGateway, any Data Aggregator configuration that connects to this DMS must be [manually updated](xref:Data_Aggregator_settings#dms-with-brokergateway).
 
 ## FAQ
 
