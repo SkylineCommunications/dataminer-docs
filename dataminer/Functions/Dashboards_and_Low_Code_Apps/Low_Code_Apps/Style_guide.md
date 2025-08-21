@@ -103,7 +103,7 @@ Use this documentation as a basis to build or improve dashboards and low-code ap
 
 ## Navigation
 
-- Use the sidebar as the main navigation to the different pages defined in the app. When there are too many pages in your sidebar, or if you want to show the same data in another way, use the header bar as tabs to open hidden pages.
+- Use the sidebar as the main navigation to the different pages defined in the app. When there are too many pages in your sidebar, or if you want to show the same data in another way, use buttons in the header bar as tabs to open hidden pages.
 
   > [!NOTE]
   > When up to two components fill an entire page with no margins, you can place action buttons on the left side of the header bar. Just do not use them as tabs.
