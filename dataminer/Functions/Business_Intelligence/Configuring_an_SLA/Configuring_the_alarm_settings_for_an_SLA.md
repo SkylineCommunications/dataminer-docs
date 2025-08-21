@@ -1,6 +1,6 @@
 ---
 uid: Configuring_the_alarm_settings_for_an_SLA
-keywords: Violation Configuration, Violation, Violation Settings
+keywords: violation configuration, violation, violation settings
 ---
 
 # Configuring the alarm settings for an SLA
