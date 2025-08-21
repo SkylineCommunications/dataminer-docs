@@ -114,6 +114,13 @@ When a lot of concurrent requests had to be processed by the Repository API in t
 
 Up to now, a `NullReference` exception would be thrown in SLDataGateway when NULL values were written to indexed logger tables.
 
+#### Swarming: Problem when trying to retrieve an element from the SLNet event cache while it was being swarmed [ID 43461]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+<!-- Not added to MR 10.6.0 -->
+
+In some rare cases, an error could occur when trying to retrieve an element from the SLNet event cache while it was being swarmed.
+
 #### Failed upgrade action because of duplicate keys for SNMPv3 elements [ID 43477]
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
