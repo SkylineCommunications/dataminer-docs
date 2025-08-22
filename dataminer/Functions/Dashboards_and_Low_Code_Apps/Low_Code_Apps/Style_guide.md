@@ -189,7 +189,7 @@ Use this documentation as a basis to build or improve dashboards and low-code ap
 
 - Do not add unnecessary images.
 
-- **Only use dynamic images** with a web component on a page or HTML tool in templates.
+- Only add images if they are **dynamic**, so that they change based on the displayed data. You can do with a web component on a page or HTML tool in templates.
 
 ### Forms (DOM and IAS components)
 
