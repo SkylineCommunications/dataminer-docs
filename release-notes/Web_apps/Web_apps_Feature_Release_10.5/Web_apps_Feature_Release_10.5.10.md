@@ -20,7 +20,25 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-*No new features have been added yet.*
+#### Low-Code Apps: 'On open' events can now also be configured on app level [ID 43550]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+From now on, it is also possible to configure *on open* events that will take place when an app is opened.
+
+These events will take place in the following cases:
+
+- When the app is accessed via the DataMiner landing page.
+- When the app is accessed via its URL.
+- When a draft is published (and the app is opened).
+- When a draft is previewed.
+- ...
+
+> [!NOTE]
+>
+>- Although it is possible to have this *on open* event run an interactive Automation script, the script window will always have a light gray background and will not inherit the background color of the page it is launched on.
+>- Currently, linking is not supported. When configuring a link to a component value, the value will always remain empty as the component will not be loaded yet when the event takes place.
+>- Current, passing URL data is not supported. A value passed through the URL will return as empty.
 
 ## Changes
 
