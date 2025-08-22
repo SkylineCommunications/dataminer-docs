@@ -22,3 +22,9 @@ While previously new jobs were always created in the draft state, now it is also
 When a MediaOps upgrade package is installed, a number of predefined existing scripts and DOM definitions created by older versions of MediaOps will now first be cleaned up.
 
 For each major version, this predefined list will be reset. Consequently, when you upgrade across major versions (e.g. from 1.x.x to 2.x.x), we recommend upgrading to the latest version of the current major version first before moving to the next major version, to ensure that these cleanup actions have taken place at least once.
+
+### Fixes
+
+#### Resource Studio: Incorrect step size after change to number of decimals of capacity or configuration parameter of type number [ID_43580]
+
+When capacity or configuration parameters of type number were defined, it could occur that the step size did not update after the number of decimals was changed, which could lead to unwanted behavior when the parameter was used in the Scheduler app. The UI has now been improved to prevent this: other fields that are affected by changes will now be updated or highlighted.
