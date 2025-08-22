@@ -51,7 +51,7 @@ When you have downloaded the virtual hard disk, you can start to create a VM in 
 1. Connect the virtual hard disk that you have just downloaded.
 
 > [!IMPORTANT]
-> If you intend to use the locally hosted Cassandra and OpenSearch clusters running on WSL, make sure to enable [nested virtualization](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/dataminer/nested-virtualization) on your host PC for the VM you created before starting the VM. To do so, run the following command on your host PC in an elevated Powershell prompt:
+> If you intend to use the locally hosted Cassandra and OpenSearch clusters running on WSL, make sure to enable [nested virtualization](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/enable-nested-virtualization) on your host PC for the VM you created before starting the VM. To do so, run the following command on your host PC in an elevated Powershell prompt:
 >
 > ```powershell
 > Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
