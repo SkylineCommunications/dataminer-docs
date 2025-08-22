@@ -87,7 +87,9 @@ Use this documentation as a basis to build or improve dashboards and low-code ap
 
 - Make sure components on a page/panel are aligned vertically and horizontally.
 
-- Always use a 50-column grid for your page layout.
+- In the page settings, always set the *Number of columns* setting to 50. This will give you more flexibility when choosing the size of your components.
+
+  ![Number of columns setting](~/dataminer/images/LCA_Number_of_columns_setting.png)
 
 - Leave one column of spacing on the left and right sides of every page.
 
@@ -122,15 +124,17 @@ Use this documentation as a basis to build or improve dashboards and low-code ap
 
 - Show **forms in a pop-up** panel.
 
-- Always choose the **same width** in your actions if you are using the same panel more than once.
+- If you reuse an existing panel, make sure to configure the **same width** as before in the action configuration, so that the same panel is always shown with the same width.
+
+  ![Panel width configuration](~/dataminer/images/LCA_Panel_config_width.png)
 
 - Every panel should have a **close button in the top-right corner**. An icon is enough; the button does not need a label.
 
 - If you have too much information in one panel, you can split it into multiple panels and **use buttons in the header bar as tabs**.
 
-- **Use the “As overlay” option** when opening a panel.
+- **Use the "As overlay" option** when opening a panel.
 
-- Do not use panels as pages.
+- Do not set the width of a panel to 100%, because it should be clear that it is a panel instead of page.
 
 ## Actions
 
