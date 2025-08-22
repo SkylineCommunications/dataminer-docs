@@ -213,7 +213,7 @@ Use this documentation as a basis to build or improve dashboards and low-code ap
 
 - **Rename your column titles** to straightforward, clear but concise names.
 
-- If you need a selected state, make sure it is **clear on the full row**.
+- If you override the default row selection indication, make sure that the overrides you configure in the templates are visible on the **entire row**.
 
 - Add actions in the **first or last column** of your table.
 
