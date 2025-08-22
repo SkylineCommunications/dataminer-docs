@@ -4,7 +4,7 @@ uid: SNMP.SnmpManagers.SnmpManager.SnmpVersion
 
 # SnmpVersion element
 
-Specifies the SNMP version: SNMPv1, SNMPv2 (default), or SNMPv3 and the notification type (traps or inform messages).
+Specifies the SNMP version: SNMPv1, SNMPv2 (default), or SNMPv3, and the notification type (traps or inform messages).
 
 ## Type
 

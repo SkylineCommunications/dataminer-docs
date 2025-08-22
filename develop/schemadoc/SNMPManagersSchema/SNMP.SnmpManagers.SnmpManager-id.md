@@ -4,7 +4,7 @@ uid: SNMP.SnmpManagers.SnmpManager-id
 
 # id attribute
 
-Specifies the ID of ths SNMP Manager.
+Specifies the ID of the SNMP Manager.
 
 ## Content Type
 

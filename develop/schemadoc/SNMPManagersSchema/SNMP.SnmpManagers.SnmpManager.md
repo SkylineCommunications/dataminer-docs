@@ -16,13 +16,13 @@ Specifies the configuration of an SNMP Manager.
 | --- | --- | --- | --- |
 | [codepage](xref:SNMP.SnmpManagers.SnmpManager-codepage) | integer |  | Specifies the code page. |
 | [delay](xref:SNMP.SnmpManagers.SnmpManager-delay) | string |  | Specifies the delay. |
-| [id](xref:SNMP.SnmpManagers.SnmpManager-id) | integer |  | Specifies the ID of ths SNMP Manager. |
+| [id](xref:SNMP.SnmpManagers.SnmpManager-id) | integer |  | Specifies the ID of the SNMP Manager. |
 | [sourceDMA](xref:SNMP.SnmpManagers.SnmpManager-sourceDMA) | integer |  | Specifies the ID of the Agent via which all notifications are sent (-1 if disabled). |
 | [winSNMP](xref:SNMP.SnmpManagers.SnmpManager-winSNMP) | boolean |  | Specifies whether WinSNMP is used. |
 
 ## Children
 
-| Name | Occurrences | Description |
+| Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Occurrences | Description |
 | --- | --- | --- |
 | All |  |  |
 | &#160;&#160;[AlarmStorm](xref:SNMP.SnmpManagers.SnmpManager.AlarmStorm) | [0, 1] | Specifies settings related to alarm storm prevention. |
@@ -36,5 +36,5 @@ Specifies the configuration of an SNMP Manager.
 | &#160;&#160;[ResendTime](xref:SNMP.SnmpManagers.SnmpManager.ResendTime) | [0, 1] | Specifies settings related to resend notifications. |
 | &#160;&#160;[SendTraps](xref:SNMP.SnmpManagers.SnmpManager.SendTraps) | [0, 1] | When set to "true", enables the forwarding of SNMP notifications. |
 | &#160;&#160;[SNMPv3](xref:SNMP.SnmpManagers.SnmpManager.SNMPv3) | [0, 1] | Configures SNMPv3-related settings. |
-| &#160;&#160;[SnmpVersion](xref:SNMP.SnmpManagers.SnmpManager.SnmpVersion) | [0, 1] | Specifies the SNMP version: SNMPv1, SNMPv2 (default), or SNMPv3 and the notification type (traps or inform messages). |
+| &#160;&#160;[SnmpVersion](xref:SNMP.SnmpManagers.SnmpManager.SnmpVersion) | [0, 1] | Specifies the SNMP version: SNMPv1, SNMPv2 (default), or SNMPv3, and the notification type (traps or inform messages). |
 | &#160;&#160;[TrapLayout](xref:SNMP.SnmpManagers.SnmpManager.TrapLayout) | [0, 1] | Configures the trap layout. |
