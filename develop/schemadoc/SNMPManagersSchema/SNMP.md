@@ -8,7 +8,7 @@ Contains the SNMP-related configuration of the DataMiner Agents and of the defin
 
 ## Children
 
-| Name | Occurrences | Description |
+| Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Occurrences | Description |
 | --- | --- | --- |
 | Sequence |  |  |
 | &#160;&#160;[Configuration](xref:SNMP.Configuration) |  | Contains the configuration of the DataMiner Agents. |
