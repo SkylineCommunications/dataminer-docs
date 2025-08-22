@@ -54,3 +54,9 @@ Up to now, when multiple NATSCustodian calls tried to retrieve the NATS credenti
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 In some cases, a deadlock could occur in the `Grpc.Net.Client` library, causing active gRPC connections to get stuck.
+
+#### SLNet would interpret the messages incorrectly when matrix crosspoints were loaded or saved over a gRPC connection in DataMiner Cube [ID 43551]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+When, in DataMiner Cube, matrix crosspoints were loaded or saved over a gRPC connection, in some cases, SLNet would interpret the messages incorrectly.
