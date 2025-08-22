@@ -66,6 +66,12 @@ When you upload an upgrade package that includes this change, the *VerifyGRPCCon
 
 We recommend uploading the package prior to the maintenance window for the upgrade, so you can already check beforehand whether all requirements for the upgrade are met and address any possible issues.
 
+#### DataMiner upgrade: New prerequisite check 'VerifyBrokerGatewayMigration' [ID 43526]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+A new *VerifyBrokerGatewayMigration* prerequisite check has been added to prepare for the upcoming mandatory migration to BrokerGateway. However, this check is not yet relevant for users outside of Skyline Communications.
+
 ## Changes
 
 ### Enhancements
