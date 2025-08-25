@@ -94,7 +94,7 @@ To handle concurrency safely:
 
 - Use thread-safe collections such as `ConcurrentDictionary` for shared caches.
 - Protect critical sections (e.g. cache initialization or updates) with locks (`lock` statement or other synchronization primitives).
-- Double-check locking patterns help ensure initialization/update occurs only once per cache cycle, minimizing duplicate work.
+- Use double-checked locking to ensure that initialization/updating occurs only once per cache cycle, minimizing duplicate work.
 - Be mindful to keep locks as short as possible to reduce contention and avoid deadlocks.
 
 Proper concurrency management ensures reliable, consistent caching behavior without wasting resources or causing data corruption.
