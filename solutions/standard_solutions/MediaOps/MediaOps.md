@@ -4,10 +4,6 @@ uid: MediaOps
 
 # dataminer.MediaOps
 
-## Harmonizing ICT and media
-
-dataminer.MediaOps transforms the media supply chain with data-driven automation, harmonizing deep media expertise with ICT tech. Experience a seamless process from planning productions, and scheduling people, technical resources, or bandwidth, to running live media operations. dataminer.MediaOps supports any vendor and any video and transport format, including SDI, SRT, and SMPTE ST 2110. It streamlines media operations, reduces complexity and cost, and improves efficiency in the evolving media supply chain.
-
 ## Deliver content faster, better, and cheaper
 
 dataminer.MediaOps seamlessly blends information and communication technology (ICT) with media technology and workflows, introducing a new era of data-driven, automated, and simplified media operations. Central to its architecture is the concept of the digital twin of the media operation—housing all network statistics, metrics, counters and configurations, coupled with vital business information like event schedules, asset inventory, playlists, electronic program guide (EPG) data, and more. This digital twin allows for unprecedented opportunity for resource planning and management, live media operations and automation of file and asset workflows.
