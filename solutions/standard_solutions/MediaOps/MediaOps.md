@@ -41,11 +41,11 @@ These uses cases are supported by default without any customization:
 
 - **Reserve**: Reservation closely aligns with planning and involves making reservations on resources as per the plans to avoid conflicts. This includes both instant reservations and future reservations to ensure resource availability and suitability, thereby creating a predictable and deterministic operation. Reservations can be made on various technical resources, technical capacities, personnel, facilities and rooms, satellite transponder slots, file transcoders in the cloud, file quality analysis functions in the cloud, and more.
 
+The following functions can be achieved by means of orchestration scripts that set up your devices and allow optional monitoring services:
+
 - **Deploy**: As infrastructure becomes virtualized or is delivered as a service, dynamic deployment becomes crucial for any technical workflow. Examples include loading the right FPGA image on a media gateway, deploying the appropriate appliance, virtual machine, or K8S workload in the data center, and initiating cloud deployments or activating cloud inventory and SaaS services on demand, in accordance with the plan. dataminer.MediaOps facilitates automation, reduces human error, and saves costs in these deployment processes.
 
 - **Configure**: At the onset of an event and after the initial deployment of cloud platforms and media functions, initial configurations need to be loaded or set manually. dataminer.MediaOps provides full access to configure media functions, IP network functions, ICT functions (DNS, DHCP, etc.), file recorders, vision mixers, intercoms, cloud transcoders, etc.
-
-The following functions can be achieved by means of orchestration scripts that set up your devices and allow optional monitoring services:
 
 - **Connect**: Making connections is fundamental in any media operation, involving the acquisition, aggregation, processing, and delivery of content to the audience. dataminer.MediaOps facilitates setting up connections across various technologies, including SMPTE ST 2110, SMPTE ST 2022, SDI, ASI, L-Band, and over the internet (SRT and RIST). dataminer.MediaOps is here to set up the connections across any technology.
 
