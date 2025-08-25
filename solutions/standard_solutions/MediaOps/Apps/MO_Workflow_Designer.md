@@ -4,7 +4,7 @@ uid: MO_Workflow_Designer
 
 # Workflow Designer
 
-The workflow designer app allows you to visually manage and configure [workflows](#workflows), which can be used as templates for jobs in the [Scheduling app](xref:MO_Scheduling).
+The Workflow Designer is an operator-level DevOps environment to create technical [workflows](#workflows). In the app, users can define workflows that describe how signals go through devices, determine what actions take place, define filters for resource selection, etc. Each workflow consists of a set of nodes and a set of connections between these nodes. These typically describe how a source signal is transported to a destination and how it gets processed in between. These workflows can then be executed by scheduling a job in the [Scheduling app](xref:MO_Scheduling).
 
 ![Example workflow](~/solutions/images/WFD_Example_WF.png)
 

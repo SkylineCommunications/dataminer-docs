@@ -7,7 +7,7 @@ uid: solution_index
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
     <b>💡 TIPS TO TAKE FLIGHT</b><br>
-   In this section, you will find technical details for specific DataMiner Solutions. To find information for all available DataMiner Solutions, go to <a href="https://catalog.dataminer.services/" style="color: #657AB7;">catalog.dataminer.services</a>.
+   In this section, you will find technical details for specific <a href="xref:SOL_About" style="color: #657AB7;">DataMiner Solutions</a>. To find information for all available DataMiner Solutions, go to <a href="https://catalog.dataminer.services/" style="color: #657AB7;">catalog.dataminer.services</a>.
   </div>
   <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
 </div>
