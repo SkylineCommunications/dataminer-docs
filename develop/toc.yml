@@ -1106,6 +1106,9 @@ items:
         topicUid: GQI_Extensions_Architecture
       - name: Best practices
         topicUid: GQI_Extensions_Best_Practices
+        items:
+          - name: Caching
+            topicUid: GQI_Extensions_Caching
       - name: Logging
         topicUid: GQI_Extensions_Logging
   - name: User-Defined APIs
