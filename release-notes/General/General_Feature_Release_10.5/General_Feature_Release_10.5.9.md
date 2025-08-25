@@ -2,10 +2,7 @@
 uid: General_Feature_Release_10.5.9
 ---
 
-# General Feature Release 10.5.9 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# General Feature Release 10.5.9
 
 > [!IMPORTANT]
 >
@@ -22,11 +19,15 @@ uid: General_Feature_Release_10.5.9
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.5.9](xref:Web_apps_Feature_Release_10.5.9).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
+
+#### New BPA test 'Large Alarm Trees' [ID 42952]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+A new BPA test named "Large Alarm Trees" is now available. This test will retrieve the active alarm trees and check if any are getting too large, because excessively large alarm trees can potentially have a negative impact on your DataMiner System. If any large alarm trees are found, you will need to take the necessary [corrective actions](xref:Best_practices_for_assigning_alarm_severity_levels#keep-alarm-trees-from-growing-too-large).
+
+The BPA test is available in System Center on the *Agents > BPA* tab.
 
 #### Automation scripts: New Interactivity tag [ID 42954]
 
@@ -76,33 +77,6 @@ After a dependency has been uploaded, all scripts using that dependency will be 
 
 > [!NOTE]
 > For QActions in protocols, the relevant SLScripting process must be restarted before the new DLL will get loaded.
-
-#### DataMiner Object Models: Attachments can now be uploaded to a network share [ID 43114]
-
-<!-- MR 10.6.0 - FR 10.5.9 -->
-
-In `ModuleSettings`, `DomManagerSettings` now contains a new `DomInstanceNetworkAttachmentSettings` class that allows you to save DOM instance attachments to a network share instead of to the *Documents* module.
-
-The `DomInstanceNetworkAttachmentSettings` class contains the following properties:
-
-- `NetworkSharePath` (string)
-
-  The UNC path to a network share.
-
-  This path has to start with "\\\\", and cannot contain any characters that are illegal in path specifications.
-
-- `CredentialId` (GUID)
-
-  The GUID of the credential containing the username and password of the user account that will be used to add the attachment to the network share.
-
-  - This credential, stored in the credential library, must be of type `UserNameAndPasswordCredential`.
-  - The user has to have read/write access to the network share. If the user is a domain user or a local Windows user, the user name must be preceded by the domain/host name (e.g. MYDOMAIN\myuser or MYPC\myuser).
-
-> [!NOTE]
->
-> - When you create or update a `DomInstanceNetworkAttachmentSettings` entry with a `NetworkSharePath` and a `CredentialId`, the system will check whether you have access to the credential.
-> - Once a `DomInstanceNetworkAttachmentSettings` entry has made made, any user with permission to create or update DOM instances will be allowed to add attachments to the network share in question, even if they do not have direct access to the share.
-> - By default, the size of the attachments is limited to 20 MB. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#documentsmaxsize).
 
 #### SLNet: 'TraceId' property added to ClientRequestMessage & extended logging [ID 43187]
 
@@ -158,6 +132,126 @@ The logging of a DOM manager will now also contain a line indicating the start o
 2025/07/02 15:05:11.110|SLNet.exe|HandleStatusTransitionRequest|INF|3|269|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Handling status transition with ID 'new_to_closed' for instance with ID '1ff720a3-0aa2-4548-8b51-d8b975e19ea4'.
 ```
 
+#### Service & Resource Management: Support for capacity ranges [ID 43335]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Resource capacity ranges are now supported. To that end, profile parameters can now be of type "range".
+
+A resource can have one capacity range per profile parameter. This range can be either fully booked or partially booked.
+
+- If a range is partially booked, other bookings can book the unbooked part of the range as long as the bookings do not overlap.
+- The same range can be booked by two overlapping bookings on condition that the same reference string is used and that the range is identical in both bookings. `GetEligibleResources` has been updated to take this into account.
+
+##### Examples
+
+Scenario: A Resource has a capacity range parameter with a range from 100 to 200.
+
+Example 1:
+
+- If a booking books the entire range without a reference string, no other overlapping bookings can book that resource while requesting that same capacity range.
+- `GetEligibleResources` will not return that resource if asked for that capacity range with an overlapping time range.
+
+Example 2:
+
+- If a booking books the range from 100 to 110, another booking can book that range from 110 to 200, etc.
+- `GetEligibleResources` will return that resource, specifying the available range from 110 to 200.
+
+Example 3:
+
+- If a booking books the range from 100 to 110 with reference string "Example 3", another booking can book the same range from 100 to 110 if it uses the same "Example 3" reference.
+- `GetEligibleResources` wil return the entire range if "Example 3" is provided as reference.
+
+##### Creating a range parameter
+
+This is how you can create a range parameter.
+
+```csharp
+var rangeCapacityParameter= new ProfileParameter
+{
+  ID = Guid.NewGuid(),
+  Categories = ProfileParameterCategory.Capacity,
+  Name = "Range Parameter",
+  Type = ProfileParameter.ParameterType.Range,
+};
+profileHelper.ProfileParameters.Create(rangeCapacityParameter);
+```
+
+##### Creating a resource with a capacity range
+
+This is how you can add range 100 to 1000 to a resource.
+
+```csharp
+var capacities = new List<MultiResourceCapacity>
+{
+  new MultiResourceCapacity
+  {
+    CapacityProfileID = rangeCapacityParameter.ID,
+    Value = new CapacityParameterValue(100, 1000),
+  }
+};
+
+var resource = new Resource(Guid.NewGuid())
+{
+  Name = "Resource",
+  Mode = ResourceMode.Available,
+  Capacities = capacities,
+  MaxConcurrency = 10
+};
+
+resourceManager.AddOrUpdateResources(resource);
+```
+
+##### Booking a range
+
+This is how you can book the range from 100 to 150 of a specified resource.
+
+```csharp
+var resourceUsage = new ResourceUsageDefinition(resource.ID)
+{
+  RequiredCapacities = new List<MultiResourceCapacityUsage>
+  {
+    new MultiResourceCapacityUsage
+    {
+      CapacityProfileID = rangeCapacityParameter.ID,
+      RangeStart = 100,
+      DecimalQuantity = 50
+    }
+  }
+};
+
+booking.ResourcesInReservationInstance.Add(resourceUsage);
+```
+
+##### Checking which resources have a specific range available
+
+This is how you can check which resources have a specific range available.
+
+```csharp
+var requiredCapacities = new List<MultiResourceCapacityUsage>()
+{
+  new MultiResourceCapacityUsage(rangeCapacityParameter, 100, 50)
+};
+
+var requiredCapabilities = new List<ResourceCapabilityUsage>();
+
+result = resourceManager.GetEligibleResourcesWithUsageInfo(now, now.AddHours(1), requiredCapacities, requiredCapabilities);
+```
+
+#### Trap forwarding: Traps can now be forwarded to target elements of which a specific hostname was configured in the port settings [ID 43347]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+SLSNMPManager is now capable of forwarding traps to target elements of which a specific hostname was configured in the port settings.
+
+If the hostname cannot be resolved to an IP address, an error alarm with the following message will be generated on the target element:
+
+`Could not resolve destination host to an IP: polling host=<hostname>, or failed to set the destination address. <ERROR>`
+
+Example:
+
+`Could not resolve destination host to an IP: polling host=localhost123, or failed to set the destination address. Host to IP failure. Error : 11001. [WSAHOST_NOT_FOUND]`
+
 ## Changes
 
 ### Enhancements
@@ -189,7 +283,7 @@ If the database consists of a single node at the time of index creation, an inde
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-From now on, an information event will be generated when an element was successfully swarmed.
+From now on, an information event will be generated when an element has been successfully swarmed.
 
 Example:
 
@@ -289,7 +383,7 @@ This means that, from now on, during a DataMiner upgrade, the *Verify NATS Clust
 
 #### SLDataGateway: Enhanced caching of TTL overrides for the trend data of specific protocols or protocol versions [ID 43362]
 
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 A number of enhancements have been made to the mechanism that is used to cache TTL overrides for the trend data of specific protocols or protocol versions in SLDataGateway, especially for Cassandra and Cassandra Cluster databases.
 
@@ -355,6 +449,26 @@ Up to now, when an element of which no parameter was included in any of the RAD 
 `ERR|0|Parameter XXX/YYYY is currently swarming to another hosting agent: RAD groups including this parameter are no longer supported`
 
 From now on, this error will only be logged when at least one parameter of the swarmed element is included in a RAD parameter group.
+
+#### DataMiner Object Models: Updating the display value of an enum is now allowed [ID 43452]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Up to now, it was not possible to change the display name of an enum entry when the enum was being used by a DOM instance, despite it having no effect on the underlying enum value or DOM behavior.
+
+This limitation has now been removed. From now on, it will be allowed to update the display name of an enum entry, even if the enum is being used by DOM instances.
+
+#### Improved logging in case STaaS system is not registered [ID 43455]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+To allow easier troubleshooting, logging has now been improved in case a DataMiner System using STaaS is not correctly registered on dataminer.services.
+
+#### Exception when RAD (sub)group is added with anomaly threshold of 0 [ID 43459]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+When a relational anomaly group or subgroup is added with the AddRADParameterGroupMessage or AddRADSubgroupMessage with anomaly threshold set to 0, an exception will now be thrown. Previously, the exception for this invalid configuration was silently ignored and the anomaly threshold was set to the default value of 3.0.
 
 ### Fixes
 
@@ -449,6 +563,12 @@ As BrokerGateway is started alongside the Microsoft Windows operating system, in
 
 To prevent being unaware of certain IP addresses, from now on, BrokerGateway will not only refresh its IP address cache every 5 minutes, it will also refresh that cache each time it detects a network adapter update.
 
+#### SNMP elements could get stuck in slow poll mode [ID 43216]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, SNMP elements could get stuck in slow poll mode because they would fail to recover after connectivity was restored.
+
 #### AnnounceHostingAgentEvent instances could linger around in the cache after a remote agent had reconnected [ID 43230]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
@@ -485,12 +605,6 @@ Adding a ping message for SNMP Manager %s. Too long since last ping was sent. Re
 Logging has been adjusted to not spam if multiple SNMP Managers send to the same IP/Port:
 Failed resolving authoritative context ID for SNMP Manager
 ```
-
-#### Swarming: Problem when redundancy groups contained DVE child elements acting as primary or backup elements [ID 43286]
-
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
-
-When Swarming was enabled, in some rare cases, SLDMS and SLDataMiner could get into a deadlock when the system contained redundancy groups in which DVE child elements acted as primary or backup elements.
 
 #### BrokerGateway: GetConnectionDetails call would incorrectly not return any destinations [ID 43292]
 
@@ -542,6 +656,12 @@ From now on, if a DOM definition field does not have a default value defined, al
 
 After an element had been swarmed, in some cases, that element would incorrectly be stuck in the Swarming state.
 
+#### Swarming: Synchronization issues caused by SLDMS accepting outdated notifications [ID 43373]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+In systems where swarming was enabled, it could occur that SLDMS accepted outdated notifications about element changes, which could lead to synchronization issues between different SLDMS instances, such as race conditions and missing information.
+
 #### SLAnalytics: Problem when grouping suggestion events generated after detecting a relational anomaly or a multivariate pattern [ID 43379]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
@@ -573,8 +693,33 @@ In some rare cases, certain log files could have their maximum size incorrectly 
 
 From now on, by default, all log files will have their maximum size set to 10 MB.
 
-#### Failover: Problem when synchronizing the ClusterEndpoints.json files on large systems [ID 43407]
+#### SLNet memory leak caused by ClusterEndpoint.json sync [ID 43407]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
-In large DataMiner Systems, in some cases, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely.
+In large DataMiner Systems, especially in clusters with Failover Agents, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely. This could lead to a serious memory leak in SLNet, causing DataMiner Agents to disconnect frequently.
+
+#### SLAnalytics - Pattern matching: Problem when retrieving the streaming matches [ID 43419]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a linked pattern was created on elements hosted on different DataMiner Agents, in some cases, the `getPatternMatchMessage` would not return the correct number of streaming matches.
+
+#### Swarming: Hosting agent cache in SLDataMiner could get out of sync after an element had been swarmed [ID 43434]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+After an element had been swarmed, in some rare cases, the hosting agent cache in SLDataMiner could get out of sync.
+
+#### SLAnalytics - Automatic incident tracking: Problem due to an incorrect internal state [ID 43451]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, an incorrect internal state in the automatic incident tracking feature could cause the SLAnalytics process to stop working.
+
+#### Memory issues caused by file offloads on a STaaS system [ID 43471]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+When a system using STaaS switched back from file storage to database storage after it had not been able to reach the database for some time, this could cause too much data to be pushed at the same time, causing memory issues on the DMA.

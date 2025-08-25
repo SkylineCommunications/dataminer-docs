@@ -2,6 +2,8 @@ items:
 - name: Solutions
   topicUid: solution_index
   items:
+  - name: About DataMiner Solutions
+    topicUid: SOL_About
   - name: Standard Solutions
     items:
     - name: dataminer.MediaOps
@@ -292,6 +294,13 @@ items:
         topicUid: Installing_NevionVideoIPath_App
       - name: Using the Nevion Video IPath app
         topicUid: How_to_NevionVideoIPath_App
+    - name: Techex TX Core app
+      topicUid: techex-tx-core-overview
+      items:
+      - name: Installing the Techex TX Core app
+        topicUid: techex-tx-core-install
+      - name: Using the Techex TX Core app
+        topicUid: techex-tx-core-howtouse
     - name: DataMiner TAG Management app
       topicUid: Overview_TAG_App
       items:

@@ -68,7 +68,7 @@ From DataMiner 10.5.6/10.6.0 onwards<!--RN 42602-->, [deleting a parameter group
 
 ## Limitations
 
-- RAD is only able to monitor parameters on the local DataMiner Agent. This means that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
+- Currently, RAD cannot monitor parameters hosted on multiple DataMiner Agents within a single group. All parameters in a group must be hosted on the same DMA. Prior to DataMiner 10.5.9/10.6.0<!--RN 43320-->, the *RelationalAnomalyDetection.xml* file on a given DMA could only include parameters hosted on that DMA.
 
 - Some parameter behavior will cause RAD to work less accurately. For example, if a parameter responds to another parameter with a delay, such as a door opening gradually lowering a room's temperature, RAD may generate less precise results.
 

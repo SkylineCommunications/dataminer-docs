@@ -14,9 +14,11 @@ For troubleshooting related to specific topics:
 
 - [Troubleshooting – Cassandra](xref:Troubleshooting_Cassandra)
 
+- [Troubleshooting – DaaS](xref:Troubleshooting_DaaS)
+
 - [Troubleshooting – Dashboard Gateway](xref:Dashboard_Gateway_troubleshooting)
 
-- [Troubleshooting – dataminer.services](xref:investigating_dataminer_services_feature_issues)
+- [Troubleshooting – dataminer.services](xref:Cloud_Connection_Issues)
 
 - [Troubleshooting – NATS](xref:Investigating_NATS_Issues)
 

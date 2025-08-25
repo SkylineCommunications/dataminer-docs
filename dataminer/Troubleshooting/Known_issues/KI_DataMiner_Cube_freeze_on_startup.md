@@ -30,6 +30,12 @@ All versions of the DataMiner Cube desktop application (DataMinerCube.exe).
   - <http://ocsp.sectigo.com/>
   - <http://crl.sectigo.com/>
 
+- For binaries signed after 2024-07-01, this is with a certificate from DigiCert that will attempt to access the following URLs as well:
+
+  - <http://ocsp.digicert.com/>
+  - <http://crl3.digicert.com/>
+  - <http://crl4.digicert.com/>
+
 Terminology:
 
 - CRL: [Certificate Revocation List](https://en.wikipedia.org/wiki/Certificate_revocation_list)
@@ -86,6 +92,9 @@ Background articles:
   127.0.0.1   crl.comodoca.com
   127.0.0.1   ocsp.sectigo.com
   127.0.0.1   crl.sectigo.com
+  127.0.0.1   ocsp.digicert.com
+  127.0.0.1   crl3.digicert.com
+  127.0.0.1   crl4.digicert.com
   ```
 
 - On the network firewall: Do not silently drop packets to these hostnames on TCP port 80. Instead, reject the connection so the client is immediately informed that no connection can be made and does not wait for a timeout.

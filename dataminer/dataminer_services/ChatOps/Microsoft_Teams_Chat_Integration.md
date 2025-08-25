@@ -1,5 +1,6 @@
 ---
 uid: Microsoft_Teams_Chat_Integration
+reviewer: Alexander Verkest
 ---
 
 # Chat integration with Microsoft Teams

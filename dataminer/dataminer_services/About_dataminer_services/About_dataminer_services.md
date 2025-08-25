@@ -1,6 +1,7 @@
 ---
 uid: about_dataminer_services
 keywords: cloud connection
+reviewer: Alexander Verkest
 ---
 
 # About dataminer.services

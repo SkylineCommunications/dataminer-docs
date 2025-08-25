@@ -5,7 +5,7 @@ uid: Standalone_Cassandra_Cluster_Installer
 # Standalone Cassandra Cluster installer
 
 > [!NOTE]
-> This tool is intended for installation of a Cassandra Cluster on Windows only. However, we highly recommend that you install Cassandra on Linux instead.
+> This tool is intended for installation of a Cassandra Cluster on Windows only, which is **no longer supported as of Cassandra 4.x**. We highly recommend using [STaaS](xref:STaaS) for your DataMiner storage instead, or else installing Cassandra on Linux.
 
 ## About this tool
 

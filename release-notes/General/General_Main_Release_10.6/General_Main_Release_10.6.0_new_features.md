@@ -118,7 +118,7 @@ public class Script
 }
 ```
 
-An information event will be generated when an element was successfully swarmed. Example:
+An information event will be generated when an element has been successfully swarmed. Example:
 
 `Swarmed from <DmaName> (<DmaId>) to <DmaName> (<DmaId>) by <UserName>`
 
@@ -680,6 +680,14 @@ For an example showing how to implement a dropdown box filter in an interactive 
 > [!IMPORTANT]
 > This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
 
+#### New BPA test 'Large Alarm Trees' [ID 42952]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+A new BPA test named "Large Alarm Trees" is now available. This test will retrieve the active alarm trees and check if any are getting too large, because excessively large alarm trees can potentially have a negative impact on your DataMiner System. If any large alarm trees are found, you will need to take the necessary [corrective actions](xref:Best_practices_for_assigning_alarm_severity_levels#keep-alarm-trees-from-growing-too-large).
+
+The BPA test is available in System Center on the *Agents > BPA* tab.
+
 #### Automation scripts: New Interactivity tag [ID 42954]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
@@ -797,9 +805,9 @@ After a dependency has been uploaded, all scripts using that dependency will be 
 > [!NOTE]
 > For QActions in protocols, the relevant SLScripting process must be restarted before the new DLL will get loaded.
 
-#### DataMiner Object Models: Attachments can now be uploaded to a network share [ID 43114]
+#### DataMiner Object Models: Attachments can now be uploaded to a network share [ID 43114] [ID 43366]
 
-<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- MR 10.6.0 - FR 10.5.10 -->
 
 In `ModuleSettings`, `DomManagerSettings` now contains a new `DomInstanceNetworkAttachmentSettings` class that allows you to save DOM instance attachments to a network share instead of to the *Documents* module.
 
@@ -807,21 +815,22 @@ The `DomInstanceNetworkAttachmentSettings` class contains the following properti
 
 - `NetworkSharePath` (string)
 
-  The UNC path to a network share.
+  The UNC path to the network share where the attachments should be saved.
 
-  This path has to start with "\\\\", and cannot contain any characters that are illegal in path specifications.
+  This path has to start with `\\` and cannot contain any characters that are illegal for a path (e.g. "<") or strings that allow directory traversal (e.g. "../").
+
+  When the path is left empty, attachments are saved to the `C:\Skyline DataMiner\Documents` folder. This is the default behavior.
 
 - `CredentialId` (GUID)
 
-  The GUID of the credential containing the username and password of the user account that will be used to add the attachment to the network share.
+  The ID of the credentials in the credentials library that will be used to add the attachment to the network share.
 
-  - This credential, stored in the credential library, must be of type `UserNameAndPasswordCredential`.
-  - The user has to have read/write access to the network share. If the user is a domain user or a local Windows user, the user name must be preceded by the domain/host name (e.g. MYDOMAIN\myuser or MYPC\myuser).
+  These credentials must be of type *Username and password credentials* and must be the credentials of a user that has read/write access to the path defined in `NetworkSharePath`. In case you have a Windows network share, you need to add the domain name (for a domain user) or hostname (for a local user) in front of the username (e.g. "MYPC\userName").
 
 > [!NOTE]
 >
-> - When you create or update a `DomInstanceNetworkAttachmentSettings` entry with a `NetworkSharePath` and a `CredentialId`, the system will check whether you have access to the credential.
-> - Once a `DomInstanceNetworkAttachmentSettings` entry has made made, any user with permission to create or update DOM instances will be allowed to add attachments to the network share in question, even if they do not have direct access to the share.
+> - When a DOM module is configured to save attachments to a network share, the system will validate whether the user creating/updating the `ModuleSettings` has permission to access the credentials. Once this is set up, any user that has permissions to create or update a `DomInstance` can save attachments to the network share under the configured user.
+> - When a DOM module is configured to save attachments to a network share, no migration is done of existing attachments. They will continue to exist in the `C:\Skyline DataMiner\Documents` folder, but will no longer work. You can copy them over or move them to the network share; the folder structure is the same. Likewise, when removing the configuration to save attachments to a network share, no migration is done of attachments available on the previously configured network share.
 > - By default, the size of the attachments is limited to 20 MB. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#documentsmaxsize).
 
 #### SLNet: 'TraceId' property added to ClientRequestMessage & extended logging [ID 43187]
@@ -877,3 +886,139 @@ The logging of a DOM manager will now also contain a line indicating the start o
 ```txt
 2025/07/02 15:05:11.110|SLNet.exe|HandleStatusTransitionRequest|INF|3|269|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Handling status transition with ID 'new_to_closed' for instance with ID '1ff720a3-0aa2-4548-8b51-d8b975e19ea4'.
 ```
+
+#### gRPC now used by default for communication between DataMiner Agents [ID 43190] [ID 43260] [ID 43305] [ID 43331] [ID 43435] [ID 43506]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Up to now, .Net Remoting was used by default for communication between DataMiner Agents, though it was possible to set gRPC as the default instead (either by adding *Redirect* tags in DMS.xml or by disabling .NET Remoting in *MaintenanceSettings.xml*). Now gRPC will be the default instead, which means that the *EnableDotNetRemoting* setting in *MaintenanceSettings.xml* is now by default set to *false*.
+
+When you upload an upgrade package that includes this change, the *VerifyGRPCConnection* prerequisite check will run to verify whether all DataMiner Agents in the cluster are ready to switch to using gRPC as the default communication type. This check will fail in case a possible configuration issue or connectivity issue is detected. For details, refer to [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite).
+
+We recommend uploading the package prior to the maintenance window for the upgrade, so you can already check beforehand whether all requirements for the upgrade are met and address any possible issues.
+
+#### Service & Resource Management: Support for capacity ranges [ID 43335]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Resource capacity ranges are now supported. To that end, profile parameters can now be of type "range".
+
+A resource can have one capacity range per profile parameter. This range can be either fully booked or partially booked.
+
+- If a range is partially booked, other bookings can book the unbooked part of the range as long as the bookings do not overlap.
+- The same range can be booked by two overlapping bookings on condition that the same reference string is used and that the range is identical in both bookings. `GetEligibleResources` has been updated to take this into account.
+
+##### Examples
+
+Scenario: A Resource has a capacity range parameter with a range from 100 to 200.
+
+Example 1:
+
+- If a booking books the entire range without a reference string, no other overlapping bookings can book that resource while requesting that same capacity range.
+- `GetEligibleResources` will not return that resource if asked for that capacity range with an overlapping time range.
+
+Example 2:
+
+- If a booking books the range from 100 to 110, another booking can book that range from 110 to 200, etc.
+- `GetEligibleResources` will return that resource, specifying the available range from 110 to 200.
+
+Example 3:
+
+- If a booking books the range from 100 to 110 with reference string "Example 3", another booking can book the same range from 100 to 110 if it uses the same "Example 3" reference.
+- `GetEligibleResources` wil return the entire range if "Example 3" is provided as reference.
+
+##### Creating a range parameter
+
+This is how you can create a range parameter.
+
+```csharp
+var rangeCapacityParameter= new ProfileParameter
+{
+  ID = Guid.NewGuid(),
+  Categories = ProfileParameterCategory.Capacity,
+  Name = "Range Parameter",
+  Type = ProfileParameter.ParameterType.Range,
+};
+profileHelper.ProfileParameters.Create(rangeCapacityParameter);
+```
+
+##### Creating a resource with a capacity range
+
+This is how you can add range 100 to 1000 to a resource.
+
+```csharp
+var capacities = new List<MultiResourceCapacity>
+{
+  new MultiResourceCapacity
+  {
+    CapacityProfileID = rangeCapacityParameter.ID,
+    Value = new CapacityParameterValue(100, 1000),
+  }
+};
+
+var resource = new Resource(Guid.NewGuid())
+{
+  Name = "Resource",
+  Mode = ResourceMode.Available,
+  Capacities = capacities,
+  MaxConcurrency = 10
+};
+
+resourceManager.AddOrUpdateResources(resource);
+```
+
+##### Booking a range
+
+This is how you can book the range from 100 to 150 of a specified resource.
+
+```csharp
+var resourceUsage = new ResourceUsageDefinition(resource.ID)
+{
+  RequiredCapacities = new List<MultiResourceCapacityUsage>
+  {
+    new MultiResourceCapacityUsage
+    {
+      CapacityProfileID = rangeCapacityParameter.ID,
+      RangeStart = 100,
+      DecimalQuantity = 50
+    }
+  }
+};
+
+booking.ResourcesInReservationInstance.Add(resourceUsage);
+```
+
+##### Checking which resources have a specific range available
+
+This is how you can check which resources have a specific range available.
+
+```csharp
+var requiredCapacities = new List<MultiResourceCapacityUsage>()
+{
+  new MultiResourceCapacityUsage(rangeCapacityParameter, 100, 50)
+};
+
+var requiredCapabilities = new List<ResourceCapabilityUsage>();
+
+result = resourceManager.GetEligibleResourcesWithUsageInfo(now, now.AddHours(1), requiredCapacities, requiredCapabilities);
+```
+
+#### Trap forwarding: Traps can now be forwarded to target elements of which a specific hostname was configured in the port settings [ID 43347]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+SLSNMPManager is now capable of forwarding traps to target elements of which a specific hostname was configured in the port settings.
+
+If the hostname cannot be resolved to an IP address, an error alarm with the following message will be generated on the target element:
+
+`Could not resolve destination host to an IP: polling host=<hostname>, or failed to set the destination address. <ERROR>`
+
+Example:
+
+`Could not resolve destination host to an IP: polling host=localhost123, or failed to set the destination address. Host to IP failure. Error : 11001. [WSAHOST_NOT_FOUND]`
+
+#### DataMiner upgrade: New prerequisite check 'VerifyBrokerGatewayMigration' [ID 43526]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+A new *VerifyBrokerGatewayMigration* prerequisite check has been added to prepare for the upcoming mandatory migration to BrokerGateway. However, this check is not yet relevant for users outside of Skyline Communications.

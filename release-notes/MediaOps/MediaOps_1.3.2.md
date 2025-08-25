@@ -2,14 +2,7 @@
 uid: MediaOps_1.3.2
 ---
 
-# MediaOps 1.3.2 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
-
-## New features
-
-*No new features have been added to this release yet.*
+# MediaOps 1.3.2
 
 ## Changes
 
@@ -22,3 +15,7 @@ In the Resource Studio app, when an element, service, or virtual function resour
 #### People & Organization: Skills not available as capabilities in bookable team [ID 43329]
 
 In the People & Organization app, when a team was made bookable, the skills of the members of that team did not become available as capabilities for these team members.
+
+#### MediaOps upgrade failing because of lingering mandatory fields in DOM definitions [ID 43503]
+
+Because DOM section definition fields that were mandatory in previous MediaOps versions had been removed, it could occur that the installation script failed when attempting to add default relations. This issue has been fixed by marking these unexpected fields as soft-deleted during the installation process.

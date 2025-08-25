@@ -1,6 +1,7 @@
 ---
 uid: Setting_up_StaaS
 description: To set up STaaS on a self-managed DMS, connect the system to dataminer.services, register, edit DB.xml on each DMA, and restart DataMiner.
+reviewer: Alexander Verkest
 ---
 
 # Setting up STaaS

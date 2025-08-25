@@ -74,7 +74,7 @@ To update the Cassandra version:
 1. Copy the **old** *Java* folder from `C:\Program Files\Cassandra_bak\Java` to `C:\Program Files\Cassandra`.
 1. Copy the **old** *cassandra.yaml* file from `C:\Program Files\Cassandra_bak\conf\cassandra.yaml` to `C:\Program Files\Cassandra\conf`.
 1. Copy the **old** *daemon* folder from `C:\Program Files\Cassandra_bak\bin\daemon` to `C:\Program Files\Cassandra\bin`.
-1. Copy the **old** *DevCenter* folder from `C:\Program Files\Cassandra_bak\DevCenter` to `C:\Program Files\Cassandra`.
+1. Copy the **old** *DevCenter* folder (if present) from `C:\Program Files\Cassandra_bak\DevCenter` to `C:\Program Files\Cassandra`.
 1. Create a new folder named *logs* in `C:\Program Files\Cassandra`.
 1. To enable the use of *nodetool*, set the system-wide environment variables *JAVA_HOME* and *CASSANDRA_HOME* to the correct locations by executing the following PowerShell commands:
 

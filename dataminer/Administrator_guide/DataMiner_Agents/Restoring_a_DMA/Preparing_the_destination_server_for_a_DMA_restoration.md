@@ -66,21 +66,11 @@ To prepare the destination server, there are **several possibilities**:
 
   1. For a DMA using a Cassandra database:
 
-     1. Open DevCenter, by going to `C:\Program Files\Cassandra\DevCenter\Run DevCenter.lnk`.
+     1. Using the query tool of your choice, connect to the database (default login and password: *root*) and drop the *SLDMADB* keyspace.
 
-     1. In the *Connections* pane, click the icon to create a new connection.
+     1. Stop the *Cassandra* service.
 
-     1. In the *New Connection* window, insert the Agent IP in the *Contact hosts* box and click *Add*.
-
-     1. Click *Next* to go to the next step of the wizard.
-
-     1. In both the *Login* and the *Password* box, insert *root*, and then click *Finish*.
-
-     1. In the *Schema* pane of DevCenter, right-click *SLDMADB* and select *Drop Keyspace*.
-
-     1. Open Windows Task Manager and stop the Cassandra service.
-
-     1. Delete the content of the folder *D:\\ProgramData\\Cassandra\\SLDMADB*.
+     1. Remove the content from the folder *D:\\ProgramData\\Cassandra\\SLDMADB*.
 
      Alternatively, for a DMA using a legacy MySQL database:
 

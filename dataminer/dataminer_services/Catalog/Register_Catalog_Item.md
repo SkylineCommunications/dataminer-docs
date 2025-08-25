@@ -1,5 +1,7 @@
 ---
 uid: Register_Catalog_Item
+keywords: catalog, registration, manifest, upload, publish
+reviewer: Alexander Verkest
 ---
 
 # Registering a Catalog item

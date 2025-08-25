@@ -58,11 +58,13 @@ You can change the minimum log level to include less or more information in the 
 
 From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, when you change the minimum log level to *Debug* or lower, information about requests sent to SLNet is also logged.
 
-### Changing the minimum log level (GQI DxM)
+### Changing the minimum log level
 
-If it does not exist yet, create the file `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.custom.json`.
+Below, you can find how to change the log level for the GQI logic itself. For GQI in SLHelper, this also sets the default minimum log level for GQI extensions. See [GQI extension logging](xref:GQI_Extensions_Logging#changing-the-minimum-log-level) for more details on how to change the minimum log level for extensions for the GQI DxM.
 
-Add the following configuration:
+#### [GQI DxM](#tab/gqi-dxm)
+
+In the [app settings](xref:GQI_DxM#configuration), add the following:
 
 ```json
 {
@@ -73,18 +75,11 @@ Add the following configuration:
         "Microsoft": "Information",
       }
     }
-  },
-  "GQIOptions": {
-    "Extensions": {
-      "Logging": {
-        "MinimumLogLevel": "Information"
-      }
-    }
   }
 }
 ```
 
-### Changing the minimum log level (SLHelper)
+#### [GQI in SLHelper](#tab/gqi-slhelper)
 
 Change the configuration in the *appSettings* section in `C:\Skyline DataMiner\Files\SLHelper.exe.config`. For example:
 
@@ -103,3 +98,5 @@ For some requests, from DataMiner 10.4.0 [CU3]/10.4.5 onwards<!-- RN 39098 -->, 
 
 > [!NOTE]
 > Any changes to the configuration file *SLHelper.exe.config* are reset after a full DataMiner upgrade or downgrade.
+
+***

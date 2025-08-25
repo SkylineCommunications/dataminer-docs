@@ -1,6 +1,7 @@
 ---
 uid: Giving_users_access_to_cloud_features
 keywords: cloud users, cloud user access, cloud permissions
+reviewer: Alexander Verkest
 ---
 
 # Controlling user access to dataminer.services features

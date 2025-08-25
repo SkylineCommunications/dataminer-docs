@@ -2,10 +2,7 @@
 uid: Web_apps_Feature_Release_10.5.9
 ---
 
-# DataMiner web apps Feature Release 10.5.9 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.5.9
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.4.0 [CU18] and 10.5.0 [CU6].
 
@@ -16,9 +13,30 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [DataMiner landing page redesigned [ID 43353]](#dataminer-landing-page-redesigned-id-43115-id-43226-id-43261-id-43303-id-43332-id-43341-id-43353)
+- [Dashboards app & Low-Code Apps: New 'Component name' setting [ID 43453]](#dashboards-app--low-code-apps-new-component-name-setting-id-43453)
 
 ## New features
+
+#### DataMiner landing page redesigned [ID 43115] [ID 43226] [ID 43261] [ID 43303] [ID 43332] [ID 43341] [ID 43353]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+The DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`) has been redesigned to be more intuitive and user-friendly. These are the main changes that have been implemented:
+
+- While previously you had to install Cube via a dropdown menu in the top-right corner, a dedicated button is now available for this, which is shown at the top of the page alongside buttons to open the Dashboards and Monitoring apps. Via a "..." icon on the Cube button, you can also install other tools.
+
+- Below this, the different categories for the available low-code apps in the system are now shown as tabs, which each have a quick filter box at the top. This will allow much quicker and easier navigation between the apps than before.
+
+- At the top of the apps section, two buttons are now displayed: *Browse catalog* will open the [DataMiner Catalog](https://catalog.dataminer.services/), and *Create app* (or *Create your first app*) can be used to create a new low-code app.
+
+- The button in the top-left corner of the page has been redesigned and now shows a more user-friendly menu with a link to dataminer.services and a quick filter box. Next to the button, the name of the DMS (or the DMA in case of a standalone DMA) will now be shown instead of the URL of the landing page.
+
+- Optionally, you can enable the possibility to select a different theme for the landing page. If you add the argument `?showAdvancedSettings=true` to the URL of the page, a theme selector will become available that allows you to select one of the following themes:
+
+- Light (i.e. the default theme)
+- Dark
+- System (i.e. the theme set in the browser)
 
 #### Low-Code Apps: Using script output in the post actions of a 'Launch a script' action [ID 43222]
 
@@ -62,6 +80,16 @@ By default, this setting will be enabled.
 
 In the *Layout* pane of the *Maps* component, a *Conditional coloring* option has now been added. This will allow you to highlight lines based on a condition.
 
+#### Dashboards app & Low-Code Apps: New 'Component name' setting [ID 43453]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Every component now has a new *Configuration name* setting, which can be found in the *Layout > General* tab.
+
+The new setting will allow you to assign a special name to a component. This will make it easier to identify components when configuring a dashboard or a low-code app. When you leave this setting empty, as before, the name of the component will be *[type of visualization]*, followed by a sequence number. For example, "Table 1" or "List 2".
+
+Although this component name will appear in different places to refer to the component in question, it will merely be used as an alias. It will have no impact whatsoever with regard to component functionality.
+
 ## Changes
 
 ### Enhancements
@@ -84,17 +112,6 @@ Up to now, when the client machine and the server were located in different time
 
 > [!NOTE]
 > If, for the `TimePicker` component, you set the `DateTimeKind` of the `Maximum` value to either "Local" or "Utc", the `Maximum` value may roll over to the next day, causing the hour/minute value of the `Maximum` property to be lower than the hour/minute value of the `Minimum` property. Hence, all values will be invalid.
-
-#### DataMiner landing page: Redesigned app sections [ID 43115] [ID 43226] [ID 43261]
-
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
-
-The app sections on the DataMiner landing page (e.g. `https://myDMA/root/`) have been redesigned.
-
-- In the upper section, you will find the native DataMiner apps like Dashboards, Monitoring, and Cube.
-- In the lower section, you will find the apps you downloaded from the DataMiner Catalog as well as the low-code apps you create yourself (in different tabs per category).
-
-  Click *Browse catalog* to open the [DataMiner Catalog](https://catalog.dataminer.services/) or *Create your first app* to create your first low-code app.
 
 #### GQI DxM: Support for asynchronous SLNet messages within ad hoc data sources and custom operators [ID 43231]
 
@@ -139,34 +156,6 @@ From now on, the order of the rows will be taken into account when determining t
 When using the GQI DxM, SLNet messages can be sent via ad hoc data sources or customer operators. However, up to now, sending an SLNet message that was not defined in `SLNetTypes` could fail because the underlying connection worker process did not have a reference to the assembly in which the message is defined.
 
 From now on, the connection worker process has references to all assemblies that are officially supported to communicate with SLNet (including `SLAnalyticsTypes`). This means that SLNet messages (requests, responses and events) defined in these assemblies can now also be used in ad hoc data sources and customer operators.
-
-#### DataMiner landing page: Redesigned user menu [ID 43303]
-
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
-
-The user menu in the header bar of the DataMiner landing page (e.g. `https://myDMA/root/`) has been redesigned.
-
-#### DataMiner landing page: Theme selection [ID 43332]
-
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
-
-On the DataMiner landing page (e.g. `https://myDMA/root/`), you can now select one of the following themes:
-
-- Light (i.e. the default theme)
-- Dark
-- System (i.e. the theme set in the browser)
-
-Currently, the theme selector is only available when you add the following argument to the URL of the landing page:
-
-`?showAdvancedSettings=true`
-
-#### DataMiner landing page: DataMiner icon in header bar will now show the name of the DMS instead of the URL of the landing page [ID 43341]
-
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
-
-In the header bar of the DataMiner landing page (e.g. `https://myDMA/root/`), the DataMiner icon on the left will now show the name of the DMS* instead of the URL of the landing page.
-
-\**If not applicable, the DataMiner icon will show the name of the DMA instead.*
 
 #### Web apps: Enhanced performance when starting a web app [ID 43364]
 
@@ -271,3 +260,9 @@ When a dashboard containing a *Button panel* component was embedded in DataMiner
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 When, while editing a low-code app, you changed the visual of a component, the list of possible actions to be configured for that component would no longer be correct.
+
+#### GQI DxM installation failed because of missing dependencies [ID 43500]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+If the latest .NET 8 hosting bundle was not installed first, it could occur that installing the GQI DxM failed because of missing dependency DLLs. To prevent this, the missing dependencies are now included in the GQI DxM installer.

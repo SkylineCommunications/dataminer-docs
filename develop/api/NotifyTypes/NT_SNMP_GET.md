@@ -342,3 +342,10 @@ string sysNameOidValue = Convert.ToString(result[0]);
 - If the "multiple get" flag (elementInfo[2]) is 0, separate SNMP messages will be used to poll each OID, and if the "multiple get" flag (elementInfo[2]) is 1, a single SNMP message will be used to poll the OIDs.<!-- RN 20727 -->
 - To perform an SNMP Get request in protocol that has no SNMP connection defined, refer to <xref:NT_SNMP_RAW_GET>.
 - Retrieving SNMP data using this method does not affect the timeout state of the element.
+- From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43273-->, infinite loop protection is available for NT_SNMP_GET.
+
+  When an infinite loop is detected, the following will be returned:
+
+  - When the `splitErrors` option is set to false, the error message `INFINITE LOOP` will be returned.
+
+  - When the `splitErrors` option is set to true, the values will be returned.

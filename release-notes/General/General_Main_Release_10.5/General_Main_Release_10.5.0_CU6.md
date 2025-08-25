@@ -2,10 +2,7 @@
 uid: General_Main_Release_10.5.0_CU6
 ---
 
-# General Main Release 10.5.0 CU6 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# General Main Release 10.5.0 CU6
 
 > [!TIP]
 >
@@ -80,7 +77,7 @@ This means that, from now on, during a DataMiner upgrade, the *Verify NATS Clust
 
 #### SLDataGateway: Enhanced caching of TTL overrides for the trend data of specific protocols or protocol versions [ID 43362]
 
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 A number of enhancements have been made to the mechanism that is used to cache TTL overrides for the trend data of specific protocols or protocol versions in SLDataGateway, especially for Cassandra and Cassandra Cluster databases.
 
@@ -107,6 +104,12 @@ Example:
 ```txt
 https://myDMA/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true&fitMode=center
 ```
+
+#### Improved logging in case STaaS system is not registered [ID 43455]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+To allow easier troubleshooting, logging has now been improved in case a DataMiner System using STaaS is not correctly registered on dataminer.services.
 
 ### Fixes
 
@@ -201,6 +204,12 @@ As BrokerGateway is started alongside the Microsoft Windows operating system, in
 
 To prevent being unaware of certain IP addresses, from now on, BrokerGateway will not only refresh its IP address cache every 5 minutes, it will also refresh that cache each time it detects a network adapter update.
 
+#### SNMP elements could get stuck in slow poll mode [ID 43216]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, SNMP elements could get stuck in slow poll mode because they would fail to recover after connectivity was restored.
+
 #### Failover: Primary IP address could incorrectly be set to the IP address of the online agent [ID 43257]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -230,12 +239,6 @@ Adding a ping message for SNMP Manager %s. Too long since last ping was sent. Re
 Logging has been adjusted to not spam if multiple SNMP Managers send to the same IP/Port:
 Failed resolving authoritative context ID for SNMP Manager
 ```
-
-#### Swarming: Problem when redundancy groups contained DVE child elements acting as primary or backup elements [ID 43286]
-
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
-
-When Swarming was enabled, in some rare cases, SLDMS and SLDataMiner could get into a deadlock when the system contained redundancy groups in which DVE child elements acted as primary or backup elements.
 
 #### BrokerGateway: GetConnectionDetails call would incorrectly not return any destinations [ID 43292]
 
@@ -273,6 +276,12 @@ When a DOM definition field does not have a default value defined, by default, n
 
 From now on, if a DOM definition field does not have a default value defined, all fields of that type will be empty when displayed on a form.
 
+#### Swarming: Synchronization issues caused by SLDMS accepting outdated notifications [ID 43373]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+In systems where swarming was enabled, it could occur that SLDMS accepted outdated notifications about element changes, which could lead to synchronization issues between different SLDMS instances, such as race conditions and missing information.
+
 #### Failover: DMS call DMS_VERIFY_CLIENT_COOKIE would incorrectly be sent to the offline agent [ID 43397]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -295,8 +304,26 @@ In some rare cases, certain log files could have their maximum size incorrectly 
 
 From now on, by default, all log files will have their maximum size set to 10 MB.
 
-#### Failover: Problem when synchronizing the ClusterEndpoints.json files on large systems [ID 43407]
+#### SLNet memory leak caused by ClusterEndpoint.json sync [ID 43407]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
-In large DataMiner Systems, in some cases, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely.
+In large DataMiner Systems, especially in clusters with Failover Agents, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely. This could lead to a serious memory leak in SLNet, causing DataMiner Agents to disconnect frequently.
+
+#### SLAnalytics - Pattern matching: Problem when retrieving the streaming matches [ID 43419]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a linked pattern was created on elements hosted on different DataMiner Agents, in some cases, the `getPatternMatchMessage` would not return the correct number of streaming matches.
+
+#### SLAnalytics - Automatic incident tracking: Problem due to an incorrect internal state [ID 43451]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, an incorrect internal state in the automatic incident tracking feature could cause the SLAnalytics process to stop working.
+
+#### Memory issues caused by file offloads on a STaaS system [ID 43471]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+When a system using STaaS switched back from file storage to database storage after it had not been able to reach the database for some time, this could cause too much data to be pushed at the same time, causing memory issues on the DMA.

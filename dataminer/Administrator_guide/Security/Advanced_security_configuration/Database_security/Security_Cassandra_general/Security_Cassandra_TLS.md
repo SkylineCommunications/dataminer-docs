@@ -186,29 +186,11 @@ To enable inter-node TLS encryption:
 
 1. Save the changes in the *cassandra.yaml* and **restart** the Cassandra service.
 
-## Connecting with DevCenter
-
-1. To be able to connect over TLS with DevCenter, install the Java Cryptography Extensions (JCE). For more information, see [Connecting DevCenter to an SSL/TLS-enabled Cassandra](https://www.datastax.com/blog/connecting-datastax-devcenter-ssl-enabled-apache-cassandra-or-datastax-enterprise).
-
-1. Create a truststore that contains the *rootCa.crt* certificate:
-
-   ```txt
-   keytool -keystore rootCa-truststore.jks -storetype JKS -importcert -file rootCa.crt -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -alias rootCa -noprompt
-   ```
-
-1. Start DevCenter by executing `C:\Program Files\Cassandra\DevCenter\Run DevCenter.lnk`.
-
-1. In DevCenter, open your connection properties.
-
-1. Go to *Advanced* and select *This cluster requires SSL*.
-
-1. Point it towards your *rootCa.jks* truststore file and use the password you used to generate it.
-
 ## Connecting with DataMiner
 
-1. Ensure TLS encryption is working by connecting to the Cassandra database through DevCenter.
+1. Ensure TLS encryption is working by connecting to the Cassandra database using the query tool of your choice.
 
-1. Stop the DataMiner agent.
+1. Stop the DataMiner Agent.
 
 1. In the `C:\Skyline DataMiner` folder, open *DB.xml*.
 

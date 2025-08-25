@@ -484,3 +484,6 @@ You can improve the appearance of each column by editing the template applied to
    Once you are finished, your final result should resemble this:
 
    ![End result](~/dataminer/images/tutorial_app_design_end_result.png)
+
+> [!TIP]
+> Ready to get started designing your own apps? Make sure to follow our [style guide](xref:LCA_Style_guide) for a consistent and great user experience.

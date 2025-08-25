@@ -14,15 +14,15 @@ uid: C_settings
    ![](~/develop/images/CsharpSettings.png)<br>
    *Text Editor Advanced Options window*
 
-   - Select the check box *Generate XML documentation comments for ///*.
+   - Select the checkbox *Generate XML documentation comments for ///*.
 
-   - Select the check box *Place 'System' directives first when sorting usings*.
+   - Select the checkbox *Place 'System' directives first when sorting usings*.
 
-   - Select the check box *Separate using directive groups*.
+   - Select the checkbox *Separate using directive groups*.
 
 1. In the list on the left, go to *Text Editor* > *C#* > *Formatting* > *General*.
 
-   Make sure the following check boxes are selected:
+   Make sure the following checkboxes are selected:
 
    ![](~/develop/images/CSharpSettingsGeneral.png)<br>
    *Text Editor Formatting Options window*

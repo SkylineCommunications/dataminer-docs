@@ -4,6 +4,9 @@ uid: Setting_up_a_new_DMS_in_DataMiner_Cube
 
 # Setting up a new DMS in DataMiner Cube
 
+> [!IMPORTANT]
+> The procedure below does not apply to [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud). DMS setup and configuration are handled automatically by Skyline. From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43110-->, the *Agent cluster* section on the *Agents* page in System Center is no longer available when you are using a DaaS System. Additionally, if there are any DaaS systems in the cluster to which you are connected, the *Add* and *Remove* buttons are disabled.
+
 1. Add the master DMA to the DMS.
 
    1. Open DataMiner Cube on the primary DMA.
