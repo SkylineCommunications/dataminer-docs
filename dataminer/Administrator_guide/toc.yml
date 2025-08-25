@@ -210,6 +210,8 @@ items:
             topicUid: Preparing_the_two_DataMiner_Agents
           - name: Failover configuration in Cube
             topicUid: Failover_configuration_in_Cube
+          - name: Switching Failover from virtual IP to hostname
+            topicUid: Switching_to_Failover_with_shared_hostname
           - name: Advanced Failover options
             topicUid: Advanced_Failover_options
           - name: DataMiner Failover on Amazon Web Services
