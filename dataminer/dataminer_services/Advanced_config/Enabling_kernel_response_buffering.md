@@ -1,5 +1,6 @@
 ---
 uid: Enabling_kernel_response_buffering
+reviewer: Alexander Verkest
 ---
 
 # Enabling kernel response buffering for DataMiner APIGateway

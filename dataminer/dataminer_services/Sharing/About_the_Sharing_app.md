@@ -1,6 +1,7 @@
 ---
 uid: About_the_Sharing_app
 keywords: cloud shares, cloud sharing
+reviewer: Alexander Verkest
 ---
 
 # About the Sharing app

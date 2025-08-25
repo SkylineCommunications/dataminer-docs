@@ -1,5 +1,6 @@
 ---
 uid: Deleting_a_catalog_item
+reviewer: Alexander Verkest
 ---
 
 # Deleting a Catalog item

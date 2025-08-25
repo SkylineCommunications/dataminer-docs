@@ -1,6 +1,7 @@
 ---
 uid: Connect_to_cloud_via_proxy
 keywords: cloud connection, cloud proxy
+reviewer: Alexander Verkest
 ---
 
 # Connecting to dataminer.services via proxy server

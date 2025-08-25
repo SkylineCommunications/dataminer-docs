@@ -1,6 +1,7 @@
 ---
 uid: Change_email_dataminer_services_account
 keywords: cloud email, cloud account
+reviewer: Alexander Verkest
 ---
 
 # Changing the email address associated with your dataminer.services account

@@ -1,6 +1,7 @@
 ---
 uid: Managing_dataminer_services_keys
 keywords: cloud keys
+reviewer: Alexander Verkest
 ---
 
 # Managing dataminer.services keys

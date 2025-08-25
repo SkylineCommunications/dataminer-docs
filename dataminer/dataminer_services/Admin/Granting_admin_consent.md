@@ -1,5 +1,6 @@
 ---
 uid: Granting_admin_consent
+reviewer: Alexander Verkest
 ---
 
 # Granting admin consent for Teams Chat Integration
