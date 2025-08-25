@@ -18,7 +18,7 @@ Either downgrade to 10.2.7 and then upgrade to DataMiner 10.2.8 (CU2), or run th
 
 ## Workaround
 
-Open DevCenter and run the command `ALTER TABLE analytics_parameterinfo_v1 add cr int;`.  
+Using a query tool of your choice, run the command `ALTER TABLE analytics_parameterinfo_v1 add cr int;`.
 
 ## Issue description
 

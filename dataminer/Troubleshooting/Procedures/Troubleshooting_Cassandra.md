@@ -56,10 +56,9 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
   - Trending must be enabled.
   - Can be used to detect memory leaks.
 
-- DevCenter
+- A query tool of your choice.
 
-  - Allows you to manually query the database.
-  - Can be found in `C:\Program Files\Cassandra\DevCenter\Run DevCenter` (*Cassandra Single*) or can be downloaded from the Apache or DataStax websites.
+  In legacy systems, DevCenter is typically used, but this tool is no longer supported. [DbVisualizer](https://www.dbvis.com/) is a possible alternative.
 
 - Notepad++ (optional)
 
