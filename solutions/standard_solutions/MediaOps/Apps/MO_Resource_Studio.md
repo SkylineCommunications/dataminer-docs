@@ -4,7 +4,7 @@ uid: MO_Resource_Studio
 
 # Resource Studio
 
-The Resource Studio app helps you create and manage bookable resources efficiently. The resources can be tied to elements in the DataMiner System (e.g. devices, network interfaces, compute resources) or external entities (e.g. people, rooms, vehicles).
+The Resource Studio app serves as a comprehensive platform for creating, managing, and optimizing resource utilization. Its key features include the ability to create diverse resources, ranging from network inventory to services and other limited-availability items such as rooms, people, vehicles etc. Users can organize these resources into pools, simplifying workflow and job resource selection. Capabilities and capacities can be assigned to resources, facilitating precise resource allocation based on specific job requirements. Users can also store supplementary information as properties, enhancing the resource management process. Utilization metrics provided by the app offer valuable insights, enabling users to optimize resource deployment and maximize operational efficiency.
 
 ![Resource Studio Overview](~/solutions/images/Resource_Studio_Overview.png)
 
