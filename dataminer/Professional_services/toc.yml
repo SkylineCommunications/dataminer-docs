@@ -90,8 +90,8 @@ items:
             topicUid: Learning_Resources
           - name: Certification
             topicUid: DEP_Certification
-          - name: Levelling up your DevOps status
-            topicUid: Levelling_up_DevOps_status
+          - name: Leveling up your DevOps status
+            topicUid: Leveling_up_DevOps_status
           - name: Reporting progress to the stakeholders
             topicUid: Reporting_Progress_to_Stakeholders
   - name: Training courses and certification
