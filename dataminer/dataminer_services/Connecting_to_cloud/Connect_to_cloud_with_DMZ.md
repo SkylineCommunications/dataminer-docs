@@ -1,6 +1,7 @@
 ---
 uid: Connect_to_cloud_with_DMZ
 keywords: cloud connection, cloud dmz
+reviewer: Alexander Verkest
 ---
 
 # Connecting to dataminer.services with a DMZ setup
@@ -34,7 +35,7 @@ From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dat
    > [!NOTE]
    > For all DxMs (except the Cloud Gateway), it is advised to have an instance running on every node. This will create redundancy in case something goes wrong and allows for upgrades without any downtime.
 
-1. On the DMZ server, in the folder `C:\Program Files\Skyline Communications\DataMiner CloudGateway`, create an override *appsettings.custom.json* with the following contents:
+1. On the DMZ server, in the folder `C:\Program Files\Skyline Communications\DataMiner CloudGateway`, edit or create the file *appsettings.custom.json* with the following contents:
 
    ```json
    {
@@ -55,7 +56,48 @@ From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dat
    > [!NOTE]
    > If you want to point the DMZ to a Failover pair, you will need to set up two DMZ servers, each pointing to one of the two Agents in the pair.
 
-1. On a DataMiner node, copy `C:\Skyline DataMiner\SLCloud.xml` and `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`, and paste these in the `C:\Skyline DataMiner\` and `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount` folder of the DMZ, respectively. Make sure that the credentials entry in *SLCloud.xml* points to the credentials file you copied over.
+1. Copy the necessary configuration from node to DMZ:
+
+   1. Check which NATS solution your system uses:
+
+      For DataMiner versions prior to DataMiner 10.6.0, open the file `C:\ProgramData\Skyline Communications\DataMiner\MessagebrokerConfig.json`:
+
+      - If it contains `"BrokerGatewayConfig"`, you are using the **[BrokerGateway-managed NATS](xref:BrokerGateway_Migration)** solution.
+      - If it contains `"SLCloudConfig"`, you are using the legacy **SLNet-managed** solution.
+
+      From DataMiner 10.6.0 onwards, the BrokerGateway-managed solution is enabled by default.
+
+      > [!IMPORTANT]
+      > For this configuration, it is also important that **automatic NATS configuration** is turned off. If automatic configuration is enabled, credentials may change over time, breaking communication with the DMZ. For instructions, see [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config).
+
+   1. If you are using the **BrokerGateway-managed** NATS solution:
+
+      1. Copy a `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` file from a DataMiner node to the same location on the DMZ.
+
+      1. On the DMZ, open `C:\ProgramData\Skyline Communications\DataMiner\MessagebrokerConfig.json`.
+
+      1. Update the file so it follows the **BrokerGatewayConfig** format:
+
+         ```json
+         {
+           "BrokerGatewayConfig": {
+             "CredentialsUrl": "https://SERVER/BrokerGateway/api/natsconnection/getnatsconnectiondetails",
+             "APIKeyPath": "C:\\Program Files\\Skyline Communications\\DataMiner BrokerGateway\\appsettings.runtime.json"
+           }
+         }
+         ```
+
+      1. Set the `CredentialsUrl` to point to one of the servers in the **internal network**.
+
+      1. Ensure the `APIKeyPath` points to the destination location of the copied `appsettings.runtime.json` file.
+
+   1. If you are using the **SLNet-managed** NATS solution:
+
+      1. From a DataMiner node in the internal network, copy `C:\Skyline DataMiner\SLCloud.xml` to the same folder on the DMZ.
+
+      1. Also copy `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds` from the node to the DMZ.
+
+      1. On the DMZ, open `SLCloud.xml` and verify that the `Credentials` path matches the destination location of the copied `.creds` file.
 
 1. Restart all DxMs in the DMZ so that they use the new settings.
 

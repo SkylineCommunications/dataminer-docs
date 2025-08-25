@@ -64,6 +64,8 @@ To set up external authentication, you first need to create an enterprise applic
 
       If your DMS consists of DMAs accessible via different URLs or IP addresses, choose one URL or IP address to use as the entity ID.
 
+      In case of a **DaaS system**, ``https://<dms-dns-name>-<organization-name>.on.dataminer.services`` should be used as the entity ID, unless a site-to-site VPN is in place, which allows access to Azure VMs that are not reachable by default.
+
    1. Under *Reply URL*, specify the following URL(s), replacing ``dataminer.example.com`` with the IP address or DNS name of your DataMiner System (note the trailing "/"):
 
       #### [From DataMiner 10.3.5 onwards](#tab/tabid-5)
@@ -115,6 +117,8 @@ To set up external authentication, you first need to create an enterprise applic
 
    We recommend placing this file in the `C:\Skyline DataMiner` folder, though it is possible to put it in a different location.
 
+   For **DaaS systems**, Skyline assistance will be required. Please contact daas@dataminer.services for support.
+
 1. Copy the following template into *spMetadata.xml*:
 
    #### [From DataMiner 10.3.5 onwards](#tab/tabid-7)
@@ -157,6 +161,8 @@ To set up external authentication, you first need to create an enterprise applic
      ```
 
 1. Replace [ENTITYID] with the URL or IP address you specified as the *Entity ID* while setting up the Microsoft Entra ID Enterprise application.
+
+   In case of a **DaaS system**, ``https://<dms-dns-name>-<organization-name>.on.dataminer.services`` should be used as the entity ID, unless a site-to-site VPN is in place, which allows access to Azure VMs that are not reachable by default.
 
 1. Replace ``https://dataminer.example.com`` with the IP address or the DNS name of your DataMiner System. The specified URL(s) must match the *Reply URL* you specified while setting up the Microsoft Entra ID Enterprise application.
 
@@ -210,7 +216,9 @@ Once authentication has been configured, you need to make sure users are provisi
 ### Configuring DataMiner to import users and groups from Microsoft Entra ID
 
 > [!IMPORTANT]
-> If you import over 1000 users or groups, it may take some time before the import is complete. Avoid importing over 10,000 users and groups, as this can result in a timeout.
+>
+> - If you import over 1000 users or groups, it may take some time before the import is complete. Avoid importing over 10,000 users and groups, as this can result in a timeout.
+> - Users will be automatically added to or removed from the groups in line with the changes made in Azure.
 
 > [!NOTE]
 > Prior to DataMiner 10.3.0 [CU12]/10.4.3<!-- RN 38154 -->, the following are not supported: usernames with non-ASCII characters, multiple users with the same first name and surname, and users for which the first name and surname are not provisioned.

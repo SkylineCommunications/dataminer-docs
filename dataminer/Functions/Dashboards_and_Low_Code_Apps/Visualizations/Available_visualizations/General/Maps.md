@@ -12,6 +12,7 @@ The Maps component is fully available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/
 
 > [!NOTE]
 >
+> - To display the map, the machine running the browser must have internet access.
 > - To use the Maps component, the host servers for DataMiner Maps have to be configured in the file `C:\Skyline DataMiner\Maps\ServerConfig.xml`. If this file does not exist, it will be created automatically when you use a Maps component for the first time. To change the configuration, see [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
 > - This component currently only supports **Google Maps** ("gmaps") as the [Maps provider](xref:Configuring_the_DataMiner_Maps_host_servers).
 
@@ -55,7 +56,7 @@ On the *Component > Layout* tab, you can configure the following settings under 
   > [!TIP]
   > For more information on how to use the Template Editor to customize the appearance of the markers, see [Using the Template Editor](xref:Template_Editor).
 
-- **Style**: When the query is configured as a set of lines, you can use these settings to change the appearance of the lines. You can change the color, direction visualization, type, and width of the lines.
+- **Style**: When the query is configured as a set of lines, you can use these settings to change the appearance of the lines. You can change the color, direction visualization, type, and width of the lines. From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43377-->, conditional coloring allows you to specify color filters for specific columns, so that lines can be highlighted based on a condition.
 
 - **Advanced settings**: Expand the advanced settings section to access the following settings:
 
@@ -99,11 +100,11 @@ The following actions are available:
 
 - *Fetch the data*: This action fetches the data from the component again.
 
-- *Pan to view*: This action pans to a certain location. The coordinates for this action can be static or dynamic (using the *Link to data* option).
+- *Pan to view*: This action pans to a certain location. The coordinates for this action can be static or dynamic (using the *Link to* option).
 
-- *Set zoom level*: This action zooms to a certain level on the map. The zoom level can be static or dynamic (using the *Link to data* option).
+- *Set zoom level*: This action zooms to a certain level on the map. The zoom level can be static or dynamic (using the *Link to* option).
 
-- *Overlay actions*: Using app actions, different types of overlays can be shown on the map. The supported overlay types are .kml, .kmz and .geoJSON. The source of the overlay needs to be specified in an input (which can also be received using the *Link to data* option), and it can be either a local source, specified by a relative path in the `C:\Skyline DataMiner\Maps` folder, or a web source, specified by a public URL that hosts the overlay. The following overlay actions are available:
+- *Overlay actions*: Using app actions, different types of overlays can be shown on the map. The supported overlay types are .kml, .kmz and .geoJSON. The source of the overlay needs to be specified in an input (which can also be received using the *Link to* option), and it can be either a local source, specified by a relative path in the `C:\Skyline DataMiner\Maps` folder, or a web source, specified by a public URL that hosts the overlay. The following overlay actions are available:
 
   - *Open overlay*
 
@@ -143,4 +144,4 @@ The following actions are available:
 
 - To **pan the map**, press and hold CTRL, then click and hold the scroll wheel while dragging the pointer in any direction.
 
-- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select a marker on the map**, it will by default be highlighted with a blue color. This can for instance be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Maps #* > *Selected markers*) is used in a linked component, clearly indicating which data is driving the content in the linked component.
+- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select a marker on the map**, it will by default be highlighted with a blue color. This can for instance be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Maps* > *Selected markers*) is used in a linked component, clearly indicating which data is driving the content in the linked component.

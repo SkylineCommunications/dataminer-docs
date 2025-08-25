@@ -968,6 +968,8 @@ items:
   - name: GQI extensions
     topicUid: GQI_Extensions
     items:
+      - name: Extension libraries
+        topicUid: GQI_Extension_Libraries
       - name: Ad hoc data sources
         topicUid: GQI_Ad_hoc_data_sources
         items:
@@ -983,8 +985,12 @@ items:
             items:
               - name: Forwarding dummy data to the GQI
                 topicUid: Forwarding_dummy_data_to_GQI
+              - name: Optimizing sort operations
+                topicUid: GQI_Ad_hoc_Optimizing_sort_operations
               - name: Scaling an ad hoc data source
                 topicUid: Scaling_Ad_hoc_Data_Source
+              - name: Fetching alarms using the Repository API
+                topicUid: Alarms_Ad_hoc_Data_Source
           - name: Tutorials
             items:
               - name: Building a GQI data source that fetches satellites
@@ -1096,6 +1102,8 @@ items:
             topicUid: GQI_RowMetadataBase
           - name: TimeRangeMetadata
             topicUid: GQI_TimeRangeMetadata
+      - name: Architecture
+        topicUid: GQI_Extensions_Architecture
       - name: Best practices
         topicUid: GQI_Extensions_Best_Practices
         items:
@@ -6169,7 +6177,7 @@ items:
         topicUid: High-level_overview
       - name: Components
         items:
-        - name: SLC SE Repository Manager
+        - name: SLC SE Repo Manager
           topicUid: TOOSLCSERepositoryManager
           items:
           - name: Cloning a repository
@@ -6379,7 +6387,7 @@ items:
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
           items:
-            - name: Producing NuGet packages via SLC SE Repository Manager
+            - name: Producing NuGet packages via SLC SE Repo Manager
               topicUid: Producing_NuGet_RepoManager
             - name: Producing NuGet packages via GitHub
               topicUid: Producing_NuGet_GitHub
@@ -6410,6 +6418,8 @@ items:
           topicUid: Notifications
         - name: Viewing test results
           topicUid: Viewing_test_results
+    - name: Definition of Done (DoD)
+      topicUid: About_DoD
     - name: Third-party Tools
       topicUid: ThirdPartyTools
       items:

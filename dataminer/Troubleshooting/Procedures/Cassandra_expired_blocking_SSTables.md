@@ -73,7 +73,7 @@ To enable this option, follow the steps below. These steps are intended for a **
 
    To find out what the PREFIXPLACEHOLDER is, navigate to the `/data/cassandra/data` folder and check the name used in that folder.
 
-1. Open a connection to the Cassandra nodes via DevCenter.
+1. Open a connection to the Cassandra nodes using a query tool of your choice.
 
 1. Execute the following queries one by one and save the contents of the "compaction" column:
 

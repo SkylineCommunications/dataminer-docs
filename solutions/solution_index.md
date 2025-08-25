@@ -56,6 +56,9 @@ uid: solution_index
   <div class="column">
     <a href="/solutions/product_solutions/TAG/TAG_Overview.html" title="Tag Management app" target="_self"><img src="~/solutions/images/Tag_Management.svg" style="width:100%"></a>
   </div>
+  <div class="column">
+    <a href="/solutions/product_solutions/Techex_TX_Core/00_techex-tx-core.html" title="Techex TX Core app" target="_self"><img src="~/solutions/images/Techex_TX_Core.svg" style="width:100%"></a>
+  </div>
 </div>
 
 ## DevTools

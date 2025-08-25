@@ -176,7 +176,7 @@ Expected duration: 45 minutes
    > 1. Right-click the ribbon and select *Customize the Ribbon*.
    > 1. In the *Main Tabs* list on the right, make sure *Developer* is enabled.
    > 1. Click *OK* in the lower right corner.
-   > 1. Access the *Developer* tab, and select the *Drawing Explorer* check box in the *Show/Hide* group.
+   > 1. Access the *Developer* tab, and select the *Drawing Explorer* checkbox in the *Show/Hide* group.
    >
    >    The Drawing Explorer window will become available in the corner of your drawing.
 

@@ -4,7 +4,19 @@ uid: Accessing_the_web_apps
 
 # Accessing the web apps
 
-You can access all DataMiner web apps via the **DataMiner landing page**.
+You can access [all DataMiner web apps](#available-web-apps) via the DataMiner landing page.
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>
+    Did you know that, depending on the configuration and version of your DMS, you can access certain web apps from the <a href="xref:DataMiner_Cube_sidebar#apps-pane" style="color: #657AB7;"><i>Apps</i> pane</a> in DataMiner Cube as well?
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
+
+## DataMiner landing page
+
+To access the DataMiner landing page:
 
 1. In a supported web browser (Google Chrome, Microsoft Edge, Mozilla Firefox, or Safari), navigate to:
 
@@ -21,21 +33,43 @@ You can access all DataMiner web apps via the **DataMiner landing page**.
 
 1. Sign in using your DataMiner credentials.
 
-1. On the landing page, click the icon of the app you want to open.
+1. On the landing page, select the app you want to open. See [Available web apps](#available-web-apps).
 
-   ![Landing page](~/dataminer/images/DataMiner_Landing_Page.png)<br>*DataMiner landing page in DataMiner 10.5.8*
+   ![Landing page](~/dataminer/images/DataMiner_Landing_Page2.png)<br>*DataMiner landing page in DataMiner 10.5.9*
 
-   Available web apps:
+In the top-left corner of the landing page, click the **DataMiner icon** or waffle icon (depending on your DataMiner version<!--RN 43024-->) to open a compact overview of the available web apps. From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, next to this icon, the **name of the DMS** is shown. In the case of a standalone DMA, the DMA name is shown instead.
 
-   - (1) [Dashboards app](xref:newR_D): Use this app to create, manage, and view dashboards that provide insights into your monitored system.
+From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, you can customize the **DataMiner landing page theme**:
 
-   - (2) [Monitoring app](xref:Working_with_the_Monitoring_app): Access a web-based interface similar to DataMiner Cube, with more limited functionality but broader accessibility.
+1. Add the argument `?showAdvancedSettings=true` to the landing page URL.
 
-   - (3) [Low-Code Apps](xref:Application_framework): Build and use custom apps to interact with data from a DMS or from external sources.
+1. Click the cogwheel button in the top-right corner of the page.
 
-     - You can access any of the available low-code apps by clicking the relevant app icon, or [create a new low-code app](xref:Creating_custom_apps).
+1. Select one of the available themes:
 
-     - Draft apps are not shown by default. To view them, click the cogwheel button and activate *Show draft applications*.
+   - *Light* (Default)
+
+   - *Dark*
+
+   - *System*
+
+## Available web apps
+
+The landing page provides access to the following web apps:
+
+![Landing page](~/dataminer/images/DataMiner_Landing_Page.png)<br>*DataMiner landing page in DataMiner 10.5.9*
+
+- (1) [Dashboards app](xref:newR_D): Use this app to create, manage, and view dashboards that provide insights into your monitored system.
+
+- (2) [Monitoring app](xref:Working_with_the_Monitoring_app): Access a web-based interface similar to DataMiner Cube, with more limited functionality but broader accessibility.
+
+- (3) [Low-Code Apps](xref:Application_framework): Build and use custom apps to interact with data from a DMS or from external sources.
+
+  - You can access any of the available low-code apps by clicking the relevant app icon, or [create a new low-code app](xref:Creating_custom_apps).
+
+  - Draft apps are not shown by default. To view them, click the cogwheel button and activate *Show draft applications*.
+
+  - From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, you can use the quick filter box in the top-left corner of the Low-Code Apps section to quickly search for apps by name.
 
 To access a **compact overview of all available web apps**:
 
@@ -43,15 +77,7 @@ To access a **compact overview of all available web apps**:
 
 - From within a web app: Click the waffle icon in the top-left corner of the app.
 
-This allows you to switch easily between web apps.
-
-<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
-  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
-    <b>💡 TIPS TO TAKE FLIGHT</b><br>
-    Did you know that, depending on the configuration and version of your DMS, you can access certain web apps from the <a href="xref:DataMiner_Cube_sidebar#apps-pane" style="color: #657AB7;"><i>Apps</i> pane</a> in DataMiner Cube as well?
-  </div>
-  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
-</div>
+This overview allows you to easily switch between web apps. Additionally, from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, a quick filter box is available to help you narrow down the apps, and a *dataminer.services* button provides direct access to the dataminer.services home page.
 
 ## Installing a web app as a standalone app
 

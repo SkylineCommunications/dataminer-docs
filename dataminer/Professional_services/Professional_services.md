@@ -18,9 +18,9 @@ uid: Professional_services
 
 <div class="row"> 
   <div class="column">
-    <a href="/dataminer/Professional_Services/DevOps_Enablement/DataMiner_DevOps_Enablement.html" title="DevOps Enablement Service" target="_self"><img src="~/dataminer/images/DevOps_Enablement_Service.svg" style="width:100%"></a>
+    <a href="/dataminer/Professional_services/DevOps_Enablement/DataMiner_DevOps_Enablement.html" title="DevOps Enablement Service" target="_self"><img src="~/dataminer/images/DevOps_Enablement_Service.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/dataminer/Professional_Services/Training_courses_and_certification/Overview_Training_intro.html" title="Training courses and certification" target="_self"><img src="~/dataminer/images/Training_Courses_Certification.svg" style="width:100%"></a>
+    <a href="/dataminer/Professional_services/Training_courses_and_certification/Overview_Training_intro.html" title="Training courses and certification" target="_self"><img src="~/dataminer/images/Training_Courses_Certification.svg" style="width:100%"></a>
   </div>
 </div>

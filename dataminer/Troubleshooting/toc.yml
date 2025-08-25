@@ -84,6 +84,8 @@ items:
                 topicUid: Element_in_Protocol_logging
           - name: Elements logging
             topicUid: Elements_logging
+          - name: Automation logging
+            topicUid: Automation_logging
           - name: Changing the maximum size of DataMiner log files
             topicUid: Changing_the_maximum_size_of_DataMiner_log_files
   - name: Troubleshooting flowcharts
@@ -201,6 +203,8 @@ items:
             topicUid: Cassandra_expired_blocking_SSTables
           - name: Element fails to start because of database failure
             topicUid: Cassandra_General_DB_Failure
+      - name: Troubleshooting – DaaS
+        topicUid: Troubleshooting_DaaS
       - name: Troubleshooting – dataminer.services
         items:
           - name: Investigating dataminer.services connection issues
@@ -248,10 +252,12 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Upgrade fails because of VerifyGRPCConnection.dll prerequisite
+            topicUid: KI_Upgrade_fails_VerifyGRPCConnection_prerequisite
+          - name: Contents of Elements folder deleted from offline Agents in Failover cluster
+            topicUid: KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster
           - name: DataMiner startup issue with one or more DcMs not running
             topicUid: KI_Startup_issue_DcM_not_running
-          - name: SRM scheduler unresponsive
-            topicUid: KI_SRM_scheduler_unresponsive
           - name: SLProtocol RTE because of element stuck in slow poll mode
             topicUid: KI_SLProtocol_RTE_after_slow_poll_timeout
           - name: User locked out after single failed login attempt
@@ -292,6 +298,10 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: SLNet memory leak caused by ClusterEndpoint.json sync
+            topicUid: KI_ClusterEndpoint_SLNet_leak
+          - name: SRM scheduler unresponsive
+            topicUid: KI_SRM_scheduler_unresponsive
           - name: SLProtocol process disappearance after protocol changes
             topicUid: KI_SLProtocol_process_disappearance
           - name: Online Failover Agent unable to acquire VIP

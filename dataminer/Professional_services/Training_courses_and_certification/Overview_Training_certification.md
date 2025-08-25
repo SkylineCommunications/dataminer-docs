@@ -79,7 +79,7 @@ To prepare effectively for the exam:
 
 - Practice questions: use the quiz at the end of the course to practice. The quiz randomly selects 10 questions out of a pool of questions.
 
-  - [DataMiner Fundamentals quiz](https://community.dataminer.services/courses/dataminer-operator/quizzes/dataminer-fundamentals/)
+  - [DataMiner Fundamentals quiz](https://community.dataminer.services/courses/dataminer-fundamentals/quizzes/dataminer-fundamentals/)
   - [DataMiner Configurator quiz](https://community.dataminer.services/courses/dataminer-administrator/quizzes/dataminer-configurator/)
 
 - Schedule check-ins with your examiner via the booking page if you have any questions.
@@ -194,7 +194,7 @@ The exam consists of two assignments: an offline assessment and a practical exer
 
 - The **offline assessment** is a quiz with multiple choice or true/false questions, which you can take at your own pace. You will need a score of 80% or higher in order to start the second assignment.
 
-- Before starting the **practical exercise** you must book an exam check-in via the booking page. During this check-in, your examiner will provide all the necessary information about the exercise. You will then have up to 3 hours to complete the task. When you have submitted your work, your examiner will evaluate it using an exam validator. You will need a score of 80% or higher to pass and earn your certification.
+- Before starting the **practical exercise** you must book an exam check-in via the booking page. During this check-in, your examiner will provide all the necessary information about the exercise. You will then have up to 4 hours to complete the task. When you have submitted your work, your examiner will evaluate it using an exam validator. You will need a score of 80% or higher to pass and earn your certification.
 
 Once you have successfully passed the second assignment, you will receive your certification badge within 5 business days. If you have any questions about your score, you can book a follow-up check-in via the booking page.
 

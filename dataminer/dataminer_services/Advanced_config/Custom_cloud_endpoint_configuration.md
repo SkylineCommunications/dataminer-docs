@@ -1,6 +1,7 @@
 ---
 uid: Custom_cloud_endpoint_configuration
 keywords: cloud endpoint
+reviewer: Alexander Verkest
 ---
 
 # Customizing the dataminer.services endpoint configuration

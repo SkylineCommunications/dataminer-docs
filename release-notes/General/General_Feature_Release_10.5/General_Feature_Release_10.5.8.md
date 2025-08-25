@@ -87,13 +87,6 @@ For detailed information about the changes included in those versions, refer to 
 
 ### Fixes
 
-#### Swarming: Information on where elements are being hosted could be incorrect [ID 42691]
-
-<!-- MR 10.6.0 - FR 10.5.8 [CU0] -->
-<!-- Not added to MR 10.6.0 -->
-
-In some rare cases, on certain DataMiner Agents in the cluster, the information on where element are being hosted could be incorrect, especially after multiple hosting agent updates had been processed simultaneously.
-
 #### Problem when combining conditional monitoring templates into an alarm template group [ID 42839]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->

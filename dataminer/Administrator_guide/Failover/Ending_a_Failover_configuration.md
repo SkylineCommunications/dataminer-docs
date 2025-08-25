@@ -17,7 +17,7 @@ In case you use a self-managed storage setup with [Cassandra storage per DMA](xr
 
 To verify this:
 
-1. Execute the following query on the database (e.g. using [DevCenter](xref:DataStax_DevCenter)):
+1. Execute the following query on the database using your preferred query tool:
 
    `Select keyspace_name, replication from system_schema.keyspaces where keyspace_name IN('SLDMADB','system_auth');`
 

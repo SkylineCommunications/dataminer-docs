@@ -650,7 +650,7 @@ items:
             topicUid: Importing_a_query
       - name: Logging
         topicUid: Dashboards_and_Low_Code_Apps_Logging
-      - name: Style Guide
+      - name: Style guide
         topicUid: LCA_Style_guide
       - name: Frequently asked questions
         topicUid: Dashboards_and_Low_Code_Apps_FAQ
@@ -665,7 +665,6 @@ items:
           - name: Dashboard URL options
             topicUid: Dashboard_URL_options
       - name: Creating and configuring dashboards
-        topicUid: Creating_and_configuring_dashboards1
         items:
           - name: Creating a new dashboard
             topicUid: Creating_a_new_dashboard
@@ -799,6 +798,8 @@ items:
             topicUid: DOM_DomInstanceHistorySettings
           - name: StorageSettings
             topicUid: DOM_StorageSettings
+          - name: DomInstanceNetworkAttachmentSettings
+            topicUid: DOM_DomInstanceNetworkAttachmentSettings
       - name: DOM events
         topicUid: DOM_events
       - name: DOM history
@@ -1297,9 +1298,7 @@ items:
       - name: API events
         topicUid: UD_APIs_Events
       - name: Troubleshooting
-        items:
-          - name: Troubleshooting User-Defined APIs
-            topicUid: UD_APIs_Troubleshooting
+        topicUid: UD_APIs_Troubleshooting
       - name: Tutorials
         topicUid: UD_APIs_Tutorials
         items:

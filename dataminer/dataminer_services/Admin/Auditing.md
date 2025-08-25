@@ -1,6 +1,7 @@
 ---
 uid: Auditing
 keywords: cloud audit log, cloud audit logs
+reviewer: Alexander Verkest
 ---
 
 # Consulting dataminer.services audit logs

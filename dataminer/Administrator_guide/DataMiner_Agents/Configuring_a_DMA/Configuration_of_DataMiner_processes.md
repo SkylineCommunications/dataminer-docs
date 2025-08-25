@@ -707,7 +707,9 @@ Example:
 
 ### Disabling .NET Remoting
 
-By default, .NET Remoting is used for communication between DMAs. From DataMiner 10.3.2/10.3.0 onwards, a gRPC connection can be used instead. To make gRPC the default for communication between DMAs, you can either [add Redirect tags in DMS.xml](xref:DMS_xml#redirects-subtag), or disable .NET Remoting in *MaintenanceSettings.xml*. However, note that the latter is **only recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards**, as prior to this there is no support for DataMiner upgrades over gRPC.
+.NET Remoting is used by default for communication between DMAs prior to DataMiner 10.5.10/10.6.0<!-- RN 43506 -->. From 10.5.10/10.6.0 onwards, gRPC is used by default.
+
+If you are using a DataMiner version between 10.3.2/10.3.0 and 10.5.10/10.6.0, you can make gRPC the default for communication between DMAs by either [adding Redirect tags in DMS.xml](xref:DMS_xml#redirects-subtag) or disabling .NET Remoting in *MaintenanceSettings.xml*. However, note that the latter is **only recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards**, as prior to this there is no support for DataMiner upgrades over gRPC.
 
 To do the latter, add an *\<EnableDotNetRemoting>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to "false".<!-- RN 31498+36023 -->
 

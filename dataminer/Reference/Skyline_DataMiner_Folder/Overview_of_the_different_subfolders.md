@@ -30,7 +30,7 @@ uid: Overview_of_the_different_subfolders
 | Tools | Tools (StandaloneUpgrade, .etc.). | No |
 | Upgrades | Information concerning the last upgrade. | No |
 | Users | Stored user information. See [ClientSettings.json](xref:ClientSettings_json#clientsettingsjson). | Yes |
-| Webpages | All webpages of the DataMiner client applications. | No |
+| Webpages | All webpages of the DataMiner client applications. | Only the *Public* subfolder (as from DataMiner 10.5.10/10.6.0<!-- RN 43458 -->) |
 
 > [!NOTE]
 >

@@ -28,7 +28,7 @@ In the Microsoft Platform protocol, for instance, this option can prevent hangin
 
 Obsolete. This option is not needed if connection type "HTTP" is used.
 
-Specify this option if the device uses chunked HTTP encoding. Only applicable for connections of type "serial" or "serial single".
+Specify this option if the device uses chunked transfer encoding. Only applicable for connections of type "serial" or "serial single".
 
 ### closeConnectionOnResponse
 

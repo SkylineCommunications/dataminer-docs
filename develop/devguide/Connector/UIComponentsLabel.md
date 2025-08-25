@@ -113,9 +113,9 @@ There are multiple ways to copy a value set in the write parameter to its read c
 > [!NOTE]
 > In case a parameter represents a configurable device parameter, the value set in the write parameter should not be set to its read counterpart using one of the above-mentioned methods. The write parameter should initiate a set to the device and after the set is performed, the value of the parameter should be requested again from the device to obtain the new value. The methods mentioned above should only be used for protocol- or DMA-related settings.
 
-## Creating an editable label with check box
+## Creating an editable label with checkbox
 
-It is possible to visualize a check box by providing a discrete entry on the write parameter:
+It is possible to visualize a checkbox by providing a discrete entry on the write parameter:
 
 ```xml
 <Param id="420">
@@ -164,7 +164,7 @@ It is possible to visualize a check box by providing a discrete entry on the wri
 </Param>
 ```
 
-![DataMiner Cube editable label with check box](~/develop/images/uieditablelabelwithcheckbox.png)
+![DataMiner Cube editable label with checkbox](~/develop/images/uieditablelabelwithcheckbox.png)
 
 ## See also
 

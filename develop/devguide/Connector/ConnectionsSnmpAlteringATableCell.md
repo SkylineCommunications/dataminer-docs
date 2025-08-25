@@ -153,7 +153,7 @@ This approach requires that you implement logic in the protocol to know which ro
              string primaryKey = protocol.RowKey();
     
             // Set instance parameter.
-            protocol.SetParameter(99 ,primaryKey);
+            protocol.SetParameter(99, primaryKey);
             protocol.SetParameter(127, value);
     
             // Refresh table.

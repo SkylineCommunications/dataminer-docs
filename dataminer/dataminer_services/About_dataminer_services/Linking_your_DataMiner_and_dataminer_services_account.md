@@ -1,6 +1,7 @@
 ---
 uid: Linking_your_DataMiner_and_dataminer_services_account
 keywords: cloud account
+reviewer: Alexander Verkest
 ---
 
 # Linking your DataMiner account to your dataminer.services account
