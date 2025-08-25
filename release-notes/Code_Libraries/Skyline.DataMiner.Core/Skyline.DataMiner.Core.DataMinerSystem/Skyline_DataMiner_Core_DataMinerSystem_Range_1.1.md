@@ -10,7 +10,7 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 ### 1.1.3.3
 
 > [!IMPORTANT]
-> In this version, **new monitors** have been added to support **usage outside of protocols** (e.g. in Automation scripts or ad hoc data sources). These allow external code to subscribe to state, name, or alarm level changes without relying on SLProtocol. However, subscriptions created using these monitors **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system. Only monitors on *IDms*, *IDmsElement*, *IDmsTable*, and **IDmsStandaloneParameter** are supported for now. If you need monitor support elsewhere, please reach out to request it.
+> In this version, **new monitors** have been added to support **usage outside of protocols** (e.g. in Automation scripts or ad hoc data sources). These allow external code to subscribe to state, name, or alarm level changes without relying on SLProtocol. However, subscriptions created using these monitors **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system. Only monitors on *IDms*, *IDmsElement*, *IDmsTable*, and **IDmsStandaloneParameter** are supported for now. If you need monitor support elsewhere, please contact <support.boost@skyline.be> to request it.
 
 #### New feature – Monitor support for non-protocol use cases on standalone parameters
 
