@@ -19,7 +19,7 @@ While previously new jobs were always created in the draft state, now it is also
 
 #### Scheduling: Improved capability and capacity filtering when manipulating nodes [ID 43553]
 
-In the *Edit job* panel, when nodes are added or resources are picked or swapped for a job, the capability and capacity filters used will now be saved in the node configuration the moment the button to add a node or pick/swap a resource is clicked. This will make sure that the filters used to find a resource are available for when a resource is swapped for a node. As the changes of the filter are only applied when the swap button is clicked, this also means that it is now possible to swap resources for nodes while changing the capabilities at the same time.
+When resources are added, picked, or swapped, the capability and capacity filters used will now take effect the moment the add, pick, or swap action is executed. In the past configuration and node manipulations had to happen separately, which could lead to challenges when swapping resources while changing capabilities. Now it is possible to swap resources while changing the capabilities at the same time.
 
 #### Cleanup of objects created by older MediaOps versions [ID 43566]
 
