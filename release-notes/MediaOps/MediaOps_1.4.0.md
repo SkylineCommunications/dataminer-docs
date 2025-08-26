@@ -19,7 +19,7 @@ While previously new jobs were always created in the draft state, now it is also
 
 #### Scheduling: Improved capability and capacity filtering when manipulating nodes [ID 43553]
 
-When resources are added, picked, or swapped, the capability and capacity filters used will now take effect the moment the add, pick, or swap action is executed. In the past configuration and node manipulations had to happen separately, which could lead to challenges when swapping resources while changing capabilities. Now it is possible to swap resources while changing the capabilities at the same time.
+When resources are added, picked, or swapped, the capability and capacity filters used will now take effect the moment the add, pick, or swap action is executed. In the past, configuration and node manipulations had to happen separately, which could lead to challenges when swapping resources while changing capabilities. Now it is possible to swap resources while changing the capabilities at the same time.
 
 #### Cleanup of objects created by older MediaOps versions [ID 43566]
 
