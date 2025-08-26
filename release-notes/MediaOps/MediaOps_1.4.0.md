@@ -13,6 +13,10 @@ uid: MediaOps_1.4.0
 
 While previously new jobs were always created in the draft state, now it is also possible to create a job in the tentative state. This has the advantage that the resources are immediately assigned to the job and checked for conflicts.
 
+#### Resource Studio: Time-dependent capabilities [ID 43606]
+
+When you create a new capability in the Resource Studio app, you can now make it time-dependent, which means that it will only be available during a specific time frame. These time-dependent capabilities can be assigned to resources and resource pools like other capabilities.
+
 ## Changes
 
 ### Enhancements
