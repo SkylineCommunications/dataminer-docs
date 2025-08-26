@@ -76,6 +76,21 @@ A new *VerifyBrokerGatewayMigration* prerequisite check has been added to prepar
 
 ### Enhancements
 
+#### APIGateway: Kernel response buffering will now be enabled by default [ID 43346]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+In the APIGateway settings, the `EnableKernelResponseBuffering` setting will now be enabled by default.
+
+If you wish to disable it, do the following:
+
+1. In the `C:\Program Files\Skyline Communications\DataMiner APIGateway\` folder of the DataMiner Agent, create a JSON file named *appsettings.custom.json*.
+1. Open this JSON file, and add the following content:
+
+   ```json
+   { "HostingOptions": { "EnableKernelResponseBuffering": false } }
+   ```
+
 #### 'Webpages\Public' folder now synced between DataMiner Agents [ID 43458]
 
 <!-- MR 10.6.0 - FR 10.5.10 -->

@@ -372,6 +372,21 @@ Because of a number of enhancements, overall performance has increased when crea
 
 The decision when to trigger a proactive detection suggestion event for a future data range breach (e.g. predicted 100% between ... and ...) has been fine-tuned. This will prevent suggestion events from being generated for parameters with values near or on the data range that should not be considered problematic.
 
+#### APIGateway: Kernel response buffering will now be enabled by default [ID 43346]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+In the APIGateway settings, the `EnableKernelResponseBuffering` setting will now be enabled by default.
+
+If you wish to disable it, do the following:
+
+1. In the `C:\Program Files\Skyline Communications\DataMiner APIGateway\` folder of the DataMiner Agent, create a JSON file named *appsettings.custom.json*.
+1. Open this JSON file, and add the following content:
+
+   ```json
+   { "HostingOptions": { "EnableKernelResponseBuffering": false } }
+   ```
+
 #### Migration from ElasticSearch to OpenSearch: is_write_index flag of the aliases will no longer be reset [ID 43369]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
