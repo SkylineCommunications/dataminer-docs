@@ -171,6 +171,11 @@ In addition, retrieving usage data to display in the Admin app resulted in a tim
 
 In some cases, it could occur that the wrong vendor name was shown.
 
+### 22 April 2025 - Fix - Catalog API - Updating item would reset original id & image path [ID 42687]
+
+When updating an item the `ImagePath` & `OriginalId` property will no longer be reset.
+Before the `ImagePath` and the `OriginalId` would be cleared with every update via the manifest.
+
 ### 22 April 2025 - Enhancement - Catalog - 'Back' button removed from details pages [ID 42734]
 
 As the "Back" button on the details page of a Catalog item had no real value, it has been removed.
@@ -178,6 +183,29 @@ As the "Back" button on the details page of a Catalog item had no real value, it
 ### 22 April 2025 - Enhancement - Catalog - Browse page optimization [ID 42673]
 
 Optimizations have been implemented on the Catalog browse page to prevent the page from becoming unresponsive when new items are loaded.
+
+### 1 April 2025 - Enhancement - Catalog - Autoselect dma if user only has one [ID 42618]
+
+When deploying a version a single DMA will be selected by default if there's only one DMA to select.
+Before (even when a user only had 1 DMA) this needed to be selected manually.
+
+### 1 April 2025 - Enhancement - Catalog - Context menu for ranges & versions only shown for members of publishing organization [ID 42569]
+
+The context menu on a catalog item range and version is now only shown to users that have the publishing organization of the item selected.
+Before this would be shown to users that didn't have rights to update/set anything.
+
+### 1 April 2025 - Enhancement - Catalog & Home - Show notifications bell for unauthenticated users [ID 42559]
+
+On Catalog & Home, users are now able to see the notifications button even when they are not signed in.
+
+### 1 April 2025 - Fix - Admin, Catalog, Home & Sharing - User profile was visible after signing out [ID 42559]
+
+Fixed a bug where you could still see your user profile after clicking "Sign out". This affects Admin, Catalog, Home & Sharing
+
+### 1 April 2025 - Fix - CatalogAPI - Users could update ranges & versions they did not have rights to [ID 42566]
+
+Fixed a bug where users could update the range/version state or set/delete a custom tag for items that they did not publish.
+Now the user will get a Forbidden error.
 
 ### 1 April 2025 - New feature - Catalog API - Ability to retrieve vendors [ID 42633]
 
