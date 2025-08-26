@@ -195,7 +195,7 @@ To set up external authentication, you first need to create an enterprise applic
 
    - **type**: `SAML` (Identity federation using SAML assertions)
 
-   - **ipMetadata**: The path to or the URL of the identity provider's metadata file, which you copied while [setting up the Microsoft Entra ID Enterprise application](#setting-up-a-microsoft-entra-id-enterprise-application).
+   - **ipMetadata**: The path to or the URL of the identity provider's metadata file, defined in Azure as _App Federation Metadata Url_, which you copied while [setting up the Microsoft Entra ID Enterprise application](#setting-up-a-microsoft-entra-id-enterprise-application).
 
    - **spMetadata**: The path to or the URL of the [DataMiner metadata file](#creating-a-dataminer-metadata-file) you created earlier.
 
@@ -408,7 +408,7 @@ From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Entra ID using SAM
 
 There are two ways to configure this setup: with or without group claims.
 
-- With group claims, when a user logs in for the first time, they will be added to an existing group that exists both in Entra ID and in DataMiner.
+- With group claims, when a user logs in for the first time, they will be added to an existing group that exists both in Entra ID and in DataMiner. Ensure that the group is created during the setup described below and that the group names match exactly.
 
 - Without group claims, any user that logs in for the first time will be added to one default security group, which you will need to configure during the setup detailed below. This is easier to configure, but has the disadvantage that user information that is created will not be updated.
 
@@ -456,7 +456,7 @@ There are two ways to configure this setup: with or without group claims.
    >
    > This is because the account name of the group will only be sent via SAML when the groups are synchronized (from an on-premises AD). Otherwise, the ID of the group will be sent instead.
 
-1. In DataMiner Cube, add the groups corresponding with the groups you included in the group claim in Entra ID. See [Adding a user group](xref:Adding_a_user_group).
+1. In DataMiner Cube, create the groups corresponding to those defined in the group claim within Entra ID, ensuring that the group names match exactly. See [Adding a user group](xref:Adding_a_user_group).
 
 1. Stop DataMiner.
 
@@ -511,7 +511,7 @@ There are two ways to configure this setup: with or without group claims.
    > [!NOTE]
    > Make sure that the identity provider claims "givenname", "surname", "emailaddress", "name", and "Unique User Identifier" are present, matching the screenshot above.
 
-1. Make sure a group has been added in DataMiner that can be used to automatically add users to. See [Adding a user group](xref:Adding_a_user_group).
+1. Ensure that a group has been created in DataMiner for automatic user assignment. This default group must match the group specified in *DataMiner.xml*.  See [Adding a user group](xref:Adding_a_user_group).
 
 1. Stop DataMiner.
 
@@ -535,7 +535,7 @@ There are two ways to configure this setup: with or without group claims.
          <EmailClaim>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</EmailClaim>
          <Givenname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</Givenname>
          <Surname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</Surname>
-         <Groups claims="false">[existing DataMiner group]</Groups>
+         <Groups claims="false">[default DataMiner group]</Groups>
        </AutomaticUserCreation>
      </ExternalAuthentication>
      ...
