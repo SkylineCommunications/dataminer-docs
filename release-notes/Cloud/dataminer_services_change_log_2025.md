@@ -13,11 +13,16 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 In the Admin app, the usage for unmanaged objects will now be displayed if you are using at least DataMiner 10.5.5/10.6.0 and DataMiner SupportAssistant 1.7.3. The data will also be available for export.
 
+### 07 August 2025 - Enhancement - Version description now supports markdown
+
+The version description now also supports parsing markdown to HTML like the item description does.
+Everything you can use in the item description you can now also use in version description.
+
 ### 05 August 2025 - Enhancement - A DaaS can use the url of a soft deleted system
 
 It is now supported to create a DaaS with a url that is used by a system that is still in soft-deleted state.
 
-### 05 August 2025 - New Feature - DMS Usage overview
+### 05 August 2025 - New Feature - Admin - DMS Usage overview
 
 A owner or administrator of a DMS is now able to see the usage of its system on a "Usage" page for the DMS in question in the Admin app.
 
