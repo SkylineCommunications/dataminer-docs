@@ -13,18 +13,17 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 In the Admin app, the usage for unmanaged objects will now be displayed if you are using at least DataMiner 10.5.5/10.6.0 and DataMiner SupportAssistant 1.7.3. The data will also be available for export.
 
-### 07 August 2025 - Enhancement - Version description now supports markdown
+### 07 August 2025 - Enhancement - Version description now supports Markdown
 
-The version description now also supports parsing markdown to HTML like the item description does.
-Everything you can use in the item description you can now also use in version description.
+If you use Markdown in the description of item versions, this will now be parsed to HTML just like for the main item description. The same syntax supported in the item description is also supported in the version description.
 
-### 05 August 2025 - Enhancement - A DaaS can use the url of a soft deleted system
+### 05 August 2025 - Enhancement - DaaS systems can now use the URL of soft-deleted systems
 
-It is now supported to create a DaaS with a url that is used by a system that is still in soft-deleted state.
+It is now supported to create a DaaS system with a URL that is used by a system that is still in the soft-deleted state.
 
-### 05 August 2025 - New Feature - Admin - DMS Usage overview
+### 05 August 2025 - New feature - Admin - DMS usage overview
 
-A owner or administrator of a DMS is now able to see the usage of its system on a "Usage" page for the DMS in question in the Admin app.
+As an owner or administrator of a DMS, you can now see the usage of your system on the *Usage* page for the DMS in question in the Admin app.
 
 ### 16 July 2025 - Enhancement - Startup and upgrade progress displayed when remotely accessing Cube
 
@@ -124,7 +123,7 @@ On the details page of a Catalog item, users will now be able to see the market 
 
 Links that direct to the DxM page on the DMS overview page in the Admin app will now open the link in the current tab of the browser instead of opening a new tab.
 
-### 20 May 2025 - Enhancement - Unauthenticated views
+### 20 May 2025 - Enhancement - Unauthenticated views [ID 42921] [ID 42922]
 
 Applications on *.dataminer.services will now support an unauthenticated view and navigate to the root page of the application when the user session expires or the user signs out.
 
@@ -154,7 +153,7 @@ When experiencing issues with the shared single sign-on, applications will now f
 
 Signing in or out will now automatically sync to other applications without the need to refresh the page.
 
-### 05 May 2025 - Enhancement - Catalog - Deletion of items by publishing organization [ID 42793]
+### 05 May 2025 - Enhancement - Catalog - Deletion of items by publishing organization [ID 42792] [ID 42793]
 
 If you are a member of the organization that published a specific Catalog item, and you have the Owner or Admin role, you can now delete that Catalog item using a context menu at the top of the item's details page. When you do so, you will have to provide the reason for the deletion.
 
@@ -176,10 +175,9 @@ In addition, retrieving usage data to display in the Admin app resulted in a tim
 
 In some cases, it could occur that the wrong vendor name was shown.
 
-### 22 April 2025 - Fix - Catalog API - Updating item would reset original id & image path [ID 42687]
+### 22 April 2025 - Fix - Catalog API - Original ID and image path reset after item update [ID 42687]
 
-When updating an item the `ImagePath` & `OriginalId` property will no longer be reset.
-Before the `ImagePath` and the `OriginalId` would be cleared with every update via the manifest.
+When an item was updated via the manifest, the `ImagePath` and `OriginalId` property were reset. This will no longer occur.
 
 ### 22 April 2025 - Enhancement - Catalog - 'Back' button removed from details pages [ID 42734]
 
@@ -189,28 +187,25 @@ As the "Back" button on the details page of a Catalog item had no real value, it
 
 Optimizations have been implemented on the Catalog browse page to prevent the page from becoming unresponsive when new items are loaded.
 
-### 1 April 2025 - Enhancement - Catalog - Autoselect dma if user only has one [ID 42618]
+### 1 April 2025 - Enhancement - Catalog - DMA now autoselected if user only has one [ID 42618]
 
-When deploying a version a single DMA will be selected by default if there's only one DMA to select.
-Before (even when a user only had 1 DMA) this needed to be selected manually.
+When a user deploys a version of an item, a single DMA will now be selected by default if there is only one DMA to select. Previously, a DMA always had to be selected manually, even when there was only one available.
 
-### 1 April 2025 - Enhancement - Catalog - Context menu for ranges & versions only shown for members of publishing organization [ID 42569]
+### 1 April 2025 - Enhancement - Catalog - Context menu for ranges and versions only shown for members of publishing organization [ID 42569]
 
-The context menu on a catalog item range and version is now only shown to users that have the publishing organization of the item selected.
-Before this would be shown to users that didn't have rights to update/set anything.
+The context menu for a Catalog item range and version is now only shown if the publishing organization of the item is currently selected, ensuring that the users viewing the menu are a member of this organization. Previously, it was also shown for users who had insufficient rights to be able to update or configure anything.
 
 ### 1 April 2025 - Enhancement - Catalog & Home - Show notifications bell for unauthenticated users [ID 42559]
 
-On Catalog & Home, users are now able to see the notifications button even when they are not signed in.
+In the Catalog app and on the dataminer.services homepage, users can now see the notifications button even when they are not signed in.
 
 ### 1 April 2025 - Fix - Admin, Catalog, Home & Sharing - User profile was visible after signing out [ID 42559]
 
-Fixed a bug where you could still see your user profile after clicking "Sign out". This affects Admin, Catalog, Home & Sharing
+In some cases, it could occur that you could still see your user profile even after clicking *Sign out*. This issue affected the Admin app, Catalog app, Sharing app, and dataminer.services homepage.
 
-### 1 April 2025 - Fix - CatalogAPI - Users could update ranges & versions they did not have rights to [ID 42566]
+### 1 April 2025 - Fix - Catalog API - Users could update ranges and versions they did not have rights to [ID 42566]
 
-Fixed a bug where users could update the range/version state or set/delete a custom tag for items that they did not publish.
-Now the user will get a Forbidden error.
+It could occur that users were able to update the range/version state or set/delete a custom tag for items that they did not publish, even though they should not have the rights to do so. Now a user who tries to do so will get a "Forbidden" error.
 
 ### 1 April 2025 - New feature - Catalog API - Ability to retrieve vendors [ID 42633]
 
