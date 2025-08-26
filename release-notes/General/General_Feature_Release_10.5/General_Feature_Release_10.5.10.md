@@ -97,6 +97,12 @@ If you wish to disable it, do the following:
 
 The folder `C:\Skyline DataMiner\Webpages\Public\` will now be synced between DataMiner Agents in a cluster. As a consequence, files that are installed in this folder can now also be included in the companion files of a DataMiner app package.
 
+#### SLNet-managed NATS solution: Credentials of the local agent will now be compared against the credentials of the primary NAS node [ID 43514]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+In the *ResetNATSCheck* timer of the SLNet-managed NATS solution, the credentials of the local agent will now be compared against the credentials of the primary NAS node. If these do not match, the NATS configuration of the local agent will be reset, and the correct credentials of the primary node will be used instead.
+
 #### DxMs upgraded [ID 43557]
 
 <!-- RN 43557: MR 10.6.0 - FR 10.5.10 -->

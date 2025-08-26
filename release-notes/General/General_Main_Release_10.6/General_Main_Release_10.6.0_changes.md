@@ -423,6 +423,12 @@ The folder `C:\Skyline DataMiner\Webpages\Public\` will now be synced between Da
 
 When a relational anomaly group or subgroup is added with the AddRADParameterGroupMessage or AddRADSubgroupMessage with anomaly threshold set to 0, an exception will now be thrown. Previously, the exception for this invalid configuration was silently ignored and the anomaly threshold was set to the default value of 3.0.
 
+#### SLNet-managed NATS solution: Credentials of the local agent will now be compared against the credentials of the primary NAS node [ID 43514]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+In the *ResetNATSCheck* timer of the SLNet-managed NATS solution, the credentials of the local agent will now be compared against the credentials of the primary NAS node. If these do not match, the NATS configuration of the local agent will be reset, and the correct credentials of the primary node will be used instead.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
