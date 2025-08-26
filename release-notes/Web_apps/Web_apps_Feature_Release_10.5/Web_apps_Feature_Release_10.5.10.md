@@ -68,6 +68,16 @@ From now on, after GQI has tries to retrieve a non-existing query node argument,
 
 An enhancement has been implemented to the way the GQI DxM deals with extensions. This will improve performance and also prevent possible performance issues in case a large number of active GQI extension libraries are used, for example when many extension libraries are activated by the Copilot DxM.
 
+#### GQI DxM: A more descriptive error will now be thrown when a column required by a custom operator no longer exist [ID 43491]
+
+<!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When a column required by a custom operator did no longer exist when a query was executed, up to now, a number of generic errors would be thrown.
+
+From now on, when a column required by a custom operator no longer exist when a query is executed, the following, more descriptive error will be thrown instead:
+
+`Column 'column name' does not exist.`
+
 #### Low-Code Apps: 'Settings' option in '...' menu renamed to 'Permissions' [ID 43536]
 
 <!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
