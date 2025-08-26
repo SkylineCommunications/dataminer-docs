@@ -103,3 +103,9 @@ When elements were migrated between DataMiner Agents via the Element Migration w
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 When, in System Center, you performed a DataMiner upgrade while Cube was connected to a DataMiner Agent that was part of a Failover system based on hostname, up to now, the upgrade could fail to start after the package had been uploaded.
+
+#### Trending: Changepoints would not be displayed when opening a trend graph [ID 43576]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+When you opened a trend graph, in some cases, the changepoints would incorrectly not be displayed.
