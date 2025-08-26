@@ -8,7 +8,7 @@ uid: coregateway_change_log
 
 Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
 
-#### 17 June 2025 - Fix - CoreGateway 2.14.13 - Problem caused by rapid file changes
+#### 17 June 2025 - Fix - CoreGateway 2.14.13 - Problem caused by rapid file changes [ID 42916]
 
 ​Rapid file changes in *DataMiner.xml* could cause a problem in CoreGateway, causing the DxM to restart.
 

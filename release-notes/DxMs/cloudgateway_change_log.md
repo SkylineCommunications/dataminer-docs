@@ -36,7 +36,7 @@ Initiating a subscription while the NATS message broker was reconnecting could c
 
 Several dependencies have been updated.
 
-#### 17 June 2025 - Fix - CloudGateway 2.17.7 - Problem caused by rapid file changes
+#### 17 June 2025 - Fix - CloudGateway 2.17.7 - Problem caused by rapid file changes [ID 42763]
 
 ​Rapid file changes in *DataMiner.xml* or *MaintenanceSettings.xml* could cause a problem in CloudGateway, causing the DxM to restart.
 
