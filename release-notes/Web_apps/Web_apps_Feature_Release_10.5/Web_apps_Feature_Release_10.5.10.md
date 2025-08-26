@@ -50,6 +50,18 @@ These events will take place in the following cases:
 
 When a shape linked to an element, service, or view was clicked in Visual Overview in the Monitoring app, it opened the Data page for the object instead of the Visual page. Now it will open the Visual page, so that the Monitoring app now has the same behavior as Cube.
 
+#### GQI DxM: A more descriptive error will now be thrown after GQI has tried to retrieve a non-existing query node argument [ID 43476]
+
+<!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, after GQI had tried to retrieve a non-existing query node argument, the following internal exception would be thrown:
+
+`Error trapped: Sequence contains no matching element.`
+
+From now on, after GQI has tries to retrieve a non-existing query node argument, the following, more descriptive error will be thrown instead:
+
+`GQI error: Missing argument value for 'Value'.`
+
 #### GQI DxM: Improved performance when handling extensions [ID 43479]
 
 <!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
