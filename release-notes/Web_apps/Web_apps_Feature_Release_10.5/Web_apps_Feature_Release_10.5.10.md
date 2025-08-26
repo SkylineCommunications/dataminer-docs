@@ -40,6 +40,21 @@ These events will take place in the following cases:
 >- Currently, linking is not supported. When configuring a link to a component value, the value will always remain empty as the component will not be loaded yet when the event takes place.
 >- Current, passing URL data is not supported. A value passed through the URL will return as empty.
 
+#### Dashboards/Low-Code Apps - Maps component: Interacting with lines on a map [ID 43562]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+From now on, when you select a line on a map in a *Maps* component
+
+- data about that line will be made available in the *Selected lines* category,
+- its *Selected* state will automatically be set to true, and
+- its border color will change.
+
+Also, in low-code apps, *On line click* event can now be configured. Inside such an event, actions have access to the event data, including data regarding the line that was clicked.
+
+> [!NOTE]
+> When you reload a dashboard or switch pages, selected lines will not automatically be reselected. Also, lines cannot be selected using an URL argument.
+
 ## Changes
 
 ### Enhancements
