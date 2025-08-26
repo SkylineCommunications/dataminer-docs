@@ -115,6 +115,14 @@ When different components in a dashboard or low-code-app used the same query, on
 
 In some cases, it could occur that a line chart in a PDF received unexpected data points from the server, which caused the chart to never be marked as finished. When a PDF was generated of such a chart, the PDF creation process never completed, never resulting in a finished PDF.
 
+#### Dashboards/Low-Code Apps - Table component: Problem when rows were deleted in a real-time update [ID 43478]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When a *Table* component with the *Update data* option enabled received an update that deleted a number of rows, up to now, the keys of the rows that were selected at the time of the update would incorrectly not be cleaned up.
+
+As a result, any row that was selected at the time of the update would incorrectly still be selected, and when that selection was re-applied, the row would again be selected.
+
 #### Dashboards app: Dashboard components rendered twice when generating PDF [ID 43490]
 
 <!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
