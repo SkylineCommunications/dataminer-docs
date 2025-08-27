@@ -4,12 +4,12 @@ uid: BPA_Cube_CRL_Freeze
 
 # Cube CRL Freeze
 
-This BPA test identifies client machines on a network without internet access where the `DataMiner Cube` application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
+This BPA test identifies client machines and DataMiner Agents without internet access where the `DataMiner Cube` application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
 ## Metadata
 
 - Name: Cube CRL Freeze
-- Description: Detects a startup freeze in the DataMiner Cube application on client machines without an internet connection.
+- Description: Detects a startup freeze in the DataMiner Cube application on client machines and DataMiner Agents without an internet connection.
 - Author: Skyline Communications
 - Default schedule: Every day
 
@@ -23,7 +23,7 @@ No problems are found.
 
 ### Error
 
-The test detects one or more client machines that are affected by the startup freeze.
+The test detects one or more client machines and DataMiner Agents that are affected by the startup freeze.
 
 - Result message: `CRL Freezes are detected.`
 
@@ -41,7 +41,7 @@ The detailed result section lists the specific DataMiner Agents that are affecte
 
 Messages can appear when the test fails to execute for unexpected reasons:
 
-- Result message: `Could not execute test ([message])."** (on unexpected exceptions).`
+- Result message: `Could not execute test ([message])."` (on unexpected exceptions).
 
 The test result details will contain the full exception text, if available.
 
@@ -53,4 +53,4 @@ The test result details will contain the full exception text, if available.
 
 ## Limitations
 
-- This test is specifically designed for environments where client machines lack an internet connection. The configuration problem and its detection are not relevant in online environments.
+- This test is specifically designed for environments where client machines and DataMiner Agents lack an internet connection. The configuration problem and its detection are not relevant in online environments.
