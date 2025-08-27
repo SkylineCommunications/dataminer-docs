@@ -107,6 +107,8 @@ Where the previous failures on configuration may be false positives, the connect
 
 Verify the following items:
 
+- Are all DataMiner Agents running?
+
 - Is the *SLNet* service running on all Agents?
 
 - Is the *DataMiner APIGateway* service running on all Agents?
