@@ -204,6 +204,10 @@ Used in order to visualize connectivity using manually drawn lines.
 
 See [Using existing lines as connectivity lines](xref:Options_for_displaying_DCF_connections#using-existing-lines-as-connectivity-lines).
 
+## Control=Border
+
+Use this option to turn a shape within a grid layout into a border that will stretch out across the card surface and that uses the default Cube style.
+
 ## Control=Button
 
 Shape-level option.
