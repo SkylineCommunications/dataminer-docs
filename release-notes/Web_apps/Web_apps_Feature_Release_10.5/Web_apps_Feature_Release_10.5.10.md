@@ -170,8 +170,8 @@ From now on, when a query no longer feeds any data to a *Maps* component, it wil
 
 Users will be allowed to remove queries marked as "old queries", but they will not be allowed to change any of their settings.
 
-#### GQI DxM: Problem when querying an ad hoc data source with the 'Update data' option enabled [ID 43596]
+#### GQI DxM: Queries could get stuck when using an ad hoc data source with the 'Update data' option enabled [ID 43596]
 
 <!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
 
-When an ad hoc data source with the *Update data* option enabled was queried, in some cases, the query could get stuck when real-time updates were received while a page of the query result set was requested.
+When an ad hoc data source with the *Update data* option enabled was queried, the query could get stuck when real-time updates occurred while a page of the query result set was requested.
