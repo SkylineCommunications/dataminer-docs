@@ -13,7 +13,7 @@ uid: Installing_Ping_Monitoring
 
 - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
-- The [*Generic Ping* connector](https://catalog.dataminer.services/result/driver/530)
+- The [*Generic Ping* connector](https://catalog.dataminer.services/detals/516670b3-a9c5-402d-88f3-16b3f0c142bb)
 
   > [!TIP]
   > We recommend using Generic Ping version 3.1.2.11 or higher. See [Deploying a Catalog item](xref:Deploying_a_catalog_item).
@@ -25,11 +25,16 @@ uid: Installing_Ping_Monitoring
 
   > [!TIP]
   >
+<<<<<<< Updated upstream:solutions/standard_solutions/Ping_Monitoring/Installing_Ping_Monitoring.md
   > - For more information about configuring destinations, consult the [Generic Ping connector documentation](https://catalog.dataminer.services/result/driver/530).
   > - See also:
   >
   >   - [Working with elements in DataMiner](xref:Element_cards)
   >   - [Creating a ping element](xref:Adding_elements) ![Video](~/dataminer/images/video_Duo.png)
+=======
+  > - For more information about configuring destinations, consult the [Generic Ping connector documentation](https://catalog.dataminer.services/details/516670b3-a9c5-402d-88f3-16b3f0c142bb).
+  > - See also: [Working with elements in DataMiner](xref:Element_cards)
+>>>>>>> Stashed changes:user-guide/Standard_Apps/Monitoring_Solutions/Ping_Monitoring/Installing_Ping_Monitoring.md
 
 - Depending on your DataMiner version, you may need to enable the following soft-launch options:
 
