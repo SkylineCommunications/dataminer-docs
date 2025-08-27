@@ -45,6 +45,18 @@ When multiple CommunicationGateway nodes were deployed in a cluster, and an elem
 > [!NOTE]
 > For this extra step to be initiated, connectors need to reference [Skyline.DataMiner.DataSources.OpenConfig.Gnmi 4.2.0](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi_4.x#extra-step-added-to-the-connection-process-id-39548) or higher.
 
+#### 27 February 2024 - Enhancement - CommunicationGateway 3.1.1 - Improved handling of exceptions encountered by gRPC streams [ID 38931]
+
+When a gRPC stream encounters an exception, the middleware will now be notified. It will log stream state changes, and if the stream is lost, it will trigger a subscribable event called "SubscriptionLost", containing a LostSubscriptionArgs value with the Channel ID, the Subscription ID, and the error message as found in CommunicationGateway.
+
+When a stream encounters a GrpcException of type "Internal" or "Dataloss", there will be attempts to recover it for a limited time (7.5 minutes), using a similar mechanism as for an "Unavailable" exception.
+
+In the logging, the following information will now be recorded:
+
+- When the stream is down but may be restored and the SubscriptionLost event is not invoked: `The stream for {subscriptionId} is down and attempts are being made to restore it. The stream went down with the error message: {message}`
+- When the stream is down and cannot be restored, and the SubscriptionLost event will be invoked: `The stream for {subscriptionId} is down and no (further) attempts are being made to restore it. The stream went down with the error message: {message}`
+- When the stream was down but is now up again: `The stream for {subscriptionId} is restored.`
+
 #### 21 February 2024 - Enhancement - CommunicationGateway 3.0.1 - Error information when IP address is not formatted correctly [ID 38755]
 
 If an IP address in the endpoint configuration is not formatted correctly, Communication Gateway will now return a *ChannelManagementHandler_ConnectRequest_CreateChannelInvalidUriFormat* error with information on what has gone wrong.
