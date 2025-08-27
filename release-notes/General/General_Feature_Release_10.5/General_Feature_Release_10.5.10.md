@@ -72,6 +72,27 @@ We recommend uploading the package prior to the maintenance window for the upgra
 
 A new *VerifyBrokerGatewayMigration* prerequisite check has been added to prepare for the upcoming mandatory migration to BrokerGateway. However, this check is not yet relevant for users outside of Skyline Communications.
 
+#### New BPA test: Cube CRL Freeze [ID 43539]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+From now on, a new BPA test *Cube CRL Freeze* will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
+
+The test, which will run once a day, will return one of the following messages:
+
+| Message | Description |
+|---------|-------------|
+| No CRL Freezes are detected. | No problems were found. |
+| CRL Freezes are detected. | The test has detected one or more client machines and DataMiner Agents that are affected by the startup freeze.<br>The detailed result section will list the specific client machines that are affected. The full list of affected client machines will be included in the `DetailedJsonResult` as `the following client machines are affected.` |
+| CRL Freezes are detected on DataMiner Agents only. | The test has detected one or more DataMiner Agents that are affected by the startup freeze.<br>The detailed result section will list the specific DataMiner Agents that are affected. The full list of affected DataMiner Agents will be included in the `DetailedJsonResult` as `the following DataMiner Agents are affected.` |
+| Could not execute test ([message]). | The test has failed to execute for unexpected reasons.<br>The test result details will contain the full exception text, if available. |
+
+##### When issues are detected
+
+When an internet connection is not available on the client machine, the DataMiner Cube application freezes for about 20 seconds during the session. This happens because Windows and .NET try to verify the application's digital signatures by checking an online Certificate Revocation List (CRL). The system times out during this process, causing the delay and impacting user productivity.
+
+To prevent these freezes, please consult your IT administrator. For detailed solutions and workarounds, see [DataMiner Cube freeze on startup](xref:KI_DataMiner_Cube_freeze_on_startup).
+
 ## Changes
 
 ### Enhancements
