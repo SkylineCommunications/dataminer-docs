@@ -169,9 +169,3 @@ Up to now, settings of existing queries that no longer fed data to a *Maps* comp
 From now on, when a query no longer feeds any data to a *Maps* component, it will no longer be automatically removed. Instead, it will be marked as "old query".
 
 Users will be allowed to remove queries marked as "old queries", but they will not be allowed to change any of their settings.
-
-#### GQI DxM: Queries could get stuck when using an ad hoc data source with the 'Update data' option enabled [ID 43596]
-
-<!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
-
-When an ad hoc data source with the *Update data* option enabled was queried, the query could get stuck when real-time updates occurred while a page of the query result set was requested.
