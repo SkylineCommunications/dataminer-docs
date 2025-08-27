@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.5.10
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- DataMiner Object Models: Attachments can now be uploaded to a network share [ID 43114] [ID 43366]
 
 ## New features
 
