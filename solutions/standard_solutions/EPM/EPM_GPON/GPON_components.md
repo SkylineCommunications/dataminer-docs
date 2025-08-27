@@ -12,11 +12,11 @@ EPM connectors constitute the core of the EPM Solution. They carry out the neces
 
 For xPON, these are the required EPM connectors:
 
-- [Skyline EPM Platform](https://catalog.dataminer.services/result/driver/7207)
+- [Skyline EPM Platform](https://catalog.dataminer.services/details/f1dc139b-8da7-4607-9ffb-65087610b3ff)
 
-- [Skyline EPM Platform xPON](https://catalog.dataminer.services/result/driver/7210)
+- [Skyline EPM Platform xPON](https://catalog.dataminer.services/details/2de7ee12-650b-442a-8c7e-c8ddf2b358f9)
 
-- [Skyline EPM Platform xPON WM](https://catalog.dataminer.services/result/driver/7213)
+- [Skyline EPM Platform xPON WM](https://catalog.dataminer.services/details/ac349ec5-a7a6-4e5f-8732-6e43ed14b3ee)
 
 ### Data collection
 

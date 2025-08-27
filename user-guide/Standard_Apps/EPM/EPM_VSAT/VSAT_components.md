@@ -17,7 +17,7 @@ While these connectors ship out with the solution packages, they need to be cont
 This is the collector connector required for the iDirect Evolution Platform. This collector was primarily tested on version 4.1 or later.
 
 > [!TIP]
-> For more information, see [Verizon iDirect Evolution Platform Collector](https://catalog.dataminer.services/result/driver/5827).
+> For more information, see [Verizon iDirect Evolution Platform Collector](https://catalog.dataminer.services/details/1502ec60-639f-417c-a5ce-1f944a862469).
 
 #### iDirect Dialog Platform VSAT
 
