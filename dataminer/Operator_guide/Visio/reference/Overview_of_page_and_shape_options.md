@@ -206,7 +206,7 @@ See [Using existing lines as connectivity lines](xref:Options_for_displaying_DCF
 
 ## Control=Border
 
-Use this option to turn a shape within a grid layout into a border that will stretch out across the card surface and that uses the default Cube style.
+Use this option to place the contents of a shape within a grid layout inside a border that will stretch out across the card surface and that uses the default Cube style.
 
 ## Control=Button
 
