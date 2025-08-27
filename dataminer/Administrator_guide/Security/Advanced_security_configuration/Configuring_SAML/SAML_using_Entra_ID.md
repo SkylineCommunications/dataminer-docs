@@ -195,7 +195,7 @@ To set up external authentication, you first need to create an enterprise applic
 
    - **type**: `SAML` (Identity federation using SAML assertions)
 
-   - **ipMetadata**: The path to or the URL of the identity provider's metadata file, defined in Azure as _App Federation Metadata Url_, which you copied while [setting up the Microsoft Entra ID Enterprise application](#setting-up-a-microsoft-entra-id-enterprise-application).
+   - **ipMetadata**: The path to or the URL of the identity provider's metadata file, defined in Azure as *App Federation Metadata Url*, which you copied while [setting up the Microsoft Entra ID Enterprise application](#setting-up-a-microsoft-entra-id-enterprise-application).
 
    - **spMetadata**: The path to or the URL of the [DataMiner metadata file](#creating-a-dataminer-metadata-file) you created earlier.
 
