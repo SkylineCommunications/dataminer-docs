@@ -160,6 +160,8 @@ items:
             topicUid: BPA_Check_Deprecated_DLL_Usage
           - name: Check Time Server
             topicUid: BPA_Check_Time_Server
+          - name: Cube CRL Freeze
+            topicUid: BPA_Cube_CRL_Freeze
           - name: Database Security
             topicUid: BPA_Database_Security
           - name: DataMiner Agent Minimum Requirements
