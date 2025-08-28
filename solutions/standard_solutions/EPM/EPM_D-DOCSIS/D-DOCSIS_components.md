@@ -20,8 +20,8 @@ EPM connectors constitute the core of the EPM Solution. They carry out the neces
 
 These are the required EPM connectors, which are included in the EPM Solution package:
 
-- [Skyline CCAP Platform EPM](https://catalog.dataminer.services/result/driver/6833)
-- [Skyline CCAP Platform WM](https://catalog.dataminer.services/result/driver/6831)
+- Skyline CCAP Platform EPM
+- Skyline CCAP Platform WM
 
 ### System connectors
 
@@ -31,11 +31,11 @@ These connectors do not ship out with the solution packages. They need to be ins
 
 The following system connectors are supported (but not required):
 
-- [Cox Vecima R-PHY Monitor](https://catalog.dataminer.services/result/driver/7039)
-- [Cox Ceeview Platform](https://catalog.dataminer.services/result/driver/7396)
-- [Cox Smart PHY](https://catalog.dataminer.services/result/driver/6972)
-- [Cox IDP EPM Connectivity](https://catalog.dataminer.services/result/driver/6929)
-- [Cox HP Network Automation](https://catalog.dataminer.services/result/driver/7038)
+- Vecima R-PHY Monitor
+- Ceeview Platform
+- Smart PHY
+- IDP EPM Connectivity
+- HP Network Automation
 
 ## Automation scripts
 
