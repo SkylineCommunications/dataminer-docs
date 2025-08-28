@@ -28,7 +28,7 @@ There are **three main ways** to share a dashboard:
    → See [Sharing via email report](#sharing-via-email-report).
 
 ![Sharing](~/dataminer/images/Dashboard_Sharing.png)
-*Cloud Share in DataMiner 10.5.4*
+*Dashboard sharing in DataMiner 10.5.4*
 
 ---
 
