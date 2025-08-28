@@ -1017,6 +1017,130 @@ Example:
 
 `Could not resolve destination host to an IP: polling host=localhost123, or failed to set the destination address. Host to IP failure. Error : 11001. [WSAHOST_NOT_FOUND]`
 
+#### DataMiner Object Models: Definition-level security [ID 43380]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+It is now possible to configure DOM instance security based on the DOM definitions the instances are linked to. In other words, you will now be able to configure which DataMiner user groups should have access to the DOM instances of a certain DOM definition.
+
+The following important changes have been made:
+
+- Only users who have been granted the *Modules > System configuration > Object Manager > Module Settings* user permission will be allowed to create, update, and delete DOM configuration objects (i.e. section definitions, DOM definitions, DOM behavior definitions, and DOM templates). This means that, if you want to deploy or change a DOM model, you will now need this permission.
+
+- The DOM module settings now include a new `LinkSecuritySettings` configuration object that will allow you to link a DataMiner user group to a DOM definition by ID. This object contains a collection of `GroupLink` objects, each containing the following properties:
+
+  - `GroupName` (string) : The name of the DataMiner user group
+  - `DomDefinitionReferences` (List\<DomDefinitionReference\>) : The list of references to the DOM definitions linked to the user group specified in `GroupName`.
+
+  > [!NOTE]
+  > Reinitialize the DOM manager each time you have updated the DOM module settings.
+
+##### General behavior
+
+- When no `GroupLink` objects are defined, then every user with *Modules > System configuration > Object Manager > Module Settings* permission will have full access to the DOM configuration settings.
+
+- From the moment one `GroupLink` object has been defined, definition-level security will be enabled for the entire DOM module. Only users belonging to user groups that have `GroupLink` object defined will have access to the instances of the DOM definitions specified in those `GroupLink` objects.
+
+- If a DOM module with definition-level security enabled contains multiple DOM definitions, no one will be able to access the instances of DOM definitions for which no `GroupLink` objects have been defined yet.
+
+- Currently, `GroupLink` objects grant full access (i.e. read access as well as write access) to the instances of the DOM definitions specified in them.
+
+##### Filtering behavior & restrictions
+
+When definition-level security has been enabled for a DOM module, every read and count filter/query will need to be evaluated to find out whether the person using that filter/query is allowed to do so. As it is only possible to evaluate filters and queries with enough context, a number of restrictions have been set.
+
+###### Read filters/queries
+
+A read filter/query needs to filter by DOM definition or by DOM instance ID.
+
+Examples of allowed filters/queries:
+
+| Example | Description |
+|---------|-------------|
+| (DOM Definition ID == a1ds5z8)  | Reading all DOM instances that are part of the specified DOM definition. |
+| (DOM Definition ID == a1ds5z8) && (Field X = "Some Value") | Reading all DOM instances with field X set to "Some Value" that are part of the specified DOM definition. |
+| (DOM Definition ID == a1ds5z8) \|\| (DOM Definition ID == 5ze7s84a) | Reading all DOM instances that are part of either of the specified DOM definitions. |
+| (DOM Instance ID == f4e87d) \|\| (DOM Instance ID == qs4z54) \|\| (DOM Instance ID == ezeasf) | Reading specific DOM instances based on ID. |
+
+Examples of prohibited filters/queries:
+
+| Example | Description |
+|---------|-------------|
+| TRUEFilterElement\<DomInstance\> | Sending a plain TRUE filter is not supported when the DOM module has definition-level security enabled. |
+| (Field X = "Some Value") | This filter does not contain any context. |
+| (Status ID = "in_progress") | This filter does not contain any context. |
+
+When a filter/query that reads DOM instances has a DOM definition context the user does not have access to, the read request will fail with a `NoPermission` error. If the DOM instances are read using a DOM instance ID filter, the read request will not fail, but the DOM instances the user does not have access to will not be returned in the result set. Here are a few examples in which the user only has access to DOM definition A.
+
+| Example | Description |
+|---------|-------------|
+| (DOM Definition ID == A) | Request will be allowed. |
+| (DOM Definition ID == A) \|\| (DOM Definition ID == B) | Request will fail with a `NoPermission` error. |
+| (DOM Instance ID == \<Instance linked to A\>) \|\| (DOM Instance ID == \<Instance linked to B\>) | Only the DOM instance linked to DOM definition A will be returned. |
+
+###### Count filters/queries
+
+A count filter/query needs to filter by DOM definition. That means that the filter/query should already limit the results based on one or more DOM definitions. Counts filtered by DOM instance ID(s) are not supported.
+
+Examples of allowed filters/queries:
+
+| Example | Description |
+|---------|-------------|
+| (DOM Definition ID == a1ds5z8) | Counting all DOM instances that are part of the specified DOM definition. |
+| (DOM Definition ID == a1ds5z8) && (Field X = "Some Value") | Counting all DOM instances with field X set to "Some Value" that are part of the specified DOM definition. |
+| (DOM Definition ID == a1ds5z8) \|\| (DOM Definition ID == 5ze7s84a) | Counting all DOM instances that are part of either of the specified DOM definitions. |
+| (DOM Definition ID = a1ds5z8) && ((DOM Instance ID == f4e87d) \|\| (DOM Instance ID == qs4z54) \|\| (DOM Instance ID == ezeasf)) | Reading specific DOM instances based on ID is only supported if a DOM definition context is specified. |
+
+Examples of prohibited filters/queries:
+
+| Example | Description |
+|---------|-------------|
+| TRUEFilterElement\<DomInstance\> | Sending a plain TRUE filter is not supported when the DOM module has definition-level security enabled. |
+| (Field X = "Some Value") | This filter does not contain any context. |
+| (Status ID = "in_progress") | This filter does not contain any context. |
+| (DOM Instance ID == f4e87d) \|\| (DOM Instance ID == qs4z54) \|\| (DOM Instance ID == ezeasf) | Reading specific DOM instances based on ID is not supported if no DOM definition context is specified. |
+
+When a filter/query that counts DOM instances has a DOM definition context the user does not have access to, the count request will fail with a `NoPermission` error.
+
+> [!NOTE]
+> Filters sent to the DOM manager by standard GQI queries made in a dashboard or low-code app have a DOM definition context by default. No special adjustments have to be made in this case, but keep in mind that GQI queries that retrieve data for DOM definitions the user does not have access to will result in permission errors appearing in the dashboard or low-code app.
+
+##### Errors
+
+The following table lists all definition-level security errors:
+
+| DomInstanceError Reason | Explanation |
+|---|---|
+| ReadFilterNotSupportedBySecurity | Returned when DOM instances were read with a filter that did not specify either a DOM definition context or a DOM instance context.<br>Adding one or more 'DOM Definition ID  = X' clauses to your complete filter should resolve this.<br>The error's `Message` property may contain additional info. |
+| CountFilterNotSupportedBySecurity | Returned when DOM instances were counted with a filter that did not specify a DOM definition context.<br>Adding one or more 'DOM Definition ID = X' clauses to your complete filter should resolve this.<br>The error's `Message` property may contain additional info. |
+| NoPermission | The user is not allowed to perform the operation (create, read, update, or delete).<br>The error's `Message` property may contain additional info.<br>The `DomDefinitionIds` property should contain the DOM definition(s) the user does not have access to. |
+
+> [!NOTE]
+> In case operations are performed in bulk, the operations that do not result in security-related errors will be applied following normal validation rules.
+
+##### Event security
+
+The permissions defined by the `GroupLink` objects will also be applied when subscribing on a `DomInstancesChangedEventMessage`. The event should only contain the created, updated or deleted instances the subscribed user is allowed to access. If an event contains multiple objects, and the user does not have access to all of those, the event will be dropped.
+
+The following properties have been added to the `DomInstancesChangedEventMessage` class:
+
+| Property | Description |
+|----------|-------------|
+| FromSecurityEnabledModule | Determines whether security could be applied to the event.<br>If true, there could be more created, updated, or deleted objects, but the subscribed user may not have access to all of them. |
+| SecurityEnabledModuleNotAvailable | An empty event could be received with this boolean property set to true if, for some reason, the security could not be applied.<br>This can occur when a user is subscribed on an agent other than the one that handled the create/update/delete action, and this other agent has connection issues with the database preventing the DOM manager to initialize.<br>If such an event is received, the subscriber may have missed one or more updates. If these events are used to keep a list of cached objects up to date, we recommend reloading them to ensure that the most recent and correct data is visualized. |
+
+##### General notes
+
+- Changing the name of a DataMiner user group will invalidate any existing `GroupLink` objects associated with it. Make sure to adjust these objects when a user group was renamed.
+- Defining `GroupLink` objects, i.e. enabling definition-level security, can result in a minor performance decrease.
+- Reading, adding or removing a DOM instance attachment will now also be blocked if the user does not have permission to read/write that DOM instance.
+
+##### Changes to the SLNetClientTest tool
+
+The SLNetClientTest tool has been updated to support the limitation of not being able to send a TRUEFilterElement to get all DOM instances in a module.
+
+When definition-level security is enabled, you will now need to first select one or more DOM definitions from a filter menu. This menu is accessible for any DOM manager, so it can also be used to retrieve DOM instances more easily for a specified list of DOM definitions.
+
 #### DataMiner upgrade: New prerequisite check 'VerifyBrokerGatewayMigration' [ID 43526]
 
 <!-- MR 10.6.0 - FR 10.5.10 -->
