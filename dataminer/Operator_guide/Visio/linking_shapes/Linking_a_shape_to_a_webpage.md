@@ -127,7 +127,7 @@ http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 > [!TIP]
 > If you want to pass data to a dashboard using placeholders, take a look at [how to specify data input in a dashboard URL](xref:Specifying_data_input_in_a_URL).
 >
-> It can also be useful to copy the URL directly from the Dashboards app. However, some of the URL parameters may be compressed. If you need the uncompressed URL parameters to insert placeholders, [retrieve the URL via the sharing option](xref:Sharing_a_dashboard#sharing-a-dashboard-url) and select *Use uncompressed URL parameters*.
+> It can also be useful to copy the URL directly from the Dashboards app. However, some of the URL parameters may be compressed. If you need the uncompressed URL parameters to insert placeholders, [retrieve the URL via the sharing option](xref:Sharing_a_dashboard#sharing-a-live-dashboard-via-urll) and select *Use uncompressed URL parameters*.
 
 ## Configuring a link to a DataMiner object within a webpage embedded in Visual Overview
 

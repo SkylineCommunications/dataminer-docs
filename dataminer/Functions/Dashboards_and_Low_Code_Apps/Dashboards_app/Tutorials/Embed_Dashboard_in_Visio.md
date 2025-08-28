@@ -29,9 +29,12 @@ Expected duration: 20 minutes
 
 The tutorial consists of the following steps:
 
-- [Step 1: Create a dynamic dashboard](#step-1-create-a-dynamic-dashboard)
-- [Step 2: Prepare the URL for use in Visio](#step-2-prepare-the-url-for-use-in-visio)
-- [Step 3: Create Visio and embed Dashboard](#step-3-create-a-visio-file-and-embed-the-dashboard)
+- [Embedding a connector dashboard in Visual Overview](#embedding-a-connector-dashboard-in-visual-overview)
+  - [Prerequisites](#prerequisites)
+  - [Overview](#overview)
+  - [Step 1: Create a dynamic dashboard](#step-1-create-a-dynamic-dashboard)
+  - [Step 2: Prepare the URL for use in Visio](#step-2-prepare-the-url-for-use-in-visio)
+  - [Step 3: Create a Visio file and embed the dashboard](#step-3-create-a-visio-file-and-embed-the-dashboard)
 
 ## Step 1: Create a dynamic dashboard
 
@@ -72,7 +75,7 @@ The tutorial consists of the following steps:
    <code>https://localhost/dashboard/#/db/Generic%20Dummy.dmadb?<span style="background-color: #FFFF00">data=%7B%22version%22:1,%22feed%22:null,%22components%22:%5B%7B%22cid%22:2,%22select%22:%7B%22elements%22:%5B%22172%2F82%22%5D%7D%7D,%7B%22cid%22:1,%22select%22:%7B%22elements%22:%5B%22172%2F82%22%5D%7D%7D%5D,%22feedAndSelect%22:%7B%7D%7D&embed=true</span></code>
 
    > [!TIP]
-   > See also: [Sharing a dashboard](xref:Sharing_a_dashboard#sharing-a-dashboard-url)
+   > See also: [Sharing a dashboard](xref:Sharing_a_dashboard#sharing-a-live-dashboard-via-url)
 
 ## Step 2: Prepare the URL for use in Visio
 
