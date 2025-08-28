@@ -86,7 +86,10 @@ The following important changes have been made:
 
 ##### General behavior
 
-- When no `GroupLink` objects are defined, then every user with *Modules > System configuration > Object Manager > Module Settings* permission will have full access to the DOM configuration settings.
+- When no `GroupLink` objects are defined, definition-level security will not be enabled, but users who want to make changes to the DOM configuration settings will need *Modules > System configuration > Object Manager > Module Settings* permission to do so.
+
+  > [!NOTE]
+  > Even when definition-level security is enabled will users need *Modules > System configuration > Object Manager > Module Settings* permission if they want to make changes to the DOM configuration settings.
 
 - From the moment one `GroupLink` object has been defined, definition-level security will be enabled for the entire DOM module. Only users belonging to user groups that have `GroupLink` object defined will have access to the instances of the DOM definitions specified in those `GroupLink` objects.
 
@@ -154,19 +157,6 @@ When a filter/query that counts DOM instances has a DOM definition context the u
 > [!NOTE]
 > Filters sent to the DOM manager by standard GQI queries made in a dashboard or low-code app have a DOM definition context by default. No special adjustments have to be made in this case, but keep in mind that GQI queries that retrieve data for DOM definitions the user does not have access to will result in permission errors appearing in the dashboard or low-code app.
 
-##### Errors
-
-The following table lists all definition-level security errors:
-
-| DomInstanceError Reason | Explanation |
-|---|---|
-| ReadFilterNotSupportedBySecurity | Returned when DOM instances were read with a filter that did not specify either a DOM definition context or a DOM instance context.<br>Adding one or more 'DOM Definition ID  = X' clauses to your complete filter should resolve this.<br>The error's `Message` property may contain additional info. |
-| CountFilterNotSupportedBySecurity | Returned when DOM instances were counted with a filter that did not specify a DOM definition context.<br>Adding one or more 'DOM Definition ID = X' clauses to your complete filter should resolve this.<br>The error's `Message` property may contain additional info. |
-| NoPermission | The user is not allowed to perform the operation (create, read, update, or delete).<br>The error's `Message` property may contain additional info.<br>The `DomDefinitionIds` property should contain the DOM definition(s) the user does not have access to. |
-
-> [!NOTE]
-> In case operations are performed in bulk, the operations that do not result in security-related errors will be applied following normal validation rules.
-
 ##### Event security
 
 The permissions defined by the `GroupLink` objects will also be applied when subscribing on a `DomInstancesChangedEventMessage`. The event should only contain the created, updated or deleted instances the subscribed user is allowed to access. If an event contains multiple objects, and the user does not have access to all of those, the event will be dropped.
@@ -181,7 +171,6 @@ The following properties have been added to the `DomInstancesChangedEventMessage
 ##### General notes
 
 - Changing the name of a DataMiner user group will invalidate any existing `GroupLink` objects associated with it. Make sure to adjust these objects when a user group was renamed.
-- Defining `GroupLink` objects, i.e. enabling definition-level security, can result in a minor performance decrease.
 - Reading, adding or removing a DOM instance attachment will now also be blocked if the user does not have permission to read/write that DOM instance.
 
 ##### Changes to the SLNetClientTest tool
