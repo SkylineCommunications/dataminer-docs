@@ -27,7 +27,7 @@ There are **three main ways** to share a dashboard:
    The recipient does not need any account or access to the DataMiner System – the PDF is immediately available in their email inbox.  
    → See [Sharing via email report](#sharing-via-email-report).
 
-![Sharing](~/dataminer/images/sharing.png)
+![Sharing](~/dataminer/images/Dashboard_Sharing.png)
 *Cloud Share in DataMiner 10.5.4*
 
 ---
