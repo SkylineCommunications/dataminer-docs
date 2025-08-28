@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 18 August 2025 - Enhancement - Admin - Unmanaged objects usage visibility and export possibility
 
-In the Admin app, the usage for unmanaged objects will now be displayed if you are using at least DataMiner 10.5.5/10.6.0 and DataMiner SupportAssistant 1.7.3. The data will also be available for export.
+In the Admin app, the usage for unmanaged objects will now be displayed if you are using at least DataMiner 10.5.9/10.6.0 and DataMiner SupportAssistant 1.7.3. The data will also be available for export.
 
 ### 07 August 2025 - Enhancement - Version description now supports Markdown
 
