@@ -4,11 +4,13 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
-#### 28 August 2025 - Fix - CoreGateway 2.14.14 - Race condition causing Catalog to prevent deployments
+#### 28 August 2025 - Fix - CoreGateway 2.14.14 - Race condition blocking Catalog deployments
 
-A race condition has been resolved that could lead to the Catalog displaying the following error while there actually were no issues. 
-```There are some issues preventing you to depoy.``` 
-```There are no (healthy) CoreGateways DxMs in the DataMiner system on the node with a running DMA.```
+A race condition has been resolved that could lead to the Catalog displaying the following error while there were actually no issues. 
+
+`There are some issues preventing you to deploy.` 
+
+`There are no (healthy) CoreGateways DxMs in the DataMiner System on the node with a running DMA.`
 
 #### 17 June 2025 - Enhancement - CoreGateway 2.14.13 - Improved upgrade process
 
