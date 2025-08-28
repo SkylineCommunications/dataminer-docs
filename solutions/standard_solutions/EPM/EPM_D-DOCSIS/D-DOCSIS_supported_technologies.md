@@ -8,8 +8,7 @@ The table below provides an overview of supported technology and the correspondi
 
 | Supported technology | Connector |
 |--|--|
-| Cisco CCAP | [CISCO CBR-8 CCAP Platform](https://catalog.dataminer.services/details/bf3924c4-8224-40eb-9ca0-42c1ee7aa2ea) |
-| Cisco CBR-8 CCAP in the Cox DAA network | [Cox CBR-8 Platform D-DOCSIS](https://catalog.dataminer.services/details/7420) |
-| Casa CCAP | [Casa Systems Platform D-DOCSIS](https://catalog.dataminer.services/details/279e0df4-ecb2-4876-b878-7a15885e7de8") |
-| Cisco CIN | [CISCO Manager CIN Platform](https://catalog.dataminer.services/details/f929a965-ac3b-47ea-bac8-c04cb618c7b1) |
-| Juniper CIN | [Juniper Networks Manager CIN Platform](https://catalog.dataminer.services/details/6f1b12b0-f710-4dd4-9138-e94911eacca7) |
+| Cisco CBR-8 CCAP | [CISCO CBR-8 CCAP Platform](https://catalog.dataminer.services/details/db9eb1d5-7dde-44e3-877c-5a5fe0ffa251) |
+| Casa CCAP | [Casa Systems Platform D-DOCSIS](https://catalog.dataminer.services/details/09b5ccdb-dad5-45fe-a5a3-3b179a4f4783) |
+| Cisco CIN | [CISCO Manager CIN Platform](https://catalog.dataminer.services/details/46fa2d52-d94f-44c5-bbf0-6db0f549e6dd) |
+| Juniper CIN | [Juniper Networks Manager CIN Platform](https://catalog.dataminer.services/details/08cab9fb-478f-4378-9c48-ec72d15ff8e0) |
