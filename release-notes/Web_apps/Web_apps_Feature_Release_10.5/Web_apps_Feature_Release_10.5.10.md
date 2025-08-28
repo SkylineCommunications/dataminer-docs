@@ -159,3 +159,13 @@ When a PDF was generated based on a dashboard, it could occur that some componen
 <!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
 
 When you opened the DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`) in Mozilla Firefox, up to now, certain letters in the DMS name would be cut off, especially letters with descenders like g, j, q, p, or y.
+
+#### Dashboards/Low-Code Apps - Maps component: Settings of unused queries would incorrectly be removed [ID 43585]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, settings of existing queries that no longer fed data to a *Maps* component would incorrectly be removed.
+
+From now on, when a query no longer feeds any data to a *Maps* component, it will no longer be automatically removed. Instead, it will be marked as "old query".
+
+Users will be allowed to remove queries marked as "old queries", but they will not be allowed to change any of their settings.

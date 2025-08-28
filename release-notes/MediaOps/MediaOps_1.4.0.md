@@ -31,6 +31,10 @@ When a MediaOps upgrade package is installed, a number of predefined existing sc
 
 For each major version, this predefined list will be reset. Consequently, when you upgrade across major versions (e.g. from 1.x.x to 2.x.x), we recommend upgrading to the latest version of the current major version first before moving to the next major version, to ensure that these cleanup actions have taken place at least once.
 
+#### Scheduling: Scheduling_CRUD_Extension script now triggered on job configuration updates [ID 43615]
+
+The *Scheduling_CRUD_Extension* script will now also trigger for updates of the configuration of jobs. Note that this may affect existing Scheduling extension scripts.
+
 ### Fixes
 
 #### Resource Studio: Incorrect step size after change to number of decimals of capacity or configuration parameter of type number [ID_43580]
