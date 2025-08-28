@@ -4,6 +4,10 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
+#### 28 August 2025 - Enhancement - CoreGateway 2.14.14 - Dependencies updated
+
+Several dependencies have been updated.
+
 #### 17 June 2025 - Enhancement - CoreGateway 2.14.13 - Improved upgrade process
 
 Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
