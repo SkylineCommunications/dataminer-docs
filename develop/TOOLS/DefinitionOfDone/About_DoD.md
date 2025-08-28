@@ -80,7 +80,7 @@ The checklist table displays the *Definition of Done* steps for the current task
   > [!NOTE]
   > Skipped steps require a comment to justify why they were skipped.
 
-- **Guard**: Assign the team member responsible to stamp the fact the step was properly done.
+- **Guard**: Assign the team member responsible for confirming that the step was properly done.
 
 - **Comment**: Add context or explain why steps were skipped. Comments can be edited inline or using the pencil icon for multiline input. Comments and skip justifications are stored to maintain a clear audit trail.
 
