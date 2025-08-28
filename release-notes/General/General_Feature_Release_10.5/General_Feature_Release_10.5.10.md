@@ -237,6 +237,14 @@ The folder `C:\Skyline DataMiner\Webpages\Public\` will now be synced between Da
 
 In the *ResetNATSCheck* timer of the SLNet-managed NATS solution, the credentials of the local agent will now be compared against the credentials of the primary NAS node. If these do not match, the NATS configuration of the local agent will be reset, and the correct credentials of the primary node will be used instead.
 
+#### DataMiner Object Models: Lazy-loading of dropdown fields [ID 43524]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, when a DOM form visualized a DOM instance that included one or more dropdown fields, all those fields would be populated immediately. On DOM forms with multiple sections, in some cases, this behavior could trigger a large number of requests, some of which for fields the user would never interact with.
+
+In order to minimize the impact of these population requests, from now on, dropdown fields will only be populated when you navigate to them.
+
 #### DxMs upgraded [ID 43557]
 
 <!-- RN 43557: MR 10.6.0 - FR 10.5.10 -->

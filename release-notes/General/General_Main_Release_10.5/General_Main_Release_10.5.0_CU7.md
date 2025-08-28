@@ -15,6 +15,14 @@ uid: General_Main_Release_10.5.0_CU7
 
 ### Enhancements
 
+#### DataMiner Object Models: Lazy-loading of dropdown fields [ID 43524]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, when a DOM form visualized a DOM instance that included one or more dropdown fields, all those fields would be populated immediately. On DOM forms with multiple sections, in some cases, this behavior could trigger a large number of requests, some of which for fields the user would never interact with.
+
+In order to minimize the impact of these population requests, from now on, dropdown fields will only be populated when you navigate to them.
+
 #### New BPA test: Cube CRL Freeze [ID 43539]
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
