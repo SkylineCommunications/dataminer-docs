@@ -62,6 +62,12 @@ In some cases, it could occur that the SyncInfo file contained duplicate keys fo
 
 Up to now, when multiple NATSCustodian calls tried to retrieve the NATS credentials simultaneously, in some cases, those credentials could get corrupted.
 
+#### Local IP port configured for a UDP connection would incorrectly be disregarded [ID 43531]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+When an element had a UDP connection that had been configured to use a local IP port, up to now, a random port would incorrectly be used instead of the port that had been configured.
+
 #### Problem with gRPC connections [ID 43542]
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
