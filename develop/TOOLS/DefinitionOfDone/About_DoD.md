@@ -78,7 +78,7 @@ The checklist table displays the *Definition of Done* steps for the current task
 - **Status**: Set the status of each step to *TO DO*, *DONE*, or *SKIPPED*.
 
   > [!NOTE]
-  > Skipped steps require a comment to justify why it was skipped.
+  > Skipped steps require a comment to justify why they were skipped.
 
 - **Guard**: Assign the team member responsible to stamp the fact the step was properly done.
 
