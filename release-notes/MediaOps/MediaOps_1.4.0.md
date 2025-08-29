@@ -35,8 +35,20 @@ For each major version, this predefined list will be reset. Consequently, when y
 
 The *Scheduling_CRUD_Extension* script will now also trigger for updates of the configuration of jobs. Note that this may affect existing Scheduling extension scripts.
 
+#### Resource Studio: Improved exception messages [ID 43627]
+
+In Resource Studio, several exception messages have been improved to be more clear to the user.
+
+#### Resource Studio: Icon indicating whether capability is provided by resource pool [ID 43629]
+
+In Resource Studio, an icon has been added that indicates whether a capability on a resource is provided by a resource pool.
+
 ### Fixes
 
 #### Resource Studio: Incorrect step size after change to number of decimals of capacity or configuration parameter of type number [ID_43580]
 
 When capacity or configuration parameters of type number were defined, it could occur that the step size did not update after the number of decimals was changed, which could lead to unwanted behavior when the parameter was used in the Scheduler app. The UI has now been improved to prevent this: other fields that are affected by changes will now be updated or highlighted.
+
+#### People & Organizations: Organization count included deprecated people [ID 43628]
+
+Up to now, on the Organizations and Teams pages, the member count also included deprecated people. These are now no longer included.
