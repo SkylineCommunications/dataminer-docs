@@ -1017,7 +1017,7 @@ Example:
 
 `Could not resolve destination host to an IP: polling host=localhost123, or failed to set the destination address. Host to IP failure. Error : 11001. [WSAHOST_NOT_FOUND]`
 
-#### DataMiner Object Models: Definition-level security [ID 43380]
+#### DataMiner Object Models: Definition-level security [ID 43380] [ID 43589]
 
 <!-- MR 10.6.0 - FR 10.5.10 -->
 
@@ -1107,6 +1107,14 @@ When a filter/query that counts DOM instances has a DOM definition context the u
 
 > [!NOTE]
 > Filters sent to the DOM manager by standard GQI queries made in a dashboard or low-code app have a DOM definition context by default. No special adjustments have to be made in this case, but keep in mind that GQI queries that retrieve data for DOM definitions the user does not have access to will result in permission errors appearing in the dashboard or low-code app.
+
+##### Additional security when reading/counting DOM instance history records
+
+From now on, when definition-level security is enabled for a DOM module, reading and counting DOM instance history records will only be possible if the following conditions are met:
+
+- The filter must include 'SubjectID Equal' clauses that narrow down the filter to the history of one or more DOM instances. If the filter does not meet this requirement, the request will fail with a `CrudFailedException`, and the `TraceData` will contain a `DomInstanceError` with reason `ReadFilterNotSupportedBySecurity` or `CountFilterNotSupportedBySecurity`.
+
+- The user must have access to all DOM instances for which history records are requested. Also, all specified DOM instances must exist. Otherwise, the request will fail with a `CrudFailedException`, and the `TraceData` will contain `DomInstanceError` with reason `NoPermission`.
 
 ##### Event security
 
