@@ -13,7 +13,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 In any dataminer.services application, accessing status routes such as /404, /error, or /success will now display the appropriate status page along with the shared header bar.
 
-### 29 August 2025 - Fix - Catalog - legacy URL support for connectors has been discontinued
+### 29 August 2025 - Fix - Catalog - Legacy URL support for connectors has been discontinued
 
 In the Catalog app, legacy connector URLs such as catalog.dataminer.services/result/driver/{:id} are no longer supported. Accessing these endpoints will now redirect users to a 404 error page.
 
