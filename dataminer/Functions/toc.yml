@@ -1186,6 +1186,15 @@ items:
         topicUid: Manually_starting_and_stopping_a_scheduled_event
       - name: Creating a Scheduler template
         topicUid: Creating_a_Scheduler_template
+  - name: Site Manager
+    topicUid: SiteManager_DxM
+    items:
+    - name: Overview
+      topicUid: SiteManagerOverview
+    - name: Getting Started
+      topicUid: SiteManagerGettingStarted
+    - name: Troubleshooting
+      topicUid: SiteManagerTroubleshooting
   - name: Spectrum Analysis
     topicUid: SpectrumAnalysis
     items:
