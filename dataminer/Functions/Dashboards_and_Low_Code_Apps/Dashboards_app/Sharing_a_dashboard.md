@@ -4,96 +4,113 @@ uid: Sharing_a_dashboard
 
 # Sharing a dashboard
 
-## Sharing a dashboard using the Live Sharing Service
+Multiple dashboard sharing options are available, depending on your use case.
+
+- Do you want to send someone a quick static snapshot for reference, or do you want them to be able to explore the live dashboard themselves?
+
+- Does your recipient have direct access to the DataMiner System, or do they rely on remote access?
+
+- Do you want to automatically revoke access to the dashboard based on an expiration date?
+
+There are **three main ways** to share a dashboard:
+
+- [Share a live dashboard with another DataMiner System user via URL](#sharing-a-live-dashboard-via-url).
+
+  This is the preferred option when the recipient already **has access** to your DataMiner System and the necessary permissions. Depending on whether they connect directly or via [remote access](xref:About_Remote_Access), they may also need a [dataminer.services account](xref:Logging_on_to_dataminer_services).
+
+- [Share a live dashboard with an external recipient via cloud share](#sharing-a-live-dashboard-via-cloud-share).
+
+  For this option, recipients **do not need access** to the DataMiner System. They **only need a [dataminer.services account](xref:Logging_on_to_dataminer_services)** to confirm their identity.
+
+  You can automatically revoke dashboard access by configuring an expiration date.
+
+- [Send a static PDF report by email](#sharing-via-email-report).
+
+  This option is useful when you want to share a **read-only snapshot version** of the dashboard.
+
+  The recipient does not need any account or access to the DataMiner System. The PDF is immediately available in their email inbox.
+
+![Sharing](~/dataminer/images/Dashboard_Sharing.png)
+*Dashboard sharing in DataMiner 10.5.9*
+
+## Sharing a live dashboard via URL
+
+From DataMiner 10.2.0/10.2.2 onwards, you can generate a URL to easily share your dashboard with other people. Use this option when the recipient is already a user of the DataMiner System.
+
+- The recipient needs to be a **[known user in the DMS](xref:Managing_users)** with the necessary permissions.
+
+- If they access directly, only their DataMiner System account is required.
+
+- If they access remotely (i.e. the URL contains `.on.dataminer.services`), they will also need a [dataminer.services account](xref:Logging_on_to_dataminer_services), with access to the cloud organization and the DataMiner System.
+
+To generate a shareable URL:
+
+1. Open the dashboard you want to share.
+
+1. Click the ... button in the top-right corner and select *Share*.
+
+1. For DataMiner versions older than 10.3.0 [CU12]/10.4.3 only, click *URL*.
+
+1. To share just the dashboard (without the full app UI), enable *Embed*.
+
+1. To get an uncompressed URL (useful for [embedding in a Visio drawing](xref:Linking_a_shape_to_a_webpage) using URL placeholders), enable *Use uncompressed URL parameters*.
+
+1. Copy the link using the *Copy link* button next to the URL.
+
+1. Share the copied URL from your clipboard in your preferred way.
 
 > [!NOTE]
-> This feature is only available if the DMA is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+> Dashboards with [restricted user access](xref:Changing_dashboard_settings) cannot be shared yet.
 
-1. In the list of dashboards on the left, select the dashboard you want to share.
+## Sharing a live dashboard via cloud share
 
-1. Click the ... button in the top-right corner of the dashboard, and select *Share* or *Start sharing* (depending on your DataMiner version).
+Using **cloud sharing**, you can let anyone view your dashboard live in their browser.
 
-   > [!NOTE]
-   >
-   > - Make sure you have the appropriate [Live sharing user permissions](xref:DataMiner_user_permissions#general--live-sharing).
-   > - Prior to DataMiner 10.2.0 [CU2]/10.2.5, to edit the dashboard, you need the user permission [Modules > Reports & Dashboards > Dashboards > Edit](xref:DataMiner_user_permissions#modules--reports--dashboards--dashboards--edit).
-   > - If access to a dashboard is limited to some users only, it will not be possible to share the dashboard.
+You can set an optional expiration date to stop sharing automatically.
 
-1. If you are using DataMiner 10.2.0/10.2.2 or higher, in the pop-up window, select *Create cloud share*. Otherwise, skip this step.
+- Recipients do not need access to your DataMiner System. They **only need a [dataminer.services account](xref:Logging_on_to_dataminer_services)**. Access to your cloud organization or DMS is not required. A verification ensures that the person opening the link is the same as the person it was shared with.
 
-   ![Live Sharing Service](~/dataminer/images/Live_Sharing_Service.png)<br>*Live Sharing Service in DataMiner 10.4.5*
+- This feature is only available if the DataMiner System is **[connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)**. Our cloud services handle the access control and connection to the DMS. No data from your dashboard gets stored in the cloud (see [Cloud connectivity and security](xref:Cloud_connectivity_and_security#live-sharing)).
 
-1. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to dataminer.services. Select *I want to link the above users* and click *Link accounts*.
+- The user who shares the dashboard needs the correct **[live sharing permissions](xref:DataMiner_user_permissions#general--live-sharing)**.
 
-1. In the pop-up window, fill in the email address(es) of the person(s) you want to share the dashboard with in the *With* field.
+### Creating a cloud share
 
-1. Optionally, add a description in the *Description* field.
+1. Open the dashboard you want to share.
 
-1. Optionally, in the *Message* field, add a message you want to send to the person you are sharing the dashboard with, in order to provide additional information.
+1. Click the ... button in the top-right corner and select *Share* or *Start sharing* (depending on your DataMiner version).
 
-1. If you do not want the dashboard to remain permanently available, select *Add expiration date* and specify the expiration date.
+1. If prompted, select *Create cloud share*.
 
-1. Click *Share*. An email will be sent to the person you are sharing the dashboard with, to inform them that they now have access to the dashboard.
+1. If this is your first time sharing a dashboard, link your account to dataminer.services by selecting *I want to link the above users*, and then clicking *Link accounts*.
 
-   ![Shared dashboard](~/dataminer/images/Shared_Dashboard.png)<br>*Live Sharing Service email in DataMiner 10.4.5*
+1. Enter the email addresses of the people you want to share the dashboard with.
 
-> [!NOTE]
-> At present, sharing dashboards that use the following components is not supported: spectrum components, Maps, SRM components (service definition and resource usage line graph), pivot tables, queries linked to data, and visualizations based on query data (e.g. node edge graph, table). For dashboards with queries that have the *Update data* setting enabled, sharing is supported from DataMiner 10.2.0 [CU4]/10.2.6 onwards. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
+1. Optionally add a description, message, or expiration date.
 
-> [!TIP]
-> See also: [Cloud connectivity and security](xref:Cloud_connectivity_and_security)
+1. Click *Share*.
 
-## Stopping a dashboard share
-
-1. In the list of dashboards on the left, select the dashboard you want to stop sharing.
-
-1. Click the *Shared* button in the dashboard header (available from DataMiner 10.3.5/10.4.0 onwards), or click the ... button in the top-right corner of the dashboard, and select *Manage share*.
-
-   This will open a pop-up box where you can delete the share.
+   The recipients will receive an email with the live dashboard link. You will get a confirmation message, and in the header bar of your dashboard you will see a *Shared* icon (shown from DataMiner 10.3.5/10.4.0 onwards).
 
 > [!NOTE]
-> If you only want to update the message for the dashboard share, you can also do this via the *Shared* button or the *Manage share* option.
+>
+> - Dashboards with [restricted user access](xref:Changing_dashboard_settings) cannot be shared yet.
+> - Dashboards containing certain components cannot be shared yet: spectrum components, Maps, SRM components (service definition and resource usage line graph), pivot tables, queries linked to data, and visualizations based on query data (e.g. node edge graph, table). For dashboards with queries that have the *Update data* setting enabled, sharing is supported from DataMiner 10.2.0 [CU4]/10.2.6 onwards. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
 
-## Sharing a dashboard URL
+### Managing or deleting a cloud share
 
-From DataMiner 10.2.0/10.2.2 onwards, you can generate a URL to easily share a dashboard with other people who have the necessary rights to access it.
+1. Open the dashboard.
 
-To do so:
+1. Click the *Shared* button in the header bar, or click the ... button in the top-right corner and select *Manage share* or *Share* (depending on your DataMiner version).
 
-### [From DataMiner 10.3.0 [CU12]/10.4.3 onwards](#tab/tabid-1)
+1. If prompted, select *Manage cloud share*.
 
-1. In the list of dashboards on the left, select the dashboard<!--RN 38278-->.
+1. Remove the share by clicking *Delete*, or update its properties and choose *Update*.
 
-1. Click the ... button in the top-right corner of the dashboard, and select *Share*.
+   You will get a confirmation message.
 
-1. To get a URL that only shows the dashboard without the rest of the app, enable the *Embed* option.
+## Sharing via email report
 
-1. To get an uncompressed version of the URL, enable the *Use uncompressed URL parameters* option.
+If you only want to share a **static version** of a dashboard, use the steps described under [Sharing a dashboard as a PDF report from the Dashboards app](xref:Sharing_PDF_report_from_Dashboards_app).
 
-   > [!NOTE]
-   > This option can for instance be useful if you want to embed the dashboard in a Visio drawing and use placeholders in the URL. See [Linking a shape to a webpage](xref:Linking_a_shape_to_a_webpage).
-
-1. To the right of the URL, click the *Copy link* button.
-
-### [Prior to DataMiner 10.3.0 [CU12]/10.4.3](#tab/tabid-2)
-
-1. In the list of dashboards on the left, select the dashboard.
-
-1. Click the ... button in the top-right corner of the dashboard, and select *Share*.
-
-1. Click *URL*.
-
-1. To get a URL that only shows the dashboard without the rest of the app, select *Embed*.
-
-1. To get an uncompressed version of the URL, select *Use uncompressed URL parameters*.
-
-   > [!NOTE]
-   > This option can for instance be useful if you want to embed the dashboard in a Visio drawing and use placeholders in the URL. See [Linking a shape to a webpage](xref:Linking_a_shape_to_a_webpage).
-
-1. To the right of the URL, click the *Copy* button.
-
-***
-
-## Sharing a dashboard as a PDF report via email
-
-See [Sharing a dashboard as a PDF report from the Dashboards app](xref:Sharing_PDF_report_from_Dashboards_app).
+Recipients will get the dashboard as a **PDF attachment**. They **do not need any account** or access to the DataMiner System.

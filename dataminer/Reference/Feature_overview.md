@@ -44,7 +44,7 @@ Below you can find an overview of the main features that have been added to Data
 | Dashboards: [*Node edge graph* component](xref:DashboardNodeEdgeGraph) | DataMiner 10.1.5/10.2.0 <!-- [ID 29425] -->|
 | Dashboards: [PDF export](xref:Sharing_PDF_report_from_Dashboards_app) | DataMiner 10.2.12/10.3.0<br>DataMiner 10.2.2 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsexport) <!-- [ID 34634] -->|
 | Dashboards: [*Progress bar* component](xref:DashboardProgressBar) | DataMiner 10.1.7/10.2.0 <!-- [ID 29773] --> |
-| Dashboards: [Sharing dashboards using the Live Sharing Service](xref:Sharing_a_dashboard#sharing-a-dashboard-using-the-live-sharing-service) | DataMiner 10.1.12/10.2.0 <!-- [ID 29047] [ID 31476] -->|
+| Dashboards: [Sharing dashboards using the Live Sharing Service](xref:Sharing_a_dashboard#sharing-a-live-dashboard-via-cloud-share) | DataMiner 10.1.12/10.2.0 <!-- [ID 29047] [ID 31476] -->|
 | Dashboards: [*Trigger* component](xref:DashboardTrigger) | DataMiner 10.1.1/10.2.0 <!-- [ID 28136] --> |
 | Dashboards/Low-Code Apps: [*Button panel* component](xref:DashboardButtonPanel) | DataMiner 10.3.9/10.4.0<br>DataMiner 10.0.3 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsbuttonpanel) <!-- [ID 36775] --> |
 | Dashboards/Low-Code Apps: [Dynamic references in text](xref:Dynamically_Referencing_Data_in_Text) | DataMiner 10.3.11/10.4.0<!-- [ID 37229] --> |
