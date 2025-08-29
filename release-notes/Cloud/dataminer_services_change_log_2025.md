@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 29 August 2025 - Enhancement - dataminer.services - status routes now use the shared header bar
+### 29 August 2025 - Enhancement - dataminer.services - Status routes now use the shared header bar
 
 In any dataminer.services application, accessing status routes such as /404, /error, or /success will now display the appropriate status page along with the shared header bar.
 
