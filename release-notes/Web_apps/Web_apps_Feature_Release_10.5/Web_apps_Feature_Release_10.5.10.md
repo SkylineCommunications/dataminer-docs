@@ -55,6 +55,18 @@ Also, in low-code apps, *On line click* event can now be configured. Inside such
 > [!NOTE]
 > When you reload a dashboard or switch pages, selected lines will not automatically be reselected. Also, lines cannot be selected using an URL argument.
 
+#### Dashboards/Low-Code Apps - Web component: New option to disable sandboxing if the URL points to a file in the DMA's 'Webpages/public/' folder [ID 43584]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+From now on, if the URL of a *Web* component points to a file in the DMA's `Webpages/public/` folder (or one of its subfolders), you can disable sandboxing by doing the following:
+
+1. In edit mode, select the component, and open the *Settings* tab.
+1. In the *Security* section, disable the *Open in sandbox* option.
+
+> [!CAUTION]
+> Disabling the *Open in sandbox* option lowers browser security and should only be done when absolutely necessary.
+
 ## Changes
 
 ### Enhancements
@@ -108,6 +120,12 @@ As this window allows you to set the user permissions of the app in question, th
 When a PDF report is being generated in a particular browser tab, from now on, the following notice will appear:
 
 `Please keep this tab active to ensure the PDF is generated correctly.`
+
+#### Dashboards/Low-Code Apps: Maps component will now display all authentication errors of the Google Maps API [ID 43601]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+From now on, a *Maps* component will display all authentication errors of the Google Maps API.
 
 ### Fixes
 
