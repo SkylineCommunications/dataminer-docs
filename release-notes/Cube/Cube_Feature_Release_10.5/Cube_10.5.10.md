@@ -119,3 +119,9 @@ Up to now, when the API connection had been closed, no attempt would incorrectly
 For example, when, after DataMiner Cube had been idle for more than 5 minutes and the API connection had automatically closed, you opened the Automation tab, the API request to retrieve the list of dashboards would fail.
 
 From now on, when the API connection was closed, it will automatically be re-established when a new API request is sent.
+
+#### Trending: Trend graph displayed in visual overview could be partially covered by the anomalies bar [ID 43602]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+When a trend graph was displayed in a visual overview, in some cases, the graph would be partially covered by the anomalies bar.
