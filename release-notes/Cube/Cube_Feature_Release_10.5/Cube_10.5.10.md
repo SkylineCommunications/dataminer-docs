@@ -109,3 +109,13 @@ When, in System Center, you performed a DataMiner upgrade while Cube was connect
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 When you opened a trend graph, in some cases, the changepoints would incorrectly not be displayed.
+
+#### Closed API connection would incorrectly not be automatically re-established [ID 43586]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, when the API connection had been closed, no attempt would incorrectly be made to automatically re-establish the connection.
+
+For example, when, after DataMiner Cube had been idle for more than 5 minutes and the API connection had automatically closed, you opened the Automation tab, the API request to retrieve the list of dashboards would fail.
+
+From now on, when the API connection was closed, it will automatically be re-established when a new API request is sent.
