@@ -29,12 +29,9 @@ Expected duration: 20 minutes
 
 The tutorial consists of the following steps:
 
-- [Embedding a connector dashboard in Visual Overview](#embedding-a-connector-dashboard-in-visual-overview)
-  - [Prerequisites](#prerequisites)
-  - [Overview](#overview)
-  - [Step 1: Create a dynamic dashboard](#step-1-create-a-dynamic-dashboard)
-  - [Step 2: Prepare the URL for use in Visio](#step-2-prepare-the-url-for-use-in-visio)
-  - [Step 3: Create a Visio file and embed the dashboard](#step-3-create-a-visio-file-and-embed-the-dashboard)
+- [Step 1: Create a dynamic dashboard](#step-1-create-a-dynamic-dashboard)
+- [Step 2: Prepare the URL for use in Visio](#step-2-prepare-the-url-for-use-in-visio)
+- [Step 3: Create a Visio file and embed the dashboard](#step-3-create-a-visio-file-and-embed-the-dashboard)
 
 ## Step 1: Create a dynamic dashboard
 
