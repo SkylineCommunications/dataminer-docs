@@ -10,7 +10,7 @@ An issue introduced in SupportAssistant 1.7.4 caused the CDMR reporting for proa
 
 #### 27 August 2025 - Enhancement - SupportAsistant 1.7.6 - General improvements
 
-General improvements have been made.
+General improvements have been made to the way SupportAssistant handles tasks, making the DxM more robust and also improving its shutdown procedure.
 
 #### 24 June 2025 - Enhancement - SupportAsistant 1.7.5 - Improved upgrade process
 
