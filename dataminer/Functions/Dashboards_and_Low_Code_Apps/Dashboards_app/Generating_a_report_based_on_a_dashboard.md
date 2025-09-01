@@ -34,4 +34,4 @@ When you do so, you can click the *Configure* button to open a window where you 
 > [!NOTE]
 >
 > - By design, the following components are not included in reports: button panel, map, and web components.
-> - If access to a dashboard is limited to some users only, this dashboard will not be available to generate reports from DataMiner Cube.
+> - Prior to DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10<!-- RN 43394+43570 -->, if access to a dashboard is limited to some users only, this dashboard will not be available to generate reports from DataMiner Cube. In later DataMiner versions, you can use such private dashboards to generate reports, but only if you have access to them.
