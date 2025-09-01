@@ -6,8 +6,8 @@ uid: KI_ClusterEndpoint_SLNet_leak
 
 ## Affected versions
 
-- Feature Release: DataMiner 10.5.7 and 10.5.8
-- Main Release: DataMiner 10.5.0 [CU4], 10.5.0 [CU5]
+- Feature Release: DataMiner 10.5.7 [CU0] and 10.5.8
+- Main Release: DataMiner 10.5.0 [CU4] build 15943, 10.5.0 [CU5]
 
 ## Cause
 
@@ -15,7 +15,7 @@ After an upgrade to one of the affected DataMiner versions, it is possible that 
 
 ## Fix
 
-Install DataMiner 10.5.0 [CU6]/10.5.9.<!-- RN 43407 -->
+Install the latest version of DataMiner 10.5.0 [CU4], DataMiner 10.5.0 [CU6], DataMiner 10.5.7 [CU2], or DataMiner 10.5.9.<!-- RN 43407 -->
 
 ## Workaround
 
