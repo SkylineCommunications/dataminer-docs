@@ -4344,7 +4344,7 @@ items:
           topicUid: DataMiner.Telnet-active
       - name: WarningThreshold
         topicUid: DataMiner.WarningThreshold
-  - name: SNMP Managers Schema
+  - name: SNMP Managers schema
     topicUid: SchemaSNMPManagers
     items:
     - name: SNMP Managers
