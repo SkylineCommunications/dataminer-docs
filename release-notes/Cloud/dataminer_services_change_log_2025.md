@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 1 September 2025 - Enhancement - Remote Access - Support remotely accessing the Assistant web app
+### 1 September 2025 - Enhancement - Remote Access - Support remote access to the Assistant web app
 
-From now on the Assistant web app can be accessed remotely.
+From now on, the Assistant web app can be accessed remotely.
 
 ### 29 August 2025 - Enhancement - dataminer.services - Status routes now use the shared header bar
 
@@ -23,7 +23,7 @@ In the Catalog app, legacy connector URLs such as catalog.dataminer.services/res
 
 ### 26 August 2025 - Enhancement - Remote Access - Support for video thumbnails when remotely accessing Cube
 
-From now on video thumbnails will be dispayed when remotely accessing DataMiner Cube.
+From now on, video thumbnails will be displayed when DataMiner Cube is accessed remotely.
 
 ### 18 August 2025 - Enhancement - Admin - Unmanaged objects usage visibility and export possibility
 
