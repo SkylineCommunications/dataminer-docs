@@ -45,7 +45,7 @@ The user interface consists of three main sections:
 
 ![DoD UI](~/develop/images/DoD_UI.png)
 
-- [Header bar](#the-dod-tool-header-bar) (1): Displays key task information and several action buttons.
+- [Header bar](#header-bar) (1): Displays key task information and several action buttons.
 
 - [Checklist table](#checklist-table) (2): Displays required steps to complete the task.
 
