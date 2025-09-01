@@ -2,11 +2,11 @@
 uid: About_DoD
 ---
 
-# Definition of Done (DoD) tool
+# Definition of Done (DoD) platform
 
-The Definition of Done (DoD) tool is a web application that helps development teams ensure all necessary steps are completed before a task is marked as done. It automates and streamlines task workflows, improves quality assurance, and simplifies documentation and collaboration.
+The Definition of Done (DoD) platform is a web application that helps development teams ensure all necessary steps are completed before a task is marked as done. It automates and streamlines task workflows, improves quality assurance, and simplifies documentation and collaboration.
 
-The tool supports efficient, high-quality work by offering:
+The platform supports efficient, high-quality work by offering:
 
 - **Automated workflows** that ensure all required steps are tracked and completed.
 
@@ -20,7 +20,7 @@ The tool supports efficient, high-quality work by offering:
 
 ## Opening a task
 
-1. Navigate to the [DoD tool home page](https://dod.skyline.be) (available to Skyline employees only).
+1. Navigate to the [DoD home page](https://dod.skyline.be) (available to Skyline employees only).
 
 1. Sign in with your Azure AD credentials.
 
@@ -31,7 +31,7 @@ The tool supports efficient, high-quality work by offering:
 
 ## Supported task types
 
-The DoD tool currently supports the following task types:
+The DoD platform currently supports the following task types:
 
 - **Driver Development**: New connector development.
 
@@ -39,19 +39,19 @@ The DoD tool currently supports the following task types:
 
 - **Driver Issue**: Bug fixes or issue resolution for existing connectors.
 
-## Using the DoD tool
+## Usage
 
-The DoD tool user interface consists of three main sections:
+The user interface consists of three main sections:
 
-![DoD tool UI](~/develop/images/DoD_UI.png)
+![DoD UI](~/develop/images/DoD_UI.png)
 
-- [Header bar](#the-dod-tool-header-bar) (1): Displays key task information and several action buttons.
+- [Header bar](#header-bar) (1): Displays key task information and several action buttons.
 
 - [Checklist table](#checklist-table) (2): Displays required steps to complete the task.
 
 - [Smart action column](#smart-actions) (3): Offers one-click access to integrated tools.
 
-### The DoD tool header bar
+### Header bar
 
 The header bar contains the following items, from left to right:
 
