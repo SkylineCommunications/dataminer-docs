@@ -235,9 +235,9 @@ To configure this setting:
    To retrieve this time zone value, you can run the following commands in a PowerShell prompt on the server:
 
    ```powershell
-   > $timezones = [System.TimeZoneInfo]::GetSystemTimeZones()
-   > $timezone = $timezones | Where-Object {$PSItem.StandardName -eq [System.TimeZone]::CurrentTimeZone.StandardName }
-   > Set-Clipboard -Value $timezone.ToSerializedString()
+   $timezones = [System.TimeZoneInfo]::GetSystemTimeZones()
+   $timezone = $timezones | Where-Object {$PSItem.StandardName -eq [System.TimeZone]::CurrentTimeZone.StandardName }
+   Set-Clipboard -Value $timezone.ToSerializedString()
    ```
 
    This last line will paste the required string to the clipboard.
