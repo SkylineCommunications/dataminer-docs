@@ -6418,7 +6418,7 @@ items:
           topicUid: Notifications
         - name: Viewing test results
           topicUid: Viewing_test_results
-    - name: Definition of Done (DoD)
+    - name: Definition of Done (DoD) Platform
       topicUid: About_DoD
     - name: Third-party Tools
       topicUid: ThirdPartyTools

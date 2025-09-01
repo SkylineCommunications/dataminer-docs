@@ -2,7 +2,7 @@
 uid: About_DoD
 ---
 
-# Definition of Done (DoD)
+# Definition of Done (DoD) platform
 
 The Definition of Done (DoD) platform is a web application that helps development teams ensure all necessary steps are completed before a task is marked as done. It automates and streamlines task workflows, improves quality assurance, and simplifies documentation and collaboration.
 
