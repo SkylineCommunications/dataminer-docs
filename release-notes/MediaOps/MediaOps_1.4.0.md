@@ -60,3 +60,7 @@ Up to now, on the Organizations and Teams pages, the member count also included 
 #### Scheduling: Jobs visualized twice in resource view [ID 43643]
 
 When many resources and jobs were visualized on the timeline on the Resource View page, it could occur that jobs were visualized twice.
+
+#### GetLinks method caused exception [ID 43650]
+
+When the GetLinks method was used, it could occur that an exception was thrown stating "an instance does not have the correct DOM Definition ID." This method has now been fixed to prevent this. This issue did not affect the out-of-the-box MediaOps Solution but could have been encountered with custom scripts.
