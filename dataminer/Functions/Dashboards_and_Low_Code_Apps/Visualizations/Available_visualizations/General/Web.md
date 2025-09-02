@@ -17,7 +17,9 @@ This component displays a webpage or a block of static HTML. It can also be used
   1. In the URL box below this, specify the URL of the webpage.
 
      > [!NOTE]
-     > From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38993-->, you can link this component to data by [dynamically referencing data](xref:Dynamically_Referencing_Data_in_Text) in the URL. However, note that the URL is limited to 2,000 characters.
+     >
+     > - From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38993-->, you can link this component to data by [dynamically referencing data](xref:Dynamically_Referencing_Data_in_Text) in the URL. However, note that the URL is limited to 2,000 characters.
+     > - If the URL refers to a file in the DMA's *Webpages/public/* folder (or one of its subfolders), and sandboxing is not required, you can disable the setting *Open in sandbox* for the component. However, you should only do this if it is absolutely necessary, as disabling this option lowers browser security. This setting is available from DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10 onwards.<!-- RN 43584 -->
 
 - To configure the component as a block of HTML:
 
