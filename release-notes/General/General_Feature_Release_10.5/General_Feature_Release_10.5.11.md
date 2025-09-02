@@ -34,8 +34,9 @@ uid: General_Feature_Release_10.5.11
 
 ### Enhancements
 
-#### DxMs upgraded [ID 43644]
+#### DxMs upgraded [ID 43642] [ID 43644]
 
+<!-- RN 43642: MR 10.5.0 [CU8] - FR 10.5.11 -->
 <!-- RN 43644: MR 10.6.0 - FR 10.5.11 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
@@ -43,6 +44,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner ArtifactDeployer 1.8.6
 - DataMiner CloudGateway 2.17.12
 - DataMiner CoreGateway 2.14.14
+- DataMiner SupportAssistant 1.7.7
 
 The CloudGateway DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, they will not be installed.
 

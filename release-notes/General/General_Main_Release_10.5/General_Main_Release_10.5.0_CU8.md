@@ -15,7 +15,15 @@ uid: General_Main_Release_10.5.0_CU8
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DxMs upgraded [ID 43642]
+
+<!-- RN 43642: MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner SupportAssistant 1.7.7
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 ### Fixes
 
