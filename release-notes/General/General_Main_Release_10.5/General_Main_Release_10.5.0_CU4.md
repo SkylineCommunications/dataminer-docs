@@ -238,10 +238,10 @@ If a redundancy group has more primary elements than backup elements, at the mom
 
 By default, that alarm is cleared as soon as one of the backup elements is available again. However, up to now, in some cases, the alarm would incorrectly not get cleared.
 
-### Fixes in build xxxx
+### Fixes in build 16239
 
 #### SLNet memory leak caused by ClusterEndpoint.json sync [ID 43407]
 
-<!-- MR 10.5.0 [CU4] (but also 10.5.0 [CU6]) - FR 10.5.7 [CU1] (but also 10.5.9) -->
+<!-- MR 10.5.0 [CU4] (but also 10.5.0 [CU5] and 10.5.0 [CU6]) - FR 10.5.7 [CU1] (but also 10.5.9) -->
 
 In large DataMiner Systems, especially in clusters with Failover Agents, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely. This could lead to a serious memory leak in SLNet, causing DataMiner Agents to disconnect frequently.

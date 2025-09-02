@@ -22,7 +22,7 @@ uid: Known_issues
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
-| [SLNet memory leak caused by ClusterEndpoint.json sync](xref:KI_ClusterEndpoint_SLNet_leak) | DataMiner 10.5.0 [CU4] build 15943, 10.5.0 [CU5], 10.5.7, and 10.5.8 | DataMiner 10.5.0 [CU4] build xxxx/10.5.0 [CU6]/10.5.7 [CU1]/10.5.9 | August 19, 2025 |
+| [SLNet memory leak caused by ClusterEndpoint.json sync](xref:KI_ClusterEndpoint_SLNet_leak) | DataMiner 10.5.0 [CU4] build 15943, 10.5.0 [CU5] build 16086, 10.5.7, and 10.5.8 | DataMiner 10.5.0 [CU4] build 16239, 10.5.0 [CU5] build 16243, 10.5.0 [CU6], 10.5.7 [CU1], and 10.5.9 | August 19, 2025 |
 | [SRM scheduler unresponsive](xref:KI_SRM_scheduler_unresponsive) | DataMiner 10.5.6 and 10.5.7 | DataMiner 10.5.8/10.6.0 | July 4, 2025|
 | [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6. | July 16, 2025 |
 | [Online Failover Agent unable to acquire VIP](xref:KI_Online_Failover_Agent_unable_to_acquire_VIP) | From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards | DataMiner 10.4.0 [CU12]/10.5.0 [CU0]/10.5.3| June 20, 2025 |
