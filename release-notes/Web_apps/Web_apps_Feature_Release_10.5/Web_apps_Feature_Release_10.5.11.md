@@ -26,7 +26,15 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards/Low-Code Apps - Maps component: Specifying line color conditions in the query filter [ID 43617]
+
+<!-- 10.4.0 [CU20] / MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+From now on, map lines can be colored by specifying a color condition in the query filter.
+
+- When a color condition is specified in the query filter, any conditional coloring configured in the *Layout* pane of the *Maps* component will be disregarded until the query filter is removed.
+
+- If the query filter contains multiple color conditions, only the first color condition will be applied. Because a line can only have one color, all other color conditions will be disregarded.
 
 ### Fixes
 
