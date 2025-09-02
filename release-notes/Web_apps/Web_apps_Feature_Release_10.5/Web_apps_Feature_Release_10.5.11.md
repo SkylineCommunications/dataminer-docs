@@ -36,6 +36,21 @@ From now on, map lines can be colored by specifying a color condition in the que
 
 - If the query filter contains multiple color conditions, only the first color condition will be applied. Because a line can only have one color, all other color conditions will be disregarded.
 
+#### Dashboards/Low-Code Apps - Grid component: Enhanced default selection behavior [ID 43625]
+
+<!-- 10.4.0 [CU20] / MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+A number of enhancements have been made to the default selection behavior of the *Grid* component.
+
+- On initial load, the component will try to apply the selection instructions specified in the URL. If the URL does not contain any of these instructions, then the *Select first item by default* setting will be applied.
+
+- On reload, the component will try to re-apply the latest selection. If this results in no items getting selected (because there is no previous selection or because the previously selected items are no longer displayed), then the *Select first item by default* setting will be applied.
+
+In a *Grid* component, at least one item will always be selected
+
+- when the component contains data, and
+- when the *Select first item by default* setting is enabled.
+
 ### Fixes
 
 *No fixes have been added yet.*
