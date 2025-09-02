@@ -113,6 +113,12 @@ Up to now, when you opened the "..." menu in the upper-right corner of a low-cod
 
 As this window allows you to set the user permissions of the app in question, the menu option has now been renamed from *Settings* to *Permissions*.
 
+#### GQI DxM will now shut down its Web API connection faster when it loses its connection to SLNet [ID 43537]
+
+<!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When the GQI DxM loses its connection to SLNet, it will now shut down its connection to the web API while it is shutting down all sessions and workers.
+
 #### Dashboards app: A notice will now appear when a PDF report is being generated in a browser tab [ID 43548]
 
 <!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
