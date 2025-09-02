@@ -43,6 +43,10 @@ In Resource Studio, several exception messages have been improved to be more cle
 
 In Resource Studio, an icon has been added that indicates whether a capability on a resource is provided by a resource pool.
 
+#### Scheduling: Client time visualized on job and resource timeline [ID 43639]
+
+Though by default the time zone of the client machine is applied in the Scheduling app, this can be customized through user settings. Therefore, to ensure that operators have good visibility on the current time used in the Scheduling application, a clock has been added to both the *Job View* and *Resource View* pages.
+
 ### Fixes
 
 #### Resource Studio: Incorrect step size after change to number of decimals of capacity or configuration parameter of type number [ID_43580]
@@ -52,3 +56,11 @@ When capacity or configuration parameters of type number were defined, it could 
 #### People & Organizations: Organization count included deprecated people [ID 43628]
 
 Up to now, on the Organizations and Teams pages, the member count also included deprecated people. These are now no longer included.
+
+#### Scheduling: Jobs visualized twice in resource view [ID 43643]
+
+When many resources and jobs were visualized on the timeline on the Resource View page, it could occur that jobs were visualized twice.
+
+#### GetLinks method caused exception [ID 43650]
+
+When the GetLinks method was used, it could occur that an exception was thrown stating "an instance does not have the correct DOM Definition ID." This method has now been fixed to prevent this. This issue did not affect the out-of-the-box MediaOps Solution but could have been encountered with custom scripts.
