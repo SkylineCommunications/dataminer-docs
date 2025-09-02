@@ -31,3 +31,11 @@ A number of issues have been fixed with regard to the `pollingRate` attribute, w
 
 > [!NOTE]
 > The StreamViewer will now indicate more clearly which columns were polled. When some columns were polled while others were skipped, the message `[PollingRate polled column PIDs xxx,yyy]` will be shown. Also, when the timer was faster than the polling rate, the message `No column reached the PollingRate interval.` will be shown, and no Get operation will be executed.
+
+#### Problem when trying to update the log levels of an element that was not hosted on the local DataMiner Agent [ID 43582]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you tried to update the log levels of an element that was not hosted on the local DataMiner Agent, up to now, the update request would incorrectly be ignored and would not be forwarded to the DataMiner Agent hosting the element.
+
+From now on, the update request will correctly be forwarded to the DataMiner Agent hosting the element where it will be processed accordingly.
