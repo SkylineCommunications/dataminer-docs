@@ -45,7 +45,7 @@ In Resource Studio, an icon has been added that indicates whether a capability o
 
 #### Scheduling: Client time visualized on job and resource timeline [ID 43639]
 
-Though by default the time zone of the client machine is displayed in the Scheduling app, this can be customized through user settings. Therefore, to ensure that operators have good visibility on the current time used in the Scheduling application, a clock has been added to both the *Job View* and *Resource View* pages.
+Though by default the time zone of the client machine is applied in the Scheduling app, this can be customized through user settings. Therefore, to ensure that operators have good visibility on the current time used in the Scheduling application, a clock has been added to both the *Job View* and *Resource View* pages.
 
 ### Fixes
 
