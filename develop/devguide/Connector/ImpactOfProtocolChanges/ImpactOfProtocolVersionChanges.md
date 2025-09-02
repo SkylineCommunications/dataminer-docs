@@ -27,7 +27,8 @@ It is important to assess if a major change will be needed as soon as possible t
 
 There are many protocol changes that can cause impact.
 
-Causing impact means that if you have an existing element using a previous version of this protocol, you cannot upgrade to the new version because something in your system will (or might) break depending on what specific features of the protocol or DataMiner are being used.
+The nature and severity of the impact will be documented via the Connector XML [VersionHistory](xref:Manifest.VersionHistory) subtags as well as the actions to take to overcome those. This information will then be exposed both in the Catalog and in DataMiner Cube when updating an pre-existing element.
+This can vary from small impact such as having to update a related Automation script, Dashboard, having to review a small part of alarm or trending templates all the way up to having to create a brand new element leading to loss of all alarm and trending history.
 
 The impacted changes listed here are grouped based on the change that is implemented.
 
