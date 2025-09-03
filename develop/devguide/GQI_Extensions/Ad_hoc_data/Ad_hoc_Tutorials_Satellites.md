@@ -21,10 +21,10 @@ Expected duration: 15 minutes.
 
 ## Overview
 
-  - [Step 1: Get a quick start from the catalog](#step-1-get-a-quick-start-from-the-catalog)
-  - [Step 2: Open the data source in Visual Studio](#step-2-open-the-data-source-in-visual-studio)
-  - [Step 3: Complete the data source](#step-3-complete-the-data-source)
-  - [Step 4: Use the data source](#step-4-use-the-data-source)
+- [Step 1: Get a quick start from the catalog](#step-1-get-a-quick-start-from-the-catalog)
+- [Step 2: Open the data source in Visual Studio](#step-2-open-the-data-source-in-visual-studio)
+- [Step 3: Complete the data source](#step-3-complete-the-data-source)
+- [Step 4: Use the data source](#step-4-use-the-data-source)
 
 ## Step 1: Get a quick start from the catalog
 

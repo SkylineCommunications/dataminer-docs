@@ -27,17 +27,12 @@ Estimated duration: 20 minutes.
 
 The tutorial consists of the following steps:
 
-  - [Step 1: Install the example package from the Catalog](#step-1-install-the-example-package-from-the-catalog)
-
-  - [Step 2: Discover anomaly detection in trend graphs](#step-2-discover-anomaly-detection-in-trend-graphs)
-
-  - [Step 3: Discover proactive cap detection](#step-3-discover-proactive-cap-detection)
-
-  - [Step 4: Find the root cause](#step-4-find-the-root-cause)
-
-  - [Step 5: Use time-scoped relation learning](#step-5-use-time-scoped-relation-learning)
-
-  - [Step 6: Final exercise](#step-6-final-exercise)
+- [Step 1: Install the example package from the Catalog](#step-1-install-the-example-package-from-the-catalog)
+- [Step 2: Discover anomaly detection in trend graphs](#step-2-discover-anomaly-detection-in-trend-graphs)
+- [Step 3: Discover proactive cap detection](#step-3-discover-proactive-cap-detection)
+- [Step 4: Find the root cause](#step-4-find-the-root-cause)
+- [Step 5: Use time-scoped relation learning](#step-5-use-time-scoped-relation-learning)
+- [Step 6: Final exercise](#step-6-final-exercise)
 
 ## Step 1: Install the example package from the Catalog
 

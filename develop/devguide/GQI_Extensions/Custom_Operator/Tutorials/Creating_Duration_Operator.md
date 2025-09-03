@@ -32,12 +32,12 @@ Expected duration: 15 minutes.
 
 ## Overview
 
-  - [Step 1: Get a quick start from the catalog](#step-1-get-a-quick-start-from-the-catalog)
-  - [Step 2: Open the custom operator in Visual Studio](#step-2-open-the-custom-operator-in-visual-studio)
-  - [Step 3: Provide the input arguments for the custom operator](#step-3-provide-the-input-arguments-for-the-custom-operator)
-  - [Step 4: Create a new column to show the duration](#step-4-create-a-new-column-to-show-the-duration)
-  - [Step 5: Add the duration to the added column](#step-5-add-the-duration-to-the-added-column)
-  - [Step 6: Use the data source](#step-6-use-the-data-source)
+- [Step 1: Get a quick start from the catalog](#step-1-get-a-quick-start-from-the-catalog)
+- [Step 2: Open the custom operator in Visual Studio](#step-2-open-the-custom-operator-in-visual-studio)
+- [Step 3: Provide the input arguments for the custom operator](#step-3-provide-the-input-arguments-for-the-custom-operator)
+- [Step 4: Create a new column to show the duration](#step-4-create-a-new-column-to-show-the-duration)
+- [Step 5: Add the duration to the added column](#step-5-add-the-duration-to-the-added-column)
+- [Step 6: Use the data source](#step-6-use-the-data-source)
 
 ## Step 1: Get a quick start from the catalog
 
