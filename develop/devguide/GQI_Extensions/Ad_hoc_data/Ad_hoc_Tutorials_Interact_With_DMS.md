@@ -28,7 +28,7 @@ Expected duration: 15 minutes.
 1. Create a new class that implements the [IGQIDatasource](xref:GQI_IGQIDataSource) interface.
 
    > [!NOTE]
-   > If certain types cannot be found in the file, verify if the *Skyline.DataMiner.Dev.Automation* NuGet package has the correct version. Go to *Tools* > *NuGet Package Manager* > *Manage NuGet Packages for Solution*. Select *Skyline.DataMiner.Dev.Automation*, and verify whether the version installed for the current project is at least *10.5.4.2*.
+   > If certain types cannot be found in the file, verify if the *Skyline.DataMiner.Dev.Automation* NuGet package has the correct version. Go to *Tools* > *NuGet Package Manager* > *Manage NuGet Packages for Solution*. Select *Skyline.DataMiner.Dev.Automation*, and verify whether the version installed for the current project is at least *10.3.4*.
 
 1. Implement the `GetColumns` method to define the columns of the data source.
 
