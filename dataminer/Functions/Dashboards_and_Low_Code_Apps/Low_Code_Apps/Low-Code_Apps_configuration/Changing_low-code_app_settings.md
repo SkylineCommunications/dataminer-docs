@@ -4,7 +4,7 @@ uid: Changing_low-code_app_settings
 
 # Changing low-code app settings
 
-Low-code apps consist of one or more pages that display the content of the app. Some settings are configured at the application level, such as [user access](xref:LowCodeApps_security_config) and [actions that get triggered when the app is opened](#having-an-event-triggered-when-the-app-is-opened). Other settings such as [page and panel configuration and updates](#configuring-the-settings-for-a-page-of-panel) should be configured for each specific low-code app page or panel.
+The general settings of a low-code app include the [actions that get triggered when the app is opened](#having-an-event-triggered-when-the-app-is-opened), which are configured on application level, and the [general settings for pages and panels](#configuring-the-settings-for-a-page-of-panel), which need to be configured for each specific low-code app page or panel.
 
 > [!TIP]
 > For information on how to configure which users can access or edit an app, see [Configuring security for a low-code app](xref:LowCodeApps_security_config).

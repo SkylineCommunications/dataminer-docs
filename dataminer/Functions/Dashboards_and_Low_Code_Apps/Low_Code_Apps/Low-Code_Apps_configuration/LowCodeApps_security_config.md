@@ -4,7 +4,7 @@ uid: LowCodeApps_security_config
 
 # Configuring security for a low-code app
 
-To configure which users can access and/or edit a low-code application:
+When you configure a low-code app, you can specify which users can access and/or edit the app. Unlike other app settings, this is a setting that is not version-specific, which means that if you configure it for one version of the app, it will apply for all versions.
 
 ## [From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards](#tab/tabid-1)
 
