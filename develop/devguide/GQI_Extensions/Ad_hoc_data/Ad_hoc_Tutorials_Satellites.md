@@ -28,7 +28,7 @@ Expected duration: 15 minutes.
 
 ## Step 1: Get a quick start from the catalog
 
-1. Go to [https://catalog.dataminer.services/details/package/5406](https://catalog.dataminer.services/details/package/5406)
+1. Go to [Satellites - GQIDS](https://catalog.dataminer.services/details/70cc84b0-74a5-46a3-af6a-dd47a1cc625a)
 
 1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 

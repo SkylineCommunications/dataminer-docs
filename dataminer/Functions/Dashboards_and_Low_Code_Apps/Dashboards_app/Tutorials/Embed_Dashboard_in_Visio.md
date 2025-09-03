@@ -10,7 +10,7 @@ Expected duration: 20 minutes
 
 > [!TIP]
 >
-> - An application package is available in the [Catalog](https://catalog.dataminer.services/details/package/5182) that demonstrates the outcome of this tutorial.
+> - An application package is available in the [Catalog](https://catalog.dataminer.services/details/ce1cc516-852f-45d3-b8c2-6389f03232b4) that demonstrates the outcome of this tutorial.
 > - When you design a dynamic dashboard (e.g. with a configurable element), you need to use a [feed](xref:Feeds), which can be a [Dropdown](xref:DashboardDropdown) component, so that a value can be dynamically assigned when the dashboard is embedded.
 > - See also: [Kata #20: Integrating dashboards in DataMiner Cube](https://community.dataminer.services/courses/kata-20/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
@@ -29,9 +29,9 @@ Expected duration: 20 minutes
 
 The tutorial consists of the following steps:
 
-- [Step 1: Create a dynamic dashboard](#step-1-create-a-dynamic-dashboard)
-- [Step 2: Prepare the URL for use in Visio](#step-2-prepare-the-url-for-use-in-visio)
-- [Step 3: Create a Visio file and embed the dashboard](#step-3-create-a-visio-file-and-embed-the-dashboard)
+  - [Step 1: Create a dynamic dashboard](#step-1-create-a-dynamic-dashboard)
+  - [Step 2: Prepare the URL for use in Visio](#step-2-prepare-the-url-for-use-in-visio)
+  - [Step 3: Create a Visio file and embed the dashboard](#step-3-create-a-visio-file-and-embed-the-dashboard)
 
 ## Step 1: Create a dynamic dashboard
 

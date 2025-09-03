@@ -8,7 +8,7 @@ uid: DOM_DevOps_installation
 
 1. If you want to be able to check what your data model looks like in a DataMiner low-code app, make sure that system has the necessary [licenses to use DataMiner Low-Code Apps](xref:Pricing_Perpetual_Use_Licensing#optional-functions). If you are using a DataMiner version prior to DataMiner 10.3.6/10.4.0, also make sure that the *DOMManager* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
-1. Deploy the DOM DevOps tools package via the [Catalog](https://catalog.dataminer.services/details/package/3195).
+1. Deploy the DOM DevOps tools package via the [Catalog](https://catalog.dataminer.services/details/11674850-aeac-48c4-9f35-03c387ebcf18).
 
    The package includes:
 

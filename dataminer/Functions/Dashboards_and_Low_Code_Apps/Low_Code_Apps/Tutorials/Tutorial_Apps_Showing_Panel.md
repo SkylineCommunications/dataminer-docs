@@ -25,7 +25,7 @@ Expected duration: 5 minutes
 
 ## Step 1: Install the dummy data sources package
 
-1. Go to <https://catalog.dataminer.services/details/package/5410>
+1. Go to <https://catalog.dataminer.services/details/636c9268-a210-494c-8643-75494e767ffb>
 
 1. Click the *Deploy* button to deploy the *IPAM - GQI dummy data sources* packages on your DMA.
 
