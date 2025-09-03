@@ -57,7 +57,7 @@ Expected duration: 20 minutes
 
 ## Step 2: Deploy the Kata DOM package
 
-1. Go to <https://catalog.dataminer.services/details/package/5995>.
+1. Go to <https://catalog.dataminer.services/details/0e9f4b50-cab7-4d2d-855f-f2a4173f1ccc>.
 
 1. Click the *Deploy* button to deploy the Kata DOM package to your DMA.
 

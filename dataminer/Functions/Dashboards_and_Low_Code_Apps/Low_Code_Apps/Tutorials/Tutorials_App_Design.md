@@ -18,7 +18,7 @@ Expected duration: 30 minutes.
 
 - DataMiner 10.4.2 or higher.
 
-- Deploy the *KataDesign* package from the [Catalog](https://catalog.dataminer.services/details/package/5883).
+- Deploy the *KataDesign* package from the [Catalog](https://catalog.dataminer.services/details/d248cdd3-8960-47fa-9190-ada5e32d0cc4).
 
   > [!TIP]
   > For information on how to deploy a package, see [Deploying a Catalog item](xref:Deploying_a_catalog_item).
@@ -47,7 +47,7 @@ Expected duration: 30 minutes.
 
 ## Step 1: Access the low-code app
 
-1. After installing the app via the [Catalog](https://catalog.dataminer.services/details/package/5883), go to `http(s)://[DMA name]/root`.
+1. After installing the app via the [Catalog](https://catalog.dataminer.services/details/d248cdd3-8960-47fa-9190-ada5e32d0cc4), go to `http(s)://[DMA name]/root`.
 
 1. Sign in using your DataMiner credentials.
 
