@@ -42,10 +42,10 @@ When you zoomed in on a trend graph, the alarm timeline on the X axis would inco
 
 When a broadcast message expired, up to now, an exception could be thrown.
 
-#### Trending: 'Display the alarm template in the trend graph' option would incorrectly not be displayed when the bottom navigator chart was not enabled [ID 43638]
+#### Trending: Changes made to the 'Display the alarm template in the trend graph' option would incorrectly not be applied when the bottom navigator chart was not enabled [ID 43638]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
-When, in a visual overview, a shape showing a trend component was configured to not show the bottom navigator chart (i.e. by means of the "NavigatorChart:false" option set in the *ParametersOptions* shape data field), up to now, it would incorrectly not be possible to set the *Display the alarm template in the trend graph* option in the component's settings.
+When, in a visual overview, a shape showing a trend component was configured to not show the bottom navigator chart (i.e. by means of the "NavigatorChart:false" option set in the *ParametersOptions* shape data field), up to now, changes made to the *Display the alarm template in the trend graph* option in the component's settings would incorrectly not be applied.
 
 Also, when a shape showing a trend component was configured to not show the bottom navigator chart, up to now, changes made to the mouse actions in the component's settings would incorrectly not be applied until the card was re-opened.
