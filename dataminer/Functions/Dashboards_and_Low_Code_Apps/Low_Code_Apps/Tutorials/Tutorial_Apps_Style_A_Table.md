@@ -29,19 +29,13 @@ Expected duration: 30 minutes.
 
 ## Overview
 
-  - [Step 1: Configure the query](#step-1-configure-the-query)
-
-  - [Step 2: Add a table component](#step-2-add-a-table-component)
-
-  - [Step 3: Configure a hyperlink](#step-3-configure-a-hyperlink)
-
-  - [Step 4: Style the 'created' column](#step-4-style-the-created-column)
-
-  - [Step 5: Add conditional coloring to the 'Fulfillment' column](#step-5-add-conditional-coloring-to-the-fulfillment-column)
-
-  - [Step 6: Add a table column that indicates which row is selected](#step-6-add-a-table-column-that-indicates-which-row-is-selected)
-
-  - [Step 7: Add a context menu](#step-7-add-a-context-menu)
+- [Step 1: Configure the query](#step-1-configure-the-query)
+- [Step 2: Add a table component](#step-2-add-a-table-component)
+- [Step 3: Configure a hyperlink](#step-3-configure-a-hyperlink)
+- [Step 4: Style the 'created' column](#step-4-style-the-created-column)
+- [Step 5: Add conditional coloring to the 'Fulfillment' column](#step-5-add-conditional-coloring-to-the-fulfillment-column)
+- [Step 6: Add a table column that indicates which row is selected](#step-6-add-a-table-column-that-indicates-which-row-is-selected)
+- [Step 7: Add a context menu](#step-7-add-a-context-menu)
 
 ## Step 1: Configure the query
 
