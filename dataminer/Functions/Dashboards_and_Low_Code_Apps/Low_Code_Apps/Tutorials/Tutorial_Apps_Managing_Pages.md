@@ -19,16 +19,22 @@ Expected duration: 5 minutes.
 
 ## Overview
 
-- [Step 1: Install the dummy data sources package](#step-1-install-the-dummy-data-sources-package)
-- [Step 2: Add a page to your app](#step-2-add-a-page-to-your-app)
-- [Step 3: Configure how your page is shown](#step-3-configure-how-your-page-is-shown)
-- [Step 4: Add data to the page](#step-4-add-data-to-the-page)
-- [Step 5: Duplicate a page](#step-5-duplicate-a-page)
-- [Step 6: (Optional) Reorder, hide, and delete pages](#step-6-optional-reorder-hide-and-delete-pages)
+- [Managing the pages of an app](#managing-the-pages-of-an-app)
+  - [Prerequisites](#prerequisites)
+  - [Overview](#overview)
+  - [Step 1: Install the dummy data sources package](#step-1-install-the-dummy-data-sources-package)
+  - [Step 2: Add a page to your app](#step-2-add-a-page-to-your-app)
+  - [Step 3: Configure how your page is shown](#step-3-configure-how-your-page-is-shown)
+  - [Step 4: Add data to the page](#step-4-add-data-to-the-page)
+  - [Step 5: Duplicate a page](#step-5-duplicate-a-page)
+  - [Step 6: (Optional) Reorder, hide, and delete pages](#step-6-optional-reorder-hide-and-delete-pages)
+  - [Next tutorial](#next-tutorial)
+  - [Learning paths](#learning-paths)
+  - [Related documentation](#related-documentation)
 
 ## Step 1: Install the dummy data sources package
 
-1. Go to <https://catalog.dataminer.services/details/package/5410>
+1. Go to <https://catalog.dataminer.services/details/d9089bae-0680-4da2-9c30-1c768f68fe63>
 
 1. Click the *Deploy* button to deploy the *IPAM - GQI dummy data sources* packages on your DMA.
 

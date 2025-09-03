@@ -22,26 +22,26 @@ Expected duration: 30 minutes.
 
 - DataMiner 10.4.1/10.5.0 or higher.
 
-- Download the JSON reader [from Github](https://github.com/SkylineCommunications/SLC-GQIDS-JsonReader), or deploy it directly to your DataMiner System via the [Catalog](https://catalog.dataminer.services/details/package/5491).
+- Download the JSON reader [from Github](https://github.com/SkylineCommunications/SLC-GQIDS-JsonReader), or deploy it directly to your DataMiner System via the [Catalog](https://catalog.dataminer.services/details/bccda4b3-90c3-420a-9e3b-622d049f8d75).
 
   > [!TIP]
   > For information on how to deploy a package, see [Deploying a Catalog item](xref:Deploying_a_catalog_item).
 
 ## Overview
 
-- [Step 1: Configure the query](#step-1-configure-the-query)
+  - [Step 1: Configure the query](#step-1-configure-the-query)
 
-- [Step 2: Add a table component](#step-2-add-a-table-component)
+  - [Step 2: Add a table component](#step-2-add-a-table-component)
 
-- [Step 3: Configure a hyperlink](#step-3-configure-a-hyperlink)
+  - [Step 3: Configure a hyperlink](#step-3-configure-a-hyperlink)
 
-- [Step 4: Style the 'created' column](#step-4-style-the-created-column)
+  - [Step 4: Style the 'created' column](#step-4-style-the-created-column)
 
-- [Step 5: Add conditional coloring to the 'Fulfillment' column](#step-5-add-conditional-coloring-to-the-fulfillment-column)
+  - [Step 5: Add conditional coloring to the 'Fulfillment' column](#step-5-add-conditional-coloring-to-the-fulfillment-column)
 
-- [Step 6: Add a table column that indicates which row is selected](#step-6-add-a-table-column-that-indicates-which-row-is-selected)
+  - [Step 6: Add a table column that indicates which row is selected](#step-6-add-a-table-column-that-indicates-which-row-is-selected)
 
-- [Step 7: Add a context menu](#step-7-add-a-context-menu)
+  - [Step 7: Add a context menu](#step-7-add-a-context-menu)
 
 ## Step 1: Configure the query
 

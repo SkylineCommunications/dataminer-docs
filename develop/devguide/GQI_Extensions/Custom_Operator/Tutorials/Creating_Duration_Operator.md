@@ -32,16 +32,16 @@ Expected duration: 15 minutes.
 
 ## Overview
 
-- [Step 1: Get a quick start from the catalog](#step-1-get-a-quick-start-from-the-catalog)
-- [Step 2: Open the custom operator in Visual Studio](#step-2-open-the-custom-operator-in-visual-studio)
-- [Step 3: Provide the input arguments for the custom operator](#step-3-provide-the-input-arguments-for-the-custom-operator)
-- [Step 4: Create a new column to show the duration](#step-4-create-a-new-column-to-show-the-duration)
-- [Step 5: Add the duration to the added column](#step-5-add-the-duration-to-the-added-column)
-- [Step 6: Use the data source](#step-6-use-the-data-source)
+  - [Step 1: Get a quick start from the catalog](#step-1-get-a-quick-start-from-the-catalog)
+  - [Step 2: Open the custom operator in Visual Studio](#step-2-open-the-custom-operator-in-visual-studio)
+  - [Step 3: Provide the input arguments for the custom operator](#step-3-provide-the-input-arguments-for-the-custom-operator)
+  - [Step 4: Create a new column to show the duration](#step-4-create-a-new-column-to-show-the-duration)
+  - [Step 5: Add the duration to the added column](#step-5-add-the-duration-to-the-added-column)
+  - [Step 6: Use the data source](#step-6-use-the-data-source)
 
 ## Step 1: Get a quick start from the catalog
 
-1. Go to [https://catalog.dataminer.services/details/package/5408](https://catalog.dataminer.services/details/package/5408)
+1. Go to [https://catalog.dataminer.services/details/0d2ae787-e1f1-4839-8245-6892ee4c37ed](https://catalog.dataminer.services/details/0d2ae787-e1f1-4839-8245-6892ee4c37ed)
 
 1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
@@ -138,7 +138,7 @@ This is the first step to implement the custom operator.
 1. Select a data source that has at least two columns containing datetime values.
 
    > [!NOTE]
-   > If you do not have an applicable data source, you can [download one from the catalog](https://catalog.dataminer.services/details/package/5407).
+   > If you do not have an applicable data source, you can [download one from the catalog](https://catalog.dataminer.services/details/583c964c-270c-4485-a8e9-84dced178759).
 
 1. Add a custom operator to the query and select *Duration*.
 
