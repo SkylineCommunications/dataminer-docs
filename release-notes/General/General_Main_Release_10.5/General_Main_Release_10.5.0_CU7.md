@@ -44,6 +44,12 @@ When an internet connection is not available on the client machine, the DataMine
 
 To prevent these freezes, please consult your IT administrator. For detailed solutions and workarounds, see [DataMiner Cube freeze on startup](xref:KI_DataMiner_Cube_freeze_on_startup).
 
+#### STaaS: Enhanced exception logging [ID 43626]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU7] - FR 10.5.11 -->
+
+A number of enhancements have been made with regard to the logging of exception messages on STaaS systems.
+
 ### Fixes
 
 #### SLDataMiner issue after connection type of element changed [ID 43249]
