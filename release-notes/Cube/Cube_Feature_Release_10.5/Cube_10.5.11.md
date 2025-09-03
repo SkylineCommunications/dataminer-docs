@@ -30,4 +30,8 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Trending: Alarm timeline would incorrectly be displayed on top of or beyond the Y axis when zooming in [ID 43593]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you zoomed in on a trend graph, the alarm timeline on the X axis would incorrectly be displayed either on top of or beyond the Y axis.

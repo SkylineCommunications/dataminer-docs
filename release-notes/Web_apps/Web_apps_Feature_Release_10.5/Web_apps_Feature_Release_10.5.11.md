@@ -44,6 +44,14 @@ A number of enhancements have been made to the default selection behavior of the
 
 When, after a reload, no items are selected (because none were selected before the reload or because the items selected before the reload are no longer displayed), from now on, the *Select first item by default* setting will be applied.
 
+#### Dashboards/Low-Code Apps - Table & Maps components: 'Old column' renamed to 'Unknown column' and 'Old query' renamed to 'Unknown marker' or 'Unknown line' [ID 43630]
+
+<!-- 10.4.0 [CU20] / MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+In the configuration settings of a *Table* component, up to now, templates for columns that had been removed would be named "Old column". From now on, they will be named "Unknown column" instead.
+
+In the configuration settings of a *Maps* component, up to now, settings for markers or lines that had been removed would be named "Old query". From now on, they will be named either "Unknown marker" or "Unknown line" instead.
+
 ### Fixes
 
 *No fixes have been added yet.*
