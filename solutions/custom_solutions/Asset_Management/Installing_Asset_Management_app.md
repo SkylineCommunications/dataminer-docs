@@ -15,7 +15,7 @@ uid: Installing_Asset_Management
 
 ## Deploying the Asset Management app
 
-1. Look up the [*Asset Management Application* package](https://catalog.dataminer.services/details/package/5159) in the Catalog.
+1. Look up the [*Asset Management Application* package](https://catalog.dataminer.services/details/e62560b8-61dd-4f86-9923-b65883913544) in the Catalog.
 
 1. Click the *Deploy* button.
 

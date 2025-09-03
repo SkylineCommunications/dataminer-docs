@@ -47,7 +47,7 @@ uid: Installing_Ping_Monitoring
 
 ## Deploying the Ping Monitoring tool
 
-1. Look up the [*Ping Monitoring* package](https://catalog.dataminer.services/details/package/4992) in the Catalog.
+1. Look up the [*Ping Monitoring* package](https://catalog.dataminer.services/details/26f08923-7ac5-4322-8a71-0a3efe9aad08) in the Catalog.
 
 1. Click the *Deploy* button.
 
