@@ -430,12 +430,6 @@ When a relational anomaly group or subgroup is added with the AddRADParameterGro
 
 In the *ResetNATSCheck* timer of the SLNet-managed NATS solution, the credentials of the local agent will now be compared against the credentials of the primary NAS node. If these do not match, the NATS configuration of the local agent will be reset, and the correct credentials of the primary node will be used instead.
 
-#### STaaS: Enhanced exception logging [ID 43626]
-
-<!-- MR 10.6.0 - FR 10.5.11 -->
-
-A number of enhancements have been made with regard to the logging of exception messages on STaaS systems.
-
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
