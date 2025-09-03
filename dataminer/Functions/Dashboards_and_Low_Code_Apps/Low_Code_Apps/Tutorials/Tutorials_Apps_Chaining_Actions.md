@@ -14,10 +14,10 @@ Expected duration: 10 minutes
 
 ## Overview
 
-  - [Step 1: Install the dummy data sources package](#step-1-install-the-dummy-data-sources-package)
-  - [Step 2: Create the simulated network scan script](#step-2-create-the-simulated-network-scan-script)
-  - [Step 3: Create and configure the header button](#step-3-create-and-configure-the-header-button)
-  - [Step 4: Chain an action](#step-4-chain-an-action)
+- [Step 1: Install the dummy data sources package](#step-1-install-the-dummy-data-sources-package)
+- [Step 2: Create the simulated network scan script](#step-2-create-the-simulated-network-scan-script)
+- [Step 3: Create and configure the header button](#step-3-create-and-configure-the-header-button)
+- [Step 4: Chain an action](#step-4-chain-an-action)
 
 > [!TIP]
 > See also: [Kata #8: Actions and events in a low-code app](https://community.dataminer.services/courses/kata-8/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
