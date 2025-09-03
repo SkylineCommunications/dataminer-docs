@@ -64,3 +64,7 @@ When many resources and jobs were visualized on the timeline on the Resource Vie
 #### GetLinks method caused exception [ID 43650]
 
 When the GetLinks method was used, it could occur that an exception was thrown stating "an instance does not have the correct DOM Definition ID." This method has now been fixed to prevent this. This issue did not affect the out-of-the-box MediaOps Solution but could have been encountered with custom scripts.
+
+#### Not possible to configure domain on resource pool [ID 43651]
+
+Since MediaOps 1.3.1, it was no longer possible to configure a domain on a resource pool within the MediaOps Solution. This is now possible again for systems where domains are available in DOM. However, note that this is not currently by default supported by the MediaOps Solution. A different application must be used to create these domains.
