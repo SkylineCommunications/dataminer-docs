@@ -42,14 +42,7 @@ From now on, map lines can be colored by specifying a color condition in the que
 
 A number of enhancements have been made to the default selection behavior of the *Grid* component.
 
-- On initial load, the component will try to apply the selection instructions specified in the URL. If the URL does not contain any of these instructions, then the *Select first item by default* setting will be applied.
-
-- On reload, the component will try to re-apply the latest selection. If this results in no items getting selected (because there is no previous selection or because the previously selected items are no longer displayed), then the *Select first item by default* setting will be applied.
-
-In a *Grid* component, at least one item will always be selected
-
-- when the component contains data, and
-- when the *Select first item by default* setting is enabled.
+When, after a reload, no items are selected (because none were selected before the reload or because the items selected before the reload are no longer displayed), from now on, the *Select first item by default* setting will be applied.
 
 ### Fixes
 
