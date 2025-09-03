@@ -2,7 +2,7 @@
 uid: Ad_hoc_Tutorials_GQIDMS
 ---
 
-# Building a GQI data source that retrieves data from a DMS
+# Building a GQI data source that retrieves client connections from a DMS
 
 In this tutorial, you will learn how you can create a GQI data source that retrieves the active client connections from your DMS.
 
