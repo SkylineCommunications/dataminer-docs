@@ -71,6 +71,14 @@ A number of issues have been fixed with regard to the `pollingRate` attribute, w
 > [!NOTE]
 > The StreamViewer will now indicate more clearly which columns were polled. When some columns were polled while others were skipped, the message `[PollingRate polled column PIDs xxx,yyy]` will be shown. Also, when the timer was faster than the polling rate, the message `No column reached the PollingRate interval.` will be shown, and no Get operation will be executed.
 
+#### Problem when trying to send an SNMP Set command to have all active alarms resent [ID 43442]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+You can have all active alarms resent by sending an SNMP Set command to the DMA (with the DataMiner IP address as target address) with OID 1.3.6.1.4.1.8813.1.1.1.1.4 and value set to the name of the SNMP manager.
+
+However, since DataMiner versions 10.4.0 [CU12]/10.5.3, this would no longer work when the SNMP manager in question had the *Resend all active alarms every ...* option disabled.
+
 #### Problem when trying to update the log levels of an element that was not hosted on the local DataMiner Agent [ID 43582]
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
