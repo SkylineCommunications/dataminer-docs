@@ -52,6 +52,23 @@ In the configuration settings of a *Table* component, up to now, templates for c
 
 In the configuration settings of a *Maps* component, up to now, settings for markers or lines that had been removed would be named "Old query". From now on, they will be named either "Unknown marker" or "Unknown line" instead.
 
+#### Low-Code Apps: 'Clear selection' component action now available in more components [ID 43635]
+
+<!-- 10.4.0 [CU20] / MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, the *Clear selection* component action could only be configured for the *Table* and *Node edge graph* components. From now on, it will also be possible to configure this component action for the following components:
+
+- *Dropdown*
+- *Grid*
+- *List*
+- *Maps*
+- *State* (for queries and tables only)
+- *Timeline*
+- *Tree*
+
+> [!NOTE]
+> The *Dropdown* component will not clear the selection when its *Clear selection* option is disabled.
+
 ### Fixes
 
 #### Web apps: Default time zone specified in ClientSettings.json file would incorrectly be disregarded when clicking 'Now' in the redesigned datetime picker component [ID 43632]
