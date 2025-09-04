@@ -34,6 +34,16 @@ From now on, the load time metric of a visual overview will include the time it 
 
 ### Fixes
 
+#### Trending: Problems when opening a trend graph containing trending of string values combined with exception values [ID 43532]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you opened a trend graph containing trending of string values combined with exception values, up to now, the following issues could occur:
+
+- Only the label of the exception value was displayed. None of the other values would have their label displayed.
+- In some cases, the average value that was displayed would incorrectly be a value that had only occurred for a short period of time.
+- The histogram would incorrectly not include any exceptions.
+
 #### Problem when updating the log levels of an element that had been migrated or swarmed to another DMA [ID 43581]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
