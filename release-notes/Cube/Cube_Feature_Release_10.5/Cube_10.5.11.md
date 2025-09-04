@@ -26,7 +26,11 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Visual Overview: Load time metric will now include the time it took to load embedded visual overviews [ID 43467]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+From now on, the load time metric of a visual overview will include the time it took to load any embedded visual overviews.
 
 ### Fixes
 
