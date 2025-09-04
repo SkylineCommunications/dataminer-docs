@@ -44,7 +44,7 @@ Below you can find an overview of the main features that have been added to Data
 | Dashboards: [*Node edge graph* component](xref:DashboardNodeEdgeGraph) | DataMiner 10.1.5/10.2.0 <!-- [ID 29425] -->|
 | Dashboards: [PDF export](xref:Sharing_PDF_report_from_Dashboards_app) | DataMiner 10.2.12/10.3.0<br>DataMiner 10.2.2 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsexport) <!-- [ID 34634] -->|
 | Dashboards: [*Progress bar* component](xref:DashboardProgressBar) | DataMiner 10.1.7/10.2.0 <!-- [ID 29773] --> |
-| Dashboards: [Sharing dashboards using the Live Sharing Service](xref:Sharing_a_dashboard#sharing-a-dashboard-using-the-live-sharing-service) | DataMiner 10.1.12/10.2.0 <!-- [ID 29047] [ID 31476] -->|
+| Dashboards: [Sharing dashboards using the Live Sharing Service](xref:Sharing_a_dashboard#sharing-a-live-dashboard-via-cloud-share) | DataMiner 10.1.12/10.2.0 <!-- [ID 29047] [ID 31476] -->|
 | Dashboards: [*Trigger* component](xref:DashboardTrigger) | DataMiner 10.1.1/10.2.0 <!-- [ID 28136] --> |
 | Dashboards/Low-Code Apps: [*Button panel* component](xref:DashboardButtonPanel) | DataMiner 10.3.9/10.4.0<br>DataMiner 10.0.3 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsbuttonpanel) <!-- [ID 36775] --> |
 | Dashboards/Low-Code Apps: [Dynamic references in text](xref:Dynamically_Referencing_Data_in_Text) | DataMiner 10.3.11/10.4.0<!-- [ID 37229] --> |
@@ -114,6 +114,7 @@ Below you can find an overview of the main features that have been added to Data
 | Low-Code Apps: [*Show a notification* action](xref:LowCodeApps_event_config#showing-a-notification) | DataMiner 10.3.0 [CU12]/10.4.3 <!-- [ID 38548] -->|
 | Low-Code Apps: [Timeline component events and actions](xref:DashboardTimeline#configuring-events-and-actions) | DataMiner web 10.3.0 CU14/10.4.0 CU2/10.4.5<!-- [ID 39254] --> |
 | Low-Code Apps: [Trigger component actions that let users control the trigger timer](xref:DashboardTrigger#letting-users-control-the-trigger-timer) | DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 <!-- [ID 43184]  --> |
+| Low-Code Apps: [On app open event](xref:Changing_low-code_app_settings#having-an-event-triggered-when-the-app-is-opened) | DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10<!-- RN 43350 --> |
 | Protocols: [Buttons in table cells to open DataMiner objects](xref:UIComponentsTableRowButtons) | DataMiner 10.1.9/10.2.0 <!-- [ID 30413] --> |
 | Protocols: [Buttons to open EPM objects](xref:AdvancedEPMLaunchEPMObjectsTableCellButtons)| DataMiner 10.2.3/10.3.0 <!-- [ID 32368] --> |
 | Protocols: [NT_CLEAR_PARAMETER (474)](xref:NT_CLEAR_PARAMETER) message | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 <!-- RN 42368 --> |

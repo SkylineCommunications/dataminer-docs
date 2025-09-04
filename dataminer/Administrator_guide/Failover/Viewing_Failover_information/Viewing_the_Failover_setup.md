@@ -5,7 +5,7 @@ uid: Viewing_the_Failover_setup
 # Viewing the Failover setup
 
 > [!NOTE]
-> To monitor the history of a Failover setup, you can use the [Generic Failover Status](https://catalog.dataminer.services/result/driver/6173) connector. This allows you to activate monitoring and trending on the Failover state.
+> To monitor the history of a Failover setup, you can use the [Generic Failover Status](https://catalog.dataminer.services/details/bef0ba8b-3145-48b7-a83e-cd1ee784024e) connector. This allows you to activate monitoring and trending on the Failover state.
 
 To view a graphical representation of how two DMAs are set up as each other’s backup:
 

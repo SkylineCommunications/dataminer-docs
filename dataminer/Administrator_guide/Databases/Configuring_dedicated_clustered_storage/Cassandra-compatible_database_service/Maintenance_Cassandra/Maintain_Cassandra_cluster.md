@@ -19,7 +19,7 @@ For more information on how to tune the resources of Cassandra's Java Virtual Ma
 
 ## Monitoring your database
 
-To ensure that your Cassandra database is running fine, we highly recommend that you create an element using the [Apache Cassandra Cluster Monitor](https://catalog.dataminer.services/result/driver/7500) connector.
+To ensure that your Cassandra database is running fine, we highly recommend that you create an element using the [Apache Cassandra Cluster Monitor](https://catalog.dataminer.services/details/a1cd0877-d1b9-4905-8e96-53d913af315e) connector.
 
 > [!NOTE]
 > This is currently not supported for AWS Keyspaces or an Azure Managed Instance for Apache Cassandra.

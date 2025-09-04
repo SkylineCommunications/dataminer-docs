@@ -7,7 +7,7 @@ uid: I-DOCSIS_maps_deployment_one_backend
 > [!IMPORTANT]
 > The configuration files mentioned in the procedure below are automatically installed when you upgrade to the latest EPM Integrated DOCSIS version. You can find them in the following folder on the DMA where the front-end element is located: `C:\Skyline DataMiner\Maps\Configs`.
 
-To deploy the Integrated DOCSIS EPM maps to a DataMiner System with one element using the [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/result/driver/7209) protocol:
+To deploy the Integrated DOCSIS EPM maps to a DataMiner System with one element using the [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/details/b175a610-19d0-4281-99cc-359e09a7e859) protocol:
 
 1. Get the configuration file for the node segment maps (*EPM_MAPS_NODE_SEGMENT.xml*).
 

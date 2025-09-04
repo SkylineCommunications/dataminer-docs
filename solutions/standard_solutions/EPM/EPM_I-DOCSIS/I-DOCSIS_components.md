@@ -21,9 +21,9 @@ EPM connectors constitute the core of the EPM Solution. They carry out the neces
 
 These are the required EPM connectors, which are included in the EPM Solution package:
 
-- [Skyline EPM Platform](https://catalog.dataminer.services/result/driver/7207)
-- [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/result/driver/7209)
-- [Skyline EPM Platform DOCSIS WM](https://catalog.dataminer.services/result/driver/7212)
+- [Skyline EPM Platform](https://catalog.dataminer.services/details/f1dc139b-8da7-4607-9ffb-65087610b3ff)
+- [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/details/b175a610-19d0-4281-99cc-359e09a7e859)
+- [Skyline EPM Platform DOCSIS WM](https://catalog.dataminer.services/details/302ebc88-3c4b-42e2-bca3-058cc7d015c1)
 
 ## Automation scripts
 

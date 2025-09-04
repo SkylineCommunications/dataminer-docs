@@ -161,6 +161,12 @@ From now on, the Class Library can be installed and used as a NuGet package.
 > [!WARNING]
 > BREAKING CHANGE: From now on, InterAppCalls will no longer use reflection. This means that, when using InterApp calls, you will now always need to provide a list with all Known Class Types when deserializing or serializing messages. Also when linking a message to an executor, you will now need to provide a mapping.
 
+### 1.2.0.11
+
+#### GetElement call now only loads information about alarm template when necessary [ID 31903]
+
+​The GetElement call performed an additional SLNet call in the background to obtain more information about the alarm template assigned to the element, even when this was not necessary. This call will now only be done in case a get is performed on the element.AlarmTemplate property.
+
 ### 1.2.0.8
 
 #### Extended authentication algorithm support \[ID 30232\]

@@ -24,7 +24,8 @@
             "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageCreator.dll",
             "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageInstaller.dll",
             "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageInstaller.SRM.dll",
-			"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Protocol.Extension.dll"
+			      "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Protocol.Extension.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.DcpChatIntegrationHelper.dll"
           ],
           "exclude": [
             "**/obj/**",

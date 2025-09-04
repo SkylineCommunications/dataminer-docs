@@ -56,6 +56,8 @@ On the *Component > Layout* tab, you can configure the following settings under 
   > [!TIP]
   > For more information on how to use the Template Editor to customize the appearance of the markers, see [Using the Template Editor](xref:Template_Editor).
 
+- **On line click**: Available from DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10 onwards, for lines only. Allows you to [configure an event](xref:LowCodeApps_event_config) that will occur when a line is clicked.<!-- RN 43562 -->
+
 - **Style**: When the query is configured as a set of lines, you can use these settings to change the appearance of the lines. You can change the color, direction visualization, type, and width of the lines. From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43377-->, conditional coloring allows you to specify color filters for specific columns, so that lines can be highlighted based on a condition.
 
 - **Advanced settings**: Expand the advanced settings section to access the following settings:

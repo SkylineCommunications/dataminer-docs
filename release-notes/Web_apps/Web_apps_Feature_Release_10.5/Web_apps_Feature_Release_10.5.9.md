@@ -266,3 +266,9 @@ When, while editing a low-code app, you changed the visual of a component, the l
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
 
 If the latest .NET 8 hosting bundle was not installed first, it could occur that installing the GQI DxM failed because of missing dependency DLLs. To prevent this, the missing dependencies are now included in the GQI DxM installer.
+
+#### GQI DxM: Queries could get stuck when using an ad hoc data source with the 'Update data' option enabled [ID 43596]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+When an ad hoc data source with the *Update data* option enabled was queried, the query could get stuck when real-time updates occurred while a page of the query result set was requested.

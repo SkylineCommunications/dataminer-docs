@@ -40,6 +40,33 @@ These events will take place in the following cases:
 >- Currently, linking is not supported. When configuring a link to a component value, the value will always remain empty as the component will not be loaded yet when the event takes place.
 >- Current, passing URL data is not supported. A value passed through the URL will return as empty.
 
+#### Dashboards/Low-Code Apps - Maps component: Interacting with lines on a map [ID 43562]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+From now on, when you select a line on a map in a *Maps* component
+
+- data about that line will be made available in the *Selected lines* category,
+- its *Selected* state will automatically be set to true, and
+- its border color will change.
+
+Also, in low-code apps, *On line click* event can now be configured. Inside such an event, actions have access to the event data, including data regarding the line that was clicked.
+
+> [!NOTE]
+> When you reload a dashboard or switch pages, selected lines will not automatically be reselected. Also, lines cannot be selected using an URL argument.
+
+#### Dashboards/Low-Code Apps - Web component: New option to disable sandboxing if the URL points to a file in the DMA's 'Webpages/public/' folder [ID 43584]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+From now on, if the URL of a *Web* component points to a file in the DMA's `Webpages/public/` folder (or one of its subfolders), you can disable sandboxing by doing the following:
+
+1. In edit mode, select the component, and open the *Settings* tab.
+1. In the *Security* section, disable the *Open in sandbox* option.
+
+> [!CAUTION]
+> Disabling the *Open in sandbox* option lowers browser security and should only be done when absolutely necessary.
+
 ## Changes
 
 ### Enhancements
@@ -50,11 +77,33 @@ These events will take place in the following cases:
 
 When a shape linked to an element, service, or view was clicked in Visual Overview in the Monitoring app, it opened the Data page for the object instead of the Visual page. Now it will open the Visual page, so that the Monitoring app now has the same behavior as Cube.
 
+#### GQI DxM: A more descriptive error will now be thrown after GQI has tried to retrieve a non-existing query node argument [ID 43476]
+
+<!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, after GQI had tried to retrieve a non-existing query node argument, the following internal exception would be thrown:
+
+`Error trapped: Sequence contains no matching element.`
+
+From now on, after GQI has tries to retrieve a non-existing query node argument, the following, more descriptive error will be thrown instead:
+
+`GQI error: Missing argument value for 'Value'.`
+
 #### GQI DxM: Improved performance when handling extensions [ID 43479]
 
 <!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
 
 An enhancement has been implemented to the way the GQI DxM deals with extensions. This will improve performance and also prevent possible performance issues in case a large number of active GQI extension libraries are used, for example when many extension libraries are activated by the Copilot DxM.
+
+#### GQI DxM: A more descriptive error will now be thrown when a column required by a custom operator no longer exist [ID 43491]
+
+<!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When a column required by a custom operator did no longer exist when a query was executed, up to now, a number of generic errors would be thrown.
+
+From now on, when a column required by a custom operator no longer exist when a query is executed, the following, more descriptive error will be thrown instead:
+
+`Column 'column name' does not exist.`
 
 #### Low-Code Apps: 'Settings' option in '...' menu renamed to 'Permissions' [ID 43536]
 
@@ -64,6 +113,12 @@ Up to now, when you opened the "..." menu in the upper-right corner of a low-cod
 
 As this window allows you to set the user permissions of the app in question, the menu option has now been renamed from *Settings* to *Permissions*.
 
+#### GQI DxM will now shut down its Web API connection faster when it loses its connection to SLNet [ID 43537]
+
+<!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When the GQI DxM loses its connection to SLNet, it will now shut down its connection to the web API while it is shutting down all sessions and workers.
+
 #### Dashboards app: A notice will now appear when a PDF report is being generated in a browser tab [ID 43548]
 
 <!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
@@ -71,6 +126,12 @@ As this window allows you to set the user permissions of the app in question, th
 When a PDF report is being generated in a particular browser tab, from now on, the following notice will appear:
 
 `Please keep this tab active to ensure the PDF is generated correctly.`
+
+#### Dashboards/Low-Code Apps: Maps component will now display all authentication errors of the Google Maps API [ID 43601]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+From now on, a *Maps* component will display all authentication errors of the Google Maps API.
 
 ### Fixes
 
@@ -103,6 +164,14 @@ When different components in a dashboard or low-code-app used the same query, on
 
 In some cases, it could occur that a line chart in a PDF received unexpected data points from the server, which caused the chart to never be marked as finished. When a PDF was generated of such a chart, the PDF creation process never completed, never resulting in a finished PDF.
 
+#### Dashboards/Low-Code Apps - Table component: Problem when rows were deleted in a real-time update [ID 43478]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When a *Table* component with the *Update data* option enabled received an update that deleted a number of rows, up to now, the keys of the rows that were selected at the time of the update would incorrectly not be cleaned up.
+
+As a result, any row that was selected at the time of the update would incorrectly still be selected, and when that selection was re-applied, the row would again be selected.
+
 #### Dashboards app: Dashboard components rendered twice when generating PDF [ID 43490]
 
 <!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
@@ -114,3 +183,13 @@ When a PDF was generated based on a dashboard, it could occur that some componen
 <!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
 
 When you opened the DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`) in Mozilla Firefox, up to now, certain letters in the DMS name would be cut off, especially letters with descenders like g, j, q, p, or y.
+
+#### Dashboards/Low-Code Apps - Maps component: Settings of unused queries would incorrectly be removed [ID 43585]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, settings of existing queries that no longer fed data to a *Maps* component would incorrectly be removed.
+
+From now on, when a query no longer feeds any data to a *Maps* component, it will no longer be automatically removed. Instead, it will be marked as "old query".
+
+Users will be allowed to remove queries marked as "old queries", but they will not be allowed to change any of their settings.

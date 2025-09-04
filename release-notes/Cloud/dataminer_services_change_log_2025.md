@@ -9,9 +9,37 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 1 September 2025 - Enhancement - Remote Access - Support remote access to the Assistant web app
+
+From now on, the Assistant web app can be accessed remotely.
+
+### 29 August 2025 - Enhancement - dataminer.services - Status routes now use the shared header bar
+
+In any dataminer.services application, accessing status routes such as /404, /error, or /success will now display the appropriate status page along with the shared header bar.
+
+### 29 August 2025 - Fix - Catalog - Legacy URL support for connectors has been discontinued
+
+In the Catalog app, legacy connector URLs such as catalog.dataminer.services/result/driver/{:id} are no longer supported. Accessing these endpoints will now redirect users to a 404 error page.
+
+### 26 August 2025 - Enhancement - Remote Access - Support for video thumbnails when remotely accessing Cube
+
+From now on, video thumbnails will be displayed when DataMiner Cube is accessed remotely.
+
 ### 18 August 2025 - Enhancement - Admin - Unmanaged objects usage visibility and export possibility
 
-In the Admin app, the usage for unmanaged objects will now be displayed if you are using at least DataMiner 10.5.5/10.6.0 and DataMiner SupportAssistant 1.7.3. The data will also be available for export.
+In the Admin app, the usage for unmanaged objects will now be displayed if you are using at least DataMiner 10.5.9/10.6.0 and DataMiner SupportAssistant 1.7.3. The data will also be available for export.
+
+### 07 August 2025 - Enhancement - Version description now supports Markdown
+
+If you use Markdown in the description of item versions, this will now be parsed to HTML just like for the main item description. The same syntax supported in the item description is also supported in the version description.
+
+### 05 August 2025 - Enhancement - DaaS systems can now use the URL of soft-deleted systems
+
+It is now supported to create a DaaS system with a URL that is used by a system that is still in the soft-deleted state.
+
+### 05 August 2025 - New feature - Admin - DMS usage overview
+
+As an owner or administrator of a DMS, you can now see the usage of your system on the *Usage* page for the DMS in question in the Admin app.
 
 ### 16 July 2025 - Enhancement - Startup and upgrade progress displayed when remotely accessing Cube
 
@@ -111,7 +139,7 @@ On the details page of a Catalog item, users will now be able to see the market 
 
 Links that direct to the DxM page on the DMS overview page in the Admin app will now open the link in the current tab of the browser instead of opening a new tab.
 
-### 20 May 2025 - Enhancement - Unauthenticated views
+### 20 May 2025 - Enhancement - Unauthenticated views [ID 42921] [ID 42922]
 
 Applications on *.dataminer.services will now support an unauthenticated view and navigate to the root page of the application when the user session expires or the user signs out.
 
@@ -141,7 +169,7 @@ When experiencing issues with the shared single sign-on, applications will now f
 
 Signing in or out will now automatically sync to other applications without the need to refresh the page.
 
-### 05 May 2025 - Enhancement - Catalog - Deletion of items by publishing organization [ID 42793]
+### 05 May 2025 - Enhancement - Catalog - Deletion of items by publishing organization [ID 42792] [ID 42793]
 
 If you are a member of the organization that published a specific Catalog item, and you have the Owner or Admin role, you can now delete that Catalog item using a context menu at the top of the item's details page. When you do so, you will have to provide the reason for the deletion.
 
@@ -163,6 +191,10 @@ In addition, retrieving usage data to display in the Admin app resulted in a tim
 
 In some cases, it could occur that the wrong vendor name was shown.
 
+### 22 April 2025 - Fix - Catalog API - Original ID and image path reset after item update [ID 42687]
+
+When an item was updated via the manifest, the `ImagePath` and `OriginalId` property were reset. This will no longer occur.
+
 ### 22 April 2025 - Enhancement - Catalog - 'Back' button removed from details pages [ID 42734]
 
 As the "Back" button on the details page of a Catalog item had no real value, it has been removed.
@@ -170,6 +202,26 @@ As the "Back" button on the details page of a Catalog item had no real value, it
 ### 22 April 2025 - Enhancement - Catalog - Browse page optimization [ID 42673]
 
 Optimizations have been implemented on the Catalog browse page to prevent the page from becoming unresponsive when new items are loaded.
+
+### 1 April 2025 - Enhancement - Catalog - DMA now autoselected if user only has one [ID 42618]
+
+When a user deploys a version of an item, a single DMA will now be selected by default if there is only one DMA to select. Previously, a DMA always had to be selected manually, even when there was only one available.
+
+### 1 April 2025 - Enhancement - Catalog - Context menu for ranges and versions only shown for members of publishing organization [ID 42569]
+
+The context menu for a Catalog item range and version is now only shown if the publishing organization of the item is currently selected, ensuring that the users viewing the menu are a member of this organization. Previously, it was also shown for users who had insufficient rights to be able to update or configure anything.
+
+### 1 April 2025 - Enhancement - Catalog & Home - Show notifications bell for unauthenticated users [ID 42559]
+
+In the Catalog app and on the dataminer.services homepage, users can now see the notifications button even when they are not signed in.
+
+### 1 April 2025 - Fix - Admin, Catalog, Home & Sharing - User profile was visible after signing out [ID 42559]
+
+In some cases, it could occur that you could still see your user profile even after clicking *Sign out*. This issue affected the Admin app, Catalog app, Sharing app, and dataminer.services homepage.
+
+### 1 April 2025 - Fix - Catalog API - Users could update ranges and versions they did not have rights to [ID 42566]
+
+It could occur that users were able to update the range/version state or set/delete a custom tag for items that they did not publish, even though they should not have the rights to do so. Now a user who tries to do so will get a "Forbidden" error.
 
 ### 1 April 2025 - New feature - Catalog API - Ability to retrieve vendors [ID 42633]
 

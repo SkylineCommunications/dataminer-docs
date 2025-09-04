@@ -12,7 +12,7 @@ uid: Installing_Smart_Trap_Processor
 
 ## Deploying the Smart Trap Processor tool
 
-1. Look up the [*Smart Trap Processor* package](https://catalog.dataminer.services/details/package/5755) in the Catalog.
+1. Look up the [*Smart Trap Processor* package](https://catalog.dataminer.services/details/0c70b4b6-f687-459f-8cc9-bd1c9025dd50) in the Catalog.
 
 1. Click the *Deploy* button.
 
@@ -26,5 +26,5 @@ uid: Installing_Smart_Trap_Processor
 
 > [!NOTE]
 >
-> - To **update** the Smart Trap Processor tool, redeploy the [*Smart Trap Processor* package](https://catalog.dataminer.services/details/package/5755). The tool will be updated, but no new Trap Processor element will be created, as one should already exist in your DMS.
+> - To **update** the Smart Trap Processor tool, redeploy the [*Smart Trap Processor* package](https://catalog.dataminer.services/details/0c70b4b6-f687-459f-8cc9-bd1c9025dd50). The tool will be updated, but no new Trap Processor element will be created, as one should already exist in your DMS.
 > - When you install the tool, default alarm and trend templates are applied to enable alarm monitoring and trending on the *Event State* and *Heartbeat Status* parameters. You can customize these templates, for example if more complex alarm thresholds are required beyond the defaults. See [About the alarm template editor](xref:About_the_alarm_template_editor).

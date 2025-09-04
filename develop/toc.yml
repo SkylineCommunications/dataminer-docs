@@ -4355,6 +4355,135 @@ items:
           topicUid: DataMiner.Telnet-active
       - name: WarningThreshold
         topicUid: DataMiner.WarningThreshold
+  - name: SNMP Managers schema
+    topicUid: SchemaSNMPManagers
+    items:
+    - name: SNMP Managers
+      topicUid: SNMP
+      items:
+      - name: Configuration
+        topicUid: SNMP.Configuration
+        items:
+        - name: Agent
+          topicUid: SNMP.Configuration.Agent
+          items:
+          - name: '@id'
+            topicUid: SNMP.Configuration.Agent-id
+          - name: '@type'
+            topicUid: SNMP.Configuration.Agent-type
+          - name: '@value'
+            topicUid: SNMP.Configuration.Agent-value
+          - name: AuthoritativeEngineID
+            topicUid: SNMP.Configuration.Agent.AuthoritativeEngineID
+          - name: EngineBoots
+            topicUid: SNMP.Configuration.Agent.EngineBoots
+      - name: SnmpManagers
+        topicUid: SNMP.SnmpManagers
+        items:
+        - name: SnmpManager
+          topicUid: SNMP.SnmpManagers.SnmpManager
+          items:
+          - name: '@codepage'
+            topicUid: SNMP.SnmpManagers.SnmpManager-codepage
+          - name: '@delay'
+            topicUid: SNMP.SnmpManagers.SnmpManager-delay
+          - name: '@id'
+            topicUid: SNMP.SnmpManagers.SnmpManager-id
+          - name: '@sourceDMA'
+            topicUid: SNMP.SnmpManagers.SnmpManager-sourceDMA
+          - name: '@winSNMP'
+            topicUid: SNMP.SnmpManagers.SnmpManager-winSNMP
+          - name: AlarmStorm
+            topicUid: SNMP.SnmpManagers.SnmpManager.AlarmStorm
+            items:
+            - name: '@alarms'
+              topicUid: SNMP.SnmpManagers.SnmpManager.AlarmStorm-alarms
+            - name: '@rangeAfterStorm'
+              topicUid: SNMP.SnmpManagers.SnmpManager.AlarmStorm-rangeAfterStorm
+            - name: '@rangeStorm'
+              topicUid: SNMP.SnmpManagers.SnmpManager.AlarmStorm-rangeStorm
+            - name: '@type'
+              topicUid: SNMP.SnmpManagers.SnmpManager.AlarmStorm-type
+          - name: CommunityString
+            topicUid: SNMP.SnmpManagers.SnmpManager.CommunityString
+          - name: Description
+            topicUid: SNMP.SnmpManagers.SnmpManager.Description
+          - name: DeviceOid
+            topicUid: SNMP.SnmpManagers.SnmpManager.DeviceOid
+          - name: Filter
+            topicUid: SNMP.SnmpManagers.SnmpManager.Filter
+          - name: InformAckTracking
+            topicUid: SNMP.SnmpManagers.SnmpManager.InformAckTracking
+          - name: IP
+            topicUid: SNMP.SnmpManagers.SnmpManager.IP
+            items:
+            - name: '@port'
+              topicUid: SNMP.SnmpManagers.SnmpManager.IP-port
+          - name: Name
+            topicUid: SNMP.SnmpManagers.SnmpManager.Name
+          - name: ResendTime
+            topicUid: SNMP.SnmpManagers.SnmpManager.ResendTime
+            items:
+            - name: '@endTrap'
+              topicUid: SNMP.SnmpManagers.SnmpManager.ResendTime-endTrap
+            - name: '@oid'
+              topicUid: SNMP.SnmpManagers.SnmpManager.ResendTime-oid
+            - name: '@pingOID'
+              topicUid: SNMP.SnmpManagers.SnmpManager.ResendTime-pingOID
+            - name: '@startTrap'
+              topicUid: SNMP.SnmpManagers.SnmpManager.ResendTime-startTrap
+          - name: SendTraps
+            topicUid: SNMP.SnmpManagers.SnmpManager.SendTraps
+            items:
+            - name: '@chronological'
+              topicUid: SNMP.SnmpManagers.SnmpManager.SendTraps-chronological
+          - name: SNMPv3
+            topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3
+            items:
+            - name: '@authPass'
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3-authPass
+            - name: '@privPass'
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3-privPass
+            - name: '@securityName'
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3-securityName
+            - name: AuthenticationProtocol
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3.AuthenticationProtocol
+            - name: ContextEngineID
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3.ContextEngineID
+            - name: ContextName
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3.ContextName
+            - name: PrivacyProtocol
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3.PrivacyProtocol
+            - name: SecurityLevel
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3.SecurityLevel
+          - name: SnmpVersion
+            topicUid: SNMP.SnmpManagers.SnmpManager.SnmpVersion
+            items:
+            - name: '@retries'
+              topicUid: SNMP.SnmpManagers.SnmpManager.SnmpVersion-retries
+            - name: '@timeout'
+              topicUid: SNMP.SnmpManagers.SnmpManager.SnmpVersion-timeout
+          - name: TrapLayout
+            topicUid: SNMP.SnmpManagers.SnmpManager.TrapLayout
+            items:
+            - name: '@oid'
+              topicUid: SNMP.SnmpManagers.SnmpManager.TrapLayout-oid
+            - name: Bindings
+              topicUid: SNMP.SnmpManagers.SnmpManager.TrapLayout.Bindings
+              items:
+              - name: Binding
+                topicUid: SNMP.SnmpManagers.SnmpManager.TrapLayout.Bindings.Binding
+                items:
+                - name: '@oid'
+                  topicUid: SNMP.SnmpManagers.SnmpManager.TrapLayout.Bindings.Binding-oid
+                - name: '@pos'
+                  topicUid: SNMP.SnmpManagers.SnmpManager.TrapLayout.Bindings.Binding-pos
+                - name: '@value'
+                  topicUid: SNMP.SnmpManagers.SnmpManager.TrapLayout.Bindings.Binding-value
+    - name: SchemaTypes
+      items:
+      - name: NillablePositiveOrZeroInteger
+        topicUid: SNMP-NillablePositiveOrZeroInteger
   - name: NuGet stages schema
     topicUid: SchemaNuGetStagesConfig
     items:
@@ -6418,7 +6547,7 @@ items:
           topicUid: Notifications
         - name: Viewing test results
           topicUid: Viewing_test_results
-    - name: Definition of Done (DoD)
+    - name: Definition of Done (DoD) Platform
       topicUid: About_DoD
     - name: Third-party Tools
       topicUid: ThirdPartyTools

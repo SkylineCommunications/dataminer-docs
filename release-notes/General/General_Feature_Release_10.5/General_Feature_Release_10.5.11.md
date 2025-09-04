@@ -1,0 +1,80 @@
+---
+uid: General_Feature_Release_10.5.11
+---
+
+# General Feature Release 10.5.11 – Preview
+
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+
+> [!IMPORTANT]
+>
+> Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+>
+> The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+> - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+> - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
+> [!TIP]
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.5.11](xref:Cube_Feature_Release_10.5.11).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.5.11](xref:Web_apps_Feature_Release_10.5.11).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
+## Highlights
+
+*No highlights have been selected yet.*
+
+## New features
+
+*No new features have been added yet.*
+
+## Changes
+
+### Enhancements
+
+#### STaaS: Enhanced exception logging [ID 43626]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU7] - FR 10.5.11 -->
+
+A number of enhancements have been made with regard to the logging of exception messages on STaaS systems.
+
+#### DxMs upgraded [ID 43642] [ID 43644]
+
+<!-- RN 43642: MR 10.5.0 [CU8] - FR 10.5.11 -->
+<!-- RN 43644: MR 10.6.0 - FR 10.5.11 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner ArtifactDeployer 1.8.6
+- DataMiner CloudGateway 2.17.12
+- DataMiner CoreGateway 2.14.14
+- DataMiner SupportAssistant 1.7.7
+
+The CloudGateway DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, they will not be installed.
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
+### Fixes
+
+#### Protocols: Problems with pollingRate attribute [ID 43418]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+A number of issues have been fixed with regard to the `pollingRate` attribute, which allows you to slow down polling for specific SNMP columns in a table by specifying a minimum interval (in milliseconds) between polling.
+
+- Using `pollingRate` would not work when the element was using the production version of the protocol or when the `partialSNMP` option was specified in the table options.
+
+- Up to now, the decision to poll a column was taken by SLSNMPManager, which relied on the *Polling.xml* file that was stored alongside the *Protocol.xml* file. From now on, SLProtocol will determine which columns will be polled independently of the *Polling.xml* file.
+
+> [!NOTE]
+> The StreamViewer will now indicate more clearly which columns were polled. When some columns were polled while others were skipped, the message `[PollingRate polled column PIDs xxx,yyy]` will be shown. Also, when the timer was faster than the polling rate, the message `No column reached the PollingRate interval.` will be shown, and no Get operation will be executed.
+
+#### Problem when trying to update the log levels of an element that was not hosted on the local DataMiner Agent [ID 43582]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you tried to update the log levels of an element that was not hosted on the local DataMiner Agent, up to now, the update request would incorrectly be ignored and would not be forwarded to the DataMiner Agent hosting the element.
+
+From now on, the update request will correctly be forwarded to the DataMiner Agent hosting the element where it will be processed accordingly.

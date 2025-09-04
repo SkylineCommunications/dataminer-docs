@@ -38,11 +38,11 @@ See also: [Service & Resource Management: Support for capacity ranges [ID 43335]
 
 The notification shown in Cube when an alarm storm is triggered has been improved. Previously, it only mentioned the number of alarms with a specific description that had entered Cube. Now the notification will also mention the protocols of the alarms. The same also goes for the tooltip shown for an alarm storm. In addition, the alarm details card for the alarm storm alarm will now also include a list of the protocols of the alarms involved. Finally, the total count of the alarms mentioned in the notification and used to determine when to enter or leave an alarm storm has also been improved, taking up to 20 alarms from the existing alarm tree into account.
 
-#### Automation, Correlation & Scheduler apps: 'Send email' action now allows you to select a private dashboard [ID 43394] [ID 43570]
+#### Automation, Correlation & Scheduler apps: 'Send email' action now allows you to select a private dashboard [ID 43393] [ID 43394] [ID 43570]
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
-In a *Send email* action, it is now possible to select a private dashboard provided you have access to it, and provided that the DataMiner server uses at least DataMiner version 10.4.0 [CU19], 10.5.0 [CU7], or 10.5.10.
+In a *Send email* action, it is now possible to select a private dashboard provided you have access to it, and provided that the DataMiner server uses at least DataMiner version 10.5.10 or 10.6.0.
 
 If you try to edit a *Send email* action linked to a private dashboard you do not have access to, the following error message will appear. However, you will be allowed to replace it by a dashboard you do have access to.
 
@@ -103,3 +103,25 @@ When elements were migrated between DataMiner Agents via the Element Migration w
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 When, in System Center, you performed a DataMiner upgrade while Cube was connected to a DataMiner Agent that was part of a Failover system based on hostname, up to now, the upgrade could fail to start after the package had been uploaded.
+
+#### Trending: Changepoints would not be displayed when opening a trend graph [ID 43576]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+When you opened a trend graph, in some cases, the changepoints would incorrectly not be displayed.
+
+#### Closed API connection would incorrectly not be automatically re-established [ID 43586]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, when the API connection had been closed, no attempt would incorrectly be made to automatically re-establish the connection.
+
+For example, when, after DataMiner Cube had been idle for more than 5 minutes and the API connection had automatically closed, you opened the Automation tab, the API request to retrieve the list of dashboards would fail.
+
+From now on, when the API connection was closed, it will automatically be re-established when a new API request is sent.
+
+#### Trending: Trend graph displayed in visual overview could be partially covered by the anomalies bar [ID 43602]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+When a trend graph was displayed in a visual overview, in some cases, the graph would be partially covered by the anomalies bar.
