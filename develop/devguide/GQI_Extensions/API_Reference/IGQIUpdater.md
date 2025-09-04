@@ -19,10 +19,10 @@ It allows adding, removing, and updating rows, or updating individual cells.
 
 ### void AddRow(GQIRow)
 
-Adds a new row to the query result. If a row with the same row key already exists, that row will be updated instead. This method behaves as an *add-or-update* operation. 
+Adds a new row to the query result. If a row with the same row key already exists, that row will be updated instead. This method behaves as an *add-or-update* operation.
 
-> [!WARNING]
-> Prior to DataMiner main release 10.5.0-CU4 and feature release 10.5.7, if a row with the same row key already existed, calling the AddRow method would result in a duplicate row with the same row key to be added.
+> [!CAUTION]
+> Prior to DataMiner 10.5.0 [CU4]/10.5.7, if a row with the same row key already exists, calling the AddRow method will result in a duplicate row with the same row key being added.
 
 #### Parameters
 
