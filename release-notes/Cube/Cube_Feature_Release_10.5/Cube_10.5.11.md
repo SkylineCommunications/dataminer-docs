@@ -30,6 +30,14 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Fixes
 
+#### Problem when updating the log levels of an element that had been migrated or swarmed to another DMA [ID 43581]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+In some cases, DataMiner Cube would fail to update the log levels of an element log file, especially when the element in question had been migrated or swarmed from the DMA to which you were connected to another DMA in the DataMiner System.
+
+Also, in some cases, it would incorrectly not be possible to clear multiple element log files in one go.
+
 #### Trending: Alarm timeline would incorrectly be displayed on top of or beyond the Y axis when zooming in [ID 43593]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
