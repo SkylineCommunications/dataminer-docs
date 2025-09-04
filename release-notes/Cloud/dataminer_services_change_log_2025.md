@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 2 September 2025 - Enhancement - dataminer.services - Ask support button
+
+From now on, users can ask for support by clicking the **?** button next to the user icon.
+
 ### 1 September 2025 - Enhancement - Remote Access - Support remote access to the Assistant web app
 
 From now on, the Assistant web app can be accessed remotely.
