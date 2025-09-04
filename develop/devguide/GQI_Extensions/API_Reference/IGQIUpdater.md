@@ -22,7 +22,7 @@ It allows adding, removing, and updating rows, or updating individual cells.
 Adds a new row to the query result. If a row with the same row key already exists, that row will be updated instead. This method behaves as an *add-or-update* operation.
 
 > [!CAUTION]
-> Prior to DataMiner 10.5.0 [CU4]/10.5.7, if a row with the same row key already exists, calling the AddRow method will result in a duplicate row with the same row key being added.
+> Prior to DataMiner 10.5.0 [CU4]/10.5.7, if a row with the same row key already exists, calling the AddRow method will result in a duplicate row with the same row key being added.<!-- RN 42530 -->
 
 #### Parameters
 
