@@ -4,7 +4,7 @@ uid: Ad_hoc_Tutorials_Interact_With_DMS
 
 # Building a GQI data source that retrieves data from a DMS
 
-In this tutorial, you will learn how you can create a GQI data source that retrieves the version info of the agents your DMS.
+In this tutorial, you will learn how you can create a GQI data source that retrieves the version info of the Agents in your DMS.
 
 Expected duration: 15 minutes.
 
@@ -19,9 +19,9 @@ Expected duration: 15 minutes.
 ## Overview
 
 - [Step 1: Create the ad hoc data source](#step-1-create-the-ad-hoc-data-source)
-- [Step 2: Fetch the agents in the DMS](#step-2-fetch-the-agents-in-the-dms)
-- [Step 3: Transform DMS responses into a GQIPage](#step-3-transform-dms-response-into-a-gqipage)
-- [Step 4: Configure the script to compile as library](#step-4-configure-the-script-to-compile-as-library)
+- [Step 2: Fetch the Agents in the DMS](#step-2-fetch-the-agents-in-the-dms)
+- [Step 3: Transform the DMS responses into a GQIPage](#step-3-transform-the-dms-response-into-a-gqipage)
+- [Step 4: Configure the script to compile as a library](#step-4-configure-the-script-to-compile-as-a-library)
 
 ## Step 1: Create the ad hoc data source
 
@@ -32,7 +32,7 @@ Expected duration: 15 minutes.
 
 1. Implement the `GetColumns` method to define the columns of the data source.
 
-   The data source will include two columns: a *Agent ID* column of type `Int` and a *Version* column of type `String`.
+   The data source will include two columns: an *Agent ID* column of type `Int` and a *Version* column of type `String`.
 
 1. Implement the `GetNextPage` method to provide the actual data.
 
@@ -62,15 +62,15 @@ public class AgentVersions : IGQIDataSource
 > [!NOTE]
 > Above the class, a *GQIMetaData* attribute was added to configure the name of the data source as displayed in the Dashboards app or Low-Code Apps.
 
-## Step 2: Fetch the agents in the DMS
+## Step 2: Fetch the Agents in the DMS
 
-To retrieve the agent information, the data source will have to communicate with the DMS. It is available by using the [OnInitInputArgs](xref:GQI_OnInitInputArgs) argument of the `OnInit` method, by implementing the [IGQIOnInit](xref:GQI_IGQIOnInit) interface.
+To retrieve the Agent information, the data source will have to communicate with the DMS. The information can be retrieved using the [OnInitInputArgs](xref:GQI_OnInitInputArgs) argument of the `OnInit` method, by implementing the [IGQIOnInit](xref:GQI_IGQIOnInit) interface. Depending on the DataMiner version used, a different approach will be needed.
 
-#### [From DataMiner 10.5.0 [CU1]/10.5.4 + GQI DxM onwards](#tab/step-2-class-library)
+### [With DataMiner 10.5.0 [CU1]/10.5.4 or higher with GQI DxM](#tab/step-2-class-library)
 
-1. Go to *Tools* > *NuGet Package Manager* > *Manage NuGet Packages for Solution*. 
+1. Go to *Tools* > *NuGet Package Manager* > *Manage NuGet Packages for Solution*.
 
-   Select *Browse* and search for `Skyline.DataMiner.Core.DataMinerSystem.Common`, and install the latest version of the class library.
+1. Select *Browse* and search for `Skyline.DataMiner.Core.DataMinerSystem.Common`, and install the latest version of the class library.
 
 1. Add the [IGQIOnInit](xref:GQI_IGQIOnInit) interface to the class.
 
@@ -94,7 +94,7 @@ To retrieve the agent information, the data source will have to communicate with
 
 1. Use the [IDms](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IDms) object to retrieve information from the DMS.
 
-   Retrieve the agents by calling the [GetAgents](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IDms.GetAgents) method. The response will be a collection of [IDma](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IDma) objects.
+   Retrieve the Agents by calling the [GetAgents](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IDms.GetAgents) method. The response will be a collection of [IDma](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IDma) objects.
 
    ```csharp
    public GQIPage GetNextPage(GetNextPageInputArgs args)
@@ -104,7 +104,7 @@ To retrieve the agent information, the data source will have to communicate with
    }
    ```
 
-#### [Prior to DataMiner 10.5.0 [CU1]/10.5.4](#tab/step-2-gqidms)
+### [With older DataMiner versions](#tab/step-2-gqidms)
 
 1. Add the [IGQIOnInit](xref:GQI_IGQIOnInit) interface to the class.
 
@@ -149,11 +149,11 @@ To retrieve the agent information, the data source will have to communicate with
 
 ***
 
-## Step 3: Transform DMS response into a GQIPage
+## Step 3: Transform the DMS response into a GQIPage
 
-Transform the response into a [GQIPage](xref:GQI_GQIPage). Each agent in the cluser and will be converted into a row.
+Transform the response into a [GQIPage](xref:GQI_GQIPage). Each Agent in the cluster will be converted into a row. Again, a different approach will be needed depending on the DataMiner version used.
 
-#### [From DataMiner 10.5.0 [CU1]/10.5.4 + GQI DxM onwards](#tab/step-3-class-library)
+### [With DataMiner 10.5.0 [CU1]/10.5.4 or higher with GQI DxM](#tab/step-3-class-library)
 
 ```csharp
 public GQIPage GetNextPage(GetNextPageInputArgs args)
@@ -173,36 +173,36 @@ public GQIPage GetNextPage(GetNextPageInputArgs args)
 }
 ```
 
-#### [Prior to DataMiner 10.5.0 [CU1]/10.5.4](#tab/step-3-gqidms)
+### [With older DataMiner versions](#tab/step-3-gqidms)
 
 ```csharp
 public GQIPage GetNextPage(GetNextPageInputArgs args)
 {
-	// Retrieve the agents in the system.
-	var agentsInfoRequest = new GetInfoMessage(InfoType.DataMinerInfo);
-	var agentsInfo = _dms.SendMessages(agentsInfoRequest).OfType<GetDataMinerInfoResponseMessage>();
+    // Retrieve the agents in the system.
+    var agentsInfoRequest = new GetInfoMessage(InfoType.DataMinerInfo);
+    var agentsInfo = _dms.SendMessages(agentsInfoRequest).OfType<GetDataMinerInfoResponseMessage>();
 
-	// Retrieve the build information for each agent.
-	var agentsBuildInfoRequests = agentsInfo.Select(agentInfo => new GetAgentBuildInfo(agentInfo.ID));
-	var agentsBuildInfo = _dms.SendMessages(agentsBuildInfoRequests.ToArray()).OfType<BuildInfoResponse>();
+    // Retrieve the build information for each agent.
+    var agentsBuildInfoRequests = agentsInfo.Select(agentInfo => new GetAgentBuildInfo(agentInfo.ID));
+    var agentsBuildInfo = _dms.SendMessages(agentsBuildInfoRequests.ToArray()).OfType<BuildInfoResponse>();
 
-	var rows = new List<GQIRow>();
-	foreach(var buildInfo in agentsBuildInfo)
-	{
-		rows.Add(new GQIRow(buildInfo.Agents[0].DataMinerID.ToString(), new GQICell[]
-		{
-			new GQICell { Value = buildInfo.Agents[0].DataMinerID },
-			new GQICell { Value = buildInfo.Agents[0].RawVersion },
-		}));
-	}
+    var rows = new List<GQIRow>();
+    foreach(var buildInfo in agentsBuildInfo)
+    {
+        rows.Add(new GQIRow(buildInfo.Agents[0].DataMinerID.ToString(), new GQICell[]
+        {
+            new GQICell { Value = buildInfo.Agents[0].DataMinerID },
+            new GQICell { Value = buildInfo.Agents[0].RawVersion },
+        }));
+    }
 
-	return new GQIPage(rows.ToArray());
+    return new GQIPage(rows.ToArray());
 }
 ```
 
 ***
 
-## Step 4: Configure the script to compile as library
+## Step 4: Configure the script to compile as a library
 
 In order for GQI to work, the script must be configured to compile as a library.
 
