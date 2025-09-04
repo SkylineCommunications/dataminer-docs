@@ -26,6 +26,9 @@ sectionDefinition = domHelper.SectionDefinitions.Create(sectionDefinition) as Cu
 
 ![DOM object relations](~/dataminer/images/DOM_Object_Relations_Simplified_SectionDefinition.jpg)
 
+> [!NOTE]
+> From 10.5.10/10.6.0 onwards, creating, updating, or deleting `SectionDefinitions` requires the [*Module settings* permission flag](xref:DOM_security#module-settings-permission-flag).
+
 ## FieldDescriptor
 
 A `FieldDescriptor` object defines what a field of a `DomInstance` should look like. To define the type of the field, you need to set the *FieldType* property. The following types are supported:
@@ -160,5 +163,5 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 |--|--|
 | FieldTypeNotSupported | A type was defined on a `FieldDescriptor` that is not supported by that descriptor.<br>Available properties: *NotSupportedType*, *SupportedTypes*. |
 | SectionDefinitionInUseByDomInstances | The `SectionDefinition` could not be updated because it is being used by at least one `DomInstance`.<br>Available properties: *SectionDefinition*, *OriginalSectionDefinition*, *DomInstanceIds* (limited to the first 100 instances<!-- RN 41572 -->). |
-| SectionDefinitionInUseByDomDefinitions | The `SectionDefinition` could not be deleted because it is being used by at least one `DomDefinition`. Set the *FieldDecriptor.IsSoftDeleted* boolean for the `FieldDescriptor` you want to delete instead.<br>Available properties: *SectionDefinition*, *DomDefinitionIds*. |
+| SectionDefinitionInUseByDomDefinitions | The `SectionDefinition` could not be deleted because it is being used by at least one `DomDefinition`. Set the *FieldDescriptor.IsSoftDeleted* boolean for the `FieldDescriptor` you want to delete instead.<br>Available properties: *SectionDefinition*, *DomDefinitionIds*. |
 | GenericEnumEntryInUseByDomInstances | The `GenericEnumEntry` could not be deleted or updated because it is being used by at least one `DomInstance`.<br>Available properties: *GenericEnumEntry*, *DomInstanceIds* (limited to the first 100 instances<!-- RN 41572 -->). |

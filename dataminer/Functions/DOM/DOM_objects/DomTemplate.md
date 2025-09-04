@@ -6,6 +6,9 @@ uid: DomTemplate
 
 A `DomTemplate` object stores a `DomInstance` with some pre-defined data, so that it can be used as a template. This makes creating very similar `DomInstances` much easier.
 
+> [!NOTE]
+> From 10.5.10/10.6.0 onwards, creating, updating, or deleting `DomTemplates` requires the ['Module settings' permission flag](xref:DOM_security#module-settings-permission-flag).
+
 ## Properties
 
 The table below lists the properties of the `DomTemplate` object. It also indicates whether a property can be used for filtering using the `DomTemplateExposers`.
