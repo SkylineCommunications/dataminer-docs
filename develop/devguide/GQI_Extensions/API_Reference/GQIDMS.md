@@ -17,7 +17,7 @@ Available from DataMiner 10.3.4/10.4.0 onwards.<!-- RN 35701 -->
 > See also:
 >
 > - [Example of retrieving data by means of DMS messages](#example-of-retrieving-data-by-means-of-dms-messages)
-> - [Building a GQI data source that retrieves data from a DMS](xref:Ad_hoc_Tutorials_GQIDMS)
+> - [Building a GQI data source that retrieves data from a DMS](xref:Ad_hoc_Tutorials_Interact_With_DMS)
 
 ## Methods
 
