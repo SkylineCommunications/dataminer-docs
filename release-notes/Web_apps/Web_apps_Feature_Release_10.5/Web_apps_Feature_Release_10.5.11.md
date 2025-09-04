@@ -54,4 +54,8 @@ In the configuration settings of a *Maps* component, up to now, settings for mar
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Web apps: Default time zone specified in ClientSettings.json file would incorrectly be disregarded when clicking 'Now' in the redesigned datetime picker component [ID 43632]
+
+<!-- 10.4.0 [CU20] / MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you clicked the *Now* button in the redesigned datetime picker component, the component would incorrect not take into account the default time zone that was specified in the *ClientSettings.json* file.
