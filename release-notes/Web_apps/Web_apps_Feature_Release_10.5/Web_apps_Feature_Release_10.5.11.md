@@ -100,6 +100,17 @@ Up to now, the *Clear selection* component action could only be configured for t
 
 ### Fixes
 
+#### Users with the 'User must change password at next login' setting enabled would incorrectly not be able to log on to the web apps [ID 43590]
+
+<!-- 10.6.0 - FR 10.5.11 -->
+
+When, in DataMiner Cube, users had the *User must change password at next login* setting enabled, up to now, they would incorrectly not be able to log on to the web apps as they were not able to change their password when logging on.
+
+From now on, when the password of a user has expired in DataMiner, the web method `ConnectAppAndInfo` will return a message of type "PasswordExpired".
+
+> [!NOTE]
+> This will not work with user passwords that expired in Microsoft Windows as DataMiner is not able to authenticate such users.
+
 #### Web apps: Default time zone specified in ClientSettings.json file would incorrectly be disregarded when clicking 'Now' in the redesigned datetime picker component [ID 43632]
 
 <!-- 10.4.0 [CU20] / MR 10.5.0 [CU8] - FR 10.5.11 -->
