@@ -996,7 +996,7 @@ items:
               - name: Building a GQI data source that fetches satellites
                 topicUid: Ad_hoc_Tutorials_Satellites
               - name: Building a GQI data source that retrieves data from a DMS
-                topicUid: Ad_hoc_Tutorials_GQIDMS
+                topicUid: Ad_hoc_Tutorials_Interact_With_DMS
       - name: Custom operators
         topicUid: GQI_Custom_Operator
         items:
