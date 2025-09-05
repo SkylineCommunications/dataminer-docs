@@ -7,7 +7,7 @@ uid: DomDefinition
 The `DomDefinition` object groups `DomInstance` objects together (as each instance has a link to a definition). It also defines which `SectionDefinitions` can or must be used by the linked `DomInstances`.
 
 > [!NOTE]
-> From 10.5.10/10.6.0 onwards, creating, updating, or deleting `DomDefinitions` requires the ['Module settings' permission flag](xref:DOM_security#module-settings-permission-flag).
+> From 10.5.10/10.6.0 onwards, creating, updating, or deleting `DomDefinitions` requires the [*Module settings* permission](xref:DOM_security#module-settings-user-permission).
 
 ## Properties
 

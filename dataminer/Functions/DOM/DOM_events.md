@@ -22,7 +22,7 @@ These types of events contain lists with the created, updated, and deleted objec
 > These event messages are available from DataMiner 10.1.3/10.2.0 onwards.
 
 > [!NOTE]
-> When [link security](xref:DOM_SecuritySettings#linksecuritysettings) is enabled for a module, CRUD events for DomInstances only include the objects the subscribed user is allowed to access. If an event would contain only objects without access, it is dropped. See the [link security](xref:DOM_SecuritySettings#events) page for more info.
+> When [link security](xref:DOM_SecuritySettings#linksecuritysettings) is enabled for a module, CRUD events for DomInstances only include the objects the subscribed user is allowed to access. If an event contains only objects without access, it is dropped. For more info, see [LinkSecuritySettings](xref:DOM_SecuritySettings#events).
 
 ### Filtering CRUD events
 

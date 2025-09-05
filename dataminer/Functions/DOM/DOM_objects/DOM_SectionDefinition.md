@@ -27,7 +27,7 @@ sectionDefinition = domHelper.SectionDefinitions.Create(sectionDefinition) as Cu
 ![DOM object relations](~/dataminer/images/DOM_Object_Relations_Simplified_SectionDefinition.jpg)
 
 > [!NOTE]
-> From 10.5.10/10.6.0 onwards, creating, updating, or deleting `SectionDefinitions` requires the [*Module settings* permission flag](xref:DOM_security#module-settings-permission-flag).
+> From 10.5.10/10.6.0 onwards, creating, updating, or deleting `SectionDefinitions` requires the [*Module settings* permission](xref:DOM_security#module-settings-user-permission).
 
 ## FieldDescriptor
 

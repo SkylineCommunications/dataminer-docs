@@ -60,13 +60,13 @@ The errors below are solely related to the status system. For each error, the *D
 | DomInstanceContainsUnknownFieldsForCurrentStatus | There is at least one `FieldValue` defined on the `DomInstance` for which no link could be found in the associated `DomBehaviorDefinition` for the current status. *AssociatedFields* contains the `SectionDefinitionID` and `FieldDescriptorID` combos of the unknown fields. |
 | StatusChangeNotAllowedForNormalUpdate | The status of the `DomInstance` was changed during a normal update request. It can only be updated by using the specific transition request. |
 
-The errors below are related to the [Link Security](xref:DOM_SecuritySettings#linksecuritysettings) feature. These can be returned when the link security feature is enabled and CRUD requests are sent for `DomInstances` or DOM history.
+The errors below are related to the [link security](xref:DOM_SecuritySettings#linksecuritysettings) feature. These can be returned when the link security feature is enabled and CRUD requests are sent for `DomInstances` or DOM history.
 
 | Error reason | Description |
 |--|--|
-| ReadFilterNotSupportedBySecurity | A read filter lacked the proper context to apply security. When filtering on `DomInstances`, add one or more `DomDefinitionId == X` clauses or only filter on specific instance IDs. When filtering on DOM history, add one or more `SubjectID == X` clauses. The *Message* property may contain extra info. |
-| CountFilterNotSupportedBySecurity | A count filter lacked the proper context to apply security. When filtering on `DomInstances`, add one or more `DomDefinitionId == X` clauses. When filtering on DOM history, add one or more `SubjectID == X` clauses. The *Message* property may contain extra info. |
-| NoPermission | The user does not have permission to perform the operation. When reading `DomInstances`, the user may not have access on at least one referenced DOM definition. *DomDefinitionIds* contains the inaccessible definition IDs. When reading DOM history, the user may not have access on at least on `DomInstance` where the history was requested for, or the instance does not exist. *DomInstanceIds* contains the inaccessible instance IDs. |
+| ReadFilterNotSupportedBySecurity | A read filter lacks the proper context to apply security. When filtering on `DomInstances`, add one or more `DomDefinitionId == X` clauses or only filter on specific instance IDs. When filtering on DOM history, add one or more `SubjectID == X` clauses. The *Message* property may contain extra info. |
+| CountFilterNotSupportedBySecurity | A count filter lacks the proper context to apply security. When filtering on `DomInstances`, add one or more `DomDefinitionId == X` clauses. When filtering on DOM history, add one or more `SubjectID == X` clauses. The *Message* property may contain extra info. |
+| NoPermission | The user does not have permission to perform the operation. When reading `DomInstances`, the user may not have access to at least one referenced DOM definition. *DomDefinitionIds* contains the inaccessible definition IDs. When reading DOM history, the user may not have access to at least one `DomInstance` for which the history was requested, or the instance does not exist. *DomInstanceIds* contains the inaccessible instance IDs. |
 
 ## Notes
 
