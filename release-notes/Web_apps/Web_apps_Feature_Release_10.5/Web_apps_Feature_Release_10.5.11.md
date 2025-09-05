@@ -31,6 +31,26 @@ In the Dashboards app as well as in the Automation, Correlation and Scheduler mo
 > - The Web DxM only works in conjunction with DataMiner Agents running DataMiner 10.5.0 or later.
 > - The legacy Reporter will continue to use SLHelper to generate the PDF reports.
 
+#### DataMiner landing page: Help menu added [ID 43583]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+The DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`) now has a help menu with the following items:
+
+- Community
+
+  - [Blog](https://aka.dataminer.services/blog)
+  - [Suggest feature](https://aka.dataminer.services/feature-suggestions)
+  - [Questions](https://aka.dataminer.services/questions)
+
+- [Documentation](https://aka.dataminer.services/DocsDataMinerServices)
+- [Status](https://aka.dataminer.services/status)
+- [Feedback](https://aka.dataminer.services/feedback-other)
+- [Support](https://aka.dataminer.services/contacting-tech-support)
+
+> [!NOTE]
+> The [Status](https://aka.dataminer.services/status) link will only resolve if the DataMiner Agent is connected to dataminer.services.
+
 ## Changes
 
 ### Enhancements
