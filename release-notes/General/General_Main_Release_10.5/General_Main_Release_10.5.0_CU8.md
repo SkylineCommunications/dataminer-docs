@@ -15,6 +15,12 @@ uid: General_Main_Release_10.5.0_CU8
 
 ### Enhancements
 
+#### STaaS: Enhanced exception logging [ID 43626]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+A number of enhancements have been made with regard to the logging of exception messages on STaaS systems.
+
 #### DxMs upgraded [ID 43642]
 
 <!-- RN 43642: MR 10.5.0 [CU8] - FR 10.5.11 -->
