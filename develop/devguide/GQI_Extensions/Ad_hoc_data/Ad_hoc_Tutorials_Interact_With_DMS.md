@@ -8,9 +8,6 @@ In this tutorial, you will learn how you can create a GQI data source that retri
 
 Expected duration: 15 minutes.
 
-> [!TIP]
-> See also: [Kata #35: Interact with your DMS using an ad hoc data source](https://community.dataminer.services/courses/kata-35/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
-
 ## Prerequisites
 
 - [Visual Studio](https://visualstudio.microsoft.com/downloads/) with [DataMiner Integration Studio](xref:Installing_and_configuring_DataMiner_Integration_Studio)
