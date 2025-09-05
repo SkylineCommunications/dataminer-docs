@@ -23,8 +23,4 @@ A number of enhancements have been made with regard to the logging of exception 
 
 ### Fixes
 
-#### Visual Overview in web apps: Problem when reading the load balancing configuration [ID 43660]
-
-<!-- MR 10.4.0 [CU20]/10.5.0 [CU8] - FR 10.5.11 -->
-
-In some cases, it would not be possible to read the load balancing configuration for visual overviews in web apps. As a result, the visual overview module would not be able to start up when load balancing was enabled.
+*No fixes have been added yet.*

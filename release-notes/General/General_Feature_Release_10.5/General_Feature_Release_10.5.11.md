@@ -86,9 +86,3 @@ However, since DataMiner versions 10.4.0 [CU12]/10.5.3, this would no longer wor
 When you tried to update the log levels of an element that was not hosted on the local DataMiner Agent, up to now, the update request would incorrectly be ignored and would not be forwarded to the DataMiner Agent hosting the element.
 
 From now on, the update request will correctly be forwarded to the DataMiner Agent hosting the element where it will be processed accordingly.
-
-#### Visual Overview in web apps: Problem when reading the load balancing configuration [ID 43660]
-
-<!-- MR 10.4.0 [CU20]/10.5.0 [CU8] - FR 10.5.11 -->
-
-In some cases, it would not be possible to read the load balancing configuration for visual overviews in web apps. As a result, the visual overview module would not be able to start up when load balancing was enabled.
