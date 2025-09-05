@@ -100,7 +100,7 @@ In addition, the following **other limitations** currently apply:
 
 - The [SLReset tool](xref:Factory_reset_tool) is not supported.
 
-- [Exporting trend data](xref:Exporting_elements_services_etc_to_a_dmimport_file) to a .dmimport file is not supported.
+- [Exporting trend data](xref:Exporting_elements_services_etc_to_a_dmimport_file) to a .dmimport file (also known as a "DELT export") is not supported.
 
 - DMZ setups are currently not supported.
 
