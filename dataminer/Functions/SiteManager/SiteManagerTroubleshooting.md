@@ -10,8 +10,8 @@ uid: SiteManagerTroubleshooting
 
 This means that the tunnel could not be set up. This could be because of several reasons:
 
-- The provided IP address or host does not match that of an exposed data source on the specified site
-- When exposing the data source, only one of two required zrok commands were executed. Make sure to execute both zrok commands as explained in [On-premises setup](xref:SiteManagerGettingStarted#on-premises-setup)
+- The provided IP address or host does not match that of an exposed data source on the specified site as specified when executing the zrok reserve command
+- When exposing the data source, only one of the two required zrok commands were executed. Make sure to execute both zrok commands as explained in [On-premises setup](xref:SiteManagerGettingStarted#on-premises-setup)
 - The Site Manager DxM is not running
 - The zrok Agent service is not running
 - The zrok controller is not running
@@ -35,6 +35,7 @@ If you are in a Powershell shell, execute the following command: `$env:USERPROFI
 The Site Manager log file logs all tunnel creation and teardown activity.
 If an element is in error state, the log file can provide more information about the root cause.
 To open the Site Manager log file in Cube, navigate to *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*.
+
 This log file is also included in a Log Collector package.
 
 #### SLDataMiner log file

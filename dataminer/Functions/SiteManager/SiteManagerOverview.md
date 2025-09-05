@@ -6,9 +6,7 @@ uid: SiteManagerOverview
 
 ## Prerequisites
 
-The Site Manager DxM extension module requires DataMiner 10.5.10.
-
-The Site Manager DxM is shipped with the DaaS image of DataMiner 10.5.10. In case you are running an older DaaS version, an upgrade is required and the Site Manager DxM will need to be installed. For more information on how to upgrade DataMiner and install a DxM, refer to [Upgrading a DataMiner Agent](xef:Upgrading_a_DataMiner_Agent).
+The Site Manager DxM extension module requires DataMiner 10.5.10. The Site Manager DxM is shipped with the DaaS image of DataMiner 10.5.10. In case you are running an older DaaS version, an upgrade is required and the Site Manager DxM will need to be installed. For more information on how to upgrade DataMiner and install a DxM, refer to [Upgrading a DataMiner Agent](xef:Upgrading_a_DataMiner_Agent).
 
 ## Supported connection types and limitations
 
@@ -29,5 +27,8 @@ Limitations:
 ## Architecture
 
 The Site Manager DxM makes use of [zrok](https://zrok.io/), a secure, open-source platform that allows privately sharing data source. zrok is built on top of [OpenZiti](https://openziti.io/), an open source zero-trust networking platform by [NetFoundry](https://netfoundry.io/).
+
+In the image below, two data sources, A and B, have been exposed and are polled by a DaaS system.
+Note that each data source has its own dedicated tunnel. Data source C is not exposed and is therefore not visible externally.
 
 ![Overview](~/dataminer/images/SiteManagerOverview.png)<br>*Tunneling overview*
