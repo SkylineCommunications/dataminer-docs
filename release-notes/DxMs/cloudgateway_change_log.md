@@ -4,6 +4,10 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 08 September 2025 - Enhancement - CloudGateway 2.17.13 - Dependencies updated
+
+Several dependencies have been updated.
+
 #### 27 August 2025 - Enhancement - CloudGateway 2.17.12 - General improvements
 
 General improvements have been made to the way CloudGateway handles tasks, making the DxM more robust and also improving its shutdown procedure.
