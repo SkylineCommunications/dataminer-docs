@@ -488,14 +488,6 @@ At startup, up to now, the ModelHost DxM would stop working when it failed to re
 
 In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.
 
-#### Problem when trying to send an SNMP Set command to have all active alarms resent [ID 43442]
-
-<!-- MR 10.6.0 - FR 10.5.11 -->
-
-You can have all active alarms resent by sending an SNMP Set command to the DMA (with the DataMiner IP address as target address) with OID 1.3.6.1.4.1.8813.1.1.1.1.4 and value set to the name of the SNMP manager.
-
-However, since DataMiner versions 10.4.0 [CU12]/10.5.3, this would no longer work when the SNMP manager in question had the *Resend all active alarms every ...* option disabled.
-
 #### Slow handling of concurrent requests to retrieve or update bookings [ID 43450]
 
 <!-- MR 10.6.0 - FR 10.5.10 -->

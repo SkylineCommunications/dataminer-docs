@@ -73,7 +73,7 @@ A number of issues have been fixed with regard to the `pollingRate` attribute, w
 
 #### Problem when trying to send an SNMP Set command to have all active alarms resent [ID 43442]
 
-<!-- MR 10.6.0 - FR 10.5.11 -->
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
 
 You can have all active alarms resent by sending an SNMP Set command to the DMA (with the DataMiner IP address as target address) with OID 1.3.6.1.4.1.8813.1.1.1.1.4 and value set to the name of the SNMP manager.
 
