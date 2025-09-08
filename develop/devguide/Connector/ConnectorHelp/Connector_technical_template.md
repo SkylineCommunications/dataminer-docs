@@ -106,7 +106,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-[In this section, provide a more detailed description of how the connector functions. For more information, refer to [Writing connector documentation](xref:Connector_help_pages#writing-connector-documentation).]
+[In this section, provide a more detailed description of how the connector functions. For more information, refer to the "Connector documentation" page > Writing connector documentation.]
 
 ## DataMiner Connectivity Framework
 
