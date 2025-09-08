@@ -12,7 +12,7 @@ uid: Overview_of_the_different_subfolders
 | AppPackages | Uploaded and installed *.dmapp packages. | Partially (only *Installed* subfolder) |
 | AssetManager | DataMiner Inventory and Asset Management configuration. Only the *Configs*, *Cache*, and *MediaConfigs* subfolders are synchronized in a DMS. | Partially |
 | Backup | Backup settings, backup DLLs, backed-up data. | Partially |
-| BPA | BPA tests. See [Running BPA tests](xref:Running_BPA_tests). | Partially (all except *Default* subfolder) |
+| BPA | [BPA tests](xref:Running_BPA_tests). The *Default* subfolder, which is not synced, contains the default BPA tests deployed by DataMiner upgrades. These same BPA tests are also available in the main *BPA* folder. | Partially (all except *Default* subfolder) |
 | Certificates | Certificates for TLS encryption. See [Enabling TLS encryption for serial communication](xref:Enabling_TLS_encryption). | No |
 | ClusterNodes | Cluster configuration for Agents connected to dataminer.services. | Partially (only *Configuration* subfolder) |
 | Configurations | Contains information about the endpoints in the cluster, required to be able to [migrate to BrokerGateway](xref:BrokerGateway_Migration). | No |
