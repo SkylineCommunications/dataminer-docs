@@ -60,7 +60,7 @@ For detailed information about the changes included in those versions, refer to 
 
 #### Protocols: Problems with pollingRate attribute [ID 43418]
 
-<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 A number of issues have been fixed with regard to the `pollingRate` attribute, which allows you to slow down polling for specific SNMP columns in a table by specifying a minimum interval (in milliseconds) between polling.
 
@@ -69,7 +69,7 @@ A number of issues have been fixed with regard to the `pollingRate` attribute, w
 - Up to now, the decision to poll a column was taken by SLSNMPManager, which relied on the *Polling.xml* file that was stored alongside the *Protocol.xml* file. From now on, SLProtocol will determine which columns will be polled independently of the *Polling.xml* file.
 
 > [!NOTE]
-> The StreamViewer will now indicate more clearly which columns were polled. When some columns were polled while others were skipped, the message `[PollingRate polled column PIDs xxx,yyy]` will be shown. Also, when the timer was faster than the polling rate, the message `No column reached the PollingRate interval.` will be shown, and no Get operation will be executed.
+> Stream Viewer will now indicate more clearly which columns were polled. When some columns were polled while others were skipped, the message `[PollingRate polled column PIDs xxx,yyy]` will be shown. Also, when the timer was faster than the polling rate, the message `No column reached the PollingRate interval.` will be shown, and no Get operation will be executed.
 
 #### Problem when trying to send an SNMP Set command to have all active alarms resent [ID 43442]
 
