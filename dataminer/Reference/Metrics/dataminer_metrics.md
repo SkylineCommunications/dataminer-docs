@@ -62,6 +62,7 @@ All specifications are provided based on the assumption that DMAs are running on
 - [Dynamic virtual element benchmarks](xref:dynamic_virtual_element_benchmarks)
 - [Element benchmarks](xref:element_benchmarks)
 - [Failover benchmarks](xref:failover_benchmarks)
+- [GQI benchmarks](xref:gqi_benchmarks)
 - [History set benchmarks](xref:history_set_benchmarks)
 - [Mobile Gateway benchmarks](xref:mobile_gateway_benchmarks)
 - [Migration benchmarks](xref:migration_benchmarks)
