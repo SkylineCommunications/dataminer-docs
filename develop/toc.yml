@@ -1109,6 +1109,8 @@ items:
         items:
           - name: Caching
             topicUid: GQI_Extensions_Caching
+      - name: Debugging
+        topicUid: GQI_Extensions_Debugging
       - name: Logging
         topicUid: GQI_Extensions_Logging
   - name: User-Defined APIs
