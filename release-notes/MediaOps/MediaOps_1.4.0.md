@@ -68,3 +68,12 @@ When the GetLinks method was used, it could occur that an exception was thrown s
 #### Not possible to configure domain on resource pool [ID 43651]
 
 Since MediaOps 1.3.1, it was no longer possible to configure a domain on a resource pool within the MediaOps Solution. This is now possible again for systems where domains are available in DOM. However, note that this is not currently by default supported by the MediaOps Solution. A different application must be used to create these domains.
+
+#### Installation shown as successful despite partial failure [ID 43694]
+
+When updates to DOM definitions failed during MediaOps installation, it could occur that the installation script incorrectly reported a successful installation, even though critical components were not fully installed. Now the installation script will correctly report a failure in case an issue occurs with any of the following calls:
+
+- CreateDomInstance
+- CreateDomDefinition
+- CreateSectionDefinition
+- CreateDomBehaviorDefinition
