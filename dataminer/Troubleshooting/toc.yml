@@ -252,6 +252,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: SLScripting issue with non-English system locale
+            topicUid: KI_SLScripting_issue_non_English_system
           - name: Upgrade fails because of VerifyGRPCConnection.dll prerequisite
             topicUid: KI_Upgrade_fails_VerifyGRPCConnection_prerequisite
           - name: Contents of Elements folder deleted from offline Agents in Failover cluster
