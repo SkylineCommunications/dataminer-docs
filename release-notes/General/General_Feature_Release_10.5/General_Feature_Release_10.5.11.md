@@ -34,6 +34,12 @@ uid: General_Feature_Release_10.5.11
 
 ### Enhancements
 
+#### VerifyGRPCConnection prerequisite check: Clearer error will now be logged when the check is performed on an agent that is not running [ID 43608]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+When the *VerifyGRPCConnection* prerequisite check is performed on a DataMiner Agent that is not running, the error that is logged will now explain the problem clearer.
+
 #### STaaS: Enhanced exception logging [ID 43626]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->

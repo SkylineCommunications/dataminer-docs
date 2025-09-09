@@ -430,6 +430,12 @@ When a relational anomaly group or subgroup is added with the AddRADParameterGro
 
 In the *ResetNATSCheck* timer of the SLNet-managed NATS solution, the credentials of the local agent will now be compared against the credentials of the primary NAS node. If these do not match, the NATS configuration of the local agent will be reset, and the correct credentials of the primary node will be used instead.
 
+#### VerifyGRPCConnection prerequisite check: Clearer error will now be logged when the check is performed on an agent that is not running [ID 43608]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+When the *VerifyGRPCConnection* prerequisite check is performed on a DataMiner Agent that is not running, the error that is logged will now explain the problem clearer.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
