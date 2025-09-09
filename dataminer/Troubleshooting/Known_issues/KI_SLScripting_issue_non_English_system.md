@@ -6,11 +6,11 @@ uid: KI_SLScripting_issue_non_English_system
 
 ## Affected versions
 
-From DataMiner 10.4.12/10.5.0 onwards, on systems with a non-English locale.
+DataMiner 10.4.0 [CU18]/10.5 [CU6]/10.5.9, on systems with a non-English locale.
 
 ## Cause
 
-On non-English systems, changes introduced in DataMiner 10.4.12/10.5.0 can cause a null reference exception to be thrown when SLScripting starts up. The localization fails on such systems, getting into a loop while trying to load assemblies to translate the exception, until the process eventually gets killed.
+On non-English systems, changes introduced in DataMiner 10.4.0 [CU18]/10.5 [CU6]/10.5.9 can cause a null reference exception to be thrown when SLScripting starts up. The localization fails on such systems, getting into a loop while trying to load assemblies to translate the exception, until the process eventually gets killed.
 
 ## Fix
 
