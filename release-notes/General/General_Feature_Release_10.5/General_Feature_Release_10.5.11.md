@@ -100,3 +100,9 @@ This issue can be prevented by manually checking if the IP address is one of the
 When you tried to update the log levels of an element that was not hosted on the local DataMiner Agent, up to now, the update request would incorrectly be ignored and would not be forwarded to the DataMiner Agent hosting the element.
 
 From now on, the update request will correctly be forwarded to the DataMiner Agent hosting the element where it will be processed accordingly.
+
+#### SLNet could return incorrect data to the client application when processing a cell subscription filter [ID 43600]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When processing a cell subscription filter, in some cases, SLNet could return incorrect data to the client application.
