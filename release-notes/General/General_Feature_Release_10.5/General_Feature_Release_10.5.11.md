@@ -79,6 +79,14 @@ You can have all active alarms resent by sending an SNMP Set command to the DMA 
 
 However, since DataMiner versions 10.4.0 [CU12]/10.5.3, this would no longer work when the SNMP manager in question had the *Resend all active alarms every ...* option disabled.
 
+#### Cassandra Cluster Migrator tool: Problem when reverse lookup of IP addresses returned hostnames other than those configured in the SSL certificate [ID 43520]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you tried to migrate a Cassandra Cluster with SSL/TLS enabled, up to now, the Cassandra Cluster Migration tool would not be able to initialize when a reverse lookup of IP addresses returned hostnames other than those configured in the SSL certificate.
+
+This issue can be prevented by manually checking if the IP address is one of the SANs (Subject Alternative Names) of the SSL certificate.
+
 #### Problem when trying to update the log levels of an element that was not hosted on the local DataMiner Agent [ID 43582]
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
