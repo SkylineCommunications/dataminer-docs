@@ -17,11 +17,12 @@ SiteManager allows setting up communication tunnels for the following element co
 - WebSocket
 - Serial
 - Smart serial
+- SSH
 
 Limitations:
 
 - SNMP traps are currently not supported
-- Elements which act as a server (e.g. a serial or smart serial server) are currently not supported
+- Elements which act as a server (e.g. a smart serial server) are currently not supported
 - The *test connection* button in Cube is not supported for testing connections to data sources on a remote site
 
 ## Architecture

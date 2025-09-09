@@ -17,7 +17,7 @@ After installing the Site Manager DxM, in the Windows services overview, you sho
 
 To allow DataMiner to access an on-premises data source via the Site Manager, the following steps are needed:
 
-1. On a machine on your on-premises network (this does not need to be on the same server where the data source is running), run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup) script specifying the **token** and a provide a **description**.
+1. On a machine on your on-premises network (this does not need to be on the same server where the data source is running), run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.ps1) script specifying the **token** and a provide a **description**.
 
     The token you need to specify can be found in the Site Manager log: In Cube, open the log file of the Site Manager DxM. (*Apps* > *System Center* > *Logging* > *Site Manager (DxM)*). The log file should contain a line mentioning a token as follows `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
 
@@ -25,7 +25,7 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
 
     > [!NOTE]
     >
-    > - This script needs to be executed on a Windows operating system
+    > - The script must be executed on Windows 10 / Windows Server 2019 or later
     > - The script must run as administrator
     > - In case PowerShell's execution policy prevents the execution, specify an execution policy (e.g. `-ExecutionPolicy Bypass`). For more information regarding PowerShell's execution policy, refer to [About execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.5).
     > - The machine on which you install this script must be able to access the data source(s) you wish to expose
@@ -34,7 +34,7 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
     You can use the following command execute the install script. Replace the placeholders with your token and description.
 
     ```powershell
-    iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1) } -Command install -ZrokAccountToken <token> -ZrokEnvironmentDescription '<description>'"
+    iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1) } -Command install -ZrokAccountToken '<token>' -ZrokEnvironmentDescription '<description>'"
     ```
 
     To uninstall, the following command can be executed:
@@ -46,17 +46,13 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
 1. After successful installation, you can start exposing your data source(s) so the DataMiner Site Manager can set up a tunnel for each data source it needs to communicate with.
 
     > [!NOTE]
-    > When in a command prompt, make sure to first execute the following command `set USERPROFILE=c:\Windows\System32\config\systemprofile`.
-    > If you are in a Powershell shell, execute the following command: `$env:USERPROFILE = "C:\Windows\System32\config\systemprofile"`.
-    
+    > If you are in a new Powershell shell, execute the following command first: `$env:USERPROFILE = "C:\Windows\System32\config\systemprofile"`.
+    > If you are in a new command prompt, make sure to first execute the following command `set USERPROFILE=c:\Windows\System32\config\systemprofile`.
+
     For each data source you wish to expose, perform the following steps:
 
     1. `zrok reserve private --backend-mode <backendMode> <endpoint>`, where `<backendMode` is either *tcpTunnel* or *udpTunnel* and `<endpoint>` specifies the endpoint you want to expose. E.g.: `zrok reserve private --backend-mode tcpTunnel 127.0.0.1:4208`. When executing this command, you should see the following output: `your reserved share token is '2dxzh484zn3'`. Copy the token and execute the next command.
     1. `zrok share reserved <token>`, where `<token>` is the token value shown in the output of the previous command.
-
-    > [!NOTE]
-    > If you specify the endpoint to be shared using the IP address, then to access the data source in DataMiner you will also need to specify the IP address.
-    > Similarly, if you use the host name, you will also need to specify the host name in DataMiner Cube.
 
 ### Getting an overview of shared resources
 
