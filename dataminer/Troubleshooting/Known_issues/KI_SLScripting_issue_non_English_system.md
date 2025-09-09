@@ -6,7 +6,7 @@ uid: KI_SLScripting_issue_non_English_system
 
 ## Affected versions
 
-DataMiner 10.4.0 [CU18]/10.5 [CU6]/10.5.9, on systems with a non-English locale.
+From DataMiner 10.4.0 [CU18]/10.5 [CU6]/10.5.9 onwards, on systems with a non-English locale.
 
 ## Cause
 
