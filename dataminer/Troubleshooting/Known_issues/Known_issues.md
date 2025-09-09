@@ -7,7 +7,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
-| [SLScripting issue with non-English system locale](xref:KI_SLScripting_issue_non_English_system) | From DataMiner 10.4.12/10.5.0 onwards | | September 9, 2025 |
+| [SLScripting issue with non-English system locale](xref:KI_SLScripting_issue_non_English_system) | DataMiner 10.4.0 [CU18]/10.5 [CU6]/10.5.9 | | September 9, 2025 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
 | [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | | August 1, 2025 |
 | [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | | July 15, 2025 |
