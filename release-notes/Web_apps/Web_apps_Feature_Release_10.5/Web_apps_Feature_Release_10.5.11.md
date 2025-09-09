@@ -104,6 +104,14 @@ Up to now, the *Clear selection* component action could only be configured for t
 > [!NOTE]
 > The *Dropdown* component will not clear the selection when its *Clear selection* option is disabled.
 
+#### Dashboards/Low-Code Apps: Default number of columns on dashboards and low-code app pages has been increased to 50 [ID 43655]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Dashboards and pages of low-code apps are made up of a number of columns that help you place components in an orderly fashion.
+
+The default number of columns has now been increased to 50.
+
 ### Fixes
 
 #### Users with the 'User must change password at next login' setting enabled would incorrectly not be able to log on to the web apps [ID 43590]
