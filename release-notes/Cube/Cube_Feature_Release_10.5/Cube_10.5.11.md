@@ -70,6 +70,12 @@ When you zoomed in on a trend graph, the alarm timeline on the X axis would inco
 
 When a broadcast message expired, up to now, an exception could be thrown.
 
+#### Trending: Trend graphs containing trending of string values could incorrectly show gaps after new data had been received [ID 43636]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When an open trend graph containing trending of string values had received new data, up to now, the graph could incorrectly show gaps.
+
 #### Trending: Changes made to the 'Display the alarm template in the trend graph' option would incorrectly not be applied when the bottom navigator chart was not enabled [ID 43638]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
