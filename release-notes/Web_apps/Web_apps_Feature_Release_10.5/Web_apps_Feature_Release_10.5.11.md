@@ -112,6 +112,12 @@ Dashboards and pages of low-code apps are made up of a number of columns that he
 
 The default number of columns has now been increased to 50.
 
+#### Dashboards/Low-Code Apps: Standard Skyline themes now have a default title font size of 14px [ID 43661]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+In all standard Skyline themes, the default title font size has been reduced from 16px to 14px.
+
 ### Fixes
 
 #### Users with the 'User must change password at next login' setting enabled would incorrectly not be able to log on to the web apps [ID 43590]
