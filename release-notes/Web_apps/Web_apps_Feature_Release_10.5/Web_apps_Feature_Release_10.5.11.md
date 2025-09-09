@@ -122,3 +122,9 @@ From now on, when the password of a user has expired in DataMiner, the web metho
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When you clicked the *Now* button in the redesigned datetime picker component, the component would incorrect not take into account the default time zone that was specified in the *ClientSettings.json* file.
+
+#### Dashboards/Low-Code Apps: Problem when entering a negative number in a numeric filter box [ID 43649]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you entered a negative number in a numeric filter box, the filter would clear itself while you were typing.
