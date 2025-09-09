@@ -38,6 +38,14 @@ From now on, the load time metric of a visual overview will include the time it 
 
 From now on, the load time metric of a visual overview will include the time shapes with data fields of type 'Property' wait for data.
 
+#### Clearer message will now appear when Cube experiences a CRL freeze [ID 43663]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When an internet connection is not available on the client machine, the DataMiner Cube application freezes for about 20 seconds during the session. From now on, when this happens, a more detailed message will appear, explaining what can be done to prevent this in the future.
+
+This type of freezes happen because Windows and .NET try to verify the application's digital signatures by checking an online Certificate Revocation List (CRL). The system times out during this process, causing the delay and impacting user productivity.
+
 ### Fixes
 
 #### Trending: Problems when opening a trend graph containing trending of string values combined with exception values [ID 43532]

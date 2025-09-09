@@ -142,3 +142,9 @@ When you clicked the *Now* button in the redesigned datetime picker component, t
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When you entered a negative number in a numeric filter box, the filter would clear itself while you were typing.
+
+#### DataMiner landing page would no longer list apps other than DataMiner low-code apps [ID 43656]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+The DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`) would incorrectly no longer list apps other than DataMiner low-code apps.
