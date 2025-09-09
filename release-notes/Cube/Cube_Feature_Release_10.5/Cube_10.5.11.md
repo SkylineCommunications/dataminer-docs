@@ -32,6 +32,12 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 From now on, the load time metric of a visual overview will include the time it took to load any embedded visual overviews.
 
+#### Visual Overview: Load time metric will now include the time shapes with data fields of type 'Property' wait for data [ID 43469]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+From now on, the load time metric of a visual overview will include the time shapes with data fields of type 'Property' wait for data.
+
 ### Fixes
 
 #### Trending: Problems when opening a trend graph containing trending of string values combined with exception values [ID 43532]
