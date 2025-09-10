@@ -499,3 +499,11 @@ In some cases, an alarm with a source other than "DataMiner" could incorrectly i
 <!-- MR 10.6.0 - FR 10.5.10 -->
 
 When a lot of concurrent requests had to be processed by the Repository API in the background, e.g. to retrieve or update bookings, this could cause thread starvation in SLDataGateway, causing these requests to be handled much more slowly than usual.
+
+#### Service & Resource Management: Problem when updating existing properties of a booking [ID 43659]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+Up to now, when the `SafelyUpdateReservationInstanceProperties` method of `ResourceManagerHelper` was used to update existing properties of a booking, in some cases, the `PropertiesWereAlreadyModified` error would incorrectly be returned.
+
+From now on, when booking properties are updated, the master agent that processes the update will check whether the properties to be updated are existing properties of the booking in question. If so, the update will complete successfully, and no false `PropertiesWereAlreadyModified` errors will be returned.

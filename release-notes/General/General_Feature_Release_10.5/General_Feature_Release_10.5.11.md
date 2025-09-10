@@ -106,3 +106,11 @@ From now on, the update request will correctly be forwarded to the DataMiner Age
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When processing a cell subscription filter, in some cases, SLNet could return incorrect data to the client application.
+
+#### Service & Resource Management: Problem when updating existing properties of a booking [ID 43659]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+Up to now, when the `SafelyUpdateReservationInstanceProperties` method of `ResourceManagerHelper` was used to update existing properties of a booking, in some cases, the `PropertiesWereAlreadyModified` error would incorrectly be returned.
+
+From now on, when booking properties are updated, the master agent that processes the update will check whether the properties to be updated are existing properties of the booking in question. If so, the update will complete successfully, and no false `PropertiesWereAlreadyModified` errors will be returned.
