@@ -50,9 +50,17 @@ items:
           - name: General Feature Release 10.5.9
             topicUid: General_Feature_Release_10.5.9
           - name: General Feature Release 10.5.8
-            topicUid: General_Feature_Release_10.5.8
+            items:
+              - name: New features and changes
+                topicUid: General_Feature_Release_10.5.8
+              - name: General Feature Release 10.5.8 CU1
+                topicUid: General_Feature_Release_10.5.8_CU1
           - name: General Feature Release 10.5.7
-            topicUid: General_Feature_Release_10.5.7
+            items:
+              - name: New features and changes
+                topicUid: General_Feature_Release_10.5.7
+              - name: General Feature Release 10.5.7 CU1
+                topicUid: General_Feature_Release_10.5.7_CU1
           - name: General Feature Release 10.5.6
             topicUid: General_Feature_Release_10.5.6
           - name: General Feature Release 10.5.5
