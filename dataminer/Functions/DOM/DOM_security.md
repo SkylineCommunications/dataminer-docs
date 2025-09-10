@@ -10,9 +10,11 @@ By default, all DOM configuration and instance data can be read by any authentic
 
 | Action | Prior to 10.5.10/10.6.0 | From 10.5.10/10.6.0 onwards |
 |--|--|--|
-| Reading `ModuleSettings` and DOM configuration objects* | Any authenticated user | Any authenticated user |
+| Reading `ModuleSettings` | Any authenticated user | Any authenticated user |
 | Creating, updating, or deleting `ModuleSettings` | Users with the *Module settings* permission | Users with the *Module settings* permission |
+| Reading DOM configuration objects* | Any authenticated user | Any authenticated user |
 | Creating, updating, or deleting DOM configuration objects* | Any authenticated user | Users with the *Module settings* permission |
+| Reading `DomTemplate` objects | Any authenticated user | Any authenticated user |
 | Creating, updating, or deleting `DomTemplate` objects | Any authenticated user | Users with the *Module settings* permission |
 | Reading `DomInstance` objects | Any authenticated user | Any authenticated user OR restricted by link security |
 | Creating, updating, or deleting `DomInstance` objects | Any authenticated user | Any authenticated user OR restricted by link security |
