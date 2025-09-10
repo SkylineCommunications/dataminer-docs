@@ -15,7 +15,7 @@ After an upgrade to one of the affected DataMiner versions, it is possible that 
 
 ## Fix
 
-Install DataMiner 10.5.0 [CU4] build 16239, DataMiner 10.5.0 [CU5] build 16243, DataMiner 10.5.0 [CU6], DataMiner 10.5.7 [CU2], or DataMiner 10.5.9.<!-- RN 43407 -->
+Install DataMiner 10.5.0 [CU4] build 16239, DataMiner 10.5.0 [CU5] build 16243, DataMiner 10.5.0 [CU6], DataMiner 10.5.7 [CU1], DataMiner 10.5.8 [CU1], or DataMiner 10.5.9.<!-- RN 43407 -->
 
 ## Workaround
 

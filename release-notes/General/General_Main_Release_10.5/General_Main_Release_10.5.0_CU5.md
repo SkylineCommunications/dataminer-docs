@@ -176,6 +176,6 @@ A problem in ClusterEndpointsManager could cause a memory leak in the SLNet proc
 
 #### SLNet memory leak caused by ClusterEndpoint.json sync [ID 43407]
 
-<!-- MR 10.5.0 [CU4] (but also 10.5.0 [CU5] and 10.5.0 [CU6]) - FR 10.5.7 [CU1] (but also 10.5.9) -->
+<!-- MR 10.5.0 [CU4] (but also 10.5.0 [CU5] and 10.5.0 [CU6]) - FR 10.5.7 [CU1] (but also 10.5.8 [CU1] and 10.5.9) -->
 
 In large DataMiner Systems, especially in clusters with Failover Agents, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely. This could lead to a serious memory leak in SLNet, causing DataMiner Agents to disconnect frequently.
