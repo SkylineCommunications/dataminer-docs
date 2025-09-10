@@ -176,3 +176,11 @@ When you entered a negative number in a numeric filter box, the filter would cle
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 The DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`) would incorrectly no longer list any custom static app.
+
+#### Dashboards/Low-Code Apps: About box would not scale correctly [ID 43668]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, when you opened the *About* box, in some cases, it would not scale correctly.
+
+From now on, when you open the *About* box on a mobile device, the versions will be displayed in one column instead of two. Also, the *Contact us* button has been removed, and will now be integrated into the app's header.
