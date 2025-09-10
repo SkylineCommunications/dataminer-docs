@@ -138,6 +138,14 @@ The default number of columns has now been increased to 50.
 
 In all standard Skyline themes, the default title font size has been reduced from 16px to 14px.
 
+#### Web apps: Message that indicates that the WebSocket connection was dropped will only appear when the first reconnection attempt also failed [ID 43664]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, whenever the WebSocket connection was (briefly) dropped, a `Connection has been interrupted.` message would appear.
+
+From now on, this message will only appear when the first attempt to re-establish the WebSocket connection also failed. This first reconnection attempt will now be made after 1 second.
+
 ### Fixes
 
 #### Users with the 'User must change password at next login' setting enabled would incorrectly not be able to log on to the web apps [ID 43590]

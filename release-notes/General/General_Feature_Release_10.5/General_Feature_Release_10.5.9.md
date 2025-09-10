@@ -254,6 +254,8 @@ Example:
 
 ## Changes
 
+<!-- Changes in build 16222 -->
+
 ### Enhancements
 
 #### SLDataGateway will now check all Cassandra, OpenSearch and Elasticsearch certificates on a daily basis [ID 41793]
