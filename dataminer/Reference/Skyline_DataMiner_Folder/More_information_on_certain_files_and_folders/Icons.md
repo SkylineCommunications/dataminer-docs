@@ -13,7 +13,9 @@ The icons and the icon rules are specified in the following XML files:
 - `C:\Skyline DataMiner\Icons\IconSelectionRules.xml`
 
 > [!NOTE]
-> If you have made any changes to these files, restart DataMiner to implement your changes.
+>
+> - If you have made any changes to these files, restart DataMiner to implement your changes.
+> - This file is only synchronized in a DMS during the midnight sync or if a [synchronization is forced](xref:Synchronizing_data_between_DataMiner_Agents). It does not get synchronized instantly or on startup.
 
 ## CustomIcons.xml
 
