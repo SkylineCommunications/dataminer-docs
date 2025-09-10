@@ -1143,3 +1143,16 @@ When definition-level security is enabled, you will now need to first select one
 <!-- MR 10.6.0 - FR 10.5.10 -->
 
 A new *VerifyBrokerGatewayMigration* prerequisite check has been added to prepare for the upcoming mandatory migration to BrokerGateway. However, this check is not yet relevant for users outside of Skyline Communications.
+
+#### SLNetClientTest tool: Filtering messages using regular expressions [ID 43540]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+In the *SLNetClientTest* tool, at the bottom of the main window, a new filter box has been added.
+
+After you select the checkbox in front of it, it will allow you to filter the message list using a regular expression.
+
+This new filter box should only be used when no new messages will be added to the list, e.g. when inspecting an *\*.slnetdump* file.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
