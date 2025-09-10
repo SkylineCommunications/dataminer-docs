@@ -4,7 +4,7 @@ uid: DOM_SecuritySettings
 
 # SecuritySettings
 
-The `SecuritySettings` configuration class is mainly used to store the link security settings. There are also some permission flag properties that are deemed obsolete.
+The `DomManagerSecuritySettings` configuration class is mainly used to store the link security settings. There are also some permission flag properties that are deemed obsolete.
 
 ## LinkSecuritySettings
 
@@ -42,7 +42,7 @@ After updating the `ModuleSettings` with new or modified links, make sure to **r
 Notes:
 
 - A link grants both read and write access (read-only links are currently not supported).
-- Users with the [*Module settings* permission](xref:DOM_security#module-settings-user-permission) always have full access but still need to adhere to the [filtering requirements](#filtering-requirements-when-security-is-enabled).
+- Users with the [*Module settings* permission](xref:DOM_security#module-settings-user-permission) always have full access to any DOM instance but still need to adhere to the [filtering requirements](#filtering-requirements-when-security-is-enabled).
 
 ### Filtering requirements when security is enabled
 
