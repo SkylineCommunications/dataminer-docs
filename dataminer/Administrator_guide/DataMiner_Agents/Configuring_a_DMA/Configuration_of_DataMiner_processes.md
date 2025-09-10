@@ -304,8 +304,8 @@ In this case, SLWatchdog will do the following:
    > [!NOTE]
    >
    > - **SLScripting**: The process is restarted automatically without restarting the entire DataMiner Agent.
-   > - **SLProtocol** (from DataMiner 10.4.12/10.5.0 onwards): When an SLProtocol process disappears, a new SLProtocol process will be started automatically, and all elements that were hosted by the disappeared process will be migrated to the newly created process. Affected elements will be restarted to ensure data synchronization. There is a one-minute delay between the disappearance of an SLProtocol process and the creation of a new one.
-   > - **SLAutomation**: Similar to SLProtocol, the process will be restarted automatically with a one-minute delay, without restarting the entire DataMiner Agent.
+   > - **SLProtocol** (from DataMiner 10.4.12/10.5.0 onwards): When an SLProtocol process disappears, a new SLProtocol process will be started automatically, and all elements that were hosted by the disappeared process will be migrated to the newly created process. Affected elements will be restarted to ensure data synchronization. There is a one-minute delay between the disappearance of an SLProtocol process and the creation of a new one. A notice alarm will also be created indicating the process disappearance and number of affected elements.
+   > - **SLAutomation**: The process will be restarted automatically with a one-minute delay, without restarting the entire DataMiner Agent. This delay is necessary to ensure that processes are not restarted while the DMA is in the process of shutting down.
 
 1. Create two information messages:
 
