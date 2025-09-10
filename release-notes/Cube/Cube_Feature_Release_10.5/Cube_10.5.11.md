@@ -91,3 +91,9 @@ When an open trend graph containing trending of string values had received new d
 When, in a visual overview, a shape showing a trend component was configured to not show the bottom navigator chart (i.e. by means of the "NavigatorChart:false" option set in the *ParametersOptions* shape data field), up to now, changes made to the *Display the alarm template in the trend graph* option in the component's settings would incorrectly not be applied.
 
 Also, when a shape showing a trend component was configured to not show the bottom navigator chart, up to now, changes made to the mouse actions in the component's settings would incorrectly not be applied until the card was re-opened.
+
+#### Problem when sending a ParameterChangeEventMessage for a non-string parameter [ID 43701]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you retrieved the string value of a non-string parameter that was being updated, an exception would be thrown as the string value was null.
