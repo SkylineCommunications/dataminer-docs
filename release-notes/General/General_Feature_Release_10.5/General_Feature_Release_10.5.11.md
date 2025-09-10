@@ -73,6 +73,12 @@ The CloudGateway DxM will only be upgraded when an older version is found on the
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### Automation scripts: No attempts will be made anymore to automatically detect the interactive behavior of script libraries [ID 43673]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+From now on, no attempts will be made anymore to automatically detect the interactive behavior of script libraries, i.e. scripts of which all Exe blocks contain precompiled C# code. These libraries are not intended to be run independently.
+
 ### Fixes
 
 #### Protocols: Problems with pollingRate attribute [ID 43418]

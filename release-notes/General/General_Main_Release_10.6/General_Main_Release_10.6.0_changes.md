@@ -436,6 +436,12 @@ In the *ResetNATSCheck* timer of the SLNet-managed NATS solution, the credential
 
 When the *VerifyGRPCConnection* prerequisite check is performed on a DataMiner Agent that is not running, the error that is logged will now explain the problem clearer.
 
+#### Automation scripts: No attempts will be made anymore to automatically detect the interactive behavior of script libraries [ID 43673]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+From now on, no attempts will be made anymore to automatically detect the interactive behavior of script libraries, i.e. scripts of which all Exe blocks contain precompiled C# code. These libraries are not intended to be run independently.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
