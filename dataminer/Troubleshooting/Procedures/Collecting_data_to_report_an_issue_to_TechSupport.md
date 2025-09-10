@@ -42,7 +42,7 @@ To save a Log Collector package:
    >
    > ![Include memory dump](~/dataminer/images/Include_Memory_Dump.png)<br/>*DataMiner Log Collector version 10.3.2330.1610*
 
-1. The Log Collector package will be saved by default in an *SL_LogCollector* folder on your desktop. Please do not rename or modify any of the files.
+The Log Collector package will be saved by default in an *SL_LogCollector* folder on your desktop. Please do not rename or modify any of the files.
 
 > [!TIP]
 > For more information about the Log Collector, see [SLLogCollector](xref:SLLogCollector).
