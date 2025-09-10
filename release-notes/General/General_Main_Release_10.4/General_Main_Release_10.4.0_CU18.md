@@ -10,6 +10,8 @@ uid: General_Main_Release_10.4.0_CU18
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.4.0 CU18](xref:Web_apps_Main_Release_10.4.0_CU18).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
+<!-- Changes in build 16208 -->
+
 ### Enhancements
 
 #### GQI: Enhanced performance when setting up GQI connections [ID 43251]

@@ -10,6 +10,8 @@ uid: General_Main_Release_10.5.0_CU6
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.5.0 CU6](xref:Web_apps_Main_Release_10.5.0_CU6).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
+<!-- Changes in build 16223 -->
+
 ### Enhancements
 
 #### SLDataGateway will now check all Cassandra, OpenSearch and Elasticsearch certificates on a daily basis [ID 41793]
