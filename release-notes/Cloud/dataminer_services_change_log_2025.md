@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 10 September 2025 - New Feature - Catalog - Revamped home page
+### 10 September 2025 - New feature - Catalog - Improved home page
 
 The Catalog app now has a new home page with a carousel and trending tab.
 
