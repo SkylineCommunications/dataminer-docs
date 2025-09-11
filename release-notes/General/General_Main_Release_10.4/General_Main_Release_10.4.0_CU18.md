@@ -10,7 +10,21 @@ uid: General_Main_Release_10.4.0_CU18
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.4.0 CU18](xref:Web_apps_Main_Release_10.4.0_CU18).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-<!-- Changes in build 16208 -->
+## Changes in build 16295
+
+#### Visual Overview in web apps: Problem when reading the load balancing configuration [ID 43660]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+In some cases, it would not be possible to read the load balancing configuration for visual overviews in web apps. As a result, the visual overview module would not be able to start up when load balancing was enabled.
+
+#### SLScripting issue with non-English system locale [ID 43690]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+On non-English systems, a null reference exception would be thrown when SLScripting started up, and localization would get into a loop while trying to load assemblies to translate that exception until the process eventually got killed.
+
+## Changes in build 16208
 
 ### Enhancements
 
