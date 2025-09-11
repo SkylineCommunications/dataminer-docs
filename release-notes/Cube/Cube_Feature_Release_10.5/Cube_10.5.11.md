@@ -92,6 +92,12 @@ When, in a visual overview, a shape showing a trend component was configured to 
 
 Also, when a shape showing a trend component was configured to not show the bottom navigator chart, up to now, changes made to the mouse actions in the component's settings would incorrectly not be applied until the card was re-opened.
 
+#### Bookings module: Listed bookings would be sorted incorrectly [ID 43641]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in Cube's *Bookings* module (or the *Skyline Booking Manager* connector), the *List View* component was configured to show a custom culture-invariant DateTime property, up to now, the listed bookings would be sorted incorrectly.
+
 #### Problem when sending a ParameterChangeEventMessage for a non-string parameter [ID 43701]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
