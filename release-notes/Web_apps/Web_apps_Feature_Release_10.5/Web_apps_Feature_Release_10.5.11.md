@@ -73,7 +73,7 @@ The DataMiner landing page (by default accessible via `https://<DMA IP or hostna
 
 #### GQI DxM: Using debug builds of GQI extension libraries [ID 43693]
 
-<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
 
 It is now possible to use debug builds of GQI extension libraries. Up to now, it was only possible to use release builds.
 
@@ -153,6 +153,19 @@ In all standard Skyline themes, the default title font size has been reduced fro
 Up to now, whenever the WebSocket connection was (briefly) dropped, a `Connection has been interrupted.` message would appear.
 
 From now on, this message will only appear when the first attempt to re-establish the WebSocket connection also failed. This first reconnection attempt will now be made after 1 second.
+
+#### GQI DxM: Extension indexer process will now load assemblies without locking the associated DLL files [ID 43707]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.11 -->
+
+The GQI DxM has an indexer process that loads Automation script libraries and their dependencies to detect GQI extensions.
+
+Up to now, once this indexer process had loaded an extension library, no other process was authorized to change or delete the associated DLL file until the indexer process exited. This could cause issues when the Automation module attempted to delete existing script libraries, even if they were never actually used as a GQI extension library.
+
+From now on, the GQI extension indexer process will load an assembly by reading the bytes from the DLL file in memory. That way, the file handle can be released as soon as the bytes have been read.
+
+> [!NOTE]
+> Currently, the extension worker process still holds a lock on the associated DLL file when it is active.
 
 ### Fixes
 
