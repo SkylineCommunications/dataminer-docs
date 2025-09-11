@@ -83,6 +83,14 @@ The CloudGateway DxM will only be upgraded when an older version is found on the
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### STaaS: A failure notice will now be returned immediately when an operation could not be sent to STaaS [ID 43667]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+Up to now, when DataMiner was not able to send an operation to STaaS, it had to wait until the write operation timed out before it got confirmation that the operation had failed.
+
+From now on, when DataMiner tries to send an operation of which the size exceeds the maximum package limit to STaaS, a failure notice will be returned immediately.
+
 #### Automation scripts: No attempts will be made anymore to automatically detect the interactive behavior of script libraries [ID 43673]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
@@ -96,8 +104,6 @@ From now on, no attempts will be made anymore to automatically detect the intera
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 In some cases, client applications like DataMiner Cube would fail to load initial parameter data for remote elements.
-
-Also, SLNet subscriptions could be added to all DMAs in the cluster, causing message loops that eventually made DMAs lose connection to each other and refuse new connections for a period of time.
 
 #### Protocols: Problems with pollingRate attribute [ID 43418]
 
