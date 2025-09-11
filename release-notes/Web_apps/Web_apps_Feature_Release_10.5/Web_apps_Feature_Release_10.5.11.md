@@ -156,7 +156,7 @@ From now on, this message will only appear when the first attempt to re-establis
 
 #### GQI DxM: Extension indexer process will now load assemblies without locking the associated DLL files [ID 43707]
 
-<!-- MR 10.5.0 [CU5] - FR 10.5.11 -->
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
 
 The GQI DxM has an indexer process that loads Automation script libraries and their dependencies to detect GQI extensions.
 
@@ -171,7 +171,7 @@ From now on, the GQI extension indexer process will load an assembly by reading 
 
 #### Users with the 'User must change password at next login' setting enabled would incorrectly not be able to log on to the web apps [ID 43590]
 
-<!-- MR 10.4.0 [CU19] / 10.5.0 [CU5] - FR 10.5.11 -->
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When, in DataMiner Cube, users had the *User must change password at next login* setting enabled, up to now, they would incorrectly not be able to log on to the web apps as they were not able to change their password when logging on.
 
