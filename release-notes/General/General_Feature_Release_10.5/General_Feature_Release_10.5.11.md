@@ -149,3 +149,12 @@ When processing a cell subscription filter, in some cases, SLNet could return in
 Up to now, when the `SafelyUpdateReservationInstanceProperties` method of `ResourceManagerHelper` was used to update existing properties of a booking, in some cases, the `PropertiesWereAlreadyModified` error would incorrectly be returned.
 
 From now on, when booking properties are updated, the master agent that processes the update will check whether the properties to be updated are existing properties of the booking in question. If so, the update will complete successfully, and no false `PropertiesWereAlreadyModified` errors will be returned.
+
+#### Relational anomaly detection: Old RAD suggestion events would incorrectly be re-opened when a paused element was re-activated [ID 43688]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+<!-- Not added to MR 10.6.0 -->
+
+When an element with active RAD suggestion events is paused, in the Alarm Console, these suggestion events will disappear from the active alarms tab.
+
+Up to now, when a paused element was re-activated, the suggestion events that had disappeared from the active alarms tab would incorrectly be re-opened again. From now on, they will no longer be re-opened. If the anomalous behavior persists when a paused element is re-activated, new RAD suggestion events will be generated instead.
