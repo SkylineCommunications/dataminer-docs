@@ -23,6 +23,14 @@ A number of enhancements have been made with regard to the logging of exception 
 
 ### Fixes
 
+#### Problem when loading initial parameter data for remote elements [ID 43339] [ID 43552]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+In some cases, client applications like DataMiner Cube would fail to load initial parameter data for remote elements.
+
+Also, SLNet subscriptions could be added to all DMAs in the cluster, causing message loops that eventually made DMAs lose connection to each other and refuse new connections for a period of time.
+
 #### Protocols: Problems with pollingRate attribute [ID 43418]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
