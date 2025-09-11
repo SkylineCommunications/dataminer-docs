@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 11 September 2025 - Enhancement - Catalog - Custom icons
 
-From now on, users can apply custom icons to their catalog items using an organization key.
+It is now possible to apply custom icons to your Catalog items using an organization key.
 
 ### 10 September 2025 - New feature - Catalog - Improved home page
 
