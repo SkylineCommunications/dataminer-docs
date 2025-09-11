@@ -171,7 +171,7 @@ From now on, the GQI extension indexer process will load an assembly by reading 
 
 #### Users with the 'User must change password at next login' setting enabled would incorrectly not be able to log on to the web apps [ID 43590]
 
-<!-- MR 10.6.0 - FR 10.5.11 -->
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU5] - FR 10.5.11 -->
 
 When, in DataMiner Cube, users had the *User must change password at next login* setting enabled, up to now, they would incorrectly not be able to log on to the web apps as they were not able to change their password when logging on.
 
