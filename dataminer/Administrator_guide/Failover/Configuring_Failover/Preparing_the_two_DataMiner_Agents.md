@@ -26,6 +26,7 @@ In addition, make sure the [required ports are opened](#opening-the-required-por
 ## Primary DataMiner Agent
 
 The primary DMA is a normal DataMiner Agent. In most cases, this will be an existing DMA that is a member of a DMS cluster. It does not require any additional configuration.
+For a brand-new failover pair where the primary DMA is not yet part of a cluster, the correct procedure is to first add the primary DMA to the cluster using its physical IP. Only after that step should you set up the failover by adding the backup (empty) DMA.
 
 ## Backup DataMiner Agent
 
