@@ -45,6 +45,16 @@ This new filter box should only be used when no new messages will be added to th
 
 ### Enhancements
 
+#### Relational anomaly detection: Enhancements [ID 43440]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+A number of enhancements have been made with regard to RAD parameter groups:
+
+- The RAD API messages no longer have to be sent to the agent monitoring the parameters in question. Each message will automatically be forwarded to the correct agent based on the name of the parameter group. If the agent could not be determined, an exception will be thrown.
+- The `GetRADParameterGroupsMessage` will now retrieve a list of all RAD parameter groups that have been configured across all agents in the cluster. Up to now, it would only retrieve the list of RAD parameter groups hosted on the local agent.
+- It is no longer allowed to have two groups with the same name, even when they are hosted by different agents.
+
 #### VerifyGRPCConnection prerequisite check: Clearer error will now be logged when the check is performed on an agent that is not running [ID 43608]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
