@@ -57,3 +57,6 @@ When you connect a DataMiner System for which SAML has already been configured t
        </md:SPSSODescriptor>
       </md:EntityDescriptor>
        ```
+
+> [!IMPORTANT]
+> Make sure SAML is configured on all DMAs in your cluster that are running the CloudGateway DxM. If some of the DMAs running CloudGateway use SAML but others do not, this could cause unpredictable or unwanted behavior.
