@@ -26,6 +26,7 @@ Except when otherwise mentioned in the relevant documentation, manual changes sh
 | Database | Database-related configuration files. See [Database](xref:Database). | Partially |
 | DeployerTokens | Used for the *APIDeployment* soft-launch feature, which is obsolete as of DataMiner 10.4.0. | Yes |
 | Documents | Documents added to the DataMiner Agent. | Yes |
+| DOM | Documents related to [DataMiner Object Models](xref:DOM). | No |
 | Elements | Element data (one subdirectory per element). See [Elements](xref:Elements1#elements). | No |
 | Files | EXEs, DLLs, configuration files, etc. | No |
 | Filters | No longer used. | No |
