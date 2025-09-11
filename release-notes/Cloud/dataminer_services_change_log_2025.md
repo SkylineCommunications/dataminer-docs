@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 11 September 2025 - Enhancement - Catalog - Custom icons
+
+From now on, users can apply custom icons to their catalog items using an organization key.
+
 ### 10 September 2025 - New feature - Catalog - Improved home page
 
 The Catalog app now has a new home page with a carousel and trending tab.
