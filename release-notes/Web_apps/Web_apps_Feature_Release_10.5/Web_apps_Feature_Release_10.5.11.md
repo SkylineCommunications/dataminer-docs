@@ -71,6 +71,14 @@ The DataMiner landing page (by default accessible via `https://<DMA IP or hostna
 > [!NOTE]
 > The [Status](https://aka.dataminer.services/status) link will only resolve if the DataMiner Agent is connected to dataminer.services.
 
+#### GQI DxM: Using debug builds of GQI extension libraries [ID 43693]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+It is now possible to use debug builds of GQI extension libraries. Up to now, it was only possible to use release builds.
+
+Debug build of an extension library can be created using either the Automation module in DataMiner Cube or the DataMiner Integration Studio (DIS). Once a debug build is created, you can then attach a debugger to the specific `DataMiner.GQI.ExtensionsWorker.Automation.exe` process, and debug the code that is executed while running the queries.
+
 ## Changes
 
 ### Enhancements
