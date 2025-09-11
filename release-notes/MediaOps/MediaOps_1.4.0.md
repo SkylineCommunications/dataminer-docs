@@ -77,3 +77,7 @@ When updates to DOM definitions failed during MediaOps installation, it could oc
 - CreateDomDefinition
 - CreateSectionDefinition
 - CreateDomBehaviorDefinition
+
+#### Confirmed jobs could have unconfigured mandatory parameters [ID 43709]
+
+In some cases, it could occur that a job was in the Confirmed state even though mandatory parameters were not configured yet. This will now be prevented.
