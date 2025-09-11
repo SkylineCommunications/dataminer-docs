@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 11 September 2025 - Enhancement - Catalog - Custom icons
 
-It is now possible to apply custom icons to your Catalog items using an organization key.
+It is now possible to apply custom icons to your Catalog items using the [Key Catalog API](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v3.0).
 
 ### 10 September 2025 - New feature - Catalog - Improved home page
 
