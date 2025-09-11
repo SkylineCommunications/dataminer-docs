@@ -56,11 +56,11 @@ The `DomInstanceNetworkAttachmentSettings` class contains the following properti
 > - When a DOM module is configured to save attachments to a network share, no migration is done of existing attachments. They will continue to exist in the `C:\Skyline DataMiner\Documents` folder, but will no longer work. You can copy them over or move them to the network share; the folder structure is the same. Likewise, when removing the configuration to save attachments to a network share, no migration is done of attachments available on the previously configured network share.
 > - By default, the size of the attachments is limited to 20 MB. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#documentsmaxsize).
 
-#### gRPC now used by default for communication between DataMiner Agents [ID 43190] [ID 43260] [ID 43305] [ID 43331] [ID 43435] [ID 43506]
+#### gRPC now used by default for server-server and server-client communication [ID 43190] [ID 43260] [ID 43305] [ID 43331] [ID 43435] [ID 43506]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-Up to now, .Net Remoting was used by default for communication between DataMiner Agents, though it was possible to set gRPC as the default instead (either by adding *Redirect* tags in DMS.xml or by disabling .NET Remoting in *MaintenanceSettings.xml*). Now gRPC will be the default instead, which means that the *EnableDotNetRemoting* setting in *MaintenanceSettings.xml* is now by default set to *false*.
+Up to now, .Net Remoting was used by default for communication between DataMiner Cube and a DataMiner Agent as well as between DataMiner Agents, though it was possible to set gRPC as the default instead (either by adding *Redirect* tags in *DMS.xml* or by disabling .NET Remoting in *MaintenanceSettings.xml* for server-server communication, and by adjusting *ConnectionSettings.txt* for server-client communication). Now gRPC will be the default instead. This means that the *EnableDotNetRemoting* setting in *MaintenanceSettings.xml* is now by default set to *false*, and the connection type in *ConnectionSettings.txt* is now by default set to *GRPCConnection*.
 
 When you upload an upgrade package that includes this change, the *VerifyGRPCConnection* prerequisite check will run to verify whether all DataMiner Agents in the cluster are ready to switch to using gRPC as the default communication type. This check will fail in case a possible configuration issue or connectivity issue is detected. For details, refer to [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite).
 
