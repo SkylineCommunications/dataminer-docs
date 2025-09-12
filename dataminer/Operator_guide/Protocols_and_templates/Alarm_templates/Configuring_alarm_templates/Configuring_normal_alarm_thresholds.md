@@ -80,7 +80,7 @@ By default, each column of a [dynamic table](xref:Table_parameters#dynamic-table
 
 1. To enable alarm monitoring for a table parameter column, select the checkbox in the first column of the template editor next to the table parameter column name.
 
-1. Optionally, specify a mask in the *Filter* column to apply the alarm configuration only on a filtered selection of available rows of the dynamic table.
+1. Optionally, specify a mask in the *Filter* column to apply the alarm configuration only on a filtered selection of available rows of the dynamic table. The filter is applied on the display key of the row. When there is no display key, the primary key is used instead.
 
    > [!NOTE]
    > You can use the wildcard characters \* and ? in this filter mask. For more information on wildcards, see [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters).
