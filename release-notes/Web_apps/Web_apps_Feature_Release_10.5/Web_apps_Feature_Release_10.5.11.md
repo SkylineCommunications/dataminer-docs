@@ -205,3 +205,11 @@ The DataMiner landing page (by default accessible via `https://<DMA IP or hostna
 Up to now, when you opened the *About* box, in some cases, it would not scale correctly.
 
 From now on, when you open the *About* box on a mobile device, the versions will be displayed in one column instead of two. Also, the *Contact us* button has been removed, and will now be integrated into the app's header.
+
+#### Dashboards/Low-Code Apps: 'Browse templates' components list would incorrectly not show custom component names [ID 43702]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+As soon as at least two templates are being used by *Grid*, *Maps*, *Table* or *Timeline* components on a dashboard or low-code app, the *Browse templates* button allows you to open a window in which you can import a template from another component to override the template of the component you are configuring.
+
+Up to now, the *Grid*, *Maps*, *Table* or *Timeline* components listed in that window would incorrectly always be identified by their component ID (e.g. "Table 2"), even if their *Configuration name* setting contained a custom component name.
