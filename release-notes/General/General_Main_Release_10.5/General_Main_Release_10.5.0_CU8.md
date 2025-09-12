@@ -31,6 +31,14 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### STaaS: A failure notice will now be returned immediately when an operation could not be sent to STaaS [ID 43667]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, when DataMiner was not able to send an operation to STaaS, it had to wait until the write operation timed out before it got confirmation that the operation had failed.
+
+From now on, when DataMiner tries to send an operation of which the size exceeds the maximum package limit to STaaS, a failure notice will be returned immediately.
+
 ### Fixes
 
 #### Problem when loading initial parameter data for remote elements [ID 43339] [ID 43552]

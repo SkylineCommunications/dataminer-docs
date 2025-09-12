@@ -436,14 +436,6 @@ In the *ResetNATSCheck* timer of the SLNet-managed NATS solution, the credential
 
 When the *VerifyGRPCConnection* prerequisite check is performed on a DataMiner Agent that is not running, the error that is logged will now explain the problem clearer.
 
-#### STaaS: A failure notice will now be returned immediately when an operation could not be sent to STaaS [ID 43667]
-
-<!-- MR 10.6.0 - FR 10.5.11 -->
-
-Up to now, when DataMiner was not able to send an operation to STaaS, it had to wait until the write operation timed out before it got confirmation that the operation had failed.
-
-From now on, when DataMiner tries to send an operation of which the size exceeds the maximum package limit to STaaS, a failure notice will be returned immediately.
-
 #### Automation scripts: No attempts will be made anymore to automatically detect the interactive behavior of script libraries [ID 43673]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
