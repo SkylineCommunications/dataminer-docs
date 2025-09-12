@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.4.0_CU19
 ---
 
-# General Main Release 10.4.0 CU19 - Preview
+# General Main Release 10.4.0 CU19
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -93,9 +93,3 @@ When an element with DCF connections had correlation rules configured, up to now
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 When, in DataMiner Cube, matrix crosspoints were loaded or saved over a gRPC connection, in some cases, SLNet would interpret the messages incorrectly.
-
-#### Visual Overview in web apps: Problem when reading the load balancing configuration [ID 43660]
-
-<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 [CU0] -->
-
-In some cases, it would not be possible to read the load balancing configuration for visual overviews in web apps. As a result, the visual overview module would not be able to start up when load balancing was enabled.
