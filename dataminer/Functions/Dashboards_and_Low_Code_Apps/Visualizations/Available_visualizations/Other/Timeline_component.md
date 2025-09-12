@@ -4,55 +4,101 @@ uid: DashboardTimeline
 
 # Timeline
 
-> [!IMPORTANT]
-> The timeline component is in preview until DataMiner 10.4.1/10.5.0. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 37812-->.
 
-Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 37812-->. Prior to this, the component is available in soft launch from DataMiner 10.1.10 onwards, if the soft-launch option *ReportsAndDashboardsScheduler* is enabled.
-
-This component allows you to visualize and manage bookings, events, and other time-bound data (e.g. appointments and project timelines).
+The timeline component is a versatile tool tailored for managing bookings, events, and other time-bound data. It is not only useful as an overview of time-sensitive items, but also allows for near-unlimited customization.
 
 ![Timeline](~/dataminer/images/Timeline.png)<br>*Timeline component in DataMiner 10.4.5*
 
+with this component, you can:
+
+- See your time-bound data [organized by resource, assignee, or any other common attribute](#grouping-items-in-a-timeline).
+
+- Enjoy timeline items that reflect their context visually and let you interact with them intuitively.
+
+## Supported data types
+
+The timeline component is used to display the results of queries in a timeline format. It should therefore **always be configured with [query data input](xref:Query_Data)**.
+
+Each row in a query corresponds to an item on your timeline.
+
+## Grouping items in a timeline
+
+You can group items on a timeline to **organize them by a common attribute**, such as category, resource, or assignee. This allows you to quickly see which items belong together and makes it easier to compare groups side by side.
+
+To group items on the timeline based on one of the columns in your data<!--35638-->:
+
+1. Hover over the component and click the ![Groups](~/dataminer/images/NewRD_Groups.png) icon.
+
+   After you click this icon, compatible data will be marked with the ![available groups](~/dataminer/images/Group_Icon.png) icon in the *Data* pane.
+
+1. Drag compatible data onto the component.
+
+   All groups are now displayed in a gray column to the left of the timeline<!--RN 33694-->. The timeline items are displayed next to the group they are part of.
+
+   ![Timeline groups](~/dataminer/images/Groups_Timeline.png)
+
+   > [!NOTE]
+   > If a group is empty (i.e. there is no start and end time), it is still displayed in the timeline component<!--RN 35600-->.
+
+## Timeline layout
+
+In the *Layout* pane, you can find the default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
+
+Additionally, the following layout options are also available:
+
+| Section | Option | Description |
+|--|--|--|
+| Filtering & Highlighting | Highlight | Available from DataMiner 10.1.11/10.2.0 onwards<!--RN 33276-->. Toggle the switch to determine whether the items that match the criteria specified in a query filter will be highlighted. Enabled by default. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
+| Filtering & Highlighting | Opacity | Available from DataMiner 10.1.11/10.2.0 onwards<!--RN 33276-->. Set the level of transparency of the items that do not match the criteria specified in a query filter. This option is only available when *Highlight* is enabled. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
+| Advanced | Empty result message | Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Specify a custom message that is displayed when a query returns no results. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
+| Style | Grouping by | Toggle the switch to determine whether the name of the column the data was grouped by (optionally) is shown. Disabled by default. |
+| Style | Segment lines | Toggle the switch to determine whether segment lines are displayed in the timeline component. Enabled by default. |
+| Style | Lock timeline to now | Select the checkbox to set a "now" indicator at a fixed position on the timeline. When this option is enabled, users can zoom in and out on the timeline, but are restricted from panning past the indicator. Disabled by default. |
+| Item templates | Browse templates *or*<br>Reuse template (prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4) | Reuse a saved template from another component in the same dashboard or low-code app. This option is only available if a template is already in use<!--RN 42226-->. |
+| Item templates | Edit | Open the Template Editor<!--RN 34761--> to customize the appearance of timeline items and configure actions, such as opening a panel when a cell is selected. For more information, refer to [Customize grid items](#customizing-grid-items). |
+
+     - To reuse saved templates for components in the same dashboard or low-code app, click *Browse templates* next to the ![Browse templates](~/dataminer/images/Browse_Templates.png) button<!--RN 42226-->. Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, click *Reuse template* next to the ![reuse template](~/dataminer/images/Reuse_Template.png) button instead<!--RN 34948-->.
+
+       > [!NOTE]
+       > Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, the option to reuse a template is only available when another timeline component in the dashboard or low-code app is configured with a custom template.
+
+### Highlighting filtered results
+
+<!--There may be two ways to highlight filtered results. Research this and add both under this section.-->
+
+![Filtering & Highlighting](~/dataminer/images/Filtering_Highlighting.png)<br/>*Query filter and timeline components in DataMiner 10.4.1*
+
+### Customizing timeline items
+
+Using the Template Editor, you can fully **customize the appearance** of each timeline item. Additionally, [conditional cases](xref:Template_Editor#adding-conditional-cases-to-a-layer) allow you not only to modify how items look **when certain conditions are met**, but also to update their underlying data simultaneously.
+
+To access the Template Editor:
+
+1. In the *Layout* pane, navigate to the *Item templates* section.
+
+   This section shows a preview of the template currently applied to the timeline component.
+
+1. Click *Edit* to open the Template Editor.
+
+1. Make your changes as described under [Using the Template Editor](xref:Template_Editor).
+
+Some **real-life examples**:
+
+- In this example, the Template Editor was used to add an icon in the lower-left corner of each timeline item, indicating whether a task is not started, on hold, or active (represented by an hourglass, pause, or play icon, respectively).
+
+  ![Timeline - Change state](~/dataminer/images/TimelineChangeState.gif)<br>*Timeline component in DataMiner 10.5.4*
+
+  Beyond changing the visual appearance, actions were configured on the icon layer so that clicking it opens a context menu. This menu allows users to manually update the icon and, at the same time, modify the underlying task status via an Automation script.
+
+- In this example, the timeline component is used as an interactive TV schedule, styled with customized colors, icons, and more. A conditional case ensures that when a program has been recorded, a red dot appears in the top-right corner of the item.
+
+  ![Timeline - TV schedule](~/dataminer/images/TimelineTVSchedule.png)<br>*Timeline component in DataMiner 10.4.1*
+
+## Timeline settings
+
 ## Configuring the component
 
-1. [Add data to the component](xref:Adding_data_to_component). The timeline component should always be configured with *Queries* data input.
-
-1. Optionally, hover the mouse pointer over the component and click the ![filter](~/dataminer/images/DashboardsX_filter.png) icon. In the *Data* pane on the right, any data that cannot be added will become unavailable. Data that is compatible will be marked with the following icon: ![available filters](~/dataminer/images/Available_Filters.png)
-
-1. Optionally, add groups to the timeline component, so that you can group items on the timeline based on one of the columns in your data<!--35638-->:
-
-   1. Hover the mouse pointer over the component and click the ![Groups](~/dataminer/images/NewRD_Groups.png) icon.
-
-      In the *Data* pane on the right, any data that cannot be added will become unavailable. Data that is compatible will be marked with the following icon: ![available groups](~/dataminer/images/Group_Icon.png)
-
-      ![groups](~/dataminer/images/Example_Groups.png)<br/>*Data pane in DataMiner 10.4.1*
-
-   1. Drag compatible data onto the component.
-
-      All groups are now displayed in a gray column to the left of the timeline<!--RN 33694-->. The timeline items are displayed next to the group they are part of.
-
-      ![Timeline groups](~/dataminer/images/Groups_Timeline.png)
-
-      > [!NOTE]
-      > If a group is empty (i.e. there is no start and end time), it is still displayed in the timeline component<!--RN 35600-->.
-
-   1. To make sure users can see which group is selected, you can add a table component displaying the selected group:
-
-      1. Go to *Components* > *Timeline* > *Selected groups* > *Tables* in the *Data* pane, and drag it onto an empty section of the dashboard or low-code app page. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, use *Feeds > Timeline > Selected groups > Query rows* in the *Data* pane instead.
-  
-      1. Hover the mouse pointer over the component and click the ![visualization](~/dataminer/images/DashboardsX_visualizations00095.png) icon.
-
-      1. Select the table visualization.
-
-   1. To make sure users can see which item is selected, you can add a table component displaying the selected item:
-
-      1. Go to *Components* > *Timeline* > *Selected items* > *Tables* in the *Data* pane, and drag it onto an empty section of the dashboard or low-code app page. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, use *Feeds > Timeline > Selected items > Query rows* in the *Data* pane instead.
-
-      1. Hover the mouse pointer over the component and click the ![visualization](~/dataminer/images/DashboardsX_visualizations00095.png) icon.
-
-      1. Select the table visualization.
-
-      ![Selected group and item](~/dataminer/images/Selected_Items_Groups.png)<br/>*Timeline and table components in DataMiner 10.4.1*
 
    1. If you want to display the name of the column the data was grouped by, make sure the *Advanced > Style > Grouping by* setting is enabled in the *Layout* pane.
 
@@ -106,45 +152,7 @@ This component allows you to visualize and manage bookings, events, and other ti
 
      From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41251-->, a timeline linked to other data can be identified by the ![Unlink](~/dataminer/images/Unlink.png) icon displayed next to the *Time range* dropdown box. To unlink the timeline, click this icon and select *Unlink*.
 
-1. Fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
-   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
-
-   - *Filtering & Highlighting*: Available from DataMiner 10.1.11/10.2.0 onwards<!--RN 33276-->. Allows you to configure a number of filtering and highlighting options. However, note that the filtering options require the [Query filter component](xref:DashboardQueryFilter), available from DataMiner 10.3.9/10.4.0 onwards.
-
-     - *Highlight*: When this option is enabled, the items that match the filter will be highlighted. Enabled by default.
-
-     - *Opacity*: When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the items that do not match the filter.
-
-       > [!NOTE]
-       > When you disable the *Highlight* option, the items that do not match the filter will no longer be displayed and the remaining items will be reorganized.
-
-     ![Filtering & Highlighting](~/dataminer/images/Filtering_Highlighting.png)<br/>*Query filter and timeline components in DataMiner 10.4.1*
-
-   - *Advanced > Empty result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results.
-
-     > [!TIP]
-     > See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message).
-
-   - *Advanced > Style*: Allows you to edit the style of the timeline component. The following options are available:
-
-     - *Grouping by*: Determines whether the name of the column the data was grouped by (optionally) is displayed in the timeline component. Disabled by default.
-
-     - *Segment lines*: Determines whether segment lines are displayed in the timeline component. Enabled by default.
-
-     - *Lock timeline to now*: Determines whether a "now" indicator is set at a fixed position on the timeline. When this option is enabled, users can zoom in and out on the timeline, but are restricted from panning past the indicator. Disabled by default.
-
-   - *Item templates*: Allows you to freely customize the appearance of the timeline component items using the Template Editor<!--RN 33311-->.
-
-     - To access the Template Editor, click *Edit* next to the pencil icon.
-
-       > [!TIP]
-       > For more information on how to use the Template Editor to customize the appearance of component items, see [Using the Template Editor](xref:Template_Editor).
-
-     - To reuse saved templates for components in the same dashboard or low-code app, click *Browse templates* next to the ![Browse templates](~/dataminer/images/Browse_Templates.png) button<!--RN 42226-->. Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, click *Reuse template* next to the ![reuse template](~/dataminer/images/Reuse_Template.png) button instead<!--RN 34948-->.
-
-       > [!NOTE]
-       > Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, the option to reuse a template is only available when another timeline component in the dashboard or low-code app is configured with a custom template.
 
 ## Using the timeline component in read mode
 
@@ -228,3 +236,9 @@ The value of input for events can be configured to be **linked to data**. From D
 > - *ESCAPE*: When you press this key while interacting with an item on the timeline, you will cancel the interaction and move the item back to its original place.
 > - *SHIFT*: When you keep this key pressed while moving an item on the timeline, the movement will be more precise.
 > - *CONTROL*: When you move an item horizontally, a larger movement is needed to also make it move vertically (and vice versa). If you want to override this default behavior and move the item with precision, both vertically and horizontally, keep this key pressed.
+
+## Enabling the component in soft launch
+
+From DataMiner 10.1.10 onwards, the timeline component is available in soft launch, if the soft-launch option *ReportsAndDashboardsScheduler* is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
+If you use the preview version of the timeline component, its functionality may be different from what is described on this page.
