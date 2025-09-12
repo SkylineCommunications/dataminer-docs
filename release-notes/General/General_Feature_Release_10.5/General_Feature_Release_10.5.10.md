@@ -25,7 +25,7 @@ uid: General_Feature_Release_10.5.10
 ## Highlights
 
 - [DataMiner Object Models: Attachments can now be uploaded to a network share [ID 43114] [ID 43366]](#dataminer-object-models-attachments-can-now-be-uploaded-to-a-network-share-id-43114-id-43366)
-- [gRPC now used by default for communication between DataMiner Agents [ID 43190] [ID 43260] [ID 43305] [ID 43331] [ID 43435] [ID 43506]](#grpc-now-used-by-default-for-communication-between-dataminer-agents-id-43190-id-43260-id-43305-id-43331-id-43435-id-43506)
+- [gRPC now used by default for communication between DataMiner Agents [ID 43190] [ID 43260] [ID 43305] [ID 43331] [ID 43435] [ID 43506]](#grpc-now-used-by-default-for-server-server-and-server-client-communication-id-43190-id-43260-id-43305-id-43331-id-43435-id-43506)
 - [DataMiner Object Models: Definition-level security [ID 43380] [ID 43589]](#dataminer-object-models-definition-level-security-id-43380-id-43589)
 
 ## New features
