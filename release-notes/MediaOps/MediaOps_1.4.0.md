@@ -47,6 +47,10 @@ In Resource Studio, an icon has been added that indicates whether a capability o
 
 Though by default the time zone of the client machine is applied in the Scheduling app, this can be customized through user settings. Therefore, to ensure that operators have good visibility on the current time used in the Scheduling application, a clock has been added to both the *Job View* and *Resource View* pages.
 
+#### Scheduling: Sorting on Resources page now case-insensitive [ID 43721]
+
+On the *Resources* page of the Scheduling app, sorting of resources now ignores case. This way, the order of the resources will be more intuitive, preventing situations where, for example, "Ch6" is shown before "CH1".
+
 ### Fixes
 
 #### Resource Studio: Incorrect step size after change to number of decimals of capacity or configuration parameter of type number [ID_43580]
