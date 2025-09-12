@@ -160,7 +160,7 @@ Swarming has its own set of prerequisites. In this step, you will use a script f
 
 Once DataMiner has restarted, you can test the Swarming functionality by moving an element from one host to another host in your DMS. You will only be able to follow these steps if you are using a DataMiner System consisting of multiple Agents.
 
-1. Go to *System Center* > *Agents* > *Status* and click the *Swarm* button in the lower right corner.
+1. Go to *System Center* > *Agents* > *Status* and click the *Swarm* button in the lower-right corner.
 
    If you see a *Migrate* button here instead, this means Swarming has not been successfully enabled.
 

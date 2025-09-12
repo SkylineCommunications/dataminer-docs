@@ -82,7 +82,7 @@ Before the *Import new assets from Excel* button on the [*Complete assets overvi
 
 1. Select *IngestInstances* from the dropdown list in the *Filter* box.
 
-1. Select *Ok* in the lower right corner.
+1. Select *Ok* in the lower-right corner.
 
 ### Modifying the theme
 
@@ -146,7 +146,7 @@ To make sure the application looks as it was intended, modify the theme before y
 
    - *Color > Font color*: rgb(71,137,219)
 
-1. To save your theme, click *Create* in the lower right corner.
+1. To save your theme, click *Create* in the lower-right corner.
 
    ![Asset Management theme](~/dataminer/images/Asset_Management_Theme.png)<br/>*New theme pop-up window in DataMiner 10.4.3*
 

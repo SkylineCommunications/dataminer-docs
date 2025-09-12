@@ -233,7 +233,7 @@ In this step, you will use the light bulb feature to configure an alarm template
 
    ![Pop-up window with proposed configuration](~/dataminer/images/Memory_Usage_Task_Manager_Template_Improvement.gif)
 
-1. Accept the suggested improvement by clicking *Update alarm template* in the lower right corner of the pop-up window.
+1. Accept the suggested improvement by clicking *Update alarm template* in the lower-right corner of the pop-up window.
 
    The suggestion event now becomes a real alarm.
 
@@ -255,7 +255,7 @@ In this step, you will use the light bulb feature to configure an alarm template
 
    ![Popup suggesting to set an absolute threshold for level increases](~/dataminer/images/Memory_Usage_Java_Runtime_Template_Improvement.gif)
 
-1. Accept the suggested improvement by clicking *Update alarm template* in the lower right corner of the pop-up window.
+1. Accept the suggested improvement by clicking *Update alarm template* in the lower-right corner of the pop-up window.
 
    The alarm for the *Java Runtime* process now disappears, while the alarm for the *Google Chrome* process changes to critical.
 
@@ -280,7 +280,7 @@ In this step, you will use the light bulb feature to configure an alarm template
    >
    > ![The current configuration and the previous configuration](~/dataminer/images/Alarm_Template_Anomaly_Configuration_History_Button.gif)
 
-1. To accept the suggested improvement, select *Update alarm template* in the lower right corner of the pop-up window.
+1. To accept the suggested improvement, select *Update alarm template* in the lower-right corner of the pop-up window.
 
    The alarm for the *Microsoft Visual Studio* process disappears, while the alarm for the *Google Chrome* process remains.
 

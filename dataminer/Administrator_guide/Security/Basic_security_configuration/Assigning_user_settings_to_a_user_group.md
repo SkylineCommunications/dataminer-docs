@@ -12,7 +12,7 @@ To a user group, you can assign either a new set of user settings containing onl
 
 1. In DataMiner Cube, go to *Apps* > *Settings*.
 
-1. In the lower left corner of the *Settings* card, click *Configure group.*
+1. In the lower-left corner of the *Settings* card, click *Configure group.*
 
    > [!NOTE]
    > If you do not see the *Configure group* button, then you are not allowed to configure user group settings. In that case, ask your system administrator to grant you the necessary permissions.

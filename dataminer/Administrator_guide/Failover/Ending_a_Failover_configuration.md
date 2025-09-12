@@ -38,7 +38,7 @@ If the replication factor is correct, you can continue ending the Failover confi
 
 1. On the *Manage* tab, make sure the online DMA is selected in the list of DataMiner Agents.
 
-1. Click the *Failover* button in the lower right corner.
+1. Click the *Failover* button in the lower-right corner.
 
 1. In the *Failover* window, depending on your DataMiner version, select *No Failover*, or clear the selection from the *Failover* checkbox.
 

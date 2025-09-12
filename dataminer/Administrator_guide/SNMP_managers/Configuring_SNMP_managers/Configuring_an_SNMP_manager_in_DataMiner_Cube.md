@@ -171,4 +171,4 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
 
 1. If you want to enable the SNMP manager, go back to the *general* tab and select *Enable the forwarding of SNMP notifications.*
 
-1. Click the *Save* button in the lower right corner.
+1. Click the *Save* button in the lower-right corner.

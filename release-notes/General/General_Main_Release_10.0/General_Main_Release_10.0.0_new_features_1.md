@@ -230,7 +230,7 @@ There are several ways to manipulate the timeline in the Job Manager app:
 - Right-click on the timeline to mark a particular time with a red line.
 - Double-click with the left mouse button to jump to the present time on the timeline.
 
-In the lower right corner of the timeline, an arrow icon is displayed. Click this icon to display a preview pane, which also allows you to manipulate the timeline. The white area in this pane corresponds with the currently displayed timeline.
+In the lower-right corner of the timeline, an arrow icon is displayed. Click this icon to display a preview pane, which also allows you to manipulate the timeline. The white area in this pane corresponds with the currently displayed timeline.
 
 - Click and drag with the left mouse button in the preview pane in order to move the white area to a different time.
 - The white area displays a lock icon. Click this icon to toggle between locked and unlocked mode. In locked mode, dragging causes the white area to remain in place while the timeline itself is moved. In unlocked mode, it is the white area that is moved across the timeline.

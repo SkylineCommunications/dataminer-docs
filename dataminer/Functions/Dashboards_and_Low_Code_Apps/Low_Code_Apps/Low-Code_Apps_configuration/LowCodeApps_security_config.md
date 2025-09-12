@@ -34,7 +34,7 @@ When you configure a low-code app, you can specify which users can access and/or
    > - If a user has been given an access level both as an individual and as part of a group, the level with the most privileges is the one that counts.
    > - The built-in Administrator account always has full access to all apps.
 
-1. Click *Apply* in the lower right corner.
+1. Click *Apply* in the lower-right corner.
 
    ![Application settings](~/dataminer/images/Application_Settings.png)<br>*Low-Code Apps settings in DataMiner 10.4.10*
 

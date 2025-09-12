@@ -24,7 +24,7 @@ Create a default layout for the Alarm Console:
 
 1. Right-click the *Tab pages* column, and select *Add tab page > Active alarms*.
 
-1. Save your changes by clicking *Apply* in the lower right corner.
+1. Save your changes by clicking *Apply* in the lower-right corner.
 
 1. Reconnect to Cube.
 

@@ -42,7 +42,7 @@ To create a connectivity chain:
 
    1. Click *OK*. The included parameters are now indicated on the item in the chain.
 
-1. If necessary, click the *Options* button in the lower right corner to configure the following options for the chain:
+1. If necessary, click the *Options* button in the lower-right corner to configure the following options for the chain:
 
    - **Require alarms to occur on consecutive elements** **in the chain** ... : If this option is selected, the RCA level is reset if the parent element is not in alarm, even if other elements are in alarm higher up in the chain.
 

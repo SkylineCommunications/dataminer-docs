@@ -10,7 +10,7 @@ Alternatively, if you are already logged on, you can also change the connection 
 
 To change the connection settings on the login page:
 
-1. On the login page, click the cogwheel button in the lower right corner and select *Options* in the menu.
+1. On the login page, click the cogwheel button in the lower-right corner and select *Options* in the menu.
 
 1. In the *Edit Settings* window, set the *Connection Type* to one of the following values:
 

@@ -35,7 +35,7 @@ To save a Log Collector package:
    > [!NOTE]
    > If the DataMiner Taskbar Utility icon is missing from the taskbar, or if the Log Collector option is not present in the dropdown list, you can manually find the `C:\Skyline DataMiner\Tools\SLLogCollector\SL_LogCollector.exe` file or download it from [DataMiner Dojo](https://community.dataminer.services/download/sllogcollector/).
 
-1. In the *DataMiner Log Collector* pop-up window, select *Start* in the lower right corner.
+1. In the *DataMiner Log Collector* pop-up window, select *Start* in the lower-right corner.
 
    > [!NOTE]
    > If you want a memory dump to be saved, before starting the log collection, first select the checkbox next to *Include memory dump* and choose the required process(es) from the list. In the case of a run-time error, the necessary processes are selected automatically.
@@ -75,7 +75,7 @@ To do so, you will need to use SLNetClientTest tool. For detailed information, r
 
 If Cube is unable to connect to your DMA, export Cube debug information as follows:
 
-1. On the login page, click the cogwheel button in the lower right corner and select *About* in the menu.
+1. On the login page, click the cogwheel button in the lower-right corner and select *About* in the menu.
 
    ![Login page](~/dataminer/images/Login_Screen.png)<br/>*DataMiner Cube version 10.3.10*
 
@@ -85,7 +85,7 @@ If Cube is unable to connect to your DMA, export Cube debug information as follo
 
 You should also collect information to investigate why Cube could not connect to your DMA:
 
-1. Go to the DataMiner Cube start window, click the cogwheel button in the lower right corner, and select *View logging*.
+1. Go to the DataMiner Cube start window, click the cogwheel button in the lower-right corner, and select *View logging*.
 
    ![View Logging](~/dataminer/images/View_Logging.png)<br/>*DataMiner Cube version 10.3.10*
 

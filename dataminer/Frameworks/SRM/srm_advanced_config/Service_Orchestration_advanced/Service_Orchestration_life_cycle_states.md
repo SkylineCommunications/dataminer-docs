@@ -52,7 +52,7 @@ On a node in a service definition, you can configure that a script should run be
 
 1. Select the service definition and the node for which you want to run the script.
 
-1. In the *properties* pane in the lower right corner, add the *Created Booking Action* property, and specify a value in the following format (similar to the format used to link a shape to an Automation script in Visio):
+1. In the *properties* pane in the lower-right corner, add the *Created Booking Action* property, and specify a value in the following format (similar to the format used to link a shape to an Automation script in Visio):
 
    ```json
    {

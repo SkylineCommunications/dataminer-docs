@@ -146,7 +146,7 @@ In this step, you will configure an information template to change the way the p
 
    - *Alarm > Corrective actions*: `Rain, mask for 2 hours | Snow, mask for 3 hours`
 
-1. In the lower right corner, select *Apply* to save your changes.
+1. In the lower-right corner, select *Apply* to save your changes.
 
 1. Click *OK* to close the information template.
 
@@ -198,7 +198,7 @@ To enhance the way the table data are shown, in this step, you will assign an al
    > [!TIP]
    > See also: [Configuring normal alarm thresholds](xref:Configuring_normal_alarm_thresholds)
 
-1. In the lower right corner, select *Apply* to apply your changes.
+1. In the lower-right corner, select *Apply* to apply your changes.
 
 1. Click *OK* to close the alarm template.
 

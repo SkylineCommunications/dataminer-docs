@@ -26,7 +26,7 @@ If you are using an older installer, follow the steps below to install DataMiner
 
 1. Click next.
 
-   The progress of the installation will be displayed. A *cancel* button in the lower right corner allows you to cancel the installation process if necessary.
+   The progress of the installation will be displayed. A *cancel* button in the lower-right corner allows you to cancel the installation process if necessary.
 
 1. Once the installation is complete, click *next*.
 
@@ -106,7 +106,7 @@ If you are using an older, deprecated DataMiner installer, follow the steps belo
 
 1. Click *Next*.
 
-   The progress of the installation will be displayed. A *cancel* button in the lower right corner allows you to cancel the installation process if necessary.
+   The progress of the installation will be displayed. A *cancel* button in the lower-right corner allows you to cancel the installation process if necessary.
 
 1. Once the installation is complete, click *next*.
 

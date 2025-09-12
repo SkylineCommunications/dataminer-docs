@@ -11,7 +11,7 @@ To view a graphical representation of how two DMAs are set up as each other’s 
 
 1. In Cube, go to *Apps* > *System Center \> Agents*.
 
-1. In the lower right corner of the *manage* tab, click the *Failover* button.
+1. In the lower-right corner of the *manage* tab, click the *Failover* button.
 
 The screenshot below (from DataMiner 10.1.0) shows such a graphical representation with two teamed DMAs acting as one virtual DMA, with corporate IP address 10.10.54.2 and acquisition IP address 169.254.46.16. In the screenshot, the second DMA in the team is online, while the first one is standing by.
 

@@ -188,7 +188,7 @@ As predicted alarms are suggestion events and not actual alarms, they are shown 
 
    ![Changing severity of the alarm that will be triggered to major](~/dataminer/images/Proactive_Cap_Detection_Tutorial_SFP_AlarmSeverity.gif)
 
-1. Accept the suggested improvement by clicking *Update alarm template* in the lower right corner of the pop-up window.
+1. Accept the suggested improvement by clicking *Update alarm template* in the lower-right corner of the pop-up window.
 
    The suggestion event now becomes a real alarm with severity *Major* and is also visible in the *Active alarms* tab.
 

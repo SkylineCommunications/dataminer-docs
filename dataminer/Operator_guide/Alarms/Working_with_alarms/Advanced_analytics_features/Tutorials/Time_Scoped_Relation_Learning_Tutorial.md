@@ -114,11 +114,11 @@ Now that you have identified the memory leak problem, it is time to address it.
 
 1. Compare this trend graph to the *Available Physical Memory* trend graph:
 
-   1. Click the upward arrow in the lower right corner of the trending page to open the parameter pane.
+   1. Click the upward arrow in the lower-right corner of the trending page to open the parameter pane.
 
-   1. Select *Add parameter* in the lower left corner of the parameter pane.
+   1. Select *Add parameter* in the lower-left corner of the parameter pane.
 
-   1. Change the parameter to *Available Physical Memory* and click *Show trend* in the lower right corner of the parameter pane.
+   1. Change the parameter to *Available Physical Memory* and click *Show trend* in the lower-right corner of the parameter pane.
 
    > [!TIP]
    > See also: [Working with the parameter pane](xref:Working_with_the_parameter_pane)

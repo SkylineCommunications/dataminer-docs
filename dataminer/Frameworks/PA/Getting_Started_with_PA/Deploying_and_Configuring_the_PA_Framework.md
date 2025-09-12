@@ -86,7 +86,7 @@ To set up the initial configuration of the PA framework or to upgrade to a more 
 
 1. Go to *Automation* module in DataMiner Cube and select the *SRM_Setup* Automation script.
 
-1. In the lower right corner, select *Execute*.
+1. In the lower-right corner, select *Execute*.
 
 1. In the *Booking Manager Element Info* box, specify the value `{}`.
 

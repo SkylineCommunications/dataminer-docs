@@ -280,7 +280,7 @@ To make a layer of sourceType "overlay" display a JPG, PNG, or GIF image:
 
    - A path relative to `C:\Skyline DataMiner\Webpages\Maps\`.
 
-1. Anchor the image to the map by linking its top-left corner and lower right corner to map coordinates.
+1. Anchor the image to the map by linking its top-left corner and lower-right corner to map coordinates.
 
    - Inside the `<GroundOverlay>` tag, add a `<TopLeft>` and a `<BottomRight>` tag.
 
