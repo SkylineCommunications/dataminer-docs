@@ -27,4 +27,4 @@ To configure notifications in System Center:
 
 1. In the *Delivery types* column, select one or more notification types: *Alerter*, *Email* or *SMS* (i.e. text message).
 
-1. Click the *Apply* button in the lower right corner.
+1. Click the *Apply* button in the lower-right corner.

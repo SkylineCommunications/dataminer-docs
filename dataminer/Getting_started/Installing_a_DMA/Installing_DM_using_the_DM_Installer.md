@@ -66,7 +66,7 @@ To install DataMiner using the DataMiner Installer v10.4, follow the steps below
 
 1. Click *Install*.
 
-   The progress of the installation will be displayed. A *cancel* button in the lower right corner allows you to cancel the installation process if necessary.
+   The progress of the installation will be displayed. A *cancel* button in the lower-right corner allows you to cancel the installation process if necessary.
 
    Once the installation is complete, the configuration window will be displayed.
 

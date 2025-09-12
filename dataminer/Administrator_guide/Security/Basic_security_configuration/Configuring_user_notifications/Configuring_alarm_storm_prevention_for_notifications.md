@@ -20,7 +20,7 @@ Alarm storm prevention for notifications can be configured on three levels: on s
 
    1. Optionally, in the box below, enter a custom warning message that should be given when the alarm storm is triggered. If you do not enter a custom message, the default message displayed in the box will be used.
 
-1. In the lower right corner, click the *Apply* button.
+1. In the lower-right corner, click the *Apply* button.
 
 ## Configuring alarm storm settings on user/group level
 
@@ -40,7 +40,7 @@ Alarm storm prevention for notifications can be configured on three levels: on s
 
    1. In the box below, enter the warning message that should be given when the alarm storm is triggered.
 
-1. In the lower right corner, click the *Apply* button.
+1. In the lower-right corner, click the *Apply* button.
 
 > [!NOTE]
 > Alarm storm configuration on user level in Alerter is done in the Alerter application itself. For more information, see [Configuring alarm storm prevention in Alerter](xref:Configuring_Alerter_alarm_storm_prevention).

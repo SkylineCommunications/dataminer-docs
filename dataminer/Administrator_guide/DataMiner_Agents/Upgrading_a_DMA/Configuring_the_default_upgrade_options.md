@@ -27,4 +27,4 @@ To do so:
      > [!IMPORTANT]
      > We highly recommend that you set this to *Upgrade main and backup Agent simultaneously*.
 
-1. After you have configured the options to your preferences, click the *Save* button in the lower right corner.
+1. After you have configured the options to your preferences, click the *Save* button in the lower-right corner.

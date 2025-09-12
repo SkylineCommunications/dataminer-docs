@@ -47,7 +47,7 @@ The process DOM definition needs to be part of the *process_automation* module I
 
 1. Save the service definition with the *Save All* button.
 
-1. Select each activity individually and give it a meaningful label using the *Edit Label* button in the lower right corner.
+1. Select each activity individually and give it a meaningful label using the *Edit Label* button in the lower-right corner.
 
    > [!NOTE]
    > Labels must be unique across the entire process definition.

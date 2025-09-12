@@ -80,7 +80,7 @@ In this tab you can have an SLA recalculated for any period in the past and make
 
 1. Click the *Load* button.
 
-1. Click the *Generate Report* button in the lower right corner.
+1. Click the *Generate Report* button in the lower-right corner.
 
    The SLA will be recalculated taking into account the current configuration of the SLA, including filters, offline window, etc.
 

@@ -95,7 +95,7 @@ Before the migration to Cassandra can begin, the migration wizard has to check i
    > - When Automation scripts are checked for compliance, and incompatibilities are found, the line numbers where these occur are stored in the file *ScriptCache.txt*, in the folder `C:\Skyline DataMiner\System Cache`. For each script, the file lists the name followed by "true" or "false" depending on whether the script is compatible. If the script is incompatible, this is then followed by the number of the invalid script action (with the first action being 0) and the line number of the invalid line. If there are several incompatible lines, the line numbers are separated by semicolons.
    > - If a script is tagged as `[CassandraReady=false]`, it is considered incompatible and not checked further. As such, no information about such a script is included in ScriptCache.txt.
 
-1. Under *DataMiner Agent System Requirements*, check whether your system has adequate resources available for the migration. If not, you may need to upgrade your system before the migration is possible. There are also several options available. You may need to click the *More options* button in the lower right corner to see some of these options.
+1. Under *DataMiner Agent System Requirements*, check whether your system has adequate resources available for the migration. If not, you may need to upgrade your system before the migration is possible. There are also several options available. You may need to click the *More options* button in the lower-right corner to see some of these options.
 
    - *Migrate average trending*/*Migrate real-time trending*: By default, only average trending information for a period of one year up to now is migrated. However, you can select not to migrate any trending, or to also migrate real-time trending (which is by default for the last 24 hours).
 
@@ -120,7 +120,7 @@ Before the migration to Cassandra can begin, the migration wizard has to check i
    > [!NOTE]
    > The migration options you selected will be logged to *SLCassandraMigration.txt*.
 
-1. If your system does not meet the necessary requirements, you can exit the wizard to deal with the issues it pointed out, and then open it again later. You can also generate a report of the wizard’s findings with the *Retrieve report* button in the lower right corner.
+1. If your system does not meet the necessary requirements, you can exit the wizard to deal with the issues it pointed out, and then open it again later. You can also generate a report of the wizard’s findings with the *Retrieve report* button in the lower-right corner.
 
 > [!NOTE]
 > If only some Agents in a DMS meet the necessary requirements, it is possible to proceed with the migration for those Agents only, so that these can already benefit from the enhanced performance provided by the Cassandra database. However, note the following:

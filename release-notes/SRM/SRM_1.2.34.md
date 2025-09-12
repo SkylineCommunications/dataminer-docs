@@ -11,7 +11,7 @@ uid: SRM_1.2.34
 
 #### New Details icon in Booking Manager app [ID 37469]
 
-It is now possible to view the details of a booking in the Booking Manager application. To do so, when you have selected a booking on the timeline, click the *Details* icon in the lower right corner.
+It is now possible to view the details of a booking in the Booking Manager application. To do so, when you have selected a booking on the timeline, click the *Details* icon in the lower-right corner.
 
 #### SRM Framework Configuration BPA [ID 37417] [ID 37689]
 

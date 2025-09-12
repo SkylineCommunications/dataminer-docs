@@ -11,7 +11,7 @@ uid: PA_Creating_script_tasks
 
    For example, for a “Ping IP” activity, an input parameter could be “IP Address”.
 
-   1. In the *Parameters* tab, create an input parameter by selecting *Add parameter* in the lower left corner.
+   1. In the *Parameters* tab, create an input parameter by selecting *Add parameter* in the lower-left corner.
 
    1. Specify the following information:
 
@@ -27,7 +27,7 @@ uid: PA_Creating_script_tasks
 
    For example, for a “Ping IP” activity, possible output parameters could be “Ping Result” and “RTT”.
 
-   1. In the *Parameters* tab, create an output parameter by selecting *Add parameter* in the lower left corner.
+   1. In the *Parameters* tab, create an output parameter by selecting *Add parameter* in the lower-left corner.
 
    1. Specify the following information:
 

@@ -46,4 +46,4 @@ To create a redundancy group template:
 
 1. On the *Views* tab page, specify the view(s) where the redundancy group template should be created.
 
-1. Click the *Create* button in the lower right corner.
+1. Click the *Create* button in the lower-right corner.

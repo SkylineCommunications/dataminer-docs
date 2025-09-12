@@ -36,7 +36,7 @@ The *Report Ticket* page allows you to report a new ticket:
 
    - *Additional Contacts*: Optional. In this field, you can add an email per line. When the ticket is created, the confirmation email will have the specified contacts in CC.
 
-1. When all the necessary information is filled in, click *Next* in the lower right corner.
+1. When all the necessary information is filled in, click *Next* in the lower-right corner.
 
 1. On the *Ticket Details* tab, fill in the following information:
 
@@ -66,11 +66,11 @@ The *Report Ticket* page allows you to report a new ticket:
 
      - *None (not recommended)*
 
-1. When all the necessary information is filled in, click *Next* in the lower right corner.
+1. When all the necessary information is filled in, click *Next* in the lower-right corner.
 
 1. Optionally, on the *Attachments* tab, upload files related to the ticket.
 
-1. Click *Next* in the lower right corner.
+1. Click *Next* in the lower-right corner.
 
    The *Finish* tab will be displayed, which will show a summary of the ticket that will be created.
 

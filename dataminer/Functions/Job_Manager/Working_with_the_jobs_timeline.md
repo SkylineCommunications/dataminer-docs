@@ -27,7 +27,7 @@ There are several ways to manipulate the timeline:
     > [!NOTE]
     > If items on the same height are very close to each other, they will be merged into one aggregated item. Clicking such an item will select all the items it combines.
 
-In the lower right corner of the timeline, an arrow icon is displayed. Click this icon to display a preview pane, which also allows you to manipulate the timeline. The white area in this pane corresponds with the currently displayed timeline.
+In the lower-right corner of the timeline, an arrow icon is displayed. Click this icon to display a preview pane, which also allows you to manipulate the timeline. The white area in this pane corresponds with the currently displayed timeline.
 
 - Click and drag with the left mouse button in the preview pane in order to move the white area to a different time.
 

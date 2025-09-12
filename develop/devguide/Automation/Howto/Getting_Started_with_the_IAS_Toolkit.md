@@ -210,7 +210,7 @@ You can now publish the script to your DMA, using either of the following ways:
 
 If everything goes well, you will see your script in the Automation module in DataMiner Cube.
 
-To take a look at the script in action, click the *Execute* button in the lower right corner and then click *Execute now*.
+To take a look at the script in action, click the *Execute* button in the lower-right corner and then click *Execute now*.
 
    ![IAS4](~/develop/images/IAS4.png)
 

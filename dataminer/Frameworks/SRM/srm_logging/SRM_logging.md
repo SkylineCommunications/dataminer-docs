@@ -13,7 +13,7 @@ Two types of log files can be generated per booking:
 - Debug: Used by Skyline to investigate issues reported by end users.
 - Action: Contains details about actions done by users or by Automation (during orchestration).
 
-To view the logging for a booking, select the booking in the list or on the timeline in the Booking Manager app, and click the *Debug Log* or *Action Log* button in the lower right corner of the UI.
+To view the logging for a booking, select the booking in the list or on the timeline in the Booking Manager app, and click the *Debug Log* or *Action Log* button in the lower-right corner of the UI.
 
 This can for instance be useful in case a booking cannot be confirmed because not all mandatory items have been configured for it (resources, profile parameters, and profile instances). In that case, a line is added to the Debug log file. <!-- RN 31183 -->
 

@@ -163,7 +163,7 @@ To configure this setup:
 
 1. Specify the **File offload identifier**, which is the string used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
 
-1. Select *Add* in the lower right corner to add an empty Elasticsearch offload cluster to the list.
+1. Select *Add* in the lower-right corner to add an empty Elasticsearch offload cluster to the list.
 
    > [!NOTE]
    > You can add an unlimited number of Elasticsearch offload clusters. The order in which the multiple clusters are listed determines their priority within the configuration. You can move offload clusters up or down with the upwards and downwards arrows next to the name of the cluster. However, the main Elasticsearch configuration always retains the highest level of priority as it is the read database.

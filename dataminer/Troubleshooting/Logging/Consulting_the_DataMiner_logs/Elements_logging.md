@@ -58,4 +58,4 @@ To do so:
 1. Click the *Clear* button in the pane on the right.
 
     > [!NOTE]
-    > If one element is selected, the button is located in the lower right corner of the pane. If several elements are selected, it is displayed in the top-left corner.
+    > If one element is selected, the button is located in the lower-right corner of the pane. If several elements are selected, it is displayed in the top-left corner.

@@ -22,7 +22,7 @@ There are two possibilities to uninstall a DataMiner Agent:
    > [!CAUTION]
    > Once you have clicked *Uninstall*, there is no way to gracefully stop the uninstallation process.
 
-   The progress of the uninstallation will be displayed. With the *Open logs* button in the lower right corner, you can see more detailed log information if necessary.
+   The progress of the uninstallation will be displayed. With the *Open logs* button in the lower-right corner, you can see more detailed log information if necessary.
 
 1. Click *Close*.
 

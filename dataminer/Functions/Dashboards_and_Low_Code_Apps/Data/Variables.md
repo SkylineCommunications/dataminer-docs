@@ -94,6 +94,6 @@ To create a new variable:
         >
         >   ![Right-click menu](~/dataminer/images/Variables_Right-click_Menu.png)<br>*Table editor in DataMiner 10.4.12*
 
-     1. Click *Save* in the lower right corner.
+     1. Click *Save* in the lower-right corner.
 
 1. Click the ![stop editing](~/dataminer/images/Stop_Editing.png) button to stop editing the variable.

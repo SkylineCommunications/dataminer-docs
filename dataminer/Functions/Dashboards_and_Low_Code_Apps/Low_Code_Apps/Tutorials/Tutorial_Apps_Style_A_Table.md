@@ -392,7 +392,7 @@ Now that the table component is configured, enable the first table column, *Orde
    1. In the *Layers* tab, select the rectangle layer and click *Configure actions* in the *Settings* pane.
 
       > [!TIP]
-      > You can recognize the type of layer by the symbol displayed in the lower left corner. For a rectangle layer, a rectangle icon is displayed.
+      > You can recognize the type of layer by the symbol displayed in the lower-left corner. For a rectangle layer, a rectangle icon is displayed.
 
       ![Configure action](~/dataminer/images/ConfigureAction.png)
 
@@ -402,9 +402,9 @@ Now that the table component is configured, enable the first table column, *Orde
 
       ![Configure action URL](~/dataminer/images/ConfigureActionPopup.png)
 
-   1. To save the new hyperlink, click *Ok* in the lower right corner.
+   1. To save the new hyperlink, click *Ok* in the lower-right corner.
 
-   1. To save all changes, click *Save* in the lower right corner of the Template Editor.
+   1. To save all changes, click *Save* in the lower-right corner of the Template Editor.
 
       Once the app has been published, when you click a table cell in the *Order ID* column, a Google search page opens with results for that order ID.
 
@@ -432,7 +432,7 @@ For the second column, *Created*, ensure a more visually appealing styling by ce
 
    ![Change text color](~/dataminer/images/ChangeTextColor.png)
 
-1. To save all changes, click *Save* in the lower right corner of the Template Editor.
+1. To save all changes, click *Save* in the lower-right corner of the Template Editor.
 
 1. Optionally, you can repeat these steps for the *Profit* column to apply similar styling.
 
@@ -508,7 +508,7 @@ For the fourth column, *Fulfillment*, follow these steps to incorporate conditio
 
      Click *Apply* to save these changes.
 
-  1. To save all changes, click *Save* in the lower right corner of the Template Editor.
+  1. To save all changes, click *Save* in the lower-right corner of the Template Editor.
 
 Optionally, you can repeat these steps for the *States* column to apply similar styling.
 
@@ -593,7 +593,7 @@ To conclude this tutorial, incorporate a context menu into the table.
 
    ![Add context menu icon](~/dataminer/images/AddContextMenuIcon.png)
 
-1. Click *Save* in the lower right corner to briefly exit the Template Editor.
+1. Click *Save* in the lower-right corner to briefly exit the Template Editor.
 
 1. Select a row in the table component.
 
@@ -651,9 +651,9 @@ To conclude this tutorial, incorporate a context menu into the table.
 
            ![Configure action](~/dataminer/images/ConfigureGoogleAction2.gif)
 
-1. Click *Ok* in the lower right corner to save the context menu.
+1. Click *Ok* in the lower-right corner to save the context menu.
 
-1. To save all changes, click *Save* in the lower right corner of the Template Editor.
+1. To save all changes, click *Save* in the lower-right corner of the Template Editor.
 
 1. Publish the low-code app and test the result.
 
