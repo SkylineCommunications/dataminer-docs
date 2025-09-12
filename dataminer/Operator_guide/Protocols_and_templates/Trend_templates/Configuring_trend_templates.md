@@ -39,7 +39,10 @@ To configure a trend template:
 
    - For **dynamic table parameters**, select a parameter and use one of the following options if necessary:
 
-     - Specify a mask in the filter column to apply the trend configuration only to a filtered selection of available rows of the dynamic table.
+     - Specify a mask in the filter column to apply the trend configuration only to a filtered selection of available rows of the dynamic table. The filter is applied on the display key of the row. When there is no display key, the primary key is used instead.
+    
+       > [!NOTE]
+       > You can use the wildcard characters \* and ? in this filter mask. For more information on wildcards, see [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters).
 
      - Duplicate column parameters using the *+* button to define different trending with different filters.
 
