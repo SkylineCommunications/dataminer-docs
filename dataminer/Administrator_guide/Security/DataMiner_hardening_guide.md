@@ -42,7 +42,7 @@ After you have run a BPA test, it will provide an overview of the detected issue
 
 From DataMiner 10.5.10/10.6.0 onwards<!-- RN 43506 -->, Cube uses gRPC by default to communicate with DataMiner, which means no further action is needed to secure this communication.
 
-However, prior to this, Cube uses .NET Remoting to communicate with DataMiner. This communication is encrypted using the Rijndael algorithm using a 256-bit key, which is negotiated over a 1024-bit RSA encrypted communication channel. However, .NET Remoting is a legacy technology and is widely considered insecure. Therefore, starting from DataMiner 10.3.2/10.3.0, we recommend that you manually enable gRPC for the client-server connection.
+However, prior to this or when manually configured, Cube uses .NET Remoting to communicate with DataMiner. This communication is encrypted using the Rijndael algorithm using a 256-bit key, which is negotiated over a 1024-bit RSA encrypted communication channel. However, .NET Remoting is a legacy technology and is widely considered insecure. Therefore, starting from DataMiner 10.3.2/10.3.0, we recommend that you manually enable gRPC for the client-server connection.
 
 To manually enable gRPC for the client-server connection, edit the *ConnectionSettings.txt* file on each DataMiner Agent. For detailed information, refer to [ConnectionSettings.txt](xref:ConnectionSettings_txt).
 
