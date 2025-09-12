@@ -98,6 +98,12 @@ Also, when a shape showing a trend component was configured to not show the bott
 
 When, in Cube's *Bookings* module (or the *Skyline Booking Manager* connector), the *List View* component was configured to show a custom culture-invariant DateTime property, up to now, the listed bookings would be sorted incorrectly.
 
+#### Trending: Exception values not marked as such would be interpreted as valid trend points without Y axis label [ID 43696]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+In a trend graph showing trending of string values, in some cases, exception values would incorrectly not be marked as such, causing DataMiner to interpret those values as valid trend points without Y axis label.
+
 #### Problem when sending a ParameterChangeEventMessage for a non-string parameter [ID 43701]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
