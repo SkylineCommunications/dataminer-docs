@@ -436,6 +436,12 @@ In the *ResetNATSCheck* timer of the SLNet-managed NATS solution, the credential
 
 When the *VerifyGRPCConnection* prerequisite check is performed on a DataMiner Agent that is not running, the error that is logged will now explain the problem clearer.
 
+#### CPE: Enhanced performance [ID 43654]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+Because of a number of enhancements in the aggregation module, overall performance has increased.
+
 #### Automation scripts: No attempts will be made anymore to automatically detect the interactive behavior of script libraries [ID 43673]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->

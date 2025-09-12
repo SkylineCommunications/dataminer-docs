@@ -83,6 +83,12 @@ The CloudGateway DxM will only be upgraded when an older version is found on the
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### CPE: Enhanced performance [ID 43654]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+Because of a number of enhancements in the aggregation module, overall performance has increased.
+
 #### STaaS: A failure notice will now be returned immediately when an operation could not be sent to STaaS [ID 43667]
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
