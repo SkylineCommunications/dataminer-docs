@@ -4,6 +4,9 @@ uid: General_Main_Release_10.4.0_CU18
 
 # General Main Release 10.4.0 CU18
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Main Release 10.4.0 CU18](xref:Cube_Main_Release_10.4.0_CU18).

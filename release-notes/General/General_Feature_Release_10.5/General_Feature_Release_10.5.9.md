@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.5.9
 
 # General Feature Release 10.5.9
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 > [!IMPORTANT]
 >
 > Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
