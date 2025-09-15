@@ -56,16 +56,20 @@ Additionally, the following layout options are also available:
 | Style | Segment lines | Toggle the switch to determine whether segment lines are displayed in the timeline component. Enabled by default. |
 | Style | Lock timeline to now | Select the checkbox to set a "now" indicator at a fixed position on the timeline. When this option is enabled, users can zoom in and out on the timeline, but are restricted from panning past the indicator. Disabled by default. |
 | Item templates | Browse templates *or*<br>Reuse template (prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4) | Reuse a saved template from another component in the same dashboard or low-code app. This option is only available if a template is already in use<!--RN 42226-->. |
-| Item templates | Edit | Open the Template Editor<!--RN 34761--> to customize the appearance of timeline items and configure actions, such as opening a panel when a cell is selected. For more information, refer to [Customize grid items](#customizing-grid-items). |
+| Item templates | Edit | Open the Template Editor<!--RN 34761--> to customize the appearance of timeline items and configure actions triggered when a layer is selected. For more information, refer to [Customizing timeline items](#customizing-timeline-items). |
 
-     - To reuse saved templates for components in the same dashboard or low-code app, click *Browse templates* next to the ![Browse templates](~/dataminer/images/Browse_Templates.png) button<!--RN 42226-->. Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, click *Reuse template* next to the ![reuse template](~/dataminer/images/Reuse_Template.png) button instead<!--RN 34948-->.
-
-       > [!NOTE]
-       > Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, the option to reuse a template is only available when another timeline component in the dashboard or low-code app is configured with a custom template.
+> [!NOTE]
+>
+> - When you disable the *Highlight* option, items that do not match the filter will no longer be displayed, and the remaining items will be reorganized.
+> - Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, the option to reuse a template is only available when another timeline component in the dashboard or low-code app is configured with a custom template.
 
 ### Highlighting filtered results
 
 <!--There may be two ways to highlight filtered results. Research this and add both under this section.-->
+
+When the *Use highlighting* option is enabled, the section of the timeline that falls within the set time range receives a different background color determined by the [dashboard theme](xref:Configuring_the_dashboard_layout#customizing-the-dashboard-theme) or the [low-code app theme](xref:LowCodeApps_Layout#customizing-the-theme-for-a-low-code-app-page). Events that (partially) occur within this set time range are displayed with normal opacity, while those outside the time range are displayed with lowered opacity. Disabled by default<!--RN 33639-->.
+
+![Highlight](~/dataminer/images/Timeline_Highlight.png)<br/>*Timeline component in DataMiner 10.4.1*
 
 ![Filtering & Highlighting](~/dataminer/images/Filtering_Highlighting.png)<br/>*Query filter and timeline components in DataMiner 10.4.1*
 
@@ -97,85 +101,42 @@ Some **real-life examples**:
 
 ## Timeline settings
 
-## Configuring the component
+In the *Settings* pane for this component, you can customize its behavior to suit your requirements.
 
+| Section | Option | Description |
+|--|--|--|
+| WebSocket settings | Inherit WebSocket settings from page/panel | Clear the checkbox to use a custom polling interval for this component. When cleared, you can specify a different polling interval (in seconds). |
+| General | Timeline | Configure the start and end times of the timeline component. When you add a new timeline component, this is automatically configured<!--RN 33657-->. |
+| General | Override dynamic units | Clear the checkbox to prevent parameter units from changing dynamically based on their value and protocol definition. Disabled by default. |
+| General | Use dynamic units | Determine whether parameter units will change dynamically based on their value and protocol definition. This option is only available if *Override dynamic units* is enabled. |
+| General | Default time range | Select a time range to zoom the timeline to, e.g. *Today*, *Last 7 days*, or *Next hour*. Options are grouped into the following categories: *Still busy*, *In the past*, *Near future*, *Recently*, *Long run*, *Starting from now*, and *Distant future*. If you select *Custom*, you can set a custom start and end time. Default: *Still busy, This week*<!--RN 33287-->. |
+| General | Link time range | Synchronize the timeline's time range with another dashboard or app component. Any changes in the linked component's time range are automatically applied to the timeline. |
+| Data retrieval | Update data | Toggle the switch to determine whether the data in the timeline should be refreshed automatically (provided this is supported by the data source). See [Query updates](xref:Query_updates)<!--RN 37269-->. Disabled by default. |
+| Events | On range select | Available from DataMiner 10.3.0 CU14/10.4.0 CU2/10.4.5 onwards<!-- RN 39254 -->. Configure an action that is triggered when a section of the timeline is selected using the right mouse button. |
+| Events | On item resize | Available from DataMiner 10.3.0 CU14/10.4.0 CU2/10.4.5 onwards<!-- RN 39254 -->. Configure an action that is triggered when an item on the timeline is resized. A timeline item can only resized if at minimum one action has been configured that is triggered on item resize. |
+| Events | On item move | Available from DataMiner 10.3.0 CU14/10.4.0 CU2/10.4.5 onwards<!-- RN 39254 -->. Configure an action that is triggered when an item on the timeline is moved. |
+| Events | On group change | Available from DataMiner 10.3.0 CU14/10.4.0 CU2/10.4.5 onwards<!-- RN 39254 -->. Configure an action that is triggered when an item on the timeline is moved to another group. |
+| Highlight range | Use highlighting | Toggle the switch to determine whether a configured time range in the timeline component is highlighted. See [Highlighting filtered results](#highlighting-filtered-results). |
 
-   1. If you want to display the name of the column the data was grouped by, make sure the *Advanced > Style > Grouping by* setting is enabled in the *Layout* pane.
+> [!NOTE]
+>
+> - The timeline component has a minimum time range of 5 milliseconds and a maximum of 10 years<!--RN 35620-->.
+> - When you enable the *Update data* setting, real-time updates will only be applied for the data sources and operators listed on the [Query updates](xref:Query_updates) page. Prior to DataMiner 10.4.0/10.4.3<!-- RN 37372 -->, data will only be updated every 30 seconds, and this will only be applied for GQI queries using the [Get parameter table by ID](xref:Get_parameter_table_by_ID) data source.
 
-1. Optionally, customize the following component options:
+## Adjusting the displayed time range
 
-   - *WebSocket settings*: Determines whether the websocket settings configured in the page/panel settings should be applied to this component. Enabled by default.
+A timeline component displays time-bound data within a set time range. The default time range that is displayed can be configured in the [timeline settings](#timeline-settings).
 
-   - *General > Timeline*: Allows you to configure the start and end times of the timeline component. When you add a new timeline component, this is automatically configured<!--RN 33657-->.
+When interacting with the timeline component in read mode, you can adjust the displayed time range by using the zooming functionalities:
 
-   - *General > Override dynamic units*: Disables parameter units from changing dynamically based on their value and protocol definition. Disabled by default.
+- To **zoom in** on the timeline component, press Ctrl while scrolling up.
 
-   - *General > Use dynamic units*: When the *Override dynamic units* option is enabled, this option will allow you to determine whether parameter units will change dynamically based on their value and protocol definition.
+- To **zoom out**, press Ctrl while scrolling down.
 
-   - *General > Default time range*: Allows you to select an option with a particular time to zoom to this time on the timeline, e.g. *Today*, *Last 7 days*, *Next hour*, etc. The options are divided into the following categories: *Still busy*, *In the past*, *Near future*, *Recently*, *Long run*, *Starting from now*, and *Distant future*. Set to *Still busy, This week* by default<!--RN 33287-->.
+On mobile devices<!--RN 35619-->, you can zoom in on the component by placing two fingers together on the screen and moving them apart. To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
 
-     If you select *Custom*, you can set a custom start and end time.
-
-     ![Custom time range](~/dataminer/images/Default_Time_Range.png)<br/>*Settings timeline component in DataMiner 10.4.1*
-
-     > [!NOTE]
-     > The component has a minimum time range of 5 milliseconds and a maximum of 10 years<!--RN 35620-->.
-
-     To synchronize the time range of the timeline with that of another component in the dashboard or low-code app, click the ![Link to data](~/dataminer/images/Link_to_Data.png) icon next to *Link time range* (Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->: *Link time range to feed*) and select the component from the dropdown list, such as a time range component.
-
-     Modifying the default time frame for this component will automatically synchronize the time range for any linked timeline component as well. The timeline will dynamically adjust to the selected time range of the linked component. For example, if you switch the time range in the linked component to *This week*, the timeline will automatically update to display the corresponding time frame.
-
-     From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41251-->, a timeline linked to other data can be identified by the ![Unlink](~/dataminer/images/Unlink.png) icon displayed next to *Link time range*. To unlink the timeline, click this icon and select *Unlink*.
-
-     > [!NOTE]
-     > To add a [time range component](xref:DashboardTimeRange) to the dashboard or low-code app that displays the time range configured for the timeline component<!--RN 33287-->:
-     >
-     > 1. Select *Timeline > Viewport > Timespans* in the *Components* section of the *Data* pane. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12, this data source can be found in the *Feeds* section of the *Data* pane.
-     > 1. Drag it onto an empty section of the dashboard or low-code app page.
-     >
-     > When you manually adjust the time range by zooming in or out, or by moving across the timeline component, the time range displayed in the time range component will automatically be adjusted.
-     >
-     > Note that modifying the time range displayed in the time range component will not update the time range displayed in the timeline component, unless it has been linked to that time range component in the *Default time range* settings.
-
-   - *Data retrieval > Update data*: Allows the component to be updated in real time, if the data supports this (see [Query updates](xref:Query_updates)). Disabled by default.
-
-     > [!NOTE]
-     > If you enable this setting, real-time updates will only be applied for the data sources and operators listed on the [Query updates](xref:Query_updates) page. Prior to DataMiner 10.4.0/10.4.3<!-- RN 37372 -->, data will only be updated every 30 seconds, and this will only be applied for GQI queries using the [Get parameter table by ID](xref:Get_parameter_table_by_ID) data source.
-
-   - *Events*: See [Configuring events and actions](#configuring-events-and-actions).
-
-   - *Highlight range > Use highlighting*: Determines whether a configured time range in the timeline component is highlighted. When this option is enabled, the section of the timeline that falls within the set time range receives a different background color determined by the [dashboard theme](xref:Configuring_the_dashboard_layout#customizing-the-dashboard-theme) or the [low-code app theme](xref:LowCodeApps_Layout#customizing-the-theme-for-a-low-code-app-page). Events that (partially) occur within this set time range are displayed with normal opacity, while those outside the time range are displayed with lowered opacity. Disabled by default<!--RN 33639-->.
-
-     ![Highlight](~/dataminer/images/Timeline_Highlight.png)<br/>*Timeline component in DataMiner 10.4.1*
-
-     To link the time range of another component in the dashboard or low-code app to the timeline component, click the ![Link to data](~/dataminer/images/Link_to_Data.png) icon next to the *Time range* dropdown box, and select the desired component from the dropdown list. Adjusting the highlight time range of this chosen component will automatically synchronize the time range for the linked timeline component as well.
-
-     From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41251-->, a timeline linked to other data can be identified by the ![Unlink](~/dataminer/images/Unlink.png) icon displayed next to the *Time range* dropdown box. To unlink the timeline, click this icon and select *Unlink*.
-
-
-
-## Using the timeline component in read mode
-
-- In read mode, you can manipulate the timeline component to navigate through the scheduled events, bookings, or time-bound data.
-
-  - Adjusting the **displayed time range**:
-
-    - From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the *Advanced* > *Hold Ctrl to zoom* setting in the *Settings* pane:
-
-      - When this setting is enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
-
-      - When this setting is disabled: Scroll up or down to zoom in or out. This is the default option.
-
-    - Prior to DataMiner 10.4.0 [CU10]/10.5.1:
-
-      - To **zoom in** on the timeline component, press Ctrl while scrolling up.
-
-      - To **zoom out**, press Ctrl while scrolling down.
-
-    - When you are using a mobile device<!--RN 35619-->, you can zoom in on the component by placing two fingers together on the screen and moving them apart. To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
-
-    > [!NOTE]
-    > The component has a minimum time range of 5 milliseconds and a maximum of 10 years, setting the zoom limit<!--RN 35620-->.
+> [!NOTE]
+> The component has a minimum time range of 5 milliseconds and a maximum of 10 years, setting the zoom limit<!--RN 35620-->.
 
   - To **move left or right** across the timeline component, click the timeline and drag the mouse. When you are using a mobile device<!--RN 35619-->, you can move left or right by sliding one finger across the component.
 
@@ -186,32 +147,51 @@ Some **real-life examples**:
 
 - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select an item in the timeline**, it will by default be highlighted with a blue border and a light-blue background. This can for instance be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Timeline* > *Selected groups* / *Selected time ranges*) is used in a linked component, clearly indicating which data is driving the content in the linked component.
 
-## Configuring events and actions
-
-From DataMiner 10.3.0 CU14/10.4.0 CU2/10.4.5 onwards<!-- RN 39254 -->, in the component options for a timeline component in a low-code app, you can configure the following **events** to trigger actions:
-
-- *On Range select*: Triggered when a section of the timeline is selected using the right mouse button.
-
-- *On item resize*: Triggered when an item on the timeline is resized.
-
-- *On item move*: Triggered when the time slot of an item on the timeline is changed.
-
-- *On group change*: Triggered when an item on the timeline is moved to another group.
-
-![Events](~/dataminer/images/Events_Setting.png)<br/>*Events setting in DataMiner 10.4.5*
-
-> [!NOTE]
+> [!TIP]
+> When interacting with the timeline, from DataMiner 10.3.0 CU14/10.4.0 CU2/10.4.5 onwards<!-- RN 39254 -->, you can use the following keys:
 >
-> - These events can only be triggered when they have actions configured. For example, an item will only be resized when at least one action has been configured for the *Item resize* event.
-> - While the *On range select* event is timeline-based, other events can have a different configuration for each query on the timeline. For example, if there are multiple queries on the timeline, and you move an item belonging to a certain query, the timeline will look at the configuration of actions for the *On move* event of that specific query to decide which actions to execute.
+> - *ESCAPE*: When you press this key while interacting with an item on the timeline, you will cancel the interaction and move the item back to its original place.
+> - *SHIFT*: When you keep this key pressed while moving an item on the timeline, the movement will be more precise.
+> - *CONTROL*: When you move an item horizontally, a larger movement is needed to also make it move vertically (and vice versa). If you want to override this default behavior and move the item with precision, both vertically and horizontally, keep this key pressed.
 
-You can configure the following **[component actions](xref:LowCodeApps_event_config#executing-a-component-action)** to be triggered by these events:
+## Adding actions to a timeline
 
-- *Fetch the data*: Fetches the data for the component. This action is already available as from DataMiner 10.2.10/10.3.0 for all components using query data as input.
+From DataMiner 10.3.0 CU14/10.4.0 CU2/10.4.5 onwards<!-- RN 39254 -->, you can configure actions for any timeline component you add to a low-code app. This feature is not available in the Dashboards app.
 
-- *Highlight time range*: Highlights a range on the timeline component. The highlighted section will expose data in the form of a *Timespan* object. If multiple sections are highlighted, the data will contain an array of *Timespan* objects.
+To configure actions:
+
+1. In the *Settings* pane, expand the [*Events* section](#timeline-settings).
+
+1. Choose one of the available event types:
+
+   - *On range select*: This event takes place when a section of the timeline is selected using the right mouse button.
+
+   - *On item resize*: This event takes place when an item on the timeline is resized.
+
+   - *On item move*: This event takes place when an item on the timeline is moved.
+
+   - *On group change*: This event takes place when an item on the timeline is moved to another group.
+
+   > [!NOTE]
+   > While the *On range select* event is timeline-based, other events can have a different configuration for each query on the timeline. For example, if there are multiple queries on the timeline, and you move an item belonging to a certain query, the timeline will look at the configuration of actions for the *On move* event of that specific query to decide which actions to execute.
+
+1. Click *Configure actions* next to your chosen event type.
+
+1. Configure any of the available actions, as detailed under [Configuring low-code app events](xref:LowCodeApps_event_config#navigating-to-a-url).
+
+### Timeline component actions
+
+Component actions are operations that can be executed on a component when an event is triggered.
+
+When you select the [*Execute component action* option](xref:LowCodeApps_event_config#executing-a-component-action), you can choose from a list of components in the app and the specific actions available for each of them.
+
+For the timeline component, the following component actions are available:
 
 - *Clear highlights*: Clears all highlights set by *Highlight time range* actions.
+
+- *Fetch the data*: Available from DataMiner 10.2.10/10.3.0 onwards. Fetches the data for the component.
+
+- *Highlight time range*: Highlights a range on the timeline component. The highlighted section will expose data in the form of a *Timespan* object. If multiple sections are highlighted, the data will contain an array of *Timespan* objects.
 
 - *Set viewport*: Sets the viewport of the timeline to a certain time range<!-- RN 39254 -->.
 
@@ -229,13 +209,6 @@ The value of input for events can be configured to be **linked to data**. From D
 - *Group change*: Provides information about the current state of the item and the new state, both as *Query row* objects.
 
 ![Event info](~/dataminer/images/Event_Info_Configured.png)<br/>*Event editor in DataMiner 10.4.5*
-
-> [!TIP]
-> When interacting with the timeline, from DataMiner 10.3.0 CU14/10.4.0 CU2/10.4.5 onwards<!-- RN 39254 -->, you can use the following keys:
->
-> - *ESCAPE*: When you press this key while interacting with an item on the timeline, you will cancel the interaction and move the item back to its original place.
-> - *SHIFT*: When you keep this key pressed while moving an item on the timeline, the movement will be more precise.
-> - *CONTROL*: When you move an item horizontally, a larger movement is needed to also make it move vertically (and vice versa). If you want to override this default behavior and move the item with precision, both vertically and horizontally, keep this key pressed.
 
 ## Enabling the component in soft launch
 
