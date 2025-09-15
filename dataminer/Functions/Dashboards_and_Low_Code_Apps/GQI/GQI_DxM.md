@@ -78,7 +78,7 @@ The `MessageHandler` manages requests from clients to the GQI DxM. Requests are 
 You can configure the following options in the `MessageHandlerOptions` in the *appsettings.custom.json* file:
 
 - **RequestTimeout**: Maximum time a request can take before timing out (default: 15 minutes). This includes the time in the queue.
-- **MaxConcurrentRequests**: Maximum number of requests that can be processed at the same time (default: 100).
+- **MaxConcurrentRequests**: Maximum number of requests that can be processed at the same time (default: 100). Note that prior to DataMiner 10.5.0 [CU8]/10.5.11<!-- RN 43730 -->, a lower default number of 20 is applied.
 - **MaxPendingRequests**: Maximum number of requests allowed in the queue (default: 1000).
 
 Example configuration:
