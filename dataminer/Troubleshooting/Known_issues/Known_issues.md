@@ -22,6 +22,7 @@ uid: Known_issues
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Performance decrease when restarting elements that export large numbers of DVEs or VFs](xref:KI_Performance_decrease_restart_element) | DataMiner 10.5.9 | DataMiner 10.5.10 | September 15, 2025 |
 | [SLScripting issue with non-English system locale](xref:KI_SLScripting_issue_non_English_system) | From DataMiner 10.4.0 [CU18]/10.5 [CU6]/10.5.9 onwards | DataMiner 10.4.0 [CU18] build 16295/10.5 [CU6] build 16294/10.5.9 build 16293 | September 9, 2025 |
 | [SLNet memory leak caused by ClusterEndpoint.json sync](xref:KI_ClusterEndpoint_SLNet_leak) | DataMiner 10.5.0 [CU4] build 15943, 10.5.0 [CU5] build 16086, 10.5.7, and 10.5.8 | DataMiner 10.5.0 [CU4] build 16239, 10.5.0 [CU5] build 16243, 10.5.0 [CU6], 10.5.7 [CU1], 10.5.8 [CU1], and 10.5.9 | August 19, 2025 |
 | [SRM scheduler unresponsive](xref:KI_SRM_scheduler_unresponsive) | DataMiner 10.5.6 and 10.5.7 | DataMiner 10.5.8/10.6.0 | July 4, 2025|
