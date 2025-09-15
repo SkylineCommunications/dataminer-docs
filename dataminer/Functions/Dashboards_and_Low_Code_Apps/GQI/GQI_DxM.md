@@ -70,3 +70,25 @@ See the following example. Idle child processes will be terminated within the co
   }
 }
 ```
+
+### Message handler configuration
+
+The `MessageHandler` manages requests from clients to the GQI DxM. Requests are placed in a queue, and a specified number of requests can be processed concurrently.
+
+You can configure the following options in the `MessageHandlerOptions` in the *appsettings.custom.json* file:
+
+- **RequestTimeout**: Maximum time a request can take before timing out (default: 15 minutes). This includes the time in the queue.
+- **MaxConcurrentRequests**: Maximum number of requests that can be processed at the same time (default: 100).
+- **MaxPendingRequests**: Maximum number of requests allowed in the queue (default: 1000).
+
+Example configuration:
+
+```json
+{
+  "MessageHandlerOptions": {
+    "RequestTimeout": "00:15:00",
+    "MaxConcurrentRequests": 100,
+    "MaxPendingRequests": 1000
+  }
+}
+```
