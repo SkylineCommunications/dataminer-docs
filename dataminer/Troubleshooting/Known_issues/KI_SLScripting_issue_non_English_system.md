@@ -14,7 +14,7 @@ On non-English systems, changes introduced in DataMiner 10.4.0 [CU18]/10.5 [CU6]
 
 ## Fix
 
-No fix is available yet.<!-- RN 43690 -->
+Install DataMiner 10.4.0 [CU18] build 16295, 10.5 [CU6] build 16294, or 10.5.9 build 16293
 
 ## Description
 
