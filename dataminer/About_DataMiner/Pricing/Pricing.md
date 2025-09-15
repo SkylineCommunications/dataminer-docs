@@ -14,4 +14,7 @@ DataMiner open monitoring and orchestration software is a transformational platf
 - [Maximizing your azure investments with MACC and DataMiner credits](xref:MACC_and_DataMiner_credits)
 
 > [!TIP]
-> See also: [Questions related to pricing](xref:FAQs_Pricing)
+> See also:
+>
+> - [Perpetual Use or Usage-based Services](https://community.dataminer.services/perpetual-use-or-usage-based-services/) on DataMiner Dojo
+> - [Questions related to pricing](xref:FAQs_Pricing)
