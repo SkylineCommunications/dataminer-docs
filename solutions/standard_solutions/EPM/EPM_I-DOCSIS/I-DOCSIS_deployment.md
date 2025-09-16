@@ -18,7 +18,7 @@ To deploy the Integrated DOCSIS branch of the EPM Solution:
    This will install the application package on all the DMAs in the cluster.
 
    > [!NOTE]
-   > If you are **upgrading** an existing EPM setup, no further steps are needed. However, if you are deploying this solution for the first time, follow the steps below as well.
+   > If you are **upgrading** an existing EPM setup, refer to [EPM Integrated DOCSIS upgrade](xref:I-DOCSIS_upgrade) for further steps. If you are deploying this solution for the **first time**, follow the steps below.
 
 1. Make sure the following prerequisites are met:
 
