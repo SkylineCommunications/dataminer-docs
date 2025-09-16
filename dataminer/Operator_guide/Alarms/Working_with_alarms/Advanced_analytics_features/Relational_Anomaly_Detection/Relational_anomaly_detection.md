@@ -58,6 +58,18 @@ For each parameter group, several configuration options are available. The table
 | Anomaly threshold | `anomalyThreshold` in API, `anomalyScore` in XML | The threshold used for suggestion event generation. Suggestion events are generated when RAD detects a region with an anomaly score higher than this threshold. A higher threshold results in fewer suggestion events, while a lower threshold results in more. Default: 6 (or 3 prior to DataMiner 10.5.9/10.6.0<!-- RN 43400 -->).|
 | Minimum anomaly duration | `minimumAnomalyDuration` | Supported from DataMiner 10.5.4/10.6.0 onwards. <!-- RN 42283 --> This option specifies the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly, similar to [alarm hysteresis](xref:Alarm_hysteresis). This value must be 5 minutes or higher. If this is set to a value greater than 5 minutes, the deviating behavior must persist longer before an anomaly event is triggered. You can configure this to filter out noise events due to a single, short, harmless outlier, for instance caused by a planned maintenance or a device restart. Default: 15 minutes (or 5 minutes prior to DataMiner 10.5.9<!-- RN 43400 -->). |
 
+### Shared model groups
+
+Since DataMiner 10.5.9, the [RAD API](xref:RAD_API) supports the creation of **shared model groups**. A shared model group consists of multiple parameter subgroups that all use the same underlying model. This approach is particularly valuable when you need to monitor many entities that share genuine behavioral similarities. 
+
+#### Use case example
+
+Consider monitoring a battery system where each battery contains several cells with voltage and current parameters. In a healthy battery, the voltages and currents of all cells remain similar and fluctuate together as the battery charges or discharges. A faulty battery may show a significantly lower voltage in one cell, creating a deviation from the expected behavioral pattern.
+
+Since the relationship between voltage and current parameters is consistent across all batteries, you can define a shared model group with a subgroup for each battery. Each subgroup contains the relevant voltage and current parameters for one battery, allowing a single model to monitor all batteries simultaneously and detect deviations from the expected behavioral patterns.
+
+Shared models generalize across subgroups, which can reduce accuracy for specific cases compared to dedicated single models trained on individual subgroup data. However, they can be especially effective when dealing with many subgroups, some of which may lack sufficient healthy reference data. 
+
 ## Relational anomalies in the Alarm Console
 
 Whenever the relationship for a parameter group is broken, RAD detects this and generates suggestion events in the Alarm Console. These events can be viewed in the *Relational Anomalies* tab, accessible through [the Alarm Console light bulb](xref:Light_Bulb_Feature), or in the *Suggestion events* tab (see [Adding and Removing Alarm Tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console)).
