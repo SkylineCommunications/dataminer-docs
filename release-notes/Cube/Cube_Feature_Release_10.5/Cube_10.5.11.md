@@ -123,3 +123,11 @@ In a trend graph showing trending of string values, in some cases, exception val
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When you retrieved the string value of a non-string parameter that was being updated, an exception would be thrown as the string value was null.
+
+#### Cube UI could get stuck when an error occurred while an embedded web browser was initialized [ID 43732]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, when an error occurred while an embedded web browser was initialized, in some cases, the entire Cube UI could get stuck.
+
+Overall error handling has now been improved. When an embedded web browser throws an exception, that exception will now be caught, information about the error will be logged, and an appropriate error message will appear in the browser control.
