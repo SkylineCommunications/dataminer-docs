@@ -97,6 +97,14 @@ For detailed information about the changes included in those versions, refer to 
 
 Because of a number of enhancements in the aggregation module, overall performance has increased.
 
+#### SLDataGateway will now use a custom thread pool instead of TPL for operations towards Cassandra [ID 43658]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+For operations towards Cassandra, from now on, SLDataGateway will use a custom thread pool instead of *Task Parallel Library* (TPL).
+
+Also, when any of the queues in SLDataGateway would get stuck, an alarm of type error will now be generated.
+
 #### STaaS: A failure notice will now be returned immediately when an operation could not be sent to STaaS [ID 43667]
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
