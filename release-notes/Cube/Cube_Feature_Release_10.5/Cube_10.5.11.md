@@ -46,6 +46,14 @@ When an internet connection is not available on the client machine, the DataMine
 
 This type of freezes happen because Windows and .NET try to verify the application's digital signatures by checking an online Certificate Revocation List (CRL). The system times out during this process, causing the delay and impacting user productivity.
 
+#### Spectrum analysis: Trace color can now be modified when a measurement point is selected [ID 43669]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, it would not be possible to modify the trace color when a measurement point was selected. This will now be possible.
+
+Also, an issue has been fixed that caused the trace color to be incorrect in *View Buffer mode*, *View script mode*, or *Watch mode*.
+
 ### Fixes
 
 #### Trending: Problems when opening a trend graph containing trending of string values combined with exception values [ID 43532]
