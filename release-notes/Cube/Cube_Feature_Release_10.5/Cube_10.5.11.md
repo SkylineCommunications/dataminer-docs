@@ -72,6 +72,12 @@ Also, in some cases, it would incorrectly not be possible to clear multiple elem
 
 When you zoomed in on a trend graph, the alarm timeline on the X axis would incorrectly be displayed either on top of or beyond the Y axis.
 
+#### Trending: Percentage in legend of trend graph showing discreet values would be incorrect [ID 43614]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in a trend graph showing discreet values, you hover over the graph, the legend will show a percentage indicating how much of the time a value has occurred in the graph. However, since a server-side change in DataMiner version 10.1.10, this percentage has been incorrect.
+
 #### Problem when a broadcast message expired [ID 43634]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->

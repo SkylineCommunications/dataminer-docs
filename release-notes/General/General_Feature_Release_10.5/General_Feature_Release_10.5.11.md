@@ -85,7 +85,7 @@ For detailed information about the changes included in those versions, refer to 
 
 #### CPE: Enhanced performance [ID 43654]
 
-<!-- MR 10.6.0 - FR 10.5.11 -->
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
 
 Because of a number of enhancements in the aggregation module, overall performance has increased.
 
