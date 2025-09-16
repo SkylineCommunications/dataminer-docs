@@ -66,10 +66,7 @@ See also: [Data location and redundancy](xref:STaaS_features#data-location-and-r
 
 ### What system redundancy policy does a DaaS system have?
 
-As of Q4 of 2024, a DaaS system is able to use Swarming.
-All DaaS systems have swarming enabled by default since 23-06-2025.
-
-See also: [Swarming](xref:Swarming).
+As of Q4 of 2024, DaaS systems can use [Swarming](xref:Swarming). Starting from June 23, 2025, this feature is enabled by default.
 
 ### What backup policy does a DaaS system have?
 
@@ -131,7 +128,7 @@ If you create a new DataMiner System via <https://dataminer.services>, it will b
 However, you can request for it to be hosted in a different available region without incurring any additional costs. To do so, please contact <daas@dataminer.services>.
 
 > [!NOTE]
-> When choosing a region, make sure to opt for a region that supports availability zones. See [Azure Regions List](https://learn.microsoft.com/en-us/azure/reliability/regions-list) for an overview.
+> When choosing a region, make sure to opt for a region that supports availability zones. For an overview, refer to [Azure Regions List](https://learn.microsoft.com/en-us/azure/reliability/regions-list).
 
 ### Where is the data for my DaaS system hosted?
 
