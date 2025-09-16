@@ -417,4 +417,4 @@ In this step, you will further configure the timeline so that users will be able
 1. Back in the *Settings* pane, next to *On item move*, click *Configure actions*, and add the same actions as for *On item resize*.
 
 > [!TIP]
-> For more information on how to configure events and actions on a timeline component, see [Configuring events and actions on the timeline component](xref:DashboardTimeline#configuring-events-and-actions).
+> For more information on how to configure events and actions on a timeline component, see [Adding actions to a timeline](xref:DashboardTimeline#adding-actions-to-a-timeline).
