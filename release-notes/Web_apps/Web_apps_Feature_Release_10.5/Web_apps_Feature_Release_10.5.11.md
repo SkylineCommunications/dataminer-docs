@@ -167,6 +167,12 @@ From now on, the GQI extension indexer process will load an assembly by reading 
 > [!NOTE]
 > Currently, the extension worker process still holds a lock on the associated DLL file when it is active.
 
+#### GQI DxM: Message handler will now by default allow 100 concurrent requests [ID 43730]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, the message handler of the GQI DxM would by default allow 20 concurrent requests. This has now been increased to 100 concurrent requests.
+
 ### Fixes
 
 #### Users with the 'User must change password at next login' setting enabled would incorrectly not be able to log on to the web apps [ID 43590]

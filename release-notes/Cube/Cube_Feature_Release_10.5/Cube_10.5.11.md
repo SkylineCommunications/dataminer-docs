@@ -50,9 +50,9 @@ This type of freezes happen because Windows and .NET try to verify the applicati
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
-Up to now, it would not be possible to modify the trace color when a measurement point was selected. This will now be possible.
+Up to now, it would not be possible to modify the trace color when a measurement point was selected. From now on, it will be possible to modify the trace color when either no measurement point or one single measurement point is selected.
 
-Also, an issue has been fixed that caused the trace color to be incorrect in *View Buffer mode*, *View script mode*, or *Watch mode*.
+Also, an issue has been fixed that caused the trace color to be incorrect in *View Buffer mode*, *View script mode*, or *Watch mode* when you had changed the color without closing the card.
 
 ### Fixes
 
