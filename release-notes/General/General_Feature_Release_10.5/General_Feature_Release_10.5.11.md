@@ -55,6 +55,14 @@ A number of enhancements have been made with regard to RAD parameter groups:
 - The `GetRADParameterGroupsMessage` will now retrieve a list of all RAD parameter groups that have been configured across all agents in the cluster. Up to now, it would only retrieve the list of RAD parameter groups hosted on the local agent.
 - It is no longer allowed to have two groups with the same name, even when they are hosted by different agents.
 
+#### Swarming: An unload request will now be broadcasted when an element is swarmed to the DMA that is hosting it [ID 43567]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+Up to now, when an element was swarmed to the DataMiner Agent that was hosting it already, nothing would happen.
+
+From now on, an unload request will be broadcasted to all DataMiner Agents in the cluster, making sure that no other DataMiner Agent is incorrectly hosting it.
+
 #### VerifyGRPCConnection prerequisite check: Clearer error will now be logged when the check is performed on an agent that is not running [ID 43608]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
@@ -85,7 +93,7 @@ For detailed information about the changes included in those versions, refer to 
 
 #### CPE: Enhanced performance [ID 43654]
 
-<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 Because of a number of enhancements in the aggregation module, overall performance has increased.
 

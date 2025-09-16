@@ -21,6 +21,12 @@ uid: General_Main_Release_10.4.0_CU20
 
 A number of enhancements have been made with regard to the logging of exception messages on STaaS systems.
 
+#### CPE: Enhanced performance [ID 43654]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Because of a number of enhancements in the aggregation module, overall performance has increased.
+
 ### Fixes
 
 #### Problem when loading initial parameter data for remote elements [ID 43339] [ID 43552]
