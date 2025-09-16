@@ -33,6 +33,8 @@ For a brand-new Failover pair where the primary DMA is not yet part of a cluster
 
 The backup DMA must be a newly installed DataMiner Agent.
 
+If you are adding a brand-new Failover pair to a cluster, you do not need to add the backup DMA to the cluster yourself. Once the Failover setup is complete, it will be added automatically.
+
 - The DataMiner ID of this DMA must be identical to the DataMiner ID of the primary DMA.
 
   For more information on how to change the DataMiner ID, see [Changing the DataMiner ID of a DMA](xref:Changing_the_DMA_ID).
