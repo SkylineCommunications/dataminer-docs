@@ -225,3 +225,9 @@ Up to now, the *Grid*, *Maps*, *Table* or *Timeline* components listed in that w
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When, after adding a GQI data source to a *Maps* component, you switched from markers to lines while the marker configuration section was open, a number of run-time errors would be thrown.
+
+#### GQI DxM: Responses on SLNet requests from a GQI DxM extension instance would incorrectly stay in memory until that instance was destroyed [ID 43738]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, responses on SLNet requests from a GQI DxM extension instance would incorrectly stay in memory until that extension instance was destroyed.
