@@ -219,3 +219,9 @@ From now on, when you open the *About* box on a mobile device, the versions will
 As soon as at least two templates are being used by *Grid*, *Maps*, *Table* or *Timeline* components on a dashboard or low-code app, the *Browse templates* button allows you to open a window in which you can import a template from another component to override the template of the component you are configuring.
 
 Up to now, the *Grid*, *Maps*, *Table* or *Timeline* components listed in that window would incorrectly always be identified by their component ID (e.g. "Table 2"), even if their *Configuration name* setting contained a custom component name.
+
+#### Dashboards/Low-Code Apps - Maps component: Problem when switching from markers to lines [ID 43735]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, after adding a GQI data source to a *Maps* component, you switched from markers to lines while the marker configuration section was open, a number of run-time errors would be thrown.
