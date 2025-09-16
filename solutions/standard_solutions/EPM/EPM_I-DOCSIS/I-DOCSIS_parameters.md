@@ -102,7 +102,7 @@ Below, you can find the pages listing unique aggregated and calculated parameter
 
   Polled directly from the cable modem using the *docsIfDocsisBaseCapability* (OID 1.3.6.1.2.1.10.127.1.1.5.0) property.
 
-- **Number CM Ping Unreachable**: Calculated. The number of associated CMs that report the ping status "Unreachable".
+- **Number CM Ping Unreachable**: Calculated. The number of associated CMs that report the ping status "Unreachable".<!-- RN 36751 -->
 
 - **Percentage CM Ping Unreachable**: Calculated. The percentage of associated CMs that report the ping status "Unreachable".
 
