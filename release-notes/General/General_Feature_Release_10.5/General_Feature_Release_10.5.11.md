@@ -178,3 +178,9 @@ From now on, when booking properties are updated, the master agent that processe
 When an element with active RAD suggestion events is paused, in the Alarm Console, these suggestion events will disappear from the active alarms tab.
 
 Up to now, when a paused element was re-activated, the suggestion events that had disappeared from the active alarms tab would incorrectly be re-opened again. From now on, they will no longer be re-opened. If the anomalous behavior persists when a paused element is re-activated, new RAD suggestion events will be generated instead.
+
+#### STaaS: Data missing from heatmaps and alarm state pie charts [ID 43689]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in a client application connected to a system using STaaS, you viewed a heatmap or an alarm state pie chart, in some cases, an incorrect time zone conversion would cause those charts to not include all available data.
