@@ -55,6 +55,14 @@ A number of enhancements have been made with regard to RAD parameter groups:
 - The `GetRADParameterGroupsMessage` will now retrieve a list of all RAD parameter groups that have been configured across all agents in the cluster. Up to now, it would only retrieve the list of RAD parameter groups hosted on the local agent.
 - It is no longer allowed to have two groups with the same name, even when they are hosted by different agents.
 
+#### Swarming: An unload request will now be broadcasted when an element is swarmed to the DMA that is hosting it [ID 43567]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+Up to now, when an element was swarmed to the DataMiner Agent that was hosting it already, nothing would happen.
+
+From now on, an unload request will be broadcasted to all DataMiner Agents in the cluster, making sure that no other DataMiner Agent is incorrectly hosting it.
+
 #### VerifyGRPCConnection prerequisite check: Clearer error will now be logged when the check is performed on an agent that is not running [ID 43608]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
@@ -85,9 +93,17 @@ For detailed information about the changes included in those versions, refer to 
 
 #### CPE: Enhanced performance [ID 43654]
 
-<!-- MR 10.6.0 - FR 10.5.11 -->
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 Because of a number of enhancements in the aggregation module, overall performance has increased.
+
+#### SLDataGateway will now use a custom thread pool instead of TPL for operations towards Cassandra [ID 43658]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+For operations towards Cassandra, from now on, SLDataGateway will use a custom thread pool instead of *Task Parallel Library* (TPL).
+
+Also, when any of the queues in SLDataGateway would get stuck, an alarm of type error will now be generated.
 
 #### STaaS: A failure notice will now be returned immediately when an operation could not be sent to STaaS [ID 43667]
 
@@ -170,3 +186,9 @@ From now on, when booking properties are updated, the master agent that processe
 When an element with active RAD suggestion events is paused, in the Alarm Console, these suggestion events will disappear from the active alarms tab.
 
 Up to now, when a paused element was re-activated, the suggestion events that had disappeared from the active alarms tab would incorrectly be re-opened again. From now on, they will no longer be re-opened. If the anomalous behavior persists when a paused element is re-activated, new RAD suggestion events will be generated instead.
+
+#### STaaS: Data missing from heatmaps and alarm state pie charts [ID 43689]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in a client application connected to a system using STaaS, you viewed a heatmap or an alarm state pie chart, in some cases, an incorrect time zone conversion would cause those charts to not include all available data.

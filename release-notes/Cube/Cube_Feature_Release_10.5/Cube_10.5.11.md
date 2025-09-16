@@ -46,6 +46,14 @@ When an internet connection is not available on the client machine, the DataMine
 
 This type of freezes happen because Windows and .NET try to verify the application's digital signatures by checking an online Certificate Revocation List (CRL). The system times out during this process, causing the delay and impacting user productivity.
 
+#### Spectrum analysis: Trace color can now be modified when a measurement point is selected [ID 43669]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, it would not be possible to modify the trace color when a measurement point was selected. From now on, it will be possible to modify the trace color when either no measurement point or one single measurement point is selected.
+
+Also, an issue has been fixed that caused the trace color to be incorrect in *View Buffer mode*, *View script mode*, or *Watch mode* when you had changed the color without closing the card.
+
 ### Fixes
 
 #### Trending: Problems when opening a trend graph containing trending of string values combined with exception values [ID 43532]
@@ -71,6 +79,12 @@ Also, in some cases, it would incorrectly not be possible to clear multiple elem
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When you zoomed in on a trend graph, the alarm timeline on the X axis would incorrectly be displayed either on top of or beyond the Y axis.
+
+#### Trending: Percentage in legend of trend graph showing discreet values would be incorrect [ID 43614]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in a trend graph showing discreet values, you hover over the graph, the legend will show a percentage indicating how much of the time a value has occurred in the graph. However, since a server-side change in DataMiner version 10.1.10, this percentage has been incorrect.
 
 #### Problem when a broadcast message expired [ID 43634]
 
@@ -109,3 +123,11 @@ In a trend graph showing trending of string values, in some cases, exception val
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When you retrieved the string value of a non-string parameter that was being updated, an exception would be thrown as the string value was null.
+
+#### Cube UI could get stuck when an error occurred while an embedded web browser was initialized [ID 43732]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, when an error occurred while an embedded web browser was initialized, in some cases, the entire Cube UI could get stuck.
+
+Overall error handling has now been improved. When an embedded web browser throws an exception, that exception will now be caught, information about the error will be logged, and an appropriate error message will appear in the browser control.

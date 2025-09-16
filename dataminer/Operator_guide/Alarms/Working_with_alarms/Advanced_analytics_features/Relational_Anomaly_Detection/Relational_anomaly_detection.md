@@ -84,7 +84,7 @@ From DataMiner 10.5.6/10.6.0 onwards<!--RN 42602-->, [deleting a parameter group
 
 - Some parameter behavior will cause RAD to work less accurately. For example, if a parameter responds to another parameter with a delay, such as a door opening gradually lowering a room's temperature, RAD may generate less precise results.
 
-- Parameters on DVE children cannot be monitored directly by RAD. Instead, you should monitor the corresponding parameter instance on the DVE parent.
+- Parameters on DVE children can only be monitored directly by RAD from DataMiner 10.5.9/10.6.0 onwards <!-- RN 43320 -->. In earlier versions, you should monitor the corresponding parameter instance on the DVE parent.
 
 - Relational anomalies on history set parameters can only be detected from DataMiner 10.5.4/10.6.0 onwards, and only under certain conditions:<!-- RN 42319 -->
 

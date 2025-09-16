@@ -6433,6 +6433,8 @@ items:
               topicUid: DisMibBrowserToolWindow
             - name: DIS Parameter Update Locations
               topicUid: DisParameterUpdateLocationsToolWindow
+        - name: Info bars
+          topicUid: DisInfoBars
         - name: Plugins
           topicUid: DisPlugins
         - name: Development using DIS

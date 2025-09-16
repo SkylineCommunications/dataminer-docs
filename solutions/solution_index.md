@@ -76,20 +76,17 @@ uid: solution_index
 
 <div class="row"> 
   <div class="column">
-    <a href="/solutions/custom_solutions/Asset_Management/Asset_Management.html" title="Asset Management" target="_self"><img src="~/solutions/images/Asset_Management.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
     <a href="/solutions/custom_solutions/DITT/Dataminer_IT_Tool_Overview.html" title="IT Tools" target="_self"><img src="~/solutions/images/DataMiner_IT_Tools.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/solutions/custom_solutions/Health_Check_tool/Dataminer_Health_Check_Tool.html" title="Health Check tool" target="_self"><img src="~/solutions/images/DataMiner_Health_Check.svg" style="width:100%"></a>
   </div>
-</div>
-
-<div class="row"> 
   <div class="column">
     <a href="/solutions/custom_solutions/PLM_Tool/DataMiner_PLM_Tool_Overview.html" title="PLM tool" target="_self"><img src="~/solutions/images/PLM.svg" style="width:100%"></a>
   </div>
+</div>
+
+<div class="row"> 
   <div class="column">
     <a href="/solutions/custom_solutions/Regression_Test_Management/Regression_Test_Management.html" title="Regression Test Management" target="_self"><img src="~/solutions/images/Regression_Test_Management.svg" style="width:100%"></a>
   </div>

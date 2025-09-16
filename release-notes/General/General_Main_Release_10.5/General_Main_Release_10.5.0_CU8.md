@@ -31,6 +31,20 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### CPE: Enhanced performance [ID 43654]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Because of a number of enhancements in the aggregation module, overall performance has increased.
+
+#### SLDataGateway will now use a custom thread pool instead of TPL for operations towards Cassandra [ID 43658]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+For operations towards Cassandra, from now on, SLDataGateway will use a custom thread pool instead of *Task Parallel Library* (TPL).
+
+Also, when any of the queues in SLDataGateway would get stuck, an alarm of type error will now be generated.
+
 #### STaaS: A failure notice will now be returned immediately when an operation could not be sent to STaaS [ID 43667]
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
@@ -89,3 +103,9 @@ From now on, the update request will correctly be forwarded to the DataMiner Age
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When processing a cell subscription filter, in some cases, SLNet could return incorrect data to the client application.
+
+#### STaaS: Data missing from heatmaps and alarm state pie charts [ID 43689]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in a client application connected to a system using STaaS, you viewed a heatmap or an alarm state pie chart, in some cases, an incorrect time zone conversion would cause those charts to not include all available data.

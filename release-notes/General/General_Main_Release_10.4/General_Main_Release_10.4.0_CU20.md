@@ -21,6 +21,12 @@ uid: General_Main_Release_10.4.0_CU20
 
 A number of enhancements have been made with regard to the logging of exception messages on STaaS systems.
 
+#### CPE: Enhanced performance [ID 43654]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Because of a number of enhancements in the aggregation module, overall performance has increased.
+
 ### Fixes
 
 #### Problem when loading initial parameter data for remote elements [ID 43339] [ID 43552]
@@ -55,3 +61,9 @@ This issue can be prevented by manually checking if the IP address is one of the
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When processing a cell subscription filter, in some cases, SLNet could return incorrect data to the client application.
+
+#### STaaS: Data missing from heatmaps and alarm state pie charts [ID 43689]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in a client application connected to a system using STaaS, you viewed a heatmap or an alarm state pie chart, in some cases, an incorrect time zone conversion would cause those charts to not include all available data.
