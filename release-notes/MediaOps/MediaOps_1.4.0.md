@@ -17,6 +17,10 @@ While previously new jobs were always created in the draft state, now it is also
 
 When you create a new capability in the Resource Studio app, you can now make it time-dependent, which means that it will only be available during a specific time frame. These time-dependent capabilities can be assigned to resources and resource pools like other capabilities.
 
+#### Scheduling: Job can now transition to Tentative state with empty capacity or capability parameters [ID 43751]
+
+It is now possible to transition a job to the Tentative state even if it has empty capacity or capability parameters configured.
+
 ## Changes
 
 ### Enhancements
