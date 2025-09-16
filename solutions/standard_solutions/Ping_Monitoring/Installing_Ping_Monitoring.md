@@ -13,7 +13,7 @@ uid: Installing_Ping_Monitoring
 
 - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
-- The [*Generic Ping* connector](https://catalog.dataminer.services/detals/516670b3-a9c5-402d-88f3-16b3f0c142bb)
+- The [*Generic Ping* connector](https://catalog.dataminer.services/details/253977dd-efa6-4095-b22e-de9adb9cc23d)
 
   > [!TIP]
   > We recommend using Generic Ping version 3.1.2.11 or higher. See [Deploying a Catalog item](xref:Deploying_a_catalog_item).
@@ -47,7 +47,7 @@ uid: Installing_Ping_Monitoring
 
 ## Deploying the Ping Monitoring tool
 
-1. Look up the [*Ping Monitoring* package](https://catalog.dataminer.services/details/26f08923-7ac5-4322-8a71-0a3efe9aad08) in the Catalog.
+1. Look up the [*Generic Ping* package](https://catalog.dataminer.services/details/cb1bd962-97a5-461b-80fd-a62b3799de96) in the Catalog.
 
 1. Click the *Deploy* button.
 
