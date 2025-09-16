@@ -39,7 +39,7 @@ A DataMiner Community Edition DaaS system will be scheduled to expire as soon as
 
 ### What happens when my DaaS system expires or is deleted?
 
-Your DaaS system along with all its associated resources and data will be decommissioned. The DataMiner System will still be recoverable for a further 7 days after the expiration or deletion. To recover the system, contact [daas@dataminer.services](mailto:daas@dataminer.services). The cloud identity and shares will be lost, and the system will receive a new cloud identity within your organization upon recovery.
+Your DaaS system along with all its associated resources and data will be decommissioned. The DataMiner System will still be recoverable for a further 30 days after the expiration or deletion. To recover the system, contact [daas@dataminer.services](mailto:daas@dataminer.services). The cloud identity and shares will be lost, and the system will receive a new cloud identity within your organization upon recovery.
 
 > [!NOTE]
 > If you are an owner of the organization of a DaaS system or an owner of a DaaS system, you will get an email notification if your system is about to expire, for example because you do not have enough DataMiner credits left. Depending on how many DataMiner credits you use for other purposes, you will get this notification up to 5 days before the system expires. Another email notification will be sent when the system effectively expires.
@@ -66,9 +66,7 @@ See also: [Data location and redundancy](xref:STaaS_features#data-location-and-r
 
 ### What system redundancy policy does a DaaS system have?
 
-As of Q4 of 2024, a DaaS system will be able to use Swarming.
-
-See also: [Swarming](xref:Swarming).
+As of Q4 of 2024, DaaS systems can use [Swarming](xref:Swarming). Starting from June 23, 2025, this feature is enabled by default.
 
 ### What backup policy does a DaaS system have?
 
@@ -97,6 +95,14 @@ You can use the DataMiner API to copy data from Azure at no additional subscript
 
 For more information, see [Connecting to data sources using a DaaS system](xref:DaaS_connecting_to_data_sources)
 
+### Can DaaS use custom DNS servers?
+
+Yes. These can be set either for the whole DMS, or per node.
+
+DaaS uses the [Azure-provided DNS](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances?tabs=redhat#azure-provided-name-resolution) by default.
+
+To request a change, contact <daas@dataminer.services>.
+
 ### Are additional costs due in order to connect to Azure?
 
 All costs related to Azure VPN Gateway are included in your DaaS subscription. When other options are used, your providers may charge additional fees. In that case, note that Skyline will not act as a broker.
@@ -122,7 +128,7 @@ If you create a new DataMiner System via <https://dataminer.services>, it will b
 However, you can request for it to be hosted in a different available region without incurring any additional costs. To do so, please contact <daas@dataminer.services>.
 
 > [!NOTE]
-> When choosing a region, make sure to opt for a region that supports availability zones.
+> When choosing a region, make sure to opt for a region that supports availability zones. For an overview, refer to [Azure Regions List](https://learn.microsoft.com/en-us/azure/reliability/regions-list).
 
 ### Where is the data for my DaaS system hosted?
 
