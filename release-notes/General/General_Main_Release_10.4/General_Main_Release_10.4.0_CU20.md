@@ -70,6 +70,12 @@ This issue can be prevented by manually checking if the IP address is one of the
 
 When processing a cell subscription filter, in some cases, SLNet could return incorrect data to the client application.
 
+#### Restarting a replicated element could cause SLProtocol to leak memory [ID 43613]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you restarted a replicated element that was in the process of starting up, in some cases, the resources in memory would incorrectly not get cleaned up, causing SLProtocol to leak memory.
+
 #### STaaS: Data missing from heatmaps and alarm state pie charts [ID 43689]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->

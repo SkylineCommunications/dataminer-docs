@@ -178,6 +178,12 @@ From now on, the update request will correctly be forwarded to the DataMiner Age
 
 When processing a cell subscription filter, in some cases, SLNet could return incorrect data to the client application.
 
+#### Restarting a replicated element could cause SLProtocol to leak memory [ID 43613]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you restarted a replicated element that was in the process of starting up, in some cases, the resources in memory would incorrectly not get cleaned up, causing SLProtocol to leak memory.
+
 #### Copilot DxM - Natural language to GQI: Columns could get removed from the cache when repeatedly requesting queries against the same data source [ID 43616]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
