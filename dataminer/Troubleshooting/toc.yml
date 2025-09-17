@@ -252,6 +252,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: gRPC-connected Cube not responding when Automation module is used
+            topicUid: KI_gRPC_connected_Cube_stuck_when_using_Automation
           - name: Upgrade fails because of VerifyGRPCConnection.dll prerequisite
             topicUid: KI_Upgrade_fails_VerifyGRPCConnection_prerequisite
           - name: Contents of Elements folder deleted from offline Agents in Failover cluster
