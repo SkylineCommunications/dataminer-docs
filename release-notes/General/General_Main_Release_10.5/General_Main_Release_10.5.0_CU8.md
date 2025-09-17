@@ -39,7 +39,7 @@ Because of a number of enhancements in the aggregation module, overall performan
 
 #### SLDataGateway will now use a custom thread pool instead of TPL for operations towards Cassandra [ID 43658]
 
-<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 For operations towards Cassandra, from now on, SLDataGateway will use a custom thread pool instead of *Task Parallel Library* (TPL).
 

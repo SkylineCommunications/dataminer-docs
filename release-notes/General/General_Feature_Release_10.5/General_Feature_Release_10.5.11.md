@@ -107,7 +107,7 @@ Because of a number of enhancements in the aggregation module, overall performan
 
 #### SLDataGateway will now use a custom thread pool instead of TPL for operations towards Cassandra [ID 43658]
 
-<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 For operations towards Cassandra, from now on, SLDataGateway will use a custom thread pool instead of *Task Parallel Library* (TPL).
 
@@ -177,6 +177,12 @@ From now on, the update request will correctly be forwarded to the DataMiner Age
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When processing a cell subscription filter, in some cases, SLNet could return incorrect data to the client application.
+
+#### Copilot DxM - Natural language to GQI: Columns could get removed from the cache when repeatedly requesting queries against the same data source [ID 43616]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+When you repeatedly requested GQI queries with aggregations like e.g. "group by" against the same data source, in some cases, certain columns could incorrectly get removed from the data sources cache.
 
 #### Service & Resource Management: Problem when updating existing properties of a booking [ID 43659]
 
