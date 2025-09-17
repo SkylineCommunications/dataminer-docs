@@ -152,6 +152,7 @@ The `ApiTriggerOutput` object has the following properties:
 |--|--|--|
 | ResponseCode | int | The HTTP status code. See [ResponseCode](#responsecode). |
 | ResponseBody | string | Contains the response body as a string. The size of this response body is limited to 29 MB. |
+| ResponseHeaders | IHeaders | HTTP headers that will be added to the response. See [ResponseHeaders](#responseheaders). |
 
 > [!NOTE]
 > A valid output instance always has to be returned.
@@ -175,6 +176,38 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 
 > [!TIP]
 > For more insight into which HTTP status codes to use in which circumstances, see [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+
+#### ResponseHeaders
+
+You can add HTTP headers to the response by adding them to the ResponseHeaders property in the `ApiTriggerOutput`. `IHeaders` exposes the following methods:
+
+- `void AddHeader(string name, string value)`: Adds a header with a single value, where 'name' is the header name. E.g. `AddHeader("Location", "/api/item/101)`.
+- `void AddHeader(string name, List<string> values)`: AssAdds a header with multiple values, where 'name' is the header name. E.g. `AddHeader("Accept", new List<string>(){"text/plain", "text/html"})`.
+
+The following headers are blocked and will result in a error if you try to set them. This list can be updated in the future:
+
+- Access-Control-Allow-Origin
+- Access-Control-Allow-Credentials
+- Access-Control-Expose-Headers
+- Access-Control-Allow-Methods
+- Access-Control-Max-Age
+- Vary
+- Content-Length (automatically set)
+- Set-Cookie
+- WWW-Authenticate
+- Proxy-Authenticate
+- Transfer-Encoding
+- Connection
+- Upgrade
+- Trailer
+- TE
+- Via
+- Server
+- Date (automatically set)
+
+> [!NOTE]
+>
+> - Available from DataMiner 10.5.11/10.6.0 onwards.
 
 ## Creating an API and tokens in DataMiner Automation
 
