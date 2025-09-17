@@ -54,6 +54,14 @@ Up to now, it would not be possible to modify the trace color when a measurement
 
 Also, an issue has been fixed that caused the trace color to be incorrect in *View Buffer mode*, *View script mode*, or *Watch mode* when you had changed the color without closing the card.
 
+#### Enhanced login screen behavior when an automatic login fails [ID 43682]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+From now on, when an automatic login with the *Administrator* user fails, a login screen will appear with the *Administrator* user pre-selected, prompting you to enter the password of the *Administrator* account.
+
+Also, when an automatic login with a Windows user fails because (a) that Windows user is not a DataMiner user or (b) the stored credentials of that Windows user are no longer valid, a login screen will appear, prompting you to enter (a) both the user name and the password or (b) the password of the pre-selected Windows user.
+
 ### Fixes
 
 #### Trending: Problems when opening a trend graph containing trending of string values combined with exception values [ID 43532]
