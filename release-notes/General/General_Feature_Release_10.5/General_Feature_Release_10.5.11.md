@@ -69,6 +69,14 @@ From now on, an unload request will be broadcasted to all DataMiner Agents in th
 
 When the *VerifyGRPCConnection* prerequisite check is performed on a DataMiner Agent that is not running, the error that is logged will now explain the problem clearer.
 
+#### DataMiner upgrade: All but the Web.config file will be removed from the 'C:\\Skyline DataMiner\\Webpages\\API' folder [ID 43609]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+During a DataMiner upgrade (or downgrade), up to now, only the `\bin` subfolder of the `C:\Skyline DataMiner\Webpages\API` folder would be cleared.
+
+From now on, the entire `C:\Skyline DataMiner\Webpages\API` folder will be cleared. Only the `Web.config` file will be kept.
+
 #### STaaS: Enhanced exception logging [ID 43626]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
