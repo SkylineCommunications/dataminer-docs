@@ -127,11 +127,11 @@ From now on, when DataMiner tries to send an operation of which the size exceeds
 
 From now on, no attempts will be made anymore to automatically detect the interactive behavior of script libraries, i.e. scripts of which all Exe blocks contain precompiled C# code. These libraries are not intended to be run independently.
 
-#### DataMiner upgrade: All but the Web.config file will be removed from the 'C:\\Skyline DataMiner\\Webpages\\API' folder when downgrading to a version older than Feature Release 10.5.9 [ID 43687]
+#### DataMiner upgrade: All but the Web.config file will be removed from the 'C:\\Skyline DataMiner\\Webpages\\API' folder when downgrading to an older version [ID 43687]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
 
-From now on, when a DataMiner Agent is downgraded to a version older than Feature Release 10.5.9, the entire `C:\Skyline DataMiner\Webpages\API` folder will be cleared. Only the `Web.config` file will be kept.
+From now on, when a DataMiner Agent is downgraded to an older version, the entire `C:\Skyline DataMiner\Webpages\API` folder will be cleared. Only the `Web.config` file will be kept.
 
 ### Fixes
 
