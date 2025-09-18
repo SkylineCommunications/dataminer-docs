@@ -1020,7 +1020,7 @@
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageProcessor.NeedsMessageQueueWorker(System.String)">
             <summary>
             Checks whether a <see cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageQueueWorker"/> needs to be created for a certain subscription subject.
-            There are some internal subscriptions for which the messages actually just need to be handle immediately.
+            There are some internal subscriptions for which the messages actually just need to be handled immediately.
             </summary>
             <param name="subject">The subject of the subscription.</param>
             <returns>Whether a <see cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageQueueWorker"/> needs to be created.</returns>
@@ -1093,13 +1093,13 @@
             <summary>
             Checks whether the queue is considered stale, meaning that no messages have been added for a certain period of time.
             <remarks>
-            If no message has ever been added to the queue, it will not be considered as stale.
+            If no message has ever been added to the queue, it will not be considered stale.
             </remarks>
             </summary>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageQueueWorker.MarkQueueStale">
             <summary>
-            Marks the queue as stale which means that no new messages can be added to it.
+            Marks the queue as stale, which means that no new messages can be added to it.
             The worker will continue to process all the messages that were still in the queue.
             </summary>
         </member>

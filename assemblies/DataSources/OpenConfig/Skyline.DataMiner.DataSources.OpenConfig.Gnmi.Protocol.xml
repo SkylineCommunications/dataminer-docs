@@ -444,7 +444,7 @@
             <param name="token">JSON array to be investigated.</param>
             <param name="pathLevel">Location of the token value in the path filter.</param>
             <param name="keysAndTokens">Found JSON token values with their key parts.</param>
-            <returns>Boolean indicating if there token values were found in the requested path.</returns>
+            <returns>Boolean indicating if token values were found in the requested path.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TryGetJsonTokenForPath(Gnmi.Path,Newtonsoft.Json.Linq.JToken,System.Int32,Newtonsoft.Json.Linq.JToken@)">
             <summary>
@@ -800,7 +800,7 @@
         </member>
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.IsAutoDelete">
             <summary>
-            Gets or sets the indication if missing rows need to be automatically removed or not. This setting is only useful when <see cref="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.ColumnType"/> is equal to <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridColumnType.State"/> .
+            Gets or sets the indication if missing rows need to be automatically removed or not. This setting is only useful when <see cref="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.ColumnType"/> is equal to <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridColumnType.State"/>.
             </summary>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.RateColumnParameterId">
@@ -1057,12 +1057,12 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.TryParseJson(Gnmi.TypedValue,Newtonsoft.Json.Linq.JToken@)">
             <summary>
-            Parses <paramref name="updateValue"/> to a <see cref="T:Newtonsoft.Json.Linq.JToken"/> if it is typed as a JSON and places it in <paramref name="parsedJsonValue"/>.
+            Parses <paramref name="updateValue"/> to a <see cref="T:Newtonsoft.Json.Linq.JToken"/> if it is typed as JSON, and places it in <paramref name="parsedJsonValue"/>.
             Otherwise, null is placed in <paramref name="parsedJsonValue"/>.
             </summary>
-            <param name="updateValue">The value we want to parse into a JToken</param>
+            <param name="updateValue">The value that should be parsed into a JToken</param>
             <param name="parsedJsonValue">Output parameter that contains the resulting JToken.</param>
-            <returns><c>true</c> if <paramref name="updateValue"/> is a JSON and was successfully parsed, otherwise <c>false</c>.</returns>
+            <returns><c>true</c> if <paramref name="updateValue"/> is JSON and was successfully parsed, otherwise <c>false</c>.</returns>
         </member>
         <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.DataEntities">
             <summary>
@@ -1160,8 +1160,8 @@
             <summary>
             Updates the parameter with the provided <paramref name="jsonToken"/> value.
             </summary>
-            <param name="jsonToken">The value we want to update the parameter to.</param>
-            <param name="timestampUtc">Time of change.</param>
+            <param name="jsonToken">The value the parameter should be updated to.</param>
+            <param name="timestampUtc">The time of the change.</param>
             <param name="origin">The origin of the new value.</param>
             <returns><c>true</c> if the ChangeValue was successfully performed, otherwise <c>false</c>.</returns>
         </member>
