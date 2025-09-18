@@ -6,7 +6,7 @@ uid: KI_Trend_flatline_different_timezones
 
 ## Affected versions
 
-This issue occurs in DataMiner 10.5.8 and later.
+This issue occurs in DataMiner Cube 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 and later.
 
 ## Cause
 
@@ -26,7 +26,7 @@ Set the client's timezone to match the DataMiner Agent's timezone.
 
 ## Fix
 
-No fix is available yet.
+No fix is available yet. <!-- RN 43757 -->
 
 ## Description
 
