@@ -24,13 +24,18 @@ namespace Skyline.DataMiner.Analytics.Rad
         /// </summary>
         public DateTime EndTime { get; set; }
         /// <summary>
-        /// Gets or sets the name of the subgroup for which one wants to retrieve anomaly scores in case of a RAD shared model group. Available since DataMiner 10.5.9..
+        /// Gets or sets the name of the subgroup for which one wants to retrieve anomaly scores in case of a RAD shared model group.
+        /// This field does not need to be specified when the group is not a shared model group (i.e. there is only one subgroup of parameter instances).
+        /// This field does not need to be specified when SubgroupID has been specified.
+        /// Available since DataMiner 10.5.9.
         /// </summary>
          public string SubgroupName { get; set; }
          /// <summary>
-         /// Gets or sets the unique identifier of the subgroup for which one wants to retrieve anomaly scores in case of a RAD shared model group. Available since DataMiner 10.5.9.
+         /// Gets or sets the unique identifier of the subgroup for which one wants to retrieve anomaly scores in case of a RAD shared model group.
+         /// This field does not need to be specified when the group is not a shared model group (i.e. there is only one subgroup of parameter instances).
          /// This field does not need to be specified when SubgroupName has been specified.
          /// The unique identifier of the subgroup can be retrieved using the <see cref="GetRADParameterGroupInfoMessage"/> message.
+         /// Available since DataMiner 10.5.9.
          /// </summary>
          public Guid SubgroupID { get; set; } = Guid.Empty;
 
