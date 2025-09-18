@@ -83,7 +83,7 @@ uid: NTNotifyTypesOverview
 |67|NT_REDUNDANCY_GROUP|Creates a redundancy group.|
 |68|NT_RENEW_DESCRIPTION_XML||
 |69|<xref:NT_GET_VALUE>|Gets the value of the specified parameter.|
-|70|NT_ADD_DESCRIPTION_FILE|**Deprecated since DataMiner 10.3.4.**|
+|70|NT_ADD_DESCRIPTION_FILE|**Deprecated since DataMiner 10.3.4.**<!-- RN 33616 -->|
 |71|<xref:NT_DELETE_REDUNDANCY_GROUP>|Removes a redundancy group.|
 |72|NT_NOTIFY_SERVICE_STATUS||
 |73|<xref:NT_GET_PARAMETER>|Gets a parameter value.|
