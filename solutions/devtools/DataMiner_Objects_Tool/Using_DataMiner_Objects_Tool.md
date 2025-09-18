@@ -69,7 +69,7 @@ After you have manually fine-tuned the results, you can execute the following ac
 
 ![Actions](~/dataminer/images/Using_DataMiner_Objects_Tool_Actions.png)
 
-- To add a new multi-line textbox to the dialog containing all selected objects serialized in JSON format, click **Show JSON** (1).
+- To add a new multiline textbox to the dialog containing all selected objects serialized in JSON format, click **Show JSON** (1).
 
   This can for instance be used to investigate or debug issues, or to export the objects and import them in other applications.
 

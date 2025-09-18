@@ -201,9 +201,9 @@ options="LinkAlarmValue=.."
 
 ### loadOID
 
-Used with multi-threaded timers to perform SNMP polling.
+Used with multithreaded timers to perform SNMP polling.
 
-For more information, refer to [Multi-threaded timers SNMP](xref:AdvancedMultiThreadedTimersSnmp).
+For more information, refer to [Multithreaded timers SNMP](xref:AdvancedMultiThreadedTimersSnmp).
 
 ### ssh pwd
 

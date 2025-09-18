@@ -29,7 +29,7 @@ Example:
 <Group id="25" connection="1">
 ```
 
-From DataMiner 8.1.0 onwards (RN 7718), a group using a connection number and connection type other than that of the main connection can be used within a multi-threaded timer. Example:
+From DataMiner 8.1.0 onwards (RN 7718), a group using a connection number and connection type other than that of the main connection can be used within a multithreaded timer. Example:
 
 ```xml
 <Type relativeTimers="true" advanced="snmpv2:MTA SNMP Connection">serial</Type>

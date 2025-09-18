@@ -242,7 +242,7 @@ uid: NTNotifyTypesOverview
 |226|<xref:NT_DIAG>|Obtains additional information about a DMA or DMS.|
 |227|NT_UPDATE_PORTS_XML2||
 |228|NT_GET_DISTINCT_INDEXES||
-|229|<xref:NT_SCHEDULE_ROW_ON_TIMER>|Allows the triggering of a specific row to be run by the multi-threaded timer outside of its normal behavior.|
+|229|<xref:NT_SCHEDULE_ROW_ON_TIMER>|Allows the triggering of a specific row to be run by the multithreaded timer outside of its normal behavior.|
 |230|NT_RG_DUPLICATE_TEMPLATE||
 |231|NT_ADD_EDIT_GENERIC_PROPERTY||
 |232|<xref:NT_SERVICE_SET_VDX>|Sets a Visio file on a service.|
@@ -261,7 +261,7 @@ uid: NTNotifyTypesOverview
 |245|NT_FORCE_REPLICATION||
 |246|NT_LOAD_OFFLINE_ELEMENT||
 |247|NT_UNLOAD_OFFLINE_ELEMENT||
-|248|<xref:NT_ASSIGN_DYNAMIC_OID>|Assigns a dynamic OID to a parameter that will be read by a multi-threaded timer.|
+|248|<xref:NT_ASSIGN_DYNAMIC_OID>|Assigns a dynamic OID to a parameter that will be read by a multithreaded timer.|
 |249|<xref:NT_CHANGE_COMMUNICATION_STATE>|Sets the communication state of an element.|
 |250|NT_REPLICATED_SERVICE_STATE||
 |251|NT_RESET_LATCH||
@@ -340,8 +340,8 @@ uid: NTNotifyTypesOverview
 |324|<xref:NT_GET_FAILOVER_CONFIG>|Retrieves the Failover configuration.|
 |325|NT_RELOAD_SECURITY||
 |326|<xref:NT_ADD_VIEW_PARENT_AS_NAME>|Adds a new view to the view with the provided name.|
-|327|<xref:NT_RESET_THREAD_POOL>|Resets the thread pool of the specified multi-threaded timer.|
-|328|<xref:NT_SET_THREAD_POOL_STATE>|Resets the thread pool of the specified multi-threaded timer.|
+|327|<xref:NT_RESET_THREAD_POOL>|Resets the thread pool of the specified multithreaded timer.|
+|328|<xref:NT_SET_THREAD_POOL_STATE>|Resets the thread pool of the specified multithreaded timer.|
 |329|NT_ENABLE_FEATURE||
 |330|NT_IS_FEATURE_ACTIVE||
 |331|NT_REPLICATION_TRANSLATION||

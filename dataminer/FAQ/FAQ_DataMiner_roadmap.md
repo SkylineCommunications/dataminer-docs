@@ -8,9 +8,9 @@ The foundation of DataMiner is based on four strategic pillars that each have a 
 
 1. **The ability to process any volume and any kind of data originating from any source element, regardless of the type of managed product, equipment supplier, or API technology**
 
-   This is the foundation of a multi-vendor system. Skyline Communications has a roadmap to continuously invest in the integration of new APIs. Proof of this is the current library of 8000 off-the-shelf product integrations, which is growing on a weekly basis.
+   This is the foundation of a multivendor system. Skyline Communications has a roadmap to continuously invest in the integration of new APIs. Proof of this is the current library of 8000 off-the-shelf product integrations, which is growing on a weekly basis.
 
-   Not only does DataMiner integrate with APIs of traditional hardware products, the platform also seamlessly interfaces with any software system deployed in a private data center or deployed as network and media functions (NFV/MFV) in the public cloud (multi-cloud).
+   Not only does DataMiner integrate with APIs of traditional hardware products, the platform also seamlessly interfaces with any software system deployed in a private data center or deployed as network and media functions (NFV/MFV) in the public cloud (multicloud).
 
    DataMiner manages the physical infrastructure (PNI), layers of virtualization (VNI) such as virtual machines, but also containers, applications, and microservices.
 
@@ -34,4 +34,4 @@ The foundation of DataMiner is based on four strategic pillars that each have a 
 
    The continuous roadmap of innovation in the domain of artificial intelligence has already resulted in new technologies with patents pending.
 
-Continuous innovation and roadmap execution lie at the basis of the success of DataMiner. The rate of adoption of the platform in the industry is extraordinary: more than 9000 DataMiner systems are deployed with over 1500 customers in more than 125 countries. DataMiner has also been awarded [many product and technology awards](xref:Overview_About_Skyline#awards). Like no other, Skyline Communications is committed to continuing innovation on the core DataMiner platform. This level of innovation creates the basis for DataMiner to excel in applications for monitoring and orchestration of the most complex ecosystems including media and broadband data centers, hybrid fiber/satellite exchange networks, all-IP broadcast infrastructures for remote production, playout and master control, multi-cloud and containerized media distribution systems for service providers, content providers and OTT, and much more.
+Continuous innovation and roadmap execution lie at the basis of the success of DataMiner. The rate of adoption of the platform in the industry is extraordinary: more than 9000 DataMiner systems are deployed with over 1500 customers in more than 125 countries. DataMiner has also been awarded [many product and technology awards](xref:Overview_About_Skyline#awards). Like no other, Skyline Communications is committed to continuing innovation on the core DataMiner platform. This level of innovation creates the basis for DataMiner to excel in applications for monitoring and orchestration of the most complex ecosystems including media and broadband data centers, hybrid fiber/satellite exchange networks, all-IP broadcast infrastructures for remote production, playout and master control, multicloud and containerized media distribution systems for service providers, content providers and OTT, and much more.

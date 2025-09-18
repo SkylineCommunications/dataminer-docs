@@ -88,7 +88,7 @@ Carefully plan invalidation frequency. Excessively frequent invalidation negates
 
 ### Concurrency
 
-In multi-user or multi-threaded environments, cache methods may be called concurrently by different threads. Without proper synchronization, this can cause race conditions, redundant data fetching, or an inconsistent cache state.
+In multi-user or multithreaded environments, cache methods may be called concurrently by different threads. Without proper synchronization, this can cause race conditions, redundant data fetching, or an inconsistent cache state.
 
 To handle concurrency safely:
 

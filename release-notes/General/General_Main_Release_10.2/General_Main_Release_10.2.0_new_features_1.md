@@ -206,7 +206,7 @@ When a Failover Agent claims or releases a virtual IP address, the following Pow
 > - The VIPAcquired script will also be triggered when the online Agent starts, but the VIPReleased script will not be triggered when the offline Agent starts.
 > - The content of the Failover scripts can be read and modified using the FailoverScriptManagerHelper.
 
-#### Elasticsearch: Multi-cluster offload \[ID 28295\]\[ID 28384\]\[ID 28473\]
+#### Elasticsearch: Multicluster offload \[ID 28295\]\[ID 28384\]\[ID 28473\]
 
 It is now possible to have data offloaded to multiple Elasticsearch clusters, i.e. a main cluster and a number of replicated clusters.
 

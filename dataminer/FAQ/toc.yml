@@ -10,8 +10,8 @@ items:
       topicUid: FAQ_Escrow
     - name: What are the principal advantages of DataMiner
       topicUid: FAQ_Principal_advantages
-    - name: What do you mean with multi-vendor technology
-      topicUid: FAQ_Multi-vendor_technology
+    - name: What do you mean with multivendor technology
+      topicUid: FAQ_Multivendor_technology
     - name: What are the benefits of using clustered DataMiner Agents instead of separate ones
       topicUid: FAQ_Clustered_DMAs
     - name: How many users can log in to a DataMiner System

@@ -569,9 +569,9 @@ items:
           topicUid: AdvancedInterElementCommunicationParameterReplication
         - name: Class Library
           topicUid: AdvancedInterElementCommunicationClassLibrary
-      - name: Multi-threading
+      - name: Multithreading
         topicUid: AdvancedMultiThreading
-      - name: Multi-threaded timers
+      - name: Multithreaded timers
         topicUid: AdvancedMultiThreadedTimers
         items:
         - name: Introduction
@@ -796,8 +796,8 @@ items:
                   topicUid: Exception_handling
                 - name: Logging
                   topicUid: Logging
-                - name: Multi-threading
-                  topicUid: Multi-threading1
+                - name: Multithreading
+                  topicUid: Multithreading1
                 - name: Thread.Sleep
                   topicUid: Thread_Sleep
                 - name: StyleCop
@@ -829,7 +829,7 @@ items:
       items:
       - name: How to aggregate alarm severities
         topicUid: How_to_aggregate_alarm_severities
-      - name: How to configure multi-threaded timers
+      - name: How to configure multithreaded timers
         topicUid: How_to_configure_multi_threaded_timers
       - name: How to create an HTTP connector (CoinMarketCap use case)
         topicUid: How_to_create_an_HTTP_connector_CoinMarketCap_use_case

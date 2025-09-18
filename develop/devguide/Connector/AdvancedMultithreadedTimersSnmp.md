@@ -4,14 +4,14 @@ uid: AdvancedMultiThreadedTimersSnmp
 
 # SNMP
 
-To implement a multi-threaded timer that performs SNMP polling, perform the following steps:
+To implement a multithreaded timer that performs SNMP polling, perform the following steps:
 
 1. Building the parameters and group
 1. Processing the responses
 
 ## Step 1: Building the parameters and group
 
-Assume the following multi-threaded timer is defined:
+Assume the following multithreaded timer is defined:
 
 ```xml
 <Timer id="1" options="ip:2000,1;each:60000;pollingrate:30,10,10;threadPool:100,5,201,202,203,204,205,15000;dynamicthreadpool:200">
@@ -24,9 +24,9 @@ Assume the following multi-threaded timer is defined:
 </Timer>
 ```
 
-This multi-threaded timer has 2000 as content group.
+This multithreaded timer has 2000 as content group.
 
-With multi-threaded timers, the Param children of this Group’s content can have one of the following suffixes (after a colon (“:”)):
+With multithreaded timers, the Param children of this Group’s content can have one of the following suffixes (after a colon (“:”)):
 
 - **single**: If ":single" is appended after the parameter ID, this parameter will be retrieved via a separate SNMP Get request. See [single](#single
 ).
@@ -81,7 +81,7 @@ Param 1003 is then defined as follows:
 </Param>
 ```
 
-Note the "loadOID" option in the Param.Type@options attribute. This option is required with multi-threaded SNMP polling.
+Note the "loadOID" option in the Param.Type@options attribute. This option is required with multithreaded SNMP polling.
 
 > [!NOTE]
 > It is advised to always put the parameters with the ":single" suffix at the end of the group so the other parameters get grouped into one request.
@@ -235,10 +235,10 @@ This results in a number of getBulkRequest operations being performed.
 
 ## Step 2: Processing the responses
 
-To process the responses, create a QAction that triggers on the group of the multi-threaded timer.
+To process the responses, create a QAction that triggers on the group of the multithreaded timer.
 
 > [!NOTE]
-> Whereas typically you provide a parameter ID in the triggers attribute, here you need to specify the ID of the group of the multi-threaded timer.
+> Whereas typically you provide a parameter ID in the triggers attribute, here you need to specify the ID of the group of the multithreaded timer.
 
 ```xml
 <QAction id="2000" name="SNMP Data" encoding="csharp" row="true" triggers="2000" options="group">
