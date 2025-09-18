@@ -120,6 +120,12 @@ Also, when a shape showing a trend component was configured to not show the bott
 
 When, in Cube's *Bookings* module (or the *Skyline Booking Manager* connector), the *List View* component was configured to show a custom culture-invariant DateTime property, up to now, the listed bookings would be sorted incorrectly.
 
+#### Trending: Part of the graph would flatline or all average trend data would disappear when zooming out [ID 43662]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in a trend graph, you zoomed out right after new real-time trend data was received, in some cases, part of the graph would incorrectly flatline or all average trend data would disappear.
+
 #### Trending: Exception values not marked as such would be interpreted as valid trend points without Y axis label [ID 43696]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
