@@ -17,7 +17,7 @@
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient._mwClient">
             <summary>
-            The middleware client instance that will handle the DxM communication.
+            The middleware client instance that will handle our DxM communication.
             A member defined as an interface is used to make unit testing easier.
             </summary>
         </member>
@@ -86,25 +86,27 @@
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Disconnect">
             <inheritdoc/>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Get(System.Collections.Generic.IEnumerable{System.String})">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Get(System.Collections.Generic.IEnumerable{System.String},System.Double)">
             <summary>
             Get the gNMI values for the specified paths.
             </summary>
             <param name="paths">The paths to request. A path should be formatted as a concatenation of node names separated by either a forward or backward slash.</param>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <returns>The individual response values, this is usually one value per path. Can only be iterated once.</returns>
             <exception cref="T:System.ArgumentNullException">The input argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown exception by the DxM.</exception>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Get(System.Collections.Generic.IEnumerable{Gnmi.Path})">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Get(System.Collections.Generic.IEnumerable{Gnmi.Path},System.Double)">
             <summary>
             Get the gNMI values for the specified paths.
             </summary>
             <param name="paths">The paths to request. This uses the actual gNMI Path class.</param>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <returns>The individual response values, this is usually one value per path. Can only be iterated once.</returns>
             <exception cref="T:System.ArgumentNullException">The input argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown exception by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.SetDataMapper(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataMapper)">
             <summary>
@@ -127,7 +129,7 @@
             <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
             <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown exception by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe(System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.TimeSpan,System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}})">
             <summary>
@@ -145,7 +147,7 @@
             <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
             <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown exception by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe(System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{Gnmi.Path},System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}})">
             <summary>
@@ -160,13 +162,13 @@
             <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
             <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown exception by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe(System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{Gnmi.Path},System.Boolean,System.TimeSpan,System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}})">
             <summary>
             Adds a subscription with a sample interval on the endpoint for the specified paths.
             </summary>
-            <param name="subscriptionName">An identifying name for this subscription. The name must be unique for the channel, or the request will be ignored if already active.</param>
+            <param name="subscriptionName">An identifying name for this subscription. The name must be unique for the channel or the request will be ignored if already active.</param>
             <param name="sampleInterval">Interval between samples. Assign zero to receive at the lowest interval possible.</param>
             <param name="paths">The model paths to subscribe to. This uses the actual gNMI Path class.</param>
             <param name="action">The callback action to execute when an update is received.</param>
@@ -178,7 +180,7 @@
             <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
             <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown exception by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe(System.String,System.Collections.Generic.IEnumerable{System.String},System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}},System.Boolean)">
             <summary>
@@ -192,7 +194,7 @@
             <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
             <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown exception by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe(System.String,System.Collections.Generic.IEnumerable{Gnmi.Path},System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}},System.Boolean)">
             <summary>
@@ -206,29 +208,31 @@
             <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
             <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown exception by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Unsubscribe(System.String)">
             <inheritdoc/>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.String)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.String,System.Double)">
             <summary>
             Sets the value for a specific path.
             </summary>
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The string value to set. The gNMI TypedValue used will be StringVal.</param>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <exception cref="T:System.ArgumentException">The path argument cannot be <see langword="null"/>, empty, or a whitespace.</exception>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.Path,System.String)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.Path,System.String,System.Double)">
             <summary>
             Sets the value for a specific path.
             </summary>
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The string value to set. The gNMI TypedValue used will be StringVal.</param>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown exception by the DxM.</exception>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.String,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.StringValueContentType)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.String,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.StringValueContentType,System.Double)">
             <summary>
             Sets the value for a specific path.
             </summary>
@@ -239,10 +243,11 @@
             - AsciiString means that the value parameter is a plain ASCII string.
             - JsonUtf8 means that the value parameter is a JSON-encoded string that will be sent to the data source in UTF-8 encoding.
             - JsonIetfUtf8 means that the value parameter is a JSON-encoded string that follows the RFC8259 standard and will be sent to the data source in UTF-8 encoding.</param>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <exception cref="T:System.ArgumentException">The path argument cannot be <see langword="null"/>, empty, or a whitespace.</exception>
             <exception cref="T:System.ArgumentException">Argument contentType contains a type that is not supported.</exception>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.Path,System.String,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.StringValueContentType)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.Path,System.String,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.StringValueContentType,System.Double)">
             <summary>
             Sets the value for a specific path.
             </summary>
@@ -253,84 +258,94 @@
             - AsciiString means that the value parameter is a plain ASCII string.
             - JsonUtf8 means that the value parameter is a JSON-encoded string that will be sent to the data source in UTF-8 encoding.
             - JsonIetfUtf8 means that the value parameter is a JSON-encoded string that follows the RFC8259 standard and will be sent to the data source in UTF-8 encoding.</param>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">Argument contentType contains a type that is not supported.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown exception by the DxM.</exception>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.Boolean)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.Boolean,System.Double)">
             <summary>
             Sets the value for a specific path.
             </summary>
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The boolean value to set. The gNMI TypedValue used will be BoolVal.</param>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <exception cref="T:System.ArgumentException">The path argument cannot be <see langword="null"/>, empty, or a whitespace.</exception>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.Path,System.Boolean)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.Path,System.Boolean,System.Double)">
             <summary>
             Sets the value for a specific path.
             </summary>
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The boolean value to set. The gNMI TypedValue used will be BoolVal.</param>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown exception by the DxM.</exception>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.Double)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.Double,System.Double)">
             <summary>
             Sets the value for a specific path.
             </summary>
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The double value to set. The gNMI TypedValue used will be DoubleVal.</param>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <exception cref="T:System.ArgumentException">The path argument cannot be <see langword="null"/>, empty, or a whitespace.</exception>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.Path,System.Double)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.Path,System.Double,System.Double)">
             <summary>
             Sets the value for a specific path.
             </summary>
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The double value to set. The gNMI TypedValue used will be DoubleVal.</param>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.Int64)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.Int64,System.Double)">
             <summary>
             Sets the value for a specific path.
             </summary>
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The Int64 value to set. The gNMI TypedValue used will be IntVal.</param>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <exception cref="T:System.ArgumentException">The path argument cannot be <see langword="null"/>, empty, or a whitespace.</exception>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.Path,System.Int64)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.Path,System.Int64,System.Double)">
             <summary>
             Sets the value for a specific path.
             </summary>
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The Int64 value to set. The gNMI TypedValue used will be IntVal.</param>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.UInt64)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.UInt64,System.Double)">
             <summary>
             Sets the value for a specific path.
             </summary>
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The UInt64 value to set. The gNMI TypedValue used will be UintVal.</param>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <exception cref="T:System.ArgumentException">The path argument cannot be <see langword="null"/>, empty, or a whitespace.</exception>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.Path,System.UInt64)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.Path,System.UInt64,System.Double)">
             <summary>
             Sets the value for a specific path.
             </summary>
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The UInt64 value to set. The gNMI TypedValue used will be UintVal.</param>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Capabilities">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Capabilities(System.Double)">
             <summary>
             Get the capabilities of the endpoint.
             </summary>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <returns>The gNMI CapabilityResponse object.</returns>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Delete(System.String)">
             <summary>
@@ -345,7 +360,7 @@
             </summary>
             <param name="path">The path to delete.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Dispose">
             <summary>
@@ -366,14 +381,15 @@
             <param name="subscribeResponse"></param>
             <param name="handler"></param>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.Path,Gnmi.TypedValue)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.Path,Gnmi.TypedValue,System.Double)">
             <summary>
             Sets the value for a specific path.
             </summary>
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The string value to set. The gNMI TypedValue used will be StringVal.</param>
+            <param name="timeout">Timeout in seconds for the request to complete. Default is 5 seconds.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.LoadSupportedEncodings">
             <summary>
@@ -417,7 +433,7 @@
             <param name="subscriptionName">Name of the subscription in case the value came in through subscription.</param>
             <returns>Boolean indicating if there is something that needs to be changed.</returns>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataEntity.ChangeValue(Gnmi.Path,Newtonsoft.Json.Linq.JObject,System.Boolean,System.DateTime,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataEntity.ChangeValue(Gnmi.Path,Newtonsoft.Json.Linq.JToken,System.Boolean,System.DateTime,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String)">
             <summary>
             Processes the update and changes the necessary values.
             </summary>
