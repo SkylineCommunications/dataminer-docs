@@ -243,7 +243,7 @@ The folder `C:\Skyline DataMiner\Webpages\Public\` will now be synced between Da
 
 #### SLNet-managed NATS solution: Credentials of the local agent will now be compared against the credentials of the primary NAS node [ID 43514]
 
-<!-- MR 10.6.0 - FR 10.5.10 -->
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 In the *ResetNATSCheck* timer of the SLNet-managed NATS solution, the credentials of the local agent will now be compared against the credentials of the primary NAS node. If these do not match, the NATS configuration of the local agent will be reset, and the correct credentials of the primary node will be used instead.
 
@@ -343,3 +343,11 @@ When, in DataMiner Cube, matrix crosspoints were loaded or saved over a gRPC con
 When a client application (e.g. DataMiner Cube) sends unsupported messages to a DataMiner Agent, deserialization exceptions are thrown in SLNet.
 
 Up to now, those exceptions would not get processed correctly when the unsupported messages were sent over a gRPC connection, causing the client application to get stuck while waiting for a response that would never arrive.
+
+#### Problem with SLDataGateway after it had removed a storage type in Elasticsearch or OpenSearch [ID 43761]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 [CU0] -->
+
+In some cases, a fatal error could occur in SLDataGateway after it had removed a storage type in an Elasticsearch or OpenSearch database.
+
+Also, in some cases, a fatal error could occur in SLDataGateway when it was shut down.
