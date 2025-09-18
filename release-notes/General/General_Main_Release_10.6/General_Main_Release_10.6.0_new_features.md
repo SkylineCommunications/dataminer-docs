@@ -447,7 +447,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320] [ID 43440]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320] [ID 43440] [ID 43686]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
@@ -460,6 +460,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 42602: MR 10.6.0 - FR 10.5.6 -->
 <!-- RNs 43320: MR 10.6.0 - FR 10.5.9 -->
 <!-- RNs 43440: MR 10.6.0 - FR 10.5.11 -->
+<!-- RNs 43686: MR 10.6.0 - FR 10.5.11 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
@@ -468,6 +469,11 @@ Whenever the relation is broken, RAD will detect this and generate suggestion ev
 ##### Configuring the parameter groups
 
 All configuration settings are stored in the *ai_rad_models_v2* database table, and have to be managed using either the *RAD Manager* app or the RAD API.
+
+> [!NOTE]
+>
+> - A RAD parameter group will be hosted on the DMA on which it was created, even after some of the parameters in the group were swarmed to other DMAs.
+> - Whenever you delete an element that is being used in one or more RAD parameter groups, an error will immediately get logged, and the parameter groups containing parameters from that deleted element will be marked as "not monitored".
 
 ##### Average trending
 
@@ -485,9 +491,7 @@ Under certain conditions, Relational anomaly detection (RAD) is able to detect r
 
 ##### Limitations
 
-- RAD is only able to monitor parameters on the local DataMiner Agent. This means that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
-
-- Some parameter behavior will cause RAD to work less accurately. For example, if a parameter only reacts on another parameter after a certain time, then RAD will produce less accurate results.
+Some parameter behavior will cause RAD to work less accurately. For example, if a parameter only reacts on another parameter after a certain time, then RAD will produce less accurate results.
 
 ##### Messages
 

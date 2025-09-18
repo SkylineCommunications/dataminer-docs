@@ -45,15 +45,21 @@ This new filter box should only be used when no new messages will be added to th
 
 ### Enhancements
 
-#### Relational anomaly detection: Enhancements [ID 43440]
+#### Relational anomaly detection: RAD parameter groups can now contain parameters hosted by different DMAs [ID 43440] [ID 43686]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
 
-A number of enhancements have been made with regard to RAD parameter groups:
+Up to now, relational anomaly detection (RAD) was only able to monitor parameters on the local DataMiner Agent. In other words, all parameter instances configured for a particular RAD parameter group had to be hosted on the same DMA.
 
-- The RAD API messages no longer have to be sent to the agent monitoring the parameters in question. Each message will automatically be forwarded to the correct agent based on the name of the parameter group. If the agent could not be determined, an exception will be thrown.
-- The `GetRADParameterGroupsMessage` will now retrieve a list of all RAD parameter groups that have been configured across all agents in the cluster. Up to now, it would only retrieve the list of RAD parameter groups hosted on the local agent.
-- It is no longer allowed to have two groups with the same name, even when they are hosted by different agents.
+From now on, it is also possible to create RAD parameter groups containing parameters hosted by different DMAs. Moreover, RAD parameter groups will now also keep working after an element has been swarmed.
+
+> [!NOTE]
+>
+> - A RAD parameter group will be hosted on the DMA on which it was created, even after some of the parameters in the group were swarmed to other DMAs.
+> - Whenever you delete an element that is being used in one or more RAD parameter groups, an error will immediately get logged, and the parameter groups containing parameters from that deleted element will be marked as "not monitored".
+> - The RAD API messages no longer have to be sent to the agent monitoring the parameters in question. Each message will automatically be forwarded to the correct agent based on the name of the parameter group. If the agent could not be determined, an exception will be thrown.
+> - The `GetRADParameterGroupsMessage` will now retrieve a list of all RAD parameter groups that have been configured across all agents in the cluster. Up to now, it would only retrieve the list of RAD parameter groups hosted on the local agent.
+> - It is no longer allowed to have two groups with the same name, even when they are hosted by different agents.
 
 #### Swarming: An unload request will now be broadcasted when an element is swarmed to the DMA that is hosting it [ID 43567]
 
