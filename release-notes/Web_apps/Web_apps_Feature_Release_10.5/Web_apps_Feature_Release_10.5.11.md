@@ -220,6 +220,12 @@ As soon as at least two templates are being used by *Grid*, *Maps*, *Table* or *
 
 Up to now, the *Grid*, *Maps*, *Table* or *Timeline* components listed in that window would incorrectly always be identified by their component ID (e.g. "Table 2"), even if their *Configuration name* setting contained a custom component name.
 
+#### Low-Code Apps - Execute component action: Custom component names were not displayed correctly when they had just been updated [ID 43710]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in edit mode, you opened the *App settings* window, clicked *Configure actions*, and then selected *Execute component action*, custom component names would not be displayed correctly when they had just been updated.
+
 #### Dashboards/Low-Code Apps - Maps component: Problem when switching from markers to lines [ID 43735]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
