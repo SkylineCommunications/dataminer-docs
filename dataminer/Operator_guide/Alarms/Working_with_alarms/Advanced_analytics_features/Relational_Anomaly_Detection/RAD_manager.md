@@ -21,7 +21,7 @@ The main window of the RAD Manager app shows the groups currently monitored by R
 
 ![The main window of the RAD Manager app](~/dataminer/images/RAD_Manager.png)
 
-The table under *Your Relational Anomaly Groups*, near the top of the app, shows all parameter groups that are currently being monitored by RAD, along with the parameters belonging to those groups and various [configuration options](xref:Relational_anomaly_detection#options-for-rad-parameter-groups). When you first start the app, this table will likely be empty. To add a new group, select [*Add Group*](#adding-a-parameter-group) in the header bar.
+The table under *Your Relational Anomaly Groups*, near the top of the app, shows all parameter groups that are currently being monitored by RAD, along with the parameters belonging to those groups and various [configuration options](xref:Relational_anomaly_detection#options-for-rad-parameter-groups). When you first start the app, this table will likely be empty. To add a new group, select [*Add Group*](#adding-a-relational-anomaly-group) in the header bar.
 
 When a group is selected in the table at the top, the *Group Information* table below it shows information about all parameters that belong to that group. You can select one or more parameters in that table to view their trend graph below.
 

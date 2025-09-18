@@ -19,7 +19,7 @@ namespace Skyline.DataMiner.Analytics.Rad
 
         /// <summary>
         /// The name of the subgroup to be removed.
-        /// /// This field does not need to be specified when SubgroupID has been specified.
+        /// This field does not need to be specified when SubgroupID has been specified.
         /// </summary>
         public string SubgroupName { get; set; }
 
