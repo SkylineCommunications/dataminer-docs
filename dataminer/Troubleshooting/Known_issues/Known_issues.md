@@ -41,7 +41,7 @@ uid: Known_issues
 | [Upgrade to DataMiner 10.5.1 or 10.5.2 is stuck](xref:KI_Upgrade_to_1051_stuck) | DataMiner 10.5.1 and 10.5.2 | DataMiner 10.5.0/10.5.2 [CU1] | January 28, 2025 |
 | [Reuploaded DVE protocol version is incorrectly set as production version](xref:KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version) | DataMiner 10.2.0 [CU16]/10.3.0 [CU4]/10.3.7 to DataMiner 10.4.0 [CU11]/10.5.2 | DataMiner 10.4.0 [CU12]/10.5.3 | December 18, 2024 |
 | [LDAP/ActiveDirectory domain users no longer able to log in after upgrade](xref:KI_LDAP_users_unable_to_log_in_after_upgrade) | DataMiner 10.4.0 [CU4] to 10.4.0 [CU11]<br>DataMiner 10.4.7 to 10.5.1 | DataMiner 10.4.0 [CU12]/10.5.0/10.5.2 | December 13, 2024 |
-| [Trend graph flatline when client and DMA use different timezones](xref:KI_Trend_flatline_different_timezones) | From Dataminer 10.5.8 onwards | | September 11, 2024 |
+| [Trend graph flatline when client and DMA use different timezones](xref:KI_Trend_flatline_different_timezones) | From Dataminer 10.5.8 onwards | | September 18, 2025 |
 
 ## 10.4.x
 
