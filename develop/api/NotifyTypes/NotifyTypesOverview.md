@@ -99,15 +99,15 @@ uid: NTNotifyTypesOverview
 |83|NT_ADD_CLIENT||
 |84|NT_SET_PARAMETER_BY_NAME||
 |85|<xref:NT_GET_PARAMETER_BY_NAME>|Gets the value of the parameter with the specified name.|
-|86|NT_SET_PARAMETER_BY_DATA|**Deprecated since DataMiner 10.3.4.**|
-|87|<xref:NT_GET_PARAMETER_BY_DATA>|Gets the parameter value corresponding with the parameter that has the specified data stored in the ElementData.xml file. **Deprecated since DataMiner 10.3.4.**|
-|88|<xref:NT_GET_ITEM_DATA>|Gets the value stored for the specified parameter in the ElementData.xml file. **Deprecated since DataMiner 10.3.4.**|
-|89|<xref:NT_SET_ITEM_DATA>|Sets the values stored for the specified parameters in the ElementData.xml file. **Deprecated since DataMiner 10.3.4.**|
+|86|NT_SET_PARAMETER_BY_DATA|**Deprecated since DataMiner 10.3.4.**<!-- RN 33625 -->|
+|87|<xref:NT_GET_PARAMETER_BY_DATA>|Gets the parameter value corresponding with the parameter that has the specified data stored in the ElementData.xml file. **Deprecated since DataMiner 10.3.4.**<!-- RN 33625 -->|
+|88|<xref:NT_GET_ITEM_DATA>|Gets the value stored for the specified parameter in the ElementData.xml file. **Deprecated since DataMiner 10.3.4.**<!-- RN 33625 -->|
+|89|<xref:NT_SET_ITEM_DATA>|Sets the values stored for the specified parameters in the ElementData.xml file. **Deprecated since DataMiner 10.3.4.**<!-- RN 33625 -->|
 |90|NT_AGENT_FOUND||
 |91|NT_CHANGE_ALARM_COLOR||
 |92|NT_SET_KEY||
 |93|NT_DMA_REMOTE_BACKUP_SETTINGS||
-|94|NT_GET_XML_COOKIE|**Deprecated since DataMiner 10.3.4.**|
+|94|NT_GET_XML_COOKIE|**Deprecated since DataMiner 10.3.4.**<!-- RN 33515 -->|
 |95|NT_GET_DMA_DOCUMENTS||
 |96|NT_GET_TASK_INFO||
 |97|NT_ADD_ELEMENT_TYPES||
