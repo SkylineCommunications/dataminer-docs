@@ -20,7 +20,7 @@ The following table contains an overview of all Notify types.
 |4     |DMS_SYSTEM_CHANGES         |         |
 |5     |DMS_NEW_CONNECTION         |         |
 |7     |DMS_RECEIVE_FILE_CHANGE         |         |
-|8     |DMS_GET_INFO         |         |
+|8     |DMS_GET_INFO         |**Deprecated since DataMiner 10.3.4.**<!-- RN 33515 -->|
 |9     |DMS_SECURITY         |         |
 |10     |DMS_SETTINGS         |         |
 |12     |DMS_FILE_CHANGED_BY_DMA         |         |
