@@ -252,8 +252,8 @@ items:
     items:
       - name: Current issues
         items:
-          - name: Trend graph flatline when client and DMA use different timezones
-            topicUid: KI_Trend_flatline_different_timezones
+          - name: Trend graph flatline when client and DMA use different time zones
+            topicUid: KI_Trend_flatline_different_time_zones
           - name: gRPC-connected Cube not responding when Automation module is used
             topicUid: KI_gRPC_connected_Cube_stuck_when_using_Automation
           - name: Upgrade fails because of VerifyGRPCConnection.dll prerequisite

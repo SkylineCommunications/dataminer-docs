@@ -1,28 +1,24 @@
 ﻿---
-uid: KI_Trend_flatline_different_timezones
+uid: KI_Trend_flatline_different_time_zones
 ---
 
-# Trend graph flatline when client and DMA use different timezones
+# Trend graph flatline when client and DMA use different time zones
 
 ## Affected versions
 
-This issue occurs in DataMiner Cube 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 and later.
+From DataMiner Cube 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards.
 
 ## Cause
 
-The method for loading trend data has changed.  
-- **Before 10.5.8**: When requesting periods like *Last day* or *Last week*, the system always requested all data up to the current time.  
-- **From 10.5.8 onwards**: To reduce the amount of data requested, only additional data is requested (e.g. *Last week* no longer re-requests the *Last day* data if it has already been retrieved).  
+In DataMiner Cube 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8, a change is introduced to the way trend data is loaded. Before this version, when a period like *Last day* or *Last week* is requested, the system always requests all data up to the current time. To reduce the amount of data requested, from DataMiner Cube 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards, only additional data is requested (e.g. *Last week* no longer re-requests the *Last day* data if it has already been retrieved).
 
-The issue arises because:  
-- Requests for *Last day* use the **client's timezone**.  
-- Requests for longer ranges (e.g. *Last week*) use the **DataMiner Agent's timezone**, and unlike before, they no longer include the data from shorter ranges (e.g. *Last day*) that have already been retrieved.
+However, this causes a flatline issue in some specific cases, because requests for *Last day* use the client's time zone, but requests for longer ranges (e.g. *Last week*) use the DataMiner Agent's time zone, and these no longer include the data from shorter ranges (e.g. *Last day*) that have already been retrieved.
 
-When these timezones differ, part of the data is skipped, resulting in a flatline on the graph.
+This means that when the client's time zone is different from the DataMiner Agent's time zone, part of the data is skipped, resulting in a flatline on the graph.
 
 ## Workaround
 
-Set the client's timezone to match the DataMiner Agent's timezone.
+Set the client's time zone to match the DataMiner Agent's time zone.
 
 ## Fix
 
@@ -30,4 +26,4 @@ No fix is available yet. <!-- RN 43757 -->
 
 ## Description
 
-If the client's timezone is **ahead of** the DMA's timezone, the trend graph will show a flatline for the hours covered by the timezone difference. This flatline typically starts 24 hours ago and continues for the duration of the timezone offset.
+When the client's time zone is ahead of the DMA's time zone, trend graphs show a flatline for the hours covered by the time zone difference. This flatline typically starts 24 hours ago and continues for the duration of the time zone offset.
