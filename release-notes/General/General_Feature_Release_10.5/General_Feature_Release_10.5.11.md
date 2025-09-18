@@ -83,19 +83,21 @@ From now on, the entire `C:\Skyline DataMiner\Webpages\API` folder will be clear
 
 A number of enhancements have been made with regard to the logging of exception messages on STaaS systems.
 
-#### DxMs upgraded [ID 43642] [ID 43644]
+#### DxMs upgraded [ID 43642] [ID 43644] [ID 43677]
 
 <!-- RN 43642: MR 10.5.0 [CU8] - FR 10.5.11 -->
 <!-- RN 43644: MR 10.6.0 - FR 10.5.11 -->
+<!-- RN 43677: MR 10.6.0 - FR 10.5.11 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner ArtifactDeployer 1.8.6
 - DataMiner CloudGateway 2.17.12
 - DataMiner CoreGateway 2.14.14
+- DataMiner DataAPI 1.3.0
 - DataMiner SupportAssistant 1.7.7
 
-The CloudGateway DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, they will not be installed.
+<!-- 43677 -->As from now, the DataAPI DxM will also be included in DataMiner upgrade packages. However, similar to the CloudGateway DxM, it will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, they will not be installed.
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
