@@ -49,7 +49,7 @@ The design of this powerful module in DataMiner provides a variety of strategic 
 
 ***Monitor the performance of different services and quickly detect and resolve any issues.***
 
-DataMiner provides unprecedented visibility over your operation by offering a dynamic service layer on top of the multi-vendor infrastructure management layer that subsequently traces any services, right across any vendor and technology boundaries, resulting in a unique real-time and historical service perspective on the most complex operations.
+DataMiner provides unprecedented visibility over your operation by offering a dynamic service layer on top of the multivendor infrastructure management layer that subsequently traces any services, right across any vendor and technology boundaries, resulting in a unique real-time and historical service perspective on the most complex operations.
 
 Users have the possibility to see the network in a way that suits them more. They can design building blocks using Microsoft Visio drawings and link them to real-time information in order to have a service path view.
 

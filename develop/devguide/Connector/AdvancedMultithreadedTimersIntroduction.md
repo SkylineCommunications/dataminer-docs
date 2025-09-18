@@ -4,29 +4,29 @@ uid: AdvancedMultiThreadedTimersIntroduction
 
 # Introduction
 
-A multi-threaded timer can be used to iterate over a table and process the rows of that table in a multi-threaded fashion, making sure that each row in the table is processed in a specified interval.
+A multithreaded timer can be used to iterate over a table and process the rows of that table in a multithreaded fashion, making sure that each row in the table is processed in a specified interval.
 
-DataMiner currently allows the use of multi-threaded timers to perform multi-threaded SNMP, serial (including SSH) or HTTP requests. Optionally, a ping can be executed before the actual request is performed. Alternatively, a multi-threaded timer can also be used to just execute logic defined in a QAction using multi-threading.
+DataMiner currently allows the use of multithreaded timers to perform multithreaded SNMP, serial (including SSH) or HTTP requests. Optionally, a ping can be executed before the actual request is performed. Alternatively, a multithreaded timer can also be used to just execute logic defined in a QAction using multithreading.
 
 > [!NOTE]
 > Thread synchronization is needed in the QAction when the same items are set or calls to other processes are executed.
 
-A multi-threaded timer is always linked to a table for which the rows will be processed periodically. Typically, each row in this table holds information about a device (such as the IP address).
+A multithreaded timer is always linked to a table for which the rows will be processed periodically. Typically, each row in this table holds information about a device (such as the IP address).
 
-Every defined timer (i.e. Timer tag in the protocol XML) represents one timer thread that will go off every period as specified in the Time tag. This is the case for conventional timers and multi-threaded timers.
+Every defined timer (i.e. Timer tag in the protocol XML) represents one timer thread that will go off every period as specified in the Time tag. This is the case for conventional timers and multithreaded timers.
 
-For conventional timers, when the timer goes off, it will either add the specified groups to the group execution queue of the protocol thread (in case of groups of type "poll") or it will execute the group immediately (in case of groups that are not of type "poll"). Multi-threaded timers, however, make use of threads from a thread pool to perform an operation for each row of a table.
+For conventional timers, when the timer goes off, it will either add the specified groups to the group execution queue of the protocol thread (in case of groups of type "poll") or it will execute the group immediately (in case of groups that are not of type "poll"). multithreaded timers, however, make use of threads from a thread pool to perform an operation for each row of a table.
 
-To define a multi-threaded timer, the "ip", "each" and "threadPool" options need to be specified in the "options" attribute of the timer:
+To define a multithreaded timer, the "ip", "each" and "threadPool" options need to be specified in the "options" attribute of the timer:
 
-- The first part of the "ip" option defines the ID of the table that contains the rows the multi-threaded timer needs to process. The second part defines the 0-based column index that either contains the IP address or the primary key (depending on whether you want to perform a ping operation or execute a QAction).
+- The first part of the "ip" option defines the ID of the table that contains the rows the multithreaded timer needs to process. The second part defines the 0-based column index that either contains the IP address or the primary key (depending on whether you want to perform a ping operation or execute a QAction).
 - The "each" option specifies the period (in ms) that each row should be executed in the table.
 - The "threadPool" option defines, among other things, the size of the thread pool.
-- For an overview of all the available options of a multi-threaded timer, see [Timer options](xref:LogicTimersTimerOptions).
+- For an overview of all the available options of a multithreaded timer, see [Timer options](xref:LogicTimersTimerOptions).
 
-Finally, a multi-threaded timer needs to contain a group of type "poll".
+Finally, a multithreaded timer needs to contain a group of type "poll".
 
-For example, consider the following multi-threaded timer:
+For example, consider the following multithreaded timer:
 
 ````xml
 <Timer id="2" options="ip:2000,1;each:60000;threadpool:20;...">
@@ -39,7 +39,7 @@ For example, consider the following multi-threaded timer:
 </Timer>
 ````
 
-This multi-threaded timer specifies that every row should be processed once every minute (each:60000).
+This multithreaded timer specifies that every row should be processed once every minute (each:60000).
 
 When the timer goes off, the rows of the table are partitioned into buckets. Each bucket represents a number of rows to be processed in one second. The number of buckets is determined by the "each" option: If "each" is specified as "60000", then 60 buckets will be created.
 
@@ -71,7 +71,7 @@ The items in the selected buckets are then added to a queue representing all ite
 
 The following figure illustrates how table rows get partitioned and assigned to a bucket. These buckets then get added to the processing queue.
 
-![Multi-threaded timers](~/develop/images/Multi-threaded_timers_conceptual.svg)
+![Multithreaded timers](~/develop/images/Multi-threaded_timers_conceptual.svg)
 
 Threads of the thread pool will then process the items in the queue. (The items in the queue denote the primary key of the row to process.)
 
@@ -80,7 +80,7 @@ Threads of the thread pool will then process the items in the queue. (The items 
 
 The thread will perform the following steps to process a row:
 
-1. It obtains the required data from the row it is going to process (using the primary key that is mentioned in the item on the queue). The data that is obtained depends on the options that are configured for the multi-threaded timer.
+1. It obtains the required data from the row it is going to process (using the primary key that is mentioned in the item on the queue). The data that is obtained depends on the options that are configured for the multithreaded timer.
 
    - The cell referred to in the "ip" option
    - The cell referred to in the "ignoreIf" option
@@ -98,7 +98,7 @@ The thread will perform the following steps to process a row:
    - For serial (single) or HTTP connections, the content returned by the QAction referred to by the "qactionBefore" option is used to perform a protocol notify call that will execute the request (via the SLPort process).
    - For SNMP connections, a raw SNMP get is performed using the contents of the group (via the SLSNMPManager process).
    > [!NOTE]
-   > This is why a poll group always needs to be added to a multi-threaded timer as this allows DataMiner to obtain the type of connection.
+   > This is why a poll group always needs to be added to a multithreaded timer as this allows DataMiner to obtain the type of connection.
 1. The QAction to process the response is executed.
 1. If the "qactionAfter" option is used, the referred QAction is executed.
 
@@ -122,7 +122,7 @@ For SNMP, the group defines the OIDs to request:
 > - The SNMP parameters need to have the "loadOID" option.
 > - A table (array) parameter cannot be used in this group; when tables are polled, this also needs to be done through a single  parameter with "loadOID".
 
-To process the response, a QAction is defined that has the options="group" attribute and the triggers attribute set to the ID of the group mentioned in the multi-threaded timer.
+To process the response, a QAction is defined that has the options="group" attribute and the triggers attribute set to the ID of the group mentioned in the multithreaded timer.
 
 ```xml
 <QAction id="1011" name="Send Request" encoding="csharp" options="group" triggers="1011" row="true">
@@ -132,9 +132,9 @@ Often, a QAction is used to perform some additional logic. This is then done by 
 
 The following figure illustrates the general concept for SNMP:
 
-![Multi-threaded timers – SNMP](~/develop/images/Multi-threaded_timers_SNMP.svg)
+![Multithreaded timers – SNMP](~/develop/images/Multi-threaded_timers_SNMP.svg)
 
-For serial and HTTP requests, the request is constructed in a QAction referred to by the '"qactionBefore" attribute. The group mentioned referred to by the multi-threaded timer is then empty:
+For serial and HTTP requests, the request is constructed in a QAction referred to by the '"qactionBefore" attribute. The group mentioned referred to by the multithreaded timer is then empty:
 
 ```xml
 <Group id="1">
@@ -156,7 +156,7 @@ public class QAction
 
 This returned object will be used to perform the actual request. (For more information on the expected structure of this object, refer to Serial or HTTP.)
 
-Similar to SNMP, to process the response for serial and HTTP, define a QAction that has the options="group" attribute and the triggers attribute set to the ID of the group mentioned in the multi-threaded timer.
+Similar to SNMP, to process the response for serial and HTTP, define a QAction that has the options="group" attribute and the triggers attribute set to the ID of the group mentioned in the multithreaded timer.
 
 ```xml
 <QAction id="1011" name="Send Request" encoding="csharp" options="group" triggers="1011" row="true">
@@ -168,12 +168,12 @@ Finally, a QAction can be used to perform some additional logic. This is then do
 
 The following figure illustrates the general concept for serial and HTTP:
 
-![Multi-threaded timers – serial and HTTP](~/develop/images/Multi-threaded_timers_serial_and_HTTP.svg)
+![Multithreaded timers – serial and HTTP](~/develop/images/Multi-threaded_timers_serial_and_HTTP.svg)
 
 Please note the following:
 
-- The requests performed by the multi-threaded timer (e.g. SNMP requests or ping) have no impact on the element state. I.e. if a request times out this will not have an impact on the state of the element.
-- The group mentioned in the multi-threaded timer serves to detect the connection to use. This group does not actually get executed as is the case with conventional timers. Therefore, conditions on a group do not work with multi-threaded timers. (Conditions on QActions, however, do work with multi-threaded timers.) Similarly, "before group" triggers are also not supported with multi-threaded timers.
+- The requests performed by the multithreaded timer (e.g. SNMP requests or ping) have no impact on the element state. I.e. if a request times out this will not have an impact on the state of the element.
+- The group mentioned in the multithreaded timer serves to detect the connection to use. This group does not actually get executed as is the case with conventional timers. Therefore, conditions on a group do not work with multithreaded timers. (Conditions on QActions, however, do work with multithreaded timers.) Similarly, "before group" triggers are also not supported with multithreaded timers.
 - When the timer goes off, first the defined "before timer" triggers are executed. For example, for the following trigger, this means that trigger 1 will go off every 2 seconds.
 
    ```xml
@@ -208,11 +208,11 @@ The "pollingrate" option ensures that the processing of these rows is more equal
 For example, “pollingRate:15,3,3” means that a counting semaphore with max count of 3 will be used, which will release at most 3 threads every 15 ms. For more information about this option, see [pollingRate](xref:LogicTimersTimerOptions#pollingrate).
 
 > [!CAUTION]
-> Proper configuration of a multi-threaded timer is very important, as it can have a major impact on CPU usage.
+> Proper configuration of a multithreaded timer is very important, as it can have a major impact on CPU usage.
 
 ## Timer.Content.Group
 
-For multi-threaded timers, the Group tag can contain the following syntax:
+For multithreaded timers, the Group tag can contain the following syntax:
 
 col:\<columnIdx\>:\<defaultGroupId\>
 

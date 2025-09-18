@@ -10,7 +10,7 @@ The solution consists of two main parts: the Performance Analyzer library and th
 
 ## Performance Analyzer library
 
-The Performance Analyzer library is available as a NuGet package. It is designed to track and log performance metrics for methods in single- or multi-threaded environments. The library provides developers with an easy way to monitor execution times and track method calls across systems by logging performance data to the storage of their choice. While you can use this library together with the low-code app, it can also be used as a standalone tool.
+The Performance Analyzer library is available as a NuGet package. It is designed to track and log performance metrics for methods in single- or multithreaded environments. The library provides developers with an easy way to monitor execution times and track method calls across systems by logging performance data to the storage of their choice. While you can use this library together with the low-code app, it can also be used as a standalone tool.
 
 For information on how to install and use the library, see [Performance Analyzer library](xref:Performance_Analyzer_Library).
 
