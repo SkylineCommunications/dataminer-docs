@@ -65,21 +65,15 @@ Expected duration: 15 minutes
 
 1. In the **Capabilities** section on the right, click the **Edit** button.
 
-1. In the newly opened *Manage Capabilities* window, click the **+** button to add a capability.
+1. In the newly opened *Manage Capabilities* window, from the `- Add Capability -` dropdown, select the **Conversion Type** option.
 
    ![Manage Capabilities](~/solutions/images/Resource_Studio_Manage_Capabilities.png)
 
-1. In the dropdown box, select **Conversion Type**.
-
-1. Click the **Values** button.
-
-1. In the *DISCRETES* section, click the **+** button.
-
-1. In the dropdown, select the **SDI to IP** option.
+1. In the new `- Add Option -` dropdown, select the **SDI to IP** option.
 
    ![Manage Capabilities - Discretes](~/solutions/images/Resource_Studio_Manage_Capabilities_Discretes.png)
 
-1. Click **Back**, and then **Apply**.
+1. Click **Update**.
 
 1. Select the **NewTek 001** resource.
 
