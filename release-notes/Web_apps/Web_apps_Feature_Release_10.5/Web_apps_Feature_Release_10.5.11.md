@@ -173,6 +173,12 @@ From now on, the GQI extension indexer process will load an assembly by reading 
 
 Up to now, the message handler of the GQI DxM would by default allow 20 concurrent requests. This has now been increased to 100 concurrent requests.
 
+#### Web apps: User picture will now be cached on the client machine [ID 43737]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+From now on, the user picture will be cached on the client machine. This will prevent having to repeatedly fetch the picture from the server each time you open the user menu or a component displaying the user icon.
+
 ### Fixes
 
 #### Users with the 'User must change password at next login' setting enabled would incorrectly not be able to log on to the web apps [ID 43590]
