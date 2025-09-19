@@ -36,6 +36,8 @@ The information in this tab is displayed in several separate blocks.
 
     - *Synced With Other Device*: The node is synchronized with another node, which is not a grandmaster. This situation is typically to be avoided.
 
+    - *Synced with Local Clock*: The node reports its local clock ID as the grandmaster clock ID it synchronizes with. This happens regardless of the configured role for the device and applies for grandmaster, boundary, transparent, and slave clocks.<!-- RN 39724 -->
+
   - *Unknown*: The Node is synchronized with a node that is not known by the PTP application.
 
   - From left to right, the total number of grandmaster, boundary clock, transparent clock, and slave devices in the configured PTP domain, or in the entire system if no domain is configured. For each of these, a summary icon displays the alarm color of the most severe PTP-related alarm on these devices. Clicking this icon opens a filtered alarm tab with the relevant alarms.
