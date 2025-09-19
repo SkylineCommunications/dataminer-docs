@@ -4,6 +4,10 @@ uid: CommunicationGateway_change_log
 
 # CommunicationGateway change log
 
+#### 17 September 2025 - Enhancement - CommunicationGateway 5.3.0 - Configurable gRPC call timeouts [ID 43460]
+
+gRPC calls no longer use a fixed 5-second timeout. You can now define a custom timeout for each request. If no timeout is specified, the default remains 5 seconds.
+
 #### 13 February 2025 - Enhancement - CommunicationGateway 5.2.0 - Circuit breaker for repeated gRPC stream failures [ID 41971]
 
 A circuit breaker mechanism has been implemented to prevent excessive resource consumption when a gRPC stream repeatedly fails. Previously, the system would continuously attempt to restore a stream, even if failures were caused by persistent issues such as invalid UTF-8 characters in messages. With this update, if a stream fails 5 times within 60 seconds, the circuit breaker will activate, halting further reconnection attempts. This enhancement improves system stability and reduces unnecessary processing.
