@@ -232,3 +232,10 @@ Up to now, when a paused element was re-activated, the suggestion events that ha
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When, in a client application connected to a system using STaaS, you viewed a heatmap or an alarm state pie chart, in some cases, an incorrect time zone conversion would cause those charts to not include all available data.
+
+#### Swarming: Outdated data could remain in the SLNet event cache after an element had been swarmed [ID 43729]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+<!-- Not added to MR 10.6.0 -->
+
+After an element had been swarmed, in some cases, outdated data could remain in the SLNet event cache.
