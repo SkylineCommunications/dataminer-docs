@@ -10,7 +10,7 @@ uid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi_7.x
 
 Previously, the `Get`, `Set`, and `Capabilities` calls on a GnmiClient always used a fixed timeout of 5 seconds. These timeout values can now be configured individually per request. If no custom timeout is specified, the default of 5 seconds still applies.
 
-Alongside this change, The OpenConfig library has been updated to the latest *Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.OpenConfig* version (i.e. 5.3.0).
+Minimum required version: [CommunicationGateway 5.3.0](xref:CommunicationGateway_change_log#17-september-2025---enhancement---communicationgateway-530---configurable-grpc-call-timeouts-id-43460).
 
 ## 7.0.0
 
