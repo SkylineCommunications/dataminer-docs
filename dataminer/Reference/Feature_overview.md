@@ -113,7 +113,7 @@ Below you can find an overview of the main features that have been added to Data
 | Low-Code Apps: [*Interactive Automation script* component](xref:InteractiveAutomationScript) | DataMiner web 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 <!-- [ID 39969] -->|
 | Low-Code Apps: [*Open monitoring card* action](xref:LowCodeApps_event_config#opening-a-monitoring-card) | DataMiner web 10.3.4/10.4.0 <!-- [ID 35661] -->|
 | Low-Code Apps: [*Show a notification* action](xref:LowCodeApps_event_config#showing-a-notification) | DataMiner 10.3.0 [CU12]/10.4.3 <!-- [ID 38548] -->|
-| Low-Code Apps: [Timeline component events and actions](xref:DashboardTimeline#configuring-events-and-actions) | DataMiner web 10.3.0 CU14/10.4.0 CU2/10.4.5<!-- [ID 39254] --> |
+| Low-Code Apps: [Timeline component events and actions](xref:DashboardTimeline#adding-actions-to-a-timeline) | DataMiner web 10.3.0 CU14/10.4.0 CU2/10.4.5<!-- [ID 39254] --> |
 | Low-Code Apps: [Trigger component actions that let users control the trigger timer](xref:DashboardTrigger#letting-users-control-the-trigger-timer) | DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 <!-- [ID 43184]  --> |
 | Low-Code Apps: [On app open event](xref:Changing_low-code_app_settings#having-an-event-triggered-when-the-app-is-opened) | DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10<!-- RN 43350 --> |
 | Protocols: [Buttons in table cells to open DataMiner objects](xref:UIComponentsTableRowButtons) | DataMiner 10.1.9/10.2.0 <!-- [ID 30413] --> |
