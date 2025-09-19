@@ -380,7 +380,7 @@ Each event provides the following data:
 
 | Event | Exposed data |
 |--|--|
-| Selecting a time range | The selected time range as *Timespan* objects. |
+| Selecting a time range | The selected time range as a *Timespan* object. |
 | Resizing an item | Old and new *Timespan* values (indicating the start and end of the item before and after the resize), plus the item's data as a *Table* object. |
 | Moving an item | Old and new *Timespan* values, plus the item's data as a *Table* object. |
 | Changing an item's group | Current and new item state, both as *Table* objects. |
