@@ -25,9 +25,9 @@ namespace Skyline.DataMiner.Analytics.Rad
         /// - Group B has two parameters: { param3: label = "Fan Speed", param4: label = "Temperature" }  
         ///
         /// Note that parameters with the same label (e.g., "Temperature" or "Fan Speed") do not
-        /// necessarily come from the same driver.  
+        /// necessarily come from the same connector.  
         ///
-        /// If a parameter label is not specified (null or empty), the user must ensure that all
+        /// If a parameter label is not specified (null or empty), you must ensure that all
         /// `RADSubgroupInfo` subgroups define their parameters in a consistent order.
         /// </summary>
         public string Label { get; set; }
@@ -60,15 +60,15 @@ namespace Skyline.DataMiner.Analytics.Rad
         public List<RADParameter> Parameters { get; set; }
 
         /// <summary>
-        /// If specified: The threshold for anomaly detection overriding the anomaly threshold set on the shared model group it is part of,
-        /// If not specified (null): the anomaly threshold set on the shared model group will be used, or the default setting if the anomaly threshold is not set on shared model group level.
+        /// If specified, this determines the threshold for anomaly detection overriding the anomaly threshold set on the shared model group it is part of.
+        /// If not specified (null), the anomaly threshold set on the shared model group will be used, or the default setting if the anomaly threshold is not set on shared model group level.
         /// </summary>
         public double? AnomalyThreshold { get; set; }
 
         /// <summary>
         /// The minimum duration in number of minutes for deviating behavior to be considered relevant anomalous behavior:
-        ///     overrides the minimum anomaly duration set on the shared model group it is part of,
-        /// or null to use the minimum anomaly duration set on the shared model group (or the default setting if it is not set).
+        /// If specified, this overrides the minimum anomaly duration set on the shared model group it is part of.
+        /// If not specified (null), the minimum anomaly duration set on the shared model group is used (or the default setting if it is not set).
         /// </summary>
         public int? MinimumAnomalyDuration { get; set; }
 
@@ -98,8 +98,8 @@ namespace Skyline.DataMiner.Analytics.Rad
         /// </summary>
         /// <param name="name">The name of the subgroup.</param>
         /// <param name="parameters">The parameters in the subgroup.</param>
-        /// <param name="anomalyThreshold">The threshold for anomaly detection overriding the anomaly threshold set on the shared model group it is part of, or null to use the anomaly threshold set on the shared model group (or the default setting if it is not set on shared model group level).</param>
-        /// <param name="minimumAnomalyDuration">The minimum duration in number of minutes for deviating behavior to be considered relevant anomalous behavior: overrides the minimum anomaly duration set on the shared model group it is part of, or null to use the minimum anomaly duration set on the shared model group (or the default setting if it is not set).</param>
+        /// <param name="anomalyThreshold">The threshold for anomaly detection overriding the anomaly threshold set on the shared model group it is part of. If not specified (null), the anomaly threshold set on the shared model group is used (or the default setting if it is not set on shared model group level).</param>
+        /// <param name="minimumAnomalyDuration">The minimum duration in number of minutes for deviating behavior to be considered relevant anomalous behavior: If specified, this overrides the minimum anomaly duration set on the shared model group it is part of. If not specified (null), the minimum anomaly duration set on the shared model group is used (or the default setting if it is not set).</param>
         public RADSubgroupInfo(string name, List<RADParameter> parameters, double? anomalyThreshold = null, int? minimumAnomalyDuration = null) {}
         
     }
