@@ -25,7 +25,7 @@ Stop DataMiner, delete the affected indices in Elasticsearch, and restart DataMi
 
 ## Fix
 
-No fix is available yet.
+No fix is available yet. <!--Task ID: 210132-->
 
 ## Issue description
 
