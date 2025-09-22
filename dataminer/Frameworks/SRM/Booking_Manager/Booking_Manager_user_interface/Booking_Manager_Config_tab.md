@@ -24,6 +24,8 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 - **Refresh Time for Next Quarantined Booking**: Allows you to configure the rate at which the parameter *Time for Next Quarantined Booking* (on the *Bookings* tab) is refreshed, which determines the delay between the current time and the start time of the next booking in quarantine. By default, this is set to 5 minutes. Minimum value: 1 minute.
 
+- **Maximum Simultaneous LSO scripts**: Determines how many LSO scripts can be executed at the same time. Default value: 100. Maximum value: 200. Introduced in SRM version 2.0.3. <!-- RN 43595 -->
+
 - **Column Configuration**: The column configuration to be used in the list of bookings on the *Bookings* tab. See [Customizing the columns of the Bookings list](xref:SRM_custom_bookings_list).
 
 - **Booking Start Failure Script**: See [Configuring a custom script in case orchestration fails](xref:Service_Orchestration_service_states#configuring-a-custom-script-in-case-orchestration-fails).
