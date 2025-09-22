@@ -18,7 +18,7 @@ Restore the connection to the Elasticsearch database or remove the Elasticsearch
 
 ## Fix
 
-No fix is available yet.
+No fix is available yet. <!-- Task ID: 209245-->
 
 ## Issue description
 

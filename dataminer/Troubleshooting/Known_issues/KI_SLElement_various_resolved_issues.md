@@ -17,6 +17,3 @@ A number of issues could lead to SLElement problems, which could cause a memory 
 | When a table was updated that contained parameters used in advanced naming/naming format, a problem could occur in SLElement. <!-- RN 34135 --> | DataMiner 10.1.0 [CU16] and [CU17].<br>DataMiner 10.2.0 [CU4] and [CU5].<br>DataMiner 10.2.7 and 10.2.8. | N/A | Install DataMiner 10.1.0 [CU18], 10.2.0 [CU6], or 10.2.9 |
 | When foreign key resolving took longer than 100 ms and the element debug log level was 1 or higher, a problem could occur in SLElement. <!-- RN 33826 --> | DataMiner 10.1.0 [CU13] to [CU17].<br>DataMiner 10.2.0 [CU1] to [CU5].<br>DataMiner 10.2.4 to 10.2.8. | N/A | Install DataMiner 10.1.0 [CU18], 10.2.0 [CU6], or 10.2.9 |
 | When SLElement notified SLDataGateway about big table updates, in some rare cases, a problem in SLElement could occur. <!-- RN 29987 --> | DataMiner 10.1.0 and 10.2.0 main release versions.<br>DataMiner 10.1.1 to 10.2.6. | N/A | Install DataMiner 10.3.0 or 10.2.7 |
-
-> [!TIP]
-> See also: [Various SLElement issues](xref:KI_SLElement_various_issues)

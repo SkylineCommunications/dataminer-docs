@@ -12,6 +12,10 @@ uid: KI_SLProtocol_Crash_Enhanced_Services
 
 The enhanced service alarm monitoring feature is not completely disabled when the enhanced service protocol is missing table 100. This can lead to access violations when alarm monitoring is enabled (PID 198) and elements are restarted.
 
+## Fix
+
+No fix is available yet. <!--Task ID: 252936-->
+
 ## Workaround
 
 1. Stop the DataMiner Agent.
