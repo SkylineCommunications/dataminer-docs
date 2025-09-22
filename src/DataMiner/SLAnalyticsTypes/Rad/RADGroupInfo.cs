@@ -22,7 +22,7 @@ namespace Skyline.DataMiner.Analytics.Rad
         public List<ParameterKey> Parameters { get; set; }
 
          /// <summary>
-         /// The list of subgroups of parameters. All subgroups will share a RAD model. Available since DataMiner 10.5.9.
+         /// The list of subgroups of parameters. All subgroups will share a RAD model. Available from DataMiner 10.5.9/10.6.0 onwards.
          /// </summary>
          public List<RADSubgroupInfo> Subgroups { get; set; }
 
@@ -54,7 +54,7 @@ namespace Skyline.DataMiner.Analytics.Rad
         }
 
         /// <summary>  
-        /// Initializes a new instance of the <see cref="RADGroupInfo"/> class. Available since DataMiner 10.5.9.
+        /// Initializes a new instance of the <see cref="RADGroupInfo"/> class. Available from DataMiner 10.5.9/10.6.0 onwards.
         /// </summary>  
         /// <param name="name">The name of the shared model group.</param>  
         /// <param name="subgroups">The list of subgroups of parameters sharing a model.</param>  

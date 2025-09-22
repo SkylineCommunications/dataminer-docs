@@ -5,7 +5,7 @@ using System;
 namespace Skyline.DataMiner.Analytics.Rad
 {
     /// <summary>
-    /// Message to remove a subgroup from an already existing Relational Anomaly Detection (RAD) shared model group. Available since DataMiner 10.5.9.
+    /// Message to remove a subgroup from an already existing Relational Anomaly Detection (RAD) shared model group. Available from DataMiner 10.5.9/10.6.0 onwards.
     /// This message can be used to remove a subgroup from the shared model group without having to delete or retrain the entire shared model group.
     /// Results in a <see cref="RemoveRADParameterGroupResponseMessage"/>.
     /// </summary>

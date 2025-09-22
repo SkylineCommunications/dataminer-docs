@@ -5,7 +5,7 @@ using System;
 namespace Skyline.DataMiner.Analytics.Rad
 {
     /// <summary>
-    /// Message to add a subgroup to an already existing relational anomaly group. Available since DataMiner 10.5.9.
+    /// Message to add a subgroup to an already existing relational anomaly group. Available from DataMiner 10.5.9/10.6.0 onwards.
     /// </summary>
     [Serializable]
     public class AddRADSubgroupMessage : GetSessionedAnalyticsMessage

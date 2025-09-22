@@ -4,11 +4,11 @@ uid: Relational_anomaly_detection
 
 # Relational anomaly detection
 
-From DataMiner 10.5.3/10.6.0 onwards, you can use relational anomaly detection (RAD) to detect when a group of parameters deviates from its normal behavior.<!-- RN 42034 -->
+From DataMiner 10.5.3/10.6.0 onwards, you can use relational anomaly detection (RAD) to detect when a group of parameters, also known as a "relational anomaly group", deviates from its normal behavior.<!-- RN 42034 -->
 
 The RAD functionality works in three different steps:
 
-1. First you need to [configure one or more groups of parameters](#configuring-parameter-groups-for-rad) that should be monitored together, e.g. a main bit rate and backup bit rate.
+1. First you need to [configure one or more groups of parameters](#configuring-relational-anomaly-groups) that should be monitored together, e.g. a main bit rate and backup bit rate.
 
 1. The algorithm will then **learn the relations** between the parameters, e.g. learn that main and backup are typically equal. This is done automatically by the system, but you can manually specify a training range.
 
@@ -16,7 +16,7 @@ The RAD functionality works in three different steps:
 
 ![The three steps of the RAD algorithm](~/dataminer/images/tutorial_RAD_Overview_Algorithm.jpg)
 
-Every five minutes, RAD calculates an anomaly score for each configured group of parameters. This score is based on the average value of each parameter in that group over the last five minutes. A high anomaly score indicates that the relationships between the parameters are broken, whereas a low anomaly score means the relationships remain intact. Historical anomaly scores can be visualized in the [RAD Manager](xref:RAD_manager) app.
+Every five minutes, RAD calculates an anomaly score for each configured relational anomaly group. This score is based on the average value of each parameter in that group over the last five minutes. A high anomaly score indicates that the relationships between the parameters are broken, whereas a low anomaly score means the relationships remain intact. Historical anomaly scores can be visualized in the [RAD Manager](xref:RAD_manager) app.
 
 ## Prerequisites
 
@@ -41,13 +41,13 @@ By way of example, here are a few of the possible use cases for relational anoma
 
 - **Power amplifiers in DAB transmitters**: Monitor the power outputs of all amplifiers in a DAB transmitter to ensure they remain in sync. This helps identify faults in the transmitter or the antenna system. For a tutorial on how to set up RAD for this use case, refer to [Working with relational anomaly detection](xref:Relational_Anomaly_Detection_Tutorial).
 
-## Configuring parameter groups for RAD
+## Configuring relational anomaly groups
 
 RAD only monitors parameters that have been added to one or more relational anomaly groups in its configuration. Each relational anomaly group represents a set of parameters that should be monitored together. RAD will learn how these parameters are related and notify you through a suggestion event when the relationship is broken.
 
 The easiest way to configure these relational anomaly groups is by using the [RAD Manager](xref:RAD_manager) app from the DataMiner Catalog. Alternatively, you can use the [RAD API](xref:RAD_API) or directly configure the relational anomaly groups in the [RAD configuration XML file](xref:Relational_anomaly_detection_xml).
 
-### Options for RAD parameter groups
+### Options for relational anomaly groups
 
 For each relational anomaly group, several configuration options are available. The table below provides an overview of these options:
 
@@ -60,11 +60,12 @@ For each relational anomaly group, several configuration options are available. 
 
 ### Shared model groups
 
-Since DataMiner 10.5.9, the [RAD API](xref:RAD_API) supports the creation of **shared model groups**. A shared model group consists of multiple relational anomaly subgroups that all use the same underlying model. This approach is particularly valuable when you need to monitor many entities that share genuine behavioral similarities. 
+From DataMiner 10.5.9/10.6.0 onwards, the [RAD API](xref:RAD_API) supports the creation of **shared model groups**. A shared model group consists of multiple relational anomaly subgroups that all use the same underlying model. This approach is particularly valuable when you need to monitor many entities that share genuine behavioral similarities.
 
-> **Note:** The RAD Manager app currently does not support shared model groups. It only supports single groups, where each group of parameters is associated with its own dedicated model.
->  
-> Shared models generalize across subgroups, which can reduce accuracy for specific cases compared to dedicated single models trained on individual subgroup data. However, they can be especially effective when dealing with many subgroups, some of which may lack sufficient healthy reference data. 
+> [!NOTE]
+> The [RAD Manager app](xref:RAD_manager) currently does not support shared model groups. It only supports single groups, where each group of parameters is associated with its own dedicated model.
+>
+> Shared models generalize across subgroups, which can reduce accuracy for specific cases compared to dedicated single models trained on individual subgroup data. However, they can be especially effective when dealing with many subgroups, some of which may lack sufficient healthy reference data.
 
 #### Shared model use case example
 

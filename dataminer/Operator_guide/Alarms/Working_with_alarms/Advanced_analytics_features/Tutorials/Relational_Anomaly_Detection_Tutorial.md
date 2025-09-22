@@ -177,7 +177,7 @@ In this step, you will learn how you can for instance suppress events created as
    ![Configuration suppressing short maintenance operations](~/dataminer/images/tutorial_RAD_Maintenance_Configuration.jpg)
 
    > [!TIP]
-   > Two other checkboxes are also available to tweak the group configuration. For more information on these options, refer to [Options for RAD parameter groups](xref:Relational_anomaly_detection#options-for-rad-parameter-groups).
+   > Two other checkboxes are also available to tweak the group configuration. For more information on these options, refer to [Options for relational anomaly groups](xref:Relational_anomaly_detection#options-for-relational-anomaly-groups).
 
 1. Click *Add group*.
 

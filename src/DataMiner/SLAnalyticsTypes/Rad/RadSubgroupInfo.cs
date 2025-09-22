@@ -5,7 +5,7 @@ using Skyline.DataMiner.Analytics.DataTypes;
 namespace Skyline.DataMiner.Analytics.Rad
 {
     /// <summary>
-    /// Represents information about a parameter instance used in a RAD subgroup. Available since DataMiner 10.5.9.
+    /// Represents information about a parameter instance used in a RAD subgroup. Available from DataMiner 10.5.9/10.6.0 onwards.
     /// </summary>
     [Serializable]
     public class RADParameter
@@ -41,7 +41,7 @@ namespace Skyline.DataMiner.Analytics.Rad
 
 
     /// <summary>
-    /// Represents information about a subgroup of a Relational Anomaly Detection shared model group. Available since DataMiner 10.5.9.
+    /// Represents information about a subgroup of a Relational Anomaly Detection shared model group. Available from DataMiner 10.5.9/10.6.0 onwards.
     /// </summary>
     [Serializable]
     public class RADSubgroupInfo
