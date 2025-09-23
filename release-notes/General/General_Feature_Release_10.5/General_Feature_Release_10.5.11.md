@@ -69,6 +69,12 @@ Up to now, when an element was swarmed to the DataMiner Agent that was hosting i
 
 From now on, an unload request will be broadcasted to all DataMiner Agents in the cluster, making sure that no other DataMiner Agent is incorrectly hosting it.
 
+#### DataMiner Object Models: Enhanced performance when filtering on FieldValues in memory via FilterElements [ID 43568]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When filtering on FieldValues in memory via FilterElements, the DomInstanceExposers.FieldValues exposer will no longer generate a JsonSerializableDictionary. Instead, it will now use a standard dictionary. This will enhance overall in-memory filtering performance.
+
 #### VerifyGRPCConnection prerequisite check: Clearer error will now be logged when the check is performed on an agent that is not running [ID 43608]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
