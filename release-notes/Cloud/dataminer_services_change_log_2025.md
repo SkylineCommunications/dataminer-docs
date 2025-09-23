@@ -11,9 +11,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 21 September 2025 - Enhancement - Catalog - Enhanced searching capabilities
 
-In the Catalog app, a more advanced search has been implemented with a ranking system.
-Users should now be able to find more relevant items when searching on terms that are not necessarily in the display name of the item.
-Additionally when clicking a 'tag' on a Catalog item, it will use that tag as a filter to find other items with the same tag.
+In the Catalog app, a more advanced search has been implemented with a ranking system. Users should now be able to find more relevant items when searching on terms that are not necessarily in the display name of the item.
+
+Additionally, when a tag on a Catalog item is clicked, that tag will be used as a filter to find other items with the same tag.
 
 ### 21 September 2025 - New feature - Admin - Integrated support
 
