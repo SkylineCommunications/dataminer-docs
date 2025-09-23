@@ -9,6 +9,16 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 21 September 2025 - Enhancement - Catalog - Enhanced searching capabilities
+
+In the Catalog app, a more advanced search has been implemented with a ranking system. Users should now be able to find more relevant items when searching on terms that are not necessarily in the display name of the item.
+
+Additionally, when a tag on a Catalog item is clicked, that tag will be used as a filter to find other items with the same tag.
+
+### 21 September 2025 - New feature - Admin - Integrated support
+
+The Admin app now has a support page where users that are part of a verified organization can see and create tickets.
+
 ### 11 September 2025 - Enhancement - Catalog - Custom icons
 
 It is now possible to apply custom icons to your Catalog items using the [Key Catalog API](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v3.0).
