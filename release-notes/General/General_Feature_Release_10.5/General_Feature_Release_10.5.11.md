@@ -159,6 +159,12 @@ From now on, when a request is sent to a DOM manager that it reinitializing, the
 
 `Initialization failed or did not complete in time for manager '<Manager Name>'. Check logging for more info.`
 
+#### SLLogCollector packages now also include the Web DcM log files [ID 43716]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+SLLogCollector packages now also include the log files of the Web DcM.
+
 ### Fixes
 
 #### Problem when loading initial parameter data for remote elements [ID 43339] [ID 43552]

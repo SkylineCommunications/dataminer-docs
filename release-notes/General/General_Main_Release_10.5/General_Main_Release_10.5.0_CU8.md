@@ -65,6 +65,12 @@ From now on, when DataMiner tries to send an operation of which the size exceeds
 
 From now on, when a DataMiner Agent is downgraded to an older version, the entire `C:\Skyline DataMiner\Webpages\API` folder will be cleared. Only the `Web.config` file will be kept.
 
+#### SLLogCollector packages now also include the Web DcM log files [ID 43716]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+SLLogCollector packages now also include the log files of the Web DcM.
+
 ### Fixes
 
 #### Problem when loading initial parameter data for remote elements [ID 43339] [ID 43552]
