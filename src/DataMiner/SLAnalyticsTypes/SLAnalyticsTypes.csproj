@@ -64,6 +64,11 @@
     <Compile Include="Rad\RemoveRADParameterGroupResponseMessage.cs" />
     <Compile Include="Rad\RetrainRADModelMessage.cs" />
     <Compile Include="Rad\RetrainRADModelResponseMessage.cs" />
+    <Compile Include="Rad\RadSubgroupInfo.cs" />
+    <Compile Include="Rad\RenameRADParameterGroupMessage.cs" />
+    <Compile Include="Rad\RenameRADParameterGroupResponseMessage.cs" />
+    <Compile Include="Rad\AddRADSubgroupMessage.cs" />
+    <Compile Include="Rad\RemoveRADSubgroupMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SLNetTypes\SLNetTypes.csproj">

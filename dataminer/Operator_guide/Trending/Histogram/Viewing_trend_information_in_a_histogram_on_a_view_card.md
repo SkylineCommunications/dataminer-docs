@@ -24,7 +24,7 @@ To save your selections as a preset:
 
 1. Enter a name and optionally a description for the preset, and click the *Add preset* button at the bottom of the window.
 
-1. Configure the histogram in the pane at the bottom and click the *Save* button in the lower right corner.
+1. Configure the histogram in the pane at the bottom and click the *Save* button in the lower-right corner.
 
     The preset will be available in the list of presets in the *Presets* pane on all view cards. Just click on the preset on any histogram page to load it again.
 

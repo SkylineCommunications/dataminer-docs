@@ -68,7 +68,9 @@ Even if this option is not specified, by default an authentication ticket is pas
 
 ### UseChrome
 
-If you want to make sure the webpage is displayed using the Chromium web browser regardless of the default browser settings in Cube, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "UseChrome".
+From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43429-->, the `UseChrome` option can no longer be used. If it is specified in a shape, it will be disregarded, and the shape will use Edge instead.
+
+In earlier versions, you can make sure the webpage is displayed using the Chromium web browser regardless of the default browser settings in Cube. To do so, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "UseChrome".
 
 ### UseIE
 
@@ -127,7 +129,7 @@ http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 > [!TIP]
 > If you want to pass data to a dashboard using placeholders, take a look at [how to specify data input in a dashboard URL](xref:Specifying_data_input_in_a_URL).
 >
-> It can also be useful to copy the URL directly from the Dashboards app. However, some of the URL parameters may be compressed. If you need the uncompressed URL parameters to insert placeholders, [retrieve the URL via the sharing option](xref:Sharing_a_dashboard#sharing-a-dashboard-url) and select *Use uncompressed URL parameters*.
+> It can also be useful to copy the URL directly from the Dashboards app. However, some of the URL parameters may be compressed. If you need the uncompressed URL parameters to insert placeholders, [retrieve the URL via the sharing option](xref:Sharing_a_dashboard#sharing-a-live-dashboard-via-url) and select *Use uncompressed URL parameters*.
 
 ## Configuring a link to a DataMiner object within a webpage embedded in Visual Overview
 

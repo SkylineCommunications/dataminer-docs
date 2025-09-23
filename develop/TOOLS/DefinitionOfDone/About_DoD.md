@@ -2,11 +2,11 @@
 uid: About_DoD
 ---
 
-# Definition of Done (DoD) tool
+# Definition of Done (DoD) platform
 
-The Definition of Done (DoD) tool is a web application that helps development teams ensure all necessary steps are completed before a task is marked as done. It automates and streamlines task workflows, improves quality assurance, and simplifies documentation and collaboration.
+The Definition of Done (DoD) platform is a web application that helps development teams ensure all necessary steps are completed before a task is marked as done. It automates and streamlines task workflows, improves quality assurance, and simplifies documentation and collaboration.
 
-The tool supports efficient, high-quality work by offering:
+The platform supports efficient, high-quality work by offering:
 
 - **Automated workflows** that ensure all required steps are tracked and completed.
 
@@ -20,7 +20,7 @@ The tool supports efficient, high-quality work by offering:
 
 ## Opening a task
 
-1. Navigate to the [DoD tool home page](https://dod.skyline.be) (available to Skyline employees only).
+1. Navigate to the [DoD home page](https://dod.skyline.be) (available to Skyline employees only).
 
 1. Sign in with your Azure AD credentials.
 
@@ -31,7 +31,7 @@ The tool supports efficient, high-quality work by offering:
 
 ## Supported task types
 
-The DoD tool currently supports the following task types:
+The DoD platform currently supports the following task types:
 
 - **Driver Development**: New connector development.
 
@@ -39,19 +39,19 @@ The DoD tool currently supports the following task types:
 
 - **Driver Issue**: Bug fixes or issue resolution for existing connectors.
 
-## Using the DoD tool
+## Usage
 
-The DoD tool user interface consists of three main sections:
+The user interface consists of three main sections:
 
-![DoD tool UI](~/develop/images/DoD_UI.png)
+![DoD UI](~/develop/images/DoD_UI.png)
 
-- [Header bar](#the-dod-tool-header-bar) (1): Displays key task information and several action buttons.
+- [Header bar](#header-bar) (1): Displays key task information and several action buttons.
 
 - [Checklist table](#checklist-table) (2): Displays required steps to complete the task.
 
 - [Smart action column](#smart-actions) (3): Offers one-click access to integrated tools.
 
-### The DoD tool header bar
+### Header bar
 
 The header bar contains the following items, from left to right:
 
@@ -61,7 +61,7 @@ The header bar contains the following items, from left to right:
 | ![External link](~/develop/images/DoD_External_Link.png) | Click this icon (or the task name) to open the task in Collaboration. |
 | ![Share URL](~/develop/images/DoD_Share_URL.png) | Click this icon to copy the task URL to your clipboard for easy sharing. |
 | ![Punch in](~/develop/images/DoD_Punch_in.png) | Use this button to start or stop tracking time for the current task. While tracking is active, the time spent on the task is logged automatically. You can edit time entries, add comments, and switch between tasks without losing time data. Time entries are validated automatically to ensure logical start and end times, with a maximum duration of 12 hours. |
-| ![OneNote](~/develop/images/DoD_OneNote.png) | Click this icon to generate a OneNote notebook for the current task, structured automatically with pages organized by vendor, device, and version. |
+| ![OneNote](~/develop/images/DoD_OneNote.png) | Click this icon to generate or access a OneNote notebook for the current task, structured automatically with pages organized by vendor, device, and version. |
 | ![Catalog](~/develop/images/DoD_Catalog.png) | Click this icon to access the Catalog item linked to this task. |
 | ![Admin tool](~/develop/images/DoD_Admin_Tool.png) | Click this icon to open the Connector Admin tool. |
 | ![Connector documentation](~/develop/images/DoD_Connector_Documentation.png) | Click this icon to open the relevant connector documentation (DataMiner Docs). |
@@ -75,14 +75,14 @@ The checklist table displays the *Definition of Done* steps for the current task
 
 - **Step**: Automatically generated DoD steps based on the task type and category.
 
-- **Status**: Set the status of each step to *TODO*, *DONE*, or *SKIP STEP*.
+- **Status**: Set the status of each step to *TO DO*, *DONE*, or *SKIPPED*.
 
   > [!NOTE]
-  > Skipped steps require a comment to explain the reason.
+  > Skipped steps require a comment to justify why they were skipped.
 
-- **Guard**: Assign the team member responsible for the step.
+- **Guard**: Assign the team member responsible for confirming that the step was properly done.
 
-- **Comment**: Add context or explain skipped steps. Comments can be edited inline or using the pencil icon for multiline input. Comments and skip justifications are stored to maintain a clear audit trail.
+- **Comment**: Add context or explain why steps were skipped. Comments can be edited inline or using the pencil icon for multiline input. Comments and skip justifications are stored to maintain a clear audit trail.
 
 - **Action**: One-click access to integrated tools, if applicable for the step. For more information, see [Smart actions](#smart-actions).
 
@@ -94,11 +94,11 @@ You can manage checklist items as follows:
 
 - Click the pencil icon to **edit** comments in a multiline editor.
 
-- Select *SKIP STEP* from the *Status* dropdown menu to **skip** a step, with proper reasoning.
+- Select *SKIPPED* from the *Status* dropdown menu to **skip** a step, with proper reasoning.
 
 ### Smart actions
 
-When available, the *Actions* column includes smart action icons. These provide quick access to tools relevant to the task:
+When available, the *Actions* column includes smart action icons. These provide quick access to tools relevant to the task steps:
 
 | Action icon | Description |
 |--|--|
@@ -107,4 +107,4 @@ When available, the *Actions* column includes smart action icons. These provide 
 
 ## Getting support
 
-For technical issues or feature requests, contact the development team via Microsoft Teams or email.
+For technical issues or feature requests, contact the development team via Microsoft Teams or email using the **Feedback** button.

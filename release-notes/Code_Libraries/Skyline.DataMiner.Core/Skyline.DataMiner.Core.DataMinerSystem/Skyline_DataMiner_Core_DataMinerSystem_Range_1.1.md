@@ -37,6 +37,9 @@ var isHigher = agent.IsVersionHigher(version);
 
 ### 1.1.3.3
 
+> [!IMPORTANT]
+> In this version, **new monitors** have been added to support **usage outside of protocols** (e.g. in Automation scripts or ad hoc data sources). These allow external code to subscribe to state, name, or alarm level changes without relying on SLProtocol. However, subscriptions created using these monitors **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system. Only monitors on *IDms*, *IDmsElement*, *IDmsTable*, and **IDmsStandaloneParameter** are supported for now. If you need monitor support elsewhere, please contact <support.boost@skyline.be> to request it.
+
 #### New feature - Added monitor methods to standalone parameter interfaces
 
 The `IDmsStandaloneParameter` and `IDmsStandaloneParameter<T>` interfaces have been extended with the following methods to allow the monitoring of value changes:

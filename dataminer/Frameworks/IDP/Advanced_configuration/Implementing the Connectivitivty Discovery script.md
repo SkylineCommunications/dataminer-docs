@@ -10,7 +10,7 @@ DataMiner IDP can be used to provision [DCF connections](xref:About_the_DataMine
 
 A [CI Type](xref:CI_Types1) can be configured with a script that will be used to discover the connectivity for the element of this CI Type. This script will typically read element data (like information from LLDP or CDP tables) and pass this on to DataMiner IDP.
 
-The script integrates with the connector and the element, and it will be executed for a specific element. For this reason, we strongly recommend that you limit the scope of the script to that single element. That means that it should not use information from neighboring equipment. In a multi-vendor environment, you would otherwise need to support a lot of connectors in a single script.
+The script integrates with the connector and the element, and it will be executed for a specific element. For this reason, we strongly recommend that you limit the scope of the script to that single element. That means that it should not use information from neighboring equipment. In a multivendor environment, you would otherwise need to support a lot of connectors in a single script.
 
 > [!TIP]
 > An example script *IDP_Example_Custom_ConnectivityDiscovery* is available in the Automation module after IDP has been installed. You can duplicate this script to use it as a starting point.

@@ -14,7 +14,7 @@ On the landing page of the app, you can see the total number of TX Core and TX E
 
 ### Services
 
-On the *Services* page, you can find more details about each service across all TX Edge instances. This includes a summary of alarms across different layers, such as those related to the transport stream and IP layer. In the lower right corner, the DataMiner node edge component has been used for a visual representation of the connectivity.
+On the *Services* page, you can find more details about each service across all TX Edge instances. This includes a summary of alarms across different layers, such as those related to the transport stream and IP layer. In the lower-right corner, the DataMiner node edge component has been used for a visual representation of the connectivity.
 
 ![Services](~/solutions/images/techex-txcore-services.png)
 

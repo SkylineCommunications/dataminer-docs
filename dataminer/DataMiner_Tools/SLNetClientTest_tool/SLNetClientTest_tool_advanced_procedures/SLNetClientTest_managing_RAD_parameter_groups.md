@@ -4,7 +4,11 @@ uid: SLNetClientTest_managing_RAD_parameter_groups
 
 # Managing parameter groups for RAD
 
-From DataMiner 10.5.4/10.6.0 onwards<!--RN 42181-->, it is possible to manage [relational anomaly detection (RAD)](xref:Relational_anomaly_detection) parameter groups using the SLNetClientTest tool. While you can configure and view the same things directly in [*RelationalAnomalyDetection.xml*](xref:Relational_anomaly_detection#configuring-parameter-groups-for-rad), with these messages you can for example configure a [low-code app](xref:Application_framework) to visualize and manage the parameter groups.
+From DataMiner 10.5.4/10.6.0 onwards<!--RN 42181-->, it is possible to manage [relational anomaly detection (RAD)](xref:Relational_anomaly_detection) parameter groups using the SLNetClientTest tool. With these messages you can for example configure a [low-code app](xref:Application_framework) to visualize and manage the parameter groups.
+
+All configuration settings are stored in the *ai_rad_models_v2* database table.
+
+In Feature Release versions up to DataMiner 10.5.8<!--RN 43400-->, it is also possible to configure and view the same settings directly in [*RelationalAnomalyDetection.xml*](xref:Relational_anomaly_detection#configuring-relational-anomaly-groups).
 
 1. [Connect to the DMA hosting the grouped parameters using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
@@ -16,7 +20,7 @@ From DataMiner 10.5.4/10.6.0 onwards<!--RN 42181-->, it is possible to manage [r
    |--|--|
    | AddRADParameterGroupMessage | Creates a new RAD parameter group. If a group with the same name already exists, the group will be updated instead. |
    | GetRADDataMessage | Retrieves anomaly scores over a specified time range. Note that anomaly scores can only be retrieved for past time periods where 5-minute averaged trend data is available. |
-   | GetRADParameterGroupInfoMessage | Retrieves the configuration information for a specific RAD parameter group. |
+   | GetRADParameterGroupInfoMessage | Retrieves the configuration information for a specific RAD parameter group. From DataMiner 10.5.9/10.6.0 onwards<!--RN 43320-->, the response to this message also includes an `IsMonitored` flag, which indicates whether the group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging. |
    | GetRADParameterGroupsMessage | Retrieves a list of all configured RAD parameter groups. |
    | RemoveRADParameterGroupMessage | Deletes a RAD parameter group. |
 

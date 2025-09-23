@@ -132,7 +132,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | *Hosted Managed Objects*      | Sum of metrics of all Managed Objects hosted. | 0.1 for 10K metrics| A hosted system With 2 Managed Objects, one with 24K metrics and the other with 150 metrics, the metered value is 24,150 x 0.1 / 10K = 0.2415 |
 
 > [!NOTE]
-> Instead of a fixed number of 5 actions, some objects defined in Skyline's [Standard Data Model](xref:Overview_DataMiner_Solutions#standard-data-model) may trigger a different number of Automation Actions when new unmanaged object instances are created.
+> Instead of a fixed number of 5 actions, some objects defined in Skyline's [Standard Data Model](xref:SOL_About#standard-data-model) may trigger a different number of Automation Actions when new unmanaged object instances are created.
 
 > [!TIP]
 > While STaaS charges can vary depending on the specifics of each DataMiner deployment and setup (e.g. specific types of Managed Objects, personal preferences and system configurations, etc.), the above translates to an average charge of 1.7 credits for 100 Managed Objects per month, considering a typical usage scenario of 180 alarm updates, 240 information events, 400,000 stored data points and 100,000 element data updates per Managed Object on average per month.

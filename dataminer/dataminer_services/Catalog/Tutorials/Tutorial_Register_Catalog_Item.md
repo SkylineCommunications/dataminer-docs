@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_Register_Catalog_Item
+reviewer: Alexander Verkest
 ---
 
 # Registering a new connector in the Catalog

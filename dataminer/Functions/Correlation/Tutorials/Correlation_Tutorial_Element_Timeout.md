@@ -44,7 +44,7 @@ In this step, you will create a Correlation rule that will trigger based on alar
 
 1. In DataMiner Cube, go to *Apps* > *Modules* > *Correlation* to open the Correlation module.
 
-1. In the lower left corner, click *Add rule* to add a new Correlation rule.
+1. In the lower-left corner, click *Add rule* to add a new Correlation rule.
 
 1. In the *Name* box on the right, specify a name of your choice, e.g. `Correlation tutorial`.
 
@@ -111,7 +111,7 @@ In this step, you will create a Correlation rule that will trigger based on alar
 
    By default, a new Correlation rule is not active, so this step is important to make sure that the rule will actually take action when needed.
 
-1. In the lower right corner, click *Apply* to save your changes.
+1. In the lower-right corner, click *Apply* to save your changes.
 
 ## Step 3: Generate a timeout alarm
 

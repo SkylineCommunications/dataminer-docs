@@ -4,6 +4,19 @@ uid: CommunicationGateway_change_log
 
 # CommunicationGateway change log
 
+#### 23 September 2025 - Fix - CommunicationGateway 5.3.1 - Installer incorrectly selected DVD drive for log files [ID 43714]
+
+Previously, the CommunicationGateway installer could incorrectly treat a DVD drive (when assigned as D:\\) as a valid location for log files. If the C:\\ drive had less free space than the DVD drive, the installer attempted to write logs to the DVD drive, resulting in installation failures.
+
+This update ensures that the installer will always prioritize the C:\\ drive, regardless of available space on other drives.
+
+#### 17 September 2025 - Enhancement - CommunicationGateway 5.3.0 - Configurable gRPC call timeouts [ID 43460]
+
+gRPC calls no longer use a fixed 5-second timeout. You can now define a custom timeout for each request. If no timeout is specified, the default remains 5 seconds.
+
+> [!NOTE]
+> To configure these timeouts, connectors must reference [Skyline.DataMiner.DataSources.OpenConfig.Gnmi 7.1.0](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi_7.x#add-support-for-configurable-timeouts-to-gnmiclient-operations-id-43460) or higher.
+
 #### 13 February 2025 - Enhancement - CommunicationGateway 5.2.0 - Circuit breaker for repeated gRPC stream failures [ID 41971]
 
 A circuit breaker mechanism has been implemented to prevent excessive resource consumption when a gRPC stream repeatedly fails. Previously, the system would continuously attempt to restore a stream, even if failures were caused by persistent issues such as invalid UTF-8 characters in messages. With this update, if a stream fails 5 times within 60 seconds, the circuit breaker will activate, halting further reconnection attempts. This enhancement improves system stability and reduces unnecessary processing.
@@ -44,6 +57,18 @@ When multiple CommunicationGateway nodes were deployed in a cluster, and an elem
 
 > [!NOTE]
 > For this extra step to be initiated, connectors need to reference [Skyline.DataMiner.DataSources.OpenConfig.Gnmi 4.2.0](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi_4.x#extra-step-added-to-the-connection-process-id-39548) or higher.
+
+#### 27 February 2024 - Enhancement - CommunicationGateway 3.1.1 - Improved handling of exceptions encountered by gRPC streams [ID 38931]
+
+When a gRPC stream encounters an exception, the middleware will now be notified. It will log stream state changes, and if the stream is lost, it will trigger a subscribable event called "SubscriptionLost", containing a LostSubscriptionArgs value with the Channel ID, the Subscription ID, and the error message as found in CommunicationGateway.
+
+When a stream encounters a GrpcException of type "Internal" or "Dataloss", there will be attempts to recover it for a limited time (7.5 minutes), using a similar mechanism as for an "Unavailable" exception.
+
+In the logging, the following information will now be recorded:
+
+- When the stream is down but may be restored and the SubscriptionLost event is not invoked: `The stream for {subscriptionId} is down and attempts are being made to restore it. The stream went down with the error message: {message}`
+- When the stream is down and cannot be restored, and the SubscriptionLost event will be invoked: `The stream for {subscriptionId} is down and no (further) attempts are being made to restore it. The stream went down with the error message: {message}`
+- When the stream was down but is now up again: `The stream for {subscriptionId} is restored.`
 
 #### 21 February 2024 - Enhancement - CommunicationGateway 3.0.1 - Error information when IP address is not formatted correctly [ID 38755]
 

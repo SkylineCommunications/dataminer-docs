@@ -1,12 +1,13 @@
 ---
 uid: About_the_Catalog_app
+reviewer: Alexander Verkest
 ---
 
 # About the Catalog app
 
 As part of dataminer.services, the Catalog app allows Skyline customers and DataMiner Strategic Partners to browse and deploy available DataMiner connectors, packages, Visio drawings, Automation scripts, dashboards, and more.
 
-![Catalog](~/dataminer/images/DataMiner_Catalog.png)<br>*Catalog in DataMiner 10.4.6*
+![Catalog](~/dataminer/images/DataMiner_Catalog.png)
 
 ## Accessing the Catalog app
 

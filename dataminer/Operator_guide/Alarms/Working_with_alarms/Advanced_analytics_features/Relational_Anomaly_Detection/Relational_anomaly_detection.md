@@ -4,11 +4,11 @@ uid: Relational_anomaly_detection
 
 # Relational anomaly detection
 
-From DataMiner 10.5.3/10.6.0 onwards, you can use relational anomaly detection (RAD) to detect when a group of parameters deviates from its normal behavior.<!-- RN 42034 -->
+From DataMiner 10.5.3/10.6.0 onwards, you can use relational anomaly detection (RAD) to detect when a group of parameters, also known as a "relational anomaly group", deviates from its normal behavior.<!-- RN 42034 -->
 
 The RAD functionality works in three different steps:
 
-1. First you need to [configure one or more groups of parameters](#configuring-parameter-groups-for-rad) that should be monitored together, e.g. a main bit rate and backup bit rate.
+1. First you need to [configure one or more groups of parameters](#configuring-relational-anomaly-groups) that should be monitored together, e.g. a main bit rate and backup bit rate.
 
 1. The algorithm will then **learn the relations** between the parameters, e.g. learn that main and backup are typically equal. This is done automatically by the system, but you can manually specify a training range.
 
@@ -16,7 +16,7 @@ The RAD functionality works in three different steps:
 
 ![The three steps of the RAD algorithm](~/dataminer/images/tutorial_RAD_Overview_Algorithm.jpg)
 
-Every five minutes, RAD calculates an anomaly score for each configured group of parameters. This score is based on the average value of each parameter in that group over the last five minutes. A high anomaly score indicates that the relationships between the parameters are broken, whereas a low anomaly score means the relationships remain intact. Historical anomaly scores can be visualized in the [RAD Manager](xref:RAD_manager) app.
+Every five minutes, RAD calculates an anomaly score for each configured relational anomaly group. This score is based on the average value of each parameter in that group over the last five minutes. A high anomaly score indicates that the relationships between the parameters are broken, whereas a low anomaly score means the relationships remain intact. Historical anomaly scores can be visualized in the [RAD Manager](xref:RAD_manager) app.
 
 ## Prerequisites
 
@@ -41,38 +41,53 @@ By way of example, here are a few of the possible use cases for relational anoma
 
 - **Power amplifiers in DAB transmitters**: Monitor the power outputs of all amplifiers in a DAB transmitter to ensure they remain in sync. This helps identify faults in the transmitter or the antenna system. For a tutorial on how to set up RAD for this use case, refer to [Working with relational anomaly detection](xref:Relational_Anomaly_Detection_Tutorial).
 
-## Configuring parameter groups for RAD
+## Configuring relational anomaly groups
 
-RAD only monitors parameters that have been added to one or more parameter groups in its configuration. Each parameter group represents a set of parameters that should be monitored together. RAD will learn how these parameters are related and notify you through a suggestion event when the relationship is broken.
+RAD only monitors parameters that have been added to one or more relational anomaly groups in its configuration. Each relational anomaly group represents a set of parameters that should be monitored together. RAD will learn how these parameters are related and notify you through a suggestion event when the relationship is broken.
 
-The easiest way to configure these parameter groups is by using the [RAD Manager](xref:RAD_manager) app from the DataMiner Catalog. Alternatively, you can use the [RAD API](xref:RAD_API) or directly configure the parameter groups in the [RAD configuration XML file](xref:Relational_anomaly_detection_xml).
+The easiest way to configure these relational anomaly groups is by using the [RAD Manager](xref:RAD_manager) app from the DataMiner Catalog. Alternatively, you can use the [RAD API](xref:RAD_API) or directly configure the relational anomaly groups in the [RAD configuration XML file](xref:Relational_anomaly_detection_xml).
 
-### Options for parameter groups
+### Options for relational anomaly groups
 
-For each parameter group, several configuration options are available. The table below provides an overview of these options:
+For each relational anomaly group, several configuration options are available. The table below provides an overview of these options:
 
 | <div style="width:200px">Name in RAD Manager app</div> | Name in API and XML | Description |
 |--|--|--|
-| Group name | `name` | The name of the parameter group. This name is used when generating a suggestion event or displaying all groups in the *RAD Manager*. |
+| Group name | `name` | The name of the relational anomaly group. This name is used when generating a suggestion event or displaying all groups in the *RAD Manager*. |
 | Update model on new data? | `updateModel` | Indicates whether RAD should update its internal model of the relationships between the parameters in the group when new trend data is available. If this is not selected, the model will only be trained immediately after creation and when [manually specifying a training range](xref:RAD_manager#specifying-the-training-range).<br>Enabling this can be useful when monitoring parameters that you would like to see changing over time; the model can then adapt to the new behavior, and only more pronounced breaks in relations will be detected. If the parameter relationship is static (e.g. two parameters that should remain equal forever), it is better not to enable this option.|
-| Anomaly threshold | `anomalyThreshold` in API, `anomalyScore` in XML | The threshold used for suggestion event generation. Suggestion events are generated when RAD detects a region with an anomaly score higher than this threshold. A higher threshold results in fewer suggestion events, while a lower threshold results in more. Default: 3 |
-| Minimum anomaly duration | `minimumAnomalyDuration` | Supported from DataMiner 10.5.4/10.6.0 onwards. <!-- RN 42283 --> This option specifies the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly, similar to [alarm hysteresis](xref:Alarm_hysteresis). This value must be 5 minutes or higher. If this is set to a value greater than 5 minutes, the deviating behavior must persist longer before an anomaly event is triggered. You can configure this to filter out noise events due to a single, short, harmless outlier, for instance caused by a planned maintenance or a device restart. Default: 5 minutes. |
+| Anomaly threshold | `anomalyThreshold` in API, `anomalyScore` in XML | The threshold used for suggestion event generation. Suggestion events are generated when RAD detects a region with an anomaly score higher than this threshold. A higher threshold results in fewer suggestion events, while a lower threshold results in more. Default: 6 (or 3 prior to DataMiner 10.5.9/10.6.0<!-- RN 43400 -->).|
+| Minimum anomaly duration | `minimumAnomalyDuration` | Supported from DataMiner 10.5.4/10.6.0 onwards. <!-- RN 42283 --> This option specifies the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly, similar to [alarm hysteresis](xref:Alarm_hysteresis). This value must be 5 minutes or higher. If this is set to a value greater than 5 minutes, the deviating behavior must persist longer before an anomaly event is triggered. You can configure this to filter out noise events due to a single, short, harmless outlier, for instance caused by a planned maintenance or a device restart. Default: 15 minutes (or 5 minutes prior to DataMiner 10.5.9<!-- RN 43400 -->). |
+
+### Shared model groups
+
+From DataMiner 10.5.9/10.6.0 onwards, the [RAD API](xref:RAD_API) supports the creation of **shared model groups**. A shared model group consists of multiple relational anomaly subgroups that all use the same underlying model. This approach is particularly valuable when you need to monitor many entities that share genuine behavioral similarities.
+
+> [!NOTE]
+> The [RAD Manager app](xref:RAD_manager) currently does not support shared model groups. It only supports single groups, where each group of parameters is associated with its own dedicated model.
+>
+> Shared models generalize across subgroups, which can reduce accuracy for specific cases compared to dedicated single models trained on individual subgroup data. However, they can be especially effective when dealing with many subgroups, some of which may lack sufficient healthy reference data.
+
+#### Shared model use case example
+
+Consider the [UPS Management Use Case](https://community.dataminer.services/cut-ups-costs-and-prevent-outages-with-ai-powered-monitoring/), where a battery system included many units, each containing several cells with voltage and current parameters. In healthy battery units, these values remain similar across cells and fluctuate together.
+
+Because this behavior is consistent across all units, you can define a shared model group with a subgroup per battery. This allows a single model to monitor all battery units and detect deviations from expected patterns.
 
 ## Relational anomalies in the Alarm Console
 
-Whenever the relationship for a parameter group is broken, RAD detects this and generates suggestion events in the Alarm Console. These events can be viewed in the *Relational Anomalies* tab, accessible through [the Alarm Console light bulb](xref:Light_Bulb_Feature), or in the *Suggestion events* tab (see [Adding and Removing Alarm Tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console)).
+Whenever the relationship for a relational anomaly group is broken, RAD detects this and generates suggestion events in the Alarm Console. These events can be viewed in the *Relational Anomalies* tab, accessible through [the Alarm Console light bulb](xref:Light_Bulb_Feature), or in the *Suggestion events* tab (see [Adding and Removing Alarm Tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console)).
 
 Suggestion events for the same group of parameters are grouped into a single incident. Clearing the grouped incident will also clear all suggestion events included in it. Other changes (e.g., taking ownership, adding comments) are not supported for grouped incidents. Note that prior to DataMiner 10.5.4, <!-- RN 41983, 42050 --> a separate suggestion event was generated for each parameter in the group where a broken relationship was detected.
 
-From DataMiner 10.5.6/10.6.0 onwards<!--RN 42602-->, [deleting a parameter group](xref:RAD_manager#removing-a-parameter-group) will also clear all open suggestion events associated with that group.
+From DataMiner 10.5.6/10.6.0 onwards<!--RN 42602-->, [deleting a relational anomaly group](xref:RAD_manager#removing-a-relational-anomaly-parameter-group) will also clear all open suggestion events associated with that group.
 
 ## Limitations
 
-- RAD is only able to monitor parameters on the local DataMiner Agent. This means that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
+- Currently, RAD cannot monitor parameters hosted on multiple DataMiner Agents within a single group. All parameters in a group must be hosted on the same DMA. Prior to DataMiner 10.5.9/10.6.0<!--RN 43320-->, the *RelationalAnomalyDetection.xml* file on a given DMA could only include parameters hosted on that DMA.
 
 - Some parameter behavior will cause RAD to work less accurately. For example, if a parameter responds to another parameter with a delay, such as a door opening gradually lowering a room's temperature, RAD may generate less precise results.
 
-- Parameters on DVE children cannot be monitored directly by RAD. Instead, you should monitor the corresponding parameter instance on the DVE parent.
+- Parameters on DVE children can only be monitored directly by RAD from DataMiner 10.5.9/10.6.0 onwards <!-- RN 43320 -->. In earlier versions, you should monitor the corresponding parameter instance on the DVE parent.
 
 - Relational anomalies on history set parameters can only be detected from DataMiner 10.5.4/10.6.0 onwards, and only under certain conditions:<!-- RN 42319 -->
 

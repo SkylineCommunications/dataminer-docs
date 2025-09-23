@@ -4,6 +4,14 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 1 September 2025 - Fix - SupportAsistant 1.7.7 - CDMR reporting & usage offloading issues
+
+An issue introduced in SupportAssistant 1.7.4 caused the CDMR reporting for proactive support and usage offloading to fail in case the server had no direct internet access instead of routing the request via the CloudGateway. This issue has been resolved and the affected versions have been unlisted.
+
+#### 27 August 2025 - Enhancement - SupportAsistant 1.7.6 - General improvements
+
+General improvements have been made to the way SupportAssistant handles tasks, making the DxM more robust and also improving its shutdown procedure.
+
 #### 24 June 2025 - Enhancement - SupportAsistant 1.7.5 - Improved upgrade process
 
 Improvements have been made to the startup and shutdown of the DxM, which improves the upgrade process.

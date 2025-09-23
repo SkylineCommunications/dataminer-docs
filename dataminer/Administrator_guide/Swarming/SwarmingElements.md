@@ -19,7 +19,7 @@ Because of the way swarming functions, it is not possible to swarm smart-serial 
 
 To swarm elements in DataMiner Cube:
 
-1. Go to *System Center* > *Agents* > *Status* and click the *Swarm* button in the lower right corner.
+1. Go to *System Center* > *Agents* > *Status* and click the *Swarm* button in the lower-right corner.
 
 1. On the left, select the element(s) you want to swarm.
 

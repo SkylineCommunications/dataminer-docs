@@ -21,7 +21,7 @@ With the DataMiner User-Defined APIs module, you can create custom APIs to inter
 - [Retrieving elements in alarm](xref:UD_APIs_Elements_in_alarm_tutorial)
 
 > [!NOTE]
-> The Automation script solution that is created and used in the tutorials is [available on GitHub](https://github.com/SkylineCommunications/SLC-UDAPI-Documentation-Tutorial-Scripts). The API scripts can also be deployed directly to a DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) using the corresponding [Catalog item](https://catalog.dataminer.services/details/package/5162).
+> The Automation script solution that is created and used in the tutorials is [available on GitHub](https://github.com/SkylineCommunications/SLC-UDAPI-Documentation-Tutorial-Scripts). The API scripts can also be deployed directly to a DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) using the corresponding [Catalog item](https://catalog.dataminer.services/details/27c07390-04e4-49fe-a1a3-c9fc5fcd171c).
 
 > [!TIP]
 >

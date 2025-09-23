@@ -1,6 +1,7 @@
 ---
 uid: Viewing_info_on_DMS
 keywords: cloud admin, cloud administration
+reviewer: Alexander Verkest
 ---
 
 # Viewing information on DataMiner Systems

@@ -124,7 +124,7 @@ In the left-hand pane, click one of the following components, and drag it onto a
 
 1. Select the component, or hover over the component and click the green cogwheel in the top-right corner.
 
-1. In the properties pane in the lower right corner, make the necessary changes to the properties of the component.
+1. In the properties pane in the lower-right corner, make the necessary changes to the properties of the component.
 
 > [!TIP]
 > See also: [Overview of user interface component properties](xref:Overview_of_user_interface_component_properties)

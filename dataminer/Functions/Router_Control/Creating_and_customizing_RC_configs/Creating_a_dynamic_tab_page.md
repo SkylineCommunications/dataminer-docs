@@ -8,7 +8,7 @@ It is possible to link a tab page to a particular tab of a matrix, so that the c
 
 To do so:
 
-1. Select the tabpage and then select the *Link to pages* option in the lower right corner.
+1. Select the tabpage and then select the *Link to pages* option in the lower-right corner.
 
 1. Next to *Page*, specify the name of the tab you are linking to.
 

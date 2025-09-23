@@ -2,6 +2,7 @@
 uid: Logging_on_to_dataminer_services
 description: Authenticate using a corporate email address linked to a Microsoft, Google, Amazon, or LinkedIn account, or create a dedicated account.
 keywords: cloud logon, cloud log-on
+reviewer: Alexander Verkest
 ---
 
 # Logging on to dataminer.services

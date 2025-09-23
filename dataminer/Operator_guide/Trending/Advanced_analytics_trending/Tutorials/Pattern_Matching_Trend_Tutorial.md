@@ -58,7 +58,7 @@ The tutorial consists of the following steps:
 
 1. Add the parameters *Free Disk Space*, *Available Physical Memory*, and *Video Feed* to the trend graph:
 
-   1. In the lower right corner, click the expand icon ![expand icon](~/dataminer/images/ExpandUp.png) to expand the parameter pane.
+   1. In the lower-right corner, click the expand icon ![expand icon](~/dataminer/images/ExpandUp.png) to expand the parameter pane.
 
    1. Click *Add parameter*.
 
@@ -162,7 +162,7 @@ You will see that the *Video Feed* pattern is indicated, but the *Backup* patter
 
 1. Add the *Free Disk Space* parameter to the trend graph:
 
-   1. In the lower right corner, click the expand icon ![expand icon](~/dataminer/images/ExpandUp.png) to expand the parameter pane.
+   1. In the lower-right corner, click the expand icon ![expand icon](~/dataminer/images/ExpandUp.png) to expand the parameter pane.
 
    1. Click *Add parameter*.
 
@@ -223,7 +223,7 @@ You will see that the *Backup* pattern is marked where relevant.
 
 1. Wait until the new tag appears for the new power spike. Zoom in if necessary to better see the spike.
 
-1. If the Alarm Console is not yet expanded, in the lower right corner of the Cube window, click the expand icon ![expand icon](~/dataminer/images/ExpandUp.png) to expand it.
+1. If the Alarm Console is not yet expanded, in the lower-right corner of the Cube window, click the expand icon ![expand icon](~/dataminer/images/ExpandUp.png) to expand it.
 
 1. In the top-right corner of the Alarm Console, click the light bulb icon.
 

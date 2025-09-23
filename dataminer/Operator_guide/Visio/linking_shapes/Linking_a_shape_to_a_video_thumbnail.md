@@ -10,7 +10,7 @@ When you link a shape to a video thumbnail, the video feed from the video server
 
 Please note the following:
 
-- From DataMiner 10.2.0 [CU1]/10.2.4 onwards, HTML5 video thumbnails are **muted** by default. From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41597-->, you can unmute them by clicking the sound icon in the lower right corner. When unmuted, the volume is automatically set to 100%. In earlier versions, unmuting required hovering over the sound icon and using a slider to adjust the volume.
+- From DataMiner 10.2.0 [CU1]/10.2.4 onwards, HTML5 video thumbnails are **muted** by default. From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41597-->, you can unmute them by clicking the sound icon in the lower-right corner. When unmuted, the volume is automatically set to 100%. In earlier versions, unmuting required hovering over the sound icon and using a slider to adjust the volume.
 
 - Video servers that only accept **TLS 1.2** are supported from DataMiner 10.2.0/10.1.1 onwards.
 

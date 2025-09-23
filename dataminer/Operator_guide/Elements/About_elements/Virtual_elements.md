@@ -62,5 +62,5 @@ To configure virtual elements in Cube, the *Element Connections* module can be u
 
 > [!NOTE]
 >
-> - You can export an overview of the element connections to a CSV file using the *Export* button in the lower right corner of the module.
+> - You can export an overview of the element connections to a CSV file using the *Export* button in the lower-right corner of the module.
 > - If there is incorrect or corrupt data in the element connections configuration, the *Element Connections* module is only available for users with full root view access.

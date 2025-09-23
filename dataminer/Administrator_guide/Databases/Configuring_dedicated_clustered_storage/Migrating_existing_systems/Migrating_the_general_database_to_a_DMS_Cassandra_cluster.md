@@ -32,7 +32,7 @@ The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on 
 
 > [!NOTE]
 >
-> - The **migration will not clear any existing data from the given Cassandra cluster**. This means that any data that might conflict with the migrated data should first be deleted manually. We recommend that you make sure the target Cassandra cluster is clean before you proceed with the migration. You can use DevCenter to inspect the data in the cluster and any existing keyspaces and/or tables can be dropped.
+> - The **migration will not clear any existing data from the given Cassandra cluster**. This means that any data that might conflict with the migrated data should first be deleted manually. We recommend that you make sure the target Cassandra cluster is clean before you proceed with the migration.
 > - If there is an **existing OpenSearch/Elasticsearch cluster** connected to the DMS, this cluster will be reused and any given input regarding this cluster will be disregarded. In the existing cluster, alarms will be deleted and migrated again from the DMS. Jobs, ticketing, and SRM information will not be migrated, as this is expected to already be present in the OpenSearch/Elasticsearch cluster. If this is not the case, migrate this data first through DataMiner Cube (see [Configuring indexing settings in System Center](xref:Configuring_DataMiner_Indexing)).
 
 ## Stages of the migration

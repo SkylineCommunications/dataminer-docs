@@ -1,5 +1,6 @@
 ---
 uid: Change_Catalog_Publishing_State
+reviewer: Alexander Verkest
 ---
 
 # Change the publishing state of a Catalog item

@@ -15,7 +15,7 @@ Thread locking
 
 ## Fix
 
-To be confirmed
+No fix available yet. <!--Task ID: 191131-->
 
 ## Issue description
 

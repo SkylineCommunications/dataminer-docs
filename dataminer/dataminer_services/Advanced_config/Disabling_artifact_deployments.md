@@ -1,5 +1,6 @@
 ---
 uid: Disabling_artifact_deployments
+reviewer: Alexander Verkest
 ---
 
 # Disabling artifact deployments locally

@@ -26,11 +26,11 @@ To view these metrics:
 
    The *Maintain Automation* window will open.
 
-1. For information about each script execution, go to the *Scripts Statistics* tab and select *Load/Refresh Scripts Statistics* in the lower left corner.
+1. For information about each script execution, go to the *Scripts Statistics* tab and select *Load/Refresh Scripts Statistics* in the lower-left corner.
 
    ![Scripts Statistics](~/dataminer/images/ScriptsStatistics.jpg)
 
-1. For general information about script executions, go to the *Automation Statistics* tab and select *Load/Refresh Automation Statistics* in the lower left corner.
+1. For general information about script executions, go to the *Automation Statistics* tab and select *Load/Refresh Automation Statistics* in the lower-left corner.
 
    ![Automation Statistics](~/dataminer/images/AutomationStatistics.jpg)
 

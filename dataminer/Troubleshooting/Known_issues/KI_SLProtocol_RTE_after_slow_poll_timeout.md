@@ -14,7 +14,7 @@ When a DataMiner element enters slow poll mode after a timeout, DataMiner uses t
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.5.9/10.4.0 [CU18]/10.5.0 [CU6]<!--RN 43216-->.
 
 ## Workaround
 

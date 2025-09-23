@@ -145,9 +145,9 @@ To create a new theme, see [Creating a new theme for a low-code app page](#creat
    > - To duplicate a component theme, click the ![Duplicate](~/dataminer/images/Duplicate_Theme.png) button next to it.
    > - To delete a component theme, click the ![Delete](~/dataminer/images/Delete_Theme.png) button next to it. This is not possible for the default theme.
 
-1. Click *Create* or *Save* (depending on your DataMiner version<!--RN 38278-->) in the lower right corner to save all changes.
+1. Click *Create* or *Save* (depending on your DataMiner version<!--RN 38278-->) in the lower-right corner to save all changes.
 
    > [!NOTE]
    >
-   > - To stop editing the theme and reset all changes, click *Cancel* in the lower right corner.
+   > - To stop editing the theme and reset all changes, click *Cancel* in the lower-right corner.
    > - To set the new theme as the default theme, click the toggle button next to *Set as default*.

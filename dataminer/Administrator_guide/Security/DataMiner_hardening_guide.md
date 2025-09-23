@@ -40,23 +40,30 @@ After you have run a BPA test, it will provide an overview of the detected issue
 
 ### Secure Cube-server communication
 
-By default, Cube currently uses .NET Remoting to communicate with DataMiner. From DataMiner 10.1.7 onwards, this communication is encrypted using the Rijndael algorithm using a 256-bit key, which is negotiated over a 1024-bit RSA encrypted communication channel. However, .NET Remoting is a legacy technology and is widely considered insecure. For this reason, DataMiner 10.3.2/10.3.0 introduces the possibility to use gRPC instead as a secure alternative.
+From DataMiner 10.5.10/10.6.0 onwards<!-- RN 43260 -->, Cube uses gRPC by default to communicate with DataMiner, which means no further action is needed to secure this communication.
+
+However, prior to this or when manually configured to do so, Cube uses .NET Remoting to communicate with DataMiner. This communication is encrypted using the Rijndael algorithm using a 256-bit key, which is negotiated over a 1024-bit RSA encrypted communication channel. However, .NET Remoting is a legacy technology and is widely considered insecure. Therefore, starting from DataMiner 10.3.2/10.3.0, we recommend that you manually enable gRPC for the client-server connection.
+
+To manually enable gRPC for the client-server connection, edit the *ConnectionSettings.txt* file on each DataMiner Agent. For detailed information, refer to [ConnectionSettings.txt](xref:ConnectionSettings_txt).
 
 > [!IMPORTANT]
-> The gRPC connection feature is still a beta feature in DataMiner 10.3.2/10.3.0 CU0, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
+> To use gRPC, your DMAs must use HTTPS connections. If this is not the case yet, make sure to [set up HTTPS](xref:Setting_up_HTTPS_on_a_DMA) first.
 
-To enable gRPC for the client-server connection, edit the *ConnectionSettings.txt* file on each DataMiner Agent. For detailed information, refer to [ConnectionSettings.txt](xref:ConnectionSettings_txt).
+> [!NOTE]
+> Prior to DataMiner 10.5.10/10.6.0, the gRPC connection feature is still a beta feature, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
 
 ### Secure server-server communication
 
 #### gRPC
 
-For the inter-DMA communication, like for the communication with DataMiner Cube, you can also use gRPC instead of .NET Remoting from DataMiner 10.3.2/10.3.0 onwards.
+From DataMiner 10.5.10/10.6.0 onwards<!-- RN 43506 -->, gRPC is used by default for communication between DataMiner Agents, which means no further action is needed to secure this communication.
 
-> [!IMPORTANT]
-> The gRPC connection feature is still a beta feature in DataMiner 10.3.2/10.3.0 CU0, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
+In earlier DataMiner versions or when manually configured, .NET Remoting is used instead. However, from DataMiner 10.3.2/10.3.0 onwards, we recommend enabling gRPC for the inter-DMA communication.
 
 To enable gRPC for the communication between DataMiner Agents in a cluster, add [redirects in DMS.xml](xref:DMS_xml#redirects-subtag) or, from **10.3.6/10.3.0 [CU3] onwards**, disable .NET Remoting completely in [MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#disabling-net-remoting).
+
+> [!NOTE]
+> Prior to DataMiner 10.5.10/10.6.0, the gRPC connection feature is still a beta feature, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
 
 #### NATS
 

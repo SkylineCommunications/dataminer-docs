@@ -83,7 +83,7 @@ Before [installing the *META WhatsApp Messaging* connector](#installing-the-meta
 
    1. Select the recipient's phone number.
 
-   1. To send a test message to your newly added phone number, click *Send message* in the lower right corner.
+   1. To send a test message to your newly added phone number, click *Send message* in the lower-right corner.
 
 1. Save the *Phone number identifier* and the *WhatsApp Business Account ID*, which you can find right below the sender's number.
 

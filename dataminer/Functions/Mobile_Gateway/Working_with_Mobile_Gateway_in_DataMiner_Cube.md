@@ -63,4 +63,4 @@ To check the list of text messages waiting to be sent:
 
 To remove a text message that has not yet been sent:
 
-- In the *status* tab, select the message in the *SMS stack* table and click the *Remove SMS* button in the lower right corner.
+- In the *status* tab, select the message in the *SMS stack* table and click the *Remove SMS* button in the lower-right corner.

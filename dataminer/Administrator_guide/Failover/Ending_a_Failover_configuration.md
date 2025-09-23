@@ -17,7 +17,7 @@ In case you use a self-managed storage setup with [Cassandra storage per DMA](xr
 
 To verify this:
 
-1. Execute the following query on the database (e.g. using [DevCenter](xref:DataStax_DevCenter)):
+1. Execute the following query on the database using your preferred query tool:
 
    `Select keyspace_name, replication from system_schema.keyspaces where keyspace_name IN('SLDMADB','system_auth');`
 
@@ -38,7 +38,7 @@ If the replication factor is correct, you can continue ending the Failover confi
 
 1. On the *Manage* tab, make sure the online DMA is selected in the list of DataMiner Agents.
 
-1. Click the *Failover* button in the lower right corner.
+1. Click the *Failover* button in the lower-right corner.
 
 1. In the *Failover* window, depending on your DataMiner version, select *No Failover*, or clear the selection from the *Failover* checkbox.
 

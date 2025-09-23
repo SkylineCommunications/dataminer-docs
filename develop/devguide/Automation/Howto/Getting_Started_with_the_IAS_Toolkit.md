@@ -135,6 +135,9 @@ public class HelloWorldDialog : Dialog
 
 In order to display the widgets, you will need to add them to your dialog using the *AddWidget* method. With this method, you can link a widget to a cell in a grid layout, where cell 0;0 is in the top-left corner of the dialog.
 
+> [!TIP]
+> For more information on interactive Automation script widgets, layouts, and event handlers, refer to the [API reference](xref:Skyline.DataMiner.Utils.InteractiveAutomationScript).
+
 ```csharp
 public class HelloWorldDialog : Dialog
 {
@@ -210,7 +213,7 @@ You can now publish the script to your DMA, using either of the following ways:
 
 If everything goes well, you will see your script in the Automation module in DataMiner Cube.
 
-To take a look at the script in action, click the *Execute* button in the lower right corner and then click *Execute now*.
+To take a look at the script in action, click the *Execute* button in the lower-right corner and then click *Execute now*.
 
    ![IAS4](~/develop/images/IAS4.png)
 

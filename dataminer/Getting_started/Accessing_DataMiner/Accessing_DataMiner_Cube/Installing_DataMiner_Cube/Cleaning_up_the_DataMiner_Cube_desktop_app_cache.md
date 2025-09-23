@@ -9,7 +9,7 @@ From DataMiner 10.1.9/10.2.0 onwards, you can remove cached Cube versions and em
 
 To do so:
 
-1. Click the cogwheel button in the lower right corner of the start window and select *Cleanup*.
+1. Click the cogwheel button in the lower-right corner of the start window and select *Cleanup*.
 
 1. In the list of cached Cube versions, select the versions you want to remove from the cache.
 

@@ -52,3 +52,14 @@ Data Aggregator does not necessarily have to be installed on a server running a 
 
 > [!NOTE]
 > By default, a log file for Data Aggregator is stored in `C:\ProgramData\Skyline Communications\DataMiner DataAggregator\Logs`. In case the *DataAggregator* service does not start, the log file will contain more information.
+
+## Updating Data Aggregator
+
+- From DataMiner 10.5.9/10.6.0 onwards<!--RN 43334-->, Data Aggregator is included in DataMiner upgrade packages. **Updates occur automatically** during a DataMiner upgrade.
+
+  However, the DxM will only be upgraded if an older version is already installed on the DMA. If no older version is found, it will not be installed.
+
+- Alternatively, you can **manually update** Data Aggregator [via the dataminer.services Admin app](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions).
+
+  > [!NOTE]
+  > When upgrading the Data Aggregator module from version 2.x.x to 3.0.0 or higher, and if your prior installation included configured GQI queries, a one-time migration process using a [Data Aggregator Migrator](xref:Data_Aggregator_Migrators#upgrading-from-version-2xx) is necessary.

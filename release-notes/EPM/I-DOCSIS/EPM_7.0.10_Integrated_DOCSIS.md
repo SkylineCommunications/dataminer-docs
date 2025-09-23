@@ -25,6 +25,10 @@ To prevent this, the connector will now store and sync the FTP settings, ensurin
 
 In addition, users will now be able to configure the *PNM Bulk Data Transfer Configuration Table* directly from the CCAP UTSC element.
 
+#### Cisco CBR-8 CCAP Platform: New table with power supply KPIs [ID 43232]
+
+On the *Power Supply* page of the Cisco CBR-8 CCAP Platform connector, a new table with power supply KPIs is now available, named the *FRU Power Status Table*. It displays SNMP data related to the CISCO Entity Field-Replaceable Unit (FRU) Control, including the power supply statuses and metrics.
+
 #### Cisco CBR-8 CCAP UTSC/Generic SFTP Client: Improved spectrum capture process [ID 43237]
 
 Previously, when processing spectrum traces using the connectors Cisco CBR-8 CCAP UTSC and Generic SFTP Client, it could occur that it was not clear when all trace results were processed. To improve this, after a capture is triggered, the element using the Cisco CBR-8 CCAP UTSC connector will now wait for the duration that combines the configured free run duration, the repeat period, and a configurable delay. This will ensure that every capture file is safely written to the local storage on the DataMiner Agent where the spectrum capture was taken.

@@ -1,6 +1,7 @@
 ---
 uid: Connect_to_cloud_with_DMZ
 keywords: cloud connection, cloud dmz
+reviewer: Alexander Verkest
 ---
 
 # Connecting to dataminer.services with a DMZ setup

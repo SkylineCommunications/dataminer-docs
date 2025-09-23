@@ -290,7 +290,7 @@ In some cases, scheduled tasks configured to take a DataMiner backup, optimize t
 
 #### Visual Overview: Hidden pages of an embedded Visio file would incorrectly be displayed when viewed in a web app \[ID 31881\]
 
-When an embedded multi-page Visio file with hidden pages was viewed in a web app, the hidden pages would incorrectly be displayed.
+When an embedded multipage Visio file with hidden pages was viewed in a web app, the hidden pages would incorrectly be displayed.
 
 #### Elements of which the second port was incorrectly configured would no longer start up \[ID 31882\]
 

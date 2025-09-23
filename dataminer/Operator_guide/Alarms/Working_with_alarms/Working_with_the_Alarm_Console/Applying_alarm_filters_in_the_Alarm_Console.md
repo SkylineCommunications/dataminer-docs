@@ -6,7 +6,7 @@ uid: ApplyingAlarmFiltersInTheAlarmConsole
 
 ## Using the Alarm Console quick filter box
 
-In the lower right corner of the Alarm Console, a quick filter box is displayed.
+In the lower-right corner of the Alarm Console, a quick filter box is displayed.
 
 This filter box can be used in different ways:
 

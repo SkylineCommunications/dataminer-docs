@@ -24,7 +24,7 @@ uid: Setting_up_a_new_DMS_in_DataMiner_Cube
 
    1. Open DataMiner Cube on the primary DMA, and navigate to the *Agents* > *Manage* tab as before.
 
-   1. In the lower left corner, click *Add*.
+   1. In the lower-left corner, click *Add*.
 
    1. Enter the IP of the DMA you want to add and click *Add*.
 

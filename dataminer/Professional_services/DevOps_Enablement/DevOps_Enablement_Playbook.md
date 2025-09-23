@@ -35,6 +35,9 @@ This guide documents typical activities and requisites recommended for a DevOps 
 
 - [Certification](xref:DEP_Certification)
 
-- [Levelling up your DevOps status](xref:Levelling_up_DevOps_status)
+- [Leveling up your DevOps status](xref:Leveling_up_DevOps_status)
 
 - [Reporting progress to the stakeholders](xref:Reporting_Progress_to_Stakeholders)
+
+> [!TIP]
+> Are you starting a DevOps Enablement initiative? Download [our template](https://community.dataminer.services/download/devops-enablement-program-template/) to serve as your guide.

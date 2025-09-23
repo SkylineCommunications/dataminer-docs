@@ -31,4 +31,4 @@ To view a list of all alarms that have affected the SLA, including past alarms, 
 > [!NOTE]
 >
 > - The *History Statistics* table only contains data for SLAs that use a fixed window.
-> - It is possible to change the maximum number of rows in the *History Statistics Table*. To do so, enter the desired number of rows in the *Max Number Of History Rows* box. You can also clear the table using the *Clear History* button in the lower right corner.
+> - It is possible to change the maximum number of rows in the *History Statistics Table*. To do so, enter the desired number of rows in the *Max Number Of History Rows* box. You can also clear the table using the *Clear History* button in the lower-right corner.

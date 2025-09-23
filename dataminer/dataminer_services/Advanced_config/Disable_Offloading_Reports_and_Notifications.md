@@ -1,5 +1,6 @@
 ---
 uid: Disable_Offloading_Reports_and_Notifications
+reviewer: Alexander Verkest
 ---
 
 # Disabling reports and notifications offloading

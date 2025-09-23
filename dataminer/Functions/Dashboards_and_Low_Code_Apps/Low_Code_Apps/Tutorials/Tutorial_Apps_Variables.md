@@ -72,7 +72,7 @@ In this step, you will create a query that retrieves elements in your DataMiner 
 
       1. Under *Empty data shows*, select *everything*.
 
-      1. Click *Link* in the lower right corner.
+      1. Click *Link* in the lower-right corner.
 
          > [!TIP]
          > See also: [Replace the static filter value with a feed](xref:Tutorial_Dashboards_Controls_And_Feeds_Query#step-4-replace-the-static-filter-value-with-a-feed)

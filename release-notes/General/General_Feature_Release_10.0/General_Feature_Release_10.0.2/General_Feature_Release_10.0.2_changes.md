@@ -348,9 +348,9 @@ In the Router Control app, in some rare cases, an exception could be thrown when
 
 In some cases, it could occur that clicking a shape had no effect.
 
-#### SLProtocol crash on multi-threaded timers \[ID 23744\]
+#### SLProtocol crash on multithreaded timers \[ID 23744\]
 
-In some cases, an error could occur in SLProtocol when using multi-threaded timers on an element with debug logging enabled at level 3 or higher.
+In some cases, an error could occur in SLProtocol when using multithreaded timers on an element with debug logging enabled at level 3 or higher.
 
 #### DataMiner Cube: Not possible to select value for alarm template condition based on discrete parameter with dependency \[ID 23789\]
 

@@ -106,7 +106,7 @@ Access your new DaaS system.
 
 1. If required, confirm by clicking *Open DataMiner Cube*.
 
-1. Click *Connect* in the lower right corner of the *New DataMiner System* pop-up window.
+1. Click *Connect* in the lower-right corner of the *New DataMiner System* pop-up window.
 
    ![New DataMiner System](~/dataminer/images/daas_access_003.png)
 
@@ -154,7 +154,7 @@ Next, you will create an element that allows you to monitor a website of your ch
 
    - **Name (HTTP Queries)**: Enter a name for your entry, e.g. `Skyline`.
 
-1. Select *OK* in the lower right corner.
+1. Select *OK* in the lower-right corner.
 
    A new entry has now been added to the *HTTP Queries* table on the *DATA* > *General* page of your element.
 
@@ -201,7 +201,7 @@ In this final step, you will create an alarm template to monitor the *Status Cod
 
    ![Alarm template HTTP Queries](~/dataminer/images/Alarm_Template_HTTP_Queries.png)
 
-1. Select *OK* in the lower right corner.
+1. Select *OK* in the lower-right corner.
 
    On the *DATA* > *General* page of your element, the alarm severity will now be shown with appropriate colors for the *Status Code* column.
 

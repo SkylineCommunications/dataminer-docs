@@ -14,7 +14,7 @@ As various network- or database-related disruptions can lead to the clusters goi
 ## Prerequisites
 
 - Elasticsearch knowledge
-- An element configured to use the [Elasticsearch Cluster Monitor protocol](https://catalog.dataminer.services/result/driver/5943)
+- An element configured to use the [Elasticsearch Cluster Monitor protocol](https://catalog.dataminer.services/details/3af57364-4a96-4106-84ad-a6a43d4f630f)
 - A DataMiner Agent with access to <http://[databaseIP]:9200>
 - A modern browser, e.g. Chrome, Edge, and Firefox
 

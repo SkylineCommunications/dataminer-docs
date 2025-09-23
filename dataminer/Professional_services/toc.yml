@@ -28,8 +28,6 @@ items:
             topicUid: Methodology_is_not_a_choice
           - name: Methodology needs to be practiced
             topicUid: Methodology_needs_to_be_practiced
-      - name: Deployment methodologies in summary
-        topicUid: Deployment_methodologies_in_summary
       - name: Turnkey Methodology
         topicUid: Turnkey_Methodology
         items:
@@ -90,8 +88,8 @@ items:
             topicUid: Learning_Resources
           - name: Certification
             topicUid: DEP_Certification
-          - name: Levelling up your DevOps status
-            topicUid: Levelling_up_DevOps_status
+          - name: Leveling up your DevOps status
+            topicUid: Leveling_up_DevOps_status
           - name: Reporting progress to the stakeholders
             topicUid: Reporting_Progress_to_Stakeholders
   - name: Training courses and certification
