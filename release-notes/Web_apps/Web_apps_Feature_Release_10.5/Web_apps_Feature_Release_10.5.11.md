@@ -183,13 +183,13 @@ From now on, the user picture will be cached on the client machine. This will pr
 
 ### Fixes
 
-#### Users with the 'User must change password at next login' setting enabled would incorrectly not be able to log on to the web apps [ID 43590]
+#### Users with the 'User must change password at next login' setting enabled would incorrectly not be able to log on to the web apps [ID 43590] [ID 43745]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When, in DataMiner Cube, users had the *User must change password at next login* setting enabled, up to now, they would incorrectly not be able to log on to the web apps as they were not able to change their password when logging on.
 
-From now on, when the password of a user has expired in DataMiner, the web method `ConnectAppAndInfo` will return a message of type "PasswordExpired".
+From now on, when you try to log in to a web app with an expired password, a message will appear, saying that your password has expired. You will then be able to enter a new password and log in again.
 
 > [!NOTE]
 > This will not work with user passwords that expired in Microsoft Windows as DataMiner is not able to authenticate such users.
