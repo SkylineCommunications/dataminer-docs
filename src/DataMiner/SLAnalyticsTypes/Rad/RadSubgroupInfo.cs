@@ -55,7 +55,7 @@ namespace Skyline.DataMiner.Analytics.Rad
         /// <summary>
         /// The parameters in the subgroup.
         /// In case multiple RADSubGroupInfo objects are defined for the same shared model group, the parameters in the subgroups need to be consistent with each other.
-        /// This means that either the parameters in the subgroups have the same label, or have consistent order of the parameters in them.
+        /// This means that either the parameters in the subgroups have the same label, or the order of the parameters in the subgroups is consistent.
         /// </summary>
         public List<RADParameter> Parameters { get; set; }
 
