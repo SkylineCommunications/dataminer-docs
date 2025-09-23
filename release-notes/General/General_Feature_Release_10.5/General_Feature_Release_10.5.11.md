@@ -45,6 +45,12 @@ This new filter box should only be used when no new messages will be added to th
 
 ### Enhancements
 
+#### Element replication: Replication buffer will now be read in chunks [ID 43281]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, when the connection to a replicated element was restored, the entire replication buffer would be read into memory at once. From now on, the replication buffer will be read in chunks.
+
 #### Relational anomaly detection: RAD parameter groups can now contain parameters hosted by different DMAs [ID 43440] [ID 43686]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->

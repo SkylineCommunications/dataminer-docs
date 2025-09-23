@@ -15,6 +15,12 @@ uid: General_Main_Release_10.4.0_CU20
 
 ### Enhancements
 
+#### Element replication: Replication buffer will now be read in chunks [ID 43281]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, when the connection to a replicated element was restored, the entire replication buffer would be read into memory at once. From now on, the replication buffer will be read in chunks.
+
 #### DataMiner Object Models: Enhanced performance when filtering on FieldValues in memory via FilterElements [ID 43568]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
