@@ -7,6 +7,14 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 5 August 2025 - DataAPI 1.3.0 - Improved DxM-DataMiner communication for better timeout handling [ID 43441]
+
+The communication between the DataAPI DxM and DataMiner has been improved to better handle timeouts. Previously, data consisting of multiple commands could be pushed in a single message, but when communication timed out this could cause DataAPI to be out of sync with DataMiner, potentially leading to data being overridden or deleted. Now the original message is split in two, so that important information can be cached at an earlier stage, avoiding problems caused by timeouts in a later stage.
+
+### 5 August 2025 - DataAPI 1.3.0 - Data now pushed directly to SLProtocol to improve performance [ID 41569]
+
+To improve performance and reduce the load on the SLNet process, DataAPI will now push data directly to the SLProtocol process. It will only communicate with SLNet over NATS to create or update the auto-generated connector and to create new elements. Requests for setting parameters are now sent directly to SLProtocol, where support has been added to communicate over NATS.
+
 ### 9 January 2025 - Fix - DataAPI 1.2.7 - Parameter ID incorrectly reset when adding new parameters [ID 41886]
 
 When new parameters were added, it could occur that their parameter ID reverted to the default starting value instead of the expected incremental IDs, because maxParamId was reset to the default initial parameter ID. This issue has been resolved.
