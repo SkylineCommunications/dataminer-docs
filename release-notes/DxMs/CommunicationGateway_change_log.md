@@ -4,6 +4,13 @@ uid: CommunicationGateway_change_log
 
 # CommunicationGateway change log
 
+#### 23 September 2025 - Fix - CommunicationGateway 5.3.1 - Installer incorrectly selected DVD drive for log files [ID 43714]
+
+Previously, the CommunicationGateway installer could incorrectly treat a DVD drive (when assigned as D:) as a valid location for log files.
+If the C drive had less free space than the DVD drive, the installer attempted to write logs to the DVD drive, resulting in installation failures.
+
+This update ensures the installer always prioritizes the C drive, regardless of available space on other drives.
+
 #### 17 September 2025 - Enhancement - CommunicationGateway 5.3.0 - Configurable gRPC call timeouts [ID 43460]
 
 gRPC calls no longer use a fixed 5-second timeout. You can now define a custom timeout for each request. If no timeout is specified, the default remains 5 seconds.
