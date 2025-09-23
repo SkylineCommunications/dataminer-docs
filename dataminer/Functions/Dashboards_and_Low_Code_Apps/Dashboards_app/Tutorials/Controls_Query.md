@@ -1,15 +1,15 @@
 ---
-uid: Tutorial_Dashboards_Controls_And_Feeds_Query
+uid: Tutorial_Dashboards_Controls_Query
 ---
 
-# Leveraging controls and feeds to create a dynamic GQI query
+# Using controls to create a dynamic GQI query
 
-In this tutorial, you will discover how to harness controls and feeds that are used in a GQI query. An update to the user input will lead to an updated GQI result. This is especially useful for visualizations that do not support any filtering.
+In this tutorial, you will discover how to harness controls to interact with a GQI query. An update to the user input will lead to an updated GQI result. This is especially useful for visualizations that do not support any filtering.
 
 Expected duration: 10 minutes
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created with the DataMiner 10.4.1 web apps.
+> The content and screenshots for this tutorial have been created with the DataMiner 10.5.9 web apps.
 
 ## Prerequisites
 
@@ -22,14 +22,11 @@ Expected duration: 10 minutes
 - [Step 1: Install the dummy data sources package](#step-1-install-the-dummy-data-sources-package)
 - [Step 2: Create a dashboard and add a text input](#step-2-create-a-dashboard-and-add-a-text-input)
 - [Step 3: Add a query and visualize it](#step-3-add-a-query-and-visualize-it)
-- [Step 4: Replace the static filter value with a feed](#step-4-replace-the-static-filter-value-with-a-feed)
-
-> [!TIP]
-> See also: [Kata #13: Controls and feeds in a low-code app](https://community.dataminer.services/courses/kata-13/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)<br>Note that this kata also showcases the data input of the text input component, which is not included in the tutorial below. This is a feature that is available from 10.3.0 [CU10]/10.4.1 onwards.
+- [Step 4: Link the text input to the GQI query to enable dynamic filtering](#step-4-link-the-text-input-to-the-gqi-query-to-enable-dynamic-filtering)
 
 ## Step 1: Install the dummy data sources package
 
-1. Go to <https://catalog.dataminer.services/catalog/5410>.
+1. Go to <https://catalog.dataminer.services/details/d9089bae-0680-4da2-9c30-1c768f68fe63>.
 
 1. Click the *Deploy* button to deploy the *IPAM - GQI dummy data sources* packages on your DMA.
 
@@ -51,7 +48,7 @@ Expected duration: 10 minutes
 
 Your text input should look like this:
 
-   ![Numeric input](~/dataminer/images/Dashboards_Tutorial_Controls_Feeds_Query_Numeric.jpg)
+   ![Step 2 result](~/dataminer/images/Dashboards_Tutorial_Step2.jpg)
 
 ## Step 3: Add a query and visualize it
 
@@ -69,19 +66,15 @@ Your text input should look like this:
 
    The result should look like this:
 
-   ![Statically filtered query](~/dataminer/images/Dashboards_Tutorial_Controls_Feeds_Query_Static.jpg)
+   ![Statically filtered query](~/dataminer/images/Dashboards_Tutorial_Static.jpg)
 
-## Step 4: Replace the static filter value with a feed
+## Step 4: Link the text input to the GQI query to enable dynamic filtering
 
 1. Edit the GQI query again and open the filter operator.
 
-1. In the *Value* box, click the "Link to feed" icon (or the "Link to data" icon in DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 or higher).
+1. In the *Value* box, click the ![Link to](~/dataminer/images/Link_to_Data.png) icon. This icon is used everywhere a user can link a value to data.
 
-   This icon is used everywhere a user can link a value to data.
-
-   !["Link to feed" icon in DataMiner 10.4.1](~/dataminer/images/Dashboards_Tutorial_Controls_Feeds_Query_Link.jpg)
-
-   Clicking the icon opens the *Link to* dialog, which will ask for a specific feed or data, the type, and a property.
+   Clicking the icon opens the *Link to* dialog, which will ask for specific data, the type, and a property.
 
 1. Specify the necessary info in the dialog:
 
@@ -89,14 +82,16 @@ Your text input should look like this:
 
       You will notice that the type and property are automatically filled in if only one possible value is available.
 
-   1. To determine what the behavior should be when the feed is empty, at the bottom of the dialog, select *everything*.
+   1. To determine what the behavior should be when the data is empty, at the bottom of the dialog, select *everything*.
 
       This determines what will happen when the user does not fill in any value in the text input. Selecting *everything* ensures that all data is retrieved in this case.
 
-      !["Link to feed" configuration in DataMiner 10.4.1](~/dataminer/images/Dashboards_Tutorial_Controls_Feeds_Query_Popup.jpg)
+      ![*Link to* pop-up window](~/dataminer/images/Link_to_popup.jpg)
 
       > [!TIP]
       > If you want the text input to behave like a search engine, you can select *nothing* instead. This will not retrieve any data until the user fills in a value in the text input.
+
+1. Select *Link* in the lower-right corner of the *Link to* dialog.
 
 1. Leave the dashboard edit mode using the button in the top-right corner.
 
@@ -115,4 +110,4 @@ This tutorial is part of the following learning path:
 
 ## Related documentation
 
-- [Component data](xref:Component_Data)
+- [Text input](xref:DashboardTextInput)
