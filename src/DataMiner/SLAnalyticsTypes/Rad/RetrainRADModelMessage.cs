@@ -61,6 +61,20 @@ namespace Skyline.DataMiner.Analytics.Rad
         public List<TimeRange> RetrainTimeRanges { get; set; }
 
         /// <summary>
+        /// Gets or sets the names of the subgroups whose data will be excluded from the retraining of the (shared) model. A subgroup will be excluded if either
+        /// its name is in this list, or its ID is in <see cref="ExcludedSubgroupIDs"/>. If both lists are empty, no subgroups will be excluded.
+        /// Available from DataMiner 10.5.9/10.6.0 onwards.
+        /// </summary>
+        public List<string> ExcludedSubgroupNames { get; set; }
+
+        /// <summary>
+        /// Gets or sets the IDs of the subgroups whose data will be excluded from the retraining of the (shared) model. A subgroup will be excluded if either 
+        /// its ID is in this list, or its name is in <see cref="ExcludedSubgroupNames"/>. If both lists are empty, no subgroups will be excluded.
+        /// Available from DataMiner 10.5.9/10.6.0 onwards.
+        /// </summary>
+        public List<Guid> ExcludedSubgroupIDs { get; set; }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="RetrainRADModelMessage"/> class.
         /// </summary>
         public RetrainRADModelMessage() { }
@@ -79,5 +93,23 @@ namespace Skyline.DataMiner.Analytics.Rad
         /// <param name="startTime">Start time of the time range with correct behavior.</param>
         /// <param name="endTime">End time of the time range with correct behavior.</param>
         public RetrainRADModelMessage(string groupName, DateTime startTime, DateTime endTime) {}
+
+        /// <summary>
+        /// Initializes a new instance with the specified parameters. Available from DataMiner 10.5.9/10.6.0 onwards.
+        /// </summary>
+        /// <param name="groupName">The name of the group whose RAD model needs to be retrained.</param>
+        /// <param name="startTime">Start time of the time range over which training data will be fetched.</param>
+        /// <param name="endTime">End time of the time range over which training data will be fetched.</param>
+        /// <param name="excludedSubgroups">The names of the subgroups whose data will be excluded from the retraining of the shared model.</param>
+        public RetrainRADModelMessage(string groupName, DateTime startTime, DateTime endTime, List<string> excludedSubgroups) {}
+
+        /// <summary>
+        /// Initializes a new instance with the specified parameters. Available from DataMiner 10.5.9/10.6.0 onwards.
+        /// </summary>
+        /// <param name="groupName">The name of the group whose RAD model needs to be retrained.</param>
+        /// <param name="startTime">start time of the time range over which training data will be fetched.</param>
+        /// <param name="endTime">End time of the time range over which training data will be fetched.</param>
+        /// <param name="excludedSubgroups">The IDs of the subgroups whose data will be excluded from the retraining of the shared model.</param>
+        public RetrainRADModelMessage(string groupName, DateTime startTime, DateTime endTime, List<Guid> excludedSubgroups) {}
     }
 }

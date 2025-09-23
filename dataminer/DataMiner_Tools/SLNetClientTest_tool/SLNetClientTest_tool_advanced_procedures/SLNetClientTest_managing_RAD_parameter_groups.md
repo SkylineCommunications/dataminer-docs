@@ -8,7 +8,7 @@ From DataMiner 10.5.4/10.6.0 onwards<!--RN 42181-->, it is possible to manage [r
 
 All configuration settings are stored in the *ai_rad_models_v2* database table.
 
-In Feature Release versions up to DataMiner 10.5.8<!--RN 43400-->, it is also possible to configure and view the same settings directly in [*RelationalAnomalyDetection.xml*](xref:Relational_anomaly_detection#configuring-parameter-groups-for-rad).
+In Feature Release versions up to DataMiner 10.5.8<!--RN 43400-->, it is also possible to configure and view the same settings directly in [*RelationalAnomalyDetection.xml*](xref:Relational_anomaly_detection#configuring-relational-anomaly-groups).
 
 1. [Connect to the DMA hosting the grouped parameters using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
