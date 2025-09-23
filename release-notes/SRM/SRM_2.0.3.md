@@ -2,7 +2,7 @@
 uid: SRM_2.0.3
 ---
 
-# SRM 2.0.2
+# SRM 2.0.3
 
 > [!NOTE]
 > This version requires that **DataMiner 10.4.9.0 – 14794 or higher** is installed. The DataMiner Main Release track is not supported.
