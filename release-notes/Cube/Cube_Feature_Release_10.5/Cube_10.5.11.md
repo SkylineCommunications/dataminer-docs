@@ -151,3 +151,9 @@ When you exported a multiline trend graph to a CSV file with the *Line graph ins
 Up to now, when an error occurred while an embedded web browser was initialized, in some cases, the entire Cube UI could get stuck.
 
 Overall error handling has now been improved. When an embedded web browser throws an exception, that exception will now be caught, information about the error will be logged, and an appropriate error message will appear in the browser control.
+
+#### Trend graphs would incorrectly show a flatline when client and DMA used different time zones [ID 43757]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When the client's time zone was ahead of the DMA's time zone, up to now, trend graphs would incorrectly show a flatline for the hours covered by the time zone difference. That flatline would typically start at now minus 24 hours and continue for the duration of the time zone offset.
