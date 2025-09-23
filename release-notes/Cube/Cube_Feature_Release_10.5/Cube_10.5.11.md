@@ -142,7 +142,7 @@ When you retrieved the string value of a non-string parameter that was being upd
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
-Up to now, it would incorrectly not be possible to export a multiline trend graph to a CSV file when you had selected the *Line graph instead of block graph* option.
+When you exported a multiline trend graph to a CSV file with the *Line graph instead of block graph* option selected, up to now, the data in the CSV file would be incorrect. Also, certain data would be missing.
 
 #### Cube UI could get stuck when an error occurred while an embedded web browser was initialized [ID 43732]
 

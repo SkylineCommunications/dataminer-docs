@@ -446,6 +446,18 @@ From now on, the entire `C:\Skyline DataMiner\Webpages\API` folder will be clear
 
 From now on, no attempts will be made anymore to automatically detect the interactive behavior of script libraries, i.e. scripts of which all Exe blocks contain precompiled C# code. These libraries are not intended to be run independently.
 
+#### DataMiner Object Models: Requests will be kept on hold for up to 30 seconds when sent to a DOM manager that is reinitializing [ID 43711]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+Up to now, when a request was sent to a DOM manager while it was reinitializing, that request would immediately fail with the following error message:
+
+`The manager '<Manager Name>' is de-initialized`
+
+From now on, when a request is sent to a DOM manager that it reinitializing, the request will be kept on hold (for up to 30 seconds) until the DOM manager is initialized again. If, after that 30-second delay, the DOM manager is not initialized, the following error message will be returned:
+
+`Initialization failed or did not complete in time for manager '<Manager Name>'. Check logging for more info.`
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
