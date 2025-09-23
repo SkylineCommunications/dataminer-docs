@@ -138,6 +138,12 @@ In a trend graph showing trending of string values, in some cases, exception val
 
 When you retrieved the string value of a non-string parameter that was being updated, an exception would be thrown as the string value was null.
 
+#### Trending: Problem when trying to export a multiline trend graph to a CSV file [ID 43708]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, it would incorrectly not be possible to export a multiline trend graph to a CSV file when you had selected the *Line graph instead of block graph* option.
+
 #### Cube UI could get stuck when an error occurred while an embedded web browser was initialized [ID 43732]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
