@@ -43,7 +43,7 @@ At the end of this course, you will be able to:
 ## Practical info
 
 - **Duration**: 5 days.
-- **Format**: On-site (hands-on, highly recommended).
+- **Format**: On-site.
 - **Team size**: Max. 15 participants.
 - **Prerequisites**: Completion of the [Initiation Training](xref:DataMiner_Connector_Integration_Initiation) or equivalent connector experience.
 - **Pricing**: see [Professional Service Credits](xref:Professional_service_credits#dedicated-training).
