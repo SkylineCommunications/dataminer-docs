@@ -97,8 +97,8 @@ items:
     items:
       - name: Free self-paced DataMiner training
         topicUid: Overview_Training_selfpaced
-      - name: Dedicated DataMiner training
-        topicUid: Overview_Training_dedicated
+      - name: DataMiner Foundational Training
+        topicUid: DataMiner_Foundational_Training
       - name: DataMiner certification
         topicUid: Overview_Training_certification
       - name: Video library

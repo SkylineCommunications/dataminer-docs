@@ -1,6 +1,7 @@
 ---
-uid: Overview_Training_dedicated
+uid: DataMiner_Foundational_Training
 ---
+
 # DataMiner Foundational Training
 
 The DataMiner Foundational Training provides a solid introduction to working with DataMiner. It combines theory, demonstrations, and hands-on exercises to help you and your team unlock the full potential of your DataMiner System.

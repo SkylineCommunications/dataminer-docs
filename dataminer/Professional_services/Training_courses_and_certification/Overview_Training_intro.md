@@ -14,7 +14,7 @@ All available **DataMiner courses** can be accessed free of charge, and we also 
 Our DataMiner training and certification services include:
 
 - [Free self-paced DataMiner training](xref:Overview_Training_selfpaced)
-- [Dedicated DataMiner training](xref:Overview_Training_dedicated)
+- [DataMiner Foundational Training](xref:DataMiner_Foundational_Training)
 - [DataMiner certification](xref:Overview_Training_certification)
 - [Video library](xref:Overview_Training_videolibrary)
 - [Connector Integration Training: Initiation](xref:DataMiner_Connector_Integration_Initiation)
