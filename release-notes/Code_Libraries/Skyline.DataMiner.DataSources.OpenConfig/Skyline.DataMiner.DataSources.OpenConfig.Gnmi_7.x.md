@@ -12,6 +12,12 @@ Previously, the `Get`, `Set`, and `Capabilities` calls on a GnmiClient always us
 
 Minimum required version: [CommunicationGateway 5.3.0](xref:CommunicationGateway_change_log#17-september-2025---enhancement---communicationgateway-530---configurable-grpc-call-timeouts-id-43460).
 
+## 7.0.1
+
+#### Fix - Improved middleware subscription handling in Communication Gateway [ID_42740]
+
+All middleware subscriptions are now disposed of before disposing of the MessageBroker object, ensuring that no threads can get stuck. 
+
 ## 7.0.0
 
 #### Fix - DataMapper unable to handle responses where type did not match actual value [ID 42762]
