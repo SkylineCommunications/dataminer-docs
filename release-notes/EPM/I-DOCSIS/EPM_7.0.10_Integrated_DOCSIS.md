@@ -28,7 +28,7 @@ Monitors that are created will be shown under *Spectrum Analyzer* > *Monitors* w
 The script has the following input parameters:
 
 - *Measurement Point Script* (required): The script used for each created measurement point.
-- *Monitor Interval* (optional): The interval during which the monitor should run. If this is not set, the *FreeRunDuration* configuration from the element is used.
+- *Monitor Interval* (optional): The interval during which the monitor should run. If this is not set, the value from the parameter *Free Run Duration* from the element will be used.
 
 ## Changes
 
