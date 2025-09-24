@@ -1,0 +1,55 @@
+---
+uid: DataMiner_Connector_Integration_Mastership
+---
+
+# DataMiner Connector Integration: Mastership Training
+
+Once you’ve mastered the basics, it’s time to take your connector skills to the next level. 
+The Mastership Training builds on your initiation knowledge and prepares you to design complex, advanced connectors.
+You will dive deeper into internal structures, advanced serial and HTTP communication, DataMiner Virtual Elements, and specialized UI components like TreeControls and Matrix. 
+Practical exercises and real-world work cases will help you become confident in handling complex integration scenarios.
+
+## What you will learn
+
+### Competencies
+
+By the end of the training, you will have developed the ability to:
+
+  - Explain and work with advanced connector internal structures.
+  - Configure and troubleshoot serial communication (basics, advanced, and smart).
+  - Integrate devices using HTTP.
+  - Build and manage DVEs (DataMiner Virtual Elements).
+  - Implement advanced UI elements like TreeControls and Matrix.
+  - Solve end-to-end real-world cases.
+
+### Goals
+
+At the end of this course, you will be able to:
+
+  - Design and implement advanced DataMiner connectors.
+  - Confidently handle serial and HTTP device integrations.
+  - Apply DVEs, TreeControls, and Matrix in complex scenarios.
+  - Tackle real-world connector challenges independently.
+
+## Training content
+
+
+| Day       | AM Session                                         | PM Session                                 |
+|-----------|----------------------------------------------------|--------------------------------------------|
+| Monday    | 02.01 - Internal Structure <br> Serial Communication Basics | 02.01 Exercise: Serial Communication Basics |
+| Tuesday   | 02.02 - Serial Communication Extra <br> 02.03 - Smart Serial Communication | 02.02 Exercise: Serial Communication Extra <br> 02.03 - HTTP |
+| Wednesday | 02.03 Exercise: HTTP                              | 02.04 - DVE                                |
+| Thursday  | 02.04 Exercise: DVE                               | 02.05 - TreeControls <br> 02.06 - Matrix   |
+| Friday    | 02.06 Exercise: Matrix                             | 02.06 - Work Cases                         |
+
+
+## Practical info
+
+- Duration: 5 days
+- Format: Onsite (hands-on, highly recommended)
+- Team size: max. 15 participants
+- Prerequisites: Completion of the Initiation Training or equivalent connector experience
+- Pricing: see [Professional Service Credits](https://docs.dataminer.services/dataminer/About_DataMiner/Pricing/Professional_service_credits.html#dedicated-training)
+
+> [!TIP]
+> To register or to get more info about this training, send an email to <salesops@skyline.be>.
