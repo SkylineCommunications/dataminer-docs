@@ -7,6 +7,7 @@ uid: DOM_DomInstanceNetworkAttachmentSettings
 The `DomInstanceNetworkAttachmentSettings` object is introduced in DataMiner version 10.5.10/10.6.0<!-- RN 43114+43366 --> and contains the settings related to how attachments are saved linked to a `DomInstance`. [The DOM helper class page](xref:DomHelper_class#attachments) contains more info about attachments.
 
 This object currently contains settings to change the default location where attachments for DOM are saved from the `C:\Skyline DataMiner\Documents` folder to a network share of your choosing.
+These settings are configured directly in the [DOM Editor](xref:DOM_Editor) when configuring the module.
 
 > [!NOTE]
 >
@@ -33,5 +34,3 @@ Can only be used in combination with [CredentialId](#credentialid).
 In order for DataMiner to access the network share, it needs the credentials of a user that has read/write access to the path defined in [NetworkSharePath](#networksharepath).
 
 These credentials have to be saved in the **credentials library**, which can be accessed in Cube, via *System Center* > *System settings* > *credentials library*. They have to be credentials of type *Username and password credentials*. In case you have a Windows network share, you need to add the domain name (for domain user) or hostname (for local user) in front of the username (e.g. "MYPC\userName").
-
-The GUID of the credentials can be found in the `C:\Skyline DataMiner\Security\Credentials\Library.xml` file.
