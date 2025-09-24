@@ -182,6 +182,14 @@ From now on, when a request is sent to a DOM manager that it reinitializing, the
 
 SLLogCollector packages now also include the log files of the Web DcM.
 
+#### DataMiner Object Models: A ModuleSettings update will no longer automatically trigger a network credentials check [ID 43799]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+Up to now, each time a `ModuleSettings` object was updated, the network credentials would be checked, even when those credentials had not been changed.
+
+From now on, when a `ModuleSettings` object is updated, the network credentials will only be checked if the network path or the credential ID were updated as well.
+
 ### Fixes
 
 #### Problem when loading initial parameter data for remote elements [ID 43339] [ID 43552]

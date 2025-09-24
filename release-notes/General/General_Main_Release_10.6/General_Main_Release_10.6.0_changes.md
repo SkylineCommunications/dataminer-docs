@@ -458,6 +458,14 @@ From now on, when a request is sent to a DOM manager that it reinitializing, the
 
 `Initialization failed or did not complete in time for manager '<Manager Name>'. Check logging for more info.`
 
+#### DataMiner Object Models: A ModuleSettings update will no longer automatically trigger a network credentials check [ID 43799]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+Up to now, each time a `ModuleSettings` object was updated, the network credentials would be checked, even when those credentials had not been changed.
+
+From now on, when a `ModuleSettings` object is updated, the network credentials will only be checked if the network path or the credential ID were updated as well.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
