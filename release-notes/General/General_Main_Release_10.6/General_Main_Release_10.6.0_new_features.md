@@ -13,13 +13,14 @@ uid: General_Main_Release_10.6.0_new_features
 
 ## New features
 
-#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196] [ID 43567]
+#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196] [ID 43567] [ID 43793]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 <!-- RN 42314: MR 10.6.0 - FR 10.5.4 -->
 <!-- RN 42535: MR 10.6.0 - FR 10.5.5 -->
 <!-- RN 43196: MR 10.6.0 - FR 10.5.9 -->
 <!-- RN 43567: MR 10.6.0 - FR 10.5.11 -->
+<!-- RN 43793: MR 10.6.0 - FR 10.5.11 -->
 
 From now on, you can enable the Swarming feature in a DataMiner System in order to be able to swarm [elements](xref:SwarmingElements) from one DataMiner Agent to another Agent in the same cluster. Prior to this, this feature is available in preview if the *Swarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
@@ -73,7 +74,8 @@ Swarming is not available in the following DataMiner Systems:
 
 > [!NOTE]
 >
-> - Currently, Swarming is limited to [basic elements](xref:SwarmingElements). Support for other types of elements will be added in future versions.
+> - Currently, Swarming is limited to [basic elements](xref:SwarmingElements) and parent DVE and Virtual Function elements. Support for other types of elements will be added in future versions.
+> - If you swarm a parent DVE or parent Virtual Function element, all child elements will then automatically be swarmed together with the parent element. Note that parent or child elements that are part of a redundancy group cannot be swarmed. Also, a parent element cannot be swarmed if one of its child elements is part of a redundancy group.
 > - [Prerequisite checks](xref:EnableSwarming#running-a-prerequisites-check) are in place to prevent the enabling of the Swarming feature when non-supported objects are present. Where possible, you will also be prevented from configuring or creating these on a Swarming-enabled system.
 
 ##### Required user permissions
@@ -86,7 +88,7 @@ To swarm an element, users will also need config rights on the element.
 
 ##### Swarming elements
 
-When Swarming has been enabled, you can swarm elements **in DataMiner Cube** via *System Center* > *Agents* > *Status*. On that page, the *Swarming* button will be displayed instead of the *Migration* button. Clicking the button will open a window where you can select the elements you want to swarm and the destination DMA.
+When Swarming has been enabled, you can swarm elements **in DataMiner Cube** via *System Center* > *Agents* > *Status*. On that page, the *Swarming* button will be displayed instead of the *Migration* button. Clicking the button will open a window where you can select the elements you want to swarm and the destination DMA. Note that child DVE elements and child Virtual Function elements will not appear in this window as they automatically follow their parent element.
 
 Swarming elements is also possible **via Automation, QActions or other (external) tools**. See the following Automation script example, in which two input parameters are defined to retrieve the element key and the target agent ID:
 

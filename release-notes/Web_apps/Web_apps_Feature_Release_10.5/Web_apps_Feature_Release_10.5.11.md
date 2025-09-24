@@ -281,3 +281,9 @@ When, in a dashboard or a low-code app, you ran an interactive Automation script
 To use the redesigned components, add the following argument to the URL of the dashboard or low-code app:
 
 `?useNewIASInputComponents=true`
+
+#### Dashboards/Low-Code Apps - Button panel component: Toggle buttons would incorrectly start to flicker when clicked [ID 43790]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you clicked a toggle button on a *Button panel* component, it would incorrectly start to flicker.

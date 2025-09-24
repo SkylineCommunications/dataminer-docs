@@ -41,6 +41,17 @@ This new filter box should only be used when no new messages will be added to th
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Swarming: Parent DVE and Virtual Function elements can now also be swarmed [ID 43793]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+It is now also possible to swarm parent DVE and Virtual Function elements. If you do so, all child elements will then automatically be swarmed together with the parent element.
+
+> [!NOTE]
+>
+> - Parent or child elements that are part of a redundancy group cannot be swarmed. Also, a parent element cannot be swarmed if one of its child elements is part of a redundancy group.
+> - In DataMiner Cube, only parent elements will show up in the *Element swarming* window. As child elements will automatically follow their parent element, they will not appear in the *Element swarming* window.
+
 ## Changes
 
 ### Enhancements
