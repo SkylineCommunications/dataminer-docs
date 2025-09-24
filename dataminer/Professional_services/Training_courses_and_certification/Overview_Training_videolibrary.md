@@ -6,7 +6,7 @@ uid: Overview_Training_videolibrary
 
 Skyline also offers specialized tutorials and training courses, covering a vast number of topics.
 
-The DataMiner Dojo Video Library is designed to share knowledge with an ever-growing global DataMiner community. It empowers users and partners to leverage the unique capabilities of DataMiner.
+The DataMiner Video Library is designed to share knowledge with an ever-growing global DataMiner community. It empowers users and partners to leverage the unique capabilities of DataMiner.
 
   ![Videolibrary](~/dataminer/images/TR_videolibrary.png)
 
