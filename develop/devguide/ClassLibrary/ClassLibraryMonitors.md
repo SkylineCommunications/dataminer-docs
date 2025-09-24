@@ -15,6 +15,7 @@ Currently, the supported methods provide the ability to monitor changes in the f
 - Table cell alarm level changes.
 - Single element alarm changes.
 - Single element name changes.
+- Single element state changes, including the element itself.
 - All elements (DMS-level) alarm changes.
 - All elements (DMS-level) name changes.
 - Service alarm level changes.
@@ -22,7 +23,6 @@ Currently, the supported methods provide the ability to monitor changes in the f
 
 More information is available in the following sections:
 
-- <xref:ClassLibraryMonitorsRequirements>
 - <xref:ClassLibraryMonitorsGettingStarted>
 - <xref:ClassLibraryMonitorsCleanupRules>
 - <xref:ClassLibraryMonitorsStartingAStartedMonitor>

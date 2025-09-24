@@ -25,9 +25,12 @@ The InterApp framework is mainly intended to be used within large projects where
 
 ### DataMiner requirements
 
-- The InterApp classes require DataMiner 10.1.0 or higher to function correctly.
+There are currently two ranges of the InterApp framework:
 
-- Using DataMiner **10.3.12 or higher is highly recommended**, as this version introduces significant efficiency increases, as illustrated in the metrics below.
+1.0.X: This range requires at least DataMiner version 10.1.0.
+1.1.X: This range requires at least DataMiner version 10.4.0.
+
+Note that using DataMiner **10.3.12 or higher is highly recommended** is highly recommended, as this version introduces significant efficiency increases, as illustrated in the metrics below.
 
    ![small-medium size messages graph](~/develop/images/InterApp_Metrics_SmallMedium.png)
 
