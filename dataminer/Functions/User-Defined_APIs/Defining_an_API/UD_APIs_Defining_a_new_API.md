@@ -181,8 +181,12 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 
 You can add HTTP headers to the response by adding them to the ResponseHeaders property in the `ApiTriggerOutput`. `IHeaders` exposes the following methods:
 
-- `void AddHeader(string name, string value)`: Adds a header with a single value, where 'name' is the header name. E.g. `AddHeader("Location", "/api/item/101)`.
-- `void AddHeader(string name, List<string> values)`: AssAdds a header with multiple values, where 'name' is the header name. E.g. `AddHeader("Accept", new List<string>(){"text/plain", "text/html"})`.
+| Method | Description | Example |
+|--|--|--|
+|`void AddHeader(string name, string value)`|Adds a header with a single value, where 'name' is the header name.|`AddHeader("Location", "/api/item/101)`|
+|`void AddHeader(string name, List<string> values)`|Adds a header with multiple values, where 'name' is the header name.|`AddHeader("Accept", new List<string>(){"text/plain", "text/html"})`.|
+|`void AddHeader(string name, params string[] values)`|Adds a header with multiple values, where 'name' is the header name.|`AddHeader("Accept", "text/plain", "text/html")`|
+|`Dictionary<string, List<string>> AsDictionary()`|Returns all headers in a dictionary.|`output.ResponseHeaders.AsDictionary()`|
 
 The following headers are blocked and will result in a error if you try to set them. This list can be updated in the future:
 
