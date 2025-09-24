@@ -38,6 +38,8 @@ Below, you can find an overview of how the Service Credits can be used.
 | Fundamentals Training (2 days) | 160 credits<br>Per session |
 | Configurator Training (2 days) | 160 credits<br>Per session |
 | Sys Admin Training (1 day) | 90 credits<br>Per session |
+| Connector Integration - Initiation (5 days) | 400 credits<br>Per session |
+| Connector Integration - Mastership (5 days) | 400 credits<br>Per session |
 | [Agile Fundamentals Training](xref:Overview_Training_agile_aw) | 40 credits<br>Per session |
 | [Kanban Workshop](xref:Overview_Kanban_workshop) | 40 credits<br>Per session |
 
