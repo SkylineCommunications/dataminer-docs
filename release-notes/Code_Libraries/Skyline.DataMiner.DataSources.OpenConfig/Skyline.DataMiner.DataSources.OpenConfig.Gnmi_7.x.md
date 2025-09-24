@@ -16,7 +16,7 @@ Minimum required version: [CommunicationGateway 5.3.0](xref:CommunicationGateway
 
 #### Fix - Improved middleware subscription handling in Communication Gateway [ID_42740]
 
-All middleware subscriptions are now disposed of before disposing of the MessageBroker object, ensuring that no threads can get stuck. 
+It could occur that the MessageBroker object was disposed of before all middleware subscriptions were disposed of, which could cause threads to get stuck. This will now be prevented.
 
 ## 7.0.0
 
