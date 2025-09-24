@@ -1,4 +1,4 @@
----
+<img width="1539" height="551" alt="image" src="https://github.com/user-attachments/assets/ae7ce113-d6bc-4e19-9d06-5698a608ba33" />---
 uid: Upgrading_a_DataMiner_Agent
 description: Once your system meets the necessary requirements and you have prepared the upgrade successfully, you can upgrade DataMiner in various ways.
 ---
@@ -43,7 +43,7 @@ For detailed steps, go to [Upgrading a DataMiner Agent in System Center](xref:Up
 
 If you are not upgrading to the DataMiner version that immediately follows your current version, always follow this general guideline:
 
-**Upgrade to the next major DataMiner version(s) before upgrading to your preferred version**.
+**Upgrade to the latest Cumulative Update (CU) of the next major DataMiner version(s) before upgrading to your preferred version**.
 
 ![Upgrading across major versions](~/dataminer/images/Upgrading_across_major_versions.png)
 
