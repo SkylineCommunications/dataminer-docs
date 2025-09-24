@@ -547,3 +547,9 @@ From now on, a master agent will also get selected on systems with only a Resour
 Also, when no master agent can be selected because the ResourceManager license is missing, the following log entry will be added to the SLMasterSyncerManager log file (with XXX being the IDs of the agents that do not have a ResourceManager license):
 
 `WARNING: No master DMA could be picked. Missing required ResourceManager license for DMAs XXX.`
+
+#### Midnight synchronization: Errors that occurred while zipping files would incorrectly get ignored [ID 42741]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+When, during a midnight synchronization, an error occurred while zipping a file, up to now, that error would incorrectly be ignored.

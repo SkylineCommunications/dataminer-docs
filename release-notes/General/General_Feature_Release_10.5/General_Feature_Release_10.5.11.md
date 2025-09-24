@@ -289,3 +289,9 @@ Also, when no master agent can be selected because the ResourceManager license i
 <!-- Not added to MR 10.6.0 -->
 
 After an element had been swarmed, in some cases, outdated data could remain in the SLNet event cache.
+
+#### Midnight synchronization: Errors that occurred while zipping files would incorrectly get ignored [ID 42741]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+When, during a midnight synchronization, an error occurred while zipping a file, up to now, that error would incorrectly be ignored.
