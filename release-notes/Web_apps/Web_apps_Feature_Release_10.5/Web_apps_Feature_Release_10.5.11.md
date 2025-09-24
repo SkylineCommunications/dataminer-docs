@@ -259,3 +259,9 @@ Up to now, responses on SLNet requests from a GQI DxM extension instance would i
 When no variable had been specified in a *Change variable* action, up to now, a run-time error would be thrown each time the action was triggered.
 
 From now on, each time a *Change variable* action without a variable gets triggered, a popup window will appear, indicating that the action has not been configured correctly.
+
+#### Dashboards/Low-Code Apps: Problem when passing the contents of query rows to an ad hoc data source [ID 43772]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When the contents of a query row was passed to an ad hoc data source, in some cases, data in columns of type numeric, boolean or datetime would not get passed correctly.
