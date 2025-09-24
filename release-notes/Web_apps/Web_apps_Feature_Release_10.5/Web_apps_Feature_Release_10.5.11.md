@@ -181,6 +181,12 @@ Up to now, the message handler of the GQI DxM would by default allow 20 concurre
 
 From now on, the user picture will be cached on the client machine. This will prevent having to repeatedly fetch the picture from the server each time you open the user menu or a component displaying the user icon.
 
+#### Web apps: Enhanced performance because of changes made to css files [ID 43781]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Because of a number of changes made to the css files, overall performance of the web apps has increased.
+
 ### Fixes
 
 #### Users with the 'User must change password at next login' setting enabled would incorrectly not be able to log on to the web apps [ID 43590] [ID 43745]
