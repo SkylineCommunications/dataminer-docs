@@ -234,6 +234,12 @@ Up to now, the *Grid*, *Maps*, *Table* or *Timeline* components listed in that w
 
 When, in edit mode, you opened the *App settings* window, clicked *Configure actions*, and then selected *Execute component action*, custom component names would not be displayed correctly when they had just been updated.
 
+#### Dashboards app: Exporting trend graphs to CSV would fail while generating an email report [ID 43712]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you generated an email report of a dashboard that contained a trend graph with the *Include CSV* option enabled, up to now, the email would incorrectly not contain any CSV file.
+
 #### Dashboards/Low-Code Apps - Maps component: Problem when switching from markers to lines [ID 43735]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
