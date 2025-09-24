@@ -1133,8 +1133,6 @@ items:
     - name: Monitors
       topicUid: ClassLibraryMonitors
       items:
-      - name: Requirements
-        topicUid: ClassLibraryMonitorsRequirements
       - name: Getting started
         topicUid: ClassLibraryMonitorsGettingStarted
       - name: Cleanup rules
