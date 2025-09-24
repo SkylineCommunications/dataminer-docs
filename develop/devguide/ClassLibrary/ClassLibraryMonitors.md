@@ -15,7 +15,7 @@ Currently, the supported methods provide the ability to monitor changes in the f
 - Table cell alarm level changes.
 - Single element alarm changes.
 - Single element name changes.
-- Single element state changes, including the element itself.
+- Single element state changes, including the element itself.<!-- RN 33097 -->
 - All elements (DMS-level) alarm changes.
 - All elements (DMS-level) name changes.
 - Service alarm level changes.
