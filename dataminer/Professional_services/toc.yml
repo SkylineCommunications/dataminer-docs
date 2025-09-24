@@ -103,6 +103,12 @@ items:
         topicUid: Overview_Training_certification
       - name: Video library
         topicUid: Overview_Training_videolibrary
+      - name: Connector Integration Training
+        items:
+        - name: Initiation
+          topicUid: DataMiner_Connector_Integration_Initiation
+        - name: Mastership
+          topicUid: DataMiner_Connector_Integration_Mastership
       - name: Agile Fundamentals Training
         topicUid: Overview_Training_agile_aw
       - name: Kanban workshop
