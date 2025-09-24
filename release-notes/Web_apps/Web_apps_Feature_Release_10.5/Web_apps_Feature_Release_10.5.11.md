@@ -271,3 +271,13 @@ From now on, each time a *Change variable* action without a variable gets trigge
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When the contents of a query row was passed to an ad hoc data source, in some cases, data in columns of type numeric, boolean or datetime would not get passed correctly.
+
+#### Interactive Automation scripts: Problem with arrow buttons in redesigned components [ID 43786]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in a dashboard or a low-code app, you ran an interactive Automation script that used the redesigned components, up to now, clicking an arrow button in a component would incorrectly not trigger the focus event. As a result, the `OnFocusLost` event would not work either.
+
+To use the redesigned components, add the following argument to the URL of the dashboard or low-code app:
+
+`?useNewIASInputComponents=true`
