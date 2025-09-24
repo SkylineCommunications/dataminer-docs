@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.5.11
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Swarming: Parent DVE and Virtual Function elements can now also be swarmed [ID 43793]](#swarming-parent-dve-and-virtual-function-elements-can-now-also-be-swarmed-id-43793)
 
 ## New features
 
