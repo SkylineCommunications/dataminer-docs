@@ -282,8 +282,8 @@ To use the redesigned components, add the following argument to the URL of the d
 
 `?useNewIASInputComponents=true`
 
-#### Dashboards/Low-Code Apps - Button panel component: Toggle buttons would incorrectly start to flicker when clicked [ID 43790]
+#### Dashboards/Low-Code Apps - Button panel component: Buttons would incorrectly start to flicker when set to 'Enabled' [ID 43790]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
-When you clicked a toggle button on a *Button panel* component, it would incorrectly start to flicker.
+When a button on a *Button panel* component was set to its "Enabled" state, it would incorrectly start to flicker.
