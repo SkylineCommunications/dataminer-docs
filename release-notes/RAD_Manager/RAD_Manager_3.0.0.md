@@ -13,7 +13,9 @@ uid: RAD_Manager_3.0.0
 
 #### 'Is Monitored' column added to relational anomaly groups table [ID 42915]
 
-An *Is Monitored* column has been added to the relational anomaly groups table to indicate the monitoring status of each group. If there are issues, an error icon and red text are displayed. If everything is functioning correctly, the text remains black. When the error icon is clicked, a message appears, referring the user to the SLAnalytics logging for more details.
+An *Is Monitored* column has been added to the relational anomaly groups table to indicate the monitoring status of each group. If there are issues, an error icon and red text are displayed. If everything is functioning correctly, the text remains black. When the error icon is clicked, a message appears, referring the user to the SLAnalytics logging for more details. 
+
+Note that this new column requires DataMiner 10.5.9/10.6.0 or higher to be able to display the monitoring status.
 
 #### Removing multiple relational anomaly groups at once [ID 42915]
 
