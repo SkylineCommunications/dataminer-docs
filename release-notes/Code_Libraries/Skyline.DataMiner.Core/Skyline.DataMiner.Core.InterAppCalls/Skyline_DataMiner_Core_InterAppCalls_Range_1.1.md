@@ -11,13 +11,11 @@ uid: Skyline_DataMiner_Core_InterAppCalls_Range_1.1
 
 #### New feature - Updated custom serializer with the SecureCode NuGet package [ID 43755]
 
-The implementation of the custom serializer in the InterApp class library has been updated to use the *SecureCoding* NuGet package.
-This further enhances protection against insecure deserialization, mitigating potential security risks when handling InterApp messages.
+The implementation of the custom serializer in the InterApp class library has been updated to use the *SecureCoding* NuGet package. This further enhances protection against insecure deserialization, mitigating potential security risks when handling InterApp messages.
 
 #### New feature - AnyCPU support [ID 43754]
 
-Using the InterApp class library assembly from GQI is now supported.
-The build configuration has been updated to target *AnyCPU* instead of *x86*, improving compatibility across different environments.
+Using the InterApp class library assembly from GQI is now supported. The build configuration has been updated to target *AnyCPU* instead of *x86*, improving compatibility across different environments.
 
 ### 1.1.0.1
 
