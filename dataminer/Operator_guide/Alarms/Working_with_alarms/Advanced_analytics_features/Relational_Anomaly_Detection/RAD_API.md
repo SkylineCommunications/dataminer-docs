@@ -22,6 +22,9 @@ All messages in the RAD API reside in the `Skyline.DataMiner.Analytics.Rad` name
 
 Each request message sent to DataMiner will return a response message of the corresponding type. For example, an `AddRADParameterGroupMessage` will receive an `AddRADParameterGroupResponseMessage` in response, confirming that the request was processed successfully.
 
+> [!NOTE]
+> Prior to DataMiner 10.5.11/10.6.0<!-- RN 43440 -->, RAD API messages must be sent to the Agent monitoring the parameters in the relational anomaly group. If the Agent cannot be determined, an exception will be thrown.
+
 ## Example
 
 Below you can find an example of an Automation script that uses the RAD API to add a RAD parameter group with four parameter instances for each element of which the name begins with `Commtia LON`.

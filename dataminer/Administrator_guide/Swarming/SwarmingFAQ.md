@@ -45,3 +45,9 @@ The only way to see this at present is to attempt to swarm the element via the A
 ## How do Agents know which elements to host when starting up?
 
 This info is stored in the database together with the element. Each element has a field storing its current host. When an element swarms to another Agent, this field is updated.
+
+## What happens to a relational anomaly group when elements are swarmed?
+
+When an element is swarmed that contains a parameter that is being monitored in a [relational anomaly group](xref:Relational_anomaly_detection), the monitoring will continue as before if DataMiner version 10.5.11/10.6.0 or higher is used.<!-- RN 43686 --> Even if all elements in the group are swarmed to another Agent, the relational anomaly group itself will continue to be hosted on the same DataMiner Agent.
+
+In versions prior to DataMiner 10.5.11/10.6.0, relational anomaly groups will stop working in such a case, as all elements within a group need to be hosted on the same Agent in such versions.
