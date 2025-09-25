@@ -2,12 +2,12 @@
 uid: Changing_low-code_app_settings
 ---
 
-# Changing low-code app settings
+# Changing app settings
 
 The general settings of a low-code app include the [actions that get triggered when the app is opened](#having-an-event-triggered-when-the-app-is-opened), which are configured on application level, and the [general settings for pages and panels](#configuring-the-settings-for-a-page-of-panel), which need to be configured for each specific low-code app page or panel.
 
 > [!TIP]
-> For information on how to configure which users can access or edit an app, see [Configuring security for a low-code app](xref:LowCodeApps_security_config).
+> For information on how to configure which users can access or edit an app, see [Configuring app security](xref:LowCodeApps_security_config).
 
 ## Having an event triggered when the app is opened
 
@@ -20,13 +20,13 @@ From DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10 onwards<!-- RN 43350 -->, you 
 
 To configure such an event:
 
-1. Make sure the low-code app is in edit mode. See [Editing a low-code application](xref:Editing_custom_apps).
+1. Make sure the low-code app is in edit mode. See [Editing an app](xref:Editing_custom_apps).
 
 1. Click the ellipsis button ("...") in the top-right corner and select *App settings*.
 
 1. Next to *On open*, click *Configure actions*.
 
-1. Configure the actions as detailed under [Configuring low-code app events](xref:LowCodeApps_event_config).
+1. Configure the actions as detailed under [Configuring app events](xref:LowCodeApps_event_config).
 
 Note that an "On app open" event currently has the following limitations:
 
@@ -36,7 +36,7 @@ Note that an "On app open" event currently has the following limitations:
 
 ## Configuring the settings for a page of panel
 
-1. Make sure the low-code app is in edit mode. See [Editing a low-code application](xref:Editing_custom_apps).
+1. Make sure the low-code app is in edit mode. See [Editing an app](xref:Editing_custom_apps).
 
 1. Select a page in the leftmost pane of the app editor. If you want to edit the panel settings, open the *panels* section in the page configuration pane.
 

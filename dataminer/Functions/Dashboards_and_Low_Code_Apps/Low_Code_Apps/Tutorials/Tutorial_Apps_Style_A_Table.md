@@ -347,7 +347,7 @@ In this tutorial, you will use an [ad hoc data source](xref:Get_ad_hoc_data), wh
 
 You can now create the query using the *Orders.json* file as the data source.
 
-1. Create a new low-code app. See [Creating low-code applications](xref:Creating_custom_apps).
+1. Create a new low-code app. See [Creating apps](xref:Creating_custom_apps).
 
 1. In the *Data* pane, select *Queries* and click the + icon to add a new query.
 

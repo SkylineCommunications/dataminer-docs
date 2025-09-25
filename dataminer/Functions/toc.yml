@@ -328,31 +328,31 @@ items:
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
-          - name: Creating low-code applications
+          - name: Creating apps
             topicUid: Creating_custom_apps
-          - name: Editing a low-code application
+          - name: Editing an app
             topicUid: Editing_custom_apps
-          - name: Configuring low-code applications
+          - name: Configuring apps
             items:
-              - name: Configuring the low-code app layout
+              - name: Configuring the app layout
                 topicUid: LowCodeApps_Layout
-              - name: Configuring a page of a low-code app
+              - name: Configuring an app page
                 topicUid: LowCodeApps_page_config
-              - name: Configuring a panel of a low-code app
+              - name: Configuring an app panel
                 topicUid: LowCodeApps_panel_config
-              - name: Changing low-code app settings
+              - name: Changing app settings
                 topicUid: Changing_low-code_app_settings
-              - name: Configuring the header bar of a low-code app page
+              - name: Configuring the app header bar
                 topicUid: LowCodeApps_header_config
-              - name: Configuring low-code app events
+              - name: Configuring app events
                 topicUid: LowCodeApps_event_config
-              - name: Configuring security for a low-code app
+              - name: Configuring app security
                 topicUid: LowCodeApps_security_config
-              - name: Retrieving an earlier version of a low-code app
+              - name: Retrieving an earlier app version
                 topicUid: LowCodeApps_earlier_version
               - name: Organizing the apps on the landing page in sections
                 topicUid: LowCodeApps_organizing_landing_page
-          - name: Deleting a low-code application
+          - name: Deleting an app
             topicUid: Deleting_custom_apps
           - name: Configuring app actions and behavior via the URL
             topicUid: Configuring_app_actions_and_behavior_via_URL

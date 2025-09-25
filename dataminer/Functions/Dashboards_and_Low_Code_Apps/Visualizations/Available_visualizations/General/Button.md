@@ -15,7 +15,7 @@ To configure the component:
 
 ## [In the DataMiner Low-Code Apps](#tab/tabid-1)
 
-1. In the *Component* > *Settings* pane, click the configuration icon next to *On click* and select the action(s) you want the button to execute. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+1. In the *Component* > *Settings* pane, click the configuration icon next to *On click* and select the action(s) you want the button to execute. See [Configuring app events](xref:LowCodeApps_event_config).
 
 1. Fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 

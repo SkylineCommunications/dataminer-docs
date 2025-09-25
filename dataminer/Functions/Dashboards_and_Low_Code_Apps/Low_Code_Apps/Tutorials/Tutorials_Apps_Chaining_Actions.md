@@ -115,4 +115,4 @@ This tutorial is part of the following learning path:
 
 ## Related documentation
 
-- [Configuring low-code app events](xref:LowCodeApps_event_config)
+- [Configuring app events](xref:LowCodeApps_event_config)

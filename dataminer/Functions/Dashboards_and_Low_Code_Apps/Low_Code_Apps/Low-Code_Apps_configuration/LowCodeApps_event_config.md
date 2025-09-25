@@ -2,17 +2,17 @@
 uid: LowCodeApps_event_config
 ---
 
-# Configuring low-code app events
+# Configuring app events
 
 You can configure actions for different types of events in DataMiner Low-Code Apps. These are the main types:
 
-- *On open*: This event takes place when an app, a page, or a panel is opened. See [Changing low-code app settings](xref:Changing_low-code_app_settings), [Configuring a page of a low-code app](xref:LowCodeApps_page_config), or [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).
+- *On open*: This event takes place when an app, a page, or a panel is opened. See [Changing app settings](xref:Changing_low-code_app_settings), [Configuring an app page](xref:LowCodeApps_page_config), or [Configuring an app panel](xref:LowCodeApps_panel_config).
 
   > [!NOTE]
   > Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39604 + 39682 + 39636-->, this type of event is only available for low-code app pages and is called "On page load".
   > Prior to DataMiner 10.4.0 [CU12]/10.5.3<!--RN 42039-->, this type of event only executes its actions when all components are done loading. This also includes the components that need scrolling down to be loaded.
 
-- *On click*: This event takes place when a user clicks a button. (See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).)
+- *On click*: This event takes place when a user clicks a button. (See [Configuring the app header bar](xref:LowCodeApps_header_config).)
 
 - *On close*: Available from DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39604 + 39682 + 39668-->. This event takes place when a page or panel is closed.
 

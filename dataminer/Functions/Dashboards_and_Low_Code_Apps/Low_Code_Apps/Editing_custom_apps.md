@@ -2,7 +2,7 @@
 uid: Editing_custom_apps
 ---
 
-# Editing a low-code application
+# Editing an app
 
 You can begin editing a low-code app from within the app or from the DataMiner landing page. If you want to edit a draft app, make sure the draft applications are shown: click the cogwheel button on the landing page and activate *Show draft applications*.
 

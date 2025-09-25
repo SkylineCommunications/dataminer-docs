@@ -343,7 +343,7 @@ To configure actions:
 
 1. Click *Configure actions* next to your chosen event type.
 
-1. Configure any of the available actions, as detailed under [Configuring low-code app events](xref:LowCodeApps_event_config#navigating-to-a-url).
+1. Configure any of the available actions, as detailed under [Configuring app events](xref:LowCodeApps_event_config#navigating-to-a-url).
 
 ### Timeline component actions
 

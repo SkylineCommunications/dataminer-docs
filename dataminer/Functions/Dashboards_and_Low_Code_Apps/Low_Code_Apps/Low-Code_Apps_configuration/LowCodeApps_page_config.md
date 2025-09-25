@@ -2,7 +2,7 @@
 uid: LowCodeApps_page_config
 ---
 
-# Configuring a page of a low-code app
+# Configuring an app page
 
 Low-code apps can consist of one or more pages that display the content of the application. These are similar to [DataMiner dashboards](xref:newR_D), though they include extra features and components that allow interaction with the displayed data. Data from a component on a page can be passed to components on the same page or on another page or panel, so that different pages and panels can influence each other.
 
@@ -18,7 +18,7 @@ To configure a page:
 
 1. In the *icon* section, select an icon for the page.
 
-1. To configure a header bar for the page, see [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).
+1. To configure a header bar for the page, see [Configuring the app header bar](xref:LowCodeApps_header_config).
 
 1. Configure the components on the page. See [Configuring components](xref:Configuring_components) and [Changing dashboard settings](xref:Changing_dashboard_settings). For a list of the available components, refer to [Available visualizations](xref:Available_visualizations).
 

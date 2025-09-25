@@ -231,7 +231,7 @@ To configure actions:
 
     1. Click *On double-click*.
 
-    1. In the pop-up window, select the action that should be executed. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+    1. In the pop-up window, select the action that should be executed. See [Configuring app events](xref:LowCodeApps_event_config).
 
 - Prior to DataMiner 10.4.1/10.5.0:
 
@@ -245,4 +245,4 @@ To configure actions:
 
   1. In the *Icon* box, select an icon for the action.
 
-  1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+  1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring app events](xref:LowCodeApps_event_config).

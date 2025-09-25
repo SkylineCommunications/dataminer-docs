@@ -82,5 +82,5 @@ This tutorial is part of the following learning path:
 
 ## Related documentation
 
-- [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config)
+- [Configuring the app header bar](xref:LowCodeApps_header_config)
 - [Closing a panel of a low-code app](xref:LowCodeApps_event_config#closing-a-panel-of-the-app)
