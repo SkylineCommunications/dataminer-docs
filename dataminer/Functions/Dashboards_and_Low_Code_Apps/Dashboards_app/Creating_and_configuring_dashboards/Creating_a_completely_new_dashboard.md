@@ -4,6 +4,16 @@ uid: Creating_a_completely_new_dashboard
 
 # Creating a completely new dashboard
 
+To learn how to create a dashboard, you can follow the steps below or watch this short video, which shows you how to create a simple dashboard to monitor system health:
+
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/dataminer/images/CreatingYourFirstDashboard.mp4" type="video/mp4">
+  </video>
+</div>
+
+<br>
+
 1. On the home page, click *Start with a new blank dashboard*.
 
    Alternatively, you can also select a folder or dashboard in the list of dashboards on the left and select *New dashboard* in the right-click menu.
@@ -39,3 +49,11 @@ uid: Creating_a_completely_new_dashboard
 >
 > If you do specify a backslash (“\\”) in a folder name, this will not become part of the folder name. Instead, a subfolder will be created, with the characters after the backslash as its name.
 >
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>
+    Now that you know how to create a dashboard, you may be interested in reading our instructions on <a href="xref:Sharing_a_dashboard" style="color: #657AB7;">sharing a dashboard</a> with others.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
