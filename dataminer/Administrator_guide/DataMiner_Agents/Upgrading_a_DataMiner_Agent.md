@@ -1,4 +1,4 @@
-<img width="1539" height="551" alt="image" src="https://github.com/user-attachments/assets/ae7ce113-d6bc-4e19-9d06-5698a608ba33" />---
+---
 uid: Upgrading_a_DataMiner_Agent
 description: Once your system meets the necessary requirements and you have prepared the upgrade successfully, you can upgrade DataMiner in various ways.
 ---
