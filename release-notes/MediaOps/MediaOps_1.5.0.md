@@ -21,4 +21,6 @@ On the *Resources* page of the Resource Studio app, when a large number of resou
 
 ### Fixes
 
-*No fixes have been added to this release yet.*
+### MediaOps log files not included in SLLogCollector package [ID 43791]
+
+When logging was collected using the SLLogCollector tool, the MediaOps logging was not included.
