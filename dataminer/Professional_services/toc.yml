@@ -101,8 +101,6 @@ items:
         topicUid: DataMiner_Foundational_Training
       - name: DataMiner certification
         topicUid: Overview_Training_certification
-      - name: Video library
-        topicUid: Overview_Training_videolibrary
       - name: Connector Integration Training
         items:
         - name: Initiation

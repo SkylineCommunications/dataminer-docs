@@ -16,7 +16,6 @@ Our DataMiner training and certification services include:
 - [Free self-paced DataMiner training](xref:Overview_Training_selfpaced)
 - [DataMiner Foundational Training](xref:DataMiner_Foundational_Training)
 - [DataMiner certification](xref:Overview_Training_certification)
-- [Video library](xref:Overview_Training_videolibrary)
 - [Connector Integration Training: Initiation](xref:DataMiner_Connector_Integration_Initiation)
 - [Connector Integration Training: Mastership](xref:DataMiner_Connector_Integration_Mastership)
 - [Agile Fundamentals Training](xref:Overview_Training_agile_aw)
