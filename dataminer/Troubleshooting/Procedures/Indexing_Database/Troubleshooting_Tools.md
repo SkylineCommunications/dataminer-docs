@@ -80,7 +80,7 @@ The best tool depends on your specific needs and the complexity of your indexing
 
 These visualization tools allow you to explore and interact with large volumes of data stored in indexing databases. They help you build insightful visualizations, analyze logs, and set up dashboards for monitoring purposes.
 
-- [Kibana](https://www.elastic.co/pt/kibana) is designed for use with ElasticSearch.
+- [Kibana](https://www.elastic.co/kibana) is designed for use with ElasticSearch.
 
 - [OpenSearch Dashboards](https://opensearch.org/docs/latest/dashboards/) is compatible with OpenSearch.
 
