@@ -54,6 +54,10 @@ items:
         topicUid: The_terminal_server_has_exceeded_the_maximum_number_of_allowed_connections
       - name: Thread problem in x. y
         topicUid: Thread_problem_in_x
+      - name: Timed out while flushing events from x.
+        topicUid: Timed_out_while_flushing_events
+      - name: Flushing in-flight events from x (DMA y) is taking a long time
+        topicUid: Flushing_in-flight_events
       - name: Unknown Error
         topicUid: Unknown_Error
   - name: Logging
