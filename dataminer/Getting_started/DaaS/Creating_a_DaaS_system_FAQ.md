@@ -39,11 +39,10 @@ A DataMiner Community Edition DaaS system will be scheduled to expire as soon as
 
 ### What happens when my DaaS system expires or is deleted?
 
-When your DaaS system expires or is deleted, the system and all associated resources and data will be decommissioned.
-However, the system can still be recovered within a limited grace period:
+When your DaaS system expires or is deleted, the system and all associated resources and data will be decommissioned. However, the system can still be recovered within a limited grace period:
 
-- 10 days &rarr; if the system was created less than 10 days ago.
-- 30 days &rarr; if the system has been running for more than 10 days at the time of expiration/deletion.
+- **10 days** if the system was created less than 10 days ago.
+- **30 days** if the system has been running for more than 10 days at the time of expiration/deletion.
 
 To recover the system, contact [daas@dataminer.services](mailto:daas@dataminer.services). The cloud identity and shares will be lost, and the system will receive a new cloud identity within your organization upon recovery.
 
