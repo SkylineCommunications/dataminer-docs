@@ -35,11 +35,11 @@ Below, you can find an overview of how the Service Credits can be used.
 |------|---------|
 | [DevOps Enablement Service](xref:DataMiner_DevOps_Enablement) | 5 credits<br>Per hour, per person |
 | [Open Day Training](https://community.dataminer.services/open-training/) | 14 credits<br>Per day, per person |
-| Fundamentals Training (2 days) | 160 credits<br>Per session |
-| Configurator Training (2 days) | 160 credits<br>Per session |
-| Sys Admin Training (1 day) | 90 credits<br>Per session |
-| Connector Integration - Initiation (5 days) | 400 credits<br>Per session |
-| Connector Integration - Mastership (5 days) | 400 credits<br>Per session |
+| [Fundamentals Training](xref:DataMiner_Foundational_Training) (2 days) | 160 credits<br>Per session |
+| [Configurator Training](xref:DataMiner_Foundational_Training) (2 days) | 160 credits<br>Per session |
+| [Sys Admin Training](xref:DataMiner_Foundational_Training) (1 day) | 90 credits<br>Per session |
+| [Connector Integration - Initiation](xref:DataMiner_Connector_Integration_Initiation) (5 days) | 400 credits<br>Per session |
+| [Connector Integration - Mastership](xref:DataMiner_Connector_Integration_Mastership) (5 days) | 400 credits<br>Per session |
 | [Agile Fundamentals Training](xref:Overview_Training_agile_aw) | 40 credits<br>Per session |
 | [Kanban Workshop](xref:Overview_Kanban_workshop) | 40 credits<br>Per session |
 
