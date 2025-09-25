@@ -84,3 +84,9 @@ The following two parameters must always be added and processed:
    </Measurement>
 </Param>
 ```
+
+## Compatibility
+
+### Compatibility with GQI
+
+GQI requires assemblies to run in a 64-bit environment. Therefore, when referencing InterApp in your [ad hoc data source](xref:GQI_Ad_hoc_data_sources#ad-hoc-data-sources) or [custom operator](xref:GQI_Custom_Operator#custom-operators) from GQI, you must reference at least [Skyline.DataMiner.Core.InterAppCalls.Common 1.1.1.1](xref:Skyline_DataMiner_Core_InterAppCalls_Range_1.1#1.1.1.1) or higher.
