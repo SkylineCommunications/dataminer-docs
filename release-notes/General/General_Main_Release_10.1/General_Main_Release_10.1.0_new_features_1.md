@@ -949,7 +949,7 @@ See the examples below.
 
 #### A message body can now be added to raw HTTP requests \[ID 27438\]
 
-In a QAction, it is now possible to add a message body to raw HTTP requests sent in a multi-threaded timer.
+In a QAction, it is now possible to add a message body to raw HTTP requests sent in a multithreaded timer.
 
 Old syntax:
 

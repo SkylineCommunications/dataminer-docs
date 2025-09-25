@@ -33,7 +33,7 @@ By default, this window will only list the existing patterns that apply to the t
 When you select a trend pattern from the list on the left, a thumbnail preview of the pattern will be displayed, together with the name of the element and parameter associated with the pattern.
 
 > [!NOTE]
-> Currently, this *Pattern Overview* window only supports single-variate patterns. Support for multi-variate patterns will be added in a later release.
+> Currently, this *Pattern Overview* window only supports single-variate patterns. Support for multivariate patterns will be added in a later release.
 
 ## Changes
 

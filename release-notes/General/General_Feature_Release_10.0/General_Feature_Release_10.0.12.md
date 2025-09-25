@@ -16,7 +16,7 @@ uid: General_Feature_Release_10.0.12
 
 #### A message body can now be added to raw HTTP requests \[ID 27438\]
 
-In a QAction, it is now possible to add a message body to raw HTTP requests sent in a multi-threaded timer.
+In a QAction, it is now possible to add a message body to raw HTTP requests sent in a multithreaded timer.
 
 Old syntax:
 
@@ -308,7 +308,7 @@ Known limitations:
   https://gateway.somecompany.com/jobs
   ```
 
-- The DataMiner user account used by the Dashboard Gateway web server should not have multi-factor authentication enabled.
+- The DataMiner user account used by the Dashboard Gateway web server should not have multifactor authentication enabled.
 
 ### DMS Automation
 

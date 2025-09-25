@@ -10,7 +10,7 @@ This page provides an overview of the security-related requirements that new pro
 
 - **Hardening procedures**: Deployed products must have well-documented steps relating how to harden their setup in order to minimize the attack surface.
 
-- **Identity & Access Management (IAM)**: To enable Single-Sign-On (SSO) and centralized user and group authentication, each product introduced in the environment must support full integration with Active Directory, Azure Active Directory (Entra ID), as well other LDAP-compatible directories such as OpenLDAP. This must include support for SSPI and SAML, with the option of using Multi-Factor Authentication (MFA).
+- **Identity & Access Management (IAM)**: To enable Single-Sign-On (SSO) and centralized user and group authentication, each product introduced in the environment must support full integration with Active Directory, Azure Active Directory (Entra ID), as well other LDAP-compatible directories such as OpenLDAP. This must include support for SSPI and SAML, with the option of using multifactor authentication (MFA).
 
 - **Roles-based access control and permissions (RBAC)**: This must be implemented for both users and groups defined in Active Directory or Azure Active Directory (Entra ID), in order to support the setup of Least Privilege Access profiles for users and to optimize the overall security posture, in line with Zero Trust best practices.
 

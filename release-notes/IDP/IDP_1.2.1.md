@@ -11,7 +11,7 @@ uid: IDP_1.2.1
 IDP connectivity has been updated to improve performance when a large number of DCF connections and interface properties are provisioned:
 
 - To reduce the number of calls, existing DCF interfaces and connections are now cached.
-- Multi-threading is now used to allow the algorithm to run faster.
+- Multithreading is now used to allow the algorithm to run faster.
 - SLNet calls are now used instead of the DCFHelper to create connections and properties.
 
 #### Bus address support for all connection types [ID 36046]

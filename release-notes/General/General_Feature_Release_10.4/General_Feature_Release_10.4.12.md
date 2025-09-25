@@ -98,6 +98,34 @@ If you have created an Automation script that launches subscripts, you can use t
 
 Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
 
+#### Elements: SSL/TLS certificates will now be validated by default for all newly created HTTP elements [ID 40877] [ID 41285]
+
+<!-- MR 10.5.0 - FR 10.4.12 -->
+
+In order to enhance secure connector communication, SSL/TLS certificates will now be validated by default for all newly created HTTP elements.
+
+If you want to disable certificate validation for an element created after a 10.5.0/10.4.12 upgrade or enable certificate validation for a element created before a 10.5.0/10.4.12 upgrade, in DataMiner Cube, right-click the element in the Surveyor, select *Edit*, and either disable or enable the *Skip SSL/TLS certificate verification (insecure)* option.
+
+When certificate validation is skipped, in case an HTTP connector polls an HTTPS endpoint:
+
+- DataMiner will ignore invalid certificates in the following cases:
+
+  - When the server certificate is expired.
+  - When the server certificate is revoked.
+  - When the common name of the server certificate does not match the server name to which DataMiner is sending the request.
+  - When the certificate is issued by a Certificate Authority that is not trusted by the DataMiner Agent.
+  - When the server certificate is signed by a weak signature.
+
+- DataMiner will block communication in the following cases:
+
+  - When the server is offering a non-server certificate.
+
+> [!NOTE]
+>
+> - If you want the SSL/TLS certification validation to be skipped for all elements sharing the same *protocol.xml* file, you can set the `SkipCertificateVerification` element to true in the `PortSettings` element of the *protocol.xml* file.
+> - If you want the SSL/TLS certification validation to be enabled when using multithreaded HTTP communication, set `requestSettings[6]` to false when building the HTTP request in a QAction. By default, this option is set to true, meaning that SSL/TLS certification validation will be skipped. For more information, see [Setting up multithreaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
+> - For backward compatibility, the SSL/TLS certification validation will be skipped by default for all elements that were created before a 10.5.0/10.4.12 upgrade.
+
 ### Enhancements
 
 #### DataMiner Object Models: Length of string fields is now limited in order to prevent database errors [ID 39496]
@@ -195,34 +223,6 @@ In this *PortLog.txt* file, it is now possible to specify IPv6 addresses as well
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
 Because of a number of enhancements, on STaaS systems, overall performance has increased when writing data to the database.
-
-#### Elements: SSL/TLS certificates will now be validated by default for all newly created HTTP elements [ID 40877] [ID 41285]
-
-<!-- MR 10.5.0 - FR 10.4.12 -->
-
-In order to enhance secure connector communication, SSL/TLS certificates will now be validated by default for all newly created HTTP elements.
-
-If you want to disable certificate validation for an element created after a 10.5.0/10.4.12 upgrade or enable certificate validation for a element created before a 10.5.0/10.4.12 upgrade, in DataMiner Cube, right-click the element in the Surveyor, select *Edit*, and either disable or enable the *Skip SSL/TLS certificate verification (insecure)* option.
-
-When certificate validation is skipped, in case an HTTP connector polls an HTTPS endpoint:
-
-- DataMiner will ignore invalid certificates in the following cases:
-
-  - When the server certificate is expired.
-  - When the server certificate is revoked.
-  - When the common name of the server certificate does not match the server name to which DataMiner is sending the request.
-  - When the certificate is issued by a Certificate Authority that is not trusted by the DataMiner Agent.
-  - When the server certificate is signed by a weak signature.
-
-- DataMiner will block communication in the following cases:
-
-  - When the server is offering a non-server certificate.
-
-> [!NOTE]
->
-> - If you want the SSL/TLS certification validation to be skipped for all elements sharing the same *protocol.xml* file, you can set the `SkipCertificateVerification` element to true in the `PortSettings` element of the *protocol.xml* file.
-> - If you want the SSL/TLS certification validation to be enabled when using multi-threaded HTTP communication, set `requestSettings[6]` to false when building the HTTP request in a QAction. By default, this option is set to true, meaning that SSL/TLS certification validation will be skipped. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
-> - For backward compatibility, the SSL/TLS certification validation will be skipped by default for all elements that were created before a 10.5.0/10.4.12 upgrade.
 
 #### SLAnalytics - Time-scoped relations: Menu will now show more related parameters [ID 40904]
 

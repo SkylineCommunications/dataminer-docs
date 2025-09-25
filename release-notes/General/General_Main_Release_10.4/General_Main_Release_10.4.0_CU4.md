@@ -34,11 +34,11 @@ Because of a number of enhancements, on systems using a Cassandra and Cassandra 
 
 Because of a number of enhancements, overall performance has increased when loading services during a DataMiner startup.
 
-#### SLDataMiner: Enhanced log entry indicating progress of multi-threaded operations that take longer that 30 seconds to complete [ID 39367]
+#### SLDataMiner: Enhanced log entry indicating progress of multithreaded operations that take longer that 30 seconds to complete [ID 39367]
 
 <!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
 
-When a multi-threaded operation takes longer that 30 seconds to complete, an entry is added to the *SLDataMiner.txt* log file to indicate that the operation in question is still in progress. This log entry has now been enhanced. It will now show the progress in more detail.
+When a multithreaded operation takes longer that 30 seconds to complete, an entry is added to the *SLDataMiner.txt* log file to indicate that the operation in question is still in progress. This log entry has now been enhanced. It will now show the progress in more detail.
 
 `Waiting for completion of %s : %lli/%lli completed`
 

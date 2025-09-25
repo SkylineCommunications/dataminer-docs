@@ -97,12 +97,16 @@ items:
     items:
       - name: Free self-paced DataMiner training
         topicUid: Overview_Training_selfpaced
-      - name: Dedicated DataMiner training
-        topicUid: Overview_Training_dedicated
+      - name: DataMiner Foundational Training
+        topicUid: DataMiner_Foundational_Training
       - name: DataMiner certification
         topicUid: Overview_Training_certification
-      - name: Video library
-        topicUid: Overview_Training_videolibrary
+      - name: Connector Integration Training
+        items:
+        - name: Initiation
+          topicUid: DataMiner_Connector_Integration_Initiation
+        - name: Mastership
+          topicUid: DataMiner_Connector_Integration_Mastership
       - name: Agile Fundamentals Training
         topicUid: Overview_Training_agile_aw
       - name: Kanban workshop

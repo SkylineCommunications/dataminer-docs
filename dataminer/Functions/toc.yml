@@ -317,8 +317,8 @@ items:
             items:
               - name: Displaying a custom empty component message
                 topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
-              - name: Leveraging controls and feeds to create a dynamic GQI query
-                topicUid: Tutorial_Dashboards_Controls_And_Feeds_Query
+              - name: Using controls to create a dynamic GQI query
+                topicUid: Tutorial_Dashboards_Controls_Query
               - name: Getting started with node edge graphs
                 topicUid: Tutorial_Apps_Node_Edge
               - name: Creating a custom parameter table connected to an element feed

@@ -6,7 +6,8 @@ uid: KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search
 
 ## Affected versions
 
-From DataMiner Cube 10.4.0 [CU12]/10.5.0/10.5.3 onwards.
+- DataMiner Cube Main Release versions 10.4.0 [CU12] and [CU13], and 10.5.0 [CU0] and [CU1].
+- DataMiner Cube Feature Release versions 10.5.3 and 10.5.4
 
 ## Cause
 
@@ -14,7 +15,7 @@ To facilitate communication between different modules, a serializable `DataObjec
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner Cube 10.4.0 [CU14], 10.5.0 [CU2], or 10.5.5<!--RN 42552-->.
 
 ## Workaround
 

@@ -15,6 +15,18 @@ uid: General_Main_Release_10.5.0_CU8
 
 ### Enhancements
 
+#### Element replication: Replication buffer will now be read in chunks [ID 43281]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, when the connection to a replicated element was restored, the entire replication buffer would be read into memory at once. From now on, the replication buffer will be read in chunks.
+
+#### DataMiner Object Models: Enhanced performance when filtering on FieldValues in memory via FilterElements [ID 43568]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When filtering on FieldValues in memory via FilterElements, the DomInstanceExposers.FieldValues exposer will no longer generate a JsonSerializableDictionary. Instead, it will now use a standard dictionary. This will enhance overall in-memory filtering performance.
+
 #### STaaS: Enhanced exception logging [ID 43626]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
@@ -31,6 +43,20 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### CPE: Enhanced performance [ID 43654]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Because of a number of enhancements in the aggregation module, overall performance has increased.
+
+#### SLDataGateway will now use a custom thread pool instead of TPL for operations towards Cassandra [ID 43658]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+For operations towards Cassandra, from now on, SLDataGateway will use a custom thread pool instead of *Task Parallel Library* (TPL).
+
+Also, when any of the queues in SLDataGateway would get stuck, an alarm of type error will now be generated.
+
 #### STaaS: A failure notice will now be returned immediately when an operation could not be sent to STaaS [ID 43667]
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
@@ -38,6 +64,18 @@ For detailed information about the changes included in those versions, refer to 
 Up to now, when DataMiner was not able to send an operation to STaaS, it had to wait until the write operation timed out before it got confirmation that the operation had failed.
 
 From now on, when DataMiner tries to send an operation of which the size exceeds the maximum package limit to STaaS, a failure notice will be returned immediately.
+
+#### DataMiner upgrade: All but the Web.config file will be removed from the 'C:\\Skyline DataMiner\\Webpages\\API' folder when downgrading to an older version [ID 43687]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+From now on, when a DataMiner Agent is downgraded to an older version, the entire `C:\Skyline DataMiner\Webpages\API` folder will be cleared. Only the `Web.config` file will be kept.
+
+#### SLLogCollector packages now also include the Web DcM log files [ID 43716]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+SLLogCollector packages now also include the log files of the Web DcM.
 
 ### Fixes
 
@@ -68,6 +106,14 @@ You can have all active alarms resent by sending an SNMP Set command to the DMA 
 
 However, since DataMiner versions 10.4.0 [CU12]/10.5.3, this would no longer work when the SNMP manager in question had the *Resend all active alarms every ...* option disabled.
 
+#### Alarm indicating a run-time error would incorrectly say "-1 pending" when all threads cleared simultaneously [ID 43508]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When multiple threads of the same process have a run-time error, the associated alarm will say "+X pending", indicating the number of threads that are stuck.
+
+Up to now, when all threads cleared simultaneously, in some cases, the alarm would incorrectly say "-1 pending".
+
 #### Cassandra Cluster Migrator tool: Problem when reverse lookup of IP addresses returned hostnames other than those configured in the SSL certificate [ID 43520]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
@@ -89,3 +135,21 @@ From now on, the update request will correctly be forwarded to the DataMiner Age
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When processing a cell subscription filter, in some cases, SLNet could return incorrect data to the client application.
+
+#### Restarting a replicated element could cause SLProtocol to leak memory [ID 43613]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you restarted a replicated element that was in the process of starting up, in some cases, the resources in memory would incorrectly not get cleaned up, causing SLProtocol to leak memory.
+
+#### Production version of DVE child elements would incorrectly be reset when you uploaded an updated copy of the DVE protocol version [ID 43640]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you uploaded an updated copy of a DVE protocol version that had already been uploaded before, up to now, the production version of the DVE child elements that were using that protocol would incorrectly be reset.
+
+#### STaaS: Data missing from heatmaps and alarm state pie charts [ID 43689]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in a client application connected to a system using STaaS, you viewed a heatmap or an alarm state pie chart, in some cases, an incorrect time zone conversion would cause those charts to not include all available data.

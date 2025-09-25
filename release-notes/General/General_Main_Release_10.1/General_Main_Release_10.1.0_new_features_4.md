@@ -610,7 +610,7 @@ Known limitations:
   - <https://gateway.somecompany.com/ticketing>
   - <https://gateway.somecompany.com/jobs>
 
-- The DataMiner user account used by the Dashboard Gateway web server should not have multi-factor authentication enabled.
+- The DataMiner user account used by the Dashboard Gateway web server should not have multifactor authentication enabled.
 
 #### Dashboards app: Default themes updated \[ID 27636\]
 

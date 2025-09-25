@@ -21,7 +21,7 @@ Download the full upgrade package for the required DataMiner version from [DataM
 
 ## Fix
 
-No fix is available yet.
+No fix is available yet. <!--Task ID: 245546-->
 
 ## Description
 

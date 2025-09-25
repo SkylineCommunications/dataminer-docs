@@ -46,6 +46,22 @@ When an internet connection is not available on the client machine, the DataMine
 
 This type of freezes happen because Windows and .NET try to verify the application's digital signatures by checking an online Certificate Revocation List (CRL). The system times out during this process, causing the delay and impacting user productivity.
 
+#### Spectrum analysis: Trace color can now be modified when a measurement point is selected [ID 43669]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, it would not be possible to modify the trace color when a measurement point was selected. From now on, it will be possible to modify the trace color when either no measurement point or one single measurement point is selected.
+
+Also, an issue has been fixed that caused the trace color to be incorrect in *View Buffer mode*, *View script mode*, or *Watch mode* when you had changed the color without closing the card.
+
+#### Enhanced login screen behavior when an automatic login fails [ID 43682]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+From now on, when an automatic login with the *Administrator* user fails, a login screen will appear with the *Administrator* user pre-selected, prompting you to enter the password of the *Administrator* account.
+
+Also, when an automatic login with a Windows user fails because (a) that Windows user is not a DataMiner user or (b) the stored credentials of that Windows user are no longer valid, a login screen will appear, prompting you to enter (a) both the user name and the password or (b) the password of the pre-selected Windows user.
+
 ### Fixes
 
 #### Trending: Problems when opening a trend graph containing trending of string values combined with exception values [ID 43532]
@@ -71,6 +87,12 @@ Also, in some cases, it would incorrectly not be possible to clear multiple elem
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When you zoomed in on a trend graph, the alarm timeline on the X axis would incorrectly be displayed either on top of or beyond the Y axis.
+
+#### Trending: Percentage in legend of trend graph showing discreet values would be incorrect [ID 43614]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in a trend graph showing discreet values, you hover over the graph, the legend will show a percentage indicating how much of the time a value has occurred in the graph. However, since a server-side change in DataMiner version 10.1.10, this percentage has been incorrect.
 
 #### Problem when a broadcast message expired [ID 43634]
 
@@ -98,6 +120,12 @@ Also, when a shape showing a trend component was configured to not show the bott
 
 When, in Cube's *Bookings* module (or the *Skyline Booking Manager* connector), the *List View* component was configured to show a custom culture-invariant DateTime property, up to now, the listed bookings would be sorted incorrectly.
 
+#### Trending: Part of the graph would flatline or all average trend data would disappear when zooming out [ID 43662]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in a trend graph, you zoomed out right after new real-time trend data was received, in some cases, part of the graph would incorrectly flatline or all average trend data would disappear.
+
 #### Trending: Exception values not marked as such would be interpreted as valid trend points without Y axis label [ID 43696]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
@@ -109,3 +137,23 @@ In a trend graph showing trending of string values, in some cases, exception val
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When you retrieved the string value of a non-string parameter that was being updated, an exception would be thrown as the string value was null.
+
+#### Trending: Problem when trying to export a multiline trend graph to a CSV file [ID 43708]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you exported a multiline trend graph to a CSV file with the *Line graph instead of block graph* option selected, up to now, the data in the CSV file would be incorrect. Also, certain data would be missing.
+
+#### Cube UI could get stuck when an error occurred while an embedded web browser was initialized [ID 43732]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, when an error occurred while an embedded web browser was initialized, in some cases, the entire Cube UI could get stuck.
+
+Overall error handling has now been improved. When an embedded web browser throws an exception, that exception will now be caught, information about the error will be logged, and an appropriate error message will appear in the browser control.
+
+#### Trend graphs would incorrectly show a flatline when client and DMA used different time zones [ID 43757]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When the client's time zone was ahead of the DMA's time zone, up to now, trend graphs would incorrectly show a flatline for the hours covered by the time zone difference. That flatline would typically start at now minus 24 hours and continue for the duration of the time zone offset.

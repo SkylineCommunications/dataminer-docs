@@ -38,7 +38,7 @@ The default TTL for information events is set to 5 years instead of the preferre
 
 ## Fix
 
-No fix is available yet.
+No fix is available yet. <!--Task IDs: 244451 & 244733-->
 
 ## Description
 

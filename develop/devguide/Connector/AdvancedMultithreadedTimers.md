@@ -2,7 +2,7 @@
 uid: AdvancedMultiThreadedTimers
 ---
 
-# Multi-threaded timers
+# Multithreaded timers
 
 In this section:
 
