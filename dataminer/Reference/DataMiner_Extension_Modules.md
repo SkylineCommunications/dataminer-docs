@@ -114,6 +114,8 @@ The DataAPI module provides an HTTP interface that accepts requests with a JSON-
 
 In combination with the DataAggregator DxM, the DataAPI DxM is required for the [Data Sources](xref:Data_Sources) module.
 
+From DataMiner 10.5.11/10.6.0 onwards, DataMiner upgrade packages by default include the latest version of the DataAPI module.<!-- RN 43677 -->
+
 ### ModelHost
 
 The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).

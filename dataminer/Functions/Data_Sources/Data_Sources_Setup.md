@@ -20,9 +20,7 @@ uid: Data_Sources_Setup
 
 ## Installing the necessary DxMs
 
-The [Data API](xref:Overview_of_Soft_Launch_Options#dataapi) and [Data Aggregator](xref:Data_Aggregator_DxM) DxMs must be deployed on the same DMA.
-
-To do so:
+The [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi) and [DataAggregator](xref:Data_Aggregator_DxM) DxMs must be deployed on the same DMA. From DataMiner 10.5.11/10.6.0 onwards<!-- RN 43677 -->, *DataAPI* is automatically installed, so only *DataAggregator* still needs to be added manually.
 
 1. In the Admin app, check whether the correct organization is mentioned in the header bar.
 
@@ -35,7 +33,7 @@ To do so:
 
 1. Locate the node (i.e. the DMA) you want to install the DxMs on.
 
-   - Next to the *Data API* module, click *Deploy* to start the automatic installation process.
+   - If your system uses a DataMiner version prior to 10.5.11/10.6.0, next to the *DataAPI* module, click *Deploy* to start the automatic installation process.
 
    - Next to the *DataAggregator* module, click *Deploy* to start the automatic installation process.
 
