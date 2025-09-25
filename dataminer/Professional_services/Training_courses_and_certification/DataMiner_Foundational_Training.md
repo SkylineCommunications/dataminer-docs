@@ -8,9 +8,9 @@ The DataMiner Foundational Training provides a solid introduction to working wit
 
 This training is available in three formats:
 
-- **On-site training session**: A private session at your facilities for larger teams.
-- **Open training session**: Public sessions hosted at Skyline offices and other locations.
-- **E-learning**: A self-paced online program on [DataMiner Dojo](https://community.dataminer.services/learning/courses/dataminer-foundational/)
+- **On-site training**: Private training at your facilities for larger teams.
+- **Open training**: Public sessions hosted at Skyline offices and other locations.
+- **E-learning**: A self-paced online program on [DataMiner Dojo](https://community.dataminer.services/learning/courses/dataminer-foundational/).
 
 ## Who should attend?
 
@@ -35,10 +35,10 @@ DataMiner Open Training sessions are open public sessions bringing together part
 
 ### E-learning
 
-Prefer learning at your own pace? The [e-learning version](https://community.dataminer.services/learning/courses/dataminer-foundational/) of this training is available on our community website. It follows the same structure as the open/on-site training program, enriched with videos, exercises, and self-assessments.
+Prefer learning at your own pace? The [e-learning version](https://community.dataminer.services/learning/courses/dataminer-foundational/) of this training is available on our community website. It follows the same structure as the open or on-site training program, enriched with videos, exercises, and self-assessments.
 
 > [!TIP]
-> For the best learning experience, it is recommended to have access to your own DataMiner training system to practice the exercises and follow along with the modules.
+> For the best learning experience, we recommend that you have access to a DataMiner training system of your own to practice the exercises and follow along with the modules.
 
 ## Training program
 
@@ -63,13 +63,13 @@ This is what the daily schedule of the full training week generally looks like (
 
 ## Practical info
 
-- **Duration**: 5 days (full program)
-- **Formats**: On-site, Open, or E-learning
-- **Language**: English
-- **Pricing**: See [Professional Service Credits](https://docs.dataminer.services/dataminer/About_DataMiner/Pricing/Professional_service_credits.html#dedicated-training)
+- **Duration**: 5 days (full program).
+- **Formats**: On-site, open, or E-learning.
+- **Language**: English.
+- **Pricing**: See [Professional Service Credits](xref:Professional_service_credits#dedicated-training).
 
 ## How to register
 
-For open training sessions you can register via [DataMiner Dojo](https://community.dataminer.services/open-training/).
+For open training sessions, you can register via [DataMiner Dojo](https://community.dataminer.services/open-training/).
 
 For on-site sessions, send an email to [salesops@skyline.be](mailto:salesops@skyline.be) to discuss availability and arrange a private session for your team.
