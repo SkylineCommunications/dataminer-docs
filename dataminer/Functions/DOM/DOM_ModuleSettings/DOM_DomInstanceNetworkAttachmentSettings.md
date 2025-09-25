@@ -7,7 +7,8 @@ uid: DOM_DomInstanceNetworkAttachmentSettings
 The `DomInstanceNetworkAttachmentSettings` object is introduced in DataMiner version 10.5.10/10.6.0<!-- RN 43114+43366 --> and contains the settings related to how attachments are saved linked to a `DomInstance`. [The DOM helper class page](xref:DomHelper_class#attachments) contains more info about attachments.
 
 This object currently contains settings to change the default location where attachments for DOM are saved from the `C:\Skyline DataMiner\Documents` folder to a network share of your choosing.
-These settings are configured directly in the [DOM Editor](xref:DOM_Editor) when configuring the module.
+
+We recommend configuring your DOM modules using the [DOM Editor](xref:DOM_Editor) tool, because that way you will be able to configure these settings directly through the tool.
 
 > [!NOTE]
 >
