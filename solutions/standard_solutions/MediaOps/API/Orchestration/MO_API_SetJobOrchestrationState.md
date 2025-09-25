@@ -14,13 +14,13 @@ using Skyline.DataMiner.Utils.MediaOps.Common.IOData.Scheduling.Scripts.JobHandl
 
 public void SetOrchestrationState(IEngine engine) 
 {
-    var actionData = new SetJobOrchestrationStateAction
-    {
-	    DomJobId = JobId, // ID of the job you're targeting
-	    Event = OrchestrationEvent.PrerollStart,
-	    EventState = OrchestrationEventState.Failed,
-	    Message = "Unable to configure resources", // Optional message providing context about the state change
-    };
+	var actionData = new SetJobOrchestrationStateAction
+	{
+		DomJobId = JobId, // ID of the job you're targeting
+		Event = OrchestrationEvent.PrerollStart,
+		EventState = OrchestrationEventState.Failed,
+		Message = "Unable to configure resources", // Optional message providing context about the state change
+	};
 
 	actionData.SendToJobHandler(engine);
 }
