@@ -61,6 +61,13 @@ items:
           topicUid: Tutorial_MediaOps_Scheduling_Configurations
         - name: Creating a workflow to use as a template for a job
           topicUid: Tutorial_MediaOps_Workflow_Designer_Intro
+      - name: API
+        topicUid: MO_API_Overview
+        items:
+        - name: Orchestration
+          items:
+          - name: Set Job Orchestration Status
+            topicUid: MO_API_SetJobOrchestrationStateAction
     - name: DataMiner PTP
       topicUid: SolPTP
       items:
