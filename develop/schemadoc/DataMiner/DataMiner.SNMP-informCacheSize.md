@@ -22,7 +22,7 @@ integer
 
 ## Remarks
 
-To handle situations where inform messages are sent out again while they have already been acknowledged by DataMiner, DataMiner will by default keep track of the latest 20 unique inform message IDs per SNMP entity in a cache, so that it can check whether an incoming inform message has already been processed, and discard it if this is the case.
+To handle situations where inform messages are sent out again while they have already been acknowledged by DataMiner, DataMiner will by default keep track of the latest 20 unique inform message IDs per SNMP entity in a cache, so that it can check whether an incoming inform message has already been processed and discard it if this is the case.
 
 ## Example
 
