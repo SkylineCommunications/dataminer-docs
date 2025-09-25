@@ -54,7 +54,7 @@ uid: Changing_dashboard_settings
 1. Click the pencil icon again to leave edit mode.
 
 > [!NOTE]
-> The settings for a page or panel of a custom low-code app can be configured in the same way as those for a dashboard. See [Configuring a page of a low-code app](xref:LowCodeApps_page_config) or [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).
+> The settings for a page or panel of a custom low-code app can be configured in the same way as those for a dashboard. See [Configuring an app page](xref:LowCodeApps_page_config) or [Configuring an app panel](xref:LowCodeApps_panel_config).
 
 > [!TIP]
-> See also: [Changing low-code app settings](xref:Changing_low-code_app_settings)
+> See also: [Changing app settings](xref:Changing_low-code_app_settings)

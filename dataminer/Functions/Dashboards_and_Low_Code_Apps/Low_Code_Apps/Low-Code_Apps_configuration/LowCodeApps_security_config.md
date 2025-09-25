@@ -2,7 +2,7 @@
 uid: LowCodeApps_security_config
 ---
 
-# Configuring security for a low-code app
+# Configuring app security
 
 When you configure a low-code app, you can specify which users can access and/or edit the app. Unlike other app settings, this is a setting that is not version-specific, which means that if you configure it for one version of the app, it will apply for all versions.
 

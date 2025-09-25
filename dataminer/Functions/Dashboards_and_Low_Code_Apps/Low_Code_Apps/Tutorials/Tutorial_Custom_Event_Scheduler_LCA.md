@@ -208,7 +208,7 @@ In this step, you will make sure the user can create new events by clicking a bu
    ![Create a new panel](~/dataminer/images/Tutorial_events_app_new_event_panel.png)
 
    > [!TIP]
-   > For more information on panels, see [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).
+   > For more information on panels, see [Configuring an app panel](xref:LowCodeApps_panel_config).
 
 1. Click the pencil icon next to the panel name to begin editing the panel.
 

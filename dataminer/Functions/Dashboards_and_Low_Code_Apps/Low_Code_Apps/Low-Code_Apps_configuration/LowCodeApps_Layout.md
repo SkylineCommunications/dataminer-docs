@@ -2,7 +2,7 @@
 uid: LowCodeApps_Layout
 ---
 
-# Configuring the low-code app layout
+# Configuring the app layout
 
 ## Customizing the icon and color of an app
 
@@ -28,7 +28,7 @@ To create a new theme, see [Creating a new theme for a low-code app page](#creat
 
 ### Applying an existing theme to a low-code app page
 
-1. Make sure the low-code app page is in edit mode and no components are selected. See [Editing a low-code application](xref:Editing_custom_apps).
+1. Make sure the low-code app page is in edit mode and no components are selected. See [Editing an app](xref:Editing_custom_apps).
 
 1. In the panel on the right, select the *Layout* pane.
 
@@ -40,7 +40,7 @@ To create a new theme, see [Creating a new theme for a low-code app page](#creat
 
 ### Creating a new theme for a low-code app page
 
-1. Make sure the low-code app page is in edit mode and no components are selected. See [Editing a low-code application](xref:Editing_custom_apps).
+1. Make sure the low-code app page is in edit mode and no components are selected. See [Editing an app](xref:Editing_custom_apps).
 
 1. In the panel on the right, select the *Layout* pane.
 

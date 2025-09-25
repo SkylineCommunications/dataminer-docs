@@ -143,4 +143,4 @@ This tutorial is part of the following learning path:
 
 ## Related documentation
 
-- [Configuring a page of a low-code app](xref:LowCodeApps_page_config)
+- [Configuring an app page](xref:LowCodeApps_page_config)

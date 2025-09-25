@@ -124,4 +124,4 @@ This tutorial is part of the following learning path:
 
 ## Related documentation
 
-- [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config)
+- [Configuring an app panel](xref:LowCodeApps_panel_config)

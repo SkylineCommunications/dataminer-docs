@@ -2,7 +2,7 @@
 uid: Deleting_custom_apps
 ---
 
-# Deleting a low-code application
+# Deleting an app
 
 You can delete a low-code app from within the app or from the DataMiner landing page.
 

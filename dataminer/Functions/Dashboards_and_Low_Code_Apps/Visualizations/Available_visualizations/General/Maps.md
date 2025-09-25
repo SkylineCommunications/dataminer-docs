@@ -96,7 +96,7 @@ In addition, in the *Settings* pane for this component, you can further customiz
 
 ## Adding actions
 
-When a maps component is used in a [low-code app](xref:Application_framework), a set of different component actions can be configured (see [Configuring low-code app events](xref:LowCodeApps_event_config)).
+When a maps component is used in a [low-code app](xref:Application_framework), a set of different component actions can be configured (see [Configuring app events](xref:LowCodeApps_event_config)).
 
 The following actions are available:
 
