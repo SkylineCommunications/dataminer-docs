@@ -51,8 +51,20 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
 
     For each data source you wish to expose, perform the following steps:
 
-    1. `zrok reserve private --backend-mode <backendMode> <endpoint>`, where `<backendMode` is either *tcpTunnel* or *udpTunnel* and `<endpoint>` specifies the endpoint you want to expose. E.g.: `zrok reserve private --backend-mode tcpTunnel 127.0.0.1:4208`. When executing this command, you should see the following output: `your reserved share token is '2dxzh484zn3'`. Copy the token and execute the next command.
-    1. `zrok share reserved <token>`, where `<token>` is the token value shown in the output of the previous command.
+    1. Perform the following command:
+
+        ```powershell
+        zrok reserve private --backend-mode <backendMode> <endpoint>
+        ```
+
+       , where `<backendMode` is either *tcpTunnel* or *udpTunnel* and `<endpoint>` specifies the endpoint you want to expose. E.g.: `zrok reserve private --backend-mode tcpTunnel 127.0.0.1:4208`. When executing this command, you should see the following output: `your reserved share token is '2dxzh484zn3'`. Copy the token and execute the next command.
+    1. Then, perform the following command:
+
+        ```powershell
+        zrok share reserved <token>
+        ```
+
+       , where `<token>` is the token value shown in the output of the previous command.
 
 ### Getting an overview of shared resources
 
