@@ -160,6 +160,14 @@ When you uploaded an updated copy of a DVE protocol version that had already bee
 
 When, in a client application connected to a system using STaaS, you viewed a heatmap or an alarm state pie chart, in some cases, an incorrect time zone conversion would cause those charts to not include all available data.
 
+#### Swarming an element while automatic incident tracking was disabled would cause the alarms of that element to be removed from any user-defined alarm group they were in [ID 43739]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+When an element was swarmed to another DataMiner Agent while automatic incident tracking was disabled, up to now, the alarms associated with that element would incorrectly be removed from any user-defined alarm group (i.e. incident) they were in, and would again appear as separate alarms. From now on, the alarms will remain in the user-defined alarm group (i.e. incident) they are in.
+
+Also, when an element is swarmed to another DataMiner Agent while automatic incident tracking is enabled, from now on, any relational anomalies or multivariate patterns on that element will be removed.
+
 #### Problem when importing a DELT package containing average trend data into a Cassandra Cluster or STaaS database [ID 43768]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
