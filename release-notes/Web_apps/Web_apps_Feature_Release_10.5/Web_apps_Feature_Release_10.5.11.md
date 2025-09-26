@@ -81,6 +81,28 @@ It is now possible to use debug builds of GQI extension libraries. Up to now, it
 
 Debug build of an extension library can be created using either the Automation module in DataMiner Cube or the DataMiner Integration Studio (DIS). Once a debug build is created, you can then attach a debugger to the specific `DataMiner.GQI.ExtensionsWorker.Automation.exe` process, and debug the code that is executed while running the queries.
 
+#### Dashboards/Low-Code Apps - Timeline component: Anchoring & virtual bound locking [ID 43740]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When creating a template for the *Timeline* component, it is now possible to anchor rectangular shapes (i.e. layers of type *Rectangle*) to the sides of the component and to lock shape dimension settings to the virtual bounds of the component.
+
+##### Anchoring
+
+- Rectangular shapes (i.e. layers of type *Rectangle*) of which the width is linked to that of another shape can now be anchored to either the left side or the right side of the shape.
+- Rectangular shapes (i.e. layers of type *Rectangle*) of which the height is linked to that of another shape can now be anchored to either the top or the bottom of the shape.
+
+##### Virtual bounds locking
+
+The *Lock* icon, which can be used to lock one or more dimension settings of a particular shape (i.e. layer) to the visual bounds of the component, can now also be used to lock these settings to the virtual bounds of the component.
+
+To do so, keep the CTRL button pressed while clicking the *Lock* icon. The icon will then take the accent color (blue) to indicate that virtual bound locking is enabled.
+
+Functionally, this ensures that when virtualization is supported (e.g. in the timeline) shapes (i.e. layers) will align to the virtual boundary rather than the visible shape boundary, allowing them to extend outside the visible area (i.e. viewport). This way, time-based elements such as pre-roll and post-roll bars that extend beyond the viewport can be visualized.
+
+> [!NOTE]
+> Virtual bounds locking of the Width dimension is only possible when the unit is set to percent.
+
 ## Changes
 
 ### Enhancements
