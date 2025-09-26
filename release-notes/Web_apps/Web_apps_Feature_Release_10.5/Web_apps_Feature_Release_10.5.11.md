@@ -103,6 +103,15 @@ Functionally, this ensures that when virtualization is supported (e.g. in the ti
 > [!NOTE]
 > Virtual bounds locking of the Width dimension is only possible when the unit is set to percent.
 
+#### Dashboards/Low-Code Apps: Component ID will now be displayed in the Layout tab of a component [ID 43760]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in edit mode, you select a component, and go to the *General* section of the *Layout* tab, you will now be able to see the component ID.
+
+> [!NOTE]
+> This component ID will only be visible when you added the `showAdvancedSettings=true` option to the URL of the dashboard or the low-code app.
+
 ## Changes
 
 ### Enhancements
