@@ -324,8 +324,8 @@ Also, when an element is swarmed to another DataMiner Agent while automatic inci
 
 When, during a midnight synchronization, an error occurred while zipping a file, up to now, that error would incorrectly be ignored.
 
-#### Problem when importing a DELT package containing average trend data exported from a Cassandra Cluster or STaaS database [ID 43768]
+#### Problem when importing a DELT package containing average trend data into a Cassandra Cluster or STaaS database [ID 43768]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
 
-Up to now, after you had imported a DELT package containing average trend data that had been exported from a Cassandra Cluster or STaaS database, the database would contain invalid trend data.
+Up to now, after you had imported a DELT package containing average trend data into a Cassandra Cluster or STaaS database, that database would contain invalid trend data.
