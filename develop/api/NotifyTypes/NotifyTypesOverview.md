@@ -83,7 +83,7 @@ uid: NTNotifyTypesOverview
 |67|NT_REDUNDANCY_GROUP|Creates a redundancy group.|
 |68|NT_RENEW_DESCRIPTION_XML||
 |69|<xref:NT_GET_VALUE>|Gets the value of the specified parameter.|
-|70|NT_ADD_DESCRIPTION_FILE|**Deprecated since DataMiner 10.3.4.**|
+|70|NT_ADD_DESCRIPTION_FILE|**Deprecated since DataMiner 10.3.4.**<!-- RN 33616 -->|
 |71|<xref:NT_DELETE_REDUNDANCY_GROUP>|Removes a redundancy group.|
 |72|NT_NOTIFY_SERVICE_STATUS||
 |73|<xref:NT_GET_PARAMETER>|Gets a parameter value.|
@@ -99,15 +99,15 @@ uid: NTNotifyTypesOverview
 |83|NT_ADD_CLIENT||
 |84|NT_SET_PARAMETER_BY_NAME||
 |85|<xref:NT_GET_PARAMETER_BY_NAME>|Gets the value of the parameter with the specified name.|
-|86|NT_SET_PARAMETER_BY_DATA|**Deprecated since DataMiner 10.3.4.**|
-|87|<xref:NT_GET_PARAMETER_BY_DATA>|Gets the parameter value corresponding with the parameter that has the specified data stored in the ElementData.xml file. **Deprecated since DataMiner 10.3.4.**|
-|88|<xref:NT_GET_ITEM_DATA>|Gets the value stored for the specified parameter in the ElementData.xml file. **Deprecated since DataMiner 10.3.4.**|
-|89|<xref:NT_SET_ITEM_DATA>|Sets the values stored for the specified parameters in the ElementData.xml file. **Deprecated since DataMiner 10.3.4.**|
+|86|NT_SET_PARAMETER_BY_DATA|**Deprecated since DataMiner 10.3.4.**<!-- RN 33625 -->|
+|87|<xref:NT_GET_PARAMETER_BY_DATA>|Gets the parameter value corresponding with the parameter that has the specified data stored in the ElementData.xml file. **Deprecated since DataMiner 10.3.4.**<!-- RN 33625 -->|
+|88|<xref:NT_GET_ITEM_DATA>|Gets the value stored for the specified parameter in the ElementData.xml file. **Deprecated since DataMiner 10.3.4.**<!-- RN 33625 -->|
+|89|<xref:NT_SET_ITEM_DATA>|Sets the values stored for the specified parameters in the ElementData.xml file. **Deprecated since DataMiner 10.3.4.**<!-- RN 33625 -->|
 |90|NT_AGENT_FOUND||
 |91|NT_CHANGE_ALARM_COLOR||
 |92|NT_SET_KEY||
 |93|NT_DMA_REMOTE_BACKUP_SETTINGS||
-|94|NT_GET_XML_COOKIE|**Deprecated since DataMiner 10.3.4.**|
+|94|NT_GET_XML_COOKIE|**Deprecated since DataMiner 10.3.4.**<!-- RN 33515 -->|
 |95|NT_GET_DMA_DOCUMENTS||
 |96|NT_GET_TASK_INFO||
 |97|NT_ADD_ELEMENT_TYPES||
@@ -242,7 +242,7 @@ uid: NTNotifyTypesOverview
 |226|<xref:NT_DIAG>|Obtains additional information about a DMA or DMS.|
 |227|NT_UPDATE_PORTS_XML2||
 |228|NT_GET_DISTINCT_INDEXES||
-|229|<xref:NT_SCHEDULE_ROW_ON_TIMER>|Allows the triggering of a specific row to be run by the multi-threaded timer outside of its normal behavior.|
+|229|<xref:NT_SCHEDULE_ROW_ON_TIMER>|Allows the triggering of a specific row to be run by the multithreaded timer outside of its normal behavior.|
 |230|NT_RG_DUPLICATE_TEMPLATE||
 |231|NT_ADD_EDIT_GENERIC_PROPERTY||
 |232|<xref:NT_SERVICE_SET_VDX>|Sets a Visio file on a service.|
@@ -261,7 +261,7 @@ uid: NTNotifyTypesOverview
 |245|NT_FORCE_REPLICATION||
 |246|NT_LOAD_OFFLINE_ELEMENT||
 |247|NT_UNLOAD_OFFLINE_ELEMENT||
-|248|<xref:NT_ASSIGN_DYNAMIC_OID>|Assigns a dynamic OID to a parameter that will be read by a multi-threaded timer.|
+|248|<xref:NT_ASSIGN_DYNAMIC_OID>|Assigns a dynamic OID to a parameter that will be read by a multithreaded timer.|
 |249|<xref:NT_CHANGE_COMMUNICATION_STATE>|Sets the communication state of an element.|
 |250|NT_REPLICATED_SERVICE_STATE||
 |251|NT_RESET_LATCH||
@@ -340,8 +340,8 @@ uid: NTNotifyTypesOverview
 |324|<xref:NT_GET_FAILOVER_CONFIG>|Retrieves the Failover configuration.|
 |325|NT_RELOAD_SECURITY||
 |326|<xref:NT_ADD_VIEW_PARENT_AS_NAME>|Adds a new view to the view with the provided name.|
-|327|<xref:NT_RESET_THREAD_POOL>|Resets the thread pool of the specified multi-threaded timer.|
-|328|<xref:NT_SET_THREAD_POOL_STATE>|Resets the thread pool of the specified multi-threaded timer.|
+|327|<xref:NT_RESET_THREAD_POOL>|Resets the thread pool of the specified multithreaded timer.|
+|328|<xref:NT_SET_THREAD_POOL_STATE>|Resets the thread pool of the specified multithreaded timer.|
 |329|NT_ENABLE_FEATURE||
 |330|NT_IS_FEATURE_ACTIVE||
 |331|NT_REPLICATION_TRANSLATION||

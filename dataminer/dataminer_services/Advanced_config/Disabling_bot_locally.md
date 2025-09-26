@@ -1,5 +1,6 @@
 ---
 uid: Disabling_bot_locally
+reviewer: Alexander Verkest
 ---
 
 # Disabling the bot feature locally

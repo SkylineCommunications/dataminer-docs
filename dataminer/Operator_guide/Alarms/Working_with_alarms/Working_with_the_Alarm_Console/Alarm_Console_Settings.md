@@ -51,7 +51,7 @@ Select this option to hide raw alarms of a correlated alarm. To show the raw ala
 >   - If only the correlated alarm matches the filter, only that alarm is displayed.
 >   - If both base and correlated alarm match the filter, only the correlated alarm is displayed.
 >   - If neither base nor correlated alarm match the filter, neither are displayed.
-> - If a quick filter is applied with the filter box in the lower right corner, the behavior is similar, except in case both base alarm and correlated alarm match the filter, as then both alarms will be displayed.
+> - If a quick filter is applied with the filter box in the lower-right corner, the behavior is similar, except in case both base alarm and correlated alarm match the filter, as then both alarms will be displayed.
 
 ## Automatic incident tracking
 

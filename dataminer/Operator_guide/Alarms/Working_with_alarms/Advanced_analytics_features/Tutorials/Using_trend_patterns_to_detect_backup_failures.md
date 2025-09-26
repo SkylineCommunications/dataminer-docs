@@ -164,7 +164,7 @@ Now that you have retrieved the most recent pattern occurrence per server, you c
 
       While the icon is selected, you can use the *Dimensions* boxes on the right to resize and reposition it exactly the way you want.
 
-   1. Select the text layer, and adjust the right margin via the lower left *Dimensions* box on the right, so that the text is displayed next to the icon.
+   1. Select the text layer, and adjust the right margin via the lower-left *Dimensions* box on the right, so that the text is displayed next to the icon.
 
    1. Add a condition to the icon layer for when the validation is OK:
 

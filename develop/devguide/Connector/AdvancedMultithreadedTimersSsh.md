@@ -4,7 +4,7 @@ uid: AdvancedMultiThreadedTimersSsh
 
 # SSH
 
-To implement a multi-threaded timer with SSH, perform the following steps:
+To implement a multithreaded timer with SSH, perform the following steps:
 
 1. Building the request
 1. Processing the responses
@@ -12,7 +12,7 @@ To implement a multi-threaded timer with SSH, perform the following steps:
 
 ## Step 1: Building the request
 
-Assume the following multi-threaded timer is defined:
+Assume the following multithreaded timer is defined:
 
 ```xml
 <Timer id="1" options="ip:1000,1;each:60000;pollingrate:30,10,10;threadPool:20,5,221,222,223,224,225,15000;dynamicthreadpool:220;qactionBefore:1010;qactionAfter:1012">
@@ -25,7 +25,7 @@ Assume the following multi-threaded timer is defined:
 </Timer>
 ```
 
-To build the request, create a QAction triggered by a multi-threaded timer (using the qactionBefore option), which creates the request object and returns this.
+To build the request, create a QAction triggered by a multithreaded timer (using the qactionBefore option), which creates the request object and returns this.
 
 ```xml
 <QAction id="1010" name="SSH Before" encoding="csharp" row="true">
@@ -127,10 +127,10 @@ Format of the request: requestInfo (object[]):
 
 ## Step 2: Processing the responses
 
-To process the responses, create a QAction that triggers on the group of the multi-threaded timer.
+To process the responses, create a QAction that triggers on the group of the multithreaded timer.
 
 > [!NOTE]
-> Whereas typically you provide a parameter ID in the triggers attribute, here you need to specify the ID of the group of the multi-threaded timer.
+> Whereas typically you provide a parameter ID in the triggers attribute, here you need to specify the ID of the group of the multithreaded timer.
 
 ```xml
 <QAction id="1011" name="SSH Data" encoding="csharp" options="group" triggers="1011" row="true">
@@ -196,7 +196,7 @@ In this QAction, you will typically also update the state column of the correspo
 
 ## Step 3: Running the QAction after the response
 
-The last step runs the QAction specified in the qactionAfter option of the multi-threaded timer.
+The last step runs the QAction specified in the *qactionAfter* option of the multithreaded timer.
 
 ```xml
 <QAction id="1012" name="SSH After" encoding="csharp" row="true">

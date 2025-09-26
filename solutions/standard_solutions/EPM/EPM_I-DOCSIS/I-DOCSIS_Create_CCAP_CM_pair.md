@@ -15,7 +15,7 @@ To create CCAP/CM pairs, you can either create a single CCAP/CM pair at a time, 
 
 1. In the pane on the left, select the script *EPM_I_DOCSIS_AddNewCcapCmPair*.
 
-1. In the lower right corner, click *Execute*.
+1. In the lower-right corner, click *Execute*.
 
    This will open a pop-up window.
 
@@ -117,7 +117,7 @@ The elements will be created with the following specifications:
 
 1. In the pane on the left, select the script *EPM_I_DOCSIS_AddNewCcapCmPair*.
 
-1. In the lower right corner, click *Execute*.
+1. In the lower-right corner, click *Execute*.
 
    This will open a pop-up window.
 

@@ -82,6 +82,8 @@ By default, each column of a [dynamic table](xref:Table_parameters#dynamic-table
 
 1. Optionally, specify a mask in the *Filter* column to apply the alarm configuration only on a filtered selection of available rows of the dynamic table.
 
+   The filter will be applied on the display key of the row. If there is no display key, the primary key will be used instead.
+
    > [!NOTE]
    > You can use the wildcard characters \* and ? in this filter mask. For more information on wildcards, see [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters).
 

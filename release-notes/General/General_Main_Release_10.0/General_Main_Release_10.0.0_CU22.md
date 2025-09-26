@@ -183,7 +183,7 @@ In some cases, scheduled tasks configured to take a DataMiner backup, optimize t
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU11] - Feature Release Version 10.2.2 -->
 
-When an embedded multi-page Visio file with hidden pages was viewed in a web app, the hidden pages would incorrectly be displayed.
+When an embedded multipage Visio file with hidden pages was viewed in a web app, the hidden pages would incorrectly be displayed.
 
 #### DataMiner Cube - Visual Overview: DCF signal paths would not be visualized correctly on pages with a grid layout [ID 31888]
 

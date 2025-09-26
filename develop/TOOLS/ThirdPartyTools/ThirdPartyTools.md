@@ -8,7 +8,7 @@ The following table lists some development tools that can be very useful while d
 
 |Tool  |Description  |Category  |
 |---------|---------|---------|
-|[DataStax DevCenter](xref:DataStax_DevCenter)     |This tool allows you to perform CQL queries or run scripts on a Cassandra database.         |Database         |
+|[DataStax DevCenter](xref:DataStax_DevCenter)     | **No longer supported.** Used to perform CQL queries or run scripts on a Cassandra database.         |Database         |
 |[dnSpy](xref:dnSpy)     |dnSpy is a debugger and .NET assembly editor.        |Debugger         |
 |[dotPeek](xref:dotPeek)     |dotPeek is a free .NET decompiler and assembly browser.     | Decompiler         |
 |[EBU LIST](xref:EBU_Live_IP_Software_Toolkit_LIST)     |EBU LIST is a freely available suite of software tools that can be used to check the state of IP-based networks and their high-bitrate media traffic.         |Network         |

@@ -106,7 +106,7 @@ Some connector versions may contain a bug that causes a lot of parameter sets to
 
 This issue is known to occur with the following connector versions:
 
-- [Microsoft Platform](https://catalog.dataminer.services/result/driver/251): 1.1.2.x, 1.2.0.x, 1.2.1.1
+- [Microsoft Platform](https://catalog.dataminer.services/details/4abcf220-c001-4ffd-bab8-559dee47088f): 1.1.2.x, 1.2.0.x, 1.2.1.1
 
 ## DataMiner is unable to start up after registration
 

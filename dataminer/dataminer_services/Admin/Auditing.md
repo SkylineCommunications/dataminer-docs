@@ -1,6 +1,7 @@
 ---
 uid: Auditing
 keywords: cloud audit log, cloud audit logs
+reviewer: Alexander Verkest
 ---
 
 # Consulting dataminer.services audit logs
@@ -30,7 +31,7 @@ To export the audit records to CSV:
 
    - Click *Submit*.
 
-1. When you see a notification in the lower right corner mentioning that the audit record request has succeeded, check your email.
+1. When you see a notification in the lower-right corner mentioning that the audit record request has succeeded, check your email.
 
    You will receive an email with a link to the CSV file. Note that it can take some time before you receive this email. If the email does not seem to arrive, check your junk mail folder.
 

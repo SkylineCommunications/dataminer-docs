@@ -35,7 +35,7 @@ uid: SRM_logging_config
 
    - *Booking Logging Date Time Format*: The datetime format for the booking logging. This must be a valid format, e.g. *dd/MM/yyyy HH:mm:ss.ffff*.
 
-   - *Booking Logging Max File Size*: The maximum size of booking log files. Minimum: 1 MB. Maximum: 100 MB.
+   - *Booking Logging Max File Size*: The maximum size of booking log files. Minimum: 1 MB. Maximum: 100 MB.<!-- RN 31984 -->
 
    - *Booking Minimum Logging Level*: Events must match this log level or a higher log level to be included in the logging. Can be set to *Verbose*, *Debug*, *Information*, *Warning*, or *Error*. <!-- RN 34336 -->
 

@@ -70,7 +70,7 @@ items:
     topicUid: InstallConfiguration_XSD
   - name: Legacy trend data exporter
     topicUid: Legacy_Trend_Data_Exporter
-  - name: Multi-threaded timer polling rate calculator
+  - name: Multithreaded timer polling rate calculator
     topicUid: Multi_Threaded_Timer_Polling_Rate_Calculator
   - name: Prerequisite checks
     items:

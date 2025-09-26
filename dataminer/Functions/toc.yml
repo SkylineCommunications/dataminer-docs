@@ -650,7 +650,7 @@ items:
             topicUid: Importing_a_query
       - name: Logging
         topicUid: Dashboards_and_Low_Code_Apps_Logging
-      - name: Style Guide
+      - name: Style guide
         topicUid: LCA_Style_guide
       - name: Frequently asked questions
         topicUid: Dashboards_and_Low_Code_Apps_FAQ
@@ -800,12 +800,16 @@ items:
             topicUid: DOM_StorageSettings
           - name: DomInstanceNetworkAttachmentSettings
             topicUid: DOM_DomInstanceNetworkAttachmentSettings
+          - name: SecuritySettings
+            topicUid: DOM_SecuritySettings
       - name: DOM events
         topicUid: DOM_events
       - name: DOM history
         topicUid: DOM_history
       - name: DOM status system
         topicUid: DOM_status_system
+      - name: DOM security
+        topicUid: DOM_security
       - name: DOM actions
         topicUid: DOM_actions
       - name: DOM data storage

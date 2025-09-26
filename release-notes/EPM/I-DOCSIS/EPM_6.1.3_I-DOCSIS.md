@@ -12,9 +12,9 @@ uid: EPM_6.1.3_I-DOCSIS
 
 ### Enhancements
 
-#### Multi-threaded timer polling rate adjusted \[ID 33570\]
+#### Multithreaded timer polling rate adjusted \[ID 33570\]
 
-To improve performance, the multi-threaded timer polling rate has been adjusted for the CCAPs and CM collectors. This will also prevent possible run-time errors.
+To improve performance, the multithreaded timer polling rate has been adjusted for the CCAPs and CM collectors. This will also prevent possible run-time errors.
 
 #### Downstream QAM Channel Post-FEC Uncorrectable Error Ratio parameter adjusted \[ID 33572\]
 
@@ -37,7 +37,7 @@ The following issues have been resolved in the Generic DOCSIS CM Collector conne
 - In the CM QAM DS and US Channels tables, it could occur that columns remained empty because they were not initialized when the tables were filled in.
 - It could occur that DOCSIS 2.0 cable modems had empty Tx power values, because the values were not being calculated.
 
-In addition, the polling rate of multi-threaded timers has been adjusted.
+In addition, the polling rate of multithreaded timers has been adjusted.
 
 #### Large difference between SNR and MER in CCAP table \[ID 33568\]
 

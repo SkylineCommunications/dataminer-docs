@@ -83,3 +83,6 @@ var singleHistory = allHistory.First();
 var sectionChanges = singleHistory.Changes.OfType<DomSectionChange>();
 var statusChanges = singleHistory.Changes.OfType<DomInstanceStatusChange>();
 ```
+
+> [!IMPORTANT]
+> When link security is enabled, the filters used to retrieve DOM history need to adhere to certain [filter requirements](xref:DOM_SecuritySettings#dom-history-read-and-count-operations).

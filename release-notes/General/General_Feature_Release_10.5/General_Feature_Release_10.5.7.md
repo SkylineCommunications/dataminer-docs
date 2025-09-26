@@ -165,9 +165,9 @@ Similarly, when BrokerGateway detects that a DataMiner Agent is about to be adde
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
-On systems using the GQI DxM, the *Get object manager instances* data source now supports real-time updates.
+On systems using the GQI DxM, the *Get object manager instances* data source now supports real-time updates. For more information on real-time updates, see [Query updates](xref:Query_updates).
 
-For more information on real-time updates, see [Query updates](xref:Query_updates).
+Note that with this change, a possible issue has also been resolved where calling the *IGQIUpdater.AddRow* method would result in a duplicate row with the same row key being added in case a row with the same row key already existed.
 
 #### New connector installed as part of an application package will now automatically be set as production version [ID 42623]
 

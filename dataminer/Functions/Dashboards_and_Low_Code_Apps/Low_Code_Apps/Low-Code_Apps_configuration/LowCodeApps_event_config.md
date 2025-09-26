@@ -6,7 +6,7 @@ uid: LowCodeApps_event_config
 
 You can configure actions for different types of events in DataMiner Low-Code Apps. These are the main types:
 
-- *On open*: This event takes place when a page or panel is opened. (See [Configuring a page of a low-code app](xref:LowCodeApps_page_config) and [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).)
+- *On open*: This event takes place when an app, a page, or a panel is opened. See [Changing low-code app settings](xref:Changing_low-code_app_settings), [Configuring a page of a low-code app](xref:LowCodeApps_page_config), or [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).
 
   > [!NOTE]
   > Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39604 + 39682 + 39636-->, this type of event is only available for low-code app pages and is called "On page load".
@@ -288,7 +288,7 @@ To configure an event to show a context menu:
 
    - Click the ![Configure actions](~/dataminer/images/Configure_Actions.png) button to configure one or more actions to execute when the menu item is clicked.
 
-     Save the actions by selecting *Ok* in the lower right corner.
+     Save the actions by selecting *Ok* in the lower-right corner.
 
 1. Optionally, add additional menu items, following the same steps until you are satisfied with the number of menu items.
 
@@ -299,7 +299,7 @@ To configure an event to show a context menu:
 
 ## Showing a notification
 
-Available from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38548-->. To configure an event to show a notification in the lower right corner of a low-code app:
+Available from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38548-->. To configure an event to show a notification in the lower-right corner of a low-code app:
 
 1. Select *Show a notification*.
 
@@ -330,7 +330,7 @@ Available from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38548-->. To configu
 
 After you have configured an action, you can click *Upon completion* to configure another action that should occur as soon as the previous action is completed.
 
-Alternatively, you can configure another action that should happen at the same time with the *Add action* button in the lower right corner.
+Alternatively, you can configure another action that should happen at the same time with the *Add action* button in the lower-right corner.
 
 From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43222-->, all actions are numbered hierarchically. For example:
 

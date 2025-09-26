@@ -32,14 +32,14 @@ This will ensure that when a DataMiner application package is installed on a Dat
 The version for the package. This needs to be a valid semantic version. See [Versioning of Catalog items](xref:About_the_Catalog_app#versioning-of-catalog-items).
 
 > [!NOTE]
-> This will be overwritten during a workflow run when the GitHub workflows are used.
+> This will be overwritten during a workflow run when the [GitHub reusable workflows](xref:github_reusable_workflows) are used.
 
 ## VersionComment
 
 The content of this is used for the version comment when a DataMiner application package is published to the Catalog.
 
 > [!NOTE]
-> This will be overwritten during a workflow run when the GitHub workflows are used.
+> This will be overwritten during a workflow run when the [GitHub reusable workflows](xref:github_reusable_workflows) are used.
 
 ## CatalogPublishKeyName
 
@@ -47,7 +47,7 @@ This is the name of the key defined either in Visual Studio User Secrets or as a
 
 > [!NOTE]
 >
-> - This will be overwritten during a workflow run when the GitHub workflows are used.
+> - This will be overwritten during a workflow run when the [GitHub reusable workflows](xref:github_reusable_workflows) are used.
 > - When using environment variables, replace colons (`:`) in the key name with double underscores (`__`). For example, if the .csproj file specifies `skyline:sdk:dataminertoken`, the corresponding environment variable should be named `skyline__sdk__dataminertoken`.
 
 ## CatalogDefaultDownloadKeyName
@@ -56,7 +56,7 @@ This is the name of the key defined either in Visual Studio User Secrets or as a
 
 > [!NOTE]
 >
-> - This will be overwritten during a workflow run when the GitHub workflows are used.
+> - This will be overwritten during a workflow run when the [GitHub reusable workflows](xref:github_reusable_workflows) are used.
 > - When using environment variables, replace colons (`:`) in the key name with double underscores (`__`). For example, if the .csproj file specifies `skyline:sdk:dataminertoken`, the corresponding environment variable should be named `skyline__sdk__dataminertoken`.
 
 ## UserSecretsId

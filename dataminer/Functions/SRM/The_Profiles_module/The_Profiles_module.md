@@ -10,7 +10,7 @@ This module does not require a separate license. It is intended to manage profil
 
 The Profiles module consists of a list pane on the left with three tabs, *Definitions*, *Instances*, and *Parameters*, and a configuration pane on the right, which displays detailed information and settings for items selected in the pane on the left.
 
-Each **profile definition** consists of a set of parameters, independent of the underlying technology, and the corresponding **profile instance** determines the values that need to be applied to these parameters. Think for example of a profile to tune a satellite receiver: operators can add parameters required for any branch of satellite receiver, such as the center frequency, roll-off factor, modulation standard, etc.
+Each **profile definition** consists of a set of parameters, independent of the underlying technology, and the corresponding **profile instance** determines the values that need to be applied to these parameters. Think for example of a profile to tune a satellite receiver: operators can add parameters required for any brand of satellite receiver, such as the center frequency, roll-off factor, modulation standard, etc.
 
 To create useful instances, you first need to create profile parameters and definitions. The instances can then be linked to a session variable in Visual Overview, or applied to elements with an Automation script.
 

@@ -26,7 +26,7 @@ There are three main ways to manually create a new job through the Scheduling ap
 
    This can be useful to ensure that resources are reserved for long enough before the start of the job and after the end of a job, for example so operators or orchestration scripts have enough time to do the setup or to take down the workflow.
 
-1. Configure the job's `Desired State`, which can be `Draft` or `Tentative`.
+1. Configure the job's *Desired State*, which can be *Draft* or *Tentative*.<!-- RN 43448 -->
 
 1. Optionally, click *Next* to select the organization and/or job owner linked to the job.
 

@@ -35,7 +35,7 @@ Perform the following steps to release a connector version:
 
 1. Tag the commit:
 
-   1. In the lower right corner, select and check out the correct branch. This must be a branch ending in *".X"*, e.g. 1.0.0.X.
+   1. In the lower-right corner, select and check out the correct branch. This must be a branch ending in *".X"*, e.g. 1.0.0.X.
 
    1. Right-click the branch and select *View History*.
 
@@ -96,7 +96,7 @@ DataMiner install packages, i.e. .dmapp files, can contain any other artifacts, 
 
 1. Tag the commit:
 
-   1. In the lower right corner, select and check out the correct branch. This must be a branch ending in *".X"*, e.g. 1.0.0.X.
+   1. In the lower-right corner, select and check out the correct branch. This must be a branch ending in *".X"*, e.g. 1.0.0.X.
 
    1. Right-click the branch and select *View History*.
 

@@ -70,7 +70,6 @@ This process includes using **Git for push and pull requests** and utilizing a C
 > [!TIP]
 > See also:
 >
-> - [CI/CD Expert Hub](https://community.dataminer.services/expert-hub-ci-cd/)
 > - [CI-CD – Our technical implementation & choice of tools](https://community.dataminer.services/ci-cd-our-technical-implementation-choice-of-tools/)
 > - [CI/CD and the Agile Principles](https://community.dataminer.services/ci-cd-and-the-agile-principles/)
 > - [Empower your DevOps engineers with the DataMiner CI/CD infrastructure](https://community.dataminer.services/empower-your-devops-engineers-with-the-dataminer-ci-cd-infrastructure/)
@@ -157,7 +156,7 @@ In a nutshell: **You operate the platform, we build and maintain the platform fo
 > [!TIP]
 > See also:
 >
-> - [Use Case - Live Dashboard Sharing (Skyline Tech Partners)](https://community.dataminer.services/use-case/live-dashboard-sharing-from-skyline-tech-partners/)
+> - [Use Case - Live Dashboard Sharing (Skyline Tech Partners)](https://community.dataminer.services/use-case/live-dashboard-sharing-skyline-tech-partners/)
 > - [Workflow Use Case - DataMiner Live Dashboard Sharing](https://community.dataminer.services/use-case/dataminer-live-data-sharing/)
 > - [Use Case - Dashboard sharing facilitating collaboration across the entire supply chain](https://community.dataminer.services/use-case/dashboard-sharing-facilitating-collaboration-across-the-entire-supply-chain/)
 > - [Use Case - Dashboard sharing reducing OPEX while accelerating incident resolution](https://community.dataminer.services/use-case/dashboard-sharing-reducing-opex-while-accelerating-incident-resolution/)
@@ -185,7 +184,7 @@ In a nutshell: **You operate the platform, we build and maintain the platform fo
 >
 > - [Let us enhance your DataMiner ChatOps experience!](https://community.dataminer.services/let-us-enhance-your-dataminer-chatops-experience/)
 > - [About ChatOps](xref:About_ChatOps)
-> - [Example use case - Custom chat commands](https://community.dataminer.services/use-case/dataminer-chatops-custom-commands/)
+> - [Example use case - Custom chat commands](https://community.dataminer.services/use-case/dataminer-chatops-custom-chat-commands/)
 > - [Examples - Custom chat commands](xref:DataMiner_Teams_bot)
 > - [Examples - Chat integration](xref:Microsoft_Teams_Chat_Integration)
 > - [Kata #6: Custom ChatOps operator](https://www.youtube.com/watch?v=qYOM6-55YYU) ![Video](~/dataminer/images/video_Duo.png)

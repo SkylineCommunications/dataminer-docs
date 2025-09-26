@@ -39,7 +39,7 @@ When you install GitHub Desktop, you will also need to add the correct repositor
    > - Make sure the local path you clone the repository to is relatively short. Using a long file path will lead to errors, as Windows will be unable to create certain files in the repository.
    > - Do not clone the repository to a folder that is synced with OneDrive, as this can cause errors.
 
-1. If you do not have write access to the repository, you will find an alert in the lower left corner of the GitHub Desktop UI.
+1. If you do not have write access to the repository, you will find an alert in the lower-left corner of the GitHub Desktop UI.
 
    ![Install GitHub3](~/images/InstallGitHub3.png)
 

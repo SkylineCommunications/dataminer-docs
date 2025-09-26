@@ -1164,7 +1164,7 @@ Permission to send ad hoc text messages.
 
 ### Modules \> System configuration \> Object Manager \> Module Settings
 
-Permission to change settings of the DataMiner Object Manager. Requires the DOMManager [soft-launch option](xref:SoftLaunchOptions).
+Permission to change settings of the DataMiner Object Manager.
 
 ### Modules \> System configuration \> Security
 

@@ -126,7 +126,7 @@ In this step, you will configure different data pages of your newly created SLA.
      - *SLA Validity End Time*: Forever
 
    > [!TIP]
-   > To save all changes simultaneously, click *Save all* in the lower right corner.
+   > To save all changes simultaneously, click *Save all* in the lower-right corner.
 
    ![SLA configuration](~/dataminer/images/SLA_tutorial_img04.png)
 
@@ -155,7 +155,7 @@ In this step, you will configure different data pages of your newly created SLA.
      - *Maximum Single Violation Unit*: Seconds
 
    > [!TIP]
-   > To save all changes simultaneously, click *Save all* in the lower right corner.
+   > To save all changes simultaneously, click *Save all* in the lower-right corner.
 
    ![Compliance configuration](~/dataminer/images/SLA_tutorial_img05.png)
 
@@ -176,7 +176,7 @@ In this step, you will configure different data pages of your newly created SLA.
    > 1. Select *System Center* and navigate to *Users/Groups*.
    > 1. Go to the *Groups* tab and select the group in question.
    > 1. Enter "1" in the *Group level* field on the *Details* tab.
-   > 1. Click *Apply* in the lower right corner of the tab.
+   > 1. Click *Apply* in the lower-right corner of the tab.
    > 1. Close Cube and restart it.
    >
    > See also: [Configuring a user group](xref:Configuring_a_user_group)
@@ -186,7 +186,7 @@ In this step, you will configure different data pages of your newly created SLA.
    > 1. Navigate to *Users/Groups* > *Users* in System Center.
    > 1. Select the account you used to log in to the DMS.
    > 1. Enter "1" in the *Override level* field on the *Details* tab.
-   > 1. Click *Apply* in the lower right corner of the tab.
+   > 1. Click *Apply* in the lower-right corner of the tab.
    > 1. Close Cube and restart it.
 
 ## Step 4: Assign and modify an alarm template

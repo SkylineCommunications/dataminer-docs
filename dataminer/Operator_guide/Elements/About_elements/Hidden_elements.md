@@ -24,6 +24,6 @@ To create a hidden element, follow the normal procedure for element creation, bu
 
 To view hidden elements in DataMiner Cube:
 
-1. On the *Elements* page of a view card, click the filter icon in the lower right corner.
+1. On the *Elements* page of a view card, click the filter icon in the lower-right corner.
 
 1. Select *Hidden elements*.

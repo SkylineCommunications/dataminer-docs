@@ -156,6 +156,8 @@ items:
         topicUid: element_benchmarks
       - name: Failover benchmarks
         topicUid: failover_benchmarks
+      - name: GQI benchmarks
+        topicUid: gqi_benchmarks
       - name: History set benchmarks
         topicUid: history_set_benchmarks
       - name: Migration benchmarks

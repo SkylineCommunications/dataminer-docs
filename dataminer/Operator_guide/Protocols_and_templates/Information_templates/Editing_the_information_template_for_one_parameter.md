@@ -19,4 +19,4 @@ To do so:
 
 1. Change the *Category*, *Alarm Description* or *Corrective actions* as required.
 
-1. Click the *Update information template* button in the lower right corner.
+1. Click the *Update information template* button in the lower-right corner.

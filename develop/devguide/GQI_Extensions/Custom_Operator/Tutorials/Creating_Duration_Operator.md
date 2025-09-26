@@ -41,7 +41,7 @@ Expected duration: 15 minutes.
 
 ## Step 1: Get a quick start from the catalog
 
-1. Go to [https://catalog.dataminer.services/details/package/5408](https://catalog.dataminer.services/details/package/5408)
+1. Go to [https://catalog.dataminer.services/details/0d2ae787-e1f1-4839-8245-6892ee4c37ed](https://catalog.dataminer.services/details/0d2ae787-e1f1-4839-8245-6892ee4c37ed)
 
 1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
@@ -138,7 +138,7 @@ This is the first step to implement the custom operator.
 1. Select a data source that has at least two columns containing datetime values.
 
    > [!NOTE]
-   > If you do not have an applicable data source, you can [download one from the catalog](https://catalog.dataminer.services/details/package/5407).
+   > If you do not have an applicable data source, you can [download one from the catalog](https://catalog.dataminer.services/details/583c964c-270c-4485-a8e9-84dced178759).
 
 1. Add a custom operator to the query and select *Duration*.
 

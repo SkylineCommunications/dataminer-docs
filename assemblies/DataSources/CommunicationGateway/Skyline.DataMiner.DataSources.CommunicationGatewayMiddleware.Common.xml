@@ -66,7 +66,7 @@
         </member>
         <member name="F:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient._natsHeartbeatRequiredTimer">
             <summary>
-            A watchdog timer to check if there has been inactivity for too long and and a heartbeat message needs to be sent to the DxM.
+            A watchdog timer to check if there has been inactivity for too long and a heartbeat message needs to be sent to the DxM.
             When the DxM does not receive any message from us, it will forcibly close the connection.
             </summary>
         </member>
@@ -785,7 +785,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.GenericSubscriptionDetails`2.Parse(Google.Protobuf.ByteString)">
             <summary>
-            Parses the content from a ResponseMessage to the type matching the subscription as defined by the generic Response.
+            Parses the content from a ResponseMessage to the type matching the subscription as defined by the generic TResponse.
             </summary>
             <param name="data"></param>
             <returns></returns>

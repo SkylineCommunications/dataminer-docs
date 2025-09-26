@@ -2,6 +2,8 @@ items:
 - name: Solutions
   topicUid: solution_index
   items:
+  - name: About DataMiner Solutions
+    topicUid: SOL_About
   - name: Standard Solutions
     items:
     - name: dataminer.MediaOps
@@ -335,13 +337,6 @@ items:
         topicUid: DOM_Using_DOM_Viewer
   - name: Custom Solutions
     items:
-    - name: DataMiner Asset Management application
-      topicUid: Asset_Management
-      items:
-      - name: Installing the Asset Management app
-        topicUid: Installing_Asset_Management
-      - name: Working with the Asset Management app
-        topicUid: Working_with_Asset_Management
     - name: DataMiner IT Tools (DITT)
       topicUid: Dataminer_IT_Tool_Overview
       items:

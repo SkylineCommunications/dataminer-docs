@@ -80,7 +80,7 @@ A number of enhancements have been made to the Display editor and the Table edit
   | Analog Read           | 2 units                        |
   | Group box             | 1 unit                         |
   | Spacer (white space)  | 1 unit                         |
-  | Multi-line parameters | depends on the number of lines |
+  | Multiline parameters | depends on the number of lines |
 
 - Although, in DataMiner Cube, the height of a table is automatically adapted, tables in Display editor will have a fixed height of 2 units.
 

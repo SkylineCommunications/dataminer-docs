@@ -66,7 +66,7 @@ The Template Editor UI consists of the following main components<!--RN 34858-->:
 - *Settings* pane (3)
 
 > [!IMPORTANT]
-> Any changes made in the Template Editor are only saved once you click the *Save* button in the lower right corner. When you close the Template Editor by clicking the "X" in the top-right corner or the *Cancel* button in the lower right corner, you will be alerted of any unsaved changes that may be lost if you close the editor prematurely.
+> Any changes made in the Template Editor are only saved once you click the *Save* button in the lower-right corner. When you close the Template Editor by clicking the "X" in the top-right corner or the *Cancel* button in the lower-right corner, you will be alerted of any unsaved changes that may be lost if you close the editor prematurely.
 
 ## Working with layers
 
@@ -127,7 +127,7 @@ If one layer is positioned higher than another, the higher layer will appear in 
 
 ### Temporarily masking a layer
 
-To temporarily mask a layer within the Template Editor, hover the mouse pointer over the layer and click the *eye* icon in the lower right corner. This action renders the layer invisible while you modify the template. To bring the layer back into view, click the *eye* icon again.
+To temporarily mask a layer within the Template Editor, hover the mouse pointer over the layer and click the *eye* icon in the lower-right corner. This action renders the layer invisible while you modify the template. To bring the layer back into view, click the *eye* icon again.
 
 ![Temporarily mask layer](~/dataminer/images/Temporarily_Mask_Layer.gif)<br>*Template Editor in DataMiner 10.5.8*
 
@@ -311,7 +311,7 @@ If you have already configured at least one other template for a component in th
 
      A list of existing components and their templates is displayed, ordered by component type. A preview shows how the current component would look if the template in question was applied.
 
-  1. Select a template from the list and click *Apply* in the lower right corner of the pop-up window.
+  1. Select a template from the list and click *Apply* in the lower-right corner of the pop-up window.
 
 - For the **table** component:
 
@@ -323,7 +323,7 @@ If you have already configured at least one other template for a component in th
 
      A list of existing components and their templates is displayed, ordered by component type. A preview shows how the current component would look if the template in question was applied.
 
-  1. Select a template from the list and click *Apply* in the lower right corner of the pop-up window.
+  1. Select a template from the list and click *Apply* in the lower-right corner of the pop-up window.
 
 - For the **maps** component:
 
@@ -333,7 +333,7 @@ If you have already configured at least one other template for a component in th
 
      A list of existing components and their templates is displayed, ordered by component type. A preview shows how the current component would look if the template in question was applied.
 
-  1. Select a template from the list and click *Apply* in the lower right corner of the pop-up window.
+  1. Select a template from the list and click *Apply* in the lower-right corner of the pop-up window.
 
 ### [Earlier DataMiner versions](#tab/tabid-2)
 

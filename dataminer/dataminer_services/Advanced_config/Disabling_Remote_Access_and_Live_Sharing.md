@@ -1,5 +1,6 @@
 ---
 uid: Disabling_Remote_Access_and_Live_Sharing
+reviewer: Alexander Verkest
 ---
 
 # Disabling Remote Access and Live Sharing locally

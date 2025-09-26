@@ -12,7 +12,7 @@ uid: Installing_PLM_tool
 
 ## Deploying the PLM tool
 
-1. Look up the [*DataMiner Planned Maintenance Tool* package](https://catalog.dataminer.services/details/package/6010) in the Catalog.
+1. Look up the [*DataMiner Planned Maintenance Tool* package](https://catalog.dataminer.services/details/88b1f821-bf68-4f4b-a244-6a547b087cd2) in the Catalog.
 
 1. Click the *Deploy* button.
 
@@ -25,7 +25,7 @@ uid: Installing_PLM_tool
    ![EPL PLM app](~/dataminer/images/EPM_PLM_app.png)
 
 > [!NOTE]
-> To update the Planned Maintenance tool, redeploy the [*DataMiner Planned Maintenance Tool* package](https://catalog.dataminer.services/details/package/6010). The tool will be updated, but no new PLM element will be created, as one should already exist in your DMS.
+> To update the Planned Maintenance tool, redeploy the [*DataMiner Planned Maintenance Tool* package](https://catalog.dataminer.services/details/88b1f821-bf68-4f4b-a244-6a547b087cd2). The tool will be updated, but no new PLM element will be created, as one should already exist in your DMS.
 
 ## Configuring the 'Planned Maintenance Tool' element
 

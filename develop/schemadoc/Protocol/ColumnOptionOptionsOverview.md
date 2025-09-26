@@ -601,7 +601,7 @@ See also: [View tables](xref:AdvancedViewTables)
 
 ## viewImpact
 
-<!-- RN 19798 -->
+<!-- RN 19798, 21384 -->
 
 By specifying this option in a particular table column definition, you can configure a "view impact" column containing IDs of views that have to be put in alarm whenever there is an alarm on a cell in another column of that same table.
 

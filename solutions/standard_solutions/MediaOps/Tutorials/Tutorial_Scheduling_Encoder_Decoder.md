@@ -9,7 +9,7 @@ In this tutorial, you will learn how to create and schedule a job, swap resource
 Expected duration: 15 minutes
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.3.1.
+> The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.4.0.
 
 ## Prerequisites
 

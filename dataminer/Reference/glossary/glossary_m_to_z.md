@@ -27,7 +27,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Mediation protocol | Standardized protocol that forms a mediation layer on top of device-specific protocols, thereby providing a unified view on similar devices that have a different device-specific protocol. Also known as base protocol. |
 | Memory file | Variable within an Automation script that consists of a container of values.<br>See [Script variables](xref:Script_variables). |
 | MER | Modulation Error Ratio. Measurement of the performance of a digital media transmitter or receiver in a communications system using digital modulation. |
-| MFN | Multi-Frequency Network. Network where multiple radio frequencies are used to transmit media content. |
+| MFN | Multifrequency Network. Network where multiple radio frequencies are used to transmit media content. |
 | MHEG-5 | Set of international standards regarding the presentation of multimedia information, standardized by the Multimedia and Hypermedia Experts Group (MHEG). |
 | MHP | Multimedia Home Platform. Open standard for middleware, designed by the DVB project for interactive digital TV. |
 | MIB | Management Information Base. A virtual information store managing objects, which is typically accessed using the Simple Network Management Protocol (SNMP).<br>See [Terminology related to the SNMP protocol](xref:Terminology_related_to_the_SNMP_protocol). |
@@ -36,7 +36,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Monitoring app | Web application used to monitor a DataMiner System. |
 | MOTS | Military Off-The-Shelf. Term used for off-the shelf products that have been developed or customized by a commercial vendor to respond to specific military requirements. |
 | MPEG | Moving Picture Experts Group. Working group formed by ISO and IEC to set standards for audio and video compression and transmission, such as MPEG-2 and MPEG-4 AVC. |
-| MPLS | Multi-Protocol Label Switching. Routing technique in telecommunications networks that directs data based on short path labels instead of long network addresses, which avoids complex lookups in a routing table and speeds up traffic flows. |
+| MPLS | Multiprotocol Label Switching. Routing technique in telecommunications networks that directs data based on short path labels instead of long network addresses, which avoids complex lookups in a routing table and speeds up traffic flows. |
 | MPTS | Multiple Program Transport Stream. Transport stream that carries more than one program. |
 | MSO | Multiple System Operator. Company that owns and operators several cable systems. |
 | MSP | Managed Service Provider. Company that provides managed services, such as remote management of a customer's IT infrastructure or end-user systems. |

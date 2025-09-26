@@ -25,8 +25,7 @@ Access to the servers with administrator rights. This requires a connection dedi
 
 1. Connect to the system via the designated VPN or host PC.
 1. Test if you can access DataMiner Cube.
-1. Go to `C:\ProgramFiles\Cassandra\Devcenter\Run DevCenter` and open *DevCenter*.
-1. Create a new connection with the address "localhost", the username "root", and the password "root".
+1. Use a query tool of your choice to connect to the database, using the address "localhost", the username "root", and the password "root".
 
 ### Create a database user with administrator permissions
 
@@ -42,9 +41,9 @@ The previous requirements are met.
     create role newUserName with superuser=true and login=true and password='newUserPassword’;
     ```
 
-1. Edit the localhost connection in *DevCenter* to use the new username and password, and confirm that this works.
+1. Reconnect using the new username and password, and confirm that this works.
 
-1. Optionally, remove the old "root" user. To do so, first make sure the *DevCenter* database connection uses the new credentials, and then use the following command:
+1. Optionally, remove the old "root" user. To do so, first make sure the database connection uses the new credentials, and then use the following command:
 
     ```txt
     DROP USER root;
@@ -62,7 +61,7 @@ The previous requirements are met.
 
 #### Steps
 
-1. Execute the following query on the database (e.g. using [DevCenter](xref:DataStax_DevCenter)):
+1. Execute the following query on the database:
 
     ```txt
     select * from system_schema.tables where keyspace_name='SLDMADB';

@@ -92,9 +92,9 @@ In order to define properties for all resources in a pool, and optionally limit 
    > [!WARNING]
    > Virtual functions with generated protocol are currently still in soft launch, with the *Function* soft-launch option. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
-1. In the *properties* subtab, configure any properties if necessary. With the buttons in the lower right corner, you can add, edit and delete resource properties.
+1. In the *properties* subtab, configure any properties if necessary. With the buttons in the lower-right corner, you can add, edit and delete resource properties.
 
-1. Click *Save* in the lower right corner.
+1. Click *Save* in the lower-right corner.
 
 > [!NOTE]
 > You can also add a resource to a pool by moving or copying it from another pool. To move a resource, drag it from one pool to the other. To copy it, keep Ctrl pressed while you drag. Note that this is only supported for existing, valid resources, and you need to have permission to edit resources to do this. It is also not possible to copy a resource to or from the "(uncategorized)" pool, as this pool is reserved for resources that are not in any other pool.

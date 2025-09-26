@@ -1,8 +1,8 @@
 ---
-uid: Levelling_up_DevOps_status
+uid: Leveling_up_DevOps_status
 ---
 
-# Levelling up your DevOps status
+# Leveling up your DevOps status
 
 The [DataMiner DevOps Professional Program](xref:DataMiner_Devops_Professionals) offers creators a lot of perks to reward and encourage their participation in the DataMiner Community. These benefits range from small personal perks to gaining access to exclusive content, all the way up to bumping up their DataMiner Support Plan from the standard Continuity level to the added-value Evolve Plan, which includes premium SLAs and even free credits to spend. In other words, the DevOps Professional Program rewards the individual and the organization that person belongs to.
 

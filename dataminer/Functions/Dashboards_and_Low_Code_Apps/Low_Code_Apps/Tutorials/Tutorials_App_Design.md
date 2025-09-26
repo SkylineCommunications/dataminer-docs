@@ -18,7 +18,7 @@ Expected duration: 30 minutes.
 
 - DataMiner 10.4.2 or higher.
 
-- Deploy the *KataDesign* package from the [Catalog](https://catalog.dataminer.services/details/package/5883).
+- Deploy the *KataDesign* package from the [Catalog](https://catalog.dataminer.services/details/d248cdd3-8960-47fa-9190-ada5e32d0cc4).
 
   > [!TIP]
   > For information on how to deploy a package, see [Deploying a Catalog item](xref:Deploying_a_catalog_item).
@@ -47,7 +47,7 @@ Expected duration: 30 minutes.
 
 ## Step 1: Access the low-code app
 
-1. After installing the app via the [Catalog](https://catalog.dataminer.services/details/package/5883), go to `http(s)://[DMA name]/root`.
+1. After installing the app via the [Catalog](https://catalog.dataminer.services/details/d248cdd3-8960-47fa-9190-ada5e32d0cc4), go to `http(s)://[DMA name]/root`.
 
 1. Sign in using your DataMiner credentials.
 
@@ -79,7 +79,7 @@ Additionally, the app does not have a customized, identifiable icon. These are t
 
    ![Clipboard icon](~/dataminer/images/Change_app_Style.png)
 
-1. Enter the following hex value in the *Hex* field in the lower left corner: #503e6f.
+1. Enter the following hex value in the *Hex* field in the lower-left corner: #503e6f.
 
    Optionally, choose your color of choice, but make sure there is enough contrast between the background color and the text color (#000000 or #ffffff, depending on the background color).
 
@@ -180,7 +180,7 @@ To ensure an aesthetically pleasing app, start with an appealing theme, which de
 
    - Set the opacity of the border color to 0%
 
-1. Click *Create* in the lower right corner to save the theme.
+1. Click *Create* in the lower-right corner to save the theme.
 
 1. In the list of themes, click the *Duplicate* button next to your new theme to create a copy of the theme.
 
@@ -196,7 +196,7 @@ To ensure an aesthetically pleasing app, start with an appealing theme, which de
 
    - *Color > Background color*: rgb(248,248,249)
 
-1. Click *Save* in the lower right corner.
+1. Click *Save* in the lower-right corner.
 
 ## Step 5: Apply the new theme
 
@@ -351,7 +351,7 @@ Here you can <b style="color: rgb(0,9,54)">create</b> a new contact.</p></div>
 
       - *Which table?*: Table 6
 
-1. Click *Ok* in the lower right corner of the pop-up window.
+1. Click *Ok* in the lower-right corner of the pop-up window.
 
 ### Configure a functional close button
 
@@ -389,7 +389,7 @@ Avoid using too many colors in one app. Currently, the grid component in our sam
 
 1. In the *Setting* pane to the right, change the color of the rectangle to #D3D3DB.
 
-1. Select *Save* in the lower right corner of the Template Editor.
+1. Select *Save* in the lower-right corner of the Template Editor.
 
    ![Grid color](~/dataminer/images/tutorial_app_design_gridcolor.gif)
 
@@ -471,7 +471,7 @@ You can improve the appearance of each column by editing the template applied to
    > [!TIP]
    > See also: [Resizing and positioning a layer](xref:Template_Editor#resizing-and-positioning-a-layer).
 
-1. Click *Save* in the lower right corner.
+1. Click *Save* in the lower-right corner.
 
 1. In the header bar of the low code app, click the ![Publish](~/dataminer/images/AppPublishIcon.png) button to publish the app.
 
@@ -484,3 +484,6 @@ You can improve the appearance of each column by editing the template applied to
    Once you are finished, your final result should resemble this:
 
    ![End result](~/dataminer/images/tutorial_app_design_end_result.png)
+
+> [!TIP]
+> Ready to get started designing your own apps? Make sure to follow our [style guide](xref:LCA_Style_guide) for a consistent and great user experience.

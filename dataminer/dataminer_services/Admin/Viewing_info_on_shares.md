@@ -1,6 +1,7 @@
 ---
 uid: Viewing_info_on_shares
 keywords: cloud shares
+reviewer: Alexander Verkest
 ---
 
 # Viewing information on shares

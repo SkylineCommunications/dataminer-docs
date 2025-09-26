@@ -267,30 +267,6 @@ Actions:
   > [!TIP]
   > For more information, refer to [Skyline DataMiner Core InterAppCalls Range 1.0.1.1](xref:Skyline_DataMiner_Core_InterAppCalls_Range_1.0#1011).
 
-- Only applicable to Skyline employees: Use the Microsoft Azure monitoring tool to check for delays on Azure's side:
-
-  1. Open the [Microsoft Azure monitoring tool](https://portal.azure.com/#view/AppInsightsExtension/WorkbookViewerBlade/ComponentId/azure%20monitor/ConfigurationId/%2Fsubscriptions%2Fc1a16bf4-039a-4778-8053-72e813c52ca4%2Fresourcegroups%2Frg-workbooks%2Fproviders%2Fmicrosoft.insights%2Fworkbooks%2Fd36c92a8-ef00-4c26-bf09-13962d3b705d/WorkbookTemplateName/Shared%20Cloud%20Storage).
-
-  1. Check the following sections for visual indicators of delays:
-
-     - *EventHub* tab: Look at the graph labeled "Throttled requests by EventHub".
-
-     - *Events* tab: Look at the graph labeled "Event queue time".
-
-  1. In both graphs, you can filter data by:
-
-     - Time range
-
-     - Instance (i.e. the endpoint used by the DMA):
-
-       - weu = West Europe.
-
-       - uks = UK South.
-
-     ![Throttled Requests by EventHub](~/dataminer/images/Throttled_Requests_By_EventHub.png)
-
-- Verify the upload and download bandwidth usage by contacting the IT department.
-
 ## Adding a new DMA to a DMS running STaaS
 
 For a detailed guide, refer to [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS). Note that this involves some additional steps compared to the instructions for [adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent).

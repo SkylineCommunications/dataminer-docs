@@ -4,18 +4,28 @@ uid: MO_Installation
 
 # Installing MediaOps
 
-The solution can be installed through the 'Deploy' button from the [Catalog](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75). The [prerequisites](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75#prerequisites) to install the latest version of the package are defined on the catalog.
+To install dataminer.MediaOps:
 
-## The installation steps
+1. Look up the [MediaOps package](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) in the DataMiner Catalog.
 
-When installing the MediaOps package the following steps will be executed:
+1. Scroll down in the *description* tab to check the list of **prerequisites**, and make sure your system meets these prerequisites.
 
-1. Prerequisite check
-1. Install/Update automation scripts
-1. Install/Update applications
-1. Install/Update DOM definitions
-1. Initialize the system (fresh install)
-1. Migration actions (if any)
-1. Cleanup actions (if any)
+1. When all prerequisites are met, click the *Deploy* button.
 
-Migration and cleanup actions will are defined in the install package and will depend on the version you install. To avoid that these actions grow indefinite over the different versions, these actions will be cleaned on every major version (1.x.x => 2.x.x). To ensure all migration and cleanup actions took place, it is advised to first upgrade the MediaOps solution to the latest version of the major version before moving to the next major version without skipping a major version.
+   > [!TIP]
+   > For more details on deploying items from the Catalog, see [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item).
+
+During the installation, the following steps will automatically be executed:
+
+1. Prerequisite check.
+1. Install/Update Automation scripts.
+1. Install/Update applications.
+1. Install/Update DOM definitions.
+1. Initialize the system (fresh install).
+1. Migration actions (if any).
+1. Cleanup actions (if any).
+
+Migration and cleanup actions are defined in the install package and will depend on the version you install. To make sure that these actions do not keep growing indefinitely over the different versions, the **migration and cleanup actions are cleaned in every major version** (e.g. from 1.x.x to 2.x.x).
+
+> [!IMPORTANT]
+> When upgrading MediaOps, to make sure all migration and cleanup actions take place, **first upgrade to the latest version of your current major version** before moving to the next major version, without skipping a major version.

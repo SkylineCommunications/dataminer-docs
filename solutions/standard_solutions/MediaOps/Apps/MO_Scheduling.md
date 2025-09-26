@@ -4,7 +4,13 @@ uid: MO_Scheduling
 
 # Scheduling
 
-The Scheduling app allows users to efficiently manage a schedule of [jobs](#jobs), [resources](#resources), and [workflows](#workflows).
+The Scheduling application is a comprehensive solution for the scheduling and orchestration of [resources](#resources) and [workflows](#workflows). Using a [job](#jobs), users can easily schedule specific resources, request a resource for a given pool of resources, schedule an entire workflow, or a combination of each of the options.
+
+Among others, the app includes the following features:
+
+- Tracking information about a job, including who is requesting it, when the job starts and ends, and job priorities.
+- Guaranteeing that a resource used in a job is available for the scheduled time.
+- Easily spotting when a job needs additional input prior to the job's start.
 
 ![Scheduling Overview](~/solutions/images/Scheduling_Overview.png)
 

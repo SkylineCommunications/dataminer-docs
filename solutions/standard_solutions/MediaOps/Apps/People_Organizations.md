@@ -4,7 +4,7 @@ uid: People_Organizations
 
 # People & Organizations
 
-The People & Organizations app allows you to create, edit, and organize people, teams, and organizations.
+Upgrade your business operations with our People and Organizations app. This app simplifies personnel management by enabling you to effortlessly create, edit, and track records for individuals, teams, and organizations. With features like team booking, optimizing personnel allocation for the right job has never been easier.
 
 ![People & Organizations Overview](~/solutions/images/People_and_Organizations_Overview.png)
 

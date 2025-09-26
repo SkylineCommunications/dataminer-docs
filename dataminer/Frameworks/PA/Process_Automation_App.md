@@ -38,7 +38,7 @@ At the top of the page, the following buttons are displayed:
 > [!TIP]
 > See also: [Creating and configuring a process definition](xref:PA_Creating_and_Configuring_a_Process_Definition).
 
-In the lower right corner, the following buttons are displayed:
+In the lower-right corner, the following buttons are displayed:
 
 - **Edit Label**: Only available when selecting an activity. Click this button to edit the label displayed underneath the activity.
 
