@@ -36,3 +36,18 @@ uid: Part6Troubleshooting
     <a href="/dataminer/Troubleshooting/RemoteLogCollection.html" title="Remote Log Collection" target="_self"><img src="~/dataminer/images/Remote_Log_Collection.svg" style="width:100%"></a>
   </div>
 </div>
+
+<style>
+.column a {
+  display: inline-block;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.column a:hover {
+  background-color: #f0f4ff; /* light background on hover */
+  transform: scale(1.05);   /* slightly bigger */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+</style>

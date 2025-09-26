@@ -49,3 +49,18 @@ description: Discover everything you need to know as a DataMiner administrator, 
     <a href="/dataminer/Administrator_guide/Swarming/Swarming.html" title="Swarming" target="_self"><img src="~/dataminer/images/Swarming.svg" style="width:100%"></a>
   </div>
 </div>
+
+<style>
+.column a {
+  display: inline-block;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.column a:hover {
+  background-color: #f0f4ff; /* light background on hover */
+  transform: scale(1.05);   /* slightly bigger */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+</style>
