@@ -329,3 +329,9 @@ Also, when an element is swarmed to another DataMiner Agent while automatic inci
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
 
 Up to now, after you had imported a DELT package containing average trend data into a Cassandra Cluster or STaaS database, that database would contain invalid trend data.
+
+#### Failover: Problem when trying to update the failover configuration when the ClusterEndpointsManager soft-launch option had been disabled [ID 43794]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+Up to now, it would not be possible to update the failover configuration when the *ClusterEndpointsManager* soft-launch option had explicitly been disabled.
