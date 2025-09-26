@@ -162,6 +162,6 @@ When, in a client application connected to a system using STaaS, you viewed a he
 
 #### Problem when importing a DELT package containing average trend data into a Cassandra Cluster or STaaS database [ID 43768]
 
-<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 Up to now, after you had imported a DELT package containing average trend data into a Cassandra Cluster or STaaS database, that database would contain invalid trend data.
