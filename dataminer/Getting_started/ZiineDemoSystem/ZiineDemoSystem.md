@@ -11,28 +11,34 @@ The Ziine Demo System allows you to explore many different DataMiner features in
 
 To access the Ziine Demo System:
 
-1. Request access to Ziine via [our website](https://skyline.be/learn/demo/).
-2. Complete the form to request access.
-3. Once you've submitted the form, you'll see a confirmation page and receive an email with more information on how to get started.
+1. Go to the [live Demo System page](https://skyline.be/learn/demo/) on the Skyline website.
+
+1. Complete the form to request access to Ziine.
+
+Once you have submitted the form, you will see a confirmation page and receive an email with more information on how to get started.
 
 ## Accessing Ziine
 
-After you've requested access, you'll now be able to login to Ziine. To get started, follow these three steps:
+After you have requested access, you will be able to log in to Ziine. To get started, follow these steps:
 
 1. Go to [ziine.skyline.be](https://ziine.skyline.be/)
-2. Log in or create an account:
+
+1. Log in using one of the following ways:
+
    - Use your corporate account linked to Microsoft, Google, Amazon, or Linkedin.
-   - Or create a dedicated account via the "Sign up" option at the bottom of the authentication window.
-3. Start exploring
-   - You'll find different apps available, and you can install DataMiner Cube to experience the desktop version. 
+   - Create a dedicated account via the *Sign up* option at the bottom of the authentication window.
+
+1. Start exploring the different available apps, or install DataMiner Cube to experience the desktop version.
 
 ### Installing DataMiner Cube
 
-On the homepage of Ziine you can find different apps, dashboards and monitoring options to explore. 
+On the homepage of Ziine you can find different apps, dashboards and monitoring options to explore.
 
-To install DataMiner Cube, you can click on the three dots of the _Cube_ button available the homepage and click _download installer_. 
+To install DataMiner Cube:
 
-<img width="2206" height="691" alt="image" src="https://github.com/user-attachments/assets/b55b2b6d-82bc-4ca8-a0d2-5f2564a5391c" />
+1. On the [ziine.skyline.be](https://ziine.skyline.be/) homepage, click the ... icon on the *Cube* button, and select *Download installer*.
+
+   ![Download Cube installer](~/dataminer/images/DownloadCubeForZiine.png)
 
    > [!TIP]
    > See also: [Installing the DataMiner Cube desktop application](xref:Installing_the_DataMiner_Cube_desktop_application)
@@ -41,11 +47,12 @@ To install DataMiner Cube, you can click on the three dots of the _Cube_ button 
 
 1. Connect to the DataMiner System "the [Ziine Demo System](xref:ZiineDemoSystem)" as described under [Opening the desktop application](xref:Using_the_desktop_app).
 
-
 > [!NOTE]
 > The Ziine hostname is `https://ziine.skyline.be/`.
 
-#### Having problems connecting?
+### Having problems connecting?
+
+If you are having problems connecting using the DataMiner Cube:
 
 1. Check the connection settings and make sure *Connection Type* is set to *Auto*. See [Overriding the default connection type](xref:Overriding_Cube_connection_type).
 
