@@ -13,7 +13,7 @@ Note that it is not possible to upgrade the web apps to a DataMiner 10.5.x versi
 > [!NOTE]
 >
 > - Executing a DataMiner upgrade will override any DataMiner web upgrades that have been performed in the past.
-> - New web functionality that depends on new features in the core processes will not be available until you have also upgraded the core software. For example, GQI is part of the core DataMiner software, so new GQI features will only become available with a full DataMiner upgrade.
+> - New web functionality that depends on new features in the core processes will not be available until you have also upgraded the core software.
 > - **All Agents within a cluster must run the same version** of the web apps. When you upgrade the web apps, you should therefore make sure the upgrade is applied to every Agent in the cluster.
 > - Web upgrades also update the [GQI DxM](xref:GQI_DxM) (since 10.5.2) and [Web DcM](xref:DataMinerExtensionModules#web) (since 10.5.11).
 
