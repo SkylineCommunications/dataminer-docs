@@ -309,6 +309,15 @@ Also, when no master agent can be selected because the ResourceManager license i
 
 After an element had been swarmed, in some cases, outdated data could remain in the SLNet event cache.
 
+#### Swarming an element while automatic incident tracking was disabled would cause the alarms of that element to be removed from any user-defined alarm group they were in [ID 43739]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+<!-- Not added to MR 10.6.0 -->
+
+When an element was swarmed to another DataMiner Agent while automatic incident tracking was disabled, up to now, the alarms associated with that element would incorrectly be removed from any user-defined alarm group (i.e. incident) they were in, and would again appear as separate alarms. From now on, the alarms will remain in the user-defined alarm group (i.e. incident) they are in.
+
+Also, when an element is swarmed to another DataMiner Agent while automatic incident tracking is enabled, from now on, any relational anomalies or multivariate patterns on that element will be removed.
+
 #### Midnight synchronization: Errors that occurred while zipping files would incorrectly get ignored [ID 42741]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
