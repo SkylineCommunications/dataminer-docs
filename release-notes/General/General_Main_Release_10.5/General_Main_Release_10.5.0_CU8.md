@@ -160,6 +160,18 @@ When you uploaded an updated copy of a DVE protocol version that had already bee
 
 When, in a client application connected to a system using STaaS, you viewed a heatmap or an alarm state pie chart, in some cases, an incorrect time zone conversion would cause those charts to not include all available data.
 
+#### Service & Resource Management: No master agent would incorrectly get selected on systems with only a ResourceManager license [ID 43697]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, only on systems with both a ResourceManager license and a ServiceManager license would a master agent get selected.
+
+From now on, a master agent will also get selected on systems with only a ResourceManager license. On these systems, the agent with the lowest DMA ID will always be promoted to master agent.
+
+Also, when no master agent can be selected because the ResourceManager license is missing, the following log entry will be added to the SLMasterSyncerManager log file (with XXX being the IDs of the agents that do not have a ResourceManager license):
+
+`WARNING: No master DMA could be picked. Missing required ResourceManager license for DMAs XXX.`
+
 #### Swarming an element while automatic incident tracking was disabled would cause the alarms of that element to be removed from any user-defined alarm group they were in [ID 43739]
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->

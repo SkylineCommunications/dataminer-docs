@@ -298,7 +298,7 @@ When, in a client application connected to a system using STaaS, you viewed a he
 
 #### Service & Resource Management: No master agent would incorrectly get selected on systems with only a ResourceManager license [ID 43697]
 
-<!-- MR 10.6.0 - FR 10.5.11 -->
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
 
 Up to now, only on systems with both a ResourceManager license and a ServiceManager license would a master agent get selected.
 

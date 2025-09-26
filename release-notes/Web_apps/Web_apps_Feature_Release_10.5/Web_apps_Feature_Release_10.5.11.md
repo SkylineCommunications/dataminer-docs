@@ -112,6 +112,24 @@ When, in edit mode, you select a component, and go to the *General* section of t
 > [!NOTE]
 > This component ID will only be visible when you added the `showAdvancedSettings=true` option to the URL of the dashboard or the low-code app.
 
+#### GQI DxM: A unique trace ID will now be logged for every incoming GQI request [ID 43795]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+From now on, using the default log configuration, a unique trace ID will be logged for every incoming GQI request. See the following example:
+
+`[2025-09-19 15:49:34.344][INF][GQI.MessageBroker.MessageBrokerConnectionService][OpenSession#18] Request trace: 26ce9840ce4de64225859549ca04de0f`
+
+This trace will then be propagated to every SLNet request (see note below) triggered by this GQI request using the `TraceInfo` property.
+
+The request ID (i.e. `#18` in the example above) can be used to find other log entries related to the same trace.
+
+> [!NOTE]
+>
+> - Currently, certain built-in data sources that use the raw SLNet connection will not be traced.
+> - If GQI extensions create their own SLNet connection, requests sent via that connection will not be traced.
+> - If GQI extensions fill in their own `TraceInfo`, this will not be overwritten.
+
 ## Changes
 
 ### Enhancements
