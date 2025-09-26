@@ -6,8 +6,8 @@ uid: installing_processing_pdf_documents
 
 ## Prerequisites
 
-- DataMiner version 10.5.8 or higher
-- DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
+- DataMiner version 10.5.8 or higher.
+- DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ## Deploying the sample solution
 
@@ -39,7 +39,7 @@ To make use of the cloud services required by the sample applications, you will 
 > [!NOTE]
 >
 > - For non-productions trials, feel free to contact [Skyline Product Marketing](mailto:team.product.marketing@skyline.be) to get secrets to connect to pre-configured AI services by Skyline.
-> - The sample applications use [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/) to connect to cloud AI services in Azure. Semantic Kernel is a open-source development kit for integrating AI models and it is perfectly possible to integrate with other models than the onces used in this sample, see [Chat completion using Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/concepts/ai-services/chat-completion/?tabs=csharp-AzureOpenAI%2Cpython-AzureOpenAI%2Cjava-AzureOpenAI&pivots=programming-language-csharp).
+> - The sample applications use [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/) to connect to cloud AI services in Azure. Semantic Kernel is an open-source development kit for integrating AI models. It is perfectly possible to integrate it with other models than the ones used in this sample (see [Chat completion using Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/concepts/ai-services/chat-completion/?tabs=csharp-AzureOpenAI%2Cpython-AzureOpenAI%2Cjava-AzureOpenAI&pivots=programming-language-csharp)).
 
 ## Configuring DataMiner to use the AI services
 
@@ -47,7 +47,7 @@ DataMiner requires the necessary endpoint information and keys to make use of th
 
 1. Create a JSON file called `secrets.json`.
 
-   You can find an example of this file in the Documents folder after installing the package.
+   You can find an example of this file in the DataMiner Documents folder after installing the package.
 
    This file must have the following structure:
 
