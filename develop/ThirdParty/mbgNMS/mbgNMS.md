@@ -47,3 +47,18 @@ The latest **mbgNMS installation package** can be downloaded using the link belo
 ## Interested in a demo?
 
 Feel free to reach out to Meinberg's or [Skyline's sales team](https://community.dataminer.services/get-in-touch/sales-team/). We have demo systems available to show you everything about the Meinberg NMS and DataMiner.
+
+<style>
+.column a {
+  display: inline-block;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.column a:hover {
+  background-color: #f0f4ff; /* light background on hover */
+  transform: scale(1.05);   /* slightly bigger */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+</style>
