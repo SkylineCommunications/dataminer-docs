@@ -151,8 +151,8 @@ The *errorCode* field of an error contains an error code that can be used by the
 | BodyTooLarge | 1009 | 413 | The body size is limited to 29 MB. This error will be thrown if the size is larger than that. |
 | AuthenticationFailed | 1010 | 401 | The passed secret is empty, is invalid, is disabled, cannot be found, or is not allowed for this API definition. |
 | QueryStringTooLarge | 1011 | 414 | The query string size is limited to 2 KB. This error will be thrown if the size is larger than that. |
-| ResponseHeadersNotAllowed  | 1012 | 500 | The response header(s) you're trying to return is not allowed. See [ResponseHeaders](xref:UD_APIs_Define_New_API#responseheaders). The "error" JSON object will contain the invalid headers in the `invalidResponseHeaders` array. |
-| ResponseHeadersInvalid | 1013 | 500 | The response header(s) you're trying to return is invalid. Header names and values can't contain whitespace, ':', ',' or ASCII control characters, see the logging for the exact error. The "error" JSON object will contain the invalid headers in the `invalidResponseHeaders` array. |
+| ResponseHeadersNotAllowed  | 1012 | 500 | The response header(s) you're trying to return is not allowed. Check the logging for more info. |
+| ResponseHeadersInvalid | 1013 | 500 | The response header(s) you're trying to return is invalid. Header names and values can't contain whitespace, ':', ',' or ASCII control characters, check the logging for the exact error. |
 
 > [!NOTE]
 > For some of these errors, more information will also be logged in the *UserDefinableApiEndpoint.txt* log file. The location of this log file depends on the [UserDefinableApiEndpoint configuration](xref:UD_APIs_UserDefinableApiEndpoint#consulting-logging-for-the-dxm).

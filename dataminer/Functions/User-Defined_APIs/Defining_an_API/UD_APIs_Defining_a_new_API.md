@@ -183,9 +183,12 @@ You can add HTTP headers to the response by adding them to the ResponseHeaders p
 
 | Method | Description | Example |
 |--|--|--|
-|`void AddHeader(string name, string value)`|Adds a header with a single value, where 'name' is the header name.|`AddHeader("Location", "/api/item/101)`|
-|`void AddHeader(string name, List<string> values)`|Adds a header with multiple values, where 'name' is the header name.|`AddHeader("Accept", new List<string>(){"text/plain", "text/html"})`.|
-|`void AddHeader(string name, params string[] values)`|Adds a header with multiple values, where 'name' is the header name.|`AddHeader("Accept", "text/plain", "text/html")`|
+|`void Add(string name, string value)`|Adds a header with a single value, where 'name' is the header name. Or adds the value to the existing header.|`Add("Location", "/api/item/101)`|
+|`void Add(string name, List<string> values)`|Adds a header with multiple values, where 'name' is the header name. Or adds values to the existing header.|`Add("Accept", new List<string>(){"text/plain", "text/html"})`.|
+|`void Add(string name, params string[] values)`|Adds a header with multiple values, where 'name' is the header name. Or adds values to the existing header.|`Add("Accept", "text/plain", "text/html")`|
+|`void Set(string name, string value)`|Sets (overwrites) a header with a single value, where 'name' is the header name.|`Set("Location", "/api/item/101)`|
+|`void Set(string name, List<string> values)`|Sets (overwrites) a header with multiple values, where 'name' is the header name.|`Set("Accept", new List<string>(){"text/plain", "text/html"})`.|
+|`void Set(string name, params string[] values)`|Sets (overwrites) a header with multiple values, where 'name' is the header name.|`Set("Accept", "text/plain", "text/html")`|
 |`Dictionary<string, List<string>> AsDictionary()`|Returns all headers in a dictionary.|`output.ResponseHeaders.AsDictionary()`|
 
 The following headers are blocked and will result in a error if you try to set them. This list can be updated in the future:
@@ -208,10 +211,13 @@ The following headers are blocked and will result in a error if you try to set t
 - Via
 - Server
 - Date (automatically set)
+- Strict-Transport-Security
 
 > [!NOTE]
 >
 > - Available from DataMiner 10.5.11/10.6.0 onwards.
+> - Keep the size of headers and values limited. Hard limits depend on the version of your webserver.
+> - Null values are not allowed, use string.Empty when adding a header with an empty value.
 
 ## Creating an API and tokens in DataMiner Automation
 
