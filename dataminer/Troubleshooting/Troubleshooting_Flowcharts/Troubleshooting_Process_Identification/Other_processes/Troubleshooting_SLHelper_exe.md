@@ -12,7 +12,7 @@ These are the main functions of *SLHelper.exe*:
 
 - Rendering Visual Overview pages for the Monitoring and Dashboards apps (see [Troubleshooting – web](xref:Investigating_Web_Issues)).
 
-- Prior to DataMiner web 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11, converting documents to PDF in the Reports, Dashboards, and Jobs apps (see [Troubleshooting – web](xref:Investigating_Web_Issues)).
+- Prior to DataMiner web 10.5.0 [CU8]/10.5.11, converting documents to PDF in the Reports, Dashboards, and Jobs apps (see [Troubleshooting – web](xref:Investigating_Web_Issues)).
 
 - Executing queries for Dashboards via the Generic Query Interface (GQI) (see [Troubleshooting – web](xref:Investigating_Web_Issues)).
 
