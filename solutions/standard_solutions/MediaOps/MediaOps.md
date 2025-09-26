@@ -81,7 +81,7 @@ These are the out-of-the-box DataMiner applications that are currently included 
 </div>
 
 > [!TIP]
-> To deploy the MediaOps package, go to the [MediaOps Standard Solution](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) in the Catalog. Make sure to first read the installation information on that page before you deploy the package.
+> Before you deploy the MediaOps package, take a look at our [installation instructions](xref:MO_Installation).
 
 <!-- 
 [For later]: ## Building upon the standard applications
