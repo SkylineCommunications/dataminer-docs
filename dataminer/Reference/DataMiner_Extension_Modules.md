@@ -73,6 +73,12 @@ From version 1.3.1 of the DataMiner SupportAssistant module onwards, this DxM al
 
 The UserDefinableApiEndpoint module is responsible for handling API triggers for DataMiner User-Defined APIs. See [DataMiner UserDefinableApiEndpoint DxM](xref:UD_APIs_UserDefinableApiEndpoint).
 
+### Web
+
+The Web module provides back-end services for the DataMiner web apps.
+
+This DxM is included in DataMiner upgrade packages from DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards.<!-- RN 43439 -->
+
 ## Available DxMs
 
 ### CloudGateway
