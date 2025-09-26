@@ -555,9 +555,3 @@ From now on, a master agent will also get selected on systems with only a Resour
 Also, when no master agent can be selected because the ResourceManager license is missing, the following log entry will be added to the SLMasterSyncerManager log file (with XXX being the IDs of the agents that do not have a ResourceManager license):
 
 `WARNING: No master DMA could be picked. Missing required ResourceManager license for DMAs XXX.`
-
-#### Problem when importing a DELT package containing average trend data into a Cassandra Cluster or STaaS database [ID 43768]
-
-<!-- MR 10.6.0 - FR 10.5.11 -->
-
-Up to now, after you had imported a DELT package containing average trend data into a Cassandra Cluster or STaaS database, that database would contain invalid trend data.

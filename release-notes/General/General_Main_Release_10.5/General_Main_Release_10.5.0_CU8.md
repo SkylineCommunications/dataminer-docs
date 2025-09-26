@@ -159,3 +159,9 @@ When you uploaded an updated copy of a DVE protocol version that had already bee
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When, in a client application connected to a system using STaaS, you viewed a heatmap or an alarm state pie chart, in some cases, an incorrect time zone conversion would cause those charts to not include all available data.
+
+#### Problem when importing a DELT package containing average trend data into a Cassandra Cluster or STaaS database [ID 43768]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, after you had imported a DELT package containing average trend data into a Cassandra Cluster or STaaS database, that database would contain invalid trend data.
