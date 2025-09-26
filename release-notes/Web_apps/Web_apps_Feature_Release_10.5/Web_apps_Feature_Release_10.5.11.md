@@ -205,6 +205,12 @@ Up to now, whenever the WebSocket connection was (briefly) dropped, a `Connectio
 
 From now on, this message will only appear when the first attempt to re-establish the WebSocket connection also failed. This first reconnection attempt will now be made after 1 second.
 
+#### GQI DxM: Message that appears when a GQI operator or data source was not able to find a column will now also indicate the GQI operator or data source in question [ID 43706]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+When a GQI operator or data source was not able to find a column, up to now, the error message would only indicate the column that could not be found. It would incorrectly not indicate the GQI operator or the data source. From now on, the error message will also indicate the GQI operator or data source that was not able to find the column in question.
+
 #### GQI DxM: Extension indexer process will now load assemblies without locking the associated DLL files [ID 43707]
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
