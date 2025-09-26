@@ -303,6 +303,12 @@ From now on, each time a *Change variable* action without a variable gets trigge
 
 When the contents of a query row was passed to an ad hoc data source, in some cases, data in columns of type numeric, boolean or datetime would not get passed correctly.
 
+#### Low-Code Apps: Problem with search box when going from edit mode to draft mode and back [ID 43775]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in edit mode, you searched for a panel, switched to draft mode, navigated to a page, and then returned to edit mode, up to now, the search input would incorrectly still display the previous search results.
+
 #### Interactive Automation scripts: Problem with arrow buttons in redesigned components [ID 43786]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
