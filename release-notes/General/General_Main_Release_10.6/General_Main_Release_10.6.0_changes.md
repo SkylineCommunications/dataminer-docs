@@ -556,12 +556,6 @@ Also, when no master agent can be selected because the ResourceManager license i
 
 `WARNING: No master DMA could be picked. Missing required ResourceManager license for DMAs XXX.`
 
-#### Midnight synchronization: Errors that occurred while zipping files would incorrectly get ignored [ID 42741]
-
-<!-- MR 10.6.0 - FR 10.5.11 -->
-
-When, during a midnight synchronization, an error occurred while zipping a file, up to now, that error would incorrectly be ignored.
-
 #### Problem when importing a DELT package containing average trend data into a Cassandra Cluster or STaaS database [ID 43768]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->

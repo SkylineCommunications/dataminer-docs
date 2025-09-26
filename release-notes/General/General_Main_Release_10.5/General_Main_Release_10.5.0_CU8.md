@@ -79,6 +79,12 @@ SLLogCollector packages now also include the log files of the Web DcM.
 
 ### Fixes
 
+#### Midnight synchronization: Errors that occurred while zipping files would incorrectly get ignored [ID 42741]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, during a midnight synchronization, an error occurred while zipping a file, up to now, that error would incorrectly be ignored.
+
 #### Problem when loading initial parameter data for remote elements [ID 43339] [ID 43552]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
