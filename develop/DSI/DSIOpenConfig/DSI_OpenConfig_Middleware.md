@@ -196,7 +196,7 @@ public class QAction : IDisposable
 
 ### Retrieving the capabilities
 
-You can find more info on the `Capabilities` RPC in the [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#capabilities).
+For more info on the `Capabilities` RPC, see [About OpenConfig: Capabilities](xref:DSI_OpenConfig_Introduction#capabilities).
 
 ```csharp
 var capabilities = client.Capabilities();
@@ -214,7 +214,7 @@ It is very useful to have this information available to know which models you ca
 
 ### Getting a value in the YANG path
 
-You can find more info on the `Get` RPC in the [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#get).
+For more info on the `Get` RPC, see [About OpenConfig: Get](xref:DSI_OpenConfig_Introduction#get).
 
 [Get](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Get%2A) allows you to retrieve values from one or more YANG paths.
 
@@ -242,7 +242,7 @@ string interfaceStatePath = "interfaces/interface/state";
 
 ### Setting a value in the YANG path
 
-You can find more info on the `Set` RPC in the [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#set).
+For more info on the `Set` RPC, see [About OpenConfig: Set](xref:DSI_OpenConfig_Introduction#set).
 
 ```csharp
 client.Set("system/config/login-banner", "Hello DataMiner!");
@@ -252,7 +252,7 @@ In OpenConfig, the read-write objects are commonly stored under the */config* pa
 
 ### Deleting a value in the YANG path
 
-In the background, this uses the `Set` RPC with delete arguments. For more info on the `Set` RPC, see [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#set).
+In the background, this uses the `Set` RPC with delete arguments. For more info on the `Set` RPC, see [About OpenConfig: Set](xref:DSI_OpenConfig_Introduction#set).
 
 ```csharp
 client.Delete("system/config/login-banner");
@@ -260,7 +260,7 @@ client.Delete("system/config/login-banner");
 
 ### Subscribing to a YANG path
 
-You can find more info on the `Subscribe` RPC in the [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#subscribe).
+For more info on the `Subscribe` RPC, see [About OpenConfig: Subscribe](xref:DSI_OpenConfig_Introduction#subscribe).
 
 [Subscribe](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe%2A) allows you to create a subscription. It needs a unique name within the client to register itself in the CommunicationGateway DxM and one or more YANG paths that you are interested in.
 

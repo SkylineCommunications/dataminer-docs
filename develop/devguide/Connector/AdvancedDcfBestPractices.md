@@ -4,8 +4,6 @@ uid: AdvancedDcfBestPractices
 
 # DCF best practices
 
-## Introduction
-
 DCF allows components to be linked and enables active path highlighting. DCF connections should not be removed automatically or accidentally as this can lead to an outage of a service that users are providing to their end users (e.g. because of a reboot of the equipment, the polling request only returns partial data). Additionally, depending on the number of connections, setting up and removing these can increase the load on the system. Therefore, creating duplicate connections/interfaces or updating these too often should be avoided.
 
 This is similar to DVEs, where automatic removal could result in a significant impact such as loss of stored data.

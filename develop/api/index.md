@@ -11,7 +11,7 @@ description: DataMiner namespaces for scripting, Automation, core functionality,
 |--- |--- |
 |[Skyline.DataMiner.Scripting](xref:Skyline.DataMiner.Scripting)|This namespace contains classes used to implement logic in QActions of connectors.|
 |[Skyline.DataMiner.Automation](xref:Skyline.DataMiner.Automation)|This namespace contains types used to implement logic in Automation scripts.|
-|[Skyline.DataMiner.Core.DataMinerSystem.Common](xref:Skyline.DataMiner.Core.DataMinerSystem.Common)|This namespace contains types used for development of protocols and Automation scripts. For more information on how to use types from this namespace, refer to [Introduction](xref:ClassLibraryIntroduction).|
+|[Skyline.DataMiner.Core.DataMinerSystem.Common](xref:Skyline.DataMiner.Core.DataMinerSystem.Common)|This namespace contains types used for development of protocols and Automation scripts. For more information on how to use types from this namespace, refer to [About the class library](xref:ClassLibraryIntroduction).|
 |[Skyline.DataMiner.Core.DataMinerSystem.Automation](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation)|This namespace contains types used for development of Automation scripts.|
 |[Skyline.DataMiner.Core.DataMinerSystem.Protocol](xref:Skyline.DataMiner.Core.DataMinerSystem.Protocol)|This namespace contains types used for development of protocols.|
 |[Skyline.DataMiner.Core.Scheduler.Automation](xref:Skyline.DataMiner.Core.Scheduler.Automation)|This namespace contains types used to interact with the DataMiner Scheduler module from Automation Scripts.|

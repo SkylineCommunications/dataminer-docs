@@ -359,8 +359,6 @@ items:
       - name: SNMP
         topicUid: ConnectionsSnmp
         items:
-        - name: Introduction
-          topicUid: ConnectionsSnmpIntroduction
         - name: OIDs
           topicUid: ConnectionsSnmpOids
         - name: Retrieving a variable
@@ -390,8 +388,6 @@ items:
       - name: Serial
         topicUid: ConnectionsSerial
         items:
-        - name: Introduction
-          topicUid: ConnectionsSerialIntroduction
         - name: Creating commands and responses
           topicUid: ConnectionsSerialCreatingCommandsAndResponses
         - name: Pairs
@@ -419,8 +415,6 @@ items:
       - name: Smart serial
         topicUid: ConnectionsSmartSerial
         items:
-        - name: Introduction
-          topicUid: ConnectionsSmartSerialIntroduction
         - name: Data forwarding from SLPort to SLProtocol
           topicUid: ConnectionsSmartSerialDataForwarding
         - name: Configuring a smart-serial connection as a server
@@ -436,8 +430,6 @@ items:
       - name: HTTP
         topicUid: ConnectionsHttp
         items:
-        - name: Introduction
-          topicUid: ConnectionsHttpIntroduction
         - name: Implementing HTTP communication
           topicUid: ConnectionsHttpImplementing
         - name: Element configuration
@@ -457,8 +449,6 @@ items:
       - name: WebSockets
         topicUid: ConnectionsWebSockets
         items:
-        - name: Introduction
-          topicUid: ConnectionsWebSocketsIntroduction
         - name: Implementing a WebSocket
           topicUid: ConnectionsWebSocketsImplementation
         - name: Connection status
@@ -570,8 +560,6 @@ items:
       - name: Multithreaded timers
         topicUid: AdvancedMultiThreadedTimers
         items:
-        - name: Introduction
-          topicUid: AdvancedMultiThreadedTimersIntroduction
         - name: SNMP
           topicUid: AdvancedMultiThreadedTimersSnmp
         - name: Serial
@@ -601,8 +589,6 @@ items:
       - name: DataMiner Mediation Layer
         topicUid: AdvancedDataMinerMediationLayer
         items:
-        - name: Introduction
-          topicUid: AdvancedDataMinerMediationLayerIntroduction
         - name: Creating a base protocol
           topicUid: AdvancedDataMinerMediationLayerCreatingABaseProtocol
         - name: Linking a device protocol to a base protocol
@@ -1116,7 +1102,7 @@ items:
         topicUid: UD_APIs_Bad_and_Best_Practices
   - name: Class Library
     items:
-    - name: Class library introduction
+    - name: About the class library
       topicUid: ClassLibraryIntroduction
     - name: Class library development
       topicUid: ClassLibraryDevelopment
@@ -6688,7 +6674,7 @@ items:
     - name: OpenConfig
       topicUid: DSI_OpenConfig
       items:
-        - name: Introduction
+        - name: About OpenConfig
           topicUid: DSI_OpenConfig_Introduction
         - name: Middleware package
           topicUid: DSI_OpenConfig_Middleware

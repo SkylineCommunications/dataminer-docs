@@ -127,7 +127,7 @@ For several connection types, some port types are already disabled by the client
 
 ## See also
 
-Coding guidelines:
+Best practices:
 
 - [Default settings](xref:Default_settings)
 - [Communication](xref:Communication1)
