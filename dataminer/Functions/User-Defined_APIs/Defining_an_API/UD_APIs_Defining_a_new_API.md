@@ -184,14 +184,14 @@ You can add HTTP headers to the response by adding them to the ResponseHeaders p
 | Method | Description | Example |
 |--|--|--|
 |`void Add(string name, string value)`|Adds a header with a single value, where 'name' is the header name. Or adds the value to the existing header.|`Add("Location", "/api/item/101)`|
-|`void Add(string name, List<string> values)`|Adds a header with multiple values, where 'name' is the header name. Or adds values to the existing header.|`Add("Accept", new List<string>(){"text/plain", "text/html"})`.|
+|`void Add(string name, IEnumerable<string> values)`|Adds a header with multiple values, where 'name' is the header name. Or adds values to the existing header.|`Add("Accept", new List<string>(){"text/plain", "text/html"})`.|
 |`void Add(string name, params string[] values)`|Adds a header with multiple values, where 'name' is the header name. Or adds values to the existing header.|`Add("Accept", "text/plain", "text/html")`|
 |`void Set(string name, string value)`|Sets (overwrites) a header with a single value, where 'name' is the header name.|`Set("Location", "/api/item/101)`|
-|`void Set(string name, List<string> values)`|Sets (overwrites) a header with multiple values, where 'name' is the header name.|`Set("Accept", new List<string>(){"text/plain", "text/html"})`.|
+|`void Set(string name, List<string> values)`|Sets (overwrites) a header with multiple values, where 'name' is the header name.|`Set("Accept", new IEnumerable<string>(){"text/plain", "text/html"})`.|
 |`void Set(string name, params string[] values)`|Sets (overwrites) a header with multiple values, where 'name' is the header name.|`Set("Accept", "text/plain", "text/html")`|
-|`Dictionary<string, List<string>> AsDictionary()`|Returns all headers in a dictionary.|`output.ResponseHeaders.AsDictionary()`|
+|`Dictionary<string, List<string>> AsDictionary()`|Returns all headers as a dictionary.|`output.ResponseHeaders.AsDictionary()`|
 
-The following headers are blocked and will result in a error if you try to set them. This list can be updated in the future:
+The following headers are blocked and will result in an error if you try to set them. This list can be updated in the future:
 
 - Access-Control-Allow-Origin
 - Access-Control-Allow-Credentials

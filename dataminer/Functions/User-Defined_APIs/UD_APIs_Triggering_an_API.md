@@ -151,7 +151,7 @@ The *errorCode* field of an error contains an error code that can be used by the
 | BodyTooLarge | 1009 | 413 | The body size is limited to 29 MB. This error will be thrown if the size is larger than that. |
 | AuthenticationFailed | 1010 | 401 | The passed secret is empty, is invalid, is disabled, cannot be found, or is not allowed for this API definition. |
 | QueryStringTooLarge | 1011 | 414 | The query string size is limited to 2 KB. This error will be thrown if the size is larger than that. |
-| ResponseHeadersNotAllowed  | 1012 | 500 | The response header(s) you're trying to return is not allowed. Check the logging for more info.  See [ResponseHeaders](xref:UD_APIs_Define_New_API#responseheaders). |
+| ResponseHeadersNotAllowed  | 1012 | 500 | The response header(s) you're trying to return is not allowed. Check the DxM logging for more info.  See [ResponseHeaders](xref:UD_APIs_Define_New_API#responseheaders). |
 | ResponseHeadersInvalid | 1013 | 500 | The response header(s) you're trying to return is invalid. Header names and values can't contain whitespace, ':', ',' or ASCII control characters, check the logging for the exact error. |
 
 > [!NOTE]
