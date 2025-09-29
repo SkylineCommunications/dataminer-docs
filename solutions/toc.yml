@@ -294,13 +294,13 @@ items:
         topicUid: Installing_NevionVideoIPath_App
       - name: Using the Nevion Video IPath app
         topicUid: How_to_NevionVideoIPath_App
-    - name: Techex TX Core app
-      topicUid: techex-tx-core-overview
+    - name: NetInsight Nimbra Vision application
+      topicUid: netinsight-nimbra-vision-overview
       items:
-      - name: Installing the Techex TX Core app
-        topicUid: techex-tx-core-install
-      - name: Using the Techex TX Core app
-        topicUid: techex-tx-core-howtouse
+      - name: Installing the Nimbra Vision app
+        topicUid: netinsight-nimbra-vision-install
+      - name: Using the Nimbra Vision app
+        topicUid: netinsight-nimbra-vision-howtouse
     - name: DataMiner TAG Management app
       topicUid: Overview_TAG_App
       items:
@@ -308,6 +308,13 @@ items:
         topicUid: Installing_TAG_App
       - name: Using the TAG Management app
         topicUid: How_to_TAG_App
+    - name: Techex TX Core app
+      topicUid: techex-tx-core-overview
+      items:
+      - name: Installing the Techex TX Core app
+        topicUid: techex-tx-core-install
+      - name: Using the Techex TX Core app
+        topicUid: techex-tx-core-howtouse
   - name: DevTools
     items:
     - name: DataMiner Objects Tool
