@@ -27,6 +27,7 @@ uid: Frameworks_and_Solutions_Tutorials
 | MediaOps: [Creating a job and configuring it with resources](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder) | Learn how to create a job and configure it with resources in the Scheduling app of the dataminer.MediaOps Solution. |
 | MediaOps: [Creating an organization with a team and contacts to use as resources in MediaOps apps](xref:Tutorial_MediaOps_People_and_Organizations_Intro) | Learn how to create an organization with a team and contacts that can be booked within the dataminer.MediaOps Solution. |
 | MediaOps: [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities) | Learn how to model a device as a resource using capabilities in the dataminer.MediaOps Solution. |
+| MediaOps: [Using time-dependent capabilities](xref:Tutorial_MediaOps_Scheduling_Time_Dependent_Capabilities) | |
 | MediaOps: [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations) | Learn how to create a job using a resource pool that was configured with specific capabilities in the dataminer.MediaOps Solution. |
 | MediaOps: [Creating a workflow to use as a template for a job](xref:Tutorial_MediaOps_Workflow_Designer_Intro) | Learn how to create a workflow that can be used as a template for jobs in the dataminer.MediaOps Solution. |
 
