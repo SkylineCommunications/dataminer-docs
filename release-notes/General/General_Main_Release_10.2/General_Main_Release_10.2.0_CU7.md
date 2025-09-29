@@ -25,11 +25,11 @@ Also, the *SLAppPackageInstaller.txt* log file will now keep track of all action
 >
 > To prevent his issue, stay on the upgrade summary tab until the upgrade has finished, and then close DataMiner Taskbar Utility to have the memory cleared. Note also that this issue is related to the Taskbar Utility only and does not affect the upgrade process.
 
-#### Enhanced performance when an SNMP element using multi-threaded timers is polling multiple sources simultaneously [ID 34143]
+#### Enhanced performance when an SNMP element using multithreaded timers is polling multiple sources simultaneously [ID 34143]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-Because of a number of enhancements, overall performance has increased when an SNMP element using multi-threaded timers is polling multiple sources simultaneously.
+Because of a number of enhancements, overall performance has increased when an SNMP element using multithreaded timers is polling multiple sources simultaneously.
 
 #### Edge WebView2 now preferred when SAML authentication is used [ID 34162]
 

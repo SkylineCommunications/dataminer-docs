@@ -60,7 +60,7 @@ Under the BELOW THIS VIEW node, there is a page for each type of item that can b
 
 ![BELOW THIS VIEW](~/dataminer/images/Below_This_View.png)<br>*BELOW THIS VIEW page in DataMiner 10.5.4*
 
-The data pages can be displayed in several ways. You can change the way they are displayed by means of the buttons in the lower right corner of the page.
+The data pages can be displayed in several ways. You can change the way they are displayed by means of the buttons in the lower-right corner of the page.
 
 | Button | Description |
 |--|--|

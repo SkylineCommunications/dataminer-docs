@@ -13,7 +13,7 @@ uid: Installing_DataMiner_IDP
    > [!TIP]
    > See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
 
-1. Deploy the [IDP package](https://catalog.dataminer.services/details/package/3163) from the Catalog.
+1. Deploy the [IDP package](https://catalog.dataminer.services/details/fdaa2902-cbb7-4d83-831d-91428ac5e88d) from the Catalog.
 
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)

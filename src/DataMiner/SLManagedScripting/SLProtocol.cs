@@ -2682,7 +2682,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>This method is intended to be used with multi-threaded timers that have the option “ping” defined.</description>
+		///				<description>This method is intended to be used with multithreaded timers that have the option “ping” defined.</description>
 		///			</item>
 		///			<item>
 		///				<description>Feature introduced in DataMiner version 8.5.0 (RN 7690).</description>
@@ -2698,7 +2698,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>This method is intended to be used with multi-threaded timers that have the ping option defined.</description>
+		///				<description>This method is intended to be used with multithreaded timers that have the ping option defined.</description>
 		///			</item>
 		///			<item>
 		///				<description>Feature introduced in DataMiner version 8.5.0 (RN 7690).</description>

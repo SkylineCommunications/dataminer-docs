@@ -1,12 +1,13 @@
 ---
 uid: About_the_Catalog_app
+reviewer: Alexander Verkest
 ---
 
 # About the Catalog app
 
 As part of dataminer.services, the Catalog app allows Skyline customers and DataMiner Strategic Partners to browse and deploy available DataMiner connectors, packages, Visio drawings, Automation scripts, dashboards, and more.
 
-![Catalog](~/dataminer/images/DataMiner_Catalog.png)<br>*Catalog in DataMiner 10.4.6*
+![Catalog](~/dataminer/images/DataMiner_Catalog.png)
 
 ## Accessing the Catalog app
 
@@ -15,6 +16,8 @@ There are several ways to access the Catalog app:
 - Go directly to <https://catalog.dataminer.services/>.
 
 - Go to <https://dataminer.services>, [sign in](xref:Logging_on_to_dataminer_services), and click *Catalog* on the landing page.
+
+- Go to the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page), and click *Browse Catalog* in the top-right corner of the Low-Code Apps section (from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->).
 
 - In DataMiner Cube, go to *Apps* > *Catalog* (from DataMiner 10.2.9/10.3.0 onwards).
 

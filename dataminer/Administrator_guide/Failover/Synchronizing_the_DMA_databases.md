@@ -33,7 +33,7 @@ To synchronize the online and the offline agent:
 
 1. In the *DataMiner Sync Status* window, select the tables you want to synchronize.
 
-1. Click the *Sync* button in the lower left corner. The *Sync Options* window will open.
+1. Click the *Sync* button in the lower-left corner. The *Sync Options* window will open.
 
 1. In the *Sync Options* window, the following options are possible:
 

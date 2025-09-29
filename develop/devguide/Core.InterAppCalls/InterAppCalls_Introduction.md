@@ -25,13 +25,16 @@ The InterApp framework is mainly intended to be used within large projects where
 
 ### DataMiner requirements
 
-- The InterApp classes require DataMiner 10.1.0 or higher to function correctly.
+There are currently two ranges of the InterApp framework:
 
-- Using DataMiner **10.3.12 or higher is highly recommended**, as this version introduces significant efficiency increases, as illustrated in the metrics below.
+- 1.0.x: This range requires at least DataMiner version 10.1.0.
+- 1.1.x: This range requires at least DataMiner version 10.4.0.
 
-   ![small-medium size messages graph](~/develop/images/InterApp_Metrics_SmallMedium.png)
+Note that using DataMiner **10.3.12 or higher is highly recommended**, as this version introduces significant efficiency increases, as illustrated in the metrics below.
 
-   ![huge size messages graph](~/develop/images/InterApp_Metrics_Huge.png)
+![small-medium size messages graph](~/develop/images/InterApp_Metrics_SmallMedium.png)
+
+![huge size messages graph](~/develop/images/InterApp_Metrics_Huge.png)
 
 ### Connector requirements
 
@@ -81,3 +84,9 @@ The following two parameters must always be added and processed:
    </Measurement>
 </Param>
 ```
+
+## Compatibility
+
+### Compatibility with GQI
+
+GQI requires assemblies to run in a 64-bit environment. Therefore, when referencing InterApp in your [ad hoc data source](xref:GQI_Ad_hoc_data_sources#ad-hoc-data-sources) or [custom operator](xref:GQI_Custom_Operator#custom-operators) from GQI, you must reference [Skyline.DataMiner.Core.InterAppCalls.Common 1.1.1.1](xref:Skyline_DataMiner_Core_InterAppCalls_Range_1.1#1111) or higher.

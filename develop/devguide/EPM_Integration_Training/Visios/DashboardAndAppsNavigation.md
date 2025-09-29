@@ -14,7 +14,7 @@ http://<DMAIP>/dashboard/#/db/Training/Station/01.%20Device%20Overview.dmadb?dat
 
 For detailed information about the JSON syntax, see [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_URL).
 
-To link to EPM objects in this JSON syntax, you will need to use the **epm-selections** field, with the DMA ID, element ID, field PID and primary key value, separated by forward slashes. This field has to be used within a component field, which means you will need to find the ID of the component. You can do so by editing the dashboard or low-code app and looking up the number in the lower right corner of the component:
+To link to EPM objects in this JSON syntax, you will need to use the **epm-selections** field, with the DMA ID, element ID, field PID and primary key value, separated by forward slashes. This field has to be used within a component field, which means you will need to find the ID of the component. You can do so by editing the dashboard or low-code app and looking up the number in the lower-right corner of the component:
 
 ![Component ID location in dashboard](~/develop/images/EPM_Retrieving_component_ID2.png)<br>
 *Component ID in a dashboard in DataMiner 10.4.3*

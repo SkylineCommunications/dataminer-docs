@@ -1,16 +1,26 @@
 ---
 uid: STaaS_features
 description: STaaS takes care of data redundancy, data resilience, data security, and data availability out of the box.
+reviewer: Alexander Verkest
 ---
 
 # STaaS features
 
 ## Data location and redundancy
 
-DataMiner STaaS relies on Azure Storage, which stores multiple copies of your data to make sure it is always available even in case outages or disasters occur. Different storage redundancy setups are possible. STaaS supports zone-redundant storage and geo-redundant storage. When you contact Skyline to register your system to use STaaS, you can include your preferences as to the region(s) where your data should be stored and the type of storage redundancy that should be used.
+DataMiner STaaS relies on Azure Storage, which stores multiple copies of your data to make sure it is always available even in case outages or disasters occur. Different storage redundancy setups are possible. STaaS supports zone-redundant storage (ZRS) and geo-redundant storage (GRS).
 
-> [!NOTE]
-> DataMiner STaaS's standard supported regions are West Europe (The Netherlands), UK South, Central US, UAE North, Southeast Asia (Singapore), and Australia East. Choosing regions outside this standard list will incur additional charges.
+When you use the installation wizard or [contact Skyline](mailto:support@dataminer.services) to register your system to use STaaS, you can include your preferences as to the region(s) where your data should be stored and the type of storage redundancy that should be used.
+
+| Region           | Location             | Status                                                     | [Geo-Redundancy Pair](https://learn.microsoft.com/en-us/azure/reliability/cross-region-replication-azure#azure-paired-regions) for GRS ([on request](mailto:support@dataminer.services?Subject=GRS%20for%20STaaS)) |
+|------------------|----------------------|------------------------------------------------------------|----------------------------------|
+| West Europe      | The Netherlands      | Live                                                       | North Europe (Ireland)           |
+| UK South         | London, UK           | Live                                                       | UK West (Cardiff)                |
+| Central US       | Iowa, USA            | Live                                                       | East US 2 (Virginia)             |
+| Southeast Asia   | Singapore            | Live                                                       | East Asia (Hong Kong SAR)        |
+| UAE North        | Dubai, UAE           | [On request](mailto:support@dataminer.services?Subject=UAE%20North%20for%20STaaS) (no extra charge) | UAE Central (Abu Dhabi) |
+| Australia East   | New South Wales, AUS | [On request](mailto:support@dataminer.services?Subject=Australia%20East%20for%20STaaS) (no extra charge) | Australia Southeast (Victoria) |
+| Other Regions    | [See full list](https://learn.microsoft.com/en-us/azure/reliability/regions-list) | Supported [on request](mailto:support@dataminer.services?Subject=Other%20region%20for%20STaaS) (extra cost) | [See full list](https://learn.microsoft.com/en-us/azure/reliability/regions-list) |
 
 - **Zone-redundant storage (ZRS)** copies your data synchronously across three Azure availability zones in one region. Each availability zone is a separate physical location with independent power, cooling, and networking. By **default**, DataMiner STaaS uses ZRS.
 
@@ -42,7 +52,7 @@ If [ZRS](#data-location-and-redundancy) is used, STaaS has an expected availabil
 
 ## TTL
 
-It is not yet possible to configure time-to-live (TTL) values for STaaS. In the table below, you can find the default TTL values for each data type.
+In the table below, you can find the default time-to-live (TTL) values for each data type.
 
 | Data type                | TTL          |
 |--------------------------|:------------:|
@@ -53,6 +63,8 @@ It is not yet possible to configure time-to-live (TTL) values for STaaS. In the 
 | State changes            | 5 years      |
 | Spectrum traces          | 1 year       |
 | Alarm events             | 1 year       |
+
+Custom configuration of TTL values can be requested via a [support ticket](xref:User_operations_support).
 
 ## Throttling
 
@@ -72,7 +84,7 @@ To **migrate existing data** to STaaS, the following limitations apply:
 
 - Migration of a setup with multiple OpenSearch/Elasticsearch clusters is not yet supported.
 
-- Migration from a MySQL setup is not yet supported.
+- Direct migration from a MySQL setup is not supported. We recommend using .dmimport files (also known as "DELT export packages") to migrate your data, or [contacting support](xref:Contacting_tech_support) for assistance with the migration.
 
 - Migration using a proxy is supported from DataMiner 10.4.6 onwards<!-- RN 39313 -->.
 
@@ -84,13 +96,11 @@ In addition, the following **other limitations** currently apply:
 
 - The following indexing engine functionality is not supported: Alarm Console search tab, search suggestions in the Alarm Console, aliases, and aggregation.
 
-- Custom configuration of TTL values is not yet supported.
-
 - Direct queries from DataMiner Cube to the database are not supported.
 
 - The [SLReset tool](xref:Factory_reset_tool) is not supported.
 
-- [Exporting trend data](xref:Exporting_elements_services_etc_to_a_dmimport_file) to a .dmimport file is not supported.
+- [Exporting trend data](xref:Exporting_elements_services_etc_to_a_dmimport_file) to a .dmimport file (also known as a "DELT export") is not supported.
 
 - DMZ setups are currently not supported.
 

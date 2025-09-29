@@ -1,5 +1,7 @@
 ---
 uid: Register_Catalog_Item
+keywords: catalog, registration, manifest, upload, publish
+reviewer: Alexander Verkest
 ---
 
 # Registering a Catalog item
@@ -134,7 +136,6 @@ documentation_url: '<fill in documentation url here>'
 
 # [Optional]
 # People who are responsible for this Catalog item. Might be developers, but this is not required.
-# Format: 'name <email> (url)'
 #   The name is required; max 256 characters.
 #   The email and url are optional, and should be in valid email/URL formats.
 owners:

@@ -51,7 +51,7 @@ Profile parameters can be configured in two ways. You can either [add a paramete
    > [!NOTE]
    > A profile parameter is considered invalid if it has a default value of type *Undefined*. Upgrading from a legacy DataMiner version where this is still supported will cause the default value type to be determined automatically. Note that parameters of type *Undefined* are also no longer considered valid, but these cannot be corrected automatically.
 
-1. Click the *Add* button in the lower right corner.
+1. Click the *Add* button in the lower-right corner.
 
    The *Add link with protocol* dialog box will appear.
 
@@ -62,7 +62,7 @@ Profile parameters can be configured in two ways. You can either [add a paramete
 
    The *\[new\]* marker next to the profile parameter will now turn blue to indicate that the parameter can be saved.
 
-1. To save the new parameter, click the *Save all changes* button in the lower right corner of the module.
+1. To save the new parameter, click the *Save all changes* button in the lower-right corner of the module.
 
 ### Configuring a converter for a profile parameter
 
@@ -111,4 +111,4 @@ To convert parameter values from the format defined in the protocol to a differe
 
 1. To add more protocol parameters, repeat from step 2.
 
-1. When the necessary parameters have been added, click *Close* to close the *Import parameters* window, and then click *Save all changes* in the lower right corner of the module.
+1. When the necessary parameters have been added, click *Close* to close the *Import parameters* window, and then click *Save all changes* in the lower-right corner of the module.

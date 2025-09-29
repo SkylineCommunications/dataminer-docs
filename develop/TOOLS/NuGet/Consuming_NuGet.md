@@ -60,7 +60,7 @@ To access the GitHub NuGet registry, you need a personal access token (PAT). Fol
 
    - **Scope**: Select the *read:packages* scope.
 
-1. Click *Generate token* in the lower left corner.
+1. Click *Generate token* in the lower-left corner.
 
 1. Copy your personal access token. You will not be able to see it again afterwards.
 
@@ -105,7 +105,7 @@ In case you are using a token that has an expiration date or if you entered the 
 
    - Visual Studio 2022: *Windows Credentials > nuget.pkg.github.com*
 
-1. Select the credentials you want to edit and click *Edit* in the lower left corner.
+1. Select the credentials you want to edit and click *Edit* in the lower-left corner.
 
 1. Update the username and/or password, and click *Save*.
 

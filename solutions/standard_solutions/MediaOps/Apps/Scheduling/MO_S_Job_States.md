@@ -36,6 +36,7 @@ Here is an overview of how these different states are connected:
 graph LR
     A[🖉 🗑 Draft] --> B[🖉 Tentative]
     B --> C[🖉 Confirmed]
+    C --> B
     C --> D[🖉 Running]
     D --> E[🖉 🗑 Completed]
     C --> H[🗑 Canceled]

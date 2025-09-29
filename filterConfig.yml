@@ -2,6 +2,9 @@ apiRules:
 - include:
     uidRegex: ^Skyline\.DataMiner\.Net\.AutomationUI\.Objects
     type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.DcpChatIntegrationHelper
+    type: Namespace
 - exclude:
     uidRegex: ^Tamir\.SharpSsh\.jsch\.ChannelSftp$
     type: Type

@@ -27,40 +27,6 @@ The tool duplicates tables, which is different from taking a snapshot (i.e. a ba
    > [!TIP]
    > For more information on creating an empty keyspace, see [Cassandra - Creating Keyspace](https://www.tutorialspoint.com/cassandra/cassandra_create_keyspace.htm).
 
-   To clone an existing keyspace:
-
-   1. Open DevCenter, by going to `C:\Program Files\Cassandra\DevCenter\Run DevCenter.lnk`.
-
-      > [!TIP]
-      > For more information on DevCenter, see [DataStax DevCenter](xref:DataStax_DevCenter).
-
-   1. In the *Connections* pane, click the icon to create a new connection.
-
-   1. In the *New Connection* window, insert the IP or hostname of the node you want to connect to in the *Contact hosts* box and click *Add*.
-
-   1. Click *Next* to go to the next step of the wizard.
-
-   1. Set the *Login* and *Password* to the credentials configured for the node (default: root) and click *Finish*.
-
-      > [!NOTE]
-      > You can find these credentials in `C:\Skyline DataMiner\Db.xml`, in the *Database.UID* and *Database.PWD* tags for the Cassandra database.
-
-   1. In the central pane of DevCenter, select the connection you have just created in the box at the top
-
-   1. In the *Schema* pane, right-click the existing keyspace and select *Clone Keyspace*.
-
-   1. In the pop-up window, check and adapt the settings if necessary:
-
-      - **Keyspace name**: Adjust this name to your preferences.
-
-      - **Replication strategy**: Should be set to *SimpleStrategy*.
-
-      - **Replication factor**: Should be 1 for a regular DMA and 2 for a Failover DMA.
-
-      - **Durable writes**: This option should be selected.
-
-   1. Click *Next* and *Finish* to clone the keyspace.
-
 1. If you want to clone the table to a keyspace that already exists, specify a name for the cloned table. To do so, create a file named *tables.txt* in the root directory of the tool. In the file, add a line for each table that needs to be cloned, separating the source and destination table names using tabs.
 
    For example:

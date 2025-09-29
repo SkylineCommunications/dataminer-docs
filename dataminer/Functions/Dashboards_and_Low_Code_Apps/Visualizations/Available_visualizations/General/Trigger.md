@@ -30,7 +30,7 @@ To use a trigger component to **refresh the data in another component**:
 
 1. Add a trigger component to your dashboard or app.
 
-1. In the *Data* pane, navigate to *All available data* > *Components* > *Trigger #* > *Last trigger* > *Triggers* and drag this component data onto a compatible component (e.g. a table or grid component).
+1. In the *Data* pane, navigate to *All available data* > *Components* > *Trigger* > *Last trigger* > *Triggers* and drag this component data onto a compatible component (e.g. a table or grid component).
 
    ![Link component to trigger](~/dataminer/images/Link_Component_to_Trigger.gif)<br>*Grid component and trigger component in DataMiner 10.5.8*
 
@@ -118,7 +118,7 @@ You can do this by configuring component actions in your low-code app using even
 
 To configure this:
 
-1. Add an event to your app. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+1. Add an event to your app. See [Configuring app events](xref:LowCodeApps_event_config).
 
 1. From the dropdown list, select *Execute component action*.
 

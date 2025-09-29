@@ -10,4 +10,4 @@ In the *Router Control* module:
 
 1. At the center, click *Unlock*.
 
-The “locked” icon will disappear from the lower left corner of the output.
+The “locked” icon will disappear from the lower-left corner of the output.

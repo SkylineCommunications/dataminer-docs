@@ -48,9 +48,9 @@ When the back end was restarted, up to now, provisioning was disabled by default
 
 Maps are now supported on the node segment, node, amplifier, and tap levels of the EPM topology.
 
-#### Multi-threaded timer removed [ID 35034]
+#### Multithreaded timer removed [ID 35034]
 
-The CCAP Platform connectors will no longer use a multi-threaded timer to poll the DOCSIS version of each cable modem.
+The CCAP Platform connectors will no longer use a multithreaded timer to poll the DOCSIS version of each cable modem.
 
 Because of this, a number of other changes have been implemented:
 
@@ -60,13 +60,13 @@ Because of this, a number of other changes have been implemented:
 
 - QAction 7600, associated with the polling of the DOCSIS version of each cable modem available in the system, has been removed.
 
-- The Threadpool page has been removed along with all its parameters, as these were associated with the multi-threaded timer.
+- The Threadpool page has been removed along with all its parameters, as these were associated with the multithreaded timer.
 
-#### Generic DOCSIS CM Collector: CM QAM Channels tables adjusted + SNMP interval logic removed from multi-threaded timer [ID 35292]
+#### Generic DOCSIS CM Collector: CM QAM Channels tables adjusted + SNMP interval logic removed from multithreaded timer [ID 35292]
 
 To avoid inconsistencies between the QAM DS/US Channels CM Collector table and CM QAM DS/US Channels CCAP tables, the latter will now contain all available channels per CM, and they will also contain a column indicating whether a channel is currently active or not.
 
-In addition, SNMP interval logic has been removed from the multi-threaded timer, as this did not work as intended.
+In addition, SNMP interval logic has been removed from the multithreaded timer, as this did not work as intended.
 
 #### Visio drawings and dashboards included in EPM package [ID 35522]
 

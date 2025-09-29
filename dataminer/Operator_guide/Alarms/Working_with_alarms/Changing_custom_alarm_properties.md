@@ -10,7 +10,7 @@ uid: Changing_custom_alarm_properties
 
 1. Go to the *Custom* tab.
 
-1. Click the settings button in the lower left corner, and select *Add*.
+1. Click the settings button in the lower-left corner, and select *Add*.
 
 1. Enter a name for the new custom property.
 
@@ -34,7 +34,7 @@ uid: Changing_custom_alarm_properties
 
 1. Select the property you want to delete.
 
-1. Click the settings button in the lower left corner, and select *Delete*.
+1. Click the settings button in the lower-left corner, and select *Delete*.
 
 > [!CAUTION]
 > Be careful when deleting alarm properties. If you delete an alarm property, it will be removed from all alarms.
@@ -69,4 +69,4 @@ You can also edit advanced settings of a custom alarm property, such as the prop
 
 1. Select the property you want to edit.
 
-1. Click the settings button in the lower left corner, and select *Edit*.
+1. Click the settings button in the lower-left corner, and select *Edit*.

@@ -4,6 +4,9 @@ uid: Gerrit
 
 # Gerrit
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
 Git repositories are hosted by [Gerrit Code Review](https://www.gerritcodereview.com/), a software package used for code reviewing, managing and serving Git repositories, etc. (<https://gerrit.skyline.be>).
 
 In Gerrit, you can see whether the CI/CD pipeline for your development succeeded. In the *Work in Progress* or *Outgoing Reviews* section of the review dashboard, select the item of which you want to see the status. This will open a new page that shows a Jenkins tag:

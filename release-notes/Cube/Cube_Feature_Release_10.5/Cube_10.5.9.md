@@ -2,21 +2,17 @@
 uid: Cube_Feature_Release_10.5.9
 ---
 
-# DataMiner Cube Feature Release 10.5.9 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.5.9
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.4.0 [CU18] and 10.5.0 [CU6].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.5.9](xref:General_Feature_Release_10.5.9).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.5.9](xref:Web_apps_Feature_Release_10.5.9).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -24,17 +20,21 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-In DataMiner feature version 10.5.6, Automation script log files were introduced. These log files can now be consulted in DataMiner Cube. To do so, in Cube, open *System Center*, and go to *Logging > Automation*.
+In DataMiner Feature Release version 10.5.6, Automation script log files were introduced. These log files can now be consulted in DataMiner Cube. To do so, in Cube, open *System Center*, and go to *Logging > Automation*.
 
-On the left, you will find a list of all Automation scripts available on the system, grouped per DataMiner Agent.
+On the left, you will find a list of all Automation scripts available on the system. Click an Automation script to expand it and display the DataMiner Agents on which it is available. Select a DMA to open the log file for that script on that specific Agent. The Agent you are currently connected to is shown in italics.
 
-- Right-clicking a script in the list will open a shortcut menu with two options: *Open* and *Open previous*. If there is no previous log file, the latter option will not be available.
-- To set the log levels for one or more Automation scripts on a particular DataMiner Agent, open the *Log settings* pane at the top of the *Automation* tab, select the files\*, set the log levels, and click *Apply levels*.
+- Right-clicking a DMA in the list will open a shortcut menu with two options: *Open* and *Open previous*. If there is no previous log file, the latter option will not be available.
 
-\**To select more than one script, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive scripts, click the first one in the list and then click the last one while holding down the Shift key.*
+- To set the log levels for one or more DMAs for a particular Automation script, expand the script in the list, select the DMA or DMAs you want to configure, open the *Log settings* section at the top of the *Automation* tab, select *Override log levels*, set the log levels, and click *Apply levels*.
+
+  You can adjust log levels for multiple items at once:
+
+  - Select non-consecutive items: Hold down the Ctrl key while selecting each item.
+  - Select consecutive items: Click the first item, then hold the Shift key and click the last item.
 
 > [!NOTE]
-> When you open an Automation script in the *Automation* module, you can access the script's log file by clicking the *View Log* button or by right-clicking inside the script's contents and selecting *View log* from the shortcut menu. Note that this will only be possible if you have permission to view log files.
+> When you open an Automation script in the *Automation* module, you can access the script's log file by clicking the *View log* button while the script is open, or by right-clicking the script in the pane on the left and selecting *View log* from the shortcut menu. Note that this will only be possible if you have permission to view log files.
 
 #### Automation: Cube now supports Automation scripts with an Interactivity tag [ID 43149]
 
@@ -73,7 +73,7 @@ Also, when there are any DaaS systems in the cluster to which you are connected,
 
 When DataMiner Cube is using the Microsoft Edge (WebView2) browser engine to display embedded webpages, popup windows containing an embedded web page will now show a banner saying that embedding a Microsoft Edge browser window within a popup window is not fully supported.
 
-#### Security: User permission 'General > View > Add/remove elements' renamed to 'Add/remove items (elements, services, etc.)' [ID 43215]
+#### Security: User permission 'General > Views > Add/remove elements' renamed to 'Add/remove items (elements, services, etc.)' [ID 43215]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
@@ -101,9 +101,9 @@ In DataMiner Cube, up to now, when the Microsoft Edge (WebView2) browser engine 
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-A number of enhancements have been made to the way in which element and service properties are displayed in the *Properties* window.
+A number of enhancements have been made to the way element and service properties are displayed in the *Properties* window.
 
-- All datetime values are now displayed in UTC time. They will no longer be converted to client time.
+- All date and time values are now displayed with the value received from the server, which is local time for elements and UTC for services. They will no longer be converted to client time.
 - The *Created* and *Created by* values will now be displayed as one single value.
 - The *Modified* and *Modified by* values will now be displayed as one single value.
 

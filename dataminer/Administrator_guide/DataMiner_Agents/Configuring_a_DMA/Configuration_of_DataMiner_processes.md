@@ -299,7 +299,13 @@ In this case, SLWatchdog will do the following:
 
 1. Send an email message stating the name of the DataMiner process toward all recipients specified in the SLWatchdog configuration settings. By default, this message will include a dump file containing copies of all DataMiner log files found on the DataMiner Agent the moment the problem was detected.
 
-1. Restart the process (in case the process that disappeared was SLScripting), or restart the DataMiner Agent as a whole (in case the process that disappeared was not SLScripting, but one of the other processes, which in many cases have a number of dependencies).
+1. Restart the process (in case the process that disappeared was SLScripting, SLProtocol, or SLAutomation), or restart the DataMiner Agent as a whole (in case the process that disappeared was one of the other processes, which in many cases have a number of dependencies).
+
+   > [!NOTE]
+   >
+   > - **SLScripting**: The process is restarted automatically without restarting the entire DataMiner Agent.
+   > - **SLProtocol** (from DataMiner 10.4.12/10.5.0 onwards): When an SLProtocol process disappears, a new SLProtocol process will be started automatically, and all elements that were hosted by the disappeared process will be migrated to the newly created process. Affected elements will be restarted to ensure data synchronization. There is a one-minute delay between the disappearance of an SLProtocol process and the creation of a new one. A notice alarm will also be created indicating the process disappearance and number of affected elements.
+   > - **SLAutomation**: The process will be restarted automatically with a one-minute delay, without restarting the entire DataMiner Agent. This delay is necessary to ensure that processes are not restarted while the DMA is in the process of shutting down.
 
 1. Create two information messages:
 
@@ -707,7 +713,9 @@ Example:
 
 ### Disabling .NET Remoting
 
-By default, .NET Remoting is used for communication between DMAs. From DataMiner 10.3.2/10.3.0 onwards, a gRPC connection can be used instead. To make gRPC the default for communication between DMAs, you can either [add Redirect tags in DMS.xml](xref:DMS_xml#redirects-subtag), or disable .NET Remoting in *MaintenanceSettings.xml*. However, note that the latter is **only recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards**, as prior to this there is no support for DataMiner upgrades over gRPC.
+.NET Remoting is used by default for communication between DMAs prior to DataMiner 10.5.10/10.6.0<!-- RN 43506 -->. From 10.5.10/10.6.0 onwards, gRPC is used by default.
+
+If you are using a DataMiner version between 10.3.2/10.3.0 and 10.5.10/10.6.0, you can make gRPC the default for communication between DMAs by either [adding Redirect tags in DMS.xml](xref:DMS_xml#redirects-subtag) or disabling .NET Remoting in *MaintenanceSettings.xml*. However, note that the latter is **only recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards**, as prior to this there is no support for DataMiner upgrades over gRPC.
 
 To do the latter, add an *\<EnableDotNetRemoting>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to "false".<!-- RN 31498+36023 -->
 

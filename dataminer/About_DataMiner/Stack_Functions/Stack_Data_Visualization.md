@@ -193,7 +193,7 @@ First of all, DataMiner Control Panels **allow versatile control actions with th
 
 Moreover, you have the freedom to **customize the appearance and design** of each DataMiner Control Panel. This includes not only buttons but also trend charts, thumbnails, real-time metrics and KPIs, spectrum analyzers, or any other elements that align with your specific needs.
 
-And finally, the control panels **enable true multi-tenant operations**. You can create tailor-made control panels for any customer, partner, or supplier, and share them via the dataminer.services.
+And finally, the control panels **enable true multitenant operations**. You can create tailor-made control panels for any customer, partner, or supplier, and share them via the dataminer.services.
 
 > [!TIP]
 > For more information:

@@ -66,7 +66,7 @@ Make a backup of your DataMiner Agent using DataMiner Taskbar Utility or DataMin
 
 If you are upgrading to another major version that does not immediately follow your current version, always follow this general guideline:
 
-**Upgrade to the next major DataMiner version(s) before upgrading to your preferred version**.
+**Upgrade to the latest Cumulative Update (CU) of the next major DataMiner version(s) before upgrading to your preferred version**.
 
 ![Upgrading across major versions](~/dataminer/images/Upgrading_across_major_versions.png)
 
@@ -142,6 +142,8 @@ When you upload a DataMiner upgrade, several prerequisite checks are automatical
 > We recommend running the prerequisite checks well in advance of the actual upgrade activity, so that you have time to carry out any actions that are required as reported by the checks.
 
 The following prerequisite checks are currently available:
+
+- [Verify gRPC Connection](xref:VerifyGRPCConnectiondmupgrade): Verifies whether all DataMiner Agents in the cluster can communicate via gRPC over HTTPS port 443 and none of the Agents currently have a non-default network configuration.
 
 - [Verify .NET Version](xref:Verify_ASP_Net_Version): Verifies whether the Microsoft ASP.NET 8.0 Hosting Bundle is installed. From DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 37969-->, this prerequisite is available by default and runs automatically when you upgrade.
 

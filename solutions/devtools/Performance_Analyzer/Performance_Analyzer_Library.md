@@ -338,7 +338,7 @@ While this now looks acceptable, with the only addition compared to the original
 - Methods are inherently nested, but the logs are not, so it may be difficult to know where a method is called from.
 - It is not possible to save the results somewhere other than in a log file.
 - As the size of the data increases, processing time will increase, but it is not possible to track if the data size changes.
-- It is not clear how this implementation will behave in multi-threaded environments.
+- It is not clear how this implementation will behave in multithreaded environments.
 - The data is not visualized effectively, so you may need to scroll to vast amounts logging.
 
 The **Performance Analyzer** can help with these and many other challenges. Its underlying logic is similar to what is illustrated above; the only difference lies in the implementation details. Thanks to abstraction — one of the key pillars of OOP — these details will not affect how the solution is used.
@@ -400,7 +400,7 @@ public static List<string> Fetch()
 }
 ```
 
-With context added, it will now be a lot easier to interpret the results accurately. But what if data processing can happen in parallel? Generally, it does not matter whether the Performance Analyzer is used in single- or multi-threaded environments, but there is one important thing to keep in mind: **in multi-threaded scenarios, nesting must be handled explicitly**. This means the parent tracker must be defined by passing it to the constructor of the tracker running on a separate thread.
+With context added, it will now be a lot easier to interpret the results accurately. But what if data processing can happen in parallel? Generally, it does not matter whether the Performance Analyzer is used in single- or multithreaded environments, but there is one important thing to keep in mind: **in multithreaded scenarios, nesting must be handled explicitly**. This means the parent tracker must be defined by passing it to the constructor of the tracker running on a separate thread.
 
 ```csharp
 public static void Solution()

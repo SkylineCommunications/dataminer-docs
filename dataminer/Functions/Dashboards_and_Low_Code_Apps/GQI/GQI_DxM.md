@@ -43,30 +43,6 @@ From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 42003-->, to verify tha
 > [!NOTE]
 > If you encounter issues when trying to enable the GQI DxM, refer to [GQI DxM repair](xref:Investigating_Web_Issues#gqi-dxm-repair)
 
-## Architecture
-
-The GQI DxM comprises multiple processes that work together to handle GQI requests and execute these efficiently. This architecture ensures modularity, scalability, and efficient communication between the different components.
-
-- **Parent process** (DataMiner GQI.exe - Windows Service)
-
-  The parent process serves as the main entry point for all GQI operations, managing the core functionality, such as query sessions, the built-in data sources and operators, and execution of the query requests. When a query utilizes GQI extensions (ad hoc data sources or custom operators), the parent process spawns one or more child processes to handle these extensions.
-
-  - Technology: .NET 8.
-  - Communication: Connects to the DataMiner Agent via gRPC (APIGateway).
-
-- **Child processes** (DataMiner GQI.ExtensionsWorker.Automation.exe)
-
-  Each extension (per library) runs within its own child process, ensuring isolation and modularity. In Task Manager, you can determine the specific extension a child process is executing by checking the command line arguments.
-
-  - Technology: .NET Framework 4.
-
-- **Communication process** (DataMiner GQI.ExtensionsWorker.SLNet.exe)
-
-  The communication process facilitates communication between GQI extensions and the DataMiner Agent through SLNet. All extensions for a given user utilize the same SLNet connection, optimizing resource usage.
-
-  - Technology: .NET Framework 4.
-  - Communication: Connects to the DataMiner Agent via IPC (SLNet).
-
 ## Configuration
 
 The GQI DxM can be configured via JSON configuration files. The default configuration can be found in `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.json`. Do **not** use this file to change settings, because it will be overwritten whenever a new version of the GQI DxM is installed.
@@ -91,6 +67,28 @@ See the following example. Idle child processes will be terminated within the co
     "Extensions": {
       "WorkerExpiration": "1.00:00:00"
     }
+  }
+}
+```
+
+### Message handler configuration
+
+The `MessageHandler` manages requests from clients to the GQI DxM. Requests are placed in a queue, and a specified number of requests can be processed concurrently.
+
+You can configure the following options in the `MessageHandlerOptions` in the *appsettings.custom.json* file:
+
+- **RequestTimeout**: Maximum time a request can take before timing out (default: 15 minutes). This includes the time in the queue.
+- **MaxConcurrentRequests**: Maximum number of requests that can be processed at the same time (default: 100). Note that prior to DataMiner 10.5.0 [CU8]/10.5.11<!-- RN 43730 -->, a lower default number of 20 is applied.
+- **MaxPendingRequests**: Maximum number of requests allowed in the queue (default: 1000).
+
+Example configuration:
+
+```json
+{
+  "MessageHandlerOptions": {
+    "RequestTimeout": "00:15:00",
+    "MaxConcurrentRequests": 100,
+    "MaxPendingRequests": 1000
   }
 }
 ```

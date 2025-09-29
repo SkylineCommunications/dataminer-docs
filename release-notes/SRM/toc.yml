@@ -127,6 +127,8 @@ items:
         topicUid: SRM_1.1.0
   - name: Feature release track (Dev Pack)
     items:
+      - name: SRM 2.0.3
+        topicUid: SRM_2.0.3
       - name: SRM 2.0.2
         topicUid: SRM_2.0.2
       - name: SRM 2.0.1

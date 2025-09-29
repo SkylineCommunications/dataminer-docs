@@ -4,6 +4,9 @@ uid: High-level_overview
 
 # High-level overview
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
 In this section, you can find a high-level overview of protocol development prior to the introduction of the CI/CD pipeline, compared to the new way of working.
 
 Consider for example the development of a protocol. Previously, System Developers put new versions of a protocol on <https://svn.skyline.be>, where the protocol was an XML file.

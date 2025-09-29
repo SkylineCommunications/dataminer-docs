@@ -48,14 +48,14 @@ To edit an existing contact:
 
    A panel will appear.
 
-1. Select *Edit* in the lower right corner of the panel.
+1. Select *Edit* in the lower-right corner of the panel.
 
 1. Make the necessary changes to the contact details.
 
    > [!TIP]
    > Changing a contact's personal skills is done differently. See [Managing skills](#managing-skills)
 
-1. After making your changes, select *Activate* in the lower right corner.
+1. After making your changes, select *Activate* in the lower-right corner.
 
    > [!NOTE]
    > Skipping this step will keep the contact in an inactive *Edit* state.

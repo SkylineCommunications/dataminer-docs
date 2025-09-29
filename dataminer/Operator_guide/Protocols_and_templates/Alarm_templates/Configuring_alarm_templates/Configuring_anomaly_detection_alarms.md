@@ -86,7 +86,7 @@ To configure the Augmented Operations alarm settings for specific parameters<!--
       - Ranges corresponding with the thresholds that have been configured in the alarm template itself. For example, if a Critical High alarm threshold of 100 Kbps is configured in the alarm template for an *Audio Bit Rate* parameter, here you will be able to select the option *Critical High (100 Kbps)* for that parameter.
       - An upper and a lower range, if these are specified in the protocol. In case no upper and lower range are specified in the protocol, but the parameter shows a percentage, 100% will be available as the upper range and 0% as the lower range.
 
-1. Click *Close* in the lower right corner to return to the alarm template editor.
+1. Click *Close* in the lower-right corner to return to the alarm template editor.
 
    In the alarm template editor, the button in the *Analytics* or *Anomalies* column will be adjusted as follows depending on the configuration:
 
@@ -96,7 +96,7 @@ To configure the Augmented Operations alarm settings for specific parameters<!--
 
    - *Smart*: Anomaly alarms are generated for this parameter based on what DataMiner Analytics determines to be an anomaly, and proactive alarms are generated.
 
-1. To save your changes, click *OK* or *Apply* in the lower right corner of the alarm template editor.
+1. To save your changes, click *OK* or *Apply* in the lower-right corner of the alarm template editor.
 
 ## [Prior to DataMiner 10.3.12/10.4.0, with automatic client updates](#tab/tabid-2)
 
@@ -125,7 +125,7 @@ To configure anomaly detection alarms for specific parameters<!--RN 37171 + 3714
 
      - *Flatline*: Enables or disables alarms for flatline anomalies. Available from DataMiner 10.2.6/10.3.0 onwards.
 
-1. Click *Close* in the lower right corner to exit the *Anomaly Alarm Settings* pop-up window.
+1. Click *Close* in the lower-right corner to exit the *Anomaly Alarm Settings* pop-up window.
 
    In the alarm template editor, depending on your changes, the button in the *Anomalies* column will now indicate the level of anomaly monitoring that has been configured:
 
@@ -135,7 +135,7 @@ To configure anomaly detection alarms for specific parameters<!--RN 37171 + 3714
 
    - **Smart**: Anomaly alarms are generated for this parameter based on what DataMiner Analytics determines to be an anomaly.
 
-1. To save your changes, click *OK* or *Apply* in the lower right corner of the alarm template editor.
+1. To save your changes, click *OK* or *Apply* in the lower-right corner of the alarm template editor.
 
 ## [Prior to DataMiner 10.3.12/10.4.0, without automatic client updates](#tab/tabid-3)
 

@@ -2,12 +2,12 @@
 uid: Web_apps_Feature_Release_10.5.9
 ---
 
-# DataMiner web apps Feature Release 10.5.9 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.5.9
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.4.0 [CU18] and 10.5.0 [CU6].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -93,7 +93,17 @@ The new setting will allow you to assign a special name to a component. This wil
 
 Although this component name will appear in different places to refer to the component in question, it will merely be used as an alias. It will have no impact whatsoever with regard to component functionality.
 
-## Changes
+## Changes in build 16295
+
+### Fixes
+
+#### Dashboards/Low-Code Apps: Maps components with lines and style settings would throw errors after an upgrade to DataMiner 10.5.9 build 16208 [ID 43698]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+After an upgrade to DataMiner 10.5.9 build 16208, in some cases, existing maps components with lines and style settings would throw errors.
+
+## Changes in build 16208
 
 ### Enhancements
 
@@ -269,3 +279,9 @@ When, while editing a low-code app, you changed the visual of a component, the l
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
 
 If the latest .NET 8 hosting bundle was not installed first, it could occur that installing the GQI DxM failed because of missing dependency DLLs. To prevent this, the missing dependencies are now included in the GQI DxM installer.
+
+#### GQI DxM: Queries could get stuck when using an ad hoc data source with the 'Update data' option enabled [ID 43596]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+When an ad hoc data source with the *Update data* option enabled was queried, the query could get stuck when real-time updates occurred while a page of the query result set was requested.

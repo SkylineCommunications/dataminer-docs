@@ -121,7 +121,7 @@ To deploy the package:
 
       ![DCF Connection Visual Overview](~/dataminer/images/kata_dcf_tutorial_2.png)
 
-   1. Click the *Apply* button in the lower right corner.
+   1. Click the *Apply* button in the lower-right corner.
 
       This will apply your changes and create the connection. The *VISUAL* page of the *SLC_KATA_DCF* view will display the DCF connection.
 

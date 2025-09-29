@@ -2,7 +2,7 @@
 uid: LowCodeApps_header_config
 ---
 
-# Configuring the header bar of a low-code app page
+# Configuring the app header bar
 
 When you are configuring an app in the Low-Code Apps module, you can configure the header bar for each page and panel. Such a header bar consists of different buttons, which can be used to execute actions or show a drop-down menu with additional buttons.
 
@@ -22,7 +22,7 @@ To configure a header bar:
 
    1. Expand the *Events* section for the header bar in the page configuration pane, and click the configuration button to the right of *On click*.
 
-   1. Select and configure the action(s) that should be triggered when the button is clicked. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+   1. Select and configure the action(s) that should be triggered when the button is clicked. See [Configuring app events](xref:LowCodeApps_event_config).
 
 1. Add and configure additional buttons if needed.
 

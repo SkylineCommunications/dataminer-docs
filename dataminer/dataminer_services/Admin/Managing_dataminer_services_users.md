@@ -1,6 +1,7 @@
 ---
 uid: Managing_dataminer_services_users
 keywords: cloud users
+reviewer: Alexander Verkest
 ---
 
 # Managing dataminer.services users

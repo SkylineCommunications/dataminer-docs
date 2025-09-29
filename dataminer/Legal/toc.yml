@@ -7,6 +7,10 @@ items:
         topicUid: License_and_Service_Terms
       - name: Terms for partners
         topicUid: Terms_partners
+  - name: dataminer.services terms
+    items:
+      - name: dataminer.services terms of use
+        topicUid: dataminer.services_terms_of_use
   - name: Support terms
     items:
       - name: On premises

@@ -13,7 +13,7 @@ By default, DataMiner installs Cassandra with the PasswordAuthenticator enabled.
 
 We highly recommend that you configure more secure passwords for the default user. Preferably, these passwords should be randomly generated and stored in a password vault.
 
-You can do so by executing the following queries (using *cqlsh* in a Linux environment, DevCenter in Windows, or your preferred query tool):
+You can do so by executing the following queries (using *cqlsh*, or your preferred query tool):
 
 `ALTER ROLE cassandra WITH PASSWORD = '<NEW PASSWORD>';`
 

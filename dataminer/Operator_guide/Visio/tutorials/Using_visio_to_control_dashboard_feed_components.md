@@ -175,7 +175,7 @@ Expected duration: 45 minutes
    >
    > 1. Right-click the ribbon and select *Customize the Ribbon*.
    > 1. In the *Main Tabs* list on the right, make sure *Developer* is enabled.
-   > 1. Click *OK* in the lower right corner.
+   > 1. Click *OK* in the lower-right corner.
    > 1. Access the *Developer* tab, and select the *Drawing Explorer* checkbox in the *Show/Hide* group.
    >
    >    The Drawing Explorer window will become available in the corner of your drawing.
@@ -214,7 +214,7 @@ Expected duration: 45 minutes
    ```
 
    > [!NOTE]
-   > The first part of the URL (i.e. the part on the left of the question mark) needs to be changed to match the naming structure of your dashboard. The component ID (`cid`) also needs to be changed to match that of your parameter feed. You can find the ID of each component in the lower right corner of the component while in edit mode.
+   > The first part of the URL (i.e. the part on the left of the question mark) needs to be changed to match the naming structure of your dashboard. The component ID (`cid`) also needs to be changed to match that of your parameter feed. You can find the ID of each component in the lower-right corner of the component while in edit mode.
 
 1. Again use a web-based encoded JSON URL converter, this time to convert the URL back to encoded JSON.
 

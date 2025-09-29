@@ -20,7 +20,7 @@ From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41799-->, you can use a [trigg
 1. Apply the necessary data. See [Adding data to a component](xref:Adding_data_to_component).
 
    > [!NOTE]
-   > The assigned data name will be visible in the lower right corner of the query filter component (e.g. Query filter 1).
+   > The assigned data name will be visible in the lower-right corner of the query filter component (e.g. Query filter 1).
 
 1. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Customize_Component_Layout).
 
@@ -64,7 +64,7 @@ After configuring the query filter component:
    > [!NOTE]
    > In this example, we are using a table component. However, any component capable of receiving a query can be linked to the query filter.
 
-1. From DataMiner 10.3.0 [CU21]/10.3.0 [CU9]/10.4.12 onwards<!--RN 41141-->, go to *All available data > Components > Query filter # > Filters > Queries* in the *Data* pane and drag it onto the table component. Prior to DataMiner 10.3.0 [CU21]/10.3.0 [CU9]/10.4.12, use *All available data > Feeds > Query filter # > Queries* in the *Data* pane instead.
+1. From DataMiner 10.3.0 [CU21]/10.3.0 [CU9]/10.4.12 onwards<!--RN 41141-->, go to *All available data > Components > Query filter > Filters > Queries* in the *Data* pane and drag it onto the table component. Prior to DataMiner 10.3.0 [CU21]/10.3.0 [CU9]/10.4.12, use *All available data > Feeds > Query filter > Queries* in the *Data* pane instead.
 
    Each time you change the query filter, a new query is passed to the table, displaying only rows that match the filter settings.
 
@@ -79,7 +79,7 @@ After configuring the query filter component:
 
 1. In the *Data* pane, go to *All available data > Queries*. Drag the query you created earlier onto the table component.
 
-1. In the *Data* pane, go to *All available data > Components > Query filter # > Filters* and drag *Query columns* onto the yellow filter drop area of the table component. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, you can find *Query columns* in the *All available data > Feeds > Query filter # > Filters* section of the *Data* pane instead.
+1. In the *Data* pane, go to *All available data > Components > Query filter > Filters* and drag *Query columns* onto the yellow filter drop area of the table component. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, you can find *Query columns* in the *All available data > Feeds > Query filter > Filters* section of the *Data* pane instead.
 
    Each time you change the query filter, the data inside the table is filtered according to the filter settings in the query filter. No new query is passed to the table. The latter keeps displaying all rows, but those that do not match the filter will turn gray.
 

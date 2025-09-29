@@ -2,7 +2,7 @@
 uid: LowCodeApps_Layout
 ---
 
-# Configuring the low-code app layout
+# Configuring the app layout
 
 ## Customizing the icon and color of an app
 
@@ -28,7 +28,7 @@ To create a new theme, see [Creating a new theme for a low-code app page](#creat
 
 ### Applying an existing theme to a low-code app page
 
-1. Make sure the low-code app page is in edit mode and no components are selected. See [Editing a low-code application](xref:Editing_custom_apps).
+1. Make sure the low-code app page is in edit mode and no components are selected. See [Editing an app](xref:Editing_custom_apps).
 
 1. In the panel on the right, select the *Layout* pane.
 
@@ -40,7 +40,7 @@ To create a new theme, see [Creating a new theme for a low-code app page](#creat
 
 ### Creating a new theme for a low-code app page
 
-1. Make sure the low-code app page is in edit mode and no components are selected. See [Editing a low-code application](xref:Editing_custom_apps).
+1. Make sure the low-code app page is in edit mode and no components are selected. See [Editing an app](xref:Editing_custom_apps).
 
 1. In the panel on the right, select the *Layout* pane.
 
@@ -145,9 +145,9 @@ To create a new theme, see [Creating a new theme for a low-code app page](#creat
    > - To duplicate a component theme, click the ![Duplicate](~/dataminer/images/Duplicate_Theme.png) button next to it.
    > - To delete a component theme, click the ![Delete](~/dataminer/images/Delete_Theme.png) button next to it. This is not possible for the default theme.
 
-1. Click *Create* or *Save* (depending on your DataMiner version<!--RN 38278-->) in the lower right corner to save all changes.
+1. Click *Create* or *Save* (depending on your DataMiner version<!--RN 38278-->) in the lower-right corner to save all changes.
 
    > [!NOTE]
    >
-   > - To stop editing the theme and reset all changes, click *Cancel* in the lower right corner.
+   > - To stop editing the theme and reset all changes, click *Cancel* in the lower-right corner.
    > - To set the new theme as the default theme, click the toggle button next to *Set as default*.

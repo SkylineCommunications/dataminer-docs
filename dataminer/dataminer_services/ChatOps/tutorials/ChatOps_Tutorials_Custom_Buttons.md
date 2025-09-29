@@ -1,5 +1,6 @@
 ---
 uid: ChatOps_Tutorials_Custom_Buttons
+reviewer: Alexander Verkest
 ---
 
 # Adaptive Card notifications with custom buttons
@@ -36,7 +37,7 @@ Later in this tutorial, you will trigger a custom command from the *Custom Comma
 > [!NOTE]
 > To learn more about this package, refer to its [README file](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/CustomCommandExamples/README.md).
 
-1. Go to <https://catalog.dataminer.services/details/package/5863>.
+1. Look up the [Custom Command Examples](https://catalog.dataminer.services/details/9405093d-bbcf-45cf-88bb-c9207644346b) package in the Catalog.
 
    ![Custom Command Examples page in Catalog](~/dataminer/images/chatops_notification_part_02_02_001.png)
 

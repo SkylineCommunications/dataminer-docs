@@ -4,7 +4,7 @@ uid: NT_ASSIGN_DYNAMIC_OID
 
 # NT_ASSIGN_DYNAMIC_OID (248)
 
-Assigns a dynamic OID to a parameter that will be read by a multi-threaded timer.
+Assigns a dynamic OID to a parameter that will be read by a multithreaded timer.
 
 ```csharp
 uint parameterID = 200;
@@ -24,4 +24,4 @@ protocol.NotifyProtocol(248 /*NT_ASSIGN_DYNAMIC_OID*/ , info, oid);
 
 ## Return Value
 
-- Used in multi-threaded timers.
+- Used in multithreaded timers.

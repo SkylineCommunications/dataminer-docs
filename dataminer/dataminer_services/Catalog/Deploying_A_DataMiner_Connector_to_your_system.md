@@ -1,5 +1,6 @@
 ---
 uid: Deploying_a_catalog_item
+reviewer: Alexander Verkest
 ---
 
 # Deploying a Catalog item to your system

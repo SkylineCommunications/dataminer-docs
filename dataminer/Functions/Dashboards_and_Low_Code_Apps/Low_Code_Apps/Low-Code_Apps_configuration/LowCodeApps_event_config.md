@@ -2,17 +2,17 @@
 uid: LowCodeApps_event_config
 ---
 
-# Configuring low-code app events
+# Configuring app events
 
 You can configure actions for different types of events in DataMiner Low-Code Apps. These are the main types:
 
-- *On open*: This event takes place when a page or panel is opened. (See [Configuring a page of a low-code app](xref:LowCodeApps_page_config) and [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).)
+- *On open*: This event takes place when an app, a page, or a panel is opened. See [Changing app settings](xref:Changing_low-code_app_settings), [Configuring an app page](xref:LowCodeApps_page_config), or [Configuring an app panel](xref:LowCodeApps_panel_config).
 
   > [!NOTE]
   > Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39604 + 39682 + 39636-->, this type of event is only available for low-code app pages and is called "On page load".
   > Prior to DataMiner 10.4.0 [CU12]/10.5.3<!--RN 42039-->, this type of event only executes its actions when all components are done loading. This also includes the components that need scrolling down to be loaded.
 
-- *On click*: This event takes place when a user clicks a button. (See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).)
+- *On click*: This event takes place when a user clicks a button. (See [Configuring the app header bar](xref:LowCodeApps_header_config).)
 
 - *On close*: Available from DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39604 + 39682 + 39668-->. This event takes place when a page or panel is closed.
 
@@ -50,6 +50,23 @@ To configure an event to launch a script:
 
 > [!IMPORTANT]
 > From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!-- RN 39027 -->, linking a script parameter to empty data (or to an empty feed, prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->) will fill it with an empty array. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
+
+From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43222-->, the output of an Automation script can be used in the post actions of a *Launch a script* action. See [Configuring another action for the same event](#configuring-another-action-for-the-same-event).
+
+To use this output as data:
+
+1. If available, click the link icon in the action configuration.
+
+1. Navigate to the *Action* tab.
+
+1. Set *Type* to `Script outputs`.
+
+1. Enter the desired property name.
+
+1. Select *Link*.
+
+> [!NOTE]
+> If a referenced key does not exist in the output, an empty string is returned by default.
 
 ## Navigating to a URL
 
@@ -271,7 +288,7 @@ To configure an event to show a context menu:
 
    - Click the ![Configure actions](~/dataminer/images/Configure_Actions.png) button to configure one or more actions to execute when the menu item is clicked.
 
-     Save the actions by selecting *Ok* in the lower right corner.
+     Save the actions by selecting *Ok* in the lower-right corner.
 
 1. Optionally, add additional menu items, following the same steps until you are satisfied with the number of menu items.
 
@@ -282,7 +299,7 @@ To configure an event to show a context menu:
 
 ## Showing a notification
 
-Available from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38548-->. To configure an event to show a notification in the lower right corner of a low-code app:
+Available from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38548-->. To configure an event to show a notification in the lower-right corner of a low-code app:
 
 1. Select *Show a notification*.
 
@@ -313,7 +330,13 @@ Available from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38548-->. To configu
 
 After you have configured an action, you can click *Upon completion* to configure another action that should occur as soon as the previous action is completed.
 
-Alternatively, you can configure another action that should happen at the same time with the *Add action* button in the lower right corner.
+Alternatively, you can configure another action that should happen at the same time with the *Add action* button in the lower-right corner.
+
+From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43222-->, all actions are numbered hierarchically. For example:
+
+![Numbered hierarchically](~/dataminer/images/Actions_Numbered_Hierarchically.png)<br>*Actions configuration window in DataMiner 10.5.9*
+
+These numbers make it easier, for example, to reference actions when [linking Automation script output data](#launching-a-script).
 
 ## Removing an action
 

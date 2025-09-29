@@ -21,7 +21,7 @@ To enable Failover using DataMiner version **10.1.8 or higher**:
 
 1. On the *Manage* tab, select the primary DMA in the list of DataMiner Agents.
 
-1. Click the *Failover* button in the lower right corner.
+1. Click the *Failover* button in the lower-right corner.
 
 1. Select the type of Failover you want to configure: *Failover (Virtual IP)* or *Failover (Hostname)*.
 
@@ -69,7 +69,7 @@ To enable Failover using DataMiner version **10.1.7 or lower**:
 
 1. On the *Manage* tab, select the primary DMA in the list of DataMiner Agents.
 
-1. Click the *Failover* button in the lower right corner.
+1. Click the *Failover* button in the lower-right corner.
 
 1. In the *Failover* window, select the *Failover* checkbox.
 

@@ -1,10 +1,10 @@
 ---
-uid: Multi-threading1
+uid: Multithreading1
 ---
 
-# Multi-threading
+# Multithreading
 
-In some situations, parallel programming can be considered to optimize performance and decrease execution time. The .NET Framework 4 (and above) provides extensive support for parallel programming. Consider the following when implementing multi-threading in a protocol:
+In some situations, parallel programming can be considered to optimize performance and decrease execution time. The .NET Framework 4 (and above) provides extensive support for parallel programming. Consider the following when implementing multithreading in a protocol:
 
 - Verify that the parallel implementation is in fact running faster through performance measurements, especially when using locks.
 

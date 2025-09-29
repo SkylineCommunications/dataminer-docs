@@ -99,7 +99,7 @@ To create a redundancy group:
 
    - If you wish to select a view for the redundancy group and another view for each of the virtual primary elements, click *Switch to advanced view configuration*, and select each item in turn to indicate the view where it should be placed.
 
-1. Click the *Create* button in the lower right corner.
+1. Click the *Create* button in the lower-right corner.
 
 > [!NOTE]
 >

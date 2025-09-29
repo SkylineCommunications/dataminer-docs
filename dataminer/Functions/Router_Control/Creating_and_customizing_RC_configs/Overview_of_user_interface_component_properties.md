@@ -144,7 +144,7 @@ Consists of TabPage components. These have one customizable property, the tab pa
 
 ## Optional property groups
 
-To each of the components mentioned above, additional property groups can be added by means of the *Add* button in the lower left corner of the properties pane. These property groups can also be removed again, by clicking the *x* in the top-right corner of the optional block of properties.
+To each of the components mentioned above, additional property groups can be added by means of the *Add* button in the lower-left corner of the properties pane. These property groups can also be removed again, by clicking the *x* in the top-right corner of the optional block of properties.
 
 The following optional property groups are available:
 

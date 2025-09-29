@@ -10,7 +10,7 @@ keywords: low-code, low code, lowcode
 | Name | Description |
 |--|--|
 | [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message) | Add a custom message when a query returns no results for any of the following components of a dashboard: table, grid, pie & donut chart, line & area chart, timeline, and node edge graph. |
-| [Leveraging controls and feeds to create a dynamic GQI query](xref:Tutorial_Dashboards_Controls_And_Feeds_Query) | Discover how to harness controls and feeds that are used in a GQI query, so that an update to the user input will lead to an updated GQI result. |
+| [Using controls to create a dynamic GQI query](xref:Tutorial_Dashboards_Controls_Query) | Learn how to link controls to a GQI query so that changes in user input immediately update the query results. |
 | [Getting started with node edge graphs](xref:Tutorial_Apps_Node_Edge)| Build a basic network diagram using GQI queries with a node edge graph component. |
 | [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
 | [Creating an anomaly overview dashboard](xref:Creating_Anomaly_Overview_Dashboard) | Create a dashboard that shows an overview of behavioral change event data. |
@@ -57,4 +57,4 @@ keywords: low-code, low code, lowcode
 | [Providing a custom sort order](xref:GQI_Redirect_Sort_Tutorial) | Implement a custom GQI column sort order using a custom operator. |
 | [Building a GQI data source that fetches satellites](xref:Ad_hoc_Tutorials_Satellites) | Go through an example script that forwards satellites data to the GQI. |
 | [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
-| [Building a GQI data source that retrieves data from a DMS](xref:Ad_hoc_Tutorials_GQIDMS) | Create an ad hoc data source to retrieve data from your DMS. |
+| [Building a GQI data source that retrieves data from a DMS](xref:Ad_hoc_Tutorials_Interact_With_DMS) | Create an ad hoc data source to retrieve data from your DMS. |

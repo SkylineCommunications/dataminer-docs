@@ -9,16 +9,18 @@ uid: General_Main_Release_10.6.0_new_features
 
 ## Highlights
 
-- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314-id-42535-id-43196)
+- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196] [ID 43567] [ID 43793]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314-id-42535-id-43196-id-43567-id-43793)
 
 ## New features
 
-#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196]
+#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196] [ID 43567] [ID 43793]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 <!-- RN 42314: MR 10.6.0 - FR 10.5.4 -->
 <!-- RN 42535: MR 10.6.0 - FR 10.5.5 -->
 <!-- RN 43196: MR 10.6.0 - FR 10.5.9 -->
+<!-- RN 43567: MR 10.6.0 - FR 10.5.11 -->
+<!-- RN 43793: MR 10.6.0 - FR 10.5.11 -->
 
 From now on, you can enable the Swarming feature in a DataMiner System in order to be able to swarm [elements](xref:SwarmingElements) from one DataMiner Agent to another Agent in the same cluster. Prior to this, this feature is available in preview if the *Swarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
@@ -37,6 +39,8 @@ When you create or update an element in DataMiner Cube, you will be able to indi
 If you try to swarm an element of which the *Block Swarming* option is set to true, then the error message *Element is not allowed to swarm (blocked)* will be displayed.
 
 In DataMiner Cube, this *Block Swarming* option will only be visible if Swarming is enabled in the DataMiner System.
+
+When an element is swarmed to the DataMiner Agent that is hosting it already, an unload request will be broadcasted to all DataMiner Agents in the cluster, making sure that no other DataMiner Agent is incorrectly hosting it.
 
 > [!IMPORTANT]
 >
@@ -70,7 +74,8 @@ Swarming is not available in the following DataMiner Systems:
 
 > [!NOTE]
 >
-> - Currently, Swarming is limited to [basic elements](xref:SwarmingElements). Support for other types of elements will be added in future versions.
+> - Currently, Swarming is limited to [basic elements](xref:SwarmingElements) and parent DVE and Virtual Function elements. Support for other types of elements will be added in future versions.
+> - If you swarm a parent DVE or parent Virtual Function element, all child elements will then automatically be swarmed together with the parent element. Note that parent or child elements that are part of a redundancy group cannot be swarmed. Also, a parent element cannot be swarmed if one of its child elements is part of a redundancy group.
 > - [Prerequisite checks](xref:EnableSwarming#running-a-prerequisites-check) are in place to prevent the enabling of the Swarming feature when non-supported objects are present. Where possible, you will also be prevented from configuring or creating these on a Swarming-enabled system.
 
 ##### Required user permissions
@@ -83,7 +88,7 @@ To swarm an element, users will also need config rights on the element.
 
 ##### Swarming elements
 
-When Swarming has been enabled, you can swarm elements **in DataMiner Cube** via *System Center* > *Agents* > *Status*. On that page, the *Swarming* button will be displayed instead of the *Migration* button. Clicking the button will open a window where you can select the elements you want to swarm and the destination DMA.
+When Swarming has been enabled, you can swarm elements **in DataMiner Cube** via *System Center* > *Agents* > *Status*. On that page, the *Swarming* button will be displayed instead of the *Migration* button. Clicking the button will open a window where you can select the elements you want to swarm and the destination DMA. Note that child DVE elements and child Virtual Function elements will not appear in this window as they automatically follow their parent element.
 
 Swarming elements is also possible **via Automation, QActions or other (external) tools**. See the following Automation script example, in which two input parameters are defined to retrieve the element key and the target agent ID:
 
@@ -118,7 +123,7 @@ public class Script
 }
 ```
 
-An information event will be generated when an element was successfully swarmed. Example:
+An information event will be generated when an element has been successfully swarmed. Example:
 
 `Swarmed from <DmaName> (<DmaId>) to <DmaName> (<DmaId>) by <UserName>`
 
@@ -444,7 +449,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320] [ID 43440] [ID 43686]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
@@ -456,6 +461,8 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 42480: MR 10.6.0 - FR 10.5.5 -->
 <!-- RNs 42602: MR 10.6.0 - FR 10.5.6 -->
 <!-- RNs 43320: MR 10.6.0 - FR 10.5.9 -->
+<!-- RNs 43440: MR 10.6.0 - FR 10.5.11 -->
+<!-- RNs 43686: MR 10.6.0 - FR 10.5.11 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
@@ -464,6 +471,11 @@ Whenever the relation is broken, RAD will detect this and generate suggestion ev
 ##### Configuring the parameter groups
 
 All configuration settings are stored in the *ai_rad_models_v2* database table, and have to be managed using either the *RAD Manager* app or the RAD API.
+
+> [!NOTE]
+>
+> - A RAD parameter group will be hosted on the DMA on which it was created, even after some of the parameters in the group were swarmed to other DMAs.
+> - Whenever you delete an element that is being used in one or more RAD parameter groups, an error will immediately get logged, and the parameter groups containing parameters from that deleted element will be marked as "not monitored".
 
 ##### Average trending
 
@@ -481,9 +493,7 @@ Under certain conditions, Relational anomaly detection (RAD) is able to detect r
 
 ##### Limitations
 
-- RAD is only able to monitor parameters on the local DataMiner Agent. This means that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
-
-- Some parameter behavior will cause RAD to work less accurately. For example, if a parameter only reacts on another parameter after a certain time, then RAD will produce less accurate results.
+Some parameter behavior will cause RAD to work less accurately. For example, if a parameter only reacts on another parameter after a certain time, then RAD will produce less accurate results.
 
 ##### Messages
 
@@ -491,15 +501,16 @@ The following API messages can be used to create, retrieve and remove RAD parame
 
 | Message | Function |
 |---------|----------|
-| AddRADParameterGroupMessage     | Creates a new RAD parameter group.<br>If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated. |
+| AddRADParameterGroupMessage     | Creates a new RAD parameter group.<br>It is not allowed to have two groups with the same name, even when they are hosted by different agents.<br>If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated. |
 | GetRADDataMessage               | Retrieves the anomaly scores over a specified time range of historical data. |
 | GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular RAD parameter group.<br>The response to a `GetRADParameterGroupInfoMessage` includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging. |
-| GetRADParameterGroupsMessage    | Retrieves a list of all RAD parameter groups that have been configured. |
+| GetRADParameterGroupsMessage    | Retrieves a list of all RAD parameter groups that have been configured across all agents in the cluster. |
 | RemoveRADParameterGroupMessage  | Deletes a RAD parameter group. |
 | RetrainRADModelMessage          | Retrains the RAD model over a specified time range. |
 
 > [!NOTE]
 >
+> - These messages do not have to be sent to the agent monitoring the parameters in question. Each message will automatically be forwarded to the correct agent based on the name of the parameter group. If the agent could not be determined, an exception will be thrown.
 > - Names of RAD parameter groups will be processed case-insensitive.
 > - When a Relational Anomaly Detection (RAD) parameter group is deleted, all open suggestion events associated with that parameter group will automatically be cleared.
 > - Instances of (direct) view column parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will automatically be translated to the base table parameters.
@@ -680,6 +691,14 @@ For an example showing how to implement a dropdown box filter in an interactive 
 > [!IMPORTANT]
 > This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
 
+#### New BPA test 'Large Alarm Trees' [ID 42952]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+A new BPA test named "Large Alarm Trees" is now available. This test will retrieve the active alarm trees and check if any are getting too large, because excessively large alarm trees can potentially have a negative impact on your DataMiner System. If any large alarm trees are found, you will need to take the necessary [corrective actions](xref:Best_practices_for_assigning_alarm_severity_levels#keep-alarm-trees-from-growing-too-large).
+
+The BPA test is available in System Center on the *Agents > BPA* tab.
+
 #### Automation scripts: New Interactivity tag [ID 42954]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
@@ -797,6 +816,34 @@ After a dependency has been uploaded, all scripts using that dependency will be 
 > [!NOTE]
 > For QActions in protocols, the relevant SLScripting process must be restarted before the new DLL will get loaded.
 
+#### DataMiner Object Models: Attachments can now be uploaded to a network share [ID 43114] [ID 43366]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+In `ModuleSettings`, `DomManagerSettings` now contains a new `DomInstanceNetworkAttachmentSettings` class that allows you to save DOM instance attachments to a network share instead of to the *Documents* module.
+
+The `DomInstanceNetworkAttachmentSettings` class contains the following properties:
+
+- `NetworkSharePath` (string)
+
+  The UNC path to the network share where the attachments should be saved.
+
+  This path has to start with `\\` and cannot contain any characters that are illegal for a path (e.g. "<") or strings that allow directory traversal (e.g. "../").
+
+  When the path is left empty, attachments are saved to the `C:\Skyline DataMiner\Documents` folder. This is the default behavior.
+
+- `CredentialId` (GUID)
+
+  The ID of the credentials in the credentials library that will be used to add the attachment to the network share.
+
+  These credentials must be of type *Username and password credentials* and must be the credentials of a user that has read/write access to the path defined in `NetworkSharePath`. In case you have a Windows network share, you need to add the domain name (for a domain user) or hostname (for a local user) in front of the username (e.g. "MYPC\userName").
+
+> [!NOTE]
+>
+> - When a DOM module is configured to save attachments to a network share, the system will validate whether the user creating/updating the `ModuleSettings` has permission to access the credentials. Once this is set up, any user that has permissions to create or update a `DomInstance` can save attachments to the network share under the configured user.
+> - When a DOM module is configured to save attachments to a network share, no migration is done of existing attachments. They will continue to exist in the `C:\Skyline DataMiner\Documents` folder, but will no longer work. You can copy them over or move them to the network share; the folder structure is the same. Likewise, when removing the configuration to save attachments to a network share, no migration is done of attachments available on the previously configured network share.
+> - By default, the size of the attachments is limited to 20 MB. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#documentsmaxsize).
+
 #### SLNet: 'TraceId' property added to ClientRequestMessage & extended logging [ID 43187]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
@@ -850,6 +897,16 @@ The logging of a DOM manager will now also contain a line indicating the start o
 ```txt
 2025/07/02 15:05:11.110|SLNet.exe|HandleStatusTransitionRequest|INF|3|269|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Handling status transition with ID 'new_to_closed' for instance with ID '1ff720a3-0aa2-4548-8b51-d8b975e19ea4'.
 ```
+
+#### gRPC now used by default for server-server and server-client communication [ID 43190] [ID 43260] [ID 43305] [ID 43331] [ID 43435] [ID 43506]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Up to now, .Net Remoting was used by default for communication between DataMiner Cube and a DataMiner Agent as well as between DataMiner Agents, though it was possible to set gRPC as the default instead (either by adding *Redirect* tags in *DMS.xml* or by disabling .NET Remoting in *MaintenanceSettings.xml* for server-server communication, and by adjusting *ConnectionSettings.txt* for server-client communication). Now gRPC will be the default instead. This means that the *EnableDotNetRemoting* setting in *MaintenanceSettings.xml* is now by default set to *false*, and the connection type in *ConnectionSettings.txt* is now by default set to *GRPCConnection*.
+
+When you upload an upgrade package that includes this change, the *VerifyGRPCConnection* prerequisite check will run to verify whether all DataMiner Agents in the cluster are ready to switch to using gRPC as the default communication type. This check will fail in case a possible configuration issue or connectivity issue is detected. For details, refer to [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite).
+
+We recommend uploading the package prior to the maintenance window for the upgrade, so you can already check beforehand whether all requirements for the upgrade are met and address any possible issues.
 
 #### Service & Resource Management: Support for capacity ranges [ID 43335]
 
@@ -970,3 +1027,143 @@ If the hostname cannot be resolved to an IP address, an error alarm with the fol
 Example:
 
 `Could not resolve destination host to an IP: polling host=localhost123, or failed to set the destination address. Host to IP failure. Error : 11001. [WSAHOST_NOT_FOUND]`
+
+#### DataMiner Object Models: Definition-level security [ID 43380] [ID 43589]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+It is now possible to configure DOM instance security based on the DOM definitions the instances are linked to. In other words, you will now be able to configure which DataMiner user groups should have access to the DOM instances of a certain DOM definition.
+
+The following important changes have been made:
+
+- Only users who have been granted the *Modules > System configuration > Object Manager > Module Settings* user permission will be allowed to create, update, and delete DOM configuration objects (i.e. section definitions, DOM definitions, DOM behavior definitions, and DOM templates). This means that, if you want to deploy or change a DOM model, you will now need this permission.
+
+- The DOM module settings now include a new `LinkSecuritySettings` configuration object that will allow you to link a DataMiner user group to a DOM definition by ID. This object contains a collection of `GroupLink` objects, each containing the following properties:
+
+  - `GroupName` (string) : The name of the DataMiner user group
+  - `DomDefinitionReferences` (List\<DomDefinitionReference\>) : The list of references to the DOM definitions linked to the user group specified in `GroupName`.
+
+  > [!NOTE]
+  > Reinitialize the DOM manager each time you have updated the DOM module settings.
+
+##### General behavior
+
+- When no `GroupLink` objects are defined, definition-level security will not be enabled, but users who want to make changes to the DOM configuration settings will need *Modules > System configuration > Object Manager > Module Settings* permission to do so.
+
+  > [!NOTE]
+  > Even when definition-level security is enabled will users need *Modules > System configuration > Object Manager > Module Settings* permission if they want to make changes to the DOM configuration settings.
+
+- From the moment one `GroupLink` object has been defined, definition-level security will be enabled for the entire DOM module. Only users belonging to user groups that have `GroupLink` object defined will have access to the instances of the DOM definitions specified in those `GroupLink` objects.
+
+- If a DOM module with definition-level security enabled contains multiple DOM definitions, no one will be able to access the instances of DOM definitions for which no `GroupLink` objects have been defined yet.
+
+- Currently, `GroupLink` objects grant full access (i.e. read access as well as write access) to the instances of the DOM definitions specified in them.
+
+##### Filtering behavior & restrictions
+
+When definition-level security has been enabled for a DOM module, every read and count filter/query will need to be evaluated to find out whether the person using that filter/query is allowed to do so. As it is only possible to evaluate filters and queries with enough context, a number of restrictions have been set.
+
+###### Read filters/queries
+
+A read filter/query needs to filter by DOM definition or by DOM instance ID.
+
+Examples of allowed filters/queries:
+
+| Example | Description |
+|---------|-------------|
+| (DOM Definition ID == a1ds5z8)  | Reading all DOM instances that are part of the specified DOM definition. |
+| (DOM Definition ID == a1ds5z8) && (Field X = "Some Value") | Reading all DOM instances with field X set to "Some Value" that are part of the specified DOM definition. |
+| (DOM Definition ID == a1ds5z8) \|\| (DOM Definition ID == 5ze7s84a) | Reading all DOM instances that are part of either of the specified DOM definitions. |
+| (DOM Instance ID == f4e87d) \|\| (DOM Instance ID == qs4z54) \|\| (DOM Instance ID == ezeasf) | Reading specific DOM instances based on ID. |
+
+Examples of prohibited filters/queries:
+
+| Example | Description |
+|---------|-------------|
+| TRUEFilterElement\<DomInstance\> | Sending a plain TRUE filter is not supported when the DOM module has definition-level security enabled. |
+| (Field X = "Some Value") | This filter does not contain any context. |
+| (Status ID = "in_progress") | This filter does not contain any context. |
+
+When a filter/query that reads DOM instances has a DOM definition context the user does not have access to, the read request will fail with a `NoPermission` error. If the DOM instances are read using a DOM instance ID filter, the read request will not fail, but the DOM instances the user does not have access to will not be returned in the result set. Here are a few examples in which the user only has access to DOM definition A.
+
+| Example | Description |
+|---------|-------------|
+| (DOM Definition ID == A) | Request will be allowed. |
+| (DOM Definition ID == A) \|\| (DOM Definition ID == B) | Request will fail with a `NoPermission` error. |
+| (DOM Instance ID == \<Instance linked to A\>) \|\| (DOM Instance ID == \<Instance linked to B\>) | Only the DOM instance linked to DOM definition A will be returned. |
+
+###### Count filters/queries
+
+A count filter/query needs to filter by DOM definition. That means that the filter/query should already limit the results based on one or more DOM definitions. Counts filtered by DOM instance ID(s) are not supported.
+
+Examples of allowed filters/queries:
+
+| Example | Description |
+|---------|-------------|
+| (DOM Definition ID == a1ds5z8) | Counting all DOM instances that are part of the specified DOM definition. |
+| (DOM Definition ID == a1ds5z8) && (Field X = "Some Value") | Counting all DOM instances with field X set to "Some Value" that are part of the specified DOM definition. |
+| (DOM Definition ID == a1ds5z8) \|\| (DOM Definition ID == 5ze7s84a) | Counting all DOM instances that are part of either of the specified DOM definitions. |
+| (DOM Definition ID = a1ds5z8) && ((DOM Instance ID == f4e87d) \|\| (DOM Instance ID == qs4z54) \|\| (DOM Instance ID == ezeasf)) | Reading specific DOM instances based on ID is only supported if a DOM definition context is specified. |
+
+Examples of prohibited filters/queries:
+
+| Example | Description |
+|---------|-------------|
+| TRUEFilterElement\<DomInstance\> | Sending a plain TRUE filter is not supported when the DOM module has definition-level security enabled. |
+| (Field X = "Some Value") | This filter does not contain any context. |
+| (Status ID = "in_progress") | This filter does not contain any context. |
+| (DOM Instance ID == f4e87d) \|\| (DOM Instance ID == qs4z54) \|\| (DOM Instance ID == ezeasf) | Reading specific DOM instances based on ID is not supported if no DOM definition context is specified. |
+
+When a filter/query that counts DOM instances has a DOM definition context the user does not have access to, the count request will fail with a `NoPermission` error.
+
+> [!NOTE]
+> Filters sent to the DOM manager by standard GQI queries made in a dashboard or low-code app have a DOM definition context by default. No special adjustments have to be made in this case, but keep in mind that GQI queries that retrieve data for DOM definitions the user does not have access to will result in permission errors appearing in the dashboard or low-code app.
+
+##### Additional security when reading/counting DOM instance history records
+
+From now on, when definition-level security is enabled for a DOM module, reading and counting DOM instance history records will only be possible if the following conditions are met:
+
+- The filter must include 'SubjectID Equal' clauses that narrow down the filter to the history of one or more DOM instances. If the filter does not meet this requirement, the request will fail with a `CrudFailedException`, and the `TraceData` will contain a `DomInstanceError` with reason `ReadFilterNotSupportedBySecurity` or `CountFilterNotSupportedBySecurity`.
+
+- The user must have access to all DOM instances for which history records are requested. Also, all specified DOM instances must exist. Otherwise, the request will fail with a `CrudFailedException`, and the `TraceData` will contain `DomInstanceError` with reason `NoPermission`.
+
+##### Event security
+
+The permissions defined by the `GroupLink` objects will also be applied when subscribing on a `DomInstancesChangedEventMessage`. The event should only contain the created, updated or deleted instances the subscribed user is allowed to access. If an event contains multiple objects, and the user does not have access to all of those, the event will be dropped.
+
+The following properties have been added to the `DomInstancesChangedEventMessage` class:
+
+| Property | Description |
+|----------|-------------|
+| FromSecurityEnabledModule | Determines whether security could be applied to the event.<br>If true, there could be more created, updated, or deleted objects, but the subscribed user may not have access to all of them. |
+| SecurityEnabledModuleNotAvailable | An empty event could be received with this boolean property set to true if, for some reason, the security could not be applied.<br>This can occur when a user is subscribed on an agent other than the one that handled the create/update/delete action, and this other agent has connection issues with the database preventing the DOM manager to initialize.<br>If such an event is received, the subscriber may have missed one or more updates. If these events are used to keep a list of cached objects up to date, we recommend reloading them to ensure that the most recent and correct data is visualized. |
+
+##### General notes
+
+- Changing the name of a DataMiner user group will invalidate any existing `GroupLink` objects associated with it. Make sure to adjust these objects when a user group was renamed.
+- Reading, adding or removing a DOM instance attachment will now also be blocked if the user does not have permission to read/write that DOM instance.
+
+##### Changes to the SLNetClientTest tool
+
+The SLNetClientTest tool has been updated to support the limitation of not being able to send a TRUEFilterElement to get all DOM instances in a module.
+
+When definition-level security is enabled, you will now need to first select one or more DOM definitions from a filter menu. This menu is accessible for any DOM manager, so it can also be used to retrieve DOM instances more easily for a specified list of DOM definitions.
+
+#### DataMiner upgrade: New prerequisite check 'VerifyBrokerGatewayMigration' [ID 43526]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+A new *VerifyBrokerGatewayMigration* prerequisite check has been added to prepare for the upcoming mandatory migration to BrokerGateway. However, this check is not yet relevant for users outside of Skyline Communications.
+
+#### SLNetClientTest tool: Filtering messages using regular expressions [ID 43540]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+In the *SLNetClientTest* tool, at the bottom of the main window, a new filter box has been added.
+
+After you select the checkbox in front of it, it will allow you to filter the message list using a regular expression.
+
+This new filter box should only be used when no new messages will be added to the list, e.g. when inspecting an *\*.slnetdump* file.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

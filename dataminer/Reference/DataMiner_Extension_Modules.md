@@ -73,11 +73,19 @@ From version 1.3.1 of the DataMiner SupportAssistant module onwards, this DxM al
 
 The UserDefinableApiEndpoint module is responsible for handling API triggers for DataMiner User-Defined APIs. See [DataMiner UserDefinableApiEndpoint DxM](xref:UD_APIs_UserDefinableApiEndpoint).
 
+### Web
+
+The Web module provides back-end services for the DataMiner web apps.
+
+This DxM is included in DataMiner upgrade packages from DataMiner 10.5.0 [CU8]/10.5.11 onwards.<!-- RN 43439 -->
+
 ## Available DxMs
 
 ### CloudGateway
 
 The CloudGateway module is responsible for connecting a DataMiner System to dataminer.services. It manages the identity towards dataminer.services and ensures a secure connection.
+
+This DxM is included in DataMiner upgrade packages from DataMiner 10.5.9/10.6.0 onwards<!--RN 43205-->. However, the DxM will only be upgraded if an older version is found on the DMA. If no older version is found, it will not be installed.
 
 ### CloudFeed
 
@@ -86,20 +94,6 @@ The CloudFeed module is responsible for offloading data towards dataminer.servic
 From CloudFeed version 1.4.0 onwards, the minimum required DataMiner version is DataMiner 10.4.10.<!-- RN 40413 -->
 
 From DataMiner 10.5.0/10.5.1 onwards<!--RN 41357-->, DataMiner upgrade packages by default include the latest version of the CloudFeed module. If a newer version of the CloudFeed module is available but you prefer not to install an upgrade package, you can install a newer version separately via the Admin app.
-
-### Copilot
-
-The Copilot module extends DataMiner with conversational AI. For more information, see [Copilot](xref:Copilot_DxM).
-
-### DataAggregator
-
-See [Data Aggregator](xref:Data_Aggregator_DxM).
-
-### ModelHost
-
-The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
-
-The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node). However, once it has been deployed, it gets upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 -->
 
 ### CommunicationGateway
 
@@ -111,3 +105,23 @@ This DxM exists in tandem with service-specific [middleware](xref:Nuget_Communic
 
 > [!TIP]
 > See also: [OpenConfig Middleware](xref:DSI_OpenConfig_Middleware)
+
+### Copilot
+
+The Copilot module extends DataMiner with conversational AI. For more information, see [Copilot](xref:Copilot_DxM).
+
+### DataAggregator
+
+See [Data Aggregator](xref:Data_Aggregator_DxM).
+
+### DataAPI
+
+The DataAPI module provides an HTTP interface that accepts requests with a JSON-formatted body. When required, it creates an element to store values extracted from the JSON payload.
+
+In combination with the DataAggregator DxM, the DataAPI DxM is required for the [Data Sources](xref:Data_Sources) module.
+
+### ModelHost
+
+The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
+
+The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node). However, once it has been deployed, it gets upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 -->

@@ -5,9 +5,9 @@ description: DataMiner soft-launch options activate features that are not yet av
 
 # Overview of soft-launch options
 
-The table below contains an overview of all available soft-launch options. Unless otherwise specified, the key in the "Feature key" column must be added in *SoftLaunchOptions.xml* with the value "true" in order to activate the feature.
+The list below contains an overview of all available soft-launch options. Unless otherwise specified, the key must be added in *SoftLaunchOptions.xml* with the value "true" in order to activate the feature.
 
-The table also details the minimum DataMiner version to start using each option and, in case the feature has already been officially released in a later DataMiner version, the "Release version" when it becomes available. From that "Release version" onwards, the feature is active by default and any soft-launch configuration for the feature is ignored. As such, it is not necessary to remove a tag from *SoftLaunchOptions.xml* when the corresponding feature is officially released.
+The list also details the minimum DataMiner version to start using each option and, in case the feature has already been officially released in a later DataMiner version, the "Release version" when it becomes available. From that "Release version" onwards, the feature is active by default and any soft-launch configuration for the feature is ignored. As such, it is not necessary to remove a tag from *SoftLaunchOptions.xml* when the corresponding feature is officially released.
 
 ### AnomalyFeedback
 

@@ -2,16 +2,34 @@
 uid: General_Main_Release_10.5.0_CU6
 ---
 
-# General Main Release 10.5.0 CU6 - Preview
+# General Main Release 10.5.0 CU6
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube 10.5.0 CU6](xref:Cube_Main_Release_10.5.0_CU6).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.5.0 CU6](xref:Web_apps_Main_Release_10.5.0_CU6).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
+## Changes in build 16294
+
+### Fixes
+
+#### Visual Overview in web apps: Problem when reading the load balancing configuration [ID 43660]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+In some cases, it would not be possible to read the load balancing configuration for visual overviews in web apps. As a result, the visual overview module would not be able to start up when load balancing was enabled.
+
+#### SLScripting issue with non-English system locale [ID 43690]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+On non-English systems, a null reference exception would be thrown when SLScripting started up, and localization would get into a loop while trying to load assemblies to translate that exception until the process eventually got killed.
+
+## Changes in build 16223
 
 ### Enhancements
 
@@ -263,12 +281,6 @@ In some cases, a run-time error could be thrown when a DVE child element was del
 
 When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
 
-#### Problem when loading initial parameter data for remote elements [ID 43339]
-
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
-
-In some cases, client applications like DataMiner Cube would fail to load initial parameter data for remote elements.
-
 #### StorageModule DcM would fail to read an element XML file [ID 43350]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -313,11 +325,11 @@ In some rare cases, certain log files could have their maximum size incorrectly 
 
 From now on, by default, all log files will have their maximum size set to 10 MB.
 
-#### Failover: Problem when synchronizing the ClusterEndpoints.json files on large systems [ID 43407]
+#### SLNet memory leak caused by ClusterEndpoint.json sync [ID 43407]
 
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+<!-- MR 10.5.0 [CU4] (but also 10.5.0 [CU5] and 10.5.0 [CU6]) - FR 10.5.7 [CU1] (but also 10.5.8 [CU1] and 10.5.9) -->
 
-In large DataMiner Systems, in some cases, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely.
+In large DataMiner Systems, especially in clusters with Failover Agents, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely. This could lead to a serious memory leak in SLNet, causing DataMiner Agents to disconnect frequently.
 
 #### SLAnalytics - Pattern matching: Problem when retrieving the streaming matches [ID 43419]
 

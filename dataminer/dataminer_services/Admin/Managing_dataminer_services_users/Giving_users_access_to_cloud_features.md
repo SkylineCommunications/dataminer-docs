@@ -1,6 +1,7 @@
 ---
 uid: Giving_users_access_to_cloud_features
 keywords: cloud users, cloud user access, cloud permissions
+reviewer: Alexander Verkest
 ---
 
 # Controlling user access to dataminer.services features
@@ -46,6 +47,6 @@ If users have a dataminer.services account (i.e. they are registered on <https:/
 
 1. In the sidebar on the left, navigate to *Organization* > *Users*.
 
-1. In the list of users, on the right, click the user icon with an x in the lower right corner to revoke access for a specific user.
+1. In the list of users, on the right, click the user icon with an x in the lower-right corner to revoke access for a specific user.
 
 1. Click *Remove* to confirm that the user should be removed from the organization on dataminer.services, so that they will no longer have access to the DMS.

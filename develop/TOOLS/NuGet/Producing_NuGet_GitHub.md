@@ -29,7 +29,7 @@ To access the GitHub NuGet registry, you need a personal access token (PAT). Fol
 
    - **Scope**: Select the *write:packages* and *delete:packages* scopes. The *repo* scope should be selected by default as well.
 
-1. Click *Generate token* in the lower left corner.
+1. Click *Generate token* in the lower-left corner.
 
 1. Copy your personal access token. You will not be able to see it again afterwards.
 

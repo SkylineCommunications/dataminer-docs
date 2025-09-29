@@ -55,9 +55,9 @@ To actually sign in users in DataMiner, several authentication methods are suppo
 - [SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) (Entra ID, Okta, etc.)
 - [RADIUS](xref:Configuring_RADIUS_settings)
 
-## Multi-Factor Authentication (MFA)
+## Multifactor Authentication (MFA)
 
-Both RADIUS and SAML authentication have support for enabling Multi-Factor Authentication on your DataMiner System.
+Both RADIUS and SAML authentication have support for enabling multifactor authentication on your DataMiner System.
 
 ## Groups and permissions
 

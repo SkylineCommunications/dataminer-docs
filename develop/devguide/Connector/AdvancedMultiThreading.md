@@ -2,7 +2,7 @@
 uid: AdvancedMultiThreading
 ---
 
-# Multi-threading
+# Multithreading
 
 For each element, a main protocol execution thread is created in the SLProtocol process (see [Inner workings](xref:InnerWorkingsIntroduction)). In a protocol, it is possible to specify that additional threads should be created. This can be useful, for example, to separate time-critical actions from the polling of a device.
 

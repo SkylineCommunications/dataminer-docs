@@ -4,6 +4,9 @@ uid: SonarQube
 
 # SonarQube
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
 SonarQube performs C# code analysis on all QActions of a protocol or C# Exe blocks of an Automation script.
 
 ## Using SonarQube

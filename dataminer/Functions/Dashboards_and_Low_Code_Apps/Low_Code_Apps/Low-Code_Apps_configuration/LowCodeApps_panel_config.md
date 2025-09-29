@@ -2,7 +2,7 @@
 uid: LowCodeApps_panel_config
 ---
 
-# Configuring a panel of a low-code app
+# Configuring an app panel
 
 In addition to pages, panels can be configured in apps in the Low-Code Apps module. These contain secondary content that can be shown on top of pages. Panels can be shown or hidden via actions, for example when a user clicks a button. They can also be reused on multiple different pages.
 
@@ -20,9 +20,11 @@ In addition to pages, panels can be configured in apps in the Low-Code Apps modu
 
 1. To configure a panel, click the pencil icon next to the panel. This will open the panel configuration pane.
 
-1. To configure a header bar for the panel, follow the same steps as to configure this for a page. See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).
+1. To configure a header bar for the panel, follow the same steps as to configure this for a page. See [Configuring the app header bar](xref:LowCodeApps_header_config).
 
-1. From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39668 + 39636-->, if one or more actions should be triggered when the panel is opened or closed, in the panel configuration pane, open the *Events* section and click the *Configure actions* button next to *On open* or *On close*. Then configure the action(s) that should be triggered. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+1. To configure general panel settings, see [Configuring the settings for a page of panel](xref:Changing_low-code_app_settings#configuring-the-settings-for-a-page-of-panel).
+
+1. From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39668 + 39636-->, if one or more actions should be triggered when the panel is opened or closed, in the panel configuration pane, open the *Events* section and click the *Configure actions* button next to *On open* or *On close*. Then configure the action(s) that should be triggered. See [Configuring app events](xref:LowCodeApps_event_config).
 
 1. Click the pencil icon to configure the components on the panel. See [Configuring components](xref:Configuring_components) and [Changing dashboard settings](xref:Changing_dashboard_settings). For a list of the available components, refer to [Available visualizations](xref:Available_visualizations).
 

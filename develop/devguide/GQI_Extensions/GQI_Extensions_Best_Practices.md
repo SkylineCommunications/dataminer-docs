@@ -10,6 +10,7 @@ When developing a GQI extension, keep the following in mind:
 - [Do not use Skyline.DataMiner.Automation](#do-not-use-skylinedataminerautomation)
 - [Only use 64-bit assembly references](#only-use-64-bit-assembly-references)
 - [Make your ad hoc data source scalable](#make-your-ad-hoc-data-source-scalable)
+- Use caching correctly and when appropriate — see [Caching](xref:GQI_Extensions_Caching).
 
 ## Use DIS to create and publish extensions
 
@@ -31,6 +32,9 @@ Remember to **compile the script as a library**. You can configure this in your 
  </Script>
 </DMSScript>
 ```
+
+> [!CAUTION]
+> Do **not** use dots (`.`) in your library name. This can potentially cause the error `GQI error: Could not create instance of datasource`.
 
 ## Do not use Skyline.DataMiner.Automation
 

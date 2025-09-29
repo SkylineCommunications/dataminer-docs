@@ -4,6 +4,14 @@ uid: Configuring_components
 
 # Configuring components
 
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>
+    Want to see how to configure components in practice? Watch <a href="xref:Creating_a_completely_new_dashboard" style="color: #657AB7;">this short video</a>.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
+
 Most dashboard or low-code app components consist of **a visualization and data**.
 
 In the edit mode, [visualizations](xref:Available_visualizations) are available via the panel on the left, and [data](xref:Available_Data_Types) is available via the *Data* pane on the right.

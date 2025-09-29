@@ -1,5 +1,6 @@
 ---
 uid: ChatOps_Tutorials_Chat_Notification
+reviewer: Alexander Verkest
 ---
 
 # Chat notifications
@@ -40,7 +41,7 @@ If you have not yet installed the DataMiner Teams bot, follow the steps below. O
 > [!NOTE]
 > To learn more about this package, refer to its [README file](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md).
 
-1. Go to <https://catalog.dataminer.services/details/package/5860>.
+1. Look up the [Chat Integration Examples](https://catalog.dataminer.services/details/bfd3b725-ff5c-4b62-b776-75acad802541) package in the Catalog.
 
    ![ChatIntegration Examples page in Catalog](~/dataminer/images/chatops_notification_01_001.png)
 

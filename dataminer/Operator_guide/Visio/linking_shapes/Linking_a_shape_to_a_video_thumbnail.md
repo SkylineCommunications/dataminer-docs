@@ -10,7 +10,7 @@ When you link a shape to a video thumbnail, the video feed from the video server
 
 Please note the following:
 
-- From DataMiner 10.2.0 [CU1]/10.2.4 onwards, HTML5 video thumbnails are **muted** by default. From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41597-->, you can unmute them by clicking the sound icon in the lower right corner. When unmuted, the volume is automatically set to 100%. In earlier versions, unmuting required hovering over the sound icon and using a slider to adjust the volume.
+- From DataMiner 10.2.0 [CU1]/10.2.4 onwards, HTML5 video thumbnails are **muted** by default. From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41597-->, you can unmute them by clicking the sound icon in the lower-right corner. When unmuted, the volume is automatically set to 100%. In earlier versions, unmuting required hovering over the sound icon and using a slider to adjust the volume.
 
 - Video servers that only accept **TLS 1.2** are supported from DataMiner 10.2.0/10.1.1 onwards.
 
@@ -148,6 +148,24 @@ Additional configuration is possible in the URL:
 
   ```txt
   #https://dma.local/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true
+  ```
+
+- From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43388-->, you can specify how the image in a video thumbnail should be displayed by adding the **fitMode** parameter to the URL. The possible values are:
+
+  - `fill`: The image will completely cover the container. It may crop parts of the image, but it ensures that there is no empty space. *(default)*
+
+  - `fit`: The image will be fully visible inside the container while maintaining aspect ratio. There may be empty space if aspect ratios differ.
+
+  - `stretch`: The image will stretch to exactly fill the container, ignoring aspect ratio. This may cause distortion.
+
+  - `center`: The image will retain its original size and will be aligned at the center. It may overflow or be cropped.
+
+  - `shrink`: The image will behave like `fill` or `center`, whichever results in a smaller image. It will only scale down if needed.
+
+  Example:
+
+  ```txt
+  #https://dma.local/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true&fitMode=center
   ```
 
 ## Allowed paths in case of connection via DataMiner proxy

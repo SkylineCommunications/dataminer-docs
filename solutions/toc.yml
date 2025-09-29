@@ -2,6 +2,8 @@ items:
 - name: Solutions
   topicUid: solution_index
   items:
+  - name: About DataMiner Solutions
+    topicUid: SOL_About
   - name: Standard Solutions
     items:
     - name: dataminer.MediaOps
@@ -306,6 +308,13 @@ items:
         topicUid: Installing_TAG_App
       - name: Using the TAG Management app
         topicUid: How_to_TAG_App
+    - name: Techex TX Core app
+      topicUid: techex-tx-core-overview
+      items:
+      - name: Installing the Techex TX Core app
+        topicUid: techex-tx-core-install
+      - name: Using the Techex TX Core app
+        topicUid: techex-tx-core-howtouse
   - name: DevTools
     items:
     - name: DataMiner Objects Tool
@@ -333,13 +342,6 @@ items:
         topicUid: DOM_Using_DOM_Viewer
   - name: Custom Solutions
     items:
-    - name: DataMiner Asset Management application
-      topicUid: Asset_Management
-      items:
-      - name: Installing the Asset Management app
-        topicUid: Installing_Asset_Management
-      - name: Working with the Asset Management app
-        topicUid: Working_with_Asset_Management
     - name: DataMiner IT Tools (DITT)
       topicUid: Dataminer_IT_Tool_Overview
       items:
