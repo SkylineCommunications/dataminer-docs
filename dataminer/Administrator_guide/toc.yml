@@ -442,6 +442,8 @@ items:
             topicUid: User_groups
           - name: Types of users
             topicUid: Types_of_users
+          - name: Viewing user information
+            topicUid: Viewing_user_information
           - name: Encryption in DataMiner
             topicUid: Encryption_in_DataMiner
           - name: Cloud connectivity and security
@@ -463,8 +465,6 @@ items:
                 topicUid: Adding_a_user
               - name: Deleting a user
                 topicUid: Deleting_a_user
-              - name: Viewing user information
-                topicUid: Viewing_user_information
               - name: Editing a user's details
                 topicUid: Editing_a_users_details
               - name: Changing group membership of a user
