@@ -192,6 +192,12 @@ From now on, when a `ModuleSettings` object is updated, the network credentials 
 
 ### Fixes
 
+#### Midnight synchronization: Errors that occurred while zipping files would incorrectly get ignored [ID 42741]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, during a midnight synchronization, an error occurred while zipping a file, up to now, that error would incorrectly be ignored.
+
 #### Problem when loading initial parameter data for remote elements [ID 43339] [ID 43552]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
@@ -292,7 +298,7 @@ When, in a client application connected to a system using STaaS, you viewed a he
 
 #### Service & Resource Management: No master agent would incorrectly get selected on systems with only a ResourceManager license [ID 43697]
 
-<!-- MR 10.6.0 - FR 10.5.11 -->
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
 
 Up to now, only on systems with both a ResourceManager license and a ServiceManager license would a master agent get selected.
 
@@ -309,8 +315,22 @@ Also, when no master agent can be selected because the ResourceManager license i
 
 After an element had been swarmed, in some cases, outdated data could remain in the SLNet event cache.
 
-#### Midnight synchronization: Errors that occurred while zipping files would incorrectly get ignored [ID 42741]
+#### Swarming an element while automatic incident tracking was disabled would cause the alarms of that element to be removed from any user-defined alarm group they were in [ID 43739]
 
-<!-- MR 10.6.0 - FR 10.5.11 -->
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
 
-When, during a midnight synchronization, an error occurred while zipping a file, up to now, that error would incorrectly be ignored.
+When an element was swarmed to another DataMiner Agent while automatic incident tracking was disabled, up to now, the alarms associated with that element would incorrectly be removed from any user-defined alarm group (i.e. incident) they were in, and would again appear as separate alarms. From now on, the alarms will remain in the user-defined alarm group (i.e. incident) they are in.
+
+Also, when an element is swarmed to another DataMiner Agent while automatic incident tracking is enabled, from now on, any relational anomalies or multivariate patterns on that element will be removed.
+
+#### Problem when importing a DELT package containing average trend data into a Cassandra Cluster or STaaS database [ID 43768]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, after you had imported a DELT package containing average trend data into a Cassandra Cluster or STaaS database, that database would contain invalid trend data.
+
+#### Failover: Problem when trying to update the failover configuration when the ClusterEndpointsManager soft-launch option had been disabled [ID 43794]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, it would not be possible to update the failover configuration when the *ClusterEndpointsManager* soft-launch option had explicitly been disabled.

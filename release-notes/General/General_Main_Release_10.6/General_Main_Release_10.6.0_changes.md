@@ -543,21 +543,3 @@ When you repeatedly requested GQI queries with aggregations like e.g. "group by"
 Up to now, when the `SafelyUpdateReservationInstanceProperties` method of `ResourceManagerHelper` was used to update existing properties of a booking, in some cases, the `PropertiesWereAlreadyModified` error would incorrectly be returned.
 
 From now on, when booking properties are updated, the master agent that processes the update will check whether the properties to be updated are existing properties of the booking in question. If so, the update will complete successfully, and no false `PropertiesWereAlreadyModified` errors will be returned.
-
-#### Service & Resource Management: No master agent would incorrectly get selected on systems with only a ResourceManager license [ID 43697]
-
-<!-- MR 10.6.0 - FR 10.5.11 -->
-
-Up to now, only on systems with both a ResourceManager license and a ServiceManager license would a master agent get selected.
-
-From now on, a master agent will also get selected on systems with only a ResourceManager license. On these systems, the agent with the lowest DMA ID will always be promoted to master agent.
-
-Also, when no master agent can be selected because the ResourceManager license is missing, the following log entry will be added to the SLMasterSyncerManager log file (with XXX being the IDs of the agents that do not have a ResourceManager license):
-
-`WARNING: No master DMA could be picked. Missing required ResourceManager license for DMAs XXX.`
-
-#### Midnight synchronization: Errors that occurred while zipping files would incorrectly get ignored [ID 42741]
-
-<!-- MR 10.6.0 - FR 10.5.11 -->
-
-When, during a midnight synchronization, an error occurred while zipping a file, up to now, that error would incorrectly be ignored.

@@ -81,6 +81,55 @@ It is now possible to use debug builds of GQI extension libraries. Up to now, it
 
 Debug build of an extension library can be created using either the Automation module in DataMiner Cube or the DataMiner Integration Studio (DIS). Once a debug build is created, you can then attach a debugger to the specific `DataMiner.GQI.ExtensionsWorker.Automation.exe` process, and debug the code that is executed while running the queries.
 
+#### Dashboards/Low-Code Apps - Timeline component: Anchoring & virtual bound locking [ID 43740]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When creating a template for the *Timeline* component, it is now possible to anchor rectangular shapes (i.e. layers of type *Rectangle*) to the sides of the component and to lock shape dimension settings to the virtual bounds of the component.
+
+##### Anchoring
+
+- Rectangular shapes (i.e. layers of type *Rectangle*) of which the width is linked to that of another shape can now be anchored to either the left side or the right side of the shape.
+- Rectangular shapes (i.e. layers of type *Rectangle*) of which the height is linked to that of another shape can now be anchored to either the top or the bottom of the shape.
+
+##### Virtual bounds locking
+
+The *Lock* icon, which can be used to lock one or more dimension settings of a particular shape (i.e. layer) to the visual bounds of the component, can now also be used to lock these settings to the virtual bounds of the component.
+
+To do so, keep the CTRL button pressed while clicking the *Lock* icon. The icon will then take the accent color (blue) to indicate that virtual bound locking is enabled.
+
+Functionally, this ensures that when virtualization is supported (e.g. in the timeline) shapes (i.e. layers) will align to the virtual boundary rather than the visible shape boundary, allowing them to extend outside the visible area (i.e. viewport). This way, time-based elements such as pre-roll and post-roll bars that extend beyond the viewport can be visualized.
+
+> [!NOTE]
+> Virtual bounds locking of the Width dimension is only possible when the unit is set to percent.
+
+#### Dashboards/Low-Code Apps: Component ID will now be displayed in the Layout tab of a component [ID 43760]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in edit mode, you select a component, and go to the *General* section of the *Layout* tab, you will now be able to see the component ID.
+
+> [!NOTE]
+> This component ID will only be visible when you added the `showAdvancedSettings=true` option to the URL of the dashboard or the low-code app.
+
+#### GQI DxM: A unique trace ID will now be logged for every incoming GQI request [ID 43795]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+From now on, using the default log configuration, a unique trace ID will be logged for every incoming GQI request. See the following example:
+
+`[2025-09-19 15:49:34.344][INF][GQI.MessageBroker.MessageBrokerConnectionService][OpenSession#18] Request trace: 26ce9840ce4de64225859549ca04de0f`
+
+This trace will then be propagated to every SLNet request (see note below) triggered by this GQI request using the `TraceInfo` property.
+
+The request ID (i.e. `#18` in the example above) can be used to find other log entries related to the same trace.
+
+> [!NOTE]
+>
+> - Currently, certain built-in data sources that use the raw SLNet connection will not be traced.
+> - If GQI extensions create their own SLNet connection, requests sent via that connection will not be traced.
+> - If GQI extensions fill in their own `TraceInfo`, this will not be overwritten.
+
 ## Changes
 
 ### Enhancements
@@ -155,6 +204,12 @@ In all standard Skyline themes, the default title font size has been reduced fro
 Up to now, whenever the WebSocket connection was (briefly) dropped, a `Connection has been interrupted.` message would appear.
 
 From now on, this message will only appear when the first attempt to re-establish the WebSocket connection also failed. This first reconnection attempt will now be made after 1 second.
+
+#### GQI DxM: Message that appears when a GQI operator or data source was not able to find a column will now also indicate the GQI operator or data source in question [ID 43706]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+When a GQI operator or data source was not able to find a column, up to now, the error message would only indicate the column that could not be found. It would incorrectly not indicate the GQI operator or the data source. From now on, the error message will also indicate the GQI operator or data source that was not able to find the column in question.
 
 #### GQI DxM: Extension indexer process will now load assemblies without locking the associated DLL files [ID 43707]
 
@@ -271,6 +326,12 @@ From now on, each time a *Change variable* action without a variable gets trigge
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When the contents of a query row was passed to an ad hoc data source, in some cases, data in columns of type numeric, boolean or datetime would not get passed correctly.
+
+#### Low-Code Apps: Problem with search box when going from edit mode to draft mode and back [ID 43775]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When, in edit mode, you searched for a panel, switched to draft mode, navigated to a page, and then returned to edit mode, up to now, the search input would incorrectly still display the previous search results.
 
 #### Interactive Automation scripts: Problem with arrow buttons in redesigned components [ID 43786]
 
