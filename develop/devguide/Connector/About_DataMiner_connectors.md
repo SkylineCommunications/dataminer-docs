@@ -1,5 +1,5 @@
 ---
-uid: Introduction
+uid: About_DataMiner_connectors
 description: DataMiner connectors (or 'protocols'/'drivers') are XML files containing the information needed for DataMiner to communicate with a data source.
 ---
 

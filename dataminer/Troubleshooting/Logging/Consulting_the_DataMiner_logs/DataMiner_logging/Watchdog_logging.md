@@ -66,4 +66,4 @@ There are two ways to access the Watchdog logging:
 
 - [DataMiner logging](xref:DataMiner_logging)
 - [Investigating a protocol thread RTE](xref:Investigating_a_protocol_thread_RTE)
-- [Connector fundamentals > Inner workings > Introduction](xref:InnerWorkingsIntroduction)
+- [Connector fundamentals > Inner workings](xref:InnerWorkings)

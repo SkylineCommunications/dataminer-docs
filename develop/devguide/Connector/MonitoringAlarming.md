@@ -4,8 +4,6 @@ uid: MonitoringAlarming
 
 # Alarming
 
-## Introduction
-
 DataMiner provides the possibility to define alarm templates. An alarm template is an XML file containing all alarm thresholds for all parameters that support alarming in a DataMiner protocol. For more information about alarm templates in DataMiner, refer to [Alarm templates](xref:About_alarm_templates).
 
 Typically, only a subset of the parameters defined in a protocol should support alarming (and therefore be included in the alarm template overview). This is because many parameters in a protocol are defined to implement internal protocol logic.
