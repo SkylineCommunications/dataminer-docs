@@ -160,8 +160,7 @@ In a nutshell: **You operate the platform, we build and maintain the platform fo
 > - [Workflow Use Case - DataMiner Live Dashboard Sharing](https://community.dataminer.services/use-case/dataminer-live-data-sharing/)
 > - [Use Case - Dashboard sharing facilitating collaboration across the entire supply chain](https://community.dataminer.services/use-case/dashboard-sharing-facilitating-collaboration-across-the-entire-supply-chain/)
 > - [Use Case - Dashboard sharing reducing OPEX while accelerating incident resolution](https://community.dataminer.services/use-case/dashboard-sharing-reducing-opex-while-accelerating-incident-resolution/)
-> - [Real-time Software Router Control Panel Sharing](https://community.dataminer.services/real-time-software-router-control-panel-sharing/)
-> - [Sharing a Dashboard](xref:Sharing_a_dashboard)
+> - [Sharing a dashboard](xref:Sharing_a_dashboard)
 
 ### Remote Access
 
