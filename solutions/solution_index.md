@@ -56,9 +56,6 @@ uid: solution_index
   <div class="column">
     <a href="/solutions/product_solutions/NetInsight_Nimbra_Vision/00_netinsight-nimbra-vision.html" title="NetInsight Nimbra Vision app" target="_self"><img src="~/solutions/images/NetInsight_Nimbra_Vision.svg" style="width:100%"></a>
   </div>
-</div>
-
-<div class="row"> 
   <div class="column">
     <a href="/solutions/product_solutions/TAG/TAG_Overview.html" title="Tag Management app" target="_self"><img src="~/solutions/images/Tag_Management.svg" style="width:100%"></a>
   </div>
