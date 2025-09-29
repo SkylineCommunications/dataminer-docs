@@ -215,7 +215,7 @@ The following headers are blocked and will result in an error if you try to set 
 
 > [!NOTE]
 >
-> - Available from DataMiner 10.5.11/10.6.0 onwards.
+> - Available from DataMiner 10.5.12/10.6.0 onwards.
 > - Keep the size of headers and values limited. Hard limits depend on the version of your webserver.
 > - Null values are not allowed, use string.Empty when adding a header with an empty value.
 
