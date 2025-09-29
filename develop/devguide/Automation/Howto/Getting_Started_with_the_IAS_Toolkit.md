@@ -15,8 +15,6 @@ The Interactive Automation Script Toolkit (or “IAS Toolkit” in short) is a l
 
 To choose your version of the IAS Toolkit, the first thing you need to know is the [version of DataMiner](xref:Interactive_Automation_Script_Toolkit#versions) where you want your script to run. As DataMiner keeps improving, so does its support for newer, more advanced IAS components.
 
-In this introduction, DataMiner version 10.1.2 is used. This means that [version 2.0.x](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/2.0.0) of the toolkit can be used.
-
 Just like for protocol and regular Automation script development, our IDE of choice is Visual Studio with the latest version of [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). If you do not have DIS installed, you can find more information on how to do so under [Installing and configuring the software](xref:Installing_and_configuring_the_software).
 
 ## Creating a new script
