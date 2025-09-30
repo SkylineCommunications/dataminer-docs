@@ -1,0 +1,74 @@
+---
+uid: General_Feature_Release_10.5.12
+---
+
+# General Feature Release 10.5.12 – Preview
+
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+
+> [!IMPORTANT]
+>
+> Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+>
+> The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+> - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+> - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
+> [!TIP]
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.5.12](xref:Cube_Feature_Release_10.5.12).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.5.12](xref:Web_apps_Feature_Release_10.5.12).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
+## Highlights
+
+*No highlights have been selected yet.*
+
+## New features
+
+*No new features have been added yet.*
+
+## Changes
+
+### Enhancements
+
+#### User-defined APIs: New ResponseHeaders property [ID 43705]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+In the `ResponseHeaders` property of the `ApiTriggerOutput` class, you can now specify the HTTP headers that will be added to the response.
+
+Currently, the following headers are blocked, and will result in an error if you try to set them:
+
+- Access-Control-Allow-Origin
+- Access-Control-Allow-Credentials
+- Access-Control-Expose-Headers
+- Access-Control-Allow-Methods
+- Access-Control-Max-Age
+- Vary
+- Content-Length (automatically set)
+- Set-Cookie
+- WWW-Authenticate
+- Proxy-Authenticate
+- Transfer-Encoding
+- Connection
+- Upgrade
+- Trailer
+- TE
+- Via
+- Server
+- Date (automatically set)
+- Strict-Transport-Security
+
+The endpoint can now also return the following additional errors:
+
+| ErrorCode | Integer value | HTTP Status Code | Description |
+|-----------|---------------|------------------|-------------|
+| ResponseHeadersNotAllowed | 1012 | 500 | The response header or headers you are trying to return are not allowed. |
+| ResponseHeadersInvalid | 1013 | 500 | The response header or headers you are trying to return are invalid. Header names and values cannot contain whitespace, colons (":"), commas (","), or ASCII control characters. The *UserDefinableApiEndpoint* logging will contain the exact error. |
+
+### Fixes
+
+*No fixes have been added yet.*
