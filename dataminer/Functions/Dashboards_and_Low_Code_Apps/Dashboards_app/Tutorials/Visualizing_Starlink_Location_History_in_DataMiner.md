@@ -9,11 +9,9 @@ In this tutorial, you will explore how to leverage the Starlink Enterprise solut
 Expected duration: 30 minutes
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created with the DataMiner 10.5.3 web apps.
-
-> [!NOTE]
-> The *Location History Tracking* feature is now included by default in the latest Starlink Enterprise package (since v2.0.0 and higher).
-> You can still create your own history page and rebuild the functionality step by step. This remains a valuable exercise to deepen your understanding of low-code apps and MAP integrations.
+>
+> - In the latest versions of the Starlink Enterprise package (v2.0.0 and higher), the *Location History Tracking* feature is already included by default. This means that you can take a look at the configuration of this feature in the *Starlink Enterprise* app and then follow this tutorial to try to build it yourself step by step, as a valuable exercise to deepen your understanding of low-code apps and map integrations.
+> - The content and screenshots for this tutorial have been created with the DataMiner 10.5.3 web apps.
 
 > [!TIP]
 > See also: [Kata #59: Visualizing Starlink location history in DataMiner](https://community.dataminer.services/courses/kata-59/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
