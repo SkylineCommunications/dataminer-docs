@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 30 September 2025 - Enhancement - Catalog - Ranges now show their created at date instead of lsat modified date
+### 30 September 2025 - Enhancement - Catalog - Ranges now show creation date instead of last modified date
 
-In the Catalog app, the ranges will now show their creation date instead of the last modified date.
+In the Catalog app, item ranges will now show their creation date instead of the date when they were last modified.
 
 ### 21 September 2025 - Enhancement - Catalog - Enhanced searching capabilities
 
