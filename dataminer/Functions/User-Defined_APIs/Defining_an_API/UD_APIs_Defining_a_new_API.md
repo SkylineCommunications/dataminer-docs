@@ -179,19 +179,19 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 
 #### ResponseHeaders
 
-You can add HTTP headers to the response by adding them to the ResponseHeaders property in the `ApiTriggerOutput`. `IHeaders` exposes the following methods:
+You can add HTTP headers to the response by adding them to the *ResponseHeaders* property in the `ApiTriggerOutput`. `IHeaders` exposes the following methods:
 
 | Method | Description | Example |
 |--|--|--|
-|`void Add(string name, string value)`|Adds a header with a single value, where 'name' is the header name. Or adds the value to the existing header.|`Add("Location", "/api/item/101)`|
-|`void Add(string name, IEnumerable<string> values)`|Adds a header with multiple values, where 'name' is the header name. Or adds values to the existing header.|`Add("Accept", new List<string>(){"text/plain", "text/html"})`.|
-|`void Add(string name, params string[] values)`|Adds a header with multiple values, where 'name' is the header name. Or adds values to the existing header.|`Add("Accept", "text/plain", "text/html")`|
-|`void Set(string name, string value)`|Sets (overwrites) a header with a single value, where 'name' is the header name.|`Set("Location", "/api/item/101)`|
-|`void Set(string name, List<string> values)`|Sets (overwrites) a header with multiple values, where 'name' is the header name.|`Set("Accept", new IEnumerable<string>(){"text/plain", "text/html"})`.|
-|`void Set(string name, params string[] values)`|Sets (overwrites) a header with multiple values, where 'name' is the header name.|`Set("Accept", "text/plain", "text/html")`|
+|`void Add(string name, string value)`|Adds a header with a single value, where "name" is the header name, or adds the value to the existing header.|`Add("Location", "/api/item/101)`|
+|`void Add(string name, IEnumerable<string> values)`|Adds a header with multiple values, where "name" is the header name, or adds values to the existing header.|`Add("Accept", new List<string>(){"text/plain", "text/html"})`.|
+|`void Add(string name, params string[] values)`|Adds a header with multiple values, where "name" is the header name, or adds values to the existing header.|`Add("Accept", "text/plain", "text/html")`|
+|`void Set(string name, string value)`|Sets (overwrites) a header with a single value, where "name" is the header name.|`Set("Location", "/api/item/101)`|
+|`void Set(string name, List<string> values)`|Sets (overwrites) a header with multiple values, where "name" is the header name.|`Set("Accept", new IEnumerable<string>(){"text/plain", "text/html"})`.|
+|`void Set(string name, params string[] values)`|Sets (overwrites) a header with multiple values, where "name" is the header name.|`Set("Accept", "text/plain", "text/html")`|
 |`Dictionary<string, List<string>> AsDictionary()`|Returns all headers as a dictionary.|`output.ResponseHeaders.AsDictionary()`|
 
-The following headers are blocked and will result in an error if you try to set them. This list can be updated in the future:
+The headers listed below are **blocked** and will result in an error if you try to set them. This list can be updated in the future.
 
 - Access-Control-Allow-Origin
 - Access-Control-Allow-Credentials
@@ -215,9 +215,9 @@ The following headers are blocked and will result in an error if you try to set 
 
 > [!NOTE]
 >
-> - Available from DataMiner 10.5.12/10.6.0 onwards.
-> - Keep the size of headers and values limited. Hard limits depend on the version of your webserver.
-> - Null values are not allowed, use string.Empty when adding a header with an empty value.
+> - The *ResponseHeaders* property can be used from DataMiner 10.5.12/10.6.0 onwards.<!-- RN 43705 -->
+> - Keep the size of headers and values limited. Hard limits depend on the version of your web server.
+> - Null values are not allowed. Use *string.Empty* when adding a header with an empty value.
 
 ## Creating an API and tokens in DataMiner Automation
 
