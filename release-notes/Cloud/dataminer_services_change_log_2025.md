@@ -11,9 +11,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 1 October 2025 - Enhancement - Usage - STaaS usage billing
 
-Starting from 1 October 2025, automatic monthly billing will be implemented for STaaS usage. The expended credits for STaaS usage will be subtracted from the relevant organization's DataMiner credit balance on the first day of each month. This automatic billing will take effect retroactively, going as far back as April 2024.
-In case an organization does not have sufficient DataMiner credits their balance will go negative and it should be topped up as soon as possible.
-Organizations with a negative balance won't be able to deploy new DaaS systems.
+Starting from 1 October 2025, automatic monthly billing will be implemented for STaaS. On the first day of each month, the expended DataMiner credits for the previous month's STaaS usage will be subtracted from the organization's balance. This billing will take effect retroactively, going as far back as April 2024.
+
+In case an organization does not have sufficient DataMiner credits, their balance will go negative, and it will need to be topped up as soon as possible. Organizations with a negative balance will not be able to deploy new DaaS systems.
 
 ### 21 September 2025 - Enhancement - Catalog - Enhanced searching capabilities
 
