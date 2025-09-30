@@ -15,6 +15,7 @@ uid: deploying_srm
 
    > [!NOTE]
    > DataMiner will restart during the installation of the package.
+   > In SRM versions prior to **2.0.1**, you must reinstall the SRM package on each new agent that is added to the cluster, as some files are not synchronized automatically.
 
    > [!TIP]
    > See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
