@@ -9,6 +9,12 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 1 October 2025 - Enhancement - Usage - STaaS usage billing
+
+Starting from 1 October 2025, automatic monthly billing will be implemented for STaaS. On the first day of each month, the expended DataMiner credits for the previous month's STaaS usage will be subtracted from the organization's balance. This billing will take effect retroactively, going as far back as April 2024.
+
+In case an organization does not have sufficient DataMiner credits, their balance will go negative, and it will need to be topped up as soon as possible. Organizations with a negative balance will not be able to deploy new DaaS systems.
+
 ### 30 September 2025 - Enhancement - Catalog - Ranges now show creation date instead of last modified date
 
 In the Catalog app, item ranges will now show their creation date instead of the date when they were last modified.
