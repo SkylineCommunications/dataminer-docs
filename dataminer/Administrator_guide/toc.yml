@@ -442,8 +442,8 @@ items:
             topicUid: User_groups
           - name: Types of users
             topicUid: Types_of_users
-          - name: Viewing user information
-            topicUid: Viewing_user_information
+          - name: The Users / Groups module in System Center
+            topicUid: Accessing_security_in_System_Center
           - name: Encryption in DataMiner
             topicUid: Encryption_in_DataMiner
           - name: Cloud connectivity and security
@@ -457,10 +457,8 @@ items:
           - name: Managing users
             topicUid: Managing_users
             items:
-              - name: Accessing security in System Center
-                topicUid: Accessing_security_in_System_Center
-              - name: Opening a user card
-                topicUid: Opening_a_user_card
+              - name: Viewing user information
+                topicUid: Viewing_user_information
               - name: Adding a user
                 topicUid: Adding_a_user
               - name: Deleting a user

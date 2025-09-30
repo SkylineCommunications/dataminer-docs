@@ -1,5 +1,6 @@
 ---
 uid: Viewing_user_information
+description: user card
 ---
 
 # Viewing user information
@@ -8,7 +9,7 @@ In DataMiner Cube, you can view various detailed information about users, provid
 
 There are two ways you can view this information:
 
-- Go to System Center > *Users / Groups* > *users* and select the user.
+- Go to System Center > *Users / Groups* > *users*, and select the user.
 - Look up the user in the search box at the top of the Cube UI, and double-click the search result to open the user card.
 
 The information is shown on different tabs:
@@ -22,3 +23,10 @@ The information is shown on different tabs:
 
 ![Recent activity](~/dataminer/images/Recent_Activity.png)<br>
 *Recent activity on a user card in DataMiner Cube 10.5.10*
+
+> [!NOTE]
+> Please note the following regarding **user cards**:
+>
+> - You can also **edit** security settings for a user on a user card. To do so, click the *Edit* button in the lower-right corner first.
+> - To open your own user card, you can click the user icon in the top-right corner and select *Account details*.
+> - Next to the username at the top of a user card, you can also see whether the user is currently online or offline.
