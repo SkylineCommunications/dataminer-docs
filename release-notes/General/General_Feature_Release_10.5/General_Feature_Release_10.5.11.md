@@ -182,6 +182,12 @@ From now on, when a request is sent to a DOM manager that it reinitializing, the
 
 SLLogCollector packages now also include the log files of the Web DcM.
 
+#### Relational anomaly detection: New API message to retrieve a RAD parameter subgroup [ID 43797]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+From now on, the new `GetRADSubgroupInfoMessage` will allow you to retrieves all configuration information for a particular RAD parameter subgroup by subgroup ID.
+
 #### DataMiner Object Models: A ModuleSettings update will no longer automatically trigger a network credentials check [ID 43799]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
@@ -328,3 +334,10 @@ Up to now, after you had imported a DELT package containing average trend data i
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
 
 Up to now, it would not be possible to update the failover configuration when the *ClusterEndpointsManager* soft-launch option had explicitly been disabled.
+
+#### Automation: No longer possible to send an email report in a C# code block after having selected a dashboard created by means of the Dashboards app [ID 43822]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+<!-- Not added to MR 10.6.0 -->
+
+Since DataMiner feature version 10.5.10, in Automation, it would incorrectly no longer be possible to send an email report in a C# code block after having selected a dashboard created by means of the Dashboards app.
