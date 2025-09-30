@@ -34,7 +34,40 @@ uid: General_Feature_Release_10.5.12
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### User-defined APIs: New ResponseHeaders property [ID 43705]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+In the `ResponseHeaders` property of the `ApiTriggerOutput` class, you can now specify the HTTP headers that will be added to the response.
+
+Currently, the following headers are blocked, and will result in an error if you try to set them:
+
+- Access-Control-Allow-Origin
+- Access-Control-Allow-Credentials
+- Access-Control-Expose-Headers
+- Access-Control-Allow-Methods
+- Access-Control-Max-Age
+- Vary
+- Content-Length (automatically set)
+- Set-Cookie
+- WWW-Authenticate
+- Proxy-Authenticate
+- Transfer-Encoding
+- Connection
+- Upgrade
+- Trailer
+- TE
+- Via
+- Server
+- Date (automatically set)
+- Strict-Transport-Security
+
+The endpoint can now also return the following additional errors:
+
+| ErrorCode | Integer value | HTTP Status Code | Description |
+|-----------|---------------|------------------|-------------|
+| ResponseHeadersNotAllowed | 1012 | 500 | The response header or headers you are trying to return are not allowed. |
+| ResponseHeadersInvalid | 1013 | 500 | The response header or headers you are trying to return are invalid. Header names and values cannot contain whitespace, colons (":"), commas (","), or ASCII control characters. The *UserDefinableApiEndpoint* logging will contain the exact error. |
 
 ### Fixes
 
