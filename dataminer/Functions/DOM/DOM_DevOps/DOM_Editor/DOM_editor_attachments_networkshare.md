@@ -6,7 +6,7 @@ uid: DOM_editor_attachments_networkshare
 
 <!--RN43726-->
 
-Users can specify a UNC path and select credentials from the Credentials Library to store DOM attachments linked to DOM Instances.
+Since DataMiner 10.5.10, users can specify a UNC path and select credentials from the Credentials Library to store DOM attachments linked to DOM Instances. 
 
 By default, this feature is not enabled, and attachments are saved locally in the C:\Skyline DataMiner\Documents folder.
 
