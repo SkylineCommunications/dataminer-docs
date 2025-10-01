@@ -53,3 +53,9 @@ Other changes made with regard to extension worker behavior:
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 When, in the *Layout* pane of a *Maps* component, you clicked *Save current view* after the map had been panned horizontally, in some cases, the longitude would be set to an invalid value outside the [-180,180] range.
+
+#### Dashboards/Low-Code Apps - Line & area chart component: Problem with parameter filter would cause trended parameters to not show up in the component [ID 43813]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, the parameter filter that was used when checking whether or not a parameter was trended would incorrectly be based on the primary key instead of the display key. As a result, in some cases, trended parameters that matched the filter would incorrectly be considered as not trended, causing them to not show up in the component.
