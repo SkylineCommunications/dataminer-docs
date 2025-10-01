@@ -77,6 +77,14 @@ From now on, all dashboard reports configured in Automation, Correlation or Sche
 
 SLHelper will also no longer convert the reports of the legacy Reporter module to PDF format. From now on, this will also be done by the Web DcM.
 
+#### NATSMigration tool will now also check for outdated DLL files in the ProtocolScripts folder [ID 43778]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+From now on, the *NATSMigration* tool will also check for outdated DLL files in the `C:\Skyline DataMiner\ProtocolScripts` folder.
+
+When an outdated DLL file is found, the migration will be aborted. For the migration to succeed, the user will have to remove the outdated DLL file and update the protocol in question.
+
 ### Fixes
 
 *No fixes have been added yet.*
