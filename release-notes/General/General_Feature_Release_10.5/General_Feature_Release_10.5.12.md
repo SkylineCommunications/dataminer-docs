@@ -87,4 +87,10 @@ When an outdated DLL file is found, the migration will be aborted. For the migra
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Alerter would incorrectly require .NET Framework 2.0 [ID 43787]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+When you tried to install Alerter, in some cases, a warning message would appear, saying that Microsoft .NET Framework 2.0 needed to be installed first.
+
+From now on, when you try to install Alerter, it will check whether Microsoft .NET Framework 4.6.2 is installed.

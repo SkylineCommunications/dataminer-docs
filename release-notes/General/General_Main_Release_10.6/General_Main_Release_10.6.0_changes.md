@@ -586,3 +586,11 @@ When you repeatedly requested GQI queries with aggregations like e.g. "group by"
 Up to now, when the `SafelyUpdateReservationInstanceProperties` method of `ResourceManagerHelper` was used to update existing properties of a booking, in some cases, the `PropertiesWereAlreadyModified` error would incorrectly be returned.
 
 From now on, when booking properties are updated, the master agent that processes the update will check whether the properties to be updated are existing properties of the booking in question. If so, the update will complete successfully, and no false `PropertiesWereAlreadyModified` errors will be returned.
+
+#### Alerter would incorrectly require .NET Framework 2.0 [ID 43787]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+When you tried to install Alerter, in some cases, a warning message would appear, saying that Microsoft .NET Framework 2.0 needed to be installed first.
+
+From now on, when you try to install Alerter, it will check whether Microsoft .NET Framework 4.6.2 is installed.
