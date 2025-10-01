@@ -321,7 +321,7 @@ After an element had been swarmed, in some cases, outdated data could remain in 
 
 When an element was swarmed to another DataMiner Agent while automatic incident tracking was disabled, up to now, the alarms associated with that element would incorrectly be removed from any user-defined alarm group (i.e. incident) they were in, and would again appear as separate alarms. From now on, the alarms will remain in the user-defined alarm group (i.e. incident) they are in.
 
-Also, when an element is swarmed to another DataMiner Agent while automatic incident tracking is enabled, from now on, any relational anomalies or multivariate patterns on that element will be removed.
+Note that when an element is swarmed to another Agent while automatic incident tracking is enabled, any active anomalies that include that element will be cleared.
 
 #### Problem when importing a DELT package containing average trend data into a Cassandra Cluster or STaaS database [ID 43768]
 
