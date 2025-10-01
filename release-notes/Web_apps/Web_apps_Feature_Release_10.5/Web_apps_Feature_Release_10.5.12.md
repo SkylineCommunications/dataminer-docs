@@ -30,4 +30,8 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards/Low-Code Apps - Maps component: Clicking 'Save current view' would set the latitude to an invalid value [ID 43812]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When, in the *Layout* pane of a *Maps* component, you clicked *Save current view* after the map had been panned horizontally, in some cases, the longitude would be set to an invalid value outside the [-180,180] range.
