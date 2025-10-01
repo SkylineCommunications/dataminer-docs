@@ -30,4 +30,8 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Trend graph could incorrectly show a flatline when the predictions had been scrolled beyond the viewport [ID 43776]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When you opened a trend graph showing trend data values with low Y values and predictions with very high Y values, up to now, the graph could incorrectly show a flatline, especially when you had scrolled the predictions beyond the viewport.
