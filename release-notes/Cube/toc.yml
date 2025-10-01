@@ -36,7 +36,11 @@ items:
           - name: DataMiner Cube Feature Release 10.5.11 - Preview
             topicUid: Cube_Feature_Release_10.5.11
           - name: DataMiner Cube Feature Release 10.5.10
-            topicUid: Cube_Feature_Release_10.5.10
+            items:
+              - name: New features and changes
+                topicUid: Cube_Feature_Release_10.5.10
+              - name: DataMiner Cube Feature Release 10.5.10 CU1
+                topicUid: Cube_Feature_Release_10.5.10_CU1
           - name: DataMiner Cube Feature Release 10.5.9
             topicUid: Cube_Feature_Release_10.5.9
           - name: DataMiner Cube Feature Release 10.5.8
