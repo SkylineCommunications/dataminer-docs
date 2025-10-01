@@ -17,7 +17,7 @@ uid: General_Main_Release_10.5.0_CU9
 
 #### NATSMigration tool will now also check for outdated DLL files in the ProtocolScripts folder [ID 43778]
 
-<!-- MR 10.6.0 - FR 10.5.12 -->
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
 
 From now on, the *NATSMigration* tool will also check for outdated DLL files in the `C:\Skyline DataMiner\ProtocolScripts` folder.
 
