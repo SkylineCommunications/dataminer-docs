@@ -855,6 +855,8 @@ items:
                 topicUid: DOM_editor_deleting_section
               - name: Naming a DOM instance
                 topicUid: DOM_editor_naming_instance
+              - name: Using a network share for attachments
+                topicUid: DOM_editor_attachments_networkshare
       - name: Best practices
         topicUid: DOM_best_practices
       - name: Tutorials
