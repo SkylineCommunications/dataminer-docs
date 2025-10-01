@@ -32,11 +32,12 @@ By default, this feature is not enabled, and attachments are saved locally in th
 
 1. In the *Network Share Path* box, fill in the UNC path to the network share. It needs to start with \\\\ and cannot contain any characters that are illegal for a path (e.g. "<") or strings that allow directory traversal (e.g. "../").
 
-    ![DOM Editor: network attachement settings window](~/dataminer/images/DOM_Editor_networkshare.png)
+    ![DOM Editor: network attachment settings window](~/dataminer/images/DOM_Editor_networkshare.png)
 
 1. Click *Back* again and then click *Apply* and *OK*.
+
+1. Click *Back* again and click the button *Reinitiliaze* next to the module you configured.
 
 ## Notes
 
 - The configuration creates a [DomInstanceNetworkAttachmentSettings](xref:DOM_DomInstanceNetworkAttachmentSettings) object.
-- Changes are applied immediately and do not require a restart.
