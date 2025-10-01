@@ -30,6 +30,24 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Fixes
 
+#### GQI DxM: Existing query sessions would incorrectly be allowed to use a restarted extension worker [ID 43770]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+When an extension worker process had stopped unexpectedly, e.g. because someone had manually killed it, up to now, the process would automatically restart when a new query was executed, and existing query sessions would be allowed to use it as if nothing had happened.
+
+However, when the extension worker restarted, the state of the existing query sessions would no longer be valid, causing the core GQI process to no longer be able to communicate correctly with the extension worker process.
+
+From now on, when an extension worker process is stopped, all references to that process in the existing query sessions will be rendered invalid. If an existing query session then attempts to use the extension worker, the following error message will be thrown:
+
+`Extension worker for '<ExtensionLibrary>' has exited.`
+
+Other changes made with regard to extension worker behavior:
+
+- While an extension worker is being shut down, from now on, another extension worker will be allowed to start up or shut down.
+- Requesting the data source metrics of active extension workers will no longer reset their expiration time. In other words, if an extension worker is due to expire, requesting the data source metrics will no longer have any affect on that expiration.
+- Extension worker references will no longer leak memory when a new extension worker is starting up while the previous one for the same extension library is being shut down.
+
 #### Dashboards/Low-Code Apps - Maps component: Clicking 'Save current view' would set the latitude to an invalid value [ID 43812]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
