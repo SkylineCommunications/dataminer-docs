@@ -25,6 +25,8 @@ Once you are in edit mode, you can [customize the app](xref:LowCodeApps_Layout#c
 
 When the app is ready, click the ![Publish](~/dataminer/images/AppPublishIcon.png) icon in the header bar to save your changes and publish it.
 
+If any users have the app open when an update is published, they will see the updated version as soon as they refresh the web page. Until then, they will be able to keep using the previous version. Only in case changes have been made to server-side objects such as Automation scripts or GQI data sources that an app makes use of, will this cause a problem for an older version of the app that remains open, as the app will no longer be able to use the server object it expects.
+
 > [!IMPORTANT]
 > Once an app has been published, it is not possible to revert it to a draft.
 
