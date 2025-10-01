@@ -35,3 +35,11 @@ This Feature Release of the DataMiner Cube client application contains the same 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 When you opened a trend graph showing trend data values with low Y values and predictions with very high Y values, up to now, the graph could incorrectly show a flatline, especially when you had scrolled the predictions beyond the viewport.
+
+#### Problem when switching themes while trend graphs were open [ID 43777]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When, in DataMiner Cube, you opened a trend graph and then switched to another theme, up to now, errors would start to appear in the logging.
+
+Also, the trend graph colors would incorrectly not get updated.
