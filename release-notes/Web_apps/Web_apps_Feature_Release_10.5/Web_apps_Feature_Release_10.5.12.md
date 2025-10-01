@@ -59,3 +59,9 @@ When, in the *Layout* pane of a *Maps* component, you clicked *Save current view
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 Up to now, the parameter filter that was used when checking whether or not a parameter was trended would incorrectly be based on the primary key instead of the display key. As a result, in some cases, trended parameters that matched the filter would incorrectly be considered as not trended, causing them to not show up in the component.
+
+#### Dashboards/Low-Code Apps: Search input component would not pass an empty value when its default value was cleared [ID 43819]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When a *Search input* component had its *Emit value on* option set to "Value change", up to now, it would not pass an empty value when its value was cleared after the default selection had been (re)applied.
