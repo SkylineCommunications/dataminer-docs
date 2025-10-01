@@ -170,9 +170,9 @@ Also, when no master agent can be selected because the ResourceManager license i
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
 
-When an element was swarmed to another DataMiner Agent while automatic incident tracking was disabled, up to now, the alarms associated with that element would incorrectly be removed from any user-defined alarm group (i.e. incident) they were in, and would again appear as separate alarms. From now on, the alarms will remain in the user-defined alarm group (i.e. incident) they are in.
+If automatic incident tracking was disabled and an element had an alarm that had been manually added to an alarm group, up to now, swarming that element would cause that alarm to incorrectly be removed from the alarm group and appear again as a separate alarm. This will no longer occur.
 
-Note that when an element is swarmed to another Agent while automatic incident tracking is enabled, any active anomalies that include that element will be cleared.
+If an element gets swarmed while automatic incident tracking is enabled, the behavior remains the same as before: Manually created groups keep their elements, but any active relational anomalies (including automatically created alarm groups) involving the element are cleared.
 
 #### Problem when importing a DELT package containing average trend data into a Cassandra Cluster or STaaS database [ID 43768]
 
