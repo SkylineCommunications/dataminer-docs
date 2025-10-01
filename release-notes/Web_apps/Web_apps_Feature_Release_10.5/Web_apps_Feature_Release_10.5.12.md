@@ -48,6 +48,12 @@ Other changes made with regard to extension worker behavior:
 - Requesting the data source metrics of active extension workers will no longer reset their expiration time. In other words, if an extension worker is due to expire, requesting the data source metrics will no longer have any affect on that expiration.
 - Extension worker references will no longer leak memory when a new extension worker is starting up while the previous one for the same extension library is being shut down.
 
+#### Web apps: Old login page would incorrectly appear when navigating to '/login' directly [ID 43796]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When you navigated to the login page of a web app by using a URL like `https://<DMA IP or hostname>/monitoring/login`, up to now, the app's old login page would incorrectly appear. From now on, an "error 404" page will appear instead.
+
 #### Dashboards/Low-Code Apps - Maps component: Clicking 'Save current view' would set the latitude to an invalid value [ID 43812]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
