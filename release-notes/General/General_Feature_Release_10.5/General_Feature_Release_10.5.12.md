@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.5.12
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- User-defined APIs: Specify HTTP headers in the response [ID 43705]
 
 ## New features
 
