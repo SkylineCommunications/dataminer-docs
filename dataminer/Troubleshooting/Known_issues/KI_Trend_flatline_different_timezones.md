@@ -22,7 +22,7 @@ Set the client's time zone to match the DataMiner Agent's time zone.
 
 ## Fix
 
-No fix is available yet. <!-- RN 43757 -->
+Install DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.10 [CU1]. <!-- RN 43757 -->
 
 ## Description
 
