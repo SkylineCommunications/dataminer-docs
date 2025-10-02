@@ -810,6 +810,9 @@ items:
         topicUid: DOM_status_system
       - name: DOM security
         topicUid: DOM_security
+        items:
+          - name: DOM definition-level security app
+            topicUid: DOM_definition_security_app
       - name: DOM actions
         topicUid: DOM_actions
       - name: DOM data storage

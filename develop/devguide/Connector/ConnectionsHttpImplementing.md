@@ -173,4 +173,4 @@ The message body can be captured by specifying the ID of the parameter in which 
 
 ## See also
 
-- [Element Wizard](xref:ConnectionsIntroduction#element-wizard) for recommended HTTP(S) port settings
+- [Configuring port settings](xref:Connections#configuring-port-settings) for recommended HTTP(S) port settings

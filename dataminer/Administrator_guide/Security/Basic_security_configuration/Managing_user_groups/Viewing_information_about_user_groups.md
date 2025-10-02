@@ -4,21 +4,14 @@ uid: Viewing_information_about_user_groups
 
 # Viewing information about user groups
 
-To view information about an existing user group:
+To view information about an existing user group, go to **System Center** > **Users / Groups** > **Groups** and select the group in the list on the left.
 
-1. In the *Users / Groups* section of the System Center module, go to the *Groups* tab.
+The information is then shown on different tabs:
 
-1. Select the group in question in the *Local* or *Domain* list, depending on the type of group.
+- **Details**: The group’s name and security level (see [User rights](xref:User_rights)).
 
-1. In the pane on the right:
+- **Users**: The users who are a member of the group.
 
-   - Check the *Details* tab to view the group’s name and security level.
+- **Permissions**: The [user permissions](xref:DataMiner_user_permissions) assigned to the group and the views it has access to.
 
-   - Check the *Users* tab to see the list of users who are a member of the group.
-
-   - Check the *Permissions* tab to see views the group has access to and the rights that have been configured for it.
-
-     > [!NOTE]
-     > For more information on the user permissions in Cube, see [DataMiner user permissions](xref:DataMiner_user_permissions).
-
-   - Check the *Alerts* tab to see what notifications have been configured for the group.
+- **Alerts**: The notifications that have been configured for the group.

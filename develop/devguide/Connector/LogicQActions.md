@@ -4,7 +4,7 @@ uid: LogicQActions
 
 # QActions
 
-## Introduction
+## About QActions
 
 Quick Actions (often referred to as "QActions") are used to implement custom functionality that cannot be implemented by other protocol constructs (e.g. parsing a JSON response received from the device, etc.).
 
@@ -152,7 +152,7 @@ Consider the following example of a protocol that defines a button (with paramet
 
 In case the DataMiner Agent has multiple elements running this protocol, this means that every time the button is pressed on one of these elements, the executionCount variable is incremented, i.e. the executionCount field will hold the number of times this QAction has been executed as a result of a button being pressed by any of the elements executing this protocol (note that in this case locking is required).
 
-In case you only want to keep track of the execution count on a per element basis, either define a protocol parameter that will hold the execution count (as illustrated in the first example in the [Introduction](xref:LogicQActions#introduction)) instead of a static field in the QAction class, or use the approach described in the section [Instance entry methods](xref:LogicQActions#instance-entry-methods).
+In case you only want to keep track of the execution count on a per element basis, either define a protocol parameter that will hold the execution count (as illustrated in the first example under [About QActions](#about-qactions)) instead of a static field in the QAction class, or use the approach described in the section [Instance entry methods](xref:LogicQActions#instance-entry-methods).
 
 ### Instance entry methods
 

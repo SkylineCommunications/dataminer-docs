@@ -182,6 +182,12 @@ From now on, when a request is sent to a DOM manager that it reinitializing, the
 
 SLLogCollector packages now also include the log files of the Web DcM.
 
+#### Relational anomaly detection: New API message to retrieve a RAD parameter subgroup [ID 43797]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+From now on, the new `GetRADSubgroupInfoMessage` will allow you to retrieves all configuration information for a particular RAD parameter subgroup by subgroup ID.
+
 #### DataMiner Object Models: A ModuleSettings update will no longer automatically trigger a network credentials check [ID 43799]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
@@ -191,12 +197,6 @@ Up to now, each time a `ModuleSettings` object was updated, the network credenti
 From now on, when a `ModuleSettings` object is updated, the network credentials will only be checked if the network path or the credential ID were updated as well.
 
 ### Fixes
-
-#### Midnight synchronization: Errors that occurred while zipping files would incorrectly get ignored [ID 42741]
-
-<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
-
-When, during a midnight synchronization, an error occurred while zipping a file, up to now, that error would incorrectly be ignored.
 
 #### Problem when loading initial parameter data for remote elements [ID 43339] [ID 43552]
 
@@ -319,9 +319,9 @@ After an element had been swarmed, in some cases, outdated data could remain in 
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
 
-When an element was swarmed to another DataMiner Agent while automatic incident tracking was disabled, up to now, the alarms associated with that element would incorrectly be removed from any user-defined alarm group (i.e. incident) they were in, and would again appear as separate alarms. From now on, the alarms will remain in the user-defined alarm group (i.e. incident) they are in.
+If automatic incident tracking was disabled and an element had an alarm that had been manually added to an alarm group, up to now, swarming that element would cause that alarm to incorrectly be removed from the alarm group and appear again as a separate alarm. This will no longer occur.
 
-Also, when an element is swarmed to another DataMiner Agent while automatic incident tracking is enabled, from now on, any relational anomalies or multivariate patterns on that element will be removed.
+If an element gets swarmed while automatic incident tracking is enabled, the behavior remains the same as before: Manually created groups keep their elements, but any active relational anomalies (including automatically created alarm groups) involving the element are cleared.
 
 #### Problem when importing a DELT package containing average trend data into a Cassandra Cluster or STaaS database [ID 43768]
 
@@ -334,3 +334,10 @@ Up to now, after you had imported a DELT package containing average trend data i
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
 
 Up to now, it would not be possible to update the failover configuration when the *ClusterEndpointsManager* soft-launch option had explicitly been disabled.
+
+#### Automation: No longer possible to send an email report in a C# code block after having selected a dashboard created by means of the Dashboards app [ID 43822]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+<!-- Not added to MR 10.6.0 -->
+
+Since DataMiner feature version 10.5.10, in Automation, it would incorrectly no longer be possible to send an email report in a C# code block after having selected a dashboard created by means of the Dashboards app.

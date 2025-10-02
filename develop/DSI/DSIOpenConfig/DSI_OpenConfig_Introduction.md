@@ -2,7 +2,7 @@
 uid: DSI_OpenConfig_Introduction
 ---
 
-# OpenConfig
+# About OpenConfig
 
 OpenConfig is an informal working group with members such as Google, Microsoft, AT&T, and British Telecom.
 

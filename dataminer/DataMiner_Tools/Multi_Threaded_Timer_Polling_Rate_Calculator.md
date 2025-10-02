@@ -51,6 +51,6 @@ The result box will display the optimal *pollingrate* configuration. This can th
 
 ## Useful links
 
-- [About multithreaded timers](xref:AdvancedMultiThreadedTimersIntroduction)
+- [Multithreaded timers](xref:AdvancedMultiThreadedTimers)
 
 - [How to configure multithreaded timers](xref:How_to_configure_multi_threaded_timers)

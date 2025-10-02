@@ -41,7 +41,7 @@ Once a request is sent by a client, a response is expected. HTTP response messag
 
 Understanding these status codes is key to properly handling response content received on the client side.
 
-For more information, see this [introduction to HTTP communication](xref:ConnectionsHttpIntroduction).
+For more information, see [HTTP connections](xref:ConnectionsHttp).
 
 ## About HTTP DataMiner connectors
 

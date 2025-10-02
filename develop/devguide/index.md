@@ -5,7 +5,7 @@ description: Learn how to create DataMiner connectors & Automation scripts, and 
 
 # Development Guide
 
-- [Connectors](xref:Introduction)
+- [Connectors](xref:About_DataMiner_connectors)
 - [Automation scripts](xref:AutomationDevGuideIndex)
 - [GQI extensions](xref:GQI_Extensions)
 - [User-Defined APIs](xref:DMI_User-DefinedAPIs)

@@ -166,7 +166,7 @@ To prepare effectively for the exam:
   
   - System Library:
     - [Introduction video to DIS Class Library](https://community.dataminer.services/courses/dataminer-automation/lessons/dataminer-integration-studio-dis-class-library/)
-    - [Class library introduction on DataMiner Docs](xref:ClassLibraryIntroduction)
+    - [About the class library](xref:ClassLibraryIntroduction)
     - [Class library examples](xref:ClassLibraryExamples)
 
 - Schedule check-ins with your examiner via the booking page if you have any questions.

@@ -13,6 +13,23 @@ uid: EPM_7.0.10_Integrated_DOCSIS
 
 A new dashboard is now available with the name *US FN Breach Report (OFDMA)* and *US FN Breach Report (SC-QAM)*. It allows you to monitor whether a KPI is higher than a specific threshold for a specific period of time. It makes use a of new ad hoc data source (*EPM_I_DOCSIS_GQI_GET_BREACH_DATA*) that reports the fiber nodes that breached a threshold for a specific number of months in a row. This is checked in weekly increments. This means that if for example a month is selected, the dashboard will check whether for that period of time (i.e. a month), the threshold was breached at least once every week.
 
+#### New SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig script [ID 43805]
+
+A new script, *SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig*, is now available, which replaces the existing script *SLC-AS-EPM_I_DOCSIS_CreateCbr8CcapMeasPoints*. The new script creates and maintains both measurement points and spectrum monitors for each port of all active CISCO CBR-8 CCAP UTSC (Production) elements.
+
+When the script is run, it discovers all active Production elements using the CISCO CBR-8 CCAP UTSC connector, and then executes the following actions for each port:
+
+1. It creates a measurement point.
+1. It creates or updates a monitor linked to that point and to a spectrum script.
+1. It removes deprecated monitors if the corresponding port no longer exists.
+
+Monitors that are created will be shown under *Spectrum Analyzer* > *Monitors* with names in the format *ElementName_InterfaceName*.
+
+The script has the following input parameters:
+
+- *Measurement Point Script* (required): The script used for each created measurement point.
+- *Monitor Interval* (optional): The interval during which the monitor should run. If this is not set, the value from the parameter *Free Run Duration* from the element will be used.
+
 ## Changes
 
 ### Enhancements

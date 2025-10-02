@@ -79,12 +79,6 @@ SLLogCollector packages now also include the log files of the Web DcM.
 
 ### Fixes
 
-#### Midnight synchronization: Errors that occurred while zipping files would incorrectly get ignored [ID 42741]
-
-<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
-
-When, during a midnight synchronization, an error occurred while zipping a file, up to now, that error would incorrectly be ignored.
-
 #### Problem when loading initial parameter data for remote elements [ID 43339] [ID 43552]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
@@ -176,9 +170,9 @@ Also, when no master agent can be selected because the ResourceManager license i
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
 
-When an element was swarmed to another DataMiner Agent while automatic incident tracking was disabled, up to now, the alarms associated with that element would incorrectly be removed from any user-defined alarm group (i.e. incident) they were in, and would again appear as separate alarms. From now on, the alarms will remain in the user-defined alarm group (i.e. incident) they are in.
+If automatic incident tracking was disabled and an element had an alarm that had been manually added to an alarm group, up to now, swarming that element would cause that alarm to incorrectly be removed from the alarm group and appear again as a separate alarm. This will no longer occur.
 
-Also, when an element is swarmed to another DataMiner Agent while automatic incident tracking is enabled, from now on, any relational anomalies or multivariate patterns on that element will be removed.
+If an element gets swarmed while automatic incident tracking is enabled, the behavior remains the same as before: Manually created groups keep their elements, but any active relational anomalies (including automatically created alarm groups) involving the element are cleared.
 
 #### Problem when importing a DELT package containing average trend data into a Cassandra Cluster or STaaS database [ID 43768]
 

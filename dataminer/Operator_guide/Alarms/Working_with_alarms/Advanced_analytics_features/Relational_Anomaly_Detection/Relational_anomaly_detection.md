@@ -83,7 +83,7 @@ From DataMiner 10.5.6/10.6.0 onwards<!--RN 42602-->, [deleting a relational anom
 
 ## Limitations
 
-- Monitoring parameters hosted on **multiple DataMiner Agents within a single relational anomaly group** is only supported from DataMiner 10.5.11/10.6.0 onwards.<!-- RN 43686 --> In previous DataMiner versions, all parameters in a group must be hosted on the same DMA. This also means that in previous DataMiner versions, a relational anomaly group will stop working if any elements in that group are [swarmed](xref:Swarming) to other DMAs. In addition, prior to DataMiner 10.5.9/10.6.0<!--RN 43320-->, the *RelationalAnomalyDetection.xml* file on a given DMA can only include parameters hosted on that same DMA.
+- Monitoring parameters hosted on **multiple DataMiner Agents within a single relational anomaly group** is only supported from DataMiner 10.5.11/10.6.0 onwards.<!-- RN 43686 --> In previous DataMiner versions, all parameters in a group must be hosted on the same DMA. This also means that in previous DataMiner versions, a relational anomaly group will stop working if any elements in that group are [swarmed](xref:Swarming) to other DMAs. In more recent DataMiner versions, they will continue to work, but any active anomalies are cleared if elements involved in those anomalies are swarmed. Note also that prior to DataMiner 10.5.9/10.6.0<!--RN 43320-->, the *RelationalAnomalyDetection.xml* file on a given DMA can only include parameters hosted on that same DMA.
 
 - Some parameter behavior will cause RAD to work less accurately. For example, if a parameter responds to another parameter with a delay, such as a door opening gradually lowering a room's temperature, RAD may generate less precise results.
 
