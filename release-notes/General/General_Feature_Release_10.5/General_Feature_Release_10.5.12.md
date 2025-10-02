@@ -75,6 +75,14 @@ From now on, all dashboard reports configured in Automation, Correlation or Sche
 
 SLHelper will also no longer convert the reports of the legacy Reporter module to PDF format. From now on, this will also be done by the Web DcM.
 
+#### DataMiner upgrade: Backend browser installation package no longer included in upgrade packages [ID 43771]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+From now on, DataMiner upgrade packages will no longer include the Puppeteer-Sharp/Chromium browser installation package.
+
+This backend browser, which was used by SLHelper to generate reports and to convert those reports to PDF format, is no longer needed as the new Web DcM will now generate all reports and convert them to PDF format.
+
 #### NATSMigration tool will now also check for outdated DLL files in the ProtocolScripts folder [ID 43778]
 
 <!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
