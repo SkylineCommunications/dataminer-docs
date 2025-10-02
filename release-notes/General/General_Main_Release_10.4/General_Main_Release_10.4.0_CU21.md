@@ -15,7 +15,13 @@ uid: General_Main_Release_10.4.0_CU21
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Automation: Engine class now exposes the public property ScriptName [ID 43840]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+From now on, the `Engine` class exposes the public property `ScriptName`.
+
+This means that, in an Automation script, it will now be possible to retrieve the name of that script.
 
 ### Fixes
 

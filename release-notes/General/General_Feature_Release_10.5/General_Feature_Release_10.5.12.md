@@ -63,6 +63,14 @@ The endpoint can now also return the following additional errors:
 | ResponseHeadersNotAllowed | 1012 | 500 | The response header or headers you are trying to return are not allowed. |
 | ResponseHeadersInvalid | 1013 | 500 | The response header or headers you are trying to return are invalid. Header names and values cannot contain whitespace, colons (":"), commas (","), or ASCII control characters. The *UserDefinableApiEndpoint* logging will contain the exact error. |
 
+#### Automation: Engine class now exposes the public property ScriptName [ID 43840]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+From now on, the `Engine` class exposes the public property `ScriptName`.
+
+This means that, in an Automation script, it will now be possible to retrieve the name of that script.
+
 ## Changes
 
 ### Enhancements

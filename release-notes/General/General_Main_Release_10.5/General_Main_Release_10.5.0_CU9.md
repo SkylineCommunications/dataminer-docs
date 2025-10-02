@@ -23,6 +23,14 @@ From now on, the *NATSMigration* tool will also check for outdated DLL files in 
 
 When an outdated DLL file is found, the migration will be aborted. For the migration to succeed, the user will have to remove the outdated DLL file and update the protocol in question.
 
+#### Automation: Engine class now exposes the public property ScriptName [ID 43840]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+From now on, the `Engine` class exposes the public property `ScriptName`.
+
+This means that, in an Automation script, it will now be possible to retrieve the name of that script.
+
 ### Fixes
 
 *No fixes have been added yet.*
