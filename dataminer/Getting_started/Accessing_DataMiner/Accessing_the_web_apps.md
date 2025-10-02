@@ -35,29 +35,23 @@ To access the DataMiner landing page:
 
 1. On the landing page, select the app you want to open. See [Available web apps](#available-web-apps).
 
-   ![Landing page](~/dataminer/images/DataMiner_Landing_Page2.png)<br>*DataMiner landing page in DataMiner 10.5.9*
+   ![Landing page](~/dataminer/images/DataMiner_Landing_Page2.png)<br>*DataMiner landing page in DataMiner 10.5.11*
 
 In the top-left corner of the landing page, click the **DataMiner icon** or waffle icon (depending on your DataMiner version<!--RN 43024-->) to open a compact overview of the available web apps. From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, next to this icon, the **name of the DMS** is shown. In the case of a standalone DMA, the DMA name is shown instead.
 
-From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, you can customize the **DataMiner landing page theme**:
+In the top-right corner of the landing page, the ![Help](~/dataminer/images/Landing_page_help_icon.png) icon provides access to several handy pages (from DataMiner web 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- 43583 -->):
 
-1. Add the argument `?showAdvancedSettings=true` to the landing page URL.
-
-1. Click the cogwheel button in the top-right corner of the page.
-
-1. Select one of the available themes:
-
-   - *Light* (Default)
-
-   - *Dark*
-
-   - *System*
+- *Community*: Links to the DataMiner Dojo blog, a page where you can suggest new DataMiner features, and our Q&A forum.
+- *Documentation*: Links to the main page of the DataMiner documentation.
+- *Status*: Displays the current status of the various DataMiner services.
+- *Feedback*: Allows you to provide direct feedback on DataMiner.
+- *Support*: Displays contact information for DataMiner Support.
 
 ## Available web apps
 
 The landing page provides access to the following web apps:
 
-![Landing page](~/dataminer/images/DataMiner_Landing_Page.png)<br>*DataMiner landing page in DataMiner 10.5.9*
+![Landing page](~/dataminer/images/DataMiner_Landing_Page.png)<br>*DataMiner landing page in DataMiner 10.5.11*
 
 - (1) [Dashboards app](xref:newR_D): Use this app to create, manage, and view dashboards that provide insights into your monitored system.
 
@@ -97,3 +91,19 @@ To do so:
 1. Optionally, you can pin the app to your taskbar or add a desktop shortcut to quickly open it.
 
    ![Standalone app](~/dataminer/images/Standalone_App.png)<br>*Low-Code Apps module in DataMiner 10.5.8*
+
+## Customizing the landing page theme
+
+From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, you can customize the DataMiner landing page theme:
+
+1. Add the argument `?showAdvancedSettings=true` to the landing page URL.
+
+1. Click the cogwheel button in the top-right corner of the page.
+
+1. Select one of the available themes:
+
+   - *Light* (Default)
+
+   - *Dark*
+
+   - *System*
