@@ -98,6 +98,17 @@ From now on, all dashboard reports configured in Automation, Correlation or Sche
 
 SLHelper will also no longer convert the reports of the legacy Reporter module to PDF format. From now on, this will also be done by the Web DcM.
 
+#### Relational anomaly detection: New API message to migrate a RAD parameter group to a specific DMA [ID 43769]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+From now on, the new `MigrateRADParameterGroupMessage` will allow you to migrate a RAD parameter group to a specific DataMiner Agent.
+
+This new DataMiner Agent will then be responsible for building, maintaining, and executing the anomaly detection model of the RAD parameter group in question.
+
+> [!NOTE]
+> A RAD parameter group will be migrated automatically when its parameters are hosted by elements that are swarmed from one DataMiner Agent to another. The RAD parameter group will then be migrated to the DataMiner Agent hosting the majority of its parameters.
+
 #### DataMiner upgrade: Backend browser installation package no longer included in upgrade packages [ID 43771]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->

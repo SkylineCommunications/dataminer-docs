@@ -449,7 +449,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320] [ID 43440] [ID 43686] [ID 43797]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320] [ID 43440] [ID 43686] [ID 43769] [ID 43797]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
@@ -463,6 +463,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 43320: MR 10.6.0 - FR 10.5.9 -->
 <!-- RNs 43440: MR 10.6.0 - FR 10.5.11 -->
 <!-- RNs 43686: MR 10.6.0 - FR 10.5.11 -->
+<!-- RNs 43769: MR 10.6.0 - FR 10.5.12 -->
 <!-- RNs 43797: MR 10.6.0 - FR 10.5.11 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
@@ -498,7 +499,7 @@ Some parameter behavior will cause RAD to work less accurately. For example, if 
 
 ##### Messages
 
-The following API messages can be used to create, retrieve and remove RAD parameter groups:
+The following API messages can be used to create, retrieve, migrate, and remove RAD parameter groups:
 
 | Message | Function |
 |---------|----------|
@@ -507,6 +508,7 @@ The following API messages can be used to create, retrieve and remove RAD parame
 | GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular RAD parameter group.<br>The response to a `GetRADParameterGroupInfoMessage` includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging. |
 | GetRADParameterGroupsMessage    | Retrieves a list of all RAD parameter groups that have been configured across all agents in the cluster. |
 | GetRADSubgroupInfoMessage       | Retrieves all configuration information for a particular RAD parameter subgroup by subgroup ID. |
+| MigrateRADParameterGroupMessage | Migrates a RAD parameter group to a specific DataMiner Agent. This new DataMiner Agent will then be responsible for building, maintaining, and executing the anomaly detection model of the RAD parameter group in question.<br>Note: A RAD parameter group will be migrated automatically when its parameters are hosted by elements that are swarmed from one DataMiner Agent to another. The RAD parameter group will then be migrated to the DataMiner Agent hosting the majority of its parameters. |
 | RemoveRADParameterGroupMessage  | Deletes a RAD parameter group. |
 | RetrainRADModelMessage          | Retrains the RAD model over a specified time range. |
 
