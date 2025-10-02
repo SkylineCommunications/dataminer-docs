@@ -71,3 +71,9 @@ Up to now, the parameter filter that was used when checking whether or not a par
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 When a *Search input* component had its *Emit value on* option set to "Value change", up to now, it would not pass an empty value when its value was cleared after the default selection had been (re)applied.
+
+#### Dashboards/Low-Code Apps - Time range component: Problem when scheduling the PDF generation of dashboard reports using a relative timespan [ID 43828]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When the *Time range* component had been used to schedule the PDF generation of dashboard reports, the reports would not be generated at the correct time when a relative timespan (e.g. "Today so far") had been specified. Instead of the relative timespan, the system would incorrectly use a fixed timespan based on the moment at which the time range had been configured.
