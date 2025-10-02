@@ -177,12 +177,17 @@ In the *Dimensions* section of the *Settings* pane, you can resize and position 
 | ![Left](~/dataminer/images/Dimensions_Left.png) | Left | Specify the location of the left edge of the layer (in pixels or percent). This value should be lower than the width of the overall template. |
 | ![Right](~/dataminer/images/Dimensions_Right.png) | Right | Specify the location of the right edge of the layer (in pixels or percent). This value should be lower than the width of the overall template. |
 
+To change the unit used for the dimension values, click the unit itself. For instance, clicking *px* will switch to *%*.
+
+You can secure one or multiple dimension settings of a layer by clicking the ![Lock](~/dataminer/images/Dimensions_Lock.png) icon next to the chosen setting. This lock functionality enhances the security of your design, preserving your template's intended appearance, especially when dealing with variable widths and heights. For example, when adjusting a table column width, you may want to maintain specific proportions. Once a setting is locked, any attempt to override the specified dimension will be restricted. This includes moving or resizing the layer in the preview and adjusting the component size in the dashboard or low-code app edit mode (e.g. changing the size of a table column). The locked dimensions ensure that the template remains in its designated position. If you are unable to lock a dimension setting because of the locking of other settings, the lock icon will be grayed out.
+
+From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- RN 43740 -->, it is also possible to lock a dimension setting of a shape to the virtual bounds of a component instead of the visual bounds. To do so, keep the CTRL button pressed while clicking the lock icon. The icon will then take the accent color (blue) to indicate that virtual bound locking is enabled. Functionally, this ensures that when virtualization is supported (e.g. in the timeline), shapes will align to the virtual boundary rather than the visible shape boundary, allowing them to extend outside the visible area (i.e. viewport). This way, time-based elements such as pre-roll and post-roll bars that extend beyond the viewport can be visualized.
+
 > [!NOTE]
 >
 > - In the preview, when you use the drag-and-drop functionality to move a layer, or when you resize a layer by dragging the frame edges, the dimension settings in the *Settings* pane will automatically be adjusted.
-> - You can change the unit to percent by clicking *px* next to the dimension values.
-> - You can secure one or multiple dimension settings of a layer by clicking the ![*Lock*](~/dataminer/images/Dimensions_Lock.png) icon next to the chosen setting. This lock functionality enhances the security of your design, preserving your template's intended appearance, especially when dealing with variable widths and heights. For example, when adjusting a table column width, you may want to maintain specific proportions. Once a setting is locked, any attempt to override the specified dimension will be restricted. This includes moving or resizing the layer in the preview and adjusting the component size in the dashboard or low-code app edit mode (e.g. changing the size of a table column). The locked dimensions ensure that the template remains in its designated position. If you are unable to lock a dimension setting because of the locking of other settings, the lock icon will be grayed out.
 > - For some layers, the width and height is determined by the left and right position and can therefore not be modified.
+> - Virtual bounds locking of the *Width* dimension is only possible when the unit is set to percent.
 
 ### Customizing layer appearance and behavior
 
@@ -214,6 +219,8 @@ Layer-specific properties:
 | N/A | HTML code | Enter HTML code. Basic syntax highlighting and IntelliSense is supported. | HTML |
 | N/A | Link width to | Link the width of this column to that of another column, selected from the dropdown list. Only available for table and grid components. | Rectangle |
 | N/A | Link height to | Link the height of this column to that of another column, selected from the dropdown list. Only available for table and grid components. | Rectangle |
+| ![Horizontal anchor left](~/dataminer/images/Rectangle_Horizontal_Anchor.png) ![Horizontal anchor right](~/dataminer/images/Rectangle_Horizontal_Anchor_Right.png) | Horizontal anchor | If the width of a rectangle is linked to that of another shape, you can use this property to anchor the shape to either the left or the right side of the shape. Available from DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards.<!-- RN 43740 --> | Rectangle |
+| ![Vertical anchor top](~/dataminer/images/Rectangle_Vertical_Anchor.png) ![Vertical anchor bottom](~/dataminer/images/Rectangle_Vertical_Anchor_Bottom.png) | Vertical anchor | If the height of a rectangle is linked to that of another shape, you can use this property to anchor the shape to either the top or the bottom of the shape. Available from DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards.<!-- RN 43740 --> | Rectangle |
 
 > [!NOTE]
 > Certain HTML tags, such as `<iframe>` and `<object>`, are not supported in HTML layers because embedded content is currently restricted in templates. If you want to use these tags, consider using the [web component](xref:DashboardWeb) instead. To display content like video thumbnails in a template, you can convert the content to a base64-encoded image and display it using an `<img>` tag.
