@@ -19,6 +19,10 @@ uid: MediaOps_1.5.0
 
 On the *Resources* page of the Resource Studio app, when a large number of resources are deprecated or restored, a loading indicator is now displayed, providing feedback on the action in progress. In addition, when you start an action to deprecate or restore multiple resources, you will now first be asked to confirm the action.
 
+#### Exception thrown when timing of completed job is adjusted [ID 43847]
+
+When a job is in the state *Completed*, *Canceled*, *Ready For Invoice*, or *Invoiced*, and an attempt is made to adjust the timing of the job, an InvalidOperationException will now be thrown, as this is not allowed in such cases.
+
 ### Fixes
 
 #### MediaOps log files not included in SLLogCollector package [ID 43791]
