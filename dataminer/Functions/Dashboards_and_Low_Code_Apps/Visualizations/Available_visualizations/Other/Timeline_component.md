@@ -355,6 +355,8 @@ For the timeline component, the following component actions are available:
 
 - *Clear highlights*: Clears all highlights set by *Highlight time range* actions.
 
+- *Clear selection*: This action clears the selection of data in the component. Available from DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!--RN 43635-->.
+
 - *Fetch the data*: Available from DataMiner 10.2.10/10.3.0 onwards. Fetches the data for the component.
 
 - *Highlight time range*: Highlights a range on the timeline component. The highlighted section will expose data in the form of a *Timespan* object. If multiple sections are highlighted, the data will contain an array of *Timespan* objects.

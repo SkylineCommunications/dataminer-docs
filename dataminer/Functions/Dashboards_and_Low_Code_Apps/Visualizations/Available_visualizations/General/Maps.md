@@ -100,6 +100,8 @@ When a maps component is used in a [low-code app](xref:Application_framework), a
 
 The following actions are available:
 
+- *Clear selection*: This action clears the selection of data in the component. Available from DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!--RN 43635-->.
+
 - *Fetch the data*: This action fetches the data from the component again.
 
 - *Pan to view*: This action pans to a certain location. The coordinates for this action can be static or dynamic (using the *Link to* option).
