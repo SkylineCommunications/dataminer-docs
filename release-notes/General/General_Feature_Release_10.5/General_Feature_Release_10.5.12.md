@@ -28,6 +28,15 @@ uid: General_Feature_Release_10.5.12
 
 ## New features
 
+#### DataMiner upgrade: New VerifyOSVersion prerequisite will block upgrades on unsupported OS versions [ID 43356]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+When a DataMiner upgrade is being performed, from now on, the new *VerifyOSVersion* prerequisite will check whether the DataMiner version in the upgrade package supports the version of the operating system that is installed on the DataMiner Agent. If not, the upgrade will be aborted, and the user will be asked to upgrade the operating system.
+
+> [!NOTE]
+> Microsoft no longer supports OS versions older than Windows Server 2016 or Windows 10. Hence, these versions will not pass the above-mentioned OS version check.
+
 #### User-defined APIs: New ResponseHeaders property [ID 43705]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->

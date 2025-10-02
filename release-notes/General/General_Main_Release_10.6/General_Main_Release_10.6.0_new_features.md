@@ -1030,6 +1030,15 @@ Example:
 
 `Could not resolve destination host to an IP: polling host=localhost123, or failed to set the destination address. Host to IP failure. Error : 11001. [WSAHOST_NOT_FOUND]`
 
+#### DataMiner upgrade: New VerifyOSVersion prerequisite will block upgrades on unsupported OS versions [ID 43356]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+When a DataMiner upgrade is being performed, from now on, the new *VerifyOSVersion* prerequisite will check whether the DataMiner version in the upgrade package supports the version of the operating system that is installed on the DataMiner Agent. If not, the upgrade will be aborted, and the user will be asked to upgrade the operating system.
+
+> [!NOTE]
+> Microsoft no longer supports OS versions older than Windows Server 2016 or Windows 10. Hence, these versions will not pass the above-mentioned OS version check.
+
 #### DataMiner Object Models: Definition-level security [ID 43380] [ID 43589]
 
 <!-- MR 10.6.0 - FR 10.5.10 -->
