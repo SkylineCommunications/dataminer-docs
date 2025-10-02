@@ -13,7 +13,7 @@ In the file *Config.manual.asp*, located in the folder `C:\Skyline DataMiner\Web
 
 ## Configuring whether the landing page is displayed
 
-You can configure whether the landing page is displayed or instead the Monitoring app is opened when a user browses to a DMA.
+You can configure whether the [landing page](xref:Accessing_the_web_apps#dataminer-landing-page) is displayed or instead the Monitoring app is opened when a user browses to a DMA.
 
 1. Open `C:\Skyline DataMiner\WebPages\config.manual.asp` in a text editor.
 
