@@ -125,6 +125,14 @@ From now on, the *NATSMigration* tool will also check for outdated DLL files in 
 
 When an outdated DLL file is found, the migration will be aborted. For the migration to succeed, the user will have to remove the outdated DLL file and update the protocol in question.
 
+#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 43854]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
+
+This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
+
 ### Fixes
 
 #### Alerter would incorrectly require .NET Framework 2.0 [ID 43787]
