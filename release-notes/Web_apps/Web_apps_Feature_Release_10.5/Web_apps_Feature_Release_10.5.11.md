@@ -114,8 +114,8 @@ When creating a template for the *Timeline* component, it is now possible to anc
 
 ##### Anchoring
 
-- Rectangular shapes (i.e. layers of type *Rectangle*) of which the width is linked to that of another shape can now be anchored to either the left side or the right side of the shape.
-- Rectangular shapes (i.e. layers of type *Rectangle*) of which the height is linked to that of another shape can now be anchored to either the top or the bottom of the shape.
+- If *Rectangle* shapes are linked to the width of a specific column, you can now select whether the background color representing the linked column is anchored to the left (default) or to the right.
+- If *Rectangle* shapes are linked to the height of a specific column, you can now select whether the background color representing the linked column is anchored to the bottom (default) or to the top.
 
 ##### Virtual bounds locking
 
