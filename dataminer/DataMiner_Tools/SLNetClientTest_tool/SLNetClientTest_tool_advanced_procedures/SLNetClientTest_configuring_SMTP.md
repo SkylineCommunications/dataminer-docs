@@ -8,7 +8,7 @@ A DMS can be configured to send out email notifications and reports via an SMTP 
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
-1. Go to the *Build Message* tab and select *UpdateSmtpConfigMessage* in the drop-down box at the top.
+1. Go to the *Build Message* tab located at the bottom left of the SLNetClientTest tool window and select *UpdateSmtpConfigMessage* in the drop-down box at the top.
 
 1. Specify the necessary SMTP settings. See [SMTP server settings](xref:Configuring_outgoing_email#smtp-server-settings).
 
