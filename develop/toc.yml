@@ -945,6 +945,8 @@ items:
         topicUid: BP_Implementing_IAS_in_Regression_Tests
       - name: Creating a Cypress test for an interactive Automation script
         topicUid: Creating_a_cypress_test_for_an_interactive_automation_script
+      - name: Launching and attaching interactive Automation scripts
+        topicUid: Launching_and_attaching_interactive_Automation_scripts
       - name: Implementing the OnRequestScriptInfo entry point
         topicUid: Implementing_OnRequestScriptInfo_Entry_Point
   - name: GQI extensions

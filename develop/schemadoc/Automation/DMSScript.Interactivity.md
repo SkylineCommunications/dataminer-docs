@@ -2,7 +2,7 @@
 uid: DMSScript.Interactivity
 ---
 
-# Type element
+# Interactivity element
 
 Specifies if the script requires user interaction.
 
