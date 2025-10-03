@@ -9,6 +9,8 @@ items:
     - name: dataminer.MediaOps
       topicUid: MediaOps
       items:
+      - name: Installing dataminer.MediaOps
+        topicUid: MO_Installation
       - name: People & Organizations
         topicUid: People_Organizations
         items:
@@ -57,6 +59,8 @@ items:
           topicUid: Tutorial_MediaOps_People_and_Organizations_Intro
         - name: Assigning capabilities to resources
           topicUid: Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities
+        - name: Using time-dependent capabilities
+          topicUid: Tutorial_MediaOps_Scheduling_Time_Dependent_Capabilities
         - name: Scheduling a job using a resource pool with specific capabilities
           topicUid: Tutorial_MediaOps_Scheduling_Configurations
         - name: Creating a workflow to use as a template for a job
