@@ -329,6 +329,16 @@ If an element gets swarmed while automatic incident tracking is enabled, the beh
 
 Up to now, after you had imported a DELT package containing average trend data into a Cassandra Cluster or STaaS database, that database would contain invalid trend data.
 
+#### SLWatchdog would incorrectly remove the threads table entries of all SLProtocol processes when one SLProtocol process disappeared [ID 43780]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 [CU0] -->
+
+Since DataMiner version 10.5.0/10.4.12, the DataMiner Agent is no longer restarted when an SLProtocol process disappears. Instead, a new SLProtocol process is started and all elements that were hosted by the process that disappeared are now be hosted by the newly created process.
+
+However, up to now, when an SLProtocol process disappeared, SLWatchdog would remove all entries in its threads table that matched the name of the process (e.g. "SLProtocol"). This would result in all entries of the other SLProtocol processes to be removed as well.
+
+From now on, SLWatchdog will only remove the threads table entries that match the name as well as the ID of the process.
+
 #### Failover: Problem when trying to update the failover configuration when the ClusterEndpointsManager soft-launch option had been disabled [ID 43794]
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
