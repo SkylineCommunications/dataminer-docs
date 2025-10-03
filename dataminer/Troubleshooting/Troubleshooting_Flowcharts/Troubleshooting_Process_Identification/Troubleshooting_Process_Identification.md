@@ -1,5 +1,6 @@
 ---
 uid: Troubleshooting_Process_Identification
+keywords: SL,SLElement,SLDataMiner,SLProtocol,SLNet,SLNetComService,SLDMS,SLPort,SLSNMPManager,SLWatchdog,SLLog,SLDataGateway
 ---
 
 # Troubleshooting - process identification
