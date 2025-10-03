@@ -8,7 +8,7 @@ The `DomInstanceNetworkAttachmentSettings` object is introduced in DataMiner ver
 
 This object currently contains settings to change the default location where attachments for DOM are saved from the `C:\Skyline DataMiner\Documents` folder to a network share of your choosing.
 
-We recommend configuring your DOM modules using the [DOM Editor](xref:DOM_Editor) tool, because that way you will be able to configure these settings directly through the tool.
+We recommend using the [DOM Editor](xref:DOM_editor_attachments_networkshare) to configure a network share to store attachments.
 
 > [!NOTE]
 >
