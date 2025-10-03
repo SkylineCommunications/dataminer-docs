@@ -72,6 +72,8 @@ In the example below, a grid filters a table component based on job state. By se
 
 To **clear the selection** in a grid, keep Ctrl pressed and click each selected item.
 
+From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!--RN 43635-->, an action can also be configured on another dashboard component (e.g. a button) so that this can be used to clear the grid selection (see [Configuring app events](xref:LowCodeApps_event_config)).
+
 ## Configuration options
 
 ### Grid layout
