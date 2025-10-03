@@ -6,9 +6,6 @@ reviewer: Alexander Verkest
 
 # Managing dataminer.services keys
 
-> [!IMPORTANT]
-> You need to have the *Owner* role in order to access or create keys.
-
 ## System keys
 
 System keys can be used with the [DataMinerDeploy .NET tool to deploy packages](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.DataMinerDeploy/tree/main/CICD.Tools.DataMinerDeploy#deploying-from-a-volatile-upload) to a DMS that is connected to dataminer.services.
