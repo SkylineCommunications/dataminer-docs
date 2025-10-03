@@ -6,13 +6,13 @@ uid: ThirdPartyIntegrations
 
 <div class="row"> 
   <div class="column">
-    <a href="/develop/ThirdParty/Ansible/Configure_DataMiner_using_Ansible.html" title="Ansible" target="_self"><img src="~/tutorials/images/Ansible.svg" style="width:100%"></a>
+    <a href="/develop/ThirdParty/Ansible/Configure_DataMiner_using_Ansible.html" title="Ansible" target="_self"><img src="~/develop/images/Ansible.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/develop/ThirdParty/Grafana/Grafana_plugin.html" title="Grafana" target="_self"><img src="~/tutorials/images/Grafana.svg" style="width:100%"></a>
+    <a href="/develop/ThirdParty/Grafana/Grafana_plugin.html" title="Grafana" target="_self"><img src="~/develop/images/Grafana.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/develop/ThirdParty/mbgNMS/mbgNMS.html" title="Meinberg" target="_self"><img src="~/tutorials/images/Meinberg.svg" style="width:100%"></a>
+    <a href="/develop/ThirdParty/mbgNMS/mbgNMS.html" title="Meinberg" target="_self"><img src="~/develop/images/Meinberg.svg" style="width:100%"></a>
   </div>  
 </div>
 

@@ -73,6 +73,9 @@ uid: solution_index
   <div class="column">
     <a href="/solutions/devtools/Performance_Analyzer/Performance_Analyzer.html" title="Performance Analyzer" target="_self"><img src="~/solutions/images/performance_analyzer.svg" style="width:100%"></a>
   </div>
+  <div class="column">
+    <a href="/solutions/devtools/Dom_Viewer/domviewer_about.html" title="DOM Viewer" target="_self"><img src="~/solutions/images/DOM_Viewer.svg" style="width:100%"></a>
+  </div>
 </div>
 
 ## Custom Solutions
