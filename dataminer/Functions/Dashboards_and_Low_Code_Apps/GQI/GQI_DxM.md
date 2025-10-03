@@ -22,7 +22,7 @@ The GQI DxM is supported from DataMiner 10.5.0 [CU1]/10.5.4 onwards, and automat
 > By default, DataMiner web applications will continue to use the SLHelper process for GQI-related operations. To switch to using the GQI DxM, see [Enabling the use of the GQI DxM](#enabling-the-use-of-the-gqi-dxm).
 
 > [!NOTE]
-> [Data Aggregator](xref:Data_Aggregator_DxM) currently relies on the SLHelper process to execute GQI queries. Support for the GQI DxM will be introduced in a future version of Data Aggregator.
+> [Data Aggregator](xref:Data_Aggregator_DxM) supports queries via the GQI DxM from version 3.1.0 onwards. See [Using the GQI DxM for queries](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries).
 
 ## Enabling the use of the GQI DxM
 
