@@ -973,6 +973,8 @@ items:
                 topicUid: Scaling_Ad_hoc_Data_Source
               - name: Fetching alarms using the Repository API
                 topicUid: Alarms_Ad_hoc_Data_Source
+              - name: Paging data from the server
+                topicUid: Paging_Ad_hoc_Data_Source
           - name: Tutorials
             items:
               - name: Building a GQI data source that fetches satellites
