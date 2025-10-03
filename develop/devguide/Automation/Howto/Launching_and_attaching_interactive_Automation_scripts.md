@@ -85,11 +85,11 @@ Goal: Run the script as if launched by a specific user, so you don't need an ext
 
 Attach to the same user:
 ```csharp
-engine.FindInteractiveClient(string.Empty, timeoutSeconds, $"user:{engine.UserLoginName}", AutomationScriptAttachOptions.AttachImmediately);
+engine.FindInteractiveClient(String.Empty, timeoutSeconds, $"user:{engine.UserLoginName}", AutomationScriptAttachOptions.AttachImmediately);
 ```
 Or via cookie:
 ```csharp
-engine.FindInteractiveClient(string.Empty, timeoutSeconds, $"user:{engine.UserCookie}", AutomationScriptAttachOptions.AttachImmediately);
+engine.FindInteractiveClient(String.Empty, timeoutSeconds, $"user:{engine.UserCookie}", AutomationScriptAttachOptions.AttachImmediately);
 ```
 
 Start the script via SLNet and pass the user cookie:
