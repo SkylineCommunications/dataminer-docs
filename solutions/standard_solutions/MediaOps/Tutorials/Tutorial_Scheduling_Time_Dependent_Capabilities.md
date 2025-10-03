@@ -4,12 +4,12 @@ uid: Tutorial_MediaOps_Scheduling_Time_Dependent_Capabilities
 
 # Using time-dependent capabilities
 
-In this tutorial, you will learn how time-dependent capabilities can be used to ensure a steerable antenna can be booked multiple times as long as all overlapping jobs are using the steerable antenna for the same satellite (the steerable antenna can point only to one satellite).
+In this tutorial, you will learn how time-dependent capabilities can be used to ensure that a steerable antenna can be booked multiple times as long as all overlapping jobs are using the steerable antenna for the same satellite. This way, you can ensure that the antenna is booked correctly, taking into account that it can point to only one satellite at a time.
 
 Expected duration: 15 minutes
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created using DataMiner version 10.5.9 and MediaOps version 1.4.1.
+> The content and screenshots for this tutorial have been created using DataMiner version 10.5.9 and MediaOps version 1.4.0.
 
 ## Prerequisites
 
@@ -21,10 +21,12 @@ Expected duration: 15 minutes
 
 - [Step 1: Create resources](#step-1-create-resources)
 - [Step 2: Create and assign a time-dependent capability](#step-2-create-and-assign-a-time-dependent-capability)
+- [Step 3: Configure which antenna can point to which satellite](#step-3-configure-which-antenna-can-point-to-which-satellite)
+- [Step 4: Create jobs for antennas](#step-4-create-jobs-for-antennas)
 
 ## Step 1: Create resources
 
-In this first step, you will create resources for our steerable antenna's needed for this tutorial.
+In this first step, you will create resources representing the steerable antennas needed for this tutorial.
 
 1. On the **Resource Pools** page of the Resource Studio app, click **+ New**.
 
@@ -36,7 +38,7 @@ In this first step, you will create resources for our steerable antenna's needed
 
    ![Add resources to the resource pool](~/solutions/images/Resource_Studio_Add_Antenna_Resources.png)
 
-1. Enter the name `Antenna 01`, set the concurrency to `5` (to allow up to 5 jobs to use the resource at the same time) and click *Save as Completed*.
+1. Enter the name `Antenna 01`, set the concurrency to `5` (to allow up to 5 jobs to use the resource at the same time), and click *Save as Completed*.
 
    ![Add Antenna](~/solutions/images/Resource_Studio_Add_Antenna.png)
 
@@ -57,51 +59,57 @@ In this first step, you will create resources for our steerable antenna's needed
       - EUT-01
       - SES-01
 
-   ![New resource pool](~/solutions/images/Resource_Studio_TDC_New_Capability.png)
+   ![New capability configuration](~/solutions/images/Resource_Studio_TDC_New_Capability.png)
 
-## Step 3: Assign which antenna can point to which satellite
+## Step 3: Configure which antenna can point to which satellite
 
 1. Go to the **Resource Pools** page.
 
 1. Select the *Antennas* resource pool.
 
-1. In the context menu of the each antenna resource, Click on *Assign Capabilities*.
+1. Click the *...* icon for *Antenna 01* and select **Assign Capabilities**.
 
-![New resource pool](~/solutions/images/Resource_Studio_TDC_Assign_Satellite.png)
+   ![Assign capabilities option](~/solutions/images/Resource_Studio_TDC_Assign_Satellite.png)
 
-1. Assign both satellites to indicate the antenna can point to both satellites.
+1. Select the capability *Satellite* and add both options.
 
-![New resource pool](~/solutions/images/Resource_Studio_TDC_Assign_Satellite2.png)
+   ![Assign capabilities](~/solutions/images/Resource_Studio_TDC_Assign_Satellite2.png)
 
-## Step 4: Create jobs for antenna's
+1. Do the same for *Antenna 02*.
+
+## Step 4: Create jobs for antennas
 
 1. Go to the **Scheduling** app.
 
-1. Create a new job in tentative (in draft the resource is not reserved). In our example we take a pre-roll of 10min to leave sufficient time for the satellite to start tracking the satellite.
+1. On the *Job View* page, click **+ New** to start creating a new job, and configure it as illustrated below:
 
-![New resource pool](~/solutions/images/Resource_Studio_TDC_Create_Job1.png)
+   ![New resource pool](~/solutions/images/Resource_Studio_TDC_Create_Job1.png)
 
-1. Open the job edit panel by clicking on the pencil button on the job.
+   In this example, a pre-roll of 10 minutes is used to leave sufficient time for the antenna to start tracking the satellite. The job is created in the *Tentative* state, so that the resource is not reserved yet.
 
-1. Click on the *Add Node* button.
+1. Click *Next* and then click *Create Job*.
 
-![New resource pool](~/solutions/images/Resource_Studio_TDC_Add_Antenna_Job1.png)
+1. Click the pencil icon on the job on the timeline to open the *Edit job* panel.
 
-1. Select the `Antennas` pool and click on the filter icon.
+1. In the *Nodes* section, click *Add Node*.
 
-![New resource pool](~/solutions/images/Resource_Studio_TDC_Add_Antenna_Filter_Job1.png)
+   ![New resource pool](~/solutions/images/Resource_Studio_TDC_Add_Antenna_Job1.png)
 
-1. Add the time-dependent capability `Satellite` with as value `EUT-01`.
+1. Select the *Antennas* pool and click the filter icon.
 
-![New resource pool](~/solutions/images/Resource_Studio_TDC_Add_Antenna_Filter2_Job1.png)
+   ![New resource pool](~/solutions/images/Resource_Studio_TDC_Add_Antenna_Filter_Job1.png)
 
-1. Select `Antenna 01` and click on the *Add Resource* button.
+1. Add the time-dependent capability *Satellite* with the value *EUT-01*.
 
-![New resource pool](~/solutions/images/Resource_Studio_TDC_Add_Antenna2_Job1.png)
+   ![New resource pool](~/solutions/images/Resource_Studio_TDC_Add_Antenna_Filter2_Job1.png)
 
-1. Close the job edit panel
+1. Select *Antenna 01* and click *Add Resource*.
 
-1. Repeat the steps te create a second job that overlaps with the first one, but this time before adding the resource play around with the satellite capability to see that `Antenna 01` is only available when using `EUT-01`.
+   ![New resource pool](~/solutions/images/Resource_Studio_TDC_Add_Antenna2_Job1.png)
+
+1. Close the *Edit job* panel
+
+1. Repeat the previous steps to create a second job that overlaps with the first one, but this time, before adding the resource, play around with the satellite capability to see that *Antenna 01* is only available when *EUT-01* is used.
 
 ![New resource pool](~/solutions/images/Resource_Studio_TDC_2Jobs.png)
 

@@ -28,7 +28,7 @@ There are three main ways to manually create a new job through the Scheduling ap
 
 1. Configure the job's *Desired State*, which can be *Draft* or *Tentative*.<!-- RN 43448 -->
 
-   The default value can be configured in the [Default Job Settings](xref:MO_S_App_Configuration#Configure Job Defaults).
+   The default value can be configured in the [default job settings](xref:MO_S_App_Configuration#configure-job-defaults).
 
 1. Optionally, click *Next* to select the organization and/or job owner linked to the job.
 
