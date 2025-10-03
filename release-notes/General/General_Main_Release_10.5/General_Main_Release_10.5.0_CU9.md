@@ -15,6 +15,17 @@ uid: General_Main_Release_10.5.0_CU9
 
 ### Enhancements
 
+#### Swarming: Clearer error message when file contents cannot be retrieved [ID 43774]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+When, during a swarming operation, a file cannot be loaded, from now on, a clearer error message will be logged. The message will now include the reason of the failure, and, if the error occurred because the file was locked, the process locking the file will also be mentioned.
+
+Also:
+
+- If SLDataMiner is unable to load a certain file, it will shut down gracefully, and the DataMiner Agent will be stopped.
+- If a process other than SLDataMiner is unable to load a certain file, then it will retry loading the file 10 times, and if, after all those retries, it is still not able to load the file, it will stop trying, and retry again when it needs to send a request to the storage module.
+
 #### NATSMigration tool will now also check for outdated DLL files in the ProtocolScripts folder [ID 43778]
 
 <!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
