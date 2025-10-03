@@ -60,6 +60,9 @@ On the *Component > Layout* tab, you can configure the following settings under 
 
 - **Style**: When the query is configured as a set of lines, you can use these settings to change the appearance of the lines. You can change the color, direction visualization, type, and width of the lines. From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43377-->, conditional coloring allows you to specify color filters for specific columns, so that lines can be highlighted based on a condition.
 
+  > [!NOTE]
+  > From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards, lines can also be colored based on the [conditional coloring](xref:DashboardQueryFilter#conditional-coloring) of a linked query filter. This will override the color configuration in the layer settings of the Maps component. Note that if the query filter contains multiple color conditions, only the first color condition will be applied, as a line can only have one color.<!-- RN 43617 -->
+
 - **Advanced settings**: Expand the advanced settings section to access the following settings:
 
   - *Show in zoom level*: Determines in which range of zoom levels the query should be visible.
