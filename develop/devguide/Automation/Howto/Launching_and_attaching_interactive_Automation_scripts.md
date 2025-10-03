@@ -67,14 +67,14 @@ string id = protocol.UserCookie;
 // {448BB4B8-4E55-4CB7-BCC3-848923BD19DA}:AUTOMATION:Automation script:581/120:John Smith
 ```
 
-From an Automation script started by a user::
+From an Automation script started by a user:
 ```csharp
 string id = engine.UserCookie;
 ```
 
 From an SLNet connection:
 ```csharp
-Guid id = protocol.GetUserConnection().ConnectionID
+Guid id = protocol.GetUserConnection().ConnectionID;
 // example: 448BB4B8-4E55-4CB7-BCC3-848923BD19DA
 // Note: protocol.SLNet and Engine.SLNetRaw cookies are process-associated, not user-associated.
 ```
