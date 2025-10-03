@@ -26,7 +26,27 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Custom Alarm Console hyperlinks linked to Automation scripts will no longer no longer hidden in the right-click menu of an alarm [ID 43809]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, custom hyperlinks linked to an Automation script would not be displayed in the right-click menu of an alarm. From now on, they will be displayed.
+
+Example of a custom hyperlinks linked to an Automation script:
+
+```xml
+<HyperLinks xmlns="http://www.skyline.be/config/hyperlinks">
+    <!-- SECOND-GENERATION HYPERLINKS -->
+    <HyperLink id="29"
+        version="2"
+        name="Send QA report by e-mail"
+        menu="Scripts"
+        type="script"
+        alarmColumn="true">
+    QA report by e-mail||||Tooltip|NoConfirmation
+    </HyperLink>
+</HyperLinks>
+```
 
 ### Fixes
 
