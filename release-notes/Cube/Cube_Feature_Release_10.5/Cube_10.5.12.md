@@ -26,11 +26,11 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
-#### Custom Alarm Console hyperlinks linked to Automation scripts will no longer no longer hidden in the right-click menu of an alarm [ID 43809]
+#### Custom Alarm Console hyperlinks linked to Automation scripts will no longer be hidden in the right-click menu of certain alarms [ID 43809]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, custom hyperlinks linked to an Automation script would not be displayed in the right-click menu of an alarm. From now on, they will be displayed.
+Up to now, custom hyperlinks linked to an Automation script would not be displayed in the right-click menu of an alarm of the type *Error* or *Notice* referring to the functionality of the DataMiner System or an alarm of type "Incident". From now on, these hyperlinks will be displayed.
 
 Example of a custom hyperlinks linked to an Automation script:
 
@@ -63,3 +63,13 @@ When you opened a trend graph showing trend data values with low Y values and pr
 When, in DataMiner Cube, you opened a trend graph and then switched to another theme, up to now, errors would start to appear in the logging.
 
 Also, the trend graph colors would incorrectly not get updated.
+
+#### Problem when routing requests related to a swarmed element or an element migrated via a DELT package [ID 43815]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+In some cases, a request from DataMiner Cube related to a swarmed element or an element migrated via a DELT package would not get routed to the correct DataMiner Agent.
+
+For example, when an element card showing a table with context menus was open while the element in question was swarmed to another DMA, after the swarming operation, it would no longer be possible to select items from those context menus.
+
+Also, it would not be possible to rename swarmed elements or elements migrated via a DELT package from the element list on a view card.
