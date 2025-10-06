@@ -30,7 +30,7 @@ By default, this feature is not enabled, and attachments are saved locally in th
 
     ![DOM Editor: manager settings window](~/dataminer/images/DOM_Editor_managersettings.png)
 
-1. Select the correct set of credentials from the *Credential* dropdown.
+1. Select the correct set of credentials from the *Credentials* dropdown.
 
    If the expected credentials are not available, verify if your account has permission to use the credentials.
 
