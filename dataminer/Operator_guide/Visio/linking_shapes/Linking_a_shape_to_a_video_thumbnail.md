@@ -45,9 +45,6 @@ Add a shape data field of type **Link** to the shape, and configure one of the f
 
 The following image formats are supported: .png, .jpg, .bmp, and .emf.
 
-> [!TIP]
-> See also: [Linking a shape to a video thumbnail](xref:Linking_a_shape_to_a_video_thumbnail)
-
 ### In DataMiner Cube
 
 1. Right-click the Visio drawing, and click *Edit Mode*.
