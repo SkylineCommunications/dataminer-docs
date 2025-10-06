@@ -85,7 +85,7 @@ In this first step, you will create resources representing the steerable antenna
 
    ![New resource pool](~/solutions/images/Resource_Studio_TDC_Create_Job1.png)
 
-   In this example, a pre-roll of 10 minutes is used to leave sufficient time for the antenna to start tracking the satellite. The job is created in the *Tentative* state, so that the resource is not reserved yet.
+   In this example, a pre-roll of 10 minutes is used to leave sufficient time for the antenna to start tracking the satellite. The job is created in the *Tentative* state to ensure resources are reserved.
 
 1. Click *Next* and then click *Create Job*.
 
