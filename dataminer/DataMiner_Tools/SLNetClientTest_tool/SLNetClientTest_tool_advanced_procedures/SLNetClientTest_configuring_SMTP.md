@@ -10,6 +10,8 @@ A DMS can be configured to send out email notifications and reports via an SMTP 
 
 1. Go to the *Build Message* tab and select *UpdateSmtpConfigMessage* in the drop-down box at the top.
 
+   ![Build Message tab](~/dataminer/images/SLCLientTest_UpdateSmtpConfigMessage.png)<br>*SLNetClientTest tool in DataMiner 10.5.11*
+
 1. Specify the necessary SMTP settings. See [SMTP server settings](xref:Configuring_outgoing_email#smtp-server-settings).
 
    > [!TIP]
