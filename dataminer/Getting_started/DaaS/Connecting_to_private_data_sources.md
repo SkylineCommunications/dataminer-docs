@@ -13,16 +13,17 @@ To establish this connection, after you have followed the [procedure below](#est
 
 ### Gateway SKUs
 
-By default, our deployments use the [Generation 1 VPN Gateway SKU *VpnGw1AZ*](https://learn.microsoft.com/en-us/azure/vpn-gateway/about-gateway-skus).
-- Maximum 30 tunnels can be created.
-- Throughput benchmark of 650Mbps.
-- The *AZ* in this SKU stands for *Zone Redundant*, which means the gateway instances are automatically distributed across multiple Azure Availability Zones. This increases resilience and protects against zone-level failures.
+By default, our deployments use the [Generation 1 VPN Gateway SKU *VpnGw1AZ*](https://learn.microsoft.com/en-us/azure/vpn-gateway/about-gateway-skus):
+
+- At most 30 tunnels can be created.
+- Throughput benchmark of 650 Mbps.
+- Zone redundant (as indicated by the "AZ" in the SKU): Gateway instances are automatically distributed across multiple Azure Availability Zones. This increases resilience and protects against zone-level failures.
 
 You can request a different SKU during the setup, and it is also possible to scale up to *VpnGw2AZ* and *VpnGw3AZ* (generation 1) later if necessary.
 
-For more information see the official Microsoft documentation [about gateway skus](https://learn.microsoft.com/en-us/azure/vpn-gateway/about-gateway-skus#benchmark).
+For more information, refer to the official Microsoft documentation [About gateway SKUs](https://learn.microsoft.com/en-us/azure/vpn-gateway/about-gateway-skus#benchmark).
 
-### VPN Gateway Redundancy Modes
+### VPN gateway redundancy modes
 
 By default, the gateway runs in Active-Standby mode:
 
@@ -30,10 +31,10 @@ By default, the gateway runs in Active-Standby mode:
 - You will need to connect to one public IP address.
 - If the active instance fails, Azure automatically fails over to the standby instance. This failover is seamless, but **may cause a brief reconnection**.
 
-For customers who require even higher availability, Active-Active mode can be enabled:
+If you require even higher availability, Active-Active mode can be enabled:
 
-- In this mode, both gateway instances are active simultaneously.
-- Each instance has its own public IP address, and the on-premises VPN device(s) must establish a tunnel to each IP.
+- Both gateway instances are active simultaneously.
+- Each instance has its own public IP address, and on-premises VPN devices must establish a tunnel to each IP address.
 - Traffic is load-balanced across the two tunnels. If one instance fails, the other continues to process traffic without the need for failover.
 
 By default, the IKEv2 protocol will be used. IKEv1 is possible but not recommended.
