@@ -35,6 +35,11 @@ Depending on whether the DataMiner Agent is part of a Failover pair or not, a di
 
 ## Removing a Failover DMA
 
+1. [End the Failover configuration](xref:Ending_a_Failover_configuration).
+
+   > [!NOTE]
+   > This first step is especially important if you are using Failover based on hostname. For Failover setups based on virtual IP, this step can be skipped.
+
 1. On a DMA in the cluster, go to the *System Center* module and select the *Agents* page.
 
 1. In the list of DMAs in the *Manage* section, select the DMA you want to remove.
