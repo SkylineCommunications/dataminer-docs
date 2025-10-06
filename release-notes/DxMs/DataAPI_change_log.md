@@ -7,6 +7,50 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 3 October 2025 - DataAPI 1.4.0 - Added support for history set in DataAPI [ID 43666]
+
+DataAPI has been extended to allow users to specify a date and time for history sets, as a header called historySet (optional).
+1. When the header is specified, **all** parameters in the request body have the attribute historySet, protocol xml, set to true.
+1. If the header is not specified, nothing will be modified (i.e., parameters that had historySet set to true will keep it as true, parameters that had historySet set to false will remain as false.
+
+The time specified should follow the format: **yyyy-MM-ddTHH:mm:ssZ (ISO 8601)**.
+If the format is not respected, DataAPI will reject the request.
+Additionally, DataAPI will also reject requests that attempt to perform "history sets" in the future.
+
+> [!IMPORTANT]
+> To take advantage of this feature, both the new DataMiner software version and the new DataAPI version are required, in which case, DataMiner will perform the parameter sets with the provided timestamp associated.
+> 
+> In case this DataAPI release is running with a DataMiner version that does not support history sets via DataAPI, any request that specifies the historySet header will be rejected. This ensures consistent behavior and prevents unintended data operations.
+
+Example of a request:
+
+````bash
+curl -X 'PUT' \
+  'http://localhost:34567/api/data/parameters' \
+  -H 'accept: application/json' \
+  -H 'identifier: test' \
+  -H 'type: test' \
+  -H 'historySet: 2025-09-04T08:30:00Z' \
+  -H 'Content-Type: application/json' \
+  -d '{"data": {"param1": 123 }}'
+````
+
+### 3 October 2025 - DataAPI 1.4.0 - Unable to run installer on DaaS system [ID 43713]
+
+It could occur that a DaaS system or a system with a CD Drive configured was unable to be upgraded/downgraded to a different version of DataAPI.
+
+The installer, now, considers the C: drive by default to copy the files, only in case the drive is not available, it will then look into other drives.
+
+### 3 October 2025 - DataAPI 1.4.0 - Make Peer logic more robust [ID 43657]
+
+It could occur that Data API DxM would fail to start and show a fatal error indicating that a BackgroundService had thrown an unhandled exception while electing a leader.
+This has now been improved to avoid concurrency issues.
+
+### 3 October 2025 - DataAPI 1.4.0 - No longer trend string parameters by default [ID 43462]
+
+String parameters are no longer added to the trend template by default.
+They are still configured as "trendable" and can be manually enabled by users if they wish.
+
 ### 5 August 2025 - DataAPI 1.3.0 - Improved DxM-DataMiner communication for better timeout handling [ID 43441]
 
 The communication between the DataAPI DxM and DataMiner has been improved to better handle timeouts. Previously, data consisting of multiple commands could be pushed in a single message, but when communication timed out this could cause DataAPI to be out of sync with DataMiner, potentially leading to data being overridden or deleted. Now the original message is split in two, so that important information can be cached at an earlier stage, avoiding problems caused by timeouts in a later stage.
