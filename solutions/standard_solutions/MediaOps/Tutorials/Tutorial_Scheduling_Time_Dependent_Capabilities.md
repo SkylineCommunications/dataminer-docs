@@ -83,7 +83,7 @@ In this first step, you will create resources representing the steerable antenna
 
 1. On the *Job View* page, click **+ New** to start creating a new job, and configure it as illustrated below:
 
-   ![New resource pool](~/solutions/images/Resource_Studio_TDC_Create_Job1.png)
+   ![Create job window](~/solutions/images/Resource_Studio_TDC_Create_Job1.png)
 
    In this example, a pre-roll of 10 minutes is used to leave sufficient time for the antenna to start tracking the satellite. The job is created in the *Tentative* state to ensure resources are reserved.
 
@@ -93,26 +93,34 @@ In this first step, you will create resources representing the steerable antenna
 
 1. In the *Nodes* section, click *Add Node*.
 
-   ![New resource pool](~/solutions/images/Resource_Studio_TDC_Add_Antenna_Job1.png)
+   ![Add Node](~/solutions/images/Resource_Studio_TDC_Add_Antenna_Job1.png)
 
 1. Select the *Antennas* pool and click the filter icon.
 
-   ![New resource pool](~/solutions/images/Resource_Studio_TDC_Add_Antenna_Filter_Job1.png)
+   ![Select the resource pool](~/solutions/images/Resource_Studio_TDC_Add_Antenna_Filter_Job1.png)
 
 1. Add the time-dependent capability *Satellite* with the value *EUT-01*.
 
-   ![New resource pool](~/solutions/images/Resource_Studio_TDC_Add_Antenna_Filter2_Job1.png)
+   ![Add time-dependent capability](~/solutions/images/Resource_Studio_TDC_Add_Antenna_Filter2_Job1.png)
 
 1. Select *Antenna 01* and click *Add Resource*.
 
-   ![New resource pool](~/solutions/images/Resource_Studio_TDC_Add_Antenna2_Job1.png)
+   ![Add resource](~/solutions/images/Resource_Studio_TDC_Add_Antenna2_Job1.png)
 
 1. Close the *Edit job* panel
 
 1. Repeat the previous steps to create a second job that overlaps with the first one, but this time, before adding the resource, play around with the satellite capability to see that *Antenna 01* is only available when *EUT-01* is used.
 
-![New resource pool](~/solutions/images/Resource_Studio_TDC_2Jobs.png)
+   For example, below you can see the two overlapping jobs on the timeline.
 
-![New resource pool](~/solutions/images/Resource_Studio_TDC_2Jobs_EUT.png)
+   ![Jobs on the timeline](~/solutions/images/Resource_Studio_TDC_2Jobs.png)
 
-![New resource pool](~/solutions/images/Resource_Studio_TDC_2Jobs_SES.png)
+   If *EUT-01* is used, both resources are available for the second job:
+
+   ![Both resources available with EUT-01](~/solutions/images/Resource_Studio_TDC_2Jobs_EUT.png)
+
+   If *SES-01* is used, *Antenna 01* is unavailable, as indicated by the icon in front of the resource.
+
+   ![Antenna 01 unavailable with SES-01](~/solutions/images/Resource_Studio_TDC_2Jobs_SES.png)
+
+   Note that unavailable resources are shown by default so that you can clearly see how many resources are available in a resource pool, even if they cannot be selected for a specific job. If you only want to see available resources, you can use the *Show available only* toggle button in the top-right corner.
