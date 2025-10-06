@@ -13,7 +13,7 @@ Most functionality is only available after you [connect to a DMA](xref:Connectin
 
 ## Properties tab
 
-The *Properties* tab shows an overview of the different messages have been sent, with the time they were sent and the time it took to get a response.
+The *Properties* tab shows an overview of the different messages that have been sent and received, with the time they were sent and the time it took to get a response.
 
 When you select a message in the list, the pane on the right shows more detailed information. With the *Grid* and *Text* tabs at the top of that pane, you can switch between two different ways of viewing this information.
 
