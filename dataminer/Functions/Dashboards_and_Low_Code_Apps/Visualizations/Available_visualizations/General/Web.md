@@ -36,3 +36,8 @@ In the *Settings* pane for this component, you can customize its behavior to sui
 You can make a web component display a video stream based on an image URL.
 
 To do so, configure the URL similar to the value of the *Link* shape data field when you [configure a video thumbnail in Visual Overview](xref:Linking_a_shape_to_a_video_thumbnail).
+
+> [!TIP]
+> You can also display a YouTube livestream or other online video by using its embed link. To do so, open the video on the streaming platform, select *Share* > *Embed*, and copy the URL from the `src` property of the embed code. For example: `https://www.youtube.com/embed/0FBiyFpV__g?si=WUgPIJUk2s_Wzfy8`.
+>
+> ![Embed link](~/dataminer/images/Web_component_embed_video.png)
