@@ -119,7 +119,7 @@ In this first step, you will create resources representing the steerable antenna
 
    ![Both resources available with EUT-01](~/solutions/images/Resource_Studio_TDC_2Jobs_EUT.png)
 
-   If *SES-01* is used, *Antenna 01* is unavailable, as indicated by the icon in front of the resource.
+   If *SES-01* is used, *Antenna 01* is unavailable, as indicated by the ⦻ icon in front of the resource.
 
    ![Antenna 01 unavailable with SES-01](~/solutions/images/Resource_Studio_TDC_2Jobs_SES.png)
 
