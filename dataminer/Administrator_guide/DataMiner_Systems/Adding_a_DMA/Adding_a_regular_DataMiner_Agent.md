@@ -7,7 +7,7 @@ uid: Adding_a_regular_DataMiner_Agent
 > [!IMPORTANT]
 >
 > - Before you add a DataMiner Agent, make sure the IP network ports are configured correctly, see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports), and connection strings are configured (if necessary), see [Connection strings](xref:Connection_strings).
-> - If you're running a DataMiner version lower than 10.5.0 CU4, also make sure the machine where you're running Cube can access the new agent over the IP that's used for adding it, even when using connection strings.
+> - If you are running a DataMiner version lower than 10.5.0 CU4, also make sure the machine where you are running Cube can access the new agent over the IP that is used for adding it, even when using connection strings.
 > - If the DataMiner System uses [Dedicated clustered storage](xref:Dedicated_clustered_storage), make sure the new DMA is configured to use the same clustered storage as the DMS you are about to add it to (by modifying the general database settings in its [DB.xml](xref:DB_xml) file to match those of the other DMAs and then restarting the DMA).
 > - If the DataMiner System uses [Swarming](xref:Swarming), make sure Swarming is enabled on the new DMA before you add it to the cluster.
 > - If the DataMiner System uses STaaS, additional steps are required. See [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
