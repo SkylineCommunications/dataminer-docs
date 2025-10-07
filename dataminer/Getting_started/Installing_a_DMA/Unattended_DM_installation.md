@@ -4,25 +4,114 @@ uid: Unattended_DM_installation
 
 # Unattended DataMiner installation
 
-> [!IMPORTANT]
-> This feature is currently only available if the deprecated 10.2 or 10.0 DataMiner Installer is used. It is not yet available with more recent installers.
+## v10.5 installer
 
-The unattended installation process can be used to install a standalone DMA, but also to install a cluster, set up Failover, or even add a DMA to an existing cluster.
+With the v10.5 installer, it is possible to pre-configure the installation, so that you only need to launch the installer and everything else is taken care of automatically. This can only be used to install a standalone DataMiner Agent; any additional configuration, for example to add the DMA to a cluster, will need to be done manually afterwards.
+
+To pre-configure the installation, configure a JSON file as indicated in the examples below, depending on the type of setup you want, and then execute the command below (after filling in the correct path):
+
+```powershell
+cd "C:\Skyline DataMiner\Tools\FirstStartupChoice"
+.\FirstStartupChoice.exe --silent-config <path to config file>
+```
+
+> [!TIP]
+> For details about the different fields that can be configured during the installation, refer to [Running the installer](xref:Installing_DM_using_the_DM_installer#running-the-installer).
+
+### Example: STaaS with subscription licensing
+
+```json
+{
+  "DatabaseConfig": {
+    "DatabaseMode": "STaaS",
+    "CassandraTlsEnabled": false
+  },
+  "LicenseConfig": {
+    "LicenseMode": "Subscription",
+    "DataMinerId": ""
+  },
+  "RegistrationConfig": {
+    "OrganizationApiKey": "<Organization API Key>",
+    "SystemName": "<System Name>",
+    "SystemUrl": "<System URL>",
+    "AdminEmail": "<AdminEmail>",
+    "StaasRegion": "<weu|uks|cus|sea>"
+  }
+}
+```
+
+### Example: STaaS with perpetual licensing
+
+```json
+{
+  "DatabaseConfig": {
+    "DatabaseMode": "STaaS",
+    "CassandraTlsEnabled": false
+  },
+  "LicenseConfig": {
+    "LicenseMode": "Perpetual",
+    "DataMinerId": ""
+  },
+  "RegistrationConfig": {
+    "OrganizationApiKey": "<Organization API Key>",
+    "SystemName": "<System Name>",
+    "SystemUrl": "<System URL>",
+    "AdminEmail": "<AdminEmail>",
+    "StaasRegion": "<weu|uks|cus|sea>"
+  }
+}
+```
+
+### Example: Self-hosted storage with subscription licensing
+
+```json
+{
+  "DatabaseConfig": {
+    "DatabaseMode": "SelfHostedLocal",
+    "CassandraTlsEnabled": false
+  },
+  "LicenseConfig": {
+    "LicenseMode": "Subscription",
+    "DataMinerId": ""
+  },
+  "RegistrationConfig": {
+    "OrganizationApiKey": "<Organization API Key>",
+    "SystemName": "<System Name>",
+    "SystemUrl": "<System URL>",
+    "AdminEmail": "<AdminEmail>",
+    "StaasRegion": ""
+  }
+}
+```
+
+### Example: Self-hosted storage with perpetual licensing
+
+```json
+{
+  "DatabaseConfig": {
+    "DatabaseMode": "SelfHostedLocal",
+    "CassandraTlsEnabled": false
+  },
+  "LicenseConfig": {
+    "LicenseMode": "Perpetual",
+    "DataMinerId": "12345"
+  },
+  "RegistrationConfig": {
+    "StaasRegion": ""
+  }
+}
+```
+
+## Deprecated v10.2 or v10.0 installer
+
+With the deprecated v10.2 or v10.0 installer, the unattended installation process can be used to install a standalone DMA, but also to install a cluster, set up Failover, or even add a DMA to an existing cluster.
 
 > [!NOTE]
 >
 > - The 10.2.0 installer currently does not support unattended installation of a cluster.
 > - Unattended installation of a DataMiner System with OpenSearch database is currently not supported.
 
-To make sure the installation is executed correctly, a valid configuration file and license file must be included in the same folder as *Setup.exe*. See [Unattended installation configuration file](#unattended-installation-configuration-file).
-
-<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
-  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
-    <b>💡 TIPS TO TAKE FLIGHT</b><br>For more information, see <a href="xref:DataminerLicenses" style="color: #657AB7;">Obtaining a DataMiner license</a>.
-  </div>
-  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
-</div>
-<br>
+To make sure the installation is executed correctly, a valid [configuration file](#unattended-installation-configuration-file) and [license file](xref:DataminerLicenses) must be included in the same folder as *Setup.exe*.
 
 You can then start the unattended installation by running the following command:
 
@@ -68,7 +157,7 @@ C:\Users>Administrator>echo %errorlevel%
 
 If something goes wrong during the configuration, e.g. the connection with one of the servers is lost or a DMA is not correctly configured, configuration changes will be reverted, and the installation process will install a standalone Agent. Information on the issue can be found in the log file. See [Unattended installation logging](#unattended-installation-logging).
 
-## Unattended installation configuration file
+### Unattended installation configuration file
 
 The XML configuration is done in the *InstallConfiguration.xml* file. The settings specified in this file make it possible for the setup of the DMA in the DMS to be automatically taken care of.
 
@@ -77,7 +166,7 @@ The *InstallConfiguration.xml* file must use the syntax detailed below.
 > [!NOTE]
 > You can check the validity of an *InstallConfiguration.xml* file using the [InstallConfiguration Schema file](xref:InstallConfiguration_XSD).
 
-### DMS tag
+#### DMS tag
 
 The main *DMS* tag has the following possible subtags:
 
@@ -109,7 +198,7 @@ The main *DMS* tag has the following possible subtags:
 
   In a *Package* tag, you can specify the relative or UNC path to the package to be installed (including the package extension).
 
-### DMA tag
+#### DMA tag
 
 The *DMA* tag has the following possible subtags:
 
@@ -192,7 +281,7 @@ The *DMA* tag has the following possible subtags:
 > - In case Cassandra had already been installed previously, and the cluster name is changed with the new installer, Cassandra will not be automatically reconfigured. This must be done manually.
 > - Installing a Cassandra cluster is only possible if there is no existing Cassandra or Elasticsearch installation on the server.
 
-### CassandraClusterSettings tag
+#### CassandraClusterSettings tag
 
 The *CassandraClusterSettings* tag has the following possible subtags:
 
@@ -260,7 +349,7 @@ The *CassandraClusterSettings* tag has the following possible subtags:
 
   This should only be set to true for 1 DMA. Possible values: true, false.
 
-### ElasticClusterSettings tag
+#### ElasticClusterSettings tag
 
 The *ElasticClusterSettings* tag has the following possible subtags:
 
@@ -306,9 +395,9 @@ The *ElasticClusterSettings* tag has the following possible subtags:
 
   The location where Elasticsearch will be installed.
 
-## Unattended installation configuration file examples
+### Unattended installation configuration file examples
 
-### Cluster with three DMAs including one Failover pair
+#### Cluster with three DMAs including one Failover pair
 
 The example below is used to create the following cluster:
 
@@ -397,7 +486,7 @@ The example below is used to create the following cluster:
 </DMS>
 ```
 
-### Cluster with Cassandra cluster general database
+#### Cluster with Cassandra cluster general database
 
 The example below is used to create a cluster of three DMAs, all using the same Cassandra cluster as their general database.
 
@@ -676,7 +765,7 @@ The example below is used to create a cluster of three DMAs, all using the same 
 </DMS>
 ```
 
-## Unattended installation logging
+### Unattended installation logging
 
 During the installation, all actions and errors are reported in a log file, which can be found in the temporary folder *%Temp%\DataMinerInstallerLog*.
 
