@@ -23,8 +23,8 @@ Why:
 - Auto scans the script for UI usage. If it cannot detect this, the session won’t be interactive and the script will fail to run.
 - Always/Optional avoids detection pitfalls by explicitly defining behavior.
 
-Notes:
-- Interactivity is available from DataMiner 10.5.9/10.6.0 onward. Older versions always use automatic detection.
+> [!NOTE]
+> Interactivity is available from DataMiner 10.5.9/10.6.0 onward. Older versions always use automatic detection.
 
 ## Launching from non-UI contexts (Scheduler, Correlation, QAction, other non-interactive scripts)
 
@@ -32,29 +32,43 @@ Goal: Show the UI to an active Cube user when prompted.
 
 Use:
 ```csharp
-engine.FindInteractiveClient("Scheduled task requires operator input to proceed.", timeoutSeconds);
+if (!engine.FindInteractiveClient("Scheduled task requires operator input to proceed.", timeoutSeconds))
+{
+    engine.ExitFail("No interactive client attached within the timeout. Aborting.");
+}
 ```
 
 Why:
 - Non-UI contexts (e.g. Scheduler) are not users. The script cannot show UI to them.
 - [FindInteractiveClient](xref:Find_interactive_client) lets a user attach, all active users are shown a popup to attach to the script, the first to click Attach sees the UI.
 
-## Auto-attach to a specific user from non-UI contexts
+![DataMiner Cube popup: “Scheduled task requires operator input to proceed.” with Attach and Ignore buttons.](~/develop/images/cube-interactive-client-attach-dialog.png)
 
-Goal: Show the UI to a specific user without prompting.
+> [!IMPORTANT]
+> `FindInteractiveClient` won't work for a user connected to a web session.
 
-Use:
+## Auto-attach to specific users from non-UI contexts
+
+Goal: Show the UI to specific users without prompting.
+
+Example: Attach immediately to users in specified groups
+```csharp
+engine.FindInteractiveClient(String.Empty, timeoutSeconds, "Operators;PowerUsers", AutomationScriptAttachOptions.AttachImmediately);
+```
+
+Example: Attach immediately to a specific user by username
 ```csharp
 engine.FindInteractiveClient(String.Empty, timeoutSeconds, "user:JohnSmith", AutomationScriptAttachOptions.AttachImmediately);
 ```
 
-Or:
+Example: Attach immediately to a specific Cube session by user cookie
 ```csharp
 engine.FindInteractiveClient(String.Empty, timeoutSeconds, "userCookie:C57D3BEFAD4F445B9BC37B9FAFB84ADB", AutomationScriptAttachOptions.AttachImmediately);
 ```
 
-Notes:
-- Each Cube client instance has a unique user cookie. Prefer the cookie for precise targeting, especially if a user has multiple Cube sessions.
+> [!TIP]
+> Each Cube session has its own cookie. 
+> Use the cookie to target the right session, because a user might have several Cube sessions on different devices.
 
 ### Retrieving user cookies
 
@@ -89,7 +103,7 @@ engine.FindInteractiveClient(String.Empty, timeoutSeconds, $"user:{engine.UserLo
 ```
 Or via cookie:
 ```csharp
-engine.FindInteractiveClient(String.Empty, timeoutSeconds, $"user:{engine.UserCookie}", AutomationScriptAttachOptions.AttachImmediately);
+engine.FindInteractiveClient(String.Empty, timeoutSeconds, $"userCookie:{engine.UserCookie}", AutomationScriptAttachOptions.AttachImmediately);
 ```
 
 Start the script via SLNet and pass the user cookie:
