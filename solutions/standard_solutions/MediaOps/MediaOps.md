@@ -4,6 +4,30 @@ uid: MediaOps
 
 # dataminer.MediaOps
 
+## MediaOps applications
+
+dataminer.MediaOps is available in the [Catalog](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) as a package containing multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
+
+These are the out-of-the-box DataMiner applications that are currently included in the dataminer.MediaOps installation package:
+
+<div class="row">
+  <div class="column">
+  <a href="/solutions/standard_solutions/MediaOps/Apps/People_Organizations.html" title="People & Organizations" target="_self"><img src="~/solutions/images/mo_PeopleOrganizations.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Resource_Studio.html" title="Resource Studio" target="_self"><img src="~/solutions/images/mo_ResourceStudio.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Workflow_Designer.html" title="Workflow Designer" target="_self"><img src="~/solutions/images/mo_WorkflowDesigner.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Scheduling.html" title="Scheduling" target="_self"><img src="~/solutions/images/mo_Scheduling.svg" style="width:100%"></a>
+  </div>
+</div>
+
+> [!TIP]
+> Before you deploy the MediaOps package, take a look at our [installation instructions](xref:MO_Installation).
+
 ## Deliver content faster, better, and cheaper
 
 dataminer.MediaOps seamlessly blends information and communication technology (ICT) with media technology and workflows, introducing a new era of data-driven, automated, and simplified media operations. Central to its architecture is the concept of the digital twin of the media operation—housing all network statistics, metrics, counters and configurations, coupled with vital business information like event schedules, asset inventory, playlists, electronic program guide (EPG) data, and more. This digital twin allows for unprecedented opportunity for resource planning and management, live media operations and automation of file and asset workflows.
@@ -58,30 +82,6 @@ The following functions can be achieved by means of orchestration scripts that s
 - **Finish**: Cleaning up the network post-event is essential, involving tasks such as removing multicast routes from switches, deactivating cloud infrastructure (eliminating excess cost), and adjusting host and flow policies to enhance network security.
 
 <!-- - **Cost & billing**: At the end of the day, M&E enterprises need to manage costs and income. dataminer.MediaOps provides reports on resource utilization, cost, and sales billing prices for each event, enabling M&E companies to understand their costs and allocate them to shows, channels, categories, content providers, customers, and more. dataminer.MediaOps can also generate raw billing information and integrate it into your billing system. -->
-
-## MediaOps applications
-
-dataminer.MediaOps is available in the [Catalog](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) as a package containing multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
-
-These are the out-of-the-box DataMiner applications that are currently included in the dataminer.MediaOps installation package:
-
-<div class="row">
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/People_Organizations.html" title="People & Organizations" target="_self"><img src="~/solutions/images/mo_PeopleOrganizations.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Resource_Studio.html" title="Resource Studio" target="_self"><img src="~/solutions/images/mo_ResourceStudio.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Workflow_Designer.html" title="Workflow Designer" target="_self"><img src="~/solutions/images/mo_WorkflowDesigner.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Scheduling.html" title="Scheduling" target="_self"><img src="~/solutions/images/mo_Scheduling.svg" style="width:100%"></a>
-  </div>
-</div>
-
-> [!TIP]
-> Before you deploy the MediaOps package, take a look at our [installation instructions](xref:MO_Installation).
 
 <!-- 
 [For later]: ## Building upon the standard applications
