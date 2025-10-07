@@ -12,6 +12,30 @@ While dataminer.MediaOps encompasses the entire media operation, it allows each 
 
 ![MediaOps for planned, live, and file-based operations](~/dataminer/images/mediaops_plan_live_file.png)
 
+## MediaOps applications
+
+dataminer.MediaOps is available in the [Catalog](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) as a package containing multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
+
+These are the out-of-the-box DataMiner applications that are currently included in the dataminer.MediaOps installation package:
+
+<div class="row">
+  <div class="column">
+  <a href="/solutions/standard_solutions/MediaOps/Apps/People_Organizations.html" title="People & Organizations" target="_self"><img src="~/solutions/images/mo_PeopleOrganizations.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Resource_Studio.html" title="Resource Studio" target="_self"><img src="~/solutions/images/mo_ResourceStudio.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Workflow_Designer.html" title="Workflow Designer" target="_self"><img src="~/solutions/images/mo_WorkflowDesigner.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Scheduling.html" title="Scheduling" target="_self"><img src="~/solutions/images/mo_Scheduling.svg" style="width:100%"></a>
+  </div>
+</div>
+
+> [!TIP]
+> Before you deploy the MediaOps package, take a look at our [installation instructions](xref:MO_Installation).
+
 ## Who can benefit from dataminer.MediaOps?
 
 Many users rely on dataminer.MediaOps for their specific needs:
@@ -58,30 +82,6 @@ The following functions can be achieved by means of orchestration scripts that s
 - **Finish**: Cleaning up the network post-event is essential, involving tasks such as removing multicast routes from switches, deactivating cloud infrastructure (eliminating excess cost), and adjusting host and flow policies to enhance network security.
 
 <!-- - **Cost & billing**: At the end of the day, M&E enterprises need to manage costs and income. dataminer.MediaOps provides reports on resource utilization, cost, and sales billing prices for each event, enabling M&E companies to understand their costs and allocate them to shows, channels, categories, content providers, customers, and more. dataminer.MediaOps can also generate raw billing information and integrate it into your billing system. -->
-
-## MediaOps applications
-
-dataminer.MediaOps is available in the [Catalog](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) as a package containing multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
-
-These are the out-of-the-box DataMiner applications that are currently included in the dataminer.MediaOps installation package:
-
-<div class="row">
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/People_Organizations.html" title="People & Organizations" target="_self"><img src="~/solutions/images/mo_PeopleOrganizations.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Resource_Studio.html" title="Resource Studio" target="_self"><img src="~/solutions/images/mo_ResourceStudio.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Workflow_Designer.html" title="Workflow Designer" target="_self"><img src="~/solutions/images/mo_WorkflowDesigner.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Scheduling.html" title="Scheduling" target="_self"><img src="~/solutions/images/mo_Scheduling.svg" style="width:100%"></a>
-  </div>
-</div>
-
-> [!TIP]
-> Before you deploy the MediaOps package, take a look at our [installation instructions](xref:MO_Installation).
 
 <!-- 
 [For later]: ## Building upon the standard applications
