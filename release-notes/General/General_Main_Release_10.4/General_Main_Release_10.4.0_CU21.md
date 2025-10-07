@@ -15,6 +15,12 @@ uid: General_Main_Release_10.4.0_CU21
 
 ### Enhancements
 
+#### OPC communication is End of Life [ID 43785]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+From now on, OPC communication should no longer be used in DataMiner connectors. Instead, QActions should be used, for example like in the [Generic OPC Data Access](https://catalog.dataminer.services/details/f2642ea9-9eaa-42f3-880e-816470b06a61) connector.
+
 #### Automation: Engine class now exposes the public property ScriptName [ID 43840]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
@@ -33,4 +39,8 @@ This BPA test will identify client machines and DataMiner Agents without interne
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### SLNet would wait too long before closing a connection [ID 43851]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+In some rare cases, SLNet would incorrectly wait for 2 hours before closing a connection. As a result, SLNet and SLDataMiner would keep a large number of unused connections in memory for too long.
