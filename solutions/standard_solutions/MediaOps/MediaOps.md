@@ -4,6 +4,14 @@ uid: MediaOps
 
 # dataminer.MediaOps
 
+## Deliver content faster, better, and cheaper
+
+dataminer.MediaOps seamlessly blends information and communication technology (ICT) with media technology and workflows, introducing a new era of data-driven, automated, and simplified media operations. Central to its architecture is the concept of the digital twin of the media operation—housing all network statistics, metrics, counters and configurations, coupled with vital business information like event schedules, asset inventory, playlists, electronic program guide (EPG) data, and more. This digital twin allows for unprecedented opportunity for resource planning and management, live media operations and automation of file and asset workflows.
+
+While dataminer.MediaOps encompasses the entire media operation, it allows each tenant — whether within the organization or external stakeholders like customers, contractors, network providers, rental companies, and reporters — to work independently within their designated area, while maintaining seamless harmony with other teams.
+
+![MediaOps for planned, live, and file-based operations](~/dataminer/images/mediaops_plan_live_file.png)
+
 ## MediaOps applications
 
 dataminer.MediaOps is available in the [Catalog](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) as a package containing multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
@@ -27,14 +35,6 @@ These are the out-of-the-box DataMiner applications that are currently included 
 
 > [!TIP]
 > Before you deploy the MediaOps package, take a look at our [installation instructions](xref:MO_Installation).
-
-## Deliver content faster, better, and cheaper
-
-dataminer.MediaOps seamlessly blends information and communication technology (ICT) with media technology and workflows, introducing a new era of data-driven, automated, and simplified media operations. Central to its architecture is the concept of the digital twin of the media operation—housing all network statistics, metrics, counters and configurations, coupled with vital business information like event schedules, asset inventory, playlists, electronic program guide (EPG) data, and more. This digital twin allows for unprecedented opportunity for resource planning and management, live media operations and automation of file and asset workflows.
-
-While dataminer.MediaOps encompasses the entire media operation, it allows each tenant — whether within the organization or external stakeholders like customers, contractors, network providers, rental companies, and reporters — to work independently within their designated area, while maintaining seamless harmony with other teams.
-
-![MediaOps for planned, live, and file-based operations](~/dataminer/images/mediaops_plan_live_file.png)
 
 ## Who can benefit from dataminer.MediaOps?
 
