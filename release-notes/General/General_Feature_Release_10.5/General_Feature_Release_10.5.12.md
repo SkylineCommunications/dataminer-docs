@@ -160,6 +160,15 @@ When you tried to install Alerter, in some cases, a warning message would appear
 
 From now on, when you try to install Alerter, it will check whether Microsoft .NET Framework 4.6.2 is installed.
 
+#### 'Failed to wait for Parameter Notification queue to handle remaining events' exception after a DataMiner startup [ID 43818]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+<!-- Not added in MR 10.6.0 -->
+
+After a DataMiner startup, in some cases, the following exception could appear in the Alarm Console, especially on large, heavily loaded systems:
+
+`Unexpected Exception [Failed to wait for Parameter Notification queue to handle remaining events]: DmaConnections`
+
 #### SLNet would wait too long before closing a connection [ID 43851]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
