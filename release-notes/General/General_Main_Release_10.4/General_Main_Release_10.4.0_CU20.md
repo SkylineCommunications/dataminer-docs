@@ -39,14 +39,6 @@ A number of enhancements have been made with regard to the logging of exception 
 
 Because of a number of enhancements in the aggregation module, overall performance has increased.
 
-#### SLDataGateway will now use a custom thread pool instead of TPL for operations towards Cassandra [ID 43658]
-
-<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
-
-For operations towards Cassandra, from now on, SLDataGateway will use a custom thread pool instead of *Task Parallel Library* (TPL).
-
-Also, when any of the queues in SLDataGateway would get stuck, an alarm of type error will now be generated.
-
 #### DataMiner upgrade: All but the Web.config file will be removed from the 'C:\\Skyline DataMiner\\Webpages\\API' folder when downgrading to an older version [ID 43687]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
