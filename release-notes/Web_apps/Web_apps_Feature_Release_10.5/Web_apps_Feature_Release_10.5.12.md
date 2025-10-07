@@ -26,13 +26,13 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-#### Dashboards/Low-Code Apps: Elements will now be lazy-loaded when element data is dropped onto a Dropdown component [ID 43814]
+#### Dashboards/Low-Code Apps: Elements will now be lazy-loaded when configuring components [ID 43814]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, when you dropped element data onto a *Dropdown* component, one operation would retrieve the first 10000 elements. The rest of the elements would not be listed.
+In edit mode, up to now, when you configured a component showing element data, one operation would retrieve the first 10000 elements. The rest of the elements would not be displayed.
 
-From now on, the first 100 elements will be retrieved initially. When, afterwards, you then scroll down, the next 100 elements will be retrieved each time you reach the bottom of the list.
+From now on, the first 100 elements will initially be retrieved. Afterwards, when you then scroll down, the next 100 elements will be retrieved each time you reach the bottom of the list.
 
 When a *Dropdown* component is filtered, the filter will be forwarded to the web API, and the filtered list of elements will be returned.
 
