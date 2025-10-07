@@ -7,24 +7,21 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
-### 3 October 2025 - DataAPI 1.4.0 - Added support for history set in DataAPI [ID 43666]
+### 3 October 2025 - New feature - DataAPI 1.4.0 - Added support for history sets [ID 43666]
 
-DataAPI has been extended to allow users to specify a date and time for history sets, as a header called historySet (optional).
-1. When the header is specified, **all** parameters in the request body have the attribute historySet, protocol xml, set to true.
-1. If the header is not specified, nothing will be modified (i.e., parameters that had historySet set to true will keep it as true, parameters that had historySet set to false will remain as false.
+Data API has been extended to allow users to specify a date and time for history sets, with an **optional header** called **historySet**.
 
-The time specified should follow the format: **yyyy-MM-ddTHH:mm:ssZ (ISO 8601)**.
-If the format is not respected, DataAPI will reject the request.
-Additionally, DataAPI will also reject requests that attempt to perform "history sets" in the future.
+- When the header is specified, **all parameters** in the request body have the attribute **historySet** set to **true** in the protocol.xml.
+- When the header is not specified, nothing will be modified (i.e. if historySet was set to true or false for a parameter, this will remain unchanged).
+
+The time specified in such requests must follow the format `yyyy-MM-ddTHH:mm:ssZ` (ISO 8601). If a different format is used, the request will be rejected. Any requests to perform a history set in the future will also be rejected.
 
 > [!IMPORTANT]
-> To take advantage of this feature, both the new DataMiner software version and the new DataAPI version are required, in which case, DataMiner will perform the parameter sets with the provided timestamp associated.
-> 
-> In case this DataAPI release is running with a DataMiner version that does not support history sets via DataAPI, any request that specifies the historySet header will be rejected. This ensures consistent behavior and prevents unintended data operations.
+> This feature requires **DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 or higher**. With lower DataMiner versions, it is not yet supported, and any requests that specify the historySet header will be rejected.
 
 Example of a request:
 
-````bash
+```bash
 curl -X 'PUT' \
   'http://localhost:34567/api/data/parameters' \
   -H 'accept: application/json' \
@@ -33,29 +30,27 @@ curl -X 'PUT' \
   -H 'historySet: 2025-09-04T08:30:00Z' \
   -H 'Content-Type: application/json' \
   -d '{"data": {"param1": 123 }}'
-````
+```
 
-### 3 October 2025 - DataAPI 1.4.0 - Unable to run installer on DaaS system [ID 43713]
+### 3 October 2025 - Fix - DataAPI 1.4.0 - Unable to run installer on DaaS system [ID 43713]
 
-It could occur that a DaaS system or a system with a CD Drive configured was unable to be upgraded/downgraded to a different version of DataAPI.
+It could occur that a DaaS system or a system with a CD drive configured could not be upgraded or downgraded to a different version of DataAPI, because the DataAPI installer considered this a valid drive to copy files to.
 
-The installer, now, considers the C: drive by default to copy the files, only in case the drive is not available, it will then look into other drives.
+Now the installer will by default use the C: drive to copy the files, and it will only look into other drives in case this drive is not available.
 
-### 3 October 2025 - DataAPI 1.4.0 - Make Peer logic more robust [ID 43657]
+### 3 October 2025 - Fix - DataAPI 1.4.0 - Issue in peer and leader logic could cause DataAPI startup to fail [ID 43657]
 
-It could occur that Data API DxM would fail to start and show a fatal error indicating that a BackgroundService had thrown an unhandled exception while electing a leader.
-This has now been improved to avoid concurrency issues.
+It could occur that the DataAPI DxM failed to start, with a fatal error indicating that a background service had thrown an unhandled exception while electing a leader. This will now be prevented.
 
-### 3 October 2025 - DataAPI 1.4.0 - No longer trend string parameters by default [ID 43462]
+### 3 October 2025 - Enhancement - DataAPI 1.4.0 - Trending no longer enabled by default for string parameters [ID 43462]
 
-String parameters are no longer added to the trend template by default.
-They are still configured as "trendable" and can be manually enabled by users if they wish.
+Trending for string parameters is no longer enabled by default in the trend template. However, you can still manually enable trending for them if necessary.
 
-### 5 August 2025 - DataAPI 1.3.0 - Improved DxM-DataMiner communication for better timeout handling [ID 43441]
+### 5 August 2025 - Enhancement - DataAPI 1.3.0 - Improved DxM-DataMiner communication for better timeout handling [ID 43441]
 
 The communication between the DataAPI DxM and DataMiner has been improved to better handle timeouts. Previously, data consisting of multiple commands could be pushed in a single message, but when communication timed out this could cause DataAPI to be out of sync with DataMiner, potentially leading to data being overridden or deleted. Now the original message is split in two, so that important information can be cached at an earlier stage, avoiding problems caused by timeouts in a later stage.
 
-### 5 August 2025 - DataAPI 1.3.0 - Data now pushed directly to SLProtocol to improve performance [ID 41569]
+### 5 August 2025 - Enhancement - DataAPI 1.3.0 - Data now pushed directly to SLProtocol to improve performance [ID 41569]
 
 To improve performance and reduce the load on the SLNet process, DataAPI will now push data directly to the SLProtocol process. It will only communicate with SLNet over NATS to create or update the auto-generated connector and to create new elements. Requests for setting parameters are now sent directly to SLProtocol, where support has been added to communicate over NATS.
 
