@@ -89,6 +89,20 @@ namespace Skyline.DataMiner.Automation
 		public SLProfileManager ProfileManager { get; }
 
 		/// <summary>
+		/// Gets the name of the triggered script.
+		/// </summary>
+		/// <value>The name of the triggered script.</value>
+		/// <remarks>
+		/// <para>Feature introduced in DataMiner 10.5.12 (RN 43840).</para>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// engine.Log(engine.ScriptName);
+		/// </code>
+		/// </example>
+		public string ScriptName { get; }
+
+		/// <summary>
 		/// Gets the Ticketing Gateway.
 		/// </summary>
 		/// <value>The Ticketing Gateway.</value>
