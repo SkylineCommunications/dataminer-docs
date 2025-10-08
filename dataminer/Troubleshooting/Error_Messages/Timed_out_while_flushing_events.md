@@ -2,25 +2,27 @@
 uid: Timed_out_while_flushing_events
 ---
 
-# Timed out while flushing events from x. Outdated data might be displayed for this agent until the connection is refreshed
+# Timed out while flushing events from x. Outdated data might be displayed for this Agent until the connection is refreshed
 
 In a notice of this type:
 
-- "x" is the name of the DataMiner agent for which events might be outdated.
-- The agent on which the notice was created is the one where the stored events might be outdated.
+- "x" is the name of the DataMiner Agent for which events might be outdated.
+- The Agent on which the notice was created is the one where the stored events might be outdated.
 
 ## Symptom
 
-Outdated events (e.g. alarm events or element states) might be displayed for the specified agent when viewed through the DataMiner agent where the notice was created.
+Outdated events (e.g. alarm events or element states) might be displayed for the specified Agent when viewed through the DataMiner Agent on which the notice was created.
 
 ## Possible cause
 
-- Handling events is stuck or slow
+Handling events is stuck or slow.
 
 ## Resolution
 
-Use the SLNetClientTest tool to connect to the agent where the notice was generated on.
+1. Use the SLNetClientTest tool to connect to the Agent on which the notice was generated.
 
-Use *Diagnostics > SLNet > DropSLNetConnections* to trigger a reconnect with the other agents in the cluster.
+   See [Connecting to a DMA with the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
-The notice will automatically clear as part of reconnecting the agents.
+1. Use *Diagnostics* > *SLNet* > *DropSLNetConnections* to trigger a reconnection with the other Agents in the cluster.
+
+   As part of this reconnection, the notice will automatically be cleared.
