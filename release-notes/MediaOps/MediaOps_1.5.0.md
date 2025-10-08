@@ -23,6 +23,10 @@ On the *Resources* page of the Resource Studio app, when a large number of resou
 
 When a job is in the state *Completed*, *Canceled*, *Ready For Invoice*, or *Invoiced*, and an attempt is made to adjust the timing of the job, an InvalidOperationException will now be thrown, as this is not allowed in such cases.
 
+#### Scheduling: Prefetching of data disabled to reduce memory usage [ID 43901]
+
+To reduce memory usage, data will now no longer be prefetched in the Scheduling app. Previously, this prefetch was implemented to improve performance, but when queries were canceled before data was returned to the client, this could lead to a noticeable memory buildup especially when multiple users were using the system.
+
 ### Fixes
 
 #### MediaOps log files not included in SLLogCollector package [ID 43791]
