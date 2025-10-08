@@ -16,7 +16,7 @@ The foundation of DataMiner is based on four strategic pillars that each have a 
 
    DataMiner pushes the boundaries of the industry as a result of its ability to connect to any function in the environment, which is the foundation of a truly unified management and operations system.
 
-1. **Automation and orchestration to manage service life cycles in today's hybrid media and IT environments**
+1. **Automation and orchestration to manage service lifecycles in today's hybrid media and IT environments**
 
    DataMiner Service & Resource Management (SRM) is a unique orchestration suite that offers unlimited automation and resource management across any infrastructure. Using DataMiner SRM, operators can plan any service ahead of time while resting assured that the network and processing behind it will deliver the necessary capacity. In case of shortage of capacity, DataMiner can even be instructed to deploy additional capacity on demand in the private or public cloud.
 

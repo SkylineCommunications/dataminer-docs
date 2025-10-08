@@ -59,7 +59,7 @@ A parameter like "input level" could be assigned the following alarm severity le
 
 ## Keep alarm trees from growing too large
 
-[Alarm trees](xref:Alarm_trees) "group" the different alarm records representing the life cycle of an alarm. A record gets added whenever the severity of the alarm changes, as well as when alarm properties change, comments get added, etc.
+[Alarm trees](xref:Alarm_trees) "group" the different alarm records representing the lifecycle of an alarm. A record gets added whenever the severity of the alarm changes, as well as when alarm properties change, comments get added, etc.
 
 We recommend keeping the number of alarm records in a single alarm tree **below 1000**. Having too many alarms in a single alarm tree can have a negative impact on the performance of the DMA and the stability of the cluster.
 

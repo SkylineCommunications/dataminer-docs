@@ -38,7 +38,7 @@ To manually mask an alarm:
 
 1. Enter a comment, which will be stored in the *Comment* field of the new alarm record.
 
-A new alarm record will be added to the life cycle of the alarm, with *Status* and *Alarm Type* set to “Mask”. The masked alarm will disappear from the *Active alarms* tab, and is added to the *Masked alarms* tab instead
+A new alarm record will be added to the lifecycle of the alarm, with *Status* and *Alarm Type* set to “Mask”. The masked alarm will disappear from the *Active alarms* tab, and is added to the *Masked alarms* tab instead
 
 > [!NOTE]
 >
@@ -65,4 +65,4 @@ To manually unmask an alarm:
    > [!NOTE]
    > When, in case of timed masking, an alarm is automatically unmasked by the system, the system will automatically add a comment to indicate that it unmasked the alarm because the masking time has elapsed.
 
-When you unmask an alarm, a new alarm record is added to its alarm life cycle, with *Status* set to “Open” and *Alarm Type* set to “Unmask”. The alarm will disappear from the *Masked alarms* tab, and return to the *Active alarms* tab instead.
+When you unmask an alarm, a new alarm record is added to its alarm lifecycle, with *Status* set to “Open” and *Alarm Type* set to “Unmask”. The alarm will disappear from the *Masked alarms* tab, and return to the *Active alarms* tab instead.

@@ -129,7 +129,7 @@ In the Cube UI, the following text strings have been adjusted to allow a more na
 
 As Cassandra on Windows OS and Cassandra Single are no longer supported, it is no longer possible to migrate the general database to Cassandra. Hence, the *Cassandra preparation/migration* button, found in the bottom-left corner of the *Database* section, has been removed.
 
-See also: [Third-party software support life cycle](xref:Software_support_life_cycles#third-party-software-support-life-cycle)
+See also: [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)
 
 #### Visual Overview: An element or service referenced by a service but not included in it will now always be hidden [ID 42644]
 

@@ -234,7 +234,7 @@ From DataMiner 10.2.7/10.3.0 onwards, the number of simultaneously running SLScr
 ## Running SLScripting as a service
 
 > [!IMPORTANT]
-> This configuration is no longer supported. See [Software support life cycles](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement).
+> This configuration is no longer supported. See [Software support lifecycles](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement).
 
 By default, the SLScripting process runs as a server. However, in some cases, it needs to run as a service. It is possible to configure this in the file *DataMiner.xml*:
 

@@ -9,7 +9,7 @@ uid: GQI_OnArgumentsProcessedInputArgs
 - Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
 - Assembly: `SLAnalyticsTypes.dll`
 
-Contains functionality to retrieve values for the provided arguments. An instance is provided through the `OnArgumentsProcessed` life cycle method of the [IGQIInputArguments building block](xref:GQI_IGQIInputArguments).
+Contains functionality to retrieve values for the provided arguments. An instance is provided through the `OnArgumentsProcessed` lifecycle method of the [IGQIInputArguments building block](xref:GQI_IGQIInputArguments).
 
 > [!TIP]
 > For clean code, use [GetArgumentValue](#t-getargumentvaluetgqiargumentt-argument) to retrieve values from required arguments and use [TryGetArgumentValue](#bool-trygetargumentvaluetgqiargumentt-argument-out-t-value) to retrieve values from optional arguments.

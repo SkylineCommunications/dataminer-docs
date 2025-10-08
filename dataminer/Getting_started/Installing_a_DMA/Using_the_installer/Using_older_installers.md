@@ -90,7 +90,7 @@ If you are using an older, deprecated DataMiner installer, follow the steps belo
      > [!NOTE]
      > By default, a DataMiner Agent installed with the deprecated DataMiner installer uses a single Cassandra node that is hosted on the same physical or virtual server. However, different architectures are also possible. For more information, see [Storage options overview](xref:Supported_system_data_storage_architectures), or check with your Technical Account Manager.
 
-   - If you are using an older DataMiner installer, you can select to install *MySQL Server*, and optionally [*MySQL Workbench*](xref:MySQL_Workbench). However, as MySQL support is [scheduled to end soon](xref:Software_support_life_cycles#third-party-software-support-life-cycle), this option is **not recommended**.
+   - If you are using an older DataMiner installer, you can select to install *MySQL Server*, and optionally [*MySQL Workbench*](xref:MySQL_Workbench). However, as MySQL support is [scheduled to end soon](xref:Software_support_life_cycles#third-party-software-support-lifecycle), this option is **not recommended**.
 
      > [!NOTE]
      >

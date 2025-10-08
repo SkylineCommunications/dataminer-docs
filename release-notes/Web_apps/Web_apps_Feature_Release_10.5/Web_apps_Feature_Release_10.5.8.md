@@ -195,9 +195,9 @@ In some cases, components used in a low-code app could cause a user's web browse
 
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
 
-In some cases, both GQI DxM and SLHelper could leak memory, especially when executing GQI queries with GQI extensions (i.e. ad hoc data source or custom operators) that throw exceptions from their life cycle methods.
+In some cases, both GQI DxM and SLHelper could leak memory, especially when executing GQI queries with GQI extensions (i.e. ad hoc data source or custom operators) that throw exceptions from their lifecycle methods.
 
-See also: [GQI DxM - Life cycle: OnDestroy method would incorrectly be called when an error occurred in the OnInit method [ID 43186]](#gqi-dxm---life-cycle-ondestroy-method-would-incorrectly-be-called-when-an-error-occurred-in-the-oninit-method-id-43186)
+See also: [GQI DxM - Lifecycle: OnDestroy method would incorrectly be called when an error occurred in the OnInit method [ID 43186]](#gqi-dxm---lifecycle-ondestroy-method-would-incorrectly-be-called-when-an-error-occurred-in-the-oninit-method-id-43186)
 
 #### Web Services API: SLHelper would incorrectly be used to process GQI queries when GQI DxM had been enabled in Web.config [ID 43046]
 
@@ -281,13 +281,13 @@ From now on, whether the above-mentioned components are configured to visualize 
 1. If no data selection instructions could be found in the URL, select the first item if such an option is supported and enabled.
 1. Preserve the current selection when the data is refetched.
 
-#### GQI DxM - Life cycle: OnDestroy method would incorrectly be called when an error occurred in the OnInit method [ID 43186]
+#### GQI DxM - Lifecycle: OnDestroy method would incorrectly be called when an error occurred in the OnInit method [ID 43186]
 
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
 
-Up to now, when an error occurred in the `OnInit` life cycle method, the `OnDestroy` life cycle method would still be called to clean up resources.
+Up to now, when an error occurred in the `OnInit` lifecycle method, the `OnDestroy` lifecycle method would still be called to clean up resources.
 
-From now on, when something goes wrong in the `OnInit` life cycle method, the `OnDestroy` life cycle method will no longer be called.
+From now on, when something goes wrong in the `OnInit` lifecycle method, the `OnDestroy` lifecycle method will no longer be called.
 
 #### Dashboards app & Low-Code Apps - GQI: Problem when a query was refetched [ID 43195]
 

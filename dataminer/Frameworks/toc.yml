@@ -227,7 +227,7 @@ items:
                 topicUid: Service_Orchestration_service_profiles
               - name: Custom events configuration
                 topicUid: Service_Orchestration_custom_events
-              - name: Booking life cycle states configuration
+              - name: Booking lifecycle states configuration
                 topicUid: Service_Orchestration_life_cycle_states
               - name: Service states configuration
                 topicUid: Service_Orchestration_service_states
@@ -268,7 +268,7 @@ items:
                 topicUid: SRM_assigning_resource_profile_parameter_value_silently
               - name: Adding properties to an existing booking
                 topicUid: SRM_adding_properties_to_booking_silently
-              - name: Applying booking life cycle transitions
+              - name: Applying booking lifecycle transitions
                 topicUid: SRM_apply_LS_transition_silently
               - name: Applying service state transitions
                 topicUid: SRM_apply_service_state_transitions_silently

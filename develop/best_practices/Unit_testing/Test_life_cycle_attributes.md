@@ -2,11 +2,11 @@
 uid: Test_life_cycle_attributes
 ---
 
-# Test life cycle attributes
+# Test lifecycle attributes
 
-You can create unit tests with MSTestv2 by marking a class with the *TestClass* attribute and test methods with the *TestMethod* attribute. Below, we describe some other attributes that can be used, which are often referred to as "test life cycle" attributes.
+You can create unit tests with MSTestv2 by marking a class with the *TestClass* attribute and test methods with the *TestMethod* attribute. Below, we describe some other attributes that can be used, which are often referred to as "test lifecycle" attributes.
 
-Test life cycle attributes can be useful in situations where some common logic must be executed before or after a test is executed (e.g. creating a connection, or doing some cleanup). This can, for instance, be the case when implementing integration tests.
+Test lifecycle attributes can be useful in situations where some common logic must be executed before or after a test is executed (e.g. creating a connection, or doing some cleanup). This can, for instance, be the case when implementing integration tests.
 
 MSTestV2 supports the following Initialize/Cleanup attribute pairs:
 

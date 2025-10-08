@@ -268,7 +268,7 @@ From now on, events associated with alarms of elements that are paused or stoppe
 
 #### DataMiner Cube - Services list: Only state change icons configured to perform a valid state change will be clickable \[ID 24753\]
 
-When life cycle management is enabled, then the services list allows you to change the state of the service by clicking an icon. From now on, you will only be able to click icons that are configured to perform a valid state change.
+When lifecycle management is enabled, then the services list allows you to change the state of the service by clicking an icon. From now on, you will only be able to click icons that are configured to perform a valid state change.
 
 #### DataMiner Cube - Visual Overview: Advanced editing pane improvements \[ID 24772\]\[ID 24794\]
 

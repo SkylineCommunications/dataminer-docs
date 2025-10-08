@@ -103,7 +103,7 @@ The second tab of the service definition pane can be used to manage properties o
 
 ## Actions tab
 
-The third tab of the service definition pane allows you to specify Automation scripts (i.e. [LSO scripts](xref:srm_scripting#life-cycle-service-orchestration-lso-script)) that should run when the service based on the service definition gets a specific service state:
+The third tab of the service definition pane allows you to specify Automation scripts (i.e. [LSO scripts](xref:srm_scripting#lifecycle-service-orchestration-lso-script)) that should run when the service based on the service definition gets a specific service state:
 
 1. Click the *Add* button in the lower-right corner.
 

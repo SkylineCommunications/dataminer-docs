@@ -94,7 +94,7 @@ To reinstall the browser app, you need to clean the XBAP cache:
 
 ## Can I still use the DataMiner Cube browser app in Internet Explorer?
 
-Support for the DataMiner Cube browser app has ended as of DataMiner 10.3 (see [Third-party software support life cycle](xref:Software_support_life_cycles#third-party-software-support-life-cycle)).
+Support for the DataMiner Cube browser app has ended as of DataMiner 10.3 (see [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)).
 
 For earlier DataMiner versions, we also recommend using the desktop application. See [Installing the DataMiner Cube desktop application](xref:Installing_the_DataMiner_Cube_desktop_application).
 

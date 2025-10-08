@@ -4,7 +4,7 @@ uid: Configuring_Atlassian_Crowd_settings
 
 # Configuring Atlassian Crowd settings
 
-DataMiner can import users and groups from an Atlassian Crowd server and can also rely on this type of server for user authentication. However, note that the latter is no longer recommended (see [Software support life cycles](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)).
+DataMiner can import users and groups from an Atlassian Crowd server and can also rely on this type of server for user authentication. However, note that the latter is no longer recommended (see [Software support lifecycles](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)).
 
 This section contains the following information on Atlassian Crowd settings:
 
@@ -28,7 +28,7 @@ In the Atlassian Crowd server, make sure there is an application named “datami
 
 ## Authenticating DataMiner users against an Atlassian Crowd server
 
-DataMiner users can be authenticated against an Atlassian Crowd server. However, note that this is no longer recommended (see [Software support life cycles](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)).
+DataMiner users can be authenticated against an Atlassian Crowd server. However, note that this is no longer recommended (see [Software support lifecycles](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)).
 
 To configure this, open the *DataMiner.xml* file, add an [ExternalAuthentication](xref:DataMiner.ExternalAuthentication) tag as shown in the example below, and restart the DataMiner Agent. Users added to the Crowd server and imported into DataMiner should then be able to log on.
 

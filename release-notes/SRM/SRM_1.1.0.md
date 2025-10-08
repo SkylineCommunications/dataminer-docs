@@ -217,7 +217,7 @@ When a resource pool was customized for a specific node and that node was config
 
 #### Exception when changing timing of booking [ID 24024]
 
-If the timing of a future booking was modified so that the beginning of its pre-roll phase was in the past, or if the start time of a booking was modified while the pre-roll phase had already begun, an exception was thrown and the booking life cycle was not updated.
+If the timing of a future booking was modified so that the beginning of its pre-roll phase was in the past, or if the start time of a booking was modified while the pre-roll phase had already begun, an exception was thrown and the booking lifecycle was not updated.
 
 #### 'Action when Post-Roll Ends' parameter not initialized by default [ID 24031]
 

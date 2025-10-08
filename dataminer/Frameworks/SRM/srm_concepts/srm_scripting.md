@@ -17,9 +17,9 @@ A PLS is typically linked to a specific virtual function. The name of the PLS ca
 
 For example, different connectors can expose the same "Encoding" virtual function. As it is the same virtual function, one profile definition will be used for the virtual function. The Profile-Load Scripts for the various connectors can be linked to this profile definition. When the booking is orchestrated, the correct PLS will be executed.
 
-A PLS can be called by an [LSO script](xref:srm_scripting#life-cycle-service-orchestration-lso-script) in a Service Orchestration context, or it can also be called directly in a Resource Automation context.
+A PLS can be called by an [LSO script](xref:srm_scripting#lifecycle-service-orchestration-lso-script) in a Service Orchestration context, or it can also be called directly in a Resource Automation context.
 
-## Life cycle Service Orchestration (LSO) script
+## Lifecycle Service Orchestration (LSO) script
 
 LSO scripts are only used in the context of Service Orchestration.
 

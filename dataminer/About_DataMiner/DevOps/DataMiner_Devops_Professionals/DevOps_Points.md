@@ -4,7 +4,7 @@ uid: DevOps_Points
 
 # Accumulating DevOps Points
 
-To maintain a DataMiner DevOps Professional status and to be an official member of the exclusive DataMiner DevOps Professionals community and unlock the associated [benefits](xref:Benefits_DevOps_Professionals_Program), you must accumulate a set quantity of DevOps Points [on an annual basis](#devops-points-life-cycle).
+To maintain a DataMiner DevOps Professional status and to be an official member of the exclusive DataMiner DevOps Professionals community and unlock the associated [benefits](xref:Benefits_DevOps_Professionals_Program), you must accumulate a set quantity of DevOps Points [on an annual basis](#devops-points-lifecycle).
 
 There are three levels available for DataMiner DevOps Professionals, with *Advocate* being the entry level and *Catalyst* being the top tier.
 
@@ -16,7 +16,7 @@ There are three levels available for DataMiner DevOps Professionals, with *Advoc
 | 750 points per year | 5,000 points per year | 15,000 points per year |
 
 > [!IMPORTANT]
-> Your DevOps Points expire once a period of 12 months has passed since you first signed up. For more information, see [DevOps Points life cycle](#devops-points-life-cycle).
+> Your DevOps Points expire once a period of 12 months has passed since you first signed up. For more information, see [DevOps Points lifecycle](#devops-points-lifecycle).
 
 In general, the more active you are in the DataMiner Dojo community and the more you work with DataMiner, the more DevOps Points you will accumulate. This can be achieved through a variety of actions, such as:
 
@@ -116,9 +116,9 @@ In general, the more active you are in the DataMiner Dojo community and the more
   > [!TIP]
   > For more information on how to **earn DevOps Points as a business or technology partner**, see [Benefits for DataMiner business and technology partners](xref:Benefits_Business_and_Tech_Partners).
 
-## DevOps Points life cycle
+## DevOps Points lifecycle
 
-The life cycle of DevOps Points operates as follows:
+The lifecycle of DevOps Points operates as follows:
 
 - **Expiration**: The DevOps Points you have collected expire after 12 months from your sign-up date for the program (referred to as your anniversary date or renewal date). However, although your DevOps Points total will reset to zero, you will retain the DevOps Professional status you had on your anniversary date.
 

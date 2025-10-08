@@ -14,7 +14,7 @@ uid: Part7Reference
 
 - [Naming of elements, services, views, etc.](xref:NamingConventions)
 
-- [Software support life cycles](xref:Software_support_life_cycles)
+- [Software support lifecycles](xref:Software_support_life_cycles)
 
 - [Feature overview](xref:Feature_overview)
 

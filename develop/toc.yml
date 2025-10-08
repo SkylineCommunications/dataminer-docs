@@ -959,7 +959,7 @@ items:
             topicUid: Ad_hoc_Creation
           - name: Building blocks
             topicUid: Ad_hoc_Building_blocks
-          - name: Life cycle
+          - name: Lifecycle
             topicUid: Ad_hoc_Life_cycle
           - name: Linking rows to DataMiner objects
             topicUid: Ad_hoc_Metadata
@@ -988,7 +988,7 @@ items:
             topicUid: CO_Creation
           - name: Building blocks
             topicUid: CO_Building_blocks
-          - name: Life cycle
+          - name: Lifecycle
             topicUid: CO_Life_cycle
           - name: Modifying links to DataMiner objects
             topicUid: CO_Metadata
@@ -6723,7 +6723,7 @@ items:
         topicUid: FluentAssertions
       - name: Data-driven tests
         topicUid: Data_driven_tests
-      - name: Test life cycle attributes
+      - name: Test lifecycle attributes
         topicUid: Test_life_cycle_attributes
       - name: Using files in unit tests
         topicUid: Using_files_in_unit_tests

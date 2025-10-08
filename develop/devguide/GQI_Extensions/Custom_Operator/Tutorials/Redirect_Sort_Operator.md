@@ -78,7 +78,7 @@ public sealed class SortRedirector
 
 ## Step 3: Provide column arguments
 
-In order to redirect from one column to another, you will need to know which columns. Implement the [IGQIInputArguments](xref:GQI_IGQIInputArguments) interface to have life cycle methods in which you can define some custom arguments and retrieve their value.
+In order to redirect from one column to another, you will need to know which columns. Implement the [IGQIInputArguments](xref:GQI_IGQIInputArguments) interface to have lifecycle methods in which you can define some custom arguments and retrieve their value.
 
 Two arguments are needed:
 
@@ -103,13 +103,13 @@ public sealed class SortRedirector : IGQIInputArguments
         _toArg = new GQIColumnDropdownArgument("Redirect to column") { IsRequired = true };
     }
 
-    // Life cycle method to define the arguments
+    // Lifecycle method to define the arguments
     public GQIArgument[] GetInputArguments()
     {
         return new[] { _fromArg, _toArg };
     }
 
-    // Life cycle method to retrieve the argument values
+    // Lifecycle method to retrieve the argument values
     public OnArgumentsProcessedOutputArgs OnArgumentsProcessed(OnArgumentsProcessedInputArgs args)
     {
         _fromColumn = args.GetArgumentValue(_fromArg);
@@ -148,7 +148,7 @@ public sealed class SortRedirector : IGQIInputArguments, IGQIOnInit
 
 ## Step 5: Implement the sort redirection on a high level
 
-Now that you are all set up, it is time to implement the main logic of your sort redirector. This logic will be triggered by the [Optimize](xref:GQI_IGQIOptimizableOperator#igqiquerynode-optimizeigqioperatornode-currentnode-igqicoreoperator-nextoperator) life cycle method of the [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator) interface.
+Now that you are all set up, it is time to implement the main logic of your sort redirector. This logic will be triggered by the [Optimize](xref:GQI_IGQIOptimizableOperator#igqiquerynode-optimizeigqioperatornode-currentnode-igqicoreoperator-nextoperator) lifecycle method of the [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator) interface.
 
 The high-level optimization logic will go like this:
 

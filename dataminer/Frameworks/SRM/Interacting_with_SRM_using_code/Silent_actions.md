@@ -14,7 +14,7 @@ Multiple "silent actions" are possible in scripts, allowing the scripts to inter
 
 - [Silently adding properties to an existing booking](xref:SRM_adding_properties_to_booking_silently)
 
-- [Silently applying booking life cycle transitions](xref:SRM_apply_LS_transition_silently)
+- [Silently applying booking lifecycle transitions](xref:SRM_apply_LS_transition_silently)
 
 - [Silently applying service state transitions](xref:SRM_apply_service_state_transitions_silently)
 

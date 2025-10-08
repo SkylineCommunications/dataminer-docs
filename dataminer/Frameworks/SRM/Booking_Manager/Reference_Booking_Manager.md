@@ -169,7 +169,7 @@ The JSON value of this property can contain the following fields:
 
 - *ConvertToContributing*:  Determines whether the *Convert to Contributing* checkbox is selected by default (*true*) or not (*false*).<!-- RN 28069 -->
 
-- *LifeCycle*: The type of lock life cycle, which can be *Locked* or *Unlocked*. *Locked* means the timing of the contributing booking is tied to that of the main booking; *Unlocked* means it is independent from the main booking. See [Locked or unlocked](xref:Service_Orchestration_contrib_bookings#locked-or-unlocked).
+- *LifeCycle*: The type of lock lifecycle, which can be *Locked* or *Unlocked*. *Locked* means the timing of the contributing booking is tied to that of the main booking; *Unlocked* means it is independent from the main booking. See [Locked or unlocked](xref:Service_Orchestration_contrib_bookings#locked-or-unlocked).
 
 - *LiteContributingResource*: Optional. Determines whether a lite contributing resource is used. If the property is not specified, regular contributing resources will be created. See [Enabling lite contributing bookings](xref:Service_Orchestration_contrib_bookings#enabling-lite-contributing-bookings).<!-- RN 31182 -->
 

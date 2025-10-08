@@ -13,7 +13,7 @@ Before you start [creating contributing bookings](#configuring-contributing-book
 
 ### Locked or unlocked
 
-A contributing booking can be locked or unlocked. When it is **locked**, the booking life cycle of the contributing booking is tied to the booking life cycle of the main booking. When it is **unlocked**, the main and contributing booking are more independent.
+A contributing booking can be locked or unlocked. When it is **locked**, the booking lifecycle of the contributing booking is tied to the booking lifecycle of the main booking. When it is **unlocked**, the main and contributing booking are more independent.
 
 The timing for a contributing resource is fully managed by the SRM framework and is different depending on the type of contributing booking:
 
@@ -28,7 +28,7 @@ The timing for a contributing resource is fully managed by the SRM framework and
 
 If a contributing booking has the orchestration trigger "**Local**", it can orchestrate itself. If it has the orchestration trigger "**Main**", it can be triggered by the main booking making use of it.
 
-Regardless of whether the orchestration trigger is "Main" or "Local", the update of the booking life cycle state will always be determined by local events.<!-- RN 24856 -->
+Regardless of whether the orchestration trigger is "Main" or "Local", the update of the booking lifecycle state will always be determined by local events.<!-- RN 24856 -->
 
 ## Contributing booking behavior
 
@@ -36,7 +36,7 @@ By default, a service is created at booking time for a contributing booking, alo
 
 Similar to regular bookings, contributing bookings can be **edited**. Relevant objects such as the contributing resource and service will be edited automatically in the background.<!-- RN 27502 -->
 
-Like a main booking, a contributing booking can have different [life cycle states](xref:Service_Orchestration_life_cycle_states). These can be adjusted based on changes applied to the main booking, and likewise, changes applied to a contributing booking can cause a life cycle state adjustment of the main booking making use of it:
+Like a main booking, a contributing booking can have different [lifecycle states](xref:Service_Orchestration_life_cycle_states). These can be adjusted based on changes applied to the main booking, and likewise, changes applied to a contributing booking can cause a lifecycle state adjustment of the main booking making use of it:
 
 - When a booking is converted to a contributing booking (with the *Convert to Contributing* checkbox in the Booking Wizard), the SRM framework will set the booking to the **Partial** state. It is then up to the user or the front-end script to confirm the booking.<!-- RN 27573 -->
 

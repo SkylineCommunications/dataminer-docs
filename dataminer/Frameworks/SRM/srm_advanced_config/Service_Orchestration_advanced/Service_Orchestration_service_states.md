@@ -6,9 +6,9 @@ uid: Service_Orchestration_service_states
 
 The DataMiner service associated with a booking can have different service states: Start, Stop, Standby, or Pause.
 
-Whenever a booking enters a different booking life cycle state, the SRM framework will adjust the service state accordingly.
+Whenever a booking enters a different booking lifecycle state, the SRM framework will adjust the service state accordingly.
 
-The booking life cycle state changes during the following events:
+The booking lifecycle state changes during the following events:
 
 - Start of pre-roll
 - End of pre-roll
@@ -19,7 +19,7 @@ Each of these events will trigger a booking action, which will launch an LSO scr
 
 ## Customizing which service state corresponds with which booking stage
 
-When the booking life cycle state changes, the corresponding service gets a specific service state. You can customize which service state is applied for a specific event:
+When the booking lifecycle state changes, the corresponding service gets a specific service state. You can customize which service state is applied for a specific event:
 
 1. In the Booking Manager app, go to *Config* > *Services and SLA*.
 
@@ -63,7 +63,7 @@ For each service state that a service definition must support, an action must be
 
 ## Configuring a custom script in case orchestration fails
 
-If the orchestration cannot be triggered for some reason, the booking life cycle state will become *Failed*.<!-- RN 28912 -->
+If the orchestration cannot be triggered for some reason, the booking lifecycle state will become *Failed*.<!-- RN 28912 -->
 
 Optionally, you can configure a custom script that will be triggered in such a case. This script can perform custom actions such as sending a report.<!-- RN 26018 -->
 

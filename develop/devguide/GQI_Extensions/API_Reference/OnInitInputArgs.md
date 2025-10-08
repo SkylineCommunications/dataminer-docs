@@ -9,7 +9,7 @@ uid: GQI_OnInitInputArgs
 - Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
 - Assembly: `SLAnalyticsTypes.dll`
 
-Contains functionality and general query information for ad hoc data sources and custom operators. An instance is provided through the `OnInit` life cycle method of the [IGQIOnInit building block](xref:GQI_IGQIOnInit).
+Contains functionality and general query information for ad hoc data sources and custom operators. An instance is provided through the `OnInit` lifecycle method of the [IGQIOnInit building block](xref:GQI_IGQIOnInit).
 
 ## Properties
 

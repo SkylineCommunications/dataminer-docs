@@ -14,7 +14,7 @@ From DataMiner 10.4.5/10.5.0 onwards<!-- RN 39043 -->, [ad hoc data sources](xre
 
 To enable logging, the GQI extension (either an ad hoc data source or a custom operator) must implement the [IGQIOnInit](xref:GQI_IGQIOnInit) interface.
 
-This building block adds the [OnInit](xref:GQI_IGQIOnInit#oninitoutputargs-oninitoninitinputargs-args) life cycle method, granting access to the [IGQILogger](xref:GQI_IGQILogger) object through the [Logger property](xref:GQI_OnInitInputArgs#properties) of the [OnInitInputArgs](xref:GQI_OnInitInputArgs) class.
+This building block adds the [OnInit](xref:GQI_IGQIOnInit#oninitoutputargs-oninitoninitinputargs-args) lifecycle method, granting access to the [IGQILogger](xref:GQI_IGQILogger) object through the [Logger property](xref:GQI_OnInitInputArgs#properties) of the [OnInitInputArgs](xref:GQI_OnInitInputArgs) class.
 
 Throughout its lifespan, the extension can use the [IGQILogger](xref:GQI_IGQILogger) methods to log messages and exceptions.
 

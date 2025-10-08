@@ -61,6 +61,6 @@ System.IO.IOException: Cannot create a file when that file already exists.
 
 This was caused by the truncation of the function name to cope with the limitations of the path length in Windows, which could cause two functions to have the same path. The truncation will now be done differently to prevent this issue: only the capital letters from the protocol name will be kept.
 
-#### LSO script not executed when booking life cycle already matched service state event [ID 36681]
+#### LSO script not executed when booking lifecycle already matched service state event [ID 36681]
 
 When an external event was scheduled during a particular booking stage but only effectively got fully executed during the next booking stage, this could cause a problem for bookings that left the failure state while the next booking stage was already ongoing but before the event was executed. The LSO script was not triggered because the SRM framework incorrectly assumed that the event had already been executed. This issue will now be prevented.
