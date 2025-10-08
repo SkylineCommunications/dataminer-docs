@@ -10,7 +10,7 @@ uid: Ad_hoc_Creation
 > 1. Create a new project in Visual Studio 2022.
 > 1. Search for the *DataMiner Ad Hoc Data Source Solution* template.
 > 1. Specify a name for the solution.
-> 1. Under *Additional information*, fill in the name and author for the data source, and select the life cycle interfaces you want to implement.
+> 1. Under *Additional information*, fill in the name and author for the data source, and select the lifecycle interfaces you want to implement.
 > 1. Click *Create*.
 
 To define a new ad hoc data source:

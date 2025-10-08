@@ -173,7 +173,7 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 ### Service states settings
 
-These settings can be used to customize which service state corresponds with which booking life cycle stage. In the Service State Transitions table, you can also configure which transitions between service states are allowed. For more information, see [Service Orchestration service states configuration](xref:Service_Orchestration_service_states).
+These settings can be used to customize which service state corresponds with which booking lifecycle stage. In the Service State Transitions table, you can also configure which transitions between service states are allowed. For more information, see [Service Orchestration service states configuration](xref:Service_Orchestration_service_states).
 
 ### SLA settings
 

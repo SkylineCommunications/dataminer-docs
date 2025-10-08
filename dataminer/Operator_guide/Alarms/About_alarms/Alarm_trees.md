@@ -4,7 +4,7 @@ uid: Alarm_trees
 
 # Alarm trees
 
-Whenever there is a change to an alarm after the original alarm record is created, a new alarm record is created that is linked to the previous one. This way, (nearly) every alarm in the DataMiner System will be represented by a series of linked alarm records, also known as an **alarm tree**, reflecting the entire alarm life cycle.
+Whenever there is a change to an alarm after the original alarm record is created, a new alarm record is created that is linked to the previous one. This way, (nearly) every alarm in the DataMiner System will be represented by a series of linked alarm records, also known as an **alarm tree**, reflecting the entire alarm lifecycle.
 
 Initially, when the DataMiner System detects that a parameter no longer has a value that is considered normal, it creates an alarm record with the following properties:
 

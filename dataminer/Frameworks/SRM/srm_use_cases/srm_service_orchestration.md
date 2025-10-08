@@ -4,7 +4,7 @@ uid: srm_service_orchestration
 
 # Service Orchestration
 
-Service Orchestration involves the complete scheduled orchestration of a service, including management of resources and advanced service orchestration rules. It is perfect for teams facing a high number of service additions, updates, and removals. Each change of a service requires a service orchestration cycle. In case there are lots of services of the same nature, it makes perfect sense to spend the effort configuring DataMiner SRM with all service details in order to achieve **fully automatic service life cycle orchestration**.
+Service Orchestration involves the complete scheduled orchestration of a service, including management of resources and advanced service orchestration rules. It is perfect for teams facing a high number of service additions, updates, and removals. Each change of a service requires a service orchestration cycle. In case there are lots of services of the same nature, it makes perfect sense to spend the effort configuring DataMiner SRM with all service details in order to achieve **fully automatic service lifecycle orchestration**.
 
 ## Service configuration using service definitions
 
@@ -14,13 +14,13 @@ For example, an OTT service requires an IP streaming resource on premises that c
 
 Service definitions also ensure that operators do not need to enter redundant information. For example, the output IP address of the Zixi edge resource mentioned above is the same IP address as for the transcoder input. This logic is added to the service definition with scripts that transfer data from one resource in the service definition to another resource, in any kind of direction. As these scripts describe the rules used to transfer data, they are known as [Data Transfer Rules (DTR)](xref:srm_scripting#data-transfer-rules-dtr) scripts.
 
-## Flexible life cycle management
+## Flexible lifecycle management
 
-Service Orchestration also increases the choices and possibilities for service life cycle management. While Resource Orchestration schedules only understand the "START" and "STOP" events of a schedule, Service Orchestration facilitates additional LSO states. For example, "PAUSE" may tell DataMiner to disable the streaming URL of the packager, "SWITCH_TO_REDUNDANT" may cause a redundant input stream selection, etc.
+Service Orchestration also increases the choices and possibilities for service lifecycle management. While Resource Orchestration schedules only understand the "START" and "STOP" events of a schedule, Service Orchestration facilitates additional LSO states. For example, "PAUSE" may tell DataMiner to disable the streaming URL of the packager, "SWITCH_TO_REDUNDANT" may cause a redundant input stream selection, etc.
 
-Two more stages that are included in the service life cycle of DataMiner SRM are the "PRE-ROLL" and "POST-ROLL" stages. Operators often like to get a service orchestrated and checked before it goes on air. This is the pre-roll stage. Similarly, operators may want to keep the service deployed after the schedule end, for example to cope with unexpended schedule extensions. This can be done with the post-roll stage.
+Two more stages that are included in the service lifecycle of DataMiner SRM are the "PRE-ROLL" and "POST-ROLL" stages. Operators often like to get a service orchestrated and checked before it goes on air. This is the pre-roll stage. Similarly, operators may want to keep the service deployed after the schedule end, for example to cope with unexpended schedule extensions. This can be done with the post-roll stage.
 
-The additional logic for these life cycle stages is defined in scripts that are configured for each service definition, called [Life cycle Service Orchestration (LSO)](xref:srm_scripting#life-cycle-service-orchestration-lso-script) scripts. These allow DevOps teams to script precisely what DataMiner will do for each LSO transition.
+The additional logic for these lifecycle stages is defined in scripts that are configured for each service definition, called [Lifecycle Service Orchestration (LSO)](xref:srm_scripting#lifecycle-service-orchestration-lso-script) scripts. These allow DevOps teams to script precisely what DataMiner will do for each LSO transition.
 
 ## Automated resource configuration
 

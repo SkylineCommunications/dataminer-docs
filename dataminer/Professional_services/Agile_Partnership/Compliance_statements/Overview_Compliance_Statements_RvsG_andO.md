@@ -38,6 +38,6 @@ Because of the nature of software ICT projects, those requirements will never be
 
 Furthermore, even for just one single requirement, software and ICT technology offers limitless options in terms of a practical implementation. There might also be different opinions on which options are the most suitable, depending on many factors such as personal preferences, existing habits and practices, and much more. At the same time, the time and resources available for the implementation of the solution remain finite.
 
-> Priorities shift and requirements evolve throughout the life cycle of a software delivery project for many reasons. Embracing change guarantees that you get the best possible solution without being constrained by what was foreseen several months before.
+> Priorities shift and requirements evolve throughout the lifecycle of a software delivery project for many reasons. Embracing change guarantees that you get the best possible solution without being constrained by what was foreseen several months before.
 
 Ultimately it is the actual implementation that will define the value of the project. During the execution of such a project, it is therefore vital to stay focused on the original goals and objectives, to use the requirements as a guidance, but above all to aim towards generating value for the business and delivering that value as early as possible, if needed in stages. This ensures that the finite time and resources are used as efficiently as possible to strive towards the objectives that were set forth initially as much as possible.

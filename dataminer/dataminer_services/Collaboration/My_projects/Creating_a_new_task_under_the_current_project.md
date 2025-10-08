@@ -21,12 +21,12 @@ To create a new task under the current project, do the following:
    | New driver feature | Used to send in a request for Skyline to consider a feature to be added to one of the DataMiner drivers deployed in your system, provided by Skyline. |
    | New software feature | Used to send in a request for Skyline to consider a feature to be added to the DataMiner software. |
    | Software issue | Used to report an issue regarding the DataMiner software. |
-   | Support | Used if none of the above-mentioned other types apply or if no type can be selected at this stage.                                                    |
+   | Support | Used if none of the above-mentioned other types apply or if no type can be selected at this stage. |
 
 1. Enter a title.
 
    > [!NOTE]
-   > - Above the title you have just entered, you will notice the current status of the task you are creating, i.e. “Not started”. Hover over the small question mark to see an overview of all possible task statuses depicted in a typical task life cycle. For more information on the different task statuses, see [Task statuses](xref:Statuses#task-statuses).
+   > - Above the title you have just entered, you will notice the current status of the task you are creating, i.e. “Not started”. Hover over the small question mark to see an overview of all possible task statuses depicted in a typical task lifecycle. For more information on the different task statuses, see [Task statuses](xref:Statuses#task-statuses).
    > - In the top-right corner, you can click an ellipsis button to open a menu that contains the following commands:
    >
    >   - Click *Full screen* to expand the task pane. In full-screen mode, you can then click *Split view* to exit the full-screen mode.

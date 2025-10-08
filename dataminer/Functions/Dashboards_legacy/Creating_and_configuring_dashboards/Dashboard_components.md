@@ -216,7 +216,7 @@ Component-specific options:
 
 - *Highlight time*: Enter the number of seconds you want new alarms to be highlighted.
 
-- *History tracking*: Select this option to show only the most recent alarm of an alarm’s life cycle. To show the alarm history as separate alarm records in the list instead, clear the selection.
+- *History tracking*: Select this option to show only the most recent alarm of an alarm’s lifecycle. To show the alarm history as separate alarm records in the list instead, clear the selection.
 
 - *Group by element*: Select this option to group the alarms by element.
 

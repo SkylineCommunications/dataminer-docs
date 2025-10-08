@@ -11,7 +11,7 @@ Available from DataMiner 10.4.4/10.5.0 onwards<!-- RN 38643 -->.
 - Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
 - Assembly: `SLAnalyticsTypes.dll`
 
-This interface exposes methods to an ad hoc data source to publish updates. A concrete implementation is provided as an argument to the ad hoc data source when it implements the [OnStartUpdates](xref:GQI_IGQIUpdateable#void-onstartupdatesigqiupdater) life cycle method.
+This interface exposes methods to an ad hoc data source to publish updates. A concrete implementation is provided as an argument to the ad hoc data source when it implements the [OnStartUpdates](xref:GQI_IGQIUpdateable#void-onstartupdatesigqiupdater) lifecycle method.
 
 It allows adding, removing, and updating rows, or updating individual cells.
 

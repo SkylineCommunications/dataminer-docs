@@ -147,7 +147,7 @@ DataMiner will automatically synchronize the configuration and subsequently its 
 To check the data synchronization state after you have set up Failover, see [Synchronizing the DMA databases](xref:Synchronizing_the_DMA_databases).
 
 > [!NOTE]
-> From DataMiner 10.3 onwards, this setup is no longer supported. See [Third-party software support life cycle](xref:Software_support_life_cycles#third-party-software-support-life-cycle)
+> From DataMiner 10.3 onwards, this setup is no longer supported. See [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)
 
 ## Preparing authentication and user provisioning
 

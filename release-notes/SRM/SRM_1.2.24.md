@@ -110,9 +110,9 @@ Debug logging has been added to LSO and PLS in the context of bookings. This wil
 
 The visual overview for the Profile-Load Script Tester is now compatible with the black theme in DataMiner Cube.
 
-#### Booking life cycle enters failed state when LSO fails \[ID 33121\]
+#### Booking lifecycle enters failed state when LSO fails \[ID 33121\]
 
-When an LSO script fails, the booking life cycle now enters the failed state. Previously, it only entered the failed state if a booking failed to start or start events were not triggered.
+When an LSO script fails, the booking lifecycle now enters the failed state. Previously, it only entered the failed state if a booking failed to start or start events were not triggered.
 
 #### EngineExtensionMethods.SynchronousAddService method now skips read-only properties \[ID 33352\]
 

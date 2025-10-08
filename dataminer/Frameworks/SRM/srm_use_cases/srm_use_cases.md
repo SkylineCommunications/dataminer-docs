@@ -21,7 +21,7 @@ Classically, SRM has typically been used to tackle the most repetitive and time-
 - [Resource Scheduling](xref:srm_resource_scheduling): Keeping track of all resource schedules without automating actions, for maximum flexibility.
 - [Resource Automation](xref:srm_resource_automation): Intelligent resource configuration with a click of a button.
 - [Resource Orchestration](xref:srm_resource_orchestration): The power of Resource Scheduling combined with automatic configuration actions at the start and end time of bookings.
-- [Service Orchestration](xref:srm_service_orchestration): Orchestration of the complete life cycle of services.
+- [Service Orchestration](xref:srm_service_orchestration): Orchestration of the complete lifecycle of services.
 
 Each of these could be an intermediate step to reach a final objective, or they could be the final objective itself. A DataMiner System can support several use cases at the same time, separately or in some cases even combined.
 

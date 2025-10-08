@@ -4,7 +4,7 @@ uid: Configuring_RADIUS_settings
 
 # Configuring RADIUS settings
 
-DataMiner users can be authenticated using a RADIUS server. However, note that this is no longer recommended (see [Software support life cycles](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)).
+DataMiner users can be authenticated using a RADIUS server. However, note that this is no longer recommended (see [Software support lifecycles](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)).
 
 If a RADIUS server has been configured, the DataMiner Agent acts as a RADIUS client and passes the user credentials along to the RADIUS server, which will then authenticate the user. DataMiner also supports RADIUS challenges (see below).
 

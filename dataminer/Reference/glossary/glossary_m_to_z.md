@@ -94,8 +94,8 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | PMR | Private Mobile Radio. Two-way radio voice communication systems using portable, mobile, base station and dispatch console radios. Also known as Professional Mobile Radio and Land Mobile Radio (LMR). |
 | PON | Passive Optical Network. Fiber-optic telecommunications technology for the delivery of broadband network to end customers. |
 | PoP | Point of Presence. Artificial demarcation point or interface point between communicating entities. |
-| Post-roll | See [Service Orchestration: booking life cycle states configuration](xref:Service_Orchestration_life_cycle_states). |
-| Pre-roll | See [Service Orchestration: booking life cycle states configuration](xref:Service_Orchestration_life_cycle_states). |
+| Post-roll | See [Service Orchestration: booking lifecycle states configuration](xref:Service_Orchestration_life_cycle_states). |
+| Pre-roll | See [Service Orchestration: booking lifecycle states configuration](xref:Service_Orchestration_life_cycle_states). |
 | Primary element | Element within a redundancy group that is operational in normal conditions.<br>See [Primary elements, backup elements and virtual primary elements](xref:About_redundancy_groups#primary-elements-backup-elements-and-virtual-primary-elements). |
 | Proactive (cap) detection | The automatic prediction of future alarm threshold breaches.<br>See [Proactive cap detection](xref:Proactive_cap_detection). |
 | Production version | The version of a protocol that is currently the main version used in the DMS. |
@@ -234,7 +234,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SQL | Structured Query Language. Programming language that is typically used for relational database management. |
 | SRM | Service and Resource Management. DataMiner software allowing you to virtualize your system resources, create an overview of how resources are connected within your infrastructure, and manage which resources are booked and when.<br>See [Service and Resource Management](xref:About_SRM). |
 | SRM Core | Suite of DataMiner core software modules that are the basis of DataMiner Service & Resource Management (SRM). Consists of seven DataMiner software modules: DataMiner Service Manager, Virtualization Engine, Resource Manager, Profile Manager, Connectivity Framework, Automation Engine and Scheduling Engine. |
-| SRM Standard Solution | DataMiner blueprint configuration that facilitates and accelerates the design and deployment of application-specific SRM solutions. This includes an installation and upgrade package of the required DataMiner components, a pre-built user interface to configure and operate SRM solutions, and ready-made workflows for booking and life cycle orchestration of services (LSO). |
+| SRM Standard Solution | DataMiner blueprint configuration that facilitates and accelerates the design and deployment of application-specific SRM solutions. This includes an installation and upgrade package of the required DataMiner components, a pre-built user interface to configure and operate SRM solutions, and ready-made workflows for booking and lifecycle orchestration of services (LSO). |
 | SSH | Secure Shell. Protocol for secure remote login and other secure network services over an insecure network. |
 | SSL | Secure Sockets Layer. |
 | SSPA | Solid-State Power Amplifier. Amplifier that uses field-effect transistors to amplify radio frequency signals. |

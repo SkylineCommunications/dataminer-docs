@@ -6,9 +6,9 @@ uid: SRM_1.2.2
 
 ## New features
 
-#### Contributing booking life cycle changes \[ID 25547\]
+#### Contributing booking lifecycle changes \[ID 25547\]
 
-Some changes have been implemented to the life cycle behavior of contributing bookings (including contributing bookings within contributing bookings):
+Some changes have been implemented to the lifecycle behavior of contributing bookings (including contributing bookings within contributing bookings):
 
 - When the main booking is confirmed:
 

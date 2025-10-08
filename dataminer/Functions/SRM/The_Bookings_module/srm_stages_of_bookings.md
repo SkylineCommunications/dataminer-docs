@@ -4,7 +4,7 @@ uid: srm_stages_of_bookings
 
 # Booking stages
 
-Once a booking has been created and is in the confirmed state, it goes through several stages in the Resource Manager until it is finished. Having a clear understanding of these steps can help in troubleshooting bookings and understanding the impact of certain configuration settings. Note that a distinction must be made between the booking stages in the core software and the [booking life cycle](xref:Service_Orchestration_life_cycle_states) when the SRM framework has been deployed.
+Once a booking has been created and is in the confirmed state, it goes through several stages in the Resource Manager until it is finished. Having a clear understanding of these steps can help in troubleshooting bookings and understanding the impact of certain configuration settings. Note that a distinction must be made between the booking stages in the core software and the [booking lifecycle](xref:Service_Orchestration_life_cycle_states) when the SRM framework has been deployed.
 
 ## Booking states
 
@@ -76,7 +76,7 @@ If the SRM framework has been deployed, there are no such events unless an event
 
 After the functions have either been successfully activated or the activation has timed out, the hosting Agent attempts to start the booking.
 
-If the function resources have not been activated yet, the start of the booking will fail. In such cases, the Resource Manager keeps the booking in the *Confirmed* state and triggers the script configured to run when the booking start fails (if any). For details on how to configure this script when you use the SRM framework, see [Configuring a custom script in case orchestration fails](xref:Service_Orchestration_service_states#configuring-a-custom-script-in-case-orchestration-fails). When the SRM framework is used, the booking life cycle will also transition to the failed state.
+If the function resources have not been activated yet, the start of the booking will fail. In such cases, the Resource Manager keeps the booking in the *Confirmed* state and triggers the script configured to run when the booking start fails (if any). For details on how to configure this script when you use the SRM framework, see [Configuring a custom script in case orchestration fails](xref:Service_Orchestration_service_states#configuring-a-custom-script-in-case-orchestration-fails). When the SRM framework is used, the booking lifecycle will also transition to the failed state.
 
 The start of a booking can also fail if:
 
@@ -91,7 +91,7 @@ Once the booking transitions to the *Ongoing* state, the hosting Agent will trig
 By default, these event scripts run asynchronously, which means that the hosting Agent will trigger them without waiting for completion.
 This asynchronous behavior means multiple scripts will run concurrently. After a script is triggered, the `HasRun` property of the event in the `ReservationInstance` object is set to `true`, indicating that the event has been triggered and will not be triggered again.
 
-When the SRM framework is used, some events are added by default to transition the booking life cycle state. Any configured [custom events](xref:Service_Orchestration_custom_events) will also be event scripts on the booking.
+When the SRM framework is used, some events are added by default to transition the booking lifecycle state. Any configured [custom events](xref:Service_Orchestration_custom_events) will also be event scripts on the booking.
 
 ### Booking end
 

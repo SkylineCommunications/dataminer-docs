@@ -104,7 +104,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | Data Plane   | *Light Managed Object*          | Endpoints with less than 200 metrics. |
 | Data Plane   | *Unmanaged Object*              | Unmanaged Object Instances available in the system (see [DataMiner Object Models](xref:DOM)). |
 | Data Sources | *Connector Services*            | Use of Skyline-developed connectors (also known as DataMiner protocols or interface drivers) made available through the [Catalog](https://catalog.dataminer.services/).<br>Connectors developed by the user or another third party are not counted. |
-| Automation   | *Automation Actions*            | - [**Automation scripts**](xref:Running_Automation_scripts), e.g. Life cycle Service Orchestration (LSO) scripts and Profile-Load Scripts (PLS). <br> - **New Unmanaged Object Instances** added to the [DataMiner Object Models](xref:DOM), e.g. a new tickets, work order, asset, or contract record. |
+| Automation   | *Automation Actions*            | - [**Automation scripts**](xref:Running_Automation_scripts), e.g. Lifecycle Service Orchestration (LSO) scripts and Profile-Load Scripts (PLS). <br> - **New Unmanaged Object Instances** added to the [DataMiner Object Models](xref:DOM), e.g. a new tickets, work order, asset, or contract record. |
 | Collaboration Services | *Dashboard Sharing*   | Sharing dashboards with real-time data and controls with both internal and external organization users. |
 | Storage as a Service (STaaS) | *Alarm Updates* | New alarm updates written to the storage service. |
 | Storage as a Service (STaaS) | *Information Events*| New information events written to the storage service.|

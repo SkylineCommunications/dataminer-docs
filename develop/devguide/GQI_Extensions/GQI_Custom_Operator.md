@@ -4,7 +4,7 @@ uid: GQI_Custom_Operator
 
 # Custom operators
 
-Each custom operator for GQI is defined in an **Automation script library** by a **C# class** that implements specific [interfaces](xref:CO_Building_blocks). Every time GQI needs to use the custom operator, it will create a new instance of that class and call the relevant [life cycle](xref:CO_Life_cycle) methods.
+Each custom operator for GQI is defined in an **Automation script library** by a **C# class** that implements specific [interfaces](xref:CO_Building_blocks). Every time GQI needs to use the custom operator, it will create a new instance of that class and call the relevant [lifecycle](xref:CO_Life_cycle) methods.
 
 > [!NOTE]
 > When transforming data, the custom operator is **applied on row level**. This means a custom operator **cannot** be used to do any of the following:

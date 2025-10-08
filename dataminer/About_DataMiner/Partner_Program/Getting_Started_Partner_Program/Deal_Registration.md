@@ -38,7 +38,7 @@ When partners identify an opportunity, they are invited to register this using t
 
 A filed opportunity proves that the partner discovered the business opportunity and filed it on Skyline’s CRM platform. This is a primary and essential step in securing a Business Development Reward for the Opportunity.
 
-### Opportunity Life Cycle
+### Opportunity Lifecycle
 
 #### Opportunity Status
 
