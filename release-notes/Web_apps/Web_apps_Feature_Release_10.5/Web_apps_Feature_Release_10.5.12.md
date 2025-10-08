@@ -24,6 +24,22 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## Changes
 
+### Breaking changes
+
+#### Dashboards/Low-Code Apps: HTML code on read-only DOM forms will no longer be interpreted [ID 43864]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, when a *Form* component was displayed in read-only mode, all content written in HTML code would be interpreted as such. However, this had a number of unwanted side effects:
+
+- All HTML code that had to be displayed as code had to be escaped to prevent it from being interpreted.
+- Text between chevrons (e.g. `<a piece of text between chevrons>`) was not displayed as it could potentially contain unsafe content.
+- etc.
+
+From now on, when set to read-only, a *Form* component will display all HTML code as code. For example, a value like `<b>Text</b>` will now always be displayed as "\<b\>Text\</b\>" instead of "**Text**".
+
+In situation where HTML code needs to be interpreted, you will need to use a *Grid* component with a GQI query.
+
 ### Enhancements
 
 #### Dashboards/Low-Code Apps: Elements will now be lazy-loaded when configuring components [ID 43814]
