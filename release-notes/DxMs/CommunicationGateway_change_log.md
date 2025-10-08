@@ -4,6 +4,12 @@ uid: CommunicationGateway_change_log
 
 # CommunicationGateway change log
 
+#### 8 October 2025 - Enhancement - CommunicationGateway 5.3.2 - Increased maximum gRPC response size [ID 43865]
+
+The maximum allowed response size for gRPC calls has been increased from 4 MB to 12 MB. This enhancement enables the CommunicationGateway to handle larger payloads.
+
+As before, if a response exceeds the configured limit, a RequestFailedException will be thrown with status code 8 (Resource exhausted).
+
 #### 23 September 2025 - Fix - CommunicationGateway 5.3.1 - Installer incorrectly selected DVD drive for log files [ID 43714]
 
 Previously, the CommunicationGateway installer could incorrectly treat a DVD drive (when assigned as D:\\) as a valid location for log files. If the C:\\ drive had less free space than the DVD drive, the installer attempted to write logs to the DVD drive, resulting in installation failures.
