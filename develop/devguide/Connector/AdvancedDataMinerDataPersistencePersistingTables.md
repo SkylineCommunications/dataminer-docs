@@ -55,7 +55,6 @@ You should only use this option in the following cases:
 - The table is not used for DVEs.
 - The [save](xref:ColumnOptionOptionsOverview#save) option is not enabled.
 - No [foreign keys](xref:ColumnOptionOptionsOverview#foreignkey) are used in the table.
-- Trending is not enabled on the table.
 - Alarm monitoring is not enabled on the table.
 
 In general, make sure to only use it on tables that are only displayed in the UI or used in a QAction, but are not used in any other way.
