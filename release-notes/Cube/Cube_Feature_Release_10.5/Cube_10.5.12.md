@@ -34,12 +34,6 @@ In order to reduce the time it takes to load a visual overview, a number of enha
 
 Throughout the lifecycle of a Cube session, the parameter cache will request and maintain certain parameter tables, and will keeping them updated.When data is requested from any of the tables in question, the data will be fetched from the cache instead of the DataMiner Agent.
 
-##### Using wildcards in table keys
-
-From now on, when retrieving data from the parameter cache, you can use \* and ? wildcards in table keys (\* representing any number of characters and ? representing one character in the specified spot).
-
-For example, if a table has a display key named `qaTable 500_x` with `x` being a sequence number, and you want to fetch the fifth row, you will now be able to use the following filter: `<A>-A|MyElement|Parameter:507,qaTable*5|=Active` A display key named e.g. *qaTable 500_5* will then match the key specified in that filter.
-
 ##### Caching only certain columns
 
 When [configuring caching of specific table parameters](https://aka.dataminer.services/configuring_caching_of_specific_table_parameters), it is now possible to configure that you only want certain columns of a table to be cached.
@@ -80,15 +74,17 @@ In a `"SubscriptionFilter"` item, you can also specify a `COLUMNS=` filter. If y
 > - If the `"SubscriptionFilter"` item contains a `COLUMNS=` filter, any `"ColumnIDs"` item specified for the same table will be ignored.
 > - In the configuration file, each table can only be configured once. It is not allowed to configure the same table multiple times with e.g. other columns.
 
-##### Placeholders of type [param:] can now refer to columns instead of rows
+##### Parameter blocks in filters now allow using wildcards in table keys
 
-Up to now, when you had to refer to a table parameter in a [param:] placeholder, it was only allowed to refer to a specific row using the following syntax:
+From now on, when retrieving data from the parameter cache, you can use \* and ? wildcards in table keys (\* representing any number of characters and ? representing one character in the specified spot).
 
-`[param:DmaID/ElementID,ParameterID,TableRow]`
+For example, if a table has a display key named `qaTable 500_x` with `x` being a sequence number, and you want to fetch the fifth row, you will now be able to use the following filter: `<A>-A|MyElement|Parameter:507,qaTable*5|=Active` A display key named e.g. *qaTable 500_5* will then match the key specified in that filter.
 
-From now on, it will also be possible to refer to an entire column of a table parameter by using the following syntax:
+##### Placeholders of type [param:] can now refer to cached table columns
 
-`[param:DmaID/ElementID,ParameterID,ColumnID]`
+From now on, when referring to a parameter ID in a [param:] placeholder, that parameter ID can also be an ID of a cached table column.
+
+`[param:DmaID/ElementID,ParameterID]`
 
 #### Custom Alarm Console hyperlinks linked to Automation scripts will no longer be hidden in the right-click menu of certain alarms [ID 43809]
 
