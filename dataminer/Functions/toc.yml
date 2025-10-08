@@ -1,4 +1,6 @@
 items:
+  - name: DataMiner Assistant
+    topicUid: DataMinerAssistant
   - name: Automation
     items:
       - name: About DataMiner Automation
