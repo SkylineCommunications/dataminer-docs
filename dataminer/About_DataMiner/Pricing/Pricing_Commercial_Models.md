@@ -74,7 +74,7 @@ Usage-based services are charged based on the actual monthly usage of services, 
 |---------|----------------------------|----------------------|
 | System capacity | Server-based licenses, each with fixed capacity tiers of managed objects: 5, 10, 25, 50, 100, 250, 500 , 1000. | Volume-based, per managed object or monitored metric per month. Independent from the number of nodes deployed. |
 | Failover | Server-based license. | Included. Users can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month. |
-| Optional functions | Licensed per node | Not applicable. All optional functions are included. |
+| Optional functions | Licensed per node. | Not applicable. All optional functions are included. |
 | Automation & orchestration | Based on the volume of concurrent services running. | Based on the automation volume. |
 | Connectors | Single connector license fee for new and existing connectors. One connector license per different, interfaced product, per DataMiner System (DMS). | Charged per connector used per month. |
 | Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [Support plans](xref:Overview_Support_Plans)). |
