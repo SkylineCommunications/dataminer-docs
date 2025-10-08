@@ -116,7 +116,7 @@ Follow the steps below to configure your DataMiner Agent:
    - *Admin Email*: This email address must be associated with a dataminer.services account that is a member of your organization. It will become the owner of the DMS on dataminer.services.
    - *STaaS Region*: If you have selected to use [STaaS](xref:STaaS) for data storage, select the region where your data should be hosted.
 
-   ![Registration details when STaaS was selected](~/dataminer/images/Registration_of_DMA_when_StaaS_is_selected.png)
+   ![Registration details when STaaS was selected](~/dataminer/images/Registration_of_DMA_when_StaaS_is_selected.png)<br>*Example with registration details for a STaaS setup*
 
    > [!NOTE]
    > By default, if you install DataMiner while connected to the internet, DataMiner is deployed in subscription mode with a [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) license. However, if you want to do an offline installation or if you want to install DataMiner with a [perpetual license](xref:Permanent_license), click the link below these registration fields and enter the DataMiner ID provided by Skyline. If you do not have a DataMiner ID yet, contact <dataminer.licensing@skyline.be>.
@@ -129,7 +129,7 @@ Follow the steps below to configure your DataMiner Agent:
 
 1. To start the configuration, click *Next*.
 
-1. When the configuration is complete, click *Finish*.
+   The configuration progress will now be displayed. When the configuration is complete, you can close the window.
 
    DataMiner will automatically start up and connect to dataminer.services. DataMiner Cube will also be installed, so you can connect to DataMiner locally.
 

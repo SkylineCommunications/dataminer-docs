@@ -67,18 +67,26 @@ cd "C:\Skyline DataMiner\Tools\FirstStartupChoice"
 ```json
 {
   "DatabaseConfig": {
-    "DatabaseMode": "SelfHostedLocal",
-    "CassandraTlsEnabled": false
+    "DatabaseMode": "SelfHostedExternal",
+    "CassandraDbName": "testdb",
+    "CassandraHost": "192.168.4.196",
+    "CassandraUsername": "skyline",
+    "CassandraPassword": "12345678",
+    "CassandraTlsEnabled": false,
+    "OpenSearchDbName": "testdb",
+    "OpenSearchHost": "192.168.4.196",
+    "OpenSearchUsername": "admin",
+    "OpenSearchPassword": "12345678"
   },
   "LicenseConfig": {
     "LicenseMode": "Subscription",
     "DataMinerId": ""
   },
   "RegistrationConfig": {
-    "OrganizationApiKey": "<Organization API Key>",
-    "SystemName": "<System Name>",
-    "SystemUrl": "<System URL>",
-    "AdminEmail": "<AdminEmail>",
+    "OrganizationApiKey": "",
+    "SystemName": "",
+    "SystemUrl": "",
+    "AdminEmail": "",
     "StaasRegion": ""
   }
 }
@@ -89,8 +97,16 @@ cd "C:\Skyline DataMiner\Tools\FirstStartupChoice"
 ```json
 {
   "DatabaseConfig": {
-    "DatabaseMode": "SelfHostedLocal",
-    "CassandraTlsEnabled": false
+    "DatabaseMode": "SelfHostedExternal",
+    "CassandraDbName": "testdb",
+    "CassandraHost": "192.168.4.196",
+    "CassandraUsername": "skyline",
+    "CassandraPassword": "12345678",
+    "CassandraTlsEnabled": false,
+    "OpenSearchDbName": "testdb",
+    "OpenSearchHost": "192.168.4.196",
+    "OpenSearchUsername": "admin",
+    "OpenSearchPassword": "12345678"
   },
   "LicenseConfig": {
     "LicenseMode": "Perpetual",
