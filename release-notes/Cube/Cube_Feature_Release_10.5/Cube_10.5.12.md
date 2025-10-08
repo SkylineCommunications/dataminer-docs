@@ -20,7 +20,13 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
-*No new features have been added yet.*
+#### Trending: Double-clicking a RAD group incident will open a trend graph with up to 10 parameters of the RAD parameter group [ID 43798]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+From now on, when you double-click a RAD group incident, a trend graph will open, showing you up to 10 parameters of the associated RAD parameter group. When you click a single RAD suggestion event, a trend graph will open, showing you only the parameter associated with that suggestion event.
+
+In the context menu of a RAD group incident as well as the context menu of a single suggestion event, you will now also find a new command in the *Open* submenu. Selecting that new command will have the same effect as double-clicking a RAD group incident. A trend graph will open, showing you up to 10 parameters of the associated RAD parameter group.
 
 ## Changes
 
