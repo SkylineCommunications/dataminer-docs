@@ -50,7 +50,7 @@ This is why:
 
 - [FindInteractiveClient](xref:Find_interactive_client) lets a user attach to the script. All active users are shown a message to attach to the script. The first user to click *Attach* sees the UI.
 
-![DataMiner Cube pop-up message to attach to a script](~/develop/images/cube-interactive-client-attach-dialog.png)
+  ![DataMiner Cube pop-up message to attach to a script](~/develop/images/cube-interactive-client-attach-dialog.png)
 
 > [!IMPORTANT]
 > `FindInteractiveClient` will not work for a user connected to a web session.
