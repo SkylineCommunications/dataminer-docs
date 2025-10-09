@@ -48,6 +48,14 @@ From now on, the `Engine` class exposes the public property `ScriptName`.
 
 This means that, in an Automation script, it will now be possible to retrieve the name of that script.
 
+#### Email messages can now also be sent if recipients are only specified in the CC and/or BCC fields [ID 43844]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, an email message could only be sent if a recipient was specified in the *To* field.
+
+From now on, it will also be possible to send email messages that only have recipients specified in the *CC* and/or *BCC* fields.
+
 #### BPA test 'Cube CRL Freeze': Enhanced performance [ID 43854]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
