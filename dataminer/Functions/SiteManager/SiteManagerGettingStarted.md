@@ -128,4 +128,4 @@ Fill in the IP or host name of the exposed data source.
 A tunnel will only be created as long as at least one element is actively connecting to this endpoint.
 For example, if you have an element that sets up a connection to a data source on a remote site, the tunnel will only be created when the element is started. As soon as the element is stopped or deleted, the tunnel will be torn down.
 
-Note also that in case multiple elements on the same DataMiner Agent connect to the same remote endpoint, only a single tunnel will be set up and this tunnel will be shared by the elements on that DataMiner Agent. The tunnel will only be tore down when all elements that connect to this remote endpoint are either stopped or deleted.
+Note also that in case multiple elements on the same DataMiner Agent connect to the same remote endpoint, only a single tunnel will be set up and this tunnel will be shared by the elements on that DataMiner Agent. The tunnel will only be torn down when all elements that connect to this remote endpoint are either stopped or deleted.
