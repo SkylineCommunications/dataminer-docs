@@ -4,13 +4,13 @@ uid: Using_older_installers
 
 # Older DataMiner installers (deprecated)
 
-If you are using an older installer, follow the steps below to install DataMiner. However, keep in mind that installers prior to the 10.4 installer are considered deprecated, so unless there is a specific reason why you need to use an older installer, we highly recommend using the [DataMiner Installer v10.4](xref:Installing_DM_using_the_DM_installer) instead.
+If you are using an older installer, follow the steps below to install DataMiner. However, keep in mind that installers prior to the 10.4 installer are considered deprecated, so unless there is a specific reason why you need to use an older installer, we highly recommend [using a recent installer](xref:Installing_DM_using_the_DM_installer) instead.
 
 ## Default DataMiner installation
 
 1. Make sure you are logged into Windows with the correct user account:
 
-   - If you are using the DataMiner 10.2 installer or newer, use an account with administrator rights. During the installation, the user account will automatically be added to a local DataMiner user group named *Administrator (installer)*.
+   - If you are using the DataMiner 10.2 installer, use an account with administrator rights. During the installation, the user account will automatically be added to a local DataMiner user group named *Administrator (installer)*.
    - If you are using a DataMiner installer older than version 10.2, use the server's local Administrator account. Do not use a regular user account with administrative rights.
 
 1. Double-click the setup executable.

@@ -4,11 +4,11 @@ uid: Unattended_DM_installation
 
 # Unattended DataMiner installation
 
-## v10.5 installer
+## v10.5 Installer
 
-With the v10.5 installer, it is possible to pre-configure the installation, so that you only need to launch the installer and everything else is taken care of automatically. This can only be used to install a standalone DataMiner Agent; any additional configuration, for example to add the DMA to a cluster, will need to be done manually afterwards.
+With the v10.5 Installer, it is possible to pre-configure DataMiner, so that after you have completed the initial installation, you only need to execute a command to have the entire configuration taken care of automatically.
 
-To pre-configure the installation, configure a JSON file as indicated in the examples below, depending on the type of setup you want, and then execute the command below (after filling in the correct path):
+To run an unattended configuration of a new DataMiner installation, configure a JSON file as indicated in the examples below, depending on the type of setup you want, and then execute the command below (after filling in the correct path):
 
 ```powershell
 cd "C:\Skyline DataMiner\Tools\FirstStartupChoice"
@@ -16,7 +16,7 @@ cd "C:\Skyline DataMiner\Tools\FirstStartupChoice"
 ```
 
 > [!TIP]
-> For details about the different fields that can be configured during the installation, refer to [Running the installer](xref:Installing_DM_using_the_DM_installer#running-the-installer).
+> For details about the different fields that can be configured, refer to [Running the Installer](xref:Installing_DM_using_the_DM_installer#running-the-installer).
 
 ### Example: STaaS with subscription licensing
 
@@ -118,14 +118,14 @@ cd "C:\Skyline DataMiner\Tools\FirstStartupChoice"
 }
 ```
 
-## Deprecated v10.2 or v10.0 installer
+## Deprecated v10.2 or v10.0 Installer
 
-With the deprecated v10.2 or v10.0 installer, the unattended installation process can be used to install a standalone DMA, but also to install a cluster, set up Failover, or even add a DMA to an existing cluster.
+With the deprecated v10.2 or v10.0 Installer, the unattended installation process can be used to install a standalone DMA, but also to install a cluster, set up Failover, or even add a DMA to an existing cluster.
 
 > [!NOTE]
 >
-> - The 10.2.0 installer currently does not support unattended installation of a cluster.
-> - Unattended installation of a DataMiner System with OpenSearch database is currently not supported.
+> - The 10.2.0 Installer does not support unattended installation of a cluster.
+> - Unattended installation of a DataMiner System with OpenSearch database is not supported.
 
 To make sure the installation is executed correctly, a valid [configuration file](#unattended-installation-configuration-file) and [license file](xref:DataminerLicenses) must be included in the same folder as *Setup.exe*.
 
@@ -135,12 +135,12 @@ You can then start the unattended installation by running the following command:
 [path to setup]/setup.exe unattended
 ```
 
-Instead of *unattended*, you can also specify the option *u*, */u* or *-u*. All of these options have the same effect. During the installation, all the actions of the installer will be logged in the console.
+Instead of *unattended*, you can also specify the option *u*, */u* or *-u*. All of these options have the same effect. During the installation, all the actions of the Installer will be logged in the console.
 
 > [!NOTE]
 > If DataMiner is installed on several servers, the installation must be started at the same time on each of the servers.
 
-Once the installation process has started, the installer will go through the following steps:
+Once the installation process has started, the Installer will go through the following steps:
 
 1. Automatic installation of any missing prerequisites:
 
@@ -150,10 +150,10 @@ Once the installation process has started, the installer will go through the fol
 
    > [!NOTE]
    >
-   > - The installer requires that at least .Net Framework 4.5 is already installed. If this is not the case, you will not be able to run the installer.
+   > - The Installer requires that at least .Net Framework 4.5 is already installed. If this is not the case, you will not be able to run the Installer.
    > - When DataMiner Failover based on virtual IP will be used, [Npcap](https://nmap.org/npcap/) or WinPcap (deprecated) can only be installed during an attended installation. For an unattended installation, make sure it is installed beforehand on both DMAs.
 
-1. Installation of the DataMiner version provided in the installer.
+1. Installation of the DataMiner version provided in the Installer.
 
 1. DataMiner startup.
 
@@ -198,7 +198,7 @@ The main *DMS* tag has the following possible subtags:
 
 - **Timeout**
 
-  The time (in minutes) to wait for communication between DMAs in order to set up a DMS. Once this time has lapsed, the installer will fall back to the installation of a standalone DMA. For most installations, a timeout value between 30 and 60 minutes should suffice. For large clusters, a higher timeout value may be needed.
+  The time (in minutes) to wait for communication between DMAs in order to set up a DMS. Once this time has lapsed, the Installer will fall back to the installation of a standalone DMA. For most installations, a timeout value between 30 and 60 minutes should suffice. For large clusters, a higher timeout value may be needed.
 
 - **DMA**
 
@@ -294,7 +294,7 @@ The *DMA* tag has the following possible subtags:
 >
 > - Make sure the correct subnet mask and IP are specified, as the installation will fail if these are incorrect, and this could also cause your Ethernet adapter settings to be changed to incorrect values.
 > - You can only specify packages either in the *DMA* tag or in the *DMS* tag, not in both.
-> - In case Cassandra had already been installed previously, and the cluster name is changed with the new installer, Cassandra will not be automatically reconfigured. This must be done manually.
+> - In case Cassandra had already been installed previously, and the cluster name is changed with the Installer, Cassandra will not be automatically reconfigured. This must be done manually.
 > - Installing a Cassandra cluster is only possible if there is no existing Cassandra or Elasticsearch installation on the server.
 
 #### CassandraClusterSettings tag
@@ -315,7 +315,7 @@ The *CassandraClusterSettings* tag has the following possible subtags:
 
 - **ClusterSize**
 
-  The size of the cluster. When installing Cassandra, the installer will wait until this number of nodes are online before it continues.
+  The size of the cluster. When installing Cassandra, the Installer will wait until this number of nodes are online before it continues.
 
 - **Port**
 
@@ -554,7 +554,7 @@ The example below is used to create a cluster of three DMAs, all using the same 
       <Seeds>10.11.1.70,10.11.2.70,10.11.3.70</Seeds>
       <!-- cassandra.yaml setting 'cluster_name': The name of the Cassandra cluster. Should be the same for all agents. -->
       <ClusterName>DMS</ClusterName>
-      <!-- The size of the cluster. When installing Cassandra, the installer will wait till it sees this number of nodes before continuing -->
+      <!-- The size of the cluster. When installing Cassandra, the Installer will wait till it sees this number of nodes before continuing -->
       <ClusterSize>3</ClusterSize>
       <!-- cassandra.yaml setting 'native_transport_port': CQL Native transport port -->
       <Port>9042</Port>
@@ -642,7 +642,7 @@ The example below is used to create a cluster of three DMAs, all using the same 
       <Seeds>10.11.1.70,10.11.2.70,10.11.3.70</Seeds>
       <!-- cassandra.yaml setting 'cluster_name': The name of the Cassandra cluster. Should be the same for all agents. -->
       <ClusterName>DMS</ClusterName>
-      <!-- The size of the cluster. When installing Cassandra, the installer will wait till it sees this number of nodes before continuing -->
+      <!-- The size of the cluster. When installing Cassandra, the Installer will wait till it sees this number of nodes before continuing -->
       <ClusterSize>3</ClusterSize>
       <!-- cassandra.yaml setting 'native_transport_port': CQL Native transport port -->
       <Port>9042</Port>
@@ -730,7 +730,7 @@ The example below is used to create a cluster of three DMAs, all using the same 
       <Seeds>10.11.1.70,10.11.2.70,10.11.3.70</Seeds>
       <!-- cassandra.yaml setting 'cluster_name': The name of the Cassandra cluster. Should be the same for all agents. -->
       <ClusterName>DMS</ClusterName>
-      <!-- The size of the cluster. When installing Cassandra, the installer will wait till it sees this number of nodes before continuing -->
+      <!-- The size of the cluster. When installing Cassandra, the Installer will wait till it sees this number of nodes before continuing -->
       <ClusterSize>3</ClusterSize>
       <!-- cassandra.yaml setting 'native_transport_port': CQL Native transport port -->
       <Port>9042</Port>

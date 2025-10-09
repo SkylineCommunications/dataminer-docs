@@ -138,7 +138,7 @@ Depending on which version of the DataMiner Installer is used, different firewal
 
 #### [Installer v10.4](#tab/tabid-1)
 
-If DataMiner is installed with the **DataMiner Installer v10.4**, the following (inbound) ports and rules are opened in the Windows firewall:
+If DataMiner is installed with a **recent DataMiner Installer** (v10.4 or higher), the following (inbound) ports and rules are opened in the Windows firewall:
 
 - TCP 80: HTTP
 

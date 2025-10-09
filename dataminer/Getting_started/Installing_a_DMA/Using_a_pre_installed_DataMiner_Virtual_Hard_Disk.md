@@ -80,7 +80,7 @@ When you have downloaded the virtual hard disk, you can start to create a VM in 
 As soon as you log in to the VM, a window will be shown where you can configure your DataMiner System.
 
 > [!IMPORTANT]
-> At this point, the DataMiner core software is fully installed. If you continue with the steps below, the installer will also automatically take care of the license and data storage configuration. However, if you **do not want a default installation**, you may not want to use this automatic configuration:
+> At this point, the DataMiner core software is fully installed. If you continue with the steps below, the Installer will also automatically take care of the license and data storage configuration. However, if you **do not want a default installation**, you may not want to use this automatic configuration:
 >
 > - If you intend to **restore a backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration below and follow the steps under [Restoring a backup onto the new installed DataMiner Agent](xref:Restoring_backup_on_newly_installed_DMA).
 > - If you are installing a **Failover** Agent, skip the configuration below, and follow the steps under [Configuring the new DataMiner Agent as a new Agent in a Failover pair](xref:Configuring_a_new_DMA_in_Failover_pair). These steps are the same as for an installation using the DataMiner Installer.
@@ -119,7 +119,7 @@ Follow the steps below to configure your DataMiner Agent:
    ![Registration details when STaaS was selected](~/dataminer/images/Registration_of_DMA_when_StaaS_is_selected.png)<br>*Example with registration details for a STaaS setup*
 
    > [!NOTE]
-   > By default, if you install DataMiner while connected to the internet, DataMiner is deployed in subscription mode with a [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) license. However, if you want to do an offline installation or if you want to install DataMiner with a [perpetual license](xref:Permanent_license), click the link below these registration fields and enter the DataMiner ID provided by Skyline. If you do not have a DataMiner ID yet, contact <dataminer.licensing@skyline.be>.
+   > By default, if you install DataMiner while connected to the internet, DataMiner is deployed in subscription mode with a [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) license. However, if you want to do an offline installation or if you want to install DataMiner with a [perpetual license](xref:Permanent_license), click the link below the registration fields and enter the DataMiner ID provided by Skyline. If you do not have a DataMiner ID yet, contact <dataminer.licensing@skyline.be>.
    >
    > ![Perpetual license configuration](~/dataminer/images/Perpetual_License.png)
    >
