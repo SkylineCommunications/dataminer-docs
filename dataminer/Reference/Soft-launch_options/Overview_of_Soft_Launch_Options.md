@@ -59,7 +59,9 @@ Allows you to disable the ClusterEndpointsManager. This can prevent possible iss
 
 ### CorrectedDisplayKeyOnNaming
 
-  Takes exception values into account for display key generation.
+Takes exception values into account for display key generation.
+
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 10.0.11/9.6.0 [CU18]/10.0.0 [CU6]
 - **Estimated Release version**: To be determined
@@ -68,12 +70,16 @@ Allows you to disable the ClusterEndpointsManager. This can prevent possible iss
 
 Enables the Topology app in DataMiner Cube. Note that you also need specific protocol changes in order to benefit from this. See [Topology app configuration](xref:Topology_app_configuration).
 
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
+
 - **Minimum version**: 9.6.7
 - **Release version**: Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- RN 42221 -->
 
 ### DataAPI
 
 Enables Data API functionality and scripted connectors. This displays the Data Sources module in DataMiner Cube.
+
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 10.4.2/10.4.0<!-- RN 36588/38307/38234 -->
 - **Estimated Release version**: To be determined
@@ -85,11 +91,15 @@ Enables Data API functionality and scripted connectors. This displays the Data S
 
 Enable functionality to retrieve diagnostics from several DataMiner core processes.
 
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
+
 - **Minimum version**: 9.6.3
 
 ### DirectViewRemoteDataUpdates
 
 Updates the values of direct view tables.
+
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 10.0.11
 - **Estimated release version**: To be determined
@@ -117,6 +127,8 @@ From DataMiner 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 onwards<!--RN 41436-->, this so
 
 In versions prior to 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1, this feature is disabled by default. If you want to test this feature for one DataMiner Cube session only, use the argument `SOFTLAUNCH_DYNAMICUNITS=Enabled`.
 
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
+
 - **Minimum version**: 10.0.12
 - **Release version**: 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 ([RN 41436](xref:Cube_Feature_Release_10.5.1#data-display-in-dataminer-cube-now-supports-dynamic-units-by-default-id-41436))
 
@@ -130,6 +142,8 @@ Enables the Virtual Functions module in Cube. This is a Cube-only feature that c
 ### GenericInterface
 
 Provides access to additional data sources and operators for GQI in the Dashboards app and Low-Code Apps.
+
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 > [!IMPORTANT]
 > Requires an IIS and DataMiner restart.
@@ -193,6 +207,8 @@ Enables the button panel component in the Dashboards app.
 
 Enables the grid component in the Dashboards app.
 
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
+
 - **Minimum version**: 10.2.12
 - **Release version**: 10.3.0 [CU10]/10.4.1 ([RN 37812](xref:Web_apps_Feature_Release_10.4.1#dashboards-app--low-code-apps-new-grid-and-timeline-components-id-33276-id-33287-id-34761-id-34948-id-37269-id-37699-id-37812))
 
@@ -206,6 +222,8 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 ### ReportsAndDashboardsGQIMaps
 
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
+
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 10.3.2
 - **Release version**: 10.5.4<!-- RN 42309 -->
@@ -225,6 +243,8 @@ Enables the Query Filter component in the Dashboards app.
 ### ReportsAndDashboardsScheduler
 
 Enables the Timeline component in the Dashboards app.
+
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 10.1.10
 - **Release version**: 10.3.0 [CU10]/10.4.1 ([RN 37812](xref:Web_apps_Feature_Release_10.4.1#dashboards-app--low-code-apps-new-grid-and-timeline-components-id-33276-id-33287-id-34761-id-34948-id-37269-id-37699-id-37812))
