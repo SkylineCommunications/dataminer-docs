@@ -170,6 +170,12 @@ When you tried to install Alerter, in some cases, a warning message would appear
 
 From now on, when you try to install Alerter, it will check whether Microsoft .NET Framework 4.6.2 is installed.
 
+#### Cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube [ID 43810]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+On systems with a Cassandra cluster database in combination with an OpenSearch indexing database, cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube.
+
 #### 'Failed to wait for Parameter Notification queue to handle remaining events' exception after a DataMiner startup [ID 43818]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
