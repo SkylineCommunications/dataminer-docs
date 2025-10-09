@@ -31,7 +31,7 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
     > - The machine on which you install this script must be able to access the data source(s) you wish to expose
     > - Updating a description is not straightforward. To update a description, a reinstallation needs to be performed. Also, once data sources have been configured to set up a connection with this site, the configuration of these data sources will also need to be updated.
 
-    You can use the following command execute the install script. Replace the placeholders with your token and description.
+    You can use the following command to execute the install script. Replace the placeholders with your token and description.
 
     ```powershell
     iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1) } -Command install -ZrokAccountToken '<token>' -ZrokEnvironmentDescription '<description>'"
