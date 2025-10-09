@@ -488,6 +488,17 @@ Up to now, each time a `ModuleSettings` object was updated, the network credenti
 
 From now on, when a `ModuleSettings` object is updated, the network credentials will only be checked if the network path or the credential ID were updated as well.
 
+#### BPA test 'DataMiner Agent Minimum Requirements': Updated requirements [ID 43913]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+In the BPA test *DataMiner Agent Minimum Requirements*, the following minimum hardware requirements have been updated:
+
+| Hardware                 | Former requirement | New requirement |
+|--------------------------|---------|---------|
+| System memory            | 32 GB   | 16 GB   |
+| Size of main disk (C:\\) | 300 GB  | 128 GB  |
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]

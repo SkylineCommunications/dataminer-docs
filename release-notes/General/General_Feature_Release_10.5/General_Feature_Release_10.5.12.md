@@ -168,6 +168,17 @@ Because of a number of enhancements, overall performance of the the *Cube CRL Fr
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
+#### BPA test 'DataMiner Agent Minimum Requirements': Updated requirements [ID 43913]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+In the BPA test *DataMiner Agent Minimum Requirements*, the following minimum hardware requirements have been updated:
+
+| Hardware                 | Former requirement | New requirement |
+|--------------------------|---------|---------|
+| System memory            | 32 GB   | 16 GB   |
+| Size of main disk (C:\\) | 300 GB  | 128 GB  |
+
 ### Fixes
 
 #### Alerter would incorrectly require .NET Framework 2.0 [ID 43787]
