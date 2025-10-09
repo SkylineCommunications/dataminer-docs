@@ -36,3 +36,7 @@ When logging was collected using the SLLogCollector tool, the MediaOps logging w
 #### Scheduling: Action buttons missing in Edit Job panel after reverting job status to Tentative [ID 43808]
 
 When the status of a job was reverted from Confirmed to Tentative, it could occur that action buttons for the job were no longer displayed in the Edit Job panel.
+
+#### Scheduler: Lock on job not removed after duplication [ID 43915]
+
+When a user duplicated a job, it could occur that the lock on the job was not removed.
