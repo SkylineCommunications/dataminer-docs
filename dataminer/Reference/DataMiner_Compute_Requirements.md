@@ -36,7 +36,7 @@ As a rule, between 16 GB and 128 GB RAM is needed, although 128 GB is an excepti
 
 ### Disk
 
-DataMiner itself, without taking the database for persistent storage into account, does not require a disk with huge capacity. However, we do recommend using an SSD as we regularly write to files. We recommend a 250 GB SSD, ideally a hot-swappable RAID1 pair.
+DataMiner itself, without taking the database for persistent storage into account, does not require a disk with huge capacity. However, we do recommend using an SSD as we regularly write to files. We recommend a 128 GB SSD, ideally a hot-swappable RAID1 pair.
 
 In addition, the disk throughput is of vital importance. The following minimum requirements apply:
 
