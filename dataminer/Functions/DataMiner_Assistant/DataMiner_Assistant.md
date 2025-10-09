@@ -6,6 +6,8 @@ uid: DataMinerAssistant
 
 The DataMiner Assistant is an integrated AI assistant that helps you interact with your DataMiner System more efficiently. It can answer DataMiner-related questions and help you interpret and manage data from your system.
 
+You can access the DataMiner Assistant via the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page).
+
 ![DataMiner Assistant](~/dataminer/images/Assistant.png)
 
 The Assistant is available in two tabs, each designed for a specific type of interaction: the [*Insights* tab](#insights), where it analyzes live data from your system, and the [*Documentation* tab](#documentation), where it provides conceptual and procedural guidance based on the official documentation.
