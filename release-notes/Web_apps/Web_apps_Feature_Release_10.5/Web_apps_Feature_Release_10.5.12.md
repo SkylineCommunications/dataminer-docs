@@ -105,3 +105,26 @@ When the *Time range* component had been used to schedule the PDF generation of 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 Up to now, users without the *Modules > Reports & Dashboards > Dashboards > View dashboards* permission would incorrectly not be allowed to view or edit a low-code app via a dashboard gateway.
+
+#### Low-Code Apps: Problems when using a dashboard gateway setup because of an incorrect user permissions check [ID 43879]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+On a dashboard gateway setup, certain calls would not work because of an incorrect user permissions check.
+
+- The following calls would not work when users did not have the *Modules > Reports & Dashboards > Dashboards > Edit* permission. From now on, these calls will require users to have either the *Modules > Reports & Dashboards > Dashboards > Edit* permission or the *Modules > User-definable apps > Edit* permission.
+
+  - AddDashboardTheme
+  - UpdateComponent
+  - UpdateDashboard
+  - UpdateDashboardTheme
+  - UploadImage
+
+- The following calls would not work when users did not have the *Modules > Reports & Dashboards > Dashboards > View dashboards* permission. From now on, these calls will require users to have either the *Modules > Reports & Dashboards > Dashboards > View dashboards* permission or the *Modules > User-definable apps > View apps* permission.
+
+  - GetDashboardThemes
+  - GetImageByName
+  - GetImages
+  - ObserveDashboardChanges
+
+Also, the ShareDashboard call did incorrectly not require users to have the *General > Live sharing > Share* permission.
