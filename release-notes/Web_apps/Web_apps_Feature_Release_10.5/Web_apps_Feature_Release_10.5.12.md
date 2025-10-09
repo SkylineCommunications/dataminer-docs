@@ -38,7 +38,7 @@ Up to now, when a *Form* component was displayed in read-only mode, all content 
 
 From now on, when set to read-only, a *Form* component will display all HTML code as code. For example, a value like `<b>Text</b>` will now always be displayed as "\<b\>Text\</b\>" instead of "**Text**".
 
-In situation where HTML code needs to be interpreted, you will need to use a *Grid* component with a GQI query.
+In situations where HTML code needs to be interpreted, you will need to use a *Grid* component with a GQI query.
 
 ### Enhancements
 

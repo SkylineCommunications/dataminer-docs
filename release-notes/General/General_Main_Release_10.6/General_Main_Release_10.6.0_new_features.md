@@ -471,7 +471,9 @@ Relational anomaly detection (RAD) will detect when a group of parameters deviat
 
 Whenever the relation is broken, RAD will detect this and generate suggestion events for each parameter instance in the group where a broken relation was detected. These suggestion events will then be grouped into a single incident so that it is shown on a single line in the Alarm Console. When you clear such an incident, all its base alarms (i.e. the suggestion events created by Relational anomaly detection) will also be cleared.
 
-All relational anomalies detected by the Relational Anomaly Detection (RAD) feature will be stored in the database, provided the DataMiner System  includes an indexing database (OpenSearch or Elasticsearch).
+All relational anomalies detected by the Relational Anomaly Detection (RAD) feature will be stored in the database\*.
+
+*\*If you choose not to use the recommended Storage as a Service (STaaS) setup but instead choose self-managed storage, you also need to set up an OpenSearch or Elasticsearch indexing database in your DMS.*
 
 ##### Configuring the parameter groups
 
