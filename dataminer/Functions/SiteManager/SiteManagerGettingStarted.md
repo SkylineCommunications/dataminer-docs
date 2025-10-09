@@ -46,7 +46,7 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
 1. After successful installation, you can start exposing your data source(s) so the DataMiner Site Manager can set up a tunnel for each data source it needs to communicate with.
 
     > [!NOTE]
-    > If you are in a new Powershell shell, execute the following command first: `$env:USERPROFILE = "C:\Windows\System32\config\systemprofile"`.
+    > If you are in a new PowerShell shell, execute the following command first: `$env:USERPROFILE = "C:\Windows\System32\config\systemprofile"`.
     > If you are in a new command prompt, make sure to first execute the following command `set USERPROFILE=c:\Windows\System32\config\systemprofile`.
 
     For each data source you wish to expose, perform the following steps:
