@@ -126,6 +126,6 @@ Fill in the IP or host name of the exposed data source.
 > If you specified the endpoint to be shared (in the zrok reserve command) using the IP address, then to access the data source in DataMiner you will also need to specify the IP address. Similarly, if you used the host name, you will also need to specify the host name in DataMiner Cube.
 
 A tunnel will only be created as long as at least one element is actively connecting to this endpoint.
-For example, if you have an element that sets up a connection to a data source on a remote site, the tunnel will only be created when the element is started. As soon as the element is stopped or deleted, the tunnel will be tore down.
+For example, if you have an element that sets up a connection to a data source on a remote site, the tunnel will only be created when the element is started. As soon as the element is stopped or deleted, the tunnel will be torn down.
 
 Note also that in case multiple elements on the same DataMiner Agent connect to the same remote endpoint, only a single tunnel will be set up and this tunnel will be shared by the elements on that DataMiner Agent. The tunnel will only be tore down when all elements that connect to this remote endpoint are either stopped or deleted.
