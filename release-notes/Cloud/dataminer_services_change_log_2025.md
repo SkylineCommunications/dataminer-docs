@@ -9,6 +9,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 9 October 2025 - Enhancement - Status - Show whitespace for incidents
+
+The status page now shows whitespace for incidents and its comments.  
+Before all the whitespace was removed from the text.
+
 ### 1 October 2025 - Enhancement - Usage - STaaS usage billing
 
 Starting from 1 October 2025, automatic monthly billing will be implemented for STaaS. On the first day of each month, the expended DataMiner credits for the previous month's STaaS usage will be subtracted from the organization's balance. This billing will take effect retroactively, going as far back as April 2024.
