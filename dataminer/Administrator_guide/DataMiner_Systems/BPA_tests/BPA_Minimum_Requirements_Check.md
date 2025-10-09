@@ -19,8 +19,8 @@ This BPA test checks if the following minimum hardware requirements are met or e
 
 This BPA test is available by default from DataMiner 10.1.0 [CU4]/10.1.7 onwards.
 
- > [!NOTE]
-  > From DataMiner 10.6.0 [CU0]/10.5.12 onwards, this BPA test its disk and RAM requirements have been reduced. Prior to DataMiner 10.6.0 [CU0]/10.5.12, this BPA test required 300GB Disk size for the main installation and 32GB of system memory.
+> [!NOTE]
+> From DataMiner 10.6.0 [CU0]/10.5.12 onwards, this BPA test its disk and RAM requirements have been reduced. Prior to DataMiner 10.6.0 [CU0]/10.5.12, this BPA test required 300GB Disk size for the main installation and 32GB of system memory.
 
 For more information on system requirements, see [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
