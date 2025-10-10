@@ -128,6 +128,14 @@ Also, when the `SL_UNKNOWN_DESTINATION` exception was thrown, up to now, a messa
 
 Throughout the DataMiner Cube UI, 'Automatic incident tracking' has now been renamed to 'Alarm grouping'.
 
+#### Enhanced message box saying that an element that is part of a redundancy group or a service included in an SLA cannot be deleted [ID 43925]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When you try to delete an element that is part of a redundancy group or a service included in an SLA, a message box will appear, saying that deleting the element is not possible.
+
+A number of improvements have now been made to this message box. The name of the redundancy group or service will no longer be truncated, and the message box itself will now have a warning icon and a more descriptive title.
+
 ### Fixes
 
 #### Trend graph showing high-value predictions would not get updated when you scrolled the predictions beyond the viewport [ID 43776]
