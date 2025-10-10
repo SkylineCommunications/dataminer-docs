@@ -5,14 +5,14 @@ uid: Assistant_AddingContextFiles
 # Adding context files
 
 > [!IMPORTANT]
-> The DataMiner Assistant is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of what will be available in a future release.
+> DataMiner Assistant is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of what will be available in a future release.
 
 Context files provide background information, rules, and logic about specific DataMiner concepts. These files help the Assistant reason about the system and provide accurate answers. **Only Skyline Communications employees can add or edit context files at this stage.** The instructions below are for internal use only.
 
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
     <b>💡 TIPS TO TAKE FLIGHT</b><br>
-    If you are looking for information about adding context specific to your organization, which will be possible once the Assistant becomes available, you might be looking for <a href="xref:Assistant_UserContext" style="color: #657AB7;">custom user context</a> instead of context files.
+    If you are looking for information about adding context specific to your organization, which will be possible once the Assistant becomes available, you might be looking for <a href="xref:Assistant_UserContext" style="color: #657AB7;">custom user context</a>.
   </div>
   <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
 </div>
@@ -40,7 +40,7 @@ There are two ways to add a new context file:
 
 - Avoid complex language and unnecessary information.
 
-- Be clear. If the content is confusing to you, the Assistant may misinterpret it.
+- Be clear. If the content is confusing, the Assistant may misinterpret it.
 
 - Avoid duplicate information.
 
@@ -69,7 +69,7 @@ Below is a template you can use to write a new context file. Replace the placeho
 
 <!-- Example: ### Clearable alarms-->
 
-<Describe key details about the subtopic.>
+<Describe key details for the subtopic.>
 
 <!-- Example:
 - When an alarm is clearable, the issue has been resolved but the alarm record still remains open.
@@ -80,7 +80,7 @@ Below is a template you can use to write a new context file. Replace the placeho
 
 <!-- Example: ### Masked alarms-->
 
-<Describe key details about the subtopic.>
+<Describe key details for the subtopic.>
 
 <!-- Example:
 - A masked alarm is an alarm that a user has deliberately suppressed for a period of time or until it is unmasked or cleared.
@@ -91,7 +91,7 @@ Below is a template you can use to write a new context file. Replace the placeho
 
 <!-- Example: ### Interpretation guidelines-->
 
-<Describe key details about the subtopic.>
+<Describe key details for the subtopic.>
 
 <!-- Example:
 - The age of an active alarm (how long it has been active) does not reflect its seriousness.
@@ -108,7 +108,7 @@ Below is a template you can use to write a new context file. Replace the placeho
 
 <!-- Example:
 - Always use values from the provided dataset; NEVER invent names, parameters, severities, or numbers.
-- Validate all element, parameter, time, and service names exist in the dataset before including them.
+- Validate whether all element, parameter, time, and service names exist in the dataset before including them.
 - (...)
 -->
 
@@ -165,7 +165,7 @@ Each situation is **mutually exclusive**. Only follow the one that matches the u
 <!-- Example:
 - Respond with a to-do list of active alarms that should be addressed first.
 - Ask whether the user would like specific resolution steps for these alarms.
-- Use **bold** for element  and parameter names.
+- Use **bold** for element and parameter names.
 -->
 ```
 

@@ -5,9 +5,9 @@ uid: Assistant_UserContext
 # Adding custom user context
 
 > [!IMPORTANT]
-> The DataMiner Assistant is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of what will be available in a future release.
+> DataMiner Assistant is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of what will be available in a future release.
 
-To help the DataMiner Assistant interpret information accurately within your organization's environment, you will be able to provide a dedicated context file named **UserContext.md**.
+To help DataMiner Assistant interpret information accurately within your organization's environment, you will be able to provide a dedicated context file named **UserContext.md**.
 
 This file will contain organization-specific information such as system structure, naming conventions, and operational rules. The Assistant will use this information to adapt its reasoning and responses accordingly.
 
@@ -33,7 +33,7 @@ Once added, this custom user context will become part of the Assistant's session
 
 - Avoid complex language and unnecessary information.
 
-- Be clear. If the content is confusing to you, the Assistant may misinterpret it.
+- Be clear. If the content is confusing, the Assistant may misinterpret it.
 
 - Avoid redundant explanations. The Assistant already understands general DataMiner concepts.
 
