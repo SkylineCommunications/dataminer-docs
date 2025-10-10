@@ -1,4 +1,16 @@
 items:
+  - name: Assistant
+    items:
+      - name: About DataMiner Assistant
+        topicUid: DataMinerAssistant
+      - name: Context overview
+        topicUid: Assistant_Context
+      - name: Adding custom user context
+        topicUid: Assistant_UserContext
+      - name: Adding context files
+        topicUid: Assistant_AddingContextFiles
+      - name: Adding custom predefined questions
+        topicUid: Assistant_Predefined_Questions
   - name: Automation
     items:
       - name: About DataMiner Automation
