@@ -57,7 +57,7 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
         zrok reserve private --backend-mode <backendMode> <endpoint>
         ```
 
-       , where `<backendMode` is either *tcpTunnel* or *udpTunnel* and `<endpoint>` specifies the endpoint you want to expose. E.g.: `zrok reserve private --backend-mode tcpTunnel 127.0.0.1:4208`. When executing this command, you should see the following output: `your reserved share token is '2dxzh484zn3'`. Copy the token and execute the next command.
+       , where `<backendMode>` is either *tcpTunnel* or *udpTunnel* and `<endpoint>` specifies the endpoint you want to expose. E.g.: `zrok reserve private --backend-mode tcpTunnel 127.0.0.1:4208`. When executing this command, you should see the following output: `your reserved share token is '2dxzh484zn3'`. Copy the token and execute the next command.
     1. Then, perform the following command:
 
         ```powershell

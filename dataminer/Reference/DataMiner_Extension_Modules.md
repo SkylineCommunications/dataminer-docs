@@ -122,7 +122,7 @@ The ModelHost DxM is not included in the Cloud Pack and [must be deployed separa
 
 ### SiteManager
 
-The SiteManager enables setting up secure communication tunnels enabling access to on-premise data sources from a DaaS system.
+The SiteManager enables setting up secure communication tunnels enabling access to on-premises data sources from a DaaS system.
 From DataMiner 10.5.10 onwards, the SiteManager is included in the DaaS image.
 
 For more information related to SiteManager, refer to the [Site Manager](xref:SiteManager_DxM).
