@@ -114,6 +114,12 @@ Example of a custom hyperlinks linked to an Automation script:
 </HyperLinks>
 ```
 
+#### 'Automatic incident tracking' renamed to 'Alarm grouping' [ID 43903]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Throughout the DataMiner Cube UI, 'Automatic incident tracking' has now been renamed to 'Alarm grouping'.
+
 ### Fixes
 
 #### Trend graph showing high-value predictions would not get updated when you scrolled the predictions beyond the viewport [ID 43776]
