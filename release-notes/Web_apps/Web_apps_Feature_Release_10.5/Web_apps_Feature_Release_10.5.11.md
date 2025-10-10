@@ -2,12 +2,12 @@
 uid: Web_apps_Feature_Release_10.5.11
 ---
 
-# DataMiner web apps Feature Release 10.5.11 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.5.11
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.4.0 [CU20] and 10.5.0 [CU8].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -16,7 +16,8 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [DOM definition-level security app [ID 43622]](#dom-definition-level-security-app-id-43622)
+- [Dashboards/Low-Code Apps - Timeline component: Anchoring & virtual bound locking [ID 43740]](#dashboardslow-code-apps---timeline-component-anchoring--virtual-bound-locking-id-43740)
 
 ## New features
 

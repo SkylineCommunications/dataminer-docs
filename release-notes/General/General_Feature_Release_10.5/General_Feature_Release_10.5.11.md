@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.5.11
 ---
 
-# General Feature Release 10.5.11 – Preview
+# General Feature Release 10.5.11
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -25,6 +25,7 @@ uid: General_Feature_Release_10.5.11
 ## Highlights
 
 - [Swarming: Parent DVE and Virtual Function elements can now also be swarmed [ID 43793]](#swarming-parent-dve-and-virtual-function-elements-can-now-also-be-swarmed-id-43793)
+- [Relational anomaly detection: RAD parameter groups can now contain parameters hosted by different DMAs [ID 43440] [ID 43686]](#relational-anomaly-detection-rad-parameter-groups-can-now-contain-parameters-hosted-by-different-dmas-id-43440-id-43686)
 
 ## New features
 
