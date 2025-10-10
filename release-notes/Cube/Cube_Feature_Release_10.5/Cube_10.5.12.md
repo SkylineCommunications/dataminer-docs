@@ -114,6 +114,14 @@ Example of a custom hyperlinks linked to an Automation script:
 </HyperLinks>
 ```
 
+#### Cube UI: Enhanced filter option and error message [ID 43817]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When, in the bottom-right corner of the *BELOW THIS VIEW* page of a view card, you clicked the filter icon, up to now, the bottom option would be *All devices (include subviews)*. This option has now been renamed to *Include subviews*.
+
+Also, when the `SL_UNKNOWN_DESTINATION` exception was thrown, up to now, a message would appear, saying "The requested DMA could not be specified or is currently unknown". This message has now been changed to "Unable to find hosting agent. The agent might still be starting up or is currently unknown".
+
 #### 'Automatic incident tracking' renamed to 'Alarm grouping' [ID 43903]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
