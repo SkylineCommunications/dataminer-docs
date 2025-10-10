@@ -9,7 +9,7 @@ uid: Assistant_Predefined_Questions
 
 When you start a new chat session in the *Insights* or *Documentation* tab, six predefined questions will be displayed to help you get started quickly. Instead of typing a question, you will be able to click one of the question tiles.
 
-![Predefined questions](~/dataminer/images/Assistant_PredefinedQuestions.png)
+![Predefined questions](~/dataminer/images/Assistant_PredefinedQuestions.gif)
 
 On the *Insights* tab, you will be able to use custom predefined questions to tailor the Assistant to your workflows, making it faster and easier to get the insights you need most. To add a new custom question, you will need to edit the JSON file directly:
 
