@@ -45,14 +45,14 @@ Once added, this custom user context will become part of the Assistant's session
 
 ## Example structure
 
-Below is a complete example of the structure of a *UserContext.md* file, focusing on a single DMA that monitors multiple regional systems:
+Below is a complete example of the structure of a *UserContext.md* file. Note that the company and scenarios in this example are fictional and provided for illustrative purposes only. They do not reflect real organizations or environments.
 
 ```md
 # User context
 
 ## Organization
 
-Skyline Media Services operates regional OTT streaming and satellite distribution platforms.
+Lumen Media Services operates regional OTT streaming and satellite distribution platforms.
 Our infrastructure spans three main regions (Europe, the Americas, and Asia), with each region managed by its own Network Operations Center (NOC).
 
 Core services include:
