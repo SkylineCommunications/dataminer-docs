@@ -83,3 +83,11 @@ This message has now been replaced by the following one:
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 In some rare cases, SLNet would incorrectly wait for 2 hours before closing a connection. As a result, SLNet and SLDataMiner would keep a large number of unused connections in memory for too long.
+
+#### BrokerGateway would incorrectly be allowed to make automatic changes to the appsettings.runtime.json file when HasManualConfig was set to true [ID 43893]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+When BrokerGateway could not find any local IP address in the `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` configuration file, up to now, it would incorrectly add a local IP address to that file, even when the `HasManualConfig` setting was set to true.
+
+From now on, when the `HasManualConfig` setting is set to true, BrokerGateway will not be allowed to make any automatic changes to the `appsettings.runtime.json` configuration file.
