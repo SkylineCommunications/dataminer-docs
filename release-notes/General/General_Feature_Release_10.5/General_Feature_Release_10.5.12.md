@@ -179,6 +179,18 @@ In the BPA test *DataMiner Agent Minimum Requirements*, the following minimum ha
 | System memory            | 32 GB   | 16 GB   |
 | Size of main disk (C:\\) | 300 GB  | 128 GB  |
 
+#### DataMiner upgrade: Enhanced warning when an upgrade package cannot be found [ID 43916]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, when a DataMiner upgrade package could not be found, the following warning message would appear:
+
+*"WARNING! Upgrade ID [guid] no longer exists"*
+
+This message has now been replaced by the following one:
+
+*"WARNING! Upgrade package with ID [guid] no longer exists"*
+
 ### Fixes
 
 #### Alerter would incorrectly require .NET Framework 2.0 [ID 43787]

@@ -64,6 +64,18 @@ Because of a number of enhancements, overall performance of the the *Cube CRL Fr
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
+#### DataMiner upgrade: Enhanced warning when an upgrade package cannot be found [ID 43916]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, when a DataMiner upgrade package could not be found, the following warning message would appear:
+
+*"WARNING! Upgrade ID [guid] no longer exists"*
+
+This message has now been replaced by the following one:
+
+*"WARNING! Upgrade package with ID [guid] no longer exists"*
+
 ### Fixes
 
 #### SLNet would wait too long before closing a connection [ID 43851]
