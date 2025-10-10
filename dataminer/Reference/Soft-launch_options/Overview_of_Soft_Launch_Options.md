@@ -89,7 +89,7 @@ This option is enabled by default when DataMiner is deployed in the cloud ([DaaS
 
 ### Diagnostics
 
-Enable functionality to retrieve diagnostics from several DataMiner core processes.
+Enable functionality to retrieve diagnostics from several DataMiner core processes. This is currently not used.
 
 This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
