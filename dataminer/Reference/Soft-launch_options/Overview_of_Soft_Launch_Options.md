@@ -59,7 +59,7 @@ Allows you to disable the ClusterEndpointsManager. This can prevent possible iss
 
 ### CorrectedDisplayKeyOnNaming
 
-Takes exception values into account for display key generation.
+Takes exception values into account for display key generation. See [CorrectedDisplayKeyOnNaming soft-launch option](xref:UIComponentsTableDisplayKeys#correcteddisplaykeyonnaming-soft-launch-option)
 
 This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
