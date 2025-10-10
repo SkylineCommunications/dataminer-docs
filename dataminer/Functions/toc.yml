@@ -4,10 +4,10 @@ items:
     items:
       - name: Context overview
         topicUid: Assistant_Context
-      - name: Writing effective prompts
-        topicUid: Assistant_WritingPrompts
       - name: Adding custom user context
         topicUid: Assistant_UserContext
+      - name: Adding context files
+        topicUid: Assistant_AddingContextFiles
       - name: Adding custom predefined questions
         topicUid: Assistant_Predefined_Questions
   - name: Automation

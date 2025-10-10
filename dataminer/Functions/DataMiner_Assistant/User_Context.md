@@ -4,28 +4,36 @@ uid: Assistant_UserContext
 
 # Adding custom user context
 
-To help the DataMiner Assistant interpret information accurately within your organization's environment, you can provide a dedicated context file named **UserContext.md**.
+> [!IMPORTANT]
+> The DataMiner Assistant is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of what will be available in a future release.
 
-This file contains organization-specific information such as system structure, naming conventions, and operational rules. The Assistant uses this information to adapt its reasoning and responses accordingly.
+To help the DataMiner Assistant interpret information accurately within your organization's environment, you will be able to provide a dedicated context file named **UserContext.md**.
 
-The *UserContext.md* file complements [Skyline's default context](xref:Assistant_Context), which contains system instructions, general data descriptions, and other default context. It adds insights that are specific to your environment.
+This file will contain organization-specific information such as system structure, naming conventions, and operational rules. The Assistant will use this information to adapt its reasoning and responses accordingly.
 
-The file must be named `UserContext.md` and written in [Markdown](xref:CTB_Markdown_Syntax). The Assistant interprets the file hierarchically based on Markdown headings, so structure the file logically.
+The *UserContext.md* file will complement [Skyline's default context](xref:Assistant_Context), which includes system instructions, general data descriptions, and other baseline information. It will add insights that are specific to your environment.
 
-This context can include, for example:
+The file must be named `UserContext.md` and written in [Markdown](xref:CTB_Markdown_Syntax). The Assistant will interpret the file hierarchically based on Markdown headings, so structure the file logically.
+
+This context may include, for example:
 
 - A description of your organization and services.
+
 - Custom naming schemes for elements, services, or parameters.
+
 - Information about your DMA structure.
+
 - Information about your role within the organization.
 
-Once added, this custom user context becomes part of the Assistant's session context. This means the Assistant will automatically take it into account when interpreting your questions, alongside the general Skyline-provided context files.
+- A glossary with terms and acronyms specific to your organization.
+
+Once added, this custom user context will become part of the Assistant's session context. This means the Assistant will automatically take it into account when interpreting your questions, alongside the general Skyline-provided context files.
 
 ## Best practices
 
 - Avoid complex language and unnecessary information.
 
-- Be clear: if the content is confusing to you, the Assistant may misinterpret it.
+- Be clear. If the content is confusing to you, the Assistant may misinterpret it.
 
 - Avoid redundant explanations. The Assistant already understands general DataMiner concepts.
 
@@ -33,7 +41,7 @@ Once added, this custom user context becomes part of the Assistant's session con
 
 - Keep sections short and structured. Lists and tables help.
 
-- Avoid including too many examples: too many examples may limit the Assistant’s flexibility in reasoning.
+- Avoid including too many examples. This may limit the Assistant's flexibility in reasoning.
 
 ## Example structure
 
@@ -45,7 +53,7 @@ Below is a complete example of the structure of a *UserContext.md* file, focusin
 ## Organization
 
 Skyline Media Services operates regional OTT streaming and satellite distribution platforms.
-Our infrastructure spans three main regions (Europe, the Americas, and Asia) with each region managed by its own Network Operations Center (NOC).
+Our infrastructure spans three main regions (Europe, the Americas, and Asia), with each region managed by its own Network Operations Center (NOC).
 
 Core services include:
 - Live broadcast distribution

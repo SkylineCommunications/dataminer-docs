@@ -4,26 +4,31 @@ uid: DataMinerAssistant
 
 # DataMiner Assistant
 
-The DataMiner Assistant is an integrated AI assistant that helps you interact with your DataMiner System more efficiently. It can answer DataMiner-related questions and help you interpret and manage data from your system.
+> [!IMPORTANT]
+> The DataMiner Assistant is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of what will be available in a future release.
 
-You can access the DataMiner Assistant via the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page).
+The DataMiner Assistant is an integrated AI assistant, accessible via the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page), that helps you interact with your DataMiner System more efficiently. It can answer DataMiner-related questions and assist in interpreting data from your system.
 
 ![DataMiner Assistant](~/dataminer/images/Assistant.png)
 
-The Assistant is available in two tabs, each designed for a specific type of interaction: the [*Insights* tab](#insights), where it analyzes live data from your system, and the [*Documentation* tab](#documentation), where it provides conceptual and procedural guidance based on the official documentation.
+The Assistant relies on [context](xref:Assistant_Context) to provide the most accurate answers to your questions and requests. To tailor responses to your organization, you will be able to add your own [user context](xref:Assistant_UserContext), providing insights specific to your environment. This will complement Skyline's default context, which includes system instructions, general data descriptions, and other baseline information.
 
-Together, these two tabs make the DataMiner Assistant a convenient way to access both system insights and reliable information.
+The Assistant will be available in two tabs, each designed for a specific type of interaction: the [*Insights* tab](#insights), where it analyzes live data from your system, and the [*Documentation* tab](#documentation), where it provides conceptual and procedural guidance based on the official documentation.
+
+Together, these two tabs will make the DataMiner Assistant a convenient way to access both system insights and reliable information.
 
 ## Insights
 
-In the *Insights* tab, the Assistant has access to your DataMiner data and can analyze it on your behalf. It can provide summaries and detailed insights into elements, alarms, and other key components of your system.
+In the *Insights* tab, the Assistant will have access to your data and will be able to analyze it on your behalf. It will provide summaries and detailed insights into elements, alarms, and other key components of your system.
 
-For example, you can ask which alarms require immediate attention, and the Assistant will identify and prioritize them, providing possible resolution steps. This makes it easier to monitor system health and take timely action without manually going through large data sets.
+![Insights tab](~/dataminer/images/Assistant_Insights_tab.png)
+
+For example, you will be able to ask which alarms require immediate attention, and the Assistant will identify and prioritize them, providing possible resolution steps. This will make it easier to monitor system health and take timely action without manually going through large data sets.
 
 ## Documentation
 
-In the *Documentation* tab, the Assistant focuses on conceptual and procedural questions. It has direct access to DataMiner Docs, allowing it to provide accurate and up-to-date information directly from the source.
+In the *Documentation* tab, the Assistant will focus on conceptual and procedural questions. It will have direct access to DataMiner Docs, allowing it to provide accurate and up-to-date information directly from the source.
 
 ![Documentation tab](~/dataminer/images/Assistant_Documentation_tab.png)
 
-You can ask questions such as how to configure an alarm template or how DataMiner user permissions work, and the Assistant will retrieve the relevant information for you. This allows you to find documentation content quickly without needing to browse through the site yourself.
+You will be able to ask questions such as which low-code app visualization type is best for large data sets, how to configure an alarm template, or how DataMiner user permissions work. The Assistant will then retrieve the relevant information for you, allowing you to find documentation content quickly without needing to browse through the DataMiner Docs manually.

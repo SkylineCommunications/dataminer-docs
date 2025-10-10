@@ -4,17 +4,20 @@ uid: Assistant_Predefined_Questions
 
 # Adding custom predefined questions
 
-When you start a new chat session in the *Insights* or *Documentation* tab, six predefined questions are displayed to help you get started quickly. Instead of typing a question, you can click one of the question tiles.
+> [!IMPORTANT]
+> The DataMiner Assistant is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of what will be available in a future release.
+
+When you start a new chat session in the *Insights* or *Documentation* tab, six predefined questions will be displayed to help you get started quickly. Instead of typing a question, you will be able to click one of the question tiles.
 
 ![Predefined questions](~/dataminer/images/Assistant_PredefinedQuestions.png)
 
-On the *Insights* tab, you can use custom predefined questions to tailor the Assistant to your workflows, making it faster and easier to get the insights you need the most. To add a new custom question, you need to edit the JSON file directly:
+On the *Insights* tab, you will be able to use custom predefined questions to tailor the Assistant to your workflows, making it faster and easier to get the insights you need most. To add a new custom question, you will need to edit the JSON file directly:
 
 1. On the DMA, go to the following folder: `C:\Skyline DataMiner\Documents\assistant`.
 
 1. Open the file *insights_questions.json*.
 
-1. Locate the question you want to replace. Each question in the file is defined as a JSON object with the following properties:
+1. Locate the question you want to replace. Each question in the file will be defined as a JSON object with the following properties:
 
    | # | Property | Description |
    |:--:|--|--|
@@ -31,12 +34,12 @@ On the *Insights* tab, you can use custom predefined questions to tailor the Ass
 
    ```json
    {
-    "icon": "notifications_active",
-    "title": "Active alarms",
-    "content": "Can you give me a brief overview of the active alarms in my system?",
-    "color": "102, 204, 0"
+     "icon": "notifications_active",
+     "title": "Active alarms",
+     "content": "Can you give me a brief overview of the active alarms in my system?",
+     "color": "102, 204, 0"
    }
    ```
 
    > [!TIP]
-   > Use clear and specific wording in your questions to get the most accurate responses. See [Writing effective prompts](xref:Assistant_WritingPrompts).
+   > Use clear and specific wording in your questions to get the most accurate responses.
