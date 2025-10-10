@@ -52,7 +52,7 @@ This means that, in an Automation script, it will now be possible to retrieve th
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, an email message could only be sent if a recipient was specified in the *To* field.
+Up to now, an email message could only be sent if the recipients were specified in the *To* field.
 
 From now on, it will also be possible to send email messages that only have recipients specified in the *CC* and/or *BCC* fields.
 

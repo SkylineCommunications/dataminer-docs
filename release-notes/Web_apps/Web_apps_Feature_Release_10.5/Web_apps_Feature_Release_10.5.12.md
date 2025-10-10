@@ -50,6 +50,14 @@ In edit mode, up to now, when you made a configuration that involved element dat
 
 From now on, the first 100 elements will initially be retrieved. Afterwards, when you then scroll down, the next 100 elements will be retrieved each time you reach the bottom of the list.
 
+#### Dashboards app: Email reports can now also be sent recipients who are not contacts and who are only specified in the CC and/or BCC fields [ID 43848]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, an email report could only be sent if recipients were specified in the *To* field. Also, those recipients had to be people in your contact list.
+
+From now on, recipients no longer have to be contacts, and it will also be possible to send email reports that only have recipients specified in the *CC* and/or *BCC* fields.
+
 ### Fixes
 
 #### GQI DxM: Existing query sessions would incorrectly be allowed to use a restarted extension worker [ID 43770]
