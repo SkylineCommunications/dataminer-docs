@@ -166,6 +166,6 @@ This error can be related to how HTTPS is configured (HTTP, TLSv1.0, TLSv1.1 is 
 
 By default, the SLASPConnection process is configured to wait 1 hour for a report to respond. A timeout is generated when no response is received after an hour.
 
-When a report times out, this is most likely related to reports generating a lot of data, and the default timeout configuration might not be sufficient. To fix this, you can adjust the timeout. For more information, refer to [the DataMiner Help](xref:MaintenanceSettings_xml#slaspconnectionreportresponsetimeout).
+When a report times out, this is most likely related to reports generating a lot of data, and the default timeout configuration might not be sufficient. To fix this, you can adjust the timeout. For more information, refer to [the DataMiner Help](xref:MaintenanceSettings.SLASPConnection.ReportResponseTimeout).
 
 However, keep in mind that when the default timeout is adjusted, the **report ASP setting must be adjusted as well**.
