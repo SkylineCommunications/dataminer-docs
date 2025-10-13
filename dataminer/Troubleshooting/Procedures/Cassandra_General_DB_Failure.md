@@ -88,7 +88,7 @@ If the Cassandra setup was already using the increased threshold values, then th
 
 1. To get an overview of the number of rows in the element, use the SLNetClientTest tool to [inspect the parameter table rows in SLProtocol](xref:SLNetClientTest_Inspecting_parameter_table_rows).
 
-   To estimate the full data set size, multiply the number of rows found by the number of columns in the table. Prioritize tables with a high row count, but keep in mind that a large data set may be normal depending on the table's context.
+   To estimate the full dataset size, multiply the number of rows found by the number of columns in the table. Prioritize tables with a high row count, but keep in mind that a large dataset may be normal depending on the table's context.
 
    A rapidly changing dataset can also contribute to a growing number of tombstones. To assess this, click the *Turn On* button next to *Auto Refresh*, and set the interval to 1 sec. Ideally, the data should update in sync with the defined timers or, if applicable, the configured polling manager table.
 

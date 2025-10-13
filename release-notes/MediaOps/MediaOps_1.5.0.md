@@ -27,3 +27,7 @@ On the *Resources* page of the Resource Studio app, when a large number of resou
 #### Scheduling: Action buttons missing in Edit Job panel after reverting job status to Tentative [ID 43808]
 
 When the status of a job was reverted from Confirmed to Tentative, it could occur that action buttons for the job were no longer displayed in the Edit Job panel.
+
+#### Scheduler: Lock on job not removed after duplication [ID 43915]
+
+When a locked job was duplicated, the user who had a lock on the original job also had a lock on the duplicated job, which should not be the case and was not clear to the user. This could cause confusion when someone else tried to edit the duplicated job.

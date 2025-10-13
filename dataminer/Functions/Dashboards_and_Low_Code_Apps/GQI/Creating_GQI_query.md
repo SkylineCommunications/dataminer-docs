@@ -28,7 +28,7 @@ The "Queries" data item allows you to construct a query in order to tap into the
    > [!IMPORTANT]
    > It is also possible to configure an ad hoc data source in a query. For more information, see [Ad hoc data sources](xref:GQI_Ad_hoc_data_sources).
 
-1. Select an operator. This step is optional; if you do not select an operator, the data set will be returned untouched. See [Query operators](xref:Query_operators).
+1. Select an operator. This step is optional; if you do not select an operator, the dataset will be returned untouched. See [Query operators](xref:Query_operators).
 
 1. Add more operators if necessary until your query is fully configured.
 

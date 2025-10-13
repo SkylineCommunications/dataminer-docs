@@ -10,7 +10,7 @@ When you expand the *Protocols* section in the *Data* pane, a list of all availa
 
 To use all protocols in your DataMiner System as data input, select the *Protocols* header and drag it onto a compatible visualization.
 
-Protocol data can also be used as a filter. For example, if you have a component that uses the entire *Elements* data set as input, you can drag a protocol data item onto it to show only the elements that use that specific protocol.
+Protocol data can also be used as a filter. For example, if you have a component that uses the entire *Elements* dataset as input, you can drag a protocol data item onto it to show only the elements that use that specific protocol.
 
 > [!TIP]
 > See [Embedding a connector dashboard in Visual Overview — Step 1: Create a dynamic dashboard](xref:Tutorial_Embed_Connector_Dashboard_in_Visio#step-1-create-a-dynamic-dashboard).

@@ -180,7 +180,7 @@ Now that all the cell towers are shown on the map, you can visualize the connect
 
 1. Select the data source *Start from* and the query *Cell towers*.
 
-   This *CellTowers* data set contains a *source* column with the ID of the cell tower that another tower is linked to.
+   This *CellTowers* dataset contains a *source* column with the ID of the cell tower that another tower is linked to.
 
 1. Create a new query that starts from the *CellTowers* query and joins itself based on this column:
 
@@ -208,7 +208,7 @@ Now that all the cell towers are shown on the map, you can visualize the connect
 
    1. Make sure only the following columns are selected: *Connection ID*, *Latitude*, *Longitude*, *Latitude (2)*, and *Longitude (2)*.
 
-   This will result in a new data set with a unique ID and two sets of coordinates that you can visualize as lines on the map:
+   This will result in a new dataset with a unique ID and two sets of coordinates that you can visualize as lines on the map:
 
    ![CellTowersConnectionsQuery](~/dataminer/images/MapsCellTowersConnectionsQuery.png)
 

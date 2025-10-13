@@ -77,7 +77,7 @@ The following functions can be achieved by means of orchestration scripts that s
 
 - **Monitor**: DataMiner intelligently monitors infrastructure, cloud inventory, precision time protocol (PTP), IP flows, services, and service level agreements (SLA), filtering out devices that are not in use or under maintenance to prevent unnecessary alarms.
 
-- **QoS/QoE**: Tracking end-user experience and service quality is crucial. DataMiner collects metrics from the network and end-user CPE devices, utilizing key performance indicators (KPIs) and key quality indicators (KQIs) to enhance service offerings based on solid data sets.
+- **QoS/QoE**: Tracking end-user experience and service quality is crucial. DataMiner collects metrics from the network and end-user CPE devices, utilizing key performance indicators (KPIs) and key quality indicators (KQIs) to enhance service offerings based on solid datasets.
 
 - **Finish**: Cleaning up the network post-event is essential, involving tasks such as removing multicast routes from switches, deactivating cloud infrastructure (eliminating excess cost), and adjusting host and flow policies to enhance network security.
 

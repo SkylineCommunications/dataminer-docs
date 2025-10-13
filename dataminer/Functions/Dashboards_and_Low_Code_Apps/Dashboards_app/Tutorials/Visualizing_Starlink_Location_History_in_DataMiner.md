@@ -27,7 +27,7 @@ Expected duration: 30 minutes
 ## Overview
 
 - [Step 1: Install the Starlink Enterprise package](#step-1-install-the-starlink-enterprise-package)
-- [Step 2: Explore the app and data sets](#step-2-explore-the-app-and-data-sets)
+- [Step 2: Explore the app and datasets](#step-2-explore-the-app-and-datasets)
 - [Step 3: Create a duplicate app with custom components](#step-3-create-a-duplicate-app-with-custom-components)
 - [Step 4: Create the GQI query to fetch the history location data](#step-4-create-the-gqi-query-to-fetch-the-history-location-data)
 - [Step 5: Test the GQI result using a table](#step-5-test-the-gqi-result-using-a-table)
@@ -48,7 +48,7 @@ Expected duration: 30 minutes
 > [!TIP]
 > The deployed app will include demo data, but in case you have a Starlink Enterprise business account, you can already start exploring **your own data** right away. Refer to the [Starlink Enterprise Connector documentation](https://docs.dataminer.services/connector/doc/Starlink_Enterprise.html#initialization) to get started.
 
-## Step 2: Explore the app and data sets
+## Step 2: Explore the app and datasets
 
 1. In the DataMiner Cube Surveyor, navigate to *DataMiner Catalog* > *Apps & Solutions* > *Starlink Enterprise* > *Starlink API (STRLE)* and open the element *STRLE Starlink Enterprise*.
 

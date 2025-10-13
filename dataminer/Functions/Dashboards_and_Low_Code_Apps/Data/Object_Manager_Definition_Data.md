@@ -10,4 +10,4 @@ When you expand the *Object manager definitions* section in the *Data* pane, the
 
 To quickly find a specific DOM definition, use the filter box at the top of the data section.
 
-Object manager definition data are often used as a filter. For example, if you have a component that uses the entire [*Object manager instances* data set](xref:Object_Manager_Instance_Data) as input, you can drag an object manager definition data item onto it to show only the DOM instances that belong to a particular definition.
+Object manager definition data are often used as a filter. For example, if you have a component that uses the entire [*Object manager instances* dataset](xref:Object_Manager_Instance_Data) as input, you can drag an object manager definition data item onto it to show only the DOM instances that belong to a particular definition.

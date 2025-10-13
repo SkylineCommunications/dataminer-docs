@@ -28,9 +28,9 @@ If a numeric parameter was set to an exception value, it could occur that it dis
 
 When HTTPS was enabled on a DMA, it could occur that Visual Overview pages could not be retrieved in the Monitoring app.
 
-#### Issues when exporting trend graph for multiple parameters to CSV with custom data set \[ID 26851\]
+#### Issues when exporting trend graph for multiple parameters to CSV with custom dataset \[ID 26851\]
 
-If a trend graph containing multiple parameters was exported to CSV with a custom data set, it could occur that the export window closed to soon, causing a problem in Cube or making it impossible to save the file. In addition, it could occur that multiple rows were created for the same timestamp.
+If a trend graph containing multiple parameters was exported to CSV with a custom dataset, it could occur that the export window closed to soon, causing a problem in Cube or making it impossible to save the file. In addition, it could occur that multiple rows were created for the same timestamp.
 
 #### Various issues in the Jobs app \[ID 26866\]
 

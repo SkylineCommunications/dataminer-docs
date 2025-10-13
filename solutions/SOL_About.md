@@ -32,7 +32,7 @@ The icons of sample applications are not marked with a DataMiner icon.
 
 ***The backbone model for your business and operation.***
 
-The DataMiner Solutions leverage shared metadata, known as the DataMiner Standard Data Model (SDM), which facilitates interoperability across multiple solutions. For instance, solutions involving scheduled jobs or planned maintenance schedules utilize common data sets defining resources. Consequently, the SDM encompasses DataMiner Object Model (DOM) definitions for various entities, such as jobs, maintenance schedules, and resources, along with the relationships between them. For example, a trouble ticketing DOM object can reference the resources object model, reflecting the attachment of tickets to specific resources.
+The DataMiner Solutions leverage shared metadata, known as the DataMiner Standard Data Model (SDM), which facilitates interoperability across multiple solutions. For instance, solutions involving scheduled jobs or planned maintenance schedules utilize common datasets defining resources. Consequently, the SDM encompasses DataMiner Object Model (DOM) definitions for various entities, such as jobs, maintenance schedules, and resources, along with the relationships between them. For example, a trouble ticketing DOM object can reference the resources object model, reflecting the attachment of tickets to specific resources.
 
 The SDM serves as the **central repository for managing and organizing your business and operational metadata** in the DataMiner digital twin. It provides a unified structure for capturing various aspects of your organization, including resources, personnel, transponder slot details, jobs, workflows, rate cards, media signals, assets, and more. Designed with flexibility and scalability in mind, the SDM ensures that your data management efforts remain streamlined and future-proof.
 
@@ -46,7 +46,7 @@ Key features:
 
 - **Relationship descriptions**: The SDM describes relationships between various DataMiner Object Models, unifying all data into a single model.
 
-- **Backwards compatibility**: Data sets (instances) within the Standard Data Model are designed to be backwards compatible, ensuring smooth transitions and minimal disruptions during updates or migrations.
+- **Backwards compatibility**: Datasets (instances) within the Standard Data Model are designed to be backwards compatible, ensuring smooth transitions and minimal disruptions during updates or migrations.
 
 - **Extendable and customizable**: Users can extend the Standard Data Model by linking custom DataMiner Object Models into the SDM, tailoring the framework to their specific organizational needs and requirements
 
