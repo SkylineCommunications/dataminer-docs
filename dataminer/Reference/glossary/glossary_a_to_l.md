@@ -8,37 +8,36 @@ uid: glossary_a_to_l
 
 | Term | Description |
 |------|-------------|
-| Absolute alarm threshold | Dynamic alarm threshold that is configured as an absolute value representing the delta with the baseline value.<br>See [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds) |
-| Access level | The security level required to access a specific parameter. This level is assigned to the parameter in the protocol.<br>See [User rights](xref:User_rights). |
-| Acquisition network | Used in the context of DataMiner Failover. The network where the managed products reside (i.e. the technical network).<br>See [About DMA Failover](xref:About_DMA_Failover). |
+| Absolute alarm threshold | [Dynamic alarm threshold](xref:Configuring_dynamic_alarm_thresholds) that is configured as an absolute value representing the delta with the baseline value. |
+| Access level | The security level required to access a specific parameter. This level is assigned to the parameter in the protocol. See [User rights](xref:User_rights). |
+| Acquisition network | Used in the context of [DataMiner Failover](xref:About_DMA_Failover). The network where the managed products reside (i.e. the technical network). |
 | ACU | Antenna Control Unit. Device that allows the monitoring and control of an antenna. |
 | ACU | Automatic Changeover Unit. Device that monitors the power supply and automatically switches between power sources when necessary. |
 | AE | Adaptive Equalizer. Equalizer that automatically adapts its parameters to a signal. |
 | AES3 | Standard for the exchange of digital audio signals between professional audio devices. Also known as AES/EBU, as it was jointly developed by the Audio Engineering Society (AES) and European Broadcasting Union (EBU). |
-| Aggregation | DataMiner module that uses aggregation rules to calculate statistical information within a DataMiner System.<br>See [Working with aggregation rules](xref:Working_with_aggregation_rules). |
-| Aggregation rule | Rule that defines which summary statistics should be calculated for a view.<br>See [Working with aggregation rules](xref:Working_with_aggregation_rules). |
-| Alarm | Notification that a parameter value has crossed a particular threshold, or a parameter has attained a particular value. This notification has a particular severity depending on the alarm template configuration.<br>See [Alarms](xref:About_alarms). |
-| Alarm banner | Banner at the top of the DataMiner Cube UI that displays the number of new alarms, the color of the most severe among them, and service impact information.<br>See [Alarm Console settings](xref:AlarmConsoleSettings). |
-| Alarm Console | Pane in DataMiner Cube that allows you to view and manage alarms and information events.<br>See [Working with the Alarm Console](xref:Working_with_the_Alarm_Console). |
-| Alarm focus | DataMiner functionality that analyzes the short-term history and current behavior of incoming alarms in order to indicate which alarms are unexpected.<br>See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus). |
-| Alarm hysteresis | Type of hysteresis where the moment when the severity of an alarm increases is delayed.<br>See [Alarm hysteresis](xref:Alarm_hysteresis). |
-| Alarm group | A group of alarms created by (Automatic) Incident Tracking.<br>See [Automatic Incident Tracking](xref:Automatic_incident_tracking). |
-| Alarm priority | Relative importance of an alarm type within the different DataMiner applications.<br>See [Alarm type priority](xref:Alarm_types#alarm-type-priority). |
-| Alarm storm | Situation where the system is flooded by a large number of alarms.<br>See [Alarm storm protection](xref:Alarm_storm_protection). |
+| Aggregation | DataMiner module that uses aggregation rules to calculate statistical information within a DataMiner System. See [Working with aggregation rules](xref:Working_with_aggregation_rules). |
+| Aggregation rule | Rule that defines which summary statistics should be calculated for a view. See [Working with aggregation rules](xref:Working_with_aggregation_rules). |
+| Alarm | Notification that a parameter value has crossed a particular threshold, or a parameter has attained a particular value. This notification has a particular severity depending on the alarm template configuration. See [Alarms](xref:About_alarms). |
+| Alarm banner | Banner at the top of the DataMiner Cube UI that displays the number of new alarms, the color of the most severe among them, and service impact information. See [Alarm Console settings](xref:AlarmConsoleSettings). |
+| Alarm Console | Pane in DataMiner Cube that allows you to view and manage alarms and information events. See [Working with the Alarm Console](xref:Working_with_the_Alarm_Console). |
+| Alarm focus | DataMiner functionality that analyzes the short-term history and current behavior of incoming alarms in order to indicate which alarms are unexpected. See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus). |
+| Alarm hysteresis | Type of hysteresis where the moment when the severity of an alarm increases is delayed. See [Alarm hysteresis](xref:Alarm_hysteresis). |
+| Alarm group | A group of alarms created by [Automatic Incident Tracking](xref:Automatic_incident_tracking). |
+| Alarm priority | Relative importance of an alarm type within the different DataMiner applications. See [Alarm type priority](xref:Alarm_types#alarm-type-priority). |
+| Alarm storm | Situation where the system is flooded by a large number of alarms. See [Alarm storm protection](xref:Alarm_storm_protection). |
 | Alarm tab | Tab in the Alarm Console in DataMiner Cube or the DataMiner Monitoring app. |
-| Alarm template | Template that contains the alarm thresholds for all parameters in a particular protocol.<br>See [About alarm templates](xref:About_alarm_templates). |
-| Alarm template group | Combination of different alarm templates into one grouped template.<br>See [Alarm template groups](xref:Alarm_template_groups). |
-| Alarm threshold | Definition of the value a particular parameter must have to trigger an alarm of a particular level.<br>See [Configuring alarm thresholds](xref:Configuring_normal_alarm_thresholds). |
-| Alarm tree | Series of linked alarm records, reflecting the lifecycle of an alarm.<br>See [Alarm trees](xref:Alarm_trees). |
-| Alerter | System tray application that notifies the user of alarms in the DataMiner System.<br>See [Alerter](xref:Alerter). |
-| Analog parameter | Parameter with a value within a predefined range delimited by a minimum and a maximum.<br>See [Discrete, analog and hybrid parameters](xref:Discrete_analog_and_hybrid_parameters). |
+| Alarm template | Template that contains the alarm thresholds for all parameters in a particular protocol. See [About alarm templates](xref:About_alarm_templates). |
+| Alarm template group | Combination of different alarm templates into one grouped template. See [Alarm template groups](xref:Alarm_template_groups). |
+| Alarm threshold | Definition of the value a particular parameter must have to trigger an alarm of a particular level. See [Configuring alarm thresholds](xref:Configuring_normal_alarm_thresholds). |
+| Alarm tree | Series of linked alarm records, reflecting the lifecycle of an alarm. See [Alarm trees](xref:Alarm_trees). |
+| Alerter | System tray application that notifies the user of alarms in the DataMiner System. See [Alerter](xref:Alerter). |
+| Analog parameter | Parameter with a value within a predefined range delimited by a minimum and a maximum. See [Discrete, analog and hybrid parameters](xref:Discrete_analog_and_hybrid_parameters). |
 | API | Application Programming Interface. Software interface that allows two applications to communicate with each other. |
 | Application package | Package containing all files necessary to install a particular DataMiner app on an existing DataMiner System. |
 | ASCII | American Standard Code for Information Interchange. Character-encoding standard for electronic communication.  |
 | ASI | Asynchronous serial interface. Streaming data format that often carries an MPEG transport stream. |
 | ASN.1 | Abstract Syntax Notation 1. Standardized notation for data structures. |
 | ASP | Active Server Pages. Server-side Microsoft script engine for dynamically generated web pages. |
-| Asset Manager | DataMiner module that is used for Inventory & Asset Management.<br>See [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management). |
 | ATM | Asynchronous Transfer Mode. Set of network protocols used to transfer data in fixed-size packets. |
 | ATP | Acceptance Test Plan. Document describing the required testing in order to determine if a software system meets the criteria for acceptability. |
 | Automation | DataMiner module that allows you to create, manage and run scripts to execute tasks automatically.<br>See [Automation](xref:automation). |
