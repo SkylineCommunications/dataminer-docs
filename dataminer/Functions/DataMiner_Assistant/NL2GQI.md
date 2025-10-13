@@ -6,7 +6,7 @@ uid: NL2GQI
 
 Starting from version 1.0.0, the [DataMiner Assistant](xref:Assistant_DxM) DxM will translate requests in human language into ready-to-execute GQI queries making use of an underlying Large Language Model (LLM).
 
-You can use this feature when [configuring queries in dashboards or low-code apps](xref:Creating_GQI_query#letting-copilot-create-a-query).
+You can use this feature when [configuring queries in dashboards or low-code apps](xref:Creating_GQI_query#letting-dataminer-assistant-create-a-query).
 
 ![NL2GQI](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner 10.5.4*
 
@@ -16,6 +16,9 @@ Examples of such natural languages request could be:
 - "Sort elements by their name"
 
 The result will be a GQI query that you can use to fetch the requested data.
+
+> [!NOTE]
+> Prior to version 2.0.0, the DataMiner Assistant DxM is called "Copilot" instead.
 
 ## Supported GQI operators
 

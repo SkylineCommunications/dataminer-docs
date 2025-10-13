@@ -106,9 +106,12 @@ This DxM exists in tandem with service-specific [middleware](xref:Nuget_Communic
 > [!TIP]
 > See also: [OpenConfig Middleware](xref:DSI_OpenConfig_Middleware)
 
-### Copilot
+### DataMiner Assistant
 
-The Copilot module extends DataMiner with conversational AI. For more information, see [Copilot](xref:Assistant_DxM).
+The DataMiner Assistant module extends DataMiner with conversational AI. For more information, see [DataMiner Assistant DxM](xref:Assistant_DxM).
+
+> [!NOTE]
+> Prior to version 2.0.0, this DxM is called "Copilot".
 
 ### DataAggregator
 
