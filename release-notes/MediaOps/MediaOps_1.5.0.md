@@ -39,4 +39,4 @@ When the status of a job was reverted from Confirmed to Tentative, it could occu
 
 #### Scheduler: Lock on job not removed after duplication [ID 43915]
 
-When a user duplicated a job, it could occur that the lock on the job was not removed.
+When a locked job was duplicated, the user who had a lock on the original job also had a lock on the duplicated job, which should not be the case and was not clear to the user. This could cause confusion when someone else tried to edit the duplicated job.
