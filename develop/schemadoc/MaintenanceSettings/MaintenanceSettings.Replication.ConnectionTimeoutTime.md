@@ -4,7 +4,7 @@ uid: MaintenanceSettings.Replication.ConnectionTimeoutTime
 
 # ConnectionTimeoutTime element
 
-Specifies the connection timeout time, in seconds.
+Specifies the connection timeout time (in seconds).
 
 ## Content Type
 

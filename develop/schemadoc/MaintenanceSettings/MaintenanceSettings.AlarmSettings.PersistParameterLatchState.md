@@ -4,7 +4,7 @@ uid: MaintenanceSettings.AlarmSettings.PersistParameterLatchState
 
 # PersistParameterLatchState element
 
-Eenables persistent parameter latch states,
+Enables persistent parameter latch states.
 
 ## Content Type
 

@@ -4,7 +4,7 @@ uid: MaintenanceSettings.AlarmSettings.Blinking-enabled
 
 # enabled attribute
 
-Whether the Blinking feature is activated or not.
+Indicates whether the Blinking feature is activated or not.
 
 ## Content Type
 

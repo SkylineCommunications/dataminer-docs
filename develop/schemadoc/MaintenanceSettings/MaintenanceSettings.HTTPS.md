@@ -12,10 +12,10 @@ Configures DataMiner to use HTTPS. For more information, refer to [Configuring H
 
 ## Attributes
 
-| Name | Type | Required | Description |
+| Name&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; | Type | Required | Description |
 | --- | --- | --- | --- |
 | [enabled](xref:MaintenanceSettings.HTTPS-enabled) | boolean |  | Specifies whether HTTPS is enabled. |
-| [name](xref:MaintenanceSettings.HTTPS-name) | anySimpleType |  | Must be set to the name matching the Common Name (CN) or one of the Subject Alternative Names (SAN) of the certificate. If it is a wildcard certificate, the name must match the mask defined in the certificate (e.g. "*.skyline.local"). For example, "dma01.skyline.be" matches the wildcard certificate for "*.skyline.be". |
+| [name](xref:MaintenanceSettings.HTTPS-name) | anySimpleType |  | Must be set to a name matching the Common Name (CN) or one of the Subject Alternative Names (SAN) of the certificate. If it is a wildcard certificate, the name must match the mask defined in the certificate (e.g. "*.skyline.local"). For example, "dma01.skyline.be" matches the wildcard certificate for "*.skyline.be". |
 
 ## Examples
 

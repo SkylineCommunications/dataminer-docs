@@ -4,7 +4,7 @@ uid: MaintenanceSettings.AlarmSettings.MustSquashAlarms
 
 # MustSquashAlarms element
 
-Eenables (true) or disables (false) alarm consolidation by default. If this is enabled, consecutive alarm events without a severity change will be combined into a consolidated event in the DataMiner client software. This may be useful to reduce the load on DataMiner Cube and on the SLNet process.
+Enables (true) or disables (false) alarm consolidation by default. If this is enabled, consecutive alarm events without a severity change will be combined into a consolidated event in the DataMiner client software. This may be useful to reduce the load on DataMiner Cube and on the SLNet process.
 
 ## Content Type
 

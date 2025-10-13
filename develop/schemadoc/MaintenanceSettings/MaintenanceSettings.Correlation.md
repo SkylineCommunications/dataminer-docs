@@ -4,7 +4,7 @@ uid: MaintenanceSettings.Correlation
 
 # Correlation element
 
-Configures correlation-related settings.
+Configures Correlation-related settings.
 
 ## Parents
 
@@ -14,4 +14,4 @@ Configures correlation-related settings.
 
 | Name | Occurrences | Description |
 | --- | --- | --- |
-| [TimeSpanCorrelationRecords](xref:MaintenanceSettings.Correlation.TimeSpanCorrelationRecords) | [0, 1] | Specifies the correlation match info window. |
+| [TimeSpanCorrelationRecords](xref:MaintenanceSettings.Correlation.TimeSpanCorrelationRecords) | [0, 1] | Specifies the Correlation match info window. |

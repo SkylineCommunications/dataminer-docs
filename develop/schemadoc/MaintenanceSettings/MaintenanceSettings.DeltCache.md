@@ -27,7 +27,7 @@ Configures the cleanup instructions for the `C:\Skyline DataMiner\System Cache\D
 
 ### Example 1
 
-If you specify the following cleanup condition, after each import or export operation, DataMiner will delete all packages except the 4 most recent ones.
+If you specify the following cleanup condition, after each import or export operation, DataMiner will delete all packages except the four most recent ones.
 
 ```xml
 <DELTCache activated="true">

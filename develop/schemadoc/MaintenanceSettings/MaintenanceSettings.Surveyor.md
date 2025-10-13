@@ -4,7 +4,7 @@ uid: MaintenanceSettings.Surveyor
 
 # Surveyor element
 
-Specifies which statistical alarm data and/or ticket data you want to have displayed next to elements, services and views in the Surveyor.
+Specifies which statistical alarm data and/or ticket data you want to have displayed next to elements, services, and views in the Surveyor.
 
 ## Parents
 

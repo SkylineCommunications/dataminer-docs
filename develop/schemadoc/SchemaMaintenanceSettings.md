@@ -12,7 +12,7 @@ MaintenanceSettings XML Schema.
 
 ## Example
 
-This is an example of a DataMiner.xml file:
+This is an example of a MaintenanceSettings.xml file:
 
 ```xml
 <MaintenanceSettings>

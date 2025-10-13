@@ -4,8 +4,9 @@ uid: MaintenanceSettings.SLASPConnection.ReportResponseTimeout
 
 # ReportResponseTimeout element
 
-Specifies how long the SLASPConnection process has to wait for a report to respond in minutes.
-If it contains “0” or if the tag cannot be found, then the default timeout is 60 minutes.
+Specifies how long the SLASPConnection process has to wait for a report to respond, in minutes.
+
+If this element contains "0" or if the tag cannot be found, the default timeout of 60 minutes is used.
 
 ## Content Type
 
@@ -18,7 +19,7 @@ integer
 ## Remarks
 
 > [!NOTE]
-> If this setting is adjusted, the report’s ASP page also has to be able to run for the modified period of time. This can be configured in IIS or in the ASP file itself, using “Server.ScriptTimeout = 3600;”. In long reports it is also advisable to force sending out the data in packets using “Response.Flush();”.
+> If this setting is adjusted, the report's ASP page also has to be able to run for the modified period of time. This can be configured in IIS or in the ASP file itself, using "Server.ScriptTimeout = 3600;". In long reports, we also recommend forcing the data to be sent out in packets using "Response.Flush();".
 
 ## Examples
 

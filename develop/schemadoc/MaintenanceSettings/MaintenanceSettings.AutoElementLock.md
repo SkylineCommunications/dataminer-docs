@@ -31,10 +31,7 @@ To activate this setting, do the following:
 1. Set the value of the AutoElementLock tag to TRUE.
 1. Set the automatic unlock delay in the time attribute (default: 5000 ms).
 
-A locked element will automatically be unlocked
-
-- after 5 seconds (default setting), or
-- when the client disconnects.
+A locked element will automatically be unlocked after 5 seconds (default setting) or when the client disconnects.
 
 > [!NOTE]
 > If the element is already locked, DataMiner will not automatically force unlock it. In that case, the user has to do this manually.

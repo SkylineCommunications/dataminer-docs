@@ -4,7 +4,7 @@ uid: MaintenanceSettings.Logging.Element
 
 # Element element
 
-Configures element related logging.
+Configures element-related logging.
 
 ## Type
 

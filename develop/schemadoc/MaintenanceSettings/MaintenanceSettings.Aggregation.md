@@ -4,7 +4,7 @@ uid: MaintenanceSettings.Aggregation
 
 # Aggregation element
 
-Configures aggregation related settings.
+Configures aggregation-related settings.
 
 ## Parents
 

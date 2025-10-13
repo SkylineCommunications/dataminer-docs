@@ -4,7 +4,7 @@ uid: MaintenanceSettings.Aggregation.Source-ignoreExceptionValues
 
 # ignoreExceptionValues attribute
 
-If this attribute is set to "true", all aggregation rules in the DataMiner System will by default ignore parameter exception values. If the attribute is set to "false" or if it is not specified, then by default exception values will be taken into account.
+If this attribute is set to "true", all aggregation rules in the DataMiner System will by default ignore parameter exception values. If the attribute is set to "false" or if it is not specified, by default exception values will be taken into account.
 
 ## Content Type
 

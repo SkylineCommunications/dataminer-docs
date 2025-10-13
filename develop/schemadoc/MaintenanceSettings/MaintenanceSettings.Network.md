@@ -4,7 +4,7 @@ uid: MaintenanceSettings.Network
 
 # Network element
 
-Configures network related settings.
+Configures network-related settings.
 
 ## Parents
 

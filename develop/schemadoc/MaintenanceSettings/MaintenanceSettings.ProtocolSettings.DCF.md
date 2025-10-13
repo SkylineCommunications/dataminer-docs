@@ -4,7 +4,7 @@ uid: MaintenanceSettings.ProtocolSettings.DCF
 
 # DCF element
 
-Configures DCF related settings.
+Configures DCF-related settings.
 
 ## Parents
 

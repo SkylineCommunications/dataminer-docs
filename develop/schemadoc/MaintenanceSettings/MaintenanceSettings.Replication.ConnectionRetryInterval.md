@@ -4,7 +4,7 @@ uid: MaintenanceSettings.Replication.ConnectionRetryInterval
 
 # ConnectionRetryInterval element
 
-Specifies the connection retry interval (in s).
+Specifies the connection retry interval (in seconds).
 
 ## Content Type
 

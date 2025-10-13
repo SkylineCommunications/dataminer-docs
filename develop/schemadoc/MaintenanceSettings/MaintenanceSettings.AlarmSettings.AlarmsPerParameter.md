@@ -34,8 +34,7 @@ If there are more alarms in an alarm tree, by default a notice will be displayed
 > - SLNet limits the alarm trees in the cache and in history queries based on this tag. If no value is specified in this tag, SLNet uses a default of 20. In addition, because in old DataMiner versions the default was 100, if the value in this tag is 100, SLNet will read it as 20 instead.
 > - SLDataMiner is responsible for generating notices if there are too many alarms in an alarm tree. If no value is specified in this tag, SLDataMiner uses a default of 100.
 
-
-## Example:
+## Example
 
 ```xml
 <AlarmsPerParameter recurring="TRUE" client="30">60</AlarmsPerParameter>
