@@ -76,7 +76,7 @@ PdfReportsIssue([Check the Reporter flowchart.])
 PdfErrors{{Are there errors in the output?}}
 PdfModule[Identify the report module causing the error. Reproduce the issue with a simple report.]
 PdfSave[Save the error message and describe the minimum report configuration to reproduce the issue.]
-PdfTimeouts[Report may fail or time out if a very large data set is processed.]
+PdfTimeouts[Report may fail or time out if a very large dataset is processed.]
 PdfOptimize[Optimize the report to reduce the volume of data.]
 EndReportIssue([Describe the issue in detail and contact Software Development.])
 %% Connect blocks %%

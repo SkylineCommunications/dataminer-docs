@@ -531,9 +531,9 @@ Certain DLL files would cause assembly load errors to get added to the log file 
 
 When, in an embedded trend graph, you switched to full-screen mode and back, in some cases, the “Zoom to last X” buttons would disappear.
 
-#### Trending: Percentile calculation was incorrect when the data set started with a gap \[ID 28077\]
+#### Trending: Percentile calculation was incorrect when the dataset started with a gap \[ID 28077\]
 
-In some cases, a trending percentile would be calculated incorrectly when the data set started with a gap.
+In some cases, a trending percentile would be calculated incorrectly when the dataset started with a gap.
 
 #### DataMiner Cube - Profiles app: After editing a profile instance, the service profile instance selection box would incorrectly be empty \[ID 28084\]
 

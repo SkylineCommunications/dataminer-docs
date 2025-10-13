@@ -168,9 +168,9 @@ In some cases, it could occur that the severity color indication was not display
 
 In some cases, trend prediction data returned by SLAnalytics would contain incorrectly converted time stamps.
 
-#### Exception when writing empty data set to Elastic database \[ID 25113\]
+#### Exception when writing empty dataset to Elasticsearch database \[ID 25113\]
 
-In some cases, an exception could be thrown when an empty data set was written to the Elastic database.
+In some cases, an exception could be thrown when an empty dataset was written to the Elasticsearch database.
 
 #### Business Intelligence: Incorrect total violation time due to a rounding issue \[ID 25115\]
 

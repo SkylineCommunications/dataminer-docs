@@ -548,7 +548,7 @@ In a visual overview with several tab pages and shapes linked to an EPM object, 
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version TBD -->
 
-When you clicked the filter icon of a table component, the query filter's column data would incorrectly not get highlighted in the *Feeds* data set.
+When you clicked the filter icon of a table component, the query filter's column data would incorrectly not get highlighted in the *Feeds* dataset.
 
 #### 'Clear all' button not available for EPM topology chain [ID 34133]
 

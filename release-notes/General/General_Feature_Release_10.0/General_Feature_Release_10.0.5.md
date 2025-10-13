@@ -872,9 +872,9 @@ In the HTML5 apps (Ticketing, Jobs, etc.), in some cases, the collapse button at
 
 In some cases, trend prediction data returned by SLAnalytics would contain incorrectly converted time stamps.
 
-#### Exception when writing empty data set to Elastic database \[ID 25113\]
+#### Exception when writing empty dataset to Elasticsearch database \[ID 25113\]
 
-In some cases, an exception could be thrown when an empty data set was written to the Elastic database.
+In some cases, an exception could be thrown when an empty dataset was written to the Elasticsearch database.
 
 #### DataMiner Cube - EPM/CPE: No Topology button in sidebar \[ID 25120\]
 

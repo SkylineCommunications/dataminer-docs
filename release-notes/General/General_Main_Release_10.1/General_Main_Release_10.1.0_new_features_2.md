@@ -685,7 +685,7 @@ When adding or editing a tag, you can now select the following additional option
 
 #### Trending: Trend percentile will now be calculated using either average or real-time trend data \[ID 27965\]
 
-Up to now, the trend percentile was calculated using the most detailed data set that was available. In cases where the trend window contained both real-time and average trend data, it would be calculated using both types of data.
+Up to now, the trend percentile was calculated using the most detailed dataset that was available. In cases where the trend window contained both real-time and average trend data, it would be calculated using both types of data.
 
 From now on, from the moment the trend window contains average data points in its most detailed set, only average data will be used for the calculation. This is also be reflected in the percentile menu, where a warning icon will be shown. A tool tip on the warning icon will indicate when only average data will be used.
 

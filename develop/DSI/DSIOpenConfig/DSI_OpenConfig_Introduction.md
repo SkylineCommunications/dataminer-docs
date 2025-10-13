@@ -163,7 +163,7 @@ This RPC can be used by clients to obtain more information from a target about i
 
 The Get RPC can be used by clients to obtain a snapshot of the requested data (the data requested is provided as a number of paths from the data model tree).
 
-Note that a Get RPC should only be used to obtain small amounts of data from the target. To request larger data sets, using a subscription is recommended.
+Note that a Get RPC should only be used to obtain small amounts of data from the target. To request larger datasets, using a subscription is recommended.
 
 #### Set
 
