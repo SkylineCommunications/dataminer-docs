@@ -16,9 +16,9 @@ When a job is in the state *Completed*, *Canceled*, *Ready For Invoice*, or *Inv
 
 To reduce memory usage, data will now no longer be prefetched in the Scheduling app. Previously, this prefetch was implemented to improve performance, but when queries were canceled before data was returned to the client, this could lead to a noticeable memory buildup especially when multiple users were using the system.
 
-### Scheduling: Configuration status will now no longer show a green checkmark if no parameters are assigned [ID 43904]
+### Scheduling: Configuration status no longer shows green checkmark if no parameters are assigned [ID 43904]
 
-When a configuration was created for a node in the nodes table of the job edit panel, a green check mark is placed on the configuration status. This might be confusing when there are no configuration parameters added to the configuration. When no parameters are configured in the node configuration, it will now be visualized as if there were no configuration created.
+Up to now, when a configuration was created for a node in the nodes table of the *Edit job* panel, a green check mark was shown for the configuration status. However, because this might be confusing when no parameters have been configured in the node configuration, such a case will now be visualized as if no configuration had been created.
 
 ### Fixes
 
@@ -30,6 +30,6 @@ When logging was collected using the SLLogCollector tool, the MediaOps logging w
 
 When a locked job was duplicated, the user who had a lock on the original job also had a lock on the duplicated job, which should not be the case and was not clear to the user. This could cause confusion when someone else tried to edit the duplicated job.
 
-#### Scheduling: Jobs are not locked when opening the job edit panel [ID 43905]
+#### Scheduling: Jobs not locked when opening the Edit job panel [ID 43905]
 
-With the release of MediaOps 1.4.0, jobs were no longer locked automatically when opening the job edit panel. Jobs are now locked again automatically when opening the job edit panel.
+With the release of MediaOps 1.4.0, jobs were no longer locked automatically when the *Edit job* panel was opened. Now opening the panel will again cause jobs to be automatically locked.
