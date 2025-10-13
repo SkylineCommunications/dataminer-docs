@@ -5,7 +5,7 @@ uid: Assistant_AddingContextFiles
 # Adding context files
 
 > [!IMPORTANT]
-> The DataMiner Assistant app is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of what will be available in a future release.
+> The DataMiner Assistant app is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of what will be available in a future release and may be subject to change..
 
 Context files provide background information, rules, and logic about specific DataMiner concepts. These files help the Assistant reason about the system and provide accurate answers. **Only Skyline Communications employees can add or edit context files at this stage.** The instructions below are for internal use only.
 

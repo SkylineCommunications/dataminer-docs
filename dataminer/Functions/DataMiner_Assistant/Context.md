@@ -5,7 +5,7 @@ uid: Assistant_Context
 # Context structure
 
 > [!IMPORTANT]
-> The DataMiner Assistant app is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of how this functionality will work once released.
+> The DataMiner Assistant app is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of how this functionality will work once released and may be subject to change.
 
 DataMiner Assistant relies on context to interpret questions and provide accurate answers. This context is not limited to what you type in a chat message. It also includes background instructions, descriptive files, and data definitions that shape how the Assistant understands and analyzes your DataMiner System.
 
