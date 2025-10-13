@@ -56,7 +56,7 @@ To do so, in a system where Copilot has been deployed, when you click the "+" bu
 ![NL2GQI](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner 10.5.4*
 
 > [!TIP]
-> For more information about how to deploy this feature, see [Copilot DxM](xref:Copilot_DxM).
+> For more information about how to deploy this feature, see [Copilot DxM](xref:Assistant_DxM).
 
 > [!IMPORTANT]
 > Copilot can make mistakes. We recommend manually checking the resulting queries and correcting or extending them to your liking when necessary. However, keep in mind that typing a new request and clicking the button a second time will override the query, causing all manual changes to be lost.

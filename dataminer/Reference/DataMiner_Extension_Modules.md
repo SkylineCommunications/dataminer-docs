@@ -108,7 +108,7 @@ This DxM exists in tandem with service-specific [middleware](xref:Nuget_Communic
 
 ### Copilot
 
-The Copilot module extends DataMiner with conversational AI. For more information, see [Copilot](xref:Copilot_DxM).
+The Copilot module extends DataMiner with conversational AI. For more information, see [Copilot](xref:Assistant_DxM).
 
 ### DataAggregator
 

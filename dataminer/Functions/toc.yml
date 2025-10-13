@@ -1,16 +1,21 @@
 items:
-  - name: Assistant
+  - name: DataMiner Assistant
     items:
-      - name: About DataMiner Assistant
+      - name: DataMiner Assistant DxM
+        topicUid: Assistant_DxM
+      - name: DataMiner Assistant app
         topicUid: DataMinerAssistant
-      - name: Context overview
-        topicUid: Assistant_Context
-      - name: Adding custom user context
-        topicUid: Assistant_UserContext
-      - name: Adding context files
-        topicUid: Assistant_AddingContextFiles
-      - name: Adding custom predefined questions
-        topicUid: Assistant_Predefined_Questions
+        items:
+        - name: Context overview
+          topicUid: Assistant_Context
+        - name: Adding custom user context
+          topicUid: Assistant_UserContext
+        - name: Adding context files
+          topicUid: Assistant_AddingContextFiles
+        - name: Adding custom predefined questions
+          topicUid: Assistant_Predefined_Questions
+      - name: Natural language to GQI
+        topicUid: NL2GQI
   - name: Automation
     items:
       - name: About DataMiner Automation
@@ -179,12 +184,6 @@ items:
         items:
           - name: Using an SLA to monitor a power service
             topicUid: SLA_tutorial
-  - name: Copilot
-    items:
-      - name: Copilot DxM
-        topicUid: Copilot_DxM
-      - name: Natural language to GQI
-        topicUid: NL2GQI
   - name: Correlation
     items:
       - name: About DataMiner Correlation

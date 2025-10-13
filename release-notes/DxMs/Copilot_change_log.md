@@ -18,7 +18,7 @@ At present, the feature supports the *Aggregate*, *Filter*, *Join*, *Select*, *S
 
 In the Dashboards app and Low-Code Apps, from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards, when you create a query, you will be able to enter your query in natural language in a text box and then click a button to automatically create the corresponding GQI query.
 
-For more detailed information, refer to [Copilot DxM](xref:Copilot_DxM).
+For more detailed information, refer to [Copilot DxM](xref:Assistant_DxM).
 
 > [!IMPORTANT]
 > Copilot can make mistakes. We recommend manually checking the resulting queries and correcting or extending them to your liking when necessary. However, keep in mind that typing a new request and clicking the button a second time will override the query, causing all manual changes to be lost.
