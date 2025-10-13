@@ -43,4 +43,4 @@ To configure the component:
 
    - *Clear selection*: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38758-->. Allows you to clear the selected values in the component by clicking the X button in the top-right corner of the filter box. This setting is disabled by default.
 
-   - *Data retrieval > Update data*: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->. Allows the values displayed in the component to be updated in real time, if the data supports this (see [Query updates](xref:Query_updates)). This setting is only available when a single query data source or an indices data set was applied. This setting is disabled by default.
+   - *Data retrieval > Update data*: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->. Allows the values displayed in the component to be updated in real time, if the data supports this (see [Query updates](xref:Query_updates)). This setting is only available when a single query data source or an indices dataset was applied. This setting is disabled by default.

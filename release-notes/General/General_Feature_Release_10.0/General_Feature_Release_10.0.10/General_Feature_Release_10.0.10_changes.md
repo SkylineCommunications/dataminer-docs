@@ -686,9 +686,9 @@ In some cases, it could occur that if an Automation script sent an email report 
 
 If a non-linked table was used in an alarm template condition for a table column parameter, it could occur that this condition could not be selected in the condition drop-down box for other table column parameters in the alarm template.
 
-#### CSV export of table parameter trend graph empty for custom data set other than 'Real-time' \[ID 26818\]
+#### CSV export of table parameter trend graph empty for custom dataset other than 'Real-time' \[ID 26818\]
 
-When a trend graph of a table cell for which the display key was different from the primary key was exported to CSV, and a custom data set other than "Real-time" was selected, it could occur that the export was empty.
+When a trend graph of a table cell for which the display key was different from the primary key was exported to CSV, and a custom dataset other than "Real-time" was selected, it could occur that the export was empty.
 
 #### Cube Launcher: Problem when loading assemblies \[ID 26819\]
 
@@ -714,9 +714,9 @@ If a numeric parameter was set to an exception value, it could occur that it dis
 
 When HTTPS was enabled on a DMA, it could occur that Visual Overview pages could not be retrieved in the Monitoring app.
 
-#### Issues when exporting trend graph for multiple parameters to CSV with custom data set \[ID 26851\]
+#### Issues when exporting trend graph for multiple parameters to CSV with custom dataset \[ID 26851\]
 
-If a trend graph containing multiple parameters was exported to CSV with a custom data set, it could occur that the export window closed to soon, causing a problem in Cube or making it impossible to save the file. In addition, it could occur that multiple rows were created for the same timestamp.
+If a trend graph containing multiple parameters was exported to CSV with a custom dataset, it could occur that the export window closed to soon, causing a problem in Cube or making it impossible to save the file. In addition, it could occur that multiple rows were created for the same timestamp.
 
 #### Reporter app: Zip package would incorrectly contain duplicate CSV files when a trend report was generated \[ID 26854\]
 

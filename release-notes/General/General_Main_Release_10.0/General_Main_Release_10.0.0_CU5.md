@@ -418,9 +418,9 @@ When you right-clicked a trend graph, in some cases, the Curves submenu would be
 
 When a line chart component was configured to display columns from different tables of the same element without grouping, in some cases, a “Cannot read property 'indexof' of undefined” error could be thrown.
 
-#### CSV export of table parameter trend graph empty for custom data set other than 'Real-time' \[ID 26818\]
+#### CSV export of table parameter trend graph empty for custom dataset other than 'Real-time' \[ID 26818\]
 
-When a trend graph of a table cell for which the display key was different from the primary key was exported to CSV, and a custom data set other than "Real-time" was selected, it could occur that the export was empty.
+When a trend graph of a table cell for which the display key was different from the primary key was exported to CSV, and a custom dataset other than "Real-time" was selected, it could occur that the export was empty.
 
 #### DataMiner Cube - Trending: Exception value displayed incorrectly in trend graph legend \[ID 26824\]
 

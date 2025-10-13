@@ -17,7 +17,7 @@ Caching is recommended when:
 Avoid caching when:
 
 - Accuracy must always be real-time (e.g. live status, alarms).
-- The data set is very small and fast to compute (caching adds unnecessary complexity).
+- The dataset is very small and fast to compute (caching adds unnecessary complexity).
 
 ## Adding caching
 
@@ -62,9 +62,9 @@ Benefits of caching per security group:
 
 ### Memory consumption
 
-While caching can greatly improve performance, it always comes at the cost of additional memory usage. The total memory footprint grows with both the size of each cached data set and the number of distinct cache entries being stored.
+While caching can greatly improve performance, it always comes at the cost of additional memory usage. The total memory footprint grows with both the size of each cached dataset and the number of distinct cache entries being stored.
 
-A common example is caching per security group rather than per individual user. This approach is far more efficient than user-level caching, but it can still consume significant memory if your environment contains many groups or if each group's data set is large. Even when a single global cache is used (not per group), similar problems can occur if the data set itself is sizable or if stale entries are left in memory too long.
+A common example is caching per security group rather than per individual user. This approach is far more efficient than user-level caching, but it can still consume significant memory if your environment contains many groups or if each group's dataset is large. Even when a single global cache is used (not per group), similar problems can occur if the dataset itself is sizable or if stale entries are left in memory too long.
 
 To prevent excessive memory growth:
 

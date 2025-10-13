@@ -669,9 +669,9 @@ Because of a number of enhancements made to the automatic incident tracking feat
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
-Previously, when you added a sort node to a GQI query against the DOM data source, all DOM instances matching any filter node needed to be retrieved before the sorting could occur. Sorting a data set with a large amount of DOM instances was practically impossible.
+Previously, when you added a sort node to a GQI query against the DOM data source, all DOM instances matching any filter node needed to be retrieved before the sorting could occur. Sorting a dataset with a large amount of DOM instances was practically impossible.
 
-From now on, the sort nodes (e.g. By X, Then By Y, etc.) will be forwarded to the database. This will considerably increase overall performance when sorting DOM instances, especially when the data set includes a large amount of items.
+From now on, the sort nodes (e.g. By X, Then By Y, etc.) will be forwarded to the database. This will considerably increase overall performance when sorting DOM instances, especially when the dataset includes a large amount of items.
 
 > [!NOTE]
 >
