@@ -13,25 +13,16 @@ uid: MediaOps_1.5.0
 
 ## Changes
 
+> [!NOTE]
+> This release also includes the enhancements and fixes of the 1.4.x releases.
+
 ### Enhancements
 
 #### Resource Studio: Improved feedback and visibility when deprecating or restoring multiple resources [ID 43804]
 
 On the *Resources* page of the Resource Studio app, when a large number of resources are deprecated or restored, a loading indicator is now displayed, providing feedback on the action in progress. In addition, when you start an action to deprecate or restore multiple resources, you will now first be asked to confirm the action.
 
-#### Exception thrown when timing of completed job is adjusted [ID 43847]
-
-When a job is in the state *Completed*, *Canceled*, *Ready For Invoice*, or *Invoiced*, and an attempt is made to adjust the timing of the job, an InvalidOperationException will now be thrown, as this is not allowed in such cases.
-
-#### Scheduling: Prefetching of data disabled to reduce memory usage [ID 43901]
-
-To reduce memory usage, data will now no longer be prefetched in the Scheduling app. Previously, this prefetch was implemented to improve performance, but when queries were canceled before data was returned to the client, this could lead to a noticeable memory buildup especially when multiple users were using the system.
-
 ### Fixes
-
-#### MediaOps log files not included in SLLogCollector package [ID 43791]
-
-When logging was collected using the SLLogCollector tool, the MediaOps logging was not included.
 
 #### Scheduling: Action buttons missing in Edit Job panel after reverting job status to Tentative [ID 43808]
 
