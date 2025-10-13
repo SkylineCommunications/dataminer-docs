@@ -40,8 +40,8 @@ uid: glossary_a_to_l
 | ASP | Active Server Pages. Server-side Microsoft script engine for dynamically generated web pages. |
 | ATM | Asynchronous Transfer Mode. Set of network protocols used to transfer data in fixed-size packets. |
 | ATP | Acceptance Test Plan. Document describing the required testing in order to determine if a software system meets the criteria for acceptability. |
-| Automation | DataMiner module that allows you to create, manage and run scripts to execute tasks automatically.<br>See [Automation](xref:automation). |
-| Average trending | Type of trending where average values are kept across a relatively long time period.<br>See [Trending techniques](xref:Trending_techniques). |
+| Automation | DataMiner module that allows you to create, manage and run scripts to execute tasks automatically. See [Automation](xref:automation). |
+| Average trending | Type of trending where average values are kept across a relatively long time period. See [Trending techniques](xref:Trending_techniques). |
 | AVR | Automatic Voltage Regulator. Device that automatically maintains a constant voltage level. |
 
 ## B
