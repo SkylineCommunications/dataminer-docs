@@ -56,6 +56,15 @@ In edit mode, up to now, when you made a configuration that involved element dat
 
 From now on, the first 100 elements will initially be retrieved. Afterwards, when you then scroll down, the next 100 elements will be retrieved each time you reach the bottom of the list.
 
+#### DataMiner Comparison tool: Redesigned header [ID 43837]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+The header of the DataMiner Comparison tool has been redesigned.
+
+- When you click the DataMiner logo, you will be redirected to the DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`).
+- When you click the app title (i.e. "Comparison"), the app's URL will be cleared of any settings that were added to it.
+
 #### Dashboards app: Email reports can now also be sent recipients who are not contacts and who are only specified in the CC and/or BCC fields [ID 43848]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
