@@ -4,7 +4,7 @@ uid: MaintenanceSettings.WatchDog.TechsupportNotifications.Reports-emailtime
 
 # emailtime attribute
 
-Specifies the hour of the day to send the email.s
+Specifies the hour of the day to send the email.
 
 ## Content Type
 

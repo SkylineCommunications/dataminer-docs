@@ -68,7 +68,7 @@ The settings that control the data being displayed have to be configured in *Mai
 ```
 
 > [!TIP]
-> See also: [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)
+> See also: [MaintenanceSettings.Surveyor](xref:MaintenanceSettings.Surveyor)
 
 ## View statistics in Visio drawings
 

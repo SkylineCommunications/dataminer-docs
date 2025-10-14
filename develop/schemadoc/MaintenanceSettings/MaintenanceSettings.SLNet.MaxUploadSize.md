@@ -13,3 +13,7 @@ integer
 ## Parents
 
 [SLNet](xref:MaintenanceSettings.SLNet)
+
+## See also
+
+- [Configuring the maximum upload size for upgrade packages](xref:Configuration_of_DataMiner_processes#configuring-the-maximum-upload-size-for-upgrade-packages)

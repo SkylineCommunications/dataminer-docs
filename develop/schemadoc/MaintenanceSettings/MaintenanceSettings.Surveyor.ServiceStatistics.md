@@ -4,7 +4,7 @@ uid: MaintenanceSettings.Surveyor.ServiceStatistics
 
 # ServiceStatistics element
 
-Specifies service statistics to be displayed in the surveyor.
+Specifies service statistics to be displayed in the Surveyor.
 
 ## Content Type
 

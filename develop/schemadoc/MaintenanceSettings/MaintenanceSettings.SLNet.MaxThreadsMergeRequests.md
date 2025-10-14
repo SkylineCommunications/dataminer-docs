@@ -4,7 +4,7 @@ uid: MaintenanceSettings.SLNet.MaxThreadsMergeRequests
 
 # MaxThreadsMergeRequests element
 
-Specifies the maximum number of simultaneous merge requests being handled by a DataMiner agent. Default: 50.
+Specifies the maximum number of simultaneous merge requests being handled by a DataMiner Agent. Default: 50.
 
 ## Content Type
 

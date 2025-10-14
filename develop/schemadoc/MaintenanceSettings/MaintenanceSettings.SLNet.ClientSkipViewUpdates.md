@@ -13,3 +13,7 @@ boolean
 ## Parents
 
 [SLNet](xref:MaintenanceSettings.SLNet)
+
+## See also
+
+- [Making DataMiner Cube ignore view updates](xref:Configuration_of_DataMiner_processes#making-dataminer-cube-ignore-view-updates)

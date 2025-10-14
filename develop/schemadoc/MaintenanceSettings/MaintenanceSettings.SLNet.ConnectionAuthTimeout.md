@@ -4,7 +4,7 @@ uid: MaintenanceSettings.SLNet.ConnectionAuthTimeout
 
 # ConnectionAuthTimeout element
 
-When an incoming authentication has not completed in the amount of seconds specified, the DataMiner Agent can clean up the authentication progress state with reason: "authentication took too long". Applies to incoming connections. Default: 30s.
+When an incoming authentication is not completed in the number of seconds specified, the DataMiner Agent can clean up the authentication progress state with reason: "authentication took too long". Applies to incoming connections. Default: 30 seconds.
 
 ## Content Type
 

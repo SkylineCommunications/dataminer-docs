@@ -13,3 +13,7 @@ boolean
 ## Parents
 
 [SLNet](xref:MaintenanceSettings.SLNet)
+
+## See also
+
+- [Limiting the number of connection attempts](xref:Configuration_of_DataMiner_processes#limiting-the-number-of-connection-attempts)

@@ -4,7 +4,7 @@ uid: MaintenanceSettings.Trending.SDCurves
 
 # SDCurves element
 
-Deprecated. Specifiedthe the maximum number of trend graphs that could be loaded simultaneously in System Display.
+Deprecated. Specified the maximum number of trend graphs that could be loaded simultaneously in System Display.
 
 ## Content Type
 

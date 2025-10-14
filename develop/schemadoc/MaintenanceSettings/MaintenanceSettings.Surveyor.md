@@ -15,9 +15,9 @@ Specifies which statistical alarm data and/or ticket data you want to have displ
 | Name | Occurrences | Description |
 | --- | --- | --- |
 | All |  |  |
-| &#160;&#160;[ElementStatistics](xref:MaintenanceSettings.Surveyor.ElementStatistics) | [0, 1] | Specifies element statistics to be displayed in the surveyor. |
-| &#160;&#160;[ServiceStatistics](xref:MaintenanceSettings.Surveyor.ServiceStatistics) | [0, 1] | Specifies service statistics to be displayed in the surveyor. |
-| &#160;&#160;[ViewStatistics](xref:MaintenanceSettings.Surveyor.ViewStatistics) | [0, 1] | Specifies view statistics to be displayed in the surveyor. |
+| &#160;&#160;[ElementStatistics](xref:MaintenanceSettings.Surveyor.ElementStatistics) | [0, 1] | Specifies element statistics to be displayed in the Surveyor. |
+| &#160;&#160;[ServiceStatistics](xref:MaintenanceSettings.Surveyor.ServiceStatistics) | [0, 1] | Specifies service statistics to be displayed in the Surveyor. |
+| &#160;&#160;[ViewStatistics](xref:MaintenanceSettings.Surveyor.ViewStatistics) | [0, 1] | Specifies view statistics to be displayed in the Surveyor. |
 
 ## Remarks
 

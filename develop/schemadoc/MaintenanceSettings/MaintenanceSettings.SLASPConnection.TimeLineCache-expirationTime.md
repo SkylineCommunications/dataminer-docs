@@ -4,7 +4,7 @@ uid: MaintenanceSettings.SLASPConnection.TimeLineCache-expirationTime
 
 # expirationTime attribute
 
-Determines how long an entry remains in the cache (in s). Default: 300s.
+Determines how long an entry remains in the cache (in seconds). Default: 300 seconds.
 
 ## Content Type
 

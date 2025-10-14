@@ -342,7 +342,7 @@ In the file *MaintenanceSettings.xml*, you can specify a number of SLWatchdog se
 1. Restart the DataMiner Agent.
 
 > [!TIP]
-> See also: [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)
+> See also: [MaintenanceSettings.WatchDog](xref:MaintenanceSettings.WatchDog)
 
 ### Example of an SLWatchdog tag in MaintenanceSettings.xml
 
@@ -390,7 +390,7 @@ The following table contains all information about the different SLWatchdog sett
 ## Configuring SLNet settings in MaintenanceSettings.xml
 
 > [!TIP]
-> See also: [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)
+> See also: [MaintenanceSettings.SLNet](xref:MaintenanceSettings.SLNet)
 
 > [!NOTE]
 > Before you configure any of these settings, you will need to stop DataMiner. After you have saved your changes, restart DataMiner again.
@@ -567,11 +567,11 @@ Example:
 
 ### Activating the NonElementProtocol option system-wide
 
-In a Visual Overview, a "NonElementProtocol" option can be specified in case it contains shapes linked to a large number of elements, but no element-specific formatting is needed from files like *description.xml*, *informations.xml*, or *port.xml*. This can enhance the overall performance of the Visual Overview.
+In a Visio drawing, a `NonElementProtocol` option can be specified in case it contains shapes linked to a large number of elements, but no element-specific formatting is needed from files like *description.xml*, *informations.xml*, or *port.xml*. This can enhance the overall performance of the corresponding visual overview.
 
-It is also possible to apply this option system-wide, instead of limiting it to one Visual Overview shape or page.
+It is also possible to apply this option system-wide, instead of limiting it to one shape or page.
 
-To do so, add a *\<NonElementProtocol>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to "true".
+To do so, add a `NonElementProtocol` element in the `SLNet` section of the *MaintenanceSettings.xml* file, and set it to `true`.
 
 Example:
 
@@ -594,7 +594,7 @@ Example:
 
 It is possible to have an information event generated whenever a connection fails to be authenticated. From DataMiner 10.1.8/10.2.0 onwards, this is enabled by default.
 
-To enable this option in older systems, add an *\<EnableFailedAuthenticationInfoEvents>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to "true".
+To enable this option in older systems, add an `EnableFailedAuthenticationInfoEvents` element in the `SLNet` section of the *MaintenanceSettings.xml* file, and set it to `true`.
 
 Example:
 
@@ -611,7 +611,7 @@ Example:
 
 ### Configuring a cluster transition state timeout
 
-In the *\<ClusterTransitionStateTimeout>* tag, you can specify a cluster transition state timeout (in seconds).
+In the `ClusterTransitionStateTimeout` element, you can specify a cluster transition state timeout (in seconds).
 
 DataMiner Agents leaving the DataMiner System (i.e. cluster) will leave the transition state after the specified timeout delay, starting from the last received notification from any of the DataMiner processes.
 
@@ -779,7 +779,7 @@ Example:
 
 From DataMiner 10.5.2/10.6.0 onwards<!--RN 41653-->, by default no information events are generated when Automation scripts are triggered by the Correlation engine. From DataMiner 10.5.4/10.6.0 onwards<!--RN 41970-->, this also applies to Automation scripts triggered by the Scheduler module.
 
-If you do want information events to be generated when scripts are triggered by Correlation rules or scheduled tasks, add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to "false":
+If you do want information events to be generated when scripts are triggered by Correlation rules or scheduled tasks, add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to `false`:
 
 ``` xml
 <MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">

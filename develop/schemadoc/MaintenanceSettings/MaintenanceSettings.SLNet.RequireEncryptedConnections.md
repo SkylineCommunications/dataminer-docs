@@ -13,3 +13,7 @@ boolean
 ## Parents
 
 [SLNet](xref:MaintenanceSettings.SLNet)
+
+## See also
+
+- [Enabling encrypted connections](xref:Configuration_of_DataMiner_processes#enabling-encrypted-connections)

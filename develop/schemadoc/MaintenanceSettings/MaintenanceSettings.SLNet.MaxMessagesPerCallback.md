@@ -13,3 +13,7 @@ integer
 ## Parents
 
 [SLNet](xref:MaintenanceSettings.SLNet)
+
+## See also
+
+- [Configuring the number of messages to be returned (polling/eventing)](xref:Configuration_of_DataMiner_processes#configuring-the-polling-request-timeout)

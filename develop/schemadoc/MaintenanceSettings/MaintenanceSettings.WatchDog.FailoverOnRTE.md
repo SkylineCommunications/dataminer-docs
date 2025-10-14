@@ -4,7 +4,7 @@ uid: MaintenanceSettings.WatchDog.FailoverOnRTE
 
 # FailoverOnRTE element
 
-Configures settings related to performing a failover when a run-time error (RTE) occurs.
+Configures settings related to performing a Failover switch when a runtime error (RTE) occurs.
 
 ## Parents
 

@@ -13,3 +13,7 @@ boolean
 ## Parents
 
 [SLNet](xref:MaintenanceSettings.SLNet)
+
+## See also
+
+- [Disabling .NET Remoting](xref:Configuration_of_DataMiner_processes#disabling-net-remoting)

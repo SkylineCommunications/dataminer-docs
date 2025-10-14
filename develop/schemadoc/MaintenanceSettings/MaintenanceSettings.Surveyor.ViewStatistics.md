@@ -4,7 +4,7 @@ uid: MaintenanceSettings.Surveyor.ViewStatistics
 
 # ViewStatistics element
 
-Specifies view statistics to be displayed in the surveyor.
+Specifies view statistics to be displayed in the Surveyor.
 
 ## Content Type
 

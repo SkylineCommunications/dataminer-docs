@@ -4,7 +4,7 @@ uid: MaintenanceSettings.SLNet.MaxWaitForFailoverDBPushOnManualSwitch
 
 # MaxWaitForFailoverDBPushOnManualSwitch element
 
-Specifies, on manual failover, how long (in s) DataMiner will wait for outstanding file offload requests to complete. Default: 60s.
+Specifies, for manual Failover switches, how long (in seconds) DataMiner will wait for outstanding file offload requests to complete. Default: 60 seconds.
 
 ## Content Type
 

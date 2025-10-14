@@ -12,6 +12,6 @@ Configures setting related to notifications.
 
 ## Children
 
-| Name | Occurrences | Description |
+| Name&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; | Occurrences | Description |
 | --- | --- | --- |
-| [Disable](xref:MaintenanceSettings.WatchDog.TechsupportNotifications.Notifications.Disable) |  | Specify '*' to disable all notifications. Multiple items can be specified by using a semicolon an separator (';'). |
+| [Disable](xref:MaintenanceSettings.WatchDog.TechsupportNotifications.Notifications.Disable) |  | Specify an asterisk ("*") to disable all notifications. Multiple items can be specified by using a semicolon (";") as separator. |

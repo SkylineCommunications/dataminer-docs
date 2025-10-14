@@ -4,7 +4,7 @@ uid: MaintenanceSettings.Replication.AuthenticateMessageTimeout
 
 # AuthenticateMessageTimeout element
 
-Specifies timeout time for authentication messages, in seconds.
+Specifies the timeout time for authentication messages (in seconds).
 
 ## Content Type
 

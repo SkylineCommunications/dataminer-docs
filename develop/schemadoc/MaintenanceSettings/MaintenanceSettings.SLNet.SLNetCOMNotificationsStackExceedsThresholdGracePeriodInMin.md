@@ -4,7 +4,7 @@ uid: MaintenanceSettings.SLNet.SLNetCOMNotificationsStackExceedsThresholdGracePe
 
 # SLNetCOMNotificationsStackExceedsThresholdGracePeriodInMin element
 
-Specifies the grace period where the DMA does not start ignoring messages for a short time. Default: 1.
+Specifies the grace period during which the DMA does not start ignoring messages for a short time. Default: 1.
 
 ## Content Type
 

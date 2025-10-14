@@ -14,7 +14,7 @@ Configures what needs to be included in the reports.
 
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| [emailtime](xref:MaintenanceSettings.WatchDog.TechsupportNotifications.Reports-emailtime) | integer |  | Specifies the hour of the day to send the email.s |
+| [emailtime](xref:MaintenanceSettings.WatchDog.TechsupportNotifications.Reports-emailtime) | integer |  | Specifies the hour of the day to send the email. |
 | [interval](xref:MaintenanceSettings.WatchDog.TechsupportNotifications.Reports-interval) | integer |  | Specifies the report interval in hours. |
 
 ## Children

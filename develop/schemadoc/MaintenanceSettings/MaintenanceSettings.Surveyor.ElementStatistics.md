@@ -4,7 +4,7 @@ uid: MaintenanceSettings.Surveyor.ElementStatistics
 
 # ElementStatistics element
 
-Specifies element statistics to be displayed in the surveyor.
+Specifies element statistics to be displayed in the Surveyor.
 
 ## Content Type
 

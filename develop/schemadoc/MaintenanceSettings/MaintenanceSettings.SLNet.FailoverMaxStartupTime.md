@@ -4,7 +4,7 @@ uid: MaintenanceSettings.SLNet.FailoverMaxStartupTime
 
 # FailoverMaxStartupTime element
 
-After a failover Agent that was previously online starts up, indicates the max time (in minutes) that the Agent can remain listed as starting up without actually going online. This is a protection mechanism against not being able to bring an Agent online. Default: 15 min.
+Indicates the maximum time (in minutes) that a Failover Agent, in case it was previously online and is starting up, can remain listed as starting up without actually going online. This is a protection mechanism against not being able to bring an Agent online. Default: 15 minutes.
 
 ## Content Type
 

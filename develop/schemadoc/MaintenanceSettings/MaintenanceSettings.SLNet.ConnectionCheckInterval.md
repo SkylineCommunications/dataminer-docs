@@ -14,5 +14,5 @@ Specifies the connection checking interval for clients or SLNet.
 
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| [clients](xref:MaintenanceSettings.SLNet.ConnectionCheckInterval-clients) | integer |  | Specifies the connection checking interval for clients (in s). Default: 10s. |
-| [slnet](xref:MaintenanceSettings.SLNet.ConnectionCheckInterval-slnet) | integer |  | Specifies the SLNet connection checking interval (in s). Default: 10s.|
+| [clients](xref:MaintenanceSettings.SLNet.ConnectionCheckInterval-clients) | integer |  | Specifies the connection checking interval for clients (in seconds). Default: 10 seconds. |
+| [slnet](xref:MaintenanceSettings.SLNet.ConnectionCheckInterval-slnet) | integer |  | Specifies the SLNet connection checking interval (in seconds). Default: 10 seconds.|

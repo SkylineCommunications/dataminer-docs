@@ -4,7 +4,7 @@ uid: MaintenanceSettings.WatchDog.Actions
 
 # Actions element
 
-Specifies the action to perform. Possible values: alarm, restart, switch. Multiple values must be separated by a semicolon (';').
+Specifies the action to perform. Possible values: alarm, restart, switch. Multiple values must be separated by a semicolon (";").
 
 ## Type
 

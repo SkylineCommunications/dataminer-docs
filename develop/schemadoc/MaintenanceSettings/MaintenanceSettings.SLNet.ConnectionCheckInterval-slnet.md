@@ -4,7 +4,7 @@ uid: MaintenanceSettings.SLNet.ConnectionCheckInterval-slnet
 
 # slnet attribute
 
-Specifies the SLNet connection checking interval (in s). Default: 10s.
+Specifies the SLNet connection checking interval (in seconds). Default: 10 seconds.
 
 ## Content Type
 

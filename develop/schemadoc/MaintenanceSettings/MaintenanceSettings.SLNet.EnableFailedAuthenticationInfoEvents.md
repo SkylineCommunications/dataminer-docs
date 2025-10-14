@@ -13,3 +13,7 @@ boolean
 ## Parents
 
 [SLNet](xref:MaintenanceSettings.SLNet)
+
+## See also
+
+- [Generating information events when a connection fails to authenticate](xref:Configuration_of_DataMiner_processes#generating-information-events-when-a-connection-fails-to-authenticate)

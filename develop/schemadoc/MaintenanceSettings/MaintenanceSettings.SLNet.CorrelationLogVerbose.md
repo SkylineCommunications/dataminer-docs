@@ -4,7 +4,7 @@ uid: MaintenanceSettings.SLNet.CorrelationLogVerbose
 
 # CorrelationLogVerbose element
 
-Specifies whether verbose correlation logging is enabled. Default: false.
+Specifies whether verbose Correlation logging is enabled. Default: false.
 
 ## Content Type
 

@@ -6,7 +6,7 @@ uid: MaintenanceSettings.Replication.ConnectionMinDelayBeforeRetry
 
 When a DataMiner Agent fails to set up a connection to another DataMiner Agent for replication purposes, further attempts to set up a connection are blocked during a fixed time interval (in seconds).
 
-Default value: 60s.
+Default value: 60 seconds.
 
 ## Content Type
 

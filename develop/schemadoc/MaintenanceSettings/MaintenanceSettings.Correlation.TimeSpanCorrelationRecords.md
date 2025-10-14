@@ -4,7 +4,7 @@ uid: MaintenanceSettings.Correlation.TimeSpanCorrelationRecords
 
 # TimeSpanCorrelationRecords element
 
-Specifies the correlation match info window.
+Specifies the Correlation match info window.
 
 ## Content Type
 

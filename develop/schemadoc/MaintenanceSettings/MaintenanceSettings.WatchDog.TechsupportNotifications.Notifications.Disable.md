@@ -4,7 +4,7 @@ uid: MaintenanceSettings.WatchDog.TechsupportNotifications.Notifications.Disable
 
 # Disable element
 
-Specify '*' to disable all notifications. Multiple items can be specified by using a semicolon an separator (';').
+Specify an asterisk ("*") to disable all notifications. Multiple items can be specified by using a semicolon (";") as separator.
 
 ## Content Type
 

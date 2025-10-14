@@ -13,3 +13,7 @@ integer
 ## Parents
 
 [SLNet](xref:MaintenanceSettings.SLNet)
+
+## See also
+
+- [ConnectivityMaxConnections](xref:Configuration_of_DataMiner_processes#connectivitymaxconnections)

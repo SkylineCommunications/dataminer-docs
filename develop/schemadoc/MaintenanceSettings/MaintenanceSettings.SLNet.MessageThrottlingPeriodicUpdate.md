@@ -13,3 +13,7 @@ integer
 ## Parents
 
 [SLNet](xref:MaintenanceSettings.SLNet)
+
+## See also
+
+- [Fine-tuning message throttling](xref:Configuration_of_DataMiner_processes#fine-tuning-message-throttling)

@@ -4,7 +4,7 @@ uid: MaintenanceSettings.SLNet.ExtraSupportedFeatureKeys
 
 # ExtraSupportedFeatureKeys element
 
-Feature enabling. ';'-separated list of feature-enabling keys that will be passed on to the client and available for use on server side.
+Semicolon-separated list of feature-enabling keys that will be passed on to the client and available for use on the server side.
 
 ## Content Type
 
