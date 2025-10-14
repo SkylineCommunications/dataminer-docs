@@ -84,6 +84,14 @@ This means that, in an Automation script, it will now be possible to retrieve th
 
 ### Enhancements
 
+#### SLLogCollector: Memory dumps will be taken first & new option to skip the BPA tests [ID 43588]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Each time the *SLLogCollector* tool is run, by default, it will order the *Standalone BPA Executor* tool to execute all BPA tests available in the system. From now on, a checkbox will allow you to have those BPA tests skipped.
+
+Also, when ordered to include memory dumps, up to now, the SLLogCollector tool would first run the BPA tests and collect all logging, and would then take the memory dumps. From now on, it will take the memory dumps first.
+
 #### Serial communication: Only TLS 1.2 or TLS 1.3 encryption will now be allowed [ID 43678]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->

@@ -15,6 +15,14 @@ uid: General_Main_Release_10.5.0_CU9
 
 ### Enhancements
 
+#### SLLogCollector: Memory dumps will be taken first & new option to skip the BPA tests [ID 43588]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Each time the *SLLogCollector* tool is run, by default, it will order the *Standalone BPA Executor* tool to execute all BPA tests available in the system. From now on, a checkbox will allow you to have those BPA tests skipped.
+
+Also, when ordered to include memory dumps, up to now, the SLLogCollector tool would first run the BPA tests and collect all logging, and would then take the memory dumps. From now on, it will take the memory dumps first.
+
 #### Swarming: Clearer error message when file contents cannot be retrieved [ID 43774]
 
 <!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
