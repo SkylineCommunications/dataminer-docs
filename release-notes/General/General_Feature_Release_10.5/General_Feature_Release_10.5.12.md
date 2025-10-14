@@ -226,8 +226,7 @@ After a DataMiner startup, in some cases, the following exception could appear i
 
 #### MessageBroker client could get stuck while trying to fetch information from BrokerGateway [ID 43832]
 
-<!-- MR 10.6.0 - FR 10.5.12 -->
-<!-- Not added in MR 10.6.0 -->
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
 
 When, on systems using the BrokerGateway-managed NATS solution, BrokerGateway is not running the local DataMiner Agent, the MessageBroker client could get stuck while trying to fetch information from BrokerGateway.
 

@@ -86,6 +86,12 @@ This message has now been replaced by the following one:
 
 ### Fixes
 
+#### MessageBroker client could get stuck while trying to fetch information from BrokerGateway [ID 43832]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+When, on systems using the BrokerGateway-managed NATS solution, BrokerGateway is not running the local DataMiner Agent, the MessageBroker client could get stuck while trying to fetch information from BrokerGateway.
+
 #### SLNet would wait too long before closing a connection [ID 43851]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
