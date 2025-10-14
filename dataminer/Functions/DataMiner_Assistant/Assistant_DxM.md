@@ -15,7 +15,7 @@ The initial 1.0.0 version only supports the [natural language to GQI](xref:NL2GQ
 
 DataMiner Assistant is currently not included in DataMiner upgrade packages and [needs to be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node). However, once it has been deployed, it gets upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 -->
 
-Prior to version 2.0.0, DataMiner Assistant is known as DataMiner Copilot. To upgrade to version 2.0.0, you will need to install DataMiner Assistant manually, even if the Copilot DxM was already installed. After that, automatic upgrades will resume.
+To upgrade to version 2.0.0 (where Copilot is renamed to DataMiner Assistant), you will need to install DataMiner Assistant manually, even if the Copilot DxM was already installed. After that, automatic upgrades will resume.
 
 For DataMiner Assistant to run correctly, the following **prerequisites** must be met:
 
