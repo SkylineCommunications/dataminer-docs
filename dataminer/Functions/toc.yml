@@ -6,7 +6,7 @@ items:
       - name: DataMiner Assistant app
         topicUid: DataMinerAssistant
         items:
-        - name: Context overview
+        - name: Context structure
           topicUid: Assistant_Context
         - name: Adding custom user context
           topicUid: Assistant_UserContext
