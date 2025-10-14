@@ -130,3 +130,9 @@ From DataMiner 10.5.11/10.6.0 onwards, DataMiner upgrade packages by default inc
 The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
 
 The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node). However, once it has been deployed, it gets upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 -->
+
+## Logging
+
+If you encounter any issues with a DxM, consult the log files for errors and warnings. By default, you can find these in the folder: `C:\ProgramData\Skyline Communications\<DxM>\Logs`.
+
+If this folder does not exist, it will be created automatically if necessary.
