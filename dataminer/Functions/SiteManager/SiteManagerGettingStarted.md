@@ -17,24 +17,26 @@ After installing the Site Manager DxM, in the Windows services overview, you sho
 
 To allow DataMiner to access an on-premises data source via the Site Manager, the following steps are needed:
 
-1. On a machine on your on-premises network (this does not need to be on the same server where the data source is running), run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.ps1) script specifying the **token** and a provide a **description**.
+### [Windows](#tab/windows)
 
-    The token you need to specify can be found in the Site Manager log: In Cube, open the log file of the Site Manager DxM. (*Apps* > *System Center* > *Logging* > *Site Manager (DxM)*). The log file should contain a line mentioning a token as follows `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
+1. On a machine on your on-premises network (this does not need to be on the same server where the data source is running), run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.ps1) script specifying the **account token** and a **site name**.
 
-    The description you need to provide should be a concise description of the site from which you are exposing data sources. This description will be shown in the Site dropdown for configuring a connection in the element edit wizard in Cube.
+    The account token you need to specify can be found in the Site Manager log: In Cube, open the log file of the Site Manager DxM. (*Apps* > *System Center* > *Logging* > *Site Manager (DxM)*). The log file should contain a line mentioning a token as follows `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
+
+    The site name you need to provide should be a concise description of the site from which you are exposing data sources. This description will be shown in the Site dropdown for configuring a connection in the element edit wizard in Cube.
 
     > [!NOTE]
     >
-    > - The script must be executed on Windows 10 / Windows Server 2019 or later
+    > - The script must be executed on Windows 10 / Windows Server 2019 build 17134 or later
     > - The script must run as administrator
     > - In case PowerShell's execution policy prevents the execution, specify an execution policy (e.g. `-ExecutionPolicy Bypass`). For more information regarding PowerShell's execution policy, refer to [About execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.5).
     > - The machine on which you install this script must be able to access the data source(s) you wish to expose
-    > - Updating a description is not straightforward. To update a description, a reinstallation needs to be performed. Also, once data sources have been configured to set up a connection with this site, the configuration of these data sources will also need to be updated.
+    > - Updating a site name is not straightforward. To update a site name, a reinstallation needs to be performed. Also, once data sources have been configured to set up a connection with this site, the configuration of these data sources will also need to be updated.
 
-    You can use the following command to execute the install script. Replace the placeholders with your token and description.
+    You can use the following command to execute the install script. Replace the placeholders with your account token and site name.
 
     ```powershell
-    iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1) } -Command install -ZrokAccountToken '<token>' -ZrokEnvironmentDescription '<description>'"
+    iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1) } -Command install -AccountToken '<AccountToken>' -SiteName '<SiteName>'"
     ```
 
     To uninstall, the following command can be executed:
@@ -65,6 +67,53 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
         ```
 
        , where `<token>` is the token value shown in the output of the previous command.
+
+### [Linux](#tab/linux)
+
+1. On a machine on your on-premises network (this does not need to be on the same server where the data source is running), run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.sh) script specifying the **account token** and a **site name**.
+
+    The account token you need to specify can be found in the Site Manager log: In Cube, open the log file of the Site Manager DxM. (*Apps* > *System Center* > *Logging* > *Site Manager (DxM)*). The log file should contain a line mentioning a token as follows `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
+
+    The site name you need to provide should be a concise description of the site from which you are exposing data sources. This description will be shown in the Site dropdown for configuring a connection in the element edit wizard in Cube.
+
+    > [!NOTE]
+    >
+    > - The Linux distribution must be using `systemd` as the service manager
+    > - The script must be run via sudo
+    > - Updating a site name is not straightforward. To update a site name, a reinstallation needs to be performed. Also, once data sources have been configured to set up a connection with this site, the configuration of these data sources will also need to be updated.
+
+    You can use the following command to execute the install script. Replace the placeholders with your account token and site name.
+
+    ```bash
+    wget -qO- "https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.sh" | bash -s -- install '<AccountToken>' '<SiteName>'
+    ```
+
+    To uninstall, the following command can be executed:
+
+    ```bash
+    wget -qO- "https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.sh" | bash -s -- uninstall
+    ```
+
+1. After successful installation, you can start exposing your data source(s) so the DataMiner Site Manager can set up a tunnel for each data source it needs to communicate with.
+
+    For each data source you wish to expose, perform the following steps:
+
+    1. Perform the following command:
+
+        ```bash
+        zrok reserve private --backend-mode <backendMode> <endpoint>
+        ```
+
+       , where `<backendMode>` is either *tcpTunnel* or *udpTunnel* and `<endpoint>` specifies the endpoint you want to expose. E.g.: `zrok reserve private --backend-mode tcpTunnel 127.0.0.1:4208`. When executing this command, you should see the following output: `your reserved share token is '2dxzh484zn3'`. Copy the token and execute the next command.
+    1. Then, perform the following command:
+
+        ```bash
+        zrok share reserved <token>
+        ```
+
+       , where `<token>` is the token value shown in the output of the previous command.
+
+***
 
 ### Getting an overview of shared resources
 
