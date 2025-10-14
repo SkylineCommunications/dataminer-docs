@@ -130,6 +130,12 @@ When DataMiner Cube performs a web request or when it displays a web browser con
 
 See also: [GRPCConnection class in SLNet is now able to expose the HTTP cookies it collected when making gRPC requests toward a DMA [ID 43858]](xref:General_Feature_Release_10.5.12#grpcconnection-class-in-slnet-is-now-able-to-expose-the-http-cookies-it-collected-when-making-grpc-requests-toward-a-dma-id-43858)
 
+#### Credentials library: Details pane can now be scrolled horizontally [ID 43870]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+From now on, when working in the *Credentials library*, you will be able to horizontally scroll the details pane. This will e.g. make it easier to view very long passwords.
+
 #### 'Automatic incident tracking' renamed to 'Alarm grouping' [ID 43903]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
