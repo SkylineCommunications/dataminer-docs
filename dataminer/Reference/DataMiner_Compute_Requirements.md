@@ -82,7 +82,7 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 > [!NOTE]
 >
-> - If you install DataMiner using the [v5.0 installer](xref:Installing_DM_using_the_DM_installer), the required .NET (Framework) versions will be **included in the installation**, so there is no need to install these separately.
+> - If you install DataMiner using the [v5.0 Installer](xref:Installing_DM_using_the_DM_installer), the required .NET (Framework) versions will be **included in the installation**, so there is no need to install these separately.
 > - We recommend always upgrading to the latest .NET Framework version.
 > - Major .NET versions are not cross-compatible, which means that you always need to install the appropriate version mentioned above. If you are for example using a DataMiner version that requires .NET 8.0, this will not work if only .NET 9.0 is installed, so in that case you will need to install .NET 8.0 as well.
 
