@@ -6,7 +6,7 @@ uid: cloudgateway_change_log
 
 #### 13 October 2025 - Security - CloudGateway 2.17.14 - Security Update
 
-Fixes a security issue introcuded in 2.17.13. 
+A security issue introduced in CloudGateway 2.17.13 has been fixed.
 
 #### 08 September 2025 - Enhancement - CloudGateway 2.17.13 - Dependencies updated
 
