@@ -72,3 +72,9 @@ This message has now been replaced by the following one:
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 In some rare cases, SLNet would incorrectly wait for 2 hours before closing a connection. As a result, SLNet and SLDataMiner would keep a large number of unused connections in memory for too long.
+
+#### Timeout of queries against a Cassandra database was set incorrectly [ID 43912]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+The timeout of queries against a Cassandra database was set incorrectly. This timeout has now been set to 10 minutes.

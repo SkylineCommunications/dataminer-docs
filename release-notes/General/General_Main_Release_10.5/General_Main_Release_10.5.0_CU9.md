@@ -105,3 +105,9 @@ In some rare cases, SLNet would incorrectly wait for 2 hours before closing a co
 When BrokerGateway could not find any local IP address in the `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` configuration file, up to now, it would incorrectly add a local IP address to that file, even when the `HasManualConfig` setting was set to true.
 
 From now on, when the `HasManualConfig` setting is set to true, BrokerGateway will not be allowed to make any automatic changes to the `appsettings.runtime.json` configuration file.
+
+#### Timeout of queries against a Cassandra database was set incorrectly [ID 43912]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+The timeout of queries against a Cassandra database was set incorrectly. This timeout has now been set to 10 minutes.
