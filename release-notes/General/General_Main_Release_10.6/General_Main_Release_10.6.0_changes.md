@@ -496,6 +496,14 @@ The `GRPCConnection` class in SLNet is now able to expose the HTTP cookies it co
 
 See also: [DataMiner Cube will now reuse the HTTP cookies of the gRPC connection [ID 43860]](xref:Cube_Feature_Release_10.5.12#dataminer-cube-will-now-reuse-the-http-cookies-of-the-grpc-connection-id-43860).
 
+#### Alarms of type 'Notice' will now be generated when SLDataGateway queues no longer seem to decrease [ID 43909]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+In some rare cases, SLDataGateway queues no longer seemed to decrease.
+
+When this should happen in the future, an alarm of type "Notice" will be generated to make sure system administrators can act accordingly in order to prevent data loss.
+
 #### BPA test 'DataMiner Agent Minimum Requirements': Updated requirements [ID 43913]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
