@@ -5,7 +5,7 @@ uid: Assistant_UserContext
 # Adding custom user context
 
 > [!IMPORTANT]
-> The DataMiner Assistant app is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of what will be available in a future release and may be subject to change..
+> The DataMiner Assistant app is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of what will be available in a future release and may be subject to change.
 
 To help DataMiner Assistant interpret information accurately within your organization's environment, you will be able to provide a dedicated context file named **UserContext.md**.
 
