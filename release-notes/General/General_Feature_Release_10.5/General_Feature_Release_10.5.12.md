@@ -244,6 +244,13 @@ When, on systems using the BrokerGateway-managed NATS solution, BrokerGateway is
 
 In some rare cases, SLNet would incorrectly wait for 2 hours before closing a connection. As a result, SLNet and SLDataMiner would keep a large number of unused connections in memory for too long.
 
+#### Swarming: Specific elements could not be swarmed to a specific DMA until that DMA had been restarted [ID 43883]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+<!-- Not added in MR 10.6.0 -->
+
+In some rare cases, it would incorrectly not be possible for specific elements to be swarmed to a specific DataMiner Agent until that Agent had been restarted.
+
 #### BrokerGateway would incorrectly be allowed to make automatic changes to the appsettings.runtime.json file when HasManualConfig was set to true [ID 43893]
 
 <!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
