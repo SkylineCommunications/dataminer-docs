@@ -176,6 +176,14 @@ Because of a number of enhancements, overall performance of the the *Cube CRL Fr
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
+#### GRPCConnection class in SLNet is now able to expose the HTTP cookies it collected when making gRPC requests toward a DMA [ID 43858]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+The `GRPCConnection` class in SLNet is now able to expose the HTTP cookies it collected when making gRPC requests toward a DataMiner Agent. That way, those cookies can be reused by client applications using SLNetTypes.
+
+See also: [DataMiner Cube will now reuse the HTTP cookies of the gRPC connection [ID 43860]](xref:Cube_Feature_Release_10.5.12#dataminer-cube-will-now-reuse-the-http-cookies-of-the-grpc-connection-id-43860).
+
 #### BPA test 'DataMiner Agent Minimum Requirements': Updated requirements [ID 43913]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->

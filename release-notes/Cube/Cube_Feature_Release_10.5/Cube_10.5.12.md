@@ -122,6 +122,14 @@ When, in the bottom-right corner of the *BELOW THIS VIEW* page of a view card, y
 
 Also, when the `SL_UNKNOWN_DESTINATION` exception was thrown, up to now, a message would appear, saying "The requested DMA could not be specified or is currently unknown". This message has now been changed to "Unable to find hosting agent. The agent might still be starting up or is currently unknown".
 
+#### DataMiner Cube will now reuse the HTTP cookies of the gRPC connection [ID 43860]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When DataMiner Cube performs a web request or when it displays a web browser control, it will now reuse the HTTP cookies of the gRPC connection. This will ensure that the requests are sent to the DataMiner Agent to which Cube is connected.
+
+See also: [GRPCConnection class in SLNet is now able to expose the HTTP cookies it collected when making gRPC requests toward a DMA [ID 43858]](xref:General_Feature_Release_10.5.12#grpcconnection-class-in-slnet-is-now-able-to-expose-the-http-cookies-it-collected-when-making-grpc-requests-toward-a-dma-id-43858)
+
 #### 'Automatic incident tracking' renamed to 'Alarm grouping' [ID 43903]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
