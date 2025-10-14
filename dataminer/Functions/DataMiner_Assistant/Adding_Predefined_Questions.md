@@ -5,7 +5,7 @@ uid: Assistant_Predefined_Questions
 # Adding custom predefined questions
 
 > [!IMPORTANT]
-> The DataMiner Assistant app is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of what will be available in a future release and may be subject to change.
+> This feature is currently still being developed. The description below is subject to change, and the feature may not yet be included in the upcoming DataMiner Assistant release.
 
 When you start a new chat session in the *Insights* or *Documentation* tab, six predefined questions will be displayed to help you get started quickly. Instead of typing a question, you will be able to click one of the question tiles.
 
