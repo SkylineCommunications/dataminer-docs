@@ -23,8 +23,6 @@ This context may include, for example:
 
 - Information about your DMA structure.
 
-- Information about your role within the organization.
-
 - A glossary with terms and acronyms specific to your organization.
 
 Once added, this custom user context will become part of the Assistant's session context. This means the Assistant will automatically take it into account when interpreting your questions, alongside the general Skyline-provided context files.
@@ -60,15 +58,6 @@ Core services include:
 - VOD content delivery
 - Contribution uplinks
 - Monitoring and reporting across all feeds
-
-## User role
-
-Network Operations Engineer; responsible for:
-
-- Monitoring system health and service availability.
-- Investigating alarms and reporting incidents.
-- Generating daily health summaries.
-- Coordinating with field engineers during outages.
 
 ## System landscape
 

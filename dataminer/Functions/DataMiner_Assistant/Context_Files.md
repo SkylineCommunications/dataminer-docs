@@ -2,7 +2,7 @@
 uid: Assistant_AddingContextFiles
 ---
 
-# Adding context files
+# Adding or editing context files
 
 > [!IMPORTANT]
 > The DataMiner Assistant app is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of what will be available in a future release and may be subject to change.
@@ -17,22 +17,24 @@ Context files provide background information, rules, and logic about specific Da
   <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
 </div>
 
-## How to contribute a context file
+## How to contribute to the context files
 
-There are two ways to add a new context file:
+There are two ways to contribute to the context files:
 
 - **Via GitHub**:
 
-  1. Fork the private [*DataMinerAssistant* repository](https://github.com/SkylineCommunications/DataMinerAssistant) containing the context files.
+  1. Fork the private [*DataMinerAssistant* repository](https://github.com/SkylineCommunications/DataMinerAssistant).
 
-  1. Add your new markdown file to the `Context` folder, following the template below.
+     You can find the existing context files in the `Context` folder.
+
+  1. Make your changes. If you want to add a new context file, make sure to follow the template below.
 
      > [!TIP]
      > See [Contributing guide: Adding a new page](xref:CTB_Adding_New_Page).
 
   1. Create a pull request to submit your changes.
 
-- **Via Team Documentation**: Send a markdown file directly to [Team Documentation](mailto:documentation@skyline.be), following the template below. They will review your file for language, structure, and clarity before merging it into the repository.
+- **Via Team Documentation**: Send an overview of changes or your new markdown file directly to [Team Documentation](mailto:documentation@skyline.be), following the template below. They will review your contribution for language, structure, and clarity before merging it into the repository.
 
 ## Best practices
 
