@@ -24,6 +24,6 @@ For DataMiner Assistant to run correctly, the following **prerequisites** must b
 
 ## Logging
 
-Errors and warnings are logged to log files in the `C:\ProgramData\Skyline Communications\DataMiner Assistant\Logs` folder. If this folder does not exist, it will be created automatically.
+Errors and warnings are logged to log files in the `C:\ProgramData\Skyline Communications\DataMiner Assistant\Logs` folder.
 
 This folder will only store at most two log files. A new log file is created when the current file exceeds a predefined size. In case the folder already contains two log files, the oldest will be removed to make room for the new one.
