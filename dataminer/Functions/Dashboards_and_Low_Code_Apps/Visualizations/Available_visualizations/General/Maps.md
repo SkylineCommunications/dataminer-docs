@@ -26,37 +26,72 @@ With this component, you can:
 
 The maps component is used to display the results of queries in a map format. It should therefore **always be configured with [query data input](xref:Query_Data)**.
 
-Each row in a query corresponds to (...)
+Each row in a query corresponds to a marker or line on the map.
 
 ## Interacting with the maps component
 
-What is shown in the map:
+The content displayed on the map depends on the [configuration in the *Layout* pane](#map-settings), where you can define the default map center, zoom level, and map bounds.
 
-Dependent on the Map settings, where you can configure the default map center, map zoom, and map bounds. In read mode, you can adjust the view of the map by zooming or panning. (...)
+In read mode, you can adjust the map view by [zooming](#zooming) or [panning](#panning).
 
-- **Zooming functionalities** are available for the maps component.
+### Zooming
 
-  - From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the *Advanced* > *Hold Ctrl to zoom* setting in the *Settings* pane:
+Zooming changes the level of detail shown on the map. You can zoom in or out in several ways:
 
-    - When this setting is enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
+- Click the "+" or "-" icon in the lower-right corner of the component.
 
-    - When this setting is disabled: Scroll up or down to zoom in or out.
+- Select the maps component and press "+" or "-" on your keyboard.
 
-  - From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017--> up to DataMiner 10.4.0 [CU9]/10.4.12:
+- Hover over the specific area you want to zoom in or out from and scroll up or down. Depending on your DataMiner version and the [*Hold Ctrl to zoom* option](#maps-settings), you may need to hold the Ctrl key while scrolling.
 
-    - To zoom in, press Ctrl while scrolling up.
+### Panning
 
-    - To zoom out, press Ctrl while scrolling down.
+Panning allows you to move the visible area of the map. You can pan in the following ways:
 
-  - Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9:
+- Use one of the following keyboard shortcuts:
 
-    - To zoom in, scroll up.
+  | Keyboard shortcut | Action |
+  |--|--|
+  | ← | Move left |
+  | → | Move right |
+  | ↑ | Move up |
+  | ↓ | Move down |
+  | Home | Jump left by 75% |
+  | End | Jump right by 75% |
+  | Page Up | Jump up by 75% |
+  | Page Down | Jump down by 75% |
 
-    - To zoom out, scroll down.
+- Click and hold the scroll wheel anywhere on the map and drag the mouse pointer in the desired direction.
 
-- To **pan the map**, press and hold CTRL, then click and hold the scroll wheel while dragging the pointer in any direction.
+  ![Panning](~/dataminer/images/Maps_Panning.gif)<br>*Maps component in DataMiner 10.5.11*
 
-- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select a marker on the map**, it will by default be highlighted with a blue color. This can for instance be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Maps* > *Selected markers*) is used in a linked component, clearly indicating which data is driving the content in the linked component.
+## Selecting which layers are shown
+
+In the top-left corner of the component, you can select which layers are displayed on the map.
+
+![Displaying different layers](~/dataminer/images/Maps_Layers.gif)<br>*Maps component in DataMiner 10.5.11*
+
+## Displaying extra layers
+
+To provide additional context or details on a map without cluttering the base view, you can configure a button to display or hide an extra layer on demand:
+
+1. Add a button component to the dashboard or page.
+
+1. Configure an on-click action:
+
+   1. Click the *Configure actions* button next to *On click*.
+
+   1. From the dropdown list, select *Execute component action*.
+
+   1. Specify the following details:
+
+      - *I want to*: `Maps, Toggle overlay`
+
+      - *Which form?*: Select the desired maps component.
+
+      - *Source*: Link to a .kml, .kmz, or .json file. The coordinates can also be dynamic (using the *Link to* option).
+
+   1. Click *Ok* in the lower-right corner.
 
 ## Adding data
 
@@ -82,45 +117,95 @@ This process is similar for the configuration of lines, but instead of one latit
 
 In the *Layout* pane, you can find the default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
-Additionally, the following layout options are also available:
+Additionally, the following *Filtering & Highlighting* options are also available:
 
-| Section | Subsection | Option | Description |
+| Option | Description |
+|--|--|
+| Highlight | Toggle the switch to determine whether the nodes that match the criteria specified in a query filter will be highlighted. Enabled by default. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
+| Opacity | Set the level of transparency of the items that do not match the criteria specified in a query filter. This option is only available when *Highlight* is enabled. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
+
+#### Layer settings
+
+The maps component supports showing multiple layers. Each layer determines how you visualize geospatial data on top of the base map. The following layer options are available:
+
+| Subsection | Option | Description | Available for |
 |--|--|--|--|
-| Filtering & Highlighting | N/A | Highlight | Toggle the switch to determine whether the nodes that match the criteria specified in a query filter will be highlighted. Enabled by default. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
-| Filtering & Highlighting | N/A | Opacity | Set the level of transparency of the items that do not match the criteria specified in a query filter. This option is only available when *Highlight* is enabled. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
-| Layer settings | N/A | Weight | Determine which marker is put in the foreground and which in the background in case markers or lines from different layers overlap with each other. The higher the weight of the layer, the more it will be pushed to the foreground. The default weight is 1. |
-| Layer settings | N/A | ![Set as marker](~/dataminer/images/Maps_Circle_icon.png) or ![Set as line](~/dataminer/images/Maps_Line_icon.png) | Hover over the query name to see whether it is configured as a set of markers (default) or as a set of lines. To change the configuration, click the ![Set as marker](~/dataminer/images/Maps_Circle_icon.png) icon to set it as markers, or the ![Set as line](~/dataminer/images/Maps_Line_icon.png) icon to set it as lines. |
-| Layer settings | N/A | Identifier/Latitude/Longitude | For each dimension, a dropdown box is shown where the column used for that dimension can be changed. You can only select valid options for each dimension. For markers, you need to select string-valued columns for the ID and numeric-valued columns for the latitude and longitude. For lines, you need to select a latitude and longitude for both the source and the destination. |
-| Layer settings | Template | Browse templates *or*<br>Reuse template (depending on your DataMiner version) | Available for markers only. Reuse a saved template from another component in the same dashboard or low-code app. This option is only available if a template is already in use<!--RN 42226-->. |
-| Layer settings | Template | Edit | Available for markers only. Open the Template Editor<!--RN 34761--> to customize the appearance of the markers. For more information, refer to [Customizing markers](#customizing-markers). |
-| Layer settings | N/A | On line click | Available from DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10 onwards<!-- RN 43562 -->, for lines only. [Configure an event](xref:LowCodeApps_event_config) that will occur when a line is clicked. |
-| Layer settings | Style | Color | Available for lines only. Change the color of the lines. |
-| Layer settings | Style | Conditional coloring | Available from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43377-->, for lines only. Specify color filters for specific columns, so that lines can be highlighted based on a condition. |
-| Layer settings | Style | Width | Available for lines only. Change the width of the lines. |
-| Layer settings | Style | Type | Available for lines only. Change the type of lines (normal, dashed, dotted, or alternate). |
-| Layer settings | Style | Direction visualization | Available for lines only. Specify how the direction of the line should be visualized on the map (none, flow, or arrow). |
-| Layer settings | Advanced settings | Show in zoom level | Determine in which range of zoom levels the query should be visible. |
-| Layer settings | Advanced settings | Weight | Similar to the weight setting on layer level. Determine which markers or lines are pushed to the foreground when two markers or lines from the same layer overlap with each other. |
-| Map settings | N/A | Save current view | After you have panned and/or zoomed to a certain location, click this button to set the center and zoom settings to the current center and zoom level of the component. |
-| Map settings | Map center | Latitude/Longitude | Determine the default center of the map by means of the latitude and longitude of the center location. To easily get the coordinates of a point on the map, right-click the component and select the latitude and/or longitude value to copy it to the clipboard. |
-| Map settings | Map zoom | Zoom range | Select the minimum and maximum zoom level. |
-| Map settings | Map zoom | Default zoom | Specify the default zoom level of the map. |
-| Map settings | Map bounds | Enable bounds | Enable this option to configure the north, east, south, and west bounds of the map. |
-| Map settings | Default map type | Map type | Select the type of the map. The available types depend on the map provider. At present, only Google Maps is supported, with the following map types: *roadmap*, *satellite*, *hybrid*, and *terrain*. |
-| Map settings | Default map type | Show map type control | Enable this option to make the map type setting visible in the component itself. |
+| N/A | Weight | Define which markers or lines appear in the foreground when items from different layers overlap. The higher the weight of the layer, the more it will be pushed to the foreground. The default weight is 1. | ![marker](~/dataminer/images/Maps_Circle_icon.png) ![line](~/dataminer/images/Maps_Line_icon.png) |
+| N/A | ![Set as marker](~/dataminer/images/Maps_Circle_icon.png) or ![Set as line](~/dataminer/images/Maps_Line_icon.png) | Hover over the query name to see whether it is configured as a set of markers (default) or as a set of lines. To change the configuration, click the ![Set as marker](~/dataminer/images/Maps_Circle_icon.png) icon to set it as markers, or the ![Set as line](~/dataminer/images/Maps_Line_icon.png) icon to set it as lines. | ![marker](~/dataminer/images/Maps_Circle_icon.png) ![line](~/dataminer/images/Maps_Line_icon.png) |
+| N/A | Identifier/Latitude/Longitude | Select the column to use for each dimension. For markers, select string-valued columns for the ID and numeric-valued columns for the latitude and longitude. For lines, select a latitude and longitude for both the source and the destination. | ![marker](~/dataminer/images/Maps_Circle_icon.png) ![line](~/dataminer/images/Maps_Line_icon.png) |
+| Template | Browse templates *or*<br>Reuse template (depending on your DataMiner version) | Reuse a saved template from another component in the same dashboard or low-code app. This option is only available if a template is already in use<!--RN 42226-->. | ![marker](~/dataminer/images/Maps_Circle_icon.png) |
+| Template | Edit | Open the Template Editor<!--RN 34761--> to customize the appearance of the markers. For more information, refer to [Customizing markers](#customizing-markers). | ![marker](~/dataminer/images/Maps_Circle_icon.png) |
+| N/A | On line click | Available from DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10 onwards<!-- RN 43562 -->. [Configure an event](xref:LowCodeApps_event_config) that will occur when a line is clicked. | ![line](~/dataminer/images/Maps_Line_icon.png) |
+| Style | Color | Change the color of the lines. | ![line](~/dataminer/images/Maps_Line_icon.png) |
+| Style | Conditional coloring | Available from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43377-->. Specify color filters for specific columns, so that lines can be highlighted based on a condition. | ![line](~/dataminer/images/Maps_Line_icon.png) |
+| Style | Width | Change the width of the lines. | ![line](~/dataminer/images/Maps_Line_icon.png) |
+| Style | Type | Change the type of lines (normal, dashed, dotted, or alternate). | ![line](~/dataminer/images/Maps_Line_icon.png) |
+| Style | Direction visualization | Specify how the direction of the line should be visualized on the map (none, flow, or arrow). | ![line](~/dataminer/images/Maps_Line_icon.png) |
+| Advanced settings | Show in zoom level | Determine in which range of zoom levels the query should be visible. |  ![marker](~/dataminer/images/Maps_Circle_icon.png) ![line](~/dataminer/images/Maps_Line_icon.png) |
+| Advanced settings | Weight | Determine which markers or lines are pushed to the foreground when two markers or lines from the same layer overlap with each other. | ![marker](~/dataminer/images/Maps_Circle_icon.png) ![line](~/dataminer/images/Maps_Line_icon.png) |
+
+*![marker](~/dataminer/images/Maps_Circle_icon.png): markers; ![line](~/dataminer/images/Maps_Line_icon.png): lines*
 
 > [!NOTE]
 > From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards, lines can also be colored based on the [conditional coloring](xref:DashboardQueryFilter#conditional-coloring) of a linked query filter. This will override the color configuration in the layer settings of the maps component. Note that if the query filter contains multiple color conditions, only the first color condition will be applied, as a line can only have one color.<!-- RN 43617 -->
 
+#### Map settings
+
+| Subsection | Option | Description |
+|--|--|--|
+| N/A | Save current view | After you have panned and/or zoomed to a certain location, click this button to set the center and zoom settings to the current center and zoom level of the component. |
+| Map center | Latitude/Longitude | Determine the default center of the map by means of the latitude and longitude of the center location. To easily get the coordinates of a point on the map, right-click the component and select the latitude and/or longitude value to copy it to the clipboard. |
+| Map zoom | Zoom range | Select the minimum and maximum zoom level. |
+| Map zoom | Default zoom | Specify the default zoom level of the map. |
+| Map bounds | Enable bounds | Enable this option to configure the north, east, south, and west bounds of the map. |
+| Default map type | Map type | Select the type of the map. The available types depend on the map provider. At present, only Google Maps is supported, with the following map types: *roadmap*, *satellite*, *hybrid*, and *terrain*. |
+| Default map type | Show map type control | Enable this option to make the map type setting visible in the component itself. |
+
 #### Highlighting filtered results
+
+To **visually distinguish markers and lines that match your filter criteria from others**, you can combine the *Highlight* option with a query filter component. This allows you to lower the opacity of non-matching items while keeping relevant results clearly visible.
+
+1. In the *Layout* pane, make sure the *Filtering & Highlighting* > *Highlight* option is enabled.
+
+1. Set your preferred opacity, e.g. 20 %. This determines how clearly you will see the markers and lines that do not meet the criteria specified in the query filter.
+
+1. Add a [query filter visualization](xref:DashboardQueryFilter) to your app or dashboard.
+
+1. Apply the same query data to the query filter that is used by the maps component.
+
+1. In the *Data* pane, navigate to *All available data* > *Components* > *Query filter #*, and drag the *Query columns* data item onto your maps component.
+
+   In read mode, you can now use the query filter component to filter and refine the data displayed in the grid component. Items that do not meet the specified criteria will be shown with lowered opacity.
 
 #### Customizing markers
 
-  > [!NOTE]
-  > The center of the marker template is determined by the latitude and longitude values for that marker.
+You can freely **customize the appearance of markers** on the map to better represent your data:
 
-  > [!TIP]
-  > For more information on how to use the Template Editor to customize the appearance of the markers, see [Using the Template Editor](xref:Template_Editor).
+1. In the *Layout* pane, expand the *Layer settings* section.
+
+1. In the *Template* subsection, click *Edit* to open the Template Editor.
+
+1. Make your changes as described under [Using the Template Editor](xref:Template_Editor).
+
+> [!NOTE]
+> The center of the marker template is determined by the latitude and longitude values for that marker.
+
+In the example below, the Template Editor was used to customize the markers representing cell towers. Displaying the markers as cell towers makes the map more intuitive and easier to interpret.
+
+![cell towers](~/dataminer/images/Maps_Celltowers.png)<br>*Maps component in DataMiner 10.5.11*
+
+#### Default maps template
+
+By default, the template of a maps component includes the following **pre-configured layers**:
+
+| Layer | Type | Description |
+|--|--|--|
+| ![Ellipse layer](~/dataminer/images/Maps_Template_Layer1.png) | Ellipse | Acts as the background of each marker. Default color is #FDFDFD, with conditional formatting for hover (#E8E8E9) and selection (#9AB3EA). |
+| ![Ellipse layer 2](~/dataminer/images/Maps_Template_Layer2.png) | Ellipse | Acts as a visual border by being slightly larger than the background layer. Default color is #C5C6C8, with conditional formatting for hover (#A0A2A6) and selection (#2563EB). |
+
+This default template (available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->) ensures that a marker is highlighted when hovered over and stands out when selected, with a light-blue background and a blue border.
+
+This can for instance be useful when the map's component data (i.e. *Components* > *Maps* > *Selected markers* > *Tables*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
 
 ### Maps settings
 
@@ -136,11 +221,25 @@ In the *Settings* pane for this component, you can customize its behavior to sui
 > [!NOTE]
 > The *Update data* setting is currently only applicable for the markers on the map. Real-time updates are not yet supported for lines.
 
-## Adding actions
+## Adding actions to a map
 
-When a maps component is used in a [low-code app](xref:Application_framework), a set of different component actions can be configured (see [Configuring app events](xref:LowCodeApps_event_config)).
+If you add a maps component to a low-code app, you can configure actions that are executed when a line on the map is clicked.
 
-The following actions are available:
+To configure actions:
+
+1. In the *Layout* pane, expand the *Layer settings* section.
+
+1. Click *Configure actions* next to *On line click*.
+
+1. Configure any of the available actions, as detailed under [Configuring app events](xref:LowCodeApps_event_config).
+
+### Maps component actions
+
+Component actions are operations that can be executed on a component when an event is triggered.
+
+When you select the [*Execute component action* option](xref:LowCodeApps_event_config#executing-a-component-action), you can choose from a list of components in the app and the specific actions available for each of them.
+
+For the maps component, the following component actions are available:
 
 - *Clear selection*: This action clears the selection of data in the component. Available from DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!--RN 43635-->.
 
