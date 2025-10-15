@@ -141,7 +141,7 @@ When the *Time range* component had been used to schedule the PDF generation of 
 
 Up to now, when you imported a newer version of a low-code app, its version history would not be updated correctly.
 
-Also, when you exported a low-code app, the version list in the export package would incorrectly include versions that had not been exported.
+Also, when you exported a low-code app, the version list in the export package would incorrectly include all versions of the app. From now on, the version list will only include the version you exported.
 
 #### Low-Code Apps: Users without 'View dashboards' permission would not be allowed to view or edit a low-code app via a dashboard gateway [ID 43846]
 
