@@ -22,9 +22,9 @@ The sidebar on the left of the Grass Valley AMPP Manager app contains buttons th
 | ![Configuration](~/dataminer/images/GVAMPP_Button3_Icon.png) | Opens the *Setup* page, where users can [configure the external component](xref:GVAMPP_Manager_Installing#installing-and-configuring-the-communication-component) and create a GV AMPP Manager element. |
 | ![About](~/dataminer/images/GVAMPP_Button4_Icon.png) | Opens the *About* page, which shows the application version information. |
 
-## Using the Workload Application Element Configurator
+## Configuring workload application elements
 
-On the Workloads Control page, the **Workload Element** column displays the currently assigned application element. An application element utilizes a specialized connector that processes the configuration and state messages specific to a particular application type. This connector also includes configuration parameters that allow changes of the workload. You can for example set the recording file or start a clip player.
+On the Workloads Control page, the **Workload Element** column displays the currently assigned application element. An application element utilizes a specialized connector that processes the configuration and state messages specific to a particular application type. This connector also includes configuration parameters that allow changes of the workload.
 
 ![Application element on the Workloads Control page](~/dataminer/images/GVAMPP_application_elementy_column.png)
 
