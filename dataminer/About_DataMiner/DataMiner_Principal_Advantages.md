@@ -51,7 +51,7 @@ The DataMiner data acquisition & control layer is based on truly unique and inno
 Integrating new technologies, implementing strategic changes in your business models, launching new service offerings, dealing with unexpected competitors or new customer demands? DataMiner enables you to move quickly and in any direction, whenever you need to.
 
 - Designed for maximum agility
-- Featuring powerful versioning and live run-time evolutions
+- Featuring powerful versioning and live runtime evolutions
 - Supported by IDE toolset (DataMiner Integration Studio)
 - Collaborative CI/CD setting
 

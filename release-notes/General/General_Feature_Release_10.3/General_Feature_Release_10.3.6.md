@@ -128,7 +128,7 @@ SLLogCollector packages will now also include all files found in `C:\Skyline Dat
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
-When an SRM event has been stuck for more than 15 minutes, the following run-time error will now appear in the Alarm Console:
+When an SRM event has been stuck for more than 15 minutes, the following runtime error will now appear in the Alarm Console:
 
 ```txt
 Thread problem in SLNet: SRM event thread for booking with id <booking id>
@@ -138,8 +138,8 @@ This error will also be added to the *SLWatchDog2.txt* log file.
 
 > [!NOTE]
 >
-> - This run-time error will appear when a custom booking event script that was configured to run synchronously has been running for more than 15 minutes. We highly recommend configuring custom booking events to run asynchronously. For more information, see [Service Orchestration custom events configuration](xref:Service_Orchestration_custom_events).
-> - Half-open run-time errors (which are thrown after an SRM event has been stuck for more than 7.5 minutes) will also be added to the *SLWatchDog2.txt* log file.
+> - This runtime error will appear when a custom booking event script that was configured to run synchronously has been running for more than 15 minutes. We highly recommend configuring custom booking events to run asynchronously. For more information, see [Service Orchestration custom events configuration](xref:Service_Orchestration_custom_events).
+> - Half-open runtime errors (which are thrown after an SRM event has been stuck for more than 7.5 minutes) will also be added to the *SLWatchDog2.txt* log file.
 
 #### DataMiner upgrades and downgrades can now be performed over gRPC [ID 36023]
 
@@ -214,7 +214,7 @@ Element replication will now automatically detect the connection settings of the
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
-In the *MaintenanceSettings.xml* file, SLWatchDog can be configured to trigger a Failover switch when it detects a run-time error in a critical process on the active Agent of a Failover pair. From now on, this *Failover on RTE* feature will also support Agents that communicate using gRPC.
+In the *MaintenanceSettings.xml* file, SLWatchDog can be configured to trigger a Failover switch when it detects a runtime error in a critical process on the active Agent of a Failover pair. From now on, this *Failover on RTE* feature will also support Agents that communicate using gRPC.
 
 #### SLNetClientTest tool now supports gRPC when it needs to establish additional connections [ID 36279]
 

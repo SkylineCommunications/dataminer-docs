@@ -2,9 +2,9 @@
 uid: Troubleshooting_Run_Time_Errors
 ---
 
-# Alarm Console - run-time errors (RTEs)
+# Alarm Console - runtime errors (RTEs)
 
-## About run-time errors
+## About runtime errors
 
 RTEs occur when a DataMiner process thread does not respond for 15 minutes. Half-open RTEs occur after 7.5 minutes.
 
@@ -18,7 +18,7 @@ These are notable exceptions to the 15-minute window:
 
 When an RTE occurs, an alarm is generated in the Alarm Console, the RTE is logged in *SLWatchDog2.txt*, and all DataMiner log files are captured in a minidump.
 
-### Identifying run-time errors
+### Identifying runtime errors
 
 - RTEs are displayed with severity "Error" in the Alarm Console.
 
@@ -30,7 +30,7 @@ When an RTE occurs, an alarm is generated in the Alarm Console, the RTE is logge
 
 ### Additional resources
 
-- [Watchdog logging and run-time error examples](xref:Watchdog_logging)
+- [Watchdog logging and runtime error examples](xref:Watchdog_logging)
 
 - [Common "Thread problem in x" errors](xref:Thread_problem_in_x)
 
@@ -82,7 +82,7 @@ click HOME "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root
 click CRASHORDISP "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Alarm_Console.html"
 click RTE "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Troubleshooting_Process_Identification.html"
 click COLLECTLOGS "/dataminer/Reference/DataMiner_Tools/SLLogCollector.html"
-click CHECKRTE "#identifying-run-time-errors"
+click CHECKRTE "#identifying-runtime-errors"
 click NORTE "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 class START,CHECKRTE classTerminal;
 class CHECKALARM,CHECKDUMP,CHECKLOGS,CHECKACTIVE,CHECKCRASHORDISP classDecision;

@@ -63,7 +63,7 @@ When the card layout is set to "Proportional", you can now mark cards to non-clo
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
-From now on, when the DataMiner System does not include an indexing engine, no run-time errors or alarms of type "Notice" will be generated for ServiceManager, TicketingManager, ResourceManager and ProfilesManager at startup.
+From now on, when the DataMiner System does not include an indexing engine, no runtime errors or alarms of type "Notice" will be generated for ServiceManager, TicketingManager, ResourceManager and ProfilesManager at startup.
 
 Also, when you open the *Profiles*, *Resources* or *Bookings* app in Cube, a message will now appear, saying that the DataMiner System does not include an indexing engine.
 

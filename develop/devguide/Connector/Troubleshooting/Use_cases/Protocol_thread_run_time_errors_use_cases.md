@@ -2,9 +2,9 @@
 uid: Protocol_thread_run_time_errors_use_cases
 ---
 
-# Protocol thread run-time errors: use cases
+# Protocol thread runtime errors: use cases
 
-This article dives deeper into different use cases where protocol thread run-time errors occur. First, a couple of general concepts are explained that will be useful to fully understand the use cases, then 5 use cases are explained in detail. These may help you in protocol thread RTE investigations, and also contain useful lessons on how to avoid RTEs.
+This article dives deeper into different use cases where protocol thread runtime errors occur. First, a couple of general concepts are explained that will be useful to fully understand the use cases, then 5 use cases are explained in detail. These may help you in protocol thread RTE investigations, and also contain useful lessons on how to avoid RTEs.
 
 ## General concepts
 
@@ -18,9 +18,9 @@ This can lead to an impact on multiple DataMiner elements in case the process or
 
 For more information on protocol threads and the SLProtocol process, see [SLProtocol](xref:InnerWorkingsSLProtocol).
 
-### Protocol run-time errors
+### Protocol runtime errors
 
-When a protocol thread takes too long to finish or gets stuck processing a group (most likely not being able to recover by itself), this is indicated as a protocol run-time error (RTE). RTEs are displayed both in the DataMiner Alarm Console and in the DataMiner Watchdog logging.
+When a protocol thread takes too long to finish or gets stuck processing a group (most likely not being able to recover by itself), this is indicated as a protocol runtime error (RTE). RTEs are displayed both in the DataMiner Alarm Console and in the DataMiner Watchdog logging.
 
 For more information on RTEs in the Watchdog logging, see [Watchdog logging](xref:Watchdog_logging).
 

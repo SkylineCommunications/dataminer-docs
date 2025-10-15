@@ -487,7 +487,7 @@ Ignoring alarm group update: unknown alarm group tree.
 
 <!-- MR 10.3.0 - FR 10.2.6 [CU0]  -->
 
-Up to now, the CSLCloudBridge library would incorrectly not take into account the connection timeout specified in the SLCloud.xml file. In some cases, this could lead to run-time errors in the MessageBrokerReconnectThread.
+Up to now, the CSLCloudBridge library would incorrectly not take into account the connection timeout specified in the SLCloud.xml file. In some cases, this could lead to runtime errors in the MessageBrokerReconnectThread.
 
 The connection timeout specified in SLCloud.xml is the maximum time it can take to set up a connection with NATS (in milliseconds). Minimum value is 1000 ms, default value is 5000 ms.
 
@@ -545,7 +545,7 @@ When, during a Failover switch, the NATS cluster was down, the offline agent wou
 
 <!-- MR 10.3.0 - FR 10.2.8 [CU0] -->
 
-In some cases, run-time errors could occur due to MessageBrokerReconnectThread problems in the SLCloudBridge process.
+In some cases, runtime errors could occur due to MessageBrokerReconnectThread problems in the SLCloudBridge process.
 
 #### SLDataGateway: Communication via NATS could get stopped when a large number of parameter changes were being processed [ID 33731]
 
@@ -624,7 +624,7 @@ This issue will now be prevented. In addition, the element's instance GUID will 
 
 <!-- MR 10.3.0 - FR 10.2.8 CU2 -->
 
-After a DMS with a Cassandra Cluster setup was upgraded to 10.2.8 (CU1), it could occur that the Alarm Console showed run-time errors related to the SLAnalytics process. This was caused by an upgrade action that was not triggered for such a setup.
+After a DMS with a Cassandra Cluster setup was upgraded to 10.2.8 (CU1), it could occur that the Alarm Console showed runtime errors related to the SLAnalytics process. This was caused by an upgrade action that was not triggered for such a setup.
 
 #### DataMiner upgrade: 'File already exists' exception could be thrown when multiple actions took a backup of the same file [ID 34601]
 

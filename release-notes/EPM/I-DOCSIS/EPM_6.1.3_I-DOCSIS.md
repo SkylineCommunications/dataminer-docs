@@ -14,7 +14,7 @@ uid: EPM_6.1.3_I-DOCSIS
 
 #### Multithreaded timer polling rate adjusted \[ID 33570\]
 
-To improve performance, the multithreaded timer polling rate has been adjusted for the CCAPs and CM collectors. This will also prevent possible run-time errors.
+To improve performance, the multithreaded timer polling rate has been adjusted for the CCAPs and CM collectors. This will also prevent possible runtime errors.
 
 #### Downstream QAM Channel Post-FEC Uncorrectable Error Ratio parameter adjusted \[ID 33572\]
 

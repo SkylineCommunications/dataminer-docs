@@ -115,7 +115,7 @@ Today, **raw data collection** is the foundation of an efficient architecture. I
 
 To address the challenges of fault detection, ensuring **good data hygiene** is key. DataMiner includes various ways to guarantee data hygiene, including:
 
-- Fully user-definable and run-time-applied alarm thresholds defined in templates.
+- Fully user-definable and runtime-applied alarm thresholds defined in templates.
 - Dynamic switching of alarm definitions based on time or events (e.g. upon service activation).
 - Ability to stack alarm templates to easily and efficiently manage thresholds across vast deployments.
 - Support for relative and absolute thresholds, including a variety of baseline methods.

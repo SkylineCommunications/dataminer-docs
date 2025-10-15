@@ -276,7 +276,7 @@ In some cases, the filter passed to the *GetServicesForFilter* method would not 
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
-When, during a session, you opened the query dataset for the first time, a run-time error would be thrown when there were no queries.
+When, during a session, you opened the query dataset for the first time, a runtime error would be thrown when there were no queries.
 
 #### Dashboards app - Parameter table component: Filter could incorrectly be duplicated [ID 37928]
 

@@ -63,7 +63,7 @@ A variable has the following properties:
   > [!NOTE]
   > In a low-code app, specifying a default value for a variable is optional, except when the variable is marked *Read-only* (see below).
 
-- Read-only. When selected, the variable cannot be modified at run-time.
+- Read-only. When selected, the variable cannot be modified at runtime.
 
   > [!NOTE]
   >

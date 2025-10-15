@@ -63,7 +63,7 @@ This will significantly enhance overall performance when deleting large numbers 
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-Up to now, in some cases, a gRPC call between two SLNet instances could get blocked indefinitely, causing run-time errors to occur in other processes.
+Up to now, in some cases, a gRPC call between two SLNet instances could get blocked indefinitely, causing runtime errors to occur in other processes.
 
 GrpcConnection has now been updated. All gRPC calls will now have a deadline of 15 minutes instead of NO_TIMEOUT.
 

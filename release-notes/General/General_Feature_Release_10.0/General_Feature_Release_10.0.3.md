@@ -281,7 +281,7 @@ A number of enhancements have been made with regarding to the masking of DataMin
 
 #### Run-time errors will now be generated when SLDataMiner halts while executing start, stop or restart actions for elements \[ID 24228\]
 
-When, for whatever reason, SLDataMiner should halt while executing start, stop or restart actions for a particular element, from now on, a run-time error will be generated.
+When, for whatever reason, SLDataMiner should halt while executing start, stop or restart actions for a particular element, from now on, a runtime error will be generated.
 
 #### DataMiner Cube: Enhanced user picture icons in search results \[ID 24364\]\[ID 24573\]
 

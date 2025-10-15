@@ -21,8 +21,8 @@ Possible values:
 |Value|Description|
 |--- |--- |
 |snmpSet|When the parameter value changes, an SNMP Set command is performed.|
-|snmpSetAndGetWithWait|Set the OID and wait, then get the OID and wait (and be warned about run-time errors). See also: [snmpSetAndGet](xref:Protocol.Params.Param-snmpSetAndGet).|
-|snmpSetWithWait|Set the OID and wait for a response (and be warned about run-time errors). See also: [snmpSetAndGet](xref:Protocol.Params.Param-snmpSetAndGet).|
+|snmpSetAndGetWithWait|Set the OID and wait, then get the OID and wait (and be warned about runtime errors). See also: [snmpSetAndGet](xref:Protocol.Params.Param-snmpSetAndGet).|
+|snmpSetWithWait|Set the OID and wait for a response (and be warned about runtime errors). See also: [snmpSetAndGet](xref:Protocol.Params.Param-snmpSetAndGet).|
 
 > [!NOTE]
 > Using snmpSetAndGetWithWait, you will not get the entire table. You will only get one instance of the table.

@@ -335,7 +335,7 @@ When an aggregation alarm was forwarded, in some cases, OID 1.3.6.1.4.1.8813.1.1
 
 #### Run-time errors on elements that were partially included in a service \[ID 26376\]
 
-In some cases, processing service additions, service updates and dynamic service inclusions would cause run-time errors on elements that were partially included in a service.
+In some cases, processing service additions, service updates and dynamic service inclusions would cause runtime errors on elements that were partially included in a service.
 
 Also, service impact indications could in some cases be displayed incorrectly.
 

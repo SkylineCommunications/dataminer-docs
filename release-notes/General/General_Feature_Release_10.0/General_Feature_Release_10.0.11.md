@@ -500,9 +500,9 @@ In addition, within DataMiner Cube, up to now there could be a problem when you 
 
 When you tried to log on to DataMiner using an incorrect user name or password, in some cases, an “Authentication took too long” error would be added to the SLNet logging after about 30 seconds.
 
-#### Incorrect run-time errors of type 'SLDMS ConnectionThread Problem' would appear when an agent responded slower than expected \[ID 26596\]
+#### Incorrect runtime errors of type 'SLDMS ConnectionThread Problem' would appear when an agent responded slower than expected \[ID 26596\]
 
-When a particular agent in a DataMiner System responded slower than expected, in some cases, incorrect run-time errors of type “SLDMS ConnectionThread Problem” could start to appear on other agents in the same DataMiner System.
+When a particular agent in a DataMiner System responded slower than expected, in some cases, incorrect runtime errors of type “SLDMS ConnectionThread Problem” could start to appear on other agents in the same DataMiner System.
 
 #### Failover: Problem when the agents had a different cluster name \[ID 26683\]
 

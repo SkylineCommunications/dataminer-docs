@@ -873,7 +873,7 @@ items:
           topicUid: Debugging_connectors_tracing_the_stack
         - name: Investigating slow device control using dotTrace
           topicUid: Investigating_slow_device_control_using_dotTrace
-        - name: Protocol thread run-time errors - use cases
+        - name: Protocol thread runtime errors - use cases
           topicUid: Protocol_thread_run_time_errors_use_cases
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex

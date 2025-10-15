@@ -682,4 +682,4 @@ When a GQI query requested property values by means of a GetPropertyValueMessage
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 [CU0] -->
 
-Due to a problem with the SPI framework, in some cases, run-time errors could occur in SLDataMiner when tracking user actions.
+Due to a problem with the SPI framework, in some cases, runtime errors could occur in SLDataMiner when tracking user actions.
