@@ -21,7 +21,7 @@ Once you have submitted the form, you will see a confirmation page and receive a
 
 After you have requested access, you will be able to log in to Ziine. To get started, follow these steps:
 
-1. Go to [ziine.skyline.be](https://ziine.skyline.be/)
+1. Go to [ziine.dataminer.services](https://ziine.dataminer.services/)
 
 1. Log in using one of the following ways:
 
@@ -36,7 +36,7 @@ On the homepage of Ziine you can find different apps, dashboards and monitoring 
 
 To install DataMiner Cube:
 
-1. On the [ziine.skyline.be](https://ziine.skyline.be/) homepage, click the ... icon on the *Cube* button, and select *Download installer*.
+1. On the [ziine.dataminer.services](https://ziine.dataminer.services/) homepage, click the ... icon on the *Cube* button, and select *Download installer*.
 
    ![Download Cube installer](~/dataminer/images/DownloadCubeForZiine.png)
 
@@ -48,7 +48,7 @@ To install DataMiner Cube:
 1. Connect to the DataMiner System "the [Ziine Demo System](xref:ZiineDemoSystem)" as described under [Opening the desktop application](xref:Using_the_desktop_app).
 
 > [!NOTE]
-> The Ziine hostname is `https://ziine.skyline.be/`.
+> The Ziine hostname is `https://ziine.dataminer.services/`.
 
 ### Having problems connecting?
 
