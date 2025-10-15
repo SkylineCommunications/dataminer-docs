@@ -1,8 +1,22 @@
 ---
-uid: Copilot_change_log
+uid: DataMinerAssistant_change_log
 ---
 
-# Copilot change log
+# DataMiner Assistant change log
+
+#### 9 October 2025 - DataMiner Assistant 2.0.0 - DataMiner Copilot has been renamed to DataMiner Assistant [ID 43922]
+
+DataMiner Copilot has now been renamed to DataMiner Assistant.
+
+#### 6 October 2025 - Enhancement - DataMiner Assistant 2.0.0 - Natural language to GQI: All datetime values will now be formatted according to the ISO 8601 standard [ID 43874]
+
+Up to now, in some cases, the Large Language Model would format datetime values incorrectly.
+
+From now on, all datetime values will be formatted according to the ISO 8601 standard.
+
+#### 27 August 2025 - Fix - Copilot 1.4.8 - Natural language to GQI: Columns could get removed from the cache when repeatedly requesting queries against the same data source [ID 43616]
+
+When you repeatedly requested GQI queries with aggregations like e.g. "group by" against the same data source, in some cases, certain columns could incorrectly get removed from the data sources cache.
 
 #### 7 July 2025 - Fix - Copilot 1.4.0 - Automatically generated query name would not be a meaningful term [ID 43255]
 
