@@ -21,7 +21,7 @@ A Catalog item is identified by a unique ID (GUID), which you will need to provi
 > - Partition key: IP address or host name of connection
 > - Burst limit: 100 requests
 > - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
-> - No queueing for extra requests beyond the token bucket
+> - No queueing for extra requests beyond the token bucket>
 
 > [!NOTE]
 > For practical examples of how to register a Catalog item, refer to the tutorials [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item), [Registering a new version of a connector in the Catalog](xref:Tutorial_Register_Catalog_Version), and [Registering a new version of a connector in the Catalog using GitHub Actions](xref:Tutorial_Register_Catalog_Version_GitHub_Actions).
@@ -72,6 +72,14 @@ file: <the zip file containing manifest, README and optional images>
 
 > [!NOTE]
 > To reference images in the README.md file, you can use the home directory (~/images) or relative path syntax (./images).
+
+> [!IMPORTANT]
+> Catalog Item Upload Limitations:
+> - Maximum file size for catalog item packages (.zip files): **250 MB**
+> 
+> Vendor/Icon Image Limitations:
+> - Maximum file size for vendor logos and custom icons: **250 KB**
+> - Supported formats for vendor/icon images: .jpg, .jpeg, .png, .bmp, .webp, .svg
 
 #### Manifest file
 
@@ -211,6 +219,6 @@ versionDescription: <The description of the version you want to register>
 
 > [!NOTE]
 >
-> - Supported types are a DataMiner protocol package (.dmprotocol) and a DataMiner application package (.dmapplication).
+> - Supported types are a DataMiner protocol package (.dmprotocol) and a DataMiner application package (.dmapplication), with a maximum file size of **250MB**.
 > - The version description must not exceed 1500 characters. The call will fail with a `Bad Request` error if the length exceeds the maximum allowed limit.<!-- RN 40956 -->
 > - Versions following semantic version A.B.C.D will be displayed in an A.B.C range, versions following semantic version A.B.C will be displayed in an A range, and all other version formats will be displayed in the "Other" range.<!-- RN 41225 -->
