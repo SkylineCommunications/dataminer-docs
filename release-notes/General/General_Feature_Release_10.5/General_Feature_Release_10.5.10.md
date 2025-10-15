@@ -56,7 +56,7 @@ The `DomInstanceNetworkAttachmentSettings` class contains the following properti
 >
 > - When a DOM module is configured to save attachments to a network share, the system will validate whether the user creating/updating the `ModuleSettings` has permission to access the credentials. Once this is set up, any user that has permissions to create or update a `DomInstance` can save attachments to the network share under the configured user.
 > - When a DOM module is configured to save attachments to a network share, no migration is done of existing attachments. They will continue to exist in the `C:\Skyline DataMiner\Documents` folder, but will no longer work. You can copy them over or move them to the network share; the folder structure is the same. Likewise, when removing the configuration to save attachments to a network share, no migration is done of attachments available on the previously configured network share.
-> - By default, the size of the attachments is limited to 20 MB. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#documentsmaxsize).
+> - By default, the size of the attachments is limited to 20 MB. See [Documents.MaxSize](xref:MaintenanceSettings.Documents.MaxSize).
 
 #### gRPC now used by default for server-server and server-client communication [ID 43190] [ID 43260] [ID 43305] [ID 43331] [ID 43435] [ID 43506]
 

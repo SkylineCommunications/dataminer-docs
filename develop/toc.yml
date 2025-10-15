@@ -4341,6 +4341,592 @@ items:
           topicUid: DataMiner.Telnet-active
       - name: WarningThreshold
         topicUid: DataMiner.WarningThreshold
+  - name: MaintenanceSettings schema
+    topicUid: SchemaMaintenanceSettings
+    items:
+    - name: MaintenanceSettings
+      topicUid: MaintenanceSettings
+      items:
+      - name: Aggregation
+        topicUid: MaintenanceSettings.Aggregation
+        items:
+        - name: Source
+          topicUid: MaintenanceSettings.Aggregation.Source
+          items:
+          - name: '@ignoreExceptionValues'
+            topicUid: MaintenanceSettings.Aggregation.Source-ignoreExceptionValues
+      - name: AlarmSettings
+        topicUid: MaintenanceSettings.AlarmSettings
+        items:
+        - name: '@elementTimeoutMode'
+          topicUid: MaintenanceSettings.AlarmSettings-elementTimeoutMode
+        - name: '@serviceTimeoutMode'
+          topicUid: MaintenanceSettings.AlarmSettings-serviceTimeoutMode
+        - name: '@viewTimeoutMode'
+          topicUid: MaintenanceSettings.AlarmSettings-viewTimeoutMode
+        - name: AlarmsPerParameter
+          topicUid: MaintenanceSettings.AlarmSettings.AlarmsPerParameter
+          items:
+          - name: '@client'
+            topicUid: MaintenanceSettings.AlarmSettings.AlarmsPerParameter-client
+          - name: '@recurring'
+            topicUid: MaintenanceSettings.AlarmSettings.AlarmsPerParameter-recurring
+        - name: AutoClear
+          topicUid: MaintenanceSettings.AlarmSettings.AutoClear
+        - name: Blinking
+          topicUid: MaintenanceSettings.AlarmSettings.Blinking
+          items:
+          - name: '@alarmFilter'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-alarmFilter
+          - name: '@blankInterval'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-blankInterval
+          - name: '@blinkInterval'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-blinkInterval
+          - name: '@elementFilter'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-elementFilter
+          - name: '@enabled'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-enabled
+          - name: '@serviceFilter'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-serviceFilter
+          - name: '@serviceSeveritiesFilter'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-serviceSeveritiesFilter
+          - name: '@viewFilter'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-viewFilter
+        - name: MaxFreezeAlarms
+          topicUid: MaintenanceSettings.AlarmSettings.MaxFreezeAlarms
+        - name: MaxFreezeTime
+          topicUid: MaintenanceSettings.AlarmSettings.MaxFreezeTime
+        - name: MustSquashAlarms
+          topicUid: MaintenanceSettings.AlarmSettings.MustSquashAlarms
+        - name: PersistParameterLatchState
+          topicUid: MaintenanceSettings.AlarmSettings.PersistParameterLatchState
+        - name: UseCreationTimeAsMainTime
+          topicUid: MaintenanceSettings.AlarmSettings.UseCreationTimeAsMainTime
+      - name: AutoElementLock
+        topicUid: MaintenanceSettings.AutoElementLock
+        items:
+        - name: '@time'
+          topicUid: MaintenanceSettings.AutoElementLock-time
+      - name: BrokerGateway
+        topicUid: MaintenanceSettings.BrokerGateway
+      - name: Correlation
+        topicUid: MaintenanceSettings.Correlation
+        items:
+        - name: TimeSpanCorrelationRecords
+          topicUid: MaintenanceSettings.Correlation.TimeSpanCorrelationRecords
+      - name: DeltCache
+        topicUid: MaintenanceSettings.DeltCache
+        items:
+        - name: DELTCacheMode
+          topicUid: MaintenanceSettings.DeltCache.DELTCacheMode
+          items:
+          - name: '@mode'
+            topicUid: MaintenanceSettings.DeltCache.DELTCacheMode-mode
+          - name: '@value'
+            topicUid: MaintenanceSettings.DeltCache.DELTCacheMode-value
+      - name: DELTUpgrades
+        topicUid: MaintenanceSettings.DELTUpgrades
+        items:
+        - name: '@activated'
+          topicUid: MaintenanceSettings.DELTUpgrades-activated
+        - name: Delete
+          topicUid: MaintenanceSettings.DELTUpgrades.Delete
+          items:
+          - name: '@mode'
+            topicUid: MaintenanceSettings.DELTUpgrades.Delete-mode
+          - name: '@value'
+            topicUid: MaintenanceSettings.DELTUpgrades.Delete-value
+      - name: DMSRevision
+        topicUid: MaintenanceSettings.DMSRevision
+        items:
+        - name: StartTime
+          topicUid: MaintenanceSettings.DMSRevision.StartTime
+      - name: Documents
+        topicUid: MaintenanceSettings.Documents
+        items:
+        - name: MaxSize
+          topicUid: MaintenanceSettings.Documents.MaxSize
+      - name: Filtering
+        topicUid: MaintenanceSettings.Filtering
+        items:
+        - name: SLElement
+          topicUid: MaintenanceSettings.Filtering.SLElement
+          items:
+          - name: '@fallback'
+            topicUid: MaintenanceSettings.Filtering.SLElement-fallback
+      - name: HTTPS
+        topicUid: MaintenanceSettings.HTTPS
+        items:
+        - name: '@enabled'
+          topicUid: MaintenanceSettings.HTTPS-enabled
+        - name: '@name'
+          topicUid: MaintenanceSettings.HTTPS-name
+      - name: Logging
+        topicUid: MaintenanceSettings.Logging
+        items:
+        - name: Element
+          topicUid: MaintenanceSettings.Logging.Element
+          items:
+          - name: '@slowActionWarnTime'
+            topicUid: MaintenanceSettings.Logging.Element-slowActionWarnTime
+        - name: MaxSize
+          topicUid: MaintenanceSettings.Logging.MaxSize
+      - name: NATSForceManualConfig
+        topicUid: MaintenanceSettings.NATSForceManualConfig
+      - name: Network
+        topicUid: MaintenanceSettings.Network
+        items:
+        - name: '@bitRateTracking'
+          topicUid: MaintenanceSettings.Network-bitRateTracking
+      - name: ProtocolSettings
+        topicUid: MaintenanceSettings.ProtocolSettings
+        items:
+        - name: DCF
+          topicUid: MaintenanceSettings.ProtocolSettings.DCF
+          items:
+          - name: CalculateAlarmState
+            topicUid: MaintenanceSettings.ProtocolSettings.DCF.CalculateAlarmState
+        - name: ExecutionVerification
+          topicUid: MaintenanceSettings.ProtocolSettings.ExecutionVerification
+          items:
+          - name: '@timeout'
+            topicUid: MaintenanceSettings.ProtocolSettings.ExecutionVerification-timeout
+        - name: MaxAggregationThreads
+          topicUid: MaintenanceSettings.ProtocolSettings.MaxAggregationThreads
+      - name: RecycleBinSize
+        topicUid: MaintenanceSettings.RecycleBinSize
+      - name: Replication
+        topicUid: MaintenanceSettings.Replication
+        items:
+        - name: AuthenticateMessageTimeout
+          topicUid: MaintenanceSettings.Replication.AuthenticateMessageTimeout
+        - name: ConnectionCheckingInterval
+          topicUid: MaintenanceSettings.Replication.ConnectionCheckingInterval
+        - name: ConnectionCheckingMaxIdleTime
+          topicUid: MaintenanceSettings.Replication.ConnectionCheckingMaxIdleTime
+        - name: ConnectionMinDelayBeforeRetry
+          topicUid: MaintenanceSettings.Replication.ConnectionMinDelayBeforeRetry
+        - name: ConnectionRetryInterval
+          topicUid: MaintenanceSettings.Replication.ConnectionRetryInterval
+        - name: ConnectionTimeoutTime
+          topicUid: MaintenanceSettings.Replication.ConnectionTimeoutTime
+        - name: HttpExpect100Continue
+          topicUid: MaintenanceSettings.Replication.HttpExpect100Continue
+        - name: UseZipping
+          topicUid: MaintenanceSettings.Replication.UseZipping
+      - name: SLASPConnection
+        topicUid: MaintenanceSettings.SLASPConnection
+        items:
+        - name: ReportResponseTimeout
+          topicUid: MaintenanceSettings.SLASPConnection.ReportResponseTimeout
+        - name: TimeLineCache
+          topicUid: MaintenanceSettings.SLASPConnection.TimeLineCache
+          items:
+          - name: '@enabled'
+            topicUid: MaintenanceSettings.SLASPConnection.TimeLineCache-enabled
+          - name: '@expirationTime'
+            topicUid: MaintenanceSettings.SLASPConnection.TimeLineCache-expirationTime
+          - name: '@gracePeriod'
+            topicUid: MaintenanceSettings.SLASPConnection.TimeLineCache-gracePeriod
+          - name: '@logVerbose'
+            topicUid: MaintenanceSettings.SLASPConnection.TimeLineCache-logVerbose
+          - name: '@maxRecords'
+            topicUid: MaintenanceSettings.SLASPConnection.TimeLineCache-maxRecords
+      - name: SLNet
+        topicUid: MaintenanceSettings.SLNet
+        items:
+        - name: ActiveAlarmStatsExpirationTime
+          topicUid: MaintenanceSettings.SLNet.ActiveAlarmStatsExpirationTime
+        - name: ActiveAlarmStatsTimeToKeep
+          topicUid: MaintenanceSettings.SLNet.ActiveAlarmStatsTimeToKeep
+        - name: AllMessageHandleWarnTime
+          topicUid: MaintenanceSettings.SLNet.AllMessageHandleWarnTime
+        - name: AllowClientSideCaching
+          topicUid: MaintenanceSettings.SLNet.AllowClientSideCaching
+        - name: AuthenticationTicketExpirationTime
+          topicUid: MaintenanceSettings.SLNet.AuthenticationTicketExpirationTime
+        - name: AutoDisconnectTime
+          topicUid: MaintenanceSettings.SLNet.AutoDisconnectTime
+        - name: AvailableDashboardsServiceUrl
+          topicUid: MaintenanceSettings.SLNet.AvailableDashboardsServiceUrl
+        - name: BackgroundTasksMaxList
+          topicUid: MaintenanceSettings.SLNet.BackgroundTasksMaxList
+        - name: CallbackTimeout
+          topicUid: MaintenanceSettings.SLNet.CallbackTimeout
+        - name: ClearedAlarmStoreTime
+          topicUid: MaintenanceSettings.SLNet.ClearedAlarmStoreTime
+        - name: ClientMessageHandleWarnTime
+          topicUid: MaintenanceSettings.SLNet.ClientMessageHandleWarnTime
+        - name: ClientSkipViewUpdates
+          topicUid: MaintenanceSettings.SLNet.ClientSkipViewUpdates
+        - name: ClusterTransitionStateTimeout
+          topicUid: MaintenanceSettings.SLNet.ClusterTransitionStateTimeout
+        - name: ConnectionAuthMethod
+          topicUid: MaintenanceSettings.SLNet.ConnectionAuthMethod
+        - name: ConnectionAuthTimeout
+          topicUid: MaintenanceSettings.SLNet.ConnectionAuthTimeout
+        - name: ConnectionCheckInterval
+          topicUid: MaintenanceSettings.SLNet.ConnectionCheckInterval
+          items:
+          - name: '@clients'
+            topicUid: MaintenanceSettings.SLNet.ConnectionCheckInterval-clients
+          - name: '@slnet'
+            topicUid: MaintenanceSettings.SLNet.ConnectionCheckInterval-slnet
+        - name: ConnectionCheckMaxFail
+          topicUid: MaintenanceSettings.SLNet.ConnectionCheckMaxFail
+        - name: ConnectionCheckTimeout
+          topicUid: MaintenanceSettings.SLNet.ConnectionCheckTimeout
+        - name: ConnectionRefusalTime
+          topicUid: MaintenanceSettings.SLNet.ConnectionRefusalTime
+        - name: ConnectionRetryInterval
+          topicUid: MaintenanceSettings.SLNet.ConnectionRetryInterval
+        - name: ConnectionWarnCount
+          topicUid: MaintenanceSettings.SLNet.ConnectionWarnCount
+        - name: ConnectivityEngineInterval
+          topicUid: MaintenanceSettings.SLNet.ConnectivityEngineInterval
+        - name: ConnectivityLogVerbose
+          topicUid: MaintenanceSettings.SLNet.ConnectivityLogVerbose
+        - name: ConnectivityMaxConnections
+          topicUid: MaintenanceSettings.SLNet.ConnectivityMaxConnections
+        - name: ConnectTimeout
+          topicUid: MaintenanceSettings.SLNet.ConnectTimeout
+        - name: CorrelationClearOnUpdate
+          topicUid: MaintenanceSettings.SLNet.CorrelationClearOnUpdate
+        - name: CorrelationLogVerbose
+          topicUid: MaintenanceSettings.SLNet.CorrelationLogVerbose
+        - name: CorrelationLoopCheckMax
+          topicUid: MaintenanceSettings.SLNet.CorrelationLoopCheckMax
+        - name: CorrelationMaxBucketsPerRule
+          topicUid: MaintenanceSettings.SLNet.CorrelationMaxBucketsPerRule
+        - name: DashboardPrefetchInterval
+          topicUid: MaintenanceSettings.SLNet.DashboardPrefetchInterval
+        - name: DashboardPrefetchLoopInterval
+          topicUid: MaintenanceSettings.SLNet.DashboardPrefetchLoopInterval
+        - name: DefaultPollingRequestTimeout
+          topicUid: MaintenanceSettings.SLNet.DefaultPollingRequestTimeout
+        - name: DefaultUpgradeOptions
+          topicUid: MaintenanceSettings.SLNet.DefaultUpgradeOptions
+        - name: DetectHangingCallsInterval
+          topicUid: MaintenanceSettings.SLNet.DetectHangingCallsInterval
+        - name: DisableDashboardPrefetch
+          topicUid: MaintenanceSettings.SLNet.DisableDashboardPrefetch
+        - name: DisableIncomingSspiAuth
+          topicUid: MaintenanceSettings.SLNet.DisableIncomingSspiAuth
+        - name: DisableReplicationBuffering
+          topicUid: MaintenanceSettings.SLNet.DisableReplicationBuffering
+        - name: ElementProtocolCacheMRU
+          topicUid: MaintenanceSettings.SLNet.ElementProtocolCacheMRU
+        - name: EnableDotNetRemoting
+          topicUid: MaintenanceSettings.SLNet.EnableDotNetRemoting
+        - name: EnableFailedAuthenticationInfoEvents
+          topicUid: MaintenanceSettings.SLNet.EnableFailedAuthenticationInfoEvents
+        - name: EPMAsyncTimeout
+          topicUid: MaintenanceSettings.SLNet.EPMAsyncTimeout
+        - name: EPMBulkCount
+          topicUid: MaintenanceSettings.SLNet.EPMBulkCount
+        - name: ExternalConnectionCheckInterval
+          topicUid: MaintenanceSettings.SLNet.ExternalConnectionCheckInterval
+        - name: ExtraSupportedFeatureKeys
+          topicUid: MaintenanceSettings.SLNet.ExtraSupportedFeatureKeys
+        - name: FailoverDbSyncMaxSubtables
+          topicUid: MaintenanceSettings.SLNet.FailoverDbSyncMaxSubtables
+        - name: FailoverMaxStartupTime
+          topicUid: MaintenanceSettings.SLNet.FailoverMaxStartupTime
+        - name: FailoverPingFailuresBeforeVipAvailable
+          topicUid: MaintenanceSettings.SLNet.FailoverPingFailuresBeforeVipAvailable
+        - name: FailoverPingTimeoutAwaitVIP
+          topicUid: MaintenanceSettings.SLNet.FailoverPingTimeoutAwaitVIP
+        - name: FailoverPingTimeoutHeartbeats
+          topicUid: MaintenanceSettings.SLNet.FailoverPingTimeoutHeartbeats
+        - name: FlushAgentMessagesInterval
+          topicUid: MaintenanceSettings.SLNet.FlushAgentMessagesInterval
+        - name: FlushQueuedMessagesInterval
+          topicUid: MaintenanceSettings.SLNet.FlushQueuedMessagesInterval
+        - name: HistoryAlarmStatsExpirationTime
+          topicUid: MaintenanceSettings.SLNet.HistoryAlarmStatsExpirationTime
+        - name: HistoryAlarmStatsTimeToKeep
+          topicUid: MaintenanceSettings.SLNet.HistoryAlarmStatsTimeToKeep
+        - name: HttpExpect100Continue
+          topicUid: MaintenanceSettings.SLNet.HttpExpect100Continue
+        - name: HttpTcpKeepAliveInterval
+          topicUid: MaintenanceSettings.SLNet.HttpTcpKeepAliveInterval
+        - name: InitRemotingViaAppConfig
+          topicUid: MaintenanceSettings.SLNet.InitRemotingViaAppConfig
+        - name: KeepFunctionDveViewsOnDisable
+          topicUid: MaintenanceSettings.SLNet.KeepFunctionDveViewsOnDisable
+        - name: MaxAgentConnectsPerHour
+          topicUid: MaintenanceSettings.SLNet.MaxAgentConnectsPerHour
+        - name: MaxAgentMessagesQueueCount
+          topicUid: MaintenanceSettings.SLNet.MaxAgentMessagesQueueCount
+        - name: MaxAuthenticationTickets
+          topicUid: MaintenanceSettings.SLNet.MaxAuthenticationTickets
+        - name: MaxConcurrentDashboardTrendQueries
+          topicUid: MaintenanceSettings.SLNet.MaxConcurrentDashboardTrendQueries
+        - name: MaxConcurrentSspiAuth
+          topicUid: MaintenanceSettings.SLNet.MaxConcurrentSspiAuth
+        - name: MaxConnectionAttempts
+          topicUid: MaintenanceSettings.SLNet.MaxConnectionAttempts
+        - name: MaxConnectionAttemptsCheckEnabled
+          topicUid: MaintenanceSettings.SLNet.MaxConnectionAttemptsCheckEnabled
+        - name: MaxConnectionAttemptsTime
+          topicUid: MaintenanceSettings.SLNet.MaxConnectionAttemptsTime
+        - name: MaxKeepUnsafeElementProtocolInCache
+          topicUid: MaintenanceSettings.SLNet.MaxKeepUnsafeElementProtocolInCache
+        - name: MaxMessagesPerCallback
+          topicUid: MaintenanceSettings.SLNet.MaxMessagesPerCallback
+        - name: MaxMessagesPerPollingRequest
+          topicUid: MaintenanceSettings.SLNet.MaxMessagesPerPollingRequest
+        - name: MaxSimultaneousRequestsToOtherAgents
+          topicUid: MaintenanceSettings.SLNet.MaxSimultaneousRequestsToOtherAgents
+        - name: MaxStackParameterNotifications
+          topicUid: MaintenanceSettings.SLNet.MaxStackParameterNotifications
+        - name: MaxStackPendingMessages
+          topicUid: MaintenanceSettings.SLNet.MaxStackPendingMessages
+        - name: MaxStackPendingMessagesFast
+          topicUid: MaintenanceSettings.SLNet.MaxStackPendingMessagesFast
+        - name: MaxStackSLNetCOMNotifications
+          topicUid: MaintenanceSettings.SLNet.MaxStackSLNetCOMNotifications
+        - name: MaxThreadsAsyncRequests
+          topicUid: MaintenanceSettings.SLNet.MaxThreadsAsyncRequests
+        - name: MaxThreadsFailoverDbForwarding
+          topicUid: MaintenanceSettings.SLNet.MaxThreadsFailoverDbForwarding
+        - name: MaxThreadsMergeAckRequests
+          topicUid: MaintenanceSettings.SLNet.MaxThreadsMergeAckRequests
+        - name: MaxThreadsMergeRequests
+          topicUid: MaintenanceSettings.SLNet.MaxThreadsMergeRequests
+        - name: MaxTopologyNotificationQueue
+          topicUid: MaintenanceSettings.SLNet.MaxTopologyNotificationQueue
+        - name: MaxUploadSize
+          topicUid: MaintenanceSettings.SLNet.MaxUploadSize
+        - name: MaxWaitForFailoverDBPushOnManualSwitch
+          topicUid: MaintenanceSettings.SLNet.MaxWaitForFailoverDBPushOnManualSwitch
+        - name: MaxWaitForFailoverOffline
+          topicUid: MaintenanceSettings.SLNet.MaxWaitForFailoverOffline
+        - name: MaxWaitForFailoverVIP
+          topicUid: MaintenanceSettings.SLNet.MaxWaitForFailoverVIP
+        - name: MessageThrottlingPeriodicUpdate
+          topicUid: MaintenanceSettings.SLNet.MessageThrottlingPeriodicUpdate
+        - name: MessageThrottlingThreshold
+          topicUid: MaintenanceSettings.SLNet.MessageThrottlingThreshold
+        - name: NicsToCheckOnFailover
+          topicUid: MaintenanceSettings.SLNet.NicsToCheckOnFailover
+        - name: NonElementProtocol
+          topicUid: MaintenanceSettings.SLNet.NonElementProtocol
+        - name: ParameterNotificationClearIdleQueueTime
+          topicUid: MaintenanceSettings.SLNet.ParameterNotificationClearIdleQueueTime
+        - name: ParameterNotificationQueueCompactLimit
+          topicUid: MaintenanceSettings.SLNet.ParameterNotificationQueueCompactLimit
+        - name: ParameterNotificationThreadCount
+          topicUid: MaintenanceSettings.SLNet.ParameterNotificationThreadCount
+        - name: PluginsToSkipLoad
+          topicUid: MaintenanceSettings.SLNet.PluginsToSkipLoad
+        - name: ProtocolCacheMRU
+          topicUid: MaintenanceSettings.SLNet.ProtocolCacheMRU
+        - name: QueuedStackOverflow
+          topicUid: MaintenanceSettings.SLNet.QueuedStackOverflow
+        - name: ReAddPreviouslySeenIPAddresses
+          topicUid: MaintenanceSettings.SLNet.ReAddPreviouslySeenIPAddresses
+        - name: RegexHistoryCacheTimeout
+          topicUid: MaintenanceSettings.SLNet.RegexHistoryCacheTimeout
+        - name: RegexHistoryEnable
+          topicUid: MaintenanceSettings.SLNet.RegexHistoryEnable
+        - name: RequireEncryptedConnections
+          topicUid: MaintenanceSettings.SLNet.RequireEncryptedConnections
+        - name: SearchOptions
+          topicUid: MaintenanceSettings.SLNet.SearchOptions
+        - name: ServiceTemplateWarnCount
+          topicUid: MaintenanceSettings.SLNet.ServiceTemplateWarnCount
+        - name: ServiceTemplateWarnElementCount
+          topicUid: MaintenanceSettings.SLNet.ServiceTemplateWarnElementCount
+        - name: SkipInformationEvents
+          topicUid: MaintenanceSettings.SLNet.SkipInformationEvents
+        - name: SLNetCOMNotificationsStackExceedsThresholdGracePeriodInMin
+          topicUid: MaintenanceSettings.SLNet.SLNetCOMNotificationsStackExceedsThresholdGracePeriodInMin
+        - name: SLNetConnectionCheckingMaxIdle
+          topicUid: MaintenanceSettings.SLNet.SLNetConnectionCheckingMaxIdle
+        - name: SmartBaselineThreadTime
+          topicUid: MaintenanceSettings.SLNet.SmartBaselineThreadTime
+        - name: TicketExpirationTime
+          topicUid: MaintenanceSettings.SLNet.TicketExpirationTime
+        - name: TimeoutAsyncMessagesBetweenAgents
+          topicUid: MaintenanceSettings.SLNet.TimeoutAsyncMessagesBetweenAgents
+        - name: TrendCacheEnable
+          topicUid: MaintenanceSettings.SLNet.TrendCacheEnable
+        - name: TrendCacheExpirationTime
+          topicUid: MaintenanceSettings.SLNet.TrendCacheExpirationTime
+        - name: TrendCacheLogVerbose
+          topicUid: MaintenanceSettings.SLNet.TrendCacheLogVerbose
+        - name: TrendCacheMaxRecordsInCache
+          topicUid: MaintenanceSettings.SLNet.TrendCacheMaxRecordsInCache
+        - name: UseSerializationManager
+          topicUid: MaintenanceSettings.SLNet.UseSerializationManager
+      - name: Spectrum
+        topicUid: MaintenanceSettings.Spectrum
+        items:
+        - name: AlarmRecordings
+          topicUid: MaintenanceSettings.Spectrum.AlarmRecordings
+          items:
+          - name: '@maxDirSize'
+            topicUid: MaintenanceSettings.Spectrum.AlarmRecordings-maxDirSize
+      - name: Surveyor
+        topicUid: MaintenanceSettings.Surveyor
+        items:
+        - name: ElementStatistics
+          topicUid: MaintenanceSettings.Surveyor.ElementStatistics
+        - name: ServiceStatistics
+          topicUid: MaintenanceSettings.Surveyor.ServiceStatistics
+        - name: ViewStatistics
+          topicUid: MaintenanceSettings.Surveyor.ViewStatistics
+      - name: Trending
+        topicUid: MaintenanceSettings.Trending
+        items:
+        - name: '@updateTrendIndices'
+          topicUid: MaintenanceSettings.Trending-updateTrendIndices
+        - name: EDCurves
+          topicUid: MaintenanceSettings.Trending.EDCurves
+        - name: SDCurves
+          topicUid: MaintenanceSettings.Trending.SDCurves
+        - name: TimeSpan
+          topicUid: MaintenanceSettings.Trending.TimeSpan
+          items:
+          - name: '@unit'
+            topicUid: MaintenanceSettings.Trending.TimeSpan-unit
+        - name: TimeSpan1DayRecords
+          topicUid: MaintenanceSettings.Trending.TimeSpan1DayRecords
+          items:
+          - name: '@unit'
+            topicUid: MaintenanceSettings.Trending.TimeSpan1DayRecords-unit
+          - name: '@window'
+            topicUid: MaintenanceSettings.Trending.TimeSpan1DayRecords-window
+        - name: TimeSpan1HourRecords
+          topicUid: MaintenanceSettings.Trending.TimeSpan1HourRecords
+          items:
+          - name: '@unit'
+            topicUid: MaintenanceSettings.Trending.TimeSpan1HourRecords-unit
+          - name: '@window'
+            topicUid: MaintenanceSettings.Trending.TimeSpan1HourRecords-window
+        - name: TimeSpan5MinRecords
+          topicUid: MaintenanceSettings.Trending.TimeSpan5MinRecords
+          items:
+          - name: '@unit'
+            topicUid: MaintenanceSettings.Trending.TimeSpan5MinRecords-unit
+          - name: '@window'
+            topicUid: MaintenanceSettings.Trending.TimeSpan5MinRecords-window
+        - name: TimeSpanSpectrumRecords
+          topicUid: MaintenanceSettings.Trending.TimeSpanSpectrumRecords
+          items:
+          - name: '@unit'
+            topicUid: MaintenanceSettings.Trending.TimeSpanSpectrumRecords-unit
+        - name: WarningLevel
+          topicUid: MaintenanceSettings.Trending.WarningLevel
+      - name: WatchDog
+        topicUid: MaintenanceSettings.WatchDog
+        items:
+        - name: Actions
+          topicUid: MaintenanceSettings.WatchDog.Actions
+          items:
+          - name: '@restartElementOnProtocolRTE'
+            topicUid: MaintenanceSettings.WatchDog.Actions-restartElementOnProtocolRTE
+        - name: EMail
+          topicUid: MaintenanceSettings.WatchDog.EMail
+          items:
+          - name: '@active'
+            topicUid: MaintenanceSettings.WatchDog.EMail-active
+          - name: BCCDestination
+            topicUid: MaintenanceSettings.WatchDog.EMail.BCCDestination
+          - name: CCDestination
+            topicUid: MaintenanceSettings.WatchDog.EMail.CCDestination
+          - name: Destination
+            topicUid: MaintenanceSettings.WatchDog.EMail.Destination
+        - name: Errors
+          topicUid: MaintenanceSettings.WatchDog.Errors
+        - name: FailoverOnRTE
+          topicUid: MaintenanceSettings.WatchDog.FailoverOnRTE
+          items:
+          - name: SkipRTE
+            topicUid: MaintenanceSettings.WatchDog.FailoverOnRTE.SkipRTE
+            items:
+            - name: '@process'
+              topicUid: MaintenanceSettings.WatchDog.FailoverOnRTE.SkipRTE-process
+            - name: '@thread'
+              topicUid: MaintenanceSettings.WatchDog.FailoverOnRTE.SkipRTE-thread
+        - name: ProcessMonitor
+          topicUid: MaintenanceSettings.WatchDog.ProcessMonitor
+          items:
+          - name: '@maxAttachmentSize'
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor-maxAttachmentSize
+          - name: '@maxInHour'
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor-maxInHour
+          - name: '@maxProcess'
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor-maxProcess
+          - name: '@maxTimeout'
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor-maxTimeout
+          - name: '@passwordOnAttachment'
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor-passwordOnAttachment
+          - name: HighDumps
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.HighDumps
+            items:
+            - name: '@maxDaysToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.HighDumps-maxDaysToKeep
+            - name: '@maxToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.HighDumps-maxToKeep
+            - name: '@minToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.HighDumps-minToKeep
+          - name: LowDumps
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.LowDumps
+            items:
+            - name: '@maxDaysToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.LowDumps-maxDaysToKeep
+            - name: '@maxToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.LowDumps-maxToKeep
+            - name: '@minToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.LowDumps-minToKeep
+          - name: MaxTotalCrashDumpFolderSizeGb
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.MaxTotalCrashDumpFolderSizeGb
+          - name: RequestDumps
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.RequestDumps
+            items:
+            - name: '@maxDaysToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.RequestDumps-maxDaysToKeep
+            - name: '@maxToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.RequestDumps-maxToKeep
+            - name: '@minToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.RequestDumps-minToKeep
+          - name: TempFolders
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.TempFolders
+            items:
+            - name: '@maxDaysToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.TempFolders-maxDaysToKeep
+            - name: '@maxToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.TempFolders-maxToKeep
+            - name: '@minToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.TempFolders-minToKeep
+        - name: TechsupportNotifications
+          topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications
+          items:
+          - name: Notifications
+            topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications.Notifications
+            items:
+            - name: Disable
+              topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications.Notifications.Disable
+          - name: Reports
+            topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications.Reports
+            items:
+            - name: '@emailtime'
+              topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications.Reports-emailtime
+            - name: '@interval'
+              topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications.Reports-interval
+            - name: Disable
+              topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications.Reports.Disable
+              items:
+              - name: '@data'
+                topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications.Reports.Disable-data
+        - name: TimeoutTime
+          topicUid: MaintenanceSettings.WatchDog.TimeoutTime
+    - name: SchemaTypes
+      items:
+      - name: DataMinerNillablePositiveOrZeroInteger
+        topicUid: MaintenanceSettings-DataMinerNillablePositiveOrZeroInteger
   - name: SNMP Managers schema
     topicUid: SchemaSNMPManagers
     items:

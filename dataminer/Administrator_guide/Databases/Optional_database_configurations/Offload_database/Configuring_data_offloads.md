@@ -64,7 +64,7 @@ The offload rate for trend data and alarm data can be configured in System Cente
      The available time frame records depend on the trend window configuration. For a default configuration, the following options are available: *All time frame records* (default setting), *Only short time frame records (5 min)* and *Only long time frame records (60 min)*.
 
      > [!NOTE]
-     > For more information on the trend window configuration, see [MaintenanceSettings.xml](xref:MaintenanceSettings_xml).
+     > For more information on the trend window configuration, see [MaintenanceSettings.Trending](xref:MaintenanceSettings.Trending).
 
    - *Remote table name*: Allows you to customize the name of the table containing this data in the offload database. The default name is *DataAvg*.
 
