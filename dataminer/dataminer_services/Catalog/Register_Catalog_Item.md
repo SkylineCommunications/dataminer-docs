@@ -21,7 +21,7 @@ A Catalog item is identified by a unique ID (GUID), which you will need to provi
 > - Partition key: IP address or host name of connection
 > - Burst limit: 100 requests
 > - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
-> - No queueing for extra requests beyond the token bucket>
+> - No queueing for extra requests beyond the token bucket
 
 > [!NOTE]
 > For practical examples of how to register a Catalog item, refer to the tutorials [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item), [Registering a new version of a connector in the Catalog](xref:Tutorial_Register_Catalog_Version), and [Registering a new version of a connector in the Catalog using GitHub Actions](xref:Tutorial_Register_Catalog_Version_GitHub_Actions).
