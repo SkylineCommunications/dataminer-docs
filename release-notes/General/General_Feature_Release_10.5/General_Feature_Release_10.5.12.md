@@ -184,6 +184,14 @@ The `GRPCConnection` class in SLNet is now able to expose the HTTP cookies it co
 
 See also: [DataMiner Cube will now reuse the HTTP cookies of the gRPC connection [ID 43860]](xref:Cube_Feature_Release_10.5.12#dataminer-cube-will-now-reuse-the-http-cookies-of-the-grpc-connection-id-43860).
 
+#### SLDMS: Broadcast event DMS_INVALIDATE_HOSTING_AGENT_CACHE has been removed [ID 43896]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, when the SLDMS process had updated its local hosting agent cache information about an element, service, or redundancy group, it would publish a DMS_INVALIDATE_HOSTING_AGENT_CACHE request across the cluster so that other agents could also update this information.
+
+This redundant broadcast event has now been removed.
+
 #### Alarms of type 'Notice' will now be generated when SLDataGateway queues no longer seem to decrease [ID 43909]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->

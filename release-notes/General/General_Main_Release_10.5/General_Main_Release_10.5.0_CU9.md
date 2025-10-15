@@ -72,6 +72,14 @@ Because of a number of enhancements, overall performance of the the *Cube CRL Fr
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
+#### SLDMS: Broadcast event DMS_INVALIDATE_HOSTING_AGENT_CACHE has been removed [ID 43896]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, when the SLDMS process had updated its local hosting agent cache information about an element, service, or redundancy group, it would publish a DMS_INVALIDATE_HOSTING_AGENT_CACHE request across the cluster so that other agents could also update this information.
+
+This redundant broadcast event has now been removed.
+
 #### DataMiner upgrade: Enhanced warning when an upgrade package cannot be found [ID 43916]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
