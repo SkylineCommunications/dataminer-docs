@@ -67,9 +67,40 @@ Panning allows you to move the visible area of the map. You can pan in the follo
 
 ## Selecting which layers are shown
 
-In the top-left corner of the component, you can select which layers are displayed on the map.
+In the top-left corner of the component, you can choose which layers are displayed on the map by selecting them from the dropdown menu.
 
 ![Displaying different layers](~/dataminer/images/Maps_Layers.gif)<br>*Maps component in DataMiner 10.5.11*
+
+## Changing the map type
+
+When the [*Show map type control* setting](#map-settings) is enabled, you can change the type of map directly in read mode.
+
+In this case, you can switch between the supported map types using the dropdown menu in the lower-left corner of the map. The available map types depend on the map provider. At present, only Google Maps is supported, with the following types:
+
+- *roadmap*
+
+- *satellite*
+
+- *hybrid*
+
+- *terrain*
+
+![Map types](~/dataminer/images/Map_Types.gif)<br>*Maps component in DataMiner 10.5.11*
+
+The [*Default map type* setting](#map-settings) determines which type of map is displayed initially when the dashboard or app is opened.
+
+## Using the map as a selector
+
+You can use a maps component as a dynamic selector, i.e. a component whose selection **determines behavior or data elsewhere in your dashboard or app**. A common use case is controlling what is displayed in another component, but selected values can also serve as input for scripts, queries, or conditional logic.
+
+When you select a marker or line on the map, the selected data (*All available data* > *Components* > *Map* > *Selected markers* / *Selected lines* > *Tables*) becomes automatically available for use in other components.
+
+In the example below, the map shows several terminals represented by markers. Clicking a marker opens a panel on the right that provides more details about the selected terminal. Thanks to the [marker customization options](#customizing-markers), terminals with an active alarm are displayed in red, allowing users to quickly identify and inspect affected terminals by selecting the corresponding markers.
+
+![Map as a selector](~/dataminer/images/Maps_Selector.gif)<br>*Maps component in DataMiner 10.5.11*
+
+> [!TIP]
+> From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!--RN 43635-->, you can configure an action on another component (e.g. a button) so that this can be used to [clear the selection](#maps-component-actions) on the map.
 
 ## Displaying extra layers
 
