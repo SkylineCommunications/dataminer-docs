@@ -166,6 +166,14 @@ When, in DataMiner Cube, you opened a trend graph and then switched to another t
 
 Also, the trend graph colors would incorrectly not get updated.
 
+#### Trending: Trend graphs for parameters of new elements would not always be displayed correctly [ID 43792]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+The first time you opened a trend graph for a parameter of a new element, the graph would be displayed correctly, but from the second time onwards, the graph would either be shown correctly or would show "No data".
+
+From now on, when you open a trend graph for a parameter of a new element, the graph will always be displayed correctly. It will show "No data" until all data has been loaded.
+
 #### Problem when routing requests related to a swarmed element or an element migrated via a DELT package [ID 43815]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
