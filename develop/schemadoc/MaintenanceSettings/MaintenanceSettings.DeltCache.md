@@ -45,6 +45,6 @@ When you specify multiple conditions, they will be combined into one expression 
 <DELTCache activated="true">
   <DELTCacheMode mode="CleanupKeepRecentPackages" value="4"/>
   <DELTCacheMode mode="CleanupLargerThan" value="2099200"/>
-  <DELTCacheMode mode="CleanupOlderThan" value="2016-04-25 00:00"/>
+  <DELTCacheMode mode="CleanupOlderThan" value="2024-04-25 00:00"/>
 </DELTCache>
 ```

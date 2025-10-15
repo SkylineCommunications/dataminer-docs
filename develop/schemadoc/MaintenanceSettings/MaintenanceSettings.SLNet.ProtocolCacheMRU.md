@@ -4,7 +4,7 @@ uid: MaintenanceSettings.SLNet.ProtocolCacheMRU
 
 # ProtocolCacheMRU element
 
-Specifies the number of ElementProtocols that is kept in cache. Default: 200.
+Specifies the number of ElementProtocols kept in cache. Default: 200.
 
 ## Content Type
 

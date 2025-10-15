@@ -4,7 +4,7 @@ uid: MaintenanceSettings.AutoElementLock
 
 # AutoElementLock element
 
-When set to "true", an element will automatically be locked when a parameter set is performed on it by a user who is allowed to lock and unlock elements.
+When this is set to "true", an element will automatically be locked when a parameter set is performed on it by a user who is allowed to lock and unlock elements.
 
 ## Type
 

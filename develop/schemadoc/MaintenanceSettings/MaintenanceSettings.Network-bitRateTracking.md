@@ -17,7 +17,7 @@ boolean
 ## Remarks
 
 > [!NOTE]
-> Disabling this setting will halt updates to the *Communication Info* table on the *General parameters* page. Bitrate-related notifies such as [NT_GET_BITRATE_DELTA](xref:NT_GET_BITRATE_DELTA) will not be usable by connectors.
+> Disabling this setting will halt updates to the *Communication Info* table on the *General parameters* page. Connectors will not be able to use bitrate-related notifies such as [NT_GET_BITRATE_DELTA](xref:NT_GET_BITRATE_DELTA).
 
 ## Examples
 

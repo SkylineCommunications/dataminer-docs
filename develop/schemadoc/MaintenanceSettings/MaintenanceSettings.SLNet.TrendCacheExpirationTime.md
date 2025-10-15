@@ -4,7 +4,7 @@ uid: MaintenanceSettings.SLNet.TrendCacheExpirationTime
 
 # TrendCacheExpirationTime element
 
-Specifies, in seconds, how long an entry remains in the cache. Default: 120 seconds.
+Specifies how long an entry remains in the cache (in seconds). Default: 120 seconds.
 
 ## Content Type
 

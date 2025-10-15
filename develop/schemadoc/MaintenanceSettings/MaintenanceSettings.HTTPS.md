@@ -4,7 +4,7 @@ uid: MaintenanceSettings.HTTPS
 
 # HTTPS element
 
-Configures DataMiner to use HTTPS. For more information, refer to [Configuring HTTPS settings in DataMiner](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-in-dataminer)
+Configures DataMiner to use HTTPS. For more information, refer to [Configuring HTTPS settings in DataMiner](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-in-dataminer).
 
 ## Parents
 
@@ -27,6 +27,6 @@ Configures DataMiner to use HTTPS. For more information, refer to [Configuring H
 </MaintenanceSettings>
 ```
 
-## Remarks
+## See also
 
-See [Configuring HTTPS settings in DataMiner](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-in-dataminer).
+- [Configuring HTTPS settings in DataMiner](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-in-dataminer)

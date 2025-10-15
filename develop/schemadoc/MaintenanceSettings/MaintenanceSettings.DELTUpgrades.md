@@ -32,7 +32,7 @@ The tag contains a number of [Delete](xref:MaintenanceSettings.DELTUpgrades.Dele
 <DELTUpgrades activated="true">
   <Delete mode="CleanupKeepRecentPackages" value="4"/>
   <Delete mode="CleanupLargerThan" value="2099200"/>
-  <Delete mode="CleanupOlderThan" value="2016-04-25 00:00"/>
+  <Delete mode="CleanupOlderThan" value="2024-04-25 00:00"/>
   <Delete mode="CleanupAll" />
 </DELTUpgrades>
 ```

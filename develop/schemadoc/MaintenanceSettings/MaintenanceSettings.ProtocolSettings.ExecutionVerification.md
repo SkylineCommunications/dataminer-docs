@@ -4,7 +4,7 @@ uid: MaintenanceSettings.ProtocolSettings.ExecutionVerification
 
 # ExecutionVerification element
 
-Enables or disables the parameter update verification feature. When this is enabled, DataMiner will check all parameter updates that are executed either via DataMiner client applications or SNMP set commands, and it will return the result of each check in the form of an information event.
+Enables or disables the parameter update verification feature. When this is enabled, DataMiner will check all parameter updates that are executed either via DataMiner client applications or via SNMP set commands, and it will return the result of each check in the form of an information event.
 
 Default timeout: 30000 milliseconds.
 
