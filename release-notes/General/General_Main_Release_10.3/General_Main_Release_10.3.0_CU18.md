@@ -122,9 +122,9 @@ When SLDataGateway retrieved data from the database page by page, in some cases,
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, when an SNMP table took a long time to be polled, a run-time error could occur in SLProtocol.
+Up to now, when an SNMP table took a long time to be polled, a runtime error could occur in SLProtocol.
 
-To avoid such run-time errors, from now on, when SLSNMPManager is polling an SNMP table, it will send a notification to SLProtocol every minute to indicate that SNMP data is being polled.
+To avoid such runtime errors, from now on, when SLSNMPManager is polling an SNMP table, it will send a notification to SLProtocol every minute to indicate that SNMP data is being polled.
 
 #### Failover switch would take significantly longer than usual due to blocking calls in the SLASPConnection process [ID 39769]
 

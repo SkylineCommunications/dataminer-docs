@@ -10,7 +10,7 @@ Suppose you see something is wrong with DataMiner, but you do not know where exa
 
 Follow the steps below to detect the most high-level issues and collect basic data about the problem you discovered.
 
-The steps go from more general, with a larger impact, to more specific. It is important to keep in mind that a general issue, such as a lack of disk space, must be resolved before more specific issues, such as DataMiner run-time errors, may be investigated.
+The steps go from more general, with a larger impact, to more specific. It is important to keep in mind that a general issue, such as a lack of disk space, must be resolved before more specific issues, such as DataMiner runtime errors, may be investigated.
 
 ### Check the resource usage in Windows Task Manager
 
@@ -64,11 +64,11 @@ Example:
 
 ![ERRORLOGTXT](~/dataminer/images/ERRORLOGTXT.png)
 
-Also check if new files are present in `C:\Skyline DataMiner\logging\MiniDump`. Files are created in this folder when a process disappearance or a run-time error is detected by the SLWatchDog process.
+Also check if new files are present in `C:\Skyline DataMiner\logging\MiniDump`. Files are created in this folder when a process disappearance or a runtime error is detected by the SLWatchDog process.
 
 The minidump is a copy of all DataMiner log files saved at the moment a problem is detected by SLWatchDog. It should not be confused with a crash dump and a memory dump, which are snapshots of memory allocated by a certain process.
 
-- In case of a **run-time error**, the file name format is **`<timestamp>_<process name>.zip`**. Note the name of the process and proceed to the next step.
+- In case of a **runtime error**, the file name format is **`<timestamp>_<process name>.zip`**. Note the name of the process and proceed to the next step.
 
 - In case of a **process disappearance**, the file name format is **`<timestamp>_Process disappeared.zip`**. You can find the name of the process in ***SLWatchdog2.txt*** inside the archive.
 
@@ -88,15 +88,15 @@ Look for the following lines:
 
 - `THREAD PROBLEM : <process name> - <thread name and ID>`
 
-  This line shows the moment when SLWatchdog reports a run-time error and saves a minidump. For most threads, this happens when a thread is not responding for 15 minutes.
+  This line shows the moment when SLWatchdog reports a runtime error and saves a minidump. For most threads, this happens when a thread is not responding for 15 minutes.
 
 - `Send alarm for process <process name> … (RTE Count = 1 )`
 
-  The RTE Count helps you identify the first run-time error if there are multiple thread problems at the same time.
+  The RTE Count helps you identify the first runtime error if there are multiple thread problems at the same time.
 
 - `CLEARED RTE: Runtime error cleared in process <process name> …`
 
-  In some cases, run-time errors do not cause major problems and clear themselves when an operation that occupies a thread is completed. When an RTE clears, the RTE count is reduced.
+  In some cases, runtime errors do not cause major problems and clear themselves when an operation that occupies a thread is completed. When an RTE clears, the RTE count is reduced.
 
 - `Process with PID <process ID> (<process name>) stopped.`
 

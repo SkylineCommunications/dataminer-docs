@@ -682,7 +682,7 @@ To define that the value of a particular parameter should be used as context ID 
 
 If the parameter is not initialized or is set to an empty string, the default parameter value will be used (i.e. an empty string).
 
-The context name and context ID can be changed at run-time, and are not saved by default. When the element is restarted, the parameter data will be lost unless the `save` attribute of the parameter was set to true (e.g. `<Param id="1" save="true">`).
+The context name and context ID can be changed at runtime, and are not saved by default. When the element is restarted, the parameter data will be lost unless the `save` attribute of the parameter was set to true (e.g. `<Param id="1" save="true">`).
 
 #### Automation scripts: Generating information events when editing a connection in a QAction [ID 42783]
 

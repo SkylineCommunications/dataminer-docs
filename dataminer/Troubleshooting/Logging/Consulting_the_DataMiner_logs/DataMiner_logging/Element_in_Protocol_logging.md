@@ -4,7 +4,7 @@ uid: Element_in_Protocol_logging
 
 # Element in Protocol logging
 
-The *Element in Protocol* log file allows you to map all the running elements on a DMA to the protocol processes they use. This can be very useful to investigate protocol thread run-time errors.
+The *Element in Protocol* log file allows you to map all the running elements on a DMA to the protocol processes they use. This can be very useful to investigate protocol thread runtime errors.
 
 ## Element in Protocol log entries
 

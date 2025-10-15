@@ -1677,9 +1677,9 @@ namespace Skyline.DataMiner.Automation
 		public void Sleep(int timeInMilliseconds) { }
 
 		/// <summary>
-		/// Clears the specified run-time flag.
+		/// Clears the specified runtime flag.
 		/// </summary>
-		/// <param name="flag">The run-time flag to clear.</param>
+		/// <param name="flag">The runtime flag to clear.</param>
 		/// <remarks>Feature introduced in DataMiner 10.0.2 (RN 23961).</remarks>
 		/// <example>
 		/// <code>

@@ -206,9 +206,9 @@ On a system with a MySQL database, in some cases, display values of rate alarms 
 
 In some cases, it could occur that the value of a rate alarm was not displayed correctly. this could for instance occur after an element restart, after an element was masked, etc.
 
-#### DataMiner Cube - Alarm Console: Error alarms could get stuck when a process had multiple threads with run-time errors \[ID 28113\]
+#### DataMiner Cube - Alarm Console: Error alarms could get stuck when a process had multiple threads with runtime errors \[ID 28113\]
 
-In some cases, error alarms could get stuck in the Alarm Console when a process had multiple threads with run-time errors.
+In some cases, error alarms could get stuck in the Alarm Console when a process had multiple threads with runtime errors.
 
 #### Problem in SLLog after stopping and reopening log file \[ID 28122\]
 

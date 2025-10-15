@@ -192,4 +192,4 @@ This case turned out to be two issues disguised as one.
 
 - Only when no other options are available, presume likely scenarios and use trial and error to find out which scenario applies.
 
-- For more use cases related to run-time errors, see [Protocol thread run-time errors: use cases](xref:Protocol_thread_run_time_errors_use_cases).
+- For more use cases related to runtime errors, see [Protocol thread runtime errors: use cases](xref:Protocol_thread_run_time_errors_use_cases).

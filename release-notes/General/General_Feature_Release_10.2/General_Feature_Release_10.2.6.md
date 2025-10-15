@@ -739,7 +739,7 @@ When bookings were requested from the server, and a filter was used to first ret
 
 #### CSLCloudBridge library would incorrectly not take into account the connection timeout specified in SLCloud.xml \[ID 33322\]
 
-Up to now, the CSLCloudBridge library would incorrectly not take into account the connection timeout specified in the SLCloud.xml file. In some cases, this could lead to run-time errors in the MessageBrokerReconnectThread.
+Up to now, the CSLCloudBridge library would incorrectly not take into account the connection timeout specified in the SLCloud.xml file. In some cases, this could lead to runtime errors in the MessageBrokerReconnectThread.
 
 The connection timeout specified in SLCloud.xml is the maximum time it can take to set up a connection with NATS (in milliseconds). Minimum value is 1000 ms, default value is 5000 ms.
 

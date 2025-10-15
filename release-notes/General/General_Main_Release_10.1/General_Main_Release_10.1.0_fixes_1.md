@@ -336,7 +336,7 @@ When an Automation script sent a PDF report based on a dashboard, in some cases,
 
 #### Failover: Problem when switching over the first time after migrating from MySQL to Cassandra \[ID 26116\]
 
-When, in a Failover setup, the first switch-over occurred after migrating from MySQL to Cassandra, in some cases, a DataMiner run-time error alarm would be generated.
+When, in a Failover setup, the first switch-over occurred after migrating from MySQL to Cassandra, in some cases, a DataMiner runtime error alarm would be generated.
 
 #### ResourceManager module would no longer initialize after a DataMiner restart \[ID 26117\]\[ID 26309\]
 

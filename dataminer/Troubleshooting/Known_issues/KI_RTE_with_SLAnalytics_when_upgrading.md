@@ -22,4 +22,4 @@ Using a query tool of your choice, run the command `ALTER TABLE analytics_parame
 
 ## Issue description
 
-After upgrading to DataMiner 10.2.8 (CU1), the Alarm Console shows run-time errors related to the SLAnalytics process.
+After upgrading to DataMiner 10.2.8 (CU1), the Alarm Console shows runtime errors related to the SLAnalytics process.

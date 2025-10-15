@@ -56,7 +56,7 @@ flowchart TD
 
 | Issue | Plan of attack |
 |--|--|
-| Protocol Thread RTE | [Check Protocol thread run-time errors: use cases](xref:Protocol_thread_run_time_errors_use_cases) |
+| Protocol Thread RTE | [Check Protocol thread runtime errors: use cases](xref:Protocol_thread_run_time_errors_use_cases) |
 
 ## Database Error
 

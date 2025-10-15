@@ -158,7 +158,7 @@ After a user had logged out of a web app, in some cases, that app would incorrec
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-When, on one thread, a group other than a poll group was launched while, on another thread, a poll group with option "partialSNMP" was waiting for incoming SNMP data, in some cases, a run-time error could occur in SLProtocol.
+When, on one thread, a group other than a poll group was launched while, on another thread, a poll group with option "partialSNMP" was waiting for incoming SNMP data, in some cases, a runtime error could occur in SLProtocol.
 
 #### Problem with SLProtocol when performing a 'replace data' action [ID 34255]
 

@@ -66,11 +66,11 @@ A number of issues have been fixed with regard to the `pollingRate` attribute, w
 > [!NOTE]
 > Stream Viewer will now indicate more clearly which columns were polled. When some columns were polled while others were skipped, the message `[PollingRate polled column PIDs xxx,yyy]` will be shown. Also, when the timer was faster than the polling rate, the message `No column reached the PollingRate interval.` will be shown, and no Get operation will be executed.
 
-#### Alarm indicating a run-time error would incorrectly say "-1 pending" when all threads cleared simultaneously [ID 43508]
+#### Alarm indicating a runtime error would incorrectly say "-1 pending" when all threads cleared simultaneously [ID 43508]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
-When multiple threads of the same process have a run-time error, the associated alarm will say "+X pending", indicating the number of threads that are stuck.
+When multiple threads of the same process have a runtime error, the associated alarm will say "+X pending", indicating the number of threads that are stuck.
 
 Up to now, when all threads cleared simultaneously, in some cases, the alarm would incorrectly say "-1 pending".
 

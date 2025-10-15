@@ -206,7 +206,7 @@ When you generated a PDF of a dashboard that contained a table component showing
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-In some cases, invalid nodes could get added to a GQI query, causing run-time errors to be thrown.
+In some cases, invalid nodes could get added to a GQI query, causing runtime errors to be thrown.
 
 #### Dashboards app & Low-Code Apps: Clearing a State component by means of Ctrl+Click [ID 36056]
 

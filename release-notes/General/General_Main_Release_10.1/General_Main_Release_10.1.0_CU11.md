@@ -204,7 +204,7 @@ In some cases, an error could occur in SLProtocol when trying to parse data rece
 
 #### Problem with SLDataMiner when a trigger to reload service settings was delayed & memory leak in SLElement \[ID 31711\]
 
-When a trigger to reload service settings was delayed, in some cases, a run-time error could occur in the service thread of SLDataMiner.
+When a trigger to reload service settings was delayed, in some cases, a runtime error could occur in the service thread of SLDataMiner.
 
 Also, SLElement could leak memory when services were configured with a delayed trigger or a redundancy condition that persisted for a period of time.
 

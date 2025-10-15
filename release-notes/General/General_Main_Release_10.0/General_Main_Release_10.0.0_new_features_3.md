@@ -338,7 +338,7 @@ If a shape is linked to an alarm, it is now possible to have the list of impacte
 
 To do so, add a shape data field of type “Info”, and set its value to “Services”. See the example below.
 
-Make sure the text of the shape contains an asterisk ('\*'). At run-time, this asterisk will then be replaced with the names of all impacted services.
+Make sure the text of the shape contains an asterisk ('\*'). At runtime, this asterisk will then be replaced with the names of all impacted services.
 
 Example:
 

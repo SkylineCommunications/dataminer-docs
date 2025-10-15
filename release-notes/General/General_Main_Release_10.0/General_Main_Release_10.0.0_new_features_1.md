@@ -419,7 +419,7 @@ It is now possible to upload and run Best Practice Analysis (BPA) tests using th
 
 BPA tests, which are meant to be short checks, can be configured to run either once or periodically (e.g. once a day). A BPA test can be run to verify, for example, whether all agents in a DataMiner System are set to use the same time server.
 
-If a BPA test takes more than 15 minutes, the SLNet process may throw a run-time error.
+If a BPA test takes more than 15 minutes, the SLNet process may throw a runtime error.
 
 #### Mobile Gateway: Communicating with an SMSEagle device via HTTPS \[ID 22441\]
 

@@ -296,7 +296,7 @@ A number of enhancements have been made with regard to the logging of the SLData
 
 The *SLDBConnection.txt* and *SLCloudStorage.txt* log files will now contain cleaner entries, and entries of type "Error" will also be added to the *SLError.txt* file.
 
-Also, run-time log level updates will now be applied at runtime without requiring a DataMiner restart.
+Also, runtime log level updates will now be applied at runtime without requiring a DataMiner restart.
 
 #### GQI now also logs requests to SLNet [ID 39355]
 

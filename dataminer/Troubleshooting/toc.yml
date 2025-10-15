@@ -458,7 +458,7 @@ items:
             topicUid: Year_2038_Problem_for_Cassandra
           - name: Null reference exceptions in SLDBConnection.txt and unhandled exception in Alarm Console
             topicUid: KI_NullReferenceException_SLDBConnection
-          - name: SLProtocol timer thread run-time error
+          - name: SLProtocol timer thread runtime error
             topicUid: KI_SLProtocol_timer_thread_RTE
           - name: SLNet deadlock on DMA startup
             topicUid: KI_SLNet_deadlock_on_startup

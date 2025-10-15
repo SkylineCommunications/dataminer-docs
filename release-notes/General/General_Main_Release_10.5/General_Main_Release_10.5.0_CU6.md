@@ -160,7 +160,7 @@ From now on, elements will only be deleted once all steps in the migration proce
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When an element was restarted multiple times in rapid succession, in some cases, an run-time error could occur in the parameter thread of SLElement.
+When an element was restarted multiple times in rapid succession, in some cases, a runtime error could occur in the parameter thread of SLElement.
 
 #### Problem when stopping an element or performing a Failover switch when another action was being executed [ID 43089]
 
@@ -273,7 +273,7 @@ Also, up to now, when a `GetNatsConnection` call was made while no endpoints wer
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-In some cases, a run-time error could be thrown when a DVE child element was deleted.
+In some cases, a runtime error could be thrown when a DVE child element was deleted.
 
 #### Problem when an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet [ID 43314]
 

@@ -241,7 +241,7 @@ In the TicketingHelper class and TicketingGatewayHelper, the “AttachmentsHelpe
 
 When you launch an Automation script, you can choose to select the “After executing a SET command” option. If you do so, every time the script performs a parameter or property update, it will wait for a return value indicating whether or not the update was successful.
 
-From now on, the “NoCheckingSets” run-time flag will allow this option to be changed while a script is being run.
+From now on, the “NoCheckingSets” runtime flag will allow this option to be changed while a script is being run.
 
 ### DMS Maps
 
@@ -353,7 +353,7 @@ The DataMiner Installer now targets Microsoft .NET Framework 4.6.2.
 
 From now on, when you launch the SLLogCollector tool, the following options will be selected by default:
 
-- Include memory dump (when run-time errors have been found on the system)
+- Include memory dump (when runtime errors have been found on the system)
 - Save to SLLogCollector folder on desktop
 
 #### Logs will now include Cassandra yaml file parsing errors \[ID 25809\]
@@ -448,7 +448,7 @@ Together with this fix, the following changes have also been made:
 
 A number of small fixes have been made, including the following:
 
-- In some cases, a run-time error could occur in “Database Offload Thread \[local\]” when a DataMiner startup took too long.
+- In some cases, a runtime error could occur in “Database Offload Thread \[local\]” when a DataMiner startup took too long.
 
 - SLElement could leak memory when registering a link with an empty filter or when initializing a parameter group.
 
