@@ -38,4 +38,4 @@ Below you will find examples of how to define a service template that will autom
 > See also:
 >
 > - [Getting Started with Service Templates](https://www.youtube.com/watch?v=0cX1mIPbGAw) ![Video](~/dataminer/images/video_Duo.png)
-> - [Create a large amount of similar services in one go by leveraging the power of service templates](https://youtu.be/Bi70lZDauGY?si=Oj1hVe4V6mDMF4g8) ![Video](~/dataminer/images/video_Duo.png)
+> - [Service templates in DataMiner](https://youtu.be/Bi70lZDauGY?si=Oj1hVe4V6mDMF4g8) ![Video](~/dataminer/images/video_Duo.png)
