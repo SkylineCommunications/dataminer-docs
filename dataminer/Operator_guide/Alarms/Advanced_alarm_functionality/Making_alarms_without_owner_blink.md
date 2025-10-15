@@ -28,7 +28,7 @@ It is also possible to specify alarm filters, so that blinking is only enabled b
 > [!TIP]
 > See also:
 >
-> - [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)
+> - [MaintenanceSettings.AlarmSettings.Blinking](xref:MaintenanceSettings.AlarmSettings.Blinking)
 > - [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions)
 
 ## Activating alarm blinking on a DMA

@@ -13,3 +13,7 @@ boolean
 ## Parents
 
 [AlarmSettings](xref:MaintenanceSettings.AlarmSettings)
+
+## See also
+
+- [Clearing alarms](xref:Clearing_alarms)

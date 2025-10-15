@@ -76,7 +76,7 @@ To make gRPC the default communication method, do the following on every DataMin
 
 - To make gRPC the default communication method for **server-server communication**, do one of the following:
 
-  - Disable *.NET Remoting* in [MaintenanceSettings.xml](xref:MaintenanceSettings_xml) by adding `<EnableDotNetRemoting>false</EnableDotNetRemoting>` to the `<SLNet>` section.
+  - Disable *.NET Remoting* in *MaintenanceSettings.xml* by adding `<EnableDotNetRemoting>false</EnableDotNetRemoting>` to the `<SLNet>` section.
   
   OR
   
