@@ -2,9 +2,11 @@
 uid: GVAMPP_Manager_Using
 ---
 
-# Using the AMPP Manager Application
+# Using the AMPP Manager app
 
 The Grass Valley Manager application allows users to visualize and control multiple GV AMPP Manager elements.
+
+## App overview
 
 You can select a manager using the dropdown box in the top-right corner of the *Statistics* page.
 
@@ -22,19 +24,18 @@ The sidebar on the left of the Grass Valley AMPP Manager app contains buttons th
 
 ## Using the Workload Application Element Configurator
 
-In the Workloads panel, the **Workload Element** column displays the currently assigned Application Element. An Application Element utilizes a specialized connector that processes both the configuration and state messages specific to a particular application type. Additionally, this connector offers configuration parameters that allows the change of the workload; for example, set the recording file or start a Clip Player: 
+On the Workloads Control page, the **Workload Element** column displays the currently assigned application element. An application element utilizes a specialized connector that processes the configuration and state messages specific to a particular application type. This connector also includes configuration parameters that allow changes of the workload. You can for example set the recording file or start a clip player.
 
-![Application Element](~/dataminer/images/GVAMPP_application_elementy_column.png)
+![Application element on the Workloads Control page](~/dataminer/images/GVAMPP_application_elementy_column.png)
 
-When the button is clicked, a configurator dialog will allow the user to either assign the selected workload to an existins Application Element or to create an element and then assign the workload to it:
+Clicking the button in the *Workload Element* column, as shown above, opens a dialog where you can either assign the selected workload to an existing application element or create a new element and then assign the workload to it:
 
-![Select Application Element](~/dataminer/images/GVAMPP_create_or_select_application_element.png)
+![Create or add an application element](~/dataminer/images/GVAMPP_create_or_select_application_element.png)
 
-
-Once assigned, the **AMPP Navigation** column will show the icon to jump to the Application Element using the Monitoring application:
+Once an application element has been assigned, you can click the icon in the **AMPP Navigation** column to open the application element using the [Monitoring app](xref:Working_with_the_Monitoring_app):
 
 ![Navigate to monitor](~/dataminer/images/GVAMPP_navigation.png)
 
+In the Monitoring app, this will for example look like this:
+
 ![Monitor element](~/dataminer/images/GVAMPP_monitor.png)
-
-
