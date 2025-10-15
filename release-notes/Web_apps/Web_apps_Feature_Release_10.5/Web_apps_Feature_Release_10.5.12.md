@@ -28,13 +28,13 @@ When in edit mode, it is now possible to directly export a GQI query to a JSON f
 
 Up to now, when you wanted to export a GQI query to a JSON file (e.g. to have it executed by the *Data Aggregator* module), you had to open the developer tools of your browser, copy the query from the request payload, and convert the query using the *ConvertQueryToProtoJson* web method.
 
-#### DataMiner landing page: New 'User settings' window allows users to change their password [ID 43803]
+#### Web apps: New 'User settings' window allows users to change their password [ID 43803]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-In the user menu of the DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`), you can now find a new *User settings* item. Clicking that item will open a window that allows you to change your password.
+In the user menu of each DataMiner web app, you can now find a new *User settings* item. Clicking that item will open a window that allows you to change your password.
 
-For a user to be able to open this window, the following conditions must be met:
+For a user to be able to see and click this new menu item, the following conditions must be met:
 
 - In *System Center > Users*, the user's *User cannot change password* setting must be disabled.
 - The user must have *Modules > System configuration > Security > Specific > Limited administrator* permission.
