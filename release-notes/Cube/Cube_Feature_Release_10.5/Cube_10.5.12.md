@@ -128,8 +128,6 @@ Also, when the `SL_UNKNOWN_DESTINATION` exception was thrown, up to now, a messa
 
 When DataMiner Cube performs a web request or when it displays a web browser control, it will now reuse the HTTP cookies of the gRPC connection. This will ensure that the requests are sent to the DataMiner Agent to which Cube is connected.
 
-See also: [GRPCConnection class in SLNet is now able to expose the HTTP cookies it collected when making gRPC requests toward a DMA [ID 43858]](xref:General_Feature_Release_10.5.12#grpcconnection-class-in-slnet-is-now-able-to-expose-the-http-cookies-it-collected-when-making-grpc-requests-toward-a-dma-id-43858)
-
 #### Credentials library: Details pane can now be scrolled horizontally [ID 43870]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->

@@ -489,14 +489,6 @@ Up to now, each time a `ModuleSettings` object was updated, the network credenti
 
 From now on, when a `ModuleSettings` object is updated, the network credentials will only be checked if the network path or the credential ID were updated as well.
 
-#### GRPCConnection class in SLNet is now able to expose the HTTP cookies it collected when making gRPC requests toward a DMA [ID 43858]
-
-<!-- MR 10.6.0 - FR 10.5.12 -->
-
-The `GRPCConnection` class in SLNet is now able to expose the HTTP cookies it collected when making gRPC requests toward a DataMiner Agent. That way, those cookies can be reused by client applications using SLNetTypes.
-
-See also: [DataMiner Cube will now reuse the HTTP cookies of the gRPC connection [ID 43860]](xref:Cube_Feature_Release_10.5.12#dataminer-cube-will-now-reuse-the-http-cookies-of-the-grpc-connection-id-43860).
-
 #### Alarms of type 'Notice' will now be generated when SLDataGateway queues no longer seem to decrease [ID 43909]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
