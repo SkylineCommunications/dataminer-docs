@@ -68,6 +68,12 @@ In edit mode, up to now, when you made a configuration that involved element dat
 
 From now on, the first 100 elements will initially be retrieved. Afterwards, when you then scroll down, the next 100 elements will be retrieved each time you reach the bottom of the list.
 
+#### Dashboards app: PDF reports can now be generated in landscape mode [ID 43826]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When you configure a PDF report, you can now select the *Landscape* setting to indicate that the report should be generated in landscape mode.
+
 #### DataMiner Comparison tool: Redesigned header [ID 43837]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
