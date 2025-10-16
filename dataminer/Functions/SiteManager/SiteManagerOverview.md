@@ -8,7 +8,7 @@ The Site Manager module is available as a DxM ([DataMiner Extension Module](xref
 
 ## Prerequisites
 
-The Site Manager DxM requires DataMiner 10.5.10 or higher. See [Site Manager DxM installation](xref:SiteManagerGettingStarted#site-manager-dxm-installation).
+The Site Manager DxM requires DataMiner 10.5.10/10.6.0 or higher. See [Site Manager DxM installation](xref:SiteManagerGettingStarted#site-manager-dxm-installation).
 
 ## Supported connection types and limitations
 

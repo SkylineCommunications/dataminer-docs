@@ -6,9 +6,11 @@ uid: SiteManagerGettingStarted
 
 ## Site Manager DxM installation
 
-The Site Manager DxM must run on the same machine the DataMiner Agent runs from which you want to connect to remote data sources. The Site Manager DxM is by default included in the DaaS image of DataMiner 10.5.10. In case you are running an older DataMiner version, an upgrade is required and the Site Manager DxM will need to be installed. For more information on how to upgrade DataMiner, refer to [Upgrading a DataMiner Agent](xef:Upgrading_a_DataMiner_Agent). For information on how to install a DxM, see [Deploying a DxM on a DMS node](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+The Site Manager DxM must run on the same machine as the DataMiner Agent from which you want to connect to remote data sources. It can be used with any DataMiner System that uses version 10.5.10/10.6.0 or higher. You can [deploy it from the Admin app](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
-When you have installed the Site Manager DxM, in the Windows services overview, you should see two services:
+The Site Manager DxM is **by default included in the DaaS image of DataMiner 10.5.10**. If your DaaS system is using an older DataMiner version, you will need to [upgrade DataMiner](xef:Upgrading_a_DataMiner_Agent) and [deploy the Site Manager DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+
+When the Site Manager DxM has been installed, in the Windows services overview, you should see two services:
 
 - *DataMiner SiteManager*: This is the Site Manager DxM that interacts with DataMiner and the zrok-agent process
 - *zrok-agent*: This is the zrok Agent service with which the Site Manager DxM communicates for creating the communication tunnels
