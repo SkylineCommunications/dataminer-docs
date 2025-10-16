@@ -33,6 +33,9 @@ You can follow the steps below or watch this short video, which shows you how to
 
    If you do not intend to use the latest Installer (v10.5), make sure the necessary .NET and .NET Framework versions are installed, as mentioned in the requirements. With the v10.5 Installer, these will be included in the installation.
 
+> [!NOTE]
+> If the .NET Framework is not installed, the v10.5 installer will install it and prompt for a system reboot before continuing the installation.
+
 1. Make sure the server is synced with an NTP server. If you intend to install multiple DataMiner Agents in a cluster, make sure all servers are synced with the same NTP server.
 
 1. Make sure that no anti-virus software will interfere with the DataMiner installation and with the DataMiner software once it is installed. See [Regarding antivirus software](xref:Regarding_antivirus_software).
