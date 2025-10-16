@@ -56,7 +56,7 @@ One of the following predefined values:
   >
   > SNMP itself treats these values purely as octets and provides no context about character encoding. It is the connector's responsibility to interpret those bytes correctly.
   >
-  > See also: [ANSI code page](https://en.wikipedia.org/wiki/Windows_code_page)
+  > For more information, refer to [Code Page Identifiers](https://learn.microsoft.com/en-us/windows/win32/intl/code-page-identifiers) and [Unicode and Character Sets](https://learn.microsoft.com/en-us/windows/win32/intl/unicode-and-character-sets).
 
 - OctetStringUTF8
 
