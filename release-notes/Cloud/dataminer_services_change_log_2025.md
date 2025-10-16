@@ -9,10 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 9 October 2025 - Enhancement - Status - Show whitespace for incidents
+### 9 October 2025 - Fix - Status - Incorrect spacing incident descriptions
 
-The status page now shows whitespace for incidents and its comments.  
-Before all the whitespace was removed from the text.
+Previously, if descriptions for incidents contained tabs or new lines, these were not shown. Now the text will be shown with correct spacing.
 
 ### 1 October 2025 - Enhancement - Usage - STaaS usage billing
 
