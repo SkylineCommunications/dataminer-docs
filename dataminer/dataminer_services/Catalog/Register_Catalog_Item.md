@@ -74,12 +74,9 @@ file: <the zip file containing manifest, README and optional images>
 > To reference images in the README.md file, you can use the home directory (~/images) or relative path syntax (./images).
 
 > [!IMPORTANT]
-> Catalog Item Upload Limitations:
-> - Maximum file size for catalog item packages (.zip files): **250 MB**
-> 
-> Vendor/Icon Image Limitations:
-> - Maximum file size for vendor logos and custom icons: **250 KB**
-> - Supported formats for vendor/icon images: .jpg, .jpeg, .png, .bmp, .webp, .svg
+>
+> - Limitations apply for the maximum file size of packages and vendor/icon images. See [Best practices when creating Catalog items](xref:Best_Practices_When_Creating_Catalog_Items#keep-the-limitations-in-mind)
+> - Only the following formats are supported for vendor/icon images: .jpg, .jpeg, .png, .bmp, .webp, .svg
 
 #### Manifest file
 
