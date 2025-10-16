@@ -85,6 +85,33 @@ Up to now, an email report could only be sent if recipients were specified in th
 
 From now on, recipients no longer have to be contacts, and it will also be possible to send email reports that only have recipients specified in the *CC* and/or *BCC* fields.
 
+#### Dashboards/Low-Code Apps - Grid component: 'Grid template' section replaced by 'Grid layout' section [ID 43889]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When editing a *Grid* component, up to now, the *Advanced > Grid template* section of the *Layout* pane allowed you to configure the number of columns and rows displayed in the component and choose how items scale within the available space. Now, that *Grid template* section has been replaced by the *Layout > Grid layout* section, which contains the following settings:
+
+- **Columns**
+
+  | Setting | Description |
+  |---|---|
+  | Fixed column count   | Disable this setting to have all columns displayed, or enable this setting to have the fixed number of columns specified in *Columns* displayed. |
+  | Columns              | In this box, specify the number of columns (from 1 to 100) to be displayed when *Fixed column count* is enabled. |
+  | Stretch to fit width | Enable this setting to have the cells scaled dynamically to fit the grid. |
+  | Horizontal scroll    | Enable this setting if you want a horizontal scrollbar to be displayed.<br>When this setting is disabled, text in the cells will either wrap or be clipped, depending on the other settings. When a fixed number of columns are displayed, text in the cells will not wrap. |
+
+- **Rows**
+
+  | Setting | Description |
+  |---|---|
+  | Fixed row count   | Disable this setting to have all rows displayed, or enable this setting to have the fixed number of rows specified in *Rows* displayed. |
+  | Rows              | In this box, specify the number of rows (from 1 to 100) to be displayed when *Fixed row count* is enabled. |
+  | Stretch to fit width | Enable this setting to have the cells scaled dynamically to fit the grid. |
+  | Horizontal scroll    | Enable this setting if you want a horizontal scrollbar to be displayed.<br>When this setting is disabled, text in the cells will either wrap or be clipped, depending on the other settings. When a fixed number of rows are displayed, text in the cells will not wrap. |
+
+> [!NOTE]
+> By default, newly created grids will have *Stretch to fit width* enabled and *Horizontal scroll* disabled.
+
 ### Fixes
 
 #### GQI DxM: Existing query sessions would incorrectly be allowed to use a restarted extension worker [ID 43770]
