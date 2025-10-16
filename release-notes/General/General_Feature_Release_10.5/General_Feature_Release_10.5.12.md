@@ -223,6 +223,16 @@ This message has now been replaced by the following one:
 
 *"WARNING! Upgrade package with ID [guid] no longer exists"*
 
+#### DxMs upgraded [ID 43950]
+
+<!-- RN 43950: MR 10.6.0 - FR 10.5.12 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner CloudGateway 2.17.14
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
 ### Fixes
 
 #### Alerter would incorrectly require .NET Framework 2.0 [ID 43787]
