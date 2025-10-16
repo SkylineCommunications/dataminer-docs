@@ -10,45 +10,45 @@ uid: DIS_3.1
 
 #### IDE
 
-##### Functions XML snippet [ID 43396]
+##### New XML snippet 'Functions Root' [ID 43396]
 
-A new snippet "Functions Root" has been introduced which will insert the following XML:
+A new *Functions Root* snippet has been introduced. It will insert the following XML code.
 
 ```xml
 <Functions xmlns="http://www.skyline.be/config/functions">
-	<Version>1.0.0.1</Version>
-	<Protocol>
-		<Name>ProtocolX</Name>
-	</Protocol>
+    <Version>1.0.0.1</Version>
+    <Protocol>
+        <Name>ProtocolX</Name>
+    </Protocol>
 </Functions>
 ```
 
-##### Parameter Update Locations tool window Session support [ID 43396]
+##### 'Parameter Update Locations' tool window is now able to detect update locations in HTTP sessions [ID 43646]
 
-The Parameter Update Locations tool window is now able to detect update locations in [HTTP Sessions](xref:Protocol.HTTP.Session) defined in a protocol.
+The *Parameter Update Locations* tool window is now able to detect update locations in [HTTP sessions](xref:Protocol.HTTP.Session) defined in a protocol.
 
-For example, in the following session, the tool window is now able to detect that parameters 1000, 1001 and 1002 are updated through this session:
+For example, in the following session, the tool window is now able to detect that parameters 1000, 1001, and 1002 are updated through this session:
 
 ```xml
 <HTTP>
-	<Session id="1">
-		<Connection id="1">
-			<Request verb="GET" pid="900">
-			</Request>
-			<Response statusCode="1001">
-				<Headers>
-					<Header key="Content-Type" pid="1002"></Header>
-				</Headers>
-				<Content pid="1000"></Content>
-			</Response>
-		</Connection>
-	</Session>
+    <Session id="1">
+        <Connection id="1">
+            <Request verb="GET" pid="900">
+            </Request>
+            <Response statusCode="1001">
+                <Headers>
+                    <Header key="Content-Type" pid="1002"></Header>
+                </Headers>
+                <Content pid="1000"></Content>
+            </Response>
+        </Connection>
+    </Session>
 </HTTP>
 ```
 
-#### Updated Driver Help templates [ID 43420]
+##### Generate Driver Help plugin will now use the updated Technical and Marketing templates [ID 43420]
 
-The [Generate Driver Help](xref:DisPlugins#generate-driver-help) plugin in DIS has been updated according to the current templates defined in the guidelines with the Technical and Marketing templates.
+The [Generate Driver Help](xref:DisPlugins#generate-driver-help) plugin will now use the updated Technical and Marketing templates.
 
 ##### Updated DIS dependencies [ID 43959]
 
@@ -61,47 +61,44 @@ DIS now uses:
 - [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 2.0.0
 - [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol) version 1.0.16
 - [Skyline.DataMiner.Core.ArtifactDownloader](https://www.nuget.org/packages/Skyline.DataMiner.Core.ArtifactDownloader) version 3.1.1
-
 - [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.5.10
 - [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.5.10
 - [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.5.10
-
 - [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.4
 
 ### Fixes
 
 #### IDE
 
-##### Improved error popup visibility and resolved permission-related crash [ID 43538]
+##### Problem when an operation failed because of insufficient permissions [ID 43538]
 
-DIS will now no longer crash in case an operation is performed for which insufficient permissions are granted on the destination DataMiner Agent.
-Instead, a message will be shown indicating that the operation failed because of insufficient permissions.
+Up to now, a fatal error would occur when an operation was performed for which insufficient permissions were granted on the destination DMA. From now on, a message will appear, indicating that the operation failed because of insufficient permissions.
 
-Also, error popups now reliably display in front of Visual Studio, preventing them from appearing behind the main window.
+Also, error popups will now reliably appear in front of Visual Studio. They will no longer appear behind the main window. In addition, the appearance and consistency of error popups have been aligned.
 
-Additionally, the appearance and consistency of error popups have been aligned.
+##### Problem when selecting NuGet references in Solution Explorer [ID 43544]
 
-##### Fix infinite error popups when selecting NuGet references in solution explorer [ID 43544]
+Up to now, selecting a NuGet reference in Visual Studio's Solution Explorer (within a package solution) could cause an infinite loop of error popups, eventually leading to a fatal error in Visual Studio.
 
-An issue has been fixed where selecting a NuGet reference in Visual Studio’s Solution Explorer (within a package solution) could cause an infinite loop of error popups which eventually led to  Visual Studio crash.
+##### Skyline.DataMiner.Sdk projects would incorrectly not allow multiple Exe blocks regardless of their type [ID 43784]
 
-#### Only allow one C# Exe block for Skyline.DataMiner.Sdk projects [ID 43784]
+With the introduction of the Skyline.DataMiner.Sdk projects, Script style projects would incorrectly not allow multiple [Exe](xref:DMSScript.Script.Exe) blocks, regardless of their [type](xref:DMSScript.Script.Exe-type).
 
-With the introduction of the Skyline.DataMiner.Sdk projects, multiple [Exe](DMSScript.Script.Exe) blocks, regardless of its [type](DMSScript.Script.Exe-type), were not allowed in Script style projects. This restriction has been made less restrictive: multiple 'csharp' type Exe blocks are not allowed.
-This way users can have one C# Exe block and e.g. a 'report' block.
+From now on, Script style projects will not allow multiple Exe blocks of type 'csharp'. This will allow users to have e.g. an Exe block of type 'csharp' and an Exe block of type 'report'.
 
-#### ProcessAutomation.dll is referenced incorrectly after building dmapp [ID 43899]
+##### ProcessAutomation.dll would be referenced incorrectly after building a dmapp [ID 43899]
 
-Previously, when creating or deploying an Automation script that referenced ProcessAutomation.dll, this assembly  was incorrectly resolved.
-The system attempted to locate it in the `ProtocolScripts/DllImport` folder, whereas the correct location is `ProtocolScripts`.
+Up to now, when you had created or deployed an Automation script that referenced the *ProcessAutomation.dll* file, that assembly would be resolved incorrectly. The system would attempt to locate it in the `ProtocolScripts/DllImport` folder, whereas the correct location was `ProtocolScripts`.
 
-From now on, when ProcessAutomation.dll is referenced, the resulting path in the XML will be pointing to the `ProtocolScripts` folder.
+From now on, when the *ProcessAutomation.dll* file is referenced, the resulting path in the XML file will point to the `ProtocolScripts` folder.
 
-#### Removed Automation script interactivity check
+##### Removed Automation script interactivity check
 
-In DIS, when you published an Automation script, a mechanism was present that tried to detect whether the script contains any uses of interactive methods (e.g. ShowUI). If that was the case, flags were set in the script options that will mark the script as interactive. This mechanism was no longer working as DIS was no longer checking the C# code but instead the placeholder. This had as a side effect that it prevented you from manually setting the flags in the XML of an Automation script project.
+In DIS, when you published an Automation script, an attempt would be made to detect whether the script used any interactive methods (e.g. ShowUI). If that was the case, flags would be set in the script options to mark the script as interactive.
 
-Since indicating that a script requires interactivity should now be done using the [Interactivity](DMSScript.Interactivity) tag, and the current implementation did not work anymore, this logic has now been removed from DIS. This now also allows to set the flags again without being altered by DIS.
+As DIS now checks the placeholder instead of the C# code, this mechanism no longer worked. As a result, it was also no longer possible to manually set the flags in the XML file of an Automation script project.
+
+The above-mentioned mechanism has now been removed. Whether a script requires interactivity should now be specified using the [Interactivity](xref:DMSScript.Interactivity) tag. Also, it is now possible again to manually set the flags in the XML file of an Automation script project.
 
 ## DIS 3.1.11
 
