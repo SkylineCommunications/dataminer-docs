@@ -2,15 +2,17 @@
 uid: SiteManagerOverview
 ---
 
-# Overview
+# About Site Manager
+
+The Site Manager module is available as a DxM ([DataMiner Extension Module](xref:DataMinerExtensionModules)). It is used to set up secure communication tunnels enabling communication with selected on-premises data sources from a DaaS system without the need to configure e.g. a site-to-site VPN.
 
 ## Prerequisites
 
-The Site Manager DxM requires DataMiner 10.5.10. The Site Manager DxM is shipped with the DaaS image of DataMiner 10.5.10. In case you are running an older DaaS version, an upgrade is required and the Site Manager DxM will need to be installed. For more information on how to upgrade DataMiner and install a DxM, refer to [Upgrading a DataMiner Agent](xef:Upgrading_a_DataMiner_Agent).
+The Site Manager DxM requires DataMiner 10.5.10 or higher. The Site Manager DxM is shipped with the DaaS image of DataMiner 10.5.10. In case you are running an older DaaS version, an upgrade is required and the Site Manager DxM will need to be installed. For more information on how to upgrade DataMiner, refer to [Upgrading a DataMiner Agent](xef:Upgrading_a_DataMiner_Agent). For information on how to install a DxM, see [Deploying a DxM on a DMS node](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
 ## Supported connection types and limitations
 
-SiteManager allows setting up communication tunnels for the following element connection types:
+Site Manager can be used to set up communication tunnels for the following element connection types:
 
 - SNMP
 - HTTP
@@ -19,17 +21,16 @@ SiteManager allows setting up communication tunnels for the following element co
 - Smart serial
 - SSH
 
-Limitations:
+The following limitations apply:
 
-- SNMP traps are currently not supported
-- Elements which act as a server (e.g. a smart serial server) are currently not supported
-- The *test connection* button in Cube is not supported for testing connections to data sources on a remote site
+- SNMP traps are currently not supported.
+- Elements that act as a server (e.g. a smart-serial server) are currently not supported.
+- The *Test connection* button in Cube is not supported for testing connections to data sources on a remote site.
 
 ## Architecture
 
-The Site Manager DxM makes use of [zrok](https://zrok.io/), a secure, open-source platform that allows privately sharing data sources. zrok is built on top of [OpenZiti](https://openziti.io/), an open-source zero-trust networking platform by [NetFoundry](https://netfoundry.io/).
+The Site Manager DxM makes use of [zrok](https://zrok.io/), a secure, open-source platform that allows private sharing of data sources. zrok is built on top of [OpenZiti](https://openziti.io/), an open-source zero-trust networking platform by [NetFoundry](https://netfoundry.io/).
 
-In the image below, two data sources, A and B, have been exposed and are polled by a DaaS system.
-Note that each data source has its own dedicated tunnel. Data source C is not exposed and is therefore not visible externally.
+The image below shows two data sources, A and B, that have been exposed and are polled by a DaaS system. Each data source has its own dedicated tunnel. Data source C is not exposed and is therefore not visible externally.
 
 ![Overview](~/dataminer/images/SiteManagerOverview.png)<br>*Tunneling overview*
