@@ -48,13 +48,13 @@ One of the following predefined values:
 - OctetStringASCII
 
   > [!NOTE]
-  > This type can be used to retrieve extended-ASCII characters such as `é`, `è`, `à`, and more. In a read parameter, it displays the incoming octet values according to the system’s ANSI code page, which is determined by the Windows system locale and may differ between machines. Ensure the ANSI code page matches that of the SNMP device to prevent misinterpreted characters.
+  > This type can be used to retrieve extended ASCII characters such as `é`, `è`, `à`, and more. In a read parameter, it displays the incoming octet values according to the system's ANSI code page, which is determined by the Windows system locale and may differ between machines. To prevent misinterpreted characters, make sure the ANSI code page matches that of the SNMP device.
   >
-  > For example, if the device sends the hex value `0x4D61E7E3`, it represents `Maçã` under the Western European (Windows-1252) code page, where `0xE7` and `0xE3` map to `ç` and `ã`. However, if the Windows system locale is set to a Cyrillic (Windows-1251) code page, those same byte values would display as `Maзг`.
+  > For example, if the device sends the hex value `0x4D61E7E3`, this represents `Maçã` under the Western European (Windows-1252) code page, where `0xE7` and `0xE3` map to `ç` and `ã`. However, if the Windows system locale is set to a Cyrillic (Windows-1251) code page, those same byte values would display as `Maзг`.
   >
-  > By contrast, if `Maçã` were actually encoded in UTF-8 `0x4D61C3A7C3A3` by the device, reading it as `OctetStringASCII` (using the system ANSI code page, e.g., Windows-1252) would produce `MaÃ§Ãã`. In this scenario, use `OctetStringUTF8` instead.
+  > By contrast, if `Maçã` were actually encoded in UTF-8 `0x4D61C3A7C3A3` by the device, reading it as `OctetStringASCII` (using the system ANSI code page, e.g. Windows-1252) would produce `MaÃ§Ãã`. In this scenario, use `OctetStringUTF8` instead.
   >
-  > SNMP itself treats these values purely as octets and provides no context about character encoding. It is the connector’s responsibility to interpret those bytes correctly.
+  > SNMP itself treats these values purely as octets and provides no context about character encoding. It is the connector's responsibility to interpret those bytes correctly.
   >
   > See also: [ANSI code page](https://en.wikipedia.org/wiki/Windows_code_page)
 
