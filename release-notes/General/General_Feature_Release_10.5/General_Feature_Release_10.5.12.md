@@ -171,6 +171,15 @@ From now on, it will also be possible to send PDF reports if recipients are only
 > [!NOTE]
 > Currently, PDF reports configured in DataMiner Cube still require recipients to be specified in the *To* field.
 
+#### Relational anomaly detection: New API message to retrieve all relational anomalies within a given time frame [ID 43853]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+From now on, the new `GetAllRelationalAnomaliesMessage` will allow you to retrieve all relational anomalies within a given time frame, regardless of the RAD parameter group or parameter they were detected on.
+
+> [!NOTE]
+> This message will only return anomalies detected on parameters to which the user has access.
+
 #### BPA test 'Cube CRL Freeze': Enhanced performance [ID 43854]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
