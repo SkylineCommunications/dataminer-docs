@@ -4,6 +4,105 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.12
+
+### New features
+
+#### IDE
+
+##### Functions XML snippet [ID 43396]
+
+A new snippet "Functions Root" has been introduced which will insert the following XML:
+
+```xml
+<Functions xmlns="http://www.skyline.be/config/functions">
+	<Version>1.0.0.1</Version>
+	<Protocol>
+		<Name>ProtocolX</Name>
+	</Protocol>
+</Functions>
+```
+
+##### Parameter Update Locations tool window Session support [ID 43396]
+
+The Parameter Update Locations tool window is now able to detect update locations in [HTTP Sessions](xref:Protocol.HTTP.Session) defined in a protocol.
+
+For example, in the following session, the tool window is now able to detect that parameters 1000, 1001 and 1002 are updated through this session:
+
+```xml
+<HTTP>
+	<Session id="1">
+		<Connection id="1">
+			<Request verb="GET" pid="900">
+			</Request>
+			<Response statusCode="1001">
+				<Headers>
+					<Header key="Content-Type" pid="1002"></Header>
+				</Headers>
+				<Content pid="1000"></Content>
+			</Response>
+		</Connection>
+	</Session>
+</HTTP>
+```
+
+#### Updated Driver Help templates [ID 43420]
+
+The [Generate Driver Help](xref:DisPlugins#generate-driver-help) plugin in DIS has been updated according to the current templates defined in the guidelines with the Technical and Marketing templates.
+
+##### Updated DIS dependencies [ID 43959]
+
+DIS now uses:
+
+- [Skyline.DataMiner.CICD.DMApp.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Automation) version 3.0.3
+- [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol) version 3.0.3
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 1.2.1
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 2.0.0
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 2.0.0
+- [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol) version 1.0.16
+- [Skyline.DataMiner.Core.ArtifactDownloader](https://www.nuget.org/packages/Skyline.DataMiner.Core.ArtifactDownloader) version 3.1.1
+
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.5.10
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.5.10
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.5.10
+
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.4
+
+### Fixes
+
+#### IDE
+
+##### Improved error popup visibility and resolved permission-related crash [ID 43538]
+
+DIS will now no longer crash in case an operation is performed for which insufficient permissions are granted on the destination DataMiner Agent.
+Instead, a message will be shown indicating that the operation failed because of insufficient permissions.
+
+Also, error popups now reliably display in front of Visual Studio, preventing them from appearing behind the main window.
+
+Additionally, the appearance and consistency of error popups have been aligned.
+
+##### Fix infinite error popups when selecting NuGet references in solution explorer [ID 43544]
+
+An issue has been fixed where selecting a NuGet reference in Visual Studio’s Solution Explorer (within a package solution) could cause an infinite loop of error popups which eventually led to  Visual Studio crash.
+
+#### Only allow one C# Exe block for Skyline.DataMiner.Sdk projects [ID 43784]
+
+With the introduction of the Skyline.DataMiner.Sdk projects, multiple [Exe](DMSScript.Script.Exe) blocks, regardless of its [type](DMSScript.Script.Exe-type), were not allowed in Script style projects. This restriction has been made less restrictive: multiple 'csharp' type Exe blocks are not allowed.
+This way users can have one C# Exe block and e.g. a 'report' block.
+
+#### ProcessAutomation.dll is referenced incorrectly after building dmapp [ID 43899]
+
+Previously, when creating or deploying an Automation script that referenced ProcessAutomation.dll, this assembly  was incorrectly resolved.
+The system attempted to locate it in the `ProtocolScripts/DllImport` folder, whereas the correct location is `ProtocolScripts`.
+
+From now on, when ProcessAutomation.dll is referenced, the resulting path in the XML will be pointing to the `ProtocolScripts` folder.
+
+#### Removed Automation script interactivity check
+
+In DIS, when you published an Automation script, a mechanism was present that tried to detect whether the script contains any uses of interactive methods (e.g. ShowUI). If that was the case, flags were set in the script options that will mark the script as interactive. This mechanism was no longer working as DIS was no longer checking the C# code but instead the placeholder. This had as a side effect that it prevented you from manually setting the flags in the XML of an Automation script project.
+
+Since indicating that a script requires interactivity should now be done using the [Interactivity](DMSScript.Interactivity) tag, and the current implementation did not work anymore, this logic has now been removed from DIS. This now also allows to set the flags again without being altered by DIS.
+
 ## DIS 3.1.11
 
 ### New features
