@@ -8,7 +8,7 @@ The Site Manager module is available as a DxM ([DataMiner Extension Module](xref
 
 ## Prerequisites
 
-The Site Manager DxM requires DataMiner 10.5.10 or higher. The Site Manager DxM is shipped with the DaaS image of DataMiner 10.5.10. In case you are running an older DaaS version, an upgrade is required and the Site Manager DxM will need to be installed. For more information on how to upgrade DataMiner, refer to [Upgrading a DataMiner Agent](xef:Upgrading_a_DataMiner_Agent). For information on how to install a DxM, see [Deploying a DxM on a DMS node](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+The Site Manager DxM requires DataMiner 10.5.10 or higher. See [Site Manager DxM installation](xref:SiteManagerGettingStarted#site-manager-dxm-installation).
 
 ## Supported connection types and limitations
 
