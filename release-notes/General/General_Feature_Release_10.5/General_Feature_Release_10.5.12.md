@@ -294,3 +294,12 @@ From now on, when the `HasManualConfig` setting is set to true, BrokerGateway wi
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 The timeout of queries against a Cassandra database was set incorrectly. This timeout has now been set to 10 minutes.
+
+#### Problem with temporary deadlocks in SLNet while DataMiner Agents were connecting or reconnecting [ID 43936]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+<!-- Not added in MR 10.6.0 -->
+
+Up to now, a temporary deadlock could occur in SLNet while DataMiner Agents were connecting or reconnecting to each other.
+
+In some cases, this could lead to "thread problem" alarms appearing and then clearing later on.
