@@ -48,7 +48,15 @@ One of the following predefined values:
 - OctetStringASCII
 
   > [!NOTE]
-  > This type can be used to retrieve special characters like é, è, à, and more. In a read parameter, it displays the incoming octet values according to the latin-1 (ISO 8859-1) character set. For example, if the hex value "0x4D61E7E3" is received, it will be displayed as "Maçã". However, if the "Maçã" value was written in UTF-8 encoding, it would have the hex value "0x4D61C3A7C3A3". Reading this value as OctetStringASCII would result in the unexpected display of "MaÃ§Ã£". It is important to consistently use the same type for read and write operations, as the SNMP device interprets these values solely as octets without contextual understanding of the represented characters.
+  > This type can be used to retrieve extended ASCII characters such as `é`, `è`, `à`, and more. In a read parameter, it displays the incoming octet values according to the system's ANSI code page, which is determined by the Windows system locale and may differ between machines. To prevent misinterpreted characters, make sure the ANSI code page matches that of the SNMP device.
+  >
+  > For example, if the device sends the hex value `0x4D61E7E3`, this represents `Maçã` under the Western European (Windows-1252) code page, where `0xE7` and `0xE3` map to `ç` and `ã`. However, if the Windows system locale is set to a Cyrillic (Windows-1251) code page, those same byte values would display as `Maзг`.
+  >
+  > By contrast, if `Maçã` were actually encoded in UTF-8 `0x4D61C3A7C3A3` by the device, reading it as `OctetStringASCII` (using the system ANSI code page, e.g. Windows-1252) would produce `MaÃ§Ãã`. In this scenario, use `OctetStringUTF8` instead.
+  >
+  > SNMP itself treats these values purely as octets and provides no context about character encoding. It is the connector's responsibility to interpret those bytes correctly.
+  >
+  > For more information, refer to [Code Page Identifiers](https://learn.microsoft.com/en-us/windows/win32/intl/code-page-identifiers) and [Unicode and Character Sets](https://learn.microsoft.com/en-us/windows/win32/intl/unicode-and-character-sets).
 
 - OctetStringUTF8
 
