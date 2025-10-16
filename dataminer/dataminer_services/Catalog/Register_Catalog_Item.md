@@ -216,6 +216,6 @@ versionDescription: <The description of the version you want to register>
 
 > [!NOTE]
 >
-> - Supported types are a DataMiner protocol package (.dmprotocol) and a DataMiner application package (.dmapplication), with a maximum file size of **250MB**.
+> - Supported types are a DataMiner protocol package (.dmprotocol) and a DataMiner application package (.dmapplication), with a maximum file size of **250 MB**.
 > - The version description must not exceed 1500 characters. The call will fail with a `Bad Request` error if the length exceeds the maximum allowed limit.<!-- RN 40956 -->
 > - Versions following semantic version A.B.C.D will be displayed in an A.B.C range, versions following semantic version A.B.C will be displayed in an A range, and all other version formats will be displayed in the "Other" range.<!-- RN 41225 -->
