@@ -47,7 +47,7 @@ On the DataMiner Agent, the tool itself can be found at the following location:
 
 When you launch the tool, the following options will be selected by default:
 
-- Include memory dump (when run-time errors have been found on the system)
+- Include memory dump (when runtime errors have been found on the system)
 
 - Save to SLLogCollector folder on desktop
 

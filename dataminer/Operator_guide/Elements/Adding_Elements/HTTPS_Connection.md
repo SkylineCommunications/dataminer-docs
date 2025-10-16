@@ -40,5 +40,5 @@ For HTTP(S) connections, you can specify the following connection settings while
   > [!NOTE]
   >
   > - To skip SSL/TLS certificate validation for all elements that share the same *protocol.xml* file, set the `SkipCertificateVerification` element to true in the `PortSettings` element of the *protocol.xml* file.
-  > - To enable SSL/TLS certificate validation when using multi-threaded HTTP communication, set `requestSettings[6]` to false when building the HTTP request in a QAction. For more information, see [Setting up multi-threaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
+  > - To enable SSL/TLS certificate validation when using multithreaded HTTP communication, set `requestSettings[6]` to false when building the HTTP request in a QAction. For more information, see [Setting up multithreaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
   > - For backward compatibility, the SSL/TLS certificate validation is skipped by default for all elements created before version 10.5.0/10.4.12.

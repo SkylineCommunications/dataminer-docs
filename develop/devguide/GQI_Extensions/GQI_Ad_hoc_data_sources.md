@@ -5,7 +5,7 @@ description: For an ad hoc data source, add a correctly configured script in the
 
 # Ad hoc data sources
 
-Each ad hoc data source for GQI is defined in an **Automation script library** by a **C# class** that implements specific [interfaces](xref:Ad_hoc_Building_blocks). Every time GQI requires information from the ad hoc data source, it will create a new instance of that class and call the relevant [life cycle](xref:Ad_hoc_Life_cycle) methods.
+Each ad hoc data source for GQI is defined in an **Automation script library** by a **C# class** that implements specific [interfaces](xref:Ad_hoc_Building_blocks). Every time GQI requires information from the ad hoc data source, it will create a new instance of that class and call the relevant [lifecycle](xref:Ad_hoc_Life_cycle) methods.
 
 > [!TIP]
 > To learn more about what you can do with ad hoc data sources, we highly recommend watching [Empower Replay: Create your own GQI data source](https://www.youtube.com/watch?v=rapRdkIRSHQ). ![Video](~/dataminer/images/video_Duo.png)

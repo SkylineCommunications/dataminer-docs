@@ -7,7 +7,7 @@ uid: Advanced_Failover_options
 When you click *Advanced* in the *Failover* dialog box, a window opens with several tabs where you can configure advanced options.
 
 > [!NOTE]
-> Some Failover options can also be configured directly in *MaintenanceSettings.xml*. For more information, refer to the Watchdog settings in [MaintenanceSettings.xml](xref:MaintenanceSettings_xml).
+> Some Failover options can also be configured directly in *MaintenanceSettings.xml*. For more information, refer to [MaintenanceSettings.SLNet](xref:MaintenanceSettings.SLNet) and [MaintenanceSettings.WatchDog.FailoverOnRTE](xref:MaintenanceSettings.WatchDog.FailoverOnRTE).
 
 ## Type
 

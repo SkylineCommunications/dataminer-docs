@@ -9,7 +9,7 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 > [!NOTE]
 > We promote the use of Ubuntu LTS as the preferred Linux distribution. As such, the commands mentioned below will work on any Debian-based system, including Ubuntu.
 
-1. Download a [supported Cassandra version](xref:Software_support_life_cycles#third-party-software-support-life-cycle) and install it on a Linux machine.
+1. Download a [supported Cassandra version](xref:Software_support_life_cycles#third-party-software-support-lifecycle) and install it on a Linux machine.
 
    - For information on which Cassandra versions are supported, see [Cassandra requirements](xref:DataMiner_Compute_Requirements#cassandra-requirements).
 

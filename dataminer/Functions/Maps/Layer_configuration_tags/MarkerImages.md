@@ -41,7 +41,7 @@ In this optional attribute, you can specify the point of the image that has to b
 
 Default anchor: Bottom middle of the marker image
 
-Example: If the marker image is 32 pixels wide and 32 pixels high, specifying "0,32" in the *anchor* attribute will cause the lower left corner of the image to be anchored to the map location.
+Example: If the marker image is 32 pixels wide and 32 pixels high, specifying "0,32" in the *anchor* attribute will cause the lower-left corner of the image to be anchored to the map location.
 
 ### single
 

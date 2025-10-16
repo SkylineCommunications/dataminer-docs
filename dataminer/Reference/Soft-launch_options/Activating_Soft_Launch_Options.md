@@ -28,4 +28,4 @@ For some **Cube-only** features, it is not necessary to configure a tag in *Soft
 For some features, a different configuration may be required. For more information, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
 
 > [!NOTE]
-> If you want to change which soft-launch options are enabled for a [DaaS system](xref:Creating_a_DMS_in_the_cloud), contact <daas@dataminer.services>. When you create a DaaS staging system, most soft-launch options will be enabled by default.
+> When you create a [DaaS system](xref:Creating_a_DMS_in_the_cloud), some soft-launch options will be enabled by default. If you want to change which soft-launch options are enabled, contact <daas@dataminer.services>. To know which options are enabled by default, refer to the [overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).

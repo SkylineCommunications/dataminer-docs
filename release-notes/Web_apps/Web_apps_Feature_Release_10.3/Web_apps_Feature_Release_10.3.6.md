@@ -139,14 +139,14 @@ A web component now supports hyperlinks with a target attribute.
 
 Example: `<a href="http://www.skyline.be" target="_blank">Skyline Communications</a>`
 
-#### Web services API: Multi-value DOM fields will now list all their values [ID 36190]
+#### Web services API: Multivalue DOM fields will now list all their values [ID 36190]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-Up to now, in e.g. low-code apps, multi-value DOM fields would only show a summary of the values they contained. From now on, they will list all values instead.
+Up to now, in e.g. low-code apps, multivalue DOM fields would only show a summary of the values they contained. From now on, they will list all values instead.
 
 > [!NOTE]
-> When a multi-value DOM field contains invalid values, it will no longer list them. Instead, they will be added to the error message.
+> When a multivalue DOM field contains invalid values, it will no longer list them. Instead, they will be added to the error message.
 
 ### Fixes
 
@@ -206,7 +206,7 @@ When you generated a PDF of a dashboard that contained a table component showing
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-In some cases, invalid nodes could get added to a GQI query, causing run-time errors to be thrown.
+In some cases, invalid nodes could get added to a GQI query, causing runtime errors to be thrown.
 
 #### Dashboards app & Low-Code Apps: Clearing a State component by means of Ctrl+Click [ID 36056]
 

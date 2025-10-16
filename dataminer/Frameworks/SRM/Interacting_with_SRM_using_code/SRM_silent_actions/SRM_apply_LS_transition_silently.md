@@ -2,9 +2,9 @@
 uid: SRM_apply_LS_transition_silently
 ---
 
-# Silently applying booking life cycle transitions
+# Silently applying booking lifecycle transitions
 
-The example below shows how booking life cycle transitions (Finish, On-Hold, Confirm, Cancel, or Delete) can be applied to an existing booking without user interaction by means of an Automation script.
+The example below shows how booking lifecycle transitions (Finish, On-Hold, Confirm, Cancel, or Delete) can be applied to an existing booking without user interaction by means of an Automation script.
 
 > [!NOTE]
 > Using the *TryChangeStateToConfirmed* call as illustrated below will also trigger any Created Booking custom script.

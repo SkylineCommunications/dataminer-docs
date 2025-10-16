@@ -50,7 +50,7 @@ A number of enhancements have been made to the NATS configuration:
 
   > [!NOTE]
   >
-  > - Changing this option in the SLNetClientTest tool can be done at run-time. The change will be applied immediately.
+  > - Changing this option in the SLNetClientTest tool can be done at runtime. The change will be applied immediately.
   > - Forcing manual configuration will disable the automatic NATS configuration on the DataMiner System. It will then be up to the user to either manually configure a NATS cluster or manually call NatsCustodianResetNatsMessage when changes are made to the DMS.
 
 - On DataMiner startup, NAS and NATS will now automatically be started if they are not running.
@@ -160,11 +160,11 @@ For more information, see [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_V
 
 When an error occurs in SLScripting, from now on, a new SLScripting instance will be started and all QActions will be reloaded.
 
-#### Alarm Console: A run-time error will now appear when the Resource Manager failed to initialize [ID 34024]
+#### Alarm Console: A runtime error will now appear when the Resource Manager failed to initialize [ID 34024]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-From now on, the following run-time error will appear in the Alarm Console when the Resource Manager failed to initialized.
+From now on, the following runtime error will appear in the Alarm Console when the Resource Manager failed to initialized.
 
 ```txt
 An unexpected exception has occurred while initializing Resource Manager. Please check the SLResourceManager logging for more information.
@@ -548,7 +548,7 @@ In a visual overview with several tab pages and shapes linked to an EPM object, 
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version TBD -->
 
-When you clicked the filter icon of a table component, the query filter's column data would incorrectly not get highlighted in the *Feeds* data set.
+When you clicked the filter icon of a table component, the query filter's column data would incorrectly not get highlighted in the *Feeds* dataset.
 
 #### 'Clear all' button not available for EPM topology chain [ID 34133]
 
@@ -590,7 +590,7 @@ When a GQI query requested property values by means of a GetPropertyValueMessage
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 [CU0] -->
 
-Due to a problem with the SPI framework, in some cases, run-time errors could occur in SLDataMiner when tracking user actions.
+Due to a problem with the SPI framework, in some cases, runtime errors could occur in SLDataMiner when tracking user actions.
 
 #### SNMP polling issues in case protocol contained wildcards in parameter OIDs [ID 34343]
 

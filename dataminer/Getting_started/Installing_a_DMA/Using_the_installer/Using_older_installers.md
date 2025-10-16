@@ -4,13 +4,13 @@ uid: Using_older_installers
 
 # Older DataMiner installers (deprecated)
 
-If you are using an older installer, follow the steps below to install DataMiner. However, keep in mind that installers prior to the 10.4 installer are considered deprecated, so unless there is a specific reason why you need to use an older installer, we highly recommend using the [DataMiner Installer v10.4](xref:Installing_DM_using_the_DM_installer) instead.
+If you are using an older installer, follow the steps below to install DataMiner. However, keep in mind that installers prior to the 10.4 installer are considered deprecated, so unless there is a specific reason why you need to use an older installer, we highly recommend [using a recent installer](xref:Installing_DM_using_the_DM_installer) instead.
 
 ## Default DataMiner installation
 
 1. Make sure you are logged into Windows with the correct user account:
 
-   - If you are using the DataMiner 10.2 installer or newer, use an account with administrator rights. During the installation, the user account will automatically be added to a local DataMiner user group named *Administrator (installer)*.
+   - If you are using the DataMiner 10.2 installer, use an account with administrator rights. During the installation, the user account will automatically be added to a local DataMiner user group named *Administrator (installer)*.
    - If you are using a DataMiner installer older than version 10.2, use the server's local Administrator account. Do not use a regular user account with administrative rights.
 
 1. Double-click the setup executable.
@@ -26,7 +26,7 @@ If you are using an older installer, follow the steps below to install DataMiner
 
 1. Click next.
 
-   The progress of the installation will be displayed. A *cancel* button in the lower right corner allows you to cancel the installation process if necessary.
+   The progress of the installation will be displayed. A *cancel* button in the lower-right corner allows you to cancel the installation process if necessary.
 
 1. Once the installation is complete, click *next*.
 
@@ -90,7 +90,7 @@ If you are using an older, deprecated DataMiner installer, follow the steps belo
      > [!NOTE]
      > By default, a DataMiner Agent installed with the deprecated DataMiner installer uses a single Cassandra node that is hosted on the same physical or virtual server. However, different architectures are also possible. For more information, see [Storage options overview](xref:Supported_system_data_storage_architectures), or check with your Technical Account Manager.
 
-   - If you are using an older DataMiner installer, you can select to install *MySQL Server*, and optionally [*MySQL Workbench*](xref:MySQL_Workbench). However, as MySQL support is [scheduled to end soon](xref:Software_support_life_cycles#third-party-software-support-life-cycle), this option is **not recommended**.
+   - If you are using an older DataMiner installer, you can select to install *MySQL Server*, and optionally [*MySQL Workbench*](xref:MySQL_Workbench). However, as MySQL support is [scheduled to end soon](xref:Software_support_life_cycles#third-party-software-support-lifecycle), this option is **not recommended**.
 
      > [!NOTE]
      >
@@ -106,7 +106,7 @@ If you are using an older, deprecated DataMiner installer, follow the steps belo
 
 1. Click *Next*.
 
-   The progress of the installation will be displayed. A *cancel* button in the lower right corner allows you to cancel the installation process if necessary.
+   The progress of the installation will be displayed. A *cancel* button in the lower-right corner allows you to cancel the installation process if necessary.
 
 1. Once the installation is complete, click *next*.
 

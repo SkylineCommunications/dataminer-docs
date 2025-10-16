@@ -27,7 +27,7 @@ In System Center, go to *System settings* > *Credentials library*. You can then:
 
     - For each set of credentials, the user groups that can use them must be specified. To do so, add or remove the relevant groups in the *Included in groups* box using the *ADD \>\>* and *\<\< REMOVE* buttons.
 
-When you have applied changes to a set of credentials, do not forget to click the *Apply* button in the lower right corner to save the changes.
+When you have applied changes to a set of credentials, do not forget to click the *Apply* button in the lower-right corner to save the changes.
 
 > [!NOTE]
 >

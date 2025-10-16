@@ -73,6 +73,12 @@ From version 1.3.1 of the DataMiner SupportAssistant module onwards, this DxM al
 
 The UserDefinableApiEndpoint module is responsible for handling API triggers for DataMiner User-Defined APIs. See [DataMiner UserDefinableApiEndpoint DxM](xref:UD_APIs_UserDefinableApiEndpoint).
 
+### Web
+
+The Web module provides back-end services for the DataMiner web apps.
+
+This DxM is included in DataMiner upgrade packages from DataMiner 10.5.0 [CU8]/10.5.11 onwards.<!-- RN 43439 -->
+
 ## Available DxMs
 
 ### CloudGateway
@@ -113,6 +119,8 @@ See [Data Aggregator](xref:Data_Aggregator_DxM).
 The DataAPI module provides an HTTP interface that accepts requests with a JSON-formatted body. When required, it creates an element to store values extracted from the JSON payload.
 
 In combination with the DataAggregator DxM, the DataAPI DxM is required for the [Data Sources](xref:Data_Sources) module.
+
+From DataMiner 10.5.11/10.6.0 onwards, DataMiner upgrade packages by default include the latest version of the DataAPI module.<!-- RN 43677 -->
 
 ### ModelHost
 

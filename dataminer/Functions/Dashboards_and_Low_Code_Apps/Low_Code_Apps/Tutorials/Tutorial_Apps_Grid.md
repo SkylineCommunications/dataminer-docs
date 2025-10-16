@@ -39,7 +39,7 @@ You can now create the query using the *Orders.json* file as the data source.
 > [!NOTE]
 > The *Orders.json* file should have been created while following the [Style a table](xref:Tutorial_Apps_Style_A_Table#step-1-configure-the-query) tutorial.
 
-1. Create a new low-code app. See [Creating low-code applications](xref:Creating_custom_apps).
+1. Create a new low-code app. See [Creating apps](xref:Creating_custom_apps).
 
 1. In the *Data* pane, expand *Queries*.
 

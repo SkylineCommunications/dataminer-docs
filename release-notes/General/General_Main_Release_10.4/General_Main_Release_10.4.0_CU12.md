@@ -113,7 +113,7 @@ When the same version of a DVE connector was uploaded twice, the production vers
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-When an element was deleted, a run-time error could occur in SLProtocol when a parameter had a duplicate `RawType` tag configured.
+When an element was deleted, a runtime error could occur in SLProtocol when a parameter had a duplicate `RawType` tag configured.
 
 #### SNMP managers would incorrectly receive some or all active alarms at DMA startup [ID 41878]
 

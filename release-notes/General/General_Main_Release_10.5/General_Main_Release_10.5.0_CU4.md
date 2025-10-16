@@ -30,9 +30,9 @@ Similarly, when BrokerGateway detects that a DataMiner Agent is about to be adde
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
-On systems using the GQI DxM, the *Get object manager instances* data source now supports real-time updates.
+On systems using the GQI DxM, the *Get object manager instances* data source now supports real-time updates. For more information on real-time updates, see [Query updates](xref:Query_updates).
 
-For more information on real-time updates, see [Query updates](xref:Query_updates).
+Note that with this change, a possible issue has also been resolved where calling the *IGQIUpdater.AddRow* method would result in a duplicate row with the same row key being added in case a row with the same row key already existed.
 
 #### New connector installed as part of an application package will now automatically be set as production version [ID 42623]
 
@@ -104,7 +104,7 @@ A number of enhancements have been made to BrokerGateway with regard to error ha
 
 From DataMiner 10.5.0 [CU2]/10.5.5 onwards, you can migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) using the *NATSMigration* tool.
 
-Up to now, changes made to the *MaintenanceSettings.xml* file during the migration required DataMiner to be restarted. As these changes will now be read at run-time, it will no longer be required to restart DataMiner when migrating.
+Up to now, changes made to the *MaintenanceSettings.xml* file during the migration required DataMiner to be restarted. As these changes will now be read at runtime, it will no longer be required to restart DataMiner when migrating.
 
 #### GQI: Sort operator now supports real-time updates when GQI DxM is being used [ID 42941]
 
@@ -237,3 +237,11 @@ After a Failover switch, in some cases, the ClusterEndpointManager would fail to
 If a redundancy group has more primary elements than backup elements, at the moment when all backups are in use, an alarm with severity level "Notice" will appear in the Alarm Console mentioning that all redundancy resources are in use.
 
 By default, that alarm is cleared as soon as one of the backup elements is available again. However, up to now, in some cases, the alarm would incorrectly not get cleared.
+
+### Fixes in build 16239
+
+#### SLNet memory leak caused by ClusterEndpoint.json sync [ID 43407]
+
+<!-- MR 10.5.0 [CU4] (but also 10.5.0 [CU5] and 10.5.0 [CU6]) - FR 10.5.7 [CU1] (but also 10.5.8 [CU1] and 10.5.9) -->
+
+In large DataMiner Systems, especially in clusters with Failover Agents, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely. This could lead to a serious memory leak in SLNet, causing DataMiner Agents to disconnect frequently.

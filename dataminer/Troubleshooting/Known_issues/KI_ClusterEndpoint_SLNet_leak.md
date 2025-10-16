@@ -6,8 +6,8 @@ uid: KI_ClusterEndpoint_SLNet_leak
 
 ## Affected versions
 
-- Feature Release: DataMiner 10.5.7 and 10.5.8
-- Main Release: DataMiner 10.5.0 [CU4], 10.5.0 [CU5]
+- Feature Release: DataMiner 10.5.7 [CU0] and 10.5.8
+- Main Release: DataMiner 10.5.0 [CU4] build 15943, 10.5.0 [CU5] build 16086
 
 ## Cause
 
@@ -15,11 +15,11 @@ After an upgrade to one of the affected DataMiner versions, it is possible that 
 
 ## Fix
 
-Install DataMiner 10.5.0 [CU6]/10.5.9.<!-- RN 43407 -->
+Install DataMiner 10.5.0 [CU4] build 16239, DataMiner 10.5.0 [CU5] build 16243, DataMiner 10.5.0 [CU6], DataMiner 10.5.7 [CU1], DataMiner 10.5.8 [CU1], or DataMiner 10.5.9.<!-- RN 43407 -->
 
 ## Workaround
 
-In DataMiner 10.5.0 [CU5]/10.5.8, you can prevent this issue by setting the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft-launch option to "false" on each DataMiner Agent in the cluster. However, note that it is not possible to [migrate to BrokerGateway](xref:BrokerGateway_Migration) while this option is disabled.
+In DataMiner 10.5.0 [CU5] (build 16086) or 10.5.8, you can prevent this issue by setting the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft-launch option to "false" on each DataMiner Agent in the cluster. However, note that it is not possible to [migrate to BrokerGateway](xref:BrokerGateway_Migration) while this option is disabled.
 
 ## Description
 

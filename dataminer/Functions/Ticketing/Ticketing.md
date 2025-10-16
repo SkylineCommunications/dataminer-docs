@@ -6,7 +6,7 @@ uid: ticketing
 
 > [!CAUTION]
 >
-> - The Ticketing app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
+> - The Ticketing app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles). ![EOL](~/dataminer/images/EOL_Duo.png)
 > - The Ticketing app is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 The Ticketing app, also known as DataMiner Ticketing, allows you to easily create and manage tickets in DataMiner. The app is available both embedded within DataMiner Cube and as a standalone web app.

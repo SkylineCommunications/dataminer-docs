@@ -47,7 +47,7 @@ Regardless of which upgrade strategy you choose, you will first need to perform 
 
 #### Rolling upgrade
 
-To perform a rolling upgrade, refer to the [rolling upgrade guide](https://opensearch.org/docs/latest/install-and-configure/upgrade-opensearch/rolling-upgrade/) in the OpenSearch documentation.
+To perform a rolling upgrade, refer to the [rolling upgrade guide](https://docs.opensearch.org/latest/migrate-or-upgrade/rolling-upgrade/) in the OpenSearch documentation.
 
 ### Major upgrade
 

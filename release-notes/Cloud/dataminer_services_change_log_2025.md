@@ -9,9 +9,61 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 9 October 2025 - Fix - Status - Incorrect spacing incident descriptions
+
+Previously, if descriptions for incidents contained tabs or new lines, these were not shown. Now the text will be shown with correct spacing.
+
+### 1 October 2025 - Enhancement - Usage - STaaS usage billing
+
+Starting from 1 October 2025, automatic monthly billing will be implemented for STaaS. On the first day of each month, the expended DataMiner credits for the previous month's STaaS usage will be subtracted from the organization's balance. This billing will take effect retroactively, going as far back as April 2024.
+
+In case an organization does not have sufficient DataMiner credits, their balance will go negative, and it will need to be topped up as soon as possible. Organizations with a negative balance will not be able to deploy new DaaS systems.
+
+### 30 September 2025 - Enhancement - Catalog - Ranges now show creation date instead of last modified date
+
+In the Catalog app, item ranges will now show their creation date instead of the date when they were last modified.
+
+### 21 September 2025 - Enhancement - Catalog - Enhanced searching capabilities
+
+In the Catalog app, a more advanced search has been implemented with a ranking system. Users should now be able to find more relevant items when searching on terms that are not necessarily in the display name of the item.
+
+Additionally, when a tag on a Catalog item is clicked, that tag will be used as a filter to find other items with the same tag.
+
+### 21 September 2025 - New feature - Admin - Integrated support
+
+The Admin app now has a support page where users that are part of a verified organization can see and create tickets.
+
+### 11 September 2025 - Enhancement - Catalog - Custom icons
+
+It is now possible to apply custom icons to your Catalog items using the [Key Catalog API](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v3.0).
+
+### 10 September 2025 - New feature - Catalog - Improved home page
+
+The Catalog app now has a new home page with a carousel and trending tab.
+
+### 2 September 2025 - Enhancement - dataminer.services - Ask support button
+
+From now on, users can ask for support by clicking the **?** button next to the user icon.
+
+### 1 September 2025 - Enhancement - Remote Access - Support remote access to the Assistant web app
+
+From now on, the Assistant web app can be accessed remotely.
+
+### 29 August 2025 - Enhancement - dataminer.services - Status routes now use the shared header bar
+
+In any dataminer.services application, accessing status routes such as /404, /error, or /success will now display the appropriate status page along with the shared header bar.
+
+### 29 August 2025 - Fix - Catalog - Legacy URL support for connectors has been discontinued
+
+In the Catalog app, legacy connector URLs such as catalog.dataminer.services/result/driver/{:id} are no longer supported. Accessing these endpoints will now redirect users to a 404 error page.
+
+### 26 August 2025 - Enhancement - Remote Access - Support for video thumbnails when remotely accessing Cube
+
+From now on, video thumbnails will be displayed when DataMiner Cube is accessed remotely.
+
 ### 18 August 2025 - Enhancement - Admin - Unmanaged objects usage visibility and export possibility
 
-In the Admin app, the usage for unmanaged objects will now be displayed if you are using at least DataMiner 10.5.5/10.6.0 and DataMiner SupportAssistant 1.7.3. The data will also be available for export.
+In the Admin app, the usage for unmanaged objects will now be displayed if you are using at least DataMiner 10.5.9/10.6.0 and DataMiner SupportAssistant 1.7.3. The data will also be available for export.
 
 ### 07 August 2025 - Enhancement - Version description now supports Markdown
 

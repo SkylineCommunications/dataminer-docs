@@ -104,7 +104,7 @@ items:
         topicUid: Forbidden_characters
       - name: Examples of element names
         topicUid: Examples_of_element_names
-  - name: Software support life cycles
+  - name: Software support lifecycles
     topicUid: Software_support_life_cycles
   - name: Feature overview
     topicUid: Feature_overview
@@ -156,6 +156,8 @@ items:
         topicUid: element_benchmarks
       - name: Failover benchmarks
         topicUid: failover_benchmarks
+      - name: GQI benchmarks
+        topicUid: gqi_benchmarks
       - name: History set benchmarks
         topicUid: history_set_benchmarks
       - name: Migration benchmarks

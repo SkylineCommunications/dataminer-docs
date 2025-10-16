@@ -2,12 +2,12 @@
 uid: Cube_Feature_Release_10.5.10
 ---
 
-# DataMiner Cube Feature Release 10.5.10 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.5.10
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.4.0 [CU19] and 10.5.0 [CU7].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -38,11 +38,11 @@ See also: [Service & Resource Management: Support for capacity ranges [ID 43335]
 
 The notification shown in Cube when an alarm storm is triggered has been improved. Previously, it only mentioned the number of alarms with a specific description that had entered Cube. Now the notification will also mention the protocols of the alarms. The same also goes for the tooltip shown for an alarm storm. In addition, the alarm details card for the alarm storm alarm will now also include a list of the protocols of the alarms involved. Finally, the total count of the alarms mentioned in the notification and used to determine when to enter or leave an alarm storm has also been improved, taking up to 20 alarms from the existing alarm tree into account.
 
-#### Automation, Correlation & Scheduler apps: 'Send email' action now allows you to select a private dashboard [ID 43394] [ID 43570]
+#### Automation, Correlation & Scheduler apps: 'Send email' action now allows you to select a private dashboard [ID 43393] [ID 43394] [ID 43570]
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
-In a *Send email* action, it is now possible to select a private dashboard provided you have access to it, and provided that the DataMiner server uses at least DataMiner version 10.4.0 [CU19], 10.5.0 [CU7], or 10.5.10.
+In a *Send email* action, it is now possible to select a private dashboard provided you have access to it, and provided that the DataMiner server uses at least DataMiner version 10.5.10 or 10.6.0.
 
 If you try to edit a *Send email* action linked to a private dashboard you do not have access to, the following error message will appear. However, you will be allowed to replace it by a dashboard you do have access to.
 
@@ -109,3 +109,29 @@ When, in System Center, you performed a DataMiner upgrade while Cube was connect
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 When you opened a trend graph, in some cases, the changepoints would incorrectly not be displayed.
+
+#### Closed API connection would incorrectly not be automatically re-established [ID 43586]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, when the API connection had been closed, no attempt would incorrectly be made to automatically re-establish the connection.
+
+For example, when, after DataMiner Cube had been idle for more than 5 minutes and the API connection had automatically closed, you opened the Automation tab, the API request to retrieve the list of dashboards would fail.
+
+From now on, when the API connection was closed, it will automatically be re-established when a new API request is sent.
+
+#### Trending: Trend graph displayed in visual overview could be partially covered by the anomalies bar [ID 43602]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
+
+When a trend graph was displayed in a visual overview, in some cases, the graph would be partially covered by the anomalies bar.
+
+#### Automation: Problem when sending messages related to unsupported features to the DataMiner Agent via gRPC [ID 43756]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 [CU0] -->
+
+When DataMiner Cube sends messages related to unsupported Automation features to a DataMiner Agent, deserialization exceptions are thrown in SLNet.
+
+Up to now, those exceptions would not get processed correctly when the unsupported messages were sent over a gRPC connection, causing DataMiner Cube to get stuck while waiting for a response that would never arrive.
+
+From now on, DataMiner Cube will no longer send messages related to an unsupported Automation feature to a DataMiner Agent if it knows the DataMiner Agent does not support the feature in question.

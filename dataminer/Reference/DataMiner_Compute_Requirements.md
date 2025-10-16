@@ -36,7 +36,7 @@ As a rule, between 16 GB and 128 GB RAM is needed, although 128 GB is an excepti
 
 ### Disk
 
-DataMiner itself, without taking the database for persistent storage into account, does not require a disk with huge capacity. However, we do recommend using an SSD as we regularly write to files. We recommend a 250 GB SSD, ideally a hot-swappable RAID1 pair.
+DataMiner itself, without taking the database for persistent storage into account, does not require a disk with huge capacity. However, we do recommend using an SSD as we regularly write to files. We recommend a 128 GB SSD, ideally a hot-swappable RAID1 pair.
 
 In addition, the disk throughput is of vital importance. The following minimum requirements apply:
 
@@ -82,8 +82,16 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 > [!NOTE]
 >
+> - If you install DataMiner using the [v5.0 Installer](xref:Installing_DM_using_the_DM_installer), the required .NET (Framework) versions will be **included in the installation**, so there is no need to install these separately.
 > - We recommend always upgrading to the latest .NET Framework version.
 > - Major .NET versions are not cross-compatible, which means that you always need to install the appropriate version mentioned above. If you are for example using a DataMiner version that requires .NET 8.0, this will not work if only .NET 9.0 is installed, so in that case you will need to install .NET 8.0 as well.
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>Are you not sure which versions you have installed? Take a look at <a href="https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed" style="color: #657AB7;">Microsoft's guide</a> on this topic. You can also consult their <a href="https://learn.microsoft.com/en-us/dotnet/framework/install/" style="color: #657AB7;">.NET Framework installation guide</a>.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
 
 ### Microsoft Visual C++
 

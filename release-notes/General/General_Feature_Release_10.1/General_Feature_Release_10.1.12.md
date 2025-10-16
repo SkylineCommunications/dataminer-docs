@@ -712,7 +712,7 @@ In some cases, the status of a newly installed Failover system would incorrectly
 
 #### Problem when using Class Library monitors in DataMiner Integration Studio \[ID 31685\]
 
-Critical errors could be thrown when using Class Library monitors in DataMiner Integration Studio in conjunction with DataMiner version 10.1.12. Also, in some cases, Automation scripts could fail at run-time.
+Critical errors could be thrown when using Class Library monitors in DataMiner Integration Studio in conjunction with DataMiner version 10.1.12. Also, in some cases, Automation scripts could fail at runtime.
 
 ## Addendum CU2
 

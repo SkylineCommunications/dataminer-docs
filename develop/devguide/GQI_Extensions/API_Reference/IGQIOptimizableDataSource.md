@@ -7,7 +7,7 @@ uid: GQI_IGQIOptimizableDataSource
 Available from DataMiner 10.3.3/10.4.0 onwards<!-- RN 35389 -->.
 
 > [!NOTE]
-> This interface is only used by the GQI framework in the life cycle for ad hoc data sources from DataMiner 10.5.0 [CU2]/10.5.5 onwards when using the [GQI DxM](xref:GQI_DxM)<!-- RN42528 -->.
+> This interface is only used by the GQI framework in the lifecycle for ad hoc data sources from DataMiner 10.5.0 [CU2]/10.5.5 onwards when using the [GQI DxM](xref:GQI_DxM)<!-- RN42528 -->.
 
 ## Definition
 
@@ -44,6 +44,6 @@ Called when an optimizable operator is appended directly to the ad hoc data sour
 
 #### See also
 
-- The [ad hoc data source life cycle](xref:Ad_hoc_Life_cycle).
+- The [ad hoc data source lifecycle](xref:Ad_hoc_Life_cycle).
 - The [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator) to optimize custom operators.
 - Example: [Optimizing sort operations](xref:GQI_Ad_hoc_Optimizing_sort_operations).

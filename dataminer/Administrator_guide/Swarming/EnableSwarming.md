@@ -9,7 +9,7 @@ uid: EnableSwarming
 
 ## Prerequisites
 
-- DataMiner 10.5.1/10.6.0 or higher.
+- DataMiner 10.5.1/10.6.0 or higher for swarming of basic elements. DataMiner 10.5.11/10.6.0 for swarming of DVEs or virtual function parent or child elements.
 
 - [STaaS](xref:STaaS) or a [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage) setup.
 

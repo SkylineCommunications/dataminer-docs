@@ -96,7 +96,7 @@ The [SLA Manager App](https://community.dataminer.services/business-intelligence
 
 ### Custom apps
 
-In addition to the standard core DataMiner licenses, which allow anybody to design, build, and deploy comprehensive multi-vendor end-to-end network management and orchestration solutions, you can also opt to license custom, purpose-built DataMiner applications from Skyline Communications, such as the [DataMiner PTP app](xref:SolPTP).
+In addition to the standard core DataMiner licenses, which allow anybody to design, build, and deploy comprehensive multivendor end-to-end network management and orchestration solutions, you can also opt to license custom, purpose-built DataMiner applications from Skyline Communications, such as the [DataMiner PTP app](xref:SolPTP).
 
 ### Staging
 

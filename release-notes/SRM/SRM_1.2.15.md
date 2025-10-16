@@ -44,7 +44,7 @@ In addition, when an error occurs during the execution of the *SRM_ImportFunctio
 
 The efficiency of the *SRM_QuarantineHandling* script has been improved as follows:
 
-- Only bookings that have a booking life cycle stage other than *Quarantine* are now processed.
+- Only bookings that have a booking lifecycle stage other than *Quarantine* are now processed.
 - When loading future bookings, the script now filters by date as well as on whether the bookings are quarantined.
 
 #### Cleanup mechanism for fast booking creation \[ID 30221\]

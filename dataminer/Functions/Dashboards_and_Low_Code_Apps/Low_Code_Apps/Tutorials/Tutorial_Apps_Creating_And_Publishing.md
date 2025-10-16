@@ -77,4 +77,4 @@ This tutorial is part of the following learning path:
 
 ## Related documentation
 
-- [Creating low-code applications](xref:Creating_custom_apps)
+- [Creating apps](xref:Creating_custom_apps)

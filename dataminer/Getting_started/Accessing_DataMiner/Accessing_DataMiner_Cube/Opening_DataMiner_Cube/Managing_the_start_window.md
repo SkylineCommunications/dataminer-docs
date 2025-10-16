@@ -12,7 +12,7 @@ From DataMiner 10.2.0 \[CU3]/10.2.6 onwards, Cube can automatically update to a 
 
 In the Cube start window, you can select which Cube update track should be used:
 
-1. Click the cogwheel icon in the lower right corner of the start window.
+1. Click the cogwheel icon in the lower-right corner of the start window.
 
 1. Select *Settings*.
 
@@ -119,7 +119,7 @@ To filter the tiles in the start window:
 
 To specify whether the DataMiner Cube should start up when Windows is started:
 
-1. Click the cogwheel icon in the lower right corner of the start window.
+1. Click the cogwheel icon in the lower-right corner of the start window.
 
 1. Select or clear the option *Start with Windows*, depending on whether you want Cube to start with Windows or not.
 
@@ -127,7 +127,7 @@ To specify whether the DataMiner Cube should start up when Windows is started:
 
 To view logging for the DataMiner Cube start window:
 
-1. Click the cogwheel icon in the lower right corner of the window.
+1. Click the cogwheel icon in the lower-right corner of the window.
 
 1. Select *View logging*.
 
@@ -140,7 +140,7 @@ The Cube start window also checks the servers you connect to for new software ve
 This scheduled task can be edited to change the interval or time or to completely disable the background updates (by disabling the task). To reset the task to the default settings, simply delete the task and open the Cube start window. The scheduled task will automatically be created again.
 
 > [!NOTE]
-> Background updates (triggered by the Windows Task Scheduler) for the Cube start window have a phased rollout. This means not all clients will be updated at the same time. Different clients will receive the update over a time period of a few days. However, you can force the start window to update to the latest available version by clicking the cogwheel button in the lower right corner and selecting *Check for updates*.
+> Background updates (triggered by the Windows Task Scheduler) for the Cube start window have a phased rollout. This means not all clients will be updated at the same time. Different clients will receive the update over a time period of a few days. However, you can force the start window to update to the latest available version by clicking the cogwheel button in the lower-right corner and selecting *Check for updates*.
 
 ### Checking the software version of the start window
 
@@ -148,7 +148,7 @@ From DataMiner 10.2.6/10.3.0 onwards, you can check which software version the s
 
 To do so:
 
-1. Click the cogwheel icon in the lower right corner of the start window.
+1. Click the cogwheel icon in the lower-right corner of the start window.
 
 1. Select *About*.
 
@@ -158,7 +158,7 @@ Do one of the following:
 
 - Execute the above-mentioned scheduled task.
 
-- Click the cogwheel icon in the lower right corner of the start window, and select *Check for updates*.
+- Click the cogwheel icon in the lower-right corner of the start window, and select *Check for updates*.
 
 ### Consulting the start window logging
 

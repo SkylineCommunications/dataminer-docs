@@ -186,6 +186,9 @@ var combinedResult = domHelper.DomInstances.Read(andFilter);
 >
 > For STaaS, there is no such hard limit, but we do recommend keeping the queries short.
 
+> [!IMPORTANT]
+> When link security is enabled, the filters used to retrieve `DomInstances` or DOM history need to adhere to certain [filter requirements](xref:DOM_SecuritySettings#filtering-requirements-when-security-is-enabled).
+
 #### Sorting
 
 It is also possible to sort your results based on a specific field of a DOM instance (both core fields and `FieldValues`). This sorting is done in the database, which should result in good performance. To apply this sorting, call the `OrderBy` or `OrderByDescending` methods on a filter. This will return a query object that can be passed to the read method of the helper.
@@ -320,7 +323,7 @@ domHelper.DomInstances.Attachments.Delete(domInstanceId, "ImportantDocument.txt"
 
 > [!NOTE]
 >
-> - The size limit of the attachments is determined by the [Documents.MaxSize](xref:MaintenanceSettings_xml#documentsmaxsize) setting in *MaintenanceSettings.xml*. The default value for this is 20 MB. Trying to upload a larger file using the helper will result in a `DataMinerException`.
+> - The size limit of the attachments is determined by the [Documents.MaxSize](xref:MaintenanceSettings.Documents.MaxSize) setting in *MaintenanceSettings.xml*. The default value for this is 20 MB. Trying to upload a larger file using the helper will result in a `DataMinerException`.
 > - Deleting a `DomInstance` will delete all attachments from the file system. The attachments cannot be recovered.
 > - To view or download `DomInstance` attachments, read permission is required, and to add or edit them, edit permission is required.
 > - To include `DomInstance` attachments in a [custom backup](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups) in Cube, select *All documents located on this DMA*.

@@ -16,7 +16,7 @@ In design mode, there are three panes:
 
   Any item that is clicked in the design area is automatically also selected in the list on the right.
 
-- In the lower right corner, the properties of a selected item can be configured.
+- In the lower-right corner, the properties of a selected item can be configured.
 
 ## Buttons
 

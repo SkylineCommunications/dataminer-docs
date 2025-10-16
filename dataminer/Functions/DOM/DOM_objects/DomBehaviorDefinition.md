@@ -9,6 +9,9 @@ A `DomBehaviorDefinition` object is a standalone object that extends a normal DO
 > [!NOTE]
 > This object is supported from DataMiner 10.1.11/10.2.0 onwards.
 
+> [!NOTE]
+> From 10.5.10/10.6.0 onwards, creating, updating, or deleting `DomBehaviorDefinitions` requires the [*Module settings* permission](xref:DOM_security#module-settings-user-permission).
+
 ## Properties
 
 The table below lists the properties of the `DomBehaviorDefinition` object. It also indicates whether a property can be used for filtering using the `DomBehaviorDefinitionExposers`.

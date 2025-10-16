@@ -62,7 +62,7 @@ If the repository is private, the name should look like this (using "-" as separ
   | GQIDS | GQI data source |
   | GQIO | GQI operator |
   | LCA | Low-Code App |
-  | LSO | Life cycle Service Orchestration |
+  | LSO | Lifecycle Service Orchestration |
   | PA | Process Automation |
   | PLS | Profile-Load Scripts |
   | S | Solutions |

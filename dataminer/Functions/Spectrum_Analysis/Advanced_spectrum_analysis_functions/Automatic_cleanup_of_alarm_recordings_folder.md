@@ -42,4 +42,4 @@ Each time a new alarm recording has been stored in the above-mentioned folder, D
 > - Names of alarm recordings include the alarm severity. Example: 0006221671.t=critical.dat
 
 > [!TIP]
-> See also: [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)
+> See also: [MaintenanceSettings.Spectrum.AlarmRecordings](xref:MaintenanceSettings.Spectrum.AlarmRecordings)

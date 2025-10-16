@@ -14,7 +14,7 @@ uid: PA_Creating_resource_tasks
 
    For example, for a “Ping IP” activity, an input parameter could be “IP Address”.
 
-   1. In the *Parameters* tab, create an input parameter by selecting *Add parameter* in the lower left corner.
+   1. In the *Parameters* tab, create an input parameter by selecting *Add parameter* in the lower-left corner.
 
    1. Specify the following information:
 
@@ -28,7 +28,7 @@ uid: PA_Creating_resource_tasks
 
    For example, for a “Ping IP” activity, possible output parameters could be “Ping Result” and “RTT”.
 
-   1. In the *Parameters* tab, create an output parameter by selecting *Add parameter* in the lower left corner.
+   1. In the *Parameters* tab, create an output parameter by selecting *Add parameter* in the lower-left corner.
 
    1. Specify the following information:
 
@@ -241,7 +241,7 @@ uid: PA_Creating_resource_tasks
 
       - **Instance**: <Element>
 
-   1. Click the *Save* button in the lower right corner.
+   1. Click the *Save* button in the lower-right corner.
 
    ![Add resource](~/dataminer/images/Resources.png)
 
@@ -249,7 +249,7 @@ uid: PA_Creating_resource_tasks
 
    1. Select the *SRM_Setup* script.
 
-   1. In the lower right corner, click *Execute*.
+   1. In the lower-right corner, click *Execute*.
 
    1. In the *Booking Manager Element Info* box, specify the value `{}`.
 

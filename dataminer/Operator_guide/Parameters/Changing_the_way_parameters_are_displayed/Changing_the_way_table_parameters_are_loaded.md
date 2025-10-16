@@ -12,4 +12,4 @@ To enable or disable lazy loading of table parameters:
 
 1. In DataMiner Cube, go to *Apps* > *System Center* > *System settings* > *data display*.
 
-1. Toggle the option *Enable lazy loading for tables* and click the *Apply* button in the lower right corner.
+1. Toggle the option *Enable lazy loading for tables* and click the *Apply* button in the lower-right corner.

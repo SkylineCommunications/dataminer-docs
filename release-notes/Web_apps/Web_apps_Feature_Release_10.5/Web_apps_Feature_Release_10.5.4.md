@@ -266,11 +266,11 @@ When the data in a *Form* component was saved, an error would be thrown when man
 
 From now on, all boolean fields will have a default value (either true or false).
 
-#### Dashboards/Low-Code Apps: Letter descenders would incorrectly be cut off in Components data set [ID 42118]
+#### Dashboards/Low-Code Apps: Letter descenders would incorrectly be cut off in Components dataset [ID 42118]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When, while configuring a component, you opened the *Components* data set on the *Data* pane, all portions of letters that extended below the font's baseline (i.e. the descenders of letters like e.g. g, j, q, p, and y) would incorrectly be cut off.
+When, while configuring a component, you opened the *Components* dataset on the *Data* pane, all portions of letters that extended below the font's baseline (i.e. the descenders of letters like e.g. g, j, q, p, and y) would incorrectly be cut off.
 
 #### Dashboards/Low-Code Apps - Parameter table component: Clicking the info icon of the 'Parameter table filters' section would not open the correct help page [ID 42123]
 
@@ -399,7 +399,7 @@ When you had selected a time range in a *Timeline* component, in some cases, tha
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When you entered the edit mode of a low-code app, in some cases, a run-time error could occur when the app contained a component to which no visualization had been assigned.
+When you entered the edit mode of a low-code app, in some cases, a runtime error could occur when the app contained a component to which no visualization had been assigned.
 
 #### Dashboards/Low-Code Apps - Query filter component: Problem when changing a query that contained boolean columns [ID 42442]
 

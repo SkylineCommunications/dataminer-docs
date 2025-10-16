@@ -62,7 +62,7 @@ When EPM dashboards using GQI queries were used in recent DataMiner versions, it
 
 #### Generic DOCSIS CM Collector: RTE caused by SLProtocolExt call [ID 39923]
 
-Because of the use of the *SLProtocolExt* interface to retrieve keys from the CM QAM DS Channel table, long wait times could be encountered in the Generic DOCSIS CM Collector connector, which could cause a run-time error in DataMiner. The connector has now been enhanced to prevent this.
+Because of the use of the *SLProtocolExt* interface to retrieve keys from the CM QAM DS Channel table, long wait times could be encountered in the Generic DOCSIS CM Collector connector, which could cause a runtime error in DataMiner. The connector has now been enhanced to prevent this.
 
 #### Card structure different when opened from the Alarm Console or from the topology [ID 39934]
 

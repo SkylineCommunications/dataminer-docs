@@ -4,6 +4,18 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 13 October 2025 - Security - CloudGateway 2.17.14 - Security Update
+
+A security issue introduced in CloudGateway 2.17.13 has been fixed.
+
+#### 08 September 2025 - Enhancement - CloudGateway 2.17.13 - Dependencies updated
+
+Several dependencies have been updated.
+
+#### 27 August 2025 - Enhancement - CloudGateway 2.17.12 - General improvements
+
+General improvements have been made to the way CloudGateway handles tasks, making the DxM more robust and also improving its shutdown procedure.
+
 #### 24 July 2025 - Fix - CloudGateway 2.17.11 - Incorrect connectivity warnings due to incomplete validation
 
 An issue was introduced in CloudGateway 2.17.5 where the connection to dataminer.services was only validated by IP address, without falling back to DNS as expected. On systems where the firewall is configured to allow traffic based on DNS rather than IP, this could result in incorrect connectivity warnings in the Admin app. This issue has now been resolved.

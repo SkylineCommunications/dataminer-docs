@@ -4,7 +4,7 @@ uid: Query_operators
 
 # Query operators
 
-When you create a query, you can use the operators listed below. Selecting an operator is optional. If you do not select an operator, the data set will be returned untouched.
+When you create a query, you can use the operators listed below. Selecting an operator is optional. If you do not select an operator, the dataset will be returned untouched.
 
 Available operators:
 

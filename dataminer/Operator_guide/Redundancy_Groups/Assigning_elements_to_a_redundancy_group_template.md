@@ -18,7 +18,7 @@ To do so:
 
 1. Add the primary elements:
 
-   1. Click the *Manage primary* button in the lower left corner.
+   1. Click the *Manage primary* button in the lower-left corner.
 
    1. In the *Manage primary elements* window, use the *Add \>\>* and *\<\< Remove* buttons to move elements from the column with existing elements in the DMA to the column with primary elements in the redundancy group.
 
@@ -36,7 +36,7 @@ To do so:
 
 1. Add the backup elements:
 
-   1. Click the *Manage backup* button in the lower left corner.
+   1. Click the *Manage backup* button in the lower-left corner.
 
    1. In the *Manage backup elements* window, use the *Add \>\>* and *\<\< Remove* buttons to move elements from the column with existing elements in the DMA to the column with backup elements in the redundancy group.
 
@@ -48,7 +48,7 @@ To do so:
 
    - In the drop-down lists under *Trend templates*, choose a trend template for when the backup element is operational, and one for when it is not operational. If set to *\<Dynamic>*, the element will take over the trend template from the primary element.
 
-1. Click *Apply* in the lower right corner to finish assigning elements to the template.
+1. Click *Apply* in the lower-right corner to finish assigning elements to the template.
 
 > [!NOTE]
 > Adding a DVE main element as a primary or backup element in a redundancy group is only possible if the creation of DVE child elements is disabled for that element. See [Enabling or disabling the creation of DVE child elements](xref:Dynamic_virtual_elements#enabling-or-disabling-the-creation-of-dve-child-elements).

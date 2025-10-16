@@ -22,7 +22,7 @@ From DataMiner 10.2.0 [CU22]/10.3.0 [CU11]/10.4.2 onwards<!--RN 38034-->, this o
 
 ## History tracking
 
-Select this option to attach the life cycle of an alarm to the alarm. This means that all the alarms records related to the same alarm are grouped under one "alarm tree" entry in the Alarm Console. You can then expand this alarm tree to see all the underlying alarm records.
+Select this option to attach the lifecycle of an alarm to the alarm. This means that all the alarms records related to the same alarm are grouped under one "alarm tree" entry in the Alarm Console. You can then expand this alarm tree to see all the underlying alarm records.
 
 To show the alarm history as separate alarm records in the list instead, clear the selection.
 
@@ -37,7 +37,7 @@ In the active alarms tab, history tracking is enabled by default. In a history a
 > - For information on how alarm records are combined in an alarm tree, see [Alarm trees](xref:Alarm_trees).
 
 > [!NOTE]
-> By default, a maximum of 20 alarms can be included in an alarm tree. This default number can be customized with the [AlarmsPerParameter tag in MaintenanceSettings.xml](xref:MaintenanceSettings_xml#alarmsettingsalarmsperparameter).
+> By default, a maximum of 20 alarms can be included in an alarm tree. This default number can be customized with the [AlarmsPerParameter tag in MaintenanceSettings.xml](xref:MaintenanceSettings.AlarmSettings.AlarmsPerParameter).
 
 ## Correlation tracking
 
@@ -51,7 +51,7 @@ Select this option to hide raw alarms of a correlated alarm. To show the raw ala
 >   - If only the correlated alarm matches the filter, only that alarm is displayed.
 >   - If both base and correlated alarm match the filter, only the correlated alarm is displayed.
 >   - If neither base nor correlated alarm match the filter, neither are displayed.
-> - If a quick filter is applied with the filter box in the lower right corner, the behavior is similar, except in case both base alarm and correlated alarm match the filter, as then both alarms will be displayed.
+> - If a quick filter is applied with the filter box in the lower-right corner, the behavior is similar, except in case both base alarm and correlated alarm match the filter, as then both alarms will be displayed.
 
 ## Automatic incident tracking
 

@@ -24,7 +24,7 @@ Expected duration: 10 minutes
 
 ## Step 1: Install the dummy data sources package
 
-1. Go to <https://catalog.dataminer.services/details/package/5410>.
+1. Go to <https://catalog.dataminer.services/details/d9089bae-0680-4da2-9c30-1c768f68fe63>.
 
 1. Click the *Deploy* button to deploy the *IPAM - GQI dummy data sources* packages on your DMA.
 
@@ -115,4 +115,4 @@ This tutorial is part of the following learning path:
 
 ## Related documentation
 
-- [Configuring low-code app events](xref:LowCodeApps_event_config)
+- [Configuring app events](xref:LowCodeApps_event_config)

@@ -10,7 +10,7 @@ In System Center, you can change the maximum total size of the log files in your
 
 1. In the box under *Log file size*, specify a different number.
 
-1. Click the *Apply limit* button in the lower right corner.
+1. Click the *Apply limit* button in the lower-right corner.
 
 > [!NOTE]
 >

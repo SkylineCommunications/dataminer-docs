@@ -20,7 +20,7 @@ Create two dummy shapes, and add two shape data fields to each of them: one of t
    | XPos             | *\[Leftmost position on the X-axis\]* |
    | YPos             | *\[Topmost position on the Y-axis\]*  |
 
-1. Create a dummy shape in the lower right corner with the following shape data fields:
+1. Create a dummy shape in the lower-right corner with the following shape data fields:
 
    | Shape data field | Value                                   |
    | ---------------- | --------------------------------------- |
@@ -40,7 +40,7 @@ If you want a Visio page to have an X-Y grid of 100 by 50, create the following 
   | XPos             | 00    |
   | YPos             | 00    |
 
-- In the lower right corner, create a shape with the following shape data fields:
+- In the lower-right corner, create a shape with the following shape data fields:
 
   | Shape data field | Value |
   | ---------------- | ----- |

@@ -61,7 +61,7 @@ The Avg. Reflection Distance value has been removed from the Service Group \[Fib
 
 #### Improved mapping of CM US QAM channels \[ID 33673\]
 
-The mapping of the CM US QAM channels has been adjusted to improve performance. This will also prevent possible run-time errors.
+The mapping of the CM US QAM channels has been adjusted to improve performance. This will also prevent possible runtime errors.
 
 #### Configuration cache backup \[ID 33689\]
 

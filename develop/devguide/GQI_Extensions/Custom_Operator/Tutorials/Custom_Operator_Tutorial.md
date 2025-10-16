@@ -171,7 +171,7 @@ This tutorial includes three use cases demonstrating different strategies to opt
 
 ### Use case: Filtering by 'Age'
 
-With a large data set, you may want to filter your results to avoid retrieving millions of rows each time you run your custom operator. Imagine you are only interested in individuals aged 70 or older.
+With a large dataset, you may want to filter your results to avoid retrieving millions of rows each time you run your custom operator. Imagine you are only interested in individuals aged 70 or older.
 
 ![Filter by age](~/dataminer/images/tutorial_2_query_1.png)
 

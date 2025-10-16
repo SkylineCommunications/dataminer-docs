@@ -8,7 +8,7 @@ If a set of user settings has been assigned to a user group, you can open that s
 
 1. In DataMiner Cube, go to *Apps* > *Settings*.
 
-1. In the lower left corner of the *Settings* card, click *Configure group.*
+1. In the lower-left corner of the *Settings* card, click *Configure group.*
 
    > [!NOTE]
    > If the *Configure group* button is not displayed, you are not allowed to configure user group settings. In that case, ask your system administrator to grant you the necessary permissions.

@@ -527,9 +527,9 @@ When you have selected a file, the actual upload will only start after you click
 
 All files uploaded by users will by default be placed in the `C:\Skyline DataMiner\TempDocuments` folder, which is automatically cleared at every DataMiner startup.
 
-#### New engine.UnSetFlag method to clear run-time flags \[ID 23961\]
+#### New engine.UnSetFlag method to clear runtime flags \[ID 23961\]
 
-In an Automation script, you can now use the engine.UnSetFlag method to clear the following run-time flags:
+In an Automation script, you can now use the engine.UnSetFlag method to clear the following runtime flags:
 
 - RunTimeFlags.AllowUndef
 - RunTimeFlags.NoInformationEvents

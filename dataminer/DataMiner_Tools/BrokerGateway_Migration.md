@@ -113,7 +113,7 @@ For DataMiner versions prior to DataMiner 10.5.0 [CU4]/10.5.7, we recommend runn
 
 The following actions will be executed during the migration, in the indicated order:
 
-1. DataMiner is stopped.
+1. If you are using a DataMiner version prior to 10.5.0 [CU4]/10.5.7, DataMiner is stopped.
 
 1. The *BrokerGateway* flag in `C:\Skyline DataMiner\MaintenanceSettings.xml` is set to true, or, if you are using a DataMiner version prior to 10.5.5/10.5.0 [CU2], a *BrokerGateway* soft-launch flag is set instead.
 

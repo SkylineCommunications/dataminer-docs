@@ -28,7 +28,7 @@ Founded in 1985, Skyline has decades of industry-specific NMS and OSS expertise.
 
 ## Awards
 
-As a result of its continuous far-reaching innovation, Skyline has been recognized for its leadership in shaping the future of end-to-end multi-vendor network management and OSS solutions.
+As a result of its continuous far-reaching innovation, Skyline has been recognized for its leadership in shaping the future of end-to-end multivendor network management and OSS solutions.
 
 ![Awards](~/dataminer/images/awards.png)
 

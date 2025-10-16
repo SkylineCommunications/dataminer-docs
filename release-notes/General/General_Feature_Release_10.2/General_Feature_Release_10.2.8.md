@@ -255,7 +255,7 @@ A number of enhancements have been made to the NATS configuration:
 
 > [!NOTE]
 >
-> - Changing this option in the SLNetClientTest tool can be done at run-time. The change will be applied immediately.
+> - Changing this option in the SLNetClientTest tool can be done at runtime. The change will be applied immediately.
 > - Forcing manual configuration will disable the automatic NATS configuration on the DataMiner System. It will then be up to the user to either manually configure a NATS cluster or manually call NatsCustodianResetNatsMessage when changes are made to the DMS.
 
 - On DataMiner startup, NAS and NATS will now automatically be started if they are not running.
@@ -410,7 +410,7 @@ When you tried to add, update or delete a resource, a NullReferenceException cou
 
 #### Run-time errors due to MessageBrokerReconnectThread problems in SLCloudBridge \[ID 33716\]
 
-In some cases, run-time errors could occur due to MessageBrokerReconnectThread problems in the SLCloudBridge process.
+In some cases, runtime errors could occur due to MessageBrokerReconnectThread problems in the SLCloudBridge process.
 
 #### DataMiner Cube - Spectrum Analysis: Problem with 'Next trace' button and slider after a spectrum recording had been paused \[ID 33718\]
 
@@ -537,7 +537,7 @@ In order to prevent SLPort from running out of memory, from now on, the size of 
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 [CU2] -->
 
-After a DMS with a Cassandra Cluster setup was upgraded to 10.2.8 (CU1), it could occur that the Alarm Console showed run-time errors related to the SLAnalytics process. This was caused by an upgrade action that was not triggered for such a setup.
+After a DMS with a Cassandra Cluster setup was upgraded to 10.2.8 (CU1), it could occur that the Alarm Console showed runtime errors related to the SLAnalytics process. This was caused by an upgrade action that was not triggered for such a setup.
 
 #### Problem in SLElement when element was dynamically included in service multiple times with partially included parameter set [ID 34185]
 

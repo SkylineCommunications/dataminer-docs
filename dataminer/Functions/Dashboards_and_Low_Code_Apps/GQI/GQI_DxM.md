@@ -22,7 +22,7 @@ The GQI DxM is supported from DataMiner 10.5.0 [CU1]/10.5.4 onwards, and automat
 > By default, DataMiner web applications will continue to use the SLHelper process for GQI-related operations. To switch to using the GQI DxM, see [Enabling the use of the GQI DxM](#enabling-the-use-of-the-gqi-dxm).
 
 > [!NOTE]
-> [Data Aggregator](xref:Data_Aggregator_DxM) currently relies on the SLHelper process to execute GQI queries. Support for the GQI DxM will be introduced in a future version of Data Aggregator.
+> [Data Aggregator](xref:Data_Aggregator_DxM) supports queries via the GQI DxM from version 3.1.0 onwards. See [Using the GQI DxM for queries](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries).
 
 ## Enabling the use of the GQI DxM
 
@@ -67,6 +67,28 @@ See the following example. Idle child processes will be terminated within the co
     "Extensions": {
       "WorkerExpiration": "1.00:00:00"
     }
+  }
+}
+```
+
+### Message handler configuration
+
+The `MessageHandler` manages requests from clients to the GQI DxM. Requests are placed in a queue, and a specified number of requests can be processed concurrently.
+
+You can configure the following options in the `MessageHandlerOptions` in the *appsettings.custom.json* file:
+
+- **RequestTimeout**: Maximum time a request can take before timing out (default: 15 minutes). This includes the time in the queue.
+- **MaxConcurrentRequests**: Maximum number of requests that can be processed at the same time (default: 100). Note that prior to DataMiner 10.5.0 [CU8]/10.5.11<!-- RN 43730 -->, a lower default number of 20 is applied.
+- **MaxPendingRequests**: Maximum number of requests allowed in the queue (default: 1000).
+
+Example configuration:
+
+```json
+{
+  "MessageHandlerOptions": {
+    "RequestTimeout": "00:15:00",
+    "MaxConcurrentRequests": 100,
+    "MaxPendingRequests": 1000
   }
 }
 ```

@@ -22,6 +22,6 @@ Every protocol contains the following metadata:
 
 ## See also
 
-Coding guidelines:
+Best practices:
 
 - [Administrative Metadata](xref:Comment_metadata)

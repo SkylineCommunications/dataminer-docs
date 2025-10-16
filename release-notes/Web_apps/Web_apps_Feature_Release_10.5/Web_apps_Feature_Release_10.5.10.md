@@ -2,21 +2,17 @@
 uid: Web_apps_Feature_Release_10.5.10
 ---
 
-# DataMiner web apps Feature Release 10.5.10 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.5.10
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.4.0 [CU19] and 10.5.0 [CU7].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.5.10](xref:General_Feature_Release_10.5.10).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.5.10](xref:Cube_Feature_Release_10.5.10).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -54,6 +50,18 @@ Also, in low-code apps, *On line click* event can now be configured. Inside such
 
 > [!NOTE]
 > When you reload a dashboard or switch pages, selected lines will not automatically be reselected. Also, lines cannot be selected using an URL argument.
+
+#### Dashboards/Low-Code Apps - Web component: New option to disable sandboxing if the URL points to a file in the DMA's 'Webpages/public/' folder [ID 43584]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+From now on, if the URL of a *Web* component points to a file in the DMA's `Webpages/public/` folder (or one of its subfolders), you can disable sandboxing by doing the following:
+
+1. In edit mode, select the component, and open the *Settings* tab.
+1. In the *Security* section, disable the *Open in sandbox* option.
+
+> [!CAUTION]
+> Disabling the *Open in sandbox* option lowers browser security and should only be done when absolutely necessary.
 
 ## Changes
 
@@ -101,6 +109,12 @@ Up to now, when you opened the "..." menu in the upper-right corner of a low-cod
 
 As this window allows you to set the user permissions of the app in question, the menu option has now been renamed from *Settings* to *Permissions*.
 
+#### GQI DxM will now shut down its Web API connection faster when it loses its connection to SLNet [ID 43537]
+
+<!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+When the GQI DxM loses its connection to SLNet, it will now shut down its connection to the web API while it is shutting down all sessions and workers.
+
 #### Dashboards app: A notice will now appear when a PDF report is being generated in a browser tab [ID 43548]
 
 <!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
@@ -108,6 +122,12 @@ As this window allows you to set the user permissions of the app in question, th
 When a PDF report is being generated in a particular browser tab, from now on, the following notice will appear:
 
 `Please keep this tab active to ensure the PDF is generated correctly.`
+
+#### Dashboards/Low-Code Apps: Maps component will now display all authentication errors of the Google Maps API [ID 43601]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+From now on, a *Maps* component will display all authentication errors of the Google Maps API.
 
 ### Fixes
 
@@ -169,3 +189,9 @@ Up to now, settings of existing queries that no longer fed data to a *Maps* comp
 From now on, when a query no longer feeds any data to a *Maps* component, it will no longer be automatically removed. Instead, it will be marked as "old query".
 
 Users will be allowed to remove queries marked as "old queries", but they will not be allowed to change any of their settings.
+
+#### Dashboards/Low-Code Apps - Query builder: Problem when linking required ad hoc arguments to data [ID 43766]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 [CU0] -->
+
+When, in the query builder, you had linked required ad hoc arguments to data, in some cases, data would not get passed correctly, causing an error to be thrown.

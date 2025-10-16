@@ -87,7 +87,7 @@ Use this documentation as a basis to build or improve dashboards and low-code ap
 
 - Make sure components on a page/panel are aligned vertically and horizontally.
 
-- In the page settings, always set the *Number of columns* setting to 50. This will give you more flexibility when choosing the size of your components.
+- In the page settings, make sure the *Number of columns* setting is set to 50. This will give you more flexibility when choosing the size of your components. From DataMiner web 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- RN 43655 -->, this is the default setting.
 
   ![Number of columns setting](~/dataminer/images/LCA_Number_of_columns_setting.png)
 

@@ -43,7 +43,7 @@ For detailed steps, go to [Upgrading a DataMiner Agent in System Center](xref:Up
 
 If you are not upgrading to the DataMiner version that immediately follows your current version, always follow this general guideline:
 
-**Upgrade to the next major DataMiner version(s) before upgrading to your preferred version**.
+**Upgrade to the latest Cumulative Update (CU) of the next major DataMiner version(s) before upgrading to your preferred version**.
 
 ![Upgrading across major versions](~/dataminer/images/Upgrading_across_major_versions.png)
 

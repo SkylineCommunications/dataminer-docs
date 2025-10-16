@@ -10,13 +10,13 @@ Each of the [DataMiner SRM use cases](xref:srm_use_cases) relies on a combinatio
 
 ## Scheduling Engine
 
-The Scheduling Engine **executes scheduled actions precisely, reliably, and on time**. The engine can trigger a variety of DataMiner actions, including any and all Automation script executions needed by DataMiner SRM. The Scheduling Engine is the actor behind any orchestration, whether this is loading a profile on a resource in the [Resource Orchestration](xref:srm_resource_orchestration) use case or executing a service life cycle state change.
+The Scheduling Engine **executes scheduled actions precisely, reliably, and on time**. The engine can trigger a variety of DataMiner actions, including any and all Automation script executions needed by DataMiner SRM. The Scheduling Engine is the actor behind any orchestration, whether this is loading a profile on a resource in the [Resource Orchestration](xref:srm_resource_orchestration) use case or executing a service lifecycle state change.
 
 The Scheduler timeline can be visualized [in Visual Overview](xref:Embedding_a_Resource_Manager_component) or [in dashboards and low-code apps](xref:DashboardTimeline). The timeline components not only support rich schedule visualization options but also facilitate control surface user actions, such as selecting a time range in one click. A built-in bookings timeline is also available in the [Bookings module](xref:The_Bookings_module) in DataMiner Cube.
 
 ![Bookings module](~/dataminer/images/Bookings_module.png)<br>*Bookings module in DataMiner Cube 10.5.5*
 
-To prevent alarm fatigue in operation teams, you can also apply **schedule-aware monitoring**. Alarm template configurations can be included in various [Profile-Load Scripts (PLS)](xref:srm_scripting#profile-load-script-pls) and/or [Life cycle Service Orchestration (LSO)](xref:srm_scripting#life-cycle-service-orchestration-lso-script) scripts. This way, when a profile is loaded on a resource based on the schedule, an alarm template can be loaded that only monitors the health status of the resource. Similarly, on service life cycle orchestration level, a switch to a different LSO state can go hand in hand with updated alarm monitoring.
+To prevent alarm fatigue in operation teams, you can also apply **schedule-aware monitoring**. Alarm template configurations can be included in various [Profile-Load Scripts (PLS)](xref:srm_scripting#profile-load-script-pls) and/or [Lifecycle Service Orchestration (LSO)](xref:srm_scripting#lifecycle-service-orchestration-lso-script) scripts. This way, when a profile is loaded on a resource based on the schedule, an alarm template can be loaded that only monitors the health status of the resource. Similarly, on service lifecycle orchestration level, a switch to a different LSO state can go hand in hand with updated alarm monitoring.
 
 The scheduling engine supports a wide range of possibilities. Bookings can be scheduled to happen just once, or they can be made permanent. DataMiner SRM supports a variety of LSO state transitions, including pre- and post-roll LSO state changes, as well as booking events. This allows you to streamline even the most complex event schedules.
 
@@ -94,9 +94,9 @@ In the out-of-the-box **Booking Manager app** that comes with DataMiner SRM, an 
 
 Service definitions can be extended with [DTR (Data Transfer Rules)](xref:srm_scripting#data-transfer-rules-dtr) scripts, which define a rule set for automatic resource selection and profile parameter inheritance during service setup. For example, if an HD input signal is selected for transport across an IP network, then the source encoder can automatically select HD-capable encoder and decoder edge gateways. This way, operators save even more time during service setup, and they also avoid inconsistencies in the configuration.
 
-### Automate every phase in your services' life cycles
+### Automate every phase in your services' lifecycles
 
-Each service definition can be extended with a custom [Life cycle Service Orchestration (LSO)](xref:srm_scripting#life-cycle-service-orchestration-lso-script) script. This script can specify any life cycle state that the service should have, such as "paused", "standby", "switched to backup", etc. It also defines the transitions that need to happen between these states, which typically consist of a set of profile loads on the resources in the service.
+Each service definition can be extended with a custom [Lifecycle Service Orchestration (LSO)](xref:srm_scripting#lifecycle-service-orchestration-lso-script) script. This script can specify any lifecycle state that the service should have, such as "paused", "standby", "switched to backup", etc. It also defines the transitions that need to happen between these states, which typically consist of a set of profile loads on the resources in the service.
 
 ![Booking example](~/dataminer/images/Booking_states_example.png)<br>*Booking states example in DataMiner Cube 10.5.5*
 
@@ -104,6 +104,6 @@ Each service definition can be extended with a custom [Life cycle Service Orches
 
 To monitor your services, you can build visual overviews and dashboards that can be customized for every service definition individually. These monitoring views typically contain an east-west view and/or a north-south view of the service. An east-west view shows an end-to-end view of the entire service delivery chain and the status of all its components, while a north-south view shows a "vertical" slice of the technology stack on which the service is running, all the way down to the physical layer. This way, DevOps engineers can conveniently and consistently customize the look and feel of services.
 
-By controlling service schedules, DataMiner can also enhance all its monitoring capabilities with service awareness. This can be used to for example adapt alarm templates of inventory based on the service it is included in, automatically start and stop SLA tracking based on a the state of a service (started/paused/stopped), or dynamically spin up QoS monitoring probes as part of certain life cycle transitions.
+By controlling service schedules, DataMiner can also enhance all its monitoring capabilities with service awareness. This can be used to for example adapt alarm templates of inventory based on the service it is included in, automatically start and stop SLA tracking based on a the state of a service (started/paused/stopped), or dynamically spin up QoS monitoring probes as part of certain lifecycle transitions.
 
 ![Service visual overview example](~/dataminer/images/SRM_SLAVisibility-1024x557.png)<br>*Service visual overview example*

@@ -27,7 +27,7 @@ To add a new parameter group, follow these steps.
    </RelationalAnomalyDetection>
    ```
 
-   The attributes `name` and `updateModel` are required, while `anomalyScore` and `minimumAnomalyDuration` are optional. For more information on the available options, see [Options for parameter groups](xref:Relational_anomaly_detection#options-for-parameter-groups).
+   The attributes `name` and `updateModel` are required, while `anomalyScore` and `minimumAnomalyDuration` are optional. For more information on the available options, see [Options for relational anomaly groups](xref:Relational_anomaly_detection#options-for-relational-anomaly-groups).
 
    In each `Instance` element, you can specify either a single-value parameter or a table parameter using one of the following formats:
 

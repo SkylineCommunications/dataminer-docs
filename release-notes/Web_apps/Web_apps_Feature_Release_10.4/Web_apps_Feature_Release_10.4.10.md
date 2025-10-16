@@ -167,7 +167,7 @@ In some cases, the following error could appear in the *State*, *Dropdown*, and 
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
-When you removed a component from a dashboard, and then added another component by first dropping data onto the dashboard and then picking the visualization afterwards, in some cases, run-time errors could be thrown that would make the dashboard unusable until you refreshed the app.
+When you removed a component from a dashboard, and then added another component by first dropping data onto the dashboard and then picking the visualization afterwards, in some cases, runtime errors could be thrown that would make the dashboard unusable until you refreshed the app.
 
 #### Dashboards app: Incorrect warning message would appear when stripping a dashboard (folder) creator of the edit permission [ID 40540]
 

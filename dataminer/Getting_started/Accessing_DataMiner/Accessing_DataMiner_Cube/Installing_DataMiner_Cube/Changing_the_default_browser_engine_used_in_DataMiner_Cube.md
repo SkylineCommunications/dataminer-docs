@@ -27,4 +27,4 @@ To change the default browser engine used in DataMiner Cube:
 
    1. Next to *Engine*, select the engine that should be used for this protocol.
 
-1. Click the *Apply* button in the lower right corner to save your changes.
+1. Click the *Apply* button in the lower-right corner to save your changes.

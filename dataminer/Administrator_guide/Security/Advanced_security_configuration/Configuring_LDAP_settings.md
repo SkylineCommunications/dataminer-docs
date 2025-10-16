@@ -60,7 +60,7 @@ To configure custom LDAP settings in DataMiner Cube:
    > - If a setting is left empty, the default setting will be applied.
    > - If you change any of these settings, this change will only be applied to the DataMiner Agent you are connected to. The change is not synced with the rest of the cluster.
 
-1. Click the *Apply* button in the lower right corner.
+1. Click the *Apply* button in the lower-right corner.
 
 ## LDAP section in DataMiner.xml
 

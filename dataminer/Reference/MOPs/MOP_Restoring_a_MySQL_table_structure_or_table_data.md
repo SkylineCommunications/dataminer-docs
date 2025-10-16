@@ -135,7 +135,7 @@ Use the steps below to restore lost data (i.e. a single table or an entire schem
    - If this operation times out, it is likely to still be ongoing in the background.
    - If this operation fails (i.e. after a long time, no space has been cleared on the disk), use the *MySQL* command line utility to do the operation manually.
 
-1. Navigate back to the MySQL Workbench home tab (via the home icon in the lower left corner), go to the *Server Administration* column on the right and double-click *Local MySQL*. If you do not see this option, click *New Server Instance* to create a new default server instance, then connect to localhost and complete the wizard.
+1. Navigate back to the MySQL Workbench home tab (via the home icon in the lower-left corner), go to the *Server Administration* column on the right and double-click *Local MySQL*. If you do not see this option, click *New Server Instance* to create a new default server instance, then connect to localhost and complete the wizard.
 1. In the menu on the left, select *Data Import/Restore*.
 1. Select *Import from Self-Contained File*.
 1. Make sure that there is enough space on the target disk to proceed.

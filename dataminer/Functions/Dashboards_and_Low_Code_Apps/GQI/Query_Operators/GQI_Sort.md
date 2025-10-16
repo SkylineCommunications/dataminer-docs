@@ -70,4 +70,4 @@ From DataMiner 10.4.2/10.5.0 onwards<!--RN 38150-->, when you add a sort operato
 [Real-time updates](xref:Query_updates) are available for this operator from DataMiner 10.5.0/10.5.7 onwards when using the [GQI DxM](xref:GQI_DxM) <!-- RN 42941 -->.
 
 > [!IMPORTANT]
-> While the original sort order will remain correct, the order will **not** be reevaluated when an update is processed. Updates will be applied to the correct rows but will not reorder the data set; new rows will be added at the bottom.
+> While the original sort order will remain correct, the order will **not** be reevaluated when an update is processed. Updates will be applied to the correct rows but will not reorder the dataset; new rows will be added at the bottom.

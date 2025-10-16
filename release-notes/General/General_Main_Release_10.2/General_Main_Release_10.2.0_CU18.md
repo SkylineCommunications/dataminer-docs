@@ -304,7 +304,7 @@ Moreover, when additional logging was activated for SLPort, an `Attempted to set
 
 <!-- MR 10.2.0 [CU18] - FR TBD -->
 
-When the alarm template of an element was updated, a run-time error could occur in the SLElement process.
+When the alarm template of an element was updated, a runtime error could occur in the SLElement process.
 
 #### Monitoring app & Dashboards app: Cleared alarm groups would incorrectly still appear in alarm lists [ID 37045]
 

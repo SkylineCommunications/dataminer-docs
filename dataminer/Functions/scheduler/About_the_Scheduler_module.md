@@ -44,12 +44,12 @@ The Scheduler module consists of different tabs that each provide a different pe
 
     - Click a button with a particular time to zoom to this time on the timeline, e.g. Today, Last week, Next month, etc.
 
-    - To make the timeline move along with the current time, in the lower left corner, select *Follow mode*.
+    - To make the timeline move along with the current time, in the lower-left corner, select *Follow mode*.
 
       > [!NOTE]
       > When you navigate away from the line that represents now while follow mode is enabled, follow mode will temporarily be paused. As soon as you navigate back in view of the line that represents now, follow mode will be activated again.
 
-    - To change the time zone for the timeline pane, in the lower right corner, select a different *Time zone*.
+    - To change the time zone for the timeline pane, in the lower-right corner, select a different *Time zone*.
 
   - To also view disabled tasks, in the *TASKS* tab, select *Include disabled tasks*.
 

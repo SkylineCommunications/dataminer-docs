@@ -116,7 +116,7 @@ Other component-specific options:
 
 - *Show range selection*: To allow the user to set the range of the graph, select either *Show Range* or *Show Custom Date Picker*. The former will display drop-down list where the user can select different time ranges, the latter will allow the user to enter a custom range.
 
-- *Plotter*: Select how the graph should be plotted in the drop-down list. You can choose a regular graph, or a stacked graph, multi-column bars or stacked bars.
+- *Plotter*: Select how the graph should be plotted in the drop-down list. You can choose a regular graph, or a stacked graph, multicolumn bars or stacked bars.
 
 - *Show parameter checkboxes*: Select this option to display a *Parameters* button above the graph that allows the user to select what aggregation rules are displayed. The checkboxes also allow the user to display the average and apply linear regression to the graph.
 
@@ -216,7 +216,7 @@ Component-specific options:
 
 - *Highlight time*: Enter the number of seconds you want new alarms to be highlighted.
 
-- *History tracking*: Select this option to show only the most recent alarm of an alarm’s life cycle. To show the alarm history as separate alarm records in the list instead, clear the selection.
+- *History tracking*: Select this option to show only the most recent alarm of an alarm’s lifecycle. To show the alarm history as separate alarm records in the list instead, clear the selection.
 
 - *Group by element*: Select this option to group the alarms by element.
 
@@ -568,7 +568,7 @@ Other component-specific options:
 
 - *Show range selection*: To allow the user to set the range of the histogram, select either *Show range* or *Show custom date picker*. The former will display a drop-down list where the user can select different time ranges, the latter will allow the user to enter a custom range.
 
-- *Plotter*: Select how the graph should be plotted in the drop-down list. You can choose a regular graph, or a stacked graph, multi-column bars or stacked bars.
+- *Plotter*: Select how the graph should be plotted in the drop-down list. You can choose a regular graph, or a stacked graph, multicolumn bars or stacked bars.
 
 - *Histogram range*: If you do not want the range to be automatically selected, select *Manual* in the drop-down list, and then enter the minimum and maximum of the histogram range.
 
@@ -629,7 +629,7 @@ Other component-specific options:
 
 - *Show range selection*: To allow the user to set the range of the trend graph, select either *Show range* or *Show custom date picker*. The former will display a drop-down list where the user can select different time ranges, the latter will allow the user to enter a custom range.
 
-- *Plotter*: Select how the graph should be plotted in the drop-down list. You can choose a regular graph, or a stacked graph, multi-column bars or stacked bars.
+- *Plotter*: Select how the graph should be plotted in the drop-down list. You can choose a regular graph, or a stacked graph, multicolumn bars or stacked bars.
 
 - *Show parameter checkboxes*: Select this option to display a *Parameters* button above the graph that allows the user to select which parameters are displayed. The checkboxes also allow the user to display the average and apply linear regression to the graph.
 

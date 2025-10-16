@@ -8,7 +8,7 @@ For each of the graphs, the information can be exported as a .csv file.
 
 To do so:
 
-1. Click the spreadsheet icon in the lower right corner next to the graph.
+1. Click the spreadsheet icon in the lower-right corner next to the graph.
 
 1. Browse to the location where you want to save the exported file, optionally specify a custom file name, and click *Save*.
 

@@ -44,7 +44,7 @@ Below you can find an overview of the main features that have been added to Data
 | Dashboards: [*Node edge graph* component](xref:DashboardNodeEdgeGraph) | DataMiner 10.1.5/10.2.0 <!-- [ID 29425] -->|
 | Dashboards: [PDF export](xref:Sharing_PDF_report_from_Dashboards_app) | DataMiner 10.2.12/10.3.0<br>DataMiner 10.2.2 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsexport) <!-- [ID 34634] -->|
 | Dashboards: [*Progress bar* component](xref:DashboardProgressBar) | DataMiner 10.1.7/10.2.0 <!-- [ID 29773] --> |
-| Dashboards: [Sharing dashboards using the Live Sharing Service](xref:Sharing_a_dashboard#sharing-a-dashboard-using-the-live-sharing-service) | DataMiner 10.1.12/10.2.0 <!-- [ID 29047] [ID 31476] -->|
+| Dashboards: [Sharing dashboards using the Live Sharing Service](xref:Sharing_a_dashboard#sharing-a-live-dashboard-via-cloud-share) | DataMiner 10.1.12/10.2.0 <!-- [ID 29047] [ID 31476] -->|
 | Dashboards: [*Trigger* component](xref:DashboardTrigger) | DataMiner 10.1.1/10.2.0 <!-- [ID 28136] --> |
 | Dashboards/Low-Code Apps: [*Button panel* component](xref:DashboardButtonPanel) | DataMiner 10.3.9/10.4.0<br>DataMiner 10.0.3 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsbuttonpanel) <!-- [ID 36775] --> |
 | Dashboards/Low-Code Apps: [Dynamic references in text](xref:Dynamically_Referencing_Data_in_Text) | DataMiner 10.3.11/10.4.0<!-- [ID 37229] --> |
@@ -81,6 +81,7 @@ Below you can find an overview of the main features that have been added to Data
 | DOM: [Attachments](xref:DomHelper_class#attachments) | DataMiner 10.1.3/10.2.0 <!-- [ID 28739] --> |
 | DOM: [Calculating changes to a DOM instance](xref:ExecuteScriptOnDomInstanceActionSettings#calculating-changes-done-to-a-dom-instance-in-a-crud-script) | DataMiner 10.4.3/10.5.0 <!-- [ID 38364] -->|
 | DOM: [CRUD actions on multiple instances](xref:DomHelper_class#multiple-instances) | DataMiner 10.4.2/10.5.0 <!-- [ID 37891] -->|
+| DOM: [definition-level security app](xref:DOM_definition_security_app) | DataMiner 10.5.11/10.6.0 <!-- RN 43622 -->|
 | DOM: [DomBehaviorDefinition](xref:DomBehaviorDefinition) and [status system](xref:DOM_status_system_example) | DataMiner 10.1.11/10.2.0 <!-- [ID 30443] --> |
 | DOM: [DomInstanceFieldDescriptor](xref:DOM_DomInstanceFieldDescriptor) and [ElementFieldDescriptor](xref:DOM_ElementFieldDescriptor) | DataMiner 10.1.10/10.2.0 <!-- [ID 30583] --> |
 | DOM: [DomInstanceNameDefinition](xref:DomInstanceNameDefinition) | DataMiner 10.1.9/10.2.0 <!-- [ID 30226] -->|
@@ -89,6 +90,7 @@ Below you can find an overview of the main features that have been added to Data
 | DOM: [GroupFieldDescriptor](xref:DOM_GroupFieldDescriptor) and [UserFieldDescriptor](xref:DOM_UserFieldDescriptor) | DataMiner 10.3.3/10.4.0 <!-- [ID 35278] -->|
 | DOM: [History of DOM instances](xref:DOM_history) | DataMiner 10.1.3/10.2.0 <!-- [ID 28709] --> |
 | DOM: [Interactive Automation script action](xref:DOM_actions#interactive-script) |  DataMiner 10.2.8/10.3.0 <!-- [ID 33513] -->|
+| DOM: [DOM link security](xref:DOM_security) | DataMiner 10.5.10/10.6.0 <!--RN43589--> |
 | EPM: [Aliases for topology cells, chains and search chains](xref:EPMConfig_xml) | DataMiner 10.1.7/10.2.0 <!-- [ID 29766] [ID 29841] -->|
 | [EPM integration](xref:Topology_app_configuration) | DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- RN 42221 --> |
 | [Failover with shared hostname](xref:Failover_configuration_in_Cube) | DataMiner 10.1.8/10.2.0 |
@@ -112,8 +114,9 @@ Below you can find an overview of the main features that have been added to Data
 | Low-Code Apps: [*Interactive Automation script* component](xref:InteractiveAutomationScript) | DataMiner web 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 <!-- [ID 39969] -->|
 | Low-Code Apps: [*Open monitoring card* action](xref:LowCodeApps_event_config#opening-a-monitoring-card) | DataMiner web 10.3.4/10.4.0 <!-- [ID 35661] -->|
 | Low-Code Apps: [*Show a notification* action](xref:LowCodeApps_event_config#showing-a-notification) | DataMiner 10.3.0 [CU12]/10.4.3 <!-- [ID 38548] -->|
-| Low-Code Apps: [Timeline component events and actions](xref:DashboardTimeline#configuring-events-and-actions) | DataMiner web 10.3.0 CU14/10.4.0 CU2/10.4.5<!-- [ID 39254] --> |
+| Low-Code Apps: [Timeline component events and actions](xref:DashboardTimeline#adding-actions-to-a-timeline) | DataMiner web 10.3.0 CU14/10.4.0 CU2/10.4.5<!-- [ID 39254] --> |
 | Low-Code Apps: [Trigger component actions that let users control the trigger timer](xref:DashboardTrigger#letting-users-control-the-trigger-timer) | DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 <!-- [ID 43184]  --> |
+| Low-Code Apps: [On app open event](xref:Changing_low-code_app_settings#having-an-event-triggered-when-the-app-is-opened) | DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10<!-- RN 43350 --> |
 | Protocols: [Buttons in table cells to open DataMiner objects](xref:UIComponentsTableRowButtons) | DataMiner 10.1.9/10.2.0 <!-- [ID 30413] --> |
 | Protocols: [Buttons to open EPM objects](xref:AdvancedEPMLaunchEPMObjectsTableCellButtons)| DataMiner 10.2.3/10.3.0 <!-- [ID 32368] --> |
 | Protocols: [NT_CLEAR_PARAMETER (474)](xref:NT_CLEAR_PARAMETER) message | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 <!-- RN 42368 --> |
@@ -144,3 +147,4 @@ Below you can find an overview of the main features that have been added to Data
 | Visual Overview: [Table control with Refresh and/or Sort button](xref:Turning_a_shape_into_a_parameter_control#adding-a-refresh-andor-sort-button-to-a-table-control) | DataMiner 10.2.6/10.3.0 <!-- [ID 33346]-->|
 | Visual Overview: [Text wrapping and trimming](xref:Configuring_text_wrapping_and_trimming) | DataMiner 10.2.3/10.3.0 <!-- [ID 32440] --> |
 | Visual Overview (web): [Load balancing](xref:Investigating_Web_Issues#load-balancing) | DataMiner 10.5.2/10.6.0 <!-- [ID 41434] [ID 41728] --> |
+| [Web DcM](xref:DataMinerExtensionModules#web) | DataMiner 10.5.0 [CU8]/10.5.11 <!-- RN 43439 --> |

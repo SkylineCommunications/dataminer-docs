@@ -25,11 +25,11 @@ Also, the *SLAppPackageInstaller.txt* log file will now keep track of all action
 >
 > To prevent his issue, stay on the upgrade summary tab until the upgrade has finished, and then close DataMiner Taskbar Utility to have the memory cleared. Note also that this issue is related to the Taskbar Utility only and does not affect the upgrade process.
 
-#### Enhanced performance when an SNMP element using multi-threaded timers is polling multiple sources simultaneously [ID 34143]
+#### Enhanced performance when an SNMP element using multithreaded timers is polling multiple sources simultaneously [ID 34143]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-Because of a number of enhancements, overall performance has increased when an SNMP element using multi-threaded timers is polling multiple sources simultaneously.
+Because of a number of enhancements, overall performance has increased when an SNMP element using multithreaded timers is polling multiple sources simultaneously.
 
 #### Cassandra: Alarms indicating that the cluster is down will no longer be repeated as long as the status of the cluster remains the same [ID 34209]
 
@@ -158,7 +158,7 @@ After a user had logged out of a web app, in some cases, that app would incorrec
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-When, on one thread, a group other than a poll group was launched while, on another thread, a poll group with option "partialSNMP" was waiting for incoming SNMP data, in some cases, a run-time error could occur in SLProtocol.
+When, on one thread, a group other than a poll group was launched while, on another thread, a poll group with option "partialSNMP" was waiting for incoming SNMP data, in some cases, a runtime error could occur in SLProtocol.
 
 #### Problem with SLProtocol when performing a 'replace data' action [ID 34255]
 

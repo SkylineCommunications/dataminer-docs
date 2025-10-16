@@ -20,7 +20,7 @@ Groups the PortSettings elements for the additional protocol connections.
 
 For every protocol, you have to specify its type in Protocol.Type, and its port settings in Protocol.PortSettings (see [PortSettings](xref:Protocol.PortSettings)).
 
-In case of a multi-type protocol, the Protocol.Type@advanced attribute is used to define any additional protocol types. The port settings for those additional protocol types then have to be specified in a Protocol.Ports.PortSettings element in which the name attribute contains the name of the additional type as specified in the Protocol.Type@advanced attribute.
+In case of a multitype protocol, the Protocol.Type@advanced attribute is used to define any additional protocol types. The port settings for those additional protocol types then have to be specified in a Protocol.Ports.PortSettings element in which the name attribute contains the name of the additional type as specified in the Protocol.Type@advanced attribute.
 
 ## Examples
 

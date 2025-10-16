@@ -28,7 +28,7 @@ Note that while in most cases the root time of an issue in the SLWatchdog loggin
 
 SLWatchdog will take action:
 
-- If a run-time error occurs – see [Troubleshooting – Run-Time Errors (RTEs)](xref:Troubleshooting_Run_Time_Errors).
+- If a runtime error occurs – see [Troubleshooting – Run-Time Errors (RTEs)](xref:Troubleshooting_Run_Time_Errors).
 
 - If a process suddenly stops (i.e. a process disappearance).
 

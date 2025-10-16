@@ -257,7 +257,7 @@ In some cases, the Asset Manager app would fail to initialize.
 
 #### Run-time errors in ParameterThread when defining a column parameter in the functions.xml \[ID 31074\]
 
-In some cases, run-time errors could occur in the ParameterThread when defining a column parameter in the functions.xml.
+In some cases, runtime errors could occur in the ParameterThread when defining a column parameter in the functions.xml.
 
 #### Table row exports for DVEs and virtual functions would trigger updates to be sent when no client applications were connected \[ID 31156\]
 

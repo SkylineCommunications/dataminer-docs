@@ -62,7 +62,7 @@ These files are used to hold a particular value used in a script. Within the scr
 - To configure a memory file, click the underlined sections in the *MEMORY FILES* section. The first section determines the memory file name, the second determines whether the file is volatile or persistent.
 
   > [!NOTE]
-  > For volatile memory files, the life cycle of the values stored in the memory spaces is limited to the execution time of the script. Once the script is terminated, all data stored in the memory spaces is lost. For non-volatile memory files, the life cycle of the values stored in the memory spaces is unlimited. The values are stored in a file on the hard disk of the DMA. They will survive different script cycles and even DMA reboots.
+  > For volatile memory files, the lifecycle of the values stored in the memory spaces is limited to the execution time of the script. Once the script is terminated, all data stored in the memory spaces is lost. For non-volatile memory files, the lifecycle of the values stored in the memory spaces is unlimited. The values are stored in a file on the hard disk of the DMA. They will survive different script cycles and even DMA reboots.
 
 ### Permanent memory files
 

@@ -36,7 +36,7 @@ To create a connectivity chain between parameters in an element:
 
    1. Click *OK*. The included parameters are now indicated together as one item in the internal chain.
 
-1. If necessary, click the *Options* button in the lower right corner to configure the following options for the chain:
+1. If necessary, click the *Options* button in the lower-right corner to configure the following options for the chain:
 
    - **Require alarms to occur on consecutive elements** ... : If this option is selected, the RCA level is reset if the parent parameter is not in alarm, even if other parameters are in alarm higher up in the chain.
 
