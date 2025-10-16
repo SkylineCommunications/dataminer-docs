@@ -160,13 +160,16 @@ When an outdated DLL file is found, the migration will be aborted. For the migra
 
 From now on, OPC communication should no longer be used in DataMiner connectors. Instead, QActions should be used, for example like in the [Generic OPC Data Access](https://catalog.dataminer.services/details/f2642ea9-9eaa-42f3-880e-816470b06a61) connector.
 
-#### Email messages can now also be sent if recipients are only specified in the CC and/or BCC fields [ID 43844]
+#### PDF reports configured in the Dashboards app can now also be sent if recipients are only specified in the CC and/or BCC fields [ID 43844]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, an email message could only be sent if the recipients were specified in the *To* field.
+Up to now, an PDF report configured in the Dashboards app could only be sent if recipients were specified in the *To* field.
 
-From now on, it will also be possible to send email messages that only have recipients specified in the *CC* and/or *BCC* fields.
+From now on, it will also be possible to send PDF reports if recipients are only specified in the *CC* and/or *BCC* fields.
+
+> [!NOTE]
+> Currently, PDF reports configured in DataMiner Cube still require recipients to be specified in the *To* field.
 
 #### BPA test 'Cube CRL Freeze': Enhanced performance [ID 43854]
 
