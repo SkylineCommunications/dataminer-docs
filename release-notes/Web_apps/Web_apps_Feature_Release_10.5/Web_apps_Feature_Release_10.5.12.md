@@ -206,3 +206,9 @@ On a dashboard gateway setup, certain calls would not work because of an incorre
   - ObserveDashboardChanges
 
 Also, the ShareDashboard call did incorrectly not require users to have the *General > Live sharing > Share* permission.
+
+#### Dashboards/Low-Code Apps - Table component: 'Is selected' template override would only be applied correctly for the first 50 rows [ID 43937]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, in a *Table* component, the *Is selected* template override would only be applied correctly for the first 50 rows.
