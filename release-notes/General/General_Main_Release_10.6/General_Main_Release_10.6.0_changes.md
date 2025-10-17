@@ -573,12 +573,6 @@ In some cases, an alarm with a source other than "DataMiner" could incorrectly i
 
 When a lot of concurrent requests had to be processed by the Repository API in the background, e.g. to retrieve or update bookings, this could cause thread starvation in SLDataGateway, causing these requests to be handled much more slowly than usual.
 
-#### Copilot DxM - Natural language to GQI: Columns could get removed from the cache when repeatedly requesting queries against the same data source [ID 43616]
-
-<!-- MR 10.6.0 - FR 10.5.11 -->
-
-When you repeatedly requested GQI queries with aggregations like e.g. "group by" against the same data source, in some cases, certain columns could incorrectly get removed from the data sources cache.
-
 #### Service & Resource Management: Problem when updating existing properties of a booking [ID 43659]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->

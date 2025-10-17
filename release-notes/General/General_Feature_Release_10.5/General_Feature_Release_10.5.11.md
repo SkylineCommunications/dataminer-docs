@@ -254,12 +254,6 @@ When processing a cell subscription filter, in some cases, SLNet could return in
 
 When you restarted a replicated element that was in the process of starting up, in some cases, the resources in memory would incorrectly not get cleaned up, causing SLProtocol to leak memory.
 
-#### Copilot DxM - Natural language to GQI: Columns could get removed from the cache when repeatedly requesting queries against the same data source [ID 43616]
-
-<!-- MR 10.6.0 - FR 10.5.11 -->
-
-When you repeatedly requested GQI queries with aggregations like e.g. "group by" against the same data source, in some cases, certain columns could incorrectly get removed from the data sources cache.
-
 #### Production version of DVE child elements would incorrectly be reset when you uploaded an updated copy of the DVE protocol version [ID 43640]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
