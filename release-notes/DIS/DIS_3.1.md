@@ -84,7 +84,7 @@ Up to now, selecting a NuGet reference in Visual Studio's Solution Explorer (wit
 
 With the introduction of the Skyline.DataMiner.Sdk projects, Script style projects would incorrectly not allow multiple [Exe](xref:DMSScript.Script.Exe) blocks, regardless of their [type](xref:DMSScript.Script.Exe-type).
 
-From now on, Script style projects will not allow multiple Exe blocks of type 'csharp'. This will allow users to have e.g. an Exe block of type 'csharp' and an Exe block of type 'report'.
+From now on, Skyline.DataMiner.Sdk Script projects will not allow multiple Exe blocks of type 'csharp'. This will allow users to have e.g. an Exe block of type 'csharp' and an Exe block of type 'report'.
 
 ##### ProcessAutomation.dll would be referenced incorrectly after building a dmapp [ID 43899]
 
