@@ -37,7 +37,7 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
    > - You must run the script as administrator.
    > - The machine where you install this script must be able to access the data sources you want to expose. It does not have to be the machine where the data sources are running.
    > - In case PowerShell's execution policy prevents the execution, specify an execution policy (e.g. `-ExecutionPolicy Bypass`). For more information regarding PowerShell's execution policy, refer to [About execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.5).
-   > - Updating a site name is not straightforward. To update a site name, a reinstallation needs to be performed. Also, if data sources have been configured to set up a connection with this site, the configuration of these data sources will also need to be updated.
+   > - Updating a site name is not straightforward. To update a site name, you will need to uninstall (as mentioned below) and then run the script again. Also, if data sources have been configured to set up a connection with this site, the configuration of these data sources will also need to be updated.
 
    To uninstall, you can use the following command:
 
