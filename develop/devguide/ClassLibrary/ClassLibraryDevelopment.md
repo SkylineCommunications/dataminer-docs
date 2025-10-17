@@ -13,7 +13,7 @@ Everyone at Skyline is encouraged to help maintain and add features to the base 
 
 Adding to the class library is relatively simple, and your changes can be used in development and production right away. The official merge and release as a stable version for everyone is handled within the Skyline Data Acquisition domain after code reviewing and QA, but this does not block use in projects and possible releases.
 
-If you would like to have input on code design, do not hesitate to ask Data Acquisition for assistance (by sending an email to [domain.create.data-acquisition@skyline.be](mailto:domain.create.data-acquisition@skyline.be)).
+If you would like to have input on code design, do not hesitate to ask Data Acquisition for assistance (by sending an email to [support.data-acquisition@skyline.be](mailto:support.data-acquisition@skyline.be)).
 
 These are the most important things to keep in mind:
 
@@ -57,7 +57,7 @@ These are the most important things to keep in mind:
 
     1. Assign the task to the Data Acquisition user, with the task status *Code Review* and with the *Tools* tag added.
 
-    1. Send an email to [domain.create.data-acquisition@skyline.be](mailto:domain.create.data-acquisition@skyline.be) mentioning that you added something and in which branch this was done.
+    1. Send an email to [support.data-acquisition@skyline.be](mailto:support.data-acquisition@skyline.be) mentioning that you added something and in which branch this was done.
 
 > [!TIP]
 > At this point, if you already want to use a beta package of your new class library version (and possibly even release your protocols with it), Under the SLC internal Nuget store, you will also be able to find a NuGet of your class library branch for use instead of the DIS code generation.
