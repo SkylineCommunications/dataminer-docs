@@ -95,6 +95,12 @@ This message has now been replaced by the following one:
 
 *"WARNING! Upgrade package with ID [guid] no longer exists"*
 
+#### NATSMigration tool will now log clearer HTTP errors when it is not able to connect to BrokerGateway [ID 43931]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+When the *NATSMigration* tool is not able to connect to BrokerGateway, it will now add clearer HTTP errors to the error log.
+
 ### Fixes
 
 #### MessageBroker client could get stuck while trying to fetch information from BrokerGateway [ID 43832]
@@ -108,6 +114,12 @@ When, on systems using the BrokerGateway-managed NATS solution, BrokerGateway is
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 In some rare cases, SLNet would incorrectly wait for 2 hours before closing a connection. As a result, SLNet and SLDataMiner would keep a large number of unused connections in memory for too long.
+
+#### Events would be generated with incorrect hosting agent information [ID 43862]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+When elements were swarmed or migrated via a DELT package, in some cases, events would not be generated with the correct hosting agent information.
 
 #### BrokerGateway would incorrectly be allowed to make automatic changes to the appsettings.runtime.json file when HasManualConfig was set to true [ID 43893]
 
