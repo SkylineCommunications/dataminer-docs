@@ -92,7 +92,7 @@ Up to now, when you had created or deployed an Automation script that referenced
 
 From now on, when the *ProcessAutomation.dll* file is referenced, the resulting path in the XML file will point to the `ProtocolScripts` folder.
 
-##### Problem with Automation script interactivity check
+##### Problem with Automation script interactivity check [ID 42881]
 
 In DIS, when you published an Automation script, an attempt would be made to detect whether the script used any interactive methods (e.g. ShowUI). If that was the case, flags would be set in the script options to mark the script as interactive.
 
