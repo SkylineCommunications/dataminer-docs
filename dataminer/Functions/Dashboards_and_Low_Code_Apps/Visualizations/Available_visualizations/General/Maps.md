@@ -6,15 +6,19 @@ uid: DashboardMaps
 
 Available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/DataMiner 10.5.4 onwards<!-- RN 42309 -->.
 
-This component is used to display markers and/or lines on a map. It currently only supports **Google Maps** ("gmaps") as the [Maps provider](xref:Configuring_the_DataMiner_Maps_host_servers).
+The maps component lets you **visualize and explore geospatial data using markers and/or lines**. It currently only supports Google Maps ("gmaps") as the [Maps provider](xref:Configuring_the_DataMiner_Maps_host_servers).
 
 ![Maps](~/dataminer/images/Maps_Component.png)<br>*Maps component in DataMiner 10.4.4*
 
 With this component, you can:
 
-- (...)
+- Track both real-time and [historical location data](#using-the-map-for-history-tracking) to monitor movements or analyze trends.
 
-- (...)
+- [Select markers or lines](#using-the-map-as-a-selector) on the map to view more details.
+
+- See your data in a way that makes sense, thanks to a range of [customization options](#customizing-markers).
+
+- Toggle [extra layers on demand](#displaying-extra-layers) to add context without cluttering the map.
 
 ## Prerequisites
 
@@ -30,13 +34,13 @@ Each row in a query corresponds to a marker or line on the map.
 
 ## Interacting with the maps component
 
-The content displayed on the map depends on the [configuration in the *Layout* pane](#map-settings), where you can define the default map center, zoom level, and map bounds.
+In read mode, you can interact with the maps component in several ways to explore and customize the map view.
 
-In read mode, you can adjust the map view by [zooming](#zooming) or [panning](#panning).
+You can [zoom](#zooming) in or out to adjust the level of detail, [pan](#panning) across the map to focus on different areas, [select which layers are shown](#selecting-which-layers-are-shown) to control the information visible on the map, and [change the map type](#changing-the-map-type) to switch between different map styles.
 
 ### Zooming
 
-Zooming changes the level of detail shown on the map. You can zoom in or out in several ways:
+Zooming changes **the level of detail shown on the map**. You can zoom in or out in several ways:
 
 - Click the "+" or "-" icon in the lower-right corner of the component.
 
@@ -46,7 +50,7 @@ Zooming changes the level of detail shown on the map. You can zoom in or out in 
 
 ### Panning
 
-Panning allows you to move the visible area of the map. You can pan in the following ways:
+Panning allows you to **move the visible area of the map**. You can pan in the following ways:
 
 - Use one of the following keyboard shortcuts:
 
@@ -65,17 +69,17 @@ Panning allows you to move the visible area of the map. You can pan in the follo
 
   ![Panning](~/dataminer/images/Maps_Panning.gif)<br>*Maps component in DataMiner 10.5.11*
 
-## Selecting which layers are shown
+### Selecting which layers are shown
 
 In the top-left corner of the component, you can choose which layers are displayed on the map by selecting them from the dropdown menu.
 
 ![Displaying different layers](~/dataminer/images/Maps_Layers.gif)<br>*Maps component in DataMiner 10.5.11*
 
-## Changing the map type
+### Changing the map type
 
 When the [*Show map type control* setting](#map-settings) is enabled, you can change the type of map directly in read mode.
 
-In this case, you can switch between the supported map types using the dropdown menu in the lower-left corner of the map. The available map types depend on the map provider. At present, only Google Maps is supported, with the following types:
+In the lower-left corner of the map, you can **switch between the supported map types** using the dropdown menu. The available map types depend on the map provider. At present, only Google Maps is supported, with the following types:
 
 - *roadmap*
 
@@ -89,22 +93,9 @@ In this case, you can switch between the supported map types using the dropdown 
 
 The [*Default map type* setting](#map-settings) determines which type of map is displayed initially when the dashboard or app is opened.
 
-## Using the map as a selector
-
-You can use a maps component as a dynamic selector, i.e. a component whose selection **determines behavior or data elsewhere in your dashboard or app**. A common use case is controlling what is displayed in another component, but selected values can also serve as input for scripts, queries, or conditional logic.
-
-When you select a marker or line on the map, the selected data (*All available data* > *Components* > *Map* > *Selected markers* / *Selected lines* > *Tables*) becomes automatically available for use in other components.
-
-In the example below, the map shows several terminals represented by markers. Clicking a marker opens a panel on the right that provides more details about the selected terminal. Thanks to the [marker customization options](#customizing-markers), terminals with an active alarm are displayed in red, allowing users to quickly identify and inspect affected terminals by selecting the corresponding markers.
-
-![Map as a selector](~/dataminer/images/Maps_Selector.gif)<br>*Maps component in DataMiner 10.5.11*
-
-> [!TIP]
-> From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!--RN 43635-->, you can configure an action on another component (e.g. a button) so that this can be used to [clear the selection](#maps-component-actions) on the map.
-
 ## Displaying extra layers
 
-To provide additional context or details on a map without cluttering the base view, you can configure a button to display or hide an extra layer on demand:
+To provide additional context or details on a map without cluttering the base view, you can **configure a button to display or hide an extra layer** on demand:
 
 1. Add a button component to the dashboard or page.
 
@@ -123,6 +114,30 @@ To provide additional context or details on a map without cluttering the base vi
       - *Source*: Link to a .kml, .kmz, or .json file. The coordinates can also be dynamic (using the *Link to* option).
 
    1. Click *Ok* in the lower-right corner.
+
+## Using the map as a selector
+
+You can use a maps component as a dynamic selector, i.e. a component whose selection **determines behavior or data elsewhere in your dashboard or app**. A common use case is controlling what is displayed in another component, but selected values can also serve as input for scripts, queries, or conditional logic.
+
+When you select a marker or line on the map, the selected data (*All available data* > *Components* > *Map* > *Selected markers* / *Selected lines* > *Tables*) becomes automatically available for use in other components.
+
+In the example below, the map shows several terminals represented by markers. Clicking a marker opens a panel on the right that provides more details about the selected terminal. Thanks to the [marker customization options](#customizing-markers), terminals with an active alarm are displayed in red, allowing users to quickly identify and inspect affected terminals by selecting the corresponding markers.
+
+![Map as a selector](~/dataminer/images/Maps_Selector.gif)<br>*Maps component in DataMiner 10.5.11*
+
+> [!TIP]
+> From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!--RN 43635-->, you can configure an action on another component (e.g. a button) so that this can be used to [clear the selection](#maps-component-actions) on the map.
+
+## Using the map for history tracking
+
+The maps component lets you view and monitor both real-time and historical data through ad hoc data sources.
+
+You can follow the movement or status of assets over time, analyze patterns, and compare past and current activity directly on the map. Combining live and historical data provides a complete picture of operations or events in a single view.
+
+![History tracking](~/dataminer/images/Maps_History_Tracking.png)<br>*Maps component in DataMiner 10.5.3*
+
+> [!TIP]
+> For step-by-step instructions, see the [*Visualizing the Starlink location history in DataMiner* tutorial](xref:Tutorial_Visualizing_Starlink_Location_History_in_DataMiner). This tutorial shows how to use the *Starlink Enterprise* solution to track historical data, such as following a cruise ship's movements over time.
 
 ## Adding data
 
@@ -195,6 +210,8 @@ The maps component supports showing multiple layers. Each layer determines how y
 #### Highlighting filtered results
 
 To **visually distinguish markers and lines that match your filter criteria from others**, you can combine the *Highlight* option with a query filter component. This allows you to lower the opacity of non-matching items while keeping relevant results clearly visible.
+
+![Highlighting](~/dataminer/images/Maps_Highlight.gif)<br>*Maps component and query filter component in DataMiner 10.5.11*
 
 1. In the *Layout* pane, make sure the *Filtering & Highlighting* > *Highlight* option is enabled.
 
@@ -295,6 +312,18 @@ For the maps component, the following component actions are available:
 
   > [!TIP]
   > For more information about the different types of overlays, see [Layer types](xref:Layer_types#layers-of-sourcetype-overlay)
+
+#### Example use case: Pan and zoom the map via grid selection
+
+Component actions can be combined to create interactive behavior between components.
+
+In the example below, a grid component lists several locations. When an item in the grid is clicked, the maps component automatically zooms to that location.
+
+![Grid and maps component](~/dataminer/images/GridandMap.gif)<br>*Grid component and maps component in DataMiner 10.5.11*
+
+Here, the grid component is configured with an on-click event that triggers two actions on the maps component. The *Pan to view* action pans the map to the latitude and longitude of the selected location, while the *Set zoom level* action sets the zoom level to 60, focusing on the selected area.
+
+This setup allows users to quickly navigate to the relevant location on the map.
 
 ## Enabling the component in soft launch
 
