@@ -16,6 +16,20 @@ namespace Skyline.DataMiner.Automation
 	public interface IEngine
 	{
         /// <summary>
+        /// Occurs when the script finishes.
+		/// <note>Available from DataMiner 10.6.0 main release and 10.5.12 feature release.</note>
+        /// </summary>
+        /// <remarks>This event provides an opportunity to perform cleanup or other actions after the script is
+        /// finished. Subscribers can use the event arguments to access additional context about the destruction
+        /// process.</remarks>
+        /// <example>
+		/// <code>
+        /// engine.OnDestroy += (sender, args) => { var e = sender as IEngine; e.Log($"Script finished with success ? {args.ScriptSucceed}"); };
+		/// </code>
+        /// </example>
+        event EventHandler<ScriptEventArgs> OnDestroy;
+
+        /// <summary>
         /// Acknowledges the specified alarm tree using the provided comment message.
         /// </summary>
         /// <param name="alarmTreeID">The alarm tree to update</param>
