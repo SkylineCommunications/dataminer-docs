@@ -97,11 +97,14 @@ description: A DataMiner System can have several additional modules or apps, e.g
     <a href="/dataminer/Functions/scheduler/scheduler.html" title="Scheduler" target="_self"><img src="~/dataminer/images/Scheduler.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/dataminer/Functions/Spectrum_Analysis/Spectrum_Analysis.html" title="Spectrum Analysis" target="_self"><img src="~/dataminer/images/Spectrum_Analysis.svg" style="width:100%"></a>
+    <a href="/dataminer/Functions/SiteManager/SiteManagerOverview.html" title="Site Manager" target="_self"><img src="~/dataminer/images/Site_Manager.svg" style="width:100%"></a>
   </div>
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/dataminer/Functions/Spectrum_Analysis/Spectrum_Analysis.html" title="Spectrum Analysis" target="_self"><img src="~/dataminer/images/Spectrum_Analysis.svg" style="width:100%"></a>
+  </div>
   <div class="column">
     <a href="/dataminer/Functions/Ticketing/Ticketing.html" title="Ticketing" target="_self"><img src="~/dataminer/images/Ticketing.svg" style="width:100%"></a>
   </div>  
