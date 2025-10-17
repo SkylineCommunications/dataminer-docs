@@ -24,6 +24,5 @@ To trigger a recalculation of the update locations, use the *Refresh* button abo
 > [!NOTE]
 > The following update locations are currently not recognized by DIS:
 >
-> - HTTP Sessions. These are not yet supported.
 > - The actions Aggregate, Merge, Normalize, ReadFile, Set, SetAndGetWithWait, SetWithWait, SwapColumn, and Wmi.
 > - In SLProtocolExt, the generated parameter property setters.
