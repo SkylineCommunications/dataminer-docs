@@ -10,7 +10,7 @@ From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards.
 
 ## Cause
 
-If a protocol contains an SNMP group with a condition, and such a group is first executed with the condition being false and then with the condition being true, this can trigger an SLProtocol run-time error depending on how quickly the device responds.
+If a protocol contains an SNMP group with a condition, and such a group is first executed with the condition being false and then with the condition being true, this can trigger an SLProtocol runtime error depending on how quickly the device responds.
 
 ## Workaround
 
@@ -22,4 +22,4 @@ Install DataMiner 10.3.0 [CU17], 10.4.0 [CU5], or 10.4.8.<!-- RN 39885 -->
 
 ## Issue description
 
-In the Alarm Console, a DataMiner run-time error is displayed with description "Thread problem in SLProtocol.exe", mentioning a protocol that contains an SNMP group with a condition.
+In the Alarm Console, a DataMiner runtime error is displayed with description "Thread problem in SLProtocol.exe", mentioning a protocol that contains an SNMP group with a condition.

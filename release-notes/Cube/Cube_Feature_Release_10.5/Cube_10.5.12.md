@@ -122,6 +122,24 @@ When, in the bottom-right corner of the *BELOW THIS VIEW* page of a view card, y
 
 Also, when the `SL_UNKNOWN_DESTINATION` exception was thrown, up to now, a message would appear, saying "The requested DMA could not be specified or is currently unknown". This message has now been changed to "Unable to find hosting agent. The agent might still be starting up or is currently unknown".
 
+#### DataMiner Cube will now reuse the HTTP cookies of the gRPC connection [ID 43860]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When DataMiner Cube performs a web request or when it displays a web browser control, it will now reuse the HTTP cookies of the gRPC connection. This will ensure that the requests are sent to the DataMiner Agent to which Cube is connected.
+
+#### Credentials library: Details pane can now be scrolled horizontally [ID 43870]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+From now on, when working in the *Credentials library*, you will be able to horizontally scroll the details pane. This will e.g. make it easier to view very long passwords.
+
+#### Automation, Correlation, and Scheduler: PDF report configuration window has been enlarged [ID 43898]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+In the Automation, Correlation, and Scheduler modules, you can generate a report based on a dashboard. When you do so, you can click the *Configure* button to open a window where you can configure the report. The size of this configuration window has now been changed from 800x600 pixels to 1200x900 pixels.
+
 #### 'Automatic incident tracking' renamed to 'Alarm grouping' [ID 43903]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
@@ -151,6 +169,14 @@ When you opened a trend graph showing trend data values with low Y values and pr
 When, in DataMiner Cube, you opened a trend graph and then switched to another theme, up to now, errors would start to appear in the logging.
 
 Also, the trend graph colors would incorrectly not get updated.
+
+#### Trending: Trend graphs for parameters of new elements would not always be displayed correctly [ID 43792]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+The first time you opened a trend graph for a parameter of a new element, the graph would be displayed correctly, but from the second time onwards, the graph would either be shown correctly or would show "No data".
+
+From now on, when you open a trend graph for a parameter of a new element, the graph will always be displayed correctly. It will show "No data" when no data could be found.
 
 #### Problem when routing requests related to a swarmed element or an element migrated via a DELT package [ID 43815]
 

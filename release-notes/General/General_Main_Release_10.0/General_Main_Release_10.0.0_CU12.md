@@ -183,9 +183,9 @@ When an element had an empty port type value, in some cases, trying to edit that
 
 When you assigned an alarm template group to a DVE element, no alarms would be generated.
 
-#### ProtocolThread run-time error could occur when an element with a serial connection was paused \[ID 29083\]
+#### ProtocolThread runtime error could occur when an element with a serial connection was paused \[ID 29083\]
 
-In some cases, a ProtocolThread run-time error could occur when an element with a serial connection was paused.
+In some cases, a ProtocolThread runtime error could occur when an element with a serial connection was paused.
 
 #### Memory leak in SLXml when registered objects were removed \[ID 29091\]
 

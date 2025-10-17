@@ -809,9 +809,9 @@ When you assigned an alarm template group to a DVE element, no alarms would be g
 
 When you closed the DataMiner Cube start window, in some rare cases, the configuration file of that start window would incorrectly be cleared.
 
-#### ProtocolThread run-time error could occur when an element with a serial connection was paused \[ID 29083\]
+#### ProtocolThread runtime error could occur when an element with a serial connection was paused \[ID 29083\]
 
-In some cases, a ProtocolThread run-time error could occur when an element with a serial connection was paused.
+In some cases, a ProtocolThread runtime error could occur when an element with a serial connection was paused.
 
 #### Memory leak in SLXml when registered objects were removed \[ID 29091\]
 

@@ -10,7 +10,7 @@ For each aggregation rule, there is an XML file detailing its configuration. Nor
 
 ## Specifying whether an aggregation rule ignores parameter exception values
 
-On system level, this setting is configured in the *Aggregation.Source* tag of the *MaintenanceSettings.xml* file, but if you configure this setting for a specific aggregation rule, this will override the system-level setting. See [Alphabetical overview of settings](xref:MaintenanceSettings_xml#alphabetical-overview-of-settings).
+On system level, this setting is configured in the *Aggregation.Source* tag of the *MaintenanceSettings.xml* file, but if you configure this setting for a specific aggregation rule, this will override the system-level setting. See [MaintenanceSettings XML Schema](xref:SchemaMaintenanceSettings).
 
 To configure this setting for a specific aggregation rule, open the corresponding XML file, add the *ignoreExceptionValues* attribute to the *\<Rule>* tag, and set it to *"true"* or *"false"*, depending on whether you want exception values to be ignored or not, respectively.
 

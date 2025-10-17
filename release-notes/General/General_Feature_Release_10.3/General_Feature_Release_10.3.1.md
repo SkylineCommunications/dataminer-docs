@@ -778,6 +778,6 @@ In some cases, an error could occur in the Skyline Device Simulator when a proxy
 
 When working with large timer values and *Timerbase*, in some cases, an integer overflow could occur.
 
-- In x86 versions of SLProtocol, this would result in a default time of 5 minutes for run-time error detection, while waiting a pseudo-random time to continue polling (around 10 days). The run-time error would get reset about every 10 days.
+- In x86 versions of SLProtocol, this would result in a default time of 5 minutes for runtime error detection, while waiting a pseudo-random time to continue polling (around 10 days). The runtime error would get reset about every 10 days.
 
-- In x64 versions of SLProtocol, this would cause the timer to become inaccurate. No run-time errors would occur.
+- In x64 versions of SLProtocol, this would cause the timer to become inaccurate. No runtime errors would occur.

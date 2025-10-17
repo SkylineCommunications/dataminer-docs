@@ -74,7 +74,7 @@ In some cases, a *Form* component would not be able to create instances when the
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-In some cases, a run-time error could occur when configuring a *Node edge graph* component.
+In some cases, a runtime error could occur when configuring a *Node edge graph* component.
 
 #### Dashboards app - Column & bar chart component: Chart and legend would show different colors after removing a bar [ID 39847]
 

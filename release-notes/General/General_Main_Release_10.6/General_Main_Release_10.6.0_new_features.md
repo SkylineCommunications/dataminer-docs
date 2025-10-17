@@ -449,7 +449,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320] [ID 43440] [ID 43686] [ID 43720] [ID 43769] [ID 43797]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320] [ID 43440] [ID 43686] [ID 43720] [ID 43769] [ID 43797] [ID 43853]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
@@ -466,6 +466,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 43720: MR 10.6.0 - FR 10.5.12 -->
 <!-- RNs 43769: MR 10.6.0 - FR 10.5.12 -->
 <!-- RNs 43797: MR 10.6.0 - FR 10.5.11 -->
+<!-- RNs 43853: MR 10.6.0 - FR 10.5.12 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
@@ -509,6 +510,7 @@ The following API messages can be used to create, retrieve, migrate, and remove 
 | Message | Function |
 |---------|----------|
 | AddRADParameterGroupMessage     | Creates a new RAD parameter group.<br>It is not allowed to have two groups with the same name, even when they are hosted by different agents.<br>If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated. |
+| GetAllRelationalAnomaliesMessage | Retrieves all relational anomalies within a given time frame, regardless of the RAD parameter group or parameter they were detected on.<br>Note: This message will only return anomalies detected on parameters to which the user has access. |
 | GetRADDataMessage               | Retrieves the anomaly scores over a specified time range of historical data. |
 | GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular RAD parameter group.<br>The response to a `GetRADParameterGroupInfoMessage` includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging. |
 | GetRADParameterGroupsMessage    | Retrieves a list of all RAD parameter groups that have been configured across all agents in the cluster. |
@@ -682,7 +684,7 @@ To define that the value of a particular parameter should be used as context ID 
 
 If the parameter is not initialized or is set to an empty string, the default parameter value will be used (i.e. an empty string).
 
-The context name and context ID can be changed at run-time, and are not saved by default. When the element is restarted, the parameter data will be lost unless the `save` attribute of the parameter was set to true (e.g. `<Param id="1" save="true">`).
+The context name and context ID can be changed at runtime, and are not saved by default. When the element is restarted, the parameter data will be lost unless the `save` attribute of the parameter was set to true (e.g. `<Param id="1" save="true">`).
 
 #### Automation scripts: Generating information events when editing a connection in a QAction [ID 42783]
 
@@ -852,7 +854,7 @@ The `DomInstanceNetworkAttachmentSettings` class contains the following properti
 >
 > - When a DOM module is configured to save attachments to a network share, the system will validate whether the user creating/updating the `ModuleSettings` has permission to access the credentials. Once this is set up, any user that has permissions to create or update a `DomInstance` can save attachments to the network share under the configured user.
 > - When a DOM module is configured to save attachments to a network share, no migration is done of existing attachments. They will continue to exist in the `C:\Skyline DataMiner\Documents` folder, but will no longer work. You can copy them over or move them to the network share; the folder structure is the same. Likewise, when removing the configuration to save attachments to a network share, no migration is done of attachments available on the previously configured network share.
-> - By default, the size of the attachments is limited to 20 MB. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#documentsmaxsize).
+> - By default, the size of the attachments is limited to 20 MB. See [Documents.MaxSize](xref:MaintenanceSettings.Documents.MaxSize).
 
 #### SLNet: 'TraceId' property added to ClientRequestMessage & extended logging [ID 43187]
 

@@ -204,7 +204,7 @@ When you switched from one page to another, up to now, actions on open panels wo
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When, in a *Table* component with multiple queries, you rapidly switched between the different queries or generated a PDF, in some cases, the following run-time error could appear instead of the actual table data:
+When, in a *Table* component with multiple queries, you rapidly switched between the different queries or generated a PDF, in some cases, the following runtime error could appear instead of the actual table data:
 
 `Cannot read properties of undefined (reading "Value")`
 

@@ -202,7 +202,7 @@ Below, you can find the options that can be specified in the **ParametersOptions
   > [!CAUTION]
   > Be careful when you use the "Month" option.
   >
-  > - The TimeSpan1DayRecords interval should be set in *MaintenanceSettings.xml* (which is not set by default). If this interval is not set, then the system will fall back to the TimeSpan1HourRecords interval. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml).
+  > - The TimeSpan1DayRecords interval should be set in *MaintenanceSettings.xml* (which is not set by default). If this interval is not set, then the system will fall back to the TimeSpan1HourRecords interval. See [MaintenanceSettings.Trending](xref:MaintenanceSettings.Trending).
   > - Do not include multiple parameters of which the TimeSpan1DayRecords interval has not been set.
 
 - **ThemeForeground**:

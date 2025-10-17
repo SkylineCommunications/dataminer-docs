@@ -170,7 +170,7 @@ Retry logic has now been added to all CCAP platform connectors to prevent this i
 
 #### Run-time error caused by CCAP connector [ID 35599]
 
-In some cases, CCAP connectors could cause run-time errors. To prevent this, the *partialSNMP* option has been added to all SNMP tables in order to divide the polling over several smaller groups.
+In some cases, CCAP connectors could cause runtime errors. To prevent this, the *partialSNMP* option has been added to all SNMP tables in order to divide the polling over several smaller groups.
 
 #### Invalid ID in passive tables [ID 35659]
 

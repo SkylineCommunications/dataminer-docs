@@ -256,4 +256,4 @@ Previously, when a configuration backup was executed, IDP temporarily stored the
 
 #### Incompatibility with DataMiner 10.1.1 or higher \[ID 28826\]
 
-If the IDP app was used with DataMiner version 10.1.1 or higher, run-time errors could occur. IDP has now been optimized to be fully compatible with the changes introduced in DataMiner 10.1.1.
+If the IDP app was used with DataMiner version 10.1.1 or higher, runtime errors could occur. IDP has now been optimized to be fully compatible with the changes introduced in DataMiner 10.1.1.

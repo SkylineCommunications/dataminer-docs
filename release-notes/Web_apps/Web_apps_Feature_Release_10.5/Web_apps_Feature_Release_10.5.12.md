@@ -20,7 +20,25 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-*No new features have been added yet.*
+#### Dashboards/Low-Code Apps: GQI queries can now be exported as JSON files [ID 43800]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When in edit mode, it is now possible to directly export a GQI query to a JSON file. To do so, select the query, click the ellipsis button, and select *Export*.
+
+Up to now, when you wanted to export a GQI query to a JSON file (e.g. to have it executed by the *Data Aggregator* module), you had to open the developer tools of your browser, copy the query from the request payload, and convert the query using the *ConvertQueryToProtoJson* web method.
+
+#### Web apps: New 'User settings' window allows users to change their password [ID 43803]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+In the user menu of each DataMiner web app, you can now find a new *User settings* item. Clicking that item will open a window that allows you to change your password.
+
+For a user to be able to see and click this new menu item, the following conditions must be met:
+
+- In *System Center > Users*, the user's *User cannot change password* setting must be disabled.
+- The user must have *Modules > System configuration > Security > Specific > Limited administrator* permission.
+- The user must not be logged in with external or delegated authentication.
 
 ## Changes
 
@@ -50,6 +68,21 @@ In edit mode, up to now, when you made a configuration that involved element dat
 
 From now on, the first 100 elements will initially be retrieved. Afterwards, when you then scroll down, the next 100 elements will be retrieved each time you reach the bottom of the list.
 
+#### Dashboards app: PDF reports can now be generated in landscape mode [ID 43826]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When you configure a PDF report, you can now select the *Landscape* setting to indicate that the report should be generated in landscape mode.
+
+#### DataMiner Comparison tool: Redesigned header [ID 43837]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+The header of the DataMiner Comparison tool has been redesigned.
+
+- When you click the DataMiner logo, you will be redirected to the DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`).
+- When you click the app title (i.e. "Comparison"), the app's URL will be cleared of any settings that were added to it.
+
 #### Dashboards app: Email reports can now also be sent recipients who are not contacts and who are only specified in the CC and/or BCC fields [ID 43848]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
@@ -57,6 +90,35 @@ From now on, the first 100 elements will initially be retrieved. Afterwards, whe
 Up to now, an email report could only be sent if recipients were specified in the *To* field. Also, those recipients had to be people in your contact list.
 
 From now on, recipients no longer have to be contacts, and it will also be possible to send email reports that only have recipients specified in the *CC* and/or *BCC* fields.
+
+#### Dashboards/Low-Code Apps - Grid component: 'Grid template' section replaced by 'Grid layout' section [ID 43889]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When editing a *Grid* component, up to now, the *Advanced > Grid template* section of the *Layout* pane allowed you to configure the number of columns and rows displayed in the component and choose how items scale within the available space. Now, that *Grid template* section has been replaced by the *Layout > Grid layout* section, which contains the following settings:
+
+- **Columns**
+
+  | Setting | Description |
+  |---|---|
+  | Fixed column count   | Disable this setting to have all columns displayed, or enable this setting to have the fixed number of columns specified in *Columns* displayed. |
+  | Columns              | If *Fixed column count* is enabled, then, in this box, specify the number of columns (from 1 to 100) to be displayed. |
+  | Stretch to fit       | Enable this setting to have the cells scaled dynamically to fit the grid. |
+  | Stretch mode         | If *Stretch to fit* is enabled, then set *Stretch mode* to either "Fit" or "Limit":<br>- Fit: Try to fit as many items as possible.<br>- Limit: Enlarge or reduce the items according to the template dimensions. |
+  | Horizontal scroll    | Enable this setting if you want a horizontal scrollbar to be displayed.<br>When this setting is disabled, text in the cells will either wrap or be clipped, depending on the other settings. When a fixed number of columns are displayed, text in the cells will not wrap. |
+
+- **Rows**
+
+  | Setting | Description |
+  |---|---|
+  | Fixed row count   | Disable this setting to have all rows displayed, or enable this setting to have the fixed number of rows specified in *Rows* displayed. |
+  | Rows              | In this box, specify the number of rows (from 1 to 100) to be displayed when *Fixed row count* is enabled. |
+  | Stretch to fit    | Enable this setting to have the cells scaled dynamically to fit the grid. |
+  | Stretch mode      | If *Stretch to fit* is enabled, then set *Stretch mode* to either "Fit" or "Limit":<br>- Fit: Try to fit as many items as possible.<br>- Limit: Enlarge or reduce the items according to the template dimensions. |
+  | Vertical scroll   | Enable this setting if you want a vertical scrollbar to be displayed.<br>When this setting is disabled, text in the cells will either wrap or be clipped, depending on the other settings. When a fixed number of rows are displayed, text in the cells will not wrap. |
+
+> [!NOTE]
+> By default, newly created grids will have *Stretch to fit* enabled and *Stretch mode* set to "Limit" for columns, and *Vertical scroll* enabled for rows.
 
 ### Fixes
 
@@ -108,6 +170,14 @@ When a *Search input* component had its *Emit value on* option set to "Value cha
 
 When the *Time range* component had been used to schedule the PDF generation of dashboard reports, the reports would not be generated at the correct time when a relative timespan (e.g. "Today so far") had been specified. Instead of the relative timespan, the system would incorrectly use a fixed timespan based on the moment at which the time range had been configured.
 
+#### Low-Code Apps: Problem when importing and exporting low-code apps [ID 43833]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, when you imported a newer version of a low-code app, its version history would not be updated correctly.
+
+Also, when you exported a low-code app, the version list in the export package would incorrectly include all versions of the app. From now on, the version list will only include the version you exported.
+
 #### Low-Code Apps: Users without 'View dashboards' permission would not be allowed to view or edit a low-code app via a dashboard gateway [ID 43846]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
@@ -136,3 +206,9 @@ On a dashboard gateway setup, certain calls would not work because of an incorre
   - ObserveDashboardChanges
 
 Also, the ShareDashboard call did incorrectly not require users to have the *General > Live sharing > Share* permission.
+
+#### Dashboards/Low-Code Apps - Table component: 'Is selected' template override would only be applied correctly for the first 50 rows [ID 43937]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, in a *Table* component, the *Is selected* template override would only be applied correctly for the first 50 rows.

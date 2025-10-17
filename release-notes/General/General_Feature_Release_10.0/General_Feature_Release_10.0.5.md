@@ -387,7 +387,7 @@ This functionality will allow you to offer clear feedback on user input.
 
 #### UnSetFlag method now also added to IEngine interface \[ID 25188\]
 
-Since DataMiner 10.0.0/10.0.1, you can use the engine.UnSetFlag method to clear the AllowUndef, NoInformationEvents and NoKeyCaching run-time flags in an Automation script.
+Since DataMiner 10.0.0/10.0.1, you can use the engine.UnSetFlag method to clear the AllowUndef, NoInformationEvents and NoKeyCaching runtime flags in an Automation script.
 
 This method has now also been added to the IEngine interface.
 
@@ -838,9 +838,9 @@ When, after restarting an element, the alarms associated with that element were 
 
 In interactive Automation scripts, in some cases, checkbox components would not be updated correctly.
 
-#### SLDMS run-time errors when connection with remote DMA could not be initialized \[ID 25068\]
+#### SLDMS runtime errors when connection with remote DMA could not be initialized \[ID 25068\]
 
-When the connection with a remote DMA could not be initialized, run-time errors could occur in the SLDMS process.
+When the connection with a remote DMA could not be initialized, runtime errors could occur in the SLDMS process.
 
 #### Active alarms could be displayed incorrectly after restarting a DMA with a MySQL database \[ID 25071\]
 
@@ -926,7 +926,7 @@ In some cases, an error could occur in SLProtocol when starting a DVE element or
 
 #### Run-time error in protocol thread after dynamic IP change or close action of serial connection \[ID 25223\]
 
-If a protocol with serial connection over UDP or TDC/IP used either an action of type "close" on a serial connection or a parameter with type option "dynamic IP", a run-time error could occur in the protocol thread.
+If a protocol with serial connection over UDP or TDC/IP used either an action of type "close" on a serial connection or a parameter with type option "dynamic IP", a runtime error could occur in the protocol thread.
 
 #### Automation: Options text in narrow Automation script execution window not fully displayed \[ID 25226\]
 

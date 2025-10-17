@@ -84,6 +84,14 @@ This means that, in an Automation script, it will now be possible to retrieve th
 
 ### Enhancements
 
+#### SLLogCollector: Memory dumps will be taken first & new option to skip the BPA tests [ID 43588]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Each time the *SLLogCollector* tool is run, by default, it will order the *Standalone BPA Executor* tool to execute all BPA tests available in the system. From now on, a checkbox will allow you to have those BPA tests skipped.
+
+Also, when ordered to include memory dumps, up to now, the SLLogCollector tool would first run the BPA tests and collect all logging, and would then take the memory dumps. From now on, it will take the memory dumps first.
+
 #### Serial communication: Only TLS 1.2 or TLS 1.3 encryption will now be allowed [ID 43678]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
@@ -152,13 +160,25 @@ When an outdated DLL file is found, the migration will be aborted. For the migra
 
 From now on, OPC communication should no longer be used in DataMiner connectors. Instead, QActions should be used, for example like in the [Generic OPC Data Access](https://catalog.dataminer.services/details/f2642ea9-9eaa-42f3-880e-816470b06a61) connector.
 
-#### Email messages can now also be sent if recipients are only specified in the CC and/or BCC fields [ID 43844]
+#### PDF reports configured in the Dashboards app can now also be sent if recipients are only specified in the CC and/or BCC fields [ID 43844]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, an email message could only be sent if the recipients were specified in the *To* field.
+Up to now, an PDF report configured in the Dashboards app could only be sent if recipients were specified in the *To* field.
 
-From now on, it will also be possible to send email messages that only have recipients specified in the *CC* and/or *BCC* fields.
+From now on, it will also be possible to send PDF reports if recipients are only specified in the *CC* and/or *BCC* fields.
+
+> [!NOTE]
+> Currently, PDF reports configured in DataMiner Cube still require recipients to be specified in the *To* field.
+
+#### Relational anomaly detection: New API message to retrieve all relational anomalies within a given time frame [ID 43853]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+From now on, the new `GetAllRelationalAnomaliesMessage` will allow you to retrieve all relational anomalies within a given time frame, regardless of the RAD parameter group or parameter they were detected on.
+
+> [!NOTE]
+> This message will only return anomalies detected on parameters to which the user has access.
 
 #### BPA test 'Cube CRL Freeze': Enhanced performance [ID 43854]
 
@@ -167,6 +187,36 @@ From now on, it will also be possible to send email messages that only have reci
 Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
+
+#### DxMs upgraded [ID 43866] [ID 43950]
+
+<!-- RN 43866: MR 10.6.0 - FR 10.5.12 -->
+<!-- RN 43950: MR 10.6.0 - FR 10.5.12 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner CloudGateway 2.17.14
+- DataMiner DataAPI 1.4.0
+
+The CloudGateway DxM and the DataAPI DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, they will not be installed.
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
+#### SLDMS: Broadcast event DMS_INVALIDATE_HOSTING_AGENT_CACHE has been removed [ID 43896]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, when the SLDMS process had updated its local hosting agent cache information about an element, service, or redundancy group, it would publish a DMS_INVALIDATE_HOSTING_AGENT_CACHE request across the cluster so that other agents could also update this information.
+
+This redundant broadcast event has now been removed.
+
+#### Alarms of type 'Notice' will now be generated when SLDataGateway queues no longer seem to decrease [ID 43909]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+In some rare cases, SLDataGateway queues no longer seemed to decrease.
+
+When this should happen in the future, an alarm of type "Notice" will be generated to make sure system administrators can act accordingly in order to prevent data loss.
 
 #### BPA test 'DataMiner Agent Minimum Requirements': Updated requirements [ID 43913]
 
@@ -190,6 +240,12 @@ Up to now, when a DataMiner upgrade package could not be found, the following wa
 This message has now been replaced by the following one:
 
 *"WARNING! Upgrade package with ID [guid] no longer exists"*
+
+#### NATSMigration tool will now log clearer HTTP errors when it is not able to connect to BrokerGateway [ID 43931]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+When the *NATSMigration* tool is not able to connect to BrokerGateway, it will now add clearer HTTP errors to the error log.
 
 ### Fixes
 
@@ -218,8 +274,7 @@ After a DataMiner startup, in some cases, the following exception could appear i
 
 #### MessageBroker client could get stuck while trying to fetch information from BrokerGateway [ID 43832]
 
-<!-- MR 10.6.0 - FR 10.5.12 -->
-<!-- Not added in MR 10.6.0 -->
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
 
 When, on systems using the BrokerGateway-managed NATS solution, BrokerGateway is not running the local DataMiner Agent, the MessageBroker client could get stuck while trying to fetch information from BrokerGateway.
 
@@ -229,6 +284,19 @@ When, on systems using the BrokerGateway-managed NATS solution, BrokerGateway is
 
 In some rare cases, SLNet would incorrectly wait for 2 hours before closing a connection. As a result, SLNet and SLDataMiner would keep a large number of unused connections in memory for too long.
 
+#### Events would be generated with incorrect hosting agent information [ID 43862]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+When elements were swarmed or migrated via a DELT package, in some cases, events would not be generated with the correct hosting agent information.
+
+#### Swarming: Specific elements could not be swarmed to a specific DMA until that DMA had been restarted [ID 43883]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+<!-- Not added in MR 10.6.0 -->
+
+In some rare cases, it would incorrectly not be possible for specific elements to be swarmed to a specific DataMiner Agent until that Agent had been restarted.
+
 #### BrokerGateway would incorrectly be allowed to make automatic changes to the appsettings.runtime.json file when HasManualConfig was set to true [ID 43893]
 
 <!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
@@ -236,3 +304,18 @@ In some rare cases, SLNet would incorrectly wait for 2 hours before closing a co
 When BrokerGateway could not find any local IP address in the `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` configuration file, up to now, it would incorrectly add a local IP address to that file, even when the `HasManualConfig` setting was set to true.
 
 From now on, when the `HasManualConfig` setting is set to true, BrokerGateway will not be allowed to make any automatic changes to the `appsettings.runtime.json` configuration file.
+
+#### Timeout of queries against a Cassandra database was set incorrectly [ID 43912]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+The timeout of queries against a Cassandra database was set incorrectly. This timeout has now been set to 10 minutes.
+
+#### Problem with temporary deadlocks in SLNet while DataMiner Agents were connecting or reconnecting [ID 43936]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+<!-- Not added in MR 10.6.0 -->
+
+Up to now, a temporary deadlock could occur in SLNet while DataMiner Agents were connecting or reconnecting to each other.
+
+In some cases, this could lead to "thread problem" alarms appearing and then clearing later on.

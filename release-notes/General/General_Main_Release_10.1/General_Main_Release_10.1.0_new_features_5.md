@@ -273,7 +273,7 @@ In the TicketingHelper class and TicketingGatewayHelper, the “AttachmentsHelpe
 
 When you launch an Automation script, you can choose to select the “After executing a SET command” option. If you do so, every time the script performs a parameter or property update, it will wait for a return value indicating whether or not the update was successful.
 
-From now on, the “NoCheckingSets” run-time flag will allow this option to be changed while a script is being run.
+From now on, the “NoCheckingSets” runtime flag will allow this option to be changed while a script is being run.
 
 #### Connecting a DMS to a remote ElasticSearch cluster from an Automation script \[ID 26569\]
 

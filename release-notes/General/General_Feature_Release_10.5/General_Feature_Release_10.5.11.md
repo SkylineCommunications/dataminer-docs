@@ -218,11 +218,11 @@ You can have all active alarms resent by sending an SNMP Set command to the DMA 
 
 However, since DataMiner versions 10.4.0 [CU12]/10.5.3, this would no longer work when the SNMP manager in question had the *Resend all active alarms every ...* option disabled.
 
-#### Alarm indicating a run-time error would incorrectly say "-1 pending" when all threads cleared simultaneously [ID 43508]
+#### Alarm indicating a runtime error would incorrectly say "-1 pending" when all threads cleared simultaneously [ID 43508]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
-When multiple threads of the same process have a run-time error, the associated alarm will say "+X pending", indicating the number of threads that are stuck.
+When multiple threads of the same process have a runtime error, the associated alarm will say "+X pending", indicating the number of threads that are stuck.
 
 Up to now, when all threads cleared simultaneously, in some cases, the alarm would incorrectly say "-1 pending".
 
@@ -253,12 +253,6 @@ When processing a cell subscription filter, in some cases, SLNet could return in
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When you restarted a replicated element that was in the process of starting up, in some cases, the resources in memory would incorrectly not get cleaned up, causing SLProtocol to leak memory.
-
-#### Copilot DxM - Natural language to GQI: Columns could get removed from the cache when repeatedly requesting queries against the same data source [ID 43616]
-
-<!-- MR 10.6.0 - FR 10.5.11 -->
-
-When you repeatedly requested GQI queries with aggregations like e.g. "group by" against the same data source, in some cases, certain columns could incorrectly get removed from the data sources cache.
 
 #### Production version of DVE child elements would incorrectly be reset when you uploaded an updated copy of the DVE protocol version [ID 43640]
 
