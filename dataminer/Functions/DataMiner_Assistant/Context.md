@@ -7,7 +7,7 @@ uid: Assistant_Context
 > [!IMPORTANT]
 > The DataMiner Assistant app is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of how this functionality will work once released and may be subject to change.
 
-DataMiner Assistant relies on context to interpret questions and provide accurate answers. This context is not limited to what you type in a chat message. It also includes background instructions, descriptive files, and data definitions that shape how the Assistant understands and analyzes your DataMiner System.
+The DataMiner Assistant relies on context to interpret questions and provide accurate answers. This context is not limited to what you type in a chat message. It also includes background instructions, descriptive files, and data definitions that shape how the Assistant understands and analyzes your DataMiner System.
 
 The context consists of several layers:
 
@@ -19,7 +19,7 @@ The context consists of several layers:
 | User prompt | The message you type in the chat, e.g. "Which alarms require immediate attention?" |
 | [User context](xref:Assistant_UserContext) | Optional organization-specific information that customizes the Assistant’s understanding of your environment. |
 
-When you start a new chat session, DataMiner Assistant will first load the general system instructions to understand its purpose, tone, and behavioral rules. It will then access the relevant context files and data source descriptions depending on your question.
+When you start a new chat session, the DataMiner Assistant will first load the general system instructions to understand its purpose, tone, and behavioral rules. It will then access the relevant context files and data source descriptions depending on your question.
 
 The system instructions, context files, and data source descriptions are maintained by Skyline Communications. In the future, this context will be available as a public GitHub repository, where anyone can propose changes. All contributions will be reviewed by Skyline's Context Engineering team.
 

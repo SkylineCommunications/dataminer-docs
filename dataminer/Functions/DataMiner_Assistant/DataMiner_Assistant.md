@@ -7,11 +7,11 @@ uid: DataMinerAssistant
 > [!IMPORTANT]
 > The DataMiner Assistant app is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of what will be available in a future release and may be subject to change.
 
-DataMiner Assistant is an integrated AI assistant, accessible via the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page), that helps you interact with your DataMiner System more efficiently. It can answer DataMiner-related questions and assist in interpreting data from your system.
+The DataMiner Assistant is an integrated AI assistant, accessible via the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page), that helps you interact with your DataMiner System more efficiently. It can answer DataMiner-related questions and assist in interpreting data from your system.
 
 ![DataMiner Assistant](~/dataminer/images/Assistant.png)
 
-DataMiner Assistant relies on [context](xref:Assistant_Context) to provide the most accurate answers to your questions and requests. To tailor responses to your organization, you will be able to add your own [user context](xref:Assistant_UserContext), providing insights specific to your environment. This will complement Skyline's default context, which includes system instructions, general data descriptions, and other baseline information.
+The DataMiner Assistant relies on [context](xref:Assistant_Context) to provide the most accurate answers to your questions and requests. To tailor responses to your organization, you will be able to add your own [user context](xref:Assistant_UserContext), providing insights specific to your environment. This will complement Skyline's default context, which includes system instructions, general data descriptions, and other baseline information.
 
 The Assistant app will be available in two tabs, each designed for a specific type of interaction: the [*Insights* tab](#insights), where it analyzes live data from your system, and the [*Documentation* tab](#documentation), where it provides conceptual and procedural guidance based on the official documentation.
 
