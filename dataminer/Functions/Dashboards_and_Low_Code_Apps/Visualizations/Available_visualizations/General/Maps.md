@@ -79,7 +79,7 @@ In the top-left corner of the component, you can choose which layers are display
 
 When the [*Show map type control* setting](#map-settings) is enabled, you can change the type of map in the lower-left corner of the component.
 
-In the lower-left corner of the map, you can **switch between the supported map types** using the dropdown menu. The available map types depend on the map provider. At present, only Google Maps is supported, with the following types:
+You can **switch between the supported map types** using the dropdown menu. The available map types depend on the map provider. At present, only Google Maps is supported, with the following types:
 
 - *roadmap*
 
