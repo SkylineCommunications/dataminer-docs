@@ -201,7 +201,7 @@ In the *Layout* pane, the following settings in the *Map settings* section deter
 
 | Subsection | Option | Description |
 |--|--|--|
-| N/A | Save current view | After you have panned and/or zoomed to a certain location, click this button to set the center and zoom settings to the current center and zoom level of the component. |
+| N/A | Save current view | After you have panned and/or zoomed to a certain location, click this button to set the center and zoom settings as the default view. This will be the view that users see when they first open the map. |
 | Map center | Latitude/Longitude | Determine the default center of the map by means of the latitude and longitude of the center location. To easily get the coordinates of a point on the map, right-click the component and select the latitude and/or longitude value to copy it to the clipboard. |
 | Map zoom | Zoom range | Select the minimum and maximum zoom level. |
 | Map zoom | Default zoom | Specify the default zoom level of the map. |
