@@ -250,7 +250,7 @@ By default, the template of a maps component includes the following **pre-config
 
 | Layer | Type | Description |
 |--|--|--|
-| ![Ellipse layer](~/dataminer/images/Maps_Template_Layer1.png) | Ellipse | Acts as the background of each marker. Default color is #FDFDFD, with conditional formatting for hover (#E8E8E9) and selection (#9AB3EA). |
+| ![Ellipse layer](~/dataminer/images/Maps_Template_Layer1.png) | Ellipse | Acts as the background of each marker, with conditional formatting for hover and selection. |
 | ![Ellipse layer 2](~/dataminer/images/Maps_Template_Layer2.png) | Ellipse | Acts as a visual border by being slightly larger than the background layer. Default color is #C5C6C8, with conditional formatting for hover (#A0A2A6) and selection (#2563EB). |
 
 This default template (available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->) ensures that a marker is highlighted when hovered over and stands out when selected, with a light-blue background and a blue border.
