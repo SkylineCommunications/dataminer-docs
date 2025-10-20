@@ -14,8 +14,8 @@ The **imported version is always marked as active**, regardless of whether it re
 
 Each Low Code App can have multiple versions. Each version can be one of the following:
 
-- **Published (P):** The version currently live and accessible to users.
-- **Draft (D):** A working version under development, not yet published.
+- **Published:** A released version of the app.
+- **Draft:** A working version under development, not yet published.
 
 At any given time, a Low Code App can have a maximum of two active versions: one published and one draft.
 
@@ -26,20 +26,20 @@ When importing a package that contains a Low Code App, DataMiner compares the **
 
 The following table summarizes how different combinations of existing and imported versions are handled.
 
-| Existing App      | Package App  | Import Result                                                                       | Resulting Versions         |
-| ----------------- | ------------ | ----------------------------------------------------------------------------------- | -------------------------- |
-| –                 | v5 published | The package v5 is added as a new published version.                                 | **P: 5**, **D: 0**         |
-| –                 | v5 draft     | The package v5 is added as a new draft version.                                     | **P: 0**, **D: 5**         |
-| v5 published      | v6 published | The existing v5 is replaced by the package v6 (published).                          | **P: 6**, **D: 0**         |
-| v5 published      | v6 draft     | The existing v5 remains published. The package v6 becomes the new draft.            | **P: 5**, **D: 6**         |
-| v5 draft          | v6 published | The existing v5 remains as draft. The package v6 becomes the new published version. | **P: 6**, **D: 5**         |
-| v5 draft          | v6 draft     | The package v6 replaces the v5 draft as the active draft. The existing v5 remains.  | **P: untouched**, **D: 6** |
-| v5 draft          | v4 draft     | The package v4 draft is made the active draft.                                      | **P: untouched**, **D: 4** |
-| v16–v25 published | v5 published | The package v5 becomes the new active version.                                      | **P: 5**, **D: 0**         |
-| v16–v25 published | v5 draft     | The existing published versions remain. The package v5 is added as a draft.         | **P: untouched**, **D: 5** |
-| v5 published      | v5 published | The existing v5 is replaced by the package v5 (same version).                       | **P: 5**, **D: untouched** |
-| v5 published      | v4 draft     | The package v4 draft is added as a new draft version.                               | **P: 5**, **D: 4**         |
-| v5 published      | v5 draft     | The existing published version remains. The package v5 is added as a draft.         | **P: 5**, **D: 5**         |
+| Existing App      | Package App  | Import Result                                                                       | Active Versions                                                                                              |
+| ----------------- | ------------ | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| –                 | v5 published | The package v5 is added as a new published version.                                 | Version 5 is the current active published version.                                                           |
+| –                 | v5 draft     | The package v5 is added as a new draft version.                                     | Version 5 is the current active draft version.                                                               |
+| v5 published      | v6 published | The existing v5 is replaced by the package v6 (published).                          | Version 6 from the package is the new active published version.                                              |
+| v5 published      | v6 draft     | The existing v5 remains published. The package v6 becomes the new draft.            | Version 5 remains the active published version. Version 6 from the package becomes the active draft version. |
+| v5 draft          | v6 published | The existing v5 remains as draft. The package v6 becomes the new published version. | Version 5 remains the current active draft version. Version 6 will be the new active published version.      |
+| v5 draft          | v6 draft     | The package v6 replaces the v5 draft as the active draft.                           | Version 6 becomes the new active draft version.                                                              |
+| v5 draft          | v4 draft     | The package v4 draft is made the active draft.                                      | Version 4 from the package is the new active draft version.                                                  |
+| v16–v25 published | v5 published | The package v5 becomes the new active version.                                      | All other versions remain. The version 5 from the package is the new active published version.               |
+| v16–v25 published | v5 draft     | The existing published versions remain. The package v5 is added as a draft.         | All other versions remain. The version 5 from the package is the new active draft version.                   |
+| v5 published      | v5 published | The existing v5 is replaced by the package v5 (same version).                       | Version 5 remains the active published version.                                                              |
+| v5 published      | v4 draft     | The package v4 draft is added as a new draft version.                               | Version 5 remains the active published version. Version 4 from the package is the new active draft version.  |
+| v5 published      | v5 draft     | The package v5 is added as a draft and replaces the existing published version.     | The current active draft version remains version 5.                                                          |
 
 ## Example Scenarios
 
@@ -50,47 +50,31 @@ To better understand how this table applies in practice, here are some typical d
 If your system does not yet contain the app and you import a **package with version 5 (published)**,  
 DataMiner creates a new app with version **5** as the active published version.
 
-➡️ **Result:** P: 5, D: 0
-
 If instead the package contains version **5 (draft)**,  
 the app is added as a **draft**, ready to be published later.
-
-➡️ **Result:** P: 0, D: 5
 
 ### 2. Updating an Existing Published App
 
 Suppose your system already has version **5 (published)** and you import a **package containing version 6 (published)**.  
 The new version **6** replaces version **5** as the active version.
 
-➡️ **Result:** P: 6, D: 0
-
-If the imported version is **6 (draft)**, then version **5** remains live, and version **6** is added as a draft.
-
-➡️ **Result:** P: 5, D: 6
+If the imported version is **6 (draft)**, then version **5** remains the active published version, and version **6** is added as a draft.
 
 ### 3. Updating a Draft App
 
 If you have version **5 (draft)** on your system and import **version 6 (published)**,  
 then version **6** becomes the new active published version, while your existing **draft 5** is preserved.
 
-➡️ **Result:** P: 6, D: 5
-
 If you instead import **version 6 (draft)**,  
 your previous draft (**v5**) is replaced by the new draft (**v6**).
-
-➡️ **Result:** P: untouched, D: 6
 
 ### 4. Older or Mixed Versions
 
 If your system has **multiple published versions (e.g., v16–v25)** and you import a **package with version 5 (published)**,  
 version **5** becomes the new published version.
 
-➡️ **Result:** P: 5, D: 0
-
 If the imported version is **5 (draft)**, your existing published versions remain untouched,  
 and a new **draft version 5** is added.
-
-➡️ **Result:** P: untouched, D: 5
 
 ## Additional Notes
 
