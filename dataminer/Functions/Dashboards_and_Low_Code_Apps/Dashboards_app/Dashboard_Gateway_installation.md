@@ -57,7 +57,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
 > [!IMPORTANT]
 > To be able to use [DataMiner Maps](xref:DashboardGenericMap) and [video thumbnails embedded using a Web component](xref:DashboardWeb), a [reverse proxy](#reverse-proxy) must be configured. This is also needed in case any modules or apps other than the Dashboards app, Low-Code Apps, Monitoring app, Jobs app, and Ticketing app are embedded.
 
-## Dashboard Gateway configuration
+## Configuration
 
 1. On the Dashboard Gateway web server(s), install IIS and the [URL Rewrite](https://www.iis.net/downloads/microsoft/url-rewrite) module.
 
@@ -71,16 +71,20 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 1. From a DataMiner Agent, copy the following folders to the web root folder of the Dashboard Gateway web server:
 
-   - The web application folder(s), e.g. `C:\Skyline DataMiner\Webpages\Dashboard`, `C:\Skyline DataMiner\Webpages\App`, `C:\Skyline DataMiner\Webpages\Monitoring`, `C:\Skyline DataMiner\Webpages\Jobs`, `C:\Skyline DataMiner\Webpages\Ticketing`, etc.
-   - `C:\Skyline DataMiner\Webpages\SharedComponents`
-   - The Authentication app folder, i.e. `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
+    - C:\Skyline DataMiner\Webpages\Dashboard
+    - C:\Skyline DataMiner\Webpages\App
+    - C:\Skyline DataMiner\Webpages\Monitoring
+    - C:\Skyline DataMiner\Webpages\Jobs
+    - C:\Skyline DataMiner\Webpages\Ticketing
+    - C:\Skyline DataMiner\Webpages\SharedComponents
+    - C:\Skyline DataMiner\Webpages\Auth (from DataMiner 10.3.5 onwards)
 
-1. On the Dashboard Gateway web server, edit the *web.config* in the API folder, and specify the following settings:
+2. On the Dashboard Gateway web server, edit the *web.config* in the API folder, and specify the following settings:
 
    - *connectionString*: The hostname or IP address of the DataMiner Agent to which the Dashboard Gateway has to connect.
    - *connectionUser* and *connectionPassword*: The DataMiner user account that the Dashboard Gateway has to use to connect to the DataMiner Agent (username and password).
 
-1. If [external authentication via SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) is used, also configure the URL of the API of the Dashboard Gateway (`https://gateway.mycompany.com/API/`) as an *AssertionConsumerService* in the metadata XML file and on the identity provider.
+3. If [external authentication via SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) is used, also configure the URL of the API of the Dashboard Gateway (`https://gateway.mycompany.com/API/`) as an *AssertionConsumerService* in the metadata XML file and on the identity provider.
 
 ## Reverse proxy
 
@@ -178,3 +182,23 @@ To add a rewrite rule that will proxy any request to the VideoThumbnails web pag
 To test whether the reverse proxy is working properly, enter `https://gateway/maps/maps.aspx?config=yourmapconfig` or `https://gateway/videothumbnails/video.htm` in your browser's address bar.
 
 If the reverse proxy was configured correctly, you should see the login screen of the DataMiner Maps module or the VideoThumbnails web page. It should be possible to log in.
+
+## DataMiner Upgrades
+
+When a DataMiner Agent is upgraded, the Dashboard Gateway must also be updated to ensure both run on the same web version.
+
+1. After the DataMiner upgrade, go to the upgraded DataMiner Agent.
+2. Copy the following folders from the DataMiner Agent to the web root folder of the Dashboard Gateway web server (default: C:\inetpub\wwwroot):
+
+    - C:\Skyline DataMiner\Webpages\Dashboard
+    - C:\Skyline DataMiner\Webpages\App
+    - C:\Skyline DataMiner\Webpages\Monitoring
+    - C:\Skyline DataMiner\Webpages\Jobs
+    - C:\Skyline DataMiner\Webpages\Ticketing
+    - C:\Skyline DataMiner\Webpages\SharedComponents
+    - C:\Skyline DataMiner\Webpages\Auth (from DataMiner 10.3.5 onwards)
+    - C:\Skyline DataMiner\Webpages\API (make sure not to overwrite the existing web.config file. Copy all other files and folders, but keep the existing web.config in place.)
+
+> [!IMPORTANT]
+> Always ensure that the web application folders on the Dashboard Gateway are in sync with the DataMiner Agent.
+> Running different web versions may cause compatibility issues or prevent the web applications from loading correctly.
