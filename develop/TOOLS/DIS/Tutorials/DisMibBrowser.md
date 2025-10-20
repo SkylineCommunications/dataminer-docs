@@ -65,7 +65,7 @@ Once you have downloaded the tutorial files, double-click the *Tutorials-DIS-MIB
 
 ## Step 3: Submit your protocol.xml file
 
-Once you have successfully navigated the steps under [Explore the DIS MIB Browser functionalities](#step-2-explore-the-dis-mib-browser-functionalities), forward your updated *protocol.xml* file to [Team Data Acquisition](mailto:domain.create.data-acquisition@skyline.be).
+Once you have successfully navigated the steps under [Explore the DIS MIB Browser functionalities](#step-2-explore-the-dis-mib-browser-functionalities), forward your updated *protocol.xml* file to [Team Data Acquisition](mailto:support.data-acquisition@skyline.be).
 
 Adhere to the following email format:
 

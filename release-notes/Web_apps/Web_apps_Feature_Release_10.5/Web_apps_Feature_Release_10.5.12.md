@@ -102,8 +102,9 @@ When editing a *Grid* component, up to now, the *Advanced > Grid template* secti
   | Setting | Description |
   |---|---|
   | Fixed column count   | Disable this setting to have all columns displayed, or enable this setting to have the fixed number of columns specified in *Columns* displayed. |
-  | Columns              | In this box, specify the number of columns (from 1 to 100) to be displayed when *Fixed column count* is enabled. |
-  | Stretch to fit width | Enable this setting to have the cells scaled dynamically to fit the grid. |
+  | Columns              | If *Fixed column count* is enabled, then, in this box, specify the number of columns (from 1 to 100) to be displayed. |
+  | Stretch to fit       | Enable this setting to have the cells scaled dynamically to fit the grid. |
+  | Stretch mode         | If *Stretch to fit* is enabled, then set *Stretch mode* to either "Fit" or "Limit":<br>- Fit: Try to fit as many items as possible.<br>- Limit: Enlarge or reduce the items according to the template dimensions. |
   | Horizontal scroll    | Enable this setting if you want a horizontal scrollbar to be displayed.<br>When this setting is disabled, text in the cells will either wrap or be clipped, depending on the other settings. When a fixed number of columns are displayed, text in the cells will not wrap. |
 
 - **Rows**
@@ -112,11 +113,12 @@ When editing a *Grid* component, up to now, the *Advanced > Grid template* secti
   |---|---|
   | Fixed row count   | Disable this setting to have all rows displayed, or enable this setting to have the fixed number of rows specified in *Rows* displayed. |
   | Rows              | In this box, specify the number of rows (from 1 to 100) to be displayed when *Fixed row count* is enabled. |
-  | Stretch to fit width | Enable this setting to have the cells scaled dynamically to fit the grid. |
-  | Horizontal scroll    | Enable this setting if you want a horizontal scrollbar to be displayed.<br>When this setting is disabled, text in the cells will either wrap or be clipped, depending on the other settings. When a fixed number of rows are displayed, text in the cells will not wrap. |
+  | Stretch to fit    | Enable this setting to have the cells scaled dynamically to fit the grid. |
+  | Stretch mode      | If *Stretch to fit* is enabled, then set *Stretch mode* to either "Fit" or "Limit":<br>- Fit: Try to fit as many items as possible.<br>- Limit: Enlarge or reduce the items according to the template dimensions. |
+  | Vertical scroll   | Enable this setting if you want a vertical scrollbar to be displayed.<br>When this setting is disabled, text in the cells will either wrap or be clipped, depending on the other settings. When a fixed number of rows are displayed, text in the cells will not wrap. |
 
 > [!NOTE]
-> By default, newly created grids will have *Stretch to fit width* enabled and *Horizontal scroll* disabled.
+> By default, newly created grids will have *Stretch to fit* enabled and *Stretch mode* set to "Limit" for columns, and *Vertical scroll* enabled for rows.
 
 ### Fixes
 
@@ -204,3 +206,9 @@ On a dashboard gateway setup, certain calls would not work because of an incorre
   - ObserveDashboardChanges
 
 Also, the ShareDashboard call did incorrectly not require users to have the *General > Live sharing > Share* permission.
+
+#### Dashboards/Low-Code Apps - Table component: 'Is selected' template override would only be applied correctly for the first 50 rows [ID 43937]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, in a *Table* component, the *Is selected* template override would only be applied correctly for the first 50 rows.

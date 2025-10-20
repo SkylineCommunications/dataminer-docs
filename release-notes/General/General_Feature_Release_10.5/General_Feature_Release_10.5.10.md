@@ -263,7 +263,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 - DataMiner CloudGateway 2.17.11
 
-The CloudGateway DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, they will not be installed.
+The CloudGateway DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 

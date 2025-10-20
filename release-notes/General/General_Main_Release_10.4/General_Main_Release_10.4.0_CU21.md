@@ -37,13 +37,16 @@ From now on, the `Engine` class exposes the public property `ScriptName`.
 
 This means that, in an Automation script, it will now be possible to retrieve the name of that script.
 
-#### Email messages can now also be sent if recipients are only specified in the CC and/or BCC fields [ID 43844]
+#### PDF reports configured in the Dashboards app can now also be sent if recipients are only specified in the CC and/or BCC fields [ID 43844]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, an email message could only be sent if the recipients were specified in the *To* field.
+Up to now, an PDF report configured in the Dashboards app could only be sent if recipients were specified in the *To* field.
 
-From now on, it will also be possible to send email messages that only have recipients specified in the *CC* and/or *BCC* fields.
+From now on, it will also be possible to send PDF reports if recipients are only specified in the *CC* and/or *BCC* fields.
+
+> [!NOTE]
+> Currently, PDF reports configured in DataMiner Cube still require recipients to be specified in the *To* field.
 
 #### BPA test 'Cube CRL Freeze': Enhanced performance [ID 43854]
 
@@ -66,6 +69,12 @@ This message has now been replaced by the following one:
 *"WARNING! Upgrade package with ID [guid] no longer exists"*
 
 ### Fixes
+
+#### Parameter or DCF information would become unavailable to remotely hosted elements after a DataMiner connection had been re-established [ID 43765]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+After a DataMiner connection had been re-established (due to e.g. a network issue, a failover switch, etc.), in some rare cases, an issue could occur that would cause parameter or DCF information to be unavailable to remotely hosted elements.
 
 #### SLNet would wait too long before closing a connection [ID 43851]
 

@@ -56,13 +56,16 @@ From now on, the `Engine` class exposes the public property `ScriptName`.
 
 This means that, in an Automation script, it will now be possible to retrieve the name of that script.
 
-#### Email messages can now also be sent if recipients are only specified in the CC and/or BCC fields [ID 43844]
+#### PDF reports configured in the Dashboards app can now also be sent if recipients are only specified in the CC and/or BCC fields [ID 43844]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, an email message could only be sent if the recipients were specified in the *To* field.
+Up to now, an PDF report configured in the Dashboards app could only be sent if recipients were specified in the *To* field.
 
-From now on, it will also be possible to send email messages that only have recipients specified in the *CC* and/or *BCC* fields.
+From now on, it will also be possible to send PDF reports if recipients are only specified in the *CC* and/or *BCC* fields.
+
+> [!NOTE]
+> Currently, PDF reports configured in DataMiner Cube still require recipients to be specified in the *To* field.
 
 #### BPA test 'Cube CRL Freeze': Enhanced performance [ID 43854]
 
@@ -92,7 +95,19 @@ This message has now been replaced by the following one:
 
 *"WARNING! Upgrade package with ID [guid] no longer exists"*
 
+#### NATSMigration tool will now log clearer HTTP errors when it is not able to connect to BrokerGateway [ID 43931]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+When the *NATSMigration* tool is not able to connect to BrokerGateway, it will now add clearer HTTP errors to the error log.
+
 ### Fixes
+
+#### Parameter or DCF information would become unavailable to remotely hosted elements after a DataMiner connection had been re-established [ID 43765]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+After a DataMiner connection had been re-established (due to e.g. a network issue, a failover switch, etc.), in some rare cases, an issue could occur that would cause parameter or DCF information to be unavailable to remotely hosted elements.
 
 #### MessageBroker client could get stuck while trying to fetch information from BrokerGateway [ID 43832]
 
@@ -105,6 +120,12 @@ When, on systems using the BrokerGateway-managed NATS solution, BrokerGateway is
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 In some rare cases, SLNet would incorrectly wait for 2 hours before closing a connection. As a result, SLNet and SLDataMiner would keep a large number of unused connections in memory for too long.
+
+#### Events would be generated with incorrect hosting agent information [ID 43862]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+When elements were swarmed or migrated via a DELT package, in some cases, events would not be generated with the correct hosting agent information.
 
 #### BrokerGateway would incorrectly be allowed to make automatic changes to the appsettings.runtime.json file when HasManualConfig was set to true [ID 43893]
 

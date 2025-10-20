@@ -134,6 +134,12 @@ When DataMiner Cube performs a web request or when it displays a web browser con
 
 From now on, when working in the *Credentials library*, you will be able to horizontally scroll the details pane. This will e.g. make it easier to view very long passwords.
 
+#### Automation, Correlation, and Scheduler: PDF report configuration window has been enlarged [ID 43898]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+In the Automation, Correlation, and Scheduler modules, you can generate a report based on a dashboard. When you do so, you can click the *Configure* button to open a window where you can configure the report. The size of this configuration window has now been changed from 800x600 pixels to 1200x900 pixels.
+
 #### 'Automatic incident tracking' renamed to 'Alarm grouping' [ID 43903]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->

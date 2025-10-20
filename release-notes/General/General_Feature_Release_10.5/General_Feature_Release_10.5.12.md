@@ -160,13 +160,25 @@ When an outdated DLL file is found, the migration will be aborted. For the migra
 
 From now on, OPC communication should no longer be used in DataMiner connectors. Instead, QActions should be used, for example like in the [Generic OPC Data Access](https://catalog.dataminer.services/details/f2642ea9-9eaa-42f3-880e-816470b06a61) connector.
 
-#### Email messages can now also be sent if recipients are only specified in the CC and/or BCC fields [ID 43844]
+#### PDF reports configured in the Dashboards app can now also be sent if recipients are only specified in the CC and/or BCC fields [ID 43844]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, an email message could only be sent if the recipients were specified in the *To* field.
+Up to now, an PDF report configured in the Dashboards app could only be sent if recipients were specified in the *To* field.
 
-From now on, it will also be possible to send email messages that only have recipients specified in the *CC* and/or *BCC* fields.
+From now on, it will also be possible to send PDF reports if recipients are only specified in the *CC* and/or *BCC* fields.
+
+> [!NOTE]
+> Currently, PDF reports configured in DataMiner Cube still require recipients to be specified in the *To* field.
+
+#### Relational anomaly detection: New API message to retrieve all relational anomalies within a given time frame [ID 43853]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+From now on, the new `GetAllRelationalAnomaliesMessage` will allow you to retrieve all relational anomalies within a given time frame, regardless of the RAD parameter group or parameter they were detected on.
+
+> [!NOTE]
+> This message will only return anomalies detected on parameters to which the user has access.
 
 #### BPA test 'Cube CRL Freeze': Enhanced performance [ID 43854]
 
@@ -175,6 +187,20 @@ From now on, it will also be possible to send email messages that only have reci
 Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
+
+#### DxMs upgraded [ID 43866] [ID 43950]
+
+<!-- RN 43866: MR 10.6.0 - FR 10.5.12 -->
+<!-- RN 43950: MR 10.6.0 - FR 10.5.12 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner CloudGateway 2.17.14
+- DataMiner DataAPI 1.4.0
+
+The CloudGateway DxM and the DataAPI DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, they will not be installed.
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### SLDMS: Broadcast event DMS_INVALIDATE_HOSTING_AGENT_CACHE has been removed [ID 43896]
 
@@ -215,17 +241,19 @@ This message has now been replaced by the following one:
 
 *"WARNING! Upgrade package with ID [guid] no longer exists"*
 
-#### DxMs upgraded [ID 43950]
+#### NATSMigration tool will now log clearer HTTP errors when it is not able to connect to BrokerGateway [ID 43931]
 
-<!-- RN 43950: MR 10.6.0 - FR 10.5.12 -->
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
 
-The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
-
-- DataMiner CloudGateway 2.17.14
-
-For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+When the *NATSMigration* tool is not able to connect to BrokerGateway, it will now add clearer HTTP errors to the error log.
 
 ### Fixes
+
+#### Parameter or DCF information would become unavailable to remotely hosted elements after a DataMiner connection had been re-established [ID 43765]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+After a DataMiner connection had been re-established (due to e.g. a network issue, a failover switch, etc.), in some rare cases, an issue could occur that would cause parameter or DCF information to be unavailable to remotely hosted elements.
 
 #### Alerter would incorrectly require .NET Framework 2.0 [ID 43787]
 
@@ -262,6 +290,12 @@ When, on systems using the BrokerGateway-managed NATS solution, BrokerGateway is
 
 In some rare cases, SLNet would incorrectly wait for 2 hours before closing a connection. As a result, SLNet and SLDataMiner would keep a large number of unused connections in memory for too long.
 
+#### Events would be generated with incorrect hosting agent information [ID 43862]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+When elements were swarmed or migrated via a DELT package, in some cases, events would not be generated with the correct hosting agent information.
+
 #### Swarming: Specific elements could not be swarmed to a specific DMA until that DMA had been restarted [ID 43883]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
@@ -282,3 +316,12 @@ From now on, when the `HasManualConfig` setting is set to true, BrokerGateway wi
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 The timeout of queries against a Cassandra database was set incorrectly. This timeout has now been set to 10 minutes.
+
+#### Problem with temporary deadlocks in SLNet while DataMiner Agents were connecting or reconnecting [ID 43936]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+<!-- Not added in MR 10.6.0 -->
+
+Up to now, a temporary deadlock could occur in SLNet while DataMiner Agents were connecting or reconnecting to each other.
+
+In some cases, this could lead to "thread problem" alarms appearing and then clearing later on.
