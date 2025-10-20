@@ -90,6 +90,5 @@ Only the **last 15 versions** are stored in the file system.
 
 ### See Also
 
-- [Deploying a Catalog Item to Your System](../catalog/deploying-a-catalog-item.md)
-- [Viewing Information on Deployments](../admin/viewing-deployments.md)
-- [DataMiner Documentation Home](https://docs.dataminer.services/dataminer/DataMiner_index.html)
+- [Deploying a Catalog Item to Your System](xref:Deploying_a_catalog_item)
+- [Viewing information on deployments](xref:Viewing_info_on_deployments)

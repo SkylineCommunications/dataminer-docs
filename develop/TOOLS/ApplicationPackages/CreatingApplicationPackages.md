@@ -63,7 +63,7 @@ The packager tool also allows the creation of a protocol package (.dmprotocol) f
 
 You can include an application in the package. When you do this, the latest version of that application is included. The version history inside the application will be cleaned up and will only include that version.
 
-When this package is imported into the DMA, the resulting version of the application will be the one defined in the package, refer to [Deploy Low Code App from catalog](#Deploy_LCA_from_catalog).
+When this package is imported into the DMA, the resulting version of the application will be the one defined in the package, refer to [Deploy Low Code App from catalog](xref:Deploy_Low_Code_App_from_catalog).
 
 ## Low-Code App Editor
 
