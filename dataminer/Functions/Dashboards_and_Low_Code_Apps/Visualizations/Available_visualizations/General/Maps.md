@@ -28,7 +28,7 @@ With this component, you can:
 
 ## Supported data types
 
-The maps component is used to display the results of queries in a map format. It should therefore **always be configured with [query data input](xref:Query_Data)**.
+The maps component is used to display the results of queries as geospatial data on top of a map. It should therefore **always be configured with [query data input](xref:Query_Data)**.
 
 Each row in a query corresponds to a marker or line on the map.
 
