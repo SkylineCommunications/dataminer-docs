@@ -61,6 +61,7 @@ From DataMiner 10.1.11/10.2.0 onwards, you can also run the tool via command lin
 | `-f=VALUE`<br>`--folder=VALUE` | Determines the folder where the logging should be saved. Default: `C:\Skyline_Data\` |
 | `-d=VALUE`<br>`--dumps=VALUE` | Allows you to specify the process names or IDs for which dumps should be taken. "VALUE" should be a comma-separated list of names or IDs. |
 | `-m=VALUE`<br>`--memory=VALUE` | If this option is added, an additional dump will be taken after the process reaches the amount of memory (in MB) specified as "VALUE". |
+| `-b=VALUE`<br>`--bpas=VALUE` | If "VALUE" is set to true (default), BPAs are executed before log collection. If set to false, they are not executed. Available as of 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 |
 
 For example:
 
