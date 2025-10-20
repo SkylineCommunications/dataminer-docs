@@ -286,8 +286,8 @@ By default, the template of a timeline component includes the following **pre-co
 | Layer | Type | Description |
 |--|--|--|
 | ![Text layer](~/dataminer/images/Timeline_Text_Layer.png) | Text | Displays the value from the first column in the data source. |
-| ![Rectangle layer 1](~/dataminer/images/Timeline_Rectangle_Layer1.png) | Rectangle | Acts as the background of each timeline item. Default color is `#F6F6F6`, with conditional formatting for hover (`#E8E8E9`) and selection (`#D5DBE9`). |
-| ![Rectangle layer 2](~/dataminer/images/Timeline_Rectangle_Layer2.png) | Rectangle | Acts as a visual border by being slightly larger than the background layer. Default color is `#D3D4D5`, with conditional formatting for selection (`#B8BABC`). |
+| ![Rectangle layer 1](~/dataminer/images/Timeline_Rectangle_Layer1.png) | Rectangle | Acts as the background of each timeline item, with conditional formatting for hover and selection (`#D5DBE9`). |
+| ![Rectangle layer 2](~/dataminer/images/Timeline_Rectangle_Layer2.png) | Rectangle | Acts as a visual border by being slightly larger than the background layer, with conditional formatting for selection. |
 
 This default template (available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->) ensures that a timeline item is highlighted when hovered over and stands out when selected, with a light-blue background and a blue border.
 
