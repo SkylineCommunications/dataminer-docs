@@ -14,7 +14,7 @@ With this component, you can:
 
 - Track both real-time and [historical location data](#using-the-map-for-history-tracking) to monitor movements or analyze trends.
 
-- [Select markers or lines](#using-the-map-as-a-selector) on the map to view more details.
+- [Select markers or lines](#using-the-map-as-a-selector) on the map to access more details.
 
 - See your data in a way that makes sense, thanks to a range of [customization options](#customizing-markers).
 
@@ -101,7 +101,7 @@ To provide additional context or details on a map without cluttering the base vi
 
 1. Configure an on-click action:
 
-   1. Click the *Configure actions* button next to *On click*.
+   1. In the *Settings* pane, click the *Configure actions* button next to *On click*.
 
    1. From the dropdown list, select *Execute component action*.
 
@@ -117,7 +117,7 @@ To provide additional context or details on a map without cluttering the base vi
 
 ## Using the map as a selector
 
-You can use a maps component as a dynamic selector, i.e. a component whose selection **determines behavior or data elsewhere in your dashboard or app**. A common use case is controlling what is displayed in another component, but selected values can also serve as input for scripts, queries, or conditional logic.
+You can use a maps component as a dynamic selector, i.e. a component whose selection **determines behavior or data elsewhere in your dashboard or app**. A common use case is to display more information about a marker or line on the map when it is selected.
 
 When you select a marker or line on the map, the selected data (*All available data* > *Components* > *Map* > *Selected markers* / *Selected lines* > *Tables*) becomes automatically available for use in other components.
 
@@ -137,7 +137,7 @@ You can follow the movement or status of assets over time, analyze patterns, and
 ![History tracking](~/dataminer/images/Maps_History_Tracking.png)<br>*Maps component in DataMiner 10.5.3*
 
 > [!TIP]
-> For step-by-step instructions, see the [*Visualizing the Starlink location history in DataMiner* tutorial](xref:Tutorial_Visualizing_Starlink_Location_History_in_DataMiner). This tutorial shows how to use the *Starlink Enterprise* solution to track historical data, such as following a cruise ship's movements over time.
+> For step-by-step instructions, see [*Visualizing the Starlink location history in DataMiner*](xref:Tutorial_Visualizing_Starlink_Location_History_in_DataMiner). This tutorial shows how to use the *Starlink Enterprise* solution to track historical data, such as following a cruise ship's movements over time.
 
 ## Adding data
 
@@ -172,7 +172,7 @@ Additionally, the following *Filtering & Highlighting* options are also availabl
 
 #### Layer settings
 
-The maps component supports showing multiple layers. Each layer determines how you visualize geospatial data on top of the base map. The following layer options are available:
+The maps component supports showing multiple layers. Each layer determines how you visualize geospatial data on top of the base map. In the *Layout* pane, the following layer options are available in the *Layer settings* section:
 
 | Subsection | Option | Description | Available for |
 |--|--|--|--|
@@ -196,6 +196,8 @@ The maps component supports showing multiple layers. Each layer determines how y
 > From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards, lines can also be colored based on the [conditional coloring](xref:DashboardQueryFilter#conditional-coloring) of a linked query filter. This will override the color configuration in the layer settings of the maps component. Note that if the query filter contains multiple color conditions, only the first color condition will be applied, as a line can only have one color.<!-- RN 43617 -->
 
 #### Map settings
+
+In the *Layout* pane, the following settings in the *Map settings* section determine the default view and behavior of the map within the component:
 
 | Subsection | Option | Description |
 |--|--|--|
@@ -223,7 +225,7 @@ To **visually distinguish markers and lines that match your filter criteria from
 
 1. In the *Data* pane, navigate to *All available data* > *Components* > *Query filter #*, and drag the *Query columns* data item onto your maps component.
 
-   In read mode, you can now use the query filter component to filter and refine the data displayed in the grid component. Items that do not meet the specified criteria will be shown with lowered opacity.
+   In read mode, you can now use the query filter component to filter and refine the data displayed in the maps component. Items that do not meet the specified criteria will be shown with lowered opacity.
 
 #### Customizing markers
 
@@ -271,15 +273,17 @@ In the *Settings* pane for this component, you can customize its behavior to sui
 
 ## Adding actions to a map
 
-If you add a maps component to a low-code app, you can configure actions that are executed when a line on the map is clicked.
+When you add a maps component to a low-code app, you can configure actions that are executed when a marker or line on the map is clicked.
 
-To configure actions:
+To configure actions for a line click:
 
 1. In the *Layout* pane, expand the *Layer settings* section.
 
 1. Click *Configure actions* next to *On line click*.
 
 1. Configure any of the available actions, as detailed under [Configuring app events](xref:LowCodeApps_event_config).
+
+Actions triggered by clicking a marker on the map can be configured in the [Template Editor](xref:Template_Editor#accessing-the-template-editor). These are linked to the on-click event of a shape in the marker template.
 
 ### Maps component actions
 
@@ -299,19 +303,19 @@ For the maps component, the following component actions are available:
 
 - *Overlay actions*: Using app actions, different types of overlays can be shown on the map. The supported overlay types are .kml, .kmz and .geoJSON. The source of the overlay needs to be specified in an input (which can also be received using the *Link to* option), and it can be either a local source, specified by a relative path in the `C:\Skyline DataMiner\Maps` folder, or a web source, specified by a public URL that hosts the overlay. The following overlay actions are available:
 
-  - *Open overlay*
+  - *Open overlay*: This action displays a specified overlay on the map.
 
-  - *Close overlay*
+  - *Close overlay*: This action removes a specified overlay from the map.
 
-  - *Toggle overlay*
+  - *Toggle overlay*: This action opens a specified overlay if it is currently closed, or closes it if it is currently open.
 
-  - *Close all overlays*
+  - *Close all overlays*: This action removes all overlays currently displayed on the map.
 
   > [!NOTE]
   > While local sources are more secure and not openly accessible like public sources on the internet, you do have to make sure the route to the *GetSecureFile* API method (`https://DMA/API/v1/GetSecureFile.aspx`) is openly accessible in order to use the local overlay files.
 
   > [!TIP]
-  > For more information about the different types of overlays, see [Layer types](xref:Layer_types#layers-of-sourcetype-overlay)
+  > For more information about the different types of overlays, see [Layer types](xref:Layer_types#layers-of-sourcetype-overlay).
 
 #### Example use case: Pan and zoom the map via grid selection
 
@@ -327,6 +331,6 @@ This setup allows users to quickly navigate to the relevant location on the map.
 
 ## Enabling the component in soft launch
 
-From DataMiner 10.3.2 onwards, the maps component is available in soft launch, if the soft-launch option *ReportsAndDashboardsGQIMaps* is enabled. For more information, see [Soft-launch option](xref:SoftLaunchOptions).
+From DataMiner 10.3.2 onwards, the maps component is available in soft launch, if the soft-launch option *ReportsAndDashboardsGQIMaps* is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
 If you use the preview version of the maps component, its functionality may be different from what is described on this page.
