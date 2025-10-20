@@ -24,7 +24,7 @@ With this component, you can:
 
 - To display the map, the machine running the browser must have internet access.
 
-- To use the maps component, the host servers for DataMiner Maps have to be configured in the file `C:\Skyline DataMiner\Maps\ServerConfig.xml`. If this file does not exist, it will be created automatically when you use a maps component for the first time. To change the configuration, see [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
+- To use the maps component, a valid maps configuration is required. See [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
 
 ## Supported data types
 
