@@ -10,6 +10,8 @@ The Site Manager module is available as a DxM ([DataMiner Extension Module](xref
 
 Site Manager requires DataMiner 10.5.10/10.6.0 or higher. See [SiteManager DxM installation](xref:SiteManagerGettingStarted#sitemanager-dxm-installation).
 
+It can only be deployed on DataMiner Agents [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud). On DaaS systems, which is where Site Manager is primarily intended to be used, this prerequisite is automatically met.
+
 ## Supported connection types and limitations
 
 Site Manager can be used to set up communication tunnels for the following element connection types:
