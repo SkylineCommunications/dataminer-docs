@@ -12,7 +12,7 @@ This means that the tunnel could not be set up. This could be because of several
 
 - The provided IP address or hostname does not match that of an exposed data source on the specified site as specified during [on-premises setup](xref:SiteManagerGettingStarted#on-premises-setup).
 - When the data source was exposed during [on-premises setup](xref:SiteManagerGettingStarted#on-premises-setup), only one of the two required zrok commands were executed.
-- The Site Manager DxM is not running.
+- The SiteManager DxM is not running.
 - The zrok Agent service is not running.
 - The zrok controller is not running.
 
@@ -40,7 +40,7 @@ This log file is also included in a Log Collector package.
 
 ### SLDataMiner log file
 
-In DataMiner, the SLDataMiner process is responsible for communication with the Site Manager DxM.
+In DataMiner, the SLDataMiner process is responsible for communication with the SiteManager DxM.
 
 In case issues occur, the SLDataMiner log file could provide useful information regarding the cause of the issue.
 

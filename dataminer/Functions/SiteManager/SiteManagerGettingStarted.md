@@ -4,16 +4,16 @@ uid: SiteManagerGettingStarted
 
 # Getting started with Site Manager
 
-## Site Manager DxM installation
+## SiteManager DxM installation
 
-The Site Manager DxM must run on the same machine as the DataMiner Agent from which you want to connect to remote data sources. It can be used with any DataMiner System that uses version 10.5.10/10.6.0 or higher. You can [deploy it from the Admin app](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+The SiteManager DxM must run on the same machine as the DataMiner Agent from which you want to connect to remote data sources. It can be used with any DataMiner System that uses version 10.5.10/10.6.0 or higher. You can [deploy it from the Admin app](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
-The Site Manager DxM is **by default included in the DaaS image of DataMiner 10.5.10**. If your DaaS system is using an older DataMiner version, you will need to [upgrade DataMiner](xref:Upgrading_a_DataMiner_Agent) and [deploy the Site Manager DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+The DxM is **by default included in the DaaS image of DataMiner 10.5.10**. If your DaaS system is using an older DataMiner version, you will need to [upgrade DataMiner](xref:Upgrading_a_DataMiner_Agent) and [deploy the SiteManager DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
-When the Site Manager DxM has been installed, in the Windows services overview, you should see two services:
+When the DxM has been installed, in the Windows services overview, you should see two services:
 
-- *DataMiner SiteManager*: This is the Site Manager DxM that interacts with DataMiner and the zrok-agent process
-- *zrok-agent*: This is the zrok Agent service with which the Site Manager DxM communicates for creating the communication tunnels
+- *DataMiner SiteManager*: This is the SiteManager DxM that interacts with DataMiner and the *zrok-agent* process.
+- *zrok-agent*: This is the zrok Agent service with which the SiteManager DxM communicates for creating the communication tunnels.
 
 ## On-premises setup
 
@@ -81,8 +81,8 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
    >
    > - The Linux distribution must be using `systemd` as the service manager.
    > - The script must be run via sudo.
-   > - The machine where you run the script does not have to be the same as the one where the data sources are running.
-   > - Updating a site name is not straightforward. To update a site name, a reinstallation needs to be performed. Also, if data sources have been configured to set up a connection with this site, the configuration of these data sources will also need to be updated.
+   > - The machine where you install this script must be able to access the data sources you want to expose. It does not have to be the machine where the data sources are running.
+   > - Updating a site name is not straightforward. To update a site name, you will need to uninstall (as mentioned below) and then run the script again. Also, if data sources have been configured to set up a connection with this site, the configuration of these data sources will also need to be updated.
 
    To uninstall, you can use the following command:
 
@@ -165,9 +165,9 @@ Once a data source has been shared, you are ready to connect to it from a DaaS s
 
 1. In DataMiner Cube, [add a new element](xref:Adding_elements).
 
-1. When you configure an element connection for the element that should communicate with a data source on a remote site (through a secure tunnel), select the site in *Site* dropdown.
+1. When you configure an element connection for the element that should communicate with a data source on a remote site (through a secure tunnel), select the site in the *Site* dropdown.
 
-   The site name that appears in the *Site* dropdown corresponds with the description given during execution of the on-premises installation script.
+   The site name that appears in the *Site* dropdown corresponds with the description specified during execution of the [on-premises installation script](#on-premises-setup).
 
 1. Fill in the IP or hostname of the exposed data source.
 
