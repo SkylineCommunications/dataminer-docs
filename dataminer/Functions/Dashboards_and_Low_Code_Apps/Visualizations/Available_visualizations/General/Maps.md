@@ -109,7 +109,7 @@ To provide additional context or details on a map without cluttering the base vi
 
       - *I want to*: `Maps, Toggle overlay`
 
-      - *Which form?*: Select the desired maps component.
+      - *Which map?*: Select the desired maps component.
 
       - *Source*: Link to a .kml, .kmz, or .json file. The coordinates can also be dynamic (using the *Link to* option).
 
