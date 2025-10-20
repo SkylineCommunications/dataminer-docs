@@ -34,7 +34,7 @@ Each row in a query corresponds to a marker or line on the map.
 
 ## Interacting with the maps component
 
-In read mode, you can interact with the maps component in several ways to explore and customize the map view.
+You can interact with the maps component in several ways to explore and customize the map view.
 
 You can [zoom](#zooming) in or out to adjust the level of detail, [pan](#panning) across the map to focus on different areas, [select which layers are shown](#selecting-which-layers-are-shown) to control the information visible on the map, and [change the map type](#changing-the-map-type) to switch between different map styles.
 
