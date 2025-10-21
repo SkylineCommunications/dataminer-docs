@@ -65,8 +65,6 @@ items:
     topicUid: Looking_up_an_item_in_the_catalog
   - name: Deploying a Catalog item to your system
     topicUid: Deploying_a_catalog_item
-  - name: Deploying a Low Code App from catalog package
-    topicUid: Deploy_Low_Code_App_from_catalog
   - name: Registering a Catalog item
     topicUid: Register_Catalog_Item
   - name: Changing the publishing state of a Catalog item
