@@ -126,7 +126,7 @@ When editing a *Grid* component, up to now, the *Advanced > Grid template* secti
 
 From DataMiner 10.3.11/10.3.0 [CU8] onwards, whenever you upgrade a DMA or install a DataMiner web upgrade, an automatic backup of all existing dashboards and low-code apps on the system is generated and stored in `C:\Skyline DataMiner\System Cache\Web\Backups`.
 
-Up to now, that backup would include all app versions. From now on, it will only include the versions that were last published as well as the draft versions. The version history will be left untouched.
+Up to now, that backup would include all app versions. From now on, it will only include up to two versions per app: the last version that was published and the most recent draft. The version history will be left untouched.
 
 > [!NOTE]
 >
