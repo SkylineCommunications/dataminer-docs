@@ -36,7 +36,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
 - The Dashboard Gateway web server(s) should be able to communicate with a DMA using both a .NET Remoting connection and an HTTP(S) connection (using port 80 or 443, depending on the HTTP(S) configuration of the DataMiner Agent)
 
 > [!IMPORTANT]
-> Always make sure your Dashboard Gateway's web application folders are in sync with the DataMiner server. This means that when you upgrade your DataMiner software, you must make sure the folders for the web apps are also up to date.
+> Always make sure your Dashboard Gateway's web application folders are in sync with the DataMiner server. This means that when you upgrade your DataMiner software, you must make sure the folders for the web apps are also up to date. See [DataMiner upgrades](#dataminer-upgrades)
 
 ## Limitations
 
@@ -71,20 +71,20 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 1. From a DataMiner Agent, copy the following folders to the web root folder of the Dashboard Gateway web server:
 
-    - C:\Skyline DataMiner\Webpages\Dashboard
-    - C:\Skyline DataMiner\Webpages\App
-    - C:\Skyline DataMiner\Webpages\Monitoring
-    - C:\Skyline DataMiner\Webpages\Jobs
-    - C:\Skyline DataMiner\Webpages\Ticketing
-    - C:\Skyline DataMiner\Webpages\SharedComponents
-    - C:\Skyline DataMiner\Webpages\Auth (from DataMiner 10.3.5 onwards)
+    - `C:\Skyline DataMiner\Webpages\Dashboard`
+    - `C:\Skyline DataMiner\Webpages\App`
+    - `C:\Skyline DataMiner\Webpages\Monitoring`
+    - `C:\Skyline DataMiner\Webpages\Jobs`
+    - `C:\Skyline DataMiner\Webpages\Ticketing`
+    - `C:\Skyline DataMiner\Webpages\SharedComponents`
+    - `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
 
-2. On the Dashboard Gateway web server, edit the *web.config* in the API folder, and specify the following settings:
+1. On the Dashboard Gateway web server, edit the *web.config* in the API folder, and specify the following settings:
 
    - *connectionString*: The hostname or IP address of the DataMiner Agent to which the Dashboard Gateway has to connect.
    - *connectionUser* and *connectionPassword*: The DataMiner user account that the Dashboard Gateway has to use to connect to the DataMiner Agent (username and password).
 
-3. If [external authentication via SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) is used, also configure the URL of the API of the Dashboard Gateway (`https://gateway.mycompany.com/API/`) as an *AssertionConsumerService* in the metadata XML file and on the identity provider.
+1. If [external authentication via SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) is used, also configure the URL of the API of the Dashboard Gateway (`https://gateway.mycompany.com/API/`) as an *AssertionConsumerService* in the metadata XML file and on the identity provider.
 
 ## Reverse proxy
 
@@ -105,7 +105,7 @@ A reverse proxy should be used to give access to these web pages on the DMA via 
 
 - [Application Request Routing](https://www.iis.net/downloads/microsoft/application-request-routing)
 
-### Configuration
+### Reverse proxy configuration
 
 #### Enabling reverse proxy functionality
 
@@ -183,22 +183,20 @@ To test whether the reverse proxy is working properly, enter `https://gateway/ma
 
 If the reverse proxy was configured correctly, you should see the login screen of the DataMiner Maps module or the VideoThumbnails web page. It should be possible to log in.
 
-## DataMiner Upgrades
+## DataMiner upgrades
 
-When a DataMiner Agent is upgraded, the Dashboard Gateway must also be updated to ensure both run on the same web version.
+When a DataMiner Agent is upgraded, the Dashboard Gateway must also be updated to make sure both use the same web version.
 
-1. After the DataMiner upgrade, go to the upgraded DataMiner Agent.
-2. Copy the following folders from the DataMiner Agent to the web root folder of the Dashboard Gateway web server (default: C:\inetpub\wwwroot):
+To do so, after the DataMiner upgrade, copy the following folders from the DataMiner Agent to the web root folder of the Dashboard Gateway web server (default: `C:\inetpub\wwwroot`):
 
-    - C:\Skyline DataMiner\Webpages\Dashboard
-    - C:\Skyline DataMiner\Webpages\App
-    - C:\Skyline DataMiner\Webpages\Monitoring
-    - C:\Skyline DataMiner\Webpages\Jobs
-    - C:\Skyline DataMiner\Webpages\Ticketing
-    - C:\Skyline DataMiner\Webpages\SharedComponents
-    - C:\Skyline DataMiner\Webpages\Auth (from DataMiner 10.3.5 onwards)
-    - C:\Skyline DataMiner\Webpages\API (make sure not to overwrite the existing web.config file. Copy all other files and folders, but keep the existing web.config in place.)
+- `C:\Skyline DataMiner\Webpages\Dashboard`
+- `C:\Skyline DataMiner\Webpages\App`
+- `C:\Skyline DataMiner\Webpages\Monitoring`
+- `C:\Skyline DataMiner\Webpages\Jobs`
+- `C:\Skyline DataMiner\Webpages\Ticketing`
+- `C:\Skyline DataMiner\Webpages\SharedComponents`
+- `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
+- `C:\Skyline DataMiner\Webpages\API` (make sure not to overwrite the existing web.config file. Copy all other files and folders, but keep the existing web.config in place.)
 
 > [!IMPORTANT]
-> Always ensure that the web application folders on the Dashboard Gateway are in sync with the DataMiner Agent.
-> Running different web versions may cause compatibility issues or prevent the web applications from loading correctly.
+> Always ensure that the web application folders on the Dashboard Gateway are in sync with the DataMiner Agent. Running different web versions may cause compatibility issues or prevent the web applications from loading correctly.
