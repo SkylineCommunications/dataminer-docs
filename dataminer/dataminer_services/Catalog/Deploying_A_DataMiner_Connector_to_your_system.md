@@ -22,7 +22,9 @@ To deploy an item from the Catalog (e.g. a connector or package) to your DataMin
 - Your dataminer.services account is linked to a DataMiner user account. See [Linking your DataMiner account to your dataminer.services account](xref:Linking_your_DataMiner_and_dataminer_services_account).
 
 > [!NOTE]
-> From DataMiner 10.4.10/10.5.0 onwards<!--RN 40291-->, when you install a connector for the first time by deploying it from the Catalog, it will automatically be promoted to the production version. However, when you later deploy a new version of the same connector and want it to be set as the production version, you will need to manually [promote this protocol version](xref:Promoting_a_protocol_version_to_production_version). Prior to DataMiner 10.4.10/10.5.0, deploying a connector from the Catalog will never change the production version for that connector in the DataMiner System.
+>
+> - From DataMiner 10.4.10/10.5.0 onwards<!--RN 40291-->, when you install a connector for the first time by deploying it from the Catalog, it will automatically be promoted to the production version. However, when you later deploy a new version of the same connector and want it to be set as the production version, you will need to manually [promote this protocol version](xref:Promoting_a_protocol_version_to_production_version). Prior to DataMiner 10.4.10/10.5.0, deploying a connector from the Catalog will never change the production version for that connector in the DataMiner System.
+> - When you deploy a low-code app, the version in the package becomes the active app version. For detailed information, see [Low-code app deployment behavior](#low-code-app-deployment-behavior).
 
 > [!TIP]
 > In the Admin app, you can get an overview of all the deployments that have been done to a DMS. See [Viewing information on deployments](xref:Viewing_info_on_deployments).
