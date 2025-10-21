@@ -9,6 +9,8 @@ uid: KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout
 - Main Release versions from DataMiner 10.3.0 [CU6] onwards
 - Feature Release versions from DataMiner 10.3.6 onwards
 
+This issue will only occur with self-managed storage setups.
+
 ## Cause
 
 The Cassandra query timeout was implemented in seconds instead of milliseconds during a code change, causing an excessively long timeout time, which can in turn cause an SLDataGateway memory leak.
