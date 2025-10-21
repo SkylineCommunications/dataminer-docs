@@ -193,3 +193,9 @@ In some cases, a request from DataMiner Cube related to a swarmed element or an 
 For example, when an element card showing a table with context menus was open while the element in question was swarmed to another DMA, after the swarming operation, it would no longer be possible to select items from those context menus.
 
 Also, it would not be possible to rename swarmed elements or elements migrated via a DELT package from the element list on a view card.
+
+#### Cube would incorrectly attempt to retrieve Catalog package information for automation scripts [ID 43872]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When connected to a system without an indexing database, up to now, DataMiner Cube would incorrectly attempt to retrieve Catalog package information for automation scripts. From now on, it will only do so when connected to a system with an indexing database.
