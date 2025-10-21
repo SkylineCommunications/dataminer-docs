@@ -12,10 +12,13 @@ From DataMiner 10.5.11/10.6.0 onwards, an app is available where you can configu
 
 ## Accessing the DOM definition-level security app
 
-If you have the required user permission ([Modules > System configuration > Object Manager > Module settings](xref:DataMiner_user_permissions#modules--system-configuration--object-manager--module-settings)), you can access this app as follows:
+If you have the required user permission ([Modules > System configuration > Object Manager > Module settings](xref:DataMiner_user_permissions#modules--system-configuration--object-manager--module-settings)), you can access this app in either of the following ways:
 
-- In DataMiner Cube, go to *System Center* > *DOM*, or
-- browse directly to `https://<DMA IP or hostname>/dom`.
+- Browse to `https://<DMA IP or hostname>/dom`.
+
+- In DataMiner Cube, go to *System Center* > *DOM*.
+
+  If you are using a [remote access URL](xref:Cloud_Remote_Access_URL), you will then need to click a link to open the app in a browser. With a regular Cube connection, the app is shown directly in DataMiner Cube.
 
 > [!NOTE]
 > The app can also be embedded in a low-code app to allow direct access from within that low-code app. To do so, use a URL like `https://<DMA IP or hostname>/dom/#/?embed=true` in a [Web component](xref:DashboardWeb). You can also make the embedded app show specific DOM modules by adding the IDs of those modules in the URL, for example: `https://<DMA IP or hostname>/dom/#/?embed=true&moduleIds=myDomModule1,myDomModule2,myDomModule3`.
