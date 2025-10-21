@@ -101,6 +101,16 @@ This message has now been replaced by the following one:
 
 When the *NATSMigration* tool is not able to connect to BrokerGateway, it will now add clearer HTTP errors to the error log.
 
+#### DxMs upgraded [ID 43961]
+
+<!-- RN 43961: MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner Orchestrator 1.8.0
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
 ### Fixes
 
 #### Parameter or DCF information would become unavailable to remotely hosted elements after a DataMiner connection had been re-established [ID 43765]

@@ -188,15 +188,17 @@ Because of a number of enhancements, overall performance of the the *Cube CRL Fr
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
-#### DxMs upgraded [ID 43866] [ID 43950]
+#### DxMs upgraded [ID 43866] [ID 43950] [ID 43961]
 
 <!-- RN 43866: MR 10.6.0 - FR 10.5.12 -->
 <!-- RN 43950: MR 10.6.0 - FR 10.5.12 -->
+<!-- RN 43961: MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner CloudGateway 2.17.14
 - DataMiner DataAPI 1.4.0
+- DataMiner Orchestrator 1.8.0
 
 The CloudGateway DxM and the DataAPI DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, they will not be installed.
 
