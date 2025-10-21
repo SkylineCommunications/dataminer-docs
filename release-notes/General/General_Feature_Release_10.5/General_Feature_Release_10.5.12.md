@@ -249,6 +249,19 @@ This message has now been replaced by the following one:
 
 When the *NATSMigration* tool is not able to connect to BrokerGateway, it will now add clearer HTTP errors to the error log.
 
+#### Relational anomaly detection: New API message to retrieve the model fit score of a RAD parameter subgroup [ID 43934]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+From now on, the new `GetRADSubgroupModelFitMessage` will allow you to retrieve the model fit score of a RAD parameter subgroup.
+
+The model fit score, ranging from 0 to 1, indicates how well the relational behavior of a subgroup is captured by the shared model trained across multiple subgroups:
+
+- Higher scores suggest that the subgroup's behavior aligns well with the shared model.
+- Lower scores indicate that the subgroup's behavior deviates from the patterns learned by the shared model.
+
+The model fit score is derived from the evolution of anomaly scores over time for the subgroup in question. In general, subgroups with consistently high anomaly scores tend to have lower model fit scores, reflecting poor alignment with the shared relational model.
+
 #### Time-scoped relation learning: Exceptions will now be thrown when sending a GetTimeScopedRelationsMessage with incorrect arguments [ID 43963]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
