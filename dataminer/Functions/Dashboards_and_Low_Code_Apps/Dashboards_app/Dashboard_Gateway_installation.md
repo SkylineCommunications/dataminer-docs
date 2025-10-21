@@ -196,7 +196,7 @@ To do so, after the DataMiner upgrade, copy the following folders from the DataM
 - `C:\Skyline DataMiner\Webpages\Ticketing`
 - `C:\Skyline DataMiner\Webpages\SharedComponents`
 - `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
-- `C:\Skyline DataMiner\Webpages\API` (make sure not to overwrite the existing web.config file. Copy all other files and folders, but keep the existing web.config in place.)
+- `C:\Skyline DataMiner\Webpages\API` (Make sure not to overwrite the existing web.config file. Copy all other files and folders, but keep the existing web.config in place.)
 
 > [!IMPORTANT]
 > Always ensure that the web application folders on the Dashboard Gateway are in sync with the DataMiner Agent. Running different web versions may cause compatibility issues or prevent the web applications from loading correctly.
