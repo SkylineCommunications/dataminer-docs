@@ -184,7 +184,7 @@ namespace Skyline.DataMiner.Automation
 		/// <value>The version of the web interactive Automation script UI.</value>
 		/// <remarks>
 		/// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43840).</para>
-		/// <para>The WebUIVersion is 'Default' by default, meaning the old UI, this will later change to the new UI. The WebUIVersion can be set to 'V2' to show the new UI or 'V1' for the old UI.</para>
+		/// <para>The WebUIVersion is set to 'Default' by default. At present, this means that the old UI (V1) is used. You can instead set this to 'V2' to show the new UI or  to 'V1' to make sure the old UI will continue to be used even if the default behavior changes.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
