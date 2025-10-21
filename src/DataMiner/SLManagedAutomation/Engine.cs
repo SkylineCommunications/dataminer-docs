@@ -179,6 +179,21 @@ namespace Skyline.DataMiner.Automation
 		public string UserLoginName { get; }
 
 		/// <summary>
+		/// Gets or sets the web Interactive Automation Script UI version.
+		/// </summary>
+		/// <value>The version of the web Interactive Automation Script UI.</value>
+		/// <remarks>
+		/// <para>Feature introduced in DataMiner 10.5.12 (RN 43840).</para>
+		/// <para>The WebUIVersion is 'Default' by default, meaning the old UI, this will later change to the new UI. The WebUIVersion can be set to 'V2' to show the new UI or 'V1' for the old UI.</para>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// engine.WebUIVersion= WebUIVersion.V2;
+		/// </code>
+		/// </example>
+		public WebUIVersion WebUIVersion { get; set; }
+
+		/// <summary>
 		/// Acknowledges the specified alarm tree using the provided comment message.
 		/// </summary>
 		/// <param name="alarmTreeID">The alarm tree to update</param>
