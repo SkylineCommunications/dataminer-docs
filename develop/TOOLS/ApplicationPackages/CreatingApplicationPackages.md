@@ -59,6 +59,12 @@ The Packager .NET tool is a tool that can be used to create application packages
 
 The packager tool also allows the creation of a protocol package (.dmprotocol) for protocol solutions.
 
+## Exporting low-code apps
+
+You can include a low-code app in a package. This will include only the latest version of the app, and the version history of the app will be cleaned up in the export. When this package is imported onto a DMA, the resulting app version will be the one defined in the package.
+
+See also: [Low-code app deployment behavior](xref:Deploying_a_catalog_item#low-code-app-deployment-behavior).
+
 ## Low-Code App Editor
 
 The *Low Code App Extensions* script or "Low-Code App Editor" is an interactive Automation script that allows, among other things, the exporting of low-code apps (optionally including DOM instances) from a DataMiner System.
