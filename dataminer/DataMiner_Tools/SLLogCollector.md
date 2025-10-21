@@ -29,6 +29,10 @@ To use the SLLogCollector tool:
 
 1. Configure the necessary options:
 
+   - From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!-- RN 43588 -->, if you do not want to execute the BPA tests available in the system, clear the *Run BPAs* checkbox.
+
+     If this checkbox is selected, or in earlier DataMiner versions starting from DataMiner 10.3.3/10.4.0<!-- RN 35436 -->, each time the *SLLogCollector* tool is run, it will order the [*Standalone BPA Executor* tool](xref:Standalone_BPA_Executor) to execute all BPA tests available in the system. The files containing the test results will have names using the `<BPA Name>_<Date(yyyy-MM-dd_HH)>` format and can be found in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder.
+
    - To only collect logging for the period since DataMiner was last started, select *Exclude logging of previous run of DataMiner*.
 
    - To collect memory dumps as well as logging, select *Include memory dump*. Then select for which process(es) memory dumps should be collected and when these should be collected.
@@ -46,9 +50,6 @@ To use the SLLogCollector tool:
    > ![SLLogCollector](~/dataminer/images/SLLogCollector.png)
 
 1. To view information on the actions of the tool, expand the *Console* section at the bottom of the window. For more detailed information, click the *Show detailed log* button.
-
-> [!NOTE]
-> By default (from DataMiner 10.3.3/10.4.0 onwards<!-- RN 35436 -->), each time the *SLLogCollector* tool is run, it will order the [*Standalone BPA Executor* tool](xref:Standalone_BPA_Executor) to execute all BPA tests available in the system. The files containing the test results will have names using the `<BPA Name>_<Date(yyyy-MM-dd_HH)>` format and can be found in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder. From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!-- RN 43588 -->, a checkbox is available that allows you to skip these BPA tests.
 
 ## Running the tool via command line
 
