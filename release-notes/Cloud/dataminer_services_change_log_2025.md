@@ -11,7 +11,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 21 October 2025 - Fix - Sharing - Cloud share name
 
-Creating a cloud share of a dashboard with a `,` in the name is now supported.
+Previously, when a dashboard has a comma in the name, the sharing app removed the comma and all characters that came after the comma.
+This lead to the share not being found by the cloud thus making sharing unavailable for dashboards with comma in the name.
+Now sharing is supported for dashboards with a comma in the name.
 
 ### 9 October 2025 - Fix - Status - Incorrect spacing incident descriptions
 
