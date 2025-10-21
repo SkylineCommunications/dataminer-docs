@@ -509,6 +509,12 @@ In the BPA test *DataMiner Agent Minimum Requirements*, the following minimum ha
 | System memory            | 32 GB   | 16 GB   |
 | Size of main disk (C:\\) | 300 GB  | 128 GB  |
 
+#### Time-scoped relation learning: Exceptions will now be thrown when sending a GetTimeScopedRelationsMessage with incorrect arguments [ID 43963]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+When a client application retrieves information about time-scoped related parameters using the `GetTimeScopedRelationsMessage`, from now on, exceptions will be thrown when that message is sent with incorrect arguments (e.g. a non-existing parameter ID, an invalid time range, etc.).
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
