@@ -9,11 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 21 October 2025 - Fix - Sharing - Cloud share name
+### 21 October 2025 - Fix - Sharing - Not possible to share a dashboard with a comma in its name
 
-Previously, when a dashboard has a comma in the name, the sharing app removed the comma and all characters that came after the comma.
-This lead to the share not being found by the cloud thus making sharing unavailable for dashboards with comma in the name.
-Now sharing is supported for dashboards with a comma in the name.
+Previously, when a user shared a dashboard that had a comma in its name, the Sharing app removed the comma and all characters that followed it. This caused the share not to be found on dataminer.services, which effectively made it impossible to share a dashboard with a comma in its name. This issue has been resolved, so such dashboards can now be shared.
 
 ### 9 October 2025 - Fix - Status - Incorrect spacing incident descriptions
 
