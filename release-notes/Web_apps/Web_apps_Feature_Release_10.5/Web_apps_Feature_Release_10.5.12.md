@@ -207,6 +207,14 @@ On a dashboard gateway setup, certain calls would not work because of an incorre
 
 Also, the ShareDashboard call did incorrectly not require users to have the *General > Live sharing > Share* permission.
 
+#### Dashboards app: Multiple error messages would appear when you were editing a dashboard when another user was also editing it [ID 43928]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When, for example, you were editing a dashboard that another user was also editing at the same time, up to now, a series of error messages could start to appear. From now on, only one error message will appear.
+
+As simultaneous dashboard editing is not supported, any errors that appear will not be added to the Cube logging.
+
 #### Dashboards/Low-Code Apps - Table component: 'Is selected' template override would only be applied correctly for the first 50 rows [ID 43937]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
