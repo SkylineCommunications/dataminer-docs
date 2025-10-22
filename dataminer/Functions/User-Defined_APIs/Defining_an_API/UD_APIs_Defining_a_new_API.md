@@ -216,6 +216,7 @@ The headers listed below are **blocked** and will result in an error if you try 
 > [!NOTE]
 >
 > - The *ResponseHeaders* property can be used from DataMiner 10.5.12/10.6.0 onwards.<!-- RN 43705 -->
+> - By default, each response includes a *Content-Type* header set to "application/json". This can be overridden if needed.<!-- RN 43960 -->
 > - Keep the size of headers and values limited. Hard limits depend on the version of your web server.
 > - Null values are not allowed. Use *string.Empty* when adding a header with an empty value.
 
