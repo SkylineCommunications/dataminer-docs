@@ -66,16 +66,16 @@ If you are having problems connecting using the DataMiner Cube:
 
       ![Logging on to Ziine](~/dataminer/images/ziine_login.png)
 
-### Navigating Ziine in DataMiner Cube
+## Navigating the Ziine UI in DataMiner Cube
 
-After logging on to Cube, on the left-hand side of the Cube UI is the Surveyor pane with three main views:
+When you have logged on to Cube, use the [Surveyor pane](xref:DataMiner_Cube_sidebar) on the left to navigate the UI. Within the pane, you will find three main [views](xref:About_views):
 
-1. Operations
-1. Solutions
-1. Visual Overview Design examples
+- Operations
+- Solutions
+- Visual Overview Design examples
 
-Under each view are subviews representing the different demos on show. For example in the Downlink view a subview under Operations, you will find a demo about downlink services where two different highly redundant sites are being actively monitored from a service and SLA perspective.
+Under each view, subviews represent the different demos on show. For example, under *Operations*, the *Downlink* view contains a demo about downlink services, where two different highly redundant sites are being actively monitored from a service and SLA perspective.
 
-In the central pane of the Cube UI you will find navigation links to a demo hub where you can explore the ever growing list of demos on offer, a quick starter guide and others.
+In the central pane (or "[card pane](xref:DataMiner_Cube_card_pane)") of the Cube UI, you will find navigation links to a demo hub where you can explore the ever-growing list of demos on offer, a quick starter guide, and more.
 
 ![Ziine Cube](~/dataminer/images/Ziine_cube.png)
