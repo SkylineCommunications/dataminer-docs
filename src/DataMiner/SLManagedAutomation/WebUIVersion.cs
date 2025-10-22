@@ -1,7 +1,7 @@
 ﻿namespace Skyline.DataMiner.Automation
 {
 	/// <summary>
-	/// Specifies how the client will handle extra time info.
+	/// Specifies the version of the web UI.
 	/// </summary>
 	public enum WebUIVersion
 	{
