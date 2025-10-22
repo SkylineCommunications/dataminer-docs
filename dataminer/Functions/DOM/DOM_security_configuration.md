@@ -12,7 +12,7 @@ From DataMiner 10.5.11/10.6.0 onwards, you can configure definition-level securi
 
 ## Accessing the DOM security UI
 
-If you have the required user permission ([Modules > System configuration > Object Manager > Module settings](xref:DataMiner_user_permissions#modules--system-configuration--object-manager--module-settings)), you can configure DOM definition level security in either of the following ways:
+If you have the required user permission ([Modules > System configuration > Object Manager > Module settings](xref:DataMiner_user_permissions#modules--system-configuration--object-manager--module-settings)), you can configure DOM definition-level security in either of the following ways:
 
 - Browse to `https://<DMA IP or hostname>/dom`.
 
