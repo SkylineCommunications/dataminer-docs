@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.5.12
 
 ## Highlights
 
-- [User-defined APIs: New ResponseHeaders property [ID 43705]](#user-defined-apis-new-responseheaders-property-id-43705)
+- [User-defined APIs: New ResponseHeaders property [ID 43705] [ID 43960]](#user-defined-apis-new-responseheaders-property-id-43705-id-43960)
 
 ## New features
 
