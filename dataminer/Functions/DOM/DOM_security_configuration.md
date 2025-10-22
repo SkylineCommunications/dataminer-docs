@@ -8,7 +8,7 @@ uid: DOM_security_ui
 
 From DataMiner 10.5.11/10.6.0 onwards, you can configure definition-level security settings for DOM. In the background, this will make use of the [link security](xref:DOM_security#link-security) feature.
 
-![Configuring DOM definition level security in DataMiner 10.5.11](~/dataminer/images/DOMSecurityApp.png)<br>*Configuring DOM definition level security in DataMiner 10.5.11*
+![Configuring DOM definition-level security in DataMiner 10.5.11](~/dataminer/images/DOMSecurityApp.png)<br>*Configuring DOM definition-level security in DataMiner 10.5.11*
 
 ## Accessing the DOM security UI
 
