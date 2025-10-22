@@ -11,7 +11,7 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 #### Fix - AgentId property of DmsAutomationScriptRunOptions ignored when executing a script [ID 43923]
 
-When executing an Automation script via DmsAutomationScript, the AgentId specified in DmsAutomationScriptRunOptions was not applied when constructing the SLNet message, causing the script to run on the default/incorrect Agent. This has been corrected so that the specified AgentId is now respected.
+When an Automation script was executed via DmsAutomationScript, the AgentId specified in DmsAutomationScriptRunOptions was not applied when constructing the SLNet message, causing the script to run on the default/incorrect Agent. This has been corrected so that the specified AgentId is now respected.
 
 ### 1.1.3.4
 
