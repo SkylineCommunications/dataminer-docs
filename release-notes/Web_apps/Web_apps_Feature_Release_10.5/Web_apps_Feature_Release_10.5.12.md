@@ -120,6 +120,30 @@ When editing a *Grid* component, up to now, the *Advanced > Grid template* secti
 > [!NOTE]
 > By default, newly created grids will have *Stretch to fit* enabled and *Stretch mode* set to "Limit" for columns, and *Vertical scroll* enabled for rows.
 
+#### Automatic backups of web apps will no longer include all versions [ID 43906]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+From DataMiner 10.3.11/10.3.0 [CU8] onwards, whenever you upgrade a DMA or install a DataMiner web upgrade, an automatic backup of all existing dashboards and low-code apps on the system is generated and stored in `C:\Skyline DataMiner\System Cache\Web\Backups`.
+
+Up to now, that backup would include all app versions. From now on, it will only include up to two versions per app: the last version that was published and the most recent draft. The version history will be left untouched.
+
+> [!NOTE]
+>
+> - When the `App.info.json` file of an app is present and valid, but a version cannot be found, a warning will be displayed, and the app will be included in the backup.
+> - When the `App.info.json` file of an app is not present or invalid, or if the published and draft versions are set to null in that file, a warning will be displayed, and the app will not be included in the backup.
+
+#### DataMiner landing page: Settings icon and 'System home settings' menu have been removed from the header bar [ID 43966]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+On the DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`), the settings icon and the *System home settings* menu have now been removed from the header bar.
+
+- The *Show draft applications* option has been moved to the apps section, next to the search bar.
+- The *Theme* option\* has been moved to the *User settings* window.
+
+\**The Theme option is only visible when you added `showAdvancedSettings=true` to the URL of the landing page.*
+
 ### Fixes
 
 #### GQI DxM: Existing query sessions would incorrectly be allowed to use a restarted extension worker [ID 43770]
@@ -207,8 +231,34 @@ On a dashboard gateway setup, certain calls would not work because of an incorre
 
 Also, the ShareDashboard call did incorrectly not require users to have the *General > Live sharing > Share* permission.
 
+#### Dashboards app: Multiple error messages would appear when you were editing a dashboard when another user was also editing it [ID 43928]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When, for example, you were editing a dashboard that another user was also editing at the same time, up to now, a series of error messages could start to appear. From now on, only one error message will appear.
+
+As simultaneous dashboard editing is not supported, any errors that appear will not be added to the Cube logging.
+
 #### Dashboards/Low-Code Apps - Table component: 'Is selected' template override would only be applied correctly for the first 50 rows [ID 43937]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 Up to now, in a *Table* component, the *Is selected* template override would only be applied correctly for the first 50 rows.
+
+#### Dashboards/Low-Code Apps - Time range component: Problem with relative time span when linked to a Trigger component [ID 43968]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When, in a dashboard or a low-code app, a *Time range* component had a relative time span set (e.g. "Today so far") and was linked to a *Trigger* component, up to now, the *Time range* component would incorrectly no longer update its relative time span when the *Trigger* component ordered it to do so after a reload of the dashboard or a page switch in the low-code app.
+
+#### Problem with embedded video thumbnails [ID 43973]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+In client applications like DataMiner Cube, up to now, embedded video thumbnails would no longer work.
+
+#### DataMiner web apps authentication page: Header could keep on loading indefinitely [ID 43978]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+In some cases, the header of the DataMiner web apps authentication page would keep on loading indefinitely.

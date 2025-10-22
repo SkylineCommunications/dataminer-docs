@@ -22,6 +22,7 @@ The following icons are currently available:
 |:--|--:|
 | Audio Processor | <img src="~/solutions/images/RS_Audio_Processor.svg" alt="Audio Processor" style="width:70px;"/> |
 | Audio Shuffler | <img src="~/solutions/images/RS_Audio_Shuffler.svg" alt="Audio Shuffler" style="width:70px;"/> |
+| Camera | <img src="~/solutions/images/RS_Camera.svg" alt="Camera" style="width:70px;"/> |
 | Channel | <img src="~/solutions/images/RS_Channel.svg" alt="Channel" style="width:70px;"/> |
 | Closed Caption Unit | <img src="~/solutions/images/RS_Closed_Caption_Unit.svg" alt="Closed Caption Unit" style="width:70px;"/> |
 | Cloud Recording | <img src="~/solutions/images/RS_Cloud_Recording.svg" alt="Cloud Recording" style="width:70px;"/> |

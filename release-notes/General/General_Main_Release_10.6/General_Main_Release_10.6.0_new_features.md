@@ -449,7 +449,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320] [ID 43440] [ID 43686] [ID 43720] [ID 43769] [ID 43797] [ID 43853]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320] [ID 43440] [ID 43686] [ID 43720] [ID 43769] [ID 43797] [ID 43853] [ID 43934]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
@@ -467,6 +467,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 43769: MR 10.6.0 - FR 10.5.12 -->
 <!-- RNs 43797: MR 10.6.0 - FR 10.5.11 -->
 <!-- RNs 43853: MR 10.6.0 - FR 10.5.12 -->
+<!-- RNs 43934: MR 10.6.0 - FR 10.5.12 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
@@ -515,6 +516,7 @@ The following API messages can be used to create, retrieve, migrate, and remove 
 | GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular RAD parameter group.<br>The response to a `GetRADParameterGroupInfoMessage` includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging. |
 | GetRADParameterGroupsMessage    | Retrieves a list of all RAD parameter groups that have been configured across all agents in the cluster. |
 | GetRADSubgroupInfoMessage       | Retrieves all configuration information for a particular RAD parameter subgroup by subgroup ID. |
+| GetRADSubgroupModelFitMessage   | Retrieves the model fit score of a RAD parameter subgroup.<br>The model fit score, ranging from 0 to 1, indicates how well the relational behavior of a subgroup is captured by the shared model trained across multiple subgroups:<br>- Higher scores suggest that the subgroup's behavior aligns well with the shared model.<br>- Lower scores indicate that the subgroup's behavior deviates from the patterns learned by the shared model.<br>The model fit score is derived from the evolution of anomaly scores over time for the subgroup in question. In general, subgroups with consistently high anomaly scores tend to have lower model fit scores, reflecting poor alignment with the shared relational model. |
 | GetRelationalAnomaliesMessage   | Retrieves relational anomalies detected in the past for a particular parameter during a specified time range. |
 | MigrateRADParameterGroupMessage | Migrates a RAD parameter group to a specific DataMiner Agent. This new DataMiner Agent will then be responsible for building, maintaining, and executing the anomaly detection model of the RAD parameter group in question.<br>Note: A RAD parameter group will be migrated automatically when its parameters are hosted by elements that are swarmed from one DataMiner Agent to another. The RAD parameter group will then be migrated to the DataMiner Agent hosting the majority of its parameters. |
 | RemoveRADParameterGroupMessage  | Deletes a RAD parameter group. |
@@ -1189,11 +1191,13 @@ This new filter box should only be used when no new messages will be added to th
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### User-defined APIs: New ResponseHeaders property [ID 43705]
+#### User-defined APIs: New ResponseHeaders property [ID 43705] [ID 43960]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
 In the `ResponseHeaders` property of the `ApiTriggerOutput` class, you can now specify the HTTP headers that will be added to the response.
+
+Also, the `ApiTriggerOutput` class now allows you to override the contents of the Content-Type header, which is set to "application/json" by default.
 
 Currently, the following headers are blocked, and will result in an error if you try to set them:
 
@@ -1223,3 +1227,31 @@ The endpoint can now also return the following additional errors:
 |-----------|---------------|------------------|-------------|
 | ResponseHeadersNotAllowed | 1012 | 500 | The response header or headers you are trying to return are not allowed. |
 | ResponseHeadersInvalid | 1013 | 500 | The response header or headers you are trying to return are invalid. Header names and values cannot contain whitespace, colons (":"), commas (","), or ASCII control characters. The *UserDefinableApiEndpoint* logging will contain the exact error. |
+
+#### Interactive Automation scripts executed in a web app: UI version can now be set in the script [ID 43875]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+Up to now, when you wanted an interactive Automation script executed in a web app to use the new UI version, you had to add `useNewIASInputComponents=true` to the URL of the app.
+
+From now on, it is also possible to indicate the UI version in the script itself. To do so, set the `engine.WebUIVersion` property to one of the following values:
+
+| Value | UI version |
+|-------|------------|
+| WebUIVersion.Default | Default UI version. At present, this is V1. |
+| WebUIVersion.V1      | Current UI version (V1) |
+| WebUIVersion.V2      | New UI version (V2)     |
+
+Example:
+
+```csharp
+engine.WebUIVersion = WebUIVersion.V2
+```
+
+The URL parameter `useNewIASInputComponents` has priority over the UI version set in the script.
+
+- If you use `useNewIASInputComponents=true`, the script will use the new UI version (i.e. V2), even when V1 was set in the script.
+- If you use `useNewIASInputComponents=false`, the script will use the current UI version (i.e. V1), even when V2 was set in the script.
+
+> [!IMPORTANT]
+> This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.

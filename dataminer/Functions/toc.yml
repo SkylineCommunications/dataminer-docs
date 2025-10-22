@@ -359,10 +359,10 @@ items:
                 topicUid: LowCodeApps_event_config
               - name: Configuring app security
                 topicUid: LowCodeApps_security_config
-              - name: Retrieving an earlier app version
-                topicUid: LowCodeApps_earlier_version
               - name: Organizing the apps on the landing page in sections
                 topicUid: LowCodeApps_organizing_landing_page
+          - name: Retrieving an earlier app version
+            topicUid: LowCodeApps_earlier_version
           - name: Deleting an app
             topicUid: Deleting_custom_apps
           - name: Configuring app actions and behavior via the URL
@@ -822,8 +822,8 @@ items:
       - name: DOM security
         topicUid: DOM_security
         items:
-          - name: DOM definition-level security app
-            topicUid: DOM_definition_security_app
+          - name: Configuring definition-level security
+            topicUid: DOM_security_ui
       - name: DOM actions
         topicUid: DOM_actions
       - name: DOM data storage

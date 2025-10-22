@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.5.12
 
 ## Highlights
 
-- [User-defined APIs: New ResponseHeaders property [ID 43705]](#user-defined-apis-new-responseheaders-property-id-43705)
+- [User-defined APIs: New ResponseHeaders property [ID 43705] [ID 43960]](#user-defined-apis-new-responseheaders-property-id-43705-id-43960)
 
 ## New features
 
@@ -37,11 +37,13 @@ When a DataMiner upgrade is being performed, from now on, the new *VerifyOSVersi
 > [!NOTE]
 > Microsoft no longer supports OS versions older than Windows Server 2016 or Windows 10. Hence, these versions will not pass the above-mentioned OS version check.
 
-#### User-defined APIs: New ResponseHeaders property [ID 43705]
+#### User-defined APIs: New ResponseHeaders property [ID 43705] [ID 43960]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
 In the `ResponseHeaders` property of the `ApiTriggerOutput` class, you can now specify the HTTP headers that will be added to the response.
+
+Also, the `ApiTriggerOutput` class now allows you to override the contents of the Content-Type header, which is set to "application/json" by default.
 
 Currently, the following headers are blocked, and will result in an error if you try to set them:
 
@@ -79,6 +81,34 @@ The endpoint can now also return the following additional errors:
 From now on, the `Engine` class exposes the public property `ScriptName`.
 
 This means that, in an Automation script, it will now be possible to retrieve the name of that script.
+
+#### Interactive Automation scripts executed in a web app: UI version can now be set in the script [ID 43875]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+Up to now, when you wanted an interactive Automation script executed in a web app to use the new UI version, you had to add `useNewIASInputComponents=true` to the URL of the app.
+
+From now on, it is also possible to indicate the UI version in the script itself. To do so, set the `engine.WebUIVersion` property to one of the following values:
+
+| Value | UI version |
+|-------|------------|
+| WebUIVersion.Default | Default UI version. At present, this is V1. |
+| WebUIVersion.V1      | Current UI version (V1) |
+| WebUIVersion.V2      | New UI version (V2)     |
+
+Example:
+
+```csharp
+engine.WebUIVersion = WebUIVersion.V2
+```
+
+The URL parameter `useNewIASInputComponents` has priority over the UI version set in the script.
+
+- If you use `useNewIASInputComponents=true`, the script will use the new UI version (i.e. V2), even when V1 was set in the script.
+- If you use `useNewIASInputComponents=false`, the script will use the current UI version (i.e. V1), even when V2 was set in the script.
+
+> [!IMPORTANT]
+> This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
 
 ## Changes
 
@@ -249,6 +279,25 @@ This message has now been replaced by the following one:
 
 When the *NATSMigration* tool is not able to connect to BrokerGateway, it will now add clearer HTTP errors to the error log.
 
+#### Relational anomaly detection: New API message to retrieve the model fit score of a RAD parameter subgroup [ID 43934]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+From now on, the new `GetRADSubgroupModelFitMessage` will allow you to retrieve the model fit score of a RAD parameter subgroup.
+
+The model fit score, ranging from 0 to 1, indicates how well the relational behavior of a subgroup is captured by the shared model trained across multiple subgroups:
+
+- Higher scores suggest that the subgroup's behavior aligns well with the shared model.
+- Lower scores indicate that the subgroup's behavior deviates from the patterns learned by the shared model.
+
+The model fit score is derived from the evolution of anomaly scores over time for the subgroup in question. In general, subgroups with consistently high anomaly scores tend to have lower model fit scores, reflecting poor alignment with the shared relational model.
+
+#### Time-scoped relation learning: Exceptions will now be thrown when sending a GetTimeScopedRelationsMessage with incorrect arguments [ID 43963]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+When a client application retrieves information about time-scoped related parameters using the `GetTimeScopedRelationsMessage`, from now on, exceptions will be thrown when that message is sent with incorrect arguments (e.g. a non-existing parameter ID, an invalid time range, etc.).
+
 ### Fixes
 
 #### Parameter or DCF information would become unavailable to remotely hosted elements after a DataMiner connection had been re-established [ID 43765]
@@ -327,3 +376,22 @@ The timeout of queries against a Cassandra database was set incorrectly. This ti
 Up to now, a temporary deadlock could occur in SLNet while DataMiner Agents were connecting or reconnecting to each other.
 
 In some cases, this could lead to "thread problem" alarms appearing and then clearing later on.
+
+#### Visual Overview in web apps: Cube running as a service within SLHelper would not load the common server settings from ClientSettings.json [ID 43941]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, when DataMiner Cube was running as a service within the SLHelper process, it would not load the common server settings from `C:\Skyline DataMiner\users\ClientSettings.json` when it is unable to retrieve its own user settings.
+
+From now on, regardless of whether DataMiner Cube can retrieve its own user settings, it will load the common server settings from `C:\Skyline DataMiner\users\ClientSettings.json`.
+
+#### Notices regarding incorrect baseline values would no longer be generated when an element was started after being swarmed or migrated [ID 43970]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When an element that had been swarmed or migrated by means of a DELT package was started up, up to now, the following notices would no longer be generated when incorrect baseline values were found:
+
+- `The fixed value (%g) is invalid. It is lower than nominal value (%g), and in the higher range. This value will not be used for alarm creation.`
+- `The fixed value (%g) is invalid. It is higher than nominal value (%g), and in the lower range. This value will not be used for alarm creation.`
+
+These notices will now be generated again.
