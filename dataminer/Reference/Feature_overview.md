@@ -81,7 +81,7 @@ Below you can find an overview of the main features that have been added to Data
 | DOM: [Attachments](xref:DomHelper_class#attachments) | DataMiner 10.1.3/10.2.0 <!-- [ID 28739] --> |
 | DOM: [Calculating changes to a DOM instance](xref:ExecuteScriptOnDomInstanceActionSettings#calculating-changes-done-to-a-dom-instance-in-a-crud-script) | DataMiner 10.4.3/10.5.0 <!-- [ID 38364] -->|
 | DOM: [CRUD actions on multiple instances](xref:DomHelper_class#multiple-instances) | DataMiner 10.4.2/10.5.0 <!-- [ID 37891] -->|
-| DOM: [definition-level security app](xref:DOM_definition_security_app) | DataMiner 10.5.11/10.6.0 <!-- RN 43622 -->|
+| DOM: [definition-level security configuration](xref:DOM_security_ui) | DataMiner 10.5.11/10.6.0 <!-- RN 43622 -->|
 | DOM: [DomBehaviorDefinition](xref:DomBehaviorDefinition) and [status system](xref:DOM_status_system_example) | DataMiner 10.1.11/10.2.0 <!-- [ID 30443] --> |
 | DOM: [DomInstanceFieldDescriptor](xref:DOM_DomInstanceFieldDescriptor) and [ElementFieldDescriptor](xref:DOM_ElementFieldDescriptor) | DataMiner 10.1.10/10.2.0 <!-- [ID 30583] --> |
 | DOM: [DomInstanceNameDefinition](xref:DomInstanceNameDefinition) | DataMiner 10.1.9/10.2.0 <!-- [ID 30226] -->|
