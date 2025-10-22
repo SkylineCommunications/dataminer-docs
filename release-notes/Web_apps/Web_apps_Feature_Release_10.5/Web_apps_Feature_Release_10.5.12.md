@@ -133,6 +133,17 @@ Up to now, that backup would include all app versions. From now on, it will only
 > - When the `App.info.json` file of an app is present and valid, but a version cannot be found, a warning will be displayed, and the app will be included in the backup.
 > - When the `App.info.json` file of an app is not present or invalid, or if the published and draft versions are set to null in that file, a warning will be displayed, and the app will not be included in the backup.
 
+#### DataMiner landing page: Settings icon and 'System home settings' menu have been removed from the header bar [ID 43966]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+On the DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`), the settings icon and the *System home settings* menu have now been removed from the header bar.
+
+- The *Show draft applications* option has been moved to the apps section, next to the search bar.
+- The *Theme* option\* has been moved to the *User settings* window.
+
+\**The Theme option is only visible when you added `showAdvancedSettings=true` to the URL of the landing page.*
+
 ### Fixes
 
 #### GQI DxM: Existing query sessions would incorrectly be allowed to use a restarted extension worker [ID 43770]
