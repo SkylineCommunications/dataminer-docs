@@ -7,4 +7,4 @@ uid: MediaOps_RNs_index
 These release notes contain all new features, enhancements, and fixes for MediaOps.
 
 > [!TIP]
-> There is [general documentation](xref:MediaOps) is available for the MediaOps solution.
+> There is [documentation](xref:MediaOps) available for the MediaOps solution.
