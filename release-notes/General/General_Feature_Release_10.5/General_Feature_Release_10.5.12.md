@@ -80,6 +80,34 @@ From now on, the `Engine` class exposes the public property `ScriptName`.
 
 This means that, in an Automation script, it will now be possible to retrieve the name of that script.
 
+#### Interactive Automation scripts executed in a web app: UI version can now be set in the script [ID 43875]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+Up to now, when you wanted an interactive Automation script executed in a web app to use the new UI version, you had to add `useNewIASInputComponents=true` to the URL of the app.
+
+From now on, it is also possible to indicate the UI version in the script itself. To do so, set the `engine.WebUIVersion` property to one of the following values:
+
+| Value | UI version |
+|-------|------------|
+| WebUIVersion.Default | Default UI version. At present, this is V1. |
+| WebUIVersion.V1      | Current UI version (V1) |
+| WebUIVersion.V2      | New UI version (V2)     |
+
+Example:
+
+```csharp
+engine.WebUIVersion = WebUIVersion.V2
+```
+
+The URL parameter `useNewIASInputComponents` has priority over the UI version set in the script.
+
+- If you use `useNewIASInputComponents=true`, the script will use the new UI version (i.e. V2), even when V1 was set in the script.
+- If you use `useNewIASInputComponents=false`, the script will use the current UI version (i.e. V1), even when V2 was set in the script.
+
+> [!IMPORTANT]
+> This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
+
 ## Changes
 
 ### Enhancements
