@@ -4,6 +4,17 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.13
+
+### Fixes
+
+#### IDE
+
+##### Problem when publishing Automation script [ID 43997]
+
+In some cases, a MissingMethodException could be thrown while publishing an Automation script that makes use of the DataMiner SDK.
+From now on, the publish operation will be performed in a dedicated process to avoid interference of the NuGet packages for doing NuGet related operations that are already loaded in Visual Studio.
+
 ## DIS 3.1.12
 
 ### New features
