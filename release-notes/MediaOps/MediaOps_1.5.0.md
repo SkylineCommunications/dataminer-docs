@@ -7,10 +7,8 @@ uid: MediaOps_1.5.0
 > [!IMPORTANT]
 > We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
 
-## Prerequisites
-
-* DataMiner version 10.5.11 or higher
-* [GQI DxM](xref:GQI_DxM)
+> [!NOTE]
+> This version requires DataMiner 10.5.11/10.6.0 or higher. In addition, the [GQI DxM](xref:GQI_DxM) must be installed.
 
 ## New features
 

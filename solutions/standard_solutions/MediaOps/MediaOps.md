@@ -34,8 +34,9 @@ These are the out-of-the-box DataMiner applications that are currently included 
 </div>
 
 > [!TIP]
-> Before you deploy the MediaOps package, take a look at our [installation instructions](xref:MO_Installation).
-> There are [Release Notes](xref:MediaOps_RNs_index) for every MediaOps version.
+>
+> - Before you deploy the MediaOps package, take a look at our [installation instructions](xref:MO_Installation).
+> - For details about the changes introduced in each MediaOps version, refer to the [release notes](xref:MediaOps_RNs_index).
 
 ## Who can benefit from dataminer.MediaOps?
 

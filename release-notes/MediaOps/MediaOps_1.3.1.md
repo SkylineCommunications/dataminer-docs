@@ -4,36 +4,34 @@ uid: MediaOps_1.3.1
 
 # MediaOps 1.3.1
 
-## Prerequisites
-
-* DataMiner version 10.5.7 or higher
-* [GQI DxM](xref:GQI_DxM)
+> [!NOTE]
+> This version requires DataMiner 10.5.7/10.6.0 or higher. In addition, the [GQI DxM](xref:GQI_DxM) must be installed.
 
 ## New features
 
-### Scheduling: Pre-roll and post-roll configuration for jobs [ID 43035]
+#### Scheduling: Pre-roll and post-roll configuration for jobs [ID 43035]
 
 When a job is set up in the Scheduling app, either manually or automatically, operators or orchestration scripts require some time to do the setup or to take down the job or workflow. To ensure that resources are reserved for long enough before the start of the job and after the end of a job, it is now possible to configure a pre-roll and/or post-roll period.
 
-### Scheduling: Possibility to delete completed jobs [ID 43036]
+#### Scheduling: Possibility to delete completed jobs [ID 43036]
 
 In the Scheduling app, it is now possible to delete completed MediaOps jobs.
 
-### Scheduling: Job and node properties can now be divided into sections [ID 43041]
+#### Scheduling: Job and node properties can now be divided into sections [ID 43041]
 
 On the *App Configuration* page of the Scheduling app, you can now divide job and node properties into sections. Within a property section, you can order the properties to your preference.
 
-### Scheduling: Ability to set job back from confirmed to tentative [ID 43042]
+#### Scheduling: Ability to set job back from confirmed to tentative [ID 43042]
 
 When a job has been confirmed, you can now return it to the tentative state from the job edit panel.
 
-### Scheduling: Recurring jobs [ID 43043]
+#### Scheduling: Recurring jobs [ID 43043]
 
 Via the context menu on a job, it is now possible to convert the job into a recurring job. This will only be possible for jobs that have not started yet and only if the state of the jobs is draft or tentative.
 
 Once a job has been converted into a recurring job, it is still possible to update each job individually, but it is not possible to update all jobs at once. This means that it is best to make sure a job is fully configured before you convert it into a recurring job.
 
-### Scheduling: New button to copy job edit panel URL to clipboard [ID 43059]
+#### Scheduling: New button to copy job edit panel URL to clipboard [ID 43059]
 
 In the header bar of the job edit panel, a button is now available that allows you to copy the URL of the panel to the clipboard.
 
@@ -53,8 +51,8 @@ Creating and editing resources and resource pools in the MediaOps apps will now 
 
 The following performance improvements have been implemented:
 
-* When the job edit panel was opened, whenever there was an update to any existing job, the job details were retrieved for the job in the panel. This could cause performance issues in systems with many job updates. Now only changes to the job in the panel will cause the job details to be retrieved again.
-* When certain fields (e.g. the organization) were not filled in, it could occur that requests were sent to the database with an empty field, which would fail. To make sure such unnecessary requests are no longer sent, the ID will now be validated before a request is sent.
+- When the job edit panel was opened, whenever there was an update to any existing job, the job details were retrieved for the job in the panel. This could cause performance issues in systems with many job updates. Now only changes to the job in the panel will cause the job details to be retrieved again.
+- When certain fields (e.g. the organization) were not filled in, it could occur that requests were sent to the database with an empty field, which would fail. To make sure such unnecessary requests are no longer sent, the ID will now be validated before a request is sent.
 
 #### Compatibility with SRM framework [ID 43038]
 
