@@ -38,6 +38,19 @@ Microsoft .NET Framework 4.7.2
 > [!IMPORTANT]
 > We recommend always upgrading to the latest .NET Framework version.
 
+### Microsoft WebView2
+
+WebView2 is available for all operating systems listed above.
+
+The most recent versions of Windows all come with WebView2 Runtime pre-installed.
+
+However, less recent versions of Windows might require installing WebView2 Runtime manually. (https://developer.microsoft.com/en-us/microsoft-edge/webview2/consumer/)
+
+> [!NOTE]
+>
+> - From DataMiner Cube 10.5.9 onwards<!--RN 43429-->, WebView2 is mandatory and Chromium is no longer available.
+> - Installing WebView2 might require a reboot before it can be used.
+
 ### Skyline certificates
 
 To install the Skyline certificates:
