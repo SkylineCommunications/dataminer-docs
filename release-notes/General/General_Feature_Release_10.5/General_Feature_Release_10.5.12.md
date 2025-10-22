@@ -37,11 +37,13 @@ When a DataMiner upgrade is being performed, from now on, the new *VerifyOSVersi
 > [!NOTE]
 > Microsoft no longer supports OS versions older than Windows Server 2016 or Windows 10. Hence, these versions will not pass the above-mentioned OS version check.
 
-#### User-defined APIs: New ResponseHeaders property [ID 43705]
+#### User-defined APIs: New ResponseHeaders property [ID 43705] [ID 43960]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
 In the `ResponseHeaders` property of the `ApiTriggerOutput` class, you can now specify the HTTP headers that will be added to the response.
+
+Also, the `ApiTriggerOutput` class now allows you to override the contents of the Content-Type header, which is set to "application/json" by default.
 
 Currently, the following headers are blocked, and will result in an error if you try to set them:
 

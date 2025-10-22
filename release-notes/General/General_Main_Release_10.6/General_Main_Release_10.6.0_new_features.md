@@ -1191,11 +1191,13 @@ This new filter box should only be used when no new messages will be added to th
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### User-defined APIs: New ResponseHeaders property [ID 43705]
+#### User-defined APIs: New ResponseHeaders property [ID 43705] [ID 43960]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
 In the `ResponseHeaders` property of the `ApiTriggerOutput` class, you can now specify the HTTP headers that will be added to the response.
+
+Also, the `ApiTriggerOutput` class now allows you to override the contents of the Content-Type header, which is set to "application/json" by default.
 
 Currently, the following headers are blocked, and will result in an error if you try to set them:
 
