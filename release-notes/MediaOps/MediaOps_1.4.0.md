@@ -4,6 +4,11 @@ uid: MediaOps_1.4.0
 
 # MediaOps 1.4.0
 
+## Prerequisites
+
+* DataMiner version 10.5.9 or higher
+* [GQI DxM](xref:GQI_DxM)
+
 ## New features
 
 #### Scheduling: Creating a job in the tentative state [ID 43448]

@@ -4,6 +4,11 @@ uid: MediaOps_1.3.2
 
 # MediaOps 1.3.2
 
+## Prerequisites
+
+* DataMiner version 10.5.7 or higher
+* [GQI DxM](xref:GQI_DxM)
+
 ## Changes
 
 ### Fixes
