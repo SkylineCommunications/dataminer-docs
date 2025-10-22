@@ -199,3 +199,11 @@ Also, it would not be possible to rename swarmed elements or elements migrated v
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 When connected to a system without an indexing database, up to now, DataMiner Cube would incorrectly attempt to retrieve Catalog package information for automation scripts. From now on, it will only do so when connected to a system with an indexing database.
+
+#### Changing the protocol version of an element would incorrectly affect the element's 'Skip SSL/TLS certificate verification (insecure)' connection options [ID 43932]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When, in DataMiner Cube, you changed the protocol version of an element that had connections of which the *Skip SSL/TLS certificate verification (insecure)* option was enabled, up to now, this option would incorrectly no longer be enabled.
+
+From now on, changing the protocol version of an element will no longer affect any *Skip SSL/TLS certificate verification (insecure)* options.
