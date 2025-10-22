@@ -7,6 +7,12 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.3.5
+
+#### Fix - AgentId property of DmsAutomationScriptRunOptions ignored when executing a script [ID 43923]
+
+When executing an Automation script via DmsAutomationScript, the AgentId specified in DmsAutomationScriptRunOptions was not applied when constructing the SLNet message, causing the script to run on the default/incorrect Agent. This has been corrected so that the specified AgentId is now respected.
+
 ### 1.1.3.4
 
 #### New feature - Added TryParse methods to DmsElementId and DmsServiceId structs [ID 43535]
