@@ -34,7 +34,7 @@ namespace Skyline.DataMiner.Automation
         /// engine.OnDestroy += (sender, args) => { var e = sender as Engine; e.Log($"Script finished with success ? {args.ScriptSucceed}"); };
 		/// </code>
         /// </example>
-        public event EventHandler<ScriptEventArgs> OnDestroy;
+        public event EventHandler<DestroyEventArgs> OnDestroy;
 
         /// <summary>
         /// Gets the instance ID.

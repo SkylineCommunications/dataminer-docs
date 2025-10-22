@@ -27,7 +27,7 @@ namespace Skyline.DataMiner.Automation
         /// engine.OnDestroy += (sender, args) => { var e = sender as IEngine; e.Log($"Script finished with success ? {args.ScriptSucceed}"); };
 		/// </code>
         /// </example>
-        event EventHandler<ScriptEventArgs> OnDestroy;
+        event EventHandler<DestroyEventArgs> OnDestroy;
 
         /// <summary>
         /// Acknowledges the specified alarm tree using the provided comment message.
