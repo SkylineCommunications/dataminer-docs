@@ -245,3 +245,9 @@ When, in a dashboard or a low-code app, a *Time range* component had a relative 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 In client applications like DataMiner Cube, up to now, embedded video thumbnails would no longer work.
+
+#### DataMiner web apps authentication page: Header could keep on loading indefinitely [ID 43978]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+In some cases, the header of the DataMiner web apps authentication page would keep on loading indefinitely.
