@@ -12,7 +12,7 @@
     <PackageReference Include="Skyline.DataMiner.Core.AppPackageInstaller" Version="3.1.1" />
     <PackageReference Include="Skyline.DataMiner.Core.AppPackageInstaller.SRM" Version="3.1.1" />
     <PackageReference Include="Skyline.DataMiner.Core.DataMinerSystem.Automation" Version="1.1.3.5" />
-    <PackageReference Include="Skyline.DataMiner.Core.DataMinerSystem.Protocol" Version="1.1.3.3" />
+    <PackageReference Include="Skyline.DataMiner.Core.DataMinerSystem.Protocol" Version="1.1.3.5" />
     <PackageReference Include="Skyline.DataMiner.Core.InterAppCalls.Common" Version="1.1.1.1" />
     <PackageReference Include="Skyline.DataMiner.Core.Matrix.Protocol" Version="1.1.0.3" />
     <PackageReference Include="Skyline.DataMiner.Core.Scheduler.Automation" Version="1.0.1-Alpha5" />
