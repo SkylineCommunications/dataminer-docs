@@ -7,6 +7,12 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### ? October 2025 - Fix - DataAPI 1.4.1 - Issue with fetching of auto-generated elements and connectors at startup [ID 44000]
+
+It could occur that DataAPI would crash at startup if an exception was thrown during the NATS communication. 
+
+Now the startup procedure is made more robust to properly handle the NATS/MessageBroker exceptions.
+
 ### 3 October 2025 - New feature - DataAPI 1.4.0 - Added support for history sets [ID 43666]
 
 Data API has been extended to allow users to specify a date and time for history sets, with an **optional header** called **historySet**.
