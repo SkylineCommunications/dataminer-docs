@@ -8,7 +8,7 @@ For SNMPv3 connections, you can specify the following connection settings while 
 
 - **SNMP version**: Allows you to select a different SNMP version than the version configured in the protocol. With an SNMPv3 type protocol, you can select SNMPv2 or SNMPv3.
 
-- **Site**: The remote site. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the Site Manager DxM is installed and remote sites are configured. For more information, refer to [Site Manager](xref:SiteManagerOverview).
+- **Site**: The remote site. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the SiteManager DxM is installed and remote sites are configured. For more information, refer to [Site Manager](xref:SiteManagerOverview).
 
 - **IP address/host**: The polling IP or URL of the destination.
 
