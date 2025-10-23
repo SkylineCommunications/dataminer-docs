@@ -395,3 +395,9 @@ When an element that had been swarmed or migrated by means of a DELT package was
 - `The fixed value (%g) is invalid. It is higher than nominal value (%g), and in the lower range. This value will not be used for alarm creation.`
 
 These notices will now be generated again.
+
+#### Automation script matrix actions related to swarmed or migrated elements could fail [ID 43971]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, after elements had been swarmed or migrated by means of a DELT package, in some cases, Automation script matrix actions associated with those elements could fail.
