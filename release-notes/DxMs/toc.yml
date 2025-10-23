@@ -22,5 +22,7 @@ items:
     href: ModelHost/toc.yml
   - name: Orchestrator release notes
     topicUid: orchestrator_change_log
+  - name: Site Manager release notes
+    topicUid: SiteManager_change_log
   - name: Support Assistant release notes
     topicUid: supportassistant_change_log

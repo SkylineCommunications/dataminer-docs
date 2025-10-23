@@ -96,9 +96,11 @@ You can follow the steps below or watch this short video, which shows you how to
 
    - For a **WebSocket** connection, see [WebSocket connection](xref:WebSocket_Connection).
 
+   - For a connection from a DaaS Agent to a private data source via [Site Manager](xref:SiteManagerOverview), see [Creating an element that communicates with a data source through a tunnel](xref:SiteManagerGettingStarted#creating-an-element-that-communicates-with-a-data-source-through-a-tunnel).
+
 1. If the protocol is [configured to allow you to test the connection](xref:Protocol.Groups.Group-ping), optionally click the button *Test connection* below the connection you want to test.
 
-   After you click the button, a message will display the results of the test.
+   After you click the button, a message will display the results of the test. However, note that this button is not available for connections via [Site Manager](xref:SiteManagerOverview).
 
 1. Specify the timeout settings per connection:
 
