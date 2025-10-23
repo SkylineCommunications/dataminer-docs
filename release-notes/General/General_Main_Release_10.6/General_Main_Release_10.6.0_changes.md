@@ -515,6 +515,12 @@ In the BPA test *DataMiner Agent Minimum Requirements*, the following minimum ha
 
 When a client application retrieves information about time-scoped related parameters using the `GetTimeScopedRelationsMessage`, from now on, exceptions will be thrown when that message is sent with incorrect arguments (e.g. a non-existing parameter ID, an invalid time range, etc.).
 
+#### BrokerGateway uninstall will delete the entire C:\\ProgramData\\Skyline Communications\\DataMiner BrokerGateway\\ folder [ID 43985]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+From now on, when BrokerGateway is uninstalled, the entire `C:\ProgramData\Skyline Communications\DataMiner BrokerGateway\` folder will be deleted.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]

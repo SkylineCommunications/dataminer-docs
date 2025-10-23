@@ -298,6 +298,12 @@ The model fit score is derived from the evolution of anomaly scores over time fo
 
 When a client application retrieves information about time-scoped related parameters using the `GetTimeScopedRelationsMessage`, from now on, exceptions will be thrown when that message is sent with incorrect arguments (e.g. a non-existing parameter ID, an invalid time range, etc.).
 
+#### BrokerGateway uninstall will delete the entire C:\\ProgramData\\Skyline Communications\\DataMiner BrokerGateway\\ folder [ID 43985]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+From now on, when BrokerGateway is uninstalled, the entire `C:\ProgramData\Skyline Communications\DataMiner BrokerGateway\` folder will be deleted.
+
 ### Fixes
 
 #### Parameter or DCF information would become unavailable to remotely hosted elements after a DataMiner connection had been re-established [ID 43765]
