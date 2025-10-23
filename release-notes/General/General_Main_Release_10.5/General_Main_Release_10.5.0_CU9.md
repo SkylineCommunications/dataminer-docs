@@ -111,6 +111,12 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### BrokerGateway uninstall will delete the entire C:\\ProgramData\\Skyline Communications\\DataMiner BrokerGateway\\ folder [ID 43985]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+From now on, when BrokerGateway is uninstalled, the entire `C:\ProgramData\Skyline Communications\DataMiner BrokerGateway\` folder will be deleted.
+
 ### Fixes
 
 #### Parameter or DCF information would become unavailable to remotely hosted elements after a DataMiner connection had been re-established [ID 43765]

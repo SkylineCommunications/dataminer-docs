@@ -300,7 +300,7 @@ When a client application retrieves information about time-scoped related parame
 
 #### BrokerGateway uninstall will delete the entire C:\\ProgramData\\Skyline Communications\\DataMiner BrokerGateway\\ folder [ID 43985]
 
-<!-- MR 10.6.0 - FR 10.5.12 -->
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
 
 From now on, when BrokerGateway is uninstalled, the entire `C:\ProgramData\Skyline Communications\DataMiner BrokerGateway\` folder will be deleted.
 
