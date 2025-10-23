@@ -93,7 +93,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The name of the triggered script.</value>
 		/// <remarks>
-		/// <para>Feature introduced in DataMiner 10.5.12 (RN 43840).</para>
+		/// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43840).</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -177,6 +177,21 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		public string UserLoginName { get; }
+
+		/// <summary>
+		/// Gets or sets the web interactive Automation script UI version.
+		/// </summary>
+		/// <value>The version of the web interactive Automation script UI.</value>
+		/// <remarks>
+		/// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43875).</para>
+		/// <para>The WebUIVersion is set to 'Default' by default. At present, this means that the old UI (V1) is used. You can instead set this to 'V2' to show the new UI or to 'V1' to make sure the old UI will continue to be used even if the default behavior changes.</para>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// engine.WebUIVersion= WebUIVersion.V2;
+		/// </code>
+		/// </example>
+		public WebUIVersion WebUIVersion { get; set; }
 
 		/// <summary>
 		/// Acknowledges the specified alarm tree using the provided comment message.
