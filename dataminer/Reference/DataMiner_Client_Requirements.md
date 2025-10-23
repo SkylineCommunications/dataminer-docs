@@ -40,16 +40,12 @@ Microsoft .NET Framework 4.7.2
 
 ### Microsoft WebView2
 
-WebView2 is available for all operating systems listed above.
+From DataMiner Cube 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43429-->, WebView2 must be installed. In earlier DataMiner versions, it is possible to use Chromium instead.
 
-The most recent versions of Windows all come with WebView2 Runtime pre-installed.
-
-However, less recent versions of Windows might require installing WebView2 Runtime manually. (https://developer.microsoft.com/en-us/microsoft-edge/webview2/consumer/)
+WebView2 is available for all [supported operating systems](#operating-system). The most recent versions of Windows all come with WebView2 Runtime pre-installed. However, for less recent versions of Windows, you may need to [install WebView2 Runtime manually](https://developer.microsoft.com/en-us/microsoft-edge/webview2/consumer/).
 
 > [!NOTE]
->
-> - From DataMiner Cube 10.5.9 onwards<!--RN 43429-->, WebView2 is mandatory and Chromium is no longer available.
-> - Installing WebView2 might require a reboot before it can be used.
+> After WebView2 is installed, a reboot may be needed before it can be used.
 
 ### Skyline certificates
 
