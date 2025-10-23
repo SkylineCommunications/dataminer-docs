@@ -215,3 +215,11 @@ When connected to a system without an indexing database, up to now, DataMiner Cu
 When, in DataMiner Cube, you changed the protocol version of an element that had connections of which the *Skip SSL/TLS certificate verification (insecure)* option was enabled, up to now, this option would incorrectly no longer be enabled.
 
 From now on, changing the protocol version of an element will no longer affect any *Skip SSL/TLS certificate verification (insecure)* options.
+
+#### DMA would incorrectly be added to a cluster when authentication had failed [ID 43977]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When, in DataMiner Cube, you try to add a DataMiner Agent to an existing cluster, you have to enter your user credentials.
+
+Up to now, in some cases, the DataMiner Agent would incorrectly be added to the cluster, even when authentication had failed.
