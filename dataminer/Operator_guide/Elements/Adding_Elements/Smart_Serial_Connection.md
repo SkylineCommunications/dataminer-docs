@@ -6,7 +6,7 @@ uid: Smart_Serial_Connection
 
 For smart-serial connections, you can specify the following connection settings while creating or editing an element:
 
-- **Site**: The remote site. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the Site Manager DxM is installed and remote sites are configured. For more information, refer to [Site Manager](xref:SiteManagerOverview). Note that a smart-serial element acting as a server is not supported on remote sites.
+- **Site**: The remote site. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the SiteManager DxM is installed and remote sites are configured. For more information, refer to [Site Manager](xref:SiteManagerOverview). Note that a smart-serial element acting as a server is not supported on remote sites.
 
 - **IP address/host**: The polling IP or URL of the destination.
 
