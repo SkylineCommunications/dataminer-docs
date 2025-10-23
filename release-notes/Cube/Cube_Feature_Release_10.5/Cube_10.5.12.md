@@ -152,6 +152,14 @@ In the Automation, Correlation, and Scheduler modules, you can generate a report
 
 Throughout the DataMiner Cube UI, 'Automatic incident tracking' has now been renamed to 'Alarm grouping'.
 
+#### Alarm Console: Recursive loop detection in alarm trees [ID 43914]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+From now on, when alarms have been removed from alarm trees or when correlation base alarms have been added, DataMiner Cube will check whether there are loops in the alarm tree, i.e. whether the alarm tree contains any alarms that refer to themselves.
+
+When a correlation alarm loop is detected, the following error will be added to the Cube logging and to SLClient.txt: "Cube Correlation nested alarm loop detected!"
+
 #### Enhanced message box saying that an element that is part of a redundancy group or a service included in an SLA cannot be deleted [ID 43925]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
