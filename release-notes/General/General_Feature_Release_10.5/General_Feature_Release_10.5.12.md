@@ -402,6 +402,12 @@ Up to now, when DataMiner Cube was running as a service within the SLHelper proc
 
 From now on, regardless of whether DataMiner Cube can retrieve its own user settings, it will load the common server settings from `C:\Skyline DataMiner\users\ClientSettings.json`.
 
+#### Outdated SLAnalytics icons would incorrectly remain visible for too long because of SLNet caching issues [ID 43957]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+Up to now, because of SLNet caching issues, in client applications like e.g. DataMiner Cube, outdated SLAnalytics icons would incorrectly remain visible for too long.
+
 #### Notices regarding incorrect baseline values would no longer be generated when an element was started after being swarmed or migrated [ID 43970]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->

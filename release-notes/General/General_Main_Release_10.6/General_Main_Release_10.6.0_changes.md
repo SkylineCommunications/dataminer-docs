@@ -600,3 +600,9 @@ From now on, when you try to install Alerter, it will check whether Microsoft .N
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
 On systems with a Cassandra cluster database in combination with an OpenSearch indexing database, cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube.
+
+#### Outdated SLAnalytics icons would incorrectly remain visible for too long because of SLNet caching issues [ID 43957]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+Up to now, because of SLNet caching issues, in client applications like e.g. DataMiner Cube, outdated SLAnalytics icons would incorrectly remain visible for too long.
