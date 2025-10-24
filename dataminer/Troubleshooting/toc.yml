@@ -300,6 +300,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Scrollbars not shown in web apps
+            topicUid: KI_Scrollbars_not_shown_in_web_apps
           - name: SLDataGateway memory leak caused by excessive Cassandra query timeout
             topicUid: KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout
           - name: SLProtocol RTE because of element stuck in slow poll mode
