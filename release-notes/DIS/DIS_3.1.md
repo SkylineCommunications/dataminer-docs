@@ -4,6 +4,16 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.14
+
+### New features
+
+#### IDE
+
+##### no-restore option will now be passed to the process that will create an Automation script application package [ID 44007]
+
+From now on, the `no-restore` option will be added as an additional argument when spawning the process that will create an Automation script application package (dmapp) via the dotnet build operation.
+
 ## DIS 3.1.13
 
 ### Fixes
@@ -14,7 +24,7 @@ uid: DIS_3.1
 
 In some cases, a `MissingMethodException` could be thrown while publishing an Automation script that uses the DataMiner SDK.
 
-From now on, the publish operation will be performed in a dedicated process to avoid any interference with NuGet packages already loaded in by Visual Studio.
+From now on, the application package (dmapp) creation will be performed in a dedicated process to avoid any interference with NuGet packages already loaded in by Visual Studio.
 
 ## DIS 3.1.12
 
