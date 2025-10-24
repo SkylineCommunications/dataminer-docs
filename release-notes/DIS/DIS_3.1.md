@@ -6,13 +6,13 @@ uid: DIS_3.1
 
 ## DIS 3.1.14
 
-### New Feature
+### New features
 
 #### IDE
 
-##### no restore option passed to process for creating the Automation script application package [ID 44007]
+##### no-restore option will now be passed to the process that will create an Automation script application package [ID 44007]
 
-From now on, the "no-restore" option has been added as an additional argument when spawning the process that will create the application package (dmapp) through the dotnet build operation.
+From now on, the `no-restore` option will be added as an additional argument when spawning the process that will create an Automation script application package (dmapp) via the dotnet build operation.
 
 ## DIS 3.1.13
 
