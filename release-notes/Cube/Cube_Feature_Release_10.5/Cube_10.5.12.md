@@ -216,6 +216,12 @@ When, in DataMiner Cube, you changed the protocol version of an element that had
 
 From now on, changing the protocol version of an element will no longer affect any *Skip SSL/TLS certificate verification (insecure)* options.
 
+#### Profiles: Profile parameters would incorrectly be marked as modified when their discrete values were not sorted alphabetically [ID 43965]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When, in DataMiner Cube, you opened the Profiles module, profile parameters with discrete values that were not sorted alphabetically would incorrectly be marked as modified.
+
 #### DMA would incorrectly be added to a cluster when authentication had failed [ID 43977]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
