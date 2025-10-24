@@ -509,6 +509,27 @@ In the BPA test *DataMiner Agent Minimum Requirements*, the following minimum ha
 | System memory            | 32 GB   | 16 GB   |
 | Size of main disk (C:\\) | 300 GB  | 128 GB  |
 
+#### SLNet/SLDataGateway: Repository read and upsert requests for ReservationInstance objects will now be sent over NATS [ID 43918]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+Read and upsert requests for reservation instances from SLNet to SLDataGateway will now be sent over NATS.
+
+Also, all messages exchanged between SLNet and SLDataGateway will now be stored in a new log file named *SLRepositoryRequests.txt*. The log entries will have the following format:
+
+`[<request id>] [<operation context (when logged in SLNet)>] <message>`
+
+Each request will have four log entries:
+
+- An entry added when the request has left SLNet.
+- An entry added when the request has arrived in SLDataGateway.
+- An entry added when SLDataGateway has handled the request.
+- An entry added when the reply has arrived in SLNet.
+
+All above-mentioned entries will have log level 6. However, if the request took more than 1s, the fourth log entry will have log level 0.
+
+In addition, a number of enhancements have been made to increase overall performance when writing data to the database.
+
 #### Time-scoped relation learning: Exceptions will now be thrown when sending a GetTimeScopedRelationsMessage with incorrect arguments [ID 43963]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
