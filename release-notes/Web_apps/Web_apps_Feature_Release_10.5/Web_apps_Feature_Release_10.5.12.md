@@ -40,6 +40,15 @@ For a user to be able to see and click this new menu item, the following conditi
 - The user must have *Modules > System configuration > Security > Specific > Limited administrator* permission.
 - The user must not be logged in with external or delegated authentication.
 
+#### New GQI data source: Get relational anomalies [ID 43820]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+In the Generic Query Interface, a new *Get relational anomalies* data source is now available. It will return all relational anomalies in the DMS.
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.6.0/10.5.12 or newer.
+
 #### Interactive Automation scripts executed in a web app: UI version can now be set in the script [ID 43964]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
@@ -217,6 +226,12 @@ Up to now, the parameter filter that was used when checking whether or not a par
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 When a *Search input* component had its *Emit value on* option set to "Value change", up to now, it would not pass an empty value when its value was cleared after the default selection had been (re)applied.
+
+#### Dashboards/Low-Code Apps: Problem when applying a time range when using the 'Get behavioral change events' or 'Get pattern occurrence events' data sources [ID 43821]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+When, in e.g. a Table component, a specific time range was applied when listing behavioral changes or pattern occurrences using the *Get behavioral change events* or *Get pattern occurrence events* data sources, in some cases, an error message could appear, saying that the time range was not in UTC format. Also, the time range would not be displayed correctly.
 
 #### Dashboards/Low-Code Apps - Time range component: Problem when scheduling the PDF generation of dashboard reports using a relative timespan [ID 43828]
 
