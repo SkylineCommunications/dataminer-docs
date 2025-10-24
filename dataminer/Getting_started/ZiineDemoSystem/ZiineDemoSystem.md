@@ -15,6 +15,8 @@ Watch the video below for a quick overview of how to request access, connect to 
   </video>
 </div>
 
+*Note that some apps shown in this video are not available to external users.*
+
 ## Requesting access to Ziine
 
 To access the Ziine Demo System:
