@@ -7,6 +7,14 @@ description: Use the Ziine Demo System to explore DataMiner features in a functi
 
 The Ziine Demo System allows you to explore many different DataMiner features in a functioning DataMiner System. This includes the standard DataMiner monitoring and Visual Overview features, and also several DataMiner Solutions and standard apps.
 
+Watch the video below for a quick overview of how to request access, connect to Ziine, and get started. You can also follow the detailed steps on this page.
+
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/dataminer/images/Ziine.mp4" type="video/mp4">
+  </video>
+</div>
+
 ## Requesting access to Ziine
 
 To access the Ziine Demo System:
