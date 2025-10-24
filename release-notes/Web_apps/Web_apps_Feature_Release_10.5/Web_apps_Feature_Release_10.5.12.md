@@ -289,6 +289,12 @@ In client applications like DataMiner Cube, up to now, embedded video thumbnails
 
 #### DataMiner web apps authentication page: Header could keep on loading indefinitely [ID 43978]
 
-<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 In some cases, the header of the DataMiner web apps authentication page would keep on loading indefinitely.
+
+#### Web apps: Scrollbar would not always appear when you hovered the mouse pointer over a scrollable container [ID 43996]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When a DataMiner web app contains a scrollable container, a scrollbar should be shown when the user hovers the mouse pointer over that container. However, after a Chrome upgrade to version 139 or higher, this behavior was no longer consistent.
