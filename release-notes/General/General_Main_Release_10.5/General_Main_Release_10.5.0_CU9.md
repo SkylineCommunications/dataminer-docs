@@ -111,6 +111,17 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### QActions: Variables will now also be logged when a NotifyProtocol call fails [ID 43967]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+When SLScripting executes a NotifyProtocol call, this can potentially lead to issues in SLProtocol when the variables are not in the correct format. Entries like `NotifyProtocol with xxx failed. 0x800xxxxx` can then appear in the error logging.
+
+As entries like the one mentioned above make it hard to investigate exactly why a NotifyProtocol call has failed, from now on, these log entries will also include the values of the variables that were used in the NotifyProtocol call.
+
+> [!NOTE]
+> When a NotifyProtocol call returns a `0x800706BA, RPC_S_SERVER_UNAVAILABLE` error, that means that the SLProtocol process was not active and that the NotifyProtocol call was not the cause of the issue. Therefore, the values of the variables will not be included with this specific error is thrown.
+
 #### BrokerGateway uninstall will delete the entire C:\\ProgramData\\Skyline Communications\\DataMiner BrokerGateway\\ folder [ID 43985]
 
 <!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
