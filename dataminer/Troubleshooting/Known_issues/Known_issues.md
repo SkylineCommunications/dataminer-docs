@@ -248,6 +248,7 @@ uid: Known_issues
 | [Migration of Ticketing data from Cassandra to Elasticsearch fails](xref:KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails) | From DataMiner 10.1.0/10.0.13 onwards | | - |
 | [DataMiner Cube freeze on startup](xref:KI_DataMiner_Cube_freeze_on_startup) | N/A | | - |
 | [Setting a protocol to production takes a long time](xref:KI_Setting_a_protocol_to_production_takes_a_long_time) | N/A | | - |
+| [Scrollbars not shown in web apps](xref:KI_Scrollbars_not_shown_in_web_apps) | DataMiner web apps on Chrome v139 or higher | DataMiner web 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | October 24, 2025 |
 | [SLScripting crash when using JScript QActions](xref:KI_SLScripting_crash_JScript_QActions) | DataMiner Systems running on Windows 11 24H2 | N/A | March 20, 2025 |
 | [DIS unable to connect to DataMiner Agent](xref:KI_DIS_unable_to_connect) | DIS 3.1.6 | DIS 3.1.7 | March 12, 2025 |
 | [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
