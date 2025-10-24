@@ -296,11 +296,11 @@ Up to now, in a *Table* component, the *Is selected* template override would onl
 
 When, in a dashboard or a low-code app, a *Time range* component had a relative time span set (e.g. "Today so far") and was linked to a *Trigger* component, up to now, the *Time range* component would incorrectly no longer update its relative time span when the *Trigger* component ordered it to do so after a reload of the dashboard or a page switch in the low-code app.
 
-#### Problem with embedded video thumbnails [ID 43973]
+#### Problem with embedded VLC player [ID 43973]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-In client applications like DataMiner Cube, up to now, embedded video thumbnails would no longer work.
+In client applications like DataMiner Cube, the embedded VLC player would no longer work.
 
 #### DataMiner web apps authentication page: Header could keep on loading indefinitely [ID 43978]
 
