@@ -237,7 +237,7 @@ When used, these methods return a list of `PartialObject<DomInstance, DomInstanc
 Retrieving values — behavior summary
 
 - Multiple values: use `GetValues<T>` / `TryGetValues<T>` to obtain a `List<T>`. `GetValues<T>` throws `InvalidOperationException` if the values are not of type `T`; `TryGetValues<T>` returns `false` in that case.
-- Single value: use `GetValue<T>` / `TryGetValue<T>` for single-valued fields. `GetValue<T>` throws `InvalidOperationException` if the value is not of type `T`; `TryGetValue<T>` returns `false`.
+- Single value: use `GetValue<T>` / `TryGetValue<T>` for single-valued fields. `GetValue<T>` throws `InvalidOperationException` if the value is not of type `T` or when there are multiple values available for that field descriptor; `TryGetValue<T>` returns `false`.
 - No value available: `GetValue<T>` returns `default(T)` (equivalent to an empty list for list types); `TryGetValue<T>` returns `false`; `GetValues<T>` returns `null`; `TryGetValues<T>` returns `false`.
 
 > [!IMPORTANT]
