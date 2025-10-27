@@ -82,11 +82,13 @@ The offload rate for trend data and alarm data can be configured in System Cente
 
    - If all previous values should be removed from the database each time a new snapshot is offloaded, make sure the option *Only keep the latest parameter value in the database* is selected. If this option is not selected, all values will be kept.
 
-     > [!NOTE]
-     > This option corresponds with the `clean="true"` configuration in the *Offload* tag in *DB.xml*. If it is activated, DataMiner will truncate the data table in the offload database before new information is added. This way, the table always contains the latest snapshot information only.
+     This option corresponds with the `clean="true"` configuration in the *Offload* tag in *DB.xml*. If it is activated, DataMiner will truncate the data table in the offload database before new information is added. This way, the table always contains the latest snapshot information only.
 
    > [!TIP]
    > In an information template, you can configure specific parameters to be included in offload database snapshots. See [Creating an information template](xref:Creating_an_information_template).
+
+> [!NOTE]
+> When real-time or average trending is offloaded, and there are more than 10&nbsp;000 lines to write to an offload file, so that multiple offload files need to be generated per second, these files will have a different name format from other offload files. While usually offload file names refer to a date and time, those files will instead refer to a specific time tick. This is necessary to prevent name conflicts when multiple files are generated per second. Aside from the different name format, these files are the same as other offload files.
 
 ## Disabling data offloads to the offload database on element level
 
