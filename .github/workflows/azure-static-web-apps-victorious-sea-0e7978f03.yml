@@ -34,7 +34,7 @@ jobs:
       - name: Zip artifact for deployment
         run: Compress-Archive -Path _site/* -DestinationPath .\_site.zip
       - name: Publish results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: release
           path: _site.zip
