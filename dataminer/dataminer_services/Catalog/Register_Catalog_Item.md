@@ -73,6 +73,11 @@ file: <the zip file containing manifest, README and optional images>
 > [!NOTE]
 > To reference images in the README.md file, you can use the home directory (~/images) or relative path syntax (./images).
 
+> [!IMPORTANT]
+>
+> - Limitations apply for the maximum file size of packages and vendor/icon images. See [Best practices when creating Catalog items](xref:Best_Practices_When_Creating_Catalog_Items#keep-the-limitations-in-mind)
+> - Only the following formats are supported for vendor/icon images: .jpg, .jpeg, .png, .bmp, .webp, .svg
+
 #### Manifest file
 
 This file will contain all the necessary information to register a Catalog item with a version. This manifest file should be a valid .yml file and will contain "required" and "optional" attributes to add extra information to the Catalog item. Note that limitations may apply to certain attributes based on length or formatting.
@@ -211,6 +216,6 @@ versionDescription: <The description of the version you want to register>
 
 > [!NOTE]
 >
-> - Supported types are a DataMiner protocol package (.dmprotocol) and a DataMiner application package (.dmapplication).
+> - Supported types are a DataMiner protocol package (.dmprotocol) and a DataMiner application package (.dmapplication), with a maximum file size of **250 MB**.
 > - The version description must not exceed 1500 characters. The call will fail with a `Bad Request` error if the length exceeds the maximum allowed limit.<!-- RN 40956 -->
 > - Versions following semantic version A.B.C.D will be displayed in an A.B.C range, versions following semantic version A.B.C will be displayed in an A range, and all other version formats will be displayed in the "Other" range.<!-- RN 41225 -->

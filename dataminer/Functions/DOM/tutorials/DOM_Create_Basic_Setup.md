@@ -149,7 +149,7 @@ namespace Tutorial
 
 Create a low-code app to visualize your DOM setup:
 
-1. Create a low-code app as detailed under [Creating low-code applications](xref:Creating_custom_apps).
+1. Create a low-code app as detailed under [Creating apps](xref:Creating_custom_apps).
 
 1. Drag the DOM definition onto the canvas: *"Object Manager Definitions" > "people_app" > "PersonDomDefinition"*.
 

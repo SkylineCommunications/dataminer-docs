@@ -187,11 +187,11 @@ In the Automation app, it is now possible to change the casing of a script name.
 
 Also, if you change the casing of a script name that was selected, it will remain selected.
 
-#### Alarm Console: A run-time error will now appear when the Resource Manager failed to initialize [ID 34024]
+#### Alarm Console: A runtime error will now appear when the Resource Manager failed to initialize [ID 34024]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-From now on, the following run-time error will appear in the Alarm Console when the Resource Manager failed to initialized.
+From now on, the following runtime error will appear in the Alarm Console when the Resource Manager failed to initialized.
 
 ```txt
 An unexpected exception has occurred while initializing Resource Manager. Please check the SLResourceManager logging for more information.

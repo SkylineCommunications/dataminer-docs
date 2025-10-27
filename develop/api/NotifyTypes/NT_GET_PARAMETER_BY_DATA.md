@@ -33,4 +33,4 @@ else
 ## Remarks
 
 - The [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) interface defines a wrapper method [GetParameterByData](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameterByData(System.String)) for this call.
-- This Notify type is **deprecated** since DataMiner 10.3.4.
+- This Notify type is **deprecated** since DataMiner 10.3.4.<!-- RN 33625 -->

@@ -125,3 +125,13 @@ From now on, when the API connection was closed, it will automatically be re-est
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 When a trend graph was displayed in a visual overview, in some cases, the graph would be partially covered by the anomalies bar.
+
+#### Automation: Problem when sending messages related to unsupported features to the DataMiner Agent via gRPC [ID 43756]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 [CU0] -->
+
+When DataMiner Cube sends messages related to unsupported Automation features to a DataMiner Agent, deserialization exceptions are thrown in SLNet.
+
+Up to now, those exceptions would not get processed correctly when the unsupported messages were sent over a gRPC connection, causing DataMiner Cube to get stuck while waiting for a response that would never arrive.
+
+From now on, DataMiner Cube will no longer send messages related to an unsupported Automation feature to a DataMiner Agent if it knows the DataMiner Agent does not support the feature in question.

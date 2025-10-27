@@ -144,9 +144,9 @@ An error similar to the following was displayed:
 Reservation Action failed due to: Skyline.DataMiner.Library.Exceptions.ResourceManagerTraceDataException: Failed to remove Reservation named 'bb' from quarantine
 ```
 
-#### Life cycle contributing booking changed upon change to life cycle main booking \[ID 30871\]
+#### Lifecycle contributing booking changed upon change to lifecycle main booking \[ID 30871\]
 
-When the life cycle of a main booking was updated, it could occur that the life cycle of a contributing booking was also updated, even though this should not happen.
+When the lifecycle of a main booking was updated, it could occur that the lifecycle of a contributing booking was also updated, even though this should not happen.
 
 #### SRM_BookingActions script used incorrect script to apply custom action \[ID 30941\]
 

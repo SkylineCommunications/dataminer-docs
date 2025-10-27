@@ -54,6 +54,9 @@ uid: solution_index
 
 <div class="row"> 
   <div class="column">
+    <a href="/solutions/product_solutions/NetInsight_Nimbra_Vision/00_netinsight-nimbra-vision.html" title="NetInsight Nimbra Vision app" target="_self"><img src="~/solutions/images/NetInsight_Nimbra_Vision.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
     <a href="/solutions/product_solutions/TAG/TAG_Overview.html" title="Tag Management app" target="_self"><img src="~/solutions/images/Tag_Management.svg" style="width:100%"></a>
   </div>
   <div class="column">
@@ -69,6 +72,9 @@ uid: solution_index
   </div>
   <div class="column">
     <a href="/solutions/devtools/Performance_Analyzer/Performance_Analyzer.html" title="Performance Analyzer" target="_self"><img src="~/solutions/images/performance_analyzer.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/solutions/devtools/Dom_Viewer/domviewer_about.html" title="DOM Viewer" target="_self"><img src="~/solutions/images/DOM_Viewer.svg" style="width:100%"></a>
   </div>
 </div>
 
@@ -94,3 +100,18 @@ uid: solution_index
     <a href="/solutions/custom_solutions/Vecima_Remote_PHY_Monitor/Remote_PHY_Monitoring.html" title="Remote PHY Monitoring" target="_self"><img src="~/solutions/images/Remote_PHY_Monitoring.svg" style="width:100%"></a>
   </div>
 </div>
+
+<style>
+.column a {
+  display: inline-block;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.column a:hover {
+  background-color: #f0f4ff; /* light background on hover */
+  transform: scale(1.05);   /* slightly bigger */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+</style>

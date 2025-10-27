@@ -66,7 +66,7 @@ Make a backup of your DataMiner Agent using DataMiner Taskbar Utility or DataMin
 
 If you are upgrading to another major version that does not immediately follow your current version, always follow this general guideline:
 
-**Upgrade to the next major DataMiner version(s) before upgrading to your preferred version**.
+**Upgrade to the latest Cumulative Update (CU) of the next major DataMiner version(s) before upgrading to your preferred version**.
 
 ![Upgrading across major versions](~/dataminer/images/Upgrading_across_major_versions.png)
 
@@ -160,6 +160,8 @@ The following prerequisite checks are currently available:
 - [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed): Verifies whether the obsolete *APIDeployment* [soft-launch option](xref:SoftLaunchOptions) is enabled and obsolete APIs are deployed. From DataMiner 10.4.0 onwards<!--RN 37825-->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Verify No Amazon Keyspaces](xref:Verify_No_Amazon_Keyspaces): Verifies whether the DataMiner Agent is using the Amazon Keyspaces Service on AWS as a Cassandra-compatible database service, which is no longer supported as of DataMiner 10.3.0 [CU8]/10.3.11. From DataMiner 10.5.0/10.5.3 onwards<!--RN 41914-->, this prerequisite is available by default and runs automatically when you upgrade.
+
+- [Verify OS Version](xref:Verify_OS_Version): Verifies whether the DataMiner version in the upgrade package supports the version of the operating system that is installed on the DataMiner Agent. From DataMiner 10.5.12/10.6.0 onwards<!--RN 43356-->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Service Automatic Properties](xref:BPA_Service_Automatic_Properties): Verifies whether the installed SRM framework version is up to date. From DataMiner 10.2.3/10.3.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 

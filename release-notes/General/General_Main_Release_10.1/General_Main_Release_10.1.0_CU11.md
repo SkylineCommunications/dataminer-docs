@@ -204,7 +204,7 @@ In some cases, an error could occur in SLProtocol when trying to parse data rece
 
 #### Problem with SLDataMiner when a trigger to reload service settings was delayed & memory leak in SLElement \[ID 31711\]
 
-When a trigger to reload service settings was delayed, in some cases, a run-time error could occur in the service thread of SLDataMiner.
+When a trigger to reload service settings was delayed, in some cases, a runtime error could occur in the service thread of SLDataMiner.
 
 Also, SLElement could leak memory when services were configured with a delayed trigger or a redundancy condition that persisted for a period of time.
 
@@ -290,7 +290,7 @@ In some cases, scheduled tasks configured to take a DataMiner backup, optimize t
 
 #### Visual Overview: Hidden pages of an embedded Visio file would incorrectly be displayed when viewed in a web app \[ID 31881\]
 
-When an embedded multi-page Visio file with hidden pages was viewed in a web app, the hidden pages would incorrectly be displayed.
+When an embedded multipage Visio file with hidden pages was viewed in a web app, the hidden pages would incorrectly be displayed.
 
 #### Elements of which the second port was incorrectly configured would no longer start up \[ID 31882\]
 

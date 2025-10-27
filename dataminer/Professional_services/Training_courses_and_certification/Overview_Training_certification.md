@@ -166,7 +166,7 @@ To prepare effectively for the exam:
   
   - System Library:
     - [Introduction video to DIS Class Library](https://community.dataminer.services/courses/dataminer-automation/lessons/dataminer-integration-studio-dis-class-library/)
-    - [Class library introduction on DataMiner Docs](xref:ClassLibraryIntroduction)
+    - [About the class library](xref:ClassLibraryIntroduction)
     - [Class library examples](xref:ClassLibraryExamples)
 
 - Schedule check-ins with your examiner via the booking page if you have any questions.
@@ -295,3 +295,14 @@ Three months before the expiration of your certification, you will receive an em
 Recertification involves a verbal exam or assignment designed to assess knowledge of updates and advancements in DataMiner since your initial certification. The exam ensures that your expertise remains up to date with the latest developments.
 
 Upon successful completion of the exam, your certification will be renewed for another three years, and you will receive an updated certification badge from Skyline Academy.
+
+### DataMiner Configurator certifications expiring in 2024, 2025, 2026, or 2027
+
+The recertification exam for DataMiner Configurator will focus on these topics:
+
+| Module | Course | Topics |
+|-----------|------------|------------|
+| DataMiner Fundamentals | [Module 01 - DataMiner Intro](https://community.dataminer.services/courses/dataminer-fundamentals/lessons/module-01-dataminer-intro/) | DataMiner intro <br>DataMiner as a Service<br> Self-managed with STaaS<br> dataminer.services |
+| DataMiner Configurator Level 1 | [Module 05 - Views, Services, and SLAs](https://community.dataminer.services/courses/dataminer-configurator/lessons/module-05-views-services-and-slas/) | SLAs |
+| DataMiner Configurator Level 2 | [Module 02 - Dashboards](https://community.dataminer.services/courses/dataminer-configurator/lessons/module-02-dashboards/)<br>[Module 03 - Low-Code Apps](https://community.dataminer.services/courses/dataminer-configurator/lessons/module-03-low-code-apps/)<br>[Module 05 - Automation Intro](https://community.dataminer.services/courses/dataminer-configurator/lessons/module-05-automation-intro/) | All |
+| DataMiner Sys Admin | [Module 02 - Scripted Connectors](https://community.dataminer.services/courses/dataminer-sysadmin/lessons/module-02-scripted-connectors/) | All |

@@ -56,7 +56,7 @@ The `DomInstanceNetworkAttachmentSettings` class contains the following properti
 >
 > - When a DOM module is configured to save attachments to a network share, the system will validate whether the user creating/updating the `ModuleSettings` has permission to access the credentials. Once this is set up, any user that has permissions to create or update a `DomInstance` can save attachments to the network share under the configured user.
 > - When a DOM module is configured to save attachments to a network share, no migration is done of existing attachments. They will continue to exist in the `C:\Skyline DataMiner\Documents` folder, but will no longer work. You can copy them over or move them to the network share; the folder structure is the same. Likewise, when removing the configuration to save attachments to a network share, no migration is done of attachments available on the previously configured network share.
-> - By default, the size of the attachments is limited to 20 MB. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#documentsmaxsize).
+> - By default, the size of the attachments is limited to 20 MB. See [Documents.MaxSize](xref:MaintenanceSettings.Documents.MaxSize).
 
 #### gRPC now used by default for server-server and server-client communication [ID 43190] [ID 43260] [ID 43305] [ID 43331] [ID 43435] [ID 43506]
 
@@ -243,7 +243,7 @@ The folder `C:\Skyline DataMiner\Webpages\Public\` will now be synced between Da
 
 #### SLNet-managed NATS solution: Credentials of the local agent will now be compared against the credentials of the primary NAS node [ID 43514]
 
-<!-- MR 10.6.0 - FR 10.5.10 -->
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 In the *ResetNATSCheck* timer of the SLNet-managed NATS solution, the credentials of the local agent will now be compared against the credentials of the primary NAS node. If these do not match, the NATS configuration of the local agent will be reset, and the correct credentials of the primary node will be used instead.
 
@@ -263,7 +263,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 - DataMiner CloudGateway 2.17.11
 
-The CloudGateway DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, they will not be installed.
+The CloudGateway DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
@@ -335,3 +335,19 @@ When an element with DCF connections had correlation rules configured, up to now
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
 When, in DataMiner Cube, matrix crosspoints were loaded or saved over a gRPC connection, in some cases, SLNet would interpret the messages incorrectly.
+
+#### Problem when processing deserialization exceptions thrown as a result of messages received via gRPC [ID 43758]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 [CU0] -->
+
+When a client application (e.g. DataMiner Cube) sends unsupported messages to a DataMiner Agent, deserialization exceptions are thrown in SLNet.
+
+Up to now, those exceptions would not get processed correctly when the unsupported messages were sent over a gRPC connection, causing the client application to get stuck while waiting for a response that would never arrive.
+
+#### Problem with SLDataGateway after it had removed a storage type in Elasticsearch or OpenSearch [ID 43761]
+
+<!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 [CU0] -->
+
+In some cases, a fatal error could occur in SLDataGateway after it had removed a storage type in an Elasticsearch or OpenSearch database.
+
+Also, in some cases, a fatal error could occur in SLDataGateway when it was shut down.

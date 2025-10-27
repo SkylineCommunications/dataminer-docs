@@ -92,6 +92,9 @@ The following shape data fields can be added to a shape that has to represent a 
 
     For example, "Name=\[var:userSpecifiedName\]". Only objects of which the name matches the regular expression will be shown.
 
+    > [!NOTE]
+    > If the regular expression contains pipe characters ("|"), you will need to change the default separator character in the shape data to avoid conflicts. For more information, see [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
+
   - From DataMiner 10.2.0/10.1.10 onwards, you can filter service children based on whether they are mapped resources, unmapped resources, or resources inherited from a resource pool. To do so, add a data field of type **ChildrenFilter** and set its value to "ResourceMapping=", followed by one or more roles (separated by commas): "mapped", "unmapped" or "inheritance". If you specify multiple roles, all shapes of which the roles match one of the specified roles will be shown. For example:
 
     | Shape data field   | Value                                       |

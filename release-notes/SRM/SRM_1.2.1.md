@@ -46,9 +46,9 @@ The service definitions that can be selected in the Booking Manager are now filt
 
 ### Fixes
 
-#### Booking life cycle of contributing booking not updated correctly \[ID 24856\]
+#### Booking lifecycle of contributing booking not updated correctly \[ID 24856\]
 
-In some cases, it could occur that the booking life cycle of a contributing booking was not updated by local events as it should be, but instead by the main booking.
+In some cases, it could occur that the booking lifecycle of a contributing booking was not updated by local events as it should be, but instead by the main booking.
 
 #### SRM_ServiceType service property not updated \[ID 24887\]
 

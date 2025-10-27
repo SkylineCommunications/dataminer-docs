@@ -70,7 +70,7 @@ items:
     topicUid: InstallConfiguration_XSD
   - name: Legacy trend data exporter
     topicUid: Legacy_Trend_Data_Exporter
-  - name: Multi-threaded timer polling rate calculator
+  - name: Multithreaded timer polling rate calculator
     topicUid: Multi_Threaded_Timer_Polling_Rate_Calculator
   - name: Prerequisite checks
     items:
@@ -94,6 +94,8 @@ items:
         topicUid: Verify_No_Obsolete_API_Deployed
       - name: Verify No Amazon Keyspaces
         topicUid: Verify_No_Amazon_Keyspaces
+      - name: Verify OS Version
+        topicUid: Verify_OS_Version
   - name: Protocol debug tools
     topicUid: Protocol_Debug_Tools
   - name: Skyline Device Simulator
@@ -173,6 +175,8 @@ items:
         topicUid: Opening_the_SLNetClientTest_tool
       - name: Connecting to a DMA with the SLNetClientTest tool
         topicUid: Connecting_to_a_DMA_with_the_SLNetClientTest_tool
+      - name: Overview of the SLNetClientTest tool UI
+        topicUid: SLNetClientTest_tool_UI
       - name: SLNetClientTest tool diagnostic procedures
         topicUid: SLNetClientTest_tool_diagnostic_procedures
         items:

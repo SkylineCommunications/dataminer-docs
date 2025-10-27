@@ -716,7 +716,7 @@ If colors are defined using the *Visual.Background* property of bookings, these 
 
 #### DataMiner will now generated an error when it detects a ServiceManager license but no ElasticSearch instance \[ID 24329\]
 
-From now on, a DataMiner Agent will generated the following DataMiner run-time error when it detects a ServiceManager license but no Elasticsearch instance:
+From now on, a DataMiner Agent will generated the following DataMiner runtime error when it detects a ServiceManager license but no Elasticsearch instance:
 
 *The Service Manager is licensed, but no ElasticSearch database is active on the system. Therefore, Resource Manager and Service Manager will not initialize.*
 

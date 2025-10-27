@@ -104,7 +104,7 @@ A number of enhancements have been made to BrokerGateway with regard to error ha
 
 From DataMiner 10.5.0 [CU2]/10.5.5 onwards, you can migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) using the *NATSMigration* tool.
 
-Up to now, changes made to the *MaintenanceSettings.xml* file during the migration required DataMiner to be restarted. As these changes will now be read at run-time, it will no longer be required to restart DataMiner when migrating.
+Up to now, changes made to the *MaintenanceSettings.xml* file during the migration required DataMiner to be restarted. As these changes will now be read at runtime, it will no longer be required to restart DataMiner when migrating.
 
 #### GQI: Sort operator now supports real-time updates when GQI DxM is being used [ID 42941]
 

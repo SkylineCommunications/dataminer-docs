@@ -152,6 +152,7 @@ The `ApiTriggerOutput` object has the following properties:
 |--|--|--|
 | ResponseCode | int | The HTTP status code. See [ResponseCode](#responsecode). |
 | ResponseBody | string | Contains the response body as a string. The size of this response body is limited to 29 MB. |
+| ResponseHeaders | IHeaders | HTTP headers that will be added to the response. See [ResponseHeaders](#responseheaders). |
 
 > [!NOTE]
 > A valid output instance always has to be returned.
@@ -175,6 +176,49 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 
 > [!TIP]
 > For more insight into which HTTP status codes to use in which circumstances, see [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+
+#### ResponseHeaders
+
+You can add HTTP headers to the response by adding them to the *ResponseHeaders* property in the `ApiTriggerOutput`. `IHeaders` exposes the following methods:
+
+| Method | Description | Example |
+|--|--|--|
+|`void Add(string name, string value)`|Adds a header with a single value, where "name" is the header name, or adds the value to the existing header.|`Add("Location", "/api/item/101)`|
+|`void Add(string name, IEnumerable<string> values)`|Adds a header with multiple values, where "name" is the header name, or adds values to the existing header.|`Add("Accept", new List<string>(){"text/plain", "text/html"})`.|
+|`void Add(string name, params string[] values)`|Adds a header with multiple values, where "name" is the header name, or adds values to the existing header.|`Add("Accept", "text/plain", "text/html")`|
+|`void Set(string name, string value)`|Sets (overwrites) a header with a single value, where "name" is the header name.|`Set("Location", "/api/item/101)`|
+|`void Set(string name, List<string> values)`|Sets (overwrites) a header with multiple values, where "name" is the header name.|`Set("Accept", new IEnumerable<string>(){"text/plain", "text/html"})`.|
+|`void Set(string name, params string[] values)`|Sets (overwrites) a header with multiple values, where "name" is the header name.|`Set("Accept", "text/plain", "text/html")`|
+|`Dictionary<string, List<string>> AsDictionary()`|Returns all headers as a dictionary.|`output.ResponseHeaders.AsDictionary()`|
+
+The headers listed below are **blocked** and will result in an error if you try to set them. This list can be updated in the future.
+
+- Access-Control-Allow-Origin
+- Access-Control-Allow-Credentials
+- Access-Control-Expose-Headers
+- Access-Control-Allow-Methods
+- Access-Control-Max-Age
+- Vary
+- Content-Length (automatically set)
+- Set-Cookie
+- WWW-Authenticate
+- Proxy-Authenticate
+- Transfer-Encoding
+- Connection
+- Upgrade
+- Trailer
+- TE
+- Via
+- Server
+- Date (automatically set)
+- Strict-Transport-Security
+
+> [!NOTE]
+>
+> - The *ResponseHeaders* property can be used from DataMiner 10.5.12/10.6.0 onwards.<!-- RN 43705 -->
+> - By default, each response includes a *Content-Type* header set to "application/json". This can be overridden if needed.<!-- RN 43960 -->
+> - Keep the size of headers and values limited. Hard limits depend on the version of your web server.
+> - Null values are not allowed. Use *string.Empty* when adding a header with an empty value.
 
 ## Creating an API and tokens in DataMiner Automation
 

@@ -61,4 +61,4 @@ This tutorial is part of the following learning path:
 
 ## Related documentation
 
-- [Editing a low-code application](xref:Editing_custom_apps)
+- [Editing an app](xref:Editing_custom_apps)

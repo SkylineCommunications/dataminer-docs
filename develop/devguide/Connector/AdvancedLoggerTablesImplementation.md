@@ -255,7 +255,7 @@ In order to make a protocol compatible with both RDBMS (SQL) and Cassandra, and 
 - Avoid specifying a foreign key option on a parameter, unless this is on the partitioning key, because it would mean that a secondary index is created in Cassandra, which has a negative impact on performance.
 - If the rows in the logger table should only be added and never overwritten, use an auto-increment PK for the parameter table. If you do so, DataMiner does not need to scan the entire table first to check if a row already exists, which allows a higher insertion rate.
 - Do not choose the auto-increment PK in DataMiner as partition key. This would lead to a very high cardinality and would mean that you would have to know beforehand what this value is before being able to query the row.
-- AddRow calls are blocking calls, meaning there is no advantage to add rows multi-threaded. It will even have the downside that threads will start to block each other and new threads are created to try to compensate. Therefore, it is better to have one thread running that gets items to be added from a ConcurrentQueue.
+- AddRow calls are blocking calls, meaning there is no advantage to add rows multithreaded. It will even have the downside that threads will start to block each other and new threads are created to try to compensate. Therefore, it is better to have one thread running that gets items to be added from a ConcurrentQueue.
 - DateTime values should be inserted in UTC.
 
 ## See also

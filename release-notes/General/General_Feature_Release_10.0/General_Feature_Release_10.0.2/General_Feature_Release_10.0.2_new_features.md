@@ -727,9 +727,9 @@ When you have selected a file, the actual upload will only start after you click
 
 All files uploaded by users will by default be placed in the `C:\Skyline DataMiner\TempDocuments` folder, which is automatically cleared at every DataMiner startup.
 
-#### New engine.UnsetFlag method to clear run-time flags \[ID 23961\]
+#### New engine.UnsetFlag method to clear runtime flags \[ID 23961\]
 
-In an Automation script, you can now use the engine.UnsetFlag method to clear the following run-time flags:
+In an Automation script, you can now use the engine.UnsetFlag method to clear the following runtime flags:
 
 - RunTimeFlags.AllowUndef
 - RunTimeFlags.NoInformationEvents
@@ -842,6 +842,6 @@ If *ignorePastReservations* is false, this method works in the same way as exist
 
 #### DataMiner will now generated an error when it detects a ServiceManager license but no ElasticSearch instance \[ID 24329\]
 
-From now on, a DataMiner Agent will generated the following DataMiner run-time error when it detects a ServiceManager license but no Elasticsearch instance:
+From now on, a DataMiner Agent will generated the following DataMiner runtime error when it detects a ServiceManager license but no Elasticsearch instance:
 
 *The Service Manager is licensed, but no ElasticSearch database is active on the system. Therefore, Resource Manager and Service Manager will not initialize.*

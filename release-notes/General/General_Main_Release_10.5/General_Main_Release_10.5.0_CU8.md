@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_CU8
 ---
 
-# General Main Release 10.5.0 CU8 - Preview
+# General Main Release 10.5.0 CU8
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,6 +14,18 @@ uid: General_Main_Release_10.5.0_CU8
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
+
+#### Element replication: Replication buffer will now be read in chunks [ID 43281]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, when the connection to a replicated element was restored, the entire replication buffer would be read into memory at once. From now on, the replication buffer will be read in chunks.
+
+#### DataMiner Object Models: Enhanced performance when filtering on FieldValues in memory via FilterElements [ID 43568]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When filtering on FieldValues in memory via FilterElements, the DomInstanceExposers.FieldValues exposer will no longer generate a JsonSerializableDictionary. Instead, it will now use a standard dictionary. This will enhance overall in-memory filtering performance.
 
 #### STaaS: Enhanced exception logging [ID 43626]
 
@@ -37,14 +49,6 @@ For detailed information about the changes included in those versions, refer to 
 
 Because of a number of enhancements in the aggregation module, overall performance has increased.
 
-#### SLDataGateway will now use a custom thread pool instead of TPL for operations towards Cassandra [ID 43658]
-
-<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
-
-For operations towards Cassandra, from now on, SLDataGateway will use a custom thread pool instead of *Task Parallel Library* (TPL).
-
-Also, when any of the queues in SLDataGateway would get stuck, an alarm of type error will now be generated.
-
 #### STaaS: A failure notice will now be returned immediately when an operation could not be sent to STaaS [ID 43667]
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
@@ -52,6 +56,18 @@ Also, when any of the queues in SLDataGateway would get stuck, an alarm of type 
 Up to now, when DataMiner was not able to send an operation to STaaS, it had to wait until the write operation timed out before it got confirmation that the operation had failed.
 
 From now on, when DataMiner tries to send an operation of which the size exceeds the maximum package limit to STaaS, a failure notice will be returned immediately.
+
+#### DataMiner upgrade: All but the Web.config file will be removed from the 'C:\\Skyline DataMiner\\Webpages\\API' folder when downgrading to an older version [ID 43687]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+From now on, when a DataMiner Agent is downgraded to an older version, the entire `C:\Skyline DataMiner\Webpages\API` folder will be cleared. Only the `Web.config` file will be kept.
+
+#### SLLogCollector packages now also include the Web DcM log files [ID 43716]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+SLLogCollector packages now also include the log files of the Web DcM.
 
 ### Fixes
 
@@ -82,6 +98,14 @@ You can have all active alarms resent by sending an SNMP Set command to the DMA 
 
 However, since DataMiner versions 10.4.0 [CU12]/10.5.3, this would no longer work when the SNMP manager in question had the *Resend all active alarms every ...* option disabled.
 
+#### Alarm indicating a runtime error would incorrectly say "-1 pending" when all threads cleared simultaneously [ID 43508]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When multiple threads of the same process have a runtime error, the associated alarm will say "+X pending", indicating the number of threads that are stuck.
+
+Up to now, when all threads cleared simultaneously, in some cases, the alarm would incorrectly say "-1 pending".
+
 #### Cassandra Cluster Migrator tool: Problem when reverse lookup of IP addresses returned hostnames other than those configured in the SSL certificate [ID 43520]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
@@ -104,8 +128,62 @@ From now on, the update request will correctly be forwarded to the DataMiner Age
 
 When processing a cell subscription filter, in some cases, SLNet could return incorrect data to the client application.
 
+#### Restarting a replicated element could cause SLProtocol to leak memory [ID 43613]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you restarted a replicated element that was in the process of starting up, in some cases, the resources in memory would incorrectly not get cleaned up, causing SLProtocol to leak memory.
+
+#### Production version of DVE child elements would incorrectly be reset when you uploaded an updated copy of the DVE protocol version [ID 43640]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+When you uploaded an updated copy of a DVE protocol version that had already been uploaded before, up to now, the production version of the DVE child elements that were using that protocol would incorrectly be reset.
+
 #### STaaS: Data missing from heatmaps and alarm state pie charts [ID 43689]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
 When, in a client application connected to a system using STaaS, you viewed a heatmap or an alarm state pie chart, in some cases, an incorrect time zone conversion would cause those charts to not include all available data.
+
+#### Service & Resource Management: No master agent would incorrectly get selected on systems with only a ResourceManager license [ID 43697]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, only on systems with both a ResourceManager license and a ServiceManager license would a master agent get selected.
+
+From now on, a master agent will also get selected on systems with only a ResourceManager license. On these systems, the agent with the lowest DMA ID will always be promoted to master agent.
+
+Also, when no master agent can be selected because the ResourceManager license is missing, the following log entry will be added to the SLMasterSyncerManager log file (with XXX being the IDs of the agents that do not have a ResourceManager license):
+
+`WARNING: No master DMA could be picked. Missing required ResourceManager license for DMAs XXX.`
+
+#### Swarming an element while automatic incident tracking was disabled would cause the alarms of that element to be removed from any user-defined alarm group they were in [ID 43739]
+
+<!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
+
+If automatic incident tracking was disabled and an element had an alarm that had been manually added to an alarm group, up to now, swarming that element would cause that alarm to incorrectly be removed from the alarm group and appear again as a separate alarm. This will no longer occur.
+
+If an element gets swarmed while automatic incident tracking is enabled, the behavior remains the same as before: Manually created groups keep their elements, but any active relational anomalies (including automatically created alarm groups) involving the element are cleared.
+
+#### Problem when importing a DELT package containing average trend data into a Cassandra Cluster or STaaS database [ID 43768]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, after you had imported a DELT package containing average trend data into a Cassandra Cluster or STaaS database, that database would contain invalid trend data.
+
+#### SLWatchdog would incorrectly remove the threads table entries of all SLProtocol processes when one SLProtocol process disappeared [ID 43780]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 [CU0] -->
+
+Since DataMiner version 10.5.0/10.4.12, the DataMiner Agent is no longer restarted when an SLProtocol process disappears. Instead, a new SLProtocol process is started and all elements that were hosted by the process that disappeared are now be hosted by the newly created process.
+
+However, up to now, when an SLProtocol process disappeared, SLWatchdog would remove all entries in its threads table that matched the name of the process (e.g. "SLProtocol"). This would result in all entries of the other SLProtocol processes to be removed as well.
+
+From now on, SLWatchdog will only remove the threads table entries that match the name as well as the ID of the process.
+
+#### Failover: Problem when trying to update the failover configuration when the ClusterEndpointsManager soft-launch option had been disabled [ID 43794]
+
+<!-- MR  10.5.0 [CU8] - FR 10.5.11 -->
+
+Up to now, it would not be possible to update the failover configuration when the *ClusterEndpointsManager* soft-launch option had explicitly been disabled.

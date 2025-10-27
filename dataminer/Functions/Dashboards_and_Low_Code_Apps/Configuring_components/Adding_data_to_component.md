@@ -36,7 +36,7 @@ To add data or change the data of a component:
 
      > [!NOTE]
      >
-     > - If you add the entire *Bookings* data set to a dropdown, list, or tree component, you will also need to link this to a time range component.
+     > - If you add the entire *Bookings* dataset to a dropdown, list, or tree component, you will also need to link this to a time range component.
      > - From DataMiner 10.2.11/10.3.0 onwards, you can filter on all versions of a protocol by adding the protocol itself to the component. In earlier versions, only the first of the available versions will be added in that case.
 
    - Data input can also be provided by any another component. When a component has been added to the dashboard or low-code app, the *Components* or *Feeds* section (depending on your DataMiner version<!--RN 41141-->) is added to the available data in the *Data* pane. You can then drag an entry from this section to a different component in order to link it to the component. For more information, see [Component data](xref:Component_Data).

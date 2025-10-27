@@ -19,7 +19,7 @@ Install DataMiner 10.2.0 [CU11] or 10.3.2. <!-- RN 35179 -->
 
 ## Workaround
 
-Explicitly configure `<TimeSpan1DayRecords window="120" />` in *MaintenanceSettings.xml*. See [Trending.TimeSpan1DayRecords](xref:MaintenanceSettings_xml#trendingtimespan1dayrecords).
+Explicitly configure `<TimeSpan1DayRecords window="120" />` in *MaintenanceSettings.xml*. See [Trending.TimeSpan1DayRecords](xref:MaintenanceSettings.Trending.TimeSpan1DayRecords).
 
 This will ensure that records are written into the database. However, note that this will not generate records in the past, so you may continue to see a gap in trend graphs for some time.
 

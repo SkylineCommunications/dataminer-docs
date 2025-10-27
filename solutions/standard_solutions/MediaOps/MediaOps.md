@@ -12,6 +12,32 @@ While dataminer.MediaOps encompasses the entire media operation, it allows each 
 
 ![MediaOps for planned, live, and file-based operations](~/dataminer/images/mediaops_plan_live_file.png)
 
+## MediaOps applications
+
+dataminer.MediaOps is available in the [Catalog](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) as a package containing multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
+
+These are the out-of-the-box DataMiner applications that are currently included in the dataminer.MediaOps installation package:
+
+<div class="row">
+  <div class="column">
+  <a href="/solutions/standard_solutions/MediaOps/Apps/People_Organizations.html" title="People & Organizations" target="_self"><img src="~/solutions/images/mo_PeopleOrganizations.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Resource_Studio.html" title="Resource Studio" target="_self"><img src="~/solutions/images/mo_ResourceStudio.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Workflow_Designer.html" title="Workflow Designer" target="_self"><img src="~/solutions/images/mo_WorkflowDesigner.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Scheduling.html" title="Scheduling" target="_self"><img src="~/solutions/images/mo_Scheduling.svg" style="width:100%"></a>
+  </div>
+</div>
+
+> [!TIP]
+>
+> - Before you deploy the MediaOps package, take a look at our [installation instructions](xref:MO_Installation).
+> - For details about the changes introduced in each MediaOps version, refer to the [release notes](xref:MediaOps_RNs_index).
+
 ## Who can benefit from dataminer.MediaOps?
 
 Many users rely on dataminer.MediaOps for their specific needs:
@@ -53,37 +79,28 @@ The following functions can be achieved by means of orchestration scripts that s
 
 - **Monitor**: DataMiner intelligently monitors infrastructure, cloud inventory, precision time protocol (PTP), IP flows, services, and service level agreements (SLA), filtering out devices that are not in use or under maintenance to prevent unnecessary alarms.
 
-- **QoS/QoE**: Tracking end-user experience and service quality is crucial. DataMiner collects metrics from the network and end-user CPE devices, utilizing key performance indicators (KPIs) and key quality indicators (KQIs) to enhance service offerings based on solid data sets.
+- **QoS/QoE**: Tracking end-user experience and service quality is crucial. DataMiner collects metrics from the network and end-user CPE devices, utilizing key performance indicators (KPIs) and key quality indicators (KQIs) to enhance service offerings based on solid datasets.
 
 - **Finish**: Cleaning up the network post-event is essential, involving tasks such as removing multicast routes from switches, deactivating cloud infrastructure (eliminating excess cost), and adjusting host and flow policies to enhance network security.
 
 <!-- - **Cost & billing**: At the end of the day, M&E enterprises need to manage costs and income. dataminer.MediaOps provides reports on resource utilization, cost, and sales billing prices for each event, enabling M&E companies to understand their costs and allocate them to shows, channels, categories, content providers, customers, and more. dataminer.MediaOps can also generate raw billing information and integrate it into your billing system. -->
 
-## MediaOps applications
-
-dataminer.MediaOps is available in the [Catalog](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) as a package containing multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
-
-These are the out-of-the-box DataMiner applications that are currently included in the dataminer.MediaOps installation package:
-
-<div class="row">
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/People_Organizations.html" title="People & Organizations" target="_self"><img src="~/solutions/images/mo_PeopleOrganizations.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Resource_Studio.html" title="Resource Studio" target="_self"><img src="~/solutions/images/mo_ResourceStudio.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Workflow_Designer.html" title="Workflow Designer" target="_self"><img src="~/solutions/images/mo_WorkflowDesigner.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Scheduling.html" title="Scheduling" target="_self"><img src="~/solutions/images/mo_Scheduling.svg" style="width:100%"></a>
-  </div>
-</div>
-
-> [!TIP]
-> To deploy the MediaOps package, go to the [MediaOps Standard Solution](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) in the Catalog. Make sure to first read the installation information on that page before you deploy the package.
-
 <!-- 
 [For later]: ## Building upon the standard applications
 
 [For later]: When the standard MediaOps apps are insufficient to meet the needs of the users, you can create your own custom apps that interact with MediaOps. More information can be found under the [Integration Notes](xref:MediaOps_Integration). -->
+
+<style>
+.column a {
+  display: inline-block;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.column a:hover {
+  background-color: #f0f4ff; /* light background on hover */
+  transform: scale(1.05);   /* slightly bigger */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+</style>

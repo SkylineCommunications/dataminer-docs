@@ -89,9 +89,9 @@ Also, in case of a Failover setup, the above-mentioned list of IP addresses will
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-Up to now, a run-time error would be thrown when the `<AzureAD>` element in the *DataMiner.xml* file did not contain an `objectId` attribute.
+Up to now, a runtime error would be thrown when the `<AzureAD>` element in the *DataMiner.xml* file did not contain an `objectId` attribute.
 
-This `objectId` attribute will now be considered optional. Hence, no run-time error will be thrown anymore when it has not been specified.
+This `objectId` attribute will now be considered optional. Hence, no runtime error will be thrown anymore when it has not been specified.
 
 #### Security enhancements [ID 37267] [ID 37291] [ID 37335] [ID 37345]
 

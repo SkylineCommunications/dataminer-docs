@@ -1,4 +1,21 @@
 items:
+  - name: DataMiner Assistant
+    items:
+      - name: DataMiner Assistant DxM
+        topicUid: Assistant_DxM
+      - name: DataMiner Assistant app
+        topicUid: DataMinerAssistant
+        items:
+        - name: Context structure
+          topicUid: Assistant_Context
+        - name: Adding custom user context
+          topicUid: Assistant_UserContext
+        - name: Adding or editing context files
+          topicUid: Assistant_AddingContextFiles
+        - name: Adding custom predefined questions
+          topicUid: Assistant_Predefined_Questions
+      - name: Natural language to GQI
+        topicUid: NL2GQI
   - name: Automation
     items:
       - name: About DataMiner Automation
@@ -167,12 +184,6 @@ items:
         items:
           - name: Using an SLA to monitor a power service
             topicUid: SLA_tutorial
-  - name: Copilot
-    items:
-      - name: Copilot DxM
-        topicUid: Copilot_DxM
-      - name: Natural language to GQI
-        topicUid: NL2GQI
   - name: Correlation
     items:
       - name: About DataMiner Correlation
@@ -317,8 +328,8 @@ items:
             items:
               - name: Displaying a custom empty component message
                 topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
-              - name: Leveraging controls and feeds to create a dynamic GQI query
-                topicUid: Tutorial_Dashboards_Controls_And_Feeds_Query
+              - name: Using controls to create a dynamic GQI query
+                topicUid: Tutorial_Dashboards_Controls_Query
               - name: Getting started with node edge graphs
                 topicUid: Tutorial_Apps_Node_Edge
               - name: Creating a custom parameter table connected to an element feed
@@ -328,31 +339,31 @@ items:
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
-          - name: Creating low-code applications
+          - name: Creating apps
             topicUid: Creating_custom_apps
-          - name: Editing a low-code application
+          - name: Editing an app
             topicUid: Editing_custom_apps
-          - name: Configuring low-code applications
+          - name: Configuring apps
             items:
-              - name: Configuring the low-code app layout
+              - name: Configuring the app layout
                 topicUid: LowCodeApps_Layout
-              - name: Configuring a page of a low-code app
+              - name: Configuring an app page
                 topicUid: LowCodeApps_page_config
-              - name: Configuring a panel of a low-code app
+              - name: Configuring an app panel
                 topicUid: LowCodeApps_panel_config
-              - name: Changing low-code app settings
+              - name: Changing app settings
                 topicUid: Changing_low-code_app_settings
-              - name: Configuring the header bar of a low-code app page
+              - name: Configuring the app header bar
                 topicUid: LowCodeApps_header_config
-              - name: Configuring low-code app events
+              - name: Configuring app events
                 topicUid: LowCodeApps_event_config
-              - name: Configuring security for a low-code app
+              - name: Configuring app security
                 topicUid: LowCodeApps_security_config
-              - name: Retrieving an earlier version of a low-code app
-                topicUid: LowCodeApps_earlier_version
               - name: Organizing the apps on the landing page in sections
                 topicUid: LowCodeApps_organizing_landing_page
-          - name: Deleting a low-code application
+          - name: Retrieving an earlier app version
+            topicUid: LowCodeApps_earlier_version
+          - name: Deleting an app
             topicUid: Deleting_custom_apps
           - name: Configuring app actions and behavior via the URL
             topicUid: Configuring_app_actions_and_behavior_via_URL
@@ -810,6 +821,9 @@ items:
         topicUid: DOM_status_system
       - name: DOM security
         topicUid: DOM_security
+        items:
+          - name: Configuring definition-level security
+            topicUid: DOM_security_ui
       - name: DOM actions
         topicUid: DOM_actions
       - name: DOM data storage
@@ -855,6 +869,8 @@ items:
                 topicUid: DOM_editor_deleting_section
               - name: Naming a DOM instance
                 topicUid: DOM_editor_naming_instance
+              - name: Using a network share for attachments
+                topicUid: DOM_editor_attachments_networkshare
       - name: Best practices
         topicUid: DOM_best_practices
       - name: Tutorials

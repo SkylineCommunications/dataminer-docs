@@ -27,7 +27,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Mediation protocol | Standardized protocol that forms a mediation layer on top of device-specific protocols, thereby providing a unified view on similar devices that have a different device-specific protocol. Also known as base protocol. |
 | Memory file | Variable within an Automation script that consists of a container of values.<br>See [Script variables](xref:Script_variables). |
 | MER | Modulation Error Ratio. Measurement of the performance of a digital media transmitter or receiver in a communications system using digital modulation. |
-| MFN | Multi-Frequency Network. Network where multiple radio frequencies are used to transmit media content. |
+| MFN | Multifrequency Network. Network where multiple radio frequencies are used to transmit media content. |
 | MHEG-5 | Set of international standards regarding the presentation of multimedia information, standardized by the Multimedia and Hypermedia Experts Group (MHEG). |
 | MHP | Multimedia Home Platform. Open standard for middleware, designed by the DVB project for interactive digital TV. |
 | MIB | Management Information Base. A virtual information store managing objects, which is typically accessed using the Simple Network Management Protocol (SNMP).<br>See [Terminology related to the SNMP protocol](xref:Terminology_related_to_the_SNMP_protocol). |
@@ -36,7 +36,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Monitoring app | Web application used to monitor a DataMiner System. |
 | MOTS | Military Off-The-Shelf. Term used for off-the shelf products that have been developed or customized by a commercial vendor to respond to specific military requirements. |
 | MPEG | Moving Picture Experts Group. Working group formed by ISO and IEC to set standards for audio and video compression and transmission, such as MPEG-2 and MPEG-4 AVC. |
-| MPLS | Multi-Protocol Label Switching. Routing technique in telecommunications networks that directs data based on short path labels instead of long network addresses, which avoids complex lookups in a routing table and speeds up traffic flows. |
+| MPLS | Multiprotocol Label Switching. Routing technique in telecommunications networks that directs data based on short path labels instead of long network addresses, which avoids complex lookups in a routing table and speeds up traffic flows. |
 | MPTS | Multiple Program Transport Stream. Transport stream that carries more than one program. |
 | MSO | Multiple System Operator. Company that owns and operators several cable systems. |
 | MSP | Managed Service Provider. Company that provides managed services, such as remote management of a customer's IT infrastructure or end-user systems. |
@@ -94,8 +94,8 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | PMR | Private Mobile Radio. Two-way radio voice communication systems using portable, mobile, base station and dispatch console radios. Also known as Professional Mobile Radio and Land Mobile Radio (LMR). |
 | PON | Passive Optical Network. Fiber-optic telecommunications technology for the delivery of broadband network to end customers. |
 | PoP | Point of Presence. Artificial demarcation point or interface point between communicating entities. |
-| Post-roll | See [Service Orchestration: booking life cycle states configuration](xref:Service_Orchestration_life_cycle_states). |
-| Pre-roll | See [Service Orchestration: booking life cycle states configuration](xref:Service_Orchestration_life_cycle_states). |
+| Post-roll | See [Service Orchestration: booking lifecycle states configuration](xref:Service_Orchestration_life_cycle_states). |
+| Pre-roll | See [Service Orchestration: booking lifecycle states configuration](xref:Service_Orchestration_life_cycle_states). |
 | Primary element | Element within a redundancy group that is operational in normal conditions.<br>See [Primary elements, backup elements and virtual primary elements](xref:About_redundancy_groups#primary-elements-backup-elements-and-virtual-primary-elements). |
 | Proactive (cap) detection | The automatic prediction of future alarm threshold breaches.<br>See [Proactive cap detection](xref:Proactive_cap_detection). |
 | Production version | The version of a protocol that is currently the main version used in the DMS. |
@@ -234,7 +234,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SQL | Structured Query Language. Programming language that is typically used for relational database management. |
 | SRM | Service and Resource Management. DataMiner software allowing you to virtualize your system resources, create an overview of how resources are connected within your infrastructure, and manage which resources are booked and when.<br>See [Service and Resource Management](xref:About_SRM). |
 | SRM Core | Suite of DataMiner core software modules that are the basis of DataMiner Service & Resource Management (SRM). Consists of seven DataMiner software modules: DataMiner Service Manager, Virtualization Engine, Resource Manager, Profile Manager, Connectivity Framework, Automation Engine and Scheduling Engine. |
-| SRM Standard Solution | DataMiner blueprint configuration that facilitates and accelerates the design and deployment of application-specific SRM solutions. This includes an installation and upgrade package of the required DataMiner components, a pre-built user interface to configure and operate SRM solutions, and ready-made workflows for booking and life cycle orchestration of services (LSO). |
+| SRM Standard Solution | DataMiner blueprint configuration that facilitates and accelerates the design and deployment of application-specific SRM solutions. This includes an installation and upgrade package of the required DataMiner components, a pre-built user interface to configure and operate SRM solutions, and ready-made workflows for booking and lifecycle orchestration of services (LSO). |
 | SSH | Secure Shell. Protocol for secure remote login and other secure network services over an insecure network. |
 | SSL | Secure Sockets Layer. |
 | SSPA | Solid-State Power Amplifier. Amplifier that uses field-effect transistors to amplify radio frequency signals. |

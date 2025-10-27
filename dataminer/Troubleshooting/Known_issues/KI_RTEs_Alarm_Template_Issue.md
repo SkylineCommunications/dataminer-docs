@@ -18,4 +18,4 @@ Install DataMiner 10.2.0 [CU18]. <!--RN 37027-->
 
 ## Description
 
-When updating an element's alarm template, run-time errors occur. These specifically occur in the SLElement process and/or the alarm template scheduling thread, but other processes may also be affected as a result.
+When updating an element's alarm template, runtime errors occur. These specifically occur in the SLElement process and/or the alarm template scheduling thread, but other processes may also be affected as a result.

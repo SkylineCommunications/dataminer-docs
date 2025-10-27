@@ -143,11 +143,11 @@ When authenticating users using SAML, the following additional debug information
 
 Several SLAnalytics configuration files will now also be collected by the SLLogCollector tool. These will be placed in the *Logs/Skyline DataMiner/Analytics* and *Logs/Skyline DataMiner/Configuration* folders of the archive created by SLLogCollector.
 
-#### Enhanced performance when an SNMP element using multi-threaded timers is polling multiple sources simultaneously [ID 34143]
+#### Enhanced performance when an SNMP element using multithreaded timers is polling multiple sources simultaneously [ID 34143]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-Because of a number of enhancements, overall performance has increased when an SNMP element using multi-threaded timers is polling multiple sources simultaneously.
+Because of a number of enhancements, overall performance has increased when an SNMP element using multithreaded timers is polling multiple sources simultaneously.
 
 #### Edge WebView2 now preferred when SAML authentication is used [ID 34162]
 
@@ -397,7 +397,7 @@ Up to now, in low-code apps, feeds would incorrectly not keep the selected value
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-When, on one thread, a group other than a poll group was launched while, on another thread, a poll group with option "partialSNMP" was waiting for incoming SNMP data, in some cases, a run-time error could occur in SLProtocol.
+When, on one thread, a group other than a poll group was launched while, on another thread, a poll group with option "partialSNMP" was waiting for incoming SNMP data, in some cases, a runtime error could occur in SLProtocol.
 
 #### Dashboards app Low-Code Apps: GQI table error not cleared between sessions [ID 34243]
 

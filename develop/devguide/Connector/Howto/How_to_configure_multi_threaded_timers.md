@@ -2,21 +2,21 @@
 uid: How_to_configure_multi_threaded_timers
 ---
 
-# How to configure multi-threaded timers
+# How to configure multithreaded timers
 
-A multi-threaded timer, as the name suggests, is a timer that performs action in a multi-threaded manner. By using such timers, you can ensure that every row in a table is polled (or executed) in a certain time slot.
+A multithreaded timer, as the name suggests, is a timer that performs action in a multithreaded manner. By using such timers, you can ensure that every row in a table is polled (or executed) in a certain time slot.
 
-Currently, multi-threaded timers support the following communication protocols: SNMP, HTTP and Serial. In addition, a multi-threaded timer can also be used to execute some QAction logic.
+Currently, multithreaded timers support the following communication protocols: SNMP, HTTP and Serial. In addition, a multithreaded timer can also be used to execute some QAction logic.
 
-A multi-threaded timer has some similarities with a normal timer, as both will define a Time interval and Content to be executed. The Time interval defines how often the timer will go off, and every time this happens the Group defined in the Content tag will be executed.
+A multithreaded timer has some similarities with a normal timer, as both will define a Time interval and Content to be executed. The Time interval defines how often the timer will go off, and every time this happens the Group defined in the Content tag will be executed.
 
-However, a multi-threaded timer differs from a normal timer with several attributes that need to be defined in the options tag.
+However, a multithreaded timer differs from a normal timer with several attributes that need to be defined in the options tag.
 
-For more detailed information on multi-threaded timers, see the following [introduction](xref:AdvancedMultiThreadedTimersIntroduction).
+For more detailed information on multithreaded timers, see [Multithreaded timers](xref:AdvancedMultiThreadedTimers).
 
 ## Basic configuration
 
-Let's start from the following multi-threaded timer code snippet (a timer used to perform an HTTP request):
+Let's start from the following multithreaded timer code snippet (a timer used to perform an HTTP request):
 
 ```xml
 <Timer id="1" options="ip:100,1;each:10000;threadpool:20;qactionbefore:2">
@@ -61,12 +61,12 @@ When the threadpool is defined too low, this can cause threads to be queued (i.e
 
 ![Example of threadpool statistics with queued threads](~/develop/images/MultiThreadedHTTPStatistics2.png)
 
-In this example, a multi-threaded HTTP timer is used. If a complex device is polled, the responses can be quite big. This could cause huge spikes in memory and CPU usage every time the threads are launched to poll 20 rows, because all of them are currently launched simultaneously.
+In this example, a multithreaded HTTP timer is used. If a complex device is polled, the responses can be quite big. This could cause huge spikes in memory and CPU usage every time the threads are launched to poll 20 rows, because all of them are currently launched simultaneously.
 
 ![Example of CPU spikes when threads are launched simultaneously](~/develop/images/multi-threaded_timer_graph.png)<br>
 *Example of CPU spikes when threads are launched simultaneously*
 
-To overcome this, you can make use of the `pollingrate` attribute in the options tag. See the [introduction to multi-threaded timers](xref:AdvancedMultiThreadedTimersIntroduction).
+To overcome this, you can make use of the `pollingrate` attribute in the options tag. For more information, see [Multithreaded timers](xref:AdvancedMultiThreadedTimers).
 
 By defining the polling rate correctly, you can spread the launch of the threads equally over the timer's time and thereby avoid memory and CPU spikes.
 
@@ -95,13 +95,13 @@ For example, take the following configuration:
 
 This configuration ensures that whenever the timer goes off, the 20 threads that were initially released at the start of the second are now spread over 200-millisecond intervals, meaning that every 200 milliseconds, "c" threads are released (in this case 4, as 1 second has five 200-millisecond intervals, and 5 * 4 = 20). This results in a better spread of load and less spikes in memory and CPU usage.
 
-As defining the polling rate correctly can be tricky, you can use the *PollingRate Calculator Tool* to make things easier. For more information on how to download and use this tool, see [Multi-threaded timer polling rate calculator](xref:Multi_Threaded_Timer_Polling_Rate_Calculator).
+As defining the polling rate correctly can be tricky, you can use the *PollingRate Calculator Tool* to make things easier. For more information on how to download and use this tool, see [Multithreaded timer polling rate calculator](xref:Multi_Threaded_Timer_Polling_Rate_Calculator).
 
-## Using multiple multi-threaded timers
+## Using multiple multithreaded timers
 
-It is perfectly possible to have multiple multi-threaded timers, even so that every timer is of a different type: HTTP, Serial or SNMP. To accomplish this, define additional connections in the advanced tag of the protocol, and create the new multi-threaded timers for each connection, keeping in mind to use the correct connection attribute on every poll group.
+It is perfectly possible to have multiple multithreaded timers, even so that every timer is of a different type: HTTP, Serial or SNMP. To accomplish this, define additional connections in the advanced tag of the protocol, and create the new multithreaded timers for each connection, keeping in mind to use the correct connection attribute on every poll group.
 
-However, as multi-threaded timers make use of a table to retrieve the IP address to poll, it is still important that the element configuration defines a different IP/port for every connection.
+However, as multithreaded timers make use of a table to retrieve the IP address to poll, it is still important that the element configuration defines a different IP/port for every connection.
 
 In the background, every identical IP/port combination gets assigned to one and the same SLPort process. When this configuration is not taken into account, this could lead to excessive strain on a single SLPort process, which could cause polling issues or even crashes.
 

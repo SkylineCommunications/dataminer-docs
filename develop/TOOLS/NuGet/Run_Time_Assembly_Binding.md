@@ -68,7 +68,7 @@ Because of this, no unification is performed. Instead of providing a single vers
 - NuGet package "A" exposes types from NuGet package "B".
 - You use types from package "B" through package "A" (e.g. calling a method defined in package "A" that has as argument a type from package "B", or using a method from package "A" that returns a type of package "B").
 
-If you do not follow this rule, you can experience run-time issues as explained in more detail below.
+If you do not follow this rule, you can experience runtime issues as explained in more detail below.
 
 ## Example
 

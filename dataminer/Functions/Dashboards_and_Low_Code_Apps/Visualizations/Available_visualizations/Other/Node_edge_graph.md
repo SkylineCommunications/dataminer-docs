@@ -115,7 +115,7 @@ To configure actions:
 
 1. In the *Icon* box, select an icon for the action.
 
-1. In the *Action* box, select the action that should be executed. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+1. In the *Action* box, select the action that should be executed. See [Configuring app events](xref:LowCodeApps_event_config).
 
 You can configure the following [**component actions**](xref:LowCodeApps_event_config#executing-a-component-action):
 

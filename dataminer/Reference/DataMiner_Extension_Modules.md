@@ -73,6 +73,12 @@ From version 1.3.1 of the DataMiner SupportAssistant module onwards, this DxM al
 
 The UserDefinableApiEndpoint module is responsible for handling API triggers for DataMiner User-Defined APIs. See [DataMiner UserDefinableApiEndpoint DxM](xref:UD_APIs_UserDefinableApiEndpoint).
 
+### Web
+
+The Web module provides back-end services for the DataMiner web apps.
+
+This DxM is included in DataMiner upgrade packages from DataMiner 10.5.0 [CU8]/10.5.11 onwards.<!-- RN 43439 -->
+
 ## Available DxMs
 
 ### CloudGateway
@@ -100,9 +106,12 @@ This DxM exists in tandem with service-specific [middleware](xref:Nuget_Communic
 > [!TIP]
 > See also: [OpenConfig Middleware](xref:DSI_OpenConfig_Middleware)
 
-### Copilot
+### DataMiner Assistant
 
-The Copilot module extends DataMiner with conversational AI. For more information, see [Copilot](xref:Copilot_DxM).
+The DataMiner Assistant module extends DataMiner with conversational AI. For more information, see [DataMiner Assistant DxM](xref:Assistant_DxM).
+
+> [!NOTE]
+> Prior to version 2.0.0, this DxM is called "Copilot".
 
 ### DataAggregator
 
@@ -114,8 +123,16 @@ The DataAPI module provides an HTTP interface that accepts requests with a JSON-
 
 In combination with the DataAggregator DxM, the DataAPI DxM is required for the [Data Sources](xref:Data_Sources) module.
 
+From DataMiner 10.5.11/10.6.0 onwards, DataMiner upgrade packages by default include the latest version of the DataAPI module.<!-- RN 43677 -->
+
 ### ModelHost
 
 The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
 
 The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node). However, once it has been deployed, it gets upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 -->
+
+## Logging
+
+If you encounter any issues with a DxM, consult the log files for errors and warnings. By default, you can find these in the folder: `C:\ProgramData\Skyline Communications\<DxM>\Logs`.
+
+If this folder does not exist, it will be created automatically if necessary.

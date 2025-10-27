@@ -118,7 +118,7 @@ You can do this by configuring component actions in your low-code app using even
 
 To configure this:
 
-1. Add an event to your app. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+1. Add an event to your app. See [Configuring app events](xref:LowCodeApps_event_config).
 
 1. From the dropdown list, select *Execute component action*.
 

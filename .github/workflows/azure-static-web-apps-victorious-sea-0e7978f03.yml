@@ -142,4 +142,3 @@ jobs:
         azure-search-indexer: indexer-1745835640388
         # Admin key used to connect to Azure Cognitive Search instance
         azure-search-admin-key: ${{ secrets.AZURE_SEARCH_KEY }}
-

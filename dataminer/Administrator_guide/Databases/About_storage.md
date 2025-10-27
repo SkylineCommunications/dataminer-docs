@@ -27,7 +27,7 @@ Instead of a dedicated clustered storage setup, older systems often still use **
 >
 > - [DataMiner Hosting and High Availability](xref:Overview_hosting)
 > - [Securing the DataMiner databases](xref:Cassandra_authentication)
-> - [Third-party software support life cycle](xref:Software_support_life_cycles#third-party-software-support-life-cycle)
+> - [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)
 
 > [!NOTE]
 >

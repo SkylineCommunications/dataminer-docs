@@ -99,7 +99,7 @@ Below you can find the structure of the referenced parameters:
 </Param>
 ```
 
-#### Handling Responses
+## Handling Responses
 
 Responses can be processed by a QAction that triggers on change of the "Response Data" parameter in the response.
 
@@ -158,7 +158,7 @@ public class QAction
 }
 ```
 
-#### Sending commands
+## Sending commands
 
 This works by first selecting the right node in the tree of data and then performing a specific command on that location. To then have the API create the frame, you perform encoding and finishing. To then grab that encoded frame and set it on the protocol, you can assign an action to the handler: PackageReady. The action can then be e.g. GlowPackageReady that will set the data on the "Request Data" parameter and perform a checktrigger to initiate the sending of a command.
 

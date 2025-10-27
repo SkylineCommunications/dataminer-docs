@@ -9,7 +9,7 @@ uid: GQI_IGQIFactory
 - Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
 - Assembly: `SLAnalyticsTypes.dll`
 
-This interface provides various methods to create objects that can be used to communicate with the core GQI framework. An implementation of this interface can be obtained via the [Factory property](xref:GQI_OnInitInputArgs#properties) on the *OnInitInputArgs* passed in the [OnInit](xref:GQI_IGQIOnInit#oninitoutputargs-oninitoninitinputargs-args) life cycle method.
+This interface provides various methods to create objects that can be used to communicate with the core GQI framework. An implementation of this interface can be obtained via the [Factory property](xref:GQI_OnInitInputArgs#properties) on the *OnInitInputArgs* passed in the [OnInit](xref:GQI_IGQIOnInit#oninitoutputargs-oninitoninitinputargs-args) lifecycle method.
 
 Available from DataMiner 10.4.5/10.5.0 onwards.<!-- RN 39136 -->
 
@@ -30,7 +30,7 @@ An implementation of [IGQISortField](xref:GQI_IGQISortField) that represents a s
 
 ### IGQISortOperator CreateSortOperator(params IGQISortField[])
 
-Creates an [IGQISortOperator](xref:GQI_IGQISortOperator) that defines a sort operation on one or more [sort fields](xref:GQI_IGQISortField). Can be used to implement custom sort behaviors during the [Optimize](xref:GQI_IGQIOptimizableOperator#igqiquerynode-optimizeigqioperatornode-currentnode-igqicoreoperator-nextoperator) life cycle method.
+Creates an [IGQISortOperator](xref:GQI_IGQISortOperator) that defines a sort operation on one or more [sort fields](xref:GQI_IGQISortField). Can be used to implement custom sort behaviors during the [Optimize](xref:GQI_IGQIOptimizableOperator#igqiquerynode-optimizeigqioperatornode-currentnode-igqicoreoperator-nextoperator) lifecycle method.
 
 #### Parameters
 

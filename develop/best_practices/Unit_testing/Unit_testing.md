@@ -11,5 +11,5 @@ Below, you can find out how to create unit tests in Visual Studio in a solution-
 - [Writing testable code](xref:Writing_testable_code)
 - [FluentAssertions](xref:FluentAssertions)
 - [Data-driven tests](xref:Data_driven_tests)
-- [Test life cycle attributes](xref:Test_life_cycle_attributes)
+- [Test lifecycle attributes](xref:Test_life_cycle_attributes)
 - [Using files in unit tests](xref:Using_files_in_unit_tests)

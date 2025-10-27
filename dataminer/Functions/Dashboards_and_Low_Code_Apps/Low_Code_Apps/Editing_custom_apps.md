@@ -2,7 +2,7 @@
 uid: Editing_custom_apps
 ---
 
-# Editing a low-code application
+# Editing an app
 
 You can begin editing a low-code app from within the app or from the DataMiner landing page. If you want to edit a draft app, make sure the draft applications are shown: click the cogwheel button on the landing page and activate *Show draft applications*.
 
@@ -24,6 +24,8 @@ From **within an application**:
 Once you are in edit mode, you can [customize the app](xref:LowCodeApps_Layout#customizing-the-icon-and-color-of-an-app), or edit the [pages](xref:LowCodeApps_page_config), [panels](xref:LowCodeApps_panel_config), [header bar](xref:LowCodeApps_header_config), [events](xref:LowCodeApps_event_config), or [security](xref:LowCodeApps_security_config) as needed.
 
 When the app is ready, click the ![Publish](~/dataminer/images/AppPublishIcon.png) icon in the header bar to save your changes and publish it.
+
+If any users have the app open when an update is published, they will see the updated version as soon as they refresh the web page. Until then, they will be able to keep using the previous version. Only in case changes have been made to server-side objects such as Automation scripts or GQI data sources that an app makes use of, will this cause a problem for an older version of the app that remains open, as the app will no longer be able to use the server object it expects.
 
 > [!IMPORTANT]
 > Once an app has been published, it is not possible to revert it to a draft.

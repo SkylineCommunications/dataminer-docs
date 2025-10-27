@@ -57,7 +57,7 @@ The header bar contains the following items, from left to right:
 
   - *About*: Displays information about the app.
 
-  - *Help*: Opens the DataMiner documentation.
+  - *Help*: Available up to DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10. Opens the DataMiner documentation.
 
   - *Sign out*: Logs you out of the app and returns you to the logon screen.
 

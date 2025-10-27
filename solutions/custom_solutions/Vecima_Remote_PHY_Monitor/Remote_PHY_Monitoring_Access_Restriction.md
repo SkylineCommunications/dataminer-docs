@@ -34,4 +34,4 @@ To use the *R-PHY Analog & RF* low-code app, users need to have access to the DM
    1. When you have done this for all parameters for which you want to restrict access, click *OK*.
 
 > [!NOTE]
-> You can also limit which users or user groups have access to the low-code app itself. See [Configuring security for a low-code app](xref:LowCodeApps_security_config).
+> You can also limit which users or user groups have access to the low-code app itself. See [Configuring app security](xref:LowCodeApps_security_config).

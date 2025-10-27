@@ -82,3 +82,18 @@ description: DataMiner tutorials are step-by-step guides that teach you how to u
     <a href="/tutorials/Advanced_Admin_Tutorials.html" title="Advanced Admin tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Advanced_Admin.svg" style="width:100%"></a>
   </div>  
 </div>
+
+<style>
+.column a {
+  display: inline-block;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.column a:hover {
+  background-color: #f0f4ff; /* light background on hover */
+  transform: scale(1.05);   /* slightly bigger */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+</style>

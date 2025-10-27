@@ -115,7 +115,7 @@ Today, **raw data collection** is the foundation of an efficient architecture. I
 
 To address the challenges of fault detection, ensuring **good data hygiene** is key. DataMiner includes various ways to guarantee data hygiene, including:
 
-- Fully user-definable and run-time-applied alarm thresholds defined in templates.
+- Fully user-definable and runtime-applied alarm thresholds defined in templates.
 - Dynamic switching of alarm definitions based on time or events (e.g. upon service activation).
 - Ability to stack alarm templates to easily and efficiently manage thresholds across vast deployments.
 - Support for relative and absolute thresholds, including a variety of baseline methods.
@@ -193,7 +193,7 @@ First of all, DataMiner Control Panels **allow versatile control actions with th
 
 Moreover, you have the freedom to **customize the appearance and design** of each DataMiner Control Panel. This includes not only buttons but also trend charts, thumbnails, real-time metrics and KPIs, spectrum analyzers, or any other elements that align with your specific needs.
 
-And finally, the control panels **enable true multi-tenant operations**. You can create tailor-made control panels for any customer, partner, or supplier, and share them via the dataminer.services.
+And finally, the control panels **enable true multitenant operations**. You can create tailor-made control panels for any customer, partner, or supplier, and share them via the dataminer.services.
 
 > [!TIP]
 > For more information:

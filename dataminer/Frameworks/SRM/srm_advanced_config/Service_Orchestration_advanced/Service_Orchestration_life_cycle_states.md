@@ -2,9 +2,9 @@
 uid: Service_Orchestration_life_cycle_states
 ---
 
-# Service Orchestration: booking life cycle states configuration
+# Service Orchestration: booking lifecycle states configuration
 
-A booking is always associated with a specific booking life cycle state. The following states are supported:
+A booking is always associated with a specific booking lifecycle state. The following states are supported:
 
 - **Partial**: This is the initial state when a booking is created. Resources that are part of the booking have been booked, but no orchestration will happen.
 
@@ -65,7 +65,7 @@ On a node in a service definition, you can configure that a script should run be
 
 > [!NOTE]
 >
-> - In case the script fails, the booking will be set to the *Partial* booking life cycle state. <!-- RN 28875 -->
+> - In case the script fails, the booking will be set to the *Partial* booking lifecycle state. <!-- RN 28875 -->
 > - To report a custom message to the main booking wizard and inform the user when the custom script fails, the script must exit with the following call (the exception containing the custom message): `AutomationScript.HandleException(Engine, Exception);` <!-- RN 26616 -->
 
 > [!TIP]
@@ -73,11 +73,11 @@ On a node in a service definition, you can configure that a script should run be
 
 ## Defining custom state colors
 
-You can assign a custom color to each of the booking life cycle states.
+You can assign a custom color to each of the booking lifecycle states.
 
 1. In the Booking Manager app, go to *Config* > *Lifecycle colors*.
 
-1. Next to the life cycle state for which you want to define a custom color, click the pencil icon, select the custom color, and click the green checkmark icon.
+1. Next to the lifecycle state for which you want to define a custom color, click the pencil icon, select the custom color, and click the green checkmark icon.
 
 > [!TIP]
 > See also: [Lifecycle colors subtab](xref:Booking_Manager_Config_tab#lifecycle-colors-subtab)

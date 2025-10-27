@@ -1,12 +1,12 @@
 ---
 uid: Software_support_life_cycles
-keywords: support lifecycle, product lifecycle
-description: Keep track of the current support life cycle for DataMiner versions, DataMiner functionality, and third-party software.
+keywords: support life cycle, product life cycle, product lifecycle
+description: Keep track of the current support lifecycle for DataMiner versions, DataMiner functionality, and third-party software.
 ---
 
-# Software support life cycles
+# Software support lifecycles
 
-## DataMiner support life cycle policy
+## DataMiner support lifecycle policy
 
 If you are following the **Feature Release** track, you always need to **upgrade to the latest version** to get the latest security updates. If you do not want to upgrade to a new Feature Release version but do want to get the latest security updates, you will need to switch to the Main Release track instead.
 
@@ -73,7 +73,7 @@ Status overview:
 > [!NOTE]
 > For information about functionality in soft launch that is retired, refer to [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
 
-## Third-party software support life cycle
+## Third-party software support lifecycle
 
 | Item | Current status | Detail | Future status |
 |---------|---------|---------|---------|

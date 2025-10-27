@@ -84,7 +84,7 @@ Tickets for Support can be generated through dataminer.services.
 
 Support is available during Business Hours only, except if the User has purchased an Out of Business Hours Support plan. If the User wishes to create a ticket in follow-up of their telephone support, the User needs to generate a ticket through Skyline's dataminer.services.
 
-The User can always consult the status of their tickets on Skyline's dataminer.services. The ticket number will be used by Skyline for the entire life cycle of the specific Issue or question.
+The User can always consult the status of their tickets on Skyline's dataminer.services. The ticket number will be used by Skyline for the entire lifecycle of the specific Issue or question.
 
 To be able to assist the User in an efficient manner, when generating a ticket or calling Skyline's Support helpdesk, when reasonable required, User shall provide (a) reproducible test case, and (b) any log files, trace and systems files. The User's failure to provide this information may prevent Skyline from identifying and fixing the Issue.
 

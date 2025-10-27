@@ -87,7 +87,7 @@ Each additional protocol execution thread in a protocol is linked to a connectio
 
 On a group, it is then possible to define the connection (i.e. which protocol execution thread) this group must be executed from.
 
-For more information on how to implement multiple protocol execution threads in a protocol, see [Multi-threading](xref:AdvancedMultiThreading).
+For more information on how to implement multiple protocol execution threads in a protocol, see [Multithreading](xref:AdvancedMultiThreading).
 
 ![Multiple protocol execution threads](~/develop/images/Protocol_Explained_-_Defining_Multiple_Protocol_Threads.svg)
 
@@ -95,7 +95,7 @@ For more information on how to implement multiple protocol execution threads in 
 
 When a timer has as content groups that are not poll groups (i.e. the group type is "trigger" or "action"), that group will be executed by the timer thread.
 
-By letting the timer thread perform some actions while the main protocol thread is busy performing another operation (e.g. executing a QAction), multi-threaded behavior can be obtained.
+By letting the timer thread perform some actions while the main protocol thread is busy performing another operation (e.g. executing a QAction), multithreaded behavior can be obtained.
 
 For example, consider two timers, where the first timer contains a group of type "poll action" and is therefore added to the group execution queue. This group contains an action to increment a parameter value. The second timer contains a group of type "action". The action lets a QAction triggering on parameter 2 execute. The QAction will increase the value of parameter 3 every second, until it reaches 5.
 

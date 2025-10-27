@@ -29,7 +29,7 @@ uid: Changing_dashboard_settings
 
      - *Fit to view*: Available from DataMiner 10.2.7/10.3.0 onwards. Select this option to make sure all components are automatically adjusted to always be fully visible, so the user does not need to scroll.
 
-     - *Number of columns*: Allows you to configure in how many columns components can be displayed in the dashboard (maximum: 50). If you change the number of columns to a lower number and the columns currently contain components, these components will be automatically relocated when necessary.
+     - *Number of columns*: Allows you to configure in how many columns components can be displayed in the dashboard. If you change the number of columns to a lower number and the columns currently contain components, these components will be automatically relocated when necessary. From DataMiner web 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- RN 43655 -->, this is by default set to the maximum of 50.
 
    - **User access/Dashboard security**
 
@@ -54,7 +54,7 @@ uid: Changing_dashboard_settings
 1. Click the pencil icon again to leave edit mode.
 
 > [!NOTE]
-> The settings for a page or panel of a custom low-code app can be configured in the same way as those for a dashboard. See [Configuring a page of a low-code app](xref:LowCodeApps_page_config) or [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).
+> The settings for a page or panel of a custom low-code app can be configured in the same way as those for a dashboard. See [Configuring an app page](xref:LowCodeApps_page_config) or [Configuring an app panel](xref:LowCodeApps_panel_config).
 
 > [!TIP]
-> See also: [Changing low-code app settings](xref:Changing_low-code_app_settings)
+> See also: [Changing app settings](xref:Changing_low-code_app_settings)

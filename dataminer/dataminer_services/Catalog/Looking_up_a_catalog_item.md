@@ -27,6 +27,9 @@ When you open up the Catalog, a search box is displayed.
    - **Public**: This will only return results that are publicly available to everyone.
    - **Private**: This will only return results from the private items that are only visible to people in your organization.
 
+   > [!TIP]
+   > If you see a tag in the search results that interests you, click the tag to quickly filter the results to items that match that tag.
+
 1. If you see the item you are looking for, click it to open a page where you can see information about that item and its versions.
 
    From here, you can also [deploy the item to your DataMiner System](xref:Deploying_a_catalog_item).

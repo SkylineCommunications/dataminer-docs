@@ -2,7 +2,7 @@
 uid: Creating_custom_apps
 ---
 
-# Creating low-code applications
+# Creating apps
 
 > [!NOTE]
 > To view, add, edit, delete, or publish low-code applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps) as well as the [DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps) user permission.
@@ -37,9 +37,9 @@ uid: Creating_custom_apps
 1. Add and configure the necessary [pages](xref:LowCodeApps_page_config), [panels](xref:LowCodeApps_panel_config), and [events](xref:LowCodeApps_event_config) for the app.
 
    > [!TIP]
-   > To configure the settings for pages and panels in a low-code app, see [Changing low-code app settings](xref:Changing_low-code_app_settings).
+   > To configure the settings for pages and panels in a low-code app, see [Changing app settings](xref:Changing_low-code_app_settings).
 
-1. To customize who can access or edit the application, see [Configuring security for a low-code app](xref:LowCodeApps_security_config).
+1. To customize who can access or edit the application, see [Configuring app security](xref:LowCodeApps_security_config).
 
 1. When your app is ready, click the ![Publish](~/dataminer/images/AppPublishIcon.png) icon in the header bar to save your changes and publish it.
 

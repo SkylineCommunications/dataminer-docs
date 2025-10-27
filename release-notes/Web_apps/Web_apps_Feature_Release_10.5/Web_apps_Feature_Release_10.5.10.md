@@ -189,3 +189,9 @@ Up to now, settings of existing queries that no longer fed data to a *Maps* comp
 From now on, when a query no longer feeds any data to a *Maps* component, it will no longer be automatically removed. Instead, it will be marked as "old query".
 
 Users will be allowed to remove queries marked as "old queries", but they will not be allowed to change any of their settings.
+
+#### Dashboards/Low-Code Apps - Query builder: Problem when linking required ad hoc arguments to data [ID 43766]
+
+<!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 [CU0] -->
+
+When, in the query builder, you had linked required ad hoc arguments to data, in some cases, data would not get passed correctly, causing an error to be thrown.

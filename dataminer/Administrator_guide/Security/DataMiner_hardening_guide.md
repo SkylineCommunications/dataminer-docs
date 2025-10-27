@@ -69,6 +69,9 @@ To enable gRPC for the communication between DataMiner Agents in a cluster, add 
 
 By default, NATS does not employ TLS encryption, leaving communication susceptible to eavesdropping. Consequently, we strongly recommend [enabling TLS encryption for enhanced security within your NATS cluster](xref:Security_NATS).
 
+> [!NOTE]
+> When DataMiner is installed with the [v10.5 installer](xref:Installing_DM_using_the_DM_installer), TLS is by default enabled and configured for NATS.
+
 ### Disable legacy components
 
 DataMiner has some components that are considered legacy. They are still around to support existing setups that depend on them, but if you have a new setup or you want to secure your existing setup, we recommend disabling them. Currently we recommend disabling the *Annotations* component, the legacy *Reports and Dashboards* component, and the v0 api.
@@ -136,9 +139,9 @@ For more information about disabling legacy SSL/TLS versions, refer to [TLS, DTL
 
 Depending on which version of the DataMiner Installer is used, different firewall ports are opened by default. You can find more information about this below.
 
-#### [Installer v10.4](#tab/tabid-1)
+#### [Installer v10.4 & v10.5](#tab/tabid-1)
 
-If DataMiner is installed with the **DataMiner Installer v10.4**, the following (inbound) ports and rules are opened in the Windows firewall:
+If DataMiner is installed with a **recent DataMiner Installer** (v10.4 or higher), the following (inbound) ports and rules are opened in the Windows firewall:
 
 - TCP 80: HTTP
 

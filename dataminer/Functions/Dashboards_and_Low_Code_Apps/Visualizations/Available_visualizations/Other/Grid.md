@@ -70,7 +70,12 @@ In the example below, a grid filters a table component based on job state. By se
 
 ![Grid as a selector](~/dataminer/images/Grid_as_Selector.gif)<br>*Grid component and table component in DataMiner 10.5.7*
 
+> [!TIP]
+> For another good example of the grid component functioning as a selector, see [Example use case: Pan and zoom the map via grid selection](xref:DashboardMaps#example-use-case-pan-and-zoom-the-map-via-grid-selection).
+
 To **clear the selection** in a grid, keep Ctrl pressed and click each selected item.
+
+From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!--RN 43635-->, an action can also be configured on another component (e.g. a button) so that this can be used to clear the grid selection (see [Configuring app events](xref:LowCodeApps_event_config)).
 
 ## Configuration options
 
@@ -155,8 +160,8 @@ By default, the template of a grid component includes the following **pre-config
 | Layer | Type | Description |
 |--|--|--|
 | ![Text layer](~/dataminer/images/Grid_Text_Layer.png) | Text | Displays the value from the first column in the data source. |
-| ![Rectangle layer 1](~/dataminer/images/Grid_Rectangle_Layer.png) | Rectangle | Acts as the background of each grid block. Default color is `#F6F6F6`, with conditional formatting for hover (`#E8E8E9`) and selection (`#D5DBE9`). |
-| ![Rectangle layer 2](~/dataminer/images/Grid_Rectangle_Layer2.png) | Rectangle | Acts as a visual border by being slightly larger than the background layer. Default color is `#B8BABC`, with conditional formatting for selection (`#2563EB`). |
+| ![Rectangle layer 1](~/dataminer/images/Grid_Rectangle_Layer.png) | Rectangle | Acts as the background of each grid block, with conditional formatting for hover and selection. |
+| ![Rectangle layer 2](~/dataminer/images/Grid_Rectangle_Layer2.png) | Rectangle | Acts as a visual border by being slightly larger than the background layer, with conditional formatting for selection. |
 
 This default template (available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->) ensures that a grid block is highlighted when hovered over and stands out when selected, with a light-blue background and a blue border.
 

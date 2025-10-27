@@ -24,6 +24,8 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 - **Refresh Time for Next Quarantined Booking**: Allows you to configure the rate at which the parameter *Time for Next Quarantined Booking* (on the *Bookings* tab) is refreshed, which determines the delay between the current time and the start time of the next booking in quarantine. By default, this is set to 5 minutes. Minimum value: 1 minute.
 
+- **Maximum Simultaneous LSO scripts**: Determines how many LSO scripts can be executed at the same time. Default value: 100. Maximum value: 200. Introduced in SRM version 2.0.3. <!-- RN 43595 -->
+
 - **Column Configuration**: The column configuration to be used in the list of bookings on the *Bookings* tab. See [Customizing the columns of the Bookings list](xref:SRM_custom_bookings_list).
 
 - **Booking Start Failure Script**: See [Configuring a custom script in case orchestration fails](xref:Service_Orchestration_service_states#configuring-a-custom-script-in-case-orchestration-fails).
@@ -37,6 +39,8 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 - **Leave Quarantine Script**: See [Configuring the Booking Manager app to use custom scripts](xref:SRM_custom_scripts).
 
 ### History and Logs settings
+
+- **Time to Keep Booking Attachments**: Determines how long booking attachments are kept after a booking has ended.<!-- RN 35625 -->
 
 - **Booking logging location**: The path that indicates where the booking logs will be saved. Click *Settings* to open a window where you can customize this path and configure the logging date/time format, maximum file size, minimum logging level, and logging cleanup. For more information, see [Configuring SRM logging](xref:SRM_logging_config).
 
@@ -169,7 +173,7 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 ### Service states settings
 
-These settings can be used to customize which service state corresponds with which booking life cycle stage. In the Service State Transitions table, you can also configure which transitions between service states are allowed. For more information, see [Service Orchestration service states configuration](xref:Service_Orchestration_service_states).
+These settings can be used to customize which service state corresponds with which booking lifecycle stage. In the Service State Transitions table, you can also configure which transitions between service states are allowed. For more information, see [Service Orchestration service states configuration](xref:Service_Orchestration_service_states).
 
 ### SLA settings
 

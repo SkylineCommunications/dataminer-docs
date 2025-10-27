@@ -13,7 +13,7 @@ DataMiner supports **four different use cases** that can flexibly be combined wi
 - [Resource Scheduling](xref:srm_resource_scheduling): Keeping track of all resource schedules without automating actions, for maximum flexibility.
 - [Resource Automation](xref:srm_resource_automation): Intelligent resource configuration with a click of a button.
 - [Resource Orchestration](xref:srm_resource_orchestration): The power of Resource Scheduling combined with automatic configuration actions at the start and end time of bookings.
-- [Service Orchestration](xref:srm_service_orchestration): Orchestration of the complete life cycle of services.
+- [Service Orchestration](xref:srm_service_orchestration): Orchestration of the complete lifecycle of services.
 
 Each of the four DataMiner SRM use cases described above relies on a **combination of different DataMiner modules**, as detailed below.
 
@@ -29,7 +29,7 @@ Each of the four DataMiner SRM use cases described above relies on a **combinati
 
 - **[Network Manager](xref:srm_stack#network-manager)**: Calculate the paths across any network, independently from the technology and vendor used for that network.
 
-- **[Service Manager](xref:srm_stack#service-manager)**: Add a full-fledged service layer on top of your individual resources, allowing quick creation of services, full automation of the entire service life cycle, and enhanced visibility of service quality and SLAs.
+- **[Service Manager](xref:srm_stack#service-manager)**: Add a full-fledged service layer on top of your individual resources, allowing quick creation of services, full automation of the entire service lifecycle, and enhanced visibility of service quality and SLAs.
 
 - **Apps**: Out-of-the-box standard application for specific tech domains, such as the [Booking Manager](xref:Booking_Manager_user_interface) app, which allows you to create and manage bookings using DataMiner Service & Resource Management (SRM), the [DataMiner IDP](xref:SolIDP) (Infrastructure Discovery and Provisioning) app and the [DataMiner PTP](xref:SolPTP) (Precision Time Protocol) app.
 

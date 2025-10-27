@@ -136,7 +136,7 @@ Two different DataMiner startup issues are related to IP changes: DataMiner may 
 
 ### Swarming issue
 
-If you have just enabled the [Swarming](xref:Swarming) feature and DataMiner does not startup:
+If you have just enabled the [Swarming](xref:Swarming) feature and DataMiner does not start up:
 
 - Double-check whether the DataMiner System uses a database compatible with Swarming. See [Prerequisites](xref:EnableSwarming#prerequisites).
 

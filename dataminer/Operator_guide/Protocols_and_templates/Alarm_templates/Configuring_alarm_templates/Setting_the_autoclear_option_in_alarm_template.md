@@ -14,7 +14,7 @@ To do so:
 
 1. In the last column for the parameters where you want to override the autoclear parameter, select *True* or *False*.
 
-   By default, the field will be set to *System Default*. This means that the parameter will inherit the AutoClear setting specified in the *AlarmSettings.AutoClear* tag in [MaintenanceSettings.xml](xref:MaintenanceSettings_xml).
+   By default, the field will be set to *System Default*. This means that the parameter will inherit the AutoClear setting specified in the [AlarmSettings.AutoClear](xref:MaintenanceSettings.AlarmSettings.AutoClear) tag in *MaintenanceSettings.xml*.
 
 > [!NOTE]
 > Disabling autoclear is not recommended in larger systems as it can cause alarm trees to grow excessively large. Refer to the [best practices](xref:Best_practices_for_assigning_alarm_severity_levels#keep-alarm-trees-from-growing-too-large) for more information.

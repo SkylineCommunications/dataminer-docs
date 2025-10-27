@@ -7,20 +7,20 @@ description: A DataMiner System can have several additional modules or apps, e.g
 
 <div class="row"> 
   <div class="column">
+    <a href="/dataminer/Functions/DataMiner_Assistant/Assistant_DxM.html" title="DataMiner Assistant" target="_self"><img src="~/dataminer/images/DataMiner_Assistant.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
     <a href="/dataminer/Functions/Automation_module/automation.html" title="Automation" target="_self"><img src="~/dataminer/images/Automation.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Functions/SRM/The_Bookings_module/The_Bookings_module.html" title="Bookings" target="_self"><img src="~/dataminer/images/Bookings.svg" style="width:100%"></a>
   </div>
-  <div class="column">
-    <a href="/dataminer/Functions/Business_Intelligence/Business_Intelligence.html" title="Business Intelligence" target="_self"><img src="~/dataminer/images/Business_Intelligence.svg" style="width:100%"></a>
-  </div>
 </div>
 
 <div class="row"> 
   <div class="column">
-    <a href="/dataminer/Functions/Copilot/Copilot_DxM.html" title="Copilot" target="_self"><img src="~/dataminer/images/Copilot.svg" style="width:100%"></a>
-  </div>  
+    <a href="/dataminer/Functions/Business_Intelligence/Business_Intelligence.html" title="Business Intelligence" target="_self"><img src="~/dataminer/images/Business_Intelligence.svg" style="width:100%"></a>
+  </div>
   <div class="column">
     <a href="/dataminer/Functions/Correlation/About_DMS_Correlation.html" title="Correlation" target="_self"><img src="~/dataminer/images/Correlation.svg" style="width:100%"></a>
   </div>  
@@ -109,3 +109,18 @@ description: A DataMiner System can have several additional modules or apps, e.g
     <a href="/dataminer/Functions/User-Defined_APIs/UD_APIs.html" title="User-Defined APIs" target="_self"><img src="~/dataminer/images/User_Defined_APIs.svg" style="width:100%"></a>
   </div>
 </div>
+
+<style>
+.column a {
+  display: inline-block;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.column a:hover {
+  background-color: #f0f4ff; /* light background on hover */
+  transform: scale(1.05);   /* slightly bigger */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+</style>

@@ -8,7 +8,7 @@ uid: FAQs_General
 - [Does DataMiner process personal data in a GDPR-compliant manner?](xref:FAQ_GDPR)
 - [Does Skyline offer an escrow service?](xref:FAQ_Escrow)
 - [What are the principal advantages of DataMiner?](xref:FAQ_Principal_advantages)
-- [What do you mean with multi-vendor technology?](xref:FAQ_Multi-vendor_technology)
+- [What do you mean with multivendor technology?](xref:FAQ_Multivendor_technology)
 - [What are the benefits of using clustered DataMiner Agents as opposed to separate ones?](xref:FAQ_Clustered_DMAs)
 - [How many (concurrent) users can log in to a DataMiner System?](xref:FAQ_Concurrent_users)
 - [What is the recommended method for southbound integration of an EMS/NMS?](xref:FAQ_Southbound_integration_EMS_NMS)

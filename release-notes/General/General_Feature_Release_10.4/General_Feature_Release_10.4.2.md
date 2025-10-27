@@ -380,7 +380,7 @@ It is now possible to read DOM objects and ModuleSettings in parallel. This will
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
-When multiple, separate sort operators were optimized by the GQI data source *Get parameter table by ID*, up to now, they would be incorrectly combined into a single multi-level sort operation. From now on, only the last sort operator will be used, consistent with the behavior in case the sort operators are not optimized.
+When multiple, separate sort operators were optimized by the GQI data source *Get parameter table by ID*, up to now, they would be incorrectly combined into a single multilevel sort operation. From now on, only the last sort operator will be used, consistent with the behavior in case the sort operators are not optimized.
 
 For example, from now on, when you sort by A and, later on in the GQI query, sort again by B, the query will now only be sorted by B.
 
@@ -528,7 +528,7 @@ SLDataGateway would incorrectly keep waiting for an acknowledgement from SLDataG
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
-When one of the following parameters was updated while an SLA window was changing, a run-time error could occur in SLProtocol:
+When one of the following parameters was updated while an SLA window was changing, a runtime error could occur in SLProtocol:
 
 - Base timestamp
 - Monitor span

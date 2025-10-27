@@ -4,7 +4,7 @@ uid: Getting_Started_with_the_IAS_Toolkit
 
 # Getting started with the IAS Toolkit
 
-## Introduction
+## About the IAS Toolkit
 
 The Interactive Automation Script Toolkit (or “IAS Toolkit” in short) is a library that can be used to create interactive Automation scripts. Its main purpose is to make developing interactive Automation scripts easier.
 
@@ -14,8 +14,6 @@ The Interactive Automation Script Toolkit (or “IAS Toolkit” in short) is a l
 > See also: [Kata #10: Create a simple interactive script](https://community.dataminer.services/courses/kata-10/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
 To choose your version of the IAS Toolkit, the first thing you need to know is the [version of DataMiner](xref:Interactive_Automation_Script_Toolkit#versions) where you want your script to run. As DataMiner keeps improving, so does its support for newer, more advanced IAS components.
-
-In this introduction, DataMiner version 10.1.2 is used. This means that [version 2.0.x](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/2.0.0) of the toolkit can be used.
 
 Just like for protocol and regular Automation script development, our IDE of choice is Visual Studio with the latest version of [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). If you do not have DIS installed, you can find more information on how to do so under [Installing and configuring the software](xref:Installing_and_configuring_the_software).
 
@@ -134,6 +132,9 @@ public class HelloWorldDialog : Dialog
 ```
 
 In order to display the widgets, you will need to add them to your dialog using the *AddWidget* method. With this method, you can link a widget to a cell in a grid layout, where cell 0;0 is in the top-left corner of the dialog.
+
+> [!TIP]
+> For more information on interactive Automation script widgets, layouts, and event handlers, refer to the [API reference](xref:Skyline.DataMiner.Utils.InteractiveAutomationScript).
 
 ```csharp
 public class HelloWorldDialog : Dialog

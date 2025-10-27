@@ -115,7 +115,7 @@ helper.Log("Report a warning", LogEntryType.Warning);
 
 ### Returning data
 
-When [Service Orchestration](xref:srm_service_orchestration) is used, a Profile-Load Script can return data that can then be used within an [LSO script](xref:srm_scripting#life-cycle-service-orchestration-lso-script). This is done by means of a `<string,string>` dictionary that can be built using the following method: <!-- RN 30862 -->
+When [Service Orchestration](xref:srm_service_orchestration) is used, a Profile-Load Script can return data that can then be used within an [LSO script](xref:srm_scripting#lifecycle-service-orchestration-lso-script). This is done by means of a `<string,string>` dictionary that can be built using the following method: <!-- RN 30862 -->
 
 ```csharp
 ProfileParameterEntryHelper.AddOrUpdateResult(string key, string value)

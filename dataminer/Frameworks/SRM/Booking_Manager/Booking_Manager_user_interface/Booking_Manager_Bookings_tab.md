@@ -63,6 +63,8 @@ This tab of the Booking Manager app displays information about current, past and
     > [!NOTE]
     > Prior to SRM 1.2.23, instead of a *Rescue* button, a *Leave Interrupted* button is available, which has the same functionality. <!-- RN 28472 -->
 
+  - **Details**:  Displayed at the bottom of the tab. Opens a window with more detailed information about the selected booking.<!-- 37483 -->
+
   - **Debug Log**: Displayed at the bottom of the tab. Allows you to open the debug log file. See [SRM logging](xref:SRM_logging).
 
   - **Action Log**: Displayed at the bottom of the tab. Allows you to open the action log file. See [SRM logging](xref:SRM_logging).

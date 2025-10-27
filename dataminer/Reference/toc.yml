@@ -104,7 +104,7 @@ items:
         topicUid: Forbidden_characters
       - name: Examples of element names
         topicUid: Examples_of_element_names
-  - name: Software support life cycles
+  - name: Software support lifecycles
     topicUid: Software_support_life_cycles
   - name: Feature overview
     topicUid: Feature_overview

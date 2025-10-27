@@ -14,7 +14,7 @@ Changes introduced in DataMiner 10.4.0 [CU4]/10.4.7 could cause the code to push
 
 ## Fix
 
-No fix is available yet.<!-- RN 42819 - reverted by 43488 -->
+Install DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10<!-- RN 43477 -->.
 
 ## Workaround
 
