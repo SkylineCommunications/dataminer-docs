@@ -53,7 +53,7 @@ The offload rate for trend data and alarm data can be configured in System Cente
      >
      > ![Example trend graph](~/dataminer/images/Trending_offload_example.png)
 
-   - The **interval** at which these offloads are generated: A number of minutes between 1 and 1440 (i.e. 1 day). However, note that in practice, a minimum interval of approximately 150 seconds is currently applied.
+   - The **interval** at which these offloads are generated: A number of minutes between 1 and 1440 (i.e. 1 day).
 
    - The offload **start time**, i.e. the time when the offload to the database first begins, in the format hh:mm:ss. This setting is only implemented at startup, so if you change the setting while the DMA is running, the DMA will need to be restarted for the change to take effect.
 
