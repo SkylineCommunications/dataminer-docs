@@ -94,6 +94,8 @@ items:
         topicUid: Verify_No_Obsolete_API_Deployed
       - name: Verify No Amazon Keyspaces
         topicUid: Verify_No_Amazon_Keyspaces
+      - name: Verify OS Version
+        topicUid: Verify_OS_Version
   - name: Protocol debug tools
     topicUid: Protocol_Debug_Tools
   - name: Skyline Device Simulator
