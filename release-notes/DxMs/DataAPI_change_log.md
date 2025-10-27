@@ -7,6 +7,12 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### ? October 2025 - Fix - DataAPI 1.4.1 - Issue with deadlock and memory leak in Node Identification mechanism [ID 44026]
+
+It could occur that DataAPI would deadlock while processing incoming NATS messages. This caused message accumulation, eventually leading to a memory leak.
+
+The locking mechanism has been improved to ensure proper entry and exit, preventing deadlocks and eliminating the associated memory leak.
+
 ### ? October 2025 - Fix - DataAPI 1.4.1 - Issue with fetching of auto-generated elements and connectors at startup [ID 44000]
 
 It could occur that DataAPI would crash at startup if an exception was thrown during the NATS communication. 
