@@ -279,7 +279,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner Orchestrator: version 1.5.3.14012
 - DataMiner SupportAssistant: version 1.6.4.14013
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID 38508]
 

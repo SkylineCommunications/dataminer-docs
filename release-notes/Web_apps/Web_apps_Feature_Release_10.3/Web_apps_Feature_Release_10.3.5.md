@@ -123,7 +123,7 @@ A default value can be set by means of a URL option:
 
   - `?data=<URL-encoded JSON object>`
 
-For more information on how to pass data using a JSON object, see [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL).
+For more information on how to pass data using a JSON object, see [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_URL).
 
 #### Dashboards app & Low-Code Apps: New 'Numeric input' feed [ID 35911]
 
@@ -148,7 +148,7 @@ A default value can be set by means of a URL option:
 
   - `?data=<URL-encoded JSON object>`
 
-For more information on how to pass data using a JSON object, see [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL).
+For more information on how to pass data using a JSON object, see [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_URL).
 
 #### Low-Code Apps: 'Open monitoring card' action can now also be linked to a feed [ID 35986]
 

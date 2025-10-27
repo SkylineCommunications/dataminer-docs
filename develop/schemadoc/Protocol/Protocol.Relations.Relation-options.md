@@ -28,7 +28,7 @@ Example:
 
 ### includeInAlarms
 
-This will add an extra property to enable alarm bubble-up. Each relation should have a unique property name.
+This will add an extra property to enable alarm bubble-up on tree controls. Each relation should have a unique property name.
 
 Example:
 
@@ -37,3 +37,6 @@ Example:
 <Relation path="100;300" options="includeInAlarms:topology2"/>
 <Relation path="100;200;300;400;500" options="includeInAlarms:topology:rightTopLevel"/>
 ```
+
+> [!NOTE]
+> See [Alarm bubble-Up](xref:UIComponentsTreeControlAlarmBubbleUp) for more information.

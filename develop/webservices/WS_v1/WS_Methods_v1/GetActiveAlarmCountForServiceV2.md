@@ -6,7 +6,7 @@ uid: GetActiveAlarmCountForServiceV2
 
 Use this method to retrieves the number of active alarms on a service along with the alarm cache status.
 
-Available from DataMiner 10.0.7 onwards.
+<!-- Available from DataMiner 10.0.7 onwards. -->
 
 ## Input
 

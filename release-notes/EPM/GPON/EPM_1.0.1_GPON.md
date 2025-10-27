@@ -41,9 +41,21 @@ For a split FAT shape, the pop-up shows the following information:
 - ONT Offline
 - Percentage ONT Offline
 
+#### New subscriber ONT OVERVIEW dashboard [ID 37471]
+
+A new *ONT OVERVIEW* dashboard has been created, using ad hoc queries. For this purpose, the GQI ad hoc data source script has been adjusted to allow users to access comprehensive subscriber information on the dashboard. As a result, it now provides details such as Contract ID, Main Street, Street 1, Street 2, and Neighborhood. Additionally, this dashboard functionality has been integrated at the port, distribution, and FAT levels. The dashboard also has the capability to display only those ONTs that meet specific Out of Spec (OOS) parameter criteria.
+
+At the Port level, a new Visual page has also been added that presents general port information.
+
+Finally, a new column has been incorporated into the Port, Split Distribution, and Split Fat tables. This column houses the OLT element ID, facilitating the GQI script in its search for the corresponding ONTs.
+
 ## Changes
 
 ### Enhancements
+
+#### Route EPM Entity moved to front end [ID 36683]
+
+To prevent possible duplicate entries, the Route EPM Entity has been moved from the back-end managers to the front-end manager.
 
 #### Number ONT KPI improved [ID 37024]
 
@@ -52,3 +64,15 @@ The logic that calculates the Number ONT KPI at network level has been adjusted 
 #### Improved EPM front-end ID request flow [ID 37036]
 
 To improve the EPM front-end ID request flow, so that new entities are available to the user more quickly, the EPM front-end element now no longer has to assign IDs to the xPON CPE devices.
+
+#### Remote view parameters moved from ONT overview to dashboard [ID 37160]
+
+To improve the overall performance of the solution, the remote view parameters have been removed from the ONT overview table. These parameters will now instead be available in a dashboard that the user will be able to navigate to from the *Visual* page at the ONT level.
+
+#### Improved organization of KPIs [ID 37170]
+
+In the service topology, the KPIs have now been arranged in a user-friendly manner. To achieve this, new pages have been created with the "CPEIntegration_Data/" prefix, where the necessary parameters have been placed for improved visibility.
+
+#### Supply Voltage units updated from mV to V [ID 37222]
+
+In the ONT overview table, the units for the Supply Voltage parameter have been updated from mV to V.

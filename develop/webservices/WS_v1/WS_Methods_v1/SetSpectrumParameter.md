@@ -4,7 +4,7 @@ uid: SetSpectrumParameter
 
 # SetSpectrumParameter
 
-Use this method to set a particular spectrum parameter (available from DataMiner 9.5.5 onwards).
+<!-- Use this method to set a particular spectrum parameter (available from DataMiner 9.5.5 onwards). -->
 
 This method is obsolete from DataMiner 10.3.5/10.4.0 onwards. <!-- RN 36364 -->
 

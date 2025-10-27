@@ -6,7 +6,7 @@ uid: GetJobTemplatesV2
 
 Use this method to retrieve all the job templates available in a specific domain.
 
-Available from DataMiner 10.0.9 onwards.
+<!-- Available from DataMiner 10.0.9 onwards. -->
 
 ## Input
 

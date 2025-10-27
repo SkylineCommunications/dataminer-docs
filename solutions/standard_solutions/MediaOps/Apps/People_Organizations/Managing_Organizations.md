@@ -4,17 +4,17 @@ uid: PO_Managing_Organizations
 
 # Managing organizations
 
-The *Organizations Overview* page focuses on your managed organizations. It allows you to switch between two tabs: *Overview* and *List*, each offering a different perspective on the available organizations.
+The *Organizations* page focuses on your managed organizations. It allows you to switch between two tabs: *Overview* and *List*, each offering a different perspective on the available organizations.
 
-You can switch between the *Overview* and *List* tabs by clicking *Overview* and *List* in the header bar of the *Organizations Overview* page.
+You can switch between the *Overview* and *List* tabs by clicking *Overview* or *List* in the header bar.
 
-![Header bar](~/user-guide/images/Organizations_Header_Bar.png)
+![Header bar](~/solutions/images/Organizations_Header_Bar.png)
 
-- The *Overview* tab provides a **snapshot of key metrics**, including the most prominent organization categories, the top 5 organizations with the most members, the number of organizations, deprecated organizations, and drafts, and the five most recently added organizations. This tab gives you a quick view of aggregated organizational data.
+- The *Overview* tab provides a **snapshot of key metrics**, including the most prominent organization categories, the top 5 organizations with the most members, the number of organizations, active organizations, and drafts, and the five most recently added organizations. This tab gives you a quick view of aggregated organizational data.
 
-  ![Overview page](~/user-guide/images/PO_Organizations_Overview_Example.png)
+  ![Overview page](~/solutions/images/PO_Organizations_Overview_Example.png)
 
-- The *List* tab provides an **overview of all organizations**, along with their state, number of members, and organization category. This tab allows you to access and review organization details in one centralized location. It also provides an efficient way to [filter through the list of organizations](#searching-within-the-list-of-organizations) based on the provided information.
+- The *List* tab provides an **overview of all organizations**, along with their state, number of members, and organization category. This tab allows you to access and review organization details in one centralized location. It also provides an efficient way to filter through the list of organizations based on the provided information.
 
 ## Adding a new organization
 
@@ -30,17 +30,11 @@ To add a new organization:
 
    The *Organization drafts* panel will open. The new organization is now saved as a draft.
 
-   - If you want to activate your new organization, select the organization in the *Drafts* panel and click *Activate Selected* in the top-left corner of the panel.
+   - If you want to activate your new organization, select the organization in the *Drafts* panel and click *Activate Selected* in the top-left corner of the panel, or click *Activate All* to activate all the current drafts.
 
-     > [!NOTE]
-     > To activate all drafts simultaneously, click *Activate All*.
+   - If you want to activate your new organization later, close the panel with the "X" in the top-right corner. Later on, when you want to activate the organization, you can open the panel again via the *Drafts* button in the header bar of the *List* tab.
 
-   - If you want to activate your new organization later, click the "X" in the top-right corner of the panel to close it.
-
-     To return to the *Drafts* panel at a later point, click *Drafts* in the header bar of the *List* tab.
-
-> [!IMPORTANT]
-> When a new organization is created, it will not have any members. Make sure to [add members](#configuring-organization-members) in the *Details* panel.
+To add members to your new organization, see [Configuring organization members](#configuring-organization-members).
 
 ## Editing an organization
 
@@ -48,15 +42,15 @@ To edit an existing organization:
 
 1. Navigate to the *List* tab.
 
-1. Locate the organization you want to edit and click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the organization's details.
+1. Locate the organization you want to edit and click the ![Edit](~/solutions/images/PO_Edit.png) button next to the organization's details.
 
    A panel will appear.
 
-1. Select *Edit* in the lower right corner of the panel.
+1. Select *Edit* in the lower-right corner of the panel.
 
 1. Make the necessary changes to the organization information.
 
-1. After making your changes, select *Activate* in the lower right corner.
+1. After making your changes, select *Activate* in the lower-right corner.
 
    > [!NOTE]
    > Skipping this step will keep the organization in an inactive *Edit* state.
@@ -69,40 +63,15 @@ To configure organization members for an existing organization:
 
 1. Navigate to the *List* tab.
 
-1. Locate the organization you want to add members to and click the ![Details](~/user-guide/images/PO_Details.png) button next to the appropriate organization.
+1. Locate the organization you want to add members to and click the ![Details](~/solutions/images/PO_Details.png) button next to the appropriate organization.
 
-   A panel will appear.
+1. In the panel that appears on the right, click *Edit members* at the top.
 
-1. Select *Edit members* in the top-left corner of the panel.
+1. Move contacts to and from the *Non-members* and *Members* columns using the ► and ◄ buttons.
 
-1. To change the organization members, move contacts to and from the *Non-members* and *Members* columns using the ► and ◄ buttons.
+   If you quickly want to find a specific contact in the lists, click the magnifying glass icon at the top and specify a filter.
 
-   > [!NOTE]
-   > To search within the lists of contacts, hover your mouse pointer over the *Non-members* or *Members* column and click the magnifying glass icon to activate the search bar.
-
-1. Click the "X" button in the top-right corner to close the panel.
-
-The selected organization members will now appear in the list of members on the *Details* panel.
-
-## Assigning a contract to an organization
-
-To assign a contract to an organization:
-
-1. Navigate to the *List* tab.
-
-1. In the *Contracts* column, click the ![Contracts](~/user-guide/images/PO_Contracts.png) button.
-
-   A panel will appear.
-
-1. Select *+ Assign*.
-
-1. Select the contract you want to assign to the current organization.
-
-1. Click *Ok*.
-
-   The contract will now appear under *Contracts*.
-
-   ![Contract](~/user-guide/images/PO_Contract.png)
+When you close the panel, the selected organization members will be shown in the list of members in the *Details* panel.
 
 ## Deprecating an organization
 
@@ -119,34 +88,11 @@ To deprecate an existing organization:
    > [!NOTE]
    > To access this overview of deprecated organizations at a later point, click *Deprecated* in the header bar of the *List* tab.
 
-## Searching within the list of organizations
-
-To search within the list of organizations:
-
-1. Navigate to the *List* tab.
-
-1. Hover your mouse pointer over the organizations list.
-
-   In the top-right corner of the list, you will see a magnifying glass icon.
-
-1. Click the magnifying glass icon to activate the search bar.
-
-1. Type in your search query.
-
-   You can search based on the *Name* and *Organization category* columns of the organizations list.
-
-   As you type, the list will dynamically update to show organizations that match your search criteria. For example, typing "Retail Chain" will filter and display all organizations that have "Retail Chain" listed as their organization category.
-
-   ![Retail Chain](~/user-guide/images/PO_Search_Organizations_List.png)
-
-> [!NOTE]
-> To clear your search and return to the full list of organizations, delete the text in the search box and click outside of the search box to close it.
-
 ## Managing organization categories
 
 On both the *Overview* and *List* tabs, you can access the *Categories* panel by clicking the *Categories* button in the header bar.
 
-![Header bar](~/user-guide/images/Organizations_HeaderBar.png)
+![Header bar](~/solutions/images/Organizations_HeaderBar.png)
 
 The *Categories* panel provides an overview of all available organization categories, with options to [edit](#editing-an-organization-category) and [create new ones](#adding-a-new-organization-category).
 
@@ -172,14 +118,14 @@ To edit an existing organization category:
 
 1. In the header bar, click *Categories* to open the *Categories* panel.
 
-1. Click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the category you want to edit.
+1. Click the ![Edit](~/solutions/images/PO_Edit.png) button next to the category you want to edit.
 
 1. Edit the name of the category and select *Save* in the top-right corner.
 
 ### Assigning an organization category
 
+You can view an organization's category in the *Organization category* column in the *List* tab.
+
 To assign a category to an organization, enter the appropriate category in the *Category* field when you [create a new organization](#adding-a-new-organization) or [edit an existing organization](#editing-an-organization).
 
-![Assigning categories](~/user-guide/images/Assigning_Category.png)
-
-You can view an organization's category in the *Organization category* column on the *List* tab.
+![Assigning categories](~/solutions/images/Assigning_Category.png)

@@ -1,0 +1,65 @@
+items:
+  - name: General questions
+    topicUid: FAQs_General
+    items:
+    - name: What is Skyline's mission and vision
+      topicUid: FAQ_MissionVision
+    - name: Does DataMiner process personal data in a GDPR-compliant manner
+      topicUid: FAQ_GDPR
+    - name: Does Skyline offer an escrow service
+      topicUid: FAQ_Escrow
+    - name: What are the principal advantages of DataMiner
+      topicUid: FAQ_Principal_advantages
+    - name: What do you mean with multivendor technology
+      topicUid: FAQ_Multivendor_technology
+    - name: What are the benefits of using clustered DataMiner Agents instead of separate ones
+      topicUid: FAQ_Clustered_DMAs
+    - name: How many users can log in to a DataMiner System
+      topicUid: FAQ_Concurrent_users
+    - name: What is the recommended method for southbound integration of an EMS/NMS
+      topicUid: FAQ_Southbound_integration_EMS_NMS
+    - name: What are the DataMiner system requirements
+      topicUid: FAQ_DataMiner_system_requirements
+    - name: What is the DataMiner roadmap
+      topicUid: FAQ_DataMiner_roadmap
+    - name: How does Skyline define the DMA element capacity
+      topicUid: FAQ_DMA_element_capacity
+    - name: How much bandwidth must be provided for data acquisition on data sources
+      topicUid: FAQ_Bandwidth_data_acquisition
+    - name: Which languages are available in the DataMiner Cube client
+      topicUid: FAQ_DataMiner_Cube_languages
+    - name: How can I view documentation in a different language
+      topicUid: FAQ_doc_change_language
+  - name: Connectors
+    topicUid: FAQs_Connectors
+    items:
+    - name: What is a connector
+      topicUid: FAQ_What_is_a_connector
+    - name: What is the standard lead time for new connectors
+      topicUid: FAQ_Standard_lead_time_new_connectors
+    - name: What are the limitations when using the Generic SNMP connector as opposed to a dedicated connector
+      topicUid: FAQ_Limitations_generic_SNMP_connector
+    - name: What are the standard operating procedures for connector deployment
+      topicUid: FAQ_SOP_connectors
+    - name: What kind of training is available for DIS
+      topicUid: FAQ_DIS_Training
+    - name: Does technical support apply to the actual DataMiner connectors I design
+      topicUid: FAQ_Support_for_own_connector
+    - name: How are third-party connectors added
+      topicUid: Overview_adding_third_party_connectors
+    - name: Can I copy existing third-party DataMiner connectors or parts of them
+      topicUid: FAQ_Copy_existing_connector
+    - name: What if a second- or third-party DataMiner connector malfunctions
+      topicUid: FAQ_2nd_3rd_party_connector_malfunctions
+  - name: Pricing
+    topicUid: FAQs_Pricing
+  - name: Support Services
+    topicUid: FAQs_Support_Services
+  - name: dataminer.services
+    topicUid: FAQ_dataminer_services
+  - name: General configuration
+    topicUid: General_configuration
+  - name: IDs of views, elements, services, redundancy groups and parameters
+    topicUid: IDs_of_views_elements_services_redundancy_groups_and_parameters
+  - name: DataMiner client applications
+    topicUid: DataMiner_client_applications

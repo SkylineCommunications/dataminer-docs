@@ -159,7 +159,7 @@ In the following example, the condition is met when the value of the parameter w
 <Condition><![CDATA[(id:92 == empty)]]></Condition>
 ```
 
-In the following example, the condition is met when the value the value of parameter ID 500 is equal to “Active”.
+In the following example, the condition is met when the value of parameter ID 500 is equal to “Active”.
 
 ```xml
 <Condition>id:500 == "Active"</Condition>

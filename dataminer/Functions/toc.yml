@@ -1,0 +1,1328 @@
+items:
+  - name: DataMiner Assistant
+    items:
+      - name: DataMiner Assistant DxM
+        topicUid: Assistant_DxM
+      - name: DataMiner Assistant app
+        topicUid: DataMinerAssistant
+        items:
+        - name: Context structure
+          topicUid: Assistant_Context
+        - name: Adding custom user context
+          topicUid: Assistant_UserContext
+        - name: Adding or editing context files
+          topicUid: Assistant_AddingContextFiles
+        - name: Adding custom predefined questions
+          topicUid: Assistant_Predefined_Questions
+      - name: Natural language to GQI
+        topicUid: NL2GQI
+  - name: Automation
+    items:
+      - name: About DataMiner Automation
+        topicUid: automation
+      - name: Managing Automation scripts
+        topicUid: Managing_Automation_scripts
+      - name: Designing Automation scripts
+        topicUid: Designing_Automation_scripts
+        items:
+          - name: General script configuration
+            topicUid: General_script_configuration
+          - name: Script variables
+            topicUid: Script_variables
+          - name: Script actions
+            topicUid: Script_actions
+      - name: Automation script actions in DataMiner Cube
+        topicUid: Automation_script_actions_in_DataMiner_Cube
+        items:
+          - name: Assign dummy
+            topicUid: Assign_dummy
+          - name: Assign template
+            topicUid: Assign_template
+          - name: C# code
+            topicUid: CSharp_code
+          - name: Clear memory
+            topicUid: Clear_memory
+          - name: Comment
+            topicUid: Comment
+          - name: Email
+            topicUid: Email
+          - name: Exit
+            topicUid: Exit
+          - name: Find interactive client
+            topicUid: Find_interactive_client
+          - name: Get parameter or memory value
+            topicUid: Get_parameter_or_memory_value
+          - name: GoTo and Label
+            topicUid: GoTo_and_Label
+          - name: If condition
+            topicUid: If_condition
+          - name: Information
+            topicUid: Information
+          - name: Log
+            topicUid: Log
+          - name: Script
+            topicUid: Script
+          - name: Set parameter, memory position or variable
+            topicUid: Set_parameter_memory_position_or_variable
+          - name: Set element state
+            topicUid: Set_element_state
+          - name: Sleep
+            topicUid: Sleep
+          - name: SMS
+            topicUid: SMS
+          - name: Upload report to FTP
+            topicUid: Upload_report_to_FTP
+          - name: Upload report to shared folder
+            topicUid: Upload_report_to_shared_folder
+          - name: User interaction
+            topicUid: User_interaction
+      - name: Running Automation scripts
+        topicUid: Running_Automation_scripts
+        items:
+          - name: Manually executing a script
+            topicUid: Manually_executing_a_script
+          - name: Script execution options
+            topicUid: Script_execution_options
+      - name: Using C# code in Automation scripts
+        topicUid: Using_CSharp_code_in_Automation_scripts
+        items:
+          - name: Adding C# code to an Automation script
+            topicUid: Adding_CSharp_code_to_an_Automation_script
+          - name: Debugging C# scripts
+            topicUid: Debugging_CSharp_scripts
+          - name: Building interactive Automation scripts with C#
+            topicUid: Building_interactive_Automation_scripts_with_CSharp
+          - name: Compiling a C# code block as a library
+            topicUid: Compiling_a_CSharp_code_block_as_a_library
+      - name: Special parameters available in Automation scripts
+        topicUid: Special_parameters_available_in_DMS_Automation_scripts
+      - name: Alarm level IDs for use in Automation scripts
+        topicUid: Alarm_level_IDs_for_use_in_Automation_scripts
+      - name: Automation scripts triggered from redundancy groups
+        topicUid: Automation_scripts_triggered_from_redundancy_groups
+      - name: Frequently asked questions about DataMiner Automation
+        topicUid: Frequently_asked_questions_about_DMS_Automation
+        items:
+          - name: How can I execute an Automation Script on an element in timeout?
+            topicUid: How_can_I_execute_an_Automation_Script_on_an_element_in_timeout
+          - name: How do I abort a running Automation script?
+            topicUid: How_do_I_abort_a_running_Automation_script
+          - name: How do I retrieve the current value of a script parameter?
+            topicUid: How_do_I_retrieve_the_current_value_of_a_script_parameter
+          - name: How do I connect to a CMDB from an Automation script?
+            topicUid: How_do_I_connect_to_a_CMDB_from_an_Automation_script
+          - name: How do I parse Correlation Alarm Info data?
+            topicUid: How_do_I_parse_Correlation_Alarm_Info_data
+          - name: How can I manage permanent memory files?
+            topicUid: How_can_I_manage_permanent_memory_files
+  - name: Bookings
+    items:
+      - name: About the Bookings module
+        topicUid: The_Bookings_module
+      - name: Stages of bookings
+        topicUid: srm_stages_of_bookings
+      - name: Advanced booking configuration
+        items:
+          - name: Function resource settings
+            topicUid: Function_resource_settings
+          - name: Resource availability
+            topicUid: Resource_availability
+  - name: Business Intelligence
+    topicUid: sla
+    items:
+      - name: Creating an SLA
+        items:
+          - name: Creating a new SLA
+            topicUid: Creating_a_new_SLA
+          - name: Replicating an existing SLA
+            topicUid: Replicating_an_existing_SLA
+      - name: Configuring an SLA
+        items:
+          - name: Setting the SLA Window
+            topicUid: Setting_the_SLA_Window
+          - name: Setting the offline window for an SLA
+            topicUid: Setting_the_offline_window_for_an_SLA
+          - name: Configuring the alarm settings for an SLA
+            topicUid: Configuring_the_alarm_settings_for_an_SLA
+          - name: Turning SLA tracking on and off
+            topicUid: Turning_SLA_tracking_on_and_off
+          - name: Resetting the SLA counters
+            topicUid: Resetting_the_SLA_counters
+          - name: Setting the time to keep outages
+            topicUid: Setting_the_time_to_keep_outages
+          - name: Setting the SLA start and end time
+            topicUid: Setting_the_SLA_start_and_end_time
+          - name: Configuring SLA Compliance
+            topicUid: Configuring_SLA_Compliance
+          - name: Making an SLA generate tickets
+            topicUid: Making_an_SLA_generate_tickets
+          - name: Saving and loading an SLA configuration
+            topicUid: Saving_and_loading_an_SLA_configuration
+          - name: Changing an SLA into an enhanced service
+            topicUid: Changing_an_SLA_into_an_enhanced_service
+      - name: Viewing SLA information
+        items:
+          - name: Consulting general SLA information
+            topicUid: Consulting_general_SLA_information
+          - name: Checking SLA Key Performance Indicators
+            topicUid: Checking_SLA_Key_Performance_Indicators
+          - name: Checking the SLA compliance
+            topicUid: Checking_the_SLA_compliance
+          - name: Viewing a list of outages
+            topicUid: Viewing_a_list_of_outages
+          - name: Viewing a list of current active service alarms
+            topicUid: Viewing_a_list_of_current_active_service_alarms
+      - name: Making corrections to existing outages
+        items:
+          - name: Correcting an outage in the outage list
+            topicUid: Correcting_an_outage_in_the_outage_list
+          - name: Excluding alarms that affect the SLA
+            topicUid: Excluding_alarms_that_affect_the_SLA
+      - name: SLA reporting
+        topicUid: SLA_reporting
+      - name: Tutorials
+        items:
+          - name: Using an SLA to monitor a power service
+            topicUid: SLA_tutorial
+  - name: Correlation
+    items:
+      - name: About DataMiner Correlation
+        topicUid: About_DMS_Correlation
+      - name: Managing Correlation rules
+        topicUid: Managing_Correlation_rules
+        items:
+          - name: Collapsing and expanding folders
+            topicUid: Collapsing_and_expanding_folders
+          - name: Adding a new folder
+            topicUid: Adding_a_new_folder
+          - name: Moving rules or folders
+            topicUid: Moving_rules_or_folders
+          - name: Deleting a rule or folder
+            topicUid: Deleting_a_rule_or_folder
+          - name: Renaming a folder
+            topicUid: Renaming_a_folder
+          - name: Adding a new Correlation rule
+            topicUid: Adding_a_new_Correlation_rule
+          - name: Testing a Correlation rule
+            topicUid: Testing_a_Correlation_rule
+      - name: General configuration of Correlation rules
+        topicUid: General_configuration_of_Correlation_rules
+      - name: Filtering and grouping base alarms for Correlation rules
+        topicUid: Filtering_and_grouping_base_alarms_for_Correlation_rules
+        items:
+          - name: Adding alarm filters to Correlation rules
+            topicUid: Adding_alarm_filters_to_Correlation_rules
+          - name: Limiting the base alarms
+            topicUid: Limiting_the_base_alarms
+          - name: Grouping alarms in Correlation rules
+            topicUid: Grouping_alarms_in_Correlation_rules
+      - name: Adding rule conditions in Correlation rules
+        topicUid: Adding_rule_conditions_in_Correlation_rules
+      - name: Adding rule actions in Correlation rules
+        topicUid: Adding_rule_actions_in_Correlation_rules
+        items:
+          - name: Acknowledging a base alarm
+            topicUid: Acknowledging_a_base_alarm
+          - name: Creating a ticket
+            topicUid: Creating_a_ticket
+          - name: Escalating an event
+            topicUid: Escalating_an_event
+          - name: Triggering a correlated alarm
+            topicUid: Triggering_a_correlated_alarm
+          - name: Running an Automation script from a Correlation rule
+            topicUid: Running_an_Automation_script_from_a_Correlation_rule
+          - name: Sending an email
+            topicUid: Sending_an_email
+          - name: Sending a text message
+            topicUid: Sending_a_text_message
+          - name: Triggering a parameter set
+            topicUid: Triggering_a_parameter_set
+      - name: Best practices for Correlation
+        topicUid: Best_Practices_For_Correlation
+      - name: DataMiner Correlation tutorials
+        items:
+          - name: Responding to element timeouts using Correlation
+            topicUid: Correlation_Tutorial_Element_Timeout
+      - name: Correlation rule syntax
+        topicUid: Correlation_rule_syntax
+        items:
+          - name: Condition format
+            topicUid: Condition_format
+          - name: Script condition functions
+            topicUid: Script_condition_functions
+          - name: Examples of script conditions
+            topicUid: Examples_of_script_conditions
+      - name: Using Correlation analyzers
+        topicUid: Using_Correlation_analyzers
+        items:
+          - name: Creating an analyzer
+            topicUid: Creating_an_analyzer
+          - name: Configuring an analyzer
+            topicUid: Configuring_an_analyzer
+          - name: Running an analyzer
+            topicUid: Running_an_analyzer
+          - name: Managing analyzers
+            topicUid: Managing_analyzers
+      - name: Working with the Connectivity Editor
+        topicUid: Working_with_the_Connectivity_Editor
+        items:
+          - name: Creating a connectivity chain
+            topicUid: Creating_a_connectivity_chain
+          - name: Creating an internal connectivity chain
+            topicUid: Creating_an_internal_connectivity_chain
+          - name: Managing connectivity chains
+            topicUid: Managing_connectivity_chains
+      - name: Working with aggregation rules
+        topicUid: Working_with_aggregation_rules
+        items:
+          - name: About aggregation rules
+            topicUid: About_aggregation_rules
+          - name: Viewing aggregation information
+            topicUid: Viewing_aggregation_information
+          - name: Managing aggregation rules
+            topicUid: Managing_aggregation_rules
+  - name: Dashboards and Low-Code Apps
+    topicUid: Dashboards_and_Low_Code_Apps
+    items:
+      - name: Dashboards app
+        topicUid: newR_D
+        items:
+          - name: Overview of the Dashboards app UI
+            topicUid: Overview_of_the_Dashboards_app_UI
+          - name: Managing dashboard folders
+            topicUid: Managing_dashboard_folders
+          - name: Creating and configuring dashboards
+            items:
+              - name: Creating a completely new dashboard
+                topicUid: Creating_a_completely_new_dashboard
+              - name: Creating a dashboard based on an example
+                topicUid: Creating_a_dashboard_based_on_an_example
+              - name: Duplicating a dashboard
+                topicUid: Duplicating_a_dashboard
+              - name: Deleting a dashboard
+                topicUid: Deleting_a_dashboard
+              - name: Editing a dashboard
+                topicUid: Editing_a_dashboard
+              - name: Changing dashboard settings
+                topicUid: Changing_dashboard_settings
+              - name: Configuring security for a dashboard
+                topicUid: Configuring_dashboard_security
+              - name: Configuring the dashboard layout
+                topicUid: Configuring_the_dashboard_layout
+              - name: Embedding a dashboard component in a webpage or Visio drawing
+                topicUid: Embedding_a_dashboard_component_in_a_webpage_or_Visio_drawing
+          - name: Sharing a dashboard
+            topicUid: Sharing_a_dashboard
+          - name: Generating a report based on a dashboard
+            items:
+              - name: From DataMiner Cube
+                topicUid: Generating_a_report_based_on_a_dashboard_Cube
+              - name: From the Dashboards app
+                topicUid: Sharing_PDF_report_from_Dashboards_app
+          - name: Customizing the Dashboards app
+            topicUid: Customizing_the_Dashboards_app
+          - name: Dashboard Gateway installation
+            topicUid: Dashboard_Gateway_installation
+          - name: Tutorials
+            topicUid: Tutorial_Dashboards
+            items:
+              - name: Displaying a custom empty component message
+                topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
+              - name: Using controls to create a dynamic GQI query
+                topicUid: Tutorial_Dashboards_Controls_Query
+              - name: Getting started with node edge graphs
+                topicUid: Tutorial_Apps_Node_Edge
+              - name: Creating a custom parameter table connected to an element feed
+                topicUid: Creating_a_parameter_table_connected_to_an_element_feed
+              - name: Creating an alarm dashboard for a daily DMS health check
+                topicUid: Tutorial_Alarm_Dashboard_for_your_daily_DMS_health_check
+      - name: Low-Code Apps
+        topicUid: Application_framework
+        items:
+          - name: Creating apps
+            topicUid: Creating_custom_apps
+          - name: Editing an app
+            topicUid: Editing_custom_apps
+          - name: Configuring apps
+            items:
+              - name: Configuring the app layout
+                topicUid: LowCodeApps_Layout
+              - name: Configuring an app page
+                topicUid: LowCodeApps_page_config
+              - name: Configuring an app panel
+                topicUid: LowCodeApps_panel_config
+              - name: Changing app settings
+                topicUid: Changing_low-code_app_settings
+              - name: Configuring the app header bar
+                topicUid: LowCodeApps_header_config
+              - name: Configuring app events
+                topicUid: LowCodeApps_event_config
+              - name: Configuring app security
+                topicUid: LowCodeApps_security_config
+              - name: Organizing the apps on the landing page in sections
+                topicUid: LowCodeApps_organizing_landing_page
+          - name: Retrieving an earlier app version
+            topicUid: LowCodeApps_earlier_version
+          - name: Deleting an app
+            topicUid: Deleting_custom_apps
+          - name: Configuring app actions and behavior via the URL
+            topicUid: Configuring_app_actions_and_behavior_via_URL
+          - name: Tutorials
+            topicUid: Tutorial_Apps
+            items:
+              - name: Creating and publishing an app
+                topicUid: Tutorial_Apps_Creating_And_Publishing
+              - name: Editing an existing app
+                topicUid: Tutorial_Apps_Edit_Existing_App
+              - name: Managing the pages in an app
+                topicUid: Tutorial_Apps_Managing_Pages
+              - name: Creating and showing a panel
+                topicUid: Tutorial_Apps_Panel
+              - name: Using a header bar
+                topicUid: Tutorial_Apps_Headerbar
+              - name: Running a script when a page opens
+                topicUid: Tutorial_Apps_Script_Upon_Page_Load
+              - name: Chaining actions
+                topicUid: Tutorial_Apps_Chaining_Actions
+              - name: Using the stepper component in a low-code app
+                topicUid: TutorialStepper
+              - name: Styling a table component
+                topicUid: Tutorial_Apps_Style_A_Table
+              - name: Using the maps component in a low-code app
+                topicUid: MapsTutorial
+              - name: Getting started with the grid component
+                topicUid: Tutorial_Apps_Grid
+              - name: Leveraging feeds in a web component
+                topicUid: Tutorial_Dashboards_Feeds_Web_Component
+              - name: Creating a visually appealing and user-friendly low-code app
+                topicUid: Tutorial_App_Design
+              - name: Using flows in a low-code app
+                topicUid: Tutorial_Apps_Flows
+              - name: Using variables in a low-code app
+                topicUid: Tutorial_Apps_Variables
+              - name: Creating a custom event scheduler low-code app
+                topicUid: Tutorial_Custom_Event_Scheduler_LCA
+              - name: Visualizing the Starlink location history in DataMiner
+                topicUid: Tutorial_Visualizing_Starlink_Location_History_in_DataMiner
+      - name: Configuring components
+        topicUid: Configuring_components
+        items:
+          - name: Applying a visualization
+            topicUid: Apply_Visualization
+          - name: Adding data to a component
+            topicUid: Adding_data_to_component
+          - name: Customizing the component layout
+            topicUid: Customize_Component_Layout
+          - name: Dynamically referencing data in text
+            topicUid: Dynamically_Referencing_Data_in_Text
+          - name: Using the Template Editor
+            topicUid: Template_Editor
+          - name: Deleting a component
+            topicUid: Delete_Component
+      - name: Available visualizations
+        topicUid: Available_visualizations
+        items:
+          - name: General
+            items:
+              - name: Block
+                topicUid: DashboardBlock
+              - name: Button
+                topicUid: DashboardButton
+              - name: Button panel
+                topicUid: DashboardButtonPanel
+              - name: Form
+                topicUid: DashboardForm
+              - name: Text
+                topicUid: DashboardText
+              - name: Image
+                topicUid: DashboardImage
+              - name: Icon
+                topicUid: DashboardIcon
+              - name: Generic map
+                topicUid: DashboardGenericMap
+              - name: Clock (digital)
+                topicUid: DashboardClockDigital
+              - name: Clock (analog)
+                topicUid: DashboardClockAnalog
+              - name: Group
+                topicUid: DashboardGroup
+              - name: Maps
+                topicUid: DashboardMaps
+              - name: Query filter
+                topicUid: DashboardQueryFilter
+              - name: Stepper
+                topicUid: DashboardStepper
+              - name: Trigger
+                topicUid: DashboardTrigger
+              - name: Web
+                topicUid: DashboardWeb
+              - name: Time range
+                topicUid: DashboardTimeRange
+          - name: States and values
+            items:
+              - name: State
+                topicUid: DashboardState
+              - name: Progress bar
+                topicUid: DashboardProgressBar
+              - name: Gauge
+                topicUid: DashboardGauge
+              - name: Ring
+                topicUid: DashboardRing
+              - name: State timeline
+                topicUid: DashboardStateTimeline
+          - name: Tables
+            items:
+              - name: Parameter table
+                topicUid: DashboardParameterTable
+              - name: Alarm table
+                topicUid: DashboardAlarmTable
+              - name: Pivot table
+                topicUid: DashboardPivotTable
+              - name: Table
+                topicUid: DashboardTable
+                items:
+                  - name: Filtering table content
+                    topicUid: Filtering_Table_Content
+          - name: Charts
+            items:
+              - name: Column & Bar chart
+                topicUid: ColumnAndBarChart
+              - name: Line & area chart
+                topicUid: LineAndAreaChart
+              - name: Pie & donut chart
+                topicUid: PieAndDonutChart
+          - name: Other
+            items:
+              - name: Timeline
+                topicUid: DashboardTimeline
+              - name: List
+                topicUid: DashboardList
+              - name: EPM picker
+                topicUid: DashboardEPMPicker
+              - name: Grid
+                topicUid: DashboardGrid
+              - name: Interactive Automation script
+                topicUid: InteractiveAutomationScript
+              - name: Node edge graph
+                topicUid: DashboardNodeEdgeGraph
+              - name: Parameter page
+                topicUid: DashboardParameterPage
+              - name: Service definition
+                topicUid: DashboardServiceDefinition
+              - name: Spectrum Analyzer
+                topicUid: DashboardSpectrumAnalyzer
+              - name: Visual Overview
+                topicUid: DashboardVisualOverview
+              - name: Tree
+                topicUid: DashboardTree
+              - name: Parameter picker
+                topicUid: DashboardParameterPicker
+              - name: Trend statistics
+                topicUid: DashboardTrendStatistics
+          - name: Feeds
+            topicUid: Feeds
+          - name: Basic controls
+            items:
+              - name: Dropdown
+                topicUid: DashboardDropdown
+              - name: Numeric input
+                topicUid: DashboardNumericInput
+              - name: Search input
+                topicUid: DashboardSearchInput
+              - name: Text input
+                topicUid: DashboardTextInput
+              - name: Time range
+                topicUid: TimeRange
+              - name: Toggle
+                topicUid: Toggle
+      - name: Available data types
+        topicUid: Available_Data_Types
+        items:
+          - name: Booking data
+            topicUid: Booking_Data
+          - name: Component data
+            topicUid: Component_Data
+          - name: Element data
+            topicUid: Element_Data
+          - name: Flows
+            topicUid: Using_flows
+            items:
+              - name: Configuring a flow
+                topicUid: Configuring_a_flow
+              - name: Flow operators
+                topicUid: Flow_operators
+          - name: Index data
+            topicUid: Index_Data
+          - name: Object manager definition data
+            topicUid: Object_Manager_Definition_Data
+          - name: Object manager instance data
+            topicUid: Object_Manager_Instance_Data
+          - name: Parameter table filters
+            topicUid: Parameter_Table_Filters
+          - name: Parameter data
+            topicUid: Parameter_Data
+          - name: Profile parameter data
+            topicUid: Profile_Parameter_Data
+          - name: Protocol data
+            topicUid: Protocol_Data
+          - name: Query data
+            topicUid: Query_Data
+          - name: Redundancy group data
+            topicUid: Redundancy_Group_Data
+          - name: Resource data
+            topicUid: Resource_Data
+          - name: Service definition data
+            topicUid: Service_Definition_Data
+          - name: Service data
+            topicUid: Service_Data
+          - name: Spectrum buffer data
+            topicUid: Spectrum_Buffer_Data
+          - name: Spectrum preset data
+            topicUid: Spectrum_Preset_Data
+          - name: URL data
+            topicUid: URL_data
+          - name: Variables
+            topicUid: Variables
+          - name: View data
+            topicUid: View_Data
+      - name: Specifying data input in a dashboard or app URL
+        topicUid: Specifying_data_input_in_a_URL
+      - name: Generic Query Interface (GQI)
+        items:
+          - name: About the Generic Query Interface
+            topicUid: About_GQI
+          - name: GQI DxM
+            topicUid: GQI_DxM
+          - name: Creating a GQI query
+            topicUid: Creating_GQI_query
+          - name: Query data sources
+            topicUid: Query_data_sources
+            items:
+              - name: Get alarms
+                topicUid: Get_alarms
+              - name: Get ad hoc data
+                topicUid: Get_ad_hoc_data
+              - name: Get trend data patterns
+                topicUid: Get_trend_data_patterns
+              - name: Get trend data pattern events
+                topicUid: Get_trend_data_pattern_events
+              - name: Get behavioral change events
+                topicUid: Get_behavioral_change_events
+              - name: Get DCF connections
+                topicUid: Get_DCF_connections
+              - name: Get elements
+                topicUid: Get_elements
+              - name: Get parameter table by alias
+                topicUid: Get_parameter_table_by_alias
+              - name: Get object manager instances
+                topicUid: Get_object_manager_instances
+              - name: Get parameter table by ID
+                topicUid: Get_parameter_table_by_ID
+              - name: Get parameter relations
+                topicUid: Get_parameter_relations
+              - name: Get parameters for element where
+                topicUid: Get_parameters_for_element_where
+              - name: Get profile instances
+                topicUid: Get_profile_instances
+              - name: Get resources
+                topicUid: Get_resources
+              - name: Get services
+                topicUid: Get_services
+              - name: Get view relations
+                topicUid: Get_view_relations
+              - name: Get views
+                topicUid: Get_views
+              - name: Start from
+                topicUid: Start_from
+          - name: Query operators
+            topicUid: Query_operators
+            items:
+              - name: Aggregate
+                topicUid: GQI_Aggregate
+              - name: Column manipulations
+                topicUid: GQI_Column_manipulations
+              - name: Custom operator
+                topicUid: GQI_Custom_Operator_About
+              - name: Filter
+                topicUid: GQI_Filter
+              - name: Join
+                topicUid: GQI_Join
+              - name: Select
+                topicUid: GQI_Select
+              - name: (Then) Sort (by)
+                topicUid: GQI_Sort
+              - name: Top X
+                topicUid: GQI_Top_X
+          - name: Logging
+            topicUid: GQI_Logging
+          - name: Query updates
+            topicUid: Query_updates
+          - name: Importing a query
+            topicUid: Importing_a_query
+      - name: Logging
+        topicUid: Dashboards_and_Low_Code_Apps_Logging
+      - name: Style guide
+        topicUid: LCA_Style_guide
+      - name: Frequently asked questions
+        topicUid: Dashboards_and_Low_Code_Apps_FAQ
+  - name: DMS Dashboards (legacy)
+    topicUid: dashboards
+    items:
+      - name: Accessing dashboards
+        topicUid: Accessing_dashboards
+        items:
+          - name: Logging on to the Dashboards App
+            topicUid: Logging_on_to_the_Dashboards_App
+          - name: Dashboard URL options
+            topicUid: Dashboard_URL_options
+      - name: Creating and configuring dashboards
+        items:
+          - name: Creating a new dashboard
+            topicUid: Creating_a_new_dashboard
+          - name: Configuring dashboard components
+            topicUid: Configuring_dashboard_components1
+          - name: Adding an item to a dashboard from outside the Dashboards app
+            topicUid: Adding_an_item_to_a_dashboard_from_outside_the_Dashboards_app
+          - name: Dashboard components
+            topicUid: Dashboard_components
+          - name: Creating a dashboard with a dynamic list layout
+            topicUid: Creating_a_dashboard_with_a_dynamic_list_layout
+          - name: Creating a dashboard container
+            topicUid: Creating_a_dashboard_container
+      - name: Managing dashboards in the legacy app
+        topicUid: Managing_dashboards_in_the_legacy_app
+        items:
+          - name: Activating or deactivating a dashboard
+            topicUid: Activating_or_deactivating_a_dashboard
+          - name: Editing a dashboard
+            topicUid: Editing_a_dashboard1
+          - name: Duplicating a dashboard
+            topicUid: Duplicating_a_dashboard1
+          - name: Deleting a dashboard
+            topicUid: Deleting_a_dashboard1
+          - name: Organizing dashboards in folders
+            topicUid: Organizing_dashboards_in_folders
+      - name: Customizing the legacy Dashboards app
+        topicUid: Customizing_the_legacy_Dashboards_app
+      - name: Legacy Dashboard Gateway installation
+        items:
+          - name: Installing a DMS Dashboard Gateway
+            topicUid: Installing_a_DMS_Dashboard_Gateway
+          - name: Adding a Dashboards User to the DMS
+            topicUid: Adding_a_Dashboards_User_to_the_DMS
+          - name: Configuring dashboard access rights
+            topicUid: Configuring_dashboard_access_rights
+          - name: Dashboard Gateway troubleshooting
+            topicUid: Dashboard_Gateway_troubleshooting
+  - name: Data Aggregator
+    topicUid: Data_Aggregator_DxM
+    items:
+      - name: Installation and setup
+        topicUid: Data_Aggregator_install_setup
+      - name: Settings
+        topicUid: Data_Aggregator_settings
+      - name: Configuring GQI queries
+        topicUid: Data_Aggregator_queries
+      - name: Troubleshooting
+        topicUid: Data_Aggregator_troubleshooting
+  - name: Data Sources
+    topicUid: Data_Sources
+    items:
+      - name: Scripted connectors
+        topicUid: Scripted_Connectors
+      - name: Data API
+        topicUid: Data_API
+      - name: Getting started with the Data Sources module
+        topicUid: Data_Sources_Setup
+      - name: Limitations
+        topicUid: Data_Sources_Limitations
+      - name: Tutorials
+        items:
+          - name: Creating a scripted connector 
+            topicUid: Data_Sources_Tutorials_GettingStarted
+  - name: DataMiner Object Models (DOM)
+    topicUid: DOM
+    items:
+      - name: DOM managers
+        topicUid: DOM_managers
+      - name: DOM objects
+        topicUid: DOM_objects
+        items:
+          - name: SectionDefinition object
+            topicUid: DOM_SectionDefinition
+            items:
+              - name: AutoIncrementFieldDescriptor
+                topicUid: DOM_AutoIncrementFieldDescriptor
+              - name: DomInstanceFieldDescriptor
+                topicUid: DOM_DomInstanceFieldDescriptor
+              - name: DomInstanceValueFieldDescriptor
+                topicUid: DOM_DomInstanceValueFieldDescriptor
+              - name: ElementFieldDescriptor
+                topicUid: DOM_ElementFieldDescriptor
+              - name: GenericEnumFieldDescriptor
+                topicUid: DOM_GenericEnumFieldDescriptor
+              - name: GroupFieldDescriptor
+                topicUid: DOM_GroupFieldDescriptor
+              - name: ReservationFieldDescriptor
+                topicUid: DOM_ReservationFieldDescriptor
+              - name: ResourceFieldDescriptor
+                topicUid: DOM_ResourceFieldDescriptor
+              - name: ServiceDefinitionFieldDescriptor
+                topicUid: DOM_ServiceDefinitionFieldDescriptor
+              - name: StaticTextFieldDescriptor
+                topicUid: DOM_StaticTextFieldDescriptor
+              - name: UserFieldDescriptor
+                topicUid: DOM_UserFieldDescriptor
+          - name: DomDefinition object
+            topicUid: DomDefinition
+          - name: DomInstance object
+            topicUid: DomInstance
+            items:
+              - name: DOM multiple sections
+                topicUid: DOM_MultipleSections
+          - name: DomTemplate object
+            topicUid: DomTemplate
+          - name: DomBehaviorDefinition object
+            topicUid: DomBehaviorDefinition
+      - name: DOM helper class
+        topicUid: DomHelper_class
+      - name: DOM module settings
+        topicUid: DOM_ModuleSettings
+        items:
+          - name: Module ID
+            topicUid: DOM_ModuleId
+          - name: ModuleSections
+            topicUid: DOM_ModuleSections
+          - name: FieldAliases
+            topicUid: DOM_FieldAliases
+          - name: ExecuteScriptOnDomInstanceActionSettings
+            topicUid: ExecuteScriptOnDomInstanceActionSettings
+          - name: DomManagerInformationEventSettings
+            topicUid: DomManagerInformationEventSettings
+          - name: DomInstanceNameDefinition
+            topicUid: DomInstanceNameDefinition
+          - name: ModuleBehaviorDefinition
+            topicUid: DOM_ModuleBehaviorDefinition
+          - name: TtlSettings
+            topicUid: DOM_TtlSettings
+          - name: DomInstanceHistorySettings
+            topicUid: DOM_DomInstanceHistorySettings
+          - name: StorageSettings
+            topicUid: DOM_StorageSettings
+          - name: DomInstanceNetworkAttachmentSettings
+            topicUid: DOM_DomInstanceNetworkAttachmentSettings
+          - name: SecuritySettings
+            topicUid: DOM_SecuritySettings
+      - name: DOM events
+        topicUid: DOM_events
+      - name: DOM history
+        topicUid: DOM_history
+      - name: DOM status system
+        topicUid: DOM_status_system
+      - name: DOM security
+        topicUid: DOM_security
+        items:
+          - name: Configuring definition-level security
+            topicUid: DOM_security_ui
+      - name: DOM actions
+        topicUid: DOM_actions
+      - name: DOM data storage
+        topicUid: DOM_data_storage
+      - name: DOM examples
+        items:
+          - name: Invoice app example
+            topicUid: DOM_Invoice_app_example
+          - name: Status system example
+            topicUid: DOM_status_system_example
+          - name: Altering and getting values of a DomInstance - examples
+            topicUid: DOM_Altering_values_of_a_DomInstance
+          - name: Processing multiple DomInstances - examples
+            topicUid: DOM_BulkProcessing_Examples
+      - name: DOM DevOps tools
+        topicUid: DOM_DevOps_tools
+        items:
+          - name: DOM DevOps tools installation
+            topicUid: DOM_DevOps_installation
+          - name: Using the DOM Designer
+            topicUid: DOM_Designer
+            items:
+              - name: Configuring the Excel file
+                topicUid: DOM_Designer_Excel_config
+              - name: Deploying the Excel file
+                topicUid: DOM_Designer_Excel_deployment
+          - name: Using the DOM Editor
+            topicUid: DOM_Editor
+            items:
+              - name: Creating a new module and definition
+                topicUid: DOM_editor_new_def
+              - name: Adding a field
+                topicUid: DOM_editor_adding_field
+              - name: Adding a section definition
+                topicUid: DOM_editor_adding_section
+              - name: Adding a button
+                topicUid: DOM_editor_adding_button
+              - name: Changing a field name
+                topicUid: DOM_editor_changing_field_name
+              - name: Deleting a field
+                topicUid: DOM_editor_deleting_field
+              - name: Deleting a section definition
+                topicUid: DOM_editor_deleting_section
+              - name: Naming a DOM instance
+                topicUid: DOM_editor_naming_instance
+              - name: Using a network share for attachments
+                topicUid: DOM_editor_attachments_networkshare
+      - name: Best practices
+        topicUid: DOM_best_practices
+      - name: Tutorials
+        items:
+          - name: Getting started with DOM
+            topicUid: DOM_Getting_Started_With_DOM
+          - name: Making DOM objects state-aware
+            topicUid: DOM_Making_DOM_Stateful
+          - name: Creating a basic DOM setup
+            topicUid: DOM_Create_Basic_Setup
+          - name: Removing an enum entry from a GenericEnumFieldDescriptor
+            topicUid: DOM_Remove_Enum_Entry
+          - name: Removing a field descriptor from a definition
+            topicUid: DOM_Remove_FieldDescriptor_Definition
+          - name: Generating code with the DOM Editor
+            topicUid: DOM_Generating_code_with_the_DOM_editor
+  - name: Experience and Performance Management (EPM)
+    topicUid: EPM
+    items:
+      - name: About DataMiner Experience and Performance Management
+        topicUid: About_DMS_Experience_and_Performance_Management
+      - name: Working with the Experience and Performance Management interface
+        topicUid: Working_with_the_Experience_and_Performance_Management_interface
+        items:
+          - name: Accessing the Experience and Performance Management user interface
+            topicUid: Accessing_the_Experience_and_Performance_Management_user_interface
+          - name: Using the EPM Topology app
+            topicUid: EPM_Topology_app
+          - name: EPM user interface components
+            topicUid: EPM_user_interface_components
+          - name: Using the EPM filter section
+            topicUid: Using_the_EPM_filter_section
+          - name: Using the EPM overview section
+            topicUid: Using_the_EPM_overview_section
+          - name: EPM alarm monitoring and trending
+            topicUid: EPM_alarm_monitoring_and_trending
+          - name: Creating a link between DataMiner elements and the EPM element
+            topicUid: Creating_a_link_between_DataMiner_elements_and_the_EPM_element
+      - name: EPM integration training
+        topicUid: EPM_Integration_Training
+      - name: Tutorials
+        items:
+          - name: Getting started with EPM
+            topicUid: EPM_Introduction_Tutorial
+  - name: Inventory & Asset Management
+    items:
+      - name: About DataMiner Inventory & Asset Management
+        topicUid: About_DMS_Inventory_Asset_Management
+      - name: Browsing the database with DataMiner Inventory and Asset Management
+        topicUid: Browsing_the_database_with_DMS_Inventory_and_Asset_Management
+      - name: Managing data in the database with DataMiner Inventory and Asset Management
+        topicUid: Managing_data_in_the_database_with_DMS_Inventory_and_Asset_Management
+        items:
+          - name: Adding a row to a table
+            topicUid: Adding_a_row_to_a_table
+          - name: Updating a table row
+            topicUid: Updating_a_table_row
+          - name: Deleting a row from a table
+            topicUid: Deleting_a_row_from_a_table
+          - name: Exporting a table to a CSV file
+            topicUid: Exporting_a_table_to_a_CSV_file
+          - name: Searching the database
+            topicUid: Searching_the_database
+          - name: Reloading the Asset Manager user interface
+            topicUid: Reloading_the_Asset_Manager_user_interface
+          - name: Starting a sync of the DataMiner database and the CMDB
+            topicUid: Starting_a_sync_of_the_DataMiner_database_and_the_CMDB
+      - name: Configuring DataMiner Inventory and Asset Management
+        topicUid: Configuring_DMS_Inventory_and_Asset_Management
+        items:
+          - name: Tags in the Asset Manager configuration file
+            topicUid: Tags_in_the_Asset_Manager_configuration_file
+          - name: Example of an Asset Manager configuration file
+            topicUid: Example_of_an_Asset_Manager_configuration_file
+          - name: Activating the Asset Management database in Cube
+            topicUid: Activating_the_Asset_Management_database_in_Cube
+      - name: Configuring data mediation settings in DataMiner Inventory and Asset Management
+        topicUid: Configuring_data_mediation_settings_in_DMS_Inventory_and_Asset_Management
+        items:
+          - name: Tags in the Asset Manager mediation configuration file
+            topicUid: Tags_in_the_Asset_Manager_mediation_configuration_file
+          - name: Example of an Asset Manager mediation configuration file
+            topicUid: Example_of_an_Asset_Manager_mediation_configuration_file
+      - name: Synchronizing a database with elements and views with the Surveyor
+        topicUid: Synchronizing_a_database_with_elements_and_views_with_the_Surveyor
+  - name: Job Manager
+    topicUid: jobs
+    items:
+      - name: About jobs
+        topicUid: About_jobs
+      - name: Accessing the Jobs app
+        topicUid: Accessing_the_jobs_app
+      - name: Overview of the Jobs app UI
+        topicUid: Overview_of_the_Job_Manager_app_UI
+      - name: Configuring jobs in the Jobs app
+        topicUid: Configuring_jobs_in_the_Job_Manager_app
+        items:
+          - name: Configuring job domains
+            topicUid: Configuring_job_domains
+          - name: Configuring job sections
+            topicUid: Configuring_job_sections
+          - name: Configuring jobs linked to bookings
+            topicUid: Configuring_jobs_linked_to_bookings
+          - name: Configuring a job field
+            topicUid: Configuring_a_job_field
+      - name: Working with the jobs timeline
+        topicUid: Working_with_the_jobs_timeline
+      - name: Manually adding a job
+        topicUid: Manually_adding_a_job
+      - name: Exporting a job to PDF
+        topicUid: Exporting_a_job_to_PDF
+      - name: Manually removing a job
+        topicUid: Manually_removing_a_job
+      - name: Working with job templates
+        topicUid: Working_with_job_templates
+  - name: Maps
+    items:
+      - name: About DataMiner Maps
+        topicUid: About_DMS_Maps
+      - name: Using DataMiner Maps
+        topicUid: Using_DataMiner_Maps
+        items:
+          - name: Displaying a DataMiner map in a web browser
+            topicUid: Displaying_a_DataMiner_map_in_a_web_browser
+          - name: Displaying a DataMiner Map in a DataMiner dashboard
+            topicUid: Displaying_a_DataMiner_Map_in_a_DataMiner_dashboard
+          - name: Switching map configurations by means of JavaScript
+            topicUid: Switching_map_configurations_by_means_of_JavaScript
+      - name: Configuring the DataMiner Maps host servers
+        topicUid: Configuring_the_DataMiner_Maps_host_servers
+      - name: Configuring the DataMiner Maps
+        items:
+          - name: Top-level structure of a DataMiner Maps configuration file
+            topicUid: Top-level_structure_of_a_DataMiner_Maps_configuration_file
+          - name: Adding a filter box to a DataMiner Map
+            topicUid: Adding_a_filter_box_to_a_DataMiner_Map
+          - name: Adding a custom legend to a map
+            topicUid: Adding_a_custom_legend_to_a_map
+          - name: Grouping markers in one clustered marker
+            topicUid: Grouping_markers_in_one_clustered_marker
+          - name: Enabling spiderfied markers
+            topicUid: Enabling_spiderfied_markers
+          - name: Attributes of the Layer tag
+            topicUid: Attributes_of_the_Layer_tag
+          - name: Layer types
+            topicUid: Layer_types
+          - name: Layer groups
+            topicUid: Layer_groups
+      - name: Layer configuration tags
+        topicUid: Layer_configuration_tags
+        items:
+          - name: ParametersSourceInfo
+            topicUid: ParametersSourceInfo
+          - name: PropertiesSourceInfo
+            topicUid: PropertiesSourceInfo
+          - name: SqlSourceInfo
+            topicUid: SqlSourceInfo
+          - name: TableSourceInfo
+            topicUid: TableSourceInfo
+          - name: LineOptions
+            topicUid: LineOptions
+          - name: MarkerImages
+            topicUid: MarkerImages
+          - name: MarkerDetails
+            topicUid: MarkerDetails
+          - name: PopupSkeleton and PopupDetails
+            topicUid: PopupSkeleton_and_PopupDetails
+  - name: Mobile Gateway
+    topicUid: MobileGateway
+    items:
+      - name: Configuring Mobile Gateway
+        items:
+          - name: Configuring a serial cell phone modem
+            topicUid: Configuring_a_serial_cell_phone_modem
+          - name: Configuring an IP-based cell phone modem
+            topicUid: Configuring_an_IP-based_cell_phone_modem
+          - name: Configuring Mobile Gateway to communicate with an SMSEagle device via HTTPS
+            topicUid: Configuring_Mobile_Gateway_to_communicate_with_an_SMSEagle_device_via_HTTPS
+          - name: Overview of the Mobile Gateway configuration settings
+            topicUid: Overview_of_the_Mobile_Gateway_configuration_settings
+          - name: Configuring Mobile Gateway in DataMiner Cube
+            topicUid: Configuring_Mobile_Gateway_in_DataMiner_Cube
+          - name: Approved modems for use with Mobile Gateway
+            topicUid: Approved_modems_Mobile_Gateway
+      - name: Working with Mobile Gateway in DataMiner Cube
+        topicUid: Working_with_Mobile_Gateway_in_DataMiner_Cube
+      - name: Using Mobile Gateway in a Failover setup
+        topicUid: Using_Mobile_Gateway_in_a_Failover_setup
+      - name: Roaming support
+        topicUid: Roaming_support
+      - name: Command reference
+        topicUid: Command_reference
+      - name: Encoding and decoding of character sets in text messages
+        topicUid: Encoding_and_decoding_of_character_sets_in_text_messages
+  - name: Profiles
+    items:
+      - name: About the Profiles module
+        topicUid: The_Profiles_module
+      - name: Configuring profile parameters
+        topicUid: Configuring_profile_parameters
+      - name: Configuring profile definitions
+        topicUid: Configuring_profile_definitions
+      - name: Configuring profile instances
+        topicUid: Configuring_profile_instances
+  - name: DMS Reporter
+    topicUid: reporter
+    items:
+      - name: About DMS Reporter
+        topicUid: About_DMS_Reporter
+      - name: Viewing the reports page on a card
+        topicUid: Viewing_the_reports_page_on_a_card
+        items:
+          - name: Reports page overview
+            topicUid: Reports_page_overview
+          - name: Exporting the report information
+            topicUid: Exporting_the_report_information
+      - name: Viewing the built-in reports in the Reporter app
+        topicUid: Viewing_the_built-in_reports_in_the_Reporter_app
+        items:
+          - name: System reports
+            topicUid: System_reports
+          - name: Element reports
+            topicUid: Element_reports
+          - name: Service reports
+            topicUid: Service_reports
+          - name: Business reports
+            topicUid: Business_reports
+          - name: Booking reports
+            topicUid: Booking_reports
+          - name: Using the View filter for built-in reports
+            topicUid: Using_the_View_filter_for_built-in_reports
+      - name: Creating report templates
+        topicUid: Creating_report_templates
+        items:
+          - name: Accessing the report templates
+            topicUid: Accessing_the_report_templates
+          - name: Adding a new report template
+            topicUid: Adding_a_new_report_template
+      - name: Working with custom report templates in a third-party editor
+        topicUid: Working_with_custom_report_templates_in_a_third-party_editor
+        items:
+          - name: Creating a custom report template in an ASP editor
+            topicUid: Creating_a_custom_report_template_in_an_ASP_editor
+          - name: Including external files in a report template
+            topicUid: Including_external_files_in_a_report_template
+          - name: Importing a custom report template made in a third-party editor
+            topicUid: Importing_a_custom_report_template_made_in_a_third-party_editor
+      - name: Report template components
+        topicUid: Report_template_components
+        items:
+          - name: Components for one single element or service
+            topicUid: Components_for_one_single_element_or_service
+          - name: Components for multiple elements or services
+            topicUid: Components_for_multiple_elements_or_services
+      - name: Generating a report with a custom report template
+        topicUid: Generating_a_report_with_a_custom_report_template
+        items:
+          - name: Generating a report with the Reporter app
+            topicUid: Generating_a_report_with_the_Reporter_app
+          - name: Generating reports with a report URL
+            topicUid: Generating_reports_with_a_report_URL
+      - name: Sending reports by email
+        topicUid: Sending_reports_by_email
+      - name: Reporter Admin tools
+        topicUid: Reporter_Admin_tools
+      - name: Publishing Reporter components on your own website
+        items:
+          - name: Img tags referring to ASP pages
+            topicUid: Img_tags_referring_to_ASP_pages
+          - name: Setting up authentication and creating the ASP pages
+            topicUid: Setting_up_authentication_and_creating_the_ASP_pages
+          - name: Component overview
+            topicUid: Component_overview
+          - name: Constants
+            topicUid: Constants
+  - name: Resources
+    items:
+      - name: About the Resources module
+        topicUid: The_Resources_module
+      - name: Resources module UI overview
+        topicUid: Resources_module_UI_overview
+      - name: Configuring pools of resources
+        topicUid: Configuring_pools_of_resources
+  - name: Router Control
+    topicUid: RouterControl
+    items:
+      - name: Working with the default Router Control configuration
+        topicUid: Working_with_the_default_Router_Control_configuration
+        items:
+          - name: Selecting a matrix
+            topicUid: Selecting_a_matrix
+          - name: Connecting an output to an input
+            topicUid: Connecting_an_output_to_an_input
+          - name: Disconnecting an output from an input
+            topicUid: Disconnecting_an_output_from_an_input
+          - name: Locking an output
+            topicUid: Locking_an_output
+          - name: Unlocking an output
+            topicUid: Unlocking_an_output
+      - name: Creating and customizing Router Control configurations
+        topicUid: Creating_and_customizing_Router_Control_configurations
+        items:
+          - name: Router Control design mode
+            topicUid: Router_Control_design_mode
+          - name: Managing the Router Control configurations
+            topicUid: Managing_the_Router_Control_configurations
+          - name: Designing a matrix tab page in the Router Control module
+            topicUid: Designing_a_matrix_tab_page_in_the_Router_Control_module
+          - name: Overview of user interface component properties
+            topicUid: Overview_of_user_interface_component_properties
+          - name: Creating a dynamic tab page
+            topicUid: Creating_a_dynamic_tab_page
+  - name: Services
+    items:
+      - name: About the Services module
+        topicUid: The_Services_module
+      - name: Using the overview tab
+        topicUid: SRM_Services_overview
+      - name: Using the definitions tab
+        topicUid: SRM_Services_definitions
+      - name: Using the profiles tab
+        topicUid: SRM_Services_profiles
+  - name: Scheduler
+    topicUid: scheduler
+    items:
+      - name: About DataMiner Scheduler
+        topicUid: About_the_Scheduler_module
+      - name: Manually adding a scheduled task
+        topicUid: Manually_adding_a_scheduled_task
+      - name: Scheduling an event based on a Scheduler template
+        topicUid: Scheduling_an_event_based_on_a_Scheduler_template
+      - name: Manually starting and stopping a scheduled event
+        topicUid: Manually_starting_and_stopping_a_scheduled_event
+      - name: Creating a Scheduler template
+        topicUid: Creating_a_Scheduler_template
+  - name: Spectrum Analysis
+    topicUid: SpectrumAnalysis
+    items:
+      - name: Installation and configuration of a spectrum analyzer
+        topicUid: Installation_and_configuration_of_a_spectrum_analyzer
+        items:
+          - name: Connecting spectrum analyzers to your DataMiner System
+            topicUid: Connecting_spectrum_analyzers_to_your_DataMiner_System
+          - name: Installing the Keysight/Agilent IO Libraries
+            topicUid: Installing_the_Keysight_Agilent_IO_Libraries
+      - name: Working with spectrum analyzer elements
+        items:
+          - name: Spectrum analyzer cards
+            topicUid: Spectrum_analyzer_cards
+          - name: Viewing spectrum analyzer traces
+            topicUid: Viewing_spectrum_analyzer_traces
+          - name: Changing the spectrum analyzer settings
+            topicUid: Changing_the_spectrum_analyzer_settings
+          - name: Configuring measurement points
+            topicUid: Configuring_measurement_points
+          - name: Working with markers
+            topicUid: Working_with_markers
+          - name: Working with reference lines
+            topicUid: Working_with_reference_lines
+          - name: Using Spectrum Analysis presets
+            topicUid: Using_Spectrum_Analysis_presets
+          - name: Working with trace recordings
+            topicUid: Working_with_trace_recordings
+          - name: Configuring spectrum thresholds
+            topicUid: Configuring_spectrum_thresholds
+      - name: Spectrum analyzer scripts and monitors
+        topicUid: Spectrum_analyzer_scripts_and_monitors
+        items:
+          - name: Working with spectrum scripts
+            topicUid: Working_with_spectrum_scripts
+          - name: Working with spectrum monitors
+            topicUid: Working_with_spectrum_monitors
+          - name: Spectrum Analyzer script actions
+            topicUid: Spectrum_Analyzer_script_actions
+      - name: Advanced Spectrum Analysis functions
+        items:
+          - name: Specifying an amplitude correction
+            topicUid: Specifying_an_amplitude_correction
+          - name: Making a measurement point execute a script before taking a trace
+            topicUid: Making_a_measurement_point_execute_a_script_before_taking_a_trace
+          - name: Restricting the number of client sessions of a spectrum element
+            topicUid: Restricting_the_number_of_client_sessions_of_a_spectrum_element
+          - name: Automatic cleanup of alarm recordings folder
+            topicUid: Automatic_cleanup_of_alarm_recordings_folder
+          - name: Configuring a spectrum element to follow the device settings
+            topicUid: Configuring_a_spectrum_element_to_follow_the_device_settings
+      - name: Tutorials
+        items:
+            - name: Monitoring a spectrum signal by comparing it with thresholds
+              topicUid: Monitor_a_spectrum_signal_by_comparing_it_with_thresholds
+  - name: Ticketing
+    topicUid: ticketing
+    items:
+      - name: Accessing the Ticketing app
+        topicUid: Accessing_the_Ticketing_app
+      - name: Overview of the Ticketing app UI
+        topicUid: Overview_of_the_Ticketing_app_UI
+      - name: Viewing Ticketing information in Cube
+        topicUid: Viewing_Ticketing_information_in_Cube
+      - name: Creating a ticket
+        topicUid: Creating_a_ticket1
+      - name: Configuring domains
+        topicUid: Configuring_domains
+      - name: Displaying ticket statistics in the Surveyor
+        topicUid: Displaying_ticket_statistics_in_the_Surveyor
+      - name: Using the Ticketing Gateway API
+        topicUid: Using_the_Ticketing_Gateway_API
+        items:
+          - name: Setting up the TicketingGatewayHelper
+            topicUid: Setting_up_the_TicketingGatewayHelper
+          - name: Creating tickets with the Ticketing Gateway API
+            topicUid: Creating_tickets_with_the_Ticketing_Gateway_API
+          - name: Linking a ticket to a DataMiner item using the Ticketing Gateway API
+            topicUid: Linking_a_ticket_to_a_DataMiner_item_using_the_Ticketing_Gateway_API
+          - name: Retrieving tickets using the Ticketing Gateway API
+            topicUid: Retrieving_tickets_using_the_Ticketing_Gateway_API
+          - name: About DataMiner elements using the Ticketing Gateway API
+            topicUid: About_DataMiner_elements_using_the_Ticketing_Gateway_API
+          - name: Overview of the TicketingGatewayHelper class
+            topicUid: Overview_of_the_TicketingGatewayHelper_class
+  - name: User-Defined APIs
+    topicUid: UD_APIs
+    items:
+      - name: Managing APIs and tokens in Cube
+        topicUid: UD_APIs_Viewing_in_Cube
+      - name: Defining an API
+        items:
+          - name: Defining a new API
+            topicUid: UD_APIs_Define_New_API
+          - name: Using existing scripts
+            topicUid: UD_APIs_Using_existing_scripts
+          - name: Creating APIs and tokens in code
+            topicUid: UD_APIs_Creating_in_code
+            items:
+              - name: ApiToken object
+                topicUid: UD_APIs_Objects_ApiToken
+              - name: ApiDefinition object
+                topicUid: UD_APIs_Objects_ApiDefinition
+          - name: API script examples
+            topicUid: UD_APIs_API_script_examples
+      - name: Triggering an API
+        topicUid: UD_APIs_Triggering_an_API
+      - name: DataMiner UserDefinableApiEndpoint DxM
+        topicUid: UD_APIs_UserDefinableApiEndpoint
+      - name: API events
+        topicUid: UD_APIs_Events
+      - name: Troubleshooting
+        topicUid: UD_APIs_Troubleshooting
+      - name: Tutorials
+        topicUid: UD_APIs_Tutorials
+        items:
+          - name: Hello world
+            topicUid: UD_APIs_Hello_world_tutorial
+          - name: Retrieving elements in alarm
+            topicUid: UD_APIs_Elements_in_alarm_tutorial

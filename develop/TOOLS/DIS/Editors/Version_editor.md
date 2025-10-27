@@ -10,11 +10,9 @@ If you click *Version Editor* in the file tab header when editing a protocol XML
 
 If you want to save the changes you made and return to the XML editor, click *Apply Changes*. If you want to discard the changes you made, click *Cancel*.
 
-## Current version
+## All versions
 
 In this tab, you can specify the general properties of the current (minor) version (version number, author, date, etc.), a list of all features, changes and fixes in this version, and a list of references.
-
-If you click *Go to this version in All Versions tree*, the *All Versions* tab will open and the current version will be selected in the version tree.
 
 ### Features, changes and fixes
 
@@ -66,15 +64,7 @@ To remove a reference
 >
 > See also: [Interface](xref:DIS_settings#interface)
 
-## Current range
-
-In this tab, you can find an overview of all versions in the current range.
-
-Clicking a version number will open the *All Versions* tab to allow you to edit the information stored for that particular version.
-
-## All versions
-
-In this tab, you can find an overview of all versions of the current protocol.
+In this tab, you can also find an overview of all versions of the current protocol.
 
 - In the tree structure on the left, you can add and delete branches representing branch versions, system versions, major versions and minor versions by right-clicking a node and selecting the appropriate menu command. At the bottom of the pane, you can also find a button to add a minor version.
 - In the edit pane on the right, you can edit the properties of the version selected on the left.
@@ -82,7 +72,7 @@ In this tab, you can find an overview of all versions of the current protocol.
   - To a branch version, you can add a list of branch features.
   - To a system version, you can add a list of system requirements.
   - To a major version, you can add a list of major changes.
-  - To a minor version, you can add a list of features, changes and fixes, and a list of references. See also [Current version](#current-version).
+  - To a minor version, you can add a list of features, changes and fixes, and a list of references.
 
 > [!NOTE]
 >
@@ -90,3 +80,9 @@ In this tab, you can find an overview of all versions of the current protocol.
 > - When you select a version that is not the current version, you can click the *Set this version as current button* to make that version the current version. Also, in the version tree on the left, you can right-click a version and select *Set as current version*. The current version and all its parent versions will be marked in bold.
 > - When you create a new version, the *Based On* field will now automatically be populated when possible.
 > - When you add a minor version, this new version will automatically inherit all data from the current version and become itself the new current version.
+
+## Changes overview
+
+In this tab, you can find an overview of all versions in the current range.
+
+Clicking a version number will open the *All Versions* tab to allow you to edit the information stored for that particular version.

@@ -1,14 +1,13 @@
 ---
 uid: Connector_help_pages
+description: For every connector that is developed for DataMiner, two or more documentation pages should be made.
 ---
 
 # Connector documentation
 
-For every connector that is developed for DataMiner, two or more documentation pages should be made.
+For every connector that is developed for DataMiner, at least one documentation page should be made. This mandatory page is referred to as the [marketing page](#marketing-page). This page should be appealing and focus on demonstrating the value the connector can bring to users, similar to the packaging of a product in a store.
 
-The first page is the [marketing page](#marketing-page), which should be appealing and focus on demonstrating the value the connector can bring to users, similar to the packaging of a product in a store.
-
-The second page is the [technical page](#technical-page), which should be a subpage of the marketing page containing further technical details. You could compare this to the instructions booklet included with a product in a store. The technical page details among others how the connections should be set up when you create an element with the connector, how the element should be used, etc.
+If the connector is very simple and intuitive, a limited amount of technical and "how to" information can be added directly within the marketing page. Otherwise, if the connector is a bit more complex, a [technical page](#technical-page) should be made as well. This should be a subpage of the marketing page containing further technical details. You could compare this to the instructions booklet included with a product in a store. The technical page details among others how the connections should be set up when you create an element with the connector, how the element should be used and configured, etc.
 
 If a connector exports child connectors, a subpage should also be created for each of these child connectors.
 
@@ -18,12 +17,12 @@ When you develop a connector using DIS, you can pre-generate the connector docum
 
 ### File names and folder
 
-To make sure your pages can be automatically included in the [DataMiner Catalog](https://catalog.dataminer.services/), it is important that you use the correct file names and place the files in the correct folder:
+To make sure your pages can be automatically included in the [Catalog](https://catalog.dataminer.services/), it is important that you use the correct file names and place the files in the correct folder:
 
 - Marketing page: make sure the **file name** of your marketing page is the **exact name of the connector in the Catalog**, but with **underscores instead of spaces**. For example, the file name of the *Microsoft Platform* marketing page has to be *Microsoft_Platform.md*. Make sure the casing is the same, and do not replace any other characters with underscores. Any mismatch between the file name and the connector name will make the documentation **unavailable** in the Catalog.
 
   > [!IMPORTANT]
-  > It is very important that the file name **does not contain any spaces**. If the file name contains spaces, this will cause an error when the new file is pushed to the DataMiner Catalog.
+  > It is very important that the file name **does not contain any spaces**. If the file name contains spaces, this will cause an error when the new file is pushed to the Catalog.
 
 - Technical page: make sure the **file name** follows the same rules as mentioned above for the Marketing page but is followed by a **_Technical** suffix. For example, the file name of the *Microsoft Platform* technical page has to be *Microsoft_Platform_Technical.md*.
 
@@ -62,13 +61,15 @@ Use DocFX Flavored Markdown (DFM). See [Markdown syntax](xref:CTB_Markdown_Synta
 
 ### Title
 
-The title of both pages should be the name of the connector in the [DataMiner Catalog](https://catalog.dataminer.services/).
+The title of both pages should be the name of the connector in the [Catalog](https://catalog.dataminer.services/).
 
 ### Marketing page
 
 The format of the marketing page should be the same as for the documentation of other Catalog items. See [Best practices when documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items).
 
-However, note that the Marketing page of a connector should always have a **Technical Reference** section, and this section must include a note with a link to the [technical page](#technical-page) for the connector (optionally in addition to other technical info that is important enough to include it here):
+For very straightforward and intuitive connectors, a **Technical Reference** section will contain a very brief explanation of how to use the connector.
+
+For connectors that requires more technical and usage information, the **Technical Reference** section must include a note with a link to the [technical page](#technical-page) for the connector (optionally in addition to other technical info that is important enough to be included here):
 
 ```md
 > [!NOTE]
@@ -77,12 +78,14 @@ However, note that the Marketing page of a connector should always have a **Tech
 
 ### Technical page
 
+Depending on the complexity of the connector, a technical page can be made. It should be organized as follows.
+
 #### 'About' section
 
 In the **About** section, add a short paragraph explaining the **function of the connector**. Try to also include some **information about the data source**. If you copy this information from somewhere else, make sure it fits the informative context of documentation (e.g. remove meaningless praise like "best-of-breed", "top-of-the-line", etc.).
 
 > [!NOTE]
-> In this *About* section, older connector documentation will contain **tables** with version info, product info, and system info, but these are **no longer required** as this information is now included directly within the *Protocol.xml* via the various [VersionHistory](xref:Protocol.VersionHistory) tags.
+> In this *About* section, older connector documentation will contain **tables** with version info, product info, and system info, but these are **no longer required** as this information is now included directly within the *Protocol.xml* via the various [VersionHistory](xref:Protocol.VersionHistory) tags. However, before you remove the version history info from existing connector help pages, **make sure all the necessary info is properly added to the relevant [VersionHistory](xref:Protocol.VersionHistory) tags** and make sure this is done **for every non-deprecated range** of the connector.
 
 #### 'Configuration' section
 

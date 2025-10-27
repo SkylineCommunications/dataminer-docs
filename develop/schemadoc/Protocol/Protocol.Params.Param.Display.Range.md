@@ -29,3 +29,6 @@ Defines the parameter value range.
 > - The range information is used when defining alarm thresholds.
 > - The range information is used by UI components such as parameters of measurement type "analog".
 > - The range information is used by the Analytics component of DataMiner for more accurate trend/alarm prediction.
+
+> [!IMPORTANT]
+> When you use the [time](xref:Protocol.Params.Param.Measurement.Type-options) option, you should either specify both the low and high intervals if a range is required, or specify neither. Otherwise, Cube will not be able to correctly display the tooltip and slider within the expected ranges.

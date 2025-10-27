@@ -6,7 +6,7 @@ uid: GetTrendStatisticsForService
 
 Use this method to retrieve the trend statistics for a specified service.
 
-Available from DataMiner 9.5.8 onwards.
+<!-- Available from DataMiner 9.5.8 onwards. -->
 
 ## Input
 

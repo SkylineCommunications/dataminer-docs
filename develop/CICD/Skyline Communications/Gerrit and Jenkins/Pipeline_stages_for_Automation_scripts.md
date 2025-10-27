@@ -4,6 +4,9 @@ uid: Pipeline_stages_for_Automation_scripts
 
 # Pipeline stages for Automation scripts
 
+> [!IMPORTANT]
+> This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
 Currently, the pipeline consists of the following stages:
 
 - [Loading Jenkinsfile](#loading-jenkinsfile)
@@ -50,7 +53,7 @@ Currently, the pipeline consists of the following stages:
 
 ## Loading Jenkinsfile
 
-When a new Git repository is created using the SLC SE Repository Manager tool, the repository initially contains a .gitignore file and a Jenkinsfile. This Jenkinsfile in turn refers to another "master" Jenkins file. During this stage, the Jenkinsfile gets loaded.
+When a new Git repository is created using the SLC SE Repo Manager tool, the repository initially contains a .gitignore file and a Jenkinsfile. This Jenkinsfile in turn refers to another "master" Jenkins file. During this stage, the Jenkinsfile gets loaded.
 
 ## Declarative checkout from SCM
 

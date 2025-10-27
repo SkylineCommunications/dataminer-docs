@@ -6,7 +6,7 @@ uid: LogicActionSetNext
 
 This action can be executed on pairs only.
 
-This action dynamically sets the value of the [next](xref:Protocol.Groups.Group.Content.Param-next) attribute. Normally this is set to a fixed value in the connector, but in certain cases, you want to be able to change it dynamically.
+This action dynamically sets the value of the [next](xref:Protocol.Groups.Group.Content.Pair-next) attribute. Normally this is set to a fixed value in the connector, but in certain cases, you want to be able to change it dynamically.
 
 > [!NOTE]
 > Only supported for serial, smart-serial and GPIB.

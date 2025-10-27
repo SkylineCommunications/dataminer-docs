@@ -6,7 +6,7 @@ uid: UnhideJobSectionDefinition
 
 Use this method to make a job section definition visible.
 
-Available from DataMiner 9.6.7 onwards.
+<!-- Available from DataMiner 9.6.7 onwards. -->
 
 ## Input
 

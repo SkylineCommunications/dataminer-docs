@@ -201,9 +201,9 @@ options="LinkAlarmValue=.."
 
 ### loadOID
 
-Used with multi-threaded timers to perform SNMP polling.
+Used with multithreaded timers to perform SNMP polling.
 
-For more information, refer to [Multi-threaded timers SNMP](xref:AdvancedMultiThreadedTimersSnmp).
+For more information, refer to [Multithreaded timers SNMP](xref:AdvancedMultiThreadedTimersSnmp).
 
 ### ssh pwd
 
@@ -233,6 +233,9 @@ Only applicable for parameters of type read.
 
 This option specifies that this parameter holds the path to the private key for setting up SSH communication based on public key authentication. This is an alternative way to set up an SSH connection (instead of user credentials).
 
-The content of the "ssh options" parameter is as follows: ```key=C:\Users\User\.ssh\my_key_rsa;pass=passphrase```
+The content of the "ssh options" parameter is as follows: `key=C:\Users\User\.ssh\my_key_rsa;pass=passphrase`
 
 Only applicable for parameters of type read.
+
+> [!NOTE]
+> When you authenticate with a key through a private/public key pair, you must still specify the user. See also: [Defining an SSH connection in a protocol](xref:ConnectionsSerialSecureShell#defining-an-ssh-connection-in-a-protocol).

@@ -4,9 +4,7 @@ uid: SaveJobsSectionDomainConfig
 
 # SaveJobsSectionDomainConfig
 
-Use this method to save the configuration of a job section domain.
-
-Obsolete from DataMiner 10.0.9 onwards. Replaced by [UpdateDomainSectionDefinitionConfiguration](xref:UpdateDomainSectionDefinitionConfiguration).
+This method is deprecated. <!-- From DataMiner 10.0.9 onwards -->Use [UpdateDomainSectionDefinitionConfiguration](xref:UpdateDomainSectionDefinitionConfiguration) instead.
 
 ## Input
 

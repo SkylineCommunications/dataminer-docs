@@ -4,13 +4,13 @@ uid: NT_SCHEDULE_ROW_ON_TIMER
 
 # NT_SCHEDULE_ROW_ON_TIMER (229)
 
-Allows the triggering of a specific row to be run by the multi-threaded timer outside its normal behavior.
+Allows the triggering of a specific row to be run by the multithreaded timer outside its normal behavior.
 
 ```csharp
 string rowKey = "Row 1";
 int timerID = 1;
 
-protocol.NotifyProtocol(229 /* NT_FILL_ARRAY_WITH_COLUMN */, rowKey, timerID);
+protocol.NotifyProtocol(229 /* NT_SCHEDULE_ROW_ON_TIMER */, rowKey, timerID);
 ```
 
 ## Parameters
@@ -24,4 +24,4 @@ protocol.NotifyProtocol(229 /* NT_FILL_ARRAY_WITH_COLUMN */, rowKey, timerID);
 
 ## Remarks
 
-- This can only be used in case a table is being processed by a multi-threaded timer.
+- This can only be used in case a table is being processed by a multithreaded timer.

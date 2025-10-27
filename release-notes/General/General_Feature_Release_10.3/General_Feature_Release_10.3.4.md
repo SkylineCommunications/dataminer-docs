@@ -118,7 +118,7 @@ SLLogCollector packages will now also include the following additional file:
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
-Proactive cap detection predicts future issues based on trend data in the Cassandra database. Because of a number of enhancements, overall prediction accuracy has increased.
+Proactive cap detection predicts future issues based on trend data stored by DataMiner. Because of a number of enhancements, overall prediction accuracy has increased.
 
 #### Service & Resource Management: Bookings of type 'Custom Process Automation' no longer consume license credits [ID 35742]
 

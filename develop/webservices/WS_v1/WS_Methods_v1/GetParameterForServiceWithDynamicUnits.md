@@ -6,7 +6,7 @@ uid: GetParameterForServiceWithDynamicUnits
 
 Use this method to retrieve a particular parameter for a service, with dynamic units.
 
-Available from DataMiner 10.0.11 onwards.
+<!-- Available from DataMiner 10.0.11 onwards. -->
 
 ## Input
 

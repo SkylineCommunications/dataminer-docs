@@ -1,0 +1,658 @@
+items:
+  - name: DataMiner System layout
+    topicUid: GeneralLayout
+  - name: DataMiner Agents
+    topicUid: DataminerAgents
+    items:
+      - name: Configuring a DataMiner Agent
+        items:
+          - name: Changing the DataMiner ID of a DMA
+            topicUid: Changing_the_DMA_ID
+          - name: Changing the name of a DMA
+            topicUid: Changing_the_name_of_a_DMA
+          - name: Specifying your company data
+            topicUid: Specifying_your_company_data
+          - name: Configuring the IP network ports
+            topicUid: Configuring_the_IP_network_ports
+          - name: Configuring the polling request timeout
+            topicUid: Configuring_the_polling_request_timeout
+          - name: Configuring outgoing email
+            topicUid: Configuring_outgoing_email
+          - name: Setting up HTTPS on a DMA
+            topicUid: Setting_up_HTTPS_on_a_DMA
+          - name: Configuring the landing page of a DMA
+            topicUid: Configuring_the_landing_page
+          - name: DMA configuration related to client applications
+            topicUid: DMA_configuration_related_to_client_applications
+          - name: Changing the IP of a DMA
+            topicUid: Changing_the_IP_of_a_DMA
+          - name: Forcing a DataMiner Agent to work without virtual IP addresses
+            topicUid: Forcing_a_DMA_to_work_without_virtual_IPs
+          - name: Setting the indexing options for the server-side search
+            topicUid: Setting_the_indexing_options_for_the_server-side_search
+          - name: Switching between DataMiner configurations on a DMA
+            topicUid: Switching_between_DataMiner_configurations
+          - name: Configuring DataMiner processes
+            topicUid: Configuration_of_DataMiner_processes
+      - name: Backing up a DataMiner Agent
+        topicUid: Backing_up_a_DataMiner_Agent
+        items:
+          - name: Backing up a DataMiner Agent using DataMiner Taskbar Utility
+            topicUid: Backing_up_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility
+          - name: Backing up a DataMiner Agent in DataMiner Cube
+            topicUid: Backing_up_a_DataMiner_Agent_in_DataMiner_Cube
+      - name: Restoring a DataMiner Agent
+        topicUid: Restoring_a_DataMiner_Agent
+        items:
+          - name: Preparing the destination server for a DMA restoration
+            topicUid: Preparing_the_destination_server_for_a_DMA_restoration
+          - name: Restoring a DMA using the DataMiner Taskbar Utility
+            topicUid: Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility
+          - name: Restoring the DMA configuration only
+            topicUid: Restoring_the_DMA_configuration_only
+          - name: Restoring the database only (legacy)
+            topicUid: Restoring_the_database_only
+          - name: Maintaining the dataminer.services connection when restoring a DMA
+            topicUid: Maintaining_cloud_connection_when_restoring
+          - name: Starting a restored DataMiner Agent in a cluster
+            topicUid: Starting_a_restored_DataMiner_Agent_in_a_cluster
+      - name: Upgrading a DataMiner Agent
+        topicUid: Upgrading_a_DataMiner_Agent
+        items:
+          - name: DataMiner Main Release vs. Feature Release
+            topicUid: DataMiner_MR_vs_FR
+          - name: Preparing to upgrade a DataMiner Agent
+            topicUid: Preparing_to_upgrade_a_DataMiner_Agent
+          - name: Upgrading a DataMiner Agent in the Update Center
+            topicUid: Upgrading_a_DataMiner_Agent_in_the_Update_Center
+          - name: Upgrading a DataMiner Agent using DataMiner Taskbar Utility
+            topicUid: Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility
+          - name: Upgrading a DataMiner Agent in System Center
+            topicUid: Upgrading_a_DataMiner_Agent_in_System_Center
+          - name: Upgrading the DataMiner web apps
+            topicUid: Upgrading_Downgrading_Webapps
+          - name: Checking the upgrade history of a DataMiner Agent
+            topicUid: Checking_the_upgrade_history_of_a_DataMiner_Agent
+          - name: Configuring the default upgrade options
+            topicUid: Configuring_the_default_upgrade_options
+      - name: Obtaining a DataMiner license
+        topicUid: DataminerLicenses
+        items:
+          - name: Permanent license
+            topicUid: Permanent_license
+          - name: Time-based license
+            topicUid: Time-based_license
+      - name: Health assessment guidelines for DataMiner Agents
+        topicUid: Health_Assessment_Guidelines_for_DataMiner_Agent
+      - name: Uninstalling a DataMiner Agent
+        topicUid: Uninstalling_a_DataMiner_Agent
+      - name: DataMiner packages
+        topicUid: DataMiner_packages
+      - name: Exporting and importing packages on a DMA
+        topicUid: Exporting_and_importing_packages_on_a_DMA
+        items:
+          - name: Exporting elements, services, etc. to a .dmimport file
+            topicUid: Exporting_elements_services_etc_to_a_dmimport_file
+          - name: Importing elements, services, etc. from a .dmimport file
+            topicUid: Importing_elements_services_etc_from_a_dmimport_file
+  - name: DataMiner Systems
+    items:
+      - name: About DataMiner Systems
+        topicUid: About_DataMiner_Systems
+        items:
+          - name: Virtual device connections
+            topicUid: Virtual_device_connections
+          - name: Gratuitous ARP messages
+            topicUid: Gratuitous_ARP_messages
+          - name: Eventing or polling
+            topicUid: Eventing_or_polling
+          - name: DataMiner processes
+            topicUid: DataMiner_processes
+          - name: DataMiner interfaces
+            topicUid: DataMiner_interfaces
+      - name: Viewing information on the DMAs in a DMS
+        topicUid: Viewing_information_on_the_DMAs_in_a_DMS
+      - name: Setting up a new DataMiner System
+        items:
+          - name: Before you begin to set up a new DMS
+            topicUid: Before_you_begin_to_set_up_a_new_DMS
+          - name: Setting up a new DMS in DataMiner Cube
+            topicUid: Setting_up_a_new_DMS_in_DataMiner_Cube
+      - name: Adding a DataMiner Agent to a DataMiner System
+        topicUid: Adding_a_DataMiner_Agent_to_a_DataMiner_System
+        items:
+          - name: Adding a regular DataMiner Agent
+            topicUid: Adding_a_regular_DataMiner_Agent
+          - name: Adding a DataMiner Agent to a DMS running STaaS
+            topicUid: Adding_a_DMA_to_a_DMS_running_STaaS
+          - name: Adding a DataMiner Probe
+            topicUid: Adding_a_DataMiner_Probe
+          - name: Connection strings
+            topicUid: Connection_strings
+      - name: Removing a DataMiner Agent from a DataMiner System
+        topicUid: Removing_a_DataMiner_Agent_from_a_DataMiner_System
+      - name: Starting or stopping DataMiner Agents in your DataMiner System
+        items:
+          - name: Starting or stopping a DMA in DataMiner Cube
+            topicUid: Starting_or_stopping_a_DMA_in_DataMiner_Cube
+          - name: Starting or stopping a DMA using DataMiner Taskbar Utility
+            topicUid: Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility
+      - name: Migrating elements in a DataMiner System
+        topicUid: Migrating_elements_in_a_DataMiner_System
+      - name: Sharing DataMiner data with third parties
+        topicUid: Sharing_DataMiner_data_with_third_parties
+      - name: DataMiner maintenance tools
+        items:
+          - name: Cleaning up unused files on a DMA
+            topicUid: Cleaning_up_unused_files_on_a_DMA
+          - name: Synchronizing data between DataMiner Agents
+            topicUid: Synchronizing_data_between_DataMiner_Agents
+      - name: Running BPA tests
+        topicUid: Running_BPA_tests
+        items:
+          - name: Active Runtime Errors
+            topicUid: BPA_Report_Active_RTE
+          - name: Antivirus on the DataMiner Agents
+            topicUid: BPA_Check_Antivirus_DLLs
+          - name: Cassandra DB Size
+            topicUid: BPA_Cassandra_DB_Size
+          - name: Check Deprecated DLL Usage
+            topicUid: BPA_Check_Deprecated_DLL_Usage
+          - name: Check Time Server
+            topicUid: BPA_Check_Time_Server
+          - name: Cube CRL Freeze
+            topicUid: BPA_Cube_CRL_Freeze
+          - name: Database Security
+            topicUid: BPA_Database_Security
+          - name: DataMiner Agent Minimum Requirements
+            topicUid: BPA_Minimum_Requirements_Check
+          - name: Firewall Configuration
+            topicUid: BPA_Firewall_Configuration
+          - name: HTTPS Configuration
+            topicUid: BPA_Https_Configuration
+          - name: Large Alarm Trees
+            topicUid: BPA_LargeAlarmTrees
+          - name: NATS cluster verification
+            topicUid: BPA_Check_Agent_Presence
+          - name: Password Strength
+            topicUid: BPA_Password_Strength
+          - name: Security Advisory
+            topicUid: BPA_Security_Advisory
+          - name: Service Automatic Properties
+            topicUid: BPA_Service_Automatic_Properties
+          - name: SLNet connections between the DataMiner Agents
+            topicUid: BPA_Check_Cluster_SLNet_Connections
+          - name: SRM Framework Configuration
+            topicUid: BPA_SRM_Framework_Configuration
+          - name: SRM Function Resources Consistency
+            topicUid: BPA_SRM_Function_Resources_Consistency
+          - name: Validate connectors
+            topicUid: BPA_Validate_Connectors
+          - name: Verify Cloud DxM Version
+            topicUid: BPA_Verify_Cloud_DxM_Version
+          - name: View Recursive Loops
+            topicUid: BPA_View_Recursion
+          - name: Verify NATS Migration Prerequisites
+            topicUid: BPA_NATS_Migration_Prerequisites
+  - name: Failover
+    topicUid: failover
+    items:
+      - name: About DMA Failover
+        topicUid: About_DMA_Failover
+      - name: Viewing Failover information
+        items:
+          - name: Viewing the Failover setup
+            topicUid: Viewing_the_Failover_setup
+          - name: Viewing the current Failover DMA status
+            topicUid: Viewing_the_current_Failover_DMA_status
+      - name: Configuring Failover
+        topicUid: Configuring_Failover
+        items:
+          - name: Preparing the two DataMiner Agents
+            topicUid: Preparing_the_two_DataMiner_Agents
+          - name: Failover configuration in Cube
+            topicUid: Failover_configuration_in_Cube
+          - name: Switching Failover from virtual IP to hostname
+            topicUid: Switching_to_Failover_with_shared_hostname
+          - name: Advanced Failover options
+            topicUid: Advanced_Failover_options
+          - name: DataMiner Failover on Amazon Web Services
+            topicUid: Failover_AWS
+      - name: Preferred configuration using virtual IP addresses (best practice)
+        topicUid: Preferred_configuration_using_virtual_IP_addresses__best_practice
+      - name: Synchronizing the DMA databases
+        topicUid: Synchronizing_the_DMA_databases
+      - name: Ending a Failover configuration
+        topicUid: Ending_a_Failover_configuration
+      - name: Frequently asked questions about DMA Failover
+        items:
+          - name: What if one of the DMAs is stopped?
+            topicUid: Failover_FAQ_what_if_DMA_stopped
+          - name: What if one of the DMAs is restarted?
+            topicUid: Failover_FAQ_what_if_DMA_restarted
+          - name: What if a database server stops working?
+            topicUid: Failover_FAQ_server_stops_working
+          - name: What if a network cable is pulled out?
+            topicUid: Failover_FAQ_cable_pulled_out
+          - name: How do I upgrade a Failover pair?
+            topicUid: Failover_FAQ_upgrade
+          - name: How do I prevent DMAs from registering the same virtual IP?
+            topicUid: Failover_FAQ_avoid_registering_same_virtual_IP
+          - name: What if I have connection issues after a Failover switch?
+            topicUid: Failover_FAQ_connection_issues
+          - name: What if one of the Agents cannot be started or restarted?
+            topicUid: Failover_FAQ_cannot_start
+  - name: Storage
+    items:
+      - name: About storage
+        topicUid: About_storage
+      - name: Storage as a Service (STaaS)
+        topicUid: STaaS
+        items:
+          - name: STaaS features
+            topicUid: STaaS_features
+          - name: Setting up STaaS
+            topicUid: Setting_up_StaaS
+          - name: Requesting a cost estimation
+            topicUid: STaaS_cost_estimation
+          - name: Migrating existing data to STaaS
+            topicUid: Migrating_existing_data_to_STaaS
+      - name: Other storage options (not recommended)
+        items:
+          - name: Storage options overview
+            topicUid: Supported_system_data_storage_architectures
+            items:
+              - name: Dedicated clustered storage
+                topicUid: Dedicated_clustered_storage
+              - name: Separate Cassandra setup with indexing
+                topicUid: Separate_Cassandra_setup_with_Elasticsearch
+              - name: Separate Cassandra setup without indexing
+                topicUid: Separate_Cassandra_setup_without_Elasticsearch
+              - name: Legacy setup with MySQL or MSSQL database
+                topicUid: Legacy_setup_with_MySQL_or_MSSQL_database
+          - name: Storage configuration
+            items:
+              - name: Configuring dedicated clustered storage
+                topicUid: Configuring_dedicated_clustered_storage
+                items:
+                  - name: Cassandra-compatible database service
+                    items:
+                      - name: Cassandra Cluster
+                        topicUid: Cassandra_database
+                        items:
+                          - name: Deploying a Cassandra database
+                            items:
+                              - name: Installing Cassandra on a Linux machine
+                                topicUid: Installing_Cassandra
+                              - name: Installing Cassandra Reaper
+                                topicUid: Installing_Cassandra_Reaper
+                              - name: Adding and removing nodes in a Cassandra cluster database
+                                topicUid: Scale_Cassandra_Database
+                              - name: Making Cassandra nodetool accessible remotely
+                                topicUid: Making_Cassandra_nodetool_accessible_remotely
+                              - name: Configuring the replication factor and consistency level
+                                topicUid: replication_and_consistency_configuration
+                              - name: Setting up an Azure Managed Instance for Apache Cassandra
+                                topicUid: Azure_Managed_Instance_for_Apache_Cassandra
+                          - name: Maintaining a Cassandra cluster
+                            topicUid: Maintain_Cassandra_Cluster
+                          - name: Backing up and restoring a Cassandra cluster using Medusa
+                            topicUid: Backup_Restore_Cassandra_Cluster_Medusa
+                      - name: Amazon Keyspaces Service
+                        topicUid: Amazon_Keyspaces_Service
+                        items:
+                          - name: Deploying the Amazon Keyspaces Service
+                            topicUid: Deploying_Amazon_Keyspaces_Service
+                  - name: Configuring the general database settings
+                    topicUid: Configuring_the_database_settings_in_Cube
+                  - name: Migrating existing systems to dedicated clustered storage
+                    topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+                  - name: Decommissioning WSL
+                    topicUid: Decommissioning_WSL
+              - name: Configuring storage per DMA
+                topicUid: Configuring_storage_per_DMA
+                items:
+                  - name: Cassandra per DMA
+                    items:
+                      - name: Migrating a legacy setup to Cassandra
+                        topicUid: Migrating_the_general_database_to_Cassandra
+                      - name: Configuring the Cassandra database per DMA settings
+                        topicUid: Configuring_Cassandra_per_DMA_in_Cube
+                      - name: Maintaining a Cassandra database on DMA
+                        items:
+                          - name: Configuring Cassandra backups
+                            topicUid: Configuring_Cassandra_Backups
+                          - name: Moving the Cassandra database to a different disk drive
+                            topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
+                  - name: MySQL database
+                    topicUid: MySQL_database
+                    items:
+                      - name: Deleting element data from a MySQL database
+                        topicUid: Deleting_element_data_from_a_MySQL_database
+                      - name: Moving MySQL data to another location
+                        topicUid: Moving_MySQL_data_to_another_location
+                      - name: Configuring the SQL database settings
+                        topicUid: Configuring_MySQL_database_in_Cube
+              - name: Configuring an indexing database
+                topicUid: Indexing_Database
+                items:
+                  - name: OpenSearch database
+                    topicUid: OpenSearch_database
+                    items:
+                      - name: Installing an OpenSearch database
+                        topicUid: Installing_OpenSearch_database
+                      - name: Configuring multiple OpenSearch clusters
+                        topicUid: Configuring_multiple_OpenSearch_clusters
+                      - name: Configuring a multiple data center OpenSearch cluster
+                        topicUid: Configuring_multiple_datacenter_OpenSearch_cluster
+                      - name: Configuring OpenSearch backups
+                        topicUid: Configuring_OpenSearch_Backups
+                  - name: Amazon OpenSearch Service
+                    topicUid: Amazon_OpenSearch_Service
+                  - name: Elasticsearch
+                    topicUid: Elasticsearch_database
+                    items:
+                      - name: Installing Elasticsearch on a separate Linux machine
+                        topicUid: Installing_Elasticsearch_on_separate_Linux_machine
+                      - name: Installing Elasticsearch on a DMA via DataMiner (storage per DMA only)
+                        topicUid: Installing_Elasticsearch_via_DataMiner
+                      - name: Configuring an Elasticsearch database on a separate machine
+                        topicUid: Configuring_Elasticsearch_Database
+                        items:
+                          - name: Configuring the master nodes
+                            topicUid: Configuring_master_Elasticsearch_nodes
+                          - name: Adding an Elasticsearch cluster node
+                            topicUid: Configuring_Elasticsearch_node_add
+                          - name: Configuring a multiple data center Elasticsearch cluster
+                            topicUid: Configuring_multiple_datacenter_Elasticsearch_cluster
+                          - name: Removing an Elasticsearch cluster node
+                            topicUid: Configuring_Elasticsearch_node_remove
+                      - name: Configuring multiple Elasticsearch clusters
+                        topicUid: Configuring_multiple_Elasticsearch_clusters
+                        items:
+                          - name: Taking a snapshot of one Elasticsearch cluster and restoring it to another
+                            topicUid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
+                          - name: Verifying Elasticsearch synchronization
+                            topicUid: Verifying_Elasticsearch_Synchronization
+                      - name: Configuring Elasticsearch backups
+                        topicUid: Configuring_Elasticsearch_backups
+                        items:
+                          - name: Taking and restoring snapshots
+                            topicUid: Configuring_Elasticsearch_backups_Windows_Linux
+                          - name: Restoring backups using the Standalone Elastic Backup Tool
+                            topicUid: Configuring_Elasticsearch_backups_Windows
+                      - name: Uninstalling Elasticsearch from a DMA (storage per DMA only)
+                        topicUid: Uninstalling_Elasticsearch_from_a_DMA
+                  - name: Manually connecting a DMA to an indexing database
+                    topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
+                  - name: Configuring indexing settings in DataMiner Cube
+                    topicUid: Configuring_DataMiner_Indexing
+                  - name: Migrating SRM resources to the indexing database
+                    topicUid: Resources_migration_to_elastic
+                  - name: Migrating SRM profiles to the indexing database
+                    topicUid: Profile_migration_to_elastic
+                  - name: Migrating from Elasticsearch to OpenSearch
+                    topicUid: Migrating_from_Elasticsearch_to_OpenSearch
+              - name: Configuring an additional database
+                topicUid: Configuring_an_additional_database
+              - name: Common storage settings
+                items:
+                  - name: Specifying TTL overrides
+                    topicUid: Specifying_TTL_overrides
+              - name: Database queries
+                items:
+                  - name: Examples of database queries
+                    topicUid: Examples_of_database_queries
+                  - name: Querying an Elasticsearch database
+                    topicUid: Querying_an_Elasticsearch_database
+                  - name: Querying an SQL database
+                    topicUid: Querying_an_SQL_database
+                  - name: Querying a Cassandra database compared to MySQL
+                    topicUid: Querying_Cassandra_vs_MySQL
+      - name: Offloading data
+        topicUid: Offload_database
+        items:
+          - name: Setting up an offload database
+            topicUid: Setting_up_an_offload_database
+          - name: Structure of an offload database
+            topicUid: Structure_of_the_offload_database
+          - name: Configuring data offloads
+            topicUid: Configuring_data_offloads
+          - name: How DataMiner offloads data
+            topicUid: How_DataMiner_offloads_data
+  - name: Security
+    items:
+      - name: About security
+        topicUid: About_security
+        items:
+          - name: Key principles and best practices
+            topicUid: Security_key_principles
+          - name: Automation in the context of security
+            topicUid: Security_and_automation
+          - name: Must-have requirements
+            topicUid: Security_must_haves
+      - name: About DataMiner security
+        topicUid: About_DMS_Security
+        items:
+          - name: User management
+            topicUid: User_management
+          - name: User rights
+            topicUid: User_rights
+          - name: User groups
+            topicUid: User_groups
+          - name: Types of users
+            topicUid: Types_of_users
+          - name: The Users / Groups module in System Center
+            topicUid: Accessing_security_in_System_Center
+          - name: Encryption in DataMiner
+            topicUid: Encryption_in_DataMiner
+          - name: Cloud connectivity and security
+            topicUid: Cloud_connectivity_and_security
+      - name: DataMiner hardening guide
+        topicUid: DataMiner_hardening_guide
+      - name: DataMiner user permissions
+        topicUid: DataMiner_user_permissions
+      - name: Basic security configuration
+        items:
+          - name: Managing users
+            topicUid: Managing_users
+            items:
+              - name: Viewing user information
+                topicUid: Viewing_user_information
+              - name: Adding a user
+                topicUid: Adding_a_user
+              - name: Deleting a user
+                topicUid: Deleting_a_user
+              - name: Editing a user's details
+                topicUid: Editing_a_users_details
+              - name: Changing group membership of a user
+                topicUid: Changing_group_membership_of_a_user
+              - name: Disconnecting a user in DataMiner Cube
+                topicUid: Disconnecting_a_user_in_DataMiner_Cube
+          - name: Configuring user notifications
+            topicUid: Configuring_user_notifications
+            items:
+              - name: Configuring notifications in System Center
+                topicUid: Configuring_notifications_in_System_Center
+              - name: Configuring notifications directly from the Alarm Console or Surveyor
+                topicUid: Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor
+              - name: Configuring alarm storm prevention for notifications
+                topicUid: Configuring_alarm_storm_prevention_for_notifications
+              - name: Customizing the layout of notification messages
+                topicUid: Customizing_the_layout_of_notification_messages
+          - name: Managing user groups
+            items:
+              - name: Viewing information about user groups
+                topicUid: Viewing_information_about_user_groups
+              - name: Adding a user group
+                topicUid: Adding_a_user_group
+              - name: Configuring a user group
+                topicUid: Configuring_a_user_group
+              - name: Deleting a user group
+                topicUid: Deleting_a_user_group
+          - name: Assigning user settings to a user group
+            topicUid: Assigning_user_settings_to_a_user_group
+          - name: Configuring a set of user group settings
+            topicUid: Configuring_a_set_of_user_group_settings
+          - name: Managing predefined sets of credentials for SNMP authentication
+            topicUid: Managing_predefined_sets_of_credentials_for_SNMP_authentication
+          - name: Frequently asked questions about user group settings
+            topicUid: Frequently_asked_questions_about_user_group_settings
+      - name: Advanced security configuration
+        items:
+#          - name: Lockbox service for DaaS and STaaS systems
+#            topicUid: Lockbox
+          - name: Securing self-managed DataMiner storage
+            items:
+              - name: Securing the Cassandra general database
+                items:
+                  - name: Cassandra authentication
+                    topicUid: Cassandra_authentication
+                  - name: Cassandra authorization
+                    topicUid: Cassandra_authorization
+                  - name: Encryption in Cassandra
+                    topicUid: Security_Cassandra_TLS
+                  - name: Running Cassandra as a non-SYSTEM user (Windows)
+                    topicUid: Running_Cassandra_as_non-SYSTEM_user
+                  - name: Firewall ports used with Cassandra
+                    topicUid: Cassandra_firewall
+                  - name: Updating Cassandra
+                    topicUid: Cassandra_updating
+                  - name: Updating Java for Cassandra
+                    topicUid: Cassandra_Java_updating
+              - name: Securing the OpenSearch database
+                topicUid: Security_OpenSearch
+              - name: Securing the Elasticsearch database
+                topicUid: Security_Elasticsearch
+          - name: Securing the web server
+            items:
+              - name: HTTP headers
+                topicUid: HTTP_Headers
+          - name: Configuring SAML settings
+            topicUid: Configuring_external_authentication_via_an_identity_provider_using_SAML
+            items:
+            - name: Configuring SAML with Microsoft Entra ID
+              topicUid: SAML_using_Entra_ID
+            - name: Configuring SAML with Azure B2C
+              topicUid: SAML_using_Azure_B2C
+            - name: Configuring SAML with Okta
+              topicUid: SAML_using_Okta
+            - name: Additional configuration for systems connected to dataminer.services
+              topicUid: SAML_config_to_connect_to_cloud
+            - name: Troubleshooting SAML issues
+              topicUid: Troubleshooting_SAML_Issues
+          - name: Configuring LDAP settings
+            topicUid: Configuring_LDAP_settings
+          - name: Configuring Atlassian Crowd settings
+            topicUid: Configuring_Atlassian_Crowd_settings
+          - name: Configuring RADIUS settings
+            topicUid: Configuring_RADIUS_settings
+          - name: Setting up Azure Active Directory Domain Services
+            topicUid: Setting_up_Azure_Active_Directory_Domain_Services
+          - name: Securing NATS
+            topicUid: Security_NATS
+          - name: Enabling TLS encryption for serial communication
+            topicUid: Enabling_TLS_encryption
+          - name: Skipping certificate validation when consuming gRPC services
+            topicUid: Skipping_certificate_validation_when_consuming_gRPC_services
+  - name: SNMP managers
+    items:
+      - name: About SNMP managers
+        topicUid: About_SNMP_managers
+        items:
+          - name: Terminology related to the SNMP protocol
+            topicUid: Terminology_related_to_the_SNMP_protocol
+          - name: Interaction between SNMP manager and SNMP agent
+            topicUid: Interaction_between_SNMP_manager_and_SNMP_agent
+      - name: Configuring SNMP managers
+        items:
+          - name: Configuring an SNMP manager in DataMiner Cube
+            topicUid: Configuring_an_SNMP_manager_in_DataMiner_Cube
+          - name: Enabling the virtual SNMP agent of an element
+            topicUid: Enabling_the_virtual_SNMP_agent_of_an_element
+          - name: Changing SNMP agent ports
+            topicUid: Changing_SNMP_agent_ports
+          - name: Configuring SNMP agent community strings
+            topicUid: Configuring_SNMP_agent_community_strings
+          - name: Enabling notifications in case SNMPv3 traps cannot be processed
+            topicUid: Enabling_notifications_in_case_SNMPv3_traps_cannot_be_processed
+          - name: Enabling DataMiner SNMP agent functionality
+            topicUid: Enabling_DataMiner_SNMP_agent_functionality
+          - name: Adjusting the SNMP inform message cache size
+            topicUid: Adjusting_the_SNMP_inform_message_cache_size
+          - name: Generating SMIv2 MIB files
+            topicUid: Generating_SMIv2_MIB_files
+      - name: Resending alarms to an SNMP manager
+        topicUid: Resending_alarms_to_an_SNMP_manager
+      - name: DataMiner SNMP notification definition
+        items:
+          - name: Default DataMiner notification
+            topicUid: Default_DataMiner_notification
+          - name: Custom DataMiner notification
+            topicUid: Custom_DataMiner_notification
+  - name: DataMiner Connectivity Framework
+    items:
+      - name: About the DataMiner Connectivity Framework
+        topicUid: About_the_DataMiner_Connectivity_Framework
+      - name: Viewing element connections
+        topicUid: Viewing_element_connections
+      - name: Configuring element connectivity in Cube
+        items:
+          - name: Editing element connections in the Properties window
+            topicUid: Editing_element_connections_in_the_Properties_window
+          - name: Advanced Connectivity configuration
+            topicUid: Advanced_Connectivity_configuration
+      - name: Defining connectivity chains in XML files
+        topicUid: Defining_connectivity_chains_in_XML_files
+        items:
+          - name: General Connectivity.xml file
+            topicUid: General_Connectivity_xml_file
+          - name: Connectivity.xml files representing chains
+            topicUid: Connectivity_xml_files_representing_chains
+          - name: Automatically generating service RCA chains based on connectivity
+            topicUid: Automatically_generating_service_RCA_chains_based_on_connectivity
+      - name: Tutorials
+        items:
+          - name: Getting started with DCF
+            topicUid: getting_started_dataminer_connectivity_framework
+          - name: Working with DCF interface properties in GQI queries
+            topicUid: working_with_dcf_interface_properties_gqi
+  - name: TCP-IP sockets
+    items:
+      - name: About TCP-IP sockets
+        topicUid: About_TCP-IP_sockets
+      - name: Configuring the TCP-IP socket settings
+        topicUid: Configuring_the_TCP-IP_socket_settings
+        items:
+          - name: Configuring the necessary tags in DataMiner.xml
+            topicUid: Configuring_the_necessary_tags_in_DataMiner_xml
+          - name: Testing alarm forwarding
+            topicUid: Testing_alarm_forwarding
+      - name: TCP-IP socket message reference
+        topicUid: TCP-IP_socket_message_reference
+  - name: Serial gateways
+    topicUid: SerialGateways
+    items:
+      - name: About DMS Serial Gateways
+        topicUid: About_DMS_Serial_Gateways
+      - name: Features of a DMS Serial Gateway
+        topicUid: Features_of_a_DMS_Serial_Gateway
+      - name: Using a DMS Serial Gateway
+        topicUid: Using_a_DMS_Serial_Gateway
+  - name: Swarming
+    topicUid: Swarming
+    items:
+      - name: Enabling the Swarming feature
+        topicUid: EnableSwarming
+      - name: Swarming elements
+        topicUid: SwarmingElements
+      - name: Swarming bookings
+        topicUid: SwarmingBookings
+      - name: Rolling back Swarming
+        topicUid: SwarmingRollback
+      - name: Frequently asked questions
+        topicUid: SwarmingFAQ
+      - name: Tutorials
+        items:
+          - name: Enable Swarming Tutorial
+            topicUid: Swarming_Tutorial_Enable

@@ -34,11 +34,11 @@ In the *Bookings* app, the default window of the timeline area has now been chan
 
 This also means that a ListView component configured to list bookings will by default have its *StartTime=* and *EndTime=* options set to `NOW - 8 hours` and `NOW + 16 hours` respectively.
 
-#### Selecting 'Help' will now open the 'Getting started' page of the online DataMiner user guide [ID 35571]
+#### Selecting 'Help' will now open the 'Getting started' page of the online DataMiner documentation [ID 35571]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
-When, in DataMiner Cube, you select *Help* in the user menu or the *Apps* pane, the ['Getting started' page of the online DataMiner user guide](xref:Part1GettingStarted) will open in a browser window.
+When, in DataMiner Cube, you select *Help* in the user menu or the *Apps* pane, the ['Getting started' page of the online DataMiner documentation](xref:Getting_Started) will open in a browser window.
 
 #### Services app: Enhanced performance when opening the 'Profiles' tab [ID 35634]
 

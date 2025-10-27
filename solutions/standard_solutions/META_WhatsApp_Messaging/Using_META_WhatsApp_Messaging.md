@@ -13,7 +13,7 @@ uid: Using_META_WhatsApp_Messaging
 
    1. Go to the *DATA* > *General* page of the *META WhatsApp Alerter* element.
 
-   1. Click *New Contact* in the lower right corner.
+   1. Click *New Contact* in the lower-right corner.
 
    1. Enter the contact's phone number and name, then confirm both by clicking the green check mark.
 
@@ -46,10 +46,10 @@ In this example, a WhatsApp notification is sent whenever a critical alarm is ge
 
 1. Create the following configuration rule:
 
-   ![Correlation rule configuration](~/user-guide/images/META_WhatsApp_Messaging_Correlation.png)
+   ![Correlation rule configuration](~/dataminer/images/META_WhatsApp_Messaging_Correlation.png)
 
-1. Click *Apply* in the lower right corner.
+1. Click *Apply* in the lower-right corner.
 
    Now, when a critical alarm occurs (1), the contacts listed in the *Contacts* table will receive a WhatsApp notification (2), no matter their physical location.
 
-   ![WhatsApp messages](~/user-guide/images/META_WhatsApp_Messaging_Cover.png)
+   ![WhatsApp messages](~/dataminer/images/META_WhatsApp_Messaging_Cover.png)

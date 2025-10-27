@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_CU1
 ---
 
-# General Main Release 10.5.0 CU1 - Preview
+# General Main Release 10.5.0 CU1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -25,7 +25,7 @@ Up to now, the DataMiner Agent to which you were connected would handle all requ
 
 ##### Configuration
 
-In the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular DataMiner Agent, add the following keys in the `<appSettings>` section:
+In the `C:\Skyline DataMiner\Webpages\API\Web.config` file of a particular DataMiner Agent, add the following keys in the `<appSettings>` section:
 
 - `<add key="visualOverviewLoadBalancer" value="true" />`
 
@@ -61,7 +61,7 @@ The following new messages can now be used to  which you can target to be sent t
 
 ##### Logging
 
-Additional logging with regard to visual overview load balancing will be available in the web logs located in the *C:\\Skyline DataMiner\\Logging\\Web* folder.
+Additional logging with regard to visual overview load balancing will be available in the web logs located in the `C:\Skyline DataMiner\Logging\Web` folder.
 
 #### Enhanced performance when updating subscriptions and when checking events against the set of active subscriptions [ID 41822]
 
@@ -142,7 +142,7 @@ Up to now, when a reservation went into quarantine, the *SRM_QuarantineHandling*
 
 When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.xml* file, the `NatsCustodianResetNatsRequest` message will now be blocked. Instead of performing a NATS reset, it will now return an error with the following message:
 
-`Resetting NATS is blocked while the system is running a Manual Config. See https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_advanced_procedures/SLNetClientTest_disabling_automatic_nats_config.html for more information.`
+`Resetting NATS is blocked while the system is running a Manual Config. See https://docs.dataminer.services/dataminer/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_advanced_procedures/SLNetClientTest_disabling_automatic_nats_config.html for more information.`
 
 > [!NOTE]
 > The `NatsCustodianResetNatsRequest` message will also be blocked when BrokerGateway is being used.
@@ -174,12 +174,12 @@ Also, no new log file will be started every day anymore. From now on, a new log 
 
 <!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
 
-From now on, a separate log file will be created per GQI DxM extension library in the *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions* folder.
+From now on, a separate log file will be created per GQI DxM extension library in the `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions` folder.
 
 Example:
 
-- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library A.txt*
-- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library B.txt*
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions\Library A.txt`
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions\Library B.txt`
 
 The log entries added to those files will now each include the name of the extension as well as the name of the user. The log entry format will now be the following:
 
@@ -191,7 +191,7 @@ The log entries added to those files will now each include the name of the exten
 
 SLLogCollector will now look for GQI DxM extension logging in the following folder:
 
-- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions*
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions`
 
 ### Fixes
 

@@ -4,6 +4,30 @@ uid: orchestrator_change_log
 
 # Orchestrator change log
 
+#### 16 October 2025 - Enhancement - Orchestrator 1.8.0 - Improved service recovery after reboot
+
+From now on, DataMiner services will automatically restart after a Windows reboot, ensuring essential services are recovered even if BrokerGateway or related components are not yet running.
+
+In addition, the startup type of DataMiner Orchestrator is now set to "Automatic (Delayed Start)" by default to improve system stability during startup.
+
+#### 1 July 2025 - Fix - Orchestrator 1.7.8 - Deploying the Orchestrator DxM from the Admin app removes the Orchestrator DxM
+
+An issue introduced in Orchestrator 1.7.6 made it impossible to upgrade or downgrade the DxM from the [Admin app](https://admin.dataminer.services). Trying to do so would cause the DxM to be uninstalled, leaving the server in a state where none of the DxMs could be updated from the Admin app.
+
+This issue is fixed in Orchestrator 1.7.8. However, to upgrade any servers running Orchestrator 1.7.6 or 1.7.7 to this version (or higher versions), you will need to install the [DataMiner Cloud Pack 3.3.3](https://community.dataminer.services/dataminer-cloud-pack/).
+
+#### 24 June 2025 - Enhancement - Orchestrator 1.7.7 - Improved upgrade process
+
+Improvements have been made to the startup and shutdown of the DxM, which improves the upgrade process.
+
+#### 17 June 2025 - Enhancement - Orchestrator 1.7.6 - Improved upgrade process
+
+Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
+
+#### 1 April 2025 - Enhancement - Orchestrator 1.7.5 - Dependencies updated [ID 42657]
+
+Several dependencies have been updated.
+
 #### 12 November 2024 - Fix - Orchestrator 1.7.4 - Installer caused Orchestrator startup issue [ID 41404]
 
 A DLL issue in the installer of Orchestrator 1.7.2 caused the service to be unable to start, which could make it impossible to still update DxMs from the [Admin app](https://admin.dataminer.services).

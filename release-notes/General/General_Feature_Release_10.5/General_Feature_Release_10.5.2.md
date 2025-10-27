@@ -53,7 +53,7 @@ Up to now, the DataMiner Agent to which you were connected would handle all requ
 
 ##### Configuration
 
-In the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular DataMiner Agent, add the following keys in the `<appSettings>` section:
+In the `C:\Skyline DataMiner\Webpages\API\Web.config` file of a particular DataMiner Agent, add the following keys in the `<appSettings>` section:
 
 - `<add key="visualOverviewLoadBalancer" value="true" />`
 
@@ -89,7 +89,7 @@ The following new messages can now be used to  which you can target to be sent t
 
 ##### Logging
 
-Additional logging with regard to visual overview load balancing will be available in the web logs located in the *C:\\Skyline DataMiner\\Logging\\Web* folder.
+Additional logging with regard to visual overview load balancing will be available in the web logs located in the `C:\Skyline DataMiner\Logging\Web` folder.
 
 #### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Correlation engine [ID 41653]
 
@@ -169,7 +169,7 @@ The logging of the arp command will now also include the MAC address that claime
 All DataMiner upgrade packages now include the latest Visual C++ Redistributable.
 
 > [!NOTE]
-> From now on, after having upgraded a DataMiner Agent, the *C:\\Skyline DataMiner\\Files* and *C:\\Skyline DataMiner\\Files\\x64* folders will no longer contain any individual Visual C++ Redistributable DLL files.
+> From now on, after having upgraded a DataMiner Agent, the `C:\Skyline DataMiner\Files` and `C:\Skyline DataMiner\Files\x64` folders will no longer contain any individual Visual C++ Redistributable DLL files.
 
 #### DataMiner Taskbar Utility: 'Launch > Download DataMiner Cube' command will now download the DataMiner Cube desktop app [ID 41308]
 
@@ -210,7 +210,7 @@ The string representation of the trace data has also been adjusted to provide mo
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
 
-During a DataMiner upgrade, the ".dmapp" and ".dmprotocol" file extensions will now by default be added to the list of MIME types in the *C:\\Skyline DataMiner\\Webpages\\web.config* file.
+During a DataMiner upgrade, the ".dmapp" and ".dmprotocol" file extensions will now by default be added to the list of MIME types in the `C:\Skyline DataMiner\Webpages\web.config` file.
 
 #### Security enhancements [ID 41475]
 
@@ -298,11 +298,11 @@ A clearer error message will now be logged. The `ReportsAndDashboardsException` 
 
 From now on, SLLogCollector packages can also include a memory dump of the *w3wp* process in case of web API issues.
 
-#### EPM systems: Enhanced performance when aggregating large data sets [ID 41685]
+#### EPM systems: Enhanced performance when aggregating large datasets [ID 41685]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-Because of a number of enhancements, on EPM systems, overall performance has increased when aggregating large data sets.
+Because of a number of enhancements, on EPM systems, overall performance has increased when aggregating large datasets.
 
 #### Storage as a Service: Timeout for responses to write requests has been reduced to 10 seconds [ID 41717]
 
@@ -387,7 +387,7 @@ While the booking scheduler task queue was being processed, in some cases, debug
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
-At DataMiner startup, SLDataMiner will now check the *C:\\Skyline DataMiner\\SoftLaunchOptions.xml* file to determine whether the *BrokerGateway* soft-launch option is enabled or not.
+At DataMiner startup, SLDataMiner will now check the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file to determine whether the *BrokerGateway* soft-launch option is enabled or not.
 
 - If the *BrokerGateway* soft-launch option is **enabled**, it will start the **nats-server service**.
 - If the *BrokerGateway* soft-launch option is **disabled**, it will start the **NAS and NATS services**.

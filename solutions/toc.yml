@@ -2,25 +2,69 @@ items:
 - name: Solutions
   topicUid: solution_index
   items:
+  - name: About DataMiner Solutions
+    topicUid: SOL_About
   - name: Standard Solutions
     items:
     - name: dataminer.MediaOps
       topicUid: MediaOps
       items:
       - name: Installing dataminer.MediaOps
-        topicUid: Installing_MediaOps
-      - name: MediaOps applications
-        topicUid: MediaOps_apps
+        topicUid: MO_Installation
+      - name: People & Organizations
+        topicUid: People_Organizations
         items:
-        - name: People & Organizations
-          topicUid: People_Organizations
-          items:
-          - name: Managing contacts
-            topicUid: PO_Managing_Contacts
-          - name: Managing teams
-            topicUid: PO_Managing_Teams
-          - name: Managing organizations
-            topicUid: PO_Managing_Organizations
+        - name: Managing contacts
+          topicUid: PO_Managing_Contacts
+        - name: Managing teams
+          topicUid: PO_Managing_Teams
+        - name: Managing organizations
+          topicUid: PO_Managing_Organizations
+      - name: Resource Studio
+        topicUid: MO_Resource_Studio
+        items: 
+        - name: Assigning resource icons
+          topicUid: RS_Resource_Icons
+        - name: Linking resource pools
+          topicUid: RS_Linking_Pools
+      - name: Workflow Designer
+        topicUid: MO_Workflow_Designer
+        items:
+          - name: Creating workflows
+            topicUid: WFD_Creating_Workflows
+      - name: Scheduling
+        topicUid: MO_Scheduling
+        items:
+          - name: Creating a job
+            topicUid: SCH_Create_Job
+          - name: Editing a job
+            topicUid: SCH_Edit_Job
+          - name: Working with recurring jobs
+            topicUid: SCH_Recurring
+          - name: Job states
+            topicUid: MO_S_Job_States
+          - name: Job locking
+            topicUid: MO_S_Job_Locking
+          - name: App settings
+            topicUid: MO_S_App_Configuration
+          - name: Validation of upcoming jobs
+            topicUid: Overview_MediaOps_Validation
+      - name: Tutorials
+        items: 
+        - name: Configuring resources and resource pools
+          topicUid: Tutorial_MediaOps_Resource_Studio_Intro
+        - name: Creating a job and configuring it with resources
+          topicUid: Tutorial_MediaOps_Scheduling_Encoder_Decoder
+        - name: Creating an organization with a team and contacts to use as resources in MediaOps apps
+          topicUid: Tutorial_MediaOps_People_and_Organizations_Intro
+        - name: Assigning capabilities to resources
+          topicUid: Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities
+        - name: Using time-dependent capabilities
+          topicUid: Tutorial_MediaOps_Scheduling_Time_Dependent_Capabilities
+        - name: Scheduling a job using a resource pool with specific capabilities
+          topicUid: Tutorial_MediaOps_Scheduling_Configurations
+        - name: Creating a workflow to use as a template for a job
+          topicUid: Tutorial_MediaOps_Workflow_Designer_Intro
     - name: DataMiner PTP
       topicUid: SolPTP
       items:
@@ -207,6 +251,30 @@ items:
         topicUid: Ping_Monitoring_managing_groups_destinations
       - name: Getting started tutorial
         topicUid: Tutorial_Apps_Ping_Monitoring_App
+    - name: IP Network Explorer
+      topicUid: IpNetworkExplorer
+      items:
+      - name: Getting started with IP Network Explorer
+        topicUid: IpNetworkExplorer_getting_started
+      - name: IP Network Explorer UI overview
+        topicUid: IpNetworkExplorer_UI_overview
+      - name: Supported devices and protocols
+        topicUid: IpNetworkExplorer_Supported_Devices_And_Protocols
+    - name: Smart Trap Processor
+      topicUid: Smart_Trap_Processor_Overview
+      items:
+      - name: Installing the Smart Trap Processor
+        topicUid: Installing_Smart_Trap_Processor
+      - name: Using the Smart Trap Processor
+        items:
+        - name: The Smart Trap Processor user interface
+          topicUid: The_SmartTrapProcessor_user_interface
+        - name: Configuring processing rules
+          topicUid: Processor_configuration
+        - name: Monitoring processed traps
+          topicUid: Monitoring_Processed_Traps
+      - name: Getting started tutorial
+        topicUid: Smart_Trap_Processor_Tutorial
   - name: Product Solutions
     items:
     - name: EVS Cerebrum application
@@ -216,6 +284,13 @@ items:
         topicUid: Installing_EVS_Cerebrum
       - name: Working with the EVS Cerebrum app
         topicUid: Using_EVS_Cerebrum
+    - name: Grass Valley AMPP Manager app
+      topicUid: GVAMPP_Manager_Overview
+      items:
+      - name: Installing the Grass Valley AMPP Manager app
+        topicUid: GVAMPP_Manager_Installing
+      - name: Using the Grass Valley AMPP Manager app
+        topicUid: GVAMPP_Manager_Using
     - name: Nevion Video IPath app
       topicUid: Overview_NevionVideoIPath_App
       items:
@@ -223,6 +298,13 @@ items:
         topicUid: Installing_NevionVideoIPath_App
       - name: Using the Nevion Video IPath app
         topicUid: How_to_NevionVideoIPath_App
+    - name: NetInsight Nimbra Vision application
+      topicUid: netinsight-nimbra-vision-overview
+      items:
+      - name: Installing the Nimbra Vision app
+        topicUid: netinsight-nimbra-vision-install
+      - name: Using the Nimbra Vision app
+        topicUid: netinsight-nimbra-vision-howtouse
     - name: DataMiner TAG Management app
       topicUid: Overview_TAG_App
       items:
@@ -230,6 +312,13 @@ items:
         topicUid: Installing_TAG_App
       - name: Using the TAG Management app
         topicUid: How_to_TAG_App
+    - name: Techex TX Core app
+      topicUid: techex-tx-core-overview
+      items:
+      - name: Installing the Techex TX Core app
+        topicUid: techex-tx-core-install
+      - name: Using the Techex TX Core app
+        topicUid: techex-tx-core-howtouse
   - name: DevTools
     items:
     - name: DataMiner Objects Tool
@@ -246,21 +335,8 @@ items:
         topicUid: Performance_Analyzer_Library
       - name: Performance Analyzer app
         topicUid: Performance_Analyzer_LCA
-    - name: Smart Trap Processor
-      topicUid: Smart_Trap_Processor_Overview
-      items:
-      - name: Installing the Smart Trap Processor
-        topicUid: Installing_Smart_Trap_Processor
-      - name: Using the Smart Trap Processor
-        items:
-        - name: The Smart Trap Processor user interface
-          topicUid: The_SmartTrapProcessor_user_interface
-        - name: Configuring processing rules
-          topicUid: Processor_configuration
-        - name: Monitoring processed traps
-          topicUid: Monitoring_Processed_Traps
       - name: Getting started tutorial
-        topicUid: Smart_Trap_Processor_Tutorial
+        topicUid: Performance_Analyzer_Getting_Started_Tutorial
     - name: DOM Viewer
       topicUid: domviewer_about
       items:
@@ -270,13 +346,6 @@ items:
         topicUid: DOM_Using_DOM_Viewer
   - name: Custom Solutions
     items:
-    - name: DataMiner Asset Management application
-      topicUid: Asset_Management
-      items:
-      - name: Installing the Asset Management app
-        topicUid: Installing_Asset_Management
-      - name: Working with the Asset Management app
-        topicUid: Working_with_Asset_Management
     - name: DataMiner IT Tools (DITT)
       topicUid: Dataminer_IT_Tool_Overview
       items:
@@ -288,6 +357,17 @@ items:
         topicUid: Open_Putty_with_DITT
       - name: Implementing DITT in a visual overview
         topicUid: Implementing_DITT_in_Visio
+    - name: DataMiner Health Check Tool
+      topicUid: DataMiner_Health_Check_Tool
+      items:
+      - name: Installing the Health Check Tool
+        topicUid: DataMiner_Health_Check_Tool_Installation
+      - name: Configuring the Health Check Tool
+        topicUid: DataMiner_Health_Check_Tool_Configuration
+      - name: Using the Health Check Tool
+        topicUid: DataMiner_Health_Check_Usage
+      - name: Health Check Tool Dashboards
+        topicUid: DataMiner_Health_Dashboards
     - name: DataMiner Planned Maintenance (PLM) tool
       topicUid: DataMiner_PLM_Tool_Overview
       items:
@@ -309,6 +389,15 @@ items:
             topicUid: Deleting_maintenance_event
       - name: Planned Maintenance records
         topicUid: PLM_Records
+    - name: Regression Test Management
+      topicUid: Regression_Test_Management
+      items:
+        - name: Installing the Regression Test Management Solution
+          topicUid: Installing_the_Regression_Test_Management_Solution
+        - name: Configuring the Regression Test Management Solution
+          topicUid: Configuring_the_Regression_Test_Management_Solution
+        - name: Using the Regression Test Management Solution
+          topicUid: Using_the_Regression_Test_Management_Solution
     - name: Remote PHY Monitoring
       topicUid: Remote_PHY_Monitoring
       items:

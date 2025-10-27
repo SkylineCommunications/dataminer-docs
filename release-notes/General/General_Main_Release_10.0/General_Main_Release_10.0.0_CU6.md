@@ -40,7 +40,7 @@ Performance has improved when a subscription is added on element level, specific
 In addition, it is now possible to change the number of records that can be contained in the protocol cache. You can do so using the SLNetClientTest tool by going to *Options* > *SLNet Options*, selecting *protocolCacheMru* in the drop-down box, changing the value where necessary and clicking *OK*. However, do not change this value without checking with Skyline for advice first, as an incorrect setting can cause serious issues.
 
 > [!WARNING]
-> The DataMiner SLNetClientTest tool is an advanced system administration tool that should be used with extreme care (*C:\\Skyline DataMiner\\Files\\SLNetClientTest.exe*).
+> The DataMiner SLNetClientTest tool is an advanced system administration tool that should be used with extreme care (`C:\Skyline DataMiner\Files\SLNetClientTest.exe`).
 
 #### Improved logging for view tables in SLElement log \[ID 27192\]
 
@@ -76,9 +76,9 @@ In some cases, if refreshing LDAP took a long time, it could occur that this blo
 
 When you tried to log on to DataMiner using an incorrect user name or password, in some cases, an “Authentication took too long” error would be added to the SLNet logging after about 30 seconds.
 
-#### Incorrect run-time errors of type 'SLDMS ConnectionThread Problem' would appear when an agent responded slower than expected \[ID 26596\]
+#### Incorrect runtime errors of type 'SLDMS ConnectionThread Problem' would appear when an agent responded slower than expected \[ID 26596\]
 
-When a particular agent in a DataMiner System responded slower than expected, in some cases, incorrect run-time errors of type “SLDMS ConnectionThread Problem” could start to appear on other agents in the same DataMiner System.
+When a particular agent in a DataMiner System responded slower than expected, in some cases, incorrect runtime errors of type “SLDMS ConnectionThread Problem” could start to appear on other agents in the same DataMiner System.
 
 #### Failover: Problem when the agents had a different cluster name \[ID 26683\]
 

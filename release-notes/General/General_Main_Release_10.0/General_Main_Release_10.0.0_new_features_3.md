@@ -338,7 +338,7 @@ If a shape is linked to an alarm, it is now possible to have the list of impacte
 
 To do so, add a shape data field of type “Info”, and set its value to “Services”. See the example below.
 
-Make sure the text of the shape contains an asterisk ('\*'). At run-time, this asterisk will then be replaced with the names of all impacted services.
+Make sure the text of the shape contains an asterisk ('\*'). At runtime, this asterisk will then be replaced with the names of all impacted services.
 
 Example:
 
@@ -505,7 +505,7 @@ Using the new DataMiner stencils will considerably speed up the design of visual
 
 #### Visual Overview: Parameter cache can now be used by shapes linked to a table column value and by \[param:\] placeholders that retrieve a table column value \[ID 22900\]
 
-In the global user settings in DataMiner Cube (*C:\\Skyline DataMiner\\Users\\ClientSettings.json*), it is possible to configure that certain table parameters have to be cached. This cache can now also be used for:
+In the global user settings in DataMiner Cube (`C:\Skyline DataMiner\users\ClientSettings.json`), it is possible to configure that certain table parameters have to be cached. This cache can now also be used for:
 
 - a shape that is linked to a table column value, and
 - a \[param:\] placeholder that retrieves a table column value.

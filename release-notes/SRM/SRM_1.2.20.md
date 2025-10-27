@@ -40,7 +40,7 @@ A new script, *SRM_BookResourcesQuickly*, is now available, which allows you to 
 
 It is now possible to import and export the settings of a Booking Manager element.
 
-- To **export** the settings, on the *General* data page of the element, click *Export*. An export file will be created in folder *C:\\Skyline DataMiner\\Documents\\Skyline Booking Manager\\Configurations*.
+- To **export** the settings, on the *General* data page of the element, click *Export*. An export file will be created in folder `C:\Skyline DataMiner\Documents\Skyline Booking Manager\Configurations`.
 
 - To **import** the settings, on the *General* data page of the element, click *Import*, and then select the file to import in the pop-up window. As the import feature is intended to be used to **pass settings from one DMS to another**, it does not import the parameter *DMA IDs to Store Reservations*.
 
@@ -85,7 +85,7 @@ Similarly, the *ServiceReservationInstance.UnassignResources* method has been ex
 
 #### Booking Friendly Reference now calculated in SLAutomation \[ID 31628\]
 
-Previously, the Friendly Reference of a booking was calculated in the Booking Manager element. However, because this required an external parameter set from the script to the connector, this could take a long time if the system was experiencing a run-time error, and this could cause booking creation to fail. To prevent such issues, the Friendly Reference is now calculated in SLAutomation instead.
+Previously, the Friendly Reference of a booking was calculated in the Booking Manager element. However, because this required an external parameter set from the script to the connector, this could take a long time if the system was experiencing a runtime error, and this could cause booking creation to fail. To prevent such issues, the Friendly Reference is now calculated in SLAutomation instead.
 
 #### Improved behavior of Show Information Events setting \[ID 31680\]
 

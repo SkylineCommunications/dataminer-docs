@@ -1,0 +1,160 @@
+items:
+  - name: Deploying a DataMiner System
+    topicUid: Deploying_a_DataMiner_System
+    items:
+    - name: Creating a DataMiner System in the cloud (DaaS)
+      topicUid: Creating_a_DMS_in_the_cloud
+      items:
+        - name: Creating a new DMS on dataminer.services
+          topicUid: Creating_a_DMS_on_dataminer_services
+        - name: Accessing a newly created DMS for the first time
+          topicUid: Accessing_a_new_DMS
+        - name: Connecting to data sources
+          topicUid: DaaS_connecting_to_data_sources
+          items:
+            - name: Connecting to private data sources with DaaS
+              topicUid: Connecting_to_private_data_sources
+        - name: Deploying solution demos
+          topicUid: DaaS_deploying_solution_demos
+        - name: Ordering DataMiner credits
+          topicUid: Order_DataMiner_credits
+        - name: Removing a DaaS system
+          topicUid: Removing_a_DaaS_system
+        - name: Frequently asked questions
+          topicUid: Creating_a_DaaS_system_FAQ
+    - name: Installing a self-managed DataMiner Agent
+      topicUid: Installing_a_DataMiner_Agent
+      items:
+        - name: Using the DataMiner Installer
+          topicUid: Installing_DM_using_the_DM_installer
+          items:
+            - name: Restoring a backup onto a newly installed DMA
+              topicUid: Restoring_backup_on_newly_installed_DMA
+            - name: Configuring a new DMA as a new Agent in a Failover pair
+              topicUid: Configuring_a_new_DMA_in_Failover_pair
+            - name: Switching from subscription mode to perpetual license
+              topicUid: Switching_from_subscription_mode_to_perpetual_license
+            - name: Switching from subscription mode to offline demo license
+              topicUid: Switching_from_subscription_mode_to_offline_demo
+            - name: Using an older installer (deprecated)
+              topicUid: Using_older_installers
+        - name: Using a pre-installed DataMiner Virtual Hard Disk
+          topicUid: Using_a_pre_installed_DataMiner_Virtual_Hard_Disk
+        - name: Unattended DataMiner installation
+          topicUid: Unattended_DM_installation
+        - name: Regarding virtual servers
+          topicUid: Regarding_virtual_servers
+        - name: Regarding antivirus software
+          topicUid: Regarding_antivirus_software
+        - name: Frequently asked questions
+          topicUid: Installing_a_DMA_FAQ
+  - name: Interacting with DataMiner
+    items:
+      - name: Client apps
+        topicUid: Client_apps
+      - name: DataMiner components
+        topicUid: DataMiner_components
+      - name: DataMiner functions
+        topicUid: DataMiner_functions
+      - name: Accessing DataMiner Cube
+        items:
+          - name: Installing & configuring the DataMiner Cube software
+            topicUid: Installing_configuring_the_DataMiner_Cube_software
+            items:
+              - name: Installing the DataMiner Cube desktop application
+                topicUid: Installing_the_DataMiner_Cube_desktop_application
+              - name: Cleaning up the DataMiner Cube desktop app cache
+                topicUid: Cleaning_up_the_DataMiner_Cube_desktop_app_cache
+              - name: Uninstalling the DataMiner Cube desktop application
+                topicUid: Uninstalling_the_DataMiner_Cube_desktop_application
+              - name: Changing the default browser engine used in DataMiner Cube
+                topicUid: Changing_the_default_browser_engine_used_in_DataMiner_Cube
+              - name: Configuring Microsoft Edge to run DataMiner Cube
+                topicUid: Configuring_Microsoft_edge_to_run_Cube
+              - name: DataMiner Cube deployment methods
+                topicUid: DataMiner_Cube_deployment_methods
+          - name: Connecting to a DataMiner Agent with Cube
+            items:
+              - name: Using the desktop application
+                topicUid: Using_the_desktop_app
+                items:
+                  - name: Logging on to DataMiner Cube
+                    topicUid: Logging_on_to_DataMiner_Cube
+                  - name: Overriding the default connection type
+                    topicUid: Overriding_Cube_connection_type
+                  - name: Managing the start window of the desktop app
+                    topicUid: Managing_the_start_window
+                  - name: Arguments for DataMiner Cube
+                    topicUid: Options_for_opening_DataMiner_Cube
+                  - name: Desktop application command-line arguments
+                    topicUid: Desktop_app_command_line_arguments
+              - name: Using the browser application
+                topicUid: Using_the_browser_app
+      - name: Accessing the web apps
+        topicUid: Accessing_the_web_apps
+  - name: Working with DataMiner Cube
+    items:
+      - name: DataMiner Cube UI components
+        topicUid: Cube_UI_components
+        items:
+          - name: DataMiner Cube header bar
+            topicUid: DataMiner_Cube_header_bar
+          - name: DataMiner Cube sidebar
+            topicUid: DataMiner_Cube_sidebar
+          - name: DataMiner Cube card pane
+            topicUid: DataMiner_Cube_card_pane
+          - name: DataMiner Cube Alarm Console
+            topicUid: DataMiner_Cube_Alarm_Console
+      - name: Working with cards in DataMiner Cube
+        topicUid: Working_with_cards_in_DataMiner_Cube
+      - name: Searching in DataMiner Cube
+        topicUid: Searching_in_DataMiner_Cube
+      - name: Using quick filters
+        topicUid: Using_quick_filters
+      - name: Using keyboard navigation
+        topicUid: Using_keyboard_navigation
+      - name: Working with workspaces
+        topicUid: Working_with_workspaces
+      - name: User settings
+        topicUid: User_settings
+      - name: Computer settings
+        topicUid: Computer_settings
+      - name: Chat collaboration
+        topicUid: chat
+      - name: DataMiner Cube tips & tricks
+        topicUid: DataMiner_Cube_tips_tricks
+  - name: Working with the Monitoring app
+    topicUid: Working_with_the_Monitoring_app
+    items:
+      - name: Monitoring app header bar
+        topicUid: Monitoring_app_header_bar
+      - name: Monitoring app sidebar
+        topicUid: Monitoring_app_sidebar
+      - name: Monitoring app Alarm Console
+        topicUid: Monitoring_app_Alarm_Console
+      - name: Monitoring app card pane
+        topicUid: Monitoring_app_card_pane
+        items:
+          - name: View cards
+            topicUid: View_Cards
+          - name: Service cards
+            topicUid: Service_Cards
+          - name: Element cards
+            topicUid: Element_Cards
+            items:
+              - name: Trending page
+                topicUid: Trending_Page
+          - name: Alarm cards
+            topicUid: Alarm_Cards
+          - name: CPE cards
+            topicUid: CPE_Cards
+          - name: Spectrum analyzer cards
+            topicUid: Spectrum_Analyzer_Cards
+  - name: DataMiner Community
+    topicUid: Getting_started_community
+  - name: Ziine Demo System
+    topicUid: ZiineDemoSystem
+  - name: Tutorials
+    items:
+      - name: Creating your first element on a DaaS system
+        topicUid: Creating_your_first_element_on_a_DaaS_system

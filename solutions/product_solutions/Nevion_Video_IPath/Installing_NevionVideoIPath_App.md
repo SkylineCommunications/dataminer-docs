@@ -14,7 +14,7 @@ uid: Installing_NevionVideoIPath_App
 
 ## Deploying the Nevion Video IPath app
 
-1. Look up the [*Nevion Video IPath* package](https://catalog.dataminer.services/details/ec97a934-679e-42c2-ac4b-f33a3d9f8d2c) in the DataMiner Catalog.
+1. Look up the [*Nevion Video IPath* package](https://catalog.dataminer.services/details/ec97a934-679e-42c2-ac4b-f33a3d9f8d2c) in the Catalog.
 
 1. Click the *Deploy* button.
 

@@ -4,6 +4,26 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
+#### 28 August 2025 - Fix - CoreGateway 2.14.14 - Race condition blocking Catalog deployments
+
+A race condition has been resolved that could lead to the Catalog displaying the following error while there were actually no issues. 
+
+`There are some issues preventing you to deploy.` 
+
+`There are no (healthy) CoreGateways DxMs in the DataMiner System on the node with a running DMA.`
+
+#### 17 June 2025 - Enhancement - CoreGateway 2.14.13 - Improved upgrade process
+
+Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
+
+#### 17 June 2025 - Fix - CoreGateway 2.14.13 - Problem caused by rapid file changes [ID 42916]
+
+​Rapid file changes in *DataMiner.xml* could cause a problem in CoreGateway, causing the DxM to restart.
+
+#### 1 April 2025 - Enhancement - CoreGateway 2.14.12 - Dependencies updated [ID 42655]
+
+Several dependencies have been updated.
+
 #### 30 October 2024 - Enhancement - CoreGateway 2.14.11 - Dependencies updated [ID 41282]
 
 Several dependencies have been updated.

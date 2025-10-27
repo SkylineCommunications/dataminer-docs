@@ -20,7 +20,7 @@ For larger contributions, e.g. to add several new pages, we recommend that you i
   > [!NOTE]
   > Microsoft also provides a zero-install Visual Studio Code for the web. When you are working in GitHub online, you can access this by pressing the "." button on your keyboard. This version offers a complete overview of the repository like in the downloadable version of Visual Studio Code, but it does not offer any extensions, e.g. a spell check.
 
-- If you are making a larger contribution, we always recommend making a test build on your local machine before pushing your changes to the repository. To be able to make a local test build, you need to have [DocFX](xref:CTB_Local_Test_Build#installing-and-configuring-docfx) installed.
+- [DocFX](xref:CTB_Local_Test_Build#installing-and-configuring-docfx) (optional): If you are making a larger contribution, we recommend making a test build on your local machine before pushing your changes to the repository, which requires DocFX.
 
 When you install GitHub Desktop, you will also need to add the correct repository:
 
@@ -39,7 +39,7 @@ When you install GitHub Desktop, you will also need to add the correct repositor
    > - Make sure the local path you clone the repository to is relatively short. Using a long file path will lead to errors, as Windows will be unable to create certain files in the repository.
    > - Do not clone the repository to a folder that is synced with OneDrive, as this can cause errors.
 
-1. If you do not have write access to the repository, you will find an alert in the lower left corner of the GitHub Desktop UI.
+1. If you do not have write access to the repository, you will find an alert in the lower-left corner of the GitHub Desktop UI.
 
    ![Install GitHub3](~/images/InstallGitHub3.png)
 

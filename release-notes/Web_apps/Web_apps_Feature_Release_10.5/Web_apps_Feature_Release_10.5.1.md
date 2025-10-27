@@ -4,6 +4,8 @@ uid: Web_apps_Feature_Release_10.5.1
 
 # DataMiner web apps Feature Release 10.5.1
 
+This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.4.0 [CU10].
+
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
@@ -193,4 +195,4 @@ When a dashboard gateway was used, up to now, it would not be possible to initia
 `The type initializer for 'Skyline.DataMiner.Web.Common.v1.Dashboards.DashboardsInterface' threw an exception.`
 
 > [!IMPORTANT]
-> From now on, when a dashboard gateway is used, all local KML or KMZ overlay files should be placed in the *C:\\Skyline DataMiner\\Maps* folder of the DataMiner Agent. They should no longer be placed on the dashboard gateway.
+> From now on, when a dashboard gateway is used, all local KML or KMZ overlay files should be placed in the `C:\Skyline DataMiner\Maps` folder of the DataMiner Agent. They should no longer be placed on the dashboard gateway.

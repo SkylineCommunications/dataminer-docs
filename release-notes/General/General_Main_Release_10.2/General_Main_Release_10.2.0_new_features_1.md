@@ -22,7 +22,7 @@ uid: General_Main_Release_10.2.0_new_features_1
 
 #### SLAnalytics - Automatic incident tracking: Enhanced configuration of property-based incident tracking \[ID 28083\]
 
-In the *C:\\Skyline DataMiner\\Analytics\\configuration.xml* file, it is now possible to indicate which of the following properties will be used to group alarms by:
+In the `C:\Skyline DataMiner\Analytics\configuration.xml` file, it is now possible to indicate which of the following properties will be used to group alarms by:
 
 - The parameter the alarm is generated on
 - The service the alarm is generated on
@@ -206,7 +206,7 @@ When a Failover Agent claims or releases a virtual IP address, the following Pow
 > - The VIPAcquired script will also be triggered when the online Agent starts, but the VIPReleased script will not be triggered when the offline Agent starts.
 > - The content of the Failover scripts can be read and modified using the FailoverScriptManagerHelper.
 
-#### Elasticsearch: Multi-cluster offload \[ID 28295\]\[ID 28384\]\[ID 28473\]
+#### Elasticsearch: Multicluster offload \[ID 28295\]\[ID 28384\]\[ID 28473\]
 
 It is now possible to have data offloaded to multiple Elasticsearch clusters, i.e. a main cluster and a number of replicated clusters.
 
@@ -216,7 +216,7 @@ When an error occurs on one of the replicated clusters, a single alarm will be g
 
 ##### Configuration
 
-The configuration of the Elasticsearch clusters can be stored in a new *DBConfiguration.xml* file, located in the *C:\\Skyline DataMiner\\Database* folder. This configuration file takes priority over the existing *DB.xml* file when it comes to Elasticsearch.
+The configuration of the Elasticsearch clusters can be stored in a new *DBConfiguration.xml* file, located in the `C:\Skyline DataMiner\Database` folder. This configuration file takes priority over the existing *DB.xml* file when it comes to Elasticsearch.
 
 At DataMiner startup, when the *DBConfiguration.xml* file exists and an Elasticsearch connection is defined in the *DB.xml* file, the Elasticsearch connection is commented out in the *DB.xml* file and an additional comment is added, indicating that the Elasticsearch configuration is taken from the *DBConfiguration.xml* file instead.
 
@@ -545,7 +545,7 @@ When using an SMSEagle device to send text messages, it is now possible to confi
 
 To do so, proceed as follows:
 
-1. In the *C:\\Skyline DataMiner\\Mobile Gateway\\Config.xml* file, add unicode="true" to the \<SMSEagle> element, and save the file.
+1. In the `C:\Skyline DataMiner\Mobile Gateway\Config.xml` file, add unicode="true" to the \<SMSEagle> element, and save the file.
 2. Restart the SLGSMGateway process.
 
 Default setting: unicode="false"
@@ -559,9 +559,9 @@ On MySQL and Microsoft SQL Server databases, the alarm table now has an extra fi
 > - This change will cause a small increase in latency when retrieving alarms from the database.
 > - From now on, using a filter with an AlarmFilterItemExtraStatus in the GetAlarmDetailsFromDbMessage from within an Automation script will not work correctly in conjunction with a MySQL or Microsoft SQL Server database.
 
-#### SimulationHelper API now allows loading, enabling and disabling element simulations at run-time \[ID 29517\]
+#### SimulationHelper API now allows loading, enabling and disabling element simulations at runtime \[ID 29517\]
 
-Up to now, loading new element simulations always required a DataMiner restart. Now, the SimulationHelper API will allow you to load, enable and disable element simulations at run-time from within protocol QActions or Automation scripts.
+Up to now, loading new element simulations always required a DataMiner restart. Now, the SimulationHelper API will allow you to load, enable and disable element simulations at runtime from within protocol QActions or Automation scripts.
 
 Construction:
 
@@ -606,7 +606,7 @@ A protection has been added to avoid reduced performance of the system when an a
 
 In an EPM environment, it is now possible to override the names of topology cells, chains and search chains specified in a protocol with aliases specified in a separate file.
 
-In the *C:\\Skyline DataMiner\\* folder, create an *EPMConfig.xml* file that contains a \<Topologies> and/or \<Chains> configuration identical to the one in the protocol, and specify the necessary aliases in override attributes. See the following example.
+In the `C:\Skyline DataMiner\` folder, create an *EPMConfig.xml* file that contains a \<Topologies> and/or \<Chains> configuration identical to the one in the protocol, and specify the necessary aliases in override attributes. See the following example.
 
 ```xml
 <Protocol>

@@ -10,23 +10,25 @@ items:
       - name: DataMiner web apps release notes
         topicUid: DataMiner_Web_apps_RNs_index
         href: Web_apps/toc.yml
+      - name: DxM release notes
+        topicUid: DxM_RNs_index
+        href: DxMs/toc.yml
       - name: dataminer.services release notes
         items:
           - name: dataminer.services change log
             items:
             - name: 2025
-              topicUid: DCP_change_log_2025
-            - name: 2024
-              topicUid: DCP_change_log
+              topicUid: dataminer_services_change_log_2025
+            - name: 2024 (July-December)
+              topicUid: dataminer_services_change_log_2024_07to12
+            - name: 2024 (January-June)
+              topicUid: dataminer_services_change_log_2024_01to06
             - name: 2023
-              topicUid: DCP_change_log_2023
+              topicUid: dataminer_services_change_log_2023
             - name: 2022
-              topicUid: DCP_change_log_2022
+              topicUid: dataminer_services_change_log_2022
           - name: Cloud Pack release notes
             topicUid: Cloud_Pack_change_log
-      - name: DxM release notes
-        topicUid: DxM_RNs_index
-        href: DxMs/toc.yml
       - name: Other release notes
         items:
           - name: Code library release notes
@@ -41,12 +43,19 @@ items:
             href: IDP/toc.yml
           - name: MbgNMS release notes
             href: MbgNMS/toc.yml
+          - name: MediaOps release notes
+            topicUid: MediaOps_RNs_index
+            href: MediaOps/toc.yml
           - name: PA release notes
             topicUid: PA_1.3.1
             href: PA/toc.yml
           - name: PTP release notes
             href: PTP/toc.yml
+          - name: RAD Manager
+            href: RAD_Manager/toc.yml
           - name: SRM release notes
             href: SRM/toc.yml
       - name: Breaking changes
         topicUid: Breaking_changes
+      - name: Release overview
+        topicUid: Release_overview

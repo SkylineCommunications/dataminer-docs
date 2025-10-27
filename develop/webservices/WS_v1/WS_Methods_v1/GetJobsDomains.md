@@ -6,7 +6,7 @@ uid: GetJobsDomains
 
 Use this method to retrieve all available job domains.
 
-Available from DataMiner 10.0.9 onwards.
+<!-- Available from DataMiner 10.0.9 onwards. -->
 
 ## Input
 

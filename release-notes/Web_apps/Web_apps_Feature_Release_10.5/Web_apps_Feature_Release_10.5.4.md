@@ -2,10 +2,12 @@
 uid: Web_apps_Feature_Release_10.5.4
 ---
 
-# DataMiner web apps Feature Release 10.5.4 – Preview
+# DataMiner web apps Feature Release 10.5.4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.4.0 [CU13] and 10.5.0 [CU1].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,7 +16,10 @@ uid: Web_apps_Feature_Release_10.5.4
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Low-Code Apps: Enhanced URL data support [ID 42031]](#low-code-apps-enhanced-url-data-support-id-42031)
+- [Dashboards/Low-Code Apps - Query builder: Dragging and dropping operators [ID 42127]](#dashboardslow-code-apps---query-builder-dragging-and-dropping-operators-id-42127)
+- [Dashboards app: Default Skyline dashboard themes updated [ID 42179]](#dashboards-app-default-skyline-dashboard-themes-updated-id-42179)
+- [Dashboards/Low-Code Apps: Maps component is now fully released [ID 42309]](#dashboardslow-code-apps-maps-component-is-now-fully-released-id-42309)
 
 ## New features
 
@@ -28,6 +33,16 @@ When a default time zone is defined for DataMiner web apps, that default time zo
 
 For more information, see [Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
 
+#### Dashboards/Low-Code Apps - Query builder: Dragging and dropping operators [ID 42127]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you want to rearrange the operators in a query, you can now do so by dragging and dropping operators from one location in the query to another, making this much easier than before. This will only be possible within the same level, not from e.g. a joined query to the parent query or vice versa.
+
+If an operator shows a red error state after you have dragged it to a new location, this means that the operator in question cannot be used at that location and that the query has become invalid as a result.
+
+In addition, you can now also insert new operators in between existing ones by clicking a "+" button.
+
 #### Dashboards/Low-Code Apps: Maps component is now fully released [ID 42309]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
@@ -40,7 +55,7 @@ For all information about this component, see [Maps](xref:DashboardMaps).
 
 > [!NOTE]
 >
-> - To use the Maps component, the host servers for DataMiner Maps have to be configured in the file *C:\Skyline DataMiner\Maps\ServerConfig.xml*. If this file does not exist, it will be created automatically when you use a Maps component for the first time. To change the configuration, see [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
+> - To use the Maps component, the host servers for DataMiner Maps have to be configured in the file `C:\Skyline DataMiner\Maps\ServerConfig.xml`. If this file does not exist, it will be created automatically when you use a Maps component for the first time. To change the configuration, see [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
 > - This component currently only supports **Google Maps** ("gmaps") as the [Maps provider](xref:Configuring_the_DataMiner_Maps_host_servers).
 
 ## Changes
@@ -91,7 +106,7 @@ When you add the following argument to the URL of a low-code app, all UI compone
 
 Up to now, low-code apps would only support using URL data to pass default values to components. For example, to select a particular default value in a dropdown box. From now on, low-code apps will also be able to consume data passed via their URL using either the JSON syntax or the legacy syntax. For example, you will now be able to use an element specified in the URL to filter a GQI query.
 
-For more information regarding the above-mentioned JSON syntax and legacy syntax, see [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL).
+For more information regarding the above-mentioned JSON syntax and legacy syntax, see [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_URL).
 
 > [!NOTE]
 > Contrary to dashboards, low-code apps will not push data to the URL. In other words, the URL will not change when data is selected in a component.
@@ -125,16 +140,6 @@ Existing components will not be affected.
 
 In a *Select* operator of a GQI query, you can now reorder the columns by dragging and dropping them.
 
-#### Dashboards/Low-Code Apps - Query builder: Dragging and dropping operators [ID 42127]
-
-<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
-
-When building a query, it is now possible to drag and drop operators from one location to another. However, this will only be allowed within the same level, not from e.g. a joined query to the parent query or vice versa.
-
-If an operator shows a red error state after you have dragged it to a new location, this means that the operator in question cannot be used at that location and that the query has become invalid as a result.
-
-Also, it is now possible to insert new operators in between existing ones by clicking a "+" button.
-
 #### Dashboards/Low-Code Apps - Grid component: Using browser menu commands [ID 42128]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
@@ -151,9 +156,9 @@ In the *Time range* component, up to now, the color of the *Apply* button would,
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-Items selected in *Node edge graph*, *Grid*, *Maps*, *Timeline* or *Table* components will now be passed to another components in the order in which they have been selected.
+Items selected in *Node edge graph*, *Grid*, *Maps*, *Timeline*, or *Table* components will now be passed to other components in the order in which they have been selected.
 
-#### Dashboards app: Default Skyline dashboard themes have been updated [ID 42179]
+#### Dashboards app: Default Skyline dashboard themes updated [ID 42179]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
@@ -174,7 +179,7 @@ Up to now, each time the *GetRegionalSettings* method was called, it would retri
 > [!NOTE]
 > As a result of this change, any changes made to the time zone and/or list separator in *ClientSettings.json* will no longer be applied when you refresh the web app. From now on, changes made to the time zone and/or list separator will require an IIS reset.
 
-#### Low-Code Apps: Names of apps, pages and panels are now limited to 150 characters [ID 42220]
+#### Low-Code Apps: Names of apps, pages, and panels now limited to 150 characters [ID 42220]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
@@ -217,6 +222,12 @@ These updated colors will automatically be applied to all existing dashboards an
 
 Also, the icon of the *Column & bar chart* component has been redesigned.
 
+#### Dashboards/Low-Code Apps - Dropdown component: Enhanced behavior [ID 42298]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 [CU0] -->
+
+Up to now, a *Dropdown* component would open upwards as soon as it was positioned in the bottom half of the screen, even when there was enough room to open downwards. From now on, a *Dropdown* component will only open upwards if there is not enough room below it to open downwards.
+
 #### Dashboards/Low-Code Apps - Maps, Timeline & Grid components: Templates have been updated [ID 42322]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
@@ -255,11 +266,11 @@ When the data in a *Form* component was saved, an error would be thrown when man
 
 From now on, all boolean fields will have a default value (either true or false).
 
-#### Dashboards/Low-Code Apps: Letter descenders would incorrectly be cut off in Components data set [ID 42118]
+#### Dashboards/Low-Code Apps: Letter descenders would incorrectly be cut off in Components dataset [ID 42118]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When, while configuring a component, you opened the *Components* data set on the *Data* pane, all portions of letters that extended below the font's baseline (i.e. the descenders of letters like e.g. g, j, q, p, and y) would incorrectly be cut off.
+When, while configuring a component, you opened the *Components* dataset on the *Data* pane, all portions of letters that extended below the font's baseline (i.e. the descenders of letters like e.g. g, j, q, p, and y) would incorrectly be cut off.
 
 #### Dashboards/Low-Code Apps - Parameter table component: Clicking the info icon of the 'Parameter table filters' section would not open the correct help page [ID 42123]
 
@@ -388,4 +399,16 @@ When you had selected a time range in a *Timeline* component, in some cases, tha
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When you entered the edit mode of a low-code app, in some cases, a run-time error could occur when the app contained a component to which no visualization had been assigned.
+When you entered the edit mode of a low-code app, in some cases, a runtime error could occur when the app contained a component to which no visualization had been assigned.
+
+#### Dashboards/Low-Code Apps - Query filter component: Problem when changing a query that contained boolean columns [ID 42442]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 [CU0] -->
+
+In some cases, a *Query filter* component could throw an error whenever you made a change to a query that contained boolean columns.
+
+#### Low-Code Apps: Loops in component data could cause an app to become unresponsive [ID 42531]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 [CU0] -->
+
+In some cases, a low-code app could become unresponsive due to loops in component data.

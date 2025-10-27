@@ -6,6 +6,7 @@ using Skyline.DataMiner.Net.Exceptions;
 using Skyline.DataMiner.Net.Profiles;
 using System.Collections.Generic;
 using Skyline.DataMiner.Net.Messages.SLDataGateway;
+using Skyline.DataMiner.Net.Automation;
 
 namespace Skyline.DataMiner.Automation
 {
@@ -88,6 +89,20 @@ namespace Skyline.DataMiner.Automation
 		public SLProfileManager ProfileManager { get; }
 
 		/// <summary>
+		/// Gets the name of the triggered script.
+		/// </summary>
+		/// <value>The name of the triggered script.</value>
+		/// <remarks>
+		/// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43840).</para>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// engine.Log(engine.ScriptName);
+		/// </code>
+		/// </example>
+		public string ScriptName { get; }
+
+		/// <summary>
 		/// Gets the Ticketing Gateway.
 		/// </summary>
 		/// <value>The Ticketing Gateway.</value>
@@ -162,6 +177,21 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		public string UserLoginName { get; }
+
+		/// <summary>
+		/// Gets or sets the web interactive Automation script UI version.
+		/// </summary>
+		/// <value>The version of the web interactive Automation script UI.</value>
+		/// <remarks>
+		/// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43875).</para>
+		/// <para>The WebUIVersion is set to 'Default' by default. At present, this means that the old UI (V1) is used. You can instead set this to 'V2' to show the new UI or to 'V1' to make sure the old UI will continue to be used even if the default behavior changes.</para>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// engine.WebUIVersion= WebUIVersion.V2;
+		/// </code>
+		/// </example>
+		public WebUIVersion WebUIVersion { get; set; }
 
 		/// <summary>
 		/// Acknowledges the specified alarm tree using the provided comment message.
@@ -1085,7 +1115,13 @@ namespace Skyline.DataMiner.Automation
 		/// engine.Log("My log message");
 		/// </code>
 		/// </example>
-		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
+		/// <remarks>
+		/// <list type="bullet">
+		/// <item><description>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</description></item>
+		/// <item><description>From DataMiner 10.5.6/10.6.0 onwards (RN 42572), logging will also be added in a dedicated log file with the name of the Automation script. For additional information, see <see href="xref:Log">Log</see>.</description></item>
+		/// <item><description>To configure a custom log level for a specific script in its dedicated log file, send an UpdateLogfileSettingMessage in which Name is set to "Automation\ScriptName". If no custom log configuration exists for a particular Automation script, the default configuration will be used.</description></item>
+		/// </list>
+		/// </remarks>
 		public void Log(string message) { }
 
 		/// <summary>
@@ -1100,7 +1136,13 @@ namespace Skyline.DataMiner.Automation
 		/// engine.Log("My log message", LogType.Always, 5);
 		/// </code>
 		/// </example>
-		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
+		/// <remarks>
+		/// <list type="bullet">
+		/// <item><description>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</description></item>
+		/// <item><description>From DataMiner 10.5.6/10.6.0 onwards (RN 42572), logging will also be added in a dedicated log file with the name of the Automation script. For additional information, see <see href="xref:Log">Log</see>.</description></item>
+		/// <item><description>To configure a custom log level for a specific script in its dedicated log file, send an UpdateLogfileSettingMessage in which Name is set to "Automation\ScriptName". If no custom log configuration exists for a particular Automation script, the default configuration will be used.</description></item>
+		/// </list>
+		/// </remarks>
 		public void Log(string message, LogType type, int logLevel) { }
 
 		/// <summary>
@@ -1116,7 +1158,13 @@ namespace Skyline.DataMiner.Automation
 		/// engine.Log("My log message", LogType.Always, 5, "Initialize");
 		/// </code>
 		/// </example>
-		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
+		/// <remarks>
+		/// <list type="bullet">
+		/// <item><description>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</description></item>
+		/// <item><description>From DataMiner 10.5.6/10.6.0 onwards (RN 42572), logging will also be added in a dedicated log file with the name of the Automation script. For additional information, see <see href="xref:Log">Log</see>.</description></item>
+		/// <item><description>To configure a custom log level for a specific script in its dedicated log file, send an UpdateLogfileSettingMessage in which Name is set to "Automation\ScriptName". If no custom log configuration exists for a particular Automation script, the default configuration will be used.</description></item>
+		/// </list>
+		/// </remarks>
 		public void Log(string message, LogType type, int logLevel, string method) { }
 
 		/// <summary>
@@ -1152,6 +1200,9 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		public SubScriptOptions PrepareSubScript(string scriptName) { return null; }
+
+		/// <inheritdoc cref="IEngine.PrepareSubScript(string, RequestScriptInfoInput)"/>
+		public RequestScriptInfoSubScriptOptions PrepareSubScript(string scriptName, RequestScriptInfoInput input) { return null; }
 
 		/// <summary>
 		/// Launches an application on the client in an interactive script.
@@ -1641,9 +1692,9 @@ namespace Skyline.DataMiner.Automation
 		public void Sleep(int timeInMilliseconds) { }
 
 		/// <summary>
-		/// Clears the specified run-time flag.
+		/// Clears the specified runtime flag.
 		/// </summary>
-		/// <param name="flag">The run-time flag to clear.</param>
+		/// <param name="flag">The runtime flag to clear.</param>
 		/// <remarks>Feature introduced in DataMiner 10.0.2 (RN 23961).</remarks>
 		/// <example>
 		/// <code>

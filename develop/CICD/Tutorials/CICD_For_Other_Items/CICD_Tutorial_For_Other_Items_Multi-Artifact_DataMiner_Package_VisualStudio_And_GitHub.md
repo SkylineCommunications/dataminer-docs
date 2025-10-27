@@ -1,10 +1,11 @@
 ---
 uid: CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub
+keywords: Skyline.DataMiner.Sdk, Tutorial
 ---
 
 # Registering a new version of a multi-artifact DataMiner package to the Catalog using Visual Studio and GitHub
 
-In this tutorial, you will learn how to develop, (pre-)release, and upload a DataMiner package to the DataMiner Catalog with a basic CI/CD pipeline using Visual Studio and GitHub. This package will contain multiple artifacts:
+In this tutorial, you will learn how to develop, (pre-)release, and upload a DataMiner package to the Catalog with a basic CI/CD pipeline using Visual Studio and GitHub. This package will contain multiple artifacts:
 
 - Automation script: TutorialScript1
 - Automation script: TutorialScript2
@@ -20,7 +21,7 @@ Expected duration: 15 minutes
 - A [GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
 - [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/)
 - [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
-- An [organization key](xref:Managing_DCP_keys#organization-keys) or [system key](xref:Managing_DCP_keys#system-keys) or account with the *Owner* role in order to access/create keys.
+- An [organization key](xref:Managing_dataminer_services_keys#organization-keys) or [system key](xref:Managing_dataminer_services_keys#system-keys) or account with the *Owner* role in order to access/create keys.
 
 ## Overview
 
@@ -170,7 +171,7 @@ In this step, you will focus on the extra code that should be executed when the 
    ``` text
    Error: DATAMINER_TOKEN is not set. Release not possible!
    Please create or re-use an admin.dataminer.services token by visiting: https://admin.dataminer.services/.
-   Navigate to the right Organization then go to Keys and create/find a key with permissions to Register Catalog Items.
+   Navigate to the right organization, then go to Keys and create or find a key with the permissions Register catalog items, Download catalog versions, and Read catalog items.
    Copy the value of the token.
    Then set a DATAMINER_TOKEN secret in your repository settings: <Dynamic Link>
    ```
@@ -183,6 +184,7 @@ In this step, you will focus on the extra code that should be executed when the 
 
    - *Register catalog items*
    - *Read catalog items*
+   - *Download catalog versions*
 
    > [!TIP]
    > See also: [dataminer.services keys](xref:GitHub_Secrets#dataminerservices-keys)
@@ -195,7 +197,7 @@ With this setup, any push with new content (including the initial creation) to t
 
 ## Step 6: Check the results
 
-1. Go to the [DataMiner Catalog](https://catalog.dataminer.services/)
+1. Go to the [Catalog](https://catalog.dataminer.services/)
 
 1. Check in the top-right corner if the correct organization is selected.
 

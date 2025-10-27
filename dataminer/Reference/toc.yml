@@ -1,0 +1,204 @@
+items:
+  - name: DataMiner Compute Requirements
+    topicUid: DataMiner_Compute_Requirements
+  - name: DataMiner Client Requirements
+    topicUid: DataMiner_Client_Requirements
+  - name: Skyline DataMiner folder
+    items:
+      - name: Overview of the files found in the root folder
+        topicUid: Overview_of_the_files_found_in_the_root_folder
+      - name: Overview of the different subfolders
+        topicUid: Overview_of_the_different_subfolders
+      - name: More information on certain files and folders
+        items:
+          - name: Aggregation
+            topicUid: Aggregation
+          - name: ClientSettings.json
+            topicUid: ClientSettings_json
+          - name: ConnectionSettings.txt
+            topicUid: ConnectionSettings_txt
+          - name: Database
+            topicUid: Database
+          - name: DataMiner.xml
+            topicUid: DataMiner_xml
+          - name: DB.xml
+            topicUid: DB_xml
+          - name: DBConfiguration.xml
+            topicUid: DBConfiguration_xml
+          - name: DBMaintenanceDMS.xml
+            topicUid: DBMaintenanceDMS_xml
+          - name: DMS.xml
+            topicUid: DMS_xml
+          - name: Elements
+            topicUid: Elements1
+          - name: EPMConfig.xml
+            topicUid: EPMConfig_xml
+          - name: Hyperlinks.xml
+            topicUid: Hyperlinks_xml
+          - name: Icons
+            topicUid: Icons
+          - name: Information.xml
+            topicUid: Information_xml
+          - name: LogSettings.xml
+            topicUid: LogSettings_xml
+          - name: MaintenanceSettings.xml
+            topicUid: MaintenanceSettings_xml
+          - name: Polling.xml
+            topicUid: Polling_xml
+          - name: PortLog.txt
+            topicUid: PortLog_txt
+          - name: PropertyConfiguration.xml
+            topicUid: PropertyConfiguration_xml
+          - name: Recycle bin
+            topicUid: Recycle_bin
+          - name: SLCloud.xml
+            topicUid: SLCloud_xml
+          - name: SLNet.exe.config
+            topicUid: SLNet_exe_config
+          - name: SNMP Managers.xml
+            topicUid: SNMP_Managers_xml
+          - name: System Cache
+            topicUid: System_Cache
+          - name: SyncRules.xml
+            topicUid: SyncRules_xml
+          - name: Views.xml
+            topicUid: Views_xml
+  - name: Methods of Procedure
+    items:
+      - name: Changing the default password for Cassandra
+        topicUid: MOP_Changing_the_default_password_for_Cassandra
+      - name: Changing the password for Elasticsearch
+        topicUid: MOP_Changing_the_password_for_Elasticsearch
+      - name: Checking the required open ports in a DMS
+        topicUid: MOP_Checking_the_required_open_ports_in_a_DMS
+      - name: DataMiner Agent sanity check
+        topicUid: MOP_DataMiner_Agent_sanity_check
+      - name: Downgrading a DMS
+        topicUid: MOP_Downgrading_a_DMS
+      - name: Implementing connection strings in a DataMiner System
+        topicUid: MOP_Implementing_connection_strings_in_a_DMS
+      - name: Migrating a Failover pair to new hardware
+        topicUid: MOP_Migrating_a_Failover_pair_to_new_hardware
+      - name: Replacing a dead Cassandra node (Linux)
+        topicUid: MOP_Replacing_a_dead_Cassandra_node_Linux
+      - name: Restoring a MySQL table structure or table data
+        topicUid: MOP_Restoring_a_MySQL_table_structure_or_table_data
+      - name: Restoring a single table in a MySQL database
+        topicUid: MOP_Restoring_a_single_table_in_a_MySQL_database
+      - name: Taking a backup using a symbolic link to another drive
+        topicUid: MOP_Taking_a_backup_using_a_symbolic_link_to_another_drive
+      - name: Taking a snapshot of one Elasticsearch cluster and restoring it to another
+        topicUid: MOP_Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
+      - name: Tracking the health of a DataMiner System
+        topicUid: MOP_Tracking_the_health_of_a_DMS
+      - name: Upgrading a DMA/DMS
+        topicUid: MOP_Upgrading_a_DMA_DMS
+      - name: Upgrading Elasticsearch from one minor version to another
+        topicUid: MOP_Upgrading_Elasticsearch_from_one_minor_version_to_another
+      - name: Verifying Elasticsearch synchronization
+        topicUid: MOP_Verifying_Elasticsearch_Synchronization
+  - name: Naming of elements, services, views, etc.
+    topicUid: NamingConventions
+    items:
+      - name: Forbidden characters
+        topicUid: Forbidden_characters
+      - name: Examples of element names
+        topicUid: Examples_of_element_names
+  - name: Software support lifecycles
+    topicUid: Software_support_life_cycles
+  - name: Feature overview
+    topicUid: Feature_overview
+  - name: Soft-launch options
+    topicUid: SoftLaunchOptions
+    items:
+      - name: Activating soft-launch options
+        topicUid: Activating_Soft_Launch_Options
+      - name: Overview of soft-launch options
+        topicUid: Overview_of_Soft_Launch_Options
+      - name: Activating SLProtocol as a 64-bit process
+        topicUid: Activating_SLProtocol_as_a_64_Bit_Process
+      - name: Activating SLProtocol as a 32-bit process
+        topicUid: Activating_SLProtocol_as_a_32_Bit_Process
+  - name: DataMiner Extension Modules (DxMs)
+    topicUid: DataMinerExtensionModules
+  - name: Custom branding
+    topicUid: Custom_branding
+  - name: DataMiner metrics
+    topicUid: dataminer_metrics
+    items:
+      - name: Alarm benchmarks
+        topicUid: alarm_benchmarks
+      - name: Alarm benchmarks (Cassandra Cluster)
+        topicUid: alarm_benchmarks_cassandra_cluster
+      - name: Alarm focus benchmarks
+        topicUid: alarm_focus_benchmarks
+      - name: Automatic incident tracking benchmarks
+        topicUid: automatic_incident_tracking_benchmarks
+      - name: Automation benchmarks
+        topicUid: automation_benchmarks
+      - name: Behavioral anomaly detection benchmarks
+        topicUid: behavioral_anomaly_detection_benchmarks
+      - name: Cassandra (cluster) write performance benchmarks
+        topicUid: cassandra_cluster_write_performance_benchmarks
+      - name: Change history metrics
+        topicUid: change_history_benchmarks
+      - name: Dashboards benchmarks
+        topicUid: dashboards_benchmarks
+      - name: DataMiner Object Model benchmarks
+        topicUid: dataminer_object_model_benchmarks
+      - name: dataminer.services benchmarks
+        topicUid: cloud_benchmarks
+      - name: Direct view benchmarks
+        topicUid: direct_view_benchmarks
+      - name: Dynamic virtual element benchmarks
+        topicUid: dynamic_virtual_element_benchmarks
+      - name: Element benchmarks
+        topicUid: element_benchmarks
+      - name: Failover benchmarks
+        topicUid: failover_benchmarks
+      - name: GQI benchmarks
+        topicUid: gqi_benchmarks
+      - name: History set benchmarks
+        topicUid: history_set_benchmarks
+      - name: Migration benchmarks
+        topicUid: migration_benchmarks
+      - name: Mobile gateway benchmarks
+        topicUid: mobile_gateway_benchmarks
+      - name: Parameter set benchmarks
+        topicUid: parameter_set_benchmarks
+      - name: Pattern matching benchmarks
+        topicUid: pattern_matching_benchmarks
+      - name: Profile manager benchmarks
+        topicUid: profile_manager_benchmarks
+      - name: Resources benchmarks
+        topicUid: resources_benchmarks
+      - name: Service benchmarks
+        topicUid: service_benchmarks
+      - name: Service profile benchmarks
+        topicUid: service_profile_benchmarks
+      - name: Service & Resource Management benchmarks
+        topicUid: service_resource_management_benchmarks
+      - name: Swarming bookings benchmarks
+        topicUid: swarming_bookings_benchmarks
+      - name: Swarming elements benchmarks
+        topicUid: swarming_elements_benchmarks
+      - name: Trending benchmarks
+        topicUid: trend_benchmarks
+      - name: User-Defined APIs benchmarks
+        topicUid: user-defined_API_benchmarks
+      - name: View benchmarks
+        topicUid: view_benchmarks
+      - name: Visual Overview benchmarks
+        topicUid: visual_overview_benchmarks
+  - name: Technical information
+    items:
+      - name: Connecting devices using RS-232/RS-422/RS-485
+        topicUid: Connecting_devices_using_RS_232_RS_422_RS_485
+      - name: NatsCustodian
+        topicUid: NatsCustodian
+  - name: Glossary
+    items:
+      - name: A to L
+        topicUid: glossary_a_to_l
+      - name: M to Z
+        topicUid: glossary_m_to_z

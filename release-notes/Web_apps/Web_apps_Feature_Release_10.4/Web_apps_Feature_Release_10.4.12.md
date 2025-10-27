@@ -63,7 +63,7 @@ A variable has the following properties:
   > [!NOTE]
   > In a low-code app, specifying a default value for a variable is optional, except when the variable is marked *Read-only* (see below).
 
-- Read-only. When selected, the variable cannot be modified at run-time.
+- Read-only. When selected, the variable cannot be modified at runtime.
 
   > [!NOTE]
   >
@@ -272,7 +272,7 @@ When, on a system that was not using automatic Windows authentication, you were 
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-Since DataMiner feature version 10.4.9, a *Generic map* component would no longer be able to render maps of which the `AppVersion` property was set to 1 in the *C:\\Skyline DataMiner\\Maps\\ServerConfig.xml* file.
+Since DataMiner feature version 10.4.9, a *Generic map* component would no longer be able to render maps of which the `AppVersion` property was set to 1 in the `C:\Skyline DataMiner\Maps\ServerConfig.xml` file.
 
 Example:
 

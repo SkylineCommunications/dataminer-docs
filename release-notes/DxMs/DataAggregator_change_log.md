@@ -4,6 +4,63 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
+#### 7 July 2025 - Enhancement - DataAggregator 3.2.0 - BrokerGateway support [ID 43238]
+
+The DataAggregator DxM now supports [BrokerGateway](xref:BrokerGateway_Migration). In case your Data Aggregator setup connects to multiple DataMiner Systems and BrokerGateway is enabled, you will need to configure the *BrokerOptions.Clusters* setting in *appsettings.custom.json* with the following fields:
+
+- **ID**: A unique ID.
+- **CredsUrl**: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
+- **APIKeyPath**: The file path to the *appsettings.runtime.json* file containing the private key. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+
+For example:
+
+```json
+   "BrokerOptions": {
+    "Clusters": [
+      {
+        "ID": "localhost"
+      },
+      {
+        "ID": "My Other DMS - Without BrokerGateway",
+        "URIs": [ "nats://slc-dms2-dma01:4222", "nats://slc-dms2-dma02:4222", "nats://slc-dms2-dma03:4222" ],
+        "CredsFile": "C:\\data aggregator\\creds\\SLC-DMS2-DMA01.creds" // Note: creds file can change when DMS config changes
+      },
+      {
+        "ID": "Another DMS - With BrokerGateway",
+        "CredsUrl": "https://10.11.12.13/BrokerGateway/api/natsconnection/getnatsconnectiondetails",
+        "APIKeyPath": "C:\\data aggregator\\apikeys\\appsettings.runtime.json" // Works only on DMAs using BrokerGateway, keeps working even if DMS config changes
+      }
+    ]
+  },
+```
+
+#### 2 June 2025 - Enhancement - DataAggregator 3.1.1 - Error logging in case helper.json could not be read [ID 43094]
+
+When manual changes cause the JSON configuration within the helper.json to be invalid, up to now the configuration was ignored without giving any reason. Now an error will be logged in the log file that will indicate what went wrong. JSON deserialization errors will contain the line number.
+
+#### 20 May 2025 - Enhancement - DataAggregator 3.1.0 - Use of GQI DxM [ID 39216] [ID 42831]
+
+The DataAggregator DxM is now capable of communicating directly with the GQI DxM. This will improve performance, as data will no longer have to flow through CoreGateway, SLNet, and SLHelper. To make use of the GQI DxM, the following manual configuration is required:
+
+1. Update the DataAggregator DxM to version 3.1.0.
+
+1. In the *appsettings.custom.json* file, add the following setting:
+
+   ```json
+   {
+     "QueryExecutorOptions": {
+       "UseGQIDxM": true
+     }
+   }
+   ```
+
+1. Restart the *DataAggregator* service.
+
+1. In case your setup already contains queries, run the *MigratorToGQIDxM* tool to migrate these to the format supported by the GQI DxM.
+
+> [!NOTE]
+> At present, the *MigratorToGQIDxM* tool is only available on demand by sending a request to <support@dataminer.services>.
+
 #### 6 September 2024 - Fix - DataAggregator 3.0.7 - Old CSV exports not removed [ID 40623]
 
 If Data Aggregator was configured to export data to CSV for multiple jobs, storing the CSV export files in separate folders according to the configured paths, it could occur that the old CSV files did not get removed after the number of days configured with the *DeleteAfterXDays* setting, which could eventually cause the system to run out of disk space. This has now been fixed: the old CSV files of every job will be deleted as configured.
@@ -40,7 +97,7 @@ Beautiful Soup is a commonly used library that makes it easy to scrape informati
 
 #### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Improve DataAggregator Migrator [ID 38682]
 
-Improvements have been made to the [migrator tool](xref:Data_Aggregator_Migrator) to better allow converting GQI queries from the [previous syntax to the new one](xref:Data_Aggregator_settings#gqi-queries).
+Improvements have been made to the [migrator tool](xref:Data_Aggregator_Migrators#upgrading-from-version-2xx) to better allow converting GQI queries from the [previous syntax to the new one](xref:Data_Aggregator_settings#gqi-queries).
 
 This includes:
 
@@ -93,13 +150,13 @@ A new Data Aggregator module is now available as a DxM (DataMiner Extension Modu
 
 ##### Installation and setup
 
-1. Make sure [DataMiner Cloud Pack](xref:CloudPackages) 2.8.4 or higher is installed on the server where you want to install Data Aggregator.
+1. Make sure [DataMiner Cloud Pack](xref:DataMiner_Cloud_Pack) 2.8.4 or higher is installed on the server where you want to install Data Aggregator.
 
 1. Make sure DataMiner 10.2.12 or higher is installed on the DataMiner Agents you want to use Data Aggregator with.
 
 1. Make sure CoreGateway 2.12.0 or higher (included in Cloud Pack 2.8.4) is installed on the DataMiner Agents you want to use Data Aggregator with.
 
-1. In the [Admin app](xref:CloudAdminApp), install the *DataMiner DataAggregator* DxM on the relevant node. See [Managing the nodes of a cloud-connected DMS](xref:Managing_cloud-connected_nodes).
+1. In the [Admin app](xref:About_the_Admin_app), install the *DataMiner DataAggregator* DxM on the relevant node. See [Managing the nodes of a cloud-connected DMS](xref:Managing_cloud-connected_nodes).
 
 1. On the server where you installed Data Aggregator, open the folder `C:\Program Files\Skyline Communications\DataMiner DataAggregator`.
 

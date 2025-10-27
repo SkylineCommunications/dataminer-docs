@@ -16,9 +16,9 @@ To do so, you need to [create a dataminer.services key](#creating-a-dataminerser
 
 ## Creating a dataminer.services key
 
-A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
+A dataminer.services key is scoped to the specific organization for which it was created and can only be used for uploads and deployments to that organization.
 
-For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
+For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_dataminer_services_keys#organization-keys).
 
 ## Adding the key as a secret in the repository
 

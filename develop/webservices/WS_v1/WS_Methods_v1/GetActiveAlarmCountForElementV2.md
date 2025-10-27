@@ -6,7 +6,7 @@ uid: GetActiveAlarmCountForElementV2
 
 Use this method to retrieve the number of active alarms on an element along with the alarm cache status.
 
-Available from DataMiner 10.0.7 onwards.
+<!-- Available from DataMiner 10.0.7 onwards. -->
 
 ## Input
 

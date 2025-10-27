@@ -22,7 +22,7 @@ The overview below illustrates four basic migration scenarios.
 
 ## Transition into full DataMiner System & Skyline customer
 
-- True multi-vendor and fully customizable DataMiner System, sold by Skyline Communications
+- True multivendor and fully customizable DataMiner System, sold by Skyline Communications
 
 - Supports the Meinberg Element Manager app, Meinberg products, and any product from any vendor
 

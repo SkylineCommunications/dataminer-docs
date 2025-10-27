@@ -4,6 +4,8 @@ uid: Web_apps_Feature_Release_10.5.2
 
 # DataMiner web apps Feature Release 10.5.2
 
+This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.4.0 [CU11].
+
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
@@ -31,14 +33,14 @@ Up to now, all GQI-related operations were executed by the SLHelper process, whi
 - System load by GQI operations can now be balanced among the different DataMiner Agents in a DMS.
 
 > [!IMPORTANT]
-> This feature is available in preview and should only be used on staging setups for now. By default, the DataMiner web apps will continue to use the SLHelper process to execute GQI-related operations. If you want to test the new GQI DxM, update the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file accordingly.
+> This feature is available in preview and should only be used on staging setups for now. By default, the DataMiner web apps will continue to use the SLHelper process to execute GQI-related operations. If you want to test the new GQI DxM, update the `C:\Skyline DataMiner\Webpages\API\Web.config` file accordingly.
 
 > [!TIP]
 > For more information, see [GQI DxM](xref:GQI_DxM).
 
 ##### Specifying when idle child processes should be terminated
 
-When the GQI DxM is used, in the *C:\\Program Files\\Skyline Communications\\DataMiner GQI\\appsettings.custom.json* file, you can specify when idle child processes should be terminated.
+When the GQI DxM is used, in the `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.custom.json` file, you can specify when idle child processes should be terminated.
 
 See the following example. Idle child processes will be terminated within the configured *WorkerExpiration* (in this case 1 day) + 30 seconds.
 

@@ -163,11 +163,11 @@ When data was updated in a table, in some cases, client applications would incor
 
 When users logged in again after having logged out, in some cases, popup messages would no longer appear.
 
-#### SLWatchDog2.txt: Total number of processes of which at least one thread has a run-time error was incorrectly replaced by total number of threads with a run-time error \[ID 28360\]
+#### SLWatchDog2.txt: Total number of processes of which at least one thread has a runtime error was incorrectly replaced by total number of threads with a runtime error \[ID 28360\]
 
-Each time a run-time error occurs, an entry is added to the SLWatchDog2.txt log file, showing the total number of processes of which at least one thread has a run-time error.
+Each time a runtime error occurs, an entry is added to the SLWatchDog2.txt log file, showing the total number of processes of which at least one thread has a runtime error.
 
-However, in some cases, that log entry would incorrectly show the total number of threads with a run-time error instead.
+However, in some cases, that log entry would incorrectly show the total number of threads with a runtime error instead.
 
 #### HTML5 apps: Problem when entering numeric values \[ID 28374\]
 

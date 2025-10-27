@@ -7,7 +7,7 @@ uid: AdvancedInterElementCommunicationElementConnections
 In case a parameter should receive or send its value from or to another parameter of another element, element connections can be used. Using the "Element Connections" app, links between elements can be defined.
 
 > [!NOTE]
-> For more information on the Element Connections app, refer to [Virtual elements used for element connections](xref:Virtual_elements#virtual-elements-used-for-element-connections). Note that the User Guide also contains a section on element connections of the DataMiner Connectivity Framework, which is not related to the functionality mentioned here.
+> For more information on the Element Connections app, refer to [Virtual elements used for element connections](xref:Virtual_elements#virtual-elements-used-for-element-connections). Note that this is not related to the [DCF element connections](xref:Viewing_element_connections) functionality, which is a completely different feature.
 
 A parameter in a protocol can be defined as either a source or destination of an element connection. This is done via the attribute virtual of the Type tag.
 

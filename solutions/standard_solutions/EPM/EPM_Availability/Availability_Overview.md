@@ -10,4 +10,4 @@ Using DataMiner’s topology application, you can view aggregated KPIs for all d
 
 You can integrate your inventory system with the solution to keep the Availability topology up to date with all endpoints, no matter how many, ensuring your ability to monitor critical elements and promptly detect outages.
 
-![EPM Availability Solution](~/user-guide/images/EPM_Availability_Overview.gif)
+![EPM Availability Solution](~/dataminer/images/EPM_Availability_Overview.gif)

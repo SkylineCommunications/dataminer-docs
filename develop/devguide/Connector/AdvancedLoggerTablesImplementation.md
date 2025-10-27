@@ -78,7 +78,7 @@ To implement a logger table, perform the following steps:
 
     In the example above, this will result in a column with name "sip" of type VARCHAR(20) (in case of a MySQL database). The name of the parameter is used as the name of the corresponding column in the database (Note that it is therefore not allowed to change this name in an existing protocol).
 
-    In case the logger table persists in Cassandra, the specified datatype will automatically be mapped to the corresponding Cassandra datatype.
+    In case the logger table persists in Cassandra, the specified data type will automatically be mapped to the corresponding Cassandra datatype.
 
     Note the following restrictions:
 
@@ -176,6 +176,8 @@ To implement a logger table, perform the following steps:
 
       However, in order to preserve compatibility with an RDBMS (SQL) database, we still recommend defining a column of type DATETIME that specifies the partitions to keep.
 
+    - When an element with a logger table is deleted, the logger table will also be deleted if it is stored in the default keyspace. However, if the [customDatabaseName](xref:Protocol.Params.Param.ArrayOptions-options#customdatabasename) or [databaseNameProtocol](xref:Protocol.Params.Param.ArrayOptions-options#databasenameprotocol) option is used, the table will not be deleted.<!-- RN 42029 -->
+
     The logger table defined in the steps above will result in the creation of a table with name elementdata_[DMA ID]_[element ID]_[table parameter ID].
 
     In MySQL, in addition to the table, a stored procedure is generated for performing a so-called "upsert" operation: this routine first performs an UPDATE to update the specified row and then checks the number or updated rows. If this equals zero, this means the row did not yet exist. In that case, an INSERT statement is executed.
@@ -253,7 +255,7 @@ In order to make a protocol compatible with both RDBMS (SQL) and Cassandra, and 
 - Avoid specifying a foreign key option on a parameter, unless this is on the partitioning key, because it would mean that a secondary index is created in Cassandra, which has a negative impact on performance.
 - If the rows in the logger table should only be added and never overwritten, use an auto-increment PK for the parameter table. If you do so, DataMiner does not need to scan the entire table first to check if a row already exists, which allows a higher insertion rate.
 - Do not choose the auto-increment PK in DataMiner as partition key. This would lead to a very high cardinality and would mean that you would have to know beforehand what this value is before being able to query the row.
-- AddRow calls are blocking calls, meaning there is no advantage to add rows multi-threaded. It will even have the downside that threads will start to block each other and new threads are created to try to compensate. Therefore, it is better to have one thread running that gets items to be added from a ConcurrentQueue.
+- AddRow calls are blocking calls, meaning there is no advantage to add rows multithreaded. It will even have the downside that threads will start to block each other and new threads are created to try to compensate. Therefore, it is better to have one thread running that gets items to be added from a ConcurrentQueue.
 - DateTime values should be inserted in UTC.
 
 ## See also

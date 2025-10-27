@@ -8,7 +8,7 @@ On the Planned Maintenance tool's *Configuration* page, you find two essential c
 
 The ***Resource Types* table** delimits the supported resources.
 
-![Configuring resources](~/user-guide/images/Configuring_resources2.png)
+![Configuring resources](~/dataminer/images/Configuring_resources2.png)
 
 To configure a new PLM resource type:
 
@@ -25,7 +25,7 @@ To configure a new PLM resource type:
 
 The ***Resource Subscribers* table** allows the PLM tool to reference both table and standalone parameters for the specified protocol.
 
-![Configuring resources 2](~/user-guide/images/Configuring_resources.png)
+![Configuring resources 2](~/dataminer/images/Configuring_resources.png)
 
 To configure a new PLM resource subscriber:
 
@@ -42,7 +42,7 @@ To configure a new PLM resource subscriber:
    - Enter the **parameter ID** (PID) for the parameter that correlates to the resource being created.
 
      > [!NOTE]
-     > You can use a **table PID**, a **column PID**, or a the ID of a **standalone parameter**.
+     > You can use a **table PID**, a **column PID**, or an ID of a **standalone parameter**.
      >
      > - If a **table PID** is provided, the resource name is validated as a **primary key or display key**.
      > - If a **column PID** is used, the validation looks for matching values within the specified column.

@@ -1,0 +1,126 @@
+items:
+  - name: About Skyline Communications
+    topicUid: Overview_About_Skyline
+  - name: Principal advantages
+    topicUid: Overview_Principal_Advantages
+  - name: Standardized foundation
+    topicUid: Overview_Standardized_Foundation
+  - name: Digital transformation
+    topicUid: Digital_transformation
+  - name: Open software platform
+    topicUid: Overview_Platform_Open_Platform
+  - name: References and use cases
+    topicUid: Overview_References_and_use_cases
+  - name: Compliance offering
+    topicUid: DataMiner_compliance_offering
+  - name: Evolution vs. optimization in software development
+    topicUid: evolution_vs_optimization
+  - name: Deployment models
+    topicUid: Overview_hosting
+    items:
+      - name: DataMiner as a Service
+        topicUid: DaaS_hosting
+      - name: Self-managed DataMiner nodes with Storage as a Service
+        topicUid: DM_selfhosted_and_StaaS
+      - name: Self-managed DataMiner nodes and storage nodes (not recommended)
+        topicUid: DM_and_storage_selfhosted
+  - name: Stack functions
+    topicUid: Overview_Stack_Functions
+    items:
+      - name: dataminer.services
+        topicUid: Overview_dataminer_services
+      - name: Orchestration
+        topicUid: Stack_Orchestration
+      - name: Data Management
+        topicUid: Stack_Data_Management
+      - name: Augmented Operations
+        topicUid:  Stack_Augmented_Operations
+      - name: Data Visualization
+        topicUid: Stack_Data_Visualization
+      - name: Infrastructure Discovery & Provisioning
+        topicUid: Stack_IDP
+      - name: DataMiner Object Models
+        topicUid: Stack_DOM
+      - name: Open Framework
+        topicUid: Stack_Open_Framework
+      - name: Data Connectivity
+        topicUid: Stack_Data_Connectivity
+      - name: Data Aggregation
+        topicUid: Stack_Data_Aggregation
+      - name: Service Management
+        topicUid: Stack_SLA_Management
+      - name: Third-Party Integrations
+        topicUid: Stack_Third_Party_Integrations
+  - name: Solutions
+    topicUid: Overview_DataMiner_Solutions
+  - name: DevOps
+    topicUid: Overview_DevOps_index
+    items:
+      - name: DataMiner DevOps Professional Program
+        topicUid: DataMiner_Devops_Professionals
+        items:
+          - name: About the DevOps Professional Program
+            topicUid: What_is_the_DevOps_Professionals_Program
+          - name: Benefits for members
+            topicUid: Benefits_DevOps_Professionals_Program
+          - name: Benefits for business and tech partners
+            topicUid: Benefits_Business_and_Tech_Partners
+          - name: Accumulating DevOps Points
+            topicUid: DevOps_Points
+          - name: Expectations
+            topicUid: Skill_Sets_DevOps_Professionals_Program
+      - name: DataMiner DevOps Creative Collective
+        topicUid: DataMiner_DevOps_Creative_Collective
+        items:
+          - name: DataMiner Solutions
+            topicUid: DataMiner_Solutions
+          - name: Solution Product Owner
+            topicUid: Solution_Product_Owner
+          - name: Agile best practices for DataMiner Solution Product Owners
+            topicUid: Agile_Methodologies
+          - name: Core values
+            topicUid: Core_Values
+          - name: Recommended policies
+            topicUid: Recommended_Policies
+          - name: Unlimited opportunity
+            topicUid: Unlimited_Opportunity
+      - name: Glossary
+        topicUid: DevOps_Glossary
+  - name: Pricing
+    topicUid: Pricing
+    items:
+    - name: Commercial and deploy models summary
+      topicUid: Pricing_Commercial_Models
+    - name: Usage-based services
+      topicUid: Pricing_Usage_based_service
+    - name: Perpetual-Use Licensing
+      topicUid: Pricing_Perpetual_Use_Licensing
+    - name: Professional Service credits
+      topicUid: Professional_service_credits
+    - name: Maximizing your azure investments with MACC and DataMiner credits
+      topicUid: MACC_and_DataMiner_credits
+  - name: DataMiner Partner Program
+    topicUid: Partner_Program
+    items:
+      - name: About the Partner Program
+        topicUid: About_Partner_Program
+      - name: Getting started with the Partner Program
+        topicUid: Getting_Started_with_the_Partner_Program
+        items:
+          - name: Sales and Marketing
+            topicUid: Sales_and_Marketing
+          - name: Service delivery
+            topicUid: Service_Delivery
+          - name: Partnership governance
+            topicUid: Partnership_Governance
+      - name: Deal Registration
+        topicUid: Deal_Registration
+      - name: Bidding DataMiner
+        topicUid: Bidding_DataMiner
+        items:
+          - name: Skyline bid management
+            topicUid: Skyline_Bid_Management
+      - name: Partner responsibilities
+        items:
+          - name: Support level roles
+            topicUid: Support_Level_Roles

@@ -136,7 +136,7 @@ The following checks and error messages have been added.
 | 2.5.1    | MissingDefaultThreshold          | Missing default thresholds on monitored parameter. Param ID '{pid}'.                                                                 |
 | 2.25.2   | UpdatedIdxValue_Parent           | Some columns have their SLProtocol position changed. Table PID '{tablePid}'.                                                         |
 | 4.2.5    | ObsoleteSuffixTable              | Suffix 'table' in 'Group/Content/Param' element is considered obsolete. Group ID '{groupId}'.                                        |
-| 4.2.6    | SuffixRequiresMultiThreadedTimer | Suffix '{suffix}' in'Group/Content/Param' element requires the group to be called from a multi-threaded timer. Group ID '{groupId}'. |
+| 4.2.6    | SuffixRequiresMultiThreadedTimer | Suffix '{suffix}' in'Group/Content/Param' element requires the group to be called from a multithreaded timer. Group ID '{groupId}'. |
 | 16.5.3   | IncompatibleParamReferences      | Incompatible links to parameters via 'Group@dynamicId' attribute and 'Group/Params' element. ParameterGroup ID '{parameterGroupId}'. |
 | 16.8.1   | MissingDynamicIdAttribute        | Filtering via 'Group@dynamicIndex' attribute requires a 'Group@dynamicId' attribute. ParameterGroup ID '{parameterGroupId}'.         |
 | 18.10.9  | IrrelevantColumn                 | Irrelevant column with PID '{columnPid}' in 'TreeControl/HiddenColumns'. TreeControl ID '{treeControlId}'.                           |

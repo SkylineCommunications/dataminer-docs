@@ -25,7 +25,7 @@ Fiddler is a free web debugging tool that logs all HTTP(S) traffic between your 
 
    ![Fiddler Main Window](~/develop/images/Fiddler_Main_Window.png)<br>*Fiddler main window*
 
-   - Select the check boxes *Enable Rules* and *Unmatched requests passthrough*.
+   - Select the checkboxes *Enable Rules* and *Unmatched requests passthrough*.
 
    - You can make sure a response for a captured HTTP request is provided by dragging the HTTP request from the request overview on the left to the *AutoResponder* overview on the right.
 

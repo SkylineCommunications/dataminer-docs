@@ -14,7 +14,7 @@ jobs:
     runs-on: windows-latest
     name: Build Job
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: true
       - name: Install DocFX
@@ -45,7 +45,7 @@ jobs:
     needs: build_job
     name: Deploy Job to Storage account
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: release
           path: .
@@ -65,6 +65,13 @@ jobs:
           tar -xvf downloadazcopy-v10-linux
           sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
           azcopy --version
+          az version
+          # --- temporary downgrade Azure CLI (START) --- Issue: https://github.com/azure/azure-cli/issues/32048
+          AZ_CLI_DIST=$(lsb_release -cs)
+          AZ_CLI_VER=2.76.0
+          sudo apt-get install azure-cli=${AZ_CLI_VER}-1~${AZ_CLI_DIST} --allow-downgrades
+          az version
+          # --- temporary downgrade Azure CLI (END) ---
           az storage blob sync \
             --source _site \
             --container docs
@@ -85,7 +92,7 @@ jobs:
     needs: build_job
     name: Deploy Job to SA with SWA and FD
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: release
           path: .
@@ -100,6 +107,13 @@ jobs:
           tar -xvf downloadazcopy-v10-linux
           sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
           azcopy --version
+          az version
+          # --- temporary downgrade Azure CLI (START) --- Issue: https://github.com/azure/azure-cli/issues/32048
+          AZ_CLI_DIST=$(lsb_release -cs)
+          AZ_CLI_VER=2.76.0
+          sudo apt-get install azure-cli=${AZ_CLI_VER}-1~${AZ_CLI_DIST} --allow-downgrades
+          az version
+          # --- temporary downgrade Azure CLI (END) ---
           az storage blob sync \
             --source _site \
             --container '$web'
@@ -125,6 +139,6 @@ jobs:
         # Name of the Azure Cognitive Search resource.
         azure-search-instance: docs-srch
         # Search indexer to reindex
-        azure-search-indexer: azureblob-indexer2
+        azure-search-indexer: indexer-1745835640388
         # Admin key used to connect to Azure Cognitive Search instance
         azure-search-admin-key: ${{ secrets.AZURE_SEARCH_KEY }}

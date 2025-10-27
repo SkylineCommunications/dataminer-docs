@@ -26,7 +26,7 @@ Total expected duration: 30 minutes.
   - [Step 1: Create a Visual Studio project](#step-1-create-a-visual-studio-project)
   - [Step 2: Create a GitHub repository](#step-2-create-a-github-repository)
   - [Step 3: Add the starter workflow](#step-3-add-the-starter-workflow)
-  - [Step 4: Release a private item in the DataMiner Catalog](#step-4-release-a-private-item-in-the-dataminer-catalog)
+  - [Step 4: Release a private item in the Catalog](#step-4-release-a-private-item-in-the-catalog)
 
 ## Prerequisites
 
@@ -49,7 +49,7 @@ In this part, you will learn how to set up an organization in GitHub and SonarCl
 Expected duration: 20 minutes.
 
 > [!TIP]
-> See also: [Kata #49: Set up your development environment in GitHub](https://community.dataminer.services/courses/kata-49/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #49: Set up your development environment in GitHub](https://community.dataminer.services/courses/kata-49/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
 ### Step 1: Create a GitHub Organization
 
@@ -110,7 +110,7 @@ For more information, refer to the [GitHub documentation](https://docs.github.co
 
 ### Step 5: Optionally add organization-wide secrets
 
-Some Skyline-provided workflows require tokens and secrets to access services like SonarCloud or the DataMiner Catalog. Instead of adding secrets to every repository, you can add them organization-wide.
+Some Skyline-provided workflows require tokens and secrets to access services like SonarCloud or the Catalog. Instead of adding secrets to every repository, you can add them organization-wide.
 
 Unless you have a paid GitHub subscription, these secrets will only be available for public repositories.
 
@@ -124,7 +124,7 @@ Unless you have a paid GitHub subscription, these secrets will only be available
 
 In this second part, you will learn how to develop, (pre-)release, and optionally deploy connectors with a CI/CD pipeline in GitHub. These processes follow the same quality standards that developers within Skyline Communications adhere to.
 
-This CI/CD pipeline will ensure strict quality standards, provide you with a private item registered in the DataMiner Catalog, and give you the ability to deploy the item automatically.
+This CI/CD pipeline will ensure strict quality standards, provide you with a private item registered in the Catalog, and give you the ability to deploy the item automatically.
 
 Expected duration: 10 minutes.
 
@@ -200,7 +200,7 @@ Expected duration: 10 minutes.
 
 You should now see your CI jobs complete successfully, ensuring that quality standards are met.
 
-### Step 4: Release a private item in the DataMiner Catalog
+### Step 4: Release a private item in the Catalog
 
 1. On the *Code* tab for your repository on GitHub, on the right, click *Create a new release*.
 

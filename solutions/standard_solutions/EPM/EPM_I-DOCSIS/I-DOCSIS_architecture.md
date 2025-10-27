@@ -12,7 +12,7 @@ The EPM Solution makes use of the following components:
 - [Front-end connector](#front-end-connector): This connector takes care of technology-agnostic data presentation. It allows users to view KPIs and other information based on the data received from the back-end connectors.
 - [System connectors](#system-connectors): These connectors are designed to operate as peripherals within the EPM Solution.
 <!--
-![EPM architecture](~/user-guide/images/EPM_docsis_architecture.png)
+![EPM architecture](~/dataminer/images/EPM_docsis_architecture.png)
 -->
 ```mermaid
 %%{init: {'flowchart':{'curve':'monotoneY'}}}%%
@@ -35,7 +35,7 @@ At the core of the solution are collector connectors capable of interfacing with
 
 In a typical Integrated DOCSIS deployment, there are various types of service-delivery entities such as CMTSs, Fiber and Optical Nodes, and cable modems (CMs).
 
-![Integrated DOCSIS collectors](~/user-guide/images/EPM_I-docsis_collectors.png)
+![Integrated DOCSIS collectors](~/dataminer/images/EPM_I-docsis_collectors.png)
 
 The EPM Solution integrates with these entity types, regardless of technology or vendor, via specific or generic connectors. These "collector" connectors operate at the lowest level of the EPM Solution. The connectors are optimized for data gathering and initial processing. Parameters stored at this level typically correspond to direct readings from data sources.
 

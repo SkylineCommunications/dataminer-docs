@@ -8,6 +8,9 @@ Markdown is a lightweight markup language with plain text formatting syntax. It 
 
 For more detailed info about DFM syntax, see [Docs Markdown reference](https://docs.microsoft.com/en-us/contribute/markdown-reference).
 
+> [!TIP]
+> For some of the syntax below, you can use the built-in toolbar of the *Learn Markdown* VS Code extension. If you enable the *Show Toolbar* setting for this extension in the VS Code settings, a toolbar will be displayed at the bottom of the window containing buttons that allow you to quickly create a [list](#lists), [code block](#code-blocks), [alert](#alerts), etc.
+
 ## Paragraphs
 
 Each paragraph should be separated from the next paragraph by an empty line. If you do not add this empty line, the paragraphs will be combined into one. For example, the markdown below will be generated as one single paragraph:
@@ -135,6 +138,33 @@ You can use up to five heading levels on a single page. If you need more levels,
 
 Headings should always be surrounded by empty lines, so make sure there is an empty line above and below each heading, like in the example above.
 
+## Tabs
+
+You can display content in tabs, which is useful when you want to show different information based on versions or categories.
+
+Tabs are created using hash symbols similar to headings. Use one more hash than the parent heading level. For example, tabs under the page title (heading level 1) use `##`, while tabs under a level 2 heading use `###`, and so on.
+
+The hash should then be followed by a Markdown link `[]()`. The text of the link will become the text of the tab header. In order for the header to be recognized as a tab, the link itself must start with #tab/ and be followed by a unique ID (e.g. `#tab/Linux` or `#tab/Windows`). Always end the tab section with three asterisks (`***`).
+
+For example:
+
+```md
+
+## Header
+
+### [Tab label 1](#tab/tabid-1)
+
+Content for the first tab.
+
+### [Tab label 2](#tab/tabid-2)
+
+Content for the second tab.
+
+***
+```
+
+Tab headings and ending markers (`***`) should always be surrounded by empty lines, so make sure there is an empty line above and below each heading and ending marker, like in the example above.
+
 ## Tables
 
 To create a table, use pipe characters to show the column edges. Each table should have a header row, which is followed by a row where dashes fill in the space between the pipe characters. For example:
@@ -210,7 +240,7 @@ See [System components](xref:BasicConcepts#system-components).
 
 ## Images
 
-To add an image, first place the image in the correct folder in the repository. For example, to add an image for the user guide section of the documentation, add the image in the folder "user-guide/images".
+To add an image, first place the image in the correct folder in the repository. For example, to add an image for the "DataMiner overview" section of the documentation, add the image in the folder "dataminer/images".
 
 To then display the image in the text, use the following syntax:
 
@@ -221,7 +251,7 @@ To then display the image in the text, use the following syntax:
 For example:
 
 ```md
-![Awards](~/dataminer-overview/images/awards.png)
+![Awards](~/dataminer/images/awards.png)
 ```
 
 > [!NOTE]

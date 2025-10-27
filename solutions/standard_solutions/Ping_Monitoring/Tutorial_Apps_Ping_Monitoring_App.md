@@ -12,7 +12,7 @@ Expected duration: 15 minutes
 > The content and screenshots for this tutorial have been created using DataMiner version 10.4.8 and Ping Monitoring version 1.0.1-CU12.
 
 > [!TIP]
-> See also: [Kata #47: Monitor a network with ping commands](https://community.dataminer.services/courses/kata-47/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #47: Monitor a network with ping commands](https://community.dataminer.services/courses/kata-47/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ Expected duration: 15 minutes
 
 ## Step 1: Deploy the Ping Monitoring package from the Catalog
 
-1. Look up the [Ping Monitoring](https://catalog.dataminer.services/details/cb1bd962-97a5-461b-80fd-a62b3799de96) package in the DataMiner Catalog.
+1. Look up the [Ping Monitoring](https://catalog.dataminer.services/details/cb1bd962-97a5-461b-80fd-a62b3799de96) package in the Catalog.
 
 1. Click the *Deploy* button.
 
@@ -39,17 +39,17 @@ Expected duration: 15 minutes
 
 1. Go to the root page of your DataMiner System and check if the tool has been added:
 
-   ![DMS root page](~/user-guide/images/DMAroot-PingMonitoring.png)
+   ![DMS root page](~/dataminer/images/DMAroot-PingMonitoring.png)
 
    If you do not know where to find the home page URL, open <https://dataminer.services/> in a browser, and copy the URL or click the *Home* button.
 
-   ![dataminer.services](~/user-guide/images/dataminerservices-PingMonitoring.png)
+   ![dataminer.services](~/dataminer/images/dataminerservices-PingMonitoring.png)
 
 1. Open the Ping Monitoring tool.
 
    This is what the application will look like:
 
-   ![Ping Monitoring UI](~/user-guide/images/brand_new_destinations-PingMonitoring.png)
+   ![Ping Monitoring UI](~/dataminer/images/brand_new_destinations-PingMonitoring.png)
 
 > [!TIP]
 > See also: [Ping Monitoring UI overview](xref:Ping_Monitoring_UI)
@@ -72,7 +72,7 @@ Groups are used to organize the destinations configured in the application. Dest
 
 1. Click *Save*.
 
-![new group](~/user-guide/images/Create_New_Group-PingMonitoring.gif)
+![new group](~/dataminer/images/Create_New_Group-PingMonitoring.gif)
 
 ## Step 3: Create a new destination
 
@@ -96,7 +96,7 @@ Carry out the following steps for each one of the destinations above:
 
 1. Click *Add Destination*.
 
-![new destination](~/user-guide/images/Create_New_Destination-PingMonitoring.gif)
+![new destination](~/dataminer/images/Create_New_Destination-PingMonitoring.gif)
 
 > [!TIP]
 > See also: [Adding a new destination](xref:Ping_Monitoring_managing_groups_destinations#adding-a-new-destination).
@@ -114,7 +114,7 @@ When you have configured the destinations, the application will update to displa
 
 1. If you are a member of the DevOps Program, take a screenshot of the *Destinations* table (similar to the one below), ensuring all columns are clearly visible, and upload it on the [Kata page on DataMiner Dojo](https://community.dataminer.services/courses/kata-47/).
 
-   ![destinations](~/user-guide/images/destinations-PingMonitoring.png)
+   ![destinations](~/dataminer/images/destinations-PingMonitoring.png)
 
 > [!TIP]
 > For more ideas, see [Ping Monitoring Use Cases - DataMiner Dojo](https://community.dataminer.services/use-case/ping-monitoring/).
@@ -135,7 +135,7 @@ When you have configured the destinations, the application will update to displa
 
 1. Close the panel on the right with the *Close* button near the top-right corner.
 
-![filtering and details](~/user-guide/images/Filter_Details-PingMonitoring.gif)
+![filtering and details](~/dataminer/images/Filter_Details-PingMonitoring.gif)
 
 ## Step 6: Delete the destinations
 
@@ -145,7 +145,7 @@ To finalize this tutorial, delete each of the destinations you have created as f
 
 1. Click *Next* to permanently delete the destination.
 
-![delete destination](~/user-guide/images/Delete_Destination-PingMonitoring.gif)
+![delete destination](~/dataminer/images/Delete_Destination-PingMonitoring.gif)
 
 > [!TIP]
 > See also: [deleting a destination](xref:Ping_Monitoring_managing_groups_destinations#deleting-a-destination).

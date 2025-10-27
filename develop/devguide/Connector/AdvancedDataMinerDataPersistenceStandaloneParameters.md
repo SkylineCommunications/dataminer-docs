@@ -10,22 +10,17 @@ This is typically useful for parameters holding a configurable value. For exampl
 
 ```xml
 <Param id="903" trending="false" save="true">
-    <Name>Auto Clear Inputs</Name>
+    <Name>Inputs_AutoClear</Name>
     <Description>Auto Clear Inputs</Description>
     <Information>
         <Subtext>Indicates whether or not to automatically remove missing inputs every hour.</Subtext>
-        <Includes>
-            <Include>time</Include>
-            <Include>range</Include>
-            <Include>steps</Include>
-            <Include>units</Include>
-        </Includes>
     </Information>
     <Type>read</Type>
     <Interprete>
         <RawType>numeric text</RawType>
         <LengthType>next param</LengthType>
         <Type>double</Type>
+        <DefaultValue>1</DefaultValue>
     </Interprete>
     <Display>
         <RTDisplay>true</RTDisplay>

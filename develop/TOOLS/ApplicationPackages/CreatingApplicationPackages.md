@@ -33,7 +33,7 @@ If you do not have this version of DIS, then follow these steps for the installa
 
 ### CI/CD tutorial
 
-If you are interested in combining this with automatic registration in the DataMiner Catalog, follow our [CI/CD tutorial that uses this Skyline DataMiner Package Project](xref:CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub).
+If you are interested in combining this with automatic registration in the Catalog, follow our [CI/CD tutorial that uses this Skyline DataMiner Package Project](xref:CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub).
 
 ## DataMiner Package Composer
 
@@ -45,7 +45,7 @@ Key highlights:
 - Modular packages: Bundle components like dashboards and DOM modules.
 - Version management: Track updates with ease.
 
-You can find how to install and use this described on its [DataMiner Catalog Record](https://catalog.dataminer.services/details/10aeaf2a-2e6c-4841-a49e-5e3dfcd655ba).
+You can find how to install and use this described on its [Catalog Record](https://catalog.dataminer.services/details/10aeaf2a-2e6c-4841-a49e-5e3dfcd655ba).
 
 ## Application package builder API
 
@@ -58,6 +58,12 @@ For the API documentation, refer to [Skyline.AppInstaller.AppPackage](xref:Skyli
 The Packager .NET tool is a tool that can be used to create application packages. Refer to [Skyline.DataMiner.CICD.Tools.Packager](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab) for more information on the supported types and how to install and use this tool. It is typically used to create e.g. an application package from an Automation script solution folder (e.g. as a step in a CI/CD pipeline.) It currently supports creating application packages for Automation script solutions, Visio repositories (both protocol Visio files and other) and dashboard repositories.
 
 The packager tool also allows the creation of a protocol package (.dmprotocol) for protocol solutions.
+
+## Exporting low-code apps
+
+You can include a low-code app in a package. This will include only the latest version of the app, and the version history of the app will be cleaned up in the export. When this package is imported onto a DMA, the resulting app version will be the one defined in the package.
+
+See also: [Low-code app deployment behavior](xref:Deploying_a_catalog_item#low-code-app-deployment-behavior).
 
 ## Low-Code App Editor
 

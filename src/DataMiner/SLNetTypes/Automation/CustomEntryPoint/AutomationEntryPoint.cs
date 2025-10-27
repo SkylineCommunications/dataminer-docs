@@ -97,6 +97,13 @@ namespace Skyline.DataMiner.Net.Automation
             OnApiTrigger = 11,
 
 			/// <summary>
+			/// On Request script info.
+			/// [AutomationEntryPoint(AutomationEntryPointType.Types.OnRequestScriptInfo)]
+			/// Detailed information about implementing this entry point type is available in <see href="xref:Implementing_OnRequestScriptInfo_Entry_Point">Implementing the OnRequestScriptInfo entry point</see>.
+			/// </summary>
+			OnRequestScriptInfo = 13,
+
+			/// <summary>
 			/// Automation entry point for testing purposes.
 			/// </summary>
 			AutomationEntryPointTest = int.MaxValue

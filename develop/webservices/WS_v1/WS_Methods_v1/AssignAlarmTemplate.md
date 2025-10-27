@@ -4,7 +4,7 @@ uid: AssignAlarmTemplate
 
 # AssignAlarmTemplate
 
-Use this method to assign an alarm template to one or more elements. Available from DataMiner 10.1.9 onwards.
+Use this method to assign an alarm template to one or more elements.<!-- Available from DataMiner 10.1.9 onwards. -->
 
 ## Input
 

@@ -12,7 +12,7 @@ To be able to implement DITT functionality, such as initiating ping and tracerou
 
    - The DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-1. Look up the [*DataMiner IT Tools* package](https://catalog.dataminer.services/details/package/5959) in the DataMiner Catalog.
+1. Look up the [*DataMiner IT Tools* package](https://catalog.dataminer.services/details/5c55a26b-acca-4257-8833-e9a9675149a9) in the Catalog.
 
 1. Click *Deploy*.
 
@@ -21,4 +21,4 @@ To be able to implement DITT functionality, such as initiating ping and tracerou
    If your DataMiner System does not contain a DITT element yet, a new DITT element will automatically be created when the package is installed.
 
 > [!NOTE]
-> To update DITT, redeploy the [*DataMiner IT Tools* package](https://catalog.dataminer.services/details/package/5959). The tool will be updated, but no new DITT element will be created (as one should already exist in your DMS).
+> To update DITT, redeploy the [*DataMiner IT Tools* package](https://catalog.dataminer.services/details/5c55a26b-acca-4257-8833-e9a9675149a9). The tool will be updated, but no new DITT element will be created (as one should already exist in your DMS).

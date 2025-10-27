@@ -67,7 +67,7 @@ Expected duration: 10 minutes.
 
 To securely upload and/or deploy a connector, you will need a secret key.
 
-This means that you will need to create a [system key](xref:Managing_DCP_keys#system-keys) token to authenticate the register version call from the Catalog API:
+This means that you will need to create a [system key](xref:Managing_dataminer_services_keys#system-keys) token to authenticate the register version call from the Catalog API:
 
 1. In the [Admin app](https://admin.dataminer.services/), under *DataMiner Systems* in the sidebar on the left, select the DMS to which you want to deploy connectors and go to the *Keys* page.
 
@@ -75,12 +75,12 @@ This means that you will need to create a [system key](xref:Managing_DCP_keys#sy
 
 1. Configure the key with a label of your choice and the permission *Register catalog items*.
 
-   ![Organization Key](~/user-guide/images/tutorial_catalog_registration_create_org_key.png)
+   ![Organization Key](~/dataminer/images/tutorial_catalog_registration_create_org_key.png)
 
 1. Copy the key so you can use it later.
 
 > [!IMPORTANT]
-> You need to have the *Owner* role in order to access/create system keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user) for information on how to change a role for a user.
+> You need to have the *Owner* role in order to access/create system keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_dataminer_services_user) for information on how to change a role for a user.
 
 ## Step 4: Create and run a workflow
 

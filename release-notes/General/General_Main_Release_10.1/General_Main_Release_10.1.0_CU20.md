@@ -101,11 +101,11 @@ When a legacy Dashboard Gateway was connected to a DataMiner Agent with HTTPS co
 
 In some cases, tooltips of certain visualizations would not be aligned correctly.
 
-#### Protocols - Multi-threaded timers: Empty poll groups would cause SLProtocol to send empty SNMP requests to SLSNMPManager [ID 33900]
+#### Protocols - Multithreaded timers: Empty poll groups would cause SLProtocol to send empty SNMP requests to SLSNMPManager [ID 33900]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
-When multi-threaded timers were used in an SNMP protocol, the timer would incorrectly always execute the poll group, even if it did not specify any OIDs to be polled.
+When multithreaded timers were used in an SNMP protocol, the timer would incorrectly always execute the poll group, even if it did not specify any OIDs to be polled.
 
 From now on, an empty group will no longer cause SLProtocol to send an empty SNMP request to SLSNMPManager.
 

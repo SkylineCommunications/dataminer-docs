@@ -4,6 +4,37 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 1 September 2025 - Fix - SupportAsistant 1.7.7 - CDMR reporting & usage offloading issues
+
+An issue introduced in SupportAssistant 1.7.4 caused the CDMR reporting for proactive support and usage offloading to fail in case the server had no direct internet access instead of routing the request via the CloudGateway. This issue has been resolved and the affected versions have been unlisted.
+
+#### 27 August 2025 - Enhancement - SupportAsistant 1.7.6 - General improvements
+
+General improvements have been made to the way SupportAssistant handles tasks, making the DxM more robust and also improving its shutdown procedure.
+
+#### 24 June 2025 - Enhancement - SupportAsistant 1.7.5 - Improved upgrade process
+
+Improvements have been made to the startup and shutdown of the DxM, which improves the upgrade process.
+
+#### 17 June 2025 - Enhancement - SupportAsistant 1.7.4 - Improved upgrade process
+
+Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
+
+#### 1 April 2025 - Enhancement - SupportAsistant 1.7.3 - Dependencies updated [ID 42658]
+
+Several dependencies have been updated.
+
+#### 20 February 2025 - Fix - SupportAssistant 1.7.2 - Reports not uploaded when reports and notifications folder was missing [ID 42197]
+
+Up to now, if the reports and notifications folder did not exist when Support Assistant started, new reports were never uploaded until the service was restarted. The folder will now be created to ensure that reports can be uploaded immediately.
+
+#### 20 February 2025 - Enhancement - SupportAssistant 1.7.2 - Offloading of logs/metrics of the GQI DxM [ID 41893]
+
+The files from the following folders will now also be added to the offloads zip package:
+
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Metrics`
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs`
+
 #### 30 October 2024 - Enhancement - SupportAssistant 1.7.1 - Include SLAutomation_BAK.txt in file offloads [ID 41281]
 
 From now on, the SLAutomation_BAK.txt file is also included in the file offloads.

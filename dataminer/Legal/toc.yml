@@ -1,0 +1,21 @@
+items:
+  - name: Commercial terms
+    items:
+      - name: Terms of sale
+        topicUid: Terms_of_Sale
+      - name: Terms for online deployments
+        topicUid: License_and_Service_Terms
+      - name: Terms for partners
+        topicUid: Terms_partners
+  - name: dataminer.services terms
+    items:
+      - name: dataminer.services terms of use
+        topicUid: dataminer.services_terms_of_use
+  - name: Support terms
+    items:
+      - name: On premises
+        topicUid: Support_Terms_On_Premises
+      - name: SaaS
+        topicUid: Support_Terms_SaaS
+  - name: DaaS Planned Maintenance Policy
+    topicUid: DaaS_Planned_Maintenance_Policy

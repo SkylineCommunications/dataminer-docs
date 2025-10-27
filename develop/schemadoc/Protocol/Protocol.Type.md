@@ -4,7 +4,7 @@ uid: Protocol.Type
 
 # Type element
 
-Specifies the protocol type. In multi-connection protocols, it specifies the type of the main connection.
+Specifies the protocol type. In protocols with multiple connections, it specifies the type of the main connection.
 
 ## Type
 

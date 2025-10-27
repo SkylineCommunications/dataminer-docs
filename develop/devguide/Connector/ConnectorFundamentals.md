@@ -1,10 +1,11 @@
 ---
 uid: ConnectorFundamentals
+description: To develop a DataMiner protocol, you need to know about its metadata, its components, and how its components are related to each other.
 --- 
 
 # Connector fundamentals
 
-This section introduces the fundamental concepts of a DataMiner protocol. It is important to have a good understanding of the concepts mentioned in this chapter in order to be able to develop a DataMiner Protocol.
+This section introduces the fundamental concepts of a DataMiner protocol. It is important to have a good understanding of the concepts mentioned in this chapter in order to be able to develop a DataMiner protocol.
 
 In this section:
 

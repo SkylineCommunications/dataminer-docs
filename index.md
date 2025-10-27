@@ -21,33 +21,40 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
 
 <div class="row">
   <div class="columnhome">
-    <a href="/dataminer-overview/Overview_index.html" title="DataMiner Overview" target="_self"><img src="images/Docs_DataminerOverview.svg" style="width:100%"></a>
+    <a href="/dataminer/DataMiner_index.html" title="DataMiner Overview" target="_self"><img src="images/Docs_DataminerOverview.svg" style="width:100%"></a>
   </div>
   <div class="columnhome">
-    <a href="/user-guide/Getting_started/Getting_Started.html" title="User Guide" target="_self"><img src="images/Docs_UserGuide.svg" style="width:100%"></a>
-  </div>  
-  <div class="columnhome">
     <a href="/solutions/solution_index.html" title="DataMiner Solutions" target="_self"><img src="images/Docs_DMSolutions.svg" style="width:100%"></a>
+  </div>
+  <div class="columnhome">
+    <a href="/tutorials/Tutorials.html" title="DataMiner Tutorials" target="_self"><img src="images/Docs_DataMinerTutorials.svg" style="width:100%"></a>
   </div>
 </div>
 
 <div class="row">
-  <div class="columnhome">
-    <a href="/release-notes/DataMiner_General_RNs_index.html" title="DataMiner Release Notes" target="_self"><img src="images/Docs_DataminerReleaseNotes.svg" style="width:100%"></a>
-  </div>
+
   <div class="columnhome">
     <a href="https://docs.dataminer.services/connector/index.html" title="Connector Documentation" target="_self"><img src="images/Docs_ConnectorDocumentation.svg" style="width:100%"></a>
   </div>
   <div class="columnhome">
     <a href="/develop/index.html" title="Developer Documentation" target="_self"><img src="images/Docs_DeveloperDocumentation.svg" style="width:100%"></a>
   </div>
+  <div class="columnhome">
+    <a href="/release-notes/DataMiner_General_RNs_index.html" title="DataMiner Release Notes" target="_self"><img src="images/Docs_DataminerReleaseNotes.svg" style="width:100%"></a>
+  </div>
 </div>
 
-<div style="display: flex; flex-wrap: wrap; margin-top: 20px; max-width: 59.6%; ">
-  <a class="xref" href="/tutorials/Tutorials.html" style="flex: 1; min-width: 250px; text-decoration: none;">
-    <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; background-color: #DEF7FF; color: #000000; display: flex; align-items: center; justify-content: center; gap: 10px;">
-      <b style="font-size: 30px; color: #00517e;">DATAMINER TUTORIALS</b>
-      <img src="images/Docs_Tutorials.svg" alt="DataMiner tutorials" style="width: 50px;">
-    </div>
-  </a>
-</div>
+<style>
+.columnhome a {
+  display: inline-block;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.columnhome a:hover {
+  background-color: #f0f4ff; /* light background on hover */
+  transform: scale(1.05);   /* slightly bigger */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+</style>

@@ -4,13 +4,13 @@ uid: NT_SET_THREAD_POOL_STATE
 
 # NT_SET_THREAD_POOL_STATE (328)
 
-Resets the thread pool of the specified multi-threaded timer.
+Resets the thread pool of the specified multithreaded timer.
 
 ```csharp
-bool isEnabled = true;
 int timerId = 1;
+bool isEnabled = true;
 
-protocol.NotifyDataMiner(328 /*NT_SET_THREAD_POOL_STATE*/, timerId, isEnabled);
+protocol.NotifyProtocol(328 /*NT_SET_THREAD_POOL_STATE*/, timerId, isEnabled);
 ```
 
 ## Parameters

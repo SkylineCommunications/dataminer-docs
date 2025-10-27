@@ -4,6 +4,12 @@ uid: cloudfeed_change_log
 
 # Cloud Feed change log
 
+#### 2 April 2025 - Fix - CloudFeed 1.4.4 - Problem during startup caused by inability to contact CloudGateway [ID 42599]
+
+<!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
+
+When, during startup, CloudFeed was not able to contact CloudGateway, in some cases, it would stop working.
+
 #### 28 August 2024 - Enhancement - CloudFeed 1.4.0 - More data will now be offloaded [ID 40413]
 
 DataMiner CloudFeed has been upgraded. It now offloads alarm events, change point events, SRM events, element configuration events, and feedback events.

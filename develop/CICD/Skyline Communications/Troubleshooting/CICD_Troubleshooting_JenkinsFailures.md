@@ -32,4 +32,4 @@ You can fix this by adding another QAction project to the solution (e.g. with ID
 
 ## DCP Registration, Prepare for SVN, Push to SVN & Push to Azure
 
-If an error occurs here, contact the Data-Acq Tools team, as the release may have happened partially, meaning that the next run will fail. The team will clean up the records so that the pipeline can be properly rebuilt.
+If an error occurs here, contact the BOOST team, as the release may have happened partially, meaning that the next run will fail. The team will clean up the records so that the pipeline can be properly rebuilt.

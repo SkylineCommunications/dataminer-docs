@@ -19,4 +19,4 @@ This section contains the following information on the DataMiner PTP app:
 
 > [!TIP]
 > See also:
-> [DataMiner Precision Time Protocol (PTP) App](https://community.dataminer.services/video/dataminer-precision-time-protocol-ptp-app/) ![Video](~/user-guide/images/video_Duo.png)
+> [DataMiner Precision Time Protocol (PTP) App](https://www.youtube.com/watch?v=eamFLwSvtDE) ![Video](~/dataminer/images/video_Duo.png)

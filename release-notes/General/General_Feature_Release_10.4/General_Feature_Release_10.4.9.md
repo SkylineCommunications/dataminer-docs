@@ -298,7 +298,7 @@ Also, a parameter will need to have had at least one day of fluctuating trend da
 
 When a booking was started or stopped, up to now, the system would always verify whether that booking had an `SRMServiceInfo` object. If it did, then no services would be created or deleted. However, when the start actions were run on a DMA other than the DMA on which the booking was created, no `SRMServiceInfo` object would be found, causing a service to be created when that was not necessary.
 
-In the configuration file of the Resource Manager (*C:\\Skyline DataMiner\\ResourceManager\\config.xml*), you can now specify a new *SkipServiceHandling* option, which will allow you to indicate whether or not an `SRMServiceInfo` object check has to be performed when a booking is started or stopped.
+In the configuration file of the Resource Manager (`C:\Skyline DataMiner\ResourceManager\config.xml`), you can now specify a new *SkipServiceHandling* option, which will allow you to indicate whether or not an `SRMServiceInfo` object check has to be performed when a booking is started or stopped.
 
 #### SLAutomation: Enhanced compilation of Automation scripts [ID 39965]
 
@@ -316,9 +316,9 @@ From now on, alarms generated for child DVE elements using a parameter ID from t
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Every DataMiner upgrade package includes a *FilesToDelete.txt* file, which lists all files in the *C:\\Skyline DataMiner\\* folder that should be deleted during the upgrade procedure. From now on, the *ResetConfig.txt* file will no longer be added to that list of files to be deleted.
+Every DataMiner upgrade package includes a *FilesToDelete.txt* file, which lists all files in the `C:\Skyline DataMiner\` folder that should be deleted during the upgrade procedure. From now on, the *ResetConfig.txt* file will no longer be added to that list of files to be deleted.
 
-The *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file is a file used by the factory reset tool *SLReset.exe* as a whitelist to determine which files to keep. The first time *SLReset.exe* is executed, the default whitelist is added to *ResetConfig.txt*. Afterwards, you can add files you want to keep to this whitelist, so that these are not removed when the tool is executed again. If you delete *ResetConfig.txt*, the default whitelist will be used again.
+The `C:\Skyline DataMiner\Files\ResetConfig.txt` file is a file used by the factory reset tool *SLReset.exe* as a whitelist to determine which files to keep. The first time *SLReset.exe* is executed, the default whitelist is added to *ResetConfig.txt*. Afterwards, you can add files you want to keep to this whitelist, so that these are not removed when the tool is executed again. If you delete *ResetConfig.txt*, the default whitelist will be used again.
 
 #### Storage as a Service: Event hub throttling errors will now be logged as 'Warning' instead of 'Error' [ID 40018]
 
@@ -336,7 +336,7 @@ In other words, from now on, when this soft-launch option is set to true, these 
 
 #### SLNet: Enhanced performance when sending requests to SLDataGateway [ID 40023]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.4.0 [CU13]/10.5.0 - FR 10.4.9 -->
 
 Because of a number of enhancements made to SLNet, overall performance has increased when sending requests to SLDataGateway.
 
@@ -366,9 +366,9 @@ From now on, by default, the *SLNet.txt* log file will no longer contain any log
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, the factory reset tool *SLReset.exe* always used the relative path `.\\` to locate the *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file, assuming that it would always be executed from the *C:\\Skyline DataMiner\\Files* folder. As a result, when it was executed from another folder (e.g. from a terminal window opened on the Windows desktop), it would not be able to find the *ResetConfig.txt* file.
+Up to now, the factory reset tool *SLReset.exe* always used the relative path `.\\` to locate the `C:\Skyline DataMiner\Files\ResetConfig.txt` file, assuming that it would always be executed from the `C:\Skyline DataMiner\Files` folder. As a result, when it was executed from another folder (e.g. from a terminal window opened on the Windows desktop), it would not be able to find the *ResetConfig.txt* file.
 
-From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* when locating *ResetConfig.txt*.
+From now on, *SLReset.exe* will always use the absolute path `C:\Skyline DataMiner\Files\ResetConfig.txt` when locating *ResetConfig.txt*.
 
 #### Service & Resource Management: Enhanced performance when creating and initializing reservations [ID 40082]
 
@@ -432,7 +432,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner CoreGateway: version 2.14.9
 - DataMiner SupportAssistant: version 1.6.10
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### DataMiner Object Models: Enhanced storage of DOM instances [ID 40242]
 
@@ -518,9 +518,9 @@ Events generated after DOM objects were created, updated or deleted would incorr
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, when an SNMP table took a long time to be polled, a run-time error could occur in SLProtocol.
+Up to now, when an SNMP table took a long time to be polled, a runtime error could occur in SLProtocol.
 
-To avoid such run-time errors, from now on, when SLSNMPManager is polling an SNMP table, it will send a notification to SLProtocol every minute to indicate that SNMP data is being polled.
+To avoid such runtime errors, from now on, when SLSNMPManager is polling an SNMP table, it will send a notification to SLProtocol every minute to indicate that SNMP data is being polled.
 
 #### Failover switch would take significantly longer than usual due to blocking calls in the SLASPConnection process [ID 39769]
 

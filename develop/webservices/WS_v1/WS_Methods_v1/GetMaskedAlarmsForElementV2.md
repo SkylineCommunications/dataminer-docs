@@ -6,7 +6,7 @@ uid: GetMaskedAlarmsForElementV2
 
 Use this method to retrieve the list of all the masked alarms of a particular element, as well as the alarm cache status.
 
-Available from DataMiner 10.0.7 onwards.
+<!-- Available from DataMiner 10.0.7 onwards. -->
 
 ## Input
 

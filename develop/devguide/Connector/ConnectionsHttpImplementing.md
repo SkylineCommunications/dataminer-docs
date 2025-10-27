@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsHttpImplementing
+description: To periodically request information from a device via HTTP, the approach is very similar to serial communication.
 ---
 
 # Implementing HTTP communication
@@ -36,21 +37,22 @@ The following example shows an implementation of an HTTP request:
 </Request>
 ```
 
-Using the verb attribute, the request defines which HTTP method (or verb) is to be used, e.g. "GET", "POST", "PUT", etc.
+Using the *verb* attribute, the request defines which HTTP method (or verb) is to be used, e.g. "GET", "POST", "PUT", etc.
 
-The url attribute defines the path, optionally including a query string and/or fragment string.
+The *url* attribute defines the path, optionally including a query string and/or fragment string.
 
 > [!NOTE]
 >
-> - Instead of using the url attribute, you can specify the ID of a parameter that holds the request path. This is done using the pid attribute:
+> - Instead of using the *url* attribute, you can specify the ID of a parameter that holds the request path. This is done using the *pid* attribute:
 >
 >   ```xml
 >   <Request verb="GET" url="/barco-webservice/rest/NetworkWall/alarm">
 >   <Request verb="GET" pid="5045"> <!-- content parameter 5045: "barco-webservice/rest/NetworkWall/alarm" -->
 >   ```
 >
->   - In case the pid attribute is used, parameter 5045 does not need a leading slash ("/").
->   - In case both the url and pid attributes are specified, the pid attribute will be ignored. Typically, only one of these attributes is specified.
+>   - In case the *pid* attribute is used, parameter 5045 does not need a leading slash ("/").
+>   - The parameter referred to in the *pid* attribute must be of type `string`.
+>   - In case both the *url* and *pid* attributes are specified, the *pid* attribute will be ignored. Typically, only one of these attributes is specified.
 >
 > - It is also possible to specify an absolute URL (e.g. `http://google.com`), which possibly specifies another host (or IP address/port) than the one specified in the corresponding element connection.
 
@@ -64,7 +66,7 @@ By using either Data or Parameters, you can send data along with the HTTP reques
 > DataMiner does not perform any encoding on the provided data. Therefore, if you are, for example, building a URL for a GET request with a query string or the body of a POST request with content type "application/x-www-form-urlencoded", you must ensure that the data is using [percent-encoding](https://datatracker.ietf.org/doc/html/rfc3986#section-2.1) (also known as URL encoding) to avoid misinterpretation of the provided data. Otherwise, the provided data might be misinterpreted by the server in case the data contains characters from the [reserved character set](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2) (e.g. '&amp;').
 
 > [!NOTE]
-> Either Parameters or Data should be used, not both. If both are used together, only the content of Parameters will be included in the request.
+> Either *Parameters* or *Data* should be used, not both. If both are used together, only the content of *Parameters* will be included in the request.
 
 The content specified in Data will either be appended unaltered to the URL (in case of GET request) or put in the body (POST request).
 
@@ -162,10 +164,13 @@ Using the statusCode attribute, you can specify the ID of the parameter in which
 > - HTTP communication logging can be enabled by setting information logging to level 3 (RN 14439).
 > - A retry mechanism (as configured in the element connection settings) is triggered when an HTTP request times out (i.e. upon reception of the WINHTTP_ERROR_TIMEOUT error) and when the SLPort process is unable to connect to the web server (i.e. upon reception of the ERROR_WINHTTP_CANNOT_CONNECT error).<!-- RN 13111 -->
 
-The value of a header can be captured by defining a header (see [Protocol.HTTP.Session.Connection.Request.Headers.Header](xref:Protocol.HTTP.Session.Connection.Request.Headers.Header)) and specifying the name of the header and the ID of the parameter in which the value should be put.
+> [!TIP]
+> See also: [Change-based event handling](xref:InnerWorkingsChangeBasedEventHandling)
+
+The value of a header can be captured by defining a header (see [Protocol.HTTP.Session.Connection.Response.Headers.Header](xref:Protocol.HTTP.Session.Connection.Response.Headers.Header)) and specifying the name of the header and the ID of the parameter in which the value should be put.
 
 The message body can be captured by specifying the ID of the parameter in which the body should be put in Content (see [Protocol.HTTP.Session.Connection.Response.Content](xref:Protocol.HTTP.Session.Connection.Response.Content)).
 
 ## See also
 
-- [Element Wizard](xref:ConnectionsIntroduction#element-wizard) for recommended HTTP(S) PortSettings
+- [Configuring port settings](xref:Connections#configuring-port-settings) for recommended HTTP(S) port settings

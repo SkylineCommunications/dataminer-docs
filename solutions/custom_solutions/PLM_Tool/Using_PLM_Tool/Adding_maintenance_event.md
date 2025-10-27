@@ -13,7 +13,7 @@ To create a maintenance event (also known as a PLM item), follow these steps:
 
 1. In the *Planned Maintenance* pop-up window, provide the necessary information.
 
-   ![Adding maintenance event](~/user-guide/images/Adding_Maintenance_Event.png)
+   ![Adding maintenance event](~/dataminer/images/Adding_Maintenance_Event.png)
 
    - **Title**: Choose a name for the maintenance event. We recommend choosing a descriptive title to ensure intuitive use of the app.
 
@@ -41,7 +41,7 @@ To create a maintenance event (also known as a PLM item), follow these steps:
 
      - **End**: Enter the end date of the recurrence.
 
-     ![Range of Recurrence](~/user-guide/images/Range_of_Recurrence.png)
+     ![Range of Recurrence](~/dataminer/images/Range_of_Recurrence.png)
 
 1. To save your changes, click *OK*. A new row will be added to the PLM table, indicating the successful creation of the PLM item.
 

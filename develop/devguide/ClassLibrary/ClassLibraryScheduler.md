@@ -18,6 +18,9 @@ To install the Scheduler package, follow these steps:
    Install-Package Skyline.DataMiner.Core.Scheduler.Automation 
    ```
 
+> [!NOTE]
+> This package is currently available as a prerelease. When installing the package in Visual Studio via the NuGet Package Manager, make sure to select *Include prerelease*.
+
 ## Using the Skyline.DataMiner.Core.Scheduler.Automation library
 
 To use the library, first initialize the [Scheduler](xref:Skyline.DataMiner.Core.Scheduler.Automation.Scheduler) class by passing a filter determining which scheduled tasks should be retrieved when the class is initialized:

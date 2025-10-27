@@ -4,7 +4,7 @@ uid: AdvancedMultiThreadedTimersHttp
 
 # HTTP
 
-To set up multi-threaded HTTP communication in a QAction, perform the following steps:<!-- RN 9290 -->
+To set up multithreaded HTTP communication in a QAction, perform the following steps:<!-- RN 9290 -->
 
 1. [Build the request](#step-1-build-the-request)
 1. [Process the responses](#step-2-process-the-responses)
@@ -12,7 +12,7 @@ To set up multi-threaded HTTP communication in a QAction, perform the following 
 
 ## Step 1: Build the request
 
-Assume the following multi-threaded timer is defined:
+Assume the following multithreaded timer is defined:
 
 ```xml
 <Timer id="1" options="ip:1000,1;each:5000;pollingrate:30,10,10;threadPool:20,5,221,222,223,224,225,15000;dynamicthreadpool:220;qactionBefore:1010;qactionAfter:1012">
@@ -25,7 +25,19 @@ Assume the following multi-threaded timer is defined:
 </Timer>
 ```
 
-To build the request, create a QAction triggered by a multi-threaded timer (using the qactionBefore option), which creates the request object and returns this.
+Group 1011 is a group of type `poll`, with an empty `content` tag, e.g. as defined below.
+
+```xml
+    <Group id="1011">
+       <Name>Multithread Group 1011</Name>
+    <Description>Multithread Group 1011</Description>
+       <Type>poll</Type>
+       <Content>
+       </Content>
+    </Group>
+```
+
+To build the request, create a QAction triggered by a multithreaded timer (using the qactionBefore option), which creates the request object and returns this.
 
 ```xml
 <QAction id="1010" name="Create HTTP Request" encoding="csharp" row="true">
@@ -131,10 +143,10 @@ In this QAction, typically you will also set the state of the corresponding row 
 
 ## Step 2: Process the responses
 
-To process the responses, create a QAction that triggers on the group of the multi-threaded timer.
+To process the responses, create a QAction that triggers on the group of the multithreaded timer.
 
 > [!NOTE]
-> Whereas typically you provide a parameter ID in the triggers attribute, here you need to specify the ID of the group of the multi-threaded timer.
+> Whereas typically you provide a parameter ID in the triggers attribute, here you need to specify the ID of the group of the multithreaded timer.
 
 ```xml
 <QAction id="1011" name="Process HTTP Responses" encoding="csharp" options="group" triggers="1011" row="true">
@@ -172,7 +184,7 @@ public class QAction
             {
                 string communicationState = Convert.ToString(result);
                 
-                if (communicationState != "TIMEOUT" && communicationState != "NO POLLING OCCURRED")
+                if (communicationState != "TIMEOUT" && communicationState != "NO POLLING OCCURED")
                 {
                     object[] responses = (object[])result;
                 
@@ -219,7 +231,7 @@ In this QAction, you will typically also update the state column of the correspo
 
 ## Step 3: Run the QAction after the response
 
-The last step runs the QAction specified in the qactionAfter option of the multi-threaded timer.
+The last step runs the QAction specified in the qactionAfter option of the multithreaded timer.
 
 ```xml
 <QAction id="1012" name="HTTP After" encoding="csharp" row="true">
@@ -231,7 +243,7 @@ In this QAction, you can check if a timeout occurred and set the status of the c
 public class QAction
 {
     /// <summary>
-    /// After Processing Multi-threaded Group.
+    /// After Processing Multithreaded Group.
     /// </summary>
     /// <param name="protocol">Link with SLProtocol process.</param>
     public static void Run(SLProtocol protocol)

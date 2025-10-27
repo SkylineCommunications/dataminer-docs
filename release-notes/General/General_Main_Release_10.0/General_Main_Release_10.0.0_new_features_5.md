@@ -180,7 +180,7 @@ The mobile DataMiner apps can now be added to a mobile device’s home screen an
 
 #### Default time zone can now be specified in ClientSettings.json \[ID 22762\]
 
-Time notations displayed in DataMiner mobile apps will now all be based on the time zone specified in the following setting, located in the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file:
+Time notations displayed in DataMiner mobile apps will now all be based on the time zone specified in the following setting, located in the `C:\Skyline DataMiner\users\ClientSettings.json` file:
 
 - commonServer.ui.DefaultTimeZone
 
@@ -716,7 +716,7 @@ If colors are defined using the *Visual.Background* property of bookings, these 
 
 #### DataMiner will now generated an error when it detects a ServiceManager license but no ElasticSearch instance \[ID 24329\]
 
-From now on, a DataMiner Agent will generated the following DataMiner run-time error when it detects a ServiceManager license but no Elasticsearch instance:
+From now on, a DataMiner Agent will generated the following DataMiner runtime error when it detects a ServiceManager license but no Elasticsearch instance:
 
 *The Service Manager is licensed, but no ElasticSearch database is active on the system. Therefore, Resource Manager and Service Manager will not initialize.*
 

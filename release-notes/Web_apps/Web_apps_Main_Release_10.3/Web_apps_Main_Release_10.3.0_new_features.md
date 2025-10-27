@@ -101,17 +101,17 @@ An ad hoc data source is represented as a class that implements predefined inter
   |--|--|--|--|
   | OnDestroy | OnDestroyInputArgs | OnDestroyOutputArgs | Indicates that the GQI will close the session. |
 
-##### Life cycle
+##### Lifecycle
 
-All methods discussed above are called at some point during the GQI life cycle, depending on whether a query is created or fetched, and depending on whether they have been implemented.
+All methods discussed above are called at some point during the GQI lifecycle, depending on whether a query is created or fetched, and depending on whether they have been implemented.
 
-The following flowchart illustrates the GQI life cycle when a query is created:
+The following flowchart illustrates the GQI lifecycle when a query is created:
 
-![GQI query creation life cycle](~/user-guide/images/GQICreateQuery.png)
+![GQI query creation lifecycle](~/dataminer/images/GQICreateQuery.png)
 
-The following flowchart illustrates the GQI life cycle when a query is fetched:
+The following flowchart illustrates the GQI lifecycle when a query is fetched:
 
-![GQI query fetching life cycle](~/user-guide/images/GQIFetchQuery.png)
+![GQI query fetching lifecycle](~/dataminer/images/GQIFetchQuery.png)
 
 ##### Objects
 

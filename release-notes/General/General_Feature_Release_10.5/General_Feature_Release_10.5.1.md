@@ -123,7 +123,7 @@ Note that when Swarming is enabled, this will result in some major changes to th
 > [!IMPORTANT]
 >
 > - Swarming cannot be enabled on DataMiner Main Release 10.5.
-> - Once the element configuration has been moved from disk to database, there is no good way to revert this change, which means that if you were to disable Swarming again, you would lose all your elements, leaving your DMS with a lot of lingering references to non-existing elements. For instructions on how to disable Swarming and **partially** recover your elements, see [Partially rolling back Swarming](xref:SwarmingRollback).
+> - If you decide to [roll back Swarming](xref:SwarmingRollback) again, you will need to restore a backup to get the element XML files back. Any changes that have been implemented to elements after you enabled Swarming will be lost. As a consequence, the sooner you decide to roll back, the smaller the impact of the rollback will be.
 
 ##### Capabilities
 
@@ -313,13 +313,13 @@ This will significantly enhance overall performance when deleting large numbers 
 
 <!-- MR 10.5.0 - FR 10.5.1 -->
 
-Up to now, the *VerifyNatsIsRunning* prerequisite would fail when it did not find `IgnitionValue` in the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file. From now on, it will no longer check whether `IgnitionValue` is present in that file.
+Up to now, the *VerifyNatsIsRunning* prerequisite would fail when it did not find `IgnitionValue` in the `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` file. From now on, it will no longer check whether `IgnitionValue` is present in that file.
 
 #### gRPC connection reliability has been enhanced [ID 41261]
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-Up to now, in some cases, a gRPC call between two SLNet instances could get blocked indefinitely, causing run-time errors to occur in other processes.
+Up to now, in some cases, a gRPC call between two SLNet instances could get blocked indefinitely, causing runtime errors to occur in other processes.
 
 GrpcConnection has now been updated. All gRPC calls will now have a deadline of 15 minutes instead of NO_TIMEOUT.
 
@@ -337,7 +337,7 @@ Also, a new SLNet option `HttpTcpKeepAliveInterval` can now be configured on Dat
 
 <!-- MR 10.5.0 - FR 10.5.1 -->
 
-The *VerifyClusterPorts* prerequisite and the *VerifyClusterPorts.dmupgrade* package will now use the Single Source of Truth (*C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json*) to determine which endpoints should be tested.
+The *VerifyClusterPorts* prerequisite and the *VerifyClusterPorts.dmupgrade* package will now use the Single Source of Truth (`C:\Skyline DataMiner\Configurations\ClusterEndpoints.json`) to determine which endpoints should be tested.
 
 If this JSON file cannot be found, the endpoint to be tested will be retrieved from the *DMS.xml* and *SLCloud.xml* files.
 
@@ -345,7 +345,7 @@ If this JSON file cannot be found, the endpoint to be tested will be retrieved f
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 
-Up to now, when you had made changes to a *C:\\Skyline DataMiner\\Analytics\\configuration.xml* file on the leader Agent, you had to manually replace the file on all Agents in the cluster. From now on, you can force the synchronization of this file via Cube.
+Up to now, when you had made changes to a `C:\Skyline DataMiner\Analytics\configuration.xml` file on the leader Agent, you had to manually replace the file on all Agents in the cluster. From now on, you can force the synchronization of this file via Cube.
 
 See also [Synchronizing data between DataMiner Agents](xref:Synchronizing_data_between_DataMiner_Agents)
 
@@ -361,7 +361,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner Orchestrator: version 1.7.1
 - DataMiner SupportAssistant: version 1.7.1
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### SNMPv3 elements will now go into an error state when the user name is missing [ID 41312]
 
@@ -540,11 +540,11 @@ A number of issues that occurred while synchronizing files among agents in a DMS
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e. *C:\Skyline DataMiner\users\\<UserName\>*).
+When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e. `C:\Skyline DataMiner\users\<UserName>`).
 
 #### DataMiner upgrade: Folder to which the contents of the upgrade package had been extracted would not be removed [ID 41393]
 
-<!-- MR 10.5.0 - FR 10.5.1 -->
+<!-- MR 10.4.0 [CU16]/10.5.0 - FR 10.5.1 -->
 
 When a DataMiner Agent had been upgraded, in some cases, the folder to which the contents of the upgrade package had been extracted would incorrectly not be removed.
 

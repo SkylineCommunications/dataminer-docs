@@ -12,25 +12,33 @@
     <link rel="shortcut icon" href="favicon.ico">
 </head>
 
-<body>
+<body onload="onLoad()">
     <div class="container py-5 row">
         <div class="wp-block-column">
-            <center>
-                <h1 class="pageNotFound">404</h1>
-                <p class="lead">Looks like this page went missing.</p>
-                <p>Maybe you'll find what you're looking for via our <a href="https://docs.dataminer.services/">home
-                        page</a>.</p>
-            </center>
+            <img alt="Something went wrong, page not found" class="inline-image" src="https://skyline.be/img/404.png">
         </div>
         <div class="wp-block-column">
-            <div class="wp-block-drupalmedia-drupal-media-entity">
-                <div class="contextual-region">
-                    <img alt="Something went wrong, page not found" class="inline-image"
-                        src="https://skyline.be/img/404.png">
-                </div>
-            </div>
+            <h1 class="pageNotFound">404</h1>
+            <p class="lead">Looks like this page went missing.</p>
+            <p>Maybe you'll find what you're looking for via our <a href="https://docs.dataminer.services/">home
+                    page</a> or one of the search results below.</p>
         </div>
     </div>
+    <script type="text/javascript">
+        function onLoad() {
+            if (document.getElementById('search-results'))
+                return;
+
+            const errorPath = window.location.pathname;
+            if (!errorPath)
+                return;
+
+            const fallback = document.createElement('iframe');
+            fallback.id = 'search-results';
+            fallback.src = `/?embed=true&search=${errorPath}`;
+            document.body.append(fallback);
+        }
+    </script>
 </body>
 <style>
     body {
@@ -40,12 +48,25 @@
         font-weight: 400;
         line-height: 1.5;
         color: #212529;
+        background-color: #fafafa;
         text-align: left;
+        display: flex;
+        height: 100dvh;
+        flex-direction: column;
+    }
+
+    #search-results {
+        width: 100dvw;
+        display: block;
+        margin: auto;
+        flex: 1 0 auto;
+        border: none;
+        border-top: 4px solid #337ab7;
     }
 
     .container {
         margin: 50px auto auto auto;
-        padding: 0 20px;
+        padding: 0 60px;
         width: 100%;
         max-width: 1340px;
         flex-direction: row
@@ -59,18 +80,9 @@
     }
 
     .py-5 {
-        padding-bottom: 3rem !important;
-    }
-
-    .contextual-region {
-        position: relative;
-    }
-
-    .contextual {
-        position: absolute;
-        z-index: 500;
-        top: 6px;
-        right: 0;
+        padding-bottom: 0;
+        box-sizing: border-box;
+        margin-top: 16px;
     }
 
     .wp-block-column {
@@ -81,9 +93,15 @@
         flex-direction: column;
         flex-basis: 100%;
         flex: 1;
+        position: relative;
+
+        &:has(.pageNotFound) {
+            flex: 2;
+        }
     }
 
     .pageNotFound {
+        margin-top: 0;
         font-size: 3.5rem;
         line-height: 1.1;
         margin-bottom: 1rem;
@@ -100,58 +118,41 @@
     p {
         margin-top: 0;
         margin-bottom: 1rem;
-    }
-
-    .btn {
-        white-space: normal;
-        display: inline-block;
-        font-weight: 400;
-        color: #212529;
-        text-align: center;
-        vertical-align: middle;
-        cursor: pointer;
-        user-select: none;
-        background-color: transparent;
-        border: 1px solid transparent;
-        padding: 0.375rem 0.95rem;
-        font-size: 1rem;
-        line-height: 1.5;
-        border-radius: 0.25rem;
-        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    }
-
-    .btn-lg,
-    .btn-group-lg>.btn {
-        font-weight: bold;
-    }
-
-    .btn-lg,
-    .btn-group-lg>.btn {
-        padding: 0.5rem 1rem;
-        font-size: 1.25rem;
-        line-height: 1.5;
-        border-radius: 0.3rem;
-    }
-
-    .btn-secondary {
-        color: #fff;
-        background-color: #00aeef;
-        border-color: #00aeef;
-        text-decoration: none;
+        max-width: 460px;
     }
 
     .inline-image {
-        width: 100%;
-        height: auto;
-        max-width: 1038;
-        max-height: 711;
+        max-height: 30dvh;
+        width: auto;
+        float: right;
+        transform: translateY(3px);
+        vertical-align: bottom;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        border-style: none;
     }
 
-    img {
-        vertical-align: middle;
-        border-style: none;
-        max-width: 1038px;
-        max-height: 711px;
+    @media screen and (max-width: 768px) {
+        p {
+            font-size: 80%;
+            max-width: auto;
+        }
+
+        .lead {
+            font-size: 1.2rem;
+        }
+
+        .container {
+            flex-direction: column;
+            padding: 0 20px;
+        }
+
+        .wp-block-column:has(img) {
+            min-height: 16dvh;
+            margin-bottom: -60px;
+        }
     }
 </style>
 

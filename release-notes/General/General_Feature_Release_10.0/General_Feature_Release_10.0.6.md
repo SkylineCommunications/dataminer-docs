@@ -63,7 +63,7 @@ From now on, in Cube, you can not only enable a simulation file, but also create
 
 When you open an element card, you can also access this same command via the card’s hamburger menu.
 
-The simulation file will be stored on the DataMiner Agent, in the protocol folder of the element in question: *C:\\Skyline DataMiner\\Protocols\\NAME\\VERSION\\Simulation_ELEMENTNAME.xml*
+The simulation file will be stored on the DataMiner Agent, in the protocol folder of the element in question: `C:\Skyline DataMiner\Protocols\NAME\VERSION\Simulation_ELEMENTNAME.xml`
 
 #### Resources app: Time-dependent capabilities \[ID 25409\]
 
@@ -71,7 +71,7 @@ When, in the *Resources* app, you assign a capability parameter to a resource, i
 
 #### Visual Overview: SetVar controls 'ListBox' and 'FilterComboBox' now use virtualization \[ID 25436\]
 
-The SetVar controls "ListBox" and "FilterComboBox" now both use virtualization. This will allow those controls to load large data sets without major performance loss.
+The SetVar controls "ListBox" and "FilterComboBox" now both use virtualization. This will allow those controls to load large datasets without major performance loss.
 
 #### Visual Overview: Retrieving a booking ID using the \[Reservation:\] placeholder \[ID 25447\]
 

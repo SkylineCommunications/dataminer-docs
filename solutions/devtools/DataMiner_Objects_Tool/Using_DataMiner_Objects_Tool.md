@@ -10,13 +10,13 @@ To access the DataMiner Objects Tool:
 
 1. Select *DataMiner Objects Tool* to start using the tool.
 
-   ![DataMiner Objects Tool](~/user-guide/images/DataMiner_Objects_Tool.png)
+   ![DataMiner Objects Tool](~/dataminer/images/DataMiner_Objects_Tool.png)
 
 ## The DataMiner Objects Tool user interface
 
 The UI of the DataMiner Objects Tool app consists of the following main components:
 
-![Low-Code App buttons](~/user-guide/images/Using_DataMiner_Objects_Tool.png)
+![Low-Code App buttons](~/dataminer/images/Using_DataMiner_Objects_Tool.png)
 
 All functionality of the tool is accessible via the *Filter All DataMiner Objects* button (1). Clicking the button launches the *DataMiner Objects Tool* interactive Automation script, which gives an overview of each supported DataMiner object type. You can then select one of the types to open a new dialog where filters can be defined.
 
@@ -32,7 +32,7 @@ For **DOM instances** (4), the app shows the total number of DOM instances in th
 
 To configure a filter:
 
-![Configuring filters](~/user-guide/images/Using_DataMiner_Objects_Tool_ConfiguringFilters.png)
+![Configuring filters](~/dataminer/images/Using_DataMiner_Objects_Tool_ConfiguringFilters.png)
 
 1. **Include or exclude filters** by selecting or clearing the checkbox next to an item property name.
 
@@ -53,7 +53,7 @@ To configure a filter:
 
 Once the items have been retrieved based on the filters you have configured, you can manually fine-tune the selection:
 
-![Fine-tuning results](~/user-guide/images/Using_DataMiner_Objects_Tool_FinetuningResults.png)
+![Fine-tuning results](~/dataminer/images/Using_DataMiner_Objects_Tool_FinetuningResults.png)
 
 - The **number of matching items** (1) is displayed to give a quick view on how many items in the system match the filters.
 
@@ -67,9 +67,9 @@ Once the items have been retrieved based on the filters you have configured, you
 
 After you have manually fine-tuned the results, you can execute the following actions for the selected objects:
 
-![Actions](~/user-guide/images/Using_DataMiner_Objects_Tool_Actions.png)
+![Actions](~/dataminer/images/Using_DataMiner_Objects_Tool_Actions.png)
 
-- To add a new multi-line textbox to the dialog containing all selected objects serialized in JSON format, click **Show JSON** (1).
+- To add a new multiline textbox to the dialog containing all selected objects serialized in JSON format, click **Show JSON** (1).
 
   This can for instance be used to investigate or debug issues, or to export the objects and import them in other applications.
 

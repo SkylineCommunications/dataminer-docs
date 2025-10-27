@@ -20,7 +20,7 @@ Note that support for subfolders in the `ProtocolScripts` folder is introduced i
 > - In a protocol or Automation script solution, you **cannot use NuGet packages that generate code** (e.g. the [Grpc.Tools](https://www.nuget.org/packages/Grpc.Tools) NuGet package). This is because when DataMiner compiles a protocol or Automation script, it only considers the C# code that is included in the XML file of the protocol or Automation script. Therefore, if you want to make use of this NuGet package, you need to include the generated code in the protocol or Automation script solution.
 > - When consuming different versions of the same NuGet package, make sure you are aware of the **potential pitfalls** when doing so as explained in [Run-time assembly binding](xref:Run_Time_Assembly_Binding).
 
-At Skyline, an [internal NuGet store](https://devcore3/nuget) is available where Skyline employees can produce and consume private libraries. As a Skyline employee, you will need to [add this store in Visual Studio](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) in order to use it.
+At Skyline, an [internal NuGet store](https://dev.azure.com/skyline-cloud/Private_NuGets/_artifacts/feed/skyline-private-nugets) is available where Skyline employees can produce and consume private libraries. As a Skyline employee, you will need to [add this store in Visual Studio](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) in order to use it.
 
 ## Licensing
 
@@ -60,7 +60,7 @@ To access the GitHub NuGet registry, you need a personal access token (PAT). Fol
 
    - **Scope**: Select the *read:packages* scope.
 
-1. Click *Generate token* in the lower left corner.
+1. Click *Generate token* in the lower-left corner.
 
 1. Copy your personal access token. You will not be able to see it again afterwards.
 
@@ -105,7 +105,7 @@ In case you are using a token that has an expiration date or if you entered the 
 
    - Visual Studio 2022: *Windows Credentials > nuget.pkg.github.com*
 
-1. Select the credentials you want to edit and click *Edit* in the lower left corner.
+1. Select the credentials you want to edit and click *Edit* in the lower-left corner.
 
 1. Update the username and/or password, and click *Save*.
 
@@ -145,3 +145,8 @@ If you encounter problems with credentials in Visual Studio, particularly when t
 
 > [!IMPORTANT]
 > If you choose to add your credentials in an unencrypted manner, it is highly recommended to restrict the token's scope to only allow reading packages, as explained in [step 1 of creating a personal access token](#step-1-creating-a-personal-access-token).
+
+## Accessing the Azure NuGet registry
+
+> [!NOTE]
+> This NuGet registry is to be used by Skyline employees only. More information is available on [Skyline Internal Docs](https://internaldocs.skyline.be/DevDocs/Skyline%20Software%20Development%20Toolkit/Private%20NuGet%20Store.html) (accessible for Skyline employees only).

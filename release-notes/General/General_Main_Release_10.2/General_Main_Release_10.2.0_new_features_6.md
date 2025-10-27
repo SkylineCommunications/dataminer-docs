@@ -356,7 +356,7 @@ A caching mechanism involving three separate caches will now be used when retrie
 
 ##### Configuration of the caches
 
-The caches can be configured in the *C:\\Skyline DataMiner\\ResourceManager\\Config.xml* file. See the following example.
+The caches can be configured in the `C:\Skyline DataMiner\ResourceManager\config.xml` file. See the following example.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -796,7 +796,7 @@ For instructions on how to install this manually, see [Securing the Elasticsearc
 
 The StandaloneCassandraBackup.exe tool can be used by an administrator to take a backup of a Cassandra database (either a single node or a cluster).
 
-From DataMiner 10.1.8 onwards, this tool will be available on each DMA server in the folder *C:\\Skyline DataMiner\\Tools*. As it only affects Cassandra files, it can be used on any DataMiner system regardless of version.
+From DataMiner 10.1.8 onwards, this tool will be available on each DMA server in the folder `C:\Skyline DataMiner\Tools`. As it only affects Cassandra files, it can be used on any DataMiner system regardless of version.
 
 For more information on this tool, see [Standalone Cassandra Backup Tool](xref:Standalone_Cassandra_Backup_Tool).
 

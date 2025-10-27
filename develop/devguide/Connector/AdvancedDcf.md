@@ -23,4 +23,4 @@ In this section:
 - <xref:AdvancedDcfBestPractices>
 
 > [!TIP]
-> See also: [DataMiner Connectivity Framework](xref:About_the_DataMiner_Connectivity_Framework) in the DataMiner User Guide.
+> See also: [DataMiner Connectivity Framework](xref:About_the_DataMiner_Connectivity_Framework).

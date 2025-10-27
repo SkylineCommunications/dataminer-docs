@@ -30,18 +30,14 @@ In addition, when this option is used, next to the DLL, a program database file 
 
 ### dllname=name.dll
 
+> [!IMPORTANT]
+> Avoid using this option if possible. Support for this option ends in DataMiner 10.7 (see [Software support lifecycles](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)).
+
 By default, every QAction is compiled into a DLL file at first use. This DLL file is stored in the C:\Skyline DataMiner\ProtocolScripts directory, and is assigned a name that is constructed in the following format:
 
 `[ProtocolName].[ProtocolVersion].QAction.[QactionID].dll`
 
 Example: Microsoft Platform.1.5.0.36.Qaction.27.dll
-
-> [!NOTE]
-> In case the /DataMiner/ProcessOptions@scriptingProcesses attribute in the DataMiner.xml configuration file has been set to "protocol", the DLL name will be as follows:
->
-> `[ProtocolName].[ProtocolVersion].QAction.[QactionID].[ProcessID].dll`
->
-> ProcessID is the process ID of the corresponding SLProtocol process.
 
 When you want the DLL file to include a meaningful name, enter that name in this options attribute.
 

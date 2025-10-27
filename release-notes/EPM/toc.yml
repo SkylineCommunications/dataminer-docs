@@ -35,6 +35,8 @@ items:
             topicUid: EPM_1.0.1_xPON_CU6
   - name: Integrated DOCSIS
     items:
+      - name: EPM 7.0.10 Integrated DOCSIS - preview
+        topicUid: EPM_7.0.10_Integrated_DOCSIS
       - name: EPM 7.0.9 Integrated DOCSIS
         topicUid: EPM_7.0.9_Integrated_DOCSIS
       - name: EPM 7.0.8 Integrated DOCSIS

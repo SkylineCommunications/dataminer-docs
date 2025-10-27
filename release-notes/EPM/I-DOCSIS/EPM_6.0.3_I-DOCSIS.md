@@ -32,4 +32,4 @@ At service group level, it could occur that the % CM Group Delay OOS, % CM Refle
 
 #### Run-time errors caused by Arris E6000 CCAP Platform elements \[ID 32090\]
 
-In some cases, elements using the Arris E6000 CCAP Platform connector could cause run-time errors.
+In some cases, elements using the Arris E6000 CCAP Platform connector could cause runtime errors.

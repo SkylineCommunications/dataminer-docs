@@ -107,4 +107,4 @@ If you click *Check for updates…*, the *DIS Update* dialog box will appear. Th
 
 ## Help
 
-If you click *Help*, the DataMiner Integration Studio user guide will open in a browser window.
+If you click *Help*, the DataMiner Integration Studio documentation will open in a browser window.

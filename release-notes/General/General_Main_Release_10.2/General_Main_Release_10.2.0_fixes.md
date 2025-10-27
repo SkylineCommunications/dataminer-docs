@@ -530,7 +530,7 @@ In some rare cases, overall memory usage of the SLAnalytics process would tempor
 
 #### Enabled soft-launch options could incorrectly be disabled \[ID 31033\]
 
-When no *SoftLaunchOptions.xml* file was found in the *C:\\Skyline DataMiner\\* root directory, soft-launch options that were enabled by default (e.g. the new average trending feature) would incorrectly be disabled.
+When no *SoftLaunchOptions.xml* file was found in the `C:\Skyline DataMiner\` root directory, soft-launch options that were enabled by default (e.g. the new average trending feature) would incorrectly be disabled.
 
 #### Interactive Automation scripts: Problem with file upload components \[ID 31064\]
 

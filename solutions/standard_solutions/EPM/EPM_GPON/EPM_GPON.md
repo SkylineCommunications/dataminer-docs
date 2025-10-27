@@ -16,6 +16,6 @@ In a typical xPON deployment, there are four main components:
 
 - **Optical Network Terminal (ONT)**: The terminal device located at the subscriber premises. This is the last physical connection between the subscriber and the OLT in the network.
 
-![xPON deployment](~/user-guide/images/EPM_GPON_deploy.png)
+![xPON deployment](~/dataminer/images/EPM_GPON_deploy.png)
 
 Other implementations are also possible. Those are focused on distance (less splits and longer fiber) or on speed (less subscribers by port). However, in general this typical deployment has the best balance between coverage, speed, and number of subscribers.

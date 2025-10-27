@@ -196,7 +196,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner Orchestrator: version 1.5.6
 - DataMiner SupportAssistant: version 1.6.6
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### Security enhancements [ID 38756] [ID 38650] [ID 38951]
 
@@ -409,9 +409,9 @@ When an Automation script sent an email to a user or a user group using an *Emai
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-When an element used SNMP or HTTP communication, a notification would only be sent to SLWatchdog when a poll group finished executing. As a result, when it took longer than 15 minutes to execute a poll group, an SLProtocol run-time error alarm would be generated and subsequently cleared when the poll group finished.
+When an element used SNMP or HTTP communication, a notification would only be sent to SLWatchdog when a poll group finished executing. As a result, when it took longer than 15 minutes to execute a poll group, an SLProtocol runtime error alarm would be generated and subsequently cleared when the poll group finished.
 
-In order to avoid such run-time error alarms from being generated, a check will now be performed when a response is received, and an additional notification will be sent to SLWatchdog when the first notification to SLWatchdog was sent more than one minute ago.
+In order to avoid such runtime error alarms from being generated, a check will now be performed when a response is received, and an additional notification will be sent to SLWatchdog when the first notification to SLWatchdog was sent more than one minute ago.
 
 #### STaaS: Failing request would not be retried [ID 38874]
 
@@ -438,7 +438,7 @@ Up to now, on STaaS systems, a notice would be generated when a DataMiner backup
 From now on, when a DataMiner backup is executed with the database backup option enabled, on a STaaS system, no database backup will be performed.
 
 > [!NOTE]
-> On STaaS systems, database backups are taken automatically. If you want a STaaS backup to be restored, contact [Skyline support](mailto:techsupport@skyline.be).
+> On STaaS systems, database backups are taken automatically. If you want a STaaS backup to be restored, contact [DataMiner Support](mailto:support@dataminer.services).
 
 #### StorageModule: Only final retry will be logged as error when a data storage request fails [ID 38897]
 
@@ -447,6 +447,14 @@ From now on, when a DataMiner backup is executed with the database backup option
 When a StorageModule client requests data to be stored, in some cases, a subscription exception can be thrown. Those data storage requests are retried automatically. However, up to now, each retry would be logged as error.
 
 From now on, only the final retry will be logged as error. All prior retries will only be logged when the log level is set to "debug".
+
+#### DataMiner Cube: 'Search for alarms' would list alarms with timestamps according to the local time zone of the client computer [ID 38899]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.4 -->
+
+Up to now, when you opened a new alarm tab, and did a search using the *Search for alarms* box, the alarms matching the search criterion would incorrectly show timestamps according to the local time zone of the client computer.
+
+From now on, when you use the *Search of alarms* box, the alarms matching the search criterion will show timestamps according to the server time, i.e. the local time zone of the DataMiner Agent to which the Cube client is connected.
 
 #### Problem with SLLog when stopping or restarting DataMiner [ID 38902]
 

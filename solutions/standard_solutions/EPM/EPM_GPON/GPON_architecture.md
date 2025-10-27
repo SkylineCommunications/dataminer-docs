@@ -12,7 +12,7 @@ The EPM xPON Solution uses components that extract information directly from the
 - [ONT data connector](#ont-data-connector): This connector is responsible for the ONT data reception and analysis. A generic Kafka stream is used to implement these capabilities.
 - [System connectors](#system-connectors): These connectors are designed to operate as peripherals within the EPM Solution. For xPON, most of the system connectors are used to include the physical network devices (if available) in the EPM aggregations and logical associations.
 
-![EPM xPON architecture](~/user-guide/images/EPM_GPON_architecture.png)
+![EPM xPON architecture](~/dataminer/images/EPM_GPON_architecture.png)
 
 ## Front-end connector
 
@@ -34,7 +34,7 @@ These connectors also register the ONT operative data provided by the third-part
 
 ## ONT data connector
 
-All operative data received for a xPON ONT is provided by a third party in a Kafka stream. To process it, the solution uses the [Generic Kafka Consumer](https://catalog.dataminer.services/result/driver/7373) connector. The received data is then parsed by a different set of [system connectors](#system-connectors) and finally aggregated according to the topology conditions.
+All operative data received for a xPON ONT is provided by a third party in a Kafka stream. To process it, the solution uses the [Generic Kafka Consumer](https://catalog.dataminer.services/details/172dd90c-5324-45c7-980f-df51d327d91c) connector. The received data is then parsed by a different set of [system connectors](#system-connectors) and finally aggregated according to the topology conditions.
 
 ## System connectors
 

@@ -12,7 +12,7 @@ The Ping Monitoring tool UI consists of the following main components:
 
 - [Overview pane](#the-ping-monitoring-overview-pane) (3)
 
-![Ping Monitoring UI](~/user-guide/images/PingMonitoring_UI.png)
+![Ping Monitoring UI](~/dataminer/images/PingMonitoring_UI.png)
 
 ## The Ping Monitoring header bar
 
@@ -50,13 +50,13 @@ You can find the following functionalities in the header bar of the application:
 
 The sidebar on the left of the Ping Monitoring tool contains buttons that can be used to access different pages:
 
-- ![Destinations](~/user-guide/images/Destinations_PM.png) : Clicking the *Destinations* button displays a list overview of all available destinations in your DataMiner System, along with all available information. See [The *Destinations* page](#the-destinations-page).
+- ![Destinations](~/dataminer/images/Destinations_PM.png) : Clicking the *Destinations* button displays a list overview of all available destinations in your DataMiner System, along with all available information. See [The *Destinations* page](#the-destinations-page).
 
-- ![Grid View](~/user-guide/images/Grid_View.png) : Clicking the *Grid View* button displays a grid overview of all available destinations in your DataMiner System. See [The *Grid View* page](#the-grid-view-page).
+- ![Grid View](~/dataminer/images/Grid_View.png) : Clicking the *Grid View* button displays a grid overview of all available destinations in your DataMiner System. See [The *Grid View* page](#the-grid-view-page).
 
-- ![Groups](~/user-guide/images/Groups_PM.png) : Clicking the *Groups* button displays an overview of all active groups in your DataMiner System. Each group corresponds to a Generic Ping element. See [The *Groups* page](#the-groups-page).
+- ![Groups](~/dataminer/images/Groups_PM.png) : Clicking the *Groups* button displays an overview of all active groups in your DataMiner System. Each group corresponds to a Generic Ping element. See [The *Groups* page](#the-groups-page).
 
-- ![Alarms](~/user-guide/images/Alarms_PM.png) : Clicking the *Alarms* button displays an overview of all active alarms in the groups. See [The *Alarms* page](#the-alarms-page).
+- ![Alarms](~/dataminer/images/Alarms_PM.png) : Clicking the *Alarms* button displays an overview of all active alarms in the groups. See [The *Alarms* page](#the-alarms-page).
 
 ## The Ping Monitoring overview pane
 
@@ -78,7 +78,7 @@ The following information is available for each destination:
 
 - **Cycle packet loss**: The percentage of lost packets during ping command and response process, e.g. *0.00 %*.
 
-Clicking the ![additional information](~/user-guide/images/additional_information.png) button displays additional information about the destination, including host information, results, settings, and more.
+Clicking the ![additional information](~/dataminer/images/additional_information.png) button displays additional information about the destination, including host information, results, settings, and more.
 
 With the buttons at the top of the page, you can [create, edit, and delete destinations](xref:Ping_Monitoring_managing_groups_destinations#managing-destinations).
 
@@ -86,7 +86,7 @@ With the buttons at the top of the page, you can [create, edit, and delete desti
 
 The *Grid View* page offers a compact grid overview of all destinations, ideal for managing a large number of destinations. The color of each grid tile indicates the associated destination's [alarm severity level](xref:Alarm_types#alarm-severity-levels).
 
-![Grid View](~/user-guide/images/Grid_View_Image.png)
+![Grid View](~/dataminer/images/Grid_View_Image.png)
 
 Click any tile in the grid to display additional information about the destination, including host information, results, settings, and more.
 
@@ -106,7 +106,7 @@ This is the main information that is available for each group:
 
 Selecting a group in the overview will display all destinations configured within that group in the *Destinations in Selected Group* pane.
 
-![Destinations selected group](~/user-guide/images/Destinations_Selected_Group.png)
+![Destinations selected group](~/dataminer/images/Destinations_Selected_Group.png)
 
 Clicking the *Slowest Destinations in Group* button will display any outliers in the groups, i.e. destinations that take a longer time than average to receive and respond to a ping command.
 
@@ -120,7 +120,7 @@ The *Alarms* page offers an overview of all active alarms in the groups. A filte
 
 On the *Destinations* and *Grid View* pages, a filter pane on the left enables you to narrow down destinations based on their properties.
 
-![Filter pane](~/user-guide/images/Filter_PM.png)
+![Filter pane](~/dataminer/images/Filter_PM.png)
 
 To limit the filter pane to an overview of the currently active filters, enable the toggle button in the top-right corner. Disable the toggle button to return to the full view.
 

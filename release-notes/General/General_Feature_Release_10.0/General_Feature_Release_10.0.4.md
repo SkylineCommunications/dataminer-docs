@@ -66,7 +66,7 @@ In the ListView component, which is used in the Bookings and Services apps as we
 
 In the new Cube X layout, by default, cards no longer have a Forward button in their header bar menu.
 
-If you want card header bar menus to contain a Forward button, then open the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file, and set the *commonServer.card.DisplayForwardButton* option to true.
+If you want card header bar menus to contain a Forward button, then open the `C:\Skyline DataMiner\Users\ClientSettings.json` file, and set the *commonServer.card.DisplayForwardButton* option to true.
 
 #### Visual Overview: New icons added to DataMiner stencils \[ID 25024\]
 
@@ -268,7 +268,7 @@ From now on, events associated with alarms of elements that are paused or stoppe
 
 #### DataMiner Cube - Services list: Only state change icons configured to perform a valid state change will be clickable \[ID 24753\]
 
-When life cycle management is enabled, then the services list allows you to change the state of the service by clicking an icon. From now on, you will only be able to click icons that are configured to perform a valid state change.
+When lifecycle management is enabled, then the services list allows you to change the state of the service by clicking an icon. From now on, you will only be able to click icons that are configured to perform a valid state change.
 
 #### DataMiner Cube - Visual Overview: Advanced editing pane improvements \[ID 24772\]\[ID 24794\]
 
@@ -311,7 +311,7 @@ Because client computers running a Microsoft Windows version prior to Windows 10
 
 Previously, the amount of simultaneous calls that native SLElement and SLDMS modules could make to the local SLNet process was limited to 1 and 5 respectively. This limit has now been removed. Both now use the same limit as other processes, i.e. 10 simultaneous calls.
 
-If you prefer to keep the call limits as they were, you can specify the following option in the *\<appSettings>* section of the *C:\\Skyline DataMiner\\Files\\SLNetCOM.dll.config* file:
+If you prefer to keep the call limits as they were, you can specify the following option in the *\<appSettings>* section of the `C:\Skyline DataMiner\Files\SLNetCOM.dll.config` file:
 
 ```xml
 <add key="UseLegacyThrottle" value="true" />

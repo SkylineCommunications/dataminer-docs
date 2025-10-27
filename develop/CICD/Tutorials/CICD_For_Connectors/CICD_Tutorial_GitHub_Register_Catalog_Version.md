@@ -13,10 +13,10 @@ Expected duration: 10 minutes
 
 ## Prerequisites
 
-- An [organization key](xref:Managing_DCP_keys#organization-keys) or [system key](xref:Managing_DCP_keys#system-keys) or account with the *Owner* role in order to access/create keys.
+- An [organization key](xref:Managing_dataminer_services_keys#organization-keys) or account with the *Owner* role in order to access/create keys.
 
   > [!TIP]
-  > See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user)
+  > See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_dataminer_services_user)
 
 - A registered Catalog item.
 
@@ -94,7 +94,7 @@ Expected duration: 10 minutes
 
 To securely store sensitive information like the API token, you will need to add a GitHub secret:
 
-1. Create an [organization key](xref:Managing_DCP_keys#organization-keys) token to authenticate the register version call from the Catalog API:
+1. Create an [organization key](xref:Managing_dataminer_services_keys#organization-keys) token to authenticate the register version call from the Catalog API:
 
    1. In the [Admin app](https://admin.dataminer.services/), under *Organization* in the sidebar on the left, select the *Keys* page.
 
@@ -102,23 +102,23 @@ To securely store sensitive information like the API token, you will need to add
 
    1. Configure the key with a label of your choice and the permission *Register catalog items*.
 
-      ![Organization Key](~/user-guide/images/tutorial_catalog_registration_create_org_key.png)
+      ![Organization Key](~/dataminer/images/tutorial_catalog_registration_create_org_key.png)
 
    1. Copy the key so you can use it later.
 
    > [!IMPORTANT]
-   > You need to have the *Owner* role in order to access/create organization keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user) for information on how to change a role for a user.
+   > You need to have the *Owner* role in order to access/create organization keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_dataminer_services_user) for information on how to change a role for a user.
 
 1. In your GitHub repository, go to the *Settings* page.
 
 1. In the sidebar on the left, select *Secrets and variables* > *Actions*, and then click the *New repository secret* button.
 
-   ![New repository secret button](~/user-guide/images/tutorial_catalog_registration_new_secret.png)
+   ![New repository secret button](~/dataminer/images/tutorial_catalog_registration_new_secret.png)
 
 1. Specify the name `API_TOKEN`, and add the organization key you copied earlier as the value.
 
 > [!NOTE]
-> In case using an organization key results in issues, you can try using a [system key](xref:Managing_DCP_keys#system-keys) instead.
+> In case using an organization key results in issues, you can try using a [system key](xref:Managing_dataminer_services_keys#system-keys) instead.
 
 ## Step 3: Push the workflow file
 
@@ -146,6 +146,6 @@ You can also manually trigger the workflow by navigating to the *Actions* tab in
 
    You can view detailed logs for each step to check for errors or success messages.
 
-1. When the workflow has run successfully, navigate to the item in the DataMiner Catalog.
+1. When the workflow has run successfully, navigate to the item in the Catalog.
 
    You will be able to see the registered version in the **versions** tab.

@@ -15,17 +15,17 @@ The latest **mbgNMS installation package** can be downloaded using the link belo
 > [!TIP]
 > Refer to the [Meinberg NMS manual](https://community.dataminer.services/download/slc_um_meinberg_nms_rev000-pdf-2/) and release notes for detailed instructions.
 
-- Latest release: [Meinberg Element Manager 1.4.0](https://community.dataminer.services/download/meinberg-element-manager-1-4-0/)
+- Latest release: [Meinberg Element Manager 1.4.1 CU1](https://community.dataminer.services/download/meinberg-element-manager-1-4-1-cu1/)
 
-- Release notes: [Release notes mbgNMS 1.4.0](xref:MbgNMS_1.4.0)
+- Release notes: [Release notes mbgNMS 1.4.1](xref:MbgNMS_1.4.1)
 
 - Minimum required DataMiner version: [10.4.0 Main Release](https://community.dataminer.services/download/dataminer-main-release-10-4-0-0-15230-cu10/)
 
 ![Upgrading](~/develop/images/mbgNMS_Upgrading_across_major_versions.png)
 
 > [!IMPORTANT]
-> If you are using an older DataMiner version and you want to upgrade to a DataMiner version that does not immediately follow your current version, see [**Best practices when upgrading across major versions**](https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Agents/Upgrading_a_DMA/Preparing_to_upgrade_a_DataMiner_Agent.html#best-practices-when-upgrading-across-major-versions).  
-> Please also make sure the system meets the following [**Prerequisite Checks**](https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Agents/Upgrading_a_DMA/Preparing_to_upgrade_a_DataMiner_Agent.html#prerequisite-checks) before upgrading.
+> If you are using an older DataMiner version and you want to upgrade to a DataMiner version that does not immediately follow your current version, see [**Best practices when upgrading across major versions**](https://docs.dataminer.services/dataminer/Administrator_guide/DataMiner_Agents/Upgrading_a_DMA/Preparing_to_upgrade_a_DataMiner_Agent.html#best-practices-when-upgrading-across-major-versions).  
+> Please also make sure the system meets the following [**Prerequisite Checks**](https://docs.dataminer.services/dataminer/Administrator_guide/DataMiner_Agents/Upgrading_a_DMA/Preparing_to_upgrade_a_DataMiner_Agent.html#prerequisite-checks) before upgrading.
 
 ## Content
 
@@ -47,3 +47,18 @@ The latest **mbgNMS installation package** can be downloaded using the link belo
 ## Interested in a demo?
 
 Feel free to reach out to Meinberg's or [Skyline's sales team](https://community.dataminer.services/get-in-touch/sales-team/). We have demo systems available to show you everything about the Meinberg NMS and DataMiner.
+
+<style>
+.column a {
+  display: inline-block;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.column a:hover {
+  background-color: #f0f4ff; /* light background on hover */
+  transform: scale(1.05);   /* slightly bigger */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+</style>

@@ -4,7 +4,9 @@ uid: GetAlarmStatesForElement
 
 # GetAlarmStatesForElement
 
-Use this method to retrieve the relative duration (in percent) of every alarm severity for the specified element during the specified timespan (available from DataMiner 9.5.8 onwards).
+Use this method to retrieve the relative duration (in percent) of every alarm severity for the specified element during the specified timespan.
+
+<!-- Available from DataMiner 9.5.8 onwards. -->
 
 ## Input
 

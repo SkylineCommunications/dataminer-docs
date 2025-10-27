@@ -44,7 +44,7 @@ A friendly name can be passed along in the `elementName`, which is used as conte
 
 ##### Endpoint details
 
-You also need to pass a [DataSourceConfiguration](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration) that specifies the details of the endpoint you want to connect with.
+You also need to pass a [DataSourceConfiguration](xref:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.DataSourceConfiguration) that specifies the details of the endpoint you want to connect with.
 
 ```csharp
 var config = new DataSourceConfiguration();
@@ -59,7 +59,7 @@ config.Port = 10164;
 
 On top of that, there are some additional **parameters for authentication**. There is support for credentials and client certificates. In case of a self-signed certificate, it is important that the root certificate of the path is part of the *Trusted Root Certification Authorities* certificate store in Windows.
 
-To use a **client certificate**, configure the path where it can be found in [ClientCertificate](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration.ClientCertificate).
+To use a **client certificate**, configure the path where it can be found in [ClientCertificate](xref:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.DataSourceConfiguration.ClientCertificate).
 
 ```csharp
 config.ClientCertificate = @"C:\Certificates\client-auth-cert.pfx";
@@ -82,14 +82,14 @@ config.Password = Convert.ToString(protocol.GetParameter(Parameter.datasourcepas
 
 ##### Logging
 
-To be able to **log** the information about what is being handled by the middleware, you will need to pass an [ILogger](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ILogger).
+To be able to **log** the information about what is being handled by the middleware, you will need to pass an [ILogger](xref:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.ILogger).
 
-An example of an [ILogger](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ILogger) implementation for a DataMiner connector could be the following:
+An example of an [ILogger](xref:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.ILogger) implementation for a DataMiner connector could be the following:
 
 ```csharp
 namespace QAction_1.Loggers
 {
-    using Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils;
+    using Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api;
     using Skyline.DataMiner.Scripting;
 
     internal class DataMinerConnectorLogger : ILogger
@@ -156,7 +156,7 @@ private void OnConnectionStateChanged(object sender, EventArgs e)
 ```
 
 > [!NOTE]
-> In case you are setting up a secure channel, it is important that the server certificate is issued to the hostname configured in the [DataSourceConfiguration](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration). The whole certificate chain needs to be trusted and must not be expired. If you are running **CommunicationGateway 1.2.2** or higher, you can optionally skip certificate validation for certain whitelisted hosts with the [SkipVerifyHosts](xref:Skipping_certificate_validation_when_consuming_gRPC_services) option. Use this with caution, as improper certificate validation can lead to a range of different security threats such as man-in-the-middle attacks.
+> In case you are setting up a secure channel, it is important that the server certificate is issued to the hostname configured in the [DataSourceConfiguration](xref:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.DataSourceConfiguration). The whole certificate chain needs to be trusted and must not be expired. If you are running **CommunicationGateway 1.2.2** or higher, you can optionally skip certificate validation for certain whitelisted hosts with the [SkipVerifyHosts](xref:Skipping_certificate_validation_when_consuming_gRPC_services) option. Use this with caution, as improper certificate validation can lead to a range of different security threats such as man-in-the-middle attacks.
 
 ### Disconnecting
 
@@ -196,7 +196,7 @@ public class QAction : IDisposable
 
 ### Retrieving the capabilities
 
-You can find more info on the `Capabilities` RPC in the [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#capabilities).
+For more info on the `Capabilities` RPC, see [About OpenConfig: Capabilities](xref:DSI_OpenConfig_Introduction#capabilities).
 
 ```csharp
 var capabilities = client.Capabilities();
@@ -214,7 +214,7 @@ It is very useful to have this information available to know which models you ca
 
 ### Getting a value in the YANG path
 
-You can find more info on the `Get` RPC in the [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#get).
+For more info on the `Get` RPC, see [About OpenConfig: Get](xref:DSI_OpenConfig_Introduction#get).
 
 [Get](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Get%2A) allows you to retrieve values from one or more YANG paths.
 
@@ -242,7 +242,7 @@ string interfaceStatePath = "interfaces/interface/state";
 
 ### Setting a value in the YANG path
 
-You can find more info on the `Set` RPC in the [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#set).
+For more info on the `Set` RPC, see [About OpenConfig: Set](xref:DSI_OpenConfig_Introduction#set).
 
 ```csharp
 client.Set("system/config/login-banner", "Hello DataMiner!");
@@ -252,7 +252,7 @@ In OpenConfig, the read-write objects are commonly stored under the */config* pa
 
 ### Deleting a value in the YANG path
 
-In the background, this uses the `Set` RPC with delete arguments. For more info on the `Set` RPC, see [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#set).
+In the background, this uses the `Set` RPC with delete arguments. For more info on the `Set` RPC, see [About OpenConfig: Set](xref:DSI_OpenConfig_Introduction#set).
 
 ```csharp
 client.Delete("system/config/login-banner");
@@ -260,7 +260,7 @@ client.Delete("system/config/login-banner");
 
 ### Subscribing to a YANG path
 
-You can find more info on the `Subscribe` RPC in the [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#subscribe).
+For more info on the `Subscribe` RPC, see [About OpenConfig: Subscribe](xref:DSI_OpenConfig_Introduction#subscribe).
 
 [Subscribe](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe%2A) allows you to create a subscription. It needs a unique name within the client to register itself in the CommunicationGateway DxM and one or more YANG paths that you are interested in.
 

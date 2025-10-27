@@ -4,7 +4,7 @@ uid: CICD_Jenkins_Examples
 
 # Jenkins CI/CD examples
 
-These are basic pipeline examples for uploading to the DataMiner Catalog and/or deploying to DMAs connected to dataminer.services.
+These are basic pipeline examples for uploading to the Catalog and/or deploying to DMAs connected to dataminer.services.
 
 We recommend combining these with quality control beforehand, such as executing static code analysis and running tests.
 
@@ -13,9 +13,9 @@ We recommend combining these with quality control beforehand, such as executing 
 
 ## Basic upload for non-connector items
 
-This is a basic pipeline for uploading non-connector items to the DataMiner Catalog. Eventually, you will also be able to deploy such items to DMAs connected to dataminer.services using this pipeline, but this is not yet supported at the moment.
+This is a basic pipeline for uploading non-connector items to the Catalog. Eventually, you will also be able to deploy such items to DMAs connected to dataminer.services using this pipeline, but this is not yet supported at the moment.
 
-To upload an item, you will need *DATAMINER_TOKEN* as a secret. This will be the **key for the DataMiner organization** as provided through the [DataMiner Admin app](xref:CloudAdminApp).
+To upload an item, you will need *DATAMINER_TOKEN* as a secret. This will be the **key for the DataMiner organization** as provided through the [Admin app](xref:About_the_Admin_app).
 
 On a **Ubuntu** runner:
 
@@ -46,7 +46,8 @@ pipeline
                     dotnet publish \
                         -p:Version="0.0.${BUILD_NUMBER}-prerelease" \
                         -p:VersionComment="This is just a pre-release version." \
-                        -p:CatalogPublishKeyName="${DATAMINER_TOKEN}"
+                        -p:CatalogPublishKeyName="DATAMINER_TOKEN" \
+                        -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
                 '''
             }
         }
@@ -84,7 +85,8 @@ pipeline
                     dotnet publish `
                         -p:Version="0.0.%BUILD_NUMBER%-prerelease" `
                         -p:VersionComment="This is just a pre-release version." `
-                        -p:CatalogPublishKeyName="%DATAMINER_TOKEN%"
+                        -p:CatalogPublishKeyName="DATAMINER_TOKEN" `
+                        -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
                 '''
             }
         }
@@ -95,7 +97,7 @@ pipeline
 
 ## Basic pipeline for connectors
 
-For this pipeline, you will need a dataminer.services **key for the specific DMS** to which you want to deploy the connectors. For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
+For this pipeline, you will need a dataminer.services **key for the specific DMS** to which you want to deploy the connectors. For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
 
 In the example below, the Jenkins server is on a fixed Windows machine, and local caching is used to avoid re-downloading the tools:
 

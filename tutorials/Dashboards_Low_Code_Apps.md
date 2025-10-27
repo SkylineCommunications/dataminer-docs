@@ -10,8 +10,7 @@ keywords: low-code, low code, lowcode
 | Name | Description |
 |--|--|
 | [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message) | Add a custom message when a query returns no results for any of the following components of a dashboard: table, grid, pie & donut chart, line & area chart, timeline, and node edge graph. |
-| [Leveraging feeds in a web component](xref:Tutorial_Dashboards_Feeds_Web_Component) | Embed another webpage or HTML content directly into your dashboard using a web component. |
-| [Leveraging controls and feeds to create a dynamic GQI query](xref:Tutorial_Dashboards_Controls_And_Feeds_Query) | Discover how to harness controls and feeds that are used in a GQI query, so that an update to the user input will lead to an updated GQI result. |
+| [Using controls to create a dynamic GQI query](xref:Tutorial_Dashboards_Controls_Query) | Learn how to link controls to a GQI query so that changes in user input immediately update the query results. |
 | [Getting started with node edge graphs](xref:Tutorial_Apps_Node_Edge)| Build a basic network diagram using GQI queries with a node edge graph component. |
 | [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
 | [Creating an anomaly overview dashboard](xref:Creating_Anomaly_Overview_Dashboard) | Create a dashboard that shows an overview of behavioral change event data. |
@@ -39,8 +38,9 @@ keywords: low-code, low code, lowcode
 | [Chaining actions](xref:Tutorial_Apps_Chaining_Actions) | Perform consecutive actions in a low-code app. |
 | [Using the stepper component in a low-code app](xref:TutorialStepper) | Add and configure a stepper component in a low-code app to help with managing incidents and their different states. |
 | [Styling a table component](xref:Tutorial_Apps_Style_A_Table) | Style a table component in a low-code app using GQI queries and the Template Editor. |
-| [Using the maps component in a low-code app](xref:TutorialMaps) | Add and configure a maps component in a low-code app to visualize cell towers, their connections, and their coverage. |
+| [Using the maps component in a low-code app](xref:MapsTutorial) | Add and configure a maps component in a low-code app to visualize cell towers, their connections, and their coverage. |
 | [Getting started with the grid component](xref:Tutorial_Apps_Grid) | Getting started with a grid component in a low-code app using GQI queries and the Template Editor. |
+| [Leveraging feeds in a web component](xref:Tutorial_Dashboards_Feeds_Web_Component) | Embed another webpage or HTML content directly into your dashboard using a web component. |
 | [Creating a visually appealing and user-friendly low-code app](xref:Tutorial_App_Design) | Create an intuitive, visually appealing, and user-friendly low-code app, learning about best practices in low-code app design. |
 | [Using flows in a low-code app](xref:Tutorial_Apps_Flows) | Use flows to only load items inside of the timeline viewport and reuse panels. |
 | [Using variables in a low-code app](xref:Tutorial_Apps_Variables) | Use a variable to dynamically filter elements in a low-code app based on their state. |
@@ -57,4 +57,4 @@ keywords: low-code, low code, lowcode
 | [Providing a custom sort order](xref:GQI_Redirect_Sort_Tutorial) | Implement a custom GQI column sort order using a custom operator. |
 | [Building a GQI data source that fetches satellites](xref:Ad_hoc_Tutorials_Satellites) | Go through an example script that forwards satellites data to the GQI. |
 | [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
-| [Building a GQI data source that retrieves data from a DMS](xref:Ad_hoc_Tutorials_GQIDMS) | Create an ad hoc data source to retrieve data from your DMS. |
+| [Building a GQI data source that retrieves data from a DMS](xref:Ad_hoc_Tutorials_Interact_With_DMS) | Create an ad hoc data source to retrieve data from your DMS. |

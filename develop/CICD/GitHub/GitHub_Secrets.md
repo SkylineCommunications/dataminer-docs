@@ -26,7 +26,7 @@ A key should be added as a secret in the repository, so that it is stored secure
 
 1. In the top-right corner, click *New repository secret*.
 
-1. Specify a name for your secret (e.g. `DATAMINER_DEPLOY_KEY`), paste the key as the value for the secret, and then save the secret.
+1. Specify a name for your secret (e.g. `DATAMINER_TOKEN`), paste the key as the value for the secret, and then save the secret.
 
    Once it is saved, your secret will be displayed in the *repository secrets*, and you will be able to use it in a workflow.
 
@@ -42,14 +42,14 @@ Several provided workflows may require static code analysis through SonarCloud i
 
 ## dataminer.services keys
 
-In the [DataMiner Admin app](xref:CloudAdminApp), two different types of keys can be created: system keys and organization keys. It is important that you use the correct key for specific actions.
+In the [Admin app](xref:About_the_Admin_app), two different types of keys can be created: system keys and organization keys. It is important that you use the correct key for specific actions.
 
-- A dataminer.services **system key** is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS. It can also be used to upload private artifacts to the DataMiner Catalog that will only be accessible for the organization that your DMS belongs to. To deploy connectors, you will need this key.
+- A dataminer.services **system key** is scoped to the specific DMS for which it was created and can only be used for volatile uploads and deployments to that DMS. All other uploads and deployments need to use the organization key.
 
   - Name: DATAMINER_DEPLOY_KEY
-  - Value: See [Managing dataminer.services keys](xref:Managing_DCP_keys).
+  - Value: See [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
 
-- A dataminer.services **organization key** is scoped to the specific organization for which it was created and can **only be used to perform uploads to the DataMiner Catalog**. This includes uploading private artifacts to the DataMiner Catalog that will only be accessible for the organization that your DMS belongs to. To upload non-connector items, you will need this key.
+- A dataminer.services **organization key** is scoped to the specific organization for which it was created and can be used to upload to and deploy from the Catalog. This includes uploading private artifacts to the Catalog that will only be accessible for the organization that your DMS belongs to. To upload and deploy items, you will need this key.
 
   - Name: DATAMINER_TOKEN
-  - Value: See [Managing dataminer.services keys](xref:Managing_DCP_keys).
+  - Value: See [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).

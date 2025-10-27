@@ -4,9 +4,75 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 13 October 2025 - Security - CloudGateway 2.17.14 - Security Update
+
+A security issue introduced in CloudGateway 2.17.13 has been fixed.
+
+#### 08 September 2025 - Enhancement - CloudGateway 2.17.13 - Dependencies updated
+
+Several dependencies have been updated.
+
+#### 27 August 2025 - Enhancement - CloudGateway 2.17.12 - General improvements
+
+General improvements have been made to the way CloudGateway handles tasks, making the DxM more robust and also improving its shutdown procedure.
+
+#### 24 July 2025 - Fix - CloudGateway 2.17.11 - Incorrect connectivity warnings due to incomplete validation
+
+An issue was introduced in CloudGateway 2.17.5 where the connection to dataminer.services was only validated by IP address, without falling back to DNS as expected. On systems where the firewall is configured to allow traffic based on DNS rather than IP, this could result in incorrect connectivity warnings in the Admin app. This issue has now been resolved.
+
+#### 07 July 2025 - Fix - CloudGateway 2.17.10 - Unhandled exception while setting up connection could cause a DxM restart
+
+When an exception was encountered while setting up the connection, this could cause the CloudGateway DxM to stop working correctly and then restart.
+
+#### 30 June 2025 - Fix - CloudGateway 2.17.9 - Problem with dashboard sharing in proxy setups
+
+In proxy setups, sharing a dashboard or trying to modify a shared dashboard could result in the following error message: `Sharing dashboard failed. Error trapped: Something went wrong while fetching the sharing URL.` This issue has now been resolved.
+
+#### 24 June 2025 - Enhancement - CloudGateway 2.17.8 - Improved upgrade process
+
+Improvements have been made to the startup and shutdown of the DxM, which improves the upgrade process.
+
+#### 17 June 2025 - Enhancement - CloudGateway 2.17.7 - Improved upgrade process
+
+Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
+
+#### 17 June 2025 - Enhancement - CloudGateway 2.17.7 - Endpoint added for future use
+
+An endpoint has been added to the ConnectionTester tool, which will be required in the future.
+
+#### 17 June 2025 - Fix - CloudGateway 2.17.7 - Problem when subscribing during NATS message broker reconnect
+
+Initiating a subscription while the NATS message broker was reconnecting could cause the DxM to stop functioning correctly. This has been fixed.
+
+#### 17 June 2025 - Enhancement - CloudGateway 2.17.7 - Dependencies updated
+
+Several dependencies have been updated.
+
+#### 17 June 2025 - Fix - CloudGateway 2.17.7 - Problem caused by rapid file changes [ID 42763]
+
+​Rapid file changes in *DataMiner.xml* or *MaintenanceSettings.xml* could cause a problem in CloudGateway, causing the DxM to restart.
+
+#### 4 April 2025 - Enhancement - CloudGateway 2.17.4 - Dependencies updated [ID 42682]
+
+Several dependencies have been updated.
+
+#### 4 April 2025 - Enhancement - CloudGateway 2.17.4 - Improved token refresh [ID 42627]
+
+The tokens to authenticate towards dataminer.services no longer rely on NATS to refresh. This means the tokens will now continue to refresh even when NATS is unavailable.
+
+#### 4 April 2025 - Fix - CloudGateway 2.17.4 - TCP port leak [ID 42458]
+
+A TCP port leak could occur in the CloudGateway, especially when there was an issue with the connection to dataminer.services.
+
+#### 4 April 2025 - Fix - CloudGateway 2.17.4 - Connection issue caused by hibernation mode [ID 42383]
+
+​When the DataMiner CloudGateway DxM was run on a machine that goes into hibernation mode (e.g. a laptop or desktop computer), the process to create the connection to dataminer.services could get stuck as a side effect of the hibernation mode. To prevent this, this process will now time out after 30 seconds, and a new attempt will be made.
+
+This does not affect machines that do not go into hibernation mode (e.g. servers).
+
 #### 30 January 2025 - Fix - CloudGateway 2.17.2 - Reconnect banner continually showing when remote access is used [ID 42086]
 
-With the Remote Access and Live Sharing performance and stability improvements released on the 27th of January (rolled back on the 29th of January), if CloudGateway version 2.16.0 - 2.17.1 was used, the reconnect banner showed up all the time while remote access was used. This issue has been fixed. 
+With the Remote Access and Live Sharing performance and stability improvements released on the 27th of January (rolled back on the 29th of January), if CloudGateway version 2.16.0 - 2.17.1 was used, the reconnect banner showed up all the time while remote access was used. This issue has been fixed.
 
 #### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Access tokens instantly refreshed when cloud session is manually renewed [ID 42081]
 
@@ -26,7 +92,7 @@ Cloud Gateway will now offload error information in case the running state of a 
 
 #### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Cloud connection performance and stability improvements [ID 41733]
 
-From now on, the CloudGateway DxM will create multiple connections to dataminer.services instead of one, which is possible since the recent [Remote Access and Live Sharing performance and stability improvements](xref:DCP_change_log_2025#27-january-2025---enhancement---remote-access-and-live-sharing-performance-and-stability-improvements-id-42043).
+From now on, the CloudGateway DxM will create multiple connections to dataminer.services instead of one, which is possible since the recent [Remote Access and Live Sharing performance and stability improvements](xref:dataminer_services_change_log_2025#27-january-2025---enhancement---remote-access-and-live-sharing-performance-and-stability-improvements-id-42043).
 
 This enhancement improves **performance** because it allows a higher request throughput.
 

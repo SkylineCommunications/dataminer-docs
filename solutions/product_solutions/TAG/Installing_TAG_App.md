@@ -26,7 +26,7 @@ uid: Installing_TAG_App
 
 ## Deploying the DataMiner TAG Management app
 
-1. Look up the [*TAG Management* package](https://catalog.dataminer.services/details/package/6076) in the DataMiner Catalog.
+1. Look up the [*TAG Management* package](https://catalog.dataminer.services/details/0ef8f78a-beeb-4ec0-b321-e79b26b393ce) in the Catalog.
 
 1. Click the *Deploy* button.
 
@@ -40,7 +40,7 @@ To access the TAG Management application:
 
 1. Select *TAG Management* to start using the application.
 
-   ![TAG Management](~/user-guide/images/TAG_application.png)
+   ![TAG Management](~/dataminer/images/TAG_application.png)
 
 > [!NOTE]
 > This application enhances the functionality of existing TAG MCM and MCS elements on your DMA. If these elements have not been configured yet, [add the necessary elements](xref:Adding_elements) using the [appropriate protocols](https://docs.dataminer.services/connector/doc/TAG_Video_Systems_MBC-7000.html).

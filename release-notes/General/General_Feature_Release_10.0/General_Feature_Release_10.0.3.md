@@ -73,7 +73,7 @@ protocol.NotifyDataMiner(182 /*NT_DELETE_FOLDER*/, folderName, bRecycle);
 ```
 
 > [!NOTE]
-> If a relative path is passed to the NT_DELETE_FOLDER function, it will assume it to be relative to the *C:\\Skyline DataMiner\\Documents\\* folder. So, in the example above, the function will try to delete the *C:\\Skyline DataMiner\\Documents\\Configurations* folder. If you want it to delete the *C:\\Skyline DataMiner\\Configurations* folder, then you have to specify the full path.
+> If a relative path is passed to the NT_DELETE_FOLDER function, it will assume it to be relative to the `C:\Skyline DataMiner\Documents` folder. So, in the example above, the function will try to delete the `C:\Skyline DataMiner\Documents\Configurations` folder. If you want it to delete the `C:\Skyline DataMiner\Configurations` folder, then you have to specify the full path.
 
 ### DMS Cube
 
@@ -196,9 +196,9 @@ The parameter feed allows you to select multiple parameters from a predefined li
 
 A new setting, *Auto-expand parameters*, is now available for the parameter feed component. If this setting is selected, all tables and groups in the component will by default be expanded.
 
-#### Dashboards app: New Bookings data set & Node edge graph component improvements \[ID 24480\]
+#### Dashboards app: New Bookings dataset & Node edge graph component improvements \[ID 24480\]
 
-A new *Bookings* data set is now available in the Dashboards app, which can be filtered on a specific time range. This can be used to add booking data to a *Drop-down*, *List* or *Tree* feed component. If the entire booking data set is added, a time range feed should also be added as a filter. Booking data can also be added as a filter to a *Node edge graph* component. To specify a booking data feed in a URL, specify *bookings=bookingsID*.
+A new *Bookings* dataset is now available in the Dashboards app, which can be filtered on a specific time range. This can be used to add booking data to a *Dropdown*, *List*, or *Tree* component. If the entire booking dataset is added, a time range feed should also be added as a filter. Booking data can also be added as a filter to a *Node edge graph* component. To specify a booking data feed in a URL, specify *bookings=bookingsID*.
 
 Because it is now possible to use a booking data filter, the *Reservation instance ID* setting is no longer available for the *Node edge graph* component. If a service filter is used for this component, it must be linked with a time range feed. Finally, the *Service definition* setting for the *Node edge graph* component has been changed from a text box to a drop-down list.
 
@@ -281,7 +281,7 @@ A number of enhancements have been made with regarding to the masking of DataMin
 
 #### Run-time errors will now be generated when SLDataMiner halts while executing start, stop or restart actions for elements \[ID 24228\]
 
-When, for whatever reason, SLDataMiner should halt while executing start, stop or restart actions for a particular element, from now on, a run-time error will be generated.
+When, for whatever reason, SLDataMiner should halt while executing start, stop or restart actions for a particular element, from now on, a runtime error will be generated.
 
 #### DataMiner Cube: Enhanced user picture icons in search results \[ID 24364\]\[ID 24573\]
 

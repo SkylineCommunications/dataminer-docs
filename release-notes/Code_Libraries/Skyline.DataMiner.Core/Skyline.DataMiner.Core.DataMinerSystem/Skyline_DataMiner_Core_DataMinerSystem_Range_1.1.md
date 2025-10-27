@@ -7,11 +7,244 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.3.5
+
+#### Fix - AgentId property of DmsAutomationScriptRunOptions ignored when executing a script [ID 43923]
+
+When an Automation script was executed via DmsAutomationScript, the AgentId specified in DmsAutomationScriptRunOptions was not applied when constructing the SLNet message, causing the script to run on the default/incorrect Agent. This has been corrected so that the specified AgentId is now respected.
+
+### 1.1.3.4
+
+#### New feature - Added TryParse methods to DmsElementId and DmsServiceId structs [ID 43535]
+
+The DmsElementId and DmsServiceId structures have been extended with a TryParse method.
+
+Example usage:
+
+```csharp
+string dmaEidString = "208/13";
+bool result = DmsElementId.TryParse(dmaEidString, out var dmaEid);
+```
+
+#### Fix - Fixed implementation of IsVersionHigher method of IDma interface [ID 43446]
+
+The implementation of the IsVersionHigher (IDma) method has been corrected so that it now correctly compares the version of the Agent with the specified version.
+
+This method verifies if the provided version number is higher than the DataMiner Agent version. Note that this method only supports the formats "V.W.X.Y" or "V.W.X.Y-CUZ" where V, W, X, Y, and Z are numbers. The CU is ignored in the comparison. The method returns **true** if the specified version number is higher than the version of this DataMiner Agent; otherwise, **false** is returned.
+
+Example usage:
+
+```csharp
+string version = "10.0.3.0-CU0";
+
+var agent = dms.GetAgent();
+var isHigher = agent.IsVersionHigher(version);
+```
+
+### 1.1.3.3
+
+> [!IMPORTANT]
+> In this version, **new monitors** have been added to support **usage outside of protocols** (e.g. in Automation scripts or ad hoc data sources). These allow external code to subscribe to state, name, or alarm level changes without relying on SLProtocol. However, subscriptions created using these monitors **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system. Only monitors on *IDms*, *IDmsElement*, *IDmsTable*, and **IDmsStandaloneParameter** are supported for now. If you need monitor support elsewhere, please contact <support.boost@skyline.be> to request it.
+
+#### New feature - Added monitor methods to standalone parameter interfaces
+
+The `IDmsStandaloneParameter` and `IDmsStandaloneParameter<T>` interfaces have been extended with the following methods to allow the monitoring of value changes:
+
+- `IDmsStandaloneParameter` interface:
+  - `void StopValueMonitor(string sourceId, bool force = false)`
+  - `void StopValueMonitor(string sourceId, TimeSpan subscribeTimeout, bool force = false)`
+- `IDmsStandaloneParameter<T>` interface:
+  - `void StartValueMonitor(string sourceId, Action<ParamValueChange<T>> onChange)`
+  - `void StartValueMonitor(string sourceId, Action<ParamValueChange<T>> onChange, TimeSpan subscribeTimeout)`
+
+### 1.1.3.2
+
+> [!IMPORTANT]
+> In this version, **new monitors** have been added to support **usage outside of protocols** (e.g. in Automation scripts or ad hoc data sources). These allow external code to subscribe to state, name, or alarm level changes without relying on SLProtocol. However, subscriptions created using these monitors **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system. Only monitors on *IDms*, *IDmsElement*, and *IDmsTable* are supported for now. If you need monitor support elsewhere, please reach out to request it.
+
+#### New feature - Monitor support for non-protocol use cases
+
+The *IDms*, *IDmsElement*, and *IDmsTable* interfaces have been extended with new `Start*Monitor` and `Stop*Monitor` methods, enabling stateful event subscriptions **outside of protocols** (e.g. in ad hoc data sources or external integrations). These are alternative APIs for monitoring DataMiner behavior in custom contexts without direct use of SLProtocol. This extension provides flexible, lightweight monitoring capabilities for many integration scenarios outside the traditional protocol-based flow.
+
+The following types of monitors are supported:
+
+- On *IDmsElement*:
+
+  - `StartAlarmLevelMonitor` / `StopAlarmLevelMonitor`
+  - `StartNameMonitor` / `StopNameMonitor`
+  - `StartStateMonitor` / `StopStateMonitor`
+
+- On *IDms*:
+
+  - `StartElementAlarmLevelMonitor` / `StopElementAlarmLevelMonitor`
+  - `StartElementNameMonitor` / `StopElementNameMonitor`
+  - `StartElementStateMonitor` / `StopElementStateMonitor`
+  - `StartServiceStateMonitor` / `StopServiceStateMonitor`
+  - `StartViewStateMonitor` / `StopViewStateMonitor`
+
+- On *IDmsTable*:
+
+  - `StartValueMonitor` / `StopValueMonitor`: Supports monitoring all or filtered columns using the primary key index.
+
+Each monitor requires a *sourceId* to uniquely identify the subscription and a callback delegate (e.g. `Action<ElementStateChange>`). Subscriptions can be initiated using either a default timeout or a user-defined *TimeSpan*.
+
+For example, to monitor an element's alarm level and state:
+
+```csharp
+string sourceId = Guid.NewGuid().ToString();
+
+element.StartAlarmLevelMonitor(sourceId, change =>
+{
+    Log($"{change.NewLevel} alarm raised on element {change.ElementId}");
+});
+
+element.StartStateMonitor(sourceId, change =>
+{
+    Log($"Element {change.ElementId} changed state to {change.NewState}");
+});
+```
+
+When your use case is complete or the script is exiting, you must **explicitly stop the subscriptions**:
+
+```csharp
+element.StopAlarmLevelMonitor(sourceId);
+element.StopStateMonitor(sourceId);
+```
+
+If needed, you can use overloads to specify a timeout and to specify whether to forcefully remove the subscription:
+
+```csharp
+element.StopAlarmLevelMonitor(sourceId, TimeSpan.FromSeconds(10), force: true);
+```
+
+**Filtering table columns** is supported using the following overload on *IDmsTable*:
+
+```csharp
+table.StartValueMonitor(sourceId, pkIndex, new[] { 1001, 1003 }, change =>
+{
+    Log($"Row {change.PrimaryKey} changed.");
+});
+```
+
+### 1.1.3.1
+
+#### New feature - API added for retrieving element and service count on each Agent [ID 41795]
+
+The IDms interface has been extended with the following method: `DmsInfo GetDmsInfo()`, which will return information about the DataMiner Agents. It returns a *DmsInfo* object, which has an *Agents* member. This member is a list of *DmaInfo* objects. Each *DmaInfo* object gives an overview of the Agent ID, the number of elements hosted on that Agent, and the number of services hosted by that Agent.
+
+Example usage:
+
+```csharp
+IDms dms = protocol.GetDms();
+
+DmsInfo dmsConfig = dms.GetDmsInfo();
+IEnumerable<DmaInfo> dmaConfigs = dmsConfig.Agents;
+
+foreach (var dmaConfig in dmaConfigs)
+{
+    int elementCount = dmaConfig.ElementCount;
+    int serviceCount = dmaConfig.ServiceCount;
+}
+```
+
+#### New feature - Support added for configuring and retrieving SlowPoll, SlowPollBase, and PingInterval settings [ID 41797]
+
+The class library now includes support for retrieving and configuring the slow poll settings of an element.
+
+When an element is created, the slow poll settings can be configured under the advanced settings. Two types of configuration are supported: *DurationBasedSlowPollSettings* and *TimeoutCountBasedSlowPollSettings*. If slow polling is not configured, the property value is null.
+
+This example shows how to create an element with duration-based slow poll settings:
+
+```csharp
+IDms dms = protocol.GetDms();
+IDma agent = dms.GetAgent(protocol.DataMinerID);
+IDmsProtocol protocol = dms.GetProtocol(
+   Settings.HttpConnectionTestProtocolName,
+   Settings.HttpConnectionTestProtocolVersion);
+
+ITcp port = new Tcp("127.0.0.1", 80);
+IHttpConnection myHttpConnection = new HttpConnection(port);
+
+var configuration = new ElementConfiguration(
+                  dms,
+                  elementName,
+                  protocol,
+                  new List<IElementConnection> { myHttpConnection })
+{
+   Description = "my test element",
+   State = ConfigurationElementState.Active
+};
+
+configuration.AdvancedSettings.Timeout = new TimeSpan(0, 0, 0, 30);
+configuration.AdvancedSettings.SlowPollSettings = new DurationBasedSlowPollSettings(TimeSpan.FromSeconds(12), TimeSpan.FromSeconds(22));
+DmsElementId id = agent.CreateElement(configuration);
+```
+
+Creating an element with timeout count-based slow poll settings is similar but instead an instance of *TimeoutCountBasedSlowPollSettings* should be provided for the *SlowPollSettings* property:
+
+```csharp
+configuration.AdvancedSettings.SlowPollSettings = new TimeoutCountBasedSlowPollSettings(TimeSpan.FromSeconds(12), 18);
+```
+
+To retrieve the slow poll configuration of an existing element, access the *SlowPollSettings* under the *AdvancedSettings*. The value is either null (no slow polling configured) or an instance of *DurationBasedSlowPollSettings* or *TimeoutCountBasedSlowPollSettings*.
+
+```csharp
+slowPollSetings  = element.AdvancedSettings.SlowPollSettings;
+if(slowPollSetings != null)
+{
+  if(slowPollSettings is TimeoutCountBasedSlowPollSettings)
+  {
+      // ...
+  }else if(slowPollSettings is DurationBasedSlowPollSettings)
+  {
+     // ...
+  }
+}
+```
+
+To update the slow poll settings, create an instance of either *TimeoutCountBasedSlowPollSettings* or *DurationBasedSlowPollSettings*, assign it to the *SlowPollSettings* of the element, and then call the *Update* method on the element.
+
+#### Enhancement - Element creation with empty user name prevented for elements with SNMPv3 connection and support added for using credential library with SNMPv3 connections [ID 41805]
+
+Up to now, it was possible to create an instance of the *SnmpV3SecurityConfig* class with an empty string as user name, or a user name that only consisted of whitespace characters (e.g. spaces, tabs, newlines, etc.). As these are not valid SNMPv3 user names, there is now a check in place to verify that the user name is not one of those options. When this check fails, an *ArgumentException* is thrown, and the creation of the *SnmpV3SecurityConfig* object fails.
+
+This means that the following restrictions now apply for the user name:
+
+- `username != null` (this check was already in place; an *ArgumentNullException* is thrown on failure)
+- `username != ""` (new; an *ArgumentException* is thrown on failure)
+- The user name string does not only contain whitespace characters (an *ArgumentException* is thrown on failure).
+
+In addition, support has been added to use the credential library with SNMPv3 connections.
+
+#### Fix - Exception when changing state of an element fails [ID 41807]
+
+Up to now, when the *DmsElement.Delete()* method was executed and something went wrong, no exception was thrown (and no logging was generated for this). Moreover, further actions on that element object would throw an *ElementNotFoundException*, which was incorrect because the element still existed.
+
+Similar issues could occur when *DmsElement.Start()*, *DmsElement.Stop()*, *DmsElement.Restart()*, or *DmsElement.Pause()* was executed.
+
+From now on, the *SetElementStateResponseMessage* will be processed, and a *DMSException* will be thrown when:
+
+- No response is returned from the DMS (the returned *SetElementStateMessage* is null).
+- The contents of the *SetElementStateMessage* indicates that something went wrong while performing the state change (`SetElementStateResponseMessage.HasSucceeded == false`).
+
+This check is performed when *DmsElement.Delete()*, *DmsElement.Start()*, *DmsElement.Stop()*, *DmsElement.Restart()*, or *DmsElement.Pause()* is called.
+
+#### Fix - Refactored logging for duplicate property detection [ID 42292]
+
+To improve logging efficiency, the duplicate property detection logic has been refactored. It is now executed once at the start of the *Parse* methods in *DmsElement*, *DmsService*, and *DmsView* classes, preventing unnecessary checks within loops. This reduces redundant processing and redundant logging, improving overall performance.
+
+#### New feature - FunctionSettings property added to IDmsElement [ID 42841]
+
+The *IDmsElement* interface now has an additional *FunctionSettings* property, which has the following two properties:
+
+- *IsFunctionElement (bool)*: When true is returned, this indicates that the element is linked to a function resource.
+- *FunctionId*: The GUID of the linked function resource. If there is no linked function resource, *Guid.Empty* is returned.
+
 ### 1.1.2.2
 
 #### Fix - Cached property definitions cleared when PropertyExists is called [ID 41610]
 
-​The property definitions are cached in the class library. However, when a server call is made to retrieve the properties again (through the PropertyExists method), the cached values should be cleared and repopulated. Until now, the cached values were not cleared, leading to the possible situation where a property that was deleted in DataMiner would still be present in the cache of the class library.
+The property definitions are cached in the class library. However, when a server call is made to retrieve the properties again (through the PropertyExists method), the cached values should be cleared and repopulated. Until now, the cached values were not cleared, leading to the possible situation where a property that was deleted in DataMiner would still be present in the cache of the class library.
 
 ### 1.1.2.1
 
@@ -113,7 +346,7 @@ DMSMessage[] SendMessages(DMSMessage[] messages);
 
 #### Fix - Breaking change reverted for InterAppCalls
 
-When the Skyline.DataMiner.Core.InterAppCalls.Common NuGet package was used, versions 1.1.1.10/1.1.1.11 of the DataMinerSystem package could cause run-time errors. This breaking change has been reverted.
+When the Skyline.DataMiner.Core.InterAppCalls.Common NuGet package was used, versions 1.1.1.10/1.1.1.11 of the DataMinerSystem package could cause runtime errors. This breaking change has been reverted.
 
 ### 1.1.1.11
 

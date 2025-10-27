@@ -37,7 +37,7 @@ A number of enhancements have been made with regard to the management of profile
 
 #### Failover: Additional folders synchronized at initial setup \[ID 23875\]
 
-From now on, at initial Failover setup, the following folders under *C:\\Skyline DataMiner\\* will also be synchronized among the two DataMiner Agents:
+From now on, at initial Failover setup, the following folders under `C:\Skyline DataMiner\` will also be synchronized among the two DataMiner Agents:
 
 - Aggregation
 - Configurations\\JSON
@@ -65,7 +65,7 @@ The maxJSONLength setting, for instance, has now been made configurable. Up to n
 
 To set maxJSONLength to a specific value, do the following:
 
-1. Open the *Web.config* file located in the *C:\\Skyline DataMiner\\Webpages\\API* folder.
+1. Open the *Web.config* file located in the `C:\Skyline DataMiner\Webpages\API` folder.
 
 1. Make sure that the *configuration.appSettings* section contains an element similar to the following one:
 
@@ -348,9 +348,9 @@ In the Router Control app, in some rare cases, an exception could be thrown when
 
 In some cases, it could occur that clicking a shape had no effect.
 
-#### SLProtocol crash on multi-threaded timers \[ID 23744\]
+#### SLProtocol crash on multithreaded timers \[ID 23744\]
 
-In some cases, an error could occur in SLProtocol when using multi-threaded timers on an element with debug logging enabled at level 3 or higher.
+In some cases, an error could occur in SLProtocol when using multithreaded timers on an element with debug logging enabled at level 3 or higher.
 
 #### DataMiner Cube: Not possible to select value for alarm template condition based on discrete parameter with dependency \[ID 23789\]
 

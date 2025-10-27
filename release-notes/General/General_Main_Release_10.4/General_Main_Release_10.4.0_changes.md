@@ -180,7 +180,7 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
-Proactive cap detection predicts future issues based on trend data in the Cassandra database. Because of a number of enhancements, overall prediction accuracy has increased.
+Proactive cap detection predicts future issues based on trend data stored by DataMiner. Because of a number of enhancements, overall prediction accuracy has increased.
 
 #### Service & Resource Management: Bookings of type 'Custom Process Automation' no longer consume license credits [ID 35742]
 
@@ -476,9 +476,9 @@ Up to now, when a DOM instance was deleted, the associated HistoryChange records
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-Up to now, a run-time error would be thrown when the `<AzureAD>` element in the *DataMiner.xml* file did not contain an `objectId` attribute.
+Up to now, a runtime error would be thrown when the `<AzureAD>` element in the *DataMiner.xml* file did not contain an `objectId` attribute.
 
-This `objectId` attribute will now be considered optional. Hence, no run-time error will be thrown anymore when it has not been specified.
+This `objectId` attribute will now be considered optional. Hence, no runtime error will be thrown anymore when it has not been specified.
 
 #### SLAnalytics: Enhanced performance when using automatic incident tracking based on properties [ID 37198]
 
@@ -669,9 +669,9 @@ Because of a number of enhancements made to the automatic incident tracking feat
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
-Previously, when you added a sort node to a GQI query against the DOM data source, all DOM instances matching any filter node needed to be retrieved before the sorting could occur. Sorting a data set with a large amount of DOM instances was practically impossible.
+Previously, when you added a sort node to a GQI query against the DOM data source, all DOM instances matching any filter node needed to be retrieved before the sorting could occur. Sorting a dataset with a large amount of DOM instances was practically impossible.
 
-From now on, the sort nodes (e.g. By X, Then By Y, etc.) will be forwarded to the database. This will considerably increase overall performance when sorting DOM instances, especially when the data set includes a large amount of items.
+From now on, the sort nodes (e.g. By X, Then By Y, etc.) will be forwarded to the database. This will considerably increase overall performance when sorting DOM instances, especially when the dataset includes a large amount of items.
 
 > [!NOTE]
 >
@@ -788,20 +788,20 @@ When you upgrade DataMiner from a version older than 10.4.0 to a version from 10
 
 - [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed)
 
-Also, the newly added *UninstallApiDeployment* upgrade action will remove everything related to the deprecated [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) feature:
+Also, the newly added *UninstallApiDeployment* upgrade action will remove everything related to the deprecated API Deployment soft-launch feature:
 
 - Stop and delete the *SLAPIEndpoint* service.
 
 - Remove the following files (if present):
 
-  - *C:\Skyline DataMiner\SLAPIEndpoint*
-  - *C:\Skyline DataMiner\DeployerTokens*
-  - *C:\Skyline DataMiner\ForceDeployerTokensFileStorage.txt*
-  - *C:\Skyline DataMiner\Resources\SLAPIEndpoint.zip*
+  - `C:\Skyline DataMiner\SLAPIEndpoint`
+  - `C:\Skyline DataMiner\DeployerTokens`
+  - `C:\Skyline DataMiner\ForceDeployerTokensFileStorage.txt`
+  - `C:\Skyline DataMiner\Resources\SLAPIEndpoint.zip`
 
 - If present, remove the rewrite rules for API Deployment.
 
-- Remove the API Deployment configuration file from *C:\Skyline DataMiner\Configurations\JSON*.
+- Remove the API Deployment configuration file from `C:\Skyline DataMiner\Configurations\JSON`.
 
 - Remove the *APIDeployment* soft-launch flag from *SoftLaunchOptions.xml*.
 
@@ -842,7 +842,7 @@ public virtual void UpdateAllCapacitiesAndCapabilitiesByReference(Func<FilterEle
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
-When multiple, separate sort operators were optimized by the GQI data source *Get parameter table by ID*, up to now, they would be incorrectly combined into a single multi-level sort operation. From now on, only the last sort operator will be used, consistent with the behavior in case the sort operators are not optimized.
+When multiple, separate sort operators were optimized by the GQI data source *Get parameter table by ID*, up to now, they would be incorrectly combined into a single multilevel sort operation. From now on, only the last sort operator will be used, consistent with the behavior in case the sort operators are not optimized.
 
 For example, from now on, when you sort by A and, later on in the GQI query, sort again by B, the query will now only be sorted by B.
 

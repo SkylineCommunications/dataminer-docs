@@ -10,13 +10,11 @@ This page outlines the procedure for deploying the DataMiner EPM VSAT package on
 
 Start by deploying the DataMiner EPM VSAT package to the system:
 
-1. Go to the [DataMiner EPM VSAT](https://catalog.dataminer.services/details/4879501c-9716-4a33-8846-ff1835fef7ea) package in the DataMiner Catalog.
+1. Go to the [DataMiner EPM VSAT](https://catalog.dataminer.services/details/4879501c-9716-4a33-8846-ff1835fef7ea) package in the Catalog.
 
 1. Click the *Deploy* button to [deploy the package](xref:Deploying_a_catalog_item) on your DMA.
 
 This will install the connectors, Automation scripts, and Visio drawings needed to create and configure the DataMiner EPM VSAT Solution.
-
-While the package is being deployed, you can follow the progress of the deployment in the Admin app, on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
 
 ## Collectors configuration
 
@@ -89,6 +87,8 @@ Follow the steps below to set up the **front-end and back-end elements**:
       | File Export Path            | A shared folder path, for example `C:\EPM\Documents\GEO`    |
 
    1. Select the *assignments* tab.
+      
+   1. Add the element IDs (in DMAID/ElementID format) to the *Frontend Assignments* table.
 
    1. Add the element IDs (in DMAID/ElementID format) to the *Backend Assignments* table.
 

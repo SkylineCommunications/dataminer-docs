@@ -157,17 +157,17 @@ When, in a interactive Automation script launched from a dashboard or a low-code
 
 When, on a mobile device, you entered your credentials on the authentication page of a DataMiner web app and pressed ENTER, you would incorrectly not be logged in. Instead, the authentication page would simply refresh.
 
-#### Dashboards app & Low-Code Apps: Parameters data set would not include any parameters of type 'Button' when filtered by protocol [ID 39973]
+#### Dashboards app & Low-Code Apps: Parameters dataset would not include any parameters of type 'Button' when filtered by protocol [ID 39973]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-When, in the *Parameters* data set, you filtered by protocol, the parameters list would incorrectly not include any parameters of type "Button".
+When, in the *Parameters* dataset, you filtered by protocol, the parameters list would incorrectly not include any parameters of type "Button".
 
 #### Dashboards app & Low-Code Apps - Timeline component: Regional settings would not be taken into account [ID 39987]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-When positioning items, the *Timeline* component would incorrectly not take into account the regional settings (e.g. time zone) specified in the *C:\\Skyline DataMiner\\users\\ClientSettings.json* file.
+When positioning items, the *Timeline* component would incorrectly not take into account the regional settings (e.g. time zone) specified in the `C:\Skyline DataMiner\users\ClientSettings.json` file.
 
 #### Dashboards app & Low-Code Apps - Table component: Problem when grouping an empty table by a column [ID 40012]
 
@@ -179,7 +179,7 @@ In some cases, when an empty table was grouped by a column, the grouping would n
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-When you link dataminer objects to rows in an ad hoc data source or when you configure a custom operator, you can add timespan data as metadata. Up to now, this timespan metadata would incorrectly not be converted to the local timezone specified in the *C:\\Skyline DataMiner\\users\\ClientSettings.json* file.
+When you link dataminer objects to rows in an ad hoc data source or when you configure a custom operator, you can add timespan data as metadata. Up to now, this timespan metadata would incorrectly not be converted to the local timezone specified in the `C:\Skyline DataMiner\users\ClientSettings.json` file.
 
 > [!TIP]
 > See also:

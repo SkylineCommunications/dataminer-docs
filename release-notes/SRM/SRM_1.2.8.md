@@ -101,9 +101,9 @@ In some cases, if a user aborted the booking creation script, it could occur tha
 
 When resources are imported, capability and capacity parameters will not be included in case they are empty. A capability of type number will also not be included if it is not within the parameter range or if the maximum is smaller than the minimum. A capability of type discrete will not be included if no discrete values were defined or if a discrete value is invalid.
 
-#### Booking stuck in Service Post-Roll life cycle stage \[ID 28035\]
+#### Booking stuck in Service Post-Roll lifecycle stage \[ID 28035\]
 
-In some cases, if a booking was edited to have no post-roll time, it could occur that the booking became stuck in the *Service Post-Roll* stage of its life cycle.
+In some cases, if a booking was edited to have no post-roll time, it could occur that the booking became stuck in the *Service Post-Roll* stage of its lifecycle.
 
 #### Problem when change to booking causing conflict was canceled \[ID 28037\]
 

@@ -4,17 +4,17 @@ uid: PO_Managing_Teams
 
 # Managing teams
 
-The *Teams Overview* page focuses on your managed teams. It allows you to switch between two tabs: *Overview* and *List*, each offering a different perspective on the available teams.
+The *Teams* page focuses on your managed teams. It allows you to switch between two tabs: *Overview* and *List*, each offering a different perspective on the available teams.
 
-You can switch between the *Overview* and *List* tabs by clicking *Overview* and *List* in the header bar of the *Teams Overview* page.
+![Header bar](~/solutions/images/Teams_Header_Bar.png)
 
-![Header bar](~/user-guide/images/Teams_Header_Bar.png)
+- The *Overview* tab provides a **snapshot of key metrics**, including the teams with the most people, the number of teams, active teams, and drafts, and the most recently added teams. This tab gives you a quick view of important information.
 
-- The *Overview* tab provides a **snapshot of key metrics**, including the teams with the most people, the number of teams, deprecated teams, and drafts, and the five most recently added teams. This tab gives you a quick view of important information.
+  ![Overview page](~/solutions/images/PO_Teams_Overview_Example.png)
 
-  ![Overview page](~/user-guide/images/PO_Teams_Overview_Example.png)
+- The *List* tab provides an **overview of all teams**, along with their state, bookable status, number of members, team email address, team description, and skills. This tab allows you to access and review team details in one centralized location.
 
-- The *List* tab provides an **overview of all teams**, along with their state, bookable status, number of members, team email address, team description, and expertise. This tab allows you to access and review team details in one centralized location. It also provides an efficient way to [filter through the list of teams](#searching-within-the-list-of-teams) based on the provided information.
+  With the magnifying glass icon above the list, you can also add a quick filter to look for specific teams in the list.
 
 ## Adding a new team
 
@@ -30,33 +30,25 @@ To add a new team:
 
    The *Team drafts* panel will open. The new team is now saved as a draft.
 
-   - If you want to activate your new team, select the team in the *Drafts* panel and click *Activate Selected* in the top-left corner of the panel.
+   - If you want to activate your new team, select the team in the *Drafts* panel and click *Activate Selected* in the top-left corner of the panel, or click *Activate All* to activate all the current drafts.
 
-     > [!NOTE]
-     > To activate all drafts simultaneously, click *Activate All*.
+   - If you want to activate your new team later, close the panel with the "X" in the top-right corner. Later on, when you want to activate the team, you can open the panel again via the *Drafts* button in the header bar of the *List* tab.
 
-   - If you want to activate your new team later, click the "X" in the top-right corner of the panel to close it.
-
-     To return to the *Drafts* panel at a later point, click *Drafts* in the header bar of the *List* tab.
-
-> [!IMPORTANT]
-> When a new team is created, it will not have any members. Make sure to [add members](#configuring-team-members) in the *Details* panel.
+To add members to your new team, see [Configuring team members](#configuring-team-members).
 
 ## Editing a team
 
 To edit an existing team:
 
-1. Navigate to the *List* tab.
-
-1. Locate the team you want to edit and click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the team's details.
+1. In the *List* tab, locate the team you want to edit and click the ![Edit](~/solutions/images/PO_Edit.png) button for this team.
 
    A panel will appear.
 
-1. Select *Edit* in the lower right corner of the panel.
+1. Select *Edit* in the lower-right corner of the panel.
 
 1. Make the necessary changes to the team information.
 
-1. After making your changes, select *Activate* in the lower right corner.
+1. After making your changes, select *Activate* in the lower-right corner.
 
    > [!NOTE]
    > Skipping this step will keep the team in an inactive *Edit* state.
@@ -67,42 +59,33 @@ To edit an existing team:
 
 To configure team members for an existing team:
 
-1. Navigate to the *List* tab.
+1. In the *List* tab, locate the team you want to add members to and click the ![Details](~/solutions/images/PO_Details.png) button for this team.
 
-1. Locate the team you want to add members to and click the ![Details](~/user-guide/images/PO_Details.png) button next to the team's details.
+1. In the panel that appears on the right, click *Edit members* at the top.
 
-   A panel will appear.
+1. Move contacts to and from the *People available* and *Members* columns using the ► and ◄ buttons.
 
-1. Select *Edit members* in the top-left corner of the panel.
+   If you quickly want to find a specific contact in the lists, click the magnifying glass icon at the top and specify a filter.
 
-1. To change the team members, move contacts to and from the *People available* and *Members* columns using the ► and ◄ buttons.
-
-   > [!NOTE]
-   > To search within the list of contacts, hover your mouse pointer over the *People available* or *Members* column and click the magnifying glass icon to activate the search bar.
-
-1. Click the "X" button in the top-right corner to close the panel.
-
-The selected team members will now appear in the list of members in the *Details* panel.
+When you close the panel, the selected team members will be shown in the list of members in the *Details* panel.
 
 ## Making a team bookable
 
 To verify whether a team is bookable:
 
-- On the *List* tab, check the *Bookable* column to see if *No* or *Yes* is displayed. By default, this is set to *No*.
+- In the *List* tab, check the *Bookable* column to see if *No* or *Yes* is displayed. By default, this is set to *No*.
 
-- Click the ![Details](~/user-guide/images/PO_Details.png) button next to the appropriate team and check whether the toggle button in the top-right corner is set to *Not Bookable* or *Bookable*. By default, this is set to *Not bookable*.
+- Click the ![Details](~/solutions/images/PO_Details.png) button next to the appropriate team and check whether the toggle button in the top-right corner is set to *Not Bookable* or *Bookable*. By default, this is set to *Not bookable*.
 
 To make a team bookable:
 
-1. Navigate to the *List* tab.
-
-1. Locate the team you want to make bookable and click the ![Details](~/user-guide/images/PO_Details.png) button next to the team's details.
+1. In the *List* tab, locate the team you want to make bookable and click the ![Details](~/solutions/images/PO_Details.png) button for this team.
 
 1. Enable the toggle button in the top-right corner.
 
    This setting will now be set to *Bookable*.
 
-   ![Bookable](~/user-guide/images/PO_Bookable.png)
+   ![Bookable](~/solutions/images/PO_Bookable.png)
 
    > [!NOTE]
    > This toggle button is only visible when the team has been activated. See [Adding a new team](#adding-a-new-team) or [Editing a team](#editing-a-team).
@@ -117,84 +100,28 @@ To deprecate an existing team:
 
 1. Click *Deprecate Selected* in the header bar.
 
-   An overview of all deprecated teams will appear. This will include the team you have just deprecated.
+   An overview of all deprecated teams will be shown. This will include the team you have just deprecated.
 
    > [!NOTE]
    > To access this overview of deprecated teams at a later point, click *Deprecated* in the header bar of the *List* tab.
 
-## Searching within the list of teams
+## Managing skills in teams
 
-To search within the list of teams:
+On both the *Overview* and *List* tabs, you can access the *Skills* panel from the header bar.
 
-1. Navigate to the *List* tab.
+![Header bar](~/solutions/images/PO_Skills_Header_Bar.png)
 
-1. Hover your mouse pointer over the teams list.
+In this panel, you can see an overview of the existing skills, add more skills with the "+" button, and remove any skills that are not needed with the "x" button.
 
-   In the top-right corner of the list, you will see a magnifying glass icon.
+To assign a skill, click the ![Lightning](~/solutions/images/PO_Skills.png) button in the list of teams in the *List* tab. You will then be able to select the skills you want to assign in a pop-up window.
 
-1. Click the magnifying glass icon to activate the search bar.
-
-1. Type in your search query.
-
-   You can search based on the following columns of the teams list: name, team email, team description, and expertise.
-
-   As you type, the list will dynamically update to show teams that match your search criteria. For example, typing "Production" will filter and display all teams that have "Production" listed as their expertise.
-
-   ![Production](~/user-guide/images/PO_Search_Teams_List.png)
-
-> [!NOTE]
-> To clear your search and return to the full list of teams, delete the text in the search box and click outside of the search box to close it.
-
-## Managing areas of expertise
-
-On both the *Overview* and *List* tabs, you can access the *Expertise* panel by clicking the *Expertise* button in the header bar.
-
-![Header bar](~/user-guide/images/PO_Expertise_Header_Bar.png)
-
-The *Expertise* panel provides an overview of all available areas of expertise, with options to [edit](#editing-an-area-of-expertise) and [create new ones](#adding-a-new-area-of-expertise).
-
-[Assigning an area of expertise](#assigning-an-area-of-expertise) to teams streamlines the booking process by making it easier to match teams with tasks that suit their level of expertise.
-
-### Adding a new area of expertise
-
-To add a new area of expertise:
-
-1. In the header bar, click *Expertises* to open the *Expertise* panel.
-
-1. Select *+ New expertise*.
-
-1. Enter a name for the new area of expertise in the *Expertise* field, e.g. `Product Management`.
-
-1. Select *Save* in the top-right corner.
-
-   Your new area of expertise will now appear in the list of areas of expertise.
-
-### Editing an area of expertise
-
-To edit an existing area of expertise:
-
-1. In the header bar, click *Expertises* to open the *Expertise* panel.
-
-1. Click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the area of expertise you want to edit.
-
-1. Edit the name of the area of expertise and select *Save* in the top-right corner.
-
-> [!NOTE]
-> You may need to refresh the page for the change to become visible in the *Expertise* column on the *List* tab.
-
-### Assigning an area of expertise
-
-To assign an area of expertise to a team, enter the appropriate area of expertise in the *Team expertise(s)* field when you [create a new team](#adding-a-new-team) or [edit an existing team](#editing-a-team).
-
-![Assigning expertise](~/user-guide/images/Assigning_Expertise.png)
-
-You can view a team's area of expertise in the *Expertise* column on the *List* tab.
+![Assigning skills](~/solutions/images/Assigning_Skills.png)
 
 ## Managing roles
 
 On both the *Overview* and *List* tabs, you can access the *Roles* panel by clicking the *Roles* button in the header bar.
 
-![Header bar](~/user-guide/images/PO_Roles_Header_Bar.png)
+![Header bar](~/solutions/images/PO_Roles_Header_Bar.png)
 
 The *Roles* panel provides an overview of all roles, with options to [edit](#editing-a-role) and [create new ones](#adding-a-new-role).
 
@@ -220,24 +147,20 @@ To edit an existing role:
 
 1. In the header bar, click *Roles* to open the *Roles* panel.
 
-1. Click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the role you want to edit.
+1. Click the ![Edit](~/solutions/images/PO_Edit.png) button next to the role you want to edit.
 
 1. Edit the name of the role and select *Save* in the top-right corner.
 
 ### Assigning a role
 
+To view the roles given to team members in a team, click the ![Details](~/solutions/images/PO_Details.png) button next to the team's details. In the *Details* panel, you can find the different roles under *Members*.
+
+![Roles](~/solutions/images/PO_Roles.png)
+
 To assign a role to a team member:
 
-1. On the *List* tab, click the ![Details](~/user-guide/images/PO_Details.png) button next to the appropriate team.
+1. In the *List* tab, click the ![Details](~/solutions/images/PO_Details.png) button next to the appropriate team.
 
-1. Under *Members*, click the role listed in the *Role* column next to the team member you wish to assign a role to. If no role has been assigned yet, click the ![Role](~/user-guide/images/PO_Role_Icon.png) icon.
+1. Under *Members*, click the role listed in the *Role* column next to the team member you wish to assign a role to. If no role has been assigned yet, click the ![Role](~/solutions/images/PO_Role_Icon.png) icon.
 
-   The *Set Team Role* pop-up window will appear.
-
-1. Select a role from the dropdown menu.
-
-1. Click *Ok*.
-
-To view the roles given to team members in a team, click the ![Details](~/user-guide/images/PO_Details.png) button next to the team's details. In the *Details* panel, you can find the different roles under *Members*.
-
-![Roles](~/user-guide/images/PO_Roles.png)
+1. Select a role from the dropdown menu in the pop-up window, and click *Ok*.

@@ -63,7 +63,7 @@ This will significantly enhance overall performance when deleting large numbers 
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-Up to now, in some cases, a gRPC call between two SLNet instances could get blocked indefinitely, causing run-time errors to occur in other processes.
+Up to now, in some cases, a gRPC call between two SLNet instances could get blocked indefinitely, causing runtime errors to occur in other processes.
 
 GrpcConnection has now been updated. All gRPC calls will now have a deadline of 15 minutes instead of NO_TIMEOUT.
 
@@ -89,7 +89,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner Orchestrator: version 1.7.1
 - DataMiner SupportAssistant: version 1.7.1
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### SNMPv3 elements will now go into an error state when the user name is missing [ID 41312]
 
@@ -218,7 +218,7 @@ Up to now, that list could incorrectly contain multiple entries for the same fil
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e. *C:\Skyline DataMiner\users\\<UserName\>*).
+When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e. `C:\Skyline DataMiner\users\<UserName>`).
 
 #### Failover: Offline Agent would not be able to synchronize with the online Agent [ID 41527]
 

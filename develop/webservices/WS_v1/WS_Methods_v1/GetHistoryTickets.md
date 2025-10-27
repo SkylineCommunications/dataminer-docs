@@ -4,16 +4,14 @@ uid: GetHistoryTickets
 
 # GetHistoryTickets
 
-This method is obsolete from DataMiner 10.0.13 onwards. Use the [GetHistoryTicketsV2](xref:GetHistoryTicketsV2) method instead.
-
-This method retrieves the tickets created in a particular timespan. The tickets are retrieved in pages, in descending order.
+This method is deprecated. <!-- from DataMiner 10.0.13 onwards. -->Use the [GetHistoryTicketsV2](xref:GetHistoryTicketsV2) method instead.
 
 > [!NOTE]
-> DataMiner Ticketing requires a Cassandra database as well as a specific license. From DataMiner 10.0.13 onwards, it also requires an indexing database. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
+> DataMiner Ticketing requires a Cassandra database as well as a specific license. <!-- From DataMiner 10.0.13 onwards, -->It also requires an indexing database. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
 
 > [!CAUTION]
 >
-> - DataMiner Ticketing is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/user-guide/images/EOL_Duo.png)
+> - DataMiner Ticketing is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
 > - DataMiner Ticketing is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 ## Input

@@ -39,6 +39,16 @@
             Gets the UTC timestamp of the previous value.
             </summary>
         </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Args.DataMinerConnectorRateArgs.PreviousRateValue">
+            <summary>
+            Gets the previous rate value that was set. Note that this will be null when calculating the first rate.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Args.DataMinerConnectorRateArgs.PreviousRateTimestampUtc">
+            <summary>
+            Gets the UTC timestamp of the previous rate value that was set. Note that this will be DateTime.MinValue when calculating the first rate.
+            </summary>
+        </member>
         <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Args.DataMinerConnectorRawValueArgs">
             <summary>
             Arguments that are passed to a function when the raw value changes.
@@ -57,6 +67,11 @@
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Args.DataMinerConnectorRawValueArgs.Value">
             <summary>
             Gets the value as it came from the data source.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Args.DataMinerConnectorRawValueArgs.ValueType">
+            <summary>
+            Gets the type that the value represents.
             </summary>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Args.DataMinerConnectorRawValueArgs.TimestampUtc">
@@ -92,6 +107,42 @@
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Args.DataMinerConnectorTriggerValueArgs.TimestampUtc">
             <summary>
             Gets the UTC timestamp of the values.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.ChangedParameters">
+            <summary>
+            Represents an in-memory snapshot of all the changes that have been processed by the DataMapper.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.ChangedParameters.#ctor(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String)">
+            <summary>
+            Constructs a <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.ChangedParameters"/> object.
+            </summary>
+            <param name="origin">Where the data originates from.</param>
+            <param name="subscriptionName">
+            The name of the subscription that took in the data.
+            <see cref="F:System.String.Empty"/> if the data came from <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType.Poll"/>.
+            </param>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.ChangedParameters.Parameters">
+            <summary>
+            The standalone parameters that received changes.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.ChangedParameters.DataGrids">
+            <summary>
+            The table parameters that received changes.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.ChangedParameters.Origin">
+            <summary>
+            Where the data originates from.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.ChangedParameters.SubscriptionName">
+            <summary>
+            The name of the subscription that took in the data.
+            <see cref="F:System.String.Empty"/> if the data came from <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType.Poll"/>.
             </summary>
         </member>
         <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid">
@@ -150,11 +201,15 @@
             Gets the mapping between the primary key and when the row is deleted.
             </summary>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangeReferencedValues(System.DateTime,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType)">
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.BatchSize">
+            <summary>
+            The maximum number of rows that can be processed in one batch.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangeReferencedValues(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType)">
             <summary>
             Changes the values of referenced columns when one of its source columns has had a value change.
             </summary>
-            <param name="timestampUtc">UTC time when the value was taken.</param>
             <param name="origin">Indication of where the data originated from.</param>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangeValue(Gnmi.PathElem[],Gnmi.TypedValue,System.DateTime,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String)">
@@ -163,6 +218,29 @@
             </summary>
             <param name="pathElems">A collection of all path elements.</param>
             <param name="updateValue">Value that needs to be changed.</param>
+            <param name="timestampUtc">UTC time when the value was taken.</param>
+            <param name="origin">Indication of where the data originated from.</param>
+            <param name="subscriptionName">Name of the subscription in case the data came in through subscription.</param>
+            <returns>Boolean indicating if there is something that needs to be changed.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangeValue(Gnmi.Path,Gnmi.TypedValue,System.DateTime,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String)">
+            <summary>
+            Processes the update and adds it to the table cells that need to be changed.
+            </summary>
+            <param name="path">Path of the value.</param>
+            <param name="updateValue">Value that needs to be changed.</param>
+            <param name="timestampUtc">UTC time when the value was taken.</param>
+            <param name="origin">Indication of where the data originated from.</param>
+            <param name="subscriptionName">Name of the subscription in case the data came in through subscription.</param>
+            <returns>Boolean indicating if there is something that needs to be changed.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangeValue(Gnmi.Path,Newtonsoft.Json.Linq.JToken,System.Boolean,System.DateTime,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String)">
+            <summary>
+            Processes the update and adds it to the table cells that need to be changed.
+            </summary>
+            <param name="path">Path of the value.</param>
+            <param name="updateValue">Value that needs to be changed.</param>
+            <param name="isJsonIetf">Boolean indicating if the JSON object comes from IETF format or not.</param>
             <param name="timestampUtc">UTC time when the value was taken.</param>
             <param name="origin">Indication of where the data originated from.</param>
             <param name="subscriptionName">Name of the subscription in case the data came in through subscription.</param>
@@ -181,6 +259,29 @@
             Reads the primary keys of the table.
             </summary>
             <param name="protocol">Link with SLProtocol.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.RemoveMissingRows(Skyline.DataMiner.Scripting.SLProtocol,System.Boolean@)">
+            <summary>
+            Removes all rows from the table that have the deleted status.
+            </summary>
+            <param name="protocol">Link with SLProtocol.</param>
+            <param name="isSuppress">Boolean indicating if protocol calls should be prevented. This is referenced because the value can change to true during the execution of the method, e.g. when the QAction is being disposed.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.RemoveMissingRows(Skyline.DataMiner.Scripting.SLProtocol,System.Boolean@,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Removes the rows from the table that are present in the <paramref name="pks"/> on the condition that they also have the deleted status.
+            </summary>
+            <param name="protocol">Link with SLProtocol.</param>
+            <param name="isSuppress">Boolean indicating if protocol calls should be prevented. This is referenced because the value can change to true during the execution of the method, e.g. when the QAction is being disposed.</param>
+            <param name="pks">Primary keys to be removed when the state of the row indicates that the row is deleted.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.RemoveMissingRow(Skyline.DataMiner.Scripting.SLProtocol,System.Boolean@,System.String)">
+            <summary>
+            Removes the row from the table where the PK is equal to <paramref name="pk"/> on the condition that the row also has the deleted status.
+            </summary>
+            <param name="protocol">Link with SLProtocol.</param>
+            <param name="isSuppress">Boolean indicating if protocol calls should be prevented. This is referenced because the value can change to true during the execution of the method, e.g. when the QAction is being disposed.</param>
+            <param name="pk">Primary key to be removed when the state of the row indicates that the row is deleted.</param>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.FillArray(Skyline.DataMiner.Scripting.SLProtocol,System.Boolean@)">
             <summary>
@@ -204,59 +305,258 @@
             <param name="subscriptionName">Name of the subscription for which a sync entered.</param>
             <param name="isSuppress">Boolean indicating if protocol calls should be prevented. This is referenced because the value can change to true during the execution of the method, e.g. when the QAction is being disposed.</param>
         </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.RegisterSubscription(System.String)">
+            <summary>
+            Registers the subscription under the _subscribedPrimaryKeysInterval.
+            </summary>
+            <param name="subscriptionName">Name of the subscription to register.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.UnregisterSubscription(System.String)">
+            <summary>
+            Removes the subscription from the _subscribedPrimaryKeysInterval and clears the column values.
+            </summary>
+            <param name="subscriptionName">Name of the subscription to remove.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.AddAllReferencedColumnChange(System.String,System.DateTime,System.Collections.Concurrent.ConcurrentDictionary{System.Int32,System.Collections.Generic.HashSet{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangedPrimaryKey}})">
+            <summary>
+            Indicates that a row has changed value, so the primary key will be added to all columns that are referenced.
+            </summary>
+            <param name="primaryKey">Primary key of the row that has changed values.</param>
+            <param name="timestampUtc">The timestamp in UTC of when the primary key got changed.</param>
+            <param name="changedReferencedColumnParameterIds">Collection of columns that have changed values.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.AddReferencedColumnChange(System.Collections.Generic.IEnumerable{System.Int32},System.String,System.DateTime,System.Collections.Concurrent.ConcurrentDictionary{System.Int32,System.Collections.Generic.HashSet{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangedPrimaryKey}})">
+            <summary>
+            Adds the primary key to all columns that are referenced.
+            </summary>
+            <param name="referencedColumns">List of column parameter IDs that have a reference to a column.</param>
+            <param name="primaryKey">Primary key of the row that has changed values.</param>
+            <param name="timestampUtc">The timestamp in UTC of when the primary key got changed.</param>
+            <param name="changedReferencedColumnParameterIds">Collection of columns that have changed values.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ClearColumnValues">
+            <summary>
+            Clears the column cell values in memory when a rate column is linked.
+            </summary>
+        </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ClearValue">
             <summary>
             Clears the value of modified rows.
             </summary>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ParseJson(System.String,System.String,System.Boolean,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String,System.DateTime)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ClearOlderDeletedRows">
             <summary>
-            The entry point for parsing the JSON; will check whether it is a single entity
-            that came in or an array with multiple entities.
+            Removes the keys of rows that were deleted more than 5 minutes ago.
             </summary>
-            <param name="primaryKey">The primary key of the row that was found in the update.</param>
-            <param name="json">The JSON content of the update.</param>
-            <param name="isWithModuleName">Whether the JSON properties contain the YANG module name as well.</param>
-            <param name="origin">Indication of where the data originated from.</param>
-            <param name="subscriptionName">Name of the subscription in case the value came in through subscription.</param>
-            <param name="timestampUtc">UTC time when the value was taken.</param>
-            <returns>Boolean indicating if there is something that needs to be changed.</returns>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ParseJson(System.String,Newtonsoft.Json.Linq.JToken,System.Boolean,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String,System.DateTime)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.GetMissingKeys">
             <summary>
-            Parses a single JSON entity.
+            Gets the keys that were not present during polling.
             </summary>
-            <param name="primaryKey">The primary key of the row.</param>
-            <param name="json">The JSON content of the single entity.</param>
-            <param name="isWithModuleName">Whether the JSON properties contain the YANG module name as well.</param>
-            <param name="origin">Indication of where the data originated from.</param>
-            <param name="subscriptionName">Name of the subscription in case the value came in through subscription.</param>
-            <param name="timestampUtc">UTC time when the value was taken.</param>
-            <returns>Boolean indicating if there is something that needs to be changed.</returns>
+            <returns>Dictionary with key being the primary key and the value being the current timestamp.</returns>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ParseJsonArray(Newtonsoft.Json.Linq.JObject,System.Boolean,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String,System.DateTime)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangeColumnValue(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridRow,System.String,Newtonsoft.Json.Linq.JToken,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.DateTime)">
             <summary>
-            Parses the JSON array and passes the single entities along to <see cref="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ParseJson(System.String,System.String,System.Boolean,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String,System.DateTime)"/>.
+            Changes the value of the column and all linked columns.
             </summary>
-            <param name="jsonObject">The JSON array that needs to be parsed.</param>
-            <param name="isWithModuleName">Whether the JSON properties contain the YANG module name as well.</param>
+            <param name="column">Column to be changed.</param>
+            <param name="row">Object with all new values for that row.</param>
+            <param name="primaryKey">Primary key of the row that changed.</param>
+            <param name="token">JSON token that contains the new value of the cell.</param>
             <param name="origin">Indication of where the data originated from.</param>
-            <param name="subscriptionName">Name of the subscription in case the value came in through a subscription.</param>
             <param name="timestampUtc">UTC time when the value was taken.</param>
-            <returns>Boolean indicating if there is something that needs to be changed.</returns>
+            <returns>Boolean indicating if the value changed.</returns>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ParseJsonList(Newtonsoft.Json.Linq.JObject,System.Boolean,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String,System.DateTime)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TryGetJson(Gnmi.TypedValue,Newtonsoft.Json.Linq.JToken@)">
             <summary>
-            Parses the JSON list and passes the single entities along to <see cref="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ParseJson(System.String,System.String,System.Boolean,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String,System.DateTime)"/>.
+            Tries to get the JSON object from the TypedValue.
             </summary>
-            <param name="jsonObject">The JSON list that needs to be parsed.</param>
-            <param name="isWithModuleName">Whether the JSON properties contain the YANG module name as well.</param>
+            <param name="updateValue">Value to be parsed.</param>
+            <param name="jsonToken">Found JSON token in the value.</param>
+            <returns>Boolean indicating if a JSON object could be found in the value</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ParseJsonFromMatchingDataGridPath(Newtonsoft.Json.Linq.JToken,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},Gnmi.Path,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String,System.DateTime)">
+            <summary>
+            JSON object matches with the data grid. Parses the JSON child tokens to further map them with the data columns.
+            </summary>
+            <param name="json">JSON object that is equal to the data grid.</param>
+            <param name="pathKeyParts">Parts of the primary key.</param>
+            <param name="dataPath">Path of the incoming data that goes beyond the data grid path.</param>
             <param name="origin">Indication of where the data originated from.</param>
             <param name="subscriptionName">Name of the subscription in case the value came in through a subscription.</param>
             <param name="timestampUtc">UTC time when the value was taken.</param>
             <returns>Boolean indicating if there is something that needs to be changed.</returns>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.FillMissingValuesSubscription(Skyline.DataMiner.Scripting.SLProtocol,System.Boolean@,System.Collections.Concurrent.ConcurrentDictionary{System.String,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.RowState})">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ParseJsonFromMatchingDataGridPathRows(Newtonsoft.Json.Linq.JArray,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},Gnmi.Path,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String,System.DateTime)">
+            <summary>
+            JSON array matches with the data grid. Parses the JSON child tokens to further map them with the data columns.
+            </summary>
+            <param name="json">JSON array that is equal to the data grid.</param>
+            <param name="pathKeyParts">Parts of the primary key.</param>
+            <param name="dataPath">Path of the incoming data that goes beyond the data grid path.</param>
+            <param name="origin">Indication of where the data originated from.</param>
+            <param name="subscriptionName">Name of the subscription in case the value came in through a subscription.</param>
+            <param name="timestampUtc">UTC time when the value was taken.</param>
+            <returns>Boolean indicating if there is something that needs to be changed.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ParseJsonFromMatchingDataGridPathRow(Newtonsoft.Json.Linq.JToken,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},Gnmi.Path,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String,System.DateTime)">
+            <summary>
+            JSON object matches with the data grid. Parses the JSON child tokens to further map them with the data columns.
+            </summary>
+            <param name="json">JSON token that is equal to the data grid or one of its sub parts.</param>
+            <param name="pathKeyParts">Parts of the primary key.</param>
+            <param name="dataPath">Path of the incoming data that goes beyond the data grid path.</param>
+            <param name="origin">Indication of where the data originated from.</param>
+            <param name="subscriptionName">Name of the subscription in case the value came in through a subscription.</param>
+            <param name="timestampUtc">UTC time when the value was taken.</param>
+            <returns>Boolean indicating if there is something that needs to be changed.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ParseJsonFromPartialDataGridPath(Newtonsoft.Json.Linq.JToken,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},Gnmi.Path,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String,System.DateTime)">
+            <summary>
+            JSON object does not fully match yet with the data grid. Parses the JSON child tokens to further map them with the data grid and data columns.
+            </summary>
+            <param name="json">JSON token.</param>
+            <param name="pathKeyParts">Parts of the primary key.</param>
+            <param name="entityPath">Path filter in the data grid entity that specifies what JSON token value should be returned for a specific level.</param>
+            <param name="origin">Indication of where the data originated from.</param>
+            <param name="subscriptionName">Name of the subscription in case the value came in through a subscription.</param>
+            <param name="timestampUtc">UTC time when the value was taken.</param>
+            <returns>Boolean indicating if there is something that needs to be changed.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TryGetJsonTokenForPath(Gnmi.Path,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},Newtonsoft.Json.Linq.JToken,System.Int32,System.Int32,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.KeyAndToken})">
+            <summary>
+            Tries to get the JSON token values for the requested path filter.
+            </summary>
+            <param name="entityPath">Path filter in the data grid entity that specifies what JSON token value should be returned for a specific level.</param>
+            <param name="pathKeyParts">Parts of the primary key.</param>
+            <param name="token">JSON token to be investigated.</param>
+            <param name="pathLevel">Location of the token value in the path filter.</param>
+            <param name="rowIndex">In case the direct parent is an array, it will contain the index of the token of that array.</param>
+            <param name="keysAndTokens">Found JSON token values with their key parts.</param>
+            <returns>Boolean indicating if token values were found in the requested path.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TryGetJsonTokenForPath(Gnmi.Path,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},Newtonsoft.Json.Linq.JArray,System.Int32,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.KeyAndToken})">
+            <summary>
+            Tries to get the JSON token values for the requested path filter.
+            </summary>
+            <param name="entityPath">Path filter in the data grid entity that specifies what JSON token value should be returned for a specific level.</param>
+            <param name="pathKeyParts">Parts of the primary key.</param>
+            <param name="token">JSON array to be investigated.</param>
+            <param name="pathLevel">Location of the token value in the path filter.</param>
+            <param name="keysAndTokens">Found JSON token values with their key parts.</param>
+            <returns>Boolean indicating if token values were found in the requested path.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TryGetJsonTokenForPath(Gnmi.Path,Newtonsoft.Json.Linq.JToken,System.Int32,Newtonsoft.Json.Linq.JToken@)">
+            <summary>
+            Tries to get a JSON token value on the specified path.
+            </summary>
+            <param name="path">Path for which the token is requested.</param>
+            <param name="token">JSON token to be investigated.</param>
+            <param name="pathLevel">Location of the token value in the path.</param>
+            <param name="foundToken">JSON token value on the requested path.</param>
+            <returns>Boolean indicating if the token value was found in the requested path.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ProcessTokenProperty(Newtonsoft.Json.Linq.JProperty,Gnmi.Path,System.Int32,System.Int32,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TokenPropertyInvestigationResult)">
+            <summary>
+            Processes a token property. Checks if the property matches the path filter on that level and also keeps track of a potential primary key value.
+            </summary>
+            <param name="property">JSON property to be processed.</param>
+            <param name="entityPath">Path filter in the data grid entity that specifies what JSON token value should be returned for a specific level.</param>
+            <param name="rowIndex">In case the direct parent is an array, it will contain the index of the token of that array.</param>
+            <param name="pathLevel">Location of the token property in the path filter.</param>
+            <param name="investigationResult">Result of the investigation among the different properties, which contains the found key and token.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ProcessChildrenTokenProperties(Newtonsoft.Json.Linq.JObject,Gnmi.Path,System.Int32,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.KeyAndToken})">
+            <summary>
+            Process the properties of a JSON oject.
+            </summary>
+            <param name="objectToken">JSON object to be processed.</param>
+            <param name="entityPath">Path filter in the data grid entity that specifies what JSON token value should be returned for a specific level.</param>
+            <param name="pathLevel">Location of the JSON object in the path filter.</param>
+            <param name="pathKeyParts">Parts of the primary key.</param>
+            <param name="keysAndTokens">Found JSON token values with their key parts.</param>
+            <returns>Boolean indicating if token values were found in the requested path.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.RemoveModulePrefix(System.String)">
+            <summary>
+            Removes the module name from a JSON property name.
+            </summary>
+            <param name="name">Name of the JSON property.</param>
+            <returns>Name of the JSON property without module name.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ValidateMatchingKey(System.String,System.String,Gnmi.PathElem)">
+            <summary>
+            Verifies if the current property matches with the path element.
+            </summary>
+            <param name="propertyName">Name of the property to be verified.</param>
+            <param name="propertyValue">Value of the property to be verified.</param>
+            <param name="pathElem">Path element of the filter.</param>
+            <returns>Boolean indicating if the property matches with the path element.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.AddKeyFromToken(Newtonsoft.Json.Linq.JObject,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},System.Int32)">
+            <summary>
+            Looks in the properties of a token. When it contains exactly one property that is a string or int, a key will be created based on that, or the index of the row will be used.
+            </summary>
+            <param name="objectToken">JSON object to be processed.</param>
+            <param name="pathKeyParts">Parts of the primary key.</param>
+            <param name="rowIndex">Index that will be used when the token does not contain a key in the properties.</param>
+            <returns>Created key based on the token.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.AddKeyFromString(System.String,System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},System.Int32,System.Boolean)">
+            <summary>
+            Looks in the properties of a token. When it contains exactly one property that is a string or int, a key will be created based on that, or the index of the row will be used.
+            </summary>
+            <param name="key">Key to be added.</param>
+            <param name="pathKeyParts">Parts of the primary key.</param>
+            <param name="rowIndex">Index that will be used when the token does not contain a key in the properties.</param>
+            <param name="isFilterMatch">Boolean indicating if this key is a value that matches the specified filter in the data grid path.</param>
+            <returns>Created key based on the token.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ConstructPrimaryKey(System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},Gnmi.Path)">
+            <summary>
+            Constructs a primary key. Filtered key parts will be removed unless they are the last item.
+            </summary>
+            <param name="pathKeyParts">Parts of the key.</param>
+            <param name="dataPath">The remainder of the path of the incoming data.</param>
+            <returns>Primary key.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TryGetTokenValueAsString(Newtonsoft.Json.Linq.JToken,System.String@)">
+            <summary>
+            Checks if the token is an integer or string type and returns the value.
+            </summary>
+            <param name="token">JSON token to be verified.</param>
+            <param name="value">Token value as string when the type is an integer or string.</param>
+            <returns>Boolean indicating if the JSON token is an integer or string type.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangeValue(System.String,Gnmi.Path,System.Object,System.Type,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String,System.DateTime)">
+            <summary>
+            Changes the value of a table cell when the path matches with a column in the data grid.
+            </summary>
+            <param name="primaryKey">Primary key of the cell</param>
+            <param name="path">Path of the cell.</param>
+            <param name="cellValue">Value of the cell.</param>
+            <param name="cellValueType">Type of the value.</param>
+            <param name="origin">Indication of where the data originated from.</param>
+            <param name="subscriptionName">Name of the subscription in case the value came in through a subscription.</param>
+            <param name="timestampUtc">UTC time when the value was taken.</param>
+            <returns>Boolean indicating if there is something that needs to be changed.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.IsRecentDeleted(System.String,System.DateTime,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType)">
+            <summary>
+            Verifies if a row has been deleted more recently than the passed timestamp.
+            </summary>
+            <param name="primaryKey">Primary key of the row to be verified.</param>
+            <param name="timestampUtc">UTC time of the delete to be verified.</param>
+            <param name="origin">Indication of where the data originated from.</param>
+            <returns>Boolean indicating if the row has been more recently deleted than the current timestamp.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.FillMissingValues(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridRow)">
+            <summary>
+            Fills in the default missing values in a row.
+            </summary>
+            <param name="row">Row for which the missing values need to be set.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.FillMissingValuesSubscription(Skyline.DataMiner.Scripting.SLProtocol,System.Boolean@,System.Collections.Concurrent.ConcurrentDictionary{System.String,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.SubscriptionRowState})">
             <summary>
             Fills in the cells that have an empty value with the exception value.
             </summary>
@@ -264,7 +564,7 @@
             <param name="isSuppress">Boolean indicating if protocol calls should be prevented. This is referenced because the value can change to true during the execution of the method, e.g. when the QAction is being disposed.</param>
             <param name="subscribedPrimaryKeys">Collection of primary keys that entered during the subscription interval.</param>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.GetMissingKeysColumnValuesSubscription(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn,System.Collections.Concurrent.ConcurrentDictionary{System.String,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.RowState},System.Collections.Concurrent.ConcurrentDictionary{System.Int32,System.Collections.Generic.HashSet{System.String}})">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.GetMissingKeysColumnValuesSubscription(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn,System.Collections.Concurrent.ConcurrentDictionary{System.String,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.SubscriptionRowState},System.Collections.Concurrent.ConcurrentDictionary{System.Int32,System.Collections.Generic.HashSet{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangedPrimaryKey}})">
             <summary>
             Fills in the column cells that have an empty value with the exception value.
             </summary>
@@ -282,7 +582,7 @@
             <param name="isSuppress">Boolean indicating if protocol calls should be prevented. This is referenced because the value can change to true during the execution of the method, e.g. when the QAction is being disposed.</param>
             <param name="missingKeys">Primary keys of the column that are empty.</param>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.FillMissingReferencedColumnValuesSubscription(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn,Skyline.DataMiner.Scripting.SLProtocol,System.Boolean@,System.Collections.Generic.HashSet{System.String})">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.FillMissingReferencedColumnValuesSubscription(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn,Skyline.DataMiner.Scripting.SLProtocol,System.Boolean@,System.Collections.Generic.HashSet{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangedPrimaryKey})">
             <summary>
             Fills in the referenced column cells that have an empty value with the exception value.
             </summary>
@@ -291,21 +591,160 @@
             <param name="isSuppress">Boolean indicating if protocol calls should be prevented. This is referenced because the value can change to true during the execution of the method, e.g. when the QAction is being disposed.</param>
             <param name="missingKeys">Primary keys of the column that are empty.</param>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.RemoveMissingKeysFromCollection(Skyline.DataMiner.Scripting.SLProtocol,System.Boolean@,System.Collections.Generic.IEnumerable{System.String})">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.FlagSubscriptionPrimaryKey(System.String,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String,System.DateTime)">
             <summary>
-            Remove rows that are present in the collection
+            Sets a flag that the data of a row entered during the subscription cycle.
+            </summary>
+            <param name="primaryKey">Primary key of the row.</param>
+            <param name="origin">Indication of where the data originated from.</param>
+            <param name="subscriptionName">Name of the subscription in case the value came in through a subscription.</param>
+            <param name="timestampUtc">UTC time when the value was taken.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.RemoveMissingKeysFromCollection(Skyline.DataMiner.Scripting.SLProtocol,System.Boolean@,System.Collections.Concurrent.ConcurrentDictionary{System.String,System.DateTime})">
+            <summary>
+            Remove rows that are present in the collection or set the state when there is a state column.
             </summary>
             <param name="protocol">Link with SLProtocol.</param>
             <param name="isSuppress">Boolean indicating if protocol calls should be prevented. This is referenced because the value can change to true during the execution of the method, e.g. when the QAction is being disposed.</param>
             <param name="deleteKeys">Collection of keys to be deleted.</param>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.RemoveMissingKeys(Skyline.DataMiner.Scripting.SLProtocol,System.Boolean@,System.Collections.Concurrent.ConcurrentDictionary{System.String,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.RowState})">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.RemoveOrChangeState(Skyline.DataMiner.Scripting.SLProtocol,System.Boolean@,System.Collections.Concurrent.ConcurrentDictionary{System.String,System.DateTime},Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn)">
+            <summary>
+            Remove missing rows or set the state column.
+            </summary>
+            <param name="protocol">Link with SLProtocol.</param>
+            <param name="isSuppress">Boolean indicating if protocol calls should be prevented. This is referenced because the value can change to true during the execution of the method, e.g. when the QAction is being disposed.</param>
+            <param name="deleteKeys">Collection of keys to be deleted.</param>
+            <param name="stateColumn">Parameter column that contains the state.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.RemoveMissingKeys(Skyline.DataMiner.Scripting.SLProtocol,System.Boolean@,System.Collections.Concurrent.ConcurrentDictionary{System.String,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.SubscriptionRowState})">
             <summary>
             Remove rows that did not appear during two subscription intervals.
             </summary>
             <param name="protocol">Link with SLProtocol.</param>
             <param name="isSuppress">Boolean indicating if protocol calls should be prevented. This is referenced because the value can change to true during the execution of the method, e.g. when the QAction is being disposed.</param>
             <param name="subscribedPrimaryKeys">Collection of primary keys that entered during the subscription interval.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ValidateColumns(System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn})">
+            <summary>
+            Validates all columns if the content is as expected and seals it so no more changes can be done after initiating.
+            </summary>
+            <param name="columns">Columns to be validated.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ValidateColumn(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn,System.Collections.Concurrent.ConcurrentDictionary{System.Int32,System.Int32},System.Collections.Generic.HashSet{System.Int32})">
+            <summary>
+            Validates the column.
+            </summary>
+            <param name="column">Column to be validated.</param>
+            <param name="rateColumns">Collection with all columns that are used as a rate column.</param>
+            <param name="referencedColumns">Collection with all columns that are used to trigger on.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">One of the passed parameters contains a value that was not expected.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ValidateRateColumns(System.Collections.Concurrent.ConcurrentDictionary{System.Int32,System.Int32})">
+            <summary>
+            Validates the rate columns.
+            </summary>
+            <param name="rateColumns">Collection with rate columns.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Exception thrown when a rate column is not a customized type or if the data grid does not contain the rate column.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ValidateReferencedColumns(System.Collections.Generic.HashSet{System.Int32})">
+            <summary>
+            Validates the referenced columns.
+            </summary>
+            <param name="referencedColumns">Collection with referenced columns.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Exception thrown when a referenced column is not a customized type or if the data grid does not contain the referenced column.</exception>
+            <exception cref="T:System.ArgumentException">Exception thrown when there is no function assigned to be executed when the referenced column changes value.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ValidateReferencedColumn(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn)">
+            <summary>
+            Validates a destination of a referenced column.
+            </summary>
+            <param name="destinationColumn">Destination column to be verified</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Exception thrown when the source of a destination column is not a poll type or if the data grid does not contain the source of a destination column.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.SealColumns">
+            <summary>
+            Seals the columns after initialization, so e.g. column types can no longer be changed during runtime.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TokenPropertyInvestigationResult">
+            <summary>
+            Class that is used while iterating over the properties what the found key and token is.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TokenPropertyInvestigationResult.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TokenPropertyInvestigationResult"/> class.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TokenPropertyInvestigationResult.KeyValue">
+            <summary>
+            Gets the value of the key that was found in the properties.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TokenPropertyInvestigationResult.IsAllowedKey">
+            <summary>
+            Gets a boolean indicating if this row is allowed to be added.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TokenPropertyInvestigationResult.IsFilterMatch">
+            <summary>
+            Gets a boolean indicating if this key is specified in the path of the data grid.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TokenPropertyInvestigationResult.TokenCount">
+            <summary>
+            Gets the number of tokens that are of type string or integer.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.TokenPropertyInvestigationResult.Token">
+            <summary>
+            Token that was found in the properties that matches the path.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.KeyAndToken">
+            <summary>
+            Class that keeps track of the token and parent key parts.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.KeyAndToken.#ctor(System.Collections.Generic.List{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.PathKeyPart},Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.KeyAndToken"/> class.
+            </summary>
+            <param name="keyParts">Collection with the key parts.</param>
+            <param name="token">JSON token.</param>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.KeyAndToken.KeyParts">
+            <summary>
+            Gets the collection with the key parts.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.KeyAndToken.Token">
+            <summary>
+            Gets the JSON token.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangedPrimaryKey">
+            <summary>
+            Represents a primary key that got changed at a certain point in time.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangedPrimaryKey.#ctor(System.String,System.DateTime)">
+            <summary>
+            Constructs a <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangedPrimaryKey"/> object.
+            </summary>
+            <param name="primaryKey">The primary key that got changed.</param>
+            <param name="timestampUtc">The UTC time when the primary key got changed.</param>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangedPrimaryKey.PrimaryKey">
+            <summary>
+            The primary key that got changed.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.ChangedPrimaryKey.TimestampUtc">
+            <summary>
+            The UTC time when the primary key got changed.
+            </summary>
         </member>
         <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn">
             <summary>
@@ -331,14 +770,22 @@
             <param name="missingValue">Value to be filled in when the cell has no value.</param>
             <exception cref="T:System.ArgumentOutOfRangeException">Exception that will be raised when an argument is not in the expected range, e.g. when <paramref name="parameterId "/> is negative.</exception>
         </member>
-        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.PathYangModel">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.#ctor(System.Int32,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridColumnType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn"/> class.
+            </summary>
+            <param name="parameterId">Parameter ID of the column that the incoming value should be written to.</param>
+            <param name="columnType">Type of the column.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Exception that will be raised when an argument is not in the expected range, e.g. when <paramref name="parameterId "/> is negative.</exception>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.PathYangModelAsString">
             <summary>
             Gets the path in the YANG model.
             </summary>
         </member>
-        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.PathYangModelWithoutModules">
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.PathYangModel">
             <summary>
-            Gets the path without modules in the YANG model.
+            Gets the path in the YANG model.
             </summary>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.ParameterId">
@@ -349,6 +796,11 @@
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.ColumnType">
             <summary>
             Gets the type of the column.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.IsAutoDelete">
+            <summary>
+            Gets or sets the indication if missing rows need to be automatically removed or not. This setting is only useful when <see cref="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.ColumnType"/> is equal to <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridColumnType.State"/>.
             </summary>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.RateColumnParameterId">
@@ -381,12 +833,13 @@
             Gets the method to be executed to process when source values are changing.
             </summary>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.ChangeValue(System.String,System.Object,System.DateTime,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.ChangeValue(System.String,System.Object,System.Type,System.DateTime,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType)">
             <summary>
             Processes the update and changes the value property.
             </summary>
             <param name="primaryKey">Primary key of the value that needs to be changed.</param>
             <param name="cellValue">Value that needs to be changed.</param>
+            <param name="cellValueType">Type of the value.</param>
             <param name="timestampUtc">UTC time when the value was taken.</param>
             <param name="origin">Indication of where the data originated from.</param>
             <returns>Boolean indicating if there is something that needs to be changed.</returns>
@@ -396,12 +849,25 @@
             Clears all the cell values in memory of this column.
             </summary>
         </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.ClearCellValue(System.String)">
+            <summary>
+            Clears a cell value in memory of this column.
+            </summary>
+            <param name="primaryKey">The primary key of the cell.</param>
+        </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.GetCellValue(System.String)">
             <summary>
             Gets the cell value for the provided primary key.
             </summary>
             <param name="primaryKey">Primary key of the cell.</param>
-            <returns>Value of the cell.</returns>
+            <returns>Value of the cell. Null when the primary key does not exist.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.GetCellTimestamp(System.String)">
+            <summary>
+            Gets the timestamp when the cell value was last changed for the provided primary key.
+            </summary>
+            <param name="primaryKey">Primary key of the cell.</param>
+            <returns>Timestamp when the cell value was last changed. DateTime.MinValue when the primary key does not exist.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.InitSettings">
             <summary>
@@ -469,16 +935,6 @@
             <param name="columnParameterId">Parameter ID of the column.</param>
             <returns>Value that is present on the column position.</returns>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridRow.TryGenerateColumnNotify(System.Int32,System.String,System.Object[]@,System.Object[]@)">
-            <summary>
-            Tries to create the objects that are needed to set a row.
-            </summary>
-            <param name="tableParameterId">Parameter ID of the table.</param>
-            <param name="primaryKey">Primary key of the row.</param>
-            <param name="setPids">Object with parameter IDs that are needed in the notify.</param>
-            <param name="setValues">Object with values that are needed in the notify.</param>
-            <returns>Boolean indicating if there are cells that need to be set.</returns>
-        </member>
         <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper">
              <summary>
              Maps paths in a YANG model to containers in a DataMiner connector.
@@ -493,6 +949,11 @@
             Boolean indicating if communication is suppressed. Useful when the QAction is being disposed and notifications are still entering.
             </summary>
         </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper._notificationProcessors">
+            <summary>
+            Contains a <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor"/> per subscription.
+            </summary>
+        </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.#ctor(Skyline.DataMiner.Scripting.SLProtocol,System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataEntity})">
             <summary>
             Initializes a new instance of the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper"/> class.
@@ -501,12 +962,40 @@
             <param name="inventory">A mapping of the path in the YANG model to the data entity.</param>
             <exception cref="T:System.ArgumentNullException">Exception that will be raised when one of the passed arguments is empty.</exception>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.RegisterSubscriptionPaths(System.String,System.Collections.Generic.IEnumerable{Gnmi.Path})">
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.DefaultThrottlingInterval">
+            <summary>
+            The default throttling value in milliseconds.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.MaxAllowedThrottlingInterval">
+            <summary>
+            The maximum allowed throttling value in milliseconds.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.ThrottleInterval">
+             <summary>
+             The time interval in milliseconds between applying gNMI notifications to the in-memory data model before forwarding them to SLProtocol.
+             Reduces the frequency of SLProtocol calls, potentially improving throughput.
+            
+             Setting it to 0 or lower will disable throttling.
+             The default value is <see cref="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.DefaultThrottlingInterval" />.
+             The maximum allowed value is <see cref="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.MaxAllowedThrottlingInterval" />.
+             If a higher value is configured, it will automatically default to the maximum.
+             </summary>
+             <remarks>
+             If throttling is enabled, gNMI notifications will also be throttled before they are passed along to the callback.
+             This ensures that when the callback triggers, the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper" /> is finished processing these and the data in the parameters is up to date.
+             Throttling is never applied to a <see cref="T:Gnmi.GetResponse" />.
+             </remarks>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.RegisterSubscriptionPaths(System.String,System.Collections.Generic.IEnumerable{Gnmi.Path},System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}},Gnmi.SubscriptionMode)">
             <summary>
             Registers the parameter IDs that are linked with a subscription name.
             </summary>
             <param name="subscriptionName">Name of the subscription.</param>
             <param name="paths">List of paths that are subscribed.</param>
+            <param name="action">The action that needs to be executed when a response comes in.</param>
+            <param name="subscriptionMode">The mode of the subscription.</param>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.UnregisterSubscriptionPaths(System.String)">
             <summary>
@@ -521,13 +1010,12 @@
             <param name="pid">Parameter ID.</param>
             <returns>The path that matches with the parameter ID.</returns>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.ProcessNotification(Gnmi.Notification,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.Boolean,System.String)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.ProcessSubscribeResponse(Gnmi.SubscribeResponse,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String)">
             <summary>
-            Processes the gNMI notification and adapts the parameter values accordingly.
+            Processes the gNMI <see cref="T:Gnmi.SubscribeResponse" /> and adapts the parameter values accordingly.
             </summary>
-            <param name="notification">gNMI notification to be processed.</param>
+            <param name="subscribeResponse">gNMI subscribe response to be processed.</param>
             <param name="origin">Indication of where the data originated from.</param>
-            <param name="isSyncResponse">Boolean indicating that the initial transmission of updates has concluded.</param>
             <param name="subscriptionName">Name of the subscription under which the notification entered.</param>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.ReadExistingValues">
@@ -535,7 +1023,27 @@
             Reads out the parameter values and stores them internally.
             </summary>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.SetLogger(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ILogger)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.RemoveMissingRowsForPid(System.Int32)">
+            <summary>
+            Removes all rows from the table that have the deleted status.
+            </summary>
+            <param name="tablePid">Parameter ID of the table for which the rows will need to be removed.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.RemoveMissingRowsForPid(System.Int32,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Removes the rows from the table that are present in the <paramref name="pks"/> on the condition that they also have the deleted status.
+            </summary>
+            <param name="tablePid">Parameter ID of the table for which the rows will need to be removed.</param>
+            <param name="pks">Primary keys to be removed when the state of the row indicates that the row is deleted.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.RemoveMissingRowForPid(System.Int32,System.String)">
+            <summary>
+            Removes the row from the table where the PK is equal to <paramref name="pk"/> on the condition that the row also has the deleted status.
+            </summary>
+            <param name="tablePid">Parameter ID of the table for which the rows will need to be removed.</param>
+            <param name="pk">Primary key to be removed when the state of the row indicates that the row is deleted.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.SetLogger(Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.ILogger)">
             <summary>
             Assigns a logger interface.
             </summary>
@@ -546,6 +1054,36 @@
             Suppresses the communication, no more values will be filled in or logging will be written out.
             </summary>
             <param name="isSuppress">Boolean indicating if communication should be suppressed.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.TryParseJson(Gnmi.TypedValue,Newtonsoft.Json.Linq.JToken@)">
+            <summary>
+            Parses <paramref name="updateValue"/> to a <see cref="T:Newtonsoft.Json.Linq.JToken"/> if it is typed as JSON, and places it in <paramref name="parsedJsonValue"/>.
+            Otherwise, null is placed in <paramref name="parsedJsonValue"/>.
+            </summary>
+            <param name="updateValue">The value that should be parsed into a JToken</param>
+            <param name="parsedJsonValue">Output parameter that contains the resulting JToken.</param>
+            <returns><c>true</c> if <paramref name="updateValue"/> is JSON and was successfully parsed, otherwise <c>false</c>.</returns>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.DataEntities">
+            <summary>
+            Class that is used to keep track of data entities that have the same path.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.DataEntities.#ctor(Gnmi.Path)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.DataEntities"/> class.
+            </summary>
+            <param name="entityPath">Path of the entity.</param>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.DataEntities.EntityPath">
+            <summary>
+            Gets the path of the entity.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper.DataEntities.LinkedEntities">
+            <summary>
+            Gets the list of data entities with this path.
+            </summary>
         </member>
         <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorParameter">
             <summary>
@@ -592,12 +1130,140 @@
             <param name="updateValue">Value that needs to be changed.</param>
             <param name="timestampUtc">UTC time when the value was taken.</param>
             <param name="origin">Indication of where the data originated from.</param>
+            <param name="subscriptionName">Name of the subscription in case the data came in through subscription.</param>
+            <returns>Boolean indicating if there is something that needs to be changed.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorParameter.ChangeValue(Gnmi.Path,Gnmi.TypedValue,System.DateTime,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String)">
+            <summary>
+            Processes the update and changes the value property.
+            </summary>
+            <param name="path">Path of the value.</param>
+            <param name="updateValue">Value that needs to be changed.</param>
+            <param name="timestampUtc">UTC time when the value was taken.</param>
+            <param name="origin">Indication of where the data originated from.</param>
+            <param name="subscriptionName">Name of the subscription in case the data came in through subscription.</param>
+            <returns>Boolean indicating if there is something that needs to be changed.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorParameter.ChangeValue(Gnmi.Path,Newtonsoft.Json.Linq.JToken,System.Boolean,System.DateTime,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String)">
+            <summary>
+            Processes the update and changes the value property.
+            </summary>
+            <param name="path">Path of the value.</param>
+            <param name="updateValue">Value that needs to be changed.</param>
+            <param name="isJsonIetf">Boolean indicating if the JSON object comes from IETF format or not.</param>
+            <param name="timestampUtc">UTC time when the value was taken.</param>
+            <param name="origin">Indication of where the data originated from.</param>
             <param name="subscriptionName">Name of the subscription in case the value came in through subscription.</param>
             <returns>Boolean indicating if there is something that needs to be changed.</returns>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorParameter.PassRawValue(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Args.DataMinerConnectorRawValueArgs)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorParameter.ChangeValue(Newtonsoft.Json.Linq.JToken,System.DateTime,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType)">
             <summary>
-            Default method to be executed when no external method has been provided. This method simply returns the value that was present in the argument.
+            Updates the parameter with the provided <paramref name="jsonToken"/> value.
+            </summary>
+            <param name="jsonToken">The value the parameter should be updated to.</param>
+            <param name="timestampUtc">The time of the change.</param>
+            <param name="origin">The origin of the new value.</param>
+            <returns><c>true</c> if the ChangeValue was successfully performed, otherwise <c>false</c>.</returns>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._throttler">
+            <summary>
+            Will periodically flush the changes stored in the in-memory data model to the DataMiner connector through SLProtocol calls.
+            </summary>
+            <remarks>Can be null if no throttling needs to be applied.</remarks>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._dataModelSemaphore">
+            <summary>
+            Used to acquire access to <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._dataModel" /> and <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._throttledSubscribeResponses"/>.
+            </summary>
+            <remarks>Can be null if no throttling needs to be applied.</remarks>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._dataModel">
+            <summary>
+            The in-memory data model.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._throttledSubscribeResponses">
+            <summary>
+            Contains the gNMI <see cref="T:Gnmi.SubscribeResponse"/> instances that have been applied to the in-memory <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._dataModel"/> but still need to be flushed.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._dataMapper">
+            <summary>
+            The DataMapper that will take care of storing the incoming data.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._logger">
+            <summary>
+            The logger that the consumer has configured.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._action">
+            <summary>
+            The handler that the consumer has configured to process the messages.
+            </summary>
+            <remarks>Optional, so can be null.</remarks>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._origin">
+            <summary>
+            Where the data originates from.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._name">
+            <summary>
+            The name of the processor. Will be either the name of the subscription or <see cref="F:System.String.Empty"/> for the processor that will take care
+            of the data that came in through a <see cref="T:Gnmi.GetResponse" />. 
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._needsThrottling">
+            <summary>
+            Whether this processor needs to throttle the incoming responses.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._disposeLock">
+            <summary>
+            Synchronizes whether the object has been disposed.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor._isDisposed">
+            <summary>
+            Whether the object has been disposed.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor.#ctor(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Utils.DataMapperLoggerWrapper,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String,System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}},System.Nullable{Gnmi.SubscriptionMode})">
+            <summary>
+            Constructs a <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor" />.
+            </summary>
+            <param name="logger">The logger that the consumer has configured.</param>
+            <param name="dataMapper">The DataMapper that will take care of storing the incoming data.</param>
+            <param name="origin">Where the data originates from.</param>
+            <param name="name">
+            The name of the processor. Will be either the name of the subscription or <see cref="F:System.String.Empty"/> for the processor that will take care
+            of the data that came in through a <see cref="T:Gnmi.GetResponse" />. 
+            </param>
+            <param name="action">The handler that the consumer has configured to process the messages.</param>
+            <param name="subscriptionMode">The mode of the subscription.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when one of the required arguments is null.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor.Process(Gnmi.SubscribeResponse)">
+            <summary>
+            Processes a <see cref="T:Gnmi.SubscribeResponse" /> and will apply the changes to the in-memory data model.
+            </summary>
+            <param name="subscribeResponse">The subscribe response that needs to be processed.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorSubscribeResponseProcessor.FlushChanges(System.Object)">
+            <summary>
+            Goes over all the changes that have been applied to the in-memory model and flushes the data to SLProtocol.
+            </summary>
+            <param name="state">Unused. Needs to match the delegate.</param>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorUtils">
+            <summary>
+            Class that contains common shared methods of the DataMinerConnector classes.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorUtils.PassRawValue(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Args.DataMinerConnectorRawValueArgs)">
+            <summary>
+            Default method to be executed when no external method has been provided. This method simply returns the value that was present in the argument, except for byte[] objects, which are serialized as string.
             </summary>
             <param name="rawValueArgs">Raw value as it is entering from the data source.</param>
             <returns>Processed value.</returns>
@@ -617,27 +1283,62 @@
             The values in the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn"/> will enter through a customized calculation, e.g. rate calculation.
             </summary>
         </member>
-        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.RowState">
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridColumnType.State">
             <summary>
-            State that keeps track of row during subscription.
+            The <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn"/> will be used to keep track of the row state to be able to identify if a row has been deleted or not.
             </summary>
         </member>
-        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.RowState.MissingTwice">
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridRowState">
+            <summary>
+            State of a row in a data grid.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridRowState.Updated">
+            <summary>
+            The row already existed and had value changes.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridRowState.Equal">
+            <summary>
+            The row already existed and none of the values changed. Currently not supported. At this moment <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridRowState.Updated"/> will be used instead.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridRowState.New">
+            <summary>
+            The row was newly added.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridRowState.Deleted">
+            <summary>
+            The row was no longer found in the incoming data. This state will only appear when there is no automatic deletion.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridRowState.Recreated">
+            <summary>
+            The row previously had the <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridRowState.Deleted"/> state and was added again. This state will only appear when there is no automatic deletion. When automatic deletion is active, it will result in a <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridRowState.New"/> state.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.SubscriptionRowState">
+            <summary>
+            Keeps track of the row presence during subscription.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.SubscriptionRowState.MissingTwice">
             <summary>
             Row was not present twice during subscription interval. Can be removed.
             </summary>
         </member>
-        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.RowState.MissingOnce">
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.SubscriptionRowState.MissingOnce">
             <summary>
             Row was not present during the last subscription interval. Will not remove yet. Because of multiple threads the sync can be processed faster than a response with cell values.
             </summary>
         </member>
-        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.RowState.Added">
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.SubscriptionRowState.Added">
             <summary>
             Row was not present before and has been added because a value entered during the subscription interval.
             </summary>
         </member>
-        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.RowState.Updated">
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.SubscriptionRowState.Updated">
             <summary>
             Row was present before, and the value entered during the subscription interval.
             </summary>
@@ -667,19 +1368,24 @@
             Gets the type of the column.
             </summary>
         </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn.IsAutoDelete">
+            <summary>
+            Gets or sets the indication if missing rows need to be automatically removed or not. This setting is only useful when <see cref="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn.ColumnType"/> is equal to <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridColumnType.State"/>.
+            </summary>
+        </member>
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn.MissingValue">
             <summary>
             Gets the value to be filled in when the real value is missing from the data source.
             </summary>
         </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn.PathYangModelAsString">
+            <summary>
+            Gets the path in the YANG model in string format.
+            </summary>
+        </member>
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn.PathYangModel">
             <summary>
             Gets the path in the YANG model.
-            </summary>
-        </member>
-        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn.PathYangModelWithoutModules">
-            <summary>
-            Gets the path without modules in the YANG model.
             </summary>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn.RateCalculator">
@@ -707,12 +1413,13 @@
             Gets the list of column parameter IDs from which the values should be passed to the OnTriggerValueChange function.
             </summary>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn.ChangeValue(System.String,System.Object,System.DateTime,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn.ChangeValue(System.String,System.Object,System.Type,System.DateTime,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType)">
             <summary>
             Processes the update and changes the value property.
             </summary>
             <param name="primaryKey">Primary key of the value that needs to be changed.</param>
             <param name="cellValue">Value that needs to be changed.</param>
+            <param name="cellValueType">Type of the value.</param>
             <param name="timestampUtc">UTC time when the value was taken.</param>
             <param name="origin">Indication of where the data originated from.</param>
             <returns>Boolean indicating if there is something that needs to be changed.</returns>
@@ -722,12 +1429,25 @@
             Clears all the cell values in memory of this column.
             </summary>
         </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn.ClearCellValue(System.String)">
+            <summary>
+            Clears a cell value in memory of this column.
+            </summary>
+            <param name="primaryKey">The primary key of the cell.</param>
+        </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn.GetCellValue(System.String)">
             <summary>
             Gets the cell value for the provided primary key.
             </summary>
             <param name="primaryKey">Primary key of the cell.</param>
-            <returns>Value of the cell.</returns>
+            <returns>Value of the cell. Null when the primary key does not exist.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn.GetCellTimestamp(System.String)">
+            <summary>
+            Gets the timestamp when the cell value was last changed for the provided primary key.
+            </summary>
+            <param name="primaryKey">Primary key of the cell.</param>
+            <returns>Timestamp when the cell value was last changed. DateTime.MinValue when the primary key does not exist.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.IDataMinerConnectorDataGridColumn.InitSettings">
             <summary>
@@ -771,7 +1491,7 @@
             A class that adds a wrapper around the external logger interface. This makes it also possible to suppress logging, e.g. when disposing.
             </summary>
         </member>
-        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Utils.DataMapperLoggerWrapper.#ctor(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ILogger)">
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Utils.DataMapperLoggerWrapper.#ctor(Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.ILogger)">
             <summary>
             Initializes a new instance of the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Utils.DataMapperLoggerWrapper"/> class.
             </summary>
@@ -823,21 +1543,6 @@
             Logs a message to trace every action or function call being executed.
             </summary>
             <param name="message">Message to be logged.</param>
-        </member>
-        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.YangModelPath">
-            <summary>
-            Represents a path in a YANG model.
-            </summary>
-        </member>
-        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.YangModelPath.Module">
-            <summary>
-            The module in which this path can be found.
-            </summary>
-        </member>
-        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.YangModelPath.Path">
-            <summary>
-            The actual path.
-            </summary>
         </member>
     </members>
 </doc>

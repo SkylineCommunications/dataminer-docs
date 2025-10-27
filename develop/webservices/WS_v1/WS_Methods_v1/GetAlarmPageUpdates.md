@@ -4,7 +4,9 @@ uid: GetAlarmPageUpdates
 
 # GetAlarmPageUpdates
 
-Use this method to retrieve alarm page information for a custom selection of alarms that match the specified filters. (Available from DataMiner 9.5.6 onwards.)
+Use this method to retrieve alarm page information for a custom selection of alarms that match the specified filters.
+
+<!-- Available from DataMiner 9.5.6 onwards. -->
 
 ## Input
 

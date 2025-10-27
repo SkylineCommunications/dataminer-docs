@@ -2,12 +2,12 @@
 uid: TOOSLCSERepositoryManager
 ---
 
-# SLC SE Repository Manager
+# SLC SE Repo Manager
 
 > [!IMPORTANT]
 > This tool is only intended to be used by Skyline employees. Consequently, this section includes information that is only applicable to Skyline employees and links that are only accessible to Skyline employees.
 
-The SLC SE Repository Manager is the main tool to interact with the Gerrit server that hosts all Git repositories for System Engineering. This tool can be used to perform the following operations:
+The SLC SE Repo Manager is the main tool to interact with the Gerrit server that hosts all Git repositories for System Engineering. This tool can be used to perform the following operations:
 
 - Create new repositories
 
@@ -15,18 +15,18 @@ The SLC SE Repository Manager is the main tool to interact with the Gerrit serve
 
 - Clone repositories
 
-The SLC SE Repository Manager installer can be downloaded from [http://tools/Installers.html](http://tools/Installers.html).
+The SLC SE Repo Manager installer can be downloaded from [http://tools/Installers.html](http://tools/Installers.html).
 
 > [!NOTE]
 >
-> - The SLC SE Repository Manager requires the use of VPN.
-> - The SLC SE Repository Manager makes use of the SharpSvn library, which has a dependency on the Microsoft Visual C++ 2010 x86 Redistributable. This can be downloaded from <https://www.microsoft.com/en-us/download/details.aspx?id=26999>.
-> - At startup, the SLC SE Repository Manager verifies whether a new version of the tool is available and downloads the new version if this is the case.
+> - The SLC SE Repo Manager requires the use of VPN.
+> - The SLC SE Repo Manager makes use of the SharpSvn library, which has a dependency on the Microsoft Visual C++ 2010 x86 Redistributable. This can be downloaded from <https://www.microsoft.com/en-us/download/details.aspx?id=26999>.
+> - At startup, the SLC SE Repo Manager verifies whether a new version of the tool is available and downloads the new version if this is the case.
 
-The main window of the SLC SE Repository Manager is shown below.
+The main window of the SLC SE Repo Manager is shown below.
 
-![SLC SE Repository Manager main window](~/develop/images/SLC_SE_Repo_Manager_tool.png)
-<br>*SLC SE Repository Manager main window*
+![SLC SE Repo Manager main window](~/develop/images/SLC_SE_Repo_Manager_tool.png)
+<br>*SLC SE Repo Manager main window*
 
 On startup, the tool will load all known protocol repositories hosted on Gerrit, grouped by vendor, and display these in a tree control on the left-hand side. On the right-hand side, you can find the main buttons to perform different operations. A button will only be enabled in case the item selected in the tree supports the operation.
 

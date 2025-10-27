@@ -1,5 +1,6 @@
 ---
 uid: skyline_dataminer_sdk_dataminer_package_project
+keywords: Skyline.DataMiner.Sdk, Package Project
 ---
 
 # Skyline DataMiner Package Project
@@ -10,15 +11,17 @@ Note that the information below assumes that you have access to Visual Studio an
 
 ## Creating a DataMiner application package
 
-The project is by default configured to create a `.dmapp` file every time you build the project.
+The project is by default configured to create a .dmapp file every time you build the project.
 
-When you compile or build the project, you will find the generated `.dmapp` in the standard output folder, which is typically the `bin` folder of your project.
+When you compile or build the project, you will find the generated .dmapp in the standard output folder, which is typically the *bin* folder of your project.
 
-When you publish the project, a corresponding item will be created in the online DataMiner Catalog.
+When you publish the project, a corresponding item will be created in the online Catalog.
 
 ## Adding extra artifacts in the same solution
 
-You can right-click the solution and select *Add* > *New Project*. This will allow you to select DataMiner project templates (e.g. adding additional Automation scripts).
+### New artifacts
+
+You can right-click the solution and select *Add* > *New Project*. This will allow you to select DataMiner project templates (e.g. to add additional Automation scripts).
 
 > [!NOTE]
 > Connectors are currently not supported for this.
@@ -31,7 +34,11 @@ You can also add new projects by using the dotnet-cli. For the sake of stability
     dotnet sln add MyUserDefinedApiFromGithub
 ```
 
-Every *Skyline.DataMiner.SDK* project within the solution, except other DataMiner package projects, will by default be included within the `.dmapp` created by this project. You can customize this behavior using the *PackageContent/ProjectReferences.xml* file. This allows you to add filters to include or exclude projects as needed.
+Every *Skyline.DataMiner.SDK* project within the solution, except other DataMiner package projects, will by default be included within the .dmapp created by this project. You can customize this behavior using the *PackageContent/ProjectReferences.xml* file. This allows you to add filters to include or exclude projects as needed. See [ProjectReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_project_references) for more information.
+
+### Existing Automation script files
+
+You can right-click the solution and select *Add* > *Add Existing DataMiner Automation Script*. This will allow you to add existing Automation scripts files to the solution.
 
 ## Importing from DataMiner
 
@@ -43,13 +50,62 @@ You can import specific items directly from a DataMiner Agent using DIS:
 
 1. Once connected, import the DataMiner artifacts you want:
 
-   1. In your *Solution Explorer*, navigate to folders such as *PackageContent/Dashboards* or *PackageContent/LowCodeApps*.
-   1. Right-click, and select *Add*.
-   1. Select e.g. *Import DataMiner Dashboard/Low-Code App*, depending on what you want to import.
+   - To import **dashboards**:
 
-## Executing additional code on installation
+     1. In your *Solution Explorer*, navigate in the Package project to *PackageContent/Dashboards*.
 
-Open the `$SCRIPTNAME$.cs` file to write custom installation code. Common actions include creating elements, services, or views.
+     1. Right-click, and select *Add*.
+
+     1. Select *Import DataMiner Dashboard*.
+
+   - To import **low-code apps**:
+
+     1. In your *Solution Explorer*, navigate in the Package project to *PackageContent/LowCodeApps*.
+
+     1. Right-click, and select *Add*.
+
+     1. Select *Import DataMiner Low-Code App*.
+
+   - To import an **Automation script**:
+
+     1. In your *Solution Explorer*, right-click the solution, and select *Add*.
+
+     1. Select *Import DataMiner Automation Script*.
+
+## Adding content from the Catalog
+
+You can reference and include additional content from the Catalog using the *PackageContent/CatalogReferences.xml* file provided in this project. See [CatalogReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_catalog_references) for more information.
+
+For the SDK to be able to download the referenced items from the Catalog, configure a user secret in Visual Studio:
+
+1. Obtain an **organization key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
+
+   - *Register catalog items*
+   - *Read catalog items*
+   - *Download catalog versions*
+
+1. Securely store the key using Visual Studio User Secrets:
+
+   1. Right-click the project and select *Manage User Secrets*.
+
+   1. Add the key in the following format:
+
+      ```json
+      { 
+        "skyline": {
+          "sdk": {
+            "dataminertoken": "MyKeyHere"
+          }
+        }
+      }
+      ```
+
+> [!TIP]
+> Alternatively, you can configure the token using the default environment variable. For more information, see [Publishing manually](#publishing-manually).
+
+## Executing additional code during installation
+
+To execute custom code during installation, open the `$SCRIPTNAME$.cs` file and add your logic there. This can be used for actions such as creating elements, services, or views.
 
 > [!TIP]
 > Type `clGetDms` in the .cs file and press Tab twice to insert a snippet that gives you access to the *IDms* classes, making DataMiner manipulation easier.
@@ -66,14 +122,40 @@ string setupContentPath = installer.GetSetupContentDirectory();
 
 ## Publishing to the Catalog
 
-By default, a project is created with support for publishing to the DataMiner Catalog. You can publish your artifact manually through Visual Studio or by setting up a CI/CD workflow.
+By default, a project is created with support for publishing to the Catalog. You can publish your artifact manually through Visual Studio or by setting up a CI/CD workflow. To ensure high quality, Skyline only publishes Catalog items through CI/CD.
 
 ### Publishing manually
 
+You can manually publish a Catalog item using either the [.NET CLI](#using-the-net-cli-with-an-environment-variable) or [Visual Studio's publish functionality](#using-visual-studio-with-a-user-secret).
+
+#### Using the .NET CLI with an environment variable
+
+When working in a collaborative environment, it is typically considered a best practice to work with environment variables.
+
+You can use a `dotnet` command to publish your Catalog item:
+
+```bash
+$env:DATAMINER_TOKEN = "MyOrgKey"
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
+```
+
+You can also choose to leave the default `CatalogPublishKeyName` in the .csproj file and add a system variable in Windows (through [Powershell](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.5#set-environment-variables-with-setenvironmentvariable) or the [System Control Panel](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.5#set-environment-variables-in-the-system-control-panel), e.g. `[Environment]::SetEnvironmentVariable("skyline__sdk__dataminertoken", "MyOrgKey", "Machine"))`.
+
+By doing so, you can omit `CatalogDefaultDownloadKeyName` and `CatalogPublishKeyName`, and simplify the command:
+
+```bash
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version."
+```
+
+#### Using Visual Studio with a User Secret
+
+You can also publish your artifact via [Visual Studio's default publish functionality](https://learn.microsoft.com/en-us/dotnet/core/tutorials/publishing-with-visual-studio), using a User Secret. This is convenient when managing multiple projects with different registration keys.
+
 1. Obtain an **organization key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
 
-   - *Register Catalog items*
-   - *Read Catalog items*
+   - *Register catalog items*
+   - *Read catalog items*
+   - *Download catalog versions*
 
 1. Securely store the key using Visual Studio User Secrets:
 
@@ -85,7 +167,7 @@ By default, a project is created with support for publishing to the DataMiner Ca
       { 
         "skyline": {
           "sdk": {
-            "catalogpublishtoken": "MyKeyHere"
+            "dataminertoken": "MyKeyHere"
           }
         }
       }
@@ -120,6 +202,19 @@ There are two ways to change the version of a package:
      <Version>1.0.1</Version>
      ```
 
+### Updating Catalog item details
+
+To update only the **Catalog item details**, you can re-publish an already existing version. The Catalog does not allow the re-publishing of an existing version artifact, so the artifact will not be updated (i.e. the existing version will remain unchanged in the Catalog). However, the Catalog item details will be updated. This includes the details provided in the **manifest.yml** and the **readme**.
+
+If you have set the default key name as a system environment variable (see above), you can run the following command:
+
+```bash
+dotnet publish -p:Version="1.0.0"
+```
+
+> [!NOTE]
+> When `Version` is not included in the command, it will default to the value defined in the `<Version>` tag in the .csproj file.
+
 ### Publishing to the Catalog with the basic CI/CD workflow
 
 If you have used the *Skyline.DataMiner.VisualStudioTemplates*, your project can include a basic GitHub workflow for Catalog publishing.
@@ -137,7 +232,7 @@ Follow these steps to set it up:
    ``` text
    Error: DATAMINER_TOKEN is not set. Release not possible!
    Please create or re-use an admin.dataminer.services token by visiting: https://admin.dataminer.services/.
-   Navigate to the right Organization then go to Keys and create/find a key with permissions to Register Catalog Items.
+   Navigate to the right organization, then go to Keys and create or find a key with permission Register catalog items, Download catalog versions, and Read catalog items.
    Copy the value of the token.
    Then set a DATAMINER_TOKEN secret in your repository settings: **Dynamic Link**
    ```
@@ -146,8 +241,9 @@ Follow these steps to set it up:
 
 1. Obtain an **organization key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
 
-   - *Register Catalog items*
-   - *Read Catalog items*
+   - *Register catalog items*
+   - *Read catalog items*
+   - *Download catalog versions*
 
 1. Add the key as a secret in your GitHub repository, by navigating to *Settings* > *Secrets and variables* > *Actions* and creating a secret named `DATAMINER_TOKEN`.
 
@@ -164,7 +260,7 @@ With this setup, any push with new content (including the initial creation) to t
 1. Create a new release, select the desired version as a **tag**, and provide a title and description.
 
 > [!NOTE]
-> The description will be visible in the DataMiner Catalog.
+> The description will be visible in the Catalog.
 
 ### Publishing to the Catalog with the complete CI/CD workflow
 
@@ -185,7 +281,7 @@ If you have used the Skyline.DataMiner.VisualStudioTemplates, your project can i
    ``` text
    Error: DATAMINER_TOKEN is not set. Release not possible!
    Please create or re-use an admin.dataminer.services token by visiting: https://admin.dataminer.services/.
-   Navigate to the right Organization then go to Keys and create/find a key with permissions to Register Catalog Items.
+   Navigate to the right organization, then go to Keys and create or find a key with permissions Register catalog items, Download catalog versions, and Read catalog items.
    Copy the value of the token.
    Then set a DATAMINER_TOKEN secret in your repository settings: **Dynamic Link**
    ```
@@ -194,8 +290,9 @@ If you have used the Skyline.DataMiner.VisualStudioTemplates, your project can i
 
 1. Obtain an **organization key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
 
-   - *Register Catalog items*
-   - *Read Catalog items*
+   - *Register catalog items*
+   - *Read catalog items*
+   - *Download catalog versions*
 
 1. Add the key as a secret in your GitHub repository, by navigating to *Settings* > *Secrets and variables* > *Actions* and creating secrets or variables with the required names.
 
@@ -205,7 +302,7 @@ The following secrets and variables will have been added to your repository afte
 
 | Name              | Type     | Description                                    | Setup Guide                                                                                               |
 |-------------------|----------|------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| `DATAMINER_TOKEN` | Secret   | Organization key for publishing to the Catalog | Obtain from [admin.dataminer.services](https://admin.dataminer.services/) and add it as a secret.         |
+| `DATAMINER_TOKEN` | Secret   | Organization key for downloading/publishing from/to the Catalog | Obtain from [admin.dataminer.services](https://admin.dataminer.services/) and add it as a secret.         |
 | `SONAR_TOKEN`     | Secret   | Token for SonarCloud authentication            | Obtain from [SonarCloud Security](https://sonarcloud.io/account/security) and add it as a secret.         |
 | `SONAR_NAME`      | Variable | SonarCloud project ID                          | Visit [SonarCloud](https://sonarcloud.io/projects/create), copy the project ID, and add it as a variable. |
 
@@ -218,117 +315,10 @@ The following secrets and variables will have been added to your repository afte
 1. Create a new release, select the desired version as a **tag**, and provide a title and description.
 
 > [!NOTE]
-> The description will be visible in the DataMiner Catalog.
+> The description will be visible in the Catalog.
 
-## Advanced configuration
+## See also
 
-### Multiple packages
-
-You can add multiple DataMiner package projects within a single solution and then have them make different packages. The default behavior on building or publishing this solution through CI/CD is that all of them will have the same version and upload to the same organization.
-
-Within a single solution, you can configure some advanced setups in order to:
-
-- Release packages to different organizations
-- Release packages with different versions
-
-This is also supported with our reusable workflow (offered through the templates as the "Complete" GitHub Workflow): [DataMiner App Packages Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow).
-
-In GitHub you can make several different workflows (or different jobs) that trigger the reusable workflow with different arguments that can change the behavior of the Build and Publish steps.
-
-This is most easily handled using Visual Studio Solution filters.
-
-#### Visual Studio solution filter files
-
-A **solution filter** (`.slnf`) file in Visual Studio 2022 is a feature designed to load a subset of projects within a larger solution (`.sln`). This is particularly useful for large solutions that contain many projects, as it allows developers to work only with the relevant projects, improving load times and reducing resource consumption.
-
-Within Skyline DataMiner SDK, they provide an additional key benefit. You can easily publish or build a specific subset of projects by providing those dotnet-cli commands with a solution filter file. This can allow you to independently version or release different DataMiner application packages.
-
-For more information on how to make such filters, refer to [Visual Studio 2022 solution filter (*.slnf) files](xref:skyline_dataminer_sdk_solution_filter_files).
-
-#### dotnet-cli
-
-##### Default
-
-Default call that releases every package in a solution to the same organization with the same version:
-
-```bash
-$env:DATAMINER_TOKEN = "MyOrgKey"
-dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="$DATAMINER_TOKEN"
-```
-
-##### With filters
-
-Call that releases only packages configured with either of the provided solution filter files:
-
-- PackagesForOrganizationA.slnf
-- PackagesForOrganizationB.slnf
-
-```bash
-$env:DATAMINER_TOKENA = "MyOrgAKey"
-$env:DATAMINER_TOKENB = "MyOrgAKey"
-dotnet publish PackagesForOrganizationA.slnf -p:Version="1.0.1" -p:VersionComment="Releasing 1.0.1 for A." -p:CatalogPublishKeyName="$DATAMINER_TOKENA"
-dotnet publish PackagesForOrganizationB.slnf -p:Version="2.0.1" -p:VersionComment="Releasing 2.0.1 for B." -p:CatalogPublishKeyName="$DATAMINER_TOKENB"
-```
-
-#### GitHub reusable workflows
-
-When using GitHub reusable workflows as provided by Skyline Communications, you can optionally include a Visual Studio solution filter file that will adjust the behavior of the pipeline so it only builds, tests, and publishes the subsection defined by the filter.
-
-##### Default job
-
-```yml
-jobs:
-
-  CI:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/DataMiner App Packages Master Workflow.yml@main
-    with:
-      configuration: Release
-      referenceName: ${{ github.ref_name }}
-      runNumber: ${{ github.run_number }}
-      referenceType: ${{ github.ref_type }}
-      repository: ${{ github.repository }}
-      owner: ${{ github.repository_owner }}
-      sonarCloudProjectName: ${{ vars.SONAR_NAME }}
-    secrets:
-      dataminerToken: ${{ secrets.DATAMINER_TOKEN }}
-      sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
-
-```
-
-##### Jobs with filters
-
-Notice the addition of the extra argument below where you can define the .slnf names. Both jobs are using a different secrets.DATAMINER_TOKEN, which allows uploading to different organizations in the same run.
-
-```yml
-jobs:
-
-  CI-package1:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/DataMiner App Packages Master Workflow.yml@DataMinerSDKSupport
-    with:
-      configuration: Release
-      referenceName: ${{ github.ref_name }}
-      runNumber: ${{ github.run_number }}
-      referenceType: ${{ github.ref_type }}
-      repository: ${{ github.repository }}
-      owner: ${{ github.repository_owner }}
-      sonarCloudProjectName: ${{ vars.SONAR_NAME }}
-      solutionFilterName: "PackagesForOrganizationA.slnf"
-    secrets:
-      dataminerToken: ${{ secrets.DATAMINER_TOKENA }}
-      sonarCloudToken: ${{ secrets.SONAR_TOKEN }} 
-  
-  CI-package2:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/DataMiner App Packages Master Workflow.yml@DataMinerSDKSupport
-    with:
-      configuration: Release
-      referenceName: ${{ github.ref_name }}
-      runNumber: ${{ github.run_number }}
-      referenceType: ${{ github.ref_type }}
-      repository: ${{ github.repository }}
-      owner: ${{ github.repository_owner }}
-      sonarCloudProjectName: ${{ vars.SONAR_NAME }}
-      solutionFilterName: "PackagesForOrganizationB.slnf"
-    secrets:
-      dataminerToken: ${{ secrets.DATAMINER_TOKENB }}
-      sonarCloudToken: ${{ secrets.SONAR_TOKEN }} 
-```
+- [Skyline DataMiner Package Project - Advanced](xref:skyline_dataminer_sdk_dataminer_package_project_advanced)
+- [Skyline DataMiner Package Project - CatalogReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_catalog_references)
+- [Skyline DataMiner Package Project - ProjectReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_project_references)

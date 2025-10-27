@@ -29,6 +29,12 @@ If you want to use characters like "<", ">" and "&" in the naming format, enclos
 > [!NOTE]
 > If you use this NamingFormat tag, it will override any naming rules specified in the options attribute of the ArrayOptions tag (`options=";naming=/1512,1514"`). Using the NamingFormat tag is preferred over the use of the naming option.
 
+> [!NOTE]
+> When referencing a parameter ID, take care not to add spaces before or after the number. For example:
+>
+> - Correct: ";Input;1005;TS;2004"
+> - Incorrect: ";Input; 1005;TS;2004 "
+
 ## Examples
 
 The following example:

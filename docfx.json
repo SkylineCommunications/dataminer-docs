@@ -23,7 +23,9 @@
             "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit.dll",
             "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageCreator.dll",
             "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageInstaller.dll",
-            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageInstaller.SRM.dll"
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageInstaller.SRM.dll",
+			      "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Protocol.Extension.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.DcpChatIntegrationHelper.dll"
           ],
           "exclude": [
             "**/obj/**",
@@ -42,12 +44,10 @@
     "content": [
       {
         "files": [
-          "dataminer-overview/**.md",
-          "dataminer-overview/**/toc.yml",
+          "dataminer/**.md",
+          "dataminer/**/toc.yml",
           "solutions/**.md",
           "solutions/**/toc.yml",
-          "user-guide/**.md",
-          "user-guide/**/toc.yml",
           "release-notes/**.md",
           "release-notes/**/toc.yml",
           "tutorials/**.md",
@@ -73,10 +73,10 @@
   "resource": [
       {
         "files": [
+          "fonts/**",
           "images/**",
-          "dataminer-overview/images/**",
+          "dataminer/images/**",
           "solutions/images/**",
-          "user-guide/images/**",
           "release-notes/images/**",
           "develop/images/**",
           "tutorials/images/**",
@@ -84,7 +84,8 @@
           "develop/schemadoc/Protocol/images/**",
           "develop/schemadoc/Automation/images/**",
           "staticwebapp.config.json",
-          "404.html"
+          "404.html",
+          "robots.txt"
         ]
       }
     ],
@@ -95,6 +96,8 @@
       "_appFooter": "© Skyline Communications 2025",
       "_enableSearch": false,
       "_enableNewTab": true,
+      "_disableNextArticle": true,
+      "_disableNavbar": true,
 	    "_googleAnalyticsTagId": "GTM-WD3NQGN"
     },
     "globalMetadataFiles": [],

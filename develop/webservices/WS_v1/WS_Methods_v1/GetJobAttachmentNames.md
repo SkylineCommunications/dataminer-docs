@@ -6,7 +6,7 @@ uid: GetJobAttachmentNames
 
 Use this method to retrieve the names of all files attached to a specific job.
 
-Available from DataMiner 10.0.5 onwards.
+<!-- Available from DataMiner 10.0.5 onwards. -->
 
 ## Input
 

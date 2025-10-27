@@ -6,6 +6,9 @@ uid: Protocol.QActions.QAction-triggers
 
 Specifies the IDs of the parameters that will cause the QAction to be executed each time their value changes.
 
+> [!TIP]
+> See also: [Change-based event handling](xref:InnerWorkingsChangeBasedEventHandling)
+
 ## Content Type
 
 [TypeSemicolonSeparatedNumbers](xref:Protocol-TypeSemicolonSeparatedNumbers)

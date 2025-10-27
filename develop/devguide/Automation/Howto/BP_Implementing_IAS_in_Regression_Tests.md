@@ -14,8 +14,8 @@ This guide focuses on best practices (recommendations) for integrating interacti
 > See also:
 >
 > - [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit)
-> - [Model View Presenter (MVP)](https://community.dataminer.services/courses/dataminer-automation/lessons/model-view-presenter/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-> - [How to get started with regression tests](https://community.dataminer.services/video/how-to-get-started-with-regression-tests/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Model View Presenter (MVP)](https://community.dataminer.services/courses/dataminer-automation/lessons/model-view-presenter/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
+> - [How to get started with regression tests](https://www.youtube.com/watch?v=xUcXZAMjp8A) ![Video](~/dataminer/images/video_Duo.png)
 
 ## Use the Model View Presenter (MVP) design pattern
 

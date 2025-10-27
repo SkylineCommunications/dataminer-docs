@@ -602,19 +602,6 @@ For more information on the available search options, see [Setting the indexing 
 
 Also, from now on, DataMiner Cube will call the server-side search engine when you enter a numeric search string like "1234". Up to now, when you entered a numeric search string, DataMiner Cube would perform a client-side search that would only return views of which the ID matched the search string.
 
-#### System Center - Database: Address specified in the 'DB server' field of a database of type 'Cassandra' or 'CassandraCluster' can now include a custom port [ID 34590]
-
-<!-- MR 10.3.0 - FR 10.3.3 -->
-
-When, in the *Database* section of *System Center*, you are configuring a database of type "Cassandra" or "CassandraCluster", you can now specify an address with a custom port in the *DB server* field.
-
-If you specify a hostname or IP address without a port, DataMiner will fall back to the default Cassandra port 9042.
-
-Examples:
-
-- localhost (Will be resolved to localhost:9042)
-- 10.5.100.1:5555
-
 #### Resources app: 'Resources' tab and 'Occupancy' tab can now be filtered [ID 34973]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->

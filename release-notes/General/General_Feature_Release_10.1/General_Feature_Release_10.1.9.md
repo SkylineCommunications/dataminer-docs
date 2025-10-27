@@ -563,7 +563,7 @@ When drawing connections between nodes in a service definition diagram, in some 
 
 #### Web apps: Problems with DefaultTimeZone setting \[ID 30301\]
 
-The time displayed in the DataMiner web apps (e.g. Jobs, Dashboards, etc.) is based on the DefaultTimeZone setting in the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file.
+The time displayed in the DataMiner web apps (e.g. Jobs, Dashboards, etc.) is based on the DefaultTimeZone setting in the `C:\Skyline DataMiner\users\ClientSettings.json` file.
 
 Up to now, the following problems could occur with regard to this setting:
 

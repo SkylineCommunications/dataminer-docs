@@ -153,7 +153,7 @@ Because client computers running a Microsoft Windows version prior to Windows 10
 
 Previously, the amount of simultaneous calls that native SLElement and SLDMS modules could make to the local SLNet process was limited to 1 and 5 respectively. This limit has now been removed. Both now use the same limit as other processes, i.e. 10 simultaneous calls.
 
-If you prefer to keep the call limits as they were, you can specify the following option in the *\<appSettings>* section of the *C:\\Skyline DataMiner\\Files\\SLNetCOM.dll.config* file:
+If you prefer to keep the call limits as they were, you can specify the following option in the *\<appSettings>* section of the `C:\Skyline DataMiner\Files\SLNetCOM.dll.config` file:
 
 ```xml
 <add key="UseLegacyThrottle" value="true" />
@@ -229,7 +229,7 @@ A number of enhancements have been made with respect to the DELT export process.
 
 #### Automation: UnSetFlag method now also added to IEngine interface \[ID 25188\]
 
-Since DataMiner 10.0.0/10.0.1, you can use the engine.UnSetFlag method to clear the AllowUndef, NoInformationEvents and NoKeyCaching run-time flags in an Automation script.
+Since DataMiner 10.0.0/10.0.1, you can use the engine.UnSetFlag method to clear the AllowUndef, NoInformationEvents and NoKeyCaching runtime flags in an Automation script.
 
 This method has now also been added to the IEngine interface.
 
@@ -625,9 +625,9 @@ The URL argument “cpes” now has the following extended format:
 
 In interactive Automation scripts, in some cases, checkbox components would not be updated correctly.
 
-#### SLDMS run-time errors when connection with remote DMA could not be initialized \[ID 25068\]
+#### SLDMS runtime errors when connection with remote DMA could not be initialized \[ID 25068\]
 
-When the connection with a remote DMA could not be initialized, run-time errors could occur in the SLDMS process.
+When the connection with a remote DMA could not be initialized, runtime errors could occur in the SLDMS process.
 
 #### SLDataMiner: Memory leak when retrieving security group information from the user directory \[ID 25080\]
 
@@ -639,7 +639,7 @@ If there were multiple trend points in the same second, it could occur that thes
 
 #### DataMiner Cube: Problem when clicking several times in rapid succession or when a log folder was created on a clean client computer \[ID 25099\]
 
-In DataMiner Cube, in some cases, an exception could be thrown when clicking several times in rapid succession or when the *C:\\ProgramData\\Skyline\\DataMiner\\DataMinerCube\\CubeLogging* folder was created on a clean client computer.
+In DataMiner Cube, in some cases, an exception could be thrown when clicking several times in rapid succession or when the `C:\ProgramData\Skyline\DataMiner\DataMinerCube\CubeLogging` folder was created on a clean client computer.
 
 #### HTML5 apps: Last item in drop-down lists was hidden by the collapse button \[ID 25108\]
 
@@ -695,7 +695,7 @@ In some cases, an error could occur in SLNet when you performed a diagnostic req
 
 #### Run-time error in protocol thread after dynamic IP change or close action of serial connection \[ID 25223\]
 
-If a protocol with serial connection over UDP or TDC/IP used either an action of type "close" on a serial connection or a parameter with type option "dynamic IP", a run-time error could occur in the protocol thread.
+If a protocol with serial connection over UDP or TDC/IP used either an action of type "close" on a serial connection or a parameter with type option "dynamic IP", a runtime error could occur in the protocol thread.
 
 #### Automation: Options text in narrow Automation script execution window not fully displayed \[ID 25226\]
 

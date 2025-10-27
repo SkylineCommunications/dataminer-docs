@@ -24,7 +24,7 @@ In addition, the provisioning details of a CI type can now also be managed in th
 
 The *DataMiner IDP CI Types* element, which uses the Skyline IDP CMDB protocol, now allows you to export one or more CI types to JSON format.
 
-If you select CI types in the *CI Types Templates* table, you can click the *Export Selected* button to export the selected CI types. Alternatively, you can click the *Export all* button to export all CI types in the table. The exported files are located in the folder configured using the *CI Type File Path* parameter. By default, this is *C:\\Skyline DataMiner\\Documents*\\*Skyline IDP CMDB*\\*CI Types*.
+If you select CI types in the *CI Types Templates* table, you can click the *Export Selected* button to export the selected CI types. Alternatively, you can click the *Export all* button to export all CI types in the table. The exported files are located in the folder configured using the *CI Type File Path* parameter. By default, this is `C:\Skyline DataMiner\Documents*\*Skyline IDP CMDB*\*CI Types`.
 
 #### Additional scripts launched after element creation \[ID 23716\]
 

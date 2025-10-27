@@ -6,8 +6,8 @@ items:
     items:
     - name: Getting started with data source integrations
       topicUid: Getting_started_with_data_source_integrations
-    - name: Introduction
-      topicUid: Introduction
+    - name: About DataMiner connectors
+      topicUid: About_DataMiner_connectors
     - name: Connector fundamentals
       topicUid: ConnectorFundamentals
       items:
@@ -217,8 +217,6 @@ items:
       - name: Inner workings
         topicUid: InnerWorkings
         items:
-        - name: Introduction
-          topicUid: InnerWorkingsIntroduction
         - name: SLDataMiner
           topicUid: InnerWorkingsSLDataMiner
         - name: SLProtocol
@@ -356,15 +354,11 @@ items:
     - name: Connections
       topicUid: Connections
       items:
-      - name: Introduction
-        topicUid: ConnectionsIntroduction
       - name: Virtual
         topicUid: ConnectionsVirtual
       - name: SNMP
         topicUid: ConnectionsSnmp
         items:
-        - name: Introduction
-          topicUid: ConnectionsSnmpIntroduction
         - name: OIDs
           topicUid: ConnectionsSnmpOids
         - name: Retrieving a variable
@@ -394,8 +388,6 @@ items:
       - name: Serial
         topicUid: ConnectionsSerial
         items:
-        - name: Introduction
-          topicUid: ConnectionsSerialIntroduction
         - name: Creating commands and responses
           topicUid: ConnectionsSerialCreatingCommandsAndResponses
         - name: Pairs
@@ -423,8 +415,6 @@ items:
       - name: Smart serial
         topicUid: ConnectionsSmartSerial
         items:
-        - name: Introduction
-          topicUid: ConnectionsSmartSerialIntroduction
         - name: Data forwarding from SLPort to SLProtocol
           topicUid: ConnectionsSmartSerialDataForwarding
         - name: Configuring a smart-serial connection as a server
@@ -435,11 +425,11 @@ items:
           topicUid: ConnectionsSmartSerialLogging
         - name: Dynamic polling
           topicUid: ConnectionsSmartSerialDynamicPolling
+        - name: Common pitfalls
+          topicUid: ConnectionsSmartSerialCommonPitfalls
       - name: HTTP
         topicUid: ConnectionsHttp
         items:
-        - name: Introduction
-          topicUid: ConnectionsHttpIntroduction
         - name: Implementing HTTP communication
           topicUid: ConnectionsHttpImplementing
         - name: Element configuration
@@ -459,8 +449,6 @@ items:
       - name: WebSockets
         topicUid: ConnectionsWebSockets
         items:
-        - name: Introduction
-          topicUid: ConnectionsWebSocketsIntroduction
         - name: Implementing a WebSocket
           topicUid: ConnectionsWebSocketsImplementation
         - name: Connection status
@@ -533,6 +521,8 @@ items:
           topicUid: AdvancedDVEsSeverityState
         - name: Toggling DVE creation
           topicUid: AdvancedDVEsTogglingCreation
+        - name: Assigning templates
+          topicUid: AdvancedDVEsTemplates
         - name: Remarks
           topicUid: AdvancedDVEsRemarks
         - name: Exercise
@@ -565,13 +555,11 @@ items:
           topicUid: AdvancedInterElementCommunicationParameterReplication
         - name: Class Library
           topicUid: AdvancedInterElementCommunicationClassLibrary
-      - name: Multi-threading
+      - name: Multithreading
         topicUid: AdvancedMultiThreading
-      - name: Multi-threaded timers
+      - name: Multithreaded timers
         topicUid: AdvancedMultiThreadedTimers
         items:
-        - name: Introduction
-          topicUid: AdvancedMultiThreadedTimersIntroduction
         - name: SNMP
           topicUid: AdvancedMultiThreadedTimersSnmp
         - name: Serial
@@ -601,8 +589,6 @@ items:
       - name: DataMiner Mediation Layer
         topicUid: AdvancedDataMinerMediationLayer
         items:
-        - name: Introduction
-          topicUid: AdvancedDataMinerMediationLayerIntroduction
         - name: Creating a base protocol
           topicUid: AdvancedDataMinerMediationLayerCreatingABaseProtocol
         - name: Linking a device protocol to a base protocol
@@ -792,8 +778,8 @@ items:
                   topicUid: Exception_handling
                 - name: Logging
                   topicUid: Logging
-                - name: Multi-threading
-                  topicUid: Multi-threading1
+                - name: Multithreading
+                  topicUid: Multithreading1
                 - name: Thread.Sleep
                   topicUid: Thread_Sleep
                 - name: StyleCop
@@ -825,7 +811,7 @@ items:
       items:
       - name: How to aggregate alarm severities
         topicUid: How_to_aggregate_alarm_severities
-      - name: How to configure multi-threaded timers
+      - name: How to configure multithreaded timers
         topicUid: How_to_configure_multi_threaded_timers
       - name: How to create an HTTP connector (CoinMarketCap use case)
         topicUid: How_to_create_an_HTTP_connector_CoinMarketCap_use_case
@@ -887,7 +873,7 @@ items:
           topicUid: Debugging_connectors_tracing_the_stack
         - name: Investigating slow device control using dotTrace
           topicUid: Investigating_slow_device_control_using_dotTrace
-        - name: Protocol thread run-time errors - use cases
+        - name: Protocol thread runtime errors - use cases
           topicUid: Protocol_thread_run_time_errors_use_cases
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
@@ -944,7 +930,11 @@ items:
     - name: UIBlockType overview
       topicUid:  UIBlockTypesOverview
     - name: Best practices
-      topicUid: Automation_best_practices
+      items:
+      - name: Generating information events
+        topicUid: Automation_best_practices_information_events
+      - name: Handling async code
+        topicUid: Handling_Async_Code
     - name: How-tos
       items:
       - name: Making your Automation scripts debug-ready
@@ -955,9 +945,168 @@ items:
         topicUid: BP_Implementing_IAS_in_Regression_Tests
       - name: Creating a Cypress test for an interactive Automation script
         topicUid: Creating_a_cypress_test_for_an_interactive_automation_script
+      - name: Launching and attaching interactive Automation scripts
+        topicUid: Launching_and_attaching_interactive_Automation_scripts
+      - name: Implementing the OnRequestScriptInfo entry point
+        topicUid: Implementing_OnRequestScriptInfo_Entry_Point
+  - name: GQI extensions
+    topicUid: GQI_Extensions
+    items:
+      - name: Extension libraries
+        topicUid: GQI_Extension_Libraries
+      - name: Ad hoc data sources
+        topicUid: GQI_Ad_hoc_data_sources
+        items:
+          - name: Creating an ad hoc data source
+            topicUid: Ad_hoc_Creation
+          - name: Building blocks
+            topicUid: Ad_hoc_Building_blocks
+          - name: Lifecycle
+            topicUid: Ad_hoc_Life_cycle
+          - name: Linking rows to DataMiner objects
+            topicUid: Ad_hoc_Metadata
+          - name: Examples
+            items:
+              - name: Forwarding dummy data to the GQI
+                topicUid: Forwarding_dummy_data_to_GQI
+              - name: Optimizing sort operations
+                topicUid: GQI_Ad_hoc_Optimizing_sort_operations
+              - name: Scaling an ad hoc data source
+                topicUid: Scaling_Ad_hoc_Data_Source
+              - name: Fetching alarms using the Repository API
+                topicUid: Alarms_Ad_hoc_Data_Source
+              - name: Paging data from the server
+                topicUid: Paging_Ad_hoc_Data_Source
+          - name: Tutorials
+            items:
+              - name: Building a GQI data source that fetches satellites
+                topicUid: Ad_hoc_Tutorials_Satellites
+              - name: Building a GQI data source that retrieves data from a DMS
+                topicUid: Ad_hoc_Tutorials_Interact_With_DMS
+      - name: Custom operators
+        topicUid: GQI_Custom_Operator
+        items:
+          - name: Creating a custom operator
+            topicUid: CO_Creation
+          - name: Building blocks
+            topicUid: CO_Building_blocks
+          - name: Lifecycle
+            topicUid: CO_Life_cycle
+          - name: Modifying links to DataMiner objects
+            topicUid: CO_Metadata
+          - name: Tutorials
+            items:
+              - name: Creating a minus operator
+                topicUid: Creating_Minus_Operator
+              - name: Creating a duration operator
+                topicUid: Creating_Duration_Operator
+              - name: Optimizing your custom operator
+                topicUid: Custom_Operator_Tutorial
+              - name: Providing a custom sort order
+                topicUid: GQI_Redirect_Sort_Tutorial
+      - name: API reference
+        items:
+          - name: GenIfRowMetadata
+            topicUid: GQI_GenIfRowMetadata
+          - name: GQIArgument
+            topicUid: GQI_GQIArgument
+          - name: GQICell
+            topicUid: GQI_GQICell
+          - name: GQIColumn
+            topicUid: GQI_GQIColumn
+          - name: GQIColumn<T>
+            topicUid: GQI_GQIColumnT
+          - name: GQIDMS
+            topicUid: GQI_GQIDMS
+          - name: GQIEditableHeader
+            topicUid: GQI_GQIEditableHeader
+          - name: GQIEditableRow
+            topicUid: GQI_GQIEditableRow
+          - name: GQILogLevel
+            topicUid: GQI_GQILogLevel
+          - name: GQIPage
+            topicUid: GQI_GQIPage
+          - name: GQIRow
+            topicUid: GQI_GQIRow
+          - name: GQISortDirection
+            topicUid: GQI_GQISortDirection
+          - name: IGQIColumn
+            topicUid: GQI_IGQIColumn
+          - name: IGQIColumnOperator
+            topicUid: GQI_IGQIColumnOperator
+          - name: IGQICoreBlock
+            topicUid: GQI_IGQICoreBlock
+          - name: IGQICoreDataSource
+            topicUid: GQI_IGQICoreDataSource
+          - name: IGQICoreOperator
+            topicUid: GQI_IGQICoreOperator
+          - name: IGQIDataSource
+            topicUid: GQI_IGQIDataSource
+          - name: IGQIDataSourceNode 
+            topicUid: GQI_IGQIDataSourceNode 
+          - name: IGQIFactory
+            topicUid: GQI_IGQIFactory
+          - name: IGQIFilterOperator
+            topicUid: GQI_IGQIFilterOperator
+          - name: IGQIInputArguments
+            topicUid: GQI_IGQIInputArguments
+          - name: IGQILogger
+            topicUid: GQI_IGQILogger
+          - name: IGQIOnDestroy
+            topicUid: GQI_IGQIOnDestroy
+          - name: IGQIOnInit
+            topicUid: GQI_IGQIOnInit
+          - name: IGQIOnPrepareFetch
+            topicUid: GQI_IGQIOnPrepareFetch
+          - name: IGQIOperator
+            topicUid: GQI_IGQIOperator
+          - name: IGQIOperatorNode
+            topicUid: GQI_IGQIOperatorNode
+          - name: IGQIOptimizableDataSource
+            topicUid: GQI_IGQIOptimizableDataSource
+          - name: IGQIOptimizableOperator
+            topicUid: GQI_IGQIOptimizableOperator
+          - name: IGQIQueryNode
+            topicUid: GQI_IGQIQueryNode
+          - name: IGQIRowOperator
+            topicUid: GQI_IGQIRowOperator
+          - name: IGQISortField
+            topicUid: GQI_IGQISortField
+          - name: IGQISortOperator
+            topicUid: GQI_IGQISortOperator
+          - name: IGQIUpdateable
+            topicUid: GQI_IGQIUpdateable
+          - name: IGQIUpdater
+            topicUid: GQI_IGQIUpdater
+          - name: ObjectRefMetadata
+            topicUid: GQI_ObjectRefMetadata
+          - name: OnArgumentsProcessedInputArgs
+            topicUid: GQI_OnArgumentsProcessedInputArgs
+          - name: OnInitInputArgs
+            topicUid: GQI_OnInitInputArgs
+          - name: RowMetadataBase
+            topicUid: GQI_RowMetadataBase
+          - name: TimeRangeMetadata
+            topicUid: GQI_TimeRangeMetadata
+      - name: Architecture
+        topicUid: GQI_Extensions_Architecture
+      - name: Best practices
+        topicUid: GQI_Extensions_Best_Practices
+        items:
+          - name: Caching
+            topicUid: GQI_Extensions_Caching
+      - name: Debugging
+        topicUid: GQI_Extensions_Debugging
+      - name: Logging
+        topicUid: GQI_Extensions_Logging
+  - name: User-Defined APIs
+    topicUid: DMI_User-DefinedAPIs
+    items:
+      - name: Bad and best practices
+        topicUid: UD_APIs_Bad_and_Best_Practices
   - name: Class Library
     items:
-    - name: Class library introduction
+    - name: About the class library
       topicUid: ClassLibraryIntroduction
     - name: Class library development
       topicUid: ClassLibraryDevelopment
@@ -970,8 +1119,6 @@ items:
     - name: Monitors
       topicUid: ClassLibraryMonitors
       items:
-      - name: Requirements
-        topicUid: ClassLibraryMonitorsRequirements
       - name: Getting started
         topicUid: ClassLibraryMonitorsGettingStarted
       - name: Cleanup rules
@@ -1007,6 +1154,68 @@ items:
         topicUid: InterAppCalls_Customizations
       - name: Examples
         topicUid: InterAppCalls_Examples
+  - name: Swarming
+    items:
+      - name: Preparing scripts and connectors for Swarming
+        topicUid: SwarmingPrepare
+      - name: Configuring a script to swarm elements
+        topicUid: SwarmingScriptElement
+      - name: Configuring a script to swarm bookings
+        topicUid: SwarmingScriptBooking
+  - name: EPM integration
+    items:
+      - name: EPM Integration Training
+        topicUid: EpmIntegrationTrainingAbout
+      - name: Connectors configuration
+        items:
+        - name: General configuration EPM Manager connector
+          topicUid: EPMManagerGeneralConfiguration
+        - name: Topology configuration
+          topicUid: EPMManagerTopology
+        - name: Chains and fields configuration
+          topicUid: EPMManagerChainsAndFields
+        - name: Linking collector data to an EPM object
+          topicUid: EpmIntegrationLinkingCollectorData
+        - name: View impact configuration
+          topicUid: EpmIntegrationViewImpact
+        - name: Configuring buttons in table cells to open EPM objects
+          topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
+        - name: Aggregation and merge actions
+          topicUid: EpmIntegrationTrainingAggregations
+        - name: Alarm settings
+          topicUid: EPMManagerAlarms
+        - name: View tables
+          topicUid: EpmIntegrationTrainingViewTables
+      - name: Visual Overview configuration
+        items:
+          - name: Linking a shape to an EPM object
+            topicUid: LinkingShapeEpmObjectSystemNameType
+          - name: Filtering alarms based on system name and type
+            topicUid: FilteringAlarmsUsingSystemNameType
+          - name: Linking a shape to a filtered alarm tab
+            topicUid: AlarmConsoleNavigation
+          - name: Linking a shape to a dashboard or app
+            topicUid: DashboardAndAppsNavigation
+          - name: Best practices for retrieving remote parameters
+            topicUid: BestPracticesRemoteKpis
+          - name: Performing ping and tracert operations using DITT
+            topicUid: DITTIntegration
+      - name: Web apps configuration
+        items:
+          - name: EPM and Dashboards
+            topicUid: EpmIntegrationTrainingDashboards
+          - name: EPM and the Monitoring app
+            topicUid: EpmIntegrationTrainingMonitoring
+          - name: EPM and Low-Code Apps
+            topicUid: EpmIntegrationTrainingLowCodeApp
+      - name: Topology app configuration
+        topicUid: Topology_app_configuration
+      - name: Enhanced view configuration
+        topicUid: Enhanced_view_configuration
+      - name: Agent caching configuration
+        topicUid: EPMIntegration_Agent_cache_config
+      - name: DataMiner processes configuration
+        topicUid: EPM_DataMiner_processes_config
   - name: Getting started as a System Developer
     topicUid: GettingStartedAsSysDev
 - name: API documentation
@@ -1024,6 +1233,8 @@ items:
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Automation
     - name: Skyline.DataMiner.Core.DataMinerSystem.Protocol
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Protocol
+    - name: Skyline.DataMiner.Analytics.Rad
+      topicUid: Skyline.DataMiner.Analytics.Rad
     - name: Skyline.DataMiner.Net
       topicUid: Skyline.DataMiner.Net
     - name: Skyline.DataMiner.Net.Swarming
@@ -1275,6 +1486,8 @@ items:
         topicUid: NT_SET_BITRATE_DELTA_INDEX_TRACKING
       - name: NT_ADD_VIEWS
         topicUid: NT_ADD_VIEWS
+      - name: NT_CLEAR_PARAMETER
+        topicUid: NT_CLEAR_PARAMETER
     - name: DMS notify types
       topicUid: SLDmsNotifyTypes
       items:
@@ -3502,6 +3715,8 @@ items:
         topicUid: DMSScript.Author
       - name: CheckSets
         topicUid: DMSScript.CheckSets
+      - name: Interactivity
+        topicUid: DMSScript.Interactivity
       - name: Description
         topicUid: DMSScript.Description
       - name: Folder
@@ -3638,6 +3853,1209 @@ items:
         topicUid: Automation-EnumTrueFalseLowerCase
       - name: NonEmptyStringType
         topicUid: Automation-NonEmptyStringType
+      - name: InteractivityOptions
+        topicUid: Automation-InteractivityOptions
+  - name: Functions schema
+    topicUid: SchemaFunctions
+    items:
+    - name: Functions
+      topicUid: Functions
+      items: 
+      - name: Function
+        topicUid: Functions.Function
+        items: 
+        - name: '@id'
+          topicUid: Functions.Function-id
+        - name: '@maxInstances'
+          topicUid: Functions.Function-maxInstances
+        - name: '@name'
+          topicUid: Functions.Function-name
+        - name: '@profile'
+          topicUid: Functions.Function-profile
+        - name: EntryPoints
+          topicUid: Functions.Function.EntryPoints
+          items: 
+          - name: EntryPoint
+            topicUid: Functions.Function.EntryPoints.EntryPoint
+            items: 
+            - name: '@pid'
+              topicUid: Functions.Function.EntryPoints.EntryPoint-pid
+            - name: '@type'
+              topicUid: Functions.Function.EntryPoints.EntryPoint-type
+        - name: ExportRules
+          topicUid: Functions.Function.ExportRules
+          items: 
+          - name: ExportRule
+            topicUid: Functions.Function.ExportRules.ExportRule
+            items: 
+            - name: '@attribute'
+              topicUid: Functions.Function.ExportRules.ExportRule-attribute
+            - name: '@regex'
+              topicUid: Functions.Function.ExportRules.ExportRule-regex
+            - name: '@tag'
+              topicUid: Functions.Function.ExportRules.ExportRule-tag
+            - name: '@value'
+              topicUid: Functions.Function.ExportRules.ExportRule-value
+            - name: '@whereAttribute'
+              topicUid: Functions.Function.ExportRules.ExportRule-whereAttribute
+            - name: '@whereTag'
+              topicUid: Functions.Function.ExportRules.ExportRule-whereTag
+            - name: '@whereValue'
+              topicUid: Functions.Function.ExportRules.ExportRule-whereValue
+        - name: Graphical
+          topicUid: Functions.Function.Graphical
+        - name: Interfaces
+          topicUid: Functions.Function.Interfaces
+          items: 
+          - name: Interface
+            topicUid: Functions.Function.Interfaces.Interface
+            items: 
+            - name: '@broadcast'
+              topicUid: Functions.Function.Interfaces.Interface-broadcast
+            - name: '@id'
+              topicUid: Functions.Function.Interfaces.Interface-id
+            - name: '@name'
+              topicUid: Functions.Function.Interfaces.Interface-name
+            - name: '@parameterGroupLink'
+              topicUid: Functions.Function.Interfaces.Interface-parameterGroupLink
+            - name: '@profile'
+              topicUid: Functions.Function.Interfaces.Interface-profile
+            - name: '@type'
+              topicUid: Functions.Function.Interfaces.Interface-type
+        - name: Parameters
+          topicUid: Functions.Function.Parameters
+          items: 
+          - name: Parameter
+            topicUid: Functions.Function.Parameters.Parameter
+            items: 
+            - name: '@id'
+              topicUid: Functions.Function.Parameters.Parameter-id
+      - name: OverrideTimeoutVF
+        topicUid: Functions.OverrideTimeoutVF
+      - name: Protocol
+        topicUid: Functions.Protocol
+        items: 
+        - name: Name
+          topicUid: Functions.Protocol.Name
+      - name: Version
+        topicUid: Functions.Version
+    - name: SchemaTypes
+      items:
+      - name: EnumTrueFalseLowerCase
+        topicUid: Functions-EnumTrueFalseLowerCase
+      - name: Guid
+        topicUid: Functions-TypeGuid
+      - name: InputType
+        topicUid: Functions-TypeInputType
+      - name: TypeNonEmptyString
+        topicUid: Functions-TypeNonEmptyString
+      - name: TypeParamId
+        topicUid: Functions-TypeParamId
+  - name: Hyperlinks schema
+    topicUid: SchemaHyperlinks
+    items:
+    - name: HyperLinks
+      topicUid: HyperLinks
+      items:
+      - name: HyperLink
+        topicUid: HyperLinks.HyperLink
+        items:
+        - name: '@alarmAction'
+          topicUid: HyperLinks.HyperLink-alarmAction
+        - name: '@alarmColumn'
+          topicUid: HyperLinks.HyperLink-alarmColumn
+        - name: '@combineParameters'
+          topicUid: HyperLinks.HyperLink-combineParameters
+        - name: '@descriptionParsing'
+          topicUid: HyperLinks.HyperLink-descriptionParsing
+        - name: '@filterElement'
+          topicUid: HyperLinks.HyperLink-filterElement
+        - name: '@id'
+          topicUid: HyperLinks.HyperLink-id
+        - name: '@menu'
+          topicUid: HyperLinks.HyperLink-menu
+        - name: '@name'
+          topicUid: HyperLinks.HyperLink-name
+        - name: '@type'
+          topicUid: HyperLinks.HyperLink-type
+        - name: '@valueParsing'
+          topicUid: HyperLinks.HyperLink-valueParsing
+        - name: '@version'
+          topicUid: HyperLinks.HyperLink-version
+  - name: LogSettings schema
+    topicUid: SchemaLogSettings
+    items:
+    - name: Log
+      topicUid: LogSettingsLog
+      items:
+      - name: File
+        topicUid: Log.File
+      - name: General
+        topicUid: Log.General
+        items:
+        - name: LinesPerIteration
+          topicUid: Log.General.LinesPerIteration
+        - name: SLLogMaxMemory
+          topicUid: Log.General.SLLogMaxMemory
+    - name: SchemaTypes
+      items:
+      - name: FileElementType
+        topicUid: LogSettings-FileElementType
+        items:
+        - name: Levels
+          topicUid: LogSettings-FileElementType.Levels
+          items:
+          - name: '@debug'
+            topicUid: LogSettings-FileElementType.Levels-debug
+          - name: '@error'
+            topicUid: LogSettings-FileElementType.Levels-error
+          - name: '@info'
+            topicUid: LogSettings-FileElementType.Levels-info
+        - name: '@name'
+          topicUid: LogSettings-FileElementType-name
+  - name: DataMiner schema
+    topicUid: SchemaDataMiner
+    items:
+    - name: DataMiner
+      topicUid: DataMiner
+      items:
+      - name: '@disableElementIP'
+        topicUid: DataMiner-disableElementIP
+      - name: '@elementid'
+        topicUid: DataMiner-elementid
+      - name: '@id'
+        topicUid: DataMiner-id
+      - name: '@licenseNotice'
+        topicUid: DataMiner-licenseNotice
+      - name: '@protocolVisioLnk'
+        topicUid: DataMiner-protocolVisioLnk
+      - name: '@readElementData'
+        topicUid: DataMiner-readElementData
+      - name: '@readProperties'
+        topicUid: DataMiner-readProperties
+      - name: '@safeMode'
+        topicUid: DataMiner-safeMode
+      - name: '@storeLastPollTimes'
+        topicUid: DataMiner-storeLastPollTimes
+      - name: '@useAgentBinding'
+        topicUid: DataMiner-useAgentBinding
+      - name: AlarmSocket
+        topicUid: DataMiner.AlarmSocket
+        items:
+        - name: '@port'
+          topicUid: DataMiner.AlarmSocket-port
+      - name: AzureAD
+        topicUid: DataMiner.AzureAD
+        items:
+        - name: '@clientId'
+          topicUid: DataMiner.AzureAD-clientId
+        - name: '@clientSecret'
+          topicUid: DataMiner.AzureAD-clientSecret
+        - name: '@objectId'
+          topicUid: DataMiner.AzureAD-objectId
+        - name: '@password'
+          topicUid: DataMiner.AzureAD-password
+        - name: '@tenantId'
+          topicUid: DataMiner.AzureAD-tenantId
+        - name: '@username'
+          topicUid: DataMiner.AzureAD-username
+      - name: ClearableAlarmStormProtection
+        topicUid: DataMiner.ClearableAlarmStormProtection
+        items:
+        - name: '@max'
+          topicUid: DataMiner.ClearableAlarmStormProtection-max
+        - name: '@min'
+          topicUid: DataMiner.ClearableAlarmStormProtection-min
+      - name: Colors
+        topicUid: DataMiner.Colors
+        items:
+        - name: Color
+          topicUid: DataMiner.Colors.Color
+          items:
+          - name: '@type'
+            topicUid: DataMiner.Colors.Color-type
+          - name: '@value'
+            topicUid: DataMiner.Colors.Color-value
+      - name: Crowd
+        topicUid: DataMiner.Crowd
+        items:
+        - name: '@application'
+          topicUid: DataMiner.Crowd-application
+        - name: '@host'
+          topicUid: DataMiner.Crowd-host
+        - name: '@password'
+          topicUid: DataMiner.Crowd-password
+      - name: DaaS
+        topicUid: DataMiner.DaaS
+        items:
+        - name: '@enabled'
+          topicUid: DataMiner.DaaS-enabled
+      - name: DataMinerGuid
+        topicUid: DataMiner.DataMinerGuid
+      - name: DMA
+        topicUid: DataMiner.DMA
+        items:
+        - name: '@publicDNS'
+          topicUid: DataMiner.DMA-publicDNS
+        - name: DMAName
+          topicUid: DataMiner.DMA.DMAName
+          items:
+          - name: '@mode'
+            topicUid: DataMiner.DMA.DMAName-mode
+        - name: Location1
+          topicUid: DataMiner.DMA.Location1
+        - name: Location2
+          topicUid: DataMiner.DMA.Location2
+        - name: Location3
+          topicUid: DataMiner.DMA.Location3
+      - name: ExternalAuthentication
+        topicUid: DataMiner.ExternalAuthentication
+        items:
+        - name: '@autoproxy'
+          topicUid: DataMiner.ExternalAuthentication-autoproxy
+        - name: '@host'
+          topicUid: DataMiner.ExternalAuthentication-host
+        - name: '@ipMetadata'
+          topicUid: DataMiner.ExternalAuthentication-ipMetadata
+        - name: '@password'
+          topicUid: DataMiner.ExternalAuthentication-password
+        - name: '@port'
+          topicUid: DataMiner.ExternalAuthentication-port
+        - name: '@sharedSecret'
+          topicUid: DataMiner.ExternalAuthentication-sharedSecret
+        - name: '@spMetadata'
+          topicUid: DataMiner.ExternalAuthentication-spMetadata
+        - name: '@timeout'
+          topicUid: DataMiner.ExternalAuthentication-timeout
+        - name: '@type'
+          topicUid: DataMiner.ExternalAuthentication-type
+        - name: '@username'
+          topicUid: DataMiner.ExternalAuthentication-username
+        - name: AutomaticUserCreation
+          topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation
+          items:
+          - name: '@enabled'
+            topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation-enabled
+          - name: EmailClaim
+            topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation.EmailClaim
+          - name: Givenname
+            topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation.Givenname
+          - name: Groups
+            topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation.Groups
+            items:
+            - name: '@claims'
+              topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation.Groups-claims
+          - name: PreferredLoginClaim
+            topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation.PreferredLoginClaim
+          - name: Surname
+            topicUid: DataMiner.ExternalAuthentication.AutomaticUserCreation.Surname
+      - name: ID
+        topicUid: DataMiner.ID
+        items:
+        - name: Views
+          topicUid: DataMiner.ID.Views
+          items:
+          - name: '@current'
+            topicUid: DataMiner.ID.Views-current
+          - name: '@currentOwn'
+            topicUid: DataMiner.ID.Views-currentOwn
+      - name: IP
+        topicUid: DataMiner.IP
+        items:
+        - name: '@skipMAC'
+          topicUid: DataMiner.IP-skipMAC
+        - name: VirtualIPFrom
+          topicUid: DataMiner.IP.VirtualIPFrom
+        - name: VirtualIPMask
+          topicUid: DataMiner.IP.VirtualIPMask
+        - name: VirtualIPTo
+          topicUid: DataMiner.IP.VirtualIPTo
+      - name: LDAP
+        topicUid: DataMiner.LDAP
+        items:
+        - name: '@auth'
+          topicUid: DataMiner.LDAP-auth
+        - name: '@host'
+          topicUid: DataMiner.LDAP-host
+        - name: '@namingContext'
+          topicUid: DataMiner.LDAP-namingContext
+        - name: '@nonDomainLDAP'
+          topicUid: DataMiner.LDAP-nonDomainLDAP
+        - name: '@notifications'
+          topicUid: DataMiner.LDAP-notifications
+        - name: '@password'
+          topicUid: DataMiner.LDAP-password
+        - name: '@port'
+          topicUid: DataMiner.LDAP-port
+        - name: '@referralConfigured'
+          topicUid: DataMiner.LDAP-referralConfigured
+        - name: '@useForFullName'
+          topicUid: DataMiner.LDAP-useForFullName
+        - name: '@username'
+          topicUid: DataMiner.LDAP-username
+        - name: '@useSSL'
+          topicUid: DataMiner.LDAP-useSSL
+        - name: Group
+          topicUid: DataMiner.LDAP.Group
+          items:
+          - name: Classname
+            topicUid: DataMiner.LDAP.Group.Classname
+          - name: DescriptionField
+            topicUid: DataMiner.LDAP.Group.DescriptionField
+          - name: DistinguishedField
+            topicUid: DataMiner.LDAP.Group.DistinguishedField
+          - name: Filter
+            topicUid: DataMiner.LDAP.Group.Filter
+          - name: NameField
+            topicUid: DataMiner.LDAP.Group.NameField
+        - name: QueryTimeout
+          topicUid: DataMiner.LDAP.QueryTimeout
+        - name: User
+          topicUid: DataMiner.LDAP.User
+          items:
+          - name: AccountNameField
+            topicUid: DataMiner.LDAP.User.AccountNameField
+          - name: Classname
+            topicUid: DataMiner.LDAP.User.Classname
+          - name: DescriptionField
+            topicUid: DataMiner.LDAP.User.DescriptionField
+          - name: DisplayNameField
+            topicUid: DataMiner.LDAP.User.DisplayNameField
+          - name: EmailField
+            topicUid: DataMiner.LDAP.User.EmailField
+          - name: Filter
+            topicUid: DataMiner.LDAP.User.Filter
+          - name: MobileField
+            topicUid: DataMiner.LDAP.User.MobileField
+          - name: PagerField
+            topicUid: DataMiner.LDAP.User.PagerField
+          - name: PhoneField
+            topicUid: DataMiner.LDAP.User.PhoneField
+      - name: Logging
+        topicUid: DataMiner.Logging
+        items:
+        - name: DaysToKeep
+          topicUid: DataMiner.Logging.DaysToKeep
+        - name: Debug
+          topicUid: DataMiner.Logging.Debug
+        - name: Error
+          topicUid: DataMiner.Logging.Error
+        - name: Info
+          topicUid: DataMiner.Logging.Info
+      - name: MobileGateway
+        topicUid: DataMiner.MobileGateway
+        items:
+        - name: IP
+          topicUid: DataMiner.MobileGateway.IP
+        - name: UserName
+          topicUid: DataMiner.MobileGateway.UserName
+      - name: NetworkAdapters
+        topicUid: DataMiner.NetworkAdapters
+        items:
+        - name: MAC
+          topicUid: DataMiner.NetworkAdapters.MAC
+      - name: PollSocket
+        topicUid: DataMiner.PollSocket
+        items:
+        - name: '@allowSets'
+          topicUid: DataMiner.PollSocket-allowSets
+        - name: '@port'
+          topicUid: DataMiner.PollSocket-port
+      - name: ProcessOptions
+        topicUid: DataMiner.ProcessOptions
+        items:
+        - name: '@portProcesses'
+          topicUid: DataMiner.ProcessOptions-portProcesses
+        - name: '@protocolProcesses'
+          topicUid: DataMiner.ProcessOptions-protocolProcesses
+        - name: '@scriptingProcesses'
+          topicUid: DataMiner.ProcessOptions-scriptingProcesses
+        - name: SeparateProcesses
+          topicUid: DataMiner.ProcessOptions.SeparateProcesses
+          items:
+          - name: Protocols
+            topicUid: DataMiner.ProcessOptions.SeparateProcesses.Protocols
+            items:
+            - name: Protocol
+              topicUid: DataMiner.ProcessOptions.SeparateProcesses.Protocols.Protocol
+              items:
+              - name: Name
+                topicUid: DataMiner.ProcessOptions.SeparateProcesses.Protocols.Protocol.Name
+      - name: QOS
+        topicUid: DataMiner.QOS
+      - name: SMTP
+        topicUid: DataMiner.SMTP
+        items:
+        - name: From
+          topicUid: DataMiner.SMTP.From
+        - name: Helo
+          topicUid: DataMiner.SMTP.Helo
+        - name: Host
+          topicUid: DataMiner.SMTP.Host
+        - name: HostPort
+          topicUid: DataMiner.SMTP.HostPort
+        - name: LoginMethod
+          topicUid: DataMiner.SMTP.LoginMethod
+        - name: MaxSubjectLength
+          topicUid: DataMiner.SMTP.MaxSubjectLength
+        - name: Password
+          topicUid: DataMiner.SMTP.Password
+        - name: User
+          topicUid: DataMiner.SMTP.User
+      - name: SNMP
+        topicUid: DataMiner.SNMP
+        items:
+        - name: '@enableDataMinerAgentPolling'
+          topicUid: DataMiner.SNMP-enableDataMinerAgentPolling
+        - name: '@informCacheSize'
+          topicUid: DataMiner.SNMP-informCacheSize
+        - name: '@port'
+          topicUid: DataMiner.SNMP-port
+        - name: '@readCommunity'
+          topicUid: DataMiner.SNMP-readCommunity
+        - name: '@writeCommunity'
+          topicUid: DataMiner.SNMP-writeCommunity
+      - name: SnmpTrapDistribution
+        topicUid: DataMiner.SnmpTrapDistribution
+      - name: SNMPv1
+        topicUid: DataMiner.SNMPv1
+        items:
+        - name: '@trapPort'
+          topicUid: DataMiner.SNMPv1-trapPort
+      - name: SNMPv2
+        topicUid: DataMiner.SNMPv2
+        items:
+        - name: '@trapPort'
+          topicUid: DataMiner.SNMPv2-trapPort
+      - name: SNMPv3
+        topicUid: DataMiner.SNMPv3
+        items:
+        - name: '@generateNoticeOnIncorrectTrapReceived'
+          topicUid: DataMiner.SNMPv3-generateNoticeOnIncorrectTrapReceived
+        - name: '@trapPort'
+          topicUid: DataMiner.SNMPv3-trapPort
+      - name: Telnet
+        topicUid: DataMiner.Telnet
+        items:
+        - name: '@active'
+          topicUid: DataMiner.Telnet-active
+      - name: WarningThreshold
+        topicUid: DataMiner.WarningThreshold
+  - name: MaintenanceSettings schema
+    topicUid: SchemaMaintenanceSettings
+    items:
+    - name: MaintenanceSettings
+      topicUid: MaintenanceSettings
+      items:
+      - name: Aggregation
+        topicUid: MaintenanceSettings.Aggregation
+        items:
+        - name: Source
+          topicUid: MaintenanceSettings.Aggregation.Source
+          items:
+          - name: '@ignoreExceptionValues'
+            topicUid: MaintenanceSettings.Aggregation.Source-ignoreExceptionValues
+      - name: AlarmSettings
+        topicUid: MaintenanceSettings.AlarmSettings
+        items:
+        - name: '@elementTimeoutMode'
+          topicUid: MaintenanceSettings.AlarmSettings-elementTimeoutMode
+        - name: '@serviceTimeoutMode'
+          topicUid: MaintenanceSettings.AlarmSettings-serviceTimeoutMode
+        - name: '@viewTimeoutMode'
+          topicUid: MaintenanceSettings.AlarmSettings-viewTimeoutMode
+        - name: AlarmsPerParameter
+          topicUid: MaintenanceSettings.AlarmSettings.AlarmsPerParameter
+          items:
+          - name: '@client'
+            topicUid: MaintenanceSettings.AlarmSettings.AlarmsPerParameter-client
+          - name: '@recurring'
+            topicUid: MaintenanceSettings.AlarmSettings.AlarmsPerParameter-recurring
+        - name: AutoClear
+          topicUid: MaintenanceSettings.AlarmSettings.AutoClear
+        - name: Blinking
+          topicUid: MaintenanceSettings.AlarmSettings.Blinking
+          items:
+          - name: '@alarmFilter'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-alarmFilter
+          - name: '@blankInterval'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-blankInterval
+          - name: '@blinkInterval'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-blinkInterval
+          - name: '@elementFilter'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-elementFilter
+          - name: '@enabled'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-enabled
+          - name: '@serviceFilter'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-serviceFilter
+          - name: '@serviceSeveritiesFilter'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-serviceSeveritiesFilter
+          - name: '@viewFilter'
+            topicUid: MaintenanceSettings.AlarmSettings.Blinking-viewFilter
+        - name: MaxFreezeAlarms
+          topicUid: MaintenanceSettings.AlarmSettings.MaxFreezeAlarms
+        - name: MaxFreezeTime
+          topicUid: MaintenanceSettings.AlarmSettings.MaxFreezeTime
+        - name: MustSquashAlarms
+          topicUid: MaintenanceSettings.AlarmSettings.MustSquashAlarms
+        - name: PersistParameterLatchState
+          topicUid: MaintenanceSettings.AlarmSettings.PersistParameterLatchState
+        - name: UseCreationTimeAsMainTime
+          topicUid: MaintenanceSettings.AlarmSettings.UseCreationTimeAsMainTime
+      - name: AutoElementLock
+        topicUid: MaintenanceSettings.AutoElementLock
+        items:
+        - name: '@time'
+          topicUid: MaintenanceSettings.AutoElementLock-time
+      - name: BrokerGateway
+        topicUid: MaintenanceSettings.BrokerGateway
+      - name: Correlation
+        topicUid: MaintenanceSettings.Correlation
+        items:
+        - name: TimeSpanCorrelationRecords
+          topicUid: MaintenanceSettings.Correlation.TimeSpanCorrelationRecords
+      - name: DeltCache
+        topicUid: MaintenanceSettings.DeltCache
+        items:
+        - name: DELTCacheMode
+          topicUid: MaintenanceSettings.DeltCache.DELTCacheMode
+          items:
+          - name: '@mode'
+            topicUid: MaintenanceSettings.DeltCache.DELTCacheMode-mode
+          - name: '@value'
+            topicUid: MaintenanceSettings.DeltCache.DELTCacheMode-value
+      - name: DELTUpgrades
+        topicUid: MaintenanceSettings.DELTUpgrades
+        items:
+        - name: '@activated'
+          topicUid: MaintenanceSettings.DELTUpgrades-activated
+        - name: Delete
+          topicUid: MaintenanceSettings.DELTUpgrades.Delete
+          items:
+          - name: '@mode'
+            topicUid: MaintenanceSettings.DELTUpgrades.Delete-mode
+          - name: '@value'
+            topicUid: MaintenanceSettings.DELTUpgrades.Delete-value
+      - name: DMSRevision
+        topicUid: MaintenanceSettings.DMSRevision
+        items:
+        - name: StartTime
+          topicUid: MaintenanceSettings.DMSRevision.StartTime
+      - name: Documents
+        topicUid: MaintenanceSettings.Documents
+        items:
+        - name: MaxSize
+          topicUid: MaintenanceSettings.Documents.MaxSize
+      - name: Filtering
+        topicUid: MaintenanceSettings.Filtering
+        items:
+        - name: SLElement
+          topicUid: MaintenanceSettings.Filtering.SLElement
+          items:
+          - name: '@fallback'
+            topicUid: MaintenanceSettings.Filtering.SLElement-fallback
+      - name: HTTPS
+        topicUid: MaintenanceSettings.HTTPS
+        items:
+        - name: '@enabled'
+          topicUid: MaintenanceSettings.HTTPS-enabled
+        - name: '@name'
+          topicUid: MaintenanceSettings.HTTPS-name
+      - name: Logging
+        topicUid: MaintenanceSettings.Logging
+        items:
+        - name: Element
+          topicUid: MaintenanceSettings.Logging.Element
+          items:
+          - name: '@slowActionWarnTime'
+            topicUid: MaintenanceSettings.Logging.Element-slowActionWarnTime
+        - name: MaxSize
+          topicUid: MaintenanceSettings.Logging.MaxSize
+      - name: NATSForceManualConfig
+        topicUid: MaintenanceSettings.NATSForceManualConfig
+      - name: Network
+        topicUid: MaintenanceSettings.Network
+        items:
+        - name: '@bitRateTracking'
+          topicUid: MaintenanceSettings.Network-bitRateTracking
+      - name: ProtocolSettings
+        topicUid: MaintenanceSettings.ProtocolSettings
+        items:
+        - name: DCF
+          topicUid: MaintenanceSettings.ProtocolSettings.DCF
+          items:
+          - name: CalculateAlarmState
+            topicUid: MaintenanceSettings.ProtocolSettings.DCF.CalculateAlarmState
+        - name: ExecutionVerification
+          topicUid: MaintenanceSettings.ProtocolSettings.ExecutionVerification
+          items:
+          - name: '@timeout'
+            topicUid: MaintenanceSettings.ProtocolSettings.ExecutionVerification-timeout
+        - name: MaxAggregationThreads
+          topicUid: MaintenanceSettings.ProtocolSettings.MaxAggregationThreads
+      - name: RecycleBinSize
+        topicUid: MaintenanceSettings.RecycleBinSize
+      - name: Replication
+        topicUid: MaintenanceSettings.Replication
+        items:
+        - name: AuthenticateMessageTimeout
+          topicUid: MaintenanceSettings.Replication.AuthenticateMessageTimeout
+        - name: ConnectionCheckingInterval
+          topicUid: MaintenanceSettings.Replication.ConnectionCheckingInterval
+        - name: ConnectionCheckingMaxIdleTime
+          topicUid: MaintenanceSettings.Replication.ConnectionCheckingMaxIdleTime
+        - name: ConnectionMinDelayBeforeRetry
+          topicUid: MaintenanceSettings.Replication.ConnectionMinDelayBeforeRetry
+        - name: ConnectionRetryInterval
+          topicUid: MaintenanceSettings.Replication.ConnectionRetryInterval
+        - name: ConnectionTimeoutTime
+          topicUid: MaintenanceSettings.Replication.ConnectionTimeoutTime
+        - name: HttpExpect100Continue
+          topicUid: MaintenanceSettings.Replication.HttpExpect100Continue
+        - name: UseZipping
+          topicUid: MaintenanceSettings.Replication.UseZipping
+      - name: SLASPConnection
+        topicUid: MaintenanceSettings.SLASPConnection
+        items:
+        - name: ReportResponseTimeout
+          topicUid: MaintenanceSettings.SLASPConnection.ReportResponseTimeout
+        - name: TimeLineCache
+          topicUid: MaintenanceSettings.SLASPConnection.TimeLineCache
+          items:
+          - name: '@enabled'
+            topicUid: MaintenanceSettings.SLASPConnection.TimeLineCache-enabled
+          - name: '@expirationTime'
+            topicUid: MaintenanceSettings.SLASPConnection.TimeLineCache-expirationTime
+          - name: '@gracePeriod'
+            topicUid: MaintenanceSettings.SLASPConnection.TimeLineCache-gracePeriod
+          - name: '@logVerbose'
+            topicUid: MaintenanceSettings.SLASPConnection.TimeLineCache-logVerbose
+          - name: '@maxRecords'
+            topicUid: MaintenanceSettings.SLASPConnection.TimeLineCache-maxRecords
+      - name: SLNet
+        topicUid: MaintenanceSettings.SLNet
+        items:
+        - name: ActiveAlarmStatsExpirationTime
+          topicUid: MaintenanceSettings.SLNet.ActiveAlarmStatsExpirationTime
+        - name: ActiveAlarmStatsTimeToKeep
+          topicUid: MaintenanceSettings.SLNet.ActiveAlarmStatsTimeToKeep
+        - name: AllMessageHandleWarnTime
+          topicUid: MaintenanceSettings.SLNet.AllMessageHandleWarnTime
+        - name: AllowClientSideCaching
+          topicUid: MaintenanceSettings.SLNet.AllowClientSideCaching
+        - name: AuthenticationTicketExpirationTime
+          topicUid: MaintenanceSettings.SLNet.AuthenticationTicketExpirationTime
+        - name: AutoDisconnectTime
+          topicUid: MaintenanceSettings.SLNet.AutoDisconnectTime
+        - name: AvailableDashboardsServiceUrl
+          topicUid: MaintenanceSettings.SLNet.AvailableDashboardsServiceUrl
+        - name: BackgroundTasksMaxList
+          topicUid: MaintenanceSettings.SLNet.BackgroundTasksMaxList
+        - name: CallbackTimeout
+          topicUid: MaintenanceSettings.SLNet.CallbackTimeout
+        - name: ClearedAlarmStoreTime
+          topicUid: MaintenanceSettings.SLNet.ClearedAlarmStoreTime
+        - name: ClientMessageHandleWarnTime
+          topicUid: MaintenanceSettings.SLNet.ClientMessageHandleWarnTime
+        - name: ClientSkipViewUpdates
+          topicUid: MaintenanceSettings.SLNet.ClientSkipViewUpdates
+        - name: ClusterTransitionStateTimeout
+          topicUid: MaintenanceSettings.SLNet.ClusterTransitionStateTimeout
+        - name: ConnectionAuthMethod
+          topicUid: MaintenanceSettings.SLNet.ConnectionAuthMethod
+        - name: ConnectionAuthTimeout
+          topicUid: MaintenanceSettings.SLNet.ConnectionAuthTimeout
+        - name: ConnectionCheckInterval
+          topicUid: MaintenanceSettings.SLNet.ConnectionCheckInterval
+          items:
+          - name: '@clients'
+            topicUid: MaintenanceSettings.SLNet.ConnectionCheckInterval-clients
+          - name: '@slnet'
+            topicUid: MaintenanceSettings.SLNet.ConnectionCheckInterval-slnet
+        - name: ConnectionCheckMaxFail
+          topicUid: MaintenanceSettings.SLNet.ConnectionCheckMaxFail
+        - name: ConnectionCheckTimeout
+          topicUid: MaintenanceSettings.SLNet.ConnectionCheckTimeout
+        - name: ConnectionRefusalTime
+          topicUid: MaintenanceSettings.SLNet.ConnectionRefusalTime
+        - name: ConnectionRetryInterval
+          topicUid: MaintenanceSettings.SLNet.ConnectionRetryInterval
+        - name: ConnectionWarnCount
+          topicUid: MaintenanceSettings.SLNet.ConnectionWarnCount
+        - name: ConnectivityEngineInterval
+          topicUid: MaintenanceSettings.SLNet.ConnectivityEngineInterval
+        - name: ConnectivityLogVerbose
+          topicUid: MaintenanceSettings.SLNet.ConnectivityLogVerbose
+        - name: ConnectivityMaxConnections
+          topicUid: MaintenanceSettings.SLNet.ConnectivityMaxConnections
+        - name: ConnectTimeout
+          topicUid: MaintenanceSettings.SLNet.ConnectTimeout
+        - name: CorrelationClearOnUpdate
+          topicUid: MaintenanceSettings.SLNet.CorrelationClearOnUpdate
+        - name: CorrelationLogVerbose
+          topicUid: MaintenanceSettings.SLNet.CorrelationLogVerbose
+        - name: CorrelationLoopCheckMax
+          topicUid: MaintenanceSettings.SLNet.CorrelationLoopCheckMax
+        - name: CorrelationMaxBucketsPerRule
+          topicUid: MaintenanceSettings.SLNet.CorrelationMaxBucketsPerRule
+        - name: DashboardPrefetchInterval
+          topicUid: MaintenanceSettings.SLNet.DashboardPrefetchInterval
+        - name: DashboardPrefetchLoopInterval
+          topicUid: MaintenanceSettings.SLNet.DashboardPrefetchLoopInterval
+        - name: DefaultPollingRequestTimeout
+          topicUid: MaintenanceSettings.SLNet.DefaultPollingRequestTimeout
+        - name: DefaultUpgradeOptions
+          topicUid: MaintenanceSettings.SLNet.DefaultUpgradeOptions
+        - name: DetectHangingCallsInterval
+          topicUid: MaintenanceSettings.SLNet.DetectHangingCallsInterval
+        - name: DisableDashboardPrefetch
+          topicUid: MaintenanceSettings.SLNet.DisableDashboardPrefetch
+        - name: DisableIncomingSspiAuth
+          topicUid: MaintenanceSettings.SLNet.DisableIncomingSspiAuth
+        - name: DisableReplicationBuffering
+          topicUid: MaintenanceSettings.SLNet.DisableReplicationBuffering
+        - name: ElementProtocolCacheMRU
+          topicUid: MaintenanceSettings.SLNet.ElementProtocolCacheMRU
+        - name: EnableDotNetRemoting
+          topicUid: MaintenanceSettings.SLNet.EnableDotNetRemoting
+        - name: EnableFailedAuthenticationInfoEvents
+          topicUid: MaintenanceSettings.SLNet.EnableFailedAuthenticationInfoEvents
+        - name: EPMAsyncTimeout
+          topicUid: MaintenanceSettings.SLNet.EPMAsyncTimeout
+        - name: EPMBulkCount
+          topicUid: MaintenanceSettings.SLNet.EPMBulkCount
+        - name: ExternalConnectionCheckInterval
+          topicUid: MaintenanceSettings.SLNet.ExternalConnectionCheckInterval
+        - name: ExtraSupportedFeatureKeys
+          topicUid: MaintenanceSettings.SLNet.ExtraSupportedFeatureKeys
+        - name: FailoverDbSyncMaxSubtables
+          topicUid: MaintenanceSettings.SLNet.FailoverDbSyncMaxSubtables
+        - name: FailoverMaxStartupTime
+          topicUid: MaintenanceSettings.SLNet.FailoverMaxStartupTime
+        - name: FailoverPingFailuresBeforeVipAvailable
+          topicUid: MaintenanceSettings.SLNet.FailoverPingFailuresBeforeVipAvailable
+        - name: FailoverPingTimeoutAwaitVIP
+          topicUid: MaintenanceSettings.SLNet.FailoverPingTimeoutAwaitVIP
+        - name: FailoverPingTimeoutHeartbeats
+          topicUid: MaintenanceSettings.SLNet.FailoverPingTimeoutHeartbeats
+        - name: FlushAgentMessagesInterval
+          topicUid: MaintenanceSettings.SLNet.FlushAgentMessagesInterval
+        - name: FlushQueuedMessagesInterval
+          topicUid: MaintenanceSettings.SLNet.FlushQueuedMessagesInterval
+        - name: HistoryAlarmStatsExpirationTime
+          topicUid: MaintenanceSettings.SLNet.HistoryAlarmStatsExpirationTime
+        - name: HistoryAlarmStatsTimeToKeep
+          topicUid: MaintenanceSettings.SLNet.HistoryAlarmStatsTimeToKeep
+        - name: HttpExpect100Continue
+          topicUid: MaintenanceSettings.SLNet.HttpExpect100Continue
+        - name: HttpTcpKeepAliveInterval
+          topicUid: MaintenanceSettings.SLNet.HttpTcpKeepAliveInterval
+        - name: InitRemotingViaAppConfig
+          topicUid: MaintenanceSettings.SLNet.InitRemotingViaAppConfig
+        - name: KeepFunctionDveViewsOnDisable
+          topicUid: MaintenanceSettings.SLNet.KeepFunctionDveViewsOnDisable
+        - name: MaxAgentConnectsPerHour
+          topicUid: MaintenanceSettings.SLNet.MaxAgentConnectsPerHour
+        - name: MaxAgentMessagesQueueCount
+          topicUid: MaintenanceSettings.SLNet.MaxAgentMessagesQueueCount
+        - name: MaxAuthenticationTickets
+          topicUid: MaintenanceSettings.SLNet.MaxAuthenticationTickets
+        - name: MaxConcurrentDashboardTrendQueries
+          topicUid: MaintenanceSettings.SLNet.MaxConcurrentDashboardTrendQueries
+        - name: MaxConcurrentSspiAuth
+          topicUid: MaintenanceSettings.SLNet.MaxConcurrentSspiAuth
+        - name: MaxConnectionAttempts
+          topicUid: MaintenanceSettings.SLNet.MaxConnectionAttempts
+        - name: MaxConnectionAttemptsCheckEnabled
+          topicUid: MaintenanceSettings.SLNet.MaxConnectionAttemptsCheckEnabled
+        - name: MaxConnectionAttemptsTime
+          topicUid: MaintenanceSettings.SLNet.MaxConnectionAttemptsTime
+        - name: MaxKeepUnsafeElementProtocolInCache
+          topicUid: MaintenanceSettings.SLNet.MaxKeepUnsafeElementProtocolInCache
+        - name: MaxMessagesPerCallback
+          topicUid: MaintenanceSettings.SLNet.MaxMessagesPerCallback
+        - name: MaxMessagesPerPollingRequest
+          topicUid: MaintenanceSettings.SLNet.MaxMessagesPerPollingRequest
+        - name: MaxSimultaneousRequestsToOtherAgents
+          topicUid: MaintenanceSettings.SLNet.MaxSimultaneousRequestsToOtherAgents
+        - name: MaxStackParameterNotifications
+          topicUid: MaintenanceSettings.SLNet.MaxStackParameterNotifications
+        - name: MaxStackPendingMessages
+          topicUid: MaintenanceSettings.SLNet.MaxStackPendingMessages
+        - name: MaxStackPendingMessagesFast
+          topicUid: MaintenanceSettings.SLNet.MaxStackPendingMessagesFast
+        - name: MaxStackSLNetCOMNotifications
+          topicUid: MaintenanceSettings.SLNet.MaxStackSLNetCOMNotifications
+        - name: MaxThreadsAsyncRequests
+          topicUid: MaintenanceSettings.SLNet.MaxThreadsAsyncRequests
+        - name: MaxThreadsFailoverDbForwarding
+          topicUid: MaintenanceSettings.SLNet.MaxThreadsFailoverDbForwarding
+        - name: MaxThreadsMergeAckRequests
+          topicUid: MaintenanceSettings.SLNet.MaxThreadsMergeAckRequests
+        - name: MaxThreadsMergeRequests
+          topicUid: MaintenanceSettings.SLNet.MaxThreadsMergeRequests
+        - name: MaxTopologyNotificationQueue
+          topicUid: MaintenanceSettings.SLNet.MaxTopologyNotificationQueue
+        - name: MaxUploadSize
+          topicUid: MaintenanceSettings.SLNet.MaxUploadSize
+        - name: MaxWaitForFailoverDBPushOnManualSwitch
+          topicUid: MaintenanceSettings.SLNet.MaxWaitForFailoverDBPushOnManualSwitch
+        - name: MaxWaitForFailoverOffline
+          topicUid: MaintenanceSettings.SLNet.MaxWaitForFailoverOffline
+        - name: MaxWaitForFailoverVIP
+          topicUid: MaintenanceSettings.SLNet.MaxWaitForFailoverVIP
+        - name: MessageThrottlingPeriodicUpdate
+          topicUid: MaintenanceSettings.SLNet.MessageThrottlingPeriodicUpdate
+        - name: MessageThrottlingThreshold
+          topicUid: MaintenanceSettings.SLNet.MessageThrottlingThreshold
+        - name: NicsToCheckOnFailover
+          topicUid: MaintenanceSettings.SLNet.NicsToCheckOnFailover
+        - name: NonElementProtocol
+          topicUid: MaintenanceSettings.SLNet.NonElementProtocol
+        - name: ParameterNotificationClearIdleQueueTime
+          topicUid: MaintenanceSettings.SLNet.ParameterNotificationClearIdleQueueTime
+        - name: ParameterNotificationQueueCompactLimit
+          topicUid: MaintenanceSettings.SLNet.ParameterNotificationQueueCompactLimit
+        - name: ParameterNotificationThreadCount
+          topicUid: MaintenanceSettings.SLNet.ParameterNotificationThreadCount
+        - name: PluginsToSkipLoad
+          topicUid: MaintenanceSettings.SLNet.PluginsToSkipLoad
+        - name: ProtocolCacheMRU
+          topicUid: MaintenanceSettings.SLNet.ProtocolCacheMRU
+        - name: QueuedStackOverflow
+          topicUid: MaintenanceSettings.SLNet.QueuedStackOverflow
+        - name: ReAddPreviouslySeenIPAddresses
+          topicUid: MaintenanceSettings.SLNet.ReAddPreviouslySeenIPAddresses
+        - name: RegexHistoryCacheTimeout
+          topicUid: MaintenanceSettings.SLNet.RegexHistoryCacheTimeout
+        - name: RegexHistoryEnable
+          topicUid: MaintenanceSettings.SLNet.RegexHistoryEnable
+        - name: RequireEncryptedConnections
+          topicUid: MaintenanceSettings.SLNet.RequireEncryptedConnections
+        - name: SearchOptions
+          topicUid: MaintenanceSettings.SLNet.SearchOptions
+        - name: ServiceTemplateWarnCount
+          topicUid: MaintenanceSettings.SLNet.ServiceTemplateWarnCount
+        - name: ServiceTemplateWarnElementCount
+          topicUid: MaintenanceSettings.SLNet.ServiceTemplateWarnElementCount
+        - name: SkipInformationEvents
+          topicUid: MaintenanceSettings.SLNet.SkipInformationEvents
+        - name: SLNetCOMNotificationsStackExceedsThresholdGracePeriodInMin
+          topicUid: MaintenanceSettings.SLNet.SLNetCOMNotificationsStackExceedsThresholdGracePeriodInMin
+        - name: SLNetConnectionCheckingMaxIdle
+          topicUid: MaintenanceSettings.SLNet.SLNetConnectionCheckingMaxIdle
+        - name: SmartBaselineThreadTime
+          topicUid: MaintenanceSettings.SLNet.SmartBaselineThreadTime
+        - name: TicketExpirationTime
+          topicUid: MaintenanceSettings.SLNet.TicketExpirationTime
+        - name: TimeoutAsyncMessagesBetweenAgents
+          topicUid: MaintenanceSettings.SLNet.TimeoutAsyncMessagesBetweenAgents
+        - name: TrendCacheEnable
+          topicUid: MaintenanceSettings.SLNet.TrendCacheEnable
+        - name: TrendCacheExpirationTime
+          topicUid: MaintenanceSettings.SLNet.TrendCacheExpirationTime
+        - name: TrendCacheLogVerbose
+          topicUid: MaintenanceSettings.SLNet.TrendCacheLogVerbose
+        - name: TrendCacheMaxRecordsInCache
+          topicUid: MaintenanceSettings.SLNet.TrendCacheMaxRecordsInCache
+        - name: UseSerializationManager
+          topicUid: MaintenanceSettings.SLNet.UseSerializationManager
+      - name: Spectrum
+        topicUid: MaintenanceSettings.Spectrum
+        items:
+        - name: AlarmRecordings
+          topicUid: MaintenanceSettings.Spectrum.AlarmRecordings
+          items:
+          - name: '@maxDirSize'
+            topicUid: MaintenanceSettings.Spectrum.AlarmRecordings-maxDirSize
+      - name: Surveyor
+        topicUid: MaintenanceSettings.Surveyor
+        items:
+        - name: ElementStatistics
+          topicUid: MaintenanceSettings.Surveyor.ElementStatistics
+        - name: ServiceStatistics
+          topicUid: MaintenanceSettings.Surveyor.ServiceStatistics
+        - name: ViewStatistics
+          topicUid: MaintenanceSettings.Surveyor.ViewStatistics
+      - name: Trending
+        topicUid: MaintenanceSettings.Trending
+        items:
+        - name: '@updateTrendIndices'
+          topicUid: MaintenanceSettings.Trending-updateTrendIndices
+        - name: EDCurves
+          topicUid: MaintenanceSettings.Trending.EDCurves
+        - name: SDCurves
+          topicUid: MaintenanceSettings.Trending.SDCurves
+        - name: TimeSpan
+          topicUid: MaintenanceSettings.Trending.TimeSpan
+          items:
+          - name: '@unit'
+            topicUid: MaintenanceSettings.Trending.TimeSpan-unit
+        - name: TimeSpan1DayRecords
+          topicUid: MaintenanceSettings.Trending.TimeSpan1DayRecords
+          items:
+          - name: '@unit'
+            topicUid: MaintenanceSettings.Trending.TimeSpan1DayRecords-unit
+          - name: '@window'
+            topicUid: MaintenanceSettings.Trending.TimeSpan1DayRecords-window
+        - name: TimeSpan1HourRecords
+          topicUid: MaintenanceSettings.Trending.TimeSpan1HourRecords
+          items:
+          - name: '@unit'
+            topicUid: MaintenanceSettings.Trending.TimeSpan1HourRecords-unit
+          - name: '@window'
+            topicUid: MaintenanceSettings.Trending.TimeSpan1HourRecords-window
+        - name: TimeSpan5MinRecords
+          topicUid: MaintenanceSettings.Trending.TimeSpan5MinRecords
+          items:
+          - name: '@unit'
+            topicUid: MaintenanceSettings.Trending.TimeSpan5MinRecords-unit
+          - name: '@window'
+            topicUid: MaintenanceSettings.Trending.TimeSpan5MinRecords-window
+        - name: TimeSpanSpectrumRecords
+          topicUid: MaintenanceSettings.Trending.TimeSpanSpectrumRecords
+          items:
+          - name: '@unit'
+            topicUid: MaintenanceSettings.Trending.TimeSpanSpectrumRecords-unit
+        - name: WarningLevel
+          topicUid: MaintenanceSettings.Trending.WarningLevel
+      - name: WatchDog
+        topicUid: MaintenanceSettings.WatchDog
+        items:
+        - name: Actions
+          topicUid: MaintenanceSettings.WatchDog.Actions
+          items:
+          - name: '@restartElementOnProtocolRTE'
+            topicUid: MaintenanceSettings.WatchDog.Actions-restartElementOnProtocolRTE
+        - name: EMail
+          topicUid: MaintenanceSettings.WatchDog.EMail
+          items:
+          - name: '@active'
+            topicUid: MaintenanceSettings.WatchDog.EMail-active
+          - name: BCCDestination
+            topicUid: MaintenanceSettings.WatchDog.EMail.BCCDestination
+          - name: CCDestination
+            topicUid: MaintenanceSettings.WatchDog.EMail.CCDestination
+          - name: Destination
+            topicUid: MaintenanceSettings.WatchDog.EMail.Destination
+        - name: Errors
+          topicUid: MaintenanceSettings.WatchDog.Errors
+        - name: FailoverOnRTE
+          topicUid: MaintenanceSettings.WatchDog.FailoverOnRTE
+          items:
+          - name: SkipRTE
+            topicUid: MaintenanceSettings.WatchDog.FailoverOnRTE.SkipRTE
+            items:
+            - name: '@process'
+              topicUid: MaintenanceSettings.WatchDog.FailoverOnRTE.SkipRTE-process
+            - name: '@thread'
+              topicUid: MaintenanceSettings.WatchDog.FailoverOnRTE.SkipRTE-thread
+        - name: ProcessMonitor
+          topicUid: MaintenanceSettings.WatchDog.ProcessMonitor
+          items:
+          - name: '@maxAttachmentSize'
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor-maxAttachmentSize
+          - name: '@maxInHour'
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor-maxInHour
+          - name: '@maxProcess'
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor-maxProcess
+          - name: '@maxTimeout'
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor-maxTimeout
+          - name: '@passwordOnAttachment'
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor-passwordOnAttachment
+          - name: HighDumps
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.HighDumps
+            items:
+            - name: '@maxDaysToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.HighDumps-maxDaysToKeep
+            - name: '@maxToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.HighDumps-maxToKeep
+            - name: '@minToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.HighDumps-minToKeep
+          - name: LowDumps
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.LowDumps
+            items:
+            - name: '@maxDaysToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.LowDumps-maxDaysToKeep
+            - name: '@maxToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.LowDumps-maxToKeep
+            - name: '@minToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.LowDumps-minToKeep
+          - name: MaxTotalCrashDumpFolderSizeGb
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.MaxTotalCrashDumpFolderSizeGb
+          - name: RequestDumps
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.RequestDumps
+            items:
+            - name: '@maxDaysToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.RequestDumps-maxDaysToKeep
+            - name: '@maxToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.RequestDumps-maxToKeep
+            - name: '@minToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.RequestDumps-minToKeep
+          - name: TempFolders
+            topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.TempFolders
+            items:
+            - name: '@maxDaysToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.TempFolders-maxDaysToKeep
+            - name: '@maxToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.TempFolders-maxToKeep
+            - name: '@minToKeep'
+              topicUid: MaintenanceSettings.WatchDog.ProcessMonitor.TempFolders-minToKeep
+        - name: TechsupportNotifications
+          topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications
+          items:
+          - name: Notifications
+            topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications.Notifications
+            items:
+            - name: Disable
+              topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications.Notifications.Disable
+          - name: Reports
+            topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications.Reports
+            items:
+            - name: '@emailtime'
+              topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications.Reports-emailtime
+            - name: '@interval'
+              topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications.Reports-interval
+            - name: Disable
+              topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications.Reports.Disable
+              items:
+              - name: '@data'
+                topicUid: MaintenanceSettings.WatchDog.TechsupportNotifications.Reports.Disable-data
+        - name: TimeoutTime
+          topicUid: MaintenanceSettings.WatchDog.TimeoutTime
+    - name: SchemaTypes
+      items:
+      - name: DataMinerNillablePositiveOrZeroInteger
+        topicUid: MaintenanceSettings-DataMinerNillablePositiveOrZeroInteger
+  - name: SNMP Managers schema
+    topicUid: SchemaSNMPManagers
+    items:
+    - name: SNMP Managers
+      topicUid: SNMP
+      items:
+      - name: Configuration
+        topicUid: SNMP.Configuration
+        items:
+        - name: Agent
+          topicUid: SNMP.Configuration.Agent
+          items:
+          - name: '@id'
+            topicUid: SNMP.Configuration.Agent-id
+          - name: '@type'
+            topicUid: SNMP.Configuration.Agent-type
+          - name: '@value'
+            topicUid: SNMP.Configuration.Agent-value
+          - name: AuthoritativeEngineID
+            topicUid: SNMP.Configuration.Agent.AuthoritativeEngineID
+          - name: EngineBoots
+            topicUid: SNMP.Configuration.Agent.EngineBoots
+      - name: SnmpManagers
+        topicUid: SNMP.SnmpManagers
+        items:
+        - name: SnmpManager
+          topicUid: SNMP.SnmpManagers.SnmpManager
+          items:
+          - name: '@codepage'
+            topicUid: SNMP.SnmpManagers.SnmpManager-codepage
+          - name: '@delay'
+            topicUid: SNMP.SnmpManagers.SnmpManager-delay
+          - name: '@id'
+            topicUid: SNMP.SnmpManagers.SnmpManager-id
+          - name: '@sourceDMA'
+            topicUid: SNMP.SnmpManagers.SnmpManager-sourceDMA
+          - name: '@winSNMP'
+            topicUid: SNMP.SnmpManagers.SnmpManager-winSNMP
+          - name: AlarmStorm
+            topicUid: SNMP.SnmpManagers.SnmpManager.AlarmStorm
+            items:
+            - name: '@alarms'
+              topicUid: SNMP.SnmpManagers.SnmpManager.AlarmStorm-alarms
+            - name: '@rangeAfterStorm'
+              topicUid: SNMP.SnmpManagers.SnmpManager.AlarmStorm-rangeAfterStorm
+            - name: '@rangeStorm'
+              topicUid: SNMP.SnmpManagers.SnmpManager.AlarmStorm-rangeStorm
+            - name: '@type'
+              topicUid: SNMP.SnmpManagers.SnmpManager.AlarmStorm-type
+          - name: CommunityString
+            topicUid: SNMP.SnmpManagers.SnmpManager.CommunityString
+          - name: Description
+            topicUid: SNMP.SnmpManagers.SnmpManager.Description
+          - name: DeviceOid
+            topicUid: SNMP.SnmpManagers.SnmpManager.DeviceOid
+          - name: Filter
+            topicUid: SNMP.SnmpManagers.SnmpManager.Filter
+          - name: InformAckTracking
+            topicUid: SNMP.SnmpManagers.SnmpManager.InformAckTracking
+          - name: IP
+            topicUid: SNMP.SnmpManagers.SnmpManager.IP
+            items:
+            - name: '@port'
+              topicUid: SNMP.SnmpManagers.SnmpManager.IP-port
+          - name: Name
+            topicUid: SNMP.SnmpManagers.SnmpManager.Name
+          - name: ResendTime
+            topicUid: SNMP.SnmpManagers.SnmpManager.ResendTime
+            items:
+            - name: '@endTrap'
+              topicUid: SNMP.SnmpManagers.SnmpManager.ResendTime-endTrap
+            - name: '@oid'
+              topicUid: SNMP.SnmpManagers.SnmpManager.ResendTime-oid
+            - name: '@pingOID'
+              topicUid: SNMP.SnmpManagers.SnmpManager.ResendTime-pingOID
+            - name: '@startTrap'
+              topicUid: SNMP.SnmpManagers.SnmpManager.ResendTime-startTrap
+          - name: SendTraps
+            topicUid: SNMP.SnmpManagers.SnmpManager.SendTraps
+            items:
+            - name: '@chronological'
+              topicUid: SNMP.SnmpManagers.SnmpManager.SendTraps-chronological
+          - name: SNMPv3
+            topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3
+            items:
+            - name: '@authPass'
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3-authPass
+            - name: '@privPass'
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3-privPass
+            - name: '@securityName'
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3-securityName
+            - name: AuthenticationProtocol
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3.AuthenticationProtocol
+            - name: ContextEngineID
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3.ContextEngineID
+            - name: ContextName
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3.ContextName
+            - name: PrivacyProtocol
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3.PrivacyProtocol
+            - name: SecurityLevel
+              topicUid: SNMP.SnmpManagers.SnmpManager.SNMPv3.SecurityLevel
+          - name: SnmpVersion
+            topicUid: SNMP.SnmpManagers.SnmpManager.SnmpVersion
+            items:
+            - name: '@retries'
+              topicUid: SNMP.SnmpManagers.SnmpManager.SnmpVersion-retries
+            - name: '@timeout'
+              topicUid: SNMP.SnmpManagers.SnmpManager.SnmpVersion-timeout
+          - name: TrapLayout
+            topicUid: SNMP.SnmpManagers.SnmpManager.TrapLayout
+            items:
+            - name: '@oid'
+              topicUid: SNMP.SnmpManagers.SnmpManager.TrapLayout-oid
+            - name: Bindings
+              topicUid: SNMP.SnmpManagers.SnmpManager.TrapLayout.Bindings
+              items:
+              - name: Binding
+                topicUid: SNMP.SnmpManagers.SnmpManager.TrapLayout.Bindings.Binding
+                items:
+                - name: '@oid'
+                  topicUid: SNMP.SnmpManagers.SnmpManager.TrapLayout.Bindings.Binding-oid
+                - name: '@pos'
+                  topicUid: SNMP.SnmpManagers.SnmpManager.TrapLayout.Bindings.Binding-pos
+                - name: '@value'
+                  topicUid: SNMP.SnmpManagers.SnmpManager.TrapLayout.Bindings.Binding-value
+    - name: SchemaTypes
+      items:
+      - name: NillablePositiveOrZeroInteger
+        topicUid: SNMP-NillablePositiveOrZeroInteger
   - name: NuGet stages schema
     topicUid: SchemaNuGetStagesConfig
     items:
@@ -5343,10 +6761,24 @@ items:
     items:  
     - name: Skyline DataMiner SDK
       topicUid: skyline_dataminer_sdk
+      items:
+        - name: Project properties
+          topicUid: skyline_dataminer_sdk_project_properties
     - name: DataMiner Package Project
       topicUid: skyline_dataminer_sdk_dataminer_package_project
+      items:
+        - name: Advanced
+          topicUid: skyline_dataminer_sdk_dataminer_package_project_advanced
+        - name: CatalogReferences.xml
+          topicUid: skyline_dataminer_sdk_dataminer_package_project_catalog_references
+        - name: ProjectReferences.xml
+          topicUid: skyline_dataminer_sdk_dataminer_package_project_project_references
     - name: Visual Studio 2022 solution filter (*.slnf) files
       topicUid: skyline_dataminer_sdk_solution_filter_files
+    - name: Frequently asked questions
+      topicUid: skyline_dataminer_sdk_frequently_asked_questions
+    - name: Troubleshooting
+      topicUid: skyline_dataminer_sdk_troubleshooting
   - name: Platform-independent CI/CD
     topicUid: Platform_independent_CICD
   - name: CI/CD using command line
@@ -5401,6 +6833,8 @@ items:
           topicUid: CICD_Tutorial_For_Other_Items_User_Defined_API_GitHub_Codespaces
         - name: Registering a new version of a multi-artifact DataMiner package to the Catalog using Visual Studio and GitHub
           topicUid: CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub
+        - name: Registering a new version of multiple DataMiner packages to the Catalog using Visual Studio and GitHub
+          topicUid: CICD_Tutorial_For_Other_Items_Multi-Package_VisualStudio_And_GitHub
   - name: CI/CD using GitLab
     items:
     - name: GitLab examples
@@ -5430,7 +6864,7 @@ items:
       items:
       - name: GitHub quality gate
         topicUid: CICD_Quality_Gate_Github
-    - name: Publishing items in the DataMiner Catalog
+    - name: Publishing items in the Catalog
       topicUid: publish_to_catalog
     - name: CI/CD Skyline Communications GitHub
       items:
@@ -5444,7 +6878,7 @@ items:
         topicUid: High-level_overview
       - name: Components
         items:
-        - name: SLC SE Repository Manager
+        - name: SLC SE Repo Manager
           topicUid: TOOSLCSERepositoryManager
           items:
           - name: Cloning a repository
@@ -5569,6 +7003,8 @@ items:
               topicUid: DisMibBrowserToolWindow
             - name: DIS Parameter Update Locations
               topicUid: DisParameterUpdateLocationsToolWindow
+        - name: Info bars
+          topicUid: DisInfoBars
         - name: Plugins
           topicUid: DisPlugins
         - name: Development using DIS
@@ -5654,7 +7090,7 @@ items:
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
           items:
-            - name: Producing NuGet packages via SLC SE Repository Manager
+            - name: Producing NuGet packages via SLC SE Repo Manager
               topicUid: Producing_NuGet_RepoManager
             - name: Producing NuGet packages via GitHub
               topicUid: Producing_NuGet_GitHub
@@ -5685,6 +7121,8 @@ items:
           topicUid: Notifications
         - name: Viewing test results
           topicUid: Viewing_test_results
+    - name: Definition of Done (DoD) Platform
+      topicUid: About_DoD
     - name: Third-party Tools
       topicUid: ThirdPartyTools
       items:
@@ -5826,68 +7264,10 @@ items:
     - name: OpenConfig
       topicUid: DSI_OpenConfig
       items:
-        - name: Introduction
+        - name: About OpenConfig
           topicUid: DSI_OpenConfig_Introduction
         - name: Middleware package
           topicUid: DSI_OpenConfig_Middleware
-- name: DataMiner module integrations
-  topicUid: DataMinerModuleIntegrations
-  items:
-    - name: User-Defined APIs
-      topicUid: DMI_User-DefinedAPIs
-      items:
-        - name: Bad and best practices
-          topicUid: UD_APIs_Bad_and_Best_Practices
-    - name: EPM integration
-      items:
-        - name: EPM Integration Training
-          topicUid: EpmIntegrationTrainingAbout
-        - name: Connectors configuration
-          items:
-          - name: General configuration EPM Manager connector
-            topicUid: EPMManagerGeneralConfiguration
-          - name: Topology configuration
-            topicUid: EPMManagerTopology
-          - name: Chains and fields configuration
-            topicUid: EPMManagerChainsAndFields
-          - name: Linking collector data to an EPM object
-            topicUid: EpmIntegrationLinkingCollectorData
-          - name: View impact configuration
-            topicUid: EpmIntegrationViewImpact
-          - name: Configuring buttons in table cells to open EPM objects
-            topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
-          - name: Aggregation and merge actions
-            topicUid: EpmIntegrationTrainingAggregations
-          - name: Alarm settings
-            topicUid: EPMManagerAlarms
-          - name: View tables
-            topicUid: EpmIntegrationTrainingViewTables
-        - name: Visual Overview configuration
-          items:
-            - name: Linking a shape to an EPM object
-              topicUid: LinkingShapeEpmObjectSystemNameType
-            - name: Filtering alarms based on system name and type
-              topicUid: FilteringAlarmsUsingSystemNameType
-            - name: Linking a shape to a filtered alarm tab
-              topicUid: AlarmConsoleNavigation
-            - name: Linking a shape to a dashboard or app
-              topicUid: DashboardAndAppsNavigation
-            - name: Best practices for retrieving remote parameters
-              topicUid: BestPracticesRemoteKpis
-            - name: Performing ping and tracert operations using DITT
-              topicUid: DITTIntegration
-        - name: Web apps configuration
-          items:
-            - name: EPM and Dashboards
-              topicUid: EpmIntegrationTrainingDashboards
-            - name: EPM and the Monitoring app
-              topicUid: EpmIntegrationTrainingMonitoring
-            - name: EPM and Low-Code Apps
-              topicUid: EpmIntegrationTrainingLowCodeApp
-        - name: Topology app configuration
-          topicUid: Topology_app_configuration
-        - name: DataMiner processes configuration
-          topicUid: EPM_DataMiner_processes_config
 - name: Third-party integrations
   topicUid: ThirdPartyIntegrations
   items:
@@ -5909,6 +7289,15 @@ items:
 - name: Best practices
   topicUid: Best_practices
   items:
+    - name: Catalog Items
+      topicUid: Best_practices-Catalog_Items
+      items:
+      - name: Best practices when creating Catalog items
+        topicUid: Best_Practices_When_Creating_Catalog_Items
+      - name: Best practices when documenting Catalog items
+        topicUid: Best_Practices_When_Documenting_Catalog_Items
+      - name: Naming conventions for Catalog item components
+        topicUid: Naming_Conventions_For_Catalog_Item_Components
     - name: Unit testing
       topicUid: Unit_testing
       items:
@@ -5922,7 +7311,7 @@ items:
         topicUid: FluentAssertions
       - name: Data-driven tests
         topicUid: Data_driven_tests
-      - name: Test life cycle attributes
+      - name: Test lifecycle attributes
         topicUid: Test_life_cycle_attributes
       - name: Using files in unit tests
         topicUid: Using_files_in_unit_tests

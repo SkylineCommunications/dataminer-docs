@@ -6,7 +6,7 @@ uid: GetAlarmStateTimelineForElement
 
 Use this method to retrieve the alarm state timeline for a particular element.
 
-Available from DataMiner version 9.5.1 onwards.
+<!-- Available from DataMiner version 9.5.1 onwards. -->
 
 ## Input
 

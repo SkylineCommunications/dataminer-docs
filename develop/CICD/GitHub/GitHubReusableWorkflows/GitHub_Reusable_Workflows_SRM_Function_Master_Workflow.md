@@ -37,7 +37,7 @@ jobs:
       repository: ${{ github.repository }}
       owner: ${{ github.repository_owner }}
       sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the SonarCloud project URL here.
-      # The API-key: generated in the DCP Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
+      # The API-key: generated in the dataminer.services Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
     secrets:
       api-key: ${{ secrets.DATAMINER_DEPLOY_KEY }}
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }}

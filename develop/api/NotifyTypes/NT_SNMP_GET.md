@@ -73,7 +73,7 @@ if (response.Length == 1)
   - elementInfo[3] (string): Instance.
   - elementInfo[4] (int): Connection ID (default 0).
   - elementInfo[5] (string): Get community string<!-- RN 4048 -->
-  - elementInfo[6] (bool): Split errors from values. Default: False.
+  - elementInfo[6] (bool): Split errors from values. When set to false, errors are included directly in the response. When set to true, only the values are returned, and errors are omitted from the response. Default: false.
   - elementInfo[7] (int): DataMiner Agent ID. Default: local DataMiner Agent ID.
   - elementInfo[8] (int): Dynamic poll type. Default: 2 (SingleGets).
 
@@ -101,12 +101,18 @@ if (response.Length == 1)
       - 1: None
       - 2: HMAC-MD5
       - 3: HMAC-SHA
+      - 4: HMAC128-SHA-224
+      - 5: HMAC192-SHA-256
+      - 6: HMAC256-SHA-384
+      - 7: HMAC384-SHA-512
     - [3] (string): Authentication password. Default: empty string ("").
     - [4] (int): Encryption algorithm. Default: 1 (None). Possible values:
       - 1: None
       - 2: DES
       - 3: N/A, deprecated
       - 4: AES128
+      - 20: AES192
+      - 21: AES256
     - [5] (string): Encryption passphrase. Default: empty string ("")
   - elementInfo[13]: (int) Specifies the value for the max-repetitions field in the BulkPDU. Default: 6. Should be a value of at least 1. If no value is specified, or if the specified value is 0 or less, the default number of repetitions (6) will be passed along.<!-- RN 23888 -->
 
@@ -336,3 +342,10 @@ string sysNameOidValue = Convert.ToString(result[0]);
 - If the "multiple get" flag (elementInfo[2]) is 0, separate SNMP messages will be used to poll each OID, and if the "multiple get" flag (elementInfo[2]) is 1, a single SNMP message will be used to poll the OIDs.<!-- RN 20727 -->
 - To perform an SNMP Get request in protocol that has no SNMP connection defined, refer to <xref:NT_SNMP_RAW_GET>.
 - Retrieving SNMP data using this method does not affect the timeout state of the element.
+- From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43273-->, infinite loop protection is available for NT_SNMP_GET.
+
+  When an infinite loop is detected, the following will be returned:
+
+  - When the `splitErrors` option is set to false, the error message `INFINITE LOOP` will be returned.
+
+  - When the `splitErrors` option is set to true, the values will be returned.

@@ -7,8 +7,12 @@ items:
       topicUid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.0
     - name: Skyline.DataMiner.Core.InterAppCalls Range 1.0
       topicUid: Skyline_DataMiner_Core_InterAppCalls_Range_1.0
+    - name: Skyline.DataMiner.Core.InterAppCalls Range 1.1
+      topicUid: Skyline_DataMiner_Core_InterAppCalls_Range_1.1
   - name: Skyline.DataMiner.DataSources.OpenConfig
     items:
+    - name: Skyline.DataMiner.DataSources.OpenConfig.Gnmi Range 7.x
+      topicUid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi_7.x
     - name: Skyline.DataMiner.DataSources.OpenConfig.Gnmi Range 6.x
       topicUid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi_6.x
     - name: Skyline.DataMiner.DataSources.OpenConfig.Gnmi Range 5.x
@@ -19,6 +23,8 @@ items:
       topicUid: Skyline_DataMiner_DataSources_OpenConfig_2.0
     - name: Skyline DataMiner DataSources OpenConfig 1.0.3
       topicUid: Skyline_DataMiner_DataSources_OpenConfig_1.0.3
+    - name: Skyline DataMiner DataSources OpenConfig 1.0.2
+      topicUid: Skyline_DataMiner_DataSources_OpenConfig_1.0.2
   - name: Class Library release notes (deprecated)
     items:
     - name: Class Library Range 1.4

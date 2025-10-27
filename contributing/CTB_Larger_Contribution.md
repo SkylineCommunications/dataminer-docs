@@ -9,7 +9,7 @@ uid: CTB_Larger_Contribution
 > [!TIP]
 > See also:
 >
-> - [Getting started with your Documentation Tools](https://community.dataminer.services/video/getting-started-with-your-documentation-tools/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-> - [Making a large contribution to DataMiner Docs](https://community.dataminer.services/video/making-a-large-contribution-to-the-dataminer-docs/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Getting started with your Documentation Tools](https://www.youtube.com/watch?v=VyCS7DrM9PI) ![Video](~/dataminer/images/video_Duo.png)
+> - [Making a large contribution to DataMiner Docs](https://www.youtube.com/watch?v=VINizT8JFRw) ![Video](~/dataminer/images/video_Duo.png)
 >
 > Note that these videos are less update-friendly than the instructions in this section of the documentation.

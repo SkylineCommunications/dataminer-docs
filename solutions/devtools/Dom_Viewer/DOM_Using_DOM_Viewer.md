@@ -5,7 +5,7 @@ uid: DOM_Using_DOM_Viewer
 # Using the DOM Viewer
 
 > [!TIP]
-> To get to know this tool, you can [follow Kata #54 on DataMiner Dojo](https://community.dataminer.services/courses/kata-54/) and deploy the tutorial package [Tutorial - DOM Viewer](https://catalog.dataminer.services/details/fea99fc7-63fc-40da-85fb-db1ca914986a) from the DataMiner Catalog. This package includes the DOM Viewer itself as well as the example modules used in Kata #54.
+> To get to know this tool, you can [follow Kata #54 on DataMiner Dojo](https://community.dataminer.services/courses/kata-54/) and deploy the tutorial package [Tutorial - DOM Viewer](https://catalog.dataminer.services/details/fea99fc7-63fc-40da-85fb-db1ca914986a) from the Catalog. This package includes the DOM Viewer itself as well as the example modules used in Kata #54.
 
 The DOM Viewer application consists of several pages:
 
@@ -19,7 +19,7 @@ The DOM Viewer application consists of several pages:
 
 ## SDM Modules
 
-This page shows the [Standard Data Model](xref:SDM) if it is present in your DataMiner System. The Standard Data Model is a single unified DOM model to capture a wide range of business and operational data. Several low-code apps available in the DataMiner Catalog, including all [MediaOps applications](xref:MediaOps), are built on this model.
+This page shows the Standard Data Model if it is present in your DataMiner System. The Standard Data Model is a single unified DOM model to capture a wide range of business and operational data. Several low-code apps available in the [Catalog](https://catalog.dataminer.services/), including all [MediaOps applications](xref:MediaOps), are built on this model.
 
 > [!NOTE]
 > The DOM Viewer will only be able to display the SDM information if the Standard Data Model is present in your DataMiner System.

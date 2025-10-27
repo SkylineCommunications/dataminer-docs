@@ -6,7 +6,7 @@ uid: GetParametersForProtocolFiltered
 
 Use this method to retrieve the parameters of a particular protocol that match a specified filter.
 
-Available from DataMiner 9.6.4 onwards.
+<!-- Available from DataMiner 9.6.4 onwards. -->
 
 ## Input
 

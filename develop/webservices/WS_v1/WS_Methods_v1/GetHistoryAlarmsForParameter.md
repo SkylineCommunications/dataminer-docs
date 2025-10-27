@@ -6,7 +6,7 @@ uid: GetHistoryAlarmsForParameter
 
 Use this method in order to retrieve the history alarms for a particular parameter.
 
-Available from DataMiner version 9.5.1 onwards.
+<!-- Available from DataMiner version 9.5.1 onwards. -->
 
 ## Input
 

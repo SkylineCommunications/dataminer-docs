@@ -4,7 +4,9 @@ uid: DuplicateJobsSectionDefinition
 
 # DuplicateJobsSectionDefinition
 
-Use this method to duplicate a section definition from one jobs domain to another. Available from DataMiner 10.0.10 onwards.
+Use this method to duplicate a section definition from one jobs domain to another.
+
+<!-- Available from DataMiner 10.0.10 onwards. -->
 
 ## Input
 

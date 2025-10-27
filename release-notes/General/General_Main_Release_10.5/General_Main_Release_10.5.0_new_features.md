@@ -53,7 +53,7 @@ Up to now, the labeling of behavioral anomalies was purely based on the change p
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
-SLNetTypes now exposes two new request-response operations that will allow you to retrieve a file from the *C:\\Skyline DataMiner\\Logging* folder or one of its subfolders:
+SLNetTypes now exposes two new request-response operations that will allow you to retrieve a file from the `C:\Skyline DataMiner\Logging` folder or one of its subfolders:
 
 | Type of file to be retrieved | Request | Response |
 |---|---|---|
@@ -252,7 +252,7 @@ Up to now, when an SLProtocol process disappeared, the DataMiner Agent would res
 `Process disappearance of SLProtocol.exe with PID <processId>; <x> elements hosted by the disappeared process have been restarted.`
 
 > [!IMPORTANT]
-> When an SLProtocol process disappears, typically, a crashdump will also be created. It is highly recommended to ask [Skyline TechSupport](mailto:techsupport@skyline.be) to investigate that crashdump so that future SLProtocol disappearances and subsequent element restarts can be prevented.
+> When an SLProtocol process disappears, typically, a crashdump will also be created. We highly recommend asking [DataMiner Support](mailto:support@dataminer.services) to investigate that crashdump so that future SLProtocol disappearances and subsequent element restarts can be prevented.
 
 In the *SLElementInProtocol.txt* log file, the following fields have been added:
 
@@ -416,7 +416,7 @@ For example, when I install *MyConnector 1.0.0.1* for the first time, it will au
 A connector will only be promoted to "production version" if its first version is installed/uploaded in one of the following ways:
 
 - When it is published from within DataMiner Integration Studio (DIS).
-- When it is deployed from the [DataMiner Catalog](https://catalog.dataminer.services/).
+- When it is deployed from the [Catalog](https://catalog.dataminer.services/).
 - When its *.dmprotocol* file is uploaded from the *Protocols & Templates* app in DataMiner Cube.
 
 > [!NOTE]

@@ -1,4 +1,5 @@
 ﻿using Skyline.DataMiner.Net;
+using Skyline.DataMiner.Net.Automation;
 using Skyline.DataMiner.Net.Exceptions;
 using Skyline.DataMiner.Net.Messages;
 using Skyline.DataMiner.Net.Messages.SLDataGateway;
@@ -910,6 +911,33 @@ namespace Skyline.DataMiner.Automation
 		SubScriptOptions PrepareSubScript(string scriptName);
 
 		/// <summary>
+		/// Returns a <see cref="RequestScriptInfoSubScriptOptions"/> object, which you can use to configure and start the <see cref="AutomationEntryPointType.Types.OnRequestScriptInfo"/> entry point as a subscript.
+		/// </summary>
+		/// <param name="scriptName">The name of the script to prepare.</param>
+		/// <param name="input">The input for the <see cref="AutomationEntryPointType.Types.OnRequestScriptInfo"/> entry point method.</param>
+		/// <exception cref="ArgumentNullException"><paramref name="scriptName"/> is <see langword="null"/>.</exception>
+		/// <returns>The <see cref="RequestScriptInfoSubScriptOptions"/> object.</returns>
+		/// <example>
+		/// <code>
+		/// SubScriptOptions subscriptInfo;
+		/// RequestScriptInfoInput infoInput = new RequestScriptInfoInput { Data = new Dictionary&gt;string, string&lt;{ { "requestKey", "value" } } };
+		/// subscriptInfo = engine.PrepareSubScript("myOtherScript", infoInput);
+		/// subscriptInfo.Synchronous = true;
+		/// ...
+		/// subscriptInfo.StartScript();
+		/// if (!subscriptInfo.Output?.Data?.TryGetValue("resultKey", out string resultKeyValue))
+		/// {
+		///		engine.ExitFail("Expected a resultKey in the output of the subscript.");
+		/// }
+		/// </code>
+		/// </example>
+		/// <remarks>
+		/// <note type="note">Available from DataMiner 10.5.7/10.6.0 onwards.</note><!-- RN 42969 -->
+		/// <note type="note">Detailed information about implementing the <see cref="AutomationEntryPointType.Types.OnRequestScriptInfo"/>  entry point type is available in <see href="xref:Implementing_OnRequestScriptInfo_Entry_Point">Implementing the OnRequestScriptInfo entry point</see>.</note>
+		/// </remarks>
+		RequestScriptInfoSubScriptOptions PrepareSubScript(string scriptName, RequestScriptInfoInput input);
+
+		/// <summary>
 		/// Returns a <see cref="MailReportOptions" /> object, which you can use to configure and launch an email report.
 		/// </summary>
 		/// <param name="mailReport">The full name of the dashboard (including all parent folders separated with '/') or the name of the report template (legacy Reporter) to be used.</param>
@@ -1365,6 +1393,20 @@ namespace Skyline.DataMiner.Automation
 		int InstanceId { get; }
 
 		/// <summary>
+		/// Gets the name of the triggered script.
+		/// </summary>
+		/// <value>The name of the triggered script.</value>
+		/// <remarks>
+		/// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43840).</para>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// engine.Log(engine.ScriptName);
+		/// </code>
+		/// </example>
+		string ScriptName { get; }
+
+		/// <summary>
 		/// Gets the name of the user who triggered the script.
 		/// </summary>
 		/// <value>The name of the user who triggered the script.</value>
@@ -1382,9 +1424,9 @@ namespace Skyline.DataMiner.Automation
 		string TriggeredByName { get; }
 
 		/// <summary>
-		/// Clears the specified run-time flag.
+		/// Clears the specified runtime flag.
 		/// </summary>
-		/// <param name="flag">The run-time flag to clear.</param>
+		/// <param name="flag">The runtime flag to clear.</param>
 		/// <remarks>Feature introduced in DataMiner 10.0.5 (RN 25188).</remarks>
 		/// <example>
 		/// <code>
@@ -1430,6 +1472,21 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		string UserDisplayName { get; }
+
+		/// <summary>
+		/// Gets or sets the web interactive Automation script UI version.
+		/// </summary>
+		/// <value>The version of the web interactive Automation script UI.</value>
+		/// <remarks>
+		/// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43875).</para>
+		/// <para>The WebUIVersion is set to 'Default' by default. At present, this means that the old UI (V1) is used. You can instead set this to 'V2' to show the new UI or to 'V1' to make sure the old UI will continue to be used even if the default behavior changes.</para>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// engine.WebUIVersion= WebUIVersion.V2;
+		/// </code>
+		/// </example>
+		WebUIVersion WebUIVersion { get; set; }
 
 		/// <summary>
 		/// Gets the Profile Manager.

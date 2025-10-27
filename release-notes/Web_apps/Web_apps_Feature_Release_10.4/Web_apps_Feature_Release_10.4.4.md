@@ -133,7 +133,7 @@ Two new settings have also been added:
 - **Settings > Data retrieval > Update data**: When this setting is enabled, the values will be updated in real time (when the data supports this).
 
   > [!NOTE]
-  > This setting is only visible when one query is linked and is used as data, or when the index data set is linked as data.
+  > This setting is only visible when one query is linked and is used as data, or when the index dataset is linked as data.
 
 The visualizations can now also be linked to a *Trigger* component and support two actions in low-code apps:
 

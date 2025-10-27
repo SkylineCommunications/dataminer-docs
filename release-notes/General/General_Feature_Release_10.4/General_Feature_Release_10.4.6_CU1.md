@@ -20,15 +20,15 @@ uid: General_Feature_Release_10.4.6_CU1
 
 ### Enhancements
 
-#### DxMs upgraded [ID 39803]
+#### DxM upgraded [ID 39803]
 
 <!-- RN 39803: MR 10.5.0 - FR 10.4.6 [CU1] -->
 
-The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+The following DataMiner Extension Module (DxM), which is included in the DataMiner upgrade package, has been upgraded to the indicated version:
 
 - DataMiner CoreGateway: version 2.14.7
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in this version, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 ### Fixes
 

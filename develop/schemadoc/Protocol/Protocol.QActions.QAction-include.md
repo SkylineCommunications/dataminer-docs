@@ -16,4 +16,4 @@ string
 
 ## Remarks
 
-Use a semicolon as separator when multiple scripts are specified. The specified scripts must be present in the ProtocolScripts folder. Only applicable in case encoding is set to either JScript or VBScript. (Note the VBScript is [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement).)
+Use a semicolon as separator when multiple scripts are specified. The specified scripts must be present in the ProtocolScripts folder. Only applicable in case encoding is set to either JScript or VBScript (note that these are [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)).

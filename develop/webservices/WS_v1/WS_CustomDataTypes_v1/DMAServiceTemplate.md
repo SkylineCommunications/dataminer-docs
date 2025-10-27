@@ -16,7 +16,7 @@ uid: DMAServiceTemplate
 | Definition.GlobalConditions | Array of DMAServiceTemplateGlobalCondition | Array of conditions, each consisting of a type (*None*, *Equals*, *WildCard* or *ContainsRow*) and two values. These conditions determine when elements can be combined in a service. They can for instance specify that part of the element names must be equal to a specific value. |
 | Definition.PreRequiredData | Array of [DMAServiceTemplateRequiredData](xref:DMAServiceTemplateRequiredData) | Extra information used in the service template to create services. This information is required before elements are assigned (e.g. data used to limit elements according to a user-specified condition). |
 | Definition.RequiredData | Array of [DMAServiceTemplateRequiredData](xref:DMAServiceTemplateRequiredData) | Extra information used in the service template to create services. |
-| Definition.AdvancedRequestOrder | String | The custom order in which child elements and input data should be selected when the service is generated, if any. For more information, refer to the DataMiner User Guide. |
+| Definition.AdvancedRequestOrder | String | The custom order in which child elements and input data should be selected when the service is generated, if any. |
 | Definition.AutoGenerateName | [DMASTString](xref:DMASTString) | The template for the name of the generated services. |
 | Definition.GenerateDescription | [DMASTString](xref:DMASTString) | The template for the description of the generated services. |
 | Groups | Array of [DMAServiceInfoGroupDefinition](xref:DMAServiceInfoGroupDefinition) | Arrays defining different groups of child elements for generated services. |

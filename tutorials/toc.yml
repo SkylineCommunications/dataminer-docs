@@ -30,9 +30,13 @@ items:
         topicUid: DOM_tutorials
       - name: Protocols & Templates tutorials
         topicUid: Protocols_Templates_tutorials
+      - name: Services tutorials
+        topicUid: Services_Tutorials 
       - name: Spectrum Analysis tutorials
         topicUid: Spectrum_Analysis_tutorials
       - name: User-defined APIs tutorials
         topicUid: User-defined_APIs_Tutorials
       - name: Visual Overview tutorials
         topicUid: Visio_Tutorials
+      - name: Advanced admin tutorials
+        topicUid: Advanced_Admin_Tutorials

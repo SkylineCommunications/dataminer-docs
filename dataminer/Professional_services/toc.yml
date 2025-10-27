@@ -1,0 +1,113 @@
+items:
+  - name: Agile partnership
+    topicUid: Overview_Agile_Partnership_intro
+    items:
+      - name: Delivering value
+        topicUid: Overview_Agile_Partnership_delivering_value
+      - name: Principles agile partnership
+        topicUid: Overview_Agile_Partnership_principles
+      - name: Agile scope-based deployment
+        topicUid: Overview_Agile_Partnership_scope_based_deployment
+      - name: Compliance statements
+        topicUid: Overview_Compliance_Statements_intro
+        items:
+          - name: Requirements vs. goals and objectives
+            topicUid: Overview_Compliance_Statements_RvsG_O
+          - name: Tender compliancy (licenses / engineering days)
+            topicUid: Overview_Compliance_Statements_Tender_Compliancy
+  - name: Deployment methodologies
+    topicUid: Deployment_methodologies
+    items:
+      - name: About Digital Transformation
+        topicUid: DeploymentMethodology
+      - name: Managing technology deployments
+        items:
+          - name: Methodology is key to success
+            topicUid: Managing_technology_deployments
+          - name: Methodology is not a choice
+            topicUid: Methodology_is_not_a_choice
+          - name: Methodology needs to be practiced
+            topicUid: Methodology_needs_to_be_practiced
+      - name: Turnkey Methodology
+        topicUid: Turnkey_Methodology
+        items:
+          - name: Typical phases of a Turnkey Project deployment
+            topicUid: Typical_phases_of_a_Turnkey_Project_deployment
+          - name: Terms & Conditions for a Turnkey Project deployment
+            topicUid: Terms_Conditions_for_a_Turnkey_Project_deployment
+          - name: Change Request Procedure
+            topicUid: Change_Request_Procedure
+      - name: Agile Scope-Based Methodology
+        topicUid: Agile_Scope-Based_Methodology
+        items:
+          - name: Key Values & Principles
+            topicUid: Key_Values_Principles
+          - name: Formal roles for Agile Scope-Based deployment
+            topicUid: Formal_roles_for_Agile_Scope-Based_deployment
+          - name: Typical Phases for Agile Scope-Based projects
+            topicUid: Typical_Phases_for_Agile_Scope-Based_projects
+      - name: Agile Time & Materials Methodology
+        topicUid: Agile_Time_Materials_Methodology
+      - name: Use Cases & Practical Examples
+        topicUid: Some_Use_Cases_Practical_Examples
+  - name: Support Services
+    topicUid: Support_Services
+    items:
+      - name: Support plans
+        topicUid: Overview_Support_Plans
+      - name: Software updates and upgrades
+        topicUid: Overview_Support_upgrade_policy
+      - name: Out-of-business-hours support
+        topicUid: Overview_Out_Of_Business_Hours_Support
+      - name: Proactive Support
+        topicUid: Proactive_Support
+        items:
+          - name: Proactive Support - Low Disk Space
+            topicUid: Proactive_Support_Low_Disk_Space
+          - name: Proactive Support - Missing CDMR Reporting
+            topicUid: Proactive_Support_Missing_CDMR_Reporting
+      - name: Partner support lines
+        topicUid: Partner_support_lines
+      - name: Support application
+        topicUid: User_operations_support
+  - name: DataMiner DevOps Enablement Service
+    topicUid: DataMiner_DevOps_Enablement
+    items:
+      - name: What is DevOps Enablement?
+        topicUid: What_is_DataMiner_DevOps_Enablement
+      - name: The DataMiner DevOps Professional Program
+        topicUid: DevOps_Enablement_and_the_DevOps_Professional_program
+      - name: DevOps Enablement Playbook
+        topicUid: DevOps_Enablement_Playbook
+        items:
+          - name: Tooling and infrastructure
+            topicUid: Tooling_Infrastructure
+          - name: Onboarding
+            topicUid: DEP_Onboarding
+          - name: Learning resources
+            topicUid: Learning_Resources
+          - name: Certification
+            topicUid: DEP_Certification
+          - name: Leveling up your DevOps status
+            topicUid: Leveling_up_DevOps_status
+          - name: Reporting progress to the stakeholders
+            topicUid: Reporting_Progress_to_Stakeholders
+  - name: Training courses and certification
+    topicUid: Overview_Training_intro
+    items:
+      - name: Free self-paced DataMiner training
+        topicUid: Overview_Training_selfpaced
+      - name: DataMiner Foundational Training
+        topicUid: DataMiner_Foundational_Training
+      - name: DataMiner certification
+        topicUid: Overview_Training_certification
+      - name: Connector Integration Training
+        items:
+        - name: Initiation
+          topicUid: DataMiner_Connector_Integration_Initiation
+        - name: Mastership
+          topicUid: DataMiner_Connector_Integration_Mastership
+      - name: Agile Fundamentals Training
+        topicUid: Overview_Training_agile_aw
+      - name: Kanban workshop
+        topicUid: Overview_Kanban_workshop

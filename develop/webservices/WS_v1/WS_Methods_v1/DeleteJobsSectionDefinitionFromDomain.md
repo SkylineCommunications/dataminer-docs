@@ -6,7 +6,7 @@ uid: DeleteJobsSectionDefinitionFromDomain
 
 Use this method to delete a job section definition from a specific job domain. Note that the job section definition will still exist, but the link with the domain will be removed.
 
-Available from DataMiner 10.0.9 onwards.
+<!-- Available from DataMiner 10.0.9 onwards. -->
 
 ## Input
 

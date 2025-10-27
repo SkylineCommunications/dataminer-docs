@@ -26,7 +26,7 @@ The period (in ms) that each row should be executed in the table. For example, e
 
 ## ignoreIf
 
-Expected format: ifgnoreIf:\<columnIndex\>:\<value\>
+Expected format: ignoreIf:\<columnIndex\>:\<value\>
 
 With this option, you can make sure a group is NOT executed when the specified condition is met. This will not execute the group when the specified 0-based column position (of the table with ID specified in the "ip" option) has the specified value (value needs to be a numeric value) or the cell value is not initialized.
 
@@ -193,10 +193,10 @@ Expected format: qaction:\<qactionId\>
 
 The ID of the QAction that is activated by the timer. The triggers attribute of the QAction tag needs to be empty, and the option row="true" needs to be added.
 
-RowKey() can then be called in the QAction to see which row was being called. Note that this is not executed multi-threaded but sequentially.
+RowKey() can then be called in the QAction to see which row was being called. Note that this is not executed multithreaded but sequentially.
 
 > [!NOTE]
-> This is not executed multi-threaded but sequentially. Therefore, this option is considered obsolete. Instead, use the qactionBefore option to obtain multi-threaded behavior.
+> This is not executed multithreaded but sequentially. Therefore, this option is considered obsolete. Instead, use the qactionBefore option to obtain multithreaded behavior.
 
 Example:
 
@@ -228,7 +228,7 @@ RowKey() can then be called in the QAction to see which row was being called.
 
 ## threadPool
 
-Normally this is a multi-threaded timer (except when only a QAction is defined). This means that several rows are executed at the same time. To be able to do this at the same time, the timer requires multiple threads.
+Normally this is a multithreaded timer (except when only a QAction is defined). This means that several rows are executed at the same time. To be able to do this at the same time, the timer requires multiple threads.
 
 Expected format: threadPool:\<size\>,\<calculationInterval\>,\<usagePid\>,\<waitingPid\>,\<maxDurationPid\>,\<avgDurationPid\>,\<counterPid\>,\<stackSize\>
 

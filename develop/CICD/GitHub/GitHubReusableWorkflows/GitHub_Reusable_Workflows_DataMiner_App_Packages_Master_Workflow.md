@@ -30,7 +30,7 @@ The following actions will be performed:
 
 - Part of our quality control involves static code analysis through SonarCloud as a mandatory step. If you want to use this reusable workflow, you will need to have a SonarCloud organization setup, linked to your GitHub organization as described in the [SonarCloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
 
-- Creating a GitHub release or tag will attempt to register your item as a private item in the DataMiner Catalog. For this, the repository must have access to a DATAMINER_TOKEN stored as a GitHub secret.
+- Creating a GitHub release or tag will attempt to register your item as a private item in the Catalog. For this, the repository must have access to a DATAMINER_TOKEN stored as a GitHub secret.
 
 ## How to use
 
@@ -72,7 +72,7 @@ on:
 jobs:
 
   CI:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/DataMiner App Packages Master Workflow.yml@DataMinerSDKSupport
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/DataMiner App Packages Master Workflow.yml@main
     with:
       configuration: Release
       referenceName: ${{ github.ref_name }}
@@ -83,8 +83,9 @@ jobs:
       sonarCloudProjectName: ${{ vars.SONAR_NAME }} # Go to 'https://sonarcloud.io/projects/create' and create a project. Then create a SONAR_NAME variable with the ID of the project as mentioned in the SonarCloud project URL.
       # solutionFilterName: "MySolutionFilter.slnf"
     secrets:
-      dataminerToken: ${{ secrets.DATAMINER_TOKEN }} # The API key: generated in the DCP Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
+      dataminerToken: ${{ secrets.DATAMINER_TOKEN }} # The API key: generated in the dataminer.services Admin app (https://admin.dataminer.services/) as authentication for a certain organization.
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }} # The API key for access to SonarCloud.
+      # overrideCatalogDownloadToken: ${{ secrets.OVERRIDE_DATAMINER_TOKEN }} # Override on the dataminerToken for downloading Catalog items: generated in the dataminer.services Admin app (https://admin.dataminer.services/) as authentication for a certain organization.
 ```
 
 ### Using Visual Studio templates

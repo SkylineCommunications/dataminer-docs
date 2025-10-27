@@ -6,7 +6,7 @@ uid: GetMatrixOutputsForInputLabel
 
 Use this method to retrieve the outputs of a matrix input, using the label of the input.
 
-Available from DataMiner version 9.5.1 onwards.
+<!-- Available from DataMiner version 9.5.1 onwards. -->
 
 ## Input
 

@@ -6,6 +6,9 @@ uid: Protocol.Params.Param.ArrayOptions-displayColumn
 
 Defines which column is used as an identifier for the user.
 
+> [!IMPORTANT]
+> Using this attribute is not recommended. For new protocols, use either the [naming](xref:Protocol.Params.Param.ArrayOptions-options#naming) option or the [Protocol.Params.Param.ArrayOptions.NamingFormat](xref:Protocol.Params.Param.ArrayOptions.NamingFormat) tag instead.
+
 ## Content Type
 
 unsignedInt
@@ -17,9 +20,6 @@ unsignedInt
 ## Remarks
 
 This column has to be of type “String”. It can be updated, and normally contains a readable key which identifies the row for the user.
-
-> [!NOTE]
-> For performance reasons, using either the "naming" option or the NamingFormat tag is favored over using the displayColumn attribute for new protocols.
 
 > [!CAUTION]
 > Depending on how the display key is defined, there is an important difference in the way trend data is stored in the trend data database table. If the *displayColumn* attribute is used, the **display key** is used in the trend data table. In case either the [naming](xref:Protocol.Params.Param.ArrayOptions-options#naming) option or [NamingFormat](xref:Protocol.Params.Param.ArrayOptions.NamingFormat) is used, the **primary key** is used in the trend data table.

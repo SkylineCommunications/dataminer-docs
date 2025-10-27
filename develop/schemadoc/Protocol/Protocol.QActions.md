@@ -25,8 +25,4 @@ Contains all the QActions defined in the protocol.
 
 ## Remarks
 
-A QAction (i.e. Quick Action) is a script that can be executed when a parameter or row changes. Inside a QAction, the following scripting languages can be used:
-
-- JScript
-- VBScript ([no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement))
-- C#
+A QAction (i.e. Quick Action) is a script that can be executed when a parameter or row changes. Inside a QAction, C# should be used. In the past, JScript or VBScript could also be used, but this is [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement).

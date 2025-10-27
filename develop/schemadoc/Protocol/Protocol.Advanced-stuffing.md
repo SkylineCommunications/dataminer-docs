@@ -49,5 +49,5 @@ string
 ## Examples
 
 ```xml
-<Advanced stuffing="on=command,response;escape=0x10;stuffing=0x10;startoffset=2; endoffset=4"/>
+<Advanced stuffing="on=command,response;escape=0x10;stuffing=0x10;startoffset=2;endoffset=4"/>
 ```

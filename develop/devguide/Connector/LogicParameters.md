@@ -1,5 +1,6 @@
 ---
 uid: LogicParameters
+description: A parameter can represent a table, a table column, an internal placeholder to hold a value, a UI component, etc.
 ---
 
 # Parameters
@@ -67,13 +68,7 @@ For example, to define a parameter that holds the combination DMA ID/element ID,
   <Name>GlobalElementID</Name>
   <Description>Global Element ID</Description>
   <Information>
-     <Subtext>The global element ID.</Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
+     <Subtext>The global element ID. Format: {dmaID}/{elementID}</Subtext>
   </Information>
   <Type>elementdmaid</Type>
   <Interprete>
@@ -130,7 +125,7 @@ General parameters can be loaded dynamically, and the following defaults apply:<
 
 - Communication: General parameters belonging to this group are not loaded for protocols of type *http*, *websocket*, *opc*, *gpib*, *virtual*, *sla*, and *service*.
 - DCF: Only loaded if parameter groups are defined in the protocol.
-- Verification: General parameters belonging to this group are not loaded when *MaintenanceSettings.xml* has been configured to enable Command Execution Verification. (With the [ProtocolSettings.ExecutionVerification](xref:MaintenanceSettings_xml#protocolsettingsexecutionverification) tag.)
+- Verification: General parameters belonging to this group are not loaded when *MaintenanceSettings.xml* has been configured to enable Command Execution Verification. (With the [ProtocolSettings.ExecutionVerification](xref:MaintenanceSettings.ProtocolSettings.ExecutionVerification) tag.)
 - Replication: By default, general parameters belonging to this group are always loaded.
 
 You can override the above-mentioned default behavior by adding a *GeneralParameters* tag to the protocol. In this tag, you can specify for each of the different types of general parameters whether you want these added to elements based on the protocol in question. Refer to [Protocol.GeneralParameters](xref:Protocol.GeneralParameters) in the DataMiner Protocol Markup Language section for more information.

@@ -8,7 +8,7 @@ Use this method to retrieve the trend data for a parameter from within a particu
 
 Unlike the *GetTrendDataForTableParameter* method, this method allows you to select if real-time data should be retrieved, if available. With *GetTrendDataForTableParameter*, real-time data is only retrieved in case no average trending is available.
 
-Available from DataMiner 9.6.12 onwards.
+<!-- Available from DataMiner 9.6.12 onwards. -->
 
 ## Input
 

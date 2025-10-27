@@ -230,7 +230,7 @@ There are several ways to manipulate the timeline in the Job Manager app:
 - Right-click on the timeline to mark a particular time with a red line.
 - Double-click with the left mouse button to jump to the present time on the timeline.
 
-In the lower right corner of the timeline, an arrow icon is displayed. Click this icon to display a preview pane, which also allows you to manipulate the timeline. The white area in this pane corresponds with the currently displayed timeline.
+In the lower-right corner of the timeline, an arrow icon is displayed. Click this icon to display a preview pane, which also allows you to manipulate the timeline. The white area in this pane corresponds with the currently displayed timeline.
 
 - Click and drag with the left mouse button in the preview pane in order to move the white area to a different time.
 - The white area displays a lock icon. Click this icon to toggle between locked and unlocked mode. In locked mode, dragging causes the white area to remain in place while the timeline itself is moved. In unlocked mode, it is the white area that is moved across the timeline.
@@ -419,7 +419,7 @@ It is now possible to upload and run Best Practice Analysis (BPA) tests using th
 
 BPA tests, which are meant to be short checks, can be configured to run either once or periodically (e.g. once a day). A BPA test can be run to verify, for example, whether all agents in a DataMiner System are set to use the same time server.
 
-If a BPA test takes more than 15 minutes, the SLNet process may throw a run-time error.
+If a BPA test takes more than 15 minutes, the SLNet process may throw a runtime error.
 
 #### Mobile Gateway: Communicating with an SMSEagle device via HTTPS \[ID 22441\]
 
@@ -729,9 +729,9 @@ The .NET Compiler Platform ("Roslyn") is now used to compile QActions, so that C
 
 #### Possibility to refer to DLLs in subfolders of ProtocolScripts folder \[ID 23565\]
 
-Up to now, to use a custom DLL in a protocol's QActions, it always had to be stored in the folder *C:\\Skyline DataMiner\\ProtocolScripts*. Now it is also possible to use a DLL that is stored in a subfolder of this folder. In that case, you must mention the subfolder when you specify the DLL in the protocol.
+Up to now, to use a custom DLL in a protocol's QActions, it always had to be stored in the folder `C:\Skyline DataMiner\ProtocolScripts`. Now it is also possible to use a DLL that is stored in a subfolder of this folder. In that case, you must mention the subfolder when you specify the DLL in the protocol.
 
-For example, to use “test.dll” stored in *C:\\Skyline DataMiner\\ProtocolScripts\\SubFolder*, configure the *dllImport* attribute of the QAction tag as follows: *dllImport="SubFolder\\test.dll"*.
+For example, to use “test.dll” stored in `C:\Skyline DataMiner\ProtocolScripts\SubFolder`, configure the *dllImport* attribute of the QAction tag as follows: *dllImport="SubFolder\\test.dll"*.
 
 It is now also possible to use DLLs with the same name but with different assembly versions within the same driver, though not within the same QAction.
 
@@ -749,7 +749,7 @@ For example, the following QAction definitions are possible within a single prot
 >
 > - A leading slash before the folder name is supported, but not required.
 > - A folder separator can be a forward slash or backslash.
-> - DLL files stored in *C:\\Skyline DataMiner\\Files\\* will take precedence over DLL files in other folders if they are not strongly named (signed). This is standard Microsoft .NET assembly resolving behavior.
+> - DLL files stored in `C:\Skyline DataMiner\Files\` will take precedence over DLL files in other folders if they are not strongly named (signed). This is standard Microsoft .NET assembly resolving behavior.
 > - In the details of a DLL, ‘File Version’ and ‘Product Version’ reflect the project’s file version at compilation. Other tools might be needed to check the actual assembly version.
 
 #### SLProtocol class refactored to an interface \[ID 23787\]

@@ -1,11 +1,4 @@
 items:
-  - name: Data Aggregator release notes
-    topicUid: DataAggregator_change_log
-  - name: Communication Gateway release notes
-    topicUid: CommunicationGateway_change_log
-  - name: Model Host release notes
-    topicUid: ModelHost_1.1.0
-    href: ModelHost/toc.yml
   - name: Artifact Deployer release notes
     topicUid: artifactdeployer_change_log
   - name: Cloud Feed release notes
@@ -16,9 +9,18 @@ items:
     topicUid: coregateway_change_log
   - name: Field Control release notes
     topicUid: fieldcontrol_change_log
+  - name: Communication Gateway release notes
+    topicUid: CommunicationGateway_change_log
+  - name: DataMiner Assistant release notes
+    topicUid: DataMinerAssistant_change_log
+  - name: Data Aggregator release notes
+    topicUid: DataAggregator_change_log
+  - name: Data API release notes - preview
+    topicUid: DataAPI_change_log
+  - name: Model Host release notes
+    topicUid: ModelHost_1.1.0
+    href: ModelHost/toc.yml
   - name: Orchestrator release notes
     topicUid: orchestrator_change_log
   - name: Support Assistant release notes
     topicUid: supportassistant_change_log
-  - name: Data API release notes - preview
-    topicUid: DataAPI_change_log

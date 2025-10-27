@@ -16,7 +16,7 @@ uid: General_Feature_Release_10.0.5
 
 #### Support for icons in SVG format \[ID 24841\]
 
-In function protocols and the *C:\\Skyline DataMiner\\Icons\\CustomIcons.xml* file, icons can now also be defined in SVG format.
+In function protocols and the `C:\Skyline DataMiner\Icons\CustomIcons.xml` file, icons can now also be defined in SVG format.
 
 Also, the default function icon has been updated.
 
@@ -387,7 +387,7 @@ This functionality will allow you to offer clear feedback on user input.
 
 #### UnSetFlag method now also added to IEngine interface \[ID 25188\]
 
-Since DataMiner 10.0.0/10.0.1, you can use the engine.UnSetFlag method to clear the AllowUndef, NoInformationEvents and NoKeyCaching run-time flags in an Automation script.
+Since DataMiner 10.0.0/10.0.1, you can use the engine.UnSetFlag method to clear the AllowUndef, NoInformationEvents and NoKeyCaching runtime flags in an Automation script.
 
 This method has now also been added to the IEngine interface.
 
@@ -838,9 +838,9 @@ When, after restarting an element, the alarms associated with that element were 
 
 In interactive Automation scripts, in some cases, checkbox components would not be updated correctly.
 
-#### SLDMS run-time errors when connection with remote DMA could not be initialized \[ID 25068\]
+#### SLDMS runtime errors when connection with remote DMA could not be initialized \[ID 25068\]
 
-When the connection with a remote DMA could not be initialized, run-time errors could occur in the SLDMS process.
+When the connection with a remote DMA could not be initialized, runtime errors could occur in the SLDMS process.
 
 #### Active alarms could be displayed incorrectly after restarting a DMA with a MySQL database \[ID 25071\]
 
@@ -858,7 +858,7 @@ If there were multiple trend points in the same second, it could occur that thes
 
 #### DataMiner Cube: Problem when clicking several times in rapid succession or when a log folder was created on a clean client computer \[ID 25099\]
 
-In DataMiner Cube, in some cases, an exception could be thrown when clicking several times in rapid succession or when the *C:\\ProgramData\\Skyline\\DataMiner\\DataMinerCube\\CubeLogging* folder was created on a clean client computer.
+In DataMiner Cube, in some cases, an exception could be thrown when clicking several times in rapid succession or when the `C:\ProgramData\Skyline\DataMiner\DataMinerCube\CubeLogging` folder was created on a clean client computer.
 
 #### Monitoring app: Severity color indication not displayed in Alarm Console and on alarms pages \[ID 25106\]
 
@@ -872,9 +872,9 @@ In the HTML5 apps (Ticketing, Jobs, etc.), in some cases, the collapse button at
 
 In some cases, trend prediction data returned by SLAnalytics would contain incorrectly converted time stamps.
 
-#### Exception when writing empty data set to Elastic database \[ID 25113\]
+#### Exception when writing empty dataset to Elasticsearch database \[ID 25113\]
 
-In some cases, an exception could be thrown when an empty data set was written to the Elastic database.
+In some cases, an exception could be thrown when an empty dataset was written to the Elasticsearch database.
 
 #### DataMiner Cube - EPM/CPE: No Topology button in sidebar \[ID 25120\]
 
@@ -926,7 +926,7 @@ In some cases, an error could occur in SLProtocol when starting a DVE element or
 
 #### Run-time error in protocol thread after dynamic IP change or close action of serial connection \[ID 25223\]
 
-If a protocol with serial connection over UDP or TDC/IP used either an action of type "close" on a serial connection or a parameter with type option "dynamic IP", a run-time error could occur in the protocol thread.
+If a protocol with serial connection over UDP or TDC/IP used either an action of type "close" on a serial connection or a parameter with type option "dynamic IP", a runtime error could occur in the protocol thread.
 
 #### Automation: Options text in narrow Automation script execution window not fully displayed \[ID 25226\]
 

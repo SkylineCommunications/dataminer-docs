@@ -168,9 +168,9 @@ In some cases, it could occur that the severity color indication was not display
 
 In some cases, trend prediction data returned by SLAnalytics would contain incorrectly converted time stamps.
 
-#### Exception when writing empty data set to Elastic database \[ID 25113\]
+#### Exception when writing empty dataset to Elasticsearch database \[ID 25113\]
 
-In some cases, an exception could be thrown when an empty data set was written to the Elastic database.
+In some cases, an exception could be thrown when an empty dataset was written to the Elasticsearch database.
 
 #### Business Intelligence: Incorrect total violation time due to a rounding issue \[ID 25115\]
 
@@ -336,7 +336,7 @@ When an Automation script sent a PDF report based on a dashboard, in some cases,
 
 #### Failover: Problem when switching over the first time after migrating from MySQL to Cassandra \[ID 26116\]
 
-When, in a Failover setup, the first switch-over occurred after migrating from MySQL to Cassandra, in some cases, a DataMiner run-time error alarm would be generated.
+When, in a Failover setup, the first switch-over occurred after migrating from MySQL to Cassandra, in some cases, a DataMiner runtime error alarm would be generated.
 
 #### ResourceManager module would no longer initialize after a DataMiner restart \[ID 26117\]\[ID 26309\]
 

@@ -37,7 +37,7 @@ Allows you to specify a deviation on the command to be verified using Command Ex
 > [!NOTE]
 > Command Execution Verification has to be enabled in MaintenanceSettings.xml.
 
-See also: [annalog](xref:Protocol.Params.Param.Measurement.Type#analog)
+See also: [analog](xref:Protocol.Params.Param.Measurement.Type#analog)
 
 ### Options for measurement type "discreet"
 
@@ -131,6 +131,9 @@ If, for example, you specify the following, the value "123.456" will be displaye
 ```xml
 <Type options="time">number</Type>
 ```
+
+> [!IMPORTANT]
+> For Cube to correctly display the tooltip and slider in the correct ranges, when a [range](xref:Protocol.Params.Param.Display.Range) is required, both the low and high intervals must be specified.
 
 An extra "timeofday" option can be added to display the value as the time-of-day in local format:
 

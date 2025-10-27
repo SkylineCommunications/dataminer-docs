@@ -315,7 +315,7 @@ In Data Display, three-digit number groups in numeric values will now by default
 
 #### Cube Launcher: New tool to install a DataMiner Cube desktop application \[ID 26282\]\[ID 26381\]
 
-From now on, you can use the Cube Launcher to install DataMiner Cube as a desktop applica-tion.
+From now on, you can use the Cube Launcher to install DataMiner Cube as a desktop application.
 
 This new tool offers a number of advantages. It allows you to deploy multiple Cube versions side by side, and it will automatically select the correct Cube version when you connect to a DMA.
 
@@ -326,7 +326,7 @@ This new tool offers a number of advantages. It allows you to deploy multiple Cu
 1. Click *Install*.
 
    > [!NOTE]
-   > Although it is still possible to install a DataMiner Cube desktop applica-tion using an MSI installation package, it is strongly advised to use the new Cube Launcher instead.
+   > Although it is still possible to install a DataMiner Cube desktop application using an MSI installation package, it is strongly advised to use the new Cube Launcher instead.
 
 #### SNMP Managers: Polling IP address can now be added as a custom trap binding \[ID 26339\]
 
@@ -826,7 +826,7 @@ After a DataMiner upgrade operation, in some cases, a “DataMiner is currently 
 
 #### Failover: Problem when switching over the first time after migrating from MySQL to Cassandra \[ID 26116\]
 
-When, in a Failover setup, the first switch-over occurred after migrating from MySQL to Cassandra, in some cases, a DataMiner run-time error alarm would be generated.
+When, in a Failover setup, the first switch-over occurred after migrating from MySQL to Cassandra, in some cases, a DataMiner runtime error alarm would be generated.
 
 #### ResourceManager module would no longer initialize after a DataMiner restart \[ID 26117\]\[ID 26309\]
 

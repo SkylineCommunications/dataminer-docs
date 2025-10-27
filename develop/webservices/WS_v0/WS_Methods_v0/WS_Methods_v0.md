@@ -5,7 +5,7 @@ uid: WS_Methods_v0
 # Methods (v0)
 
 > [!WARNING]
-> From DataMiner 10.2.0/10.1.6 onwards, the Web Services API v0 is considered obsolete. By default, the v0 interface is disabled from these DataMiner versions onwards.
+> The Web Services API v0 is **obsolete** and is by default disabled.
 
 ## Overview of the methods (v0)
 

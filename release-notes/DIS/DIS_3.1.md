@@ -4,6 +4,247 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.13
+
+### Fixes
+
+#### IDE
+
+##### Problem when publishing an Automation script [ID 43997]
+
+In some cases, a `MissingMethodException` could be thrown while publishing an Automation script that uses the DataMiner SDK.
+
+From now on, the publish operation will be performed in a dedicated process to avoid any interference with NuGet packages already loaded in by Visual Studio.
+
+## DIS 3.1.12
+
+### New features
+
+#### IDE
+
+##### New XML snippet 'Functions Root' [ID 43396]
+
+A new *Functions Root* snippet has been introduced. It will insert the following XML code.
+
+```xml
+<Functions xmlns="http://www.skyline.be/config/functions">
+    <Version>1.0.0.1</Version>
+    <Protocol>
+        <Name>ProtocolX</Name>
+    </Protocol>
+</Functions>
+```
+
+##### 'Parameter Update Locations' tool window is now able to detect update locations in HTTP sessions [ID 43646]
+
+The *Parameter Update Locations* tool window is now able to detect update locations in [HTTP sessions](xref:Protocol.HTTP.Session) defined in a protocol.
+
+For example, in the following session, the tool window is now able to detect that parameters 1000, 1001, and 1002 are updated through this session:
+
+```xml
+<HTTP>
+    <Session id="1">
+        <Connection id="1">
+            <Request verb="GET" pid="900">
+            </Request>
+            <Response statusCode="1001">
+                <Headers>
+                    <Header key="Content-Type" pid="1002"></Header>
+                </Headers>
+                <Content pid="1000"></Content>
+            </Response>
+        </Connection>
+    </Session>
+</HTTP>
+```
+
+##### Generate Driver Help plugin will now use the updated Technical and Marketing templates [ID 43420]
+
+The [Generate Driver Help](xref:DisPlugins#generate-driver-help) plugin will now use the updated Technical and Marketing templates.
+
+##### Updated DIS dependencies [ID 43959]
+
+DIS now uses:
+
+- [Skyline.DataMiner.CICD.DMApp.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Automation) version 3.0.3
+- [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol) version 3.0.3
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 1.2.1
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 2.0.0
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 2.0.0
+- [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol) version 1.0.16
+- [Skyline.DataMiner.Core.ArtifactDownloader](https://www.nuget.org/packages/Skyline.DataMiner.Core.ArtifactDownloader) version 3.1.1
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.5.10
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.5.10
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.5.10
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.4
+
+### Fixes
+
+#### IDE
+
+##### Problem when an operation failed because of insufficient permissions [ID 43538]
+
+Up to now, a fatal error would occur when an operation was performed for which insufficient permissions were granted on the destination DMA. From now on, a message will appear, indicating that the operation failed because of insufficient permissions.
+
+Also, error popups will now reliably appear in front of Visual Studio. They will no longer appear behind the main window. In addition, the appearance and consistency of error popups have been aligned.
+
+##### Problem when selecting NuGet references in Solution Explorer [ID 43544]
+
+Up to now, selecting a NuGet reference in Visual Studio's Solution Explorer (within a package solution) could cause an infinite loop of error popups, eventually leading to a fatal error in Visual Studio.
+
+##### Skyline.DataMiner.Sdk projects would incorrectly not allow multiple Exe blocks regardless of their type [ID 43784]
+
+With the introduction of the Skyline.DataMiner.Sdk projects, Script style projects would incorrectly not allow multiple [Exe](xref:DMSScript.Script.Exe) blocks, regardless of their [type](xref:DMSScript.Script.Exe-type).
+
+From now on, Skyline.DataMiner.Sdk Script projects will not allow multiple Exe blocks of type 'csharp'. This will allow users to have e.g. an Exe block of type 'csharp' and an Exe block of type 'report'.
+
+##### ProcessAutomation.dll would be referenced incorrectly after building a dmapp [ID 43899]
+
+Up to now, when you had created or deployed an Automation script that referenced the *ProcessAutomation.dll* file, that assembly would be resolved incorrectly. The system would attempt to locate it in the `ProtocolScripts/DllImport` folder, whereas the correct location was `ProtocolScripts`.
+
+From now on, when the *ProcessAutomation.dll* file is referenced, the resulting path in the XML file will point to the `ProtocolScripts` folder.
+
+##### Problem with Automation script interactivity check [ID 42881]
+
+In DIS, when you published an Automation script, an attempt would be made to detect whether the script used any interactive methods (e.g. ShowUI). If that was the case, flags would be set in the script options to mark the script as interactive.
+
+As DIS now checks the placeholder instead of the C# code, this mechanism no longer worked. As a result, it was also no longer possible to manually set the flags in the XML file of an Automation script project.
+
+The above-mentioned mechanism has now been removed. Whether a script requires interactivity should now be specified using the [Interactivity](xref:DMSScript.Interactivity) tag. Also, it is now possible again to manually set the flags in the XML file of an Automation script project.
+
+## DIS 3.1.11
+
+### New features
+
+#### IDE
+
+##### Updated DIS dependencies [ID 43233]
+
+DIS now uses:
+
+- [Skyline.DataMiner.CICD.DMApp.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Automation) version 2.1.1
+- [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol) version 2.1.1
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common/1.2.0-bravo) version 1.1.2
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 1.3.3
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.3
+- [Skyline.DataMiner.Core.ArtifactDownloader](https://www.nuget.org/packages/Skyline.DataMiner.Core.ArtifactDownloader) version 2.2.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.5.7.2
+- [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol/1.1.0-bravo) version 1.0.15
+- [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) version 1.0.0.4
+
+### Fixes
+
+#### IDE
+
+##### Text editor window would open empty when an XML file was closed [ID 43217]
+
+When an XML file was being closed while a *.cs* file was still open, DIS would try to re-open the XML file, causing the text editor of the XML file to open empty.
+
+Also, the check that determines whether the opened file belongs to a DataMiner-specific solution (e.g. an Automation script solution, a connector solution, etc.) has been updated. From now on, as soon as DIS detects that the project is using the `Skyline.DataMiner.Sdk` SDK, it will consider this a DataMiner-specific solution.
+
+##### Problem when switching branches [ID 43234]
+
+Up to now, when DIS switched branches in a repository that contains a large DataMiner solution, an exception could be thrown when an attempt was made to determine the type of project.
+
+From now on, when the project type could not be determined because the project was not fully loaded yet after a branch switch, the method that determines the project type will no longer throw an exception. Instead, it will return false.
+
+## DIS 3.1.10
+
+### New features
+
+#### IDE
+
+##### Updated XMLSchemas and Validators dependencies [ID 42906]
+
+DIS now uses:
+
+- [Validator version 1.3.2](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.3.2)
+- [Skyline.DataMiner.XmlSchemas version 1.1.2](https://github.com/SkylineCommunications/Skyline.DataMiner.XmlSchemas/releases/tag/1.1.2)
+
+## DIS 3.1.9
+
+### New features
+
+#### IDE
+
+##### Redesigned version history editor [ID 42674]
+
+The version history editor has been redesigned:
+
+- The *Current Version* page has been replaced by the *All Versions* page. Adding a new minor and major version will now be more intuitive.
+
+- The *Current Range* page has been renamed to *Changes Overview*. It shows the full history of the connector, created by checking the *Based On* parameter of each connector version. Note that the newest version is on top.
+
+  - If you enter a search string in the search box, that search string will be highlighted and the rows will be filtered to only show the ones containing that string.
+  - The width of the last column will be adjusted dynamically to better accommodate its contents.
+
+Also, a number of changes have been made as to layout in order to enhance overall readability.
+
+![Version editor](~/develop/images/DIS_VersionHistoryEditor.png)
+
+## DIS 3.1.8
+
+### New features
+
+#### IDE
+
+##### Support for nested SAML [ID 42690]
+
+DIS has now support for nested SAML operations.
+
+## DIS 3.1.7
+
+### New features
+
+#### IDE
+
+##### New info bar will suggest using the Protocol.Extension NuGet [ID 42021]
+
+A new info bar has been added to suggest using the [Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
+
+##### Updated XMLSchemas and Validators dependencies [ID 42511]
+
+DIS now uses:
+
+- [Validator version 1.2.0](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.2.0)
+- [Skyline.DataMiner.XmlSchemas.Protocol version 1.1.1](https://github.com/SkylineCommunications/Skyline.DataMiner.XmlSchemas/releases/tag/1.1.1)
+
+### Changes
+
+#### Enhancements
+
+##### Context menu of QAction edit icon no longer lists the SLDatabase.dll and System.Xml.dll assemblies [ID 42509]
+
+The icon you can click to edit a QAction opens a context menu that allows you to easily add references to some predefined assemblies.
+
+From now on, the list of predefined assemblies will no longer include *SLDatabase.dll* and *System.Xml.dll*.
+
+#### Fixes
+
+##### Problem when importing low-code apps of which the name contained illegal characters [ID 42475]
+
+Up to now, an error could occur when, in DIS, you tried to import a low-code app with a name that contained characters that are not allowed in file names.
+
+From now on, when you import a low-code app of which the name contains illegal characters, DIS will generate a new file name in which all illegal characters are replaced by an underscore character ('_').
+
+##### An exception would be thrown when DIS was not able to connect to the Web API of the DataMiner Agent [ID 42484]
+
+When DIS connects to a DataMiner Agent, since DataMiner 3.1.6, it would also connect to the Web API. If it was not able to connect to the Web API, up to now, an exception would be thrown, which would prevent actions such as publishing a protocol from being performed.
+
+From now on, when DIS is not able to connect to the Web API, the error message will now be logged in the output window (together with a message that states that importing dashboards and low-code apps will not be possible because no Web API connection could not be set up).
+
+All other functionality that relies on the SLNet connection, such as publishing a protocol, should no longer be affected.
+
+##### Parameter Update Locations tool window: Parameter selection box would not get populated again when you had switched to another solution [ID 42500]
+
+In the *Parameter Update Locations* tool window, the parameter selection box would not get populated again when you had switched to another solution.
+
+Also, in some rare cases, the *Confirmed Update Locations* and *Possible Update Locations* panes could contain duplicate entries.
+
+##### Skyline.DataMiner.Sdk: Use of OutDir property [ID 42497]
+
+Version 1.1.0 of the *Skyline.DataMiner.Sdk* will now use the `OutDir` property instead of dynamically making the output path (which was error prone).
+
 ## DIS 3.1.6
 
 ### New features
@@ -23,7 +264,7 @@ For example:
 
 In the *Possible Update Locations* pane, you will find an overview of possible locations where this parameter might get updated.
 
-- For example, if a QAction contains a `protocol.SetParameter()` call, but it could not be determined which parameter gets updated (e.g. because the parameter ID is calculated at run-time), then that QAction will be listed in the *Possible Update Locations* pane.
+- For example, if a QAction contains a `protocol.SetParameter()` call, but it could not be determined which parameter gets updated (e.g. because the parameter ID is calculated at runtime), then that QAction will be listed in the *Possible Update Locations* pane.
 
 - Also, the *Confirmed Update Locations* will mark incorrect update locations in red. For example, if the connector calls a method that should be executed on a table parameter is incorrectly executed on a standalone parameter.
 

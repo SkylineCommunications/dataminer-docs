@@ -11,7 +11,7 @@ NuGet is the package manager for .NET. DIS and our CI/CD pipeline provide tools 
 
 The NuGet Gallery (<https://nuget.org>) is the central package repository used by all package authors and consumers.
 
-Within Skyline, we also use an internal NuGet server: <https://devcore3/nuget>.
+Within Skyline, we also use an internal NuGet server: <https://dev.azure.com/skyline-cloud/Private_NuGets/_artifacts/feed/skyline-private-nugets>.
 
 - [Skyline NuGet Packages](xref:SkylineNuGetPackages)
 - [Consuming NuGet packages](xref:Consuming_NuGet)

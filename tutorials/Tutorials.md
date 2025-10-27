@@ -61,11 +61,14 @@ description: DataMiner tutorials are step-by-step guides that teach you how to u
     <a href="/tutorials/Protocols_Templates_Tutorials.html" title="Protocols & Templates tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Protocols_Templates.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/tutorials/Spectrum_Analysis_tutorials.html" title="Spectrum Analysis tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Spectrum_Analysis.svg" style="width:100%"></a>
+    <a href="/tutorials/Services_Tutorials.html" title="Services tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Services.svg" style="width:100%"></a>
   </div>  
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/tutorials/Spectrum_Analysis_tutorials.html" title="Spectrum Analysis tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Spectrum_Analysis.svg" style="width:100%"></a>
+  </div>  
   <div class="column">
     <a href="/tutorials/User-defined_APIs_Tutorials.html" title="User-defined APIs tutorials" target="_self"><img src="~/tutorials/images/Tutorials_User-Defined_APIs.svg" style="width:100%"></a>
   </div>
@@ -73,3 +76,24 @@ description: DataMiner tutorials are step-by-step guides that teach you how to u
     <a href="/tutorials/Visio_Tutorials.html" title="Visual Overview tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Visual_Overview.svg" style="width:100%"></a>
   </div>  
 </div>
+
+<div class="row"> 
+  <div class="column">
+    <a href="/tutorials/Advanced_Admin_Tutorials.html" title="Advanced Admin tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Advanced_Admin.svg" style="width:100%"></a>
+  </div>  
+</div>
+
+<style>
+.column a {
+  display: inline-block;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.column a:hover {
+  background-color: #f0f4ff; /* light background on hover */
+  transform: scale(1.05);   /* slightly bigger */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+</style>

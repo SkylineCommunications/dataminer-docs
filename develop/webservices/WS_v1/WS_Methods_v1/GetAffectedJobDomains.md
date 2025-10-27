@@ -4,7 +4,9 @@ uid: GetAffectedJobDomains
 
 # GetAffectedJobDomains
 
-Use this method to retrieve all domains that a specific section definition is linked to. Available from DataMiner 10.0.10 onwards.
+Use this method to retrieve all domains that a specific section definition is linked to.
+
+<!-- Available from DataMiner 10.0.10 onwards. -->
 
 ## Input
 

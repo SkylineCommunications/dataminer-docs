@@ -4,7 +4,9 @@ uid: GetMonitoredParametersForService
 
 # GetMonitoredParametersForService
 
-Use this method to retrieve all the monitored parameters for all elements of a specified service. Available from DataMiner 9.5.8 onwards.
+Use this method to retrieve all the monitored parameters for all elements of a specified service.
+
+<!-- Available from DataMiner 9.5.8 onwards. -->
 
 ## Input
 

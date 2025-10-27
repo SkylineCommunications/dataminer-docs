@@ -29,7 +29,7 @@ The latest benchmark tests, at the time of release, demonstrate that the roundtr
 > [!NOTE]
 >
 > - For this improvement to be active, DataMiner version 10.3.12 or higher must be installed. Lower DataMiner versions will dynamically fall back to using SLNet subscriptions.
-> - It is possible to forcibly disable the use of the new broker technology by either adding *LegacyInterAppSubscriptions* to the *C:\Skyline DataMiner\SoftLaunchOptions.xml* file or adjusting the source code to send a call with *allowBroker* set to *false*.
+> - It is possible to forcibly disable the use of the new broker technology by either adding *LegacyInterAppSubscriptions* to the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file or adjusting the source code to send a call with *allowBroker* set to *false*.
 > - As of DataMiner 10.4.6, the default maximum message size with the new message broker is set to 30 MB.
 
 #### New feature - Enhanced security: Remote code execution exploit prevention

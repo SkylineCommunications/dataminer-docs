@@ -12,7 +12,7 @@ With this extension, you can seamlessly **import, create, and deploy connectors*
 ![DIS overview](https://docs.dataminer.services/develop/images/DataMinerIntegrationStudio.png)
 
 > [!TIP]
-> See also: [Kata #37: Getting started with DIS](https://community.dataminer.services/courses/kata-37/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #37: Getting started with DIS](https://community.dataminer.services/courses/kata-37/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
 ## Benefits
 

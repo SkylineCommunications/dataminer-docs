@@ -13,3 +13,5 @@ uid: Display_keys1
 - By default, if no display key is explicitly defined in the protocol, the primary key will be used as the display key.
 
 - In new implementations, the "\[IDX\]" suffix is no longer required. However, in existing implementations, removing this "\[IDX\]" suffix is not recommended, as this could have an impact on existing systems.
+
+- Leading and trailing spaces should be avoided in display keys (as well as in primary keys).

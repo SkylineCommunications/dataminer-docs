@@ -209,6 +209,9 @@ foreach (string dropDownOption in dropDownOptions)
 uiBuilder.AppendBlock(blockItem);
 ```
 
+> [!NOTE]
+> It is possible for dropdowns in interactive Automation scripts to become overloaded with data. Although a filter can be used to locate items in a dropdown list, retrieving and displaying all available options could be time-consuming. From DataMiner 10.5.8/10.6.0 onwards<!-- RN 42808 / RN 42845 -->, for Automation scripts launched from web apps where the [`useNewIASInputComponents=true` URL parameter](xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url) is used, you can use [WasOnFilter](xref:Skyline.DataMiner.Automation.UIResults.WasOnFilter(System.String)) to get the filter value that was entered. The options added to the selection box can be filtered by the script. Enable the [WantsOnFilter](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnFilter) property when defining the selection box.
+
 ## Executable
 
 Allows you to run a program execution. To do this, you must fill in the property *Extra* with the name of the program you want to execute.
@@ -244,8 +247,6 @@ Examples:
 
 Allows you to define a file selector control.
 
-Available from DataMiner 10.0.0/10.0.2 onwards.
-
 Example:
 
 ```csharp
@@ -268,7 +269,7 @@ string uploadedFilePath = results.GetUploadedFilePath("varUserUploadedFile");
 
 When you have selected a file, the actual upload will only start after you click a button to make the script continue (e.g. *Close*, *Next*, etc.). Once the upload has started, a *Cancel* option will be available.
 
-All files uploaded by users will by default be placed in the *C:\\Skyline DataMiner\\TempDocuments* folder, which is automatically cleared at every DataMiner startup.
+All files uploaded by users will by default be placed in the `C:\Skyline DataMiner\TempDocuments` folder, which is automatically cleared at every DataMiner startup.
 
 > [!TIP]
 > See also: [GetUploadedFilePath](xref:Skyline.DataMiner.Automation.UIResults.GetUploadedFilePath(System.String))
@@ -348,7 +349,7 @@ uiBuilder.AppendBlock(blockItem);
 
 ## PasswordBox
 
-Allows you to define a password box. Available from DataMiner 9.6.6 onwards.
+Allows you to define a password box.
 
 Example:
 
@@ -368,7 +369,7 @@ Optionally, you can set the *HasPeekIcon* property to display an icon that, when
 
 ## RadioButtonList
 
-Allows you to define a radio button list. Available from DataMiner 9.6.6 onwards.
+Allows you to define a radio button list.
 
 It is possible to differentiate between the raw value and display value for the options. The display value is the text the UI will show for the option, and the raw value is the value used to have a radio button selected by default using [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition.InitialValue).
 
@@ -446,7 +447,7 @@ uiBuilder.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
-> From DataMiner 9.5.3 onwards, this control can be used with a "WantsOnChange" property, which prevents updates being sent after a single character is changed in a text box. See [WantsOnChange](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange).
+> This control can be used with a "WantsOnChange" property, which prevents updates being sent after a single character is changed in a text box. See [WantsOnChange](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange).
 
 ## Time
 
@@ -473,23 +474,31 @@ UIBlockDefinition blockItem = new UIBlockDefinition
 uiBuilder.AppendBlock(blockItem);
 ```
 
-> [!NOTE]
->
-> - From DataMiner 9.5.3 onwards, additional classes are available to define controls to select the date and/or time. See [AutomationConfigOptions class](xref:Skyline.DataMiner.Automation.AutomationConfigOptions).
-> - When the initial value of the time span exceeds 24 hours, an extra digit will be displayed that represents the days. This digit is by default hidden. You can also make it show up by using the up button of the spinner or pressing the Up arrow key on your keyboard when the current time span is 23:59:59.
-> - The `AutomationTimeUpDownOptions` property `AllowSpin` is not supported in the Low-Code Apps.
-> - The `AutomationTimeUpDownOptions` property `UpdateValueOnEnter` is not supported in Cube.
-> - The `AutomationTimeUpDownOptions` property `FractionalSecondsDigitsCount` is only supported in Cube and should be within a range of 0 to 3.
-> - From DataMiner 10.3.0 [CU1]/10.3.4 onwards, the `ShowTimeUnits` property is available. When this property is set to *true*, the component will display labels indicating the days, hours, minutes and seconds. By default, this property is set to *false*. The `ShowTimeUnits` property is only supported in the DataMiner web apps and not in DataMiner Cube. <!-- RN 35435 -->
-> - When the initial value is set to an empty string or null, a default value of one hour will be displayed in Cube. In the Low-Code Apps, zero (00:00:00) will be displayed.
-> - The time span values are returned in the constant invariant format (e.g. "3.17:25:30.5569124").
+Please note the following:
 
-> [!NOTE]
-> The kind of returned date/time may be different depending on whether the script is executed in a web or Cube environment. From DataMiner 10.5.4/10.6.0 onwards<!-- RN 42064 / RN 42097 / RN 42110 -->, [GetClientDateTime](xref:Skyline.DataMiner.Automation.UIResults.GetClientDateTime(System.String)) can be used to get the date/time as it is displayed. Enable the [ClientTimeInfo](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ClientTimeInfo) property to make sure the info is available.
+- Additional classes are available to define controls to select the date and/or time. See [AutomationConfigOptions class](xref:Skyline.DataMiner.Automation.AutomationConfigOptions).
+
+- When the initial value of the time span exceeds 24 hours, an extra digit will be displayed that represents the days. This digit is by default hidden. You can also make it show up by using the up button of the spinner or pressing the Up arrow key on your keyboard when the current time span is 23:59:59.
+
+- The `AutomationTimeUpDownOptions` property `AllowSpin` is not supported in Low-Code Apps.
+
+- The `AutomationTimeUpDownOptions` property `UpdateValueOnEnter` is not supported in Cube.
+
+- The `AutomationTimeUpDownOptions` property `FractionalSecondsDigitsCount` is only supported in Cube and should be within a range of 0 to 3.
+
+- From DataMiner 10.3.0 [CU1]/10.3.4 onwards, the `ShowTimeUnits` property is available. When this property is set to *true*, the component will display labels indicating the days, hours, minutes and seconds. By default, this property is set to *false*. The `ShowTimeUnits` property is only supported in the DataMiner web apps and not in DataMiner Cube. <!-- RN 35435 -->
+
+- When the initial value is set to an empty string or null, a default value of one hour will be displayed in Cube. In the Low-Code Apps, zero (00:00:00) will be displayed.
+
+- The time span values are returned in the constant invariant format (e.g. "3.17:25:30.5569124").
+
+- The kind of returned date/time may be different depending on whether the script is executed in a web or Cube environment. From DataMiner 10.5.4/10.6.0 onwards<!-- RN 42064 / RN 42097 / RN 42110 -->, [GetClientDateTime](xref:Skyline.DataMiner.Automation.UIResults.GetClientDateTime(System.String)) can be used to get the date/time as it is displayed. Enable the [ClientTimeInfo](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ClientTimeInfo) property to make sure the info is available.
+
+- From DataMiner 10.5.9/10.6.0 onwards<!-- RN 43014 -->, for the [AutomationDateTimeUpDownOptions](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions), [AutomationDateTimePickerOptions](xref:Skyline.DataMiner.Automation.AutomationDateTimePickerOptions) and [AutomationTimePickerOptions](xref:Skyline.DataMiner.Automation.AutomationTimePickerOptions), the [DateTimeKind](https://learn.microsoft.com/en-us/dotnet/api/system.datetime) of the [Minimum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Minimum) and [Maximum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Maximum) will be taken into account. For more information, refer to [Minimum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Minimum) and [Maximum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Maximum).
 
 ## TreeView
 
-Allows you to define a tree view. Available from DataMiner 10.0.10 onwards.
+Allows you to define a tree view.
 
 To define a tree view control, create a *UIBlockDefinition* of type *TreeView* and add each item of the tree view as a *TreeViewItem* to the *TreeViewItems* property. It is not required to fill in the *InitialValue* or *Value* of the *UIBlockDefinition*, as that value is determined based on the *TreeViewItem* collection.
 

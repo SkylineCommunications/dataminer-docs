@@ -6,7 +6,7 @@ uid: GetActiveAlarmsForViewV2
 
 Use this method to retrieve all active alarms of a particular view along with the alarm cache status.
 
-Available from DataMiner 10.0.7 onwards.
+<!-- Available from DataMiner 10.0.7 onwards. -->
 
 ## Input
 

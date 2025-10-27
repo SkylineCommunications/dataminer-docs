@@ -7,13 +7,13 @@ uid: I-DOCSIS_maps_deployment_multiple_backends
 > [!NOTE]
 > The configuration files mentioned in the procedure below are automatically installed when you upgrade to the latest EPM Integrated DOCSIS version. You can find them in the following folder on the DMA where the front-end element is located: `C:\Skyline DataMiner\Maps\Configs`.
 
-To deploy the Integrated DOCSIS EPM maps to a DataMiner System with multiple elements using the [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/result/driver/7209) protocol:
+To deploy the Integrated DOCSIS EPM maps to a DataMiner System with multiple elements using the [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/details/b175a610-19d0-4281-99cc-359e09a7e859) protocol:
 
 1. Get the configuration file for the node segment maps (*EPM_MAPS_NODE_SEGMENT.xml*).
 
 1. Make sure that the *elementVar* field of all passive layers contains the name of the card variable (without the initial underscore) used in the Skyline EPM Platform Visio drawing:
 
-   ![Verify if the elementVar field contains the card variable](~/user-guide/images/EPM_I_DOCSIS_maps_deployment_maps_config_one_backend.png)
+   ![Verify if the elementVar field contains the card variable](~/dataminer/images/EPM_I_DOCSIS_maps_deployment_maps_config_one_backend.png)
 
 1. Create a relation layer per back-end element. You can copy one of the existing layers in the configuration file and paste it until you match the number of back-end elements in the DMS. For example, if the DMS has 11 back-end elements, you need to create 11 relation layers in the map configuration file.
 

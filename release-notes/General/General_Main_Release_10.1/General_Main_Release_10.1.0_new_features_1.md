@@ -392,7 +392,7 @@ If a Cassandra node goes down or when a node is down when DataMiner starts up, a
 - If the Cassandra cluster feature is used, alarm and information event information is always migrated to Elasticsearch. It is not possible to use this feature without enabling indexing on alarms.
 
 > [!NOTE]
-> If a database of type Cassandra cluster is used, the soft-launch feature [NewAverageTrending](xref:Overview_of_Soft_Launch_Options#newaveragetrending) is automatically enabled.
+> If a database of type Cassandra cluster is used, the soft-launch feature *NewAverageTrending* is automatically enabled.
 
 #### Dynamic table filters: New component type 'recursivefullfilter' \[ID 24672\] \[ID 24676\]
 
@@ -411,7 +411,7 @@ recursivefullfilter=(1002 > 0)
 
 #### Support for icons in SVG format \[ID 24841\]
 
-In function protocols and the *C:\\Skyline DataMiner\\Icons\\CustomIcons.xml* file, icons can now also be defined in SVG format.
+In function protocols and the `C:\Skyline DataMiner\Icons\CustomIcons.xml` file, icons can now also be defined in SVG format.
 
 Also, the default function icon has been updated.
 
@@ -657,11 +657,11 @@ Automation scripts and QActions will now by default be compiled with a reference
 
 #### Proactive cap detection \[ID 26637\]\[ID 27132\]\[ID 27241\]\[ID 27355\]\[ID 27393\]
 
-To further enhance the proactive monitoring capabilities of DataMiner, proactive cap detection is now available. This DataMiner Analytics feature predicts future issues based on trend data in the Cassandra database, using advanced techniques that consider repeating patterns, information on the rate at which a parameter value increases or decreases, etc. However, note that some events simply cannot be predicted. For example, a spike in a trend graph caused by randomly pulling out a cable can never be predicted by looking at historical trend data, so proactive cap detection will not know about this in advance.
+To further enhance the proactive monitoring capabilities of DataMiner, proactive cap detection is now available. This DataMiner Analytics feature predicts future issues based on the trend data stored by DataMiner, using advanced techniques that consider repeating patterns, information on the rate at which a parameter value increases or decreases, etc. However, note that some events simply cannot be predicted. For example, a spike in a trend graph caused by randomly pulling out a cable can never be predicted by looking at historical trend data, so proactive cap detection will not know about this in advance.
 
 ##### Specifications
 
-For the best results, both real-time and average trending should be activated on a parameter for which you want proactive cap detection to be available. To calculate its predictions, DataMiner Analytics will make use of the available real-time data, 5-minute average data, 1-hour average data and daily average data. It can predict at most 200 data points into the future. This is further limited by the available data: if there is a data set of a specific number of points, DataMiner Analytics can never predict further than that number of points divided by ten. For example, if the database contains one year of hourly averages and no daily averages, then DataMiner Analytics computes 365 daily averages and is able to predict issues 36 days into the future.
+For the best results, both real-time and average trending should be activated on a parameter for which you want proactive cap detection to be available. To calculate its predictions, DataMiner Analytics will make use of the available real-time data, 5-minute average data, 1-hour average data and daily average data. It can predict at most 200 data points into the future. This is further limited by the available data: if there is a dataset of a specific number of points, DataMiner Analytics can never predict further than that number of points divided by ten. For example, if the database contains one year of hourly averages and no daily averages, then DataMiner Analytics computes 365 daily averages and is able to predict issues 36 days into the future.
 
 This feature is currently only available for trended parameters with numeric values, and not for partial table parameters. Because of memory constraints, proactive cap detection is also only possible for up to 100 000 parameters per DMA. If there are more parameters for which proactive cap detection would be possible, no predictions will be available for these and the Analytics log file will mention that the number of tracked parameters exceeded the maximum.
 
@@ -819,7 +819,7 @@ protocol.NotifyDataMiner(182 /*NT_DELETE_FOLDER*/, folderName, bRecycle);
 ```
 
 > [!NOTE]
-> If a relative path is passed to the NT_DELETE_FOLDER function, it will assume it to be relative to the *C:\\Skyline DataMiner\\Documents\\* folder. So, in the example above, the function will try to delete the *C:\\Skyline DataMiner\\Documents\\Configurations* folder. If you want it to delete the *C:\\Skyline DataMiner\\Configurations* folder, then you have to specify the full path.
+> If a relative path is passed to the NT_DELETE_FOLDER function, it will assume it to be relative to the `C:\Skyline DataMiner\Documents\` folder. So, in the example above, the function will try to delete the `C:\Skyline DataMiner\Documents\Configurations` folder. If you want it to delete the `C:\Skyline DataMiner\Configurations` folder, then you have to specify the full path.
 
 #### Authentication via a client certificate when polling an HTTPS server \[ID 25243\]
 
@@ -949,7 +949,7 @@ See the examples below.
 
 #### A message body can now be added to raw HTTP requests \[ID 27438\]
 
-In a QAction, it is now possible to add a message body to raw HTTP requests sent in a multi-threaded timer.
+In a QAction, it is now possible to add a message body to raw HTTP requests sent in a multithreaded timer.
 
 Old syntax:
 

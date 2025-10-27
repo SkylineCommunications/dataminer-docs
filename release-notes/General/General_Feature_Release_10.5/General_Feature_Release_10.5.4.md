@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.5.4
 ---
 
-# General Feature Release 10.5.4 – Preview
+# General Feature Release 10.5.4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -185,7 +185,7 @@ If multiple settings indicate that the element should be running in isolation mo
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
-Per DataMiner Agent, the RAD parameter groups must be configured in the *C:\\Skyline DataMiner\\Analytics\\RelationalAnomalyDetection.xml* file, which must be formatted as follows.
+Per DataMiner Agent, the RAD parameter groups must be configured in the `C:\Skyline DataMiner\Analytics\RelationalAnomalyDetection.xml` file, which must be formatted as follows.
 
 ```xml
 <?xml version="1.0" ?>
@@ -255,7 +255,7 @@ When you clear such an incident, all its base alarms (i.e. the suggestion events
 
 When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.xml* file, the `NatsCustodianResetNatsRequest` message will now be blocked. Instead of performing a NATS reset, it will now return an error with the following message:
 
-`Resetting NATS is blocked while the system is running a Manual Config. See https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_advanced_procedures/SLNetClientTest_disabling_automatic_nats_config.html for more information.`
+`Resetting NATS is blocked while the system is running a Manual Config. See https://docs.dataminer.services/dataminer/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_advanced_procedures/SLNetClientTest_disabling_automatic_nats_config.html for more information.`
 
 > [!NOTE]
 > The `NatsCustodianResetNatsRequest` message will also be blocked when BrokerGateway is being used.
@@ -288,9 +288,9 @@ Because of a number of enhancements, overall performance has increased when exec
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
-When you migrate data of datatype *CustomData* from either Cassandra Single or Cassandra Cluster to STaaS (using e.g. the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02)), you can now indicate exactly which data you want to have migrated.
+When you migrate data of data type *CustomData* from either Cassandra Single or Cassandra Cluster to STaaS (using e.g. the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02)), you can now indicate exactly which data you want to have migrated.
 
-For example, if you want to migrate only the SLAnalytics data, you can now specify the *CustomData* datatype as well as the *Analytics* datatype.
+For example, if you want to migrate only the SLAnalytics data, you can now specify the *CustomData* data type as well as the *Analytics* data type.
 
 #### Connection enhancements [ID 42233]
 
@@ -310,7 +310,7 @@ From now on, those suggestion events will be grouped into a single incident, whi
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
-When Swarming is enabled, a file named *Where are my elements.txt* will now be present in the *C:\\Skyline DataMiner\\Elements\\* folder.
+When Swarming is enabled, a file named *Where are my elements.txt* will now be present in the `C:\Skyline DataMiner\Elements\` folder.
 
 In that file, users who wonder why this folder no longer contains any *element.xml* files will be referred to the [Swarming documentation](https://aka.dataminer.services/swarming) in [docs.dataminer.services](https://docs.dataminer.services/).
 
@@ -339,12 +339,12 @@ Also, no new log file will be started every day anymore. From now on, a new log 
 
 <!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
 
-From now on, a separate log file will be created per GQI DxM extension library in the *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions* folder.
+From now on, a separate log file will be created per GQI DxM extension library in the `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions` folder.
 
 Example:
 
-- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library A.txt*
-- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library B.txt*
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions\Library A.txt`
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions\Library B.txt`
 
 The log entries added to those files will now each include the name of the extension as well as the name of the user. The log entry format will now be the following:
 
@@ -356,7 +356,7 @@ The log entries added to those files will now each include the name of the exten
 
 SLLogCollector will now look for GQI DxM extension logging in the following folder:
 
-- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions*
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions`
 
 ### Fixes
 
@@ -368,7 +368,7 @@ After a Cassandra Cluster migration had been initialized, it would no longer be 
 
 #### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
 
-<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.4 -->
 
 When multiple users of the same user group requested the same mobile visual overview, in some rare cases, a separate DataMiner Cube instance would incorrectly be created on the DataMiner Agent for each of those users, potentially causing the creation of one Cube instance to block the creation of another Cube instance.
 
@@ -501,6 +501,12 @@ However, up to now, the response would not contain the anomaly score and the par
 
 In some rare cases, an exception could be thrown when NATS sessions were disposed.
 
+#### Mobile Visual Overview: Problem with SLHelper when removing mobile visual overview sessions [ID 42296]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.4 [CU0] -->
+
+When mobile visual overview sessions were removed from a DataMiner Agent, in some cases, the SLHelper process could temporarily block other requests.
+
 #### GQI DxM: Problem when executing a query using ad hoc data sources with real-time updates enabled [ID 42310]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU1] - FR 10.5.4 -->
@@ -536,3 +542,9 @@ The *WebView2Loader.dll* file will now been added to the DataMiner upgrade packa
 <!-- Not added to MR 10.6.0 -->
 
 When an element had been migrated from one DataMiner Agent to another, in some rare cases, certain actions involving that migrated element (e.g. a deletion of the element) would fail until the DataMiner Agent was restarted.
+
+#### SLNet memory leak related to indexing logic for Cube search bar [ID 42544]
+
+<!-- MR 10.6.0 - FR 10.5.4 [CU0] -->
+
+In systems with many trended parameters, an SLNet memory leak could occur whenever an ElementInfoMessage was sent (e.g. when an element was restarted or edited, or when an element property was changed). This was caused by the SLNet indexing of trended parameters for the Cube search bar not being cleaned up correctly, which lead to duplicate entries being kept in the SearchManager in SLNet, consuming more and more memory.

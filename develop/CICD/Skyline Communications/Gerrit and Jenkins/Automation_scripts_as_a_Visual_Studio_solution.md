@@ -8,7 +8,7 @@ From DIS 2.31 onwards, developing Automation scripts as a Visual Studio solution
 
 - C# projects that contain the code for the Exe blocks of an Automation script can contain multiple .cs files. At compilation, the contents of those files will be combined into one Exe block.
 
-- DLL imports need to be configured on the C# project itself by adding references to the external components. These can be external DLL files (located in *C:\\DataMiner\\ProtocolScripts* or *C:\\DataMiner\\Files*) or other scripts in the same solution.
+- DLL imports need to be configured on the C# project itself by adding references to the external components. These can be external DLL files (located in `C:\DataMiner\ProtocolScripts` or `C:\DataMiner\Files`) or other scripts in the same solution.
 
 > [!TIP]
 > See also: [Developing Automation scripts as Visual Studio solutions](xref:Developing_Automation_scripts_as_Visual_Studio_solutions)

@@ -24,7 +24,7 @@ To deploy the Availability branch of the EPM Solution:
 
    - There should be a separate DMA to host the front-end element, which does not host any collectors. This is not mandatory, but it is highly recommended.
 
-   - Make sure the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) is enabled so you can use the Topology app.
+   - If you are using a DataMiner Cube version prior to DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- RN 42221 -->, make sure the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) is enabled so you can use the Topology app.
 
 1. In DataMiner Cube, go to *Apps* > *Automation* and run the *EPMSetupWizard* Automation script (in the *EPM TOOLS* folder).
 
@@ -61,10 +61,10 @@ To deploy the Availability branch of the EPM Solution:
 
 1. In the front-end visual overview, click the *Set* button next to *Import* to begin the provisioning.
 
-   ![Configuration page front-end element](~/user-guide/images/Availability_FrontEnd_Configuration.png)
+   ![Configuration page front-end element](~/dataminer/images/Availability_FrontEnd_Configuration.png)
 
    > [!NOTE]
-   > If you cannot see the Topology app in between the Surveyor and Activity modules in Cube, close and reopen DataMiner Cube. If this has no effect, make sure the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) is enabled. If it is, and the app is still not shown, restart DataMiner.
+   > If you cannot see the Topology app in between the Surveyor and Activity modules in Cube, close and reopen DataMiner Cube. If this has no effect, and you are using a DataMiner Cube version prior to DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- RN 42221 -->, make sure the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) is enabled. If you are using a recent DataMiner version or the option is enabled, and the app is still not shown, restart DataMiner.
 
 1. Optionally, duplicate and customize the alarm and trend templates.
 

@@ -53,9 +53,9 @@ A number of enhancements have been made with regard to the compilation of Automa
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Every DataMiner upgrade package includes a *FilesToDelete.txt* file, which lists all files in the *C:\\Skyline DataMiner\\* folder that should be deleted during the upgrade procedure. From now on, the *ResetConfig.txt* file will no longer be added to that list of files to be deleted.
+Every DataMiner upgrade package includes a *FilesToDelete.txt* file, which lists all files in the `C:\Skyline DataMiner\` folder that should be deleted during the upgrade procedure. From now on, the *ResetConfig.txt* file will no longer be added to that list of files to be deleted.
 
-The *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file is a file used by the factory reset tool *SLReset.exe* as a whitelist to determine which files to keep. The first time *SLReset.exe* is executed, the default whitelist is added to *ResetConfig.txt*. Afterwards, you can add files you want to keep to this whitelist, so that these are not removed when the tool is executed again. If you delete *ResetConfig.txt*, the default whitelist will be used again.
+The `C:\Skyline DataMiner\Files\ResetConfig.txt` file is a file used by the factory reset tool *SLReset.exe* as a whitelist to determine which files to keep. The first time *SLReset.exe* is executed, the default whitelist is added to *ResetConfig.txt*. Afterwards, you can add files you want to keep to this whitelist, so that these are not removed when the tool is executed again. If you delete *ResetConfig.txt*, the default whitelist will be used again.
 
 #### Storage as a Service: Event hub throttling errors will now be logged as 'Warning' instead of 'Error' [ID 40018]
 
@@ -77,9 +77,9 @@ When booking objects are added to, updated in or deleted from the cache, from no
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, the factory reset tool *SLReset.exe* always used the relative path `.\\` to locate the *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* file, assuming that it would always be executed from the *C:\\Skyline DataMiner\\Files* folder. As a result, when it was executed from another folder (e.g. from a terminal window opened on the Windows desktop), it would not be able to find the *ResetConfig.txt* file.
+Up to now, the factory reset tool *SLReset.exe* always used the relative path `.\\` to locate the `C:\Skyline DataMiner\Files\ResetConfig.txt` file, assuming that it would always be executed from the `C:\Skyline DataMiner\Files` folder. As a result, when it was executed from another folder (e.g. from a terminal window opened on the Windows desktop), it would not be able to find the *ResetConfig.txt* file.
 
-From now on, *SLReset.exe* will always use the absolute path *C:\\Skyline DataMiner\\Files\\ResetConfig.txt* when locating *ResetConfig.txt*.
+From now on, *SLReset.exe* will always use the absolute path `C:\Skyline DataMiner\Files\ResetConfig.txt` when locating *ResetConfig.txt*.
 
 #### Automation: Using the Engine.Sleep method in an Automation script could affect other scripts [ID 40104]
 
@@ -125,7 +125,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner CoreGateway: version 2.14.9
 - DataMiner SupportAssistant: version 1.6.10
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### All Cassandra driver logging will now be stored in the SLCassandraDriver.txt file [ID 40268]
 
@@ -199,9 +199,9 @@ Events generated after DOM objects were created, updated or deleted would incorr
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, when an SNMP table took a long time to be polled, a run-time error could occur in SLProtocol.
+Up to now, when an SNMP table took a long time to be polled, a runtime error could occur in SLProtocol.
 
-To avoid such run-time errors, from now on, when SLSNMPManager is polling an SNMP table, it will send a notification to SLProtocol every minute to indicate that SNMP data is being polled.
+To avoid such runtime errors, from now on, when SLSNMPManager is polling an SNMP table, it will send a notification to SLProtocol every minute to indicate that SNMP data is being polled.
 
 #### Failover switch would take significantly longer than usual due to blocking calls in the SLASPConnection process [ID 39769]
 

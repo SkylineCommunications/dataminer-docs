@@ -2,10 +2,12 @@
 uid: Cube_Feature_Release_10.5.4
 ---
 
-# DataMiner Cube Feature Release 10.5.4 – Preview
+# DataMiner Cube Feature Release 10.5.4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.4.0 [CU13] and 10.5.0 [CU1].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,7 +16,8 @@ uid: Cube_Feature_Release_10.5.4
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Elements can now be configured to run in isolation mode [ID 41758]](#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758)
+- [Legacy InterClient feature has been removed [ID 42263]](#legacy-interclient-feature-has-been-removed-id-42263)
 
 ## New features
 
@@ -126,7 +129,16 @@ In the Cube UI, the following text strings have been adjusted to allow a more na
 
 As Cassandra on Windows OS and Cassandra Single are no longer supported, it is no longer possible to migrate the general database to Cassandra. Hence, the *Cassandra preparation/migration* button, found in the bottom-left corner of the *Database* section, has been removed.
 
-See also: [Third-party software support life cycle](xref:Software_support_life_cycles#third-party-software-support-life-cycle)
+See also: [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)
+
+#### Visual Overview: An element or service referenced by a service but not included in it will now always be hidden [ID 42644]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.4 [CU0] -->
+
+Up to now, when an element or service was referenced by a service but not included in it, a shape linked to that element or service would only be hidden when it was referenced by a wildcard (* or ?). From now on, when an element or service is referenced by a service but not included in it, it will always be hidden, regardless of how it is referenced.
+
+> [!NOTE]
+> The new behavior can be disabled by using the *elementoptions: IgnoreDynamicInclude* shape data. See [Adding options to shapes linked to elements or services](xref:Adding_options_to_shapes_linked_to_elements_or_services#options).
 
 ### Fixes
 

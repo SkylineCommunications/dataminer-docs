@@ -62,7 +62,7 @@ If the repository is private, the name should look like this (using "-" as separ
   | GQIDS | GQI data source |
   | GQIO | GQI operator |
   | LCA | Low-Code App |
-  | LSO | Life cycle Service Orchestration |
+  | LSO | Lifecycle Service Orchestration |
   | PA | Process Automation |
   | PLS | Profile-Load Scripts |
   | S | Solutions |
@@ -70,6 +70,7 @@ If the repository is private, the name should look like this (using "-" as separ
   | T | Tests: regression tests, integration tests, performance tests, etc. |
   | UDAPI | User-Defined APIs |
   | V | Visio files |
+  | EXT | External tools - softwares  |
 
   > [!NOTE]
   > If you think an item type should be added, please contact us so we can add it before you create the repository.

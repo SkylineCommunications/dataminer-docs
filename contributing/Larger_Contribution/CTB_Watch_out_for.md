@@ -22,7 +22,7 @@ When you are working on your own fork, make sure you regularly **check in GitHub
 
 1. To update your fork, click the triangle button next to *Sync fork* and select *Update branch*.
 
-   ![Link to forks](~/user-guide/images/Contributing_Update_Branch.png)
+   ![Link to forks](~/dataminer/images/Contributing_Update_Branch.png)
 
 ## Adding cross-references
 

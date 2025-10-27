@@ -10,7 +10,7 @@ To use this app, the [Performance Analyzer library](xref:Performance_Analyzer_Li
 
 ## Installing the Performance Analyzer app
 
-To install the Performance Analyzer app, deploy the [Performance Analyzer](https://catalog.dataminer.services/details/414894ce-21ae-48e7-b2c3-0652fff08349) package from the DataMiner Catalog.
+To install the Performance Analyzer app, deploy the [Performance Analyzer](https://catalog.dataminer.services/details/414894ce-21ae-48e7-b2c3-0652fff08349) package from the Catalog.
 
 > [!TIP]
 > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item).
@@ -21,7 +21,7 @@ To install the Performance Analyzer app, deploy the [Performance Analyzer](https
 
 Below, you can find an overview of the main components of the app.
 
-![Performance Analyzer LCA](~/user-guide/images/performance_analyzer_lca.png)
+![Performance Analyzer LCA](~/dataminer/images/performance_analyzer_lca.png)
 
 1. **Performance Analyzer Metrics Folder**: Defines the folder where performance data files are located. By default, this is `C:\Skyline_Data\PerformanceAnalyzer`.
 
@@ -47,15 +47,15 @@ Below, you can find an overview of the main components of the app.
 
 Left-clicking a method in the Metrics table opens a menu with different options to visualize the execution times of the method.
 
-![Performance Analyzer metrics method menu](~/user-guide/images/Performance_analyzer_metrics_method_menu.png)
+![Performance Analyzer metrics method menu](~/dataminer/images/Performance_analyzer_metrics_method_menu.png)
 
 - *Analyze Method (File)* displays statistics for the method in the file that is currently selected.
 
-  ![Performance Analyzer analyze method single file](~/user-guide/images/Performance_analyzer_analyze_method_single_file.png)
+  ![Performance Analyzer analyze method single file](~/dataminer/images/Performance_analyzer_analyze_method_single_file.png)
 
 - *Analyze Method (Multi-File)* displays statistics for the method across all files in the configured Performance Analyzer metrics folder.
 
-  ![Performance Analyzer analyze method multi-file](~/user-guide/images/Performance_analyzer_analyze_method_multi_file.png)
+  ![Performance Analyzer analyze method multi-file](~/dataminer/images/Performance_analyzer_analyze_method_multi_file.png)
 
 > [!IMPORTANT]
 > Analyzing a method across all files can cause a lot of memory and disk usage depending on the size of the metrics folder. A failsafe is implemented to load only the most recent 2 GB of files based on the last modified date.

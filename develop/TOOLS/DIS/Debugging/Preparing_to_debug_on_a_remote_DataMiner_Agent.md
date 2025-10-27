@@ -8,7 +8,7 @@ Proceed as follows if you want to debug a QAction or an Automation script locate
 
 1. On the remote DataMiner Agent, create a network share where DIS can upload the DLL files and the symbol files.
 
-   Example: *C:\\dis*
+   Example: `C:\dis`
 
 1. When you use Visual Studio 2010, both Visual Studio and Remote Debugging Monitor (msvsmon.exe) need to run with a local Administrator account. Create a dedicated debugging user account on your local computer as well as on the remote DataMiner Agent. Make sure both user accounts have:
 

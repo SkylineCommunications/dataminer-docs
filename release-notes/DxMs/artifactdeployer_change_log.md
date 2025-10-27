@@ -4,6 +4,22 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 27 August 2025 - Enhancement - ArtifactDeployer 1.8.6 - General improvements
+
+General improvements have been made to the way ArtifactDeployer handles tasks, making the DxM more robust and also improving its shutdown procedure.
+
+#### 24 June 2025 - Enhancement - ArtifactDeployer 1.8.5 - Improved upgrade process
+
+Improvements have been made to the startup and shutdown of the DxM, which improves the upgrade process.
+
+#### 17 June 2025 - Enhancement - ArtifactDeployer 1.8.4 - Improved upgrade process
+
+Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
+
+#### 1 April 2025 - Enhancement - Dependencies updated [ID 42654]
+
+Several dependencies have been updated.
+
 #### 5 November 2024 - Fix - ArtifactDeployer 1.8.2 - Fix memory leak [ID 41335]
 
 A NuGet dependency used by ArtifactDeployer could cause a memory leak. The dependencies have been updated to resolve this.

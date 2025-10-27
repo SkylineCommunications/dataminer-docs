@@ -136,6 +136,14 @@ Up to now, when alarms were cleared before the end of the time frame specified i
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up so that no lingering buckets are left.
 
+#### DataMiner Cube: 'Search for alarms' would list alarms with timestamps according to the local time zone of the client computer [ID 38899]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.4 -->
+
+Up to now, when you opened a new alarm tab, and did a search using the *Search for alarms* box, the alarms matching the search criterion would incorrectly show timestamps according to the local time zone of the client computer.
+
+From now on, when you use the *Search of alarms* box, the alarms matching the search criterion will show timestamps according to the server time, i.e. the local time zone of the DataMiner Agent to which the Cube client is connected.
+
 #### Not possible to delete a service created via an SRM booking when it had been assigned a name that was already being used [ID 38914]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
@@ -146,7 +154,7 @@ When a service created via an SRM booking got into an error state because it had
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-Up to now, in some cases, a run-time error could occur when the function manager was not able to read the *functions.xml* file in `C:\Skyline DataMiner\ServiceManager`.
+Up to now, in some cases, a runtime error could occur when the function manager was not able to read the *functions.xml* file in `C:\Skyline DataMiner\ServiceManager`.
 
 From now on, if an error occurs when the function manager was not able to read that file, an entry will be added to the *SLFunctionManager.txt* log file, and if the error occurred because the file was locked by another process, the log entry will include the name of the process.
 

@@ -235,7 +235,7 @@ Up to now, the maxJSONLength setting, which is used when serializing and deseria
 
 To set maxJSONLength to a specific value, do the following:
 
-1. Open the *Web.config* file located in the *C:\\Skyline DataMiner\\Webpages\\API* folder.
+1. Open the *Web.config* file located in the `C:\Skyline DataMiner\Webpages\API` folder.
 
 2. Make sure that the *configuration.appSettings* section contains an element similar to the following one:
 
@@ -502,7 +502,7 @@ Once you have compiled a C# code block as a library, you can then import that li
 > - The order of the C# blocks in an Automation script will define the order in which the libraries will be compiled.
 > - When you delete an Automation script that contains a library, all files belonging to that library will also be deleted. As a result, you will not be able to recompile any of the depending scripts until you add the deleted library again (with the same script name and library name).
 > - When you delete a library C# block from an Automation script and then save the script, the DLL of that deleted library will not be deleted. The DLL file and all references to that deleted library should be removed manually.
-> - When you compile a library, its DLL file (and, if compiled in debug mode, its PDB and CS files) are stored in *C:\\Skyline DataMiner\\Scripts\\Libraries*. When the first Automation-related action (i.e. creating, editing or deleting an Automation script, or validating a C# code block) is performed after a DataMiner restart, this folder is cleaned up. After cleaning, of each library it will only contain the most recent version.
+> - When you compile a library, its DLL file (and, if compiled in debug mode, its PDB and CS files) are stored in `C:\Skyline DataMiner\Scripts\Libraries`. When the first Automation-related action (i.e. creating, editing or deleting an Automation script, or validating a C# code block) is performed after a DataMiner restart, this folder is cleaned up. After cleaning, of each library it will only contain the most recent version.
 
 #### Interactive Automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
 
@@ -525,11 +525,11 @@ string uploadedFilePath = results.GetUploadedFilePath("varUserUploadedFile");
 
 When you have selected a file, the actual upload will only start after you click a button to make the script continue (e.g. Close, Next, etc.). Once the upload has started, a *Cancel* option will appear, allowing you to abort the upload operation.
 
-All files uploaded by users will by default be placed in the *C:\\Skyline DataMiner\\TempDocuments* folder, which is automatically cleared at every DataMiner startup.
+All files uploaded by users will by default be placed in the `C:\Skyline DataMiner\TempDocuments` folder, which is automatically cleared at every DataMiner startup.
 
-#### New engine.UnSetFlag method to clear run-time flags \[ID 23961\]
+#### New engine.UnSetFlag method to clear runtime flags \[ID 23961\]
 
-In an Automation script, you can now use the engine.UnSetFlag method to clear the following run-time flags:
+In an Automation script, you can now use the engine.UnSetFlag method to clear the following runtime flags:
 
 - RunTimeFlags.AllowUndef
 - RunTimeFlags.NoInformationEvents

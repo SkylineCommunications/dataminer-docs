@@ -5,7 +5,7 @@ uid: CTB_Quick_Edit
 # Doing a quick edit to a page
 
 > [!TIP]
-> See also: [Making a small contribution to DataMiner Docs](https://community.dataminer.services/video/making-a-small-contribution-to-dataminer-docs/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Making a small contribution to DataMiner Docs](https://www.youtube.com/watch?v=hPi9kv8WKGU) ![Video](~/dataminer/images/video_Duo.png)
 
 On every page of the documentation on docs.dataminer.services, an *Improve this page* link is available in the top-right corner. Clicking this link will open the source of the documentation on GitHub. You can then make changes as follows:
 

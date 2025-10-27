@@ -19,6 +19,19 @@ Specifies that the contents of a particular response header has to be stored in 
 
 ## Remarks
 
-In this context, this has to be done by means of a key/value pair.
+In case the HTTP response contains multiple headers with the same key, the specified parameter will contain the combined value of all these headers, with each header value separated by `\r\n`.
 
+For example, suppose the following response header is configured in the protocol:
 
+```xml
+<Header key="X-Custom" pid="30" />
+```
+
+Assuming the response contains the following headers:
+
+```
+X-Custom: A
+X-Custom: B
+```
+
+As a result, parameter 30 will contain the following value: `A\r\nB`.

@@ -36,7 +36,7 @@ public void ApplyServiceState(Engine engine, ServiceReservationInstance reservat
 
 As input, the method requires the engine reference, the booking where the state should be applied and the state to apply.
 
-The target state is not defined in the Booking Manager, only in the service definition actions. While LSO (Life cycle Service Orchestration) is running, the *Service State* property of the booking will have the value "Configuring *\[state to apply\]*...". When LSO has finished, the booking returns to its initial state. If LSO fails, the *Service State* will be set to "Failed". Note that it is possible to apply identical states consecutively.
+The target state is not defined in the Booking Manager, only in the service definition actions. While LSO (Lifecycle Service Orchestration) is running, the *Service State* property of the booking will have the value "Configuring *\[state to apply\]*...". When LSO has finished, the booking returns to its initial state. If LSO fails, the *Service State* will be set to "Failed". Note that it is possible to apply identical states consecutively.
 
 #### Updated behavior for adjusting end time of locked contributing bookings \[ID 28772\]
 

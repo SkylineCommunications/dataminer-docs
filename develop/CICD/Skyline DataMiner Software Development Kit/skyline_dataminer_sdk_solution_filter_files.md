@@ -31,9 +31,9 @@ Working with solution filters has the following advantages:
 
 1. Open a solution (.sln) in Visual Studio 2022.
 
-1. Select the projects you want to work with by unloading the others (right-click a project and select *Unload*).
+1. Select the projects you want to work with by unloading the others (right-click a project and select *Unload Project*).
 
-1. In the menu, go to *File* > *Save As Solution Filter* and specify a name (e.g. `MyProjectSubset.slnf`).
+1. Right-click the solution and select *Save As Solution Filter* and specify a name (e.g. `MyProjectSubset.slnf`).
 
 This will generate a .slnf file that references the original .sln but only loads the selected projects.
 

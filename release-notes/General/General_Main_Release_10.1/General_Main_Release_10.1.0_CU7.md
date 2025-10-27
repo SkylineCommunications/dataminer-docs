@@ -66,7 +66,7 @@ In some cases, it could occur that the initial synchronization of services in a 
 
 #### Dashboards app - GQI: 'Start from' option would not be available when the Queries.json file was empty or missing \[ID 30157\]
 
-When building a GQI query, in some cases, the “Start from” option would not be available when the *C:\\Skyline DataMiner\\Generic Interface\\Queries.json* file was empty or missing.
+When building a GQI query, in some cases, the “Start from” option would not be available when the `C:\Skyline DataMiner\Generic Interface\Queries.json` file was empty or missing.
 
 #### Improved performance when including/excluding elements in services based on alarm or element alarm state \[ID 30303\]
 

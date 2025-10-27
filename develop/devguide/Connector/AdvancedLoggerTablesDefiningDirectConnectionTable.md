@@ -4,6 +4,9 @@ uid: AdvancedLoggerTablesDefiningDirectConnectionTable
 
 # Defining a logger table of type DirectConnection with a primary key
 
+> [!IMPORTANT]
+> Avoid using this configuration if possible. Support for this ends in DataMiner 10.7 (see [Software support lifecycles](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)).
+
 Starting from DataMiner 10.2.3 (RN 32375), it is possible to define a logger table of type DirectConnection with a primary key.
 
 In the [Param](xref:Protocol.Params.Param) element of the logger table, do the following:

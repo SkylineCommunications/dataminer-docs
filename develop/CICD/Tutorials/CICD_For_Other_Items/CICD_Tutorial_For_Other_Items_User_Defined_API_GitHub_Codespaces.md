@@ -1,10 +1,11 @@
 ---
 uid: CICD_Tutorial_For_Other_Items_User_Defined_API_GitHub_Codespaces
+keywords: Skyline.DataMiner.Sdk, Tutorial
 ---
 
 # Registering a new version of a user-defined API to the Catalog using GitHub Codespaces
 
-In this tutorial, you will learn how to develop, (pre-)release, and upload a user-defined API to the DataMiner Catalog with a CI/CD pipeline using GitHub Workspaces. However, note that you can use similar steps for **any artifact type** except for connectors (e.g. Automation script, Automation script library, package project, etc.).
+In this tutorial, you will learn how to develop, (pre-)release, and upload a user-defined API to the Catalog with a CI/CD pipeline using GitHub Workspaces. However, note that you can use similar steps for **any artifact type** except for connectors (e.g. Automation script, Automation script library, package project, etc.).
 
 Expected duration: 10 minutes
 
@@ -84,7 +85,7 @@ Expected duration: 10 minutes
    ```
 
    > [!NOTE]
-   > If you receive a warning about pasting a multi-line, you can click *Paste*. Double-check whether all three commands have run in the end. You may need to press Enter an additional time for the last command to execute.
+   > If you receive a warning about pasting a multiline, you can click *Paste*. Double-check whether all three commands have run in the end. You may need to press Enter an additional time for the last command to execute.
 
 1. On the left, click the *Source Control* button.
 
@@ -119,7 +120,7 @@ Expected duration: 10 minutes
    ```text
    Error: DATAMINER_TOKEN is not set. Release not possible!
    Please create or re-use an admin.dataminer.services token by visiting: https://admin.dataminer.services/.
-   Navigate to the right Organization then go to Keys and create/find a key with permissions to Register Catalog Items.
+   Navigate to the right Organization then go to Keys and create/find a key with permissions to Register catalog items, Download catalog versions and Read catalog items.
    Copy the value of the token.
    Then set a DATAMINER_TOKEN secret in your repository settings: <Dynamic Link>
    ```
@@ -132,6 +133,7 @@ Expected duration: 10 minutes
 
    - *Register catalog items*
    - *Read catalog items*
+   - *Download catalog versions*
 
    > [!TIP]
    > See also: [dataminer.services keys](xref:GitHub_Secrets#dataminerservices-keys)
@@ -146,7 +148,7 @@ With this setup, any push with new content (including the initial creation) to t
 
 ## Step 7: Check the results
 
-1. Go to the [DataMiner Catalog](https://catalog.dataminer.services/)
+1. Go to the [Catalog](https://catalog.dataminer.services/)
 
 1. Check in the top-right corner if the correct organization is selected.
 

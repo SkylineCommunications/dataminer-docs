@@ -105,7 +105,7 @@ In larger projects, generating multiple parameters simultaneously may be benefic
 
       ![DIS - Generate Parameters - Group Params Assignment](~/develop/images/DIS_ToolWindow_MibBrowser_GenerateParameters_GroupParams.png)
 
-1. Select *Finish* in the lower right corner to generate your parameters, along with their respective groups and timers.
+1. Select *Finish* in the lower-right corner to generate your parameters, along with their respective groups and timers.
 
 ## Comparing the connector with MIB Files
 

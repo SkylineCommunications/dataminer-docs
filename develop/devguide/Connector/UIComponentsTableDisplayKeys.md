@@ -60,7 +60,13 @@ Another way to define a display key using naming is by using the *NamingFormat* 
 
 The first character defines the separator and can be freely chosen. It will be replaced by an empty string when the display key is formed. The use of the CDATA block allows the use of characters like "<", ">", and "&", which are otherwise encoded in XML.
 
-In the example above, the semicolon separates the static text from the dynamic parameter values. A display key for this table will look as follows: "Input 2 TS 3".
+In the example above, the semicolon separates the static text from the dynamic parameter values. A display key for this table will look as follows: "Input2TS3".
+
+> [!NOTE]
+> When referencing a parameter ID, take care not to add spaces before or after the number. For example:
+>
+> - Correct: ";Input;1005;TS;2004"
+> - Incorrect: ";Input; 1005;TS;2004 "
 
 ## Naming
 
@@ -107,6 +113,14 @@ Using the displayColumn attribute, you can specify that values of a particular c
 >
 > - The column referred to in the *displayColumn* attribute must never be the column holding the primary key, as this would result in the creation of an unnecessary mapping between primary key and display key.
 > - For performance reasons, using either the "naming" option or *NamingFormat* tag is favored over using the *displayColumn* attribute for new protocols.
+
+## CorrectedDisplayKeyOnNaming soft-launch option
+
+By default, if one of the columns used to create the display key contains an exception value, this value is ignored, and the raw value is used in the display key instead. If the exception is defined on a discrete parameter, the value is dropped from the display key entirely.
+
+You can alter this behavior by enabling the [CorrectedDisplayKeyOnNaming](xref:Overview_of_Soft_Launch_Options#correcteddisplaykeyonnaming) soft-launch option. This will cause display keys to be formatted with the exception display value instead. Because altering the display key could break existing fixed uses of display keys, this behavior is currently only available via the soft-launch option.
+
+Note that empty display values for exceptions and discrete parameters will result in the raw parameter value being used in the display key in some cases.
 
 ## See also
 

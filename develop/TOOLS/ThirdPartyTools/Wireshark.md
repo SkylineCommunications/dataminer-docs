@@ -21,7 +21,7 @@ To capture packets:
 
 1. Select the interface and specify a capture filter to limit the number of captured packets.
 
-Always try to provide a packet filter so only the required packets are captured. For example, the following capture filters can be used: 
+Always try to provide a packet filter so only the required packets are captured. For example, the following capture filters can be used:
 
 - *tcp port http*: Only capture HTTP traffic to or from TCP port 80.
 
@@ -55,6 +55,44 @@ Some extra steps can make it easier to capture traffic for a DataMiner element:
 1. Select the correct input interface. You can find the IP of an interface by expanding it in Wireshark.
 
    If the IP used by the element has no immediate link with the available interfaces, the interface that is used to route the traffic can be found using the following command in Powershell: `Test-NetConnection –ComputerName <ip/hostname> –DiagnoseRouting | Select-Object -Property RemoteAddress,SelectedSourceAddress`. The interface IP used for routing is shown as *SelectedSourceAddress*.
+
+## Useful tips
+
+### Make Wireshark recognize incoming SNMP data
+
+If a device uses a custom port to send packets of SNMP data, do the following to make Wireshark recognize that data as SNMP:
+
+1. Right-click a packet.
+1. Select *Decode As*.
+
+   ![Wireshark - Decode As](~/develop/images/Wireshark_DecodeAs.png)
+
+### Configuring SNMPv3 user credentials in Wireshark preferences
+
+To make sure that SNMPv3 packets get decrypted, configure the necessary user credentials in the Wireshark preferences.
+
+![SNMPv3 user credentials in Wireshark preferences](~/develop/images/Wireshark_Preferences_SNMP_users.png)
+
+### Filtering serials packets
+
+In case of a serial connector, you can use filtering to look for packets of which the payload contains a specific value. See the following example:
+
+`data.data[0:2] == 7b40`
+
+- `data.data[0:2]` extracts the first two bytes from the data payload (starting from byte 0, with a length of 2).
+- `== 7b40` compares the two above-mentioned bytes to the hexadecimal value *7b40*.
+
+### Using 'I/O Graphs' to get an overview of traffic rates
+
+To get an overview of traffic rates, go to *Statistics > I/O Graphs*.
+
+![Statistics > I/O Graphs](~/develop/images/Wireshark_IOGraphs.png)
+
+### The 'delta displayed' column can reveal the response time between DataMiner and the device
+
+The *delta displayed* column shows the time between displayed packets. Adding this column can reveal the response time between DataMiner and the device.
+
+![delta displayed column](~/develop/images/Wireshark_delta_displayed_column.png)
 
 ## Notes on using Wireshark
 
