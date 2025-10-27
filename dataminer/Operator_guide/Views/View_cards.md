@@ -64,7 +64,7 @@ The data pages can be displayed in several ways. You can change the way they are
 
 | Button | Description |
 |--|--|
-| ![Filter button](~/dataminer/images/View_Filter_button.png) | Filters the view to show only certain items. If you click the button, a pane is displayed in which you can select which items should be displayed. <br> To show items from subviews as well, select the checkbox click *All devices (Include sub-views)*. Note that the number of items indicated next to the DATA pages can change depending on whether this filter is selected. |
+| ![Filter button](~/dataminer/images/View_Filter_button.png) | Filters the view to show only certain items. If you click the button, a pane is displayed in which you can select which items should be displayed. <br> To show items from subviews as well, select *Include subviews* or *All devices (include subviews)*, depending on your DataMiner version<!-- RN 43817 -->. Note that the number of items indicated next to the DATA pages can change depending on whether this filter is selected. |
 | ![List view button](~/dataminer/images/View_List_button.png) | Displays the list view. |
 | ![Summary view button](~/dataminer/images/View_Summary_button.png) | Displays the summary view. |
 
