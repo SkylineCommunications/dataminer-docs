@@ -38,4 +38,8 @@ uid: General_Feature_Release_10.6.1
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### SLNet: Information messages triggered in a QAction would incorrectly only be forwarded to the DMA hosting the element in question [ID 43958]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When a QAction triggered an information message with regard to a particular element, in some cases, SLNet would incorrectly only forward that message to the DataMiner Agent that hosted that element. As a result, that information message would not appear in client applications connected to any of the other DataMiner Agents in the system.

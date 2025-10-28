@@ -30,4 +30,12 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Visual Overview in web apps: Children shapes would incorrectly be displayed on top of a clickable group of shapes [ID 43465]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] - FR 10.6.1 -->
+
+In DataMiner Cube, when a visual overview contains a clickable group of shapes that is linked to e.g. an element, that clickable group will always be displayed on top of other shapes (e.g. *Children* shapes).
+
+Up to now, a visual overview in a web app would behave differently. *Children* shapes would incorrectly be displayed on top of the clickable group, causing that group to not be clickable.
+
+From now on, a visual overview in a web app will behave in the same way as a visual overview in DataMiner Cube.
