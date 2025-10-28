@@ -34,7 +34,26 @@ uid: General_Feature_Release_10.6.1
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+DataMiner Systems will now use the BrokerGateway-managed NATS solution by default. Also, it will no longer be possible to migrate from the BrokerGateway-managed NATS solution (nats-server service) back to the legacy SLNet-managed NATS solution (NAS and NATS services).
+
+- DataMiner upgrades will no longer automatically install NAS and NATS.
+
+- SLReset will now consider the BrokerGateway-managed NATS solution as the default solution, and will remove the `C:\Skyline DataMiner\NATS` folder (if present).
+
+- SLLogCollector will no longer collect any data from the `C:\Skyline DataMiner\NATS` folder.
+
+- In the *MaintenanceSettings.xml* file, the following tags will now be considered obsolete:
+
+  - BrokerGateway
+  - NATSDisasterCheck
+  - NATSLogFileAmountToKeep
+  - NATSLogFileCleanupMs
+  - NATSResetWindow
+  - NATSRestartTimeout
 
 ### Fixes
 

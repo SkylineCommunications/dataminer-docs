@@ -52,8 +52,16 @@ In some cases, fetching the data to be displayed in an Alarm table component cou
 
 From now on, the table data will be fetched asynchronously using a WebSocket.
 
-#### Dashboards/Low-Code Apps - Table component: Current selection would not be re-applied immediately when the browser was refreshed [ID 44003]
+#### Dashboards/Low-Code Apps - Table component: Current selection would not immediately become visible when the browser was refreshed [ID 44003]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-After you had refreshed your browser, a Table component would incorrectly only re-apply the current selection when you hovered the mouse pointer over the dashboard or low-code app. From now on, when you refresh your browser, the current selection will be re-applied immediately.
+After you had refreshed your browser, a Table component would correctly re-apply the current selection, but that selection would incorrectly only become visible when you hovered the mouse pointer over the dashboard or low-code app. From now on, when you refresh your browser, the current selection will immediately be visible.
+
+#### DataMiner landing page: Problem when 'Show draft applications' option was enabled [ID 44027]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When, on the DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`), the *Show draft applications* option was enabled, up to now, you would always be directed to the draft version of an app (if a draft version existed), even when you did not have permission to edit the app. When you did not have edit permission, an HTTP 403 error would appear.
+
+From now on, when you do not have edit permission, the "Draft" label will be hidden, and you will be directed to the last published version of the app.
