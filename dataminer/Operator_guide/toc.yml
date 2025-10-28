@@ -236,7 +236,7 @@ items:
             topicUid: Behavioral_anomaly_detection
           - name: Proactive cap detection
             topicUid: Proactive_cap_detection
-          - name: Automatic incident tracking
+          - name: Automatic alarm grouping
             topicUid: Automatic_incident_tracking
             items:
             - name: Customizing alarm grouping rules
@@ -268,7 +268,7 @@ items:
               topicUid: Creating_Anomaly_Overview_Dashboard
             - name: Staying ahead of issues with proactive cap detection
               topicUid: Proactive_Cap_Detection_Tutorial
-            - name: Fine-tuning incident tracking
+            - name: Fine-tuning alarm grouping
               topicUid: Incident_Tracking_Configuration_Tutorial
       - name: Advanced alarm functionality
         items:

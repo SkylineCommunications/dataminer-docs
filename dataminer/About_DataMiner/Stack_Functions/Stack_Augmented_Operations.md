@@ -100,14 +100,14 @@ An anomaly significance scoring mechanism augments the change point detection so
 
 **Autonomous grouping of alarms linked to the same root cause.**
 
-The Automatic Incident Tracking feature autonomously learns about system behavior and leverages the rich context of alarms and relational information available in a DataMiner System to automatically correlate alarms belonging to a specific incident. No manual pre-analysis or time-consuming setup and configuration of correlation logic is required.
+The Automatic Alarm Grouping feature autonomously learns about system behavior and leverages the rich context of alarms and relational information available in a DataMiner System to automatically correlate alarms belonging to a specific incident. No manual pre-analysis or time-consuming setup and configuration of correlation logic is required.
 
 > [!TIP]
 > For more information:
 >
 > - Course: [Incident Tracking](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/incident-tracking/)
 > - Video: [Focus on the Root of Issues with Incident Analysis](https://www.youtube.com/watch?v=m6ITgtTFz1E) ![Video](~/dataminer/images/video_Duo.png)
-> - [Automatic Incident Tracking](xref:Automatic_incident_tracking)
+> - [Automatic Alarm Grouping](xref:Automatic_incident_tracking)
 
 ## Focus Alarms
 
