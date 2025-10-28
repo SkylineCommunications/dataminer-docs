@@ -624,6 +624,8 @@ items:
                 topicUid: Get_parameters_for_element_where
               - name: Get profile instances
                 topicUid: Get_profile_instances
+              - name: Get relational anomalies
+                topicUid: Get_relational_anomalies
               - name: Get resources
                 topicUid: Get_resources
               - name: Get services
