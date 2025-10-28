@@ -33,3 +33,8 @@ Please note the following:
 - From DataMiner 10.3.10/10.4.0 onwards<!-- RN 37007 -->, the GenericEnumFieldDescriptors options are listed in the same order as they are created, for optimal customizability of the form. In earlier DataMiner versions, they are ordered alphabetically.
 
 - From DataMiner 10.3.0 [CU12]/10.4.3 onwards<!-- RN 37546 -->, only the first 100 instances are initially loaded in a form. To find other instances, you can search for them. However, note that for `DomInstanceValue` fields, you can only search on the DOM instance name. Also, if a `DomInstanceValueFieldDescriptor` is used that refers to a field descriptor in a section definition that allows multiple values, only the first value that is found will be shown. If a DOM instance does not contain a value for such a field descriptor, only the DOM instance name will be shown.
+
+- From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43864-->, when a form is displayed in read-only mode, any HTML code in its content is displayed as code instead of being interpreted. For example, a value like `<b>Text</b>` will be displayed as "\<b\>Text\</b\>" instead of "**Text**".
+
+  > [!TIP]
+  > If you want HTML code to be rendered as formatted content, use a [grid component](xref:DashboardGrid) with a GQI query instead.
