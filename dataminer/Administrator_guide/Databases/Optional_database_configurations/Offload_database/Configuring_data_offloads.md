@@ -38,53 +38,61 @@ The offload rate for trend data and alarm data can be configured in System Cente
 
    This is the offload rate at which the data will actually be sent to the offload database. The default interval is 5 minutes.
 
-1. To configure alarm data offloads, in the *Offloads* section, select *Alarm data*. You can then fine-tune this configuration as follows:
+1. To configure **alarm data** offloads, in the *Offloads* section, select *Alarm data*. You can then fine-tune this configuration as follows:
 
    - If a particular table should not be included in the offloads, clear the selection from this table.
 
    - To customize the name of the table containing particular data in the offload database, specify a custom name next to *Remote table name*.
 
-1. To configure real-time trend data offloads, in the *Offloads* section, select *Trend data* > *Enable data offload*. You can then specify the following options:
+1. To configure **real-time trend data** offloads, in the *Offloads* section, select *Trend data* > *Enable data offload*. You can then specify the following options:
 
-   - The offload type: *All parameter values* or *All changed parameter values.*
+   - The **offload type**: *All parameter values* or *All changed parameter values.*
 
      > [!NOTE]
-     > When *All parameter values* is selected, data will still be offloaded even when the parameter value has not changed. However, real-time data is written to the database with the timestamp of the last change, so that there can be multiple consecutive entries with exactly the same timestamp in that case.
+     > When *All parameter values* is selected, data will still be offloaded even when the parameter value has not changed. However, real-time data is written to the database with the timestamp of the last change, so that there can be multiple consecutive entries with exactly the same timestamp in that case. For example, for the parameter change illustrated below, if *All parameter values* is selected, the offloaded data will be 1 record, of value 1. With *All changed parameter values*, the offloaded data will be all 20 values needed to draw the graph.
+     >
+     > ![Example trend graph](~/dataminer/images/Trending_offload_example.png)
 
-   - The interval at which these offloads are generated: A number of minutes between 1 and 1440 (i.e. 1 day), or instantly.
+   - The **interval** at which these offloads are generated: A number of minutes between 1 and 1440 (i.e. 1 day).
 
-   - The time when the offload to the database first begins, in the format hh:mm:ss. This setting is only implemented at startup, so if you change the setting while the DMA is running, it will need to be restarted for the change to take effect.
+   - The offload **start time**, i.e. the time when the offload to the database first begins, in the format hh:mm:ss. This setting is only implemented at startup, so if you change the setting while the DMA is running, the DMA will need to be restarted for the change to take effect.
 
-   - *Remote table name*: Allows you to customize the name of the table containing this data in the offload database. The default name is *Data*.
+   - **Remote table name**: Allows you to customize the name of the table containing this data in the offload database. The default name is *Data*.
 
-1. To configure average trend data offloads, select *Trend data* > *Enable dataavg offload.* You can then fine-tune this configuration as follows:
+1. To configure **average trend data** offloads, select *Trend data* > *Enable dataavg offload.* You can then fine-tune this configuration as follows:
 
    - Next to *Offload*, specify which average trended record should be offloaded.
 
-     The available time frame records depend on the trend window configuration. For a default configuration, the following options are available: *All time frame records* (default setting), *Only short time frame records (5 min)* and *Only long time frame records (60 min)*.
+     The available **time frame records** depend on the trend window configuration. For a default configuration, the following options are available: *All time frame records* (default setting), *Only short time frame records (5 min)* and *Only long time frame records (60 min)*.
 
      > [!NOTE]
      > For more information on the trend window configuration, see [MaintenanceSettings.Trending](xref:MaintenanceSettings.Trending).
 
-   - *Remote table name*: Allows you to customize the name of the table containing this data in the offload database. The default name is *DataAvg*.
+   - **Remote table name**: Allows you to customize the name of the table containing this data in the offload database. The default name is *DataAvg*.
 
-1. To offload snapshots (i.e. parameter information for parameters for which the snapshot option has been set in the protocol), select *Parameter value* and *Enable snapshot offload*. The snapshot offloads can then be further fine-tuned as follows:
+1. To offload **snapshots** (i.e. parameter information for parameters for which the snapshot option has been set in the protocol), select *Parameter value* and *Enable snapshot offload*. The snapshot offloads can then be further fine-tuned as follows:
 
    - Select to offload *All parameter values* or only *All changed parameter values*.
 
-   - Specify the offload rate (by default once every five minutes).
+   - Specify the offload **rate** (by default once every five minutes).
 
-   - Specify the offload start time, in the format hh:mm:ss.
+   - Specify the offload **start time**, in the format hh:mm:ss.
 
-   - To customize the name of the table containing the snapshot data in the offload database, specify a custom name next to *Remote table name*.
+   - To customize the name of the table containing the snapshot data in the offload database, specify a custom name next to **Remote table name**.
 
    - If all previous values should be removed from the database each time a new snapshot is offloaded, make sure the option *Only keep the latest parameter value in the database* is selected. If this option is not selected, all values will be kept.
 
-     > [!NOTE]
-     > This option corresponds with the `clean="true"` configuration in the *Offload* tag in *DB.xml*. If it is activated, DataMiner will truncate the data table in the offload database before new information is added. This way, the table always contains the latest snapshot information only.
+     This option corresponds with the `clean="true"` configuration in the *Offload* tag in *DB.xml*. If it is activated, DataMiner will truncate the data table in the offload database before new information is added. This way, the table always contains the latest snapshot information only.
 
    > [!TIP]
    > In an information template, you can configure specific parameters to be included in offload database snapshots. See [Creating an information template](xref:Creating_an_information_template).
+
+> [!NOTE]
+>
+> When real-time or average trending is offloaded:
+>
+> - If there are more than 10&nbsp;000 lines to write to an offload file, so that multiple offload files need to be generated per configured interval, these files will have a different name format from other offload files. While usually offload file names refer to a date and time, those files will instead refer to a specific time tick. This is necessary to prevent name conflicts when multiple files are generated per second. Aside from the different name format, these files are the same as other offload files.
+> - If less than 10&nbsp;000 lines are written to an offload file, there will usually be a delay of approximately 150 seconds before the offload file is generated. However, note that this does not affect the records within the file; these will reflect the configured offload interval. If the interval is small enough, this does mean that a file could contain changes for multiple intervals. If more than 10&nbsp;000 lines are written, offload files are written immediately.
 
 ## Disabling data offloads to the offload database on element level
 
