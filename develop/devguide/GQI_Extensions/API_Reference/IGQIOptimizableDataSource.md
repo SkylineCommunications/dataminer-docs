@@ -47,8 +47,43 @@ Called when an optimizable operator is appended directly to the ad hoc data sour
 #### Parameters
 
 - [IGQIDataSourceNode](xref:GQI_IGQIDataSourceNode) `currentNode`: A reference to the current node.
-
 - [IGQICoreOperator](xref:GQI_IGQICoreOperator) `nextOperator`: A reference to the next operator.
+
+#### Examples
+
+##### Append an operator (default behavior)
+
+By appending an operator to a query node, you tell the GQI framework to apply the operation after that node.
+
+To append an operator to a query node, you can call its `Append(IGQICoreOperator)` method. The following implementation has the same behavior as if the `IGQIOptimizableDataSource` interface was not implemented.
+
+```csharp
+public IGQIOperatorNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOperator)
+{
+    return currentNode.Append(nextOperator);
+}
+```
+
+##### Remove or replace an operator
+
+By *not* appending a given operator, the operation will no longer be applied by the GQI framework. The ad hoc data source then becomes solely responsable for ensuring that the result remains equivalent.
+
+This approach can be used to provide custom, more efficient implementations of operations like filtering and sorting.
+
+```csharp
+public IGQIOperatorNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOperator)
+{
+    // Custom logic to try and optimize for the next operator
+    if (TryOptimizeFor(nextOperator))
+    {
+        // Return our current node that is now also responsible for the operation
+        return currentNode;
+    }
+
+    // Fall back to the default behavior
+    return currentNode.Append(nextOperator);
+}
+```
 
 #### See also
 
