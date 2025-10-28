@@ -25,8 +25,13 @@ uid: General_Main_Release_10.5.0_CU10
 
 When a QAction triggered an information message with regard to a particular element, SLNet would incorrectly only forward that message to the DataMiner Agent that hosted that element. As a result, that information message would not appear in client applications connected to any of the other DataMiner Agents in the system.
 
-#### Failover: Problem when deleting an element with an empty name [ID 44005]
+#### Failover: 'C:\\Skyline DataMiner\\Elements' folder on offline Agents could unexpectedly be cleared [ID 44005]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-When, on the offline Agent of a failover system, an element with an empty name was deleted, up to now, the entire `C:\Skyline DataMiner\Elements\` folder would incorrectly be deleted. As a result, after a failover switch, the Agent that had now become the online Agent would not have any elements.
+In Failover clusters, in some rare cases where specific conditions related to DVE element handling and naming conflicts were met, the `C:\Skyline DataMiner\Elements` folder on offline Agents could unexpectedly be cleared, sometimes leaving no elements behind.
+
+To detect whether this has occurred:
+
+- Compare the number of elements on the online and offline Agents.
+- Check the offline Agent's Recycle Bin for entries named "Element   deleted", indicating a deletion occurred without a known element name.
