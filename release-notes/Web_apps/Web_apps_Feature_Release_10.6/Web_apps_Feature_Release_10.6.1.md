@@ -26,7 +26,11 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards/Low-Code Apps - Line & area chart component: Exporting trend data of aggregation parameters is now supported [ID 43939]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When a Line & area chart component was displaying trend data of aggregation parameters, up to now, it was not possible to export that trend data to a CSV file. Exporting that data is now supported.
 
 ### Fixes
 
