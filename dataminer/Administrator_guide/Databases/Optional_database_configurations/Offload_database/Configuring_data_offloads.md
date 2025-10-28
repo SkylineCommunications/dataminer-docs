@@ -91,7 +91,7 @@ The offload rate for trend data and alarm data can be configured in System Cente
 >
 > When real-time or average trending is offloaded:
 >
-> - If there are more than 10&nbsp;000 lines to write to an offload file, so that multiple offload files need to be generated per second, these files will have a different name format from other offload files. While usually offload file names refer to a date and time, those files will instead refer to a specific time tick. This is necessary to prevent name conflicts when multiple files are generated per second. Aside from the different name format, these files are the same as other offload files.
+> - If there are more than 10&nbsp;000 lines to write to an offload file, so that multiple offload files need to be generated per configured interval, these files will have a different name format from other offload files. While usually offload file names refer to a date and time, those files will instead refer to a specific time tick. This is necessary to prevent name conflicts when multiple files are generated per second. Aside from the different name format, these files are the same as other offload files.
 > - If less than 10&nbsp;000 lines are written to an offload file, there will usually be a delay of approximately 150 seconds before the offload file is generated. However, note that this does not affect the records within the file; these will reflect the configured offload interval. If the interval is small enough, this does mean that a file could contain changes for multiple intervals. If more than 10&nbsp;000 lines are written, offload files are written immediately.
 
 ## Disabling data offloads to the offload database on element level
