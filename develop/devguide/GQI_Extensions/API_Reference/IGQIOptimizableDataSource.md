@@ -16,6 +16,14 @@ Available from DataMiner 10.3.3/10.4.0 onwards<!-- RN 35389 -->.
 
 The *IGQIOptimizableDataSource* interface can be used to optimize an ad hoc data source based on operators added to a query.
 
+Common optimizations include:
+
+- Inspecting the properties of an operator to make data retrieval more efficient.
+- Removing or replacing an operator to implement the same operation more efficiently in the ad hoc data source.
+
+> [!WARNING]
+> Optimizing an operator should **never change the functional behavior of the query**. If an ad hoc data source removes or alters an operator, it is responsible for keeping the final result functionally equivalent.
+
 > [!TIP]
 > You can implement this interface to forward sort operations to an underlying database to improve performance.
 
