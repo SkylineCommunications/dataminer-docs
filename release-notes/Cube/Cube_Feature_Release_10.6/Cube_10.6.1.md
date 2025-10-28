@@ -26,7 +26,11 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### SPI log entries containing the duration of an SRM server call will now include either the number of objects or the requested object ID [ID 44014]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+From now on, SPI log entries containing the duration of an SRM server call will now include either the number of objects or the requested object ID.
 
 ### Fixes
 
