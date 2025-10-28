@@ -39,3 +39,4 @@ In the following example, only parameter 40 will be sent as ASCII:
 
 > [!NOTE]
 > Fixed parameters do not need conversion. If you have a fixed parameter (e.g. a 0x0D trailer), you should not convert that parameter unless you specify it as Unicode (0x000x0D).
+> Since RN43929, DataMiner version 10.6.1, specifying ascii="true" will only apply conversion to string-type parameters in the command. Fixed parameters with Interprete Value specified in 0x format are not converted. Numeric text - double parameters are not encoded as Unicode UTF-16 and hence are not converted with ascii="true". When a parameter ID is explicitly defined in the ascii attribute, the conversion will be executed regardless of the parameter type.
