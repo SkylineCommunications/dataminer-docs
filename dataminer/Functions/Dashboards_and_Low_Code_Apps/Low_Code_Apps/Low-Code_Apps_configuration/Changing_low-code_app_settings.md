@@ -4,7 +4,7 @@ uid: Changing_low-code_app_settings
 
 # Changing app settings
 
-The general settings of a low-code app include the [actions that get triggered when the app is opened](#having-an-event-triggered-when-the-app-is-opened), which are configured on application level, and the [general settings for pages and panels](#configuring-the-settings-for-a-page-of-panel), which need to be configured for each specific low-code app page or panel.
+The general settings of a low-code app include the [actions that get triggered when the app is opened](#having-an-event-triggered-when-the-app-is-opened), which are configured on application level, and the [general settings for pages and panels](#configuring-the-settings-for-a-page-or-panel), which need to be configured for each specific low-code app page or panel.
 
 > [!TIP]
 > For information on how to configure which users can access or edit an app, see [Configuring app security](xref:LowCodeApps_security_config).
@@ -34,7 +34,7 @@ Note that an "On app open" event currently has the following limitations:
 
 - Currently, linking is not supported. When a link is configured to a component value, the value will remain empty because the component is not yet loaded at the time when the action occurs. This also applies in case a value is passed through the URL.
 
-## Configuring the settings for a page of panel
+## Configuring the settings for a page or panel
 
 1. Make sure the low-code app is in edit mode. See [Editing an app](xref:Editing_custom_apps).
 
