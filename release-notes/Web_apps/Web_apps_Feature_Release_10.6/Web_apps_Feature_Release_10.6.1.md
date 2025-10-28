@@ -39,3 +39,11 @@ In DataMiner Cube, when a visual overview contains a clickable group of shapes t
 Up to now, a visual overview in a web app would behave differently. *Children* shapes would incorrectly be displayed on top of the clickable group, causing that group to not be clickable.
 
 From now on, a visual overview in a web app will behave in the same way as a visual overview in DataMiner Cube.
+
+#### Dashboards/Low-Code Apps - Alarm table component: Fetching alarm table data could time out [ID 43986]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+In some cases, fetching the data to be displayed in an Alarm table component could time out.
+
+From now on, the table data will be fetched asynchronously using a WebSocket.
