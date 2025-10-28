@@ -71,6 +71,9 @@ Note that an "On app open" event currently has the following limitations:
 
      - *Slow polling timer*: The polling interval (in s) for components that do not display real-time information.
 
+     > [!NOTE]
+     > Changes to these settings will only take effect after you refresh the dashboard or app.
+
 1. Click the pencil icon again to leave edit mode.
 
 1. To save your changes and publish it, click the ![Publish](~/dataminer/images/AppPublishIcon.png) icon in the header bar.
