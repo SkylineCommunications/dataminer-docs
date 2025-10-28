@@ -23,12 +23,13 @@ If you do install antivirus software on the **server**, you must:
   - The NATS processes *nats-account-server.exe* and *nats-streaming-server.exe*.
   - In case you are using self-managed storage instead of [Storage as a Service](xref:STaaS), the process(es) of the database application(s) you are using with DataMiner (e.g. Cassandra).
 
-  Below you can find a list of the main processes used by DataMiner and their paths. However, note that this list is not exhaustive, and other processes also may need to be excluded depending on your specific setup.
+  Below you can find a list of the main processes used by DataMiner and their paths. However, note that this list is not exhaustive, and other processes also may need to be excluded depending on your specific setup. Note also that, depending on your setup and DataMiner version, some of these may not be present in your system.
 
   | Name                                   | Path                                                                                                                                         |
   |----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
   | DataMiner APIGateway                   | C:\Program Files\Skyline Communications\DataMiner APIGateway\DataMiner APIGateway.exe                                                     |
   | DataMiner ArtifactDeployer            | C:\Program Files\Skyline Communications\DataMiner ArtifactDeployer\DataMiner ArtifactDeployer.exe                                         |
+  | DataMiner Assistant                   | C:\Program Files\Skyline Communications\DataMiner Assistant\DataMiner Assistant.exe                                                       |
   | DataMiner BrokerGateway               | C:\Program Files\Skyline Communications\DataMiner BrokerGateway\DataMiner BrokerGateway.exe                                               |
   | DataMiner CloudFeed                   | C:\Program Files\Skyline Communications\DataMiner CloudFeed\DataMiner CloudFeed.exe                                                       |
   | DataMiner CloudGateway                | C:\Program Files\Skyline Communications\DataMiner CloudGateway\DataMiner CloudGateway.exe                                                 |
