@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 28 October 2025 - New Feature - Community Edition Trial DaaS
+### 29 October 2025 - New Feature - Community Edition Trial DaaS
 
 Previously, users had to purchase credits to deploy a DaaS. This has changed, and now new organizations can deploy a Community Edition DaaS, valid for one week.
 
