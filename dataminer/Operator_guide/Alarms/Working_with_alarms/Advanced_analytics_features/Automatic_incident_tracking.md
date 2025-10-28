@@ -6,7 +6,7 @@ uid: Automatic_incident_tracking
 
 This DataMiner Analytics feature groups active alarms that are related, so that the Alarm Console provides a better overview of the current issues in the system. Unlike Correlation tracking, this can happen completely automatically, without any configuration by the user. DataMiner Analytics automatically detects which alarms share a common trait and groups them together.
 
-Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- 43903 -->, this feature is called incident tracking.
+Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- 43903 -->, this feature is called automatic incident tracking.
 
 The following factors, in order, are taken into account for the grouping:
 
