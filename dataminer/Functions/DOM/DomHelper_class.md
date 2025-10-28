@@ -226,11 +226,13 @@ From DataMiner 10.6.0 onwards<!-- RN 43852 -->, the `DomInstances` CRUD helper s
 The new overloads of `Read` and `PreparePaging` accept a `SelectedFields<DomInstance>` object. To select a field, add the exposer from `DomInstanceExposers` or add the `FieldDescriptorID` to the `SelectedFields<DomInstance>` object.
 
 > [!NOTE]
+> The `Id` is always available on a `PartialObject`; you do not need to add the `Id` exposer to `SelectedFields<DomInstance>`.
+>
 > Selecting the `FieldValues` or `FullObject` exposer is not supported and will result in a failed read operation.
 
 When used, these methods return a list of `PartialObject<DomInstance, DomInstanceId>`, which provides:
 
-- `ID`: the `DomInstance` ID. Note: the `Id` is always available on a `PartialObject`; you do not need to add the `Id` exposer to `SelectedFields<DomInstance>`.
+- `ID`: the `DomInstance` ID.
 - `GetValue` and `TryGetValue`: retrieve the value of a selected exposer or a single-value `FieldDescriptorID`.
 - `GetValues` and `TryGetValues`: retrieve a list of values for a selected `FieldDescriptorID` (for multi-valued fields or when multiple sections are allowed).
 
