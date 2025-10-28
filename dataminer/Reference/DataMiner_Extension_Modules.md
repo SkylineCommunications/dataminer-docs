@@ -123,7 +123,7 @@ The DataAPI module provides an HTTP interface that accepts requests with a JSON-
 
 In combination with the DataAggregator DxM, the DataAPI DxM is required for the [Data Sources](xref:Data_Sources) module.
 
-From DataMiner 10.5.11/10.6.0 onwards, DataMiner upgrade packages by default include the latest version of the DataAPI module.<!-- RN 43677 -->
+This DxM is included in DataMiner upgrade packages from DataMiner 10.5.11/10.6.0 onwards. However, the DxM will only be upgraded if an older version is found on the DMA. If no older version is found, it will not be installed.<!-- RN 43677 -->
 
 ### ModelHost
 
