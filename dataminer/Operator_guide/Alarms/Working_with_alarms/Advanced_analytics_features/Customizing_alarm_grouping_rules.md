@@ -4,9 +4,9 @@ uid: Customizing_alarm_grouping_rules
 
 # Customizing alarm grouping rules
 
-Automatic incident tracking strives to maximize the amount of information used for grouping alarms. By default, all [available source of information](xref:Automatic_incident_tracking) are taken into account for incident tracking. However, in some cases, it can be beneficial to tweak this configuration by disabling specific rules for grouping or defining custom ones.
+DataMiner Analytics strives to maximize the amount of information used for grouping alarms. By default, all [available source of information](xref:Automatic_incident_tracking) are taken into account for alarm grouping. However, in some cases, it can be beneficial to tweak this configuration by disabling specific rules for grouping or defining custom ones.
 
-You can do so by modifying the *configuration.xml* file, located in the `C:\Skyline DataMiner\analytics\` folder of the leader Agent. If you are using a DataMiner System that consists of multiple DMAs, it is important that you modify the file on the server hosting that leader Agent. To find out which DMA is the leader Agent, see [Automatic incident tracking configuration in System Center](xref:Automatic_incident_tracking#automatic-incident-tracking-configuration-in-system-center).
+You can do so by modifying the *configuration.xml* file, located in the `C:\Skyline DataMiner\analytics\` folder of the leader Agent. If you are using a DataMiner System that consists of multiple DMAs, it is important that you modify the file on the server hosting that leader Agent. To find out which DMA is the leader Agent, see [Automatic alarm grouping configuration in System Center](xref:Automatic_incident_tracking#automatic-alarm-grouping-configuration-in-system-center).
 
 Below you can find information about the [basic syntax](#basic-syntax), as well as detailed procedures for some of the rules. Customizing the other rules can be done in a very similar way to the described procedures.
 
@@ -48,12 +48,12 @@ Each property is identified by an XML block in the *configuration.xml* file. For
     </item>
   ```
 
-  In the example above, automatic incident tracking is configured to group alarms under the same view, but only if the proportion of elements in alarm among all elements under that view exceeds the configured threshold of 50%.
+  In the example above, alarms under the same view are configured to be grouped, but only if the proportion of elements in alarm among all elements under that view exceeds the configured threshold of 50%.
 
   Generally, a lower threshold results in quicker but less reliable alarm group triggering, while a higher threshold results in slower triggering with higher confidence.
 
 > [!TIP]
-> For an introduction to the different properties and how you can use them, see [Tutorial: Fine-tune incident tracking for your system](xref:Incident_Tracking_Configuration_Tutorial). Below you can also find some detailed procedures for specific properties.
+> For an introduction to the different properties and how you can use them, see [Tutorial: Fine-tune alarm grouping for your system](xref:Incident_Tracking_Configuration_Tutorial). Below you can also find some detailed procedures for specific properties.
 
 ## Enabling or disabling service-based alarm grouping
 
@@ -154,7 +154,7 @@ The following basic configuration is needed in Cube:
 
 In addition, the following configuration is needed in the *configuration.xml* file:
 
-- For each custom-defined alarm, element, view, or service property, add an \<item> tag within the \<Properties> tag of the Automatic Incident Tracking XML configuration group as shown below. Make sure the \<Name> tag is set to *GenericProperties*, as using any other name will result in a reading error.
+- For each custom-defined alarm, element, view, or service property, add an \<item> tag within the \<Properties> tag of the Automatic Alarm Grouping XML configuration group as shown below. Make sure the \<Name> tag is set to *GenericProperties*, as using any other name will result in a reading error.
 
   ```xml
   <item type="skyline::dataminer::analytics::workers::configuration::XMLConfigurationProperty&lt;class std::vector&lt;class std::shared_ptr&lt;class skyline::dataminer::analytics::workers::configuration:: IGenericPropertyVisitorConfiguration&gt;,class std::allocator&lt;class std::shared_ptr&lt;class skyline::dataminer::analytics::workers::configuration:: IGenericPropertyVisitorConfiguration&gt; &gt; &gt; &gt;">
@@ -213,7 +213,7 @@ After editing and saving the configuration file, **restart the SLAnalytics proce
 
 If you do not see the expected changes in grouping behavior after you have customized the *configuration.xml* file:
 
-- Check whether the edited file is located on the Agent specified in the configuration under *Leader DataMiner ID*. (See [Automatic incident tracking configuration in System Center](xref:Automatic_incident_tracking#automatic-incident-tracking-configuration-in-system-center).
+- Check whether the edited file is located on the Agent specified in the configuration under *Leader DataMiner ID*. (See [Automatic alarm grouping configuration in System Center](xref:Automatic_incident_tracking#automatic-alarm-grouping-configuration-in-system-center).
 
 - Check whether the SLAnalytics process was restarted on that Agent.
 

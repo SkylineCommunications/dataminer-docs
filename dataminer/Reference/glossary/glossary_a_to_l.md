@@ -22,7 +22,7 @@ uid: glossary_a_to_l
 | Alarm Console | Pane in DataMiner Cube that allows you to view and manage alarms and information events.<br>See [Working with the Alarm Console](xref:Working_with_the_Alarm_Console). |
 | Alarm focus | DataMiner functionality that analyzes the short-term history and current behavior of incoming alarms in order to indicate which alarms are unexpected.<br>See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus). |
 | Alarm hysteresis | Type of hysteresis where the moment when the severity of an alarm increases is delayed.<br>See [Alarm hysteresis](xref:Alarm_hysteresis). |
-| Alarm group | A group of alarms created by (Automatic) Incident Tracking.<br>See [Automatic Incident Tracking](xref:Automatic_incident_tracking). |
+| Alarm group | A group of alarms created by (Automatic) Alarm Grouping.<br>See [Automatic Alarm Grouping](xref:Automatic_incident_tracking). |
 | Alarm priority | Relative importance of an alarm type within the different DataMiner applications.<br>See [Alarm type priority](xref:Alarm_types#alarm-type-priority). |
 | Alarm storm | Situation where the system is flooded by a large number of alarms.<br>See [Alarm storm protection](xref:Alarm_storm_protection). |
 | Alarm tab | Tab in the Alarm Console in DataMiner Cube or the DataMiner Monitoring app. |

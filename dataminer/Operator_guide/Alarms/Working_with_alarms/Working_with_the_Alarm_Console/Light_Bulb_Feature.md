@@ -9,7 +9,7 @@ From DataMiner 10.3.10/10.4.0 onwards, you can leverage the Alarm Console's ligh
 The Alarm Console light bulb feature supports the following advanced analytics features:
 
 - Alarm focus
-- Automatic incident tracking
+- Automatic alarm grouping
 - Behavioral anomaly detection
 - Relational anomaly detection
 - Proactive cap detection

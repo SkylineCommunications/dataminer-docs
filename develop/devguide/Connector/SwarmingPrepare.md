@@ -108,7 +108,7 @@ When communicating with the server, make sure to always pass along the `TreeID`:
 | `new GenerateAlarmMessage(..., rootalarmid, ...)` | `new GenerateAlarmMessage(..., treeToUpdate, ...)` |
 | `new GetAlarmTreeDetailsMessage(dmaid, rootAlarmID)` | `new GetAlarmTreeDetailsMessage(AlarmTreeID)` |
 | `GetAlarmDetailsMessage` | Use `.Trees`. |
-| `new CorrelateNowRequest(...)` | Use the [incident tracking](xref:Automatic_incident_tracking) functionality instead. |
+| `new CorrelateNowRequest(...)` | Use the [alarm grouping](xref:Automatic_incident_tracking) functionality instead. |
 | `GetCorrelationBaseAlarmDetailsMessage` | Use `AlarmEventID` instead of `AlarmID`. |
 | `GetAlarmLinksMessage` | Do not use. |
 
