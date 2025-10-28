@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 29 October 2025 - New Feature - Community Edition Trial DaaS
 
-Previously, users had to purchase credits to deploy a DaaS. This has changed, and now new organizations can deploy a Community Edition DaaS, valid for one week.
+Previously, users had to purchase DataMiner credits to deploy a DaaS system. Now new organizations can deploy a Community Edition Trial DaaS system for free, which they can use for one week to test out DataMiner features. After a week, the system will be automatically decommissioned.
 
 ### 21 October 2025 - Fix - Sharing - Not possible to share a dashboard with a comma in its name
 
