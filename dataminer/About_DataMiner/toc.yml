@@ -11,7 +11,7 @@ items:
     topicUid: Overview_Platform_Open_Platform
   - name: References and use cases
     topicUid: Overview_References_and_use_cases
-  - name: Skyline and DataMiner security
+  - name: Security
     topicUid: Skyline_and_DataMiner_security
   - name: Compliance offering
     topicUid: DataMiner_compliance_offering
