@@ -15,7 +15,7 @@ namespace Skyline.DataMiner.Analytics.Rad
         public RADGroupInfo ParameterGroupInfo { get; set; }
 
         /// <summary>
-        /// The DataMiner ID of the agent hosting the parameter group. Available from DataMiner 10.5.11/10.6.0 onwards.
+        /// The DataMiner ID of the Agent hosting the parameter group. Available from DataMiner 10.5.11/10.6.0 onwards.
         /// </summary>
         public int DataMinerID { get; set; }
 
