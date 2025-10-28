@@ -32,6 +32,17 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 From now on, SPI log entries containing the duration of an SRM server call will now include either the number of objects or the requested object ID.
 
+#### System Center: Query executor and indexing engine settings will no longer be available when the DMS is using STaaS [ID 44018]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+When Cube is connected to a DataMiner System using STaaS:
+
+- In the *Tools* section of *System Center*, the query executor will no longer be available.
+- In the *Search & indexing* section of *System Center*, the indexing engine settings will no longer be available.
+
+Also, when an exception is thrown when Cube tries to use the MigrationManagerHelper, an error will now be logged in the Cube logging.
+
 ### Fixes
 
 *No fixes have been added yet.*

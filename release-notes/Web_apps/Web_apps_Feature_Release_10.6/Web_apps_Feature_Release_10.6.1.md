@@ -51,3 +51,9 @@ From now on, a visual overview in a web app will behave in the same way as a vis
 In some cases, fetching the data to be displayed in an Alarm table component could time out.
 
 From now on, the table data will be fetched asynchronously using a WebSocket.
+
+#### Dashboards/Low-Code Apps - Table component: Current selection would not be re-applied immediately when the browser was refreshed [ID 44003]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+After you had refreshed your browser, a Table component would incorrectly only re-apply the current selection when you hovered the mouse pointer over the dashboard or low-code app. From now on, when you refresh your browser, the current selection will be re-applied immediately.
