@@ -1,4 +1,10 @@
 items:
+  - name: v10.7
+    items:
+      - name: Main Release
+        items:
+          - name: DataMiner web apps Main Release 10.7.0 - Preview
+            topicUid: Web_apps_Main_Release_10.7.0
   - name: v10.6
     items:
       - name: Main Release

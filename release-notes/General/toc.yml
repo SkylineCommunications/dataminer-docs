@@ -1,4 +1,15 @@
 items:
+  - name: v10.7
+    items:
+      - name: Main Release
+        items:
+          - name: General Main Release 10.7.0 - Preview
+            topicUid: General_Main_Release_10.7.0
+            items:
+              - name: General Main Release 10.7.0 - New features
+                topicUid: General_Main_Release_10.7.0_new_features
+              - name: General Main Release 10.7.0 - Changes
+                topicUid: General_Main_Release_10.7.0_changes
   - name: v10.6
     items:
       - name: Main Release
