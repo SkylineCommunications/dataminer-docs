@@ -305,9 +305,9 @@ When an enhanced service was renamed while there was an alarm on multiple servic
 
 In certain text boxes, in some cases, it would not be possible to enter a zero character.
 
-#### Jobs app: Empty drop-down boxes when creating/editing job \[ID 27810\]
+#### Jobs app: Empty dropdown boxes when creating/editing job \[ID 27810\]
 
-When a job was created or edited in the Jobs app, it could occur that no items were displayed in drop-down boxes.
+When a job was created or edited in the Jobs app, it could occur that no items were displayed in dropdown boxes.
 
 #### DataMiner Cube - Alarm Console: Problem when performing actions in rapid succession \[ID 27814\]
 

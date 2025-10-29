@@ -559,7 +559,7 @@ When an alarm template was refreshed in the SLElement process, e.g. because the 
 
 #### Profiles module: Discrete capability parameter showed actual values instead of display values \[ID 30533\]
 
-In the Profiles module, if a capability parameter of type Discrete was configured in a profile instance, the drop-down box for this parameter showed the actual discrete values instead of the display values.
+In the Profiles module, if a capability parameter of type Discrete was configured in a profile instance, the dropdown box for this parameter showed the actual discrete values instead of the display values.
 
 #### Standalone Cassandra Backup Tool: Problem when using the clearsnapshot command without -name argument \[ID 30549\]
 

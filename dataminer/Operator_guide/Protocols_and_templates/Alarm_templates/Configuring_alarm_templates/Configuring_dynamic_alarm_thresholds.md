@@ -8,7 +8,7 @@ Instead of defining alarm thresholds as a fixed value, you can set them as a dyn
 
 ![Dynamic alarm thresholds](~/dataminer/images/Dynamic_Alarm_Thresholds.png)<br>*Alarm template in DataMiner 10.4.5*
 
-The different types of alarm thresholds can be selected in the drop-down list in the *Type* column:
+The different types of alarm thresholds can be selected in the dropdown list in the *Type* column:
 
 - **Normal**: The normal value and the different alarm thresholds are [fixed by the operator](xref:Configuring_normal_alarm_thresholds). This option is selected by default.
 
@@ -27,7 +27,7 @@ Both for "absolute" and "relative" alarm thresholds, the "normal" value has to b
 
 1. In the Baseline editor, you can choose either a fixed baseline, or a smart baseline:
 
-   - Set a fixed baseline value by entering this value in the table at the top of the editor. For discrete parameters, you will be able to select the value in a drop-down list.
+   - Set a fixed baseline value by entering this value in the table at the top of the editor. For discrete parameters, you will be able to select the value in a dropdown list.
 
      > [!NOTE]
      >

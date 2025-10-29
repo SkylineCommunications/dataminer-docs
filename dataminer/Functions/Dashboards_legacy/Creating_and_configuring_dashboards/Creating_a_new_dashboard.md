@@ -19,7 +19,7 @@ To create a new dashboard in the *Dashboards* app:
 
     - Next to *Description*, you can add a description with additional information about the dashboard.
 
-    - You can select a folder for the dashboard in the drop-down list on the right. To create a new folder, select *\<Create New>*.
+    - You can select a folder for the dashboard in the dropdown list on the right. To create a new folder, select *\<Create New>*.
 
     - Click the *...* button next to *Layout* to change the layout of the dashboard. Dashboard components can be displayed in one to five columns, as an embedded component, in a raster, or in a dynamic list. For more information on the dynamic list layout, see [Creating a dashboard with a dynamic list layout](xref:Creating_a_dashboard_with_a_dynamic_list_layout).
 

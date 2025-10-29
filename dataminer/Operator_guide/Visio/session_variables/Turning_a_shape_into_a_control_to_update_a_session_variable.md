@@ -40,7 +40,7 @@ Add a shape data field of type **SetVar** to the shape or the page, and set its 
   > [!NOTE]
   > To initialize multiple values, separate the entries by pipe characters.
 
-- If you want the user to be able to select the new value from a drop-down list with fixed values:
+- If you want the user to be able to select the new value from a dropdown list with fixed values:
 
   ```txt
   VariableName:NewValue1:NewValue2:...:NewValueX

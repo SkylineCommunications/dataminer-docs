@@ -14,7 +14,7 @@ You can fine-tune how the timeout is calculated using the SLNetClientTest tool:
 
 1. Go to *Advanced* > *Options* > *SLNet Options*.
 
-1. Depending on what you want to configure, select one of the following options in the drop-down box at the top of the window:
+1. Depending on what you want to configure, select one of the following options in the dropdown box at the top of the window:
 
    - *EPMAsyncTimeout*: The base value for a timeout when the CPE collector contacts another DataMiner Agent.
 

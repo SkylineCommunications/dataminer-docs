@@ -56,7 +56,7 @@ Do not use Exception tags to add exceptions to write parameters. To do so, use M
 - For discreet parameters, you need to set the state attribute of the Discreet.Display tag to “disabled” if you want to display a check box with the exception.
 
 > [!NOTE]
-> If you use Discreet tags to define multiple exceptions for a particular write parameter, those exceptions will be displayed in a drop-down box.
+> If you use Discreet tags to define multiple exceptions for a particular write parameter, those exceptions will be displayed in a dropdown box.
 
 ### Exception values with decimals
 

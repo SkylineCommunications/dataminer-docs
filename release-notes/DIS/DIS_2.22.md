@@ -23,7 +23,7 @@ Using this new function editor, you can
 - manage the functions defined in the function XML file you are editing, and
 - design function pages using simple drag-and-drop operations.
 
-When you click *Publish*, the function XML file you are currently editing will be published to the DMA that was set as default DMA in the *DMA* tab of the *DIS Settings* dialog box. To publish a function XML file to another, non-default DMA, click the drop-down button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
+When you click *Publish*, the function XML file you are currently editing will be published to the DMA that was set as default DMA in the *DMA* tab of the *DIS Settings* dialog box. To publish a function XML file to another, non-default DMA, click the dropdown button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
 
 ### XML Schema
 

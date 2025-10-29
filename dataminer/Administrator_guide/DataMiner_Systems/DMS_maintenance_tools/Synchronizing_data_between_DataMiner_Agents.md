@@ -21,7 +21,7 @@ To make a DMA synchronize its changes with other Agents in the cluster, you can 
 
 1. In the second column, select *Synchronization*.
 
-1. In the drop-down list next to *Type*, make sure *This DataMiner Agent* is selected.
+1. In the dropdown list next to *Type*, make sure *This DataMiner Agent* is selected.
 
 1. Click the *Sync now* button at the bottom of the card.
 
@@ -40,7 +40,7 @@ To synchronize all Agents in the cluster, you can manually execute the complete 
 
 1. In the second column, select *Synchronization*.
 
-1. In the drop-down list next to *Type*, select *This DMS*.
+1. In the dropdown list next to *Type*, select *This DMS*.
 
 1. Click the *Sync now* button at the bottom of the card.
 
@@ -56,7 +56,7 @@ When a file has been changed on a particular DMA, you can force the synchronizat
 
 1. In the second column, select *Synchronization*.
 
-1. In the drop-down list next to *Type*, select *File*.
+1. In the dropdown list next to *Type*, select *File*.
 
 1. In the *File* box enter the path of the file in question, e.g. `C:\Skyline DataMiner\Views.xml`.
 
@@ -74,7 +74,7 @@ To synchronize all Visio templates used in the cluster, you can execute a file s
 
 1. In the second column, select *Synchronization*.
 
-1. In the drop-down list next to *Type*, select *Visio*.
+1. In the dropdown list next to *Type*, select *Visio*.
 
 1. Click the *Sync now* button at the bottom of the card.
 

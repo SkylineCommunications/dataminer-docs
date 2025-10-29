@@ -40,7 +40,7 @@
 		/// </example>
 		TextBox = 2,
 		/// <summary>
-		/// Drop-down list.
+		/// Dropdown list.
 		/// </summary>
 		/// <example>
 		/// <code>

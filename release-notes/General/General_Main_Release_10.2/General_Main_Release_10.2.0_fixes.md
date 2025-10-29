@@ -154,7 +154,7 @@ When you started the DataMiner Cube desktop app with the “/Hostname=xyz” com
 
 #### Dashboards app: Feeds section of edit pane’s Data tab incorrectly listed feeds using the component names \[ID 28779\]
 
-When you added a feed component to a dashboard (e.g. a drop-down feed) and gave it a title, in the Feeds section of the edit pane’s Data tab, the feed would incorrectly have the name you gave to the component instead of the actual name of the feed.
+When you added a feed component to a dashboard (e.g. a dropdown feed) and gave it a title, in the Feeds section of the edit pane’s Data tab, the feed would incorrectly have the name you gave to the component instead of the actual name of the feed.
 
 #### DataMiner Cube: Desktop app could no longer be installed from the landing page \[ID 28802\]
 
@@ -461,7 +461,7 @@ When you opened a dashboard containing a parameter feed with a preset selection,
 
 #### Profiles module: Discrete capability parameter showed actual values instead of display values \[ID 30533\]
 
-In the Profiles module, if a capability parameter of type Discrete was configured in a profile instance, the drop-down box for this parameter showed the actual discrete values instead of the display values.
+In the Profiles module, if a capability parameter of type Discrete was configured in a profile instance, the dropdown box for this parameter showed the actual discrete values instead of the display values.
 
 #### Insufficient information in exception message in case of invalid characters in dictionary keys \[ID 30602\]
 

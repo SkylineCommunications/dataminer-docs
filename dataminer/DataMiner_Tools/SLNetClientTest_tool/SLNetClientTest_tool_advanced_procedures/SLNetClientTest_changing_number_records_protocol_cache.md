@@ -12,7 +12,7 @@ To change this setting:
 
 1. Go to *Advanced* > *Options* > *SLNet Options*.
 
-1. Select *protocolCacheMru* in the drop-down box at the top of the pop-up window.
+1. Select *protocolCacheMru* in the dropdown box at the top of the pop-up window.
 
 1. Right-click the current value and select *Edit Value*.
 

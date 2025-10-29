@@ -26,7 +26,7 @@ To edit the name of a job domain or change its "hidden" status:
 
 1. If you are not already on the configuration page, click the user icon in the top-right corner and select *Configuration*.
 
-1. In the drop-down box at the top, make sure the right job domain is selected.
+1. In the dropdown box at the top, make sure the right job domain is selected.
 
 1. Click *Edit* in the header bar.
 
@@ -38,7 +38,7 @@ To edit the name of a job domain or change its "hidden" status:
 
 1. If you are not already on the configuration page, click the user icon in the top-right corner and select *Configuration*.
 
-1. In the drop-down box at the top, make sure the right job domain is selected.
+1. In the dropdown box at the top, make sure the right job domain is selected.
 
 1. Click *Duplicate* in the header bar. This will open a menu where you can select one of the following options:
 
@@ -56,6 +56,6 @@ To edit the name of a job domain or change its "hidden" status:
 
 1. If you are not already on the configuration page, click the user icon in the top-right corner and select *Configuration*.
 
-1. In the drop-down box at the top, make sure the right job domain is selected.
+1. In the dropdown box at the top, make sure the right job domain is selected.
 
 1. Click *Delete* in the header bar and click *Yes* in the pop-up window to confirm the deletion.

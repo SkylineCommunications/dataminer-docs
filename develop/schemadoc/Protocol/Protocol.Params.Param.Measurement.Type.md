@@ -92,7 +92,7 @@ Can be used to map discrete parameter values to a more meaningful display text.
 
 In case of a parameter of type "read", this measurement type allows you to display a user-defined string when the parameter contains a certain value.
 
-In case of a parameter of type "write", this measurement type allows you to display a drop-down box with predefined strings masking underlying values. In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag has to be used to define the various discreet values.
+In case of a parameter of type "write", this measurement type allows you to display a dropdown box with predefined strings masking underlying values. In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag has to be used to define the various discreet values.
 
 For example:
 
@@ -115,7 +115,7 @@ For example:
 See also:
 
 - [Options for measurement type "discreet"](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-discreet)
-- [Drop-down list](xref:UIComponentsDropDownList)
+- [Dropdown list](xref:UIComponentsDropDownList)
 - [Protocol.Params.Param.Measurement.Discreets](xref:Protocol.Params.Param.Measurement.Discreets)
 
 ### matrix

@@ -69,9 +69,9 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
    1. Configure the edges as follows:
 
-      1. In the *Source* box, select the column from the query that represents the source of the connection. To the right of the drop-down list, click the icon representing the source node.
+      1. In the *Source* box, select the column from the query that represents the source of the connection. To the right of the dropdown list, click the icon representing the source node.
 
-      1. In the *Destination* box, select the column from the query that represents the destination of the connection. To the right of the drop-down list, click the icon representing the destination nodes.
+      1. In the *Destination* box, select the column from the query that represents the destination of the connection. To the right of the dropdown list, click the icon representing the destination nodes.
 
       1. Optionally, expand the *bidirectional configuration* section (available from DataMiner 10.1.11/10.2.0 onwards) to configure how multiple edges between two nodes should be mapped.
 

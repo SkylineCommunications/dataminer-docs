@@ -60,7 +60,7 @@ You can construct a query to use as data input for a component by following thes
 
 3. Specify a name for the query.
 
-4. In the drop-down box below this, select the data source you want to use. At present, the following options are available:
+4. In the dropdown box below this, select the data source you want to use. At present, the following options are available:
 
     - *Get elements*: The elements in the DataMiner System.
 
@@ -88,7 +88,7 @@ You can construct a query to use as data input for a component by following thes
 
     - *Filter*: Filters the dataset. When you select this option, select the column to filter, specify the filter method (e.g. equals, greater than, etc.) and the value to use as a filter. The available filter methods depend on the type of data in the selected column. Once the filter has been fully configured, you can refine the results by applying another operator, e.g. an additional filter.
 
-    - *Join*: Joins two tables together. When you select this option, in the *Type* drop-down box, you will first need to select how the tables should be joined. Then you will need to select another data source (optionally refined with one or more operators) in order to specify the table you want the first table to be joined with. Optionally, you can also specify a condition to determine when rows should be joined. For instance, if one table contains elements with a custom property that details a booking ID and the other lists bookings, you could add the condition that the property in the first table must match the ID in the second table.
+    - *Join*: Joins two tables together. When you select this option, in the *Type* dropdown box, you will first need to select how the tables should be joined. Then you will need to select another data source (optionally refined with one or more operators) in order to specify the table you want the first table to be joined with. Optionally, you can also specify a condition to determine when rows should be joined. For instance, if one table contains elements with a custom property that details a booking ID and the other lists bookings, you could add the condition that the property in the first table must match the ID in the second table.
 
         The *Inner* type of join only includes rows if they match the condition. *Left* displays all rows from the first table (i.e. the table on the left) and only the matching rows from the other table. *Right* does the opposite. *Outer* displays first the non-matching rows from the left table, then the matching rows from both tables, then the non-matching rows from the right table.
 
@@ -196,7 +196,7 @@ A new *Service definition* visualization is now available in the *Other* categ
 
 To support this new visualization, two new datasets are available:
 
-- A bookings dataset: This dataset can be filtered on a specific time range. It can be used as the data feed for a *Service definition* component or to add booking data to a *Drop-down*, *List* or *Tree* feed component. If the entire booking dataset is added, a time range feed should also be added as a filter. To specify a booking data feed in a URL, specify *bookings=bookingsID*
+- A bookings dataset: This dataset can be filtered on a specific time range. It can be used as the data feed for a *Service definition* component or to add booking data to a *Dropdown*, *List* or *Tree* feed component. If the entire booking dataset is added, a time range feed should also be added as a filter. To specify a booking data feed in a URL, specify *bookings=bookingsID*
 
 - A service definition dataset: This dataset can be used as the data feed for a *Service definition* component. Alternatively, in case a feed component is used to provide a booking feed to the *Service definition* component, it is possible to use a service definition filter feed on this feed component, so that a booking is only included in the feed if it is based on one the service definitions in the filter. To specify a service definition data feed in a URL, use the argument “service definitions”, and specify the service definition ID(s), for example: *service definitions=serviceDefinitionID1%2FserviceDefinitionID2*
 
@@ -386,7 +386,7 @@ When you create or update a dashboard, you can now add Spectrum Analyzer compone
 
 A Spectrum Analyzer component, linked to a Spectrum Analyzer element, will open a new session based on the last session that was closed by the user in DataMiner Cube.
 
-Also, in the DATA pane, you can select a spectrum preset and, for example, have it act as a filter. It is even possible to link a drop-down feed component to a Spectrum Analyzer component and use it to select the preset to be used in the latter.
+Also, in the DATA pane, you can select a spectrum preset and, for example, have it act as a filter. It is even possible to link a dropdown feed component to a Spectrum Analyzer component and use it to select the preset to be used in the latter.
 
 > [!NOTE]
 > Spectrum parameters dynamically added by spectrum monitors will automatically be available in the Dashboards app.
@@ -473,7 +473,7 @@ For this purpose, 2 new methods have been added to the web services API v1: *Get
 
 It is now possible to use spectrum buffers as input for a Spectrum Analyzer visualization. These are available in the new *Spectrum Buffers* section in the *Data* pane. To select a spectrum buffer, first specify the name of a spectrum element in the box at the top if this section. The buffers are then listed in the format *MonitorName: TraceName \[MeasptName\] \[PresetName\]*.
 
-You can link a Spectrum Analyzer visualization to spectrum buffer input directly, or use feed components (e.g. drop-down or list), by adding an individual spectrum buffer to a feed component or by adding the spectrum buffers as a collection and then adding a spectrum element as a filter.
+You can link a Spectrum Analyzer visualization to spectrum buffer input directly, or use feed components (e.g. dropdown or list), by adding an individual spectrum buffer to a feed component or by adding the spectrum buffers as a collection and then adding a spectrum element as a filter.
 
 #### Dashboards app: Line chart component now exposes timespan feed \[ID 27128\]
 

@@ -19,7 +19,7 @@ For SNMPv3 connections, you can specify the following connection settings while 
 
 - **Use credentials**: If predefined credentials have been made available for your user account, you can select this checkbox to select a set of predefined SNMP credentials. See also: [Managing predefined sets of credentials for SNMP authentication](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication).
 
-- **Security level and protocol**: Select one of the following three levels in the drop-down list:
+- **Security level and protocol**: Select one of the following three levels in the dropdown list:
 
   - *noAuthNoPriv*: No authentication and no privacy, which is essentially the same as SNMPv2.
 

@@ -57,7 +57,7 @@ To add C# code to a script:
 
 You can interact with the Automation Engine by interacting with an instance of the Engine class.
 
-When you type `engine.` in the code editor, you will be presented with a drop-down list of all statements available in the Automation Engine.
+When you type `engine.` in the code editor, you will be presented with a dropdown list of all statements available in the Automation Engine.
 
 By default, C# code used in an Automation script throws an exception when it encounters an undefined or an empty parameter. However, if you add the following line in an Automation script action of type *C# code*, null will be returned instead.
 

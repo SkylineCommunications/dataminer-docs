@@ -28,13 +28,13 @@ To configure the dialog box, select parts in the *Add part* box on the right, an
 
   1. Click the underlined section to select a destination variable.
 
-- To add a drop-down list:
+- To add a dropdown list:
 
   1. Choose *Drop-down*.
 
   1. Click the underlined section to select a destination variable.
 
-  1. Add the various options for the drop-down list with the *Add new option* button.
+  1. Add the various options for the dropdown list with the *Add new option* button.
 
 - To display a button:
 

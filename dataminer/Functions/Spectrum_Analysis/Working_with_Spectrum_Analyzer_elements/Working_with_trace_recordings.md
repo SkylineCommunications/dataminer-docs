@@ -42,7 +42,7 @@ To play back a recording:
 
 1. If you want to select a shared recording, in the pop-up window, select *Show shared recordings*.
 
-1. In the drop-down list next to *Name*, select the recording you want to play.
+1. In the dropdown list next to *Name*, select the recording you want to play.
 
 1. At the bottom of the pop-up window, indicate the way the recording should be played.
 

@@ -76,11 +76,11 @@ In order to define properties for all resources in a pool, and optionally limit 
 
 1. In the *device* subtab, configure the following fields as necessary. These fields can be optional, depending on your SRM configuration.
 
-   - *Function*: Links the resource to an existing virtual function. The drop-down list allows you to select virtual functions based on *functions.xml* files or virtual functions with a generated protocol.
+   - *Function*: Links the resource to an existing virtual function. The dropdown list allows you to select virtual functions based on *functions.xml* files or virtual functions with a generated protocol.
 
    - *Element* or *Link element*: Links the resource to an existing DataMiner element. If a link to an element has been configured already, you can clear the link by selecting *\<None>*.
 
-   - *Instance*: If a virtual function is selected in the *Function* field, here you can select one of the available entrypoint table instances. For example, if the linked element is a provisioning element, the instance can indicate which of its provisioned elements the resource should be linked to. In case the selected virtual function does not define an entrypoint table, the drop-down box will only show the option \<none>.
+   - *Instance*: If a virtual function is selected in the *Function* field, here you can select one of the available entrypoint table instances. For example, if the linked element is a provisioning element, the instance can indicate which of its provisioned elements the resource should be linked to. In case the selected virtual function does not define an entrypoint table, the dropdown box will only show the option \<none>.
 
    - *Function instance name*: Available from DataMiner 10.2.0 \[CU3]/10.2.6 onwards. Allows you to modify the name of the DVE linked to a function resource.
 

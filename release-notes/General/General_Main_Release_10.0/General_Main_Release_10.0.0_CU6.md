@@ -37,7 +37,7 @@ When, in the StandAloneBpaExecutor tool, you select a DLL file, it shows the BPA
 
 Performance has improved when a subscription is added on element level, specifically if the subscription contains elements with different protocols. This will for instance ensure that when multiple cards are opened to Visual Overview pages, parameters will be displayed more quickly.
 
-In addition, it is now possible to change the number of records that can be contained in the protocol cache. You can do so using the SLNetClientTest tool by going to *Options* > *SLNet Options*, selecting *protocolCacheMru* in the drop-down box, changing the value where necessary and clicking *OK*. However, do not change this value without checking with Skyline for advice first, as an incorrect setting can cause serious issues.
+In addition, it is now possible to change the number of records that can be contained in the protocol cache. You can do so using the SLNetClientTest tool by going to *Options* > *SLNet Options*, selecting *protocolCacheMru* in the dropdown box, changing the value where necessary and clicking *OK*. However, do not change this value without checking with Skyline for advice first, as an incorrect setting can cause serious issues.
 
 > [!WARNING]
 > The DataMiner SLNetClientTest tool is an advanced system administration tool that should be used with extreme care (`C:\Skyline DataMiner\Files\SLNetClientTest.exe`).

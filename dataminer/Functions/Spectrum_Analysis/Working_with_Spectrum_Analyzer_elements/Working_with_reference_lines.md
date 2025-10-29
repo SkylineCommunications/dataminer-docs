@@ -74,7 +74,7 @@ The following options are available for spectrum reference lines:
 
 - **Changing reference line colors**:
 
-  To change the color of reference lines or their labels, go to the *reference lines* tab in the ribbon and select a different color in the appropriate drop-down list.
+  To change the color of reference lines or their labels, go to the *reference lines* tab in the ribbon and select a different color in the appropriate dropdown list.
 
 - **Linking reference lines to measurement points:**
 

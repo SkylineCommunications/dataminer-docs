@@ -12,7 +12,7 @@ However, it is possible to change the maximum upload size via the SLNetClientTes
 
 1. In the *Advanced* menu, go to *Options* > *SLNet Options.*
 
-1. In the drop-down list next to *Option values for*, select *MaxUploadSize*.
+1. In the dropdown list next to *Option values for*, select *MaxUploadSize*.
 
 1. Right-click the indicated value for this setting, and select *Edit value*.
 

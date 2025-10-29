@@ -511,9 +511,9 @@ In DataMiner Cube, the term “CPE” (Customer Premises Equipment) has been rep
 
 #### Discreet parameters now supported in EPM search chains \[ID 25862\]
 
-When a filter in an EPM search chain refers to a column parameter of type discreet, the filter will be displayed as a drop-down box rather than a text box.
+When a filter in an EPM search chain refers to a column parameter of type discreet, the filter will be displayed as a dropdown box rather than a text box.
 
-If the filter is used for multiple tables, it will be displayed as a drop-down box as soon as one of the columns represents a discreet parameter.
+If the filter is used for multiple tables, it will be displayed as a dropdown box as soon as one of the columns represents a discreet parameter.
 
 When multiple columns have different discreet values, all these values will be displayed as long as they have a unique value and display string.
 

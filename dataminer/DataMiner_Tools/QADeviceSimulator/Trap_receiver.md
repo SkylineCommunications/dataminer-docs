@@ -11,6 +11,6 @@ You can access the trap sender functionality of the tool by selecting *Tools* >
 ![](~/develop/images/QADS_TrapAndInformMonitor.png)
 <br>Trap and Inform Monitor window
 
-To start the tool, select an IP in the drop-down box and enter a port. Then click the *Start* button.
+To start the tool, select an IP in the dropdown box and enter a port. Then click the *Start* button.
 
 To allow the tool to decrypt SNMPv3 traps or informs, go to *File* > *Configure SNMPv3 Security* in the menu bar. A window then opens where you can configure the necessary settings.

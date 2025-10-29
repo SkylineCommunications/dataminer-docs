@@ -18,7 +18,7 @@ To use this tool:
 
 1. Specify a user and password and click *Connect*.
 
-1. In the *Protocol* drop-down box, select the protocol and version.
+1. In the *Protocol* dropdown box, select the protocol and version.
 
 At this point, multiple features are available for the debugging of the selected protocol.
 

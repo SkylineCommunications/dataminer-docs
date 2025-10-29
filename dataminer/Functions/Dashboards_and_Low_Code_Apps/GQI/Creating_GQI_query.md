@@ -23,7 +23,7 @@ The "Queries" data item allows you to construct a query in order to tap into the
    > [!NOTE]
    > From DataMiner 10.2.0 [CU2]/10.2.5 onwards, a query must have a unique name. If you edit an existing query that has no name, you will need to specify a unique name for it. Prior to this, starting from DataMiner 10.1.0/10.1.1, a query name is optional but highly recommended.
 
-1. In the drop-down box below this, select the data source you want to use. For a detailed overview of all available data sources, see [Query data sources](xref:Query_data_sources).
+1. In the dropdown box below this, select the data source you want to use. For a detailed overview of all available data sources, see [Query data sources](xref:Query_data_sources).
 
    > [!IMPORTANT]
    > It is also possible to configure an ad hoc data source in a query. For more information, see [Ad hoc data sources](xref:GQI_Ad_hoc_data_sources).

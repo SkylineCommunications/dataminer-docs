@@ -18,7 +18,7 @@ Under *Total violation*, you can specify how long the SLA may be violated during
 
 To set a relative limit:
 
-1. Set *Maximum Total Violations Type* to Relative, using the drop-down list.
+1. Set *Maximum Total Violations Type* to Relative, using the dropdown list.
 
 1. Enter the desired percentage under *Maximum Total Violations Percentage*.
 
@@ -28,7 +28,7 @@ To set a relative limit:
 
 To set an absolute limit:
 
-1. Set *Maximum Total Violations Type* to Absolute, using the drop-down list.
+1. Set *Maximum Total Violations Type* to Absolute, using the dropdown list.
 
 1. Enter a unit and value under *Maximum Total Violations Unit* and *Maximum Total Violations Value* respectively.
 
@@ -51,7 +51,7 @@ Under *Single violation*, you can specify how long one single violation may last
 
 To set a relative limit:
 
-1. Set *Maximum Single Violation Type* to *Relative*, using the drop-down list.
+1. Set *Maximum Single Violation Type* to *Relative*, using the dropdown list.
 
 1. Enter the desired percentage under *Maximum Single Violation Percentage*.
 
@@ -61,7 +61,7 @@ To set a relative limit:
 
 To set an absolute limit:
 
-1. Set *Maximum Single Violation Type* to *Absolute*, using the drop-down list.
+1. Set *Maximum Single Violation Type* to *Absolute*, using the dropdown list.
 
 1. Enter a unit and value under *Maximum Single Violation Unit* and *Maximum Single Violation Value* respectively.
 

@@ -13,9 +13,9 @@ uid: EPM_6.1.4_D-DOCSIS
 
 Monitoring of the fan trays and power supply modules has been added to the CCAP visual. The number of power supply modules on the visual will match the number of installed power supplies in that CCAP.
 
-#### 'All' filter option added to table drop-down filters [ID 33739]
+#### 'All' filter option added to table dropdown filters [ID 33739]
 
-An *All* filter option has been added to all table drop-down filters, so that users can clear specific filters without using the *Clear* button, which clears all active filters.
+An *All* filter option has been added to all table dropdown filters, so that users can clear specific filters without using the *Clear* button, which clears all active filters.
 
 #### COX CBR-8 Platform D-DOCSIS: Linecard Redundancy Status added [ID 36072]
 
