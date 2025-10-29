@@ -11,16 +11,7 @@ uid: General_Main_Release_10.7.0_changes
 
 ### Enhancements
 
-#### DataMiner installer has been updated [ID 43592]
-
-<!-- MR 10.7.0 - FR 10.6.1 -->
-
-The DataMiner installer has been updated.
-
-When the installation is complete, you will have the option to open the *Configuration* tool and configure your system.
-
-> [!TIP]
-> For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
+*No enhancements have been added yet.*
 
 ### Fixes
 
