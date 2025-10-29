@@ -65,3 +65,11 @@ After you had refreshed your browser, a Table component would correctly re-apply
 When, on the DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`), the *Show draft applications* option was enabled, up to now, you would always be directed to the draft version of an app (if a draft version existed), even when you did not have permission to edit the app. When you did not have edit permission, an HTTP 403 error would appear.
 
 From now on, when you do not have edit permission, the "Draft" label will be hidden, and you will be directed to the last published version of the app.
+
+#### Dashboards/Low-Code Apps - Form component: Error messages would unexpectedly disappear [ID 44029]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, when an error message appeared in a Form component, that message would unexpectedly disappear.
+
+From now on, when an error message appears, it will stay visible until an action is performed in the Form component or until a button is clicked.
