@@ -55,6 +55,12 @@ DataMiner Systems will now use the BrokerGateway-managed NATS solution by defaul
   - NATSResetWindow
   - NATSRestartTimeout
 
+#### DataMiner upgrade: Prerequisite check 'VerifyBrokerGatewayMigration' will verify whether all DMS in the cluster are using the BrokerGateway-managed NATS solution [ID 43861]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+During a DataMiner upgrade, the *VerifyBrokerGatewayMigration* prerequisite check will verify whether all DataMiner Agents in the cluster are using the BrokerGateway-managed NATS solution. If not, the check will fail, and the upgrade will not be able to continue.
+
 ### Fixes
 
 #### SLNet: Information messages triggered in a QAction would incorrectly only be forwarded to the DMA hosting the element in question [ID 43958]

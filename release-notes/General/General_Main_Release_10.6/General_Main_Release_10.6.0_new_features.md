@@ -1172,11 +1172,12 @@ The SLNetClientTest tool has been updated to support the limitation of not being
 
 When definition-level security is enabled, you will now need to first select one or more DOM definitions from a filter menu. This menu is accessible for any DOM manager, so it can also be used to retrieve DOM instances more easily for a specified list of DOM definitions.
 
-#### DataMiner upgrade: New prerequisite check 'VerifyBrokerGatewayMigration' [ID 43526]
+#### DataMiner upgrade: Prerequisite check 'VerifyBrokerGatewayMigration' will verify whether all DMS in the cluster are using the BrokerGateway-managed NATS solution [ID 43526] [ID 43861]
 
-<!-- MR 10.6.0 - FR 10.5.10 -->
+<!-- RN 43526: MR 10.6.0 - FR 10.5.10 -->
+<!-- RN 43861: MR 10.6.0 - FR 10.6.1 -->
 
-A new *VerifyBrokerGatewayMigration* prerequisite check has been added to prepare for the upcoming mandatory migration to BrokerGateway. However, this check is not yet relevant for users outside of Skyline Communications.
+During a DataMiner upgrade, the *VerifyBrokerGatewayMigration* prerequisite check will verify whether all DataMiner Agents in the cluster are using the BrokerGateway-managed NATS solution. If not, the check will fail, and the upgrade will not be able to continue.
 
 #### SLNetClientTest tool: Filtering messages using regular expressions [ID 43540]
 

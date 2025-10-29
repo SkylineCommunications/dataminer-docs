@@ -113,7 +113,7 @@ For detailed information about the changes included in those versions, refer to 
 
 #### QActions: Variables will now also be logged when a NotifyProtocol call fails [ID 43967]
 
-<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 When SLScripting executes a NotifyProtocol call, this can potentially lead to issues in SLProtocol when the variables are not in the correct format. Entries like `NotifyProtocol with xxx failed. 0x800xxxxx` can then appear in the error logging.
 
