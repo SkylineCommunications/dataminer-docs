@@ -22,6 +22,8 @@ uid: MediaOps_1.4.2
 
 ### Fixes
 
-#### Linked resource pools could cause confirmed jobs with missing resources [ID 44030]
+#### Adding a resource with linked resource pool to a confirmed or running job could cause an empty node [ID 44030]
 
-When a resource pool with a linked resource pool was added to a confirmed or running job, and that linked resource pool used manual resource selection or did not have any available resources, the job could end up with nodes for which no resource was selected. Now a resource will be selected, and a pop-up message will inform the user of any pools that have not been added.
+When a resource was added to a confirmed or running job, and that resource was part of a resource pool that had a linked resource pool using manual resource selection or without available resources, it could occur that this resource was not added as expected. This could lead to a confirmed or running job with an empty node.
+
+To prevent this issue, when a resource is added to a confirmed or running job, any linked pools will now no longer be added. A pop-up message will inform the user of which pools were not added.
