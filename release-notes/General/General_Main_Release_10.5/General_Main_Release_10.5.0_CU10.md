@@ -15,7 +15,11 @@ uid: General_Main_Release_10.5.0_CU10
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
 
 ### Fixes
 

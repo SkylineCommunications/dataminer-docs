@@ -543,6 +543,12 @@ Because of a number of enhancements, overall performance has increased
 - when writing data to the database, and
 - when reading reservation instances, especially on high-load systems.
 
+#### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
+
 #### Time-scoped relation learning: Exceptions will now be thrown when sending a GetTimeScopedRelationsMessage with incorrect arguments [ID 43963]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->

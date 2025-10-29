@@ -65,6 +65,12 @@ DataMiner Systems will now use the BrokerGateway-managed NATS solution by defaul
 
 During a DataMiner upgrade, the *VerifyBrokerGatewayMigration* prerequisite check will verify whether all DataMiner Agents in the cluster are using the BrokerGateway-managed NATS solution. If not, the check will fail, and the upgrade will not be able to continue.
 
+#### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
+
 ### Fixes
 
 #### SLNet: Information messages triggered in a QAction would incorrectly only be forwarded to the DMA hosting the element in question [ID 43958]
