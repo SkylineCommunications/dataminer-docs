@@ -32,7 +32,7 @@ Skyline's DataMiner SaaS platform is composed of:
 
 DataMiner nodes (DaaS — DataMiner as a Service) are not multitenant because DaaS uses isolated compute nodes independent from other users. This offers some advantages related to increased security and isolation for access to your managed objects.
 
-Storage nodes (STaaS - Storage as a Service), on the other hands, are multitenant, with data for each specific DataMiner System being isolated in a logical partition. You can only ever access the logical partition dedicated to your own DataMiner System, and all partitions are strictly isolated from each other.
+Storage nodes (STaaS - Storage as a Service), on the other hand, are multitenant, with data for each specific DataMiner System being isolated in a logical partition. You can only ever access the logical partition dedicated to your own DataMiner System, and all partitions are strictly isolated from each other.
 
 ### Can different commercial models exist in the same organization?
 
@@ -68,3 +68,25 @@ No.
 ### Can I order specific product codes instead of credits?
 
 Yes. You can always request a quote from the Skyline Sales Team.
+
+## DataMiner credits
+
+### What are DataMiner credits?
+
+DataMiner credits are a form of currency used to subscribe to DataMiner software and hosting services. They are typically used for usage-based offerings such as DaaS (DataMiner as a Service) or STaaS (Storage as a Service).
+
+> [!TIP]
+> For definitions of related terms such as "DataMiner credits," see [Usage terms](xref:Pricing_Usage_based_service#usage-terms).
+
+### Where can I check the current DataMiner credit balance of my organization?
+
+You can view the current DataMiner credit balance for your organization in the [Admin app](https://admin.dataminer.services/).
+
+### How can I acquire more DataMiner credits?
+
+You can order additional DataMiner credits through the Azure Marketplace.  
+See [Order DataMiner credits](xref:Order_DataMiner_credits).
+
+For further assistance, contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
+
+---
