@@ -32,6 +32,12 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 When a Line & area chart component was displaying trend data of aggregation parameters, up to now, it was not possible to export that trend data to a CSV file. Exporting that data is now supported.
 
+#### Dashboards app: Enhanced error handling when generating PDF reports [ID 44019]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Because of a number of enhancements, error handling has improved when generating PDF reports.
+
 ### Fixes
 
 #### Visual Overview in web apps: Children shapes would incorrectly be displayed on top of a clickable group of shapes [ID 43465]
