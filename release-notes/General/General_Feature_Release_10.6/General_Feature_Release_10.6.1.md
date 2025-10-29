@@ -34,7 +34,7 @@ uid: General_Feature_Release_10.6.1
 
 ### Enhancements
 
-#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856]
+#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43890]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
@@ -54,6 +54,10 @@ DataMiner Systems will now use the BrokerGateway-managed NATS solution by defaul
   - NATSLogFileCleanupMs
   - NATSResetWindow
   - NATSRestartTimeout
+
+- From now on, when an attempt is made to communicate using the legacy SLNet-managed NATS solution, the following exception will be thrown and logged:
+
+  `Unable to find file. SLCloud configured messageBrokers are unsupported as of DataMiner 10.6.0.`
 
 #### DataMiner upgrade: Prerequisite check 'VerifyBrokerGatewayMigration' will verify whether all DMS in the cluster are using the BrokerGateway-managed NATS solution [ID 43861]
 
