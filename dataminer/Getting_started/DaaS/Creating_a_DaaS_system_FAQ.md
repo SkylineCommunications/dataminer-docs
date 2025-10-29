@@ -5,26 +5,9 @@ keywords: cloud faq
 
 # Frequently asked questions related to DaaS
 
-### What are DataMiner credits?
+### Where can I find information about DataMiner credits?
 
-DataMiner credits are a form of currency used to subscribe to DataMiner software and hosting services.
-
-<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
-  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
-    <b>💡 TIPS TO TAKE FLIGHT</b><br>Unfamiliar with terms like "DataMiner credits"? Take a look at our list of <a href="xref:Pricing_Usage_based_service#usage-terms" style="color: #657AB7;">usage terms</a>.
-  </div>
-  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
-</div>
-
-### Where can I check the current DataMiner credit balance of my organization?
-
-The DataMiner credit balance of an organization is displayed in the [Admin app](https://admin.dataminer.services/).
-
-### How can I acquire more DataMiner credits?
-
-You can order DataMiner credits through the Azure Marketplace. See [Order DataMiner credits](xref:Order_DataMiner_credits).
-
-For more information, contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
+For details about what DataMiner credits are, how they are used, and how to acquire more, see the [Pricing FAQ](xref:Pricing_Usage_based_service).
 
 ### When does maintenance take place on a DaaS system?
 
@@ -32,10 +15,10 @@ See [DaaS Planned Maintenance Policy](xref:DaaS_Planned_Maintenance_Policy).
 
 ### When does a DaaS system expire?
 
-A DataMiner Community Edition DaaS system will be scheduled to expire as soon as the organization does not have sufficient DataMiner credits to extend its lifetime.
+A DaaS system is assigned an expiration date when it is created. Once this date is reached, the system will automatically expire unless it is renewed beforehand.
 
 > [!NOTE]
-> When an organization has multiple DaaS systems, they will be extended in chronological order. When your organization does not have enough credits left to extend one of your DaaS systems, that DaaS system will be scheduled to expire. However, at this point, you may still have a number of DataMiner credits left that will be considered reserved for your other DaaS systems.
+> The automatic weekly renewal mechanism has been removed. DaaS systems no longer deduct DataMiner credits over time. You will receive an email notification before your system’s expiration date, including a link to this FAQ for more information.
 
 ### What happens when my DaaS system expires or is deleted?
 
@@ -47,7 +30,7 @@ When your DaaS system expires or is deleted, the system and all associated resou
 To recover the system, contact [daas@dataminer.services](mailto:daas@dataminer.services). The cloud identity and shares will be lost, and the system will receive a new cloud identity within your organization upon recovery.
 
 > [!NOTE]
-> If you are an owner of the organization of a DaaS system or an owner of a DaaS system, you will get an email notification if your system is about to expire, for example because you do not have enough DataMiner credits left. Depending on how many DataMiner credits you use for other purposes, you will get this notification up to 5 days before the system expires. Another email notification will be sent when the system effectively expires.
+> If you are an owner of the organization of a DaaS system or an owner of a DaaS system, you will get an email notification if your system is about to expire. Another email notification will be sent when the system effectively expires.
 
 ### How can I manually delete my DaaS system?
 
@@ -86,7 +69,7 @@ As of Q4 of 2024, DaaS systems can use [Swarming](xref:Swarming). Starting from 
 
 ### Where are DaaS backups stored?
 
-Backups are stored in zone-redundant storage (ZRS) managed by Azure backup, in the same region as the DaaS system.
+Backups are stored in zone-redundant storage (ZRS) managed by Azure Backup, in the same region as the DaaS system.
 
 ### Is it possible to make a local backup of all data?
 
@@ -116,7 +99,7 @@ Additional query costs may be due when using e.g. Azure ExpressRoute or Amazon C
 
 ### How are user accounts managed? Where are the passwords stored?
 
-User management on DaaS systems is similar to that on on-premises system. Although local accounts are available by default, user accounts are typically integrated by an identity provider.
+User management on DaaS systems is similar to that on on-premises systems. Although local accounts are available by default, user accounts are typically integrated by an identity provider.
 
 See also: [User management](xref:User_management).
 
