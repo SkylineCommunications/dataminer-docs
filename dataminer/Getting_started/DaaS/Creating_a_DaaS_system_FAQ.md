@@ -7,7 +7,7 @@ keywords: cloud faq
 
 ### Where can I find information about DataMiner credits?
 
-For details about what DataMiner credits are, how they are used, and how to acquire more, see the [Pricing FAQ](xref:Pricing_Usage_based_service).
+For details about what DataMiner credits are, how they are used, and how to acquire more, see the [Pricing FAQ](xref:FAQs_Pricing).
 
 ### When does maintenance take place on a DaaS system?
 
@@ -15,10 +15,10 @@ See [DaaS Planned Maintenance Policy](xref:DaaS_Planned_Maintenance_Policy).
 
 ### When does a DaaS system expire?
 
-A DaaS system is assigned an expiration date when it is created. Once this date is reached, the system will automatically expire unless it is renewed beforehand.
+A DaaS system is assigned an expiration date when it is created. By default, DataMiner Community Edition DaaS Trials will expire after one week. Once this date is reached, the system will automatically expire unless it is renewed beforehand. 
 
 > [!NOTE]
-> The automatic weekly renewal mechanism has been removed. DaaS systems no longer deduct DataMiner credits over time. You will receive an email notification before your system’s expiration date, including a link to this FAQ for more information.
+> You will receive an email notification before your system’s expiration date, including a link to this FAQ for more information.
 
 ### What happens when my DaaS system expires or is deleted?
 
@@ -69,7 +69,7 @@ As of Q4 of 2024, DaaS systems can use [Swarming](xref:Swarming). Starting from 
 
 ### Where are DaaS backups stored?
 
-Backups are stored in zone-redundant storage (ZRS) managed by Azure Backup, in the same region as the DaaS system.
+Backups are stored in zone-redundant storage (ZRS) managed by Azure backup, in the same region as the DaaS system.
 
 ### Is it possible to make a local backup of all data?
 
