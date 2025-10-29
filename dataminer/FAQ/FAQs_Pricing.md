@@ -73,20 +73,23 @@ Yes. You can always request a quote from the Skyline Sales Team.
 
 ### What are DataMiner credits?
 
-DataMiner credits are a form of currency used to subscribe to DataMiner software and hosting services. They are typically used for usage-based offerings such as DaaS (DataMiner as a Service) or STaaS (Storage as a Service).
+DataMiner credits are a form of currency used to subscribe to DataMiner software and hosting services.
 
-> [!TIP]
-> For definitions of related terms such as "DataMiner credits," see [Usage terms](xref:Pricing_Usage_based_service#usage-terms).
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>Unfamiliar with terms like "DataMiner credits"? Take a look at our list of <a href="xref:Pricing_Usage_based_service#usage-terms" style="color: #657AB7;">usage terms</a>.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
 
 ### Where can I check the current DataMiner credit balance of my organization?
 
-You can view the current DataMiner credit balance for your organization in the [Admin app](https://admin.dataminer.services/).
+The DataMiner credit balance of an organization is displayed in the [Admin app](https://admin.dataminer.services/).
 
 ### How can I acquire more DataMiner credits?
 
-You can order additional DataMiner credits through the Azure Marketplace.  
-See [Order DataMiner credits](xref:Order_DataMiner_credits).
+You can order DataMiner credits through the Azure Marketplace. See [Order DataMiner credits](xref:Order_DataMiner_credits).
 
-For further assistance, contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
+For more information, contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
 
 ---
