@@ -19,7 +19,7 @@ Some common use cases include:
 - Combining multiple operators into a single, more efficient operation.
 - Forwarding certain operators to improve performance.
 
-> [!WARNING]
+> [!IMPORTANT]
 > Optimizing an operator should **never change the functional behavior of the query**. If a custom operator removes or alters an operator, it is responsible for keeping the final result functionally equivalent.
 
 ## Methods

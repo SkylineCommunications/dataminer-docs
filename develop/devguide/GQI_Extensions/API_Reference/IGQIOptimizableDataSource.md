@@ -21,7 +21,7 @@ Common optimizations include:
 - Inspecting the properties of an operator to make data retrieval more efficient.
 - Removing or replacing an operator to implement the same operation more efficiently in the ad hoc data source.
 
-> [!WARNING]
+> [!IMPORTANT]
 > Optimizing an operator should **never change the functional behavior of the query**. If an ad hoc data source removes or alters an operator, it is responsible for keeping the final result functionally equivalent.
 
 > [!TIP]
@@ -51,7 +51,7 @@ Called when an optimizable operator is appended directly to the ad hoc data sour
 
 #### Examples
 
-##### Append an operator (default behavior)
+##### Appending an operator (default behavior)
 
 By appending an operator to a query node, you tell the GQI framework to apply the operation after that node.
 
@@ -64,9 +64,9 @@ public IGQIOperatorNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperato
 }
 ```
 
-##### Remove or replace an operator
+##### Removing or replacing an operator
 
-By *not* appending a given operator, the operation will no longer be applied by the GQI framework. The ad hoc data source then becomes solely responsable for ensuring that the result remains equivalent.
+By **not** appending a given operator, you cause the operation to no longer be applied by the GQI framework. The ad hoc data source then becomes solely responsible for ensuring that the result remains equivalent.
 
 This approach can be used to provide custom, more efficient implementations of operations like filtering and sorting.
 
