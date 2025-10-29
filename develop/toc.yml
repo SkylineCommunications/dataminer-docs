@@ -603,7 +603,7 @@ items:
           topicUid: AdvancedDataMinerMediationLayerLinkingTableParameters
         - name: Data pages
           topicUid: AdvancedDataMinerMediationLayerDataPages
-      - name: Code Pages
+      - name: Code pages
         topicUid: AdvancedCodePages
     - name: Connector documentation
       topicUid: Connector_help_pages
