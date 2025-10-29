@@ -36,6 +36,8 @@ To enable Failover using DataMiner version **10.1.8 or higher**:
    1. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](xref:Advanced_Failover_options).
 
    1. Click *Apply* or *OK* to save the configuration (depending on your DataMiner version).
+  
+   1. If you're running DataMiner 1.6.0 or higher, run NATSRepair to update your NATS credentials with the virtual IP. See [BrokerGateway Migration](xref:BrokerGateway_Migration).  
 
       Once you have completed the configuration, the IP addresses will be changed. Because of this, it could take a while before you can reconnect to the system.
 
@@ -53,6 +55,8 @@ To enable Failover using DataMiner version **10.1.8 or higher**:
    1. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](xref:Advanced_Failover_options).
 
    1. Click *Apply* or *OK* to save the configuration (depending on your DataMiner version).
+      
+   1. If you're running DataMiner 1.6.0 or higher, run NATSRepair to update your NATS credentials with the new hostname. See [BrokerGateway Migration](xref:BrokerGateway_Migration).
 
    > [!IMPORTANT]
    > Always configure Failover with a shared hostname for DataMiner Systems that already contain a Failover pair configured with a shared hostname or that contain a DataMiner Agent that was added by hostname.
