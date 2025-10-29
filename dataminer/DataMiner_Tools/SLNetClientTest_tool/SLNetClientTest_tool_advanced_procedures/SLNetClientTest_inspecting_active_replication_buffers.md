@@ -24,7 +24,7 @@ To drop one specific replication buffer:
 
 1. Go to the *Build Message* tab of the main window.
 
-1. In the *Message Type* drop-down list, select *DiagnoseMessage*.
+1. In the *Message Type* dropdown list, select *DiagnoseMessage*.
 
 1. In the *ExtraInfo* field, specify "drop:\[bufferkey\]", where \[bufferkey\] is the key of the replication buffer you want to drop. Replication buffer keys are listed in the replication buffer stats (e.g. "hostname/ipaddress/dmaid/eid")
 
@@ -55,7 +55,7 @@ When a replication buffer saves files to disk, those files are located in `C:\Sk
 
     1. Go to the *Build Message* tab of the main window.
 
-    1. In the *Message Type* drop-down list, select *DiagnoseMessage*.
+    1. In the *Message Type* dropdown list, select *DiagnoseMessage*.
 
     1. In the *ExtraInfo* field, specify "flush:\[fileNamePattern]".
 

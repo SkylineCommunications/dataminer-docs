@@ -462,7 +462,7 @@ When a parameter was displayed on a dialog box, in some cases, its parameter des
 A number of issues have been resolved that could occur with the breadcrumbs at the top of cards in DataMiner Cube:
 
 - When an object was renamed, it could occur that the name in the breadcrumbs was not updated.
-- When an object had been deleted, it could occur that it was still displayed in the breadcrumbs' drop-down menu.
+- When an object had been deleted, it could occur that it was still displayed in the breadcrumbs' dropdown menu.
 - For services that only contained excluded devices, it could occur that breadcrumbs were not displayed correctly.
 - Breadcrumbs will no longer be displayed in upper case only.
 

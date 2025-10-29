@@ -127,7 +127,7 @@ To upload an Automation script to a DataMiner Agent, do the following:
 1. Click *Publish* to compile the script and publish it to the DataMiner Agent that was set as default DMA in the *DMA* tab of the *DIS Settings* dialog box.
 
 > [!NOTE]
-> If you want to publish the script to another, non-default DMA, click the drop-down button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
+> If you want to publish the script to another, non-default DMA, click the dropdown button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
 
 ## Structure of an Automation script solution
 

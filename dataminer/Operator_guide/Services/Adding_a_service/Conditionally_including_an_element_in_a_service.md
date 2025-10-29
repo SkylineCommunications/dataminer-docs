@@ -14,7 +14,7 @@ During service creation or while editing a service, it is possible to include an
 
 1. If the element should be included when the condition matches, select *Include (In Use when condition match)*, otherwise select *Exclude (Excluded when condition match)*.
 
-1. Click *Add condition* and select one of the options in the drop-down list, depending on what the condition should match with: *Parameter value*, *Alarm state*, or *Element state*, or *Element is in the active connectivity chain*.
+1. Click *Add condition* and select one of the options in the dropdown list, depending on what the condition should match with: *Parameter value*, *Alarm state*, or *Element state*, or *Element is in the active connectivity chain*.
 
    - If you select *Parameter value* or *Alarm state* and specify a table parameter, a toggle button is displayed next to the index. Click the toggle button to switch between using the primary key or the display key (default) to check for the parameter value or the alarm state.
 

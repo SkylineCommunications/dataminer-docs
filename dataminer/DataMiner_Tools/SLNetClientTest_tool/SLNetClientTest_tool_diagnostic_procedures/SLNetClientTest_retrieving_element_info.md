@@ -10,7 +10,7 @@ In some cases, it can be useful to retrieve information about elements via SLNet
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-1. In the *Message Type* drop-down list, select *GetLiteElementInfo*.
+1. In the *Message Type* dropdown list, select *GetLiteElementInfo*.
 
 1. Configure the fields of the message according to your preferences.
 

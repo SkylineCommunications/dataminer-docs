@@ -209,9 +209,9 @@ In the sidebar, next to the *All dashboards* and *Recent dashboards* icons, th
 
 The first icon will only be available when there are private dashboards, the second icon will only be available when the DataMiner Agent is connected to the cloud and there are shared dashboards.
 
-#### Ticketing app: Tickets can now be filtered on fields of type 'drop-down list' \[ID 33370\]
+#### Ticketing app: Tickets can now be filtered on fields of type 'dropdown list' \[ID 33370\]
 
-In the Ticketing app, tickets can now also be filtered on fields of type “drop-down list”.
+In the Ticketing app, tickets can now also be filtered on fields of type “dropdown list”.
 
 #### Web apps - Data table component: Search box \[ID 33385\]
 

@@ -100,7 +100,7 @@ The panel can be used as follows:
 
   1. In the *Advanced editing* panel, click *Add page data*.
 
-  1. Select a data item in the drop-down list.
+  1. Select a data item in the dropdown list.
 
   1. In the value box next to the data item, specify the value.
 
@@ -110,7 +110,7 @@ The panel can be used as follows:
 
   1. In the *Advanced editing* panel, click *Add shape data*.
 
-  1. Select a data item in the drop-down list.
+  1. Select a data item in the dropdown list.
 
   1. In the value box next to the data item, specify the value.
 

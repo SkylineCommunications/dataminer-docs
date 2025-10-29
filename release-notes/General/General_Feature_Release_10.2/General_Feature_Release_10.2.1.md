@@ -590,6 +590,6 @@ When you closed the Bookings app, in some cases, not all booking data would be f
 
 From DataMiner 10.2.1 onwards, the following release note also applies:
 
-#### DataMiner web apps: Filter issue when using arrow keys in drop-down box \[ID 31472\]
+#### DataMiner web apps: Filter issue when using arrow keys in dropdown box \[ID 31472\]
 
-In the DataMiner web apps (e.g. the Dashboards app), when you opened a drop-down box that already had a value selected and used the arrow keys to navigate through the values, the current value was applied as a filter, while this should not occur.
+In the DataMiner web apps (e.g. the Dashboards app), when you opened a dropdown box that already had a value selected and used the arrow keys to navigate through the values, the current value was applied as a filter, while this should not occur.

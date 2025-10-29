@@ -10,7 +10,7 @@ In DataMiner Cube, you can [change the log levels](xref:DataMiner_logging#changi
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-1. In the *Message Type* drop-down list, select *UpdateLogFileSettingsMessage*.
+1. In the *Message Type* dropdown list, select *UpdateLogFileSettingsMessage*.
 
 1. In the box next to *LogConfig*, click the "..." button.
 

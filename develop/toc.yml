@@ -257,7 +257,7 @@ items:
         topicUid: UIComponentsLabel
       - name: Text box
         topicUid: UIComponentsTextBox
-      - name: Drop-down list
+      - name: Dropdown list
         topicUid: UIComponentsDropDownList
       - name: Combo box
         topicUid: UIComponentsComboBox

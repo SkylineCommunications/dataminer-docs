@@ -200,7 +200,7 @@ The header and login screen of the Jobs app have now been adapted to the new Dat
 
 When you open a browser window and enter the IP address or host name of a DataMiner Agent, you are now directed to a new DataMiner landing page (“/root”).
 
-After signing in, you will be presented with a list of apps (e.g. Monitoring, Dashboards, etc.), and a drop-down menu on the right will allow you to install the DataMiner Cube desktop application using either a click-once web installer or an MSI installer.
+After signing in, you will be presented with a list of apps (e.g. Monitoring, Dashboards, etc.), and a dropdown menu on the right will allow you to install the DataMiner Cube desktop application using either a click-once web installer or an MSI installer.
 
 Clicking the user menu in the upper-right corner will allow you to open the Tools page, the About page and DataMiner Help.
 

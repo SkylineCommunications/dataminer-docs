@@ -149,7 +149,7 @@ When you entered an invalid value in a numeric component, the *UIResults.GetStri
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
-When you opened a trend graph of an EPM object, it would not be possible to add a second parameter. After you had added a new parameter, the drop-down box would incorrectly only contain the current parameter.
+When you opened a trend graph of an EPM object, it would not be possible to add a second parameter. After you had added a new parameter, the dropdown box would incorrectly only contain the current parameter.
 
 #### DataMiner Cube - Spectrum analysis: Preset would not be loaded when clicking 'View buffer' [ID 34357]
 

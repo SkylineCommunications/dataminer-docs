@@ -18,7 +18,7 @@ In the configuration pane, you can configure a selected profile instance as foll
 
   1. In the *General* section, next to *Based on*, click *Add*.
 
-  1. In the drop-down list, select the relevant instance, and then click *Add*.
+  1. In the dropdown list, select the relevant instance, and then click *Add*.
 
   > [!NOTE]
   > - With this option, you can for example override one or more values from a base instance.
@@ -28,7 +28,7 @@ In the configuration pane, you can configure a selected profile instance as foll
 
   1. Next to *Applies to*, click *Edit*.
 
-  1. Select the definition in the drop-down list and click *Apply*.
+  1. Select the definition in the dropdown list and click *Apply*.
 
   > [!NOTE]
   > An instance must always be linked to a definition. It will not be possible to save the instance unless a definition has been selected.

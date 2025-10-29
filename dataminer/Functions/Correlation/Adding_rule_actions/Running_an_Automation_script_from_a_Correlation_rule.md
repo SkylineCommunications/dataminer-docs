@@ -13,7 +13,7 @@ To run an Automation script from a Correlation rule:
 1. Specify any additional information needed by the script, e.g. dummy elements.
 
    > [!NOTE]
-   > To dynamically pass the element that triggers the Correlation rule to the Automation script, in the drop-down list for the relevant dummy element, select *\<Dynamic>*.
+   > To dynamically pass the element that triggers the Correlation rule to the Automation script, in the dropdown list for the relevant dummy element, select *\<Dynamic>*.
 
 1. Optionally, specify the options for running the script. For more information, see [Script execution options](xref:Script_execution_options).
 

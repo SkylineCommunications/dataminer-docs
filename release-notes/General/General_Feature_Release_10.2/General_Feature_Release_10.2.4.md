@@ -362,7 +362,7 @@ This is the most basic procedure to use an external data source in a query:
 
 5. In the Dashboards app, configure a query and select the data source *Get custom data*.
 
-6. In the *Data source* drop-down box, select the name of your custom data source.
+6. In the *Data source* dropdown box, select the name of your custom data source.
 
 Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the *IGQIInputArguments* interface in the script to define that a specific argument is required, for instance to filter the displayed data. For more information, refer to the sections below.
 

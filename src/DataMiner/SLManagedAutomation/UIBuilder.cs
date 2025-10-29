@@ -323,10 +323,10 @@ namespace Skyline.DataMiner.Automation
 		public UIBuilder AppendButton(string destVar, string displayText, string style) { return null; }
 
 		/// <summary>
-		/// Adds a drop-down box to this dialog box.
+		/// Adds a dropdown box to this dialog box.
 		/// </summary>
 		/// <param name="destVar">The name of the destination variable.</param>
-		/// <param name="options">The items in the drop-down list. The format of a drop-down entry must be as follows: value|displayValue</param>
+		/// <param name="options">The items in the dropdown list. The format of a dropdown entry must be as follows: value|displayValue</param>
 		/// <returns>This <see cref="UIBuilder"/> instance.</returns>
 		/// <remarks>
 		/// <para>This is a convenience method that will create a new instance of <see cref="UIBlockDefinition"/> of type DropDown and sets <see cref="RequireResponse"/> to <c>true</c>.</para>

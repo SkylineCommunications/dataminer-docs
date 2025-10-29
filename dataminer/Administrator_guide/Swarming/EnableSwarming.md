@@ -41,7 +41,7 @@ To run a prerequisites check using SLNetClientTest tool:
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-1. In the *Message Type* drop-down list, select the message *Skyline.DataMiner.Net.Swarming.SwarmingPrerequisitesCheckRequest*.
+1. In the *Message Type* dropdown list, select the message *Skyline.DataMiner.Net.Swarming.SwarmingPrerequisitesCheckRequest*.
 
    By default, the *DataMinerID* property for the message will be set to -1, which means that the entire cluster will be checked.
 
@@ -80,7 +80,7 @@ To enable Swarming using SLNetClientTest tool:
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-1. In the *Message Type* drop-down list, select the message *Skyline.DataMiner.Net.Swarming.EnableSwarmingRequest*.
+1. In the *Message Type* dropdown list, select the message *Skyline.DataMiner.Net.Swarming.EnableSwarmingRequest*.
 
    This message will need to be sent with its default settings, so do not make any changes to the settings for the message.
 

@@ -20,4 +20,4 @@ Use this method to add or update a job section definition field.
 
 | Item | Format | Description |
 |--|--|--|
-| AddOrUpdateJobsSectionDefinitionFieldResult | Array of FieldID, FieldIsSoftDeleted and OptionIsSoftDeleted | The ID of the added or updated field, along with two booleans indicating whether the field is hidden because it was deleted and whether an option of the field is hidden because it was deleted (in case of a drop-down field). |
+| AddOrUpdateJobsSectionDefinitionFieldResult | Array of FieldID, FieldIsSoftDeleted and OptionIsSoftDeleted | The ID of the added or updated field, along with two booleans indicating whether the field is hidden because it was deleted and whether an option of the field is hidden because it was deleted (in case of a dropdown field). |

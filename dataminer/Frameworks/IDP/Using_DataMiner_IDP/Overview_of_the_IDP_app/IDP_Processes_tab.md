@@ -29,7 +29,7 @@ Click the *New* button to open the Process Automation wizard. In this wizard, yo
 
    - Select an existing process to schedule it again or create a custom process.
 
-   - In the *Start* drop-down box, select whether the process should be executed once (*Instant*) or repeated at regular intervals (*Timer*). If you select *Timer*, you will need to specify a profile and interval for the timer. Note that this drop-down box is only available if a repeat gateway is available in the DMS. If no repeat gateway is available, the process will always be executed once.
+   - In the *Start* dropdown box, select whether the process should be executed once (*Instant*) or repeated at regular intervals (*Timer*). If you select *Timer*, you will need to specify a profile and interval for the timer. Note that this dropdown box is only available if a repeat gateway is available in the DMS. If no repeat gateway is available, the process will always be executed once.
 
    - If you are creating a custom process, click the *Add* *Activity button* to add an activity to the process. You can use the *Delete Activity* button to remove the last activity you have added.
 

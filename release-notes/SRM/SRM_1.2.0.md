@@ -94,9 +94,9 @@ If a service definition contained a node with the property *Options* set to *Hid
 
 In some cases, it could occur that parameters were shown in the Booking Wizard while they were not configured, even if the property *ShowNotConfiguredParameters* was not set to true on the corresponding node. In addition, it could occur that a parameter without value was not shown, even though this property was set to true.
 
-#### Resources drop-down list not generated correctly in Booking Wizard \[ID 24837\]
+#### Resources dropdown list not generated correctly in Booking Wizard \[ID 24837\]
 
-In the Booking Wizard, it could occur that the resources drop-down list was not generated correctly. This could make it possible for users to select an unavailable resource, which would cause the booking to be quarantined.
+In the Booking Wizard, it could occur that the resources dropdown list was not generated correctly. This could make it possible for users to select an unavailable resource, which would cause the booking to be quarantined.
 
 #### Incorrect booking color when booking was converted to contributing booking \[ID 24839\]
 

@@ -15,7 +15,7 @@ Alarm cards consist of three panes:
 - The **top pane** shows **general information** about the alarm, such as which parameters are in alarm and when the alarm started.
 
   > [!NOTE]
-  > If more than one parameter is in alarm on the same element, click the downward arrow next to “other parameters in alarm” to view a drop-down list containing these parameters. To view the alarm card for such a parameter, select it in the list.
+  > If more than one parameter is in alarm on the same element, click the downward arrow next to “other parameters in alarm” to view a dropdown list containing these parameters. To view the alarm card for such a parameter, select it in the list.
 
 - The **pane on the left** shows the **history** of the alarm. For correlated alarms, it also shows the source alarms.
 

@@ -76,7 +76,7 @@ In the dashboard editor, click *Actions* in the top-right corner to access the v
 
     - *Background image*: click the *...* button to choose a background image for the component.
 
-    - *Background mode*: use the drop-down list to choose how the background image will be displayed.
+    - *Background mode*: use the dropdown list to choose how the background image will be displayed.
 
     - *Text color*: click the *...* button to determine the text color of the component.
 
@@ -101,11 +101,11 @@ In the dashboard editor, click *Actions* in the top-right corner to access the v
 
     - Possible selections for *Fixed selection* are: Alarm, DataMiner Agent, Element, None, Parameter, Protocol, Redundancy group, Service, View.
 
-    - When you choose a fixed selection, different drop-down lists will appear underneath depending on your choice.
+    - When you choose a fixed selection, different dropdown lists will appear underneath depending on your choice.
 
     > [!NOTE]
     > - A user selection determines the type of input a user has to provide. If you for instance choose "Element" for the user selection, the user will have to specify an element. A fixed selection acts as a selection filter. If you for instance specify a particular protocol for the fixed selection, the user will only be able to specify items that use this protocol.
-    > - For a trend parameter component, if you configure a feed with a table parameter, there are two possibilities regarding the table index. You can either select a unique name in the drop-down list, or select *Other value* in the list, and then enter a value. If you enter a value, you can use an asterisk ("\*") as a wildcard.
+    > - For a trend parameter component, if you configure a feed with a table parameter, there are two possibilities regarding the table index. You can either select a unique name in the dropdown list, or select *Other value* in the list, and then enter a value. If you enter a value, you can use an asterisk ("\*") as a wildcard.
 
 1. If necessary, in order to further limit the feed selection, you can enter a mask for the element name. To do so, click *Advanced* and enter a mask next to *Element mask*. In this mask you can use placeholders like *\[this service\]* and *\[param:dmaid/eid:pid:dispidx\]*.
 

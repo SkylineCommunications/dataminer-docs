@@ -12,13 +12,13 @@ To configure these job sections:
 
   The different job sections are displayed in a diagram with nodes extending to the right and in between them. The lowest nodes below the job sections are represented as + icons.
 
-1. In the drop-down box at the top, make sure the right job domain is selected.
+1. In the dropdown box at the top, make sure the right job domain is selected.
 
 1. You can then create new job sections, modify job sections and delete job sections:
 
    - To create a new job section, click the node where you want to add the job section. Specify the necessary information in the *New* tab of the pop-up window and then click *Save* to add the section.
 
-     Alternatively, instead of creating a new section from scratch, you can re-use a job section that is used in a different domain, by going to the *Existing* tab, selecting the section in the drop-down box and clicking *Save*.
+     Alternatively, instead of creating a new section from scratch, you can re-use a job section that is used in a different domain, by going to the *Existing* tab, selecting the section in the dropdown box and clicking *Save*.
 
      The following information can be specified if you create a completely new section:
 

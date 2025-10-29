@@ -40,7 +40,7 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
 
 1. For *SNMPv3* only, an extra section will become available at the bottom of the *general* tab. In this section, specify the username, and the authentication and encryption password if necessary. In the expandable *Advanced* section, specify the following further options:
 
-   - **Security level and protocol**: Select one of the following three levels in the drop-down list:
+   - **Security level and protocol**: Select one of the following three levels in the dropdown list:
 
      - *NoAuth_NoPriv*: No authentication and no privacy, which is essentially the same as SNMPv2.
 
@@ -137,7 +137,7 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
 
      1. In the *Name* box, enter a name for the alarm filter.
 
-     1. In the *Type* drop-down list, select whether the alarm filter should be *Public*, so any users are able to update it, or *Protected*.
+     1. In the *Type* dropdown list, select whether the alarm filter should be *Public*, so any users are able to update it, or *Protected*.
 
      1. Optionally, add a description for the filter in the *Description* box.
 

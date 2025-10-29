@@ -9,7 +9,7 @@ If you click *Display Editor* in the file tab header when editing a protocol XML
 ![Display editor](~/develop/images/DIS_PageEditor.png)
 
 > [!NOTE]
-> When DVE elements are defined in the protocol, the drop-down box in the top-left corner allows you to select either the main protocol or one of the DVE elements. The editor will then only display the pages and parameters of the item you selected.
+> When DVE elements are defined in the protocol, the dropdown box in the top-left corner allows you to select either the main protocol or one of the DVE elements. The editor will then only display the pages and parameters of the item you selected.
 
 ## Pages
 

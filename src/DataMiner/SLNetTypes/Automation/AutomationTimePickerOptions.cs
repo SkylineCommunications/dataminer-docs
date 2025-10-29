@@ -96,9 +96,9 @@ namespace Skyline.DataMiner.Automation
 		public TimeSpan TimeInterval { get; set; }
 
 		/// <summary>
-		/// Gets or sets a value indicating whether to enable the drop-down button of the time picker control.
+		/// Gets or sets a value indicating whether to enable the dropdown button of the time picker control.
 		/// </summary>
-		/// <value><c>true</c> to enable the drop-down button of the time picker control; otherwise, <c>false</c>.</value>
+		/// <value><c>true</c> to enable the dropdown button of the time picker control; otherwise, <c>false</c>.</value>
 		/// <remarks>
 		/// <para>Default: true.</para>
 		/// </remarks>

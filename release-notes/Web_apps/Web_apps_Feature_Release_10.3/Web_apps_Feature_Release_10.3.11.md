@@ -225,7 +225,7 @@ When you edited an existing action, in some cases, the *Execute component* actio
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-The feed linker would no longer automatically select the feed type when there was only a single option. Moreover, as it was not possible to open the drop-down box, no feed could be selected manually either.
+The feed linker would no longer automatically select the feed type when there was only a single option. Moreover, as it was not possible to open the dropdown box, no feed could be selected manually either.
 
 #### Monitoring app: Problem when navigating to another visual overview page [ID 37415]
 

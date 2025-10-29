@@ -4,7 +4,7 @@ uid: LowCodeApps_header_config
 
 # Configuring the app header bar
 
-When you are configuring an app in the Low-Code Apps module, you can configure the header bar for each page and panel. Such a header bar consists of different buttons, which can be used to execute actions or show a drop-down menu with additional buttons.
+When you are configuring an app in the Low-Code Apps module, you can configure the header bar for each page and panel. Such a header bar consists of different buttons, which can be used to execute actions or show a dropdown menu with additional buttons.
 
 To configure a header bar:
 
@@ -16,7 +16,7 @@ To configure a header bar:
 
 1. In the page configuration pane, expand the *Icon* section to select an icon for the button.
 
-1. If you want the button to be a drop-down box, click the ![Set as drop-down](~/dataminer/images/AppSetAsDropdown.png) icon.
+1. If you want the button to be a dropdown box, click the ![Set as dropdown](~/dataminer/images/AppSetAsDropdown.png) icon.
 
 1. To configure what will happen when a user clicks the button:
 

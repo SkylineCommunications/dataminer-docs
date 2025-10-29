@@ -238,7 +238,7 @@ uid: WS_Methods_v1_overview
 | [GetInformationEventsV2](xref:GetInformationEventsV2) | Retrieves the information events for a specified timespan, as well as the alarm cache status. <!-- Available from DataMiner 10.0.7 onwards. --> |
 | [GetJob](xref:GetJob) | Retrieves a specific job by ID. <!-- Available from DataMiner 9.6.4 onwards. --> |
 | [GetJobAttachmentNames](xref:GetJobAttachmentNames) | Retrieve the names of all files attached to a specific job. <!-- Available from DataMiner 10.0.5 onwards. --> |
-| [GetJobFieldOptions](xref:GetJobFieldOptions) | Retrieves the drop-down options of a job field. <!-- Available from DataMiner 9.6.4 onwards. --> |
+| [GetJobFieldOptions](xref:GetJobFieldOptions) | Retrieves the dropdown options of a job field. <!-- Available from DataMiner 9.6.4 onwards. --> |
 | [GetJobs](xref:GetJobs) | Retrieves all jobs. <!-- Available from DataMiner 9.6.4 onwards. --> |
 | [GetJobsDomain](xref:GetJobsDomain) | Retrieves a jobs domain. <!-- Available from DataMiner 10.0.9 onwards. --> |
 | [GetJobsDomains](xref:GetJobsDomains) | Retrieve all available job domains. <!-- Available from DataMiner 10.0.9 onwards. --> |

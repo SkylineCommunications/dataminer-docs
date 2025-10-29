@@ -326,7 +326,7 @@ It is now possible to connect a DataMiner System to the cloud. To do so:
 
 5. Specify the following information in the pop-up window:
 
-    - *Organization*: Specify your organization, either by selecting it in the drop-down box if it already exists in the system, or by clicking *Create new* and specifying your name and DNS.
+    - *Organization*: Specify your organization, either by selecting it in the dropdown box if it already exists in the system, or by clicking *Create new* and specifying your name and DNS.
     - DMS name: Specify the name you want to use for your DMS.
     - DMS URL: Specify a URL-friendly version of the DMS name.
 

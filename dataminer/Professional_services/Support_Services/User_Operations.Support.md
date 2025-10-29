@@ -50,7 +50,7 @@ The *Report Ticket* page allows you to report a new ticket:
 
    - *Systems*:
 
-     - If the system is connected to dataminer.services, select the system and the relevant DMA in the drop-down boxes.
+     - If the system is connected to dataminer.services, select the system and the relevant DMA in the dropdown boxes.
 
      - If the system is not connected to dataminer.services, click the cloud toggle button and then specify the system details manually.
 

@@ -297,7 +297,7 @@ At the bottom of the sidebar, you can now click a help button that will open a m
 
 #### Schedule configuration of BPA tests \[ID 29000\]
 
-On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the drop-down box in the *Schedule* column, you can select to run a test at different intervals, e.g. daily or every 12 hours.
+On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the dropdown box in the *Schedule* column, you can select to run a test at different intervals, e.g. daily or every 12 hours.
 
 #### New Surveyor setting: Collapse DVE elements beneath their main element \[ID 29021\]
 

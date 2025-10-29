@@ -10,13 +10,13 @@ For each field, the following configuration is possible.
 
 - **Name**: The name of the field that will be displayed when the user is creating or editing a job. This box must always be filled in.
 
-- **Type**: Allows you to select the type of field in a drop-down list. A field always has to have a particular type assigned. The following types are available:
+- **Type**: Allows you to select the type of field in a dropdown list. A field always has to have a particular type assigned. The following types are available:
 
     - *Datetime*: Select this type to create a box in which the user will need to specify a date and time.
 
     - *Double*: Select this type to create a box in which the user will need to specify a double. (For more information on this data type, see <https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/data-types/index>).
 
-    - *Dropdown*: When you select this type, you will need to specify the different values the user will be able to select in the drop-down list.
+    - *Dropdown*: When you select this type, you will need to specify the different values the user will be able to select in the dropdown list.
 
     - *Time span*: Select this type to create a box in which the user will need to specify a time span.
 
@@ -30,7 +30,7 @@ For each field, the following configuration is possible.
         > - It is not possible to edit the value of the auto-increment field. The field will only be displayed after a job has been created and the value of the field is filled in by the system. This field can also not be set as optional, so the *Required* checkbox is not available in the configuration for this field.
         > - If you change the format of auto-increment fields when these are used in existing jobs, the existing jobs will keep using the old format.
 
-    - *User*: Select this type to create a drop-down list in which one of the users available in the DataMiner System will need to be selected.
+    - *User*: Select this type to create a dropdown list in which one of the users available in the DataMiner System will need to be selected.
 
     - *URL*: Select this type to create a box in which only a URL can be specified.
 

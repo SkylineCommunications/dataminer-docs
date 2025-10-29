@@ -370,13 +370,13 @@ When a GQI component still had a session open when a new query was triggered, in
 
 When the *Dashboards* app was opened on a mobile device, an error could occur when you entered something in the search box.
 
-#### Dashboards app & Low-Code Apps - Form component: Problems with multiple-selection drop-down boxes [ID 35829]
+#### Dashboards app & Low-Code Apps - Form component: Problems with multiple-selection dropdown boxes [ID 35829]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
-When a form component contained multiple-selection drop-down boxes, it would load too slowly due to the drop-down box change detection being triggered over and over again. From now on, form components containing multiple-selection drop-down boxes will load considerably quicker.
+When a form component contained multiple-selection dropdown boxes, it would load too slowly due to the dropdown box change detection being triggered over and over again. From now on, form components containing multiple-selection dropdown boxes will load considerably quicker.
 
-Also, when a multiple-selection drop-down field of a DOM instance was added to a form component, the current values preloaded into the field as placeholders would incorrectly not get removed once the data was loaded, causing the drop-down field to contain duplicate values.
+Also, when a multiple-selection dropdown field of a DOM instance was added to a form component, the current values preloaded into the field as placeholders would incorrectly not get removed once the data was loaded, causing the dropdown field to contain duplicate values.
 
 #### Dashboards app: A table component could appear to be empty when you rapidly switched between visualizations [ID 35831]
 

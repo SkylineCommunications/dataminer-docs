@@ -50,7 +50,7 @@ If you choose to save a protocol or an Automation script as a package, the packa
 
 Up to now, when you opened a protocol in which DVE elements were defined and clicked *Display Editor* in the file tab header, the pages of the main protocol and the pages of the DVE protocols would be displayed in the same list.
 
-From now on, when DVE elements are defined in the protocol, a drop-down box in the top-left corner of the display editor will allow you to select either the main protocol or one of the DVE elements. The editor will then only display the pages and parameters of the item you selected.
+From now on, when DVE elements are defined in the protocol, a dropdown box in the top-left corner of the display editor will allow you to select either the main protocol or one of the DVE elements. The editor will then only display the pages and parameters of the item you selected.
 
 Also, export rules will now be created automatically.
 

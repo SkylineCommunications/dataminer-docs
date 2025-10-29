@@ -184,7 +184,7 @@ Previously, it was not possible to move an existing booking from the *Partial* s
 
 #### Duplicate colors removed on State Colors page [ID 24029]
 
-In the drop-down lists on the *Admin > State Colors* data page of the SRM application element, the following duplicate colors have been removed:
+In the dropdown lists on the *Admin > State Colors* data page of the SRM application element, the following duplicate colors have been removed:
 
 - Cyan (now only included as *Aqua*)
 - Fuchsia (now only included as *Magenta*)

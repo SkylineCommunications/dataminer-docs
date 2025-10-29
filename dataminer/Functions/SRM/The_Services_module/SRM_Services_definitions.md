@@ -46,7 +46,7 @@ In the header section of the service definition panel, you can specify the follo
 
 - **Template**: This checkbox determines whether the service definition is considered to be a template or not. If a service definition is configured as a service definition template, it will be treated differently while scripts to create bookings are running. This option is particularly useful in case the service definition is systematically modified during the script, in order to reduce the required resources.
 
-- **Visio**: Allows you to select the Visio file that will be used for services generated for this service definition. Either select one of the available files in the drop-down list, or click *New upload* to add a new file.
+- **Visio**: Allows you to select the Visio file that will be used for services generated for this service definition. Either select one of the available files in the dropdown list, or click *New upload* to add a new file.
 
   > [!NOTE]
   > Customizing the Visio file for a specific generated service is only possible after a different Visio file has been assigned to the service.
@@ -119,8 +119,8 @@ To remove one of the added scripts, select it and click the *Delete* button in t
 
 This tab allows you to link profile definitions to the selected service definition.
 
-In the *Add service profile* drop-down box, all profile definitions configured in the *Profiles* module are available.
+In the *Add service profile* dropdown box, all profile definitions configured in the *Profiles* module are available.
 
-To link the selected service definition with a profile, select one of the profile definitions in the drop-down box and click *Add*. However, note that this change will only be saved if the profile is linked to at least one of the parameters in the diagram.
+To link the selected service definition with a profile, select one of the profile definitions in the dropdown box and click *Add*. However, note that this change will only be saved if the profile is linked to at least one of the parameters in the diagram.
 
-Below the drop-down box, a list is displayed of the profiles that have already been linked to the selected service definition and of the parameters in these profiles. An “x” icon to the right of each profile name allows you to remove the profile from the service definition.
+Below the dropdown box, a list is displayed of the profiles that have already been linked to the selected service definition and of the parameters in these profiles. An “x” icon to the right of each profile name allows you to remove the profile from the service definition.

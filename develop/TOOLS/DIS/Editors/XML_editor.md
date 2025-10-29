@@ -94,7 +94,7 @@ This editor allows you to design the parameter tables of a protocol using simple
 
 If you click *Publish*, the protocol or the Automation script you are currently editing will be published to the DMA that was set as default DMA in the *DMA* tab of the *DIS Settings* dialog box.
 
-To publish a protocol or an Automation script to another, non-default DMA, click the drop-down button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
+To publish a protocol or an Automation script to another, non-default DMA, click the dropdown button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
 
 When you publish a protocol or an Automation script, DIS will create either a *.dmprotocol* package (in case of a protocol) or a *.dmapp* package (in case of an Automation script) in the background, install that package on the DataMiner Agent, and then automatically remove it again. This way, there is no need to manually copy all required DLL files on the DataMiner Agent in question (e.g. DLL files of NuGet packages that are used in the protocol or Automation script).
 
