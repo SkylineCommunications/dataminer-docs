@@ -92,12 +92,12 @@ Additionally, the following layout options are also available:
 | Advanced | N/A | Empty result message | Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Specify a custom message that is displayed when a query returns no results. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
 | Advanced | N/A | Grid template | Available up to DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11<!--RN 43889-->. Configure the number of columns and rows in the grid, and adjust scaling options<!--RN 34761 + 34781-->. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
 | Grid layout | Columns | Fixed column count | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->. Determine how many columns are displayed. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
-| Grid layout | Columns | Columns | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->, when the *Fixed column count* option is enabled. Specify the number of columns to display (1–100). |
+| Grid layout | Columns | Columns | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->, when the *Fixed column count* option is enabled. Specify the number of columns to display. |
 | Grid layout | Columns | Stretch to fit | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->. Enable this setting to have items expand horizontally to fill the container. Enabled by default. |
 | Grid layout | Columns | Stretch mode | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->, when *Stretch to fit* is enabled and *Fix column count* is disabled. Control how items behave when stretched. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
 | Grid layout | Columns | Horizontal scroll | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->, when *Stretch to fit* is disabled. Enable this setting to allow horizontal scrolling instead of wrapping or clipping content. |
 | Grid layout | Rows | Fixed row count | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->. Toggle the switch to determine how many rows are displayed. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
-| Grid layout | Rows | Rows | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->, when *Fixed row count* is enabled. Specify the number of rows to display (1–100). |
+| Grid layout | Rows | Rows | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->, when *Fixed row count* is enabled. Specify the number of rows to display. |
 | Grid layout | Rows | Stretch to fit | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->. Enable this setting to have items expand vertically to fill the container. Disabled by default. |
 | Grid layout | Rows | Stretch mode | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->, when *Stretch to fit* is enabled and *Fix column count* is disabled. Control how items behave when stretched. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
 | Grid layout | Rows | Vertical scroll | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->, when *Stretch to fit* is disabled. Enable this option to allow vertical scrolling instead of wrapping or clipping content. Enabled by default. |
@@ -115,7 +115,7 @@ Additionally, the following layout options are also available:
 
 In the *Layout* pane, under *Grid layout*, you can **configure the number of columns and rows** displayed in the grid component and **choose how items scale** within the available space.
 
-- By default, the grid automatically displays all columns and rows, adapted to the available width and height. To show a fixed number of columns or rows, enable *Fixed column count* or *Fixed row count* and enter the desired value (1–100).
+- By default, the grid automatically displays all columns and rows, adapted to the available width and height. To show a fixed number of columns or rows, enable *Fixed column count* or *Fixed row count* and enter the desired value.
 
   ![Fixed column count](~/dataminer/images/Fixed_Column_Count.gif)<br>*Grid component in DataMiner 10.5.12*
 

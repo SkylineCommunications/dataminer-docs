@@ -141,7 +141,7 @@ When editing a *Grid* component, up to now, the *Advanced > Grid template* secti
   | Setting | Description |
   |---|---|
   | Fixed column count   | Disable this setting to have all columns displayed, or enable this setting to have the fixed number of columns specified in *Columns* displayed. |
-  | Columns              | If *Fixed column count* is enabled, then, in this box, specify the number of columns (from 1 to 100) to be displayed. |
+  | Columns              | If *Fixed column count* is enabled, then, in this box, specify the number of columns to be displayed. |
   | Stretch to fit       | Enable this setting to have the cells scaled dynamically to fit the grid. |
   | Stretch mode         | If *Stretch to fit* is enabled, then set *Stretch mode* to either "Fit" or "Limit":<br>- Fit: Try to fit as many items as possible.<br>- Limit: Enlarge or reduce the items according to the template dimensions. |
   | Horizontal scroll    | Enable this setting if you want a horizontal scrollbar to be displayed.<br>When this setting is disabled, text in the cells will either wrap or be clipped, depending on the other settings. When a fixed number of columns are displayed, text in the cells will not wrap. |
@@ -151,7 +151,7 @@ When editing a *Grid* component, up to now, the *Advanced > Grid template* secti
   | Setting | Description |
   |---|---|
   | Fixed row count   | Disable this setting to have all rows displayed, or enable this setting to have the fixed number of rows specified in *Rows* displayed. |
-  | Rows              | In this box, specify the number of rows (from 1 to 100) to be displayed when *Fixed row count* is enabled. |
+  | Rows              | In this box, specify the number of rows to be displayed when *Fixed row count* is enabled. |
   | Stretch to fit    | Enable this setting to have the cells scaled dynamically to fit the grid. |
   | Stretch mode      | If *Stretch to fit* is enabled, then set *Stretch mode* to either "Fit" or "Limit":<br>- Fit: Try to fit as many items as possible.<br>- Limit: Enlarge or reduce the items according to the template dimensions. |
   | Vertical scroll   | Enable this setting if you want a vertical scrollbar to be displayed.<br>When this setting is disabled, text in the cells will either wrap or be clipped, depending on the other settings. When a fixed number of rows are displayed, text in the cells will not wrap. |
