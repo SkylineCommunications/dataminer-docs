@@ -105,7 +105,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Connects the specified matrix crosspoint.
-		/// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+		/// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the matrix parameter.</param>
         /// <param name="input">The index of the matrix input.</param>
@@ -120,7 +120,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Connects the specified matrix crosspoint.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the matrix parameter.</param>
         /// <param name="input">The label of the matrix input.</param>
@@ -153,7 +153,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Disconnects the specified matrix crosspoint.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the matrix parameter.</param>
         /// <param name="input">The label of the matrix input.</param>
@@ -166,7 +166,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Connects the specified matrix crosspoint.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the matrix parameter.</param>
         /// <param name="input">The label of the matrix input.</param>
@@ -187,7 +187,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the display key that corresponds with the specified primary key.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the table or column parameter.</param>
         /// <param name="primaryKey">The primary key.</param>
@@ -200,7 +200,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the ID that corresponds with the specified parameter name.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the parameter.</param>
         /// <returns>The ID that corresponds with the specified parameter name or -1 if the parameter was not found.</returns>
@@ -212,7 +212,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the ID that corresponds with the specified parameter name.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the parameter.</param>
         /// <param name="writeParam"><c>true</c> if the specified parameter is a write parameter; otherwise, <c>false</c>.</param>
@@ -233,7 +233,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the primary key that corresponds with the specified display key.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the table or column parameter.</param>
         /// <param name="displayKey">The display key.</param>
@@ -259,7 +259,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the ID of the write parameter with the specified name.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the write parameter.</param>
         /// <returns>The ID of the write parameter with the specified name or -1 if the write parameter was not found.</returns>
@@ -283,7 +283,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the display value that corresponds with the specified raw value of the specified parameter.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the parameter.</param>
         /// <param name="rawValue">The raw value for which the display value has to be determined.</param>
@@ -317,7 +317,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the input that is connected to the specified output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the matrix parameter.</param>
         /// <param name="output">The output.</param>
@@ -331,7 +331,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the input that is connected to the specified output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The label of the matrix parameter.</param>
         /// <param name="output">The output.</param>
@@ -360,7 +360,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the value of the specified parameter.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the parameter.</param>
         /// <returns>The value of the parameter.</returns>
@@ -372,7 +372,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the value of the specified table cell.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the column parameter.</param>
         /// <param name="idx">The primary key or display key.</param>
@@ -396,7 +396,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the value of the specified table cell using the primary key.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the column parameter.</param>
         /// <param name="primaryKey">The primary key.</param>
@@ -426,7 +426,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the display value of the specified standalone parameter.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the standalone parameter.</param>
         /// <returns>The display value of the specified standalone parameter.</returns>
@@ -439,7 +439,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the display value of the specified table cell.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the column parameter.</param>
         /// <param name="idx">The primary key or display key.</param>
@@ -461,7 +461,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the display value of the specified table cell using the column name and row primary key.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the column parameter.</param>
         /// <param name="primaryKey">The primary key of the row.</param>
@@ -482,7 +482,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the value that corresponds with the specified display value of the specified parameter.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the parameter.</param>
         /// <param name="displayValue">The display value for which the raw value has to be determined.</param>
@@ -498,7 +498,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the value that corresponds with the specified display value of the specified parameter.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the parameter.</param>
         /// <param name="displayValue">The display value for which the raw value has to be determined.</param>
@@ -522,7 +522,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the ID of the read parameter that corresponds with the specified write parameter ID.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the write parameter.</param>
         /// <returns>The ID of the corresponding read parameter. Returns -1 in case the specified parameter was not found or if there is no corresponding write parameter.</returns>
@@ -548,7 +548,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the display keys of the specified table.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="tableParameterName">The name of the table or column parameter ID.</param>
         /// <returns>The display keys.</returns>
@@ -567,7 +567,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the primary key to display key map of the specified table.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="tableParameterName">The name of the table or column parameter.</param>
         /// <returns>The primary key to display key map of the specified table.</returns>
@@ -586,7 +586,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the primary keys of the specified table.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="tableParameterName">The name of the table or column parameter.</param>
         /// <returns>The primary keys of the specified table.</returns>
@@ -605,7 +605,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the ID of the write parameter that corresponds with the specified read parameter.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the read parameter.</param>
         /// <returns>The ID of the corresponding write parameter. Returns -1 in case the specified parameter was not found or if there is no corresponding write parameter.</returns>
@@ -645,7 +645,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Returns a value indicating whether the specified matrix crosspoint is connected.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the matrix parameter.</param>
         /// <param name="input">The matrix input.</param>
@@ -659,7 +659,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Returns a value indicating whether the specified matrix crosspoint is connected.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the matrix parameter.</param>
         /// <param name="input">The matrix input.</param>
@@ -712,7 +712,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Enables or disables the specified matrix input.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="index">The index of the input.</param>
@@ -727,7 +727,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Enables or disables the specified matrix input.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="inputLineLabel">The label of the input.</param>
@@ -762,7 +762,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Enables or disables the specified matrix input or output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="input"><c>true</c> if the specified index is an input; otherwise, <c>false</c>.</param>
@@ -778,7 +778,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Enables or disables the specified matrix input or output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="input"><c>true</c> if the specified index is an input; otherwise, <c>false</c>.</param>
@@ -809,7 +809,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Enables or disables the specified matrix output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="outputLineLabel">The label of the output.</param>
@@ -822,7 +822,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Enables or disables the specified matrix output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="index">The index of the output.</param>
@@ -852,7 +852,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets a value indicating whether "follow mode" is enabled on the specified matrix output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="outputLabel">The label of the output.</param>
@@ -865,7 +865,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets a value indicating whether "follow mode" is enabled on the specified matrix output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="index">The index of the output.</param>
@@ -889,7 +889,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the index of the input or output that corresponds with the specified input or output label.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="input"><c>true</c> if the specified label is an input label; otherwise, <c>false</c>.</param>
@@ -913,7 +913,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the index of the input that corresponds with the specified input label.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="inputLabel">The label of the input.</param>
@@ -936,7 +936,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the label of the specified matrix input.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="index">The index of the input.</param>
@@ -967,7 +967,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets a value indicating whether the specified matrix input is locked.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="index">The index of the matrix input.</param>
@@ -981,7 +981,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets a value indicating whether the specified matrix input is locked.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="inputLabel">The label of the matrix input.</param>
@@ -1007,7 +1007,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the label of the specified matrix input or output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="input"><c>true</c> if the specified index is an input; otherwise, <c>false</c>.</param>
@@ -1045,7 +1045,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets a value indicating whether the specified input or output is locked.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="input"><c>true</c> if the specified index is an input; otherwise, <c>false</c>.</param>
@@ -1059,7 +1059,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets a value indicating whether the specified input or output is locked.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="input"><c>true</c> if the specified index is an input; otherwise, <c>false</c>.</param>
@@ -1084,7 +1084,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the index of the output that corresponds with the specified output label.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="outputLabel">The label of the output.</param>
@@ -1106,7 +1106,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the label of the specified matrix output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="index">The output index. </param>
@@ -1136,7 +1136,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets a value indicating whether the specified matrix output is locked.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="outputLabel">The label of the matrix output.</param>
@@ -1149,7 +1149,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets a value indicating whether the specified matrix output is locked.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="index">The index of the matrix output.</param>
@@ -1178,7 +1178,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets a value indicating whether the specified matrix input is enabled.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="index">The index of the matrix input.</param>
@@ -1192,7 +1192,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets a value indicating whether the specified matrix input is enabled.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="lineLabel">The label of the matrix input.</param>
@@ -1227,7 +1227,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets a value indicating whether the specified matrix input or output is enabled.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="input"><c>true</c> if the specified index is an input; otherwise, <c>false</c>.</param>
@@ -1241,7 +1241,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets a value indicating whether the specified matrix input or output is enabled.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="input"><c>true</c> if the specified index is an input; otherwise, <c>false</c>.</param>
@@ -1273,7 +1273,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets a value indicating whether the specified matrix output is enabled.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="lineLabel">The label of the matrix output.</param>
@@ -1285,7 +1285,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets a value indicating whether the specified matrix output is enabled.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="index">The index of the matrix output.</param>
@@ -1314,7 +1314,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Configures a slave output to follow a master output on the specified matrix.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="masterLabel">The label of the master output.</param>
@@ -1327,7 +1327,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Configures a slave output to follow a master output on the specified matrix.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="master">The index of the master output.</param>
@@ -1358,7 +1358,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Enables or disables the ‘follow mode’ of the specified matrix output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="index">The index of the output.</param>
@@ -1371,7 +1371,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Enables or disables the ‘follow mode’ of the specified matrix output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="outputLabel">The label of the output.</param>
@@ -1403,7 +1403,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Sets the label of the specified input.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="index">The index of the input.</param>
@@ -1417,7 +1417,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Sets the label of the specified input.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="oldName">The label of the input.</param>
@@ -1447,7 +1447,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Locks or unlocks the specified matrix input.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="index">The index of the matrix input.</param>
@@ -1461,7 +1461,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Locks or unlocks the specified matrix input.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="inputLabel">The label of the matrix input.</param>
@@ -1496,7 +1496,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Sets the label of the specified matrix input or output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="input"><c>true</c> if the specified index is an input; otherwise, <c>false</c>.</param>
@@ -1512,7 +1512,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Sets the label of the specified matrix input or output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="input"><c>true</c> if the specified index is an input; otherwise, <c>false</c>.</param>
@@ -1548,7 +1548,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Locks or unlocks the specified matrix input or output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="input"><c>true</c> if the specified index is an input; otherwise, <c>false</c>.</param>
@@ -1564,7 +1564,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Locks or unlocks the specified matrix input or output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="input"><c>true</c> if the specified index is an input; otherwise, <c>false</c>.</param>
@@ -1594,7 +1594,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Sets the label of the specified matrix output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="oldName">The label of the output.</param>
@@ -1607,7 +1607,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Sets the label of the specified matrix output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="index">The index of the output.</param>
@@ -1636,7 +1636,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Locks or unlocks the specified matrix output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="index">The index of the matrix output.</param>
@@ -1650,7 +1650,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Locks or unlocks the specified matrix output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="outputLabel">The label of the matrix output.</param>
@@ -1677,7 +1677,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Stops the specified matrix output from being a master output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="masterLabel">The label of the master output.</param>
@@ -1689,7 +1689,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Stops the specified matrix output from being a master output.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="parameterName">The name of the matrix parameter.</param>
         /// <param name="master">The index of the master output.</param>
@@ -1742,7 +1742,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Sets the value of the specified parameter.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The parameter name.</param>
         /// <param name="value">The value to set.</param>
@@ -1754,7 +1754,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Sets the value of the specified cell.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the column parameter.</param>
         /// <param name="idx">The display key of the row.</param>
@@ -1776,7 +1776,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Sets the value of a cell specified using the primary key instead of the display key.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use an overload that takes the parameter ID instead to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
         /// </summary>
         /// <param name="name">The name of the column parameter.</param>
         /// <param name="primaryKey">The primary key of the row.</param>
