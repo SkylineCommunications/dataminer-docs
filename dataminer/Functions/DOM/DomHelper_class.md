@@ -219,11 +219,11 @@ var orderedOnField = domHelper.DomInstances.Read(onFieldQuery);
 > [!NOTE]
 > Natural sorting is not supported. Enabling this option on the sorting API could result in poor performance since this will be executed in memory and requires all data to be loaded from the database.
 
-#### Read selected fields
+#### Reading selected fields
 
 From DataMiner 10.6.0 onwards<!-- RN 43852 -->, the `DomInstances` CRUD helper supports reading only a selected subset of fields from `DomInstance` objects. This reduces the amount of data transferred and can significantly improve performance when clients only need a few fields from each instance.
 
-The new overloads of `Read` and `PreparePaging` accept a `SelectedFields<DomInstance>` object. To select a field, add the exposer from `DomInstanceExposers` or add the `FieldDescriptorID` to the `SelectedFields<DomInstance>` object.
+The overloads of `Read` and `PreparePaging` introduced in DataMiner 10.6.0 accept a `SelectedFields<DomInstance>` object. To select a field, add the exposer from `DomInstanceExposers` or add the `FieldDescriptorID` to the `SelectedFields<DomInstance>` object.
 
 > [!NOTE]
 > The `Id` is always available on a `PartialObject`; you do not need to add the `Id` exposer to `SelectedFields<DomInstance>`.
@@ -232,20 +232,20 @@ The new overloads of `Read` and `PreparePaging` accept a `SelectedFields<DomInst
 
 When used, these methods return a list of `PartialObject<DomInstance, DomInstanceId>`, which provides:
 
-- `ID`: the `DomInstance` ID.
-- `GetValue` and `TryGetValue`: retrieve the value of a selected exposer or a single-value `FieldDescriptorID`.
-- `GetValues` and `TryGetValues`: retrieve a list of values for a selected `FieldDescriptorID` (for multi-valued fields or when multiple sections are allowed).
+- `ID`: The `DomInstance` ID.
+- `GetValue` and `TryGetValue`: Retrieves the value of a selected exposer or a single-value `FieldDescriptorID`.
+- `GetValues` and `TryGetValues`: Retrieves a list of values for a selected `FieldDescriptorID` (for multi-valued fields or when multiple sections are allowed).
 
-Retrieving values — behavior summary
+When retrieving values, the following behavior applies:
 
-- Multiple values: use `GetValues<T>` / `TryGetValues<T>` to obtain a `List<T>`. `GetValues<T>` throws `InvalidOperationException` if the values are not of type `T`; `TryGetValues<T>` returns `false` in that case.
-- Single value: use `GetValue<T>` / `TryGetValue<T>` for single-valued fields. `GetValue<T>` throws `InvalidOperationException` if the value is not of type `T` or when there are multiple values available for that field descriptor; `TryGetValue<T>` returns `false`.
-- No value available: `GetValue<T>` returns `default(T)` (equivalent to an empty list for list types); `TryGetValue<T>` returns `false`; `GetValues<T>` returns `null`; `TryGetValues<T>` returns `false`.
+- **Multiple values**: Use `GetValues<T>`/`TryGetValues<T>` to obtain a `List<T>`. `GetValues<T>` throws `InvalidOperationException` if the values are not of type `T`; `TryGetValues<T>` returns `false` in that case.
+- **Single value**: Use `GetValue<T>`/`TryGetValue<T>` for single-valued fields. `GetValue<T>` throws `InvalidOperationException` if the value is not of type `T` or when there are multiple values available for that field descriptor; `TryGetValue<T>` returns `false`.
+- **No value**: `GetValue<T>` returns `default(T)` (equivalent to an empty list for list types). `TryGetValue<T>` returns `false`. `GetValues<T>` returns `null`. `TryGetValues<T>` returns `false`.
 
 > [!IMPORTANT]
-> Be aware that a `FieldDescriptor` ID should be unique across section definitions in a DOM module.
+> A `FieldDescriptor` ID must be unique across section definitions in a DOM module.
 
-**Example — Read selected fields:**
+##### Example: Reading selected fields
 
 ```csharp
 // Build a filter
@@ -272,7 +272,7 @@ foreach (var doc in results)
 }
 ```
 
-**Example — Read selected fields page by page:**
+##### Example: Reading selected fields page by page
 
 Similar to the read example, the selected fields can be used for a paged read. In the example, the default preferred page size of 500 items will be used, but a different page size can be set.
 
