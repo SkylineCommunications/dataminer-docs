@@ -20,7 +20,7 @@ Below you can find an overview of the different methods that can be used to depl
 | MSI Launcher (shared)    | x64       | No                | Yes                          |                | X [(7)](#fn_7) |
 | MSI CefSharp             | x86 + x64 | No                | Yes                          |                | X [(6)](#fn_6) |
 
-<a id="fn_1"></a>(1) "Launcher" is an alternative name for the [DataMiner Cube start window](xref:Using_the_desktop_app).<br>
+<a id="fn_1"></a>(1) "Launcher" is an alternative name for the [DataMiner Cube start window](xref:Managing_the_start_window).<br>
 <a id="fn_2"></a>(2) Updates from DMA only.<br>
 <a id="fn_3"></a>(3) Updates from DMA and dataminer.services (see [Managing the start window of the desktop app](xref:Managing_the_start_window)).<br>
 <a id="fn_4"></a>(4) XBAP will be phased out (due to Internet Explorer [end of life](https://docs.microsoft.com/en-us/lifecycle/announcements/internet-explorer-11-end-of-support) and known issues).<br>

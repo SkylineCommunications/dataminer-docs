@@ -3,7 +3,7 @@ uid: Installing_the_DataMiner_Cube_desktop_application
 description: Log on to dataminer.services, select 'Desktop installation' and run the downloaded file. Adjust the options if necessary, and click 'Install'.
 ---
 
-# Installing the DataMiner Cube desktop application
+# Installing DataMiner Cube
 
 > [!TIP]
 > Before you install DataMiner Cube, make sure the client machine meets the minimum requirements detailed in the [DataMiner Client Requirements](xref:DataMiner_Client_Requirements).

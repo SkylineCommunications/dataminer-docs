@@ -5,7 +5,7 @@ uid: Using_the_browser_app
 # Using the browser application
 
 > [!IMPORTANT]
-> The DataMiner Cube browser app reached *End of Life* as of DataMiner 10.3.x. While existing features will continue to function, some new features will only be supported in the DataMiner Cube desktop app. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41873 + 41844-->, the option to install the browser application (via XBAP upgrade packages) has been removed. We recommend using the [DataMiner Cube desktop app](xref:Using_the_desktop_app) instead.
+> The DataMiner Cube browser app reached *End of Life* as of DataMiner 10.3.x. While existing features will continue to function, some new features will only be supported in the DataMiner Cube desktop app. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41873 + 41844-->, the option to install the browser application (via XBAP upgrade packages) has been removed. We recommend using the [DataMiner Cube desktop app](xref:Connecting_to_a_DMA_with_Cube) instead.
 
 Up to DataMiner 10.5.2/10.4.0 [CU11]<!--RN 41844-->, it is possible to use DataMiner Cube as a browser app, but this is not recommended. In the past, Internet Explorer was used for this, but now you can use Microsoft Edge in IE compatibility mode (see [Configuring Microsoft Edge to run DataMiner Cube](xref:Configuring_Microsoft_edge_to_run_Cube)) or Chrome with the [IE Tab extension](https://chrome.google.com/webstore/detail/ie-tab/hehijbfgiekmjfkfjpbkbammjbdenadd).
 
@@ -25,6 +25,4 @@ https://[DMA]/dataminercube
 > - DataMiner Cube will automatically disconnect when the DMA to which you are connected goes offline.
 > - It is possible to connect to Cube using specific [URL arguments](xref:Options_for_opening_DataMiner_Cube).
 > - It is good practice to encode URLs according to the W3C guidelines. For more information, see <http://www.w3schools.com/tags/ref_urlencode.asp>.
-
-> [!CAUTION]
-> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly recommend using HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
+> - While the desktop version of DataMiner Cube runs as a 64-bit process on 64-bit systems and as a 32-bit process on 32-bit systems, the DataMiner Cube browser application always runs as a 32-bit process.

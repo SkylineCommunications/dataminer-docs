@@ -36,7 +36,7 @@ Expected duration: 20 minutes
 
 Now that you have deployed the DOM Editor to your DMA, you can use it to create a DOM definition:
 
-1. [Open DataMiner Cube](xref:Using_the_desktop_app) and go to *Apps* > *Automation*.
+1. [Open DataMiner Cube](xref:Connecting_to_a_DMA_with_Cube) and go to *Apps* > *Automation*.
 
 1. In the Automation module, search for a script called **DOM Editor** and select it.
 
