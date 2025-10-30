@@ -200,19 +200,19 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the ID that corresponds with the specified parameter name.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use a library with the mapping between parameter <see href="xref:Protocol.Params.Param.Description" >Description</see> and ID in your script instead.</note>
         /// </summary>
         /// <param name="name">The name of the parameter.</param>
         /// <returns>The ID that corresponds with the specified parameter name or -1 if the parameter was not found.</returns>
         /// <remarks>
         /// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
         /// </remarks>
-        [Obsolete("Use overloads with parameter ID instead of name.")]
+        [Obsolete("Use a library with the mapping between name and ID in your script instead.")]
         int FindParameterID(string name);
 
         /// <summary>
         /// Gets the ID that corresponds with the specified parameter name.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use a library with the mapping between parameter <see href="xref:Protocol.Params.Param.Description" >Description</see> and ID in your script instead.</note>
         /// </summary>
         /// <param name="name">The name of the parameter.</param>
         /// <param name="writeParam"><c>true</c> if the specified parameter is a write parameter; otherwise, <c>false</c>.</param>
@@ -220,7 +220,7 @@ namespace Skyline.DataMiner.Automation
         /// <remarks>
         /// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
         /// </remarks>
-        [Obsolete("Use overloads with parameter ID instead of name.")]
+        [Obsolete("Use a library with the mapping between name and ID in your script instead.")]
         int FindParameterID(string name, bool writeParam);
 
         /// <summary>
@@ -259,14 +259,14 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Gets the ID of the write parameter with the specified name.
-        /// <note>Please use instead an overload that takes the parameter ID to prevent issues in case the parameter <see href="xref:Protocol.Params.Param.Description">Description</see> changes.</note>
+        /// <note>Please use a library with the mapping between parameter <see href="xref:Protocol.Params.Param.Description" >Description</see> and ID in your script instead.</note>
         /// </summary>
         /// <param name="name">The name of the write parameter.</param>
         /// <returns>The ID of the write parameter with the specified name or -1 if the write parameter was not found.</returns>
         /// <remarks>
         /// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
         /// </remarks>
-        [Obsolete("Use overloads with parameter ID instead of name.")]
+        [Obsolete("Use a library with the mapping between name and ID in your script instead.")]
         int FindWriteParameterID(string name);
 
         /// <summary>
