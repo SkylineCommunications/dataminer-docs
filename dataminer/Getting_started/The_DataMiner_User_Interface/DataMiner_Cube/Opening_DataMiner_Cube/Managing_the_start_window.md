@@ -32,7 +32,7 @@ These are the main components of the start window UI:
 
    - **View logging**: Shows the logging for the DataMiner Cube start window.
 
-     This logging is also available in the following location on your computer: `%LocalAppData%\Skyline\DataMiner\DataMinerCube\Logs\logYYYYMMDD.txt`
+     This logging is also available in the following location on the client machine: `%LocalAppData%\Skyline\DataMiner\DataMinerCube\Logs\logYYYYMMDD.txt`
 
    - **About**: Shows version information for the start window.
 
