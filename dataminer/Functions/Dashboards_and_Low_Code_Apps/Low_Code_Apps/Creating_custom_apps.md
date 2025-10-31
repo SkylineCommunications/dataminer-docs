@@ -47,7 +47,7 @@ uid: Creating_custom_apps
 > Once an app has been published, it is not possible to revert it to a draft.
 
 > [!NOTE]
-> When you close a draft app you have been working on, it is saved automatically. As such, if you do not want to publish your app immediately, you can just close it to save it as a draft. However, draft apps are not shown by default on the landing page. To view them, click the cogwheel button and activate *Show draft applications*.
+> When you close a draft app you have been working on, it is saved automatically. As such, if you do not want to publish your app immediately, you can just close it to save it as a draft. However, draft apps are not shown by default on the landing page. To view them, enable the *Show drafts* toggle next to the search bar. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43966-->,click the cogwheel button and activate *Show draft applications*.
 
 > [!TIP]
 > See also: [Tutorials - Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing)
@@ -67,7 +67,7 @@ From DataMiner 10.3.0 [CU10]/10.4.1 onwards<!-- RN 37698+37724 -->, it is possib
 
 The most recently published app version will now be duplicated. If the app has not yet been published, its draft version will be duplicated instead.
 
-The newly created duplicate will be assigned a unique name and will automatically be opened in a new browser tab. On the root page, this landing app will be added to the list if the *Show draft applications* option is enabled.
+The newly created duplicate will be assigned a unique name and will automatically be opened in a new browser tab. On the root page, this landing app will be added to the list if the *Show drafts* or *Show draft applications* option (depending on your DataMiner version<!--RN 43966-->) is enabled.
 
 ### Duplicating an app from the app page itself
 
