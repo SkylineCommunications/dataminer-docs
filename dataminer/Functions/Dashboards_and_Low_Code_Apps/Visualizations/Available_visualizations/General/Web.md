@@ -28,7 +28,7 @@ The web component supports two main types of content:
 
 - **Webpages**: Display any accessible webpage by providing its URL. The component will render the page content within an embedded frame.
 
-- **Custom HTML**: Render HTML content directly in the component, allowing for custom layouts, styling, and formatting.
+- **Custom HTML**: Render HTML content directly in the component, for example to add a custom layout or styling.
 
 > [!NOTE]
 > From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38993-->, you can [dynamically reference data](xref:Dynamically_Referencing_Data_in_Text) in URLs to create data-driven web content. The URL is limited to 2,000 characters and HTML code to 100,000 characters.
@@ -44,9 +44,9 @@ You can configure the web component to display a video stream based on an image 
 You can display YouTube livestreams or other online videos by using their embed links:
 
 1. Open the video on the streaming platform.
-2. Select *Share* > *Embed*.
-3. Copy the URL from the `src` property of the embed code.
-4. Use this URL in the web component configuration.
+1. Select *Share* > *Embed*.
+1. Copy the URL from the `src` property of the embed code.
+1. Use this URL in the web component configuration.
 
 **Example**: `https://www.youtube.com/embed/0FBiyFpV__g?si=WUgPIJUk2s_Wzfy8`
 
@@ -60,17 +60,17 @@ When you need to embed local resources (files hosted on your DataMiner Agent) in
 
 There are two key things to keep in mind when referencing local resources:
 
-- **Public folder requirement**: Local resources are not accessible over dataminer.services unless they're in the public folder. All other local resources are blocked for security reasons. Note that all resources in the public folder are accessible to all users.
+- **Public folder requirement**: Local resources are not accessible over dataminer.services unless they are in the DMA's `C:\Skyline DataMiner\Webpages\public` folder. All other local resources are blocked for security reasons. Note that all resources in this folder are accessible to all users.
 
-- **Relative URL usage**: Your URL should be a relative URL so that for both local and remote access (which have different URLs), the resource can be accessed consistently.
+- **Relative URL usage**: Your URL should be a relative URL, so that for both local and remote access (which use different URLs), the resource can be accessed consistently.
 
 ### Best practices
 
-- **Store files in the public directory**: Place your local HTML files, images, and other resources in the DMA's `Webpages/public/` folder or its subfolders to ensure they are accessible both locally and via dataminer.services.
+- **Store files in the public directory**: Place your local HTML files, images, and other resources in the DMA's `C:\Skyline DataMiner\Webpages\public` folder or its subfolders to ensure that they are accessible both locally and via dataminer.services.
 
 - **Use relative paths**: Instead of absolute URLs, use relative paths like `./folder/file.html` or `../resources/page.html` to ensure compatibility across different access methods.
 
-- **Consider sandboxing**: When referencing local resources in the public folder, you can disable sandboxing in the component settings if absolutely necessary, but only do so when required as it reduces browser security.
+- **Consider sandboxing**: When referencing local resources in the `public` folder, you can disable sandboxing in the component settings if absolutely necessary, but only do so when required, as it reduces browser security.
 
 ## Configuration options
 
