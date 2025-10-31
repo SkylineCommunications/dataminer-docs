@@ -29,21 +29,25 @@ These are the most important things to keep in mind:
 
 1. Clone the repository *Custom Solutions/Generic/Skyline.DataMiner.Core/DataMinerSystem*.
 
-    >[!NOTE]
-    > If you are working remotely and the clone takes longer than 15 minutes, please ask the BOOST team for assistance (by sending an email to [support.boost@skyline.be](mailto:support.boost@skyline.be)).
+   >[!NOTE]
+   > If you are working remotely and the clone takes longer than 15 minutes, please ask the BOOST team for assistance (by sending an email to [support.boost@skyline.be](mailto:support.boost@skyline.be)).
 
 1. Select the master branch you want to start with.
 
 1. Make a new branch: gerrit/DCPxxxx_subject (or dev/DCPxxxx if you are not using Gerrit).
 
-1. Optional: Update Jenkinsfile to skip integration tests step. During development, it can be useful to skip the integration tests to reduce the execution time of the pipeline. The Jenkins pipeline of the class library is configured to execute the Jenkinsfile present in the repository. There is also another file present: JenkinsFileNoIntegration. To skip the integration tests, copy the content of the JenkinsFileNoIntegration to the JenkinsFile. Note: After development, be sure to put the Jenkinsfile again to its original content.
+1. Optionally, update the Jenkinsfile to skip the integration tests step.
+
+   During development, it can be useful to skip the integration tests to reduce the execution time of the pipeline. The Jenkins pipeline of the class library is configured to execute the Jenkinsfile present in the repository. There is also another file present: JenkinsFileNoIntegration. To skip the integration tests, copy the content of the JenkinsFileNoIntegration to the JenkinsFile.
+
+   Note: After development, be sure to place back the original content in the Jenkinsfile.
 
 1. Commit these changes and push them.
 
 1. Wait until SonarQube is finished, then open the *Issues* tab and bulk edit everything as "won't fix".
 
-    > [!NOTE]
-    > You may find 20 or so code smells that were not fixed, but these can be ignored. All new issues reported in SonarQube from now on will be related to your changes specifically.
+   > [!NOTE]
+   > You may find 20 or so code smells that were not fixed, but these can be ignored. All new issues reported in SonarQube from now on will be related to your changes specifically.
 
 1. If your branch introduces a new minimum required DataMiner version, configure the corresponding version of the `Skyline.DataMiner.Dev.*` NuGet packages.
 
@@ -53,11 +57,11 @@ These are the most important things to keep in mind:
 
 1. When you are ready:
 
-    1. Do a Gerrit push for code review, or just do a push in case you are not using Gerrit.
+   1. Do a Gerrit push for code review, or just do a push in case you are not using Gerrit.
 
-    1. Assign the task to the Data Acquisition user, with the task status *Code Review* and with the *Tools* tag added.
+   1. Assign the task to the Data Acquisition user, with the task status *Code Review* and with the *Tools* tag added.
 
-    1. Send an email to [support.data-acquisition@skyline.be](mailto:support.data-acquisition@skyline.be) mentioning that you added something and in which branch this was done.
+   1. Send an email to [support.data-acquisition@skyline.be](mailto:support.data-acquisition@skyline.be) mentioning that you added something and in which branch this was done.
 
 > [!TIP]
 > At this point, if you already want to use a beta package of your new class library version (and possibly even release your protocols with it), Under the SLC internal Nuget store, you will also be able to find a NuGet of your class library branch for use instead of the DIS code generation.
