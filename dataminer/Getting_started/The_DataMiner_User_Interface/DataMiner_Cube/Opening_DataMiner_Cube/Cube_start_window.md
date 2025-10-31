@@ -71,6 +71,7 @@ From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 41203-->, you can
 
 > [!NOTE]
 > The garbage can icon becomes visible only after you grab a tile or group and begin dragging it.
+
 ## Changing the name shown for a DMS
 
 To change the name shown on a tile representing a DMS:
@@ -121,6 +122,7 @@ From DataMiner 10.2.6/10.3.0 onwards, you can configure whether Cube should conn
 
 > [!NOTE]
 > From DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 onwards<!--RN 42716-->, if you select *HTTP or HTTPS*, Cube will send both an HTTP request and an HTTPS request in parallel, each with a timeout of 60 seconds. The first successful response will be used, and the other request will be canceled. If the first response is not successful, Cube will fall back on the other request. In earlier versions, Cube will first send an HTTP request with a default timeout of 100 seconds. If that request fails, it will then send an HTTPS request.
+
 ## Filtering the displayed tiles
 
 To filter the tiles in the start window:
