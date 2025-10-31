@@ -98,7 +98,7 @@ From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, you can
 
 1. Add the argument `?showAdvancedSettings=true` to the landing page URL.
 
-1. Click the cogwheel button in the top-right corner of the page.
+1. Click the user button in the top-right corner of the page and select *User settings*. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43966-->, click the cogwheel button in the top-right corner of the page.
 
 1. Select one of the available themes:
 
