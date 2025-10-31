@@ -14,7 +14,7 @@ You can follow the steps below or watch this short video, which shows you how to
   </video>
 </div>
 
-1. [Open DataMiner Cube](xref:Using_the_desktop_app).
+1. [Open DataMiner Cube](xref:Connecting_to_a_DMA_with_Cube).
 
 1. Right-click an item in the Surveyor, and select *New \> Element*.
 
