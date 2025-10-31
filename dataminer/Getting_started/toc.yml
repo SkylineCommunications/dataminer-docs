@@ -81,10 +81,10 @@ items:
       - name: Connecting to a DataMiner Agent with Cube
         topicUid: Connecting_to_a_DMA_with_Cube
         items:
-          - name: Logging on to DataMiner Cube
-            topicUid: Logging_on_to_DataMiner_Cube
           - name: The Cube start window
             topicUid: Cube_start_window
+          - name: Logging on to DataMiner Cube
+            topicUid: Logging_on_to_DataMiner_Cube
           - name: Overriding the default connection type
             topicUid: Overriding_Cube_connection_type
           - name: Arguments for DataMiner Cube
