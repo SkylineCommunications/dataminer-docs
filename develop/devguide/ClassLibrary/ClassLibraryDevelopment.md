@@ -25,9 +25,9 @@ These are the most important things to keep in mind:
 
 ## Contribution workflow
 
-1. Make a new task if one does not exist yet under the *SLC-SE-Class Library* project. You can set the type to *Consultancy*.
+1. Make a new task if one does not exist yet under the *SLC-SE-System Development Library* project. You can set the type to *New Feature*.
 
-1. Clone the repo *Custom Solutions/Generic/Skyline.DataMiner.Core/DataMinerSystem*.
+1. Clone the repository *Custom Solutions/Generic/Skyline.DataMiner.Core/DataMinerSystem*.
 
     >[!NOTE]
     > If you are working remotely and the clone takes longer than 15 minutes, please ask the BOOST team for assistance (by sending an email to [support.boost@skyline.be](mailto:support.boost@skyline.be)).
@@ -36,7 +36,7 @@ These are the most important things to keep in mind:
 
 1. Make a new branch: gerrit/DCPxxxx_subject (or dev/DCPxxxx if you are not using Gerrit).
 
-1. In a text editor, change the Jenkins file from *jenkins.groovy* to *jenkinsNoIntegration.groovy*.
+1. Optional: Update Jenkinsfile to skip integration tests step. During development, it can be useful to skip the integration tests to reduce the execution time of the pipeline. The Jenkins pipeline of the class library is configured to execute the Jenkinsfile present in the repository. There is also another file present: JenkinsFileNoIntegration. To skip the integration tests, copy the content of the JenkinsFileNoIntegration to the JenkinsFile. Note: After development, be sure to put the Jenkinsfile again to its original content.
 
 1. Commit these changes and push them.
 
