@@ -66,6 +66,8 @@ items:
         items:
           - name: Installing DataMiner Cube
             topicUid: Installing_the_DataMiner_Cube_desktop_application
+          - name: Upgrading DataMiner Cube
+            topicUid: Upgrading_Cube
           - name: Cleaning up the DataMiner Cube cache
             topicUid: Cleaning_up_the_DataMiner_Cube_desktop_app_cache
           - name: Uninstalling DataMiner Cube
@@ -82,7 +84,7 @@ items:
           - name: Logging on to DataMiner Cube
             topicUid: Logging_on_to_DataMiner_Cube
           - name: The Cube start window
-            topicUid: Managing_the_start_window
+            topicUid: Cube_start_window
           - name: Overriding the default connection type
             topicUid: Overriding_Cube_connection_type
           - name: Arguments for DataMiner Cube

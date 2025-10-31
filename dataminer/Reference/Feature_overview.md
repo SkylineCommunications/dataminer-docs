@@ -8,7 +8,7 @@ Below you can find an overview of the main features that have been added to Data
 
 > [!NOTE]
 >
-> - From DataMiner 10.2.0 [CU3]/10.2.6 onwards, **Cube** can automatically be upgraded to the latest version if [automatic updates are enabled](xref:DMA_configuration_related_to_client_applications#managing-client-versions), and depending on the selected [Cube update track](xref:Managing_the_start_window#selecting-your-cube-update-track) and on the [deployment method](xref:DataMiner_Cube_deployment_methods). This way you can have access to the latest Cube features even if you still use an older DataMiner version on the server.
+> - From DataMiner 10.2.0 [CU3]/10.2.6 onwards, **Cube** can automatically be upgraded to the latest version if [automatic updates are enabled](xref:DMA_configuration_related_to_client_applications#managing-client-versions), and depending on the selected [Cube update track](xref:Upgrading_Cube#selecting-your-cube-update-track) and on the [deployment method](xref:DataMiner_Cube_deployment_methods). This way you can have access to the latest Cube features even if you still use an older DataMiner version on the server.
 > - For many DataMiner **web apps** features, from DataMiner 10.3.0/10.3.3 onwards, it is sufficient to [upgrade the web apps only](xref:Upgrading_Downgrading_Webapps). However, to upgrade to a 10.5.x version of the web apps, the server must first be upgraded to at least version 10.4.0/10.4.1. If other server limitations apply, these are listed below.
 
 |Feature | Minimum required version(s) |
