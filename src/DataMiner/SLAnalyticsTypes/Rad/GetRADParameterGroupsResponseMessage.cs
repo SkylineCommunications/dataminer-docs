@@ -18,7 +18,6 @@ namespace Skyline.DataMiner.Analytics.Rad
         /// <summary>
         /// Returns a string that represents the current message.
         /// </summary>
-        /// <returns>A string that represents the current message.</returns>
         public override string ToString()
         {
             return string.Empty;
