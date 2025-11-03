@@ -458,9 +458,9 @@ If you click such a button, a temporary C# project will be created, containing t
 
 When working in the XML editor, you will notice so-called "virtual comments" next to certain XML tags. They are called "virtual" because they cannot be found in the protocol XML file itself.
 
-In the following, there are "virtual comments" next to the referenced parameters. They contain the names found in the *\<Description>* tags of those parameters.
+In the following example, there are "virtual comments" next to the referenced parameters. They contain the names found in the `<Description>` tags of those parameters.
 
-For example, next to *\<Param>30\</Param>*, you can see *\<!-- System Table -->* because, in the parameter definition, the *\<Description>* tag contains "System Table".
+For example, next to `<Param>30</Param>`, you can see `<!-- System Table -->` because, in the parameter definition, the `<Description>` tag contains "System Table".
 
 ```xml
 <Group id="2">
@@ -485,5 +485,4 @@ For example, next to *\<Param>30\</Param>*, you can see *\<!-- System Table -->*
 ```
 
 > [!NOTE]
-> If you do not want virtual comments to appear, you can turn them off.
-> See [Interface](xref:DIS_settings#interface)
+> If you do not want virtual comments to appear, you can turn them off. See [Interface](xref:DIS_settings#interface).
