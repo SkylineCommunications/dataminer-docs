@@ -5,13 +5,9 @@ keywords: cloud faq
 
 # Frequently asked questions related to DaaS
 
-### Where can I find information about DataMiner credits?
+### How can I create a new DaaS system?
 
-For details about what DataMiner credits are, how they are used, and how to acquire more, see the [Pricing FAQ](xref:FAQs_Pricing).
-
-### When does maintenance take place on a DaaS system?
-
-See [DaaS Planned Maintenance Policy](xref:DaaS_Planned_Maintenance_Policy).
+Follow the instructions under [Creating a new DMS on dataminer.services](xref:Creating_a_DMS_on_dataminer_services).
 
 ### Can I try out DaaS for free?
 
@@ -19,6 +15,14 @@ When [creating a new organization](xref:Creating_an_organization) you can try ou
 
 > [!NOTE]
 > You will receive an email notification before your system’s expiration date, including a link to this FAQ for more information.
+
+### Where can I find information about DataMiner credits?
+
+For details about what DataMiner credits are, how they are used, and how to acquire more, see the [Pricing FAQ](xref:FAQs_Pricing).
+
+### When does maintenance take place on a DaaS system?
+
+See [DaaS Planned Maintenance Policy](xref:DaaS_Planned_Maintenance_Policy).
 
 ### How can I manually delete my DaaS system?
 
@@ -35,10 +39,6 @@ To recover the system, contact [daas@dataminer.services](mailto:daas@dataminer.s
 
 > [!NOTE]
 > If you are an owner of the organization of a DaaS system or an owner of a DaaS system, you will get an email notification if your system is about to expire. Another email notification will be sent when the system effectively expires.
-
-### How can I create a new DaaS system?
-
-Follow the instructions under [Creating a new DMS on dataminer.services](xref:Creating_a_DMS_on_dataminer_services).
 
 ### What is the expected availability of a DaaS system?
 
