@@ -173,7 +173,7 @@ To group items on the timeline based on one of the columns in your data<!--35638
    All groups are now displayed in a gray column to the left of the timeline<!--RN 33694-->. The timeline items are displayed next to the group they are part of.
 
    > [!IMPORTANT]
-   > When grouping is enabled, the timeline automatically adds a sort operator to the query based on the grouping field. This lets the timeline load groups and their items gradually as the user scrolls. If an ad hoc data source implements IGQIOptimizable, make sure the returned groups and their items follow the expected sort order (all items within the same group are returned after each other). Otherwise some items may only appear after all groups have been scrolled.
+   > When grouping is enabled, the timeline automatically adds a sort operator to the query based on the grouping field. This lets the timeline load groups and their items gradually as the user scrolls. If an [ad hoc data source](xref:GQI_Ad_hoc_data_sources) implements [IGQIOptimizableDataSource](xref:GQI_IGQIOptimizableDataSource), make sure the returned groups and their items follow the expected sort order (all items within the same group are returned after each other). Otherwise, some items may only appear after all groups have been scrolled through. For more information, refer to [GQI extensions](xref:GQI_Extensions).
 
    > [!NOTE]
    > If a group is empty (i.e. there is no start and end time), it is still displayed in the timeline component<!--RN 35600-->.
