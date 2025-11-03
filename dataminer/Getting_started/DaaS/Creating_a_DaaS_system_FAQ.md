@@ -11,24 +11,24 @@ Follow the instructions under [Creating a new DMS on dataminer.services](xref:Cr
 
 ### Can I try out DaaS for free?
 
-When [creating a new organization](xref:Creating_an_organization) you can try out a DataMiner Community Edition DaaS for free. This system will expire after one week. Once this expiry date is reached, the system will automatically be removed unless it is upgraded beforehand. To upgrade your trial system to a regular DataMiner Community Edition DaaS, contact <support@dataminer.services>. If you would like an extended trial period, contact <sales@skyline.be>.
+If you [create a new organization](xref:Creating_an_organization), you can try out a DataMiner Community Edition DaaS system for free. This trial system will expire after **one week**. Once this expiration date is reached, the system will automatically be removed unless it is upgraded beforehand.
+
+To **upgrade** your trial system to a regular DataMiner Community Edition DaaS system, please contact <support@dataminer.services>.
+
+If you would like an **extended trial period**, please contact <sales@skyline.be>.
 
 > [!NOTE]
-> You will receive an email notification before your system’s expiration date, including a link to this FAQ for more information.
+> If you are an owner of the organization of a DaaS system or an owner of a DaaS system, you will get an email notification if your system is about to expire. Another email notification will be sent when the system effectively expires.
 
 ### Where can I find information about DataMiner credits?
 
-For details about what DataMiner credits are, how they are used, and how to acquire more, see the [Pricing FAQ](xref:FAQs_Pricing).
-
-### When does maintenance take place on a DaaS system?
-
-See [DaaS Planned Maintenance Policy](xref:DaaS_Planned_Maintenance_Policy).
+For details about what DataMiner credits are, how they are used, and how to acquire more, refer to the [Pricing FAQ](xref:FAQs_Pricing).
 
 ### How can I manually delete my DaaS system?
 
 You can delete your DaaS system at any time before its expiration. See [Removing a DaaS system](xref:Removing_a_DaaS_system).
 
-### What happens when my DaaS system expires or is deleted?
+### Can a deleted or expired DaaS system still be recovered?
 
 When your DaaS system expires or is deleted, the system and all associated resources and data will be decommissioned. However, the system can still be recovered within a limited grace period:
 
@@ -37,8 +37,9 @@ When your DaaS system expires or is deleted, the system and all associated resou
 
 To recover the system, contact [daas@dataminer.services](mailto:daas@dataminer.services).
 
-> [!NOTE]
-> If you are an owner of the organization of a DaaS system or an owner of a DaaS system, you will get an email notification if your system is about to expire. Another email notification will be sent when the system effectively expires.
+### When does maintenance take place on a DaaS system?
+
+See [DaaS Planned Maintenance Policy](xref:DaaS_Planned_Maintenance_Policy).
 
 ### What is the expected availability of a DaaS system?
 
@@ -81,7 +82,7 @@ You can use the DataMiner API to copy data from Azure at no additional subscript
 
 ### How can a DaaS system connect to on-premises and cloud resources?
 
-For more information, see [Connecting to data sources using a DaaS system](xref:DaaS_connecting_to_data_sources)
+See [Connecting to data sources using a DaaS system](xref:DaaS_connecting_to_data_sources).
 
 ### Can DaaS use custom DNS servers?
 

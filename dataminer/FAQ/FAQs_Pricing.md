@@ -88,8 +88,6 @@ The DataMiner credit balance of an organization is displayed in the [Admin app](
 
 ### How can I acquire more DataMiner credits?
 
-You can order DataMiner credits through the Azure Marketplace. See [Order DataMiner credits](xref:Order_DataMiner_credits).
+You can order DataMiner credits through the Azure Marketplace. See [Ordering DataMiner credits](xref:Order_DataMiner_credits).
 
 For more information, contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
-
----
