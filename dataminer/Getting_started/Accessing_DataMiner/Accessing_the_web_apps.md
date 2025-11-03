@@ -67,13 +67,13 @@ The landing page header bar contains the following items, from left to right:
 
     - The `?showAdvancedSettings=true` argument has been added to the landing page URL.
 
-    - The user is allowed to change their password:
+    - You are able to change your password:
 
-      - In *System Center* > *Users*, the user's *User cannot change password* setting must be disabled.
+      - In *System Center* > *Users*, the setting *User cannot change password* is disabled for your account.
 
-      - The user must have the [*Modules* > *System configuration* > *Security* > *Specific* > *Limited administrator* permission](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator).
+      - You have the [*Modules* > *System configuration* > *Security* > *Specific* > *Limited administrator* permission](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator).
 
-      - The user must not be logged in with external or delegated authentication.
+      - You are not logged in with external or delegated authentication.
 
   - *Sign out*: Logs you out and returns you to the logon screen.
 
