@@ -60,15 +60,15 @@ When you opened the Profiles or Resources app, in some cases, an incorrect excep
 
 In some cases, the diagram would not show the selected value when the first field was a text field.
 
-Also, when you opened a drop-down field, in some cases, the fields would close again, making it impossible to select a value.
+Also, when you opened a dropdown field, in some cases, the fields would close again, making it impossible to select a value.
 
 #### DataMiner state saved in connection and in event cache not in sync \[ID 26928\]
 
 In some cases, it could occur that the DataMiner state saved on the connection and in the event cache were not in sync, which could cause various issues. For example, it could be impossible to delete a ticketing resolver.
 
-#### DataMiner Cube desktop app installation drop-down box not displayed correctly on landing page on small screen \[ID 26934\]
+#### DataMiner Cube desktop app installation dropdown box not displayed correctly on landing page on small screen \[ID 26934\]
 
-On the DataMiner landing page, the drop-down box that allows you to install the desktop DataMiner Cube app was not displayed correctly if the screen was too small. Since the DataMiner Cube desktop app can only be installed on PCs with a relatively large screen, on small screens this drop-down box will no longer be displayed.
+On the DataMiner landing page, the dropdown box that allows you to install the desktop DataMiner Cube app was not displayed correctly if the screen was too small. Since the DataMiner Cube desktop app can only be installed on PCs with a relatively large screen, on small screens this dropdown box will no longer be displayed.
 
 #### DataMiner Cube: Text displayed incorrectly in mixed DPI environment \[ID 26937\]
 
@@ -314,9 +314,9 @@ In some cases, a KeyNotFound exception could be thrown when you opened a ListVie
 
 In some cases, an error could occur in SLDataMiner at startup when no NICs could be found.
 
-#### Jobs app: Empty drop-down boxes when creating/editing job \[ID 27810\]
+#### Jobs app: Empty dropdown boxes when creating/editing job \[ID 27810\]
 
-When a job was created or edited in the Jobs app, it could occur that no items were displayed in drop-down boxes.
+When a job was created or edited in the Jobs app, it could occur that no items were displayed in dropdown boxes.
 
 #### SLAnalytics: Problem when opening a trend graph on a system using pattern matching \[ID 27829\]
 

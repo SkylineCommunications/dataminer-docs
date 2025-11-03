@@ -79,7 +79,7 @@ Also, apart from the *Left mouse button action on graph* and *Right mouse button
 
 In an alarm template, it is now possible to configure monitoring conditions that check whether a parameter value is equal or not equal to “Not Initialized”.
 
-A drop-down box now allows you to choose between “Value” (default) and “Not initialized”. Note that, when you choose “Value” and enter a parameter value, that value will not be cleared when you later select “Not initialized”.
+A dropdown box now allows you to choose between “Value” (default) and “Not initialized”. Note that, when you choose “Value” and enter a parameter value, that value will not be cleared when you later select “Not initialized”.
 
 #### Alarm Console: Special Indexing Engine search tab is now available without enabling the 'System configuration \> Indexing Engine \> UI Available' user permission \[ID 25429\]
 

@@ -28,12 +28,12 @@ To do so:
    > [!NOTE]
    > - When you add a sound file, it is placed in the folder `C:\Skyline DataMiner\Sounds`.
    > - The following file extensions are supported: ".asf", ".wmv", ".wm", ".asx", ".wax", ".wvx", ".wmx", ".wpl", ".wmd", ".mpg", ".m1v", ".mp2", ".mp3", ".mpa", ".mpe", ".m3u", ".mid", ".midi", ".rmi", ".aif", ".aifc", ".aiff", ".au", ".snd", ".wav", ".cda", ".ivf", ".wmz", ".wms".
-   > - You can also delete an audio file in the drop-down list, by hovering the mouse pointer over the file and then clicking the *X*.
+   > - You can also delete an audio file in the dropdown list, by hovering the mouse pointer over the file and then clicking the *X*.
    > - If you add, update or delete a sound file, an information event is generated. If a sound is updated or deleted, a recycle bin entry is generated.
 
-1. When you have selected a sound file, optionally check what it sounds like by clicking the button to the right of the *Audio file* drop-down list. The same button can then be used to stop the sound again.
+1. When you have selected a sound file, optionally check what it sounds like by clicking the button to the right of the *Audio file* dropdown list. The same button can then be used to stop the sound again.
 
-1. Below the *Audio file* drop-down list, you can select the following options:
+1. Below the *Audio file* dropdown list, you can select the following options:
 
    - *Repeat*: If you select this option, the audio file will be repeated.
 

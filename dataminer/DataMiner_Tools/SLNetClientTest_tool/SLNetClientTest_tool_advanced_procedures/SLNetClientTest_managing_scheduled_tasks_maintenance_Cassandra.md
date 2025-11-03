@@ -12,7 +12,7 @@ To send such a message:
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-1. In the *Message Type* drop-down list, select one of the following messages:
+1. In the *Message Type* dropdown list, select one of the following messages:
 
    - *GetMaintenanceTaskRequest*: Retrieves a list of the maintenance tasks for the specified DMA(s).
 

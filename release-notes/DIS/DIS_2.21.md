@@ -16,8 +16,8 @@ In the *DMA* tab of the *DIS Settings* window, it is now possible to configure m
 
 After having configured a number of DMA connections in the *DMA* tab of the *DIS Settings* window, you can set one of them as default connection by right-clicking it and selecting *Set as Default*.
 
-- To publish a protocol or an Automation script to the default DMA, at the top of the XML editor, click the *Publish* button. To publish a protocol or an Automation script to a non-default DMA, at the top of the XML editor, click the drop-down button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
-- When, in the *DIS Inject* tool window, you want to connect to the default DMA, click the *Connect* button. When, in the *DIS Inject* tool window, you want to connect to a non-default DMA, click the drop-down button at the right of the *Connect* button, and click the DMA to which you want to connect.
+- To publish a protocol or an Automation script to the default DMA, at the top of the XML editor, click the *Publish* button. To publish a protocol or an Automation script to a non-default DMA, at the top of the XML editor, click the dropdown button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
+- When, in the *DIS Inject* tool window, you want to connect to the default DMA, click the *Connect* button. When, in the *DIS Inject* tool window, you want to connect to a non-default DMA, click the dropdown button at the right of the *Connect* button, and click the DMA to which you want to connect.
 
 > [!NOTE]
 > The title of the *DIS Inject* tool window now includes the name of the DMA to which DIS is connected (between brackets). When DIS is not connected to any DMA, the tool window title will include “(not connected)”.

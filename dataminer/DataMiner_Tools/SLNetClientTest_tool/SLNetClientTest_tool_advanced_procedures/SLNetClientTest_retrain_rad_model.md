@@ -13,7 +13,7 @@ In some cases, it can be useful to retrain the internal model used by [relationa
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-1. In the *Message Type* drop-down list, select the message *Skyline.DataMiner.Analytics.Rad.RetrainRADModelMessage*.
+1. In the *Message Type* dropdown list, select the message *Skyline.DataMiner.Analytics.Rad.RetrainRADModelMessage*.
 
    > [!NOTE]
    > Prior to DataMiner 10.5.5/10.6.0<!--RN 42480-->, the message is called "*Skyline.DataMiner.Analytics.MAD.RetrainMADModelMessage*" instead. In this message, "MAD" stands for "multivariate anomaly detection", which is another name for RAD.

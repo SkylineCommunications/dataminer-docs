@@ -125,9 +125,9 @@ The following example illustrates how you can create a slider with a checkbox.
 
 ![DataMiner Cube slider with checkbox](~/develop/images/uisliderwithcheckbox.png)
 
-## Creating a slider with a drop-down List
+## Creating a slider with a dropdown List
 
-If you provide multiple discrete entries with state "disabled", a drop-down list is shown, as illustrated in the following example:
+If you provide multiple discrete entries with state "disabled", a dropdown list is shown, as illustrated in the following example:
 
 ```xml
 <Param id="174">
@@ -195,7 +195,7 @@ If you provide multiple discrete entries with state "disabled", a drop-down list
 </Param>
 ```
 
-![DataMiner Cube slider with drop-down list](~/develop/images/uisliderwithcheckbox2.png)
+![DataMiner Cube slider with dropdown list](~/develop/images/uisliderwithcheckbox2.png)
 
 ## See also
 

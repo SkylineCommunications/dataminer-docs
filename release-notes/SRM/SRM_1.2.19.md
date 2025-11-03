@@ -24,7 +24,7 @@ It is now possible to duplicate and save bookings with unmapped resources. These
 
 A new script, *SRM_ApplyProfileToResource*, is now available. This script allows you to apply a profile configuration to a resource without creating a booking. The script requires a single resource ID as its input.
 
-The script allows you to select the full configuration for the resource. You can select a profile for the resource as well as for the interfaces. You can apply a state transition by selecting a profile instance that has state profiles configured, selecting the *State Transition* checkbox, and selecting the corresponding state in a drop-down box. To combine profiles and state profile data, you should select the *Full Config* checkbox, which only becomes available if *State Transition* is selected.
+The script allows you to select the full configuration for the resource. You can select a profile for the resource as well as for the interfaces. You can apply a state transition by selecting a profile instance that has state profiles configured, selecting the *State Transition* checkbox, and selecting the corresponding state in a dropdown box. To combine profiles and state profile data, you should select the *Full Config* checkbox, which only becomes available if *State Transition* is selected.
 
 When a configuration is applied, this can affect existing bookings. The script will therefore first display a window with the ongoing bookings before you can confirm the configuration change.
 
@@ -62,9 +62,9 @@ It is now possible to add any type of resource to a booking using the *AssignRes
 
 #### Selection of unmapped resources based on function or pool during booking creation \[ID 30902\]
 
-When you create a booking with unmapped resources (i.e. resources that are not mapped to a service definition node), a *selection type* drop-down box is now available, which allows you to indicate whether you want to select a resource based on a function or based on a pool.
+When you create a booking with unmapped resources (i.e. resources that are not mapped to a service definition node), a *selection type* dropdown box is now available, which allows you to indicate whether you want to select a resource based on a function or based on a pool.
 
-If you select *Function* in the drop-down box, you will then be able to select the function and the profile instance for the function and interfaces. Finally, the selectable resources will be filtered based on the capacities and capabilities of the selected profile instance(s).
+If you select *Function* in the dropdown box, you will then be able to select the function and the profile instance for the function and interfaces. Finally, the selectable resources will be filtered based on the capacities and capabilities of the selected profile instance(s).
 
 If you select *Pool*, you can then select the pool and select a resource from this pool.
 

@@ -12,7 +12,7 @@ If necessary, you can change the duration of this grace period using the SLNetCl
 
 1. Go to *Advanced* > *Options* > *SLNet Options*.
 
-1. In the drop-down box, select *SLNetCOMNotificationsStackExceedsThresholdGracePeriodInMin*.
+1. In the dropdown box, select *SLNetCOMNotificationsStackExceedsThresholdGracePeriodInMin*.
 
 1. Right- click the DMA for which you want to edit the grace period and select *Edit value*.
 

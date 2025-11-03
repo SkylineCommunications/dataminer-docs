@@ -102,9 +102,9 @@ When, in *System Center*, you go to *Logging \> DataMiner*, you can now inspect 
 - SLSRMSettableServiceStateManager.txt
 - SLVisualManager.txt
 
-#### Ticketing app: Tickets can now be filtered on fields of type 'drop-down list' \[ID 33370\]
+#### Ticketing app: Tickets can now be filtered on fields of type 'dropdown list' \[ID 33370\]
 
-In the Ticketing app, tickets can now also be filtered on fields of type “drop-down list”.
+In the Ticketing app, tickets can now also be filtered on fields of type “dropdown list”.
 
 #### VerifyClusterPorts.dmupgrade package can no longer be run on a single DMA \[ID 33429\]
 

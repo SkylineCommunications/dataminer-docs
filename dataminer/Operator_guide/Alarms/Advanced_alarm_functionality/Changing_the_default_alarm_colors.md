@@ -22,7 +22,7 @@ In the *DataMiner.xml* file, you can specify the colors you want to assign to ea
 
    1. Go to the *Tools* tab and select *synchronization*.
 
-   1. In the drop-down list next to *Type*, select *File*.
+   1. In the dropdown list next to *Type*, select *File*.
 
    1. In the *File* box, specify the following path: `C:\Skyline DataMiner\DataMiner.xml`.
 

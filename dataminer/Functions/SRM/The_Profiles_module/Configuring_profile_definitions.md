@@ -18,7 +18,7 @@ In the configuration pane, you can configure a selected profile definition as fo
 
   1. In the *General* section, next to *Based on*, click *Add*.
 
-  1. In the drop-down list, select the relevant definition, and then click *Add*.
+  1. In the dropdown list, select the relevant definition, and then click *Add*.
 
      The parameters of the added definition will be added to the definition you are configuring.
 
@@ -35,7 +35,7 @@ In the configuration pane, you can configure a selected profile definition as fo
 
   1. Next to *Remarks*, optionally add additional information about the script.
 
-  1. Next to *Script*, select the script from the drop-down list with existing Automation scripts.
+  1. Next to *Script*, select the script from the dropdown list with existing Automation scripts.
 
   1. Click *OK*.
 

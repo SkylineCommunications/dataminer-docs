@@ -341,9 +341,9 @@ When you added a SET action to an Automation script and then changed it to a GET
 
 #### DataMiner Cube - Protocols & Templates: Problem when trying to select another protocol version in the 'List based on protocol version' box \[ID 24499\]
 
-If an information template is based on an older protocol version that does not have the same parameters as the latest protocol version, a warning is displayed at the bottom of the information template. Above the warning, a drop-down list allows you to select a different protocol version to load those parameters instead.
+If an information template is based on an older protocol version that does not have the same parameters as the latest protocol version, a warning is displayed at the bottom of the information template. Above the warning, a dropdown list allows you to select a different protocol version to load those parameters instead.
 
-In some cases, selecting a different protocol version in this drop-down list would no longer be possible.
+In some cases, selecting a different protocol version in this dropdown list would no longer be possible.
 
 #### DataMiner Cube - Services app: Problem when duplicating service definitions \[ID 24500\]
 
@@ -406,9 +406,9 @@ After a DCF connection update, in some cases, the highlighting of a manually dra
 > [!NOTE]
 > This problem only occurred when one or both of the interfaces connected to the connector were of type input/output.
 
-#### DataMiner Cube - Data Display: Problem with lite drop-down controls when the listed parameter values were dependent on other parameter values \[ID 24743\]
+#### DataMiner Cube - Data Display: Problem with lite dropdown controls when the listed parameter values were dependent on other parameter values \[ID 24743\]
 
-In some cases, lite drop-down controls would not contain the correct values, especially when the listed parameter values were dependent on other parameter values.
+In some cases, lite dropdown controls would not contain the correct values, especially when the listed parameter values were dependent on other parameter values.
 
 #### DataMiner Cube - Advanced search: Problem when matches could only be found for one of the state filter options \[ID 24758\]
 
@@ -641,9 +641,9 @@ If there were multiple trend points in the same second, it could occur that thes
 
 In DataMiner Cube, in some cases, an exception could be thrown when clicking several times in rapid succession or when the `C:\ProgramData\Skyline\DataMiner\DataMinerCube\CubeLogging` folder was created on a clean client computer.
 
-#### HTML5 apps: Last item in drop-down lists was hidden by the collapse button \[ID 25108\]
+#### HTML5 apps: Last item in dropdown lists was hidden by the collapse button \[ID 25108\]
 
-In the HTML5 apps (Ticketing, Jobs, etc.), in some cases, the collapse button at the bottom of a drop-down list would hide the last item in the list.
+In the HTML5 apps (Ticketing, Jobs, etc.), in some cases, the collapse button at the bottom of a dropdown list would hide the last item in the list.
 
 #### DataMiner Cube - EPM/CPE: No Topology button in sidebar \[ID 25120\]
 

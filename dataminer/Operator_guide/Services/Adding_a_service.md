@@ -78,7 +78,7 @@ To add a service or enhanced service, follow the steps below.
            > [!NOTE]
            >
            > - For a matrix element, you can select specific inputs or outputs to be included from the list of parameters.
-           > - If you select a table parameter to include, a filter allows you to select the rows to be included in the service. You can select a row in the drop-down list, or specify a filter yourself. If you specify the filter, you can also select rows by primary key. For example, enter the filter \*24\* to include all rows of which the display key contains "24", or enter ^pk^\*24\* to include all rows of which the primary key contains "24".
+           > - If you select a table parameter to include, a filter allows you to select the rows to be included in the service. You can select a row in the dropdown list, or specify a filter yourself. If you specify the filter, you can also select rows by primary key. For example, enter the filter \*24\* to include all rows of which the display key contains "24", or enter ^pk^\*24\* to include all rows of which the primary key contains "24".
 
         1. Indicate if the selected item should always be included, or if it should be excluded depending on one or more conditions.
 

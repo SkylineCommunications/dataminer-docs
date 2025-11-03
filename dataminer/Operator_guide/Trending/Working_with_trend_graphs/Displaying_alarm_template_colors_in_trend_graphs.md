@@ -18,7 +18,7 @@ To switch between these settings:
 
 1. Go to *Settings \> Trending*.
 
-1. In the drop-down list next to *Display the alarm template in the trend graph*, select either *Line* or *Band*.
+1. In the dropdown list next to *Display the alarm template in the trend graph*, select either *Line* or *Band*.
 
 > [!NOTE]
 >

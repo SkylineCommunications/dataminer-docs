@@ -214,7 +214,7 @@ Example:
 
 ### FilterMode
 
-Specify the option FilterMode=edit to ensure that users need to specify an exact value in the filter, instead of selecting a value in a drop-down list as usual.
+Specify the option FilterMode=edit to ensure that users need to specify an exact value in the filter, instead of selecting a value in a dropdown list as usual.
 
 ### fixedPosition
 
@@ -232,7 +232,7 @@ In the example above, if fixedPosition is not used and "Cable" is selected in th
 
 ### ignoreEmptyFilterValues
 
-It is possible that the column where the filter values are stored has rows with empty values (e.g. because the row was removed while aggregation was still going on, so that the row was created again). With this option, empty values are not included in the filter drop-down list.
+It is possible that the column where the filter values are stored has rows with empty values (e.g. because the row was removed while aggregation was still going on, so that the row was created again). With this option, empty values are not included in the filter dropdown list.
 
 ### KPIsInDiagram
 

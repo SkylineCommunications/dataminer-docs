@@ -65,7 +65,7 @@ The pane consists of a tree view with several fixed nodes:
 
   > [!NOTE]
   >
-  > - A Visual Overview page can contain multiple tabs. If there are too many tabs to display them all on the screen, a "..." icon will be displayed. To open one of the tabs that are not displayed, you can click this icon and select the tab from the drop-down list.
+  > - A Visual Overview page can contain multiple tabs. If there are too many tabs to display them all on the screen, a "..." icon will be displayed. To open one of the tabs that are not displayed, you can click this icon and select the tab from the dropdown list.
   > - As you can also access these tabs from the card navigation pane, it is possible to hide them in Visual Overview by means of the *Show tab pages* user setting. For more information, see [Visual Overview settings](xref:User_settings#visual-overview-settings).
   > - If a Visual Overview page contains a background image, the header bar and navigation pane will be hidden after 3 seconds without mouse movement. Simply move the mouse again to make them reappear.
   > - Whether zooming in and out on a Visual Overview page is possible depends on the configuration of the page in Visio. See [EnableZoom](xref:Overview_of_page_and_shape_options) and [DisableZoom](xref:Overview_of_page_and_shape_options).

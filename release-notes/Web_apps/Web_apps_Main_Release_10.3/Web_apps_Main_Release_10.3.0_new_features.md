@@ -58,7 +58,7 @@ This is the most basic procedure to use an external data source in a query:
 
 1. In the Dashboards app, configure a query and select the data source *Get ad hoc data*.
 
-1. In the *Data source* drop-down box, select the name of your ad hoc data source.
+1. In the *Data source* dropdown box, select the name of your ad hoc data source.
 
 Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the *IGQIInputArguments* interface in the script to define that a specific argument is required, for instance to filter the displayed data. For more information, refer to the sections below.
 

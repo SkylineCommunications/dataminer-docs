@@ -14,11 +14,11 @@ The page consists of the following sections:
 
 - **Reload element**: Reloads the information for a particular element.
 
-- **Reload element (by element name)**: Functions in the same way as the reload element option, except that you must enter the name of the element manually, instead of selecting in a drop-down list.
+- **Reload element (by element name)**: Functions in the same way as the reload element option, except that you must enter the name of the element manually, instead of selecting in a dropdown list.
 
 - **Reload Agent**: Reloads all elements of the DMA you select.
 
-- **Reload Agent (by IP)**: Functions in the same way as the Reload Agent option, except that you must enter the IP of the DMA manually, instead of selecting the DMA in a drop-down list.
+- **Reload Agent (by IP)**: Functions in the same way as the Reload Agent option, except that you must enter the IP of the DMA manually, instead of selecting the DMA in a dropdown list.
 
 - **Reload protocol meta info**: Reloads the information regarding the loaded protocols, i.e. the available versions, production version and protocol type.
 

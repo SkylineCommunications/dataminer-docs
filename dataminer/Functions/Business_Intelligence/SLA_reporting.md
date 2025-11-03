@@ -60,9 +60,9 @@ This tab contains a detailed graph showing the distribution of alarms over a par
 
 This tab contains a graphic representation of alarm events and alarm states for the SLA, as well as a timeline showing the worst alarm states.
 
-Use the drop-down menu at the top to choose whether the graphs show information regarding a particular element, SLA availability or SLA compliance.
+Use the dropdown menu at the top to choose whether the graphs show information regarding a particular element, SLA availability or SLA compliance.
 
-Use the next drop-down menu to set the time span for which the graphs show information.
+Use the next dropdown menu to set the time span for which the graphs show information.
 
 ## Alarms
 
@@ -114,14 +114,14 @@ In this tab, you will find an overview of all the information pertaining to the 
 
 ## Parameter
 
-In this tab, you can generate reports for a particular parameter. To do so, simply select the parameter in the drop-down list.
+In this tab, you can generate reports for a particular parameter. To do so, simply select the parameter in the dropdown list.
 
 ## Top
 
-In this tab, you can see a list of the 10 parameters that had the most alarm events in a given time span. Determine the time span with the drop-down list at the top of the window.
+In this tab, you can see a list of the 10 parameters that had the most alarm events in a given time span. Determine the time span with the dropdown list at the top of the window.
 
 ## Trending
 
 In this tab, you can generate a graph that shows the evolution of a chosen parameter over a particular time period.
 
-Choose the parameter and time period with the drop-down lists at the top of the screen.
+Choose the parameter and time period with the dropdown lists at the top of the screen.

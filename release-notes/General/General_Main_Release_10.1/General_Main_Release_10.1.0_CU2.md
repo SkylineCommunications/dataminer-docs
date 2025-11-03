@@ -56,7 +56,7 @@ Also, offline Failover agents will now be prevented from becoming the primary NA
 
 #### Schedule configuration of BPA tests \[ID 29000\]
 
-On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the drop-down box in the *Schedule* column, you can select to run a test at different intervals, e.g. daily or every 12 hours.
+On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the dropdown box in the *Schedule* column, you can select to run a test at different intervals, e.g. daily or every 12 hours.
 
 #### Cache for SNMP inform messages \[ID 29034\]
 
@@ -361,9 +361,9 @@ On systems with a Cassandra database, in some cases, elements that had a large a
 
 Due to incorrect filtering, in some cases, the selection box in the CPE feed would contain too much data.
 
-#### DataMiner Cube: Problem when selecting a value from a drop-down parameter in a custom context menu of a table \[ID 29383\]
+#### DataMiner Cube: Problem when selecting a value from a dropdown parameter in a custom context menu of a table \[ID 29383\]
 
-If a parameter of type “drop-down” in a custom context menu of a table retrieved its values from a dependency parameter, in some cases, the first time a value was selected, the selection would not be applied.
+If a parameter of type “dropdown” in a custom context menu of a table retrieved its values from a dependency parameter, in some cases, the first time a value was selected, the selection would not be applied.
 
 #### Jobs app: Small typographical error in warning message \[ID 29388\]
 

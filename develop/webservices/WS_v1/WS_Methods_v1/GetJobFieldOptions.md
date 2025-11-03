@@ -4,7 +4,7 @@ uid: GetJobFieldOptions
 
 # GetJobFieldOptions
 
-Use this method to retrieve the drop-down options for a specific job field.
+Use this method to retrieve the dropdown options for a specific job field.
 
 ## Input
 
@@ -19,4 +19,4 @@ Use this method to retrieve the drop-down options for a specific job field.
 
 | Item | Format | Description |
 |--|--|--|
-| GetJobFieldOptionsResult | [DMAJobFieldPossibleValues](xref:DMAJobFieldPossibleValues) | The drop-down options for the specified job field, along with a boolean indicating whether more options are available. |
+| GetJobFieldOptionsResult | [DMAJobFieldPossibleValues](xref:DMAJobFieldPossibleValues) | The dropdown options for the specified job field, along with a boolean indicating whether more options are available. |

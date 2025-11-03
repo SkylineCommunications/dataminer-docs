@@ -6,7 +6,7 @@ uid: Script
 
 Use this action to run another Automation script from within the current script.
 
-1. Select one of the available scripts in the drop-down box.
+1. Select one of the available scripts in the dropdown box.
 
 1. If required, link the dummies in the script you selected to the dummies in the current script, or to variables.
 

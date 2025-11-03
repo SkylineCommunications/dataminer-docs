@@ -33,7 +33,7 @@ You can then further specify the dummy properties in the *DUMMIES* section:
 
 1. To change the protocol for a dummy, click the underlined sections next to *Protocol* and *Versions* respectively, and select a new protocol and protocol version.
 
-1. Optionally, to link a default element to a dummy, select an element in the underlined field next to *Configuration element* for this dummy. This can be particularly useful when a table parameter column is selected, as you will then be able to select an index from the available indices of the table of that default element in a drop-down list.
+1. Optionally, to link a default element to a dummy, select an element in the underlined field next to *Configuration element* for this dummy. This can be particularly useful when a table parameter column is selected, as you will then be able to select an index from the available indices of the table of that default element in a dropdown list.
 
 ## Creating a parameter
 

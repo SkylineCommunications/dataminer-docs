@@ -18,7 +18,7 @@ With the SLNetClientTest tool, you can check and modify the thresholds defined f
 
 1. Go to *Advanced* > *Options* > *SLNet Options*.
 
-1. In the drop-down list at the top of the window, select an option and then configure it using the right-click menu in the pane below.
+1. In the dropdown list at the top of the window, select an option and then configure it using the right-click menu in the pane below.
 
    - *MaxAgentConnectsPerHour*: The maximum number of connections SLNet is allowed to set up with a DMA within one hour. If more connections have been made, further connections are refused for 30 minutes.
    - *QueuedStackOverflow*: The maximum number of messages that can be pending for an SLNet subscriber. If more messages are queued than this maximum, the connection is destroyed.

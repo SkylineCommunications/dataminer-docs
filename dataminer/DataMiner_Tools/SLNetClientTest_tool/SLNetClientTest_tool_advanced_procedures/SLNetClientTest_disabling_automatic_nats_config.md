@@ -26,7 +26,7 @@ To disable automatic NATS configuration for the entire cluster in one go:
 
 1. Go to *Advanced* > *Options* > *SLNet Options*.
 
-1. In the drop-down box, select *NATSForceManualConfig*.
+1. In the dropdown box, select *NATSForceManualConfig*.
 
 1. Configure the option as follows for each DMA in the cluster:
 

@@ -652,7 +652,7 @@ When a workspace was saved, the pinned state of alarm tab cards was not included
 
 When you assign a Visio drawing to a view or a service, you can specify a default page. This initial page selection would no longer work.
 
-Also, when the *How to show element card Data pages* setting was set to “Show in drop-down box”, initial page selection would no longer work.
+Also, when the *How to show element card Data pages* setting was set to “Show in dropdown box”, initial page selection would no longer work.
 
 #### Web apps: 'Refresh now' message would incorrectly appear when opening a web app that did not have an active websocket connection \[ID 32585\]
 

@@ -118,7 +118,7 @@ http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 | \<ElementName> | Name of the element |
 | \<DataMinerID> | DataMiner ID |
 | \<DMAIP> | The certificate address, hostname or IP address of the DataMiner Agent to which the user is connected. See [\<DMAIP>](xref:Placeholders_for_variables_in_shape_data_values#dmaip). |
-| \<PageFilter> | Value of the drop-down filter box in the top-right corner of the Visio drawing. See [Specifying an EPM parameter that can be used to filter](xref:Specifying_an_EPM_parameter_that_can_be_used_to_filter). |
+| \<PageFilter> | Value of the dropdown filter box in the top-right corner of the Visio drawing. See [Specifying an EPM parameter that can be used to filter](xref:Specifying_an_EPM_parameter_that_can_be_used_to_filter). |
 
 > [!NOTE]
 >

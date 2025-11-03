@@ -603,9 +603,9 @@ When a feed used by a GQI query was changed while the query table was being sort
 
 In some cases, column references could not be created for columns of which the name contained underscore characters.
 
-#### Web apps - GQI: Problem when retrieving ticket fields of type 'drop-down list' \[ID 33177\]
+#### Web apps - GQI: Problem when retrieving ticket fields of type 'dropdown list' \[ID 33177\]
 
-When ticket fields of type “drop-down list” were retrieved using a GQI query, in some cases, those fields would incorrectly not contain any values.
+When ticket fields of type “dropdown list” were retrieved using a GQI query, in some cases, those fields would incorrectly not contain any values.
 
 #### SLPort would incorrectly split WebSocket messages larger than 65kB \[ID 33182\]
 

@@ -12,7 +12,7 @@ To create such an enhanced view:
 
 1. Go to the *Build Message* tab of the main window.
 
-1. In the *Message Type* drop-down list, select *EnhanceViewWithElementRequestMessage*.
+1. In the *Message Type* dropdown list, select *EnhanceViewWithElementRequestMessage*.
 
 1. Specify the ID of the view you want to enhance and the ID of the element you want to use for this.
 

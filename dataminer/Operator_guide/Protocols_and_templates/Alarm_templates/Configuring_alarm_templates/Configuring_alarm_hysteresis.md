@@ -10,7 +10,7 @@ Two types of [hysteresis](xref:Alarm_hysteresis) are available, clear hysteresis
 
 - Enter a value in the *Hyst on* column to determine the number of seconds before the severity level of an alarm increases.
 
-- If you want to apply hysteresis to specific severity levels only, when you enter a value in the *Hyst off* or *Hyst on* box, select the severity levels in the drop-down list below the box.
+- If you want to apply hysteresis to specific severity levels only, when you enter a value in the *Hyst off* or *Hyst on* box, select the severity levels in the dropdown list below the box.
 
 > [!NOTE]
 >

@@ -58,7 +58,7 @@ Different types of trend prediction can be displayed, each in a different style.
 To select which trend prediction type is used:
 
 - From DataMiner 10.2.9/10.3.0 onwards, right-click the trend graph, select *Trend prediction* in the right-click menu, and then select the desired prediction type.
-- In earlier DataMiner versions, use the drop-down list in the top-right corner.
+- In earlier DataMiner versions, use the dropdown list in the top-right corner.
 
 You can either select one of the available trend prediction types, or select "Auto". Auto mode will automatically switch between the different trend prediction types as you zoom in and out on the graph.
 

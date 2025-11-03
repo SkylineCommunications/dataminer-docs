@@ -13,7 +13,7 @@ uid: Cube_Feature_Release_10.2.9
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-In a trend graph, up to now, a drop-down list in the top-right corner allowed you to select one of the available trend prediction types or "Auto". This drop-down list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or "Auto" from the context menu.
+In a trend graph, up to now, a dropdown list in the top-right corner allowed you to select one of the available trend prediction types or "Auto". This dropdown list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or "Auto" from the context menu.
 
 #### Tab layout: Closing a card tab by clicking it with the middle mouse button [ID 33883]
 

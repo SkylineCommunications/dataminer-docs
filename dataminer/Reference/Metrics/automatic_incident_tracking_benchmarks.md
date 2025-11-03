@@ -2,7 +2,7 @@
 uid: automatic_incident_tracking_benchmarks
 ---
 
-# Automatic incident tracking benchmarks
+# Automatic alarm grouping benchmarks
 
 ## Specifications of the test server
 

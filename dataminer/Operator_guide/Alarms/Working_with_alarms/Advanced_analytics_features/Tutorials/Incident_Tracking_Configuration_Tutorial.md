@@ -2,11 +2,11 @@
 uid: Incident_Tracking_Configuration_Tutorial
 ---
 
-# Fine-tuning incident tracking in your system
+# Fine-tuning alarm grouping in your system
 
-The incident tracking (a.k.a. alarm grouping) functionality automatically groups alarms related to the same root cause. This automatic grouping is governed by a set of **rules** or **grouping strategies**. In this tutorial, you will learn how to enable and disable certain rules, tweak them, and even add your own custom rules to the alarm grouping engine.
+The alarm grouping (a.k.a. incident tracking) functionality automatically groups alarms related to the same root cause. This automatic grouping is governed by a set of **rules** or **grouping strategies**. In this tutorial, you will learn how to enable and disable certain rules, tweak them, and even add your own custom rules to the alarm grouping engine.
 
-The content and screenshots for this tutorial have been created in DataMiner 10.4.10.
+The content and screenshots for this tutorial have been created in DataMiner 10.5.12.
 
 Estimated duration: 30 minutes.
 
@@ -17,9 +17,9 @@ Estimated duration: 30 minutes.
 
 - DataMiner 10.2.0/10.1.4 or higher with [Storage as a Service (STaaS)](xref:STaaS) (recommended) or a [self-managed Cassandra database](xref:Supported_system_data_storage_architectures).
 
-- Automatic incident tracking is enabled in DataMiner Cube: *System Center* > *System settings* > *analytics config* > *Automatic incident tracking*.
+- Automatic alarm grouping is enabled in DataMiner Cube: *System Center* > *System settings* > *analytics config* > *Automatic alarm grouping*.
 
-- Automatic incident tracking is enabled in the Alarm Console: To check if this is enabled, check if *Automatic incident tracking* is selected in the Alarm Console hamburger menu.
+- Automatic alarm grouping is enabled in the Alarm Console: To check if this is enabled, check if *Automatic alarm grouping* is selected in the Alarm Console hamburger menu.
 
   ![Enable Incident Tracking in the Alarm Console](~/dataminer/images/EnableAlarmGroupingInAlarmConsole.png)
 
@@ -31,7 +31,7 @@ The tutorial consists of the following steps:
 - [Step 2: Find the advanced configuration file](#step-2-find-the-advanced-configuration-file)
 - [Step 3: Explore the default alarm grouping rules](#step-3-explore-the-default-alarm-grouping-rules)
 - [Step 4: Switch off parameter and view grouping](#step-4-switch-off-parameter-and-view-grouping)
-- [Step 5: Add your own rules to the incident tracking engine](#step-5-add-your-own-rules-to-the-incident-tracking-engine)
+- [Step 5: Add your own rules to the alarm grouping engine](#step-5-add-your-own-rules-to-the-alarm-grouping-engine)
 - [Step 6: Group on a custom element property](#step-6-group-on-a-custom-element-property)
 - [Step 7: Clean up your system](#step-7-clean-up-your-system)
 
@@ -48,13 +48,13 @@ The tutorial consists of the following steps:
 
 ## Step 2: Find the advanced configuration file
 
-Automatic incident tracking groups alarms according to a set of rules, which are listed in a configuration file. To locate the file in your system:
+Automatic alarm grouping groups alarms according to a set of rules, which are listed in a configuration file. To locate the file in your system:
 
 1. Go to *Apps* > *System Center* > *System settings* > *analytics config*.
 
-1. Under *Automatic Incident Tracking*, check which ID is mentioned in the box *Leader DataMiner ID*.
+1. Under *Automatic Alarm Grouping*, check which ID is mentioned in the box *Leader DataMiner ID*.
 
-   This is the ID of the DataMiner Agent within your DMS that is in charge of running the incident tracking algorithm for the entire DMS.
+   This is the ID of the DataMiner Agent within your DMS that is in charge of running the alarm grouping algorithm for the entire DMS.
 
 1. On the server running the leader DMA, go to the folder `C:\Skyline DataMiner\Analytics`.
 
@@ -67,7 +67,7 @@ Automatic incident tracking groups alarms according to a set of rules, which are
 
 ## Step 3: Explore the default alarm grouping rules
 
-By default, a new alarm can only be added to an existing alarm group if it occurs within 10 minutes of another alarm that is already in the group. You can customize this 10-minute interval in DataMiner Cube via *System Center* > *System settings* > *analytics config* > *Automatic Incident Tracking* > *Maximum time interval*. Once alarms occur within this interval, the rules in the *configuration.xml* will determine whether or not they are grouped.
+By default, a new alarm can only be added to an existing alarm group if it occurs within 10 minutes of another alarm that is already in the group. You can customize this 10-minute interval in DataMiner Cube via *System Center* > *System settings* > *analytics config* > *Automatic Alarm Grouping* > *Maximum time interval*. Once alarms occur within this interval, the rules in the *configuration.xml* will determine whether or not they are grouped.
 
 1. Open the *configuration.xml* file, and take a look at the different rules.
 
@@ -108,7 +108,7 @@ By default, a new alarm can only be added to an existing alarm group if it occur
 
    - The *GenericProperties* rule, which allows you to define custom properties.
 
-     You will find out more about this rule in [step 5](#step-5-add-your-own-rules-to-the-incident-tracking-engine).
+     You will find out more about this rule in [step 5](#step-5-add-your-own-rules-to-the-alarm-grouping-engine).
 
 1. Test the *ParameterProperty* rule:
 
@@ -129,7 +129,7 @@ By default, a new alarm can only be added to an existing alarm group if it occur
       ![Grouping on parameter](~/dataminer/images/parameterGrouping.png)
 
       > [!NOTE]
-      > If no alarm group is formed, check whether *Automatic incident tracking* is enabled in the Alarm Console and whether you have triggered the alarm for the correct element. Not all of the elements added for this tutorial use the same protocol, so if you used a different element than mentioned above, the rule may not be triggered.
+      > If no alarm group is formed, check whether *Automatic alarm grouping* is enabled in the Alarm Console and whether you have triggered the alarm for the correct element. Not all of the elements added for this tutorial use the same protocol, so if you used a different element than mentioned above, the rule may not be triggered.
 
    1. In both elements, click the *Toggle Alarm* button again to clear the alarms again.
 
@@ -160,7 +160,7 @@ To make it easier to see the effect of the next steps, temporarily switch off pa
   1. Save the file.
   1. Restart the *SLAnalytics.exe* process on the leader Agent.
 
-## Step 5: Add your own rules to the incident tracking engine
+## Step 5: Add your own rules to the alarm grouping engine
 
 When you deployed the Catalog package earlier, elements were added in a *Nodes* and an *Amplifiers* view. This is inspired by EPM setups where a node sends out a signal to a group of amplifiers which in turn amplify and forward the signal to households. In this step, you will add a rule to automatically group alarms on amplifiers under the same node.
 
@@ -300,7 +300,7 @@ It is not possible to use the *ParentNode* alarm property from the previous step
    > [!IMPORTANT]
    > Use the following email format to send us your screenshot:
    >
-   > - Subject: *Tutorial - Fine-tune incident tracking in your system*
+   > - Subject: *Tutorial - Fine-tune alarm grouping in your system*
    > - To: [ai@skyline.be](mailto:ai@skyline.be)
    > - Body:
    >   - *Dojo account*: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.

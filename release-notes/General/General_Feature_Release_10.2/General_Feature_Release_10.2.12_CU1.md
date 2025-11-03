@@ -14,11 +14,11 @@ uid: General_Feature_Release_10.2.12_CU1
 
 ### Fixes
 
-#### Low-Code Apps: Drop-down box containing an 'execute component' action would incorrectly be empty [ID 34953]
+#### Low-Code Apps: Dropdown box containing an 'execute component' action would incorrectly be empty [ID 34953]
 
 <!-- MR 10.3.0 - FR 10.2.12 [CU1] -->
 
-When an *execute component* action had been configured, in some cases, when you tried to update that action, the drop-down box containing the action would incorrectly be empty.
+When an *execute component* action had been configured, in some cases, when you tried to update that action, the dropdown box containing the action would incorrectly be empty.
 
 #### Dashboards app & low-Code Apps: Manually sorted GQI table would no longer feed row values [ID 34969]
 

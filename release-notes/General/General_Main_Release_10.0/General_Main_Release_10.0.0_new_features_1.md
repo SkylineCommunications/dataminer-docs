@@ -278,7 +278,7 @@ Within each section of type *Fields*, arrow icons allow you to change the positi
 > - If a section definition is in use in jobs, deleting the section definition will not remove it from the system, but cause it to become hidden.
 > - The type of a job section can be changed from “Fields” to “Booking” (or vice versa) as long as that section is not being used in any job.
 > - Job section fields of type “Integer” only accept values between -9223372036854775808 and 9223372036854775808, while job section fields of type “Double” only accept values between -1.7976931348623157^308 and 1.7976931348623157^308.
-> - Values can be added to or deleted from job section fields of type “Dropdown” even when those fields are being used by existing jobs. When a value is deleted from a drop-down field, it is marked as hidden, not deleted physically.
+> - Values can be added to or deleted from job section fields of type “Dropdown” even when those fields are being used by existing jobs. When a value is deleted from a dropdown field, it is marked as hidden, not deleted physically.
 
 ##### Job Manager user permissions
 

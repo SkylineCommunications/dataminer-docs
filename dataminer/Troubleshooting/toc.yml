@@ -262,8 +262,6 @@ items:
             topicUid: KI_gRPC_connected_Cube_stuck_when_using_Automation
           - name: Upgrade fails because of VerifyGRPCConnection.dll prerequisite
             topicUid: KI_Upgrade_fails_VerifyGRPCConnection_prerequisite
-          - name: Contents of Elements folder deleted from offline Agents in Failover cluster
-            topicUid: KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster
           - name: DataMiner startup issue with one or more DcMs not running
             topicUid: KI_Startup_issue_DcM_not_running
           - name: User locked out after single failed login attempt
@@ -300,6 +298,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Contents of Elements folder deleted from offline Agents in Failover cluster
+            topicUid: KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster
           - name: Scrollbars not shown in web apps
             topicUid: KI_Scrollbars_not_shown_in_web_apps
           - name: SLDataGateway memory leak caused by excessive Cassandra query timeout

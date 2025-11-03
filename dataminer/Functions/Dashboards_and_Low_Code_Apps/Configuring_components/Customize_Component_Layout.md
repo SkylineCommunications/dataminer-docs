@@ -16,13 +16,13 @@ Each component in a dashboard or low-code app has a number of default options. B
 
 1. In the ***Styles*** section, you can then change the component theme in different ways:
 
-   - To **change the component theme** to one of the different existing component themes for your current dashboard or low-code app theme, click the current theme and select a different theme in the drop-down list.
+   - To **change the component theme** to one of the different existing component themes for your current dashboard or low-code app theme, click the current theme and select a different theme in the dropdown list.
 
    - To **customize the component theme**, enable the *Customize* toggle button to customize the currently selected theme.
 
      - In the *Title* section, specify the following:
 
-       - *Font*: Select a font type in the drop-down list
+       - *Font*: Select a font type in the dropdown list
 
        - *Font size*: The size (in pixels) of the title
 

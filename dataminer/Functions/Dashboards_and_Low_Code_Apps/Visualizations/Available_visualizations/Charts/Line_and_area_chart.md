@@ -35,7 +35,7 @@ To configure the component:
 
    - From DataMiner 10.2.0/10.1.3 onwards, a [parameter table filter](xref:Parameter_Table_Filters) is supported if the URL option showAdvancedSettings=true is used. This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
-   - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view trending for aggregation rules on specific views. To select these, in the drop-down box for the parameter data source, select *View*.
+   - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view trending for aggregation rules on specific views. To select these, in the dropdown box for the parameter data source, select *View*.
 
 1. Optionally, customize the following component options in the *Component* > *Settings* pane:
 
