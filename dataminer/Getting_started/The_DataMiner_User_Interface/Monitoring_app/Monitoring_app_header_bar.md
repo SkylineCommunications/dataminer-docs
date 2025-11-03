@@ -42,13 +42,22 @@ The Monitoring app header bar contains the following items, from left to right:
 
 - User button: A button with the initials or picture of the current user is displayed in the top-right corner. Click this button to open a menu that provides access to the following options:
 
-  - *Settings*: Allows you to configure the default page that is displayed when you open an element or a view card.
+  - *(Monitoring) settings*: Allows you to configure the default page that is displayed when you open an element or a view card.
 
     > [!NOTE]
     > Setting the Visual page as the default page can cause reduced performance.
 
   - *About*: Displays information about the app.
 
-  - *Help*: Opens the DataMiner Help.
+  - *Help*: Available up to DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10. Opens the DataMiner Help.
+
+  - *User settings*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43803-->. Allows you to configure user-specific settings such as changing your password.
+
+    > [!NOTE]
+    > User settings are only available if the following conditions are met:
+    >
+    > - In *System Center* > *Users*, the user's *User cannot change password* setting must be disabled.
+    > - The user must have the [*Modules* > *System configuration* > *Security* > *Specific* > *Limited administrator* permission](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator).
+    > - The user must not be logged in with external or delegated authentication.
 
   - *Sign out*: Logs you out of the app and returns you to the logon screen.
