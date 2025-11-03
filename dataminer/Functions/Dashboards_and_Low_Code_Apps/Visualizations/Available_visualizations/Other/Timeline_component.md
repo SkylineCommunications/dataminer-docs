@@ -172,6 +172,9 @@ To group items on the timeline based on one of the columns in your data<!--35638
 
    All groups are now displayed in a gray column to the left of the timeline<!--RN 33694-->. The timeline items are displayed next to the group they are part of.
 
+   > [!IMPORTANT]
+   > All items that are in the same group have to be returned after eachother from the data source (important if you implement your own data sources) to ensure all itmes are visualized (the component supports lazy loading and otherwise items might only appear after scrolling through all groups).
+
    > [!NOTE]
    > If a group is empty (i.e. there is no start and end time), it is still displayed in the timeline component<!--RN 35600-->.
 
