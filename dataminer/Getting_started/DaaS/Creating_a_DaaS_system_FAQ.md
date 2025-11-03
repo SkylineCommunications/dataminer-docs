@@ -13,12 +13,16 @@ For details about what DataMiner credits are, how they are used, and how to acqu
 
 See [DaaS Planned Maintenance Policy](xref:DaaS_Planned_Maintenance_Policy).
 
-### When does a DaaS system expire?
+### Can I try out DaaS for free?
 
-A DaaS system is assigned an expiration date when it is created. By default, DataMiner Community Edition DaaS Trials will expire after one week. Once this date is reached, the system will automatically expire unless it is renewed beforehand. 
+When [creating a new organization](xref:Creating_an_organization) you can try out a DataMiner Community Edition DaaS for free. This system will expire after one week. Once this expiry date is reached, the system will automatically be removed unless it is upgraded beforehand. To upgrade your trial system to a regular DataMiner Community Edition DaaS, contact <support@dataminer.services>. If you would like an extended trial period, contact <sales@skyline.be>.
 
 > [!NOTE]
 > You will receive an email notification before your system’s expiration date, including a link to this FAQ for more information.
+
+### How can I manually delete my DaaS system?
+
+You can delete your DaaS system at any time before its expiration. See [Removing a DaaS system](xref:Removing_a_DaaS_system).
 
 ### What happens when my DaaS system expires or is deleted?
 
@@ -27,14 +31,10 @@ When your DaaS system expires or is deleted, the system and all associated resou
 - **10 days** if the system was created less than 10 days ago.
 - **30 days** if the system has been running for more than 10 days at the time of expiration/deletion.
 
-To recover the system, contact [daas@dataminer.services](mailto:daas@dataminer.services). The cloud identity and shares will be lost, and the system will receive a new cloud identity within your organization upon recovery.
+To recover the system, contact [daas@dataminer.services](mailto:daas@dataminer.services).
 
 > [!NOTE]
 > If you are an owner of the organization of a DaaS system or an owner of a DaaS system, you will get an email notification if your system is about to expire. Another email notification will be sent when the system effectively expires.
-
-### How can I manually delete my DaaS system?
-
-You can delete your DaaS system at any time before its expiration. See [Removing a DaaS system](xref:Removing_a_DaaS_system).
 
 ### How can I create a new DaaS system?
 
