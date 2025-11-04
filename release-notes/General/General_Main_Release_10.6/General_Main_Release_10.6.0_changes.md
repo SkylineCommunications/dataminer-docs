@@ -545,14 +545,6 @@ Because of a number of enhancements, overall performance has increased
 - when writing data to the database, and
 - when reading reservation instances, especially on high-load systems.
 
-#### Automation: Engine class now has an OnDestroy handler that will allow resources to be cleaned up when a script ends [ID 43919]
-
-<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
-
-An `OnDestroy` handler has now been added to the `Engine` class. This handler will allow resources to be cleaned up when a script ends.
-
-Multiple handlers can be added. They will run synchronously, and if one handler throws an error, the others will keep on running.
-
 #### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
 
 <!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->

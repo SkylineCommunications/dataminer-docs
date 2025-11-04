@@ -105,7 +105,7 @@ During a DataMiner upgrade, the *VerifyBrokerGatewayMigration* prerequisite chec
 
 #### Automation: Engine class now has an OnDestroy handler that will allow resources to be cleaned up when a script ends [ID 43919]
 
-<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+<!-- MR 10.7.0 - FR 10.6.1 -->
 
 An `OnDestroy` handler has now been added to the `Engine` class. This handler will allow resources to be cleaned up when a script ends.
 

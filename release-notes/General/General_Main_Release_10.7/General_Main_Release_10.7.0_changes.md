@@ -39,6 +39,14 @@ When retrieving values, the following behavior will apply:
 > [!IMPORTANT]
 > A `FieldDescriptor` ID must be unique across section definitions in a DOM module.
 
+#### Automation: Engine class now has an OnDestroy handler that will allow resources to be cleaned up when a script ends [ID 43919]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+An `OnDestroy` handler has now been added to the `Engine` class. This handler will allow resources to be cleaned up when a script ends.
+
+Multiple handlers can be added. They will run synchronously, and if one handler throws an error, the others will keep on running.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
