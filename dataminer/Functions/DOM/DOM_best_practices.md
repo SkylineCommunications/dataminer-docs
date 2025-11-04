@@ -197,7 +197,7 @@ Every call to DataMiner (e.g. `DomInstance` create call) and the database has a 
 
 - **Select only the fields you need when reading**
 
-  When you only need a subset of a `DomInstance`'s properties (for example when populating a table), select those fields using the `SelectedFields<DomInstance>` overloads of `Read` or `PreparePaging` instead of retrieving full objects. This feature (see [Read selected fields](xref:DomHelper_class#reading-selected-fields)) reduces payload size and can significantly improve performance and memory usage. This feature is available from DataMiner 10.6.0 onwards <!-- RN 43852 -->.
+  When you only need a subset of a `DomInstance`'s properties (for example when populating a table), select those fields using the `SelectedFields<DomInstance>` overloads of `Read` or `PreparePaging` instead of retrieving full objects. This feature (see [Read selected fields](xref:DomHelper_class#reading-selected-fields)) reduces payload size and can significantly improve performance and memory usage. This feature is available from DataMiner 10.6.1/10.7.0 onwards <!-- RN 43852 -->.
 
 ### Avoid using DOM CRUD scripts for DOM definitions that see many instance creates or updates
 
