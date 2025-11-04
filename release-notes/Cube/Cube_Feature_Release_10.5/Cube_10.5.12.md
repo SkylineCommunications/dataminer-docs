@@ -38,7 +38,7 @@ In the context menu of a RAD group incident as well as the context menu of a sin
 
 In order to reduce the time it takes to load a visual overview, a number of enhancements have been made to the parameter cache.
 
-Throughout the lifecycle of a Cube session, the parameter cache will request and maintain certain parameter tables, and will keeping them updated.When data is requested from any of the tables in question, the data will be fetched from the cache instead of the DataMiner Agent.
+Throughout the lifecycle of a Cube session, the parameter cache will request and maintain certain parameter tables, and will keeping them updated. When data is requested from any of the tables in question, the data will be fetched from the cache instead of the DataMiner Agent.
 
 ##### Caching only certain columns
 
