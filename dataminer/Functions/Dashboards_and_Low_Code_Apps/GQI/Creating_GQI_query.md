@@ -47,6 +47,23 @@ The "Queries" data item allows you to construct a query in order to tap into the
 
 From DataMiner 10.3.0 [CU10]/10.4.1 onwards, you can duplicate a query. To do so, click the "..." button next to the query in the *Data* pane and then select *Duplicate*.
 
+## Exporting a query
+
+From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43800-->, you can export a query to JSON:
+
+1. Click the "..." button next to the query in the *Data* pane and select *Export*.
+
+   A pop-up window will appear, showing a preview of the query in JSON format.
+
+1. Choose whether to download the query as a JSON file or copy the JSON object to your clipboard.
+
+> [!NOTE]
+> Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12, exporting a query to JSON requires using your browser's developer tools:
+>
+> 1. Open the developer tools.
+> 1. Go to the *Network* tab and trigger the query by performing the usual action in the app.
+> 1. ...
+
 ## Letting DataMiner Assistant create a query
 
 From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42234-->, you can use the DataMiner Assistant [natural language to GQI feature](xref:NL2GQI) to automatically create a GQI query based on a request in natural language.
