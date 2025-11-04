@@ -24,7 +24,7 @@ namespace Skyline.DataMiner.Automation
 
         /// <summary>
         /// Occurs when the script finishes.
-		/// <note>Available from DataMiner 10.6.0 main release and 10.5.12 feature release.</note>
+		/// <note>Available from DataMiner 10.7.0 main release and 10.6.1 feature release.</note>
         /// </summary>
         /// <remarks>This event provides an opportunity to perform cleanup or other actions after the script is
         /// finished. Subscribers can use the event arguments to access additional context about the destruction
