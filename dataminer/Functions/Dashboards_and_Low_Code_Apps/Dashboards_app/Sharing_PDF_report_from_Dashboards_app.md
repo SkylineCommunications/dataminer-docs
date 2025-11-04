@@ -42,6 +42,8 @@ To share a dashboard as a PDF report in the Dashboards app:
 
    - *Stack components*: Select this option if you want all components to be displayed below one another. This can be especially useful for dashboards containing large components (e.g. pivot tables) in order to make sure all data is displayed.
 
+   - *Landscape*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43826-->. Select this option to generate the report in landscape mode.
+
    - *Paper format*: Allows you to select a different format than the default A4 format for the PDF.
 
 1. When everything has been configured, at the top, click *Send*.
