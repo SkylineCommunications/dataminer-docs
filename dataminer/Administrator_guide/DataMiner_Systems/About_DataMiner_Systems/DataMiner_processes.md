@@ -50,6 +50,9 @@ If a Cassandra database or Cassandra-compatible database is installed, this proc
 
 - Transfer of data to the SLAnalytics process.
 
+> [!NOTE]
+> For logging related to the SLDataGateway process, check the *SLDataGateway.txt* log file. From DataMiner 10.5.12/10.6.0 onwards<!--RN 43918-->, you can consult the messages sent between SLNet and SLDataGateway in the *SLRepositoryRequests.txt* log file.
+
 ### SLDMS
 
 Takes care of file synchronization within the DataMiner System, triggers connections, etc.
