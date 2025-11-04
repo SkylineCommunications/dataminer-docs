@@ -11,7 +11,7 @@ namespace Skyline.DataMiner.Analytics.Rad
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The ID of the new hosting agent for the group.
+        /// The ID of the new hosting Agent for the group.
         /// </summary>
         public int NewHostingAgentId { get; set; }
 
@@ -23,8 +23,8 @@ namespace Skyline.DataMiner.Analytics.Rad
         /// <summary>
         /// Initializes a new instance of the <see cref="MigrateRADParameterGroupMessage"/> class.
         /// </summary>
-        /// <param name="groupName">The name of the group to move to a new agent.</param>
-        /// <param name="newHostingAgentId">The ID of the new hosting agent for the group.</param>
+        /// <param name="groupName">The name of the group to move to a new Agent.</param>
+        /// <param name="newHostingAgentId">The ID of the new hosting Agent for the group.</param>
         public MigrateRADParameterGroupMessage(string groupName, int newHostingAgentId) { }
 
         /// <summary>

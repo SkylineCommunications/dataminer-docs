@@ -5,14 +5,14 @@ using Skyline.DataMiner.Analytics.DataTypes;
 namespace Skyline.DataMiner.Analytics.Rad
 {
     /// <summary>
-    /// Request message to get relational anomaly detections for a specific parameter instance and time range.
+    /// Request message to get relational anomalies for a specific parameter instance and time range.
     /// Results will be returned in a <see cref="GetRelationalAnomaliesResponseMessage"/>.
     /// </summary>
     [Serializable]
     public class GetRelationalAnomaliesMessage : GetSessionedAnalyticsMessage
     {
         /// <summary>
-        /// Gets or sets the <see cref="ParameterKey"/> representing the target parameter for fetching relational anomaly detections.
+        /// Gets or sets the <see cref="ParameterKey"/> representing the target parameter for fetching relational anomalies.
         /// </summary>
         public ParameterKey ParameterKey { get; set; }
      

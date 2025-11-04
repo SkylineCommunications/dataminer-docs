@@ -15,7 +15,7 @@ namespace Skyline.DataMiner.Analytics.Rad
 
         /// <summary>
         /// Gets or sets the model data fit value for the subgroup.
-        /// A high ModelFit value (i.e. a value close to 1) indicates that the subgroup's behavior closely aligns with the overall model,
+        /// A high ModelFit value (i.e. a value close to 1) indicates that the subgroup's behavior closely aligns with the overall model.
         /// A low ModelFit value (i.e. a value closer to 0) indicates that the subgroup's behavior deviates significantly from the behavior learned by the overall model.
         /// </summary>
         public double ModelFit { get; set; }

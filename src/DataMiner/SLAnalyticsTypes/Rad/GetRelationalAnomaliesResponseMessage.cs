@@ -30,12 +30,12 @@ namespace Skyline.DataMiner.Analytics.Rad
         public DateTime EndTime { get; set; }
 
         /// <summary>
-        /// Name of the Relational Anomaly Detection group that detected the anomaly.
+        /// Name of the relational anomaly detection group that detected the anomaly.
         ///</summary>
         public string GroupName { get; set; }
 
         /// <summary>
-        /// If specified (i.e. not null or empty), the name of the subgroup that detected the anomaly. 
+        /// If specified (i.e. not null or empty), the name of the subgroup that detected the anomaly.
         /// </summary>
         public string SubgroupName { get; set; }
 

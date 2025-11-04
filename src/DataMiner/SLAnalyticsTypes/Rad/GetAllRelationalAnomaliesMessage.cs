@@ -4,7 +4,7 @@ using Skyline.DataMiner.Analytics.Communication;
 namespace Skyline.DataMiner.Analytics.Rad
 {
     /// <summary>
-    /// Request message to get all relational anomaly detections within a specific time range, across all relational anomaly groups.
+    /// Request message to get all relational anomalies within a specific time range, across all relational anomaly groups.
     /// Results will be returned in a <see cref="GetRelationalAnomaliesResponseMessage"/>.
     /// </summary>
     [Serializable]
