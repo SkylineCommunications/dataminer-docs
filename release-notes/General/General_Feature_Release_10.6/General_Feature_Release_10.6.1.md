@@ -28,7 +28,15 @@ uid: General_Feature_Release_10.6.1
 
 ## New features
 
-*No new features have been added yet.*
+#### Dashboard reports can now be generated in PDF, HTML, and/or CSV format [ID 43887]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+Up to now, a report of a dashboard could only be generated in PDF format (.pdf). Now, it is also possible to generate such a report in archived HTML format (.mhtml) or CSV format.
+
+MHTML files include all necessary information to allow the report to be rendered in a web browser: HTML code, images, CSS stylesheets, etc.
+
+Also, the default file name has been changed from `Report.pdf` to `<dashboard name>.pdf`, `<dashboard name>.mhtml`, or `<dashboard name>.csv`.
 
 ## Changes
 
