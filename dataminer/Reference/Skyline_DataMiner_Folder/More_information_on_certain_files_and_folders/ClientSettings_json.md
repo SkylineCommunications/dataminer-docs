@@ -144,7 +144,6 @@ For example, the following configuration shows how to cache only specific column
 
 > [!NOTE]
 >
-> - If both the `ColumnIDs` property and a `columns=` option in the `SubscriptionFilter` are specified, the `columns=` option in the filter takes priority.
 > - A `columns=` option can also be provided in the `SubscriptionFilter`. In this case, it takes priority over the separate `ColumnIDs` setting.
 > - When `columns=` is used in `SubscriptionFilter`, only requests that use the same `SubscriptionFilter` will use the cache. For the separate `ColumnIDs` setting, any request that matches the other cache settings will use the cached data if the requested column matches the cached column.
 > - Make sure that all the required columns are being retrieved when you use the "columns=" option. If this does not match, the cache will not be used.
