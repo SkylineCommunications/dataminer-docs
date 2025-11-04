@@ -7,14 +7,14 @@ uid: BrokerGateway_Migration
 From DataMiner 10.5.0 [CU2]/10.5.5 onwards<!-- RN 42573 -->, you can migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) using the "NATSMigration" tool. Prior to this, starting from DataMiner 10.5.0/10.5.2, this feature is available in [soft launch](xref:SoftLaunchOptions).
 
 > [!IMPORTANT]
-> To be able to start this migration, the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft-launch option may not be disabled on any DataMiner Agent in the cluster. In DataMiner 10.5.0 [CU5]/10.5.8<!-- RN 43370 -->, this option can be disabled to prevent possible issues on systems where no migration is planned.
+> This migration is **mandatory to be able to upgrade to DataMiner 10.6.0/10.6.1** or higher. If you try to upgrade to such a DataMiner version when this migration has not yet been completed, the upgrade will be blocked.<!-- RN 43861 -->
+
+> [!NOTE]
+> To be able to start this migration, the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft-launch option must not be disabled on any DataMiner Agent in the cluster. In DataMiner 10.5.0 [CU5]/10.5.8<!-- RN 43370 -->, this option can be disabled to prevent possible issues on systems where no migration is planned.
 
 Once the [prerequisites](#prerequisites) are met, you can either [run an automatic migration](#running-an-automatic-migration) or [run the migration manually](#running-the-migration-manually).
 
 Note that prior to DataMiner 10.5.0 [CU4]/10.5.7, this migration requires a DataMiner restart.<!-- RN 42930 -->
-
-> [!IMPORTANT]
-> This migration must be completed prior to upgrading to DataMiner 10.6.0/10.6.1.<!-- RN 43861 -->
 
 After the migration, you may need to [update your Data Aggregator configuration](#updating-the-data-aggregator-configuration).
 
