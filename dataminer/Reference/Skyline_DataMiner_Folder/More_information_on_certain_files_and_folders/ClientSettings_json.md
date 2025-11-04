@@ -145,7 +145,7 @@ For example, the following configuration shows how to cache only specific column
 > [!NOTE]
 >
 > - If both the `ColumnIDs` property and a `columns=` option in the `SubscriptionFilter` are specified, the `columns=` option in the filter takes priority.
-> - The `ColumnIDs=` parameter can also be provided in the `SubscriptionFilter`. In this case, it takes priority over the separate `ColumnIDs` setting. When `ColumnIDs=` is used, only requests that use the same `SubscriptionFilter` will use the cache. For the separate `ColumnIDs` setting, any request that matches the other cache settings will use the cached data if the requested column matches the cached column.
+> - A `columns=` option can also be provided in the `SubscriptionFilter`. In this case, it takes priority over the separate `ColumnIDs` setting. When `columns=` is used in `SubscriptionFilter`, only requests that use the same `SubscriptionFilter` will use the cache. For the separate `ColumnIDs` setting, any request that matches the other cache settings will use the cached data if the requested column matches the cached column.
 > - Make sure that all the required columns are being retrieved when you use the "columns=" option. If this does not match, the cache will not be used.
 
 The \[Param:\] placeholder in Visual Overview uses data from the cache. However, the subscription filter used for the placeholder needs to match the subscription filter in the configuration minus any "columns=" options. (See [Filtering the data of a cached table parameter](xref:Filtering_the_data_of_a_cached_table_parameter).)
