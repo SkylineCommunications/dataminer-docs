@@ -8,7 +8,11 @@ Use this action to send a notification via email.
 
 ![Email](~/dataminer/images/Automation_Email.png)<br>*Automation module in DataMiner 10.5.6*
 
-- You will need to fill in at least the *To* and *Subject* fields. The *CC*, *BCC*, and *Message* fields are optional.
+- You need to specify at least one recipient in the *To*, *CC*, and/or *BCC* fields.
+
+  Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43848-->, at least one *To* recipient is required, and all recipients need to be present in your contact list.
+
+- The *Subject* field is required. The *Message* field is optional.
 
 - The subject and message support the following **placeholders**<!--RN 42985-->:
 

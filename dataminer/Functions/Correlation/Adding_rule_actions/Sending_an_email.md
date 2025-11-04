@@ -10,20 +10,23 @@ In the *Actions* section of the details pane:
 
 1. Click *Add Action* and select *Send email*.
 
-1. Enter the recipient addresses in the *To*, *CC*, and *BCC* boxes. Use semicolons to separate multiple addresses.
+1. Specify at least one recipient in the *To*, *CC*, and/or *BCC* boxes. Use semicolons to separate multiple addresses.
 
    Alternatively, you can also click the *To*, *CC*, and *BCC* fields to select users and/or groups from the DMS.
 
    > [!NOTE]
-   > You can also specify the destination addresses in the following formats:
    >
-   > - user:domainname\\username
-   > - group:domainname\\groupname
+   > - You can also specify the destination addresses in the following formats:
    >
-   > For email reports only, the following formats are also possible:
+   >   - user:domainname\\username
+   >   - group:domainname\\groupname
    >
-   > - ftp:hostname:/path/on/server/remotefilename:username:password
-   > - copy:remotefilename:\\\\ipaddress\\path\\to
+   > - For email reports only, the following formats are also possible:
+   >
+   >   - ftp:hostname:/path/on/server/remotefilename:username:password
+   >   - copy:remotefilename:\\\\ipaddress\\path\\to
+   >
+   > - Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43848-->, at least one *To* recipient is required, and all recipients need to be present in your contact list.
 
 1. Enter the message *Subject*.
 
