@@ -17,11 +17,10 @@ namespace Skyline.DataMiner.Automation
 	{
         /// <summary>
         /// Occurs when the script finishes.
-		/// <note>Available from DataMiner 10.7.0 main release and 10.6.1 feature release.</note>
         /// </summary>
         /// <remarks>This event provides an opportunity to perform cleanup or other actions after the script is
         /// finished. Subscribers can use the event arguments to access additional context about the destruction
-        /// process.</remarks>
+        /// process.<note>Available from DataMiner 10.4.0 [CU22]/10.5.0 [CU10]/10.6.0/10.6.1 onwards (RN 43919).</note></remarks>
         /// <example>
 		/// <code>
         /// engine.OnDestroy += (sender, args) => { var e = sender as IEngine; e.Log($"Script finished with success ? {args.ScriptSucceed}"); };
