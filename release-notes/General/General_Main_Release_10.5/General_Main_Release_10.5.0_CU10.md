@@ -31,6 +31,12 @@ All methods in the `Skyline.DataMiner.Automation` namespace that use parameter d
 
 ### Fixes
 
+#### SLElement could stop working when DVE elements were deleted [ID 43947]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, when DVE elements were deleted while multiple DVE elements were having their state changed to deleted/stopped, in some cases, SLElement could stop working.
+
 #### SLNet: Information messages triggered in a QAction would incorrectly only be forwarded to the DMA hosting the element in question [ID 43958]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
