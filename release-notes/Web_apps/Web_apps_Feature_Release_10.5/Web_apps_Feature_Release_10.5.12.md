@@ -313,3 +313,11 @@ In some cases, the header of the DataMiner web apps authentication page would ke
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 When a DataMiner web app contains a scrollable container, a scrollbar should be shown when the user hovers the mouse pointer over that container. However, after a Chrome upgrade to version 139 or higher, this behavior was no longer consistent.
+
+#### Web apps: Message that indicates that the WebSocket connection was dropped would incorrectly appear when no WebSocket connection had been made [ID 44047]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+In some cases, a `Connection has been interrupted.` message would incorrectly appear when no WebSocket connection had been made.
+
+From now on, this message will only appear when an attempt to re-establish a WebSocket connection has failed.
