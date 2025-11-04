@@ -70,7 +70,7 @@ When retrieving values, the following behavior will apply:
 > [!IMPORTANT]
 > A `FieldDescriptor` ID must be unique across section definitions in a DOM module.
 
-#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43890]
+#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43890] [ID 44050]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
@@ -94,6 +94,8 @@ DataMiner Systems will now use the BrokerGateway-managed NATS solution by defaul
 - From now on, when an attempt is made to communicate using the legacy SLNet-managed NATS solution, the following exception will be thrown and logged:
 
   `Unable to find file. SLCloud configured messageBrokers are unsupported as of DataMiner 10.6.0.`
+
+- NATSRepair.exe will no longer check if the *BrokerGateway* flag in *MaintenanceSettings.xml* is set to true.
 
 #### DataMiner upgrade: Prerequisite check 'VerifyBrokerGatewayMigration' will verify whether all DMS in the cluster are using the BrokerGateway-managed NATS solution [ID 43861]
 
