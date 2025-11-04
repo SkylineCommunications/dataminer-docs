@@ -122,13 +122,16 @@ The header of the DataMiner Comparison tool has been redesigned.
 - When you click the DataMiner logo, you will be redirected to the DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`).
 - When you click the app title (i.e. "Comparison"), the app's URL will be cleared of any settings that were added to it.
 
-#### Dashboards app: Email reports can now also be sent recipients who are not contacts and who are only specified in the CC and/or BCC fields [ID 43848]
+#### Dashboards app: Email reports can now also be sent to recipients who are not contacts and who are only specified in the CC and/or BCC fields [ID 43848]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 Up to now, an email report could only be sent if recipients were specified in the *To* field. Also, those recipients had to be people in your contact list.
 
 From now on, recipients no longer have to be contacts, and it will also be possible to send email reports that only have recipients specified in the *CC* and/or *BCC* fields.
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 or newer.
 
 #### Dashboards/Low-Code Apps - Grid component: 'Grid template' section replaced by 'Grid layout' section [ID 43889]
 
