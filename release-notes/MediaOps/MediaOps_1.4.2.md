@@ -31,3 +31,14 @@ To prevent this issue, when a resource is added to a confirmed or running job, a
 #### Resource Studio: Resource error details not shown [ID 44036]
 
 If a resource had an error, it was not possible to view the details of that error in the Resource Studio app. This issue has now been resolved.
+
+#### Scheduling: Jobs sort order changed unexpectedly on Ops Board page [ID 44057]
+
+When an action was executed that influenced the timing of a job, it could occur that the order of the jobs on the *Ops Board* page changed unexpectedly. This issue has been resolved.
+
+In addition, the default sort order has been improved. Now the following sorting will be applied on the *Ops Board* page:
+
+- Active jobs: By job end time (then by ID).
+- Upcoming jobs: By job start time (then by ID).
+- Completed jobs: By job end time in descending order (then by ID).
+- All jobs: First all running jobs are sorted by end time (then by ID), then all upcoming jobs are sorted by start time (then by ID), and finally all completed jobs are sorted by end time in descending order (then by ID).
