@@ -79,6 +79,12 @@ All methods in the `Skyline.DataMiner.Automation` namespace that use parameter d
 
 When a QAction triggered an information message with regard to a particular element, SLNet would incorrectly only forward that message to the DataMiner Agent that hosted that element. As a result, that information message would not appear in client applications connected to any of the other DataMiner Agents in the system.
 
+#### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+Up to now, SLAnalytics would incorrectly not receive any "swarming complete" notifications for swarmed DVE child elements. As a result, alarm focus calculations for DVE child elements would be restarted from scratch instead of being fetched from the database.
+
 #### Failover: 'C:\\Skyline DataMiner\\Elements' folder on offline Agents could unexpectedly be cleared [ID 44005]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
