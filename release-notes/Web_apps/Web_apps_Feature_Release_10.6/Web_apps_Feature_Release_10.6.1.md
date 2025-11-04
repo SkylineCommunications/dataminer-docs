@@ -58,6 +58,12 @@ In some cases, fetching the data to be displayed in an Alarm table component cou
 
 From now on, the table data will be fetched asynchronously using a WebSocket.
 
+#### Dashboards/Low-Code Apps - Node edge graph component: Selected edges would not be selected again after the graph had been refreshed [ID 43992]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When you had selected one of several edges that went in the same direction between two nodes, up to now, that edge would incorrectly not be selected again after the graph had been refreshed.
+
 #### Dashboards/Low-Code Apps - Table component: Current selection would not immediately become visible when the browser was refreshed [ID 44003]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
