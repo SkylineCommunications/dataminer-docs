@@ -130,6 +130,9 @@ Up to now, an email report could only be sent if recipients were specified in th
 
 From now on, recipients no longer have to be contacts, and it will also be possible to send email reports that only have recipients specified in the *CC* and/or *BCC* fields.
 
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 or newer.
+
 #### Dashboards/Low-Code Apps - Grid component: 'Grid template' section replaced by 'Grid layout' section [ID 43889]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
