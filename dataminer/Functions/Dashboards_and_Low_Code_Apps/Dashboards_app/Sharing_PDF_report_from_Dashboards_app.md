@@ -20,9 +20,9 @@ To share a dashboard as a PDF report in the Dashboards app:
 
 1. Click *Email report*.
 
-1. In the *To* box, specify the email address(es) you want to send the PDF report to.
+1. Specify the email address of at least one recipient in the *To*, *CC*, and/or *BCC* box.
 
-1. Optionally, specify additional addresses in the *CC* and *BCC* boxes.
+   Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43848-->, all recipients need to be present in your contact list, and you need to specify at least one *To* recipient. Optionally, specify additional addresses in the *CC* and *BCC* boxes.
 
 1. In the *Subject* box, specify the subject for the email.
 
