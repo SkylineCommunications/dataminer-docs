@@ -28,23 +28,9 @@ uid: General_Feature_Release_10.6.1
 
 ## New features
 
-#### Dashboard reports can now be generated in PDF, HTML, and/or CSV format [ID 43887]
-
-<!-- MR 10.6.0 - FR 10.6.1 -->
-
-Up to now, a report of a dashboard could only be generated in PDF format (.pdf). Now, it is possible to generate a report in PDF, archived HTML format (.mhtml) and/or CSV format.
-
-MHTML files include all necessary information to allow the report to be rendered in a web browser: HTML code, images, CSS stylesheets, etc.
-
-Also, the default file name has been changed from `Report.pdf` to `<dashboard name>.pdf`, `<dashboard name>.mhtml`, or `<dashboard name>.csv.zip`.
-
-## Changes
-
-### Enhancements
-
 #### DataMiner Objects Models: DomInstances CRUD helper now supports reading only a selected subset of fields from `DomInstance` objects [ID 43852]
 
-<!-- MR 10.7.0 - FR 10.6.1 -->
+<!-- MR 10.6.0 - FR 10.6.1 -->
 
 The `DomInstances` CRUD helper now supports reading only a selected subset of fields from `DomInstance` objects. This will reduce the amount of data transferred and can significantly improve performance in cases where clients only need a few fields from each instance.
 
@@ -69,6 +55,20 @@ When retrieving values, the following behavior will apply:
 
 > [!IMPORTANT]
 > A `FieldDescriptor` ID must be unique across section definitions in a DOM module.
+
+#### Dashboard reports can now be generated in PDF, HTML, and/or CSV format [ID 43887]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+Up to now, a report of a dashboard could only be generated in PDF format (.pdf). Now, it is possible to generate a report in PDF, archived HTML format (.mhtml) and/or CSV format.
+
+MHTML files include all necessary information to allow the report to be rendered in a web browser: HTML code, images, CSS stylesheets, etc.
+
+Also, the default file name has been changed from `Report.pdf` to `<dashboard name>.pdf`, `<dashboard name>.mhtml`, or `<dashboard name>.csv.zip`.
+
+## Changes
+
+### Enhancements
 
 #### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43890] [ID 44050]
 
