@@ -114,3 +114,9 @@ From now on, when you do not have edit permission, the "Draft" label will be hid
 Up to now, when an error message appeared in a Form component, that message would unexpectedly disappear.
 
 From now on, when an error message appears, it will stay visible until an action is performed in the Form component or until a button is clicked.
+
+#### DataMiner web apps authentication page: Problem logging in when using a Firefox browser [ID 44043]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When you had opened the DataMiner web apps authentication page in a Firefox web browser, in some cases, an error could occur when you tried to log in to a web app.
