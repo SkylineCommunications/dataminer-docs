@@ -135,7 +135,7 @@ When a QAction triggered an information message with regard to a particular elem
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
-When a correlation rule that was configured to trigger a new correlated alarm had the *Auto clear* option set, in some cases, the correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
+When, in a correlation rule, a *New alarm* or an *Escalate event* action was configured with the *Auto clear* option set, in some cases, the new correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
 
