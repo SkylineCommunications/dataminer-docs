@@ -48,7 +48,7 @@ var timeRangeFilter = ReservationInstanceExposers.Start.LessThan(end).AND(Reserv
 var resourceFilter = ResourceExposers.Name.Contains("Encoder").AND(FunctionResourceExposers.FunctionGUID.Equal(Guid.Parse("...")));
 
 // Filter that matches all resources that support a capacity range between 100 and 200 units for a specific capacity parameter.
-var resourceFilter = ResourceExposers.Capacities.SupportsRange(rangeCapacityId, 200, 200)
+var resourceFilter = ResourceExposers.Capacities.SupportsRange(rangeCapacityId, 100, 200)
 ```
 
 > [!IMPORTANT]
