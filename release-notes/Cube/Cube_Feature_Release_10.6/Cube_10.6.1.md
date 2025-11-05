@@ -26,6 +26,12 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
+#### Trending: Double-clicking the alarm group of a multi-variate trend pattern will now open a trend graph showing all parameters involved in the multi-variate trend pattern [ID 43994]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+When, in the Alarm Console, you double-click the alarm group of a multi-variate trend pattern, from now on, a trend graph will open, showing all parameters involved in the pattern alarm group (up to a maximum of 10).
+
 #### SPI log entries containing the duration of an SRM server call will now include either the number of objects or the requested object ID [ID 44014]
 
 <!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
