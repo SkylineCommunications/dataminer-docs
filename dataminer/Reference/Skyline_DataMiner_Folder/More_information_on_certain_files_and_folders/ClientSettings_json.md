@@ -154,8 +154,8 @@ The \[Param:\] placeholder in Visual Overview uses data from the cache. However,
 
 From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43457-->, Visual Overview also supports using the parameter cache for:
 
-- Parameter parts (parameters used in conditional statements)
-- Parameter placeholders that target a full column rather than a specific row
+- Parameter parts (parameters used in conditional statements).
+- Parameter placeholders that target a full column rather than a specific row.
 
 From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43457-->, wildcard characters can be used in table keys when requesting data from cached tables:
 
