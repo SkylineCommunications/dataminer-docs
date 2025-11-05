@@ -81,6 +81,24 @@ When you had selected one of several edges that went in the same direction betwe
 
 After you had refreshed your browser, a Table component would correctly re-apply the current selection, but that selection would incorrectly only become visible when you hovered the mouse pointer over the dashboard or low-code app. From now on, when you refresh your browser, the current selection will immediately be visible.
 
+#### Dashboards/Low-Code Apps - Alarm table component: No longer possible to filter by service name [ID 44020]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+In an *Alarm table* component, it would incorrectly no longer be possible to filter by service name.
+
+> [!NOTE]
+> Note that the following Web Services API methods, which allow filtering by service, have all been modified. Up to now, services were checked by ID. From now on, services will be checked by name:
+>
+> - GetAlarmPages
+> - GetAlarmPagesV2
+> - GetAlarmPageUpdates
+> - GetAlarmPageUpdatesV2
+> - GetAlarmPageWithAlarms
+> - GetAlarmPageWithAlarmsV2
+> - GetAlarms
+> - GetAlarmsV2
+
 #### DataMiner landing page: Problem when 'Show draft applications' option was enabled [ID 44027]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
