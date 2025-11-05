@@ -49,6 +49,12 @@ When a Line & area chart component was displaying trend data of aggregation para
 
 Because of a number of enhancements, error handling has improved when generating PDF reports.
 
+#### Jobs app is End of Life [ID 44052]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+The Jobs app has been declared End of Life. On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer appear on the DataMiner landing page.
+
 ### Fixes
 
 #### Visual Overview in web apps: Children shapes would incorrectly be displayed on top of a clickable group of shapes [ID 43465]
@@ -81,11 +87,11 @@ When you had selected one of several edges that went in the same direction betwe
 
 After you had refreshed your browser, a Table component would correctly re-apply the current selection, but that selection would incorrectly only become visible when you hovered the mouse pointer over the dashboard or low-code app. From now on, when you refresh your browser, the current selection will immediately be visible.
 
-#### Dashboards/Low-Code Apps - Alarm table component: No longer possible to filter by service name [ID 44020]
+#### Dashboards/Low-Code Apps - Alarm table component: Not possible to filter by the service.propertyname column [ID 44020]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-In an *Alarm table* component, it would incorrectly no longer be possible to filter by service name.
+In an *Alarm table* component, up to now, it would incorrectly not be possible to filter by the Alarm Console column service.*propertyname* (*propertyname* being the name of the service property). This has now been made possible.
 
 > [!NOTE]
 > Note that the following Web Services API methods, which allow filtering by service, have all been modified. Up to now, services were checked by ID. From now on, services will be checked by name:
