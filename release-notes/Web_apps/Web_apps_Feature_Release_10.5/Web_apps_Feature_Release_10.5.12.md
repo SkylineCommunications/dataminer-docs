@@ -24,7 +24,7 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-When in edit mode, it is now possible to directly export a GQI query to a JSON file. To do so, select the query, click the ellipsis button, and select *Export*.
+When in edit mode, it is now possible to directly export a GQI query to a JSON file. To do so, click the ellipsis button ("...") next to the query in the *Data* pane and select *Export*.
 
 Up to now, when you wanted to export a GQI query to a JSON file (e.g. to have it executed by the *Data Aggregator* module), you had to open the developer tools of your browser, copy the query from the request payload, and convert the query using the *ConvertQueryToProtoJson* web method.
 
