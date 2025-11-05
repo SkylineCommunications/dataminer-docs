@@ -48,6 +48,7 @@ Below you can find an overview of the main features that have been added to Data
 | Dashboards: [*Trigger* component](xref:DashboardTrigger) | DataMiner 10.1.1/10.2.0 <!-- [ID 28136] --> |
 | Dashboards/Low-Code Apps: [*Button panel* component](xref:DashboardButtonPanel) | DataMiner 10.3.9/10.4.0<br>DataMiner 10.0.3 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsbuttonpanel) <!-- [ID 36775] --> |
 | Dashboards/Low-Code Apps: [Dynamic references in text](xref:Dynamically_Referencing_Data_in_Text) | DataMiner 10.3.11/10.4.0<!-- [ID 37229] --> |
+| Dashboards/Low-Code Apps: [Exporting a GQI query](xref:Creating_GQI_query#exporting-a-query) | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- [ID 43800] --> |
 | Dashboards/Low-Code Apps: [Flows](xref:Using_flows) | DataMiner web 10.4.0 [CU9]/10.4.12<!-- [ID 40974] --><br>Minimum server version: DataMiner 10.3.9/10.4.0 |
 | Dashboards/Low-Code Apps: [*Form* component](xref:DashboardForm) and DOM data input | DataMiner web 10.3.6/10.4.0<br>DataMiner 10.1.7 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#dommanager) <!-- [ID 36124] -->|
 | Dashboards/Low-Code Apps: [*Grid* component](xref:DashboardGrid) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.2.12 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals) |
@@ -99,6 +100,7 @@ Below you can find an overview of the main features that have been added to Data
 | GQI: [Custom operator](xref:GQI_Custom_Operator) | DataMiner web 10.3.0 [CU10]/10.4.1 <!-- [ID 37840] --><br>DataMiner 10.2.7 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#genericinterface) |
 | GQI: [Custom sort order](xref:GQI_Redirect_Sort_Tutorial) | DataMiner 10.4.5/10.5.0 <!-- [ID 39136] -->|
 | GQI: [DCF connections data source](xref:Get_DCF_connections) | DataMiner 10.1.3/10.2.0 <!-- [ID 29703] -->|
+| GQI: [Relational anomalies data source](xref:Get_relational_anomalies) | DataMiner 10.5.12/10.6.0 <!-- [ID 43820] --> |
 | GQI: [Importing queries](xref:Importing_a_query) | DataMiner 10.1.4/10.2.0 <!-- [ID 29022] --> |
 | GQI: [Logging](xref:GQI_Logging) | DataMiner 10.4.0/10.4.4 <!-- [ID 38870] --> |
 | GQI: [Logging of metrics](xref:GQI_Logging#metrics) | DataMiner 10.4.0 [CU3]/10.4.5 <!-- [ID 39098] -->|

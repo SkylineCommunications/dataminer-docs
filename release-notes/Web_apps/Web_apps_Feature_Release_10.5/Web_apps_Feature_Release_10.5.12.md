@@ -137,7 +137,7 @@ From now on, recipients no longer have to be contacts, and it will also be possi
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-When editing a *Grid* component, up to now, the *Advanced > Grid template* section of the *Layout* pane allowed you to configure the number of columns and rows displayed in the component and choose how items scale within the available space. Now, that *Grid template* section has been replaced by the *Layout > Grid layout* section, which contains the following settings:
+When editing a grid component, up to now, the *Advanced > Grid template* section of the *Layout* pane allowed you to configure the number of columns and rows displayed in the component and choose how items scale within the available space. Now, that *Grid template* section has been replaced by the *Layout > Grid layout* section, which contains the following settings:
 
 - **Columns**
 
