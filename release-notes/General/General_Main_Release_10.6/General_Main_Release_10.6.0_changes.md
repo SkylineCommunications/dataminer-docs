@@ -648,3 +648,9 @@ On systems with a Cassandra cluster database in combination with an OpenSearch i
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
 Up to now, because of SLNet caching issues, in client applications like e.g. DataMiner Cube, outdated SLAnalytics icons would incorrectly remain visible for too long.
+
+#### Correlation alarms triggered by a correlation rule with the 'Auto clear' option set would not be cleared automatically [ID 43974]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+When a correlation rule that was configured to trigger a new correlated alarm had the *Auto clear* option set, in some cases, the correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
