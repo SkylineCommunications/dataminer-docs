@@ -142,6 +142,8 @@ For example, the following configuration shows how to cache only specific column
 }
 ```
 
+When specifying multiple column IDs, list them as comma-separated values without spaces. For example: `"ColumnIDs": "1512,1513,1514"`.
+
 > [!NOTE]
 >
 > - A `columns=` option can also be provided in the `SubscriptionFilter`. In this case, it takes priority over the separate `ColumnIDs` setting.
