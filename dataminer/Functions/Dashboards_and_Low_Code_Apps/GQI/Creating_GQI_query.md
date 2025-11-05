@@ -55,14 +55,10 @@ From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43800-->, you ca
 
    A pop-up window will appear, showing a preview of the query in JSON format.
 
-1. Choose whether to download the query as a JSON file or copy the JSON object to your clipboard.
+1. Select *Download JSON* to download the query as a JSON file, or *Copy query* to copy the JSON object to your clipboard.
 
 > [!NOTE]
-> Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12, exporting a query to JSON requires using your browser's developer tools:
->
-> 1. Open the developer tools.
-> 1. Go to the *Network* tab and trigger the query by performing the usual action in the app.
-> 1. ...
+> Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12, exporting a query is not supported in the user interface. To export a GQI query to a JSON file (for example, to have it executed by the Data Aggregator module), follow the instructions under [Configuring GQI queries for Data Aggregator](xref:Data_Aggregator_queries).
 
 ## Letting DataMiner Assistant create a query
 
