@@ -221,9 +221,9 @@ var orderedOnField = domHelper.DomInstances.Read(onFieldQuery);
 
 #### Reading selected fields
 
-From DataMiner 10.6.1/10.7.0 onwards<!-- RN 43852 -->, the `DomInstances` CRUD helper supports reading only a selected subset of fields from `DomInstance` objects. This reduces the amount of data transferred and can significantly improve performance when clients only need a few fields from each instance.
+From DataMiner 10.6.0/10.6.1 onwards<!-- RN 43852 -->, the `DomInstances` CRUD helper supports reading only a selected subset of fields from `DomInstance` objects. This reduces the amount of data transferred and can significantly improve performance when clients only need a few fields from each instance.
 
-The overloads of `Read` and `PreparePaging` introduced in DataMiner 10.6.1/10.7.0 accept a `SelectedFields<DomInstance>` object. To select a field, add the exposer from `DomInstanceExposers` or add the `FieldDescriptorID` to the `SelectedFields<DomInstance>` object.
+The overloads of `Read` and `PreparePaging` introduced in DataMiner 10.6.0/10.6.1 accept a `SelectedFields<DomInstance>` object. To select a field, add the exposer from `DomInstanceExposers` or add the `FieldDescriptorID` to the `SelectedFields<DomInstance>` object.
 
 > [!NOTE]
 > The `Id` is always available on a `PartialObject`; you do not need to add the `Id` exposer to `SelectedFields<DomInstance>`.
