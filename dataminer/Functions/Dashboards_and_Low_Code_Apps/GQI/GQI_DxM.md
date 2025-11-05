@@ -19,14 +19,26 @@ Running GQI as an extension module has several advantages:
 The GQI DxM is supported from DataMiner 10.5.0 [CU1]/10.5.4 onwards, and automatically gets installed and updated by upgrade packages from that version onwards. It also gets updated when you install a web-only upgrade package.<!-- RN 41811 --> Earlier DataMiner versions starting from 10.5.0/10.5.2 also include a preview version of the GQI DxM, but this should only be used on staging systems.
 
 > [!IMPORTANT]
-> By default, DataMiner web applications will continue to use the SLHelper process for GQI-related operations. To switch to using the GQI DxM, see [Enabling the use of the GQI DxM](#enabling-the-use-of-the-gqi-dxm).
+> From DataMiner 10.6.0/10.5.12 onwards<!--RN 44058-->, the GQI DxM is enabled by default for DataMiner web applications. In earlier versions the GQI DxM is disabled by default and instead the SLHelper process is used for GQI functionality.
+>
+> To explicitly opt in to or out of the GQI DxM, see [Enabling or disabling the use of the GQI DxM](#enabling-or-disabling-the-use-of-the-gqi-dxm).
 
 > [!NOTE]
 > [Data Aggregator](xref:Data_Aggregator_DxM) supports queries via the GQI DxM from version 3.1.0 onwards. See [Using the GQI DxM for queries](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries).
 
-## Enabling the use of the GQI DxM
+## Enabling or disabling the use of the GQI DxM
 
-To enable the use of the GQI DxM in the DataMiner web apps, add the following configuration key to the `C:\Skyline DataMiner\Webpages\API\Web.config` file:
+From DataMiner 10.6.0/10.5.12 onwards<!--RN 44058--> the GQI DxM is enabled for DataMiner web apps by default.
+To disable the use of the GQI DxM, add the following configuration to the `C:\Skyline DataMiner\Webpages\API\Web.config` file:
+
+```xml
+<appSettings>
+    <add key="gqi:useDxM" value="false" />
+</appSettings>
+```
+
+Prior to DataMiner 10.6.0/10.5.12<!--RN 44058-->, the GQI DxM is disabled for DataMiner web apps by default.
+To enable the use of the GQI DxM, add the following configuration to the `C:\Skyline DataMiner\Webpages\API\Web.config` file:
 
 ```xml
 <appSettings>
