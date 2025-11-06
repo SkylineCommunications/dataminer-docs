@@ -49,6 +49,12 @@ When a Line & area chart component was displaying trend data of aggregation para
 
 Because of a number of enhancements, error handling has improved when generating PDF reports.
 
+#### Dashboards/Low-Code Apps: DataMiner Copilot renamed to DataMiner Assistant [ID 44028]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+In the Dashboards app and all low-code apps, the name *DataMiner Copilot* has now been replaced by *DataMiner Assistant*.
+
 #### Jobs app is End of Life [ID 44052]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
