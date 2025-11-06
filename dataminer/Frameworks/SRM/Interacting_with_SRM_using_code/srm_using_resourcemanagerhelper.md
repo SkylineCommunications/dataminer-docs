@@ -177,8 +177,7 @@ var requestedCapacity = new MultiResourceCapacityUsage(bitrateProfileId, quantit
 context.RequiredCapacities.Add(requestedCapacity); 
 ```
 
-> [!NOTE] 
-> Since DataMiner 10.5.9/10.6.0 <!-- RN 43335 -->, it is possible to request resources that have a capacity range defined by a start range and the quantity.
+From DataMiner 10.5.9/10.6.0 onwards<!-- RN 43335 -->, it is possible to request resources that have a capacity range defined by a start range and the quantity.
 
 ```csharp
 var rangeCapacityParameter = Guid.Parse("...");
