@@ -172,7 +172,7 @@ uid: glossary_a_to_l
 | Eb/No | Energy per Bit (Eb) to Noise Density (No) ratio. Measure of signal-to-noise ratio for a digital communication system. |
 | Edge QAM | Headend or hub device that receives packets of digital video or data. It repacketizes the video or data into an MPEG transport stream and digitally modulates the digital transport stream onto a downstream RF carrier using quadrature amplitude modulation (QAM). |
 | EIGRP | Enhanced Interior Gateway Routing Protocol. Advanced routing protocol used to automate routing decisions and configuration in a network. |
-| Elasticsearch | Open-source search and analytics engine, which can be used as the DataMiner Indexing database. See [Elasticsearch database](xref:Elasticsearch_database). |
+| Elasticsearch | Open-source search and analytics engine, which is sometimes used as the DataMiner Indexing database in older DataMiner versions. See [Elasticsearch database](xref:Elasticsearch_database). |
 | Element | A DataMiner object that usually represents a device monitored by the DataMiner System. See [Elements](xref:About_elements). |
 | Element Connections | DataMiner module used to configure virtual elements. Not to be confused with connections in the context of the DataMiner Connectivity Framework. See [Configuring virtual elements with the Element Connections module](xref:Virtual_elements#configuring-virtual-elements-with-the-element-connections-module). |
 | Element state | Indication of whether an element is currently active, paused or stopped. See [Element states](xref:Element_states). |
