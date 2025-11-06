@@ -12,7 +12,7 @@ Starting from DataMiner 10.5.0 [CU2]/10.5.5, it is possible to [**migrate to Bro
 ## Manual TLS configuration
 
 > [!CAUTION]
-> To manually enable TLS encryption for NATS inter-node or DataMiner-to-NATS node communication, you will need to disable automatic NATS configuration as described below. Otherwise, DataMiner could overwrite your custom NATS configuration, leaving your communication unprotected. However, this means you will become responsible for maintaining the configuration of the [*SLCloud.xml*](xref:SLCloud_xml), [*nas.config*](xref:Investigating_NATS_Issues#nasconfig), and [*nats-server.config*](xref:Investigating_NATS_Issues#nats-serverconfig) files, as well as ensuring the synchronization of the credentials in the system.
+> To manually enable TLS encryption for NATS inter-node or DataMiner-to-NATS node communication, you will need to disable automatic NATS configuration as described below. Otherwise, DataMiner could overwrite your custom NATS configuration, leaving your communication unprotected. However, this means you will become responsible for maintaining the configuration of the [*SLCloud.xml*](xref:SLCloud_xml), [*nas.config*](xref:Investigating_Legacy_NATS_Issues#nasconfig), and [*nats-server.config*](xref:Investigating_Legacy_NATS_Issues#nats-serverconfig) files, as well as ensuring the synchronization of the credentials in the system.
 
 ### Enabling NATS inter-node TLS communication
 

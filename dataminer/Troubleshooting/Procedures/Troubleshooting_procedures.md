@@ -22,6 +22,8 @@ For troubleshooting related to specific topics:
 
 - [Troubleshooting – NATS](xref:Investigating_NATS_Issues)
 
+- [Troubleshooting – Legacy NATS](xref:Investigating_Legacy_NATS_Issues)
+
 - [Troubleshooting – Indexing database](xref:Troubleshooting_Indexing_Database)
 
 - [Troubleshooting – SAML issues](xref:Troubleshooting_SAML_Issues)

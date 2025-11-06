@@ -4,6 +4,7 @@ uid: BPA_NATS_Migration_Prerequisites
 
 # Verify NATS Migration Prerequisites
 
+From DataMiner 10.6.0 onwards, this Prerequisite is removed as the migration to BrokerGateway has occurred on this version due to being mandatory.<!-- RN 44035 -->
 This BPA test will verify whether DataMiner is ready to [migrate the NATS management to the BrokerGateway DxM](xref:BrokerGateway_Migration).
 
 It will verify that:
@@ -32,7 +33,7 @@ This BPA test is available on demand. You can [run it in System Center](xref:Run
 
   The NAS/NATS services could not be located.
 
-  Verify that the NAS/NATS services are installed. If they are missing, install them via the [SLEndpointTool](xref:Investigating_NATS_Issues#remaining-steps).
+  Verify that the NAS/NATS services are installed. If they are missing, install them via the [SLEndpointTool](xref:Investigating_Legacy_NATS_Issues#remaining-steps).
 
 - **Service \<servicename\> v\<version\> uses \<dll name\> file version \<dll version\>. It must be at least version 3.0.0. Please update this DxM to the latest version:**
 
