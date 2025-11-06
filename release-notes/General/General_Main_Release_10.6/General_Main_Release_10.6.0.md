@@ -8,9 +8,7 @@ uid: General_Main_Release_10.6.0
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!IMPORTANT]
-> Before you upgrade to this DataMiner version, make sure all DataMiner Agents in the cluster have been migrated to the BrokerGateway-managed NATS solution. For all information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration)
->
-> BrokerGateway will manage NATS communication based on a single source of truth that has the complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS will be configured automatically, and a newer version of NATS will be used that has better performance and is easier to upgrade.
+> Before you upgrade to this DataMiner version, make sure all DataMiner Agents in the cluster have been migrated to the BrokerGateway-managed NATS solution. For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
 >
 > See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 43890] [ID 44050]](xref:General_Main_Release_10.6.0_changes#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43526-id-43856-id-43861-id-43890-id-44050)
 
