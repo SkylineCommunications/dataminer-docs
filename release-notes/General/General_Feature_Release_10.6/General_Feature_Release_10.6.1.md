@@ -28,15 +28,9 @@ uid: General_Feature_Release_10.6.1
 
 ## New features
 
-*No new features have been added yet.*
-
-## Changes
-
-### Enhancements
-
 #### DataMiner Objects Models: DomInstances CRUD helper now supports reading only a selected subset of fields from `DomInstance` objects [ID 43852]
 
-<!-- MR 10.7.0 - FR 10.6.1 -->
+<!-- MR 10.6.0 - FR 10.6.1 -->
 
 The `DomInstances` CRUD helper now supports reading only a selected subset of fields from `DomInstance` objects. This will reduce the amount of data transferred and can significantly improve performance in cases where clients only need a few fields from each instance.
 
@@ -62,7 +56,21 @@ When retrieving values, the following behavior will apply:
 > [!IMPORTANT]
 > A `FieldDescriptor` ID must be unique across section definitions in a DOM module.
 
-#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43890]
+#### Dashboard reports can now be generated in PDF, HTML, and/or CSV format [ID 43887]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+Up to now, a report of a dashboard could only be generated in PDF format (.pdf). Now, it is possible to generate a report in PDF, archived HTML format (.mhtml) and/or CSV format.
+
+MHTML files include all necessary information to allow the report to be rendered in a web browser: HTML code, images, CSS stylesheets, etc.
+
+Also, the default file name has been changed from `Report.pdf` to `<dashboard name>.pdf`, `<dashboard name>.mhtml`, or `<dashboard name>.csv.zip`.
+
+## Changes
+
+### Enhancements
+
+#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43890] [ID 44050]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
@@ -87,11 +95,21 @@ DataMiner Systems will now use the BrokerGateway-managed NATS solution by defaul
 
   `Unable to find file. SLCloud configured messageBrokers are unsupported as of DataMiner 10.6.0.`
 
+- NATSRepair.exe will no longer check if the *BrokerGateway* flag in *MaintenanceSettings.xml* is set to true.
+
 #### DataMiner upgrade: Prerequisite check 'VerifyBrokerGatewayMigration' will verify whether all DMS in the cluster are using the BrokerGateway-managed NATS solution [ID 43861]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
 During a DataMiner upgrade, the *VerifyBrokerGatewayMigration* prerequisite check will verify whether all DataMiner Agents in the cluster are using the BrokerGateway-managed NATS solution. If not, the check will fail, and the upgrade will not be able to continue.
+
+#### Automation: Engine class now has an OnDestroy handler that will allow resources to be cleaned up when a script ends [ID 43919]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+An `OnDestroy` handler has now been added to the `Engine` class. This handler will allow resources to be cleaned up when a script ends.
+
+Multiple handlers can be added. They will run synchronously, and if one handler throws an error, the others will keep on running.
 
 #### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
 
@@ -101,11 +119,23 @@ All methods in the `Skyline.DataMiner.Automation` namespace that use parameter d
 
 ### Fixes
 
+#### SLElement could stop working when DVE elements were deleted [ID 43947]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, when DVE elements were deleted while multiple DVE elements were having their state changed to deleted/stopped, in some cases, SLElement could stop working.
+
 #### SLNet: Information messages triggered in a QAction would incorrectly only be forwarded to the DMA hosting the element in question [ID 43958]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 When a QAction triggered an information message with regard to a particular element, SLNet would incorrectly only forward that message to the DataMiner Agent that hosted that element. As a result, that information message would not appear in client applications connected to any of the other DataMiner Agents in the system.
+
+#### Correlation alarms triggered by a correlation rule with the 'Auto clear' option set would not be cleared automatically [ID 43974]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+When, in a correlation rule, a *New alarm* or an *Escalate event* action was configured with the *Auto clear* option set, in some cases, the new correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
 
@@ -123,3 +153,9 @@ To detect whether this has occurred:
 
 - Compare the number of elements on the online and offline Agents.
 - Check the offline Agent's Recycle Bin for entries named "Element   deleted", indicating a deletion occurred without a known element name.
+
+#### SLProtocol would silently fail to parse the Protocol.Advanced@stuffing attribute when its value contained spaces [ID 44010]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, SLProtocol would silently fail to parse the *stuffing* attribute of the *Protocol.Advanced* tag when its value contained spaces.

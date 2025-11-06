@@ -1172,6 +1172,34 @@ The SLNetClientTest tool has been updated to support the limitation of not being
 
 When definition-level security is enabled, you will now need to first select one or more DOM definitions from a filter menu. This menu is accessible for any DOM manager, so it can also be used to retrieve DOM instances more easily for a specified list of DOM definitions.
 
+#### DataMiner Objects Models: DomInstances CRUD helper now supports reading only a selected subset of fields from `DomInstance` objects [ID 43852]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+The `DomInstances` CRUD helper now supports reading only a selected subset of fields from `DomInstance` objects. This will reduce the amount of data transferred and can significantly improve performance in cases where clients only need a few fields from each instance.
+
+New `Read` and `PreparePaging` overloads will accept a `SelectedFields<DomInstance>` object. To select a field, add the exposer from `DomInstanceExposers` or add the `FieldDescriptorID` to the `SelectedFields<DomInstance>` object.
+
+> [!NOTE]
+>
+> - The `Id` is always available on a `PartialObject`. You do not need to add the `Id` exposer to `SelectedFields<DomInstance>`.
+> - Selecting the `FieldValues` or `FullObject` exposer is not supported and will result in a failed read operation.
+
+The `Read` and `PreparePaging` methods will return a list of `PartialObject<DomInstance, DomInstanceId>`, which provides:
+
+- `ID`: The `DomInstance` ID.
+- `GetValue` and `TryGetValue`, which retrieve the value of a selected exposer or a single-value `FieldDescriptorID`.
+- `GetValues` and `TryGetValues`, which retrieve a list of values for a selected `FieldDescriptorID` (for fields with multiple values, or when multiple sections are allowed).
+
+When retrieving values, the following behavior will apply:
+
+- **Multiple values**: Use `GetValues<T>`/`TryGetValues<T>` to obtain a `List<T>`. `GetValues<T>` throws `InvalidOperationException` if the values are not of type `T`; `TryGetValues<T>` returns `false` in that case.
+- **Single value**: Use `GetValue<T>`/`TryGetValue<T>` for fields with a single value. `GetValue<T>` throws `InvalidOperationException` if the value is not of type `T` or when there are multiple values available for that field descriptor; `TryGetValue<T>` returns `false`.
+- **No value**: `GetValue<T>` returns `default(T)` (equivalent to an empty list for list types). `TryGetValue<T>` returns `false`. `GetValues<T>` returns `null`. `TryGetValues<T>` returns `false`.
+
+> [!IMPORTANT]
+> A `FieldDescriptor` ID must be unique across section definitions in a DOM module.
+
 #### DataMiner upgrade: Prerequisite check 'VerifyBrokerGatewayMigration' will verify whether all DMS in the cluster are using the BrokerGateway-managed NATS solution [ID 43526] [ID 43861]
 
 <!-- RN 43526: MR 10.6.0 - FR 10.5.10 -->
@@ -1256,3 +1284,13 @@ The URL parameter `useNewIASInputComponents` has priority over the UI version se
 
 > [!IMPORTANT]
 > This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
+
+#### Dashboard reports can now be generated in PDF, HTML, and/or CSV format [ID 43887]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+Up to now, a report of a dashboard could only be generated in PDF format (.pdf). Now, it is possible to generate a report in PDF, archived HTML format (.mhtml) and/or CSV format.
+
+MHTML files include all necessary information to allow the report to be rendered in a web browser: HTML code, images, CSS stylesheets, etc.
+
+Also, the default file name has been changed from `Report.pdf` to `<dashboard name>.pdf`, `<dashboard name>.mhtml`, or `<dashboard name>.csv.zip`.

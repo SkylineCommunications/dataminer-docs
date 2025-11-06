@@ -490,7 +490,7 @@ Up to now, each time a `ModuleSettings` object was updated, the network credenti
 
 From now on, when a `ModuleSettings` object is updated, the network credentials will only be checked if the network path or the credential ID were updated as well.
 
-#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43890]
+#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43890] [ID 44050]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
@@ -514,6 +514,8 @@ DataMiner Systems will now use the BrokerGateway-managed NATS solution by defaul
 - From now on, when an attempt is made to communicate using the legacy SLNet-managed NATS solution, the following exception will be thrown and logged:
 
   `Unable to find file. SLCloud configured messageBrokers are unsupported as of DataMiner 10.6.0.`
+
+- NATSRepair.exe will no longer check if the *BrokerGateway* flag in *MaintenanceSettings.xml* is set to true.
 
 #### Alarms of type 'Notice' will now be generated when SLDataGateway queues no longer seem to decrease [ID 43909]
 
@@ -646,3 +648,9 @@ On systems with a Cassandra cluster database in combination with an OpenSearch i
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
 Up to now, because of SLNet caching issues, in client applications like e.g. DataMiner Cube, outdated SLAnalytics icons would incorrectly remain visible for too long.
+
+#### Correlation alarms triggered by a correlation rule with the 'Auto clear' option set would not be cleared automatically [ID 43974]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+When, in a correlation rule, a *New alarm* or an *Escalate event* action was configured with the *Auto clear* option set, in some cases, the new correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
