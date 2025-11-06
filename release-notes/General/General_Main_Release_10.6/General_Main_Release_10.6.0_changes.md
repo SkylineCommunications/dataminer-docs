@@ -564,6 +564,14 @@ All methods in the `Skyline.DataMiner.Automation` namespace that use parameter d
 
 When a client application retrieves information about time-scoped related parameters using the `GetTimeScopedRelationsMessage`, from now on, exceptions will be thrown when that message is sent with incorrect arguments (e.g. a non-existing parameter ID, an invalid time range, etc.).
 
+#### NATSRepair.exe can no longer be run when automatic NATS configuration is disabled [ID 44061]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+From now on, it will no longer be possible to run *NATSRepair.exe* when automatic NATS configuration is disabled. If the *NATSForceManualConfig* option is enabled, *NATSRepair.exe* will immediately stop without performing any actions.
+
+See also: [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]

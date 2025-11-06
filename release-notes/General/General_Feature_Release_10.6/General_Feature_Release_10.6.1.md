@@ -122,6 +122,14 @@ Multiple handlers can be added. They will run synchronously, and if one handler 
 
 All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
 
+#### NATSRepair.exe can no longer be run when automatic NATS configuration is disabled [ID 44061]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+From now on, it will no longer be possible to run *NATSRepair.exe* when automatic NATS configuration is disabled. If the *NATSForceManualConfig* option is enabled, *NATSRepair.exe* will immediately stop without performing any actions.
+
+See also: [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)
+
 ### Fixes
 
 #### SLElement could stop working when DVE elements were deleted [ID 43947]
