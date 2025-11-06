@@ -29,6 +29,10 @@ In the Scheduling app, the default sort order on the *Ops Board* page has been i
 
 This enhancement also prevents unexpected changes to the order of the jobs on the *Ops Board* page when an action is executed that influences the timing of a job.
 
+#### Scheduling: Nodes table maximize button removed from Edit job panel [ID 44085]
+
+In the Scheduling app, the button to maximize the Nodes table has been removed from the *Edit job* panel, as this functionality was not used and did not work as expected.
+
 ### Fixes
 
 #### Scheduling: Adding a resource with linked resource pool to a confirmed or running job could cause an empty node [ID 44030]
@@ -40,3 +44,7 @@ To prevent this issue, when a resource is added to a confirmed or running job, a
 #### Resource Studio: Resource error details not shown [ID 44036]
 
 If a resource had an error, it was not possible to view the details of that error in the Resource Studio app. This issue has now been resolved.
+
+#### Scheduling: No longer possible to swap resources through drag and drop [ID 44082]
+
+Starting from MediaOps 1.4.0, it was no longer possible to swap resources by dragging and dropping them from the *Resource View* page of the Scheduling app.
