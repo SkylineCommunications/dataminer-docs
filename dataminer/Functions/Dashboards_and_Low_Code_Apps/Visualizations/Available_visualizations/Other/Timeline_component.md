@@ -172,6 +172,9 @@ To group items on the timeline based on one of the columns in your data<!--35638
 
    All groups are now displayed in a gray column to the left of the timeline<!--RN 33694-->. The timeline items are displayed next to the group they are part of.
 
+   > [!IMPORTANT]
+   > When grouping is enabled, the timeline automatically adds a sort operator to the query based on the grouping field. This lets the timeline load groups and their items gradually as the user scrolls. If an [ad hoc data source](xref:GQI_Ad_hoc_data_sources) implements [IGQIOptimizableDataSource](xref:GQI_IGQIOptimizableDataSource), make sure the returned groups and their items follow the expected sort order (all items within the same group are returned after each other). Otherwise, some items may only appear after all groups have been scrolled through. For more information, refer to [GQI extensions](xref:GQI_Extensions).
+
    > [!NOTE]
    > If a group is empty (i.e. there is no start and end time), it is still displayed in the timeline component<!--RN 35600-->.
 
@@ -286,8 +289,8 @@ By default, the template of a timeline component includes the following **pre-co
 | Layer | Type | Description |
 |--|--|--|
 | ![Text layer](~/dataminer/images/Timeline_Text_Layer.png) | Text | Displays the value from the first column in the data source. |
-| ![Rectangle layer 1](~/dataminer/images/Timeline_Rectangle_Layer1.png) | Rectangle | Acts as the background of each timeline item. Default color is `#F6F6F6`, with conditional formatting for hover (`#E8E8E9`) and selection (`#D5DBE9`). |
-| ![Rectangle layer 2](~/dataminer/images/Timeline_Rectangle_Layer2.png) | Rectangle | Acts as a visual border by being slightly larger than the background layer. Default color is `#D3D4D5`, with conditional formatting for selection (`#B8BABC`). |
+| ![Rectangle layer 1](~/dataminer/images/Timeline_Rectangle_Layer1.png) | Rectangle | Acts as the background of each timeline item, with conditional formatting for hover and selection (`#D5DBE9`). |
+| ![Rectangle layer 2](~/dataminer/images/Timeline_Rectangle_Layer2.png) | Rectangle | Acts as a visual border by being slightly larger than the background layer, with conditional formatting for selection. |
 
 This default template (available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->) ensures that a timeline item is highlighted when hovered over and stands out when selected, with a light-blue background and a blue border.
 

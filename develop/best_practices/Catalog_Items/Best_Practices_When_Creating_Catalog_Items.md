@@ -68,6 +68,17 @@ Some rules of thumb:
 - The *Main* range indicates the latest and most recommended range to install.
 - Custom tags on a range should only be used in exceptional cases, where two ranges might be considered but each has its specifics.
 
+## Keep the limitations in mind
+
+When creating Catalog items, be mindful of the following size limitations:
+
+- **Catalog item packages**: Maximum 250 MB per .zip file upload.
+- **Version files**: Maximum 250 MB per .dmprotocol or .dmapplication file.
+- **Vendor logos and custom icons**: Maximum 250 KB per image file.
+
+> [!NOTE]
+> Images included in your README.md (within the *images* folder) are not subject to the 250 KB per image limitation. This restriction only applies for vendor logos and custom icons.
+
 > [!TIP]
 > See also: [Versioning of Catalog items](xref:About_the_Catalog_app#versioning-of-catalog-items)
 

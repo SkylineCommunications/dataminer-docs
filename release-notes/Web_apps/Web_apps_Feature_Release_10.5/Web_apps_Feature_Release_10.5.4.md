@@ -399,7 +399,7 @@ When you had selected a time range in a *Timeline* component, in some cases, tha
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When you entered the edit mode of a low-code app, in some cases, a run-time error could occur when the app contained a component to which no visualization had been assigned.
+When you entered the edit mode of a low-code app, in some cases, a runtime error could occur when the app contained a component to which no visualization had been assigned.
 
 #### Dashboards/Low-Code Apps - Query filter component: Problem when changing a query that contained boolean columns [ID 42442]
 

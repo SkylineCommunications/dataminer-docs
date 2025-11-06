@@ -7,20 +7,20 @@ description: A DataMiner System can have several additional modules or apps, e.g
 
 <div class="row"> 
   <div class="column">
+    <a href="/dataminer/Functions/DataMiner_Assistant/Assistant_DxM.html" title="DataMiner Assistant" target="_self"><img src="~/dataminer/images/DataMiner_Assistant.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
     <a href="/dataminer/Functions/Automation_module/automation.html" title="Automation" target="_self"><img src="~/dataminer/images/Automation.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Functions/SRM/The_Bookings_module/The_Bookings_module.html" title="Bookings" target="_self"><img src="~/dataminer/images/Bookings.svg" style="width:100%"></a>
   </div>
-  <div class="column">
-    <a href="/dataminer/Functions/Business_Intelligence/Business_Intelligence.html" title="Business Intelligence" target="_self"><img src="~/dataminer/images/Business_Intelligence.svg" style="width:100%"></a>
-  </div>
 </div>
 
 <div class="row"> 
   <div class="column">
-    <a href="/dataminer/Functions/Copilot/Copilot_DxM.html" title="Copilot" target="_self"><img src="~/dataminer/images/Copilot.svg" style="width:100%"></a>
-  </div>  
+    <a href="/dataminer/Functions/Business_Intelligence/Business_Intelligence.html" title="Business Intelligence" target="_self"><img src="~/dataminer/images/Business_Intelligence.svg" style="width:100%"></a>
+  </div>
   <div class="column">
     <a href="/dataminer/Functions/Correlation/About_DMS_Correlation.html" title="Correlation" target="_self"><img src="~/dataminer/images/Correlation.svg" style="width:100%"></a>
   </div>  
@@ -97,11 +97,14 @@ description: A DataMiner System can have several additional modules or apps, e.g
     <a href="/dataminer/Functions/scheduler/scheduler.html" title="Scheduler" target="_self"><img src="~/dataminer/images/Scheduler.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/dataminer/Functions/Spectrum_Analysis/Spectrum_Analysis.html" title="Spectrum Analysis" target="_self"><img src="~/dataminer/images/Spectrum_Analysis.svg" style="width:100%"></a>
+    <a href="/dataminer/Functions/SiteManager/SiteManagerOverview.html" title="Site Manager" target="_self"><img src="~/dataminer/images/Site_Manager.svg" style="width:100%"></a>
   </div>
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/dataminer/Functions/Spectrum_Analysis/Spectrum_Analysis.html" title="Spectrum Analysis" target="_self"><img src="~/dataminer/images/Spectrum_Analysis.svg" style="width:100%"></a>
+  </div>
   <div class="column">
     <a href="/dataminer/Functions/Ticketing/Ticketing.html" title="Ticketing" target="_self"><img src="~/dataminer/images/Ticketing.svg" style="width:100%"></a>
   </div>  

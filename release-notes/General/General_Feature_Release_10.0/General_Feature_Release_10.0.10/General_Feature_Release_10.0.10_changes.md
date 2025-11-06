@@ -81,11 +81,11 @@ A number of enhancements have been made to the Cube Launcher:
 
 - Enhanced animations.
 
-#### Jobs app: Possible to update or delete values of drop-down fields in unused job sections \[ID 26503\]
+#### Jobs app: Possible to update or delete values of dropdown fields in unused job sections \[ID 26503\]
 
-From now on, if a job section is not being used by a job, it will be possible to update or delete values of drop-down fields in that section.
+From now on, if a job section is not being used by a job, it will be possible to update or delete values of dropdown fields in that section.
 
-If you try to update or delete values of drop-down fields in sections that are being used, an error message will appear.
+If you try to update or delete values of dropdown fields in sections that are being used, an error message will appear.
 
 #### Applications using system files to be updated during a DataMiner upgrade will now forcefully be terminated \[ID 26505\]
 
@@ -335,7 +335,7 @@ When an aggregation alarm was forwarded, in some cases, OID 1.3.6.1.4.1.8813.1.1
 
 #### Run-time errors on elements that were partially included in a service \[ID 26376\]
 
-In some cases, processing service additions, service updates and dynamic service inclusions would cause run-time errors on elements that were partially included in a service.
+In some cases, processing service additions, service updates and dynamic service inclusions would cause runtime errors on elements that were partially included in a service.
 
 Also, service impact indications could in some cases be displayed incorrectly.
 
@@ -477,7 +477,7 @@ When, in the *SNMP forwarding* section of *System Center*, you configured an SNM
 
 #### DataMiner Cube - Multiple set: List of table indices would not be populated when there was no associated read parameter \[ID 26593\]
 
-When you performed a multiple set (i.e. an update of multiple parameter values in one go), up to now, the drop-down box listing the table indices would incorrectly not be populated when there was no associated read parameter (e.g. write parameters linked to buttons displayed in table cells).
+When you performed a multiple set (i.e. an update of multiple parameter values in one go), up to now, the dropdown box listing the table indices would incorrectly not be populated when there was no associated read parameter (e.g. write parameters linked to buttons displayed in table cells).
 
 #### DataMiner Cube - EPM: KPI list would incorrectly display long column names that included the table name \[ID 26599\]
 
@@ -554,7 +554,7 @@ When a ReservationDefinition was created with an occurrence outside of its time 
 
 #### Dashboards app: Feeds would not appear in the Feeds section of a component’s data tab \[ID 26702\]
 
-In some cases, the time range, drop-down, list and tree feeds would not appear in the Feeds section of a component’s data tab.
+In some cases, the time range, dropdown, list and tree feeds would not appear in the Feeds section of a component’s data tab.
 
 #### Settings of advanced ports incorrectly deleted when element was edited \[ID 26703\]
 
@@ -684,7 +684,7 @@ In some cases, it could occur that if an Automation script sent an email report 
 
 #### DataMiner Cube: Not possible to reuse alarm template condition based on non-linked table \[ID 26812\]
 
-If a non-linked table was used in an alarm template condition for a table column parameter, it could occur that this condition could not be selected in the condition drop-down box for other table column parameters in the alarm template.
+If a non-linked table was used in an alarm template condition for a table column parameter, it could occur that this condition could not be selected in the condition dropdown box for other table column parameters in the alarm template.
 
 #### CSV export of table parameter trend graph empty for custom dataset other than 'Real-time' \[ID 26818\]
 
@@ -756,7 +756,7 @@ In some cases, the element state of a virtual function element would remain “U
 
 In some cases, the diagram would not show the selected value when the first field was a text field.
 
-Also, when you opened a drop-down field, in some cases, the fields would close again, making it impossible to select a value.
+Also, when you opened a dropdown field, in some cases, the fields would close again, making it impossible to select a value.
 
 #### Incorrect sorting of parameters in multiple parameter set confirmation window \[ID 26908\]
 
@@ -778,9 +778,9 @@ When an Automation script was executed from a shape in Visual Overview, it could
 
 In some cases, it could occur that the DataMiner state saved on the connection and in the event cache were not in sync, which could cause various issues. For example, it could be impossible to delete a ticketing resolver.
 
-#### DataMiner Cube desktop app installation drop-down box not displayed correctly on landing page on small screen \[ID 26934\]
+#### DataMiner Cube desktop app installation dropdown box not displayed correctly on landing page on small screen \[ID 26934\]
 
-On the DataMiner landing page, the drop-down box that allows you to install the desktop DataMiner Cube app was not displayed correctly if the screen was too small. Since the DataMiner Cube desktop app can only be installed on PCs with a relatively large screen, on small screens this drop-down box will no longer be displayed.
+On the DataMiner landing page, the dropdown box that allows you to install the desktop DataMiner Cube app was not displayed correctly if the screen was too small. Since the DataMiner Cube desktop app can only be installed on PCs with a relatively large screen, on small screens this dropdown box will no longer be displayed.
 
 #### DataMiner Cube: Text displayed incorrectly in mixed DPI environment \[ID 26937\]
 
@@ -848,9 +848,9 @@ A number of issues that would sometimes occur during DELT import operations have
 
 In some rare cases, a DMA startup problem could occur if a COM pointer was created for the SLGSMGateway process while the SLNet process was initializing.
 
-#### Jobs app: Drop-down icon of domain selector in header bar not displayed in case hidden domain was selected \[ID 27025\]
+#### Jobs app: Dropdown icon of domain selector in header bar not displayed in case hidden domain was selected \[ID 27025\]
 
-When a hidden domain was selected, the drop-down icon of the domain selector in the header of the Jobs app was not displayed.
+When a hidden domain was selected, the dropdown icon of the domain selector in the header of the Jobs app was not displayed.
 
 #### Encrypted credential library passwords would incorrectly be re-encrypted \[ID 27034\]\[ID 27089\]
 

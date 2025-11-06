@@ -57,9 +57,9 @@ The Help link in the IDP app now links to a URL that will always redirect to the
 
 When IDP was used in a DMS consisting of multiple DMAs, and one or more of the DMAs were disconnected, none of the DMAs were available in the app. Now, all connected DMAs in the cluster will always be listed. This affects the following features:
 
-- The drop-down box to select a DMA in the *Discovered Elements* table on the *Inventory* > *Discovered* tab.
+- The dropdown box to select a DMA in the *Discovered Elements* table on the *Inventory* > *Discovered* tab.
 - The working directories table on the *Admin* > *Configuration* tab.
-- The drop-down box to select the Fallback Agent, available via the *Admin* > *Provisioning* tab.
+- The dropdown box to select the Fallback Agent, available via the *Admin* > *Provisioning* tab.
 
 #### Rack not displayed correctly with Skyline Black theme \[ID 32156\]
 

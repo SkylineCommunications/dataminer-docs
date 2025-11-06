@@ -17,7 +17,7 @@ In System Center, go to *System settings* > *Credentials library*. You can then:
 
   - Each set of credentials must have a unique name, specified in the *Name* box at the top.
 
-  - Each set of credentials must have a specific type assigned. The following types of credentials are available, and can be selected in the *Type* drop-down box:
+  - Each set of credentials must have a specific type assigned. The following types of credentials are available, and can be selected in the *Type* dropdown box:
 
     - Community credentials
 

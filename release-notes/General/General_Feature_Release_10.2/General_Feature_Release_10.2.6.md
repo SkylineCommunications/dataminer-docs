@@ -603,9 +603,9 @@ When a feed used by a GQI query was changed while the query table was being sort
 
 In some cases, column references could not be created for columns of which the name contained underscore characters.
 
-#### Web apps - GQI: Problem when retrieving ticket fields of type 'drop-down list' \[ID 33177\]
+#### Web apps - GQI: Problem when retrieving ticket fields of type 'dropdown list' \[ID 33177\]
 
-When ticket fields of type “drop-down list” were retrieved using a GQI query, in some cases, those fields would incorrectly not contain any values.
+When ticket fields of type “dropdown list” were retrieved using a GQI query, in some cases, those fields would incorrectly not contain any values.
 
 #### SLPort would incorrectly split WebSocket messages larger than 65kB \[ID 33182\]
 
@@ -739,7 +739,7 @@ When bookings were requested from the server, and a filter was used to first ret
 
 #### CSLCloudBridge library would incorrectly not take into account the connection timeout specified in SLCloud.xml \[ID 33322\]
 
-Up to now, the CSLCloudBridge library would incorrectly not take into account the connection timeout specified in the SLCloud.xml file. In some cases, this could lead to run-time errors in the MessageBrokerReconnectThread.
+Up to now, the CSLCloudBridge library would incorrectly not take into account the connection timeout specified in the SLCloud.xml file. In some cases, this could lead to runtime errors in the MessageBrokerReconnectThread.
 
 The connection timeout specified in SLCloud.xml is the maximum time it can take to set up a connection with NATS (in milliseconds). Minimum value is 1000 ms, default value is 5000 ms.
 

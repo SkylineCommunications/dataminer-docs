@@ -152,11 +152,11 @@ It is possible to display the minimum and/or maximum hold of the trace you are c
      > [!NOTE]
      > Even when minimum and maximum hold are hidden, the calculation of the minimum and maximum hold continues. They are only reset when the reset option is clicked.
 
-   - To modify the number of traces used for the minimum calculation, next to *# traces minimum*, select a different value in the drop-down list.
+   - To modify the number of traces used for the minimum calculation, next to *# traces minimum*, select a different value in the dropdown list.
 
-   - To modify the number of traces used for the maximum calculation, next to *# traces maximum*, select a different value in the drop-down list.
+   - To modify the number of traces used for the maximum calculation, next to *# traces maximum*, select a different value in the dropdown list.
 
-1. To display the minimum or maximum hold in a different color, in the *Colors* section, select a different color in the drop-down lists in question.
+1. To display the minimum or maximum hold in a different color, in the *Colors* section, select a different color in the dropdown lists in question.
 
 > [!NOTE]
 > When you are viewing multiple measurement points at the same time, these options are not available.
@@ -177,7 +177,7 @@ It is possible to display the average trace, next to or instead of the actual re
 
   By default, the number is set to *inf*, which means there is no limit to the number of traces taken into account.
 
-- To change the color of the average trace, in the *Colors* section, select a different color in the *Average hold* drop-down list.
+- To change the color of the average trace, in the *Colors* section, select a different color in the *Average hold* dropdown list.
 
 ### Resetting the average calculation
 
@@ -199,11 +199,11 @@ In the *view* tab of the ribbon, you can do the following:
 
 - To change the size of the settings pane, drag the edge of the pane. Click the blue bar to the right of the pane to collapse or expand it entirely.
 
-- To change the units used in the real-time display, next to *Amplitude units* or *frequency units*, select a different unit in the drop-down list. *Sweeptime units* can also be customized.
+- To change the units used in the real-time display, next to *Amplitude units* or *frequency units*, select a different unit in the dropdown list. *Sweeptime units* can also be customized.
 
   The change of units will be applied everywhere on the spectrum analyzer card, including on the real-time display.
 
-- To change the number of decimals displayed for the frequency throughout the spectrum card, select the number of decimals in the *Frequency decimals* drop-down list. If you select *Auto*, the number of decimals for a particular parameter will depend on the value of the parameter.
+- To change the number of decimals displayed for the frequency throughout the spectrum card, select the number of decimals in the *Frequency decimals* dropdown list. If you select *Auto*, the number of decimals for a particular parameter will depend on the value of the parameter.
 
 - To change the background color of the grid, in the *Colors* section, click *Grid background* and select a different color.
 

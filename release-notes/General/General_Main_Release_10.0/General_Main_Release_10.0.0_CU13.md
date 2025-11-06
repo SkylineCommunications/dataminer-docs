@@ -14,7 +14,7 @@ uid: General_Main_Release_10.0.0_CU13
 
 #### Schedule configuration of BPA tests \[ID 29000\]
 
-On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the drop-down box in the *Schedule* column, you can select to run a test at different intervals, e.g. daily or every 12 hours.
+On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the dropdown box in the *Schedule* column, you can select to run a test at different intervals, e.g. daily or every 12 hours.
 
 #### Enhanced performance when assigning alarm templates with conditions used in multiple rules \[ID 29109\]
 
@@ -167,9 +167,9 @@ When an alarm property of a DVE element was updated using a SetDataMinerInfoMess
 
 Due to incorrect filtering, in some cases, the selection box in the CPE feed would contain too much data.
 
-#### DataMiner Cube: Problem when selecting a value from a drop-down parameter in a custom context menu of a table \[ID 29383\]
+#### DataMiner Cube: Problem when selecting a value from a dropdown parameter in a custom context menu of a table \[ID 29383\]
 
-If a parameter of type “drop-down” in a custom context menu of a table retrieved its values from a dependency parameter, in some cases, the first time a value was selected, the selection would not be applied.
+If a parameter of type “dropdown” in a custom context menu of a table retrieved its values from a dependency parameter, in some cases, the first time a value was selected, the selection would not be applied.
 
 #### Legacy Reporter: Status query would no longer show alarm colors \[ID 29516\]
 

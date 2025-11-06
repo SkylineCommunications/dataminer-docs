@@ -37,7 +37,7 @@ Its usage has the following limitations:
 
 1. Click *Fetch*.
 
-1. Select the type of information you want to check in the *Type* drop-down box.
+1. Select the type of information you want to check in the *Type* dropdown box.
 
    The retrieved information will then be displayed in the tabs below the settings.
 

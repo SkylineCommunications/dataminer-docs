@@ -434,9 +434,9 @@ When, in a particular Cube session, a new element, service or redundancy group w
 
 In a PDF report, in some cases, EPM components that only had one active chain filter would incorrectly not display their selected value.
 
-#### Problem when run-time errors occurred in identically named process threads \[ID 31564\]
+#### Problem when runtime errors occurred in identically named process threads \[ID 31564\]
 
-When, in a single process, multiple threads have a run-time error, those errors are grouped into one alarm tree. However, some threads have names that are not unique. When multiple identically named threads had a run-time error, all associated alarms would be generated simultaneously with the same value. This would cause SLElement to generate additional, incorrect alarms and SLWatchdog to not properly close those alarms.
+When, in a single process, multiple threads have a runtime error, those errors are grouped into one alarm tree. However, some threads have names that are not unique. When multiple identically named threads had a runtime error, all associated alarms would be generated simultaneously with the same value. This would cause SLElement to generate additional, incorrect alarms and SLWatchdog to not properly close those alarms.
 
 #### Jobs app: Problem when changing the type of a field that was being used in a job filter \[ID 31565\]
 
@@ -590,6 +590,6 @@ When you closed the Bookings app, in some cases, not all booking data would be f
 
 From DataMiner 10.2.1 onwards, the following release note also applies:
 
-#### DataMiner web apps: Filter issue when using arrow keys in drop-down box \[ID 31472\]
+#### DataMiner web apps: Filter issue when using arrow keys in dropdown box \[ID 31472\]
 
-In the DataMiner web apps (e.g. the Dashboards app), when you opened a drop-down box that already had a value selected and used the arrow keys to navigate through the values, the current value was applied as a filter, while this should not occur.
+In the DataMiner web apps (e.g. the Dashboards app), when you opened a dropdown box that already had a value selected and used the arrow keys to navigate through the values, the current value was applied as a filter, while this should not occur.

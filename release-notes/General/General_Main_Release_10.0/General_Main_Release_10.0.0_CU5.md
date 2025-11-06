@@ -157,7 +157,7 @@ When an aggregation alarm was forwarded, in some cases, OID 1.3.6.1.4.1.8813.1.1
 
 #### Run-time errors on elements that were partially included in a service \[ID 26376\]
 
-In some cases, processing service additions, service updates and dynamic service inclusions would cause run-time errors on elements that were partially included in a service.
+In some cases, processing service additions, service updates and dynamic service inclusions would cause runtime errors on elements that were partially included in a service.
 
 Also, service impact indications could in some cases be displayed incorrectly.
 
@@ -283,7 +283,7 @@ When, in the *SNMP forwarding* section of *System Center*, you configured an SN
 
 #### DataMiner Cube - Multiple set: List of table indices would not be populated when there was no associated read parameter \[ID 26593\]
 
-When you performed a multiple set (i.e. an update of multiple parameter values in one go), up to now, the drop-down box listing the table indices would incorrectly not be populated when there was no associated read parameter (e.g. write parameters linked to buttons displayed in table cells).
+When you performed a multiple set (i.e. an update of multiple parameter values in one go), up to now, the dropdown box listing the table indices would incorrectly not be populated when there was no associated read parameter (e.g. write parameters linked to buttons displayed in table cells).
 
 #### DataMiner Cube - EPM: KPI list would incorrectly display long column names that included the table name \[ID 26599\]
 

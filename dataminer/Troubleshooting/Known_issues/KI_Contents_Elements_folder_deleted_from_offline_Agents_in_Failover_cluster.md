@@ -28,7 +28,7 @@ On offline Agents in a Failover cluster, an unexpected deletion of element conte
 
 ## Fix
 
-No fix is available yet. <!--Task ID: 275052-->
+Install DataMiner 10.5.0 [CU10]/10.6.1. <!--RN 44005-->
 
 ## Workaround
 

@@ -107,7 +107,7 @@ The following changes have been implemented to the behavior of table parameter s
 
 - When a column filter is specified, the client will only receive updates if the updated cell is part of a filtered column. This change also applies to the web API in general.
 
-- In the drop-down, list and tree feeds, the indices will now be updated in real time if WebSockets are enabled. If WebSockets are not enabled, the indices will be fetched initially and then a message will be displayed to notify the user that WebSockets must be enabled in order to retrieve updates.
+- In the dropdown, list and tree feeds, the indices will now be updated in real time if WebSockets are enabled. If WebSockets are not enabled, the indices will be fetched initially and then a message will be displayed to notify the user that WebSockets must be enabled in order to retrieve updates.
 
 #### Jobs app: Fields marked 'Show in list view' will now always be shown in the jobs list, even when those fields do not have values \[ID 24708\]
 
@@ -365,11 +365,11 @@ Also, when you hover over a *Back* or *Forward* button, a tool tip will now sh
 
 When DataMiner Cube is shut down, it saves information about the last user who logged in. The formatting of that user data has now been enhanced.
 
-#### Jobs app: Possible to update or delete values of drop-down fields in unused job sections \[ID 26503\]
+#### Jobs app: Possible to update or delete values of dropdown fields in unused job sections \[ID 26503\]
 
-From now on, if a job section is not being used by a job, it will be possible to update or delete values of drop-down fields in that section.
+From now on, if a job section is not being used by a job, it will be possible to update or delete values of dropdown fields in that section.
 
-If you try to update or delete values of drop-down fields in sections that are being used, an error message will appear.
+If you try to update or delete values of dropdown fields in sections that are being used, an error message will appear.
 
 #### Applications using system files to be updated during a DataMiner upgrade will now forcefully be terminated \[ID 26505\]
 

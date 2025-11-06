@@ -58,6 +58,6 @@ The following strings must not be used as parameter names or parameter descripti
 | Database stack                         | Preset Deleted                             | Trending Template Edited       |
 | DataMiner Agent found                  | Protocol Added                             | User settings                  |
 | DataMiner Agent lost                   | Protocol Deleted                           | VDX Deleted                    |
-| DataMiner run-time                     | Protocol Edited                            | VDX Added                      |
+| DataMiner runtime                     | Protocol Edited                            | VDX Added                      |
 | Database settings edited               | Protocol Replaced                          | VDX Edited                     |
 | Deleted                                | Real-time TCP Socket                       | Views Edited                   |

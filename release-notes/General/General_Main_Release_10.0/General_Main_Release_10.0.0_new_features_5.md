@@ -200,7 +200,7 @@ The header and login screen of the Jobs app have now been adapted to the new Dat
 
 When you open a browser window and enter the IP address or host name of a DataMiner Agent, you are now directed to a new DataMiner landing page (“/root”).
 
-After signing in, you will be presented with a list of apps (e.g. Monitoring, Dashboards, etc.), and a drop-down menu on the right will allow you to install the DataMiner Cube desktop application using either a click-once web installer or an MSI installer.
+After signing in, you will be presented with a list of apps (e.g. Monitoring, Dashboards, etc.), and a dropdown menu on the right will allow you to install the DataMiner Cube desktop application using either a click-once web installer or an MSI installer.
 
 Clicking the user menu in the upper-right corner will allow you to open the Tools page, the About page and DataMiner Help.
 
@@ -716,7 +716,7 @@ If colors are defined using the *Visual.Background* property of bookings, these 
 
 #### DataMiner will now generated an error when it detects a ServiceManager license but no ElasticSearch instance \[ID 24329\]
 
-From now on, a DataMiner Agent will generated the following DataMiner run-time error when it detects a ServiceManager license but no Elasticsearch instance:
+From now on, a DataMiner Agent will generated the following DataMiner runtime error when it detects a ServiceManager license but no Elasticsearch instance:
 
 *The Service Manager is licensed, but no ElasticSearch database is active on the system. Therefore, Resource Manager and Service Manager will not initialize.*
 

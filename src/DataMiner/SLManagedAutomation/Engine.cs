@@ -22,11 +22,24 @@ namespace Skyline.DataMiner.Automation
 
 		~Engine() { }
 
-		/// <summary>
-		/// Gets the instance ID.
-		/// </summary>
-		/// <value>The instance ID.</value>
-		public int InstanceId { get; }
+        /// <summary>
+        /// Occurs when the script finishes.
+        /// </summary>
+        /// <remarks>This event provides an opportunity to perform cleanup or other actions after the script is
+        /// finished. Subscribers can use the event arguments to access additional context about the destruction
+        /// process.<note>Available from DataMiner 10.6.1/10.7.0 onwards (RN 43919).</note></remarks>
+        /// <example>
+		/// <code>
+        /// engine.OnDestroy += (sender, args) => { var e = sender as Engine; e.Log($"Script finished with success ? {args.ScriptSucceed}"); };
+		/// </code>
+        /// </example>
+        public event EventHandler<DestroyEventArgs> OnDestroy;
+
+        /// <summary>
+        /// Gets the instance ID.
+        /// </summary>
+        /// <value>The instance ID.</value>
+        public int InstanceId { get; }
 
 		/// <summary>
 		/// Gets a value indicating whether an interactive client is available for the script.
@@ -93,7 +106,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The name of the triggered script.</value>
 		/// <remarks>
-		/// <para>Feature introduced in DataMiner 10.5.12 (RN 43840).</para>
+		/// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43840).</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -177,6 +190,21 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		public string UserLoginName { get; }
+
+		/// <summary>
+		/// Gets or sets the web interactive Automation script UI version.
+		/// </summary>
+		/// <value>The version of the web interactive Automation script UI.</value>
+		/// <remarks>
+		/// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43875/43964).</para>
+		/// <para>The WebUIVersion is set to 'Default' by default. At present, this means that the old UI (V1) is used. You can instead set this to 'V2' to show the new UI or to 'V1' to make sure the old UI will continue to be used even if the default behavior changes. However, if the 'useNewIASInputComponents' URL parameter is used, this will override this configuration in the script (see <see href="xref:Configuring_app_actions_and_behavior_via_URL">Configuring app actions and behavior via the URL</see>).</para>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// engine.WebUIVersion= WebUIVersion.V2;
+		/// </code>
+		/// </example>
+		public WebUIVersion WebUIVersion { get; set; }
 
 		/// <summary>
 		/// Acknowledges the specified alarm tree using the provided comment message.
@@ -1677,9 +1705,9 @@ namespace Skyline.DataMiner.Automation
 		public void Sleep(int timeInMilliseconds) { }
 
 		/// <summary>
-		/// Clears the specified run-time flag.
+		/// Clears the specified runtime flag.
 		/// </summary>
-		/// <param name="flag">The run-time flag to clear.</param>
+		/// <param name="flag">The runtime flag to clear.</param>
 		/// <remarks>Feature introduced in DataMiner 10.0.2 (RN 23961).</remarks>
 		/// <example>
 		/// <code>

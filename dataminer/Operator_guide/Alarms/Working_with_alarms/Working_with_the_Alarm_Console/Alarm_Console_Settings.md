@@ -37,7 +37,7 @@ In the active alarms tab, history tracking is enabled by default. In a history a
 > - For information on how alarm records are combined in an alarm tree, see [Alarm trees](xref:Alarm_trees).
 
 > [!NOTE]
-> By default, a maximum of 20 alarms can be included in an alarm tree. This default number can be customized with the [AlarmsPerParameter tag in MaintenanceSettings.xml](xref:MaintenanceSettings_xml#alarmsettingsalarmsperparameter).
+> By default, a maximum of 20 alarms can be included in an alarm tree. This default number can be customized with the [AlarmsPerParameter tag in MaintenanceSettings.xml](xref:MaintenanceSettings.AlarmSettings.AlarmsPerParameter).
 
 ## Correlation tracking
 
@@ -53,9 +53,11 @@ Select this option to hide raw alarms of a correlated alarm. To show the raw ala
 >   - If neither base nor correlated alarm match the filter, neither are displayed.
 > - If a quick filter is applied with the filter box in the lower-right corner, the behavior is similar, except in case both base alarm and correlated alarm match the filter, as then both alarms will be displayed.
 
-## Automatic incident tracking
+## Automatic alarm grouping
 
-This option is only available in a DMS using Cassandra, and only if automatic incident tracking is enabled in System Center. It is also only available for active alarms, not for history alarms. For more information, see [Automatic incident tracking](xref:Automatic_incident_tracking).
+This option is only available if automatic alarm grouping is enabled in System Center. It is also only available for active alarms, not for history alarms. For more information, see [Automatic alarm grouping](xref:Automatic_incident_tracking).
+
+Note that prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- 43903 -->, this option is called *Automatic incident tracking* instead.
 
 ## Text to speech
 

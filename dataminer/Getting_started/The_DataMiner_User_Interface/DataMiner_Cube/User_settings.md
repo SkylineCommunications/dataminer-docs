@@ -56,7 +56,7 @@ The DataMiner Cube user settings are divided in the following sections:
 
 On the *General* page, the following settings are available:
 
-- **Background theme**: In the drop-down box, you can select the background theme for DataMiner Cube. The following themes are available:
+- **Background theme**: In the dropdown box, you can select the background theme for DataMiner Cube. The following themes are available:
 
   - *Skyline Mixed*
 
@@ -108,7 +108,7 @@ On the *Alarm Console* page, several settings are available:
   > [!NOTE]
   > This alarm storm protection is triggered by the total number of alarm updates, information events included.
 
-- **Filter the alarms before they enter Cube**: Select this setting and then select one of the existing alarm filters in the drop-down list in order to apply it as a server-side alarm filter. When you do so, the *Active alarms* tab of the Alarm Console will only list alarms that match this filter.
+- **Filter the alarms before they enter Cube**: Select this setting and then select one of the existing alarm filters in the dropdown list in order to apply it as a server-side alarm filter. When you do so, the *Active alarms* tab of the Alarm Console will only list alarms that match this filter.
 
   > [!NOTE]
   >
@@ -164,9 +164,9 @@ On the *Card* page, the settings are divided into four sections, i.e. a section 
 
   - *Show in side panel*: To go to a different Data Display page, you must select it in the navigation pane under the DATA heading.
 
-  - *Show in drop-down box*: To go to a different Data Display page, you must select it in a drop-down box at the top of the card. Note that the navigation pane will still have a DATA heading, but no pages will be shown underneath the heading.
+  - *Show in dropdown box*: To go to a different Data Display page, you must select it in a dropdown box at the top of the card. Note that the navigation pane will still have a DATA heading, but no pages will be shown underneath the heading.
 
-  - *Show in both side panel and drop-down box*: To go to a different Data Display page, you can either select it in the navigation pane, or in the drop-down box.
+  - *Show in both side panel and dropdown box*: To go to a different Data Display page, you can either select it in the navigation pane, or in the dropdown box.
 
 - **How to show service card Data pages**: This setting provides three options for navigation between Data Display pages on a service card:
 
@@ -310,17 +310,17 @@ These settings allow you to specify which alarm levels and icons are shown next 
 
 - **Use modern icons**: When this option is selected, the redesigned DataMiner 10 icons are used instead of the legacy icons. However, in this case icons cannot display latch levels, aggregation levels, or split view alarm levels.
 
-- **View alarm level**: In the drop-down list next to this setting, choose either *Consolidated* to show the alarm level of all child items, or *Split* to show the alarm level of the first-level child items on the left and the alarm level of the child items on the deeper levels on the right. Not supported if *Use modern icons* is selected.
+- **View alarm level**: In the dropdown list next to this setting, choose either *Consolidated* to show the alarm level of all child items, or *Split* to show the alarm level of the first-level child items on the left and the alarm level of the child items on the deeper levels on the right. Not supported if *Use modern icons* is selected.
 
-- **View latch level**: In the drop-down list next to this setting, choose either *Show* to show the latch level for views, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
+- **View latch level**: In the dropdown list next to this setting, choose either *Show* to show the latch level for views, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
 
-- **View aggregation level**: With this option, aggregated alarms on views are indicated with a triangle next to the colored bar indicating the view alarm level. In the drop-down list next to this setting, choose either *Show* to show this triangle, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
+- **View aggregation level**: With this option, aggregated alarms on views are indicated with a triangle next to the colored bar indicating the view alarm level. In the dropdown list next to this setting, choose either *Show* to show this triangle, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
 
-- **Element alarm level**: In the drop-down list next to this setting, choose either *Separate from timeout* to show a timeout icon and the last-known alarm level, or *Timeout overrules* to show a timeout icon and the timeout color.
+- **Element alarm level**: In the dropdown list next to this setting, choose either *Separate from timeout* to show a timeout icon and the last-known alarm level, or *Timeout overrules* to show a timeout icon and the timeout color.
 
-- **Element latch level**: In the drop-down list next to this setting, choose either *Show* to show the latch level for elements, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
+- **Element latch level**: In the dropdown list next to this setting, choose either *Show* to show the latch level for elements, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
 
-- **Service latch level**: In the drop-down list next to this setting, choose either *Show* to show the latch level for services, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
+- **Service latch level**: In the dropdown list next to this setting, choose either *Show* to show the latch level for services, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
 
 > [!TIP]
 > See also: [Special icon settings](xref:DataMiner_Cube_sidebar#special-icon-settings)
@@ -334,7 +334,7 @@ On the *Regional* page, the following settings are available:
   > [!NOTE]
   > Other languages are available for demo purposes only. See [Setting demo languages to be available in Cube](xref:ClientSettings_json#setting-demo-languages-to-be-available-in-cube).
 
-- **Regional date and time format**: Select a culture in the drop-down list to customize the format of dates and times in DataMiner Cube to that culture.
+- **Regional date and time format**: Select a culture in the dropdown list to customize the format of dates and times in DataMiner Cube to that culture.
 
 - **CSV separator**: Select which separator should be used in CSV exports from Cube.
 
@@ -369,7 +369,7 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 
 - **Show alarm template colors on vertical axis**: Obsolete from DataMiner 10.3.0/10.2.4 onwards. Enable this setting to show the alarm colors next to the vertical axis of trend graphs. The setting *Display the alarm template in the trend graph* allows you to further specify how the alarm colors are displayed.
 
-- **Display the alarm template in the trend graph**: In the drop-down list next to this setting, choose *Line* to show alarm template colors as a small line next to the Y-axis, or *Band* to show them as semi-transparent horizontal bands across the trend graph. From DataMiner 10.3.0/10.2.4 onwards, the checkbox in front of this setting must be selected for alarm colors to be shown next to the vertical axis of trend graphs.
+- **Display the alarm template in the trend graph**: In the dropdown list next to this setting, choose *Line* to show alarm template colors as a small line next to the Y-axis, or *Band* to show them as semi-transparent horizontal bands across the trend graph. From DataMiner 10.3.0/10.2.4 onwards, the checkbox in front of this setting must be selected for alarm colors to be shown next to the vertical axis of trend graphs.
 
 - **Show most detailed data**: If you select this option, the most detailed data available will be shown, rather than average data. In order to ensure optimal performance in case a large amount of trend data must be displayed, this option is by default not selected.
 

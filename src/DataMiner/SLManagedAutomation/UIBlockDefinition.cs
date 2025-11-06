@@ -708,7 +708,7 @@ namespace Skyline.DataMiner.Automation
 		/// <code>
 		/// UIBlockDefinition label3 = new UIBlockDefinition();
 		/// label3.Type = UIBlockType.StaticText;
-		/// label3.Text = "Drop-down no filter";
+		/// label3.Text = "Dropdown no filter";
 		/// label3.Row = 2;
 		/// label3.Column = 0;
 		/// uib.AppendBlock(label3);
@@ -725,7 +725,7 @@ namespace Skyline.DataMiner.Automation
 		/// input3.InitialValue = "2";
 		/// input3.Row = 2;
 		/// input3.Column = 1;
-		/// input3.TooltipText = "drop-down no filter - tooltip text";
+		/// input3.TooltipText = "dropdown no filter - tooltip text";
 		/// uib.AppendBlock(input3);
 		/// </code>
 		/// </example>
@@ -1000,14 +1000,14 @@ namespace Skyline.DataMiner.Automation
 		public void AddCheckBoxListOption(string rawValue, string displayValue) { }
 
 		/// <summary>
-		/// Adds an entry to a drop-down list.
+		/// Adds an entry to a dropdown list.
 		/// </summary>
 		/// <param name="option">The entry to add.</param>
 		/// <remarks>Only intended to be used when <see cref="Type"/> is set to <see cref="E:UIBlockType.DropDown"/>.</remarks>
 		public void AddDropDownOption(string option) { }
 
 		/// <summary>
-		/// Adds an entry to a drop-down list.
+		/// Adds an entry to a dropdown list.
 		/// </summary>
 		/// <param name="rawValue">The raw value.</param>
 		/// <param name="displayValue">The display value.</param>

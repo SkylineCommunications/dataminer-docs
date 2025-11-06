@@ -38,7 +38,7 @@ To save a Log Collector package:
 1. In the *DataMiner Log Collector* pop-up window, select *Start* in the lower-right corner.
 
    > [!NOTE]
-   > If you want a memory dump to be saved, before starting the log collection, first select the checkbox next to *Include memory dump* and choose the required process(es) from the list. In the case of a run-time error, the necessary processes are selected automatically.
+   > If you want a memory dump to be saved, before starting the log collection, first select the checkbox next to *Include memory dump* and choose the required process(es) from the list. In the case of a runtime error, the necessary processes are selected automatically.
    >
    > ![Include memory dump](~/dataminer/images/Include_Memory_Dump.png)<br/>*DataMiner Log Collector version 10.3.2330.1610*
 

@@ -11,8 +11,8 @@ items:
     topicUid: fieldcontrol_change_log
   - name: Communication Gateway release notes
     topicUid: CommunicationGateway_change_log
-  - name: Copilot release notes
-    topicUid: Copilot_change_log
+  - name: DataMiner Assistant release notes
+    topicUid: DataMinerAssistant_change_log
   - name: Data Aggregator release notes
     topicUid: DataAggregator_change_log
   - name: Data API release notes - preview
@@ -22,5 +22,7 @@ items:
     href: ModelHost/toc.yml
   - name: Orchestrator release notes
     topicUid: orchestrator_change_log
+  - name: Site Manager release notes
+    topicUid: SiteManager_change_log
   - name: Support Assistant release notes
     topicUid: supportassistant_change_log

@@ -9,7 +9,6 @@ uid: Known_issues
 |--|--|--|--|
 | [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | | September 17, 2025 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
-| [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | | August 1, 2025 |
 | [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | | July 15, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
@@ -21,10 +20,12 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | 21 October, 2025 |
 | [Trend graph flatline when client and DMA use different time zones](xref:KI_Trend_flatline_different_time_zones) | From Dataminer 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards | DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.10 [CU1] | September 18, 2025 |
 | [Performance decrease when restarting elements that export large numbers of DVEs or VFs](xref:KI_Performance_decrease_restart_element) | DataMiner 10.5.9 | DataMiner 10.5.10 | September 15, 2025 |
 | [SLScripting issue with non-English system locale](xref:KI_SLScripting_issue_non_English_system) | From DataMiner 10.4.0 [CU18]/10.5 [CU6]/10.5.9 onwards | DataMiner 10.4.0 [CU18] build 16295/10.5 [CU6] build 16294/10.5.9 build 16293 | September 9, 2025 |
 | [SLNet memory leak caused by ClusterEndpoint.json sync](xref:KI_ClusterEndpoint_SLNet_leak) | DataMiner 10.5.0 [CU4] build 15943, 10.5.0 [CU5] build 16086, 10.5.7, and 10.5.8 | DataMiner 10.5.0 [CU4] build 16239, 10.5.0 [CU5] build 16243, 10.5.0 [CU6], 10.5.7 [CU1], 10.5.8 [CU1], and 10.5.9 | August 19, 2025 |
+| [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | DataMiner 10.5.0 [CU10]/10.6.1 | August 1, 2025 |
 | [SRM scheduler unresponsive](xref:KI_SRM_scheduler_unresponsive) | DataMiner 10.5.6 and 10.5.7 | DataMiner 10.5.8/10.6.0 | July 4, 2025|
 | [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | July 16, 2025 |
 | [Online Failover Agent unable to acquire VIP](xref:KI_Online_Failover_Agent_unable_to_acquire_VIP) | From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards | DataMiner 10.4.0 [CU12]/10.5.0 [CU0]/10.5.3| June 20, 2025 |
@@ -49,7 +50,6 @@ uid: Known_issues
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
 | [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | | September 17, 2025 |
-| [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | | August 1, 2025 |
 | [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | | July 15, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
@@ -61,7 +61,9 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | 21 October, 2025 |
 | [Trend graph flatline when client and DMA use different time zones](xref:KI_Trend_flatline_different_time_zones) | From Dataminer 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards | DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.10 [CU1] | September 18, 2025 |
+| [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | DataMiner 10.5.0 [CU10]/10.6.1 | August 1, 2025 |
 | [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | July 16, 2025 |
 | [Online Failover Agent unable to acquire VIP](xref:KI_Online_Failover_Agent_unable_to_acquire_VIP) | From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards | DataMiner 10.4.0 [CU12]/10.5.0 [CU0]/10.5.3| June 20, 2025 |
 | [SLProtocol RTE because of element stuck in slow poll mode](xref:KI_SLProtocol_RTE_after_slow_poll_timeout) | From DataMiner 10.4.0 [CU11] onwards | DataMiner 10.5.9/10.4.0 [CU18]/10.5.0 [CU6] | June 16, 2025 |
@@ -108,7 +110,6 @@ uid: Known_issues
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
 | [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | | September 17, 2025 |
-| [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | | August 1, 2025 |
 | [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | | July 15, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
@@ -117,6 +118,8 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | 21 October, 2025 |
+| [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | DataMiner 10.5.0 [CU10]/10.6.1 | August 1, 2025 |
 | [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | July 16, 2025 |
 | [Online Failover Agent unable to acquire VIP](xref:KI_Online_Failover_Agent_unable_to_acquire_VIP) | From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards | DataMiner 10.4.0 [CU12]/10.5.0 [CU0]/10.5.3| June 20, 2025 |
 | [Cube displays incorrect offload configuration for real-time trending data](xref:KI_Cube_displays_incorrect_offload_configuration_for_real-time_trending_data) | From DataMiner Cube 10.3.7/10.4.0 onwards | DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | March 20, 2025 |
@@ -158,7 +161,7 @@ uid: Known_issues
 | [Cassandra cluster node in unexpected state](xref:KI_Cassandra_cluster_node_unexpected_state) | Cassandra Cluster setups | [Requires configuration](xref:KI_Cassandra_cluster_node_unexpected_state) | January 10, 2023 |
 | [Year 2038 problem for Cassandra](xref:Year_2038_Problem_for_Cassandra) | All DataMiner versions with a Cassandra setup<br>prior to DataMiner 10.2.0 [CU14]/10.3.0 [CU2]/10.3.4 | DataMiner 10.2.0 [CU14]/10.3.0 [CU2]/10.3.4 | January 10, 2023 |
 | [Null reference exceptions in SLDBConnection.txt and unhandled exception when retrieving Correlation details](xref:KI_NullReferenceException_SLDBConnection) | DataMiner 10.1.0 up to 10.2.0 [CU10]<br>DataMiner 10.1.2 up to 10.3.1 | DataMiner 10.2.0 [CU11]/10.3.0/10.3.2 | December 20, 2022 |
-| [SLProtocol timer thread run-time error](xref:KI_SLProtocol_timer_thread_RTE) | DataMiner versions prior to 10.2.0 [CU10]/10.3.1 | DataMiner 10.2.0 [CU10]/10.3.1 | December 20, 2022 |
+| [SLProtocol timer thread runtime error](xref:KI_SLProtocol_timer_thread_RTE) | DataMiner versions prior to 10.2.0 [CU10]/10.3.1 | DataMiner 10.2.0 [CU10]/10.3.1 | December 20, 2022 |
 | [Vertical text in Visual Overview not displayed correctly](xref:KI_Visual_Overview_Vertical_Text_no_longer_working) | DataMiner 10.2.0 [CU3]/10.2.3 up to 10.3.0 [CU4]/10.3.7 | DataMiner 10.3.0 [CU5]/10.3.8 | December 16, 2022 |
 | [SLNet deadlock on DMA startup](xref:KI_SLNet_deadlock_on_startup) | DataMiner 10.1.0 up to 10.2.0 [CU15]/10.3.0 [CU3]<br>DataMiner 10.1.2 up to 10.3.2 | DataMiner 10.2.0 [CU16]/10.3.0 [CU3]/10.3.3 | December 14, 2022 |
 | [Stable trend points not kept alive](xref:KI_stable_trend_points_not_kept_alive) | DataMiner 10.2.0 [CU8] up to 10.2.0 [CU10]<br>DataMiner 10.2.10 up to 10.3.1 | DataMiner 10.2.0 [CU11]/10.3.2 | December 9, 2022 |
@@ -173,7 +176,6 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
-| [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | | August 1, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
 | [Unable to override information events TTL of 5 years](xref:KI_Information_events_TTL_five_years) | Cassandra Cluster setups | | July 24, 2024 |
@@ -182,6 +184,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From DataMiner 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | DataMiner 10.5.0 [CU10]/10.6.1 | August 1, 2025 |
 | [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | July 16, 2025 |
 | [Reuploaded DVE protocol version is incorrectly set as production version](xref:KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version) | DataMiner 10.2.0 [CU16]/10.3.0 [CU4]/10.3.7 to DataMiner 10.4.0 [CU11]/10.5.2 | DataMiner 10.4.0 [CU12]/10.5.3 | December 18, 2024 |
 | [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
@@ -209,7 +212,7 @@ uid: Known_issues
 | [Cassandra cluster node in unexpected state](xref:KI_Cassandra_cluster_node_unexpected_state) | Cassandra Cluster setups | [Requires configuration](xref:KI_Cassandra_cluster_node_unexpected_state) | January 10,2023 |
 | [Year 2038 problem for Cassandra](xref:Year_2038_Problem_for_Cassandra) | All DataMiner versions with a Cassandra setup<br>prior to DataMiner 10.2.0 [CU14]/10.3.0 [CU2]/10.3.4 | DataMiner 10.2.0 [CU14]/10.3.0 [CU2]/10.3.4 | January 10, 2023 |
 | [Null reference exceptions in SLDBConnection.txt and unhandled exception when retrieving Correlation details](xref:KI_NullReferenceException_SLDBConnection) | DataMiner 10.1.0 up to 10.2.0 [CU10]<br>DataMiner 10.1.2 up to 10.3.1 | DataMiner 10.2.0 [CU11]/10.3.0/10.3.2 | December 20,2022 |
-| [SLProtocol timer thread run-time error](xref:KI_SLProtocol_timer_thread_RTE) | DataMiner versions prior to 10.2.0 [CU10]/10.3.1 | DataMiner 10.2.0 [CU10]/10.3.1 | December 20, 2022 |
+| [SLProtocol timer thread runtime error](xref:KI_SLProtocol_timer_thread_RTE) | DataMiner versions prior to 10.2.0 [CU10]/10.3.1 | DataMiner 10.2.0 [CU10]/10.3.1 | December 20, 2022 |
 | [Vertical text in Visual Overview not displayed correctly](xref:KI_Visual_Overview_Vertical_Text_no_longer_working) | DataMiner 10.2.0 [CU3]/10.2.3 up to 10.3.0 [CU4]/10.3.7 | DataMiner 10.3.0 [CU5]/10.3.8 | December 16, 2022 |
 | [SLNet deadlock on DMA startup](xref:KI_SLNet_deadlock_on_startup) | DataMiner 10.1.0 up to 10.2.0 [CU15]/10.3.0 [CU3]<br>DataMiner 10.1.2 up to 10.3.2 | DataMiner 10.2.0 [CU16]/10.3.0 [CU3]/10.3.3 | December 14, 2022 |
 | [Stable trend points not kept alive](xref:KI_stable_trend_points_not_kept_alive) | DataMiner 10.2.0 [CU8] up to 10.2.0 [CU10]<br>DataMiner 10.2.10 up to 10.3.1 | DataMiner 10.2.0 [CU11]/10.3.2 | December 9, 2022 |
@@ -237,7 +240,6 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
-| [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | | August 1, 2025 |
 | [Unable to override information events TTL of 5 years](xref:KI_Information_events_TTL_five_years) | Cassandra Cluster setups | | July 24, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [IP address in SAN field of TLS certificate ignored in Windows 2012 R2](xref:KI_Win2012R2_ignores_IP_in_SAN_field) | Systems using Windows 2012 R2 | | March 20, 2023 |
@@ -245,6 +247,8 @@ uid: Known_issues
 | [Migration of Ticketing data from Cassandra to Elasticsearch fails](xref:KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails) | From DataMiner 10.1.0/10.0.13 onwards | | - |
 | [DataMiner Cube freeze on startup](xref:KI_DataMiner_Cube_freeze_on_startup) | N/A | | - |
 | [Setting a protocol to production takes a long time](xref:KI_Setting_a_protocol_to_production_takes_a_long_time) | N/A | | - |
+| [Scrollbars not shown in web apps](xref:KI_Scrollbars_not_shown_in_web_apps) | DataMiner web apps on Chrome v139 or higher | DataMiner web 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | October 24, 2025 |
+| [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | DataMiner 10.5.0 [CU10]/10.6.1 | August 1, 2025 |
 | [SLScripting crash when using JScript QActions](xref:KI_SLScripting_crash_JScript_QActions) | DataMiner Systems running on Windows 11 24H2 | N/A | March 20, 2025 |
 | [DIS unable to connect to DataMiner Agent](xref:KI_DIS_unable_to_connect) | DIS 3.1.6 | DIS 3.1.7 | March 12, 2025 |
 | [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |

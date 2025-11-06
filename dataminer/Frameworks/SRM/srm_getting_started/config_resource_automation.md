@@ -27,7 +27,7 @@ For example: `{"ResourceId":" 25405e6e-3f96-4801-bc76-2dc1dae18358"}`
 
 ### Running the wizard
 
-The script allows you to select the full configuration for the resource. You can select a profile for the resource as well as for the interfaces. You can apply a state transition by selecting a profile instance that has state profiles configured, selecting the *State Transition* checkbox, and selecting the corresponding state in a drop-down box. To combine profiles and state profile data, you should select the *Full Config* checkbox, which only becomes available if *State Transition* is selected.
+The script allows you to select the full configuration for the resource. You can select a profile for the resource as well as for the interfaces. You can apply a state transition by selecting a profile instance that has state profiles configured, selecting the *State Transition* checkbox, and selecting the corresponding state in a dropdown box. To combine profiles and state profile data, you should select the *Full Config* checkbox, which only becomes available if *State Transition* is selected.
 
 ![SRM_ApplyProfileToResource wizard](~/dataminer/images/srm_applyprofiletoresource.png)
 

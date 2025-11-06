@@ -372,7 +372,7 @@ The design of DataMiner Cube has been updated to be more user-friendly and more 
 
 ##### Redesigned header bar
 
-- In the header bar, the date and time and the four squares indicating the four "sides" of Cube are no longer displayed by default. A drop-down arrow in the header bar provides quick access to settings that allow you to display these again if you prefer this. These settings are also available on the *Cube* tab of the Cube settings card.
+- In the header bar, the date and time and the four squares indicating the four "sides" of Cube are no longer displayed by default. A dropdown arrow in the header bar provides quick access to settings that allow you to display these again if you prefer this. These settings are also available on the *Cube* tab of the Cube settings card.
 
 - In the middle of the header bar, there is now a search box. This search box features improved search possibilities compared to the search box that was previously included in the side panel. As soon as you click the search box, a list of suggestions is shown below. Initially, this list shows recent items, but it is updated with search results as soon as you type anything in the box. You can click a suggestion to immediately open the corresponding card, or click *Advanced search* at the bottom of the list to open a complete list of search results in the side panel. This list will stay visible until another tab is selected.
 
@@ -727,9 +727,9 @@ When you have selected a file, the actual upload will only start after you click
 
 All files uploaded by users will by default be placed in the `C:\Skyline DataMiner\TempDocuments` folder, which is automatically cleared at every DataMiner startup.
 
-#### New engine.UnsetFlag method to clear run-time flags \[ID 23961\]
+#### New engine.UnsetFlag method to clear runtime flags \[ID 23961\]
 
-In an Automation script, you can now use the engine.UnsetFlag method to clear the following run-time flags:
+In an Automation script, you can now use the engine.UnsetFlag method to clear the following runtime flags:
 
 - RunTimeFlags.AllowUndef
 - RunTimeFlags.NoInformationEvents
@@ -842,6 +842,6 @@ If *ignorePastReservations* is false, this method works in the same way as exist
 
 #### DataMiner will now generated an error when it detects a ServiceManager license but no ElasticSearch instance \[ID 24329\]
 
-From now on, a DataMiner Agent will generated the following DataMiner run-time error when it detects a ServiceManager license but no Elasticsearch instance:
+From now on, a DataMiner Agent will generated the following DataMiner runtime error when it detects a ServiceManager license but no Elasticsearch instance:
 
 *The Service Manager is licensed, but no ElasticSearch database is active on the system. Therefore, Resource Manager and Service Manager will not initialize.*

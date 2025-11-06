@@ -31,6 +31,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 149 call <see href="xref:NT_ADD_ROW">NT_ADD_ROW</see>.</description>
 		///			</item>
+		/// 		<item>
+		/// 			<description>If a row with the specified primary key already exists, the method does nothing. To update an existing row instead, use <see href="xref:Skyline.DataMiner.Scripting.SLProtocol">SetRow</see>.</description>
+		/// 		</item>
 		///			<item>
 		///				<description>Available from DataMiner 10.1.1 (RN 27995) onwards. Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
@@ -66,6 +69,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 149 call <see href="xref:NT_ADD_ROW">NT_ADD_ROW</see>.</description>
 		///			</item>
+		/// 		<item>
+		/// 			<description>If a row with the specified primary key already exists, the method does nothing. To update an existing row instead, use <see href="xref:Skyline.DataMiner.Scripting.SLProtocol">SetRow</see>.</description>
+		/// 		</item>
 		///			<item>
 		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
@@ -85,6 +91,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 149 call <see href="xref:NT_ADD_ROW">NT_ADD_ROW</see>.</description>
 		///			</item>
+		/// 		<item>
+		/// 			<description>If a row with the specified primary key already exists, the method does nothing. To update an existing row instead, use <see href="xref:Skyline.DataMiner.Scripting.SLProtocol">SetRow</see>.</description>
+		/// 		</item>
 		///			<item>
 		///				<description>Available from DataMiner 10.1.1 (RN 27995) onwards. Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>

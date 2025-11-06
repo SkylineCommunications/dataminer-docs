@@ -76,9 +76,9 @@ To avoid unnecessary exceptions, when numeric parameter values are converted, th
 
 Performance has been improved when interacting with the Profile Manager. In addition, the cache mechanism implemented in the SRM framework has been improved.
 
-#### Natural sorting in Booking Wizard drop-down boxes \[ID 29217\]
+#### Natural sorting in Booking Wizard dropdown boxes \[ID 29217\]
 
-Natural sorting is now used in several drop-down boxes in the Booking Wizard (containing service definitions, profiles instances, resources, and discrete parameter values in case resource pool inheritance is used).
+Natural sorting is now used in several dropdown boxes in the Booking Wizard (containing service definitions, profiles instances, resources, and discrete parameter values in case resource pool inheritance is used).
 
 #### Booking Manager settings retrieved more efficiently \[ID 29273\]
 

@@ -116,7 +116,7 @@ It also keeps track of a number of key performance indicators.
 > See also:
 >
 > - [SLWatchdog](xref:Configuration_of_DataMiner_processes#slwatchdog)
-> - [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)
+> - [MaintenanceSettings.WatchDog](xref:MaintenanceSettings.WatchDog)
 
 ## Auxiliary DMA software components
 
@@ -137,7 +137,7 @@ The DMS Reporter process.
 
 > [!NOTE]
 >
-> - Timeline data that are received from SLDataGateway or directly from a MySQL database are cached in the SLASPConnection process. Some caching options can be configured in *MaintenanceSettings.xml*. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml).
+> - Timeline data that are received from SLDataGateway or directly from a MySQL database are cached in the SLASPConnection process. Some caching options can be configured in *MaintenanceSettings.xml*. See [MaintenanceSettings.SLASPConnection](xref:MaintenanceSettings.SLASPConnection).
 > - You can also find more information and settings for timeline caching at *http(s)://\[DmaIp\]/Reports/Tools.asp*:
 >   - The page displays timeline cache statistics and list contents.
 >   - The expiration time, grace time and maximum number of records can be set here, but only for the current session. These settings can be permanently changed in *MaintenanceSettings.xml*.

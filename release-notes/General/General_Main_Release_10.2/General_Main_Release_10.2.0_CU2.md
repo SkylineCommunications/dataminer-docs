@@ -85,9 +85,9 @@ A number of enhancements have been made with regard to the setup of serial conne
 
 From now on, Elasticsearch will ignore casing when sorting fields of type string.
 
-#### DataMiner web apps: Filter issue when using arrow keys in drop-down box \[ID 31472\]
+#### DataMiner web apps: Filter issue when using arrow keys in dropdown box \[ID 31472\]
 
-In the DataMiner web apps (e.g. the Dashboards app), when you opened a drop-down box that already had a value selected and used the arrow keys to navigate through the values, the current value was applied as a filter, while this should not occur.
+In the DataMiner web apps (e.g. the Dashboards app), when you opened a dropdown box that already had a value selected and used the arrow keys to navigate through the values, the current value was applied as a filter, while this should not occur.
 
 #### Alarm templates: Miscellaneous fixes \[ID 32462\]
 
@@ -208,11 +208,11 @@ When you exported GQI data from a table component to a CSV file, up to now, only
 
 #### Memory leak in SLElement \[ID 32885\]
 
-In some cases, a problem with subscriptions on views with remote data would cause SLElement to leak memory, which could eventually lead to run-time errors in the parameter thread.
+In some cases, a problem with subscriptions on views with remote data would cause SLElement to leak memory, which could eventually lead to runtime errors in the parameter thread.
 
 #### Filtered tables could incorrectly receive updates for rows that did not match the applied filter \[ID 32915\]
 
-In some cases, a filtered table could incorrectly receive updates for rows that did not match the applied filter. On EPM setups, this would cause performance issues and run-time errors.
+In some cases, a filtered table could incorrectly receive updates for rows that did not match the applied filter. On EPM setups, this would cause performance issues and runtime errors.
 
 #### DataMiner Cube - Alarm Console: Focus icon would not be displayed when a new alarm was added to an alarm group \[ID 32931\]
 

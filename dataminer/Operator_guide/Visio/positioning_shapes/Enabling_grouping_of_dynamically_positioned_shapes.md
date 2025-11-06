@@ -61,11 +61,11 @@ The following optional shape data can be added to the *ShapeGrouping* shape to f
 
   If this shape data is not specified, the primary key column determines the order of the grouping. If two of the values of an *Orderby* column are the same, shapes corresponding to these values can be grouped in either order.
 
-## Configuration of the connection drop-down menu
+## Configuration of the connection dropdown menu
 
-When table connections are used, multiple table connections for shapes that are grouped together will also be grouped together into a single connection. Clicking on a grouped connection will open the details pane of that connection. This details pane will display a drop-down menu where you can select the connection for which details need to be displayed.
+When table connections are used, multiple table connections for shapes that are grouped together will also be grouped together into a single connection. Clicking on a grouped connection will open the details pane of that connection. This details pane will display a dropdown menu where you can select the connection for which details need to be displayed.
 
-You can customize the format of the items in the drop-down menu by adding an *Options* shape data field to the connection shape and specifying the value "*ConnectionSelectionFormat=\[Custom text containing a row value\]*".
+You can customize the format of the items in the dropdown menu by adding an *Options* shape data field to the connection shape and specifying the value "*ConnectionSelectionFormat=\[Custom text containing a row value\]*".
 
 For example:
 

@@ -334,7 +334,7 @@ When configuring an SNMP manager, you can now add the polling IP address as a cu
 
 #### Profiles app: Display value configuration possible for capability profile parameters of type discrete \[ID 26379\]
 
-Previously, when you configured a capability profile parameter of type discrete, it was not possible to specify display values for the raw values of the parameter. Now, with the *Discrete type* drop-down box, you can specify whether the display values are text or a number. Depending on this selection, the selection box for the discrete parameter will be either a text box or a spin box. When you specify the possible values for the parameter, there is now also an additional *Display value* column where you can specify the display value corresponding with each raw value. Both a raw value and a display value always need to be specified. The raw values always have to be unique, but this limitation does not apply for the display values.
+Previously, when you configured a capability profile parameter of type discrete, it was not possible to specify display values for the raw values of the parameter. Now, with the *Discrete type* dropdown box, you can specify whether the display values are text or a number. Depending on this selection, the selection box for the discrete parameter will be either a text box or a spin box. When you specify the possible values for the parameter, there is now also an additional *Display value* column where you can specify the display value corresponding with each raw value. Both a raw value and a display value always need to be specified. The raw values always have to be unique, but this limitation does not apply for the display values.
 
 Capability profile parameters of type discrete that were configured before this change will have no discrete type selected. For these parameters, the display value will remain equal to the raw value, unless they are reconfigured.
 
@@ -826,7 +826,7 @@ After a DataMiner upgrade operation, in some cases, a “DataMiner is currently 
 
 #### Failover: Problem when switching over the first time after migrating from MySQL to Cassandra \[ID 26116\]
 
-When, in a Failover setup, the first switch-over occurred after migrating from MySQL to Cassandra, in some cases, a DataMiner run-time error alarm would be generated.
+When, in a Failover setup, the first switch-over occurred after migrating from MySQL to Cassandra, in some cases, a DataMiner runtime error alarm would be generated.
 
 #### ResourceManager module would no longer initialize after a DataMiner restart \[ID 26117\]\[ID 26309\]
 

@@ -136,9 +136,9 @@ If you corrected an outage that was no longer in the current SLA window, in some
 
 After trying to save a job that contained errors (e.g. missing fields), in some cases, it would no longer be possible to click the *Save* button again after correcting the errors.
 
-#### Dashboards app: Problem when loading drop-down boxes of interactive Automation scripts \[ID 24888\]
+#### Dashboards app: Problem when loading dropdown boxes of interactive Automation scripts \[ID 24888\]
 
-When a dialog box of an interactive Automation script showed multiple drop-down boxes next to each other, in some cases, some of those boxes would become unresponsive when data was being loaded into them.
+When a dialog box of an interactive Automation script showed multiple dropdown boxes next to each other, in some cases, some of those boxes would become unresponsive when data was being loaded into them.
 
 #### Jobs app: No headers were displayed at the top of the jobs list \[ID 25042\]
 
@@ -288,9 +288,9 @@ Up to now, parameter information of inactive elements would incorrectly not get 
 
 In some cases, the SLNet.exe.config file would contain an unnecessary “codedom” tag. On certain DataMiner Agents, this could lead to issues when generating functions.
 
-#### Interactive Automation scripts: Some drop-down boxes would unnecessarily trigger a refresh of the UI \[ID 25902\]
+#### Interactive Automation scripts: Some dropdown boxes would unnecessarily trigger a refresh of the UI \[ID 25902\]
 
-In some cases, drop-down boxes would unnecessarily trigger a refresh of the UI.
+In some cases, dropdown boxes would unnecessarily trigger a refresh of the UI.
 
 #### Dashboards app - Service Definition component: Booking ID not passed to the script when clicking a node \[ID 25912\]
 
@@ -336,7 +336,7 @@ When an Automation script sent a PDF report based on a dashboard, in some cases,
 
 #### Failover: Problem when switching over the first time after migrating from MySQL to Cassandra \[ID 26116\]
 
-When, in a Failover setup, the first switch-over occurred after migrating from MySQL to Cassandra, in some cases, a DataMiner run-time error alarm would be generated.
+When, in a Failover setup, the first switch-over occurred after migrating from MySQL to Cassandra, in some cases, a DataMiner runtime error alarm would be generated.
 
 #### ResourceManager module would no longer initialize after a DataMiner restart \[ID 26117\]\[ID 26309\]
 
@@ -470,7 +470,7 @@ When you closed a dashboard containing feeds, and then opened another dashboard,
 
 #### Dashboards app: Feeds would not appear in the Feeds section of a component’s data tab \[ID 26702\]
 
-In some cases, the time range, drop-down, list and tree feeds would not appear in the Feeds section of a component’s data tab.
+In some cases, the time range, dropdown, list and tree feeds would not appear in the Feeds section of a component’s data tab.
 
 #### Problem with SLAnalytics during a Failover switch \[ID 26711\]
 

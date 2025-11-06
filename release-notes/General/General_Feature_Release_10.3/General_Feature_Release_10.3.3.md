@@ -301,11 +301,11 @@ From now on, when the `<DBServer>` element contains multiple host addresses incl
 
 In some cases, the SLDataGateway process could end up with an excessive number of *HealthMonitor.Refresh* threads.
 
-#### Some agents in the cluster would incorrectly remove the run-time hosting agent info they had stored for another agent [ID 35287]
+#### Some agents in the cluster would incorrectly remove the runtime hosting agent info they had stored for another agent [ID 35287]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
-When run-time connections were being set up between agents or when a midnight sync was being executed, some agents in the DataMiner cluster would incorrectly remove the run-time hosting agent information they had stored for another agent in the same cluster.
+When runtime connections were being set up between agents or when a midnight sync was being executed, some agents in the DataMiner cluster would incorrectly remove the runtime hosting agent information they had stored for another agent in the same cluster.
 
 #### DataMiner Object Models: Permission checks for DOM modules requiring view permission 'None' were too strict [ID 35305]
 

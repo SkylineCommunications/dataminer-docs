@@ -42,7 +42,7 @@ It is now possible to have a network path consisting of only a single element or
 
 #### Service definitions only available to select as default depending on Virtual Platform property \[ID 25258\]
 
-The service definitions that can be selected in the Booking Manager are now filtered based on their *Virtual Platform* property. The *Default Booking Service Definition* must now always have the *Virtual Platform* property and the value of the property must be the same as the *Default Virtual Platform* specified in the Booking Manager settings. If no virtual platform is specified in the Booking Manager settings, all template service definitions will be selectable in the *Default Booking Service Definition* drop-down list.
+The service definitions that can be selected in the Booking Manager are now filtered based on their *Virtual Platform* property. The *Default Booking Service Definition* must now always have the *Virtual Platform* property and the value of the property must be the same as the *Default Virtual Platform* specified in the Booking Manager settings. If no virtual platform is specified in the Booking Manager settings, all template service definitions will be selectable in the *Default Booking Service Definition* dropdown list.
 
 ### Fixes
 

@@ -32,7 +32,7 @@ Skyline's DataMiner SaaS platform is composed of:
 
 DataMiner nodes (DaaS — DataMiner as a Service) are not multitenant because DaaS uses isolated compute nodes independent from other users. This offers some advantages related to increased security and isolation for access to your managed objects.
 
-Storage nodes (STaaS - Storage as a Service), on the other hands, are multitenant, with data for each specific DataMiner System being isolated in a logical partition. You can only ever access the logical partition dedicated to your own DataMiner System, and all partitions are strictly isolated from each other.
+Storage nodes (STaaS - Storage as a Service), on the other hand, are multitenant, with data for each specific DataMiner System being isolated in a logical partition. You can only ever access the logical partition dedicated to your own DataMiner System, and all partitions are strictly isolated from each other.
 
 ### Can different commercial models exist in the same organization?
 
@@ -68,3 +68,26 @@ No.
 ### Can I order specific product codes instead of credits?
 
 Yes. You can always request a quote from the Skyline Sales Team.
+
+## DataMiner credits
+
+### What are DataMiner credits?
+
+DataMiner credits are a form of currency used to subscribe to DataMiner software and hosting services.
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>Unfamiliar with terms like "DataMiner credits"? Take a look at our list of <a href="xref:Pricing_Usage_based_service#usage-terms" style="color: #657AB7;">usage terms</a>.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
+
+### Where can I check the current DataMiner credit balance of my organization?
+
+The DataMiner credit balance of an organization is displayed in the [Admin app](https://admin.dataminer.services/).
+
+### How can I acquire more DataMiner credits?
+
+You can order DataMiner credits through the Azure Marketplace. See [Ordering DataMiner credits](xref:Order_DataMiner_credits).
+
+For more information, contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).

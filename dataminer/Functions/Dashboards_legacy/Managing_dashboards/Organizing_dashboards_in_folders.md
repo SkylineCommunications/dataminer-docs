@@ -13,6 +13,6 @@ To do so:
 
 1. Click the pencil icon to edit the dashboard or dashboard container.
 
-1. On the right, next to *FOLDER*, choose the folder in the drop-down list, or choose *\<Create New>* and type the new folder name in the field below.
+1. On the right, next to *FOLDER*, choose the folder in the dropdown list, or choose *\<Create New>* and type the new folder name in the field below.
 
 1. Click the Save icon in the top-right corner.

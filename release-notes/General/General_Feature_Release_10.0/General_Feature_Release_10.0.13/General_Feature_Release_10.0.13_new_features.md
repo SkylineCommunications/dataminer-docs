@@ -328,7 +328,7 @@ You can construct a query to use as data input for a component by following thes
 
 1. Specify a name for the query.
 
-1. In the drop-down box below this, select the data source you want to use. At present, the following options are available:
+1. In the dropdown box below this, select the data source you want to use. At present, the following options are available:
 
     - *Get elements*: The elements in the DataMiner System.
     - *Get parameter table by alias*: The parameter table using the specified alias in the Elasticsearch database.
@@ -352,7 +352,7 @@ You can construct a query to use as data input for a component by following thes
 
     - *Filter*: Filters the dataset. When you select this option, select the column to filter, specify the filter method (e.g. equals, greater than, etc.) and the value to use as a filter. The available filter methods depend on the type of data in the selected column. Once the filter has been fully configured, you can refine the results by applying another operator, e.g. an additional filter.
 
-    - *Join*: Joins two tables together. When you select this option, in the *Type* drop-down box, you will first need to select how the tables should be joined. Then you will need to select another data source (optionally refined with one or more operators) in order to specify the table you want the first table to be joined with. Optionally, you can also specify a condition to determine when rows should be joined. For instance, if one table contains elements with a custom property that details a booking ID and the other lists bookings, you could add the condition that the property in the first table must match the ID in the second table.
+    - *Join*: Joins two tables together. When you select this option, in the *Type* dropdown box, you will first need to select how the tables should be joined. Then you will need to select another data source (optionally refined with one or more operators) in order to specify the table you want the first table to be joined with. Optionally, you can also specify a condition to determine when rows should be joined. For instance, if one table contains elements with a custom property that details a booking ID and the other lists bookings, you could add the condition that the property in the first table must match the ID in the second table.
 
         The *Inner* type of join only includes rows if they match the condition. *Left* displays all rows from the first table (i.e. the table on the left) and only the matching rows from the other table. *Right* does the opposite. *Outer* displays first the non-matching rows from the left table, then the matching rows from both tables, then the non-matching rows from the right table.
 
@@ -499,7 +499,7 @@ The GetDataMinerClusterName method can now be used to retrieve the name of the D
 
 Multiple changes and improvements have been implemented to the Ticketing app. The most important change is that the app will now use the Elasticsearch database instead of the Cassandra database.
 
-When you install DataMiner 10.0.13 and you already use an Elasticsearch database, all ticketing data will be migrated automatically. If you do not have an Elasticsearch database and you have installed DataMiner 10.0.13, the ticketing data will be migrated automatically as soon as you add an Elasticsearch database to you DataMiner System. However, until you do so, you will no longer be able to use the Ticketing app. A run-time error in the Alarm Console will indicate that Ticketing Manager could not be initialized because there is no Elasticsearch database.
+When you install DataMiner 10.0.13 and you already use an Elasticsearch database, all ticketing data will be migrated automatically. If you do not have an Elasticsearch database and you have installed DataMiner 10.0.13, the ticketing data will be migrated automatically as soon as you add an Elasticsearch database to you DataMiner System. However, until you do so, you will no longer be able to use the Ticketing app. A runtime error in the Alarm Console will indicate that Ticketing Manager could not be initialized because there is no Elasticsearch database.
 
 When you interact with the Ticketing Manager in scripts, keep the following changes in mind:
 

@@ -132,7 +132,7 @@ items:
         topicUid: alarm_benchmarks_cassandra_cluster
       - name: Alarm focus benchmarks
         topicUid: alarm_focus_benchmarks
-      - name: Automatic incident tracking benchmarks
+      - name: Automatic alarm grouping benchmarks
         topicUid: automatic_incident_tracking_benchmarks
       - name: Automation benchmarks
         topicUid: automation_benchmarks

@@ -528,7 +528,7 @@ SLDataGateway would incorrectly keep waiting for an acknowledgement from SLDataG
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
-When one of the following parameters was updated while an SLA window was changing, a run-time error could occur in SLProtocol:
+When one of the following parameters was updated while an SLA window was changing, a runtime error could occur in SLProtocol:
 
 - Base timestamp
 - Monitor span

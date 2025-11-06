@@ -557,7 +557,7 @@ Also, in some cases, columns would not resize correctly.
 
 #### Problem when notify protocol command NT_SET_BITRATE_DELTA_INDEX_TRACKING (448) was used in a QAction that was triggered by an 'after startup' trigger \[ID 29893\]
 
-When the notify protocol command NT_SET_BITRATE_DELTA_INDEX_TRACKING (448) was used in a QAction that was triggered by an “after startup” trigger, in some rare cases, the bit rate tracking would not get enabled because SLSNMPManager was not yet aware of the element in question. Also, due to a code issue, a lock would incorrectly not get released, causing the following run-time error to occur in the ProtocolThread:
+When the notify protocol command NT_SET_BITRATE_DELTA_INDEX_TRACKING (448) was used in a QAction that was triggered by an “after startup” trigger, in some rare cases, the bit rate tracking would not get enabled because SLSNMPManager was not yet aware of the element in question. Also, due to a code issue, a lock would incorrectly not get released, causing the following runtime error to occur in the ProtocolThread:
 
 ```txt
 Thread problem in SLProtocol.exe: [Protocol Name/Protocol Version] Element Name - ProtocolThread
@@ -596,7 +596,7 @@ Due to a problem with the mechanism that automatically removes information event
 
 #### Failover: Problem with SLNet during DataMiner startup \[ID 29950\]
 
-On a Failover system, in some rare cases, an error could occur in SLNet during DataMiner startup, causing the following run-time error in SLDMS:
+On a Failover system, in some rare cases, an error could occur in SLNet during DataMiner startup, causing the following runtime error in SLDMS:
 
 ```txt
 THREAD PROBLEM : SLDMS.exe - ConnectionThread [pid 99999 - thread 99999]

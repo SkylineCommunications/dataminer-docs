@@ -495,11 +495,11 @@ Recursion detected in the mediation links tree
 
 As this error was caused by an internal lookup issue that had no effect whatsoever with regard to mediation layer functionality, from now on, it will no longer be logged.
 
-#### Mobile apps: Problem when trying to select an item in a drop-down box [ID 34742]
+#### Mobile apps: Problem when trying to select an item in a dropdown box [ID 34742]
 
 <!-- MR 10.3.0 - FR 10.2.12 [CU0] -->
 
-In some cases, it would incorrectly not be possible to select an item in a drop-down box when the items were grouped or when their actual value was not identical to the value that was displayed.
+In some cases, it would incorrectly not be possible to select an item in a dropdown box when the items were grouped or when their actual value was not identical to the value that was displayed.
 
 #### Skyline Device Simulator: 'no such object' would incorrectly be returned when requesting data from a simulation [ID 34746]
 

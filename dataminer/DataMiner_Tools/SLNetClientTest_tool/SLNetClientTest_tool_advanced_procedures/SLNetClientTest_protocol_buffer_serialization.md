@@ -12,7 +12,7 @@ You can configure this as follows in the SLNetClientTest tool:
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-1. In the *Message Type* drop-down list, select one of the following messages, depending on what you want to configure:
+1. In the *Message Type* dropdown list, select one of the following messages, depending on what you want to configure:
 
    - *DisableProtoBufSerializationMessage*: Disables protocol buffer serialization on all open connections that have it enabled and on all future connections.
 

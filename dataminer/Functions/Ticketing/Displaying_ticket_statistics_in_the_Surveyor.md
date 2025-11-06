@@ -44,4 +44,4 @@ To do so:
 > - Using the same placeholder as mentioned above, ticket statistics can also be displayed in Visio drawings. See [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
 
 > [!TIP]
-> See also: [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)
+> See also: [MaintenanceSettings.Surveyor](xref:MaintenanceSettings.Surveyor)

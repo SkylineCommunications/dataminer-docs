@@ -37,6 +37,8 @@ When you create a query, you can use one or more of the data sources listed belo
 
 - [Get profile instances](xref:Get_profile_instances)
 
+- [Get relational anomalies](xref:Get_relational_anomalies)
+
 - [Get resources](xref:Get_resources)
 
 - [Get services](xref:Get_services)

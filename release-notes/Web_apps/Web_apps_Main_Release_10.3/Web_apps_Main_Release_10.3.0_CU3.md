@@ -116,11 +116,11 @@ When you generated a PDF of a dashboard that contained a table component showing
 
 In some cases, GQI query nodes without options would incorrectly be expanded.
 
-#### Dashboards app: Problem when a 'State' component was fed a parameter value by a drop-down component in a shared dashboard [ID 36075]
+#### Dashboards app: Problem when a 'State' component was fed a parameter value by a dropdown component in a shared dashboard [ID 36075]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
-In a shared dashboard, an error could occur when a *State* component was fed a parameter value by a drop-down component.
+In a shared dashboard, an error could occur when a *State* component was fed a parameter value by a dropdown component.
 
 #### Dashboards app & Low-Code Apps: GQI table component could throw 'Paged table session not found' error [ID 36101]
 

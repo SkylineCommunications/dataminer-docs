@@ -199,7 +199,7 @@ Finally, if you changed the information template for a parameter, and the inform
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.10 -->
 
-Because of a race condition, it could occur that a virtual primary element in a redundancy group behaved as if it were a regular DataMiner element. This could cause a run-time error in the SLProtocol process and could eventually cause the process to crash.
+Because of a race condition, it could occur that a virtual primary element in a redundancy group behaved as if it were a regular DataMiner element. This could cause a runtime error in the SLProtocol process and could eventually cause the process to crash.
 
 #### DELT import failed if element name contained curly bracket [ID 40330]
 

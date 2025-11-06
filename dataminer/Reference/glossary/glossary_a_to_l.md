@@ -15,16 +15,16 @@ uid: glossary_a_to_l
 | ACU | Automatic Changeover Unit. Device that monitors the power supply and automatically switches between power sources when necessary. |
 | AE | Adaptive Equalizer. Equalizer that automatically adapts its parameters to a signal. |
 | AES3 | Standard for the exchange of digital audio signals between professional audio devices. Also known as AES/EBU, as it was jointly developed by the Audio Engineering Society (AES) and European Broadcasting Union (EBU). |
-| Aggregation | DataMiner module that uses aggregation rules to calculate statistical information within a DataMiner System. See [Working with aggregation rules](xref:Working_with_aggregation_rules). |
-| Aggregation rule | Rule that defines which summary statistics should be calculated for a view. See [Working with aggregation rules](xref:Working_with_aggregation_rules). |
-| Alarm | Notification that a parameter value has crossed a particular threshold, or a parameter has attained a particular value. This notification has a particular severity depending on the alarm template configuration. See [Alarms](xref:About_alarms). |
-| Alarm banner | Banner at the top of the DataMiner Cube UI that displays the number of new alarms, the color of the most severe among them, and service impact information. See [Alarm Console settings](xref:AlarmConsoleSettings). |
-| Alarm Console | Pane in DataMiner Cube that allows you to view and manage alarms and information events. See [Working with the Alarm Console](xref:Working_with_the_Alarm_Console). |
-| Alarm focus | DataMiner functionality that analyzes the short-term history and current behavior of incoming alarms in order to indicate which alarms are unexpected. See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus). |
-| Alarm hysteresis | Type of hysteresis where the moment when the severity of an alarm increases is delayed. See [Alarm hysteresis](xref:Alarm_hysteresis). |
-| Alarm group | A group of alarms created by [Automatic Incident Tracking](xref:Automatic_incident_tracking). |
-| Alarm priority | Relative importance of an alarm type within the different DataMiner applications. See [Alarm type priority](xref:Alarm_types#alarm-type-priority). |
-| Alarm storm | Situation where the system is flooded by a large number of alarms. See [Alarm storm protection](xref:Alarm_storm_protection). |
+| Aggregation | DataMiner module that uses aggregation rules to calculate statistical information within a DataMiner System.<br>See [Working with aggregation rules](xref:Working_with_aggregation_rules). |
+| Aggregation rule | Rule that defines which summary statistics should be calculated for a view.<br>See [Working with aggregation rules](xref:Working_with_aggregation_rules). |
+| Alarm | Notification that a parameter value has crossed a particular threshold, or a parameter has attained a particular value. This notification has a particular severity depending on the alarm template configuration.<br>See [Alarms](xref:About_alarms). |
+| Alarm banner | Banner at the top of the DataMiner Cube UI that displays the number of new alarms, the color of the most severe among them, and service impact information.<br>See [Alarm Console settings](xref:AlarmConsoleSettings). |
+| Alarm Console | Pane in DataMiner Cube that allows you to view and manage alarms and information events.<br>See [Working with the Alarm Console](xref:Working_with_the_Alarm_Console). |
+| Alarm focus | DataMiner functionality that analyzes the short-term history and current behavior of incoming alarms in order to indicate which alarms are unexpected.<br>See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus). |
+| Alarm hysteresis | Type of hysteresis where the moment when the severity of an alarm increases is delayed.<br>See [Alarm hysteresis](xref:Alarm_hysteresis). |
+| Alarm group | A group of alarms created by (Automatic) Alarm Grouping.<br>See [Automatic Alarm Grouping](xref:Automatic_incident_tracking). |
+| Alarm priority | Relative importance of an alarm type within the different DataMiner applications.<br>See [Alarm type priority](xref:Alarm_types#alarm-type-priority). |
+| Alarm storm | Situation where the system is flooded by a large number of alarms.<br>See [Alarm storm protection](xref:Alarm_storm_protection). |
 | Alarm tab | Tab in the Alarm Console in DataMiner Cube or the DataMiner Monitoring app. |
 | Alarm template | Template that contains the alarm thresholds for all parameters in a particular protocol. See [About alarm templates](xref:About_alarm_templates). |
 | Alarm template group | Combination of different alarm templates into one grouped template. See [Alarm template groups](xref:Alarm_template_groups). |

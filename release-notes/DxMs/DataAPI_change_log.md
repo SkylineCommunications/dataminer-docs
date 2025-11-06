@@ -7,6 +7,18 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 31 October 2025 - Fix - DataAPI 1.4.1 - Issue with deadlock and memory leak in node identification mechanism [ID 44026]
+
+While processing incoming NATS messages, DataAPI could encounter a deadlock situation. This caused message accumulation, eventually leading to a memory leak.
+
+The locking mechanism has been improved to ensure proper entry and exit, preventing deadlocks and eliminating the associated memory leak.
+
+### 31 October 2025 - Fix - DataAPI 1.4.1 - Issue with fetching of auto-generated elements and connectors at startup [ID 44000]
+
+If an exception was thrown during NATS communication, it could occur that DataAPI crashed at startup.
+
+The startup procedure has now been made more robust so that it will properly handle the NATS/MessageBroker exceptions.
+
 ### 3 October 2025 - New feature - DataAPI 1.4.0 - Added support for history sets [ID 43666]
 
 Data API has been extended to allow users to specify a date and time for history sets, with an **optional header** called **historySet**.

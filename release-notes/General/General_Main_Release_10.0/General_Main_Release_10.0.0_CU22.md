@@ -149,7 +149,7 @@ In some rare cases, SLLogCollector could fail to take process dumps.
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU11] - Feature Release Version 10.2.2 -->
 
-When a trigger to reload service settings was delayed, in some cases, a run-time error could occur in the service thread of SLDataMiner.
+When a trigger to reload service settings was delayed, in some cases, a runtime error could occur in the service thread of SLDataMiner.
 
 Also, SLElement could leak memory when services were configured with a delayed trigger or a redundancy condition that persisted for a period of time.
 

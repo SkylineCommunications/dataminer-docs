@@ -259,11 +259,11 @@ When a service template was created using the *CreateServiceTemplate* method, th
 
 When the GQI query linked to a table component was changed, the table would incorrectly not get updated when column filters were applied. The table would only get updated when you changed the column filters.
 
-#### Mobile apps: Problem when trying to select an item in a drop-down box [ID 34742]
+#### Mobile apps: Problem when trying to select an item in a dropdown box [ID 34742]
 
 <!-- MR 10.3.0 - FR 10.2.12 [CU0] -->
 
-In some cases, it would incorrectly not be possible to select an item in a drop-down box when the items were grouped or when their actual value was not identical to the value that was displayed.
+In some cases, it would incorrectly not be possible to select an item in a dropdown box when the items were grouped or when their actual value was not identical to the value that was displayed.
 
 #### Dashboards app: Empty groups would incorrectly not be removed from parameter feeds listing EPM parameters [ID 34884]
 
@@ -298,11 +298,11 @@ When you applied a built-in theme, feed component selections would incorrectly b
 
 When a timeline was populated using a query with a query filter, it would incorrectly not be possible to group the data.
 
-#### Low-Code Apps: Drop-down box containing an 'execute component' action would incorrectly be empty [ID 34953]
+#### Low-Code Apps: Dropdown box containing an 'execute component' action would incorrectly be empty [ID 34953]
 
 <!-- MR 10.3.0 - FR 10.2.12 [CU1] -->
 
-When an *execute component* action had been configured, in some cases, when you tried to update that action, the drop-down box containing the action would incorrectly be empty.
+When an *execute component* action had been configured, in some cases, when you tried to update that action, the dropdown box containing the action would incorrectly be empty.
 
 #### Dashboards app & Low-Code Apps: Manually sorted GQI table would no longer feed row values [ID 34969]
 

@@ -44,6 +44,7 @@ items:
           - name: MbgNMS release notes
             href: MbgNMS/toc.yml
           - name: MediaOps release notes
+            topicUid: MediaOps_RNs_index
             href: MediaOps/toc.yml
           - name: PA release notes
             topicUid: PA_1.3.1

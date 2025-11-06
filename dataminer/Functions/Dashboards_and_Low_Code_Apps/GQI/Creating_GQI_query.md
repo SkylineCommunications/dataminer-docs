@@ -16,14 +16,14 @@ The "Queries" data item allows you to construct a query in order to tap into the
 1. In the *Data* pane, select *Queries* and click the + icon to add a new query.
 
    > [!TIP]
-   > If the DataMiner Copilot module has been deployed in your system, at this point you can [let Copilot create a query for you](#letting-copilot-create-a-query).
+   > If the DataMiner Assistant module has been deployed in your system, at this point you can [let DataMiner Assistant create a query for you](#letting-dataminer-assistant-create-a-query).
 
 1. Specify a name for the query.
 
    > [!NOTE]
    > From DataMiner 10.2.0 [CU2]/10.2.5 onwards, a query must have a unique name. If you edit an existing query that has no name, you will need to specify a unique name for it. Prior to this, starting from DataMiner 10.1.0/10.1.1, a query name is optional but highly recommended.
 
-1. In the drop-down box below this, select the data source you want to use. For a detailed overview of all available data sources, see [Query data sources](xref:Query_data_sources).
+1. In the dropdown box below this, select the data source you want to use. For a detailed overview of all available data sources, see [Query data sources](xref:Query_data_sources).
 
    > [!IMPORTANT]
    > It is also possible to configure an ad hoc data source in a query. For more information, see [Ad hoc data sources](xref:GQI_Ad_hoc_data_sources).
@@ -47,19 +47,32 @@ The "Queries" data item allows you to construct a query in order to tap into the
 
 From DataMiner 10.3.0 [CU10]/10.4.1 onwards, you can duplicate a query. To do so, click the "..." button next to the query in the *Data* pane and then select *Duplicate*.
 
-## Letting Copilot create a query
+## Exporting a query
 
-From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42234-->, you can use the DataMiner Copilot [natural language to GQI feature](xref:NL2GQI) to automatically create a GQI query based on a request in natural language.
+From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43800-->, you can export a query to JSON:
 
-To do so, in a system where Copilot has been deployed, when you click the "+" button to add a query, type your request in the textbox and click **Generate query**. Copilot will then create the desired GQI query and generate a relevant query name.
+1. Click the "..." button next to the query in the *Data* pane and select *Export*.
+
+   A pop-up window will appear, showing a preview of the query in JSON format.
+
+1. Select *Download JSON* to download the query as a JSON file, or *Copy query* to copy the JSON object to your clipboard.
+
+> [!NOTE]
+> Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12, exporting a query is not supported in the user interface. To export a GQI query to a JSON file (for example, to have it executed by the Data Aggregator module), follow the instructions under [Configuring GQI queries for Data Aggregator](xref:Data_Aggregator_queries).
+
+## Letting DataMiner Assistant create a query
+
+From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42234-->, you can use the DataMiner Assistant [natural language to GQI feature](xref:NL2GQI) to automatically create a GQI query based on a request in natural language.
+
+To do so, in a system where DataMiner Assistant has been deployed, when you click the "+" button to add a query, type your request in the textbox and click **Generate query**. DataMiner Assistant will then create the desired GQI query and generate a relevant query name.
 
 ![NL2GQI](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner 10.5.4*
 
 > [!TIP]
-> For more information about how to deploy this feature, see [Copilot DxM](xref:Copilot_DxM).
+> For more information about how to deploy this feature, see [DataMiner Assistant DxM](xref:Assistant_DxM).
 
 > [!IMPORTANT]
-> Copilot can make mistakes. We recommend manually checking the resulting queries and correcting or extending them to your liking when necessary. However, keep in mind that typing a new request and clicking the button a second time will override the query, causing all manual changes to be lost.
+> DataMiner Assistant can make mistakes. We recommend manually checking the resulting queries and correcting or extending them to your liking when necessary. However, keep in mind that typing a new request and clicking the button a second time will override the query, causing all manual changes to be lost.
 
 ## Notes on GQI queries
 

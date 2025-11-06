@@ -13,7 +13,7 @@ The following advanced analytics features **assist at identifying incidents in t
 
 - [Alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus).
 
-- [Automatic incident tracking](xref:Automatic_incident_tracking).
+- [Automatic alarm grouping](xref:Automatic_incident_tracking).
 
 The following advanced analytics features **generate suggestion events** that inform users about new insights on the data behavior of a trended parameter. These suggestion events are displayed in the *Suggestion events* tab of the Alarm Console. See [Changing the alarm console layout](xref:ChangingTheAlarmConsoleLayout).
 

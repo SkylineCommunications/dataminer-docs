@@ -18,4 +18,4 @@ Install DataMiner 10.5.8/10.6.0 or higher. <!--RN 43295-->
 
 ## Description
 
-An SLNet run-time error occurs on the SRM event thread. Bookings do not transition to the correct state, and it can occur that booking actions are not executed. When booking information is requested from or updated in Resource Manager, there is a delay.
+An SLNet runtime error occurs on the SRM event thread. Bookings do not transition to the correct state, and it can occur that booking actions are not executed. When booking information is requested from or updated in Resource Manager, there is a delay.

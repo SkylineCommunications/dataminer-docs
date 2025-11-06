@@ -22,7 +22,7 @@ To find devices and create elements with the Device Discovery wizard:
    > [!NOTE]
    > If you enter an invalid IP address, the *Discover* button at the bottom will be unavailable.
 
-1. Under *Devices*, indicate the way the wizard should look for devices by selecting one of the following options in the drop-down list and then specifying it further:
+1. Under *Devices*, indicate the way the wizard should look for devices by selecting one of the following options in the dropdown list and then specifying it further:
 
    - *Generic*: Look for any devices using SNMP and/or ping.
 

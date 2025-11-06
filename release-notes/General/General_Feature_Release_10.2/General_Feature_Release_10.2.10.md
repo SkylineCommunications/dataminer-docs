@@ -397,7 +397,7 @@ Up to now, in low-code apps, feeds would incorrectly not keep the selected value
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-When, on one thread, a group other than a poll group was launched while, on another thread, a poll group with option "partialSNMP" was waiting for incoming SNMP data, in some cases, a run-time error could occur in SLProtocol.
+When, on one thread, a group other than a poll group was launched while, on another thread, a poll group with option "partialSNMP" was waiting for incoming SNMP data, in some cases, a runtime error could occur in SLProtocol.
 
 #### Dashboards app Low-Code Apps: GQI table error not cleared between sessions [ID 34243]
 

@@ -20,7 +20,7 @@ Manual firewall configuration
 
 From DataMiner 10.1.0 onwards, the NATS and NAS services are automatically installed on each NATS-enabled DataMiner Agent. More information is available in the [DataMiner v10.1.0 release notes](xref:General_Main_Release_10.1.0_new_features_1#gradual-introduction-of-inter-process-communication-via-nats-id-27496id-28082id-28131-id-28233id-28660).
 
-However, if the firewall update fails after an upgrade to DataMiner 10.1.0 or higher, this can result in the following DataMiner run-time error message:
+However, if the firewall update fails after an upgrade to DataMiner 10.1.0 or higher, this can result in the following DataMiner runtime error message:
 
 `NATS has stopped, restarting …`
 

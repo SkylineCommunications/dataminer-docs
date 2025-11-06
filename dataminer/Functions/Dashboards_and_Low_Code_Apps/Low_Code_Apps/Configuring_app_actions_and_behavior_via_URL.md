@@ -63,7 +63,7 @@ You can modify the behavior of an app by adding specific parameters to the URL.
 
   - [Parameter picker > *Index filter separator* setting](xref:DashboardParameterPicker#configuring-the-component)
 
-- `useNewIASInputComponents=true`: Available from DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41495-->. Allows you to control whether the latest version of the interactive Automation script UI is used for IAS components or when launching an interactive Automation script via the *Launch a script* event. When this parameter is set to "false" or omitted, the app uses the old UI. <!--Expanded by the following RNs: 41188 , 41529, 42032, 42009, 42007, 41891, 41838, 42132, 42210, 42231, 42279, 42401, 42641, 42440, 42826, 42781-->
+- `useNewIASInputComponents=true`: Available from DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41495-->. Allows you to control whether the latest version of the interactive Automation script UI is used for IAS components or when launching an interactive Automation script via the *Launch a script* event. When this parameter is set to "false", scripts will use the old UI. If the parameter is omitted, scripts will use the old UI unless they have been explicitly configured to use the new UI (with the [WebUIVersion](xref:Skyline.DataMiner.Automation.Engine.WebUIVersion*) property). <!--Expanded by the following RNs: 41188 , 41529, 42032, 42009, 42007, 41891, 41838, 42132, 42210, 42231, 42279, 42401, 42641, 42440, 42826, 42781-->
 
   > [!NOTE]
   >
