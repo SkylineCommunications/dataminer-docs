@@ -9,12 +9,12 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 ### 1.1.3.6
 
-#### New Feature - Added SkipCertificateVerification property to IHttpConnection [ID 44066]
-The IHttpConnection interface has been extended with a SkipCertificateVerification property. This enables configuration of whether SSL/TLS certificate verification should be skipped when setting up or modifying an element’s HTTP connection.
-This corresponds to the "Skip SSL/TLS certificate verification" checkbox in Cube.
+#### New feature - SkipCertificateVerification property added to IHttpConnection [ID 44066]
+
+The IHttpConnection interface has been extended with a SkipCertificateVerification property. This enables configuration of whether SSL/TLS certificate verification should be skipped when setting up or modifying an element's HTTP connection. This corresponds to the *Skip SSL/TLS certificate verification* checkbox in Cube.
 
 > [!IMPORTANT]
-> This property is only effective on DataMiner versions 10.4.12 / 10.5.0-CU0 and higher, as the underlying support was introduced in those versions. On earlier versions, setting this property will have no effect.
+> This property is only effective if DataMiner 10.4.12/10.5.0 or higher is used, as the underlying support is introduced in those versions. With earlier versions, setting this property will have no effect.
 
 This example shows how to create an HTTP element with the SkipCertificateVerification option enabled:
 
