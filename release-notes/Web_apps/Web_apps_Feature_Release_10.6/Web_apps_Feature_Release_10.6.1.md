@@ -135,6 +135,12 @@ Up to now, when an error message appeared in a Form component, that message woul
 
 From now on, when an error message appears, it will stay visible until an action is performed in the Form component or until a button is clicked.
 
+#### Interactive Automation scripts: Numeric values containing leading zeros would not update correctly [ID 44037]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+In interactive Automation scripts launched from a web app, up to now, numeric values containing leading zeros would not update correctly.
+
 #### DataMiner web apps authentication page: Problem logging in when using a Firefox browser [ID 44043]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
