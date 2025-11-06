@@ -55,6 +55,14 @@ Because of a number of enhancements, error handling has improved when generating
 
 In the Dashboards app and all low-code apps, the name *DataMiner Copilot* has now been replaced by *DataMiner Assistant*.
 
+#### Dashboards/Low-Code Apps: Enhanced visibility of query buttons in the edit pane [ID 44048]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, when you selected a query in the edit pane, the color of the query button would not get properly adapted to the color of the background, causing visibility issues.
+
+From now on, these query buttons will clearly be visible, whatever the color of the background.
+
 #### Jobs app is End of Life [ID 44052]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->

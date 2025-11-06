@@ -490,7 +490,7 @@ Up to now, each time a `ModuleSettings` object was updated, the network credenti
 
 From now on, when a `ModuleSettings` object is updated, the network credentials will only be checked if the network path or the credential ID were updated as well.
 
-#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 43890] [ID 44050]
+#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 43890] [ID 44035] [ID 44050]
 
 <!-- RN 43526: MR 10.6.0 - FR 10.5.10 -->
 <!-- MR 10.6.0 - FR 10.6.1 -->
@@ -500,6 +500,8 @@ DataMiner Systems will now use the BrokerGateway-managed NATS solution by defaul
 - During a DataMiner upgrade, the *VerifyBrokerGatewayMigration* prerequisite check will verify whether all DataMiner Agents in the cluster are using the BrokerGateway-managed NATS solution. If not, the check will fail, and the upgrade will not be able to continue.
 
 - It will no longer be possible to migrate from the BrokerGateway-managed NATS solution (nats-server service) back to the legacy SLNet-managed NATS solution (NAS and NATS services).
+
+- The *Verify NATS Migration Prerequisites* BPA test has now been removed. As from this DataMiner version, all DataMiner Systems are expected to use the BrokerGateway-managed NATS solution by default.
 
 - DataMiner upgrades will no longer automatically install NAS and NATS.
 
