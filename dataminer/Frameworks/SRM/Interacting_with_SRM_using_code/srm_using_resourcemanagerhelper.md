@@ -21,6 +21,75 @@ var helper = new ResourceManagerHelper(protocol.SLNet.SendSingleResponseMessage)
 > [!NOTE]
 > Be careful when updating bookings in connectors. Depending on the scale of the SRM system, adding or updating bookings can take a while.
 
+## Create resource pools
+
+```csharp
+var decodersPool = new ResourcePool(Guid.NewGuid())
+{
+    Name = "Decoders",
+    Description = "This is a resource pool for decoders",
+};
+
+var antennasPool = new ResourcePool(Guid.NewGuid())
+{
+    Name = "Antennas",
+    Description = "This is a resource pool for antennas",
+};
+
+helper.AddOrUpdateResourcePools(decodersPool, antennasPool);
+```
+
+## Reading resources pools
+```csharp
+decodersPool = helper.GetResourcePools(new ResourcePool { Name = "Decoders" }).FirstOrDefault();
+antennasPool = helper.GetResourcePools(new ResourcePool { Name = "Antennas" }).FirstOrDefault();
+```
+
+## Update resource pools
+```csharp
+decodersPool.Description = "Updated description for decoders pool";
+helper.AddOrUpdateResourcePools(decodersPool);
+```
+
+## Remove resource pools
+```csharp
+helper.RemoveResourcePools(decodersPool, antennasPool); 
+```
+
+## Create resources
+```csharp
+var decoder = new Resource(Guid.NewGuid())
+{
+    Name = "Decoder_1",
+    Description = "This is a resource representing a decoder",
+    Mode = ResourceMode.Available,
+    MaxConcurrency = 10,
+    PoolGUIDs = new List<Guid>() { decodersPool.ID },
+};
+
+var antenna = new Resource(Guid.NewGuid())
+{
+    Name = "Antenna_1",
+    Description = "This is a resource representing an antenna",
+    Mode = ResourceMode.Available,
+    MaxConcurrency = 5,
+    PoolGUIDs = new List<Guid>() { antennasPool.ID },
+};
+
+helper.AddOrUpdateResources(decoder, antenna);
+```
+
+## Update resources
+```csharp
+decoder.MaxConcurrency = 100;
+helper.AddOrUpdateResources(decoder);
+```
+
+## Remove resources
+```csharp
+helper.RemoveResources(decoder, antenna);
+```
+
 ## Reading resources and bookings
 
 The *ResourceManagerHelper* provides methods to retrieve *Resource* and *ReservationInstance* (i.e. booking) objects in a filtered, sorted, and paged way.
