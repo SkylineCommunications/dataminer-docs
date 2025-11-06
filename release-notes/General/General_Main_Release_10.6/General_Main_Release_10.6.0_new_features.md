@@ -1200,13 +1200,6 @@ When retrieving values, the following behavior will apply:
 > [!IMPORTANT]
 > A `FieldDescriptor` ID must be unique across section definitions in a DOM module.
 
-#### DataMiner upgrade: Prerequisite check 'VerifyBrokerGatewayMigration' will verify whether all DMS in the cluster are using the BrokerGateway-managed NATS solution [ID 43526] [ID 43861]
-
-<!-- RN 43526: MR 10.6.0 - FR 10.5.10 -->
-<!-- RN 43861: MR 10.6.0 - FR 10.6.1 -->
-
-During a DataMiner upgrade, the *VerifyBrokerGatewayMigration* prerequisite check will verify whether all DataMiner Agents in the cluster are using the BrokerGateway-managed NATS solution. If not, the check will fail, and the upgrade will not be able to continue.
-
 #### SLNetClientTest tool: Filtering messages using regular expressions [ID 43540]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
