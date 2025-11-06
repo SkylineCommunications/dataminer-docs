@@ -9,12 +9,16 @@ uid: General_Feature_Release_10.6.1
 
 > [!IMPORTANT]
 >
-> Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+> Before you upgrade to this DataMiner version:
 >
-> The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+> - Make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation. The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
 >
-> - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
-> - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+>   - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+>   - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+>
+> - Make sure all DataMiner Agents in the cluster have been migrated to the BrokerGateway-managed NATS solution. For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
+>
+>   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 43890] [ID 44050]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-43890-id-44050)
 
 > [!TIP]
 >
@@ -24,7 +28,8 @@ uid: General_Feature_Release_10.6.1
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 43890] [ID 44050]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-43890-id-44050)
+- [Dashboard reports can now be generated in PDF, HTML, and/or CSV format [ID 43887]](#dashboard-reports-can-now-be-generated-in-pdf-html-andor-csv-format-id-43887)
 
 ## New features
 
@@ -70,11 +75,15 @@ Also, the default file name has been changed from `Report.pdf` to `<dashboard na
 
 ### Enhancements
 
-#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43890] [ID 44050]
+#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 43890] [ID 44050]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
-DataMiner Systems will now use the BrokerGateway-managed NATS solution by default. Also, it will no longer be possible to migrate from the BrokerGateway-managed NATS solution (nats-server service) back to the legacy SLNet-managed NATS solution (NAS and NATS services).
+DataMiner Systems will now use the BrokerGateway-managed NATS solution by default. BrokerGateway will manage NATS communication based on a single source of truth that has the complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS will be configured automatically, and a newer version of NATS will be used that has better performance and is easier to upgrade.
+
+- During a DataMiner upgrade, the *VerifyBrokerGatewayMigration* prerequisite check will verify whether all DataMiner Agents in the cluster are using the BrokerGateway-managed NATS solution. If not, the check will fail, and the upgrade will not be able to continue.
+
+- It will no longer be possible to migrate from the BrokerGateway-managed NATS solution (nats-server service) back to the legacy SLNet-managed NATS solution (NAS and NATS services).
 
 - DataMiner upgrades will no longer automatically install NAS and NATS.
 
@@ -96,12 +105,6 @@ DataMiner Systems will now use the BrokerGateway-managed NATS solution by defaul
   `Unable to find file. SLCloud configured messageBrokers are unsupported as of DataMiner 10.6.0.`
 
 - NATSRepair.exe will no longer check if the *BrokerGateway* flag in *MaintenanceSettings.xml* is set to true.
-
-#### DataMiner upgrade: Prerequisite check 'VerifyBrokerGatewayMigration' will verify whether all DMS in the cluster are using the BrokerGateway-managed NATS solution [ID 43861]
-
-<!-- MR 10.6.0 - FR 10.6.1 -->
-
-During a DataMiner upgrade, the *VerifyBrokerGatewayMigration* prerequisite check will verify whether all DataMiner Agents in the cluster are using the BrokerGateway-managed NATS solution. If not, the check will fail, and the upgrade will not be able to continue.
 
 #### Automation: Engine class now has an OnDestroy handler that will allow resources to be cleaned up when a script ends [ID 43919]
 
