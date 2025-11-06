@@ -19,7 +19,7 @@ Running GQI as an extension module has several advantages:
 The GQI DxM is supported from DataMiner 10.5.0 [CU1]/10.5.4 onwards, and automatically gets installed and updated by upgrade packages from that version onwards. It also gets updated when you install a web-only upgrade package.<!-- RN 41811 --> Earlier DataMiner versions starting from 10.5.0/10.5.2 also include a preview version of the GQI DxM, but this should only be used on staging systems.
 
 > [!IMPORTANT]
-> From DataMiner 10.6.0/10.6.1 onwards<!--RN 44058-->, the GQI DxM is enabled by default for DataMiner web applications. In earlier versions, the GQI DxM is disabled by default and instead the SLHelper process is used for GQI operations.
+> From DataMiner 10.5.0 [CU10]/10.6.0/10.6.1 onwards<!--RN 44058-->, the GQI DxM is enabled by default for DataMiner web applications. In earlier versions, the GQI DxM is disabled by default and instead the SLHelper process is used for GQI operations.
 >
 > To explicitly opt in to or out of the GQI DxM, see [Enabling or disabling the use of the GQI DxM](#enabling-or-disabling-the-use-of-the-gqi-dxm).
 
@@ -28,7 +28,7 @@ The GQI DxM is supported from DataMiner 10.5.0 [CU1]/10.5.4 onwards, and automat
 
 ## Enabling or disabling the use of the GQI DxM
 
-From DataMiner 10.6.0/10.6.1 onwards<!--RN 44058--> the GQI DxM is enabled for DataMiner web apps by default.
+From DataMiner 10.5.0 [CU10]/10.6.0/10.6.1 onwards<!--RN 44058--> the GQI DxM is enabled for DataMiner web apps by default.
 To disable the use of the GQI DxM, add the following configuration to the `C:\Skyline DataMiner\Webpages\API\Web.config` file:
 
 ```xml
@@ -37,7 +37,7 @@ To disable the use of the GQI DxM, add the following configuration to the `C:\Sk
 </appSettings>
 ```
 
-Prior to DataMiner 10.6.0/10.6.1<!--RN 44058-->, the GQI DxM is disabled for DataMiner web apps by default.
+Prior to DataMiner 10.5.0 [CU10]/10.6.0/10.6.1<!--RN 44058-->, the GQI DxM is disabled for DataMiner web apps by default.
 To enable the use of the GQI DxM, add the following configuration to the `C:\Skyline DataMiner\Webpages\API\Web.config` file:
 
 ```xml
