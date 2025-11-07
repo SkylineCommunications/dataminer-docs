@@ -9,15 +9,15 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 > [!NOTE]
 > If you have already created a SaaS subscription as detailed below, and you want to order **additional credits**, you do not have to create a new SaaS subscription. Instead, go to your SaaS subscription in the Azure portal, and click *Open SaaS Account on publisher's site* to be redirected to the *Purchase credits* page.
 
-1. Go to the [Azure Marketplace](https://azuremarketplace.microsoft.com/) and search for DataMiner.
+1. Go to the [Microsoft Marketplace](https://azuremarketplace.microsoft.com/) and search for DataMiner.
 
-1. Click *Get It Now*.
+1. Click *Get It Now* on the DataMiner credit plan.
 
-   ![Azure Marketplace Offer](~/dataminer/images/Azure_Marketplace_Dataminer.png)
+   ![Microsoft Marketplace Offer](~/dataminer/images/Azure_Marketplace_Dataminer.png)
 
 1. In the dialog, select the checkbox and click *Continue* to be redirected to the Azure portal.
 
-   ![Azure Marketplace continue](~/dataminer/images/Azure_Marketplace_Continue.png)
+   ![Microsoft Marketplace continue](~/dataminer/images/Azure_Marketplace_Continue.png)
 
 1. Click *Subscribe*.
 
@@ -48,6 +48,11 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
    ![Confirm Subscription](~/dataminer/images/Marketplace_Confirm_Subscription.png)
 
    This will activate your subscription and may take a couple of minutes.
+  
+   > [!NOTE]
+   > if this is your first time, you will need to accept the permission requests if prompted:
+   > First, click *Next* ![Permission Requst 1](~/dataminer/images/Marketplace_Permission_Request_1.png)
+   > Second, consent and click *Accept* ![Permission Requst 2](~/dataminer/images/Marketplace_Permission_Request_2.png)
 
 1. Once your subscription has been activated, fill in your Organization ID.
 
@@ -58,7 +63,7 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
    > 1. Select the organization you want to transfer DataMiner credits to.
    > 1. Go to the webpage URL and copy the last part of the URL after the final slash.
    >
-   >    ![How to retrieve organization ID](~/dataminer/images/Retrieve_Organization_ID.gif)
+   > ![How to retrieve organization ID](~/dataminer/images/Retrieve_Organization_ID.gif)
 
 1. Use the slider to indicate how many credits you wish to purchase for the organization.
 
