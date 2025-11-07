@@ -77,7 +77,7 @@ Also, the default file name has been changed from `Report.pdf` to `<dashboard na
 
 #### SLNetClientTest tool now allows you to check the contents of the hosting cache used by SLDataMiner [ID 43605]
 
-<!-- MR 10.7.0 - FR 10.6.1 -->
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 Using the *SLNetClientTest* tool, you can now send a DiagnosticMessage with LIST_HOSTAGENTCACHE to SLDataMiner to retrieve the contents of the hosting cache used by SLDataMiner. This will allow you to check if an element is local or not.
 
