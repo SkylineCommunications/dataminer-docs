@@ -49,9 +49,6 @@ To customize how Cube connects to a DMA for a specific computer:
 
      - By default, [eventing](xref:Eventing_or_polling) is used, but the client will automatically fall back to polling if the callback port cannot be reached (e.g. if a firewall blocks the requests).
 
-<!--    > [!NOTE]
-   > The selected connection type will be **used to connect to any DMA from the current computer**. Keep this in mind, for example in case you have selected *gRPC* and you want to connect to DataMiner versions prior to 10.3.0/10.3.2, which do not support gRPC yet. -->
-
 1. If necessary, adjust the settings for the selected connection type:
 
    - **Destination port**: Select this option to specify a custom destination port number. If you specify "-1", the port will be detected automatically.
@@ -75,7 +72,7 @@ From DataMiner 10.2.0 [CU3]/10.2.6 onwards, Cube can automatically update to a m
 
 1. Select which client versions should be used:
 
-   - **Allow automatic updates**: This will allow automatic updates to higher versions of Cube, depending on the [configuration in the Cube start window](xref:Managing_the_start_window#selecting-your-cube-update-track).
+   - **Allow automatic updates**: This will allow automatic updates to higher versions of Cube, depending on the [configuration in the Cube start window](xref:Upgrading_Cube#selecting-your-cube-update-track).
 
      > [!NOTE]
      > When a new DMA is added to a cluster, that DMA will by default use this setting. If you use a different setting, keep in mind that you will still need to adjust this for this DMA.

@@ -16,7 +16,7 @@ uid: Accessing_a_new_DMS
 
 1. If DataMiner Cube is not installed on your computer yet, click *Desktop installation* to install it.
 
-   For more detailed info about the Cube installation, refer to [Installing the DataMiner Cube desktop application](xref:Installing_the_DataMiner_Cube_desktop_application).
+   For more detailed info about the Cube installation, refer to [Installing DataMiner Cube](xref:Installing_the_DataMiner_Cube_desktop_application).
 
 1. Under *DataMiner Systems*, click *Open in desktop app*.
 

@@ -71,7 +71,7 @@ When the scripted connector is first executed, an element named `ams-ix.net` wil
 
 ## Step 3: View your data source
 
-1. [Open DataMiner Cube](xref:Using_the_desktop_app) and locate the newly created element in the Surveyor.
+1. [Open DataMiner Cube](xref:Connecting_to_a_DMA_with_Cube) and locate the newly created element in the Surveyor.
 
 1. Verify that the element is being populated with data.
 

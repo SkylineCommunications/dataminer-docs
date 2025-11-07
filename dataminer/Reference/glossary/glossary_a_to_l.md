@@ -121,7 +121,7 @@ uid: glossary_a_to_l
 | DataMiner Cloud Platform | Former name of dataminer.services. Abbreviated as DCP. See [dataminer.services](xref:about_dataminer_services). |
 | DataMiner Comparison tool | Web application that allows you to compare the values of two string parameters. See [DataMiner Comparison tool](xref:DataMinerComparisonTool). |
 | DataMiner Connectivity Framework | Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure. Abbreviated as DCF. See [DataMiner Connectivity Framework](xref:About_the_DataMiner_Connectivity_Framework). |
-| DataMiner Cube | The main client application used to connect to a DMA. See [Working with DataMiner Cube](xref:Cube_UI_components). |
+| DataMiner Cube | The main client application used to connect to a DMA. See [Working with DataMiner Cube](xref:Installing_the_DataMiner_Cube_desktop_application). |
 | DataMiner Dojo | Community website where both people from the Skyline community, and people from the worldwide DataMiner community exchange experiences and knowledge, both about DataMiner and about general hot topics in the ICT, broadband and media industry. See [DataMiner Community](xref:Community). |
 | DataMiner Driver | An XML file that allows a DMA to communicate with a data source in the system. Also known as connector or protocol. See [Protocols](xref:Protocols1). |
 | DataMiner ID | The unique ID of a DataMiner Agent. |
