@@ -21,6 +21,31 @@ uid: General_Main_Release_10.5.0_CU10
 
 All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
 
+#### Minor enhancements made to BPAs [ID 40751]
+
+<!-- MR 10.5.0 [CU10] - FR 10.4.12 -->
+
+A number of minor enhancements have been made to the following BPAs:
+
+##### Check Antivirus DLLs
+
+- Renamed to *Antivirus on the DataMiner Agents*.
+
+##### Check Cluster SLNet Connections
+
+- Renamed to *SLNet connections between the DataMiner Agents*.
+- Message `No potential issues detected` renamed to `No issues detected`.
+
+##### Minimum Requirements Check
+
+- Renamed to *DataMiner Agent Minimum Requirements*.
+- When Cassandra is not installed, this BPA will no longer report Cassandra is a requirement.
+- Memory calculation has been enhanced.
+
+##### Report active RTE
+
+- Renamed to *Active Runtime errors*.
+
 ### Fixes
 
 #### SLElement could stop working when DVE elements were deleted [ID 43947]
