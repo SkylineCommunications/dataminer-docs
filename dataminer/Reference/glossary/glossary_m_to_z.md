@@ -67,9 +67,9 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | OID | Object Identifier. Value uniquely identifying a managed object in a MIB hierarchy. |
 | OLT | Optical Line Termination. Device that serves as the service provider endpoint of a passive optical network. |
 | ONT | Optical Network Terminal. Device used to terminate a fiber-optic line, demultiplex the signal into its component parts and provide power to customer telephones. Also known as ONU (Optical Network Unit). |
-| OpenSearch | Open-source search and analytics engine, which can be used as the DataMiner Indexing database. See [OpenSearch database](xref:OpenSearch_database). |
+| OpenSearch | Open-source search and analytics engine, which can be used as the DataMiner Indexing database in case on-premises storage is used instead of the default [Storage as a Service](xref:STaaS). See [OpenSearch database](xref:OpenSearch_database). |
 | OPEX | Operating expense. The ongoing cost to run a product, system or business. |
-| OSM | OpenStreetMap. Free community-built map application, which can be integrated with DataMiner Maps. See [Maps](xref:About_DMS_Maps). |
+| OSM | OpenStreetMap. Free community-built map application, which can be integrated with [DataMiner Maps](xref:About_DMS_Maps). |
 | OSPF | Open Shortest Path First. Routing protocol for IP networks used to find the best path between the source and destination router within an autonomous system. |
 | OSS | Operations Support System. Software system that allows service providers to monitor, control, analyze and manage their network. |
 | OTA | Over-The-Air. Refers to wireless transmission, typically in the context of software updates distributed to mobile devices or TV and radio broadcasts transmitted wirelessly. |
@@ -77,7 +77,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | OU | Occasional Use. Refers to services that are not used continuously, for example satellite capacity that is offered to broadcasters for ad hoc and periodic demands. |
 | Outage | In the context of [DataMiner Business Intelligence](xref:sla), the temporary unavailability of the service monitored by an SLA. |
 | Outlier | Change in the behavior of a trend, detected by DataMiner Analytics, where the value suddenly spikes upwards or downwards and then returns to its previous, normal behavior. See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) |
-| OWM | OpenWeatherMap. Online service that provides weather data and that can be integrated in DataMiner Maps. See [Maps](xref:About_DMS_Maps). |
+| OWM | OpenWeatherMap. Online service that provides weather data and that can be integrated in [DataMiner Maps](xref:About_DMS_Maps). |
 
 ## P
 
@@ -113,7 +113,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 
 | Term | Description |
 |------|-------------|
-| QAction | Quick action within a DataMiner protocol, which can be used to implement advanced functionality that cannot be implemented by other protocol constructs. |
+| QAction | Quick action within a DataMiner protocol, which can be used to implement advanced functionality that cannot be implemented by other protocol constructs. See [About QActions](xref:LogicQActions#about-qactions) |
 | QAM | Quadrature Amplitude Modulation. Transmission technique for digital signals that combines phase modulation and amplitude modulation. |
 | QoS | Quality of Service. |
 | Query executer | Obsolete DataMiner tool that allows users to connect to an SQL database and query it using SQL statements. See [Querying an SQL database](xref:Querying_an_SQL_database). |
@@ -177,8 +177,8 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Second-party DataMiner Connector | DataMiner connector developed by the owner of a DataMiner System. |
 | Serial Gateway | Serial server that allows you to connect multiple RS-232 ports to a DMS via the acquisition LAN of a DMA. See [Serial gateways](xref:SerialGateways). |
 | Service | Group of elements or partial elements, combined from the perspective of a particular business aspect. See [Services and service templates](xref:About_services). |
-| Service definition | See [Service definition](xref:srm_definitions#service-definition). |
-| Service definition template | Type of service definition that is typically used to define the different types of services that need to be instantiated in the Service & Resource Management module, as opposed to a service definition that is only intended for one use. See [Service definition](xref:srm_definitions#service-definition). |
+| Service definition | In the context of [DataMiner SRM](xref:About_SRM), a definition of multiple virtual functions connected together through their interfaces. See [Service definition](xref:srm_definitions#service-definition). |
+| Service definition template | Type of service definition that is typically used to define the different types of services that need to be instantiated in the [Service & Resource Management](xref:About_SRM) module, as opposed to a service definition that is only intended for one use. See [Service definition](xref:srm_definitions#service-definition). |
 | Service level agreement | In the context of [DataMiner Business Intelligence](xref:sla), this refers to a specific type of element that monitors a service level agreement, i.e. an agreement between a service provider and a customer. Abbreviated as SLA. |
 | Service Manager | Legacy name for the Services module in DataMiner Cube. See [The Resources module](xref:The_Resources_module). |
 | Service profile | Profile for one or more service definitions that makes it possible to preconfigure profile instances for the service definitions, so that these no longer need to be selected during booking creation. In DataMiner, this is available in the form of service profile definitions with corresponding service profile instances. See [Using the profiles tab](xref:SRM_Services_profiles). |
@@ -198,7 +198,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SLA offline window | The time interval during which the service that an SLA applies to is considered offline. See [Business Intelligence](xref:sla). |
 | SLA outage | Alarm on the service an SLA applies to that is considered a violation of the SLA. See [Business Intelligence](xref:sla). |
 | SLA window | The time interval for which SLA compliance is calculated. See [Business Intelligence](xref:sla). |
-| SLC | Skyline Communications. |
+| SLC | [Skyline Communications](xref:Overview_About_Skyline). |
 | Sliding window | Time frame with a fixed size that moves along with the present time. Can for example be used in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console). |
 | SLLogCollector | Tool that allows you to easily collect log information and memory dumps from a DMA. See [SLLogCollector](xref:SLLogCollector). |
 | SLNetClientTest tool | Advanced system administration tool with a range of different functionalities. See [SLNetClientTest tool](xref:SLNetClientTest_tool). |
@@ -233,12 +233,12 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SPTS | Single Program Transport Stream. Transport stream that carries a single program. |
 | SQL | Structured Query Language. Programming language that is typically used for relational database management. |
 | SRM | [Service and Resource Management](xref:About_SRM). DataMiner software allowing you to virtualize your system resources, create an overview of how resources are connected within your infrastructure, and manage which resources are booked and when. |
-| SRM Core | Suite of DataMiner core software modules that are the basis of DataMiner Service & Resource Management (SRM). Consists of seven DataMiner software modules: DataMiner Service Manager, Virtualization Engine, Resource Manager, Profile Manager, Connectivity Framework, Automation Engine and Scheduling Engine. |
+| SRM Core | Suite of DataMiner core software modules that are the basis of [DataMiner Service & Resource Management (SRM)](xref:About_SRM). Consists of seven DataMiner software modules: [DataMiner Service Manager](xref:srm_stack#service-manager), [Virtualization Engine](xref:srm_stack#virtualization-engine), [Resource Manager](xref:srm_stack#resource-manager), [Profile Manager](xref:srm_stack#profile-manager), [Network Manager](xref:srm_stack#network-manager), [Automation Engine](xref:srm_stack#automation-engine), and [Scheduling Engine](xref:srm_stack#scheduling-engine). |
 | SRM Standard Solution | DataMiner blueprint configuration that facilitates and accelerates the design and deployment of application-specific SRM solutions. This includes an installation and upgrade package of the required DataMiner components, a pre-built user interface to configure and operate SRM solutions, and ready-made workflows for booking and lifecycle orchestration of services (LSO). |
 | SSH | Secure Shell. Protocol for secure remote login and other secure network services over an insecure network. |
 | SSL | Secure Sockets Layer. |
 | SSPA | Solid-State Power Amplifier. Amplifier that uses field-effect transistors to amplify radio frequency signals. |
-| STaaS | Storage as a Service. Cloud-native storage platform that allows users to connect their DMS to a scalable storage platform. |
+| STaaS | [Storage as a Service](xref:STaaS). Cloud-native storage platform that allows users to connect their DMS to a scalable storage platform. |
 | StatMux | Statistical Multiplexing. Multiplexing technique where a communication channel is divided into an arbitrary number of variable bitrate data streams. |
 | STB | Set-top box. Device connecting a TV to an external source in order to receive digital television broadcasts. |
 | Stencil | Preconfigured shapes or groups of shapes in Microsoft Visio. DataMiner supplies stencils in the DataMiner house style. See [Accessing the DataMiner stencils](xref:Working_with_shape_data_in_Microsoft_Visio#accessing-the-dataminer-stencils). |
@@ -246,11 +246,11 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Stream viewer | DataMiner application that provides a real-time view of communication between a DMA and an element. See [Connecting to an element using Stream Viewer](xref:Connecting_to_an_element_using_Stream_Viewer). |
 | String parameter | A parameter that has a string as its value. |
 | Suggestion event | Notification in the Alarm Console generated by the DataMiner artificial intelligence capabilities. See [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console). |
-| Surveyor | Pane in DataMiner Cube that contains a hierarchical overview of all views, elements, services, etc. in the DataMiner System. |
+| Surveyor | Pane in DataMiner Cube that contains a hierarchical overview of all views, elements, services, etc. in the DataMiner System. See [DataMiner Cube sidebar](xref:DataMiner_Cube_sidebar). |
 | SVN | Subversion. |
 | Sweeptime | The time that a spectrum analyzer takes to tune across the displayed frequency span. See [Changing the spectrum analyzer settings](xref:Changing_the_spectrum_analyzer_settings). |
 | SWR | Standing Wave Ratio. Ratio of the maximum and minimum amplitudes in a standing wave, i.e. a wave that oscillates in time but has a peak amplitude profile that does not move in space. |
-| System Center | A module that contains most of the administrator functionalities in DataMiner, such as management of databases and DMAs. |
+| System Center | A module that contains most of the administrator functionalities in DataMiner, such as management of DMAs and users. |
 | System function definition | Virtual function definition that is not linked to a specific protocol. System function definitions exist permanently in the system and are modified at runtime. See [Virtual function](xref:srm_definitions#virtual-function). |
 
 ## T
