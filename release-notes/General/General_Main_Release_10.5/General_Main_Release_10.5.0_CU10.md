@@ -93,3 +93,11 @@ To detect whether this has occurred:
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 Up to now, SLProtocol would silently fail to parse the *stuffing* attribute of the *Protocol.Advanced* tag when its value contained spaces.
+
+#### Offload database: Not possible to offload information events without offloading alarms as well [ID 44080]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, it would incorrectly not be possible to offload information events when you had not opted to offload alarms as well. It would only be possible to offload information events together with alarms.
+
+From now on, it will be possible to offload either alarms only, information events only, or both.

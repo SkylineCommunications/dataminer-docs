@@ -217,3 +217,11 @@ From now on, when an invalid `<Database>` tag is found in the *Db.xml* file duri
 <!-- Not added to MR 10.6.0 -->
 
 In some cases, SLASPConnection could stop while sending an email report with a dashboard attached.
+
+#### Offload database: Not possible to offload information events without offloading alarms as well [ID 44080]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, it would incorrectly not be possible to offload information events when you had not opted to offload alarms as well. It would only be possible to offload information events together with alarms.
+
+From now on, it will be possible to offload either alarms only, information events only, or both.
