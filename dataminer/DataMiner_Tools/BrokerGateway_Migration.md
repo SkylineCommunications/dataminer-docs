@@ -7,10 +7,12 @@ uid: BrokerGateway_Migration
 From DataMiner 10.5.0 [CU2]/10.5.5 onwards<!-- RN 42573 -->, you can migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) using the "NATSMigration" tool. Prior to this, starting from DataMiner 10.5.0/10.5.2, this feature is available in [soft launch](xref:SoftLaunchOptions).
 
 > [!IMPORTANT]
-> From DataMiner 10.6.0 onwards, the legacy SLNet‑managed NATS solution (NAS and NATS services) is no longer available. You must migrate manually to the BrokerGateway‑managed NATS solution before upgrading to 10.6.0 or higher. The upgrade does not perform the migration automatically, and rollback to the SLNet‑managed solution is no longer possible after upgrading to 10.6.0.
-> To start the migration, the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft‑launch option may not be disabled on any DataMiner Agent in the cluster. In DataMiner 10.5.0 [CU5]/10.5.8<!-- RN 43370 --> this option can be disabled when no migration is planned.
+> This migration is **mandatory to be able to upgrade to DataMiner 10.6.0/10.6.1** or higher. If you try to upgrade to such a DataMiner version when this migration has not yet been completed, the upgrade will be blocked. From DataMiner 10.6.0/10.6.1 onwards, the legacy SLNet‑managed NATS solution (NAS and NATS services) is no longer supported.<!-- RN 43861 -->
 
-Once the [prerequisites](#prerequisites) are met choose one of two methods: [dmupgrade package migration (recommended)](#dmupgrade-package-migration-recommended) or [manual migration (per node)](#manual-migration-per-node).
+> [!NOTE]
+> To start the migration, the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft‑launch option must not be disabled on any DataMiner Agent in the cluster. In DataMiner 10.5.0 [CU5]/10.5.8<!-- RN 43370 --> this option can be disabled when no migration is planned.
+
+Once the [prerequisites](#prerequisites) are met, you can either [run an automatic migration](#automatic-migration-using-dmupgrade-package-recommended) or [run the migration manually](#manual-migration).
 
 Note that prior to DataMiner 10.5.0 [CU4]/10.5.7 the migration requires a DataMiner restart.<!-- RN 42930 -->
 
@@ -18,34 +20,38 @@ After the migration you may need to [update your Data Aggregator configuration](
 
 ## Prerequisites
 
-Before you start the migration the entire cluster must have been running smoothly for at least 15 minutes (all Agents online and communicating). Run the [Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites) BPA to confirm readiness.
+Before you start the migration, the entire cluster must have been running smoothly for some time. This means that all DataMiner Agents in the cluster must be online and function together for at least 15 minutes. To confirm that the DMS is ready to be migrated, run the [Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites) BPA.
 
-Also verify no protocols reference the `DataMinerMessageBroker.API.dll` with a version older than `3.0.0`. Update such protocols and remove the old DLL from the `ProtocolScripts` folder. From DataMiner 10.5.0 [CU9]/10.5.12 onwards presence of this DLL blocks the migration.
+In addition, verify if any protocols reference the *DataMinerMessageBroker.API.dll* with a version older than **3.0.0**. Make sure any such references are updated before you migrate, and make sure the outdated DLL is removed from the *ProtocolScripts* folder. From DataMiner 10.5.0 [CU9]/10.5.12 onwards, if this DLL is present in the *ProtocolScripts* folder, this will block the migration.
 
-## dmupgrade package migration (recommended)
+## Automatic migration using .dmupgrade package (recommended)
 
-If you are using DataMiner 10.5.0 [CU4]/10.5.7 or higher (but lower than 10.6.0) use the upgrade package:
-
-1. Ensure the [prerequisites](#prerequisites) are met.
-2. Download and run the [NATSMigration.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package.
-
-This centrally runs `C:\Skyline DataMiner\Tools\NATSMigration.exe` with default settings on all Agents. No per‑Agent interaction is required and Agents are not restarted.
-
-## Manual migration (per node)
-
-For versions prior to 10.5.0 [CU4]/10.5.7 or when manual control is preferred:
+If you are using a DataMiner 10.5.x version starting from 10.5.0 [CU4] or 10.5.7, the recommended way to run the migration is by means of an upgrade package available on our Dojo Community platform:
 
 1. Ensure the [prerequisites](#prerequisites) are met.
-2. Open a remote desktop session to all DataMiner Agents.
-3. On each Agent open an elevated command prompt and run `C:\Skyline DataMiner\Tools\NATSMigration.exe`. with the optional argument `-r` to not restart DataMiner automatically by the script.
-4. Enter the `install` command on every Agent (including Failover partners) within 10 minutes.
+
+1. Download and run the [NATSMigration.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package.
+
+This will automatically run `C:\Skyline DataMiner\Tools\NATSMigration.exe` with default settings on all Agents. The DataMiner Agents will not be restarted.
+
+## Manual migration
+
+For DataMiner versions prior to 10.5.0 [CU4]/10.5.7, the migration needs to be run manually:
+
+1. Ensure the [prerequisites](#prerequisites) are met.
+
+1. Open a **remote desktop connection** to **all** DataMiner Agents at the same time.
+
+1. On each Agent, open an elevated command prompt and run `C:\Skyline DataMiner\Tools\NATSMigration.exe`, with the optional argument `-r` to keep the script from restarting DataMiner.
+
+1. Enter the `install` command on every Agent (including Failover Agents) within 10 minutes.
 
 > [!IMPORTANT]
-   > This must happen on **each DMA** in the cluster **within a 10-minute time frame**. It is very important that this happens for **each individual DataMiner Agent, including Failover DMAs**. Prior to DataMiner 10.5.0 [CU4]/10.5.7, this also involves a restart of each DataMiner Agent.
+> This must happen on **each DMA** in the cluster **within a 10-minute time frame**. It is very important that this happens for **each individual DataMiner Agent, including Failover DMAs**. Prior to DataMiner 10.5.0 [CU4]/10.5.7, this also involves a restart of each DataMiner Agent.
 
 ### Full example migration log (sanitized)
 
-Below is a full sample output of a successful migration run. The machine name has been replaced by `HOSTNAME` and IP addresses by `IP1`, `IP2`, and virtual IP `VIP1`. Timestamps have been removed as well.
+Below is a full sample output of a successful migration run. The machine name has been replaced by `HOSTNAME` and the IP addresses by `IP1`, `IP2`, and virtual IP `VIP1`. Timestamps have been removed as well.
 
 ```cmd
 C:\Skyline DataMiner\Tools>NATSMigration.exe
@@ -112,9 +118,9 @@ HOSTNAME - Migration successful!
 ```
 
 > [!NOTE]
-   > If you run this executable on a recent DataMiner version (DataMiner 10.5.0 [CU4]/10.5.7 or higher<!-- RN 42930 -->), no restart will be mentioned. If you run this executable prior to DataMiner 10.5.0 [CU2]/10.5.5 as a soft-launch feature, the output will indicate the "BrokerGateway SoftLaunch flag" instead of the "BrokerGateway maintenance flag".
+> If you run this executable on a recent DataMiner version (DataMiner 10.5.0 [CU4]/10.5.7 or higher<!-- RN 42930 -->), no restart will be mentioned. If you run this executable prior to DataMiner 10.5.0 [CU2]/10.5.5 as a soft-launch feature, the output will indicate the "BrokerGateway SoftLaunch flag" instead of the "BrokerGateway maintenance flag".
 
-## Actions performed by the migration
+## Actions during the migration
 
 The following actions will be executed during the migration, in the indicated order:
 
@@ -144,54 +150,60 @@ The following actions will be executed during the migration, in the indicated or
 
    This file is used when creating default sessions using the *DataMinerMessageBroker.API(.Native)* library. The file will be rewritten to reference the BrokerGateway URL and API key path. The content of this file can for example look like this:
 
-```json
-{
-  "BrokerGatewayConfig": {
-    "CredentialsUrl": "https://HOST/BrokerGateway/api/natsconnection/getnatsconnectiondetails",
-    "APIKeyPath": "C:\\Program Files\\Skyline Communications\\DataMiner BrokerGateway\\appsettings.runtime.json"
-  }
-}
-```
+   ```json
+   {
+     "BrokerGatewayConfig": {
+       "CredentialsUrl": "https://HOST/BrokerGateway/api/natsconnection/getnatsconnectiondetails",
+       "APIKeyPath": "C:\\Program Files\\Skyline Communications\\DataMiner BrokerGateway\\appsettings.runtime.json"
+     }
+   }
+   ```
 
 > [!NOTE]
-> NATSMigration has a hard‑coded 10‑minute timeout for completing `ResetCluster`. Timeout or failure reverts Agents to the SLNet‑managed NATS (if supported by the version).<!-- RN 41115 -->
+> The NATSMigration tool has a hard‑coded 10‑minute timeout for completing the *ResetCluster* operation. If for some reason the migration cannot be completed within 10 minutes, or if something goes wrong during the migration, all Agents will revert back to using the SLNet-managed NATS solution.<!-- RN 41115 -->
 
 > [!IMPORTANT]
-> Never copy the old `nats-server.config` into the new BrokerGateway‑managed installation.
+> The NATS configuration (*nats-server.config*) of the NATS instance before the migration is not transferrable to the NATS instance after the migration, so it should **never be copied over**.
 
 ## Migrating back to the old system
 
 > [!IMPORTANT]
-> From DataMiner 10.6.0 onwards rollback to the SLNet‑managed NATS solution is not supported.
+> This is no longer possible from DataMiner 10.6.0/10.6.1 onwards.
 
-On versions prior to 10.6.0 you can revert by:
+On versions prior to 10.6.0/10.6.1, there are two different ways you can go back to the SLNet-managed NATS:
 
-- Running [NATSMigrationRollback.dmupgrade](https://community.dataminer.services/download/natsmigrationrollback-dmupgrade/), or
-- Running `NATSMigration.exe` with `uninstall` on every Agent within 10 minutes (same coordination as install).
+- Download and run the package [NATSMigrationRollback.dmupgrade](https://community.dataminer.services/download/natsmigrationrollback-dmupgrade/).
+
+- Follow the same procedure as when you [run the migration manually](#manual-migration), but use the `uninstall` command instead of the `install` command. In this case, the same restrictions apply as for the migration: this must happen on all DataMiner Agents in the cluster at the same time.
 
 ## Updating the Data Aggregator configuration
 
-[Data Aggregator](xref:Data_Aggregator_DxM) configurations pointing at a migrated DMS must be updated (BrokerGateway settings).
+[Data Aggregator](xref:Data_Aggregator_DxM) can connect to multiple DataMiner Systems. When a specific DMS is migrated to BrokerGateway, any Data Aggregator configuration that connects to this DMS must be [manually updated](xref:Data_Aggregator_settings#dms-with-brokergateway).
 
 ## FAQ
 
 ### Can I run a cluster with both SLNet‑managed NATS and BrokerGateway‑managed NATS?
 
-No. Ports conflict and credentials differ; mixed setups do not function.
+This is not possible. Both NATS installations use the same network ports, so the services cannot run at the same time on a machine. The credentials these installations use are also different and not compatible with each other, so running SLNet-managed NATS on DMA1 and BrokerGateway-managed NATS on DMA2 will also not function.
 
-### Why should I migrate to BrokerGateway?
+### Why should I migrate to BrokerGateway? What are the advantages?
 
-It provides a single authoritative cluster view, automatic TLS, simplified lifecycle management and improved performance vs the legacy SLNet‑managed setup.
-From DataMiner 10.6.0 onwards the SLNet‑managed NATS solution is no longer available and migration before upgrading is mandatory.
+BrokerGateway will manage NATS communication based on a single source of truth that has the complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS will be configured automatically, and a newer version of NATS will be used that has better performance and is easier to upgrade.
+
+In addition, starting from DataMiner 10.6.0/10.6.1, the SLNet‑managed NATS solution is no longer supported, so the migration to BrokerGateway will have to be done before you can upgrade to these DataMiner versions and beyond.
 
 ## Troubleshooting
 
 ### ERROR: {machineName} was not able to remove itself from its current cluster in order to join the new cluster
 
-BrokerGateway attempts to detach from any existing cluster (endpoints in `ClusterEndpoints.json`). If an endpoint is unreachable a prompt for forced removal appears. Forced removal proceeds without informing unreachable peers. Declining cancels and reverts.<!-- RN 40991 -->
+When calling *ResetCluster*, BrokerGateway will first try to remove itself from any cluster it is part of, in order to set up a new cluster with all the endpoints specified in `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json`.
 
-Ensure all endpoints listed in `appsettings.runtime.json` are reachable before retrying.
+The endpoints BrokerGateway is currently clustered with are listed in the ClusterInfo in `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`. If one of those IPs cannot be reached, the error message above is generated.
+
+You will be asked if the node may be forcibly removed. If you agree to this, the current machine can free itself from the cluster to cluster with the new setup instead. However, because it forcibly removes itself, it no longer informs any of the unreachable endpoints of its removal. These may still attempt to contact the current machine, which will no longer be reachable for them. If you choose to not allow the forcible removal, this will cancel the migration process and revert back to the previous configuration.<!-- RN 40991 -->
+
+If you do want to migrate to BrokerGateway but you do not want this forced removal, make sure all endpoints specified in *appsettings.runtime.json* can be reached by the current machine.
 
 ### NATSRepair.exe
 
-If issues occur after migration run `NATSRepair.exe` from `C:\Skyline DataMiner\Tools\` to repair the cluster.<!-- RN 42328 -->
+If you encounter issues with your NATS cluster and you have migrated to BrokerGateway, you can run the *NATSRepair.exe* tool from the `C:\Skyline DataMiner\Tools\` folder. This will perform a repair on the cluster.<!-- RN 42328 -->

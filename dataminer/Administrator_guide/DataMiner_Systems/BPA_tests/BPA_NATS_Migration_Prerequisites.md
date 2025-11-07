@@ -4,15 +4,14 @@ uid: BPA_NATS_Migration_Prerequisites
 
 # Verify NATS Migration Prerequisites
 
-From DataMiner 10.6.0 onwards, this Prerequisite is removed as the migration to BrokerGateway has occurred on this version due to being mandatory.<!-- RN 44035 -->
-This BPA test will verify whether DataMiner is ready to [migrate the NATS management to the BrokerGateway DxM](xref:BrokerGateway_Migration).
+This BPA test is only available prior to DataMiner 10.6.0/10.6.1. It will verify whether DataMiner is ready to [migrate the NATS management to the BrokerGateway DxM](xref:BrokerGateway_Migration). This migration must be done before an upgrade to 10.6.0/10.6.1 is possible.<!-- RN 44035 -->
 
-It will verify that:
+The BPA test will verify that:
 
 - All DxMs installed on the system that use DataMiner MessageBroker are using at least version 3.0.0. This version is capable of setting up connections using BrokerGateway and can automatically switch its connection configuration at runtime.
 - `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` exists and has *IgnitionValues* filled in for every entry.
 
-This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab). From DataMiner 10.5.0/10.5.2 onwards, it is available by default.<!-- RN 40906 -->
+This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab). It is also available by default in all DataMiner 10.5.x versions starting from DataMiner 10.5.0/10.5.2.<!-- RN 40906 -->
 
 ## Metadata
 
