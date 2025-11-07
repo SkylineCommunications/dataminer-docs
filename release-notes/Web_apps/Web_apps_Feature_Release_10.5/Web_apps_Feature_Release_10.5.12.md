@@ -14,6 +14,12 @@ This Feature Release of the DataMiner web applications contains the same new fea
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.5.12](xref:General_Feature_Release_10.5.12).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.5.12](xref:Cube_Feature_Release_10.5.12).
 
+## Highlights
+
+- [Dashboards/Low-Code Apps: GQI queries can now be exported as JSON files [ID 43800]](#dashboardslow-code-apps-gqi-queries-can-now-be-exported-as-json-files-id-43800)
+- [New GQI data source: Get relational anomalies [ID 43820]](#new-gqi-data-source-get-relational-anomalies-id-43820)
+- Breaking change: [Dashboards/Low-Code Apps: HTML code on read-only DOM forms will no longer be interpreted [ID 43864]](#dashboardslow-code-apps-html-code-on-read-only-dom-forms-will-no-longer-be-interpreted-id-43864)
+
 ## New features
 
 #### Dashboards/Low-Code Apps: GQI queries can now be exported as JSON files [ID 43800]
