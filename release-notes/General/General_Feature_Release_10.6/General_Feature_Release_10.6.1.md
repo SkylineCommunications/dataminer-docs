@@ -75,6 +75,17 @@ Also, the default file name has been changed from `Report.pdf` to `<dashboard na
 
 ### Enhancements
 
+#### SLNetClientTest tool now allows you to check the contents of the hosting cache used by SLDataMiner [ID 43605]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+Using the *SLNetClientTest* tool, you can now send a DiagnosticMessage with LIST_HOSTAGENTCACHE to SLDataMiner to retrieve the contents of the hosting cache used by SLDataMiner. This will allow you to check if an element is local or not.
+
+To send such a message, open the *SLNetClientTest* tool, and go to *Diagnostics > Dma > Elements (Hosting Cache)*.
+
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 #### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 43890] [ID 44035] [ID 44050] [ID 44062]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
