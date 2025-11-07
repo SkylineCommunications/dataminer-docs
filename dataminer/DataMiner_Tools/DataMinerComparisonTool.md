@@ -15,6 +15,40 @@ http(s)://[DMA name]/Comparison
 > [!NOTE]
 > This tool supports SAML authentication from DataMiner 10.3.8/10.4.0 onwards.
 
+## Comparison tool header bar
+
+### [From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards](#tab/tabid-3)
+
+![Comparison tool header bar](~/dataminer/images/Comparison_tool_header_bar.png)<br>*Comparison tool header bar in DataMiner 10.5.12*
+
+From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43837-->, the look and functionality of the Comparison tool header bar are aligned with the [standard web apps header bar](xref:Accessing_the_web_apps#the-landing-page-header-bar) as seen on the DataMiner landing page.
+
+Specific to the Comparison tool, the header bar includes:
+
+- DataMiner logo and DMS name: Redirects you to the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page).
+
+- *Comparison* button: Removes any arguments from the Comparison app URL.
+
+### [Earlier DataMiner versions](#tab/tabid-4)
+
+![Old header bar](~/dataminer/images/Comparison_app_10_3_9.png)<br>*Comparison tool header bar in DataMiner 10.3.9*
+
+Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12, the Comparison tool header bar includes the following items, from left to right:
+
+- Logo: Opens a compact overview of the available web apps, allowing you to easily switch between them.
+
+- DataMiner logo and app name: Removes any arguments from the Comparison app URL.
+
+- User button: A button with the initials or an image of the current user. Click this button to open a menu that provides access to the following options:
+
+  - *About*: Displays information about the app.
+
+  - *Help*: Opens the DataMiner documentation.
+
+  - *Sign out*: Logs you out of the app and returns you to the logon screen.
+
+***
+
 ## Working with the Comparison tool
 
 ### [From DataMiner 10.3.9/10.4.0 onwards](#tab/tabid-1)
@@ -23,8 +57,8 @@ http(s)://[DMA name]/Comparison
 
 1. Make sure the settings panel on the left is expanded. If it is collapsed, you can expand it by clicking the cogwheel icon.
 
-   ![Comparison tool UI](~/dataminer/images/Comparison_app_10_3_9.png)<br>
-   *DataMiner Comparison tool in DataMiner 10.3.9*
+   ![Comparison tool UI](~/dataminer/images/Comparison_app.png)<br>
+   *DataMiner Comparison tool in DataMiner 10.5.12*
 
 1. In the *Original text* and *Modified text* boxes on the left, select an element and parameter (and an index if necessary), and click *Get original value* and *Get modified value*, respectively.
 

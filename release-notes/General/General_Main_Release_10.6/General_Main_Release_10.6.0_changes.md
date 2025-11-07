@@ -490,11 +490,18 @@ Up to now, each time a `ModuleSettings` object was updated, the network credenti
 
 From now on, when a `ModuleSettings` object is updated, the network credentials will only be checked if the network path or the credential ID were updated as well.
 
-#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43890]
+#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 43890] [ID 44035] [ID 44050]
 
+<!-- RN 43526: MR 10.6.0 - FR 10.5.10 -->
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
-DataMiner Systems will now use the BrokerGateway-managed NATS solution by default. Also, it will no longer be possible to migrate from the BrokerGateway-managed NATS solution (nats-server service) back to the legacy SLNet-managed NATS solution (NAS and NATS services).
+DataMiner Systems will now use the BrokerGateway-managed NATS solution by default. BrokerGateway will manage NATS communication based on a single source of truth that has the complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS will be configured automatically, and a newer version of NATS will be used that has better performance and is easier to upgrade.
+
+- During a DataMiner upgrade, the *VerifyBrokerGatewayMigration* prerequisite check will verify whether all DataMiner Agents in the cluster are using the BrokerGateway-managed NATS solution. If not, the check will fail, and the upgrade will not be able to continue.
+
+- It will no longer be possible to migrate from the BrokerGateway-managed NATS solution (nats-server service) back to the legacy SLNet-managed NATS solution (NAS and NATS services).
+
+- The *Verify NATS Migration Prerequisites* BPA test has now been removed. As from this DataMiner version, all DataMiner Systems are expected to use the BrokerGateway-managed NATS solution by default.
 
 - DataMiner upgrades will no longer automatically install NAS and NATS.
 
@@ -514,6 +521,8 @@ DataMiner Systems will now use the BrokerGateway-managed NATS solution by defaul
 - From now on, when an attempt is made to communicate using the legacy SLNet-managed NATS solution, the following exception will be thrown and logged:
 
   `Unable to find file. SLCloud configured messageBrokers are unsupported as of DataMiner 10.6.0.`
+
+- NATSRepair.exe will no longer check if the *BrokerGateway* flag in *MaintenanceSettings.xml* is set to true.
 
 #### Alarms of type 'Notice' will now be generated when SLDataGateway queues no longer seem to decrease [ID 43909]
 
@@ -554,6 +563,14 @@ All methods in the `Skyline.DataMiner.Automation` namespace that use parameter d
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
 When a client application retrieves information about time-scoped related parameters using the `GetTimeScopedRelationsMessage`, from now on, exceptions will be thrown when that message is sent with incorrect arguments (e.g. a non-existing parameter ID, an invalid time range, etc.).
+
+#### NATSRepair.exe can no longer be run when automatic NATS configuration is disabled [ID 44061]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+From now on, it will no longer be possible to run *NATSRepair.exe* when automatic NATS configuration is disabled. If so, *NATSRepair.exe* will immediately stop without performing any actions.
+
+See also: [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)
 
 ### Fixes
 
@@ -646,3 +663,17 @@ On systems with a Cassandra cluster database in combination with an OpenSearch i
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
 Up to now, because of SLNet caching issues, in client applications like e.g. DataMiner Cube, outdated SLAnalytics icons would incorrectly remain visible for too long.
+
+#### Correlation alarms triggered by a correlation rule with the 'Auto clear' option set would not be cleared automatically [ID 43974]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+When, in a correlation rule, a *New alarm* or an *Escalate event* action was configured with the *Auto clear* option set, in some cases, the new correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
+
+#### DataMiner backup would fail with an incorrect Elasticsearch error due to a Db.xml parsing issue [ID 44044]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+Up to now, if the *Db.xml* file contained an invalid `<Database>` tag, a DataMiner backup procedure would fail with the incorrect error `An error occurred when dumping the elastic database`, even on systems that did not include an Elasticsearch database.
+
+From now on, when an invalid `<Database>` tag is found in the *Db.xml* file during a DataMiner backup procedure, an `invalid tag` error will be logged and the backup procedure will continue without any exception being thrown.

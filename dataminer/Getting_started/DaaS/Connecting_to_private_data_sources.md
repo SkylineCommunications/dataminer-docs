@@ -5,7 +5,9 @@ description: To make sure DaaS can also access private data sources, a site-to-s
 
 # Connecting to private data sources with DaaS
 
-If you are using a DaaS system, by default you will only be able to connect to data sources that can be accessed from dataminer.services over the internet. To make sure DaaS can also access private data sources, a **site-to-site VPN connection** will need to be set up. This will establish a secured connection between your DaaS system and your self-hosted network (which can be on-premises or hosted by the cloud provider of your choice).
+If you are using a DaaS system, by default you will only be able to connect to data sources that can be accessed from dataminer.services over the internet. To make sure DaaS can also access private data sources, from **DataMiner 10.5.10/10.6.0** onwards, you can set up and use **Site Manager**. For detailed information, refer to [About Site Manager](xref:SiteManagerOverview).
+
+**Prior to DataMiner 10.5.10/10.6.0**, or in some specific cases [not supported by Site Manager](xref:SiteManagerOverview#supported-connection-types-and-limitations), a **site-to-site VPN connection** will need to be set up. This will establish a secured connection between your DaaS system and your self-hosted network (which can be on-premises or hosted by the cloud provider of your choice).
 
 ## About the site-to-site VPN connection
 
@@ -81,4 +83,4 @@ Once the VPN Gateway has been enabled, Skyline will provide you with the followi
 
 - The DaaS address space (by default 172.23.0.0/16, but this can be different to prevent an overlap with your address space).
 
-- The BGP ASN (if BGP is set)
+- The BGP ASN (if BGP is set).

@@ -22,11 +22,24 @@ namespace Skyline.DataMiner.Automation
 
 		~Engine() { }
 
-		/// <summary>
-		/// Gets the instance ID.
-		/// </summary>
-		/// <value>The instance ID.</value>
-		public int InstanceId { get; }
+        /// <summary>
+        /// Occurs when the script finishes.
+        /// </summary>
+        /// <remarks>This event provides an opportunity to perform cleanup or other actions after the script is
+        /// finished. Subscribers can use the event arguments to access additional context about the destruction
+        /// process.<note>Available from DataMiner 10.6.1/10.7.0 onwards (RN 43919).</note></remarks>
+        /// <example>
+		/// <code>
+        /// engine.OnDestroy += (sender, args) => { var e = sender as Engine; e.Log($"Script finished with success ? {args.ScriptSucceed}"); };
+		/// </code>
+        /// </example>
+        public event EventHandler<DestroyEventArgs> OnDestroy;
+
+        /// <summary>
+        /// Gets the instance ID.
+        /// </summary>
+        /// <value>The instance ID.</value>
+        public int InstanceId { get; }
 
 		/// <summary>
 		/// Gets a value indicating whether an interactive client is available for the script.

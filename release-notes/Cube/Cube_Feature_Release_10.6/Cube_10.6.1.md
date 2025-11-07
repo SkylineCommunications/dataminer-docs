@@ -26,6 +26,20 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
+#### Trending: Double-clicking the alarm group of a multi-variate trend pattern will now open a trend graph showing all parameters involved in the multi-variate trend pattern [ID 43994]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+When, in the Alarm Console, you double-click the alarm group of a multi-variate trend pattern, from now on, a trend graph will open, showing all parameters involved in the pattern alarm group (up to a maximum of 10).
+
+#### Alarm Console: Alarm count enhancements [ID 44011]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+Up to now, when DataMiner Cube sent an alarm count request to the DataMiner System to which it was connected, it would always send the request to each of the DataMiner Agents in that DMS. As a result, it would receive an incorrect number of alarms when the DataMiner System included a STaaS database, a Cassandra Cluster database, or an indexing engine (Elasticsearch or OpenSearch) with the *Enable indexing on alarms* option enabled.
+
+From now on, when the DMS includes a STaaS database, a Cassandra Cluster database, or an indexing engine (Elasticsearch or OpenSearch) with the *Enable indexing on alarms* option enabled, Cube will only send alarm count requests to the DMA to which it is connected. If the DMS includes a database other than those listed above, it will still send alarm count requests to each of the DMAs in the DMS.
+
 #### SPI log entries containing the duration of an SRM server call will now include either the number of objects or the requested object ID [ID 44014]
 
 <!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->

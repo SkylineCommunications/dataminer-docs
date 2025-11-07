@@ -343,6 +343,8 @@ items:
             topicUid: Creating_custom_apps
           - name: Editing an app
             topicUid: Editing_custom_apps
+          - name: Changing user settings
+            topicUid: LCA_User_Settings
           - name: Configuring apps
             items:
               - name: Configuring the app layout
@@ -1208,6 +1210,14 @@ items:
         topicUid: Manually_starting_and_stopping_a_scheduled_event
       - name: Creating a Scheduler template
         topicUid: Creating_a_Scheduler_template
+  - name: Site Manager
+    items:
+    - name: About Site Manager
+      topicUid: SiteManagerOverview
+    - name: Getting started
+      topicUid: SiteManagerGettingStarted
+    - name: Troubleshooting
+      topicUid: SiteManagerTroubleshooting
   - name: Spectrum Analysis
     topicUid: SpectrumAnalysis
     items:

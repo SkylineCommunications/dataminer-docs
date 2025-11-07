@@ -7,6 +7,33 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.3.6
+
+#### New feature - SkipCertificateVerification property added to IHttpConnection [ID 44066]
+
+The IHttpConnection interface has been extended with a SkipCertificateVerification property. This enables configuration of whether SSL/TLS certificate verification should be skipped when setting up or modifying an element's HTTP connection. This corresponds to the *Skip SSL/TLS certificate verification* checkbox in Cube.
+
+> [!IMPORTANT]
+> This property is only effective if DataMiner 10.4.12/10.5.0 or higher is used, as the underlying support is introduced in those versions. With earlier versions, setting this property will have no effect.
+
+This example shows how to create an HTTP element with the SkipCertificateVerification option enabled:
+
+```csharp
+IDms dms = protocol.GetDms();
+IDmsProtocol elementProtocol = dms.GetProtocol("MyHttpProtocol", "1.0.0.1");
+ITcp port = new Tcp("127.0.0.1", 443);
+IHttpConnection myHttpConnection  = new HttpConnection(port) { SkipCertificateVerification = true };
+
+var configuration = new ElementConfiguration(
+                  dms,
+                  elementName,
+                  elementProtocol,
+                  new List<IElementConnection> { myHttpConnection });
+
+IDma agent = dms.GetAgent(protocol.DataMinerID);
+var createdElement = agent.CreateElement(configuration);
+```
+
 ### 1.1.3.5
 
 #### Fix - AgentId property of DmsAutomationScriptRunOptions ignored when executing a script [ID 43923]
