@@ -33,6 +33,12 @@ Also, the default file name has been changed from `Report.pdf` to `<dashboard na
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.6.0/10.6.1 or newer.
 
+#### Dashboards app: Private dashboards can now also be shared via cloud share [ID 44067]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, it was only possible to share public dashboards via cloud share. From now on, it will also be possible to share private dashboards via cloud share.
+
 ## Changes
 
 ### Enhancements
@@ -42,6 +48,14 @@ Also, the default file name has been changed from `Report.pdf` to `<dashboard na
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 When a Line & area chart component was displaying trend data of aggregation parameters, up to now, it was not possible to export that trend data to a CSV file. Exporting that data is now supported.
+
+#### Low-Code Apps - Form component: Clearer error will now appear when a DOM instance contains an incorrect value for a DomInstanceFieldDescriptor or DomInstanceValueFieldDescriptor [ID 44017]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When, in a low-code app, a DOM instance contained an invalid value for a DomInstanceFieldDescriptor or DomInstanceValueFieldDescriptor, up to now, a `The item no longer exists` error message would appear on top of the field in question. This error message has now been changed to `Instance was not found`.
+
+When relevant, this error message will also mention that one or more DOM definition IDs are invalid.
 
 #### Dashboards app: Enhanced error handling when generating PDF reports [ID 44019]
 

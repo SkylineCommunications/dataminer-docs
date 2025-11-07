@@ -210,3 +210,10 @@ Up to now, SLProtocol would silently fail to parse the *stuffing* attribute of t
 Up to now, if the *Db.xml* file contained an invalid `<Database>` tag, a DataMiner backup procedure would fail with the incorrect error `An error occurred when dumping the elastic database`, even on systems that did not include an Elasticsearch database.
 
 From now on, when an invalid `<Database>` tag is found in the *Db.xml* file during a DataMiner backup procedure, an `invalid tag` error will be logged and the backup procedure will continue without any exception being thrown.
+
+#### SLASPConnection could stop working while sending an email report with a dashboard attached [ID 44068]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+<!-- Not added to MR 10.6.0 -->
+
+In some cases, SLASPConnection could stop while sending an email report with a dashboard attached.
