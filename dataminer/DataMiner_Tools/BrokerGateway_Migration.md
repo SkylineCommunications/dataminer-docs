@@ -140,7 +140,7 @@ The following actions will be executed during the migration, in the indicated or
    </MaintenanceSettings>
    ```
 
-1. The NAS and NATS services are stopped and their startup type is set to "Manual".
+1. The SLNet-managed NAS and NATS services are stopped and their startup type is set to "Manual".
 
 1. The *ResetCluster* API (`https://<ip>/BrokerGateway/api/clusteringapi/resetcluster`) is called on BrokerGateway to create a new NATS cluster, and the NATS binaries are installed at `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server` and started as a service called "nats-server".
 
