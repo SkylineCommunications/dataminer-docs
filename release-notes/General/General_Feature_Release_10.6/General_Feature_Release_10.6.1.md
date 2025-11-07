@@ -132,6 +132,17 @@ From now on, it will no longer be possible to run *NATSRepair.exe* when automati
 
 See also: [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)
 
+#### DataMiner backup: Temp file will now be created on the target path instead of the C drive [ID 44063]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+When a backup package was being created, up to now, the temporary file would be stored on the C drive. From now on, this temporary file will be stored on the target path (i.e. local path or network path).
+
+> [!NOTE]
+>
+> - When DataMiner and Cassandra are installed on the same machine, and the Cassandra data directory is on the C drive, the temporary snapshot for Cassandra will be created in that data directory before it is added to the backup package on the target path. This is default Cassandra behavior. If you wish to avoid this, move the Cassandra data directory to another drive, or consider moving to STaaS or self-managed clustered storage as Cassandra Single is End of Engineering.
+> - Backups for which only a network path has been specified may take a bit more time as the temporary file will now be created on that network path. Backups for which both a local path and a network path have been specified will not take longer as the temporary file will be created on the local path and then simply copied to the network path.
+
 ### Fixes
 
 #### SLElement could stop working when DVE elements were deleted [ID 43947]
