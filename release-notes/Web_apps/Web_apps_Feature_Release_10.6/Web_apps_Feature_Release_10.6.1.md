@@ -55,6 +55,14 @@ Because of a number of enhancements, error handling has improved when generating
 
 In the Dashboards app and all low-code apps, the name *DataMiner Copilot* has now been replaced by *DataMiner Assistant*.
 
+#### Dashboards/Low-Code Apps - Form component: Datetime values displayed in the same way as in the Table Component [ID 44039]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+On *Form* components, datetime values will now be displayed in the same way as in *Table* components.
+
+The datetime format is based on the regional settings of the web browser. If a browser is set to e.g. "English (US)", datetime values will be displayed as "12/31/2029 8:00 PM".
+
 #### Dashboards/Low-Code Apps: Enhanced visibility of query buttons in the edit pane [ID 44048]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
