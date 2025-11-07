@@ -77,6 +77,20 @@ From now on, these query buttons will clearly be visible, whatever the color of 
 
 The Jobs app has been declared End of Life. On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer appear on the DataMiner landing page.
 
+#### DataMiner web applications will now by default use GQI DxM for GQI-related operations [ID 44058]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, by default, DataMiner web applications used the SLHelper process for GQI-related operations. From now on, they will by default use the GQI DxM instead.
+
+If you want the web applications to continue to use the SLHelper process for GQI-related operations, you will have to set the `gqi:useDxM` key to false in the `C:\Skyline DataMiner\Webpages\API\Web.config` file. See the following example.
+
+```xml
+<appSettings>
+    <add key="gqi:useDxM" value="false" />
+</appSettings>
+```
+
 ### Fixes
 
 #### Visual Overview in web apps: Children shapes would incorrectly be displayed on top of a clickable group of shapes [ID 43465]
