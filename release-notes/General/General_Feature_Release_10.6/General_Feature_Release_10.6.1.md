@@ -102,7 +102,7 @@ DataMiner Systems will now use the BrokerGateway-managed NATS solution by defaul
   - NATSResetWindow
   - NATSRestartTimeout
 
-- DataMiner upgrade packages will no longer perform the *MigrateBrokerGatewaySoftLaunch* upgrade action. This action would add the BrokerGateway soft-launch option to the *MaintenanceSettings.xml* file.
+- DataMiner upgrade packages will no longer perform the *MigrateBrokerGatewaySoftLaunch* upgrade action. This action would move the BrokerGateway soft-launch option to the *MaintenanceSettings.xml* file.
 
 - From now on, when an attempt is made to communicate using the legacy SLNet-managed NATS solution, the following exception will be thrown and logged:
 
