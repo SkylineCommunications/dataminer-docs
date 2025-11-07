@@ -23,6 +23,12 @@ All methods in the `Skyline.DataMiner.Automation` namespace that use parameter d
 
 ### Fixes
 
+#### Service templates: Problem when parsing conditions to dynamically include or exclude child elements [ID 43120]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+In some cases, conditional triggers to dynamically include or exclude child elements would be parsed incorrectly, especially when the first condition was a NOT clause.
+
 #### SLElement could stop working when DVE elements were deleted [ID 43947]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
