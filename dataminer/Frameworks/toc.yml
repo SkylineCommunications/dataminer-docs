@@ -296,7 +296,7 @@ items:
                 topicUid: SRM_launching_service_profile_wizard
           - name: Interacting with Resource Manager
             topicUid: srm_using_resourcemanagerhelper
-          - name: Interacting with Profile Helper
+          - name: Interacting with Profile Manager
             topicUid: srm_using_profilehelper
           - name: Frequently asked questions related to bookings and scripting
             topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
