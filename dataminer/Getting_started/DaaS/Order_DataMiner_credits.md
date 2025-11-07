@@ -9,19 +9,19 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 > [!NOTE]
 > If you have already created a SaaS subscription as detailed below, and you want to order **additional credits**, you do not have to create a new SaaS subscription. Instead, go to your SaaS subscription in the Azure portal, and click *Open SaaS Account on publisher's site* to be redirected to the *Purchase credits* page.
 
-1. Go to the [Microsoft Marketplace](https://azuremarketplace.microsoft.com/) and search for DataMiner.
+1. Go to the [Microsoft Marketplace](https://marketplace.microsoft.com/en-us/product/saas/skylinecommunicationsnv1644148291022.dataminer?tab=PlansAndPrice).
 
 1. Click *Get It Now* on the DataMiner credit plan.
 
-   ![Microsoft Marketplace Offer](~/dataminer/images/Azure_Marketplace_Dataminer.png)
+   ![Microsoft Marketplace Offer](~/dataminer/images/Microsoft_Marketplace_Dataminer.png)
 
 1. In the dialog, select the checkbox and click *Continue* to be redirected to the Azure portal.
 
-   ![Microsoft Marketplace continue](~/dataminer/images/Azure_Marketplace_Continue.png)
+   ![Microsoft Marketplace continue](~/dataminer/images/Microsoft_Marketplace_Continue.png)
 
 1. Click *Subscribe*.
 
-   ![Azure portal SaaS resource](~/dataminer/images/Azure_Marketplace_Get_it_Now.png)
+   ![Azure portal SaaS resource](~/dataminer/images/Microsoft_Marketplace_Get_it_Now.png)
 
 1. Create a SaaS subscription resource in Azure:
 
