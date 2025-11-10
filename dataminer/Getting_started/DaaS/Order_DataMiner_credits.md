@@ -49,10 +49,15 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 
    This will activate your subscription and may take a couple of minutes.
   
-   > [!NOTE]
-   > if this is your first time, you will need to accept the permission requests if prompted:
-   > First, click *Next* ![Permission Requst 1](~/dataminer/images/Marketplace_Permission_Request_1.png)
-   > Second, consent and click *Accept* ![Permission Requst 2](~/dataminer/images/Marketplace_Permission_Request_2.png)
+   If this is the first time you activate the subscription, you will need to accept the permission requests when prompted:
+
+   1. Click *Next*.
+
+      ![Permission Request 1](~/dataminer/images/Marketplace_Permission_Request_1.png)
+
+   1. Select the checkbox indicating consent and click *Accept*.
+
+      ![Permission Request 2](~/dataminer/images/Marketplace_Permission_Request_2.png)
 
 1. Once your subscription has been activated, fill in your Organization ID.
 
