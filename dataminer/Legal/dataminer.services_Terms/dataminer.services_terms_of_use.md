@@ -64,7 +64,7 @@ Use of the "Deploy" functionality is subject to the [terms for online deployment
 
 ## Privacy
 
-Your use of the dataminer.services platform is also subject to our Privacy Policy.
+Your use of the dataminer.services platform is also subject to our [Privacy Policy](xref:dataminer.services_privacy_policy).
 
 ## No warranty & liability
 
