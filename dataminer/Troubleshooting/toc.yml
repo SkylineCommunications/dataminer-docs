@@ -200,6 +200,8 @@ items:
         items:
           - name: Web Support Assistant
             topicUid: Web_Issues_Support_Assistant
+      - name: Troubleshooting – Dedicated clustered storage
+        topicUid: Troubleshooting_Dedicated_clustered_storage
       - name: Troubleshooting – Cassandra
         topicUid: Troubleshooting_Cassandra
         items:
