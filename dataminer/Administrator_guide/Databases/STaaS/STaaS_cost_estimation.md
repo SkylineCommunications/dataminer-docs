@@ -20,7 +20,7 @@ To request a cost estimation, follow the procedure below:
    > - To do the cost estimation for a **cluster**, you only need to execute the script on **one Agent**.
 
    > [!IMPORTANT]
-   > For a separate Cassandra setup (see [storage options overview](xref:Supported_system_data_storage_architectures)), cost estimation is supported from DataMiner 10.4.0 [CU17], 10.5.0 [CU5], and 10.5.8 onwards.<!-- RN 43325 -->
+   > For a separate Cassandra setup (see [storage options overview](xref:Supported_system_data_storage_architectures)), cost estimation is supported from DataMiner 10.4.0 [CU17], 10.5.0 [CU5], and 10.5.8 onwards. Use [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02) version from 1.0.6 to enforce DMA version validation. Be aware that running it on versions not supported will cause an unrecoverable loss of historical alarms since the script execution until the next DataMiner restart.<!-- RN 43325 -->
 
 1. Initialize the test run:
 
