@@ -5,7 +5,9 @@ keywords: ProfileManager, profile definitions, profile instances, profile parame
 
 # Interacting with Profile Manager
 
-The *ProfileHelper* class can be used in code to interact with *Profile Definitions*, *Profile Instances* and *Profile Parameters* objects. To instantiate a *ProfileHelper*, a callback to SLNet needs to be provided:
+The *ProfileHelper* class can be used in code to interact with profile definitions, profile instances, and profile parameters.
+
+To instantiate a *ProfileHelper*, a callback to SLNet needs to be provided:
 
 ```csharp
 // In an automation script
@@ -21,10 +23,9 @@ var helper = new ProfileHelper(protocol.SLNet.SendMessages);
 ```
 
 > [!NOTE]
-> When an error happens during the handling of profile objects, an exception of type *CrudFailedException* is thrown. This exception contains *TraceData* providing more information about the error, see [possible values](#errors-when-interacting-with-profiles). 
-> This applies to all CRUD operations shown in the examples below, though not for Bulk operations, for which partial success is possible. For those *GetTraceDataLastCall* needs to be used to retrieve the trace data of the last call.
+> When an error happens during the handling of profile objects, an exception of type *CrudFailedException* is thrown. This exception contains *TraceData* providing more information about the error (see [possible values](#errors-when-interacting-with-profiles)). This applies to all CRUD operations shown in the examples below, but not for bulk operations, for which partial success is possible. For those, *GetTraceDataLastCall* needs to be used to retrieve the trace data of the last call.
 
-## Create profile parameters
+## Creating profile parameters
 
 ```csharp
 var symbolRateParameter = new Parameter(Guid.NewGuid())
@@ -57,33 +58,38 @@ symbolRateParameter = helper.ProfileParameters.Create(symbolRateParameter);
 modulationTypeParameter = helper.ProfileParameters.Create(modulationTypeParameter);
 ```
 
-## Retrieve profile parameters
+## Retrieving profile parameters
+
 ```csharp
 var modulationTypeParameter = helper.ProfileParameters.Read(ParameterExposers.Name.Equal("Modulation Type")).FirstOrDefault();
 ```
 
-## Update profile parameters
+## Updating profile parameters
+
 ```csharp
 modulationTypeParameter.DefaultValue.StringValue = "QAM64";
 modulationTypeParameter = helper.ProfileParameters.Update(modulationTypeParameter);
 ```
 
-## Bulk update profile parameters
+## Bulk updating profile parameters
+
 ```csharp
 modulationTypeParameter.DefaultValue.StringValue = "QPSK";
 symbolRateParameter.DefaultValue.DoubleValue = 7.5;
 var updatedParameters = helper.ProfileParameters.AddOrUpdateBulk(modulationTypeParameter, symbolRateParameter);
 ```
-> [!NOTE]
-> The *AddOrUpdateBulk* method can be used to create or update multiple profile parameters in one call. If a parameter with the same ID already exists, it is updated; otherwise, a new parameter is created.
-> There's also *AddOrUpdateBulk* methods available for *Profile Definitions* and *Profile Instances*.
 
-## Delete profile parameters
+> [!NOTE]
+> The *AddOrUpdateBulk* method can be used to create or update multiple profile parameters in one call. If a parameter with the same ID already exists, it is updated; otherwise, a new parameter is created. Similar *AddOrUpdateBulk* methods are also available for profile definitions and profile instances.
+
+## Deleting profile parameters
+
 ```csharp
 helper.ProfileParameters.Delete(modulationTypeParameter);
 ```
 
-## Create profile definitions
+## Creating profile definitions
+
 ```csharp
 var profileDefinition = new ProfileDefinition(Guid.NewGuid())
 {
@@ -96,23 +102,27 @@ profileDefinition.ParameterIDs.Add(modulationTypeParameter.ID);
 profileDefinition = helper.ProfileDefinitions.Create(profileDefinition);
 ```
 
-## Read profile definitions
+## Reading profile definitions
+
 ```csharp
 var profileDefinition = helper.ProfileDefinitions.Read(ProfileDefinitionExposers.Name.Equal("Decoding Definition")).FirstOrDefault();
 ```
 
-## Update profile definitions
+## Updating profile definitions
+
 ```csharp
 profileDefinition.Description = "Updated description";
 profileDefinition = helper.ProfileDefinitions.Update(profileDefinition);
 ```
 
-## Delete profile definitions
+## Deleting profile definitions
+
 ```csharp
 helper.ProfileDefinitions.Delete(profileDefinition);
 ```
 
-## Create profile instances
+## Creating profile instances
+
 ```csharp
 var profileInstance = new ProfileInstance(Guid.NewGuid())
 {
@@ -145,18 +155,21 @@ var profileInstance = new ProfileInstance(Guid.NewGuid())
 profileInstance = helper.ProfileInstances.Create(profileInstance);
 ```
 
-## Read profile instances
+## Reading profile instances
+
 ```csharp
 var profileInstance = helper.ProfileInstances.Read(ProfileInstanceExposers.Name.Equal("Decoding Instance")).FirstOrDefault();
 ```
 
-## Update profile instances
+## Updating profile instances
+
 ```csharp
 profileInstance.Values[0].Value.DoubleValue = 10;
 profileInstance = helper.ProfileInstances.Update(profileInstance);
 ```
 
-## Delete profile instances
+## Deleting profile instances
+
 ```csharp
 helper.ProfileInstances.Delete(profileInstance);
 ```

@@ -21,7 +21,7 @@ var helper = new ResourceManagerHelper(protocol.SLNet.SendSingleResponseMessage)
 > [!NOTE]
 > Be careful when updating bookings in connectors. Depending on the scale of the SRM system, adding or updating bookings can take a while.
 
-## Create resource pools
+## Creating resource pools
 
 ```csharp
 var decodersPool = new ResourcePool(Guid.NewGuid())
@@ -40,23 +40,27 @@ helper.AddOrUpdateResourcePools(decodersPool, antennasPool);
 ```
 
 ## Reading resources pools
+
 ```csharp
 decodersPool = helper.GetResourcePools(new ResourcePool { Name = "Decoders" }).FirstOrDefault();
 antennasPool = helper.GetResourcePools(new ResourcePool { Name = "Antennas" }).FirstOrDefault();
 ```
 
-## Update resource pools
+## Updating resource pools
+
 ```csharp
 decodersPool.Description = "Updated description for decoders pool";
 helper.AddOrUpdateResourcePools(decodersPool);
 ```
 
-## Remove resource pools
+## Removing resource pools
+
 ```csharp
 helper.RemoveResourcePools(decodersPool, antennasPool); 
 ```
 
-## Create resources
+## Creating resources
+
 ```csharp
 var decoder = new Resource(Guid.NewGuid())
 {
@@ -79,13 +83,15 @@ var antenna = new Resource(Guid.NewGuid())
 helper.AddOrUpdateResources(decoder, antenna);
 ```
 
-## Update resources
+## Updating resources
+
 ```csharp
 decoder.MaxConcurrency = 100;
 helper.AddOrUpdateResources(decoder);
 ```
 
-## Remove resources
+## Removing resources
+
 ```csharp
 helper.RemoveResources(decoder, antenna);
 ```
