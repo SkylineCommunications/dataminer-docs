@@ -15,13 +15,9 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 
    ![Microsoft Marketplace Offer](~/dataminer/images/Microsoft_Marketplace_Dataminer.png)
 
-1. In the dialog, select the checkbox and click *Continue* to be redirected to the Azure portal.
+1. In the dialog, click *Get it now* to be redirected to the Azure portal.
 
-   ![Microsoft Marketplace continue](~/dataminer/images/Microsoft_Marketplace_Continue.png)
-
-1. Click *Subscribe*.
-
-   ![Azure portal SaaS resource](~/dataminer/images/Microsoft_Marketplace_Get_it_Now.png)
+   ![Microsoft Marketplace Get it now](~/dataminer/images/Microsoft_Marketplace_GetItNow.png)
 
 1. Create a SaaS subscription resource in Azure:
 
