@@ -8,7 +8,7 @@ To install dataminer.MediaOps:
 
 1. Look up the [MediaOps package](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) in the DataMiner Catalog.
 
-1. Scroll down in the *description* tab to check the list of **prerequisites**, and make sure your system meets these prerequisites.
+1. Find the **prerequisites** (matching the version of the package) in the MediaOps [Release Notes](https://docs.dataminer.services/release-notes/MediaOps_RNs_index.html), and make sure your system meets these prerequisites.
 
 1. When all prerequisites are met, click the *Deploy* button.
 
