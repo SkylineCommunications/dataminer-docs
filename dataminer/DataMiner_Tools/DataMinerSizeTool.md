@@ -1,5 +1,6 @@
 ---
 uid: DataMinerSizeTool
+keywords: WhatsTheSize,What's The Size
 ---
 
 # DataMiner Size tool
