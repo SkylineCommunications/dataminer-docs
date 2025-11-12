@@ -20,7 +20,23 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
-*No new features have been added yet.*
+#### Trending: Trend graphs will now show relational anomalies [ID 43857]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+When you open a trend graph of a parameter with relational anomalies, from now on, these anomalies will be indicated by tags.
+
+Hovering over a tag button or right-clicking and selecting *Expand tags* will highlight the anomalies in orange.
+
+Additionally, a "+" icon will appear on the right of an anomaly tag in the following cases:
+
+- the tag indicates a multi-variate trend pattern match, or
+- not all parameters associated with the anomaly are displayed on the trend graph.
+
+Clicking a "+" icon will load all parameters associated with the multi-variate trend pattern or the anomaly.
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.6.0/10.5.12 or newer.<!-- RN 43720 -->
 
 ## Changes
 
