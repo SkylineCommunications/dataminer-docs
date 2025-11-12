@@ -13,7 +13,7 @@ To request a cost estimation, follow the procedure below:
 1. Deploy the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02) from the Catalog.
 
    > [!IMPORTANT]
-   > For a **separate Cassandra** setup (see [storage options overview](xref:Supported_system_data_storage_architectures)), cost estimation is supported from DataMiner 10.4.0 [CU17], 10.5.0 [CU5], and 10.5.8 onwards. If you are using such a setup with an earlier DataMiner version, the script will not work. Note that early versions of the STaaS Migration script (older than 1.0.6) will not detect if you are using a supported DataMiner version, which may cause irreversible loss of alarm data for alarms generated after you run the script until the next DataMiner restart. Make sure to always use the **recommended version** of the package.
+   > For a **separate Cassandra** setup (see [storage options overview](xref:Supported_system_data_storage_architectures)), cost estimation is supported from DataMiner 10.4.0 [CU17], 10.5.0 [CU5], and 10.5.8 onwards. To prevent possible issues, make sure to always use the **recommended version** of the package.
 
 1. In the Automation module in DataMiner Cube, locate the *CloudStorageMigration* script and [execute the script](xref:Manually_executing_a_script).
 
