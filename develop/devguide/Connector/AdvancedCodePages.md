@@ -27,7 +27,7 @@ The different mapping affects how the inserted character is stored and sent in a
 
 Because of these inconsistencies, we recommend only using characters inside of the ASCII subset range (0x00-0x7F). Characters beyond ASCII range (0x80-0xFF) may behave unpredictably depending on the Windows code page. Elements should use Unicode to avoid such issues.
 
-Improvements introduced in DataMiner 10.6.1 (RN 43929), help make transitions between the Windows code page and Unicode smoother for elements with stored values:
+Improvements introduced in DataMiner 10.6.0/10.6.1 (RN 43929) help make transitions between the Windows code page and Unicode smoother for elements with stored values:
 
 - Table primary key values are always stored in Unicode. This ensures consistent row loading, regardless of the code page.
 - The Unicode characters are also saved in the database when a string value enters on a saved string-type parameter, e.g. via a protocol.SetParameter call in a QAction, or a write parameter with the `setter="true"` attribute. This enables an element that switches to a Unicode version to load and display the text as it was originally set on the parameter.
@@ -151,7 +151,7 @@ if (mac.Length == 6)
 
 ## Converting an existing connector into Unicode
 
-If you are using DataMiner 10.6.1 or higher, when you implement Unicode in an existing connector that was using Windows code page, take the following steps into account:
+If you are using DataMiner 10.6.0/10.6.1 or higher, when you implement Unicode in an existing connector that was using Windows code page, take the following steps into account:
 
 1. First define the unicode [option](xref:Protocol.Type-options).
 
@@ -160,4 +160,4 @@ If you are using DataMiner 10.6.1 or higher, when you implement Unicode in an ex
 1. Adapt elements with a serial connection: The `ascii` attribute needs to be added to the commands to let the command send the same value as before. String type parameters can no longer be displayed directly: define new hidden parameters to be used in the response. A QAction should read out the raw bytes of the hidden string parameter in the response with a NotifyProtocol NT_GET_DATA, and then convert these bytes back into a string, e.g. with Encoding.ASCII.GetString, and set that string value to the displayed parameter that was originally in the response of the previous connector version. (See [Serial responses](#serial-responses).)
 
 > [!NOTE]
-> DataMiner 10.6.1 (RN 43929) is required for this. In earlier DataMiner versions, the behavior is different, and an upgrade to 10.6.1 or higher will introduce breaking changes to this functionality. Fixed parameters with a value as text in combination with Unicode is not supported in earlier versions. If you are using an earlier DataMiner version, specify the value in the 0x format. In addition, in earlier versions `ascii="true"` on a command is applied to all parameters in the command, even on numeric text parameters. Explicitly specify the parameter IDs in the `ascii` attribute to make it compatible with earlier DataMiner versions.
+> DataMiner 10.6.0/10.6.1 (RN 43929) or higher is required for this. In earlier DataMiner versions, the behavior is different, and an upgrade to 10.6.0/10.6.1 or higher will introduce breaking changes to this functionality. Fixed parameters with a value as text in combination with Unicode is not supported in earlier versions. If you are using an earlier DataMiner version, specify the value in the 0x format. In addition, in earlier versions `ascii="true"` on a command is applied to all parameters in the command, even on numeric text parameters. Explicitly specify the parameter IDs in the `ascii` attribute to make it compatible with earlier DataMiner versions.
