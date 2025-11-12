@@ -73,6 +73,25 @@ Also, the default file name has been changed from `Report.pdf` to `<dashboard na
 
 ## Changes
 
+### Breaking changes
+
+#### Unicode string values will now be saved correctly in non-Unicode elements [ID 43929]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+Up to now, when a string parameter in a non-Unicode connector was set to a Unicode value, malformed data would get saved into that parameter, and that same malformed data would remain in the parameter when, later, the connector was changed to a Unicode connector.
+
+From now on, when a string parameter in a non-Unicode connector is set to a Unicode value, that Unicode value will be saved correctly, and will remain saved correctly when the connector is changed to a Unicode connector.
+
+- Unicode characters saved in a non-Unicode connector that cannot be mapped to a non-Unicode equivalent will be displayed as a question mark ("?") until the connector is changed to a Unicode connector.
+- Primary key values will always be saved in Unicode, even in elements using a non-Unicode connector.
+- Up to now, table rows retrieved from the database would not get loaded when the primary key could not be found, resulting in errors being logged. From now on, those table rows will be retrieved and loaded correctly.
+
+Breaking changes:
+
+- In a Unicode connector, the `Interprete.Value` of string parameters with a fixed length will be considered a Unicode value, unless it is in 0x format. Values of parameters with `Interprete.RawType` set to "Numeric Text" and `Interprete.Type` set to "double" will be considered ASCII values, even when the element is using a Unicode connector.
+- From now on, serial commands with `ascii="true"` will only be applied to string parameters of which `Interprete.Value` does not contain a value in 0x format. Up to now, `ascii="true"` would be applied to all parameters in a serial command.
+
 ### Enhancements
 
 #### SLNetClientTest tool now allows you to check the contents of the hosting cache used by SLDataMiner [ID 43605]
