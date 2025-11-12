@@ -11,7 +11,7 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 
 1. Go to the Microsoft Marketplace [DataMiner page](https://marketplace.microsoft.com/en-us/product/saas/skylinecommunicationsnv1644148291022.dataminer?tab=PlansAndPrice).
 
-1. Click *Get It Now* on the DataMiner credit plan.
+1. Click *Get It Now* for the DataMiner credit plan.
 
    ![Microsoft Marketplace Offer](~/dataminer/images/Microsoft_Marketplace_Dataminer.png)
 
