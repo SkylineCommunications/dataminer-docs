@@ -32,3 +32,9 @@ Multiple handlers can be added. They will run synchronously, and if one handler 
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 Up to now, SLAnalytics would incorrectly not receive any "swarming complete" notifications for swarmed DVE child elements. As a result, alarm focus calculations for DVE child elements would be restarted from scratch instead of being fetched from the database.
+
+#### Memory leak in SLDataMiner when documents were being handled [ID 44098]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+In some cases, SLDataMiner could leak memory when documents were being handled.

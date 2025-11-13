@@ -268,3 +268,9 @@ From now on, it will be possible to offload either alarms only, information even
 <!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
 
 When run on the offline agent of a Failover system, the Security Advisory BPA test would show an incorrect result after checking the status of port 5100 of the firewall.
+
+#### Memory leak in SLDataMiner when documents were being handled [ID 44098]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+In some cases, SLDataMiner could leak memory when documents were being handled.
