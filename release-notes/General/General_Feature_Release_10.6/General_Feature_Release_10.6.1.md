@@ -249,6 +249,12 @@ From now on, when an invalid `<Database>` tag is found in the *Db.xml* file duri
 
 In some cases, SLASPConnection could stop while sending an email report with a dashboard attached.
 
+#### Problem when importing a connector that contained information templates of which the name contained dots [ID 44079]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When you imported a connector that contained information templates of which the names contained dots ("."), a parsing error would cause an exception to be thrown.
+
 #### Offload database: Not possible to offload information events without offloading alarms as well [ID 44080]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->

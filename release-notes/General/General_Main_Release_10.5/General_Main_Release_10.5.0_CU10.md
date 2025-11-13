@@ -100,6 +100,12 @@ To detect whether this has occurred:
 
 Up to now, SLProtocol would silently fail to parse the *stuffing* attribute of the *Protocol.Advanced* tag when its value contained spaces.
 
+#### Problem when importing a connector that contained information templates of which the name contained dots [ID 44079]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When you imported a connector that contained information templates of which the names contained dots ("."), a parsing error would cause an exception to be thrown.
+
 #### Offload database: Not possible to offload information events without offloading alarms as well [ID 44080]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
