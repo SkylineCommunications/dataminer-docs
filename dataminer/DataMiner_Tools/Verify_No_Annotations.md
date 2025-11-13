@@ -4,13 +4,15 @@ uid: Verify_No_Annotations
 
 # Verify No Annotations
 
-From DataMiner 10.6.0 onwards, the *VerifyNoAnnotations* prerequisite check is included in upgrade packages. This check verifies that the LegacyAnnotations soft-launch flag is disabled before upgrading, as the legacy Annotations feature is end of life and will no longer function after the upgrade.
+From DataMiner 10.6.0 onwards, the *VerifyNoAnnotations* prerequisite check is included in upgrade packages. This check verifies that the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations) is disabled, as the legacy Annotations feature will no longer function after upgrading to 10.6.0.
 
-From DataMiner 10.6.0 onwards, the [Element-](xref:Element_cards), [View-](xref:View_cards) and [Service Card Annotations](xref:Service_card_pages) are *End of Life*.
+From DataMiner 10.6.0 onwards, the **annotations** on [element cards](xref:Element_cards), [view cards](xref:View_cards), and [service cards](xref:Service_card_pages) are **End of Life**.
 
-[!IMPORTANT]
-After disabling the LegacyAnnotations soft-launch flag, all existing annotations will be removed and will no longer be accessible.
+> [!TIP]
+> See also: [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)
 
 ## Fixing a failing prerequisite check
 
-If the *VerifyNoAnnotations* check fails, The *LegacyAnnotations* soft-launch flag is still enabled.
+If the *VerifyNoAnnotations* check fails, you will need to disable the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations).
+
+This will **remove all existing annotations**, and you will no longer be able to access them.
