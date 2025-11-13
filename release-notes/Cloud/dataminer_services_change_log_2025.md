@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 13 November 2025 - Fix - Admin - Usage
+
+Fixed the issue where selecting the deleted systems filter in the organization usage page displayed no usage data.
+
 ### 29 October 2025 - New Feature - Community Edition Trial DaaS
 
 Previously, users had to purchase DataMiner credits to deploy a DaaS system. Now new organizations can deploy a Community Edition Trial DaaS system for free, which they can use for one week to test out DataMiner features. After a week, the system will be automatically decommissioned.
