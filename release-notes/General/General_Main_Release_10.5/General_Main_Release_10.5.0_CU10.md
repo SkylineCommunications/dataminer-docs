@@ -15,23 +15,6 @@ uid: General_Main_Release_10.5.0_CU10
 
 ### Enhancements
 
-#### SLNetClientTest tool now allows you to check the contents of the hosting cache used by SLDataMiner [ID 43605]
-
-<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
-
-Using the *SLNetClientTest* tool, you can now send a DiagnosticMessage with LIST_HOSTAGENTCACHE to SLDataMiner to retrieve the contents of the hosting cache used by SLDataMiner. This will allow you to check if an element is local or not.
-
-To send such a message, open the *SLNetClientTest* tool, and go to *Diagnostics > Dma > Elements (Hosting Cache)*.
-
-> [!CAUTION]
-> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
-
-#### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
-
-<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
-
-All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
-
 #### Minor enhancements made to BPAs [ID 40751]
 
 <!-- MR 10.5.0 [CU10] - FR 10.4.12 -->
@@ -56,6 +39,29 @@ A number of minor enhancements have been made to the following BPAs:
 ##### Report active RTE
 
 - Renamed to *Active Runtime errors*.
+
+#### SLNetClientTest tool now allows you to check the contents of the hosting cache used by SLDataMiner [ID 43605]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Using the *SLNetClientTest* tool, you can now send a DiagnosticMessage with LIST_HOSTAGENTCACHE to SLDataMiner to retrieve the contents of the hosting cache used by SLDataMiner. This will allow you to check if an element is local or not.
+
+To send such a message, open the *SLNetClientTest* tool, and go to *Diagnostics > Dma > Elements (Hosting Cache)*.
+
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
+
+#### SLASPConnection will now detect more quicker that a DataMiner Agent has been added to or removed from the DataMiner System [ID 44049]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Because of a number of enhancements, SLASPConnection will now detect more quicker that a DataMiner Agent has been added to or removed from the DataMiner System.
 
 ### Fixes
 

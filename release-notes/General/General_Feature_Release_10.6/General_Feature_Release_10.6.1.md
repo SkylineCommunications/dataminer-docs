@@ -160,6 +160,12 @@ Multiple handlers can be added. They will run synchronously, and if one handler 
 
 All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
 
+#### SLASPConnection will now detect more quicker that a DataMiner Agent has been added to or removed from the DataMiner System [ID 44049]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Because of a number of enhancements, SLASPConnection will now detect more quicker that a DataMiner Agent has been added to or removed from the DataMiner System.
+
 #### NATSRepair.exe can no longer be run when automatic NATS configuration is disabled [ID 44061]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
