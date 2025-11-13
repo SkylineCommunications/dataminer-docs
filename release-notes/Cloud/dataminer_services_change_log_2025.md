@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 13 November 2025 - Fix - Admin - Usage
+### 13 November 2025 - Fix - Admin - Usage - Data not shown for deleted systems
 
-Fixed the issue where selecting the deleted systems filter in the organization usage page displayed no usage data.
+Fixed an issue where no usage data was shown when the "Deleted systems" option was selected in the DataMiner Systems filter on the organization usage page.
 
 ### 29 October 2025 - New Feature - Community Edition Trial DaaS
 
