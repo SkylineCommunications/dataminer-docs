@@ -709,3 +709,9 @@ When, in a correlation rule, a *New alarm* or an *Escalate event* action was con
 Up to now, if the *Db.xml* file contained an invalid `<Database>` tag, a DataMiner backup procedure would fail with the incorrect error `An error occurred when dumping the elastic database`, even on systems that did not include an Elasticsearch database.
 
 From now on, when an invalid `<Database>` tag is found in the *Db.xml* file during a DataMiner backup procedure, an `invalid tag` error will be logged and the backup procedure will continue without any exception being thrown.
+
+#### Failover: Security Advisory BPA test would show an incorrect result after checking the status of port 5100 of the firewall [ID 44093]
+
+<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+When run on the offline agent of a Failover system, the Security Advisory BPA test would show an incorrect result after checking the status of port 5100 of the firewall.

@@ -262,3 +262,9 @@ When you imported a connector that contained information templates of which the 
 Up to now, it would incorrectly not be possible to offload information events when you had not opted to offload alarms as well. It would only be possible to offload information events together with alarms.
 
 From now on, it will be possible to offload either alarms only, information events only, or both.
+
+#### Failover: Security Advisory BPA test would show an incorrect result after checking the status of port 5100 of the firewall [ID 44093]
+
+<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+When run on the offline agent of a Failover system, the Security Advisory BPA test would show an incorrect result after checking the status of port 5100 of the firewall.
