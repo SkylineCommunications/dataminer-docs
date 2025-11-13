@@ -116,6 +116,14 @@ If you want the web applications to continue to use the SLHelper process for GQI
 </appSettings>
 ```
 
+#### Web apps: Apps menu item 'dataminer.services' will only appear when the DMA is connected to the cloud [ID 44104]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, when you opened the Apps menu of a web app (e.g. the Monitoring app), the top-most item would be a link to dataminer.services.
+
+From now on, that link will only appear in the Apps menu of a web app when the DataMiner Agent is connected to the cloud.
+
 ### Fixes
 
 #### Visual Overview in web apps: Children shapes would incorrectly be displayed on top of a clickable group of shapes [ID 43465]
