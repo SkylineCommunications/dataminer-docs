@@ -193,3 +193,11 @@ In interactive Automation scripts launched from a web app, up to now, numeric va
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 When you had opened the DataMiner web apps authentication page in a Firefox web browser, in some cases, an error could occur when you tried to log in to a web app.
+
+#### Dashboards/Low-Code Apps: An export to CSV could incorrect be started before the data had been loaded [ID 44064]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, in a *Line & area chart* component, it would incorrectly be possible to start an export to CSV before the data had been loaded.
+
+From now on, an export to CSV will always be performed synchronously. In other words, even when you click *Export to CSV* before the data has been loaded, the export operation will only start when all data has been loaded.
