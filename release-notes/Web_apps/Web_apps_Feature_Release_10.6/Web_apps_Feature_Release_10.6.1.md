@@ -77,6 +77,17 @@ On *Form* components, datetime values will now be displayed in the same way as i
 
 The datetime format is based on the regional settings of the web browser. If a browser is set to e.g. "English (US)", datetime values will be displayed as "12/31/2029 8:00 PM".
 
+#### Low-Code Apps - Templates: Preset table component template [ID 44040]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When, in a low-code app, you click the *Browse templates* button while editing a component that uses templates, a preset table component template will now appear in the list of templates.
+
+When you apply that preset template in a component that uses templates, you can then configure it further using the template editor.
+
+> [!NOTE]
+> This preset template will only be available in low-code apps, not in dashboards.
+
 #### Dashboards/Low-Code Apps: Enhanced visibility of query buttons in the edit pane [ID 44048]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
