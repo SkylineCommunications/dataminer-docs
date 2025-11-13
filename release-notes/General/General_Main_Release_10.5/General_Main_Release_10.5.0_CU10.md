@@ -57,11 +57,11 @@ To send such a message, open the *SLNetClientTest* tool, and go to *Diagnostics 
 
 All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
 
-#### SLASPConnection will now detect more quicker that a DataMiner Agent has been added to or removed from the DataMiner System [ID 44049]
+#### SLASPConnection will now detect more quicker that a connection to a DMA has been lost or re-established [ID 44049]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-Because of a number of enhancements, SLASPConnection will now detect more quicker that a DataMiner Agent has been added to or removed from the DataMiner System.
+Because of a number of enhancements, SLASPConnection will now detect more quicker that a connection to a DataMiner Agent has been lost or re-established.
 
 ### Fixes
 
