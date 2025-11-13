@@ -60,7 +60,7 @@ To generate a shareable URL:
 1. Share the copied URL from your clipboard in your preferred way.
 
 > [!NOTE]
-> Dashboards with [restricted user access](xref:Configuring_dashboard_security) can only be viewed by users that have access to it.
+> Dashboards with [restricted user access](xref:Configuring_dashboard_security) can only be viewed by users that have access to them.
 
 ## Sharing a live dashboard via cloud share
 
@@ -94,7 +94,7 @@ You can set an optional expiration date to stop sharing automatically.
 
 > [!NOTE]
 >
-> - Dashboards with [restricted user access](xref:Configuring_dashboard_security) can be shared as of DataMiner 10.6.0 [CU0]/10.6.1 onwards.
+> - Dashboards with [restricted user access](xref:Configuring_dashboard_security) can be shared from DataMiner 10.6.0/10.6.1 onwards.<!-- RN 44067 -->
 > - Dashboards containing certain components cannot be shared yet: spectrum components, Maps, SRM components (service definition and resource usage line graph), pivot tables, queries linked to data, and visualizations based on query data (e.g. node edge graph, table). For dashboards with queries that have the *Update data* setting enabled, sharing is supported from DataMiner 10.2.0 [CU4]/10.2.6 onwards. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
 
 ### Managing or deleting a cloud share
