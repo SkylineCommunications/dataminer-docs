@@ -279,6 +279,6 @@ When run on the offline agent of a Failover system, the Security Advisory BPA te
 
 #### Memory leak in SLDataMiner when documents were being handled [ID 44098]
 
-<!-- MR 10.7.0 - FR 10.6.1 -->
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 In some cases, SLDataMiner could leak memory when documents were being handled.
