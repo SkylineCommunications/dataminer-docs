@@ -94,6 +94,12 @@ Breaking changes:
 
 ### Enhancements
 
+#### SLNet: Trend graphs in Cube will now also correctly display behavioral change points for table column parameters without advanced naming [ID 41751]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+Because of a number of enhancements made in SLNet, trend graphs in DataMiner Cube will now also correctly display behavioral change points for table column parameters without advanced naming.
+
 #### SLNetClientTest tool now allows you to check the contents of the hosting cache used by SLDataMiner [ID 43605]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
