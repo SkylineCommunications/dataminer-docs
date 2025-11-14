@@ -250,6 +250,12 @@ Up to now, if the *Db.xml* file contained an invalid `<Database>` tag, a DataMin
 
 From now on, when an invalid `<Database>` tag is found in the *Db.xml* file during a DataMiner backup procedure, an `invalid tag` error will be logged and the backup procedure will continue without any exception being thrown.
 
+#### Failover: TLS handshakes of NATS connections would fail [ID 44060]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+On a newly created Failover system, in some cases, the TLS handshakes of the NATS connections would fail due to the virtual IP address not being updated in the TLS certificate.
+
 #### SLASPConnection could stop working while sending an email report with a dashboard attached [ID 44068]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
@@ -281,4 +287,4 @@ When run on the offline agent of a Failover system, the Security Advisory BPA te
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-In some cases, SLDataMiner could leak memory when documents were being handled..
+In some cases, SLDataMiner could leak memory when documents were being handled.

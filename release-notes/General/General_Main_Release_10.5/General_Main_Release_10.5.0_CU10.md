@@ -100,6 +100,12 @@ To detect whether this has occurred:
 
 Up to now, SLProtocol would silently fail to parse the *stuffing* attribute of the *Protocol.Advanced* tag when its value contained spaces.
 
+#### Failover: TLS handshakes of NATS connections would fail [ID 44060]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+On a newly created Failover system, in some cases, the TLS handshakes of the NATS connections would fail due to the virtual IP address not being updated in the TLS certificate.
+
 #### Problem when importing a connector that contained information templates of which the name contained dots [ID 44079]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
@@ -124,4 +130,4 @@ When run on the offline agent of a Failover system, the Security Advisory BPA te
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-In some cases, SLDataMiner could leak memory when documents were being handled..
+In some cases, SLDataMiner could leak memory when documents were being handled.
