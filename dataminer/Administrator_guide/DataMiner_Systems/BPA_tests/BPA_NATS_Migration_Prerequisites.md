@@ -4,14 +4,14 @@ uid: BPA_NATS_Migration_Prerequisites
 
 # Verify NATS Migration Prerequisites
 
-This BPA test will verify whether DataMiner is ready to [migrate the NATS management to the BrokerGateway DxM](xref:BrokerGateway_Migration).
+This BPA test is only available prior to DataMiner 10.6.0/10.6.1. It will verify whether DataMiner is ready to [migrate the NATS management to the BrokerGateway DxM](xref:BrokerGateway_Migration). This migration must be done before an upgrade to 10.6.0/10.6.1 is possible.<!-- RN 44035 -->
 
-It will verify that:
+The BPA test will verify that:
 
 - All DxMs installed on the system that use DataMiner MessageBroker are using at least version 3.0.0. This version is capable of setting up connections using BrokerGateway and can automatically switch its connection configuration at runtime.
 - `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` exists and has *IgnitionValues* filled in for every entry.
 
-This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab). From DataMiner 10.5.0/10.5.2 onwards, it is available by default.<!-- RN 40906 -->
+This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab). It is also available by default in all DataMiner 10.5.x versions starting from DataMiner 10.5.0/10.5.2.<!-- RN 40906 -->
 
 ## Metadata
 
@@ -32,7 +32,7 @@ This BPA test is available on demand. You can [run it in System Center](xref:Run
 
   The NAS/NATS services could not be located.
 
-  Verify that the NAS/NATS services are installed. If they are missing, install them via the [SLEndpointTool](xref:Investigating_NATS_Issues#remaining-steps).
+  Verify that the NAS/NATS services are installed. If they are missing, install them via the [SLEndpointTool](xref:Investigating_Legacy_NATS_Issues#remaining-steps).
 
 - **Service \<servicename\> v\<version\> uses \<dll name\> file version \<dll version\>. It must be at least version 3.0.0. Please update this DxM to the latest version:**
 
