@@ -33,7 +33,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
   - Permission to create, edit and delete dashboards.
 
-- The Dashboard Gateway web server(s) should be able to communicate with a DMA using both a .NET Remoting connection and an HTTP(S) connection (using port 80 or 443, depending on the HTTP(S) configuration of the DataMiner Agent)
+- The Dashboard Gateway web server(s) must be able to communicate with a DataMiner Agent using an HTTP(S) connection (port 80 or 443, depending on the DataMiner Agent's HTTP(S) configuration). If .NET Remoting is still active (default prior to DataMiner 10.5.10/10.6.0 [CU0] or when enforced by the DMA), that port must also be accessible.
 
 > [!IMPORTANT]
 > Always make sure your Dashboard Gateway's web application folders are in sync with the DataMiner server. This means that when you upgrade your DataMiner software, you must make sure the folders for the web apps are also up to date. See [DataMiner upgrades](#dataminer-upgrades)
