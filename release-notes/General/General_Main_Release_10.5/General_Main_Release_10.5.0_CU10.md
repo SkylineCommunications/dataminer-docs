@@ -63,6 +63,14 @@ All methods in the `Skyline.DataMiner.Automation` namespace that use parameter d
 
 Because of a number of enhancements, SLASPConnection will now detect more quicker that a connection to a DataMiner Agent has been lost or re-established.
 
+#### DataMiner upgrade: New prerequisite will check whether .NET 10 is installed [ID 44121]
+
+<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+Before upgrading to this DataMiner release or above, you are expected to install the Microsoft .NET 10 hosting bundle.
+
+When you start a DataMiner upgrade procedure, from now on, a new prerequisite will verify whether Microsoft .NET 10 is installed on the system. If this is not the case, the upgrade will be canceled.
+
 ### Fixes
 
 #### Service templates: Problem when parsing conditions to dynamically include or exclude child elements [ID 43120]
