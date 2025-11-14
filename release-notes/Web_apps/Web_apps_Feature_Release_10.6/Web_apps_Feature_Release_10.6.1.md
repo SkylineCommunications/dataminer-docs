@@ -124,6 +124,12 @@ Up to now, when you opened the Apps menu of a web app (e.g. the Monitoring app),
 
 From now on, that link will only appear in the Apps menu of a web app when the DataMiner Agent is connected to the cloud.
 
+#### Low-Code Apps: Enhanced performance [ID 44114]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Because of a number of enhancements, overall performance of low-code apps has increased.
+
 ### Fixes
 
 #### Visual Overview in web apps: Children shapes would incorrectly be displayed on top of a clickable group of shapes [ID 43465]
