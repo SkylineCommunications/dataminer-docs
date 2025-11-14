@@ -90,3 +90,11 @@ Also, up to now, it would incorrectly be possible to save a script to which you 
 In a Visio file linked to a service, the [servicedefinitionfilter] placeholder can be used to refer to the row filter of an included table parameter.
 
 Up to now, in some cases, a primary key prefix, which is added to this filter for configuration purposes, would incorrectly not get removed before the filter was applied. From now on, this prefix will always be removed before the filter is applied.
+
+#### Service & Resource Management: Service Manager would incorrectly be registered each time you switched to another workspace [ID 44106]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+Up to now, the Service Manager would incorrectly be registered each time you switched to another workspace.
+
+From now on, the Service Manager will only be registered once.
