@@ -14,13 +14,13 @@ This page provides an overview of all Dashboards and Low-Code Apps tutorials, or
 
 | Name | Description | Module |
 |--|--|--|
-| [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message) | Add a custom message when a query returns no results for any of the following components of a dashboard: table, grid, pie & donut chart, line & area chart, timeline, and node edge graph. | Dashboards&nbsp;app |
 | [Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing) | Create and publish your first low-code app. | Low-Code Apps |
 | [Editing an existing app](xref:Tutorial_Apps_Edit_Existing_App) | Edit an existing low-code app. | Low-Code Apps |
 | [Managing the pages in an app](xref:Tutorial_Apps_Managing_Pages) | Add, change, duplicate, and remove pages in a low-code app. | Low-Code Apps |
 | [Creating and showing a panel](xref:Tutorial_Apps_Panel) | Show a panel in a low-code app. | Low-Code Apps |
 | [Using a header bar](xref:Tutorial_Apps_Headerbar) | Use a header bar in a low-code app. | Low-Code Apps |
 | [Creating a visually appealing and user-friendly low-code app](xref:Tutorial_App_Design) | Create an intuitive, visually appealing, and user-friendly low-code app, learning about best practices in low-code app design. | Low-Code Apps |
+| [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message) | Add a custom message when a query returns no results for any of the following components of a dashboard: table, grid, pie & donut chart, line & area chart, timeline, and node edge graph. | Dashboards&nbsp;app |
 
 ### Advanced tutorials
 
