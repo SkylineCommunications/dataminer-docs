@@ -160,6 +160,53 @@ Multiple handlers can be added. They will run synchronously, and if one handler 
 
 All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
 
+#### SLNetClientTest tool: Enhanced management of DOM modules of which definition-level security is enabled [ID 44021]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+The SLNetClientTest tool has been adapted to be able to better manage DOM modules of which definition-level security is enabled.
+
+##### Filtering on DOM instance IDs in the Filter window
+
+Up to now, it was only possible to select one or more DOM definitions in the list. From now on, it will be possible to enter up to 500 IDs of DOM instances you want to retrieve. If you enter more than 500 IDs, a message will appear, and only the first 500 IDs will be used to construct the filter.
+
+When you enter a number of IDs and click *OK*, the IDs will be parsed. The valid IDs will be used and the invalid IDs will be disregarded.
+
+Note that the IDs you enter will take precedence over the DOM definitions that you selected in the list. As soon as you enter a number of valid DOM instance IDs, the DOM definitions you selected in the list will be disregarded.
+
+##### Context menu added to the list on the main 'DomInstances' tab
+
+The list on the *DomInstances* tab now has a right-click menu with the following options:
+
+| Option | Description |
+|--------|-------------|
+| View attachments | When this option is selected, all selected DOM instances will be added to list on the *Attachments* tab. This allows you to view, add, or delete attachments for these DOM instances. |
+| View history     | When this option is selected, the selected DOM instances will be passed on to the *History* tab, where the list will be updated with the history of these DOM instances.<br>A note will be displayed at the top, clarifying that the current view only shows the history of a specific subset of instances.<br>Note: The list can only show the history of up to 500 instances. If more than 500 instances are selected, a message will be displayed, and no filtering will be applied. |
+
+##### Changes to the Attachments tab
+
+The *Attachments* tab has been updated as follows:
+
+- The *Load* button will now be disabled when definition-level security is enabled.
+
+- A message will now be displayed in the right-hand panel, explaining that you can add DOM instances to the list in the left-hand panel by using the context menu mentioned [above](#context-menu-added-to-the-list-on-the-main-dominstances-tab).
+
+- A *Clear* button now allows you to clear the list of DOM instances.
+
+##### Changes to the History tab
+
+When definition-level security is enabled, from now on, the *History* tab will no longer try to read all recent history. In that case, a message will appear, referring to the context menu mentioned [above](#context-menu-added-to-the-list-on-the-main-dominstances-tab).
+
+> [!NOTE]
+> When, in said context menu, you selected *View history* to show the history of specific DOM instances, it is currently not possible to revert that decision and make the list show all latest history. To do so, close the DOM module window and re-open it.
+
+##### When trying to delete a DOM module
+
+When you try to delete a DOM module, but you do not have access to all DOM definitions in that module, a message box will now be displayed, explaining why you are not allowed to delete the module in question.
+
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 #### SLASPConnection will now detect more quicker that a connection to a DMA has been lost or re-established [ID 44049]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
