@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 13 November 2025 - Fix - Admin - Usage - Data not shown for deleted systems
 
-Fixed an issue where no usage data was shown when the "Deleted systems" option was selected in the DataMiner Systems filter on the organization usage page.
+When the *Deleted systems* option was selected in the DataMiner Systems filter on the organization usage page of the Admin app, it could occur that no usage data was shown. This issue has been resolved.
 
 ### 29 October 2025 - New Feature - Community Edition Trial DaaS
 
