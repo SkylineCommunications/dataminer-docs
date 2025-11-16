@@ -27,11 +27,11 @@ Perpetual-Use Licenses are a one-off expenditure.
 > [!TIP]
 > See also: [Usage-based services](xref:Pricing_Usage_based_service)
 
-DataMiner's usage-based services offers a flexible and transparent software utilization offering. The utilization of the different services is measured in **DataMiner credits**, a single product and price. These credits, allocated to an organization, can be used across various services, adapting monthly to meet evolving needs and priorities.
+DataMiner's usage-based services offer a flexible and transparent software utilization offering. The utilization of the different services is measured in **DataMiner credits**, a single product and price. These credits, allocated to an organization, can be used across various services, adapting monthly to meet evolving needs and priorities.
 
-By default, it works on a Pay-per-Use model, where prepaid credits are deducted monthly based on the actual service consumptions, in any given month.
+By default, it operates on a Pay-per-Use model, where prepaid credits are deducted monthly based on actual service consumption.
 
-In addition, you also have the option to subscribe to certain services, by reserving a fixed number of units per month (Monthly Utilization Allowances or MUA), for the duration of 1 or 3 years, resulting in a well-defined and controlled expenditure and substantial savings on the number of credits consumed.
+In addition, you also have the option to subscribe to certain services by reserving a fixed number of units per month (Monthly Utilization Allowances or MUA), for the duration of 1 or 3 years, resulting in a well-defined and controlled expenditure and substantial savings on the number of credits consumed.
 
 ### DataMiner Community Edition
 
@@ -64,15 +64,15 @@ There might come a time when you need to increase your system's capacity to go a
 > [!TIP]
 > See also: [Usage-based services](xref:Pricing_Usage_based_service)
 
-## DataMiner Perpetual-Use Licenses vs Usage-based services
+## DataMiner Perpetual-Use Licenses vs Usage-based Services
 
-The Perpetual-Use model offers perpetual ownership over a named license through a one-time purchase with an optional recurrent cost for support services and software updates and upgrades.
+The Perpetual-Use model offers perpetual ownership over a named license through a one-time purchase with an optional recurrent cost for support services, software updates, and upgrades.
 
 Usage-based services are charged based on the actual monthly usage of services, where credits can be used freely in any combination of services that can change anytime.
 
 |         | Perpetual-use licensing | Usage-based services |
 |---------|----------------------------|----------------------|
-| System capacity | Server-based licenses, each with fixed capacity tiers of managed objects: 5, 10, 25, 50, 100, 250, 500 , 1000. | Volume-based, per managed object or monitored metric per month. Independent from the number of nodes deployed. |
+| System capacity | Server-based licenses, each with fixed capacity tiers of managed objects: 5, 10, 25, 50, 100, 250, 500, 1000. | Volume-based, per managed object or monitored metric per month. Independent from the number of nodes deployed. |
 | Failover | Server-based license. | Included. Users can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month. |
 | Optional functions | Licensed per node. | Not applicable. All optional functions are included. |
 | Automation & orchestration | Based on the volume of concurrent services running. | Based on the automation volume. |
