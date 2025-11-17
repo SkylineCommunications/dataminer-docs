@@ -117,7 +117,7 @@ If you create a new DataMiner System via <https://dataminer.services>, it will b
 However, you can request for it to be hosted in a different available region without incurring any additional costs. To do so, please contact <daas@dataminer.services>.
 
 > [!NOTE]
-> When choosing a region, make sure to opt for a region that supports availability zones. For an overview, refer to [Azure Regions List](https://learn.microsoft.com/en-us/azure/reliability/regions-list).
+> When choosing a region, you must select a region that supports availability zones. For an overview, refer to [Azure Regions List](https://learn.microsoft.com/en-us/azure/reliability/regions-list).
 
 ### Where is the data for my DaaS system hosted?
 
