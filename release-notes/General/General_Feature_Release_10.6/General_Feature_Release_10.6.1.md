@@ -162,7 +162,7 @@ All methods in the `Skyline.DataMiner.Automation` namespace that use parameter d
 
 #### SLNetClientTest tool: Enhanced management of DOM modules of which definition-level security is enabled [ID 44021]
 
-<!-- MR 10.7.0 - FR 10.6.1 -->
+<!-- MR 10.6.0 - FR 10.6.1 -->
 
 The SLNetClientTest tool has been adapted to be able to better manage DOM modules of which definition-level security is enabled.
 

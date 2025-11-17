@@ -585,6 +585,12 @@ All methods in the `Skyline.DataMiner.Automation` namespace that use parameter d
 
 When a client application retrieves information about time-scoped related parameters using the `GetTimeScopedRelationsMessage`, from now on, exceptions will be thrown when that message is sent with incorrect arguments (e.g. a non-existing parameter ID, an invalid time range, etc.).
 
+#### SLNetClientTest tool: Enhanced management of DOM modules of which definition-level security is enabled [ID 44021]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+The SLNetClientTest tool has been adapted to be able to better manage DOM modules of which definition-level security is enabled.
+
 #### NATSRepair.exe can no longer be run when automatic NATS configuration is disabled [ID 44061]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->

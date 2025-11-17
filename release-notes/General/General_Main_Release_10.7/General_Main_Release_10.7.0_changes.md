@@ -25,12 +25,6 @@ An `OnDestroy` handler has now been added to the `Engine` class. This handler wi
 
 Multiple handlers can be added. They will run synchronously, and if one handler throws an error, the others will keep on running.
 
-#### SLNetClientTest tool: Enhanced management of DOM modules of which definition-level security is enabled [ID 44021]
-
-<!-- MR 10.7.0 - FR 10.6.1 -->
-
-The SLNetClientTest tool has been adapted to be able to better manage DOM modules of which definition-level security is enabled.
-
 ##### Filtering on DOM instance IDs in the Filter window
 
 Up to now, it was only possible to select one or more DOM definitions in the list. From now on, it will be possible to enter up to 500 IDs of DOM instances you want to retrieve. If you enter more than 500 IDs, a message will appear, and only the first 500 IDs will be used to construct the filter.
