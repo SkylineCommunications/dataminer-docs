@@ -46,7 +46,7 @@ Skyline Communications has a successful track record of over 20 years. The compa
 
 ### Mission
 
-Our mission is to redefine how operators can manage and automate their entire operation end-to-end across any vendor and technology boundaries, more easily and more efficiently than ever before, and to ensure that you can deliver exceptional ICT, media and broadband services.
+Our mission is to redefine how operators can manage and automate their entire operation end to end across any vendor and technology boundaries, more easily and more efficiently than ever before, and to ensure that you can deliver exceptional ICT, media and broadband services.
 
 We are laser-focused on our mission, creating and deploying the most sophisticated monitoring, control, orchestration, and end-to-end workflow software solutions, which enable our users to leverage the latest technologies (such as all-IP, cloud, etc.) more efficiently to transform their products.
 
