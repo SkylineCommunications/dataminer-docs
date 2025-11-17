@@ -24,7 +24,7 @@ Starts the DataMiner Cube desktop application in the system tray. The applicatio
 
 ### /Bootstrap
 
-Combines the `/Install` and `/Silent` arguments and also copies a number of files, such as *DataMinerCube.exe.config* en *CubeLauncherConfig.json*.
+Combines the `/Install` and `/Silent` arguments and also copies a number of files, such as *DataMinerCube.exe.config* and *CubeLauncherConfig.json*.
 
 Available from DataMiner 10.2.0/10.1.9 onwards.
 
