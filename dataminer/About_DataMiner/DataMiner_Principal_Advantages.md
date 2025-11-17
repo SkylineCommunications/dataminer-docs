@@ -39,7 +39,7 @@ DataMiner features open-source connectors, meaning that there is complete transp
 
 ## Unique concept
 
-The DataMiner data acquisition & control layer is based on truly unique and innovative concepts. It is the only solution that combines both monitoring and control functionalities for your entire operation. It also provides a fully abstracted and standardized real-time updated software model of all managed objects. You never have to worry about the specifics of the underlying technology that makes up your operation.
+The DataMiner data acquisition & control layer is based on truly unique and innovative concepts. It is the only solution that combines both monitoring and control functionalities for your entire operation. It also provides a fully abstracted and standardized, real-time updated software model of all managed objects. You never have to worry about the specifics of the underlying technology that makes up your operation.
 
 - Real-time availability of all your data sources and products
 - Apply standard alarm templates
