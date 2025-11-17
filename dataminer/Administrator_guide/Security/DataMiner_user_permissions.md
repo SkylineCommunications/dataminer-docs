@@ -329,7 +329,7 @@ Permission to delete workspaces.
 ### General \> Annotations
 
 > [!NOTE]
-> The Annotations module is no longer available from DataMiner 10.6.0 onwards. Prior to this, starting from DataMiner 10.4.0/10.4.1<!-- RN 37786 -->, it is disabled by default, but it can be enabled with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). In even older DataMiner versions, this feature is enabled by default, but you can optionally disable it with the soft-launch option.
+> The Annotations module is no longer available from DataMiner 10.6.0/10.6.1 onwards.<!-- RN 44124+44136 --> Prior to this, starting from DataMiner 10.4.0/10.4.1<!-- RN 37786 -->, it is disabled by default, but it can be enabled with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). In even older DataMiner versions, this feature is enabled by default, but you can optionally disable it with the soft-launch option.
 
 #### General \> Annotations \> View
 
