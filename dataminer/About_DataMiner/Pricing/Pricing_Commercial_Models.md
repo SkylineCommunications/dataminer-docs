@@ -64,7 +64,7 @@ There might come a time when you need to increase your system's capacity to go a
 > [!TIP]
 > See also: [Usage-based services](xref:Pricing_Usage_based_service)
 
-## DataMiner Perpetual-Use Licenses vs Usage-based Services
+## DataMiner Perpetual-Use Licenses vs Usage-based services
 
 The Perpetual-Use model offers perpetual ownership over a named license through a one-time purchase with an optional recurrent cost for support services, software updates, and upgrades.
 
