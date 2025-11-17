@@ -66,7 +66,7 @@ There might come a time when you need to increase your system's capacity to go a
 
 ## DataMiner Perpetual-Use Licenses vs Usage-based services
 
-The Perpetual-Use model offers perpetual ownership over a named license through a one-time purchase with an optional recurrent cost for support services, software updates, and upgrades.
+The Perpetual-Use model offers perpetual ownership over a named license through a one-time purchase with an optional recurrent cost for support services as well as software updates and upgrades.
 
 Usage-based services are charged based on the actual monthly usage of services, where credits can be used freely in any combination of services that can change anytime.
 
