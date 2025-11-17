@@ -223,7 +223,7 @@ namespace Tamir.SharpSsh
 		/// <param name="localPath">The name of the local copy.</param>
 		/// <param name="_recursive">Value indicating whether the copy should be recursive.</param>
 		/// <exception cref="SshTransferException"><paramref name="localPath"/> is not a directory.</exception>
-		/// <remarks>The file specified in remoteFile will not be automatically enclosed in double quotes if it does not contain a space.</remarks>
+		/// <remarks>The file specified in remoteFile will not be automatically enclosed in double quotes if it does not contain a space. (RN 14337)</remarks>
 		public void From(string remoteFile, string localPath, bool _recursive)
 		{
 		}

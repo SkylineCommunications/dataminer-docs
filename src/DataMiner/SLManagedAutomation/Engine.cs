@@ -1466,13 +1466,7 @@ namespace Skyline.DataMiner.Automation
 		/// <param name="alarmTreeID">The alarm tree to update.</param>
 		/// <param name="propertyNames">The names of the properties.</param>
 		/// <param name="propertyValues">The values of the properties.</param>
-		/// <remarks>
-		/// <note type="note">
-		/// <list type="bullet">
-		/// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
-		/// </list>
-		/// </note>
-		/// </remarks>
+		/// <remarks>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</remarks>
 		/// <example>
 		/// <code>
 		/// engine.SetAlarmProperties(new AlarmTreeID(200, 400, 521655), new string[]{"Property A", "Property B"}, new string[]{"Value A", "Value B"});
@@ -1490,7 +1484,6 @@ namespace Skyline.DataMiner.Automation
         /// <remarks>
         /// <note type="note">
         /// <list type="bullet">
-        /// <item><description>Feature introduced in DataMiner 8.5.2 (RN 8347).</description></item>
         /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
         /// <item><description>Although this method is obsolete, it will still work on a DMS without Swarming enabled until 10.6.</description></item>
         /// </list>
@@ -1533,13 +1526,7 @@ namespace Skyline.DataMiner.Automation
         /// <param name="alarmTreeID">The alarm tree to update.</param>
         /// <param name="propertyName">The property name.</param>
         /// <param name="propertyValue">The value to set.</param>
-        /// <remarks>
-        /// <note type="note">
-        /// <list type="bullet">
-        /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
-        /// </list>
-        /// </note>
-        /// </remarks>
+        /// <remarks>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</remarks>
         /// <example>
         /// <code>
         /// engine.SetAlarmProperty(new AlarmTreeID(200, 456, 521655), "Property A", "Value A");
