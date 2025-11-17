@@ -4,7 +4,7 @@ uid: Protocol.Ownership
 
 # Ownership element
 
-Specifies the level of access users will have to elements, views, services and redundancy groups created by elements based on this protocol.
+Specifies the level of access users will have to elements, views, services and redundancy groups created by elements based on this protocol.<!-- RN 13010 -->
 
 ## Parent
 
@@ -48,8 +48,6 @@ Please note the following regarding the usage of this tag:
   These files will be synchronized across the DataMiner System, and are attached to the managing element on export/import.
 
   When the protocol or protocol version of an owner element is changed, a check is performed to find out whether the new protocol (version) applies any ownership settings. If so, the currently owned components are transferred and the new ownership settings are applied. If the new protocol (version) does not apply any ownership settings, the ownership file will be deleted.
-
-*Available from DataMiner 9.0.3 onwards (RN 13010).*
 
 ## Examples
 

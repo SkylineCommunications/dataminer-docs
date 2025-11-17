@@ -2439,14 +2439,11 @@ namespace Skyline.DataMiner.Scripting
 		/// <summary>
 		/// Retrieves the type of the local database.
 		/// </summary>
-		/// <returns>The type of the local database  (MySQL, Microsoft SQL Server or Cassandra).</returns>
+		/// <returns>The type of the local database (MySQL, Microsoft SQL Server or Cassandra).</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
 		///				<description> Before using this method call, it is good practice to use “#if DBInfo” in order to check whether the GetLocalDatabaseType method is supported on the DataMiner Agent.</description>
-		///			</item>
-		///			<item>
-		///				<description>Feature introduced in DataMiner version 9.0.0 (RN 10395).</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -2824,9 +2821,6 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>It is advised to use one of the overloads providing the input(s) and output(s) when possible(i.e.when it is known which crosspoints have been updated) to reduce the load.</description>
 		///			</item>
 		///			<item>
-		///				<description>The overloads accepting one or multiple input and output indices were introduced in DataMiner version 9.0.0 (RN 12434, RN 12487).</description>
-		///			</item>
-		///			<item>
 		///				<para>In case of a 2x10 matrix, for example, the coordinates of the top-left crosspoint are iX=1/iY=1, and the coordinates of the bottom-right crosspoint are iX = 2 / iY = 10.</para>
 		///			</item>
 		///		</list>
@@ -2850,9 +2844,6 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>It is advised to use one of the overloads providing the input(s) and output(s) when possible(i.e.when it is known which crosspoints have been updated) to reduce the load.</description>
-		///			</item>
-		///			<item>
-		///				<description>The overloads accepting one or multiple input and output indices were introduced in DataMiner version 9.0.0 (RN 12434, RN 12487).</description>
 		///			</item>
 		///			<item>
 		///				<para>In case of a 2x10 matrix, for example, the coordinates of the top-left crosspoint are iX=1/iY=1, and the coordinates of the bottom-right crosspoint are iX = 2 / iY = 10.</para>
