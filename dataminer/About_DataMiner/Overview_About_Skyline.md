@@ -13,7 +13,7 @@ Providing out-of-the-box solutions with customizable flexibility, Skyline Commun
 
 With deployments in 125+ countries, Skyline Communications is the trusted partner for organizations seeking scalable, future-proof xOps solutions. With its global presence and offices in Belgium, Bosnia and Herzegovina, Portugal, Singapore, UAE, and the US, Skyline empowers organizations worldwide to take control of their operations and drive innovation with confidence.
 
-Founded in 1985, Skyline has decades of industry-specific NMS and OSS expertise. Not only Skyline's DataMiner platform received various prestigious awards, but the company itself has also been awarded multiple times for innovation, growth and excellence.
+Founded in 1985, Skyline has decades of industry-specific NMS and OSS expertise. Not only has Skyline's DataMiner platform received various prestigious awards, but the company itself has also been awarded multiple times for innovation, growth and excellence.
 
 > [!TIP]
 > For more information, see [www.skyline.be](http://www.skyline.be).
