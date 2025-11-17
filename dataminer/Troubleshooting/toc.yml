@@ -434,8 +434,6 @@ items:
             topicUid: KI_SLElement_CPU_high_during_CC_migration
           - name: SLElement memory leak during Cassandra Cluster migration
             topicUid: KI_SLElement_CPU_memory_leak_during_CC_migration
-          - name: Cassandra nodes not configured if current DMA IP is assigned as virtual IP
-            topicUid: KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP
           - name: Offload to MySQL offload database fails
             topicUid: KI_offload_database_incorrect_integer_value
           - name: Cassandra backups no longer working
@@ -502,8 +500,6 @@ items:
             topicUid: KI_SNMP_polling_issues_with_wildcards_in_param_OIDs
           - name: SLAnalytics RTEs after upgrading DMS with Cassandra Cluster
             topicUid: KI_RTE_with_SLAnalytics_when_upgrading
-          - name: NATS error message after 10.1 installation
-            topicUid: KI_NATS_error_message_after_10_1_installation
           - name: Shapes in DataMiner stencils not found in Visio search
             topicUid: KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search
           - name: SLDataMiner addressChangeThread RTE after DMA startup
