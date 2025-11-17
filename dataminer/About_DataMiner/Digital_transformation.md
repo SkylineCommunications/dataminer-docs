@@ -28,7 +28,7 @@ The digital age we are living in comes with wide-reaching, fundamental changes. 
 - Creating new innovative ways to engage with your customers.
 - Ensuring that everybody in your organization can easily access and leverage any data available in the organization for various purposes.
 
-It is much more important to consider your future ability to do all these things efficiently and continuously, rather than what exactly it is you will be doing. After all, the latter is unsure and unpredictable and will continuously change over time.
+It is much more important to consider your future ability to do all these things easily and continuously, rather than what exactly it is you will be doing. After all, the latter is unsure and unpredictable and will continuously change over time.
 
 How you will transform your products, how you will optimize further, how you will engage with your customers and users, and how you will empower your employees with data: all of that will continuously change year after year. At the outset, what is crucial is **how you will set up your business so that you will be able to do those things easily and continuously**.
 
