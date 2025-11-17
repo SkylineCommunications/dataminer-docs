@@ -46,7 +46,7 @@ Skyline Communications has a successful track record of over 20 years. The compa
 
 ### Mission
 
-Our mission is to redefine how operators can manage and automate their entire operation end to end across any vendor and technology boundaries, more easily and more efficiently than ever before, and to ensure that you can deliver exceptional ICT, media and broadband services.
+Our mission is to redefine how operators can manage and automate their entire operation end to end across any vendor and technology boundaries, more easily and more efficiently than ever before, and to ensure that you can deliver exceptional ICT, media, and broadband services.
 
 We are laser-focused on our mission, creating and deploying the most sophisticated monitoring, control, orchestration, and end-to-end workflow software solutions, which enable our users to leverage the latest technologies (such as all-IP, cloud, etc.) more efficiently to transform their products.
 
@@ -76,17 +76,17 @@ Skyline Communications offers the following key ingredients for a solid long-ter
 
 ### Core business
 
-Skyline, as an organization, sharply focuses on its mission, which revolves entirely around projects in the media and broadband industries. This has brought us great success and established us as a worldwide leader in terms of technology, market share and expertise. Our mission statement is to redefine how operators can manage and automate their entire operation end-to-end across any vendor and technology boundaries, more easily and more efficiently than ever before. This is what our continuously growing team of subject-matter experts is doing day in and day out all around the world.
+Skyline, as an organization, sharply focuses on its mission, which revolves entirely around projects in the media and broadband industries. This has brought us great success and established us as a worldwide leader in terms of technology, market share and expertise. Our mission statement is to redefine how operators can manage and automate their entire operation end to end across any vendor and technology boundaries, more easily and more efficiently than ever before. This is what our continuously growing team of subject-matter experts is doing day in and day out all around the world.
 
 ### Independent
 
-It is also important to consider the unique nature of Skyline as a company and, more specifically, the fact that Skyline is a fully independent corporation, completely dedicated to developing and delivering the most sophisticated end-to-end network management and orchestration solutions. You can rest assured that you have a strong, well-established partner for the supply of this technology, entirely dedicated to further developing it. More importantly, Skyline is a partner that allows you to deploy and integrate new products easily at any time to further expand and leverage the platform without any conflicts of interest.
+It is important to also consider the unique nature of Skyline as a company and, more specifically, the fact that Skyline is a fully independent corporation, completely dedicated to developing and delivering the most sophisticated end-to-end network management and orchestration solutions. You can rest assured that you have a strong, well-established partner for the supply of this technology, entirely dedicated to further developing it. More importantly, Skyline is a partner that allows you to deploy and integrate new products easily at any time to further expand and leverage the platform without any conflicts of interest.
 
 ### Skyline's vision
 
 Our relentless desire for continuous innovation lies at the heart of our mission statement, and Skyline has established this reputation since the very inception of DataMiner. Year after year, Skyline has led the industry with innovative new paradigms and capabilities. Today, Skyline continues to evaluate how the media and broadband industry is evolving, what kind of challenges this brings along for our customers, and how these can effectively be addressed with new innovative DataMiner capabilities.
 
-With DataMiner in place, you will be equipped with the most advanced network management and orchestration technology available in the industry. For example, service and resource management have been a focal point of our R&D efforts over the past five years, which has resulted in cutting-edge technology. Furthermore, Skyline also invests heavily in new emerging technologies such as artificial intelligence and machine learning, heralding the new generation of solutions according to the principle of augmented and proactive operations.
+With DataMiner in place, you will be equipped with the most advanced network management and orchestration technology available in the industry. For example, service and resource management has been a focal point of our R&D efforts over the past five years, which has resulted in cutting-edge technology. Furthermore, Skyline also invests heavily in new emerging technologies such as artificial intelligence and machine learning, heralding the new generation of solutions according to the principle of augmented and proactive operations.
 
 ### Technology
 
