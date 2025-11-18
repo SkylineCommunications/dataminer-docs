@@ -113,7 +113,6 @@ namespace Tamir.SharpSsh
 		/// <remarks>
 		/// <para>When uploading a file using the To method, by default, the -p switch is used ('Preserves modification times, access times, and modes from the original file.').</para>
 		/// <para>This property allows to enable or disable this switch.</para>
-		///	<para>Feature introduced in DataMiner 9.5.3 (RN 15080).</para>
 		/// </remarks>
 		/// <example>
 		/// <para>The following example translates to: scp -t remotefilepath</para>

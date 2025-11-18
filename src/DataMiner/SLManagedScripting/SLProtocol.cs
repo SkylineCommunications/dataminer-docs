@@ -212,7 +212,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		/// <para>The script will be executed by the user who is performing the QAction. It will return an <see cref="ExecuteScriptResponseMessage"/>, containing information about the execution of the script.</para>
 		/// <para>Using this overload of the ExecuteScript method is particularly useful when the script in question needs a dummy or protocol information to run.</para>
-		/// <para>Feature introduced in DataMiner 10.0.5 (RN 24475).</para>
 		/// </remarks>
 		/// <examples>
 		/// <code>
@@ -267,7 +266,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		/// <para>The script will be executed by the user who is performing the QAction. It will return an <see cref="ExecuteScriptResponseMessage"/>, containing information about the execution of the script.</para>
 		/// <para>If you execute a script using this method, it will be executed with all script execution settings set to the default values. If more control is needed, then use the <see cref="SLProtocol.ExecuteScript(ExecuteScriptMessage)"/> overload.</para>
-		/// <para>Feature introduced in DataMiner 10.0.5 (RN 24475).</para>
 		/// </remarks>
 		ExecuteScriptResponseMessage ExecuteScript(string scriptName);
 
@@ -1189,9 +1187,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
-		///			</item>
-		///			<item>
 		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of an entry in <paramref name="timeInfos"/> is unspecified, the timestamp entry will be handled as local time.</description>
 		///			</item>
 		///			<item>
@@ -1218,9 +1213,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns>Either a single HRESULT (uint) value specifying an error (e.g. when the size of the parameterIDs array does not match the size of the values array) or an array of HRESULT values (uint[])  (where the array has the same size as the number of parameters that have been set) where each HRESULT value indicates the result of the corresponding item that has been set.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
-		///			<item>
-		///				<description>Introduced in DataMiner version 8.0.3.</description>
-		///			</item>
 		///			<item>
 		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear">clear</see>.</description>
 		///			</item>
@@ -1335,9 +1327,6 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This is a wrapper method for the NotifyProtocol type 84 NT_SET_PARAMETER_BY_NAME call.</description>
 		///			</item>
 		///			<item>
-		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
-		///			</item>
-		///			<item>
 		///				<description>The sets are processed in the order that they appear within the provided arrays.</description>
 		///			</item>
 		///		</list>
@@ -1350,13 +1339,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="name">The name of the parameter.</param>
 		/// <param name="value">The value to set.</param>
 		/// <returns>HRESULT value. A value of 0 (S_OK) indicates the set succeeded.</returns>
-		/// <remarks>
-		///		<list type = "bullet">
-		///			<item>
-		///				<description>Feature introduced in DataMiner version 7.5.4.1 (RN 5177).</description>
-		///			</item>
-		///		</list>
-		///	</remarks>
 		int SetReadParameterByName(string name, object value);
 
 		/// <summary>
@@ -1365,13 +1347,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="name">The name of the write parameter.</param>
 		/// <param name="value">The value to set.</param>
 		/// <returns>HRESULT value. A value of 0 (S_OK) indicates the set succeeded.</returns>
-		///<remarks>
-		///		<list type = "bullet" >
-		///			<item>
-		///				<description>Feature introduced in DataMiner version 7.5.4.1 (RN 5177).</description>
-		///			</item>
-		///		</list>
-		///	</remarks>
 		int SetWriteParameterByName(string name, object value);
 
 		/// <summary>
@@ -1380,16 +1355,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="names">The names of the parameters.</param>
 		/// <param name="values">The values to set.</param>
 		/// <returns>Either a single HRESULT (uint) value specifying an error (e.g. when the size of the names array does not match the size of the values array) or an array of HRESULT values (uint[]) (where the array has the same size as the number of parameters that have been set) where each HRESULT value indicates the result of the corresponding item that has been set. In case the value in the array is 0 (S_OK), this indicates that the set for the corresponding parameter succeeded.</returns>
-		/// <remarks>
-		///		<list type = "bullet" >
-		///			<item>
-		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
-		///			</item>
-		///			<item>
-		///				<description>The sets are processed in the order that they appear within the provided arrays.</description>
-		///			</item>
-		///		</list>
-		///	</remarks>
+		/// <remarks>The sets are processed in the order that they appear within the provided arrays.</remarks>
 		object SetReadParametersByName(string[] names, object[] values);
 
 		/// <summary>
@@ -1398,16 +1364,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="names">The names of the write parameter.</param>
 		/// <param name="values">The values to set.</param>
 		/// <returns>Either a single HRESULT (uint) value specifying an error (e.g. when the size of the names array does not match the size of the values array) or an array of HRESULT values (uint[]) (where the array has the same size as the number of parameters that have been set) where each HRESULT value indicates the result of the corresponding item that has been set. In case the value in the array is 0 (S_OK), this indicates that the set for the corresponding parameter succeeded.</returns>
-		/// <remarks>
-		/// 	<list type = "bullet" >
-		///			<item>
-		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
-		///			</item>
-		///			<item>
-		///				<description>The sets are processed in the order that they appear within the provided arrays.</description>
-		///			</item>
-		///		</list>
-		///	</remarks>
+		/// <remarks>The sets are processed in the order that they appear within the provided arrays.</remarks>
 		object SetWriteParametersByName(string[] names, object[] values);
 
 		/// <summary>
@@ -1648,9 +1605,6 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This is a wrapper method for the NotifyProtocol type 86 NT_SET_PARAMETER_BY_DATA call.</description>
 		///			</item>
 		///			<item>
-		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
-		///			</item>
-		///			<item>
 		///				<description>This method is deprecated since DataMiner 10.3.4.</description>
 		///			</item>
 		///			<item>
@@ -1712,9 +1666,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns>Either a single HRESULT (uint) value specifying an error or an array of HRESULT values (uint[]) (where the array has the same size as the number of parameters that have been set) where each HRESULT value indicates the result of the corresponding item that has been set.</returns>
 		///<remarks>
 		///		<list type = "bullet" >
-		///			<item>
-		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
-		///			</item>
 		///			<item>
 		///				<description>This is a wrapper method for the NotifyProtocol type 89 <see href="xref:NT_SET_ITEM_DATA">NT_SET_ITEM_DATA</see> call.</description>
 		///			</item>
@@ -1885,9 +1836,6 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 121 <see href="xref:NT_PUT_PARAMETER_INDEX">NT_PUT_PARAMETER_INDEX</see> call.</description>
 		///			</item>
 		///			<item>
-		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
-		///			</item>
-		///			<item>
 		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of an entry of <paramref name="timeInfos"/> is unspecified, the timestamp of that entry will be handled as local time.</description>
 		///			</item>
 		///			<item>
@@ -1916,9 +1864,6 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 121 <see href="xref:NT_PUT_PARAMETER_INDEX">NT_PUT_PARAMETER_INDEX</see> call.</description>
-		///			</item>
-		///			<item>
-		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
 		///			</item>
 		///			<item>
 		///				<description>The sets are processed in the order that they appear within the provided arrays.</description>
@@ -2067,9 +2012,6 @@ namespace Skyline.DataMiner.Scripting
 		///			<description>Prior to DataMiner 10.2.7 (RN 33198), the SetParametersIndexByKey method cannot be used to update a single cell. In case a single cell must be updated, use the SetParameterIndexByKey method instead. In cases where you dynamically set a number of cells, make sure to check the number of cells that will need to be updated. In case multiple cells need to be updated, use the SetParametersIndexByKey method. If a single cell needs to be updated, use the SetParameterIndexByKey method.</description>
 		///			</item>
 		///			<item>
-		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
-		///			</item>
-		///			<item>
 		///				<description>This method should only be used in case multiple distinct cells need to be set(e.g., cells in different tables). When appropriate, use the SetRow, FillArray, FillArrayNoDelete, NotifyProtocol type 220 call, etc.to set multiple cells belonging to the same row, column or table, respectively.</description>
 		///			</item>
 		///			<item>
@@ -2097,9 +2039,6 @@ namespace Skyline.DataMiner.Scripting
 		///		<list type="bullet" >
 		///			<item>
 		///			<description>Prior to DataMiner 10.2.7 (RN 33198), the SLProtocol.SetParametersIndexByKey method cannot be used to update a single cell. In case a single cell must be updated, use the SetParameterIndexByKey method instead. In cases where you dynamically set a number of cells, make sure to check the number of cells that will need to be updated. In case multiple cells need to be updated, use the SetParametersIndexByKey method. If a single cell needs to be updated, use the SetParameterIndexByKey method.</description>
-		///			</item>
-		///			<item>
-		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method should only be used in case multiple distinct cells need to be set(e.g., cells in different tables). When appropriate, use the SetRow, FillArray, FillArrayNoDelete, NotifyProtocol type 220 call, etc.to set multiple cells belonging to the same row, column or table, respectively.</description>
@@ -2612,16 +2551,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Gets the primary key of the row that triggered the execution of the QAction.
 		/// </summary>
 		/// <returns>The primary key of the row that triggered the execution of the QAction.</returns>
-		/// <remarks>
-		///		<list type = "bullet" >
-		///			<item>
-		///				<description>This method can only be used in QActions that have the attribute row set to “true”.</description>
-		///			</item>
-		///			<item>
-		///				<description>Feature introduced in DMS v.8.5.0. (RN 7690).</description>
-		///			</item>
-		///		</list>
-		///	</remarks>
+		/// <remarks>This method can only be used in QActions that have the attribute row set to “true”.</remarks>
 		///	<example>
 		///	<code>
 		///	string rowKey = protocol.RowKey();
@@ -2685,32 +2615,14 @@ namespace Skyline.DataMiner.Scripting
 		/// Gets the round-trip time (RTT).
 		/// </summary>
 		/// <returns>The round-trip time in ms as double.</returns>
-		/// <remarks>
-		///		<list type = "bullet" >
-		///			<item>
-		///				<description>This method is intended to be used with multithreaded timers that have the option “ping” defined.</description>
-		///			</item>
-		///			<item>
-		///				<description>Feature introduced in DataMiner version 8.5.0 (RN 7690).</description>
-		///			</item>
-		///		</list>
-		///	</remarks>
+		/// <remarks>This method is intended to be used with multithreaded timers that have the option “ping” defined.</remarks>
 		object RowRTT();
 
 		/// <summary>
 		/// Gets the timestamp of the ping execution.
 		/// </summary>
 		/// <returns>The timestamp as string.</returns>
-		/// <remarks>
-		///		<list type = "bullet" >
-		///			<item>
-		///				<description>This method is intended to be used with multithreaded timers that have the ping option defined.</description>
-		///			</item>
-		///			<item>
-		///				<description>Feature introduced in DataMiner version 8.5.0 (RN 7690).</description>
-		///			</item>
-		///		</list>
-		///	</remarks>
+		/// <remarks>This method is intended to be used with multithreaded timers that have the ping option defined.</remarks>
 		object RowPingTimestamp();
 
 		/// <summary>
@@ -3025,16 +2937,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="customName"><c>true</c> if the name specified in <paramref name="name"/> is the custom interface name; otherwise, <c>false</c>.</param>
 		/// <param name="exported"><c>true</c> to include interfaces of DVE children; otherwise, <c>false</c>.</param>
 		/// <returns>The specified interface or <see langword="null"/> in case the interface was not found.</returns>
-		/// <remarks>
-		///		<list type = "bullet" >
-		///			<item>
-		///				<description>Feature introduced in DataMiner 8.5.8 (RN 10066).</description>
-		///			</item>
-		///			<item>
-		///				<description>The SLProtocol.GetConnectivityInterface method (Int32, Int32, string, Boolean, Boolean) retrieves all connectivity interfaces for the specified element (including interfaces of DVE children if exported is true) and then returns the connectivity interface with the specified name (if present). Therefore, if you need to request multiple interfaces, it can be more performant to request all interfaces using a GetConnectivityInterfaces call and extract the desired interfaces from the returned dictionary.</description>
-		///			</item>
-		///		</list>
-		/// </remarks>
+		/// <remarks>The SLProtocol.GetConnectivityInterface method (Int32, Int32, string, Boolean, Boolean) retrieves all connectivity interfaces for the specified element (including interfaces of DVE children if exported is true) and then returns the connectivity interface with the specified name (if present). Therefore, if you need to request multiple interfaces, it can be more performant to request all interfaces using a GetConnectivityInterfaces call and extract the desired interfaces from the returned dictionary.</remarks>
 		/// <example>
 		/// <code>
 		/// var myInterface = protocol.GetConnectivityInterface(400, 2000, "MyInterface", true, true);
@@ -3075,16 +2978,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="iItfId">The ID of the interface.</param>
 		/// <param name="exported"><c>true</c> to include interfaces of DVE children; otherwise, <c>false</c>.</param>
 		/// <returns>The specified interface or <see langword="null"/> in case the specified interface was not found.</returns>
-		/// <remarks>
-		///		<list type = "bullet" >
-		///			<item>
-		///				<description>Feature introduced in DataMiner 8.5.8 (RN 10066).</description>
-		///			</item>
-		///			<item>
-		///				<description>The SLProtocol.GetConnectivityInterface method (Int32, Int32, Int32, Boolean) retrieves all connectivity interfaces for the specified element (including interfaces of DVE children if exported is true) and then returns the connectivity interface with the specified ID (if present). Therefore, if you need to request multiple interfaces, it can be more performant to request all interfaces using a single GetConnectivityInterfaces call and then extract the desired interfaces from the returned dictionary.</description>
-		///			</item>
-		///		</list>
-		/// </remarks>
+		/// <remarks>The SLProtocol.GetConnectivityInterface method (Int32, Int32, Int32, Boolean) retrieves all connectivity interfaces for the specified element (including interfaces of DVE children if exported is true) and then returns the connectivity interface with the specified ID (if present). Therefore, if you need to request multiple interfaces, it can be more performant to request all interfaces using a single GetConnectivityInterfaces call and then extract the desired interfaces from the returned dictionary.</remarks>
 		/// <example>
 		/// <code>
 		/// var myInterface = protocol.GetConnectivityInterface(400, 2000, 1, true);
@@ -3125,9 +3019,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="customName"><c>true</c> if <paramref name="nameFilter"/> refers to the custom name; otherwise, <c>false</c>.</param>
 		/// <param name="exported"><c>true</c> to include interfaces of DVE children; otherwise, <c>false</c>.</param>
 		/// <returns>The matching DCF interfaces.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.8 (RN 10066).</para>
-		/// </remarks>
 		/// <example>
 		/// <code>
 		/// Dictionary&lt;int, ConnectivityInterface&gt; interfaces = protocol.GetConnectivityInterfaces(400, 2000, "Input*", true, false);
@@ -3157,9 +3048,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="iEId">The element ID of the element.</param>
 		/// <param name="exported"><c>true</c> to include interfaces of DVE children; otherwise, <c>false</c>.</param>
 		/// <returns>The matching DCF interfaces.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.8 (RN 10066).</para>
-		/// </remarks>
 		/// <example>
 		/// <code>
 		/// Dictionary&lt;int, ConnectivityInterface&gt; interfaces = protocol.GetConnectivityInterfaces(400, 2000, false);
@@ -3203,16 +3091,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="name">The name of the connection.</param>
 		/// <param name="exported"><c>true</c> to include interfaces of DVE children; otherwise, <c>false</c>.</param>
 		/// <returns>The DCF connection or <see langword="null"/> in case the connection was not found.</returns>
-		/// <remarks>
-		///		<list type = "bullet" >
-		///			<item>
-		///				<description>Feature introduced in DataMiner 8.5.8 (RN 10066).</description>
-		///			</item>
-		///			<item>
-		///				<description>The SLProtocol.GetConnectivityConnection method (Int32, Int32, string, Boolean) retrieves all connectivity connections for the specified element and then returns the connectivity connection with the specified name (if present). Therefore, if you need to request multiple connections, it can be more performant to request all connections using a single GetConnectivityConnections call and then extract the desired connections from the returned dictionary.</description>
-		///			</item>
-		///		</list>
-		/// </remarks>
+		/// <remarks>The SLProtocol.GetConnectivityConnection method (Int32, Int32, string, Boolean) retrieves all connectivity connections for the specified element and then returns the connectivity connection with the specified name (if present). Therefore, if you need to request multiple connections, it can be more performant to request all connections using a single GetConnectivityConnections call and then extract the desired connections from the returned dictionary.</remarks>
 		/// <example>
 		/// <code>
 		/// var connection = protocol.GetConnectivityConnection(400, 2000, "MyConnection", false);
@@ -3252,16 +3131,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="iConnectionId">The ID of the connection.</param>
 		/// <param name="exported"><c>true</c> to include interfaces of DVE children; otherwise, <c>false</c>.</param>
 		/// <returns>The DCF connection or <see langword="null"/> in case the connection was not found.</returns>
-		/// <remarks>
-		///		<list type = "bullet" >
-		///			<item>
-		///				<description>Feature introduced in DataMiner 8.5.8 (RN 10066).</description>
-		///			</item>
-		///			<item>
-		///				<description>The SLProtocol.GetConnectivityConnection method (Int32, Int32, Int32, Boolean) retrieves all connectivity connections for the specified element and then returns the connectivity connection with the specified ID (if present). Therefore, if you need to request multiple connections, it can be more performant to request all connections using a single GetConnectivityConnections call and then extract the desired connections from the returned dictionary.</description>
-		///			</item>
-		///		</list>
-		/// </remarks>
+		/// <remarks>The SLProtocol.GetConnectivityConnection method (Int32, Int32, Int32, Boolean) retrieves all connectivity connections for the specified element and then returns the connectivity connection with the specified ID (if present). Therefore, if you need to request multiple connections, it can be more performant to request all connections using a single GetConnectivityConnections call and then extract the desired connections from the returned dictionary.</remarks>
 		/// <example>
 		/// <code>
 		/// var connection = protocol.GetConnectivityConnection(400, 2000, 1, false);
@@ -3301,9 +3171,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="nameFilter">The name filter.</param>
 		/// <param name="exported"><c>true</c> to include connections of DVE children; otherwise, <c>false</c>.</param>
 		/// <returns>The DCF connections that are known by the specified element and that match the specified name filter. Returns <see langword="null"/> when the specified element is stopped or unavailable.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.8 (RN 10066).</para>
-		/// </remarks>
 		/// <example>
 		/// <code>
 		/// Dictionary&lt;int, ConnectivityConnection&gt; connections = protocol.GetConnectivityConnections(400, 2000, "Input*", false);
@@ -3332,9 +3199,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="iEId">The element ID of the element.</param>
 		/// <param name="exported"><c>true</c> to include connections of DVE children; otherwise, <c>false</c>.</param>
 		/// <returns>The DCF connections that are known by the specified element. Returns <see langword="null"/> when the specified element is stopped or unavailable.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.8 (RN 10066).</para>
-		/// </remarks>
 		/// <example>
 		/// <code>
 		/// Dictionary&lt;int, ConnectivityConnection&gt; connections = protocol.GetConnectivityConnections(400, 2000, true);
@@ -3376,9 +3240,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="dmaID">The DataMiner Agent ID of the element.</param>
 		/// <param name="eleID">The element ID of the element.</param>
 		/// <returns><c>true</c> if the deletion succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 9296).</para>
-		/// </remarks>
 		/// <example>
 		/// <code>
 		/// bool hasSucceeded = protocol.DeleteConnectivityInterfaceProperty(1, 400, 2000);
@@ -3397,7 +3258,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if the deletion succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>In case <paramref name="itfId"/> is not correct, the property will not be deleted.</para>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 9296).</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -3415,9 +3275,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="eleID">The element ID of the element.</param>
 		/// <param name="both"><c>true</c> to delete the property  at both ends of the connection; otherwise, <c>false</c>.</param>
 		/// <returns><c>true</c> if the deletion succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 9.5.1 (RN 14594).</para>
-		/// </remarks>
 		/// <example>
 		/// <code>
 		/// bool hasSucceeded = protocol.DeleteConnectivityConnectionProperty(1, 400, 2000, false);
@@ -3433,9 +3290,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="dmaID">The DataMiner Agent ID of the element.</param>
 		/// <param name="eleID">The element ID of the element.</param>
 		/// <returns><c>true</c> if the deletion succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 9296).</para>
-		/// </remarks>
 		/// <example>
 		/// <code>
 		/// bool hasSucceeded = protocol.DeleteConnectivityConnectionProperty(1, 400, 2000);
@@ -3455,7 +3309,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if the deletion succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>In case <paramref name="connId"/> is not correct, the property will not be deleted.</para>
-		/// <para>Feature introduced in DataMiner 9.5.1 (RN 14594).</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -3473,9 +3326,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="dmaID">The DataMiner Agent ID of the element.</param>
 		/// <param name="eleID">The element ID of the element.</param>
 		/// <returns><c>true</c> if the deletion succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 9296).</para>
-		/// </remarks>
 		/// <example>
 		/// <code>
 		/// bool hasSucceeded = protocol.DeleteConnectivityConnectionProperty(1, 1, 400, 2000);
@@ -3492,9 +3342,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="eleID">The element ID.</param>
 		/// <param name="deleteBothConnections"><c>true</c> to delete both ends of the connection; otherwise, <c>false</c>.</param>
 		/// <returns><c>true</c> if the deletion succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 9296).</para>
-		/// </remarks>
 		/// <example>
 		/// <code>
 		/// bool hasSucceeded = protocol.DeleteConnectivityConnection(1, 400, 2000, false);
@@ -3522,7 +3369,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <item><description>A read parameter that was set using setter=true</description></item>
 		/// </list>
 		/// <para>The message will only be shown to the client triggering the QAction (even when there are multiple Cube sessions open on the same client and all are using the same credentials, the message will only be shown on the intended client).</para>
-		/// <para>Feature introduced in DataMiner version 8.5.2 (RN 8348).</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -3549,7 +3395,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <item><description>A read parameter that was set using setter=true</description></item>
 		/// </list>
 		/// <para>The message will only be shown to the client triggering the QAction (even when there are multiple Cube sessions open on the same client and all are using the same credentials, the message will only be shown on the intended client).</para>
-		/// <para>Feature introduced in DataMiner version 8.5.2 (RN 8348).</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -3566,10 +3411,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns>HRESULT indicating success or failure of clearing. If failure occurs because of an invalid parameter ID an exception will be thrown instead.</returns>
 		/// <exception cref="ArgumentException">The provided parameter ID is invalid.</exception>
 		/// <remarks>
-		/// <list type="bullet">
-		/// <item><description>Performs a NotifyProtocol 474 <see href="xref:NT_CLEAR_PARAMETER">NT_CLEAR_PARAMETER</see> call with wrapping to throw an argumentException if the clear cannot execute due to an invalid parameter ID (e.g. for a table column).</description></item>
-		/// <item><description>Feature introduced in DataMiner 10.5.6 (RN 42397).</description></item>
-		/// </list>
+		/// <para>Performs a NotifyProtocol 474 <see href="xref:NT_CLEAR_PARAMETER">NT_CLEAR_PARAMETER</see> call with wrapping to throw an argumentException if the clear cannot execute due to an invalid parameter ID (e.g. for a table column).</para>
 		/// </remarks>
 		int ClearParameter(int parameterId);
 	}

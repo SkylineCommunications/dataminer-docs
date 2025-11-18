@@ -30,4 +30,4 @@ uid: DMAAlarm
 | IsOwner          | Boolean         | Whether or not someone has taken ownership of the alarm. |
 | OwnerName        | String          | The name of the person who currently owns the alarm. |
 | LastChangeUTC    | Long integer    | The time when the alarm last changed, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
-| IsCleared        | Boolean         | Whether the alarm is cleared.<!-- Added in DataMiner 9.5.5 --> |
+| IsCleared        | Boolean         | Whether the alarm is cleared. |

@@ -6,8 +6,6 @@ uid: ConnectMatrixCrosspoint
 
 Use this method to connect or disconnect a matrix crosspoint by specifying the (1-based) input and output indexes.
 
-<!-- Available from DataMiner version 9.5.1 onwards. -->
-
 ## Input
 
 | Item        | Format  | Description                                                    |

@@ -6,8 +6,6 @@ uid: GetAvailableAlarmProperties
 
 Use this method to retrieve all properties that are available for alarm filtering.
 
-<!-- Available from DataMiner 9.5.6 onwards. -->
-
 ## Input
 
 | Item       | Format | Description                                          |
