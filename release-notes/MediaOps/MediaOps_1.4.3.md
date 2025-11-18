@@ -28,4 +28,4 @@ When a job was already confirmed or running, it was still possible to add a reso
 
 #### Scheduling: No value visible for configuration parameters of type number discrete [ID 44147]
 
-For job node configuration parameters of type number discrete, it could occur that no value was shown.
+Up to now, for job node configuration parameters of type number discrete, no value was shown.
