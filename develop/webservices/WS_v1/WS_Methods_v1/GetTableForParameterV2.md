@@ -6,7 +6,7 @@ uid: GetTableForParameterV2
 
 Use this method as an alternative to the [GetTableForParameter](xref:GetTableForParameter) method, in order to retrieve all rows from a table parameter as a DMAParameterTable object instead of an array of DMAParameterTableRow objects.
 
-Available from DataMiner 9.5.3 onwards.
+<!-- Available from DataMiner 9.5.3 onwards. -->
 
 ## Input
 
@@ -16,7 +16,7 @@ Available from DataMiner 9.5.3 onwards.
 | dmaID       | Integer          | The DataMiner Agent ID. |
 | elementID   | Integer          | The element ID.         |
 | parameterID | Integer          | The parameter ID.       |
-| filters     | Array of strings | One or more filters, separated by semicolons (“;”).<br>For more information, see [Filters](#filters) below. |
+| filters     | Array of strings | One or more filters, separated by semicolons (";").<br>For more information, see [Filters](#filters) below. |
 
 ### Filters
 
