@@ -116,6 +116,20 @@ If you want the web applications to continue to use the SLHelper process for GQI
 </appSettings>
 ```
 
+#### Interactive Automation scripts: UI version will now be set to WebUIVersion.V2 by default [ID 44059]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When connected to a DataMiner Agent with main release version 10.6.0 or feature release 10.5.12 (or above), from now on, interactive Automation scripts executed in a web app will use the new UI version (V2) by default.
+
+This also means that, when you set `engine.WebUIVersion` to `WebUIVersion.Default` in a script, the UI version will now be set to the new UI version (V2).
+
+Note that, if you still want to use UI version V1 instead, you can set `engine.WebUIVersion` to `WebUIVersion.V1`. See the example below.
+
+```csharp
+engine.WebUIVersion = WebUIVersion.V1
+```
+
 #### Web apps: Apps menu item 'dataminer.services' will only appear when the DMA is connected to the cloud [ID 44104]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
