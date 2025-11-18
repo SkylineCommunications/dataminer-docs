@@ -29,3 +29,7 @@ When a job was already confirmed or running, it was still possible to add a reso
 #### Scheduling: No value visible for configuration parameters of type number discrete [ID 44147]
 
 Up to now, for job node configuration parameters of type number discrete, no value was shown.
+
+#### Resource Studio: Configuration parameters of type text included in capabilities overview [ID 44153]
+
+In the capabilities overview, configuration parameters were shown if they were of type text, even though this should not be the case.
