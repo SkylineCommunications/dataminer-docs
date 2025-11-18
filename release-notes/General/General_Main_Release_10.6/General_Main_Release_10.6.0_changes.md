@@ -467,11 +467,11 @@ From now on, the entire `C:\Skyline DataMiner\Webpages\API` folder will be clear
 
 From now on, no attempts will be made anymore to automatically detect the interactive behavior of script libraries, i.e. scripts of which all Exe blocks contain precompiled C# code. These libraries are not intended to be run independently.
 
-#### Serial communication: Only TLS 1.2 encryption will now be allowed [ID 43678] [ID 44151]
+#### All HTTPS communication will have to use TLS 1.2 encryption [ID 43678] [ID 44151]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
-Although DataMiner supports all TLS versions up to TLS 1.3, from now on, all serial communication will have to use TLS 1.2 encryption.
+From now on, all HTTPS communication will have to use TLS 1.2 encryption. SSL, TLS 1.0, and TLS 1.1 are no longer supported.
 
 #### DataMiner Object Models: Requests will be kept on hold for up to 30 seconds when sent to a DOM manager that is reinitializing [ID 43711]
 
