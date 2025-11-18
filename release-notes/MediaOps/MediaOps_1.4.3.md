@@ -25,3 +25,7 @@ uid: MediaOps_1.4.3
 #### Scheduling: Possible to add resource to confirmed/running job despite missing mandatory configuration parameters [ID 44145]
 
 When a job was already confirmed or running, it was still possible to add a resource to it for which mandatory configuration parameters were missing, even though this should not be allowed.
+
+#### Scheduling: No value visible for configuration parameters of type number discrete [ID 44147]
+
+Up to now, for job node configuration parameters of type number discrete, no value was shown.
