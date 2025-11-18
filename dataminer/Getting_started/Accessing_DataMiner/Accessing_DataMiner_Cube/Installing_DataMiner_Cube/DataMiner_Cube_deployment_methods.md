@@ -11,22 +11,18 @@ Below you can find an overview of the different methods that can be used to depl
 > [!IMPORTANT]
 > This information is primarily aimed at system administrators.
 
-|                          | Bitness   | Automatic updates | Side-by-side version support | 10.0           | 10.1+          |
-|--------------------------|-----------|-------------------|------------------------------|----------------|----------------|
-| ClickOnce XBAP           | x86       | Yes [(2)](#fn_2)  | Yes                          | X              | X [(4)](#fn_4) |
-| MSI StandAlone           | AnyCPU    | No                | No                           | X              |                |
-| Launcher [(1)](#fn_1)    | AnyCPU    | Yes [(3)](#fn_3)  | Yes                          | X [(5)](#fn_5) | X              |
-| MSI Launcher (bootstrap) | x64       | Yes [(3)](#fn_3)  | Yes                          |                | X [(6)](#fn_6) |
-| MSI Launcher (shared)    | x64       | No                | Yes                          |                | X [(7)](#fn_7) |
-| MSI CefSharp             | x86 + x64 | No                | Yes                          |                | X [(6)](#fn_6) |
+|                             | Bitness   | Automatic updates | Side-by-side version support |
+|-----------------------------|-----------|-------------------|------------------------------|
+| ClickOnce XBAP [(1)](#fn_1) | x86       | Yes [(3)](#fn_3)  | Yes                          |
+| Launcher [(2)](#fn_2)       | AnyCPU    | Yes [(4)](#fn_4)  | Yes                          |
+| MSI Launcher (bootstrap)    | x64       | Yes [(4)](#fn_4)  | Yes                          |
+| MSI Launcher (shared)       | x64       | No                | Yes                          |
+| MSI CefSharp                | x86 + x64 | No                | Yes                          |
 
-<a id="fn_1"></a>(1) "Launcher" is an alternative name for the [DataMiner Cube start window](xref:Using_the_desktop_app).<br>
-<a id="fn_2"></a>(2) Updates from DMA only.<br>
-<a id="fn_3"></a>(3) Updates from DMA and dataminer.services (see [Managing the start window of the desktop app](xref:Managing_the_start_window)).<br>
-<a id="fn_4"></a>(4) XBAP will be phased out (due to Internet Explorer [end of life](https://docs.microsoft.com/en-us/lifecycle/announcements/internet-explorer-11-end-of-support) and known issues).<br>
-<a id="fn_5"></a>(5) Introduced in 10.0.9.<br>
-<a id="fn_6"></a>(6) Introduced in 10.1.9.<br>
-<a id="fn_7"></a>(7) Introduced in 10.2.0
+<a id="fn_1"></a>(1) XBAP is being phased out (see [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)).<br>
+<a id="fn_2"></a>(2) "Launcher" is an alternative name for the [DataMiner Cube start window](xref:Using_the_desktop_app).<br>
+<a id="fn_3"></a>(3) Updates from DMA only.<br>
+<a id="fn_4"></a>(4) Updates from DMA and dataminer.services (see [Managing the start window of the desktop app](xref:Managing_the_start_window)).
 
 ## Launcher installation
 
@@ -130,8 +126,6 @@ Below you can find an overview of the different methods that can be used to depl
 - All MSI packages require administrator rights for installation.
 
 - All MSI packages require a 64-bit operating system.
-
-- The launcher is backwards compatible and can be used to deploy any 9.x or 10.x Cube version. Shared MSI installation packages can be provided on demand for older versions.
 
 - From DataMiner Cube 10.4.0 [CU16]/10.5.0 [CU4]/10.5.7 onwards<!-- RN 42706 -->, the *About* window of the start window (available via the cogwheel button) will include info about how the installed version was deployed. If it shows "(shared)", a shared MSI installation was used. If it shows ("bootstrap"), a bootstrap MSI installation was used.
 
