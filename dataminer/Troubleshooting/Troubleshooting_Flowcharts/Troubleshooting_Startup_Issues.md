@@ -26,6 +26,8 @@ SwarmingEnabled{{"Swarming recently enabled? <br/>"}}
 SLNetComFailure{{"SLNetCom failure logged in SLDataMiner.txt? <br/>"}}
 IncorrectIPAddresses{{"Incorrect IP addresses in DMS.xml? <br/>"}}
 NATSErrors{{"Errors related to NATS in SLDataMiner.txt + SLWatchdog2.txt? <br/>"}}
+CloudSettingsErrors{{"Errors related to CloudSettings in SLCloudStorage.txt?"}}
+CloudSession["Cloud session issue"]
 CassandraErrors{{"Errors related to Cassandra in SLErrors.txt? <br/> "}}
 LicensingIssue["Licensing issue"]
 SwarmingIssue["Swarming issue"]
@@ -48,7 +50,9 @@ SLNetComFailure --- |NO| IncorrectIPAddresses
 IncorrectIPAddresses --- |YES| IPChangeIssue
 IncorrectIPAddresses --- |NO| NATSErrors
 NATSErrors --- |YES| NATSIssue
-NATSErrors --- |NO| CassandraErrors
+NATSErrors --- |NO| CloudSettingsErrors
+CloudSettingsErrors --- |YES| CloudSession
+CloudSettingsErrors --- |NO| CassandraErrors
 CassandraErrors --- |YES| CassandraIssue
 CassandraErrors --- |NO| ContactTechSupport
 
@@ -59,13 +63,14 @@ click LicensingIssue "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Trou
 click SwarmingIssue "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#swarming-issue"
 click IPChangeIssue "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#ip-change-issue"
 click NATSIssue "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#nats-issue"
+click CloudSession "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#cloud-session-token-issue"
 click CassandraIssue "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#cassandra-issue"
 click ContactTechSupport "/dataminer/Troubleshooting/Contacting_tech_support.html"
 
 %% Apply styles to blocks %%
 class DMAStartupIssues,ContactTechSupport DarkBlue;
-class LicensingIssue,SwarmingIssue,IPChangeIssue,NATSIssue,CassandraIssue,DCMIssue classExternalRef;
-class ServicesRunning,AgentNotLicensed,SwarmingEnabled,SLNetComFailure,IncorrectIPAddresses,NATSErrors,CassandraErrors Blue;
+class LicensingIssue,SwarmingIssue,IPChangeIssue,NATSIssue,CassandraIssue,DCMIssue,CloudSession classExternalRef;
+class ServicesRunning,AgentNotLicensed,SwarmingEnabled,SLNetComFailure,IncorrectIPAddresses,NATSErrors,CassandraErrors,CloudSettingsErrors Blue;
 class Home LightBlue;
 ```
 
@@ -259,6 +264,30 @@ NATS is not running as expected. As every DataMiner Agent must be able to reach 
 1. [Reinstall NAS and NATS](xref:Investigating_NATS_Issues#remaining-steps).
 
 1. If this does not fix the issue, follow the steps under [NATS Troubleshooting](xref:Investigating_NATS_Issues).
+
+## Cloud session token issue
+
+### Symptoms
+
+- DataMiner fails to start up.
+
+- *SLCloudStorage.txt* contains entries similar to the examples below:
+
+  ```txt
+  CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorage.Repositories.Exceptions.CloudSettingsRepositoryException: Failed to do GetCloudAccessTokenRequest. Received the following error messages: { "message": "The Service Principal of this DMS is expired (3/14/2023 8:09:51 AM +00:00) but should soon be refreshed automatically." }
+  ```
+
+  ```txt
+  CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorage.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing GetCcaGatewayConfigRequest. ---> System.AggregateException: One or more errors occurred. ---> DataMinerMessageBroker.API.Exceptions.SubscriptionException: No responders are available for the request. ---> NATS.Client.NATSNoRespondersException: No responders are available for the request.
+  ```
+
+### Root cause
+
+Under normal circumstances, CloudGateway refreshes the cloud session automatically. However, if CloudGateway is down for longer than six days (for example, because of a server outage), the cloud session will become invalid. As a result, DataMiner will fail to start on systems using STaaS.
+
+### Solution
+
+To resolve this issue, follow the troubleshooting steps described in [The session token has expired](xref:STaaS_Error_messages#the-session-token-has-expired).
 
 ## Cassandra issue
 
