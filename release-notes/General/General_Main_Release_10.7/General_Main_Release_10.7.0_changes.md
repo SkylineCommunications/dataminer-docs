@@ -25,6 +25,12 @@ An `OnDestroy` handler has now been added to the `Engine` class. This handler wi
 
 Multiple handlers can be added. They will run synchronously, and if one handler throws an error, the others will keep on running.
 
+#### Enhanced consistency when handling alarm property updates [ID 44074]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+To ensure that all alarm property updates are handled consistently, whatever the source of the alarm (DataMiner System, Correlation, Analytics, etc.), messages sent out following an alarm property update will now always include a reference to the base alarm of the alarm in question.
+
 #### DataMiner upgrade: Web-only upgrades with version 10.6.x or above will now require the DMA to have version 10.5.x or above [ID 44103]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->
