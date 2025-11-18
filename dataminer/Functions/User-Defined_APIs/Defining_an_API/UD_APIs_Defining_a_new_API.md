@@ -152,6 +152,7 @@ The `ApiTriggerOutput` object has the following properties:
 |--|--|--|
 | ResponseCode | int | The HTTP status code. See [ResponseCode](#responsecode). |
 | ResponseBody | string | Contains the response body as a string. The size of this response body is limited to 29 MB. |
+| ResponseBodyBytes | byte[] | Contains the response body as a byte[]. The size is limited to 29 MB. Takes precedence over ResponseBody when set. Available from DataMiner 10.6.2/10.7.0 onwards.|
 | ResponseHeaders | IHeaders | HTTP headers that will be added to the response. See [ResponseHeaders](#responseheaders). |
 
 > [!NOTE]
