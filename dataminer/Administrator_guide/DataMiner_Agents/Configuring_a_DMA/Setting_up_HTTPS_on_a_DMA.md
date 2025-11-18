@@ -53,6 +53,9 @@ To do so:
 
       > [!IMPORTANT]
       > Do not use wildcard certificates if you want to use your DataMiner Agent to connect your system to dataminer.services, as this is not supported. In that case, the certificate should be for the FQDN (e.g. "dma01.skyline.be").
+      
+      > [!IMPORTANT]
+      > If using a failover pair, ensure that you set the tag to the hostname for that specific DataMiner Agent. **Do not used the shared hostname** for that failover pair. 
 
 1. Save the file and restart the DMA.
 
