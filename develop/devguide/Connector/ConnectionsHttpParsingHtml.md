@@ -73,7 +73,7 @@ This is an object-oriented approach to HTML parsing and querying.
 The HTML Agility Pack (HAP) provides an object-oriented approach for reading/writing HTML documents. Instead of treating the HTML as a hard-coded class, it treats it as a tree structure.
 
 > [!NOTE]
-> In recent DataMiner versions, HtmlAgilityPack.dll (1.6.4) is included in the *ProtocolScripts* folder by default.<!-- RN 16746 -->
+> HtmlAgilityPack.dll (1.6.4) is included in the *ProtocolScripts* folder by default.<!-- RN 16746 -->
 
 ### Advantages
 
