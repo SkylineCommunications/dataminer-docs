@@ -587,7 +587,6 @@ namespace Skyline.DataMiner.Automation
         /// <param name="custom"><c>true</c> if the custom names should be checked; otherwise, <c>false</c>.</param>
         /// <returns>The DCF interfaces that match the specified filter.</returns>
         /// <remarks>
-        /// <para>Feature introduced in DataMiner 8.5.3 (RN 8867).</para>
         /// <para>If <paramref name="custom"/> is set to <c>false</c>, the name is checked.</para></remarks>
         /// <example>
         /// <code>
@@ -602,9 +601,6 @@ namespace Skyline.DataMiner.Automation
         /// </summary>
         /// <param name="type">The interface type ("in", "out", "inout").</param>
         /// <returns>The DCF interfaces of the specified type.</returns>
-        /// <remarks>
-        /// <para>Feature introduced in DataMiner 8.5.3 (RN 8867).</para>
-        /// </remarks>
         /// <example>
         /// <code>
         /// Element element = engine.FindElement(400, 2000);

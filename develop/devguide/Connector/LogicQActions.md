@@ -95,18 +95,6 @@ DataMiner compiles QActions with the following preprocessor directives:
    #endif
    ```
 
-- **ALARM_SQUASHING**: This preprocessor directive ("#define ALARM_SQUASHING") is automatically added when a QAction is compiled.<!-- RN 29549 -->
-
-   In QActions, all code related to alarm squashing (i.e. the combination of consecutive alarm events without a severity change into a single consolidated event) should be enclosed as illustrated below, to allow protocols that contain alarm squashing functionality to also be compiled on DataMiner versions that do not support alarm squashing:
-
-   ```csharp
-   #if ALARM_SQUASHING
-   // Code specific for alarm squashing (DataMiner 10.1.0 and later)
-   #else
-   // Code for DataMiner 10.0.0 and earlier
-   #endif
-   ```
-
 ## Entry methods
 
 The entry method is the entry point of the QAction. By default, the Run method of the QAction class in the global namespace is used as the entry point of the QAction.
