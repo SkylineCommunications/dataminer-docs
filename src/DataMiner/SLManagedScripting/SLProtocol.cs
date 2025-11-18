@@ -13,7 +13,7 @@ namespace Skyline.DataMiner.Scripting
 	/// SLProtocol interface allowing communication with the SLProtocol process.
 	/// </summary>
 	/// <remarks>
-	/// <note type="note">SLProtocol is an interface from DMA 10.0.1 onwards (RN 23787). In earlier DataMiner versions, it is a concrete class.</note>
+	/// <note type="note">In legacy DataMiner versions prior to 10.0.1 (RN 23787), SLProtocol is a concrete class instead of an interface.</note>
 	/// <para>All methods are blocking, except for the <see cref="SLProtocol.NotifyDataMinerQueued"/> method.</para>
 	/// <para>Many methods defined in this class also act as a wrapper for a specific <see cref="SLProtocol.NotifyProtocol"/>, <see cref="SLProtocol.NotifyDataMiner"/> or <see cref="SLProtocol.NotifyDataMinerQueued"/> method call. Using these methods is generally preferred over using the specific notify calls as this improves readability and type safety.</para>
 	/// <para>From DataMiner 10.2.9 onwards (RN 33965), the SLProtocol(Ext) object in QActions will retain all of its data members outside of the Run scope. This means that, while Notifies were already available out of scope earlier, members such as the QActionID will now also remain available when a QAction run ends. In addition, the SLNet connection can now be set up at any time.</para>
@@ -35,7 +35,7 @@ namespace Skyline.DataMiner.Scripting
 		/// 			<description>If a row with the specified primary key already exists, the method does nothing. To update an existing row instead, use <see href="xref:Skyline.DataMiner.Scripting.SLProtocol">SetRow</see>.</description>
 		/// 		</item>
 		///			<item>
-		///				<description>Available from DataMiner 10.1.1 (RN 27995) onwards. Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///			    <description>
@@ -73,7 +73,7 @@ namespace Skyline.DataMiner.Scripting
 		/// 			<description>If a row with the specified primary key already exists, the method does nothing. To update an existing row instead, use <see href="xref:Skyline.DataMiner.Scripting.SLProtocol">SetRow</see>.</description>
 		/// 		</item>
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///		</list>
 		/// </remarks>
@@ -95,7 +95,7 @@ namespace Skyline.DataMiner.Scripting
 		/// 			<description>If a row with the specified primary key already exists, the method does nothing. To update an existing row instead, use <see href="xref:Skyline.DataMiner.Scripting.SLProtocol">SetRow</see>.</description>
 		/// 		</item>
 		///			<item>
-		///				<description>Available from DataMiner 10.1.1 (RN 27995) onwards. Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///		</list>
 		/// </remarks>
@@ -112,7 +112,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This method overload is intended to be used with a table that has an auto-incrementing key.</description>
 		///			</item>
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 240 call <see href="xref:NT_ADD_ROW_RETURN_KEY">NT_ADD_ROW_RETURN_KEY</see>.</description>
@@ -138,7 +138,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet">
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>Starting from DataMiner 10.5.6/10.4.0 [CU15]/10.5.0 [CU3] (RN 42368): This method first retrieves all primary keys from the table using a NotifyProtocol type 397 call (<see href="xref:NT_GET_KEYS_SLPROTOCOL">NT_GET_KEYS_SLPROTOCOL</see>). If there is at least one primary key present, the method performs a NotifyProtocol type 474 (<see href="xref:NT_CLEAR_PARAMETER">NT_CLEAR_PARAMETER</see>) call, removing all rows.</description>
@@ -159,7 +159,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 156 <see href="xref:NT_DELETE_ROW">NT_DELETE_ROW</see> call.</description>
@@ -177,7 +177,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 156 <see href="xref:NT_DELETE_ROW">NT_DELETE_ROW</see> call.</description>
@@ -195,7 +195,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 156 <see href="xref:NT_DELETE_ROW">NT_DELETE_ROW</see> call.</description>
@@ -278,7 +278,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 265 <see href="xref:NT_EXISTS_ROW">NT_EXISTS_ROW</see> call.</description>
@@ -297,7 +297,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet">
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see> call.</description>
@@ -361,7 +361,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet">
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see> call.</description>
@@ -434,7 +434,7 @@ namespace Skyline.DataMiner.Scripting
 		///			<description>This overload is supported from DataMiner 10.2.7 (RN 28573) onwards.</description>
 		///			</item>
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see> call.</description>
@@ -497,7 +497,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet">
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see> call.</description>
@@ -559,7 +559,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet">
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see> call.</description>
@@ -617,7 +617,7 @@ namespace Skyline.DataMiner.Scripting
 		///			<description>This overload is supported from DataMiner 10.2.7 onwards (RN 28573).</description>
 		///			</item>
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see> call.</description>
@@ -672,7 +672,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method is defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method is defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 <see href="xref:NT_FILL_ARRAY_NO_DELETE">NT_FILL_ARRAY_NO_DELETE</see> call.</description>
@@ -730,7 +730,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This overload is supported from DataMiner 10.2.7 onwards (RN 28573).</description>
 		///			</item>
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method is defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method is defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 <see href="xref:NT_FILL_ARRAY_NO_DELETE">NT_FILL_ARRAY_NO_DELETE</see> call.</description>
@@ -789,7 +789,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This overload is supported from DataMiner 10.2.7 onwards (RN 28573).</description>
 		///			</item>
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method is defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method is defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 <see href="xref:NT_FILL_ARRAY_NO_DELETE">NT_FILL_ARRAY_NO_DELETE</see> call.</description>
@@ -852,7 +852,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method is defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method is defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 <see href="xref:NT_FILL_ARRAY_NO_DELETE">NT_FILL_ARRAY_NO_DELETE</see> call.</description>
@@ -918,7 +918,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 220 <see href="xref:NT_FILL_ARRAY_WITH_COLUMN">NT_FILL_ARRAY_WITH_COLUMN</see> call.</description>
@@ -973,7 +973,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 220 <see href="xref:NT_FILL_ARRAY_WITH_COLUMN">NT_FILL_ARRAY_WITH_COLUMN</see> call.</description>
@@ -1018,7 +1018,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>The implementation of the GetKeys method when using <see cref="NotifyProtocol.KeyType.Index"/> will retrieve the primary keys using SLProtocol (This results in a NotifyProtocol type 397 call <see href="xref:NT_GET_KEYS_SLPROTOCOL">NT_GET_KEYS_SLPROTOCOL</see>).</description>
@@ -1038,7 +1038,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///		</list>
 		/// </remarks>
@@ -1056,7 +1056,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>In order for this method to work, the column must either be a foreign key column or it must have the option 'indexColumn'.</description>
 		///			</item>
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 196 <see href="xref:NT_GET_KEYS_FOR_INDEX">NT_GET_KEYS_FOR_INDEX</see> call.</description>
@@ -1105,7 +1105,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 177 call <see href="xref:NT_SET_BINARY_DATA">NT_SET_BINARY_DATA</see>.</description>
@@ -2362,7 +2362,7 @@ namespace Skyline.DataMiner.Scripting
 		int GetTriggerParameter();
 
 		/// <summary>
-		/// Retrieves the user connection. Available from DataMiner 10.0.10 onwards.
+		/// Retrieves the user connection.
 		/// </summary>
 		/// <returns>Returns a connection that impersonates the user who triggered the QAction based on SLProtocol#UserCookie. If no user cookie is present within the QAction context, the returned IConnection will act as the SLManagedScripting connection.</returns>
 		/// <example>
@@ -2480,7 +2480,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This a wrapper method for a NotifyProtocol type 195 <see href="xref:NT_ARRAY_ROW_COUNT">NT_ARRAY_ROW_COUNT</see> call.</description>
@@ -2848,7 +2848,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), the overloads with a LogType and/or LogLevel arguments were defined as an SLProtocol extension method (with optional LogType and LogLevel arguments) in the ProtocolExtenders class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), the overloads with a LogType and/or LogLevel arguments were defined as an SLProtocol extension method (with optional LogType and LogLevel arguments) in the ProtocolExtenders class.</description>
 		///			</item>
 		///			<item>
 		///				<description>The message will be logged in the log file of the element(located in the folder C:\Skyline DataMiner\logging\).</description>
@@ -2868,7 +2868,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), the overloads with a LogType and/or LogLevel arguments were defined as an SLProtocol extension method (with optional LogType and LogLevel arguments) in the ProtocolExtenders class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), the overloads with a LogType and/or LogLevel arguments were defined as an SLProtocol extension method (with optional LogType and LogLevel arguments) in the ProtocolExtenders class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This overload uses LogType.Allways.</description>
@@ -2891,7 +2891,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), the overloads with a LogType and/or LogLevel arguments were defined as an SLProtocol extension method (with optional LogType and LogLevel arguments) in the ProtocolExtenders class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), the overloads with a LogType and/or LogLevel arguments were defined as an SLProtocol extension method (with optional LogType and LogLevel arguments) in the ProtocolExtenders class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This overload uses LogLevel.DevelopmentLogging.</description>
@@ -2913,7 +2913,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), the overloads with a LogType and/or LogLevel arguments were defined as an SLProtocol extension method (with optional LogType and LogLevel arguments) in the ProtocolExtenders class.</description>
+		///				<description>In legacy DataMiner versions prior to DataMiner 10.1.1 (RN 27995), the overloads with a LogType and/or LogLevel arguments were defined as an SLProtocol extension method (with optional LogType and LogLevel arguments) in the ProtocolExtenders class.</description>
 		///			</item>
 		///			<item>
 		///				<description>This overload uses LogType.Allways. and LogLevel.DevelopmentLogging.</description>
