@@ -163,6 +163,12 @@ From now on, that link will only appear in the Apps menu of a web app when the D
 
 Because of a number of enhancements, overall performance of low-code apps has increased.
 
+#### Dashboards/Low-Code Apps: 'Pivot table' and 'Group' components will only be visible when using the 'showAdvancedSettings=true' URL option [ID 44128]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+From now on, the *Pivot table* and *Group* components will no longer appear in lists of available visualizations, unless you use the `showAdvancedSettings=true` URL option.
+
 ### Fixes
 
 #### Visual Overview in web apps: Children shapes would incorrectly be displayed on top of a clickable group of shapes [ID 43465]
