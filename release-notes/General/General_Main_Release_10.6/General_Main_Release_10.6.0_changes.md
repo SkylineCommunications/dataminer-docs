@@ -770,3 +770,9 @@ From now on, when an invalid `<Database>` tag is found in the *Db.xml* file duri
 <!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
 
 When run on the offline agent of a Failover system, the Security Advisory BPA test would show an incorrect result after checking the status of port 5100 of the firewall.
+
+#### Problem when an element with an active filtered table subscription was swarmed to the DMA on which it was already located [ID 44150]
+
+<!-- MR 10.6.0 - FR 10.5.12 [CU0] -->
+
+When an element was swarmed to the DataMiner Agent on which it was already located, up to now, a server-side deadlock would occur when that element had an active filtered table subscription at the time of the swarming operation.

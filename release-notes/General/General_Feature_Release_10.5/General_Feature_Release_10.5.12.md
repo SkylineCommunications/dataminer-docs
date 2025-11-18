@@ -433,3 +433,9 @@ These notices will now be generated again.
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 Up to now, after elements had been swarmed or migrated by means of a DELT package, in some cases, Automation script matrix actions associated with those elements could fail.
+
+#### Problem when an element with an active filtered table subscription was swarmed to the DMA on which it was already located [ID 44150]
+
+<!-- MR 10.6.0 - FR 10.5.12 [CU0] -->
+
+When an element was swarmed to the DataMiner Agent on which it was already located, up to now, a server-side deadlock would occur when that element had an active filtered table subscription at the time of the swarming operation.

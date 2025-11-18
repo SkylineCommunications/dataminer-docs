@@ -39,6 +39,25 @@ Also, the default file name has been changed from `Report.pdf` to `<dashboard na
 
 Up to now, it was only possible to share public dashboards via cloud share. From now on, it will also be possible to share private dashboards via cloud share.
 
+#### Dashboards/Low-Code Apps - Node edge graph component: Read/Edit mode [ID 44078]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+From now on, a node edge graph component can be switched from *Read* mode to *Edit* mode and back. Only when in *Edit* mode will it be possible to reposition nodes.
+
+Also, custom positioning mode has now been replaced by the following two positioning modes.
+
+| Mode | Description  |
+|------|--------------|
+| Layered        | In this mode, the component will automatically arrange nodes and edges in the most logical way.<br>When the component is in *Edit* mode, nodes can be repositioned by hand.<br>Note: The new node positions will only be stored when the user has edit permission. |
+| Linked to data | In this mode, nodes will be positioned automatically based on their data.<br>When the component is in *Edit* mode, nodes can be repositioned by hand.<br>By default, the new node positions will not be stored. |
+
+> [!NOTE]
+> In existing node edge components, the positioning modes will be migrated as follows:
+>
+> - When previously set to *Custom positioning*, the component will now by default be set to *Edit* mode with *Layered* positioning.
+> - When previously set to *Layered* or *Linked to data*, the component will now by default be set to *Read* mode.
+
 ## Changes
 
 ### Enhancements
