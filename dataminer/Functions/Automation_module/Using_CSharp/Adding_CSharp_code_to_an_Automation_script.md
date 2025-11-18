@@ -151,18 +151,6 @@ DataMiner compiles C# blocks of Automation scripts with the following preprocess
 
 - DBInfo
 
-- ALARM_SQUASHING
-
-  In C# blocks, all code related to alarm squashing (i.e. the combination of consecutive alarm events without a severity change into a single consolidated event) should be enclosed as follows, to allow protocols that contain alarm squashing functionality to also be compiled on DataMiner versions that do not support alarm squashing:
-
-  ```cs
-  #if ALARM_SQUASHING
-   // Code specific for alarm squashing (DataMiner 10.1.0 and later)
-  #else
-   // Code for DataMiner 10.0.0 and earlier
-  #endif
-  ```
-
 ## Script timeout
 
 To prevent problems caused by faulty script statements, every C# code block has a default timeout delay of 10 minutes. If the execution of a C# code block takes longer than 10 minutes, it is aborted.
