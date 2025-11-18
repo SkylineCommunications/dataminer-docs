@@ -122,11 +122,11 @@ Each time the *SLLogCollector* tool is run, by default, it will order the *Stand
 
 Also, when ordered to include memory dumps, up to now, the SLLogCollector tool would first run the BPA tests and collect all logging, and would then take the memory dumps. From now on, it will take the memory dumps first.
 
-#### Serial communication: Only TLS 1.2 or TLS 1.3 encryption will now be allowed [ID 43678]
+#### Serial communication: Only TLS 1.2 encryption will now be allowed [ID 43678] [ID 44151]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
-Although DataMiner supports all TLS versions up to TLS 1.3, from now on, all serial communication will have to use either TLS 1.2 or TLS 1.3 encryption.
+Although DataMiner supports all TLS versions up to TLS 1.3, from now on, all serial communication will have to use TLS 1.2 encryption.
 
 #### Relational anomaly detection: All relational anomalies will now be stored in the database [ID 43720]
 
