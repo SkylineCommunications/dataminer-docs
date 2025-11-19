@@ -256,8 +256,6 @@ items:
     items:
       - name: Current issues
         items:
-          - name: Trend graph flatline when client and DMA use different time zones
-            topicUid: KI_Trend_flatline_different_time_zones
           - name: gRPC-connected Cube not responding when Automation module is used
             topicUid: KI_gRPC_connected_Cube_stuck_when_using_Automation
           - name: Upgrade fails because of VerifyGRPCConnection.dll prerequisite
@@ -304,6 +302,8 @@ items:
             topicUid: KI_Scrollbars_not_shown_in_web_apps
           - name: SLDataGateway memory leak caused by excessive Cassandra query timeout
             topicUid: KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout
+          - name: Trend graph flatline when client and DMA use different time zones
+            topicUid: KI_Trend_flatline_different_time_zones
           - name: SLProtocol RTE because of element stuck in slow poll mode
             topicUid: KI_SLProtocol_RTE_after_slow_poll_timeout
           - name: Local user not pushed to Windows
