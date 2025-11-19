@@ -11,18 +11,19 @@ Below you can find an overview of the different methods that can be used to depl
 > [!IMPORTANT]
 > This information is primarily aimed at system administrators.
 
-|                             | Bitness   | Automatic updates | Side-by-side version support |
-|-----------------------------|-----------|-------------------|------------------------------|
-| ClickOnce XBAP [(1)](#fn_1) | x86       | Yes [(3)](#fn_3)  | Yes                          |
-| Launcher [(2)](#fn_2)       | AnyCPU    | Yes [(4)](#fn_4)  | Yes                          |
-| MSI Launcher (bootstrap)    | x64       | Yes [(4)](#fn_4)  | Yes                          |
-| MSI Launcher (shared)       | x64       | No                | Yes                          |
-| MSI CefSharp                | x86 + x64 | No                | Yes                          |
+|                             | Bitness   | Automatic updates |
+|-----------------------------|-----------|-------------------|
+| ClickOnce XBAP [(1)](#fn_1) | x86       | Yes [(3)](#fn_3)  |
+| Launcher [(2)](#fn_2)       | AnyCPU    | Yes [(4)](#fn_4)  |
+| MSI Launcher (bootstrap)    | x64       | Yes [(4)](#fn_4)  |
+| MSI Launcher (shared)       | x64       | No                |
+| MSI CefSharp [(5)](#fn_5)   | x86 + x64 | No                |
 
 <a id="fn_1"></a>(1) XBAP is being phased out (see [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)).<br>
 <a id="fn_2"></a>(2) "Launcher" is an alternative name for the [DataMiner Cube start window](xref:Using_the_desktop_app).<br>
 <a id="fn_3"></a>(3) Updates from DMA only.<br>
-<a id="fn_4"></a>(4) Updates from DMA and dataminer.services (see [Managing the start window of the desktop app](xref:Managing_the_start_window)).
+<a id="fn_4"></a>(4) Updates from DMA and dataminer.services (see [Managing the start window of the desktop app](xref:Managing_the_start_window)).<br>
+<a id="fn_5"></a>(5) CefSharp is being phased out.
 
 ## Launcher installation
 
