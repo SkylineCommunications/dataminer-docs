@@ -39,6 +39,16 @@ From now on, it will no longer be allowed to perform web-only upgrades with vers
 
 This means, that any DataMiner Agent on which you want to perform a web-only upgrade with version 10.6.x or above will first have to be upgraded to version 10.5.x or above.
 
+#### SLAnalytics RAD: GetRADSubgroupFitScoresResponseMessage will now return additional information regarding subgroups of a shared model group [ID 44108]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+The `GetRADSubgroupFitScoresResponseMessage` will now return additional information regarding subgroups of a shared model group.
+
+In addition to the model fit score for each subgroup, the response message will now contain an `IsOutlier` boolean field. This field is set to true when a subgroup is identified as an outlier based on its relational behavior compared to the other subgroups.
+
+In practical terms, this means that the subgroup's model fit score deviates from the other fit scores. The shared model fits this subgroup significantly worse than it fits most of the remaining subgroups.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
