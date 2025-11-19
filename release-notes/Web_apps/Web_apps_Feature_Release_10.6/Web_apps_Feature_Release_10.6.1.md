@@ -136,7 +136,7 @@ If you want the web applications to continue to use the SLHelper process for GQI
 ```
 
 > [!NOTE]
-> Currently, the GQI DxM cannot be used on Dashboard Gateway servers yet.
+> Currently, the GQI DxM cannot be used on Dashboard Gateway servers yet. Dashboard Gateway servers will continue to use SLHelper, even if the `gqi:useDxM` key is set to true.
 
 #### Interactive Automation scripts: UI version will now be set to WebUIVersion.V2 by default [ID 44059]
 
@@ -166,11 +166,11 @@ From now on, that link will only appear in the Apps menu of a web app when the D
 
 Because of a number of enhancements, overall performance of low-code apps has increased.
 
-#### Low-Code Apps - Templates: Enhanced 'Browse templates' window [ID 44123]
+#### Dashboards/Low-Code Apps - Templates: Enhanced 'Browse templates' window [ID 44123]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-When, in a low-code app, you are editing a component that uses templates, you can click the *Browse templates* button to select a template to be applied.
+When, in a dashboard or low-code app, you are editing a component that uses templates, you can click the *Browse templates* button to select a template to be applied.
 
 From now on, the *Browse templates* window will contain a search box that allows you to search for a specific template by name.
 
