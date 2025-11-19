@@ -418,3 +418,9 @@ In some cases, SLDataMiner could leak memory when documents were being handled.
 In some cases, the number of awaited SLNet queues listed in the log files would incorrectly exceed the actual number of awaited queues.
 
 Also, the `BlockUntilAllInFlightEventsWereHandled` method will no longer be called when no work has to be done afterwards.
+
+#### Problem when performing a row-based FillArray method with zero rows as input and with the SaveOption option set to 'Partial' [ID 44137]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When a row-based `FillArray` method was performed with zero rows as input and with the `SaveOption` option set to "Partial", up to now, the method would throw an unhandled exception due to a missing check.

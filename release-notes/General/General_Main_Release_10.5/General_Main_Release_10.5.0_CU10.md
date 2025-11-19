@@ -139,3 +139,9 @@ When run on the offline agent of a Failover system, the Security Advisory BPA te
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 In some cases, SLDataMiner could leak memory when documents were being handled.
+
+#### Problem when performing a row-based FillArray method with zero rows as input and with the SaveOption option set to 'Partial' [ID 44137]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When a row-based `FillArray` method was performed with zero rows as input and with the `SaveOption` option set to "Partial", up to now, the method would throw an unhandled exception due to a missing check.
