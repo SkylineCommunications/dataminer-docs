@@ -148,7 +148,9 @@ The following actions will be executed during the migration, in the indicated or
 
 1. The *MessageBrokerConfig.json* file is written at `C:\ProgramData\Skyline Communications\DataMiner\MessageBrokerConfig.json`.
 
-   This file is used when creating default sessions using the *DataMinerMessageBroker.API(.Native)* library. The file will be rewritten to reference the BrokerGateway URL and API key path. The content of this file can for example look like this:
+   This file is used when initializing default sessions through the DataMinerMessageBroker.API (or DataMinerMessageBroker.API.Native) library. During system migration, the file is automatically overwritten to include the correct BrokerGateway URL and the path to the associated API key.
+
+A typical example of this file’s contents is shown below:
 
    ```json
    {

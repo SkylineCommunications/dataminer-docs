@@ -237,8 +237,8 @@ Incorrect IP addresses in *DMS.xml* cause IP conflicts within the DataMiner Syst
 
 - Errors in the *SLDataMiner.txt* file, including:
 
-  - `Initializing Cloud Bridge`
   - "ERR" logs that include references to NATS or MessageBroker.
+  - `Initializing Cloud Bridge`
 
 - *SLWatchdog2.txt* contains logs referencing NATS.
 

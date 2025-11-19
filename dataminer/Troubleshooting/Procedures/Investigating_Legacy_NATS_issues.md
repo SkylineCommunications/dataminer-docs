@@ -1,10 +1,14 @@
 ---
 uid: Investigating_Legacy_NATS_Issues
 keywords: VerifyNatsIsRunning, troubleshooting NATS, investigating NATS issues, Legacy NATS, SLNet-managed NATS, SLCloud
-description: Start by checking the logging, then check your installation and SLCloud.xml configuration, check if NAS and NATs are running, check the configs, …
+description: Start by checking the logging, then check your installation and SLCloud.xml configuration, check if NAS and NATs are running, check the configs, ï¿½
 ---
 
 # Troubleshooting - NATS (Legacy SLNet-managed NAS/NATS architecture)
+
+> [!IMPORTANT]
+> Do not follow the steps below if BrokerGateway-managed NATS is being used. Instead, follow the steps from [Investigating NATS issues](xref:Investigating_NATS_Issues).
+
 
 To investigate NATS issues, follow the actions detailed below, in the specified order:
 
