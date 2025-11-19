@@ -267,3 +267,9 @@ When you had opened the DataMiner web apps authentication page in a Firefox web 
 Up to now, in a *Line & area chart* component, it would incorrectly be possible to start an export to CSV before the data had been loaded.
 
 From now on, an export to CSV will always be performed synchronously. In other words, even when you click *Export to CSV* before the data has been loaded, the export operation will only start when all data has been loaded.
+
+#### Dashboards app: Problem when generating a PDF report if a trend graph with valid data was followed by a trend graph without valid data [ID 44143]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, it would not be possible to generate a PDF report if a trend graph with valid data was followed by a trend graph without valid data.
