@@ -20,9 +20,10 @@ After the migration you may need to [update your Data Aggregator configuration](
 
 ## Prerequisites
 
-Before you start the migration, the entire cluster must have been running smoothly for some time. This means that all DataMiner Agents in the cluster must be online and function together for at least 15 minutes. To confirm that the DMS is ready to be migrated, run the [Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites) BPA.
+Before initiating the migration, ensure that the entire cluster has been operating in a stable state for an extended period. All DataMiner Agents in the cluster must be online and functioning together for at least 15 minutes. To verify that the DMS meets the required conditions, run the [Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites) and [Check Deprecated DLL Usage](xref:BPA_Check_Deprecated_DLL_Usage) BPA.
 
-In addition, verify if any protocols reference the *DataMinerMessageBroker.API.dll* with a version older than **3.0.0**. Make sure any such references are updated before you migrate, and make sure the outdated DLL is removed from the *ProtocolScripts* folder. From DataMiner 10.5.0 [CU9]/10.5.12 onwards, if this DLL is present in the *ProtocolScripts* folder, this will block the migration.
+Additionally, check whether any protocols reference DataMinerMessageBroker.API.dll with a version earlier than 3.0.0. Update any such references prior to migration and remove the outdated DLL from the `C:\Skyline DataMiner\ProtocolScripts folder`.
+From DataMiner 10.5.0 [CU9] / 10.5.12 onward, the presence of such an outdated DLL in the ProtocolScripts directory will block the migration.
 
 ## Automatic migration using .dmupgrade package (recommended)
 
