@@ -76,6 +76,12 @@ If [BrokerGateway](xref:BrokerGateway_Migration) is enabled, specify the followi
   > [!NOTE]
   > This setting is available from Data Aggregator version 3.2.0 onwards.
 
+  > [!NOTE]
+  > When you make the following changes to a DMS and the path is a local file path, you will need to replace the *appsettings.runtime.json* file:
+  >
+  > - Changing the IP address of one or more DataMiner Agents.
+  > - Adding or removing one or more DataMiner Agents to/from the DMS
+
 ### DMS without BrokerGateway
 
 If the DMS does not use [BrokerGateway](xref:BrokerGateway_Migration) yet, specify the following fields:
@@ -87,7 +93,7 @@ If the DMS does not use [BrokerGateway](xref:BrokerGateway_Migration) yet, speci
 - **CredsFile**: The path to the *.creds* file containing the authentication information. On a DataMiner Agent, you can typically find this here: `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`.
 
   > [!NOTE]
-  > When you make the following changes to a DMS, you will need to replace the *.creds* file:
+  > When you make the following changes to a DMS and the path is a local file path, you will need to replace the *.creds* file:
   >
   > - Changing the IP address of one or more DataMiner Agents.
   > - Adding or removing one or more DataMiner Agents to/from the DMS.
