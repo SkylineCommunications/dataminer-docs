@@ -72,7 +72,7 @@ Use `C:\Skyline DataMiner\Tools\NATSRepair.exe`. This is only allowed if the clu
 ### Quick checklist
 
 - The `nats-server` service is running on all DataMiner Agents
-- The soft-launch option [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#ClusterEndpointsManager) is enabled everywhere
+- The soft-launch option [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options) is enabled everywhere
 - The endpoints are reachable (ports 4222/6222)
 - ClusterEndpoints.json is valid
 - The BPA tests succeed
