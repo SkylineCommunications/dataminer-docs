@@ -63,15 +63,15 @@ To migrate the profiles, you will need to use the SLNetClientTest tool. Note tha
 
 ### Troubleshooting
 
-If the migration should fail for any reason, the migration status object in the SLNetClientTest tool window will get a red background color. The ``SLMigrationManager.txt`` and ``SLProfileManager.txt`` log files will contain more information.
+If the migration should fail for any reason, the migration status object in the SLNetClientTest tool window will get a red background color. On the Agent where you started the migration, you will find more information in the log files *SLMigrationManager.txt*, *SLProfileManager.txt*, *SLNet.txt*, and *SLDBConnection.txt*.
 
-If a ``MigrationStatus`` is stuck in the ``InProgress`` state, you will need to cancel the migration and trigger the migration again. You can do so with the *Cancel Migration* button in the *ProfileManger XML to Elastic* section of the SLNetClientTest tool window.
+If a *MigrationStatus* is stuck in the *InProgress* state, you will need to cancel the migration and trigger the migration again. You can do so with the *Cancel Migration* button in the *ProfileManger XML to Elastic* section of the SLNetClientTest tool window.
 
 ### Behavior in new installations
 
 When a new DataMiner Agent is installed, the used storage type will depend on when Profile Manager starts up for the first time.
 
-- If DataMiner is installed with the 10.0 installer and Profile Manager is used, XML storage will be used. An indexing database is not yet supported as a storage type for profiles in DataMiner 10.0. After you have upgraded this DataMiner Agent to a recent DataMiner version, it will continue to use XML storage until you trigger the migration.
+- If DataMiner is installed with the legacy 10.0 installer and Profile Manager is used, XML storage will be used. An indexing database is not yet supported as a storage type for profiles in DataMiner 10.0. Before you upgrade to DataMiner 10.4.0, you will need to trigger the migration, as XML storage is no longer supported from DataMiner 10.4.0 onwards.
 
 - If DataMiner is installed and upgraded to 10.4 before Profile Manager is first started, or if it is installed with the 10.4 installer, indexing database storage will be used. This means profiles will only be functional on a DataMiner System that has indexing database storage running.
 

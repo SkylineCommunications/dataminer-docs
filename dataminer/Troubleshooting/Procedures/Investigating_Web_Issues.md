@@ -120,7 +120,7 @@ GQI recording is a debugging feature that allows you to save GQI communication a
 
 #### GQI DxM repair
 
-If you encounter issues with GQI DxM, for example, if you have [enabled the GQI DxM](xref:GQI_DxM#enabling-the-use-of-the-gqi-dxm) but are unable to see GQI DxM version on the *About* page, try repairing the service by running the GQI DxM installer:
+If you encounter issues with GQI DxM, for example, if you have [enabled the GQI DxM](xref:GQI_DxM#enabling-or-disabling-the-use-of-the-gqi-dxm) but are unable to see GQI DxM version on the *About* page, try repairing the service by running the GQI DxM installer:
 
 1. Using Task Manager, stop the DataMiner GQI service.
 

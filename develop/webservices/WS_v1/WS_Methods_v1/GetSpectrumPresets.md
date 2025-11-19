@@ -6,8 +6,6 @@ uid: GetSpectrumPresets
 
 Use this method to retrieve a list of the available shared and private presets for a spectrum analyzer.
 
-<!-- Available from DataMiner 9.5.5 onwards. -->
-
 ## Input
 
 | Item       | Format  | Description                                           |

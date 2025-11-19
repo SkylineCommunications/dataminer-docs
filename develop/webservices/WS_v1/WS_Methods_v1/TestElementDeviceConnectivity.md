@@ -6,8 +6,6 @@ uid: TestElementDeviceConnectivity
 
 This method allows you to test a connection to a device, without actually creating an element.
 
-<!-- Available from DataMiner 9.5.12 onwards. -->
-
 ## Input
 
 | Item | Format | Description |

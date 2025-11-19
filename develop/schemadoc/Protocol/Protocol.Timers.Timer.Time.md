@@ -40,7 +40,7 @@ Contains either
   - Fast interval (for example in case of alarm info): 10000 (10 seconds)
 
 > [!NOTE]
-> Since DataMiner 9.0.0/9.0.4 (RN 14392), the maximum time a timer can be set to is 24 days (2073600000). In case a larger value is specified, the following message will be logged, “Invalid (too large) time-range specified for timer [x] [set value]. (Defaulting to 24 days)"), and the time will be set to 24 days instead. In earlier versions, when the timer was set to more than 72h, false positives in the timer thread were raised. When the time was set to more than about 24 days (2^31), the value wrapped around, and the timer value was 'unspecified'.
+> The maximum time a timer can be set to is 24 days (2073600000). In case a larger value is specified, the following message will be logged, "Invalid (too large) time-range specified for timer [x] [set value]. (Defaulting to 24 days)", and the time will be set to 24 days instead.<!-- RN 14392 -->
 
 ## Examples
 

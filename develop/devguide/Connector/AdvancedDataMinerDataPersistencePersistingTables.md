@@ -1,5 +1,6 @@
 ---
 uid: AdvancedDataMinerDataPersistencePersistingTables
+keywords: volatile
 ---
 
 # Persisting tables

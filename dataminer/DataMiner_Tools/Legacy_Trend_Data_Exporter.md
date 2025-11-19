@@ -4,7 +4,7 @@ uid: Legacy_Trend_Data_Exporter
 
 # Legacy trend data exporter
 
-Starting from DataMiner 10.0.12 if a Cassandra cluster setup is used, or otherwise from DataMiner 10.1.10/10.2.0<!-- RN 28684 -->, average trending is calculated in a different way that allows better performance. However, with this change, in some specific cases, intervals between two average trend points are no longer guaranteed to be constant. In cases where trend exports are generated and a fixed interval is expected, e.g. when exporting the 5-minute average trending points, this could be an issue. For this purpose, you can use the legacy trend data exporter tool. This standalone tool will realign the average trend points in a given .csv file to ensure fixed intervals (see example below).
+In the currently supported DataMiner versions, average trending is calculated in a better way compared to legacy DataMiner versions, resulting in improved performance.<!-- RN 28684 --> However, with this way of calculating, in some specific cases, intervals between two average trend points are not guaranteed to be constant. In cases where trend exports are generated and a fixed interval is expected, e.g. when exporting the 5-minute average trending points, this could be an issue. For this purpose, you can use the legacy trend data exporter tool. This standalone tool will realign the average trend points in a given .csv file to ensure fixed intervals (see example below).
 
 You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/legacy-trend-data-exporter/).
 

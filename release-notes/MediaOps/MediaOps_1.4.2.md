@@ -2,17 +2,10 @@
 uid: MediaOps_1.4.2
 ---
 
-# MediaOps 1.4.2 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MediaOps 1.4.2
 
 > [!NOTE]
 > This version requires DataMiner 10.5.9/10.6.0 or higher. In addition, the [GQI DxM](xref:GQI_DxM) must be installed.
-
-## New features
-
-*No new features have been added to this release yet.*
 
 ## Changes
 
@@ -32,6 +25,10 @@ This enhancement also prevents unexpected changes to the order of the jobs on th
 #### Scheduling: Nodes table maximize button removed from Edit job panel [ID 44085]
 
 In the Scheduling app, the button to maximize the Nodes table has been removed from the *Edit job* panel, as this functionality was not used and did not work as expected.
+
+#### Scheduling: Number of active query sessions reduced [ID 44113]
+
+Through an improvement of the *Get Filter Status* data source, the number of active query sessions for each user interacting with the Scheduling app has been reduced. During basic operations, this will reduce the number of active query sessions to about a third of what was previously needed.
 
 ### Fixes
 

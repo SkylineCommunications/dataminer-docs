@@ -20,7 +20,23 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
-*No new features have been added yet.*
+#### Trending: Trend graphs will now show relational anomalies [ID 43857]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+When you open a trend graph of a parameter with relational anomalies, from now on, these anomalies will be indicated by tags.
+
+Hovering over a tag button or right-clicking and selecting *Expand tags* will highlight the anomalies in orange.
+
+Additionally, a "+" icon will appear on the right of an anomaly tag in the following cases:
+
+- the tag indicates a multi-variate trend pattern match, or
+- not all parameters associated with the anomaly are displayed on the trend graph.
+
+Clicking a "+" icon will load all parameters associated with the multi-variate trend pattern or the anomaly.
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.6.0/10.5.12 or newer.<!-- RN 43720 -->
 
 ## Changes
 
@@ -59,4 +75,26 @@ Also, when an exception is thrown when Cube tries to use the MigrationManagerHel
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Automation: Not possible to save a script after changing the 'Wait for positive result for at most' option of an If condition [ID 44032]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+When, while editing an Automation script, you changed the *Wait for positive result for at most* option of an *If* condition, up to now, the *Save script* button would incorrectly remain disabled, preventing you from saving the script. The *Save script* button would only be enabled after you had made another change to the script.
+
+Also, up to now, it would incorrectly be possible to save a script to which you added an If block without any conditions. From now on, the *Add condition* selection box will have a red border until you add a condition.
+
+#### Visual Overview: Problem with [servicedefinitionfilter] placeholder [ID 44054]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+In a Visio file linked to a service, the [servicedefinitionfilter] placeholder can be used to refer to the row filter of an included table parameter.
+
+Up to now, in some cases, a primary key prefix, which is added to this filter for configuration purposes, would incorrectly not get removed before the filter was applied. From now on, this prefix will always be removed before the filter is applied.
+
+#### Service & Resource Management: Service Manager would incorrectly be registered each time you switched to another workspace [ID 44106]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+Up to now, the Service Manager would incorrectly be registered each time you switched to another workspace.
+
+From now on, the Service Manager will only be registered once.

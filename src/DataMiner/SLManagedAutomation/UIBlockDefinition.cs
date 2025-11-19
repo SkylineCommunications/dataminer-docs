@@ -235,7 +235,6 @@ namespace Skyline.DataMiner.Automation
 		/// <value><c>true</c> if a filter box is available for the control; otherwise, <c>false</c>.</value>
 		/// <remarks>
 		/// <para>Default: <c>false</c>.</para>
-		/// <para>Available from DataMiner 9.5.6 onwards.</para>
 		/// <para>Applicable only when <see cref="Type"/> is set to DropDown.</para>
 		/// </remarks>
 		/// <example>
@@ -343,7 +342,6 @@ namespace Skyline.DataMiner.Automation
 		/// <value><c>true</c> if the control is enabled in the UI; otherwise, <c>false</c>.</value>
 		/// <remarks>
 		/// <para>Default: true.</para>
-		/// <para>Available from DataMiner 9.5.3 onwards.</para>
 		/// </remarks>
 		public bool IsEnabled { get; set; }
 
@@ -407,7 +405,6 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <para>Applicable only when <see cref="Type"/> is set to CheckBoxList or DropDown.</para>
 		/// <para>Default: false</para>
-		/// <para>Available from DataMiner 9.5.6 onwards.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -905,7 +902,7 @@ namespace Skyline.DataMiner.Automation
 		/// <value><c>true</c> if an update of the current value of the dialog box item will trigger an OnChange event; otherwise, <c>false</c>.</value>
 		/// <example>
 		/// <remarks>
-		/// <para>Applicable only when <see cref="Type"/> is set to either Button, Calendar, Checkbox, CheckBoxList, DropDown, Numeric, PasswordBox (from DataMiner 9.6.6 onwards), RadioButtonList (from DataMiner 9.6.6 onwards), TextBox (from DataMiner 9.5.3 onwards), Time or TreeView (from DataMiner 10.0.10 onwards).</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to either Button, Calendar, Checkbox, CheckBoxList, DropDown, Numeric, PasswordBox, RadioButtonList, TextBox, Time, or TreeView.</para>
 		/// <para>Note: A button will always trigger an OnChange event, regardless of what you specify for the WantsOnChange attribute.</para>
 		/// </remarks>
 		/// <code>
