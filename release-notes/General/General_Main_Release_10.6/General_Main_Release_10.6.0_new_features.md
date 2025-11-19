@@ -449,7 +449,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320] [ID 43440] [ID 43686] [ID 43720] [ID 43769] [ID 43797] [ID 43853] [ID 43934]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320] [ID 43440] [ID 43686] [ID 43720] [ID 43769] [ID 43797] [ID 43853] [ID 43934] [ID 44096]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
@@ -468,6 +468,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 43797: MR 10.6.0 - FR 10.5.11 -->
 <!-- RNs 43853: MR 10.6.0 - FR 10.5.12 -->
 <!-- RNs 43934: MR 10.6.0 - FR 10.5.12 -->
+<!-- RNs 44096: MR 10.6.0 - FR 10.6.1 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
@@ -485,6 +486,7 @@ All configuration settings are stored in the *ai_rad_models_v2* database table, 
 >
 > - A RAD parameter group will be hosted on the DMA on which it was created, even after some of the parameters in the group were swarmed to other DMAs.
 > - Whenever you delete an element that is being used in one or more RAD parameter groups, an error will immediately get logged, and the parameter groups containing parameters from that deleted element will be marked as "not monitored".
+> - When SLAnalytics starts up, it checks whether the configured relational anomaly groups are still valid. In other words, it checks whether the elements and parameters in those groups still exist and are still trended. Note that, if at least one parameter in a group is no longer valid, and if the group in question is a shared model group with multiple subgroups, SLAnalytics will still start the monitoring of the subgroups in which all parameters are still valid.
 
 ##### Average trending
 
