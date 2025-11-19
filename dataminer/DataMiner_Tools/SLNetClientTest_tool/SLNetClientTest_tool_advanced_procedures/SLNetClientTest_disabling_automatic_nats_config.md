@@ -149,7 +149,7 @@ The should_run_nats_node property is currently non-functional but may be support
 ### Deconstructing the manual config
 
 1. Set the `setmanualconfigflag` to false as shown in [Setting or Unsetting Manual BrokerGateway Configuration](#1-setting-or-unsetting-manual-brokergateway-configuration).
-1. Run [NATSRepair.exe](##resetting--repairing-the-brokergateway-nats-cluster) to reset your nats cluster to the default state.
+1. Run [NATSRepair.exe](xref:Investigating_NATS_Issues#resetting--repairing-the-brokergateway-nats-cluster) to reset your nats cluster to the default state.
 
 ## [Legacy SLNet-managed NAS/NATS](#tab/tabid-2)
 From DataMiner 10.2.0 [CU6]/10.2.8 onwards, you can enable the *NATSForceManualConfig* option so that NATS is not automatically configured in your DataMiner System. When you do so, you will need to configure a NATS cluster manually. There are two distinct methods to enable *NATSForceManualConfig*:
