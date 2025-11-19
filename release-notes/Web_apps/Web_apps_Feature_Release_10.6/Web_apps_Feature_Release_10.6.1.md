@@ -167,7 +167,7 @@ Because of a number of enhancements, overall performance of low-code apps has in
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-From now on, the *Pivot table* and *Group* components will no longer appear in lists of available visualizations, unless you use the `showAdvancedSettings=true` URL option.
+The *Pivot table* and *Group* components are being retired. From now on, both will no longer appear in lists of available visualizations, unless you use the `showAdvancedSettings=true` URL option.
 
 ### Fixes
 
