@@ -152,12 +152,13 @@ The `ApiTriggerOutput` object has the following properties:
 |--|--|--|
 | ResponseCode | int | The HTTP status code. See [ResponseCode](#responsecode). |
 | ResponseBody | string | Contains the response body as a string. The size of this response body is limited to 29 MB. |
-| ResponseBodyBytes | byte[] | Contains the response body as a byte[]. The size is limited to 29 MB. Takes precedence over ResponseBody when set. Available from DataMiner 10.6.1/10.7.0 onwards.|
+| ResponseBodyBytes | byte[] | Contains the response body as a byte[]. The size is limited to 29 MB. Takes precedence over *ResponseBody* when set. Available from DataMiner 10.6.1/10.7.0 onwards.<!-- RN 44158 -->|
 | ResponseHeaders | IHeaders | HTTP headers that will be added to the response. See [ResponseHeaders](#responseheaders). |
 
 > [!NOTE]
+>
 > - A valid output instance always has to be returned.
-> - A default Content-Type header is returned in every response, this is overridable, see [ResponseHeaders](#responseheaders):
+> - A default Content-Type header is returned in every response, but this is overridable (see [ResponseHeaders](#responseheaders)):
 >   - "application/json" for *ResponseBody*
 >   - "application/octet-stream" for *ResponseBodyBytes*
 
@@ -220,7 +221,7 @@ The headers listed below are **blocked** and will result in an error if you try 
 > [!NOTE]
 >
 > - The *ResponseHeaders* property can be used from DataMiner 10.5.12/10.6.0 onwards.<!-- RN 43705 -->
-> - By default, each response includes a *Content-Type* header set to "application/json" for string responses or "application/octet-stream" for bytes responses. This can be overridden if needed.<!-- RN 43960 -->
+> - By default, each response includes a *Content-Type* header set to "application/json" for string responses or set to "application/octet-stream" for bytes responses. This can be overridden if needed.<!-- RN 43960 -->
 > - Keep the size of headers and values limited. Hard limits depend on the version of your web server.
 > - Null values are not allowed. Use *string.Empty* when adding a header with an empty value.
 
