@@ -39,7 +39,7 @@ From now on, it will no longer be allowed to perform web-only upgrades with vers
 
 This means, that any DataMiner Agent on which you want to perform a web-only upgrade with version 10.6.x or above will first have to be upgraded to version 10.5.x or above.
 
-#### SLAnalytics RAD: GetRADSubgroupFitScoresResponseMessage will now return additional information regarding subgroups of a shared model group [ID 44108]
+#### Relational anomaly detection: GetRADSubgroupFitScoresResponseMessage will now return additional information regarding subgroups of a shared model group [ID 44108]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->
 

@@ -288,7 +288,7 @@ From now on, it will no longer be allowed to perform web-only upgrades with vers
 
 This means, that any DataMiner Agent on which you want to perform a web-only upgrade with version 10.6.x or above will first have to be upgraded to version 10.5.x or above.
 
-#### SLAnalytics RAD: GetRADSubgroupFitScoresResponseMessage will now return additional information regarding subgroups of a shared model group [ID 44108]
+#### Relational anomaly detection: GetRADSubgroupFitScoresResponseMessage will now return additional information regarding subgroups of a shared model group [ID 44108]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
@@ -305,6 +305,15 @@ In practical terms, this means that the subgroup's model fit score deviates from
 Before upgrading to this DataMiner release or above, you are expected to install the Microsoft .NET 10 hosting bundle.
 
 When you start a DataMiner upgrade procedure, from now on, a new prerequisite will verify whether Microsoft .NET 10 is installed on the system. If this is not the case, the upgrade will be canceled.
+
+#### Relational anomaly detection: AddRADParameterGroupMessage can now include a model training configuration [ID 44135]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+When you add or update a relational anomaly group by means of an `AddRADParameterGroupMessage`, you can now pass along the training configuration of the model that will be used by that group.
+
+- When you added a group, the configuration you passed along will be used for the initial training of the model.
+- When you updated a group, the configuration you passed along will be used to retrain the model.
 
 ### Fixes
 
