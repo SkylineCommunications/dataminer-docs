@@ -401,3 +401,11 @@ When run on the offline agent of a Failover system, the Security Advisory BPA te
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 In some cases, SLDataMiner could leak memory when documents were being handled.
+
+#### SLNet queues listed in log files would incorrectly exceed the actual number of queues [ID 44130]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+In some cases, the number of awaited SLNet queues listed in the log files would incorrectly exceed the actual number of awaited queues.
+
+Also, the `BlockUntilAllInFlightEventsWereHandled` method will no longer be called when no work has to be done afterwards.

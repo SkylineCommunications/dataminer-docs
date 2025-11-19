@@ -771,6 +771,14 @@ From now on, when an invalid `<Database>` tag is found in the *Db.xml* file duri
 
 When run on the offline agent of a Failover system, the Security Advisory BPA test would show an incorrect result after checking the status of port 5100 of the firewall.
 
+#### SLNet queues listed in log files would incorrectly exceed the actual number of queues [ID 44130]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+In some cases, the number of awaited SLNet queues listed in the log files would incorrectly exceed the actual number of awaited queues.
+
+Also, the `BlockUntilAllInFlightEventsWereHandled` method will no longer be called when no work has to be done afterwards.
+
 #### Problem when an element with an active filtered table subscription was swarmed to the DMA on which it was already located [ID 44150]
 
 <!-- MR 10.6.0 - FR 10.5.12 [CU0] -->
