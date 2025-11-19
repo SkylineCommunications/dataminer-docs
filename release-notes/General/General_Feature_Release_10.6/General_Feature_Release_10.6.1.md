@@ -270,6 +270,16 @@ When a backup package was being created, up to now, the temporary file would be 
 
 To ensure that all alarm property updates are handled consistently, whatever the source of the alarm (DataMiner System, Correlation, Analytics, etc.), messages sent out following an alarm property update will now always include a reference to the base alarm of the alarm in question.
 
+#### Relational anomaly detection: Valid subgroups of a shared model group will be monitored when other subgroup are invalid [ID 44096]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+When SLAnalytics starts up, it checks whether the configured relational anomaly groups are still valid. In other words, it checks whether the elements and parameters in those groups still exist and are still trended.
+
+Up to now, whenever at least one parameter in a group was no longer valid, SLAnalytics would not start the monitoring of that entire group.
+
+From now on, if at least one parameter in a group is no longer valid, and if the group in question is a shared model group with multiple subgroups, SLAnalytics will still start the monitoring of the subgroups in which all parameters are still valid.
+
 #### DataMiner upgrade: Web-only upgrades with version 10.6.x or above will now require the DMA to have version 10.5.x or above [ID 44103]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->
