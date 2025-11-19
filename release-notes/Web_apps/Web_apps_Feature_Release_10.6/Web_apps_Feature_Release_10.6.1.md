@@ -163,6 +163,16 @@ From now on, that link will only appear in the Apps menu of a web app when the D
 
 Because of a number of enhancements, overall performance of low-code apps has increased.
 
+#### Low-Code Apps - Templates: Enhanced 'Browse templates' window [ID 44123]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When, in a low-code app, you are editing a component that uses templates, you can click the *Browse templates* button to select a template to be applied.
+
+From now on, the *Browse templates* window will contain a search box that allows you to search for a specific template by name.
+
+Also, you will be able to specify whether you want the list to show custom templates, preset templates, or both.
+
 #### Dashboards/Low-Code Apps: 'Pivot table' and 'Group' components will only be visible when using the 'showAdvancedSettings=true' URL option [ID 44128]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
