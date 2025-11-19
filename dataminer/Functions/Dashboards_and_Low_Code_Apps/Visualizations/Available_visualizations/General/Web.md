@@ -37,7 +37,13 @@ The web component supports two main types of content:
 
 ### Configuring a video thumbnail
 
-You can configure the web component to display a video stream based on an image URL. To do so, configure the URL similar to the value of the *Link* shape data field when you [configure a video thumbnail in Visual Overview](xref:Linking_a_shape_to_a_video_thumbnail).
+You can configure the web component to display a video stream based on an image URL:
+
+1. Select the web component and navigate to the *Settings* pane.
+
+1. Under *General*, set *Type* to `Webpage`.
+
+1. In the *URL* box, configure the URL (...).
 
 ### Embedding online video streams
 
