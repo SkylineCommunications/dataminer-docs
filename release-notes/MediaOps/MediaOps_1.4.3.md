@@ -33,3 +33,11 @@ Up to now, for job node configuration parameters of type number discrete, no val
 #### Resource Studio: Configuration parameters of type text included in capabilities overview [ID 44153]
 
 In the capabilities overview, configuration parameters were shown if they were of type text, even though this should not be the case.
+
+#### Scheduling: Default values not saved for configuration parameters of type discrete [ID 44175]
+
+For configuration parameters of type discrete (number or text), the default value was not saved unless users first changed the value to something else and then changed it to the default value again.
+
+#### Resource Studio: Configuration overview showed raw value for parameters of type discrete [ID 44177]
+
+When the default value was provided for a configuration parameter of type discrete (number or text), the raw default value was shown in the configuration overview instead of the display value.
