@@ -121,7 +121,7 @@ From now on, these query buttons will clearly be visible, whatever the color of 
 
 The Jobs app has been declared End of Life. On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer appear on the DataMiner landing page.
 
-#### DataMiner web applications will now by default use GQI DxM for GQI-related operations [ID 44058]
+#### DataMiner web applications will now by default use GQI DxM for GQI-related operations [ID 44058] [ID 44134]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
@@ -134,6 +134,9 @@ If you want the web applications to continue to use the SLHelper process for GQI
     <add key="gqi:useDxM" value="false" />
 </appSettings>
 ```
+
+> [!NOTE]
+> Currently, the GQI DxM cannot be used on Dashboard Gateway servers yet.
 
 #### Interactive Automation scripts: UI version will now be set to WebUIVersion.V2 by default [ID 44059]
 
