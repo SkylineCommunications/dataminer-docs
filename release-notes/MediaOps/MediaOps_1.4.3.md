@@ -41,3 +41,7 @@ For configuration parameters of type discrete (number or text), the default valu
 #### Resource Studio: Configuration overview showed raw value for parameters of type discrete [ID 44177]
 
 When the default value was provided for a configuration parameter of type discrete (number or text), the raw default value was shown in the configuration overview instead of the display value.
+
+#### Scheduling: Red hand icon still shown after providing all mandatory values when adding node to job [ID 44179]
+
+When a new node was added to a job and all mandatory configuration values assigned to the pool had been provided, it could occur that the red hand icon continued to be shown, even though this should not be the case.
