@@ -185,10 +185,10 @@ On UDP, every packet will have the following extra header bytes:
 > [!NOTE]
 >
 > - This option is only applicable for connections of type smart-serial.
-> - smartIpHeader cannot be used together with the packetInfo communication option or with headers and trailers.
-> - From DataMiner 9.6.12 (RN 23342) onwards, the smartIpHeader option is supported in cases where an element with a smart serial connection using IP/UDP is acting as a server and multiple clients send data to the element simultaneously.
+> - *smartIpHeader* cannot be used together with the *packetInfo* communication option or with headers and trailers.
 
-See also [Configuring a smart-serial connection as a server](xref:ConnectionsSmartSerialServer)
+> [!TIP]
+> See also: [Configuring a smart-serial connection as a server](xref:ConnectionsSmartSerialServer)
 
 ### useAgentBinding
 
