@@ -651,14 +651,6 @@ When a backup package was being created, up to now, the temporary file would be 
 > - When DataMiner and Cassandra are installed on the same machine, and the Cassandra data directory is on the C drive, the temporary snapshot for Cassandra will be created in that data directory before it is added to the backup package on the target path. This is default Cassandra behavior. If you wish to avoid this, move the Cassandra data directory to another drive, or consider moving to STaaS or self-managed clustered storage as Cassandra Single is End of Engineering.
 > - Backups for which only a network path has been specified may take a bit more time as the temporary file will now be created on that network path. Backups for which both a local path and a network path have been specified will not take longer as the temporary file will be created on the local path and then simply copied to the network path.
 
-#### DataMiner upgrade: New prerequisite will check whether .NET 10 is installed [ID 44121]
-
-<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
-
-Before upgrading to this DataMiner release or above, you are expected to install the Microsoft .NET 10 hosting bundle.
-
-When you start a DataMiner upgrade procedure, from now on, a new prerequisite will verify whether Microsoft .NET 10 is installed on the system. If this is not the case, the upgrade will be canceled.
-
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]

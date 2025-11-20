@@ -65,7 +65,7 @@ Because of a number of enhancements, SLASPConnection will now detect more quicke
 
 #### DataMiner upgrade: New prerequisite will check whether .NET 10 is installed [ID 44121]
 
-<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 Before upgrading to this DataMiner release or above, you are expected to install the Microsoft .NET 10 hosting bundle.
 
