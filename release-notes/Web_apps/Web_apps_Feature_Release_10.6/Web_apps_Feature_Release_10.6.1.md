@@ -273,3 +273,11 @@ From now on, an export to CSV will always be performed synchronously. In other w
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 Up to now, it would not be possible to generate a PDF report if a trend graph with valid data was followed by a trend graph without valid data.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Users without edit permission would incorrectly not be allowed to move nodes [ID 44154]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, in a low-code app, users without permission to edit low-code apps would incorrectly not be allowed to move nodes in a node edge graph component.
+
+From now on, users with permission to view low-code apps will be allowed to moved nodes. However, if the node edge graph component is using Layered positioning, the new node positions will not be stored. New node positions will only be stored when the user has edit permission.
