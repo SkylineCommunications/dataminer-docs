@@ -74,13 +74,11 @@ If [BrokerGateway](xref:BrokerGateway_Migration) is enabled, specify the followi
 - **APIKeyPath**: The file path to the *appsettings.runtime.json* file containing the private key. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
 
   > [!NOTE]
-  > This setting is available from Data Aggregator version 3.2.0 onwards.
-
-  > [!NOTE]
-  > When you make the following changes to a DMS and the path is a local file path, you will need to replace the *appsettings.runtime.json* file:
   >
-  > - Changing the IP address of one or more DataMiner Agents.
-  > - Adding or removing one or more DataMiner Agents to/from the DMS
+  > - This setting is available from Data Aggregator version 3.2.0 onwards.
+  > - If a local file path is used, you will need to replace the *appsettings.runtime.json* file whenever you make the following changes to the DMS:
+  >   - Changing the IP address of one or more DataMiner Agents.
+  >   - Adding or removing one or more DataMiner Agents to/from the DMS.
 
 ### DMS without BrokerGateway
 
@@ -93,7 +91,7 @@ If the DMS does not use [BrokerGateway](xref:BrokerGateway_Migration) yet, speci
 - **CredsFile**: The path to the *.creds* file containing the authentication information. On a DataMiner Agent, you can typically find this here: `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`.
 
   > [!NOTE]
-  > When you make the following changes to a DMS and the path is a local file path, you will need to replace the *.creds* file:
+  > If a local file path is used, you will need to replace the *.creds* file whenever you make the following changes to the DMS:
   >
   > - Changing the IP address of one or more DataMiner Agents.
   > - Adding or removing one or more DataMiner Agents to/from the DMS.
