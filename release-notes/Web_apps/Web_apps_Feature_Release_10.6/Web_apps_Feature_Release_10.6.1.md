@@ -286,4 +286,4 @@ From now on, users with permission to view low-code apps will be allowed to move
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-In some cases, when an *Execute a script* action had been triggered by means of a header bar button, the post actions would not be able to link the script's output values.
+Up to now, when an *Execute a script* action had been triggered by means of a header bar button, the post actions would not be able to link the script's output values.
