@@ -23,7 +23,7 @@ Below you can find an overview of the different methods that can be used to depl
 <a id="fn_2"></a>(2) "Launcher" is an alternative name for the [DataMiner Cube start window](xref:Using_the_desktop_app).<br>
 <a id="fn_3"></a>(3) Updates from DMA only.<br>
 <a id="fn_4"></a>(4) Updates from DMA and dataminer.services (see [Managing the start window of the desktop app](xref:Managing_the_start_window)).<br>
-<a id="fn_5"></a>(5) CefSharp is being phased out.
+<a id="fn_5"></a>(5) CefSharp is being phased out. From DataMiner Cube 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards, WebView2 is used instead by default.
 
 ## Launcher installation
 
@@ -73,6 +73,8 @@ Below you can find an overview of the different methods that can be used to depl
 
 - Recommended when users have no permission to download or execute new applications.
 
+- Does not include the CefSharp web browser. For older Cube versions prior to DataMiner Cube 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9, this will require a separate installation. See [CefSharp MSI](#cefsharp-msi).
+
 - Only a single executable needs to be allowed on the Windows Firewall.
 
 - No support for automatic updates.
@@ -109,14 +111,17 @@ Below you can find an overview of the different methods that can be used to depl
 
 ## CefSharp MSI
 
-- Whatever Cube deployment method you use, you can install the CefSharp web browser plugin using one of the following packages.
+> [!NOTE]
+> The CefSharp web browser is being phased out. From DataMiner Cube 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards, WebView2 is used instead by default.
+
+- For Cube versions where the CefSharp web browser is still used, installing the CefSharp web browser plugin avoids the need for each individual user to download the CefSharp web browser plugin from a DMA.
+
+- Prior to DataMiner Cube 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9, installing the CefSharp web browser plugin is mandatory when you use the shared MSI deployment.
+
+- You can install the CefSharp web browser plugin using one of the following packages.
 
   - Use [CefSharp v81](https://community.dataminer.services/download/dataminer-cube-msi-cefsharp-v81/) to installs CefSharp v81 on clients where you installed DataMiner Cube v10.2.2 using the Cube MSI installer.
   - Use [CefSharp v96](https://community.dataminer.services/download/dataminer-cube-msi-cefsharp-v96/) to install CefSharp v96 on clients where you installed DataMiner Cube v10.2.0 or v10.2.3 and above using the Cube MSI installer.
-
-- Installing the CefSharp web browser plugin is mandatory when you opted for the shared MSI deployment.
-
-- Installing the CefSharp web browser plugin avoids the need for each individual user to download the CefSharp web browser plugin from a DMA.
 
 - Windows 2012 R2 requires Microsoft Visual C++ Runtime 2015 to be installed separately.
 
