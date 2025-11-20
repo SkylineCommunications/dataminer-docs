@@ -11,14 +11,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 20 November 2025 - Enhancement - Admin - Usage - Pie chart slices sorted by usage
 
-To make it easier to see which systems or features use the most, the slices in the pie chart are now sorted by usage in clockwise order.
+In the Admin app, an enhancement has been implemented to the Usage page. To make it easier to see which systems or features use the most DataMiner credits, the slices in the pie chart are now sorted by usage in clockwise order.
 
 ### 20 November 2025 - Enhancement - Admin - Usage - Hide credit cost for "Automation" and "Connectors"
 
-While the pricing for the "Automation" and "Connectors" categories is being adjusted, the usage page no longer shows the credit cost for these categories on the organization usage page.
-The panels now display "- credits", the pie charts ignore these categories, and the table no longer shows the credits column for these categories.
+While the pricing for the "Automation" and "Connectors" categories is being adjusted, the Usage page for an organization in the Admin app no longer shows the credit cost for these categories. The panels related to these categories now display "- credits", the pie charts ignore these categories, and the table no longer shows the credits column for these categories.
 
-Note: You can still see the credit cost for "Connectors" on the DataMiner System usage page.
+Note that on the Usage page for a DataMiner System, you can still see the credit cost for "Connectors".
 
 ### 13 November 2025 - Fix - Admin - Usage - Data not shown for deleted systems
 
