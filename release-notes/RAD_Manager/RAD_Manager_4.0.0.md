@@ -17,7 +17,7 @@ A major redesign of the RAD Manager main screen has been implemented to enhance 
 
 #### Historical anomalies panel [ID 43829]
 
-From DataMiner version 10.5.12/10.6.0 onwards <!--RN43853-->, the historical anomalies for each relational anomaly group can be viewed within RAD Manager. In addition, the number of historical anomalies detected per group or subgroup is shown in the relational anomaly groups grid on the left-hand side of the main screen.
+From DataMiner version 10.5.12/10.6.0 onwards<!--RN43853-->, the historical anomalies for each relational anomaly group can be viewed within RAD Manager. In addition, the number of historical anomalies detected per group or subgroup is shown in the relational anomaly groups grid on the left-hand side of the main screen.
 
 #### Support for shared model groups [ID 44091]
 
