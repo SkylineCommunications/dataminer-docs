@@ -6,8 +6,6 @@ uid: GetBookings
 
 Use this method to retrieve all bookings matching a filter.
 
-<!-- Available from DataMiner 10.0.3 onwards. -->
-
 ## Input
 
 | Item       | Format  | Description                                                          |

@@ -4,7 +4,7 @@ uid: GetInformationEventsSorted
 
 # GetInformationEventsSorted
 
-Use this method to retrieve the information events for a specified timespan, sorted according to a particular alarm state, start index and count filter, and ordered by a particular Alarm Console column.
+Use this method to retrieve the information events for a specified time span, sorted according to a particular alarm state, start index and count filter, and ordered by a particular Alarm Console column.
 
 ## Input
 

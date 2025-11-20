@@ -6,8 +6,6 @@ uid: GetAlarmPagesV2
 
 Use this method to retrieve a number of filtered alarms in pages, grouped by time (default) or severity, as well as the alarm cache status.
 
-<!-- Available from DataMiner 10.0.7 onwards. -->
-
 ## Input
 
 | Item             | Format | Description                                                               |

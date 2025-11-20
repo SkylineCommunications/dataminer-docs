@@ -6,8 +6,6 @@ uid: GetButtonPanelInfo
 
 Use this method to retrieve the parameter IDs of the parameters containing information on a button panel.
 
-<!-- Available from DataMiner 9.6.11 onwards. -->
-
 ## Input
 
 | Item        | Format  | Description                                            |

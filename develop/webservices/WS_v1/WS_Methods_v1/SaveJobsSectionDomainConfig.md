@@ -4,7 +4,12 @@ uid: SaveJobsSectionDomainConfig
 
 # SaveJobsSectionDomainConfig
 
-This method is deprecated. <!-- From DataMiner 10.0.9 onwards -->Use [UpdateDomainSectionDefinitionConfiguration](xref:UpdateDomainSectionDefinitionConfiguration) instead.
+This method is deprecated. Use [UpdateDomainSectionDefinitionConfiguration](xref:UpdateDomainSectionDefinitionConfiguration) instead.
+
+> [!CAUTION]
+>
+> - The Jobs app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
+> - The Jobs app is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 ## Input
 
