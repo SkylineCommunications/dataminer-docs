@@ -6,8 +6,6 @@ uid: GetAlarmsV2
 
 Retrieves a number of filtered alarms, along with the alarm cache status.
 
-<!-- Available from DataMiner 10.0.7 onwards. -->
-
 ## Input
 
 | Item             | Format | Description                                                               |
