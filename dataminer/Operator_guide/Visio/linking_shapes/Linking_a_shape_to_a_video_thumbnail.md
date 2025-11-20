@@ -24,4 +24,4 @@ Add a shape data field of type **Link** to the shape, and configure one of the f
 #http://<DMAIP>/VideoThumbnails/Video.htm?VideoServerParameters
 ```
 
-For more information, see [Video thumbnails](xref:Video_Thumbnails).
+For more information, see [Video thumbnails](xref:About_Video_Thumbnails).

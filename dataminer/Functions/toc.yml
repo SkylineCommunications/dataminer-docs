@@ -1339,4 +1339,6 @@ items:
           - name: Retrieving elements in alarm
             topicUid: UD_APIs_Elements_in_alarm_tutorial
   - name: Video thumbnails
-    topicUid: Video_Thumbnails
+    items:
+      - name: About video thumbnails
+        topicUid: About_Video_Thumbnails
