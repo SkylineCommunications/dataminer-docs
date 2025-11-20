@@ -114,6 +114,14 @@ Up to now, SLProtocol would silently fail to parse the *stuffing* attribute of t
 
 On a newly created Failover system, in some cases, the TLS handshakes of the NATS connections would fail due to the virtual IP address not being updated in the TLS certificate.
 
+#### Problem when importing Visio files associated with views or services via a .dmimport package [ID 44065]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, an issue would prevent Visio files associated with views or services from being imported via a *.dmimport* package.
+
+This issue did not occur when importing Visio files associated with connectors via a *.dmprotocol* package.
+
 #### Problem when importing a connector that contained information templates of which the name contained dots [ID 44079]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->

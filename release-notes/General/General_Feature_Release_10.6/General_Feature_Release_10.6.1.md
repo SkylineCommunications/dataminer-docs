@@ -378,6 +378,14 @@ From now on, when an invalid `<Database>` tag is found in the *Db.xml* file duri
 
 On a newly created Failover system, in some cases, the TLS handshakes of the NATS connections would fail due to the virtual IP address not being updated in the TLS certificate.
 
+#### Problem when importing Visio files associated with views or services via a .dmimport package [ID 44065]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, an issue would prevent Visio files associated with views or services from being imported via a *.dmimport* package.
+
+This issue did not occur when importing Visio files associated with connectors via a *.dmprotocol* package.
+
 #### SLASPConnection could stop working while sending an email report with a dashboard attached [ID 44068]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
