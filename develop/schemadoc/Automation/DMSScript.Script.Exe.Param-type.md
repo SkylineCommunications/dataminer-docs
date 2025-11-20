@@ -14,8 +14,8 @@ When type is "csharp" the following values are possible:
 - ref: Specifies that this parameter holds the DLL references.
 - scriptRef: Specifies a reference to another script. The expected format is the name of the Automation script where the script resides followed by a colon and the name of the referenced script (this is the name as specified in the libraryName attribute of the script). To refer to a script in the current Automation script, the [AutomationScriptName] placeholder can be used. E.g. "[AutomationScriptName]:MyCSharpAction".
 - debug: Specifies that this parameter holds the compile in debug mode flag.
-- preCompile: Specifies that this C# action must be compiled as a library. The value is either "true" or "false". Default: "false". Supported since DataMiner 9.6.13.
-- libraryName: Specifies the name of the library. Supported since DataMiner 9.6.13.
+- preCompile: Specifies that this C# action must be compiled as a library. The value is either "true" or "false". Default: "false".
+- libraryName: Specifies the name of the library.
 
 When type is "script" the following values are possible:
 

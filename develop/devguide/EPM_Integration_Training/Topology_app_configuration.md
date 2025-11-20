@@ -17,8 +17,6 @@ From DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards, multiple front-en
 
 ## Front-end element configuration
 
-<!-- Supported for one front-end element from DataMiner 9.6.7 onwards (RN 21711); multiple front-end support added with RN 42221 -->
-
 To have an EPM tab in the Surveyor in Cube, the DMS must be able to recognize the front-end elements. To configure this:
 
 1. Add a parameter of type "double" named "ElementManagerType" to the EPM Manager protocol.
