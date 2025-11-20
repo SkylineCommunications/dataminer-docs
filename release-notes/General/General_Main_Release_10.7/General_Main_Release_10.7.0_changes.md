@@ -56,3 +56,11 @@ In practical terms, this means that the subgroup's model fit score deviates from
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 Up to now, SLAnalytics would incorrectly not receive any "swarming complete" notifications for swarmed DVE child elements. As a result, alarm focus calculations for DVE child elements would be restarted from scratch instead of being fetched from the database.
+
+#### Service & Resource Management: A capability could incorrectly be set to a null value [ID 44125]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+In some cases, a capability could incorrectly be set to a null value.
+
+From now on, when a capability is booked, it will no longer be possible to set its value to null.

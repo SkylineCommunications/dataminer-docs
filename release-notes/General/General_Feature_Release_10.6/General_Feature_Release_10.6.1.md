@@ -419,6 +419,14 @@ When run on the offline agent of a Failover system, the Security Advisory BPA te
 
 In some cases, SLDataMiner could leak memory when documents were being handled.
 
+#### Service & Resource Management: A capability could incorrectly be set to a null value [ID 44125]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+In some cases, a capability could incorrectly be set to a null value.
+
+From now on, when a capability is booked, it will no longer be possible to set its value to null.
+
 #### SLNet queues listed in log files would incorrectly exceed the actual number of queues [ID 44130]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
