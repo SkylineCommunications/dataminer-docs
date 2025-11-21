@@ -86,6 +86,8 @@ items:
         topicUid: VerifyNatsCluster
       - name: Verify NATS is Running
         topicUid: VerifyNatsIsRunning
+      - name: Verify No Annotations
+        topicUid: Verify_No_Annotations
       - name: Verify No Legacy Correlation
         topicUid: VerifyNoLegacyCorrelation
       - name: Verify No Legacy Reports Dashboards

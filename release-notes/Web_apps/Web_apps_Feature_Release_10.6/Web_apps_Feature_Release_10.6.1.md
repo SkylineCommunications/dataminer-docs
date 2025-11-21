@@ -33,6 +33,31 @@ Also, the default file name has been changed from `Report.pdf` to `<dashboard na
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.6.0/10.6.1 or newer.
 
+#### Dashboards app: Private dashboards can now also be shared via cloud share [ID 44067]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, it was only possible to share public dashboards via cloud share. From now on, it will also be possible to share private dashboards via cloud share.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Read/Edit mode [ID 44078]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+From now on, a node edge graph component can be switched from *Read* mode to *Edit* mode and back. Only when in *Edit* mode will it be possible to reposition nodes.
+
+Also, custom positioning mode has now been replaced by the following two positioning modes.
+
+| Mode | Description  |
+|------|--------------|
+| Layered        | In this mode, the component will automatically arrange nodes and edges in the most logical way.<br>When the component is in *Edit* mode, nodes can be repositioned by hand.<br>Note: The new node positions will only be stored when the user has edit permission. |
+| Linked to data | In this mode, nodes will be positioned automatically based on their data.<br>When the component is in *Edit* mode, nodes can be repositioned by hand.<br>By default, the new node positions will not be stored. |
+
+> [!NOTE]
+> In existing node edge components, the positioning modes will be migrated as follows:
+>
+> - When previously set to *Custom positioning*, the component will now by default be set to *Edit* mode with *Layered* positioning.
+> - When previously set to *Layered* or *Linked to data*, the component will now by default be set to *Read* mode.
+
 ## Changes
 
 ### Enhancements
@@ -42,6 +67,14 @@ Also, the default file name has been changed from `Report.pdf` to `<dashboard na
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 When a Line & area chart component was displaying trend data of aggregation parameters, up to now, it was not possible to export that trend data to a CSV file. Exporting that data is now supported.
+
+#### Low-Code Apps - Form component: Clearer error will now appear when a DOM instance contains an incorrect value for a DomInstanceFieldDescriptor or DomInstanceValueFieldDescriptor [ID 44017]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When, in a low-code app, a DOM instance contained an invalid value for a DomInstanceFieldDescriptor or DomInstanceValueFieldDescriptor, up to now, a `The item no longer exists` error message would appear on top of the field in question. This error message has now been changed to `Instance was not found`.
+
+When relevant, this error message will also mention that one or more DOM definition IDs are invalid.
 
 #### Dashboards app: Enhanced error handling when generating PDF reports [ID 44019]
 
@@ -54,6 +87,25 @@ Because of a number of enhancements, error handling has improved when generating
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 In the Dashboards app and all low-code apps, the name *DataMiner Copilot* has now been replaced by *DataMiner Assistant*.
+
+#### Dashboards/Low-Code Apps - Form component: Datetime values displayed in the same way as in the Table Component [ID 44039]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+On *Form* components, datetime values will now be displayed in the same way as in *Table* components.
+
+The datetime format is based on the regional settings of the web browser. If a browser is set to e.g. "English (US)", datetime values will be displayed as "12/31/2029 8:00 PM".
+
+#### Low-Code Apps - Templates: Preset table component template [ID 44040]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When, in a low-code app, you click the *Browse templates* button while editing a component that uses templates, a preset table component template will now appear in the list of templates.
+
+When you apply that preset template in a component that uses templates, you can then configure it further using the template editor.
+
+> [!NOTE]
+> This preset template will only be available in low-code apps, not in dashboards.
 
 #### Dashboards/Low-Code Apps: Enhanced visibility of query buttons in the edit pane [ID 44048]
 
@@ -68,6 +120,67 @@ From now on, these query buttons will clearly be visible, whatever the color of 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 The Jobs app has been declared End of Life. On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer appear on the DataMiner landing page.
+
+#### DataMiner web applications will now by default use GQI DxM for GQI-related operations [ID 44058] [ID 44134]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, by default, DataMiner web applications used the SLHelper process for GQI-related operations. From now on, they will by default use the GQI DxM instead.
+
+If you want the web applications to continue to use the SLHelper process for GQI-related operations, you will have to set the `gqi:useDxM` key to false in the `C:\Skyline DataMiner\Webpages\API\Web.config` file. See the following example.
+
+```xml
+<appSettings>
+    <add key="gqi:useDxM" value="false" />
+</appSettings>
+```
+
+> [!NOTE]
+> Currently, the GQI DxM cannot be used on Dashboard Gateway servers yet. Dashboard Gateway servers will continue to use SLHelper, even if the `gqi:useDxM` key is set to true.
+
+#### Interactive Automation scripts: UI version will now be set to WebUIVersion.V2 by default [ID 44059]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When connected to a DataMiner Agent with main release version 10.6.0 or feature release 10.5.12 (or above), from now on, interactive Automation scripts executed in a web app will use the new UI version (V2) by default.
+
+This also means that, when you set `engine.WebUIVersion` to `WebUIVersion.Default` in a script, the UI version will now be set to the new UI version (V2).
+
+Note that, if you still want to use UI version V1 instead, you can set `engine.WebUIVersion` to `WebUIVersion.V1`. See the example below.
+
+```csharp
+engine.WebUIVersion = WebUIVersion.V1
+```
+
+#### Web apps: Apps menu item 'dataminer.services' will only appear when the DMA is connected to the cloud [ID 44104]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, when you opened the Apps menu of a web app (e.g. the Monitoring app), the top-most item would be a link to dataminer.services.
+
+From now on, that link will only appear in the Apps menu of a web app when the DataMiner Agent is connected to the cloud.
+
+#### Low-Code Apps: Enhanced performance [ID 44114]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Because of a number of enhancements, overall performance of low-code apps has increased.
+
+#### Dashboards/Low-Code Apps - Templates: Enhanced 'Browse templates' window [ID 44123]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When, in a dashboard or low-code app, you are editing a component that uses templates, you can click the *Browse templates* button to select a template to be applied.
+
+From now on, the *Browse templates* window will contain a search box that allows you to search for a specific template by name.
+
+Also, you will be able to specify whether you want the list to show custom templates, preset templates, or both.
+
+#### Dashboards/Low-Code Apps: 'Pivot table' and 'Group' components will only be visible when using the 'showAdvancedSettings=true' URL option [ID 44128]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+The *Pivot table* and *Group* components are being retired. From now on, both will no longer appear in lists of available visualizations, unless you use the `showAdvancedSettings=true` URL option.
 
 ### Fixes
 
@@ -135,8 +248,42 @@ Up to now, when an error message appeared in a Form component, that message woul
 
 From now on, when an error message appears, it will stay visible until an action is performed in the Form component or until a button is clicked.
 
+#### Interactive Automation scripts: Numeric values containing leading zeros would not update correctly [ID 44037]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+In interactive Automation scripts launched from a web app, up to now, numeric values containing leading zeros would not update correctly.
+
 #### DataMiner web apps authentication page: Problem logging in when using a Firefox browser [ID 44043]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 When you had opened the DataMiner web apps authentication page in a Firefox web browser, in some cases, an error could occur when you tried to log in to a web app.
+
+#### Dashboards/Low-Code Apps: An export to CSV could incorrect be started before the data had been loaded [ID 44064]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, in a *Line & area chart* component, it would incorrectly be possible to start an export to CSV before the data had been loaded.
+
+From now on, an export to CSV will always be performed synchronously. In other words, even when you click *Export to CSV* before the data has been loaded, the export operation will only start when all data has been loaded.
+
+#### Dashboards app: Problem when generating a PDF report if a trend graph with valid data was followed by a trend graph without valid data [ID 44143]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, it would not be possible to generate a PDF report if a trend graph with valid data was followed by a trend graph without valid data.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Users without edit permission would incorrectly not be allowed to move nodes [ID 44154]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, in a low-code app, users without permission to edit low-code apps would incorrectly not be allowed to move nodes in a node edge graph component.
+
+From now on, users with permission to view low-code apps will be allowed to moved nodes. However, if the node edge graph component is using Layered positioning, the new node positions will not be stored. New node positions will only be stored when the user has edit permission.
+
+#### Low-Code Apps: Post actions of an 'Execute a script' action would not be able to link the script's output values [ID 44157]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, when an *Execute a script* action had been triggered by means of a header bar button, the post actions would not be able to link the script's output values.

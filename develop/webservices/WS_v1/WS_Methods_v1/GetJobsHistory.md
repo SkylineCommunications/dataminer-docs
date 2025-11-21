@@ -6,7 +6,10 @@ uid: GetJobsHistory
 
 Use this method to retrieve all changes that were made to a job, with the most recent changes first.
 
-<!-- Available from DataMiner 10.0.11 onwards. -->
+> [!CAUTION]
+>
+> - The Jobs app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
+> - The Jobs app is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 ## Input
 

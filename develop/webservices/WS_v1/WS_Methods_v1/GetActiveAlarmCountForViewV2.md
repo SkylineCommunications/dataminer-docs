@@ -6,8 +6,6 @@ uid: GetActiveAlarmCountForViewV2
 
 Use this method to retrieve the number of active alarms on a view along with the alarm cache status.
 
-<!-- Available from DataMiner 10.0.7 onwards. -->
-
 ## Input
 
 | Item       | Format  | Description                                          |

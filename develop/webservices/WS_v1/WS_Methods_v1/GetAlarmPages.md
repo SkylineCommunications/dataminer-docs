@@ -6,15 +6,13 @@ uid: GetAlarmPages
 
 Use this method to retrieve filtered alarms in pages, grouped by time (default) or severity.
 
-<!-- Available from DataMiner 9.5.6 onwards. -->
-
 ## Input
 
 | Item | Format | Description |
 |--|--|--|
 | connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | filter | [DMAAlarmFilterV2](xref:DMAAlarmFilterV2) | The filter that the alarms must match. |
-| groupBy | String | Either “time” (default) or “severity”. |
+| groupBy | String | Either "time" (default) or "severity". |
 
 ## Output
 

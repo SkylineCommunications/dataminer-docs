@@ -355,7 +355,7 @@ uiBuilder.AppendBlock(numericBlock);
 ```
 
 > [!NOTE]
-> From DataMiner 9.5.5 onwards, you can specify the WantsOnChange property to have a small delay before a change is triggered by the numeric box itself, in order to avoid updates being sent as soon as a single character is changed in the numeric box. See [WantsOnChange](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange).
+> To have a small delay before a change is triggered by the numeric box itself, you can specify the [WantsOnChange](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange) property. This way, you can avoid updates being sent as soon as a single character is changed in the numeric box.
 
 **[WebUIVersion.V1](#ui-versions):**
 

@@ -4,7 +4,7 @@ uid: ConnectionsHttpParsingHtml
 
 # Parsing HTML
 
-Different approaches are possible for the retrieval of information from HTML documents. 
+Different approaches are possible for the retrieval of information from HTML documents.
 
 Depending on the use case, one method or the other might perform better. For example, in case a single value needs to be retrieved from a small HTML document, it is likely that the string-based method will outperform the other methods. However, as soon as multiple pieces of information need to be retrieved, the other methods may start to outperform the string-based methods. It is advised to execute some performance checking before you choose a specific approach.
 
@@ -72,6 +72,9 @@ This is an object-oriented approach to HTML parsing and querying.
 
 The HTML Agility Pack (HAP) provides an object-oriented approach for reading/writing HTML documents. Instead of treating the HTML as a hard-coded class, it treats it as a tree structure.
 
+> [!NOTE]
+> HtmlAgilityPack.dll (1.6.4) is included in the *ProtocolScripts* folder by default.<!-- RN 16746 -->
+
 ### Advantages
 
 - Good performance.
@@ -82,8 +85,8 @@ The HTML Agility Pack (HAP) provides an object-oriented approach for reading/wri
 
 ### Disadvantages
 
-- Requires an external DLL, which may not always be available.
 - Performance is worse than with string-based approaches. In cases where performance is very important, it is possible that a string-based approach should be used.
+- Requires an external DLL, which may not be available in legacy DataMiner versions.
 
 ### Recommendation
 
@@ -91,13 +94,13 @@ The HTML Agility Pack (HAP) provides an object-oriented approach for reading/wri
 
 ### HTML Agility Pack API
 
-For information about how to use the HTML Agility pack, refer to the HTML Agility Pack API page: http://html-agility-pack.net/api.
+For information about how to use the HTML Agility pack, refer to the HTML Agility Pack API page: <http://html-agility-pack.net/api>.
 
 For more information about XPath, refer to:
 
-- https://www.w3.org/TR/1999/REC-xpath-19991116/ (XML Path Language (XPath) Version 1.0)
-- https://www.w3schools.com/xml/xpath_intro.asp (W3Schools XPath tutorial)
-- http://videlibri.sourceforge.net/cgi-bin/xidelcgi (Online XPath Query Tester)
+- <https://www.w3.org/TR/1999/REC-xpath-19991116/> (XML Path Language (XPath) Version 1.0)
+- <https://www.w3schools.com/xml/xpath_intro.asp> (W3Schools XPath tutorial)
+- <http://videlibri.sourceforge.net/cgi-bin/xidelcgi> (Online XPath Query Tester)
 
 ## Examples
 
@@ -115,13 +118,10 @@ For more information about XPath, refer to:
 
   The options provided on document creation are used as follows:
 
-  - OptionFixNestedTags: If an error is detected when parsing LI, TR, TH, and TD tags, this option attempts to fix them enough for them to be loaded.
-  - OptionEmptyCollection: When using the SelectNodes method, this option makes it return empty collections instead of null, when the select fails. Avoids issues with NullPointerException.
+  - *OptionFixNestedTags*: If an error is detected when parsing LI, TR, TH, and TD tags, this option attempts to fix them enough for them to be loaded.
+  - *OptionEmptyCollection*: When using the SelectNodes method, this option makes it return empty collections instead of null, when the select fails. Avoids issues with NullPointerException.
 
   Once loaded, the data can be queried.
-
-    > [!NOTE]
-    > From DataMiner 9.5.0 [CU2]/9.5.5 (RN 16746) onwards, the HtmlAgilityPack.dll (1.6.4) is included in the ProtocolScripts folder by default.
 
 - **Accessing individual nodes**
 

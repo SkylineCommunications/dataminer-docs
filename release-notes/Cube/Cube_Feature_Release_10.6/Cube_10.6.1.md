@@ -20,11 +20,39 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
-*No new features have been added yet.*
+#### Trending: Trend graphs will now show relational anomalies [ID 43857]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+When you open a trend graph of a parameter with relational anomalies, from now on, these anomalies will be indicated by tags.
+
+Hovering over a tag button or right-clicking and selecting *Expand tags* will highlight the anomalies in orange.
+
+Additionally, a "+" icon will appear on the right of an anomaly tag in the following cases:
+
+- the tag indicates a multi-variate trend pattern match, or
+- not all parameters associated with the anomaly are displayed on the trend graph.
+
+Clicking a "+" icon will load all parameters associated with the multi-variate trend pattern or the anomaly.
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.6.0/10.5.12 or newer.<!-- RN 43720 -->
 
 ## Changes
 
 ### Enhancements
+
+#### System Center: Enhanced embedding of DOM definition-level security app on cloud-connected systems [ID 43975]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+A number of enhancements have been made to the way in which the DOM definition-level security app is embedded in System Center.
+
+Up to now, when you went to *System Center > DOM* while being connected to a cloud-connected DataMiner Agent, you had to click a hyperlink to open the app in a browser window.
+
+From now on, when you go to *System Center > DOM* while being connected to a cloud-connected DataMiner Agent running at least Main Release version 10.6.0 or Feature Release version 10.5.12, after entering your credentials, you will immediately see the app, fully embedded in System Center. The session will be kept alive until System Center is closed.
+
+Also, up to now, when you made a change in the embedded app and switched to another tab in System Center, that change would not be kept when you had not clicked the *Apply* button. From now on, all changes made in the embedded app will be kept until you close System Center.
 
 #### Trending: Double-clicking the alarm group of a multi-variate trend pattern will now open a trend graph showing all parameters involved in the multi-variate trend pattern [ID 43994]
 
@@ -59,4 +87,26 @@ Also, when an exception is thrown when Cube tries to use the MigrationManagerHel
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Automation: Not possible to save a script after changing the 'Wait for positive result for at most' option of an If condition [ID 44032]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+When, while editing an Automation script, you changed the *Wait for positive result for at most* option of an *If* condition, up to now, the *Save script* button would incorrectly remain disabled, preventing you from saving the script. The *Save script* button would only be enabled after you had made another change to the script.
+
+Also, up to now, it would incorrectly be possible to save a script to which you added an If block without any conditions. From now on, the *Add condition* selection box will have a red border until you add a condition.
+
+#### Visual Overview: Problem with [servicedefinitionfilter] placeholder [ID 44054]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+In a Visio file linked to a service, the [servicedefinitionfilter] placeholder can be used to refer to the row filter of an included table parameter.
+
+Up to now, in some cases, a primary key prefix, which is added to this filter for configuration purposes, would incorrectly not get removed before the filter was applied. From now on, this prefix will always be removed before the filter is applied.
+
+#### Service & Resource Management: Service Manager would incorrectly be registered each time you switched to another workspace [ID 44106]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+Up to now, the Service Manager would incorrectly be registered each time you switched to another workspace.
+
+From now on, the Service Manager will only be registered once.

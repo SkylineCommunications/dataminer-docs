@@ -603,6 +603,8 @@ items:
           topicUid: AdvancedDataMinerMediationLayerLinkingTableParameters
         - name: Data pages
           topicUid: AdvancedDataMinerMediationLayerDataPages
+      - name: Code pages
+        topicUid: AdvancedCodePages
     - name: Connector documentation
       topicUid: Connector_help_pages
       items:
@@ -966,6 +968,7 @@ items:
           - name: Linking rows to DataMiner objects
             topicUid: Ad_hoc_Metadata
           - name: Examples
+            topicUid: Ad_hoc_Examples
             items:
               - name: Forwarding dummy data to the GQI
                 topicUid: Forwarding_dummy_data_to_GQI

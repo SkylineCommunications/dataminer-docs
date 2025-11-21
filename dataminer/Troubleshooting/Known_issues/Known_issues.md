@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [QActions fail for element after uploading new protocol version](xref:KI_QActions_fail_after_upload_protocol_version) | From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards | | November 19, 2025 |
 | [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | | September 17, 2025 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
 | [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | | July 15, 2025 |
@@ -49,6 +50,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [QActions fail for element after uploading new protocol version](xref:KI_QActions_fail_after_upload_protocol_version) | From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards | | November 19, 2025 |
 | [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | | September 17, 2025 |
 | [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | | July 15, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
@@ -80,7 +82,7 @@ uid: Known_issues
 | [Offline Failover DMA not synchronized](xref:KI_offline_DMA_cannot_sync) | DataMiner 10.3.0 [CU11] to 10.4.0 [CU9]<br>DataMiner 10.4.2 to 10.4.12 | DataMiner 10.4.0 [CU10] and 10.5.1 | December 18, 2024 |
 | [LDAP/ActiveDirectory domain users no longer able to log in after upgrade](xref:KI_LDAP_users_unable_to_log_in_after_upgrade) | DataMiner 10.4.0 [CU4] to 10.4.0 [CU11]<br>DataMiner 10.4.7 to 10.5.1 | DataMiner 10.4.0 [CU12]/10.5.0/10.5.2 | December 13, 2024 |
 | [SNMPv3 elements not loaded correctly after upgrade](xref:KI_SNMPv3_elements_broken_after_upgrade) | DataMiner 10.4.9 to 10.4.12, after upgrade from 10.4.0 [CU6] or higher | DataMiner 10.5.0/10.5.1 | December 4, 2024 |
-| [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
+| [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.1.0 [CU17]/10.2.0 [CU5]/10.2.8 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
 | [nats-server.config file not included in DataMiner backups](xref:KI_nats-server_config_file_not_included_in_backups) | From DataMiner 10.2.0 [CU6]/10.2.8 onwards | DataMiner 10.4.11/10.5.0 | October 10, 2024 |
 | [Web apps experience frequent disconnects](xref:KI_Web_apps_experience_frequent_disconnects) | DataMiner 10.4.0 [CU6]<br>DataMiner 10.4.9 | DataMiner 10.4.0 [CU7]<br>DataMiner 10.4.10 | September 23, 2024 |
 | [DataMiner incorrectly reports a Cassandra issue when another database fails](xref:KI_DataMiner_reports_Cassandra_issue_when_another_database_fails) | From DataMiner 10.4.0 onwards | DataMiner 10.4.11/10.5.0 | September 19, 2024 |
@@ -125,7 +127,7 @@ uid: Known_issues
 | [Cube displays incorrect offload configuration for real-time trending data](xref:KI_Cube_displays_incorrect_offload_configuration_for_real-time_trending_data) | From DataMiner Cube 10.3.7/10.4.0 onwards | DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | March 20, 2025 |
 | ["Failed getting progress" notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | March 6, 2025 |
 | [Reuploaded DVE protocol version is incorrectly set as production version](xref:KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version) | DataMiner 10.2.0 [CU16]/10.3.0 [CU4]/10.3.7 to DataMiner 10.4.0 [CU11]/10.5.2 | DataMiner 10.4.0 [CU12]/10.5.3 | December 18, 2024 |
-| [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
+| [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.1.0 [CU17]/10.2.0 [CU5]/10.2.8 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
 | [nats-server.config file not included in DataMiner backups](xref:KI_nats-server_config_file_not_included_in_backups) | From DataMiner 10.2.0 [CU6]/10.2.8 onwards | DataMiner 10.4.11/10.5.0 | October 10, 2024 |
 | [ButtonState shapes in Visual Overview fail to hide as expected](xref:KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected) | DataMiner Cube versions prior to 10.4.2425.2536<br>DataMiner 10.4.8, if Cube client does not have internet access | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 | August 13, 2024 |
 | [Process crashes when trying to connect to MySQL database](xref:KI_MySQL_Unhandled_Exception) | From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 <br>onwards | DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 | July 15, 2024 |
@@ -187,7 +189,7 @@ uid: Known_issues
 | [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | DataMiner 10.5.0 [CU10]/10.6.1 | August 1, 2025 |
 | [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | July 16, 2025 |
 | [Reuploaded DVE protocol version is incorrectly set as production version](xref:KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version) | DataMiner 10.2.0 [CU16]/10.3.0 [CU4]/10.3.7 to DataMiner 10.4.0 [CU11]/10.5.2 | DataMiner 10.4.0 [CU12]/10.5.3 | December 18, 2024 |
-| [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
+| [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.1.0 [CU17]/10.2.0 [CU5]/10.2.8 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
 | [nats-server.config file not included in DataMiner backups](xref:KI_nats-server_config_file_not_included_in_backups) | From DataMiner 10.2.0 [CU6]/10.2.8 onwards | DataMiner 10.4.11/10.5.0 | October 10, 2024 |
 | [ButtonState shapes in Visual Overview fail to hide as expected](xref:KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected) | DataMiner Cube versions prior to 10.4.2425.2536<br>DataMiner 10.4.8, if Cube client does not have internet access | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 | August 13, 2024 |
 | [Timetrace data is no longer written during Cassandra Cluster migration](xref:KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration) | Cassandra Cluster setups | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 | February 29, 2024 |
@@ -251,7 +253,7 @@ uid: Known_issues
 | [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | DataMiner 10.5.0 [CU10]/10.6.1 | August 1, 2025 |
 | [SLScripting crash when using JScript QActions](xref:KI_SLScripting_crash_JScript_QActions) | DataMiner Systems running on Windows 11 24H2 | N/A | March 20, 2025 |
 | [DIS unable to connect to DataMiner Agent](xref:KI_DIS_unable_to_connect) | DIS 3.1.6 | DIS 3.1.7 | March 12, 2025 |
-| [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
+| [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.1.0 [CU17]/10.2.0 [CU5]/10.2.8 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
 | [Problem after upgrading Window OS to Windows Server 2022](xref:KI_Problem_after_OS_upgrade_to_win_2022) | Systems that have recently been upgraded to Windows Server 2022 | [Requires configuration](xref:KI_Problem_after_OS_upgrade_to_win_2022) | October 11, 2024 |
 | [ButtonState shapes in Visual Overview fail to hide as expected](xref:KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected) | DataMiner Cube versions prior to 10.4.2425.2536<br>DataMiner 10.4.8, if Cube client does not have internet access | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 | August 13, 2024 |
 | [Timetrace data is no longer written during Cassandra Cluster migration](xref:KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration) | Cassandra Cluster setups | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 | February 29, 2024 |
@@ -281,8 +283,6 @@ uid: Known_issues
 | [Taskbar Utility performance issue while agents are being upgraded](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded) | DataMiner 10.1.0 [CU19] and 10.2.0 [CU7]<br>10.2.10 | DataMiner 10.1.0 [CU20]/10.2.0 [CU8]/10.2.11 | September 23, 2022 |
 | [SLDMS Hosting Agent cache issue](xref:KI_SLDMS_hosting_agent_cache_issue) | DataMiner 10.2 Main & Feature Release<br>prior to 10.2.0 [CU7] and 10.2.10 | DataMiner 10.2.0 [CU7]/10.2.10 | September 15, 2022 |
 | [Closed alarms migrated too slowly from dms-activealarms index in Elasticsearch database](xref:KI_Closed_alarms_migrated_too_slowly) | Versions using Elasticsearch<br>for alarm indexing prior to<br>10.2.0 [CU8] and 10.2.11 | DataMiner 10.2.0 [CU8]/10.2.11 | September 14, 2022 |
-| [Cassandra nodes not configured if current DMA IP is assigned as virtual IP](xref:KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP) | DataMiner 10.1.0 [CU1]/10.1.1 up to 10.1.0 [CU5]/10.1.9 | DataMiner 10.1.0 [CU6]/10.1.9 | - |
-| [NATS error message after 10.1 installation](xref:KI_NATS_error_message_after_10_1_installation) | From DataMiner 10.1 onwards | [Requires configuration](xref:KI_NATS_error_message_after_10_1_installation) | - |
 | [Shapes in DataMiner stencils not found in Visio search](xref:KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search) | N/A | [Requires configuration](xref:KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search) | - |
 | [SLDataMiner addressChangeThread RTE after DMA startup](xref:KI_SLDataMiner_addressChangeThread_RTE_after_DMA_startup) | N/A | [Requires configuration](xref:KI_SLDataMiner_addressChangeThread_RTE_after_DMA_startup) | - |
 | [SNMP SET returns a 'NO ACCESS' error](xref:KI_SNMP_SET_returns_a_NO_ACCESS_error) | N/A | [Requires configuration](xref:KI_SNMP_SET_returns_a_NO_ACCESS_error) | - |

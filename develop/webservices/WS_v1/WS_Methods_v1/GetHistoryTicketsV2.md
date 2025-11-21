@@ -4,12 +4,9 @@ uid: GetHistoryTicketsV2
 
 # GetHistoryTicketsV2
 
-Use this method to retrieve the tickets created in a particular timespan. The tickets are retrieved in pages, in descending order.
+Use this method to retrieve the tickets created in a particular time span. The tickets are retrieved in pages, in descending order.
 
-<!-- From DataMiner 10.0.13 onwards, this method should be used instead of the [GetHistoryTickets](xref:GetHistoryTickets) method. -->
-
-> [!NOTE]
-> DataMiner Ticketing requires a Cassandra database as well as a specific license. <!-- From DataMiner 10.0.13 onwards, -->It also requires an indexing database. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
+Replaces the legacy [GetHistoryTickets](xref:GetHistoryTickets) method.
 
 > [!CAUTION]
 >
@@ -21,8 +18,8 @@ Use this method to retrieve the tickets created in a particular timespan. The ti
 | Item | Format | Description |
 |--|--|--|
 | connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| utcStartTime | Long integer | The start time of the timespan for which tickets should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
-| utcEndTime | Long integer | The end time of the timespan for which tickets should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
+| utcStartTime | Long integer | The start time of the time span for which tickets should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
+| utcEndTime | Long integer | The end time of the time span for which tickets should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
 | pageNumber | Integer | The page number (cf. note below). |
 | count | Integer | The number of tickets to be retrieved. |
 | filter | Array | An array of various filters that can be used to determine which tickets are retrieved. |

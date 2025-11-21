@@ -28,7 +28,7 @@
 		/// Text box.
 		/// </summary>
 		/// <remarks>
-		/// <para>From DataMiner 9.5.3 onwards, this control can be used with a ‘WantsOnChange’ property, which prevents updates being sent after a single character is changed in a text box. See WantsOnChange.</para>
+		/// <para>This control can be used with a ‘WantsOnChange’ property, which prevents updates being sent after a single character is changed in a text box. See <see href="xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange*">WantsOnChange</see>.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -107,7 +107,7 @@
 		/// Item that displays a time value.
 		/// </summary>
 		/// <remarks>
-		/// <code>From DataMiner 9.5.3 onwards, additional classes are available to define controls to select the date and/or time. See AutomationConfigOptions.</code>
+		/// <para>Additional classes are available to define controls to select the date and/or time. See <see href="xref:Skyline.DataMiner.Automation.AutomationConfigOptions">AutomationConfigOptions</see>.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -149,7 +149,7 @@
 		/// <para>If you want a checkbox with one or more discrete values, then use the Extra property to specify a list of discrete values (separated by semicolons). If you only want a numeric box and no checkbox, then leave the Extra property empty. In that case, just set the initial value to the DoubleValue.</para>
 		/// <para>If you set the WantsOnChange property to “true”, then both the checkbox and the discrete combo box will trigger a change.</para>
 		/// <para>Optionally you can provide a RangeHigh (maximum value), a RangeLow (minimum value), a RangeStep (increment or decrement steps) and the number of decimals.</para>
-		/// <para>Note: From DataMiner 9.5.5 onwards, you can specify the WantsOnChange property to have a small delay before a change is triggered by the numeric box itself, in order to avoid updates being sent as soon as a single character is changed in the numeric box. See WantsOnChange.</para>
+		/// <para>Note: You can specify the WantsOnChange property to have a small delay before a change is triggered by the numeric box itself, in order to avoid updates being sent as soon as a single character is changed in the numeric box. See <see href="xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange*">WantsOnChange</see>.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -179,22 +179,19 @@
 		/// <summary>
 		/// Radio button list.
 		/// </summary>
-		/// <remarks>Available from DataMiner 9.6.6 onwards (RN 21475).</remarks>
 		RadioButtonList = 14,
 		/// <summary>
 		/// Password input box.
 		/// </summary>
-		/// <remarks>Available from DataMiner 9.6.6 onwards (RN 21518).</remarks>
 		PasswordBox = 15,
 		/// <summary>
 		/// File selector.
 		/// </summary>
-		/// <remarks>Available from DataMiner 10.0.2 onwards (RN 23950).</remarks>
 		FileSelector = 16,
 		/// <summary>
 		/// Tree view control.
 		/// </summary>
-		/// <remarks>Available from DataMiner 10.0.10 onwards. Only supported in web.</remarks>
+		/// <remarks>Only supported in web.</remarks>
 		TreeView = 17,
 		/// <summary>
 		/// Download button.

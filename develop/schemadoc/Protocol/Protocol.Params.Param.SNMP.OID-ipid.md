@@ -16,6 +16,6 @@ Specifies the ID of the parameter holding the IP address that needs to be used t
 
 ## Remarks
 
-If, for the SNMP parameter, polling has to be performed on an alternative IP address, then, in the ipid attribute, specify the ID of the parameter holding the alternative IP address.
+If, for the SNMP parameter, polling has to be performed on an alternative IP address, then, in the `ipid` attribute, specify the ID of the parameter holding the alternative IP address.
 
-From DataMiner 9.0.0 (RN 10802) onwards, if you do not specify a port, the default port will be the port defined on the element connection.
+If you do not specify a port, the default port will be the port defined on the element connection.<!-- RN 10802 -->

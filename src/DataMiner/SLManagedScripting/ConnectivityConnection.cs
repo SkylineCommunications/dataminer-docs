@@ -80,7 +80,6 @@ namespace Skyline.DataMiner.Scripting
 		/// Gets a value indicating whether this interface is internal.
 		/// </summary>
 		/// <value><c>true</c> if this is an internal interface; otherwise, <c>false</c>.</value>
-		/// <remarks>Feature introduced in DataMiner 10.1.5 (RN 29314).</remarks>
 		public bool IsInternal { get; }
 
 		/// <summary>
@@ -106,9 +105,6 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="prop">The property to add.</param>
 		/// <returns><c>true</c> if adding the property succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
-		/// </remarks>
 		public bool AddProperty(ConnectivityConnectionProperty prop) { return true; }
 
 		/// <summary>
@@ -119,7 +115,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if adding the property succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>When <paramref name="both"/> is set to true, the connection must be known by both the source and destination element.</para>
-		/// <para>Feature introduced in DataMiner 9.5.1 (RN 14594).</para>
 		/// </remarks>
 		public bool AddProperty(ConnectivityConnectionProperty prop, bool both) { return true; }
 
@@ -131,9 +126,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="value">The value of the property.</param>
 		/// <param name="id">The ID of the property.</param>
 		/// <returns><c>true</c> if adding the property succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
-		/// </remarks>
 		public bool AddProperty(string name, string type, string value, out int id) { id = 0; return true; }
 
 		/// <summary>
@@ -147,7 +139,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if adding the property succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>When <paramref name="both"/> is set to true, the connection must be known by both the source and destination element.</para>
-		/// <para>Feature introduced in DataMiner 9.5.1 (RN 14594).</para>
 		/// </remarks>
 		public bool AddProperty(string name, string type, string value, out int id, bool both) { id = 0;  return true; }
 
@@ -162,7 +153,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if adding the property succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>In case the property was not created within the specified timeout, <c>false</c> will be returned. However, the message will still be handled by DataMiner.</para>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
 		/// </remarks>
 		public bool AddProperty(string name, string type, string value, out ConnectivityConnectionProperty prop, int timeoutMs) { prop = null;  return true; }
 
@@ -178,7 +168,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if adding the property succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>In case the property was not created within the specified timeout, <c>false</c> will be returned. However, the message will still be handled by DataMiner.</para>
-		/// <para>Feature introduced in DataMiner 9.5.1 (RN 14594).</para>
 		/// </remarks>
 		public bool AddProperty(string name, string type, string value, out ConnectivityConnectionProperty prop, int timeoutMs, bool both) { prop = null;  return true; }
 
@@ -197,9 +186,6 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="prop">The connection property to delete.</param>
 		/// <returns><c>true</c> if the deletion succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
-		/// </remarks>
 		public bool DeleteProperty(ConnectivityConnectionProperty prop) { return true; }
 
 		/// <summary>
@@ -207,9 +193,6 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="id">The ID of the connection property to delete.</param>
 		/// <returns><c>true</c> if the deletion succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
-		/// </remarks>
 		public bool DeleteProperty(int id) { return true; }
 
 		/// <summary>
@@ -218,9 +201,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="prop">The connection property to delete.</param>
 		/// <param name="both"><c>true</c> if the connection property should be deleted from both the source and destination element; otherwise, <c>false</c>.</param>
 		/// <returns><c>true</c> if the deletion succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 9.5.1 (RN 14594).</para>
-		/// </remarks>
 		public bool DeleteProperty(ConnectivityConnectionProperty prop, bool both) { return true; }
 
 		/// <summary>
@@ -229,9 +209,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="id">The ID of the connection property to delete.</param>
 		/// <param name="both"><c>true</c> if the connection property should be deleted from both the source and destination element; otherwise, <c>false</c>.</param>
 		/// <returns><c>true</c> if the deletion succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 9.5.1 (RN 14594).</para>
-		/// </remarks>
 		public bool DeleteProperty(int id, bool both) { return true; }
 
 		/// <summary>
@@ -245,9 +222,6 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="id">The ID of the connection property to retrieve.</param>
 		/// <returns>The connection property or <see langword="null"/> if the property with the specified ID was not found.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
-		/// </remarks>
 		public ConnectivityConnectionProperty GetPropertyById(int id) { return null; }
 
 		/// <summary>
@@ -255,9 +229,6 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="name">The name of the connection property to retrieve.</param>
 		/// <returns>The connection property or <see langword="null"/> if the property with the specified name was not found.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
-		/// </remarks>
 		public ConnectivityConnectionProperty GetPropertyByName(string name) { return null; }
 
 		/// <summary>
@@ -306,9 +277,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="updateBothConnections"><c>true</c> if the connection filter should be updated at both ends of the connection; otherwise, <c>false</c>.</param>
 		/// <param name="destPK">The ID (primary key) of the destination interface.</param>
 		/// <returns><c>true</c> if the update succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 9297).</para>
-		/// </remarks>
 		public bool Update(string newSourceName, int newSourceInterfaceId, string newDestinationName, int newDestinationDMAId, int newDestinationElementId, int newDestinationInterfaceId, string newFilter, bool updateBothConnections, out int destPK) { destPK = 0;  return true; }
 
 		/// <summary>
@@ -327,7 +295,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if the update succeeded within the specified timeout; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>In case the connection was not updated within the specified timeout, <c>false</c> will be returned. However, the message will still be handled by DataMiner.</para>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 9297).</para>
 		/// </remarks>
 		public bool Update(string newSourceName, int newSourceInterfaceId, string newDestinationName, int newDestinationDMAId, int newDestinationElementId, int newDestinationInterfaceId, string newFilter, bool updateBothConnections, out ConnectivityConnection destConn, int timeoutMs) { destConn = null; return true; }
 
@@ -346,9 +313,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="updateBothConnections"><c>true</c> if the connection filter should be updated at both ends of the connection; otherwise, <c>false</c>.</param>
 		/// <param name="destPK">The ID (primary key) of the destination interface.</param>
 		/// <returns><c>true</c> if the update succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 9297).</para>
-		/// </remarks>
 		public bool UpdateDestination(ConnectivityInterface newDestination, bool updateBothConnections, out int destPK) { destPK = 0;  return true; }
 
 		/// <summary>
@@ -361,7 +325,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if the update succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>In case the connection was not updated within the specified timeout, <c>false</c> will be returned. However, the message will still be handled by DataMiner.</para>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 9297).</para>
 		/// </remarks>
 		public bool UpdateDestination(ConnectivityInterface newDestination, bool updateBothConnections, out ConnectivityConnection destConn, int timeoutMs) { destConn = null;  return true; }
 
@@ -396,9 +359,6 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="prop">The property to update.</param>
 		/// <returns><c>true</c> if the update succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
-		/// </remarks>
 		public bool UpdateProperty(ConnectivityConnectionProperty prop) { return true; }
 
 		/// <summary>
@@ -407,9 +367,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="prop">The property to update.</param>
 		/// <param name="both"><c>true</c> if the connection property should be updated on both the source and destination element; otherwise, <c>false</c>.</param>
 		/// <returns><c>true</c> if the update succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 9.5.1 (RN 14594).</para>
-		/// </remarks>
 		public bool UpdateProperty(ConnectivityConnectionProperty prop, bool both) { return true; }
 
 		/// <summary>
@@ -421,9 +378,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="value">The new value of the property.</param>
 		/// <param name="link">The new ID of the connection to which this property belongs.</param>
 		/// <returns><c>true</c> if the update succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
-		/// </remarks>
 		public bool UpdateProperty(int id, string name, string type, string value, int link) { return true; }
 
 		/// <summary>
@@ -436,9 +390,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="link">The new ID of the connection to which this property belongs.</param>
 		/// <param name="both"><c>true</c> if the connection property should be updated on both the source and destination element; otherwise, <c>false</c>.</param>
 		/// <returns><c>true</c> if the update succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 9.5.1 (RN 14594).</para>
-		/// </remarks>
 		public bool UpdateProperty(int id, string name, string type, string value, int link, bool both) { return true; }
 	}
 }
