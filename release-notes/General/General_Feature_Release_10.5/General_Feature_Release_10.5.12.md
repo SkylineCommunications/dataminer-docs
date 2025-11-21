@@ -342,7 +342,7 @@ From now on, when you try to install Alerter, it will check whether Microsoft .N
 
 #### Cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube [ID 43810]
 
-<!-- MR 10.6.0 - FR 10.5.12 -->
+<!-- MR 10.5.0 [CU10] - FR 10.5.12 -->
 
 On systems with a Cassandra cluster database in combination with an OpenSearch indexing database, cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube.
 

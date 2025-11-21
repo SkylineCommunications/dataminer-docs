@@ -79,6 +79,12 @@ When you start a DataMiner upgrade procedure, from now on, a new prerequisite wi
 
 In some cases, conditional triggers to dynamically include or exclude child elements would be parsed incorrectly, especially when the first condition was a NOT clause.
 
+#### Cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube [ID 43810]
+
+<!-- MR 10.5.0 [CU10] - FR 10.5.12 -->
+
+On systems with a Cassandra cluster database in combination with an OpenSearch indexing database, cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube.
+
 #### SLElement could stop working when DVE elements were deleted [ID 43947]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->

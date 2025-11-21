@@ -731,12 +731,6 @@ When you tried to install Alerter, in some cases, a warning message would appear
 
 From now on, when you try to install Alerter, it will check whether Microsoft .NET Framework 4.6.2 is installed.
 
-#### Cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube [ID 43810]
-
-<!-- MR 10.6.0 - FR 10.5.12 -->
-
-On systems with a Cassandra cluster database in combination with an OpenSearch indexing database, cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube.
-
 #### Outdated SLAnalytics icons would incorrectly remain visible for too long because of SLNet caching issues [ID 43957]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
