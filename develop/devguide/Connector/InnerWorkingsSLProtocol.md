@@ -18,7 +18,7 @@ For each element that is managed by an SLProtocol process, the process contains 
 
 Each timer defined in a protocol introduces an additional timer thread. The timer thread is responsible for making sure that the groups referred to by the timer are processed.
 
-Groups of type "poll", "poll action" or "poll trigger" (sometimes referred to as "poll groups") will be added to the so-called group execution queue of the [Main protocol execution thread](xref:InnerWorkingsSLProtocol#main-protocol-execution-thread).
+Groups of type "poll", "poll action" or "poll trigger" (sometimes referred to as "poll groups") will be added to the so-called group execution queue of the [main protocol execution thread](xref:InnerWorkingsSLProtocol#main-protocol-execution-thread).
 
 Groups of type "action" or "trigger" (sometimes referred to as "non-poll groups") will be executed by the initiating thread. In this case, this means that these types of groups will be handled by the timer thread.
 
@@ -31,19 +31,19 @@ Poll groups of a timer are always added to the end of the queue as illustrated i
 ![Main protocol execution thread](~/develop/images/Protocol_Explained_-_Main_Protocol_Execution_Thread.svg)
 
 > [!NOTE]
-> These groups will only be added to the queue in case the queue does not already contain this group to prevent timers from adding them faster than they can be executed and this way avoid an endlessly growing queue.
+> These groups will only be added to the queue in case the queue does not already contain this group, to prevent timers from adding them faster than they can be executed and in this way avoid an endlessly growing queue.
 
 Timers are not the only way to add groups to the group execution queue. Multiple types of actions have been defined for adding groups to the group execution queue. The following table provides an overview of the different actions defined for adding groups to the group execution queue.
 
 |Type               |Result  |
 |-------------------|---------|
 |Add to execute     |Adds the specified groups to the very end of the group execution queue (same priority as groups added by timers).         |
-|Execute            |Adds the specified groups to the group execution queue, after the last group in the queue that was added neither by a timer, neither by an "add to execute" action. In other words, just before groups that were added by timers and/or "add to execute" actions.         |
+|Execute            |Adds the specified groups to the group execution queue, after the last group in the queue that was added neither by a timer, nor by an "add to execute" action, or in other words, just before groups that were added by timers and/or "add to execute" actions.         |
 |Execute next       |Adds the specified groups at the beginning of the group execution queue. The groups will be picked up as soon as the group that is currently being executed has finished.         |
 |Execute one        |Checks if the specified groups are present on the queue. If present, nothing will happen. If not present, the groups are added to the group execution queue at the very end (same priority as groups added by timers or by "add to execute" actions.)         |
-|Execute one top    |Checks if the specified groups are present on the queue. If present, nothing will happen. If not present, the groups are added at the beginning of the group execution queue, and it will be picked up as soon as the group that is currently being executed has finished.         |
-|Execute one now    |Checks if the specified groups are present on the queue. If present, nothing will happen. If not present, the groups are added to the group execution queue, after the last group that was added neither by a timer, neither by an "add to execute" action. In other words, just before groups that were added by timers and/or "add to execute" actions.         |
-|Force execute      |Force execute will make sure the groups are executed as soon as possible. The ongoing item (Action, Pair, Param, Session, or Trigger) of the ongoing group will finish, then the group you want to "force execute" will be executed, and then the remaining items of the previously ongoing group will be executed. Force execute should only be used in very exceptional case, in most cases, "execute next" should be used instead.       |
+|Execute one top    |Checks if the specified groups are present on the queue. If present, nothing will happen. If not present, the groups are added at the beginning of the group execution queue, and they will be picked up as soon as the group that is currently being executed has finished.         |
+|Execute one now    |Checks if the specified groups are present on the queue. If present, nothing will happen. If not present, the groups are added to the group execution queue, after the last group that was added neither by a timer, nor by an "add to execute" action, or in other words, just before groups that were added by timers and/or "add to execute" actions.         |
+|Force execute      |Force execute will make sure the groups are executed as soon as possible. The ongoing item (Action, Pair, Param, Session, or Trigger) of the ongoing group will finish, then the group you want to "force execute" will be executed, and then the remaining items of the previously ongoing group will be executed. Force execute should only be used in very exceptional cases. In most cases, "execute next" should be used instead.       |
 
 The following figure illustrates the resulting location of the added group (see blue box) based on the selected action type.
 
