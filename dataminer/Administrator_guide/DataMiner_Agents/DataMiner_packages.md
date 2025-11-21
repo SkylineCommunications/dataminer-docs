@@ -29,6 +29,9 @@ Package containing all files necessary to upgrade a DataMiner Agent to a newer v
 > [!NOTE]
 > The maximum upload size of upgrade packages is limited depending on the DataMiner version, but it is possible to increase this limit. See [Increasing the maximum upload size for upgrade packages in a DMS](xref:SLNetClientTest_increasing_max_upload).
 
+> [!TIP]
+> See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
+
 ## Update package (.dmupdate)
 
 Package containing minor updates for an existing release. Update packages contain mostly bug fixes, but can also contain new features. The packages are very similar to upgrade packages, but they only contain the files that have changed compared to the base version for which they are an update.
