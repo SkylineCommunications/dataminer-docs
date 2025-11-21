@@ -424,9 +424,9 @@ uiBuilder.AppendBlock(blockItem);
 
 Optionally, you can set the *HasPeekIcon* property to display an icon that, when clicked, will allow you to display the value inside the password box. See [HasPeekIcon](xref:Skyline.DataMiner.Automation.UIBlockDefinition.HasPeekIcon).
 
-**[WebUIVersion.V2](#ui-versions):**
+### V1 vs. V2 UI differences
 
-Property [IsReadOnly](xref:Skyline.DataMiner.Automation.UIBlockDefinition.IsReadOnly) is supported.
+In the **V2 UI** (see [UI versions](#ui-versions)), property [IsReadOnly](xref:Skyline.DataMiner.Automation.UIBlockDefinition.IsReadOnly) is supported.
 
 ## RadioButtonList
 

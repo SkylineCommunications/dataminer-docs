@@ -376,16 +376,16 @@ namespace Skyline.DataMiner.Automation
 		/// <para>This feature is available for interactive Automation scripts executed in a web environment. 
 		/// The following UIBlockTypes are supported:
 		/// 	<list type="bullet">
-		/// 		<item><term>TextBox</term></item>
-		/// 		<item><term>Numeric</term></item>
-		/// 		<item><term>Dropdown</term></item>
-		/// 		<item><term>Checkbox</term></item>
-		/// 		<item><term>CheckboxList</term></item>
-		/// 		<item><term>PasswordBox</term></item>
-		/// 		<item><term>RadiobuttonList</term></item>
-		/// 		<item><term>Calendar</term></item>
-		/// 		<item><term>Time</term></item>
-		/// 		<item><term>Treeview</term></item>
+		/// 		<item><description>TextBox</description></item>
+		/// 		<item><description>Numeric</description></item>
+		/// 		<item><description>Dropdown</description></item>
+		/// 		<item><description>Checkbox</description></item>
+		/// 		<item><description>CheckboxList</description></item>
+		/// 		<item><description>PasswordBox</description></item>
+		/// 		<item><description>RadiobuttonList</description></item>
+		/// 		<item><description>Calendar</description></item>
+		/// 		<item><description>Time</description></item>
+		/// 		<item><description>Treeview</description></item>
 		/// 	</list>
 		/// </para>
 		/// </remarks>
