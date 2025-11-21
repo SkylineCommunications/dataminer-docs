@@ -29,6 +29,22 @@ The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines di
 | [Time](#time) | Item that displays a time value. |
 | [TreeView](#treeview) | Tree view control. |
 
+## UI Versions
+
+Throughout DataMiner 10.5, the UI blocks gradually received a new design on web. This new UI could initially only be shown using the URL parameter [useNewIASInputComponents](xref:Configuring_app_actions_and_behavior_via_URL).
+
+From 10.5.12 onwards, which UI version is used by an Interactive Automation script in web can be configured by setting the [WebUIVersion](xref:Skyline.DataMiner.Automation.Engine.WebUIVersion) property on the engine. For example:
+
+```csharp
+engine.WebUIVersion = WebUIVersion.V1;
+```
+
+By default [WebUIVersion](xref:Skyline.DataMiner.Automation.Engine.WebUIVersion) will be WebUIVersion.Default, on 10.5.12 this shows the old UI WebUIVersion.V1. From 10.6 web version onwards WebUIVersion.Default will show the new UI WebUIVersion.V2 for systems with server version 10.5.12 or higher. Dataminer versions lower than 10.5.12 show the WebUIVersion.V1 UI blocks.
+
+The new UI has some differences on specific UI blocks, those will be explained underneath each UIBlockType.
+
+All new components got a new font and font size that is slightly bigger that the old font (from 12px to 14px).
+
 ## UIBuilder
 
 To create these UI blocks, a UIBuilder should be defined with *Width*, *RowDefs*, and *ColumnDefs*.
@@ -118,6 +134,10 @@ uiBuilder.AppendBlock(blockItem);
 > [!NOTE]
 > To check if the user selected the checkbox, use [GetChecked](xref:Skyline.DataMiner.Automation.UIResults.GetChecked(System.String)).
 
+**[WebUIVersion.V2](#ui-versions):**
+
+If the [Text](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Text) is too long for the given space, it will be truncated. Hovering over the text displays the full value, unless the [ToolTip](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ToolTip) property is defined, in that case, the [ToolTip](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ToolTip) takes priority.
+
 ## CheckBoxList
 
 Allows you to define a list of checkboxes.
@@ -150,6 +170,10 @@ uiBuilder.AppendBlock(checkBoxList);
 > bool ticked = results.GetChecked("list","2");
 > ```
 
+**[WebUIVersion.V2](#ui-versions):**
+
+If the CheckBoxListOptions are too long for the given space, it will be truncated. Hovering over the text displays the full value, unless the [ToolTip](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ToolTip) property is defined, in that case, the [ToolTip](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ToolTip) takes priority.
+
 ## DownloadButton
 
 Allows you to define a download button. Available from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 35869 -->
@@ -178,7 +202,7 @@ uiBuilder.AppendBlock(blockItem);
 > [!NOTE]
 >
 > - This download button is currently only supported in Automation scripts used in the DataMiner web apps (e.g. Dashboards or Low-Code Apps).
-> - The URL is used as the content of the `href` property in an A-HTML element (after sanitizing for security). For more information on how to build valid URLs, see <https://www.w3schools.com/html/html_filepaths>. The most common use cases are:
+> - The URL is used as the content of the `href` property in an A-HTML element (after sanitizing for security). For more information on how to build valid URLs, see <https://www.w3schools.com/html/html_filepaths.asp>. The most common use cases are:
 >   - An absolute URL to a file, for example: `https://dataminer.services/install/DataMinerCube.exe`
 >   - A relative URL, relative to the DMA hostname, for example: `/Documents/General Documents/myfile.txt`
 
@@ -209,8 +233,13 @@ foreach (string dropDownOption in dropDownOptions)
 uiBuilder.AppendBlock(blockItem);
 ```
 
-> [!NOTE]
-> It is possible for dropdowns in interactive Automation scripts to become overloaded with data. Although a filter can be used to locate items in a dropdown list, retrieving and displaying all available options could be time-consuming. From DataMiner 10.5.8/10.6.0 onwards<!-- RN 42808 / RN 42845 -->, for Automation scripts launched from web apps where the [`useNewIASInputComponents=true` URL parameter](xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url) is used, you can use [WasOnFilter](xref:Skyline.DataMiner.Automation.UIResults.WasOnFilter(System.String)) to get the filter value that was entered. The options added to the selection box can be filtered by the script. Enable the [WantsOnFilter](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnFilter) property when defining the selection box.
+**[WebUIVersion.V2](#ui-versions):**
+
+Property [DisplayFilter](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DisplayFilter) is not supported, dropdown now always have the filter.
+
+Property [WantsOnFocusLost](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnFocusLost) is supported.
+
+It is possible for dropdowns in interactive Automation scripts to become overloaded with data. Although a filter can be used to locate items in a dropdown list, retrieving and displaying all available options could be time-consuming. From DataMiner 10.5.8/10.6.0 onwards<!-- RN 42808 / RN 42845 -->, for Automation scripts launched from web apps, you can use [WasOnFilter](xref:Skyline.DataMiner.Automation.UIResults.WasOnFilter(System.String)) to get the filter value that was entered. The options added to the selection box can be filtered by the script. Enable the [WantsOnFilter](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnFilter) property when defining the selection box.
 
 ## Executable
 
@@ -302,6 +331,34 @@ UIBlockDefinition blockItem = new UIBlockDefinition
 uiBuilder.AppendBlock(blockItem);
 ```
 
+Optionally you can provide a RangeHigh (maximum value), a RangeLow (minimum value), a RangeStep (increment or decrement steps) and the number of decimals.
+
+Full example:
+
+```csharp
+string sel_numericValue = "23.567891";
+UIBlockDefinition numericBlock = new UIBlockDefinition();
+numericBlock.Type = UIBlockType.Numeric;
+numericBlock.InitialValue = sel_numericValue;
+numericBlock.DestVar = "num";
+numericBlock.WantsOnChange = true;
+numericBlock.Row = 0;
+numericBlock.Column = 1;
+numericBlock.HorizontalAlignment = "Center";
+numericBlock.VerticalAlignment = "Top";
+numericBlock.RangeHigh = 300;
+numericBlock.RangeLow = 5;
+numericBlock.RangeStep = 5;
+numericBlock.Decimals = 6;
+
+uiBuilder.AppendBlock(numericBlock);
+```
+
+> [!NOTE]
+> From DataMiner 9.5.5 onwards, you can specify the WantsOnChange property to have a small delay before a change is triggered by the numeric box itself, in order to avoid updates being sent as soon as a single character is changed in the numeric box. See [WantsOnChange](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange).
+
+**[WebUIVersion.V1](#ui-versions):**
+
 The initial value has to be a string of an integer or have the following format:
 
 ```csharp
@@ -316,37 +373,21 @@ Example:
 
 ```csharp
 string sel_numericValue = "23.567891;true;Discreet 2";
+numericBlock.InitialValue = sel_numericValue;
+numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
 ```
 
 If you want a checkbox with one or more discrete values, then use the *Extra* property to specify a list of discrete values (separated by semicolons). If you only want a numeric box and no checkbox, then leave the *Extra* property empty. In that case, just set the initial value to the DoubleValue.
 
 If you set the *WantsOnChange* property to "true", then both the checkbox and the discrete combo box will trigger a change.
 
-Optionally you can provide a RangeHigh (maximum value), a RangeLow (minimum value), a RangeStep (increment or decrement steps) and the number of decimals.
+**[WebUIVersion.V2](#ui-versions):**
 
-Full example:
+The new WebUIVersion does not support discreet values.
 
-```csharp
-string sel_numericValue = "23.567891;true;Discreet 2";
-UIBlockDefinition numericBlock = new UIBlockDefinition();
-numericBlock.Type = UIBlockType.Numeric;
-numericBlock.InitialValue = sel_numericValue;
-numericBlock.DestVar = "num";
-numericBlock.WantsOnChange = true;
-numericBlock.Row = 0;
-numericBlock.Column = 1;
-numericBlock.HorizontalAlignment = "Center";
-numericBlock.VerticalAlignment = "Top";
-numericBlock.RangeHigh = 300;
-numericBlock.RangeLow = 5;
-numericBlock.RangeStep = 5;
-numericBlock.Decimals = 6;
-numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
-uiBuilder.AppendBlock(numericBlock);
-```
+Setting both the RangeLow and RangeHigh does not show a slider anymore.
 
-> [!NOTE]
-> From DataMiner 9.5.5 onwards, you can specify the WantsOnChange property to have a small delay before a change is triggered by the numeric box itself, in order to avoid updates being sent as soon as a single character is changed in the numeric box. See [WantsOnChange](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange).
+The numeric value is now aligned on the left of the component.
 
 ## Parameter
 
@@ -388,6 +429,10 @@ uiBuilder.AppendBlock(blockItem);
 ```
 
 Optionally, you can set the *HasPeekIcon* property to display an icon that, when clicked, will allow you to display the value inside the password box. See [HasPeekIcon](xref:Skyline.DataMiner.Automation.UIBlockDefinition.HasPeekIcon).
+
+**[WebUIVersion.V2](#ui-versions):**
+
+Property [IsReadOnly](xref:Skyline.DataMiner.Automation.UIBlockDefinition.IsReadOnly) is supported.
 
 ## RadioButtonList
 
@@ -449,6 +494,10 @@ UIBlockDefinition blockItem = new UIBlockDefinition
 };
 uiBuilder.AppendBlock(blockItem);
 ```
+
+**[WebUIVersion.V2](#ui-versions):**
+
+The font size has increased from 12px to 14px, possibly resulting in some text not fitting their given space anymore. If the text does not fit, it be truncated. Hovering over the text displays the full value, unless the [ToolTip](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ToolTip) property is defined, in that case, the [ToolTip](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ToolTip) takes priority.
 
 ## TextBox
 
@@ -517,6 +566,10 @@ Please note the following:
 - The kind of returned date/time may be different depending on whether the script is executed in a web or Cube environment. From DataMiner 10.5.4/10.6.0 onwards<!-- RN 42064 / RN 42097 / RN 42110 -->, [GetClientDateTime](xref:Skyline.DataMiner.Automation.UIResults.GetClientDateTime(System.String)) can be used to get the date/time as it is displayed. Enable the [ClientTimeInfo](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ClientTimeInfo) property to make sure the info is available.
 
 - From DataMiner 10.5.9/10.6.0 onwards<!-- RN 43014 -->, for the [AutomationDateTimeUpDownOptions](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions), [AutomationDateTimePickerOptions](xref:Skyline.DataMiner.Automation.AutomationDateTimePickerOptions) and [AutomationTimePickerOptions](xref:Skyline.DataMiner.Automation.AutomationTimePickerOptions), the [DateTimeKind](https://learn.microsoft.com/en-us/dotnet/api/system.datetime) of the [Minimum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Minimum) and [Maximum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Maximum) will be taken into account. For more information, refer to [Minimum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Minimum) and [Maximum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Maximum).
+
+**[WebUIVersion.V2](#ui-versions):**
+
+The `AutomationTimeUpDownOptions` property [`ShowTimeUnits`](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.ShowTimeUnits) is not supported, the time will always show as "... d .. h .. m .. s".
 
 ## TreeView
 

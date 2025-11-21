@@ -17,6 +17,7 @@ namespace Skyline.DataMiner.Automation
 	/// <img src="~/develop/images/timeupdown_example.png" />
 	/// </example>
 	/// <remarks>
+	/// <para>Applicable only when <see cref="Type"/> is set to Time.</para>
 	/// <note type="note">
 	/// <para>If the name of a variable starts with the following prefix, IntelliSense in DataMiner Cube will list the object properties: timeUpDownConfig*</para>
 	/// </note>
@@ -150,14 +151,15 @@ namespace Skyline.DataMiner.Automation
 		/// </remarks>
 		public bool ShowSeconds { get; set; }
 
-		/// <summary>
-		/// Gets or sets a value indicating whether to display time labels in web component control. From DataMiner 10.3.0 [CU1]/10.3.4 onwards, the `ShowTimeUnits` property displays labels indicating the days, hours, minutes, and seconds. The `ShowTimeUnits` property is only supported in the DataMiner web apps and not in DataMiner Cube.
-		/// </summary>
-		/// <value><c>true</c> to display time labels in web component control; otherwise, <c>false</c>.</value>
-		/// <remarks>
-		/// <para>Default: <c>false</c>.</para>
-		/// </remarks>
-		public bool ShowTimeUnits { get; set; }
+        /// <summary>
+        /// Gets or sets a value indicating whether to display time labels in web component control. From DataMiner 10.3.0 [CU1]/10.3.4 onwards, the `ShowTimeUnits` property displays labels indicating the days, hours, minutes, and seconds. The `ShowTimeUnits` property is only supported in the DataMiner web apps and not in DataMiner Cube.
+        /// </summary>
+        /// <value><c>true</c> to display time labels in web component control; otherwise, <c>false</c>.</value>
+        /// <remarks>
+        /// <para>Default: <c>false</c>.</para>
+        /// <para>Applicable only on web when the WebUIVersion is WebUIVersion.V1 and on Cube.</para>
+        /// </remarks>
+        public bool ShowTimeUnits { get; set; }
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="AutomationTimeUpDownOptions"/> class.

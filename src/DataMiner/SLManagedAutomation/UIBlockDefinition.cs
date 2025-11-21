@@ -236,7 +236,8 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <para>Default: <c>false</c>.</para>
 		/// <para>Available from DataMiner 9.5.6 onwards.</para>
-		/// <para>Applicable only when <see cref="Type"/> is set to DropDown.</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to DropDown.</para>		
+		/// <para>Applicable only on web when the <see cref="WebUIVersion"/> is WebUIVersion.V1 and on Cube.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -254,7 +255,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The ID of the parameter that has to be displayed in the dialog box item.</value>
 		/// <remarks>
-		/// <para>Applicable only when <see cref="Type"/> is set to Parameter or Numeric.</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to Numeric (only when the <see cref="WebUIVersion"/> is WebUIVersion.V1) or Parameter.</para>
 		/// <para>For a dialog box item of type Numeric, this property allows to have a checkbox with multiple discrete values. In case multiple discrete values are defined, separate these with a semicolon (';'). If you do not want any checkbox, but only the numeric box, then leave this property empty.</para>
 		/// <para>For a dialog box item of type Parameter, the ID syntax is as follows: DmaID/ElementID:ParamID[:index]</para>
 		/// </remarks>
@@ -352,7 +353,8 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value><c>true</c> if users are able to enter multiple lines of text; otherwise, <c>false</c>.</value>
 		/// <remarks>
-		/// <para>Applicable only when <see cref="Type"/> is set to TextBox.</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to TextBox or StaticText.</para>
+		/// <para>If IsMultiline is false on a StaticText UI block, but the text contains a newline/enter, the UI block will behave as if IsMultiline is true.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -380,6 +382,7 @@ namespace Skyline.DataMiner.Automation
 		/// 		<item><term>Dropdown</term></item>
 		/// 		<item><term>Checkbox</term></item>
 		/// 		<item><term>CheckboxList</term></item>
+		/// 		<item><term>PasswordBox</term></item>
 		/// 		<item><term>RadiobuttonList</term></item>
 		/// 		<item><term>Calendar</term></item>
 		/// 		<item><term>Time</term></item>
@@ -669,6 +672,37 @@ namespace Skyline.DataMiner.Automation
 		/// <para>The supported styles can be accessed through const strings on the Style class, subdivided per control type (Button, Text, etc.).<br/>
 		/// All Button styles can also be applied to a DownloadButton.<br/>
 		/// The Style class is available from DataMiner 10.3.1/10.4.0 onwards. For older DataMiner versions, you can use the StaticText styles 'Title1', 'Title2', and 'Title3'.</para>
+		/// <para>On web the following is supported:
+		/// <list type="bullet">
+		/// <item>
+		/// <description>Button:
+		/// <list type="bullet">
+        /// <item><description>Style.Button.None (or "None")</description></item>
+        /// <item><description>Style.Button.CallToAction (or "CallToAction")</description></item>
+        /// </list>
+		/// </description>
+		/// </item>
+		/// <item>
+		/// <description>StaticText:
+		/// <list type="bullet">
+        /// <item><description>Style.Text.None (or "None")</description></item>
+        /// <item><description>Style.Text.Title1 (or "Title1")</description></item>
+        /// <item><description>Style.Text.Title2 (or "Title2")</description></item>
+        /// <item><description>Style.Text.Title3 (or "Title3")</description></item>
+        /// </list>
+		/// </description>
+		/// </item>
+		/// <item>
+		/// <description>TextBox (applicable only when the <see cref="WebUIVersion"/> is WebUIVersion.V1):
+		/// <list type="bullet">
+		/// <item><description>Style.Text.None (or "None")</description></item>
+        /// <item><description>Style.Text.Title1 (or "Title1")</description></item>
+        /// <item><description>Style.Text.Title2 (or "Title2")</description></item>
+        /// <item><description>Style.Text.Title3 (or "Title3")</description></item>
+        /// </list></description>
+		/// </item>
+		/// </list>
+		/// </para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -944,6 +978,7 @@ namespace Skyline.DataMiner.Automation
 		/// <value><c>true</c> to let an OnChange event be triggered when the component loses focus; otherwise, <c>false</c>.</value>
 		/// <remarks>
 		/// <para>Applicable only in case <see cref="Type"/> is set to Calendar, CheckBox, CheckBoxList, DropDown, Numeric, PasswordBox, RadioButtonList, TextBox, Time.</para>
+		/// <para>In case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>, applicable only on web when the <see cref="WebUIVersion"/> is WebUIVersion.V2 and on Cube.</para>
 		/// <para>Feature introduced in DataMiner 10.1.10 (RN 30638).</para>
 		/// </remarks>
 		public bool WantsOnFocusLost { get; set; }
