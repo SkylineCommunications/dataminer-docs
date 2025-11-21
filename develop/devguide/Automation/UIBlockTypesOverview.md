@@ -136,7 +136,7 @@ uiBuilder.AppendBlock(blockItem);
 
 **[WebUIVersion.V2](#ui-versions):**
 
-If the [Text](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Text) is too long for the given space, it will be truncated. Hovering over the text displays the full value, unless the [ToolTip](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ToolTip) property is defined, in that case, the [ToolTip](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ToolTip) takes priority.
+If the [Text](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Text) is too long for the given space, it will be truncated. Hovering over the text displays the full value, unless the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) property is defined, in that case, the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipTextText) takes priority.
 
 ## CheckBoxList
 
@@ -172,7 +172,7 @@ uiBuilder.AppendBlock(checkBoxList);
 
 **[WebUIVersion.V2](#ui-versions):**
 
-If the CheckBoxListOptions are too long for the given space, it will be truncated. Hovering over the text displays the full value, unless the [ToolTip](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ToolTip) property is defined, in that case, the [ToolTip](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ToolTip) takes priority.
+If the CheckBoxListOptions are too long for the given space, it will be truncated. Hovering over the text displays the full value, unless the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) property is defined, in that case, the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) takes priority.
 
 ## DownloadButton
 
@@ -497,7 +497,7 @@ uiBuilder.AppendBlock(blockItem);
 
 **[WebUIVersion.V2](#ui-versions):**
 
-The font size has increased from 12px to 14px, possibly resulting in some text not fitting their given space anymore. If the text does not fit, it be truncated. Hovering over the text displays the full value, unless the [ToolTip](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ToolTip) property is defined, in that case, the [ToolTip](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ToolTip) takes priority.
+The font size has increased from 12px to 14px, possibly resulting in some text not fitting their given space anymore. If the text does not fit, it be truncated. Hovering over the text displays the full value, unless the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) property is defined, in that case, the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) takes priority.
 
 ## TextBox
 
@@ -569,7 +569,7 @@ Please note the following:
 
 **[WebUIVersion.V2](#ui-versions):**
 
-The `AutomationTimeUpDownOptions` property [`ShowTimeUnits`](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.ShowTimeUnits) is not supported, the time will always show as "... d .. h .. m .. s".
+The `AutomationTimeUpDownOptions` property [`ShowTimeUnits`](xref:Skyline.DataMiner.Automation.AutomationTimeUpDownOptions.ShowTimeUnits) is not supported, the time will always show as "... d .. h .. m .. s".
 
 ## TreeView
 
