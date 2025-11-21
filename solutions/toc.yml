@@ -342,21 +342,6 @@ items:
         topicUid: Open_Putty_with_DITT
       - name: Implementing DITT in a visual overview
         topicUid: Implementing_DITT_in_Visio
-    - name: Smart Trap Processor
-      topicUid: Smart_Trap_Processor_Overview
-      items:
-      - name: Installing the Smart Trap Processor
-        topicUid: Installing_Smart_Trap_Processor
-      - name: Using the Smart Trap Processor
-        items:
-        - name: The Smart Trap Processor user interface
-          topicUid: The_SmartTrapProcessor_user_interface
-        - name: Configuring processing rules
-          topicUid: Processor_configuration
-        - name: Monitoring processed traps
-          topicUid: Monitoring_Processed_Traps
-      - name: Getting started tutorial
-        topicUid: Smart_Trap_Processor_Tutorial
     - name: DataMiner Health Check Tool
       topicUid: DataMiner_Health_Check_Tool
       items:
@@ -407,3 +392,18 @@ items:
         topicUid: Remote_PHY_Monitoring_components
       - name: Restricting access to Remote PHY Monitoring
         topicUid: Remote_PHY_Monitoring_Access_Restriction
+    - name: Smart Trap Processor
+      topicUid: Smart_Trap_Processor_Overview
+      items:
+      - name: Installing the Smart Trap Processor
+        topicUid: Installing_Smart_Trap_Processor
+      - name: Using the Smart Trap Processor
+        items:
+        - name: The Smart Trap Processor user interface
+          topicUid: The_SmartTrapProcessor_user_interface
+        - name: Configuring processing rules
+          topicUid: Processor_configuration
+        - name: Monitoring processed traps
+          topicUid: Monitoring_Processed_Traps
+      - name: Getting started tutorial
+        topicUid: Smart_Trap_Processor_Tutorial
