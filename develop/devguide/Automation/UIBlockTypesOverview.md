@@ -136,7 +136,7 @@ uiBuilder.AppendBlock(blockItem);
 
 **[WebUIVersion.V2](#ui-versions):**
 
-If the [Text](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Text) is too long for the given space, it will be truncated. Hovering over the text displays the full value, unless the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) property is defined, in that case, the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipTextText) takes priority.
+If the [Text](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Text) is too long for the given space, it will be truncated. Hovering over the text displays the full value, unless the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) property is defined, in that case, the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) takes priority.
 
 ## CheckBoxList
 
