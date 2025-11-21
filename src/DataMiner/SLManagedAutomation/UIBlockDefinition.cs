@@ -237,7 +237,7 @@ namespace Skyline.DataMiner.Automation
 		/// <para>Default: <c>false</c>.</para>
 		/// <para>Available from DataMiner 9.5.6 onwards.</para>
 		/// <para>Applicable only when <see cref="Type"/> is set to DropDown.</para>		
-		/// <para>Applicable only on web when the <see cref="WebUIVersion"/> is WebUIVersion.V1 and on Cube.</para>
+		/// <para>Applicable only in web apps when the <see cref="WebUIVersion"/> is WebUIVersion.V1 and in Cube.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -670,7 +670,7 @@ namespace Skyline.DataMiner.Automation
 		/// <para>The supported styles can be accessed through const strings on the Style class, subdivided per control type (Button, Text, etc.).<br/>
 		/// All Button styles can also be applied to a DownloadButton.<br/>
 		/// The Style class is available from DataMiner 10.3.1/10.4.0 onwards. For older DataMiner versions, you can use the StaticText styles 'Title1', 'Title2', and 'Title3'.</para>
-		/// <para>On web the following is supported:
+		/// <para>In web apps, the following is supported:
 		/// <list type="bullet">
 		/// <item>
 		/// <description>Button:
@@ -976,7 +976,7 @@ namespace Skyline.DataMiner.Automation
 		/// <value><c>true</c> to let an OnChange event be triggered when the component loses focus; otherwise, <c>false</c>.</value>
 		/// <remarks>
 		/// <para>Applicable only in case <see cref="Type"/> is set to Calendar, CheckBox, CheckBoxList, DropDown, Numeric, PasswordBox, RadioButtonList, TextBox, Time.</para>
-		/// <para>In case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>, applicable only on web when the <see cref="WebUIVersion"/> is WebUIVersion.V2 and on Cube.</para>
+		/// <para>In case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>, applicable in web apps when the <see cref="WebUIVersion"/> is WebUIVersion.V2 and in Cube.</para>
 		/// <para>Feature introduced in DataMiner 10.1.10 (RN 30638).</para>
 		/// </remarks>
 		public bool WantsOnFocusLost { get; set; }

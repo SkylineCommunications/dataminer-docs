@@ -193,7 +193,7 @@ namespace Skyline.DataMiner.Automation
 		/// <value>The version of the web interactive Automation script UI.</value>
 		/// <remarks>
 		/// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43875/43964).</para>
-		/// <para>The WebUIVersion is set to 'Default' by default. At present, this means that the new UI (V2) is used. You can instead set this to 'V1' to revert to the old UI or to 'V2' to make sure the new UI will continue to be used even if the default behavior changes. However, if the 'useNewIASInputComponents' URL parameter is used, this will override this configuration in the script (see <see href="xref:Configuring_app_actions_and_behavior_via_URL">Configuring app actions and behavior via the URL</see>).</para>
+		/// <para>The WebUIVersion is set to 'Default' by default. As from DataMiner DataMiner 10.5.0 [CU10]/10.6.1 (RN 44059), this means that the V2 UI is used. You can instead set this to 'V1' to revert to the old UI or to 'V2' to make sure the new UI will continue to be used even if the default behavior changes. However, if the 'useNewIASInputComponents' URL parameter is used, this will override this configuration in the script (see <see href="xref:Configuring_app_actions_and_behavior_via_URL">Configuring app actions and behavior via the URL</see>).</para>
 		/// </remarks>
 		/// <example>
 		/// <code>

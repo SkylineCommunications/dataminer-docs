@@ -29,21 +29,19 @@ The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines di
 | [Time](#time) | Item that displays a time value. |
 | [TreeView](#treeview) | Tree view control. |
 
-## UI Versions
+## UI versions
 
-Throughout DataMiner 10.5, the UI blocks gradually received a new design on web. This new UI could initially only be shown using the URL parameter [useNewIASInputComponents](xref:Configuring_app_actions_and_behavior_via_URL).
+Two versions of the interactive script UI are currently available. The most recent version, known as "V2", features a different design for scripts used in web apps and has been gradually developed along with DataMiner 10.5.x releases. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- RN 43964 -->, the V2 UI can only be viewed if the URL parameter [useNewIASInputComponents](xref:Configuring_app_actions_and_behavior_via_URL) is used for a web app.
 
-From 10.5.12 onwards, which UI version is used by an Interactive Automation script in web can be configured by setting the [WebUIVersion](xref:Skyline.DataMiner.Automation.Engine.WebUIVersion) property on the engine. For example:
+Starting from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12, the UI version used for interactive Automation scripts in web apps is determined by the configuration of the [WebUIVersion](xref:Skyline.DataMiner.Automation.Engine.WebUIVersion) property on the engine. For example:
 
 ```csharp
 engine.WebUIVersion = WebUIVersion.V1;
 ```
 
-By default [WebUIVersion](xref:Skyline.DataMiner.Automation.Engine.WebUIVersion) will be WebUIVersion.Default, on 10.5.12 this shows the old UI WebUIVersion.V1. From 10.6 web version onwards WebUIVersion.Default will show the new UI WebUIVersion.V2 for systems with server version 10.5.12 or higher. Dataminer versions lower than 10.5.12 show the WebUIVersion.V1 UI blocks.
+By default, [WebUIVersion](xref:Skyline.DataMiner.Automation.Engine.WebUIVersion) is set to *WebUIVersion.Default*. Prior to web DataMiner 10.5.0 [CU10]/10.6.1<!-- RN 44059 -->, this shows the V1 version of the UI. In later DataMiner web versions, this shows the V2 version of the UI, but only if the server uses DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 or higher. For earlier server versions, the V1 version of the UI continues to be shown.
 
-The new UI has some differences on specific UI blocks, those will be explained underneath each UIBlockType.
-
-All new components got a new font and font size that is slightly bigger that the old font (from 12px to 14px).
+The differences between the UI versions for specific UI block types are explained below. In addition to those specific differences, all components in the V2 UI have a different font and a font size that is slightly bigger that in the V1 UI (from 12px to 14px).
 
 ## UIBuilder
 
@@ -134,9 +132,9 @@ uiBuilder.AppendBlock(blockItem);
 > [!NOTE]
 > To check if the user selected the checkbox, use [GetChecked](xref:Skyline.DataMiner.Automation.UIResults.GetChecked(System.String)).
 
-**[WebUIVersion.V2](#ui-versions):**
+### V1 vs. V2 UI differences
 
-If the [Text](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Text) is too long for the given space, it will be truncated. Hovering over the text displays the full value, unless the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) property is defined, in that case, the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) takes priority.
+In the **V2 UI** (see [UI versions](#ui-versions)), if the [Text](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Text) is too long for the given space, it will be truncated. Hovering over the text displays the full value, unless the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) property is defined, in which case the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) takes priority.
 
 ## CheckBoxList
 
@@ -170,9 +168,9 @@ uiBuilder.AppendBlock(checkBoxList);
 > bool ticked = results.GetChecked("list","2");
 > ```
 
-**[WebUIVersion.V2](#ui-versions):**
+### V1 vs. V2 UI differences
 
-If the CheckBoxListOptions are too long for the given space, it will be truncated. Hovering over the text displays the full value, unless the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) property is defined, in that case, the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) takes priority.
+In the **V2 UI** (see [UI versions](#ui-versions)), if the CheckBoxListOptions are too long for the given space, they will be truncated. Hovering over the text displays the full value, unless the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) property is defined, in which case the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) takes priority.
 
 ## DownloadButton
 
@@ -233,13 +231,13 @@ foreach (string dropDownOption in dropDownOptions)
 uiBuilder.AppendBlock(blockItem);
 ```
 
-**[WebUIVersion.V2](#ui-versions):**
+### V1 vs. V2 UI differences
 
-Property [DisplayFilter](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DisplayFilter) is not supported, dropdown now always have the filter.
+In the **V2 UI** (see [UI versions](#ui-versions)):
 
-Property [WantsOnFocusLost](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnFocusLost) is supported.
-
-It is possible for dropdowns in interactive Automation scripts to become overloaded with data. Although a filter can be used to locate items in a dropdown list, retrieving and displaying all available options could be time-consuming. From DataMiner 10.5.8/10.6.0 onwards<!-- RN 42808 / RN 42845 -->, for Automation scripts launched from web apps, you can use [WasOnFilter](xref:Skyline.DataMiner.Automation.UIResults.WasOnFilter(System.String)) to get the filter value that was entered. The options added to the selection box can be filtered by the script. Enable the [WantsOnFilter](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnFilter) property when defining the selection box.
+- Property [DisplayFilter](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DisplayFilter) is not supported, and dropdowns now always have the filter.
+- Property [WantsOnFocusLost](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnFocusLost) is supported.
+- It is possible for dropdowns in interactive Automation scripts to become overloaded with data. Although a filter can be used to locate items in a dropdown list, retrieving and displaying all available options can be time-consuming. From DataMiner 10.5.8/10.6.0 onwards<!-- RN 42808 / RN 42845 -->, for Automation scripts launched from web apps, you can use [WasOnFilter](xref:Skyline.DataMiner.Automation.UIResults.WasOnFilter(System.String)) to get the filter value that was entered. The options added to the selection box can be filtered by the script. Enable the [WantsOnFilter](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnFilter) property when defining the selection box.
 
 ## Executable
 
@@ -357,37 +355,33 @@ uiBuilder.AppendBlock(numericBlock);
 > [!NOTE]
 > To have a small delay before a change is triggered by the numeric box itself, you can specify the [WantsOnChange](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange) property. This way, you can avoid updates being sent as soon as a single character is changed in the numeric box.
 
-**[WebUIVersion.V1](#ui-versions):**
+### V1 vs. V2 UI differences
 
-The initial value has to be a string of an integer or have the following format:
+- In the **V1 UI** (see [UI versions](#ui-versions)), the initial value has to be a string of an integer or have the following format:
 
-```csharp
-[DoubleValue];[Boolean];[SelectedDiscreetString]
-```
+  ```csharp
+  [DoubleValue];[Boolean];[SelectedDiscreetString]
+  ```
 
-- DoubleValue: Value of the numeric box.
-- Boolean: Indicates whether the discrete checkbox is selected (=true) or cleared (=false).
-- SelectedDiscreetString: selects the discrete parameter with that exact name in case multiple discrete parameters are defined.
+  - *DoubleValue*: Value of the numeric box.
+  - *Boolean*: Indicates whether the discrete checkbox is selected (=true) or cleared (=false).
+  - *SelectedDiscreetString*: selects the discrete parameter with that exact name in case multiple discrete parameters are defined.
 
-Example:
+  Example:
 
-```csharp
-string sel_numericValue = "23.567891;true;Discreet 2";
-numericBlock.InitialValue = sel_numericValue;
-numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
-```
+  ```csharp
+  string sel_numericValue = "23.567891;true;Discreet 2";
+  numericBlock.InitialValue = sel_numericValue;
+  numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
+  ```
 
-If you want a checkbox with one or more discrete values, then use the *Extra* property to specify a list of discrete values (separated by semicolons). If you only want a numeric box and no checkbox, then leave the *Extra* property empty. In that case, just set the initial value to the DoubleValue.
+  If you want a checkbox with one or more discrete values, use the *Extra* property to specify a list of discrete values (separated by semicolons). If you only want a numeric box and no checkbox, leave the *Extra* property empty. In that case, just set the initial value to the DoubleValue.
 
-If you set the *WantsOnChange* property to "true", then both the checkbox and the discrete combo box will trigger a change.
+  If you set the *WantsOnChange* property to "true", then both the checkbox and the discrete combo box will trigger a change.
 
-**[WebUIVersion.V2](#ui-versions):**
-
-The new WebUIVersion does not support discreet values.
-
-Setting both the RangeLow and RangeHigh does not show a slider anymore.
-
-The numeric value is now aligned on the left of the component.
+- The **V2 UI** does not support discrete values.
+- In the **V2 UI**, setting both *RangeLow* and *RangeHigh* does not show a slider.
+- In the **V2 UI**, the numeric value is aligned on the left side of the component.
 
 ## Parameter
 
@@ -495,9 +489,9 @@ UIBlockDefinition blockItem = new UIBlockDefinition
 uiBuilder.AppendBlock(blockItem);
 ```
 
-**[WebUIVersion.V2](#ui-versions):**
+### V1 vs. V2 UI differences
 
-The font size has increased from 12px to 14px, possibly resulting in some text not fitting their given space anymore. If the text does not fit, it be truncated. Hovering over the text displays the full value, unless the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) property is defined, in that case, the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) takes priority.
+In the **V2 UI** (see [UI versions](#ui-versions)), the font size is increased from 12 px to 14 px, which may result in some text no longer fitting in its given space when you switch between the UI versions. If the text does not fit, it will be truncated. Hovering over the text displays the full value, unless the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) property is defined, in which case the [TooltipText](xref:Skyline.DataMiner.Automation.UIBlockDefinition.TooltipText) takes priority.
 
 ## TextBox
 
@@ -567,9 +561,9 @@ Please note the following:
 
 - From DataMiner 10.5.9/10.6.0 onwards<!-- RN 43014 -->, for the [AutomationDateTimeUpDownOptions](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions), [AutomationDateTimePickerOptions](xref:Skyline.DataMiner.Automation.AutomationDateTimePickerOptions) and [AutomationTimePickerOptions](xref:Skyline.DataMiner.Automation.AutomationTimePickerOptions), the [DateTimeKind](https://learn.microsoft.com/en-us/dotnet/api/system.datetime) of the [Minimum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Minimum) and [Maximum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Maximum) will be taken into account. For more information, refer to [Minimum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Minimum) and [Maximum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Maximum).
 
-**[WebUIVersion.V2](#ui-versions):**
+### V1 vs. V2 UI differences
 
-The `AutomationTimeUpDownOptions` property [`ShowTimeUnits`](xref:Skyline.DataMiner.Automation.AutomationTimeUpDownOptions.ShowTimeUnits) is not supported, the time will always show as "... d .. h .. m .. s".
+In the **V2 UI** (see [UI versions](#ui-versions)), The *AutomationTimeUpDownOptions* property [ShowTimeUnits](xref:Skyline.DataMiner.Automation.AutomationTimeUpDownOptions.ShowTimeUnits) is not supported. The time will always be shown in the format "... d .. h .. m .. s".
 
 ## TreeView
 
