@@ -163,9 +163,9 @@ uid: WS_Methods_v1_overview
 | [GetAllRedundancyGroups](xref:GetAllRedundancyGroups) | Retrieves a list of all the redundancy groups. |
 | [GetAllRedundancyGroupsSorted](xref:GetAllRedundancyGroupsSorted) | Retrieves a specific number of redundancy groups. |
 | [GetAllViewsForParent](xref:GetAllViewsForParent) | Retrieves all the views for a particular parent view, including their subviews. |
-| [GetAnnotationsLinkForElement](xref:GetAnnotationsLinkForElement) | Retrieves a link to open the annotations page of an element. |
-| [GetAnnotationsLinkForService](xref:GetAnnotationsLinkForService) | Retrieves a link to open the annotations page of a service. |
-| [GetAnnotationsLinkForView](xref:GetAnnotationsLinkForView) | Retrieves a link to open the annotations page of a view. |
+| [GetAnnotationsLinkForElement](xref:GetAnnotationsLinkForElement) | Obsolete. Retrieves a link to open the annotations page of an element. |
+| [GetAnnotationsLinkForService](xref:GetAnnotationsLinkForService) | Obsolete. Retrieves a link to open the annotations page of a service. |
+| [GetAnnotationsLinkForView](xref:GetAnnotationsLinkForView) | Obsolete. Retrieves a link to open the annotations page of a view. |
 | [GetAutomationScript](xref:GetAutomationScript) | Retrieves an Automation script. |
 | [GetAutomationScripts](xref:GetAutomationScripts) | Retrieves all Automation scripts. |
 | [GetAvailableAlarmProperties](xref:GetAvailableAlarmProperties) | Retrieves the properties that are available for alarm filtering. |

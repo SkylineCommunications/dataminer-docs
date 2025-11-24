@@ -4,6 +4,8 @@ uid: GetAnnotationsLinkForService
 
 # GetAnnotationsLinkForService
 
+**Obsolete**. This method is no longer available as of DataMiner 10.5.0 [CU10]/10.6.1.<!-- RN 44136 -->
+
 Use this method to retrieve a link to open the annotations page of the specified service.
 
 ## Input
