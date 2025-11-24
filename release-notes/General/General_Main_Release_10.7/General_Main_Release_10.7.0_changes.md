@@ -25,6 +25,12 @@ An `OnDestroy` handler has now been added to the `Engine` class. This handler wi
 
 Multiple handlers can be added. They will run synchronously, and if one handler throws an error, the others will keep on running.
 
+#### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
+
 #### Service & Resource Management: New resource manager settings to configure the number of start action threads and simultaneous actions [ID 44056]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->

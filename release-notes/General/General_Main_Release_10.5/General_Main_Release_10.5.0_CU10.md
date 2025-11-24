@@ -46,16 +46,10 @@ A number of minor enhancements have been made to the following BPAs:
 
 Using the *SLNetClientTest* tool, you can now send a DiagnosticMessage with LIST_HOSTAGENTCACHE to SLDataMiner to retrieve the contents of the hosting cache used by SLDataMiner. This will allow you to check if an element is local or not.
 
-To send such a message, open the *SLNetClientTest* tool, and go to *Diagnostics > Dma > Elements (Hosting Cache)*.
+To send such a message, open the *SLNetClientTest* tool, and go to *Diagnostics > DMA > Elements (Hosting Cache)*.
 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
-
-#### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
-
-<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
-
-All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
 
 #### SLASPConnection will now detect more quicker that a connection to a DMA has been lost or re-established [ID 44049]
 
