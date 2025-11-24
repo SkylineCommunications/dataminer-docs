@@ -122,11 +122,11 @@ Each time the *SLLogCollector* tool is run, by default, it will order the *Stand
 
 Also, when ordered to include memory dumps, up to now, the SLLogCollector tool would first run the BPA tests and collect all logging, and would then take the memory dumps. From now on, it will take the memory dumps first.
 
-#### Serial communication: Only TLS 1.2 or TLS 1.3 encryption will now be allowed [ID 43678]
+#### All HTTPS communication will have to use TLS 1.2 encryption [ID 43678] [ID 44151]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
-Although DataMiner supports all TLS versions up to TLS 1.3, from now on, all serial communication will have to use either TLS 1.2 or TLS 1.3 encryption.
+From now on, all HTTPS communication will have to use TLS 1.2 encryption. SSL, TLS 1.0, and TLS 1.1 are no longer supported.
 
 #### Relational anomaly detection: All relational anomalies will now be stored in the database [ID 43720]
 
@@ -342,7 +342,7 @@ From now on, when you try to install Alerter, it will check whether Microsoft .N
 
 #### Cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube [ID 43810]
 
-<!-- MR 10.6.0 - FR 10.5.12 -->
+<!-- MR 10.5.0 [CU10] - FR 10.5.12 -->
 
 On systems with a Cassandra cluster database in combination with an OpenSearch indexing database, cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube.
 
@@ -433,3 +433,9 @@ These notices will now be generated again.
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 Up to now, after elements had been swarmed or migrated by means of a DELT package, in some cases, Automation script matrix actions associated with those elements could fail.
+
+#### Problem when an element with an active filtered table subscription was swarmed to the DMA on which it was already located [ID 44150]
+
+<!-- MR 10.6.0 - FR 10.5.12 [CU0] -->
+
+When an element was swarmed to the DataMiner Agent on which it was already located, up to now, a server-side deadlock would occur when that element had an active filtered table subscription at the time of the swarming operation.

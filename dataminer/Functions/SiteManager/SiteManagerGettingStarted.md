@@ -70,7 +70,7 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
 1. On a machine in your on-premises network, run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.sh) script by using the following command, where you replace the placeholders with the **account token** and a **site name**.
 
    ```bash
-   wget -qO- "https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.sh" | bash -s -- install '<AccountToken>' '<SiteName>'
+   wget -qO- "https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.sh" | sudo bash -s -- install '<AccountToken>' '<SiteName>'
    ```
 
    - You can find the **account token** in the Site Manager logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
@@ -87,7 +87,7 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
    To uninstall, you can use the following command:
 
    ```bash
-   wget -qO- "https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.sh" | bash -s -- uninstall
+   wget -qO- "https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.sh" | sudo bash -s -- uninstall
    ```
 
 1. After a successful installation, you can start exposing your data sources so Site Manager can set up a tunnel for each data source it needs to communicate with.

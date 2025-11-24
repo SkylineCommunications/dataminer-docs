@@ -6,8 +6,6 @@ uid: GetActiveAlarmsForElementV2
 
 Use this method to retrieve all the active alarms of a particular element along with the alarm cache status.
 
-<!-- Available from DataMiner 10.0.7 onwards. -->
-
 ## Input
 
 | Item       | Format  | Description                                          |

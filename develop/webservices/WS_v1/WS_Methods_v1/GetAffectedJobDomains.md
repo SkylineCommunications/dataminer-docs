@@ -6,7 +6,10 @@ uid: GetAffectedJobDomains
 
 Use this method to retrieve all domains that a specific section definition is linked to.
 
-<!-- Available from DataMiner 10.0.10 onwards. -->
+> [!CAUTION]
+>
+> - The Jobs app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
+> - The Jobs app is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 ## Input
 

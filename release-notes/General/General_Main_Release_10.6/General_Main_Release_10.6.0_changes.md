@@ -9,6 +9,25 @@ uid: General_Main_Release_10.6.0_changes
 
 ## Changes
 
+### Breaking changes
+
+#### Unicode string values will now be saved correctly in non-Unicode elements [ID 43929]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+Up to now, when a string parameter in a non-Unicode connector was set to a Unicode value, malformed data would get saved into that parameter, and that same malformed data would remain in the parameter when, later, the connector was changed to a Unicode connector.
+
+From now on, when a string parameter in a non-Unicode connector is set to a Unicode value, that Unicode value will be saved correctly, and will remain saved correctly when the connector is changed to a Unicode connector.
+
+- Unicode characters saved in a non-Unicode connector that cannot be mapped to a non-Unicode equivalent will be displayed as a question mark ("?") until the connector is changed to a Unicode connector.
+- Primary key values will always be saved in Unicode, even in elements using a non-Unicode connector.
+- Up to now, table rows retrieved from the database would not get loaded when the primary key could not be found, resulting in errors being logged. From now on, those table rows will be retrieved and loaded correctly.
+
+Breaking changes:
+
+- In a Unicode connector, the `Interprete.Value` of string parameters with a fixed length will be considered a Unicode value, unless it is in 0x format. Values of parameters with `Interprete.RawType` set to "Numeric Text" and `Interprete.Type` set to "double" will be considered ASCII values, even when the element is using a Unicode connector.
+- From now on, serial commands with `ascii="true"` will only be applied to string parameters of which `Interprete.Value` does not contain a value in 0x format. Up to now, `ascii="true"` would be applied to all parameters in a serial command.
+
 ### Enhancements
 
 #### DataMiner installer has been updated [ID 40409] [ID 41299] [ID 43030]
@@ -448,11 +467,11 @@ From now on, the entire `C:\Skyline DataMiner\Webpages\API` folder will be clear
 
 From now on, no attempts will be made anymore to automatically detect the interactive behavior of script libraries, i.e. scripts of which all Exe blocks contain precompiled C# code. These libraries are not intended to be run independently.
 
-#### Serial communication: Only TLS 1.2 or TLS 1.3 encryption will now be allowed [ID 43678]
+#### All HTTPS communication will have to use TLS 1.2 encryption [ID 43678] [ID 44151]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
-Although DataMiner supports all TLS versions up to TLS 1.3, from now on, all serial communication will have to use either TLS 1.2 or TLS 1.3 encryption.
+From now on, all HTTPS communication will have to use TLS 1.2 encryption. SSL, TLS 1.0, and TLS 1.1 are no longer supported.
 
 #### DataMiner Object Models: Requests will be kept on hold for up to 30 seconds when sent to a DOM manager that is reinitializing [ID 43711]
 
@@ -566,6 +585,53 @@ All methods in the `Skyline.DataMiner.Automation` namespace that use parameter d
 
 When a client application retrieves information about time-scoped related parameters using the `GetTimeScopedRelationsMessage`, from now on, exceptions will be thrown when that message is sent with incorrect arguments (e.g. a non-existing parameter ID, an invalid time range, etc.).
 
+#### SLNetClientTest tool: Enhanced management of DOM modules of which definition-level security is enabled [ID 44021]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+The SLNetClientTest tool has been adapted to be able to better manage DOM modules of which definition-level security is enabled.
+
+##### Filtering on DOM instance IDs in the Filter window
+
+Up to now, it was only possible to select one or more DOM definitions in the list. From now on, it will be possible to enter up to 500 IDs of DOM instances you want to retrieve. If you enter more than 500 IDs, a message will appear, and only the first 500 IDs will be used to construct the filter.
+
+When you enter a number of IDs and click *OK*, the IDs will be parsed. The valid IDs will be used and the invalid IDs will be disregarded.
+
+Note that the IDs you enter will take precedence over the DOM definitions that you selected in the list. As soon as you enter a number of valid DOM instance IDs, the DOM definitions you selected in the list will be disregarded.
+
+##### Context menu added to the list on the main 'DomInstances' tab
+
+The list on the *DomInstances* tab now has a right-click menu with the following options:
+
+| Option | Description |
+|--------|-------------|
+| View attachments | When this option is selected, all selected DOM instances will be added to list on the *Attachments* tab. This allows you to view, add, or delete attachments for these DOM instances. |
+| View history     | When this option is selected, the selected DOM instances will be passed on to the *History* tab, where the list will be updated with the history of these DOM instances.<br>A note will be displayed at the top, clarifying that the current view only shows the history of a specific subset of instances.<br>Note: The list can only show the history of up to 500 instances. If more than 500 instances are selected, a message will be displayed, and no filtering will be applied. |
+
+##### Changes to the Attachments tab
+
+The *Attachments* tab has been updated as follows:
+
+- The *Load* button will now be disabled when definition-level security is enabled.
+
+- A message will now be displayed in the right-hand panel, explaining that you can add DOM instances to the list in the left-hand panel by using the context menu mentioned [above](#context-menu-added-to-the-list-on-the-main-dominstances-tab).
+
+- A *Clear* button now allows you to clear the list of DOM instances.
+
+##### Changes to the History tab
+
+When definition-level security is enabled, from now on, the *History* tab will no longer try to read all recent history. In that case, a message will appear, referring to the context menu mentioned [above](#context-menu-added-to-the-list-on-the-main-dominstances-tab).
+
+> [!NOTE]
+> When, in said context menu, you selected *View history* to show the history of specific DOM instances, it is currently not possible to revert that decision and make the list show all latest history. To do so, close the DOM module window and re-open it.
+
+##### When trying to delete a DOM module
+
+When you try to delete a DOM module, but you do not have access to all DOM definitions in that module, a message box will now be displayed, explaining why you are not allowed to delete the module in question.
+
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 #### NATSRepair.exe can no longer be run when automatic NATS configuration is disabled [ID 44061]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
@@ -665,12 +731,6 @@ When you tried to install Alerter, in some cases, a warning message would appear
 
 From now on, when you try to install Alerter, it will check whether Microsoft .NET Framework 4.6.2 is installed.
 
-#### Cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube [ID 43810]
-
-<!-- MR 10.6.0 - FR 10.5.12 -->
-
-On systems with a Cassandra cluster database in combination with an OpenSearch indexing database, cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube.
-
 #### Outdated SLAnalytics icons would incorrectly remain visible for too long because of SLNet caching issues [ID 43957]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
@@ -690,3 +750,23 @@ When, in a correlation rule, a *New alarm* or an *Escalate event* action was con
 Up to now, if the *Db.xml* file contained an invalid `<Database>` tag, a DataMiner backup procedure would fail with the incorrect error `An error occurred when dumping the elastic database`, even on systems that did not include an Elasticsearch database.
 
 From now on, when an invalid `<Database>` tag is found in the *Db.xml* file during a DataMiner backup procedure, an `invalid tag` error will be logged and the backup procedure will continue without any exception being thrown.
+
+#### Failover: Security Advisory BPA test would show an incorrect result after checking the status of port 5100 of the firewall [ID 44093]
+
+<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+When run on the offline agent of a Failover system, the Security Advisory BPA test would show an incorrect result after checking the status of port 5100 of the firewall.
+
+#### SLNet queues listed in log files would incorrectly exceed the actual number of queues [ID 44130]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+In some cases, the number of awaited SLNet queues listed in the log files would incorrectly exceed the actual number of awaited queues.
+
+Also, the `BlockUntilAllInFlightEventsWereHandled` method will no longer be called when no work has to be done afterwards.
+
+#### Problem when an element with an active filtered table subscription was swarmed to the DMA on which it was already located [ID 44150]
+
+<!-- MR 10.6.0 - FR 10.5.12 [CU0] -->
+
+When an element was swarmed to the DataMiner Agent on which it was already located, up to now, a server-side deadlock would occur when that element had an active filtered table subscription at the time of the swarming operation.

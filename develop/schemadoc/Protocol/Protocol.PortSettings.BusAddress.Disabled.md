@@ -24,4 +24,4 @@ Contains one of the following predefined values:
 |false|Users will be able to modify the setting in the DataMiner user interface.|
 
 > [!NOTE]
-> From DataMiner 9.0.0 (RN 12883) onwards, it is no longer possible to disable the Device Address field for a GPIB connection. If you do set Disabled to “true”, this will be disregarded in that case.
+> If you set `Disabled` to "true" for a GPIB connection, this will be ignored.<!-- RN 12883 -->

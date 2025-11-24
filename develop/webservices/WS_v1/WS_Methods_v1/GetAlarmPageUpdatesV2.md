@@ -6,8 +6,6 @@ uid: GetAlarmPageUpdatesV2
 
 Use this method to retrieve alarm page information for a custom selection of alarms that match the given filters, as well as the alarm cache status.
 
-<!-- Available from DataMiner 10.0.7 onwards. -->
-
 ## Input
 
 | Item | Format | Description |

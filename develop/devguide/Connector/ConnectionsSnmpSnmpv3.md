@@ -24,7 +24,7 @@ The following RFCs provide more information about SNMPv3:
 SNMPv3 applies a User-based Security Model (USM) which provides support for authentication and encryption. For more information about USM in SNMPv3, refer to [RFC 3414](https://datatracker.ietf.org/doc/html/rfc2574).
 
 > [!NOTE]
-> Always verify that the correct security settings are filled in (username, authentication and privacy settings). From DataMiner 9.6.10 (RN 21458) onwards, a user is considered unique based on the following set of properties:
+> Always verify that the correct security settings are filled in (username, authentication and privacy settings). A user is considered unique based on the following set of properties:<!-- RN 21458 -->
 >
 > - User name
 > - Authentication protocol
@@ -39,15 +39,15 @@ The following SNMPv3 authentication and encryption (privacy) protocols are suppo
 - Encryption algorithms:
   - DES
   - AES128
-  - AES192 (Since DataMiner 9.6.13 (RN 23586))
-  - AES256 (Since DataMiner 9.6.13 (RN 23586))
+  - AES192<!-- RN 23586 -->
+  - AES256<!-- RN 23586 -->
 - Authentication algorithms:
   - MD5
   - SHA128
-  - SHA224 (Since DataMiner 9.6.13 (RN 23586))
-  - SHA256 (Since DataMiner 9.6.13 (RN 23586))
-  - SHA384 (Since DataMiner 9.6.13 (RN 23586))
-  - SHA512 (Since DataMiner 9.6.13 (RN 23586))
+  - SHA224<!-- RN 23586 -->
+  - SHA256<!-- RN 23586 -->
+  - SHA384<!-- RN 23586 -->
+  - SHA512<!-- RN 23586 -->
 
 > [!NOTE]
 > When an encryption algorithm is used with more bits than the authentication type, this can cause issues. The following combinations are therefore not possible:

@@ -253,7 +253,7 @@ amountPackets=5:amountPacketsMeasurements=4,excludeWorstResults=50">
 ```
 
 > [!NOTE]
-> From DataMiner 9.5.1 (RN 14522) onwards, if only one packet is sent, this will be displayed as a timeout, as jitter cannot be calculated based on 1 ping result. In earlier versions, a jitter of 0 ms is displayed.
+> If only one packet is sent, this will be displayed as a timeout, as jitter cannot be calculated based on 1 ping result.<!-- RN 14522 -->
 
 The following example makes use of the options to calculate the jitter, latency and packet loss rate.
 
