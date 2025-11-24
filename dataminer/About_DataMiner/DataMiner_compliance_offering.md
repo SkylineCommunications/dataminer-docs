@@ -23,11 +23,11 @@ All DataMiner services offered on dataminer.services run on Microsoft Azure, whi
 
 The NIS2 directive of the European Parliament of December 2022 aims to expand and strengthen cybersecurity across Europe. At present, it is not yet mandatory to comply with this, but all organizations must already work towards compliance. For this purpose, our external security partner has carried out an audit and provided us with a gap analysis. Based on this analysis, we are currently working to further strengthen our security.
 
-Similarly, we are also working on compliance with the more recent European Cyber Resilience Act (CRA) regulation, which imposes cybersecurity requirements for all connected products put on the EU market. This legal framework was introduced very recently in November 2024. We are currently working on reviewing our policies and implementing policy changes.
+Similarly, we are also working on compliance with the more recent European Cyber Resilience Act (CRA) regulation, which imposes cybersecurity requirements for all connected products put on the EU market. This legal framework was introduced in November 2024. We are currently working on reviewing our policies and implementing policy changes.
 
 ## ISO/IEC 27001 compliance
 
-In 2025, Skyline is planning to take the next step and aim towards attaining full ISO/IEC 27001 compliance as well. Initially, we are planning an extensive gap analysis, and based on this we are aiming to fully comply by the end of 2025 or early 2026.
+In 2025, Skyline is planning to take the next step and aim towards attaining full ISO/IEC 27001 compliance as well. Initially, we are planning an extensive gap analysis, and based on this we are aiming to fully comply early 2026.
 
 ## GDPR compliance
 
