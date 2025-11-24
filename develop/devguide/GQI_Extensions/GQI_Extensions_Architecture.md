@@ -20,13 +20,17 @@ When a query uses GQI extensions (like ad hoc data sources or custom operators),
 - **Technology:** .NET 8
 - **Communication:** Connects to the DataMiner Agent via gRPC (APIGateway)
 
-## Child processes
+## Extension worker processes
 
 **Process name:** `DataMiner GQI.ExtensionsWorker.Automation.exe`
 
 Each [extension library](xref:GQI_Extension_Libraries) runs in its own child process, providing isolation and modularity. You can identify which extension a child process is responsible for by checking the command line arguments in Task Manager.
 
 - **Technology:** .NET Framework 4
+
+The worker process exists as long as it is being used by at least one active query session, and it will remain available if there are no active query sessions until it expires. See [Termination of idle child processes](xref:GQI_DxM#termination-of-idle-child-processes).
+
+The worker process can be terminated manually using Task Manager in case an extension is using too much resources or has an issue. In that case, all dependent query sessions will become invalid and will respond with a "*Extension worker for 'ExtensionLibrary' has exited.*" message when attempting to interact with the session.
 
 ## Communication process
 
