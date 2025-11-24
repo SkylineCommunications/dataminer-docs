@@ -115,8 +115,6 @@ items:
             topicUid: Web_apps_Main_Release_10.4.0_CU20
           - name: DataMiner web apps Main Release 10.4.0 CU21
             topicUid: Web_apps_Main_Release_10.4.0_CU21
-          - name: DataMiner web apps Main Release 10.4.0 CU22 - Preview
-            topicUid: Web_apps_Main_Release_10.4.0_CU22
       - name: Feature Release
         items:
           - name: DataMiner web apps Feature Release 10.4.12
