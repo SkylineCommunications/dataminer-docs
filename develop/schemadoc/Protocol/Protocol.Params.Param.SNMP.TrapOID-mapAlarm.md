@@ -36,7 +36,7 @@ The order of the following items (separated by pipe characters) is irrelevant.
 
   It is also possible to specify something like this: `Link:1,2;3,4`. If a trap then enters, it will look for a previously received trap with the binding combination 1,2, and it will remember the combination 3,4 of the current trap for future trap linking. In other words, you need to specify which binding or combination of bindings it can find in another trap, and you need to specify where this can be found in that other trap.
 
-  Negative values can be used before the binding numbers to make groups. Example: Link:-1,3,4 will link all bindings 3 and 4 where the group is -1.|
+  Negative values can be used before the binding numbers to make groups. Example: Link:-1,3,4 will link all bindings 3 and 4 where the group is -1.
 
 - **IgnoreSingleClear**: If this predefined value is used, no alarm will be generated when a normal alarm enters without a critical alarm.
 
