@@ -30,7 +30,7 @@ Each [extension library](xref:GQI_Extension_Libraries) runs in its own child pro
 
 The worker process exists as long as it is being used by at least one active query session, and it will remain available if there are no active query sessions until it expires. See [Termination of idle child processes](xref:GQI_DxM#termination-of-idle-child-processes).
 
-The worker process can be terminated manually using Task Manager in case an extension is using too much resources or has an issue. In that case, all dependent query sessions will become invalid and will respond with a "*Extension worker for 'ExtensionLibrary' has exited.*" message when attempting to interact with the session.
+The worker process can be terminated manually using Task Manager in case an extension is using too many resources or has an issue. In that case, all dependent query sessions will become invalid and will respond with the message "*Extension worker for 'ExtensionLibrary' has exited.*" when you attempt to interact with them.<!-- RN 43770-->
 
 ## Communication process
 
