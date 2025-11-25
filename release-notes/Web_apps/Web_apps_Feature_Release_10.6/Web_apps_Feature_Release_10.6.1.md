@@ -68,6 +68,12 @@ Also, custom positioning mode has now been replaced by the following two positio
 
 When a Line & area chart component was displaying trend data of aggregation parameters, up to now, it was not possible to export that trend data to a CSV file. Exporting that data is now supported.
 
+#### GQI DxM: Enhanced performance when using the 'Get parameters for elements where' data source [ID 43989]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Because of a number of enhancements, overall performance has increased when using the *Get parameters for elements where* data source, especially on systems using the GQI DxM instead of SLHelper.
+
 #### Low-Code Apps - Form component: Clearer error will now appear when a DOM instance contains an incorrect value for a DomInstanceFieldDescriptor or DomInstanceValueFieldDescriptor [ID 44017]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
@@ -267,3 +273,23 @@ When you had opened the DataMiner web apps authentication page in a Firefox web 
 Up to now, in a *Line & area chart* component, it would incorrectly be possible to start an export to CSV before the data had been loaded.
 
 From now on, an export to CSV will always be performed synchronously. In other words, even when you click *Export to CSV* before the data has been loaded, the export operation will only start when all data has been loaded.
+
+#### Dashboards app: Problem when generating a PDF report if a trend graph with valid data was followed by a trend graph without valid data [ID 44143]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, it would not be possible to generate a PDF report if a trend graph with valid data was followed by a trend graph without valid data.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Users without edit permission would incorrectly not be allowed to move nodes [ID 44154]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, in a low-code app, users without permission to edit low-code apps would incorrectly not be allowed to move nodes in a node edge graph component.
+
+From now on, users with permission to view low-code apps will be allowed to moved nodes. However, if the node edge graph component is using Layered positioning, the new node positions will not be stored. New node positions will only be stored when the user has edit permission.
+
+#### Low-Code Apps: Post actions of an 'Execute a script' action would not be able to link the script's output values [ID 44157]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, when an *Execute a script* action had been triggered by means of a header bar button, the post actions would not be able to link the script's output values.

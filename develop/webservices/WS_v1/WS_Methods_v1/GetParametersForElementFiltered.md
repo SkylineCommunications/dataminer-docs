@@ -6,8 +6,6 @@ uid: GetParametersForElementFiltered
 
 Use this method to retrieve the parameters of a particular element that match a specified filter.
 
-<!-- Available from DataMiner 9.6.7 onwards. -->
-
 ## Input
 
 | Item                 | Format  | Description                                                                      |

@@ -42,6 +42,18 @@ Clicking a "+" icon will load all parameters associated with the multi-variate t
 
 ### Enhancements
 
+#### System Center: Enhanced embedding of DOM definition-level security app on cloud-connected systems [ID 43975]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+A number of enhancements have been made to the way in which the DOM definition-level security app is embedded in System Center.
+
+Up to now, when you went to *System Center > DOM* while being connected to a cloud-connected DataMiner Agent, you had to click a hyperlink to open the app in a browser window.
+
+From now on, when you go to *System Center > DOM* while being connected to a cloud-connected DataMiner Agent running at least Main Release version 10.6.0 or Feature Release version 10.5.12, after entering your credentials, you will immediately see the app, fully embedded in System Center. The session will be kept alive until System Center is closed.
+
+Also, up to now, when you made a change in the embedded app and switched to another tab in System Center, that change would not be kept when you had not clicked the *Apply* button. From now on, all changes made in the embedded app will be kept until you close System Center.
+
 #### Trending: Double-clicking the alarm group of a multi-variate trend pattern will now open a trend graph showing all parameters involved in the multi-variate trend pattern [ID 43994]
 
 <!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
@@ -90,6 +102,14 @@ Also, up to now, it would incorrectly be possible to save a script to which you 
 In a Visio file linked to a service, the [servicedefinitionfilter] placeholder can be used to refer to the row filter of an included table parameter.
 
 Up to now, in some cases, a primary key prefix, which is added to this filter for configuration purposes, would incorrectly not get removed before the filter was applied. From now on, this prefix will always be removed before the filter is applied.
+
+#### Alarm Console: Correlation alarms that had disappeared because the element in question had been stopped, paused, deleted, or restarted, would incorrectly re-appear [ID 44087]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+When, in the Alarm Console, there is a correlation alarm, the moment you stop, pause, delete, or restart the element on which that correlated alarm was triggered, it will automatically disappear from the Alarm Console.
+
+However, up to now, when you created a new alarm tab, any correlation alarm that had disappeared because the element in question had been stopped, paused, deleted, or restarted, would incorrectly re-appear.
 
 #### Service & Resource Management: Service Manager would incorrectly be registered each time you switched to another workspace [ID 44106]
 

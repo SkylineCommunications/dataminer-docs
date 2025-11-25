@@ -40,22 +40,26 @@ A number of minor enhancements have been made to the following BPAs:
 
 - Renamed to *Active Runtime errors*.
 
+#### New BPA test: Health Metrics [ID 43509]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+A new BPA test named "Health Metrics" has been added.
+
+This BPA test will run every hour, and will fetch details about connections used within DataMiner, either through a diagnose message or by using information offloaded to disk.
+
+In later versions, it will then also analyze those details and attempt to warn operators when load increases on specific DataMiner modules and/or connections.
+
 #### SLNetClientTest tool now allows you to check the contents of the hosting cache used by SLDataMiner [ID 43605]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 Using the *SLNetClientTest* tool, you can now send a DiagnosticMessage with LIST_HOSTAGENTCACHE to SLDataMiner to retrieve the contents of the hosting cache used by SLDataMiner. This will allow you to check if an element is local or not.
 
-To send such a message, open the *SLNetClientTest* tool, and go to *Diagnostics > Dma > Elements (Hosting Cache)*.
+To send such a message, open the *SLNetClientTest* tool, and go to *Diagnostics > DMA > Elements (Hosting Cache)*.
 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
-
-#### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
-
-<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
-
-All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
 
 #### SLASPConnection will now detect more quicker that a connection to a DMA has been lost or re-established [ID 44049]
 
@@ -65,7 +69,7 @@ Because of a number of enhancements, SLASPConnection will now detect more quicke
 
 #### DataMiner upgrade: New prerequisite will check whether .NET 10 is installed [ID 44121]
 
-<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 Before upgrading to this DataMiner release or above, you are expected to install the Microsoft .NET 10 hosting bundle.
 
@@ -79,6 +83,12 @@ When you start a DataMiner upgrade procedure, from now on, a new prerequisite wi
 
 In some cases, conditional triggers to dynamically include or exclude child elements would be parsed incorrectly, especially when the first condition was a NOT clause.
 
+#### Cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube [ID 43810]
+
+<!-- MR 10.5.0 [CU10] - FR 10.5.12 -->
+
+On systems with a Cassandra cluster database in combination with an OpenSearch indexing database, cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube.
+
 #### SLElement could stop working when DVE elements were deleted [ID 43947]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
@@ -90,6 +100,12 @@ Up to now, when DVE elements were deleted while multiple DVE elements were havin
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 When a QAction triggered an information message with regard to a particular element, SLNet would incorrectly only forward that message to the DataMiner Agent that hosted that element. As a result, that information message would not appear in client applications connected to any of the other DataMiner Agents in the system.
+
+#### Problem with parameter state timelines on systems with a Cassandra Single or Cassandra Cluster database [ID 43982]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, in some cases, parameter state timelines displayed in client applications like DataMiner web apps or DataMiner Cube could should incorrect data, especially on DataMiner Systems with a Cassandra Single or a Cassandra Cluster database.
 
 #### Failover: 'C:\\Skyline DataMiner\\Elements' folder on offline Agents could unexpectedly be cleared [ID 44005]
 
@@ -113,6 +129,14 @@ Up to now, SLProtocol would silently fail to parse the *stuffing* attribute of t
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 On a newly created Failover system, in some cases, the TLS handshakes of the NATS connections would fail due to the virtual IP address not being updated in the TLS certificate.
+
+#### Problem when importing Visio files associated with views or services via a .dmimport package [ID 44065]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, an issue would prevent Visio files associated with views or services from being imported via a *.dmimport* package.
+
+This issue did not occur when importing Visio files associated with connectors via a *.dmprotocol* package.
 
 #### Problem when importing a connector that contained information templates of which the name contained dots [ID 44079]
 
@@ -139,3 +163,9 @@ When run on the offline agent of a Failover system, the Security Advisory BPA te
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 In some cases, SLDataMiner could leak memory when documents were being handled.
+
+#### Problem when performing a row-based FillArray method with zero rows as input and with the SaveOption option set to 'Partial' [ID 44137]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When a row-based `FillArray` method was performed with zero rows as input and with the `SaveOption` option set to "Partial", up to now, the method would throw an unhandled exception due to a missing check.

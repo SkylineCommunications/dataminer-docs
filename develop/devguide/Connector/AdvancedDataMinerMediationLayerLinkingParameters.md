@@ -20,7 +20,7 @@ There are two ways to establish links between parameters in a base protocol and 
    </Mediation>
 ```
 
-From DataMiner 9.6.2 (RN 19591) onwards, it is possible to create a base protocol that is not linked to a specific element type but directly to a protocol, allowing you to link protocols with different element types to the same base protocol. When a base protocol contains a Mediation.LinkTo@protocol attribute referring a protocol, the element type in the basefor attribute of the protocol that is referred to will be disregarded.
+It is possible to create a base protocol that is not linked to a specific element type but directly to a protocol, allowing you to link protocols with different element types to the same base protocol. When a base protocol contains a Mediation.LinkTo@protocol attribute referring a protocol, the element type in the basefor attribute of the protocol that is referred to will be disregarded.<!-- RN 19591 -->
 
 In the example above, the base protocol refers to a protocol parameter by specifying the protocol and parameter ID. It is also possible to refer to a parameter through its description, as illustrated below.
 

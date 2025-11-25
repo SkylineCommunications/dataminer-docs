@@ -49,7 +49,7 @@ The following filters can be specified in the input for this method:
 
   - In case the *in_range* or *out_range* operator is used, two values separated by a forward slash (/).
 
-  - <!-- From DataMiner 9.0.1 onwards -->A value enclosed within single quotation marks (').
+  - A value enclosed within single quotation marks (').
 
   Examples:
 
@@ -92,7 +92,7 @@ The following filters can be specified in the input for this method:
 
   This filter determines how to sort the filter results. It should be followed by one or more parameter IDs, separated by pipe characters ("\|"). The default order is ascending, but DESC can be added in the filter to apply descending sort order instead. For example, `SORT=12502|DESC`.
 
-  <!-- From DataMiner 10.0.0 onwards -->You can also specify `SORT=NONE`, to avoid any kind of sorting of the results, which may improve performance.
+  You can also specify `SORT=NONE`, to avoid any kind of sorting of the results, which may improve performance.
 
 - **RESOLVE**=
 
@@ -166,12 +166,10 @@ The following filters can be specified in the input for this method:
 
   > [!NOTE]
   > String values should be enclosed in single quotation marks (').
-  
-  <!-- Prior to DataMiner 9.0.1, *AND* and *OR* operators in the filter are applied from left to right in one accumulated result, which can potentially lead to unexpected results. To avoid this, if there is a single *AND* value, place this at the end of the filter. -->
 
 - **RECURSIVEFULLFILTER**
 
-  <!-- Available from DataMiner 10.0.3 onwards. -->This filter uses the same syntax as the fullfilter component, but is applied to all keys found through recursive links when requesting a table with the recursive option.
+  This filter uses the same syntax as the fullfilter component, but is applied to all keys found through recursive links when requesting a table with the recursive option.
 
   For example:
 

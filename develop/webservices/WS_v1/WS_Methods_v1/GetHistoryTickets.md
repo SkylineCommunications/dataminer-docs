@@ -4,10 +4,7 @@ uid: GetHistoryTickets
 
 # GetHistoryTickets
 
-This method is deprecated. <!-- from DataMiner 10.0.13 onwards. -->Use the [GetHistoryTicketsV2](xref:GetHistoryTicketsV2) method instead.
-
-> [!NOTE]
-> DataMiner Ticketing requires a Cassandra database as well as a specific license. <!-- From DataMiner 10.0.13 onwards, -->It also requires an indexing database. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
+This method is deprecated. Use the [GetHistoryTicketsV2](xref:GetHistoryTicketsV2) method instead.
 
 > [!CAUTION]
 >
@@ -19,8 +16,8 @@ This method is deprecated. <!-- from DataMiner 10.0.13 onwards. -->Use the [GetH
 | Item | Format | Description |
 |--|--|--|
 | connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| utcStartTime | Long integer | The start time of the timespan for which tickets should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
-| utcEndTime | Long integer | The end time of the timespan for which tickets should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
+| utcStartTime | Long integer | The start time of the time span for which tickets should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
+| utcEndTime | Long integer | The end time of the time span for which tickets should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
 | pageSessionID | Long integer | The page session ID (cf. note below). |
 | pageNumber | Integer | The page number (cf. note below). |
 | count | Integer | The number of tickets to be retrieved. |
