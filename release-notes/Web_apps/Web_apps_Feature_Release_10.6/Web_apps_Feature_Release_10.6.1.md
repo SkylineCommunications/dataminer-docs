@@ -200,6 +200,19 @@ Also, the following methods have been removed from the Web Services API (v1):
 - GetAnnotationsLinkForService
 - GetAnnotationsLinkForView
 
+#### Web apps: Option to log in with a local user account [ID 44152]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When a DataMiner Agent was configured to used external authentication, up to now, it would not be possible to log in to a web app with a local user account.
+
+From now on, when you add the `skipAutoLogin=true` argument to the URL of the app, the login screen will allow you to log in using either external authentication or a local user account.
+
+Example: `https://dma.company.local/?skipAutoLogin=true`
+
+> [!NOTE]
+> After having logged in using external authentication, you will now find a new *Sign in with another user* option in the user menu. This option will allow you return to the login screen, where you will be able log in using either external authentication or a local user account.
+
 ### Fixes
 
 #### Visual Overview in web apps: Children shapes would incorrectly be displayed on top of a clickable group of shapes [ID 43465]
