@@ -645,6 +645,15 @@ When a backup package was being created, up to now, the temporary file would be 
 > - When DataMiner and Cassandra are installed on the same machine, and the Cassandra data directory is on the C drive, the temporary snapshot for Cassandra will be created in that data directory before it is added to the backup package on the target path. This is default Cassandra behavior. If you wish to avoid this, move the Cassandra data directory to another drive, or consider moving to STaaS or self-managed clustered storage as Cassandra Single is End of Engineering.
 > - Backups for which only a network path has been specified may take a bit more time as the temporary file will now be created on that network path. Backups for which both a local path and a network path have been specified will not take longer as the temporary file will be created on the local path and then simply copied to the network path.
 
+#### Annotations are now End of Life [ID 44124] [ID 44183]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+Annotations are now End of Life.
+
+> [!IMPORTANT]
+> Before you upgrade to this DataMiner version, make sure the soft-launch option *LegacyAnnotations* is either disabled or removed from the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file. Otherwise, the upgrade operation will be aborted.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]

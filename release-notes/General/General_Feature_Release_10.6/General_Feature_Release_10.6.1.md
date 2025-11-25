@@ -366,6 +366,15 @@ Before upgrading to this DataMiner release or above, you are expected to install
 
 When you start a DataMiner upgrade procedure, from now on, a new prerequisite will verify whether Microsoft .NET 10 is installed on the system. If this is not the case, the upgrade will be canceled.
 
+#### Annotations are now End of Life [ID 44124] [ID 44183]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+Annotations are now End of Life.
+
+> [!IMPORTANT]
+> Before you upgrade to this DataMiner version, make sure the soft-launch option *LegacyAnnotations* is either disabled or removed from the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file. Otherwise, the upgrade operation will be aborted.
+
 #### Relational anomaly detection: AddRADParameterGroupMessage can now include a model training configuration [ID 44135]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
