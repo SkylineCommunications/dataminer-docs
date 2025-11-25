@@ -101,6 +101,12 @@ Up to now, when DVE elements were deleted while multiple DVE elements were havin
 
 When a QAction triggered an information message with regard to a particular element, SLNet would incorrectly only forward that message to the DataMiner Agent that hosted that element. As a result, that information message would not appear in client applications connected to any of the other DataMiner Agents in the system.
 
+#### Problem with parameter state timelines on systems with a Cassandra Single or Cassandra Cluster database [ID 43982]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, in some cases, parameter state timelines displayed in client applications like DataMiner web apps or DataMiner Cube could should incorrect data, especially on DataMiner Systems with a Cassandra Single or a Cassandra Cluster database.
+
 #### Failover: 'C:\\Skyline DataMiner\\Elements' folder on offline Agents could unexpectedly be cleared [ID 44005]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
