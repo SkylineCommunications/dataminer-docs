@@ -4,6 +4,46 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.15
+
+### New features
+
+#### IDE
+
+##### Updated manifest for VS2026 support [ID 44142]
+
+The manifest file of the DataMiner Integration Studio extension has been updated to formally indicate support for Visual Studio 2026.
+
+##### Updated copyright snippets [ID 44053]
+
+The snippets to include the copyright message have been updated to a more concise copyright message.
+
+##### Updated IAS [ID 44072]
+
+The IAS snippet has been updated so it now corresponds with the example code in the README of the [IAS Toolkit repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit).
+
+##### Updated Directory.Build.props file to exclude TargetPlatform x84 entry [ID 44224]
+
+If the "Automatically update solution files" checkbox is enabled, DIS will automatically update some solution files such as the Directory.Build.props file which has the following entry:
+
+`<PlatformTarget>x86</PlatformTarget>`
+
+However, when creating e.g. a NuGet package that could be used in e.g. connectors, Automation scripts and GQI queries then you do not want the Directory.Build.props file to be fixed on x86, (since e.g. ad-hoc data sources run in a 64-bit process). This entry has now been removed.
+
+> [!NOTE]
+> As a consequence, developers should take care to set this entry on the csproj file when needed. For example, when creating unit tests for a regular Automation script, it might be required to configure the target platform to x86 as otherwise a BadImageFormatException could be thrown when executing the test.
+
+##### Updated DIS dependencies
+
+DIS now uses:
+
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 1.3.0
+- [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol) version 1.1.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.5.12.1
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.5.12.1
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.5.12.1
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.5
+
 ## DIS 3.1.14
 
 ### New features
