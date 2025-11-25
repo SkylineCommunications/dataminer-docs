@@ -6,7 +6,7 @@ keywords: NATS security, NATS TLS
 # Securing NATS
 
 > [!NOTE]
-> This section **only applies for DataMiner System using a version older than DataMiner 10.6.0/10.6.1**. From DataMiner 10.6.0/10.6.1 onwards, a BrokerGateway-managed NATS solution is used where TLS is configured automatically.
+> This section **only applies to DataMiner Systems using a version older than DataMiner 10.6.0/10.6.1**. From DataMiner 10.6.0/10.6.1 onwards, a BrokerGateway-managed NATS solution is used where TLS is configured automatically.
 
 By default, NATS does **not** employ TLS encryption, leaving communication susceptible to eavesdropping. Consequently, we **strongly recommend enabling TLS encryption** for enhanced security within your NATS cluster.
 

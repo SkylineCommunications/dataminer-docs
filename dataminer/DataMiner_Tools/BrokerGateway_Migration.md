@@ -65,7 +65,7 @@ For DataMiner versions prior to 10.5.0 [CU4]/10.5.7, the migration needs to be r
 ### Full example migration log (sanitized)
 
 Below is a full sample output of a successful manual migration run. The machine name has been replaced by `HOSTNAME` and the IP addresses by `IP1`, `IP2`, and virtual IP `VIP1`. Timestamps have been removed as well.
-This can only be seen if `C:\Skyline DataMiner\ToolsNATSMigration.exe` is manually executed from console.
+This can only be seen if `C:\Skyline DataMiner\Tools\NATSMigration.exe` is manually executed from console.
 
 ```cmd
 C:\Skyline DataMiner\Tools>NATSMigration.exe

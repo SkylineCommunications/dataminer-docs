@@ -1,7 +1,7 @@
 ---
 uid: Investigating_NATS_Issues
 keywords: VerifyNatsIsRunning, troubleshooting NATS, investigating NATS issues
-description: Start by checking the logging, then check your installation and SLCloud.xml configuration, check if NAS and NATs are running, check the configs, …
+description: Troubleshooting guide for BrokerGateway-managed NATS, including checking migration state, verifying configuration, inspecting logs, and repairing the cluster.
 ---
 
 # Troubleshooting – NATS (BrokerGateway-managed NAS/NATS architecture)
@@ -20,7 +20,7 @@ description: Start by checking the logging, then check your installation and SLC
    - Verify legacy NATS/NAS services are stopped or removed; ensure `nats-server` service exists (services.msc).
 1. Verify `ClusterEndpointsManager` soft‑launch option is enabled on every DMA:
    - Ensure there is **no** `<ClusterEndpointsManager>false</ClusterEndpointsManager>` in `SoftLaunchOptions.xml`.
-   - If this is disabled on any node: enable it. Restart the Agent and after a full startup run [NATSRepair.exe](##resetting--repairing-the-brokergateway-nats-cluster).
+   - If this is disabled on any node: enable it. Restart the Agent and after a full startup run [NATSRepair.exe](#resetting--repairing-the-brokergateway-nats-cluster).
 1. Validate BPAs:
    - Run BPA test: [NATS cluster verification](xref:BPA_Check_Agent_Presence).
 1. Inspect logs:

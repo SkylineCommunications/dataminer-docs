@@ -1,7 +1,7 @@
 ---
 uid: Investigating_Legacy_NATS_Issues
 keywords: VerifyNatsIsRunning, troubleshooting NATS, investigating NATS issues, Legacy NATS, SLNet-managed NATS, SLCloud
-description: Start by checking the logging, then check your installation and SLCloud.xml configuration, check if NAS and NATs are running, check the configs, �
+description: Start by checking the logging, then check your installation and SLCloud.xml configuration, check if NAS and NATS are running, check the configs…
 ---
 
 # Troubleshooting - NATS (Legacy SLNet-managed NAS/NATS architecture)
