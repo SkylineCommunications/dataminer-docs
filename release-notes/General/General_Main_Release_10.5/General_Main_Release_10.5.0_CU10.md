@@ -40,6 +40,16 @@ A number of minor enhancements have been made to the following BPAs:
 
 - Renamed to *Active Runtime errors*.
 
+#### New BPA test: Health Metrics [ID 43509]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+A new BPA test named "Health Metrics" has been added.
+
+This BPA test will run every hour, and will fetch details about connections used within DataMiner, either through a diagnose message or by using information offloaded to disk.
+
+In later versions, it will then also analyze those details and attempt to warn operators when load increases on specific DataMiner modules and/or connections.
+
 #### SLNetClientTest tool now allows you to check the contents of the hosting cache used by SLDataMiner [ID 43605]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
