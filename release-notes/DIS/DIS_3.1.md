@@ -10,28 +10,28 @@ uid: DIS_3.1
 
 #### IDE
 
-##### Updated manifest for VS2026 support [ID 44142]
+##### Updated manifest file now indicates that Visual Studio 2026 is supported [ID 44142]
 
-The manifest file of the DataMiner Integration Studio extension has been updated to formally indicate support for Visual Studio 2026.
+The manifest file of the DataMiner Integration Studio extension has been updated to formally indicate that Visual Studio 2026 is supported.
 
-##### Updated copyright snippets [ID 44053]
+##### Copyright snippets now include a more concise copyright message [ID 44053]
 
-The snippets to include the copyright message have been updated to a more concise copyright message.
+All snippets that include a copyright message have been updated. The copyright message has now been made more concise.
 
-##### Updated IAS [ID 44072]
+##### IAS snippet now corresponds with the example code in the README file of the IAS Toolkit repository [ID 44072]
 
-The IAS snippet has been updated so it now corresponds with the example code in the README of the [IAS Toolkit repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit).
+The IAS snippet has been updated. it now corresponds with the example code in the README file of the [IAS Toolkit repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit).
 
-##### Updated Directory.Build.props file to exclude TargetPlatform x84 entry [ID 44224]
+##### Directory.Build.props file will now exclude the 'TargetPlatform x86' entry [ID 44224]
 
-If the "Automatically update solution files" checkbox is enabled, DIS will automatically update some solution files such as the Directory.Build.props file which has the following entry:
+If the *Automatically update solution files* option is enabled, DIS will automatically update a number of solution files, such as the *Directory.Build.props* file that contains has the following entry:
 
 `<PlatformTarget>x86</PlatformTarget>`
 
-However, when creating e.g. a NuGet package that could be used in e.g. connectors, Automation scripts and GQI queries then you do not want the Directory.Build.props file to be fixed on x86, (since e.g. ad-hoc data sources run in a 64-bit process). This entry has now been removed.
+However, when you create e.g. a NuGet package that could be used in e.g. connectors, Automation scripts and GQI queries, you do not want the *Directory.Build.props* file to have its platform target fixed on x86. As a result, the `<PlatformTarget>x86</PlatformTarget>` entry has now been removed.
 
 > [!NOTE]
-> As a consequence, developers should take care to set this entry on the csproj file when needed. For example, when creating unit tests for a regular Automation script, it might be required to configure the target platform to x86 as otherwise a BadImageFormatException could be thrown when executing the test.
+> Developers should now set this entry in the csproj file when needed. For example, when you create unit tests for a regular Automation script, it might be required to set the target platform to x86. Otherwise, a `BadImageFormatException` could be thrown when executing the test.
 
 ##### Updated DIS dependencies
 
