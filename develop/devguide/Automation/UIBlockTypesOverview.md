@@ -31,7 +31,7 @@ The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines di
 
 ## UI versions
 
-Two versions of the interactive script UI are currently available. The most recent version, known as "V2", features a modern look and improved usability for scripts used in web apps and has been gradually developed along with DataMiner 10.5.x releases. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- RN 43964 -->, the V2 UI can only be viewed if the URL parameter [useNewIASInputComponents](xref:Configuring_app_actions_and_behavior_via_URL) is used for a web app.
+Two versions of the interactive script UI are currently available. The most recent version, known as "V2", features a modern look and improved usability for scripts used in web apps and has been gradually developed along with DataMiner 10.5.x releases. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- RN 43964 -->, the V2 UI can only be viewed if the URL parameter [useNewIASInputComponents](xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url) is used for a web app.
 
 Starting from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12, the UI version used for interactive Automation scripts in web apps is determined by the [engine.WebUIVersion](xref:Skyline.DataMiner.Automation.Engine.WebUIVersion) property. For example:
 
@@ -41,7 +41,7 @@ engine.WebUIVersion = WebUIVersion.V1;
 
 By default, [WebUIVersion](xref:Skyline.DataMiner.Automation.Engine.WebUIVersion) is set to *WebUIVersion.Default*. Prior to web DataMiner 10.5.0 [CU10]/10.6.1<!-- RN 44059 -->, this shows the V1 version of the UI. In later DataMiner web versions, this shows the V2 version of the UI, but only if the server uses DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 or higher. For earlier server versions, the V1 version of the UI continues to be shown.
 
-If the [useNewIASInputComponents](xref:Configuring_app_actions_and_behavior_via_URL) URL parameter is used, it will take priority over the configured version in the script and shows version V1 when set to false and version V2 when set to true.
+If the [useNewIASInputComponents](xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url) URL parameter is used, it will take priority over the configured version in the script and shows version V1 when set to false and version V2 when set to true.
 
 The differences between the UI versions for specific UI block types are explained below. In addition to those specific differences, all components in the V2 UI have a different font and a font size that is slightly bigger than the V1 UI (from 12px to 14px).
 
@@ -369,7 +369,7 @@ uiBuilder.AppendBlock(numericBlock);
 
   - *DoubleValue*: Value of the numeric box.
   - *Boolean*: Indicates whether the discrete checkbox is selected (=true) or cleared (=false).
-  - *SelectedDiscreetString*: selects the discrete parameter with that exact name in case multiple discrete parameters are defined.
+  - *SelectedDiscreetString*: Selects the discrete parameter with that exact name in case multiple discrete parameters are defined.
 
   Example:
 
@@ -549,10 +549,10 @@ The following formats are supported on web:
 
 | Format | Configuration option |
 | ------ | -------------------- |
-| Date and Time | Use [`AutomationDateTimeUpDownOptions`](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions) (with the [`Format`](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Format) property set to `Custom` (default) or `FullDateTime`) |
-| Date only | Use [`AutomationDateTimeUpDownOptions`](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions) with the [`Format`](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Format) property set to `ShortDate` |
-| Time only | Use [`AutomationTimePickerOptions`](xref:Skyline.DataMiner.Automation.AutomationTimePickerOptions) |
-| Duration | Use [`AutomationTimeUpDownOptions`](xref:Skyline.DataMiner.Automation.AutomationTimeUpDownOptions) |
+| Date and Time | Use [AutomationDateTimeUpDownOptions](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions) (with the [Format](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Format) property set to `Custom` (default) or `FullDateTime`) |
+| Date only | Use [AutomationDateTimeUpDownOptions](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions) with the [Format](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Format) property set to `ShortDate` |
+| Time only | Use [AutomationTimePickerOptions](xref:Skyline.DataMiner.Automation.AutomationTimePickerOptions) |
+| Duration | Use [AutomationTimeUpDownOptions](xref:Skyline.DataMiner.Automation.AutomationTimeUpDownOptions) |
 
 Please note the following:
 
