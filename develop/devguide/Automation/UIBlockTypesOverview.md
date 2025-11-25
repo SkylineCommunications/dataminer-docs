@@ -112,7 +112,9 @@ uiBuilder.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
-> The kind of returned date/time may be different depending on whether the script is executed in a web or Cube environment. From DataMiner 10.5.4/10.6.0 onwards<!-- RN 42064 / RN 42097 / RN 42110 -->, [GetClientDateTime](xref:Skyline.DataMiner.Automation.UIResults.GetClientDateTime(System.String)) can be used to get the date/time as it is displayed. Enable the [ClientTimeInfo](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ClientTimeInfo) property to make sure the info is available.
+>
+> - The kind of returned date/time may be different depending on whether the script is executed in a web or Cube environment. From DataMiner 10.5.4/10.6.0 onwards<!-- RN 42064 / RN 42097 / RN 42110 -->, [GetClientDateTime](xref:Skyline.DataMiner.Automation.UIResults.GetClientDateTime(System.String)) can be used to get the date/time as it is displayed. Enable the [ClientTimeInfo](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ClientTimeInfo) property to make sure the info is available.
+> - From DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 onwards<!--RN 42440-->, when a default time zone is configured for the web apps, calendar and time input fields consistently use that time zone both for displaying values and for returning the selected date/time. In previous versions, calendar and time input fields display values based on the web session's time zone, but return a date/time in the configured default time zone.
 
 ## CheckBox
 
@@ -569,6 +571,8 @@ Please note the following:
 - The time span values are returned in the constant invariant format (e.g. "3.17:25:30.5569124").
 
 - The kind of returned date/time may be different depending on whether the script is executed in a web or Cube environment. From DataMiner 10.5.4/10.6.0 onwards<!-- RN 42064 / RN 42097 / RN 42110 -->, [GetClientDateTime](xref:Skyline.DataMiner.Automation.UIResults.GetClientDateTime(System.String)) can be used to get the date/time as it is displayed. Enable the [ClientTimeInfo](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ClientTimeInfo) property to make sure the info is available.
+
+- From DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 onwards<!--RN 42440-->, when a default time zone is configured for the web apps, calendar and time input fields consistently use that time zone both for displaying values and for returning the selected date/time. In previous versions, calendar and time input fields display values based on the web session's time zone, but return a date/time in the configured default time zone.
 
 - From DataMiner 10.5.9/10.6.0 onwards<!-- RN 43014 -->, for the [AutomationDateTimeUpDownOptions](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions), [AutomationDateTimePickerOptions](xref:Skyline.DataMiner.Automation.AutomationDateTimePickerOptions) and [AutomationTimePickerOptions](xref:Skyline.DataMiner.Automation.AutomationTimePickerOptions), the [DateTimeKind](https://learn.microsoft.com/en-us/dotnet/api/system.datetime) of the [Minimum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Minimum) and [Maximum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Maximum) will be taken into account. For more information, refer to [Minimum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Minimum) and [Maximum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Maximum).
 
