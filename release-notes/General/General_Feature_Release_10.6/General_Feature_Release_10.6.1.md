@@ -518,6 +518,12 @@ In some cases, the number of awaited SLNet queues listed in the log files would 
 
 Also, the `BlockUntilAllInFlightEventsWereHandled` method will no longer be called when no work has to be done afterwards.
 
+#### Problem when synchronizing create/update/delete actions performed on services [ID 44132]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+In some rare cases, certain create/update/delete actions performed on services would not get synchronized among the DataMiner Agents in a cluster, especially when they had been performed in rapid succession.
+
 #### Problem when performing a row-based FillArray method with zero rows as input and with the SaveOption option set to 'Partial' [ID 44137]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
