@@ -68,6 +68,12 @@ Also, custom positioning mode has now been replaced by the following two positio
 
 When a Line & area chart component was displaying trend data of aggregation parameters, up to now, it was not possible to export that trend data to a CSV file. Exporting that data is now supported.
 
+#### GQI DxM: Enhanced performance when using the 'Get parameters for elements where' data source [ID 43989]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Because of a number of enhancements, overall performance has increased when using the *Get parameters for elements where* data source, especially on systems using the GQI DxM instead of SLHelper.
+
 #### Low-Code Apps - Form component: Clearer error will now appear when a DOM instance contains an incorrect value for a DomInstanceFieldDescriptor or DomInstanceValueFieldDescriptor [ID 44017]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
