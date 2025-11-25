@@ -43,7 +43,7 @@ You can configure the web component to display a video stream based on an image 
 
 1. Under *General*, set *Type* to `Webpage`.
 
-1. In the *URL* box, configure the URL (...).
+1. In the *URL* box, configure the URL as described under [Configuring a video thumbnail in a web component](xref:Configuring_a_video_thumbnail_in_a_web_component).
 
 ### Embedding online video streams
 
