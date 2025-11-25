@@ -24,4 +24,4 @@ Add a shape data field of type **Link** to the shape, and configure one of the f
 #http://<DMAIP>/VideoThumbnails/Video.htm?VideoServerParameters
 ```
 
-For more information on how to configure the shape data field, see [Configuring a video thumbnail in Visio](xref:Configuring_a_video_thumbnail_in_Visio).
+For more information on how to configure the shape data field, see [Configuring a video thumbnail for Visual Overview](xref:Configuring_a_video_thumbnail_in_Visio).

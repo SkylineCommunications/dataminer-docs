@@ -2,9 +2,11 @@
 uid: Configuring_a_video_thumbnail_in_Visio
 ---
 
-# Configuring a video thumbnail in Visio
+# Configuring a video thumbnail for Visual Overview
 
-1. Right-click the Visio drawing, and click *Edit In Visio*.
+## Configuring a video thumbnail in Visio
+
+When you are [configuring a drawing in Visio](xref:Getting_started_with_visual_overview), you can link a shape to a video thumbnail as follows:
 
 1. Add a shape data field of type *Link* to the shape.
 

@@ -1344,7 +1344,7 @@ items:
         topicUid: About_Video_Thumbnails
       - name: Configuring video thumbnails
         items:
-          - name: Configuring a video thumbnail in Visio
+          - name: Configuring a video thumbnail for Visual Overview
             topicUid: Configuring_a_video_thumbnail_in_Visio
           - name: Configuring a video thumbnail in a web component
             topicUid: Configuring_a_video_thumbnail_in_a_web_component
