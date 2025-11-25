@@ -9,19 +9,8 @@ description: Start by checking the logging, then check your installation and SLC
 ## BrokerGateway-managed NATS (nats-server service) troubleshooting
 
 > [!NOTE]
-> From DataMiner 10.5.0 [CU2]/10.5.5 onwards you can migrate to the BrokerGateway‑managed NATS solution. The guidance below applies AFTER migration (legacy NAS/NATS services replaced by the single `nats-server` service managed via BrokerGateway). 
+> From DataMiner 10.5.0 [CU2]/10.5.5 onwards you can [migrate](xref:BrokerGateway_Migration) to the BrokerGateway‑managed NATS solution. The guidance below applies AFTER migration (legacy NAS/NATS services replaced by the single `nats-server` service managed via BrokerGateway). 
 > If you still use the legacy SLNet-managed NATS architecture, refer to [Legacy NAS/NATS troubleshooting](xref:Investigating_Legacy_NATS_Issues).
-
-
-### Technical key differences versus legacy NAS/NATS
-
-| Aspect | Legacy SLNet-managed NATS/NAS services | BrokerGateway-managed NATS service |
-|--------|------------------------------|-----------------------|
-| Services | Windows services: NAS, NATS | Windows service: `nats-server`; BrokerGateway service (IIS/Kestrel hosted) supplies credentials & clustering |
-| Config source | `SLCloud.xml`, NAS/NATS config files | `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` (endpoints), `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` (BrokerGateway) |
-| Credentials | `.creds` files under `C:\Skyline DataMiner\NATS\nsc` | dynamic credentials via BrokerGateway API. Saved on disk in `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\.data\nats\nsc` |
-| Cluster formation | NATSCustodian recalculates NAS/NATS configs | BrokerGateway API builds cluster |
-| Repair tool | [Manual reset / reinstall](xref:Investigating_Legacy_NATS_Issues#remaining-steps) | `C:\Skyline DataMiner\Tools\NATSRepair.exe` tool |
 
 ### Typical diagnostic flow
 
@@ -37,7 +26,6 @@ description: Start by checking the logging, then check your installation and SLC
 1. Inspect logs:
    - BrokerGateway logs: `C:\ProgramData\Skyline Communications\DataMiner BrokerGateway\Logs`.
    - NATS logs: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\nats-server.log`.
-   - MessageBroker client logs: Any DxM or core process can log MessageBroker issues in their logging.
    - General SLError logs: `C:\Skyline DataMiner\Logging\SLErrors.txt`.
 1. Check configuration files:
    - `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json`: For each agent, an IP must be present with a non-null IgnitionValue. AdditionalEndpoints must list its VIPs, if any.

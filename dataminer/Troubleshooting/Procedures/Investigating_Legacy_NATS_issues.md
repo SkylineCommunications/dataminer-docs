@@ -7,7 +7,7 @@ description: Start by checking the logging, then check your installation and SLC
 # Troubleshooting - NATS (Legacy SLNet-managed NAS/NATS architecture)
 
 > [!IMPORTANT]
-> Do not follow the steps below if BrokerGateway-managed NATS is being used. Instead, follow the steps from [Investigating NATS issues](xref:Investigating_NATS_Issues).
+> Do not follow the steps below if BrokerGateway-managed NATS is being used. This is the only option from DataMiner 10.6.0 on. Instead, follow the steps from [Investigating NATS issues](xref:Investigating_NATS_Issues).
 
 
 To investigate NATS issues, follow the actions detailed below, in the specified order:

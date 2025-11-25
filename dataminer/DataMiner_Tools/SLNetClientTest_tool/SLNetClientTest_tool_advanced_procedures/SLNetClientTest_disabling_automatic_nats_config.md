@@ -23,7 +23,7 @@ BrokerGateway exposes an API endpoint that allows enabling or disabling manual N
 
 To enable manual configuration, send a POST request to:
 ```
-/BrokerGateway/api/clusteringapi/setmanualconfigflag
+https://[ip]/BrokerGateway/api/clusteringapi/setmanualconfigflag
 ```
 with the following request body:
 ```json
@@ -35,7 +35,7 @@ with the following request body:
 To disable manual configuration, use the same endpoint but set the has_manual_config flag to false.
 When distribute_in_cluster is set to true, the configuration flag is automatically propagated to all nodes in the cluster.
 
-All requests must include a valid BrokerGateway API key in the BrokerGateway-Api-Key header. This Administrator key can be found in ```C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json```. 
+All requests must include a valid BrokerGateway API key in the 'BrokerGateway-Api-Key' http header. This Administrator key can be found in ```C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json```. 
 
 
 #### 2. Setting up a custom manual config
@@ -43,6 +43,7 @@ All requests must include a valid BrokerGateway API key in the BrokerGateway-Api
 #### Understanding NATS configuration
 
 It is possible to configure BrokerGateway using a custom manual config. This can be used to create super-clusters and/or leaf nodes.
+
 A super-cluster is a collection of different clusters that can communicate with each other. It consists of 2 or more clusters. Clusters communicate with other clusters using gateway connections (port 7222). 
 Each cluster consists of 2 or more nodes. These nodes communicate with each other using cluster connections (port 6222).
 
