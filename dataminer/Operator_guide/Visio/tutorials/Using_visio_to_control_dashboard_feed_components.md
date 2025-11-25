@@ -15,7 +15,7 @@ Expected duration: 45 minutes
 
 - DataMiner version 10.2.2 or higher
 
-- Protocol: [Skyline Generic Virtual Connector](https://catalog.dataminer.services/details/connector/7021) – version 1.0.0.3 or higher
+- Protocol: [Skyline Generic Virtual Connector](https://catalog.dataminer.services/details/288fe004-73ac-4a3d-b62b-5626df892279) – version 1.0.0.3 or higher
 
 - Microsoft Visio
 
