@@ -237,7 +237,7 @@ namespace Skyline.DataMiner.Automation
 		/// <para>Default: <c>false</c>.</para>
 		/// <para>Available from DataMiner 9.5.6 onwards.</para>
 		/// <para>Applicable only when <see cref="Type"/> is set to DropDown.</para>		
-		/// <para>Applicable only in web apps when the <see cref="WebUIVersion"/> is WebUIVersion.V1 and in Cube.</para>
+		/// <para>Applicable only in web apps when the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V1 and in Cube.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -255,7 +255,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The ID of the parameter that has to be displayed in the dialog box item.</value>
 		/// <remarks>
-		/// <para>Applicable only when <see cref="Type"/> is set to Numeric (only when the <see cref="WebUIVersion"/> is WebUIVersion.V1) or Parameter.</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to Numeric (only when the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V1) or Parameter.</para>
 		/// <para>For a dialog box item of type Numeric, this property allows to have a checkbox with multiple discrete values. In case multiple discrete values are defined, separate these with a semicolon (';'). If you do not want any checkbox, but only the numeric box, then leave this property empty.</para>
 		/// <para>For a dialog box item of type Parameter, the ID syntax is as follows: DmaID/ElementID:ParamID[:index]</para>
 		/// </remarks>
@@ -691,7 +691,7 @@ namespace Skyline.DataMiner.Automation
 		/// </description>
 		/// </item>
 		/// <item>
-		/// <description>TextBox (applicable only when the <see cref="WebUIVersion"/> is WebUIVersion.V1):
+		/// <description>TextBox (applicable only when the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V1):
 		/// <list type="bullet">
 		/// <item><description>Style.Text.None (or "None")</description></item>
         /// <item><description>Style.Text.Title1 (or "Title1")</description></item>
@@ -957,7 +957,7 @@ namespace Skyline.DataMiner.Automation
 		/// <example>
 		/// <remarks>
 		/// <para>Applicable only in case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>.</para>
-		/// <note type="note">Available from DataMiner 10.5.8/10.6.0 onwards, in Automation scripts launched from web apps and <see href="xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url">specifying the useNewIASInputComponents=true URL parameter</see>.</note> <!-- RN 42808 / RN 42845 -->
+		/// <note type="note">Available from DataMiner 10.5.8/10.6.0 onwards, in Automation scripts launched from web apps when the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V2.</note> <!-- RN 42808 / RN 42845 -->
 		/// </remarks>
 		/// <code>
 		/// var dropDownControl = new UIBlockDefinition
@@ -976,7 +976,7 @@ namespace Skyline.DataMiner.Automation
 		/// <value><c>true</c> to let an OnChange event be triggered when the component loses focus; otherwise, <c>false</c>.</value>
 		/// <remarks>
 		/// <para>Applicable only in case <see cref="Type"/> is set to Calendar, CheckBox, CheckBoxList, DropDown, Numeric, PasswordBox, RadioButtonList, TextBox, Time.</para>
-		/// <para>In case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>, applicable in web apps when the <see cref="WebUIVersion"/> is WebUIVersion.V2 and in Cube.</para>
+		/// <para>In case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>, applicable in web apps when the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V2 and in Cube.</para>
 		/// <para>Feature introduced in DataMiner 10.1.10 (RN 30638).</para>
 		/// </remarks>
 		public bool WantsOnFocusLost { get; set; }

@@ -157,7 +157,7 @@ namespace Skyline.DataMiner.Automation
         /// <value><c>true</c> to display time labels in web component control; otherwise, <c>false</c>.</value>
         /// <remarks>
         /// <para>Default: <c>false</c>.</para>
-        /// <para>Applicable only in web apps when the WebUIVersion is WebUIVersion.V1.</para>
+        /// <para>Applicable only in web apps when the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V1.</para>
         /// </remarks>
         public bool ShowTimeUnits { get; set; }
 
