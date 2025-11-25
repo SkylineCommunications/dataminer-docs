@@ -479,6 +479,14 @@ From now on, it will be possible to offload either alarms only, information even
 
 When run on the offline agent of a Failover system, the Security Advisory BPA test would show an incorrect result after checking the status of port 5100 of the firewall.
 
+#### Problem when retrieving history alarms with wildcard or regex filters that were applied case-sensitively [ID 44095]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When, in client applications like DataMiner Cube, history alarm were retrieved with a wildcard or regex filter that filtered on values that contained uppercase characters, up to now, an incorrect result set would be returned.
+
+From now on, wildcard and regex filters will be applied case-insensitively.
+
 #### Memory leak in SLDataMiner when documents were being handled [ID 44098]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
