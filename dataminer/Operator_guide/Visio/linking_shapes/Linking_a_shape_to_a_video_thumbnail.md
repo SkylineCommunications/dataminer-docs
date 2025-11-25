@@ -13,8 +13,6 @@ When you link a shape to a video thumbnail, the video feed from the video server
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[linking > THUMBNAIL]* page.
 > - See also: [Making a shape display an image](xref:Making_a_shape_display_an_image)
 
-- To display video feeds from **Selenio MCP1 and MCP3** platforms, the Selenio modules need to have at least firmware version 6.1.
-
 ## Configuring the shape data field
 
 Add a shape data field of type **Link** to the shape, and configure one of the following values, depending on your setup:

@@ -83,7 +83,7 @@ When you are [configuring a drawing in Visio](xref:Getting_started_with_visual_o
 > [!NOTE]
 > To display video feeds from Selenio MCP1 and MCP3 platforms, the Selenio modules need to have at least firmware version 6.1.
 
-## Configuring the video thumbnail in DataMiner Cube
+## Configuring a video thumbnail in DataMiner Cube
 
 Instead of using the Visio desktop app, you can also link a shape to a video thumbnail in DataMiner Cube itself. To do so:
 
