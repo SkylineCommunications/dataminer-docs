@@ -18,7 +18,9 @@ uid: MediaOps_1.4.3
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### Resource Studio: Resources used in ongoing or future jobs can no longer be deprecated [ID 44213]
+
+Up to now, it was possible to deprecate resources that were used in ongoing or future jobs. However, as this could lead to unwanted behavior, this will now no longer be possible.
 
 ### Fixes
 
@@ -45,3 +47,7 @@ When the default value was provided for a configuration parameter of type discre
 #### Scheduling: Red hand icon still shown after providing all mandatory values when adding node to job [ID 44179]
 
 When a new node was added to a job and all mandatory configuration values assigned to the pool had been provided, it could occur that the red hand icon continued to be shown, even though this should not be the case.
+
+#### Resource Studio: Resource pool deprecation confirmation was ignored [ID 44212]
+
+When you deprecate a resource pool in the Resource Studio app, a dialog asks for confirmation. Up to now, if you then did not confirm the deprecation, the resource pool was still deprecated. This has now been fixed.
