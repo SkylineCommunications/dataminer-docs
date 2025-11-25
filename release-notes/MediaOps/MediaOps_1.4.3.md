@@ -18,7 +18,9 @@ uid: MediaOps_1.4.3
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### Resource Studio: Resources used in ongoing or future jobs can no longer be deprecated [ID 44213]
+
+Up to now, it was possible to deprecate resources that were used in ongoing or future jobs. However, as this could lead to unwanted behavior, this will now no longer be possible.
 
 ### Fixes
 
@@ -33,3 +35,19 @@ Up to now, for job node configuration parameters of type number discrete, no val
 #### Resource Studio: Configuration parameters of type text included in capabilities overview [ID 44153]
 
 In the capabilities overview, configuration parameters were shown if they were of type text, even though this should not be the case.
+
+#### Scheduling: Default values not saved for configuration parameters of type discrete [ID 44175]
+
+For configuration parameters of type discrete (number or text), the default value was not saved unless users first changed the value to something else and then changed it to the default value again.
+
+#### Resource Studio: Configuration overview showed raw value for parameters of type discrete [ID 44177]
+
+When the default value was provided for a configuration parameter of type discrete (number or text), the raw default value was shown in the configuration overview instead of the display value.
+
+#### Scheduling: Red hand icon still shown after providing all mandatory values when adding node to job [ID 44179]
+
+When a new node was added to a job and all mandatory configuration values assigned to the pool had been provided, it could occur that the red hand icon continued to be shown, even though this should not be the case.
+
+#### Resource Studio: Resource pool deprecation confirmation was ignored [ID 44212]
+
+When you deprecate a resource pool in the Resource Studio app, a dialog asks for confirmation. Up to now, if you then did not confirm the deprecation, the resource pool was still deprecated. This has now been fixed.

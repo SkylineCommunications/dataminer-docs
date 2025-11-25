@@ -82,11 +82,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The date and time format used by the date-time up-down control.</value>
 		/// <remarks>
-		/// <para>Default:</para>
-		/// <list type="bullet">
-		/// <item><description>In DataMiner 9.5.3: FullDateTime</description></item>
-		/// <item><description>From DataMiner 9.5.4 onwards: general datetime</description></item>
-		/// </list>
+		/// <para>Default: general datetime</para>
 		/// </remarks>
 		public DateTimeFormat Format { get; set; }
 
@@ -95,7 +91,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The date-time format to be used by the control when Format is set to 'Custom'.</value>
 		/// <remarks>
-		/// <para>Default: G (from DataMiner 9.5.4 onwards; previously the default value was null)</para>
+		/// <para>Default: G</para>
 		/// </remarks>
 		public string FormatString { get; set; }
 
@@ -184,7 +180,7 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <para>Default: <c>true</c>.</para>
 		/// <note type="note">
-		/// <para>From 9.5.4 onwards, the functionality of this property has been updated. If it is set to true, the control will now only update when the Enter key is pressed. If it is set to false, the control will also update when the focus is moved to somewhere else.</para>
+		/// <para>If this is set to true, the control will only update when the Enter key is pressed. If this is set to false, the control will also update when the focus is moved to somewhere else.</para>
 		/// </note>
 		/// </remarks>
 		public bool UpdateValueOnEnterKey { get; set; }

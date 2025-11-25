@@ -155,8 +155,6 @@ items:
             topicUid: General_Main_Release_10.4.0_CU20
           - name: General Main Release 10.4.0 CU21
             topicUid: General_Main_Release_10.4.0_CU21
-          - name: General Main Release 10.4.0 CU22 - Preview
-            topicUid: General_Main_Release_10.4.0_CU22
       - name: Feature Release
         items:
           - name: General Feature Release 10.4.12

@@ -467,11 +467,11 @@ From now on, the entire `C:\Skyline DataMiner\Webpages\API` folder will be clear
 
 From now on, no attempts will be made anymore to automatically detect the interactive behavior of script libraries, i.e. scripts of which all Exe blocks contain precompiled C# code. These libraries are not intended to be run independently.
 
-#### Serial communication: Only TLS 1.2 or TLS 1.3 encryption will now be allowed [ID 43678]
+#### All HTTPS communication will have to use TLS 1.2 encryption [ID 43678] [ID 44151]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
-Although DataMiner supports all TLS versions up to TLS 1.3, from now on, all serial communication will have to use either TLS 1.2 or TLS 1.3 encryption.
+From now on, all HTTPS communication will have to use TLS 1.2 encryption. SSL, TLS 1.0, and TLS 1.1 are no longer supported.
 
 #### DataMiner Object Models: Requests will be kept on hold for up to 30 seconds when sent to a DOM manager that is reinitializing [ID 43711]
 
@@ -573,12 +573,6 @@ Because of a number of enhancements, overall performance has increased
 - when writing data to the database, and
 - when reading reservation instances, especially on high-load systems.
 
-#### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
-
-<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
-
-All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
-
 #### Time-scoped relation learning: Exceptions will now be thrown when sending a GetTimeScopedRelationsMessage with incorrect arguments [ID 43963]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
@@ -650,14 +644,6 @@ When a backup package was being created, up to now, the temporary file would be 
 >
 > - When DataMiner and Cassandra are installed on the same machine, and the Cassandra data directory is on the C drive, the temporary snapshot for Cassandra will be created in that data directory before it is added to the backup package on the target path. This is default Cassandra behavior. If you wish to avoid this, move the Cassandra data directory to another drive, or consider moving to STaaS or self-managed clustered storage as Cassandra Single is End of Engineering.
 > - Backups for which only a network path has been specified may take a bit more time as the temporary file will now be created on that network path. Backups for which both a local path and a network path have been specified will not take longer as the temporary file will be created on the local path and then simply copied to the network path.
-
-#### DataMiner upgrade: New prerequisite will check whether .NET 10 is installed [ID 44121]
-
-<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
-
-Before upgrading to this DataMiner release or above, you are expected to install the Microsoft .NET 10 hosting bundle.
-
-When you start a DataMiner upgrade procedure, from now on, a new prerequisite will verify whether Microsoft .NET 10 is installed on the system. If this is not the case, the upgrade will be canceled.
 
 ### Fixes
 
@@ -739,12 +725,6 @@ When you tried to install Alerter, in some cases, a warning message would appear
 
 From now on, when you try to install Alerter, it will check whether Microsoft .NET Framework 4.6.2 is installed.
 
-#### Cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube [ID 43810]
-
-<!-- MR 10.6.0 - FR 10.5.12 -->
-
-On systems with a Cassandra cluster database in combination with an OpenSearch indexing database, cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube.
-
 #### Outdated SLAnalytics icons would incorrectly remain visible for too long because of SLNet caching issues [ID 43957]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
@@ -770,3 +750,17 @@ From now on, when an invalid `<Database>` tag is found in the *Db.xml* file duri
 <!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
 
 When run on the offline agent of a Failover system, the Security Advisory BPA test would show an incorrect result after checking the status of port 5100 of the firewall.
+
+#### SLNet queues listed in log files would incorrectly exceed the actual number of queues [ID 44130]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+In some cases, the number of awaited SLNet queues listed in the log files would incorrectly exceed the actual number of awaited queues.
+
+Also, the `BlockUntilAllInFlightEventsWereHandled` method will no longer be called when no work has to be done afterwards.
+
+#### Problem when an element with an active filtered table subscription was swarmed to the DMA on which it was already located [ID 44150]
+
+<!-- MR 10.6.0 - FR 10.5.12 [CU0] -->
+
+When an element was swarmed to the DataMiner Agent on which it was already located, up to now, a server-side deadlock would occur when that element had an active filtered table subscription at the time of the swarming operation.

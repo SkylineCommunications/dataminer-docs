@@ -7,12 +7,7 @@ uid: AddTicketAttachment
 > [!NOTE]
 > This method is solely intended for internal use by Skyline Communications employees.
 
-Use this method to add an attachment file to a ticket.
-
-> [!NOTE]
->
-> - From DataMiner 10.2.0 [CU9]/10.2.12 onwards, use the [AddTicketAttachmentV2](xref:AddTicketAttachmentV2) method instead.
-> - DataMiner Ticketing requires a Cassandra database as well as a specific license. <!-- From DataMiner 10.0.13 onwards, -->It also requires an indexing database. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
+Deprecated. Use the [AddTicketAttachmentV2](xref:AddTicketAttachmentV2) method instead.
 
 > [!CAUTION]
 >

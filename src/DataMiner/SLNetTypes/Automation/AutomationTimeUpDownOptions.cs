@@ -118,7 +118,7 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <para>Default: <c>true</c>.</para>
 		/// <note type="note">
-		/// <para>From 9.5.4 onwards, the functionality of this property has been updated. If it is set to true, the control will now only update when the Enter key is pressed. If it is set to false, the control will also update when the focus is moved to somewhere else.</para>
+		/// <para>If this is set to true, the control will only update when the Enter key is pressed. If this is set to false, the control will also update when the focus is moved to somewhere else.</para>
 		/// </note>
 		/// </remarks>
 		public bool UpdateValueOnEnterKey { get; set; }

@@ -8,7 +8,6 @@ namespace Skyline.DataMiner.Automation
 	/// <summary>
 	/// Represents an Automation entry point type.
 	/// </summary>
-	/// <remarks>Feature introduced in DataMiner 9.5.12 (RN 18229).</remarks>
 	public sealed class AutomationEntryPointType : IEquatable<AutomationEntryPointType>
 	{
 		/// <summary>

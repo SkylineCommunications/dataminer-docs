@@ -4,9 +4,7 @@ uid: GetInformationEventsV2
 
 # GetInformationEventsV2
 
-Use this method to retrieve the information events for a specified timespan, as well as the alarm cache status.
-
-<!-- Available from DataMiner 10.0.7 onwards. -->
+Use this method to retrieve the information events for a specified time span, as well as the alarm cache status.
 
 ## Input
 
