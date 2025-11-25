@@ -127,7 +127,7 @@ This gives you an idea of the parameter relations that will be used further in t
 
    1. Fill in the value *00:05* in field next to *Minimum anomaly duration (in minutes)*.
 
-   This will make sure that DataMiner also detects short anomalies, when the relation is broken for only 5 minutes. By default, DataMiner will only trigger an event if the relation is broken for at least 15 minutes are detected.
+   This will make sure that DataMiner also detects short anomalies, when the relation is broken for only 5 minutes. By default, DataMiner will only trigger an event if the relation is broken for at least 15 minutes.
 
 1. Click *Add group* to create the group.
 
@@ -190,10 +190,7 @@ In this step, you will learn how you can for instance suppress events created as
 
    This means that the relation should be broken for at least 20 minutes before an event is triggered.
 
-   ![Configuration suppressing short maintenance operations](~/dataminer/images/tutorial_RAD_Maintenance_Configuration.jpg)
-
-   > [!TIP]
-   > Two other checkboxes are also available to tweak the group configuration. For more information on these options, refer to [Options for relational anomaly groups](xref:Relational_anomaly_detection#options-for-relational-anomaly-groups).
+   ![Configuration suppressing short maintenance operations](~/dataminer/images/tutorial_RAD_Maintenance_Configuration.png)
 
 1. Click *Add group*.
 
