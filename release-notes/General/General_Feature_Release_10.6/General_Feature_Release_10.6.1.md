@@ -401,11 +401,11 @@ When a QAction triggered an information message with regard to a particular elem
 
 When, in a correlation rule, a *New alarm* or an *Escalate event* action was configured with the *Auto clear* option set, in some cases, the new correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
 
-#### Problem with parameter state timelines on systems with a Cassandra Single or Cassandra Cluster database [ID 43982]
+#### Element and parameter state timelines could show incorrect data [ID 43982]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-Up to now, in some cases, parameter state timelines displayed in client applications like DataMiner web apps or DataMiner Cube could should incorrect data, especially on DataMiner Systems with a Cassandra Single or a Cassandra Cluster database.
+Up to now, in some cases, element and parameter state timelines displayed in client applications like DataMiner web apps or DataMiner Cube could show incorrect data.
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
 
