@@ -92,7 +92,7 @@ The elements will be created with the following specifications:
 - **Collector:**
 
   - **Element name**: The defined element name combined with the suffix "_COLLECTOR".
-  - **Protocol**: The [Generic DOCSIS CM Collector](https://catalog.dataminer.services/details/connector/4207) protocol.
+  - **Protocol**: The [Generic DOCSIS CM Collector](https://catalog.dataminer.services/details/c813dc49-a520-4a63-bfd9-dc4407a2aa8e) protocol.
   - **Protocol version**: The production version.
   - **IP address**: 127.0.0.1.
   - **Alarm template**: public.
