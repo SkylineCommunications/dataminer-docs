@@ -25,11 +25,52 @@ An `OnDestroy` handler has now been added to the `Engine` class. This handler wi
 
 Multiple handlers can be added. They will run synchronously, and if one handler throws an error, the others will keep on running.
 
-#### Enhanced consistency when handling alarm property updates [ID 44074]
+#### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
-To ensure that all alarm property updates are handled consistently, whatever the source of the alarm (DataMiner System, Correlation, Analytics, etc.), messages sent out following an alarm property update will now always include a reference to the base alarm of the alarm in question.
+All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
+
+#### Service & Resource Management: New resource manager settings to configure the number of start action threads and simultaneous actions [ID 44056]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+Because of a number of enhancements, overall performance has increased when starting multiple bookings in parallel.
+
+Also, in the resource manager, it is now possible to configure the number of start action threads and simultaneous actions.
+
+| Setting | Description |
+|---------|-------------|
+| MaxAmountOfThreads       | The number of threads the resource manager will use to start bookings.<br>By default, 6 threads will be used. To restore this setting to the default value, set its value to null.<br>Note: The number of threads must at least be set to 2 in order for the scheduler to be able to start an action and keep a thread available for asynchronous continuations. |
+| MaxAmountOfParallelTasks | The number of parallel actions the resource manager will start on the threads.<br>By default, the number of parallel action is set to 7. To restore this setting to the default value, set its value to null. |
+
+The following example shows how you can configure this from an Automation script.
+
+```csharp
+private void UpdateResourceManagerConfigSettings()
+{
+    var setConfigMessage = new ResourceManagerConfigInfoMessage(ResourceManagerConfigInfoMessage.ConfigInfoType.Set)
+    {
+        ResourceManagerAutomationSettings = new ResourceManagerAutomationSettings()
+        {
+            ResourceManagerAutomationThreadSettings = new ResourceManagerAutomationThreadSettings()
+            {
+                MaxAmountOfParallelTasks = 30,
+                MaxAmountOfThreads = 8
+            }
+        },
+    };
+    engine.SendSingleResponseMessage(setConfigMessage);
+}
+```
+
+In most cases, these settings can keep their default value, unless performance has to optimized when multiple concurrent bookings have to be started. In order to increase performance, the number of threads and parallel tasks can be increased, provided the DataMiner Agent and the database can handle the increased load.
+
+> [!NOTE]
+>
+> - When the above-mentioned settings have been changed, the resource manager must be restarted.
+> - Only users with *Modules > System configuration > Tools > Admin tools* permission are allowed to change the above-mentioned settings.
+> - If the `SkipDcfLinks` setting is set to true, we recommend that you do not set MaxAmountOfParallelTasks too high. DCF link creation can be an expensive operation. Performing a large number of action in parallel might decrease performance.
 
 #### DataMiner upgrade: Web-only upgrades with version 10.6.x or above will now require the DMA to have version 10.5.x or above [ID 44103]
 

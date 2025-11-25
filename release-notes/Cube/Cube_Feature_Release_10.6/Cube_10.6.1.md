@@ -103,6 +103,14 @@ In a Visio file linked to a service, the [servicedefinitionfilter] placeholder c
 
 Up to now, in some cases, a primary key prefix, which is added to this filter for configuration purposes, would incorrectly not get removed before the filter was applied. From now on, this prefix will always be removed before the filter is applied.
 
+#### Alarm Console: Correlation alarms that had disappeared because the element in question had been stopped, paused, deleted, or restarted, would incorrectly re-appear [ID 44087]
+
+<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+When, in the Alarm Console, there is a correlation alarm, the moment you stop, pause, delete, or restart the element on which that correlated alarm was triggered, it will automatically disappear from the Alarm Console.
+
+However, up to now, when you created a new alarm tab, any correlation alarm that had disappeared because the element in question had been stopped, paused, deleted, or restarted, would incorrectly re-appear.
+
 #### Service & Resource Management: Service Manager would incorrectly be registered each time you switched to another workspace [ID 44106]
 
 <!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->

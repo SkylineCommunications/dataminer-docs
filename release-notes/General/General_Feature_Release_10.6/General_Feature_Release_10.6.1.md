@@ -103,6 +103,21 @@ else
 > - The result of the property update will contain the updated booking with all its properties (including those that were not updated).
 > - This new method does not allow you to removed properties from a reservation instance.
 
+#### User-defined APIs are now capable of returning bytes instead of a string [ID 44158]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+User-defined APIs are now capable of returning bytes instead of a string.
+
+The `ApiTriggerOutput` class now has a `ResponseBodyBytes` property of type byte[], which, when set, will take precedence over `ResponseBody` of type string. Both `ResponseBodyBytes` and `ResponseBody` are limited to 29 MB.
+
+By default, a Content-Type header of type `application/octet-stream` will be returned. If necessary, this can be overridden by means of the `Headers` property in `ApiTriggerOutput`.
+
+> [!NOTE]
+>
+> - `TriggerUserDefinableApiRequestMessage` is now also capable of returning bytes.
+> - When a user-defined API being tested in the SLNetClientTest tool returns bytes, the following message will appear: "Response body is in bytes and cannot be displayed".
+
 ## Changes
 
 ### Breaking changes
@@ -132,13 +147,23 @@ Breaking changes:
 
 Because of a number of enhancements made in SLNet, trend graphs in DataMiner Cube will now also correctly display behavioral change points for table column parameters without advanced naming.
 
+#### New BPA test: Health Metrics [ID 43509]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+A new BPA test named "Health Metrics" has been added.
+
+This BPA test will run every hour, and will fetch details about connections used within DataMiner, either through a diagnose message or by using information offloaded to disk.
+
+In later versions, it will then also analyze those details and attempt to warn operators when load increases on specific DataMiner modules and/or connections.
+
 #### SLNetClientTest tool now allows you to check the contents of the hosting cache used by SLDataMiner [ID 43605]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 Using the *SLNetClientTest* tool, you can now send a DiagnosticMessage with LIST_HOSTAGENTCACHE to SLDataMiner to retrieve the contents of the hosting cache used by SLDataMiner. This will allow you to check if an element is local or not.
 
-To send such a message, open the *SLNetClientTest* tool, and go to *Diagnostics > Dma > Elements (Hosting Cache)*.
+To send such a message, open the *SLNetClientTest* tool, and go to *Diagnostics > DMA > Elements (Hosting Cache)*.
 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
@@ -188,7 +213,7 @@ Multiple handlers can be added. They will run synchronously, and if one handler 
 
 #### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
 
-<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+<!-- MR 10.7.0 - FR 10.6.1 -->
 
 All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
 
@@ -245,6 +270,47 @@ When you try to delete a DOM module, but you do not have access to all DOM defin
 
 Because of a number of enhancements, SLASPConnection will now detect more quicker that a connection to a DataMiner Agent has been lost or re-established.
 
+#### Service & Resource Management: New resource manager settings to configure the number of start action threads and simultaneous actions [ID 44056]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+Because of a number of enhancements, overall performance has increased when starting multiple bookings in parallel.
+
+Also, in the resource manager, it is now possible to configure the number of start action threads and simultaneous actions.
+
+| Setting | Description |
+|---------|-------------|
+| MaxAmountOfThreads       | The number of threads the resource manager will use to start bookings.<br>By default, 6 threads will be used. To restore this setting to the default value, set its value to null.<br>Note: The number of threads must at least be set to 2 in order for the scheduler to be able to start an action and keep a thread available for asynchronous continuations. |
+| MaxAmountOfParallelTasks | The number of parallel actions the resource manager will start on the threads.<br>By default, the number of parallel action is set to 7. To restore this setting to the default value, set its value to null. |
+
+The following example shows how you can configure this from an Automation script.
+
+```csharp
+private void UpdateResourceManagerConfigSettings()
+{
+    var setConfigMessage = new ResourceManagerConfigInfoMessage(ResourceManagerConfigInfoMessage.ConfigInfoType.Set)
+    {
+        ResourceManagerAutomationSettings = new ResourceManagerAutomationSettings()
+        {
+            ResourceManagerAutomationThreadSettings = new ResourceManagerAutomationThreadSettings()
+            {
+                MaxAmountOfParallelTasks = 30,
+                MaxAmountOfThreads = 8
+            }
+        },
+    };
+    engine.SendSingleResponseMessage(setConfigMessage);
+}
+```
+
+In most cases, these settings can keep their default value, unless performance has to optimized when multiple concurrent bookings have to be started. In order to increase performance, the number of threads and parallel tasks can be increased, provided the DataMiner Agent and the database can handle the increased load.
+
+> [!NOTE]
+>
+> - When the above-mentioned settings have been changed, the resource manager must be restarted.
+> - Only users with *Modules > System configuration > Tools > Admin tools* permission are allowed to change the above-mentioned settings.
+> - If the `SkipDcfLinks` setting is set to true, we recommend that you do not set MaxAmountOfParallelTasks too high. DCF link creation can be an expensive operation. Performing a large number of action in parallel might decrease performance.
+
 #### NATSRepair.exe can no longer be run when automatic NATS configuration is disabled [ID 44061]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
@@ -263,12 +329,6 @@ When a backup package was being created, up to now, the temporary file would be 
 >
 > - When DataMiner and Cassandra are installed on the same machine, and the Cassandra data directory is on the C drive, the temporary snapshot for Cassandra will be created in that data directory before it is added to the backup package on the target path. This is default Cassandra behavior. If you wish to avoid this, move the Cassandra data directory to another drive, or consider moving to STaaS or self-managed clustered storage as Cassandra Single is End of Engineering.
 > - Backups for which only a network path has been specified may take a bit more time as the temporary file will now be created on that network path. Backups for which both a local path and a network path have been specified will not take longer as the temporary file will be created on the local path and then simply copied to the network path.
-
-#### Enhanced consistency when handling alarm property updates [ID 44074]
-
-<!-- MR 10.7.0 - FR 10.6.1 -->
-
-To ensure that all alarm property updates are handled consistently, whatever the source of the alarm (DataMiner System, Correlation, Analytics, etc.), messages sent out following an alarm property update will now always include a reference to the base alarm of the alarm in question.
 
 #### Relational anomaly detection: Valid subgroups of a shared model group will be monitored when other subgroup are invalid [ID 44096]
 
@@ -300,7 +360,7 @@ In practical terms, this means that the subgroup's model fit score deviates from
 
 #### DataMiner upgrade: New prerequisite will check whether .NET 10 is installed [ID 44121]
 
-<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 Before upgrading to this DataMiner release or above, you are expected to install the Microsoft .NET 10 hosting bundle.
 
@@ -340,6 +400,12 @@ When a QAction triggered an information message with regard to a particular elem
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
 When, in a correlation rule, a *New alarm* or an *Escalate event* action was configured with the *Auto clear* option set, in some cases, the new correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
+
+#### Element and parameter state timelines could show incorrect data [ID 43982]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, in some cases, element and parameter state timelines displayed in client applications like DataMiner web apps or DataMiner Cube could show incorrect data.
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
 
