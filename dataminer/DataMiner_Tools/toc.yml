@@ -74,10 +74,12 @@ items:
     topicUid: Multi_Threaded_Timer_Polling_Rate_Calculator
   - name: Prerequisite checks
     items:
-      - name: Verify .NET Version
-        topicUid: Verify_ASP_Net_Version
+      - name: Verify BrokerGateway Migration
+        topicUid: VerifyBrokerGatewayMigration
       - name: VerifyClusterPorts.dmupgrade
         topicUid: VerifyClusterPortsdmupgrade
+      - name: Verify .NET Version
+        topicUid: Verify_ASP_Net_Version
       - name: VerifyGRPCConnection.dmupgrade
         topicUid: VerifyGRPCConnectiondmupgrade
       - name: Verify Elastic Storage Type
