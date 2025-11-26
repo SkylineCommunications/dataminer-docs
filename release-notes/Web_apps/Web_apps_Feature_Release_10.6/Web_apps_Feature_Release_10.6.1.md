@@ -200,6 +200,16 @@ Also, the following methods have been removed from the Web Services API (v1):
 - GetAnnotationsLinkForService
 - GetAnnotationsLinkForView
 
+#### GQI DxM: DOM data source now supports reading only a selected subset of fields from `DomInstance` objects [ID 44141]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When connected to a DataMiner Agent running main release version 10.6.0 or feature release 10.6.1 (or above), the DOM data source will now support reading only a selected subset of fields from `DomInstance` objects.
+
+For more information, see [DataMiner Objects Models: DomInstances CRUD helper now supports reading only a selected subset of fields from `DomInstance` objects [ID 43852]](xref:General_Feature_Release_10.6.1#dataminer-objects-models-dominstances-crud-helper-now-supports-reading-only-a-selected-subset-of-fields-from-dominstance-objects-id-43852)
+
+When connected to a DataMiner Agent running a version older than main release version 10.6.0 or feature release 10.6.1, the DOM data source will continue to read `DomInstance` objects as before.
+
 #### Web apps: Option to log in with a local user account [ID 44152]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
