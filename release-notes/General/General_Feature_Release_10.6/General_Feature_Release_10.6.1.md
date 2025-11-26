@@ -18,7 +18,7 @@ uid: General_Feature_Release_10.6.1
 >
 > - Make sure all DataMiner Agents in the cluster have been migrated to the BrokerGateway-managed NATS solution. For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
 >
->   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 43890] [ID 44035] [ID 44050] [ID 44062]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-43890-id-44035-id-44050-id-44062)
+>   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
 
 > [!TIP]
 >
@@ -28,7 +28,7 @@ uid: General_Feature_Release_10.6.1
 
 ## Highlights
 
-- [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 43890] [ID 44035] [ID 44050] [ID 44062]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-43890-id-44035-id-44050-id-44062)
+- [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
 - [Dashboard reports can now be generated in PDF, HTML, and/or CSV format [ID 43887]](#dashboard-reports-can-now-be-generated-in-pdf-html-andor-csv-format-id-43887)
 
 ## New features
@@ -168,7 +168,7 @@ To send such a message, open the *SLNetClientTest* tool, and go to *Diagnostics 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 43890] [ID 44035] [ID 44050] [ID 44062]
+#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
@@ -197,11 +197,19 @@ DataMiner Systems will now use the BrokerGateway-managed NATS solution by defaul
 
 - DataMiner upgrade packages will no longer perform the *MigrateBrokerGatewaySoftLaunch* upgrade action. This action would move the BrokerGateway soft-launch option to the *MaintenanceSettings.xml* file.
 
-- From now on, when an attempt is made to communicate using the legacy SLNet-managed NATS solution, the following exception will be thrown and logged:
-
-  `Unable to find file. SLCloud configured messageBrokers are unsupported as of DataMiner 10.6.0.`
-
 - NATSRepair.exe will no longer check if the *BrokerGateway* flag in *MaintenanceSettings.xml* is set to true.
+
+#### Clearer message when SLCloud.xml cannot be found when using the legacy SLNet-managed NATS solution [ID 43890]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, when the *SLCloud.xml* file could not be found on systems using the legacy SLNet-managed NATS solution, the following generic exception would be thrown and logged:
+
+`Unable to find file.`
+
+From now on, the following exception will be thrown and logged:
+
+`Unable to find file. SLCloud configured messageBrokers are unsupported as of DataMiner 10.6.0.`
 
 #### Automation: Engine class now has an OnDestroy handler that will allow resources to be cleaned up when a script ends [ID 43919]
 

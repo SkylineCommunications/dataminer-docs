@@ -509,7 +509,7 @@ Up to now, each time a `ModuleSettings` object was updated, the network credenti
 
 From now on, when a `ModuleSettings` object is updated, the network credentials will only be checked if the network path or the credential ID were updated as well.
 
-#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 43890] [ID 44035] [ID 44050] [ID 44062]
+#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]
 
 <!-- RN 43526: MR 10.6.0 - FR 10.5.10 -->
 <!-- MR 10.6.0 - FR 10.6.1 -->
@@ -538,10 +538,6 @@ DataMiner Systems will now use the BrokerGateway-managed NATS solution by defaul
   - NATSRestartTimeout
 
 - DataMiner upgrade packages will no longer perform the *MigrateBrokerGatewaySoftLaunch* upgrade action. This action would move the BrokerGateway soft-launch option to the *MaintenanceSettings.xml* file.
-
-- From now on, when an attempt is made to communicate using the legacy SLNet-managed NATS solution, the following exception will be thrown and logged:
-
-  `Unable to find file. SLCloud configured messageBrokers are unsupported as of DataMiner 10.6.0.`
 
 - NATSRepair.exe will no longer check if the *BrokerGateway* flag in *MaintenanceSettings.xml* is set to true.
 

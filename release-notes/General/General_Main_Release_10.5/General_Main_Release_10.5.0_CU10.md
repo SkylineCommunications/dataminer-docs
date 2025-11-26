@@ -61,6 +61,18 @@ To send such a message, open the *SLNetClientTest* tool, and go to *Diagnostics 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Clearer message when SLCloud.xml cannot be found when using the legacy SLNet-managed NATS solution [ID 43890]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, when the *SLCloud.xml* file could not be found on systems using the legacy SLNet-managed NATS solution, the following generic exception would be thrown and logged:
+
+`Unable to find file.`
+
+From now on, the following exception will be thrown and logged:
+
+`Unable to find file. SLCloud configured messageBrokers are unsupported as of DataMiner 10.6.0.`
+
 #### SLASPConnection will now detect more quicker that a connection to a DMA has been lost or re-established [ID 44049]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
