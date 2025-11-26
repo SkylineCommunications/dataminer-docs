@@ -11,6 +11,8 @@ items:
     items:
       - name: dataminer.services terms of use
         topicUid: dataminer.services_terms_of_use
+      - name: dataminer.services Privacy Policy
+        topicUid: dataminer.services_privacy_policy
   - name: Support terms
     items:
       - name: On premises

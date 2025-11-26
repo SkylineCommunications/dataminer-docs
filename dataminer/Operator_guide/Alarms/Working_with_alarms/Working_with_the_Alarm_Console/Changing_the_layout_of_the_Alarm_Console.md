@@ -26,7 +26,7 @@ In the Alarm Console, you can add and remove tabs as you see fit. However, this 
 
 > [!NOTE]
 >
-> - If the Alarm Console contains more tabs than can be displayed on the screen, a "..." icon will be displayed. To open one of the tabs that are not displayed, click this icon, and select the tab from the drop-down list.
+> - If the Alarm Console contains more tabs than can be displayed on the screen, a "..." icon will be displayed. To open one of the tabs that are not displayed, click this icon, and select the tab from the dropdown list.
 > - For embedded Alarm Consoles displayed on the ALARMS page of cards, custom tabs are only saved if you select to *Apply filters*, and then select the *Show this tabpage* checkbox before clicking *Show alarms*.
 
 ### Adding a tab

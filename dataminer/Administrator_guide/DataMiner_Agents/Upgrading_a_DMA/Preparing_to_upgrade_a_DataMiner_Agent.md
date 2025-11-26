@@ -161,6 +161,8 @@ The following prerequisite checks are currently available:
 
 - [Verify No Amazon Keyspaces](xref:Verify_No_Amazon_Keyspaces): Verifies whether the DataMiner Agent is using the Amazon Keyspaces Service on AWS as a Cassandra-compatible database service, which is no longer supported as of DataMiner 10.3.0 [CU8]/10.3.11. From DataMiner 10.5.0/10.5.3 onwards<!--RN 41914-->, this prerequisite is available by default and runs automatically when you upgrade.
 
+- [Verify OS Version](xref:Verify_OS_Version): Verifies whether the DataMiner version in the upgrade package supports the version of the operating system that is installed on the DataMiner Agent. From DataMiner 10.5.12/10.6.0 onwards<!--RN 43356-->, this prerequisite is available by default and runs automatically when you upgrade.
+
 - [Service Automatic Properties](xref:BPA_Service_Automatic_Properties): Verifies whether the installed SRM framework version is up to date. From DataMiner 10.2.3/10.3.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Validate Connectors](xref:BPA_Validate_Connectors): Scans the DataMiner System for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. From DataMiner 10.3.4/10.4.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.

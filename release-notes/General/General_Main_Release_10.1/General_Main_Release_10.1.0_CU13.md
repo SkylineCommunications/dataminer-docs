@@ -165,7 +165,7 @@ In some cases, an error could occur when you tried to delete a protocol.
 
 When you assign a Visio drawing to a view or a service, you can specify a default page. This initial page selection would no longer work.
 
-Also, when the *How to show element card Data pages* setting was set to “Show in drop-down box”, initial page selection would no longer work.
+Also, when the *How to show element card Data pages* setting was set to “Show in dropdown box”, initial page selection would no longer work.
 
 #### SLProtocol would leak memory when using a 'change after response' trigger \[ID 32572\]
 

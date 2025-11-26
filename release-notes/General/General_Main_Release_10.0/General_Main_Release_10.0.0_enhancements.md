@@ -552,9 +552,9 @@ From now on, administrative updates (i.e. alarms of type â€œProperties Changedâ€
 
 When, in Scheduler, you configured a CPE report in an email action, up to now, that report was based on the base tables in the CPE element. From now on, if view tables are present in the CPE element, the report will be based on those view tables instead.
 
-#### HTML5 apps: Enhanced drop-down box behavior \[ID 22968\]
+#### HTML5 apps: Enhanced dropdown box behavior \[ID 22968\]
 
-In HTML5 apps like Jobs and Dashboards, drop-down box behavior has been enhanced, especially with respect to how auto-complete suggestions are being displayed.
+In HTML5 apps like Jobs and Dashboards, dropdown box behavior has been enhanced, especially with respect to how auto-complete suggestions are being displayed.
 
 #### DataMiner Cube - Backup: An information event will now be generated when no network path was specified for a particular Agent \[ID 22991\]
 

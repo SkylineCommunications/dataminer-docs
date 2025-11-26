@@ -16,7 +16,7 @@ If you are still using an older setup with storage per DMA instead of the recomm
 
 By default, when you install a new self-managed DataMiner System, a Cassandra database per DMA is configured. If you have an existing legacy DataMiner System with SQL database, [migrating to Cassandra](xref:Migrating_the_general_database_to_Cassandra) will give you access to additional DataMiner features (depending on your DataMiner version), including:
 
-- Advanced Analytics features such as alarm focus, behavioral anomaly detection, proactive cap detection, automatic incident tracking, and pattern matching
+- Advanced Analytics features such as alarm focus, behavioral anomaly detection, proactive cap detection, automatic alarm grouping, and pattern matching
 - Trend predictions
 - DataMiner Service & Resource Management
 - The Generic Query Interface in DataMiner Dashboards

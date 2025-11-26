@@ -44,7 +44,7 @@ When you deploy the IDP package, IDP will be installed with the default settings
 
 1. On the view selection page, specify which views should be used by DataMiner IDP:
 
-   1. For each of the sections, either select *Create a new view* or select *Use existing view* and select the view in the drop-down list.
+   1. For each of the sections, either select *Create a new view* or select *Use existing view* and select the view in the dropdown list.
 
    1. In case you use an existing view that is not yet under the TOP view, select the option *Move existing views under TOP* view.
 

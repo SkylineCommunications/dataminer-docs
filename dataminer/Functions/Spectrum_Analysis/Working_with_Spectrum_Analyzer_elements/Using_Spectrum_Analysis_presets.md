@@ -38,7 +38,7 @@ To save a preset in DataMiner Cube:
 
 1. Go to the *SAVE* section of the *Presets* tab in the settings pane.
 
-1. In the drop-down list, select the preset you want to save the configuration into.
+1. In the dropdown list, select the preset you want to save the configuration into.
 
 1. Click *Save*.
 

@@ -4,7 +4,7 @@ uid: GetInformationEvents
 
 # GetInformationEvents
 
-Use this method to retrieve the information events for a specified timespan.
+Use this method to retrieve the information events for a specified time span.
 
 ## Input
 

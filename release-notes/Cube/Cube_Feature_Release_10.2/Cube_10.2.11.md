@@ -193,7 +193,7 @@ On systems with active correlation rules, in some rare cases, the counters in th
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
-When you opened a trend graph of an EPM object, it would not be possible to add a second parameter. After you had added a new parameter, the drop-down box would incorrectly only contain the current parameter.
+When you opened a trend graph of an EPM object, it would not be possible to add a second parameter. After you had added a new parameter, the dropdown box would incorrectly only contain the current parameter.
 
 #### DataMiner Cube - Booking app: Booking updates would cause the UI to flicker [ID 34349]
 

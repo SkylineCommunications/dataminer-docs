@@ -30,4 +30,4 @@ To configure this:
 
    1. Make sure *Create SLA* is selected.
 
-   1. In the drop-down box next to *Create SLA*, select the SLA configuration you want to use.
+   1. In the dropdown box next to *Create SLA*, select the SLA configuration you want to use.

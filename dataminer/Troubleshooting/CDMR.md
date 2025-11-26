@@ -100,7 +100,7 @@ Proceed as follows to activate the email settings via the SLNetClientTest tool:
 
 1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 1. Connect to the DMA for which you want to configure SMTP. See [Connecting to a DMA with the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
-1. Go to the *Build Message* tab and select *Advanced.SetDataMinerInfoMessage* in the drop-down box at the top.
+1. Go to the *Build Message* tab and select *Advanced.SetDataMinerInfoMessage* in the dropdown box at the top.
 1. Specify the following settings:
 
     - *DataMinerID*: -1 for a local DMA or the actual DMA ID for a remote DMA.

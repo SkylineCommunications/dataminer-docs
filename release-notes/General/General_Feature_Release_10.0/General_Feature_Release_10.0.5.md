@@ -739,9 +739,9 @@ After a DCF connection update, in some cases, the highlighting of a manually dra
 > [!NOTE]
 > This problem only occurred when one or both of the interfaces connected to the connector were of type input/output.
 
-#### Dashboards app: Problem when loading drop-down boxes of interactive Automation scripts \[ID 24888\]
+#### Dashboards app: Problem when loading dropdown boxes of interactive Automation scripts \[ID 24888\]
 
-When a dialog box of an interactive Automation script showed multiple drop-down boxes next to each other, in some cases, some of those boxes would become unresponsive when data was being loaded into them.
+When a dialog box of an interactive Automation script showed multiple dropdown boxes next to each other, in some cases, some of those boxes would become unresponsive when data was being loaded into them.
 
 #### DataMiner Cube - Visual Overview: Views selection boxes on Edit Shape pane were empty when editing a Visio file in Cube \[ID 24900\]
 
@@ -864,9 +864,9 @@ In DataMiner Cube, in some cases, an exception could be thrown when clicking sev
 
 In some cases, it could occur that the severity color indication was not displayed in the Alarm Console and on alarms pages in the Monitoring app.
 
-#### HTML5 apps: Last item in drop-down lists was hidden by the collapse button \[ID 25108\]
+#### HTML5 apps: Last item in dropdown lists was hidden by the collapse button \[ID 25108\]
 
-In the HTML5 apps (Ticketing, Jobs, etc.), in some cases, the collapse button at the bottom of a drop-down list would hide the last item in the list.
+In the HTML5 apps (Ticketing, Jobs, etc.), in some cases, the collapse button at the bottom of a dropdown list would hide the last item in the list.
 
 #### SLAnalytics: Trend prediction data would contain incorrectly converted time stamps \[ID 25111\]
 

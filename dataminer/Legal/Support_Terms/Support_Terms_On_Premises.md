@@ -86,7 +86,7 @@ The User shall ensure that they have an industry-standard and uninterrupted remo
 
 When the User encounters an Issue with the Software or wishes to receive Support for another reason, the User should open a ticket for Support using the [Support application](https://supportpreview.dataminer.services/Home/CreateTicket). More details about this can be found in the [Support application documentation](xref:User_operations_support).
 
-If for some reason the User cannot access the Support application and create a ticket, they can also [contact Skyline's Support helpdesk](https://skyline.be/contact/tech-support).
+If for some reason the User cannot access the Support application and create a ticket, they can also [contact Skyline's Support helpdesk](xref:Contacting_tech_support).
 
 Support is available during Business Hours only, except if the User has purchased an Out of Business Hours Support plan. If the User wishes to create a ticket in follow-up of their telephone support, the User needs to generate a ticket through the [Support application](https://supportpreview.dataminer.services/Home/CreateTicket).
 

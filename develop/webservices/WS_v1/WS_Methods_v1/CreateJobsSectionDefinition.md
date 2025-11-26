@@ -6,6 +6,11 @@ uid: CreateJobsSectionDefinition
 
 Use this method to create a job section definition.
 
+> [!CAUTION]
+>
+> - The Jobs app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
+> - The Jobs app is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
+
 ## Input
 
 | Item | Format | Description |
@@ -20,7 +25,7 @@ Use this method to create a job section definition.
 | info.Column | Integer | The position of the column containing this section in the Jobs app layout. |
 | info.Index | Integer | The row containing this section in the Jobs app layout. |
 | info.FieldIndices | Array of string | Determines the position and order of the fields in the section. |
-| info.MultiSelectionFilters | Array of string | The IDs of the drop-down fields that are configured as filter, if available. |
+| info.MultiSelectionFilters | Array of string | The IDs of the dropdown fields that are configured as filter, if available. |
 | info.ShowInListView | Array of string | Determines whether the section is shown as a column in the list of jobs in the Jobs app. |
 | info.AllowMultipleInstances | Boolean | Indicates whether multiple instances of the job section will be allowed. |
 

@@ -86,6 +86,8 @@ items:
         topicUid: VerifyNatsCluster
       - name: Verify NATS is Running
         topicUid: VerifyNatsIsRunning
+      - name: Verify No Annotations
+        topicUid: Verify_No_Annotations
       - name: Verify No Legacy Correlation
         topicUid: VerifyNoLegacyCorrelation
       - name: Verify No Legacy Reports Dashboards
@@ -94,6 +96,8 @@ items:
         topicUid: Verify_No_Obsolete_API_Deployed
       - name: Verify No Amazon Keyspaces
         topicUid: Verify_No_Amazon_Keyspaces
+      - name: Verify OS Version
+        topicUid: Verify_OS_Version
   - name: Protocol debug tools
     topicUid: Protocol_Debug_Tools
   - name: Skyline Device Simulator
@@ -186,6 +190,8 @@ items:
             topicUid: SLNetClientTest_checking_hyperlink_filter
           - name: Checking whether protocol buffer serialization is enabled
             topicUid: SLNetClientTest_Checking_whether_protocol_buffer_serialization_is_enabled
+          - name: Checking the hosting Agent cache
+            topicUid: SLNetClientTest_Checking_the_hosting_Agent_cache
           - name: Consulting connection details
             topicUid: SLNetClientTest_consulting_connection_details
           - name: Consulting Correlation information

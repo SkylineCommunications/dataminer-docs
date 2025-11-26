@@ -16,7 +16,7 @@ string
 
 ## Remarks
 
-Next to the title of the tooltip, a drop-down arrow will allow users to enlarge the tooltip and display the text contained in this Protocol.Params.Param.Information.Subtext tag.
+Next to the title of the tooltip, a dropdown arrow will allow users to enlarge the tooltip and display the text contained in this Protocol.Params.Param.Information.Subtext tag.
 
 ## Examples
 

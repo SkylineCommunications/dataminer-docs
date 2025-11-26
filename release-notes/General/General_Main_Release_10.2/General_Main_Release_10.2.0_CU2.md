@@ -85,9 +85,9 @@ A number of enhancements have been made with regard to the setup of serial conne
 
 From now on, Elasticsearch will ignore casing when sorting fields of type string.
 
-#### DataMiner web apps: Filter issue when using arrow keys in drop-down box \[ID 31472\]
+#### DataMiner web apps: Filter issue when using arrow keys in dropdown box \[ID 31472\]
 
-In the DataMiner web apps (e.g. the Dashboards app), when you opened a drop-down box that already had a value selected and used the arrow keys to navigate through the values, the current value was applied as a filter, while this should not occur.
+In the DataMiner web apps (e.g. the Dashboards app), when you opened a dropdown box that already had a value selected and used the arrow keys to navigate through the values, the current value was applied as a filter, while this should not occur.
 
 #### Alarm templates: Miscellaneous fixes \[ID 32462\]
 

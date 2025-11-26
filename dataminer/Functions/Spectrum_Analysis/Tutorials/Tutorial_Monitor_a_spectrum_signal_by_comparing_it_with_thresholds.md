@@ -4,7 +4,7 @@ uid: Monitor_a_spectrum_signal_by_comparing_it_with_thresholds
 
 # Monitoring a spectrum signal by comparing it with thresholds
 
-For many international football games, a good live stream across the globe is of the utmost importance to make sure all football fans can watch the game live. Satellite communication plays a crucial role in this. A good example of this use case could be the Champions League Final of June 1st, 2024, broadcast from the legendary Wembley stadium in London. In this simulated use case, the satellite dish at the Skyline HQ receives the signal, behaving like a TV broadcaster to spread it to the Belgian living rooms. In this tutorial, you will learn how to monitor the signal and generate alarms when the signal is for example altered by rain fade or a sudden frequency change.
+For many international football games, a good livestream across the globe is of the utmost importance to make sure all football fans can watch the game live. Satellite communication plays a crucial role in this. A good example of this use case could be the Champions League Final of June 1st, 2024, broadcast from the legendary Wembley stadium in London. In this simulated use case, the satellite dish at the Skyline HQ receives the signal, behaving like a TV broadcaster to spread it to the Belgian living rooms. In this tutorial, you will learn how to monitor the signal and generate alarms when the signal is for example altered by rain fade or a sudden frequency change.
 
 You will learn how to:
 

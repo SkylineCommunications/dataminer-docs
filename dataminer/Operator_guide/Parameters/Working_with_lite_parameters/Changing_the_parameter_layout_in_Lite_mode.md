@@ -17,7 +17,7 @@ To change the parameter layout in Lite mode:
    > [!NOTE]
    > The font of table parameters cannot be adjusted.
 
-   - **Parameter Value Alignment**: In the drop-down list on the right, choose either *Left* or *Right* to align parameter values on the left or on the right. By default, they are aligned on the right.
+   - **Parameter Value Alignment**: In the dropdown list on the right, choose either *Left* or *Right* to align parameter values on the left or on the right. By default, they are aligned on the right.
 
    - **Always show editor controls**: Select this setting to always display the write controls for parameters. Otherwise, a pencil icon will be displayed that the user has to click in order to see the write controls.
 

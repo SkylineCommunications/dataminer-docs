@@ -4,7 +4,7 @@ uid: LowCodeApps_earlier_version
 
 # Retrieving an earlier app version
 
-When you make changes to an existing low-code app, the previous version will be kept in the system. Up to 15 versions of an app can be stored this way.
+When you make changes to an existing low-code app, the previous version will be kept in the system. Up to 15 versions of an app can be stored this way. When a new version is created, the oldest non-active version is automatically deleted.
 
 To go back to a previous version of a low-code app:
 

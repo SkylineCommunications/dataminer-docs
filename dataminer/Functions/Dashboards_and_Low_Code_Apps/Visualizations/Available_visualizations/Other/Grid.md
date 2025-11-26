@@ -70,9 +70,12 @@ In the example below, a grid filters a table component based on job state. By se
 
 ![Grid as a selector](~/dataminer/images/Grid_as_Selector.gif)<br>*Grid component and table component in DataMiner 10.5.7*
 
+> [!TIP]
+> For another good example of the grid component functioning as a selector, see [Example use case: Pan and zoom the map via grid selection](xref:DashboardMaps#example-use-case-pan-and-zoom-the-map-via-grid-selection).
+
 To **clear the selection** in a grid, keep Ctrl pressed and click each selected item.
 
-From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!--RN 43635-->, an action can also be configured on another dashboard component (e.g. a button) so that this can be used to clear the grid selection (see [Configuring app events](xref:LowCodeApps_event_config)).
+From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!--RN 43635-->, an action can also be configured on another component (e.g. a button) so that this can be used to clear the grid selection (see [Configuring app events](xref:LowCodeApps_event_config)).
 
 ## Configuration options
 
@@ -82,14 +85,24 @@ In the *Layout* pane, you can find the default options available for all compone
 
 Additionally, the following layout options are also available:
 
-| Section | Option | Description |
-|--|--|--|
-| Filtering & Highlighting | Highlight | Toggle the switch to determine whether the nodes that match the criteria specified in a query filter will be highlighted. Enabled by default. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
-| Filtering & Highlighting | Opacity | Set the level of transparency of the items that do not match the criteria specified in a query filter. This option is only available when *Highlight* is enabled. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
-| Advanced | Empty result message | Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Specify a custom message that is displayed when a query returns no results. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
-| Advanced | Grid template | Configure the number of columns and rows in the grid, and adjust scaling options<!--RN 34761 + 34781-->. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
-| Item templates | Browse templates *or*<br>Reuse template (prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4) | Reuse a saved template from another component in the same dashboard or low-code app. This option is only available if a template is already in use<!--RN 42226-->. |
-| Item templates | Edit | Open the Template Editor<!--RN 34761--> to customize the appearance of grid items and configure actions, such as opening a panel when a cell is selected. For more information, refer to [Customize grid items](#customizing-grid-items). |
+| Section | Subsection | Option | Description |
+|--|--|--|--|
+| Filtering & Highlighting | N/A | Highlight | Toggle the switch to determine whether the nodes that match the criteria specified in a query filter will be highlighted. Enabled by default. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
+| Filtering & Highlighting | N/A | Opacity | Set the level of transparency of the items that do not match the criteria specified in a query filter. This option is only available when *Highlight* is enabled. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
+| Advanced | N/A | Empty result message | Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Specify a custom message that is displayed when a query returns no results. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
+| Advanced | N/A | Grid template | Available up to DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11<!--RN 43889-->. Configure the number of columns and rows in the grid, and adjust scaling options<!--RN 34761 + 34781-->. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
+| Grid layout | Columns | Fixed column count | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->. Determine how many columns are displayed. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
+| Grid layout | Columns | Columns | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->, when the *Fixed column count* option is enabled. Specify the number of columns to display. |
+| Grid layout | Columns | Stretch to fit | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->. Enable this setting to have items expand horizontally to fill the container. Enabled by default. |
+| Grid layout | Columns | Stretch mode | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->, when *Stretch to fit* is enabled and *Fix column count* is disabled. Control how items behave when stretched. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
+| Grid layout | Columns | Horizontal scroll | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->, when *Stretch to fit* is disabled. Enable this setting to allow horizontal scrolling instead of wrapping or clipping content. |
+| Grid layout | Rows | Fixed row count | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->. Toggle the switch to determine how many rows are displayed. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
+| Grid layout | Rows | Rows | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->, when *Fixed row count* is enabled. Specify the number of rows to display. |
+| Grid layout | Rows | Stretch to fit | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->. Enable this setting to have items expand vertically to fill the container. Disabled by default. |
+| Grid layout | Rows | Stretch mode | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->, when *Stretch to fit* is enabled and *Fix column count* is disabled. Control how items behave when stretched. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
+| Grid layout | Rows | Vertical scroll | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->, when *Stretch to fit* is disabled. Enable this option to allow vertical scrolling instead of wrapping or clipping content. Enabled by default. |
+| Item templates | N/A | Browse templates *or*<br>Reuse template (prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4) | Reuse a saved template from another component in the same dashboard or low-code app. This option is only available if a template is already in use<!--RN 42226-->. |
+| Item templates | N/A | Edit | Open the Template Editor<!--RN 34761--> to customize the appearance of grid items and configure actions, such as opening a panel when a cell is selected. For more information, refer to [Customize grid items](#customizing-grid-items). |
 
 > [!NOTE]
 >
@@ -97,6 +110,28 @@ Additionally, the following layout options are also available:
 > - Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, the option to reuse a template is only available if another grid component in the same dashboard or low-code app uses a template.
 
 #### Layout and scaling options
+
+##### [From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->](#tab/tabid-1)
+
+In the *Layout* pane, under *Grid layout*, you can **configure the number of columns and rows** displayed in the grid component and **choose how items scale** within the available space.
+
+- By default, the grid automatically displays all columns and rows, adapted to the available width and height. To show a fixed number of columns or rows, enable *Fixed column count* or *Fixed row count* and enter the desired value.
+
+  ![Fixed column count](~/dataminer/images/Fixed_Column_Count.gif)<br>*Grid component in DataMiner 10.5.12*
+
+- To have items expand and fill the available space, enable the *Stretch to fit* option for columns and/or rows. When enabled for columns, items scale horizontally. When enabled for rows, items scale vertically.
+
+  ![Stretch to fit](~/dataminer/images/Stretch_to_Fit.gif)<br>*Grid component in DataMiner 10.5.12*
+
+- When *Stretch to fit* is enabled, you can refine how items scale using the *Stretch mode* options:
+
+  - ![Fit](~/dataminer/images/Stretch_Mode_Fit.png) Fit: Items shrink so as many as possible can be displayed within the grid.
+
+  - ![Limit](~/dataminer/images/Stretch_Mode_Limit.png) Limit: The item size configured in the item template is preserved. Any overflow is paginated. This is the default setting.
+
+  ![Stretch mode](~/dataminer/images/Stretch_Mode.gif)<br>*Grid component in DataMiner 10.5.12*
+
+##### [Earlier versions](#tab/tabid-2)
 
 In the *Layout* pane, under *Advanced* > *Grid template*, you can **configure the number of columns and rows** displayed in the grid component and **choose how items scale** within the available space.
 
@@ -109,6 +144,8 @@ In the *Layout* pane, under *Advanced* > *Grid template*, you can **configure th
   - ![Scaled to fit (fixed)](~/dataminer/images/Fixed.png) : The cells are scaled dynamically to fit the grid.
 
   - ![Scaled to fit (scaling)](~/dataminer/images/Scaling.png) : The cells have a fixed size. This is the default setting.
+
+***
 
 > [!NOTE]
 > The number of items that can be displayed in a grid component is limited to 1000<!--RN 37699-->.
@@ -157,8 +194,8 @@ By default, the template of a grid component includes the following **pre-config
 | Layer | Type | Description |
 |--|--|--|
 | ![Text layer](~/dataminer/images/Grid_Text_Layer.png) | Text | Displays the value from the first column in the data source. |
-| ![Rectangle layer 1](~/dataminer/images/Grid_Rectangle_Layer.png) | Rectangle | Acts as the background of each grid block. Default color is `#F6F6F6`, with conditional formatting for hover (`#E8E8E9`) and selection (`#D5DBE9`). |
-| ![Rectangle layer 2](~/dataminer/images/Grid_Rectangle_Layer2.png) | Rectangle | Acts as a visual border by being slightly larger than the background layer. Default color is `#B8BABC`, with conditional formatting for selection (`#2563EB`). |
+| ![Rectangle layer 1](~/dataminer/images/Grid_Rectangle_Layer.png) | Rectangle | Acts as the background of each grid block, with conditional formatting for hover and selection. |
+| ![Rectangle layer 2](~/dataminer/images/Grid_Rectangle_Layer2.png) | Rectangle | Acts as a visual border by being slightly larger than the background layer, with conditional formatting for selection. |
 
 This default template (available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->) ensures that a grid block is highlighted when hovered over and stands out when selected, with a light-blue background and a blue border.
 

@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.4.0_CU21
 ---
 
-# General Main Release 10.4.0 CU21 - Preview
+# General Main Release 10.4.0 CU21
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -68,6 +68,27 @@ This message has now been replaced by the following one:
 
 *"WARNING! Upgrade package with ID [guid] no longer exists"*
 
+#### DxMs upgraded [ID 43961]
+
+<!-- RN 43961: MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner Orchestrator 1.8.0
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
+#### QActions: Variables will now also be logged when a NotifyProtocol call fails [ID 43967]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When SLScripting executes a NotifyProtocol call, this can potentially lead to issues in SLProtocol when the variables are not in the correct format. Entries like `NotifyProtocol with xxx failed. 0x800xxxxx` can then appear in the error logging.
+
+As entries like the one mentioned above make it hard to investigate exactly why a NotifyProtocol call has failed, from now on, these log entries will also include the values of the variables that were used in the NotifyProtocol call.
+
+> [!NOTE]
+> When a NotifyProtocol call returns a `0x800706BA, RPC_S_SERVER_UNAVAILABLE` error, that means that the SLProtocol process was not active and that the NotifyProtocol call was not the cause of the issue. Therefore, the values of the variables will not be included with this specific error is thrown.
+
 ### Fixes
 
 #### Parameter or DCF information would become unavailable to remotely hosted elements after a DataMiner connection had been re-established [ID 43765]
@@ -87,3 +108,28 @@ In some rare cases, SLNet would incorrectly wait for 2 hours before closing a co
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 The timeout of queries against a Cassandra database was set incorrectly. This timeout has now been set to 10 minutes.
+
+#### Visual Overview in web apps: Cube running as a service within SLHelper would not load the common server settings from ClientSettings.json [ID 43941]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, when DataMiner Cube was running as a service within the SLHelper process, it would not load the common server settings from `C:\Skyline DataMiner\users\ClientSettings.json` when it is unable to retrieve its own user settings.
+
+From now on, regardless of whether DataMiner Cube can retrieve its own user settings, it will load the common server settings from `C:\Skyline DataMiner\users\ClientSettings.json`.
+
+#### Notices regarding incorrect baseline values would no longer be generated when an element was started after being swarmed or migrated [ID 43970]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When an element that had been swarmed or migrated by means of a DELT package was started up, up to now, the following notices would no longer be generated when incorrect baseline values were found:
+
+- `The fixed value (%g) is invalid. It is lower than nominal value (%g), and in the higher range. This value will not be used for alarm creation.`
+- `The fixed value (%g) is invalid. It is higher than nominal value (%g), and in the lower range. This value will not be used for alarm creation.`
+
+These notices will now be generated again.
+
+#### Automation script matrix actions related to swarmed or migrated elements could fail [ID 43971]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, after elements had been swarmed or migrated by means of a DELT package, in some cases, Automation script matrix actions associated with those elements could fail.

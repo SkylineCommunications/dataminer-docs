@@ -50,7 +50,7 @@ To do so, in edit mode, select the component, go to *Settings > General > Defaul
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-If the HLS stream of a video thumbnail of type HTML5-HLS has multiple audio tracks, the thumbnail will now have a drop-down box in which you can select one of the available audio tracks.
+If the HLS stream of a video thumbnail of type HTML5-HLS has multiple audio tracks, the thumbnail will now have a dropdown box in which you can select one of the available audio tracks.
 
 ## Changes
 

@@ -37,7 +37,7 @@ A number of enhancements have been implemented to the Skyline Queue Manager:
 
 - *Total Customers* has been renamed to *Total Resources*. This parameter represents all resources from the resource pool selected with the *Resource Pool* parameter (pool resources not included).
 - *Queue Fill Rate* is now initialized.
-- The *Resource Pool* drop-down box now only contains resource pool names. It longer contains GUIDs.
+- The *Resource Pool* dropdown box now only contains resource pool names. It longer contains GUIDs.
 - The *Refresh Pool Info* button will now also update the *Total Resources* parameter.
 
 #### Reduced number of ProfileHelper calls \[ID 28699\]

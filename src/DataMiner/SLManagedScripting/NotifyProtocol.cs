@@ -19,7 +19,14 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="row">The primary key of the row.</param>
 		/// <returns>The 1-based internal position of the row in the table.</returns>
 		/// <remarks>
-		/// This method acts as a wrapper for a NotifyProtocol type 149 call [NT_ADD_ROW](xref:NT_ADD_ROW).
+		/// 	<list type="bullet">
+		/// 		<item>
+		/// 			<description>This method acts as a wrapper for a NotifyProtocol type 149 call <see href="xref:NT_ADD_ROW">NT_ADD_ROW</see>.</description>
+		/// 		</item>
+		/// 		<item>
+		/// 			<description>If a row with the specified primary key already exists, the method does nothing. To update an existing row instead, use <see href="xref:Skyline.DataMiner.Scripting.SLProtocol">SetRow</see>.</description>
+		/// 		</item>
+		/// 	</list>
 		/// </remarks>
 		[Obsolete("Use protocol.AddRow instead", false)]
 		public static int AddRow(SLProtocol protocol, int tableId, string row)
@@ -35,7 +42,14 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="row">The row data.</param>
 		/// <returns>The 1-based internal position of the row in the table.</returns>
 		/// <remarks>
-		/// This method acts as a wrapper for a NotifyProtocol type 149 call [NT_ADD_ROW](xref:NT_ADD_ROW).
+		/// 	<list type="bullet">
+		/// 		<item>
+		/// 			<description>This method acts as a wrapper for a NotifyProtocol type 149 call <see href="xref:NT_ADD_ROW">NT_ADD_ROW</see>.</description>
+		/// 		</item>
+		/// 		<item>
+		/// 			<description>If a row with the specified primary key already exists, the method does nothing. To update an existing row instead, use <see href="xref:Skyline.DataMiner.Scripting.SLProtocol">SetRow</see>.</description>
+		/// 		</item>
+		/// 	</list>
 		/// </remarks>
 		[Obsolete("Use protocol.AddRow instead", false)]
 		public static int AddRow(SLProtocol protocol, int tableId, object[] row)
@@ -53,7 +67,14 @@ namespace Skyline.DataMiner.Scripting
 		/// <exception cref="ArgumentException">The row and key mask arrays have different length.</exception>
 		/// <exception cref="ArgumentNullException"><paramref name="row"/> is <see langword="null"/>.</exception>
 		/// <remarks>
-		/// This method acts as a wrapper for a NotifyProtocol type 149 call [NT_ADD_ROW](xref:NT_ADD_ROW).
+		/// 	<list type="bullet">
+		/// 		<item>
+		/// 			<description>This method acts as a wrapper for a NotifyProtocol type 149 call <see href="xref:NT_ADD_ROW">NT_ADD_ROW</see>.</description>
+		/// 		</item>
+		/// 		<item>
+		/// 			<description>If a row with the specified primary key already exists, the method does nothing. To update an existing row instead, use <see href="xref:Skyline.DataMiner.Scripting.SLProtocol">SetRow</see>.</description>
+		/// 		</item>
+		/// 	</list>
 		/// </remarks>
 		[Obsolete("Use protocol.AddRow instead", false)]
 		public static void AddRow(SLProtocol protocol, int tableId, object[] row, bool[] KeyMask)
@@ -70,7 +91,6 @@ namespace Skyline.DataMiner.Scripting
 		/// This method acts as a wrapper for a NotifyProtocol type 240 call [NT_ADD_ROW_RETURN_KEY](xref:NT_ADD_ROW_RETURN_KEY).
 		/// <note type="note">This method overload is intended to be used with a table that has an auto-incrementing key.</note>
 		/// </remarks>
-
 		[Obsolete("Use protocol.AddRowReturnKey instead", false)]
 		public static string AddRowReturnKey(SLProtocol protocol, int tableId)
 		{

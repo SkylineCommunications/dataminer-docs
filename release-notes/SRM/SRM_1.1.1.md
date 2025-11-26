@@ -18,7 +18,7 @@ If a function contains at least one Path parameter, the By Reference functionali
 
 The configuration for the *ResourceAssignment* property has been slightly modified. Previously, the same capability filter could not be applied to different nodes, because the "var:" label was used instead of the capability name itself.
 
-Now the text displayed next to "var:" in the configuration will be used for display purposes only, while filtering will depend on the *Capability* value. For example, with the configuration below, two drop-down lists, labeled *Location* and *Location2*, will be displayed in the Booking Wizard, and both lists will filter based on the *Location* capability.
+Now the text displayed next to "var:" in the configuration will be used for display purposes only, while filtering will depend on the *Capability* value. For example, with the configuration below, two dropdown lists, labeled *Location* and *Location2*, will be displayed in the Booking Wizard, and both lists will filter based on the *Location* capability.
 
 Node one:
 

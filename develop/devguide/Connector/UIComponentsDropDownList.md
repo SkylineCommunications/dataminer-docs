@@ -2,13 +2,13 @@
 uid: UIComponentsDropDownList
 ---
 
-# Drop-down list
+# Dropdown list
 
-## Creating a drop-down list
+## Creating a dropdown list
 
-A drop-down list is a control that allows the user to choose one value from a list.
+A dropdown list is a control that allows the user to choose one value from a list.
 
-To define a drop-down list, create a parameter of type "write", set type to "discreet" and provide a list of discrete values.
+To define a dropdown list, create a parameter of type "write", set type to "discreet" and provide a list of discrete values.
 
 ```xml
 <Param id="3105">
@@ -89,11 +89,11 @@ To define a drop-down list, create a parameter of type "write", set type to "dis
 </Param>
 ```
 
-![DataMiner Cube Drop-Down List UI Component](~/develop/images/uidropdownlist.png)
+![DataMiner Cube Dropdown List UI Component](~/develop/images/uidropdownlist.png)
 
-## Creating a drop-down list with a checkbox
+## Creating a dropdown list with a checkbox
 
-When you add a drop-down list, it is possible to show a checkbox for one entry by using the state attribute and setting its value to disabled. Note that the corresponding read parameter should interpret this as an exceptional value.
+When you add a dropdown list, it is possible to show a checkbox for one entry by using the state attribute and setting its value to disabled. Note that the corresponding read parameter should interpret this as an exceptional value.
 
 ```xml
 <Param id="1032">
@@ -164,11 +164,11 @@ When you add a drop-down list, it is possible to show a checkbox for one entry b
 </Param>
 ```
 
-![DataMiner Cube drop-down list with checkbox](~/develop/images/uidropdownlistwithcheckbox.png)
+![DataMiner Cube dropdown list with checkbox](~/develop/images/uidropdownlistwithcheckbox.png)
 
-## Creating a dynamic drop-down list
+## Creating a dynamic dropdown list
 
-When a standard drop-down list is configured, the items to choose from are statically defined in the protocol. Alternatively, you can also create a dynamic drop-down list. To do so, create a parameter that holds the dynamic entries in a parameter (by providing a semicolon-separated list of entries) and refer to this parameter using the dependencyId attribute.
+When a standard dropdown list is configured, the items to choose from are statically defined in the protocol. Alternatively, you can also create a dynamic dropdown list. To do so, create a parameter that holds the dynamic entries in a parameter (by providing a semicolon-separated list of entries) and refer to this parameter using the dependencyId attribute.
 
 ```xml
 <Param id="400" trending="false">
@@ -223,7 +223,7 @@ When a standard drop-down list is configured, the items to choose from are stati
 </Param>
 ```
 
-![DataMiner Cube dynamic drop-down list](~/develop/images/uidropdownlistdynamic.png)
+![DataMiner Cube dynamic dropdown list](~/develop/images/uidropdownlistdynamic.png)
 
 This also works for tables (from DataMiner 8 onwards (RN 5817)). It is not only possible to refer to a standalone parameter, another column of the same table can also be specified. This makes it possible to have a list of different items for every row.
 

@@ -7,6 +7,9 @@ uid: MediaOps_1.5.0
 > [!IMPORTANT]
 > We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
 
+> [!NOTE]
+> This version requires DataMiner 10.5.11/10.6.0 or higher. In addition, the [GQI DxM](xref:GQI_DxM) must be installed.
+
 ## New features
 
 #### Scheduling: Ability to pin time range quick picks [ID 43938]
@@ -37,3 +40,7 @@ When the status of a job was reverted from Confirmed to Tentative, it could occu
 #### Scheduler: Lock on job not removed after duplication [ID 43915]
 
 When a locked job was duplicated, the user who had a lock on the original job also had a lock on the duplicated job, which should not be the case and was not clear to the user. This could cause confusion when someone else tried to edit the duplicated job.
+
+#### Scheduling: Recurring jobs not saved correctly with daylight saving time [ID 44109]
+
+When recurring jobs were created, daylight saving time was not correctly applied.

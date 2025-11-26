@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.5.12
 ---
 
-# General Feature Release 10.5.12 – Preview
+# General Feature Release 10.5.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.5.12
 
 ## Highlights
 
-- [User-defined APIs: New ResponseHeaders property [ID 43705]](#user-defined-apis-new-responseheaders-property-id-43705)
+- [User-defined APIs: New ResponseHeaders property [ID 43705] [ID 43960]](#user-defined-apis-new-responseheaders-property-id-43705-id-43960)
 
 ## New features
 
@@ -37,11 +37,13 @@ When a DataMiner upgrade is being performed, from now on, the new *VerifyOSVersi
 > [!NOTE]
 > Microsoft no longer supports OS versions older than Windows Server 2016 or Windows 10. Hence, these versions will not pass the above-mentioned OS version check.
 
-#### User-defined APIs: New ResponseHeaders property [ID 43705]
+#### User-defined APIs: New ResponseHeaders property [ID 43705] [ID 43960]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
 In the `ResponseHeaders` property of the `ApiTriggerOutput` class, you can now specify the HTTP headers that will be added to the response.
+
+Also, the `ApiTriggerOutput` class now allows you to override the contents of the Content-Type header, which is set to "application/json" by default.
 
 Currently, the following headers are blocked, and will result in an error if you try to set them:
 
@@ -80,6 +82,34 @@ From now on, the `Engine` class exposes the public property `ScriptName`.
 
 This means that, in an Automation script, it will now be possible to retrieve the name of that script.
 
+#### Interactive Automation scripts executed in a web app: UI version can now be set in the script [ID 43875]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+Up to now, when you wanted an interactive Automation script executed in a web app to use the new UI version, you had to add `useNewIASInputComponents=true` to the URL of the app.
+
+From now on, it is also possible to indicate the UI version in the script itself. To do so, set the `engine.WebUIVersion` property to one of the following values:
+
+| Value | UI version |
+|-------|------------|
+| WebUIVersion.Default | Default UI version. At present, this is V1. |
+| WebUIVersion.V1      | Current UI version (V1) |
+| WebUIVersion.V2      | New UI version (V2)     |
+
+Example:
+
+```csharp
+engine.WebUIVersion = WebUIVersion.V2
+```
+
+The URL parameter `useNewIASInputComponents` has priority over the UI version set in the script.
+
+- If you use `useNewIASInputComponents=true`, the script will use the new UI version (i.e. V2), even when V1 was set in the script.
+- If you use `useNewIASInputComponents=false`, the script will use the current UI version (i.e. V1), even when V2 was set in the script.
+
+> [!IMPORTANT]
+> This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
+
 ## Changes
 
 ### Enhancements
@@ -92,11 +122,11 @@ Each time the *SLLogCollector* tool is run, by default, it will order the *Stand
 
 Also, when ordered to include memory dumps, up to now, the SLLogCollector tool would first run the BPA tests and collect all logging, and would then take the memory dumps. From now on, it will take the memory dumps first.
 
-#### Serial communication: Only TLS 1.2 or TLS 1.3 encryption will now be allowed [ID 43678]
+#### All HTTPS communication will have to use TLS 1.2 encryption [ID 43678] [ID 44151]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
-Although DataMiner supports all TLS versions up to TLS 1.3, from now on, all serial communication will have to use either TLS 1.2 or TLS 1.3 encryption.
+From now on, all HTTPS communication will have to use TLS 1.2 encryption. SSL, TLS 1.0, and TLS 1.1 are no longer supported.
 
 #### Relational anomaly detection: All relational anomalies will now be stored in the database [ID 43720]
 
@@ -188,15 +218,17 @@ Because of a number of enhancements, overall performance of the the *Cube CRL Fr
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
-#### DxMs upgraded [ID 43866] [ID 43950]
+#### DxMs upgraded [ID 43866] [ID 43950] [ID 43961]
 
 <!-- RN 43866: MR 10.6.0 - FR 10.5.12 -->
 <!-- RN 43950: MR 10.6.0 - FR 10.5.12 -->
+<!-- RN 43961: MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner CloudGateway 2.17.14
 - DataMiner DataAPI 1.4.0
+- DataMiner Orchestrator 1.8.0
 
 The CloudGateway DxM and the DataAPI DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, they will not be installed.
 
@@ -241,11 +273,56 @@ This message has now been replaced by the following one:
 
 *"WARNING! Upgrade package with ID [guid] no longer exists"*
 
+#### SLNet/SLDataGateway: Enhanced performance when reading reservation instances and when writing data to the database [ID 43918]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+Because of a number of enhancements, overall performance has increased
+
+- when writing data to the database, and
+- when reading reservation instances, especially on high-load systems.
+
 #### NATSMigration tool will now log clearer HTTP errors when it is not able to connect to BrokerGateway [ID 43931]
 
 <!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
 
 When the *NATSMigration* tool is not able to connect to BrokerGateway, it will now add clearer HTTP errors to the error log.
+
+#### Relational anomaly detection: New API message to retrieve the model fit score of a RAD parameter subgroup [ID 43934]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+From now on, the new `GetRADSubgroupModelFitMessage` will allow you to retrieve the model fit score of a RAD parameter subgroup.
+
+The model fit score, ranging from 0 to 1, indicates how well the relational behavior of a subgroup is captured by the shared model trained across multiple subgroups:
+
+- Higher scores suggest that the subgroup's behavior aligns well with the shared model.
+- Lower scores indicate that the subgroup's behavior deviates from the patterns learned by the shared model.
+
+The model fit score is derived from the evolution of anomaly scores over time for the subgroup in question. In general, subgroups with consistently high anomaly scores tend to have lower model fit scores, reflecting poor alignment with the shared relational model.
+
+#### Time-scoped relation learning: Exceptions will now be thrown when sending a GetTimeScopedRelationsMessage with incorrect arguments [ID 43963]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+When a client application retrieves information about time-scoped related parameters using the `GetTimeScopedRelationsMessage`, from now on, exceptions will be thrown when that message is sent with incorrect arguments (e.g. a non-existing parameter ID, an invalid time range, etc.).
+
+#### QActions: Variables will now also be logged when a NotifyProtocol call fails [ID 43967]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When SLScripting executes a NotifyProtocol call, this can potentially lead to issues in SLProtocol when the variables are not in the correct format. Entries like `NotifyProtocol with xxx failed. 0x800xxxxx` can then appear in the error logging.
+
+As entries like the one mentioned above make it hard to investigate exactly why a NotifyProtocol call has failed, from now on, these log entries will also include the values of the variables that were used in the NotifyProtocol call.
+
+> [!NOTE]
+> When a NotifyProtocol call returns a `0x800706BA, RPC_S_SERVER_UNAVAILABLE` error, that means that the SLProtocol process was not active and that the NotifyProtocol call was not the cause of the issue. Therefore, the values of the variables will not be included with this specific error is thrown.
+
+#### BrokerGateway uninstall will delete the entire C:\\ProgramData\\Skyline Communications\\DataMiner BrokerGateway\\ folder [ID 43985]
+
+<!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
+
+From now on, when BrokerGateway is uninstalled, the entire `C:\ProgramData\Skyline Communications\DataMiner BrokerGateway\` folder will be deleted.
 
 ### Fixes
 
@@ -265,7 +342,7 @@ From now on, when you try to install Alerter, it will check whether Microsoft .N
 
 #### Cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube [ID 43810]
 
-<!-- MR 10.6.0 - FR 10.5.12 -->
+<!-- MR 10.5.0 [CU10] - FR 10.5.12 -->
 
 On systems with a Cassandra cluster database in combination with an OpenSearch indexing database, cleared alarms would incorrectly not be shown when using the history slider in DataMiner Cube.
 
@@ -325,3 +402,40 @@ The timeout of queries against a Cassandra database was set incorrectly. This ti
 Up to now, a temporary deadlock could occur in SLNet while DataMiner Agents were connecting or reconnecting to each other.
 
 In some cases, this could lead to "thread problem" alarms appearing and then clearing later on.
+
+#### Visual Overview in web apps: Cube running as a service within SLHelper would not load the common server settings from ClientSettings.json [ID 43941]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, when DataMiner Cube was running as a service within the SLHelper process, it would not load the common server settings from `C:\Skyline DataMiner\users\ClientSettings.json` when it is unable to retrieve its own user settings.
+
+From now on, regardless of whether DataMiner Cube can retrieve its own user settings, it will load the common server settings from `C:\Skyline DataMiner\users\ClientSettings.json`.
+
+#### Outdated SLAnalytics icons would incorrectly remain visible for too long because of SLNet caching issues [ID 43957]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+Up to now, because of SLNet caching issues, in client applications like e.g. DataMiner Cube, outdated SLAnalytics icons would incorrectly remain visible for too long.
+
+#### Notices regarding incorrect baseline values would no longer be generated when an element was started after being swarmed or migrated [ID 43970]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When an element that had been swarmed or migrated by means of a DELT package was started up, up to now, the following notices would no longer be generated when incorrect baseline values were found:
+
+- `The fixed value (%g) is invalid. It is lower than nominal value (%g), and in the higher range. This value will not be used for alarm creation.`
+- `The fixed value (%g) is invalid. It is higher than nominal value (%g), and in the lower range. This value will not be used for alarm creation.`
+
+These notices will now be generated again.
+
+#### Automation script matrix actions related to swarmed or migrated elements could fail [ID 43971]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+Up to now, after elements had been swarmed or migrated by means of a DELT package, in some cases, Automation script matrix actions associated with those elements could fail.
+
+#### Problem when an element with an active filtered table subscription was swarmed to the DMA on which it was already located [ID 44150]
+
+<!-- MR 10.6.0 - FR 10.5.12 [CU0] -->
+
+When an element was swarmed to the DataMiner Agent on which it was already located, up to now, a server-side deadlock would occur when that element had an active filtered table subscription at the time of the swarming operation.

@@ -20,7 +20,7 @@ Elements have two main kinds of pages. You can see these by selecting the elemen
 
   These pages are based on [Visio drawings](xref:visio#visio-drawings). Using Microsoft Visio, users with sufficient rights can create their own visual overview pages or customize existing pages according to their preferences.
 
-- **Data pages**: These pages contain the parameters defined in the DataMiner protocol. [Parameters](xref:parameters) are variables that refer to specific data in the system. Their value may be retrieved from a data source or may depend on user input. They can for example indicate the temperature of a device, the description of a location, etc.
+- **Data pages**: These pages contain the parameters defined in the DataMiner protocol. [Parameters](xref:parameters) are variables that refer to specific data in the system. Their value may be retrieved from a data source or may depend on user input. They can, for example, indicate the temperature of a device, the description of a location, etc.
 
   DataMiner can store measurements of parameter values taken over a period of time, so that these can be shown in graphs to [visualize trends](xref:trending) in the data.
 
@@ -36,7 +36,7 @@ Like elements, services have visual overview pages and data pages. The data page
 
 ## Views
 
-[Views](xref:About_views) allow you to create structure in the overview of the various objects in your system. Views function as a kind of “folders”, which can for instance contain elements and subviews. By logically combining components in a view, you can ensure that users can quickly access all components that belong together in some way.
+[Views](xref:About_views) allow you to create structure in the overview of the various objects in your system. Views function as a kind of “folders”, which can, for instance, contain elements and subviews. By logically combining components in a view, you can ensure that users can quickly access all components that belong together in some way.
 
 ![Views](~/dataminer/images/Views.gif)<br/>*Element card in DataMiner 10.4.1*
 

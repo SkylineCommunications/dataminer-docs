@@ -52,7 +52,7 @@ At the top of the *DIS Tree* tool window, there is a breadcrumb control that all
 
 - If you click a breadcrumb (e.g. "Params"), the corresponding (parent) node will be selected in the tree view (e.g. "Params").
 
-- If you click an arrow next to a breadcrumb, a drop-down list will open, allowing you to immediately navigate to one of the child nodes.
+- If you click an arrow next to a breadcrumb, a dropdown list will open, allowing you to immediately navigate to one of the child nodes.
 
 ### Expanding, collapsing or pinning DIS tree nodes
 

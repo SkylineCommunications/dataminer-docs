@@ -12,7 +12,7 @@ To determine the destination view for the service template:
 
 To determine the destination view for the generated services, in the *Destination view generated services* section, choose one of the following three options:
 
-- To generate the services in a predetermined view, select *Fixed view* and select the view in the drop-down list. Only one view can be specified in case a fixed view is used.
+- To generate the services in a predetermined view, select *Fixed view* and select the view in the dropdown list. Only one view can be specified in case a fixed view is used.
 
 - To generate the services in the view where the template is applied, select *View on which template was applied*.
 

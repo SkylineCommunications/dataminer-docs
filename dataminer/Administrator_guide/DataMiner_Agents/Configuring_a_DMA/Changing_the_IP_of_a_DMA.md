@@ -19,6 +19,10 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
 1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
 
+1. Go to the folder `C:\Skyline DataMiner\Configurations` and open the file *ClusterEndpoints.json*.
+
+1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
+
 1. If you are not using [Storage as a Service (STaaS)](xref:STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:
 
    1. Go to the folder `C:\Skyline DataMiner\` and open the file *DB.xml*.
@@ -105,6 +109,12 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 1. Go to the folder `C:\Skyline DataMiner\` and open the file *DMS.xml*.
 
 1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
+
+1. Go to the folder `C:\Skyline DataMiner\Configurations` and open the file *ClusterEndpoints.json*.
+
+1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
+
+   This action will need to be repeated for all Agents in the cluster, including offline Failover Agents.
 
 1. If you are not using [Storage as a Service (STaaS)](xref:STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:
 
@@ -202,7 +212,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
    1. Go to the *Build Message* tab of the main window of the SLNetClientTest tool.
 
-   1. In the *Message Type* drop-down list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
+   1. In the *Message Type* dropdown list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
 
       > [!NOTE]
       > Do not send this message if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:SLNetClientTest_disabling_automatic_nats_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending this message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
@@ -233,6 +243,12 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 1. On the other DMA of the Failover pair, go to the folder `C:\Skyline DataMiner\` and open the file *DMS.xml*.
 
 1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
+
+1. On the DMA of which you have changed the IP, go to the folder `C:\Skyline DataMiner\Configurations` and open the file *ClusterEndpoints.json*.
+
+1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
+
+   This action will need to be repeated for all Agents in the cluster, including offline Failover Agents.
 
 1. If the DMAs host a Cassandra database, do the following **on both DMAs**:
 
@@ -309,7 +325,7 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
    1. Go to the *Build Message* tab of the main window of the SLNetClientTest tool.
 
-   1. In the *Message Type* drop-down list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
+   1. In the *Message Type* dropdown list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
 
       > [!NOTE]
       > > Do not send this message if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:SLNetClientTest_disabling_automatic_nats_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending this message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
@@ -426,7 +442,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
    1. Go to the *Build Message* tab of the main window of the SLNetClientTest tool.
 
-   1. In the *Message Type* drop-down list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
+   1. In the *Message Type* dropdown list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
 
       > [!NOTE]
       > > Do not send this message if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:SLNetClientTest_disabling_automatic_nats_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending this message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->

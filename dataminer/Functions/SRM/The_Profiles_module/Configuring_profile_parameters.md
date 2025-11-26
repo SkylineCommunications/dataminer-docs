@@ -36,7 +36,7 @@ Profile parameters can be configured in two ways. You can either [add a paramete
 
    - *Capability*: Indicates that the parameter represents a capability. This category cannot be combined with the *Capacity* category.
 
-1. Next to *Type*, use the drop-down list to specify whether the parameter consists of a number or of text, or if it is a discrete parameter.
+1. Next to *Type*, use the dropdown list to specify whether the parameter consists of a number or of text, or if it is a discrete parameter.
 
    - Depending on the category selection, the type options may be limited.
 

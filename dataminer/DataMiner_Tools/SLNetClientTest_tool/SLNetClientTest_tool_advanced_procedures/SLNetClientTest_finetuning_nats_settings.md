@@ -12,7 +12,7 @@ To do so:
 
 1. Go to *Advanced* > *Options* > *SLNet Options*.
 
-1. Depending on what you want to check or configure, select one of the following options in the drop-down box at the top of the window:
+1. Depending on what you want to check or configure, select one of the following options in the dropdown box at the top of the window:
 
    - *NATSDisasterCheck*: If this is set to true, automatic detection and triggering of NATS cluster self-healing is activated (default: false).
 

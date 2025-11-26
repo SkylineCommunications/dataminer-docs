@@ -24,7 +24,7 @@ The following settings can be configured in this tab:
 
 - To determine the default page of the service’s Visio file, specify the page under *Default Page*. If necessary, click the downward triangle to the right of the box to enter placeholders.
 
-- To specify a service protocol for the generated services, select a service protocol in the drop-down list under *Protocol*.
+- To specify a service protocol for the generated services, select a service protocol in the dropdown list under *Protocol*.
 
 - To specify an alarm template for the generated services, specify the template in the box under *Alarm Template*.
 

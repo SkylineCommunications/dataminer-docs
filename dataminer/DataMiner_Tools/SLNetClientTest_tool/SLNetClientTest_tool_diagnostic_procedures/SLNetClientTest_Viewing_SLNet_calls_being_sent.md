@@ -8,7 +8,7 @@ To get an overview of the SLNet calls that are being sent from a QAction, an Aut
 
 1. In the *Follow* menu, click *Follow...*.
 
-1. In the *Who to follow?* window, depending on which SLNet calls you want to see, select one of the following items in the *Hook Into Active Session* drop-down list:
+1. In the *Who to follow?* window, depending on which SLNet calls you want to see, select one of the following items in the *Hook Into Active Session* dropdown list:
 
    - For DataMiner Cube, select *Cube*.
 

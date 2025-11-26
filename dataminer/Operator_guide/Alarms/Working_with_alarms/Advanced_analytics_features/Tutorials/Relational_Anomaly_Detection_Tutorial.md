@@ -9,7 +9,7 @@ This tutorial showcases DataMiner's [relational anomaly detection (RAD)](xref:Re
 Estimated duration: 25 minutes.
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created in DataMiner 10.5.7.
+> The content and screenshots for this tutorial have been created in DataMiner 10.5.11.
 
 ## Prerequisites
 
@@ -85,7 +85,7 @@ This gives you an idea of the parameter relations that will be used further in t
 
    This will open a window where you can configure a new parameter group.
 
-   ![Add a group](~/dataminer/images/tutorial_RAD_AddGroup.jpg)
+   ![Add a group](~/dataminer/images/tutorial_RAD_AddGroup.png)
 
 1. As the *Group name*, fill in *PAs unbalanced*.
 
@@ -112,6 +112,22 @@ This gives you an idea of the parameter relations that will be used further in t
    1. Keep the *Display key filter* empty.
 
    1. Click *Add*.
+
+1. Override the default anomaly threshold:
+
+   1. Select the *Override default anomaly threshold* checkbox.
+
+   1. Fill in the value *3* in the field next to *Anomaly threshold*.
+
+   This will make DataMiner more sensitive to deviations in the relations between the parameters. By default, an event will only be triggered when the anomaly score exceeds 6, but in this example the deviation of the parameters will be too small to lead to such a high anomaly score.
+
+1. Override the default minimum anomaly duration:
+
+   1. Select the *Override default minimum anomaly duration* checkbox.
+
+   1. Fill in the value *00:05* in field next to *Minimum anomaly duration (in minutes)*.
+
+   This will make sure that DataMiner also detects short anomalies, when the relation is broken for only 5 minutes. By default, DataMiner will only trigger an event if the relation is broken for at least 15 minutes.
 
 1. Click *Add group* to create the group.
 
@@ -141,9 +157,9 @@ The top table in the RAD Manager app should now display the group you have creat
 
 1. In the RAD Manager app, select the group you created.
 
-   The *Group Information* table will now display the parameters included in your group.
+   The *Parameters in the selected group* table will now display the parameters included in your group.
 
-1. In the *Group Information* table, select both the *PA2* and *PA3 Output Power* parameters by keeping Ctrl pressed when you click them.
+1. In the *Parameters in the selected group* table, select both the *PA2* and *PA3 Output Power* parameters by keeping Ctrl pressed when you click them.
 
 1. Below the table, investigate the trend and anomaly score:
 
@@ -170,14 +186,11 @@ In this step, you will learn how you can for instance suppress events created as
 
 1. Select the *Tx Amplifier Output Power* parameter, keep the *Display key filter* empty, and click *Add*.
 
-1. Select the *Override default minimum anomaly duration* checkbox and fill in the value *15*.
+1. Select the *Override default minimum anomaly duration* checkbox and fill in the value *20*.
 
-   This means that the relation should be broken for at least 15 minutes before an event is triggered.
+   This means that the relation should be broken for at least 20 minutes before an event is triggered.
 
-   ![Configuration suppressing short maintenance operations](~/dataminer/images/tutorial_RAD_Maintenance_Configuration.jpg)
-
-   > [!TIP]
-   > Two other checkboxes are also available to tweak the group configuration. For more information on these options, refer to [Options for relational anomaly groups](xref:Relational_anomaly_detection#options-for-relational-anomaly-groups).
+   ![Configuration suppressing short maintenance operations](~/dataminer/images/tutorial_RAD_Maintenance_Configuration.png)
 
 1. Click *Add group*.
 
@@ -215,7 +228,11 @@ Typically, you will monitor not just one single DAB transmitter but multiple, an
 
 1. Select the *Tx Amplifier Output Power* parameter, keep the *Display key filter* empty, and click *Add*.
 
-1. Click *Add group*.
+1. Select the *Override default anomaly threshold* checkbox and fill in the value *3*.
+
+1. Select the *Override default minimum anomaly duration* checkbox and fill in the value *5*.
+
+1. Click *Add group(s)*.
 
    This will create a group for each element with the selected connector. In this case, it will create groups for *RAD - Commtia LON 1*, *RAD - Commtia LON 2*, *RAD - Commtia LON 3*, and *RAD - Commtia STH 1*.
 
@@ -241,12 +258,10 @@ Using the RAD API, you can fully tailor the RAD functionality to your needs. For
 
    This script will create RAD groups for all DAB transmitters containing *STH* (short for Southampton) as part of their name.
 
+   ![The resulting groups](~/dataminer/images/tutorial_RAD_Resulting_groups_API.png)
+
    > [!TIP]
    > This is only one possible example of how you can use the RAD API. If you would like to create your own script to create a custom advanced configuration, refer to [Working with the RAD API](xref:RAD_API).
-
-1. On the *Demo Control* page of the *RAD - Commtia LON 3* element, click *Add Degradation* .
-
-1. Check the Alarm Console: no new relational anomaly will appear, as the script only configured RAD for the DAB transmitters in Southampton.
 
 ## Step 8: Clean up your system
 

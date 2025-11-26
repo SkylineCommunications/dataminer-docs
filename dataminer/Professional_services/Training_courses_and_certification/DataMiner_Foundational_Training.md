@@ -30,6 +30,13 @@ In case DataMiner training is needed for a large group of people, this option br
 
 DataMiner Open Training sessions are open public sessions bringing together participants from different companies.
 
+After attending the DataMiner Open Training, you will have the opportunity to book your exam with one of our experts and earn a **DataMiner Certificate of Expertise**. 
+
+A certification voucher is included in the registration fee when you complete a full training track:
+
+- Fundamentals certification: after completing the full 2-day Fundamentals track.
+- Configurator certification: after completing both Configurator Level 1 and Level 2.
+
 > [!TIP]
 > For the schedule of the next open training sessions and the registration form, refer to [DataMiner Dojo](https://community.dataminer.services/open-training/).
 
