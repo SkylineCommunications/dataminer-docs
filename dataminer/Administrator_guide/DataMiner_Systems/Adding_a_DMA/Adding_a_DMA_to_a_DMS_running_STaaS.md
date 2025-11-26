@@ -38,7 +38,7 @@ To add a DataMiner Agent to a DMS running STaaS:
          </DataBases>
          ```
 
-      - For setups **with proxy** (this **requires DataMiner 10.4.5 or higher**<!-- RN 39221 -->), use the following configuration, filling in the fields as required:
+      - For setups **with proxy** (this **requires DataMiner 10.4.5/10.5.0 or higher**<!-- RN 39221 -->), use the following configuration, filling in the fields as required:
 
          ```xml
          <?xml version="1.0"?>
