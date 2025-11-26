@@ -93,7 +93,7 @@ When you start a DataMiner upgrade procedure, from now on, a new prerequisite wi
 
 A number of enhancements have been made to the stuffing and unstuffing behavior when sending serial commands.
 
-Stuffing will now always be removed from the parameters, even if the current command did not add stuffing during a previous run.
+Stuffing will now always be removed from the parameters, even if the current command did not add stuffing during a previous run. This will make it easier and more robust to reuse parameters across different commands.
 
 ### Fixes
 
@@ -203,3 +203,11 @@ In some rare cases, certain create/update/delete actions performed on services w
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 When a row-based `FillArray` method was performed with zero rows as input and with the `SaveOption` option set to "Partial", up to now, the method would throw an unhandled exception due to a missing check.
+
+#### NotifyDataMiner call NT_CLOSE_HISTORY_TREND_WINDOW (374) sent for a table cell would incorrectly ignore the specified timestamp [ID 44162]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, when a NotifyDataMiner call `NT_CLOSE_HISTORY_TREND_WINDOW` (374) was sent for a particular table cell, it would incorrectly ignore the specified timestamp.
+
+This call closes all previous trend windows that are still open and have already passed since the specified time.
