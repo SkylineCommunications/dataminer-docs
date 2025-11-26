@@ -1,5 +1,5 @@
 ---
-uid: SLNetClientTest_disabling_automatic_nats_config
+uid: Disabling_automatic_NATS_config
 ---
 
 # Disabling automatic NATS configuration

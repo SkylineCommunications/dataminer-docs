@@ -32,7 +32,7 @@ To generate self-signed certificates, we recommend that you **use our [scripts f
 
 A **NATS node** is always configured on the system where the DataMiner software is hosted. Follow the steps below for **each of the NATS nodes** in the cluster to enable inter-node TLS encryption:
 
-1. Ensure the **NATSForceManualConfig** option is enabled (see [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)).
+1. Ensure the **NATSForceManualConfig** option is enabled (see [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config)).
 
    This is crucial as DataMiner does not support automatic TLS configuration on the NATS nodes and will overwrite any additional configurations in the **nats-server.config** file.
 
@@ -90,7 +90,7 @@ Since a **NATS node** is always configured on the system where the DataMiner sof
 
 Follow these steps to complete the configuration:
 
-1. Ensure the **NATSForceManualConfig** option is enabled (see [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)).
+1. Ensure the **NATSForceManualConfig** option is enabled (see [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config)).
 
    This is crucial as DataMiner does not support automatic TLS configuration on the NATS nodes and will overwrite any additional configurations in the **nats-server.config** file.
 

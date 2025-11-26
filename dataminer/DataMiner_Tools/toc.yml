@@ -283,8 +283,6 @@ items:
             topicUid: SLNetClientTest_creating_enhanced_view
           - name: Debugging the dataminer.services connection
             topicUid: SLNetClientTest_debugging_cloud_connection
-          - name: Disabling automatic NATS configuration
-            topicUid: SLNetClientTest_disabling_automatic_nats_config
           - name: Disabling replication buffering
             topicUid: SLNetClientTest_disabling_replication_buffering
           - name: Editing the connection string between two DataMiner Agents
