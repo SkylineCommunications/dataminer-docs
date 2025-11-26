@@ -87,6 +87,14 @@ Before upgrading to this DataMiner release or above, you are expected to install
 
 When you start a DataMiner upgrade procedure, from now on, a new prerequisite will verify whether Microsoft .NET 10 is installed on the system. If this is not the case, the upgrade will be canceled.
 
+#### Enhanced stuffing and unstuffing behavior when sending serial commands [ID 44149]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+A number of enhancements have been made to the stuffing and unstuffing behavior when sending serial commands.
+
+Stuffing will now always be removed from the parameters, even if the current command did not add stuffing during a previous run.
+
 ### Fixes
 
 #### Service templates: Problem when parsing conditions to dynamically include or exclude child elements [ID 43120]

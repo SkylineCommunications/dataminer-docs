@@ -216,7 +216,7 @@ Also, the following methods have been removed from the Web Services API (v1):
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-When connected to a DataMiner Agent running main release version 10.6.0 or feature release 10.6.1 (or above), the DOM data source will now support reading only a selected subset of fields from `DomInstance` objects.
+When connected to a DataMiner Agent running main release version 10.6.0 or feature release 10.6.1 (or above), the DOM data source will now support reading only a selected subset of fields from `DomInstance` objects. This will reduce the amount of data transferred and can significantly improve performance in cases where a GQI query only need a few fields from each instance.
 
 For more information, see [DataMiner Objects Models: DomInstances CRUD helper now supports reading only a selected subset of fields from `DomInstance` objects [ID 43852]](xref:General_Feature_Release_10.6.1#dataminer-objects-models-dominstances-crud-helper-now-supports-reading-only-a-selected-subset-of-fields-from-dominstance-objects-id-43852)
 

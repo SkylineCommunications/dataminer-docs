@@ -392,6 +392,14 @@ When you add or update a relational anomaly group by means of an `AddRADParamete
 - When you added a group, the configuration you passed along will be used for the initial training of the model.
 - When you updated a group, the configuration you passed along will be used to retrain the model.
 
+#### Enhanced stuffing and unstuffing behavior when sending serial commands [ID 44149]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+A number of enhancements have been made to the stuffing and unstuffing behavior when sending serial commands.
+
+Stuffing will now always be removed from the parameters, even if the current command did not add stuffing during a previous run.
+
 ### Fixes
 
 #### Service templates: Problem when parsing conditions to dynamically include or exclude child elements [ID 43120]
