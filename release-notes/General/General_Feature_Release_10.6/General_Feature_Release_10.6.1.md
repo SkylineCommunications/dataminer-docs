@@ -400,6 +400,13 @@ A number of enhancements have been made to the stuffing and unstuffing behavior 
 
 Stuffing will now always be removed from the parameters, even if the current command did not add stuffing during a previous run. This will make it easier and more robust to reuse parameters across different commands.
 
+#### Swarming: Enhanced re-injection of events [ID 44173]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+<!-- Not added to MR 10.6.0 -->
+
+When elements are swarmed, since DataMiner feature version 10.5.6, some events are re-injected with the new hosting agent ID prior to the new event being generated. In some cases, the way in which this re-injection was performed could cause unwanted side effects. From now on, these side effects will be avoided by accessing the raw cached entries.
+
 ### Fixes
 
 #### Service templates: Problem when parsing conditions to dynamically include or exclude child elements [ID 43120]
