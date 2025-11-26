@@ -51,3 +51,7 @@ When a new node was added to a job and all mandatory configuration values assign
 #### Resource Studio: Resource pool deprecation confirmation was ignored [ID 44212]
 
 When you deprecate a resource pool in the Resource Studio app, a dialog asks for confirmation. Up to now, if you then did not confirm the deprecation, the resource pool was still deprecated. This has now been fixed.
+
+#### Resource Studio: Exception when adding discrete values for configuration parameter with default value enabled [ID 44229]
+
+When discrete values were added for a configuration parameter while the default value was enabled, it could occur that an exception was thrown.
