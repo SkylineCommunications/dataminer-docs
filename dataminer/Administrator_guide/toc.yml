@@ -168,6 +168,8 @@ items:
             topicUid: BPA_Minimum_Requirements_Check
           - name: Firewall Configuration
             topicUid: BPA_Firewall_Configuration
+          - name: Health Metrics
+            topicUid: BPA_HealthMetrics
           - name: HTTPS Configuration
             topicUid: BPA_Https_Configuration
           - name: Large Alarm Trees
