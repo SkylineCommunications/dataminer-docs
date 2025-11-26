@@ -20,9 +20,9 @@ For troubleshooting related to specific topics:
 
 - [Troubleshooting – dataminer.services](xref:Cloud_Connection_Issues)
 
-- [Troubleshooting – NATS](xref:Investigating_NATS_Issues)
+- [Troubleshooting – NATS (BrokerGateway-managed NAS/NATS architecture)](xref:Investigating_NATS_Issues)
 
-- [Troubleshooting – Legacy NATS](xref:Investigating_Legacy_NATS_Issues)
+- [Troubleshooting - Legacy NATS (SLNet-managed NAS/NATS architecture)](xref:Investigating_Legacy_NATS_Issues)
 
 - [Troubleshooting – Indexing database](xref:Troubleshooting_Indexing_Database)
 

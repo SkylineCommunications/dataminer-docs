@@ -142,7 +142,7 @@ Setting up BrokerGateway with a custom manual config will allow you to create su
    }
    ```
 
-1. Run [NATSRepair.exe](xref:Investigating_NATS_Issues#resetting--repairing-the-brokergateway-nats-cluster) to reset your NATS cluster to the default state.
+1. Run [NATSRepair.exe](xref:Investigating_NATS_Issues#resettingrepairing-the-brokergateway-nats-cluster) to reset your NATS cluster to the default state.
 
 ## Legacy SLNet-managed NAS/NATS
 

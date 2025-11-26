@@ -1,14 +1,13 @@
 ---
 uid: Investigating_Legacy_NATS_Issues
-keywords: VerifyNatsIsRunning, troubleshooting NATS, investigating NATS issues, Legacy NATS, SLNet-managed NATS, SLCloud
-description: Start by checking the logging, then check your installation and SLCloud.xml configuration, check if NAS and NATS are running, check the configs…
+keywords: VerifyNatsIsRunning, troubleshooting NATS, investigating NATS issues, legacy NATS, SLNet-managed NATS
+description: If you encounter issues with a legacy NATS architecture, these steps will help you troubleshoot your system.
 ---
 
-# Troubleshooting - NATS (Legacy SLNet-managed NAS/NATS architecture)
+# Troubleshooting - NATS (legacy SLNet-managed NAS/NATS architecture)
 
 > [!IMPORTANT]
-> Do not follow the steps below if BrokerGateway-managed NATS is being used. This is the only option from DataMiner 10.6.0 on. Instead, follow the steps from [Investigating NATS issues](xref:Investigating_NATS_Issues).
-
+> If BrokerGateway-managed NATS is used (which is always the case from DataMiner 10.6.0/10.6.1 onwards), instead of the steps below, follow the steps for the [BrokerGateway-managed NAS/NATS architecture](xref:Investigating_NATS_Issues).
 
 To investigate NATS issues, follow the actions detailed below, in the specified order:
 
@@ -65,6 +64,7 @@ For error information, check the logging in `C:\Skyline DataMiner\Logging`.
 - If something went wrong during clustering, an error will be logged in *SLNatsCustodian.txt*.
 
 > [!NOTE]
+>
 > - The above-mentioned log files will contain much more useful information on level 5 than they do on log level 0.
 > - The clustering step is skipped if the DMA is a standalone Agent.
 
@@ -498,7 +498,7 @@ To trigger a NATS reset:
 This will recalculate the NAS and NATS configs in the entire cluster, so any faulty configurations are cleaned up automatically.
 
 > [!IMPORTANT]
-> > Do not follow the steps above if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending the *NATSCustodianResetNatsRequest* message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
+> Do not follow the steps above if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending the *NATSCustodianResetNatsRequest* message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
 
 ## Check if new NATS connections can be established
 
@@ -615,8 +615,8 @@ To resolve this issue, manually configure a custom port for NATS that is not yet
    </SLNet>
    ```
 
-> [!NOTE]
-> If you enable the *NATSForceManualConfig* option, this means you become responsible for providing a valid NATS cluster and maintaining its configuration. See [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config).
+   > [!NOTE]
+   > If you enable the *NATSForceManualConfig* option, this means you become responsible for providing a valid NATS cluster and maintaining its configuration. See [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config).
 
 1. Start the NAS and NATS services.
 

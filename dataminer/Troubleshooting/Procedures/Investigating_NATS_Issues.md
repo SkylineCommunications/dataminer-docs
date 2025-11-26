@@ -1,37 +1,54 @@
 ---
 uid: Investigating_NATS_Issues
 keywords: VerifyNatsIsRunning, troubleshooting NATS, investigating NATS issues
-description: Troubleshooting guide for BrokerGateway-managed NATS, including checking migration state, verifying configuration, inspecting logs, and repairing the cluster.
+description: If you encounter issues with a BrokerGateway-managed NATS architecture, these steps will help you troubleshoot your system.
 ---
 
 # Troubleshooting – NATS (BrokerGateway-managed NAS/NATS architecture)
 
-## BrokerGateway-managed NATS (nats-server service) troubleshooting
-
 > [!NOTE]
-> From DataMiner 10.5.0 [CU2]/10.5.5 onwards you can [migrate](xref:BrokerGateway_Migration) to the BrokerGateway‑managed NATS solution. The guidance below applies AFTER migration (legacy NAS/NATS services replaced by the single `nats-server` service managed via BrokerGateway). 
-> If you still use the legacy SLNet-managed NATS architecture, refer to [Legacy NAS/NATS troubleshooting](xref:Investigating_Legacy_NATS_Issues).
+> The information on this page applies for systems that use the BrokerGateway-managed NATS solution. This includes all systems using DataMiner 10.6.0/10.6.1 or higher as well as systems with lower DataMiner versions that have been [migrated to the BrokerGateway‑managed NATS solution](xref:BrokerGateway_Migration). For systems using the legacy SLNet-managed NATS architecture, refer to [Legacy NAS/NATS troubleshooting](xref:Investigating_Legacy_NATS_Issues).
 
-### Typical diagnostic flow
+## Typical diagnostic flow
 
-1. Confirm migration state:
-   - This check only applies for DataMiner 10.5.12 or lower. From 10.6.0 onwards, BrokerGateway-managed NATS is the only option.
+1. If you are using a DataMiner version **below DataMiner 10.6.0/10.6.1**, confirm whether the system has been [migrated to the BrokerGateway‑managed NATS solution](xref:BrokerGateway_Migration):
+
    - Check `C:\Skyline DataMiner\MaintenanceSettings.xml` for `<BrokerGateway>true</BrokerGateway>`.
-   - Verify legacy NATS/NAS services are stopped or removed; ensure `nats-server` service exists (services.msc).
-1. Verify `ClusterEndpointsManager` soft‑launch option is enabled on every DMA:
-   - Ensure there is **no** `<ClusterEndpointsManager>false</ClusterEndpointsManager>` in `SoftLaunchOptions.xml`.
-   - If this is disabled on any node: enable it. Restart the Agent and after a full startup run [NATSRepair.exe](#resetting--repairing-the-brokergateway-nats-cluster).
-1. Validate BPAs:
-   - Run BPA test: [NATS cluster verification](xref:BPA_Check_Agent_Presence).
-1. Inspect logs:
-   - BrokerGateway logs: `C:\ProgramData\Skyline Communications\DataMiner BrokerGateway\Logs`.
-   - NATS logs: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\nats-server.log`.
-   - General SLError logs: `C:\Skyline DataMiner\Logging\SLErrors.txt`.
-1. Check configuration files:
-   - `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json`: For each agent, an IP must be present with a non-null IgnitionValue. AdditionalEndpoints must list its VIPs, if any.
-   - `C:\ProgramData\Skyline Communications\DataMiner\MessageBrokerConfig.json`: CredentialsUrl must point to the local BrokerGateway with a reachable hostname/IP.
+
+   - Verify whether the legacy NATS/NAS services are stopped or removed and ensure that the `nats-server` service exists (services.msc).
+
+   Note that from DataMiner 10.6.0/10.6.1 onwards, this check is no longer needed, as BrokerGateway is always used from then onwards.
+
+   If the system has not yet been migrated, refer to [Legacy NAS/NATS troubleshooting](xref:Investigating_Legacy_NATS_Issues).
+
+1. Check the *SoftLaunchOptions.xml* [soft-launch options](xref:Activating_Soft_Launch_Options) file to ensure that it does **not** contain the configuration `<ClusterEndpointsManager>false</ClusterEndpointsManager>`.
+
+   If it does contain this configuration:
+
+   1. Change this to `<ClusterEndpointsManager>true</ClusterEndpointsManager>`.
+
+   1. Restart the DataMiner Agent.
+
+   1. When DataMiner has fully started up, run [NATSRepair.exe](#resettingrepairing-the-brokergateway-nats-cluster).
+
+1. Run the [NATS cluster verification](xref:BPA_Check_Agent_Presence) BPA test.
+
+1. Inspect the following logging:
+
+   - BrokerGateway logging: `C:\ProgramData\Skyline Communications\DataMiner BrokerGateway\Logs`.
+
+   - NATS logging: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\nats-server.log`.
+
+   - General SLError logging: `C:\Skyline DataMiner\Logging\SLErrors.txt`.
+
+1. Check the following configuration files:
+
+   - `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json`: For each Agent, an IP must be present with a non-null `IgnitionValue`. `AdditionalEndpoints` must list its VIPs, if any.
+
+   - `C:\ProgramData\Skyline Communications\DataMiner\MessageBrokerConfig.json`: `CredentialsUrl` must point to the local BrokerGateway with a reachable hostname or IP.
 
      Example `MessageBrokerConfig.json`:
+
      ```json
      {
        "BrokerGatewayConfig": {
@@ -40,29 +57,40 @@ description: Troubleshooting guide for BrokerGateway-managed NATS, including che
        }
      }
      ```
-     Notes:
-     - `CredentialsUrl` should normally be the local agent (loopback or FQDN).
-     - If HTTPS cert CN/SAN does not match the host used here, clients may fail with TLS validation errors.
-1. Test connectivity:
-   - From each DMA, PowerShell: `Test-NetConnection <peerIP> -Port 4222` to check if nats-server is reachable. PeerIP can be the IP of the local agent or any other agent in the cluster.
 
-### Resetting / repairing the BrokerGateway NATS cluster
+     > [!NOTE]
+     > - `CredentialsUrl` is usually the local Agent (loopback or FQDN).
+     > - If HTTPS cert CN/SAN does not match the host used here, clients may fail with TLS validation errors.
 
-Use `C:\Skyline DataMiner\Tools\NATSRepair.exe`. This is only allowed if the cluster already has migrated:
-1. Run tool on one DMA.
-1. Confirm that all endpoints are used by NATSRepair. If not, manually fix `ClusterEndpoints.json` first.
+1. To test connectivity, on each DMA, execute the following PowerShell command to check if *nats-server* is reachable:
 
-### Rollback considerations
+   ```txt
+   Test-NetConnection <peerIP> -Port 4222
+   ```
+
+   `PeerIP` can be the IP of the local Agent or any other Agent in the cluster.
+
+## Resetting/repairing the BrokerGateway NATS cluster
+
+To reset or repair a NATS cluster, use the tool `C:\Skyline DataMiner\Tools\NATSRepair.exe`, as detailed below.
+
+Only do this if you are sure that the system uses the BrokerGateway‑managed NATS solution (see [Typical diagnostic flow](#typical-diagnostic-flow) for info on how to check this).
+
+1. Run `C:\Skyline DataMiner\Tools\NATSRepair.exe` on one DMA in the system.
+
+1. Confirm that all endpoints are used by *NATSRepair*. If not, manually fix `ClusterEndpoints.json` first.
+
+## Rollback considerations
 
 - ≥ DataMiner 10.6.0: Rollback unsupported.
 - < DataMiner 10.6.0: Run [NATSMigrationRollback.dmupgrade](https://community.dataminer.services/download/natsmigrationrollback-dmupgrade/)
 
-### Quick checklist
+## Quick checklist
 
-- The `nats-server` service is running on all DataMiner Agents
-- The soft-launch option [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options) is enabled everywhere
-- The endpoints are reachable (ports 4222/6222)
-- ClusterEndpoints.json is valid
-- The BPA tests succeed
-- There are no recurring auth/cluster errors
-- The clients (re)connect cleanly
+- The `nats-server` service is running on all DataMiner Agents.
+- The soft-launch option [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options) is enabled everywhere.
+- The endpoints are reachable (ports 4222/6222).
+- ClusterEndpoints.json is valid.
+- The BPA tests succeed.
+- There are no recurring auth/cluster errors.
+- The clients connect without issues.
