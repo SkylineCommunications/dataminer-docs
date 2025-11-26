@@ -10,6 +10,7 @@ The procedures below can be used to retrieve data from a DataMiner System. Howev
 - [Changing the log levels for a log file](xref:SLNetClientTest_changing_log_levels)
 - [Checking a hyperlink filter](xref:SLNetClientTest_checking_hyperlink_filter)
 - [Checking whether protocol buffer serialization is enabled](xref:SLNetClientTest_Checking_whether_protocol_buffer_serialization_is_enabled)
+- [Checking the hosting Agent cache](xref:SLNetClientTest_Checking_the_hosting_Agent_cache)
 - [Consulting connection details](xref:SLNetClientTest_consulting_connection_details)
 - [Consulting Correlation information](xref:SLNetClientTest_consulting_correlation_info)
 - [Consulting license information for a DMA](xref:SLNetClientTest_consulting_license_info)

@@ -6,9 +6,9 @@ uid: SolIDP
 
 DataMiner Infrastructure Discovery and Provisioning (IDP) is an out-of-the-box application to **manage network inventory in a highly automated yet secure manner**. Today's infrastructure deployments are highly dynamic. This is the result of many continuous evolutions.
 
-For example, there is a continuous need to add capacity to networks at the optimal cost point. In some cases, additional compute, storage, or networking capacity is deployed at the edges of the network, even at the end-customer site — think of B2B terminals (IP routers, VSAT terminals, etc.), edge computing in the network such as 5G, HFC DOCSIS remote DAA Digital Nodes, etc. In other cases, additional capacity is deployed in a few geographically spread data centers. Scale and elasticity may lead to public cloud deployment of functions as well. Most often, networks grow and adapt in all dimensions: on-premises edges, on-premises centralized, and public cloud.
+For example, there is a continuous need to add capacity to networks at the optimal cost point. In some cases, additional compute, storage, or networking capacity is deployed at the edges of the network, even at the end-customer site — think of B2B terminals (IP routers, VSAT terminals, etc.), edge computing in the network, such as 5G, HFC DOCSIS remote DAA Digital Nodes, etc. In other cases, additional capacity is deployed in a few geographically spread data centers. Scale and elasticity may lead to public cloud deployment of functions as well. Most often, networks grow and adapt in all dimensions: on-premises edges, on-premises centralized, and public cloud.
 
-DataMiner IDP will among others provide the following advantages:
+DataMiner IDP will, among others, provide the following advantages:
 
 - A **single source of truth**: a single overview of inventory documentation, wiring, addresses, etc.
 - **Dynamics**: Integration of full inventory, including VNI.
@@ -16,9 +16,9 @@ DataMiner IDP will among others provide the following advantages:
 
 ## Far-reaching automation
 
-More than ever, it is crucial to keep track of the network implementation and network change management processes and activities. There is a real need for a single source of truth when it comes to inventory. All too often, people have to conclude that their offline inventory database does not match with their actual network. DataMiner IDP ensures that the inventory database does reflect reality, and it can even do much more than that. In an automated manner, it does all the things a good operations team should constantly take care of but often does not get the time to do consistently and securely:
+More than ever, it is crucial to keep track of the network implementation and network change management processes and activities. There is a real need for a single source of truth when it comes to inventory. All too often, people have to conclude that their offline inventory database does not match their actual network. DataMiner IDP ensures that the inventory database reflects reality, and it can even do much more than that. In an automated manner, it does all the things a good operations team should constantly take care of, but often does not get the time to do consistently and securely:
 
-- **Discover new network inventory** at user-defined time intervals, and compare this with the already managed network elements and network functions. DataMiner scans any API, and therefore discovers hardware inventory (PNI), virtualized inventory (VNI), and cloud functions from any manufacturer. In addition, DataMiner IDP Discovery also extracts connectivity from the network whenever this can be done remotely (e.g. by reading LLDP info).
+- **Discover new network inventory** at user-defined time intervals, and compare this with the already managed network elements and network functions. DataMiner scans any API and therefore discovers hardware inventory (PNI), virtualized inventory (VNI), and cloud functions from any manufacturer. In addition, DataMiner IDP Discovery also extracts connectivity from the network whenever this can be done remotely (for example, by reading LLDP info).
 
 - Once the inventory is discovered or imported, DataMiner provisions the elements on the platform so that the inventory can instantly be managed. The **DataMiner zero-touch provisioning** intelligence will automatically select the connector matching the detected API from the data source. Without a single click, operators can monitor the newly added inventory, receive alarms, and control and trend metrics and counters.
 
@@ -41,7 +41,7 @@ DataMiner IDP consists of several interacting components, each responsible for a
 
 ![IDP component overview](~/dataminer/images/IDP_overview.jpg)
 
-- The **Discovery Manager** automatically discovers inventory in the network as well as the network topology. Using highly user-configurable profiles and discovery mechanisms, such as SNMP, HTTP(S) and serial, the Discovery Manager can be tailored to detect not only new inventory, but it also identifies what type of inventory is in the network.
+- The **Discovery Manager** automatically discovers inventory in the network as well as the network topology. Using highly user-configurable profiles and discovery mechanisms, such as SNMP, HTTP(S), and serial, the Discovery Manager can be tailored to detect not only new inventory, but it also identifies what type of inventory is in the network.
 
 - The **Provisioning Manager** can automate the provisioning workflow completely. As soon as DataMiner IDP discovers new inventory, the IDP Provisioning Manager will provision the inventory in DataMiner fully automatically or semi-automatically.
 

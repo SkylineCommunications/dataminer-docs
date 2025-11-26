@@ -54,10 +54,10 @@ Element cards can look quite different depending on the element protocol. Howeve
 
   - **GENERAL PARAMETERS**: General parameters for the element, such as its lock status, number of alarms, connection state, etc. See [General parameters](xref:General_parameters).
 
-  - **ANNOTATIONS**: Page where more extensive annotations can be added and viewed. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
+  - **ANNOTATIONS**: Deprecated. In older DataMiner versions (prior to DataMiner 10.6.0/10.6.1), this page can be used to add and view more extensive annotations. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
     > [!NOTE]
-    > The Annotations module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). Prior to this, starting from DataMiner 10.2.0/10.1.12, Annotations can optionally be disabled with this soft-launch option.
+    > The Annotations module is no longer available from DataMiner 10.6.0/10.6.1 onwards.<!-- RN 44124+44136 --> Prior to this, starting from DataMiner 10.4.0/10.4.1<!-- RN 37786 -->, it is disabled by default, but it can be enabled with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). In even older DataMiner versions, this feature is enabled by default, but you can optionally disable it with the soft-launch option.
 
   - **HELP**: Help page for the protocol of the element, if available.
 

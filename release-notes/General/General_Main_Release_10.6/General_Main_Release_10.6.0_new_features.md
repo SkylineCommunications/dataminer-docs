@@ -449,7 +449,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320] [ID 43440] [ID 43686] [ID 43720] [ID 43769] [ID 43797] [ID 43853] [ID 43934]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320] [ID 43440] [ID 43686] [ID 43720] [ID 43769] [ID 43797] [ID 43853] [ID 43934] [ID 44096] [ID 44135]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
@@ -468,6 +468,8 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 43797: MR 10.6.0 - FR 10.5.11 -->
 <!-- RNs 43853: MR 10.6.0 - FR 10.5.12 -->
 <!-- RNs 43934: MR 10.6.0 - FR 10.5.12 -->
+<!-- RNs 44096: MR 10.6.0 - FR 10.6.1 -->
+<!-- RNs 44135: MR 10.6.0 - FR 10.6.1 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
@@ -485,6 +487,7 @@ All configuration settings are stored in the *ai_rad_models_v2* database table, 
 >
 > - A RAD parameter group will be hosted on the DMA on which it was created, even after some of the parameters in the group were swarmed to other DMAs.
 > - Whenever you delete an element that is being used in one or more RAD parameter groups, an error will immediately get logged, and the parameter groups containing parameters from that deleted element will be marked as "not monitored".
+> - When SLAnalytics starts up, it checks whether the configured relational anomaly groups are still valid. In other words, it checks whether the elements and parameters in those groups still exist and are still trended. Note that, if at least one parameter in a group is no longer valid, and if the group in question is a shared model group with multiple subgroups, SLAnalytics will still start the monitoring of the subgroups in which all parameters are still valid.
 
 ##### Average trending
 
@@ -510,7 +513,7 @@ The following API messages can be used to create, retrieve, migrate, and remove 
 
 | Message | Function |
 |---------|----------|
-| AddRADParameterGroupMessage     | Creates a new RAD parameter group.<br>It is not allowed to have two groups with the same name, even when they are hosted by different agents.<br>If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated. |
+| AddRADParameterGroupMessage     | Creates a new RAD parameter group.<br>- It is not allowed to have two groups with the same name, even when they are hosted by different agents.<br>- If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated.<br>When you add or update a relational anomaly group by means of an `AddRADParameterGroupMessage`, you can pass along the training configuration of the model that will be used by that group.<br>- When you added a group, the configuration you passed along will be used for the initial training of the model.<br>- When you updated a group, the configuration you passed along will be used to retrain the model. |
 | GetAllRelationalAnomaliesMessage | Retrieves all relational anomalies within a given time frame, regardless of the RAD parameter group or parameter they were detected on.<br>Note: This message will only return anomalies detected on parameters to which the user has access. |
 | GetRADDataMessage               | Retrieves the anomaly scores over a specified time range of historical data. |
 | GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular RAD parameter group.<br>The response to a `GetRADParameterGroupInfoMessage` includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging. |
@@ -1172,12 +1175,33 @@ The SLNetClientTest tool has been updated to support the limitation of not being
 
 When definition-level security is enabled, you will now need to first select one or more DOM definitions from a filter menu. This menu is accessible for any DOM manager, so it can also be used to retrieve DOM instances more easily for a specified list of DOM definitions.
 
-#### DataMiner upgrade: Prerequisite check 'VerifyBrokerGatewayMigration' will verify whether all DMS in the cluster are using the BrokerGateway-managed NATS solution [ID 43526] [ID 43861]
+#### DataMiner Objects Models: DomInstances CRUD helper now supports reading only a selected subset of fields from `DomInstance` objects [ID 43852]
 
-<!-- RN 43526: MR 10.6.0 - FR 10.5.10 -->
-<!-- RN 43861: MR 10.6.0 - FR 10.6.1 -->
+<!-- MR 10.6.0 - FR 10.6.1 -->
 
-During a DataMiner upgrade, the *VerifyBrokerGatewayMigration* prerequisite check will verify whether all DataMiner Agents in the cluster are using the BrokerGateway-managed NATS solution. If not, the check will fail, and the upgrade will not be able to continue.
+The `DomInstances` CRUD helper now supports reading only a selected subset of fields from `DomInstance` objects. This will reduce the amount of data transferred and can significantly improve performance in cases where clients only need a few fields from each instance.
+
+New `Read` and `PreparePaging` overloads will accept a `SelectedFields<DomInstance>` object. To select a field, add the exposer from `DomInstanceExposers` or add the `FieldDescriptorID` to the `SelectedFields<DomInstance>` object.
+
+> [!NOTE]
+>
+> - The `Id` is always available on a `PartialObject`. You do not need to add the `Id` exposer to `SelectedFields<DomInstance>`.
+> - Selecting the `FieldValues` or `FullObject` exposer is not supported and will result in a failed read operation.
+
+The `Read` and `PreparePaging` methods will return a list of `PartialObject<DomInstance, DomInstanceId>`, which provides:
+
+- `ID`: The `DomInstance` ID.
+- `GetValue` and `TryGetValue`, which retrieve the value of a selected exposer or a single-value `FieldDescriptorID`.
+- `GetValues` and `TryGetValues`, which retrieve a list of values for a selected `FieldDescriptorID` (for fields with multiple values, or when multiple sections are allowed).
+
+When retrieving field values for a selected `FieldDescriptorID`, the following behavior will apply:
+
+- **Multiple values**: Use `GetValues<T>`/`TryGetValues<T>` to obtain a `List<T>`. `GetValues<T>` throws `InvalidOperationException` if the values are not of type `T`; `TryGetValues<T>` returns `false` in that case.
+- **Single value**: Use `GetValue<T>`/`TryGetValue<T>` for fields with a single value. `GetValue<T>` throws `InvalidOperationException` if the value is not of type `T` or when there are multiple values available for that field descriptor; `TryGetValue<T>` returns `false`.
+- **No value**: `GetValue<T>` returns `default(T)` (equivalent to an empty list for list types). `TryGetValue<T>` returns `false`. `GetValues<T>` returns `null`. `TryGetValues<T>` returns `false`.
+
+> [!IMPORTANT]
+> A `FieldDescriptor` ID must be unique across section definitions in a DOM module.
 
 #### SLNetClientTest tool: Filtering messages using regular expressions [ID 43540]
 
@@ -1256,3 +1280,13 @@ The URL parameter `useNewIASInputComponents` has priority over the UI version se
 
 > [!IMPORTANT]
 > This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
+
+#### Dashboard reports can now be generated in PDF, HTML, and/or CSV format [ID 43887]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+Up to now, a report of a dashboard could only be generated in PDF format (.pdf). Now, it is possible to generate a report in PDF, archived HTML format (.mhtml) and/or CSV format.
+
+MHTML files include all necessary information to allow the report to be rendered in a web browser: HTML code, images, CSS stylesheets, etc.
+
+Also, the default file name has been changed from `Report.pdf` to `<dashboard name>.pdf`, `<dashboard name>.mhtml`, or `<dashboard name>.csv.zip`.

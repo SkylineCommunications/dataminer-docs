@@ -39,14 +39,12 @@ Below the element selection box you can find the element manipulation tool bar. 
 - Pause the element
 - Stop the element
 - Restart the element
-- Open the element in *Element Display*
+- Open the element in *Element Display* (no longer used)
 - Open the element in *DataMiner Cube*
 - Open the element’s log file.
 
   > [!NOTE]
-  >
-  > - If DIS is connected to a remote DataMiner Agent, then make sure the `C:\Skyline DataMiner\logging` folder on that DataMiner Agent is shared and accessible.
-  > - Element Display is no longer available from DataMiner 9.6.0 onwards.
+  > If DIS is connected to a remote DataMiner Agent, then make sure the `C:\Skyline DataMiner\logging` folder on that DataMiner Agent is shared and accessible.
 
 ### Linking temporary QAction projects to QActions in the protocol of the selected element
 

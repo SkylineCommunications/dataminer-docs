@@ -4,9 +4,9 @@ uid: LoadSpectrumPreset
 
 # LoadSpectrumPreset
 
-Use this method to load a spectrum preset for a particular spectrum analyzer. Available from DataMiner 9.5.5 onwards.
+Use this method to load a spectrum preset for a particular spectrum analyzer.
 
-This method is obsolete from DataMiner 10.3.5/10.4.0 onwards.<!-- RN 36364 -->
+This method is **obsolete** from DataMiner 10.3.5/10.4.0 onwards.<!-- RN 36364 -->
 
 ## Input
 

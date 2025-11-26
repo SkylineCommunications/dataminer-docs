@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.Measurement.Type-scientificNotation
 
 # scientificNotation attribute
 
-Specifies the scientific notation to be used.
+Specifies the scientific notation to be used.<!-- RN 12433, RN 12600 -->
 
 ## Content Type
 
@@ -22,9 +22,7 @@ By default, 0 decimals are shown. To specify the number of decimals to show, the
 
 See also: Protocol.Params.Param.Display.[Decimals](xref:Protocol.Params.Param.Display.Decimals).
 
-From DataMiner 10.0.13 (RN 27690) onwards, values are represented using culture-independent (invariant) formatting.
-
-*The scientificNotation attribute is introduced in DataMiner version 9.0.1.4 (RN 12433, RN 12600).*
+Values are represented using culture-independent (invariant) formatting.<!-- RN 27690 -->
 
 ## Examples
 

@@ -6,7 +6,10 @@ uid: DeleteJobsSectionDefinitionFromDomain
 
 Use this method to delete a job section definition from a specific job domain. Note that the job section definition will still exist, but the link with the domain will be removed.
 
-<!-- Available from DataMiner 10.0.9 onwards. -->
+> [!CAUTION]
+>
+> - The Jobs app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
+> - The Jobs app is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 ## Input
 

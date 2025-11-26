@@ -24,10 +24,14 @@ Note that it is not possible to upgrade the web apps to a DataMiner 10.5.x versi
 
 From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37413-->, whenever you [upgrade your DMA](xref:Upgrading_a_DataMiner_Agent) or install a DataMiner web upgrade, an automatic backup of all existing dashboards and low-code apps on the system is generated and stored in `C:\Skyline DataMiner\System Cache\Web\Backups`.
 
+From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43906-->, to enable faster backups, the backup includes only up to two versions: the latest published version and the most recent draft. Prior to this, the backup includes all versions of each app. The [version history](xref:LowCodeApps_earlier_version) itself is left untouched.
+
 After the upgrade process, your dashboards and low-code apps may be migrated to ensure compatibility with the updated software version. If an error occurs during this migration, or if you need to perform a DataMiner downgrade, you can manually restore your dashboards and low-code apps from the backup.
 
 > [!NOTE]
-> The *Backups* folder retains only the five most recent backup files.
+>
+> - The *Backups* folder retains only the five most recent backup files.
+> - From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43906-->, only apps with a valid *App.info.json* file will be included in the automatic backup. When the file is not present or invalid, or if the published and draft versions are set to null in the file, the app will not be included in the backup.
 
 ## Downgrading the DataMiner web apps
 

@@ -6,8 +6,6 @@ uid: GetAlarmPageWithAlarmsV2
 
 Use this method to retrieve the alarm page details, including limited alarms, along with the alarm cache status.
 
-<!-- Available from DataMiner 10.0.7 onwards. -->
-
 ## Input
 
 | Item             | Format | Description                                                               |

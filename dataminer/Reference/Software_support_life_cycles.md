@@ -53,7 +53,7 @@ Important announcements about the latest changes to DataMiner core functionality
 | [Atlassian Crowd authentication](xref:Configuring_Atlassian_Crowd_settings#authenticating-dataminer-users-against-an-atlassian-crowd-server) | End of Engineering | This type of authentication will be deprecated. | End of Life to be confirmed. |
 | Connectors: Display columns in tables | End of Engineering | The [displayColumn attribute](xref:Protocol.Params.Param.ArrayOptions-displayColumn) should no longer be used in tables. | End of Life to be confirmed. |
 | Legacy reservations | End of Engineering | The legacy type of reservation used prior to DataMiner 9.5.3/9.6.0 (RN 15180) is obsolete and should no longer be used. | End of Life to be confirmed. |
-| Legacy Reporter & Dashboards | End of Support | Module is being retired and replaced with the new DataMiner Dashboards app. | End of Life as of DataMiner version 10.6.x (Q4 2025). |
+| Legacy Reporter & Dashboards | End of Support | Module is being retired and replaced with the new DataMiner Dashboards app. | End of Life as of DataMiner version 10.7.x (Q4 2026). |
 | [SLScripting as a service](xref:Configuration_of_DataMiner_processes#running-slscripting-as-a-service) | End of Support | This configuration is obsolete and should not be used. | End of Life as of DataMiner version 10.7.x (Q4 2026). |
 | Query executor | End of Support | Tool is being retired. | End of Life as of DataMiner version 10.7.x (Q4 2026). |
 | Use of JScript in QActions | End of Support | C# should be used instead. JScript in QActions cannot be used on Windows Server 2025. | End of Life as of DataMiner version 10.7.x (Q4 2026). |

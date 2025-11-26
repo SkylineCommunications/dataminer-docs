@@ -105,7 +105,7 @@ Each response contains two entries:
 
 - response[0] (Int32): The ID of the matching response or -1 in case no match is found.
 - response[1] (byte[] or String): If there was a match, this entry contains the response data as a byte array. If there was no match, this entry contains a string message (e.g. "TIMEOUT").
-- response[2] (byte[]): Only present if result[0] is -1 (i.e. no response matches) and only since DataMiner 9.5.0 (RN 13052). This makes it possible to inspect the received response that does not match any of the specified expected responses.
+- response[2] (byte[]): Only present if result[0] is -1 (i.e. no response matches). This makes it possible to inspect the received response that does not match any of the specified expected responses.<!-- RN 13052 -->
 
 Suppose parameters 1023 and 33 are defined as follows:
 

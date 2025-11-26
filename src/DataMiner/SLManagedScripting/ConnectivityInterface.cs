@@ -88,9 +88,6 @@ namespace Skyline.DataMiner.Scripting
 		/// Gets a value indicating whether this interface is internal.
 		/// </summary>
 		/// <value><c>true</c> if this is an internal interface; otherwise, <c>false</c>.</value>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 10.1.5 (RN 29314).</para>
-		/// </remarks>
 		public bool IsInternal{ get; }
 
 		/// <summary>
@@ -137,9 +134,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="sourcePK">The ID (primary key) of the connections table entry at the source.</param>
 		/// <param name="destPK">The ID (primary key) of the connections table entry at the destination.</param>
 		/// <returns><c>true</c> if the operation succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.2 (RN 8438).</para>
-		/// </remarks>
 		public bool AddConnection(ConnectivityInterface destItf, bool addBothCOnnections, out int sourcePK, out int destPK) { sourcePK = 0; destPK = 0; return true; }
 
 		/// <summary>
@@ -174,7 +168,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if the operation succeeded within the specified timeout; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>In case the connection was not created within the specified timeout, <c>false</c> will be returned. However, the message will still be handled by DataMiner.</para>
-		/// <para>Feature introduced in DataMiner 8.5.2 (RN 8438).</para>
 		/// </remarks>
 		public bool AddConnection(ConnectivityInterface destItf, bool addBothCOnnections, out ConnectivityConnection sourceConn, out ConnectivityConnection destConn, int timeoutMs) { sourceConn = null; destConn = null; return true; }
 
@@ -187,9 +180,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="sourcePK">The ID (primary key) of the connection added to the source.</param>
 		/// <param name="destPK">The ID (primary key) of the connection added to the destination.</param>
 		/// <returns><c>true</c> if the operation succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.2 (RN 8438).</para>
-		/// </remarks>
 		public bool AddConnection(ConnectivityInterface destItf, string filter, bool addBothCOnnections, out int sourcePK, out int destPK) { sourcePK = 0; destPK = 0; return true; }
 
 		/// <summary>
@@ -226,7 +216,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if the operation succeeded within the specified timeout; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>In case the connection was not created within the specified timeout, <c>false</c> will be returned. However, the message will still be handled by DataMiner.</para>
-		/// <para>Feature introduced in DataMiner 8.5.2 (RN 8438).</para>
 		/// </remarks>
 		public bool AddConnection(ConnectivityInterface destItf, string filter, bool addBothCOnnections, out ConnectivityConnection sourceConn, out ConnectivityConnection destConn, int timeoutMs) { sourceConn = null; destConn = null; return true; }
 
@@ -252,9 +241,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="sourcePK">The ID (primary key) of the connection added to the source.</param>
 		/// <param name="destPK">The ID (primary key) of the connection added to the destination.</param>
 		/// <returns><c>true</c> if the operation succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.2 (RN 8438).</para>
-		/// </remarks>
 		public bool AddConnection(string sourceName, string destName, ConnectivityInterface destItf, bool addBothConnections, out int sourcePK, out int destPK) { sourcePK = 0; destPK = 0; return true; }
 
 		/// <summary>
@@ -311,9 +297,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="sourcePK">The ID (primary key) of the connections table entry at the source.</param>
 		/// <param name="destPK">The ID (primary key) of the connections table entry at the destination.</param>
 		/// <returns><c>true</c> if the operation succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.2 (RN 8438).</para>
-		/// </remarks>
 		public bool AddConnection(string sourceName, string destName, ConnectivityInterface destItf, string filter, bool addBothConnections, out int sourcePK, out int destPK) { sourcePK = 0; destPK = 0; return true; }
 
 		/// <summary>
@@ -329,7 +312,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if the operation succeeded within the specified timeout; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>In case the connection was not created within the specified timeout, <c>false</c> will be returned. However, the message will still be handled by DataMiner.</para>
-		/// <para>Feature introduced in DataMiner 8.5.2 (RN 8438).</para>
 		/// </remarks>
 		public bool AddConnection(string sourceName, string destName, ConnectivityInterface destItf, bool AddBothConnections, out ConnectivityConnection sourceConn, out ConnectivityConnection destConn, int timeoutMs) { sourceConn = null; destConn = null; return true; }
 
@@ -377,7 +359,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if the operation succeeded within the specified timeout; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>In case the connection was not created within the specified timeout, <c>false</c> will be returned. However, the message will still be handled by DataMiner.</para>
-		/// <para>Feature introduced in DataMiner 8.5.2 (RN 8438).</para>
 		/// </remarks>
 		public bool AddConnection(string sourceName, string destName, ConnectivityInterface destItf, string filter, bool addBothConnections, out ConnectivityConnection sourceConn, out ConnectivityConnection destConn, int timeoutMs) { sourceConn = null; destConn = null; return true; }
 
@@ -418,9 +399,6 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="prop">The interface property to add.</param>
 		/// <returns><c>true</c> if the operation succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
-		/// </remarks>
 		public bool AddProperty(ConnectivityInterfaceProperty prop) { return true; }
 
 		/// <summary>
@@ -431,9 +409,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="value">The value of the interface property.</param>
 		/// <param name="id">The ID of the interface property.</param>
 		/// <returns><c>true</c> if the operation succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
-		/// </remarks>
 		public bool AddProperty(string name, string type, string value, out int id) { id = 0;  return true; }
 
 		/// <summary>
@@ -447,7 +422,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if the operation succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>In case the property was not created within the specified timeout, <c>false</c> will be returned. However, the message will still be handled by DataMiner.</para>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
 		/// </remarks>
 		public bool AddProperty(string name, string type, string value, out ConnectivityInterfaceProperty prop, int timeoutMs) { prop = null;  return true; }
 
@@ -474,7 +448,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if the operation succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>In case the property does not exist, this method will also return true.</para>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
 		/// </remarks>
 		public bool DeleteProperty(ConnectivityInterfaceProperty prop) { return true; }
 
@@ -485,7 +458,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if the operation succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>In case there was no property with the specified ID, this method will also return true.</para>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
 		/// </remarks>
 		public bool DeleteProperty(int id) { return true; }
 
@@ -549,9 +521,6 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="id">The ID of the interface property.</param>
 		/// <returns>The interface property or <see langword="null"/> if no property with the specified ID was found.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
-		/// </remarks>
 		public ConnectivityInterfaceProperty GetPropertyById(int id) { return null; }
 
 		/// <summary>
@@ -559,9 +528,6 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="name">The name of the interface property.</param>
 		/// <returns>The interface property or <see langword="null"/> if no property with the specified name was found.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
-		/// </remarks>
 		public ConnectivityInterfaceProperty GetPropertyByName(string name) { return null; }
 
 		/// <summary>
@@ -607,9 +573,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="updateBothConnections"><c>true</c> if the connection entry should be updated at both ends of the connection; otherwise, <c>false</c>.</param>
 		/// <param name="destPK">The ID (primary key) of the destination interface.</param>
 		/// <returns><c>true</c> if the update succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 9297).</para>
-		/// </remarks>
 		public bool UpdateConnection(int ConnectionId, string newSourceName, int newSourceInterfaceId, string newDestinationName, int newDestinationDMAId, int newDestinationElementId, int newDestinationInterfaceId, string newFilter, bool updateBothConnections, out int destPK) { destPK = 0; return true; }
 
 		/// <summary>
@@ -629,7 +592,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if the update succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>In case the connection was not updated within the specified timeout, <c>false</c> will be returned. However, the message will still be handled by DataMiner.</para>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 9297).</para>
 		/// </remarks>
 		public bool UpdateConnection(int ConnectionId, string newSourceName, int newSourceInterfaceId, string newDestinationName, int newDestinationDMAId, int newDestinationElementId, int newDestinationInterfaceId, string newFilter, bool updateBothConnections, out ConnectivityConnection destConn, int timeoutMs) { destConn = null;  return true; }
 
@@ -650,9 +612,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="updateBothConnections"><c>true</c> if the connection entry should be updated at both ends of the connection; otherwise, <c>false</c>.</param>
 		/// <param name="destPK">The ID (primary key) of the destination interface.</param>
 		/// <returns><c>true</c> if the update succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 9297).</para>
-		/// </remarks>
 		public bool UpdateConnectionDestination(int ConnectionId, ConnectivityInterface newDestination, bool updateBothConnections, out int destPK) { destPK = 0; return true; }
 
 		/// <summary>
@@ -666,7 +625,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns><c>true</c> if the update succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>In case the connection was not updated within the specified timeout, <c>false</c> will be returned. However, the message will still be handled by DataMiner.</para>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 9297).</para>
 		/// </remarks>
 		public bool UpdateConnectionDestination(int ConnectionId, ConnectivityInterface newDestination, bool updateBothConnections, out ConnectivityConnection destConn, int timeoutMs) { destConn = null;  return true; }
 
@@ -704,9 +662,6 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="prop">The property to update.</param>
 		/// <returns><c>true</c> if the operation succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
-		/// </remarks>
 		public bool UpdateProperty(ConnectivityInterfaceProperty prop) { return true; }
 
 		/// <summary>
@@ -718,9 +673,6 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="value">The value of the property.</param>
 		/// <param name="link">The ID of the interface to which this property belongs.</param>
 		/// <returns><c>true</c> if the operation succeeded; otherwise, <c>false</c>.</returns>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 8.5.3 (RN 8854).</para>
-		/// </remarks>
 		public bool UpdateProperty(int id, string name, string type, string value, int link) { return true; }
 
 		/// <summary>

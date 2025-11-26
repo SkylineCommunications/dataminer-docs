@@ -6,8 +6,6 @@ uid: ReconnectAppAndInfo
 
 Use this method to use a cookie (received using the [ConnectAppAndInfo](xref:ConnectAppAndInfo), [ConnectAppAndInfoStep2](xref:ConnectAppAndInfoStep2) or [ConnectAppAndInfoUsingTicket](xref:ConnectAppAndInfoUsingTicket) method) to retrieve the connection string (GUID) needed to be able to connect to the host, together with information about the DataMiner Agent (time, alarm colors, etc.) and the user permissions granted.
 
-<!-- Available from DataMiner 9.5.5 onwards. -->
-
 ## Input
 
 | Item | Format | Description |
@@ -17,9 +15,6 @@ Use this method to use a cookie (received using the [ConnectAppAndInfo](xref:Con
 | clientAppName | String | The name of the client application. |
 | clientAppVersion | String | The version of the client application. |
 | clientComputerName | String | The name of the client computer. |
-
-<!-- > [!NOTE]
-> Prior to DataMiner 9.6.0 CU19/10.0.0 CU7/10.0.12, for the *ClientAppName*, a registered app name must be specified. If this is not done, the connection will be removed after 10 minutes. To request a valid *ClientAppName*, contact your Skyline Technical Account Manager. From DataMiner 9.6.0 CU19/10.0.0 CU7/10.0.12 onwards, this registration is no longer required. -->
 
 ## Output
 
