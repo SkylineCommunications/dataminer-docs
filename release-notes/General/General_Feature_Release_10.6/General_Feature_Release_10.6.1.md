@@ -407,6 +407,14 @@ Stuffing will now always be removed from the parameters, even if the current com
 
 When elements are swarmed, since DataMiner feature version 10.5.6, some events are re-injected with the new hosting agent ID prior to the new event being generated. In some cases, the way in which this re-injection was performed could cause unwanted side effects. From now on, these side effects will be avoided by accessing the raw cached entries.
 
+#### Relational anomaly detection: Enhanced performance when retrieving anomaly scores [ID 44180]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+A caching mechanism has now been introduced in order to enhance performance when retrieving anomaly scores via a GetRADDataMessage.
+
+When the anomaly scores for a particular relational anomaly (sub)group and region are retrieved twice within a 5-minute window, from now on, SLAnalytics will not recalculate the scores. Instead, it will return the scores from the cache.
+
 ### Fixes
 
 #### Service templates: Problem when parsing conditions to dynamically include or exclude child elements [ID 43120]
