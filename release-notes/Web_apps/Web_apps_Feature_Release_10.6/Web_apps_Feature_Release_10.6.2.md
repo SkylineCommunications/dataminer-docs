@@ -26,7 +26,11 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards/Low-Code Apps: Enhanced performance when rendering a large number of template previews [ID 44156]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.2 -->
+
+Because of a number of enhancements, performance has increased when rendering a large number of template previews in e.g. the *Browse templates* window.
 
 ### Fixes
 
