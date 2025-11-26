@@ -66,9 +66,9 @@ Also, custom positioning mode has now been replaced by the following two positio
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-Annotations are now End of Life, and will no longer work when connected to a DataMiner Agent running mean release version 10.6.0 or feature release version 10.6.1 (or above).
+Annotations are now End of Life, and will no longer work when connected to a DataMiner Agent running main release version 10.6.0 or feature release version 10.6.1 (or above).
 
-Also, when connected to a DataMiner Agent running mean release version 10.6.0 or feature release version 10.6.1 (or above), the following Web Services API methods (v1) will return an error:
+Also, when connected to a DataMiner Agent running main release version 10.6.0 or feature release version 10.6.1 (or above), the following Web Services API methods (v1) will return an error:
 
 - GetAnnotationsLinkForElement
 - GetAnnotationsLinkForService
