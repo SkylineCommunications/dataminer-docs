@@ -58,6 +58,18 @@ Also, custom positioning mode has now been replaced by the following two positio
 > - When previously set to *Custom positioning*, the component will now by default be set to *Edit* mode with *Layered* positioning.
 > - When previously set to *Layered* or *Linked to data*, the component will now by default be set to *Read* mode.
 
+#### Dashboards/Low-Code Apps - Node edge graph component: New 'Node move' event [ID 44144]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Per node query linked to a *Node edge graph* component, you can now configure *node move* events that will be triggered when a node belonging to that query is moved.
+
+When triggered, a *node move* event will provide the following parameters:
+
+- The row data of the node that was moved.
+- The old position of the node: {x,y}
+- The new position of the node: {x,y}
+
 ## Changes
 
 ### Enhancements
