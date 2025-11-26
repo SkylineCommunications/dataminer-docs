@@ -16,24 +16,23 @@ Once the [prerequisites](#prerequisites) are met, you can either [run an automat
 
 Note that prior to DataMiner 10.5.0 [CU4]/10.5.7 the migration requires a DataMiner restart.<!-- RN 42930 -->
 
-After the migration you may need to [update your Data Aggregator configuration](#updating-the-data-aggregator-configuration).
+After the migration, you may need to [update your Data Aggregator configuration](#updating-the-data-aggregator-configuration).
 
-### Technical key differences versus legacy SLNet-managed NATS
+## Technical key differences with legacy SLNet-managed NATS
 
-| Aspect | Legacy SLNet-managed NATS/NAS services | BrokerGateway-managed NATS service |
+| | <div style="width:310px">Legacy SLNet-managed NATS/NAS services</div> | BrokerGateway-managed NATS service |
 |--------|------------------------------|-----------------------|
-| Services | Windows services: NAS, NATS | Windows service: `nats-server`; BrokerGateway service (IIS/Kestrel hosted) supplies credentials & clustering |
-| Config source | `SLCloud.xml`, NAS/NATS config files | `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` (endpoints), `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` (BrokerGateway) |
-| Credentials | `.creds` files under `C:\Skyline DataMiner\NATS\nsc` | dynamic credentials via BrokerGateway API. Saved on disk in `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\.data\nats\nsc` |
-| Cluster formation | NATSCustodian recalculates NAS/NATS configs | BrokerGateway API builds cluster |
-| Repair tool | [Manual reset / reinstall](xref:Investigating_Legacy_NATS_Issues#remaining-steps) | `C:\Skyline DataMiner\Tools\NATSRepair.exe` tool |
+| **Services** | Windows services: NAS, NATS. | Windows service: `nats-server`; BrokerGateway service (IIS/Kestrel hosted) supplies credentials and clustering. |
+| **Config source** | `SLCloud.xml`, NAS/NATS config files. | `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` (endpoints), `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` (BrokerGateway). |
+| **Credentials** | `.creds` files under `C:\Skyline DataMiner\NATS\nsc`. | Dynamic credentials via BrokerGateway API. Saved on disk in `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\.data\nats\nsc`. |
+| **Cluster formation** | NATSCustodian recalculates NAS/NATS configs. | BrokerGateway API builds cluster. |
+| **Repair tool** | [Manual reset / reinstall](xref:Investigating_Legacy_NATS_Issues#remaining-steps). | `C:\Skyline DataMiner\Tools\NATSRepair.exe` tool. |
 
 ## Prerequisites
 
-Before initiating the migration, ensure that the entire cluster has been operating in a stable state for an extended period. All DataMiner Agents in the cluster must be online and functioning together for at least 15 minutes. To verify that the DMS meets the required conditions, run the [Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites) and [Check Deprecated DLL Usage](xref:BPA_Check_Deprecated_DLL_Usage) BPA.
+Before initiating the migration, ensure that the entire cluster has been operating in a stable state for an extended period. All DataMiner Agents in the cluster must be online and functioning together for at least 15 minutes. To verify that the DMS meets the required conditions, run the [Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites) and [Check Deprecated DLL Usage](xref:BPA_Check_Deprecated_DLL_Usage) BPA tests.
 
-Additionally, check whether any protocols reference DataMinerMessageBroker.API.dll with a version earlier than 3.0.0. Update any such references prior to migration and remove the outdated DLL from the `C:\Skyline DataMiner\ProtocolScripts` folder.
-From DataMiner 10.5.0 [CU9]/10.5.12 onward, the presence of such an outdated DLL in the ProtocolScripts directory will block the migration.
+Additionally, check whether any protocols reference *DataMinerMessageBroker.API.dll* with a version earlier than 3.0.0. Update any such references prior to the migration and remove the outdated DLL from the `C:\Skyline DataMiner\ProtocolScripts` folder. From DataMiner 10.5.0 [CU9]/10.5.12 onwards, the presence of such an outdated DLL in the *ProtocolScripts* folder will block the migration.
 
 ## Automatic migration using .dmupgrade package (recommended)
 
@@ -44,8 +43,8 @@ If you are using a DataMiner 10.5.x version starting from 10.5.0 [CU4] or 10.5.7
 1. Download and run the [NATSMigration.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package.
 
 This will automatically run `C:\Skyline DataMiner\Tools\NATSMigration.exe` with default settings on all Agents. The DataMiner Agents will not be restarted.
-The output similar to [manual migration log](#full-example-migration-log-sanitized) can only be seen when issues occur during migration.
-The logs will be visible in `C:\Skyline DataMiner\Upgrades\Packages\NATSMigration.dmupgrade-XXX\progress.log` and in the upgrade utility UI.
+
+In case any issues occur during the migration, the output will be shown (similar to the [manual migration log](#full-example-migration-log-sanitized)). Aside from this, you can check the logging in `C:\Skyline DataMiner\Upgrades\Packages\NATSMigration.dmupgrade-XXX\progress.log` and in the upgrade utility UI.
 
 ## Manual migration
 
@@ -64,8 +63,7 @@ For DataMiner versions prior to 10.5.0 [CU4]/10.5.7, the migration needs to be r
 
 ### Full example migration log (sanitized)
 
-Below is a full sample output of a successful manual migration run. The machine name has been replaced by `HOSTNAME` and the IP addresses by `IP1`, `IP2`, and virtual IP `VIP1`. Timestamps have been removed as well.
-This can only be seen if `C:\Skyline DataMiner\Tools\NATSMigration.exe` is manually executed from console.
+Below is a full sample output of a successful manual migration run. The machine name has been replaced by `HOSTNAME` and the IP addresses by `IP1`, `IP2`, and virtual IP `VIP1`. Timestamps have been removed as well. This output is only visible if `C:\Skyline DataMiner\Tools\NATSMigration.exe` is manually executed from a command prompt.
 
 ```cmd
 C:\Skyline DataMiner\Tools>NATSMigration.exe
@@ -198,7 +196,7 @@ On versions prior to 10.6.0/10.6.1, there are two different ways you can go back
 
 ## FAQ
 
-### Can I run a cluster with both SLNet‑managed NATS and BrokerGateway‑managed NATS?
+### Can I run a cluster with both SLNet-managed NATS and BrokerGateway-managed NATS?
 
 This is not possible. Both NATS installations use the same network ports, so the services cannot run at the same time on a machine. The credentials these installations use are also different and not compatible with each other, so running SLNet-managed NATS on DMA1 and BrokerGateway-managed NATS on DMA2 will also not function.
 
@@ -220,9 +218,10 @@ You will be asked if the node may be forcibly removed. If you agree to this, the
 
 If you do want to migrate to BrokerGateway but you do not want this forced removal, make sure all endpoints specified in *appsettings.runtime.json* can be reached by the current machine.
 
-When using automatic migration with the .dmupgrade package, forced removal is always performed automatically when regular removal does not succeed.
+With the [automatic migration](#automatic-migration-using-dmupgrade-package-recommended), forced removal is always performed automatically when regular removal does not succeed.
 
 ### NATSRepair.exe
 
-If you encounter any issues with your NATS cluster related to credentials or misconfigured nodes and you have migrated to BrokerGateway, you can run the *NATSRepair.exe* tool from the `C:\Skyline DataMiner\Tools\` folder. 
-This tool needs to be run on just one agent of the cluster. It will perform a repair on the cluster.<!-- RN 42328 -->
+If you encounter any issues with your NATS cluster related to credentials or misconfigured nodes and you have migrated to BrokerGateway, you can run the *NATSRepair.exe* tool from the `C:\Skyline DataMiner\Tools\` folder.
+
+This tool needs to be run on just one Agent of the cluster. It will perform a repair on the cluster.<!-- RN 42328 -->
