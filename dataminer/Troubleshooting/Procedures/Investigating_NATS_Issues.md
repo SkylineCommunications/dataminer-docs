@@ -76,8 +76,12 @@ To reset or repair a NATS cluster, use the tool `C:\Skyline DataMiner\Tools\NATS
 
 Only do this if you are sure that the system uses the BrokerGateway‑managed NATS solution (see [Typical diagnostic flow](#typical-diagnostic-flow) for info on how to check this).
 
+Note also that this will not work if [automatic NATS configuration is disabled](xref:Disabling_automatic_NATS_config).<!-- RN 44061 -->
+
 1. Run `C:\Skyline DataMiner\Tools\NATSRepair.exe` on one DMA in the system.
+
    When executed, the tool returns a list of known DataMiner endpoints that will be used to configure the NATS cluster. For example:
+
    ```cmd
    The current known agents are the following:
    172.16.0.1
@@ -88,18 +92,16 @@ Only do this if you are sure that the system uses the BrokerGateway‑managed NA
    If agents are missing or incorrect, do not continue and change C:\Skyline DataMiner\Configurations\ClusterEndpoints.json.
    Do you want to continue? (y/n):
    ```
-   
+
    This list of endpoints is derived from `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json`. All IP addresses listed in that file must accurately reflect the complete set of DMAs in the cluster.
 
-
 1. Before proceeding, validate the endpoint list:
-   
+
    If all displayed endpoints are correct, continue with the repair.
 
    If any endpoints are missing or incorrect, stop, and manually update `ClusterEndpoints.json` by adding or removing entries as appropriate. Then rerun `NATSRepair.exe`.
 
    Only proceed when the list op IPs shown by NATSRepair matches the intended cluster composition.
-
 
 ## Rollback considerations
 
