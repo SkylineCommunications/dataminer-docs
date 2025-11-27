@@ -311,11 +311,10 @@ For the maps component, the following component actions are available:
 
   - *Close all overlays*: This action removes all overlays currently displayed on the map.
 
-  > [!Note]
-  > When setting the overlay source, make sure the source ends with a file extension. If you’re using a remote URL that doesn’t include one, you can append a custom query parameter to specify it. For example, `https://myRemoteService/overlay` can be updated to `https://myRemoteService/overlay?type=.kmz`.
-
   > [!NOTE]
-  > While local sources are more secure and not openly accessible like public sources on the internet, you do have to make sure the route to the *GetSecureFile* API method (`https://DMA/API/v1/GetSecureFile.aspx`) is openly accessible in order to use the local overlay files.
+  >
+  > - When you set the overlay source, make sure the **source ends with a file extension**. If you are using a remote URL that does not include one, you can append a custom query parameter to specify it. For example, `https://myRemoteService/overlay` can be updated to `https://myRemoteService/overlay?type=.kmz`.
+  > - While **local sources** are more secure and not openly accessible like public sources on the internet, you do have to make sure the route to the *GetSecureFile* API method (`https://DMA/API/v1/GetSecureFile.aspx`) is openly accessible in order to use the local overlay files.
 
   > [!TIP]
   > For more information about the different types of overlays, see [Layer types](xref:Layer_types#layers-of-sourcetype-overlay).
