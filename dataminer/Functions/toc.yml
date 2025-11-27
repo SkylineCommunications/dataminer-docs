@@ -16,6 +16,10 @@ items:
           topicUid: Assistant_Predefined_Questions
       - name: Natural language to GQI
         topicUid: NL2GQI
+  - name: Augmented Operations
+    items:
+      - name: Alarm focus
+        topicUid: Alarm_focus
   - name: Automation
     items:
       - name: About DataMiner Automation

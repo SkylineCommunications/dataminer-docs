@@ -12,7 +12,7 @@ The following factors, in order, are taken into account for the grouping:
 
 - Time
 
-- Alarm focus information (see [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus)).
+- [Alarm focus](xref:Alarm_focus) information
 
 - The polling IP (for timeout alarms only)
 
@@ -64,7 +64,7 @@ The grouping of alarms into incidents is updated in real time whenever appropria
 In DataMiner Cube, you can enable this feature in System Center, via *System settings* > *analytics config* > *automatic alarm grouping* (or prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- 43903 -->: *automatic incident tracking*). From DataMiner 10.2.0/10.2.1 onwards, in new installations and in systems upgrading from DataMiner versions that do not support automatic alarm grouping yet, it is enabled by default.
 
 > [!NOTE]
-> Automatic alarm grouping relies on the [alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus) functionality. Ensure this feature is enabled in System Center, via *System Center* > *System settings* > *analytics config*, to guarantee the creation of alarm groups.
+> Automatic alarm grouping relies on the [alarm focus](xref:Alarm_focus) functionality. Ensure this feature is enabled in System Center, via *System Center* > *System settings* > *analytics config*, to guarantee the creation of alarm groups.
 
 The following settings are available in System Center:
 
@@ -147,4 +147,4 @@ From DataMiner 10.2.5/10.3.0 onwards, it is possible to manually update an alarm
 > - When an alarm group has been updated manually, it will no longer be updated automatically.
 > - From DataMiner 10.2.6/10.3.0 onwards, you can manually create an alarm group even when automatic alarm grouping is not activated in the alarm tab. From DataMiner 10.2.7/10.3.0 onwards, this is even possible when alarm grouping is not [enabled in System Center](#automatic-alarm-grouping-configuration-in-system-center).
 > - From DataMiner 10.2.6/10.3.0 onwards, the right-click menu of an alarm group (or incident) also allows you to take or (force) release ownership of the alarm group, add a comment, clear the alarm group in case it was created manually, assign a ticket to the alarm group, or view a ticket that was assigned to the alarm group.
-> - From DataMiner 10.2.6/10.3.0 onwards, when an alarm group is created or edited manually, it will always receive focus. Automatically created alarm groups receive focus if at least one of the base alarms has focus. See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus).
+> - From DataMiner 10.2.6/10.3.0 onwards, when an alarm group is created or edited manually, it will always receive focus. Automatically created alarm groups receive focus if at least one of the base alarms has focus. See [Alarm focus](xref:Alarm_focus).

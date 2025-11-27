@@ -117,7 +117,7 @@ Based on an analysis of the alarm history and its patterns, the focused alarms o
 > For more information:
 >
 > - Course: [Focus Alarms](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/alarm-focus/)
-> - [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus)
+> - [Alarm focus](xref:Alarm_focus)
 
 ## Relationship Learning
 

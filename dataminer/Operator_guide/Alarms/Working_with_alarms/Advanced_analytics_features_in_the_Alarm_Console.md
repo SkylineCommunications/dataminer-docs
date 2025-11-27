@@ -11,7 +11,7 @@ All features can be activated or deactivated in System Center, via *System Cente
 
 The following advanced analytics features **assist at identifying incidents in the alarm data**:
 
-- [Alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus).
+- [Alarm focus](xref:Alarm_focus).
 
 - [Automatic alarm grouping](xref:Automatic_incident_tracking).
 
