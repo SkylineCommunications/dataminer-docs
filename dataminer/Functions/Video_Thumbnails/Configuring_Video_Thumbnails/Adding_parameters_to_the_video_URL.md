@@ -4,7 +4,7 @@ uid: Adding_parameters_to_the_video_URL
 
 # Adding parameters to the video URL
 
-When you configure a video thumbnail, the URL must contain a number of mandator parameters and may include additional optional parameters to control playback behavior, display settings, authentication, or refresh intervals.
+When you configure a video thumbnail, the URL must contain a number of mandatory parameters and may include additional optional parameters to control playback behavior, display settings, authentication, or refresh intervals.
 
 All supported video server types and their associated parameters are defined in the file `C:\Skyline DataMiner\videoservers.xml`.
 
