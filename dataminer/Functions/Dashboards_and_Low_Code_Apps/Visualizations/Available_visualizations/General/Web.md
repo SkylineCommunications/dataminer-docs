@@ -37,7 +37,7 @@ The web component supports two main types of content:
 
 ### Configuring a video thumbnail
 
-You can configure the web component to display a video stream based on an image URL:
+You can configure the web component to display a video feed or regularly refreshed image:
 
 1. Select the web component and navigate to the *Settings* pane.
 
