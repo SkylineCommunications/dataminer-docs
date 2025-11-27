@@ -22,7 +22,7 @@ Additional configuration is possible in the URL:
 
   Example: `#https://dma/videothumbnails/video.htm?type=Generic%20Images&source=https%3A%2F%2F77.158.55.113%2Fvos-api%2Fmonitor%2Fv1%2Fservices%2F55002da8-37fd-43de-82a9-f6b75089d8c9%2Fthumbnail&auth=bearer%20580a4efa-0aab-4882-af91-7b0118c67f5d` |
 
-- `volume=` (Generic VLC): Available from DataMiner 10.2.0 [CU1]/10.2.4 onwards. Specify the volume for the VLC player in the URL. The volume should be specified as a percentage, ranging from 0 (i.e. muted) to 100.
+- `volume=` (All video types): Available from DataMiner 10.2.0 [CU1]/10.2.4 onwards. Specify the volume for the video player in the URL. The volume should be specified as a percentage, ranging from 0 (i.e. muted) to 100.
 
   Example: `#https://dma.local/VideoThumbnails/Video.htm?type=VLC&source=https://videoserver/video.mp4&volume=50`
 
