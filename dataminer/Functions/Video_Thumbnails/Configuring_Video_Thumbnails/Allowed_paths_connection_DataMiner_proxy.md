@@ -33,6 +33,5 @@ If more URLs need to be added to the list of allowed URLs, do the following:
    ```
 
    > [!NOTE]
-   > If you just add a single slash ("/") in the value of the ExtraAllowedPaths key, all possible URLs will be allowed.
 
 Example: If, under `C:\Skyline DataMiner\Webpages`, you created your own folder named *MyThumbnails*, then add */MyThumbnails/* to the value of the *ExtraAllowedPaths* key.
