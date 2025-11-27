@@ -12,7 +12,7 @@ Additional configuration is possible in the URL:
 
 - `referer=` (Generic VLC): The VLC component of video thumbnails sends a referer HTTP header when requesting the source URL. The referer URL is by default the URL of the DMA, but you can change it by specifying the parameter "referer=" in the URL of the video thumbnail.
 
-  Example: `#http://localhost/VideoThumbnails/video.htm?type=VLC&source=http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4&referer=http%3A%2F%2Fsome%2Freferer%2F.`
+  Example: `#http://<DMA>/VideoThumbnails/video.htm?type=VLC&source=http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4&referer=http%3A%2F%2Fsome%2Freferer%2F.`
 
 - `user=` and `password=` (All types): You can add a password and username in the URL for basic HTTP authentication. However, in that case we advise to always use HTTPS, as otherwise the username and password will not be encrypted.
 
