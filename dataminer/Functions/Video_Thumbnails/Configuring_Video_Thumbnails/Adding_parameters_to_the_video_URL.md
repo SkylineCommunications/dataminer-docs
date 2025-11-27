@@ -18,7 +18,7 @@ Additional configuration is possible in the URL:
 
   Example: `#https://dma/VideoThumbnails/Video.htm?type=Generic%20Images&source=http%3A%2F%2F10.0.20.101%2Fimages%2Fthumbs%2F4.jpg&user=admin&password=test&refresh=1000`
 
-- `auth=` (All types): Specify an HTTP authorization header that will be added to the HTTP request when a thumbnail image is requested from the video server. This option is required when the video server expects an authentication token (for example *OAuth2*).
+- `auth=` (Images): Specify an HTTP authorization header that will be added to the HTTP request when a thumbnail image is requested from the video server. This option is required when the video server expects an authentication token (for example *OAuth2*). Note that this parameter can only be used when the `proxy=` parameter is set to `true` (default).
 
   Example: `#https://dma/videothumbnails/video.htm?type=Generic%20Images&source=https%3A%2F%2F77.158.55.113%2Fvos-api%2Fmonitor%2Fv1%2Fservices%2F55002da8-37fd-43de-82a9-f6b75089d8c9%2Fthumbnail&auth=bearer%20580a4efa-0aab-4882-af91-7b0118c67f5d` |
 
