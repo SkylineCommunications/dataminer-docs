@@ -26,7 +26,7 @@ Additional configuration is possible in the URL:
 
   Example: `#https://dma.local/VideoThumbnails/Video.htm?type=VLC&source=https://videoserver/video.mp4&volume=50`
 
-- `loop=` (All types): Available from DataMiner 10.2.0 [CU1]/10.2.4 onwards. Specify that the video should play continuously in a loop. Set to `false` by default.
+- `loop=` (All video types): Available from DataMiner 10.2.0 [CU1]/10.2.4 onwards. Specify that the video should play continuously in a loop. Set to `false` by default.
 
   `#https://dma.local/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true`
 
