@@ -4,6 +4,11 @@ uid: DashboardPivotTable
 
 # Pivot table
 
+> [!CAUTION]
+>
+> - The pivot table component is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles). ![EOL](~/dataminer/images/EOL_Duo.png
+> - From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44128-->, the pivot table will only appear in the list of available visualizations if the `showAdvancedSettings=true` URL option is used.
+
 This component displays a status report for a number of parameters of the elements using the selected protocol and protocol version.
 
 ![Pivot table](~/dataminer/images/Pivot_Table.png)<br>*Pivot table component in DataMiner 10.4.6*
