@@ -4,18 +4,35 @@ uid: DashboardNodeEdgeGraph
 
 # Node edge graph
 
-> [!NOTE]
-> This feature is in preview until DataMiner 10.1.5. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
-
-Available from DataMiner 10.2.0/10.1.5 onwards. Prior to this, the component is available in soft launch, if the soft-launch option *ReportsAndDashboardsPTP* is enabled.
-
-This component allows you to visualize any type of objects (i.e. "nodes") and the connections between them (i.e. "edges"). By linking parameters and properties to those nodes and edges, you can turn a node edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data.
+The node edge graph component allows you to **visualize any type of objects (i.e. "nodes") and the connections between them (i.e. "edges")**. By linking parameters and properties to those nodes and edges, you can turn a node edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data.
 
 ![Node edge graph](~/dataminer/images/Node_Edge_Graph.gif)<br>*Node edge graph component in DataMiner 10.4.9*
 
-The data necessary to create a node edge graph can be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects). Clicking items in the node edge graph also makes these available as data for other components. Keeping the Ctrl key pressed while you click them allows you to select multiple items at the same time.
+## Supported data types
+
+The data necessary to create a node edge graph can be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects).
+
+The node edge graph component should therefore **always be configured with [query data input](xref:Query_Data)**.
+
+## Interacting with the node edge graph
+
+Clicking items in the node edge graph also makes these available as data for other components. Keeping the Ctrl key pressed while you click them allows you to select multiple items at the same time.
 
 When edges are closely grouped together, edge labels may become minimized. If you hover the mouse pointer over the edge, the label becomes visible again. From DataMiner 10.3.0 [CU4]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->, you can press Ctrl+Space to display all labels in the node edge graph.
+
+### Zooming and panning
+
+When the [*Zooming* layout option](#node-edge-graph-layout) is enabled, there are several ways to **zoom in or out** on a node edge graph component:
+
+- Press Ctrl while scrolling up or down.
+
+- Right-click and select an area of the graph to zoom in on that selected area.
+
+- Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017-->: Scroll up or down.
+
+To **move left or right across the component**, click the graph and drag your mouse. Note that panning is only possible when zooming is enabled.
+
+## Using dynamic coloring
 
 The component uses dynamic coloring, which can be adjusted according to preference. When you hover the mouse pointer over a node or edge, a tooltip is displayed with detailed info. Click the circle in the top-right corner of the tooltip to switch between different coloring modes for all the nodes or edges of this type:
 
@@ -25,41 +42,96 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
 - *Alarm*: Nodes and edges are colored according to the highest severity of the parameters in the tooltip.
 
-## Basic component configuration
+## Highlighting specific nodes
 
-1. Add the query data that will represent the nodes and edges.
+    > [!NOTE]
+    > When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized.
 
-1. In the *Settings* pane, assign the queries as nodes or edges:
+## Configuration options
 
-   1. In the box representing each query, click either *Set as node* or *Set as edge*.
+### Node edge graph layout
 
-      - If a query is set as node, it will move to the nodes section. If a query is set as edge, it will move to the edges section.
+In the *Layout* pane, you can find the default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
-      - Once a query has been set to be a node or edge, you can still change this setting by clicking the node or edge icon in the top-right corner of the query box.
+Additionally, the following layout options are also available:
 
-   1. Configure the nodes as follows:
+| Section | Option | Description |
+|--|--|--|
+| Filtering & Highlighting | Conditional coloring | Highlight certain columns in a tooltip based on a condition. For more information, refer to [Conditional coloring](#conditional-coloring). |
+| Filtering & Highlighting | Highlight | Toggle the switch to determine whether the items that match the criteria specified in a query filter will be highlighted. Enabled by default. For more information, see [Highlighting specific nodes](#highlighting-specific-nodes). |
+| Filtering & Highlighting | Opacity | Set the level of transparency of the nodes and edges that do not match the criteria specified in a query filter. This option is only available when *Highlight* is enabled. |
+| Filtering & Highlighting | Highlight/Show entire path | Toggle the switch to determine whether only the nodes matching the filter are highlighted, or whether the entire tree structure they are a part of (from root to leaves) is highlighted as well. |
+| Advanced | Empty result message | Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Specify a custom message that is displayed when a query returns no results. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
+| Advanced | Node positions | Change how the nodes are positioned within the component. See [Node position options](#node-position-options). |
+| Advanced | Direction | Available when the *Node positions* option is set to *Layered* (default). Determine how different nodes are displayed depending on their importance, as indicated by their configured weight. See [Node position options](#node-position-options). |
+| Advanced | Zooming | Toggle the switch to determine whether users should be able to zoom in on the component or not. See [Zooming and panning](#zooming-and-panning) |
+| Advanced | Edge style | Select whether the connections should be displayed as curly (default) or straight lines. |
 
-      1. Next to *Node ID column*, select the column from the query that represents the node ID.
+#### Conditional coloring
 
-      1. Next to *X* and *Y*, select the column from the query that contains the X and Y positions respectively. This setting is only available when the *Node positions* setting in the [*Layout* pane](#layout-configuration) is set to *Linked as data* (available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->).
+This option allows you to specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used. Users can switch to this coloring mode via the tooltip of a node or edge. To configure a color filter:
 
-      1. Optionally, expand the *Base node* section to configure the node further. The following options are available:
+    - If the column you want to use for highlighting contains discrete values, click the color icon next to a value and then specify a highlight color for that value. If there are too many values to easily list them, you will first need to specify a filter in order to select a value.
 
-         - *Node name*: This name is not displayed in the component itself, and is only intended to clarify the configuration.
+    - If the column you want to use for highlighting contains values for which a specific range can be specified, select the column, indicate the range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one column, each with a color of its own.
+
+#### Node position options
+
+The following options are available:
+
+- *Layered*: Nodes are displayed in different layers. This is the default option.
+
+  When this option is enabled, you can then determine how different nodes are displayed depending on their importance, as indicated by their configured weight.
+
+  - *Backwards*: Nodes are displayed from right to left in order of importance.
+
+  - *Downwards*: Nodes are displayed from top to bottom in order of importance.
+
+  - *Forwards*: Nodes are displayed from left to right in order of importance;
+
+  - *Upwards*: Nodes are displayed from bottom to top in order of importance
+
+- *Custom*: Allows users with editing permission to drag and drop the nodes to a custom position. In that case, it is also possible to select a group of nodes by keeping the Ctrl key pressed while clicking them, and then move them together.
+
+- *Linked to data*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. Location information from your data is used to determine the node positions. To use this feature, your data must include at least two numeric columns representing the X and Y positions of each node's center. You can configure these columns in the *Identifiers* > *Nodes* section of the [*Settings* pane](#node-edge-graph-settings).
+
+  > [!NOTE]
+  > If the location info is missing for certain nodes, the *Settings* pane header will have an orange font.
+  >
+  > ![Location info missing](~/dataminer/images/Location_Info_Missing.png)
+
+  Configure the initial viewport:
+
+  - *Auto*: Automatically determine the viewport to fit all nodes. This is the default option.
+
+  - *Custom*: Specify the *Center X*, *Center Y*, *Width*, and *Height* of your custom viewport.
+
+### Node edge graph settings
+
+In the *Settings* pane for this component, you can customize its behavior to suit your requirements.
+
+| Section | Option | Description |
+|--|--|--|
+| WebSocket settings | Inherit WebSocket settings from page/panel | Clear the checkbox to use a custom polling interval for this component. When cleared, you can specify a different polling interval (in seconds). |
+| General | Override dynamic units | Clear the checkbox to prevent parameter units from changing dynamically based on their value and protocol definition. Disabled by default. |
+| Data retrieval | Update data | Toggle the switch to determine whether the data should be refreshed automatically (provided this is supported by the data source). See [Query updates](xref:Query_updates)<!--RN 37269-->. Disabled by default. |
+
+The node edge graph component supports showing multiple layers. The following *Identifiers* settings are available for each query added to the component:
+
+| Section | Subsection | Option | Description |
+|--|--|--|--|
+| N/A | Nodes/Edges | ![marker](~/dataminer/images/Maps_Circle_icon.png) or ![line](~/dataminer/images/Maps_Line_icon.png) | In the box representing each query, click either *Set as node* or *Set as edge*. If a query is set as node, it will move to the nodes section. If a query is set as edge, it will move to the edges section. Once a query has been set to be a node or edge, you can still change this setting by clicking the node or edge icon in the top-right corner of the query box. |
+| Nodes | `<query name>` | Node ID column | Select the column from the query that represents the node ID. |
+| Nodes |`<query name>` | X/Y | Only available when the *Node positions* layout option is set to *Linked as data*. Select the column from the query that contains the X and Y positions respectively. |
+| Nodes | Base node | Node name | This name is not displayed in the component itself, and is only intended to clarify the configuration. |
+| Nodes | Base node | Label | Select the column to use as the label for the node. |
+| Nodes | Base node | Shape | Select a different shape in the dropdown box to customize the node shape. By default, no shape is used. You can also select *Custom* in the dropdown box in order to get additional options that allow you to create a fully customized shape instead of one of the available presets. Click the circle to the right of the dropdown box to select a custom color for the shape. |
+| Nodes | Base node | Visual | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. Choose whether to show an icon or custom image within the node shape. |
+| Nodes | Base node | Icon | Select a different icon from the dropdown box to customize the icon shown within the node shape. Click the circle to the right of the box to select a custom color. From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, this setting is only available if the *Visual* setting is set to *Icon*. |
+| Nodes | Base node | Image | Only available if the *Visual* setting is set to *Image*. Enter a custom image link. |
+| Nodes | Base node | Size | From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, use the slider to adjust the size of the node, with a minimum of 1 px and a maximum of 100 px (default: 48 px). Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, select whether the node should be small, medium-sized, or large. |
 
          - *Weight*: A number indicating the relative importance of the node. The higher the number, the more important the node, which determines where it is displayed in the graph (depending on the layout settings).
-
-         - *Shape*: Select a different shape in the dropdown box to customize the node shape. By default, no shape is used. You can also select *Custom* in the dropdown box in order to get additional options that allow you to create a fully customized shape instead of one of the available presets. Click the circle to the right of the dropdown box to select a custom color for the shape.
-
-         - *Visual*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. Choose whether to show an icon or custom image within the node shape.
-
-         - *Icon*: Select a different icon from the dropdown box to customize the icon shown within the node shape. Click the circle to the right of the box to select a custom color. From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, this setting is only available if the *Visual* setting is set to *Icon*.
-
-         - *Image*: Only available if the *Visual* setting is set to *Image*. Enter a custom image link.
-
-         - *Label*: Select the column to use as the label for the node.
-
-         - *Size*: From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, use the slider to adjust the size of the node, with a minimum of 1 px and a maximum of 100 px (default: 48 px). Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, select whether the node should be small, medium-sized, or large.
 
          - *Enable tooltip*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over a node. This setting is enabled by default.
 
@@ -88,8 +160,6 @@ The component uses dynamic coloring, which can be adjusted according to preferen
    - *Flow*: The direction is visualized by means of animated edges. This is the default option.
 
    - *Arrows*: The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges.
-
-1. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41545-->, in case the component displays a query source and you want the data to be refreshed automatically, enable the *Update data* option in the *Settings* pane.
 
 1. From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, you can configure whether pressing the Ctrl key is required to zoom in or out. To do so, in the *Layout* pane, toggle the *Advanced* > *Hold Ctrl to zoom* option:
 
@@ -125,76 +195,3 @@ You can configure the following [**component actions**](xref:LowCodeApps_event_c
 
 > [!NOTE]
 > You can also override the default action for a node or edge using the *Add override* option.
-
-## Layout configuration
-
-You can fine-tune the layout of the component with the following settings in the *Layout* pane:
-
-- *Column filters*: Only available up to DataMiner 10.1.10. Optionally, you can specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used. Users can switch to this coloring mode via the tooltip of a node or edge. To configure a color filter:
-
-  - If the column you want to use for highlighting contains values for which a specific range can be specified, select the column, indicate the range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one column, each with a color of its own.
-
-  - Alternatively, from DataMiner 10.20/10.1.8 onwards, you can filter on specific text instead. To do so, select the column you want to use for highlighting, specify the text, and select the highlight color. By default, the value will need to be equal to the specified text to be highlighted. However, you can change this by clicking *equal* above the text box and selecting *contain* or *match regex* instead, depending on the type of filtering you want to apply. You can also apply a negative filter by clicking *does*, which will make this field switch to *does not* instead.
-
-  - Multiple filters can be applied on the same value. In that case, the filters will be applied from the top of the list to the bottom. Positive filters will get priority over negative filters.
-
-  - You can remove a column filter again by selecting *No color* instead of a specific color.
-
-- *Filters & Highlighting*: Available from DataMiner 10.1.11/10.2.0 onwards. Allows you to configure a number of filtering and highlighting options. However, note that the filtering options require the [*Query filter* component](xref:DashboardQueryFilter), available from DataMiner 10.3.9/10.4.0 onwards.
-
-  - *Conditional coloring*: (Replaces the *Column filters* option from prior to 10.1.11.) This option allows you to specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used. Users can switch to this coloring mode via the tooltip of a node or edge. To configure a color filter:
-
-    - If the column you want to use for highlighting contains discrete values, click the color icon next to a value and then specify a highlight color for that value. If there are too many values to easily list them, you will first need to specify a filter in order to select a value.
-
-    - If the column you want to use for highlighting contains values for which a specific range can be specified, select the column, indicate the range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one column, each with a color of its own.
-
-  - *Highlight*: When this option is enabled, the nodes that match the filter will be highlighted. Default: Enabled
-
-  - *Opacity*: When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the nodes and edges that do not match the filter.
-
-    > [!NOTE]
-    > When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized.
-
-  - *Highlight/Show entire path*: When this option is enabled, not only the nodes matching the filter will be highlighted, but also the entire tree structure they are a part of (from root to leaves).
-
-- *Node positions*: Allows you to change how the nodes are positioned within the component.
-
-  The following options are available:
-
-  - *Layered*: Nodes are displayed in different layers. This is the default option.
-
-  - *Custom*: Allows users with editing permission to drag and drop the nodes to a custom position. In that case, it is also possible to select a group of nodes by keeping the Ctrl key pressed while clicking them, and then move them together.
-
-  - *Linked to data*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. Location information from your data is used to determine the node positions. To use this feature, your data must include at least two numeric columns representing the X and Y positions of each node's center. You can configure these columns in the *Identifiers* > *Nodes* section of the [*Settings* pane](#basic-component-configuration).
-
-    > [!NOTE]
-    > If the location info is missing for certain nodes, the *Settings* pane header will have an orange font.
-    >
-    > ![Location info missing](~/dataminer/images/Location_Info_Missing.png)
-
-    Configure the initial viewport:
-
-    - *Auto*: Automatically determine the viewport to fit all nodes. This is the default option.
-
-    - *Custom*: Specify the *Center X*, *Center Y*, *Width*, and *Height* of your custom viewport.
-
-- *Direction*: When the *Node positions* setting is set to *Layered*, this option determines how different nodes are displayed depending on their importance, as indicated by their configured weight:
-
-  - *Backwards*: Nodes are displayed from right to left in order of importance.
-
-  - *Downwards*: Nodes are displayed from top to bottom in order of importance.
-
-  - *Forwards*: Nodes are displayed from left to right in order of importance;
-
-  - *Upwards*: Nodes are displayed from bottom to top in order of importance
-
-- *Zooming*: Select whether users should be able to zoom in on the component or not. When this option is enabled, you can zoom in or out by pressing Ctrl while using the scroll wheel. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017-->, you can use the scroll wheel of the mouse to zoom in or out.
-
-  Alternatively, you can right-click and drag across an area of the graph to zoom in on that area. Enabling this option also makes it possible to pan the graph by dragging it while keeping the left mouse button pressed.
-
-- *Edge style*: Select whether the connections should be displayed as curly or straight lines.
-
-- *Advanced* \> *Empty Result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results.
-
-  > [!TIP]
-  > See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message).
