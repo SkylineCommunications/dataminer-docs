@@ -30,7 +30,7 @@ Additional configuration is possible in the URL:
 
   `#https://dma.local/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true`
 
-- `fitMode=` (All types): Available from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43388-->. Specify how the image in a video thumbnail should be displayed.
+- `fitMode=` (Images): Available from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43388-->. Specify how the image in a video thumbnail should be displayed.
 
   The possible values are:
 
