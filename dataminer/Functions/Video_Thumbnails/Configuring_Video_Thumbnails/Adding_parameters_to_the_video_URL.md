@@ -46,7 +46,7 @@ Additional configuration is possible in the URL:
 
   Example: `#https://dma.local/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true&fitMode=center`
 
-- `toolbar=false`/`showtoolbar=false` (Generic VLC): By default the VLC toolbar is shown. To hide the toolbar, specify "toolbar=false" or "showtoolbar=false" in the URL.
+- `toolbar=false`/`showtoolbar=false` (All video types): By default the VLC toolbar is shown. To hide the toolbar, specify "toolbar=false" or "showtoolbar=false" in the URL.
 
   Example: `#http://<DMAIP>/VideoThumbnails/Video.htm?type=Generic VLC&source=http://<DMAIP>/myvideo.mpeg&showtoolbar=false`
 
