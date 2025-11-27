@@ -15,7 +15,6 @@ http(s)://<DMA>/VideoThumbnails/Video.htm?VideoServerParameters
 The `VideoServerParameters` determine the type of feed, source URL, optional authentication, and rendering behavior. You can use placeholders to build dynamic URLs.
 
 > [!TIP]
-> You can use the *EscapeDataString* placeholder when you add parameters, properties or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](xref:Placeholders_for_variables_in_shape_data_values#escapedatastringx)). For example: `https://<DMAIP>/VideoThumbnails/Video.htm?type=Generic%20VLC&source=[EscapeDataString:[param:*,10014]]`
 
 Both Visual Overview and the web component embed this webpage: Visual Overview through the *Link* shape data field, and the web component through its *URL* setting. For detailed instructions, see:
 
