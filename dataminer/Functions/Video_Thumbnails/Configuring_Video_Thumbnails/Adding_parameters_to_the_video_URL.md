@@ -61,6 +61,6 @@ Additional configuration is possible in the URL:
 > [!NOTE]
 >
 > - Always make sure that the parameters of the URL are URL-encoded, as illustrated in the examples above.
-> - Use the *EscapeDataString* placeholder when you add parameters, properties or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](xref:Placeholders_for_variables_in_shape_data_values#escapedatastringx)). For example: `https://<DMAIP>/VideoThumbnails/Video.htm?type=Generic%20VLC&source=[EscapeDataString:[param:*,10014]]`
+> - In Visio, you can use the *EscapeDataString* placeholder when you add parameters, properties, or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](xref:Placeholders_for_variables_in_shape_data_values#escapedatastringx)). For example: `https://<DMA>/VideoThumbnails/Video.htm?type=Generic%20VLC&source=[EscapeDataString:[param:*,10014]]`
 > - When the authentication token expires, the URL has to be updated with the new token.
 > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
