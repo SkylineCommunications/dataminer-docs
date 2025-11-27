@@ -11,12 +11,10 @@ When you have added a [web component](xref:DashboardWeb) in a dashboard or low-c
 1. In the *URL* box, enter the video URL. You can use IntelliSense to insert the DMA placeholder `{URL.DMAIP.Value}`. For example:
 
    ```txt
-   #https://{URL.DMAIP.Value}/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4
+   https://{URL.DMAIP.Value}/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4
    ```
 
    The URL consists of the following main components:
-
-   - `#`: The "#" in front of the URL ensures that the video is displayed in an embedded browser.
 
    - `http(s)://{URL.DMAIP.Value}/VideoThumbnails/Video.htm?`: the internal webpage hosted by the DataMiner Agent.
 
