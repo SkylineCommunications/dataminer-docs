@@ -64,7 +64,6 @@ When you are [configuring a drawing in Visio](xref:Getting_started_with_visual_o
 
        - To display video thumbnails with the VLC plugin in the Cube desktop app, use the 64-bit version of VLC.
 
-       - If you use the DataMiner Cube browser app (not recommended), make sure the 32-bit version of VLC is installed instead of the 64-bit version, as the latter may not run correctly.
 
    - `source=`: The URL of the video/image.
 
