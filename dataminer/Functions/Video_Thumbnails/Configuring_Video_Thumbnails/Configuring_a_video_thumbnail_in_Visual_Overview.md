@@ -45,7 +45,7 @@ When you are [configuring a drawing in Visio](xref:Getting_started_with_visual_o
 
      - Image: `type=Generic Images`
 
-       - The following image formats are supported: .png, .jpg, .bmp, and .emf.
+       - The following image formats are supported: .png, .jpg, and .bmp.
 
        - If you want to display an image located on a DMA, place the image in the DMA's `C:\Skyline DataMiner\Webpages` folder (or one of its subfolders, e.g. `C:\Skyline DataMiner\Webpages\MyImages\`).
 
