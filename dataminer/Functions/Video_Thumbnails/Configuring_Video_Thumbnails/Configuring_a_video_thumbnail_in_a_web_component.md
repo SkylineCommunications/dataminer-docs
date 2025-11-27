@@ -11,7 +11,7 @@ When you have added a [web component](xref:DashboardWeb) in a dashboard or low-c
 1. In the *URL* box, enter the video URL. For example:
 
    ```txt
-   #https://dma.local/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4
+   #https://{URL.DMAIP.Value}/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4
    ```
 
    The URL consists of the following main components:
