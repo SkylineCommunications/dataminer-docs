@@ -9,7 +9,7 @@ A video thumbnail is a built-in DataMiner feature that allows you to display a v
 The thumbnail is displayed by a dedicated internal webpage hosted by the DataMiner Agent:
 
 ```txt
-http(s)://<DMAIP>/VideoThumbnails/Video.htm?VideoServerParameters
+http(s)://<DMA>/VideoThumbnails/Video.htm?VideoServerParameters
 ```
 
 The `VideoServerParameters` determine the type of feed, source URL, optional authentication, and rendering behavior. You can use placeholders to build dynamic URLs.
