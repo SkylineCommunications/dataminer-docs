@@ -16,7 +16,7 @@ The `VideoServerParameters` determine the type of feed, source URL, optional aut
 
 > [!TIP]
 
-Both Visual Overview and the web component embed this webpage: Visual Overview through the *Link* shape data field, and the web component through its *URL* setting. For detailed instructions, see:
+Both Visual Overview and the web component can embed this webpage. For detailed instructions, see:
 
 - [Configuring a video thumbnail for Visual Overview](xref:Configuring_a_video_thumbnail_in_Visio)
 
