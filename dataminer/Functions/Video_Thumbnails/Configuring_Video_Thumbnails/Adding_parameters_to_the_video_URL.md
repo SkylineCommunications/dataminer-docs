@@ -48,7 +48,7 @@ Additional configuration is possible in the URL:
 
 - `toolbar=false`/`showtoolbar=false` (All video types): By default the VLC toolbar is shown. To hide the toolbar, specify "toolbar=false" or "showtoolbar=false" in the URL.
 
-  Example: `#http://<DMAIP>/VideoThumbnails/Video.htm?type=Generic VLC&source=http://<DMAIP>/myvideo.mpeg&showtoolbar=false`
+  Example: `#http://<DMA>/VideoThumbnails/Video.htm?type=Generic%20VLC&source=http://<DMA>/myvideo.mpeg&showtoolbar=false`
 
 - `refresh=` (Generic Images): Specify how frequently you want the image to be refreshed (in milliseconds).
 
