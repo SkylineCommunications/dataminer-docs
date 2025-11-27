@@ -35,7 +35,7 @@ Please note the following regarding these icons:
 
 - During the initial time interval after the start of the SLAnalytics process, DataMiner may lack sufficient data to determine the behavior of certain parameters. In such cases, only the default trend icon will be displayed for those parameters during this period.
 
-- If [Behavioral Anomaly detection](xref:Working_with_behavioral_anomaly_detection) is available, an icon may indicate the occurrence of a particular type of change point. **If a change point is considered anomalous, the icon is displayed in red.**
+- If [Behavioral Anomaly detection](xref:Behavioral_anomaly_detection) is available, an icon may indicate the occurrence of a particular type of change point. **If a change point is considered anomalous, the icon is displayed in red.**
 
 - If you hover the mouse pointer over these icons, a tooltip will display additional information.
 

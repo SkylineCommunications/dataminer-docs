@@ -4,7 +4,7 @@ uid: Anomaly_Tutorial
 
 # Detecting anomalies with DataMiner
 
-This tutorial illustrates DataMiner's [Behavioral Anomaly Detection](xref:Working_with_behavioral_anomaly_detection) features and shows how you can use these to detect certain failures in your operation.
+This tutorial illustrates DataMiner's [Behavioral Anomaly Detection](xref:Behavioral_anomaly_detection) features and shows how you can use these to detect certain failures in your operation.
 
 By default, behavioral anomaly detection is active on trended parameters. It will monitor the parameters in real time and notify users about any detected anomalies. The feature models the behavior of a parameter based on its recent history. The tutorial will make use of [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter) to quickly simulate a parameter with historical trend data. Trending is activated by default on the parameters used in this tutorial.
 
@@ -15,7 +15,7 @@ Estimated duration: 45 minutes.
 
 > [!TIP]
 >
-> - For more information, such as technical limitations of anomaly detection, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
+> - For more information, such as technical limitations of anomaly detection, see [Behavioral anomaly detection](xref:Behavioral_anomaly_detection).
 > - See also: [Kata #12: Automatically detect anomalies with DataMiner](https://community.dataminer.services/courses/kata-12/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
 ## Prerequisites
@@ -72,7 +72,7 @@ The tutorial consists of the following steps:
    Under each of the jumps up and down, a gray or black block is displayed. These blocks indicate a detected change in behavior, or **change point**.
 
    > [!TIP]
-   > For more information on the possible types of change points, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection)
+   > For more information on the possible types of change points, see [Behavioral anomaly detection](xref:Behavioral_anomaly_detection#types-of-change-points)
 
 1. Hover the mouse pointer over a change point to see more detail about the type of change point (e.g. a level shift). If necessary, zoom in to see all details, such as the begin and end values.
 

@@ -76,7 +76,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | OTT | Over-The-Top. Refers to media streaming services offered directly to viewers via the internet, rather than through a traditional cable or broadcast provider. |
 | OU | Occasional Use. Refers to services that are not used continuously, for example satellite capacity that is offered to broadcasters for ad hoc and periodic demands. |
 | Outage | In the context of [DataMiner Business Intelligence](xref:sla), the temporary unavailability of the service monitored by an SLA. |
-| Outlier | Change in the behavior of a trend, detected by DataMiner Analytics, where the value suddenly spikes upwards or downwards and then returns to its previous, normal behavior. See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) |
+| Outlier | Change in the behavior of a trend, detected by DataMiner Analytics, where the value suddenly spikes upwards or downwards and then returns to its previous, normal behavior. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection) |
 | OWM | OpenWeatherMap. Online service that provides weather data and that can be integrated in [DataMiner Maps](xref:About_DMS_Maps). |
 
 ## P
@@ -270,7 +270,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | TLS | Transport Layer Security. Cryptographic protocol designed to provide communication security over a network. |
 | Tooltip | Small pop-up window describing an object that is being pointed to, such as a button. |
 | Transparent clock | Device in a PTP environment that passes the time it retrieves from a boundary clock or grandmaster clock on to endpoint devices. See [DataMiner PTP app](xref:SolPTP) |
-| Trend change | Change in the behavior of a trend, detected by DataMiner Analytics, where the value suddenly starts to increase or decrease at an unusual rate. See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). |
+| Trend change | Change in the behavior of a trend, detected by DataMiner Analytics, where the value suddenly starts to increase or decrease at an unusual rate. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection). |
 | Trend group | A group of parameters for which trending is displayed. See [Working with trend groups](xref:Working_with_trend_groups). |
 | Trend pattern | A tagged pattern in the trend data of a parameter. See [Working with pattern matching](xref:Working_with_pattern_matching) and [Monitoring of trend patterns](xref:Monitoring_of_trend_patterns). |
 | Trend prediction | Prediction of the expected trend of a parameter value in the future. See [Working with trend predictions](xref:Working_with_trend_predictions). |
@@ -301,7 +301,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 
 | Term | Description |
 |------|-------------|
-| Variance change | Change in the behavior of a trend, detected by DataMiner Analytics, where the variance of a value either increases or decreases. See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). |
+| Variance change | Change in the behavior of a trend, detected by DataMiner Analytics, where the variance of a value either increases or decreases. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection). |
 | VDA | Video Distribution Amplifier. Device that amplifies a video signal and sends it to multiple outputs. |
 | VF | Virtual Function. |
 | VHF | Very High Frequency. Refers to radio frequencies between 30 MHz and 299.9 MHz. |

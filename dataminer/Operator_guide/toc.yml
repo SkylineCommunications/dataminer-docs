@@ -232,8 +232,6 @@ items:
       - name: Advanced analytics features in the Alarm Console
         topicUid: Advanced_analytics_features_in_the_Alarm_Console
         items:
-          - name: Behavioral anomaly detection
-            topicUid: Behavioral_anomaly_detection
           - name: Proactive cap detection
             topicUid: Proactive_cap_detection
           - name: Monitoring of trend patterns
@@ -311,8 +309,6 @@ items:
             topicUid: Working_with_trend_predictions
           - name: Working with trend icons
             topicUid: Working_with_trend_icons
-          - name: Working with behavioral anomaly detection
-            topicUid: Working_with_behavioral_anomaly_detection
           - name: Working with pattern matching
             topicUid: Working_with_pattern_matching
             items:

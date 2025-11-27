@@ -77,7 +77,7 @@ DataMiner's change point detection solution automatically identifies both abrupt
 > - Video about [Intelligent Fault Detection](https://www.youtube.com/watch?v=Ug1J0Pn6o3k) (covering Change Point Detection, among others) ![Video](~/dataminer/images/video_Duo.png)
 > - Blog post about [Automatic Detection of Frozen States](https://community.dataminer.services/lets-talk-ai-automatic-detection-of-frozen-states)
 > - Blog post about [User Feedback on Behavioral Anomalies](https://community.dataminer.services/enhance-your-dataminer-experience-with-anomaly-feedback/).
-> - [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
+> - [Behavioral anomaly detection](xref:Behavioral_anomaly_detection)
 
 ## Anomaly Detection
 
@@ -90,8 +90,7 @@ An anomaly significance scoring mechanism augments the change point detection so
 >
 > - Course: [Behavioral Anomaly Detection](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/behavioral-anomaly-detection/)
 > - Video about [Intelligent Fault Detection](https://www.youtube.com/watch?v=Ug1J0Pn6o3k) (covering Anomaly Detection, among others) ![Video](~/dataminer/images/video_Duo.png)
-> - [Advanced analytics in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
-> - [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection)
+> - [Behavioral anomaly detection](xref:Behavioral_anomaly_detection)
 > - [Kata #12: Automatically detect anomalies with DataMiner](https://community.dataminer.services/courses/kata-12/) ![Video](~/dataminer/images/video_Duo.png)
 
 ## Incident Identification

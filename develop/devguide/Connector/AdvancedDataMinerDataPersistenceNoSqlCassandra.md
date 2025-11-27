@@ -658,7 +658,7 @@ The table is defined as follows:
 
 #### analytics_changepoints
 
-This table contains a one-year history of behavioral change points. See [Behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
+This table contains a one-year history of behavioral change points. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection).
 
 From DataMiner 10.2.12 onwards, the partitioning of the table is optimized into table version *analytics_changepoints_v2*. In earlier versions, large and heavily trended elements can cause larger partition sizes of the version *analytics_changepoints_v1* tables.
 
@@ -709,7 +709,7 @@ This table is defined as follows:
 
 #### analytics_parameterinfo_v1
 
-This table contains data for each trended parameter that is tracked by one of the proactive advanced analytics features: trend icons, [behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection), [proactive cap detection](xref:Proactive_cap_detection) and [monitoring of trend patterns](xref:Monitoring_of_trend_patterns). This data is required for the real-time updating of the model information stored in the other analytics tables upon incoming new data values.
+This table contains data for each trended parameter that is tracked by one of the proactive advanced analytics features: trend icons, [behavioral anomaly detection](xref:Behavioral_anomaly_detection), [proactive cap detection](xref:Proactive_cap_detection) and [monitoring of trend patterns](xref:Monitoring_of_trend_patterns). This data is required for the real-time updating of the model information stored in the other analytics tables upon incoming new data values.
 
 This table is defined as follows:
 
@@ -749,7 +749,7 @@ This table is defined as follows:
 
 #### analytics_wavestream
 
-The table stores a model per trended parameter or table cell for [proactive cap detection](xref:Proactive_cap_detection) and [behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). The amount of data in the table is related to the number of tracked parameters.
+The table stores a model per trended parameter or table cell for [proactive cap detection](xref:Proactive_cap_detection) and [behavioral anomaly detection](xref:Behavioral_anomaly_detection). The amount of data in the table is related to the number of tracked parameters.
 
 This table is defined as follows:
 

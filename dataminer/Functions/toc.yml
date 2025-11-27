@@ -27,6 +27,8 @@ items:
             topicUid: Manually_creating_or_updating_alarm_groups
           - name: Customizing alarm grouping rules
             topicUid: Customizing_alarm_grouping_rules
+      - name: Behavioral anomaly detection
+        topicUid: Behavioral_anomaly_detection
   - name: Automation
     items:
       - name: About DataMiner Automation

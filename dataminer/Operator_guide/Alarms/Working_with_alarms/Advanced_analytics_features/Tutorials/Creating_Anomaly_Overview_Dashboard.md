@@ -4,7 +4,7 @@ uid: Creating_Anomaly_Overview_Dashboard
 
 # Creating an anomaly overview dashboard
 
-This tutorial illustrates DataMiner's [behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) feature in the context of Dashboards and Low-Code Apps. While creating an anomaly overview dashboard, you will learn how to access the behavioral change event data in a dashboard and gain insight in how to build great dashboards and low-code apps.
+This tutorial illustrates DataMiner's [behavioral anomaly detection](xref:Behavioral_anomaly_detection) feature in the context of Dashboards and Low-Code Apps. While creating an anomaly overview dashboard, you will learn how to access the behavioral change event data in a dashboard and gain insight in how to build great dashboards and low-code apps.
 
 Estimated duration: 35 minutes.
 
@@ -13,7 +13,7 @@ Estimated duration: 35 minutes.
 
 > [!TIP]
 >
-> - For more information, such as technical limitations of anomaly detection, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
+> - For more information, such as technical limitations of anomaly detection, see [Behavioral anomaly detection](xref:Behavioral_anomaly_detection).
 > - See also: [Anomaly Detection Tutorial](xref:Anomaly_Tutorial), [Kata #12: Automatically detect anomalies with DataMiner](https://community.dataminer.services/courses/kata-12/) on DataMiner Dojo, and [Kata #39: Building an anomaly overview dashboard](https://community.dataminer.services/courses/kata-39/) on DataMiner Dojo.
 
 ## Prerequisites

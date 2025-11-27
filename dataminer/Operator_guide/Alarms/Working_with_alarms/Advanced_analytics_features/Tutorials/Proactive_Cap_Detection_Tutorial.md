@@ -74,7 +74,7 @@ In this step, you will learn what potential issues DataMiner's proactive cap det
 
      ![Cache utilization of three content management servers before failure](~/dataminer/images/Proactive_Cap_Detection_Tutorial_CMS_Before_Failure.png)
 
-   - **Anomalies**: DataMiner's [behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) identifies a trend change at the moment when server 2's cache utilization starts to increase, as shown below:
+   - **Anomalies**: DataMiner's [behavioral anomaly detection](xref:Behavioral_anomaly_detection) identifies a trend change at the moment when server 2's cache utilization starts to increase, as shown below:
 
      ![Trend change detected on cache utilization of Proactive Tutorial - CMS 2](~/dataminer/images/Proactive_Cap_Detection_Tutorial_CMS_Server2_TrendChange.png)<br>*Proactive Cap Detection Tutorial > Content Management Servers > Proactive Tutorial - CMS 2 > Cache Utilization (after failure)*
 

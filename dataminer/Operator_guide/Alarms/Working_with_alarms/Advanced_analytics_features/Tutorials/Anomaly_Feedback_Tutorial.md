@@ -4,7 +4,7 @@ uid: Anomaly_Feedback_Tutorial
 
 # Improving anomaly detection using feedback
 
-DataMiner's [behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) automatically detects when a parameter in your system is behaving in an unexpected way. It does this by modeling the behavior of the parameter based on its recent history, and generating a suggestion event or alarm when that behavior deviates significantly from that model. However, in some cases, DataMiner may not work optimally out of the box and it may, for example, generate an anomaly too quickly.
+DataMiner's [behavioral anomaly detection](xref:Behavioral_anomaly_detection) automatically detects when a parameter in your system is behaving in an unexpected way. It does this by modeling the behavior of the parameter based on its recent history, and generating a suggestion event or alarm when that behavior deviates significantly from that model. However, in some cases, DataMiner may not work optimally out of the box and it may, for example, generate an anomaly too quickly.
 
 In this tutorial, you will learn how to improve the detection of new anomalies by providing feedback on detected anomalies.
 
@@ -132,7 +132,7 @@ In this step, you will **give negative feedback to unwanted level shift anomalie
    In the trend graph, you can see that a level shift was still detected. However, the change point below the bit rate drop is light gray this time, which indicates a lower level of importance, meaning it is not marked as an anomaly. So, while the change is still detected, it is no longer seen as unexpected by DataMiner.
 
    > [!TIP]
-   > For more information about the difference between change points and anomalies, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
+   > For more information about the difference between change points and anomalies, see [Behavioral anomaly detection](xref:Behavioral_anomaly_detection#types-of-change-points).
 
 ## Step 3: Fine-tune anomaly detection
 

@@ -51,7 +51,7 @@ uid: glossary_a_to_l
 | Backup element | Element within a redundancy group that is intended to take over from another element in the group in case that element fails. See [Primary elements, backup elements and virtual primary elements](xref:About_redundancy_groups#primary-elements-backup-elements-and-virtual-primary-elements). |
 | Backup package | Package containing all files necessary to restore a particular DataMiner Agent installation. See [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent). |
 | Base protocol | Standardized protocol that forms a mediation layer on top of device-specific protocols, thereby providing a unified view on similar devices that have a different device-specific protocol. Also known as mediation protocol. See [DataMiner Mediation Layer](xref:AdvancedDataMinerMediationLayer). |
-| Behavioral anomaly detection | DataMiner Analytics feature that detects changes in the behavior of a trend. See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). |
+| Behavioral anomaly detection | DataMiner Analytics feature that detects changes in the behavior of a trend. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection). |
 | BER | Bit Error Rate. The percentage of bits with errors compared to the total bits received in a transmission. |
 | BGP | Border Gateway Protocol. Routing protocol used for traffic between autonomous systems over the internet. |
 | Booking | See [Booking](xref:srm_instantiations#booking). |
@@ -74,7 +74,7 @@ uid: glossary_a_to_l
 | CCU | Camera Control Unit. Device used to monitor and control camera functions, for example in live video broadcasting. |
 | CDN | Content Delivery Network. Network of servers in different locations that work together to allow fast delivery of internet content. |
 | Central database | Alternative name for the offload database, especially used for older DataMiner versions. See [Offloading data](xref:Offload_database). |
-| Change point | Point where the behavior of a parameter trend changes, detected by the DataMiner Analytics software. See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). |
+| Change point | Point where the behavior of a parameter trend changes, detected by the DataMiner Analytics software. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection). |
 | CI/CD | Continuous Integration Continuous Delivery/Deployment. A set of practices that ensure small changes are continuously implemented to the software and made available to customers. |
 | CI Type | Configuration Item type. Definition of the behavior of elements in network implementation workflows as part of DataMiner IDP. This includes how to discover the device, provision an element, and perform software management, configuration management and more. A CI Type can be unique for a specific protocol or common for multiple element types, such as a product family. See [DataMiner IDP app](xref:SolIDP). |
 | Clear hysteresis | Type of hysteresis where the moment when the severity of an alarm decreases is delayed. See [Alarm hysteresis](xref:Alarm_hysteresis). |
@@ -285,7 +285,7 @@ uid: glossary_a_to_l
 | Latch level | The previous highest alarm severity level of a DataMiner object. See [Special icon settings](xref:DataMiner_Cube_sidebar#special-icon-settings). |
 | LCA | [Low-Code Apps](xref:Application_framework). DataMiner module that allows you to create custom applications to interact with data from a DataMiner System or an external source. |
 | LDAP | Lightweight Directory Access Protocol. Cross-platform protocol used for directory services authentication. |
-| Level shift | Change in the behavior of a trend, detected by DataMiner Analytics, where the value shifts upwards or downwards and then stays at that level. See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) |
+| Level shift | Change in the behavior of a trend, detected by DataMiner Analytics, where the value shifts upwards or downwards and then stays at that level. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection) |
 | LINQ | Language Integrated Query. See [Language Integrated Query](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/) |
 | List view | UI component consisting of a dynamic, filterable list of elements, services or bookings. This component is part of the Bookings and Services apps and can also be embedded in Visual Overview. See [Creating a list view](xref:Creating_a_list_view). |
 | Lite mode | A mode in DataMiner Cube that displays parameters in a customizable, more compact way. See [Working with Lite parameters](xref:Working_with_Lite_parameters). |

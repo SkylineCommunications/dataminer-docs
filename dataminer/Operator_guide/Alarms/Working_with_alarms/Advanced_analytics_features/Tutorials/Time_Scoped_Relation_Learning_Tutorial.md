@@ -70,7 +70,7 @@ The tutorial consists of the following steps:
 1. Hover the mouse pointer over a change point to see more detail about the type of change point (e.g. a level shift). If necessary, zoom in to see all details, such as the begin and end values of the change.
 
    > [!TIP]
-   > For more information on the possible types of change points, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection)
+   > For more information on the possible types of change points, see [Behavioral anomaly detection](xref:Behavioral_anomaly_detection#types-of-change-points).
 
 ![Available physical memory: investigate behavioral changes (as in DataMiner Version 10.4.0)](~/dataminer/images/ExploreChangePoints.gif)
 
