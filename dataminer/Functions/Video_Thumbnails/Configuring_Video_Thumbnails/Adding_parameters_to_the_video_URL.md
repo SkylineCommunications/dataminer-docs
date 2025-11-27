@@ -52,7 +52,7 @@ Additional configuration is possible in the URL:
 
 - `refresh=` (Generic Images): Specify how frequently you want the image to be refreshed (in milliseconds).
 
-  Example: `#http://<DMA IP>/VideoThumbnails/Video.htm?type=Generic Images&source=http://IpAddress/Folder/Picture.png&refresh=5000`
+  Example: `#http://<DMA>/VideoThumbnails/Video.htm?type=Generic Images&source=http://IpAddress/Folder/Picture.png&refresh=5000`
 
 - `proxy=` (Generic Images): By default, a thumbnail of type `Generic Images` always uses the DMA as a proxy. However, you can add an extra URL parameter, "proxy", to override this behavior.
 
