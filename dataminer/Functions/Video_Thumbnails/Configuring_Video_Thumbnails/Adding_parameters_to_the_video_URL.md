@@ -31,7 +31,7 @@ All supported video server types and their associated parameters are defined in 
     > [!TIP]
     > For more information on HLS, see <https://github.com/video-dev/hls.js/>
 
-  - Image: `type=Generic Images`
+  - Image: `type=Generic%20Images`
 
     - The following image formats are supported: .png, .jpg, and .bmp.
 
@@ -48,7 +48,7 @@ All supported video server types and their associated parameters are defined in 
 
     - Both HTTP and HTTPS are supported.
 
-  - VLC: `type=Generic VLC`
+  - VLC: `type=Generic%20VLC`
 
     - To display video thumbnails with the VLC plugin in the Cube desktop app, use the 64-bit version of VLC.
 

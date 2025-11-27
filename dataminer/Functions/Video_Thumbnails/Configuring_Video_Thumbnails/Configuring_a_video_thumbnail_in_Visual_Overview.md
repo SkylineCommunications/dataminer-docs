@@ -22,7 +22,7 @@ When you are [configuring a drawing in Visio](xref:Getting_started_with_visual_o
 
    - `http(s)://<DMA>/VideoThumbnails/Video.htm?`: the internal webpage hosted by the DataMiner Agent.
 
-   - URL parameters: These define how the video thumbnail is displayed and played. Som parameters are mandatory (for example, `type=` to indicate the video type and `source=` to specify the video or image source), while others are optional (for example, `loop=` to play a video continuously). For a complete overview, see [Adding parameters to the video URL](xref:Adding_parameters_to_the_video_URL).
+   - URL parameters: These define how the video thumbnail is displayed and played. Some parameters are mandatory (for example, `type=` to indicate the video type and `source=` to specify the video or image source), while others are optional (for example, `loop=` to play a video continuously). For a complete overview, see [Adding parameters to the video URL](xref:Adding_parameters_to_the_video_URL).
 
 1. Save the Visio file.
 
