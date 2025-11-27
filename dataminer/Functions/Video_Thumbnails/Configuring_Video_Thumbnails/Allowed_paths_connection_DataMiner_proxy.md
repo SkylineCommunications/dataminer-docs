@@ -34,4 +34,4 @@ If more URLs need to be added to the list of allowed URLs, do the following:
 
    > [!NOTE]
 
-Example: If, under `C:\Skyline DataMiner\Webpages`, you created your own folder named *MyThumbnails*, then add */MyThumbnails/* to the value of the *ExtraAllowedPaths* key.
+Example: If your video server hosts thumbnails at `http://videoserver/thumbnails/image1.jpg`, then add `/thumbnails/` to the value of the *ExtraAllowedPaths* key.
