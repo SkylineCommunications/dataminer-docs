@@ -13,7 +13,7 @@ When you are [configuring a drawing in Visio](xref:Getting_started_with_visual_o
 1. Enter the video URL. For example:
 
    ```txt
-   #https://dma.local/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4
+   #https://<DMA>/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4
    ```
 
    The URL consists of the following main components:
