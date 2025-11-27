@@ -14,7 +14,7 @@ Additional configuration is possible in the URL:
 
   Example: `#http://<DMA>/VideoThumbnails/video.htm?type=VLC&source=http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4&referer=http%3A%2F%2Fsome%2Freferer%2F.`
 
-- `user=` and `password=` (All types): You can add a password and username in the URL for basic HTTP authentication. However, in that case we advise to always use HTTPS, as otherwise the username and password will not be encrypted.
+- `user=` and `password=` (Images): You can add a password and username in the URL for basic HTTP authentication. However, in that case we advise to always use HTTPS, as otherwise the username and password will not be encrypted. Note that this parameter can only be used when the `proxy=` parameter is set to `true` (default).
 
   Example: `#https://dma/VideoThumbnails/Video.htm?type=Generic%20Images&source=http%3A%2F%2F10.0.20.101%2Fimages%2Fthumbs%2F4.jpg&user=admin&password=test&refresh=1000`
 
