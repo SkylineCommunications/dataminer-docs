@@ -14,10 +14,11 @@ http(s)://<DMA>/VideoThumbnails/Video.htm?VideoServerParameters
 
 The `VideoServerParameters` determine the type of feed, source URL, optional authentication, and rendering behavior. You can use placeholders to build dynamic URLs.
 
-> [!TIP]
-
 Both Visual Overview and the web component can embed this webpage. For detailed instructions, see:
 
 - [Configuring a video thumbnail for Visual Overview](xref:Configuring_a_video_thumbnail_in_Visio)
 
 - [Configuring a video thumbnail in a web component](xref:Configuring_a_video_thumbnail_in_a_web_component)
+
+> [!NOTE]
+> To display video feeds from Selenio MCP1 and MCP3 platforms, the Selenio modules need to have at least firmware version 6.1.
