@@ -47,7 +47,7 @@ When you are [configuring a drawing in Visio](xref:Getting_started_with_visual_o
 
        - The following image formats are supported: .png, .jpg, and .bmp.
 
-       - If you want to display an image located on a DMA, place the image in the DMA's `C:\Skyline DataMiner\Webpages` folder (or one of its subfolders, e.g. `C:\Skyline DataMiner\Webpages\MyImages\`).
+       - If you want to display an image located on a DMA, place the image in the DMA's `C:\Skyline DataMiner\Webpages\Public\` folder (or one of its subfolders, e.g. `C:\Skyline DataMiner\Webpages\Public\MyImages\`).
 
          > [!TIP]
          > If you get an "Invalid path" error, open the file `C:\Skyline DataMiner\Webpages\VideoThumbnails\Web.config`, and check whether the image folder (e.g. */MyImages/*) has been added to the *ExtraAllowedPaths* key.
