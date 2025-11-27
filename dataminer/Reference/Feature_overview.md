@@ -18,7 +18,7 @@ Below you can find an overview of the main features that have been added to Data
 | Augmented operations: [Anomaly feedback](xref:Providing_user_feedback) | DataMiner 10.4.11/10.5.0<br>DataMiner 10.4.4 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#anomalyfeedback)<!-- [ID 38707] [ID 38980] [ID 39944] --> |
 | Augmented operations: [Configuration of behavioral anomaly alarms](xref:Configuring_anomaly_detection_alarms) | DataMiner 10.3.12/10.4.0 <!-- [ID 36857] [ ID 37148] -->|
 | Augmented operations: [Managing pattern definitions](xref:Managing_pattern_definitions) | DataMiner Cube 10.3.6/10.4.0 <!-- [ID 35694] [ID 36114] -->|
-| Augmented operations: [Manually updating an alarm group](xref:Automatic_incident_tracking#manually-updating-an-alarm-group) | DataMiner 10.2.5/10.3.0 <!-- [ID 32729] -->|
+| Augmented operations: [Manually updating an alarm group](xref:Manually_creating_or_updating_alarm_groups) | DataMiner 10.2.5/10.3.0 <!-- [ID 32729] -->|
 | Augmented operations: [Multivariate trend patterns](xref:Working_with_pattern_matching#multivariate-patterns) | DataMiner Cube 10.3.8/10.4.0<!-- [ID 36731] --><br>Minimum server version: DataMiner 10.3.3/10.4.0 <!-- [ID 35301] -->|
 | Augmented operations: [Proactive cap detection feedback](xref:Providing_user_feedback) | DataMiner 10.5.1/10.6.0<!-- [ID 41371] --> |
 | Augmented operations: [Relational anomaly detection](xref:Relational_anomaly_detection) | DataMiner 10.5.3/10.6.0<!-- [ID 42034] --> |

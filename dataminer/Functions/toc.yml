@@ -20,6 +20,13 @@ items:
     items:
       - name: Alarm focus
         topicUid: Alarm_focus
+      - name: Automatic alarm grouping
+        topicUid: Automatic_alarm_grouping
+        items:
+          - name: Manually creating or updating alarm groups
+            topicUid: Manually_creating_or_updating_alarm_groups
+          - name: Customizing alarm grouping rules
+            topicUid: Customizing_alarm_grouping_rules
   - name: Automation
     items:
       - name: About DataMiner Automation

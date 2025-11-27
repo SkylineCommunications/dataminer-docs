@@ -1,5 +1,5 @@
 ---
-uid: automatic_incident_tracking_benchmarks
+uid: Automatic_alarm_grouping_benchmarks
 ---
 
 # Automatic alarm grouping benchmarks

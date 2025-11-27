@@ -55,7 +55,7 @@ Select this option to hide raw alarms of a correlated alarm. To show the raw ala
 
 ## Automatic alarm grouping
 
-This option is only available if automatic alarm grouping is enabled in System Center. It is also only available for active alarms, not for history alarms. For more information, see [Automatic alarm grouping](xref:Automatic_incident_tracking).
+This option is only available if automatic alarm grouping is enabled in System Center. It is also only available for active alarms, not for history alarms. For more information, see [Automatic alarm grouping](xref:Automatic_alarm_grouping).
 
 Note that prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- 43903 -->, this option is called *Automatic incident tracking* instead.
 

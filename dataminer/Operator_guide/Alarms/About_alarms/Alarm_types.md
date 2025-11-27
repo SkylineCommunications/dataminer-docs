@@ -106,11 +106,11 @@ Correlated alarms are represented in the Alarm Console with a special icon.
 
 ### Incidents
 
-[Alarm groups](xref:Automatic_incident_tracking), also known as incidents, are alarms triggered by the SLAnalytics process. They automatically group alarms related to the same incident based on advanced analytics.
+[Alarm groups](xref:Automatic_alarm_grouping), also known as incidents, are alarms triggered by the SLAnalytics process. They automatically group alarms related to the same incident based on advanced analytics.
 
 They use the same icon as correlated alarms, and they can be expanded in the same way as correlated alarms. Their severity is always the highest severity of their base alarms.
 
-You can also manually create your own alarm group (see [Manually updating an alarm group](xref:Automatic_incident_tracking#manually-updating-an-alarm-group).)
+You can also manually create your own alarm group (see [Manually updating an alarm group](xref:Manually_creating_or_updating_alarm_groups).)
 
 ## Alarm type priority
 

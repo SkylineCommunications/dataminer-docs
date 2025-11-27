@@ -236,11 +236,6 @@ items:
             topicUid: Behavioral_anomaly_detection
           - name: Proactive cap detection
             topicUid: Proactive_cap_detection
-          - name: Automatic alarm grouping
-            topicUid: Automatic_incident_tracking
-            items:
-            - name: Customizing alarm grouping rules
-              topicUid: Customizing_alarm_grouping_rules
           - name: Monitoring of trend patterns
             topicUid: Monitoring_of_trend_patterns
           - name: Relational anomaly detection

@@ -105,7 +105,7 @@ The Automatic Alarm Grouping feature autonomously learns about system behavior a
 >
 > - Course: [Incident Tracking](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/incident-tracking/)
 > - Video: [Focus on the Root of Issues with Incident Analysis](https://www.youtube.com/watch?v=m6ITgtTFz1E) ![Video](~/dataminer/images/video_Duo.png)
-> - [Automatic Alarm Grouping](xref:Automatic_incident_tracking)
+> - [Automatic Alarm Grouping](xref:Automatic_alarm_grouping)
 
 ## Focus Alarms
 

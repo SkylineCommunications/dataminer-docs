@@ -43,7 +43,7 @@ To enable or disable the alarm focus feature:
 1. Under *Alarm focus*, click the toggle button.
 
 > [!IMPORTANT]
-> If you disable alarm focus, [automatic alarm grouping](xref:Automatic_incident_tracking) is automatically also disabled, and only [manual alarm grouping](xref:Automatic_incident_tracking#manually-updating-an-alarm-group) can still be used. <!-- RN 33348 -->
+> If you disable alarm focus, [automatic alarm grouping](xref:Automatic_alarm_grouping) is automatically also disabled, and only [manual alarm grouping](xref:Manually_creating_or_updating_alarm_groups) can still be used. <!-- RN 33348 -->
 
 > [!NOTE]
 > Alarm focus is only available if the DataMiner System uses [Storage as a Service](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
