@@ -67,7 +67,7 @@ When you have added a [web component](xref:DashboardWeb) in a dashboard or low-c
    For example:
 
    ```txt
-   #https://dma.local/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true
+   #https://{URL.DMAIP.Value}/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true
    ```
 
    By adding the `loop=true` parameter to the video URL, the video will play continuously in a loop.
