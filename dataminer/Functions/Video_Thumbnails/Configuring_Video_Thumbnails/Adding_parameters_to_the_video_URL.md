@@ -56,7 +56,7 @@ Additional configuration is possible in the URL:
 
 - `proxy=` (Generic Images): By default, a thumbnail of type `Generic Images` always uses the DMA as a proxy. However, you can add an extra URL parameter, "proxy", to override this behavior.
 
-  Example: `http://<DMA IP>/VideoThumbnails/video.htm?type=Generic%20Images&source=<IMG URL>&proxy=false`
+  Example: `http://<DMA>/VideoThumbnails/video.htm?type=Generic%20Images&source=<IMG URL>&proxy=false`
 
 > [!NOTE]
 >
