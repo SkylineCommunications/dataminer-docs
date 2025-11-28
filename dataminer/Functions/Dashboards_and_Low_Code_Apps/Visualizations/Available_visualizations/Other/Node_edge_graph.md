@@ -115,6 +115,7 @@ In the *Settings* pane for this component, you can customize its behavior to sui
 | WebSocket settings | Inherit WebSocket settings from page/panel | Clear the checkbox to use a custom polling interval for this component. When cleared, you can specify a different polling interval (in seconds). |
 | General | Override dynamic units | Clear the checkbox to prevent parameter units from changing dynamically based on their value and protocol definition. Disabled by default. |
 | Data retrieval | Update data | Toggle the switch to determine whether the data should be refreshed automatically (provided this is supported by the data source). See [Query updates](xref:Query_updates)<!--RN 37269-->. Disabled by default. |
+| Advanced | Hold Ctrl to zoom | Available from DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, when the [*Zooming* layout option](#node-edge-graph-layout) is enabled. Select the checkbox to make the scroll wheel zoom only when you hold the Ctrl key. |
 
 The node edge graph component supports showing multiple layers. The following *Identifiers* settings are available for each query added to the component:
 
@@ -130,44 +131,20 @@ The node edge graph component supports showing multiple layers. The following *I
 | Nodes | Base node | Icon | Select a different icon from the dropdown box to customize the icon shown within the node shape. Click the circle to the right of the box to select a custom color. From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, this setting is only available if the *Visual* setting is set to *Icon*. |
 | Nodes | Base node | Image | Only available if the *Visual* setting is set to *Image*. Enter a custom image link. |
 | Nodes | Base node | Size | From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, use the slider to adjust the size of the node, with a minimum of 1 px and a maximum of 100 px (default: 48 px). Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, select whether the node should be small, medium-sized, or large. |
-
-         - *Weight*: A number indicating the relative importance of the node. The higher the number, the more important the node, which determines where it is displayed in the graph (depending on the layout settings).
-
-         - *Enable tooltip*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over a node. This setting is enabled by default.
-
-         - *Show metric*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the node will not be displayed underneath the node.
-
-      1. If you want to visualize some nodes differently for the same query, under *Override nodes*, click *Add override*, specify a filter, and configure the nodes as detailed above.
-
-   1. Configure the edges as follows:
-
-      1. In the *Source* box, select the column from the query that represents the source of the connection. To the right of the dropdown list, click the icon representing the source node.
-
-      1. In the *Destination* box, select the column from the query that represents the destination of the connection. To the right of the dropdown list, click the icon representing the destination nodes.
-
-      1. Optionally, expand the *bidirectional configuration* section (available from DataMiner 10.1.11/10.2.0 onwards) to configure how multiple edges between two nodes should be mapped.
-
-      1. Optionally, next to *Style*, select a different style for the connection lines.
-
-      1. Optionally, next to *Weight*, specify a number to indicate the relative importance of the edge. This will determine the thickness of the connection line.
-
-      1. *Enable tooltip*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over an edge. This setting is enabled by default.
-
-      1. *Show metric*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the edge will not be displayed underneath the edge.
-
-1. From DataMiner 10.2.4/10.3.0 onwards, optionally, you can make the edges show a direction. To do so, in the *Settings* pane, activate the *Visualize directions* toggle button, and select how the direction should be shown:
-
-   - *Flow*: The direction is visualized by means of animated edges. This is the default option.
-
-   - *Arrows*: The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges.
-
-1. From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, you can configure whether pressing the Ctrl key is required to zoom in or out. To do so, in the *Layout* pane, toggle the *Advanced* > *Hold Ctrl to zoom* option:
-
-   - Enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
-
-   - Disabled: Scroll up or down to zoom in or out. This is the default option.
-
-   This setting is only available if the *Zooming* setting is enabled in the [*Layout* pane](#layout-configuration).
+| Nodes | Base node | Weight | A number indicating the relative importance of the node. The higher the number, the more important the node, which determines where it is displayed in the graph (depending on the layout settings). |
+| Nodes | Base node | Enable tooltip | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over a node. This setting is enabled by default. |
+| Nodes | Base node | Show metric | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the node will not be displayed underneath the node. |
+| Nodes | Override nodes | Add override | If you want to visualize some nodes differently for the same query, click *Add override*, specify a filter, and configure the nodes as detailed above. |
+| Edges | `<query name>` | Source | Select the column from the query that represents the source of the connection. To the right of the dropdown list, click the icon representing the source node. |
+| Edges | `<query name>` | Destination | Select the column from the query that represents the destination of the connection. To the right of the dropdown list, click the icon representing the destination nodes. |
+| Edges | `<query name>` | Bidirectional configuration section | Optionally, configure how multiple edges between two nodes should be mapped. |
+| Edges | Actions | Style | Optionally, select a different style for the connection lines. |
+| Edges | Actions | Weight | Optionally, specify a number to indicate the relative importance of the edge. This will determine the thickness of the connection line. |
+| Edges | Actions | Enable tooltip | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over an edge. This setting is enabled by default. |
+| Edges | Actions | Show metric | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the edge will not be displayed underneath the edge. |
+| Edges | Actions | Visualize directions | Available from DataMiner 10.2.4/10.3.0 onwards. Toggle the switch to specify whether the edges should display a direction. |
+| Edges | Action | How | Only available when *Visualize directions* is enabled. Choose how the direction should be displayed. Select *Flow* to visualize the direction using animated edges (default), or *Arrows* to show arrows drawn on the edges. You can also specify the exact arrow position. |
+| Nodes | Actions | Add override | If you want to visualize some edges differently for the same query, click *Add override*, specify a filter, and configure the edges as detailed above. |
 
 ## Component actions configuration
 
