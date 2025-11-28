@@ -256,6 +256,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Removing an invalid or unreachable IP address causes your own DMA to leave the DMS
+            topicUid: KI_Removing_an_invalid_or_unreachable_IP_address_causes_your_own_DMA_to_leave_the_DMS
           - name: QActions fail for element after uploading new protocol version
             topicUid: KI_QActions_fail_after_upload_protocol_version
           - name: gRPC-connected Cube not responding when Automation module is used
