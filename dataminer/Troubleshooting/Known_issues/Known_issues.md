@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [Removing an invalid or unreachable IP address causes your own DMA to leave the DMS](xref:KI_Removing_an_invalid_or_unreachable_IP_address_causes_your_own_DMA_to_leave_the_DMS) | Feature Release versions from DataMiner 10.5.7 onwards | | November 28, 2025 |
 | [QActions fail for element after uploading new protocol version](xref:KI_QActions_fail_after_upload_protocol_version) | From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards | | November 19, 2025 |
 | [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | | September 17, 2025 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
