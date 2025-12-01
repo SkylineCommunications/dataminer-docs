@@ -4,7 +4,7 @@ uid: trend_patterns_backup_failures
 
 # Using trend patterns to detect backup failures
 
-This tutorial illustrates DataMiner's [pattern matching](xref:Working_with_pattern_matching) feature in the context of Dashboards and Low-Code Apps. It will show you how to access patterns and occurrences within a dashboard and how to effectively handle missing pattern occurrences, using the example of server backups. By utilizing a trend pattern, DataMiner will detect the backups. The goal of the example dashboard in this tutorial is to generate a comprehensive report indicating whether daily backup patterns have been detected for all servers.
+This tutorial illustrates DataMiner's [pattern matching](xref:Pattern_matching) feature in the context of Dashboards and Low-Code Apps. It will show you how to access patterns and occurrences within a dashboard and how to effectively handle missing pattern occurrences, using the example of server backups. By utilizing a trend pattern, DataMiner will detect the backups. The goal of the example dashboard in this tutorial is to generate a comprehensive report indicating whether daily backup patterns have been detected for all servers.
 
 Estimated duration: 20 minutes.
 
@@ -13,7 +13,7 @@ Estimated duration: 20 minutes.
 
 > [!TIP]
 >
-> - For more information, such as technical limitations of pattern matching, see [Working with behavioral pattern matching](xref:Working_with_pattern_matching).
+> - For more information, such as technical limitations of pattern matching, see [Pattern matching](xref:Pattern_matching).
 > - See also: [Kata #41: Trend patterns in Cube - recap Empower](https://community.dataminer.services/courses/kata-41/) and [Kata #42: Trend patterns in Dashboards & LCA](https://community.dataminer.services/courses/kata-42/) on DataMiner Dojo.
 
 ## Prerequisites

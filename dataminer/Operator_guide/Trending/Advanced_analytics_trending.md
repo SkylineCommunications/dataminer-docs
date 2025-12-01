@@ -14,7 +14,7 @@ Most of these features rely on the SLAnalytics process. These require [Storage a
 
 - [Behavioral anomaly detection](xref:Behavioral_anomaly_detection)
 
-- [Pattern matching](xref:Working_with_pattern_matching)
+- [Pattern matching](xref:Pattern_matching)
 
 Other features depend on a connection to dataminer.services. These cannot be activated or deactivated in System Center, and Cassandra is not strictly required for them, although it is recommended. At present, only one such feature is available: [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph)
 

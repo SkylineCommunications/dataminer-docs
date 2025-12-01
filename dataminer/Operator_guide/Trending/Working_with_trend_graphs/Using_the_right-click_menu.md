@@ -42,7 +42,7 @@ The trending right-click menu contains the following commands:
 
 - **Show most detailed data**: If you select this option, the most detailed data available will be shown, rather than average data.
 
-- **Expand tags**: Highlights all patterns matching the configured tags. See [Working with pattern matching](xref:Working_with_pattern_matching).
+- **Expand tags**: Highlights all patterns matching the configured tags. See [Pattern matching](xref:Pattern_matching).
 
 - **Show percentile**: Displays a percentile line for the currently displayed data. The calculated percentile and its value will be displayed to the right of the line. Changing the displayed range does not update the percentile line, so that you can compare it with the data for a larger or smaller time frame. The percentile line will be displayed as a full line over the range for which it was originally displayed, and as a dashed line over the rest of the graph. Click the line to change the percentile or to refresh it to the currently displayed data.
 

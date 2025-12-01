@@ -4,7 +4,7 @@ uid: Pattern_Matching_Trend_Tutorial
 
 # Working with trend patterns in DataMiner Cube
 
-This tutorial showcases DataMiner's [pattern matching](xref:Working_with_pattern_matching) feature. You will first learn how to select a time range where multiple parameters exhibit a recurring pattern and create a trend pattern, which will help provide context information in your trend graphs. Then you will find out how you can avoid having to create the same pattern several times for different elements using the same protocol or for different rows in a table. Finally, you will learn how to work with pattern events in the Alarm Console, as well as how you can clean up the patterns that have been created in the system.
+This tutorial showcases DataMiner's [pattern matching](xref:Pattern_matching) feature. You will first learn how to select a time range where multiple parameters exhibit a recurring pattern and create a trend pattern, which will help provide context information in your trend graphs. Then you will find out how you can avoid having to create the same pattern several times for different elements using the same protocol or for different rows in a table. Finally, you will learn how to work with pattern events in the Alarm Console, as well as how you can clean up the patterns that have been created in the system.
 
 This tutorial will make use of [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter) to establish the parameters' normal behavior, enabling DataMiner to detect unexpected behavior. Trending is enabled on all parameters used in this tutorial.
 

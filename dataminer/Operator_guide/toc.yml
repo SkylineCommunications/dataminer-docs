@@ -234,8 +234,6 @@ items:
         items:
           - name: Proactive cap detection
             topicUid: Proactive_cap_detection
-          - name: Monitoring of trend patterns
-            topicUid: Monitoring_of_trend_patterns
           - name: Relational anomaly detection
             topicUid: Relational_anomaly_detection
             items:
@@ -309,21 +307,6 @@ items:
             topicUid: Working_with_trend_predictions
           - name: Working with trend icons
             topicUid: Working_with_trend_icons
-          - name: Working with pattern matching
-            topicUid: Working_with_pattern_matching
-            items:
-              - name: Defining a pattern
-                topicUid: Defining_a_pattern
-              - name: Editing a pattern definition
-                topicUid: Editing_a_pattern_definition
-              - name: Deleting a pattern definition
-                topicUid: Deleting_a_pattern_definition
-              - name: Managing pattern definitions
-                topicUid: Managing_pattern_definitions
-              - name: Tutorials
-                items:
-                  - name: Using trend patterns to detect backup failures
-                    topicUid: trend_patterns_backup_failures
           - name: Working with relation learning
             topicUid: Working_with_relation_learning
             items:

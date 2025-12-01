@@ -11,7 +11,7 @@ DataMiner trending allows you to check the behavior of specific parameters by me
 
 With the [trending settings](xref:User_settings#trending-settings) in DataMiner Cube, you can customize how graphs are displayed and how you can interact with them.
 
-Based on the available trend data, DataMiner Analytics provides features such as [trend predictions](xref:Working_with_trend_predictions), [anomaly detection](xref:Behavioral_anomaly_detection), [pattern matching](xref:Working_with_pattern_matching), and [relation learning](xref:Working_with_relation_learning).
+Based on the available trend data, DataMiner Analytics provides features such as [trend predictions](xref:Working_with_trend_predictions), [anomaly detection](xref:Behavioral_anomaly_detection), [pattern matching](xref:Pattern_matching), and [relation learning](xref:Working_with_relation_learning).
 
 Trending is configured using so-called [trend templates](xref:About_trend_templates). For each protocol and protocol version, one or more trend templates can be configured. These determine for which parameters trend information is stored, and which kind of trend information (real-time or average).
 

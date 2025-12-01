@@ -709,7 +709,7 @@ This table is defined as follows:
 
 #### analytics_parameterinfo_v1
 
-This table contains data for each trended parameter that is tracked by one of the proactive advanced analytics features: trend icons, [behavioral anomaly detection](xref:Behavioral_anomaly_detection), [proactive cap detection](xref:Proactive_cap_detection) and [monitoring of trend patterns](xref:Monitoring_of_trend_patterns). This data is required for the real-time updating of the model information stored in the other analytics tables upon incoming new data values.
+This table contains data for each trended parameter that is tracked by one of the proactive advanced analytics features: trend icons, [behavioral anomaly detection](xref:Behavioral_anomaly_detection), [proactive cap detection](xref:Proactive_cap_detection) and [pattern matching](xref:Pattern_matching). This data is required for the real-time updating of the model information stored in the other analytics tables upon incoming new data values.
 
 This table is defined as follows:
 

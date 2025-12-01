@@ -63,7 +63,7 @@ Based on AI pattern matching algorithms, instances of tagged patterns are automa
 > - Video about [Intelligent Fault Detection](https://www.youtube.com/watch?v=Ug1J0Pn6o3k) (covering Automated Tagging, among others) ![Video](~/dataminer/images/video_Duo.png)
 > - Blog post about [Multivariate Pattern Matching](https://community.dataminer.services/using-the-power-of-multivariate-patterns-to-add-context-to-your-trend-graphs/)
 > - [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
-> - [Working with pattern matching](xref:Working_with_pattern_matching)
+> - [Pattern matching](xref:Pattern_matching)
 
 ## Change Point Detection
 

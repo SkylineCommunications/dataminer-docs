@@ -88,7 +88,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | PAM | Production Asset Management. System designed to manage the production workflow, often in digital media production. |
 | Parameter | A variable that refers to pieces of data in the system. See [Parameters](xref:parameters). |
 | Parameter dependency | A relationship between two or more parameters defined in an element protocol. See [Parameter dependencies](xref:Parameter_dependencies). |
-| Pattern matching | The automatic recognition of a tagged pattern in the trend data of a parameter. See [Working with pattern matching](xref:Working_with_pattern_matching). |
+| Pattern matching | The automatic recognition of a tagged pattern in the trend data of a parameter. See [Pattern matching](xref:Pattern_matching). |
 | Pending inventory | In the context of [DataMiner IDP](xref:SolIDP), this represents the elements in a DMS that are not yet managed by IDP. Also known as "unmanaged inventory". |
 | PHY | Physical layer. |
 | PMR | Private Mobile Radio. Two-way radio voice communication systems using portable, mobile, base station and dispatch console radios. Also known as Professional Mobile Radio and Land Mobile Radio (LMR). |
@@ -272,7 +272,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Transparent clock | Device in a PTP environment that passes the time it retrieves from a boundary clock or grandmaster clock on to endpoint devices. See [DataMiner PTP app](xref:SolPTP) |
 | Trend change | Change in the behavior of a trend, detected by DataMiner Analytics, where the value suddenly starts to increase or decrease at an unusual rate. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection). |
 | Trend group | A group of parameters for which trending is displayed. See [Working with trend groups](xref:Working_with_trend_groups). |
-| Trend pattern | A tagged pattern in the trend data of a parameter. See [Working with pattern matching](xref:Working_with_pattern_matching) and [Monitoring of trend patterns](xref:Monitoring_of_trend_patterns). |
+| Trend pattern | A tagged pattern in the trend data of a parameter. See [Pattern matching](xref:Pattern_matching). |
 | Trend prediction | Prediction of the expected trend of a parameter value in the future. See [Working with trend predictions](xref:Working_with_trend_predictions). |
 | Trend template | Template that defines for which parameter trending information has to be logged and which kind of trending information has to be included. See [Trend templates](xref:About_trend_templates). |
 | Trending | DataMiner functionality that allows you to visualize the trend of parameter values. See [Trending](xref:trending). |
