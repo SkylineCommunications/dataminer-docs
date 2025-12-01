@@ -14,7 +14,9 @@ Redundancy groups have specific context menu options in the Surveyor. They also 
 > To quickly find a redundancy group in the Surveyor, search with the term “redundancy”, followed by a space and part of the redundancy group name. See [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube).
 
 > [!IMPORTANT]
-> Redundancy groups cannot be integrated with DataMiner Service and Resource Management (SRM).
+> 
+> - Redundancy groups cannot be integrated with DataMiner Service and Resource Management (SRM).
+> - Redundancy groups are not supported for DVEs or connectors without groups. <!-- DCP278771 -->
 
 ## Primary elements, backup elements and virtual primary elements
 
@@ -33,7 +35,7 @@ In short, when creating a redundancy group, you have to do the following:
 > [!NOTE]
 >
 > - Virtual primary elements “inherit” their parameter values from the primary element or backup element to which they are linked. However, they have their own alarm history and trend data.
-> - Virtual primary elements can be included in services. That way, physical devices in a service can be automatically swapped when necessary without affecting the service itself.
+> - Virtual primary elements can be included in services. That way, physical devices in a service can be automatically swapped when necessary without affecting the service itself. 
 
 ## Software redundancy
 
