@@ -42,12 +42,35 @@ items:
             topicUid: Deleting_a_pattern_definition
           - name: Managing pattern definitions
             topicUid: Managing_pattern_definitions
-          - name: Tutorials
-            items:
-              - name: Using trend patterns to detect backup failures
-                topicUid: trend_patterns_backup_failures
-
-
+      - name: Relation learning
+        topicUid: Relation_learning
+        items:
+          - name: Adding related parameters to a trend graph
+            topicUid: Adding_related_parameters_to_a_trend_graph
+          - name: Adding time-scoped related parameters to a trend graph
+            topicUid: Adding_time_scoped_related_parameters_to_a_trend_graph
+      - name: Providing user feedback
+        topicUid: Providing_user_feedback
+      - name: Tutorials
+        items:
+          - name: Detecting anomalies with DataMiner
+            topicUid: Anomaly_Tutorial
+          - name: Improving anomaly detection using feedback
+            topicUid: Anomaly_Feedback_Tutorial
+          - name: Staying ahead of issues with proactive cap detection
+            topicUid: Proactive_Cap_Detection_Tutorial
+          - name: Gaining insights using time-scoped relation learning
+            topicUid: Time_Scoped_Relation_Learning_Tutorial
+          - name: Working with trend patterns in DataMiner Cube
+            topicUid: Pattern_Matching_Trend_Tutorial
+          - name: Creating an anomaly overview dashboard
+            topicUid: Creating_Anomaly_Overview_Dashboard
+          - name: Using trend patterns to detect backup failures
+            topicUid: trend_patterns_backup_failures
+          - name: Fine-tuning alarm grouping
+            topicUid: Incident_Tracking_Configuration_Tutorial
+          - name: Working with relational anomaly detection
+            topicUid: Relational_Anomaly_Detection_Tutorial
   - name: Automation
     items:
       - name: About DataMiner Automation
