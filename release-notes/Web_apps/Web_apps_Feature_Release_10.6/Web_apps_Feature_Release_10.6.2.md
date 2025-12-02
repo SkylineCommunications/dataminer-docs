@@ -32,6 +32,14 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 Because of a number of enhancements, performance has increased when rendering a large number of template previews in e.g. the *Browse templates* window.
 
+#### Dashboards/Low-Code Apps - Templates: Default templates of all components that are using templates will now show up a presets in 'Browse templates' window [ID 44174]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In the *Browse templates* window, all default templates of all components that are using templates will now show up a presets.
+
+Also, this window will now include a number of additional presets.
+
 ### Fixes
 
 #### Dashboards app: Problem when generating a PDF report of a dashboard containing a Time range component [ID 44168]
