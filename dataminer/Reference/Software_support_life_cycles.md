@@ -103,7 +103,6 @@ The following features currently have the "End of Support" status. They will no 
 
 | Item | Details | Future status |
 |------|---------|---------------|
-| Support for Cassandra database on Windows OS | Cassandra no longer supports Windows as its operating system from version 4.x onwards. Consequently, from DataMiner 10.4.x onwards, Cassandra databases on Windows up to Cassandra version 3.11 are no longer supported. We recommend moving to a Linux system, using [Ubuntu LTS](https://catalog.dataminer.services/details/c6285161-e8c7-4be3-a8b3-20259b20815b). | End of life to be confirmed. |
 | Support for Cassandra versions prior to 4.x |Cassandra versions older than Cassandra 4.x are no longer supported on any operating system.| End of Life as of DataMiner 10.7.x (Q4 2026).|
 | Support for MySQL as local database | End of Support as of DataMiner 10.6.x. Existing features will work, but some new features will require [Storage as a Service](xref:STaaS) (recommended) or [dedicated clustered storage](xref:Dedicated_clustered_storage). | End of Life to be confirmed. |
 | Two-site redundant indexing clusters | This setup should no longer be used. For optimal redundancy, we recommend switching to [Storage as a Service](xref:STaaS). | End of Life as of DataMiner 10.7.x (Q4 2026).|
@@ -115,6 +114,7 @@ The following features currently have the "End of Life" status. They are no long
 | Item | Details |
 |------|---------|
 | Support for Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service | End of Life as of DataMiner 10.5.x. Support for this feature ended with DataMiner 10.3.0 [CU8]/10.3.11. We recommend switching to [Storage as a Service](xref:STaaS). Note that, though not recommended, using a self-managed OpenSearch database remains supported. |
+| Support for Cassandra database on Windows OS | Cassandra databases are no longer supported on Windows. We recommend moving to a Linux system, using [Ubuntu LTS](https://catalog.dataminer.services/details/c6285161-e8c7-4be3-a8b3-20259b20815b). |
 | Support for DataMiner Cube running in Internet Explorer/Edge in IE compatibility mode (XBAP) | End of Life as of DataMiner 10.3.x. |
 | Support for MSSQL as local database | End of Life as of DataMiner 10.3.x. We recommend switching to [Storage as a Service](xref:STaaS). |
 | Support for Visual Studio 2015 | End of Life as of DIS 2.35. DIS will no longer be compatible with this Visual Studio version. |
