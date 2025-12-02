@@ -105,3 +105,9 @@ Up to now, SLAnalytics would incorrectly not receive any "swarming complete" not
 In some cases, a capability could incorrectly be set to a null value.
 
 From now on, when a capability is booked, it will no longer be possible to set its value to null.
+
+#### Failover: Problem when reloading the scheduled tasks [ID 44234]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.

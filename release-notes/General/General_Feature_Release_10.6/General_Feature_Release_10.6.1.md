@@ -574,3 +574,9 @@ This call closes all previous trend windows that are still open and have already
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 Because of a protobuf serialization issue, GQI data sources could throw an exception when requesting certain data from SLNet.
+
+#### Failover: Problem when reloading the scheduled tasks [ID 44234]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.
