@@ -72,6 +72,20 @@ When triggered, a *node move* event will provide the following parameters:
 
 ## Changes
 
+### Breaking changes
+
+#### Annotations are now End of Life [ID 44136]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Annotations are now End of Life, and will no longer work when connected to a DataMiner Agent running main release version 10.6.0 or feature release version 10.6.1 (or above).
+
+Also, when connected to a DataMiner Agent running main release version 10.6.0 or feature release version 10.6.1 (or above), the following Web Services API methods (v1) will return an error:
+
+- GetAnnotationsLinkForElement
+- GetAnnotationsLinkForService
+- GetAnnotationsLinkForView
+
 ### Enhancements
 
 #### Dashboards/Low-Code Apps - Line & area chart component: Exporting trend data of aggregation parameters is now supported [ID 43939]
@@ -199,18 +213,6 @@ Also, you will be able to specify whether you want the list to show custom templ
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 The *Pivot table* and *Group* components are being retired. From now on, both will no longer appear in lists of available visualizations, unless you use the `showAdvancedSettings=true` URL option.
-
-#### Annotations are now End of Life [ID 44136]
-
-<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
-
-Annotations are now End of Life, and will no longer work when connected to a DataMiner Agent running mean release version 10.6.0 or feature release version 10.6.1 (or above).
-
-Also, the following methods have been removed from the Web Services API (v1):
-
-- GetAnnotationsLinkForElement
-- GetAnnotationsLinkForService
-- GetAnnotationsLinkForView
 
 #### GQI DxM: DOM data source now supports reading only a selected subset of fields from `DomInstance` objects [ID 44141]
 
