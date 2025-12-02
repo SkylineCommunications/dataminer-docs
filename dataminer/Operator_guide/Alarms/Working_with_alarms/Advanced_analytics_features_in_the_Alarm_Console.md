@@ -15,7 +15,7 @@ The following advanced analytics features **assist at identifying incidents in t
 
 - [Automatic alarm grouping](xref:Automatic_alarm_grouping).
 
-The following advanced analytics features **generate suggestion events** that inform users about new insights on the data behavior of a trended parameter. These suggestion events are displayed in the *Suggestion events* tab of the Alarm Console. See [Changing the alarm console layout](xref:ChangingTheAlarmConsoleLayout).
+The following advanced analytics features generate [suggestion events](xref:Alarm_types#suggestion-events) that inform users about new insights into the data behavior of a trended parameter:
 
 - [Behavioral anomaly detection](xref:Behavioral_anomaly_detection).
 
