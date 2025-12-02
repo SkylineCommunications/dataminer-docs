@@ -85,3 +85,9 @@ A `Cassandra.InvalidQuery` exception with message "No keyspace has been specifie
 When neither an *SLCloud.xml* file nor a *MessageBrokerConfig.json* file could not be found on a DataMiner Agent, up to now, any process using MessageBroker would fail to generate a default *MessageBrokerConfig.json* file. As a result, it would not be possible to connect to NATS.
 
 From now on, when neither a *SLCloud.xml* file nor a *MessageBrokerConfig.json* file can be found, a default *MessageBrokerConfig.json* file will be generated.
+
+#### Problem with SLElement when loading elements that included matrix parameters [ID 44188]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In some cases, SLElement could stop working when loading elements that included matrix parameters.
