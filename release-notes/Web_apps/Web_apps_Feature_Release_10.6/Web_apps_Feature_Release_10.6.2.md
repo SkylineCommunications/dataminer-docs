@@ -34,4 +34,8 @@ Because of a number of enhancements, performance has increased when rendering a 
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards app: Problem when generating a PDF report of a dashboard containing a Time range component [ID 44168]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When you had generated a PDF report of a dashboard that contained a *Time range* component of which the *Edit using* option was set to "Keyboard & calendar", up to now, the date would incorrectly not be displayed.
