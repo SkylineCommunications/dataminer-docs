@@ -60,6 +60,10 @@ items:
             topicUid: Relational_anomaly_detection_xml
           - name: Working with the RAD API
             topicUid: RAD_API
+      - name: Trend icons
+        topicUid: Trend_icons
+      - name: Trend prediction
+        topicUid: Trend_prediction
       - name: Providing user feedback
         topicUid: Providing_user_feedback
       - name: Tutorials

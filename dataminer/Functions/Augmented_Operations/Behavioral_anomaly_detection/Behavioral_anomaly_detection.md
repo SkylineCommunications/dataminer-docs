@@ -28,7 +28,7 @@ If a change point other than an outlier or unlabeled change is **unexpected**, i
 
 ## Change points in trend graphs
 
-On a trend graph, a change point is indicated by a bar below the graph. In addition, recent change points will be reflected by a [parameter's trend icon](xref:Working_with_trend_icons).
+On a trend graph, a change point is indicated by a bar below the graph. In addition, recent change points will be reflected by a [parameter's trend icon](xref:Trend_icons).
 
 ![Anomaly detection](~/dataminer/images/Anomaly_Detection.png)<br>*Trending: Anomaly detection in DataMiner 10.4.5*
 

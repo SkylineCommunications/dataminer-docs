@@ -272,11 +272,6 @@ items:
             topicUid: Displaying_alarm_template_colors_in_trend_graphs
       - name: Advanced analytics features in trend graphs
         topicUid: Advanced_analytics_trending
-        items:
-          - name: Working with trend predictions
-            topicUid: Working_with_trend_predictions
-          - name: Working with trend icons
-            topicUid: Working_with_trend_icons
       - name: Working with histograms
         topicUid: Viewing_trend_information_in_a_histogram
         items:

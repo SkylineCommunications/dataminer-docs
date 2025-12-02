@@ -1,8 +1,8 @@
 ---
-uid: Working_with_trend_icons
+uid: Trend_icons
 ---
 
-# Working with trend icons
+# Trend icons
 
 The DataMiner Analytics software analyzes the behavior of numeric parameters in real time. A visual summary of the most recent behavior is shown in the form of a **trend icon** next to a trended parameter on a data page.
 

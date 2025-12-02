@@ -195,7 +195,7 @@ In the previous step, you used negative feedback to remove certain anomalies det
    This demonstrates that DataMiner's anomaly detection algorithm has learned when to generate an anomaly based on your feedback.
 
 > [!TIP]
-> You can easily check whether a parameter has a change point or an anomaly within the last hour by looking at the trend icons displayed in front of the parameters. These icons show the type of change point detected, if any, while their color indicates whether the change point was marked as an anomaly. See [Working with trend icons](xref:Working_with_trend_icons) for more information.
+> You can easily check whether a parameter has a change point or an anomaly within the last hour by looking at the trend icons displayed in front of the parameters. These icons show the type of change point detected, if any, while their color indicates whether the change point was marked as an anomaly. See [Trend icons](xref:Trend_icons) for more information.
 >
 > ![Trend icons indicating all sectors have a change point in the last hour and all but the fifth were anomalous](~/dataminer/images/Average_Download_Bit_Rate_Trend_Icons.png)
 

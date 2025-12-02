@@ -151,7 +151,7 @@ Gain valuable insights with ease. Tagged patterns and anomalies provide context 
 >
 > - Course: [Time-scoped relations](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/time-scoped-relations/)
 > - Course: [Trend icons](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/trend-icons/)
-> - [Working with trend icons](xref:Working_with_trend_icons)
+> - Documentation: [Trend icons](xref:Trend_icons)
 > - [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph)
 > - [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph)
 > - [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature)

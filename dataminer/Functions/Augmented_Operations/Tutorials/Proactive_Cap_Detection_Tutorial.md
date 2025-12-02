@@ -4,7 +4,7 @@ uid: Proactive_Cap_Detection_Tutorial
 
 # Staying ahead of issues with proactive cap detection
 
-In this tutorial, you will learn how to use DataMiner's [proactive cap detection](xref:Proactive_cap_detection) feature to be notified about potential upcoming issues. This feature uses [trend predictions](xref:Working_with_trend_predictions) to automatically analyze which parameters are at risk of exceeding critical thresholds in the near future, and will notify users about them.
+In this tutorial, you will learn how to use DataMiner's [proactive cap detection](xref:Proactive_cap_detection) feature to be notified about potential upcoming issues. This feature uses [trend prediction](xref:Trend_prediction) to automatically analyze which parameters are at risk of exceeding critical thresholds in the near future, and will notify users about them.
 
 By default, proactive cap detection is enabled for all trended parameters. Trending is activated by default for the parameters used in this tutorial. For more information about the technical limitations, see the [proactive cap detection](xref:Proactive_cap_detection) page.
 

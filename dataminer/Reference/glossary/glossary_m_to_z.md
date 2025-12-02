@@ -273,7 +273,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Trend change | Change in the behavior of a trend, detected by DataMiner Analytics, where the value suddenly starts to increase or decrease at an unusual rate. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection). |
 | Trend group | A group of parameters for which trending is displayed. See [Working with trend groups](xref:Working_with_trend_groups). |
 | Trend pattern | A tagged pattern in the trend data of a parameter. See [Pattern matching](xref:Pattern_matching). |
-| Trend prediction | Prediction of the expected trend of a parameter value in the future. See [Working with trend predictions](xref:Working_with_trend_predictions). |
+| Trend prediction | Prediction of the expected trend of a parameter value in the future. See [Trend prediction](xref:Trend_prediction). |
 | Trend template | Template that defines for which parameter trending information has to be logged and which kind of trending information has to be included. See [Trend templates](xref:About_trend_templates). |
 | Trending | DataMiner functionality that allows you to visualize the trend of parameter values. See [Trending](xref:trending). |
 | TS | Transport Stream. Digital container format for transmission and storage of audio, video and data of a broadcast. |

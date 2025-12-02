@@ -115,7 +115,7 @@ uid: glossary_a_to_l
 | Dashboard Gateway | DataMiner software that allows users to access dashboards even if they do not have access to DataMiner. See [Dashboard Gateway installation](xref:Dashboard_Gateway_installation). |
 | Data Display | Legacy term referring to the data pages of cards in DataMiner Cube. |
 | DataMiner Agent | A piece of hardware running the DataMiner software. Abbreviated as DMA. |
-| DataMiner Analytics | Artificial intelligence technology built into DataMiner, which among others provides [trend predictions](xref:Working_with_trend_predictions) and [various features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console). |
+| DataMiner Analytics | Artificial intelligence technology built into DataMiner, which among others provides [trend prediction](xref:Trend_prediction) and [various features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console). |
 | DataMiner Certification Program | Program that allows you to test your DataMiner knowledge and skills and prove your expertise with our official certificates. See [DataMiner certification](xref:Overview_Training_certification). |
 | DataMiner Client | An entity communicating with a DataMiner Agent. The term is mostly used to denote a client application that allows users to interact with the DataMiner Agent. See [DataMiner client apps](xref:Client_apps). |
 | DataMiner Cloud Platform | Former name of dataminer.services. Abbreviated as DCP. See [dataminer.services](xref:about_dataminer_services). |
