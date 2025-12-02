@@ -16,7 +16,7 @@ Redundancy groups have specific context menu options in the Surveyor. They also 
 > [!IMPORTANT]
 > 
 > - Redundancy groups cannot be integrated with DataMiner Service and Resource Management (SRM).
-> - Redundancy groups are not supported for DVEs or connectors without groups. <!-- DCP278771 -->
+> - The following types of elements cannot be included in redundancy groups: Elements using a connector without [groups](xref:LogicGroups), as well as DVE child elements. <!-- DCP278771 -->
 
 ## Primary elements, backup elements and virtual primary elements
 
