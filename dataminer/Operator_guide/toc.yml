@@ -231,16 +231,6 @@ items:
         topicUid: Clearing_alarms
       - name: Advanced analytics features in the Alarm Console
         topicUid: Advanced_analytics_features_in_the_Alarm_Console
-        items:
-          - name: Relational anomaly detection
-            topicUid: Relational_anomaly_detection
-            items:
-            - name: Working with the RAD Manager
-              topicUid: RAD_manager
-            - name: Configuring RAD through the configuration XML file
-              topicUid: Relational_anomaly_detection_xml
-            - name: Working with the RAD API
-              topicUid: RAD_API
       - name: Advanced alarm functionality
         items:
           - name: Changing the default alarm colors

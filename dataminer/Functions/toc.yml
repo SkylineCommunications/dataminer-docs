@@ -51,6 +51,15 @@ items:
             topicUid: Adding_related_parameters_to_a_trend_graph
           - name: Adding time-scoped related parameters to a trend graph
             topicUid: Adding_time_scoped_related_parameters_to_a_trend_graph
+      - name: Relational anomaly detection
+        topicUid: Relational_anomaly_detection
+        items:
+          - name: Working with the RAD Manager
+            topicUid: RAD_manager
+          - name: Configuring RAD through the configuration XML file
+            topicUid: Relational_anomaly_detection_xml
+          - name: Working with the RAD API
+            topicUid: RAD_API
       - name: Providing user feedback
         topicUid: Providing_user_feedback
       - name: Tutorials
