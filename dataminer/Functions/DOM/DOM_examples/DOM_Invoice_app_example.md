@@ -332,7 +332,7 @@ var secondProductFieldValues = new List<FieldValue>()
     new FieldValue(productPriceFieldDescriptorId, new ValueWrapper<double>(599.95)),
 };
 
-// Add them to a Section linked to the ID of the GeneralSectionDefinition
+// Add them to a Section linked to the ID of the ProductsSectionDefinition
 var secondProductSection = new Section()
 {
     SectionDefinitionID = productsSectionDefinitionId
