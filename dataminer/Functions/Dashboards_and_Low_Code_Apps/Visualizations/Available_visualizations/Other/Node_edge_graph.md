@@ -4,7 +4,7 @@ uid: DashboardNodeEdgeGraph
 
 # Node edge graph
 
-The node edge graph component allows you to **visualize any type of objects (i.e. "nodes") and the connections between them (i.e. "edges")**. By linking parameters and properties to those nodes and edges, you can turn a node edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data.
+The node edge graph component allows you to **visualize any type of objects (i.e. "nodes") and the connections between them (i.e. "edges")**. By linking parameters and properties to those nodes and edges, you can turn the graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data.
 
 ![Node edge graph](~/dataminer/images/Node_Edge_Graph.gif)<br>*Node edge graph component in DataMiner 10.4.9*
 
@@ -12,23 +12,30 @@ The node edge graph component allows you to **visualize any type of objects (i.e
 
 The data necessary to create a node edge graph can be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects).
 
-The node edge graph component should therefore **always be configured with [query data input](xref:Query_Data)**.
+The component should therefore **always be configured with [query data input](xref:Query_Data)**.
 
 ## Interacting with the node edge graph
 
-Clicking items in the node edge graph also makes these available as data for other components. Keeping the Ctrl key pressed while you click them allows you to select multiple items at the same time.
+What you see in the node edge graph depends on the provided data and your [component configuration](#configuration-options).
 
-When edges are closely grouped together, edge labels may become minimized. If you hover the mouse pointer over the edge, the label becomes visible again. From DataMiner 10.3.0 [CU4]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->, you can press Ctrl+Space to display all labels in the node edge graph.
+> [!NOTE]
+> When edges are closely grouped together, edge labels may become minimized. If you hover the mouse pointer over the edge, the label becomes visible again. From DataMiner 10.3.0 [CU4]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->, you can press Ctrl+Space to display all labels at once.
+
+### Selecting items
+
+You can select multiple items in the node edge graph at the same time by keeping the Ctrl key pressed while clicking nodes.
+
+When you select one or multiple items in the node edge graph, the selected data becomes available under *All available data* > *Components* > *Node edge graph* > *Tables*.
+
+Thanks to this exposed data, you can use the node edge graph component as a dynamic selector, i.e. a component whose selection determines behavior or data elsewhere in your dashboard or app. A common use case is showing additional details when a node is selected.
 
 ### Zooming and panning
 
-When the [*Zooming* layout option](#node-edge-graph-layout) is enabled, there are several ways to **zoom in or out** on a node edge graph component:
+When the [*Zooming* option](#node-edge-graph-layout) is enabled, you can **zoom in or out** in two ways:
 
-- Press Ctrl while scrolling up or down.
+- Scroll up or down. Depending on your DataMiner version<!--RN 40017--> and the [*Hold Ctrl to zoom* option](#node-edge-graph-settings), you may need to hold the Ctrl key while scrolling.
 
-- Right-click and select an area of the graph to zoom in on that selected area.
-
-- Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017-->: Scroll up or down.
+- Right-click, drag to select an area, and zoom into it.
 
 To **move left or right across the component**, click the graph and drag your mouse. Note that panning is only possible when zooming is enabled.
 
@@ -44,8 +51,26 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
 ## Highlighting specific nodes
 
-    > [!NOTE]
-    > When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized.
+When you highlight items based on a query filter, only the items that match the filter are emphasized. Items outside the filter criteria remain visible, but with lowered opacity. The level of transparency can be adjusted.
+
+To highlight items with a query filter:
+
+1. In the *Layout* pane, make sure the *Filtering & Highlighting* > *Highlight* option is enabled.
+
+1. Set your preferred opacity, for example `20 %`. This determines how clearly you will see the items that do not meet the criteria specified in the query filter.
+
+   ![Highlight](~/dataminer/images/NodeEdgeGraph_Highlight.png)<br>*Node edge graph layout settings in DataMiner 10.6.1*
+
+1. Add a query filter visualization to your app or dashboard.
+
+1. Apply the same query data to the query filter that is used by the node edge graph.
+
+1. In the *Data* pane, navigate to *All available data* > *Components* > *Query filter #*, and drag the *Query columns* data item onto your node edge graph component.
+
+   In read mode, you can now use the query filter component to filter and refine the data displayed in the node edge graph component. Items that do not meet the specified criteria will be shown with lowered opacity.
+
+> [!NOTE]
+> When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized.
 
 ## Configuration options
 
@@ -69,17 +94,21 @@ Additionally, the following layout options are also available:
 
 #### Conditional coloring
 
-This option allows you to specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used. Users can switch to this coloring mode via the tooltip of a node or edge. To configure a color filter:
+In the *Layout* pane, under *Conditional coloring*, you can configure color filters for specific columns so that these can be used for highlighting in case analytical coloring is used. You can switch to this coloring mode via the tooltip of a node or edge. See [Using dynamic coloring](#using-dynamic-coloring).
 
-    - If the column you want to use for highlighting contains discrete values, click the color icon next to a value and then specify a highlight color for that value. If there are too many values to easily list them, you will first need to specify a filter in order to select a value.
+To configure a color filter:
 
-    - If the column you want to use for highlighting contains values for which a specific range can be specified, select the column, indicate the range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one column, each with a color of its own.
+- If the column you want to use for highlighting contains **discrete values**, click the color icon next to a value and then specify a highlight color for that value. If there are too many values to easily list them, you will first need to specify a filter in order to select a value.
+
+- If the column you want to use for highlighting contains **values for which a specific range can be specified**, select the column, indicate the range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one column, each with a color of its own.
 
 #### Node position options
 
+The node position settings determine how the graph arranges nodes visually. Depending on your dataset and use case, different positioning modes may be more suitable.
+
 The following options are available:
 
-- *Layered*: Nodes are displayed in different layers. This is the default option.
+- *Layered* (default): Nodes are displayed in different layers.
 
   When this option is enabled, you can then determine how different nodes are displayed depending on their importance, as indicated by their configured weight.
 
@@ -121,7 +150,7 @@ The node edge graph component supports showing multiple layers. The following *I
 
 | Section | Subsection | Option | Description |
 |--|--|--|--|
-| N/A | Nodes/Edges | ![marker](~/dataminer/images/Maps_Circle_icon.png) or ![line](~/dataminer/images/Maps_Line_icon.png) | In the box representing each query, click either *Set as node* or *Set as edge*. If a query is set as node, it will move to the nodes section. If a query is set as edge, it will move to the edges section. Once a query has been set to be a node or edge, you can still change this setting by clicking the node or edge icon in the top-right corner of the query box. |
+| N/A | `<query name>` | ![marker](~/dataminer/images/Maps_Circle_icon.png) or ![line](~/dataminer/images/Maps_Line_icon.png) | In the box representing each query, click either *Set as node* or *Set as edge*. If a query is set as node, it will move to the nodes section. If a query is set as edge, it will move to the edges section. Once a query has been set to be a node or edge, you can still change this setting by clicking the node or edge icon in the top-right corner of the query box. |
 | Nodes | `<query name>` | Node ID column | Select the column from the query that represents the node ID. |
 | Nodes |`<query name>` | X/Y | Only available when the *Node positions* layout option is set to *Linked as data*. Select the column from the query that contains the X and Y positions respectively. |
 | Nodes | Base node | Node name | This name is not displayed in the component itself, and is only intended to clarify the configuration. |
@@ -134,10 +163,12 @@ The node edge graph component supports showing multiple layers. The following *I
 | Nodes | Base node | Weight | A number indicating the relative importance of the node. The higher the number, the more important the node, which determines where it is displayed in the graph (depending on the layout settings). |
 | Nodes | Base node | Enable tooltip | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over a node. This setting is enabled by default. |
 | Nodes | Base node | Show metric | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the node will not be displayed underneath the node. |
+| Nodes | Base node | Actions | Select *Add action* to configure an action that is executed when a node is clicked or double-clicked, or when an icon is clicked in the tooltip. See [Adding actions to a node edge graph](#adding-actions-to-a-node-edge-graph). |
 | Nodes | Override nodes | Add override | If you want to visualize some nodes differently for the same query, click *Add override*, specify a filter, and configure the nodes as detailed above. |
 | Edges | `<query name>` | Source | Select the column from the query that represents the source of the connection. To the right of the dropdown list, click the icon representing the source node. |
 | Edges | `<query name>` | Destination | Select the column from the query that represents the destination of the connection. To the right of the dropdown list, click the icon representing the destination nodes. |
 | Edges | `<query name>` | Bidirectional configuration section | Optionally, configure how multiple edges between two nodes should be mapped. |
+| Edges | `<query name>` | Actions | Select *Add action* to configure an action that is executed when an edge is clicked or double-clicked, or when an icon is clicked in the tooltip. See [Adding actions to a node edge graph](#adding-actions-to-a-node-edge-graph). |
 | Edges | Actions | Style | Optionally, select a different style for the connection lines. |
 | Edges | Actions | Weight | Optionally, specify a number to indicate the relative importance of the edge. This will determine the thickness of the connection line. |
 | Edges | Actions | Enable tooltip | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over an edge. This setting is enabled by default. |
@@ -146,17 +177,23 @@ The node edge graph component supports showing multiple layers. The following *I
 | Edges | Action | How | Only available when *Visualize directions* is enabled. Choose how the direction should be displayed. Select *Flow* to visualize the direction using animated edges (default), or *Arrows* to show arrows drawn on the edges. You can also specify the exact arrow position. |
 | Nodes | Actions | Add override | If you want to visualize some edges differently for the same query, click *Add override*, specify a filter, and configure the edges as detailed above. |
 
-## Component actions configuration
+## Adding actions to a node edge graph
 
-If you add a node edge graph to a custom app using the [DataMiner Low-Code Apps](xref:Application_framework), you can also configure actions for the component. This feature is not available in the Dashboards app.
+When you add a node edge graph to a low-code app, you can configure actions that are executed when a node or edge is clicked or double-clicked, or when an icon is selected in the tooltip that appears when you hover over the node or edge.
 
 To configure actions:
 
-1. In the *Component* \> *Settings* pane, under the nodes or edges you want to configure actions for, expand the *Actions* section.
+1. In the *Component* > *Settings* pane, under the nodes or edges you want to configure actions for, expand the *Actions* section.
 
 1. Click *Add action*.
 
-1. To specify how the action is triggered, at the top of the action configuration section, click the icon for click, double-click, or button in tooltip.
+1. At the top of the action configuration section, specify how the action is triggered:
+
+   - ![On click](~/dataminer/images/NodeEdgeGraph_Onclick.png): The action is triggered when the node or edge is clicked.
+
+   - ![On double-click](~/dataminer/images/NodeEdgeGraph_Ondouble-click.png): The action is triggered when the node or edge is double-clicked.
+
+   - ![On icon click](~/dataminer/images/NodeEdgeGraph_Tooltipicon.png): The action is triggered when the icon in the tooltip is selected.
 
 1. In the *Label* box, specify a label for the action.
 
@@ -164,11 +201,17 @@ To configure actions:
 
 1. In the *Action* box, select the action that should be executed. See [Configuring app events](xref:LowCodeApps_event_config).
 
-You can configure the following [**component actions**](xref:LowCodeApps_event_config#executing-a-component-action):
+### Node edge graph component actions
 
-- *Fetch the data*: Fetches the data for the component. Available from DataMiner 10.2.10/10.3.0 onwards.
+Component actions are operations that can be executed on a component when an event is triggered.
 
-- *Clear selection*: Clear the data status of the component. Available from DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->.
+When you select the [*Execute component action* option](xref:LowCodeApps_event_config#executing-a-component-action), you can choose from a list of components in the app and the specific actions available for each of them.
+
+For the node edge graph component, the following actions are available:
+
+- *Fetch the data*: This action fetches the data for the component again. Available from DataMiner 10.2.10/10.3.0 onwards.
+
+- *Clear selection*: This action clears the data status of the component. Available from DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->.
 
 > [!NOTE]
 > You can also override the default action for a node or edge using the *Add override* option.

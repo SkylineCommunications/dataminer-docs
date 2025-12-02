@@ -55,9 +55,9 @@ You can modify the behavior of an app by adding specific parameters to the URL.
 
   - [Line & area chart > Parameter table filter](xref:LineAndAreaChart#configuring-the-component)
 
-  - [Node edge graph > *Enable tooltip* setting](xref:DashboardNodeEdgeGraph#basic-component-configuration)
+  - [Node edge graph > *Enable tooltip* setting](xref:DashboardNodeEdgeGraph#node-edge-graph-settings)
 
-  - [Node edge graph > *Show metric* setting](xref:DashboardNodeEdgeGraph#basic-component-configuration)
+  - [Node edge graph > *Show metric* setting](xref:DashboardNodeEdgeGraph#node-edge-graph-settings)
 
   - [Parameter picker > Parameter table filter](xref:DashboardParameterPicker#configuring-the-component)
 
