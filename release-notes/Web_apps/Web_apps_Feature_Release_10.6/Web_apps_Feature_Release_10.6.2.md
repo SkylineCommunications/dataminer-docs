@@ -40,6 +40,14 @@ In the *Browse templates* window, all default templates of all components that a
 
 Also, this window will now include a number of additional presets.
 
+#### Dashboards/Low-Code Apps - Templates: Enhanced template previews [ID 44176]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+A number of enhancements have been made with regard to template previews.
+
+From now on, template previews will always be rendered in a consistent way, whatever the component in which they are viewed.
+
 ### Fixes
 
 #### Dashboards app: Problem when generating a PDF report of a dashboard containing a Time range component [ID 44168]
