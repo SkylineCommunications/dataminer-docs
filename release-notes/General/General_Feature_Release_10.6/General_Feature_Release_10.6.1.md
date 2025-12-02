@@ -568,3 +568,9 @@ When a row-based `FillArray` method was performed with zero rows as input and wi
 Up to now, when a NotifyDataMiner call `NT_CLOSE_HISTORY_TREND_WINDOW` (374) was sent for a particular table cell, it would incorrectly ignore the specified timestamp.
 
 This call closes all previous trend windows that are still open and have already passed since the specified time.
+
+#### Problem with GQI data sources because of a protobuf serialization issue [ID 44181]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Because of a protobuf serialization issue, GQI data sources could throw an exception when requesting certain data from SLNet.
