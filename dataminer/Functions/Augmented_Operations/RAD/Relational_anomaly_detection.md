@@ -89,6 +89,8 @@ Hovering over a tag button or right-clicking and selecting *Expand tags* will hi
 
 Additionally, a "+" icon will appear to the right of multivariate trend pattern tags and relational anomaly tags when not all involved parameters are currently loaded in the graph. Clicking the icon will load all parameters associated with the multi-variate trend pattern or the anomaly.
 
+![Relational anomaly group in trend graph](~/dataminer/images/RAD_trend_graph.gif)<br>*Trend graph showing a relational anomaly in DataMiner 10.6.1*
+
 ## Limitations
 
 - Monitoring parameters hosted on **multiple DataMiner Agents within a single relational anomaly group** is only supported from DataMiner 10.5.11/10.6.0 onwards.<!-- RN 43686 --> In previous DataMiner versions, all parameters in a group must be hosted on the same DMA. Note also that prior to DataMiner 10.5.9/10.6.0<!--RN 43320-->, the *RelationalAnomalyDetection.xml* file on a given DMA can only include parameters hosted on that same DMA.
