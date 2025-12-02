@@ -50,6 +50,7 @@ The following features currently have the "End of Engineering" status. They will
 | Connectors: [dllName option in QAction options attribute](xref:Protocol.QActions.QAction-options#dllnamenamedll) | This option is superfluous and should no longer be used. | End of Support as of DataMiner 10.7.x (Q4 2026). <br>End of Life as of DataMiner 10.8.x (Q4 2027). |
 | Legacy reservations | The legacy type of reservation used prior to DataMiner 9.5.3/9.6.0 (RN 15180) is obsolete and should no longer be used. | End of Life to be confirmed. |
 | Logger tables of type DirectConnection with a primary key |See [Defining a logger table of type DirectConnection with a primary key](xref:AdvancedLoggerTablesDefiningDirectConnectionTable). | End of Support as of DataMiner 10.7.x (Q4 2026). <br>End of Life as of DataMiner 10.8.x (Q4 2027). |
+| Pivot table and Group components | End of Engineering as of DataMiner 10.6.x. These components are being retired in the Dashboards app and Low-Code Apps. | End of Support as of DataMiner 10.7.x (Q4 2026).<br>End of Life as of DataMiner 10.8.x (Q4 2027). |
 | [Radius authentication](xref:Configuring_RADIUS_settings) | This type of authentication is deprecated and has inherent flaws. We recommend using a different type of authentication instead. | End of Support as of DataMiner 10.7.x (Q4 2026). <br>End of Life as of DataMiner 10.8.x (Q4 2027). |
 
 ### End of Support
@@ -61,7 +62,6 @@ The following features currently have the "End of Support" status. They will no 
 | Asset Manager | End of Support as of DataMiner 10.6.x. Module is being retired. | End of Life to be confirmed. |
 | Logger tables with autoincrement option | See [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement). | End of Life as of DataMiner 10.8.x (Q4 2027). |
 | Legacy Reporter & Dashboards | Module is being retired and replaced with the new DataMiner Dashboards app. | End of Life as of DataMiner 10.7.x (Q4 2026). |
-| Pivot table and Group components | End of Support as of DataMiner 10.6.x. These components are being retired in the Dashboards app and Low-Code Apps. | End of Life to be confirmed. |
 | Query executor | Tool is being retired. | End of Life as of DataMiner 10.7.x (Q4 2026). |
 | [SLScripting as a service](xref:Configuration_of_DataMiner_processes#running-slscripting-as-a-service) | This configuration is obsolete and should not be used. | End of Life as of DataMiner 10.7.x (Q4 2026). |
 | Use of JScript in QActions | C# should be used instead. JScript in QActions cannot be used on Windows Server 2025. | End of Life as of DataMiner 10.7.x (Q4 2026). |
