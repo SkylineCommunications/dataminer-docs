@@ -90,6 +90,17 @@ In addition to the model fit score for each subgroup, the response message will 
 
 In practical terms, this means that the subgroup's model fit score deviates from the other fit scores. The shared model fits this subgroup significantly worse than it fits most of the remaining subgroups.
 
+#### dataminer.services: Restrictions when adding a DMA to a DMS [ID 44171]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+From now on, when you try to add a DataMiner Agent to a DataMiner System, the operation will fail in the following cases:
+
+- The DataMiner Agent is cloud-connected, but the DataMiner System is not.
+- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
+
+If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.  
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
