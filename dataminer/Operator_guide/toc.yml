@@ -232,8 +232,6 @@ items:
       - name: Advanced analytics features in the Alarm Console
         topicUid: Advanced_analytics_features_in_the_Alarm_Console
         items:
-          - name: Proactive cap detection
-            topicUid: Proactive_cap_detection
           - name: Relational anomaly detection
             topicUid: Relational_anomaly_detection
             items:

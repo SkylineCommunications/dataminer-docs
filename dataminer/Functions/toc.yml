@@ -42,6 +42,8 @@ items:
             topicUid: Deleting_a_pattern_definition
           - name: Managing pattern definitions
             topicUid: Managing_pattern_definitions
+      - name: Proactive cap detection
+        topicUid: Proactive_cap_detection
       - name: Relation learning
         topicUid: Relation_learning
         items:
