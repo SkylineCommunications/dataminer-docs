@@ -76,7 +76,7 @@ The following features currently have the "End of Life" status. They are no long
 | Annotations | From DataMiner 10.3.x onwards, Annotations should no longer be used. From DataMiner 10.6.x onwards, this feature is no longer available. |
 | Child bookings | End of Life as of DataMiner 10.5.x. Child bookings have been retired, as the same functionality is supported with contributing bookings |
 | Jobs app | End of Life as of DataMiner 10.5.x. |
-| Legacy Correlation Engine | End of Life as of DataMiner 10.5.x. This only applies to the legacy System Display Correlation engine |
+| Legacy Correlation Engine | End of Life as of DataMiner 10.5.x. This only applies to the legacy System Display Correlation engine. |
 | OPC communication | OPC communication should no longer be used in DataMiner connectors. Instead, QActions should be used, for example like in the [Generic OPC Data Access](https://catalog.dataminer.services/details/f2642ea9-9eaa-42f3-880e-816470b06a61) connector. |
 | Recurring bookings | End of Life as of DataMiner 10.5.x. Recurring bookings have been retired. Instead, we suggest duplicating the previous occurrence of the booking. |
 | Ticketing app | End of Life as of DataMiner 10.6.x. Skyline is researching a replacement for this module. |
@@ -94,7 +94,7 @@ The following features currently have the "End of Engineering" status. They will
 
 | Item | Details | Future status |
 |------|---------|---------------|
-|Support for Cassandra Single | Support will end for setups where each DMA has its own Cassandra database. Instead we recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [dedicated clustered storage](xref:Dedicated_clustered_storage) instead. | End of support as of DataMiner 10.7.x (Q4 2026). |
+| Support for Cassandra Single | Support will end for setups where each DMA has its own Cassandra database. Instead we recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [dedicated clustered storage](xref:Dedicated_clustered_storage) instead. | End of support as of DataMiner 10.7.x (Q4 2026). |
 | Support for Elasticsearch 6.8 | As Elastic no longer supports Elasticsearch 6.8 (or lower), support for this will also end in DataMiner. We highly recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [OpenSearch](xref:OpenSearch_database) instead. | End of support as of DataMiner 10.7.x (Q4 2026). |
 
 ### End of Support
@@ -120,3 +120,58 @@ The following features currently have the "End of Life" status. They are no long
 | Support for Visual Studio 2015 | End of Life as of DIS 2.35. DIS will no longer be compatible with this Visual Studio version. |
 | Support for Visual Studio 2017 | End of Life as of DIS 2.41. DIS will no longer be compatible with this Visual Studio version. |
 | Support for Visual Studio 2019 | End of Life as of DIS 3.0. DIS will no longer be compatible with this Visual Studio version. |
+
+## Overview per DataMiner version
+
+The overview below shows which lifecycle changes apply for each major DataMiner version.
+
+### DataMiner 10.3
+
+- **End of Support – Annotations**: Should no longer be used from this version onwards.
+- **End of Support – Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service**: Support for this feature ended with DataMiner 10.3.0 [CU8]/10.3.11. We recommend switching to [Storage as a Service](xref:STaaS). Note that, though not recommended, using a self-managed OpenSearch database remains supported.
+- **End of Support – DataMiner Cube running in Internet Explorer/Edge in IE compatibility mode (XBAP)**
+- **End of Support – MSSQL as local database**: We recommend switching to [Storage as a Service](xref:STaaS).
+
+### DataMiner 10.4
+
+- **End of Life – XML storage of SRM resources and profiles**: From this version onwards, SRM resources and profiles must be stored in the indexing database instead of in XML.
+
+### DataMiner 10.5
+
+- **End of Life – Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service**: We recommend switching to [Storage as a Service](xref:STaaS). Note that, though not recommended, using a self-managed OpenSearch database remains supported.
+- **End of Life – Child bookings**: Child bookings have been retired, as the same functionality is supported with contributing bookings
+- **End of Life – Jobs app**: No longer available from this version onwards.
+- **End of Life – Legacy Correlation Engine**: The legacy System Display Correlation engine is no longer available from this version onwards.
+- **End of Life – Recurring bookings**: Recurring bookings have been retired. Instead, we suggest duplicating the previous occurrence of the booking.
+
+### DataMiner 10.6
+
+- **End of Life – Annotations**: No longer available from this version onwards.
+- **End of Support – Asset Manager**: This module is being retired.
+- **End of Support – MySQL as local database**: Existing features will work, but some new features will require [Storage as a Service](xref:STaaS) (recommended) or [dedicated clustered storage](xref:Dedicated_clustered_storage).
+- **End of Engineering – Pivot table and Group components**: These components are being retired in the Dashboards app and Low-Code Apps.
+- **End of Life – Ticketing app**: Skyline is researching a replacement for this module.
+
+### DataMiner 10.7
+
+- **End of Support – Cassandra Single**: Support will end for setups where each DMA has its own Cassandra database. Instead we recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [dedicated clustered storage](xref:Dedicated_clustered_storage) instead.
+- **End of Life – Cassandra versions prior to 4.x**: Cassandra versions older than Cassandra 4.x are no longer supported on any operating system.
+- **End of Support – Connectors: [dllName option in QAction options attribute](xref:Protocol.QActions.QAction-options#dllnamenamedll)**: This option is superfluous and should no longer be used.
+- **End of Support – Elasticsearch 6.8**: As Elastic no longer supports Elasticsearch 6.8 (or lower), support for this will also end in DataMiner. We highly recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [OpenSearch](xref:OpenSearch_database) instead.
+- **End of Life – Legacy Reporter & Dashboards**: No longer available from this version onwards. Use the new DataMiner Dashboards app instead.
+- **End of Support – [Logger tables of type DirectConnection with a primary key](xref:AdvancedLoggerTablesDefiningDirectConnectionTable)**
+- **End of Support – Pivot table and Group components**: These components are being retired in the Dashboards app and Low-Code Apps.
+- **End of Life - Query executor**: No longer available from this version onwards.
+- **End of Support – [Radius authentication](xref:Configuring_RADIUS_settings)**: This type of authentication is deprecated and has inherent flaws. We recommend using a different type of authentication instead.
+- **End of Life – [SLScripting as a service](xref:Configuration_of_DataMiner_processes#running-slscripting-as-a-service)**: This configuration is obsolete and should not be used.
+- **End of Life – Two-site redundant indexing clusters**: This setup should no longer be used. For optimal redundancy, we recommend switching to [Storage as a Service](xref:STaaS).
+- **End of Life – Use of JScript in QActions**: C# should be used instead. JScript in QActions cannot be used on Windows Server 2025.
+- **End of Life – Use of VBScript in QActions**: C# should be used instead.
+
+### DataMiner 10.8
+
+- **End of Life – Connectors: [dllName option in QAction options attribute](xref:Protocol.QActions.QAction-options#dllnamenamedll)**
+- **End of Life – [Logger tables of type DirectConnection with a primary key](xref:AdvancedLoggerTablesDefiningDirectConnectionTable)**
+- **End of Life – Logger tables with [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement) option**
+- **End of Life – Pivot table and Group components**: No longer available from this version onwards.
+- **End of Life – [Radius authentication](xref:Configuring_RADIUS_settings)**
