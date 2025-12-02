@@ -8,7 +8,7 @@ With the relation learning feature, you can add related parameters to your trend
 
 Related parameters are available via the light bulb in the top-right corner of a trend graph:
 
-![Relation learning](~/dataminer/images/Relation_Learning.png)<br>*Light bulb feature in DataMiner 10.4.5*
+![Relation learning](~/dataminer/images/Relation_learning_add_parameter.gif)<br>*Relation learning in DataMiner 10.6.12*
 
 There are two ways to use this feature:
 
