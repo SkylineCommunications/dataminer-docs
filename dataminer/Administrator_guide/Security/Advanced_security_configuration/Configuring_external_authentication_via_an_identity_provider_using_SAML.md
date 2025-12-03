@@ -38,7 +38,11 @@ Please note the following:
 
 - For **DataMiner Cube**, it is possible to bypass the external authentication provider by entering an explicit username/password combination. However, prior to DataMiner 10.1.11/10.2.0, this is only possible for the Administrator user.
 
-- For the **Web apps**, when external authentication is enabled, it is no longer possible to log in with local accounts. As a workaround, since you do not need to configure external authentication on every DMA of the cluster, you can log in to the web apps using external authentication on one DMA and log in using a local account on another DMA.
+- For the **Web apps**:
+
+  - From DataMiner web 10.5.0 [CU10]/10.6.1 onwards<!-- RN 44152 -->, when external authentication is enabled, but you want to sign in with a local user, add the `skipAutoLogin=true` argument to the URL of the app. You will then be able to choose between signing in using an identity provider or a local account. Once you are signed in, you will also be able to sign out via the *Sign in with another user* option in the user menu.
+
+  - Prior to DataMiner web 10.5.0 [CU10]/10.6.1, when external authentication is enabled, it is not possible to log in with local accounts. As a workaround, since you do not need to configure external authentication on every DMA of the cluster, you can log in to the web apps using external authentication on one DMA and log in using a local account on another DMA.
 
 > [!TIP]
 > See also: [Troubleshooting SAML issues](xref:Troubleshooting_SAML_Issues)
