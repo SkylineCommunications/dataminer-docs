@@ -26,7 +26,7 @@ When the status of your DataMiner Agent changes to *Leaving cluster*, you can st
 
 ## Fix
 
-No fix is available yet<!--RN 44253-->.
+Install DataMiner 10.6.0/10.6.1.<!-- RN 44253 -->
 
 ## Description
 
