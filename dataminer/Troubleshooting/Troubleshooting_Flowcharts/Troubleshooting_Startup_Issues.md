@@ -259,7 +259,7 @@ NATS is not running as expected. As every DataMiner Agent must be able to reach 
 
 ### Solution
 
-Follow the steps under [NATS Troubleshooting](xref:Investigating_NATS_Issues).
+Follow the steps under [NATS troubleshooting](xref:Investigating_NATS_Issues).
 
 ## Cloud session token issue
 
