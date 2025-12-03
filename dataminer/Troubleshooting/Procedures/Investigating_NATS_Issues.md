@@ -24,11 +24,9 @@ To investigate NATS issues in a BrokerGateway-managed system, follow the actions
 
 ## Confirm the system uses BrokerGateway-managed NATS
 
-If you are using a DataMiner version **below DataMiner 10.6.0/10.6.1**, you need to confirm whether the system has been [migrated to the BrokerGateway‑managed NATS solution](xref:BrokerGateway_Migration).
+If you are using a DataMiner version **below DataMiner 10.6.0/10.6.1**, you need to confirm whether the system has been [migrated to the BrokerGateway‑managed NATS solution](xref:BrokerGateway_Migration). From DataMiner 10.6.0/10.6.1 onwards, BrokerGateway is always used so you can skip this step.
 
-From DataMiner 10.6.0/10.6.1 onwards, BrokerGateway is always used, so you can skip this step.
-
-### How to verify
+To verify this:
 
 1. Check `C:\Skyline DataMiner\MaintenanceSettings.xml` for the following configuration:
 
@@ -47,7 +45,7 @@ If the system has not yet been migrated to BrokerGateway, refer to [Legacy NAS/N
 
 The ClusterEndpointsManager soft-launch option must be enabled for BrokerGateway to manage NATS clustering properly.
 
-### How to verify and fix
+To verify and resolve this:
 
 1. Open `C:\Skyline DataMiner\SoftLaunchOptions.xml`.
 
@@ -69,7 +67,7 @@ For more information about soft-launch options, see [Activating Soft-Launch Opti
 
 The [NATS cluster verification BPA test](xref:BPA_Check_Agent_Presence) can quickly identify common configuration and connectivity issues.
 
-### How to run the test
+To run this test:
 
 1. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *BPA*.
 
@@ -108,7 +106,7 @@ Check the following log files in the order listed:
 ### Common error patterns
 
 - **Authorization violations**: Indicate credential mismatches or missing credential files.
-- **Connection refused errors**: Suggest firewall or antivirus issues. It can also mean that the NATS service is not running.
+- **Connection refused errors**: Suggest firewall or antivirus issues. This can also mean that the NATS service is not running.
 - **Cluster formation errors**: Point to configuration mismatches between nodes.
 
 ## Check the configuration files
@@ -119,11 +117,11 @@ Verify that the key configuration files contain the correct information for your
 
 Location: `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json`
 
-This file defines the endpoints for each agent in the cluster.
+This file defines the endpoints for each Agent in the cluster.
 
 **Things to check:**
 
-- For each agent entry, an IP must be present with a non-null `IgnitionValue`.
+- For each Agent entry, an IP must be present with a non-null `IgnitionValue`.
 - `AdditionalEndpoints` must list any VIPs (Virtual IP addresses) if applicable.
 
 **Example:**
@@ -155,7 +153,7 @@ This file configures how DataMiner processes connect to BrokerGateway to obtain 
 
 - `CredentialsUrl` typically points to the local Agent (using loopback or FQDN). This is the default setting unless it has been manually changed.
 - If the HTTPS certificate CN/SAN does not match the hostname used in the URL, clients may fail with TLS validation errors.
-- appsettings.runtime.json must be present at the path specified in `APIKeyPath`.
+- *appsettings.runtime.json* must be present at the path specified in `APIKeyPath`.
 
 **Example:**
 
@@ -203,19 +201,19 @@ This file contains the API key used for authentication between DataMiner process
 **Common issues:**
 
 - **File missing**: If the file is missing, this indicates that the BrokerGateway installation or NATS configuration is incomplete.
-- **ClusterInfo mismatch**: If the `ClusterInfo` section does not match the actual cluster nodes, it can lead to authentication failures.
+- **ClusterInfo mismatch**: If the `ClusterInfo` section does not match the actual cluster nodes, this can lead to authentication failures.
 
 **How to fix:**
 
-If this file is missing, corrupted, or contains invalid data, run [NATSRepair.exe](#resettingrepairing-the-brokergateway-nats-cluster) to regenerate the NATS configuration and credentials. This will recreate the `appsettings.runtime.json` file.
+If this file is missing or corrupted, or it contains invalid data, run [NATSRepair.exe](#resettingrepairing-the-brokergateway-nats-cluster) to regenerate the NATS configuration and credentials. This will recreate the `appsettings.runtime.json` file.
 
 ## Test connectivity between nodes
 
 Network connectivity issues between DataMiner Agents can prevent NATS clustering from functioning correctly.
 
-### How to test
+### Connectivity check
 
-On each DataMiner Agent, execute the following PowerShell command to check if *nats-server* is reachable:
+To test connectivity, on each DataMiner Agent, execute the following PowerShell command to check if *nats-server* is reachable:
 
 ```powershell
 Test-NetConnection <peerIP> -Port 4222
@@ -226,7 +224,7 @@ Replace `<peerIP>` with:
 - The IP address of the local Agent (to test local connectivity)
 - The IP addresses of other Agents in the cluster (to test cluster connectivity)
 
-**Expected output for successful connection:**
+Expected output for successful connection:
 
 ```txt
 ComputerName     : 172.16.0.1
@@ -237,7 +235,7 @@ SourceAddress    : 172.16.0.1
 TcpTestSucceeded : True
 ```
 
-If `TcpTestSucceeded` is `False`, this indicates a firewall issue or that the NATS service is not running on the target Agent.
+If `TcpTestSucceeded` is `False`, this indicates that there is a firewall issue or that the NATS service is not running on the target Agent.
 
 ### Required ports
 
@@ -254,8 +252,6 @@ Only do this if you are sure that the system uses the BrokerGateway‑managed NA
 
 > [!NOTE]
 > This will not work if [automatic NATS configuration is disabled](xref:Disabling_automatic_NATS_config).<!-- RN 44061 -->
-
-### How to run NATSRepair.exe
 
 1. Run `C:\Skyline DataMiner\Tools\NATSRepair.exe` on one DMA in the system.
 
