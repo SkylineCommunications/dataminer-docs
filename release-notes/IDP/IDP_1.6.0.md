@@ -1,11 +1,14 @@
 ---
-uid: IDP_1.5.4
+uid: IDP_1.6.0
 ---
 
-# IDP 1.5.4 - Preview
+# IDP 1.6.0 - Preview
 
 > [!IMPORTANT]
 > We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+
+> [!NOTE]
+> This IDP version requires that DataMiner 10.4.0 [CU0] or higher is installed.
 
 ## New features
 
@@ -26,6 +29,10 @@ IDP now supports custom restore scripts with interactive UI, allowing users to p
 
 Note that such scripts will need to call *IEngine.FindInteractiveClient* to make sure that their UI is shown to the user (see [Launching and attaching interactive Automation scripts](xref:Launching_and_attaching_interactive_Automation_scripts#launching-a-script-from-non-ui-contexts-scheduler-correlation-qaction-other-non-interactive-scripts)).
 
-#### Changes
+## Changes
 
-*No enhancements or fixes have been added to this release yet.*
+### Enhancements
+
+#### Increased minimum DataMiner version [ID 44271]
+
+The minimum DataMiner version for the IDP app has now been increased to DataMiner 10.4.0 [CU0].
