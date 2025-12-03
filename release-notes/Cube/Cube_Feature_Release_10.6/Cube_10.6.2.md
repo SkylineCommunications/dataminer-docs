@@ -20,7 +20,7 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
-#### Visual Overview: New shape data field of type VLC [ID 43750]
+#### Visual Overview: New shape data field of type VLC [ID 43750] [ID 44265]
 
 <!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
 
@@ -36,6 +36,9 @@ DataMiner Cube will try to find the VLC application in the following way:
 1. Check if VLC is installed in `C:\Program Files`.
 1. Check if VLC is installed in `C:\Program Files (x86)`. If so, the user will receive a warning, saying that the 32-bit version of VLC is not supported.
 1. Check the registry.
+
+> [!NOTE]
+> This new shape data field of type VLC is not supported in visual overviews that are used in web apps.
 
 ## Changes
 
