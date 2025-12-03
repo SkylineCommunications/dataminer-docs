@@ -225,7 +225,7 @@ Incorrect IP addresses in *DMS.xml* cause IP conflicts within the DataMiner Syst
 
 1. Update the *DMS.xml* file with the correct IP addresses.
 
-1. Reinstall NATS to ensure all Agents can come online without issues. See [NATS troubleshooting](xref:Investigating_NATS_Issues#remaining-steps) for details.
+1. Reinstall NATS to ensure all Agents can come online without issues. See [NATS troubleshooting](xref:Investigating_NATS_Issues) for details.
 
 1. Check *DMS.xml* to ensure that each DMA retains its respective IP address.
 
@@ -242,8 +242,8 @@ Incorrect IP addresses in *DMS.xml* cause IP conflicts within the DataMiner Syst
 
 - Errors in the *SLDataMiner.txt* file, including:
 
+  - "ERR" logs that include references to NATS or MessageBroker.
   - `Initializing Cloud Bridge`
-  - "ERR" logs that include references to NATS.
 
 - *SLWatchdog2.txt* contains logs referencing NATS.
 
@@ -259,11 +259,7 @@ NATS is not running as expected. As every DataMiner Agent must be able to reach 
 
 ### Solution
 
-1. Check in the Task Manager if NAS and NATS are running.
-
-1. [Reinstall NAS and NATS](xref:Investigating_NATS_Issues#remaining-steps).
-
-1. If this does not fix the issue, follow the steps under [NATS Troubleshooting](xref:Investigating_NATS_Issues).
+Follow the steps under [NATS troubleshooting](xref:Investigating_NATS_Issues).
 
 ## Cloud session token issue
 

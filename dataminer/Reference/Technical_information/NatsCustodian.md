@@ -4,6 +4,9 @@ uid: NatsCustodian
 
 # NatsCustodian
 
+> [!NOTE]
+> This manager is no longer available from DataMiner 10.6.0/10.6.1 onwards. From that DataMiner version onwards, NATS management has been fully migrated to [BrokerGateway](xref:BrokerGateway_Migration). <!-- RN 44035 -->
+
 NatsCustodian is a dedicated manager in SLNet designed to monitor and manage NATS configuration in real time. Performing checks every minute, NatsCustodian automates the process of identifying and addressing configuration anomalies. This ongoing monitoring is critical to maintain uninterrupted messaging, system stability, and performance in cluster environments where configuration changes are frequent. As such, NatsCustodian plays an essential role in ensuring the efficient operation of NATS server clusters.
 
 ## NatsCustodian workflow starting from DataMiner 10.2.0 [CU18], 10.3.0 [CU6], and 10.3.9
@@ -123,4 +126,4 @@ flowchart TD
 
 ### Triggering NATS reconfiguration
 
-See [NATS reset](xref:Investigating_NATS_Issues#try-a-nats-reset).
+See [NATS reset](xref:Investigating_Legacy_NATS_Issues#try-a-nats-reset).

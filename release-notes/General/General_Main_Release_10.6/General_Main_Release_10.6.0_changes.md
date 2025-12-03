@@ -628,7 +628,7 @@ When you try to delete a DOM module, but you do not have access to all DOM defin
 
 From now on, it will no longer be possible to run *NATSRepair.exe* when automatic NATS configuration is disabled. If so, *NATSRepair.exe* will immediately stop without performing any actions.
 
-See also: [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)
+See also: [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config)
 
 #### DataMiner backup: Temp file will now be created on the target path instead of the C drive [ID 44063]
 

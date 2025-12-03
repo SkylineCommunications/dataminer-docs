@@ -215,7 +215,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
    1. In the *Message Type* dropdown list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
 
       > [!NOTE]
-      > Do not send this message if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:SLNetClientTest_disabling_automatic_nats_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending this message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
+      > Do not send this message if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending this message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
 
    1. Close the SLNetClientTest tool.
 
@@ -328,7 +328,7 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
    1. In the *Message Type* dropdown list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
 
       > [!NOTE]
-      > > Do not send this message if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:SLNetClientTest_disabling_automatic_nats_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending this message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
+      > > Do not send this message if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending this message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
 
    1. Close the SLNetClientTest tool.
 
@@ -445,7 +445,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
    1. In the *Message Type* dropdown list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
 
       > [!NOTE]
-      > > Do not send this message if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:SLNetClientTest_disabling_automatic_nats_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending this message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
+      > > Do not send this message if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending this message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
 
    1. Close the SLNetClientTest tool.
 
