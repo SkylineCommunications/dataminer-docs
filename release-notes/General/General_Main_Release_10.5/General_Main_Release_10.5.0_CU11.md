@@ -71,3 +71,11 @@ From now on, in order to prevent any issues related to certificates, in the foll
 - When calling NATSRepair.
 - When migrating to BrokerGateway.
 - When no certificate authorities can be found during BrokerGateway startup.
+
+#### STaaS: Problem when migrating or importing elements with logger tables [ID 44196]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+On systems using STaaS, when an element with logger tables had been migrated from one DMA to another, up to now, that element would no longer start up after it was migrated back to its original DMA.
+
+Also, on system using STaaS, up to now, when importing a DELT package containing elements with logger tables, the logger table data would not be imported correctly.
