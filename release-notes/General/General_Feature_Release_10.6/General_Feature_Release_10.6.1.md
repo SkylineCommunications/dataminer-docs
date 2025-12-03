@@ -580,3 +580,10 @@ Because of a protobuf serialization issue, GQI data sources could throw an excep
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.
+
+#### Removing an invalid or unreachable IP address could cause the active DMA to leave the DMS [ID 44253]
+
+<!-- MR 10.6.0 - FR 10.6.1 [CU0] -->
+<!-- Not added to MR 10.6.0 -->
+
+When you removed a rogue or unreachable IP address on the *Agents* page in *System Center*, up to now, the DataMiner Agent you were connected to could unexpectedly switch to the *Leaving cluster* state and leave the cluster.
