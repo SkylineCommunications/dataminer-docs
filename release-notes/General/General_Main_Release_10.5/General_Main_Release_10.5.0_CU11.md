@@ -35,7 +35,7 @@ Note that, from now on, if not all nodes of the OpenSearch cluster are listed in
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-Because of a number of enhancements, overall performance has increased when upgrading the following DxMs in e.g. `https://admin.dataminer.services/`:
+Because of a number of enhancements, overall performance has increased when the following DxMs are upgraded during a DataMiner upgrade:
 
 - BrokerGateway
 - StorageModule
