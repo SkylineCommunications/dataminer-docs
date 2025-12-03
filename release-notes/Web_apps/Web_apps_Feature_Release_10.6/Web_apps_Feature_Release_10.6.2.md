@@ -73,6 +73,12 @@ If you choose *Custom*:
 
 The above-mentioned label configuration can be set per node query, per edge query, and can also be overridden by means of node and edge overrides.
 
+#### Enhanced error logging when deleting DOM instances fails [ID 44263]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In a dashboard, a low-code app, or another DataMiner web app, each time an error occurs when you try to delete a DOM instance, from now on, all exceptions will be logged, and a message will appear in the UI.
+
 ### Fixes
 
 #### Dashboards app: Problem when generating a PDF report of a dashboard containing a Time range component [ID 44168]
