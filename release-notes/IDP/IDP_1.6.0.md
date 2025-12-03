@@ -54,3 +54,8 @@ The minimum DataMiner version for the IDP app has now been increased to DataMine
 The Embed Comparison URL in the IDP Application Visual Overview is now set correctly when navigating to the overview from the `Configuration > Compare` tab.
 
 The user will need to introduce credentials the first time they access the overview, however, subsequent accesses will be automatically logged in.
+
+#### Improve null checks in IDP Reapply and Reassign scripts [ID 44006]
+
+Adapted the script to log when the elements provided as input do not exist.
+Improved the code to handle `null` references better and to prevent `NullReferenceException` from being thrown.
