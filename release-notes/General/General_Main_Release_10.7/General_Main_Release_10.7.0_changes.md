@@ -114,6 +114,14 @@ From now on, when you try to add a DataMiner Agent to a DataMiner System, the op
 
 If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.  
 
+#### Scheduler will now be able to start more than 10 synchronously running Automation scripts [ID 44200]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+Up to now, using Scheduler, it would only be possible to start a maximum of 10 synchronously running Automation scripts.
+
+From now on, it will be possible to start more than 10 synchronously running Automation scripts.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
