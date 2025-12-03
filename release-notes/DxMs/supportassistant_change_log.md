@@ -4,9 +4,9 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
-#### 3 December 2025 - Enhancement - SupportAssistant 1.8.0 - Added possiblity to locally trigger remote log collector
+#### 3 December 2025 - Enhancement - SupportAssistant 1.8.0 - Added possibility to locally trigger remote log collector
 
-SupportAssistant now supports new requests that allow to trigger remote log collectors locally. Which will be leveraged by an upcoming LogCollector change.
+SupportAssistant now supports new requests that allow the local triggering of remote log collectors. This functionality will be leveraged by an upcoming LogCollector change.
 
 #### 1 September 2025 - Fix - SupportAssistant 1.7.7 - CDMR reporting & usage offloading issues
 
