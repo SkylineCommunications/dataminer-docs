@@ -31,6 +31,15 @@ Also, all logging with regard to OpenSearch health monitoring can now be found i
 
 Note that, from now on, if not all nodes of the OpenSearch cluster are listed in the *Db.xml* file, a notice will be generated to warn operators.
 
+#### Enhanced performance when upgrading DxMs [ID 44210] [ID 44211]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Because of a number of enhancements, overall performance has increased when upgrading the following DxMs in e.g. `https://admin.dataminer.services/`:
+
+- BrokerGateway
+- StorageModule
+
 ### Fixes
 
 #### Not possible to export elements with logger tables on systems with Cassandra Cluster and OpenSearch [ID 44105]

@@ -86,6 +86,15 @@ Up to now, using Scheduler, it would only be possible to start a maximum of 10 s
 
 From now on, it will be possible to start more than 10 synchronously running Automation scripts.
 
+#### Enhanced performance when upgrading DxMs [ID 44210] [ID 44211]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Because of a number of enhancements, overall performance has increased when upgrading the following DxMs in e.g. `https://admin.dataminer.services/`:
+
+- BrokerGateway
+- StorageModule
+
 ### Fixes
 
 #### Not possible to export elements with logger tables on systems with Cassandra Cluster and OpenSearch [ID 44105]
