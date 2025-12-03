@@ -134,3 +134,10 @@ From now on, in order to prevent any issues related to certificates, in the foll
 On systems using STaaS, when an element with logger tables had been migrated from one DMA to another, up to now, that element would no longer start up after it was migrated back to its original DMA.
 
 Also, on system using STaaS, up to now, when importing a DELT package containing elements with logger tables, the logger table data would not be imported correctly.
+
+#### RAD parameter groups would no longer get monitored when a parameter had not had a value for more than 5 days [ID 44204]
+
+<!-- MR 10.6.0 - FR 10.6.2 -->
+<!-- Not added to MR 10.6.0 -->
+
+When a parameter within a RAD parameter group had not had a value for more than 5 days, up to now, SLAnalytics would incorrectly lose track of the entire parameter group. As a result, no anomalies would get detected for that group, and create, update and delete actions performed on that group would fail.
