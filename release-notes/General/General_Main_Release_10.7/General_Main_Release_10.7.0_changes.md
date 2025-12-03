@@ -72,6 +72,19 @@ In most cases, these settings can keep their default value, unless performance h
 > - Only users with *Modules > System configuration > Tools > Admin tools* permission are allowed to change the above-mentioned settings.
 > - If the `SkipDcfLinks` setting is set to true, we recommend that you do not set MaxAmountOfParallelTasks too high. DCF link creation can be an expensive operation. Performing a large number of action in parallel might decrease performance.
 
+#### Augmented Operations: Server-side support for new flatline detection modes [ID 44094]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+When, in DataMiner client applications (e.g. DataMiner Cube), you are configuring the Augmented Operations alarm settings for a particular parameter in an alarm template, from now on, it will be possible to choose between the following flatline detection modes:
+
+| Mode | Description |
+|------|-------------|
+| Smart flatline alarming    | In this mode, SLAnalytics will automatically determine when a flatline period is anomalous by comparing it to the parameter's historical behavior. A new flatline period will only trigger an alarm if it is significantly longer than previously observed flat periods. |
+| Absolute flatline alarming | In this mode, you can define a fixed duration threshold (in seconds) for when a flatline event should trigger an alarm. Additionally, you can assign a severity level to the generated flatline alarm event. |
+
+See also: [Alarm templates: New flatline detection modes in Augmented Operations alarm settings [ID 44191]](xref:Cube_Feature_Release_10.6.2#alarm-templates-new-flatline-detection-modes-in-augmented-operations-alarm-settings-id-44191)
+
 #### DataMiner upgrade: Web-only upgrades with version 10.6.x or above will now require the DMA to have version 10.5.x or above [ID 44103]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->
@@ -90,6 +103,17 @@ In addition to the model fit score for each subgroup, the response message will 
 
 In practical terms, this means that the subgroup's model fit score deviates from the other fit scores. The shared model fits this subgroup significantly worse than it fits most of the remaining subgroups.
 
+#### dataminer.services: Restrictions when adding a DMA to a DMS [ID 44171]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+From now on, when you try to add a DataMiner Agent to a DataMiner System, the operation will fail in the following cases:
+
+- The DataMiner Agent is cloud-connected, but the DataMiner System is not.
+- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
+
+If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.  
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
@@ -105,3 +129,9 @@ Up to now, SLAnalytics would incorrectly not receive any "swarming complete" not
 In some cases, a capability could incorrectly be set to a null value.
 
 From now on, when a capability is booked, it will no longer be possible to set its value to null.
+
+#### Failover: Problem when reloading the scheduled tasks [ID 44234]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.

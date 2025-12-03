@@ -45,11 +45,11 @@ Expected duration: 20 minutes.
 
 First, a [CI Type](xref:CI_Types) needs to be created for IDP to know how to manage the element or device.
 
-Instead of creating the CI Type from scratch, you will generate it based on an existing connector. In this example, the [Generic Switch](https://catalog.dataminer.services/details/connector/931) connector is used, but you can use any other connector.
+Instead of creating the CI Type from scratch, you will generate it based on an existing connector. In this example, the [Generic Switch](https://catalog.dataminer.services/details/ae750d4e-50b1-489d-b948-1abe1af591dd) connector is used, but you can use any other connector.
 
 1. Deploy the connector to start from:
 
-   1. Deploy the latest version of the [Generic Switch](https://catalog.dataminer.services/details/connector/931) connector from the Catalog.
+   1. Deploy the latest version of the [Generic Switch](https://catalog.dataminer.services/details/ae750d4e-50b1-489d-b948-1abe1af591dd) connector from the Catalog.
 
       > [!TIP]
       > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)

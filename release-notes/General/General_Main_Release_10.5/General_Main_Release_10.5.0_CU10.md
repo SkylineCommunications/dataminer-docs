@@ -61,6 +61,18 @@ To send such a message, open the *SLNetClientTest* tool, and go to *Diagnostics 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Clearer message when SLCloud.xml cannot be found when using the legacy SLNet-managed NATS solution [ID 43890]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, when the *SLCloud.xml* file could not be found on systems using the legacy SLNet-managed NATS solution, the following generic exception would be thrown and logged:
+
+`Unable to find file.`
+
+From now on, the following exception will be thrown and logged:
+
+`Unable to find file. SLCloud configured messageBrokers are unsupported as of DataMiner 10.6.0.`
+
 #### SLASPConnection will now detect more quicker that a connection to a DMA has been lost or re-established [ID 44049]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
@@ -74,6 +86,14 @@ Because of a number of enhancements, SLASPConnection will now detect more quicke
 Before upgrading to this DataMiner release or above, you are expected to install the Microsoft .NET 10 hosting bundle.
 
 When you start a DataMiner upgrade procedure, from now on, a new prerequisite will verify whether Microsoft .NET 10 is installed on the system. If this is not the case, the upgrade will be canceled.
+
+#### Enhanced stuffing and unstuffing behavior when sending serial commands [ID 44149]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+A number of enhancements have been made to the stuffing and unstuffing behavior when sending serial commands.
+
+Stuffing will now always be removed from the parameters, even if the current command did not add stuffing during a previous run. This will make it easier and more robust to reuse parameters across different commands.
 
 ### Fixes
 
@@ -101,11 +121,11 @@ Up to now, when DVE elements were deleted while multiple DVE elements were havin
 
 When a QAction triggered an information message with regard to a particular element, SLNet would incorrectly only forward that message to the DataMiner Agent that hosted that element. As a result, that information message would not appear in client applications connected to any of the other DataMiner Agents in the system.
 
-#### Problem with parameter state timelines on systems with a Cassandra Single or Cassandra Cluster database [ID 43982]
+#### Element and parameter state timelines could show incorrect data [ID 43982]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-Up to now, in some cases, parameter state timelines displayed in client applications like DataMiner web apps or DataMiner Cube could should incorrect data, especially on DataMiner Systems with a Cassandra Single or a Cassandra Cluster database.
+Up to now, in some cases, element and parameter state timelines displayed in client applications like DataMiner web apps or DataMiner Cube could show incorrect data.
 
 #### Failover: 'C:\\Skyline DataMiner\\Elements' folder on offline Agents could unexpectedly be cleared [ID 44005]
 
@@ -158,14 +178,42 @@ From now on, it will be possible to offload either alarms only, information even
 
 When run on the offline agent of a Failover system, the Security Advisory BPA test would show an incorrect result after checking the status of port 5100 of the firewall.
 
+#### Problem when retrieving history alarms with wildcard or regex filters that were applied case-sensitively [ID 44095]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When, in client applications like DataMiner Cube, history alarm were retrieved with a wildcard or regex filter that filtered on values that contained uppercase characters, up to now, an incorrect result set would be returned.
+
+From now on, wildcard and regex filters will be applied case-insensitively.
+
 #### Memory leak in SLDataMiner when documents were being handled [ID 44098]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 In some cases, SLDataMiner could leak memory when documents were being handled.
 
+#### Problem when synchronizing create/update/delete actions performed on services [ID 44132]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+In some rare cases, certain create/update/delete actions performed on services would not get synchronized among the DataMiner Agents in a cluster, especially when they had been performed in rapid succession.
+
 #### Problem when performing a row-based FillArray method with zero rows as input and with the SaveOption option set to 'Partial' [ID 44137]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 When a row-based `FillArray` method was performed with zero rows as input and with the `SaveOption` option set to "Partial", up to now, the method would throw an unhandled exception due to a missing check.
+
+#### NotifyDataMiner call NT_CLOSE_HISTORY_TREND_WINDOW (374) sent for a table cell would incorrectly ignore the specified timestamp [ID 44162]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, when a NotifyDataMiner call `NT_CLOSE_HISTORY_TREND_WINDOW` (374) was sent for a particular table cell, it would incorrectly ignore the specified timestamp.
+
+This call closes all previous trend windows that are still open and have already passed since the specified time.
+
+#### Problem with GQI data sources because of a protobuf serialization issue [ID 44181]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Because of a protobuf serialization issue, GQI data sources could throw an exception when requesting certain data from SLNet.
