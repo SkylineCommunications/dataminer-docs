@@ -29,6 +29,15 @@ IDP now supports custom restore scripts with interactive UI, allowing users to p
 
 Note that such scripts will need to call *IEngine.FindInteractiveClient* to make sure that their UI is shown to the user (see [Launching and attaching interactive Automation scripts](xref:Launching_and_attaching_interactive_Automation_scripts#launching-a-script-from-non-ui-contexts-scheduler-correlation-qaction-other-non-interactive-scripts)).
 
+#### Added support for Skip SSL/TLS certificate verification in CI Types [ID 44110]
+
+The IDP CI Type now includes a new property called `SkipCertificateVerification` to indicate whether the SSL/TLS certificate should be skipped for a specific HTTP port on the element configuration.
+
+Currently, this property can only be configured via the CI Type JSON definition.
+The IDP CI Type Management script and the IDP Visual Overview support are currently not available and will be added in a future release.
+
+Note that this feature requires DataMiner 10.4.12/10.5.0 or higher.
+
 ## Changes
 
 ### Enhancements
