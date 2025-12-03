@@ -33,6 +33,16 @@ Note that such scripts will need to call *IEngine.FindInteractiveClient* to make
 
 ### Enhancements
 
+#### Limit the number of authentication attempts for the IDP Configuration Management [ID 43910]
+
+To avoid user accounts from being locked out at the Operating System level due to multiple failed authentication attempts, a failed authentication tracker has been introduced.
+
+This tracker limits the maximum number of failed authentication attempts to 10 during a 6 minutes rolling window. After reaching this limit, further authentication attempts will be blocked for a duration of 15 minutes.
+
+A manual attempt to login via the UI will allow 1 extra authentication attempt and clear the lockout if successful.
+
+Rectifying the credentials in DataMiner will reset the failed authentication tracker.
+
 #### Increased minimum DataMiner version [ID 44271]
 
 The minimum DataMiner version for the IDP app has now been increased to DataMiner 10.4.0 [CU0].
