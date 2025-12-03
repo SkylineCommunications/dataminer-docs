@@ -4,7 +4,7 @@ uid: Options_for_opening_DataMiner_Cube
 
 # Arguments for DataMiner Cube
 
-It is possible to [connect to a DMS using URL arguments](xref:Managing_the_start_window#connecting-to-a-dms-using-arguments). Below you can find an [overview of the different arguments](#overview-of-the-arguments), as well as some [examples](#examples) of how you can use these.
+It is possible to [connect to a DMS using URL arguments](xref:Cube_start_window#connecting-to-a-dms-using-arguments). Below you can find an [overview of the different arguments](#overview-of-the-arguments), as well as some [examples](#examples) of how you can use these.
 
 To combine different options, use a **space as separator**.
 

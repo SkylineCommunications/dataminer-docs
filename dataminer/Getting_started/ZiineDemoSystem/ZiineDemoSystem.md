@@ -51,11 +51,11 @@ To install DataMiner Cube:
    ![Download Cube installer](~/dataminer/images/DownloadCubeForZiine.png)
 
    > [!TIP]
-   > See also: [Installing the DataMiner Cube desktop application](xref:Installing_the_DataMiner_Cube_desktop_application)
+   > See also: [Installing DataMiner Cube](xref:Installing_the_DataMiner_Cube_desktop_application)
 
 1. After installation, open the DataMiner Cube desktop application.
 
-1. Connect to the DataMiner System "the [Ziine Demo System](xref:ZiineDemoSystem)" as described under [Opening the desktop application](xref:Using_the_desktop_app).
+1. Connect to the DataMiner System "the [Ziine Demo System](xref:ZiineDemoSystem)" as described under [Connecting to a DataMiner Agent with Cube](xref:Connecting_to_a_DMA_with_Cube).
 
 > [!NOTE]
 > The Ziine hostname is `https://ziine.dataminer.services/`.

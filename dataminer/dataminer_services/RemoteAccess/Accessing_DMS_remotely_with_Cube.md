@@ -16,7 +16,7 @@ From DataMiner 10.3.0/10.3.2 onwards, you can use DataMiner Cube to access your 
 - The [APIGateway DxM](xref:DataMinerExtensionModules#apigateway) is installed and running on the DMA you are connecting to.
 - [Remote access to Cube is enabled](xref:Controlling_remote_access) for the DMS.
 - You have been [granted access to dataminer.services features](xref:Giving_users_access_to_cloud_features).
-- You [have the DataMiner Cube desktop application installed](xref:Installing_configuring_the_DataMiner_Cube_software) and all [client requirements](xref:DataMiner_Client_Requirements) are met.
+- You [have the DataMiner Cube desktop application installed](xref:Installing_the_DataMiner_Cube_desktop_application) and all [client requirements](xref:DataMiner_Client_Requirements) are met.
 - Your user account has been granted access to the DataMiner System.
 
 ## Starting a remote access session with DataMiner Cube
@@ -25,7 +25,7 @@ To access the DMS remotely via Cube, use the [remote access URL](xref:Cloud_Remo
 
 You can start the Cube session in different ways:
 
-- **Via the desktop app on a client PC**: [Open the Cube desktop app](xref:Using_the_desktop_app) and add a new DMS. In the *host* field, fill in the remote access URL of your system, without the protocol prefix, e.g. `ziine-skyline.on.dataminer.services`. In the *alias* field, you can fill in a more user-friendly name to make it easy to identify the system.
+- **Via the desktop app on a client PC**: [Open the Cube desktop app](xref:Connecting_to_a_DMA_with_Cube) and add a new DMS. In the *host* field, fill in the remote access URL of your system, without the protocol prefix, e.g. `ziine-skyline.on.dataminer.services`. In the *alias* field, you can fill in a more user-friendly name to make it easy to identify the system.
 
   ![Remote Cube in the launcher](~/dataminer/images/RemoteCubeLauncher.png)
 

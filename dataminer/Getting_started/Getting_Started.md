@@ -13,7 +13,7 @@ description: Create a DataMiner System, and learn how to interact with DataMiner
     <a href="/dataminer/Getting_started/Interacting_with_DataMiner/Client_apps.html" title="Interacting with DataMiner" target="_self"><img src="~/dataminer/images/Interacting_with_DataMiner.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/dataminer/Getting_started/The_DataMiner_User_Interface/DataMiner_Cube/Cube_UI_components.html" title="Working with DataMiner Cube" target="_self"><img src="~/dataminer/images/Working_with_DataMiner_Cube.svg" style="width:100%"></a>
+    <a href="/dataminer/Getting_started/The_DataMiner_User_Interface/DataMiner_Cube/Installing_DataMiner_Cube/Installing_the_DataMiner_Cube_desktop_application.html" title="Working with DataMiner Cube" target="_self"><img src="~/dataminer/images/Working_with_DataMiner_Cube.svg" style="width:100%"></a>
   </div>
 </div>
 
