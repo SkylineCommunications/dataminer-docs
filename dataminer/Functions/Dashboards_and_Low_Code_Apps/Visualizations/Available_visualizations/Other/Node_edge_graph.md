@@ -31,7 +31,7 @@ You can interact with the node edge graph in several ways:
 
   Thanks to this exposed data, you can use the node edge graph component as a dynamic selector, i.e. a component whose selection determines behavior or data elsewhere in your dashboard or app. A common use case is showing additional details when a node is selected.
 
-- **Moving a node**: You can select and drag a node to a new position. You can move multiple nodes at the same type by keeping the Ctrl key pressed while selecting several nodes and then moving them together.
+- **Moving a node**: You can select and drag a node to a new position. You can move multiple nodes at the same time by keeping the Ctrl key pressed while selecting several nodes and then moving them together.
 
   The conditions for repositioning nodes depend on your DataMiner version:
 
@@ -230,7 +230,7 @@ To configure actions:
 
 ### Configuring node movement events
 
-From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44144-->, you can configure actions that are executed when a node belonging to the query is moved in the node edge graph.
+From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44144-->, you can configure actions that are executed when a node belonging to a specific node query is moved in the node edge graph.
 
 To configure these events:
 
