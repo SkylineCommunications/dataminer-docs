@@ -116,6 +116,12 @@ When neither an *SLCloud.xml* file nor a *MessageBrokerConfig.json* file could n
 
 From now on, when neither a *SLCloud.xml* file nor a *MessageBrokerConfig.json* file can be found, a default *MessageBrokerConfig.json* file will be generated.
 
+#### Uploading certain protocol versions would cause elements to no longer be able to execute QActions [ID 44172]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When you uploaded a protocol with a version that was identical to the prefix of the version of a protocol that was already in use (e.g. a new protocol with version 1.0.0.1_DEV versus an existing protocol with version 1.0.0.1), up to now, elements using the existing protocol (e.g. with version 1.0.0.1) would incorrectly no longer be able to execute QActions.
+
 #### Problem with SLElement when loading elements that included matrix parameters [ID 44188]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
