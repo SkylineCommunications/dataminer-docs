@@ -36,3 +36,11 @@ Note that such scripts will need to call *IEngine.FindInteractiveClient* to make
 #### Increased minimum DataMiner version [ID 44271]
 
 The minimum DataMiner version for the IDP app has now been increased to DataMiner 10.4.0 [CU0].
+
+### Fixes
+
+#### IDP Application Visual Overview does not set the Embed Comparison URL correctly [ID 43577]
+
+The Embed Comparison URL in the IDP Application Visual Overview is now set correctly when navigating to the overview from the `Configuration > Compare` tab.
+
+The user will need to introduce credentials the first time they access the overview, however, subsequent accesses will be automatically logged in.
