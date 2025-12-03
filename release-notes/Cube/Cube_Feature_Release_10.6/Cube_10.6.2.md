@@ -44,7 +44,16 @@ DataMiner Cube will try to find the VLC application in the following way:
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Alarm templates: New flatline detection modes in Augmented Operations alarm settings [ID 44191]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+
+When, in an alarm template, you are configuring the Augmented Operations alarm settings for a particular parameter, you can now also choose between the following flatline detection modes:
+
+| Mode | Description |
+|------|-------------|
+| Smart flatline alarming    | In this mode, SLAnalytics will automatically determine when a flatline period is anomalous by comparing it to the parameter's historical behavior. A new flatline period will only trigger an alarm if it is significantly longer than previously observed flat periods. |
+| Absolute flatline alarming | In this mode, you can define a fixed duration threshold (in seconds) for when a flatline event should trigger an alarm. Additionally, you can assign a severity level to the generated flatline alarm event. |
 
 ### Fixes
 
