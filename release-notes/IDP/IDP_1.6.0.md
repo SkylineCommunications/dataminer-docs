@@ -29,12 +29,12 @@ IDP now supports custom restore scripts with interactive UI, allowing users to p
 
 Note that such scripts will need to call *IEngine.FindInteractiveClient* to make sure that their UI is shown to the user (see [Launching and attaching interactive Automation scripts](xref:Launching_and_attaching_interactive_Automation_scripts#launching-a-script-from-non-ui-contexts-scheduler-correlation-qaction-other-non-interactive-scripts)).
 
-#### Added support for Skip SSL/TLS certificate verification in CI Types [ID 44110]
+#### Support for skipping SSL/TLS certificate verification in CI Types [ID 44110]
 
-The IDP CI Type now includes a new property called `SkipCertificateVerification` to indicate whether the SSL/TLS certificate should be skipped for a specific HTTP port on the element configuration.
+The IDP CI Type now includes a new property, `SkipCertificateVerification`, which allows you to skip SSL/TLS certificate verification for a specific HTTP port in the element configuration.
 
 Currently, this property can only be configured via the CI Type JSON definition.
-The IDP CI Type Management script and the IDP Visual Overview support are currently not available and will be added in a future release.
+Support in the IDP CI Type Management script and the IDP Visual Overview will be added in a future release.
 
 Note that this feature requires DataMiner 10.4.12/10.5.0 or higher.
 
@@ -42,38 +42,36 @@ Note that this feature requires DataMiner 10.4.12/10.5.0 or higher.
 
 ### Enhancements
 
-#### Limit the number of authentication attempts for the IDP Configuration Management [ID 43910]
+#### Limit the number of authentication attempts for IDP Configuration Management [ID 43910]
 
-To avoid user accounts from being locked out at the Operating System level due to multiple failed authentication attempts, a failed authentication tracker has been introduced.
+To prevent user accounts from being locked out at the operating system level due to multiple failed authentication attempts, a failed authentication tracker has been added.
 
-This tracker limits the maximum number of failed authentication attempts to 10 during a 6 minutes rolling window. After reaching this limit, further authentication attempts will be blocked for a duration of 15 minutes.
+This tracker limits the maximum number of failed authentication attempts to 10 within a 6-minute rolling window. After reaching this limit, further authentication attempts are blocked for 15 minutes.
 
-A manual attempt to login via the UI will allow 1 extra authentication attempt and clear the lockout if successful.
+A manual login attempt via the UI allows one extra authentication attempt and clears the lockout if successful.
 
-Rectifying the credentials in DataMiner will reset the failed authentication tracker.
+Rectifying the credentials in DataMiner resets the failed authentication tracker.
 
 #### Monitor and alarm on availability of recent IDP configuration backup files [ID 44129]
 
-IDP now allows an administrator to monitor the availability of recent configuration backup files and configure an alarm to be raised no recent backup files are found.
-This can be achieved by configuring an alarm template on the newly added `Latest Backup` column and leverage the flatline detection functionality.
+Administrators can now monitor the availability of recent configuration backup files and configure an alarm if no recent backup files are found.
+This can be achieved by configuring an alarm template on the newly added **Latest Backup** column and leveraging the flatline detection functionality.
 
 > [!IMPORTANT]
-> To fully leverage this feature it is required to have DataMiner server version 10.7.0/10.6.2 or newer. See: [Augmented Operations: Server-side support for new flatline detection modes [ID 44094]](xref:General_Feature_Release_10.6.2#augmented-operations-server-side-support-for-new-flatline-detection-modes-id-44094)
-
+> To fully leverage this feature, DataMiner server version 10.7.0/10.6.2 or newer is required. See: [Augmented Operations: Server-side support for new flatline detection modes [ID 44094]](xref:General_Feature_Release_10.6.2#augmented-operations-server-side-support-for-new-flatline-detection-modes-id-44094)
 
 #### Increased minimum DataMiner version [ID 44271]
 
-The minimum DataMiner version for the IDP app has now been increased to DataMiner 10.4.0 [CU0].
+The minimum required DataMiner version for the IDP app is now 10.4.0 [CU0].
 
 ### Fixes
 
 #### IDP Application Visual Overview does not set the Embed Comparison URL correctly [ID 43577]
 
-The Embed Comparison URL in the IDP Application Visual Overview is now set correctly when navigating to the overview from the `Configuration > Compare` tab.
+The Embed Comparison URL in the IDP Application Visual Overview is now set correctly when navigating from the **Configuration > Compare** tab.
 
-The user will need to introduce credentials the first time they access the overview, however, subsequent accesses will be automatically logged in.
+The user will need to enter credentials the first time they access the overview; subsequent accesses will be automatically logged in.
 
-#### Improve null checks in IDP Reapply and Reassign scripts [ID 44006]
+#### Improved null checks in IDP Reapply and Reassign scripts [ID 44006]
 
-Adapted the script to log when the elements provided as input do not exist.
-Improved the code to handle `null` references better and to prevent `NullReferenceException` from being thrown.
+The script now logs when the input elements do not exist and handles `null` references more robustly to prevent `NullReferenceException` errors.
