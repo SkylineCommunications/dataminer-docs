@@ -52,6 +52,15 @@ A manual attempt to login via the UI will allow 1 extra authentication attempt a
 
 Rectifying the credentials in DataMiner will reset the failed authentication tracker.
 
+#### Monitor and alarm on availability of recent IDP configuration backup files [ID 44129]
+
+IDP now allows an administrator to monitor the availability of recent configuration backup files and configure an alarm to be raised no recent backup files are found.
+This can be achieved by configuring an alarm template on the newly added `Latest Backup` column and leverage the flatline detection functionality.
+
+> [!IMPORTANT]
+> To fully leverage this feature it is required to have DataMiner server version 10.7.0/10.6.2 or newer. See: [Augmented Operations: Server-side support for new flatline detection modes [ID 44094]](xref:General_Feature_Release_10.6.2#augmented-operations-server-side-support-for-new-flatline-detection-modes-id-44094)
+
+
 #### Increased minimum DataMiner version [ID 44271]
 
 The minimum DataMiner version for the IDP app has now been increased to DataMiner 10.4.0 [CU0].
