@@ -23,7 +23,7 @@ What you see in the node edge graph depends on the provided data and your [compo
 
 ### Available interactions
 
-You can interact with the timeline in several ways:
+You can interact with the node edge graph in several ways:
 
 - **Selecting an item**: Click an item to select it. You can select multiple items at the same time by keeping the Ctrl key pressed while clicking nodes.
 
