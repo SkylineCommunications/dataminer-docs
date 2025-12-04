@@ -103,7 +103,7 @@ The response to a `GetRADParameterGroupInfoMessage` will now also include the ID
 
 #### SLAnalytics: New database synchronization tasks will be paused when the queue is too long [ID 44243]
 
-<!-- MR 10.7.0 - FR 10.6.2 -->
+<!-- MR 10.6.0 - FR 10.6.2 -->
 
 When database operations fail or take too long, the queue of database synchronization tasks (which update model information) can grow excessively, causing the SLAnalytics process to consume increasing amounts of memory.
 

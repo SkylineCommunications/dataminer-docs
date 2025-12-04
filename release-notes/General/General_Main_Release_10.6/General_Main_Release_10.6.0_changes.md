@@ -650,6 +650,14 @@ Annotations are now End of Life.
 > [!IMPORTANT]
 > Before you upgrade to this DataMiner version, make sure the soft-launch option *LegacyAnnotations* is either disabled or removed from the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file. Otherwise, the upgrade operation will be aborted.
 
+#### SLAnalytics: New database synchronization tasks will be paused when the queue is too long [ID 44243]
+
+<!-- MR 10.6.0 - FR 10.6.2 -->
+
+When database operations fail or take too long, the queue of database synchronization tasks (which update model information) can grow excessively, causing the SLAnalytics process to consume increasing amounts of memory.
+
+From now on, SLAnalytics will pause the creation of new synchronization tasks for some types of model information whenever there are too many pending tasks already. New synchronization operations will only be created again once the backlog has decreased.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]

@@ -147,3 +147,9 @@ In a dashboard, a low-code app, or another DataMiner web app, each time an error
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 When you had generated a PDF report of a dashboard that contained a *Time range* component of which the *Edit using* option was set to "Keyboard & calendar", up to now, the date would incorrectly not be displayed.
+
+#### Problem when importing a web app [ID 44202]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When you imported a web app, e.g. from the DataMiner Catalog onto the DataMiner landing page, in some cases, not all associated files would get synchronization across the DataMiner System.
