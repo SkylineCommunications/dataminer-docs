@@ -200,8 +200,6 @@ items:
         items:
           - name: Web Support Assistant
             topicUid: Web_Issues_Support_Assistant
-      - name: Troubleshooting – Dedicated clustered storage
-        topicUid: Troubleshooting_Dedicated_clustered_storage
       - name: Troubleshooting – Cassandra
         topicUid: Troubleshooting_Cassandra
         items:
@@ -217,6 +215,8 @@ items:
             topicUid: Cloud_Connection_Issues
           - name: Investigating dataminer.services feature issues
             topicUid: investigating_dataminer_services_feature_issues
+      - name: Troubleshooting – Dedicated clustered storage
+        topicUid: Troubleshooting_Dedicated_clustered_storage
       - name: Troubleshooting – NATS
         topicUid: Investigating_NATS_Issues
       - name: Troubleshooting – Legacy NATS
