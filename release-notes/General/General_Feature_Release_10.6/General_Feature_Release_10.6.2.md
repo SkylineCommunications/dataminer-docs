@@ -101,6 +101,14 @@ Because of a number of enhancements, overall performance has increased when the 
 
 The response to a `GetRADParameterGroupInfoMessage` will now also include the ID of the RAD parameter group.
 
+#### SLAnalytics: New database synchronization tasks will be paused when the queue is too long [ID 44243]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+When database operations fail or take too long, the queue of database synchronization tasks (which update model information) can grow excessively, causing the SLAnalytics process to consume increasing amounts of memory.
+
+From now on, SLAnalytics will pause the creation of new synchronization tasks for some types of model information whenever there are too many pending tasks already. New synchronization operations will only be created again once the backlog has decreased.
+
 ### Fixes
 
 #### Not possible to export elements with logger tables on systems with Cassandra Cluster and OpenSearch [ID 44105]
