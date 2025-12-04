@@ -31,10 +31,9 @@ Note that such scripts will need to call *IEngine.FindInteractiveClient* to make
 
 #### Support for skipping SSL/TLS certificate verification in CI Types [ID 44110]
 
-The IDP CI Type now includes a new property, `SkipCertificateVerification`, which allows you to skip SSL/TLS certificate verification for a specific HTTP port in the element configuration.
+The IDP CI Type now includes a new property, *SkipCertificateVerification*, which allows you to skip SSL/TLS certificate verification for a specific HTTP port in the element configuration.
 
-Currently, this property can only be configured via the CI Type JSON definition.
-Support in the IDP CI Type Management script and the IDP Visual Overview will be added in a future release.
+Currently, this property can only be configured via the CI Type JSON definition. Support in the IDP CI Type Management script and the IDP Visual Overview will be added in a future release.
 
 Note that this feature requires DataMiner 10.4.12/10.5.0 or higher.
 
@@ -42,23 +41,20 @@ Note that this feature requires DataMiner 10.4.12/10.5.0 or higher.
 
 ### Enhancements
 
-#### Limit the number of authentication attempts for IDP Configuration Management [ID 43910]
+#### Number of authentication attempts for IDP Configuration Management limited [ID 43910]
 
-To prevent user accounts from being locked out at the operating system level due to multiple failed authentication attempts, a failed authentication tracker has been added.
-
-This tracker limits the maximum number of failed authentication attempts to 10 within a 6-minute rolling window. After reaching this limit, further authentication attempts are blocked for 15 minutes.
+To prevent user accounts from being locked out at the operating system level because of multiple failed authentication attempts, an authentication failure tracker has been added. This tracker limits the maximum number of failed authentication attempts for IDP Configuration Management to 10 within a 6-minute rolling window. When this limit is reached, further authentication attempts are blocked for 15 minutes.
 
 A manual login attempt via the UI allows one extra authentication attempt and clears the lockout if successful.
 
-Rectifying the credentials in DataMiner resets the failed authentication tracker.
+Updating the credentials in DataMiner resets the failed authentication tracker.
 
-#### Monitor and alarm on availability of recent IDP configuration backup files [ID 44129]
+#### Alarm monitoring of availability of recent IDP configuration backup files [ID 44129]
 
-Administrators can now monitor the availability of recent configuration backup files and configure an alarm if no recent backup files are found.
-This can be achieved by configuring an alarm template on the newly added **Latest Backup** column and leveraging the flatline detection functionality.
+Administrators can now monitor the availability of recent configuration backup files and have an alarm triggered if no recent backup files are found. This can be achieved by enabling monitoring of the newly added **Latest Backup** column in an alarm template and leveraging the flatline detection functionality.
 
 > [!IMPORTANT]
-> To fully leverage this feature, DataMiner server version 10.7.0/10.6.2 or newer is required. See: [Augmented Operations: Server-side support for new flatline detection modes [ID 44094]](xref:General_Feature_Release_10.6.2#augmented-operations-server-side-support-for-new-flatline-detection-modes-id-44094)
+> To fully leverage this feature, the DataMiner Agent needs to run DataMiner 10.7.0/10.6.2 or higher. See [Augmented Operations: Server-side support for new flatline detection modes [ID 44094]](xref:General_Feature_Release_10.6.2#augmented-operations-server-side-support-for-new-flatline-detection-modes-id-44094).
 
 #### Increased minimum DataMiner version [ID 44271]
 
@@ -66,12 +62,14 @@ The minimum required DataMiner version for the IDP app is now 10.4.0 [CU0].
 
 ### Fixes
 
-#### IDP Application Visual Overview does not set the Embed Comparison URL correctly [ID 43577]
+#### Incorrect URL configuration for Comparison tool in IDP visual overview [ID 43577]
 
-The Embed Comparison URL in the IDP Application Visual Overview is now set correctly when navigating from the **Configuration > Compare** tab.
+The URL configured for the embedded Comparison tool on the *Configuration* > *Compare* tab of the IDP visual overview was not correct, causing users to be asked to provide credentials whenever they navigated to the tab.
 
-The user will need to enter credentials the first time they access the overview; subsequent accesses will be automatically logged in.
+Now users will only need to enter credentials the first time they access the overview; after this, they will be automatically logged in.
 
-#### Improved null checks in IDP Reapply and Reassign scripts [ID 44006]
+#### Null reference exceptions when reapplying or reassigning CI Types [ID 44006]
 
-The script now logs when the input elements do not exist and handles `null` references more robustly to prevent `NullReferenceException` errors.
+When input elements did not exist, reapplying or reassigning CI Types could cause null reference exceptions to be thrown.
+
+Now the script will log when the input elements do not exist and handle null references more robustly.

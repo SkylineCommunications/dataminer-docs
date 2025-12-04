@@ -348,9 +348,7 @@ For each connection, this section also has to contain one of the following array
 
     - **AcceptedIpAddresses**: Represents the accepted IP addresses. Only relevant if *IsServerModeEnabled* is *true*. Allows you to specify one or more allowed IP addresses for the connection. The element will then only communicate with those IP addresses. This serves the same purpose as the *Accepted IP address* field in the element editor in DataMiner Cube (see [Adding elements](xref:Adding_elements)).
 
-    - **SkipCertificateVerification**: Indicates whether the SSL/TLS certificate verification should be skipped for this specific HTTP port on the element configuration. 
-    This is only relevant when *TypeConnection* is *Http*. The default value is false.
-    Note that this feature requires DataMiner 10.4.12/10.5.0 or higher and that this property can only be configured via the CI Type JSON definition.
+    - **SkipCertificateVerification**: Indicates whether the SSL/TLS certificate verification should be skipped for this specific HTTP port in the element configuration. This is only relevant when *TypeConnection* is *Http*. The default value is false. Note that this feature requires DataMiner 10.4.12/10.5.0 or higher, and that this property can only be configured via the CI Type JSON definition.
 
     Below is an example of four connections that are required to create an element.
 
