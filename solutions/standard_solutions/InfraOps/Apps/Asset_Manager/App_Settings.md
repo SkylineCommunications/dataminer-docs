@@ -8,7 +8,7 @@ Present on the about page, here users have access to a few settings that can be 
 
 Figure 53
 
-![Asset Manager App Settings Wizard](~/solutions/images/Asset_Manager_Asset_Manager_App_Settings_Wizard.png)
+![Asset Manager App Settings Wizard](~/solutions/images/Asset_Manager_App_Settings_Wizard.png)
 
 The first two options allow users to enable or disable the tracking of Asset and Connections changes. Then, users have the Max History Entries field, where users can define maximum number of history records. To add to the previous settings, the History TTL fields are also available for users to define for how long they want to keep their history records.
 

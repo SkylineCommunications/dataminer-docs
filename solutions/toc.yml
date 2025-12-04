@@ -305,7 +305,7 @@ items:
           - name: Asset Lifecycle
             topicUid: Asset_Lifecycle
         - name: Connections
-          topicUid: Connections
+          topicUid: AssetManager_Connections
         - name: Rack View
           topicUid: Rack_View
         - name: Row Viewer

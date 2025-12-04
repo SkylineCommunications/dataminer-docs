@@ -6,7 +6,7 @@ uid: Racks_Page
 
 Final step from a hierarchical level, here racks can be configured. It displays the Space and Power Capacity, along with their Usage (%). It’s calculated based on the size of the assets placed on the rack (amount of Rack Units) and its Maximum Power Consumption.
 
-This can be defined on the Asset Designer, specifically, on the Asset Class (see also [Asset Class Details](xref:Asset_Class_Details.md)):
+This can be defined on the Asset Designer, specifically, on the Asset Class (see also [Asset Class Details](xref:Asset_Class_Details)):
 
 ![Racks Page](~/solutions/images/Facility_Manager_Racks_Page.png)
 

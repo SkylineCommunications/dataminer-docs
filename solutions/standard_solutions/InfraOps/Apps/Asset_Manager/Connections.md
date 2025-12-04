@@ -1,5 +1,5 @@
 ---
-uid: Connections
+uid: AssetManager_Connections
 ---
 
 # Connections
