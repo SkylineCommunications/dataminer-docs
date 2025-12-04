@@ -65,6 +65,65 @@ items:
           topicUid: Tutorial_MediaOps_Scheduling_Configurations
         - name: Creating a workflow to use as a template for a job
           topicUid: Tutorial_MediaOps_Workflow_Designer_Intro
+    - name: dataminer.InfraOps
+      topicUid: InfraOps
+      items:
+      - name: Installing InfraOps
+        topicUid: IO_Installation
+      - name: Facility Manager
+        topicUid: Facility_Manager
+        items:
+        - name: Facilities
+          topicUid: Facilities_Page
+        - name: Rooms
+          topicUid: Rooms_Page
+        - name: Racks
+          topicUid: Racks_Page
+        - name: Room Designer
+          topicUid: Room_Designer
+      - name: Asset Manager
+        topicUid: Asset_Manager
+        items:
+        - name: Asset Designer
+          topicUid: Asset_Designer
+        - name: Cable Types
+          topicUid: Cable_Types
+        - name: Port Types
+          topicUid: Port_Types
+        - name: Asset Class Details
+          topicUid: Asset_Class_Details
+        - name: Managed Assets
+          topicUid: Managed_Assets
+          items:
+          - name: Asset Details
+            topicUid: Asset_Details
+          - name: Asset Hierarchy
+            topicUid: Asset_Hierarchy
+          - name: Asset Connections
+            topicUid: Asset_Connections
+          - name: Asset Location
+            topicUid: Asset_Location
+          - name: Asset Custody and Ownership
+            topicUid: Asset_Custody_and_Ownership
+          - name: Asset Lifecycle
+            topicUid: Asset_Lifecycle
+        - name: Connections
+          topicUid: AssetManager_Connections
+        - name: Rack View
+          topicUid: Rack_View
+        - name: Row Viewer
+          topicUid: Row_Viewer
+        - name: Rack Comparer
+          topicUid: Rack_Comparer
+        - name: App Settings
+          topicUid: App_Settings
+      - name: Plan and Build
+        topicUid: Plan_And_Build
+        items:
+        - name: Jobs Page
+          topicUid: Jobs_Page
+        - name: Job Details
+          topicUid: Job_Details
     - name: DataMiner PTP
       topicUid: SolPTP
       items:
@@ -260,67 +319,6 @@ items:
         topicUid: IpNetworkExplorer_UI_overview
       - name: Supported devices and protocols
         topicUid: IpNetworkExplorer_Supported_Devices_And_Protocols
-    - name: dataminer.InfraOps
-      topicUid: InfraOps
-      items:
-      - name: InfraOps Overview
-        topicUid: InfraOps
-      - name: Installing InfraOps
-        topicUid: IO_Installation
-      - name: Facility Manager
-        topicUid: Facility_Manager
-        items:
-        - name: Facilities Page
-          topicUid: Facilities_Page
-        - name: Rooms Page
-          topicUid: Rooms_Page
-        - name: Racks Page
-          topicUid: Racks_Page
-        - name: Room Designer
-          topicUid: Room_Designer
-      - name: Asset Manager
-        topicUid: Asset_Manager
-        items:
-        - name: Asset Designer
-          topicUid: Asset_Designer
-        - name: Cable Types
-          topicUid: Cable_Types
-        - name: Port Types
-          topicUid: Port_Types
-        - name: Asset Class Details
-          topicUid: Asset_Class_Details
-        - name: Managed Assets
-          topicUid: Managed_Assets
-          items:
-          - name: Asset Details
-            topicUid: Asset_Details
-          - name: Asset Hierarchy
-            topicUid: Asset_Hierarchy
-          - name: Asset Connections
-            topicUid: Asset_Connections
-          - name: Asset Location
-            topicUid: Asset_Location
-          - name: Asset Custody and Ownership
-            topicUid: Asset_Custody_and_Ownership
-          - name: Asset Lifecycle
-            topicUid: Asset_Lifecycle
-        - name: Connections
-          topicUid: AssetManager_Connections
-        - name: Rack View
-          topicUid: Rack_View
-        - name: Row Viewer
-          topicUid: Row_Viewer
-        - name: Rack Comparer
-          topicUid: Rack_Comparer
-        - name: App Settings
-          topicUid: App_Settings
-      - name: Plan and Build
-        topicUid: Plan_And_Build
-        items:
-        - name: Jobs Page
-          topicUid: Jobs_Page
-        - name: Job Details
-          topicUid: Job_Details
   - name: Product Solutions
     items:
     - name: EVS Cerebrum application

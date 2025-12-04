@@ -2,11 +2,9 @@
 uid: App_Settings
 ---
 
-## App Settings
+# App Settings
 
 Present on the about page, here users have access to a few settings that can be configured:
-
-Figure 53
 
 ![Asset Manager App Settings Wizard](~/solutions/images/Asset_Manager_App_Settings_Wizard.png)
 
