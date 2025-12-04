@@ -17,6 +17,7 @@ items:
       - name: Natural language to GQI
         topicUid: NL2GQI
   - name: Augmented Operations
+    topicUid: Overview_Augmented_Operations
     items:
       - name: Alarm focus
         topicUid: Alarm_focus

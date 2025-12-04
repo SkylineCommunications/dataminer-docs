@@ -10,7 +10,7 @@ description: A DataMiner System can have several additional modules or apps, e.g
     <a href="/dataminer/Functions/DataMiner_Assistant/Assistant_DxM.html" title="DataMiner Assistant" target="_self"><img src="~/dataminer/images/DataMiner_Assistant.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/dataminer/Functions/Augmented_Operations/Alarm_focus/Alarm_focus.html" title="Augmented operations" target="_self"><img src="~/dataminer/images/Augmented_Operations.svg" style="width:100%"></a>
+    <a href="/dataminer/Functions/Augmented_Operations/Overview_Augmented_Operations.html" title="Augmented operations" target="_self"><img src="~/dataminer/images/Augmented_Operations.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Functions/Automation_module/automation.html" title="Automation" target="_self"><img src="~/dataminer/images/Automation.svg" style="width:100%"></a>
