@@ -156,3 +156,11 @@ Also, on system using STaaS, up to now, when importing a DELT package containing
 <!-- Not added to MR 10.6.0 -->
 
 When a parameter within a RAD parameter group had not had a value for more than 5 days, up to now, SLAnalytics would incorrectly lose track of the entire parameter group. As a result, no anomalies would get detected for that group, and create, update and delete actions performed on that group would fail.
+
+#### No retries would incorrectly be attempted when retrieving DMS configuration info failed [ID 44240]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a client application connects to a DataMiner System, it retrieves the configuration info of that DataMiner System.
+
+Up to now, when retrieving that info failed, no retries would incorrectly be attempted. From now on, a retry will be attempted every 10 seconds.
