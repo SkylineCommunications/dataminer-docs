@@ -130,6 +130,12 @@ When neither an *SLCloud.xml* file nor a *MessageBrokerConfig.json* file could n
 
 From now on, when neither a *SLCloud.xml* file nor a *MessageBrokerConfig.json* file can be found, a default *MessageBrokerConfig.json* file will be generated.
 
+#### Elements hosted on another DMA and under the root view would not be visible if you did not have full access to the root view [ID 44170]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In client applications like DataMiner Cube, up to now, elements hosted on a DMA other than the one you were connected to would incorrectly not be visible in the Surveyor if they were directly under the root view and if you did not have full access to that root view.
+
 #### Uploading certain protocol versions would cause elements to no longer be able to execute QActions [ID 44172]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
