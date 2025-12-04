@@ -283,7 +283,7 @@ The *Configuration* section contains the following fields:
 | Properties | Allows you to configure all properties for the element (see [Properties](#properties)) |
 | Type | Deprecated. Set this field to the Element Type specified in the protocol. |
 | EnableTelnet | Deprecated. Set this field to *False*. |
-| ForceAgent | Deprecated. Can be used on systems before 9.6.0 to link elements to a fixed DMA in a Failover setup. |
+| ForceAgent | Deprecated. Used on systems prior to 9.6.0 to link elements to a fixed DMA in a Failover setup. |
 | KeepOnline | Deprecated. Set this field to *False*. |
 | EnableSnmpAgent | Deprecated. Set this field to *False*. |
 | SnmpReadCommunityString | Deprecated. Specify an empty string "". |

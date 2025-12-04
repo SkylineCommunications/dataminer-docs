@@ -38,7 +38,7 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
 
     > [!NOTE]
     >
-    > - If an upgrade is started using the DataMiner Taskbar Utility, from DataMiner 9.6.5 onwards, a button is available that allows you to abort the upgrade in progress. However, be very careful with this functionality, as aborting an upgrade can potentially cause a DMA to no longer start up.
+    > - If an upgrade is started using the DataMiner Taskbar Utility, a button allows you to abort the upgrade in progress. However, be very careful with this functionality, as aborting an upgrade can potentially cause a DMA to no longer start up.
     > - From DataMiner 10.1.0 [CU19]/10.2.0 [CU7]/10.2.10 onwards, this option also allows you to install .dmapp packages. In earlier DataMiner versions, only .dmupgrade packages are supported.
 
     > [!TIP]
@@ -79,7 +79,7 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
 
 - **Stop DataMiner (forced)**
 
-    Available from DataMiner 9.6.5 onwards. Immediately stops all processes of the DataMiner Agent software on the server you are connected to. This option should only be used in case an issue has occurred that prevents the DMA from shutting down properly.
+    Immediately stops all processes of the DataMiner Agent software on the server you are connected to. This option should only be used in case an issue has occurred that prevents the DMA from shutting down properly.
 
 - **Restart DataMiner**
 
