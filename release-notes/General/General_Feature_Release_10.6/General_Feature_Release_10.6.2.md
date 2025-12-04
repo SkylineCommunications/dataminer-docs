@@ -184,3 +184,11 @@ When a parameter within a RAD parameter group had not had a value for more than 
 When a client application connects to a DataMiner System, it retrieves the configuration info of that DataMiner System.
 
 Up to now, when retrieving that info failed, no retries would incorrectly be attempted. From now on, a retry will be attempted every 10 seconds.
+
+#### SLAnalytics: Problems with alarm grouping and pattern matching [ID 44262]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+Up to now, the introduction of `CorrelationMetaData`, a new type of alarm metadata, in DataMiner Main Release 10.6.0 and Feature Release 10.6.1 would cause alarm grouping to produce incorrect results after a restart and pattern matching suggestion events and alarm groups to be cleared incorrectly.
+
+As SLAnalytics now fully supports `CorrelationMetaData`, the above-mentioned issues will no longer occur.
