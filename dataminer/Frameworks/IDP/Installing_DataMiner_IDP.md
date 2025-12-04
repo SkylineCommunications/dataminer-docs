@@ -6,7 +6,7 @@ uid: Installing_DataMiner_IDP
 
 ## Deploying the IDP package
 
-1. Make sure DataMiner version **10.3.0 CU0** or higher is installed in your DMS.
+1. Make sure DataMiner version **10.4.0 CU0** or higher is installed in your DMS.
 
 1. If you intend to upgrade an existing IDP installation, and you are using a DataMiner version **lower than 10.4.0 or 10.4.3**, install the **[IDP Migration](https://community.dataminer.services/download/idp-migration/) package**.
 
