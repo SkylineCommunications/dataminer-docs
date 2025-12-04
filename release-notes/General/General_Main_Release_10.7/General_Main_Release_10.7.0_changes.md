@@ -122,6 +122,12 @@ Up to now, using Scheduler, it would only be possible to start a maximum of 10 s
 
 From now on, it will be possible to start more than 10 synchronously running Automation scripts.
 
+#### Relational anomaly detection: GetRADParameterGroupInfoResponseMessage now also includes the ID of the RAD parameter group [ID 44237]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+The response to a `GetRADParameterGroupInfoMessage` will now also include the ID of the RAD parameter group.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]

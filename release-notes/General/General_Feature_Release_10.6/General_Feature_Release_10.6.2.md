@@ -95,6 +95,12 @@ Because of a number of enhancements, overall performance has increased when the 
 - BrokerGateway
 - StorageModule
 
+#### Relational anomaly detection: GetRADParameterGroupInfoResponseMessage now also includes the ID of the RAD parameter group [ID 44237]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+The response to a `GetRADParameterGroupInfoMessage` will now also include the ID of the RAD parameter group.
+
 ### Fixes
 
 #### Not possible to export elements with logger tables on systems with Cassandra Cluster and OpenSearch [ID 44105]

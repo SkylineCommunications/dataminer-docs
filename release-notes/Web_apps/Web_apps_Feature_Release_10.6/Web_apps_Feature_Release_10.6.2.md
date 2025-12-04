@@ -73,6 +73,67 @@ If you choose *Custom*:
 
 The above-mentioned label configuration can be set per node query, per edge query, and can also be overridden by means of node and edge overrides.
 
+#### GQI extensions: Filtering enhancements [ID 44230]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+In `SLAnalyticsTypes`, the `IGQIFilterOperator` interface in the GQI extensions API now has a new read-only property:
+
+- `IGQIFilter Filter`: The filter applied by the filter operator
+
+> [!CAUTION]
+> The introduction of this new property breaks compatibility for existing interface implementations. Although the `IGQIFilterOperator` interface will in practice only be implemented by the GQI framework and is not intended to be implemented by external code on production systems, existing test setups may get broken when upgrading to the new `SLAnalyticsTypes` version.
+
+Additionally, the following new types have been defined:
+
+- `Interface IGQIFilter`
+
+  Common interface for all possible filters.
+
+- `Interface IGQIValueFilter : IGQIFilter`
+
+  Filter on a specific column with a specific constant value.
+
+  With the following read-only properties:
+
+  - `IGQIColumn Column`: The column to filter on.
+  - `GQIFilterMethod Method`: The method to use for filtering.
+  - `object Value`: The value to filter with.
+
+- `Interface IGQIAndFilter : IGQIFilter`
+
+  Conjunction of multiple filters.
+
+  With the following read-only property:
+
+  - `IReadOnlyList<IGQIFilter> Filters`: Filters to be combined.
+
+- `Interface IGQIOrFilter : IGQIFilter`
+
+  Disjunction of multiple filters.
+
+  With the following read-only property:
+
+  - `IReadOnlyList<IGQIFilter> Filters`: Filters to be combined.
+
+- `Enum GQIFilterMethod`
+
+  Represents the way a value can be used to filter a column.
+
+  With the following values:
+
+  - Contains
+  - DoesNotContain
+  - DoesNotEqual
+  - DoesNotMatchRegex
+  - Equals
+  - IsGreaterThan
+  - IsGreaterThanOrEquals
+  - IsLessThan
+  - IsLessThanOrEquals
+  - MatchesRegex
+  - None
+
 #### Enhanced error logging when deleting DOM instances fails [ID 44263]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
