@@ -236,7 +236,8 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <para>Default: <c>false</c>.</para>
 		/// <para>Available from DataMiner 9.5.6 onwards.</para>
-		/// <para>Applicable only when <see cref="Type"/> is set to DropDown.</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to DropDown.</para>		
+		/// <para>Applicable only in web apps when the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V1 and in Cube.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -254,7 +255,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The ID of the parameter that has to be displayed in the dialog box item.</value>
 		/// <remarks>
-		/// <para>Applicable only when <see cref="Type"/> is set to Parameter or Numeric.</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to Numeric (only when the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V1) or Parameter.</para>
 		/// <para>For a dialog box item of type Numeric, this property allows to have a checkbox with multiple discrete values. In case multiple discrete values are defined, separate these with a semicolon (';'). If you do not want any checkbox, but only the numeric box, then leave this property empty.</para>
 		/// <para>For a dialog box item of type Parameter, the ID syntax is as follows: DmaID/ElementID:ParamID[:index]</para>
 		/// </remarks>
@@ -343,7 +344,6 @@ namespace Skyline.DataMiner.Automation
 		/// <value><c>true</c> if the control is enabled in the UI; otherwise, <c>false</c>.</value>
 		/// <remarks>
 		/// <para>Default: true.</para>
-		/// <para>Available from DataMiner 9.5.3 onwards.</para>
 		/// </remarks>
 		public bool IsEnabled { get; set; }
 
@@ -352,7 +352,8 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value><c>true</c> if users are able to enter multiple lines of text; otherwise, <c>false</c>.</value>
 		/// <remarks>
-		/// <para>Applicable only when <see cref="Type"/> is set to TextBox.</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to TextBox or StaticText.</para>
+		/// <para>If IsMultiline is false on a StaticText UI block, but the text contains a newline/enter, the UI block will behave as if IsMultiline is true.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -375,15 +376,16 @@ namespace Skyline.DataMiner.Automation
 		/// <para>This feature is available for interactive Automation scripts executed in a web environment. 
 		/// The following UIBlockTypes are supported:
 		/// 	<list type="bullet">
-		/// 		<item><term>TextBox</term></item>
-		/// 		<item><term>Numeric</term></item>
-		/// 		<item><term>Dropdown</term></item>
-		/// 		<item><term>Checkbox</term></item>
-		/// 		<item><term>CheckboxList</term></item>
-		/// 		<item><term>RadiobuttonList</term></item>
-		/// 		<item><term>Calendar</term></item>
-		/// 		<item><term>Time</term></item>
-		/// 		<item><term>Treeview</term></item>
+		/// 		<item><description>TextBox</description></item>
+		/// 		<item><description>Numeric</description></item>
+		/// 		<item><description>Dropdown</description></item>
+		/// 		<item><description>Checkbox</description></item>
+		/// 		<item><description>CheckboxList</description></item>
+		/// 		<item><description>PasswordBox</description></item>
+		/// 		<item><description>RadiobuttonList</description></item>
+		/// 		<item><description>Calendar</description></item>
+		/// 		<item><description>Time</description></item>
+		/// 		<item><description>Treeview</description></item>
 		/// 	</list>
 		/// </para>
 		/// </remarks>
@@ -407,7 +409,6 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <para>Applicable only when <see cref="Type"/> is set to CheckBoxList or DropDown.</para>
 		/// <para>Default: false</para>
-		/// <para>Available from DataMiner 9.5.6 onwards.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -669,6 +670,37 @@ namespace Skyline.DataMiner.Automation
 		/// <para>The supported styles can be accessed through const strings on the Style class, subdivided per control type (Button, Text, etc.).<br/>
 		/// All Button styles can also be applied to a DownloadButton.<br/>
 		/// The Style class is available from DataMiner 10.3.1/10.4.0 onwards. For older DataMiner versions, you can use the StaticText styles 'Title1', 'Title2', and 'Title3'.</para>
+		/// <para>In web apps, the following is supported:
+		/// <list type="bullet">
+		/// <item>
+		/// <description>Button:
+		/// <list type="bullet">
+        /// <item><description>Style.Button.None (or "None")</description></item>
+        /// <item><description>Style.Button.CallToAction (or "CallToAction")</description></item>
+        /// </list>
+		/// </description>
+		/// </item>
+		/// <item>
+		/// <description>StaticText:
+		/// <list type="bullet">
+        /// <item><description>Style.Text.None (or "None")</description></item>
+        /// <item><description>Style.Text.Title1 (or "Title1")</description></item>
+        /// <item><description>Style.Text.Title2 (or "Title2")</description></item>
+        /// <item><description>Style.Text.Title3 (or "Title3")</description></item>
+        /// </list>
+		/// </description>
+		/// </item>
+		/// <item>
+		/// <description>TextBox (applicable only when the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V1):
+		/// <list type="bullet">
+		/// <item><description>Style.Text.None (or "None")</description></item>
+        /// <item><description>Style.Text.Title1 (or "Title1")</description></item>
+        /// <item><description>Style.Text.Title2 (or "Title2")</description></item>
+        /// <item><description>Style.Text.Title3 (or "Title3")</description></item>
+        /// </list></description>
+		/// </item>
+		/// </list>
+		/// </para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -708,7 +740,7 @@ namespace Skyline.DataMiner.Automation
 		/// <code>
 		/// UIBlockDefinition label3 = new UIBlockDefinition();
 		/// label3.Type = UIBlockType.StaticText;
-		/// label3.Text = "Drop-down no filter";
+		/// label3.Text = "Dropdown no filter";
 		/// label3.Row = 2;
 		/// label3.Column = 0;
 		/// uib.AppendBlock(label3);
@@ -725,7 +757,7 @@ namespace Skyline.DataMiner.Automation
 		/// input3.InitialValue = "2";
 		/// input3.Row = 2;
 		/// input3.Column = 1;
-		/// input3.TooltipText = "drop-down no filter - tooltip text";
+		/// input3.TooltipText = "dropdown no filter - tooltip text";
 		/// uib.AppendBlock(input3);
 		/// </code>
 		/// </example>
@@ -905,7 +937,7 @@ namespace Skyline.DataMiner.Automation
 		/// <value><c>true</c> if an update of the current value of the dialog box item will trigger an OnChange event; otherwise, <c>false</c>.</value>
 		/// <example>
 		/// <remarks>
-		/// <para>Applicable only when <see cref="Type"/> is set to either Button, Calendar, Checkbox, CheckBoxList, DropDown, Numeric, PasswordBox (from DataMiner 9.6.6 onwards), RadioButtonList (from DataMiner 9.6.6 onwards), TextBox (from DataMiner 9.5.3 onwards), Time or TreeView (from DataMiner 10.0.10 onwards).</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to either Button, Calendar, Checkbox, CheckBoxList, DropDown, Numeric, PasswordBox, RadioButtonList, TextBox, Time, or TreeView.</para>
 		/// <para>Note: A button will always trigger an OnChange event, regardless of what you specify for the WantsOnChange attribute.</para>
 		/// </remarks>
 		/// <code>
@@ -925,7 +957,7 @@ namespace Skyline.DataMiner.Automation
 		/// <example>
 		/// <remarks>
 		/// <para>Applicable only in case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>.</para>
-		/// <note type="note">Available from DataMiner 10.5.8/10.6.0 onwards, in Automation scripts launched from web apps and <see href="xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url">specifying the useNewIASInputComponents=true URL parameter</see>.</note> <!-- RN 42808 / RN 42845 -->
+		/// <note type="note">Available from DataMiner 10.5.8/10.6.0 onwards, in Automation scripts launched from web apps when the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V2.</note> <!-- RN 42808 / RN 42845 -->
 		/// </remarks>
 		/// <code>
 		/// var dropDownControl = new UIBlockDefinition
@@ -944,6 +976,7 @@ namespace Skyline.DataMiner.Automation
 		/// <value><c>true</c> to let an OnChange event be triggered when the component loses focus; otherwise, <c>false</c>.</value>
 		/// <remarks>
 		/// <para>Applicable only in case <see cref="Type"/> is set to Calendar, CheckBox, CheckBoxList, DropDown, Numeric, PasswordBox, RadioButtonList, TextBox, Time.</para>
+		/// <para>In case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>, applicable in web apps when the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V2 and in Cube.</para>
 		/// <para>Feature introduced in DataMiner 10.1.10 (RN 30638).</para>
 		/// </remarks>
 		public bool WantsOnFocusLost { get; set; }
@@ -1000,14 +1033,14 @@ namespace Skyline.DataMiner.Automation
 		public void AddCheckBoxListOption(string rawValue, string displayValue) { }
 
 		/// <summary>
-		/// Adds an entry to a drop-down list.
+		/// Adds an entry to a dropdown list.
 		/// </summary>
 		/// <param name="option">The entry to add.</param>
 		/// <remarks>Only intended to be used when <see cref="Type"/> is set to <see cref="E:UIBlockType.DropDown"/>.</remarks>
 		public void AddDropDownOption(string option) { }
 
 		/// <summary>
-		/// Adds an entry to a drop-down list.
+		/// Adds an entry to a dropdown list.
 		/// </summary>
 		/// <param name="rawValue">The raw value.</param>
 		/// <param name="displayValue">The display value.</param>

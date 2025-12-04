@@ -50,14 +50,11 @@ By default, DIS sets the language version of the C# projects to 7.3.
 
 #### [Prior to DIS v2.38](#tab/tabid-2)
 
-The language version of C# projects in DIS varies depending on the DMA version specified in the *Protocol.Compliancies.MinimumRequired* tag of the protocol XML file:
+If no *Protocol.Compliancies.MinimumRequired* tag could be found, DIS sets the language version of the C# projects to 4.0.
 
-- DataMiner 9.6.10 or older (or if no *Protocol.Compliancies.MinimumRequired* tag could be found): DIS sets the language version of the C# projects to 4.0.
+Otherwise, DIS sets the language version of the C# projects to:
 
-- DataMiner 9.6.11 or higher: DIS sets the language version of the C# projects to:
-
-  - 6.0 (Visual Studio 2015)
-
-  - 7.3 (Visual Studio 2017 or later)
+- 6.0 (Visual Studio 2015)
+- 7.3 (Visual Studio 2017 or later)
 
 ***

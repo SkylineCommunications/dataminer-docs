@@ -69,7 +69,7 @@ To create an information template:
 
    - **Alarm properties**: Can be used to override alarm properties for the parameter.
 
-     To override alarm properties, select *Override* and specify the alarm property name(s) and value(s). In the *Value* field, you can directly refer to other parameters by typing *parameter.* and then selecting the parameter in the drop-down list. Note that the alarm property name must not contain a semicolon.
+     To override alarm properties, select *Override* and specify the alarm property name(s) and value(s). In the *Value* field, you can directly refer to other parameters by typing *parameter.* and then selecting the parameter in the dropdown list. Note that the alarm property name must not contain a semicolon.
 
    - **Part of snapshot**: Enable this option to add the value of this parameter to snapshots that are offloaded to the offload database.
 

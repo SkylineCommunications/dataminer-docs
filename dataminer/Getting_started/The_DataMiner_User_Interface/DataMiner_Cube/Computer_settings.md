@@ -45,7 +45,7 @@ On this page, you can select settings related to the connection of your computer
 
 - **Automatic log-on with saved user name and password**: Select this setting to have DataMiner Cube remember your username and password, so that you do not have to enter these except after an explicit logout.
 
-- **Connection type**: Select a connection type in the drop-down list. By default, this is set to *Auto*. If you select *Remoting* instead, more settings will be displayed that need to be specified (destination port, polling interval, etc.).
+- **Connection type**: Select a connection type in the dropdown list. By default, this is set to *Auto*. If you select *Remoting* instead, more settings will be displayed that need to be specified (destination port, polling interval, etc.).
 
   > [!TIP]
   > See also: [Manual configuration of client communication settings](xref:DMA_configuration_related_to_client_applications#manual-configuration-of-client-communication-settings)

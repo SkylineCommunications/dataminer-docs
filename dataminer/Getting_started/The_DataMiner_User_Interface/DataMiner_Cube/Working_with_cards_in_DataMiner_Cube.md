@@ -65,7 +65,7 @@ The pane consists of a tree view with several fixed nodes:
 
   > [!NOTE]
   >
-  > - A Visual Overview page can contain multiple tabs. If there are too many tabs to display them all on the screen, a "..." icon will be displayed. To open one of the tabs that are not displayed, you can click this icon and select the tab from the drop-down list.
+  > - A Visual Overview page can contain multiple tabs. If there are too many tabs to display them all on the screen, a "..." icon will be displayed. To open one of the tabs that are not displayed, you can click this icon and select the tab from the dropdown list.
   > - As you can also access these tabs from the card navigation pane, it is possible to hide them in Visual Overview by means of the *Show tab pages* user setting. For more information, see [Visual Overview settings](xref:User_settings#visual-overview-settings).
   > - If a Visual Overview page contains a background image, the header bar and navigation pane will be hidden after 3 seconds without mouse movement. Simply move the mouse again to make them reappear.
   > - Whether zooming in and out on a Visual Overview page is possible depends on the configuration of the page in Visio. See [EnableZoom](xref:Overview_of_page_and_shape_options) and [DisableZoom](xref:Overview_of_page_and_shape_options).
@@ -103,10 +103,10 @@ The pane consists of a tree view with several fixed nodes:
 
   ![Notes](~/dataminer/images/Notes.png)<br>*Notes in DataMiner 10.4.5*
 
-- **ANNOTATIONS**: Displays more extensive comments on DataMiner items. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
+- **ANNOTATIONS**: Deprecated. In older DataMiner versions (prior to DataMiner 10.6.0/10.6.1), this displays more extensive comments on DataMiner items. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
   > [!NOTE]
-  > The Annotations module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). Prior to this, starting from DataMiner 10.2.0/10.1.12, Annotations can optionally be disabled with this soft-launch option.
+  > The Annotations module is no longer available from DataMiner 10.6.0/10.6.1 onwards<!-- RN 44124+44136 -->. Prior to this, starting from DataMiner 10.4.0/10.4.1<!-- RN 37786 -->, it is disabled by default, but it can be enabled with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). In even older DataMiner versions, this feature is enabled by default, but you can optionally disable it with the soft-launch option.
 
 Depending on the type of cards, more nodes may be available, e.g. *AGGREGATION* on view cards.
 

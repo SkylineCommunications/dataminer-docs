@@ -48,8 +48,8 @@ The following keyboard shortcuts are available in Cube:
   | Control | Shortcut | Action |
   |--|--|--|
   | Checkbox | Space | Select or clear the checkbox. |
-  | Drop-down box | Alt + Down arrow | Open drop-down box. |
-  |  | Down/ Up arrow | Select next/previous item in the drop-down box. |
+  | Dropdown box | Alt + Down arrow | Open dropdown box. |
+  |  | Down/ Up arrow | Select next/previous item in the dropdown box. |
   | Table on data page of a card | Arrow keys | Navigate from cell to cell. |
   |  | Enter | Drill down. |
   |  | F2 | Edit the selected cell. |

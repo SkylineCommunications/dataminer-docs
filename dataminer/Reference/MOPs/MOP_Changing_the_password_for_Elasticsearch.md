@@ -62,7 +62,7 @@ The procedure below details how you can change the password for an Elasticsearch
 1. In the *Connection* menu, select *Connect*.
 1. In the *Connect* window, select the DMA, specify credentials with administrator rights, and click *Connect*.
 1. Go to the *Build Message* tab of the main window.
-1. In the *Message Type* drop-down list, select "UpdateDatabaseSettingsMessage".
+1. In the *Message Type* dropdown list, select "UpdateDatabaseSettingsMessage".
 1. Change the following attributes:
 
     - *ChangedFields*: PWD

@@ -123,7 +123,7 @@ The DataAPI module provides an HTTP interface that accepts requests with a JSON-
 
 In combination with the DataAggregator DxM, the DataAPI DxM is required for the [Data Sources](xref:Data_Sources) module.
 
-From DataMiner 10.5.11/10.6.0 onwards, DataMiner upgrade packages by default include the latest version of the DataAPI module.<!-- RN 43677 -->
+This DxM is included in DataMiner upgrade packages from DataMiner 10.5.11/10.6.0 onwards. However, the DxM will only be upgraded if an older version is found on the DMA. If no older version is found, it will not be installed.<!-- RN 43677 -->
 
 ### ModelHost
 
@@ -131,8 +131,14 @@ The ModelHost module is responsible for allowing users to retrieve parameter rel
 
 The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node). However, once it has been deployed, it gets upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 -->
 
+### SiteManager
+
+The SiteManager module is used to set up secure communication tunnels enabling access to on-premises data sources from a DaaS system. It is supported from DataMiner 10.5.10/10.5.0 onwards and is included in the 10.5.10 DaaS image.
+
+For more information, refer to [Site Manager](xref:SiteManagerOverview).
+
 ## Logging
 
-If you encounter any issues with a DxM, consult the log files for errors and warnings. By default, you can find these in the folder: `C:\ProgramData\Skyline Communications\<DxM>\Logs`.
+If you encounter any issues with a DxM, consult the log files for errors and warnings. By default, you can find these in the following folder: `C:\ProgramData\Skyline Communications\<DxM>\Logs`.
 
 If this folder does not exist, it will be created automatically if necessary.

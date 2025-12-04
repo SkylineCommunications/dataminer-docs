@@ -12,7 +12,7 @@ Most of the trend cache options can be configured as follows:
 
 1. Go to *Advanced* > *Options* > *SLNet Options*.
 
-1. In the drop-down list at the top of the window, select an option and then configure it using the right-click menu in the pane below.
+1. In the dropdown list at the top of the window, select an option and then configure it using the right-click menu in the pane below.
 
    The following options are available:
 

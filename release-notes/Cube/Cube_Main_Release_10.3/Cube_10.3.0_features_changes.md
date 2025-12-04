@@ -462,7 +462,7 @@ Up to now, alarms that did not contain any focus information were not allowed to
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
-In a trend graph, up to now, a drop-down list in the top-right corner allowed you to select one of the available trend prediction types or “Auto”. This drop-down list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or “Auto” from the context menu.
+In a trend graph, up to now, a dropdown list in the top-right corner allowed you to select one of the available trend prediction types or “Auto”. This dropdown list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or “Auto” from the context menu.
 
 #### Browser callbacks can now open EPM objects via SystemName or SystemType [ID 33963]
 

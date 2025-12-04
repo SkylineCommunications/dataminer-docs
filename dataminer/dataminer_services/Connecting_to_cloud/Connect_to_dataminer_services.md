@@ -50,7 +50,7 @@ Before you connect your DMS to dataminer.services (unless you [connect with a DM
 
 1. Specify the following information in the pop-up window:
 
-   - *Organization*: Specify your organization, either by selecting it in the drop-down box if it already exists in the system or by clicking *Create new* and specifying your name and DNS.
+   - *Organization*: Specify your organization, either by selecting it in the dropdown box if it already exists in the system or by clicking *Create new* and specifying your name and DNS.
 
      > [!NOTE]
      > To be able to select an existing organization, you must be a [member of that organization on dataminer.services](xref:Giving_users_access_to_cloud_features).

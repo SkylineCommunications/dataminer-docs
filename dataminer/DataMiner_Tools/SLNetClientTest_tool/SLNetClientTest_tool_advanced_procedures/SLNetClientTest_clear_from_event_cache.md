@@ -16,7 +16,7 @@ To do:
 
 1. Go to the *Build Message* tab.
 
-1. In the *Message Type* drop-down list, select *GetAlarmDetailsMessage*.
+1. In the *Message Type* dropdown list, select *GetAlarmDetailsMessage*.
 
 1. Next to the *Int 32[] Array* for *AlarmIDs*, click the ... button.
 

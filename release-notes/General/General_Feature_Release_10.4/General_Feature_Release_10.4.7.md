@@ -105,7 +105,7 @@ On some systems, the `C:\Skyline DataMiner\System Cache\SLNet` folder can contai
 
    1. Connect to the DMA using the SLNetClientTest tool.
    1. Go to the *Build Message* tab of the main window.
-   1. In the *Message Type* drop-down list, select *DiagnoseMessage*.
+   1. In the *Message Type* dropdown list, select *DiagnoseMessage*.
    1. In the *ExtraInfo* field, specify "flush:[fileNamePattern]". For examples of file name patterns, see below.
    1. In the *Type* field at the bottom, select "ReplicationBufferStats".
 

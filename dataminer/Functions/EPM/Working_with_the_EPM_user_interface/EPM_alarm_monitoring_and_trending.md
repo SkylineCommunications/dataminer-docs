@@ -36,4 +36,4 @@ Though in some aspects alarming and trending work in the same way as for regular
 
 - If you filter down to a particular level of the overview and then open trending, a filter is displayed at the top of the trending legend, indicating the name and value of the field above the one where trending was opened. The index in the legend indicates the values filtered for that parent field. If you clear the filter at the top, the index will act similarly to the filter field in the EPM environment.
 
-- In case you load trending for a [partial table](xref:Table_parameters#partial-tables), you will only see the specific entry from the page containing the relevant index. To load extra pages, select them in the corresponding drop-down list.
+- In case you load trending for a [partial table](xref:Table_parameters#partial-tables), you will only see the specific entry from the page containing the relevant index. To load extra pages, select them in the corresponding dropdown list.

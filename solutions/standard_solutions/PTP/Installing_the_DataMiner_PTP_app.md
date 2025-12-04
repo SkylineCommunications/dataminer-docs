@@ -39,7 +39,7 @@ To set up and configure the DataMiner PTP app:
 
 1. On the view selection page, specify the view that should be used by the DataMiner PTP app.
 
-   Either select *Create a new view* or select *Use existing view* and select the view in the drop-down list, and click *Confirm*.
+   Either select *Create a new view* or select *Use existing view* and select the view in the dropdown list, and click *Confirm*.
 
 1. On the following page, which informs you that the wizard will now create the DataMiner PTP app, click *Confirm*. If necessary, you can also abort the wizard by clicking *Abort* in the bottom-right corner.
 

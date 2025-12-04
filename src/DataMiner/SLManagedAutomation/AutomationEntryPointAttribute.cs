@@ -20,7 +20,6 @@ namespace Skyline.DataMiner.Automation
 	/// <description>For reasons of backward compatibility, it is recommended to use the Script class as the entry point class for a script. Although this is no longer strictly required, it is good practice to add a Script class to a C# code block, even if it is empty.</description>
 	/// </item>
 	/// </list>
-	/// <para>Feature introduced in DataMiner 9.5.12 (RN 18229).</para>
 	/// </remarks>
 	/// <example>
 	/// <para>Defining a custom entry point:</para>

@@ -62,11 +62,11 @@ You will often find filter boxes in DataMiner Cube that you can use to filter th
 > - When you use the Alarm Console quick filter to filter the alarms shown in an alarm tab, the total number of alarms will still be displayed in the alarm bar, with the filtered number of alarms added in parentheses.
 > - In the Alarm Console quick filter, to search for exact matches in alarm properties, square brackets can be used. For example, if there are two alarms, one with property "bbc1", the other with property "bbc", using the search term "bbc" will return both alarms. However, using the search term "\[bbc\]" will only return the latter.
 
-## Using filters in drop-down lists
+## Using filters in dropdown lists
 
-In several places in DataMiner Cube, drop-down lists feature a filter box that can be used to find an item in the list more quickly.
+In several places in DataMiner Cube, dropdown lists feature a filter box that can be used to find an item in the list more quickly.
 
-Such drop-down list controls can for example be found in the element, service, redundancy group template and service template editor, as well as in the Automation, Correlation, Aggregation, Element Connections, Trending and Scheduler apps.
+Such dropdown list controls can for example be found in the element, service, redundancy group template and service template editor, as well as in the Automation, Correlation, Aggregation, Element Connections, Trending and Scheduler apps.
 
 By default, DataMiner will simply look for the text you enter in the filter. However, it is also possible to use regular expressions, if you add the prefix *regex:* in front of your filter entry.
 

@@ -69,4 +69,4 @@ In the code above, the Time element is the hexadecimal representation of the fol
 > [!NOTE]
 >
 > - If you define a trigger that will be activated by another trigger, then leave this tag empty.
-> - In legacy DataMiner versions prior to DataMiner 9.0.0 [CU2], when `<NoTimeout>...</NoTimeOut>` was specified in the protocol, the "timeout after retries" trigger did not go off (whereas the "timeout" trigger did go off) when the response matched the value set in `<NoTimeout>`. However, in the currently supported DataMiner versions, the "timeout after retries" trigger will go off despite the `<NoTimeout>` setting, resulting in similar behavior as the "timeout" trigger.<!-- RN 12543 -->
+> - The "timeout after retries" and "timeout" trigger will go off regardless of the [NoTimeout](xref:Protocol.NoTimeouts.NoTimeout) configuration in the protocol.<!-- RN 12543 -->

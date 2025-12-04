@@ -32,7 +32,7 @@ If you want to update one element:
 
    - By default, the list will contain all elements using the same protocol version as the element you right-clicked.
 
-   - If you want to list all elements using another protocol (version), just select another protocol and/or protocol version in the drop-down boxes in the top-left corner of the dialog box.
+   - If you want to list all elements using another protocol (version), just select another protocol and/or protocol version in the dropdown boxes in the top-left corner of the dialog box.
 
    - Click *Check all / none / invert* to respectively select all elements, select none of the elements, or invert your selection.
 

@@ -2,12 +2,12 @@
 uid: Cube_Feature_Release_10.5.12
 ---
 
-# DataMiner Cube Feature Release 10.5.12 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.5.12
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.4.0 [CU21] and 10.5.0 [CU9].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -16,7 +16,7 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Parameter cache enhancements will improve overall visual overview loading performance [ID 43457]](#parameter-cache-enhancements-will-improve-overall-visual-overview-loading-performance-id-43457)
 
 ## New features
 
@@ -38,7 +38,7 @@ In the context menu of a RAD group incident as well as the context menu of a sin
 
 In order to reduce the time it takes to load a visual overview, a number of enhancements have been made to the parameter cache.
 
-Throughout the lifecycle of a Cube session, the parameter cache will request and maintain certain parameter tables, and will keeping them updated.When data is requested from any of the tables in question, the data will be fetched from the cache instead of the DataMiner Agent.
+Throughout the lifecycle of a Cube session, the parameter cache will request and maintain certain parameter tables, and will keeping them updated. When data is requested from any of the tables in question, the data will be fetched from the cache instead of the DataMiner Agent.
 
 ##### Caching only certain columns
 
@@ -91,6 +91,12 @@ For example, if a table has a display key named `qaTable 500_x` with `x` being a
 From now on, when referring to a parameter ID in a [param:] placeholder, that parameter ID can also be an ID of a cached table column.
 
 `[param:DmaID/ElementID,ParameterID]`
+
+#### Automation, Correlation & Scheduler modules: List of dashboards that can be selected in 'Send email' actions will now be refreshed each time you open the Automation, Correlation, or Scheduler module [ID 43671]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+From now on, the list of dashboards that can be selected in *Send email* actions will now be refreshed each time you open the Automation, Correlation, or Scheduler module.
 
 #### Custom Alarm Console hyperlinks linked to Automation scripts will no longer be hidden in the right-click menu of certain alarms [ID 43809]
 
@@ -146,6 +152,14 @@ In the Automation, Correlation, and Scheduler modules, you can generate a report
 
 Throughout the DataMiner Cube UI, 'Automatic incident tracking' has now been renamed to 'Alarm grouping'.
 
+#### Alarm Console: Recursive loop detection in alarm trees [ID 43914]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+From now on, when alarms have been removed from alarm trees or when correlation base alarms have been added, DataMiner Cube will check whether there are loops in the alarm tree, i.e. whether the alarm tree contains any alarms that refer to themselves.
+
+When a correlation alarm loop is detected, the following error will be added to the Cube logging and to SLClient.txt: "Cube Correlation nested alarm loop detected!"
+
 #### Enhanced message box saying that an element that is part of a redundancy group or a service included in an SLA cannot be deleted [ID 43925]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
@@ -187,3 +201,31 @@ In some cases, a request from DataMiner Cube related to a swarmed element or an 
 For example, when an element card showing a table with context menus was open while the element in question was swarmed to another DMA, after the swarming operation, it would no longer be possible to select items from those context menus.
 
 Also, it would not be possible to rename swarmed elements or elements migrated via a DELT package from the element list on a view card.
+
+#### Cube would incorrectly attempt to retrieve Catalog package information for automation scripts [ID 43872]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When connected to a system without an indexing database, up to now, DataMiner Cube would incorrectly attempt to retrieve Catalog package information for automation scripts. From now on, it will only do so when connected to a system with an indexing database.
+
+#### Changing the protocol version of an element would incorrectly affect the element's 'Skip SSL/TLS certificate verification (insecure)' connection options [ID 43932]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When, in DataMiner Cube, you changed the protocol version of an element that had connections of which the *Skip SSL/TLS certificate verification (insecure)* option was enabled, up to now, this option would incorrectly no longer be enabled.
+
+From now on, changing the protocol version of an element will no longer affect any *Skip SSL/TLS certificate verification (insecure)* options.
+
+#### Profiles: Profile parameters would incorrectly be marked as modified when their discrete values were not sorted alphabetically [ID 43965]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When, in DataMiner Cube, you opened the Profiles module, profile parameters with discrete values that were not sorted alphabetically would incorrectly be marked as modified.
+
+#### DMA would incorrectly be added to a cluster when authentication had failed [ID 43977]
+
+<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+
+When, in DataMiner Cube, you try to add a DataMiner Agent to an existing cluster, you have to enter your user credentials.
+
+Up to now, in some cases, the DataMiner Agent would incorrectly be added to the cluster, even when authentication had failed.

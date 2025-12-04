@@ -147,6 +147,10 @@ items:
             topicUid: Cleaning_up_unused_files_on_a_DMA
           - name: Synchronizing data between DataMiner Agents
             topicUid: Synchronizing_data_between_DataMiner_Agents
+      - name: Advanced configuration
+        items:
+          - name: Disabling automatic NATS configuration
+            topicUid: Disabling_automatic_NATS_config
       - name: Running BPA tests
         topicUid: Running_BPA_tests
         items:
@@ -168,6 +172,8 @@ items:
             topicUid: BPA_Minimum_Requirements_Check
           - name: Firewall Configuration
             topicUid: BPA_Firewall_Configuration
+          - name: Health Metrics
+            topicUid: BPA_HealthMetrics
           - name: HTTPS Configuration
             topicUid: BPA_Https_Configuration
           - name: Large Alarm Trees

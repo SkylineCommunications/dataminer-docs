@@ -223,7 +223,7 @@ When you create or update a dashboard, you can now add Spectrum Analyzer compone
 
 A Spectrum Analyzer component, linked to a Spectrum Analyzer element, will open a new session based on the last session that was closed by the user in DataMiner Cube.
 
-Also, in the DATA pane, you can select a spectrum preset and, for example, have it act as a filter. It is even possible to link a drop-down feed component to a Spectrum Analyzer component and use it to select the preset to be used in the latter.
+Also, in the DATA pane, you can select a spectrum preset and, for example, have it act as a filter. It is even possible to link a dropdown feed component to a Spectrum Analyzer component and use it to select the preset to be used in the latter.
 
 ##### Trigger action to open a new dashboard
 

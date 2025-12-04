@@ -147,7 +147,7 @@ To connect your DMS to the cloud:
 
 5. Specify the following information in the pop-up window:
 
-    - *Organization*: Specify your organization, either by selecting it in the drop-down box if it already exists in the system, or by clicking *Create new* and specifying your name and DNS.
+    - *Organization*: Specify your organization, either by selecting it in the dropdown box if it already exists in the system, or by clicking *Create new* and specifying your name and DNS.
     - DMS name: Specify the name you want to use for your DMS.
     - DMS URL: Specify a URL-friendly version of the DMS name.
 
@@ -689,11 +689,11 @@ On Failover systems using a shared hostname instead of a shared virtual IP addre
 
 When the status of an existing booking was set to “Canceled”, in some cases, the associated start actions and events would incorrectly still be triggered.
 
-#### Ticketing app: Problem with drop-down fields \[ID 29478\]
+#### Ticketing app: Problem with dropdown fields \[ID 29478\]
 
-When you added or updated options in a field of type “drop-down list”, in some cases, the default values of those options were not filled in correctly.
+When you added or updated options in a field of type “dropdown list”, in some cases, the default values of those options were not filled in correctly.
 
-Also, when you turned a field into a field of type “drop-down list”, in some cases, a null reference exception could be thrown.
+Also, when you turned a field into a field of type “dropdown list”, in some cases, a null reference exception could be thrown.
 
 #### Dashboards app - State timeline: Unclear error message when no parameter index has been specified yet \[ID 30485\]
 

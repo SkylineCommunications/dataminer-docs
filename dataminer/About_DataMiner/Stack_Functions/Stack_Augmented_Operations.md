@@ -13,9 +13,7 @@ The technology captures, correlates, and analyzes all data sources in real time 
 Additionally, DataMiner Augmented Operations reduce setup and configuration time, increase management efficiency, and provide unprecedented insights into the most complex operations in an intuitive and easy manner. Combined with the unique end-to-end value proposition of DataMiner, DataMiner Augmented Operations are indispensable for managing tomorrow’s operational ecosystems proactively.
 
 > [!TIP]
-> For more information:
->
-> - Learn to leverage DataMiner's AI capabilities—from proactive issues detection to streamlined incident response—so you can stay ahead of potential problems and work more effectively, with the free [DataMiner AI course](https://community.dataminer.services/learning/courses/AI/). ![Video](~/dataminer/images/video_Duo.png)
+> Learn to leverage DataMiner's AI capabilities, from proactive issues detection to streamlined incident response, so you can stay ahead of potential problems and work more effectively, with the free [DataMiner AI course](https://community.dataminer.services/learning/courses/AI/). ![Video](~/dataminer/images/video_Duo.png)
 
 > [!NOTE]
 > Are you struggling with something? Are there use cases you want us to tackle? Or do you simply have a great idea on how to improve DataMiner’s AI capabilities? Then [**let's talk AI**](https://community.dataminer.services/lets-talk-ai-automatic-detection-of-frozen-states/) and [**share your thoughts with Team AI**](https://community.dataminer.services/skylines-ai-team-wants-to-hear-from-you/).
@@ -100,14 +98,14 @@ An anomaly significance scoring mechanism augments the change point detection so
 
 **Autonomous grouping of alarms linked to the same root cause.**
 
-The Automatic Incident Tracking feature autonomously learns about system behavior and leverages the rich context of alarms and relational information available in a DataMiner System to automatically correlate alarms belonging to a specific incident. No manual pre-analysis or time-consuming setup and configuration of correlation logic is required.
+The Automatic Alarm Grouping feature autonomously learns about system behavior and leverages the rich context of alarms and relational information available in a DataMiner System to automatically correlate alarms belonging to a specific incident. No manual pre-analysis or time-consuming setup and configuration of correlation logic is required.
 
 > [!TIP]
 > For more information:
 >
 > - Course: [Incident Tracking](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/incident-tracking/)
 > - Video: [Focus on the Root of Issues with Incident Analysis](https://www.youtube.com/watch?v=m6ITgtTFz1E) ![Video](~/dataminer/images/video_Duo.png)
-> - [Automatic Incident Tracking](xref:Automatic_incident_tracking)
+> - [Automatic Alarm Grouping](xref:Automatic_incident_tracking)
 
 ## Focus Alarms
 

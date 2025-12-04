@@ -20,7 +20,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 | [![Generic map](~/dataminer/images/Generic_Map.svg)](xref:DashboardGenericMap) | A [generic map](xref:DashboardGenericMap) visualizes real-time data from the DataMiner System on top of geographical maps provided by online map services. |
 | [![Clock](~/dataminer/images/Clock.svg)](xref:DashboardClockDigital) | A [digital clock](xref:DashboardClockDigital) displays the current time in a digital format. |
 | [![Clock (Analog)](~/dataminer/images/Clock_Analog.svg)](xref:DashboardClockAnalog) | An [analog clock](xref:DashboardClockAnalog) displays the current time with clock hands. |
-| [![Group](~/dataminer/images/Group.svg)](xref:DashboardGroup) | A [group](xref:DashboardGroup) is used to display multiple components at once. |
+| [![Group](~/dataminer/images/Group.svg)](xref:DashboardGroup) | A [group](xref:DashboardGroup) (obsolete) is used to display multiple components at once. |
 | [![Maps](~/dataminer/images/maps.svg)](xref:DashboardMaps) | A [maps](xref:DashboardMaps) component is used to display markers and/or lines on a map. |
 | [![Query filter](~/dataminer/images/Query_Filter.svg)](xref:DashboardQueryFilter) | A [query filter](xref:DashboardQueryFilter) is used to filter and refine data based on specific criteria. |
 | [![Stepper](~/dataminer/images/Stepper.svg)](xref:DashboardStepper) | A [stepper](xref:DashboardStepper) is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. |
@@ -43,7 +43,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 |:--:|--|
 | [![Parameter table](~/dataminer/images/Parameter_Table.svg)](xref:DashboardParameterTable) | A [parameter table](xref:DashboardParameterTable) displays a data table of an element. |
 | [![Alarm table](~/dataminer/images/Alarm_Table.svg)](xref:DashboardAlarmTable) | An [alarm table](xref:DashboardAlarmTable) displays a list of alarms or information events, which can be filtered in multiple ways. |
-| [![Pivot table](~/dataminer/images/Pivot_Table.svg)](xref:DashboardPivotTable) | A [pivot table](xref:DashboardPivotTable) displays a status report for a number of parameters of the elements using the selected protocol and protocol version. |
+| [![Pivot table](~/dataminer/images/Pivot_Table.svg)](xref:DashboardPivotTable) | A [pivot table](xref:DashboardPivotTable) (obsolete) displays a status report for a number of parameters of the elements using the selected protocol and protocol version. |
 | [![Table](~/dataminer/images/Table.svg)](xref:DashboardTable) | A [table](xref:DashboardTable) displays the results of a query in a structured, row-column format, similar to a spreadsheet. |
 
 ### Charts

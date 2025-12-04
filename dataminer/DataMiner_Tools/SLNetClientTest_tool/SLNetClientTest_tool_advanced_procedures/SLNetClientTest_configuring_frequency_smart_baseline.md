@@ -14,7 +14,7 @@ To change this frequency:
 
 1. Go to *Advanced* > *Options* > *SLNet Options*.
 
-1. In the drop-down box, select *SmartBaselineThreadTime*.
+1. In the dropdown box, select *SmartBaselineThreadTime*.
 
 1. Right-click the DMA for which you want to change the setting and select *Edit value*.
 

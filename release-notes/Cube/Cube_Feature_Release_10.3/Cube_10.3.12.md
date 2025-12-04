@@ -119,7 +119,7 @@ A number of general enhancements have been made with regard to cache management.
 
 In the *View* tab of a spectrum card, you can change the *RBW* (Resolution bandwidth) and *VBW* (Video bandwidth) settings.
 
-Up to now, these could be modified by means of a drop-down box. From now on, they can be modified by means of "+" (plus) and "-" (minus) buttons.
+Up to now, these could be modified by means of a dropdown box. From now on, they can be modified by means of "+" (plus) and "-" (minus) buttons.
 
 #### DataMiner Cube - Spectrum Analysis: New marker button 'Center to marker frequency' [ID 37705]
 

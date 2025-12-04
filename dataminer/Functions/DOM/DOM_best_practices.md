@@ -195,6 +195,10 @@ Every call to DataMiner (e.g. `DomInstance` create call) and the database has a 
 
   When there is a need to retrieve a large number of `DomInstances`, you should use [paging](xref:DomHelper_class#reading-dom-data). This increases the number of read calls, but since the payload is large, splitting up the calls is beneficial.
 
+- **Select only the fields you need when reading**
+
+  When you only need a subset of a `DomInstance`'s properties (for example when populating a table), select those fields using the `SelectedFields<DomInstance>` overloads of `Read` or `PreparePaging` instead of retrieving full objects. This feature (see [Read selected fields](xref:DomHelper_class#reading-selected-fields)) reduces payload size and can significantly improve performance and memory usage. This feature is available from DataMiner 10.6.0/10.6.1 onwards <!-- RN 43852 -->.
+
 ### Avoid using DOM CRUD scripts for DOM definitions that see many instance creates or updates
 
 In the `ModuleSettings` and `DomDefinition`, it is possible to [define a script](xref:ExecuteScriptOnDomInstanceActionSettings) that will be executed when a `DomInstance` is created, updated, or deleted. This can for example be useful when a change to one of these objects needs to be sent to an external system.

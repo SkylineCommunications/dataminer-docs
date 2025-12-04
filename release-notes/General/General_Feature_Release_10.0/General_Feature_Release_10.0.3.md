@@ -200,7 +200,7 @@ A new setting, *Auto-expand parameters*, is now available for the parameter feed
 
 A new *Bookings* dataset is now available in the Dashboards app, which can be filtered on a specific time range. This can be used to add booking data to a *Dropdown*, *List*, or *Tree* component. If the entire booking dataset is added, a time range feed should also be added as a filter. Booking data can also be added as a filter to a *Node edge graph* component. To specify a booking data feed in a URL, specify *bookings=bookingsID*.
 
-Because it is now possible to use a booking data filter, the *Reservation instance ID* setting is no longer available for the *Node edge graph* component. If a service filter is used for this component, it must be linked with a time range feed. Finally, the *Service definition* setting for the *Node edge graph* component has been changed from a text box to a drop-down list.
+Because it is now possible to use a booking data filter, the *Reservation instance ID* setting is no longer available for the *Node edge graph* component. If a service filter is used for this component, it must be linked with a time range feed. Finally, the *Service definition* setting for the *Node edge graph* component has been changed from a text box to a dropdown list.
 
 ### DMS CPE Management
 
@@ -367,7 +367,7 @@ The following changes have been implemented to the behavior of table parameter s
 
 - When a column filter is specified, the client will only receive updates if the updated cell is part of a filtered column. This change also applies to the web API in general.
 
-- In the drop-down, list and tree feeds, the indices will now be updated in real time if WebSockets are enabled. If WebSockets are not enabled, the indices will be fetched initially and then a message will be displayed to notify the user that WebSockets must be enabled in order to retrieve updates.
+- In the dropdown, list and tree feeds, the indices will now be updated in real time if WebSockets are enabled. If WebSockets are not enabled, the indices will be fetched initially and then a message will be displayed to notify the user that WebSockets must be enabled in order to retrieve updates.
 
 #### DataMiner Cube: Enhanced app icons \[ID 24718\]
 

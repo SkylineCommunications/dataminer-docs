@@ -16,7 +16,7 @@ To retrieve DCF debug information:
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-1. In the *Message Type* drop-down list, select one of the following messages, depending on which information you want to retrieve:
+1. In the *Message Type* dropdown list, select one of the following messages, depending on which information you want to retrieve:
 
    - *GetAlarmConnectivityMessage*
 

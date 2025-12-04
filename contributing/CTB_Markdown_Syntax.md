@@ -165,6 +165,9 @@ Content for the second tab.
 
 Tab headings and ending markers (`***`) should always be surrounded by empty lines, so make sure there is an empty line above and below each heading and ending marker, like in the example above.
 
+> [!IMPORTANT]
+> Avoid adding level-2 (##) or level-3 (###) headers within the body of your tabs, as this will lead to unwanted behavior. These headers will all be shown in the quick overview of the page on the right, but if a user clicks a link in the overview for a specific tab while looking at a different tab, nothing will happen.
+
 ## Tables
 
 To create a table, use pipe characters to show the column edges. Each table should have a header row, which is followed by a row where dashes fill in the space between the pipe characters. For example:

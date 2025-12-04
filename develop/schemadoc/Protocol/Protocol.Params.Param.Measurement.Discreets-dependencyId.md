@@ -34,7 +34,7 @@ If no dependencyValues are defined, an empty list will be shown.<!-- RN 5817 -->
 
 ## Examples
 
-In the following example, the parameter will show a drop-down box of all the semicolon-separated items in parameter 10, but the user will be allowed to add extra items:
+In the following example, the parameter will show a dropdown box of all the semicolon-separated items in parameter 10, but the user will be allowed to add extra items:
 
 ```xml
 <Measurement>

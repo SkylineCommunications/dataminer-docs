@@ -4,7 +4,7 @@ uid: DOM_security
 
 # Security
 
-By default, all DOM configuration and instance data can be read by any authenticated DataMiner user. A [single dedicated user permission](#module-settings-user-permission) controls who can change core configuration. From DataMiner 10.5.10/10.6.0 onwards<!--RN43589-->, you can also restrict access to specific DOM instances via the [link security](#link-security) feature. A [dedicated app to configure definition-level security](xref:DOM_definition_security_app) is available from DataMiner 10.5.11/10.6.0 onwards.
+By default, all DOM configuration and instance data can be read by any authenticated DataMiner user. A [single dedicated user permission](#module-settings-user-permission) controls who can change core configuration. From DataMiner 10.5.10/10.6.0 onwards<!--RN43589-->, you can also restrict access to specific DOM instances via the [link security](#link-security) feature. A [dedicated UI to configure definition-level security](xref:DOM_security_ui) is available from DataMiner 10.5.11/10.6.0 onwards.
 
 ## Overview
 

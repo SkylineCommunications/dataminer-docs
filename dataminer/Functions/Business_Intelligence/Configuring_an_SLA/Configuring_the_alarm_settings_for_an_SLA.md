@@ -22,17 +22,17 @@ In addition, more recent versions of the *Skyline SLA Definition Basic* protocol
 
 ## Setting the violation level
 
-To define the service alarm level from which the SLA must indicate it has been violated, choose a violation level in the drop-down list under *Violation Level* and confirm your choice.
+To define the service alarm level from which the SLA must indicate it has been violated, choose a violation level in the dropdown list under *Violation Level* and confirm your choice.
 
 ## Setting the delay time
 
-To set a delay time before the SLA starts indicating that it has been violated, enter a value in the box under *Delay Time*, either by typing it in or by choosing from the drop-down list. Then confirm the value.
+To set a delay time before the SLA starts indicating that it has been violated, enter a value in the box under *Delay Time*, either by typing it in or by choosing from the dropdown list. Then confirm the value.
 
 It is also possible to indicate that no delay is used, by selecting the *Not used* checkbox.
 
 ## Setting a minimum outage threshold
 
-To set an initial time span during which an alarm is not taken into account, enter a value in the box under *Minimum Outage Threshold*, either by typing it in or by choosing from the drop-down list. Then confirm the value.
+To set an initial time span during which an alarm is not taken into account, enter a value in the box under *Minimum Outage Threshold*, either by typing it in or by choosing from the dropdown list. Then confirm the value.
 
 > [!NOTE]
 > When a delay time has been set, if the alarm is still in effect once the delay time is over, the full duration of the alarm will be taken into account. When a minimum outage threshold has been set, the time set in the minimum outage threshold will not be taken into account for the duration of the alarm.
@@ -57,7 +57,7 @@ To add a violation filter, follow the procedure below:
 
 1. Click *Add Entry* at the bottom of the *Violation Settings* table.
 
-1. In the first column, choose the *Violation Filter Type* in the drop-down list and confirm. This is the alarm field on which you wish to filter, e.g. Severity.
+1. In the first column, choose the *Violation Filter Type* in the dropdown list and confirm. This is the alarm field on which you wish to filter, e.g. Severity.
 
    > [!NOTE]
    > The violation filter types *Key point*, and *Component info* refer to parameter data that can be set in the protocol information template. For more information, see [Creating an information template](xref:Creating_an_information_template).

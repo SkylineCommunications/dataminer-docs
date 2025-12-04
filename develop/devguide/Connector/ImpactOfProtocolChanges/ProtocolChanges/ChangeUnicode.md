@@ -17,10 +17,12 @@ DIS MCC
 
 Element data and trending in the database need to be removed entirely.
 
-Changing a protocol using MySQL (no longer supported as of DataMiner 10.4.x) or Cassandra should be compatible. Values in *elementdata* are stored by default as Unicode and ASCII v and vu.
+If MySQL is used (no longer supported as of DataMiner 10.4.x), adding or removing the Unicode option in an existing protocol is not supported.
 
-To be verified as from which DMA version it will be considered no longer an impacting change. Until clarified, we will still consider it an impacting change. See [task 106112](https://collaboration.dataminer.services/task/106112)
+From DataMiner 10.6.0/10.6.1 onwards (RN 43929), Cassandra and STaaS support switching to and from Unicode. Values in *elementdata* are stored by default as Unicode UTF-16 encoding and Windows code page encoding in columns vu and v, allowing a switch to or from Unicode. Values that were inserted in *elementdata* before DataMiner 10.6.0/10.6.1 and that have not been modified since then could show unexpected characters when switching to Unicode.
+
+To gain a better understanding of Unicode and the needed steps to take when implementing Unicode, refer to [Code pages](xref:AdvancedCodePages).
 
 ## Actions to be taken
 
-Manual removal of database
+If MySQL is used, manual removal from database.

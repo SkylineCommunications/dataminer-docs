@@ -4,6 +4,164 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.15
+
+### New features
+
+#### IDE
+
+##### Updated manifest file now indicates that Visual Studio 2026 is supported [ID 44142]
+
+The manifest file of the DataMiner Integration Studio extension has been updated to formally indicate that Visual Studio 2026 is supported.
+
+##### Copyright snippets now include a more concise copyright message [ID 44053]
+
+All snippets that include a copyright message have been updated. The copyright message has now been made more concise.
+
+##### IAS snippet now corresponds with the example code in the README file of the IAS Toolkit repository [ID 44072]
+
+The IAS snippet has been updated. it now corresponds with the example code in the README file of the [IAS Toolkit repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit).
+
+##### Directory.Build.props file will now exclude the 'TargetPlatform x86' entry [ID 44224]
+
+If the *Automatically update solution files* option is enabled, DIS will automatically update a number of solution files, such as the *Directory.Build.props* file that contains has the following entry:
+
+`<PlatformTarget>x86</PlatformTarget>`
+
+However, when you create e.g. a NuGet package that could be used in e.g. connectors, Automation scripts and GQI queries, you do not want the *Directory.Build.props* file to have its platform target fixed on x86. As a result, the `<PlatformTarget>x86</PlatformTarget>` entry has now been removed.
+
+> [!NOTE]
+> Developers should now set this entry in the csproj file when needed. For example, when you create unit tests for a regular Automation script, it might be required to set the target platform to x86. Otherwise, a `BadImageFormatException` could be thrown when executing the test.
+
+##### Updated DIS dependencies
+
+DIS now uses:
+
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 1.3.0
+- [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol) version 1.1.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.5.12.1
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.5.12.1
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.5.12.1
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.5
+
+## DIS 3.1.14
+
+### New features
+
+#### IDE
+
+##### no-restore option will now be passed to the process that will create an Automation script application package [ID 44007]
+
+From now on, the `no-restore` option will be added as an additional argument when spawning the process that will create an Automation script application package (dmapp) via the dotnet build operation.
+
+## DIS 3.1.13
+
+### Fixes
+
+#### IDE
+
+##### Problem when publishing an Automation script [ID 43997]
+
+In some cases, a `MissingMethodException` could be thrown while publishing an Automation script that uses the DataMiner SDK.
+
+From now on, the application package (dmapp) creation will be performed in a dedicated process to avoid any interference with NuGet packages already loaded in by Visual Studio.
+
+## DIS 3.1.12
+
+### New features
+
+#### IDE
+
+##### New XML snippet 'Functions Root' [ID 43396]
+
+A new *Functions Root* snippet has been introduced. It will insert the following XML code.
+
+```xml
+<Functions xmlns="http://www.skyline.be/config/functions">
+    <Version>1.0.0.1</Version>
+    <Protocol>
+        <Name>ProtocolX</Name>
+    </Protocol>
+</Functions>
+```
+
+##### 'Parameter Update Locations' tool window is now able to detect update locations in HTTP sessions [ID 43646]
+
+The *Parameter Update Locations* tool window is now able to detect update locations in [HTTP sessions](xref:Protocol.HTTP.Session) defined in a protocol.
+
+For example, in the following session, the tool window is now able to detect that parameters 1000, 1001, and 1002 are updated through this session:
+
+```xml
+<HTTP>
+    <Session id="1">
+        <Connection id="1">
+            <Request verb="GET" pid="900">
+            </Request>
+            <Response statusCode="1001">
+                <Headers>
+                    <Header key="Content-Type" pid="1002"></Header>
+                </Headers>
+                <Content pid="1000"></Content>
+            </Response>
+        </Connection>
+    </Session>
+</HTTP>
+```
+
+##### Generate Driver Help plugin will now use the updated Technical and Marketing templates [ID 43420]
+
+The [Generate Driver Help](xref:DisPlugins#generate-driver-help) plugin will now use the updated Technical and Marketing templates.
+
+##### Updated DIS dependencies [ID 43959]
+
+DIS now uses:
+
+- [Skyline.DataMiner.CICD.DMApp.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Automation) version 3.0.3
+- [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol) version 3.0.3
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 1.2.1
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 2.0.0
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 2.0.0
+- [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol) version 1.0.16
+- [Skyline.DataMiner.Core.ArtifactDownloader](https://www.nuget.org/packages/Skyline.DataMiner.Core.ArtifactDownloader) version 3.1.1
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.5.10
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.5.10
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.5.10
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.4
+
+### Fixes
+
+#### IDE
+
+##### Problem when an operation failed because of insufficient permissions [ID 43538]
+
+Up to now, a fatal error would occur when an operation was performed for which insufficient permissions were granted on the destination DMA. From now on, a message will appear, indicating that the operation failed because of insufficient permissions.
+
+Also, error popups will now reliably appear in front of Visual Studio. They will no longer appear behind the main window. In addition, the appearance and consistency of error popups have been aligned.
+
+##### Problem when selecting NuGet references in Solution Explorer [ID 43544]
+
+Up to now, selecting a NuGet reference in Visual Studio's Solution Explorer (within a package solution) could cause an infinite loop of error popups, eventually leading to a fatal error in Visual Studio.
+
+##### Skyline.DataMiner.Sdk projects would incorrectly not allow multiple Exe blocks regardless of their type [ID 43784]
+
+With the introduction of the Skyline.DataMiner.Sdk projects, Script style projects would incorrectly not allow multiple [Exe](xref:DMSScript.Script.Exe) blocks, regardless of their [type](xref:DMSScript.Script.Exe-type).
+
+From now on, Skyline.DataMiner.Sdk Script projects will not allow multiple Exe blocks of type 'csharp'. This will allow users to have e.g. an Exe block of type 'csharp' and an Exe block of type 'report'.
+
+##### ProcessAutomation.dll would be referenced incorrectly after building a dmapp [ID 43899]
+
+Up to now, when you had created or deployed an Automation script that referenced the *ProcessAutomation.dll* file, that assembly would be resolved incorrectly. The system would attempt to locate it in the `ProtocolScripts/DllImport` folder, whereas the correct location was `ProtocolScripts`.
+
+From now on, when the *ProcessAutomation.dll* file is referenced, the resulting path in the XML file will point to the `ProtocolScripts` folder.
+
+##### Problem with Automation script interactivity check [ID 42881]
+
+In DIS, when you published an Automation script, an attempt would be made to detect whether the script used any interactive methods (e.g. ShowUI). If that was the case, flags would be set in the script options to mark the script as interactive.
+
+As DIS now checks the placeholder instead of the C# code, this mechanism no longer worked. As a result, it was also no longer possible to manually set the flags in the XML file of an Automation script project.
+
+The above-mentioned mechanism has now been removed. Whether a script requires interactivity should now be specified using the [Interactivity](xref:DMSScript.Interactivity) tag. Also, it is now possible again to manually set the flags in the XML file of an Automation script project.
+
 ## DIS 3.1.11
 
 ### New features

@@ -14,6 +14,33 @@ This Feature Release of the DataMiner Cube client application contains the same 
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.5.11](xref:General_Feature_Release_10.5.11).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.5.11](xref:Web_apps_Feature_Release_10.5.11).
 
+## New features
+
+#### System Center: DOM definition-level security app [ID 43622]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+In System Center, a new embedded web app now offers you a user-friendly UI to configure DOM definition-level security settings.
+
+To access this app, go to *System Center > DOM*.
+
+In the app, by default, no rules will be applied, meaning that all users will have full access to all DOM modules. They will all be allowed to create, read, update, and delete DOM definitions in all available DOM modules.
+
+When you set a particular DOM module to "Restrict access", the list of DOM definitions in that module will open, and no one will have access to the module. Granting a user group full access to a DOM definition will grant all users in that group permission to read, update, and delete that DOM definition.
+
+The security configuration of a particular DOM module will be considered valid if at least one user group has full access to at least one definition in that module. Also, users will only be able to apply changes to the security settings of a particular DOM module when none of the DOM modules contain invalid settings.
+
+When a user applies changes to a DOM module, that module will reinitialize itself.
+
+> [!NOTE]
+>
+> - This app only works in conjunction with DataMiner Agents running at least Main Release version 10.6.0 or Feature Release version 10.5.10.
+> - This app is only accessible to users with the following user permission: *Modules > System configuration > Object Manager > Module settings*.
+> - To access this web app directly, go to `https://<DMA IP or hostname>/dom`.
+> - You can embed this app in a low-code app by specifying a URL like `https://<DMA IP or hostname>/dom/#/?embed=true` in a *Web* component. Also, when you embed this app in a low-code app, you can make it show specific DOM modules by adding the IDs of those modules in the URL. See the following example: `https://<DMA IP or hostname>/dom/#/?embed=true&moduleIds=myDomModule1,myDomModule2,myDomModule3`.
+
+See also: [DataMiner Object Models: Definition-level security [ID 43380] [ID 43589]](xref:General_Feature_Release_10.5.10#dataminer-object-models-definition-level-security-id-43380-id-43589)
+
 ## Changes
 
 ### Enhancements

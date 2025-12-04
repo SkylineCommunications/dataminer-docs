@@ -59,7 +59,7 @@ To configure the component:
 
      - *Show maximum*: Available from DataMiner 10.2.0/10.1.6 onwards. Select this option to show the maximum value of the value range below the ring. Note that this value can be customized in the component settings.
 
-     - *Show icon*: Determines whether an icon is displayed for the parameter. You can select which icon is displayed in a drop-down list.
+     - *Show icon*: Determines whether an icon is displayed for the parameter. You can select which icon is displayed in a dropdown list.
 
        For trended parameters, by default a trend icon is displayed. Clicking this icon will open the corresponding trend graph in the Monitoring app.
 

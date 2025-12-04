@@ -761,34 +761,15 @@ A number of minor enhancements have been made to the following BPAs:
 
 - Renamed to *Nats connections between the DataMiner Agents*.
 
-##### Check Antivirus DLLs
-
-- Renamed to *Antivirus on the DataMiner Agents*.
-
-##### Check Cluster SLNet Connections
-
-- Renamed to *SLNet connections between the DataMiner Agents*.
-- Message `No potential issues detected` renamed to `No issues detected`.
-
 ##### HTTPS Configuration
 
 - Will no longer be considered a standard BPA test.
 - Will by default be executed as part of the *Security Advisory* BPA.
 
-##### Minimum Requirements Check
-
-- Renamed to *DataMiner Agent Minimum Requirements*.
-- When Cassandra is not installed, this BPA will no longer report Cassandra is a requirement.
-- Memory calculation has been enhanced.
-
 ##### Password Strength
 
 - Will no longer be considered a standard BPA test.
 - Will by default be executed as part of the *Security Advisory* BPA.
-
-##### Report active RTE
-
-- Renamed to *Active Runtime errors*.
 
 ##### Security Advisory BPA
 

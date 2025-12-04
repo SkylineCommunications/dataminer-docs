@@ -154,4 +154,4 @@ Link security also applies to events:
 
 - Renaming a DataMiner security group invalidates any existing group links using the old name. Update the links accordingly.
 - Enabling link security introduces some overhead. Testing showed only minor measurable impact, predominantly in large-scale bulk operations with very high numbers of links (e.g. 100K). More typical scenarios showed little to no noticeable performance difference.
-- The DOM instance tab in a DOM module window of the SLNet Client Test tool will require you to select one or more DOM definitions before being able to read the DOM instances. This only when security is enabled.
+- When security is enabled, the DOM instance tab in a DOM module window of the [SLNetClientTest tool](xref:SLNetClientTest_tool) will require you to select one or more DOM definitions before you can read the DOM instances.

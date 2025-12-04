@@ -4,7 +4,12 @@ uid: GetJobFieldOptions
 
 # GetJobFieldOptions
 
-Use this method to retrieve the drop-down options for a specific job field.
+Use this method to retrieve the dropdown options for a specific job field.
+
+> [!CAUTION]
+>
+> - The Jobs app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
+> - The Jobs app is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 ## Input
 
@@ -19,4 +24,4 @@ Use this method to retrieve the drop-down options for a specific job field.
 
 | Item | Format | Description |
 |--|--|--|
-| GetJobFieldOptionsResult | [DMAJobFieldPossibleValues](xref:DMAJobFieldPossibleValues) | The drop-down options for the specified job field, along with a boolean indicating whether more options are available. |
+| GetJobFieldOptionsResult | [DMAJobFieldPossibleValues](xref:DMAJobFieldPossibleValues) | The dropdown options for the specified job field, along with a boolean indicating whether more options are available. |

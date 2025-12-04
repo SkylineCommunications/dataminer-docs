@@ -13,7 +13,7 @@ To create a base protocol, provide an element type name (e.g. "IRD" or "Switch")
 <Name>Standard IRD</Name>
 ```
 
-From DataMiner 9.6.2 (RN 19591) onwards, the *baseFor* attribute of the base protocol is no longer considered when a parameter is directly linked to a device protocol using the *protocol* attribute of [Mediation.LinkTo](xref:Protocol.Params.Param.Mediation.LinkTo). In such an instance, the device protocol does not need to have an element type that matches the value of the *baseFor* attribute.
+Note that the *baseFor* attribute of the base protocol is not considered when a parameter is directly linked to a device protocol using the *protocol* attribute of [Mediation.LinkTo](xref:Protocol.Params.Param.Mediation.LinkTo). In such an instance, the device protocol does not need to have an element type that matches the value of the *baseFor* attribute.
 
 > [!NOTE]
 >

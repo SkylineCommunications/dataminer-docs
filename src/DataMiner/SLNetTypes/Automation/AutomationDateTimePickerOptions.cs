@@ -17,6 +17,7 @@ namespace Skyline.DataMiner.Automation
 	/// <img src="~/develop/images/datetimepicker_example.png" />
 	/// </example>
 	/// <remarks>
+	/// <para>Applicable only when <see cref="Type"/> is set to Time.</para>
 	/// <note type="note">
 	/// <para>If the name of a variable starts with the following prefix, IntelliSense in DataMiner Cube will list the object properties: dateTimePickerConfig*</para>
 	/// </note>
@@ -88,9 +89,9 @@ namespace Skyline.DataMiner.Automation
 		public CalendarMode CalendarDisplayMode { get; set; }
 
 		/// <summary>
-		/// Gets or sets a value indicating whether to show the drop-down button to show the calendar control.
+		/// Gets or sets a value indicating whether to show the dropdown button to show the calendar control.
 		/// </summary>
-		/// <value><c>true</c> to show the drop-down button; otherwise, <c>false</c>.</value>
+		/// <value><c>true</c> to show the dropdown button; otherwise, <c>false</c>.</value>
 		/// <remarks>
 		/// <para>Default: <c>true</c>.</para>
 		/// </remarks>

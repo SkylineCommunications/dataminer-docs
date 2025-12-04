@@ -35,7 +35,7 @@ To configure the component:
 
    - From DataMiner 10.2.0/10.1.3 onwards, a [parameter table filter](xref:Parameter_Table_Filters) is supported if the URL option showAdvancedSettings=true is used. This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
-   - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view trending for aggregation rules on specific views. To select these, in the drop-down box for the parameter data source, select *View*.
+   - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view trending for aggregation rules on specific views. To select these, in the dropdown box for the parameter data source, select *View*.
 
 1. Optionally, customize the following component options in the *Component* > *Settings* pane:
 
@@ -214,7 +214,7 @@ It is possible to export the trend data to CSV. To do so, click the ... icon in 
 >
 > - The separator used in CSV exports is based on the *CSV separator* setting in Cube. If this setting cannot be retrieved, the local browser settings are used instead.
 > - From DataMiner 10.3.3/10.4.0 onwards, the *Show average*, *Show minimum*, and *Show maximum* settings are also taken into account when you export a chart to CSV. In addition, if the *Show min/max shading* option is enabled, minimum and maximum values will always be taken into account in the export. <!-- RN 35311 -->
-> - Creating a CSV export of an aggregation parameter is not yet supported.
+> - Prior to DataMiner 10.5.0 [CU10]/10.6.1<!--RN 43939-->, creating a CSV export of an aggregation parameter is not supported.
 
 ## Zooming and panning
 

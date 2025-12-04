@@ -2,9 +2,11 @@
 uid: Automatic_incident_tracking
 ---
 
-# Automatic incident tracking
+# Automatic alarm grouping
 
-This DataMiner Analytics feature groups active alarms that are related to the same incident, so that the Alarm Console provides a better overview of the current issues in the system. Unlike Correlation tracking, this can happen completely automatically, without any configuration by the user. DataMiner Analytics automatically detects which alarms share a common trait and groups them as one incident.
+This DataMiner Analytics feature groups active alarms that are related, so that the Alarm Console provides a better overview of the current issues in the system. Unlike Correlation tracking, this can happen completely automatically, without any configuration by the user. DataMiner Analytics automatically detects which alarms share a common trait and groups them together.
+
+Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- 43903 -->, this feature is called automatic incident tracking.
 
 The following factors, in order, are taken into account for the grouping:
 
@@ -29,7 +31,7 @@ The following factors, in order, are taken into account for the grouping:
 
 - Element information
 
-- Alarm, element, service or view properties, if these have been configured for incident tracking (see [Customizing alarm grouping rules](xref:Customizing_alarm_grouping_rules)).
+- Alarm, element, service or view properties, if these have been configured for alarm grouping (see [Customizing alarm grouping rules](xref:Customizing_alarm_grouping_rules)).
 
 If a single factor is used, it is mentioned in the value of the created alarm group.
 
@@ -37,7 +39,7 @@ The above-mentioned factors are applied in order, meaning that if multiple facto
 
 Sometimes, multiple factors are combined to create an alarm group. For example, if you have a device with two alarms (*Element information* factor), and Relation Learning indicates one of these alarms is related to a different alarm on another element, a group of three alarms is created. In this case, the alarm group's value will indicate it is a "multiple reasons group".
 
-If no suitable match is found, alarms will not be grouped. Also, since only alarms with an alarm focus score are taken into account, automatic incident tracking does not apply to information events, suggestion events or notice messages.
+If no suitable match is found, alarms will not be grouped. Also, since only alarms with an alarm focus score are taken into account, automatic alarm grouping does not apply to information events, suggestion events or notice messages.
 
 The grouping of alarms into incidents is updated in real time whenever appropriate:
 
@@ -49,26 +51,26 @@ The grouping of alarms into incidents is updated in real time whenever appropria
 
 > [!NOTE]
 >
-> - Using automatic incident tracking with history sets is supported; however, keep in mind that this may trigger the creation and immediate clearing of a large number of alarm groups.
+> - Using automatic alarm grouping with history sets is supported; however, keep in mind that this may trigger the creation and immediate clearing of a large number of alarm groups.
 > - When an element is stopped or paused, the alarms associated with that element will not be taken into account when grouping alarms. Also, alarms associated with elements that are stopped or paused will be removed from any existing alarm group.
 > - When an element is swarmed to another Agent, any active anomalies (including alarm groups) that include that element will be cleared. This does not apply for [manually created](#manually-updating-an-alarm-group) alarm groups, but note that prior to DataMiner 10.5.0 [CU8]/10.5.11, alarms from swarmed elements do get removed from manually created alarm groups.<!-- RN 43739 -->
-> - After a [DataMiner Agent is added to a DMS](xref:Adding_a_DataMiner_Agent_to_a_DataMiner_System), incidents created by automatic incident tracking will temporarily be shown incorrectly. This issue will automatically be resolved within 30 minutes, but you can also manually fix this sooner by changing the *Leader DataMiner ID* in the [automatic incident tracking configuration in System Center](xref:Automatic_incident_tracking#automatic-incident-tracking-configuration-in-system-center).
+> - After a [DataMiner Agent is added to a DMS](xref:Adding_a_DataMiner_Agent_to_a_DataMiner_System), automatically generated alarm groups will temporarily be shown incorrectly. This issue will resolve itself within 30 minutes, but you can also manually fix this sooner by changing the *Leader DataMiner ID* in the [automatic alarm grouping configuration in System Center](xref:Automatic_incident_tracking#automatic-alarm-grouping-configuration-in-system-center).
 
 > [!TIP]
 > It is possible to manually customize alarm grouping. See [Customizing alarm grouping rules](xref:Customizing_alarm_grouping_rules).
 
-## Automatic incident tracking configuration in System Center
+## Automatic alarm grouping configuration in System Center
 
-In DataMiner Cube, you can enable this feature in System Center, via *System settings* > *analytics config* > *automatic incident tracking*. From DataMiner 10.2.0/10.2.1 onwards, in new installations and in systems upgrading from DataMiner versions that did not support automatic incident tracking yet, it is enabled by default.
+In DataMiner Cube, you can enable this feature in System Center, via *System settings* > *analytics config* > *automatic alarm grouping* (or prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- 43903 -->: *automatic incident tracking*). From DataMiner 10.2.0/10.2.1 onwards, in new installations and in systems upgrading from DataMiner versions that do not support automatic alarm grouping yet, it is enabled by default.
 
 > [!NOTE]
-> Automatic incident tracking relies on the [alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus) functionality. Ensure this feature is enabled in System Center, via *System Center* > *System settings* > *analytics config*, to guarantee the creation of alarm groups.
+> Automatic alarm grouping relies on the [alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus) functionality. Ensure this feature is enabled in System Center, via *System Center* > *System settings* > *analytics config*, to guarantee the creation of alarm groups.
 
 The following settings are available in System Center:
 
 - *Enabled*: Allows you to activate or deactivate this feature.
 
-- *Leader DataMiner ID*: The DMA performing all incident tracking calculations. By default, this is the DMA with the lowest DataMiner ID at the time when alarm grouping is enabled.
+- *Leader DataMiner ID*: The DMA performing all alarm grouping calculations. By default, this is the DMA with the lowest DataMiner ID at the time when alarm grouping is enabled.
 
 - *Maximum group size*: Available from DataMiner 10.1.11/10.2.0 onwards. When an alarm group reaches the maximum size specified in this setting, a new group will be created with all remaining alarms that belong to the same incident. Default value: 1000.
 
@@ -76,12 +78,12 @@ The following settings are available in System Center:
 
 - *Maximum group events rate*: Available from DataMiner 10.2.1/10.2.0 onwards. The maximum number of alarm group events that can be generated per second. This setting is used to avoid possible performance issues during alarm floods. If more events are generated per second than the specified number, the generation of events is slowed down, and a notice alarm is generated. As soon as the number of generated events drops below the threshold again, the notice alarm is cleared and events are again generated as quickly as possible. Default value: 100.
 
-## Activating automatic incident tracking
+## Activating automatic alarm grouping
 
-When this feature has been enabled in System Center as detailed above, it still needs to be activated in the Alarm Console. To do so, in the Alarm Console hamburger menu, select *Automatic incident tracking*.
+When this feature has been enabled in System Center as detailed above, it still needs to be activated in the Alarm Console. To do so, in the Alarm Console hamburger menu, select *Automatic alarm grouping* (or prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- 43903 -->: *Automatic incident tracking*).
 
 > [!NOTE]
-> Automatic incident tracking is only shown for active alarms, not for history alarms. Consequently, from DataMiner 10.2.0 [CU12]/10.3.3 onwards, the *Automatic incident tracking* option is not available for a history tab in the Alarm Console. <!-- RN 35556 -->
+> Automatic alarm grouping is only available for active alarms, not for history alarms.
 
 ## Alarm groups in the Alarm Console
 
@@ -107,20 +109,20 @@ In the Alarm Console, alarm groups are displayed as a special kind of alarm entr
 
 ## Manually updating an alarm group
 
-From DataMiner 10.2.5/10.3.0 onwards, it is possible to manually update an alarm group or "incident". In the Alarm Console, you can add or remove alarms, create an alarm group manually, or rename an alarm group.
+From DataMiner 10.2.5/10.3.0 onwards, it is possible to manually update an alarm group. In the Alarm Console, you can add or remove alarms, create an alarm group manually, or rename an alarm group.
 
-- To **create an alarm group**, right-click an alarm that is not part of an alarm group yet, and select *Add to incident*. In the pop-up window, select to create a new incident and add the alarm to it.
+- To **create an alarm group**, right-click an alarm that is not part of an alarm group yet, and select *Add to alarm group* (or prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- 43903 -->: *Add to incident*). In the pop-up window, select to create a new alarm group (or incident) and add the alarm to it.
 
-- To **add an alarm** to an existing alarm group, right-click an alarm that is not part of an alarm group yet, and select *Add to incident*. In the pop-up window, select to add the alarm to an existing incident.
+- To **add an alarm** to an existing alarm group, right-click an alarm that is not part of an alarm group yet, and select *Add to alarm group* (or prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- 43903 -->: *Add to incident*). In the pop-up window, select to add the alarm to an existing alarm group (or incident).
 
   > [!NOTE]
-  > The following types of alarms cannot be added to an alarm group: correlated alarms, information events, suggestion events, other alarm groups, and clearable alarms. Prior to DataMiner 10.2.9/10.3.0 it is also not possible to add alarms without focus information, such as notices and errors.
+  > The following types of alarms cannot be added to an alarm group: correlated alarms, information events, suggestion events, other alarm groups, and clearable alarms. Prior to DataMiner 10.2.9/10.3.0, it is also not possible to add alarms without focus information, such as notices and errors.
 
-- To **remove an alarm** from an alarm group, right-click an alarm that is part of an incident and select *Remove from incident*.
+- To **remove an alarm** from an alarm group, right-click an alarm that is part of an alarm group and select *Remove from alarm group* (or prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- 43903 -->: *Remove from incident*).
 
 - To **rename an alarm group**, click the pencil icon next to the alarm group name and specify a new name.
 
-- To **move an alarm** from one alarm group to another (supported from DataMiner 10.2.6/10.3.0 onwards), right-click an alarm that is part of an incident and select *Move to another incident*. You will then be able to select a different incident or create a new one to add the alarm to.
+- To **move an alarm** from one alarm group to another (supported from DataMiner 10.2.6/10.3.0 onwards), right-click an alarm that is part of an alarm group and select *Move to another alarm group* (or prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- 43903 -->: *Move to another incident*). You will then be able to select a different alarm group or create a new one to add the alarm to.
 
 - From DataMiner 10.2.7/10.3.0 onwards, you can also modify an alarm group with **drag-and-drop editing**. To do so:
 
@@ -136,13 +138,13 @@ From DataMiner 10.2.5/10.3.0 onwards, it is possible to manually update an alarm
      - Click the *x* next to an alarm in the side panel to remove it from the alarm group.
 
      > [!NOTE]
-     > If you right-click an alarm group and select *Edit incident*, this will open the side panel and activate drag-and-drop editing, so you can edit the alarm group in the same way as described here.
+     > If you right-click an alarm group and select *Edit alarm group* (or prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- 43903 -->: *Edit incident*), this will open the side panel and activate drag-and-drop editing, so you can edit the alarm group in the same way as described here.
 
   1. When you are done, click *Apply*.
 
 > [!NOTE]
 >
 > - When an alarm group has been updated manually, it will no longer be updated automatically.
-> - From DataMiner 10.2.6/10.3.0 onwards, you can manually create an alarm group even when the *Automatic incident tracking* option is not activated in the alarm tab. From DataMiner 10.2.7/10.3.0 onwards, this is even possible when incident tracking is not [enabled in System Center](#automatic-incident-tracking-configuration-in-system-center).
-> - From DataMiner 10.2.6/10.3.0 onwards, the right-click menu of an incident also allows you to take/(force) release ownership of the incident, add a comment, clear the incident in case it was created manually, assign a ticket to the incident, or view a ticket that was assigned to the incident.
+> - From DataMiner 10.2.6/10.3.0 onwards, you can manually create an alarm group even when automatic alarm grouping is not activated in the alarm tab. From DataMiner 10.2.7/10.3.0 onwards, this is even possible when alarm grouping is not [enabled in System Center](#automatic-alarm-grouping-configuration-in-system-center).
+> - From DataMiner 10.2.6/10.3.0 onwards, the right-click menu of an alarm group (or incident) also allows you to take or (force) release ownership of the alarm group, add a comment, clear the alarm group in case it was created manually, assign a ticket to the alarm group, or view a ticket that was assigned to the alarm group.
 > - From DataMiner 10.2.6/10.3.0 onwards, when an alarm group is created or edited manually, it will always receive focus. Automatically created alarm groups receive focus if at least one of the base alarms has focus. See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus).

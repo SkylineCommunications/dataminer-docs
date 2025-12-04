@@ -6,8 +6,6 @@ uid: GetMonitoredParametersForElement
 
 Use this method to retrieve all the monitored parameters for a specified element.
 
-<!-- Available from DataMiner 9.5.8 onwards. -->
-
 ## Input
 
 | Item                | Format  | Description                                           |

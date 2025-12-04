@@ -69,6 +69,15 @@
     <Compile Include="Rad\RenameRADParameterGroupResponseMessage.cs" />
     <Compile Include="Rad\AddRADSubgroupMessage.cs" />
     <Compile Include="Rad\RemoveRADSubgroupMessage.cs" />
+  	<Compile Include="Rad\GetRadSubgroupInfoMessage.cs" />
+	  <Compile Include="Rad\GetRadSubgroupInfoResponseMessage.cs" />
+    <Compile Include="Rad\MigrateRADParameterGroupMessage.cs" />
+    <Compile Include="Rad\MigrateRADParameterGroupResponseMessage.cs" />
+    <Compile Include="Rad\GetAllRelationalAnomaliesMessage.cs" />
+    <Compile Include="Rad\GetRelationalAnomaliesMessage.cs" />
+    <Compile Include="Rad\GetRelationalAnomaliesResponseMessage.cs" />
+    <Compile Include="Rad\GetRADSubgroupFitScoresMessage.cs" />
+    <Compile Include="Rad\GetRADSubgroupFitScoresResponseMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SLNetTypes\SLNetTypes.csproj">

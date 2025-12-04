@@ -8,7 +8,11 @@ From DataMiner 10.3.0/10.3.3 onwards, DataMiner web upgrades are **available sep
 
 Starting from DataMiner 10.4.0, every **cumulative update of a Main Release includes the same web apps changes as the corresponding DataMiner Feature Release**. For example, all DataMiner web apps changes from Feature Release 10.5.4 are also available in Main Release 10.4.0 (CU13) and 10.5 (CU1). This means that if you are on the Main Release track, you can simply install the latest web upgrade package without having to check for a separate Main Release or Feature Release package. <!-- It also means that if you for example build a low-code app using the latest DataMiner Feature Release, your app will also be compatible with the latest Main Release cumulative updates. (This comment can be published once GQI DxM becomes the default in a 10.5.x Feature Release, as backwards compatibility will apply from DataMiner 10.5.0 onwards.) -->
 
-Note that it is not possible to upgrade the web apps to a DataMiner 10.5.x version or higher if the DataMiner Agent itself is still running a DataMiner version older than 10.4.0/10.4.1. **To install a 10.5.x web upgrade, the server must first be upgraded to at least version 10.4.0**.<!--RN 41395-->
+From DataMiner 10.5.x onwards, web apps can only be upgraded to the next major version if the DataMiner Agent is already running at least the baseline version introduced in the previous major release. This means:
+
+- To install a 10.5.x web upgrade, the server must first be upgraded to at least version 10.4.0<!--RN 41395-->.
+
+- To install a 10.6.x web upgrade, the server must first be upgraded to at least version 10.5.0<!--RN 44103-->.
 
 > [!NOTE]
 >
@@ -24,10 +28,14 @@ Note that it is not possible to upgrade the web apps to a DataMiner 10.5.x versi
 
 From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37413-->, whenever you [upgrade your DMA](xref:Upgrading_a_DataMiner_Agent) or install a DataMiner web upgrade, an automatic backup of all existing dashboards and low-code apps on the system is generated and stored in `C:\Skyline DataMiner\System Cache\Web\Backups`.
 
+From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43906-->, to enable faster backups, the backup includes only up to two versions: the latest published version and the most recent draft. Prior to this, the backup includes all versions of each app. The [version history](xref:LowCodeApps_earlier_version) itself is left untouched.
+
 After the upgrade process, your dashboards and low-code apps may be migrated to ensure compatibility with the updated software version. If an error occurs during this migration, or if you need to perform a DataMiner downgrade, you can manually restore your dashboards and low-code apps from the backup.
 
 > [!NOTE]
-> The *Backups* folder retains only the five most recent backup files.
+>
+> - The *Backups* folder retains only the five most recent backup files.
+> - From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43906-->, only apps with a valid *App.info.json* file will be included in the automatic backup. When the file is not present or invalid, or if the published and draft versions are set to null in the file, the app will not be included in the backup.
 
 ## Downgrading the DataMiner web apps
 

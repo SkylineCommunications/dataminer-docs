@@ -10,9 +10,9 @@ This component displays an uploaded image.
 
 To configure this component:
 
-- In the *Component* > *Settings* pane, select the image you want to display in the *Image* drop-down list.
+- In the *Component* > *Settings* pane, select the image you want to display in the *Image* dropdown list.
 
-  This list shows all images available on the DMA. If the image you want is not yet in the list, you can upload it using the option *Upload a new image* below the drop-down list. The following image types are supported: PNG, JPEG, GIF, APNG, SVG and WEBP.
+  This list shows all images available on the DMA. If the image you want is not yet in the list, you can upload it using the option *Upload a new image* below the dropdown list. The following image types are supported: PNG, JPEG, GIF, APNG, SVG and WEBP.
 
 In the *Component \> Layout* tab, the following options can be configured:
 

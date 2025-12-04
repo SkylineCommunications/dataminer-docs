@@ -7,6 +7,16 @@ description: Use the Ziine Demo System to explore DataMiner features in a functi
 
 The Ziine Demo System allows you to explore many different DataMiner features in a functioning DataMiner System. This includes the standard DataMiner monitoring and Visual Overview features, and also several DataMiner Solutions and standard apps.
 
+Watch the video below for a quick overview of how to request access, connect to Ziine, and get started. You can also follow the detailed steps on this page.
+
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/dataminer/images/Ziine.mp4" type="video/mp4">
+  </video>
+</div>
+
+*Note that some apps shown in this video are not available to external users.*
+
 ## Requesting access to Ziine
 
 To access the Ziine Demo System:
@@ -65,3 +75,17 @@ If you are having problems connecting using the DataMiner Cube:
    1. Click the blue arrow icon to log on.
 
       ![Logging on to Ziine](~/dataminer/images/ziine_login.png)
+
+## Navigating the Ziine UI in DataMiner Cube
+
+When you have logged on to Cube, use the [Surveyor pane](xref:DataMiner_Cube_sidebar) on the left to navigate the UI. Within the pane, you will find three main [views](xref:About_views):
+
+- Operations
+- Solutions
+- Visual Overview Design examples
+
+Under each view, subviews represent the different demos on show. For example, under *Operations*, the *Downlink* view contains a demo about downlink services, where two different highly redundant sites are being actively monitored from a service and SLA perspective.
+
+In the central pane (or "[card pane](xref:DataMiner_Cube_card_pane)") of the Cube UI, you will find navigation links to a demo hub where you can explore the ever-growing list of demos on offer, a quick starter guide, and more.
+
+![Ziine Cube](~/dataminer/images/Ziine_cube.png)

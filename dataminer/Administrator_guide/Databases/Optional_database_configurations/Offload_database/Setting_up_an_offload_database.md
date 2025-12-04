@@ -145,7 +145,7 @@ The final step is the configuration of the DMS.
 
    1. In the *Sharing* tab, click *Share*.
 
-   1. In the drop-down list, select *Everyone*. If this option is not listed, click *Find people* to add it.
+   1. In the dropdown list, select *Everyone*. If this option is not listed, click *Find people* to add it.
 
       This is necessary because the folder has to be freely accessible, as no user credentials are passed in the query that retrieves the data.
 
@@ -178,7 +178,7 @@ The final step is the configuration of the DMS.
 
    1. Prior to DataMiner 10.1.1/10.2.0 only: Select the *Activate this database* checkbox to activate the offload database.
 
-   1. From DataMiner 10.1.1/10.2.0 onwards, in the *Type* drop-down box, select *Database*.
+   1. From DataMiner 10.1.1/10.2.0 onwards, in the *Type* dropdown box, select *Database*.
 
    1. Select the type of database: MySQL, MSSQL or Oracle.
 

@@ -29,12 +29,30 @@ To add a DataMiner Agent to a DMS running STaaS:
 
    1. Configure the *Database* tag with *type="CloudStorage"* as illustrated below:
 
-      ```xml
-      <?xml version="1.0"?>
-      <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
-         <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage"/>
-      </DataBases>
-      ```
+      - For setups **without proxy**, use the following configuration:
+
+         ```xml
+         <?xml version="1.0"?>
+         <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
+            <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage"/>
+         </DataBases>
+         ```
+
+      - For setups **with proxy** (this **requires DataMiner 10.4.5/10.5.0 or higher**<!-- RN 39221 -->), use the following configuration, filling in the fields as required:
+
+         ```xml
+         <?xml version="1.0"?>
+         <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
+            <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage">
+               <Proxy>
+                  <Address>[Enter Address Here]</Address>
+                  <Port>[Enter Port Here]</Port>
+                  <UserName>[Enter UserName Here]</UserName>
+                  <Password>[Enter Password Here]</Password>
+               </Proxy>
+            </DataBase>
+         </DataBases>
+         ```
 
 1. Start DataMiner on the new DMA.
 

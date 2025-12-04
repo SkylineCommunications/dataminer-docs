@@ -656,9 +656,9 @@ On systems with a Cassandra database, in some cases, elements that had a large a
 
 Due to incorrect filtering, in some cases, the selection box in the CPE feed would contain too much data.
 
-#### DataMiner Cube: Problem when selecting a value from a drop-down parameter in a custom context menu of a table \[ID 29383\]
+#### DataMiner Cube: Problem when selecting a value from a dropdown parameter in a custom context menu of a table \[ID 29383\]
 
-If a parameter of type “drop-down” in a custom context menu of a table retrieved its values from a dependency parameter, in some cases, the first time a value was selected, the selection would not be applied.
+If a parameter of type “dropdown” in a custom context menu of a table retrieved its values from a dependency parameter, in some cases, the first time a value was selected, the selection would not be applied.
 
 #### Jobs app: Fields in newly created copy of a section definition would have an incorrect field type \[ID 29387\]
 

@@ -16,13 +16,13 @@ To configure a Correlation analyzer:
 
 1. Optionally, expand *Show details* and add a description in the *Description* field.
 
-1. If the analyzer should always be managed by one DMA, expand *Show details*, select *This rule will be managed by one single DataMiner Agent*, and select the DMA in the drop-down list.
+1. If the analyzer should always be managed by one DMA, expand *Show details*, select *This rule will be managed by one single DataMiner Agent*, and select the DMA in the dropdown list.
 
 1. In the *Alarm filter* section, indicate what should be analyzed:
 
-    - To analyze a view, select *Analyze the alarms from view* and select the view in the drop-down list.
+    - To analyze a view, select *Analyze the alarms from view* and select the view in the dropdown list.
 
-    - To analyze an element, select *Analyze the alarms from element* and select the element in the drop-down list.
+    - To analyze an element, select *Analyze the alarms from element* and select the element in the dropdown list.
 
     - To analyze based on an alarm filter, select *Analyze the alarms matching the filter* and create a filter:
 

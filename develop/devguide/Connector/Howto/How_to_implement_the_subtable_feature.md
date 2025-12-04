@@ -74,7 +74,7 @@ The table definition in the connector for the *SAP Base Info Hidden* table:
 
 In this step, you need to create logic to add rows to the filter table, in our case the *SAP Table Filter* table, and to allow the removal of such entries.
 
-First, you need a drop-down list containing all the different available rows. In our example, we get the data for this parameter from another parameter that contains all the SAP port names separated by commas. Below you can find the filter parameter definition:
+First, you need a dropdown list containing all the different available rows. In our example, we get the data for this parameter from another parameter that contains all the SAP port names separated by commas. Below you can find the filter parameter definition:
 
 ```xml
 <Param id="4673" trending="false">

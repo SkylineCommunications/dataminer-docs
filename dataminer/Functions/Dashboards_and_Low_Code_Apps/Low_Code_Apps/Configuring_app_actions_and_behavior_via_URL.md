@@ -55,17 +55,14 @@ You can modify the behavior of an app by adding specific parameters to the URL.
 
   - [Line & area chart > Parameter table filter](xref:LineAndAreaChart#configuring-the-component)
 
-  - [Node edge graph > *Enable tooltip* setting](xref:DashboardNodeEdgeGraph#basic-component-configuration)
+  - [Node edge graph > *Enable tooltip* setting](xref:DashboardNodeEdgeGraph#node-edge-graph-settings)
 
-  - [Node edge graph > *Show metric* setting](xref:DashboardNodeEdgeGraph#basic-component-configuration)
+  - [Node edge graph > *Show metric* setting](xref:DashboardNodeEdgeGraph#node-edge-graph-settings)
 
   - [Parameter picker > Parameter table filter](xref:DashboardParameterPicker#configuring-the-component)
 
   - [Parameter picker > *Index filter separator* setting](xref:DashboardParameterPicker#configuring-the-component)
 
-- `useNewIASInputComponents=true`: Available from DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41495-->. Allows you to control whether the latest version of the interactive Automation script UI is used for IAS components or when launching an interactive Automation script via the *Launch a script* event. When this parameter is set to "false" or omitted, the app uses the old UI. <!--Expanded by the following RNs: 41188 , 41529, 42032, 42009, 42007, 41891, 41838, 42132, 42210, 42231, 42279, 42401, 42641, 42440, 42826, 42781-->
+- `useNewIASInputComponents=true`: Available from DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41495-->. Allows you to control whether the latest version of the interactive Automation script UI is used for IAS components or when an interactive Automation script is launched via the *Launch a script* event. When this parameter is set to "false", scripts will use the old UI. When it is set to "true", scripts will use the new UI.
 
-  > [!NOTE]
-  >
-  > - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42009-->, when you add `useNewIASInputComponents=true` to the app URL, some UI components that are still using the previous design may be disabled.
-  > - From DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 onwards<!--RN 42440-->, when a default time zone is configured for the web apps, calendar and time input fields consistently use that time zone both for displaying values and for returning the selected date/time. In previous versions, calendar and time input fields display values based on the web session's time zone, but return a date/time in the configured default time zone.
+  If the `useNewIASInputComponents=true` parameter is omitted, prior to web DataMiner 10.5.0 [CU10]/10.6.1, scripts will use the old UI (V1). In later DataMiner web versions, this shows the V2 version of the UI, but only if the server uses DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 or higher. For earlier server versions, the V1 version of the UI continues to be shown, unless the [WebUIVersion](xref:Skyline.DataMiner.Automation.Engine.WebUIVersion*) property has been explicitly configured. <!--Expanded by the following RNs: 41188 , 41529, 42032, 42009, 42007, 41891, 41838, 42132, 42210, 42231, 42279, 42401, 42641, 42440, 42826, 42781-->

@@ -6,7 +6,10 @@ uid: UnhideJobSectionDefinition
 
 Use this method to make a job section definition visible.
 
-<!-- Available from DataMiner 9.6.7 onwards. -->
+> [!CAUTION]
+>
+> - The Jobs app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
+> - The Jobs app is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 ## Input
 
