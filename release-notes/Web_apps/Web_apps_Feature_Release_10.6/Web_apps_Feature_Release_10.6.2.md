@@ -154,6 +154,19 @@ When you had generated a PDF report of a dashboard that contained a *Time range*
 
 When you imported a web app, e.g. from the DataMiner Catalog onto the DataMiner landing page, in some cases, not all associated files would get synchronization across the DataMiner System.
 
+#### Data Aggregator would not be able to execute a converted GQI query that contained a regular expression [ID 44258]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a GQI query was converted to JSON in order to have it executed by the Data Aggregator, up to now, on systems where Data Aggregator executed GQI queries using CoreGateway and SLHelper instead of the GQI DxM, it would incorrectly not be possible for the Data Aggregator to execute that query if it contained a regular expression.
+
+The following error would be logged:
+
+```console
+A unknown exception occurred in CoreGateway: Error trapped: Skyline.DataMiner.Net.SLConfiguration.SLValue`1[System.String] could not be converted to System.Text.RegularExpressions.Regex.
+Parameter name: value
+```
+
 #### Dashboards/Low-Code Apps - State timeline component: Problems when processing state changes [ID 44277]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
