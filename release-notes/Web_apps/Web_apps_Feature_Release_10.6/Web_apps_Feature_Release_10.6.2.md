@@ -153,3 +153,9 @@ When you had generated a PDF report of a dashboard that contained a *Time range*
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 When you imported a web app, e.g. from the DataMiner Catalog onto the DataMiner landing page, in some cases, not all associated files would get synchronization across the DataMiner System.
+
+#### Dashboards/Low-Code Apps - State timeline component: Problems when processing state changes [ID 44277]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+A number of issues have been fixed with regard to the State timeline component. These issues would mostly occur when processing state changes.
