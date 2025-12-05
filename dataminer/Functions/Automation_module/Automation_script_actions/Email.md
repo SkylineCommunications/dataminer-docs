@@ -17,7 +17,7 @@ Use this action to send a notification via email.
 
 - To send a **plain text** email, select *Plain text*.
 
-- To include a **dashboard** in the email, select *Include report or dashboard*, select an existing dashboard, and optionally click the *Configure* button to further configure it. See [Generating a PDF report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
+- To include a **dashboard** in the email, select *Include report or dashboard*, select an existing dashboard, and optionally click the *Configure* button to further configure it. See [Generating a report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
 
   You can select any of the dashboards available in the [dashboards app](xref:newR_D).
 

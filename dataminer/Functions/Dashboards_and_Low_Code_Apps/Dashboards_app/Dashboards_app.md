@@ -4,7 +4,7 @@ uid: newR_D
 
 # Dashboards app
 
-With the Dashboards app, you can make, manage, and view dashboards that can display a wealth of information about the monitored system. You can [share your dashboards](xref:Sharing_a_dashboard) with just about anyone via dataminer.services, or [create a PDF report](xref:Generating_a_report_based_on_a_dashboard_Cube) based on them.
+With the Dashboards app, you can make, manage, and view dashboards that can display a wealth of information about the monitored system. You can [share your dashboards](xref:Sharing_a_dashboard) with just about anyone via dataminer.services, or [create an email report](xref:Generating_a_report_based_on_a_dashboard_Cube) based on them.
 
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">

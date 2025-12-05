@@ -24,7 +24,7 @@ Use this action to upload a report to an FTP server:
    >
    > - If you want to specify multiple indices for one table parameter, use a semicolon ";" as separator.
    > - If you want to specify multiple parameters for one element, service, or protocol version, assign them all within a single line.
-   > - Dashboards are listed in the dropdown list along with the reports. The icon in front of each item in the list shows whether the item is a dashboard or a report. With the *Configure* button, you can further configure a report based on a dashboard. See [Generating a PDF report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
+   > - Dashboards are listed in the dropdown list along with the reports. The icon in front of each item in the list shows whether the item is a dashboard or a report. With the *Configure* button, you can further configure a report based on a dashboard. See [Generating a report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
    > - Private dashboards will not appear in the dropdown list, as they cannot be shared. You can edit access to dashboards in the [dashboard settings](xref:Configuring_dashboard_security).
 
 ## Example

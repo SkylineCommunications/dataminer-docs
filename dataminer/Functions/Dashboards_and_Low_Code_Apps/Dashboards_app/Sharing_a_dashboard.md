@@ -24,11 +24,11 @@ There are **three main ways** to share a dashboard:
 
   You can automatically revoke dashboard access by configuring an expiration date.
 
-- [Send a static PDF report by email](#sharing-via-email-report).
+- [Send a static report by email](#sharing-via-email-report).
 
   This option is useful when you want to share a **read-only snapshot version** of the dashboard.
 
-  The recipient does not need any account or access to the DataMiner System. The PDF is immediately available in their email inbox.
+  The recipient does not need any account or access to the DataMiner System. The report is immediately available in their email inbox.
 
 ![Sharing](~/dataminer/images/Dashboard_Sharing.png)
 *Dashboard sharing in DataMiner 10.5.9*
@@ -111,6 +111,6 @@ You can set an optional expiration date to stop sharing automatically.
 
 ## Sharing via email report
 
-If you only want to share a **static version** of a dashboard, use the steps described under [Sharing a dashboard as a PDF report from the Dashboards app](xref:Sharing_PDF_report_from_Dashboards_app).
+If you only want to share a **static version** of a dashboard, use the steps described under [Sharing a dashboard via an email report from the Dashboards app](xref:Sharing_report_from_Dashboards_app).
 
-Recipients will get the dashboard as a **PDF attachment**. They **do not need any account** or access to the DataMiner System.
+Recipients will get the dashboard as a **report attachment** (PDF, HTML, or CSV). They **do not need any account** or access to the DataMiner System.
