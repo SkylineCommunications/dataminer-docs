@@ -7,10 +7,12 @@ uid: AddJobAttachmentV2
 > [!NOTE]
 > This method is solely intended for internal use by Skyline Communications employees.
 
-Use this method to add an attachment to a job. Available from DataMiner 10.2.0 [CU9]/10.2.12 onwards.
+Use this method to add an attachment to a job. Available from DataMiner 10.2.0 [CU9]/10.2.12 onwards. Replaces the [AddJobAttachment](xref:AddJobAttachment) method.
 
-> [!NOTE]
-> From DataMiner 10.2.0 [CU9]/10.2.12 onwards, this method should be used instead of the [AddJobAttachment](xref:AddJobAttachment) method.
+> [!CAUTION]
+>
+> - The Jobs app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
+> - The Jobs app is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 ## Input
 

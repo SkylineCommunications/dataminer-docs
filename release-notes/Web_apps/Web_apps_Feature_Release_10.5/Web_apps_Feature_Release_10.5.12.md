@@ -2,12 +2,12 @@
 uid: Web_apps_Feature_Release_10.5.12
 ---
 
-# DataMiner web apps Feature Release 10.5.12 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.5.12
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.4.0 [CU21] and 10.5.0 [CU9].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -16,7 +16,9 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Dashboards/Low-Code Apps: GQI queries can now be exported as JSON files [ID 43800]](#dashboardslow-code-apps-gqi-queries-can-now-be-exported-as-json-files-id-43800)
+- [New GQI data source: Get relational anomalies [ID 43820]](#new-gqi-data-source-get-relational-anomalies-id-43820)
+- Breaking change: [Dashboards/Low-Code Apps: HTML code on read-only DOM forms will no longer be interpreted [ID 43864]](#dashboardslow-code-apps-html-code-on-read-only-dom-forms-will-no-longer-be-interpreted-id-43864)
 
 ## New features
 
@@ -24,7 +26,7 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-When in edit mode, it is now possible to directly export a GQI query to a JSON file. To do so, select the query, click the ellipsis button, and select *Export*.
+When in edit mode, it is now possible to directly export a GQI query to a JSON file. To do so, click the ellipsis button ("...") next to the query in the *Data* pane and select *Export*.
 
 Up to now, when you wanted to export a GQI query to a JSON file (e.g. to have it executed by the *Data Aggregator* module), you had to open the developer tools of your browser, copy the query from the request payload, and convert the query using the *ConvertQueryToProtoJson* web method.
 
@@ -122,7 +124,7 @@ The header of the DataMiner Comparison tool has been redesigned.
 - When you click the DataMiner logo, you will be redirected to the DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`).
 - When you click the app title (i.e. "Comparison"), the app's URL will be cleared of any settings that were added to it.
 
-#### Dashboards app: Email reports can now also be sent recipients who are not contacts and who are only specified in the CC and/or BCC fields [ID 43848]
+#### Dashboards app: Email reports can now also be sent to recipients who are not contacts and who are only specified in the CC and/or BCC fields [ID 43848]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
@@ -130,11 +132,14 @@ Up to now, an email report could only be sent if recipients were specified in th
 
 From now on, recipients no longer have to be contacts, and it will also be possible to send email reports that only have recipients specified in the *CC* and/or *BCC* fields.
 
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 or newer.
+
 #### Dashboards/Low-Code Apps - Grid component: 'Grid template' section replaced by 'Grid layout' section [ID 43889]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-When editing a *Grid* component, up to now, the *Advanced > Grid template* section of the *Layout* pane allowed you to configure the number of columns and rows displayed in the component and choose how items scale within the available space. Now, that *Grid template* section has been replaced by the *Layout > Grid layout* section, which contains the following settings:
+When editing a grid component, up to now, the *Advanced > Grid template* section of the *Layout* pane allowed you to configure the number of columns and rows displayed in the component and choose how items scale within the available space. Now, that *Grid template* section has been replaced by the *Layout > Grid layout* section, which contains the following settings:
 
 - **Columns**
 
@@ -165,7 +170,7 @@ When editing a *Grid* component, up to now, the *Advanced > Grid template* secti
 
 From DataMiner 10.3.11/10.3.0 [CU8] onwards, whenever you upgrade a DMA or install a DataMiner web upgrade, an automatic backup of all existing dashboards and low-code apps on the system is generated and stored in `C:\Skyline DataMiner\System Cache\Web\Backups`.
 
-Up to now, that backup would include all app versions. From now on, it will only include up to two versions per app: the last version that was published and the most recent draft. The version history will be left untouched.
+Up to now, that backup would include all app versions. From now on, to enable faster backups, it will only include up to two versions per app: the last version that was published and the most recent draft. The version history will be left untouched.
 
 > [!NOTE]
 >
@@ -313,3 +318,11 @@ In some cases, the header of the DataMiner web apps authentication page would ke
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
 When a DataMiner web app contains a scrollable container, a scrollbar should be shown when the user hovers the mouse pointer over that container. However, after a Chrome upgrade to version 139 or higher, this behavior was no longer consistent.
+
+#### Web apps: Message that indicates that the WebSocket connection was dropped would incorrectly appear when no WebSocket connection had been made [ID 44047]
+
+<!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
+
+In some cases, a `Connection has been interrupted.` message would incorrectly appear when no WebSocket connection had been made.
+
+From now on, this message will only appear when an attempt to re-establish a WebSocket connection has failed.

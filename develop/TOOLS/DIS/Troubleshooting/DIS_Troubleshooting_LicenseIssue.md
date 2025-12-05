@@ -15,7 +15,7 @@ Even though DIS is freely available, it can occur that the license check fails.
 
    If not, check the certification and make sure it is allowed in your network.
 
-1. Check if you can you log in to SkylineAPI.
+1. Check if you can log in to SkylineAPI.
 
    If not, check if you are using the right credentials.
 

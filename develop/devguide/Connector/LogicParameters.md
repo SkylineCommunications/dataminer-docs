@@ -28,13 +28,14 @@ A parameter of type **read** is typically used as a data placeholder for interna
 A **fixed** parameter acts as a data placeholder that will not change. Though it is in fact possible to change the value of a fixed parameter (using a change length action and then setting the new value), this is not a common operation. For example, to define a parameter that represents a fixed value used in a communication protocol that is being implemented, a fixed parameter can be defined as follows:
 
 ```xml
-<Param id="110">
-  <Name>COM 0x0A</Name>
-  <Description>COM 0x0A</Description>
-  <Type>Read</Type>
+<Param id="11">
+  <Name>Fixed_0x0A</Name>
+  <Description>Fixed 0x0A</Description>
+  <Type>read</Type>
   <Interprete>
-      <RawType>Other</RawType>
-      <LengthType>Fixed</LengthType>
+      <RawType>other</RawType>
+      <Type>string</Type>
+      <LengthType>fixed</LengthType>
       <Length>1</Length>
       <Value>0x0A</Value>
    </Interprete>
@@ -64,7 +65,7 @@ The following parameter types can be used to obtain element-related information 
 For example, to define a parameter that holds the combination DMA ID/element ID, you can define a parameter as follows:
 
 ```xml
-<Param id="48" trending="false">
+<Param id="48">
   <Name>GlobalElementID</Name>
   <Description>Global Element ID</Description>
   <Information>
@@ -73,15 +74,9 @@ For example, to define a parameter that holds the combination DMA ID/element ID,
   <Type>elementdmaid</Type>
   <Interprete>
      <RawType>other</RawType>
+     <Type>string</Type>
      <LengthType>next param</LengthType>
-     <Type>string</Type>
   </Interprete>
-  <Display>
-     <RTDisplay>false</RTDisplay>
-  </Display>
-  <Measurement>
-     <Type>string</Type>
-  </Measurement>
 </Param>
 ```
 

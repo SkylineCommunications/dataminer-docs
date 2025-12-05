@@ -343,6 +343,8 @@ items:
             topicUid: Creating_custom_apps
           - name: Editing an app
             topicUid: Editing_custom_apps
+          - name: Changing user settings
+            topicUid: LCA_User_Settings
           - name: Configuring apps
             items:
               - name: Configuring the app layout
@@ -1336,3 +1338,21 @@ items:
             topicUid: UD_APIs_Hello_world_tutorial
           - name: Retrieving elements in alarm
             topicUid: UD_APIs_Elements_in_alarm_tutorial
+  - name: Video thumbnails
+    items:
+      - name: About video thumbnails
+        topicUid: About_Video_Thumbnails
+      - name: Configuring video thumbnails
+        items:
+          - name: Configuring a video thumbnail for Visual Overview
+            topicUid: Configuring_a_video_thumbnail_in_Visio
+          - name: Configuring a video thumbnail in a web component
+            topicUid: Configuring_a_video_thumbnail_in_a_web_component
+          - name: Adding parameters to the video URL
+            topicUid: Adding_parameters_to_the_video_URL
+          - name: Video streaming with proxy
+            topicUid: Video_streaming_with_proxy
+          - name: Allowed paths in case of connection via DataMiner proxy
+            topicUid: Allowed_paths_connection_DataMiner_proxy
+          - name: Ignoring validation errors during HTTP parsing
+            topicUid: Ignoring_validation_errors_during_HTTP_parsing

@@ -74,10 +74,12 @@ items:
     topicUid: Multi_Threaded_Timer_Polling_Rate_Calculator
   - name: Prerequisite checks
     items:
-      - name: Verify .NET Version
-        topicUid: Verify_ASP_Net_Version
+      - name: Verify BrokerGateway Migration
+        topicUid: VerifyBrokerGatewayMigration
       - name: VerifyClusterPorts.dmupgrade
         topicUid: VerifyClusterPortsdmupgrade
+      - name: Verify .NET Version
+        topicUid: Verify_ASP_Net_Version
       - name: VerifyGRPCConnection.dmupgrade
         topicUid: VerifyGRPCConnectiondmupgrade
       - name: Verify Elastic Storage Type
@@ -86,6 +88,8 @@ items:
         topicUid: VerifyNatsCluster
       - name: Verify NATS is Running
         topicUid: VerifyNatsIsRunning
+      - name: Verify No Annotations
+        topicUid: Verify_No_Annotations
       - name: Verify No Legacy Correlation
         topicUid: VerifyNoLegacyCorrelation
       - name: Verify No Legacy Reports Dashboards
@@ -188,6 +192,8 @@ items:
             topicUid: SLNetClientTest_checking_hyperlink_filter
           - name: Checking whether protocol buffer serialization is enabled
             topicUid: SLNetClientTest_Checking_whether_protocol_buffer_serialization_is_enabled
+          - name: Checking the hosting Agent cache
+            topicUid: SLNetClientTest_Checking_the_hosting_Agent_cache
           - name: Consulting connection details
             topicUid: SLNetClientTest_consulting_connection_details
           - name: Consulting Correlation information
@@ -277,8 +283,6 @@ items:
             topicUid: SLNetClientTest_creating_enhanced_view
           - name: Debugging the dataminer.services connection
             topicUid: SLNetClientTest_debugging_cloud_connection
-          - name: Disabling automatic NATS configuration
-            topicUid: SLNetClientTest_disabling_automatic_nats_config
           - name: Disabling replication buffering
             topicUid: SLNetClientTest_disabling_replication_buffering
           - name: Editing the connection string between two DataMiner Agents

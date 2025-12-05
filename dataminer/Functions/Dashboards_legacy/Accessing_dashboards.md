@@ -13,9 +13,6 @@ To access DataMiner dashboards:
 
 - Go directly to the link `https://[MyDataMiner]/Dashboards` or `http://[MyDataMiner]/Dashboards`, depending on your setup.
 
-    > [!CAUTION]
-    > If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise that you use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
-
 More information on accessing the Dashboards app is included in the following topics:
 
 - [Logging on to the Dashboards App](xref:Logging_on_to_the_Dashboards_App)

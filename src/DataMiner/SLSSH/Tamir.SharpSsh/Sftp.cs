@@ -190,7 +190,6 @@ namespace Tamir.SharpSsh
 		/// <param name="path">The file for which the last modified time should be retrieved.</param>
 		/// <param name="fileNameComparisonMethod">The file name comparison method.</param>
 		/// <returns>The time the file has last been modified.</returns>
-		/// <remarks>Feature introduced in DataMiner 8.5.5 (RN 9490).</remarks>
 		public string GetFileLastModifiedTime(string path, StringComparison fileNameComparisonMethod = StringComparison.InvariantCultureIgnoreCase)
 		{
 			return string.Empty;

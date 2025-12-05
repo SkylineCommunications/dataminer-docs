@@ -13,7 +13,6 @@ namespace Skyline.DataMiner.Automation
 	/// <summary>
 	/// Defines the possible Automation script entry point delegate types.
 	/// </summary>
-	/// <remarks>Available from DataMiner 9.5.12 onwards (RN 18229).</remarks>
 	public class AutomationEntryPointDelegates
 	{
 		/// <summary>

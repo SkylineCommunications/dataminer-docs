@@ -6,8 +6,6 @@ uid: EditSLAElement
 
 Use this method to edit a specified SLA element.
 
-<!-- Available from DataMiner 9.0.5 onwards. -->
-
 ## Input
 
 | Item          | Format                     | Description                                                        |

@@ -18,8 +18,8 @@ Use this method to retrieve the data to create a scatter chart for an array of s
 | filter.ProtocolName | String | The protocol ID of the protocol for which service data should be retrieved. |
 | filter.ProtocolVersion | String | The protocol version of the protocol for which service data should be retrieved. |
 | filter.Limit | Integer | The maximum number of services for which data should be retrieved. |
-| filter.StartTimeUTC | Long integer | The start time (in UTC) of the timespan for which data should be retrieved. |
-| filter.EndTimeUTC | Long integer | The end time (in UTC) of the timespan for which data should be retrieved. |
+| filter.StartTimeUTC | Long integer | The start time (in UTC) of the time span for which data should be retrieved. |
+| filter.EndTimeUTC | Long integer | The end time (in UTC) of the time span for which data should be retrieved. |
 | filter.IncludeSubViews | Boolean | Indicates whether data should also be retrieves for elements in subviews of the specified view. |
 
 ## Output

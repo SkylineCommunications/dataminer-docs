@@ -25,27 +25,7 @@ If card footers are enabled, the footer of a view card displays the following:
 
 ## View card pages
 
-The navigation pane on the left side of a view card contains a tree view with the following items:
-
-- [VISUAL](#visual)
-
-- [BELOW THIS VIEW](#below-this-view)
-
-- [ALARMS](#alarms)
-
-- [REPORTS](#reports)
-
-- [DASHBOARDS](#dashboards)
-
-- [AGGREGATION](#aggregation)
-
-- [HISTOGRAM](#histogram)
-
-- [TRENDING](#trending)
-
-- [NOTES](#notes)
-
-- [ANNOTATIONS](#annotations)
+The navigation pane on the left side of a view card contains a tree view with the items mentioned below.
 
 ### VISUAL
 
@@ -266,9 +246,9 @@ To remove parameters from the trend graph, you can:
 
 On this page, you can add short notes to the view. For more information, see [Card navigation pane](xref:Working_with_cards_in_DataMiner_Cube#card-navigation-pane).
 
-### ANNOTATIONS
+### ANNOTATIONS (deprecated)
 
-On this page, you can add, view and edit extensive annotations to the view. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
+In older DataMiner versions (prior to DataMiner 10.6.0/10.6.1), this page allows you to add, view, and edit extensive annotations for the view. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
 > [!NOTE]
-> The Annotations module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). Prior to this, starting from DataMiner 10.2.0/10.1.12, Annotations can optionally be disabled with this soft-launch option.
+> The Annotations module is no longer available from DataMiner 10.6.0/10.6.1 onwards.<!-- RN 44124+44136 --> Prior to this, starting from DataMiner 10.4.0/10.4.1<!-- RN 37786 -->, it is disabled by default, but it can be enabled with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). In even older DataMiner versions, this feature is enabled by default, but you can optionally disable it with the soft-launch option.

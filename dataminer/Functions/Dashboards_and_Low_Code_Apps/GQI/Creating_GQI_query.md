@@ -47,13 +47,26 @@ The "Queries" data item allows you to construct a query in order to tap into the
 
 From DataMiner 10.3.0 [CU10]/10.4.1 onwards, you can duplicate a query. To do so, click the "..." button next to the query in the *Data* pane and then select *Duplicate*.
 
+## Exporting a query
+
+From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43800-->, you can export a query to JSON:
+
+1. Click the "..." button next to the query in the *Data* pane and select *Export*.
+
+   A pop-up window will appear, showing a preview of the query in JSON format.
+
+1. Select *Download JSON* to download the query as a JSON file, or *Copy query* to copy the JSON object to your clipboard.
+
+> [!NOTE]
+> Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12, exporting a query is not supported in the user interface. To export a GQI query to a JSON file (for example, to have it executed by the Data Aggregator module), follow the instructions under [Configuring GQI queries for Data Aggregator](xref:Data_Aggregator_queries).
+
 ## Letting DataMiner Assistant create a query
 
 From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42234-->, you can use the DataMiner Assistant [natural language to GQI feature](xref:NL2GQI) to automatically create a GQI query based on a request in natural language.
 
 To do so, in a system where DataMiner Assistant has been deployed, when you click the "+" button to add a query, type your request in the textbox and click **Generate query**. DataMiner Assistant will then create the desired GQI query and generate a relevant query name.
 
-![NL2GQI](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner 10.5.4*
+![NL2GQI](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner 10.6.1*
 
 > [!TIP]
 > For more information about how to deploy this feature, see [DataMiner Assistant DxM](xref:Assistant_DxM).

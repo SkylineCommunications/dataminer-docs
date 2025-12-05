@@ -2,12 +2,12 @@
 uid: Cube_Feature_Release_10.5.12
 ---
 
-# DataMiner Cube Feature Release 10.5.12 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.5.12
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.4.0 [CU21] and 10.5.0 [CU9].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -16,7 +16,7 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Parameter cache enhancements will improve overall visual overview loading performance [ID 43457]](#parameter-cache-enhancements-will-improve-overall-visual-overview-loading-performance-id-43457)
 
 ## New features
 
@@ -38,7 +38,7 @@ In the context menu of a RAD group incident as well as the context menu of a sin
 
 In order to reduce the time it takes to load a visual overview, a number of enhancements have been made to the parameter cache.
 
-Throughout the lifecycle of a Cube session, the parameter cache will request and maintain certain parameter tables, and will keeping them updated.When data is requested from any of the tables in question, the data will be fetched from the cache instead of the DataMiner Agent.
+Throughout the lifecycle of a Cube session, the parameter cache will request and maintain certain parameter tables, and will keeping them updated. When data is requested from any of the tables in question, the data will be fetched from the cache instead of the DataMiner Agent.
 
 ##### Caching only certain columns
 

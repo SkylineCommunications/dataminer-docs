@@ -18,8 +18,6 @@ If you have the required user permission ([Modules > System configuration > Obje
 
 - In DataMiner Cube, go to *System Center* > *DOM*.
 
-  If you are using a [remote access URL](xref:Cloud_Remote_Access_URL), you will then need to click a link to open the UI in a browser. With a regular Cube connection, the UI is shown directly in DataMiner Cube.
-
 > [!NOTE]
 > The UI can also be embedded in a low-code app to allow direct access from within that low-code app. To do so, use a URL like `https://<DMA IP or hostname>/dom/#/?embed=true` in a [Web component](xref:DashboardWeb). You can also make the embedded UI show specific DOM modules by adding the IDs of those modules in the URL, for example: `https://<DMA IP or hostname>/dom/#/?embed=true&moduleIds=myDomModule1,myDomModule2,myDomModule3`.
 

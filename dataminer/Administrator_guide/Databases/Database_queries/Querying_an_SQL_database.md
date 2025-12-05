@@ -5,14 +5,11 @@ uid: Querying_an_SQL_database
 # Querying an SQL database
 
 > [!NOTE]
-> This feature is no longer supported.
+> This feature is no longer supported. It is not compatible with [DataMiner STaaS](xref:STaaS).<!-- RN 44018 -->
 
 To query an SQL database, do the following:
 
 1. Go to *System Center \>* *Tools* \> *query executer*.
-
-   > [!NOTE]
-   > The query executer feature is not compatible with [DataMiner STaaS](xref:STaaS). As such, this page is not available on DaaS systems from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->.
 
 1. In the *Execute query on* box, select the database you want to query.
 

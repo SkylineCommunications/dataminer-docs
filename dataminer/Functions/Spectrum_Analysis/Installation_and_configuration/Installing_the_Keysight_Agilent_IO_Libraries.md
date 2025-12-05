@@ -10,7 +10,7 @@ On a DataMiner Agent that has to communicate through a GPIB/LAN gateway, you hav
 > After installing the IO Libraries, you will need to restart the machine. After changing the IO configuration, you will need to restart the DMA software.
 
 > [!WARNING]
-> Both the Keysight Distributed Infrastructure service (*kdi-controller.exe*) and the NATS module within DataMiner use IP port 9090. This will result in NATS issues and will prevent DataMiner from starting. To fix this, change the port number of the KDI service by editing `C:\ProgramData\Keysight\Distributed Infrastructure\kdi.yaml` and restarting the machine, or change the NATS port. See [Troubleshooting – NATS](xref:Investigating_NATS_Issues#check-if-port-is-already-in-use). This procedure must be followed for every DMA running DataMiner 10.1.0/10.1.1 or higher.
+> Both the Keysight Distributed Infrastructure service (*kdi-controller.exe*) and the NATS module within DataMiner use IP port 9090. This will result in NATS issues and will prevent DataMiner from starting. To fix this, change the port number of the KDI service by editing `C:\ProgramData\Keysight\Distributed Infrastructure\kdi.yaml` and restarting the machine, or change the NATS port. See [Troubleshooting – NATS](xref:Investigating_Legacy_NATS_Issues#check-if-port-is-already-in-use). This procedure must be followed for every DMA running DataMiner 10.1.0/10.1.1 or higher.
 
 ## Installing the IO Libraries
 

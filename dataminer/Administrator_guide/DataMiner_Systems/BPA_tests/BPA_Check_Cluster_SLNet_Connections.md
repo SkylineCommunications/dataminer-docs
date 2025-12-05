@@ -4,7 +4,7 @@ uid: BPA_Check_Cluster_SLNet_Connections
 
 # SLNet connections between the DataMiner Agents
 
-Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this BPA test is called "Check Cluster SLNet Connections".
+Prior to DataMiner 10.4.12/10.5.0 [CU10]<!--RN 40751-->, this BPA test is called "Check Cluster SLNet Connections".
 
 This BPA test is executed across the cluster. It will trigger a local test on each DMA that can be reached from the DMA initiating the BPA test, to check the connections between the DMAs. It is important to know if there are issues with these connections, as they are used for communication between DMAs. The BPA will indicate if there are potential problems.
 

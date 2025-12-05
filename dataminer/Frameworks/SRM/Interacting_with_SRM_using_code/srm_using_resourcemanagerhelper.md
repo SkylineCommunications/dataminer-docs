@@ -21,6 +21,81 @@ var helper = new ResourceManagerHelper(protocol.SLNet.SendSingleResponseMessage)
 > [!NOTE]
 > Be careful when updating bookings in connectors. Depending on the scale of the SRM system, adding or updating bookings can take a while.
 
+## Creating resource pools
+
+```csharp
+var decodersPool = new ResourcePool(Guid.NewGuid())
+{
+    Name = "Decoders",
+    Description = "This is a resource pool for decoders",
+};
+
+var antennasPool = new ResourcePool(Guid.NewGuid())
+{
+    Name = "Antennas",
+    Description = "This is a resource pool for antennas",
+};
+
+helper.AddOrUpdateResourcePools(decodersPool, antennasPool);
+```
+
+## Reading resources pools
+
+```csharp
+decodersPool = helper.GetResourcePools(new ResourcePool { Name = "Decoders" }).FirstOrDefault();
+antennasPool = helper.GetResourcePools(new ResourcePool { Name = "Antennas" }).FirstOrDefault();
+```
+
+## Updating resource pools
+
+```csharp
+decodersPool.Description = "Updated description for decoders pool";
+helper.AddOrUpdateResourcePools(decodersPool);
+```
+
+## Removing resource pools
+
+```csharp
+helper.RemoveResourcePools(decodersPool, antennasPool); 
+```
+
+## Creating resources
+
+```csharp
+var decoder = new Resource(Guid.NewGuid())
+{
+    Name = "Decoder_1",
+    Description = "This is a resource representing a decoder",
+    Mode = ResourceMode.Available,
+    MaxConcurrency = 10,
+    PoolGUIDs = new List<Guid>() { decodersPool.ID },
+};
+
+var antenna = new Resource(Guid.NewGuid())
+{
+    Name = "Antenna_1",
+    Description = "This is a resource representing an antenna",
+    Mode = ResourceMode.Available,
+    MaxConcurrency = 5,
+    PoolGUIDs = new List<Guid>() { antennasPool.ID },
+};
+
+helper.AddOrUpdateResources(decoder, antenna);
+```
+
+## Updating resources
+
+```csharp
+decoder.MaxConcurrency = 100;
+helper.AddOrUpdateResources(decoder);
+```
+
+## Removing resources
+
+```csharp
+helper.RemoveResources(decoder, antenna);
+```
+
 ## Reading resources and bookings
 
 The *ResourceManagerHelper* provides methods to retrieve *Resource* and *ReservationInstance* (i.e. booking) objects in a filtered, sorted, and paged way.
@@ -46,6 +121,9 @@ var timeRangeFilter = ReservationInstanceExposers.Start.LessThan(end).AND(Reserv
 
 // Filter that matches all resources that have a name that contains 'Encoder' and are linked to a specific function.
 var resourceFilter = ResourceExposers.Name.Contains("Encoder").AND(FunctionResourceExposers.FunctionGUID.Equal(Guid.Parse("...")));
+
+// Filter that matches all resources that support a capacity range between 100 and 200 units for a specific capacity parameter.
+var resourceFilter = ResourceExposers.Capacities.SupportsRange(rangeCapacityId, 100, 200)
 ```
 
 > [!IMPORTANT]
@@ -172,6 +250,14 @@ Multiple capacities can be added to the list. Only resources that have all capac
 var bitrateProfileId = Guid.Parse("...");
 var requestedCapacity = new MultiResourceCapacityUsage(bitrateProfileId, quantity: 100);
 context.RequiredCapacities.Add(requestedCapacity); 
+```
+
+From DataMiner 10.5.9/10.6.0 onwards<!-- RN 43335 -->, it is possible to request resources that have a capacity range defined by a start range and the quantity.
+
+```csharp
+var rangeCapacityParameter = Guid.Parse("...");
+var requestedCapacityId = new MultiResourceCapacityUsage(rangeCapacityParameterId, start: 100, quantity: 50);
+context.RequiredCapacities.Add(requestedCapacityId); 
 ```
 
 A list of capabilities can be passed to only return resources that have the specified capabilities.

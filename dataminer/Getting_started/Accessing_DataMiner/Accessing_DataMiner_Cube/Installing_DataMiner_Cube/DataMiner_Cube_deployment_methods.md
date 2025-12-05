@@ -11,22 +11,19 @@ Below you can find an overview of the different methods that can be used to depl
 > [!IMPORTANT]
 > This information is primarily aimed at system administrators.
 
-|                          | Bitness   | Automatic updates | Side-by-side version support | 10.0           | 10.1+          |
-|--------------------------|-----------|-------------------|------------------------------|----------------|----------------|
-| ClickOnce XBAP           | x86       | Yes [(2)](#fn_2)  | Yes                          | X              | X [(4)](#fn_4) |
-| MSI StandAlone           | AnyCPU    | No                | No                           | X              |                |
-| Launcher [(1)](#fn_1)    | AnyCPU    | Yes [(3)](#fn_3)  | Yes                          | X [(5)](#fn_5) | X              |
-| MSI Launcher (bootstrap) | x64       | Yes [(3)](#fn_3)  | Yes                          |                | X [(6)](#fn_6) |
-| MSI Launcher (shared)    | x64       | No                | Yes                          |                | X [(7)](#fn_7) |
-| MSI CefSharp             | x86 + x64 | No                | Yes                          |                | X [(6)](#fn_6) |
+|                             | Bitness   | Automatic updates |
+|-----------------------------|-----------|-------------------|
+| ClickOnce XBAP [(1)](#fn_1) | x86       | Yes [(3)](#fn_3)  |
+| Launcher [(2)](#fn_2)       | AnyCPU    | Yes [(4)](#fn_4)  |
+| MSI Launcher (bootstrap)    | x64       | Yes [(4)](#fn_4)  |
+| MSI Launcher (shared)       | x64       | No                |
+| MSI CefSharp [(5)](#fn_5)   | x86 + x64 | No                |
 
-<a id="fn_1"></a>(1) "Launcher" is an alternative name for the [DataMiner Cube start window](xref:Using_the_desktop_app).<br>
-<a id="fn_2"></a>(2) Updates from DMA only.<br>
-<a id="fn_3"></a>(3) Updates from DMA and dataminer.services (see [Managing the start window of the desktop app](xref:Managing_the_start_window)).<br>
-<a id="fn_4"></a>(4) XBAP will be phased out (due to Internet Explorer [end of life](https://docs.microsoft.com/en-us/lifecycle/announcements/internet-explorer-11-end-of-support) and known issues).<br>
-<a id="fn_5"></a>(5) Introduced in 10.0.9.<br>
-<a id="fn_6"></a>(6) Introduced in 10.1.9.<br>
-<a id="fn_7"></a>(7) Introduced in 10.2.0
+<a id="fn_1"></a>(1) XBAP is being phased out (see [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)).<br>
+<a id="fn_2"></a>(2) "Launcher" is an alternative name for the [DataMiner Cube start window](xref:Using_the_desktop_app).<br>
+<a id="fn_3"></a>(3) Updates from DMA only.<br>
+<a id="fn_4"></a>(4) Updates from DMA and dataminer.services (see [Managing the start window of the desktop app](xref:Managing_the_start_window)).<br>
+<a id="fn_5"></a>(5) CefSharp is being phased out. From DataMiner Cube 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards, WebView2 is used instead by default.
 
 ## Launcher installation
 
@@ -76,6 +73,8 @@ Below you can find an overview of the different methods that can be used to depl
 
 - Recommended when users have no permission to download or execute new applications.
 
+- Does not include the CefSharp web browser. For older Cube versions prior to DataMiner Cube 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9, this will require a separate installation. See [CefSharp MSI](#cefsharp-msi).
+
 - Only a single executable needs to be allowed on the Windows Firewall.
 
 - No support for automatic updates.
@@ -112,14 +111,17 @@ Below you can find an overview of the different methods that can be used to depl
 
 ## CefSharp MSI
 
-- Whatever Cube deployment method you use, you can install the CefSharp web browser plugin using one of the following packages.
+> [!NOTE]
+> The CefSharp web browser is being phased out. From DataMiner Cube 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards, WebView2 is used instead by default.
+
+- For Cube versions where the CefSharp web browser is still used, installing the CefSharp web browser plugin avoids the need for each individual user to download the CefSharp web browser plugin from a DMA.
+
+- Prior to DataMiner Cube 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9, installing the CefSharp web browser plugin is mandatory when you use the shared MSI deployment.
+
+- You can install the CefSharp web browser plugin using one of the following packages.
 
   - Use [CefSharp v81](https://community.dataminer.services/download/dataminer-cube-msi-cefsharp-v81/) to installs CefSharp v81 on clients where you installed DataMiner Cube v10.2.2 using the Cube MSI installer.
   - Use [CefSharp v96](https://community.dataminer.services/download/dataminer-cube-msi-cefsharp-v96/) to install CefSharp v96 on clients where you installed DataMiner Cube v10.2.0 or v10.2.3 and above using the Cube MSI installer.
-
-- Installing the CefSharp web browser plugin is mandatory when you opted for the shared MSI deployment.
-
-- Installing the CefSharp web browser plugin avoids the need for each individual user to download the CefSharp web browser plugin from a DMA.
 
 - Windows 2012 R2 requires Microsoft Visual C++ Runtime 2015 to be installed separately.
 
@@ -130,8 +132,6 @@ Below you can find an overview of the different methods that can be used to depl
 - All MSI packages require administrator rights for installation.
 
 - All MSI packages require a 64-bit operating system.
-
-- The launcher is backwards compatible and can be used to deploy any 9.x or 10.x Cube version. Shared MSI installation packages can be provided on demand for older versions.
 
 - From DataMiner Cube 10.4.0 [CU16]/10.5.0 [CU4]/10.5.7 onwards<!-- RN 42706 -->, the *About* window of the start window (available via the cogwheel button) will include info about how the installed version was deployed. If it shows "(shared)", a shared MSI installation was used. If it shows ("bootstrap"), a bootstrap MSI installation was used.
 
