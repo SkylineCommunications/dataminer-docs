@@ -149,11 +149,3 @@ From now on, when a capability is booked, it will no longer be possible to set i
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.
-
-#### SLAnalytics: Problems with alarm grouping and pattern matching [ID 44262]
-
-<!-- MR 10.7.0 - FR 10.6.2 -->
-
-Up to now, the introduction of `CorrelationMetaData`, a new type of alarm metadata, in DataMiner Main Release 10.6.0 and Feature Release 10.6.1 would cause alarm grouping to produce incorrect results after a restart and pattern matching suggestion events and alarm groups to be cleared incorrectly.
-
-As SLAnalytics now fully supports `CorrelationMetaData`, the above-mentioned issues will no longer occur.
