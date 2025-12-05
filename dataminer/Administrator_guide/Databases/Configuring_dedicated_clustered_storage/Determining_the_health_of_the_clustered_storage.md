@@ -1,8 +1,8 @@
 ---
-uid: Troubleshooting_Dedicated_clustered_storage
+uid: Determining_the_health_of_the_clustered_storage
 ---
 
-# Troubleshooting – Dedicated clustered storage
+# Determining the health of the dedicated clustered storage
 
 When a DataMiner System uses [dedicated clustered storage](xref:Dedicated_clustered_storage) (not recommended), both the **Cassandra** and **OpenSearch** clusters must be healthy to ensure full system functionality. DataMiner includes built-in monitoring for these database types, which can be used to determine when to offload data to disk to prevent data loss.
 
