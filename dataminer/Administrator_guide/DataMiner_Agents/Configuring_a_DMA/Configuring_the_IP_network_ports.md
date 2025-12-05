@@ -43,13 +43,25 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 
 ## Graphical representation of IP communication within a DMS
 
+### Recommended setup
+
+In this example of the recommended STaaS setup, the DataMiner System consists of three DataMiner Agents. Two of these DMAs are connected to the CloudGateway and are therefore connected to dataminer.services. If one of the DMAs loses its connection, the other one acts as a backup so that the DMS remains cloud-connected.
+
+![Connection overview - STaaS](~/dataminer/images/Connection_Overview1.svg)
+
+In the example below, CloudGateway is not installed on server 2. However, to use the ArtifactDeployer DxM, server 2 connects to the CloudGateway on server 1 over port 5100.
+
+![Multiple servers - CloudGateway](~/dataminer/images/CloudGatewayServers.svg)
+
+### Other setups
+
 The diagrams below show how communication within a DMS could be set up. The blue lines indicate the communication towards the databases (in this case an OpenSearch and Cassandra cluster of three nodes each).
 
-Using gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards):
+Dedicated clustered storage with gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards):
 
 ![DMS communication overview new](~/dataminer/images/dms_ip_communication_with_DB_updated.png)
 
-Using .NET Remoting:
+Dedicated clustered storage with .NET Remoting:
 
 ![DMS communication overview](~/dataminer/images/dms_ip_communication_with_DB.png)
 
