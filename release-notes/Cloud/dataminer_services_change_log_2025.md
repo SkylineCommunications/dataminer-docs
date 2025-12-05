@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 5 December 2025 - Enhancement - Billing - DaaS usage billing
 
-Starting from December 2025, automatic monthly billing will be implemented for DaaS. On the 5th day of each month, the expended DataMiner credits for the previous month's DaaS usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Usage-based services Metering units](xref:Pricing_Usage_based_service) for more details.
+Starting from December 2025, automatic monthly billing will be implemented for DaaS. On the 5th day of each month, the expended DataMiner credits for the previous month's DaaS usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.
 
 In case an organization does not have sufficient DataMiner credits, their balance will go negative, and it will need to be topped up as soon as possible. Organizations with a negative balance will not be able to deploy new DaaS systems.
 
@@ -47,7 +47,7 @@ Previously, if descriptions for incidents contained tabs or new lines, these wer
 
 ### 1 October 2025 - Enhancement - Billing - STaaS usage billing
 
-Starting from October 2025, automatic monthly billing will be implemented for STaaS. On the first day of each month, the expended DataMiner credits for the previous month's STaaS usage will be subtracted from the organization's balance. This billing will take effect retroactively, going as far back as April 2024. See [Usage-based services Metering units](xref:Pricing_Usage_based_service) for more details.
+Starting from October 2025, automatic monthly billing will be implemented for STaaS. On the first day of each month, the expended DataMiner credits for the previous month's STaaS usage will be subtracted from the organization's balance. This billing will take effect retroactively, going as far back as April 2024. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.
 
 In case an organization does not have sufficient DataMiner credits, their balance will go negative, and it will need to be topped up as soon as possible. Organizations with a negative balance will not be able to deploy new DaaS systems.
 
