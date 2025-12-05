@@ -2,42 +2,48 @@
 uid: Racks_Page
 ---
 
-# Racks Page
+# Racks
 
-Final step from a hierarchical level, here racks can be configured. It displays the Space and Power Capacity, along with their Usage (%). It’s calculated based on the size of the assets placed on the rack (amount of Rack Units) and its Maximum Power Consumption.
+The Racks page displays an overview of all configured racks, along with the rack capacity, power capacity, and space usage (%). The latter is calculated based on the size of the assets placed on the rack and its maximum power consumption. These are defined in the Asset Manager app, specifically with the [asset class configuration](xref:Asset_Class_Details).
 
-This can be defined on the Asset Designer, specifically, on the Asset Class (see also [Asset Class Details](xref:Asset_Class_Details)):
+Once you have configured your facilities and rooms in the Facility Manager app, the final step to add all infrastructure is typically [adding the racks](#adding-a-rack).
 
 ![Racks Page](~/solutions/images/Facility_Manager_Racks_Page.png)
 
-After creating a Rack (Name and Model are mandatory fields), the user can configure the following fields:
+## Adding a rack
 
-- Name and Model
+1. In the top-left corner of the Racks page, click *New Rack*.
 
-- Description
+1. Configure the following fields, and then click *Save*:
 
-- Label: Displayed on the Room Designer and Room Viewer, when the rack is placed on the room
+   - **Rack Name**: Mandatory field.
+   - **Rack Model**: Mandatory field.
+   - **Rack Position**: If set to *Bottom*, slot 1 is at the bottom of the rack. If set to *Top*, slot 1 is at the top of the rack.
+   - **Rack Label**: This is displayed in the Room Designer and Room Viewer, when the rack is placed on the room.<!-- TBD -->
+   - **Maximum Power Capacity (kW)**: Consumed based on the assets that are placed on the rack.
+   - **Maximum Rack Capacity (U)**: The number of rack units available for this rack.
+   - **Room Name**/**Row Name**/**Zone Name**: The location where the rack is added.
 
-- Position: If set to ‘Bottom’, the Slot 1 starts from the bottom. If set to “Top”, Slot 1 starts from the top of the rack
+   This will add the rack to the racks overview table.
 
-- Height, Width and Depth (cm): This will be reflected on the Room Designer and Viewer
+1. To further configure the rack, click the details button (ⓘ) in the table.
 
-- Maximum Power Capacity (kW): Consumed based on the assets that are placed on the rack
+   This will open a pane where you can configure additional details:
 
-- Maximum Rack Capacity (U): Amount of Rack units available for this rack
+   - To add a description, click the pencil in the *Rack Info* section.
 
-- Cooling Flow:
+   - To specify the cooling flow, click the pencil in the *Rack Info* section, and select the flow:
 
-    - Front to Rear: Air flows from the front of the rack to the rear, which is the standard configuration for most server and network equipment.
+     - *Front to Rear*: Air flows from the front of the rack to the rear, which is the standard configuration for most server and network equipment.
+     - *Rear to Front*: Air flows from the rear of the rack to the front, which is less common but used in specific scenarios.
+     - *Side to Side*: Air flows from one side of the rack to the other, typically used for certain network equipment.
+     - *Top to Bottom*: Air flows from the top of the rack to the bottom, used in some specialized setups.
+     - *Bottom to Top*: Air flows from the bottom of the rack to the top, often used in conjunction with raised floor cooling systems.
 
-    - Rear to Front: Air flows from the rear of the rack to the front, which is less common but used in specific scenarios.
+   - To specify the height, width, and depth (in cm), click the pencil button in the *Rack Measurements* section. This will be reflected in the Room Designer and Room Viewer.<!-- TBD -->
 
-    - Side to Side: Air flows from one side of the rack to the other, typically used for certain network equipment.
+<!-- To add: Link Image & Gallery -->
 
-    - Top to Bottom: Air flows from the top of the rack to the bottom, used in some specialized setups.
-
-    - Bottom to Top: Air flows from the bottom of the rack to the top, often used in conjunction with raised floor cooling systems.
-
-- Room, Row and Zone
+<!-- Not yet reviewed: -->
 
 Rack must be set to Active to allow asset assignment.

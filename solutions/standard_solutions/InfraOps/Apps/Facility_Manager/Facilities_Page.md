@@ -8,6 +8,8 @@ The Facilities page of the Facility Manager app allows you to create, edit, and 
 
 On the left, it includes a filter panel. Selecting a facility also filters the lists of floors and rooms accordingly.
 
+This page is where you will typically begin your configuration, first [adding facilities](#adding-a-new-facility), then [adding floors](#adding-a-new-floor), and finally [adding rooms](#adding-a-new-room).
+
 ![Facilities page](~/solutions/images/Facility_Manager_Facilities_Page.png)
 
 > [!NOTE]
@@ -84,14 +86,15 @@ As soon as floors have been added to the facility, you will also be able to [add
 
    - In the *Room Plan* section, click the pencil icon and then select an image to add this image as the room plan. More images can be uploaded using for selection using the [Web File Manager app](xref:Web_File_Manager).
 
-   - Add zones, rows, and/or desks with the buttons at the top of the pane.
+   - Add zones, rows, and/or desks with the buttons at the top of the pane. For details, see [Rooms](xref:Rooms_Page).
 
 1. When the room is fully configured, click the *Activate* button.
 
-Here is an example of a fully configured, activated room:
+   Only when a room has been activated, will it be possible to assign assets to it in the Asset Manager app.
+
+> [!NOTE]
+> You can also add a room with the *New Room* button on the [Rooms](xref:Rooms_Page) page.
+
+Example of a fully configured, activated room:
 
 ![Room details pane](~/solutions/images/Facility_Manager_Room_Details_Side_Panel.png)
-
-<!-- TBD: -->
-
-Only active Rooms and Racks allow asset assignments.
