@@ -11,7 +11,7 @@ With the Facility Manager application, you can create a hierarchical view of you
 ## App Overview
 
 - ![Overview](~/solutions/images/FacilityManager_Overview.png) **Overview**: Provides quick insight in facilities, rack units, and power consumption.
-- ![Facilities](~/solutions/images/FacilityManager_Facilities.png) **Facilities**: Allows you to manage the facilities in your infrastructure.
+- ![Facilities](~/solutions/images/FacilityManager_Facilities.png) **[Facilities](xref:Facilities_Page)**: Allows you to manage the facilities in your infrastructure.
 - ![Rooms](~/solutions/images/FacilityManager_Rooms.png) **Rooms**: <!-- TBD -->
 - ![Racks](~/solutions/images/FacilityManager_Racks.png) **Racks**: <!-- TBD -->
 - ![Room Designer](~/solutions/images/FacilityManager_Room_Designer.png) **Room Designer**: <!-- TBD -->

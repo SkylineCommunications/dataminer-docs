@@ -37,9 +37,26 @@ On the left, it includes a filter panel. Selecting a facility also filters the l
 
    As long as this button has not been clicked, the facility is considered a draft. After it has been clicked, you can remove the facility again by clicking the *Deprecate* button.
 
-1. To add a floor to facility, click the *Add Floor* button at the top and add the floor number.
+## Adding a new floor
 
-   As soon as floors have been added to the facility, you will be able to add rooms from the *Floor details* pane.
+1. To add a floor to a facility, in the *Facility details* pane, click the *Add Floor* button at the top.
+
+1. Specify the floor name, and click *Save*.
+
+1. Close the *Facility details* pane.
+
+1. To further configure the floor, in the *Floors* table, click the details button (ⓘ) for the floor.
+
+   You can then:
+
+   - Click the pencil icon in the *Floor Info* section to specify a description for the floor.
+   - Click the pencil icon in the *Floor Plan* section to add an image as the floor plan.
+
+     To have additional images available for selection, upload them using the [Web File Manager app](xref:Web_File_Manager), which you can access directly via the button in the top-left corner.
+
+     ![Floor plan image selection](~/solutions/images/Facility_Manager_Edit_Screen_For_Room_Plans.png)
+
+As soon as floors have been added to the facility, you will also be able to [add rooms](#adding-a-new-room) from the *Floor details* pane.
 
 ## Adding a new room
 
@@ -65,7 +82,7 @@ On the left, it includes a filter panel. Selecting a facility also filters the l
 
      ![Room information Wizard](~/solutions/images/Facility_Manager_Room_Information_Wizard.png)
 
-   - In the *Room Plan* section, click the pencil icon and then select an image to add this image as the room plan.
+   - In the *Room Plan* section, click the pencil icon and then select an image to add this image as the room plan. More images can be uploaded using for selection using the [Web File Manager app](xref:Web_File_Manager).
 
    - Add zones, rows, and/or desks with the buttons at the top of the pane.
 
@@ -75,21 +92,6 @@ Here is an example of a fully configured, activated room:
 
 ![Room details pane](~/solutions/images/Facility_Manager_Room_Details_Side_Panel.png)
 
-
-<!-- The text below is still unreviewed -->
+<!-- TBD: -->
 
 Only active Rooms and Racks allow asset assignments.
-
-
-
-It’s also possible for the users to add floor or room plans from the details page by selecting the edit button (🖉) on the Room Plan section. This introduces the first interaction with the Web File Manager solution:
-
-![Edit screen for Room Plans](~/solutions/images/Facility_Manager_Edit_Screen_For_Room_Plans.png)
-
-Currently, it allows users to upload images. These can be used, as already mentioned on the Floors and Room plans, but they can also be used to assign images to Asset Classes (more details here Asset Class Details):
-
-![Web File Manager Main Page](~/solutions/images/Facility_Manager_Web_File_Manager_Main_Page.png)
-
-Once on the Web File Manager app, by selecting the Upload button on the top right, the user can upload an image that can later be used with this Asset and Inventory Management solution:
-
-![Web File Manager Upload Wizard](~/solutions/images/Facility_Manager_Web_File_Manager_Upload_Wizard.png)

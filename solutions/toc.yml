@@ -124,6 +124,8 @@ items:
           topicUid: Jobs_Page
         - name: Job Details
           topicUid: Job_Details
+      - name: Web File Manager
+        topicUid: Web_File_Manager
     - name: DataMiner PTP
       topicUid: SolPTP
       items:
