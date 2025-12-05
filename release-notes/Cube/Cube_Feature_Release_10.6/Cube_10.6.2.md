@@ -68,4 +68,10 @@ From now on, the advanced search options will only be visible on systems that in
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Alarm Console: Problem with shape data fields of type 'AlarmFilter' [ID 44081]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+
+If you add a shape data field of type *AlarmFilter* to a shape, clicking the shape will cause Alarm Console tabs of type *Active alarms linked to cards* only to show alarms that match the alarm filter specified in the field value.
+
+However, up to now, the alarm filter would incorrectly no longer be taken into account when an alarm tab of type *Active alarms linked to cards* was selected in the Alarm Console.
