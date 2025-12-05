@@ -140,6 +140,17 @@ Additionally, the following new types have been defined:
 
 In a dashboard, a low-code app, or another DataMiner web app, each time an error occurs when you try to delete a DOM instance, from now on, all exceptions will be logged, and a message will appear in the UI.
 
+#### Dashboards app - Grid component: Enhanced rendering on PDF reports in stacked mode [ID 44266]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Because of a number of enhancements, the behavior of the Grid component has improved when rendered on a PDF report in stacked mode.
+
+From now on, the grid will try to grow or shrink vertically in order to avoid a vertical scrollbar and show as many items as possible with regard to its settings.
+
+> [!NOTE]
+> A PDF report containing a Grid component can still show scrollbars and/or clipped content when the grid is set to show a fixed amount of row and a fixed amount of columns (without *Stretch to fit* option).
+
 ### Fixes
 
 #### Dashboards app: Problem when generating a PDF report of a dashboard containing a Time range component [ID 44168]
