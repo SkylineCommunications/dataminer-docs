@@ -192,7 +192,7 @@ When a Timeline component and a Time range component were linked in both directi
 
 From now on, a Timeline component will no longer adapt its viewport when instructed to do so by incoming events (from e.g. a Time range component) while a user is zooming or panning.
 
-Also, the following actions will only affect the viewport after the user interaction has finished:
+Note that the following actions will only affect the viewport after the user interaction has finished:
 
 - Selecting a range by dragging the right mouse button.
 - Selecting a segment on top of the timeline.
