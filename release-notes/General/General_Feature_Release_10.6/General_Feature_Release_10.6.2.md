@@ -38,6 +38,17 @@ uid: General_Feature_Release_10.6.2
 
 ### Enhancements
 
+#### DataMiner upgrade: New upgrade action will register DataMiner exe files with Windows Error Reporting [ID 39440]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+During a DataMiner upgrade, from now on, a new upgrade action will register all DataMiner SL\*.exe and "DataMiner \*.exe" files with Windows Error Reporting (WER). This will make sure that, each time a DataMiner process crashes for whatever reason, a full crash dump is created in `C:\Skyline DataMiner\Logging\CrashDump\wer\<ExeName>`. These WER crash dumps will allow Skyline to thoroughly investigate any issue that might occur.
+
+> [!NOTE]
+>
+> - Each time a crash dump is created for a particular process, any existing crash dumps for the same process will be automatically deleted. Per DataMiner process, only the most recent crash dump will be kept.
+> - During a DataMiner upgrade, the entire `C:\Skyline DataMiner\Logging\CrashDump\wer\` folder will be cleared.
+
 #### Security enhancements [ID 43789]
 
 <!-- 43789: MR 10.5.0 [CU11] - FR 10.6.2 -->
