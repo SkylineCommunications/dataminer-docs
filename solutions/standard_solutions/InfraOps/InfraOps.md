@@ -4,10 +4,14 @@ uid: InfraOps
 
 # InfraOps
 
-This InfraOps solution contains three applications that are ready to be used out-of-the-box in any media environment:
+The dataminer.InfraOps solution unifies planning, monitoring, and automation in one powerful solution for media, telecom, satellite, and energy organizations. In one environment, you will be able to manage the entire lifecycle of your infrastructure, both on and off premises. From the first planning steps to real-time monitoring and continuous optimization, everything is connected.
 
-- [Asset Management](xref:Asset_Manager.md)
-- [Facility Manager](xref:Facility_Manager.md)
-- [Plan and Build](xref:Plan_And_Build.md)
+The InfraOps solution includes the following three applications, which are ready for use out of the box:
 
-These apps allow users to have a full overview of their assets within the defined infrastructures and organize their build orders.
+- [Asset Management](xref:Asset_Manager): Provides full visibility into your infrastructure. Track assets with all their details, and link them to services and locations for real-time insight.
+
+- [Facility Manager](xref:Facility_Manager): Gives you a full picture of your infrastructure, allowing you to manage buildings, floors, rooms, etc.
+
+- [Plan and Build](xref:Plan_And_Build): Allows you to document every installation and track every change, ensuring that your planning is based on reliable data.
+
+It also makes use of the [Web File Manager app](xref:Web_File_Manager) in order to manage images used in the solution.
