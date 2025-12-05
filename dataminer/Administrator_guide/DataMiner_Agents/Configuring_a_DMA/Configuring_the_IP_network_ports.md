@@ -47,7 +47,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 
 In this example of the recommended STaaS setup, the DataMiner System consists of three DataMiner Agents. Two of these DMAs are connected to the CloudGateway and are therefore connected to dataminer.services. If one of the DMAs loses its connection, the other one acts as a backup so that the DMS remains cloud-connected.
 
-![Connection overview - STaaS](~/dataminer/images/Connection_Overview1.svg)
+![DMS communication - STaaS](~/dataminer/images/Connection_Overview1.svg)
 
 In the example below, CloudGateway is not installed on server 2. However, to use the ArtifactDeployer DxM, server 2 connects to the CloudGateway on server 1 over port 5100.
 
@@ -55,15 +55,15 @@ In the example below, CloudGateway is not installed on server 2. However, to use
 
 ### Other setups
 
-The diagrams below show how communication within a DMS could be set up. The blue lines indicate the communication towards the databases (in this case an OpenSearch and Cassandra cluster of three nodes each).
+The diagrams below show how communication within a DMS could be set up, when you use DataMiner with dedicated clustered storage (not recommended). The light blue lines indicate the communication towards the databases (in this case an OpenSearch and Cassandra cluster of three nodes each).
 
-Dedicated clustered storage with gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards):
+Using gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards):
 
-![DMS communication overview new](~/dataminer/images/dms_ip_communication_with_DB_updated.png)
+![DMS communication - Dedicated clustered storage - gRPC](~/dataminer/images/Connection_Overview2.svg)
 
-Dedicated clustered storage with .NET Remoting:
+Using .NET Remoting:
 
-![DMS communication overview](~/dataminer/images/dms_ip_communication_with_DB.png)
+![DMS communication - Dedicated clustered storage - .NET Remoting](~/dataminer/images/dms_ip_communication_with_DB.png)
 
 > [!TIP]
 > See also:
