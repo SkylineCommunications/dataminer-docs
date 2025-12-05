@@ -9,6 +9,12 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 5 December 2025 - Enhancement - Billing - DaaS usage billing
+
+Starting from December 2025, automatic monthly billing will be implemented for DaaS. On the 5th day of each month, the expended DataMiner credits for the previous month's DaaS usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.
+
+In case an organization does not have sufficient DataMiner credits, their balance will go negative, and it will need to be topped up as soon as possible. Organizations with a negative balance will not be able to deploy new DaaS systems.
+
 ### 20 November 2025 - Enhancement - Admin - Usage - Pie chart slices sorted by usage
 
 In the Admin app, an enhancement has been implemented to the Usage page. To make it easier to see which systems or features use the most DataMiner credits, the slices in the pie chart are now sorted by usage in clockwise order.
@@ -23,6 +29,10 @@ Note that on the Usage page for a DataMiner System, you can still see the credit
 
 When the *Deleted systems* option was selected in the DataMiner Systems filter on the organization usage page of the Admin app, it could occur that no usage data was shown. This issue has been resolved.
 
+### 31 October 2025 - Enhancement - Billing - STaaS usage billing
+
+Starting from November 2025, automatic monthly billing for the previous month will take place on the 5th day of each month.
+
 ### 29 October 2025 - New Feature - Community Edition Trial DaaS
 
 Previously, users had to purchase DataMiner credits to deploy a DaaS system. Now new organizations can deploy a Community Edition Trial DaaS system for free, which they can use for one week to test out DataMiner features. After a week, the system will be automatically decommissioned.
@@ -35,9 +45,9 @@ Previously, when a user shared a dashboard that had a comma in its name, the Sha
 
 Previously, if descriptions for incidents contained tabs or new lines, these were not shown. Now the text will be shown with correct spacing.
 
-### 1 October 2025 - Enhancement - Usage - STaaS usage billing
+### 1 October 2025 - Enhancement - Billing - STaaS usage billing
 
-Starting from 1 October 2025, automatic monthly billing will be implemented for STaaS. On the first day of each month, the expended DataMiner credits for the previous month's STaaS usage will be subtracted from the organization's balance. This billing will take effect retroactively, going as far back as April 2024.
+Starting from October 2025, automatic monthly billing will be implemented for STaaS. On the first day of each month, the expended DataMiner credits for the previous month's STaaS usage will be subtracted from the organization's balance. This billing will take effect retroactively, going as far back as April 2024. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.
 
 In case an organization does not have sufficient DataMiner credits, their balance will go negative, and it will need to be topped up as soon as possible. Organizations with a negative balance will not be able to deploy new DaaS systems.
 
