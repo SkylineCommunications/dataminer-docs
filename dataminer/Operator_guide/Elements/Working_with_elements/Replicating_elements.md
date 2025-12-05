@@ -16,6 +16,9 @@ While creating a new element or editing an existing element:
    > [!NOTE]
    > If a DMA is connected to dataminer.services and [remote access](xref:About_Remote_Access) is enabled, you can use the remote access URL.
 
+   > [!IMPORTANT]
+   > If the DMA hosting the element to be replicated has been [set up to use HTTPS](xref:Setting_up_HTTPS_on_a_DMA), make sure to use the hostname or IP address matching the Common Name (CN) or one of the Subject Alternative Names (SAN) of the SSL/TLS certificate. Otherwise, SLNet will reject the incoming connection and replication will fail.
+
 1. Enter the username and the password the local DMA can use to log on to the remote DMS in order to retrieve the parameter values from the remote element.
 
    > [!NOTE]

@@ -509,7 +509,7 @@ Up to now, each time a `ModuleSettings` object was updated, the network credenti
 
 From now on, when a `ModuleSettings` object is updated, the network credentials will only be checked if the network path or the credential ID were updated as well.
 
-#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 43890] [ID 44035] [ID 44050] [ID 44062]
+#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]
 
 <!-- RN 43526: MR 10.6.0 - FR 10.5.10 -->
 <!-- MR 10.6.0 - FR 10.6.1 -->
@@ -538,10 +538,6 @@ DataMiner Systems will now use the BrokerGateway-managed NATS solution by defaul
   - NATSRestartTimeout
 
 - DataMiner upgrade packages will no longer perform the *MigrateBrokerGatewaySoftLaunch* upgrade action. This action would move the BrokerGateway soft-launch option to the *MaintenanceSettings.xml* file.
-
-- From now on, when an attempt is made to communicate using the legacy SLNet-managed NATS solution, the following exception will be thrown and logged:
-
-  `Unable to find file. SLCloud configured messageBrokers are unsupported as of DataMiner 10.6.0.`
 
 - NATSRepair.exe will no longer check if the *BrokerGateway* flag in *MaintenanceSettings.xml* is set to true.
 
@@ -632,7 +628,7 @@ When you try to delete a DOM module, but you do not have access to all DOM defin
 
 From now on, it will no longer be possible to run *NATSRepair.exe* when automatic NATS configuration is disabled. If so, *NATSRepair.exe* will immediately stop without performing any actions.
 
-See also: [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)
+See also: [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config)
 
 #### DataMiner backup: Temp file will now be created on the target path instead of the C drive [ID 44063]
 
@@ -644,6 +640,23 @@ When a backup package was being created, up to now, the temporary file would be 
 >
 > - When DataMiner and Cassandra are installed on the same machine, and the Cassandra data directory is on the C drive, the temporary snapshot for Cassandra will be created in that data directory before it is added to the backup package on the target path. This is default Cassandra behavior. If you wish to avoid this, move the Cassandra data directory to another drive, or consider moving to STaaS or self-managed clustered storage as Cassandra Single is End of Engineering.
 > - Backups for which only a network path has been specified may take a bit more time as the temporary file will now be created on that network path. Backups for which both a local path and a network path have been specified will not take longer as the temporary file will be created on the local path and then simply copied to the network path.
+
+#### Annotations are now End of Life [ID 44124] [ID 44183]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+Annotations are now End of Life.
+
+> [!IMPORTANT]
+> Before you upgrade to this DataMiner version, make sure the soft-launch option *LegacyAnnotations* is either disabled or removed from the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file. Otherwise, the upgrade operation will be aborted.
+
+#### SLAnalytics: New database synchronization tasks will be paused when the queue is too long [ID 44243]
+
+<!-- MR 10.6.0 - FR 10.6.2 -->
+
+When database operations fail or take too long, the queue of database synchronization tasks (which update model information) can grow excessively, causing the SLAnalytics process to consume increasing amounts of memory.
+
+From now on, SLAnalytics will pause the creation of new synchronization tasks for some types of model information whenever there are too many pending tasks already. New synchronization operations will only be created again once the backlog has decreased.
 
 ### Fixes
 

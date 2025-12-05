@@ -8,7 +8,7 @@ Starting from version 1.0.0, the [DataMiner Assistant](xref:Assistant_DxM) DxM w
 
 You can use this feature when [configuring queries in dashboards or low-code apps](xref:Creating_GQI_query#letting-dataminer-assistant-create-a-query).
 
-![NL2GQI](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner 10.5.4*
+![NL2GQI](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner 10.6.1*
 
 Examples of such natural languages request could be:
 

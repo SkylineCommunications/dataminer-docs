@@ -2,17 +2,10 @@
 uid: MediaOps_1.4.3
 ---
 
-# MediaOps 1.4.3 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MediaOps 1.4.3
 
 > [!NOTE]
 > This version requires DataMiner 10.5.9/10.6.0 or higher. In addition, the [GQI DxM](xref:GQI_DxM) must be installed.
-
-## New features
-
-*No new features have been added to this release yet.*
 
 ## Changes
 
@@ -51,3 +44,7 @@ When a new node was added to a job and all mandatory configuration values assign
 #### Resource Studio: Resource pool deprecation confirmation was ignored [ID 44212]
 
 When you deprecate a resource pool in the Resource Studio app, a dialog asks for confirmation. Up to now, if you then did not confirm the deprecation, the resource pool was still deprecated. This has now been fixed.
+
+#### Resource Studio: Exception when adding discrete values for configuration parameter with default value enabled [ID 44229]
+
+When discrete values were added for a configuration parameter while the default value was enabled, it could occur that an exception was thrown.

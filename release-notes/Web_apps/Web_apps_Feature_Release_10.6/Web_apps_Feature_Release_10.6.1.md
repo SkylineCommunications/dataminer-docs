@@ -2,21 +2,17 @@
 uid: Web_apps_Feature_Release_10.6.1
 ---
 
-# DataMiner web apps Feature Release 10.6.1 – Preview
+# DataMiner web apps Feature Release 10.6.1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.5.0 [CU10].
 
-This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.4.0 [CU22] and 10.5.0 [CU10].
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.1](xref:General_Feature_Release_10.6.1).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.6.1](xref:Cube_Feature_Release_10.6.1).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -58,7 +54,33 @@ Also, custom positioning mode has now been replaced by the following two positio
 > - When previously set to *Custom positioning*, the component will now by default be set to *Edit* mode with *Layered* positioning.
 > - When previously set to *Layered* or *Linked to data*, the component will now by default be set to *Read* mode.
 
+#### Dashboards/Low-Code Apps - Node edge graph component: New 'Node move' event [ID 44144]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Per node query linked to a *Node edge graph* component, you can now configure *node move* events that will be triggered when a node belonging to that query is moved.
+
+When triggered, a *node move* event will provide the following parameters:
+
+- The row data of the node that was moved.
+- The old position of the node: {x,y}
+- The new position of the node: {x,y}
+
 ## Changes
+
+### Breaking changes
+
+#### Annotations are now End of Life [ID 44136]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Annotations are now End of Life, and will no longer work when connected to a DataMiner Agent running main release version 10.6.0 or feature release version 10.6.1 (or above).
+
+Also, when connected to a DataMiner Agent running main release version 10.6.0 or feature release version 10.6.1 (or above), the following Web Services API methods (v1) will return an error:
+
+- GetAnnotationsLinkForElement
+- GetAnnotationsLinkForService
+- GetAnnotationsLinkForView
 
 ### Enhancements
 
@@ -188,6 +210,29 @@ Also, you will be able to specify whether you want the list to show custom templ
 
 The *Pivot table* and *Group* components are being retired. From now on, both will no longer appear in lists of available visualizations, unless you use the `showAdvancedSettings=true` URL option.
 
+#### GQI DxM: DOM data source now supports reading only a selected subset of fields from `DomInstance` objects [ID 44141]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When connected to a DataMiner Agent running main release version 10.6.0 or feature release 10.6.1 (or above), the DOM data source will now support reading only a selected subset of fields from `DomInstance` objects. This will reduce the amount of data transferred and can significantly improve performance in cases where a GQI query only need a few fields from each instance.
+
+For more information, see [DataMiner Objects Models: DomInstances CRUD helper now supports reading only a selected subset of fields from `DomInstance` objects [ID 43852]](xref:General_Feature_Release_10.6.1#dataminer-objects-models-dominstances-crud-helper-now-supports-reading-only-a-selected-subset-of-fields-from-dominstance-objects-id-43852)
+
+When connected to a DataMiner Agent running a version older than main release version 10.6.0 or feature release 10.6.1, the DOM data source will continue to read `DomInstance` objects as before.
+
+#### Web apps: Option to log in with a local user account [ID 44152]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When a DataMiner Agent was configured to used external authentication, up to now, it would not be possible to log in to a web app with a local user account.
+
+From now on, when you add the `skipAutoLogin=true` argument to the URL of the app, the login screen will allow you to log in using either external authentication or a local user account.
+
+Example: `https://dma.company.local/?skipAutoLogin=true`
+
+> [!NOTE]
+> After having logged in using external authentication, you will now find a new *Sign in with another user* option in the user menu. This option will allow you return to the login screen, where you will be able log in using either external authentication or a local user account.
+
 ### Fixes
 
 #### Visual Overview in web apps: Children shapes would incorrectly be displayed on top of a clickable group of shapes [ID 43465]
@@ -265,14 +310,6 @@ In interactive Automation scripts launched from a web app, up to now, numeric va
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 When you had opened the DataMiner web apps authentication page in a Firefox web browser, in some cases, an error could occur when you tried to log in to a web app.
-
-#### Dashboards/Low-Code Apps: An export to CSV could incorrect be started before the data had been loaded [ID 44064]
-
-<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
-
-Up to now, in a *Line & area chart* component, it would incorrectly be possible to start an export to CSV before the data had been loaded.
-
-From now on, an export to CSV will always be performed synchronously. In other words, even when you click *Export to CSV* before the data has been loaded, the export operation will only start when all data has been loaded.
 
 #### Dashboards app: Problem when generating a PDF report if a trend graph with valid data was followed by a trend graph without valid data [ID 44143]
 

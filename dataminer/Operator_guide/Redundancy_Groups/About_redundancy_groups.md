@@ -14,7 +14,9 @@ Redundancy groups have specific context menu options in the Surveyor. They also 
 > To quickly find a redundancy group in the Surveyor, search with the term “redundancy”, followed by a space and part of the redundancy group name. See [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube).
 
 > [!IMPORTANT]
-> Redundancy groups cannot be integrated with DataMiner Service and Resource Management (SRM).
+> 
+> - Redundancy groups cannot be integrated with DataMiner Service and Resource Management (SRM).
+> - The following types of elements cannot be included in redundancy groups: Elements using a connector without [groups](xref:LogicGroups), as well as DVE child elements. <!-- DCP278771 -->
 
 ## Primary elements, backup elements and virtual primary elements
 

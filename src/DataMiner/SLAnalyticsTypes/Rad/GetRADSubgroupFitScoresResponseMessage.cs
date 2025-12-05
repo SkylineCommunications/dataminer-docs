@@ -19,6 +19,13 @@ namespace Skyline.DataMiner.Analytics.Rad
         /// A low ModelFit value (i.e. a value closer to 0) indicates that the subgroup's behavior deviates significantly from the behavior learned by the overall model.
         /// </summary>
         public double ModelFit { get; set; }
+
+        /// <summary>
+        /// Gets or sets whether the subgroup behaves as an outlier compared to other subgroups that use the same shared model.
+        /// This value is automatically determined by comparing the subgroup's ModelFit against the ModelFit values of the other subgroups.
+        /// Available from DataMiner 10.6.0/10.6.1 onwards.
+        /// </summary>
+        public bool IsOutlier { get; set; }
     }
 
     /// <summary>
