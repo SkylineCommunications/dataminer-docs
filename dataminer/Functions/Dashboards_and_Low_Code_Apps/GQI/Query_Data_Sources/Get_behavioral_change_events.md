@@ -4,7 +4,7 @@ uid: Get_behavioral_change_events
 
 # Get behavioral change events
 
-Available from DataMiner 10.3.3/10.4.0 onwards.<!-- RN 35027 --> The *Get behavioral change events* data source retrieves all behavioral change points detected in the DataMiner System. These events are detected in your trend data by [DataMiner Behavioral Anomaly Detection](xref:Working_with_behavioral_anomaly_detection).
+Available from DataMiner 10.3.3/10.4.0 onwards.<!-- RN 35027 --> The *Get behavioral change events* data source retrieves all behavioral change points detected in the DataMiner System. These events are detected in your trend data by [Behavioral Anomaly Detection](xref:Behavioral_anomaly_detection).
 
 By default, the data contains the following columns:
 

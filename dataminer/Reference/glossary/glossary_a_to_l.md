@@ -20,9 +20,9 @@ uid: glossary_a_to_l
 | Alarm | Notification that a parameter value has crossed a particular threshold, or a parameter has attained a particular value. This notification has a particular severity depending on the alarm template configuration. See [Alarms](xref:About_alarms). |
 | Alarm banner | Banner at the top of the DataMiner Cube UI that displays the number of new alarms, the color of the most severe among them, and service impact information. See [Alarm Console settings](xref:AlarmConsoleSettings). |
 | Alarm Console | Pane in DataMiner Cube that allows you to view and manage alarms and information events. See [Working with the Alarm Console](xref:Working_with_the_Alarm_Console). |
-| Alarm focus | DataMiner functionality that analyzes the short-term history and current behavior of incoming alarms in order to indicate which alarms are unexpected. See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus). |
+| Alarm focus | DataMiner functionality that analyzes the short-term history and current behavior of incoming alarms in order to indicate which alarms are unexpected. See [Alarm focus](xref:Alarm_focus). |
 | Alarm hysteresis | Type of hysteresis where the moment when the severity of an alarm increases is delayed. See [Alarm hysteresis](xref:Alarm_hysteresis). |
-| Alarm group | A group of alarms created by [Automatic Alarm Grouping](xref:Automatic_incident_tracking). |
+| Alarm group | A group of alarms created by [Automatic Alarm Grouping](xref:Automatic_alarm_grouping). |
 | Alarm priority | Relative importance of an alarm type within the different DataMiner applications. See [Alarm type priority](xref:Alarm_types#alarm-type-priority). |
 | Alarm storm | Situation where the system is flooded by a large number of alarms. See [Alarm storm protection](xref:Alarm_storm_protection). |
 | Alarm tab | Tab in the Alarm Console in DataMiner Cube or the DataMiner Monitoring app. |
@@ -51,7 +51,7 @@ uid: glossary_a_to_l
 | Backup element | Element within a redundancy group that is intended to take over from another element in the group in case that element fails. See [Primary elements, backup elements and virtual primary elements](xref:About_redundancy_groups#primary-elements-backup-elements-and-virtual-primary-elements). |
 | Backup package | Package containing all files necessary to restore a particular DataMiner Agent installation. See [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent). |
 | Base protocol | Standardized protocol that forms a mediation layer on top of device-specific protocols, thereby providing a unified view on similar devices that have a different device-specific protocol. Also known as mediation protocol. See [DataMiner Mediation Layer](xref:AdvancedDataMinerMediationLayer). |
-| Behavioral anomaly detection | DataMiner Analytics feature that detects changes in the behavior of a trend. See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). |
+| Behavioral anomaly detection | DataMiner Analytics feature that detects changes in the behavior of a trend. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection). |
 | BER | Bit Error Rate. The percentage of bits with errors compared to the total bits received in a transmission. |
 | BGP | Border Gateway Protocol. Routing protocol used for traffic between autonomous systems over the internet. |
 | Booking | See [Booking](xref:srm_instantiations#booking). |
@@ -74,7 +74,7 @@ uid: glossary_a_to_l
 | CCU | Camera Control Unit. Device used to monitor and control camera functions, for example in live video broadcasting. |
 | CDN | Content Delivery Network. Network of servers in different locations that work together to allow fast delivery of internet content. |
 | Central database | Alternative name for the offload database, especially used for older DataMiner versions. See [Offloading data](xref:Offload_database). |
-| Change point | Point where the behavior of a parameter trend changes, detected by the DataMiner Analytics software. See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). |
+| Change point | Point where the behavior of a parameter trend changes, detected by the DataMiner Analytics software. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection). |
 | CI/CD | Continuous Integration Continuous Delivery/Deployment. A set of practices that ensure small changes are continuously implemented to the software and made available to customers. |
 | CI Type | Configuration Item type. Definition of the behavior of elements in network implementation workflows as part of DataMiner IDP. This includes how to discover the device, provision an element, and perform software management, configuration management and more. A CI Type can be unique for a specific protocol or common for multiple element types, such as a product family. See [DataMiner IDP app](xref:SolIDP). |
 | Clear hysteresis | Type of hysteresis where the moment when the severity of an alarm decreases is delayed. See [Alarm hysteresis](xref:Alarm_hysteresis). |
@@ -115,7 +115,7 @@ uid: glossary_a_to_l
 | Dashboard Gateway | DataMiner software that allows users to access dashboards even if they do not have access to DataMiner. See [Dashboard Gateway installation](xref:Dashboard_Gateway_installation). |
 | Data Display | Legacy term referring to the data pages of cards in DataMiner Cube. |
 | DataMiner Agent | A piece of hardware running the DataMiner software. Abbreviated as DMA. |
-| DataMiner Analytics | Artificial intelligence technology built into DataMiner, which among others provides [trend predictions](xref:Working_with_trend_predictions) and [various features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console). |
+| DataMiner Analytics | Artificial intelligence technology built into DataMiner, which among others provides [trend prediction](xref:Trend_prediction) and [various features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console). |
 | DataMiner Certification Program | Program that allows you to test your DataMiner knowledge and skills and prove your expertise with our official certificates. See [DataMiner certification](xref:Overview_Training_certification). |
 | DataMiner Client | An entity communicating with a DataMiner Agent. The term is mostly used to denote a client application that allows users to interact with the DataMiner Agent. See [DataMiner client apps](xref:Client_apps). |
 | DataMiner Cloud Platform | Former name of dataminer.services. Abbreviated as DCP. See [dataminer.services](xref:about_dataminer_services). |
@@ -285,7 +285,7 @@ uid: glossary_a_to_l
 | Latch level | The previous highest alarm severity level of a DataMiner object. See [Special icon settings](xref:DataMiner_Cube_sidebar#special-icon-settings). |
 | LCA | [Low-Code Apps](xref:Application_framework). DataMiner module that allows you to create custom applications to interact with data from a DataMiner System or an external source. |
 | LDAP | Lightweight Directory Access Protocol. Cross-platform protocol used for directory services authentication. |
-| Level shift | Change in the behavior of a trend, detected by DataMiner Analytics, where the value shifts upwards or downwards and then stays at that level. See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) |
+| Level shift | Change in the behavior of a trend, detected by DataMiner Analytics, where the value shifts upwards or downwards and then stays at that level. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection) |
 | LINQ | Language Integrated Query. See [Language Integrated Query](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/) |
 | List view | UI component consisting of a dynamic, filterable list of elements, services or bookings. This component is part of the Bookings and Services apps and can also be embedded in Visual Overview. See [Creating a list view](xref:Creating_a_list_view). |
 | Lite mode | A mode in DataMiner Cube that displays parameters in a customizable, more compact way. See [Working with Lite parameters](xref:Working_with_Lite_parameters). |

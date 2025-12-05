@@ -133,7 +133,7 @@ items:
       - name: Alarm focus benchmarks
         topicUid: alarm_focus_benchmarks
       - name: Automatic alarm grouping benchmarks
-        topicUid: automatic_incident_tracking_benchmarks
+        topicUid: Automatic_alarm_grouping_benchmarks
       - name: Automation benchmarks
         topicUid: automation_benchmarks
       - name: Behavioral anomaly detection benchmarks

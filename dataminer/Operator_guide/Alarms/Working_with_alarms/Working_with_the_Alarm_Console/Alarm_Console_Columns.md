@@ -16,7 +16,7 @@ For more information on changing the column layout, see [Changing the column lay
 
   - For updated alarm records, a second, thinner vertical line is added next to the first.
 
-- **Focus**: Available on systems using [STaaS](xref:STaaS) or a self-managed Cassandra-compatible database. Shown by default. This column displays a focus icon if an alarm is unexpected. See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus).
+- **Focus**: Available on systems using [STaaS](xref:STaaS) or a self-managed Cassandra-compatible database. Shown by default. This column displays a focus icon if an alarm is unexpected. See [Alarm focus](xref:Alarm_focus).
 
 - **Element \> Element name**: Shown by default. The name of the element.
 

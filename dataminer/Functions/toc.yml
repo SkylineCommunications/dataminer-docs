@@ -1,5 +1,5 @@
 items:
-  - name: DataMiner Assistant
+  - name: Assistant
     items:
       - name: DataMiner Assistant DxM
         topicUid: Assistant_DxM
@@ -16,6 +16,77 @@ items:
           topicUid: Assistant_Predefined_Questions
       - name: Natural language to GQI
         topicUid: NL2GQI
+  - name: Augmented Operations
+    topicUid: Overview_Augmented_Operations
+    items:
+      - name: Alarm focus
+        topicUid: Alarm_focus
+      - name: Automatic alarm grouping
+        topicUid: Automatic_alarm_grouping
+        items:
+          - name: Manually creating or updating alarm groups
+            topicUid: Manually_creating_or_updating_alarm_groups
+          - name: Customizing alarm grouping rules
+            topicUid: Customizing_alarm_grouping_rules
+      - name: Behavioral anomaly detection
+        topicUid: Behavioral_anomaly_detection
+      - name: Pattern matching
+        topicUid: Pattern_matching
+        items:
+          - name: Defining a pattern
+            topicUid: Defining_a_pattern
+          - name: Monitoring patterns
+            topicUid: Monitoring_of_trend_patterns
+          - name: Editing a pattern definition
+            topicUid: Editing_a_pattern_definition
+          - name: Deleting a pattern definition
+            topicUid: Deleting_a_pattern_definition
+          - name: Managing pattern definitions
+            topicUid: Managing_pattern_definitions
+      - name: Proactive cap detection
+        topicUid: Proactive_cap_detection
+      - name: Relation learning
+        topicUid: Relation_learning
+        items:
+          - name: Adding related parameters to a trend graph
+            topicUid: Adding_related_parameters_to_a_trend_graph
+          - name: Adding time-scoped related parameters to a trend graph
+            topicUid: Adding_time_scoped_related_parameters_to_a_trend_graph
+      - name: Relational anomaly detection
+        topicUid: Relational_anomaly_detection
+        items:
+          - name: Working with the RAD Manager
+            topicUid: RAD_manager
+          - name: Configuring RAD through the configuration XML file
+            topicUid: Relational_anomaly_detection_xml
+          - name: Working with the RAD API
+            topicUid: RAD_API
+      - name: Trend icons
+        topicUid: Trend_icons
+      - name: Trend prediction
+        topicUid: Trend_prediction
+      - name: Providing user feedback
+        topicUid: Providing_user_feedback
+      - name: Tutorials
+        items:
+          - name: Detecting anomalies with DataMiner
+            topicUid: Anomaly_Tutorial
+          - name: Improving anomaly detection using feedback
+            topicUid: Anomaly_Feedback_Tutorial
+          - name: Staying ahead of issues with proactive cap detection
+            topicUid: Proactive_Cap_Detection_Tutorial
+          - name: Gaining insights using time-scoped relation learning
+            topicUid: Time_Scoped_Relation_Learning_Tutorial
+          - name: Working with trend patterns in DataMiner Cube
+            topicUid: Pattern_Matching_Trend_Tutorial
+          - name: Creating an anomaly overview dashboard
+            topicUid: Creating_Anomaly_Overview_Dashboard
+          - name: Using trend patterns to detect backup failures
+            topicUid: trend_patterns_backup_failures
+          - name: Fine-tuning alarm grouping
+            topicUid: Incident_Tracking_Configuration_Tutorial
+          - name: Working with relational anomaly detection
+            topicUid: Relational_Anomaly_Detection_Tutorial
   - name: Automation
     items:
       - name: About DataMiner Automation

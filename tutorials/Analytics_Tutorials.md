@@ -5,7 +5,7 @@ keywords: augmented operations tutorials
 
 # DataMiner Analytics tutorials
 
-DataMiner Analytics, also known as [DataMiner Augmented Operations](xref:Stack_Augmented_Operations), leverages state-of-the-art big data and artificial intelligence technology for several features, including [behavioral anomaly detection](xref:Behavioral_anomaly_detection), [automatic alarm grouping](xref:Automatic_incident_tracking), and more.
+DataMiner Analytics, also known as [DataMiner Augmented Operations](xref:Stack_Augmented_Operations), leverages state-of-the-art big data and artificial intelligence technology for several features, including [behavioral anomaly detection](xref:Behavioral_anomaly_detection), [automatic alarm grouping](xref:Automatic_alarm_grouping), and more.
 
 ## Tutorials
 
