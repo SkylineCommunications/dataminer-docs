@@ -23,7 +23,7 @@ namespace Skyline.DataMiner.Analytics.Rad
         /// <summary>
         /// Gets or sets whether the subgroup behaves as an outlier compared to other subgroups that use the same shared model.
         /// This value is automatically determined by comparing the subgroup's ModelFit against the ModelFit values of the other subgroups.
-        /// Available from DataMiner 10.6.1/10.6.0 onwards.
+        /// Available from DataMiner 10.6.0/10.6.1 onwards.
         /// </summary>
         public bool IsOutlier { get; set; }
     }

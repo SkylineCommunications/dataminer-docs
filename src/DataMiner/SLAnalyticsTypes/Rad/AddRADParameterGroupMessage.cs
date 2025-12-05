@@ -61,7 +61,7 @@ namespace Skyline.DataMiner.Analytics.Rad
         /// Configuration for training the RAD model. Set to null to retain the existing model,
         /// or to use the default training configuration, which uses at most the last 60 days
         /// of available 5-minute average data if no model exists.
-        /// Available from DataMiner 10.6.1/10.6.0 onwards.
+        /// Available from DataMiner 10.6.0/10.6.1 onwards.
         /// </summary>
         public TrainingConfiguration TrainingConfiguration { get; set; } = null;
 
