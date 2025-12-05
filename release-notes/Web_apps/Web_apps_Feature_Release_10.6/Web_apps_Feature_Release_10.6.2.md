@@ -183,3 +183,18 @@ Parameter name: value
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 A number of issues have been fixed with regard to the State timeline component. These issues would mostly occur when processing state changes.
+
+#### Dashboards/Low-Code Apps - Timeline component: Problem when zooming or panning while linked components trigger viewport changes [ID 44280]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a Timeline component and a Time range component were linked in both directions, up to now, the Timeline component would not be able to properly perform viewport actions (e.g. zooming or panning).
+
+From now on, a Timeline component will no longer adapt its viewport when instructed to do so by incoming events (from e.g. a Time range component) while a user is zooming or panning.
+
+Also, the following actions will only affect the viewport after the user interaction has finished:
+
+- Selecting a range by dragging the right mouse button.
+- Selecting a segment on top of the timeline.
+
+Because these two actions will only affect the viewport after the user interaction has finished, the Timeline component will also receive an incoming viewport change request from the Time range component after the user interaction has finished. That way, the latter request will overrule the viewport changes that were made initially.
