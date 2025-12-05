@@ -443,7 +443,7 @@ When, in a correlation rule, a *New alarm* or an *Escalate event* action was con
 
 #### Element and parameter state timelines could show incorrect data [ID 43982]
 
-<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 [CU0] -->
 
 Up to now, in some cases, element and parameter state timelines displayed in client applications like DataMiner web apps or DataMiner Cube could show incorrect data.
 
