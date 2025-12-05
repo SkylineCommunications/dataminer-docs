@@ -20,8 +20,6 @@ For troubleshooting related to specific topics:
 
 - [Troubleshooting – dataminer.services](xref:Cloud_Connection_Issues)
 
-- [Troubleshooting – Dedicated clustered storage](xref:Troubleshooting_Dedicated_clustered_storage)
-
 - [Troubleshooting – NATS (BrokerGateway-managed NAS/NATS architecture)](xref:Investigating_NATS_Issues)
 
 - [Troubleshooting - Legacy NATS (SLNet-managed NAS/NATS architecture)](xref:Investigating_Legacy_NATS_Issues)
