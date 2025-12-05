@@ -1,5 +1,5 @@
 items:
-  - name: DataMiner Assistant
+  - name: Assistant
     items:
       - name: DataMiner Assistant DxM
         topicUid: Assistant_DxM
