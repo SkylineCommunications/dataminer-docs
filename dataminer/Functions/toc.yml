@@ -16,6 +16,8 @@ items:
           topicUid: Assistant_Predefined_Questions
       - name: Natural language to GQI
         topicUid: NL2GQI
+      - name: Document Intelligence
+        topicUid: docintel
   - name: Automation
     items:
       - name: About DataMiner Automation
