@@ -349,9 +349,6 @@ From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44040 + 44123-->, you can star
 
    After applying the preset template, you can further configure it using the Template Editor.
 
-> [!NOTE]
-> Currently, only a preset template for the table component is available, and it is supported only in the Low-Code Apps module. It can be applied to other components that support templates, but its appearance on other components may be inconsistent.
-
 ## Reusing a custom template
 
 ### [From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42226-->](#tab/tabid-1)
