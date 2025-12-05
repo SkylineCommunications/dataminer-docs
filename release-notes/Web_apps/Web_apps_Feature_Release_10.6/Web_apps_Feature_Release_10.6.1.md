@@ -14,6 +14,11 @@ This Feature Release of the DataMiner web applications contains the same new fea
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.1](xref:General_Feature_Release_10.6.1).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.6.1](xref:Cube_Feature_Release_10.6.1).
 
+## Highlights
+
+- [Dashboard reports can now be generated in PDF, HTML, and/or CSV format [ID 43888]](#dashboard-reports-can-now-be-generated-in-pdf-html-andor-csv-format-id-43888)
+- [Low-Code Apps - Templates: Preset templates are now available [ID 44040]](#low-code-apps---templates-preset-templates-are-now-available-id-44040)
+
 ## New features
 
 #### Dashboard reports can now be generated in PDF, HTML, and/or CSV format [ID 43888]
@@ -28,6 +33,17 @@ Also, the default file name has been changed from `Report.pdf` to `<dashboard na
 
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.6.0/10.6.1 or newer.
+
+#### Low-Code Apps - Templates: Preset templates are now available [ID 44040]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+From now on, preset templates are included in the overview of available templates, which you can access by clicking the *Browse templates* button while editing a component that supports templates.
+
+When you apply a preset template to a component, you can then configure it further using the Template Editor.
+
+> [!NOTE]
+> Currently, only a preset template for the table component is available, and it is supported only in the Low-Code Apps module. You can apply it to other components that support templates, but its appearance on those components may be inconsistent.
 
 #### Dashboards app: Private dashboards can now also be shared via cloud share [ID 44067]
 
@@ -123,17 +139,6 @@ In the Dashboards app and all low-code apps, the name *DataMiner Copilot* has no
 On *Form* components, datetime values will now be displayed in the same way as in *Table* components.
 
 The datetime format is based on the regional settings of the web browser. If a browser is set to e.g. "English (US)", datetime values will be displayed as "12/31/2029 8:00 PM".
-
-#### Low-Code Apps - Templates: Preset table component template [ID 44040]
-
-<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
-
-When, in a low-code app, you click the *Browse templates* button while editing a component that uses templates, a preset table component template will now appear in the list of templates.
-
-When you apply that preset template in a component that uses templates, you can then configure it further using the template editor.
-
-> [!NOTE]
-> This preset template will only be available in low-code apps, not in dashboards.
 
 #### Dashboards/Low-Code Apps: Enhanced visibility of query buttons in the edit pane [ID 44048]
 
