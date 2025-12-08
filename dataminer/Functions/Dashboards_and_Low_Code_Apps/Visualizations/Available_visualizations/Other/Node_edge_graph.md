@@ -39,11 +39,9 @@ You can interact with the node edge graph in several ways:
 
     - In the *Settings* pane, *Default mode* must be set to *Edit*.
 
-    - At least one *node move* action must be configured for the node query. See [Adding actions to a node edge graph](#adding-actions-to-a-node-edge-graph).
-
     - When *Advanced* > *Node positions* is set to *Layered* in the *Layout* pane, editor permissions are required if you want the new node positions to be stored<!--RN 44154-->. See [Configuring security for a dashboard](xref:Configuring_dashboard_security) and [Configuring app security](xref:LowCodeApps_security_config).
 
-      When *Note positions* is set to *Linked to data*, node positions are stored automatically, even when the user only has permission to view the dashboard or app.
+      When *Node positions* is set to *Linked to data*, node positions are stored automatically, even when the user only has permission to view the dashboard or app.
 
     > [!NOTE]
     > To ensure that node moves update the underlying data and do not remain purely visual, configure an event that triggers a *Launch a script* action. This Automation script should update the original data objects with the modified ones exposed by the event. For more information, see [Configuring node movement events](#configuring-node-movement-events).
