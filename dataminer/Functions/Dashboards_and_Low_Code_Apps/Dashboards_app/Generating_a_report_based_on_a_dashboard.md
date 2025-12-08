@@ -53,7 +53,7 @@ When you do so, you can click the *Configure* button to open a window where you 
 
   - *Dashboard width*: Allows you to select a custom width for the report.
 
-  - *Orientation*: Select whether you want the report to be generated in portrait or landscape mode respectively. Available from DataMiner web 10.5.0 [CU10]/10.6.1 onwards, with a minimum server version of 10.6.0/10.6.1<!--RN 43887 + 43888-->.
+  - *Orientation*: Select whether you want the report to be generated in portrait or landscape mode respectively. Available from DataMiner web 10.5.0 [CU10]/10.6.1 onwards<!--RN 43887 + 43888-->.
 
   - *Paper format*: Select a different format than the default A4 format for the report.
 
