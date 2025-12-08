@@ -45,7 +45,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 
 ### Recommended setup
 
-In this example of the recommended STaaS setup, the DataMiner System consists of three DataMiner Agents. Two of these DMAs are connected to the CloudGateway and are therefore connected to dataminer.services. If one of the DMAs loses its connection, the other one acts as a backup so that the DMS remains cloud-connected.
+The image below shows how communication within a DataMiner System could be set up, when you use DataMiner with STorage as a Service (STaaS). In this example, the DMS consists of three DataMiner Agents. Two of these DMAs are connected to the CloudGateway and are therefore connected to dataminer.services. If one of the DMAs loses its connection, the other one acts as a backup so that the DMS remains cloud-connected. The DMAs in the cluster communicate via gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards) over HTTPS port 443.
 
 ![DMS communication - STaaS](~/dataminer/images/Connection_Overview1.svg)
 
@@ -57,9 +57,7 @@ In the example below, CloudGateway is not installed on server 2. However, to use
 
 ### Other setups
 
-The diagrams below show how communication within a DMS could be set up, when you use DataMiner with dedicated clustered storage (not recommended). The light blue lines indicate the communication towards the databases (in this case an OpenSearch and Cassandra cluster of three nodes each).
-
-Using gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards):
+The diagram below shows how communication within a DataMiner System could be set up, when you use DataMiner with dedicated clustered storage (not recommended). The light blue lines indicate the communication towards the databases (in this case an OpenSearch and Cassandra cluster of three nodes each). The DMAs in the cluster communicate via gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards) over HTTPS port 443.
 
 ![DMS communication - Dedicated clustered storage - gRPC](~/dataminer/images/Connection_Overview2.svg)<br>*\*IP list: A list of IP addresses that must be allowed through the firewall (will be provided soon).*
 

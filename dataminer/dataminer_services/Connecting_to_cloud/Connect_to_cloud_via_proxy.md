@@ -10,6 +10,8 @@ From DataMiner CloudFeed 1.0.6, CloudGateway 2.7.0, and ArtifactDeployer 1.4.1 o
 
 The proxy server has to support both HTTP and WebSocket traffic.
 
+![Connecting to dataminer.services via proxy server](~/dataminer/images/ProxyServer.svg)
+
 To configure this:
 
 1. [Connect to dataminer.services](xref:Connect_to_dataminer_services).
