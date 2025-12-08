@@ -34,7 +34,7 @@ When you do so, you can click the *Configure* button to open a window where you 
 
       - The zip file contains a separate CSV file for each supported component.
 
-  - *Report title*: Specify the title for the report. Available from DataMiner web 10.5.0 [CU10]/10.6.1 onwards, with a minimum server version of 10.6.0/10.6.1<!--RN 43887 + 43888-->.
+  - *Report title*: Specify the title for the report. Available from DataMiner web 10.5.0 [CU10]/10.6.1 onwards<!--RN 43887 + 43888-->.
 
   - *Add DMS info*: Select this option to include your company details in the report.
 
