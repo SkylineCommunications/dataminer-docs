@@ -10,19 +10,19 @@ When you do so, you can click the *Configure* button to open a window where you 
 
 - At the top of the window, the link to the dashboard is displayed, with the following icons next to it:
 
-  - ![Edit URL](~/dataminer/images/Report_EditURL.png): Available from DataMiner web 10.5.0 [CU10]/10.6.1 onwards, with a minimum server version of 10.6.0/10.6.1<!--RN 43887 + 43888-->. Opens a pop-up allowing you to view and modify the dashboard URL configuration in JSON format.
+  - ![Edit URL](~/dataminer/images/Report_EditURL.png): Available from DataMiner 10.6.0/10.6.1 onwards<!--RN 43887 + 43888-->. Opens a pop-up allowing you to view and modify the dashboard URL configuration in JSON format.
 
-  - ![Reload dashboard](~/dataminer/images/Report_ReloadDashboard.png): Available from DataMiner web 10.5.0 [CU10]/10.6.1 onwards, with a minimum server version of 10.6.0/10.6.1<!--RN 43887 + 43888-->. Reloads the dashboard.
+  - ![Reload dashboard](~/dataminer/images/Report_ReloadDashboard.png): Available from DataMiner 10.6.0/10.6.1 onwards<!--RN 43887 + 43888-->. Reloads the dashboard.
 
   - ![Copy URL](~/dataminer/images/Report_Copy.png): Copies the dashboard URL to your clipboard.
 
   - ![Browse to URL](~/dataminer/images/Report_BrowseToURL.png): Opens the dashboard URL in your browser.
 
-- In the pane to the right, you can configure general settings for the report. Prior to DataMiner 10.5.0 [CU10]/10.6.1<!--RN 43887 + 43888-->, these settings are available via *Options*, at the top of the window.
+- In the pane to the right, you can configure general settings for the report. Prior to DataMiner web 10.5.0 [CU10]/10.6.1<!--RN 43887 + 43888-->, these settings are available via *Options*, at the top of the window.
 
-  - *Data*: From DataMiner web 10.5.0 [CU10]/10.6.1 onwards, with a minimum server version of 10.6.0/10.6.1<!--RN 43887 + 43888-->, you can choose the report format. In earlier versions, the report is always generated as a PDF. Depending on the components in the dashboard, the following formats may be available:
+  - *Data*: From DataMiner 10.6.0/10.6.1 onwards<!--RN 43887 + 43888-->, this section allows you to select the report format. Depending on the components in the dashboard, the following formats may be available:
 
-    - **PDF**: `<dashboard name>.pdf` will be included as an attachment.
+    - **PDF**: `<dashboard name>.pdf` will be included as an attachment. This is the default format.
 
     - **Non-interactive HTML**: `<dashboard name>.mhtml` will be included as an attachment.
 
@@ -43,7 +43,7 @@ When you do so, you can click the *Configure* button to open a window where you 
     > [!NOTE]
     > To check your company details and logo in DataMiner Cube, go to System Center \> *Agents* > *System*.
 
-  - *Include CSV*: Available up to DataMiner web 10.5.0 [CU9]/10.5.12. Includes a CSV file for each component of the dashboard. Only supported for specific components, such as the line graph, pivot table, and table component.
+  - *Include CSV*: Available prior to DataMiner 10.6.0/10.6.1. Includes a CSV file for each component of the dashboard. Only supported for specific components, such as the line graph, pivot table, and table component.
 
   - *Page numbers*: Select this option to display page numbers in the report. Available from DataMiner web 10.5.0 [CU10]/10.6.1 onwards<!--RN 43887 + 43888-->.
 

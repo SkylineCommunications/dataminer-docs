@@ -5,7 +5,7 @@ uid: Sharing_report_from_Dashboards_app
 # Sharing a dashboard via an email report from the Dashboards app
 
 > [!NOTE]
-> From DataMiner 10.2.2/10.2.0 onwards, you can generate a PDF report in the Dashboards app if the *ReportsAndDashboardsExport* [soft-launch option](xref:SoftLaunchOptions) is activated. From DataMiner 10.2.12/10.3.0 onwards, this feature is fully available.
+> From DataMiner 10.2.2/10.2.0 onwards, you can generate a report in the Dashboards app if the *ReportsAndDashboardsExport* [soft-launch option](xref:SoftLaunchOptions) is activated. From DataMiner 10.2.12/10.3.0 onwards, this feature is fully available.
 
 To share a dashboard as an email report in the Dashboards app:
 
@@ -28,7 +28,7 @@ To share a dashboard as an email report in the Dashboards app:
 
 1. Optionally, in the *Message* box, add the message body for the email.
 
-1. From DataMiner web 10.5.0 [CU10]/10.6.1 onwards<!--RN 43887 + 43888-->, with a minimum server version of 10.6.0/10.6.1, you can choose the report format. In earlier versions, the report is always generated as a PDF. Depending on the components in the dashboard, the following formats may be available:
+1. From DataMiner 10.6.0/10.6.1 onwards<!--RN 43887 + 43888-->, you can select one of the following formats for the report, depending on the components in the dashboard:
 
    - **PDF**: `<dashboard name>.pdf` will be included as an attachment.
 
@@ -42,7 +42,7 @@ To share a dashboard as an email report in the Dashboards app:
 
      - The zip file contains a separate CSV file for each supported component.
 
-     - Prior to DataMiner 10.5.0 [CU10]/10.6.1, this functionality appears as a separate *Include CSV* option.
+   In earlier DataMiner versions, reports are generated in PDF format by default, but if the dashboard contains a line & area chart, pivot table, or table component, you can select the **Include CSV** option to include a CSV file for each supported component.
 
 1. Optionally, specify the following options:
 
