@@ -39,7 +39,7 @@ To add a new scheduled task without a Scheduler template:
 
    > [!NOTE]
    >
-   > - To attach a report to an email message as a separate PDF, HTML, or CSV, select both *Plain text* and *Include report or dashboard*.
+   > - To attach a report to an email message as a separate PDF, select both *Plain text* and *Include report or dashboard*.
    > - If you want to specify multiple parameters for one element, service, or protocol version in a report or dashboard, assign them all within a single line.
    > - For the *Email* action (if you add a dashboard or (legacy) report) or the *Upload report* action, an icon in front of each item in the list shows whether the item is a dashboard or a report. When you have selected a dashboard, you can click the *Configure* button to further configure the report based on the dashboard. See [Generating a report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
    > - If you edit an existing *Email* action that uses a dashboard that no longer exists, from DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41364-->, the dashboard will be displayed in red.
