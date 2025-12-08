@@ -358,7 +358,7 @@ This means, that any DataMiner Agent on which you want to perform a web-only upg
 
 #### Relational anomaly detection: GetRADSubgroupFitScoresResponseMessage will now return additional information regarding subgroups of a shared model group [ID 44108]
 
-<!-- MR 10.7.0 - FR 10.6.1 -->
+<!-- MR 10.6.0 - FR 10.6.1 -->
 
 The `GetRADSubgroupFitScoresResponseMessage` will now return additional information regarding subgroups of a shared model group.
 
