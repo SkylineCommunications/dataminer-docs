@@ -2,10 +2,7 @@
 uid: IDP_1.6.0
 ---
 
-# IDP 1.6.0 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# IDP 1.6.0
 
 > [!NOTE]
 > This IDP version requires that DataMiner 10.4.0 [CU0] or higher is installed.
