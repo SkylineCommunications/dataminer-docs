@@ -73,7 +73,7 @@ The following features currently have the "End of Life" status. They are no long
 
 | Item | Details |
 |------|---------|
-| Annotations | From DataMiner 10.3.x onwards, Annotations should no longer be used. From DataMiner 10.6.x onwards, this feature is no longer available. |
+| Annotations | Annotations should no longer be used. From DataMiner 10.6.x onwards, this feature is no longer available. |
 | Child bookings | End of Life as of DataMiner 10.5.x. Child bookings have been retired, as the same functionality is supported with contributing bookings |
 | Jobs app | End of Life as of DataMiner 10.5.x. |
 | Legacy Correlation Engine | End of Life as of DataMiner 10.5.x. This only applies to the legacy System Display Correlation engine. |
@@ -127,8 +127,8 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 
 ### DataMiner 10.3
 
-- **End of Support – Annotations**: Should no longer be used from this version onwards.
 - **End of Support – Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service**: Support for this feature ended with DataMiner 10.3.0 [CU8]/10.3.11. We recommend switching to [Storage as a Service](xref:STaaS). Note that, though not recommended, using a self-managed OpenSearch database remains supported.
+- **End of Support – Annotations**: Should no longer be used from this version onwards.
 - **End of Support – DataMiner Cube running in Internet Explorer/Edge in IE compatibility mode (XBAP)**
 - **End of Support – MSSQL as local database**: We recommend switching to [Storage as a Service](xref:STaaS).
 
