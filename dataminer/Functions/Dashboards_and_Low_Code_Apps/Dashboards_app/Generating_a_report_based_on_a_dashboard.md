@@ -45,7 +45,7 @@ When you do so, you can click the *Configure* button to open a window where you 
 
   - *Include CSV*: Available up to DataMiner web 10.5.0 [CU9]/10.5.12. Includes a CSV file for each component of the dashboard. Only supported for specific components, such as the line graph, pivot table, and table component.
 
-  - *Page numbers*: Select this option to display page numbers in the report. Available from DataMiner web 10.5.0 [CU10]/10.6.1 onwards, with a minimum server version of 10.6.0/10.6.1<!--RN 43887 + 43888-->.
+  - *Page numbers*: Select this option to display page numbers in the report. Available from DataMiner web 10.5.0 [CU10]/10.6.1 onwards<!--RN 43887 + 43888-->.
 
   - *Include controls*: Select this option to include certain components in the report.
 
