@@ -389,7 +389,7 @@ items:
               - name: From DataMiner Cube
                 topicUid: Generating_a_report_based_on_a_dashboard_Cube
               - name: From the Dashboards app
-                topicUid: Sharing_PDF_report_from_Dashboards_app
+                topicUid: Sharing_report_from_Dashboards_app
           - name: Customizing the Dashboards app
             topicUid: Customizing_the_Dashboards_app
           - name: Dashboard Gateway installation
