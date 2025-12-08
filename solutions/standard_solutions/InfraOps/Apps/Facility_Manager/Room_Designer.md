@@ -4,11 +4,15 @@ uid: Room_Designer
 
 # Room Designer
 
-On this page, the user can accurately place the racks in their rooms, granting the user a valuable visual aid:
+This page allows you to design a room in detail, including the placement of different racks and zones. It will provide a valuable visual aid when designing rooms.
 
 ![Room Designer Page](~/solutions/images/Facility_Manager_Room_Designer_Page.png)
 
-The maximum number of squares that the component allows is 4000, so the size of each tile will adapt based on the size of the room. On the top right of the page, the Help button displays a pop-up with the available commands to interact with the Room Designer component.
+The designer consists of a grid of at most 4000 tiles. The size of each tile will be adjusted based on the size of the room.
+
+You can adjust the way the grid is displayed by pressing specific keys on the keyboard. Click the *Help* button in the top-right corner of the page to view the available keyboard commands.
+
+<!-- The text below is still unreviewed -->
 
 To place a rack in a room, the user first selects a Room, then presses on the top right the Placement Operation button. This will open a side panel that allows the user to place their Racks, Zones and Rows:
 

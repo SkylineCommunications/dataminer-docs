@@ -26,13 +26,13 @@ Once you have configured your facilities and rooms in the Facility Manager app, 
 
    This will add the rack to the racks overview table.
 
-1. To further configure the rack, click the details button (ⓘ) in the table.
+1. To further configure the rack, click the details button (ⓘ) for the rack in the table.
 
-   This will open a pane where you can configure additional details:
+   This will open the *Rack details* pane, where you can click the pencil icon in any of the available sections to configure additional details:
 
-   - To add a description, click the pencil in the *Rack Info* section.
+   - The **description**.
 
-   - To specify the cooling flow, click the pencil in the *Rack Info* section, and select the flow:
+   - The **cooling flow**:
 
      - *Front to Rear*: Air flows from the front of the rack to the rear, which is the standard configuration for most server and network equipment.
      - *Rear to Front*: Air flows from the rear of the rack to the front, which is less common but used in specific scenarios.
@@ -40,10 +40,15 @@ Once you have configured your facilities and rooms in the Facility Manager app, 
      - *Top to Bottom*: Air flows from the top of the rack to the bottom, used in some specialized setups.
      - *Bottom to Top*: Air flows from the bottom of the rack to the top, often used in conjunction with raised floor cooling systems.
 
-   - To specify the height, width, and depth (in cm), click the pencil button in the *Rack Measurements* section. This will be reflected in the Room Designer and Room Viewer.<!-- TBD -->
+   - The **height, width, and depth** (in cm). This will be reflected in the Room Designer and Room Viewer.<!-- TBD -->
 
-<!-- To add: Link Image & Gallery -->
+   At the top of the *Rack details* pane, the following buttons are also available:
 
-<!-- Not yet reviewed: -->
+   - *Rack View*: Shows an overview of the different slots in the rack.
+   - *Delete Rack*: Removes the rack from the system.
+   - *Gallery*: shows the images linked to the rack.
+   - *Link Image*: Allows you to link an image to the rack. To upload images, use the [Web File Manager app](xref:Web_File_Manager), which you can access directly via a button in the *Link image* pane.
 
-Rack must be set to Active to allow asset assignment.
+1. When the rack has been fully configured, at the bottom of the *Rack details* pane, click **Activate**.
+
+   Only when a rack has been set to active, will it be possible to assign assets to it with the [Asset Manager](xref:Asset_Manager) app.
