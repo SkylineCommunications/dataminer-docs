@@ -13,10 +13,7 @@ Example of such requests could be:
 - Processing incident information from unstructured text
 - Extracting parameters from a pdf file
 
-> [!TIP]
-> Eager to see Document Intelligence in action? The [insert final name of Jonas' package] package offers a ready-to-use Satellite Parameter Extractor app. This app showcases how to extract parameters from a pdf file as a fully automated step in the context of a satellite reservations pipeline. Go to the [Catalog app](https://catalog.dataminer.services/) to deploy the package and start diving into this feature!
-
-DataMiner Assistant uses a combination of OCR (Optical Character Recognition) & LLMs (Large Lanaguage Models) to perform the desired operations on a file. When a file is uploaded for analysis, the DxM will first process the document using OCR, which provides a plain text representation of the file content. As a second step, this information is packed together with the provided user instructions (prompt) and sent to an LLM for further interpretation. This two-step approach ensures maximum flexibility and reliability.
+DataMiner Assistant uses a combination of OCR (Optical Character Recognition) & LLMs (Large Lanaguage Models) to perform the desired operations on the files. When a file is uploaded for analysis, the DxM will first process the document using OCR, which provides a plain text representation of the file content. As a second step, this information is packed together with the provided user instructions (prompt) and sent to an LLM for further interpretation. This two-step approach ensures maximum flexibility and reliability.
 
 > [!TIP]
 > The quality of the generated response is tightly bound to the quality of the provided inputs. It is strongly advised to use well structured files containing as little unrelevant information as possible. Instructions on how to interpret the file content should also be carefully selected. Check section [User instructions](xref:docintel#user-instructions) for tips on how to structure prompts optimally.
@@ -57,3 +54,35 @@ The Document Intelligence features relies on external AI services, both for OCR 
 ## Pricing
 
 Document Intelligence consumes **DataMiner credits** proportionally to the amount of data analyzed. The DataMiner credits will be deducted monthly based on metered usage. More information about the pricing of DataMiner usage-based services can be found in the [DataMiner Pricing Overview](xref:Pricing_Usage_based_service#usage-terms)
+
+## DataMiner Automation integration
+
+From DataMiner 10.6.0 onwards, it is be possible to seamlessly integrate Document Intelligence into [DataMiner Automation](xref:automation). Hereafter a code snippet showing how to use the built-in API call.
+
+```csharp
+using Skyline.DataMiner.Net.Apps.DocumentIntelligence;
+using Skyline.DataMiner.Net.Apps.DocumentIntelligence.Objects;
+
+public void Run(IEngine engine)
+{   
+    // Read in file content
+    var filepath = "C://myFolder//myFile.pdf";
+    var fileBytes = File.ReadAllBytes(filepath);
+    // Write instructions
+    var instructions = "Extract the start and end time of my streaming event";
+    // Create Document Intelligence helper
+    var docIntelHelper = new DocumentIntelligenceHelper(engine.SendSLNetMessages);
+    // Request Document Intelligence analysis
+    var analysisResult = docIntelHelper.AnalyzeDocuments(instructions, new List<Document>() 
+    { 
+        new Document() 
+        { 
+            Name = "myFile.pdf", 
+            Content = fileBytes 
+        }
+    });
+}
+```
+
+> [!TIP]
+> Eager to see Document Intelligence in action? The [insert final name of Jonas' package] package offers a ready-to-use Satellite Parameter Extractor app. This app showcases how to extract parameters from a pdf file as a fully automated step in the context of a satellite reservations pipeline. It offers real-life examples of input files, custom istructions and integration into DataMiner Automation. Go to the [Catalog app](https://catalog.dataminer.services/) to deploy the package and start diving into this feature!
