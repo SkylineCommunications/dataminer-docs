@@ -53,17 +53,15 @@ In the example below, CloudGateway is not installed on server 2. However, to use
 
 ![Multiple servers - CloudGateway](~/dataminer/images/CloudGatewayServers.svg)
 
+*\*IP list: A list of IP addresses that must be allowed through the firewall. For STaaS, this refers to the [Microsoft Azure IP ranges](https://www.microsoft.com/en-us/download/details.aspx?id=56519). For dataminer.services, the list of IP addresses will be provided in the documentation soon.*
+
 ### Other setups
 
 The diagrams below show how communication within a DMS could be set up, when you use DataMiner with dedicated clustered storage (not recommended). The light blue lines indicate the communication towards the databases (in this case an OpenSearch and Cassandra cluster of three nodes each).
 
 Using gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards):
 
-![DMS communication - Dedicated clustered storage - gRPC](~/dataminer/images/Connection_Overview2.svg)
-
-Using .NET Remoting:
-
-![DMS communication - Dedicated clustered storage - .NET Remoting](~/dataminer/images/dms_ip_communication_with_DB.png)
+![DMS communication - Dedicated clustered storage - gRPC](~/dataminer/images/Connection_Overview2.svg)<br>*\*IP list: A list of IP addresses that must be allowed through the firewall (will be provided soon).*
 
 > [!TIP]
 > See also:
