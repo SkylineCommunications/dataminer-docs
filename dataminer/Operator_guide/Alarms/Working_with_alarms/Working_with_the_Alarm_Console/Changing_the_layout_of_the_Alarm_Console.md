@@ -49,7 +49,7 @@ In the Alarm Console, you can add and remove tabs as you see fit. However, this 
 
    - **Show current** > **Information events**: Displays the *Information events* tab.
 
-   - **Show current** > **Suggestion events**: Displays the *Suggestion events* tab. Suggestion events are AI-generated notifications. See [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console).
+   - **Show current** > **Suggestion events**: Displays a list of [suggestion events](xref:Alarm_types#suggestion-events).
 
      > [!NOTE]
      > This tab is only available in DataMiner Systems using [Storage as a Service](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database](xref:Supported_system_data_storage_architectures). In addition, the necessary analytics features need to be enabled via *System Center* > *System settings* > *Analytics Config*:

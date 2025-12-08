@@ -20,7 +20,7 @@ To do so:
    To remove a pattern, select it in the list and click the *Delete* button.
 
 > [!TIP]
-> See also: [Working with pattern matching](xref:Working_with_pattern_matching)
+> See also: [Pattern matching](xref:Pattern_matching)
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

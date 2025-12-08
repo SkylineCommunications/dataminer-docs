@@ -12,7 +12,7 @@ To learn how to create a trend template, you can follow the steps below or watch
   </video>
 </div>
 
-*Watch first: [Creating a DataMiner element](xref:Adding_elements) and [Creating an alarm template](xref:Creating_an_alarm_template)*<br>*See also: [Working with trend icons](xref:Working_with_trend_icons)*
+*Watch first: [Creating a DataMiner element](xref:Adding_elements) and [Creating an alarm template](xref:Creating_an_alarm_template)*<br>*See also: [Trend icons](xref:Trend_icons)*
 
 ## Creating a trend template
 

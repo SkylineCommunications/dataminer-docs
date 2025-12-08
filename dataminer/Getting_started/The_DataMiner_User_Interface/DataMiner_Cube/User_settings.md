@@ -377,7 +377,7 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 
 - **Percentile to calculate**: Prior to DataMiner 10.3.0/10.2.4, you first need to select *Show percentile* to see this setting. In more recent DataMiner versions, you can instead select *Percentile to calculate* directly to show a percentile line on trend graphs. You can then configure which percentile is displayed. By default, this is set to *95*.
 
-- **Trend prediction range**: Select either *Manual*, if you want to manually change the [trend prediction](xref:Working_with_trend_predictions) range, or *Auto*, if you want DataMiner to select the range depending on the zoom level.
+- **Trend prediction range**: Select either *Manual*, if you want to manually change the [trend prediction](xref:Trend_prediction) range, or *Auto*, if you want DataMiner to select the range depending on the zoom level.
 
 - **Left mouse button action on graph**: Select the action executed by dragging the left mouse button on a trend graph:
 
