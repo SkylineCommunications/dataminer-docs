@@ -1,6 +1,10 @@
 items:
   - name: IDP 1.6.0
-    topicUid: IDP_1.6.0
+    items:
+      - name: New features and changes
+        topicUid: IDP_1.6.0
+      - name: Addendum CU1
+        topicUid: IDP_1.6.0_CU1
   - name: IDP 1.5.3
     topicUid: IDP_1.5.3
   - name: IDP 1.5.2
