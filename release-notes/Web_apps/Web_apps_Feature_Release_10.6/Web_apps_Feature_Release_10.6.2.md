@@ -73,6 +73,34 @@ If you choose *Custom*:
 
 The above-mentioned label configuration can be set per node query, per edge query, and can also be overridden by means of node and edge overrides.
 
+#### Dashboards app: Redesigned sidebar [ID 44222]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+The sidebar of the Dashboards app has been redesigned.
+
+When you click the ... button at the top of the sidebar, or when you right-click the background of the sidebar, a menu with the following commands will open:
+
+- Create > Dashboard
+- Create > Folder
+- Import
+- Catalog
+- Settings
+
+When you right-click a folder, or click the ... button of a folder, a menu with the following commands will open:
+
+- Create > Dashboard
+- Create > Folder
+- Settings
+- Delete
+
+When you right-click a dashboard, or click the ... button of a dashboard, a menu with the following commands will open:
+
+- Open in a new tab
+- Duplicate
+- Settings
+- Delete
+
 #### GQI extensions: Filtering enhancements [ID 44230]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
