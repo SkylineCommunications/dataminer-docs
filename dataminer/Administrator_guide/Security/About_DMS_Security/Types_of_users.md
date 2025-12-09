@@ -49,7 +49,7 @@ This type of user will mostly be used in situations where the DMAs have been add
 
 ## Cloud users
 
-These users are automatically added when content is shared via dataminer.services. They only have the permissions needed to view the shared content. They are entirely managed by DataMiner, which means that you cannot modify them on the *Users/Groups* page. To remove these users, you must instead delete the shared dashboard itself (see [Managing or deleting a cloud share](xref:Sharing_a_dashboard#managing-or-deleting-a-cloud-share)).
+These users are automatically added when content is shared via dataminer.services. They only have the permissions needed to view the shared content. They are entirely managed by DataMiner, which means that you cannot modify them on the *Users/Groups* page. To remove these users, you must instead delete the cloud share for which the users were created (see [Managing or deleting a cloud share](xref:Sharing_a_dashboard#managing-or-deleting-a-cloud-share)).
 
 ![dataminer.services users](~/dataminer/images/Security_cloud_users.png)<br>
 *dataminer.services users in DataMiner 10.3.6*
