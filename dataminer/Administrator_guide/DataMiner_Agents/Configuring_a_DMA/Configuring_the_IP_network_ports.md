@@ -45,7 +45,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 
 ### Recommended setup
 
-The image below shows how communication within a DataMiner System should be set up, when you use DataMiner with STorage as a Service (STaaS). In this example, the DMS consists of three DataMiner Agents. Two of these DMAs are connected to the CloudGateway and are therefore connected to dataminer.services. If one of the DMAs loses its connection, the other one acts as a backup so that the DMS remains cloud-connected. The DMAs in the cluster communicate via gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards) over HTTPS port 443.
+The image below shows how communication within a DataMiner System should be set up, when you use DataMiner with STorage as a Service (STaaS). The DMAs in the cluster communicate via gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards) over HTTPS port 443.
 
 ![DMS communication - STaaS](~/dataminer/images/Connection_Overview1.svg)
 
