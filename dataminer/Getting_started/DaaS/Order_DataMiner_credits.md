@@ -57,19 +57,11 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 
 1. Once your subscription has been activated, fill in your Organization ID.
 
-   > [!NOTE]
-   > You can find your organization ID on [dataminer.services](https://dataminer.services):
-   >
-   > 1. [Log in using your dataminer.services account](xref:Logging_on_to_dataminer_services).
-   > 1. Select the organization you want to transfer DataMiner credits to.
-   > 1. Go to the webpage URL and copy the last part of the URL after the final slash.
-   >
-   > ![How to retrieve organization ID](~/dataminer/images/Retrieve_Organization_ID.gif)
+   > [!TIP]
+   > See also: [How can I find the ID of my organization on dataminer.services?](xref:FAQ_dataminer_services#how-can-i-find-the-id-of-my-organization-on-dataminerservices)
 
 1. Use the slider to indicate how many credits you wish to purchase for the organization.
 
    ![Marketplace credits slider](~/dataminer/images/Marketplace_Credits_Slider.png)
 
 1. Click *Purchase credits* and click *Confirm* to confirm your purchase.
-
-   ![Marketplace credits confirm purchase](~/dataminer/images/Marketplace_Credits_Confirm.png)
