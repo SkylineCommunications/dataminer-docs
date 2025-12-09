@@ -76,6 +76,17 @@ Also, when the Cube login window allows you to change the hostname, and you ente
 
 \**The following protocol types are supported: HTTP, HTTPS, FTP, FILE, and CUBE.*
 
+#### System Center: Clearer error messages when adding a DMA to a DMS fails [ID 44247]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+
+From now on, when you try to add a DataMiner Agent to a DataMiner System, an error message will appear in the following cases:
+
+- The DataMiner Agent is cloud-connected, but the DataMiner System is not.
+- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
+
+If the DataMiner System is a STaaS system, an error message will also appear when the DataMiner Agent is not cloud-connected.
+
 ### Fixes
 
 #### Alarm Console: Problem with shape data fields of type 'AlarmFilter' [ID 44081]

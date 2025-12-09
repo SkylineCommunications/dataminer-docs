@@ -81,7 +81,7 @@ See also: [Alarm templates: New flatline detection modes in Augmented Operations
 
 #### dataminer.services: Restrictions when adding a DMA to a DMS [ID 44171]
 
-<!-- MR 10.7.0 - FR 10.6.1 -->
+<!-- MR 10.7.0 - FR 10.6.2 -->
 
 From now on, when you try to add a DataMiner Agent to a DataMiner System, the operation will fail in the following cases:
 
