@@ -173,7 +173,5 @@ The following prerequisite checks are currently available:
 
 - [Validate Connectors](xref:BPA_Validate_Connectors): Scans the DataMiner System for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. From DataMiner 10.3.4/10.4.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
-- [Firewall Configuration](xref:BPA_Firewall_Configuration): Checks the firewall configuration. From DataMiner 10.3.7/10.4.0 onwards, this prerequisite runs automatically when you upgrade, to ensure TCP port 5100 is correctly configured to allow inbound communication. This port is required for communication to the cloud via the endpoint hosted in DataMiner CloudGateway.
-
 > [!NOTE]
 > Though this is not recommended, you can bypass these checks by manually removing the *Prerequisites* folder from *Update.zip* in the upgrade package. However, you should only do so if there is a clear reason to assume that the prerequisites do not work because of a bug in the software and they are consequently failing without a proper reason. If you bypass these checks in any other circumstances, and this results in a DataMiner issue, this is **not covered by support**.
