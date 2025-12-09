@@ -49,7 +49,7 @@ The image below shows how communication within a DataMiner System should be set 
 
 ![DMS communication - STaaS](~/dataminer/images/Connection_Overview1.svg)
 
-In the example below, CloudGateway is not installed on server 2. However, to use the ArtifactDeployer DxM, server 2 connects to the CloudGateway on server 1 over port 5100.
+If a server running a DxM does not have CloudGateway installed, any outgoing communication to dataminer.services will go through a CloudGateway available elsewhere in the cluster. In the example below, this means server 2 uses the CloudGateway on server 1 over port 5100.
 
 ![Multiple servers - CloudGateway](~/dataminer/images/CloudGatewayServers.svg)
 
