@@ -7,6 +7,10 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+#### 9 December 2025 - Enhancement - DataAPI 1.4.2 - Improved handling of files in use during upgrades [ID 44231]
+
+The Windows Restart Manager is now enabled during installations, preventing unnecessary delays caused by files still in use by the DataAPI instance that is being upgraded. This change improves the speed and reliability of the upgrade process.
+
 ### 31 October 2025 - Fix - DataAPI 1.4.1 - Issue with deadlock and memory leak in node identification mechanism [ID 44026]
 
 While processing incoming NATS messages, DataAPI could encounter a deadlock situation. This caused message accumulation, eventually leading to a memory leak.
