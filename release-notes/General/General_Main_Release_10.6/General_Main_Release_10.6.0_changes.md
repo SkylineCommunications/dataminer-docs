@@ -787,3 +787,9 @@ Also, the `BlockUntilAllInFlightEventsWereHandled` method will no longer be call
 <!-- MR 10.6.0 - FR 10.5.12 [CU0] -->
 
 When an element was swarmed to the DataMiner Agent on which it was already located, up to now, a server-side deadlock would occur when that element had an active filtered table subscription at the time of the swarming operation.
+
+#### Removing an invalid or unreachable IP address could cause the active DMA to leave the DMS [ID 44253]
+
+<!-- MR 10.6.0 - FR 10.5.12 [CU1] -->
+
+When you removed a rogue or unreachable IP address on the *Agents* page in *System Center*, up to now, the DataMiner Agent you were connected to could unexpectedly switch to the *Leaving cluster* state and leave the cluster.
