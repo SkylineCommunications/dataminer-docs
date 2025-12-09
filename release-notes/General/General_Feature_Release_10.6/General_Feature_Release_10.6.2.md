@@ -189,6 +189,14 @@ Also, on system using STaaS, up to now, when importing a DELT package containing
 
 When a parameter within a RAD parameter group had not had a value for more than 5 days, up to now, SLAnalytics would incorrectly lose track of the entire parameter group. As a result, no anomalies would get detected for that group, and create, update and delete actions performed on that group would fail.
 
+#### Problem when retrieving historic alarms with a filter on the value of a discrete parameter [ID 44221]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+When historic alarms were retrieved with a filter on the value of a discrete parameter, up to now, no alarms would be returned.
+
+This was due to the parameter value being incorrectly translated to a numeric value.
+
 #### No retries would incorrectly be attempted when retrieving DMS configuration info failed [ID 44240]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
