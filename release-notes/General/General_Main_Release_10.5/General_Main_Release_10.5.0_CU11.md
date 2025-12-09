@@ -24,7 +24,8 @@ During a DataMiner upgrade, from now on, a new upgrade action will register all 
 > [!NOTE]
 >
 > - Each time a crash dump is created for a particular process, any existing crash dumps for the same process will be automatically deleted. Per DataMiner process, only the most recent crash dump will be kept.
-> - During a DataMiner upgrade, the entire `C:\Skyline DataMiner\Logging\CrashDump\wer\` folder will be cleared.
+> - Although the entire `C:\Skyline DataMiner\Logging\CrashDump\wer\` folder will be cleared during a DataMiner upgrade, DataMiner will not manage it. Removing crash dumps from this folder will not require a DataMiner restart.
+> - Currently, WER crash dumps are not included in SLLogCollector packages, and CDMR is not aware of them.
 
 #### Security enhancements [ID 43789]
 
