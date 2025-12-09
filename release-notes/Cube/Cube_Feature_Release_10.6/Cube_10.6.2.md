@@ -66,6 +66,16 @@ In the Alarm Console, up to now, the advanced search options would incorrectly b
 
 From now on, the advanced search options will only be visible on systems that include an Elasticsearch or OpenSearch database.
 
+#### DataMiner Cube desktop app: Hostname, protocol type, and port will now be extracted from the DataMiner Agent URL [ID 44203]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+
+When, while adding a new tile/cluster to the start window of the DataMiner Cube desktop app, you paste a URL of a DataMiner Agent, from now on, the hostname, the protocol type\*, and the port will automatically be extracted from that URL.
+
+Also, when the Cube login window allows you to change the hostname, and you enter or paste a URL in the hostname box, the hostname will now be automatically extracted from that URL.
+
+\**The following protocol types are supported: HTTP, HTTPS, FTP, FILE, and CUBE.*
+
 ### Fixes
 
 #### Alarm Console: Problem with shape data fields of type 'AlarmFilter' [ID 44081]
