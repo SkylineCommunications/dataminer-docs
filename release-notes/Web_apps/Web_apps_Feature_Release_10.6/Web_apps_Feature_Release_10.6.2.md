@@ -164,6 +164,19 @@ Additionally, the following new types have been defined:
   - MatchesRegex
   - None
 
+#### Automation scripts: Updated user permissions [ID 44232]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Up to now, the *Interactive Automation script* component would only visualize an Automation script when the user had the *Modules > Automation > UI available* permission. From now on, the *Interactive Automation script* component will be able to visualize an Automation script when the user has the *Modules > Automation > Execute* permission.
+
+With regard to the Web Services API, up to now, users needed to have both the *Modules > Automation > UI available* permission and the *Modules > Automation > Execute* permission to be allowed to use the `GetAutomationScript`, `ExecuteAutomationScript`, or `ExecuteAutomationScriptWithOutput` methods.
+
+From now on, they will need the following permissions:
+
+- For the `GetAutomationScript` method: *Modules > Automation > UI available* permission and/or *Modules > Automation > Execute* permission
+- For the `ExecuteAutomationScript` and `ExecuteAutomationScriptWithOutput` methods: *Modules > Automation > Execute* permission
+
 #### Enhanced error logging when deleting DOM instances fails [ID 44263]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
