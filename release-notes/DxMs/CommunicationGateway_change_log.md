@@ -4,6 +4,16 @@ uid: CommunicationGateway_change_log
 
 # CommunicationGateway change log
 
+#### 9 December 2025 - Fix - CommunicationGateway 5.3.3 - Deadlock during stream cleanup caused thread leakage [ID 44241]
+
+A deadlock could occur when a stream was being cleaned up, causing the operation to hang and leaving background threads unreleased. Over time, these leaked threads could increase resource usage and affect system stability.
+
+The cleanup process has been adjusted to prevent this deadlock, ensuring threads are released correctly and stream shutdown completes as expected.
+
+#### 9 December 2025 - Enhancement - CommunicationGateway 5.3.3 - Improved handling of files in use during upgrades [ID 44231]
+
+The Windows Restart Manager is now enabled during installations, preventing unnecessary delays when files are in use. This change improves the speed and reliability of the upgrade process.
+
 #### 8 October 2025 - Enhancement - CommunicationGateway 5.3.2 - Increased maximum gRPC response size [ID 43865]
 
 The maximum allowed response size for gRPC calls has been increased from 4 MB to 12 MB. This enhancement enables Communication Gateway to handle larger payloads.
