@@ -47,7 +47,7 @@ When recurring jobs were created, daylight saving time was not correctly applied
 
 #### Scheduling: Errors on job copied in duplicated job [ID 44303]
 
-When a job that had errors (for example because it went into quarantined state) was duplicated, the errors were copied over to the new job. This will no longer occur.
+When a job that had errors (for example because it went into the quarantined state) was duplicated, the errors were copied over to the new job. This will no longer occur.
 
 #### Scheduling: Incorrect status message when canceling recurrence [ID 44304]
 
