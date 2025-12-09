@@ -96,3 +96,11 @@ If the DataMiner System is a STaaS system, an error message will also appear whe
 If you add a shape data field of type *AlarmFilter* to a shape, clicking the shape will cause Alarm Console tabs of type *Active alarms linked to cards* only to show alarms that match the alarm filter specified in the field value.
 
 However, up to now, the alarm filter would incorrectly no longer be taken into account when an alarm tab of type *Active alarms linked to cards* was selected in the Alarm Console.
+
+#### Visual Overview in the web apps: Browser instances would incorrectly be created for inline browsers when Cube was running as a service [ID 44272]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+
+Up to now, when Cube was running as a service, browser instances would incorrectly be created for inline browsers, even if they were not used to generate images.
+
+From now on, when Cube is running as a service, browser shapes will only verify whether the URL is correct. No browser instances will created anymore.
