@@ -492,7 +492,7 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		/// <remarks>
 		/// <para>Applicable only in case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>.</para>
-		/// <note type="note">Available from DataMiner 10.5.8/10.6.0 onwards, in Automation scripts launched from web apps and <see href="xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url">specifying the useNewIASInputComponents=true URL parameter</see>.</note> <!-- RN 42808 / RN 42845 -->
+		/// <note type="note">Available from DataMiner 10.5.8/10.6.0 onwards, in Automation scripts launched from web apps and the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V2.</note> <!-- RN 42808 / RN 42845 -->
 		/// <para>For <see cref="WasOnFilter"/> to work, <see cref="UIBlockDefinition.WantsOnFilter"/> has to be set to true. Use <see cref="GetFilterString"/> to get the filter value. See example.</para>
 		/// <note type="important">When the options are filtered, the currently selected option (if still relevant) needs to be inserted as an option, regardless of whether the filter matches. Otherwise, the dropdown will consider that value incorrect, and the dropdown will be cleared.</note>
 		/// <note type="tip">Consider only filtering the display value of the options and, if possible, ensure that the filter is not case-sensitive.</note>
