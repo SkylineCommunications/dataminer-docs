@@ -57,7 +57,7 @@ If a server running a DxM does not have CloudGateway installed, any outgoing com
 
 ### Other setups
 
-The diagram below shows how communication within a DataMiner System could be set up, when you use DataMiner with dedicated clustered storage (not recommended). The light blue lines indicate the communication towards the databases (in this case an OpenSearch and Cassandra cluster of three nodes each). The DMAs in the cluster communicate via gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards) over HTTPS port 443.
+The diagram below shows how communication within a DataMiner System should be set up, when you use DataMiner with dedicated clustered storage (not recommended). The light blue lines indicate the communication towards the databases (in this case an OpenSearch and Cassandra cluster of three nodes each). The DMAs in the cluster communicate via gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards) over HTTPS port 443.
 
 ![DMS communication - Dedicated clustered storage - gRPC](~/dataminer/images/Connection_Overview2.svg)<br>*\*IP list: A list of IP addresses that must be allowed through the firewall (will be provided soon).*
 
