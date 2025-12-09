@@ -57,8 +57,8 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 
 1. Once your subscription has been activated, fill in your Organization ID.
 
-   > [!NOTE]
-   > For more information on how to retrieve your organization ID, see [How can I find the ID of my organization in dataminer.services?](xref:FAQ_dataminer_services#how-can-i-find-the-id-of-my-organization-in-dataminerservices)
+   > [!TIP]
+   > See also: [How can I find the ID of my organization on dataminer.services?](xref:FAQ_dataminer_services#how-can-i-find-the-id-of-my-organization-on-dataminerservices)
 
 1. Use the slider to indicate how many credits you wish to purchase for the organization.
 

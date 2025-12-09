@@ -33,7 +33,7 @@ No, You will have full access to all dataminer.services features even with only 
 - **Load balancing**: Having multiple Agents connected to dataminer.services allows dataminer.services to spread incoming requests across multiple Agents. For example, when multiple shared dashboards are accessed simultaneously, the load will be spread across the connected Agents.
 - **Streamlined support services**: Even though not all Agents need to be connected to dataminer.services for this, the [Support Assistant module](xref:DataMinerExtensionModules#supportassistant) needs to be installed on all DataMiner Agents to allow our tech support team to carry out [automated support actions](xref:Proactive_Support).
 
-### How can I find the ID of my organization in dataminer.services?
+### How can I find the ID of my organization on dataminer.services?
 
 1. [Log in using your dataminer.services account](xref:Logging_on_to_dataminer_services).
 1. Select the organization you want to find the ID of.
