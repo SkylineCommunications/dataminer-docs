@@ -83,14 +83,16 @@ When you click the ... button at the top of the sidebar, or when you right-click
 
 - Create > Dashboard
 - Create > Folder
-- Import
-- Catalog
+- Create > From Import
+- Create > From Catalog
 - Settings
 
 When you right-click a folder, or click the ... button of a folder, a menu with the following commands will open:
 
 - Create > Dashboard
 - Create > Folder
+- Create > From Import
+- Create > From Catalog
 - Settings
 - Delete
 
