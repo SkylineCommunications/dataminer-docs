@@ -12,7 +12,7 @@ The cleanup process has been adjusted to prevent this deadlock, ensuring threads
 
 #### 9 December 2025 - Enhancement - CommunicationGateway 5.3.3 - Improved handling of files in use during upgrades [ID 44231]
 
-The Windows Restart Manager is now enabled during installations, preventing unnecessary delays when files are in use. This change improves the speed and reliability of the upgrade process.
+The Windows Restart Manager is now enabled during installations, preventing unnecessary delays caused by files still in use by the CommunicationGateway instance that is being upgraded. This change improves the speed and reliability of the upgrade process.
 
 #### 8 October 2025 - Enhancement - CommunicationGateway 5.3.2 - Increased maximum gRPC response size [ID 43865]
 
