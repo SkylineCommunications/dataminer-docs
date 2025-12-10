@@ -134,6 +134,12 @@ In some cases, a capability could incorrectly be set to a null value.
 
 From now on, when a capability is booked, it will no longer be possible to set its value to null.
 
+#### DataMiner installation: Stopping the DataMiner Agent during an installation would incorrectly be interpreted as a crash [ID 44220]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+At some point during a DataMiner installation, the DataMiner Agent needs to be stopped for a brief moment to allow a number of configuration steps to be performed. Up to now, in some rare cases, SLWatchdog would incorrectly interpret stopping the DataMiner Agent as a crash, causing the system to start up too soon.
+
 #### Problem when retrieving historic alarms with a filter on the value of a discrete parameter [ID 44221]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
