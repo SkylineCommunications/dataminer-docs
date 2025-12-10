@@ -120,3 +120,9 @@ Also, on system using STaaS, up to now, when importing a DELT package containing
 When a client application connects to a DataMiner System, it retrieves the configuration info of that DataMiner System.
 
 Up to now, when retrieving that info failed, no retries would incorrectly be attempted. From now on, a retry will be attempted every 10 seconds.
+
+#### Atlassian Crowd: HTTP response codes would incorrectly be ignored [ID 44254]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When DataMiner was configured to import users and groups from an Atlassian Crowd server, SLDataMiner would incorrectly disregard HTTP result codes while parsing a response during the hourly LDAP synchronization. This could lead to users being removed from their groups until the next successful synchronization, causing them to be unable to log in to DataMiner.
