@@ -258,6 +258,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Blank page shown when opening web applications directly in Microsoft Edge
+            topicUid: KI_Blank_page_shown_when_opening_web_apps_in_Microsoft_Edge
           - name: QActions fail for element after uploading new protocol version
             topicUid: KI_QActions_fail_after_upload_protocol_version
           - name: gRPC-connected Cube not responding when Automation module is used

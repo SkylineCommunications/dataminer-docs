@@ -16,9 +16,9 @@ uid: General_Feature_Release_10.6.1
 >   - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
 >   - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 >
-> - Make sure all DataMiner Agents in the cluster have been migrated to the BrokerGateway-managed NATS solution. For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
+> - Make sure all DataMiner Agents in the cluster have been **migrated to the BrokerGateway-managed NATS solution**. For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration). See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
 >
->   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
+> - Make sure the Microsoft **.NET 10** hosting bundle is installed (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)). See also: [DataMiner upgrade: New prerequisite will check whether .NET 10 is installed](#dataminer-upgrade-new-prerequisite-will-check-whether-net-10-is-installed-id-44121).
 
 > [!TIP]
 >
@@ -358,7 +358,7 @@ This means, that any DataMiner Agent on which you want to perform a web-only upg
 
 #### Relational anomaly detection: GetRADSubgroupFitScoresResponseMessage will now return additional information regarding subgroups of a shared model group [ID 44108]
 
-<!-- MR 10.7.0 - FR 10.6.1 -->
+<!-- MR 10.6.0 - FR 10.6.1 -->
 
 The `GetRADSubgroupFitScoresResponseMessage` will now return additional information regarding subgroups of a shared model group.
 
@@ -580,10 +580,3 @@ Because of a protobuf serialization issue, GQI data sources could throw an excep
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.
-
-#### Removing an invalid or unreachable IP address could cause the active DMA to leave the DMS [ID 44253]
-
-<!-- MR 10.6.0 - FR 10.6.1 [CU0] -->
-<!-- Not added to MR 10.6.0 -->
-
-When you removed a rogue or unreachable IP address on the *Agents* page in *System Center*, up to now, the DataMiner Agent you were connected to could unexpectedly switch to the *Leaving cluster* state and leave the cluster.

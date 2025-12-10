@@ -131,7 +131,7 @@ However, if you are for example using a **brand-new [DaaS system](xref:Creating_
 
 1. Also link the *Alarm Events* and *States* queries to the dropdown component for their view filter, in the same way as detailed above.
 
-The dashboard will now give you an overview of the alarm distribution and the main alarms for the selected view (similar to the *Reports* page from the previous step), so that you can easily check the health of your DMS. You can also [share the dashboard with other users as a PDF or via dataminer.services](xref:Sharing_a_dashboard).
+The dashboard will now give you an overview of the alarm distribution and the main alarms for the selected view (similar to the *Reports* page from the previous step), so that you can easily check the health of your DMS. You can also [share the dashboard with other users as a static report by email or via dataminer.services](xref:Sharing_a_dashboard).
 
 ## Step 5: Create a custom alarm template for the Animal Shelter protocol (optional)
 

@@ -73,6 +73,36 @@ If you choose *Custom*:
 
 The above-mentioned label configuration can be set per node query, per edge query, and can also be overridden by means of node and edge overrides.
 
+#### Dashboards app: Redesigned sidebar [ID 44222]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+The sidebar of the Dashboards app has been redesigned.
+
+When you click the ... button at the top of the sidebar, or when you right-click the background of the sidebar, a menu with the following commands will open:
+
+- Create > Dashboard
+- Create > Folder
+- Create > From Import
+- Create > From Catalog
+- Settings
+
+When you right-click a folder, or click the ... button of a folder, a menu with the following commands will open:
+
+- Create > Dashboard
+- Create > Folder
+- Create > From Import
+- Create > From Catalog
+- Settings
+- Delete
+
+When you right-click a dashboard, or click the ... button of a dashboard, a menu with the following commands will open:
+
+- Open in a new tab
+- Duplicate
+- Settings
+- Delete
+
 #### GQI extensions: Filtering enhancements [ID 44230]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
@@ -134,6 +164,19 @@ Additionally, the following new types have been defined:
   - MatchesRegex
   - None
 
+#### Automation scripts: Updated user permissions [ID 44232]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Up to now, the *Interactive Automation script* component would only visualize an Automation script when the user had the *Modules > Automation > UI available* permission. From now on, the *Interactive Automation script* component will be able to visualize an Automation script when the user has the *Modules > Automation > Execute* permission.
+
+With regard to the Web Services API, up to now, users needed to have both the *Modules > Automation > UI available* permission and the *Modules > Automation > Execute* permission to be allowed to use the `GetAutomationScript`, `ExecuteAutomationScript`, or `ExecuteAutomationScriptWithOutput` methods.
+
+From now on, they will need the following permissions:
+
+- For the `GetAutomationScript` method: *Modules > Automation > UI available* permission and/or *Modules > Automation > Execute* permission
+- For the `ExecuteAutomationScript` and `ExecuteAutomationScriptWithOutput` methods: *Modules > Automation > Execute* permission
+
 #### Enhanced error logging when deleting DOM instances fails [ID 44263]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
@@ -150,6 +193,64 @@ From now on, the grid will try to grow or shrink vertically in order to avoid a 
 
 > [!NOTE]
 > A PDF report containing a Grid component can still show scrollbars and/or clipped content when the grid is set to show a fixed amount of row and a fixed amount of columns (without *Stretch to fit* option).
+
+#### GQI DxM: Partition join strategy for DOM data [ID 44275]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In order to enhance overall performance of the GQI join operator, a so-called "partition join strategy" (i.e. a page-by-page join strategy) will now be used.
+
+##### Conditions that need to be met
+
+This new join strategy will only be applied to join operations in the following scenario:
+
+- The *row-by-row* option is disabled for the join operator
+
+- The *prefetch* option is disabled for the join operator
+
+  - This new *prefetch* option is disabled by default and will only be visible when the `showAdvancedSettings=true` argument is added to the URL of the dashboard or low-code app.
+  - When the *row-by-row* option is enabled, the *prefetch* option will be ignored.
+
+- Real-time updates are not enabled.
+
+- There is only a single join condition.
+
+- The join type is one of the following:
+
+  - *Inner*, when at least the order on the left or right query does not need to be preserved.
+  - *Left*, when the order on the right query does not need to be preserved.
+  - *Right*, when the order on the left query does not need to be preserved.
+
+- The query to partition (determined by join type and order preservation) supports partition filters.
+
+  A query currently supports partition filters when it only contains one of the following:
+
+  - A DOM data source
+  - Filters
+  - Column selectors
+  - Column manipulations on columns other than the join condition column
+  - Aggregations (when grouped by the join condition column)
+
+##### Join strategy concept
+
+When all above-mentioned conditions are met, the partition join is executed as follows:
+
+- The source and destination column to join on are extracted from the join conditions.
+
+- The rows are fetched page by page from the source query (which can be either a left or right query depending or sorting and join type).
+
+  - The page size is the minimum page size configured in the `DataFetchConfig` and `PartitionFilterLimit` values found in `PartitionOptions`.
+
+- For each source page, the following is done:
+
+  - A partition filter is constructed using unique source column values that were not requested yet (using a join operator cache).
+  - A new query is created by applying the partition filter to the destination query.
+  - The new query is executed, and all rows are fetched.
+  - The resulting records are added to the join operator cache using the value of the destination column.
+  - The joined records are then created by looping over all records in the page and finding matches in the join cache.
+
+> [!IMPORTANT]
+> Although the partition join strategy will enhance performance in most common scenarios that require the fastest possible query executions, this strategy can be up to twice as slow when the join has low selectivity. For these uncommon scenarios, we recommended manually enabling the *prefetch* option on the relevant join operator.
 
 ### Fixes
 

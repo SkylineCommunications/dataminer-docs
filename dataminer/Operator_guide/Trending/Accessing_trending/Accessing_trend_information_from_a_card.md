@@ -4,15 +4,15 @@ uid: Accessing_trend_information_from_a_card
 
 # Accessing trend information from a card
 
-On the data side of element cards, service cards, and (for aggregation) view cards, trended parameters are indicated with a [trend icon](xref:Working_with_trend_icons).
+On the data side of element cards, service cards, and (for aggregation) view cards, trended parameters are indicated with a [trend icon](xref:Trend_icons).
 
 On a DMA using [Storage as a Service](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database](xref:Supported_system_data_storage_architectures), these trend icons can be displayed differently depending on the recent trend or the detected behavioral changes.
 
 > [!TIP]
 > See also:
 >
-> - [Working with trend predictions](xref:Working_with_trend_predictions)
-> - [Working with trend icons](xref:Working_with_trend_icons)
+> - [Trend prediction](xref:Trend_prediction)
+> - [Trend icons](xref:Trend_icons)
 
 To access more detailed trend information for a parameter:
 

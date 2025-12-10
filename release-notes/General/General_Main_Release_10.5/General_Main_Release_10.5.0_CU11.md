@@ -24,7 +24,8 @@ During a DataMiner upgrade, from now on, a new upgrade action will register all 
 > [!NOTE]
 >
 > - Each time a crash dump is created for a particular process, any existing crash dumps for the same process will be automatically deleted. Per DataMiner process, only the most recent crash dump will be kept.
-> - During a DataMiner upgrade, the entire `C:\Skyline DataMiner\Logging\CrashDump\wer\` folder will be cleared.
+> - Although the entire `C:\Skyline DataMiner\Logging\CrashDump\wer\` folder will be cleared during a DataMiner upgrade, DataMiner will not manage it. Removing crash dumps from this folder will not require a DataMiner restart.
+> - Currently, WER crash dumps are not included in SLLogCollector packages, and CDMR is not aware of them.
 
 #### Security enhancements [ID 43789]
 
@@ -119,3 +120,9 @@ Also, on system using STaaS, up to now, when importing a DELT package containing
 When a client application connects to a DataMiner System, it retrieves the configuration info of that DataMiner System.
 
 Up to now, when retrieving that info failed, no retries would incorrectly be attempted. From now on, a retry will be attempted every 10 seconds.
+
+#### Crowd: HTTP response codes would incorrectly be ignored [ID 44254]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When DataMiner was configured to import users and groups from a Crowd server, SLDataMiner would incorrectly disregard HTTP result codes while parsing a response during the hourly LDAP synchronization. This could lead to users being removed from their groups until the next successful synchronization, causing them to be unable to log in to DataMiner.

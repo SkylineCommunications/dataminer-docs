@@ -168,5 +168,5 @@ To enable or disable different types of anomaly alarm monitoring:
 > [!TIP]
 > See also:
 >
-> - [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection)
+> - [Behavioral anomaly detection](xref:Behavioral_anomaly_detection)
 > - [Proactive cap detection](xref:Proactive_cap_detection)

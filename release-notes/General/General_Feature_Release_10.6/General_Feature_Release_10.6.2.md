@@ -47,7 +47,8 @@ During a DataMiner upgrade, from now on, a new upgrade action will register all 
 > [!NOTE]
 >
 > - Each time a crash dump is created for a particular process, any existing crash dumps for the same process will be automatically deleted. Per DataMiner process, only the most recent crash dump will be kept.
-> - During a DataMiner upgrade, the entire `C:\Skyline DataMiner\Logging\CrashDump\wer\` folder will be cleared.
+> - Although the entire `C:\Skyline DataMiner\Logging\CrashDump\wer\` folder will be cleared during a DataMiner upgrade, DataMiner will not manage it. Removing crash dumps from this folder will not require a DataMiner restart.
+> - Currently, WER crash dumps are not included in SLLogCollector packages, and CDMR is not aware of them.
 
 #### Security enhancements [ID 43789]
 
@@ -80,7 +81,7 @@ See also: [Alarm templates: New flatline detection modes in Augmented Operations
 
 #### dataminer.services: Restrictions when adding a DMA to a DMS [ID 44171]
 
-<!-- MR 10.7.0 - FR 10.6.1 -->
+<!-- MR 10.7.0 - FR 10.6.2 -->
 
 From now on, when you try to add a DataMiner Agent to a DataMiner System, the operation will fail in the following cases:
 
@@ -188,6 +189,20 @@ Also, on system using STaaS, up to now, when importing a DELT package containing
 
 When a parameter within a RAD parameter group had not had a value for more than 5 days, up to now, SLAnalytics would incorrectly lose track of the entire parameter group. As a result, no anomalies would get detected for that group, and create, update and delete actions performed on that group would fail.
 
+#### DataMiner installation: Stopping the DataMiner Agent during an installation would incorrectly be interpreted as a crash [ID 44220]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+At some point during a DataMiner installation, the DataMiner Agent needs to be stopped for a brief moment to allow a number of configuration steps to be performed. Up to now, in some rare cases, SLWatchdog would incorrectly interpret stopping the DataMiner Agent as a crash, causing the system to start up too soon.
+
+#### Problem when retrieving historic alarms with a filter on the value of a discrete parameter [ID 44221]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+When historic alarms were retrieved with a filter on the value of a discrete parameter, up to now, no alarms would be returned.
+
+This was due to the parameter value being incorrectly translated to a numeric value.
+
 #### No retries would incorrectly be attempted when retrieving DMS configuration info failed [ID 44240]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
@@ -195,3 +210,9 @@ When a parameter within a RAD parameter group had not had a value for more than 
 When a client application connects to a DataMiner System, it retrieves the configuration info of that DataMiner System.
 
 Up to now, when retrieving that info failed, no retries would incorrectly be attempted. From now on, a retry will be attempted every 10 seconds.
+
+#### Crowd: HTTP response codes would incorrectly be ignored [ID 44254]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When DataMiner was configured to import users and groups from a Crowd server, SLDataMiner would incorrectly disregard HTTP result codes while parsing a response during the hourly LDAP synchronization. This could lead to users being removed from their groups until the next successful synchronization, causing them to be unable to log in to DataMiner.
