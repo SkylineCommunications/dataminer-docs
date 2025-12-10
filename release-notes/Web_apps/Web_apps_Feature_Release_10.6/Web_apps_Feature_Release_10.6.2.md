@@ -211,8 +211,6 @@ This new join strategy will only be applied to join operations in the following 
   - This new *prefetch* option is disabled by default and will only be visible when the `showAdvancedSettings=true` argument is added to the URL of the dashboard or low-code app.
   - When the *row-by-row* option is enabled, the *prefetch* option will be ignored.
 
-- The `SessionOptimizationType.NextPage` option is used in order to optimize the query (commonly used to enable lazy loading in a table)
-
 - Real-time updates are not enabled.
 
 - There is only a single join condition.
