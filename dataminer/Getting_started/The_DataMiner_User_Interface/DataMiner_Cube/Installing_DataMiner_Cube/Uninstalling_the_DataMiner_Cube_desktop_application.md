@@ -2,7 +2,7 @@
 uid: Uninstalling_the_DataMiner_Cube_desktop_application
 ---
 
-# Uninstalling the DataMiner Cube desktop application
+# Uninstalling DataMiner Cube
 
 You can uninstall DataMiner Cube like any other program in Windows:
 

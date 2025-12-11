@@ -14,13 +14,11 @@ To change the connection settings on the login page:
 
 1. In the *Edit Settings* window, set the *Connection Type* to one of the following values:
 
-   - *Auto*: DataMiner will automatically select the connection settings.
+   - *Auto*: DataMiner will automatically select the connection settings. From DataMiner 10.5.10/10.6.0 onwards<!-- RN 43331 -->, gRPC will be used by default. Prior to this, the default connection type depends on the configuration in [ConnectionSettings.txt](xref:ConnectionSettings_txt).
 
-   <!-- - *gRPC*: Available from DataMiner 10.3.0/10.3.x onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443. -->
+   <!-- - *gRPC*: Only available for Skyline users. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443. -->
 
    - *Remoting*: DataMiner will communicate using .NET Remoting.
-
-     - This option is used by default.
 
      - The default port used for Remoting is port 8004.
 
@@ -39,6 +37,3 @@ To change the connection settings on the login page:
 1. Click *OK*.
 
 If you are already logged in, changing the connection settings in Cube is similar. For detailed information, see [Manual configuration of client communication settings](xref:DMA_configuration_related_to_client_applications#manual-configuration-of-client-communication-settings).
-
-> [!NOTE]
-> These connection settings are defined in the file *connectionsettings.txt* (located in the following directory on the DMA: `C:\Skyline DataMiner\Webpages`).

@@ -97,6 +97,12 @@ If you add a shape data field of type *AlarmFilter* to a shape, clicking the sha
 
 However, up to now, the alarm filter would incorrectly no longer be taken into account when an alarm tab of type *Active alarms linked to cards* was selected in the Alarm Console.
 
+#### Alarm Console: Action performed on an alarm in an alarm group or correlated alarm would incorrectly also be performed on alarms of the same alarm group or correlated alarm in other alarm tabs [ID 44187]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+
+When, in a particular alarm tab, you performed an action on an alarm that was part of an alarm group or a correlated alarm while *Automatic alarm grouping* option or *Correlation tracking* was enabled, up to now, that action would incorrectly also be performed on alarms of the same alarm group or correlated alarm selected in other alarm tabs.
+
 #### Visual Overview in the web apps: Browser instances would incorrectly be created for inline browsers when Cube was running as a service [ID 44272]
 
 <!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->

@@ -57,43 +57,42 @@ items:
       - name: DataMiner functions
         topicUid: DataMiner_functions
       - name: Accessing DataMiner Cube
-        items:
-          - name: Installing & configuring the DataMiner Cube software
-            topicUid: Installing_configuring_the_DataMiner_Cube_software
-            items:
-              - name: Installing the DataMiner Cube desktop application
-                topicUid: Installing_the_DataMiner_Cube_desktop_application
-              - name: Cleaning up the DataMiner Cube desktop app cache
-                topicUid: Cleaning_up_the_DataMiner_Cube_desktop_app_cache
-              - name: Uninstalling the DataMiner Cube desktop application
-                topicUid: Uninstalling_the_DataMiner_Cube_desktop_application
-              - name: Changing the default browser engine used in DataMiner Cube
-                topicUid: Changing_the_default_browser_engine_used_in_DataMiner_Cube
-              - name: Configuring Microsoft Edge to run DataMiner Cube
-                topicUid: Configuring_Microsoft_edge_to_run_Cube
-              - name: DataMiner Cube deployment methods
-                topicUid: DataMiner_Cube_deployment_methods
-          - name: Connecting to a DataMiner Agent with Cube
-            items:
-              - name: Using the desktop application
-                topicUid: Using_the_desktop_app
-                items:
-                  - name: Logging on to DataMiner Cube
-                    topicUid: Logging_on_to_DataMiner_Cube
-                  - name: Overriding the default connection type
-                    topicUid: Overriding_Cube_connection_type
-                  - name: Managing the start window of the desktop app
-                    topicUid: Managing_the_start_window
-                  - name: Arguments for DataMiner Cube
-                    topicUid: Options_for_opening_DataMiner_Cube
-                  - name: Desktop application command-line arguments
-                    topicUid: Desktop_app_command_line_arguments
-              - name: Using the browser application
-                topicUid: Using_the_browser_app
+        topicUid: Accessing_DataMiner_Cube
       - name: Accessing the web apps
         topicUid: Accessing_the_web_apps
   - name: Working with DataMiner Cube
     items:
+      - name: Installing & configuring DataMiner Cube
+        items:
+          - name: Installing DataMiner Cube
+            topicUid: Installing_the_DataMiner_Cube_desktop_application
+          - name: Upgrading DataMiner Cube
+            topicUid: Upgrading_Cube
+          - name: Cleaning up the DataMiner Cube cache
+            topicUid: Cleaning_up_the_DataMiner_Cube_desktop_app_cache
+          - name: Uninstalling DataMiner Cube
+            topicUid: Uninstalling_the_DataMiner_Cube_desktop_application
+          - name: Changing the default browser engine used in DataMiner Cube
+            topicUid: Changing_the_default_browser_engine_used_in_DataMiner_Cube
+          - name: Configuring Microsoft Edge to run DataMiner Cube (legacy)
+            topicUid: Configuring_Microsoft_edge_to_run_Cube
+          - name: DataMiner Cube deployment methods
+            topicUid: DataMiner_Cube_deployment_methods
+      - name: Connecting to a DataMiner Agent with Cube
+        topicUid: Connecting_to_a_DMA_with_Cube
+        items:
+          - name: The Cube start window
+            topicUid: Cube_start_window
+          - name: Logging on to DataMiner Cube
+            topicUid: Logging_on_to_DataMiner_Cube
+          - name: Overriding the default connection type
+            topicUid: Overriding_Cube_connection_type
+          - name: Arguments for DataMiner Cube
+            topicUid: Options_for_opening_DataMiner_Cube
+          - name: Desktop application command-line arguments
+            topicUid: Desktop_app_command_line_arguments
+          - name: Using the browser application (legacy)
+            topicUid: Using_the_browser_app
       - name: DataMiner Cube UI components
         topicUid: Cube_UI_components
         items:
