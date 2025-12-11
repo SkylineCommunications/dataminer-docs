@@ -4,43 +4,56 @@ uid: docintel
 
 # Document Intelligence
 
-Starting from version 2.0.7, the [DataMiner Assistant](xref:Assistant_DxM) DxM will be able to analyze documents based on specific instructions.
-The functionality is available over API in DataMiner automation. Both the document file and the instructions need to be provided by the user when sending a Document Intelligence request.
+Starting from version 2.0.7, the [DataMiner Assistant DxM](xref:Assistant_DxM) can analyze documents based on specific instructions. This functionality is available via API in DataMiner Automation. Both the document file and the instructions need to be provided by the user when sending a Document Intelligence request.
 
-Example of such requests could be:
+Example of such requests include:
 
-- Extracting satellite parameters from a PDF file
-- Extracting contract information from a video content rights contract in Word
-- Extracting order data from a bill of materials (BOM) Excel document
 
-## How it works
+- Extracting contract information from a video content rights contract in Word.
 
-DataMiner Assistant uses a combination of OCR (Optical Character Recognition) & LLMs (Large Lanaguage Models) in the background to perform the desired operations on the files. When a file is uploaded for analysis, the DxM will first process the document using OCR, which provides a plain text representation of the file content. As a second step, this information is packed together with the provided user instructions (prompt) and sent to an LLM for further interpretation. This two-step approach ensures maximum flexibility and reliability.
+- Extracting order data from a bill of materials (BOM) Excel document.
+
+## Processing documents
+
+The DataMiner Assistant uses a combination of OCR (Optical Character Recognition) and LLMs (Large Language Models) to analyze documents based on your instructions. The process consists of the following steps:
+
+1. You provide the document file.
+
+   In principle, every file format supported by Azure Document Intelligence Service can be analyzed via the Document Intelligence API.
+
+   Currently, the following formats are supported:
+
+   - Images (JPEG/JPG, PNG, BMP, HEIF)
+
+   - PDF
+
+   - TIFF
+
+   - Word (DOCX): embedded or linked images are not supported
+
+   - Excel (XLSX): embedded or linked images are not supported
+
+   - PowerPoint (PPTX): embedded or linked images are not supported
+
+   - HTML: embedded or linked images are not supported
+
+1. You also provide clear instructions that describe what you want to extract or analyze (i.e. your prompt).
+
+   The quality of the final result depends heavily on the quality of these inputs. Structured files and concise, well-defined instructions typically yield the best results. See [Writing an effective prompt](#writing-an-effective-prompt) for tips on how to structure the instructions optimally.
+
+1. The service runs OCR on the uploaded file to produce a plain-text representation of the document content.
+
+1. The extracted text is combined with your instructions and sent to an LLM. The model interprets the instructions and extracts or structures the requested information from the text.
+
+1. The model's output is returned as the Document Intelligence response.
 
 ![DataMiner Document Intelligence](~/dataminer/images/documentintelligence_diagram.png)<br>*Using Document Intelligence API in DataMiner Automation Scripts*
 
+## Writing an effective prompt
 
+Clear instructions help the Document Intelligence tool understand how to handle the uploaded file. While any natural-language text is accepted, a clear and precise prompt can be the difference between an excellent and a mediocre result.
 
-> [!TIP]
-> The quality of the generated response is tightly bound to the quality of the provided inputs (files and intstructions). The tool will perform better on more structured files that contain as little unrelevant information as possible. Next to that, the instructions fed to the model on how to interpret the file content should also be carefully selected. Check section [Input instructions](xref:docintel#user-instructions) for tips on how to structure the instructions optimally.
-
-## Input files
-
-In principle, every file format supported by Azure Document Intelligence Service can be analyzed via the Document Intelligence API.
-At this point in time, the following formats are supported:
-
-- Images (JPEG/JPG, PNG, BMP, HEIF)
-- PDF
-- TIFF
-- Word (DOCX): embedded or linked images not supported
-- Excel (XLSX): embedded or linked images not supported
-- PowerPoint (PPTX): embedded or linked images not supported
-- HTML: embedded or linked images not supported
-
-## Input instructions
-
-The input instructions will tell the tool Document Intelligence tool what is supposed to do. Generally speaking, any text containing instructions formulated in natural language will be accepted.
-However, some basic guidelines can truly make a difference between an excellent and a mediocre Document Intelligence response:
+Keep the following guidelines in mind:
 
 - **Be specific**. Vague requests often result in poor responses. The more context and specificity you provide, the more targeted and useful the response will be. 
 - **Focus on the essentials**. Extra information that is not directly relevant to your main question can sometimes pull the response in unintended directions. Avoiding tangential details is key.
@@ -123,14 +136,13 @@ public void Run(IEngine engine)
 
 ## Data handling
 
-The Document Intelligence features relies on external AI services, both for OCR as for LLM usage. More specifically, **Azure Document Intelligence Service** and **Azure OpenAI Service (Global Standard Deployment)** are used. Therefore, data is transmitted to Microsoft Azure endpoints for processing. Azure AI Services process data in accordance with Microsoft's data handling policies and all data is encrypted while in transit. 
+The Document Intelligence features relies on external AI services, both for OCR as for LLM usage. More specifically, **Azure Document Intelligence Service** and **Azure OpenAI Service (Global Standard Deployment)** are used. Therefore, data is transmitted to Microsoft Azure endpoints for processing. Azure AI Services process data in accordance with Microsoft's data handling policies and all data is encrypted while in transit.
 
 > [!IMPORTANT]
 > - When data is sent to the Document Intelligence Service, both input data and analysis results may be temporarily encrypted and stored in an Azure Storage for a maximum of 24h after the operation has completed. Data is guaranteed to never leave the services's region. For the time being, this will be Western Europe for any user.
 > - The Global Standard Deployment of Azure OpenAI ensures the highest availability and lowest costs by processing data across Azure's global infrastructure: while temporarily stored data should never leave the designated region, prompts and responses **might be processed in any geographic area**. In this case, the service's region currently is Sweden for every user.
 > - It is the user's responsibility to ensure that the uploaded content complies with their organization's data handling policies, security requirements, and applicable regulations (e.g., GDPR, CCPA).
 > - It is highly recommended to review the [Azure Document Intelligence data privacy documentation](https://learn.microsoft.com/en-us/legal/cognitive-services/document-intelligence/data-privacy-security) and the [Azure OpenAI data privacy and security documentation](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy).
-
 
 ## Pricing
 
