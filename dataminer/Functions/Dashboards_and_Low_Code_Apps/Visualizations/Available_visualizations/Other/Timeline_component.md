@@ -38,7 +38,7 @@ The component automatically adapts to the configured time range, but if more ite
 
 ![Timeline scrollbar](~/dataminer/images/Timeline_Scrollbar.gif)<br>*Timeline component in DataMiner 10.5.9*
 
-Note that when an element that has just been restarted, it can take up to five minutes before the timeline will be able to show the latest alarm state changes for that element.<!-- RN 43982 -->
+Note that when an element has just been restarted, it can take up to five minutes before the timeline will be able to show the latest alarm state changes for that element.<!-- RN 43982 -->
 
 ### Available interactions
 
