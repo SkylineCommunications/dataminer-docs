@@ -103,9 +103,12 @@ When you right-click a dashboard, or click the ... button of a dashboard, a menu
 - Settings
 - Delete
 
-#### GQI extensions: Filtering enhancements [ID 44230]
+#### GQI extensions: Filtering enhancements [ID 44230] [ID 44235]
 
-<!-- MR 10.7.0 - FR 10.6.2 -->
+<!-- RN 44230: MR 10.6.0 - FR 10.6.2 -->
+<!-- RN 44235: MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+##### New IGQIFilter property added to IGQIFilterOperator interface
 
 In `SLAnalyticsTypes`, the `IGQIFilterOperator` interface in the GQI extensions API now has a new read-only property:
 
@@ -163,6 +166,30 @@ Additionally, the following new types have been defined:
   - IsLessThanOrEquals
   - MatchesRegex
   - None
+
+##### New API for IGQIFilterOperator in SLAnalyticsTypes
+
+A new API has been implemented for the `IGQIFilterOperator` in `SLAnalyticsTypes`. This API can be used to optimize a filter operator by implementing the `IGQIOptimizableDataSource` or `IGQIOptimizableOperator` interface for a GQI extension.
+
+Possible types for the `IGQIFilterOperator.Filter` property:
+
+- `IGQIValueFilter`
+- `IGQIAndFilter` (for future use)
+
+Possible types for the `IGQIValueFilter.Value` property (i.e. the types for which a GQI extension can create a column):
+
+- bool
+- DateTime
+- double
+- int
+- string
+- TimeSpan
+
+> [!IMPORTANT]
+>
+> - Filters on other column types can also be inspected, but they will throw a `NotSupportedException` with the following message when trying to retrieve the Value property: "Accessing a filter value for this column type is not supported."
+> - Currently, it is not yet possible to partially optimize a filter in a GQI extension. This means that either the entire filter in the filter operator needs to be optimized, or that the filter operator cannot be optimized.
+> - When this feature is used after a web-only upgrade in conjunction with an older server version that uses an older `SLAnalyticsTypes`, the GQI extension library will not compile when installed via a package created from a DataMiner Solution because the new SLAnalyticsTypes dependency will not be included. In this case, the version in `C:\Skyline DataMiner\Files` will be used instead.
 
 #### Automation scripts: Updated user permissions [ID 44232]
 
@@ -278,6 +305,15 @@ The following error would be logged:
 A unknown exception occurred in CoreGateway: Error trapped: Skyline.DataMiner.Net.SLConfiguration.SLValue`1[System.String] could not be converted to System.Text.RegularExpressions.Regex.
 Parameter name: value
 ```
+
+#### Dashboards/Low-Code Apps: Problem when entering decimal values that start with a decimal point [ID 44260]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When you entered a decimal value that started with a decimal point (e.g. ".05"), up to now, the decimal point would incorrectly be removed. For example, ".05" would incorrectly be changed to "05".
+
+> [!NOTE]
+> In some cases, this issue can still occur when entering a decimal value in a dialog box of an interactive Automation script.
 
 #### Dashboards/Low-Code Apps - State timeline component: Problems when processing state changes [ID 44277]
 
