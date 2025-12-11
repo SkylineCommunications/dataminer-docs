@@ -312,7 +312,7 @@ Parameter name: value
 When you entered a decimal value that started with a decimal point (e.g. ".05"), up to now, the decimal point would incorrectly be removed. For example, ".05" would incorrectly be changed to "05".
 
 > [!NOTE]
-> In some cases, this issue can still occur when entering a decimal value in a dialog box of an interactive Automation script.
+> In some cases, this issue can still occur when entering a decimal value in a dialog box of an interactive Automation script that uses legacy UI components.
 
 #### Dashboards/Low-Code Apps - State timeline component: Problems when processing state changes [ID 44277]
 
