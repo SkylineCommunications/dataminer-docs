@@ -28,6 +28,7 @@ The following limitations apply:
 - SNMP traps are currently not supported.
 - Elements that act as a server (e.g. a smart-serial server) are currently not supported.
 - The *Test connection* button in Cube is not supported for testing connections to data sources on a remote site.
+- All tunnels route through Europe (Amsterdam). Depending on the location of DataMiner and the data source, latency may vary.
 
 ## Architecture
 
