@@ -68,7 +68,7 @@ From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dat
       From DataMiner 10.6.0 onwards, the BrokerGateway-managed solution is enabled by default.
 
       > [!IMPORTANT]
-      > For this configuration, it is also important that **automatic NATS configuration** is turned off. If automatic configuration is enabled, credentials may change over time, breaking communication with the DMZ. For instructions, see [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config).
+      > For this configuration, it is also important that **automatic NATS configuration** is turned off. If automatic configuration is enabled, credentials may change over time, breaking communication with the DMZ. For instructions, see [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config).
 
    1. If you are using the **BrokerGateway-managed** NATS solution:
 

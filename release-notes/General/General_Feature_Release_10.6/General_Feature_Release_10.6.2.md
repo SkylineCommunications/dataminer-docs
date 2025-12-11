@@ -38,6 +38,18 @@ uid: General_Feature_Release_10.6.2
 
 ### Enhancements
 
+#### DataMiner upgrade: New upgrade action will register DataMiner exe files with Windows Error Reporting [ID 39440]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+During a DataMiner upgrade, from now on, a new upgrade action will register all DataMiner SL\*.exe and "DataMiner \*.exe" files with Windows Error Reporting (WER). This will make sure that, each time a DataMiner process crashes for whatever reason, a full crash dump is created in `C:\Skyline DataMiner\Logging\CrashDump\wer\<ExeName>`. These WER crash dumps will allow Skyline to thoroughly investigate any issue that might occur.
+
+> [!NOTE]
+>
+> - Each time a crash dump is created for a particular process, any existing crash dumps for the same process will be automatically deleted. Per DataMiner process, only the most recent crash dump will be kept.
+> - Although the entire `C:\Skyline DataMiner\Logging\CrashDump\wer\` folder will be cleared during a DataMiner upgrade, DataMiner will not manage it. Removing crash dumps from this folder will not require a DataMiner restart.
+> - Currently, WER crash dumps are not included in SLLogCollector packages, and CDMR is not aware of them.
+
 #### Security enhancements [ID 43789]
 
 <!-- 43789: MR 10.5.0 [CU11] - FR 10.6.2 -->
@@ -69,7 +81,7 @@ See also: [Alarm templates: New flatline detection modes in Augmented Operations
 
 #### dataminer.services: Restrictions when adding a DMA to a DMS [ID 44171]
 
-<!-- MR 10.7.0 - FR 10.6.1 -->
+<!-- MR 10.7.0 - FR 10.6.2 -->
 
 From now on, when you try to add a DataMiner Agent to a DataMiner System, the operation will fail in the following cases:
 
@@ -77,6 +89,37 @@ From now on, when you try to add a DataMiner Agent to a DataMiner System, the op
 - The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
 
 If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.  
+
+#### Scheduler will now be able to start more than 10 synchronously running Automation scripts [ID 44200]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+Up to now, using Scheduler, it would only be possible to start a maximum of 10 synchronously running Automation scripts.
+
+From now on, it will be possible to start more than 10 synchronously running Automation scripts.
+
+#### Enhanced performance when upgrading DxMs [ID 44210] [ID 44211]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Because of a number of enhancements, overall performance has increased when the following DxMs are upgraded during a DataMiner upgrade:
+
+- BrokerGateway
+- StorageModule
+
+#### Relational anomaly detection: GetRADParameterGroupInfoResponseMessage now also includes the ID of the RAD parameter group [ID 44237]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+The response to a `GetRADParameterGroupInfoMessage` will now also include the ID of the RAD parameter group.
+
+#### SLAnalytics: New database synchronization tasks will be paused when the queue is too long [ID 44243]
+
+<!-- MR 10.6.0 - FR 10.6.2 -->
+
+When database operations fail or take too long, the queue of database synchronization tasks (which update model information) can grow excessively, causing the SLAnalytics process to consume increasing amounts of memory.
+
+From now on, SLAnalytics will pause the creation of new synchronization tasks for some types of model information whenever there are too many pending tasks already. New synchronization operations will only be created again once the backlog has decreased.
 
 ### Fixes
 
@@ -99,8 +142,77 @@ When neither an *SLCloud.xml* file nor a *MessageBrokerConfig.json* file could n
 
 From now on, when neither a *SLCloud.xml* file nor a *MessageBrokerConfig.json* file can be found, a default *MessageBrokerConfig.json* file will be generated.
 
+#### Elements hosted on another DMA and under the root view would not be visible if you did not have full access to the root view [ID 44170]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In client applications like DataMiner Cube, up to now, elements hosted on a DMA other than the one you were connected to would incorrectly not be visible in the Surveyor if they were directly under the root view and if you did not have full access to that root view.
+
+#### Uploading certain protocol versions would cause elements to no longer be able to execute QActions [ID 44172]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+After you had uploaded a protocol with a version that was identical to the prefix of the version of a protocol that was already in use (e.g. a new protocol with version 1.0.0.1 versus an existing protocol with version 1.0.0.1_DEV), up to now, elements using the existing protocol (e.g. with version 1.0.0.1_DEV) would incorrectly no longer be able to execute QActions.
+
 #### Problem with SLElement when loading elements that included matrix parameters [ID 44188]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 In some cases, SLElement could stop working when loading elements that included matrix parameters.
+
+#### BrokerGateway: Issues related to certificates [ID 44195]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Up to now, in some cases, issues related to certificates could cause `TLS handshake error: remote error: tls: bad certificate` errors to be added to the NATS log file and `Could not connect to the local NATS endpoint on '<IP>'. Please make sure that the nats service is running without issues.` notice alarms to be generated.
+
+From now on, in order to prevent any issues related to certificates, in the following cases, the certificate authority will be either added or updated in the certificate store:
+
+- When adding an agent to the cluster.
+- When removing an agent from the cluster.
+- When calling NATSRepair.
+- When migrating to BrokerGateway.
+- When no certificate authorities can be found during BrokerGateway startup.
+
+#### STaaS: Problem when migrating or importing elements with logger tables [ID 44196]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+On systems using STaaS, when an element with logger tables had been migrated from one DMA to another, up to now, that element would no longer start up after it was migrated back to its original DMA.
+
+Also, on system using STaaS, up to now, when importing a DELT package containing elements with logger tables, the logger table data would not be imported correctly.
+
+#### RAD parameter groups would no longer get monitored when a parameter had not had a value for more than 5 days [ID 44204]
+
+<!-- MR 10.6.0 - FR 10.6.2 -->
+<!-- Not added to MR 10.6.0 -->
+
+When a parameter within a RAD parameter group had not had a value for more than 5 days, up to now, SLAnalytics would incorrectly lose track of the entire parameter group. As a result, no anomalies would get detected for that group, and create, update and delete actions performed on that group would fail.
+
+#### DataMiner installation: Stopping the DataMiner Agent during an installation would incorrectly be interpreted as a crash [ID 44220]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+At some point during a DataMiner installation, the DataMiner Agent needs to be stopped for a brief moment to allow a number of configuration steps to be performed. Up to now, in some rare cases, SLWatchdog would incorrectly interpret stopping the DataMiner Agent as a crash, causing the system to start up too soon.
+
+#### Problem when retrieving historic alarms with a filter on the value of a discrete parameter [ID 44221]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+When historic alarms were retrieved with a filter on the value of a discrete parameter, up to now, no alarms would be returned.
+
+This was due to the parameter value being incorrectly translated to a numeric value.
+
+#### No retries would incorrectly be attempted when retrieving DMS configuration info failed [ID 44240]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a client application connects to a DataMiner System, it retrieves the configuration info of that DataMiner System.
+
+Up to now, when retrieving that info failed, no retries would incorrectly be attempted. From now on, a retry will be attempted every 10 seconds.
+
+#### Crowd: HTTP response codes would incorrectly be ignored [ID 44254]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When DataMiner was configured to import users and groups from a Crowd server, SLDataMiner would incorrectly disregard HTTP result codes while parsing a response during the hourly LDAP synchronization. This could lead to users being removed from their groups until the next successful synchronization, causing them to be unable to log in to DataMiner.

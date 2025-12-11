@@ -29,21 +29,21 @@ In general, every profile contains a list of discovery actions. Such an action c
 
 - **ProtocolType**: The discovery mechanism. Possible values include:
 
-    - SNMP
+  - SNMP
 
-    - SNMPv2
+  - SNMPv2
 
-    - SNMPv3
+  - SNMPv3
 
-    - HTTP
+  - HTTP
 
-    - HTTPS
+  - HTTPS
 
-    - Serial
+  - Serial
 
-    - Telnet
+  - Telnet
 
-    - WMI
+  - WMI
 
 - **Method**: The method to be used. The possible values depend on the value of the *ProtocolType*.
 
@@ -71,149 +71,147 @@ SNMP discovery actions have the following fields:
 - **Port**: The destination port on the device to send the request to.
 
 > [!NOTE]
-> The “Options” field is not supported for an SNMP discovery action.
+> The "Options" field is not supported for an SNMP discovery action.
 
 In addition to the discovery actions, the discovery profile also needs to contain credentials:
 
 - For **SNMP** or **SNMPv2**, only a get community string has to be configured in the field *getCommunity*.
 
-    The example below illustrates a discovery profile with SNMPv2 discovery actions.
+  The example below illustrates a discovery profile with SNMPv2 discovery actions.
 
-    ```json
-    {
-     "Actions": [{
-     "Method": "GetRequest",
-     "Name": "sysDescr",
-     "Parameter": "1.3.6.1.2.1.1.1.0",
-     "Port": 161,
-     "ProtocolType": "SNMPv2"
-     },
-     {
-     "Method": "GetRequest",
-     "Name": "sysObjectID",
-     "Parameter": "1.3.6.1.2.1.1.2.0",
-     "Port": 161,
-     "ProtocolType": "SNMPv2"
-     },
-     {
-     "Method": "GetRequest",
-     "Name": "sysUpTime",
-     "Parameter": "1.3.6.1.2.1.1.3.0",
-     "Port": 161,
-     "ProtocolType": "SNMPv2"
-     },
-     {
-     "Method": "GetRequest",
-     "Name": "sysContact",
-     "Parameter": "1.3.6.1.2.1.1.4.0",
-     "Port": 161,
-     "ProtocolType": "SNMPv2"
-     },
-     {
-     "Method": "GetRequest",
-     "Name": "sysName",
-     "Parameter": "1.3.6.1.2.1.1.5.0",
-     "Port": 161,
-     "ProtocolType": "SNMPv2"
-     },
-     {
-     "Method": "GetRequest",
-     "Name": "sysLocation",
-     "Parameter": "1.3.6.1.2.1.1.6.0",
-     "Port": 161,
-     "ProtocolType": "SNMPv2"
-     },
-     {
-     "Method": "GetRequest",
-     "Name": "sysServices",
-     "Parameter": "1.3.6.1.2.1.1.7.0",
-     "Port": 161,
-     "ProtocolType": "SNMPv2"
-     }
-     ],
-     "Credentials": {
-     "CommunitySettings": {
-     "GetCommunity": "public"
+  ```json
+  {
+   "Actions": [{
+   "Method": "GetRequest",
+   "Name": "sysDescr",
+   "Parameter": "1.3.6.1.2.1.1.1.0",
+   "Port": 161,
+   "ProtocolType": "SNMPv2"
+   },
+   {
+   "Method": "GetRequest",
+   "Name": "sysObjectID",
+   "Parameter": "1.3.6.1.2.1.1.2.0",
+   "Port": 161,
+   "ProtocolType": "SNMPv2"
+   },
+   {
+   "Method": "GetRequest",
+   "Name": "sysUpTime",
+   "Parameter": "1.3.6.1.2.1.1.3.0",
+   "Port": 161,
+   "ProtocolType": "SNMPv2"
+   },
+   {
+   "Method": "GetRequest",
+   "Name": "sysContact",
+   "Parameter": "1.3.6.1.2.1.1.4.0",
+   "Port": 161,
+   "ProtocolType": "SNMPv2"
+   },
+   {
+   "Method": "GetRequest",
+   "Name": "sysName",
+   "Parameter": "1.3.6.1.2.1.1.5.0",
+   "Port": 161,
+   "ProtocolType": "SNMPv2"
+   },
+   {
+   "Method": "GetRequest",
+   "Name": "sysLocation",
+   "Parameter": "1.3.6.1.2.1.1.6.0",
+   "Port": 161,
+   "ProtocolType": "SNMPv2"
+   },
+   {
+   "Method": "GetRequest",
+   "Name": "sysServices",
+   "Parameter": "1.3.6.1.2.1.1.7.0",
+   "Port": 161,
+   "ProtocolType": "SNMPv2"
+   }
+   ],
+   "Credentials": {
+   "CommunitySettings": {
+   "GetCommunity": "public"
 
-     }
-     }
-    }
-    ```
+   }
+   }
+  }
+  ```
 
 - For **SNMPv3**, more extensive credentials are needed, as illustrated below:
 
-    ```json
-    {
-     "Actions": [{
-     "Method": "GetRequest",
-     "Name": "sysDescr",
-     "Parameter": "1.3.6.1.2.1.1.1.0",
-     "Port": 16102,
-     "ProtocolType": "SNMPv3"
-     }
-     ],
-     "Credentials": {
-     "SnmpV3Settings": {
-     "Username": "user",
-    "SecurityLevel":"AuthPriv",
-     "AuthenticationPassword": "public",
-     "EncryptionPassword" : "private",
-     "AuthenticationAlgorithm" : "HMAC_MD5",
-     "EncryptionAlgorithm" : "AES128"
-     }
-     }
-    }
-    ```
+  ```json
+  {
+   "Actions": [{
+   "Method": "GetRequest",
+   "Name": "sysDescr",
+   "Parameter": "1.3.6.1.2.1.1.1.0",
+   "Port": 16102,
+   "ProtocolType": "SNMPv3"
+   }
+   ],
+   "Credentials": {
+   "SnmpV3Settings": {
+   "Username": "user",
+  "SecurityLevel":"AuthPriv",
+   "AuthenticationPassword": "public",
+   "EncryptionPassword" : "private",
+   "AuthenticationAlgorithm" : "HMAC_MD5",
+   "EncryptionAlgorithm" : "AES128"
+   }
+   }
+  }
+  ```
 
-    The following values are supported for “SecurityLevel”:
+  The following values are supported for "SecurityLevel":
 
-    - "None" or "1": No authentication and no privacy.
+  - "None" or "1": No authentication and no privacy.
 
-    - "AuthNoPriv" or "2": Authentication without privacy. This means that authentication is required, but data are not encrypted. An encryption password is not necessary in this case.
+  - "AuthNoPriv" or "2": Authentication without privacy. This means that authentication is required, but data are not encrypted. An encryption password is not necessary in this case.
 
-    - "AuthPriv" or "3": Authentication with privacy. This means that authentication is required and data are encrypted, so that both an authentication password and an encryption password must be specified.
+  - "AuthPriv" or "3": Authentication with privacy. This means that authentication is required and data are encrypted, so that both an authentication password and an encryption password must be specified.
 
-    The following values are supported for “AuthenticationAlgorithm”:
+  The following values are supported for "AuthenticationAlgorithm":
 
-    - "None" or "1"
+  - "None" or "1"
 
-    - "HMAC_MD5" or "2"
+  - "HMAC_MD5" or "2"
 
-    - "HMAC_SHA" or "3"
+  - "HMAC_SHA" or "3"
 
-    - "HMAC128_SHA224" or "4"
+  - "HMAC128_SHA224" or "4"
 
-    - "HMAC192_SHA256" or "5"
+  - "HMAC192_SHA256" or "5"
 
-    - "HMAC256_SHA384" or "6"
+  - "HMAC256_SHA384" or "6"
 
-    - "HMAC384_SHA512" or "7"
+  - "HMAC384_SHA512" or "7"
 
-    The following values are supported for “EncryptionAlgorithm”:
+  The following values are supported for "EncryptionAlgorithm":
 
-    - "None" or "1"
+  - "None" or "1"
 
-    - "DES" or "2"
+  - "DES" or "2"
 
-    - "AES128" or "4"
+  - "AES128" or "4"
 
-    - "AES192" or "20"
+  - "AES192" or "20"
 
-    - "AES256" or "21"
+  - "AES256" or "21"
 
-    The following restrictions apply:
+  The following restrictions apply:
 
-    - It is not possible to assign an authentication algorithm when the security level is set to "None".
+  - It is not possible to assign an authentication algorithm when the security level is set to "None".
 
-    - It is not possible to assign an encryption algorithm when the security level is set to "None" or "AuthNoPriv".
+  - It is not possible to assign an encryption algorithm when the security level is set to "None" or "AuthNoPriv".
 
-    - Up to DataMiner 9.6.11, only "HMAC-SHA" or "HMAC-MD5" are supported for authentication, and only "DES" and "AES128" are supported for encryption.
+  - The following combinations of authentication and encryption algorithm are not supported:
 
-    - The following combinations of authentication and encryption algorithm are not supported:
+    - MD5/SHA-1 and AES192
 
-        - MD5/SHA-1 and AES192
-
-        - MD5/SHA-1/SHA-224 and AES256
+    - MD5/SHA-1/SHA-224 and AES256
 
 ## HTTP discovery
 
@@ -223,8 +221,8 @@ HTTP discovery actions have the following fields:
 
 - **ProtocolType**: This defines the discovery mechanism and is set to *HTTP*.
 
-    > [!NOTE]
-    > To use HTTPS, set *ProtocolType* to *HTTPS* instead. However, in that case the DMA hosting the DataMiner IDP Discovery element must to trust the certificate issued by the device in order to successfully process the response of the device over HTTPS.
+  > [!NOTE]
+  > To use HTTPS, set *ProtocolType* to *HTTPS* instead. However, in that case the DMA hosting the DataMiner IDP Discovery element must to trust the certificate issued by the device in order to successfully process the response of the device over HTTPS.
 
 - **Method**: The method to be used. The supported value for HTTP is *GET*.
 
@@ -272,7 +270,7 @@ Serial discovery actions have the following fields:
 - **Port**: The destination port on the device to send the request to.
 
 > [!NOTE]
-> The “Options” field is not supported for a serial discovery action.
+> The "Options" field is not supported for a serial discovery action.
 
 The example below illustrates a discovery profile with one serial discovery action.
 
@@ -375,7 +373,7 @@ WMI discovery actions have the following fields:
 Credentials can be specified by adding username and password under *GenericSettings*.
 
 > [!NOTE]
-> - When fields contain a backslash (“\\”), an additional backslash must be placed before it. For example, when the namespace is *root\\cimv2*, the discovery profile should contain *root\\\\cimv2*. - In case the WMI query returns multiple instances, the value of the first instance will be used to evaluate the discovery conditions of a CI Type.
+> When fields contain a backslash ("\\"), an additional backslash must be placed before it. For example, when the namespace is *root\\cimv2*, the discovery profile should contain *root\\\\cimv2*. - In case the WMI query returns multiple instances, the value of the first instance will be used to evaluate the discovery conditions of a CI Type.
 
 For example:
 

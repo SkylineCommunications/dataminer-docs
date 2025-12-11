@@ -36,7 +36,7 @@ Expected duration: 10 minutes
 
 1. Fill in your name as the author and keep *Create DataMiner Package* selected.
 
-1. Under *Add GitHub CI/CD Workflow (Overwrite Existing)*, select *Basic*.
+1. Under *Add GitHub CI/CD Workflow (Overwrite Existing)*, select *Demo*.
 
 1. Click *Create*.
 

@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.1
 ---
 
-# General Feature Release 10.6.1 – Preview
+# General Feature Release 10.6.1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -16,9 +16,9 @@ uid: General_Feature_Release_10.6.1
 >   - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
 >   - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 >
-> - Make sure all DataMiner Agents in the cluster have been migrated to the BrokerGateway-managed NATS solution. For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
+> - Make sure all DataMiner Agents in the cluster have been **migrated to the BrokerGateway-managed NATS solution**. For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration). See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
 >
->   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
+> - Make sure the Microsoft **.NET 10** hosting bundle is installed (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)). See also: [DataMiner upgrade: New prerequisite will check whether .NET 10 is installed](#dataminer-upgrade-new-prerequisite-will-check-whether-net-10-is-installed-id-44121).
 
 > [!TIP]
 >
@@ -325,7 +325,7 @@ In most cases, these settings can keep their default value, unless performance h
 
 From now on, it will no longer be possible to run *NATSRepair.exe* when automatic NATS configuration is disabled. If so, *NATSRepair.exe* will immediately stop without performing any actions.
 
-See also: [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)
+See also: [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config)
 
 #### DataMiner backup: Temp file will now be created on the target path instead of the C drive [ID 44063]
 
@@ -358,7 +358,7 @@ This means, that any DataMiner Agent on which you want to perform a web-only upg
 
 #### Relational anomaly detection: GetRADSubgroupFitScoresResponseMessage will now return additional information regarding subgroups of a shared model group [ID 44108]
 
-<!-- MR 10.7.0 - FR 10.6.1 -->
+<!-- MR 10.6.0 - FR 10.6.1 -->
 
 The `GetRADSubgroupFitScoresResponseMessage` will now return additional information regarding subgroups of a shared model group.
 
@@ -443,7 +443,7 @@ When, in a correlation rule, a *New alarm* or an *Escalate event* action was con
 
 #### Element and parameter state timelines could show incorrect data [ID 43982]
 
-<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 [CU0] -->
 
 Up to now, in some cases, element and parameter state timelines displayed in client applications like DataMiner web apps or DataMiner Cube could show incorrect data.
 

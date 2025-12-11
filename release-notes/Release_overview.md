@@ -32,7 +32,7 @@ When a version is released, you can find the full DataMiner packages for both th
 
 ## Client updates
 
-Next to the full-blown DataMiner updates, you can opt for [regular Cube updates](xref:Managing_the_start_window#selecting-your-cube-update-track). This way you can use the latest Cube version even if you keep an older DataMiner version on the server for a while. These independent Cube updates can be used from DataMiner 10.2 onwards.
+Next to the full-blown DataMiner updates, you can opt for [regular Cube updates](xref:Upgrading_Cube). This way you can use the latest Cube version even if you keep an older DataMiner version on the server for a while. These independent Cube updates can be used from DataMiner 10.2 onwards.
 
 From DataMiner 10.3 onwards, the DataMiner web apps can also be updated independently. For more information, refer to [Upgrading the DataMiner web apps](xref:Upgrading_Downgrading_Webapps)
 
@@ -51,7 +51,7 @@ Below you can find a quick overview of the different kinds of DataMiner updates,
 | Release type | Release frequency | Impact | Medium |
 |--------------|-------------------|--------|--------|
 | DataMiner Core | Every 4–6 weeks | DataMiner restart | .dmupgrade package |
-| DataMiner Cube | Every 4–6 weeks | [Independent automatic updates](xref:Managing_the_start_window#selecting-your-cube-update-track) possible | Automatic download by Cube |
+| DataMiner Cube | Every 4–6 weeks | [Independent automatic updates](xref:Upgrading_Cube#selecting-your-cube-update-track) possible | Automatic download by Cube |
 | DataMiner Web Apps| Every 4–6 weeks | [Independent manual updates](xref:Upgrading_Downgrading_Webapps) possible, without DataMiner restart | .dmupgrade package |
 | DataMiner Extension Modules | When needed | DxM-dependent | Via dataminer.services or part of .dmupgrade package, depending on the DxM |
 | dataminer.services | Ad hoc | No user impact | Automatic |
