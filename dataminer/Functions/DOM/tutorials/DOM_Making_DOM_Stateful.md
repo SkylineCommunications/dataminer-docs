@@ -49,7 +49,7 @@ Expected duration: 20 minutes
 
 1. Click the *Deploy* button to deploy the DOM Editor package to your DMA.
 
-1. [Open DataMiner Cube](xref:Using_the_desktop_app), go to *Apps* > *Automation*, and check whether the following scripts have become available:
+1. [Open DataMiner Cube](xref:Connecting_to_a_DMA_with_Cube), go to *Apps* > *Automation*, and check whether the following scripts have become available:
 
    ![Dom Editor scripts](~/dataminer/images/DOM_Making_DOM_Stateful_domeditorscripts.png)
 

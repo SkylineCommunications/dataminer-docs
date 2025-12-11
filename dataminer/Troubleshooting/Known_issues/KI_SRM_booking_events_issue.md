@@ -22,7 +22,7 @@ The following workarounds are possible:
 
 - Create new resources with a script that does not set the *Capacity* property to null. Adjust any resources with a null *Capacity* property by assigning the capacity in a script.
 - Increase the ActiveFunctionResourceThreshold setting so the deactivation of function DVEs is not triggered. You can change this setting without a DMA restart. (See [Advanced SRM settings](xref:Function_resource_settings).)
-- Force DataMiner Cube to use the same version as the server. (See [Selecting your Cube update track](xref:Managing_the_start_window#selecting-your-cube-update-track).)
+- Force DataMiner Cube to use the same version as the server. (See [Selecting your Cube update track](xref:Upgrading_Cube#selecting-your-cube-update-track).)
 
 ## Issue description
 

@@ -20,9 +20,9 @@ Below you can find an overview of the different methods that can be used to depl
 | MSI CefSharp [(5)](#fn_5)   | x86 + x64 | No                |
 
 <a id="fn_1"></a>(1) XBAP is being phased out (see [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)).<br>
-<a id="fn_2"></a>(2) "Launcher" is an alternative name for the [DataMiner Cube start window](xref:Using_the_desktop_app).<br>
+<a id="fn_2"></a>(2) "Launcher" is an alternative name for the [DataMiner Cube start window](xref:Cube_start_window).<br>
 <a id="fn_3"></a>(3) Updates from DMA only.<br>
-<a id="fn_4"></a>(4) Updates from DMA and dataminer.services (see [Managing the start window of the desktop app](xref:Managing_the_start_window)).<br>
+<a id="fn_4"></a>(4) Updates from DMA and dataminer.services (see [The Cube start window](xref:Cube_start_window)).<br>
 <a id="fn_5"></a>(5) CefSharp is being phased out. From DataMiner Cube 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards, WebView2 is used instead by default.
 
 ## Launcher installation

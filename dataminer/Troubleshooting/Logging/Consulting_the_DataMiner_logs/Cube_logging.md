@@ -12,7 +12,7 @@ Logging is extremely useful in order to detect, investigate, and solve issues.
 *Cube logging in DataMiner 10.3*
 
 > [!TIP]
-> Logging for the Cube start window is located elsewhere. See [Consulting the start window logging](xref:Managing_the_start_window#consulting-the-start-window-logging).
+> Logging for the Cube start window is located elsewhere. See [The Cube start window](xref:Cube_start_window).
 
 ## Log file locations
 
