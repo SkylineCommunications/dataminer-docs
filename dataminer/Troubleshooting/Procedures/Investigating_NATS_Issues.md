@@ -71,7 +71,7 @@ To run this test:
 
 1. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *BPA*.
 
-1. Select the **Check Agent Presence** test.
+1. Select the **NATS cluster verification** test.
 
 1. Click *Run*.
 
