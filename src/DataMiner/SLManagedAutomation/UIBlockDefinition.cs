@@ -975,7 +975,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value><c>true</c> to let an OnChange event be triggered when the component loses focus; otherwise, <c>false</c>.</value>
 		/// <remarks>
-		/// <para>Applicable only applicable in web apps in case <see cref="Type"/> is set to Calendar, CheckBox, CheckBoxList, DropDown, Numeric, PasswordBox, TextBox, Time.</para>
+		/// <para>Applicable only applicable in web apps in case <see cref="Type"/> is set to Calendar, CheckBox, CheckBoxList, DropDown, Numeric, PasswordBox, TextBox, or Time.</para>
 		/// <para>In case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>, applicable in web apps when the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V2.</para>
 		/// <para>Feature introduced in DataMiner 10.1.10 (RN 30638).</para>
 		/// </remarks>
