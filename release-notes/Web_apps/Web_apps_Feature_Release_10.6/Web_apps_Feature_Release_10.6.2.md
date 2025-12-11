@@ -105,8 +105,7 @@ When you right-click a dashboard, or click the ... button of a dashboard, a menu
 
 #### GQI extensions: Filtering enhancements [ID 44230] [ID 44235]
 
-<!-- RN 44230: MR 10.6.0 - FR 10.6.2 -->
-<!-- RN 44235: MR 10.5.0 [CU11] - FR 10.6.2 -->
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 ##### New IGQIFilter property added to IGQIFilterOperator interface
 
