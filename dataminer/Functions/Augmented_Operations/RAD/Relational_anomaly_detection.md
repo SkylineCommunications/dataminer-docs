@@ -83,7 +83,7 @@ From DataMiner 10.5.6/10.6.0 onwards<!--RN 42602-->, [deleting a relational anom
 
 ## Relational anomalies in trend graphs
 
-From DataMiner 10.5.12/10.6.0 onwards<!-- RN 43857 -->, when you view a trend graph for a parameter that has relational anomalies, these will be indicated by tags.
+From DataMiner 10.4.0 [CU22]/10.5.0 [CU10]/10.6.0/10.6.1 onwards<!-- RN 43857 -->, when you view a trend graph for a parameter that has relational anomalies, these will be indicated by tags.
 
 Hovering over a tag button or right-clicking and selecting *Expand tags* will highlight the anomalies in orange.
 
