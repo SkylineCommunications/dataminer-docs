@@ -63,7 +63,7 @@ For each relational anomaly group, several configuration options are available. 
 From DataMiner 10.5.9/10.6.0 onwards, the [RAD API](xref:RAD_API) supports the creation of **shared model groups**. A shared model group consists of multiple relational anomaly subgroups that all use the same underlying model. This approach is particularly valuable when you need to monitor many entities that share genuine behavioral similarities.
 
 > [!NOTE]
-> The [RAD Manager app](xref:RAD_manager) currently does not support shared model groups. It only supports single groups, where each group of parameters is associated with its own dedicated model.
+> Before version 4.0.0, the [RAD Manager app](xref:RAD_manager) did not support shared model groups. The app only supported single groups, where each group of parameters is associated with its own dedicated model. Starting with version 4.0.0, the app adds supprt for shared model groups.
 >
 > Shared models generalize across subgroups, which can reduce accuracy for specific cases compared to dedicated single models trained on individual subgroup data. However, they can be especially effective when dealing with many subgroups, some of which may lack sufficient healthy reference data.
 
@@ -72,6 +72,18 @@ From DataMiner 10.5.9/10.6.0 onwards, the [RAD API](xref:RAD_API) supports the c
 Consider the [UPS Management Use Case](https://community.dataminer.services/cut-ups-costs-and-prevent-outages-with-ai-powered-monitoring/), where a battery system included many units, each containing several cells with voltage and current parameters. In healthy battery units, these values remain similar across cells and fluctuate together.
 
 Because this behavior is consistent across all units, you can define a shared model group with a subgroup per battery. This allows a single model to monitor all battery units and detect deviations from expected patterns.
+
+#### Identifying anomalous subgroups in a shared model group
+The **Fleet Outlier Detection** feature is available from DataMiner 10.5.12/10.6.0 onwards. It provides a high-level assessment of subgroups within a shared model group, helping you quickly identify individual assets or subgroups that behave unusually compared to their peers.
+
+This detection method operates differently from Relational Anomaly Detection (RAD):
+
+- RAD: Focuses on the internal consistency and status of a single unit (or subgroup). For example, It checks whether the individual cell voltages within a single battery unit fluctuate together as expected.
+
+- Fleet Outlier Detection: Analyzes the collective behavior of all units within a shared model. It establishes a "normal" performance baseline for the group and identifies any specific unit or subgroup that significantly deviates from this standard. This highlights between-group issues. The Fleet Outlier Detection can identify the single battery unit whose overall parameters behave atypically compared to other batteries in the fleet,  even if its internal parameters fluctuate consistently over time.
+
+Within the [RAD Manager app](xref:RAD_manager), the affected shared model subgroups are explicitly labeled as "Outlier Group".
+The [RAD API](xref:RAD_API) provides ways to retrieve a score for each subgroup in a shared model group. This score quantifies the degree of difference from the rest of the group, enabling automated sorting and prioritization of the most statistically anomalous units. The higher the score, the more critical the difference in behavior compared to its peers.
 
 ## Relational anomalies in the Alarm Console
 
