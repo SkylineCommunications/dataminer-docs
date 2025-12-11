@@ -14,7 +14,7 @@ In most cases, when you [connect to a DataMiner Agent](xref:Connecting_to_a_DMA_
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
     <b>💡 TIPS TO TAKE FLIGHT</b><br>
-    Are you new to the Cube user interface? Visit the <a href="xref:Cube_UI_components" style="color: #657AB7;"><i>DataMiner Cube UI components</i>page</a> for an introduction on how to use the different components of the user interface.
+    Are you new to the Cube user interface? Visit the <a href="xref:Cube_UI_components" style="color: #657AB7;"><i>DataMiner Cube UI components</i> page</a> for an introduction on how to use the different components of the user interface.
   </div>
   <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
 </div>
