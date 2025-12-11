@@ -48,7 +48,7 @@ In case of problems, Technical Support may ask you to provide version informatio
 ## How do I reinstall the DataMiner Cube browser app?
 
 > [!IMPORTANT]
-> As of DataMiner 10.3.x, the DataMiner Cube browser app is *End of Life*. Up to DataMiner 10.4.0 [CU11]/10.5.2, the application's existing features will continue to function, but no new features will be added. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41873-->, the browser app is completely deprecated and can no longer be installed.
+> The browser app is **obsolete**. This feature reached *End of Life* as of DataMiner 10.3.x. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41873-->, the browser app is completely deprecated and can no longer be installed.
 
 If the security policy of your company or computer allows it, the DataMiner Cube browser app is automatically downloaded and installed onto your computer the first time you try to open the user interface in Microsoft Edge in IE compatibility mode.
 
@@ -76,7 +76,7 @@ To reinstall the browser app, you need to clean the XBAP cache:
 ## What should I do if I cannot connect to a DMA using the DataMiner Cube browser app?
 
 > [!IMPORTANT]
-> As of DataMiner 10.3.x, the DataMiner Cube browser app is *End of Life*. Up to DataMiner 10.4.0 [CU11]/10.5.2, the application's existing features will continue to function, but no new features will be added. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41873-->, the browser app is completely deprecated and can no longer be installed.
+> The browser app is **obsolete**. This feature reached *End of Life* as of DataMiner 10.3.x. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41873-->, the browser app is completely deprecated and can no longer be installed.
 
 1. Check if Microsoft Edge has been correctly configured to run Cube for this DMA.
 
@@ -94,8 +94,9 @@ To reinstall the browser app, you need to clean the XBAP cache:
 
 ## Can I still use the DataMiner Cube browser app in Internet Explorer?
 
-Support for the DataMiner Cube browser app has ended as of DataMiner 10.3 (see [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)).
+> [!IMPORTANT]
+> The browser app is **obsolete**. This feature reached *End of Life* as of DataMiner 10.3.x. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41873-->, the browser app is completely deprecated and can no longer be installed.
 
-For earlier DataMiner versions, we also recommend using the desktop application. See [Installing DataMiner Cube](xref:Installing_the_DataMiner_Cube_desktop_application).
+This is no longer possible. Support for Internet Explorer ended in 2022 (see [Lifecycle FAQ - Internet Explorer and Microsoft Edge](https://docs.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge)). Microsoft Edge can be used instead. See [Configuring Microsoft Edge to run DataMiner Cube](xref:Configuring_Microsoft_edge_to_run_Cube).
 
-Though the browser app is still supported in older DataMiner versions, it should no longer be used in Internet Explorer, as Microsoft support for Internet Explorer ended in 2022 (see [Lifecycle FAQ - Internet Explorer and Microsoft Edge](https://docs.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge)). You can instead open the DataMiner Cube browser app in Microsoft Edge. See [Configuring Microsoft Edge to run DataMiner Cube](xref:Configuring_Microsoft_edge_to_run_Cube).
+However, using the browser app is no longer recommended, as support for this feature ends as of DataMiner 10.3 (see [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)). For earlier DataMiner versions, we also recommend using the [DataMiner Cube desktop app](xref:Connecting_to_a_DMA_with_Cube) instead.

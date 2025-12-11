@@ -5,7 +5,7 @@ uid: Configuring_Microsoft_edge_to_run_Cube
 # Configuring Microsoft Edge to run DataMiner Cube
 
 > [!IMPORTANT]
-> As of DataMiner 10.3.x, the DataMiner Cube browser app is *End of Life*. Up to DataMiner 10.4.0 [CU11]/10.5.2, the application's existing features will continue to function, but no new features will be added. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41873-->, the browser app is completely deprecated and can no longer be installed.
+> This feature is **obsolete**. The DataMiner Cube browser app reached *End of Life* as of DataMiner 10.3.x. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41873 + 41844-->, the option to install the browser application (via XBAP upgrade packages) has been removed. We recommend using the [DataMiner Cube desktop app](xref:Connecting_to_a_DMA_with_Cube) instead.
 
 Before you can run the DataMiner Cube browser application in Microsoft Edge, a number of settings must be configured.
 
