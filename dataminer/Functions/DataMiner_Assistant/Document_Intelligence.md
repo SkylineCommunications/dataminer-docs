@@ -8,6 +8,7 @@ Starting from version 2.0.7, the [DataMiner Assistant DxM](xref:Assistant_DxM) c
 
 Example of such requests include:
 
+- Extracting satellite parameters from a PDF file.
 
 - Extracting contract information from a video content rights contract in Word.
 
