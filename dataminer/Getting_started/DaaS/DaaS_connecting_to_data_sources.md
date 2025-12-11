@@ -27,4 +27,4 @@ DaaS can connect to any of your on-premises resources that are publicly availabl
 
 ## Private data sources
 
-To connect to resources in your private network, DaaS will connect using a VPN gateway. However, this requires additional configuration for which you will need to contact Skyline. For more details, see [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources).
+To connect to resources in your private network, DaaS can connect using Site Manager or a VPN gateway. For more details, see [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources).
