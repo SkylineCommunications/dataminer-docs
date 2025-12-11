@@ -5,14 +5,17 @@ keywords: NATS security, NATS TLS
 
 # Securing NATS
 
+> [!NOTE]
+> This section **only applies to DataMiner Systems using a version older than DataMiner 10.6.0/10.6.1**. From DataMiner 10.6.0/10.6.1 onwards, a BrokerGateway-managed NATS solution is used, where TLS is configured automatically.
+
 By default, NATS does **not** employ TLS encryption, leaving communication susceptible to eavesdropping. Consequently, we **strongly recommend enabling TLS encryption** for enhanced security within your NATS cluster.
 
-Starting from DataMiner 10.5.0 [CU2]/10.5.5, it is possible to [**migrate to BrokerGateway**](xref:BrokerGateway_Migration), which will **configure TLS automatically**. Prior to this, starting from DataMiner 10.5.0/10.5.2, this is available as a [soft-launch feature](xref:SoftLaunchOptions). If BrokerGateway is not in use, you can manually configure TLS as detailed below.
+In DataMiner 10.5.x versions starting from 10.5.0 [CU2]/10.5.5, it is possible to [**migrate to BrokerGateway**](xref:BrokerGateway_Migration), which will **configure TLS automatically**. Prior to this, starting from DataMiner 10.5.0/10.5.2, this is available as a [soft-launch feature](xref:SoftLaunchOptions). If BrokerGateway is not in use, you can manually configure TLS as detailed below.
 
 ## Manual TLS configuration
 
 > [!CAUTION]
-> To manually enable TLS encryption for NATS inter-node or DataMiner-to-NATS node communication, you will need to disable automatic NATS configuration as described below. Otherwise, DataMiner could overwrite your custom NATS configuration, leaving your communication unprotected. However, this means you will become responsible for maintaining the configuration of the [*SLCloud.xml*](xref:SLCloud_xml), [*nas.config*](xref:Investigating_NATS_Issues#nasconfig), and [*nats-server.config*](xref:Investigating_NATS_Issues#nats-serverconfig) files, as well as ensuring the synchronization of the credentials in the system.
+> To manually enable TLS encryption for NATS inter-node or DataMiner-to-NATS node communication, you will need to disable automatic NATS configuration as described below. Otherwise, DataMiner could overwrite your custom NATS configuration, leaving your communication unprotected. However, this means you will become responsible for maintaining the configuration of the [*SLCloud.xml*](xref:SLCloud_xml), [*nas.config*](xref:Investigating_Legacy_NATS_Issues#nasconfig), and [*nats-server.config*](xref:Investigating_Legacy_NATS_Issues#nats-serverconfig) files, as well as ensuring the synchronization of the credentials in the system.
 
 ### Enabling NATS inter-node TLS communication
 
@@ -29,7 +32,7 @@ To generate self-signed certificates, we recommend that you **use our [scripts f
 
 A **NATS node** is always configured on the system where the DataMiner software is hosted. Follow the steps below for **each of the NATS nodes** in the cluster to enable inter-node TLS encryption:
 
-1. Ensure the **NATSForceManualConfig** option is enabled (see [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)).
+1. Ensure the **NATSForceManualConfig** option is enabled (see [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config)).
 
    This is crucial as DataMiner does not support automatic TLS configuration on the NATS nodes and will overwrite any additional configurations in the **nats-server.config** file.
 
@@ -87,7 +90,7 @@ Since a **NATS node** is always configured on the system where the DataMiner sof
 
 Follow these steps to complete the configuration:
 
-1. Ensure the **NATSForceManualConfig** option is enabled (see [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)).
+1. Ensure the **NATSForceManualConfig** option is enabled (see [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config)).
 
    This is crucial as DataMiner does not support automatic TLS configuration on the NATS nodes and will overwrite any additional configurations in the **nats-server.config** file.
 

@@ -21,7 +21,6 @@ The procedures below can be applied to troubleshoot issues. However, be very car
 - [Configuring trend caching](xref:SLNetClientTest_configuring_trend_caching)
 - [Creating an enhanced view](xref:SLNetClientTest_creating_enhanced_view)
 - [Debugging the dataminer.services connection](xref:SLNetClientTest_debugging_cloud_connection)
-- [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)
 - [Disabling replication buffering](xref:SLNetClientTest_disabling_replication_buffering)
 - [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string)
 - [Enabling or disabling debug logging for a DOM manager](xref:SLNetClientTest_debug_logging_DOM_manager)

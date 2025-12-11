@@ -217,6 +217,8 @@ items:
             topicUid: investigating_dataminer_services_feature_issues
       - name: Troubleshooting – NATS
         topicUid: Investigating_NATS_Issues
+      - name: Troubleshooting – Legacy NATS
+        topicUid: Investigating_Legacy_NATS_Issues
       - name: Troubleshooting – Indexing database
         topicUid: Troubleshooting_Indexing_Database
         items:
@@ -256,8 +258,8 @@ items:
     items:
       - name: Current issues
         items:
-          - name: Removing an invalid or unreachable IP address causes your own DMA to leave the DMS
-            topicUid: KI_Removing_an_invalid_or_unreachable_IP_address_causes_your_own_DMA_to_leave_the_DMS
+          - name: Blank page shown when opening web applications directly in Microsoft Edge
+            topicUid: KI_Blank_page_shown_when_opening_web_apps_in_Microsoft_Edge
           - name: QActions fail for element after uploading new protocol version
             topicUid: KI_QActions_fail_after_upload_protocol_version
           - name: gRPC-connected Cube not responding when Automation module is used
@@ -300,6 +302,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Removing an invalid or unreachable IP address causes your own DMA to leave the DMS
+            topicUid: KI_Removing_an_invalid_or_unreachable_IP_address_causes_your_own_DMA_to_leave_the_DMS
           - name: Contents of Elements folder deleted from offline Agents in Failover cluster
             topicUid: KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster
           - name: Scrollbars not shown in web apps

@@ -18,8 +18,8 @@ Below you can find an overview of the main features that have been added to Data
 | Augmented operations: [Anomaly feedback](xref:Providing_user_feedback) | DataMiner 10.4.11/10.5.0<br>DataMiner 10.4.4 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#anomalyfeedback)<!-- [ID 38707] [ID 38980] [ID 39944] --> |
 | Augmented operations: [Configuration of behavioral anomaly alarms](xref:Configuring_anomaly_detection_alarms) | DataMiner 10.3.12/10.4.0 <!-- [ID 36857] [ ID 37148] -->|
 | Augmented operations: [Managing pattern definitions](xref:Managing_pattern_definitions) | DataMiner Cube 10.3.6/10.4.0 <!-- [ID 35694] [ID 36114] -->|
-| Augmented operations: [Manually updating an alarm group](xref:Automatic_incident_tracking#manually-updating-an-alarm-group) | DataMiner 10.2.5/10.3.0 <!-- [ID 32729] -->|
-| Augmented operations: [Multivariate trend patterns](xref:Working_with_pattern_matching#multivariate-patterns) | DataMiner Cube 10.3.8/10.4.0<!-- [ID 36731] --><br>Minimum server version: DataMiner 10.3.3/10.4.0 <!-- [ID 35301] -->|
+| Augmented operations: [Manually updating an alarm group](xref:Manually_creating_or_updating_alarm_groups) | DataMiner 10.2.5/10.3.0 <!-- [ID 32729] -->|
+| Augmented operations: [Multivariate trend patterns](xref:Pattern_matching#multivariate-patterns) | DataMiner Cube 10.3.8/10.4.0<!-- [ID 36731] --><br>Minimum server version: DataMiner 10.3.3/10.4.0 <!-- [ID 35301] -->|
 | Augmented operations: [Proactive cap detection feedback](xref:Providing_user_feedback) | DataMiner 10.5.1/10.6.0<!-- [ID 41371] --> |
 | Augmented operations: [Relational anomaly detection](xref:Relational_anomaly_detection) | DataMiner 10.5.3/10.6.0<!-- [ID 42034] --> |
 | Augmented operations: [Time-scoped relations](xref:Adding_time_scoped_related_parameters_to_a_trend_graph) | DataMiner 10.3.8/10.4.0 <!-- [ID 36434] --> |
@@ -42,7 +42,7 @@ Below you can find an overview of the main features that have been added to Data
 | Dashboards: [*Alarm table* component](xref:DashboardAlarmTable) | DataMiner 10.1.5/10.2.0 |
 | Dashboards: [JSON input in URL parameters](xref:Specifying_data_input_in_a_URL) | DataMiner 10.2.0/10.2.2 <!-- [ID 31833] [ID 31885] -->|
 | Dashboards: [*Node edge graph* component](xref:DashboardNodeEdgeGraph) | DataMiner 10.1.5/10.2.0 <!-- [ID 29425] -->|
-| Dashboards: [PDF export](xref:Sharing_PDF_report_from_Dashboards_app) | DataMiner 10.2.12/10.3.0<br>DataMiner 10.2.2 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsexport) <!-- [ID 34634] -->|
+| Dashboards: [PDF export](xref:Sharing_report_from_Dashboards_app) | DataMiner 10.2.12/10.3.0<br>DataMiner 10.2.2 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsexport) <!-- [ID 34634] -->|
 | Dashboards: [*Progress bar* component](xref:DashboardProgressBar) | DataMiner 10.1.7/10.2.0 <!-- [ID 29773] --> |
 | Dashboards: [Sharing dashboards using the Live Sharing Service](xref:Sharing_a_dashboard#sharing-a-live-dashboard-via-cloud-share) | DataMiner 10.1.12/10.2.0 <!-- [ID 29047] [ID 31476] -->|
 | Dashboards: [*Trigger* component](xref:DashboardTrigger) | DataMiner 10.1.1/10.2.0 <!-- [ID 28136] --> |

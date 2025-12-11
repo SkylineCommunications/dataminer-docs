@@ -51,7 +51,9 @@ From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 42003-->, to verify tha
 ![No DxM](~/dataminer/images/NoDxM.png)<br>*About DataMiner pop-up window in DataMiner 10.5.3*
 
 > [!NOTE]
-> If you encounter issues when trying to enable the GQI DxM, refer to [GQI DxM repair](xref:Investigating_Web_Issues#gqi-dxm-repair)
+>
+> - If you encounter issues when trying to enable the GQI DxM, refer to [GQI DxM repair](xref:Investigating_Web_Issues#gqi-dxm-repair).
+> - On a [Dashboard Gateway](xref:Dashboard_Gateway_installation) server, it is not yet possible to use the GQI DxM.<!-- RN 44134 -->
 
 ## Configuration
 

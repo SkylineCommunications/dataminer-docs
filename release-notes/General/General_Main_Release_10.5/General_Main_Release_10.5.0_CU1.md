@@ -142,7 +142,7 @@ Up to now, when a reservation went into quarantine, the *SRM_QuarantineHandling*
 
 When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.xml* file, the `NatsCustodianResetNatsRequest` message will now be blocked. Instead of performing a NATS reset, it will now return an error with the following message:
 
-`Resetting NATS is blocked while the system is running a Manual Config. See https://docs.dataminer.services/dataminer/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_advanced_procedures/SLNetClientTest_disabling_automatic_nats_config.html for more information.`
+`Resetting NATS is blocked while the system is running a Manual Config. See https://aka.dataminer.services/disabling-automatic-nats-config for more information.`
 
 > [!NOTE]
 > The `NatsCustodianResetNatsRequest` message will also be blocked when BrokerGateway is being used.
