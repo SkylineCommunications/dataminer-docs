@@ -139,7 +139,7 @@ See also:
 
 Only applicable for parameters of type "write".
 
-When measurement type is "pagebutton", the parameter will be visualized as a button giving access to a popup page.
+When measurement type is "pagebutton", the parameter will be visualized as a button giving access to a popup page. Such page is also accessible as a sub-page within the pages list displayed in the element card side panel.
 
 In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag has to be used to define the label of the button. Multiple Protocol.Params.Param.Measurement.Discreets.Discreet tags can be specified to allow the parameter to have multiple page buttons, meaning to allow multiple page buttons on the same row and column.
 
