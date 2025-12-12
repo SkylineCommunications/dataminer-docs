@@ -150,11 +150,11 @@ public void Run(IEngine engine)
 
 Document Intelligence relies on external Azure AI services for both OCR and LLM processing: **Azure Document Intelligence Service** and **Azure OpenAI Service (Global Standard Deployment)**. As a result, your data is transmitted to Microsoft Azure endpoints for processing, encrypted in transit, and handled according to Microsoft's data handling policies.
 
-- Input data and analysis results may be temporarily encrypted and stored in Azure Storage for up to 24 hours. Data remains in the service region (currently Western Europe for all users).
-
-- Azure OpenAI's Global Standard Deployment ensures the highest availability and lowest costs. Prompts and responses **might be processed in any geographic area** (currently Sweden for all users).
-
-- Ensure that all uploaded content complies with your organization's data handling policies, security requirements, and regulations (e.g. GDPR, CCPA).
+> [!IMPORTANT]
+>
+> - When data is sent to the Document Intelligence Service, both input data and analysis results may be temporarily encrypted and stored in Azure Storage for up to 24 hours after the operation is completed. Data remains in the service region. For the time being, this will be Western Europe for all users.
+> - The Global Standard Deployment of Azure OpenAI ensures the highest availability and lowest costs by processing data across Azure's global infrastructure. While temporarily stored data will never leave the designated region (currently Sweden vor all users), prompts and responses **might be processed in any geographic area**.
+> - Ensure that all uploaded content complies with your organization's data handling policies, security requirements, and regulations (e.g. GDPR, CCPA).
 
 > [!TIP]
 > We highly recommended reviewing the [Azure Document Intelligence data privacy documentation](https://learn.microsoft.com/en-us/legal/cognitive-services/document-intelligence/data-privacy-security) and the [Azure OpenAI data privacy and security documentation](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy).
