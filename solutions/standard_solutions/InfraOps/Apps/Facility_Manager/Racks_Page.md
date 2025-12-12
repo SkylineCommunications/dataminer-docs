@@ -19,7 +19,7 @@ Once you have configured your facilities and rooms in the Facility Manager app, 
    - **Rack Name**: Mandatory field.
    - **Rack Model**: Mandatory field.
    - **Rack Position**: If set to *Bottom*, slot 1 is at the bottom of the rack. If set to *Top*, slot 1 is at the top of the rack.
-   - **Rack Label**: This is displayed in the Room Designer and Room Viewer, when the rack is placed on the room.<!-- TBD -->
+   - **Rack Label**: This is displayed in the [Room Designer](xref:Room_Designer) and Room Viewer (in the [Asset Manager](xref:Asset_Manager) app), when the rack is placed in the room.
    - **Maximum Power Capacity (kW)**: Consumed based on the assets that are placed on the rack.
    - **Maximum Rack Capacity (U)**: The number of rack units available for this rack.
    - **Room Name**/**Row Name**/**Zone Name**: The location where the rack is added. You will only be able to add a rack to a room with at least one row and zone.
