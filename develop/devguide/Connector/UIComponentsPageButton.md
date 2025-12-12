@@ -4,7 +4,7 @@ uid: UIComponentsPageButton
 
 # Page button
 
-A page button allows a user to open a popup page. Such page is also available as a sub-page in the page tree within the element card side panel.
+A page button allows a user to open a popup page. Such page is also available as a sub-page in the page tree available within the element card side panel.
 
 To define a page button:
 
