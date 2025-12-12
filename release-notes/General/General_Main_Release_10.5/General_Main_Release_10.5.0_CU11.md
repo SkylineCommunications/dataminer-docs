@@ -113,6 +113,14 @@ On systems using STaaS, when an element with logger tables had been migrated fro
 
 Also, on system using STaaS, up to now, when importing a DELT package containing elements with logger tables, the logger table data would not be imported correctly.
 
+#### Problem when retrieving historic alarms with a filter on the value of a discrete parameter [ID 44221]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When historic alarms were retrieved with a filter on the value of a discrete parameter, up to now, no alarms would be returned.
+
+This was due to the parameter value being incorrectly translated to a numeric value.
+
 #### No retries would incorrectly be attempted when retrieving DMS configuration info failed [ID 44240]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->

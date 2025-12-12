@@ -140,14 +140,6 @@ From now on, when a capability is booked, it will no longer be possible to set i
 
 At some point during a DataMiner installation, the DataMiner Agent needs to be stopped for a brief moment to allow a number of configuration steps to be performed. Up to now, in some rare cases, SLWatchdog would incorrectly interpret stopping the DataMiner Agent as a crash, causing the system to start up too soon.
 
-#### Problem when retrieving historic alarms with a filter on the value of a discrete parameter [ID 44221]
-
-<!-- MR 10.7.0 - FR 10.6.2 -->
-
-When historic alarms were retrieved with a filter on the value of a discrete parameter, up to now, no alarms would be returned.
-
-This was due to the parameter value being incorrectly translated to a numeric value.
-
 #### Failover: Problem when reloading the scheduled tasks [ID 44234]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->

@@ -197,7 +197,7 @@ At some point during a DataMiner installation, the DataMiner Agent needs to be s
 
 #### Problem when retrieving historic alarms with a filter on the value of a discrete parameter [ID 44221]
 
-<!-- MR 10.7.0 - FR 10.6.2 -->
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 When historic alarms were retrieved with a filter on the value of a discrete parameter, up to now, no alarms would be returned.
 
