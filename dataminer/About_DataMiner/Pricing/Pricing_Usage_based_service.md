@@ -131,7 +131,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | *Element data*                | Sum of element data writes.       | 0.3 per 10M element data updates. | |
 | *Hosted Managed Objects*      | Sum of metrics of all Managed Objects hosted. | 0.1 for 10K metrics| A hosted system With 2 Managed Objects, one with 24K metrics and the other with 150 metrics, the metered value is 24,150 x 0.1 / 10K = 0.2415 |
 
-[Information about billing of Document Intelligence should be added here: Jonas and/or Bruno will take care of this]: # 
+<!-- Information about Document Intelligence billing will be added here once available; this will be handled by Jonas and/or Bruno.-->
 
 > [!NOTE]
 > Instead of a fixed number of 5 actions, some objects defined in Skyline's [Standard Data Model](xref:SOL_About#standard-data-model) may trigger a different number of Automation Actions when new unmanaged object instances are created.

@@ -6,9 +6,7 @@ uid: Assistant_DxM
 
 The DataMiner Assistant module is available as a DxM ([DataMiner Extension Module](xref:DataMinerExtensionModules)) and is responsible for bringing conversational AI into DataMiner.
 
-The initial 1.0.0 version only supports the [natural language to GQI](xref:NL2GQI) feature.
-
-Starting from version 2.0.7, the [document intelligence](xref:docintel) feature is also supported.
+The initial 1.0.0 version only supports the [natural language to GQI](xref:NL2GQI) feature. Starting from version 2.0.7, the [Document Intelligence](xref:docintel) feature is also supported.
 
 More features, such as the [DataMiner Assistant app](xref:DataMinerAssistant), will be added soon.
 
