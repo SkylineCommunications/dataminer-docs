@@ -12,9 +12,11 @@ Skyline Communications takes pride in the security of its products and wants to 
 > [!TIP]
 > For details on the 2025 security assessment, see [Annual DataMiner security assessment](https://community.dataminer.services/2025-dataminer-security-assessment/) on DataMiner Dojo.
 
-## Azure and dataminer.services
+## Microsoft Solutions Partner
 
-All DataMiner services offered on dataminer.services run on Microsoft Azure, which complies with ISO/IEC 27001 as well as multiple other standards. Azure uses internationally recognized processes and best practices to manage the infrastructure and organization that support and deliver its services. We work closely together with Microsoft to optimize the architecture of our service offering, making sure its security and reliability are up to the highest standards.
+As of December 2025, Skyline Communications is a Microsoft Solutions Partner, having attained a certified software designation for DataMiner. This demonstrates our interoperability with Microsoft Cloud as well as our proven track record of customer success.
+
+Moreover, all DataMiner services offered on dataminer.services run on Microsoft Azure, which complies with ISO/IEC 27001 as well as multiple other standards. Azure uses internationally recognized processes and best practices to manage the infrastructure and organization that support and deliver its services. We work closely together with Microsoft to optimize the architecture of our service offering, making sure its security and reliability are up to the highest standards.
 
 > [!TIP]
 > For more information on Azure's compliance offering, see [Azure compliance offering ISO/IEC 27001:2022](https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-iso-27001).
