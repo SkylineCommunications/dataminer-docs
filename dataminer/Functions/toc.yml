@@ -57,6 +57,8 @@ items:
         items:
           - name: Working with the RAD Manager
             topicUid: RAD_manager
+          - name:  Working with the RAD Manager (versions before 4.0.0)
+            topicUid: RAD_manager_old_layout
           - name: Configuring RAD through the configuration XML file
             topicUid: Relational_anomaly_detection_xml
           - name: Working with the RAD API

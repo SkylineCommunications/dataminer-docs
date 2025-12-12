@@ -54,11 +54,11 @@ To modify group configuration settings, click the **Edit** pencil icon ![EditIco
 
 A group with an active relational anomaly suggestion event is marked with the red anomaly icon ![RADAnomalyRedIcon](~/dataminer/images/RADAnomalyRedIcon.png). A group that can no longer be monitored—for example, because the element or a configured parameter no longer exists—is marked with the yellow exclamation icon ![RADExclamationIcon](~/dataminer/images/RADExclamationIcon.png).
 
-Each group is labeled as either a [*Single Group*](#adding-a-single-group), meaning it has its own model, or a [*Shared Model Group*](#adding-a-shared-group), where multiple subgroups use the same underlying model. 
+Each group is labeled as either a [*Single Group*](#adding-a-single-group), meaning it has its own model, or a [*Shared Model Group*](#adding-a-shared-model-group), where multiple subgroups use the same underlying model. 
 
-When you select a shared model group, a side panel appears showing all of its subgroups. Within the [RAD Manager app](xref:RAD_manager), shared model subgroups flagged by the [Fleet Outlier Detection](xref:Relational_anomaly_detection#shared-model-groups#Identifying_anomalous_subgroups_in_a_shared_model_group) are explicitly labeled as *Outlier Group*. You can easily review these outlier groups by sorting the subgroup view. The outliers are ranked based on a score that quantifies the degree of difference from the rest of the group, with the most statistically anomalous subgroups appearing at the top of the list. 
+When you select a shared model group, a side panel appears showing all of its subgroups. Within the [RAD Manager app](xref:RAD_manager), shared model subgroups flagged by the [Fleet Outlier Detection](xref:Relational_anomaly_detection#identifying-anomalous-subgroups-in-a-shared-model-group) are explicitly labeled as *Outlier Group*. You can easily review these outlier groups by sorting the subgroup view. The outliers are ranked based on a score that quantifies the degree of difference from the rest of the group, with the most statistically anomalous subgroups appearing at the top of the list. 
 
-![Outlier Group](~/dataminer/images/RAD_Outlier_Group.png)
+<img src="~/dataminer/images/RAD_Outlier_Group.png" alt="Outlier Group" width="50%">
 
 Use the *Sorting & filtering* button to apply some filtering on the groups being shown in the *Relational Anomaly Groups* table or to apply a different sorting.
 
@@ -157,6 +157,8 @@ These consistent, descriptive labels will then appear in RAD suggestion events a
 To edit an existing group, select it in the table under *Relational Anomaly Groups* and click the Edit button.
 
 This will open a window where you can change the group name, add or remove parameters, and modify group options. For more details, refer to [Adding a single group](#adding-a-single-group) and [Adding a shared model group](#adding-a-shared-model-group).
+
+## Configure model training
 
 The Edit window also gives you the option to retrain the relational anomaly model and to open a *Configure model training* window.
 Retraining RAD’s internal model can be beneficial in certain cases. It enables you to define time periods during which the relational anomaly group was behaving normally, helping RAD more accurately detect future deviations. By default, RAD trains each group upon creation using all available five-minute average trend data (up to a maximum of two months). If this initial training period included anomalous data, contained limited data, or if parameter behavior has changed over time, retraining with a specified time range can improve model accuracy.
