@@ -4,7 +4,7 @@ uid: UIComponentsPageButton
 
 # Page button
 
-A page button allows a user to open a popup page. Such page is also available as a sub-page in the page tree available within the element card side panel.
+A page button allows a user to open a pop-up page. Such a page is also available as a subpage in the page tree displayed in the element card side panel.
 
 To define a page button:
 
@@ -50,7 +50,7 @@ To define a page button:
 >
 > - Typically, the [Description](xref:Protocol.Params.Param.Description) tag is omitted when a page button is defined.
 > - Page buttons are typically used to display a limited amount of data. A pop-up window opened by means of a page button should contain either data of less importance or data that should remain visible while users are working on other pages.
-> - It is typically recommended to avoid too many nested page buttons.
+> - We typically recommended avoiding too many nested page buttons.
 > - The page buttons are right-aligned on the page. So in the example above, this means that the Settings page button will be displayed to the far right, while the Advanced Settings page button will be displayed to its left.
 > - In the page tree, the pop-up pages are listed in the order defined in the protocol.
 
