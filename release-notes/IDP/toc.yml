@@ -1,4 +1,6 @@
 items:
+  - name: IDP 1.6.1 - preview
+    topicUid: IDP_1.6.1
   - name: IDP 1.6.0
     items:
       - name: New features and changes
