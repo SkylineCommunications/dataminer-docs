@@ -8,9 +8,9 @@ The dataminer.InfraOps solution unifies planning, monitoring, and automation in 
 
 The InfraOps solution includes the following three applications, which are ready for use out of the box:
 
-- [Asset Management](xref:Asset_Manager): Provides full visibility into your infrastructure. Track assets with all their details, and link them to services and locations for real-time insight.
-
 - [Facility Manager](xref:Facility_Manager): Gives you a full picture of your infrastructure, allowing you to manage buildings, floors, rooms, etc.
+
+- [Asset Manager](xref:Asset_Manager): Provides full visibility into your infrastructure. Track assets with all their details, and link them to services and locations for real-time insight.
 
 - [Plan and Build](xref:Plan_And_Build): Allows you to document every installation and track every change, ensuring that your planning is based on reliable data.
 
