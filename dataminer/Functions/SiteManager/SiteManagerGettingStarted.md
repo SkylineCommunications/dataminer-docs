@@ -8,7 +8,7 @@ uid: SiteManagerGettingStarted
 
 The DxM is **by default included in the DaaS image of DataMiner 10.5.10**. If your DaaS system is using an older DataMiner version, you will need to [upgrade DataMiner](xref:Upgrading_a_DataMiner_Agent) and [deploy the SiteManager DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
-In case of a **self-managed DataMiner System**, the SiteManager DxM must run on the same machine as the DataMiner Agent from which you want to connect to remote data sources. It can be used with any DataMiner System that uses version 10.5.10/10.6.0 or higher. You can [deploy it from the Admin app](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+For a **self-managed DataMiner System**, the SiteManager DxM must run on the same machine as the DataMiner Agent from which you want to connect to remote data sources. It can be used with any DataMiner System that uses version 10.5.10/10.6.0 or higher. You can [deploy it from the Admin app](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
 When the DxM has been installed, in the Windows services overview, you should see two services:
 

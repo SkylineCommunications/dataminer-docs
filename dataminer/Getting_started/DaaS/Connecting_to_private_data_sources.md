@@ -11,9 +11,9 @@ If you are using a DaaS system, by default you will only be able to connect to d
 
 ## About Site Manager
 
-Site Manager offers a simpler, faster path to connectivity where flexibility and ease of setup are key. It sets up secure communication tunnels enabling communication with selected on-premises data sources from a DaaS system.
+Site Manager offers a simple, fast path to connectivity where flexibility and ease of setup are key. It sets up secure communication tunnels enabling communication with selected on-premises data sources from a DaaS system.
 
-From **DataMiner 10.5.10** onwards, Site Manager is available on DaaS systems by default and requires the installation of a zrok-agent on-premises to establish the secure communication tunnels.
+From **DataMiner 10.5.10/10.6.0** onwards, Site Manager is available on DaaS systems by default. It requires the installation of a zrok-agent on-premises to establish the secure communication tunnels.
 
 For detailed information, refer to [About Site Manager](xref:SiteManagerOverview).
 
