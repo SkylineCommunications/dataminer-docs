@@ -93,19 +93,9 @@ From now on, it will no longer be allowed to perform web-only upgrades with vers
 
 This means, that any DataMiner Agent on which you want to perform a web-only upgrade with version 10.6.x or above will first have to be upgraded to version 10.5.x or above.
 
-#### Relational anomaly detection: GetRADSubgroupFitScoresResponseMessage will now return additional information regarding subgroups of a shared model group [ID 44108]
-
-<!-- MR 10.7.0 - FR 10.6.1 -->
-
-The `GetRADSubgroupFitScoresResponseMessage` will now return additional information regarding subgroups of a shared model group.
-
-In addition to the model fit score for each subgroup, the response message will now contain an `IsOutlier` boolean field. This field is set to true when a subgroup is identified as an outlier based on its relational behavior compared to the other subgroups.
-
-In practical terms, this means that the subgroup's model fit score deviates from the other fit scores. The shared model fits this subgroup significantly worse than it fits most of the remaining subgroups.
-
 #### dataminer.services: Restrictions when adding a DMA to a DMS [ID 44171]
 
-<!-- MR 10.7.0 - FR 10.6.1 -->
+<!-- MR 10.7.0 - FR 10.6.2 -->
 
 From now on, when you try to add a DataMiner Agent to a DataMiner System, the operation will fail in the following cases:
 
@@ -143,6 +133,20 @@ Up to now, SLAnalytics would incorrectly not receive any "swarming complete" not
 In some cases, a capability could incorrectly be set to a null value.
 
 From now on, when a capability is booked, it will no longer be possible to set its value to null.
+
+#### DataMiner installation: Stopping the DataMiner Agent during an installation would incorrectly be interpreted as a crash [ID 44220]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+At some point during a DataMiner installation, the DataMiner Agent needs to be stopped for a brief moment to allow a number of configuration steps to be performed. Up to now, in some rare cases, SLWatchdog would incorrectly interpret stopping the DataMiner Agent as a crash, causing the system to start up too soon.
+
+#### Problem when retrieving historic alarms with a filter on the value of a discrete parameter [ID 44221]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+When historic alarms were retrieved with a filter on the value of a discrete parameter, up to now, no alarms would be returned.
+
+This was due to the parameter value being incorrectly translated to a numeric value.
 
 #### Failover: Problem when reloading the scheduled tasks [ID 44234]
 

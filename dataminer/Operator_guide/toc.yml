@@ -231,47 +231,6 @@ items:
         topicUid: Clearing_alarms
       - name: Advanced analytics features in the Alarm Console
         topicUid: Advanced_analytics_features_in_the_Alarm_Console
-        items:
-          - name: Behavioral anomaly detection
-            topicUid: Behavioral_anomaly_detection
-          - name: Proactive cap detection
-            topicUid: Proactive_cap_detection
-          - name: Automatic alarm grouping
-            topicUid: Automatic_incident_tracking
-            items:
-            - name: Customizing alarm grouping rules
-              topicUid: Customizing_alarm_grouping_rules
-          - name: Monitoring of trend patterns
-            topicUid: Monitoring_of_trend_patterns
-          - name: Relational anomaly detection
-            topicUid: Relational_anomaly_detection
-            items:
-            - name: Working with the RAD Manager
-              topicUid: RAD_manager
-            - name:  Working with the RAD Manager (versions before 4.0.0)
-              topicUid: RAD_manager_old_layout
-            - name: Configuring RAD through the configuration XML file
-              topicUid: Relational_anomaly_detection_xml
-            - name: Working with the RAD API
-              topicUid: RAD_API
-            - name: Tutorials
-              items:
-              - name: Working with relational anomaly detection
-                topicUid: Relational_Anomaly_Detection_Tutorial
-          - name: Providing user feedback
-            topicUid: Providing_user_feedback
-          - name: Tutorials
-            items:
-            - name: Detecting anomalies with DataMiner
-              topicUid: Anomaly_Tutorial
-            - name: Improving anomaly detection using feedback
-              topicUid: Anomaly_Feedback_Tutorial
-            - name: Creating an anomaly overview dashboard
-              topicUid: Creating_Anomaly_Overview_Dashboard
-            - name: Staying ahead of issues with proactive cap detection
-              topicUid: Proactive_Cap_Detection_Tutorial
-            - name: Fine-tuning alarm grouping
-              topicUid: Incident_Tracking_Configuration_Tutorial
       - name: Advanced alarm functionality
         items:
           - name: Changing the default alarm colors
@@ -313,41 +272,6 @@ items:
             topicUid: Displaying_alarm_template_colors_in_trend_graphs
       - name: Advanced analytics features in trend graphs
         topicUid: Advanced_analytics_trending
-        items:
-          - name: Working with trend predictions
-            topicUid: Working_with_trend_predictions
-          - name: Working with trend icons
-            topicUid: Working_with_trend_icons
-          - name: Working with behavioral anomaly detection
-            topicUid: Working_with_behavioral_anomaly_detection
-          - name: Working with pattern matching
-            topicUid: Working_with_pattern_matching
-            items:
-              - name: Defining a pattern
-                topicUid: Defining_a_pattern
-              - name: Editing a pattern definition
-                topicUid: Editing_a_pattern_definition
-              - name: Deleting a pattern definition
-                topicUid: Deleting_a_pattern_definition
-              - name: Managing pattern definitions
-                topicUid: Managing_pattern_definitions
-              - name: Tutorials
-                items:
-                  - name: Using trend patterns to detect backup failures
-                    topicUid: trend_patterns_backup_failures
-          - name: Working with relation learning
-            topicUid: Working_with_relation_learning
-            items:
-              - name: Adding related parameters to a trend graph
-                topicUid: Adding_related_parameters_to_a_trend_graph
-              - name: Adding time-scoped related parameters to a trend graph
-                topicUid: Adding_time_scoped_related_parameters_to_a_trend_graph
-          - name: Tutorials
-            items:
-              - name: Gaining insights using time-scoped relation learning
-                topicUid: Time_Scoped_Relation_Learning_Tutorial
-              - name: Working with trend patterns in DataMiner Cube
-                topicUid: Pattern_Matching_Trend_Tutorial
       - name: Working with histograms
         topicUid: Viewing_trend_information_in_a_histogram
         items:

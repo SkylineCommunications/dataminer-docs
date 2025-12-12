@@ -215,9 +215,9 @@ dotnet publish -p:Version="1.0.0"
 > [!NOTE]
 > When `Version` is not included in the command, it will default to the value defined in the `<Version>` tag in the .csproj file.
 
-### Publishing to the Catalog with the basic CI/CD workflow
+### Publishing to the Catalog with the demo CI/CD workflow
 
-If you have used the *Skyline.DataMiner.VisualStudioTemplates*, your project can include a basic GitHub workflow for Catalog publishing.
+If you have used the *Skyline.DataMiner.VisualStudioTemplates*, your project can include a demo GitHub workflow for Catalog publishing.
 
 Follow these steps to set it up:
 

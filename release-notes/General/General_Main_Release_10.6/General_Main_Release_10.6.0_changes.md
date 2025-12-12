@@ -641,6 +641,16 @@ When a backup package was being created, up to now, the temporary file would be 
 > - When DataMiner and Cassandra are installed on the same machine, and the Cassandra data directory is on the C drive, the temporary snapshot for Cassandra will be created in that data directory before it is added to the backup package on the target path. This is default Cassandra behavior. If you wish to avoid this, move the Cassandra data directory to another drive, or consider moving to STaaS or self-managed clustered storage as Cassandra Single is End of Engineering.
 > - Backups for which only a network path has been specified may take a bit more time as the temporary file will now be created on that network path. Backups for which both a local path and a network path have been specified will not take longer as the temporary file will be created on the local path and then simply copied to the network path.
 
+#### Relational anomaly detection: GetRADSubgroupFitScoresResponseMessage will now return additional information regarding subgroups of a shared model group [ID 44108]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+The `GetRADSubgroupFitScoresResponseMessage` will now return additional information regarding subgroups of a shared model group.
+
+In addition to the model fit score for each subgroup, the response message will now contain an `IsOutlier` boolean field. This field is set to true when a subgroup is identified as an outlier based on its relational behavior compared to the other subgroups.
+
+In practical terms, this means that the subgroup's model fit score deviates from the other fit scores. The shared model fits this subgroup significantly worse than it fits most of the remaining subgroups.
+
 #### Annotations are now End of Life [ID 44124] [ID 44183]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
@@ -777,3 +787,9 @@ Also, the `BlockUntilAllInFlightEventsWereHandled` method will no longer be call
 <!-- MR 10.6.0 - FR 10.5.12 [CU0] -->
 
 When an element was swarmed to the DataMiner Agent on which it was already located, up to now, a server-side deadlock would occur when that element had an active filtered table subscription at the time of the swarming operation.
+
+#### Removing an invalid or unreachable IP address could cause the active DMA to leave the DMS [ID 44253]
+
+<!-- MR 10.6.0 - FR 10.5.12 [CU1] -->
+
+When you removed a rogue or unreachable IP address on the *Agents* page in *System Center*, up to now, the DataMiner Agent you were connected to could unexpectedly switch to the *Leaving cluster* state and leave the cluster.

@@ -44,3 +44,11 @@ When a locked job was duplicated, the user who had a lock on the original job al
 #### Scheduling: Recurring jobs not saved correctly with daylight saving time [ID 44109]
 
 When recurring jobs were created, daylight saving time was not correctly applied.
+
+#### Scheduling: Errors on job copied in duplicated job [ID 44303]
+
+When a job that had errors (for example because it went into the quarantined state) was duplicated, the errors were copied over to the new job. This will no longer occur.
+
+#### Scheduling: Incorrect status message when canceling recurrence [ID 44304]
+
+When a recurrence from the Scheduling app was canceled, previously this displayed the incorrect status "Updating Series...". Now the correct status "Canceling Series..." will be displayed instead.

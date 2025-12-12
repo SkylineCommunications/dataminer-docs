@@ -21,13 +21,36 @@ What you see in the node edge graph depends on the provided data and your [compo
 > [!NOTE]
 > When edges are closely grouped together, edge labels may become minimized. If you hover the mouse pointer over the edge, the label becomes visible again. From DataMiner 10.3.0 [CU4]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->, you can press Ctrl+Space to display all labels at once.
 
-### Selecting items
+### Available interactions
 
-You can select multiple items in the node edge graph at the same time by keeping the Ctrl key pressed while clicking nodes.
+You can interact with the node edge graph in several ways:
 
-When you select one or multiple items in the node edge graph, the selected data becomes available under *All available data* > *Components* > *Node edge graph* > *Tables*.
+- **Selecting an item**: Click an item to select it. You can select multiple items at the same time by keeping the Ctrl key pressed while clicking nodes.
 
-Thanks to this exposed data, you can use the node edge graph component as a dynamic selector, i.e. a component whose selection determines behavior or data elsewhere in your dashboard or app. A common use case is showing additional details when a node is selected.
+  When you select one or multiple items in the node edge graph, the selected data becomes available under *All available data* > *Components* > *Node edge graph* > *Tables*.
+
+  Thanks to this exposed data, you can use the node edge graph component as a dynamic selector, i.e. a component whose selection determines behavior or data elsewhere in your dashboard or app. A common use case is showing additional details when a node is selected.
+
+- **Moving a node**: You can select and drag a node to a new position. You can move multiple nodes at the same time by keeping the Ctrl key pressed while selecting several nodes and then moving them together.
+
+  The conditions for repositioning nodes depend on your DataMiner version:
+
+  - From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44144-->:
+
+    - In the *Settings* pane, *Default mode* must be set to *Edit*.
+
+    - When *Advanced* > *Node positions* is set to *Layered* in the *Layout* pane, editor permissions are required if you want the new node positions to be stored<!--RN 44154-->. See [Configuring security for a dashboard](xref:Configuring_dashboard_security) and [Configuring app security](xref:LowCodeApps_security_config).
+
+      When *Node positions* is set to *Linked to data*, node positions are stored automatically, even when the user only has permission to view the dashboard or app.
+
+    > [!NOTE]
+    > To ensure that node moves update the underlying data and do not remain purely visual, configure an event that triggers a *Launch a script* action. This Automation script should update the original data objects with the modified ones exposed by the event. For more information, see [Configuring node movement events](#configuring-node-movement-events).
+
+  - Up to DataMiner 10.5.0 [CU9]/10.5.12:
+
+    - In the *Layout* pane, *Advanced* > *Node positions* must be set to *Custom*.
+
+    - The user must have the appropriate permissions to edit the dashboard/low-code app. See [Configuring security for a dashboard](xref:Configuring_dashboard_security) and [Configuring app security](xref:LowCodeApps_security_config).
 
 ### Zooming and panning
 
@@ -108,7 +131,7 @@ The node position settings determine how the graph arranges nodes visually. Depe
 
 The following options are available:
 
-- *Layered* (default): Nodes are displayed in different layers.
+- *Layered* (default): Nodes are displayed in different layers. The component will automatically arrange nodes and edges in the most logical way.
 
   When this option is enabled, you can then determine how different nodes are displayed depending on their importance, as indicated by their configured weight.
 
@@ -120,7 +143,7 @@ The following options are available:
 
   - *Upwards*: Nodes are displayed from bottom to top in order of importance
 
-- *Custom*: Allows users with editing permission to drag and drop the nodes to a custom position. In that case, it is also possible to select a group of nodes by keeping the Ctrl key pressed while clicking them, and then move them together.
+- *Custom*: Available up to DataMiner 10.5.0 [CU9]/10.5.12<!--RN 44078-->. Allows users with editing permission to drag and drop the nodes to a custom position. In that case, it is also possible to select a group of nodes by keeping the Ctrl key pressed while clicking them, and then move them together.
 
 - *Linked to data*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. Location information from your data is used to determine the node positions. To use this feature, your data must include at least two numeric columns representing the X and Y positions of each node's center. You can configure these columns in the *Identifiers* > *Nodes* section of the [*Settings* pane](#node-edge-graph-settings).
 
@@ -143,7 +166,9 @@ In the *Settings* pane for this component, you can customize its behavior to sui
 |--|--|--|
 | WebSocket settings | Inherit WebSocket settings from page/panel | Clear the checkbox to use a custom polling interval for this component. When cleared, you can specify a different polling interval (in seconds). |
 | General | Override dynamic units | Clear the checkbox to prevent parameter units from changing dynamically based on their value and protocol definition. Disabled by default. |
+| General | Default mode | Available from DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44078-->. Select whether the component should open in *Read* (default) or *Edit* mode. Only in *Edit* mode can [nodes be repositioned](#available-interactions). |
 | Data retrieval | Update data | Toggle the switch to determine whether the data should be refreshed automatically (provided this is supported by the data source). See [Query updates](xref:Query_updates)<!--RN 37269-->. Disabled by default. |
+| Events | On node move | Available from DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44144-->. Select *Configure actions* to configure events that will be triggered when a node belonging to the query is moved. See [Configuring node movement events](#configuring-node-movement-events). |
 | Advanced | Hold Ctrl to zoom | Available from DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, when the [*Zooming* layout option](#node-edge-graph-layout) is enabled. Select the checkbox to make the scroll wheel zoom only when you hold the Ctrl key. |
 
 The node edge graph component supports showing multiple layers. The following *Identifiers* settings are available for each query added to the component:
@@ -201,6 +226,32 @@ To configure actions:
 
 1. In the *Action* box, select the action that should be executed. See [Configuring app events](xref:LowCodeApps_event_config).
 
+### Configuring node movement events
+
+From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44144-->, you can configure actions that are executed when a node belonging to a specific node query is moved in the node edge graph.
+
+To configure these events:
+
+1. In the *Settings* pane, expand the *Events* section.
+
+1. Next to *On node move*, click *Configure actions*.
+
+1. Configure any of the available actions, as detailed under [Configuring app events](xref:LowCodeApps_event_config#navigating-to-a-url).
+
+When a user moves a node in the node edge graph, the event provides detailed information about what changed. This allows you to keep the graph and the underlying data in sync.
+
+A *node move* event provides the following parameters:
+
+- The row data of the node that was moved.
+
+- The old position of the node: {x,y}
+
+- The new position of the node: {x,y}
+
+You can use this information to update your data source. For example, you can configure a *Launch a script* action that updates the original data objects with the modified values provided by the event.
+
+If your data source does not support real-time updates, also configure an *Execute component action* to refetch the data.
+
 ### Node edge graph component actions
 
 Component actions are operations that can be executed on a component when an event is triggered.
@@ -212,6 +263,14 @@ For the node edge graph component, the following actions are available:
 - *Fetch the data*: This action fetches the data for the component again. Available from DataMiner 10.2.10/10.3.0 onwards.
 
 - *Clear selection*: This action clears the data status of the component. Available from DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38974-->.
+
+- *Set interaction mode*: Available from DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44078-->. This action resets the component's default mode. Options:
+
+  - *Edit*: Enables editing interactions such as repositioning nodes.
+
+  - *Read*: Opens the component in view-only mode.
+
+  - *Toggle*: Switches between *Edit* and *Read* modes.
 
 > [!NOTE]
 > You can also override the default action for a node or edge using the *Add override* option.

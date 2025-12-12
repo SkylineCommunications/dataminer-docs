@@ -1,13 +1,13 @@
 ---
-uid: Sharing_PDF_report_from_Dashboards_app
+uid: Sharing_report_from_Dashboards_app
 ---
 
-# Sharing a dashboard as a PDF report from the Dashboards app
+# Sharing a dashboard via an email report from the Dashboards app
 
 > [!NOTE]
-> From DataMiner 10.2.2/10.2.0 onwards, you can generate a PDF report in the Dashboards app if the *ReportsAndDashboardsExport* [soft-launch option](xref:SoftLaunchOptions) is activated. From DataMiner 10.2.12/10.3.0 onwards, this feature is fully available.
+> From DataMiner 10.2.2/10.2.0 onwards, you can generate a report in the Dashboards app if the *ReportsAndDashboardsExport* [soft-launch option](xref:SoftLaunchOptions) is activated. From DataMiner 10.2.12/10.3.0 onwards, this feature is fully available.
 
-To share a dashboard as a PDF report in the Dashboards app:
+To share a dashboard as an email report in the Dashboards app:
 
 ## [From DataMiner 10.3.0 [CU12]/10.4.3 onwards](#tab/tabid-1)
 
@@ -28,7 +28,21 @@ To share a dashboard as a PDF report in the Dashboards app:
 
 1. Optionally, in the *Message* box, add the message body for the email.
 
-1. To include a CSV file for each component of the dashboard, select *Include CSV*. This is only supported for specific components, such as the line graph, pivot table, and table component.
+1. From DataMiner 10.6.0/10.6.1 onwards<!--RN 43887 + 43888-->, you can select one of the following formats for the report, depending on the components in the dashboard:
+
+   - **PDF**: `<dashboard name>.pdf` will be included as an attachment.
+
+   - **Non-interactive HTML**: `<dashboard name>.mhtml` will be included as an attachment.
+
+     This format bundles everything required for browser rendering, including the HTML code, images, and CSS stylesheets.
+
+   - **CSV**: `<dashboard name>.csv.zip` will be included as an attachment.
+
+     - This option is only available if the dashboard contains at least one supported component: a line & area chart, pivot table, or table component.
+
+     - The zip file contains a separate CSV file for each supported component.
+
+   In earlier DataMiner versions, reports are generated in PDF format by default, but if the dashboard contains a line & area chart, pivot table, or table component, you can select the **Include CSV** option to include a CSV file for each supported component.
 
 1. Optionally, specify the following options:
 
@@ -44,7 +58,7 @@ To share a dashboard as a PDF report in the Dashboards app:
 
    - *Landscape*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43826-->. Select this option to generate the report in landscape mode.
 
-   - *Paper format*: Allows you to select a different format than the default A4 format for the PDF.
+   - *Paper format*: Allows you to select a different format than the default A4 format for the report.
 
 1. When everything has been configured, at the top, click *Send*.
 
