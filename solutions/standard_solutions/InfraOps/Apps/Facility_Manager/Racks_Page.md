@@ -22,7 +22,7 @@ Once you have configured your facilities and rooms in the Facility Manager app, 
    - **Rack Label**: This is displayed in the Room Designer and Room Viewer, when the rack is placed on the room.<!-- TBD -->
    - **Maximum Power Capacity (kW)**: Consumed based on the assets that are placed on the rack.
    - **Maximum Rack Capacity (U)**: The number of rack units available for this rack.
-   - **Room Name**/**Row Name**/**Zone Name**: The location where the rack is added.
+   - **Room Name**/**Row Name**/**Zone Name**: The location where the rack is added. You will only be able to add a rack to a room with at least one row and zone.
 
    This will add the rack to the racks overview table.
 
@@ -40,7 +40,7 @@ Once you have configured your facilities and rooms in the Facility Manager app, 
      - *Top to Bottom*: Air flows from the top of the rack to the bottom, used in some specialized setups.
      - *Bottom to Top*: Air flows from the bottom of the rack to the top, often used in conjunction with raised floor cooling systems.
 
-   - The **height, width, and depth** (in cm). This will be reflected in the Room Designer and Room Viewer.<!-- TBD -->
+   - The **height, width, and depth** (in cm). If you want to be able to add the rack in the Room Designer, make sure these are configured.
 
    At the top of the *Rack details* pane, the following buttons are also available:
 

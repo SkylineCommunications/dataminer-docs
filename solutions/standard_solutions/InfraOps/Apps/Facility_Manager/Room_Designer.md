@@ -8,42 +8,78 @@ This page allows you to design a room in detail, including the placement of diff
 
 ![Room Designer Page](~/solutions/images/Facility_Manager_Room_Designer_Page.png)
 
+## About the Room Designer grid
+
 The designer consists of a grid of at most 4000 tiles. The size of each tile will be adjusted based on the size of the room.
 
 You can adjust the way the grid is displayed by pressing specific keys on the keyboard. Click the *Help* button in the top-right corner of the page to view the available keyboard commands.
 
-<!-- The text below is still unreviewed -->
+## Adding items to a room in the Room Designer
 
-To place a rack in a room, the user first selects a Room, then presses on the top right the Placement Operation button. This will open a side panel that allows the user to place their Racks, Zones and Rows:
+1. Select a room in the list on the right.
 
-![Room Designer Page with Placement Operations panel open](~/solutions/images/Facility_Manager_Room_Designer_Page_With_Placement_Operations_Panel_Open.png)
+1. In the header bar, click *Placement Operations*.
 
-Rack Placement:
+   This will open a panel on the right.
 
-- Rack
+   ![Room Designer Page with Placement Operations panel open](~/solutions/images/Facility_Manager_Room_Designer_Page_With_Placement_Operations_Panel_Open.png)
 
-- X and Y: Position “0,0” starts on the top left of the grid, and the rack is placed on the coordinate selected, based on the top left of the rack. This means that, for example, if a user tries to insert a rack on the bottom right coordinate, it will not work because the rack will go outside of the grid and will be prompted with the following:
+   In the *Rack Placement* section at the top, you can **add a rack**:
 
-![Warning when selecting a rack that goes outside of the limits of the room](~/solutions/images/Facility_Manager_Warning_When_Selecting_A_Rack_That_Goes_Outside_Of_The_Limits_Of_The_Room.png)
+   1. Select the rack.
 
-- Color
+      Make sure that you select a rack that has a height, width, and depth configured, as these are required to be able to display the rack in the Room Designer.
 
-- Orientation: Vertical or Horizontal
+      With the *View* button at the bottom of the section, you can take a look at a detailed view of the rack.
 
-Zone Placement:
+   1. Fill in the X and Y coordinates to indicate the position of the top-left corner of the rack. Position "0,0" starts at the top left of the grid.
 
-- Zone
+      This means you need to make sure the indicated position leaves enough space for the rack to be included in the room. If, for example, you specify the lower right corner as the rack position, this will result in the following notification because the rack would be positioned outside of the grid:
 
-- X and Y: Starting position of the Zone
+      ![Message when adding a rack outside the grid](~/solutions/images/Facility_Manager_Warning_When_Selecting_A_Rack_That_Goes_Outside_Of_The_Limits_Of_The_Room.png)
 
-- Width and Depth: will define where the zone will end
+   1. Optionally, customize the color and orientation (i.e. vertical or horizontal) to adjust how the rack will be displayed.
 
-Row Placement:
+   1. Click *Assign*.
 
-- Row
+   In the *Zone Placement* section, you can add a **zone**:
 
-- Y: The table of the row is then displayed outside of the grid, based on the Y coordinate defined by the user
+   1. Select the zone.
 
-Finally, a cable calculator is available, to present the distance between two different racks within the same room:
+   1. Fill in the X and Y coordinates to indicate the position of the top-left corner of the zone. Position "0,0" starts at the top left of the grid.
+
+   1. Fill in the width and depth to define the size of zone on the grid.
+
+   1. Click *Assign*.
+
+   In the *Row Placement* section, you can add a **row**:
+
+   1. Select the row.
+
+   1. Fill in the Y coordinate for the row.
+
+   1. Click *Assign*.
+
+      A label with the row name will be shown next to the grid at the indicated coordinate.
+
+## Removing an item
+
+To remove an item you have added to a room in the Room Designer:
+
+1. Make sure the room is selected and click *Placement Operations*.
+
+1. Select the item in the rack, zone, or row list, and click the appropriate *Remove* button.
+
+## Calculating the cable length
+
+When you have added the necessary racks to a room, you can calculate the length of the cables between the racks:
+
+1. Make sure the room is selected.
+
+1. In the header bar, click *Cable Length Calculator*.
+
+1. Select the source and destination rack.
+
+The cable length required between the racks will be displayed.
 
 ![Cable Length Calculator](~/solutions/images/Facility_Manager_Cable_Length_Calculator.png)
