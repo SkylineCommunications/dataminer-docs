@@ -2,7 +2,7 @@
 uid: MACC_and_DataMiner_credits
 ---
 
-# Maximizing your azure investments with MACC and DataMiner credits
+# Maximizing your Azure investments with MACC and DataMiner credits
 
 ([DataMiner credits](xref:Pricing_Usage_based_service#usage-terms)) can be conveniently obtained from the following sources:
 
