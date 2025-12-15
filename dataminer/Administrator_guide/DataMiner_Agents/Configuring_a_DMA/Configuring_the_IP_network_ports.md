@@ -43,15 +43,34 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 
 ## Graphical representation of IP communication within a DMS
 
-The diagrams below show how communication within a DMS could be set up. The blue lines indicate the communication towards the databases (in this case an OpenSearch and Cassandra cluster of three nodes each).
+### Recommended setup
 
-Using gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards):
+The image below shows how communication within a DataMiner System should be set up, when you use DataMiner with STorage as a Service (STaaS). The DMAs in the cluster communicate via gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards) over HTTPS port 443.
 
-![DMS communication overview new](~/dataminer/images/dms_ip_communication_with_DB_updated.png)
+![DMS communication - STaaS](~/dataminer/images/Connection_Overview1.svg)
 
-Using .NET Remoting:
+If a server running a DxM does not have CloudGateway installed, any outgoing communication to dataminer.services will go through a CloudGateway available elsewhere in the cluster. In the example below, this means server 2 uses the CloudGateway on server 1 over port 5100.
 
-![DMS communication overview](~/dataminer/images/dms_ip_communication_with_DB.png)
+![Multiple servers - CloudGateway](~/dataminer/images/CloudGatewayServers.svg)
+
+*\*IP list: A list of IP addresses that must be allowed through the firewall. For dataminer.services, see [Connecting to dataminer.services](xref:Cloud_connectivity_and_security#connecting-to-dataminerservices). For STaaS, firewall rules must allow:*
+
+- *[Microsoft Azure IP ranges](https://www.microsoft.com/en-us/download/details.aspx?id=56519)*
+- *The necessary Skyline-managed endpoints, depending on the region you have registered your system for:*
+
+  | *Region* | *IP address* |
+  |--|--|
+  | *West Europe* | *20.76.71.123* |
+  | *Central US* | *64.236.64.187* |
+  | *East US 2* | *72.153.119.116* |
+  | *South East Asia* | *20.247.192.226* |
+  | *UK South* | *20.162.131.128* |
+
+### Other setups
+
+The diagram below shows how communication within a DataMiner System should be set up, when you use DataMiner with dedicated clustered storage (not recommended). The light blue lines indicate the communication towards the databases (in this case an OpenSearch and Cassandra cluster of three nodes each). The DMAs in the cluster communicate via gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards) over HTTPS port 443.
+
+![DMS communication - Dedicated clustered storage - gRPC](~/dataminer/images/Connection_Overview2.svg)<br>*\*IP list: A list of IP addresses that must be allowed through the firewall. See [Connecting to dataminer.services](xref:Cloud_connectivity_and_security#connecting-to-dataminerservices).*
 
 > [!TIP]
 > See also:
