@@ -53,7 +53,18 @@ If a server running a DxM does not have CloudGateway installed, any outgoing com
 
 ![Multiple servers - CloudGateway](~/dataminer/images/CloudGatewayServers.svg)
 
-*\*IP list: A list of IP addresses that must be allowed through the firewall. For STaaS, this refers to the [Microsoft Azure IP ranges](https://www.microsoft.com/en-us/download/details.aspx?id=56519). For dataminer.services, see [Connecting to dataminer.services](xref:Cloud_connectivity_and_security#connecting-to-dataminerservices).*
+*\*IP list: A list of IP addresses that must be allowed through the firewall. For dataminer.services, see [Connecting to dataminer.services](xref:Cloud_connectivity_and_security#connecting-to-dataminerservices). For STaaS, firewall rules must allow:*
+
+- *[Microsoft Azure IP ranges](https://www.microsoft.com/en-us/download/details.aspx?id=56519)*
+- *The necessary Skyline-managed endpoints, depending on the region you have registered your system for:*
+
+  | *Region* | *IP address* |
+  |--|--|
+  | *West Europe* | *20.76.71.123* |
+  | *Central US* | *64.236.64.187* |
+  | *East US 2* | *72.153.119.116* |
+  | *South East Asia* | *20.247.192.226* |
+  | *UK South* | *20.162.131.128* |
 
 ### Other setups
 
