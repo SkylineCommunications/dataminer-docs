@@ -111,6 +111,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | Storage as a Service (STaaS) | *Trend data points* | New data point updates from trended metrics written to the storage service. |
 | Storage as a Service (STaaS) | *Element data*| Metrics from Managed Objects written to the storage service. |
 | DataMiner as Service (DaaS)  | *Hosted Managed Objects* | Managed Objects hosted as a service, metered as the total sum of their metrics. |
+| DataMiner Assistant | *Document Intelligence* | [**Document Intelligence**](xref:docintel) tool that can be used in DataMiner Automation to process documents using AI. |
 
 > [!NOTE]
 > Only active and paused Managed Objects are counted for Managed Objects, Connector Services, and DaaS. Directly interfaced endpoints include data sources, devices, and platforms that expose an interface that allows direct interaction with those endpoints. Indirectly interfaced endpoints include those reported through a mediating data source, for example message brokers (like Apache Kafka or RabbitMQ), databases, or Element and Network Management Systems.
@@ -130,6 +131,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | *Trend data points*           | Sum of trend data point writes.   | 0.3 per 10M trend data points. | |
 | *Element data*                | Sum of element data writes.       | 0.3 per 10M element data updates. | |
 | *Hosted Managed Objects*      | Sum of metrics of all Managed Objects hosted. | 0.1 for 10K metrics| A hosted system With 2 Managed Objects, one with 24K metrics and the other with 150 metrics, the metered value is 24,150 x 0.1 / 10K = 0.2415 |
+| *Document Intelligence*       | Sum of the processed pages.  | 9 per 1K pages. | Processing 1.5K PDF documents with 2 pages per document, results in 3K pages processed and a metered value of 3K x 9 / 1K = 27. |
 
 <!-- Information about Document Intelligence billing will be added here once available; this will be handled by Jonas and/or Bruno.-->
 
