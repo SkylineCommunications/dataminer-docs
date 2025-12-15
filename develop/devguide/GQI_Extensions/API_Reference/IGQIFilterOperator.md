@@ -11,10 +11,13 @@ uid: GQI_IGQIFilterOperator
 
 Represents a **filter operator** in the core framework.
 
-> [!NOTE]
-> This interface is currently only a marker interface without properties or methods.
-
 ## Implements
 
 - [IGQICoreOperator](xref:GQI_IGQICoreOperator)
 - [IGQICoreBlock](xref:GQI_IGQICoreBlock)
+
+## Properties
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| Filter | [IGQIFilter](xref:GQI_IGQIFilter) | The filter logic. Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards when using the [GQI DxM](xref:GQI_DxM).<!-- RN 44230 --> |
