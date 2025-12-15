@@ -14,7 +14,7 @@ Skyline Communications takes pride in the security of its products and wants to 
 
 ## Microsoft Solutions Partner
 
-As of December 2025, Skyline Communications is a Microsoft Solutions Partner, having attained a certified software designation for DataMiner. This demonstrates our interoperability with Microsoft Cloud as well as our proven track record of customer success.
+Skyline Communications is a Microsoft Solutions Partner, having attained a certified software designation for DataMiner. This demonstrates our interoperability with Microsoft Cloud as well as our proven track record of customer success.
 
 Moreover, all DataMiner services offered on dataminer.services run on Microsoft Azure, which complies with ISO/IEC 27001 as well as multiple other standards. Azure uses internationally recognized processes and best practices to manage the infrastructure and organization that support and deliver its services. We work closely together with Microsoft to optimize the architecture of our service offering, making sure its security and reliability are up to the highest standards.
 
