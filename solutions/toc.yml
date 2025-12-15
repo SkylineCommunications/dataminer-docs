@@ -86,12 +86,13 @@ items:
         items:
         - name: Asset Designer
           topicUid: Asset_Designer
-        - name: Cable Types
-          topicUid: Cable_Types
-        - name: Port Types
-          topicUid: Port_Types
-        - name: Asset Class Details
-          topicUid: Asset_Class_Details
+          items:
+          - name: Configuring device types
+            topicUid: AM_Configuring_device_types
+          - name: Configuring cable types
+            topicUid: AM_Configuring_cable_types
+          - name: Configuring port types
+            topicUid: AM_Configuring_port_types
         - name: Managed Assets
           topicUid: Managed_Assets
           items:

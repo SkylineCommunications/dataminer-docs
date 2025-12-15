@@ -4,7 +4,7 @@ uid: Web_File_Manager
 
 # Web File Manager
 
-The Web File Manager app is used to upload and manage image files. It is a prerequisite for the InfraOps solution, in order to be able to add images [for floor or room plans](xref:Facilities_Page) in the Facility Manager app, or [for asset classes](xref:Asset_Class_Details) in the Asset Manager app.
+The Web File Manager app is used to upload and manage image files. It is a prerequisite for the InfraOps solution, in order to be able to add images [for floor or room plans](xref:Facilities_Page) in the Facility Manager app, or [for asset classes](xref:Asset_Designer#configuring-an-asset-class) in the Asset Manager app.
 
 ![Web File Manager Main Page](~/solutions/images/Facility_Manager_Web_File_Manager_Main_Page.png)
 

@@ -6,7 +6,7 @@ uid: Rooms_Page
 
 The Rooms page of the Facility Manager contains an overview of rooms, zones, rows, and desks. Selecting a room filters the other tables accordingly.
 
-For zones, the cooling usage percentage is displayed, which is calculated based on the maximum power consumption of the assets assigned to the racks placed in the zone. This is defined in the Asset Manager app, specifically with the [asset class configuration](xref:Asset_Class_Details).
+For zones, the cooling usage percentage is displayed, which is calculated based on the maximum power consumption of the assets assigned to the racks placed in the zone. This is defined in the Asset Manager app, specifically with the [asset class configuration](xref:Asset_Designer#configuring-an-asset-class).
 
 When facilities, floors, and rooms have been added, this page is where you will typically continue your configuration by further detailing the rooms with [zones](#adding-a-zone), [rows](#adding-a-row), and/or [desks](#adding-a-desk).
 

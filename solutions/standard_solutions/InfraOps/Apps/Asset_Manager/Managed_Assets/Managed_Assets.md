@@ -4,48 +4,30 @@ uid: Managed_Assets
 
 # Managed Assets
 
-After configuring the necessary Assets Classes, users can create Assets.
+When the necessary asset classes have been configured in the [Asset Designer](xref:Asset_Designer), you can add assets to the system.
 
-Same as the Asset Classes, users can import their Assets via CSV file. Otherwise, manual creation is available be pressing the top right button “Create Asset”:
+You can either [import the assets from CSV](#importing-assets-from-csv) or [create assets manually](#manually-adding-an-asset).
+
+Via the context menu of an asset on the Managed Assets page, you can change the state of the asset. However, the states you can assign depend on the current state of the asset. For details, refer to [Asset lifecycle](xref:Asset_Lifecycle).
 
 ![Managed Asset Page](~/solutions/images/Asset_Manager_Managed_Asset_Page.png)
 
-To create an Asset, the following needs to be inserted:
+## Importing assets from CSV
 
-- Asset ID and Asset Name: Unique ID and Name for the Asset
+1. In the header bar, click *Import/export Assets to/from CSV*.
 
-- Asset Class
+1. In the Option box, keep *Import* selected.
 
-The newly created asset will inherit all the configuration from its Asset Class, and it’s created with the state “Not Available”. Overview of all available Asset States:
+1. Next to *File to import*, click *Choose file* and select the file you want to import.
 
-![Asset state diagram](~/solutions/images/Asset_Manager_Asset_State_Diagram.png)
+1. Click *Upload*, and then click *Import*.
 
-While the state of the Asset is “Not Available”, the user can still edit everything on the Asset Information, except for the Asset Class.
+## Manually adding an asset
 
-Once the user changes the state to “Available”, the Asset ID is no longer editable, but now the user can define a location for the Asset.
+1. In the header bar, click *Create Asset*.
 
-After setting to “Available”, the Asset can go to “In Planning” and the “Build Plan Ready” states.
+1. Specify a unique ID and name for the asset, and select the asset class.
 
-To move to the next state which is “Installed”, the user will need an installation user and date. This can be configured in the asset details, Lifecycle section.
+1. Click *Save*.
 
-Once these details are configured, the user changes the state to “Installed”, it will no longer be possible to change the installation user and date:
-
-![Asset Lifecycle Wizard](~/solutions/images/Asset_Manager_Asset_Lifecycle_Wizard.png)
-
-Also, when moving an asset to installed state, it will no longer be possible to define the location, even if no location is defined. The user will need to set the asset state to “In Planning” to be able to configure the location.
-
-The “final” state is “In Service”. To easily change it, just click the state on the table to list the options available:
-
-![Asset State context menu](~/solutions/images/Asset_Manager_Asset_State_Context_Menu.png)
-
-From any state, the user can set the asset state to “In Transit” or “In Repair”.
-
-When setting to “In Transit”, the user will be prompted to insert the destination:
-
-![Asset Destination Location Wizard](~/solutions/images/Asset_Manager_Asset_Destination_Location_Wizard.png)
-
-This information is displayed in the Asset details panel:
-
-![Asset Details side panel](~/solutions/images/Asset_Manager_Asset_Details_Side_Panel.png)
-
-Once the user changes to any other available state, the location defined on the Destination Information will be removed and placed on the Location Information section.
+The newly created asset will inherit the configuration from its asset class.

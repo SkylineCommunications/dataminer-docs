@@ -4,7 +4,7 @@ uid: Racks_Page
 
 # Racks
 
-The Racks page displays an overview of all configured racks, along with the rack capacity, power capacity, and space usage (%). The latter is calculated based on the size of the assets placed on the rack and its maximum power consumption. These are defined in the Asset Manager app, specifically with the [asset class configuration](xref:Asset_Class_Details).
+The Racks page displays an overview of all configured racks, along with the rack capacity, power capacity, and space usage (%). The latter is calculated based on the size of the assets placed on the rack and its maximum power consumption. These are defined in the Asset Manager app, specifically with the [asset class configuration](xref:Asset_Designer#configuring-an-asset-class).
 
 Once you have configured your facilities and rooms in the Facility Manager app, the final step to add all infrastructure is typically [adding the racks](#adding-a-rack).
 
