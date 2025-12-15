@@ -4,7 +4,9 @@ uid: Asset_Designer
 
 # Asset Designer
 
-On the Asset Designer page, you can configure the asset classes used in your system. This is typically the first step when configuring the Asset Manager app. You can import the classes via CSV or from GitHub, but you can also you can manually create classes.
+On the Asset Designer page, you can configure the asset classes used in your system. This is typically the first step when configuring the Asset Manager app. You can import the classes via CSV or from GitHub, but you can also manually create classes.
+
+This page also allows you to [add device types](#configuring-device-types), cable types, and port types via the buttons in the top-left corner.<!-- TBD: can we add more info about why cable and port types should be added and how these are used? -->
 
 ## Importing asset classes
 
@@ -18,13 +20,13 @@ The **Import Netbox Asset Classes** option allows you to import assets from Netb
 
 To do so, you will first have to select up to 60 files from the repositories, then click *Selected files*, and then click *Import*.
 
-The **Import/export Asset Classes to/from CSV** allows you to select whether to import or export the asset classes. To import them, keep the *Import* option selected, select and upload your CSV file, and click *Import*.
+The **Import/export Asset Classes to/from CSV** option allows you to select whether to import or export the asset classes. To import them, keep the *Import* option selected, select and upload your CSV file, and click *Import*.
 
 ## Manually creating an asset class
 
 1. In the header bar, select *New Asset Class*.
 
-1. Specify the following details
+1. Specify the following details:
 
    - **Asset Class Name**: A unique descriptive identifier for the asset class.
 
@@ -114,12 +116,22 @@ The hierarchy levels determine which assets can be assigned to other assets:
 
 ### Defining the number of slots for an asset class
 
-<!-- the section below still needs to be reviewed -->
+If you have created an asset class using a device type with a hierarchy level, for example a Chassis asset, you can define the number of slots available for each hierarchy level:
 
-If you have created an asset class using a device type with a hierarchy level, for example a Chassis asset, you can define the number of slots available for each hierarchy level.
+1. Click the details button (ⓘ) for the asset class in the table.
 
-![Chassis Asset Class details](~/solutions/images/Asset_Manager_Chassis_Asset_Class_Details.png)
+   This will open the *Asset class details* pane.
 
-![Cards side panel](~/solutions/images/Asset_Manager_Cards_Side_Panel.png)
+   ![Chassis Asset Class details](~/solutions/images/Asset_Manager_Chassis_Asset_Class_Details.png)
 
-Assets created based on this Asset Class will have the same number of slots configured on the Asset Class (this can still change this default configuration). To configure Device Types, the user needs to select the button on the top left side. There, we also have the option to configure Cable and Port Types.
+1. Click the *Cards*, *Modules*, *Fans*, or *Power Supplies* button in the top-left corner of the pane, depending on the type of slots you want to define.
+
+   For example, if you click *Cards*, this will open the following pane:
+
+   ![Cards side panel](~/solutions/images/Asset_Manager_Cards_Side_Panel.png)
+
+1. Click the *Add* button, specify the number of slots, and click *Save*.
+
+   ![Adding card slots](~/solutions/images/Asset_Manager_Add_card_slots.png)
+
+Assets created based on this asset class will have the same number of slots as configured on the asset class (this can still change this default configuration).<!-- TBD: content in parentheses needs to be better explained -->
