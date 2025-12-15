@@ -53,7 +53,7 @@ The [filter methods](xref:GQI_GQIFilterMethod#fields) that are supported depend 
 
 ### Filter value
 
-The filter value is boxed as an `object` and can be typed checked to extract the actual value.
+The filter value is boxed as an `object` and can be type checked to extract the actual value.
 
 ```csharp
 IGQIValueFilter filter;
@@ -71,5 +71,5 @@ Supported types:
 - string
 - TimeSpan
 
-> [!Warning]
-> When attempting to access the `Value` property of a filter on a column type that is not supported for GQI extensions, a [NotSupportedException](https://learn.microsoft.com/en-us/dotnet/api/system.notsupportedexception) will be thrown.
+> [!NOTE]
+> When you attempt to access the `Value` property of a filter on a column type that is not supported for GQI extensions, a [NotSupportedException](https://learn.microsoft.com/en-us/dotnet/api/system.notsupportedexception) will be thrown.

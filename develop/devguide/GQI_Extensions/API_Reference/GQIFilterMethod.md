@@ -21,18 +21,17 @@ Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards when using the [GQI DxM](x
 | Equals | 1 | Match values that are equal to the filter value. Applicable for every value type. |
 | DoesNotEqual | 2 | Match values that are not equal to the filter value. Applicable for every value type. |
 | IsLessThan | 3 | Match values that are smaller than the filter value. See [Ordinal comparisons](#ordinal-comparisons). |
-| IsLessThanOrEquals | 4 | Match values that are smaller or equal to the filter value. See [Ordinal comparisons](#ordinal-comparisons). |
+| IsLessThanOrEquals | 4 | Match values that are smaller than or equal to the filter value. See [Ordinal comparisons](#ordinal-comparisons). |
 | IsGreaterThan | 5 | Match values that are larger than the filter value. See [Ordinal comparisons](#ordinal-comparisons). |
-| IsGreaterThanOrEquals | 6 | Match values that are larger or equal to the filter value. See [Ordinal comparisons](#ordinal-comparisons). |
+| IsGreaterThanOrEquals | 6 | Match values that are larger than or equal to the filter value. See [Ordinal comparisons](#ordinal-comparisons). |
 | Contains | 7 | Match string values that contain the filter value. |
 | DoesNotContain | 8 | Match string values that do not contain the filter value. |
-| MatchesRegex | 9 | Match string values that match the regex represented by the filter value. See [Regex comparisions](#regex-comparisons). |
-| DoesNotMatchRegex | 10 | Match string value that match the regex represented by the filter value. See [Regex comparisions](#regex-comparisons). |
+| MatchesRegex | 9 | Match string values that match the regex represented by the filter value. See [Regex comparisons](#regex-comparisons). |
+| DoesNotMatchRegex | 10 | Match string value that match the regex represented by the filter value. See [Regex comparisons](#regex-comparisons). |
 
 ## Remarks
 
-> [!NOTE]
-> Filter methods vary in the value types they support, and their behavior depends on the value type to which they are applied.
+Filter methods vary in the value types they support, and their behavior depends on the value type to which they are applied.
 
 ### String comparisons
 
@@ -51,7 +50,7 @@ Values that support ordinal comparisons can use any of the following filter meth
 - `IsLessThan`/`IsGreaterThanOrEquals`
 - `IsGreaterThan`/`IsLessThanOrEquals`
 
-Ordinal comparisions are supported for the following value types:
+Ordinal comparisons are supported for the following value types:
 
 - `DateTime`
 - `double`
@@ -64,4 +63,4 @@ Applies to: `MatchesRegex`/`DoesNotMatchRegex`
 
 Regex (regular expression) comparisons are only supported for string values. The string filter value is interpreted as a .NET regular expression without any [RegexOptions](https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-options).
 
-See also: [.NET Regular Expresssion Language - Quick Reference](https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)
+See also: [.NET Regular Expression Language - Quick Reference](https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference).
