@@ -137,6 +137,12 @@ When a client application connects to a DataMiner System, it retrieves the confi
 
 Up to now, when retrieving that info failed, no retries would incorrectly be attempted. From now on, a retry will be attempted every 10 seconds.
 
+#### Problem when trying to create, update, or delete users or user groups [ID 44245]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Because of file locking issues, in some cases, errors could occur when trying to create, update, or delete users or user groups.
+
 #### Crowd: HTTP response codes would incorrectly be ignored [ID 44254]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
