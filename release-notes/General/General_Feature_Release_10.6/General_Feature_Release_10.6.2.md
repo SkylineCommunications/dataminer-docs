@@ -168,6 +168,20 @@ After you had uploaded a protocol with a version that was identical to the prefi
 
 In some cases, SLElement could stop working when loading elements that included matrix parameters.
 
+#### Problem when importing a .dmimport package containing elements that use a production version of a connector [ID 44189]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When you imported a *.dmimport* package containing an element that used a production version of a connector for which a different version was set as production version on the target agent, up to now, the connector version set as production version in the *.dmimport* package would incorrectly always be set as new production version on the target agent.
+
+From now on, the system will always ask what you want it to do:
+
+- Make the connection version in the *.dmimport* package the new production version on the target agent, and allow the imported element to still use the production version.
+
+OR
+
+- Leave the production version untouched on the target agent, and update the imported element so that it no longer uses the production version but the referenced version instead.
+
 #### BrokerGateway: Issues related to certificates [ID 44195]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
