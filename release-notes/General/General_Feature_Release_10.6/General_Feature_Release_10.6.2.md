@@ -189,12 +189,6 @@ Also, on system using STaaS, up to now, when importing a DELT package containing
 
 When a parameter within a RAD parameter group had not had a value for more than 5 days, up to now, SLAnalytics would incorrectly lose track of the entire parameter group. As a result, no anomalies would get detected for that group, and create, update and delete actions performed on that group would fail.
 
-#### DataMiner installation: Stopping the DataMiner Agent during an installation would incorrectly be interpreted as a crash [ID 44220]
-
-<!-- MR 10.7.0 - FR 10.6.2 -->
-
-At some point during a DataMiner installation, the DataMiner Agent needs to be stopped for a brief moment to allow a number of configuration steps to be performed. Up to now, in some rare cases, SLWatchdog would incorrectly interpret stopping the DataMiner Agent as a crash, causing the system to start up too soon.
-
 #### Problem when retrieving historic alarms with a filter on the value of a discrete parameter [ID 44221]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
