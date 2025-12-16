@@ -2,7 +2,11 @@
 uid: Asset_Connections
 ---
 
-# Asset Connections
+# Configuring asset connections
+
+Assets can have two types of connections, data and power connections, depending on how their device type is configured.
+
+While all assets can have a power connection as a destination, to be able to be a source for a power connection, they need to have a device type with the tag *Power Provider*.
 
 There are two types of Connections: Data and Power Connections. User can open these by selecting the button “Open Connections” on the Asset details:
 

@@ -98,7 +98,7 @@ items:
           items:
           - name: Configuring the asset hierarchy
             topicUid: Asset_Hierarchy
-          - name: Asset Connections
+          - name: Configuring asset connections
             topicUid: Asset_Connections
           - name: Asset Location
             topicUid: Asset_Location

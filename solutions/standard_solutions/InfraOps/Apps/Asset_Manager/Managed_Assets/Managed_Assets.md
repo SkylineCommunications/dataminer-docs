@@ -4,7 +4,7 @@ uid: Managed_Assets
 
 # Managed Assets
 
-When the necessary asset classes have been configured in the [Asset Designer](xref:Asset_Designer), you can add assets to the system.
+When the necessary asset classes have been configured in the [Asset Designer](xref:Asset_Designer), you can add assets to the system on the Managed Assets page.
 
 You can either [import the assets from CSV](#importing-assets-from-csv) or [create assets manually](#manually-adding-an-asset).
 
@@ -38,7 +38,7 @@ On the Managed Assets page, clicking the details button (ⓘ) for an asset will 
 
 In the *Asset details* pane, you can click the pencil icons to define **asset information**, **network details**, **location** information, **lifecycle** information, **ownership**, and **custody details**.
 
-Via the buttons at the top of the pane, you can also configure the [asset hierarchy](xref:Asset_Hierarchy) and connections.
+Via the buttons at the top of the pane, you can also configure the [asset hierarchy](xref:Asset_Hierarchy) and [connections](xref:Asset_Connections).
 
 ![Asset details pane](~/solutions/images/Asset_Manager_Asset_Details_Side_Panel.png)
 
