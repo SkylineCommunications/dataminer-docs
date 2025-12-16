@@ -15,7 +15,7 @@ int targetDmaID = 123;
 
 string serviceXml = "<Service version=\"2\" dmaid=\""+dmaID+"\" id=\""+serviceID+"\" name=\"test remote service\" description=\"\" vdxfile=\"\" ignoreTimeouts=\"false\" isTemplate=\"false\" generatedFromTemplate=\"\" type=\"\" timestamp=\"635723913806993291\"><Element idx=\"0\" dmaid=\"1\" eid=\"21\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element><Element idx=\"1\" dmaid=\"2\" eid=\"3\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element><Triggers></Triggers></Service>";
 
-object result = protocol.NotifyDataMiner(282 /*NT_SERVICE_REMOTE*/ , object[] { targetDmaID, uint[] { serviceID, dmaID} }, serviceXml);
+object result = protocol.NotifyDataMiner(282 /*NT_SERVICE_REMOTE*/ , new object[] { targetDmaID, new uint[] { serviceID, dmaID} }, serviceXml);
 
 if (result != null)
 {
@@ -37,7 +37,7 @@ int targetDmaID = 123;
 
 string serviceXml = "<Service version=\"2\" dmaid=\""+dmaID+"\" id=\""+serviceID+"\" name=\"test remote service\" description=\"\" vdxfile=\"\" ignoreTimeouts=\"false\" isTemplate=\"false\" generatedFromTemplate=\"\" type=\"\" timestamp=\"635723913806993291\"><Element idx=\"0\" dmaid=\"1\" eid=\"21\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element><Element idx=\"1\" dmaid=\"2\" eid=\"3\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element><Triggers></Triggers></Service>";
 
-object result = protocol.NotifyDataMiner(282 /*NT_SERVICE_REMOTE*/ , object[] { targetDmaID, serviceID }, serviceXml);
+object result = protocol.NotifyDataMiner(282 /*NT_SERVICE_REMOTE*/ , new object[] { targetDmaID, serviceID }, serviceXml);
 
 if (result != null)
 {
@@ -74,3 +74,4 @@ Option 2:
 ## Return Value
 
 - (uint[]): The first element of the array contains the ID of the service.<!-- RN 10304 -->
+
