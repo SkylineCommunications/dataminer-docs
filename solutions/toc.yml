@@ -116,7 +116,7 @@ items:
           topicUid: Row_Viewer
         - name: Rack Comparer
           topicUid: Rack_Comparer
-        - name: App Settings
+        - name: App settings
           topicUid: App_Settings
       - name: Plan and Build
         topicUid: Plan_And_Build

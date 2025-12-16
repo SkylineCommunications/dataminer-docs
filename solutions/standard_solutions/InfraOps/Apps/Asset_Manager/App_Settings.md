@@ -2,12 +2,14 @@
 uid: App_Settings
 ---
 
-# App Settings
+# App settings
 
-Present on the about page, here users have access to a few settings that can be configured:
+On the About page of the Asset Manager app, you can view and edit the app settings.
 
-![Asset Manager App Settings Wizard](~/solutions/images/Asset_Manager_App_Settings_Wizard.png)
+![Asset Manager About page](~/solutions/images/Asset_Manager_About_page.png)
 
-The first two options allow users to enable or disable the tracking of Asset and Connections changes. Then, users have the Max History Entries field, where users can define maximum number of history records. To add to the previous settings, the History TTL fields are also available for users to define for how long they want to keep their history records.
+- The **Enable Asset History** and **Enable Connection History** options determine whether asset and connection changes are tracked. If these are enabled, the history of assets and connections is displayed on the History page of the app.
 
-Finally, the Job Action field allows users to define if they want to be prompted with the possibility to create a job every time they make any change on the asset manager (editing assets, creating connection, etc).
+- The **Plan and Build Job Prompt** field allows you to define if you want to be prompted with the possibility to create a job every time you make any change in the Asset Manager (editing assets, creating connections, etc.).
+
+- The **Max History Entries** setting determines the maximum number of history records that will be kept, while the **History TTL** setting determines for how many days history records are kept.
