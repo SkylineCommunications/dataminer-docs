@@ -25,7 +25,7 @@ Each `GroupLink` entry defines access for one DataMiner security group:
 |--|--|--|
 | GroupName | string | Name of the DataMiner security group. **Note:** Changing the name of a security group invalidates the link (you will need to update the link). |
 | DomDefinitionReferences | List&lt;DomDefinitionReference&gt; | Stores the references to the `DomDefinition` objects whose instances are accessible to the group. A reference is resolved via the DOM definition ID. |
-| FieldValueReferences | List&lt;FieldValueReference&gt; | Stores the references to a `DomDefinition` and `FieldDescriptor` alongside a collection of values that determine what instances will be accessible to the user. A reference is resolved via the IDs of the definition and field descriptor.|
+| FieldValueReferences | List&lt;FieldValueReference&gt; | Stores the references to a `DomDefinition` and `FieldDescriptor` alongside a collection of values that determine what instances will be accessible to the user. A reference is resolved via the IDs of the definition and field descriptor. Supported from DataMiner 10.6.2/10.6.0 onwards.|
 
 > [!NOTE]
 > In future versions, additional security-related configuration or link types may be added to the `GroupLink` class.
@@ -70,8 +70,13 @@ The following `FieldDescriptors` can be referenced:
 The security filtering is done entirely in the DB, which allows this system to be applied on DOM definitions that have millions of DOM instances linked. To ensure optimal performance and stability, some limitations are in place:
 
 - You can define up to 10 values on a reference.
-- You can only specify 1 reference per group for a DOM definition
-- When a user is part of multiple groups, and multiple of those groups have this kind of reference for a certain DOM definition, the reference of the group that comes first alphabetically (case insensitive) will be used. It is recommended to avoid these situations by defining & using the groups in such a way that overlaps are avoided. Note that it is supported to be part of an additional group that defines full definition level access. In that case, this full access will take precedence over the limited access of the other group.
+- You can only specify 1 reference per group for a DOM definition.
+- When a user is part of multiple groups, and multiple of those groups have this kind of reference for a certain DOM definition, the reference of the group that comes first alphabetically (case insensitive) will be used. It is recommended to avoid these situations by defining & using the groups in such a way that overlaps are avoided. Specific groups could be created for this.
+
+> [!NOTE]
+>
+> - A user can be part of an additional group that defines full definition level access for the same DOM definition. In that case, this full access will take precedence over the limited access of the other group.
+> - The ID of FieldDescriptor IDs should be unique within a DOM module. If there are duplicate IDs used across multiple SectionDefinitions in the module, this may result in unexpected behavior with this type of security reference.
 
 > [!IMPORTANT]
 > When `FieldValueReferences` are used to limit access to the instances of a definition, the filter used to read or count the instances must ideally not exceed 100 OR clauses. On Elasticsearch and OpenSearch, there is a default limit of 1024 OR clauses. When you specify a reference with 3 values, this means that the maximum number of conditions sent via the DOM helper read or count method should be 3 times less than this maximum (341). Since there is a limit of 10 condition values, the recommended max clauses of 100 should prevent queries from failing. On STaaS there is no such hard limit, but there is, however, a limit on the general query request size. To ensure a performant and stable solution, a maximum of 100 clauses is also recommended here.
@@ -80,7 +85,7 @@ When the `ModuleSettings` object is saved with this kind of references defined, 
 
 | Reason | Explanation |
 |--|--|
-| DomSecurityFieldValueReferenceHasInvalidIds | A reference was defined that contains empty Guid values for one of the ID fields. |
+| DomSecurityFieldValueReferenceHasInvalidIds | A reference was defined that contains an empty Guid value for the `DomDefinitionId` or `FieldDescriptorId` properties. |
 | DomSecurityFieldValueReferenceHasNoValues | A reference was defined that contains an empty list of values. |
 | DomSecurityFieldValueReferenceHasTooManyValues | A reference was defined that contains more than the maximum of 10 values. |
 
