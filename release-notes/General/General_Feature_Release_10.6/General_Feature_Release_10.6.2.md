@@ -279,3 +279,9 @@ When DataMiner was configured to import users and groups from a Crowd server, SL
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 Up to now, whenever an IP address listed in BrokerGateway's `appsettings.runtime.json` file could not be reached, `getnatsconnectiondetails` calls would slow down for all MessageBroker clients, causing DataMiner to not start up as it would not be able to contact the StorageModule DcM fast enough.
+
+#### Problem when calling NotifyDataMiner NT_ELEMENT_STARTUP_COMPLETE for an element while that element was being renamed [ID 44288]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a QAction called NotifyDataMiner `NT_ELEMENT_STARTUP_COMPLETE` for its own element while that element was being renamed, up to now, a deadlock would occur, causing a run-time error.
