@@ -107,7 +107,7 @@ When you imported a *.dmimport* package containing an element that used a produc
 
 From now on, the system will always ask what you want it to do:
 
-- Make the connection version in the *.dmimport* package the new production version on the target agent, and allow the imported element to still use the production version.
+- Make the connector version in the *.dmimport* package the new production version on the target agent, and allow the imported element to still use the production version.
 
 OR
 
