@@ -43,6 +43,14 @@ Also, all logging with regard to OpenSearch health monitoring can now be found i
 
 Note that, from now on, if not all nodes of the OpenSearch cluster are listed in the *Db.xml* file, a notice will be generated to warn operators.
 
+#### Elasticsearch/OpenSearch: Enhanced history alarm filtering on service ID or service name [ID 44192]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When, on a system with a Cassandra Cluster database, history alarms are filtered on service ID or service name, up to now, that filter would not be translated correctly to Elasticsearch or OpenSearch. From now on, that filter will be translated correctly. As a result, overall performance will increase when applying the filter in question to large data sets.
+
+Also, filtering on alarm properties or interfaces using wildcards or regular expression has now been made case insensitive.
+
 #### Enhanced performance when upgrading DxMs [ID 44210] [ID 44211]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->

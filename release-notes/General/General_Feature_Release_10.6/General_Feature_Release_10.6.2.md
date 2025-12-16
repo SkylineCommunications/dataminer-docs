@@ -90,6 +90,14 @@ From now on, when you try to add a DataMiner Agent to a DataMiner System, the op
 
 If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.  
 
+#### Elasticsearch/OpenSearch: Enhanced history alarm filtering on service ID or service name [ID 44192]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When, on a system with a Cassandra Cluster database, history alarms are filtered on service ID or service name, up to now, that filter would not be translated correctly to Elasticsearch or OpenSearch. From now on, that filter will be translated correctly. As a result, overall performance will increase when applying the filter in question to large data sets.
+
+Also, filtering on alarm properties or interfaces using wildcards or regular expression has now been made case insensitive.
+
 #### Scheduler will now be able to start more than 10 synchronously running Automation scripts [ID 44200]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
