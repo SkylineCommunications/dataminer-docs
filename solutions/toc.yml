@@ -96,9 +96,7 @@ items:
         - name: Managed Assets
           topicUid: Managed_Assets
           items:
-          - name: Asset Details
-            topicUid: Asset_Details
-          - name: Asset Hierarchy
+          - name: Configuring the asset hierarchy
             topicUid: Asset_Hierarchy
           - name: Asset Connections
             topicUid: Asset_Connections
@@ -106,7 +104,7 @@ items:
             topicUid: Asset_Location
           - name: Asset Custody and Ownership
             topicUid: Asset_Custody_and_Ownership
-          - name: Asset Lifecycle
+          - name: Asset lifecycle
             topicUid: Asset_Lifecycle
         - name: Connections
           topicUid: AssetManager_Connections

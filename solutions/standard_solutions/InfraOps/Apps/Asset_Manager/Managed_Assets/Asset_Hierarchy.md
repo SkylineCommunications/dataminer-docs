@@ -2,28 +2,47 @@
 uid: Asset_Hierarchy
 ---
 
-# Asset Hierarchy
+# Configuring the asset hierarchy
 
-As already discussed in the Asset Class section, a user can configure a full hierarchical structure for their chassis. While in the Asset Class the user can define the number of holders available by default for the Asset, here this can be changed (adding more holders or removing them) and the Assets can be assigned to the available holders.
+Assets inherit their [hierarchy from the device type](xref:AM_Configuring_device_types#device-type-hierarchy-roles) of their asset class. In addition, they can inherit a [number of slots defined for the asset class](xref:Asset_Designer#defining-the-number-of-slots-for-an-asset-class).
 
-This can be configured using a node edge component, for that, the user needs to press the “Hierarchy” button on the asset details:
+After you open the *Asset details* pane for an asset (via the ⓘ button on the Managed Assets page), the buttons at the top of that pane will allow you to add or modify assets assigned to the hierarchy.
 
-![Asset Details Side Panel - Hierarchy dropdown](~/solutions/images/Asset_Manager_Asset_Details_Side_Panel_Hierarchy_Dropdown.png)
+## Configuring slots for an asset
 
-![Full Hierarchy side panel](~/solutions/images/Asset_Manager_Full_Hierarchy_Side_Panel.png)
+If the relevant slots are supported for the asset class of your asset, the buttons *Cards*, *Modules*, *Fans*, and/or *Power Supplies* will be available at the top of the *Asset details* pane.
 
-Here the user can edit or remove existing assets from the hierarchy tree, but also can add new ones:
+![Slot configuration buttons](~/solutions/images/Asset_Manager_Asset_Details_Hierarchy_Options.png)
 
-![Card assignment Wizard](~/solutions/images/Asset_Manager_Card_Assignment_Wizard.png)
+Clicking such a button will open a pane where you can add slots with the *Add* button at the top.
 
-The option to Assign a child asset on the node edge component is only available if the chassis assets have slots available. This can be confirmed on the table view for each hierarchical level on the asset details:
+![Side panel for card assignment](~/solutions/images/Asset_Manager_Side_Panel_For_Card_Assignment.png)
 
-![Asset Details Hierarchy options](~/solutions/images/Asset_Manager_Asset_Details_Hierarchy_Options.png)
+## Assigning assets to slots
 
-![Side panel for Card assignment](~/solutions/images/Asset_Manager_Side_Panel_For_Card_Assignment.png)
+When you have configured slots for an asset, as detailed above, you can immediately add assets to them by clicking the ![Slots icon](~/solutions/images/AM_Slots_icon.png) icon
 
-Finally, on the hierarchy topic, the user can also check the node edge component along with a table with all the child assets assigned to it, by pressing “View Child Assets”:
+Alternatively, you can configure the assets based on a full overview of the hierarchy by clicking the *Hierarchy* button in the *Asset details* pane and selecting *View Full Hierarchy*.
 
-![Child Assets side panel](~/solutions/images/Asset_Manager_Child_Assets_Side_Panel.png)
+![Hierarchy dropdown](~/solutions/images/Asset_Manager_Asset_Details_Side_Panel_Hierarchy_Dropdown.png)
 
-To note that, for any change made using the node edge component, the user will also need to press “↻ Refresh hierarchy” to see the changes.
+This will open a pane where all the slots in the hierarchy are shown as nodes in a node-edge graph. Hovering the mouse pointer over a node opens a pop-up box with more information about that node.
+
+![Full hierarchy panel](~/solutions/images/Asset_Manager_Full_Hierarchy_Side_Panel.png)
+
+For slots that already have assets assigned to them, the X icon in the pop-up box can be used to remove the asset, and the pencil icon allows you to assign a different asset.
+
+Clicking an empty node in the node-edge graph will immediately open the dialog to assign an asset to the slot.
+
+![Card assignment wizard](~/solutions/images/Asset_Manager_Card_Assignment_Wizard.png)
+
+However, note that you will only see nodes in the graph if the necessary [slots have been configured](#configuring-slots-for-an-asset).
+
+> [!NOTE]
+> After you have made changes to the hierarchy, click the *Refresh Hierarchy* button at the top of the pane to view the effect of your changes.
+
+## Viewing an overview of all child assets
+
+To get an overview of all the child assets that have been configured for your asset, with both a node-edge graph illustrating how they are linked and a table listing the different assets, at the top of the *Asset details* pane, select *Hierarchy* > *View Child Assets*.
+
+![Child Assets panel](~/solutions/images/Asset_Manager_Child_Assets_Side_Panel.png)
