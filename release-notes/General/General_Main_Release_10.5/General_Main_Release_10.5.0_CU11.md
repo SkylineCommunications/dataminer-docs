@@ -197,3 +197,9 @@ Because of file locking issues, in some cases, errors could occur when trying to
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 When DataMiner was configured to import users and groups from a Crowd server, SLDataMiner would incorrectly disregard HTTP result codes while parsing a response during the hourly LDAP synchronization. This could lead to users being removed from their groups until the next successful synchronization, causing them to be unable to log in to DataMiner.
+
+#### BrokerGateway: getnatsconnectiondetails calls would slow down whenever an IP address listed in appsettings.runtime.json could not be reached [ID 44287]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Up to now, whenever an IP address listed in BrokerGateway's `appsettings.runtime.json` file could not be reached, `getnatsconnectiondetails` calls would slow down for all MessageBroker clients, causing DataMiner to not start up as it would not be able to contact the StorageModule DcM fast enough.
