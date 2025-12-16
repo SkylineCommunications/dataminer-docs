@@ -60,6 +60,41 @@ Because of a number of enhancements, overall performance has increased when the 
 - BrokerGateway
 - StorageModule
 
+#### SLLogCollector packages will now also include time zone info, domain info, IP addresses of NICs, Web.config files, IIS configuration, and HTTP service state [ID 44223]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+SLLogCollector packages will now also include the following information:
+
+- Time zone info, which will be stored in the following file:
+
+  ```text
+  /Windows/powershell.exe Get-TimeZone_.txt
+  ```
+
+- Windows domain info, which will be stored in the following files:
+
+  ```text
+  /Windows/nltest.exe _dclist_.txt
+  /Windows/nltest.exe _domain_trusts.txt
+  /Windows/nltest.exe _dsgetdc_.txt
+  ```
+
+- The IP addresses of all network adapters, which will be stored in the following files:
+
+  ```text
+  /Network Information/NetworkInterface_GetAllNetworkInterfaces.txt
+  /Network Information/powershell.exe [System.Net.Dns]_GetHostname().txt
+  ```
+
+- All `Web.config` files found in `C:\Skyline DataMiner\WebPages` and all its subfolders.
+
+- The entire IIS configuration.
+
+- A snapshot of the HTTP service state (Request Queue View), which will be stored in the following file:
+
+  `/Network Information/netsh.exe http show servicestate view=requestq verbose=no.txt`
+
 ### Fixes
 
 #### Not possible to export elements with logger tables on systems with Cassandra Cluster and OpenSearch [ID 44105]
