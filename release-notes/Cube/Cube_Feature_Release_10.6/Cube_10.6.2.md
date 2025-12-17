@@ -133,3 +133,11 @@ From now on, when the Y axis of the trend graph of a particular parameter is con
     </Display>
 </Param>
 ```
+
+#### Router Control: Problem when clicking Undo [ID 44322]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+
+When, in the *Router Control* module, you clicked the *Undo* button twice, in some cases, empty values could incorrectly get saved in the connections matrix, making it impossible to restore previous connections.
+
+From now on, during an undo operation, DataMiner Cube will filter out empty values, making sure that previous connections are properly restored without breaking existing configurations.
