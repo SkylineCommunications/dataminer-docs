@@ -220,7 +220,7 @@ From now on, the grid will try to grow or shrink vertically in order to avoid a 
 > [!NOTE]
 > A PDF report containing a Grid component can still show scrollbars and/or clipped content when the grid is set to show a fixed amount of row and a fixed amount of columns (without *Stretch to fit* option).
 
-#### GQI DxM: Partition join strategy for DOM data [ID 44275]
+#### GQI DxM: Partition join strategy for DOM data [ID 44275] [ID 44327]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
@@ -234,7 +234,7 @@ This new join strategy will only be applied to join operations in the following 
 
 - The *prefetch* option is disabled for the join operator
 
-  - This new *prefetch* option is disabled by default and will only be visible when the `showAdvancedSettings=true` argument is added to the URL of the dashboard or low-code app.
+  - This new *prefetch* option is disabled by default, and will only be visible in the query builder when the `showAdvancedSettings=true` argument is added to the URL of the dashboard or low-code app.
   - When the *row-by-row* option is enabled, the *prefetch* option will be ignored.
 
 - Real-time updates are not enabled.
