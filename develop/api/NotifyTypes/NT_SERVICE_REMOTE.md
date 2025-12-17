@@ -29,7 +29,7 @@ Creates or updates a service on a remote DMA.
 - Option 2: Create or update a service with only the **local service ID**.
 
   > [!CAUTION]
-  > This method will not work when the hosting DataMiner ID of the service is different from the DataMiner ID of the service.
+  > This method will not work to update services when the hosting DataMiner ID of the service is different from the DataMiner ID of the service.
 
   ```csharp
   int dmaID = 346;
@@ -74,4 +74,4 @@ Creates or updates a service on a remote DMA.
 
 ## Return Value
 
-- (uint[]): The first element of the array contains the ID of the service.<!-- RN 10304 -->
+- (uint[]): The first element of the array contains the ID of the service.<!-- RN 10304 --> This ID can be combined with the provided *dmaID* when using option 1 or the local DataMiner ID when using option 2 to represent the **full Service ID** which is a unique ID across the DMS.

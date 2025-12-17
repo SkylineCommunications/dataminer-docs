@@ -29,7 +29,7 @@ Creates or updates a service on a local DMA.
 - Option 2: Create or update a service with only the **local service ID**.
 
   > [!CAUTION]
-  > This method will not work when the hosting DataMiner ID of the service is different from the DataMiner ID of the service.
+  > This method will not work to update services when the hosting DataMiner ID of the service is different from the DataMiner ID of the service.
 
   ```csharp
   int serviceID = -1;
@@ -65,7 +65,7 @@ Creates or updates a service on a local DMA.
 
 ## Return Value
 
-- (uint[]): The first element of the array contains the service ID.
+- (uint[]): The first element of the array contains the service ID. This ID can be combined with the provided *dmaID* when using option 1 or the local DataMiner ID when using option 2 to represent the **full Service ID** which is a unique ID across the DMS.
 
 ## Remarks
 
