@@ -68,3 +68,7 @@ When a job that had errors (for example because it went into the quarantined sta
 #### Scheduling: Incorrect status message when canceling recurrence [ID 44304]
 
 When a recurrence from the Scheduling app was canceled, previously this displayed the incorrect status "Updating Series...". Now the correct status "Canceling Series..." will be displayed instead.
+
+### Resource Studio: Capability, capacity, and property title boxes not displayed correctly when multiple rows are selected [ID 44355]
+
+When multiple rows were selected on the Resources page of Resource Studio, the title boxes for capabilities, capacities, and properties were not displayed correctly.
