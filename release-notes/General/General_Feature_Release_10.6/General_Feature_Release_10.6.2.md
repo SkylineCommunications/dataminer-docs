@@ -297,3 +297,9 @@ Up to now, whenever an IP address listed in BrokerGateway's `appsettings.runtime
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 When a QAction called NotifyDataMiner `NT_ELEMENT_STARTUP_COMPLETE` for its own element while that element was being renamed, up to now, a deadlock would occur, causing a run-time error.
+
+#### A history set parameter with a constant value would not properly update its new timestamp [ID 44318]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Up to now, a history set parameter with a constant value would not properly update its new timestamp when a set parameter was triggered with a more recent timestamp.
