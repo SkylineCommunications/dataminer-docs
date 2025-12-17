@@ -342,3 +342,15 @@ Because these two actions will only affect the viewport after the user interacti
 In a low-code app, a *Timeline* component would cause undesired layout shifting while you were moving items between groups. This could lead to you dropping the items in the wrong group.
 
 Also, it would not be possible to pan the timeline when starting on a timeline item.
+
+#### Web apps: Problems with context menus [ID 44309]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In the DataMiner web apps, the following context menu issues have been solved:
+
+- When you right-clicked a context menu, it would not immediately close when you left-clicked the same element you right-clicked to open it. The menu would only close when you left-clicked a second time.
+
+- A context menu with a submenu, or any context menu with a horizontal positioning in relation to its parent, could be out of the viewport when opened at the bottom of the screen.
+
+- In some cases, when a context menu had been opened by pressing the space bar, it could act erratically. It would not close when you clicked outside of it, and if it had a submenu, that submenu would open on top of the existing menu.
