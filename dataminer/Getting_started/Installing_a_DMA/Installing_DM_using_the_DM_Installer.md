@@ -112,7 +112,9 @@ To install DataMiner using the DataMiner Installer v10.5, follow the steps below
 
 1. To start the configuration, click *Next*.
 
-   The configuration progress will now be displayed. When the configuration is complete, you can close the window.
+   The configuration progress will now be displayed.
+
+1. When the configuration is complete, click *Finish* to close the installer.
 
    DataMiner will automatically start up and connect to dataminer.services. DataMiner Cube will also be installed, so you can connect to DataMiner locally.
 
