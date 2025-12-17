@@ -34,12 +34,30 @@ The newly created asset will inherit the configuration from its asset class.
 
 ## Configuring asset details
 
-On the Managed Assets page, clicking the details button (ⓘ) for an asset will open a pane where you can configure asset details.
-
-In the *Asset details* pane, you can click the pencil icons to define **asset information**, **network details**, **location** information, **lifecycle** information, **ownership**, and **custody details**.
-
-Via the buttons at the top of the pane, you can also configure the [asset hierarchy](xref:Asset_Hierarchy) and [connections](xref:Asset_Connections).
+When you have added an asset, you can fine-tune it by clicking the details button (ⓘ) for the asset in the table. This will open the *Asset details* pane:
 
 ![Asset details pane](~/solutions/images/Asset_Manager_Asset_Details_Side_Panel.png)
 
-<!-- TBD: add links to relevant subpages -->
+In this pane, you can configure the following details, depending on the asset state (see [Asset lifecycle](xref:Asset_Lifecycle)):
+
+- The **asset information**:
+
+  - The asset class **name**.
+  - The asset **ID**
+  - The **description**.
+  - The **serial number**.
+  - The **firmware/OS**.
+  - The **hardware version**.
+  - Any relevant **notes** for the asset.
+
+- The **network details**: IP address, MAC address, and hostname.
+
+- **Location** information: See [Configuring the asset location](xref:Configuring_asset_location).
+
+- **Lifecycle** information: This can include the purchase date, the first-use date, the end of warranty, the installation date and user, and the modification date and user.
+
+- **Ownership**: The organization, team, and contact person, for the asset. The list of possible organizations, teams, and people is retrieved from the [People & Organizations](xref:People_Organizations) app.
+
+- **Custody** details: Similar to the *Ownership* section, but with a *From* and *Till* date to indicate the period during which the custody applies.
+
+Via the buttons at the top of the pane, you can also configure the [asset hierarchy](xref:Asset_Hierarchy) and [connections](xref:Configuring_asset_connections).

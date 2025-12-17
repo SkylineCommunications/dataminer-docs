@@ -99,11 +99,9 @@ items:
           - name: Configuring the asset hierarchy
             topicUid: Asset_Hierarchy
           - name: Configuring asset connections
-            topicUid: Asset_Connections
-          - name: Asset Location
-            topicUid: Asset_Location
-          - name: Asset Custody and Ownership
-            topicUid: Asset_Custody_and_Ownership
+            topicUid: Configuring_asset_connections
+          - name: Configuring the asset location
+            topicUid: Configuring_asset_location
           - name: Asset lifecycle
             topicUid: Asset_Lifecycle
         - name: Connections

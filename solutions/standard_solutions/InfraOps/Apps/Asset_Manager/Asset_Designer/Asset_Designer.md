@@ -40,7 +40,7 @@ The **Import/export Asset Classes to/from CSV** option allows you to select whet
 
 ## Configuring an asset class
 
-When you have added an asset class, you can fine-tune by clicking the details button (ⓘ) for the asset class in the table. This will open the *Asset details* pane
+When you have added an asset class, you can fine-tune it by clicking the details button (ⓘ) for the asset class in the table. This will open the *Asset class details* pane:
 
 ![Asset class details](~/solutions/images/Asset_Manager_Chassis_Asset_Class_Details.png)
 
