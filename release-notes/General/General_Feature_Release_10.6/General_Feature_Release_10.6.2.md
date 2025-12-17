@@ -164,6 +164,12 @@ When database operations fail or take too long, the queue of database synchroniz
 
 From now on, SLAnalytics will pause the creation of new synchronization tasks for some types of model information whenever there are too many pending tasks already. New synchronization operations will only be created again once the backlog has decreased.
 
+#### Service & Resource Management: Enhanced communication between resource managers across DataMiner Agents [ID 44279]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+A number of enhancements have been done with regard to the communication between resource managers across DataMiner Agents. This will especially enhance performance when starting multiple bookings on non-master DMAs.
+
 ### Fixes
 
 #### Problem when a connector was deleted immediately after it had been uploaded [IID 44083]

@@ -118,6 +118,12 @@ From now on, it will be possible to start more than 10 synchronously running Aut
 
 The response to a `GetRADParameterGroupInfoMessage` will now also include the ID of the RAD parameter group.
 
+#### Service & Resource Management: Enhanced communication between resource managers across DataMiner Agents [ID 44279]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+A number of enhancements have been done with regard to the communication between resource managers across DataMiner Agents. This will especially enhance performance when starting multiple bookings on non-master DMAs.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
