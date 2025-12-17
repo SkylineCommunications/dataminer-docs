@@ -111,8 +111,8 @@ Up to now, when Cube was running as a service, browser instances would incorrect
 
 From now on, when Cube is running as a service, browser shapes will only verify whether the URL is correct. No browser instances will created anymore.
 
-#### Settings: Updates made to an alarm tab of type "sliding window" defined on group level would not be saved or applied [ID 44313]
+#### Settings: Updating the size of the sliding window of an alarm tab of type "sliding window" defined on group level would not be saved or applied [ID 44313]
 
 <!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
 
-When, in the *Settings* app, you had defined an alarm tab of type "sliding window" on group level, up to now, any updates made to the settings of that alarm tab would incorrectly not be saved or applied.
+When, in the *Settings* app, you had defined an alarm tab of type "sliding window" on group level, up to now, updating the size of that sliding window would incorrectly not be saved or applied.
