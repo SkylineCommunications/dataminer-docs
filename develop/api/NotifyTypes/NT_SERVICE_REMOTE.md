@@ -74,4 +74,5 @@ Creates or updates a service on a remote DMA.
 
 ## Return Value
 
-- (uint[]): The first element of the array contains the ID of the service.<!-- RN 10304 --> This ID can be combined with the provided *dmaID* when using option 1 or the local DataMiner ID when using option 2 to represent the **full Service ID** which is a unique ID across the DMS.
+- (uint[]): The first element of the array contains the ID of the service.<!-- RN 10304 --> This ID can be combined with the provided *dmaID* when using option 1 or the local DataMiner ID when using option 2 to represent the **full service ID**, which is a unique ID across the DMS.
+
