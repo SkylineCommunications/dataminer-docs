@@ -73,7 +73,7 @@ To implement the sort optimization, take the following steps:
    1. Use the [IsSortOperator](xref:GQI_IGQICoreBlock#bool-issortoperatorout-igqisortoperator-sortoperator) method on the `nextOperator` argument to check whether the next operator is a sort operator.
 
       - If `true`: Store the sort operator in the `_sortOperator` field to optimize later in the lifecycle. Return the `currentNode` without appending the sort operator to remove the operator from the query and transfer the responsibility of applying the sort operation to the data source.
-      - If `false`: Append the `nextOperator` to the `currentNode` and return the result. This tells the GQI framework that the operator should still be applied after the data is received from the data source. This would also be the default behavior in case the [IGQIOptimizableDataSource](xref:GQI_IGQIOptimizableDataSource) were not implemented.
+      - If `false`: Append the `nextOperator` to the `currentNode` and return the result. This tells the GQI framework that the operator should still be applied after the data is received from the data source. This would also be the default behavior in case the [IGQIOptimizableDataSource](xref:GQI_IGQIOptimizableDataSource) interface was not implemented.
 
 1. Extend the [OnPrepareFetch](xref:Ad_hoc_Life_cycle#onpreparefetch) lifecycle method to apply the sort operator stored in the `sortOperator` field:
 

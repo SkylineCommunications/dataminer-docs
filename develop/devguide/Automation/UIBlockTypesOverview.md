@@ -39,7 +39,7 @@ Starting from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12, the UI version used 
 engine.WebUIVersion = WebUIVersion.V1;
 ```
 
-By default, [WebUIVersion](xref:Skyline.DataMiner.Automation.Engine.WebUIVersion) is set to *WebUIVersion.Default*. Prior to web DataMiner 10.5.0 [CU10]/10.6.1<!-- RN 44059 -->, this shows the V1 version of the UI. In later DataMiner web versions, this shows the V2 version of the UI, but only if the server uses DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 or higher. For earlier server versions, the V1 version of the UI continues to be shown.
+By default, [WebUIVersion](xref:Skyline.DataMiner.Automation.Engine.WebUIVersion) is set to *WebUIVersion.Default*. Prior to web DataMiner 10.5.0 [CU10]/10.6.1<!-- RN 44059 -->, this shows the V1 version of the UI. In later DataMiner web versions, this shows the V2 version of the UI, but only if the server uses DataMiner 10.5.12/10.6.0<!-- RN 43875 --> or higher. For earlier server versions, the V1 version of the UI continues to be shown.
 
 If the [useNewIASInputComponents](xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url) URL parameter is used, it will take priority over the configured version in the script and shows version V1 when set to false and version V2 when set to true.
 

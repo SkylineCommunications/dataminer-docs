@@ -31,6 +31,10 @@ On the *Resources* page of the Resource Studio app, when a large number of resou
 
 When users do not have the necessary permissions to execute a certain action, a clear message will now be shown to inform them of this. Previously, only a stack trace was shown.
 
+#### Resource Studio: New resource icons [ID 44330]
+
+A new LNB, SSPA, and transponder icon have been added to the list of available resource icons in the Resource Studio app.
+
 ### Fixes
 
 #### Scheduling: Action buttons missing in Edit Job panel after reverting job status to Tentative [ID 43808]

@@ -334,3 +334,11 @@ Note that the following actions will only affect the viewport after the user int
 - Selecting a segment on top of the timeline.
 
 Because these two actions will only affect the viewport after the user interaction has finished, the Timeline component will also receive an incoming viewport change request from the Time range component after the user interaction has finished. That way, the latter request will overrule the viewport changes that were made initially.
+
+#### Low-Code Apps - Timeline component: Undesired layout shifting while you were moving items between groups [ID 44307]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In a low-code app, a *Timeline* component would cause undesired layout shifting while you were moving items between groups. This could lead to you dropping the items in the wrong group.
+
+Also, it would not be possible to pan the timeline when starting on a timeline item.

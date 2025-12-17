@@ -81,6 +81,12 @@ When Cube is connected to a DataMiner System using STaaS:
 
 Also, when an exception is thrown when Cube tries to use the MigrationManagerHelper, an error will now be logged in the Cube logging.
 
+#### SLAnalytics: DataMinerID field of TargetClientRequestMessage will now be set to the DataMiner ID of the element [ID 44358]
+
+<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 [CU0] -->
+
+In the `TargetClientRequestMessage`, which is used by DataMiner Cube to request behavioral change points and relational anomalies, up to now, the `DataMinerID` field was set to the DataMiner ID of the hosting agent. From now on, the `DataMinerID` field will be set to the DataMiner ID of the element. This will ensure that SLNet is able to route the request to the correct hosting agent.
+
 ### Fixes
 
 #### Automation: Not possible to save a script after changing the 'Wait for positive result for at most' option of an If condition [ID 44032]

@@ -13,7 +13,7 @@ uid: DMAElementPage
 | Position            | Integer         | The position of the page in the list of pages of the element specified in *ElementID*. |
 | Children            | Array of string | The subpages of this page. |
 | IsSeparator         | Boolean         | Whether the page is an actual page or merely a separator. |
-| IsPopup             | Boolean         | Whether or not the page is a popup page. |
+| IsPopup             | Boolean         | Whether or not the page is a pop-up page. |
 | IsWeb               | Boolean         | Whether or not the page is a webpage. |
 | IsSpectrum          | Boolean         | Whether or not the page is a spectrum page. |
 | IsGeneralParameters | Boolean         | Whether or not the page is a “General Parameters” page. |
