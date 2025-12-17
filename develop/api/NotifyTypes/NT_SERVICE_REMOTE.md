@@ -29,7 +29,7 @@ Creates or updates a service on a remote DMA.
 - Option 2: Create or update a service with only the **local service ID**.
 
   > [!CAUTION]
-  > This method will not work when the hosting DataMiner ID of the service is different from the DataMiner ID of the service.
+  > This method will not work to update services when the hosting DataMiner ID of the service is different from the DataMiner ID of the service.
 
   ```csharp
   int dmaID = 346;
@@ -38,7 +38,7 @@ Creates or updates a service on a remote DMA.
 
   string serviceXml = "<Service version=\"2\" dmaid=\""+dmaID+"\" id=\""+serviceID+"\" name=\"test remote service\" description=\"\" vdxfile=\"\" ignoreTimeouts=\"false\" isTemplate=\"false\" generatedFromTemplate=\"\" type=\"\" timestamp=\"635723913806993291\"><Element idx=\"0\" dmaid=\"1\" eid=\"21\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element><Element idx=\"1\" dmaid=\"2\" eid=\"3\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element><Triggers></Triggers></Service>";
 
-  object result = protocol.NotifyDataMiner(282 /*NT_SERVICE_REMOTE*/ , new object[] { targetDmaID, new uint[] { serviceID, dmaID} }, serviceXml);
+  object result = protocol.NotifyDataMiner(282 /*NT_SERVICE_REMOTE*/ , new object[] { targetDmaID, serviceID }, serviceXml);
 
   if (result != null)
   {
@@ -74,4 +74,6 @@ Creates or updates a service on a remote DMA.
 
 ## Return Value
 
-- (uint[]): The first element of the array contains the ID of the service.<!-- RN 10304 -->
+- (uint[]): The first element of the array contains the ID of the service.<!-- RN 10304 --> This ID can be combined with the provided *dmaID* when using option 1 or the target DataMiner ID when using option 2 to represent the **full service ID**, which is a unique ID across the DMS.
+
+
