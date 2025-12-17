@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 17 December 2025 - Placeholder
+
+Changelog TBD
+
 ### 5 December 2025 - Enhancement - Billing - DaaS usage billing
 
 Starting from December 2025, automatic monthly billing will be implemented for DaaS. On the 5th day of each month, the expended DataMiner credits for the previous month's DaaS usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.
