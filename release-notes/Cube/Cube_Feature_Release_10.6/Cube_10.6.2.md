@@ -116,3 +116,20 @@ From now on, when Cube is running as a service, browser shapes will only verify 
 <!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
 
 When, in the *Settings* app, you had defined an alarm tab of type "sliding window" on group level, up to now, updating the size of that sliding window would incorrectly not be saved or applied.
+
+#### Trending: Y-axis labels would not take into account the Decimals setting when the trend graph was set to a logarithmic scale [ID 44320]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+
+When, in a connector, you had configured that the Y axis of the trend graph of a particular parameter had to show the values according to a logarithmic scale (see the example below), up to now, the Y-axis labels would incorrectly not take into account the amount of decimals set for that same parameter.
+
+From now on, when the Y axis of the trend graph of a particular parameter is configured to show the values according to a logarithmic scale, the amount of decimals will be taken into account, but only when the `<Decimals>` tag contains a value between 0 and 10.
+
+```xml
+<Param>
+    <Display>
+        <Trending logarithmic="true"></Trending>
+        <Decimals>2</Decimals>
+    </Display>
+</Param>
+```
