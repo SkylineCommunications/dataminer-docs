@@ -354,3 +354,9 @@ In the DataMiner web apps, the following context menu issues have been solved:
 - A context menu with a submenu, or any context menu with a horizontal positioning in relation to its parent, could be out of the viewport when opened at the bottom of the screen.
 
 - In some cases, when a context menu had been opened by pressing the space bar, it could act erratically. It would not close when you clicked outside of it, and if it had a submenu, that submenu would open on top of the existing menu.
+
+#### Web Services API: GetClientDefaultTimeZone and GetRegionalSettings would incorrectly not be able to read the regional settings of the DMA on systems using a Dashboard Gateway [ID 44317]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+On systems where dashboards and low-code apps were accessed through a Dashboard Gateway, up to now, the web methods `GetClientDefaultTimeZone` and `GetRegionalSettings` would incorrectly not be able to read the regional settings of the DataMiner Agent. From now on, the requests will be forwarded correctly.
