@@ -97,6 +97,12 @@ SLLogCollector packages will now also include the following information:
 
 ### Fixes
 
+#### Problem when a connector was deleted immediately after it had been uploaded [IID 44083]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a connector was deleted immediately after it had been uploaded, in some rare cases, events triggered by the connector upload would still be adding references to the SLNet cache while the events triggered by the connector deletion were already trying to remove those references. This would lead to the SLNet cache incorrectly containing references to connectors that no longer existed on disk.
+
 #### Not possible to export elements with logger tables on systems with Cassandra Cluster and OpenSearch [ID 44105]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
