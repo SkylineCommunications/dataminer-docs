@@ -65,8 +65,9 @@ Creates or updates a service on a local DMA.
 
 ## Return Value
 
-- (uint[]): The first element of the array contains the service ID. This ID can be combined with the provided *dmaID* when using option 1 or the local DataMiner ID when using option 2 to represent the **full Service ID** which is a unique ID across the DMS.
+- (uint[]): The first element of the array contains the service ID. This ID can be combined with the provided *dmaID* when using option 1 or the local DataMiner ID when using option 2 to represent the **full service ID**, which is a unique ID across the DMS.
 
 ## Remarks
 
 - This method call is only intended for the creation of a service on the local DMA. In case a service must be created on a remote DMA, the [NT_SERVICE_REMOTE (282)](xref:NT_SERVICE_REMOTE) call should be used.
+
