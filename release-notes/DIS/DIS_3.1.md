@@ -10,12 +10,13 @@ uid: DIS_3.1
 
 #### IDE
 
-##### DoD link introduced in version history editor and publish bar [ID 44335]
+##### New Tasks and DoD hyperlinks added to publish bar and version history editor [ID 44335]
 
-The top bar in the editor window now contains a link **Tasks** which, when pressed, opens the tasks mentioned in the version history of the current version (if any) in a browser.
-Similarly, a link **DoD** has been added which, when pressed, opens the corresponding DoD page for the tasks mentioned in the version history of the current version (if any) in a browser.
+The top bar in the editor window now contains a hyperlink named **Tasks**, which, when clicked, will open a browser tab listing the tasks mentioned in the version history of the current version (if any).
 
-The version history editor now also displays a DoD button next to each task which will also navigate to the corresponding page in a browser.
+Similarly, a hyperlink named **DoD** has been added, which, when clicked, will open a browser tab showing the corresponding DoD page for the tasks mentioned in the version history of the current version (if any).
+
+Also, the version history editor will now display a **DoD** button next to each task, which, when clicked, will open a browser tab showing the corresponding page.
 
 ##### Updated DIS dependencies
 
@@ -36,9 +37,9 @@ DIS now uses:
 
 #### IDE
 
-##### Width calculation table editor updated [ID 44321]
+##### Table editor: Updated width calculation [ID 44321]
 
-The calculation of the width in the table editor has been updated: For columns with a write parameter or that contain a button, the calculation of the column width no longer subtracts an additional offset for the write icon.
+In the table editor, the calculation of the width has been updated. For columns with a write parameter or columns that contain a button, an additional offset for the write icon will no longer be subtracted when calculating the column width.
 
 ## DIS 3.1.15
 
