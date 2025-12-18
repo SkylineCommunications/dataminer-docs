@@ -9,6 +9,29 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 18 December 2025 - Enhancement - dataminer.services - Improved DaaS deployment flow
+
+On dataminer.services, 'Add DataMiner System' button will now launch onboarding wizard.
+This wizard should help users step by step with adding a new DataMiner system.
+It will also be more clear for users to create an organization dyring this process.
+
+### 18 December 2025 - Enhancement - Catalog - Carousel click behavior
+
+Added support for shift + left click on a carousel panel to open in a new window.
+Added support for ctrl + left click on a carousel panel to open in a new tab.
+
+### 17 December 2025 - Enhancement - Terms of service
+
+The license and service term liinks have been updated to the new page on dataminer docs.
+
+### 17 December 2025 - Fix - Authentication - Removed font dependency
+
+The Authentication app will no longer require any external dependencies for the Inter font.
+
+### 17 December 2025 - Fix - Organization selector heading
+
+The overlay to select a different organization will now always show the correct styling on all applications.
+
 ### 5 December 2025 - Enhancement - Billing - DaaS usage billing
 
 Starting from December 2025, automatic monthly billing will be implemented for DaaS. On the 5th day of each month, the expended DataMiner credits for the previous month's DaaS usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.
