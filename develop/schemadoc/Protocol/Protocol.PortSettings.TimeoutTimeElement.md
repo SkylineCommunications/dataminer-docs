@@ -26,4 +26,4 @@ Specifies settings related to the element timeout.
 > - Currently, DataMiner only takes into account the value specified for the main connection. It uses this value for all connections.
 
 > [!TIP]
-> This setting does not account for the number of retries. To ensure the element has enough time to complete all retry attempts before declaring a timeout, choose a value larger than: **[Timeout of a single command](Protocol.PortSettings.TimeoutTime) × ([Number of retries](xref:Protocol.PortSettings.Retries) + 1)**.
+> This setting does not account for the number of retries. To ensure the element has enough time to complete all retry attempts before declaring a timeout, choose a value larger than: **[Timeout of a single command](xref:Protocol.PortSettings.TimeoutTime) × ([Number of retries](xref:Protocol.PortSettings.Retries) + 1)**.
