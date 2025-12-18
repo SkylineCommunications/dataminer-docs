@@ -14,7 +14,7 @@ uid: DIS_3.1
 
 The top bar in the editor window now contains a hyperlink named **Tasks**, which, when clicked, will open a browser tab for each task mentioned in the version history of the current version (if any).
 
-Similarly, a hyperlink named **DoD** has been added, which, when clicked, will open a browser tab showing the corresponding DoD page for the tasks mentioned in the version history of the current version (if any).
+Similarly, a hyperlink named **DoD** has been added, which, when clicked, will open a browser tab showing the corresponding DoD page for each task mentioned in the version history of the current version (if any).
 
 Also, the version history editor will now display a **DoD** button next to each task, which, when clicked, will open a browser tab showing the corresponding page.
 
