@@ -20,7 +20,7 @@ Optionally, you can connect multiple DataMiner Agents to dataminer.services. Thi
 
 It is also possible to connect to dataminer.services [via proxy server](xref:Connect_to_cloud_via_proxy) or [with a DMZ setup](xref:Connect_to_cloud_with_DMZ).
 
-![DMZ](~/dataminer/images/DMZ_CloudGateway.png)
+![DMZ](~/dataminer/images/DMZ_CloudGateway.svg)
 
 Connecting your DataMiner System to dataminer.services will allow you to benefit from a host of additional features. You are free to choose which features you enable or disable in your system.
 
