@@ -117,10 +117,8 @@ items:
       - name: Plan and Build
         topicUid: Plan_And_Build
         items:
-        - name: Jobs Page
+        - name: Jobs List
           topicUid: Jobs_Page
-        - name: Job Details
-          topicUid: Job_Details
       - name: Web File Manager
         topicUid: Web_File_Manager
     - name: DataMiner PTP

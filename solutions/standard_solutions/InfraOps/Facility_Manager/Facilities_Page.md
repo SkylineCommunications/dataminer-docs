@@ -13,7 +13,7 @@ This page is where you will typically begin your configuration, first [adding fa
 ![Facilities page](~/solutions/images/Facility_Manager_Facilities_Page.png)
 
 > [!NOTE]
-> To take full advantage of the map component, you will need to configure a valid Google Maps API key on the *About* page of the app. For more information on how to configure DataMiner Maps, refer to [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
+> To take full advantage of the map component, you will need to configure a valid Google Maps API key on the *About* page of the app. For more information on how to configure DataMiner Maps, refer to [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).<!-- TBD: Is the separate Maps configuration necessary, or is specifying an API key enough?-->
 
 ## Adding a new facility
 
@@ -82,7 +82,7 @@ As soon as floors have been added to the facility, you will also be able to [add
 
    - In the *Room Info* section, click the pencil icon to configure the room's description, owner, and team. The list of possible owners and teams is retrieved from the [People & Organizations](xref:People_Organizations) app.
 
-     ![Room information Wizard](~/solutions/images/Facility_Manager_Room_Information_Wizard.png)
+     ![Room information wizard](~/solutions/images/Facility_Manager_Room_Information_Wizard.png)
 
    - In the *Room Plan* section, click the pencil icon and then select an image to add this image as the room plan. More images can be uploaded using for selection using the [Web File Manager app](xref:Web_File_Manager).
 

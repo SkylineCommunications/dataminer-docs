@@ -16,9 +16,9 @@ An asset can have the following states:
 
 - When an asset is "Available", you can change its state to "**In Planning**", then to "**Build Plan Ready**", and finally to "**Installed**". However, before you can change the state to "Installed", you will first need to specify an installation user and date via the [Asset details configuration](xref:Managed_Assets#configuring-asset-details).
 
-  Keep in mind that after you change the state to "Installed", you will no longer be able to change the installation user and date, and it will also no longer be possible to change the location, even if no location was defined. If you do still want to change the installation user and date or the location, you will have to set the asset back from "Installed" to "In Planning".
+  Keep in mind that after you change the state to "Installed", you will no longer be able to change the installation user and date in the [asset details](xref:Managed_Assets#configuring-asset-details), and it will also no longer be possible to change the location, even if no location was defined. If you do still want to change the installation user and date or the location, you will have to set the asset back from "Installed" to "In Planning".
 
-  ![Asset lifecycle wizard](~/solutions/images/Asset_Manager_Asset_Lifecycle_Wizard.png)<!-- TBD: better location for screenshot? -->
+  ![Asset lifecycle wizard](~/solutions/images/Asset_Manager_Asset_Lifecycle_Wizard.png)
 
 - When an asset is in use, change the state from "Installed" to "**In Service**" via the context menu of the Managed Assets table.
 

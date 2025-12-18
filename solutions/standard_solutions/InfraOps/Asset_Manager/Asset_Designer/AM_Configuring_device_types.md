@@ -18,7 +18,7 @@ This will open a wizard where you can configure the following fields:
 
 - **Device Type Name**: A unique name for the device type
 
-  If it includes the name "Connection Panel", it can be used as such. More details on the Connection section. <!-- TBD -->
+  If the name includes "Connection Panel", you will be able to use the assets with this device type as a connection panel. See [Connections](xref:AssetManager_Connections).
 
 - **Device Type Description**: Optional description of the device type.
 
