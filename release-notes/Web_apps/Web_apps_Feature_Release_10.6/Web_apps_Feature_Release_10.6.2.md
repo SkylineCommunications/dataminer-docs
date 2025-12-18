@@ -20,7 +20,29 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-*No new features have been added yet.*
+#### DataMiner Assistant web app [ID 44342]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+A Dataminer Assistant web app is now available via `https://<DMA IP or hostname>/assistant`.
+
+This new app provides a streamlined chat experience with support for feature selection, model switching, and live message streaming.
+
+- **Real-time conversational assistant**
+
+  - You can chat directly with the assistant. Its responses will be streamed live.
+  - You can cancel questions, ask follow-up question, and consult your question history.
+  - Before you ask a question, you can select the LLM (Large Language Model) to be used.
+  - Tables and images are also supported.
+
+  > [!NOTE]
+  > At the top of the screen, you can find a number of example questions.
+
+- **Feature-based questioning**
+
+  - Before you ask a question, you can select a particular feature/subject/area: Insights or Documentation.
+  - Example questions will update automatically based on the feature/subject/area you have selected.
+  - During a conversation, behavior is adjusted according to the context.
 
 ## Changes
 
@@ -220,7 +242,7 @@ From now on, the grid will try to grow or shrink vertically in order to avoid a 
 > [!NOTE]
 > A PDF report containing a Grid component can still show scrollbars and/or clipped content when the grid is set to show a fixed amount of row and a fixed amount of columns (without *Stretch to fit* option).
 
-#### GQI DxM: Partition join strategy for DOM data [ID 44275]
+#### GQI DxM: Partition join strategy for DOM data [ID 44275] [ID 44327]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
@@ -234,7 +256,7 @@ This new join strategy will only be applied to join operations in the following 
 
 - The *prefetch* option is disabled for the join operator
 
-  - This new *prefetch* option is disabled by default and will only be visible when the `showAdvancedSettings=true` argument is added to the URL of the dashboard or low-code app.
+  - This new *prefetch* option is disabled by default, and will only be visible in the query builder when the `showAdvancedSettings=true` argument is added to the URL of the dashboard or low-code app.
   - When the *row-by-row* option is enabled, the *prefetch* option will be ignored.
 
 - Real-time updates are not enabled.
@@ -334,3 +356,35 @@ Note that the following actions will only affect the viewport after the user int
 - Selecting a segment on top of the timeline.
 
 Because these two actions will only affect the viewport after the user interaction has finished, the Timeline component will also receive an incoming viewport change request from the Time range component after the user interaction has finished. That way, the latter request will overrule the viewport changes that were made initially.
+
+#### Low-Code Apps - Timeline component: Undesired layout shifting while you were moving items between groups [ID 44307]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In a low-code app, a *Timeline* component would cause undesired layout shifting while you were moving items between groups. This could lead to you dropping the items in the wrong group.
+
+Also, it would not be possible to pan the timeline when starting on a timeline item.
+
+#### Web apps: Problems with context menus [ID 44309]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In the DataMiner web apps, the following context menu issues have been solved:
+
+- When you right-clicked a context menu, it would not immediately close when you left-clicked the same element you right-clicked to open it. The menu would only close when you left-clicked a second time.
+
+- A context menu with a submenu, or any context menu with a horizontal positioning in relation to its parent, could be out of the viewport when opened at the bottom of the screen.
+
+- In some cases, when a context menu had been opened by pressing the space bar, it could act erratically. It would not close when you clicked outside of it, and if it had a submenu, that submenu would open on top of the existing menu.
+
+#### Interactive Automation scripts: Subsequent user actions could get ignored when a component lost focus [ID 44315]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When you started an interactive Automation script in a web app, up to now, the moment a component lost focus, subsequent user actions could incorrectly be ignored.
+
+#### Web Services API: GetClientDefaultTimeZone and GetRegionalSettings would incorrectly not be able to read the regional settings of the DMA on systems using a Dashboard Gateway [ID 44317]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+On systems where dashboards and low-code apps were accessed through a Dashboard Gateway, up to now, the web methods `GetClientDefaultTimeZone` and `GetRegionalSettings` would incorrectly not be able to read the regional settings of the DataMiner Agent. From now on, the requests will be forwarded correctly.

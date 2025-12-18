@@ -33,6 +33,12 @@ The ArtifactDeployer module is responsible for allowing users to deploy differen
 
 This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
 
+### BrokerGateway
+
+The BrokerGateway module is responsible for managing the NATS communication. It automatically updates the NATS cluster when the DataMiner cluster changes and provides clients with the required credentials.
+
+This DxM is included in DataMiner upgrade packages from DataMiner 10.5.0 [CU2]/10.5.5 onwards. To make an existing DataMiner 10.5.x setup switch to using BrokerGateway, [a migration](xref:BrokerGateway_Migration) is required. Migrating is highly recommended, as BrokerGateway automatically configures TLS and uses a newer version of NATS, enhancing the overall system performance and error handling capabilities. Upgrading to DataMiner 10.6.0/10.6.1 or higher is not possible without [migrating to BrokerGateway](xref:BrokerGateway_Migration) first.
+
 ### CoreGateway
 
 The CoreGateway module is responsible for translating requests from other modules into requests towards the DataMiner System. This ensures backwards compatibility with different DataMiner versions.

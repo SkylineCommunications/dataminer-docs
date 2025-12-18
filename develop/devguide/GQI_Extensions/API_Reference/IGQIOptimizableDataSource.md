@@ -89,4 +89,5 @@ public IGQIOperatorNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperato
 
 - The [ad hoc data source lifecycle](xref:Ad_hoc_Life_cycle).
 - The [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator) to optimize custom operators.
+- Example: [Optimizing filter operations](xref:GQI_Ad_hoc_Optimizing_filter_operations).
 - Example: [Optimizing sort operations](xref:GQI_Ad_hoc_Optimizing_sort_operations).
