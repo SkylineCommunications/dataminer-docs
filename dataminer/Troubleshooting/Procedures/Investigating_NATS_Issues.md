@@ -109,6 +109,9 @@ Check the following log files in the order listed:
 - **Connection refused errors**: Suggest firewall or antivirus issues. This can also mean that the NATS service is not running.
 - **Cluster formation errors**: Point to configuration mismatches between nodes.
 
+- Seeing the following logline in processes: "Failed setting up NATS session: Exception caught in fields fetching: Failed to fetch fields: Remote SSL certificate error. Does the hostname and SSL certificate match?: SSL peer certificate or SSH remote key was not OK": This means that the certificate used by the site binding of IIS is invalid. Make sure the correct certificate is used by IIS.
+See [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA#configuring-the-https-binding-in-iis) on how to check and set the IIS HTTPS certificate.
+
 ## Check the configuration files
 
 Verify that the key configuration files contain the correct information for your cluster setup.
