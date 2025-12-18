@@ -32,12 +32,15 @@ This new app provides a streamlined chat experience with support for feature sel
 
   - You can chat directly with the assistant. Its responses will be streamed live.
   - You can cancel questions, ask follow-up question, and consult your question history.
-  - Before you ask a question, you can select the model to be used.
+  - Before you ask a question, you can select the LLM (Large Language Model) to be used.
   - Tables and images are also supported.
+
+  > [!NOTE]
+  > At the top of the screen, you can find a number of example questions.
 
 - **Feature-based questioning**
 
-  - Before you ask a question, you can select a particular feature/subject/area (e.g. Insights, Documentation, etc.).
+  - Before you ask a question, you can select a particular feature/subject/area: Insights or Documentation.
   - Example questions will update automatically based on the feature/subject/area you have selected.
   - During a conversation, behavior is adjusted according to the context.
 
@@ -373,6 +376,12 @@ In the DataMiner web apps, the following context menu issues have been solved:
 - A context menu with a submenu, or any context menu with a horizontal positioning in relation to its parent, could be out of the viewport when opened at the bottom of the screen.
 
 - In some cases, when a context menu had been opened by pressing the space bar, it could act erratically. It would not close when you clicked outside of it, and if it had a submenu, that submenu would open on top of the existing menu.
+
+#### Interactive Automation scripts: Subsequent user actions could get ignored when a component lost focus [ID 44315]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When you started an interactive Automation script in a web app, up to now, the moment a component lost focus, subsequent user actions could incorrectly be ignored.
 
 #### Web Services API: GetClientDefaultTimeZone and GetRegionalSettings would incorrectly not be able to read the regional settings of the DMA on systems using a Dashboard Gateway [ID 44317]
 
