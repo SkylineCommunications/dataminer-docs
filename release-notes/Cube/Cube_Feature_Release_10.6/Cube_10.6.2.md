@@ -141,3 +141,9 @@ From now on, when the Y axis of the trend graph of a particular parameter is con
 When, in the *Router Control* module, you clicked the *Undo* button twice, in some cases, empty values could incorrectly get saved in the connections matrix, making it impossible to restore previous connections.
 
 From now on, during an undo operation, DataMiner Cube will filter out empty values, making sure that previous connections are properly restored without breaking existing configurations.
+
+#### Ticketing module: All tickets would incorrectly be retrieved from the database when opening the module [ID 44348]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+
+When, in DataMiner Cube, you opened the Ticketing module, up to now, all tickets would incorrectly be retrieved from the database. From now on, only the open tickets will be retrieved.
