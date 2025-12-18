@@ -20,7 +20,26 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-*No new features have been added yet.*
+#### DataMiner Assistant web app [ID 44342]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+A Dataminer Assistant web app is now available via `https://<DMA IP or hostname>/assistant`.
+
+This new app provides a streamlined chat experience with support for feature selection, model switching, and live message streaming.
+
+- **Real-time conversational assistant**
+
+  - You can chat directly with the assistant. Its responses will be streamed live.
+  - You can cancel questions, ask follow-up question, and consult your question history.
+  - Before you ask a question, you can select the model to be used.
+  - Tables and images are also supported.
+
+- **Feature-based questioning**
+
+  - Before you ask a question, you can select a particular feature/subject/area (e.g. Insights, Documentation, etc.).
+  - Example questions will update automatically based on the feature/subject/area you have selected.
+  - During a conversation, behavior is adjusted according to the context.
 
 ## Changes
 
