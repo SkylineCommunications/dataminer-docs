@@ -4,6 +4,42 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.17
+
+### New features
+
+#### IDE
+
+##### DoD link introduced in version history editor and publish bar [ID 44335]
+
+The top bar in the editor window now contains a link **Tasks** which, when pressed, opens the tasks mentioned in the version history of the current version (if any) in a browser.
+Similarly, a link **DoD** has been added which, when pressed, opens the corresponding DoD page for the tasks mentioned in the version history of the current version (if any) in a browser.
+
+The version history editor now also displays a DoD button next to each task which will also navigate to the corresponding page in a browser.
+
+##### Updated DIS dependencies
+
+DIS now uses:
+
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 1.3.0
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 2.1.0
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 2.1.0
+- [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol) version 1.1.1
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.6.1
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.6.1
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.6.1
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.5
+
+## DIS 3.1.16
+
+### New features
+
+#### IDE
+
+##### Width calculation table editor updated [ID 44321]
+
+The calculation of the width in the table editor has been updated: For columns with a write parameter or that contain a button, the calculation of the column width no longer subtracts an additional offset for the write icon.
+
 ## DIS 3.1.15
 
 ### New features
