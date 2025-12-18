@@ -83,7 +83,14 @@ public class Script
 ```
 
 > [!NOTE]
-> From DataMiner 10.5.9/10.6.0 onwards, the comment ".FindInteractiveClient(" is no longer necessary. Instead, this can be defined with the [Interactivity](xref:DMSScript.Interactivity) tag of the script.<!-- RN 42954 -->
+> For DataMiner versions prior to 10.5.9/10.6.0, a comment with string ".FindInteractiveClient(" is necessary to make sure the script is marked as interactive. See [How Auto-detection determines interactivity](xref:Automation-InteractivityOptions#how-auto-detection-determines-interactivity) for more details.
+> ```csharp
+> // DO NOT REMOVE THIS COMMENT OR THE SCRIPT WON'T RUN!
+> // DataMiner evaluates if the script needs to launch in interactive mode.
+> // This is determined by a simple string search looking for ".FindInteractiveClient(" in the source code.
+> // However, because of the toolkit NuGet package, this string cannot be found here.
+> // So this comment is here as a workaround.
+> ```
 
 ## Building the UI
 
