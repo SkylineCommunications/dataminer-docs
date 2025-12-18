@@ -20,7 +20,7 @@ Clicking such a button will open a pane where you can add slots with the *Add* b
 
 ## Assigning assets to slots
 
-When you have configured slots for an asset, as detailed above, you can immediately add assets to them by clicking the ![Slots icon](~/solutions/images/AM_Slots_icon.png) icon
+When you have configured slots for an asset as detailed above, you can immediately add assets to them by clicking the ![Slots icon](~/solutions/images/AM_Slots_icon.png) icon
 
 Alternatively, you can configure the assets based on a full overview of the hierarchy by clicking the *Hierarchy* button in the *Asset details* pane and selecting *View Full Hierarchy*.
 
@@ -43,6 +43,6 @@ However, note that you will only see nodes in the graph if the necessary [slots 
 
 ## Viewing an overview of all child assets
 
-To get an overview of all the child assets that have been configured for your asset, with both a node-edge graph illustrating how they are linked and a table listing the different assets, at the top of the *Asset details* pane, select *Hierarchy* > *View Child Assets*.
+To get an overview of all the child assets that have been configured for an asset, with both a node-edge graph illustrating how they are linked and a table listing the different assets, at the top of the *Asset details* pane, select *Hierarchy* > *View Child Assets*.
 
 ![Child Assets panel](~/solutions/images/Asset_Manager_Child_Assets_Side_Panel.png)

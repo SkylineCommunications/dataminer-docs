@@ -25,10 +25,10 @@ This will open a wizard where you can configure the following fields:
 - **Tags**:
 
   - **Accepts Data Connection**: Indicates whether the assets with this device type are allowed to receive data connections.
-  - **Power Provider**: Indicates whether the assets with this device type are allowed to provide energy to other assets.
+  - **Power Provider**: Indicates whether the assets with this device type are allowed to provide energy to other assets. If this is enabled, you will be able to use the asset as a source for a power connection (see [Configuring asset connections](xref:Configuring_asset_connections)).
   - **Rack Unit Consumer**: Indicates whether the assets with this device type will consume rack units when placed in a rack.
 
-- **Use Hierarchy Level**: If this option is enabled, you will be able to select the **hierarchy role** of the asset, which can be *Chassis*, *Card*, *SubCard*, *Module*, *Fan*, or *PowerSupply*.
+- **Use Hierarchy Level**: If this option is enabled, you will be able to select the [hierarchy role](#device-type-hierarchy-roles) of the asset, which can be *Chassis*, *Card*, *SubCard*, *Module*, *Fan*, or *PowerSupply*.
 
 ![Device type wizard](~/solutions/images/Asset_Manager_Device_Type_Wizard.png)
 

@@ -10,17 +10,17 @@ This page also allows you to configure [device types](xref:AM_Configuring_device
 
 ## Importing asset classes
 
-To start importing asset classes, click *Import/Export Asset Classes* in the top-right corner. You can then choose between *Import Netbox Asset Classes* or *Import/export Asset Classes to/from CSV*.
+To start importing asset classes, click *Import/Export Asset Classes* in the top-right corner. You can then choose between the following options:.
 
-The **Import Netbox Asset Classes** option allows you to import assets from Netbox using the following GitHub repositories:
+- **Import Netbox Asset Classes**: Allows you to import assets from Netbox using the following GitHub repositories:
 
-- [devicetype-library](https://github.com/netbox-community/devicetype-library/tree/master/device-types).
+  - [devicetype-library](https://github.com/netbox-community/devicetype-library/tree/master/device-types).
 
-- [netbox-devicetype-library](https://github.com/nrkno/netbox-devicetype-library/tree/master/device-types).
+  - [netbox-devicetype-library](https://github.com/nrkno/netbox-devicetype-library/tree/master/device-types).
 
-To do so, you will first have to select up to 60 files from the repositories, then click *Selected files*, and then click *Import*.
+  To do so, you will first have to select up to 60 files from the repositories, then click *Selected files*, and then click *Import*.
 
-The **Import/export Asset Classes to/from CSV** option allows you to select whether to import or export the asset classes. To import them, keep the *Import* option selected, select and upload your CSV file, and click *Import*.
+- **Import/export Asset Classes to/from CSV**: Allows you to select whether to import or export the asset classes. To import them, keep the *Import* option selected, select and upload your CSV file, and click *Import*.
 
 ## Manually creating an asset class
 
@@ -52,7 +52,7 @@ In this pane, you can configure the following details:
   - The corresponding **device type**.
   - The **description**.
   - The **manufacturer**.
-  - The **height**, which determines how many rack units are consumed when an asset with this asset class is assigned to a rack. When you fill in this field, a conversion is applied in displayed in the details section in "U" (i.e. rack units, with 1 U being equal to 4.445 cm).
+  - The **height**, which determines how many rack units are consumed when an asset with this asset class is assigned to a rack. The specified value will be converted to "U" (i.e. rack units, with 1 U being equal to 4.445 cm) and displayed as such in the details section.
   - The **width** and **depth**.<!-- TBD: purpose? -->
   - The **max power consumption**, which will determine how much power (in percent) an asset assigned to the rack will consume compared to the available power consumption assigned to the rack.
   - The **typical power consumption**.<!-- TBD: purpose? -->
@@ -75,11 +75,11 @@ In this pane, you can configure the following details:
 - [The **ports** for the asset class](#defining-the-ports-for-an-asset-class).
 
 > [!NOTE]
-> As long as the asset class is still in the Draft state, everything will be editable, but once it has been [activated](#activating-an-asset-class), you will only be able to edit some of the fields.
+> As long as the asset class is still in the "Draft" state, everything will be editable, but once it has been [activated](#activating-an-asset-class), you will only be able to edit some of the fields.
 
 ## Defining the number of slots for an asset class
 
-If you have created an asset class using a device type with a hierarchy level, for example a Chassis asset, you can define the number of slots available for each hierarchy level:
+If you have created an asset class using a device type with a [hierarchy level](xref:AM_Configuring_device_types#device-type-hierarchy-roles) that has one or more levels below it in the hierarchy, for example a Chassis asset, you can define the number of slots available for each underlying level:
 
 1. Click the details button (ⓘ) for the asset class in the table.
 
@@ -95,7 +95,7 @@ If you have created an asset class using a device type with a hierarchy level, f
 
    ![Adding card slots](~/solutions/images/Asset_Manager_Add_card_slots.png)
 
-Assets created based on this asset class will have the same number of slots as configured on the asset class (this can still change this default configuration).<!-- TBD: content in parentheses needs to be better explained -->
+Assets created based on this asset class will by default have the same number of slots as configured on the asset class, but you can adjust this number in the asset configuration (see [Configuring the asset hierarchy](xref:Asset_Hierarchy)).
 
 ## Defining the ports for an asset class
 

@@ -10,17 +10,17 @@ To configure these connection from the [*Asset details* pane](xref:Managed_Asset
 
 ![Asset details connections dropdown](~/solutions/images/Asset_Manager_Asset_Details_Side_Panel_Connections_Dropdown.png)
 
-This will open a pane where you can add power or data connections and customize the power ports or data ports of the asset compared to the default configuration from the asset class.
+This will open a pane where you can add power or data connections and customize the power ports or data ports of the asset compared to the [default configuration from the asset class](xref:Asset_Designer#defining-the-ports-for-an-asset-class).
 
 When you click the button to add a connection, you will then need to specify the necessary information. For example, for a data connection, the following window will be displayed:
 
 ![Create data connection wizard](~/solutions/images/Asset_Manager_Create_Data_Connection_Wizard.png)
 
-You will have to select at least the **source** and **destination** asset as well as the **cable type**:
+You will have to select at least the **source** and **destination** asset as well as the **[cable type](xref:AM_Configuring_cable_types)**:
 
 - For a power connection, only cable types categorized as "Power" will be shown. For data connections, all cable types except those exclusively categorized as "Power" will be displayed.
 - For the source and destination asset, you will only be able to select assets with a port type that has the selected cable type configured as a compatible cable (see [Configuring port types](xref:AM_Configuring_port_types)).
 - To select a source or destination asset, you will first need to filter per asset class, and, if possible, filter further using the name filter. Assets with the state "Not Available" or "Disposed" will not be displayed.
-- Once a port has been selected and used for a connection, it will no longer be available to establish new connections.
+- Once a port has been selected and used for a connection, you will no longer be able to use it for new connections.
 
-<!-- TBD: what is the purpose of the other fields in the wizard? -->
+<!-- TBD: what is the purpose of the other fields in the wizard: Cable Length, Source Tag, Destination Tag, Description, Notes? -->

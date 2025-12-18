@@ -16,9 +16,9 @@ The Connections page of the Asset Manager app provides an overview of all the co
 
 At the top, several buttons are available:
 
-- With the **Add Power Connection** and **Add Data Connection** buttons at the top, you can create connections in the same way as from the Asset details pane. (See [Configuring asset connections](xref:Configuring_asset_connections).)
+- With the **Add Power Connection** and **Add Data Connection** buttons at the top, you can create connections in the same way as from the *Asset details* pane (see [Configuring asset connections](xref:Configuring_asset_connections)).
 
-- The **Connection Panels** button in the top-right corner opens a connection panel view that provides a visual overview of all the connections established between assets that have the device type "Connection Panel" and "regular" assets:
+- The **Connection Panels** button in the top-right corner opens a connection panel view that provides a visual overview of all the connections established between assets with a "connection panel" device type and other assets (see [Configuring device types](xref:AM_Configuring_device_types)):
 
   ![Connection panel view](~/solutions/images/Asset_Manager_Connection_Panel_View.png)
 

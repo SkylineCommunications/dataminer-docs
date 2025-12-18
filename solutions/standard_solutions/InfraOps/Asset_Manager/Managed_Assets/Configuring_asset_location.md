@@ -16,7 +16,7 @@ Depending on the type of asset, different types of locations can be configured:
 
 - **Desk**/**Rack**/**Room**: To assign an asset to a desk, a rack, or a room, the desk needs to be in the "Active" state, and the asset needs to be in the "Available", "In Planning", or "Build Plan Ready" state.
 
-  Assigning an asset to a **rack** is only possible if its asset class has dimensions defined (more than 0U of height) and its device type is configured as a "Rack Unit consumer" (see [Configuring device types](xref:AM_Configuring_device_types)).
+  Assigning an asset to a **rack** is only possible if its asset class has dimensions defined (more than 0 U of height) and its device type is configured as a "Rack Unit consumer" (see [Configuring device types](xref:AM_Configuring_device_types)).<!-- TBD: Is only the height needed? If yes, we should rephrase this to prevent confusion -->
 
 - **No Location**: This option allows you to remove the currently configured location. You can only do so if the asset is in the "Available", "In Planning", or "Build Plan Ready" state.
 

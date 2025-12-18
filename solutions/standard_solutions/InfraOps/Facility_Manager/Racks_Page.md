@@ -19,7 +19,7 @@ Once you have configured your facilities and rooms in the Facility Manager app, 
    - **Rack Name**: Mandatory field.
    - **Rack Model**: Mandatory field.
    - **Rack Position**: If set to *Bottom*, slot 1 is at the bottom of the rack. If set to *Top*, slot 1 is at the top of the rack.
-   - **Rack Label**: This is displayed in the [Room Designer](xref:Room_Designer) and Room Viewer (in the [Asset Manager](xref:Asset_Manager) app), when the rack is placed in the room.
+   - **Rack Label**: This is displayed in the [Room Designer](xref:Room_Designer) and Room Viewer (in the [Asset Manager](xref:Asset_Manager) app) when the rack is placed in a room.
    - **Maximum Power Capacity (kW)**: Consumed based on the assets that are placed on the rack.
    - **Maximum Rack Capacity (U)**: The number of rack units available for this rack.
    - **Room Name**/**Row Name**/**Zone Name**: The location where the rack is added. You will only be able to add a rack to a room with at least one row and zone.
@@ -40,13 +40,13 @@ Once you have configured your facilities and rooms in the Facility Manager app, 
      - *Top to Bottom*: Air flows from the top of the rack to the bottom, used in some specialized setups.
      - *Bottom to Top*: Air flows from the bottom of the rack to the top, often used in conjunction with raised floor cooling systems.
 
-   - The **height, width, and depth** (in cm). If you want to be able to add the rack in the Room Designer, make sure these are configured.
+   - The **height, width, and depth** (in cm). If you want to be able to add the rack in the [Room Designer](xref:Room_Designer), make sure these are configured.
 
    At the top of the *Rack details* pane, the following buttons are also available:
 
    - *Rack View*: Shows an overview of the different slots in the rack.
    - *Delete Rack*: Removes the rack from the system.
-   - *Gallery*: shows the images linked to the rack.
+   - *Gallery*: Shows the images linked to the rack.
    - *Link Image*: Allows you to link an image to the rack. To upload images, use the [Web File Manager app](xref:Web_File_Manager), which you can access directly via a button in the *Link image* pane.
 
 1. When the rack has been fully configured, at the bottom of the *Rack details* pane, click **Activate**.

@@ -8,7 +8,7 @@ When the necessary asset classes have been configured in the [Asset Designer](xr
 
 You can either [import the assets from CSV](#importing-assets-from-csv) or [create assets manually](#manually-adding-an-asset).
 
-Via the context menu of an asset on the Managed Assets page, you can change the state of the asset. However, the states you can assign depend on the current state of the asset. For details, refer to [Asset lifecycle](xref:Asset_Lifecycle).
+Via the context menu of an asset on the Managed Assets page, you can change the state of the asset. The states you can assign depend on the current state of the asset. For details, refer to [Asset lifecycle](xref:Asset_Lifecycle).
 
 ![Managed Asset Page](~/solutions/images/Asset_Manager_Managed_Asset_Page.png)
 
@@ -56,8 +56,8 @@ In this pane, you can configure the following details, depending on the asset st
 
 - **Lifecycle** information: This can include the purchase date, the first-use date, the end of warranty, the installation date and user, and the modification date and user.
 
-- **Ownership**: The organization, team, and contact person, for the asset. The list of possible organizations, teams, and people is retrieved from the [People & Organizations](xref:People_Organizations) app.
+- **Ownership**: The organization, team, and contact person for the asset. The list of possible organizations, teams, and people is retrieved from the [People & Organizations](xref:People_Organizations) app.
 
-- **Custody** details: Similar to the *Ownership* section, but with a *From* and *Till* date to indicate the period during which the custody applies.
+- **Custody** details: Similar to the *Ownership* configuration, but with a *From* and *Till* date to indicate the period during which the custody applies.
 
 Via the buttons at the top of the pane, you can also configure the [asset hierarchy](xref:Asset_Hierarchy) and [connections](xref:Configuring_asset_connections).
