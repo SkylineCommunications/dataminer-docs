@@ -12,7 +12,7 @@ uid: DIS_3.1
 
 ##### New Tasks and DoD hyperlinks added to publish bar and version history editor [ID 44335]
 
-The top bar in the editor window now contains a hyperlink named **Tasks**, which, when clicked, will open a browser tab listing the tasks mentioned in the version history of the current version (if any).
+The top bar in the editor window now contains a hyperlink named **Tasks**, which, when clicked, will open a browser tab for each task mentioned in the version history of the current version (if any).
 
 Similarly, a hyperlink named **DoD** has been added, which, when clicked, will open a browser tab showing the corresponding DoD page for the tasks mentioned in the version history of the current version (if any).
 
