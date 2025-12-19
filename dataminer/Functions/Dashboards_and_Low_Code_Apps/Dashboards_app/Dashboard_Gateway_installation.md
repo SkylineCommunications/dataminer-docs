@@ -84,19 +84,25 @@ There are two main reasons to consider a Dashboard Gateway setup:
    - *connectionString*: The hostname or IP address of the DataMiner Agent to which the Dashboard Gateway has to connect.
    - *connectionUser* and *connectionPassword*: The DataMiner user account that the Dashboard Gateway has to use to connect to the DataMiner Agent (username and password).
 
-1. If [external authentication via **SAML**](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) is used, also configure the URL of the API of the Dashboard Gateway (`https://gateway.mycompany.com/API/`) as an *AssertionConsumerService* in the metadata XML file and on the identity provider.
-
-1. From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!-- RN 44344 -->, to be able to use the **GQI DxM** on the Dashboard Gateway, edit the *web.config* in the API folder, and specify the following settings:
+   From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!-- RN 44344 -->, also specify the following settings to make sure the gateway can communicate using **MessageBroker** within the DataMiner cluster:
 
    - If the system uses **[BrokerGateway](xref:BrokerGateway_Migration)**:
 
-     - **credsUrl**: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
-     - **apiKeyPath**: The file path to the *appsettings.runtime.json* file containing the private key, for example: `C:\webgateway\brokergateway\appsettings.runtime.json`. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+     - *nats:credsUrl*: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
+     - *nats:apiKeyPath*: The file path to the *appsettings.runtime.json* file containing the private key, for example: `C:\webgateway\brokergateway\appsettings.runtime.json`. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
 
    - If the system does not use BrokerGateway yet (only possible on 10.5.x systems):
 
-     - **credsFile**: The path to the .creds file containing the authentication information. On a DataMiner Agent, you can typically find this here: `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`.
-     - **URIs**: A string array containing the NATS endpoints. Every DMA in the DMS can be specified here.
+     - *nats:credsFile*: The path to the *.creds* file containing the authentication information. On a DataMiner Agent, you can typically find this here: `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`.
+     - *nats:uri*: A string array containing the NATS endpoints. Every DMA in the DMS can be specified here.
+
+   > [!NOTE]
+   > If a local file path is used, you will need to replace the *appsettings.runtime.json* or the *.creds* file whenever you make the following changes to the DMS:
+   >
+   > - Changing the IP address of one or more DataMiner Agents.
+   > - Adding or removing one or more DataMiner Agents to/from the DMS.
+
+1. If [external authentication via **SAML**](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) is used, also configure the URL of the API of the Dashboard Gateway (`https://gateway.mycompany.com/API/`) as an *AssertionConsumerService* in the metadata XML file and on the identity provider.
 
 ## Reverse proxy
 
@@ -209,6 +215,12 @@ To do so, after the DataMiner upgrade, copy the following folders from the DataM
 - `C:\Skyline DataMiner\Webpages\SharedComponents`
 - `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
 - `C:\Skyline DataMiner\Webpages\API` (Make sure not to overwrite the existing web.config file. Copy all other files and folders, but keep the existing web.config in place.)
+
+> [!NOTE]
+> When you **upgrade to DataMiner 10.5.0 [CU11]/10.6.2** or higher from an older version:
+>
+> - Make sure the settings to communicate with MessageBroker are also configured. See [Configuration](#configuration).
+> - If the existing *web.config* on the Dashboard Gateway server contains a `<runtime>` tag, then this entire `<runtime>` element (including all children) needs to be replaced with the new `<runtime>` tag that is in the new *web.config* file on the DMA. If the *web.config* on the Dashboard Gateway does not contain a `<runtime>` tag, you should add it by coping it over from the *web.config* on the DMA.
 
 > [!IMPORTANT]
 > Always ensure that the web application folders on the Dashboard Gateway are in sync with the DataMiner Agent. Running different web versions may cause compatibility issues or prevent the web applications from loading correctly.
