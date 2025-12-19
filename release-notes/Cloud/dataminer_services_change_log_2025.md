@@ -11,26 +11,23 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 18 December 2025 - Enhancement - dataminer.services - Improved DaaS deployment flow
 
-On dataminer.services, 'Add DataMiner System' button will now launch onboarding wizard.
-This wizard should help users step by step with adding a new DataMiner system.
-It will also be more clear for users to create an organization dyring this process.
+On dataminer.services, The *Add DataMiner System* button will now launch an onboarding wizard that will help users to add a new DataMiner System step by step. During this process, it will also be more clear than before when an organization has to be created.
 
-### 18 December 2025 - Enhancement - Catalog - Carousel click behavior
+### 18 December 2025 - Enhancement - Catalog - Slideshow click behavior
 
-Added support for shift + left click on a carousel panel to open in a new window.
-Added support for ctrl + left click on a carousel panel to open in a new tab.
+On the Catalog home page, users can now use the Shift and Ctrl keys together with a mouse click to open items from the slideshow in a new window or tab.
 
 ### 17 December 2025 - Enhancement - Terms of service
 
-The license and service term liinks have been updated to the new page on dataminer docs.
+The links to the license and service terms have been updated to link to the [new page on DataMiner Docs](https://docs.dataminer.services/dataminer/Legal/dataminer.services_Terms/dataminer.services_terms_of_use.html).
 
 ### 17 December 2025 - Fix - Authentication - Removed font dependency
 
-The Authentication app will no longer require any external dependencies for the Inter font.
+When users tried to renew their cloud session via the authentication.dataminer.services page, it could occur that the page timed out if external font dependencies were blocked by firewall rules. This issue particularly affected customers with strict firewall configurations.
 
 ### 17 December 2025 - Fix - Organization selector heading
 
-The overlay to select a different organization will now always show the correct styling on all applications.
+In the overlay to select a different organization, it could occur that characters were cut off and styling was inconsistent.
 
 ### 5 December 2025 - Enhancement - Billing - DaaS usage billing
 
