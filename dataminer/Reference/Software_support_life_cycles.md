@@ -51,7 +51,7 @@ The following features currently have the "End of Engineering" status. They will
 | Logger tables of type DirectConnection with a primary key |See [Defining a logger table of type DirectConnection with a primary key](xref:AdvancedLoggerTablesDefiningDirectConnectionTable). | End of Support as of DataMiner 10.7.x (Q4 2026). <br>End of Life as of DataMiner 10.8.x (Q4 2027). |
 | Pivot table and Group components | End of Engineering as of DataMiner 10.6.x. These components are being retired in the Dashboards app and Low-Code Apps. | End of Support as of DataMiner 10.7.x (Q4 2026).<br>End of Life as of DataMiner 10.8.x (Q4 2027). |
 | [Radius authentication](xref:Configuring_RADIUS_settings) | This type of authentication is deprecated and has inherent flaws. We recommend using a different type of authentication instead. | End of Support as of DataMiner 10.7.x (Q4 2026). <br>End of Life as of DataMiner 10.8.x (Q4 2027). |
-| SRM Service Info | This object with booking related service info is no longer needed since SRM 2.0.2 ([RN 40666](https://docs.dataminer.services/release-notes/SRM/SRM_2.0.2.html#skipservicehandling-automatically-enabled--srmserviceinfo-objects-no-longer-used-id-40666)). | End of Life to be confirmed. |
+| SRM Service Info | This object with booking-related service info is no longer needed since SRM 2.0.2 ([RN 40666](xref:SRM_2.0.2#skipservicehandling-automatically-enabled--srmserviceinfo-objects-no-longer-used-id-40666)). | End of Life to be confirmed. |
 
 ### End of Support
 
@@ -149,6 +149,7 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 
 - **End of Life – Annotations**: No longer available from this version onwards.
 - **End of Support – Asset Manager**: This module is being retired.
+- **End of Life - Legacy reservations**: The legacy type of reservation used prior to DataMiner 9.5.3/9.6.0 (RN 15180) is obsolete and should no longer be used.
 - **End of Support – MySQL as local database**: Existing features will work, but some new features will require [Storage as a Service](xref:STaaS) (recommended) or [dedicated clustered storage](xref:Dedicated_clustered_storage).
 - **End of Engineering – Pivot table and Group components**: These components are being retired in the Dashboards app and Low-Code Apps.
 - **End of Life – Ticketing app**: Skyline is researching a replacement for this module.
