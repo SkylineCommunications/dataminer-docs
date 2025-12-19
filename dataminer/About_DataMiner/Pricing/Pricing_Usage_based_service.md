@@ -8,7 +8,7 @@ description: The DataMiner Usage-based Services model offers the option to lever
 The DataMiner Usage-based Services model offers your organization the option to leverage the DataMiner technology on a flexible basis empowering your digital transformation. It is available in both deploy models:
 
 - Self-managed deployments of DataMiner (on the ground, in a private/public cloud, or hybrid), and
-- Skyline-hosted solutions (DataMiner-as-a-Service).
+- Skyline-hosted solutions (DataMiner as a Service).
 
 This model provides **maximum operational flexibility** and maximum continuous flexibility in the utilization of DataMiner, at the required scale and leveraging any of the available DataMiner functions as deemed most valuable for the operation at any time, always perfectly aligned with any of the continuously evolving needs of both the operation and the business.
 
