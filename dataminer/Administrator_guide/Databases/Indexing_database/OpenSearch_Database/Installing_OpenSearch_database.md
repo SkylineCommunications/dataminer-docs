@@ -494,7 +494,7 @@ To renew your self-signed TLS certificates for an existing OpenSearch database, 
 
 1. Place the correct .p12 file in the `\etc\opensearch\cert\` folder on each corresponding node (making sure the .p12 name matches the node name).
 
-1. Update the opensearch.yml file so that *keystore_filepath* and *truststore_filepath* refer to the location of the .p12 files. (For an example, see [Set up TLS in the opensearch.yml file](#set-up-tls-in-the-opensearchyml-file).)
+1. Update the *opensearch.yml* file so that *keystore_filepath* and *truststore_filepath* refer to the location of the .p12 files. (For an example, see [Set up TLS in the opensearch.yml file](#set-up-tls-in-the-opensearchyml-file).)
 
 1. Add the password to the *keystore* and *truststore* password fields in *opensearch.yml*.
 
@@ -509,3 +509,5 @@ To renew your self-signed TLS certificates for an existing OpenSearch database, 
 1. Verify the *rootCA.crt*. It should return the status OK.
 
    On Ubuntu, you can do so using the following command: `openssl verify rootCA.crt`
+
+   If a different status than OK is returned, this is most likely because the *rootCA.crt* has not been applied on the OpenSearch node or the *rootCA.crt* that you have applied on the OpenSearch node is not the the one that signed the certificate.
