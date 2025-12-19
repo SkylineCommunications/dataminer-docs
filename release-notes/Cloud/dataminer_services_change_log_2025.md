@@ -11,21 +11,21 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 18 December 2025 - Enhancement - dataminer.services - Improved DaaS deployment flow
 
-On dataminer.services, The *Add DataMiner System* button will now launch an onboarding wizard that will help users to add a new DataMiner System step by step. During this process, it will also be more clear than before when an organization has to be created.
+On dataminer.services, the *Add DataMiner System* button will now launch an onboarding wizard that will help users to add a new DataMiner System step by step. During this process, it will also be more clear than before when an organization has to be created.
 
 ### 18 December 2025 - Enhancement - Catalog - Slideshow click behavior
 
-On the Catalog home page, users can now use the Shift and Ctrl keys together with a mouse click to open items from the slideshow in a new window or tab.
+On the Catalog home page, users can now use the Shift and Ctrl keys together with a mouse click to open items from the slideshow in a new window or tab, respectively.
 
 ### 17 December 2025 - Enhancement - Terms of service
 
-The links to the license and service terms have been updated to link to the [new page on DataMiner Docs](https://docs.dataminer.services/dataminer/Legal/dataminer.services_Terms/dataminer.services_terms_of_use.html).
+The links to the license and service terms have been updated to link to the [new page on DataMiner Docs](xref:dataminer.services_terms_of_use).
 
-### 17 December 2025 - Fix - Authentication - Removed font dependency
+### 17 December 2025 - Fix - Authentication - Timeout of authentication.dataminer.services page caused by font dependencies being blocked by firewall rules
 
-When users tried to renew their cloud session via the authentication.dataminer.services page, it could occur that the page timed out if external font dependencies were blocked by firewall rules. This issue particularly affected customers with strict firewall configurations.
+When users tried to renew their cloud session via the authentication.dataminer.services page, it could occur that the page timed out if external font dependencies were blocked by firewall rules. This issue particularly affected users with strict firewall configurations.
 
-### 17 December 2025 - Fix - Organization selector heading
+### 17 December 2025 - Fix - Styling issues in organization selector heading
 
 In the overlay to select a different organization, it could occur that characters were cut off and styling was inconsistent.
 
