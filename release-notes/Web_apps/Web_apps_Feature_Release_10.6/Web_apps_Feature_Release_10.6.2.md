@@ -300,6 +300,24 @@ When all above-mentioned conditions are met, the partition join is executed as f
 > [!IMPORTANT]
 > Although the partition join strategy will enhance performance in most common scenarios that require the fastest possible query executions, this strategy can be up to twice as slow when the join has low selectivity. For these uncommon scenarios, we recommended manually enabling the *prefetch* option on the relevant join operator.
 
+#### Support for GQI DxM on Dashboard Gateway [ID 44344]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+The GQI DxM can now also be used on a Dashboard Gateway server. However, this requires some additional manual configuration in order to ensure that the gateway can communicate using MessageBroker within the DataMiner cluster.
+
+On the Dashboard Gateway server, you will need to edit the *web.config* in the API folder, and specify the following settings:
+
+- If the system uses **BrokerGateway**:
+
+  - **credsUrl**: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
+  - **apiKeyPath**: The file path to the *appsettings.runtime.json* file containing the private key, for example: `C:\webgateway\brokergateway\appsettings.runtime.json`. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+
+- If the system does not use BrokerGateway yet (only possible on 10.5.x systems):
+
+  - **credsFile**: The path to the .creds file containing the authentication information. On a DataMiner Agent, you can typically find this here: `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`.
+  - **URIs**: A string array containing the NATS endpoints. Every DMA in the DMS can be specified here.
+
 ### Fixes
 
 #### Dashboards app: Problem when generating a PDF report of a dashboard containing a Time range component [ID 44168]

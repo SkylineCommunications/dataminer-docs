@@ -84,7 +84,19 @@ There are two main reasons to consider a Dashboard Gateway setup:
    - *connectionString*: The hostname or IP address of the DataMiner Agent to which the Dashboard Gateway has to connect.
    - *connectionUser* and *connectionPassword*: The DataMiner user account that the Dashboard Gateway has to use to connect to the DataMiner Agent (username and password).
 
-1. If [external authentication via SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) is used, also configure the URL of the API of the Dashboard Gateway (`https://gateway.mycompany.com/API/`) as an *AssertionConsumerService* in the metadata XML file and on the identity provider.
+1. If [external authentication via **SAML**](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) is used, also configure the URL of the API of the Dashboard Gateway (`https://gateway.mycompany.com/API/`) as an *AssertionConsumerService* in the metadata XML file and on the identity provider.
+
+1. From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!-- RN 44344 -->, to be able to use the **GQI DxM** on the Dashboard Gateway, edit the *web.config* in the API folder, and specify the following settings:
+
+   - If the system uses **[BrokerGateway](xref:BrokerGateway_Migration)**:
+
+     - **credsUrl**: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
+     - **apiKeyPath**: The file path to the *appsettings.runtime.json* file containing the private key, for example: `C:\webgateway\brokergateway\appsettings.runtime.json`. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+
+   - If the system does not use BrokerGateway yet (only possible on 10.5.x systems):
+
+     - **credsFile**: The path to the .creds file containing the authentication information. On a DataMiner Agent, you can typically find this here: `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`.
+     - **URIs**: A string array containing the NATS endpoints. Every DMA in the DMS can be specified here.
 
 ## Reverse proxy
 
