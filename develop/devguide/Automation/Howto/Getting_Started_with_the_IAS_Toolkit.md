@@ -27,7 +27,9 @@ To start creating your script:
 
 1. Fill in the solution name and specify a target folder. A folder will be created with the solution name in the target folder. This will contain your solution. Click *OK*.
 
-1. Once your solution has been created, open the first Exe block by clicking the icon next to it.
+1. Once your solution has been created, open the script XML file in the *Solution Explorer* and set the [Interactivity](xref:DMSScript.Interactivity) tag to *Always* or *Optional*, depending on the types of execution the script can have.
+
+1. Then, open the first Exe block by clicking the icon next to it.
 
    ![IAS2](~/develop/images/IAS2.png)
 
@@ -68,12 +70,6 @@ public class Script
     /// <param name="engine">Link with SLAutomation process.</param>
     public void Run(Engine engine)
     {
-        // DO NOT REMOVE THIS COMMENT OR THE SCRIPT WON'T RUN!
-        // DataMiner evaluates if the script needs to launch in interactive mode.
-        // This is determined by a simple string search looking for ".FindInteractiveClient(" in the source code.
-        // However, because of the toolkit NuGet package, this string cannot be found here.
-        // So this comment is here as a workaround.
-    
         try
         {
             controller = new InteractiveController(engine);
@@ -87,7 +83,15 @@ public class Script
 ```
 
 > [!NOTE]
-> From DataMiner 10.5.9/10.6.0 onwards, the comment ".FindInteractiveClient(" is no longer necessary. Instead, this can be defined with the [Interactivity](xref:DMSScript.Interactivity) tag of the script.<!-- RN 42954 -->
+> Prior to DataMiner 10.5.9/10.6.0<!--RN 42954-->, a comment containing the string `.FindInteractiveClient(` is required to mark the script as interactive. See [How auto-detection determines interactivity](xref:Automation-InteractivityOptions#how-auto-detection-determines-interactivity) for more details.
+>
+> ```csharp
+> // DO NOT REMOVE THIS COMMENT OR THE SCRIPT WON'T RUN!
+> // DataMiner evaluates if the script needs to launch in interactive mode.
+> // This is determined by a simple string search looking for ".FindInteractiveClient(" in the source code.
+> // However, because of the toolkit NuGet package, this string cannot be found here.
+> // So this comment is here as a workaround.
+> ```
 
 ## Building the UI
 
@@ -180,12 +184,6 @@ public class Script
     /// <param name="engine">Link with SLAutomation process.</param>
     public void Run(Engine engine)
     {
-        // DO NOT REMOVE THIS COMMENT OR THE SCRIPT WON'T RUN!
-        // DataMiner evaluates if the script needs to launch in interactive mode.
-        // This is determined by a simple string search looking for ".FindInteractiveClient(" in the source code.
-        // However, because of the toolkit NuGet package, this string cannot be found here.
-        // So this comment is here as a workaround.
-        
         try
         {
             controller = new InteractiveController(engine);
@@ -232,12 +230,6 @@ public class Script
     /// <param name="engine">Link with SLAutomation process.</param>
     public void Run(Engine engine)
     {
-        // DO NOT REMOVE THIS COMMENT OR THE SCRIPT WON'T RUN!
-        // DataMiner evaluates if the script needs to launch in interactive mode.
-        // This is determined by a simple string search looking for ".FindInteractiveClient(" in the source code.
-        // However, because of the toolkit NuGet package, this string cannot be found here.
-        // So this comment is here as a workaround.
-    
         try
         {
             controller = new InteractiveController(engine);
