@@ -67,7 +67,7 @@ The following `FieldDescriptors` can be referenced:
 | GenericEnumFieldDescriptor | GenericEnum&lt;int&gt; or List&lt;GenericEnum&lt;int&gt;&gt; | List&lt;int&gt; |
 | GenericEnumFieldDescriptor | GenericEnum&lt;string&gt; or List&lt;GenericEnum&lt;string&gt;&gt; | List&lt;string&gt; |
 
-The security filtering is done entirely in the DB, which allows this system to be applied on DOM definitions that have millions of DOM instances linked. To ensure optimal performance and stability, some limitations are in place:
+When reading or counting, the security filtering is done entirely in the DB, which allows this system to be applied on DOM definitions that have millions of DOM instances linked. To ensure optimal performance and stability, some limitations are in place:
 
 - You can define up to 10 values on a reference.
 - You can only specify 1 reference per group for a DOM definition.
