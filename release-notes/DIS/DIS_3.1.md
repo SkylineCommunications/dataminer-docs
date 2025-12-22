@@ -4,6 +4,20 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.18
+
+### New features
+
+#### IDE
+
+##### Updated DIS dependencies
+
+DIS now uses:
+
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 2.1.1
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 2.1.1
+- [Skyline.DataMiner.CICD.CSharpAnalysis.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.CSharpAnalysis.Protocol) version 1.0.7
+
 ## DIS 3.1.17
 
 ### New features
