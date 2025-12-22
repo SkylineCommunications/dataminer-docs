@@ -95,6 +95,6 @@ To share a dashboard as an email report in the Dashboards app:
 
    - *Paper format*: Allows you to select a different format than the default A4 format for the PDF.
 
-1. When everything has been configured, at the top, click *Send*.
+1. When everything has been configured, click *Send*.
 
 ***
