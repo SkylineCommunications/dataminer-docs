@@ -97,7 +97,7 @@ The root *README.md* file should include:
    > [!TIP]
    > This repository is available in the Catalog: [Repository Name | Catalog | dataminer.services](https://catalog.dataminer.services/details/{catalog-item-guid})
    >
-   > The Catalog item GUID can be found in the *manifest.yml* file.
+   > The Catalog item GUID (ID) and Name (Title) can be found in the *manifest.yml* file.
 
 ### Project README structure
 
