@@ -95,7 +95,7 @@ The root *README.md* file should include:
 3. **Catalog link** (if applicable): If the repository is published to the Catalog, include a TIP alert with a link:
 
    > [!TIP]
-   > This repository is available in the Catalog: [Repository Name | Catalog | dataminer.services](https://catalog.dataminer.services/details/{catalog-item-guid})
+   > This repository is available in the Catalog: [Catalog item name | Catalog | dataminer.services](https://catalog.dataminer.services/details/{catalog-item-guid})
    >
    > The Catalog item GUID (ID) and Name (Title) can be found in the *manifest.yml* file.
 
