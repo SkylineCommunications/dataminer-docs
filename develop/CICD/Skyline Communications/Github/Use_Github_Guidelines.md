@@ -25,11 +25,9 @@ See [Creating a GitHub account](https://internaldocs.skyline.be/Corporate/Office
 
 You can create either a public repository or a private repository.
 
-How to choose?
-
 **Public**: The code/script is generic and can be used outside of the context of the project.
 
-**Private**: The code/script is specific to a project and cannot be shared publicly.
+**Private**: The code/script is specific to a project and cannot be shared publicly. 
 
 ## Selecting the right license
 
@@ -40,10 +38,13 @@ For a script, the correct license is **MIT**.
 
 ## Repository naming convention
 
-If the repository is private, the name should look like this (using "-" as separator): **{customerAcronym}-{itemType}-{itemName}**
+If the repository is private, the name should look like this (using "-" as separator): **{customerAcronym}-{itemType}-{itemName}**.
 
 > [!IMPORTANT]
 > If the repository is **public**, **do not use a customer acronym** in the repository name. Instead, use the **Skyline acronym "SLC"**.
+
+> [!NOTE]
+> When working on a repository that will have projects with different types, consider this as a Solution (see below).
 
 - For a list of **customer acronyms**, refer to [DCP](https://dcp-ui.azurewebsites.net/customers). For generic repositories, use the Skyline Communications acronym (SLC).
 
@@ -80,6 +81,45 @@ If the repository is private, the name should look like this (using "-" as separ
 ## Adding a README file
 
 It is important to add a *README.md* file to the root folder. The contents of this file should provide users with the necessary information to understand the purpose of the code and learn how to use it.
+
+### Repository README structure
+
+The root *README.md* file should include:
+
+1. **Repository goal**: A short description (maximum three sentences) explaining the purpose of the repository.
+
+2. **Projects overview**: A list of all projects in the solution with:
+   - The project name as a link to its subfolder README (e.g. `[ProjectName](ProjectFolder/README.md)`)
+   - A brief description of the project's goal
+
+3. **Catalog link** (if applicable): If the repository is published to the Catalog, include a TIP alert with a link:
+
+   > [!TIP]
+   > This repository is available in the Catalog: [Repository Name | Catalog | dataminer.services](https://catalog.dataminer.services/details/{catalog-item-guid})
+   >
+   > The Catalog item GUID can be found in the *manifest.yml* file.
+
+### Project README structure
+
+Each project subfolder should contain its own *README.md* file with:
+
+1. **Summary**: A functional overview of what the project does (not method-level details)
+
+2. **Input arguments**: Documentation of any input parameters defined in the XML, including:
+   - Parameter name
+   - Expected type (number, text, multiple choice, etc.)
+   - Description of the parameter's purpose
+
+3. **Project type**: The type is automatically determined based on code patterns:
+
+   | Code Pattern | Project Type |
+   |--|--|
+   | C# file implementing `IGQIDataSource` | Ad-Hoc Data Source |
+   | C# file implementing `IGQIRowOperator` and/or `IGQIColumnOperator` | Data Transformer |
+   | C# file containing `[AutomationEntryPoint(AutomationEntryPointType.Types.OnApiTrigger)]` | User-Defined API |
+   | DMSScript XML file with `<Folder>` tag equal to `bot` or starting with `bot/` | ChatOps Operator |
+   | DMSScript XML file | Automation Script |
+   | Protocol XML file | Connector |
 
 ## Adding a .gitignore
 
@@ -140,13 +180,7 @@ These workflows will allow you to:
 - Compile to a DataMiner package
 - Deploy directly to a cloud-connected DataMiner Agent
 
-Please refer to [GitHub's workflow documentation](https://docs.github.com/en/actions/using-workflows/about-workflows) and to our [workflow templates](https://github.com/SkylineCommunications/.github/tree/main/workflow-templates).
-
-For Automation, see [DataMiner CI/CD Automation](https://github.com/SkylineCommunications/.github/blob/main/workflow-templates/DataMiner-CICD-Automation.yml):
-
-- The first section contains the CI part and makes reference to [reusable workflows](https://github.com/SkylineCommunications/_ReusableWorkflows).
-
-- The second section (optional and commented out by default) contains the CD part to deploy the DataMiner package to a cloud-connected DataMiner Agent.
+When using the [Visual Studio Templates](xref:VisualStudioTemplates), workflows are automatically included with your project. You can select from different workflow options (demo, build, complete). It is very much recommended to use the **complete** workflow whenever possible. In the background, this will use on of our  [workflow templates](_ReusableWorkflows/.github/workflows/DataMiner App Packages Master Workflow.yml at main · SkylineCommunications/_ReusableWorkflows) for the CI part.
 
 ## Using GitHub actions to publish to a cloud-connected DataMiner Agent
 
