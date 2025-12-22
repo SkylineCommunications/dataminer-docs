@@ -9,12 +9,15 @@ Defines the interactivity options for an Automation script.
 ## Content Type
 
 |Item|Facet value|Description|
-|--- |--- |--- |
+|---|---|---|
 |***string restriction***|||
-|&nbsp;&nbsp;Enumeration|Auto|Default option. In the background, the script will be read to try to find out if interactivity is needed, it's advised to set an explicit value Never, Optional, Always, see [How Auto-detection determines interactivity](#how-auto-detection-determines-interactivity) for more details. This behavior is the same as in DataMiner versions prior to 10.5.9/10.6.0, where the [Interactivity](xref:DMSScript.Interactivity) tag is not yet supported. |
+|&nbsp;&nbsp;Enumeration|Auto|Default option. In the background, the script will be read to try to find out if interactivity is needed. This behavior is the same as in DataMiner versions prior to 10.5.9/10.6.0, where the [Interactivity](xref:DMSScript.Interactivity) tag is not yet supported. See [How auto-detection determines interactivity](#how-auto-detection-determines-interactivity).|
 |&nbsp;&nbsp;Enumeration|Never|The script will never be interactive. It will not show any UI elements.|
 |&nbsp;&nbsp;Enumeration|Optional|The script will be interactive if it needs to be. It will show UI elements if needed.|
 |&nbsp;&nbsp;Enumeration|Always|The script will always be interactive. It will always show UI elements.|
+
+> [!NOTE]
+> Because *Auto* requires reading the entire script, we recommend setting an explicit interactivity value instead (*Never*, *Optional*, or *Always*).
 
 ## Remarks
 
@@ -26,22 +29,32 @@ Setting a value different from "Auto" will replace the [options](xref:DMSScript-
 
 - Setting "Always" will enable the option flag "RequireInteractive". This is the preferred option when Automation scripts are used in an [IAS component](xref:InteractiveAutomationScript) in low-code apps.
 
-## How Auto-detection determines interactivity
+## How auto-detection determines interactivity
 
 > [!IMPORTANT]
-> - Because the mechanism needs to read the entire script code, it should be avoided and an explicit interactivity value should be set.
+> Auto-detection requires the entire script code to be read. For this reason, we recommend avoiding this mechanism and setting an explicit interactivity value instead.
 
-When Interactivity is set to Auto, DataMiner inspects the script and automatically sets or unsets the following options:
+When Interactivity is set to *Auto*, DataMiner inspects the script and automatically sets or clears the following options:
 
-- **HasFindInteractiveClient**: Set when any c# code block contains the string ".FindInteractiveClient(" or contains a block of type "Find interactive client".
+- **HasFindInteractiveClient**: Set when any C# code block:
 
-- **RequireInteractive**: Set when any c# code block contains the strings: ".ShowUI(", ".RunClientProgram(" or ".ShowProgress(" or contains a block of type "User interaction" and does not contain the strings ".FindInteractiveClient(" and "engine.IsInteractive".
+  - Contains the string `.FindInteractiveClient(`, or
+
+  - Contains a block of type *Find interactive client*.
+
+- **RequireInteractive**: Set when any C# code block:
+
+  - Contains any of the strings `.ShowUI(`, `.RunClientProgram(`, or `.ShowProgress(`, or
+
+  - Contains a block of type *User interaction*,
+
+  - And does not contain `.FindInteractiveClient(` or `engine.IsInteractive`.
 
 If these conditions are not met, the corresponding option flag is automatically cleared.
 
 > [!NOTE]
-> - The detection is based on simple string matching within the C# code, not semantic code analysis; i.e., if code is commented out, it will still be detected.
-> - If the conditions are not met, the corresponding option flags will be automatically **cleared** (removed) if they were previously set.
-> - The string searches are case-sensitive and look for exact matches.
-> - Setting an explicit value helps to ensure that the desired interactivity behavior is enforced without reliance on string detection.
-> - Prior to DataMiner version 10.5.9/10.6.0, the [Interactivity](xref:DMSScript.Interactivity) tag is not yet supported, so this behavior always applies. 
+>
+> - Detection is based on simple string matching within the C# code, not semantic code analysis. Commented-out code is therefore still detected.
+> - String matching is case-sensitive and requires exact matches.
+> - Setting an explicit value ensures the desired interactivity behavior without relying on string detection.
+> - Prior to DataMiner 10.5.9/10.6.0, the [Interactivity](xref:DMSScript.Interactivity) tag is not supported, so auto-detection always applies.

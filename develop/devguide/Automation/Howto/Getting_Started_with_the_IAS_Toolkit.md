@@ -27,7 +27,7 @@ To start creating your script:
 
 1. Fill in the solution name and specify a target folder. A folder will be created with the solution name in the target folder. This will contain your solution. Click *OK*.
 
-1. Once your solution has been created, open the script XML file in the Solution Explorer and adjust the Interactivity tag to Always or Optional, depending on the types of execution that the script can have. More info on the [Interactivity](xref:DMSScript.Interactivity) tag.
+1. Once your solution has been created, open the script XML file in the *Solution Explorer* and set the [Interactivity](xref:DMSScript.Interactivity) tag to *Always* or *Optional*, depending on the types of execution the script can have.
 
 1. Then, open the first Exe block by clicking the icon next to it.
 
@@ -83,7 +83,8 @@ public class Script
 ```
 
 > [!NOTE]
-> For DataMiner versions prior to 10.5.9/10.6.0, a comment with string ".FindInteractiveClient(" is necessary to make sure the script is marked as interactive. See [How Auto-detection determines interactivity](xref:Automation-InteractivityOptions#how-auto-detection-determines-interactivity) for more details.
+> Prior to DataMiner 10.5.9/10.6.0<!--RN 42954-->, a comment containing the string `.FindInteractiveClient(` is required to mark the script as interactive. See [How auto-detection determines interactivity](xref:Automation-InteractivityOptions#how-auto-detection-determines-interactivity) for more details.
+>
 > ```csharp
 > // DO NOT REMOVE THIS COMMENT OR THE SCRIPT WON'T RUN!
 > // DataMiner evaluates if the script needs to launch in interactive mode.
