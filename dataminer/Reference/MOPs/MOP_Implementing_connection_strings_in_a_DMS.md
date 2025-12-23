@@ -4,9 +4,9 @@ uid: MOP_Implementing_connection_strings_in_a_DMS
 
 # Implementing connection strings in a DataMiner System
 
-A use case is provided on how to implement connection strings in a DataMiner System. This can be required if there are restrictions on the authentication within a DMA cluster. These restrictions can be noted when strange behavior occurs, like desynchronization between DMAs, missing files, users losing their connection, elements not being displayed on one DMA, etc...
+A use case is provided on how to implement connection strings in a DataMiner System. This can be required if there are restrictions on the authentication within a DMS cluster. These restrictions can be noted when strange behavior occurs, like desynchronization between DMAs, missing files, users losing their connection, elements not being displayed on one DMA, etc...
 
-How to identify issue because of connection strings and what they exactly are, can be found [here](xref:Connection_strings).
+How to identify an issue because of connection strings and what they exactly are, can be found [here](xref:Connection_strings).
 
 
 ## Requirements
