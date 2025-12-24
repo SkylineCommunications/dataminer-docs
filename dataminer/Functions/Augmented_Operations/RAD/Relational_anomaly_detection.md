@@ -54,7 +54,7 @@ For each relational anomaly group, several configuration options are available. 
 | <div style="width:200px">Name in RAD Manager app</div> | Name in API and XML | Description |
 |--|--|--|
 | Group name | `name` | The name of the relational anomaly group. This name is used when generating a suggestion event or displaying all groups in the *RAD Manager*. |
-| Update model on new data? | `updateModel` | Indicates whether RAD should update its internal model of the relationships between the parameters in the group when new trend data is available. If this is not selected, the model will only be trained immediately after creation and when [manually specifying a training range](xref:RAD_manager#specifying-the-training-range).<br>Enabling this can be useful when monitoring parameters that you would like to see changing over time; the model can then adapt to the new behavior, and only more pronounced breaks in relations will be detected. If the parameter relationship is static (e.g. two parameters that should remain equal forever), it is better not to enable this option.|
+| Update model on new data? | `updateModel` | Indicates whether RAD should update its internal model of the relationships between the parameters in the group when new trend data is available. If this is not selected, the model will only be trained immediately after creation and when [manually specifying a training range](xref:RAD_manager#configure-model-training).<br>Enabling this can be useful when monitoring parameters that you would like to see changing over time; the model can then adapt to the new behavior, and only more pronounced breaks in relations will be detected. If the parameter relationship is static (e.g. two parameters that should remain equal forever), it is better not to enable this option.|
 | Anomaly threshold | `anomalyThreshold` in API, `anomalyScore` in XML | The threshold used for suggestion event generation. Suggestion events are generated when RAD detects a region with an anomaly score higher than this threshold. A higher threshold results in fewer suggestion events, while a lower threshold results in more. Default: 6 (or 3 prior to DataMiner 10.5.9/10.6.0<!-- RN 43400 -->).|
 | Minimum anomaly duration | `minimumAnomalyDuration` | Supported from DataMiner 10.5.4/10.6.0 onwards. <!-- RN 42283 --> This option specifies the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly, similar to [alarm hysteresis](xref:Alarm_hysteresis). This value must be 5 minutes or higher. If this is set to a value greater than 5 minutes, the deviating behavior must persist longer before an anomaly event is triggered. You can configure this to filter out noise events due to a single, short, harmless outlier, for instance caused by a planned maintenance or a device restart. Default: 15 minutes (or 5 minutes prior to DataMiner 10.5.9<!-- RN 43400 -->). |
 
@@ -63,7 +63,7 @@ For each relational anomaly group, several configuration options are available. 
 From DataMiner 10.5.9/10.6.0 onwards, the [RAD API](xref:RAD_API) supports the creation of **shared model groups**. A shared model group consists of multiple relational anomaly subgroups that all use the same underlying model. This approach is particularly valuable when you need to monitor many entities that share genuine behavioral similarities.
 
 > [!NOTE]
-> The [RAD Manager app](xref:RAD_manager) currently does not support shared model groups. It only supports single groups, where each group of parameters is associated with its own dedicated model.
+> Before version 4.0.0, the [RAD Manager app](xref:RAD_manager) did not support shared model groups. The app only supported single groups, where each group of parameters is associated with its own dedicated model. Starting with version 4.0.0, the app adds supprt for shared model groups.
 >
 > Shared models generalize across subgroups, which can reduce accuracy for specific cases compared to dedicated single models trained on individual subgroup data. However, they can be especially effective when dealing with many subgroups, some of which may lack sufficient healthy reference data.
 
@@ -72,6 +72,18 @@ From DataMiner 10.5.9/10.6.0 onwards, the [RAD API](xref:RAD_API) supports the c
 Consider the [UPS Management Use Case](https://community.dataminer.services/cut-ups-costs-and-prevent-outages-with-ai-powered-monitoring/), where a battery system included many units, each containing several cells with voltage and current parameters. In healthy battery units, these values remain similar across cells and fluctuate together.
 
 Because this behavior is consistent across all units, you can define a shared model group with a subgroup per battery. This allows a single model to monitor all battery units and detect deviations from expected patterns.
+
+#### Identifying anomalous subgroups in a shared model group
+The **Fleet Outlier Detection** feature is available from DataMiner 10.5.12/10.6.0 onwards. It provides a high-level assessment of subgroups within a shared model group, helping you quickly identify individual assets or subgroups that behave unusually compared to their peers.
+
+This detection method operates differently from Relational Anomaly Detection (RAD):
+
+- RAD: Focuses on the internal consistency and status of a single unit (or subgroup). For example, It checks whether the individual cell voltages within a single battery unit fluctuate together as expected.
+
+- Fleet Outlier Detection: Analyzes the collective behavior of all units within a shared model. It establishes a "normal" performance baseline for the group and identifies any specific unit or subgroup that significantly deviates from this standard. This highlights between-group issues. The Fleet Outlier Detection can identify the single battery unit whose overall parameters behave atypically compared to other batteries in the fleet,  even if its internal parameters fluctuate consistently over time.
+
+Within the [RAD Manager app](xref:RAD_manager), the affected shared model subgroups are explicitly labeled as "Outlier Group".
+The [RAD API](xref:RAD_API) provides ways to retrieve a score for each subgroup in a shared model group. This score quantifies the degree of difference from the rest of the group, enabling automated sorting and prioritization of the most statistically anomalous units. The higher the score, the more critical the difference in behavior compared to its peers.
 
 ## Relational anomalies in the Alarm Console
 
