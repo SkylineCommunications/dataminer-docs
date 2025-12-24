@@ -17,11 +17,11 @@ Adds the after startup logic to the protocol. DIS will check whether the *protoc
 
 See also [Executing a QAction after startup](xref:LogicExamples#executing-a-qaction-after-startup)
 
-## Add matrix...
+## Add matrix
 
 Adds a matrix and/or Inputs and Outputs tables to the protocol.
 
-## Add SNMP System Info...
+## Add SNMP System Info
 
 Adds the following SNMP System Info parameters to the protocol:
 
@@ -32,11 +32,11 @@ Adds the following SNMP System Info parameters to the protocol:
 - System Contact (1.3.6.1.2.1.1.4)
 - System Location (1.3.6.1.2.1.1.6)
 
-## Add SNMP Trap Receiver...
+## Add SNMP Trap Receiver
 
 Adds an SNMP trap receiver and a QAction with boilerplate code to process received traps.
 
-## Add Table Context Menu...
+## Add Table Context Menu
 
 Adds a custom context menu to a table in the protocol. You can choose between the following:
 

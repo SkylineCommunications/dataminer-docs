@@ -13,9 +13,9 @@ The following info bars are available:
 - **Incorrect target framework**: Not all C# projects target .NET Framework 4.8.
 - **Obsolete class library generation feature**: The solution uses the deprecated [class library generation feature](xref:Class_Library_packages).
 - **Outdated analyzer files**: One or more code analysis files or settings in the solution are not up to date.
-- **Protocol extensions NuGet**: One or more projects in the solution do not reference the [Protocol Extensions NuGet package](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) or reference an outdated version. Introduced in DIS 3.1.7<!-- RN 42021 -->.
+- **Protocol extensions NuGet**: One or more projects in the solution do not reference the [Protocol Extensions NuGet package](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) or reference an outdated version.<!-- RN 42021 -->
 - **Secure Coding NuGet**: One or more projects in the solution do not reference the [Secure Coding Analyzers NuGet package](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SecureCoding.Analyzers) or reference an outdated version.
 - **StyleCop Analyzers NuGet**: One or more projects in the solution do not use the correct StyleCop.Analyzers NuGet package.
 - **UTF-8 header**: The file does not contain the UTF-8 header signature bytes. This could cause problems when uploading this file to DataMiner.
 
-As of DIS version 3.1.5 <!-- RN 41840 -->, the info bar logic is triggered 30s after opening the solution.
+The info bar logic is triggered 30s after opening the solution.<!-- RN 41840 -->

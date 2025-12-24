@@ -19,6 +19,7 @@ Additionally, the following tool windows are available:
 - [Mapping view](xref:DisMappingViewToolWindow): This tool window allows you to visualize relationships between items in the connector you are working on.
 - [Grid view](xref:DisGridViewToolWindow): This tool window allows you to manage and configure all parameters in the connector using a spreadsheet-like view.
 - [Diagram](xref:DisDiagramToolWindow): This window shows a graphical representation of a connector. It allows you to see how a connector is built, navigate through its logic, and investigate flow issues.
+- [DIS Parameter Update Locations](xref:DisParameterUpdateLocationsToolWindow): This tool window allows you to check from which locations parameters get updated.
 - [Validator](xref:DisValidatorToolWindow): This window lists the results of the latest connector validation in a tree structure, grouped by severity and category.
 - [Comparer](xref:DisComparerToolWindow):This tool window allows you to compare two connector versions.
 - [Macros](xref:DisMacrosToolWindow): This tool window allows you to create C# scripts that can be used to make changes to e.g. a protocol XML file.

@@ -4,7 +4,7 @@ uid: DIS_Troubleshooting
 
 # Problem in DIS?
 
-DIS is a complex program that can do a lot of things. It can happens that something breaks or was not taken in account.
+DIS is a complex program that can do a lot of things. It can happen that something breaks or was not taken in account.
 
 ## Preliminary checks
 
