@@ -322,6 +322,14 @@ Note that if a local file path is used, you will need to replace the *appsetting
 
 ### Fixes
 
+#### Dashboards app: Exporting trend chart data to CSV could cause an error when data was still loading [ID 44064]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Up to now, when users triggered a CSV export on a trend chart before all data had finished loading, an error popup could appear.
+
+This issue has now been resolved. The CSV export process has been made asynchronous, so the download will only start once all required data has been fully loaded, even if the export button is clicked earlier.
+
 #### Dashboards app: Problem when generating a PDF report of a dashboard containing a Time range component [ID 44168]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
