@@ -68,6 +68,16 @@ Some rules of thumb:
 - The *Main* range indicates the latest and most recommended range to install.
 - Custom tags on a range should only be used in exceptional cases, where two ranges might be considered but each has its specifics.
 
+### Ownership
+
+Each Catalog item requires at least one owner. The owner should be an individual person's full name, not a team name. 
+
+- **name**: Your full name. The email address should not be part of the name field.
+- **email**: Your email address. This is recommended, although it is currently not used in the Catalog interface.
+- **url**: A URL associated with the owner, such as your GitHub account URL.
+
+Multiple owners can be specified by adding additional entries to the list. For example:
+
 ## Keep the limitations in mind
 
 When creating Catalog items, be mindful of the following size limitations:
