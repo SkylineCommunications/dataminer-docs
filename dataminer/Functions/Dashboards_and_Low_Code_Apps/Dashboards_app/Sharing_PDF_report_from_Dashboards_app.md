@@ -4,10 +4,15 @@ uid: Sharing_report_from_Dashboards_app
 
 # Sharing a dashboard via an email report from the Dashboards app
 
-> [!NOTE]
-> From DataMiner 10.2.2/10.2.0 onwards, you can generate a report in the Dashboards app if the *ReportsAndDashboardsExport* [soft-launch option](xref:SoftLaunchOptions) is activated. From DataMiner 10.2.12/10.3.0 onwards, this feature is fully available.
+To learn how to share a dashboard as an email report in the Dashboards app, you can follow the steps below or watch this short video:
 
-To share a dashboard as an email report in the Dashboards app:
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/dataminer/images/Sharing_a_dashboard.mp4" type="video/mp4">
+  </video>
+</div>
+
+*Watch first: [Creating your first dashboard](xref:Creating_a_completely_new_dashboard)*
 
 ## [From DataMiner 10.3.0 [CU12]/10.4.3 onwards](#tab/tabid-1)
 
@@ -98,3 +103,6 @@ To share a dashboard as an email report in the Dashboards app:
 1. When everything has been configured, click *Send*.
 
 ***
+
+> [!NOTE]
+> From DataMiner 10.2.2/10.2.0 onwards, you can generate a report in the Dashboards app if the *ReportsAndDashboardsExport* [soft-launch option](xref:SoftLaunchOptions) is activated. From DataMiner 10.2.12/10.3.0 onwards, this feature is fully available.

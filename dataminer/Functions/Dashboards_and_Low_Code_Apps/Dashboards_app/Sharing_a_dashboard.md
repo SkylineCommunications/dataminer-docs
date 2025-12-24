@@ -114,3 +114,11 @@ You can set an optional expiration date to stop sharing automatically.
 If you only want to share a **static version** of a dashboard, use the steps described under [Sharing a dashboard via an email report from the Dashboards app](xref:Sharing_report_from_Dashboards_app).
 
 Recipients will get the dashboard as a **report attachment** (PDF, HTML, or CSV). They **do not need any account** or access to the DataMiner System.
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>
+    More of a visual learner? Watch <a href="xref:Sharing_report_from_Dashboards_app" style="color: #657AB7;">this short video</a> to see how to share a dashboard via email report.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
