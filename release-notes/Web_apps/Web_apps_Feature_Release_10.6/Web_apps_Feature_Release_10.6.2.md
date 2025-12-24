@@ -300,6 +300,17 @@ When all above-mentioned conditions are met, the partition join is executed as f
 > [!IMPORTANT]
 > Although the partition join strategy will enhance performance in most common scenarios that require the fastest possible query executions, this strategy can be up to twice as slow when the join has low selectivity. For these uncommon scenarios, we recommended manually enabling the *prefetch* option on the relevant join operator.
 
+#### Dashboards app: Updated navigation pane with improved accessibility and CRUD actions [ID 44297]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+The sidebar navigation pane of the Dashboards app, which contains dashboard folders and dashboards, has been redesigned to improve usability and make managing dashboard folders and dashboards more efficient. The new view:
+
+- Supports keyboard navigation.
+- Automatically adapts to the viewport width.
+- Allows additional CRUD actions directly from the view, including deleting a folder, adding a folder or dashboard, and importing a dashboard either locally or from the Catalog.
+- Displays a fitting placeholder when a folder or the root is empty.
+
 #### Support for GQI DxM on Dashboard Gateway [ID 44344]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
