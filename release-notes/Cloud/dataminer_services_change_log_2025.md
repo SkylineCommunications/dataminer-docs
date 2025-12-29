@@ -9,11 +9,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 18 December 2025 - Enhancement - dataminer.services - Improved DaaS deployment flow
+### 29 December 2025 - Fix - Admin - Remove node button
+
+On the Admin app, on the DxMs page, the option to remove a node was previously visible to all users. Now this option will only be available to users with the Owner or Admin role for the DataMiner System.
+
+### 29 December 2025 - Enhancement - dataminer.services - Improved DaaS deployment flow
 
 On dataminer.services, the *Add DataMiner System* button will now launch an onboarding wizard that will help users to add a new DataMiner System step by step. During this process, it will also be more clear than before when an organization has to be created.
 
-### 18 December 2025 - Enhancement - Catalog - Slideshow click behavior
+### 17 December 2025 - Enhancement - Catalog - Slideshow click behavior
 
 On the Catalog home page, users can now use the Shift and Ctrl keys together with a mouse click to open items from the slideshow in a new window or tab, respectively.
 
