@@ -320,6 +320,14 @@ On the Dashboard Gateway server, you will need to edit the *web.config* in the A
 
 Note that if a local file path is used, you will need to replace the *appsettings.runtime.json* or the *.creds* file whenever the IP address of one or more DataMiner Agents in the cluster changes or one or more DataMiner Agents is added to or removed from the cluster.
 
+#### Web apps: New Web folder synced across the DataMiner System [ID 44396]
+
+A new folder, `C:\Skyline DataMiner\Web`, has been added and is now synced across the DataMiner System.
+
+This folder will be used to store user-generated configuration and files that can be shared across dashboards and low-code apps, such as images and themes.
+
+The `C:\Skyline DataMiner\Generic Interface` folder has been removed, as it was no longer used.
+
 ### Fixes
 
 #### Dashboards app: Exporting trend chart data to CSV could cause an error when data was still loading [ID 44064]
