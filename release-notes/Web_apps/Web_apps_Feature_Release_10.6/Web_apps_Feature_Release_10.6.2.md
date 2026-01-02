@@ -400,3 +400,15 @@ When you started an interactive Automation script in a web app, up to now, the m
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 On systems where dashboards and low-code apps were accessed through a Dashboard Gateway, up to now, the web methods `GetClientDefaultTimeZone` and `GetRegionalSettings` would incorrectly not be able to read the regional settings of the DataMiner Agent. From now on, the requests will be forwarded correctly.
+
+#### Login could fail when using a dashboard gateway with a DMA where gRPC is enabled [ID 44364]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a dashboard gateway was used in combination with a DataMiner Agent where gRPC was enabled, up to now, logging in could fail with the following error:
+
+```txt
+Failed to authenticate over GRPC: Status(StatusCode="Internal", Detail="Error starting gRPC call. MissingMethodException: Method not found: 'System.Buffers.IBufferWriter`1<Byte> Grpc.Core.SerializationContext.GetBufferWriter()'.", DebugException="System.MissingMethodException: Method not found: 'System.Buffers.IBufferWriter`1<Byte> Grpc.Core.SerializationContext.GetBufferWriter()'.")
+```
+
+This issue has now been resolved, and authentication over gRPC will work correctly in this scenario.
