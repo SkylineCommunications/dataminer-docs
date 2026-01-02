@@ -20,9 +20,10 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-#### DataMiner Assistant web app [ID 44342]
+#### DataMiner Assistant web app [ID 44342] [ID 44379]
 
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+<!-- RN 44342: MR 10.5.0 [CU11] - FR 10.6.2 -->
+<!-- RN 44379: MR 10.7.0 - FR 10.6.2 -->
 
 A Dataminer Assistant web app is now available via `https://<DMA IP or hostname>/assistant`.
 
@@ -43,6 +44,15 @@ This new app provides a streamlined chat experience with support for feature sel
   - Before you ask a question, you can select a particular feature/subject/area: Insights or Documentation.
   - Example questions will update automatically based on the feature/subject/area you have selected.
   - During a conversation, behavior is adjusted according to the context.
+
+- **Logging**
+
+  The following information will be logged in the XXX log file:
+
+  - Every incoming chat request (level "information").
+  - The start of a streaming chat response (level "debug").
+  - The end of a streaming chat response (level "information").
+  - The returned assistant response (level "debug").
 
 ## Changes
 
