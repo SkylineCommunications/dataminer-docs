@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 29 December 2025 - Fix - Admin - Remove node button
 
-On the Admin app, on the DxMs page, the option to remove a node was previously visible to all users. Now this option will only be available to users with the Owner or Admin role for the DataMiner System.
+On the *DxMs* page of the Admin app, the option to remove a node was previously visible to all users. It is now only available to users with the Owner or Admin role for the DataMiner System.
 
 ### 29 December 2025 - Enhancement - dataminer.services - Improved DaaS deployment flow
 
