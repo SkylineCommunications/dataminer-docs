@@ -296,7 +296,15 @@ On the Dashboard Gateway server, you will need to edit the *web.config* in the A
 
 Note that if a local file path is used, you will need to replace the *appsettings.runtime.json* or the *.creds* file whenever the IP address of one or more DataMiner Agents in the cluster changes or one or more DataMiner Agents is added to or removed from the cluster.
 
+#### Ticketing app is End of Life [ID 44371]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+The Ticketing app has been declared End of Life. On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer appear on the DataMiner landing page.
+
 #### Web apps: New Web folder synced across the DataMiner System [ID 44396]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 A new folder, `C:\Skyline DataMiner\Web`, has been added and is now synced across the DataMiner System.
 
