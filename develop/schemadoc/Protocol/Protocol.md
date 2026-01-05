@@ -58,7 +58,7 @@ The root element of a DataMiner protocol.
 |&nbsp;&nbsp;[Topologies](xref:Protocol.Topologies)|[0, 1]|Contains several Topology tags, each representing the connections in a diagram displayed in a CPE Manager.|
 |&nbsp;&nbsp;[TreeControls](xref:Protocol.TreeControls)|[0, 1]|Contains all the tree controls defined in the protocol.|
 |&nbsp;&nbsp;[Triggers](xref:Protocol.Triggers)|[0, 1]|Contains the triggers defined in the protocol.|
-|&nbsp;&nbsp;[Type](xref:Protocol.Type)||Specifies the protocol type. In multi-connection protocols, it specifies the type of the main connection.|
+|&nbsp;&nbsp;[Type](xref:Protocol.Type)||Specifies the protocol type. In protocols with multiple connections, it specifies the type of the main connection.|
 |&nbsp;&nbsp;[Vendor](xref:Protocol.Vendor)||Specifies the name of the vendor of the monitored device.|
 |&nbsp;&nbsp;[VendorOID](xref:Protocol.VendorOID)||Specifies the vendor OID of the monitored device.|
 |&nbsp;&nbsp;[Version](xref:Protocol.Version)||Specifies the protocol version.|

@@ -238,7 +238,7 @@ When adding or editing a tag, you can now select the following additional option
 
 #### Trending: Trend percentile will now be calculated using either average or real-time trend data \[ID 27965\]
 
-Up to now, the trend percentile was calculated using the most detailed data set that was available. In cases where the trend window contained both real-time and average trend data, it would be calculated using both types of data.
+Up to now, the trend percentile was calculated using the most detailed dataset that was available. In cases where the trend window contained both real-time and average trend data, it would be calculated using both types of data.
 
 From now on, from the moment the trend window contains average data points in its most detailed set, only average data will be used for the calculation. This is also be reflected in the percentile menu, where a warning icon will be shown. A tool tip on the warning icon will indicate when only average data will be used.
 
@@ -328,7 +328,7 @@ You can construct a query to use as data input for a component by following thes
 
 1. Specify a name for the query.
 
-1. In the drop-down box below this, select the data source you want to use. At present, the following options are available:
+1. In the dropdown box below this, select the data source you want to use. At present, the following options are available:
 
     - *Get elements*: The elements in the DataMiner System.
     - *Get parameter table by alias*: The parameter table using the specified alias in the Elasticsearch database.
@@ -336,7 +336,7 @@ You can construct a query to use as data input for a component by following thes
     - *Get parameters for element where*: The selected parameters for the specified protocol or the parameters linked to the specified profile definition. Note that if parameters are displayed based on a specific protocol, it is not possible to combine a table parameter with other parameters, and only column parameters from the same table can be displayed in the same query.
     - *Get services*: The services in the DataMiner System.
 
-1. Select an operator. This step is optional; if you do not select an operator, the entire data set will be used. The following operators are available:
+1. Select an operator. This step is optional; if you do not select an operator, the entire dataset will be used. The following operators are available:
 
     - *Aggregate*: Allows you to aggregate data from the data source. After you have selected this option, first select the aggregation column, and the method that should be used. Depending on the type of data available in the selected column, different methods are available, e.g. Average, Count, Distinct Count, Maximum, Median, Minimum, Percentile 90/95/98 or Standard deviation.
 
@@ -350,9 +350,9 @@ You can construct a query to use as data input for a component by following thes
 
         For both manipulation methods, you will also need to specify the name for the new column. When the column manipulation operation is fully configured, you can further fine-tune the result by applying another operator.
 
-    - *Filter*: Filters the data set. When you select this option, select the column to filter, specify the filter method (e.g. equals, greater than, etc.) and the value to use as a filter. The available filter methods depend on the type of data in the selected column. Once the filter has been fully configured, you can refine the results by applying another operator, e.g. an additional filter.
+    - *Filter*: Filters the dataset. When you select this option, select the column to filter, specify the filter method (e.g. equals, greater than, etc.) and the value to use as a filter. The available filter methods depend on the type of data in the selected column. Once the filter has been fully configured, you can refine the results by applying another operator, e.g. an additional filter.
 
-    - *Join*: Joins two tables together. When you select this option, in the *Type* drop-down box, you will first need to select how the tables should be joined. Then you will need to select another data source (optionally refined with one or more operators) in order to specify the table you want the first table to be joined with. Optionally, you can also specify a condition to determine when rows should be joined. For instance, if one table contains elements with a custom property that details a booking ID and the other lists bookings, you could add the condition that the property in the first table must match the ID in the second table.
+    - *Join*: Joins two tables together. When you select this option, in the *Type* dropdown box, you will first need to select how the tables should be joined. Then you will need to select another data source (optionally refined with one or more operators) in order to specify the table you want the first table to be joined with. Optionally, you can also specify a condition to determine when rows should be joined. For instance, if one table contains elements with a custom property that details a booking ID and the other lists bookings, you could add the condition that the property in the first table must match the ID in the second table.
 
         The *Inner* type of join only includes rows if they match the condition. *Left* displays all rows from the first table (i.e. the table on the left) and only the matching rows from the other table. *Right* does the opposite. *Outer* displays first the non-matching rows from the left table, then the matching rows from both tables, then the non-matching rows from the right table.
 
@@ -499,7 +499,7 @@ The GetDataMinerClusterName method can now be used to retrieve the name of the D
 
 Multiple changes and improvements have been implemented to the Ticketing app. The most important change is that the app will now use the Elasticsearch database instead of the Cassandra database.
 
-When you install DataMiner 10.0.13 and you already use an Elasticsearch database, all ticketing data will be migrated automatically. If you do not have an Elasticsearch database and you have installed DataMiner 10.0.13, the ticketing data will be migrated automatically as soon as you add an Elasticsearch database to you DataMiner System. However, until you do so, you will no longer be able to use the Ticketing app. A run-time error in the Alarm Console will indicate that Ticketing Manager could not be initialized because there is no Elasticsearch database.
+When you install DataMiner 10.0.13 and you already use an Elasticsearch database, all ticketing data will be migrated automatically. If you do not have an Elasticsearch database and you have installed DataMiner 10.0.13, the ticketing data will be migrated automatically as soon as you add an Elasticsearch database to you DataMiner System. However, until you do so, you will no longer be able to use the Ticketing app. A runtime error in the Alarm Console will indicate that Ticketing Manager could not be initialized because there is no Elasticsearch database.
 
 When you interact with the Ticketing Manager in scripts, keep the following changes in mind:
 

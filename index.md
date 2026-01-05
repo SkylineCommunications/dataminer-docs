@@ -43,3 +43,18 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
     <a href="/release-notes/DataMiner_General_RNs_index.html" title="DataMiner Release Notes" target="_self"><img src="images/Docs_DataminerReleaseNotes.svg" style="width:100%"></a>
   </div>
 </div>
+
+<style>
+.columnhome a {
+  display: inline-block;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.columnhome a:hover {
+  background-color: #f0f4ff; /* light background on hover */
+  transform: scale(1.05);   /* slightly bigger */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+</style>

@@ -72,10 +72,10 @@ In this step, you will create a query that retrieves elements in your DataMiner 
 
       1. Under *Empty data shows*, select *everything*.
 
-      1. Click *Link* in the lower right corner.
+      1. Click *Link* in the lower-right corner.
 
          > [!TIP]
-         > See also: [Replace the static filter value with a feed](xref:Tutorial_Dashboards_Controls_And_Feeds_Query#step-4-replace-the-static-filter-value-with-a-feed)
+         > See also: [Link the text input to the GQI query to enable dynamic filtering](xref:Tutorial_Dashboards_Controls_Query#step-4-link-the-text-input-to-the-gqi-query-to-enable-dynamic-filtering)
 
    1. Click the ![Stop editing](~/dataminer/images/Stop_Editing.png) button to stop editing the query.
 

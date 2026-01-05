@@ -5,52 +5,41 @@ keywords: cloud faq
 
 # Frequently asked questions related to DaaS
 
-### What are DataMiner credits?
+### How can I create a new DaaS system?
 
-DataMiner credits are a form of currency used to subscribe to DataMiner software and hosting services.
+Follow the instructions under [Creating a new DMS on dataminer.services](xref:Creating_a_DMS_on_dataminer_services).
 
-<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
-  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
-    <b>💡 TIPS TO TAKE FLIGHT</b><br>Unfamiliar with terms like "DataMiner credits"? Take a look at our list of <a href="xref:Pricing_Usage_based_service#usage-terms" style="color: #657AB7;">usage terms</a>.
-  </div>
-  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
-</div>
+### Can I try out DaaS for free?
 
-### Where can I check the current DataMiner credit balance of my organization?
+If you [create a new organization](xref:Creating_an_organization), you can try out a DataMiner Community Edition DaaS system for free. This trial system will expire after **one week**. Once this expiration date is reached, the system will automatically be removed unless it is upgraded beforehand.
 
-The DataMiner credit balance of an organization is displayed in the [Admin app](https://admin.dataminer.services/).
+To **upgrade** your trial system to a regular DataMiner Community Edition DaaS system, please contact <support@dataminer.services>.
 
-### How can I acquire more DataMiner credits?
-
-You can order DataMiner credits through the Azure Marketplace. See [Order DataMiner credits](xref:Order_DataMiner_credits).
-
-For more information, contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
-
-### When does maintenance take place on a DaaS system?
-
-See [DaaS Planned Maintenance Policy](xref:DaaS_Planned_Maintenance_Policy).
-
-### When does a DaaS system expire?
-
-A DataMiner Community Edition DaaS system will be scheduled to expire as soon as the organization does not have sufficient DataMiner credits to extend its lifetime.
+If you would like an **extended trial period**, please contact <sales@skyline.be>.
 
 > [!NOTE]
-> When an organization has multiple DaaS systems, they will be extended in chronological order. When your organization does not have enough credits left to extend one of your DaaS systems, that DaaS system will be scheduled to expire. However, at this point, you may still have a number of DataMiner credits left that will be considered reserved for your other DaaS systems.
+> If you are an owner of the organization of a DaaS system or an owner of a DaaS system, you will get an email notification if your system is about to expire. Another email notification will be sent when the system effectively expires.
 
-### What happens when my DaaS system expires or is deleted?
+### Where can I find information about DataMiner credits?
 
-Your DaaS system along with all its associated resources and data will be decommissioned. The DataMiner System will still be recoverable for a further 7 days after the expiration or deletion. To recover the system, contact [daas@dataminer.services](mailto:daas@dataminer.services). The cloud identity and shares will be lost, and the system will receive a new cloud identity within your organization upon recovery.
-
-> [!NOTE]
-> If you are an owner of the organization of a DaaS system or an owner of a DaaS system, you will get an email notification if your system is about to expire, for example because you do not have enough DataMiner credits left. Depending on how many DataMiner credits you use for other purposes, you will get this notification up to 5 days before the system expires. Another email notification will be sent when the system effectively expires.
+For details about what DataMiner credits are, how they are used, and how to acquire more, refer to the [Pricing FAQ](xref:FAQs_Pricing).
 
 ### How can I manually delete my DaaS system?
 
 You can delete your DaaS system at any time before its expiration. See [Removing a DaaS system](xref:Removing_a_DaaS_system).
 
-### How can I create a new DaaS system?
+### Can a deleted or expired DaaS system still be recovered?
 
-Follow the instructions under [Creating a new DMS on dataminer.services](xref:Creating_a_DMS_on_dataminer_services).
+When your DaaS system expires or is deleted, the system and all associated resources and data will be decommissioned. However, the system can still be recovered within a limited grace period:
+
+- **10 days** if the system was created less than 10 days ago.
+- **30 days** if the system has been running for more than 10 days at the time of expiration/deletion.
+
+To recover the system, contact [daas@dataminer.services](mailto:daas@dataminer.services).
+
+### When does maintenance take place on a DaaS system?
+
+See [DaaS Planned Maintenance Policy](xref:DaaS_Planned_Maintenance_Policy).
 
 ### What is the expected availability of a DaaS system?
 
@@ -66,9 +55,7 @@ See also: [Data location and redundancy](xref:STaaS_features#data-location-and-r
 
 ### What system redundancy policy does a DaaS system have?
 
-As of Q4 of 2024, a DaaS system will be able to use Swarming.
-
-See also: [Swarming](xref:Swarming).
+As of Q4 of 2024, DaaS systems can use [Swarming](xref:Swarming). Starting from June 23, 2025, this feature is enabled by default.
 
 ### What backup policy does a DaaS system have?
 
@@ -83,7 +70,7 @@ See also: [Swarming](xref:Swarming).
 
 ### Where are DaaS backups stored?
 
-Backups are stored in zone-redundant storage (ZRS) managed by Azure backup, in the same region as the DaaS system.
+Backups are stored in zone-redundant storage (ZRS) managed by Azure backup, in the same region as the DaaS system.
 
 ### Is it possible to make a local backup of all data?
 
@@ -95,7 +82,15 @@ You can use the DataMiner API to copy data from Azure at no additional subscript
 
 ### How can a DaaS system connect to on-premises and cloud resources?
 
-For more information, see [Connecting to data sources using a DaaS system](xref:DaaS_connecting_to_data_sources)
+See [Connecting to data sources using a DaaS system](xref:DaaS_connecting_to_data_sources).
+
+### Can DaaS use custom DNS servers?
+
+Yes. These can be set either for the whole DMS, or per node.
+
+DaaS uses the [Azure-provided DNS](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances?tabs=redhat#azure-provided-name-resolution) by default.
+
+To request a change, contact <daas@dataminer.services>.
 
 ### Are additional costs due in order to connect to Azure?
 
@@ -105,7 +100,7 @@ Additional query costs may be due when using e.g. Azure ExpressRoute or Amazon C
 
 ### How are user accounts managed? Where are the passwords stored?
 
-User management on DaaS systems is similar to that on on-premises system. Although local accounts are available by default, user accounts are typically integrated by an identity provider.
+User management on DaaS systems is similar to that on on-premises systems. Although local accounts are available by default, user accounts are typically integrated by an identity provider.
 
 See also: [User management](xref:User_management).
 
@@ -122,7 +117,7 @@ If you create a new DataMiner System via <https://dataminer.services>, it will b
 However, you can request for it to be hosted in a different available region without incurring any additional costs. To do so, please contact <daas@dataminer.services>.
 
 > [!NOTE]
-> When choosing a region, make sure to opt for a region that supports availability zones.
+> When choosing a region, you must select a region that supports availability zones. For an overview, refer to [Azure Regions List](https://learn.microsoft.com/en-us/azure/reliability/regions-list).
 
 ### Where is the data for my DaaS system hosted?
 

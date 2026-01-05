@@ -33,10 +33,10 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
   - Permission to create, edit and delete dashboards.
 
-- The Dashboard Gateway web server(s) should be able to communicate with a DMA using both a .NET Remoting connection and an HTTP(S) connection (using port 80 or 443, depending on the HTTP(S) configuration of the DataMiner Agent)
+- The Dashboard Gateway web server(s) must be able to communicate with a DataMiner Agent using an HTTP(S) connection (port 80 or 443, depending on the DataMiner Agent's HTTP(S) configuration). If .NET Remoting is still active (default prior to DataMiner 10.5.10/10.6.0, or when enforced by the DMA), that port must also be accessible. (See [Overview of IP ports used in a DMS](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms).)
 
 > [!IMPORTANT]
-> Always make sure your Dashboard Gateway's web application folders are in sync with the DataMiner server. This means that when you upgrade your DataMiner software, you must make sure the folders for the web apps are also up to date.
+> Always make sure your Dashboard Gateway's web application folders are in sync with the DataMiner server. This means that when you upgrade your DataMiner software, you must make sure the folders for the web apps are also up to date. See [DataMiner upgrades](#dataminer-upgrades)
 
 ## Limitations
 
@@ -57,7 +57,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
 > [!IMPORTANT]
 > To be able to use [DataMiner Maps](xref:DashboardGenericMap) and [video thumbnails embedded using a Web component](xref:DashboardWeb), a [reverse proxy](#reverse-proxy) must be configured. This is also needed in case any modules or apps other than the Dashboards app, Low-Code Apps, Monitoring app, Jobs app, and Ticketing app are embedded.
 
-## Dashboard Gateway configuration
+## Configuration
 
 1. On the Dashboard Gateway web server(s), install IIS and the [URL Rewrite](https://www.iis.net/downloads/microsoft/url-rewrite) module.
 
@@ -71,16 +71,38 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 1. From a DataMiner Agent, copy the following folders to the web root folder of the Dashboard Gateway web server:
 
-   - The web application folder(s), e.g. `C:\Skyline DataMiner\Webpages\Dashboard`, `C:\Skyline DataMiner\Webpages\App`, `C:\Skyline DataMiner\Webpages\Monitoring`, `C:\Skyline DataMiner\Webpages\Jobs`, `C:\Skyline DataMiner\Webpages\Ticketing`, etc.
-   - `C:\Skyline DataMiner\Webpages\SharedComponents`
-   - The Authentication app folder, i.e. `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
+    - `C:\Skyline DataMiner\Webpages\Dashboard`
+    - `C:\Skyline DataMiner\Webpages\App`
+    - `C:\Skyline DataMiner\Webpages\Monitoring`
+    - `C:\Skyline DataMiner\Webpages\Jobs`
+    - `C:\Skyline DataMiner\Webpages\Ticketing`
+    - `C:\Skyline DataMiner\Webpages\SharedComponents`
+    - `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
 
 1. On the Dashboard Gateway web server, edit the *web.config* in the API folder, and specify the following settings:
 
    - *connectionString*: The hostname or IP address of the DataMiner Agent to which the Dashboard Gateway has to connect.
    - *connectionUser* and *connectionPassword*: The DataMiner user account that the Dashboard Gateway has to use to connect to the DataMiner Agent (username and password).
 
-1. If [external authentication via SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) is used, also configure the URL of the API of the Dashboard Gateway (`https://gateway.mycompany.com/API/`) as an *AssertionConsumerService* in the metadata XML file and on the identity provider.
+   From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!-- RN 44344 -->, also specify the following settings to make sure the gateway can communicate using **MessageBroker** within the DataMiner cluster:
+
+   - If the system uses **[BrokerGateway](xref:BrokerGateway_Migration)**:
+
+     - *nats:credsUrl*: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
+     - *nats:apiKeyPath*: The file path to the *appsettings.runtime.json* file containing the private key, for example: `C:\webgateway\brokergateway\appsettings.runtime.json`. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+
+   - If the system does not use BrokerGateway yet (only possible on 10.5.x systems):
+
+     - *nats:credsFile*: The path to the *.creds* file containing the authentication information. On a DataMiner Agent, you can typically find this here: `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`.
+     - *nats:uri*: A string array containing the NATS endpoints. Every DMA in the DMS can be specified here.
+
+   > [!NOTE]
+   > If a local file path is used, you will need to replace the *appsettings.runtime.json* or the *.creds* file whenever you make the following changes to the DMS:
+   >
+   > - Changing the IP address of one or more DataMiner Agents.
+   > - Adding or removing one or more DataMiner Agents to/from the DMS.
+
+1. If [external authentication via **SAML**](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) is used, also configure the URL of the API of the Dashboard Gateway (`https://gateway.mycompany.com/API/`) as an *AssertionConsumerService* in the metadata XML file and on the identity provider.
 
 ## Reverse proxy
 
@@ -101,7 +123,7 @@ A reverse proxy should be used to give access to these web pages on the DMA via 
 
 - [Application Request Routing](https://www.iis.net/downloads/microsoft/application-request-routing)
 
-### Configuration
+### Reverse proxy configuration
 
 #### Enabling reverse proxy functionality
 
@@ -178,3 +200,27 @@ To add a rewrite rule that will proxy any request to the VideoThumbnails web pag
 To test whether the reverse proxy is working properly, enter `https://gateway/maps/maps.aspx?config=yourmapconfig` or `https://gateway/videothumbnails/video.htm` in your browser's address bar.
 
 If the reverse proxy was configured correctly, you should see the login screen of the DataMiner Maps module or the VideoThumbnails web page. It should be possible to log in.
+
+## DataMiner upgrades
+
+When a DataMiner Agent is upgraded, the Dashboard Gateway must also be updated to make sure both use the same web version.
+
+To do so, after the DataMiner upgrade, copy the following folders from the DataMiner Agent to the web root folder of the Dashboard Gateway web server (default: `C:\inetpub\wwwroot`):
+
+- `C:\Skyline DataMiner\Webpages\Dashboard`
+- `C:\Skyline DataMiner\Webpages\App`
+- `C:\Skyline DataMiner\Webpages\Monitoring`
+- `C:\Skyline DataMiner\Webpages\Jobs`
+- `C:\Skyline DataMiner\Webpages\Ticketing`
+- `C:\Skyline DataMiner\Webpages\SharedComponents`
+- `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
+- `C:\Skyline DataMiner\Webpages\API` (Make sure not to overwrite the existing web.config file. Copy all other files and folders, but keep the existing web.config in place.)
+
+> [!NOTE]
+> When you **upgrade to DataMiner 10.5.0 [CU11]/10.6.2** or higher from an older version:
+>
+> - Make sure the settings to communicate with MessageBroker are also configured. See [Configuration](#configuration).
+> - If the existing *web.config* on the Dashboard Gateway server contains a `<runtime>` tag, then this entire `<runtime>` element (including all children) needs to be replaced with the new `<runtime>` tag that is in the new *web.config* file on the DMA. If the *web.config* on the Dashboard Gateway does not contain a `<runtime>` tag, you should add it by coping it over from the *web.config* on the DMA.
+
+> [!IMPORTANT]
+> Always ensure that the web application folders on the Dashboard Gateway are in sync with the DataMiner Agent. Running different web versions may cause compatibility issues or prevent the web applications from loading correctly.

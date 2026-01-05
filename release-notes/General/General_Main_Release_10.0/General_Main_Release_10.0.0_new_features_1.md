@@ -230,7 +230,7 @@ There are several ways to manipulate the timeline in the Job Manager app:
 - Right-click on the timeline to mark a particular time with a red line.
 - Double-click with the left mouse button to jump to the present time on the timeline.
 
-In the lower right corner of the timeline, an arrow icon is displayed. Click this icon to display a preview pane, which also allows you to manipulate the timeline. The white area in this pane corresponds with the currently displayed timeline.
+In the lower-right corner of the timeline, an arrow icon is displayed. Click this icon to display a preview pane, which also allows you to manipulate the timeline. The white area in this pane corresponds with the currently displayed timeline.
 
 - Click and drag with the left mouse button in the preview pane in order to move the white area to a different time.
 - The white area displays a lock icon. Click this icon to toggle between locked and unlocked mode. In locked mode, dragging causes the white area to remain in place while the timeline itself is moved. In unlocked mode, it is the white area that is moved across the timeline.
@@ -278,7 +278,7 @@ Within each section of type *Fields*, arrow icons allow you to change the positi
 > - If a section definition is in use in jobs, deleting the section definition will not remove it from the system, but cause it to become hidden.
 > - The type of a job section can be changed from “Fields” to “Booking” (or vice versa) as long as that section is not being used in any job.
 > - Job section fields of type “Integer” only accept values between -9223372036854775808 and 9223372036854775808, while job section fields of type “Double” only accept values between -1.7976931348623157^308 and 1.7976931348623157^308.
-> - Values can be added to or deleted from job section fields of type “Dropdown” even when those fields are being used by existing jobs. When a value is deleted from a drop-down field, it is marked as hidden, not deleted physically.
+> - Values can be added to or deleted from job section fields of type “Dropdown” even when those fields are being used by existing jobs. When a value is deleted from a dropdown field, it is marked as hidden, not deleted physically.
 
 ##### Job Manager user permissions
 
@@ -419,7 +419,7 @@ It is now possible to upload and run Best Practice Analysis (BPA) tests using th
 
 BPA tests, which are meant to be short checks, can be configured to run either once or periodically (e.g. once a day). A BPA test can be run to verify, for example, whether all agents in a DataMiner System are set to use the same time server.
 
-If a BPA test takes more than 15 minutes, the SLNet process may throw a run-time error.
+If a BPA test takes more than 15 minutes, the SLNet process may throw a runtime error.
 
 #### Mobile Gateway: Communicating with an SMSEagle device via HTTPS \[ID 22441\]
 

@@ -16,7 +16,7 @@ For step-by-step instructions on how to debug connector QActions and Automation 
 
 ## Connecting to one of the Agents specified in the DIS settings
 
-When you open the *DIS Inject* window, and you have not yet set up a connection to one of the DMAs specified in the *DMA* tab of the *DIS Settings* window, a large *Connect* button will appear in the middle of the window. Click that button to connect DataMiner Integration Studio to the default Agent. If you want to connect to another, non-default Agent, click the drop-down button at the right of the *Connect* button, and click the Agent to which you want to connect.
+When you open the *DIS Inject* window, and you have not yet set up a connection to one of the DMAs specified in the *DMA* tab of the *DIS Settings* window, a large *Connect* button will appear in the middle of the window. Click that button to connect DataMiner Integration Studio to the default Agent. If you want to connect to another, non-default Agent, click the dropdown button at the right of the *Connect* button, and click the Agent to which you want to connect.
 
 See [Connect](xref:DIS_menu) and [DMA](xref:DIS_settings#dma)
 
@@ -39,14 +39,12 @@ Below the element selection box you can find the element manipulation tool bar. 
 - Pause the element
 - Stop the element
 - Restart the element
-- Open the element in *Element Display*
+- Open the element in *Element Display* (no longer used)
 - Open the element in *DataMiner Cube*
 - Open the element’s log file.
 
   > [!NOTE]
-  >
-  > - If DIS is connected to a remote DataMiner Agent, then make sure the `C:\Skyline DataMiner\logging` folder on that DataMiner Agent is shared and accessible.
-  > - Element Display is no longer available from DataMiner 9.6.0 onwards.
+  > If DIS is connected to a remote DataMiner Agent, then make sure the `C:\Skyline DataMiner\logging` folder on that DataMiner Agent is shared and accessible.
 
 ### Linking temporary QAction projects to QActions in the protocol of the selected element
 

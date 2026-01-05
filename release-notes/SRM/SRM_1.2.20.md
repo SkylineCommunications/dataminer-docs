@@ -85,7 +85,7 @@ Similarly, the *ServiceReservationInstance.UnassignResources* method has been ex
 
 #### Booking Friendly Reference now calculated in SLAutomation \[ID 31628\]
 
-Previously, the Friendly Reference of a booking was calculated in the Booking Manager element. However, because this required an external parameter set from the script to the connector, this could take a long time if the system was experiencing a run-time error, and this could cause booking creation to fail. To prevent such issues, the Friendly Reference is now calculated in SLAutomation instead.
+Previously, the Friendly Reference of a booking was calculated in the Booking Manager element. However, because this required an external parameter set from the script to the connector, this could take a long time if the system was experiencing a runtime error, and this could cause booking creation to fail. To prevent such issues, the Friendly Reference is now calculated in SLAutomation instead.
 
 #### Improved behavior of Show Information Events setting \[ID 31680\]
 

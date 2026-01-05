@@ -32,6 +32,6 @@ A protocol typically contains a number of parameters that will be displayed (e.g
 
 ## See also
 
-Coding Guidelines
+Best practices:
 
 - [User interface](xref:Default_settings)

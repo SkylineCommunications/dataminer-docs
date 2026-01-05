@@ -40,27 +40,37 @@ After you have run a BPA test, it will provide an overview of the detected issue
 
 ### Secure Cube-server communication
 
-By default, Cube currently uses .NET Remoting to communicate with DataMiner. From DataMiner 10.1.7 onwards, this communication is encrypted using the Rijndael algorithm using a 256-bit key, which is negotiated over a 1024-bit RSA encrypted communication channel. However, .NET Remoting is a legacy technology and is widely considered insecure. For this reason, DataMiner 10.3.2/10.3.0 introduces the possibility to use gRPC instead as a secure alternative.
+From DataMiner 10.5.10/10.6.0 onwards<!-- RN 43260 -->, Cube uses gRPC by default to communicate with DataMiner, which means no further action is needed to secure this communication.
+
+However, prior to this or when manually configured to do so, Cube uses .NET Remoting to communicate with DataMiner. This communication is encrypted using the Rijndael algorithm using a 256-bit key, which is negotiated over a 1024-bit RSA encrypted communication channel. However, .NET Remoting is a legacy technology and is widely considered insecure. Therefore, starting from DataMiner 10.3.2/10.3.0, we recommend that you manually enable gRPC for the client-server connection.
+
+To manually enable gRPC for the client-server connection, edit the *ConnectionSettings.txt* file on each DataMiner Agent. For detailed information, refer to [ConnectionSettings.txt](xref:ConnectionSettings_txt).
 
 > [!IMPORTANT]
-> The gRPC connection feature is still a beta feature in DataMiner 10.3.2/10.3.0 CU0, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
+> To use gRPC, your DMAs must use HTTPS connections. If this is not the case yet, make sure to [set up HTTPS](xref:Setting_up_HTTPS_on_a_DMA) first.
 
-To enable gRPC for the client-server connection, edit the *ConnectionSettings.txt* file on each DataMiner Agent. For detailed information, refer to [ConnectionSettings.txt](xref:ConnectionSettings_txt).
+> [!NOTE]
+> Prior to DataMiner 10.5.10/10.6.0, the gRPC connection feature is still a beta feature, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
 
 ### Secure server-server communication
 
 #### gRPC
 
-For the inter-DMA communication, like for the communication with DataMiner Cube, you can also use gRPC instead of .NET Remoting from DataMiner 10.3.2/10.3.0 onwards.
+From DataMiner 10.5.10/10.6.0 onwards<!-- RN 43506 -->, gRPC is used by default for communication between DataMiner Agents, which means no further action is needed to secure this communication.
 
-> [!IMPORTANT]
-> The gRPC connection feature is still a beta feature in DataMiner 10.3.2/10.3.0 CU0, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
+In earlier DataMiner versions or when manually configured, .NET Remoting is used instead. However, from DataMiner 10.3.2/10.3.0 onwards, we recommend enabling gRPC for the inter-DMA communication.
 
 To enable gRPC for the communication between DataMiner Agents in a cluster, add [redirects in DMS.xml](xref:DMS_xml#redirects-subtag) or, from **10.3.6/10.3.0 [CU3] onwards**, disable .NET Remoting completely in [MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#disabling-net-remoting).
+
+> [!NOTE]
+> Prior to DataMiner 10.5.10/10.6.0, the gRPC connection feature is still a beta feature, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
 
 #### NATS
 
 By default, NATS does not employ TLS encryption, leaving communication susceptible to eavesdropping. Consequently, we strongly recommend [enabling TLS encryption for enhanced security within your NATS cluster](xref:Security_NATS).
+
+> [!NOTE]
+> When DataMiner is installed with the [v10.5 installer](xref:Installing_DM_using_the_DM_installer), TLS is by default enabled and configured for NATS.
 
 ### Disable legacy components
 
@@ -129,9 +139,9 @@ For more information about disabling legacy SSL/TLS versions, refer to [TLS, DTL
 
 Depending on which version of the DataMiner Installer is used, different firewall ports are opened by default. You can find more information about this below.
 
-#### [Installer v10.4](#tab/tabid-1)
+#### [Installer v10.4 & v10.5](#tab/tabid-1)
 
-If DataMiner is installed with the **DataMiner Installer v10.4**, the following (inbound) ports and rules are opened in the Windows firewall:
+If DataMiner is installed with a **recent DataMiner Installer** (v10.4 or higher), the following (inbound) ports and rules are opened in the Windows firewall:
 
 - TCP 80: HTTP
 
@@ -281,4 +291,4 @@ If you use on-premises databases, we recommend using a [Cassandra cluster and Op
 > [!NOTE]
 >
 > - If you do use Storage as a Service, Skyline will take care of protecting your data, making use of existing and secure storage solutions provided by [Microsoft Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction).
-> - Previously, Elasticsearch was recommended as the on-premises indexing database instead of OpenSearch. For more information on why OpenSearch is now recommended instead, see [From Elasticsearch to OpenSearch to StaaS](https://community.dataminer.services/from-elasticsearch-to-opensearch-to-staas/).
+> - Previously, Elasticsearch was recommended as the on-premises indexing database instead of OpenSearch. For more information on why OpenSearch is now recommended instead, see [From Elasticsearch to OpenSearch to STaaS](https://community.dataminer.services/from-elasticsearch-to-opensearch-to-staas/).

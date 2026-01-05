@@ -329,7 +329,7 @@ Permission to delete workspaces.
 ### General \> Annotations
 
 > [!NOTE]
-> The Annotations module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). Prior to this, starting from DataMiner 10.2.0/10.1.12, Annotations can optionally be disabled with this soft-launch option.
+> The Annotations module is no longer available from DataMiner 10.6.0/10.6.1 onwards.<!-- RN 44124+44136 --> Prior to this, starting from DataMiner 10.4.0/10.4.1<!-- RN 37786 -->, it is disabled by default, but it can be enabled with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). In even older DataMiner versions, this feature is enabled by default, but you can optionally disable it with the soft-launch option.
 
 #### General \> Annotations \> View
 
@@ -1164,7 +1164,7 @@ Permission to send ad hoc text messages.
 
 ### Modules \> System configuration \> Object Manager \> Module Settings
 
-Permission to change settings of the DataMiner Object Manager. Requires the DOMManager [soft-launch option](xref:SoftLaunchOptions).
+Permission to change settings of the DataMiner Object Manager.
 
 ### Modules \> System configuration \> Security
 

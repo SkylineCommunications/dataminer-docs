@@ -1,6 +1,7 @@
 ---
 uid: dataminer_services_home_page
 keywords: cloud home page
+reviewer: Alexander Verkest
 ---
 
 # The dataminer.services home page
@@ -41,7 +42,7 @@ At the top of the dataminer.services home page, you will find links to the diffe
 You can install DataMiner Cube from the dataminer.services home page. To do so, click the *Desktop installation* button in the top-right corner.
 
 > [!TIP]
-> See also: [Installing the DataMiner Cube desktop application](xref:Installing_the_DataMiner_Cube_desktop_application)
+> See also: [Installing DataMiner Cube](xref:Installing_the_DataMiner_Cube_desktop_application)
 
 ## System overview
 

@@ -6,9 +6,9 @@ uid: SRM_1.2.2
 
 ## New features
 
-#### Contributing booking life cycle changes \[ID 25547\]
+#### Contributing booking lifecycle changes \[ID 25547\]
 
-Some changes have been implemented to the life cycle behavior of contributing bookings (including contributing bookings within contributing bookings):
+Some changes have been implemented to the lifecycle behavior of contributing bookings (including contributing bookings within contributing bookings):
 
 - When the main booking is confirmed:
 
@@ -122,9 +122,9 @@ The *SRM_AssignProfiles* script has been updated to support capabilities of type
 
 Some booking properties contained JSON code to allow easy editing or duplication of a booking. However, most of these data were already available in the fields of the booking and if the properties contained a large amount of data, this could cause issues when they were stored. As such, the properties from the scripts *SRM_CreateNewBooking*, *SRM_ManageProperties* and *SRM_ManageEvents* have now been removed.
 
-#### Booking Wizard: Filter in drop-down boxes \[ID 25526\]
+#### Booking Wizard: Filter in dropdown boxes \[ID 25526\]
 
-In the Booking Wizard, all drop-down boxes now have a filter.
+In the Booking Wizard, all dropdown boxes now have a filter.
 
 #### Retry mechanism for data retrieval in DataMiner System \[ID 25610\]
 

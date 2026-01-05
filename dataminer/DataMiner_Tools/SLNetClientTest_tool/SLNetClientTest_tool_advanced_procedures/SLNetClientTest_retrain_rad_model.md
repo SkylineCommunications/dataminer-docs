@@ -13,14 +13,14 @@ In some cases, it can be useful to retrain the internal model used by [relationa
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-1. In the *Message Type* drop-down list, select the message *Skyline.DataMiner.Analytics.Rad.RetrainRADModelMessage*.
+1. In the *Message Type* dropdown list, select the message *Skyline.DataMiner.Analytics.Rad.RetrainRADModelMessage*.
 
    > [!NOTE]
    > Prior to DataMiner 10.5.5/10.6.0<!--RN 42480-->, the message is called "*Skyline.DataMiner.Analytics.MAD.RetrainMADModelMessage*" instead. In this message, "MAD" stands for "multivariate anomaly detection", which is another name for RAD.
 
 1. Configure the following fields:
 
-   - *GroupName*: The name of the parameter group as configured in *RelationalAnomalyDetection.xml*.
+   - *GroupName*: The name of the parameter group as configured in the *ai_rad_models_v2* database table. In versions prior to DataMiner 10.5.9/10.6.0, this is configured in the *RelationalAnomalyDetection.xml* file instead.
    - *StartTime*: The start time of the period during which the parameter group was behaving as expected.
    - *EndTime*: The end time of the period during which the parameter group was behaving as expected.
 
@@ -28,7 +28,7 @@ In some cases, it can be useful to retrain the internal model used by [relationa
 
 > [!NOTE]
 >
-> - From DataMiner 10.5.4/10.6.0 onwards, [other messages](xref:SLNetClientTest_managing_RAD_parameter_groups) are also available that can be used to add a parameter group, retrieve a parameter group, or retrieve all configuration information for a particular group. While you can configure and view the same things directly in *RelationalAnomalyDetection.xml*, with these messages you can for example configure a [low-code app](xref:Application_framework) to visualize and manage the parameter groups.<!-- RN 42181 -->
+> - From DataMiner 10.5.4/10.6.0 onwards, [other messages](xref:SLNetClientTest_managing_RAD_parameter_groups) are also available that can be used to add a parameter group, retrieve a parameter group, or retrieve all configuration information for a particular group.<!-- RN 42181 -->
 > - Keep in mind that the group names need to be unique. Prior to DataMiner 10.5.4/10.6.0, casing is taken into account for this, but this no longer matters in later DataMiner versions.<!-- RN 42276 -->
 
 > [!WARNING]

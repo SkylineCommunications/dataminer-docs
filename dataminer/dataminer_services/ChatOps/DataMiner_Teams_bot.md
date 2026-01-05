@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_Teams_bot
+reviewer: Alexander Verkest
 ---
 
 # DataMiner Teams bot

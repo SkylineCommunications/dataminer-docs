@@ -23,7 +23,7 @@ To make changes to the complete information template:
 > [!NOTE]
 >
 > - A protocol’s default information template, which is defined in the *Protocol.xml* file, cannot be edited as described above. The only way to modify it is by making changes to the protocol itself.
-> - If an information template is based on an older protocol version that does not have the same parameters as the latest protocol version, a warning is displayed at the bottom of the information template. Above the warning, a drop-down list allows you to select a different protocol version to load those parameters instead.
+> - If an information template is based on an older protocol version that does not have the same parameters as the latest protocol version, a warning is displayed at the bottom of the information template. Above the warning, a dropdown list allows you to select a different protocol version to load those parameters instead.
 
 ## Editing the information template for one parameter
 
@@ -37,7 +37,7 @@ To make changes to the information template for one particular parameter:
 
 1. Make the necessary changes:
 
-   - To adapt the category, choose a different category in the drop-down list next to *Category*
+   - To adapt the category, choose a different category in the dropdown list next to *Category*
 
    - To adapt the alarm description, write a new alarm description in the *Alarm description* field.
 

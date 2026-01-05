@@ -27,9 +27,13 @@ In addition, make sure the [required ports are opened](#opening-the-required-por
 
 The primary DMA is a normal DataMiner Agent. In most cases, this will be an existing DMA that is a member of a DMS cluster. It does not require any additional configuration.
 
+For a brand-new Failover pair where the primary DMA is not yet part of a cluster, first add the primary DMA to the cluster using its physical IP before you set up Failover.
+
 ## Backup DataMiner Agent
 
 The backup DMA must be a newly installed DataMiner Agent.
+
+If you are adding a brand-new Failover pair to a cluster, you do not need to add the backup DMA to the cluster yourself. Once the Failover setup is complete, it will be added automatically.
 
 - The DataMiner ID of this DMA must be identical to the DataMiner ID of the primary DMA.
 
@@ -143,7 +147,7 @@ DataMiner will automatically synchronize the configuration and subsequently its 
 To check the data synchronization state after you have set up Failover, see [Synchronizing the DMA databases](xref:Synchronizing_the_DMA_databases).
 
 > [!NOTE]
-> From DataMiner 10.3 onwards, this setup is no longer supported. See [Third-party software support life cycle](xref:Software_support_life_cycles#third-party-software-support-life-cycle)
+> From DataMiner 10.3 onwards, this setup is no longer supported. See [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)
 
 ## Preparing authentication and user provisioning
 

@@ -72,7 +72,7 @@ When a DataMiner Agent that was part of a Failover setup started up, in some cas
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
-When a DVE element or virtual function element was deleted while a subscription on the parent element or one of the child elements was updated, in some cases, especially when Stream Viewer was open, a run-time error could occur. This will now be prevented. In addition, information events will no longer be generated for the [Clients connected] parameter.
+When a DVE element or virtual function element was deleted while a subscription on the parent element or one of the child elements was updated, in some cases, especially when Stream Viewer was open, a runtime error could occur. This will now be prevented. In addition, information events will no longer be generated for the [Clients connected] parameter.
 
 #### Incomplete CorrelationDetailsEvent messages after a DMA had reconnected to the DMS [ID 40934]
 

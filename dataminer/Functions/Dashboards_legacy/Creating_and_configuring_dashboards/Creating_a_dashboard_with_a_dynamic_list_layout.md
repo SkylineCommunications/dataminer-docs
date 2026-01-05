@@ -26,7 +26,7 @@ To create a dashboard with dynamic list layout:
         > [!NOTE]
         > You can also use regular expressions in the mask field, if the mask starts with #.
 
-    - In the *Appearance* drop-down list, you can select different options to display grid lines or an alternating background color.
+    - In the *Appearance* dropdown list, you can select different options to display grid lines or an alternating background color.
 
     - Enter a value under *Rows Per Page* to limit the maximum number of rows displayed on one page to that value.
 

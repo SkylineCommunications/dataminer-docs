@@ -18,7 +18,7 @@ Use this method to create a new element on the specified DataMiner Agent.
 > [!NOTE]
 >
 > - When you create an element, the "State" property of the DMAElementConfiguration object should be *Active*, *Paused* or *Stopped*.
-> - <!-- From DataMiner 9.5.5 onwards, -->It is possible to specify a different SNMP version than is configured in the protocol. For more information on the configuration, refer to the examples below.
+> - It is possible to specify a different SNMP version than is configured in the protocol. For more information on the configuration, refer to the examples below.
 
 ## Output
 

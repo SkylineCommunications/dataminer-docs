@@ -234,7 +234,7 @@ From DataMiner 10.2.7/10.3.0 onwards, the number of simultaneously running SLScr
 ## Running SLScripting as a service
 
 > [!IMPORTANT]
-> This configuration is no longer supported. See [Software support life cycles](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement).
+> This configuration is no longer supported. See [Software support lifecycles](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement).
 
 By default, the SLScripting process runs as a server. However, in some cases, it needs to run as a service. It is possible to configure this in the file *DataMiner.xml*:
 
@@ -299,7 +299,13 @@ In this case, SLWatchdog will do the following:
 
 1. Send an email message stating the name of the DataMiner process toward all recipients specified in the SLWatchdog configuration settings. By default, this message will include a dump file containing copies of all DataMiner log files found on the DataMiner Agent the moment the problem was detected.
 
-1. Restart the process (in case the process that disappeared was SLScripting), or restart the DataMiner Agent as a whole (in case the process that disappeared was not SLScripting, but one of the other processes, which in many cases have a number of dependencies).
+1. Restart the process (in case the process that disappeared was SLScripting, SLProtocol, or SLAutomation), or restart the DataMiner Agent as a whole (in case the process that disappeared was one of the other processes, which in many cases have a number of dependencies).
+
+   > [!NOTE]
+   >
+   > - **SLScripting**: The process is restarted automatically without restarting the entire DataMiner Agent.
+   > - **SLProtocol** (from DataMiner 10.4.12/10.5.0 onwards): When an SLProtocol process disappears, a new SLProtocol process will be started automatically, and all elements that were hosted by the disappeared process will be migrated to the newly created process. Affected elements will be restarted to ensure data synchronization. There is a one-minute delay between the disappearance of an SLProtocol process and the creation of a new one. A notice alarm will also be created indicating the process disappearance and number of affected elements.
+   > - **SLAutomation**: The process will be restarted automatically with a one-minute delay, without restarting the entire DataMiner Agent. This delay is necessary to ensure that processes are not restarted while the DMA is in the process of shutting down.
 
 1. Create two information messages:
 
@@ -336,7 +342,7 @@ In the file *MaintenanceSettings.xml*, you can specify a number of SLWatchdog se
 1. Restart the DataMiner Agent.
 
 > [!TIP]
-> See also: [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)
+> See also: [MaintenanceSettings.WatchDog](xref:MaintenanceSettings.WatchDog)
 
 ### Example of an SLWatchdog tag in MaintenanceSettings.xml
 
@@ -384,7 +390,7 @@ The following table contains all information about the different SLWatchdog sett
 ## Configuring SLNet settings in MaintenanceSettings.xml
 
 > [!TIP]
-> See also: [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)
+> See also: [MaintenanceSettings.SLNet](xref:MaintenanceSettings.SLNet)
 
 > [!NOTE]
 > Before you configure any of these settings, you will need to stop DataMiner. After you have saved your changes, restart DataMiner again.
@@ -561,11 +567,11 @@ Example:
 
 ### Activating the NonElementProtocol option system-wide
 
-In a Visual Overview, a "NonElementProtocol" option can be specified in case it contains shapes linked to a large number of elements, but no element-specific formatting is needed from files like *description.xml*, *informations.xml*, or *port.xml*. This can enhance the overall performance of the Visual Overview.
+In a Visio drawing, a `NonElementProtocol` option can be specified in case it contains shapes linked to a large number of elements, but no element-specific formatting is needed from files like *description.xml*, *informations.xml*, or *port.xml*. This can enhance the overall performance of the corresponding visual overview.
 
-It is also possible to apply this option system-wide, instead of limiting it to one Visual Overview shape or page.
+It is also possible to apply this option system-wide, instead of limiting it to one shape or page.
 
-To do so, add a *\<NonElementProtocol>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to "true".
+To do so, add a `NonElementProtocol` element in the `SLNet` section of the *MaintenanceSettings.xml* file, and set it to `true`.
 
 Example:
 
@@ -588,7 +594,7 @@ Example:
 
 It is possible to have an information event generated whenever a connection fails to be authenticated. From DataMiner 10.1.8/10.2.0 onwards, this is enabled by default.
 
-To enable this option in older systems, add an *\<EnableFailedAuthenticationInfoEvents>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to "true".
+To enable this option in older systems, add an `EnableFailedAuthenticationInfoEvents` element in the `SLNet` section of the *MaintenanceSettings.xml* file, and set it to `true`.
 
 Example:
 
@@ -605,7 +611,7 @@ Example:
 
 ### Configuring a cluster transition state timeout
 
-In the *\<ClusterTransitionStateTimeout>* tag, you can specify a cluster transition state timeout (in seconds).
+In the `ClusterTransitionStateTimeout` element, you can specify a cluster transition state timeout (in seconds).
 
 DataMiner Agents leaving the DataMiner System (i.e. cluster) will leave the transition state after the specified timeout delay, starting from the last received notification from any of the DataMiner processes.
 
@@ -773,7 +779,7 @@ Example:
 
 From DataMiner 10.5.2/10.6.0 onwards<!--RN 41653-->, by default no information events are generated when Automation scripts are triggered by the Correlation engine. From DataMiner 10.5.4/10.6.0 onwards<!--RN 41970-->, this also applies to Automation scripts triggered by the Scheduler module.
 
-If you do want information events to be generated when scripts are triggered by Correlation rules or scheduled tasks, add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to "false":
+If you do want information events to be generated when scripts are triggered by Correlation rules or scheduled tasks, add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to `false`:
 
 ``` xml
 <MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">

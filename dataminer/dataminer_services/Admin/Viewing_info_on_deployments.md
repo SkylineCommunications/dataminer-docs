@@ -1,6 +1,7 @@
 ---
 uid: Viewing_info_on_deployments
 keywords: cloud deployments
+reviewer: Alexander Verkest
 ---
 
 # Viewing information on deployments

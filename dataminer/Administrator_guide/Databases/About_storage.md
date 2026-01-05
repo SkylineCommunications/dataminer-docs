@@ -6,7 +6,7 @@ uid: About_storage
 
 Each DataMiner System requires its own system data storage. This data storage serves as a repository for configuration data, historical parameter information, and alarm data.
 
-The recommended system data storage architecture is **Storage as a Service** [(STaaS)](xref:STaaS) on dataminer.services. With StaaS, you do not need to maintain the databases yourself, and all the scaling and complexity is taken care of for you.
+The recommended system data storage architecture is **Storage as a Service** [(STaaS)](xref:STaaS) on dataminer.services. With STaaS, you do not need to maintain the databases yourself, and all the scaling and complexity is taken care of for you.
 
 <br/>
 
@@ -27,7 +27,7 @@ Instead of a dedicated clustered storage setup, older systems often still use **
 >
 > - [DataMiner Hosting and High Availability](xref:Overview_hosting)
 > - [Securing the DataMiner databases](xref:Cassandra_authentication)
-> - [Third-party software support life cycle](xref:Software_support_life_cycles#third-party-software-support-life-cycle)
+> - [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)
 
 > [!NOTE]
 >

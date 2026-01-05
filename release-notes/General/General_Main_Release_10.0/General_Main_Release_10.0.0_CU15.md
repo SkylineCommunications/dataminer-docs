@@ -144,7 +144,7 @@ In some cases, large memory spikes would occur in the SLAnalytics process when r
 
 #### Failover: Problem with SLNet during DataMiner startup \[ID 29950\]
 
-On a Failover system, in some rare cases, an error could occur in SLNet during DataMiner startup, causing the following run-time error in SLDMS:
+On a Failover system, in some rare cases, an error could occur in SLNet during DataMiner startup, causing the following runtime error in SLDMS:
 
 ```txt
 THREAD PROBLEM : SLDMS.exe - ConnectionThread [pid 99999 - thread 99999]

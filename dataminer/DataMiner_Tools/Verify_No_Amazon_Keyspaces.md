@@ -9,7 +9,7 @@ From DataMiner 10.5.0/10.5.3 onwards<!--RN 41914-->, the *VerifyNoAmazonKeyspace
 From DataMiner 10.3.0 [CU8]/10.3.11 onwards, support for the Amazon Keyspaces Service is *End of Life*. We recommend switching to [Storage as a Service](xref:STaaS) instead.
 
 > [!TIP]
-> See also: [Third-party software support life cycle](xref:Software_support_life_cycles#third-party-software-support-life-cycle)
+> See also: [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)
 
 ## Fixing a failing prerequisite check
 

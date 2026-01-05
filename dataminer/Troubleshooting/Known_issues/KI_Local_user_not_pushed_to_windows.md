@@ -14,11 +14,13 @@ Changes introduced in DataMiner 10.4.0 [CU4]/10.4.7 could cause the code to push
 
 ## Fix
 
-No fix is available yet.<!-- RN 42819 - reverted by 43488 -->
+Install DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10<!-- RN 43477 -->.
 
 ## Workaround
 
 Update the user's password in the DataMiner Cube System Center.
+
+Note that this workaround will only work if the user exists on Windows level on one of the Agents in the cluster, and you are connected to that specific Agent. If the user does not exist on any of the Agents in the cluster, create the user manually on Windows level and then retry the workaround.
 
 ## Description
 

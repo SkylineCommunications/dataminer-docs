@@ -4,11 +4,19 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
+#### 28 August 2025 - Fix - CoreGateway 2.14.14 - Race condition blocking Catalog deployments
+
+A race condition has been resolved that could lead to the Catalog displaying the following error while there were actually no issues. 
+
+`There are some issues preventing you to deploy.` 
+
+`There are no (healthy) CoreGateways DxMs in the DataMiner System on the node with a running DMA.`
+
 #### 17 June 2025 - Enhancement - CoreGateway 2.14.13 - Improved upgrade process
 
 Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
 
-#### 17 June 2025 - Fix - CoreGateway 2.14.13 - Problem caused by rapid file changes
+#### 17 June 2025 - Fix - CoreGateway 2.14.13 - Problem caused by rapid file changes [ID 42916]
 
 ​Rapid file changes in *DataMiner.xml* could cause a problem in CoreGateway, causing the DxM to restart.
 
@@ -39,6 +47,10 @@ Because of a race condition, it could occur that CoreGateway kept handling reque
 #### 30 May 2024 - Fix - CoreGateway 2.14.7 - Missing System.Net.Http.dll after upgrading to CoreGateway 2.14.0 – 2.14.6 [ID 39777]
 
 An issue has been resolved where a required `System.Net.Http.dll` went missing after upgrading to a CoreGateway version from range 2.13.0 – 2.14.6. This did not happen with a clean installation of CoreGateway 2.14.0 – 2.14.6.
+
+#### 30 May 2024 - Fix - CoreGateway 2.14.7 - Regex column manipulation not correctly converted [ID 39538]
+
+If a GQI query contained a "Regex column manipulation" operator, it was converted to an incorrect SLNet GQIQuery object, resulting in the query not being correctly processed in GQI.
 
 #### 13 March 2024 - Fix - CoreGateway 2.14.6 - Issues with dataminer.services features when DMA alias contained spaces [ID 39107]
 

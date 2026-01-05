@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_Register_Catalog_Item
+reviewer: Alexander Verkest
 ---
 
 # Registering a new connector in the Catalog
@@ -107,6 +108,8 @@ The Catalog item register API call is authenticated using an [organization key](
      ```
 
 1. Add the zip file as the value of the body of the request as shown below.
+
+   Make sure your .zip file does not exceed 250 MB.
 
    The body of the request needs to be in the **multipart/form-data** format with a key of type **File** with the name **file**.
 

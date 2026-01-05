@@ -39,13 +39,13 @@ Several special alarm types exist in DataMiner:
 
 - [Timeout alarms](#timeout-alarms) indicate non-responding devices.
 
-- [Suggestion events](xref:Advanced_analytics_features_in_the_Alarm_Console) are messages intended to give users insights into the data behavior of their metrics.
+- [Suggestion events](#suggestion-events) are messages intended to give users insights into the data behavior of their metrics.
 
 - [Masked alarms](xref:Masking_and_unmasking_alarms), indicated in purple, are "hidden" to prevent unnecessary follow-up.
 
 - [Correlated alarms](#correlated-alarms) group other alarms based on a Correlation rule.
 
-- [Incidents](#incidents) group other alarms based on AI.
+- [Alarm groups](#alarm-groups) group other alarms based on AI.
 
 ### Information events
 
@@ -91,6 +91,12 @@ If a replicated element or service is in timeout state, this can have two differ
 
 The tooltip of the timeout icon in Cube will indicate if the DMA communication is the reason for the timeout.
 
+### Suggestion events
+
+The [behavioral anomaly detection](xref:Behavioral_anomaly_detection), [pattern matching](xref:Pattern_matching), and [proactive cap detection](xref:Proactive_cap_detection) features can generate notifications to alert users to anomalies, specific trend patterns, and predicted trends, respectively. These are shown as **suggestion events** in the Alarm Console.
+
+For details on how to view suggestion events, refer to [Behavioral anomaly detection in the Alarm Console](xref:Behavioral_anomaly_detection#behavioral-anomaly-detection-in-the-alarm-console).
+
 ### Correlated alarms
 
 Correlated alarms are alarms triggered by the [DataMiner Correlation](xref:About_DMS_Correlation) module. They group other alarms based on a Correlation rule.
@@ -104,13 +110,11 @@ Correlated alarms are represented in the Alarm Console with a special icon.
 ![Correlated alarm](~/dataminer/images/correlated_alarm.png)<br>
 *Correlated alarm in the Alarm Console in DataMiner 10.3.6*
 
-### Incidents
+### Alarm groups
 
-[Alarm groups](xref:Automatic_incident_tracking), also known as incidents, are alarms triggered by the SLAnalytics process. They automatically group alarms related to the same incident based on advanced analytics.
+[Alarm groups](xref:Automatic_alarm_grouping) automatically group related alarms based on advanced analytics. They use the same icon as correlated alarms, and they can be expanded in the same way as correlated alarms. Their severity is always the highest severity of their base alarms.
 
-They use the same icon as correlated alarms, and they can be expanded in the same way as correlated alarms. Their severity is always the highest severity of their base alarms.
-
-You can also manually create your own alarm group (see [Manually updating an alarm group](xref:Automatic_incident_tracking#manually-updating-an-alarm-group).)
+You can also manually create your own alarm group (see [Manually updating an alarm group](xref:Manually_creating_or_updating_alarm_groups).)
 
 ## Alarm type priority
 

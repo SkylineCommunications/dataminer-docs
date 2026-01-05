@@ -18,7 +18,7 @@ In order to ensure that the subscription for a particular element stays open:
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-1. In the *Message Type* drop-down list, select *BaseSubscriptionMessage*.
+1. In the *Message Type* dropdown list, select *BaseSubscriptionMessage*.
 
 1. Select the *BaseSubscriptions* row and click the ... button on the right in order to open the *BaseSubscription Collection Editor*.
 

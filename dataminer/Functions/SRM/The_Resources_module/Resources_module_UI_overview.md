@@ -27,9 +27,9 @@ The *Resources* tab lists resources, i.e. objects that can be used to achieve so
 
   - The *device* tab shows the linked function and element configuration.
 
-  - The *properties* tab shows an overview of all resource properties. Properties can be added, edited and deleted with three buttons in the lower right corner.
+  - The *properties* tab shows an overview of all resource properties. Properties can be added, edited and deleted with three buttons in the lower-right corner.
 
-  - When you make changes to the configuration, click the *Save* button in the lower right corner to save your changes.
+  - When you make changes to the configuration, click the *Save* button in the lower-right corner to save your changes.
 
   - At the bottom of the list of resources, two buttons are available that allow you to add or delete resources.
 
@@ -40,7 +40,7 @@ The *Resources* tab lists resources, i.e. objects that can be used to achieve so
   > - It is not possible to add a new resource while a filter is applied.
   > - When an item gets updated while a filter is applied, that item will no longer be shown if it does not match the filter.
 
-- Prior to DataMiner 10.1.5: An expandable *Properties* panel at the bottom of the pane allows you to view more details on a selected resource. Resources can be added, edited and deleted with three buttons in the lower right corner. An additional button next to these allows you to add a virtual function as a resource.
+- Prior to DataMiner 10.1.5: An expandable *Properties* panel at the bottom of the pane allows you to view more details on a selected resource. Resources can be added, edited and deleted with three buttons in the lower-right corner. An additional button next to these allows you to add a virtual function as a resource.
 
 > [!NOTE]
 >

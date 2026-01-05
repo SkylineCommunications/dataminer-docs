@@ -12,7 +12,7 @@ To export a trend graph:
 
 1. If you are exporting a graph where several curves are displayed, at the top of the export window, select which curves you want to include in the export.
 
-1. Under *Data to be exported*, select whether all data should be included ("*Everything*") or a custom data set. For a custom data set, you can select the type of trending (e.g. real-time, 5-minute interval, 60-minute interval) and the time span.
+1. Under *Data to be exported*, select whether all data should be included ("*Everything*") or a custom dataset. For a custom dataset, you can select the type of trending (e.g. real-time, 5-minute interval, 60-minute interval) and the time span.
 
 1. Optionally, select additional options for the export. From DataMiner 10.2.2/10.3.0 onwards, these options are available in an expandable *Advanced options* section.
 

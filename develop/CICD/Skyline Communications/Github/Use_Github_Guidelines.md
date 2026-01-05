@@ -45,7 +45,7 @@ If the repository is private, the name should look like this (using "-" as separ
 > [!IMPORTANT]
 > If the repository is **public**, **do not use a customer acronym** in the repository name. Instead, use the **Skyline acronym "SLC"**.
 
-- For a list of **customer acronyms**, refer to [DCP](https://dcp.skyline.be/Lists/Customers/AllItems.aspx). For generic repositories, use the Skyline Communications acronym (SLC).
+- For a list of **customer acronyms**, refer to [DCP](https://dcp-ui.azurewebsites.net/customers). For generic repositories, use the Skyline Communications acronym (SLC).
 
 - The following **item types** are currently supported (this list is to be extended):
 
@@ -62,7 +62,7 @@ If the repository is private, the name should look like this (using "-" as separ
   | GQIDS | GQI data source |
   | GQIO | GQI operator |
   | LCA | Low-Code App |
-  | LSO | Life cycle Service Orchestration |
+  | LSO | Lifecycle Service Orchestration |
   | PA | Process Automation |
   | PLS | Profile-Load Scripts |
   | S | Solutions |

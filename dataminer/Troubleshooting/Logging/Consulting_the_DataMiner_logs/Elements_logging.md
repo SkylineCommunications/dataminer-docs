@@ -28,6 +28,8 @@ This page consists of three sections:
 
 The log levels of each element are indicated to the right of the element name in the log file list. Example: 0 0 0, 1 0 0, 1 3 2, etc.
 
+The lowest log level is 0, "No logging", which means that only essential information is logged and any more specific and detailed information is left out.
+
 In the *Log settings* section, you can change the log levels for each element. To do so:
 
 1. Select one or more elements in the log file list.
@@ -56,4 +58,4 @@ To do so:
 1. Click the *Clear* button in the pane on the right.
 
     > [!NOTE]
-    > If one element is selected, the button is located in the lower right corner of the pane. If several elements are selected, it is displayed in the top-left corner.
+    > If one element is selected, the button is located in the lower-right corner of the pane. If several elements are selected, it is displayed in the top-left corner.

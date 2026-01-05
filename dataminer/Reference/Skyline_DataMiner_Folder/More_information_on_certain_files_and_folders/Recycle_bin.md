@@ -16,7 +16,7 @@ The *Recycle Bin* folder contains backup copies of modified configuration files 
 
 - Prior to DataMiner 10.5.5/10.6.0, a separate zip file is created **for each configuration change** that is implemented in the system.
 
-The total number of stored zip files is limited by the [*RecycleBinSize* setting](xref:MaintenanceSettings_xml#recyclebinsize) in *MaintenanceSettings.xml*. From DataMiner 10.5.5/10.6.0 onwards<!--RN 40565-->, if no value is provided, the default limit is 100 MB.
+The total number of stored zip files is limited by the [*RecycleBinSize* setting](xref:MaintenanceSettings.RecycleBinSize) in *MaintenanceSettings.xml*. From DataMiner 10.5.5/10.6.0 onwards<!--RN 40565-->, if no value is provided, the default limit is 100 MB.
 
 ## Restoring a previous configuration
 

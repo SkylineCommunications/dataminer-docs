@@ -27,9 +27,9 @@ To add a child element:
 
    1. In the *Element selection method* section, choose one of the following four options:
 
-      - Select *Fixed element*, and select the element from the drop-down list.
+      - Select *Fixed element*, and select the element from the dropdown list.
 
-      - Select *Fixed service*, and select the service from the drop-down list.
+      - Select *Fixed service*, and select the service from the dropdown list.
 
       - Select *Templated element*, and indicate a *Protocol* and *Element name mask*. Optionally, click *Add alternative* to add another protocol and element name mask. Several alternatives can be added. To remove one of the alternatives, click the *x* icon to the right of it.
 
@@ -52,7 +52,7 @@ To add a child element:
 
         If you want to add a parameter based on placeholders, click *Add masked parameter,* and specify the parameter name mask. To do so:
 
-        - In the *Name mask* box, use the drop-down list on the right to select the placeholders determining the parameter name. Four options are available: *Use regular expression*, *Input data*, *Child element*, or *Custom element*.
+        - In the *Name mask* box, use the dropdown list on the right to select the placeholders determining the parameter name. Four options are available: *Use regular expression*, *Input data*, *Child element*, or *Custom element*.
 
         - If at least one filter has been specified, optionally select *Only search monitored parameters*.
 
@@ -80,7 +80,7 @@ To add a child element:
       > For more information on service item statuses such as "included" and "not used", see [DATA](xref:Service_card_pages#data).
 
     > [!NOTE]
-    > When specifying a templated element or service name mask, or a name mask for parameters, you can use a regular expression. To do so, select *Use regular expression* in the drop-down list on the right. Once you have done this, an extra item will appear in the drop-down list, *Regular Expression Options*, which allows you to indicate if casing can be ignored and if the regular expression is required to match the entire input.
+    > When specifying a templated element or service name mask, or a name mask for parameters, you can use a regular expression. To do so, select *Use regular expression* in the dropdown list on the right. Once you have done this, an extra item will appear in the dropdown list, *Regular Expression Options*, which allows you to indicate if casing can be ignored and if the regular expression is required to match the entire input.
 
 To add a condition for all child elements:
 

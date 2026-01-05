@@ -19,9 +19,9 @@ In addition to this, many [tools](xref:DataMinerTools) are available, such as th
 
 DataMiner Cube is the main DataMiner client application. With Cube, you can fully monitor and configure your DataMiner System. Most operators will mainly rely on this app.
 
-- To use DataMiner Cube, you will need to [install it first](xref:Installing_configuring_the_DataMiner_Cube_software). Cube [requires a Windows environment](xref:DataMiner_Client_Requirements).
+- To use DataMiner Cube, you will need to [install it first](xref:Installing_the_DataMiner_Cube_desktop_application). Cube [requires a Windows environment](xref:DataMiner_Client_Requirements).
 
-- Once you have installed Cube, you can [connect to your DataMiner System](xref:Using_the_desktop_app) or to any other DataMiner System you have access to.
+- Once you have installed Cube, you can [connect to your DataMiner System](xref:Connecting_to_a_DMA_with_Cube) or to any other DataMiner System you have access to.
 
 ![Cube start window](~/dataminer/images/Cube_Start_Window.png)<br/>*Cube start window in DataMiner 10.4.1*
 

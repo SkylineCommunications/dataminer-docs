@@ -47,12 +47,17 @@ To do so:
     The HTTPS tag has to contain the following attributes:
 
     - **enabled**: Enables HTTPS when set to "true".
-    - **name**: Must be set to the name matching the *Common Name* (CN) or one of the *Subject Alternative Names* (SAN) of the certificate. If it is a wildcard certificate, the name must match the mask defined in the certificate (e.g. "\*.skyline.local"). For example, "dma01.skyline.be" matches the wildcard certificate for "*.skyline.be".
 
-      This name **should also be configured in the DNS server** pointing to the IP address of the DMA, so that the DMA can be reached using the configured name.
+    - **name**: Must be set to the name matching the *Common Name* (CN) or one of the *Subject Alternative Names* (SAN) of the certificate. This name can be a hostname, FQDN, or IP address (as long as it matches the certificate). The configured name always has to be unique for every DMA.
+
+      In case a **hostname or FQDN** is used, this name also has to be **configured in the DNS server** pointing to the IP address of the DMA, so that the DMA can be reached using the configured name. This name must resolve to the IP address of the DMA on the local DMA and on any DMA in the cluster.
+
+      If a **wildcard certificate** is used, the name must match the mask defined in the certificate (e.g. "\*.skyline.be"). For example, "dma01.skyline.be" matches the wildcard certificate for "\*.skyline.be".
 
       > [!IMPORTANT]
-      > Do not use wildcard certificates if you want to use your DataMiner Agent to connect your system to dataminer.services, as this is not supported. In that case, the certificate should be for the FQDN (e.g. "dma01.skyline.be").
+      >
+      > - **Do not use wildcard certificates** if you want to use your DataMiner Agent to connect your system to **dataminer.services**, as this is not supported. In that case, the certificate should be for the FQDN (e.g. "dma01.skyline.be").
+      > - If you are configuring an Agent in a **Failover** pair, ensure that you set the name tag to the hostname or IP address for that specific Agent. **Do not use the shared hostname or virtual IP** for the Failover pair.
 
 1. Save the file and restart the DMA.
 
@@ -164,7 +169,7 @@ The following auto-detect methods can be specified:
 
 - **I can no longer launch DataMiner Cube from the DataMiner Cube start window**
 
-    If you added the DMS based on the IP address, this may no longer work if HTTPS is required. Add a new DataMiner System and **use the FQDN** instead of the IP address. See [Opening DataMiner Cube](xref:Using_the_desktop_app).
+    If you added the DMS based on the IP address, this may no longer work if HTTPS is required. Add a new DataMiner System and **use the FQDN** instead of the IP address. See [Connecting to a DataMiner Agent with Cube](xref:Connecting_to_a_DMA_with_Cube).
 
 - **The webpage could not be found (HTTP 404 error)**
 

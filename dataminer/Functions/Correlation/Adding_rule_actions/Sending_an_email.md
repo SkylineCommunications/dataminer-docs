@@ -41,10 +41,10 @@ In the *Actions* section of the details pane:
    > - In the *Elements and services in view selection* section, you can select the "Dynamic" option to indicate that the elements that triggered the Correlation rule have to be included.
    > - If you want to specify multiple indices for one table parameter, use a semicolon ";" as separator.
    > - If you want to specify multiple parameters for one element, service, or protocol version, assign them all within a single line.
-   > - The icon in front of each item in the drop-down list shows whether the item is a dashboard or a report.
+   > - The icon in front of each item in the dropdown list shows whether the item is a dashboard or a report.
    > - If you edit an existing *Send email* action that uses a dashboard that no longer exists, from DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41364-->, the dashboard will be displayed in red.
 
-1. If you have selected a report or dashboard to include, optionally click the *Configure* button to further configure it. See [Generating a PDF report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
+1. If you have selected a report or dashboard to include, optionally click the *Configure* button to further configure it. See [Generating a report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
 
 1. Optionally, to also send the message when the conditions are no longer fulfilled, select *Execute on clear*.
 

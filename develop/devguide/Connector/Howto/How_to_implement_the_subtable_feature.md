@@ -6,7 +6,7 @@ uid: How_to_implement_the_subtable_feature
 
 Below, we describe one of the possible ways of implementing the *[Subtable](xref:Protocol.Params.Param.SNMP.OID-options#subtable)* feature in DataMiner.
 
-In the example below, we will filter the interface table of a data source. The example is based on the *SAP Base Info Table* of the [Alcatel SR Manager](https://catalog.dataminer.services/result/driver/2390) connector.
+In the example below, we will filter the interface table of a data source. The example is based on the *SAP Base Info Table* of the [Alcatel SR Manager](https://catalog.dataminer.services/details/dafbf0ff-4318-4784-a027-58a181b36c65) connector.
 
 ## Why use the Subtable feature?
 
@@ -74,7 +74,7 @@ The table definition in the connector for the *SAP Base Info Hidden* table:
 
 In this step, you need to create logic to add rows to the filter table, in our case the *SAP Table Filter* table, and to allow the removal of such entries.
 
-First, you need a drop-down list containing all the different available rows. In our example, we get the data for this parameter from another parameter that contains all the SAP port names separated by commas. Below you can find the filter parameter definition:
+First, you need a dropdown list containing all the different available rows. In our example, we get the data for this parameter from another parameter that contains all the SAP port names separated by commas. Below you can find the filter parameter definition:
 
 ```xml
 <Param id="4673" trending="false">
@@ -195,4 +195,4 @@ Once you have implemented the logic mentioned above, there are some other things
 - A toggle button to switch between filtered or full tables. You can then retrieve the table partially or fully depending on this button.
 - Triggering polling of the table every time the filter is changed, to make the solution more customizable.
 
-To check these possibilities in more detail, check out the [Alcatel SR Manager](https://catalog.dataminer.services/result/driver/2390) connector.
+To check these possibilities in more detail, check out the [Alcatel SR Manager](https://catalog.dataminer.services/details/dafbf0ff-4318-4784-a027-58a181b36c65) connector.

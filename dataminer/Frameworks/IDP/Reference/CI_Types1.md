@@ -283,7 +283,7 @@ The *Configuration* section contains the following fields:
 | Properties | Allows you to configure all properties for the element (see [Properties](#properties)) |
 | Type | Deprecated. Set this field to the Element Type specified in the protocol. |
 | EnableTelnet | Deprecated. Set this field to *False*. |
-| ForceAgent | Deprecated. Can be used on systems before 9.6.0 to link elements to a fixed DMA in a Failover setup. |
+| ForceAgent | Deprecated. Used on systems prior to 9.6.0 to link elements to a fixed DMA in a Failover setup. |
 | KeepOnline | Deprecated. Set this field to *False*. |
 | EnableSnmpAgent | Deprecated. Set this field to *False*. |
 | SnmpReadCommunityString | Deprecated. Specify an empty string "". |
@@ -347,6 +347,8 @@ For each connection, this section also has to contain one of the following array
     - **IsServerModeEnabled**: If this is set to true, the accepted IP addresses (cf. below) can be configured. Otherwise, this is not possible. This boolean is only relevant if *TypeConnection* is *SmartSerial*, *Type* is *IP* and the IP address is "any" or "127.0.0.1".
 
     - **AcceptedIpAddresses**: Represents the accepted IP addresses. Only relevant if *IsServerModeEnabled* is *true*. Allows you to specify one or more allowed IP addresses for the connection. The element will then only communicate with those IP addresses. This serves the same purpose as the *Accepted IP address* field in the element editor in DataMiner Cube (see [Adding elements](xref:Adding_elements)).
+
+    - **SkipCertificateVerification**: Indicates whether the SSL/TLS certificate verification should be skipped for this specific HTTP port in the element configuration. This is only relevant when *TypeConnection* is *Http*. The default value is false. Note that this feature requires DataMiner 10.4.12/10.5.0 or higher, and that this property can only be configured via the CI Type JSON definition.
 
     Below is an example of four connections that are required to create an element.
 

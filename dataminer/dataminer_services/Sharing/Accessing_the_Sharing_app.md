@@ -1,6 +1,7 @@
 ---
 uid: Accessing_the_Sharing_app
 keywords: cloud shares, cloud sharing
+reviewer: Alexander Verkest
 ---
 
 # Accessing the Sharing app

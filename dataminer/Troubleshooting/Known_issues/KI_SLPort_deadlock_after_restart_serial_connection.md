@@ -23,4 +23,4 @@ Instead of restarting an element with a serial connection, stop the element and 
 
 ## Issue description
 
-When an element using a serial connection was restarted, the SLPort process could stop working correctly, which could result in a run-time error. If this run-time error occurred, DataMiner needed to be restarted.
+When an element using a serial connection was restarted, the SLPort process could stop working correctly, which could result in a runtime error. If this runtime error occurred, DataMiner needed to be restarted.

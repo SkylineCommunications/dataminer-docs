@@ -1,6 +1,7 @@
 ---
 uid: Setting_up_StaaS
 description: To set up STaaS on a self-managed DMS, connect the system to dataminer.services, register, edit DB.xml on each DMA, and restart DataMiner.
+reviewer: Alexander Verkest
 ---
 
 # Setting up STaaS
@@ -22,20 +23,25 @@ For a self-managed DataMiner System, follow the steps below to set up STaaS.
 > - This setup is not needed for [DataMiner as a Service (DaaS) systems](xref:Creating_a_DMS_in_the_cloud), as these automatically use STaaS.
 > - If you want to add a DMA to an existing DMS that uses STaaS, refer to [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
 
-1. [Upgrade your DataMiner System](xref:Upgrading_a_DataMiner_Agent) to use at least DataMiner 10.4.0 [CU0]/10.4.1 or, preferably, the latest available DataMiner version.
+## Prerequisites
 
-   We recommend always upgrading DataMiner to the latest available version to get the latest features and performance updates. To be able to use non-indexed logger tables, the minimum supported version is DataMiner 10.4.0 [CU5]/10.4.8. <!-- RN 40066 -->
+- DataMiner 10.4.0 [CU0]/10.4.1 or higher (preferably the latest available version). See [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-1. Make sure your DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+  > [!TIP]
+  > We recommend always upgrading DataMiner to the latest available version to get the latest features and performance updates. To be able to use non-indexed logger tables, the minimum supported version is DataMiner 10.4.0 [CU5]/10.4.8. <!-- RN 40066 -->
 
-1. Make sure that all Agents in your DataMiner System have internet access, either directly or through a proxy.
+- Your system must be connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-   For specific endpoints or IPs to whitelist, contact <support@dataminer.services>. The configuration depends on the region you will register your system for.
+- All Agents in your DataMiner System must have internet access, either directly or through a proxy.
 
-   > [!NOTE]
-   > All communication for STaaS happens through HTTPS. The DataMiner System initiates all outbound connections.
+  For specific endpoints or IPs to whitelist, contact <support@dataminer.services>. The configuration depends on the region you will register your system for.
 
-1. Make sure you have at least **DataMiner CloudGateway 2.8.0** installed on the system. See [Upgrading nodes to the latest DxM versions](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions).
+  > [!NOTE]
+  > All communication for STaaS happens through HTTPS. The DataMiner System initiates all outbound connections.
+
+- DataMiner CloudGateway version 2.8.0 or higher. See [Upgrading nodes to the latest DxM versions](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions).
+
+## Configuring STaaS
 
 1. Register your system to use STaaS:
 

@@ -68,7 +68,9 @@ Even if this option is not specified, by default an authentication ticket is pas
 
 ### UseChrome
 
-If you want to make sure the webpage is displayed using the Chromium web browser regardless of the default browser settings in Cube, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "UseChrome".
+From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43429-->, the `UseChrome` option can no longer be used. If it is specified in a shape, it will be disregarded, and the shape will use Edge instead.
+
+In earlier versions, you can make sure the webpage is displayed using the Chromium web browser regardless of the default browser settings in Cube. To do so, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "UseChrome".
 
 ### UseIE
 
@@ -116,7 +118,7 @@ http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 | \<ElementName> | Name of the element |
 | \<DataMinerID> | DataMiner ID |
 | \<DMAIP> | The certificate address, hostname or IP address of the DataMiner Agent to which the user is connected. See [\<DMAIP>](xref:Placeholders_for_variables_in_shape_data_values#dmaip). |
-| \<PageFilter> | Value of the drop-down filter box in the top-right corner of the Visio drawing. See [Specifying an EPM parameter that can be used to filter](xref:Specifying_an_EPM_parameter_that_can_be_used_to_filter). |
+| \<PageFilter> | Value of the dropdown filter box in the top-right corner of the Visio drawing. See [Specifying an EPM parameter that can be used to filter](xref:Specifying_an_EPM_parameter_that_can_be_used_to_filter). |
 
 > [!NOTE]
 >

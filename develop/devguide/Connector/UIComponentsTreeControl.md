@@ -25,6 +25,6 @@ DataMiner Protocol Markup Language:
 - [Protocol.Params.Param.Measurement.Discreets.Discreet@iconRef](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-iconRef)
 - [Protocol.Relations.Relation](xref:Protocol.Relations.Relation)
 
-Coding guidelines
+Best practices:
 
 - [User Interface](xref:Default_settings)

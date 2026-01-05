@@ -7,8 +7,7 @@ uid: ClassLibrary_Range_1.0
 > [!IMPORTANT]
 > DEPRECATED: This library is no longer maintained. The code has been moved to separate public NuGets. See [Skyline.DataMiner.Core.DataMinerSystem](xref:Skyline_DataMiner_Core_DataMinerSystem_Range_1.0).
 
-> [!NOTE]
-> Range 1.0.x.x is supported as from DataMiner version 9.0.0
+<!-- Range 1.0.x.x is supported as from DataMiner version 9.0.0. -->
 
 ### 1.0.1.3
 

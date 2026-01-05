@@ -97,7 +97,7 @@ DataMiner also includes root cause analysis (RCA) based on connectivity informat
 > For more information:
 >
 > - [DataMiner Correlation](xref:About_DMS_Correlation)
-> - [DMS Correlation training video](https://community.dataminer.services/courses/dataminer-sysadmin/lessons/module-04-correlation/) ![Video](~/dataminer/images/video_Duo.png)
+> - [Correlation training video](https://community.dataminer.services/courses/dataminer-sysadmin/lessons/module-04-correlation/) ![Video](~/dataminer/images/video_Duo.png)
 
 ## Fault management
 
@@ -115,7 +115,7 @@ Today, **raw data collection** is the foundation of an efficient architecture. I
 
 To address the challenges of fault detection, ensuring **good data hygiene** is key. DataMiner includes various ways to guarantee data hygiene, including:
 
-- Fully user-definable and run-time-applied alarm thresholds defined in templates.
+- Fully user-definable and runtime-applied alarm thresholds defined in templates.
 - Dynamic switching of alarm definitions based on time or events (e.g. upon service activation).
 - Ability to stack alarm templates to easily and efficiently manage thresholds across vast deployments.
 - Support for relative and absolute thresholds, including a variety of baseline methods.
@@ -193,7 +193,7 @@ First of all, DataMiner Control Panels **allow versatile control actions with th
 
 Moreover, you have the freedom to **customize the appearance and design** of each DataMiner Control Panel. This includes not only buttons but also trend charts, thumbnails, real-time metrics and KPIs, spectrum analyzers, or any other elements that align with your specific needs.
 
-And finally, the control panels **enable true multi-tenant operations**. You can create tailor-made control panels for any customer, partner, or supplier, and share them via the dataminer.services.
+And finally, the control panels **enable true multitenant operations**. You can create tailor-made control panels for any customer, partner, or supplier, and share them via the dataminer.services.
 
 > [!TIP]
 > For more information:
@@ -211,7 +211,7 @@ And finally, the control panels **enable true multi-tenant operations**. You can
 
 The No-Code/Low-Code Apps toolset enables you to **compose tailor-made apps** for specific audiences, from the ground up **with little to no coding experience**.
 
-**Leverage your data!** Thanks to DataMiner's support for every possible category of integration, no-code apps can leverage your data lake, providing deeper insights and value. You can monitor metrics from any data source in real time, aggregate and manipulate data abstracted from hardware products, and create views tailored to the needs of each of your teams. Perform **real-time analytics** using the *[**Generic Query Interface (GQI)**](xref:Creating_GQI_query), also supporting [external data sources](xref:GQI_Ad_hoc_data_sources).
+**Leverage your data!** Thanks to DataMiner's support for every possible category of integration, no-code apps can leverage your data lake, providing deeper insights and value. You can monitor metrics from any data source in real time, aggregate and manipulate data abstracted from hardware products, and create views tailored to the needs of each of your teams. Perform **real-time analytics** using the [**Generic Query Interface (GQI)**](xref:Creating_GQI_query), also supporting [external data sources](xref:GQI_Ad_hoc_data_sources).
 
 > [!TIP]
 > See also: [Your next step towards a data-driven operation: the brand-new DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/your-next-step-towards-a-data-driven-operation-the-brand-new-dataminer-generic-query-interface-gqi/)
@@ -227,12 +227,12 @@ These apps run on HTML5, making them **accessible from anywhere**, including mob
 >
 > - [Create your own powerful apps regardless of your coding abilities](https://community.dataminer.services/low-code-apps-create-your-own-powerful-apps-regardless-of-your-coding-abilities/)
 > - [DataMiner Low-Code Apps: 5 things you need to know](https://www.youtube.com/watch?v=5hx1pDe9am0) ![Video](~/dataminer/images/video_Duo.png)
-> - [Using Button Components and Header Bars in Low-Code Apps](https://www.youtube.com/watch?v=7Qhitj3fQB4) ![Video](~/dataminer/images/video_Duo.png)
-> - [Version Control for Low-Code Apps](https://www.youtube.com/watch?v=njieQ_zWNP0) ![Video](~/dataminer/images/video_Duo.png)
 > - Example use case : [Switch configuration with DataMiner Low-Code Apps](https://community.dataminer.services/use-case/switch-configuration-with-dataminer-low-code-apps/)
 > - Workflow use case : [DataMiner Low-Code Apps & Telestream Vantage – Media Asset Workflow Automation](https://community.dataminer.services/use-case/dataminer-low-code-apps-telestream-vantage-media-asset-workflow-automation/)
+> - [DataMiner Low-Code Apps](xref:Application_framework)
+> - [Using Button Components and Header Bars in Low-Code Apps](https://www.youtube.com/watch?v=7Qhitj3fQB4) ![Video](~/dataminer/images/video_Duo.png)
+> - [Version Control for Low-Code Apps](https://www.youtube.com/watch?v=njieQ_zWNP0) ![Video](~/dataminer/images/video_Duo.png)
 > - [Kata #3: Build your first low-code app](https://www.youtube.com/watch?v=FzZEi5iCq44) ![Video](~/dataminer/images/video_Duo.png)
 > - [Kata #7: Pages, panels and headers in a low-code app](https://www.youtube.com/watch?v=YZHK8PiRbek) ![Video](~/dataminer/images/video_Duo.png)
 > - [Kata #8: Actions and events in a low-code app](https://www.youtube.com/watch?v=rr0I2JP8isU) ![Video](~/dataminer/images/video_Duo.png)
 > - [Kata #13: Control and feeds in a Low-Code App](https://www.youtube.com/watch?v=TvStVP7cN5g) ![Video](~/dataminer/images/video_Duo.png)
-> - [DataMiner Low-Code Apps](xref:Application_framework)

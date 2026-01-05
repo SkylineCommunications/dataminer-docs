@@ -26,7 +26,7 @@ Gathering, recording, and analyzing data.
 Collect data from various sources and convert them into a uniform format.
 
 > [!TIP]
-> For detailed information, see [DataMiner Mediation Layer](xref:AdvancedDataMinerMediationLayerIntroduction).
+> For detailed information, see [DataMiner Mediation Layer](xref:AdvancedDataMinerMediationLayer).
 
 ## Indexing Engine
 

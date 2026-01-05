@@ -26,6 +26,9 @@ To make a Correlation rule trigger a new, correlated alarm:
 
 1. Click the underlined field to the right of “and severity”, and select an alarm severity.
 
+   > [!NOTE]
+   > If you are using the Correlation rule to group **timeout alarms**, make sure to select a **different severity** than the *Base alarm severity*, because correlated alarms with severity "Timeout" are not supported.
+
 1. If necessary, select one or more of the following options:
 
    - **Auto clear**: Select this option if you want the Correlation alarm to be cleared automatically as soon as the conditions specified in the Correlation rule are no longer met.

@@ -90,7 +90,7 @@ The *SRM_DiscoverResources* script now supports string and time-dependent capabi
 
 #### LSO scripts now receive previous service state as input \[ID 27090\]
 
-Life cycle service orchestration (LSO) scripts will now receive an indication of the previous service state as input. This can be used to skip the resource configuration when the service is in the Failed state. The script *SRM_LSOTemplate* contains an example of this behavior.
+Lifecycle Service Orchestration (LSO) scripts will now receive an indication of the previous service state as input. This can be used to skip the resource configuration when the service is in the Failed state. The script *SRM_LSOTemplate* contains an example of this behavior.
 
 #### Deprecated ProfileManagerHelper methods replaced \[ID 27133\]
 
@@ -100,7 +100,7 @@ The SRM Solution now uses *ProfileHelper* methods instead of the deprecated *Pro
 
 From DataMiner 10.0.9 onwards, the prefix “SRMFunction\_” is no longer used for virtual functions. The standard SRM Solution has now been updated to also no longer use this prefix.
 
-#### Same lock life cycle for regular and permanent booking types \[ID 27316\]
+#### Same lock lifecycle for regular and permanent booking types \[ID 27316\]
 
 Locked permanent bookings now behave in the same way as locked regular bookings.
 
@@ -132,7 +132,7 @@ The *Created by* and *Last modified by* columns of the Bookings list always ment
 
 #### Problem in SLAutomation when running many LSO scripts \[ID 27258\]
 
-If many LSO (Life cycle Service Orchestration) scripts were triggered at the same time, as a result of many bookings starting at the same time, a problem could occur in the SLAutomation process.
+If many LSO (Lifecycle Service Orchestration) scripts were triggered at the same time, as a result of many bookings starting at the same time, a problem could occur in the SLAutomation process.
 
 #### Exception when custom script used ScriptOutput \[ID 27298\]
 

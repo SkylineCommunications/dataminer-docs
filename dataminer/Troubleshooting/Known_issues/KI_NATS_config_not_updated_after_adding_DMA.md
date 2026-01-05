@@ -32,7 +32,7 @@ To check if you have indeed encountered this issue in a DMS, you can send a *Get
 
 1. Go to the *Build Message* tab.
 
-1. In the *Message Type* drop-down list, select *GetInfoMessage*.
+1. In the *Message Type* dropdown list, select *GetInfoMessage*.
 
 1. In the *Type* dropdown, select *DmsConfiguration*.
 

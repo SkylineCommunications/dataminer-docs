@@ -4,11 +4,30 @@ uid: General_Main_Release_10.4.0_CU18
 
 # General Main Release 10.4.0 CU18
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Main Release 10.4.0 CU18](xref:Cube_Main_Release_10.4.0_CU18).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.4.0 CU18](xref:Web_apps_Main_Release_10.4.0_CU18).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
+## Changes in build 16295
+
+#### Visual Overview in web apps: Problem when reading the load balancing configuration [ID 43660]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+In some cases, it would not be possible to read the load balancing configuration for visual overviews in web apps. As a result, the visual overview module would not be able to start up when load balancing was enabled.
+
+#### SLScripting issue with non-English system locale [ID 43690]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+On non-English systems, a null reference exception would be thrown when SLScripting started up, and localization would get into a loop while trying to load assemblies to translate that exception until the process eventually got killed.
+
+## Changes in build 16208
 
 ### Enhancements
 
@@ -103,7 +122,7 @@ From now on, elements will only be deleted once all steps in the migration proce
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When an element was restarted multiple times in rapid succession, in some cases, an run-time error could occur in the parameter thread of SLElement.
+When an element was restarted multiple times in rapid succession, in some cases, a runtime error could occur in the parameter thread of SLElement.
 
 #### Problem when stopping an element or performing a Failover switch when another action was being executed [ID 43089]
 
@@ -167,7 +186,7 @@ Also, from now on, the primary IP address of the offline agent will be set to ei
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-In some cases, a run-time error could be thrown when a DVE child element was deleted.
+In some cases, a runtime error could be thrown when a DVE child element was deleted.
 
 #### Problem when an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet [ID 43314]
 

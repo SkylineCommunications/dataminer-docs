@@ -1,12 +1,10 @@
 ---
 uid: Managing_dataminer_services_keys
 keywords: cloud keys
+reviewer: Alexander Verkest
 ---
 
 # Managing dataminer.services keys
-
-> [!IMPORTANT]
-> You need to have the *Owner* role in order to access or create keys.
 
 ## System keys
 

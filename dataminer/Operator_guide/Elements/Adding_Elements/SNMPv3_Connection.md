@@ -8,10 +8,12 @@ For SNMPv3 connections, you can specify the following connection settings while 
 
 - **SNMP version**: Allows you to select a different SNMP version than the version configured in the protocol. With an SNMPv3 type protocol, you can select SNMPv2 or SNMPv3.
 
+- **Site**: The remote site. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the SiteManager DxM is installed and remote sites are configured. For more information, refer to [Site Manager](xref:SiteManagerOverview).
+
 - **IP address/host**: The polling IP or URL of the destination.
 
   > [!IMPORTANT]
-  > Do not fill in a hostname instead of an IP address if this connection will be used to receive SNMP traps. Using a hostname is not supported for SNMP trap reception.
+  > From DataMiner 10.5.9/10.6.0 onwards<!--RN 43347-->, you can fill in a hostname instead of an IP address even if the connection will be used to receive SNMP traps. In earlier versions, using a hostname is not supported for SNMP trap reception.
 
 - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.
 
@@ -19,7 +21,7 @@ For SNMPv3 connections, you can specify the following connection settings while 
 
 - **Use credentials**: If predefined credentials have been made available for your user account, you can select this checkbox to select a set of predefined SNMP credentials. See also: [Managing predefined sets of credentials for SNMP authentication](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication).
 
-- **Security level and protocol**: Select one of the following three levels in the drop-down list:
+- **Security level and protocol**: Select one of the following three levels in the dropdown list:
 
   - *noAuthNoPriv*: No authentication and no privacy, which is essentially the same as SNMPv2.
 

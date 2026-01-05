@@ -6,14 +6,14 @@ uid: Installing_DataMiner_IDP
 
 ## Deploying the IDP package
 
-1. Make sure DataMiner version **10.3.0 CU0** or higher is installed in your DMS.
+1. Make sure DataMiner version **10.4.0 CU0** or higher is installed in your DMS.
 
 1. If you intend to upgrade an existing IDP installation, and you are using a DataMiner version **lower than 10.4.0 or 10.4.3**, install the **[IDP Migration](https://community.dataminer.services/download/idp-migration/) package**.
 
    > [!TIP]
    > See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
 
-1. Deploy the [IDP package](https://catalog.dataminer.services/details/package/3163) from the Catalog.
+1. Deploy the [IDP package](https://catalog.dataminer.services/details/fdaa2902-cbb7-4d83-831d-91428ac5e88d) from the Catalog.
 
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
@@ -44,7 +44,7 @@ When you deploy the IDP package, IDP will be installed with the default settings
 
 1. On the view selection page, specify which views should be used by DataMiner IDP:
 
-   1. For each of the sections, either select *Create a new view* or select *Use existing view* and select the view in the drop-down list.
+   1. For each of the sections, either select *Create a new view* or select *Use existing view* and select the view in the dropdown list.
 
    1. In case you use an existing view that is not yet under the TOP view, select the option *Move existing views under TOP* view.
 

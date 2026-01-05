@@ -52,7 +52,7 @@ The default AutoClear setting can be configured in the `C:\Skyline DataMiner\Mai
 If you set the AutoClear setting to FALSE, alarms will not be cleared automatically. Instead, they will get into a “clearable” state, and someone will have to manually clear them.
 
 > [!TIP]
-> See also: [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)
+> See also: [MaintenanceSettings.AlarmSettings.AutoClear](xref:MaintenanceSettings.AlarmSettings.AutoClear)
 
 ## Overriding the default AutoClear setting on parameter level
 

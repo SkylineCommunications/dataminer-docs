@@ -91,7 +91,7 @@ Trend graph representing one or more aggregation rules in one or more views. The
 
 Component-specific options for each added aggregation rule:
 
-- *Graph style*: Select one of the available styles in the drop-down list to change what kind of graph line is used.
+- *Graph style*: Select one of the available styles in the dropdown list to change what kind of graph line is used.
 
 - *Graph color*: Click the ellipsis button to choose a different color for the graph.
 
@@ -110,13 +110,13 @@ Other component-specific options:
 
 - *Include sub-views*: Select this option to also include child views of the selected views.
 
-- *Trend range*: Select the time range of the trend graph in the drop-down list. If you select *Custom*, an additional box will appear where you can fill in the number of hours that should be represented in the trend graph.
+- *Trend range*: Select the time range of the trend graph in the dropdown list. If you select *Custom*, an additional box will appear where you can fill in the number of hours that should be represented in the trend graph.
 
 - *Type of trend data*: Select either average or real-time trending.
 
-- *Show range selection*: To allow the user to set the range of the graph, select either *Show Range* or *Show Custom Date Picker*. The former will display drop-down list where the user can select different time ranges, the latter will allow the user to enter a custom range.
+- *Show range selection*: To allow the user to set the range of the graph, select either *Show Range* or *Show Custom Date Picker*. The former will display dropdown list where the user can select different time ranges, the latter will allow the user to enter a custom range.
 
-- *Plotter*: Select how the graph should be plotted in the drop-down list. You can choose a regular graph, or a stacked graph, multi-column bars or stacked bars.
+- *Plotter*: Select how the graph should be plotted in the dropdown list. You can choose a regular graph, or a stacked graph, multicolumn bars or stacked bars.
 
 - *Show parameter checkboxes*: Select this option to display a *Parameters* button above the graph that allows the user to select what aggregation rules are displayed. The checkboxes also allow the user to display the average and apply linear regression to the graph.
 
@@ -140,7 +140,7 @@ Other component-specific options:
 
 - *Legend always visible*: If this option is enabled, the legend will remain displayed even when the mouse pointer does not hover over the graph. In that case, the legend just presents the parameter name without a value. This can be useful to allow the user to scroll to a particular parameter in the legend, in order to then view the value for this parameter when hovering the mouse pointer over the graph.
 
-- *Show legend upon mouseover*: In the drop-down list, select where the legend should be displayed when the mouse pointer passes over the graph: as an overlay over the graph, next to the graph, or below the graph.
+- *Show legend upon mouseover*: In the dropdown list, select where the legend should be displayed when the mouse pointer passes over the graph: as an overlay over the graph, next to the graph, or below the graph.
 
 - *Average history duration*: Enter a unit for the number of trend ranges to take in account for the calculation of the average history trend. The average history trend line will then be displayed as a dotted line on the graph. If "0" is entered, this option is disabled.
 
@@ -212,17 +212,17 @@ Overview of active alarms or alarms in a recent fixed or sliding window.
 
 Component-specific options:
 
-- *Mode*: Select the mode for the alarm list in the drop-down list. You can choose to display active alarms, or history alarms in different time ranges.
+- *Mode*: Select the mode for the alarm list in the dropdown list. You can choose to display active alarms, or history alarms in different time ranges.
 
 - *Highlight time*: Enter the number of seconds you want new alarms to be highlighted.
 
-- *History tracking*: Select this option to show only the most recent alarm of an alarm’s life cycle. To show the alarm history as separate alarm records in the list instead, clear the selection.
+- *History tracking*: Select this option to show only the most recent alarm of an alarm’s lifecycle. To show the alarm history as separate alarm records in the list instead, clear the selection.
 
 - *Group by element*: Select this option to group the alarms by element.
 
 - *Group by service*: Select this option to group the alarms by service.
 
-- *Minimal alarm level*: In the drop-down list, select the minimum alarm level of alarms displayed in the list.
+- *Minimal alarm level*: In the dropdown list, select the minimum alarm level of alarms displayed in the list.
 
 - *Advanced filter*: In this box, you can enter an alarm filter to limit what alarms are shown in the list. For more information on alarm filters, see [Alarm filters](xref:Alarm_filters).
 
@@ -247,7 +247,7 @@ Component-specific options:
 
 - *Column Order*: Use the arrows next to each column to change the order in which the columns will appear. It is also possible to add additional columns, e.g. the *Active time*, which is the time since the alarm has been generated.
 
-- *Appearance*: In the drop-down list, select the type of list you want to display.
+- *Appearance*: In the dropdown list, select the type of list you want to display.
 
 - *Toggle buttons*: Add or remove different options to have these displayed as buttons above the component, which the user can click to change the mode of the alarm list.
 
@@ -337,7 +337,7 @@ Includes a Data Display page for a particular element in a dashboard. Different 
 
 Component-specific options:
 
-- *Appearance*: Select the style of the data display page in the drop-down list.
+- *Appearance*: Select the style of the data display page in the dropdown list.
 
 - *Display 'Set parameter' controls*: Select this option to enable users to set the value of write parameters.
 
@@ -406,7 +406,7 @@ Includes a Data Display page for a particular element in a dashboard. Different 
 
 Component-specific options:
 
-- *Appearance*: In the drop-down list, you can select several layout options, such as gridlines or alternating background color.
+- *Appearance*: In the dropdown list, you can select several layout options, such as gridlines or alternating background color.
 
 - *Display 'Set parameter' controls*: Select this option to allow users to view and set parameter values.
 
@@ -414,7 +414,7 @@ Component-specific options:
 
 Displays a parameter, optionally with the parameter name, the parameter value, or the parameter set control.
 
-For a table parameter, you can select one or more columns in order to show only these, and apply a row filter if necessary, e.g. *SL\**. In the dashboard, it will then be possible to sort the columns by clicking the column header. You can also link the Parameter index to another, existing *Generic real-time parameter* component in the dashboard, by selecting *\<Link to \[name other component\]\>* in the *IDX* drop-down list.
+For a table parameter, you can select one or more columns in order to show only these, and apply a row filter if necessary, e.g. *SL\**. In the dashboard, it will then be possible to sort the columns by clicking the column header. You can also link the Parameter index to another, existing *Generic real-time parameter* component in the dashboard, by selecting *\<Link to \[name other component\]\>* in the *IDX* dropdown list.
 
 Component-specific options:
 
@@ -428,7 +428,7 @@ Component-specific options:
 
 - *Display table quick filter*: Select this option to have a filter box shown above a table parameter.
 
-- *Slider style*: In the drop-down list, choose a style for the slider, depending on whether you need to optimize performance or not.
+- *Slider style*: In the dropdown list, choose a style for the slider, depending on whether you need to optimize performance or not.
 
 - *Display 'Set parameter' control*: Select this option to allow users to view and set parameter values.
 
@@ -442,7 +442,7 @@ A histogram visualizing parameter values. You can set a custom range and interva
 
 Component-specific options:
 
-- *Histogram range*: If you do not want the range to be automatically selected, select *Manual* in the drop-down list, and then enter the minimum and maximum of the histogram range.
+- *Histogram range*: If you do not want the range to be automatically selected, select *Manual* in the dropdown list, and then enter the minimum and maximum of the histogram range.
 
 - *Histogram interval amount*: Enter the number of histogram class intervals in this box. By default, this is set to 20.
 
@@ -480,7 +480,7 @@ Component-specific options:
 
 - *Show parameter table name part*: Enable this option to display the table name part of a column parameter name.
 
-- *GUI style*: In the drop-down list, choose a style for the component, depending on whether you need to optimize performance or not.
+- *GUI style*: In the dropdown list, choose a style for the component, depending on whether you need to optimize performance or not.
 
 ### Set parameter (parameter)
 
@@ -500,7 +500,7 @@ Displays the most recent measurement for a spectrum monitor buffer.
 
 Component-specific options:
 
-- *Buffer to display*: If available, you can select a buffer in the drop-down list for it to be displayed in the thumbnail.
+- *Buffer to display*: If available, you can select a buffer in the dropdown list for it to be displayed in the thumbnail.
 
 ### Table column bar graph (parameter)
 
@@ -523,7 +523,7 @@ Component-specific options:
 
 - *Limit amount of values*: Allows you to limit the number of rows that are taken into account for the graph. This can for instance be used in combination with sorting in order to only show the "top x" or "bottom x" of a particular table column.
 
-- *Range*: If you do not want the range to be automatically selected, select *Manual* in the drop-down list, and then enter the minimum and maximum of the bar graph range.
+- *Range*: If you do not want the range to be automatically selected, select *Manual* in the dropdown list, and then enter the minimum and maximum of the bar graph range.
 
 - *Stacked bars*: Select this option to allow the bars to stack on top of each other.
 
@@ -547,7 +547,7 @@ A histogram representing trend data for one or more parameters.
 
 Component-specific options for each added parameter:
 
-- *Graph style*: Select one of the available styles in the drop-down list to change what kind of graph line is used.
+- *Graph style*: Select one of the available styles in the dropdown list to change what kind of graph line is used.
 
 - *Graph color*: Click the ellipsis button to choose a different color for the graph.
 
@@ -562,15 +562,15 @@ Component-specific options for each added parameter:
 
 Other component-specific options:
 
-- *Trend range*: Select the time range of the trend graph in the drop-down list. If you select *Custom*, an additional box will appear where you can fill in the number of hours that should be represented in the trend graph.
+- *Trend range*: Select the time range of the trend graph in the dropdown list. If you select *Custom*, an additional box will appear where you can fill in the number of hours that should be represented in the trend graph.
 
 - *Type of trend data*: Select either average or real-time trending.
 
-- *Show range selection*: To allow the user to set the range of the histogram, select either *Show range* or *Show custom date picker*. The former will display a drop-down list where the user can select different time ranges, the latter will allow the user to enter a custom range.
+- *Show range selection*: To allow the user to set the range of the histogram, select either *Show range* or *Show custom date picker*. The former will display a dropdown list where the user can select different time ranges, the latter will allow the user to enter a custom range.
 
-- *Plotter*: Select how the graph should be plotted in the drop-down list. You can choose a regular graph, or a stacked graph, multi-column bars or stacked bars.
+- *Plotter*: Select how the graph should be plotted in the dropdown list. You can choose a regular graph, or a stacked graph, multicolumn bars or stacked bars.
 
-- *Histogram range*: If you do not want the range to be automatically selected, select *Manual* in the drop-down list, and then enter the minimum and maximum of the histogram range.
+- *Histogram range*: If you do not want the range to be automatically selected, select *Manual* in the dropdown list, and then enter the minimum and maximum of the histogram range.
 
 - *Histogram interval amount*: Enter the number of histogram class intervals in this box. By default, this is set to 20.
 
@@ -596,7 +596,7 @@ Other component-specific options:
 
 - *Legend always visible*: If this option is enabled, the legend will remain displayed even when the mouse pointer does not hover over the graph. In that case, the legend just presents the parameter name without a value. This can be useful to allow the user to scroll to a particular parameter in the legend, in order to then view the value for this parameter when hovering the mouse pointer over the graph.
 
-- *Show legend upon mouseover*: In the drop-down list, select where the legend should be displayed when the mouse pointer passes over the histogram: as an overlay over the histogram, next to the histogram, or below the histogram.
+- *Show legend upon mouseover*: In the dropdown list, select where the legend should be displayed when the mouse pointer passes over the histogram: as an overlay over the histogram, next to the histogram, or below the histogram.
 
 - *Overlay legend width*, *Y-axis label width*, *Axis label font size*, etc.: Adjust these settings to fine-tune the layout of the histogram.
 
@@ -608,7 +608,7 @@ A custom trend graph for one or more parameters.
 
 Component-specific options for each added parameter:
 
-- *Graph style*: Select one of the available styles in the drop-down list to change what kind of graph line is used.
+- *Graph style*: Select one of the available styles in the dropdown list to change what kind of graph line is used.
 
 - *Graph color*: Click the ellipsis button to choose a different color for the graph.
 
@@ -623,13 +623,13 @@ Component-specific options for each added parameter:
 
 Other component-specific options:
 
-- *Trend range*: Select the time range of the trend graph in the drop-down list. If you select *Custom*, an additional box will appear where you can fill in the number of hours that should be represented in the trend graph.
+- *Trend range*: Select the time range of the trend graph in the dropdown list. If you select *Custom*, an additional box will appear where you can fill in the number of hours that should be represented in the trend graph.
 
 - *Type of trend data*: Select either average or real-time trending.
 
-- *Show range selection*: To allow the user to set the range of the trend graph, select either *Show range* or *Show custom date picker*. The former will display a drop-down list where the user can select different time ranges, the latter will allow the user to enter a custom range.
+- *Show range selection*: To allow the user to set the range of the trend graph, select either *Show range* or *Show custom date picker*. The former will display a dropdown list where the user can select different time ranges, the latter will allow the user to enter a custom range.
 
-- *Plotter*: Select how the graph should be plotted in the drop-down list. You can choose a regular graph, or a stacked graph, multi-column bars or stacked bars.
+- *Plotter*: Select how the graph should be plotted in the dropdown list. You can choose a regular graph, or a stacked graph, multicolumn bars or stacked bars.
 
 - *Show parameter checkboxes*: Select this option to display a *Parameters* button above the graph that allows the user to select which parameters are displayed. The checkboxes also allow the user to display the average and apply linear regression to the graph.
 
@@ -655,7 +655,7 @@ Other component-specific options:
 
 - *Legend always visible*: If this option is enabled, the legend will remain displayed even when the mouse pointer does not hover over the graph. In that case, the legend just presents the parameter name without a value. This can be useful to allow the user to scroll to a particular parameter in the legend, in order to then view the value for this parameter when hovering the mouse pointer over the graph.
 
-- *Show legend upon mouseover*: In the drop-down list, select where the legend should be displayed when the mouse pointer passes over the graph: as an overlay over the graph, next to the graph, or below the graph.
+- *Show legend upon mouseover*: In the dropdown list, select where the legend should be displayed when the mouse pointer passes over the graph: as an overlay over the graph, next to the graph, or below the graph.
 
 - *Average history duration*: Enter a unit for the number of trend ranges to take in account for the calculation of the average history trend. The average history trend line will then be displayed as a dotted line on the graph. If "0" is entered, this option is disabled.
 
@@ -678,7 +678,7 @@ A custom trend graph for two parameters, where one of the two is used as a refer
 
 This component has the same options as the *Trend parameter with history* component above, with the following additional options:
 
-- *Reference value source*: In the drop-down list, select whether another parameter should be used as reference, or a fixed value. If you choose the latter, enter the fixed value in the *Fixed reference value* box below.
+- *Reference value source*: In the dropdown list, select whether another parameter should be used as reference, or a fixed value. If you choose the latter, enter the fixed value in the *Fixed reference value* box below.
 
 - *Step plot*: Select this option to display a step graph.
 
@@ -688,7 +688,7 @@ A simplified trend graph, which shows trend data for a parameter in a particular
 
 Component-specific options:
 
-- *Trending type*: Select the trend range in the drop-down list.
+- *Trending type*: Select the trend range in the dropdown list.
 
 - *Graph height*: Enter the height of the graph in pixels. By default this is set to 40.
 
@@ -758,7 +758,7 @@ Component-specific options:
 
 - *Display parameter value*: Enable this option to display the current parameter value on the component.
 
-- *Slider style*: In the drop-down list, choose a style for the slider, depending on whether you need to optimize performance or not.
+- *Slider style*: In the dropdown list, choose a style for the slider, depending on whether you need to optimize performance or not.
 
 - *Display 'Set parameter' control*: Select this option to allow users to view and set parameter values.
 
@@ -796,7 +796,7 @@ Component-specific options:
 
 - *Parameter index*: In case of a table parameter, enter the display key of the row in this box.
 
-- *Trending type*: Select the trend range in the drop-down list.
+- *Trending type*: Select the trend range in the dropdown list.
 
 - *Graph height*: Enter the height of the graph in pixels. By default, this is set to 40.
 
@@ -836,7 +836,7 @@ Component-specific options:
 
 - *Parameter index*: In case of a table parameter, enter the display key of the row in this box.
 
-- *Trend range*: Select the trend range in the drop-down list. If you select *Custom*, an additional box will appear where you can fill in the number of hours that should be represented in the trend graph.
+- *Trend range*: Select the trend range in the dropdown list. If you select *Custom*, an additional box will appear where you can fill in the number of hours that should be represented in the trend graph.
 
 - *Graph only*: Select this option to hide the X- and Y-axis, and only show the graph itself.
 
@@ -898,13 +898,13 @@ Displays information about the dashboard feed.
 
 Component-specific options:
 
-- *Type*: In the drop-down list, select the type of information to be displayed (e.g. Current selection, Element name, Protocol name, ...)
+- *Type*: In the dropdown list, select the type of information to be displayed (e.g. Current selection, Element name, Protocol name, ...)
 
-- *Style*: In the drop-down list, select whether to display the feed info as normal text or as a title.
+- *Style*: In the dropdown list, select whether to display the feed info as normal text or as a title.
 
 ### Feed selector
 
-Adds a drop-down list allowing the dashboard user to change the feed directly on the dashboard page.
+Adds a dropdown list allowing the dashboard user to change the feed directly on the dashboard page.
 
 ### Generic text part
 
@@ -930,7 +930,7 @@ Component-specific options:
 
 - *Height*: In this box, enter the height of the component in pixels.
 
-- *Included Components*: In the drop-down list select the currently used components you want to include in the group. An included component will no longer be visible outside the group.
+- *Included Components*: In the dropdown list select the currently used components you want to include in the group. An included component will no longer be visible outside the group.
 
 - *Regions*: Click the *Edit Regions* button to modify the location of the components included in the group.
 
@@ -948,7 +948,7 @@ Component-specific options:
 
 - *Image height*: In the box, fill in the height of the component in pixels.
 
-- *Image alignment*: In the drop-down list, select how the image should be aligned.
+- *Image alignment*: In the dropdown list, select how the image should be aligned.
 
 ### Inline frame
 

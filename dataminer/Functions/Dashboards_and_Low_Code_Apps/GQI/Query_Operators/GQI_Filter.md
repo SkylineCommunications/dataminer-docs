@@ -4,7 +4,7 @@ uid: GQI_Filter
 
 # Filter
 
-The *Filter* query operator filters the data set. When you select this option, select the column to filter, specify the filter method (e.g. equals, greater than, etc.) and the value to use as a filter. The available filter methods depend on the type of data in the selected column. Once the filter has been fully configured, you can refine the results by applying another operator, e.g. an additional filter.
+The *Filter* query operator filters the dataset. When you select this option, select the column to filter, specify the filter method (e.g. equals, greater than, etc.) and the value to use as a filter. The available filter methods depend on the type of data in the selected column. Once the filter has been fully configured, you can refine the results by applying another operator, e.g. an additional filter.
 
 From DataMiner 10.2.0/10.1.3 onwards, instead of specifying an exact filter value, use the available data in the dashboard as the column filter. Prior to DataMiner 10.3.5/10.4.0<!--  RN 35837 -->, you can do so using the *Use feed* checkbox. In more recent DataMiner versions, you can instead click the link icon to the right of the value box. Depending on the type of data, you will then need to specify the following information:
 

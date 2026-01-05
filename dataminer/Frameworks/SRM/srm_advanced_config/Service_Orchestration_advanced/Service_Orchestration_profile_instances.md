@@ -12,7 +12,7 @@ uid: Service_Orchestration_profile_instances
 
 1. In the diagram page, select the desired node.
 
-1. In the *parameters* pane in the lower right corner, select the default profile instance in the *Profile* dropdown list.
+1. In the *parameters* pane in the lower-right corner, select the default profile instance in the *Profile* dropdown list.
 
 > [!TIP]
 > See also: [Using the definitions tab](xref:SRM_Services_definitions#using-the-definitions-tab)
@@ -33,7 +33,7 @@ You can also make sure *By reference* is selected by default instead:
 
 1. Select the service definition and the node.
 
-1. In the *parameters* pane in the lower right corner, select *By reference*.
+1. In the *parameters* pane in the lower-right corner, select *By reference*.
 
 > [!TIP]
 > See also: [Using the definitions tab](xref:SRM_Services_definitions#using-the-definitions-tab)
@@ -48,7 +48,7 @@ If an interface is not connected to other nodes in the service definition, by de
 
 1. Select the service definition and the interface.
 
-1. In the *properties* pane in the lower right corner, add the *NoConnectivityCheck* property and set its value to *True*.
+1. In the *properties* pane in the lower-right corner, add the *NoConnectivityCheck* property and set its value to *True*.
 
 > [!TIP]
 > See also: [NoConnectivityCheck](xref:SRM_properties_Booking_Manager#noconnectivitycheck)
@@ -63,7 +63,7 @@ In the context of Service Orchestration, you can mark a node or interface profil
 
 1. Select the service definition and the node or interface.
 
-1. In the *properties* pane in the lower right corner, add the [IsProfileInstanceOptional](xref:SRM_properties_Booking_Manager#isprofileinstanceoptional) property and set its value to *True*.
+1. In the *properties* pane in the lower-right corner, add the [IsProfileInstanceOptional](xref:SRM_properties_Booking_Manager#isprofileinstanceoptional) property and set its value to *True*.
 
 > [!TIP]
 > If you want to mark a resource as optional, use the [Optional](xref:SRM_properties_Booking_Manager#options) option on the service definition node instead.
@@ -100,7 +100,7 @@ To configure resource pool inheritance:
 
 1. Select the service definition and the node.
 
-1. In the parameters pane in the lower right corner, select the checkbox under *Value* for the relevant parameter, and add the following JSON code as the value
+1. In the parameters pane in the lower-right corner, select the checkbox under *Value* for the relevant parameter, and add the following JSON code as the value
 
    ```json
    {

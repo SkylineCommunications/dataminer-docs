@@ -142,7 +142,7 @@ To delete a command action from the list of actions to be executed:
 
 To execute an ad hoc command (e.g. for test purposes):
 
-- Select a command in the list on the left, and click the *Execute* button in the lower right corner.
+- Select a command in the list on the left, and click the *Execute* button in the lower-right corner.
 
   > [!NOTE]
   > This option is only available if you are logged in with a user profile that has a phone number configured.

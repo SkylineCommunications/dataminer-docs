@@ -102,9 +102,9 @@ From now on, it is allowed to change the format of auto-increment fields even wh
 
 In the Monitoring app, Spectrum Analyzer elements now have a Spectrum Analyzer page that shows the spectrum trace, using a new monitor with the last preset.
 
-#### DataMiner landing page: Drop-down menu that allows to install the DataMiner Cube desktop application \[ID 25017\]
+#### DataMiner landing page: Dropdown menu that allows to install the DataMiner Cube desktop application \[ID 25017\]
 
-The DataMiner landing page now contains a drop-down menu on the right that allows you to install the DataMiner Cube desktop application using either a click-once web installer or an MSI installer.
+The DataMiner landing page now contains a dropdown menu on the right that allows you to install the DataMiner Cube desktop application using either a click-once web installer or an MSI installer.
 
 ### DMS Service & Resource Management
 
@@ -268,7 +268,7 @@ From now on, events associated with alarms of elements that are paused or stoppe
 
 #### DataMiner Cube - Services list: Only state change icons configured to perform a valid state change will be clickable \[ID 24753\]
 
-When life cycle management is enabled, then the services list allows you to change the state of the service by clicking an icon. From now on, you will only be able to click icons that are configured to perform a valid state change.
+When lifecycle management is enabled, then the services list allows you to change the state of the service by clicking an icon. From now on, you will only be able to click icons that are configured to perform a valid state change.
 
 #### DataMiner Cube - Visual Overview: Advanced editing pane improvements \[ID 24772\]\[ID 24794\]
 
@@ -355,9 +355,9 @@ In some cases, when a new alarm or trend template was assigned to a DVE child el
 
 #### DataMiner Cube - Protocols & Templates: Problem when trying to select another protocol version in the 'List based on protocol version' box \[ID 24499\]
 
-If an information template is based on an older protocol version that does not have the same parameters as the latest protocol version, a warning is displayed at the bottom of the information template. Above the warning, a drop-down list allows you to select a different protocol version to load those parameters instead.
+If an information template is based on an older protocol version that does not have the same parameters as the latest protocol version, a warning is displayed at the bottom of the information template. Above the warning, a dropdown list allows you to select a different protocol version to load those parameters instead.
 
-In some cases, selecting a different protocol version in this drop-down list would no longer be possible.
+In some cases, selecting a different protocol version in this dropdown list would no longer be possible.
 
 #### DataMiner Cube - Services app: Problem when duplicating service definitions \[ID 24500\]
 
@@ -415,9 +415,9 @@ In the *Services* app, in some cases, the diagram of a service definition would 
 
 In some rare cases, an error could occur in SLDMS when synchronizing services to other agents in the DataMiner System.
 
-#### DataMiner Cube - Data Display: Problem with lite drop-down controls when the listed parameter values were dependent on other parameter values \[ID 24743\]
+#### DataMiner Cube - Data Display: Problem with lite dropdown controls when the listed parameter values were dependent on other parameter values \[ID 24743\]
 
-In some cases, lite drop-down controls would not contain the correct values, especially when the listed parameter values were dependent on other parameter values.
+In some cases, lite dropdown controls would not contain the correct values, especially when the listed parameter values were dependent on other parameter values.
 
 #### Problem when writing multiple datasets to a database \[ID 24748\]
 

@@ -92,7 +92,7 @@ Can be used to map discrete parameter values to a more meaningful display text.
 
 In case of a parameter of type "read", this measurement type allows you to display a user-defined string when the parameter contains a certain value.
 
-In case of a parameter of type "write", this measurement type allows you to display a drop-down box with predefined strings masking underlying values. In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag has to be used to define the various discreet values.
+In case of a parameter of type "write", this measurement type allows you to display a dropdown box with predefined strings masking underlying values. In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag has to be used to define the various discreet values.
 
 For example:
 
@@ -115,7 +115,7 @@ For example:
 See also:
 
 - [Options for measurement type "discreet"](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-discreet)
-- [Drop-down list](xref:UIComponentsDropDownList)
+- [Dropdown list](xref:UIComponentsDropDownList)
 - [Protocol.Params.Param.Measurement.Discreets](xref:Protocol.Params.Param.Measurement.Discreets)
 
 ### matrix
@@ -139,7 +139,7 @@ See also:
 
 Only applicable for parameters of type "write".
 
-When measurement type is "pagebutton", the parameter will be visualized as a button giving access to a popup page.
+When measurement type is "pagebutton", the parameter will be visualized as a button giving access to a pop-up page. Such a page is also accessible as a subpage in the page tree displayed in the element card side panel.
 
 In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag has to be used to define the label of the button. Multiple Protocol.Params.Param.Measurement.Discreets.Discreet tags can be specified to allow the parameter to have multiple page buttons, meaning to allow multiple page buttons on the same row and column.
 

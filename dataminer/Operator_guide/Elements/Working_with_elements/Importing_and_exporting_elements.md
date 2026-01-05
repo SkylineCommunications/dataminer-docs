@@ -16,7 +16,7 @@ uid: Importing_and_exporting_elements
    > [!NOTE]
    > If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
 
-1. In the lower left corner of the *Import* window, select *Import comma-separated file*.
+1. In the lower-left corner of the *Import* window, select *Import comma-separated file*.
 
 1. In the *Import file* dialog box, select the CSV file you want to import, and click *Open*.
 
@@ -61,7 +61,7 @@ Name checks are case-insensitive. This means that for instance "element1" is con
 
 1. In the menu, select *Actions \> Export*.
 
-1. In the lower left corner of the *Export* window, select *Export to comma-separated file (\*.csv), clipboard or print*.
+1. In the lower-left corner of the *Export* window, select *Export to comma-separated file (\*.csv), clipboard or print*.
 
 1. In the *WHAT* section of the *Export* window, select what is to be included in the export:
 

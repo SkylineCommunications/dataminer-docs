@@ -9,6 +9,106 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 5 December 2025 - Enhancement - Billing - DaaS usage billing
+
+Starting from December 2025, automatic monthly billing will be implemented for DaaS. On the 5th day of each month, the expended DataMiner credits for the previous month's DaaS usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.
+
+In case an organization does not have sufficient DataMiner credits, their balance will go negative, and it will need to be topped up as soon as possible. Organizations with a negative balance will not be able to deploy new DaaS systems.
+
+### 20 November 2025 - Enhancement - Admin - Usage - Pie chart slices sorted by usage
+
+In the Admin app, an enhancement has been implemented to the Usage page. To make it easier to see which systems or features use the most DataMiner credits, the slices in the pie chart are now sorted by usage in clockwise order.
+
+### 20 November 2025 - Enhancement - Admin - Usage - Hide credit cost for "Automation" and "Connectors"
+
+While the pricing for the "Automation" and "Connectors" categories is being adjusted, the Usage page for an organization in the Admin app no longer shows the credit cost for these categories. The panels related to these categories now display "- credits", the pie charts ignore these categories, and the table no longer shows the credits column for these categories.
+
+Note that on the Usage page for a DataMiner System, you can still see the credit cost for "Connectors".
+
+### 13 November 2025 - Fix - Admin - Usage - Data not shown for deleted systems
+
+When the *Deleted systems* option was selected in the DataMiner Systems filter on the organization usage page of the Admin app, it could occur that no usage data was shown. This issue has been resolved.
+
+### 31 October 2025 - Enhancement - Billing - STaaS usage billing
+
+Starting from November 2025, automatic monthly billing for the previous month will take place on the 5th day of each month.
+
+### 29 October 2025 - New Feature - Community Edition Trial DaaS
+
+Previously, users had to purchase DataMiner credits to deploy a DaaS system. Now new organizations can deploy a Community Edition Trial DaaS system for free, which they can use for one week to test out DataMiner features. After a week, the system will be automatically decommissioned.
+
+### 21 October 2025 - Fix - Sharing - Not possible to share a dashboard with a comma in its name
+
+Previously, when a user shared a dashboard that had a comma in its name, the Sharing app removed the comma and all characters that followed it. This caused the share not to be found on dataminer.services, which effectively made it impossible to share a dashboard with a comma in its name. This issue has been resolved, so such dashboards can now be shared.
+
+### 9 October 2025 - Fix - Status - Incorrect spacing incident descriptions
+
+Previously, if descriptions for incidents contained tabs or new lines, these were not shown. Now the text will be shown with correct spacing.
+
+### 1 October 2025 - Enhancement - Billing - STaaS usage billing
+
+Starting from October 2025, automatic monthly billing will be implemented for STaaS. On the first day of each month, the expended DataMiner credits for the previous month's STaaS usage will be subtracted from the organization's balance. This billing will take effect retroactively, going as far back as April 2024. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.
+
+In case an organization does not have sufficient DataMiner credits, their balance will go negative, and it will need to be topped up as soon as possible. Organizations with a negative balance will not be able to deploy new DaaS systems.
+
+### 30 September 2025 - Enhancement - Catalog - Ranges now show creation date instead of last modified date
+
+In the Catalog app, item ranges will now show their creation date instead of the date when they were last modified.
+
+### 21 September 2025 - Enhancement - Catalog - Enhanced searching capabilities
+
+In the Catalog app, a more advanced search has been implemented with a ranking system. Users should now be able to find more relevant items when searching on terms that are not necessarily in the display name of the item.
+
+Additionally, when a tag on a Catalog item is clicked, that tag will be used as a filter to find other items with the same tag.
+
+### 21 September 2025 - New feature - Admin - Integrated support
+
+The Admin app now has a support page where users that are part of a verified organization can see and create tickets.
+
+### 11 September 2025 - Enhancement - Catalog - Custom icons
+
+It is now possible to apply custom icons to your Catalog items using the [Key Catalog API](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v3.0).
+
+### 10 September 2025 - New feature - Catalog - Improved home page
+
+The Catalog app now has a new home page with a carousel and trending tab.
+
+### 2 September 2025 - Enhancement - dataminer.services - Ask support button
+
+From now on, users can ask for support by clicking the **?** button next to the user icon.
+
+### 1 September 2025 - Enhancement - Remote Access - Support remote access to the Assistant web app
+
+From now on, the Assistant web app can be accessed remotely.
+
+### 29 August 2025 - Enhancement - dataminer.services - Status routes now use the shared header bar
+
+In any dataminer.services application, accessing status routes such as /404, /error, or /success will now display the appropriate status page along with the shared header bar.
+
+### 29 August 2025 - Fix - Catalog - Legacy URL support for connectors has been discontinued
+
+In the Catalog app, legacy connector URLs such as catalog.dataminer.services/result/driver/{:id} are no longer supported. Accessing these endpoints will now redirect users to a 404 error page.
+
+### 26 August 2025 - Enhancement - Remote Access - Support for video thumbnails when remotely accessing Cube
+
+From now on, video thumbnails will be displayed when DataMiner Cube is accessed remotely.
+
+### 18 August 2025 - Enhancement - Admin - Unmanaged objects usage visibility and export possibility
+
+In the Admin app, the usage for unmanaged objects will now be displayed if you are using at least DataMiner 10.5.9/10.6.0 and DataMiner SupportAssistant 1.7.3. The data will also be available for export.
+
+### 07 August 2025 - Enhancement - Version description now supports Markdown
+
+If you use Markdown in the description of item versions, this will now be parsed to HTML just like for the main item description. The same syntax supported in the item description is also supported in the version description.
+
+### 05 August 2025 - Enhancement - DaaS systems can now use the URL of soft-deleted systems
+
+It is now supported to create a DaaS system with a URL that is used by a system that is still in the soft-deleted state.
+
+### 05 August 2025 - New feature - Admin - DMS usage overview
+
+As an owner or administrator of a DMS, you can now see the usage of your system on the *Usage* page for the DMS in question in the Admin app.
+
 ### 16 July 2025 - Enhancement - Startup and upgrade progress displayed when remotely accessing Cube
 
 From now on, if you remotely access the Cube desktop app while the DataMiner System is starting up or while an upgrade is in progress, the progress will be displayed instead of an error. Upgrading the DataMiner System while remotely accessing Cube will also no longer disconnect the session but will instead show the upgrade progress.
@@ -107,7 +207,7 @@ On the details page of a Catalog item, users will now be able to see the market 
 
 Links that direct to the DxM page on the DMS overview page in the Admin app will now open the link in the current tab of the browser instead of opening a new tab.
 
-### 20 May 2025 - Enhancement - Unauthenticated views
+### 20 May 2025 - Enhancement - Unauthenticated views [ID 42921] [ID 42922]
 
 Applications on *.dataminer.services will now support an unauthenticated view and navigate to the root page of the application when the user session expires or the user signs out.
 
@@ -137,7 +237,7 @@ When experiencing issues with the shared single sign-on, applications will now f
 
 Signing in or out will now automatically sync to other applications without the need to refresh the page.
 
-### 05 May 2025 - Enhancement - Catalog - Deletion of items by publishing organization [ID 42793]
+### 05 May 2025 - Enhancement - Catalog - Deletion of items by publishing organization [ID 42792] [ID 42793]
 
 If you are a member of the organization that published a specific Catalog item, and you have the Owner or Admin role, you can now delete that Catalog item using a context menu at the top of the item's details page. When you do so, you will have to provide the reason for the deletion.
 
@@ -159,6 +259,10 @@ In addition, retrieving usage data to display in the Admin app resulted in a tim
 
 In some cases, it could occur that the wrong vendor name was shown.
 
+### 22 April 2025 - Fix - Catalog API - Original ID and image path reset after item update [ID 42687]
+
+When an item was updated via the manifest, the `ImagePath` and `OriginalId` property were reset. This will no longer occur.
+
 ### 22 April 2025 - Enhancement - Catalog - 'Back' button removed from details pages [ID 42734]
 
 As the "Back" button on the details page of a Catalog item had no real value, it has been removed.
@@ -166,6 +270,26 @@ As the "Back" button on the details page of a Catalog item had no real value, it
 ### 22 April 2025 - Enhancement - Catalog - Browse page optimization [ID 42673]
 
 Optimizations have been implemented on the Catalog browse page to prevent the page from becoming unresponsive when new items are loaded.
+
+### 1 April 2025 - Enhancement - Catalog - DMA now autoselected if user only has one [ID 42618]
+
+When a user deploys a version of an item, a single DMA will now be selected by default if there is only one DMA to select. Previously, a DMA always had to be selected manually, even when there was only one available.
+
+### 1 April 2025 - Enhancement - Catalog - Context menu for ranges and versions only shown for members of publishing organization [ID 42569]
+
+The context menu for a Catalog item range and version is now only shown if the publishing organization of the item is currently selected, ensuring that the users viewing the menu are a member of this organization. Previously, it was also shown for users who had insufficient rights to be able to update or configure anything.
+
+### 1 April 2025 - Enhancement - Catalog & Home - Show notifications bell for unauthenticated users [ID 42559]
+
+In the Catalog app and on the dataminer.services homepage, users can now see the notifications button even when they are not signed in.
+
+### 1 April 2025 - Fix - Admin, Catalog, Home & Sharing - User profile was visible after signing out [ID 42559]
+
+In some cases, it could occur that you could still see your user profile even after clicking *Sign out*. This issue affected the Admin app, Catalog app, Sharing app, and dataminer.services homepage.
+
+### 1 April 2025 - Fix - Catalog API - Users could update ranges and versions they did not have rights to [ID 42566]
+
+It could occur that users were able to update the range/version state or set/delete a custom tag for items that they did not publish, even though they should not have the rights to do so. Now a user who tries to do so will get a "Forbidden" error.
 
 ### 1 April 2025 - New feature - Catalog API - Ability to retrieve vendors [ID 42633]
 

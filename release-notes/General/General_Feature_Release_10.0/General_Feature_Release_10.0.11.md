@@ -20,7 +20,7 @@ To further enhance the proactive monitoring capabilities of DataMiner, proactive
 
 ##### Specifications
 
-For the best results, both real-time and average trending should be activated on a parameter for which you want proactive cap detection to be available. To calculate its predictions, DataMiner Analytics will make use of the available real-time data, 5-minute average data, 1-hour average data and daily average data. It can predict at most 200 data points into the future. This is further limited by the available data: if there is a data set of a specific number of points, DataMiner Analytics can never predict further than that number of points divided by ten. For example, if the database contains one year of hourly averages and no daily averages, then DataMiner Analytics computes 365 daily averages and is able to predict issues 36 days into the future.
+For the best results, both real-time and average trending should be activated on a parameter for which you want proactive cap detection to be available. To calculate its predictions, DataMiner Analytics will make use of the available real-time data, 5-minute average data, 1-hour average data and daily average data. It can predict at most 200 data points into the future. This is further limited by the available data: if there is a dataset of a specific number of points, DataMiner Analytics can never predict further than that number of points divided by ten. For example, if the database contains one year of hourly averages and no daily averages, then DataMiner Analytics computes 365 daily averages and is able to predict issues 36 days into the future.
 
 This feature is currently only available for trended parameters with numeric values, and not for partial table parameters. Because of memory constraints, proactive cap detection is also only possible for up to 100 000 parameters per DMA. If there are more parameters for which proactive cap detection would be possible, no predictions will be available for these and the Analytics log file will mention that the number of tracked parameters exceeded the maximum.
 
@@ -290,7 +290,7 @@ For this purpose, 2 new methods have been added to the web services API v1: *Get
 
 It is now possible to use spectrum buffers as input for a Spectrum Analyzer visualization. These are available in the new *Spectrum Buffers* section in the *Data* pane. To select a spectrum buffer, first specify the name of a spectrum element in the box at the top if this section. The buffers are then listed in the format *MonitorName: TraceName \[MeasptName\] \[PresetName\]*.
 
-You can link a Spectrum Analyzer visualization to spectrum buffer input directly, or use feed components (e.g. drop-down or list), by adding an individual spectrum buffer to a feed component or by adding the spectrum buffers as a collection and then adding a spectrum element as a filter.
+You can link a Spectrum Analyzer visualization to spectrum buffer input directly, or use feed components (e.g. dropdown or list), by adding an individual spectrum buffer to a feed component or by adding the spectrum buffers as a collection and then adding a spectrum element as a filter.
 
 #### Dashboards app: Line chart component now exposes timespan feed \[ID 27128\]
 
@@ -390,7 +390,7 @@ From now on, when DataMiner forwards data using an AlarmSocket or a PollSocket, 
 
 #### DataMiner Cube - System Center: Enhanced 'Analytics config' system settings section \[ID 27087\]
 
-In the *Analytics config* section in System Center, drop-down boxes that allow the selection of a DMA now allow you to select the option *None* when appropriate. In addition, other drop-down boxes in this section have been improved to no longer show irrelevant values.
+In the *Analytics config* section in System Center, dropdown boxes that allow the selection of a DMA now allow you to select the option *None* when appropriate. In addition, other dropdown boxes in this section have been improved to no longer show irrelevant values.
 
 #### DataMiner Installer: Improved error handling when unable to connect to Cassandra \[ID 27096\]
 
@@ -434,7 +434,7 @@ When DataMiner is upgraded and one of the steps of the upgrade is a PowerShell s
 
 Performance has improved when a subscription is added on element level, specifically if the subscription contains elements with different protocols. This will for instance ensure that when multiple cards are opened to Visual Overview pages, parameters will be displayed more quickly.
 
-In addition, it is now possible to change the number of records that can be contained in the protocol cache. You can do so using the SLNetClientTest tool by going to *Options* > *SLNet Options*, selecting *protocolCacheMru* in the drop-down box, changing the value where necessary and clicking *OK*. However, do not change this value without checking with Skyline for advice first, as an incorrect setting can cause serious issues.
+In addition, it is now possible to change the number of records that can be contained in the protocol cache. You can do so using the SLNetClientTest tool by going to *Options* > *SLNet Options*, selecting *protocolCacheMru* in the dropdown box, changing the value where necessary and clicking *OK*. However, do not change this value without checking with Skyline for advice first, as an incorrect setting can cause serious issues.
 
 > [!WARNING]
 > The DataMiner SLNetClientTest tool is an advanced system administration tool that should be used with extreme care (`C:\Skyline DataMiner\Files\SLNetClientTest.exe`).
@@ -500,9 +500,9 @@ In addition, within DataMiner Cube, up to now there could be a problem when you 
 
 When you tried to log on to DataMiner using an incorrect user name or password, in some cases, an “Authentication took too long” error would be added to the SLNet logging after about 30 seconds.
 
-#### Incorrect run-time errors of type 'SLDMS ConnectionThread Problem' would appear when an agent responded slower than expected \[ID 26596\]
+#### Incorrect runtime errors of type 'SLDMS ConnectionThread Problem' would appear when an agent responded slower than expected \[ID 26596\]
 
-When a particular agent in a DataMiner System responded slower than expected, in some cases, incorrect run-time errors of type “SLDMS ConnectionThread Problem” could start to appear on other agents in the same DataMiner System.
+When a particular agent in a DataMiner System responded slower than expected, in some cases, incorrect runtime errors of type “SLDMS ConnectionThread Problem” could start to appear on other agents in the same DataMiner System.
 
 #### Failover: Problem when the agents had a different cluster name \[ID 26683\]
 

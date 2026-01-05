@@ -165,9 +165,9 @@ Similarly, when BrokerGateway detects that a DataMiner Agent is about to be adde
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
-On systems using the GQI DxM, the *Get object manager instances* data source now supports real-time updates.
+On systems using the GQI DxM, the *Get object manager instances* data source now supports real-time updates. For more information on real-time updates, see [Query updates](xref:Query_updates).
 
-For more information on real-time updates, see [Query updates](xref:Query_updates).
+Note that with this change, a possible issue has also been resolved where calling the *IGQIUpdater.AddRow* method would result in a duplicate row with the same row key being added in case a row with the same row key already existed.
 
 #### New connector installed as part of an application package will now automatically be set as production version [ID 42623]
 
@@ -260,7 +260,7 @@ A number of enhancements have been made to BrokerGateway with regard to error ha
 
 From DataMiner 10.5.0 [CU2]/10.5.5 onwards, you can migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) using the *NATSMigration* tool.
 
-Up to now, changes made to the *MaintenanceSettings.xml* file during the migration required DataMiner to be restarted. As these changes will now be read at run-time, it will no longer be required to restart DataMiner when migrating.
+Up to now, changes made to the *MaintenanceSettings.xml* file during the migration required DataMiner to be restarted. As these changes will now be read at runtime, it will no longer be required to restart DataMiner when migrating.
 
 #### GQI: Sort operator now supports real-time updates when GQI DxM is being used [ID 42941]
 

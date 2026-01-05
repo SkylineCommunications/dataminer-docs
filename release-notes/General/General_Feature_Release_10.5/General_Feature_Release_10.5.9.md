@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.5.9
 
 # General Feature Release 10.5.9
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 > [!IMPORTANT]
 >
 > Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
@@ -252,7 +255,28 @@ Example:
 
 `Could not resolve destination host to an IP: polling host=localhost123, or failed to set the destination address. Host to IP failure. Error : 11001. [WSAHOST_NOT_FOUND]`
 
-## Changes
+## Changes in build 16293
+
+#### Visual Overview in web apps: Problem when reading the load balancing configuration [ID 43660]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+In some cases, it would not be possible to read the load balancing configuration for visual overviews in web apps. As a result, the visual overview module would not be able to start up when load balancing was enabled.
+
+#### SLScripting issue with non-English system locale [ID 43690]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 [CU0] -->
+
+On non-English systems, a null reference exception would be thrown when SLScripting started up, and localization would get into a loop while trying to load assemblies to translate that exception until the process eventually got killed.
+
+#### Visual Overview in web apps: Updates to visual overviews would be ignored when the element or service was hosted on a DMA other than the one that generated the visual overview [ID 43703]
+
+<!-- MR 10.6.0 - FR 10.5.9 [CU0] -->
+<!-- Not added to MR 10.6.0 -->
+
+Updates to a visual overview would incorrectly be ignored when the visual overview was associated with an element or a service that was hosted on a DataMiner Agent other than the one that had generated that visual overview.
+
+## Changes in build 16222
 
 ### Enhancements
 
@@ -498,7 +522,7 @@ From now on, elements will only be deleted once all steps in the migration proce
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When an element was restarted multiple times in rapid succession, in some cases, an run-time error could occur in the parameter thread of SLElement.
+When an element was restarted multiple times in rapid succession, in some cases, a runtime error could occur in the parameter thread of SLElement.
 
 #### Problem when stopping an element or performing a Failover switch when another action was being executed [ID 43089]
 
@@ -618,7 +642,7 @@ Also, up to now, when a `GetNatsConnection` call was made while no endpoints wer
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-In some cases, a run-time error could be thrown when a DVE child element was deleted.
+In some cases, a runtime error could be thrown when a DVE child element was deleted.
 
 #### Problem when an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet [ID 43314]
 
@@ -693,11 +717,11 @@ In some rare cases, certain log files could have their maximum size incorrectly 
 
 From now on, by default, all log files will have their maximum size set to 10 MB.
 
-#### Failover: Problem when synchronizing the ClusterEndpoints.json files on large systems [ID 43407]
+#### SLNet memory leak caused by ClusterEndpoint.json sync [ID 43407]
 
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+<!-- MR 10.5.0 [CU4] (but also 10.5.0 [CU5] and 10.5.0 [CU6]) - FR 10.5.7 [CU1] (but also 10.5.8 [CU1] and 10.5.9) -->
 
-In large DataMiner Systems, in some cases, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely.
+In large DataMiner Systems, especially in clusters with Failover Agents, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing those files indefinitely. This could lead to a serious memory leak in SLNet, causing DataMiner Agents to disconnect frequently.
 
 #### SLAnalytics - Pattern matching: Problem when retrieving the streaming matches [ID 43419]
 

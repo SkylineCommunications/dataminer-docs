@@ -53,9 +53,9 @@ To create a redundancy group:
 
 1. Select each backup element in turn to configure it using the options on the right side of the card:
 
-   - In the drop-down lists under *Alarm templates*, choose an alarm template for when the backup element is operational, and one for when it is not operational. If set to *\<Dynamic>*, the element will take over the alarm template from the primary element.
+   - In the dropdown lists under *Alarm templates*, choose an alarm template for when the backup element is operational, and one for when it is not operational. If set to *\<Dynamic>*, the element will take over the alarm template from the primary element.
 
-   - In the drop-down lists under *Trend templates*, choose a trend template for when the backup element is operational, and one for when it is not operational. If set to *\<Dynamic>*, the element will take over the trend template from the primary element.
+   - In the dropdown lists under *Trend templates*, choose a trend template for when the backup element is operational, and one for when it is not operational. If set to *\<Dynamic>*, the element will take over the trend template from the primary element.
 
 1. If you wish to use software redundancy:
 
@@ -99,7 +99,7 @@ To create a redundancy group:
 
    - If you wish to select a view for the redundancy group and another view for each of the virtual primary elements, click *Switch to advanced view configuration*, and select each item in turn to indicate the view where it should be placed.
 
-1. Click the *Create* button in the lower right corner.
+1. Click the *Create* button in the lower-right corner.
 
 > [!NOTE]
 >

@@ -14,6 +14,8 @@ When adding a DataMiner configuration to a DMA, you can select
 
 > [!WARNING]
 > DataMiner configuration switching should never be enabled on an operational system. Only enable this feature on systems used for staging, demo or testing purposes.
+>
+> **Do not use this feature for a DataMiner Agent connected to dataminer.services**.
 
 > [!TIP]
 > See also: [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)

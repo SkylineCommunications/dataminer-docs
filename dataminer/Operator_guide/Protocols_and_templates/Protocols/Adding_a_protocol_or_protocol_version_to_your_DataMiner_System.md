@@ -42,7 +42,7 @@ In DataMiner Cube, you can upload either *Protocol.xml* files or entire protocol
 
 1. Under *Protocols* or *Versions*, right-click a random protocol or protocol version and select *Upload*.
 
-   Alternatively, you can click the *Upload* button in the lower right corner of the card.
+   Alternatively, you can click the *Upload* button in the lower-right corner of the card.
 
 1. In the *Open* dialog box, select the *Protocol.xml* file to be uploaded, and click *Open*.
 
@@ -50,7 +50,7 @@ In DataMiner Cube, you can upload either *Protocol.xml* files or entire protocol
 
 1. Go to *Apps* > *Protocols & Templates*.
 
-1. In the lower right corner of the card, click *Upload*.
+1. In the lower-right corner of the card, click *Upload*.
 
 1. In the *Open* dialog box, select the *.dmprotocol* package to be uploaded, and click *Open*.
 

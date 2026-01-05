@@ -24,9 +24,9 @@ Because of a number of enhancements, overall performance of SLPort has increased
 
 From now on, the SetParameterIndexByKey and SetParametersIndexByKey methods can also be used to update a single cell.
 
-#### Ticketing app: Tickets can now be filtered on fields of type 'drop-down list' \[ID 33370\]
+#### Ticketing app: Tickets can now be filtered on fields of type 'dropdown list' \[ID 33370\]
 
-In the Ticketing app, tickets can now also be filtered on fields of type “drop-down list”.
+In the Ticketing app, tickets can now also be filtered on fields of type “dropdown list”.
 
 #### DataMiner Cube - Visual Overview: Shape that displays a page of the Visio drawing linked to a view, service or element will no longer be displayed when the element, service or view in question does not exist \[ID 33484\]
 

@@ -4,13 +4,13 @@ uid: SwarmingElements
 
 # Swarming elements
 
-With DataMiner Swarming, you can swarm basic elements from one DataMiner Agent to another within a cluster. You can do so [in DataMiner Cube](#swarming-elements-in-dataminer-cube) or [via an Automation script](#swarming-elements-via-automation).
+With DataMiner Swarming, you can swarm elements from one DataMiner Agent to another within a cluster. You can do so [in DataMiner Cube](#swarming-elements-in-dataminer-cube) or [via an Automation script](#swarming-elements-via-automation).
 
 When you are swarming an element so it gets hosted on a different DataMiner Agent, a temporary transition occurs. The element will be stopped and then started again on a new host. While this happens, a message will be displayed to inform users that the element is currently swarming. The ability to open element cards or change the element configuration for the involved element will be temporarily suspended. Once the element migration is complete, it will become accessible again.
 
-At present, Swarming is only possible with **regular elements**. Refer to [Upcoming features](xref:Swarming#upcoming-features) for information on which other types of elements will be supported in the future.
+At present, Swarming is not yet supported for certain specific types of elements. Refer to [Upcoming features](xref:Swarming#upcoming-features) for information on which types of elements are supported already and which will supported in the future.
 
-Because of the way swarming functions, it is not possible to swarm smart-serial elements in server mode, elements polling localhost, and elements receiving SNMP traps in a DMS with trap distribution disabled on at least one DMA.
+Because of the way Swarming functions, it is not possible to swarm smart-serial elements in server mode, elements polling localhost, and elements receiving SNMP traps in a DMS with trap distribution disabled on at least one DMA.
 
 > [!NOTE]
 > To be able to trigger swarming for an element, you need the [Swarming](xref:DataMiner_user_permissions#modules--swarming) user permission as well as config rights on the element. Users that have the [Import DELT](xref:DataMiner_user_permissions#general--elements--import-delt) and [Export DELT](xref:DataMiner_user_permissions#general--elements--import-delt) user permissions will automatically also get the *Swarming* user permission when DataMiner is upgraded from a version that does not support Swarming to a version that does support it.
@@ -19,7 +19,7 @@ Because of the way swarming functions, it is not possible to swarm smart-serial 
 
 To swarm elements in DataMiner Cube:
 
-1. Go to *System Center* > *Agents* > *Status* and click the *Swarm* button in the lower right corner.
+1. Go to *System Center* > *Agents* > *Status* and click the *Swarm* button in the lower-right corner.
 
 1. On the left, select the element(s) you want to swarm.
 

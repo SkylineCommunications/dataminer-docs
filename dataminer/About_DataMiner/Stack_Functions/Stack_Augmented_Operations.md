@@ -13,9 +13,7 @@ The technology captures, correlates, and analyzes all data sources in real time 
 Additionally, DataMiner Augmented Operations reduce setup and configuration time, increase management efficiency, and provide unprecedented insights into the most complex operations in an intuitive and easy manner. Combined with the unique end-to-end value proposition of DataMiner, DataMiner Augmented Operations are indispensable for managing tomorrow’s operational ecosystems proactively.
 
 > [!TIP]
-> For more information:
->
-> - Learn to leverage DataMiner's AI capabilities—from proactive issues detection to streamlined incident response—so you can stay ahead of potential problems and work more effectively, with the free [DataMiner AI course](https://community.dataminer.services/learning/courses/AI/). ![Video](~/dataminer/images/video_Duo.png)
+> Learn to leverage DataMiner's AI capabilities, from proactive issues detection to streamlined incident response, so you can stay ahead of potential problems and work more effectively, with the free [DataMiner AI course](https://community.dataminer.services/learning/courses/AI/). ![Video](~/dataminer/images/video_Duo.png)
 
 > [!NOTE]
 > Are you struggling with something? Are there use cases you want us to tackle? Or do you simply have a great idea on how to improve DataMiner’s AI capabilities? Then [**let's talk AI**](https://community.dataminer.services/lets-talk-ai-automatic-detection-of-frozen-states/) and [**share your thoughts with Team AI**](https://community.dataminer.services/skylines-ai-team-wants-to-hear-from-you/).
@@ -65,7 +63,7 @@ Based on AI pattern matching algorithms, instances of tagged patterns are automa
 > - Video about [Intelligent Fault Detection](https://www.youtube.com/watch?v=Ug1J0Pn6o3k) (covering Automated Tagging, among others) ![Video](~/dataminer/images/video_Duo.png)
 > - Blog post about [Multivariate Pattern Matching](https://community.dataminer.services/using-the-power-of-multivariate-patterns-to-add-context-to-your-trend-graphs/)
 > - [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
-> - [Working with pattern matching](xref:Working_with_pattern_matching)
+> - [Pattern matching](xref:Pattern_matching)
 
 ## Change Point Detection
 
@@ -79,7 +77,7 @@ DataMiner's change point detection solution automatically identifies both abrupt
 > - Video about [Intelligent Fault Detection](https://www.youtube.com/watch?v=Ug1J0Pn6o3k) (covering Change Point Detection, among others) ![Video](~/dataminer/images/video_Duo.png)
 > - Blog post about [Automatic Detection of Frozen States](https://community.dataminer.services/lets-talk-ai-automatic-detection-of-frozen-states)
 > - Blog post about [User Feedback on Behavioral Anomalies](https://community.dataminer.services/enhance-your-dataminer-experience-with-anomaly-feedback/).
-> - [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
+> - [Behavioral anomaly detection](xref:Behavioral_anomaly_detection)
 
 ## Anomaly Detection
 
@@ -92,22 +90,21 @@ An anomaly significance scoring mechanism augments the change point detection so
 >
 > - Course: [Behavioral Anomaly Detection](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/behavioral-anomaly-detection/)
 > - Video about [Intelligent Fault Detection](https://www.youtube.com/watch?v=Ug1J0Pn6o3k) (covering Anomaly Detection, among others) ![Video](~/dataminer/images/video_Duo.png)
-> - [Advanced analytics in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
-> - [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection)
+> - [Behavioral anomaly detection](xref:Behavioral_anomaly_detection)
 > - [Kata #12: Automatically detect anomalies with DataMiner](https://community.dataminer.services/courses/kata-12/) ![Video](~/dataminer/images/video_Duo.png)
 
 ## Incident Identification
 
 **Autonomous grouping of alarms linked to the same root cause.**
 
-The Automatic Incident Tracking feature autonomously learns about system behavior and leverages the rich context of alarms and relational information available in a DataMiner System to automatically correlate alarms belonging to a specific incident. No manual pre-analysis or time-consuming setup and configuration of correlation logic is required.
+The Automatic Alarm Grouping feature autonomously learns about system behavior and leverages the rich context of alarms and relational information available in a DataMiner System to automatically correlate alarms belonging to a specific incident. No manual pre-analysis or time-consuming setup and configuration of correlation logic is required.
 
 > [!TIP]
 > For more information:
 >
 > - Course: [Incident Tracking](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/incident-tracking/)
 > - Video: [Focus on the Root of Issues with Incident Analysis](https://www.youtube.com/watch?v=m6ITgtTFz1E) ![Video](~/dataminer/images/video_Duo.png)
-> - [Automatic Incident Tracking](xref:Automatic_incident_tracking)
+> - [Automatic Alarm Grouping](xref:Automatic_alarm_grouping)
 
 ## Focus Alarms
 
@@ -119,7 +116,7 @@ Based on an analysis of the alarm history and its patterns, the focused alarms o
 > For more information:
 >
 > - Course: [Focus Alarms](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/alarm-focus/)
-> - [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus)
+> - [Alarm focus](xref:Alarm_focus)
 
 ## Relationship Learning
 
@@ -154,7 +151,7 @@ Gain valuable insights with ease. Tagged patterns and anomalies provide context 
 >
 > - Course: [Time-scoped relations](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/time-scoped-relations/)
 > - Course: [Trend icons](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/trend-icons/)
-> - [Working with trend icons](xref:Working_with_trend_icons)
+> - Documentation: [Trend icons](xref:Trend_icons)
 > - [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph)
 > - [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph)
 > - [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature)

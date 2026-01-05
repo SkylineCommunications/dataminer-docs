@@ -141,9 +141,9 @@ From now on, when you publish an Automation script via DIS, its name will be val
 
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
 
-In some cases, both GQI DxM and SLHelper could leak memory, especially when executing GQI queries with GQI extensions (i.e. ad hoc data source or custom operators) that throw exceptions from their life cycle methods.
+In some cases, both GQI DxM and SLHelper could leak memory, especially when executing GQI queries with GQI extensions (i.e. ad hoc data source or custom operators) that throw exceptions from their lifecycle methods.
 
-See also: [GQI DxM - Life cycle: OnDestroy method would incorrectly be called when an error occurred in the OnInit method [ID 43186]](xref:Web_apps_Feature_Release_10.5.8#gqi-dxm---life-cycle-ondestroy-method-would-incorrectly-be-called-when-an-error-occurred-in-the-oninit-method-id-43186)
+See also: [GQI DxM - Lifecycle: OnDestroy method would incorrectly be called when an error occurred in the OnInit method [ID 43186]](xref:Web_apps_Feature_Release_10.5.8#gqi-dxm---lifecycle-ondestroy-method-would-incorrectly-be-called-when-an-error-occurred-in-the-oninit-method-id-43186)
 
 #### Protocols: Problem when polling an SNMP table using the partialSnmp option in combination with the multipleGetBulk option [ID 43034]
 

@@ -42,7 +42,7 @@ The procedure below details how you can implement a DataMiner upgrade in an exis
 
    The following factors can influence the duration of the upgrade:
 
-   - A large version difference, e.g. an upgrade from 9.6 to 10.2 will take longer than an upgrade from 10.1 to 10.2.
+   - A large version difference, e.g. an upgrade from 10.1 to 10.6 will take longer than an upgrade from 10.1 to 10.2.
    - The startup time of the DataMiner Agents.
    - Other dependencies, such as extra hotfixes that need to be deployed.
 

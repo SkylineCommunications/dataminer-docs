@@ -79,13 +79,13 @@ Expected duration: 10 minutes
 1. Open the terminal (Control + Shift + C), and add the *DataMiner User-Defined API Project* template in a new project folder:
 
    ```bash
-   dotnet new dataminer-user-defined-api-project -o MyUserDefinedApiFromGithub -auth JanS -cdp true -I Basic
+   dotnet new dataminer-user-defined-api-project -o MyUserDefinedApiFromGithub -auth JanS -cdp true -I Demo
    dotnet new sln
    dotnet sln add MyUserDefinedApiFromGithub
    ```
 
    > [!NOTE]
-   > If you receive a warning about pasting a multi-line, you can click *Paste*. Double-check whether all three commands have run in the end. You may need to press Enter an additional time for the last command to execute.
+   > If you receive a warning about pasting a multiline, you can click *Paste*. Double-check whether all three commands have run in the end. You may need to press Enter an additional time for the last command to execute.
 
 1. On the left, click the *Source Control* button.
 

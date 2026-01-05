@@ -1,6 +1,7 @@
 ---
 uid: STaaS_features
 description: STaaS takes care of data redundancy, data resilience, data security, and data availability out of the box.
+reviewer: Alexander Verkest
 ---
 
 # STaaS features
@@ -51,7 +52,7 @@ If [ZRS](#data-location-and-redundancy) is used, STaaS has an expected availabil
 
 ## TTL
 
-It is not yet possible to configure time-to-live (TTL) values for STaaS. In the table below, you can find the default TTL values for each data type.
+In the table below, you can find the default time-to-live (TTL) values for each data type.
 
 | Data type                | TTL          |
 |--------------------------|:------------:|
@@ -63,6 +64,8 @@ It is not yet possible to configure time-to-live (TTL) values for STaaS. In the 
 | Spectrum traces          | 1 year       |
 | Alarm events             | 1 year       |
 
+Custom configuration of TTL values can be requested via a [support ticket](xref:User_operations_support).
+
 ## Throttling
 
 If your system is pushing too much load for a specific data type, that data type will be throttled. This could for example happen when you have an element that is continuously saving parameter updates.
@@ -71,7 +74,7 @@ From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!-- RN 42387 -->, when 
 
 ![ThrottlingAlarmExample](~/dataminer/images/throttling_alarm_example.png)
 
-If you encounter such an alarm, to ensure smooth operation of your DataMiner System, try to identify and resolve the root cause of this higher load.
+If you encounter such an alarm, to ensure smooth operation of your DataMiner System, try to identify and resolve the root cause of this higher load. For assistance with this investigation, please contact <support@dataminer.services>.
 
 ## Limitations
 
@@ -81,7 +84,7 @@ To **migrate existing data** to STaaS, the following limitations apply:
 
 - Migration of a setup with multiple OpenSearch/Elasticsearch clusters is not yet supported.
 
-- Migration from a MySQL setup is not yet supported.
+- Direct migration from a MySQL setup is not supported. We recommend using .dmimport files (also known as "DELT export packages") to migrate your data, or [contacting support](xref:Contacting_tech_support) for assistance with the migration.
 
 - Migration using a proxy is supported from DataMiner 10.4.6 onwards<!-- RN 39313 -->.
 
@@ -93,13 +96,11 @@ In addition, the following **other limitations** currently apply:
 
 - The following indexing engine functionality is not supported: Alarm Console search tab, search suggestions in the Alarm Console, aliases, and aggregation.
 
-- Custom configuration of TTL values is not yet supported.
-
 - Direct queries from DataMiner Cube to the database are not supported.
 
 - The [SLReset tool](xref:Factory_reset_tool) is not supported.
 
-- [Exporting trend data](xref:Exporting_elements_services_etc_to_a_dmimport_file) to a .dmimport file is not supported.
+- [Exporting trend data](xref:Exporting_elements_services_etc_to_a_dmimport_file) to a .dmimport file (also known as a "DELT export") is not supported.
 
 - DMZ setups are currently not supported.
 

@@ -148,7 +148,7 @@ Together with this fix, the following changes have also been made:
 
 A number of small fixes have been made, including the following:
 
-- In some cases, a run-time error could occur in “Database Offload Thread \[local\]” when a DataMiner startup took too long.
+- In some cases, a runtime error could occur in “Database Offload Thread \[local\]” when a DataMiner startup took too long.
 
 - SLElement could leak memory when registering a link with an empty filter or when initializing a parameter group.
 

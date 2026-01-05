@@ -25,27 +25,7 @@ If card footers are enabled, the footer of a view card displays the following:
 
 ## View card pages
 
-The navigation pane on the left side of a view card contains a tree view with the following items:
-
-- [VISUAL](#visual)
-
-- [BELOW THIS VIEW](#below-this-view)
-
-- [ALARMS](#alarms)
-
-- [REPORTS](#reports)
-
-- [DASHBOARDS](#dashboards)
-
-- [AGGREGATION](#aggregation)
-
-- [HISTOGRAM](#histogram)
-
-- [TRENDING](#trending)
-
-- [NOTES](#notes)
-
-- [ANNOTATIONS](#annotations)
+The navigation pane on the left side of a view card contains a tree view with the items mentioned below.
 
 ### VISUAL
 
@@ -60,11 +40,11 @@ Under the BELOW THIS VIEW node, there is a page for each type of item that can b
 
 ![BELOW THIS VIEW](~/dataminer/images/Below_This_View.png)<br>*BELOW THIS VIEW page in DataMiner 10.5.4*
 
-The data pages can be displayed in several ways. You can change the way they are displayed by means of the buttons in the lower right corner of the page.
+The data pages can be displayed in several ways. You can change the way they are displayed by means of the buttons in the lower-right corner of the page.
 
 | Button | Description |
 |--|--|
-| ![Filter button](~/dataminer/images/View_Filter_button.png) | Filters the view to show only certain items. If you click the button, a pane is displayed in which you can select which items should be displayed. <br> To show items from subviews as well, select the checkbox click *All devices (Include sub-views)*. Note that the number of items indicated next to the DATA pages can change depending on whether this filter is selected. |
+| ![Filter button](~/dataminer/images/View_Filter_button.png) | Filters the view to show only certain items. If you click the button, a pane is displayed in which you can select which items should be displayed. <br> To show items from subviews as well, select *Include subviews* or *All devices (include subviews)*, depending on your DataMiner version<!-- RN 43817 -->. Note that the number of items indicated next to the DATA pages can change depending on whether this filter is selected. |
 | ![List view button](~/dataminer/images/View_List_button.png) | Displays the list view. |
 | ![Summary view button](~/dataminer/images/View_Summary_button.png) | Displays the summary view. |
 
@@ -266,9 +246,9 @@ To remove parameters from the trend graph, you can:
 
 On this page, you can add short notes to the view. For more information, see [Card navigation pane](xref:Working_with_cards_in_DataMiner_Cube#card-navigation-pane).
 
-### ANNOTATIONS
+### ANNOTATIONS (deprecated)
 
-On this page, you can add, view and edit extensive annotations to the view. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
+In older DataMiner versions (prior to DataMiner 10.6.0/10.6.1), this page allows you to add, view, and edit extensive annotations for the view. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
 > [!NOTE]
-> The Annotations module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). Prior to this, starting from DataMiner 10.2.0/10.1.12, Annotations can optionally be disabled with this soft-launch option.
+> The Annotations module is no longer available from DataMiner 10.6.0/10.6.1 onwards.<!-- RN 44124+44136 --> Prior to this, starting from DataMiner 10.4.0/10.4.1<!-- RN 37786 -->, it is disabled by default, but it can be enabled with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). In even older DataMiner versions, this feature is enabled by default, but you can optionally disable it with the soft-launch option.

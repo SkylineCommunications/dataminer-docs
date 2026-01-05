@@ -184,7 +184,7 @@ Previously, it was not possible to move an existing booking from the *Partial* s
 
 #### Duplicate colors removed on State Colors page [ID 24029]
 
-In the drop-down lists on the *Admin > State Colors* data page of the SRM application element, the following duplicate colors have been removed:
+In the dropdown lists on the *Admin > State Colors* data page of the SRM application element, the following duplicate colors have been removed:
 
 - Cyan (now only included as *Aqua*)
 - Fuchsia (now only included as *Magenta*)
@@ -217,7 +217,7 @@ When a resource pool was customized for a specific node and that node was config
 
 #### Exception when changing timing of booking [ID 24024]
 
-If the timing of a future booking was modified so that the beginning of its pre-roll phase was in the past, or if the start time of a booking was modified while the pre-roll phase had already begun, an exception was thrown and the booking life cycle was not updated.
+If the timing of a future booking was modified so that the beginning of its pre-roll phase was in the past, or if the start time of a booking was modified while the pre-roll phase had already begun, an exception was thrown and the booking lifecycle was not updated.
 
 #### 'Action when Post-Roll Ends' parameter not initialized by default [ID 24031]
 

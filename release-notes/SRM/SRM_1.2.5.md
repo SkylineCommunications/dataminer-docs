@@ -14,7 +14,7 @@ To enable this feature, the option *Pool Resource* must be enabled in the Bookin
 
 #### Possibility to display discrete custom property values with checkboxes in the Booking Wizard \[ID 26756\]
 
-On the *Configuration* page of the Booking Manager, you can now configure custom properties with discrete values to be displayed with checkboxes in the Booking Wizard instead of with the usual drop-down box. To do so, in the *Type* column of the *Properties* table, select *Discreet Checkboxes* in the drop-down box for the custom property.
+On the *Configuration* page of the Booking Manager, you can now configure custom properties with discrete values to be displayed with checkboxes in the Booking Wizard instead of with the usual dropdown box. To do so, in the *Type* column of the *Properties* table, select *Discreet Checkboxes* in the dropdown box for the custom property.
 
 This way, users will be able to select multiple values for this property in the Booking Wizard. If multiple values are selected, they will be combined using a semicolon (";") as separator.
 

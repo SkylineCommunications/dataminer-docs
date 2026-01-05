@@ -94,7 +94,7 @@ This editor allows you to design the parameter tables of a protocol using simple
 
 If you click *Publish*, the protocol or the Automation script you are currently editing will be published to the DMA that was set as default DMA in the *DMA* tab of the *DIS Settings* dialog box.
 
-To publish a protocol or an Automation script to another, non-default DMA, click the drop-down button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
+To publish a protocol or an Automation script to another, non-default DMA, click the dropdown button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
 
 When you publish a protocol or an Automation script, DIS will create either a *.dmprotocol* package (in case of a protocol) or a *.dmapp* package (in case of an Automation script) in the background, install that package on the DataMiner Agent, and then automatically remove it again. This way, there is no need to manually copy all required DLL files on the DataMiner Agent in question (e.g. DLL files of NuGet packages that are used in the protocol or Automation script).
 
@@ -248,14 +248,14 @@ The right-click menu option *Repeat Selected Text* allows you to select a partic
 1. If you want to insert a variable (or a formula including a variable) in the text to be repeated, then do the following:
 
     - Place your cursor where you want the variable or formula to be inserted, and click *Insert placeholder*.
-    - If necessary, change the default placeholder that appeared at the location where you placed your cursor: a single value "x" delimited by "$" characters. You could change it to e.g. "$x+5$".
+    - If necessary, change the default placeholder that appeared at the location where you placed your cursor: a single value "x" delimited by `$` characters. You could change it to e.g. `$x+5$`.
 
 1. At the bottom of the window, select *Overwrite Selection*, if you want the text you selected to be overwritten by the text that is currently displayed in the *Preview* box.
 1. Click *OK* to have the text in the *Preview* box pasted in the editor.
 
 #### Using "$" characters inside a formula
 
-When you insert a variable or a formula into the text to be copied, that variable or formula is delimited by "$" characters. If you want to use a "$" character inside a formula, you have to put an escape character in front of it. Example: `$(x*10)+"\$"$`.
+When you insert a variable or a formula into the text to be copied, that variable or formula is delimited by `$` characters. If you want to use a `$` character inside a formula, you have to put an escape character in front of it. Example: `$(x*10)+"\$"$`.
 
 #### Defining the range of value "x"
 
@@ -458,14 +458,31 @@ If you click such a button, a temporary C# project will be created, containing t
 
 When working in the XML editor, you will notice so-called "virtual comments" next to certain XML tags. They are called "virtual" because they cannot be found in the protocol XML file itself.
 
-In the following screenshot, there are three "virtual comments" next to the three parameter tags. They contain the names found in the *\<Description>* tags of those parameters.
+In the following example, there are "virtual comments" next to the referenced parameters. They contain the names found in the `<Description>` tags of those parameters.
 
-Next to *\<Param>30\</Param>*, for example, you can see *\<!-- System OR Table -->* because, in the parameter definition, the *\<Description>* tag contains "System OR Table".
+For example, next to `<Param>30</Param>`, you can see `<!-- System Table -->` because, in the parameter definition, the `<Description>` tag contains "System Table".
 
-![](~/develop/images/dis_protocol_editor_comments_group.png)
+```xml
+<Group id="2">
+    <Name>Table</Name>
+    <Description>Table</Description>
+    <Content>
+        <Param>30</Param><!-- System Table -->
+    </Content>
+</Group>
 
-![](~/develop/images/dis_protocol_editor_comments_param.png)
+<Param id="30">
+    <Name>systemTable</Name>
+    <Description>System Table</Description>
+    <Type>array</Type>
+    <ArrayOptions index="0" options=";naming=/33">
+        <ColumnOption idx="0" pid="31" type="snmp" options=";save" /><!-- System Index -->
+        <ColumnOption idx="1" pid="32" type="snmp" options=";save" /><!-- System ID -->
+        <ColumnOption idx="2" pid="33" type="snmp" options=";save" /><!-- System Description -->
+        <ColumnOption idx="3" pid="34" type="snmp" options=";save" /><!-- System Up Time -->
+    </ArrayOptions>
+</Param>
+```
 
 > [!NOTE]
-> If you do not want virtual comments to appear, you can turn them off.
-> See [Interface](xref:DIS_settings#interface)
+> If you do not want virtual comments to appear, you can turn them off. See [Interface](xref:DIS_settings#interface).

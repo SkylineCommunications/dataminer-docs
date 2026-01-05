@@ -95,7 +95,7 @@ When you enable this setting, the first entry of the GQI result set will automat
 > [!NOTE]
 >
 > - This new setting has also been added to the *Grid* component, which is only available if you activate the *ReportsAndDashboardsDynamicVisuals* soft-launch option.
-> - For reasons of consistency, in the Drop-down feed, List feed, Parameter feed and Tree feed, the *Feed defaults* setting has now also been renamed to *Initial selection*
+> - For reasons of consistency, in the Dropdown feed, List feed, Parameter feed and Tree feed, the *Feed defaults* setting has now also been renamed to *Initial selection*
 
 #### Low-Code Apps: Duplicating pages and panels is now possible via new context menu [ID 36097]
 
@@ -139,14 +139,14 @@ A web component now supports hyperlinks with a target attribute.
 
 Example: `<a href="http://www.skyline.be" target="_blank">Skyline Communications</a>`
 
-#### Web services API: Multi-value DOM fields will now list all their values [ID 36190]
+#### Web services API: Multivalue DOM fields will now list all their values [ID 36190]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-Up to now, in e.g. low-code apps, multi-value DOM fields would only show a summary of the values they contained. From now on, they will list all values instead.
+Up to now, in e.g. low-code apps, multivalue DOM fields would only show a summary of the values they contained. From now on, they will list all values instead.
 
 > [!NOTE]
-> When a multi-value DOM field contains invalid values, it will no longer list them. Instead, they will be added to the error message.
+> When a multivalue DOM field contains invalid values, it will no longer list them. Instead, they will be added to the error message.
 
 ### Fixes
 
@@ -206,7 +206,7 @@ When you generated a PDF of a dashboard that contained a table component showing
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-In some cases, invalid nodes could get added to a GQI query, causing run-time errors to be thrown.
+In some cases, invalid nodes could get added to a GQI query, causing runtime errors to be thrown.
 
 #### Dashboards app & Low-Code Apps: Clearing a State component by means of Ctrl+Click [ID 36056]
 
@@ -220,11 +220,11 @@ You can now clear a *State* component by clicking it while holding down the Ctrl
 
 In some cases, GQI query nodes without options would incorrectly be expanded.
 
-#### Dashboards app: Problem when a 'State' component was fed a parameter value by a drop-down component in a shared dashboard [ID 36075]
+#### Dashboards app: Problem when a 'State' component was fed a parameter value by a dropdown component in a shared dashboard [ID 36075]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
-In a shared dashboard, an error could occur when a *State* component was fed a parameter value by a drop-down component.
+In a shared dashboard, an error could occur when a *State* component was fed a parameter value by a dropdown component.
 
 #### Dashboards app & Low-Code Apps: GQI table component could throw 'Paged table session not found' error [ID 36101]
 

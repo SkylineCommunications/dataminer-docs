@@ -16,6 +16,19 @@ namespace Skyline.DataMiner.Automation
 	public interface IEngine
 	{
         /// <summary>
+        /// Occurs when the script finishes.
+        /// </summary>
+        /// <remarks>This event provides an opportunity to perform cleanup or other actions after the script is
+        /// finished. Subscribers can use the event arguments to access additional context about the destruction
+        /// process.<note>Available from DataMiner 10.6.1/10.7.0 onwards (RN 43919).</note></remarks>
+        /// <example>
+		/// <code>
+        /// engine.OnDestroy += (sender, args) => { var e = sender as IEngine; e.Log($"Script finished with success ? {args.ScriptSucceed}"); };
+		/// </code>
+        /// </example>
+        event EventHandler<DestroyEventArgs> OnDestroy;
+
+        /// <summary>
         /// Acknowledges the specified alarm tree using the provided comment message.
         /// </summary>
         /// <param name="alarmTreeID">The alarm tree to update</param>
@@ -920,7 +933,7 @@ namespace Skyline.DataMiner.Automation
 		/// <example>
 		/// <code>
 		/// SubScriptOptions subscriptInfo;
-		/// RequestScriptInfoInput infoInput = new RequestScriptInfoInput { Data = new Dictionary&gt;string, string&lt;{ { "requestKey", "value" } } };
+		/// RequestScriptInfoInput infoInput = new RequestScriptInfoInput { Data = new Dictionary&lt;string, string&gt;{ { "requestKey", "value" } } };
 		/// subscriptInfo = engine.PrepareSubScript("myOtherScript", infoInput);
 		/// subscriptInfo.Synchronous = true;
 		/// ...
@@ -1032,13 +1045,7 @@ namespace Skyline.DataMiner.Automation
         /// <param name="alarmTreeID">The alarm tree to update.</param>
         /// <param name="propertyName">The name of the property.</param>
         /// <param name="propertyValue">The value to set.</param>
-        /// <remarks>
-        /// <note type="note">
-        /// <list type="bullet">
-        /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
-        /// </list>
-        /// </note>
-        /// </remarks>
+        /// <remarks>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</remarks>
         void SetAlarmProperty(AlarmTreeID alarmTreeID, string propertyName, string propertyValue);
 
         /// <summary>
@@ -1052,7 +1059,6 @@ namespace Skyline.DataMiner.Automation
         /// <remarks>
         /// <note type="note">
         /// <list type="bullet">
-        /// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
         /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
         /// <item><description>For performance reasons, we recommend using the overload that takes an AlarmTreeID instead.</description></item>
         /// </list>
@@ -1070,7 +1076,6 @@ namespace Skyline.DataMiner.Automation
         /// <remarks>
         /// <note type="note">
         /// <list type="bullet">
-        /// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
         /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
         /// <item><description>Although this method is obsolete, it will still work on a DMS without Swarming enabled until 10.6.</description></item>
         /// </list>
@@ -1090,13 +1095,7 @@ namespace Skyline.DataMiner.Automation
         /// <param name="alarmTreeID">The alarm tree to update.</param>
         /// <param name="propertyNames">The names of the properties.</param>
         /// <param name="propertyValues">The values of the properties.</param>
-        /// <remarks>
-        /// <note type="note">
-        /// <list type="bullet">
-        /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
-        /// </list>
-        /// </note>
-        /// </remarks>
+        /// <remarks>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</remarks>
         /// <example>
         /// <code>
         /// engine.SetAlarmProperties(new AlarmTreeID(200, 400, 521655), new string[]{"Property A", "Property B"}, new string[]{"Value A", "Value B"});
@@ -1115,7 +1114,6 @@ namespace Skyline.DataMiner.Automation
         /// <remarks>
         /// <note type="note">
         /// <list type="bullet">
-        /// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
         /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
         /// <item><description>For performance reasons, we recommend using the overload that takes an AlarmTreeID instead.</description></item>
         /// </list>
@@ -1138,7 +1136,6 @@ namespace Skyline.DataMiner.Automation
         /// <remarks>
         /// <note type="note">
         /// <list type="bullet">
-        /// <item><description>In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.</description></item>
         /// <item><description>When an alarm property value has been defined in the element protocol, and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.</description></item>
         /// <item><description>Although this method is obsolete, it will still work on a DMS without Swarming enabled until 10.6.</description></item>
         /// </list>
@@ -1393,6 +1390,20 @@ namespace Skyline.DataMiner.Automation
 		int InstanceId { get; }
 
 		/// <summary>
+		/// Gets the name of the triggered script.
+		/// </summary>
+		/// <value>The name of the triggered script.</value>
+		/// <remarks>
+		/// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43840).</para>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// engine.Log(engine.ScriptName);
+		/// </code>
+		/// </example>
+		string ScriptName { get; }
+
+		/// <summary>
 		/// Gets the name of the user who triggered the script.
 		/// </summary>
 		/// <value>The name of the user who triggered the script.</value>
@@ -1410,9 +1421,9 @@ namespace Skyline.DataMiner.Automation
 		string TriggeredByName { get; }
 
 		/// <summary>
-		/// Clears the specified run-time flag.
+		/// Clears the specified runtime flag.
 		/// </summary>
-		/// <param name="flag">The run-time flag to clear.</param>
+		/// <param name="flag">The runtime flag to clear.</param>
 		/// <remarks>Feature introduced in DataMiner 10.0.5 (RN 25188).</remarks>
 		/// <example>
 		/// <code>
@@ -1458,6 +1469,21 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		string UserDisplayName { get; }
+
+		/// <summary>
+		/// Gets or sets the web interactive Automation script UI version.
+		/// </summary>
+		/// <value>The version of the web interactive Automation script UI.</value>
+		/// <remarks>
+		/// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43875/43964).</para>
+		/// <para>The WebUIVersion is set to 'Default' by default. As from DataMiner DataMiner 10.5.0 [CU10]/10.6.1 (RN 44059), this means that the V2 UI is used. You can instead set this to 'V1' to revert to the old UI or to 'V2' to make sure the new UI will continue to be used even if the default behavior changes. Check <see href="xref:UIBlockTypesOverview#ui-versions">UI Versions</see> for more details about the differences between these versions.</para>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// engine.WebUIVersion= WebUIVersion.V1;
+		/// </code>
+		/// </example>
+		WebUIVersion WebUIVersion { get; set; }
 
 		/// <summary>
 		/// Gets the Profile Manager.

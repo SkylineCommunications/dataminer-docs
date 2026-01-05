@@ -2,11 +2,15 @@ items:
 - name: Solutions
   topicUid: solution_index
   items:
+  - name: About DataMiner Solutions
+    topicUid: SOL_About
   - name: Standard Solutions
     items:
     - name: dataminer.MediaOps
       topicUid: MediaOps
       items:
+      - name: Installing dataminer.MediaOps
+        topicUid: MO_Installation
       - name: People & Organizations
         topicUid: People_Organizations
         items:
@@ -55,6 +59,8 @@ items:
           topicUid: Tutorial_MediaOps_People_and_Organizations_Intro
         - name: Assigning capabilities to resources
           topicUid: Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities
+        - name: Using time-dependent capabilities
+          topicUid: Tutorial_MediaOps_Scheduling_Time_Dependent_Capabilities
         - name: Scheduling a job using a resource pool with specific capabilities
           topicUid: Tutorial_MediaOps_Scheduling_Configurations
         - name: Creating a workflow to use as a template for a job
@@ -254,21 +260,6 @@ items:
         topicUid: IpNetworkExplorer_UI_overview
       - name: Supported devices and protocols
         topicUid: IpNetworkExplorer_Supported_Devices_And_Protocols
-    - name: Smart Trap Processor
-      topicUid: Smart_Trap_Processor_Overview
-      items:
-      - name: Installing the Smart Trap Processor
-        topicUid: Installing_Smart_Trap_Processor
-      - name: Using the Smart Trap Processor
-        items:
-        - name: The Smart Trap Processor user interface
-          topicUid: The_SmartTrapProcessor_user_interface
-        - name: Configuring processing rules
-          topicUid: Processor_configuration
-        - name: Monitoring processed traps
-          topicUid: Monitoring_Processed_Traps
-      - name: Getting started tutorial
-        topicUid: Smart_Trap_Processor_Tutorial
   - name: Product Solutions
     items:
     - name: EVS Cerebrum application
@@ -292,13 +283,13 @@ items:
         topicUid: Installing_NevionVideoIPath_App
       - name: Using the Nevion Video IPath app
         topicUid: How_to_NevionVideoIPath_App
-    - name: Techex TX Core app
-      topicUid: techex-tx-core-overview
+    - name: NetInsight Nimbra Vision application
+      topicUid: netinsight-nimbra-vision-overview
       items:
-      - name: Installing the Techex TX Core app
-        topicUid: techex-tx-core-install
-      - name: Using the Techex TX Core app
-        topicUid: techex-tx-core-howtouse
+      - name: Installing the Nimbra Vision app
+        topicUid: netinsight-nimbra-vision-install
+      - name: Using the Nimbra Vision app
+        topicUid: netinsight-nimbra-vision-howtouse
     - name: DataMiner TAG Management app
       topicUid: Overview_TAG_App
       items:
@@ -306,6 +297,13 @@ items:
         topicUid: Installing_TAG_App
       - name: Using the TAG Management app
         topicUid: How_to_TAG_App
+    - name: Techex TX Core app
+      topicUid: techex-tx-core-overview
+      items:
+      - name: Installing the Techex TX Core app
+        topicUid: techex-tx-core-install
+      - name: Using the Techex TX Core app
+        topicUid: techex-tx-core-howtouse
   - name: DevTools
     items:
     - name: DataMiner Objects Tool
@@ -333,13 +331,6 @@ items:
         topicUid: DOM_Using_DOM_Viewer
   - name: Custom Solutions
     items:
-    - name: DataMiner Asset Management application
-      topicUid: Asset_Management
-      items:
-      - name: Installing the Asset Management app
-        topicUid: Installing_Asset_Management
-      - name: Working with the Asset Management app
-        topicUid: Working_with_Asset_Management
     - name: DataMiner IT Tools (DITT)
       topicUid: Dataminer_IT_Tool_Overview
       items:
@@ -401,3 +392,18 @@ items:
         topicUid: Remote_PHY_Monitoring_components
       - name: Restricting access to Remote PHY Monitoring
         topicUid: Remote_PHY_Monitoring_Access_Restriction
+    - name: Smart Trap Processor
+      topicUid: Smart_Trap_Processor_Overview
+      items:
+      - name: Installing the Smart Trap Processor
+        topicUid: Installing_Smart_Trap_Processor
+      - name: Using the Smart Trap Processor
+        items:
+        - name: The Smart Trap Processor user interface
+          topicUid: The_SmartTrapProcessor_user_interface
+        - name: Configuring processing rules
+          topicUid: Processor_configuration
+        - name: Monitoring processed traps
+          topicUid: Monitoring_Processed_Traps
+      - name: Getting started tutorial
+        topicUid: Smart_Trap_Processor_Tutorial

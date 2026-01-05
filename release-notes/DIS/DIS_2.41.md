@@ -23,7 +23,7 @@ Support for Microsoft Visual Studio 2017 has been dropped. The last DIS version 
 
 The Class Library generation feature has been removed in favor of NuGet packages.
 
-- If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, see [Class library introduction](xref:ClassLibraryIntroduction).
+- If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, see [About the class library](xref:ClassLibraryIntroduction).
 
 - If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package. For more information on how to create a NuGet package, see [Producing NuGet packages](xref:Producing_NuGet). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
 

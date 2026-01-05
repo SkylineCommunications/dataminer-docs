@@ -42,13 +42,13 @@ It is now possible to have a network path consisting of only a single element or
 
 #### Service definitions only available to select as default depending on Virtual Platform property \[ID 25258\]
 
-The service definitions that can be selected in the Booking Manager are now filtered based on their *Virtual Platform* property. The *Default Booking Service Definition* must now always have the *Virtual Platform* property and the value of the property must be the same as the *Default Virtual Platform* specified in the Booking Manager settings. If no virtual platform is specified in the Booking Manager settings, all template service definitions will be selectable in the *Default Booking Service Definition* drop-down list.
+The service definitions that can be selected in the Booking Manager are now filtered based on their *Virtual Platform* property. The *Default Booking Service Definition* must now always have the *Virtual Platform* property and the value of the property must be the same as the *Default Virtual Platform* specified in the Booking Manager settings. If no virtual platform is specified in the Booking Manager settings, all template service definitions will be selectable in the *Default Booking Service Definition* dropdown list.
 
 ### Fixes
 
-#### Booking life cycle of contributing booking not updated correctly \[ID 24856\]
+#### Booking lifecycle of contributing booking not updated correctly \[ID 24856\]
 
-In some cases, it could occur that the booking life cycle of a contributing booking was not updated by local events as it should be, but instead by the main booking.
+In some cases, it could occur that the booking lifecycle of a contributing booking was not updated by local events as it should be, but instead by the main booking.
 
 #### SRM_ServiceType service property not updated \[ID 24887\]
 

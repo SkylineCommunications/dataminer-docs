@@ -8,7 +8,7 @@ The Generic Query Interface is designed to retrieve and manipulate data from bot
 
 With operators, the retrieved data can be transformed, so that you can shape the output according to specific requirements. To display the retrieved data, you can use visualizations in dashboards and low-code apps, making it easy for users to access and understand the information.
 
-Various analytical tools are also available for in-depth examination of the retrieved data set, empowering users to extract valuable insights and make informed decisions.
+Various analytical tools are also available for in-depth examination of the retrieved dataset, empowering users to extract valuable insights and make informed decisions.
 
 ![GQI concept](~/dataminer/images/gqi_concept.png)
 
@@ -27,7 +27,7 @@ It comprises:
 
 - Any number of **operators**, linked together to create transformations.
 
-  These operators can be sequenced to perform tasks like filtering data sets followed by computing average values grouped by specific criteria.
+  These operators can be sequenced to perform tasks like filtering datasets followed by computing average values grouped by specific criteria.
 
 To construct queries, you can use the Dashboards or Low-Code Apps modules, where you can assemble the queries with a user-friendly UI. When you select a data source or operator in the UI, the options that are available next are automatically adjusted based on your selection. For example, if you filter numeric columns, you may get choices like "Greater than" or "Lower than", while text column filtering might include options such as "Contains" or "Matches regex".
 

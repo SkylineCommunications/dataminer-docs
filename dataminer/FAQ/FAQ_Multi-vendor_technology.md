@@ -1,10 +1,10 @@
 ---
-uid: FAQ_Multi-vendor_technology
+uid: FAQ_Multivendor_technology
 ---
 
-# What do you mean with multi-vendor technology?
+# What do you mean with multivendor technology?
 
-DataMiner is the only true multi-vendor solution in the industry. Skyline delivers the DataMiner platform with the guarantee that it can be interfaced with any data source (devices, systems, etc.) from any possible vendor, irrespective of the interface required, today and in the future. The core of the system is a cutting-edge multi-vendor protocol engine, enabling integration of any data source from any vendor, regardless of its interface or protocol. One platform enables you to manage all your operational systems, whatever data sources you have today or will have in the future.
+DataMiner is the only true multivendor solution in the industry. Skyline delivers the DataMiner platform with the guarantee that it can be interfaced with any data source (devices, systems, etc.) from any possible vendor, irrespective of the interface required, today and in the future. The core of the system is a cutting-edge multivendor protocol engine, enabling integration of any data source from any vendor, regardless of its interface or protocol. One platform enables you to manage all your operational systems, whatever data sources you have today or will have in the future.
 
 Thousands of different products from hundreds of different vendors have already been integrated, and new connectors are added on a weekly basis.
 

@@ -25,9 +25,9 @@ Depending on the type of data that is displayed, the trend line looks different.
 
 - The dark full line represents trend information retrieved from the database.
 
-- The light full line represents either the most recent real-time parameter change events, or "history data sets", i.e. parameter change events that are being drawn in the past.
+- The light full line represents either the most recent real-time parameter change events, or "history datasets", i.e. parameter change events that are being drawn in the past.
 
-- The dotted line past "Now" represents trend prediction data (see [Working with trend predictions](xref:Working_with_trend_predictions)).
+- The dotted line past "Now" represents [trend prediction](xref:Trend_prediction) data.
 
 You can change which data are shown in the graph by directly manipulating the trend graph, or via the right-click menu:
 

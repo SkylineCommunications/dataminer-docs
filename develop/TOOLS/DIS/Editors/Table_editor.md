@@ -27,7 +27,7 @@ To create a new table:
 
 When you open the table editor, DIS will check whether there are columns that are too narrow for their description to fit. If this is the case, then you can do the following:
 
-- Click the drop-down button next to the warning sign at the top of the *Tables* section, and select *Fix Column Widths* to automatically adjust the widths of all columns that are too narrow.
+- Click the dropdown button next to the warning sign at the top of the *Tables* section, and select *Fix Column Widths* to automatically adjust the widths of all columns that are too narrow.
 - In the *Displayed Columns Layout* section, click the red *Fix* button in the *Width* column of a particular table column to automatically adjust the width of that column.
 
 > [!NOTE]

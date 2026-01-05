@@ -20,7 +20,7 @@ You can do so as follows:
 
 1. Make your changes in Visual Studio Code and make sure they are saved. Keep the items listed under [Things to watch out for](xref:CTB_Watch_out_for) in mind.
 
-1. In GitHub Desktop, add a short summary of your changes in the box in the lower right corner. Optionally, you can also add a description. Then click the *Commit* button.
+1. In GitHub Desktop, add a short summary of your changes in the box in the lower-right corner. Optionally, you can also add a description. Then click the *Commit* button.
 
    ![Commit to the draft branch](~/images/Contrib_CommitToDraftBranch.png)
 

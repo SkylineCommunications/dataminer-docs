@@ -4,7 +4,7 @@ uid: LogicGroups
 
 # Groups
 
-Groups get processed by the group execution queue (see [Inner workings](xref:InnerWorkingsIntroduction)). A group allows the grouping of a number of items of the same type. The supported types of items in a group are:
+Groups get processed by the group execution queue (see [Inner workings](xref:InnerWorkings)). A group allows the grouping of a number of items of the same type. The supported types of items in a group are:
 
 - parameter
 - pair

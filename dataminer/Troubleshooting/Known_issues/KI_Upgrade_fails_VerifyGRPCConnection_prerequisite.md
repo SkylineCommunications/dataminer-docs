@@ -107,6 +107,8 @@ Where the previous failures on configuration may be false positives, the connect
 
 Verify the following items:
 
+- Are all DataMiner Agents running?
+
 - Is the *SLNet* service running on all Agents?
 
 - Is the *DataMiner APIGateway* service running on all Agents?
@@ -115,7 +117,7 @@ Verify the following items:
 
   - A **connection refused** error indicates that IIS, APIGateway, or HTTP services are not running
   - A **connection timeout** indicates a firewall issue.
-  - A **404 Not Found** error indicates that APIGateway is not running.
+  - A **404 Not Found** error indicates that either APIGateway is not running, or only IP-specific or hostname-specific bindings are defined in IIS.
 
 - Is there a proxy configured for the SYSTEM user? Verify the output of the following commands:
 

@@ -37,7 +37,7 @@ Not all Protocol.Triggers.Trigger.Time values can be used in combination with th
 |pair|succeeded|The trigger will go off when the specified pair has successfully been executed.|
 |pair|timeout|The trigger will go off when a timeout occurs on the specified pair.|
 |pair|timeout after retries|The trigger will go off after the last retry.<!-- RN 8573 -->|
-|parameter|change|The trigger will go off when the value of the specified parameter has changed.|
+|parameter|change|The trigger will go off when the value of the specified parameter has changed. (See [Change-based event handling](xref:InnerWorkingsChangeBasedEventHandling).) |
 |parameter|change after response|The trigger will go off when the value of the specified parameter has changed and the incoming response has been fully received. This is typically used on serial response parameters when the trigger should go off only if and when the response fully matches.|
 |parameter|timeout|The trigger will go off when a timeout occurs on the specified parameter.|
 |parameter|timeout after retries|The trigger will go off after the last retry.<!-- RN 8573 -->|
@@ -69,4 +69,4 @@ In the code above, the Time element is the hexadecimal representation of the fol
 > [!NOTE]
 >
 > - If you define a trigger that will be activated by another trigger, then leave this tag empty.
-> - In legacy DataMiner versions prior to DataMiner 9.0.0 [CU2], when `<NoTimeout>...</NoTimeOut>` was specified in the protocol, the "timeout after retries" trigger did not go off (whereas the "timeout" trigger did go off) when the response matched the value set in `<NoTimeout>`. However, in the currently supported DataMiner versions, the "timeout after retries" trigger will go off despite the `<NoTimeout>` setting, resulting in similar behavior as the "timeout" trigger.<!-- RN 12543 -->
+> - The "timeout after retries" and "timeout" trigger will go off regardless of the [NoTimeout](xref:Protocol.NoTimeouts.NoTimeout) configuration in the protocol.<!-- RN 12543 -->

@@ -5,6 +5,8 @@ keywords: SLReset
 
 # Factory reset tool
 
+<!-- RN 26026 -->
+
 The factory reset tool *SLReset.exe* can be used by an administrator to fully reset a DataMiner Agent to its default state from immediately after installation.
 
 This tool is available on each DMA server in the folder `C:\Skyline DataMiner\Files\`. It is not supported for older versions of DataMiner.
@@ -35,7 +37,7 @@ It will always perform the following actions, regardless of whether the DMA is r
 - UndoIISConfig
 - UndoFirewallConfig
 - Unregister
-- UninstallEndpoints
+- UninstallEndpoints (Removed from DataMiner 10.6.0/10.6.1 onwards)<!-- RN 43856 -->
 - ResetBrokerGatewayNATS<!-- RN 40759 -->
 - DeleteTaskbarAppSettings
 - ResetMaintenanceSettingsXml
@@ -56,6 +58,7 @@ It will always perform the following actions, regardless of whether the DMA is r
 
   This action runs the tool *SLDataGateway.Tools.Database.exe*, using input arguments harvested from DataMiner (*DB.xml*, credentials, etc.). For more information, see [SLDataGateway.Tools.Database.exe](#sldatagatewaytoolsdatabaseexe) below.
 
+- InstallNATS (Removed from DataMiner 10.6.0/10.6.1 onwards)<!-- RN 43856 -->
 - Register
 - DcomConfig
 - ConfigureServices

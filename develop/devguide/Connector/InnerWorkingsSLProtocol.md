@@ -18,9 +18,9 @@ For each element that is managed by an SLProtocol process, the process contains 
 
 Each timer defined in a protocol introduces an additional timer thread. The timer thread is responsible for making sure that the groups referred to by the timer are processed.
 
-Groups of type "poll", "poll action" or "poll trigger" (sometimes referred to as "poll groups") will be added to the so-called group execution queue of the main protocol execution thread (see [Main protocol execution thread](xref:InnerWorkingsSLProtocol#main-protocol-execution-thread)).
+Groups of type "poll", "poll action" or "poll trigger" (sometimes referred to as "poll groups") will be added to the so-called group execution queue of the [main protocol execution thread](xref:InnerWorkingsSLProtocol#main-protocol-execution-thread).
 
-As mentioned in [Read, write, fixed and dummy parameters](xref:LogicParameters#read-write-fixed-and-dummy-parameters), groups of type "action" or "trigger" will be executed by the initiating thread. In this case, this means that these types of groups will be handled by the timer thread.
+Groups of type "action" or "trigger" (sometimes referred to as "non-poll groups") will be executed by the initiating thread. In this case, this means that these types of groups will be handled by the timer thread.
 
 ## Main protocol execution thread
 
@@ -31,21 +31,21 @@ Poll groups of a timer are always added to the end of the queue as illustrated i
 ![Main protocol execution thread](~/develop/images/Protocol_Explained_-_Main_Protocol_Execution_Thread.svg)
 
 > [!NOTE]
-> These groups will only be added to the queue in case the queue does not already contain this group.
+> These groups will only be added to the queue in case the queue does not already contain this group, to prevent timers from adding them faster than they can be executed and in this way avoid an endlessly growing queue.
 
 Timers are not the only way to add groups to the group execution queue. Multiple types of actions have been defined for adding groups to the group execution queue. The following table provides an overview of the different actions defined for adding groups to the group execution queue.
 
-|Type  |Result  |
-|---------|---------|
-|Add to execute     |Adds the specified group or groups to the very end of the group execution queue.         |
-|Execute     |Adds the specified group or groups to the group execution queue, after the last group in the queue that was not added by a timer, but before groups that were added by a timer.         |
-|Execute next     |Adds the specified group or groups at the beginning of the group execution queue, right after the group that is currently being executed.         |
-|Execute one     |Checks if the specified group or groups are present on the queue. If present, nothing will happen. If not present, the group is added to the group execution queue at the very end, after groups that were added by a timer.         |
-|Execute one top     |Checks if the specified group or groups are present on the queue. If present, nothing will happen. If not present, the group is added at the beginning of the group execution queue, right after the group that is currently being executed.         |
-|Execute one now     |Checks if the specified group or groups are present on the queue. If present, nothing will happen. If not present, the group is added to the group execution queue, after the last group that was not added by a timer, but before groups that were added by a timer.         |
-|Force Execute     |Force execute will make sure the group is executed as soon as possible. The ongoing item (Action, Pair, Param, Session, or Trigger) of the ongoing group will finish, then the group you want to "force execute" will be executed, and then the remaining items of the previously ongoing group will be executed.        |
+|Type               |Result  |
+|-------------------|---------|
+|Add to execute     |Adds the specified groups to the very end of the group execution queue (same priority as groups added by timers).         |
+|Execute            |Adds the specified groups to the group execution queue, after the last group in the queue that was added neither by a timer, nor by an "add to execute" action, or in other words, just before groups that were added by timers and/or "add to execute" actions.         |
+|Execute next       |Adds the specified groups at the beginning of the group execution queue. The groups will be picked up as soon as the group that is currently being executed has finished.         |
+|Execute one        |Checks if the specified groups are present on the queue. If present, nothing will happen. If not present, the groups are added to the group execution queue at the very end (same priority as groups added by timers or by "add to execute" actions.)         |
+|Execute one top    |Checks if the specified groups are present on the queue. If present, nothing will happen. If not present, the groups are added at the beginning of the group execution queue, and they will be picked up as soon as the group that is currently being executed has finished.         |
+|Execute one now    |Checks if the specified groups are present on the queue. If present, nothing will happen. If not present, the groups are added to the group execution queue, after the last group that was added neither by a timer, nor by an "add to execute" action, or in other words, just before groups that were added by timers and/or "add to execute" actions.         |
+|Force execute      |Force execute will make sure the groups are executed as soon as possible. The ongoing item (Action, Pair, Param, Session, or Trigger) of the ongoing group will finish, then the group you want to "force execute" will be executed, and then the remaining items of the previously ongoing group will be executed. Force execute should only be used in very exceptional cases. In most cases, "execute next" should be used instead.       |
 
-The following figure illustrates the resulting location of the added group based on the selected action type.
+The following figure illustrates the resulting location of the added group (see blue box) based on the selected action type.
 
 ![Group execution queue](~/develop/images/Protocol_Explained_-_Main_Protocol_Execution_Thread_Group_Priority.svg)
 
@@ -79,23 +79,11 @@ This can be seen when development logging of an element running the protocol is 
 
 All linked items are considered blocking. However, it is important to note that when an item gets added to a queue, this operation only blocks until the item has been added to the queue. This means that it will not be blocking until the item that was added to the queue itself was executed. For an example, refer to [SLScripting](xref:InnerWorkingsSLScripting).
 
-## Defining multiple protocol execution threads
-
-It is possible to define additional protocol execution threads next to the main protocol execution thread, where each additional protocol execution thread maintains a group execution queue. This can be useful, for example, to separate time-critical actions from actions related to polling a device.
-
-Each additional protocol execution thread in a protocol is linked to a connection. This can be a real connection (e.g. SNMP, serial, etc.) or a virtual connection (for non-polling related functionality, e.g. for implementing cleanup).
-
-On a group, it is then possible to define the connection (i.e. which protocol execution thread) this group must be executed from.
-
-For more information on how to implement multiple protocol execution threads in a protocol, see [Multi-threading](xref:AdvancedMultiThreading).
-
-![Multiple protocol execution threads](~/develop/images/Protocol_Explained_-_Defining_Multiple_Protocol_Threads.svg)
-
 ## Executing groups by timer threads
 
 When a timer has as content groups that are not poll groups (i.e. the group type is "trigger" or "action"), that group will be executed by the timer thread.
 
-By letting the timer thread perform some actions while the main protocol thread is busy performing another operation (e.g. executing a QAction), multi-threaded behavior can be obtained.
+By letting the timer thread perform some actions while the main protocol thread is busy performing another operation (e.g. executing a QAction), multithreaded behavior can be obtained.
 
 For example, consider two timers, where the first timer contains a group of type "poll action" and is therefore added to the group execution queue. This group contains an action to increment a parameter value. The second timer contains a group of type "action". The action lets a QAction triggering on parameter 2 execute. The QAction will increase the value of parameter 3 every second, until it reaches 5.
 
@@ -323,3 +311,15 @@ The impact of this flow is that the QAction can run before group 2 is executed d
 
 > [!TIP]
 > For an interesting use case related to this, refer to [Debugging connectors: RTE caused by non-poll group in timer](xref:Debugging_connectors_RTE_caused_by_non-poll_group_in_timer).
+
+## Defining multiple protocol execution threads
+
+It is possible to define additional protocol execution threads next to the main protocol execution thread, where each additional protocol execution thread maintains a group execution queue. This can be useful, for example, to separate time-critical actions from actions related to polling a device.
+
+Each additional protocol execution thread in a protocol is linked to a connection. This can be a real connection (e.g. SNMP, serial, etc.) or a virtual connection (for non-polling related functionality, e.g. for implementing cleanup).
+
+On a group, it is then possible to define the connection (i.e. which protocol execution thread) this group must be executed from.
+
+For more information on how to implement multiple protocol execution threads in a protocol, see [Multithreading](xref:AdvancedMultiThreading).
+
+![Multiple protocol execution threads](~/develop/images/Protocol_Explained_-_Defining_Multiple_Protocol_Threads.svg)

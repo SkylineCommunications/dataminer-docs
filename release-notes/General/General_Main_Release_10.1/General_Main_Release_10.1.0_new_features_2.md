@@ -305,7 +305,7 @@ The *Profiles* app now also allows you to create and edit profile parameters of
 
 In an alarm template, it is now possible to configure monitoring conditions that check whether a parameter value is equal or not equal to “Not Initialized”.
 
-A drop-down box now allows you to choose between “Value” (default) and “Not initialized”. Note that, when you choose “Value” and enter a parameter value, that value will not be cleared when you later select “Not initialized”.
+A dropdown box now allows you to choose between “Value” (default) and “Not initialized”. Note that, when you choose “Value” and enter a parameter value, that value will not be cleared when you later select “Not initialized”.
 
 #### Creating an element simulation file \[ID 25353\]
 
@@ -425,7 +425,7 @@ When configuring an SNMP manager, you can now add the polling IP address as a cu
 
 #### Profiles app: Display value configuration possible for capability profile parameters of type discrete \[ID 26379\]
 
-Previously, when you configured a capability profile parameter of type discrete, it was not possible to specify display values for the raw values of the parameter. Now, with the *Discrete type* drop-down box, you can specify whether the display values are text or a number. Depending on this selection, the selection box for the discrete parameter will be either a text box or a spin box. When you specify the possible values for the parameter, there is now also an additional *Display value* column where you can specify the display value corresponding with each raw value. Both a raw value and a display value always need to be specified. The raw values always have to be unique, but this limitation does not apply for the display values.
+Previously, when you configured a capability profile parameter of type discrete, it was not possible to specify display values for the raw values of the parameter. Now, with the *Discrete type* dropdown box, you can specify whether the display values are text or a number. Depending on this selection, the selection box for the discrete parameter will be either a text box or a spin box. When you specify the possible values for the parameter, there is now also an additional *Display value* column where you can specify the display value corresponding with each raw value. Both a raw value and a display value always need to be specified. The raw values always have to be unique, but this limitation does not apply for the display values.
 
 Capability profile parameters of type discrete that were configured before this change will have no discrete type selected. For these parameters, the display value will remain equal to the raw value, unless they are reconfigured.
 
@@ -685,7 +685,7 @@ When adding or editing a tag, you can now select the following additional option
 
 #### Trending: Trend percentile will now be calculated using either average or real-time trend data \[ID 27965\]
 
-Up to now, the trend percentile was calculated using the most detailed data set that was available. In cases where the trend window contained both real-time and average trend data, it would be calculated using both types of data.
+Up to now, the trend percentile was calculated using the most detailed dataset that was available. In cases where the trend window contained both real-time and average trend data, it would be calculated using both types of data.
 
 From now on, from the moment the trend window contains average data points in its most detailed set, only average data will be used for the calculation. This is also be reflected in the percentile menu, where a warning icon will be shown. A tool tip on the warning icon will indicate when only average data will be used.
 

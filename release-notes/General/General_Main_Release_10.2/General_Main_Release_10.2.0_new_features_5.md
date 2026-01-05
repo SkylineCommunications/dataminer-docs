@@ -24,7 +24,7 @@ uid: General_Main_Release_10.2.0_new_features_5
 
 For the line chart, state, and ring visualizations, you can now use view parameters as a data source. These represent active aggregation rules on a specific view.
 
-To select this new data source, in the drop-down box for the “parameter” data source, select “View”. The different available view parameters, corresponding with the aggregation rules configured in your system, will then be displayed.
+To select this new data source, in the dropdown box for the “parameter” data source, select “View”. The different available view parameters, corresponding with the aggregation rules configured in your system, will then be displayed.
 
 You can combine these view parameters with other types of parameters in the same component. However, you can only group them together with other parameters using the "Group by" option "All together". If you group by element, parameter or index, the view parameters will be placed in a separate group. For view parameters, the view name is displayed instead of an element name, and the aggregation rule name is displayed instead of a regular parameter name.
 

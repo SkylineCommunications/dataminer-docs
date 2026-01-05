@@ -8,8 +8,6 @@ You can consume [NuGet packages](https://learn.microsoft.com/en-us/nuget/what-is
 
 When DIS compiles the Automation script or protocol, it will extract the required assemblies from the NuGet packages and save them alongside the protocol.xml/script.xml. To make sure elements using such a protocol can work correctly, in recent DataMiner versions, those folders with assemblies need to be placed in the folder `C:\Skyline DataMiner\ProtocolScripts\DllImport`.
 
-Note that support for subfolders in the `ProtocolScripts` folder is introduced in DataMiner 9.6.12 (RN 23565). However, the `DllImport` subfolder of the `ProtocolScripts` folder is only introduced in DataMiner 10.0.10 (RN 26605). This means that prior to DataMiner 10.0.10, only the `Files` and `ProtocolScripts` folder are used as hint paths. For example, when you have the `QAction@dllImport` value `slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`, DataMiner will try to find the assembly in the location `C:\Skyline DataMiner\ProtocolScripts\slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`. Starting from DataMiner 10.0.10, the `ProtocolScripts\DllImport` folder is added as an additional hint path (which is probed before the `Files` and `ProtocolScripts` folders). In case of the above-mentioned example, this means that the following path will be tried: `C:\Skyline DataMiner\ProtocolScripts\DllImport\slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`. Note also that only from DataMiner 10.0.10 onwards, subfolder paths for assemblies in a .dmprotocol package will be preserved during installation.
-
 > [!NOTE]
 > For DIS and CI/CD, the *PackageReference* package management format must be used. The *packages.config* package management format is not supported.
 
@@ -60,7 +58,7 @@ To access the GitHub NuGet registry, you need a personal access token (PAT). Fol
 
    - **Scope**: Select the *read:packages* scope.
 
-1. Click *Generate token* in the lower left corner.
+1. Click *Generate token* in the lower-left corner.
 
 1. Copy your personal access token. You will not be able to see it again afterwards.
 
@@ -105,7 +103,7 @@ In case you are using a token that has an expiration date or if you entered the 
 
    - Visual Studio 2022: *Windows Credentials > nuget.pkg.github.com*
 
-1. Select the credentials you want to edit and click *Edit* in the lower left corner.
+1. Select the credentials you want to edit and click *Edit* in the lower-left corner.
 
 1. Update the username and/or password, and click *Save*.
 

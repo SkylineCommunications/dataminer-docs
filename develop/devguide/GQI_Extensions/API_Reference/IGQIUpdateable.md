@@ -21,7 +21,7 @@ It defines a method pair, [OnStartUpdates](#void-onstartupdatesigqiupdater) and 
 
 This method is invoked on an ad hoc data source when it is allowed to start publishing updates. It can for example be used to set up subscriptions or event handlers that trigger updates.
 
-In the [ad hoc data source life cycle](xref:Ad_hoc_Life_cycle#onstartupdates), it is called after [OnPrepareFetch](xref:GQI_IGQIOnPrepareFetch#onpreparefetchoutputargs-onpreparefetchonpreparefetchinputargs-args) and before any [GetNextPage](xref:GQI_IGQIDataSource#gqipage-getnextpagegetnextpageinputargs-args) calls.
+In the [ad hoc data source lifecycle](xref:Ad_hoc_Life_cycle#onstartupdates), it is called after [OnPrepareFetch](xref:GQI_IGQIOnPrepareFetch#onpreparefetchoutputargs-onpreparefetchonpreparefetchinputargs-args) and before any [GetNextPage](xref:GQI_IGQIDataSource#gqipage-getnextpagegetnextpageinputargs-args) calls.
 
 > [!NOTE]
 > This method will only be called if [updates are enabled](xref:Query_updates#enabling-updates) for the containing query and when that query [can handle](xref:Query_updates#query-update-support) the updates. That way no resources are wasted.
@@ -34,4 +34,4 @@ In the [ad hoc data source life cycle](xref:Ad_hoc_Life_cycle#onstartupdates), i
 
 This method is invoked on an ad hoc data source when it should stop publishing updates. It can for example be used to clean up any subscriptions or event handlers that were set up during the [OnStartUpdates](#void-onstartupdatesigqiupdater) method.
 
-In the [ad hoc data source life cycle](xref:Ad_hoc_Life_cycle#onstopupdates), it is called after the last [GetNextPage](xref:GQI_IGQIDataSource#gqipage-getnextpagegetnextpageinputargs-args) call and right before [OnDestroy](xref:GQI_IGQIOnDestroy##ondestroyoutputargs-ondestroyondestroyinputargs-args).
+In the [ad hoc data source lifecycle](xref:Ad_hoc_Life_cycle#onstopupdates), it is called after the last [GetNextPage](xref:GQI_IGQIDataSource#gqipage-getnextpagegetnextpageinputargs-args) call and right before [OnDestroy](xref:GQI_IGQIOnDestroy##ondestroyoutputargs-ondestroyondestroyinputargs-args).

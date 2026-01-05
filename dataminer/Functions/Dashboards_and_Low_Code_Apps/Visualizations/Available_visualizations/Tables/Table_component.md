@@ -129,7 +129,15 @@ In the *Layout* pane for this component, the *Conditional coloring* option is av
 
 - If the column you want to use for highlighting contains **values for which a specific range can be specified**, select the column, indicate the range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one column, each with a color of its own.
 
-- Alternatively, from DataMiner 10.2.0/10.1.8 onwards, you can **filter on specific text** instead. To do so, select the column you want to use for highlighting, specify the text, and select the highlight color. By default, the cell value will need to be equal to the specified text to be highlighted. However, you can change this by clicking *equal* above the text box and selecting *contain* or *match regex* instead, depending on the type of filtering you want to apply. You can also apply a negative filter by clicking *does*, which will make this field switch to *does not* instead.
+- Alternatively, from DataMiner 10.2.0/10.1.8 onwards, you can **filter on specific text** instead. To do so, select the column you want to use for highlighting, specify the text, and select the highlight color. You can change the filtering behavior by clicking *equal* above the text box and selecting one of the available options:
+
+  - **Equal** (default): Highlights cells that are exactly equal to the specified text.
+
+  - **Contain**: Highlights cells that contain the specified text anywhere.
+
+  - **Match regex**: Highlights cells that match a regular expression. For example, to highlight empty cells, you can use the regex `^$`.
+
+  You can also apply a negative filter by clicking *does*, which will make this field switch to *does not* instead.
 
   ![Conditional coloring](~/dataminer/images/Conditional_Coloring.png)<br>*Table component in DataMiner 10.5.6*
 
@@ -231,7 +239,7 @@ To configure actions:
 
     1. Click *On double-click*.
 
-    1. In the pop-up window, select the action that should be executed. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+    1. In the pop-up window, select the action that should be executed. See [Configuring app events](xref:LowCodeApps_event_config).
 
 - Prior to DataMiner 10.4.1/10.5.0:
 
@@ -245,4 +253,4 @@ To configure actions:
 
   1. In the *Icon* box, select an icon for the action.
 
-  1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+  1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring app events](xref:LowCodeApps_event_config).

@@ -148,7 +148,7 @@ Currently, the following components can be added to a dashboard.
     | Component | Description                                                                                                                                                                     |
     |-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | CPE         | Allows the user to make a filter selection for a particular CPE Manager element and CPE chain.                                                                                  |
-    | Drop-down   | This feed allows the user to select an item in a drop-down list. The selectable items can be based on any data feed.                                                            |
+    | Dropdown   | This feed allows the user to select an item in a dropdown list. The selectable items can be based on any data feed.                                                            |
     | List        | This feed allows the user to select one or more items in a list. The selectable items can be based on any data feed.                                                            |
     | Parameter   | This feed allows the user to select one or more parameters. Default column order: Parameters, Elements, Indices. Note: The element list will load per page of 100 items. |
     | Time range  | This feed allows the user to specify a time range.                                                                                                                              |
@@ -527,9 +527,9 @@ When you have selected a file, the actual upload will only start after you click
 
 All files uploaded by users will by default be placed in the `C:\Skyline DataMiner\TempDocuments` folder, which is automatically cleared at every DataMiner startup.
 
-#### New engine.UnSetFlag method to clear run-time flags \[ID 23961\]
+#### New engine.UnSetFlag method to clear runtime flags \[ID 23961\]
 
-In an Automation script, you can now use the engine.UnSetFlag method to clear the following run-time flags:
+In an Automation script, you can now use the engine.UnSetFlag method to clear the following runtime flags:
 
 - RunTimeFlags.AllowUndef
 - RunTimeFlags.NoInformationEvents

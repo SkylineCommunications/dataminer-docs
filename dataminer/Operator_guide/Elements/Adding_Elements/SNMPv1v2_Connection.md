@@ -8,10 +8,12 @@ For SNMPv1/v2 connections, you can specify the following connection settings whi
 
 - **SNMP version**: Allows you to select a different SNMP version than the version configured in the protocol. With an SNMPv1 type protocol, you can select SNMPv1, SNMPv2 or SNMPv3. With an SNMPv2 type protocol, you can select SNMPv2 or SNMPv3.
 
+- **Site**: The remote site. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the SiteManager DxM is installed and remote sites are configured. For more information, refer to [Site Manager](xref:SiteManagerOverview).
+
 - **IP address/host**: The polling IP or URL of the destination.
 
   > [!IMPORTANT]
-  > Do not fill in a hostname instead of an IP address if this connection will be used to receive SNMP traps. Using a hostname is not supported for SNMP trap reception.
+  > From DataMiner 10.5.9/10.6.0 onwards<!--RN 43347-->, you can fill in a hostname instead of an IP address even if the connection will be used to receive SNMP traps. In earlier versions, using a hostname is not supported for SNMP trap reception.
 
 - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.
 

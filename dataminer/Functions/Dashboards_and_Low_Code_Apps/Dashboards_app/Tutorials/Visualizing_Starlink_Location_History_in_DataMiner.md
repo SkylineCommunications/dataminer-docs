@@ -9,7 +9,9 @@ In this tutorial, you will explore how to leverage the Starlink Enterprise solut
 Expected duration: 30 minutes
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created with the DataMiner 10.5.3 web apps.
+>
+> - In the latest versions of the Starlink Enterprise package (v2.0.0 and higher), the *Location History Tracking* feature is already included by default. This means that you can take a look at the configuration of this feature in the *Starlink Enterprise* app and then follow this tutorial to try to build it yourself step by step, as a valuable exercise to deepen your understanding of low-code apps and map integrations.
+> - The content and screenshots for this tutorial have been created with the DataMiner 10.5.3 web apps.
 
 > [!TIP]
 > See also: [Kata #59: Visualizing Starlink location history in DataMiner](https://community.dataminer.services/courses/kata-59/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
@@ -25,7 +27,7 @@ Expected duration: 30 minutes
 ## Overview
 
 - [Step 1: Install the Starlink Enterprise package](#step-1-install-the-starlink-enterprise-package)
-- [Step 2: Explore the app and data sets](#step-2-explore-the-app-and-data-sets)
+- [Step 2: Explore the app and datasets](#step-2-explore-the-app-and-datasets)
 - [Step 3: Create a duplicate app with custom components](#step-3-create-a-duplicate-app-with-custom-components)
 - [Step 4: Create the GQI query to fetch the history location data](#step-4-create-the-gqi-query-to-fetch-the-history-location-data)
 - [Step 5: Test the GQI result using a table](#step-5-test-the-gqi-result-using-a-table)
@@ -35,10 +37,6 @@ Expected duration: 30 minutes
 
 1. Go to the [Starlink Enterprise](https://catalog.dataminer.services/details/66a4c259-0fb1-4c27-aede-8bbd3a4925d0) solution in the Catalog.
 
-<!-- 1. Go to the *Versions* tab and expand version 1.0.2-CU12, so you can see the *Deploy* button for this specific version.
-
-   This version of the app contains everything you need to be able to follow this tutorial.
- -->
 1. Click the *Deploy* button to deploy the package on your DMA.
 
 1. When the package has been deployed, go to the root page of your DataMiner System, for example by clicking the *Home* button for your DMS on the [dataminer.services page](https://dataminer.services/).
@@ -50,7 +48,7 @@ Expected duration: 30 minutes
 > [!TIP]
 > The deployed app will include demo data, but in case you have a Starlink Enterprise business account, you can already start exploring **your own data** right away. Refer to the [Starlink Enterprise Connector documentation](https://docs.dataminer.services/connector/doc/Starlink_Enterprise.html#initialization) to get started.
 
-## Step 2: Explore the app and data sets
+## Step 2: Explore the app and datasets
 
 1. In the DataMiner Cube Surveyor, navigate to *DataMiner Catalog* > *Apps & Solutions* > *Starlink Enterprise* > *Starlink API (STRLE)* and open the element *STRLE Starlink Enterprise*.
 

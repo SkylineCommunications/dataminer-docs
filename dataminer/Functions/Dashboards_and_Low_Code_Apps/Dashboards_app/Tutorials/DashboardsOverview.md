@@ -9,7 +9,7 @@ With the DataMiner Dashboards module, you can create custom dashboards that inte
 ## Tutorials
 
 - [Displaying a custom message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message)
-- [Leveraging controls and feeds to create a dynamic GQI query](xref:Tutorial_Dashboards_Controls_And_Feeds_Query)
+- [Using controls to create a dynamic GQI query](xref:Tutorial_Dashboards_Controls_Query)
 - [Getting started with node edge graphs](xref:Tutorial_Apps_Node_Edge)
 - [Creating a custom parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed)
 - [Creating an alarm dashboard for a daily DMS health check](xref:Tutorial_Alarm_Dashboard_for_your_daily_DMS_health_check)

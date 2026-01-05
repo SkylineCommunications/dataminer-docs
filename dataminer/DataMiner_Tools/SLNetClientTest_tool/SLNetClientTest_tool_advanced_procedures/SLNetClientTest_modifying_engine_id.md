@@ -12,7 +12,7 @@ With the SLNetClientTest tool, you can modify this engine ID:
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-1. In the *Message Type* drop-down list, select *SNMPManagersConfigurationRequestMessage*.
+1. In the *Message Type* dropdown list, select *SNMPManagersConfigurationRequestMessage*.
 
 1. Click the field next to the *Agents* argument and then click the *...* button to open the *ObjectEditorForm* window.
 

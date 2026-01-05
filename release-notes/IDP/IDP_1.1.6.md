@@ -30,7 +30,7 @@ It is now possible to reapply or reassign a CI type to a managed element. Reappl
 
 You can reapply or reassign a CI type to an element by going to the *Inventory* > *Managed* tab in the IDP app, selecting the element and then clicking the *Reapply* or *Reassign* button above the list of managed elements.
 
-When you reapply a CI type, you will then need to click the *Reapply* button in the pop-up window. When you reassign a CI type, you will be able to select a different CI type in a drop-down box and then click the *Reassign* button in the pop-up window. Only CI types for which provisioning is enabled via *Workflows* > *Automation* will be displayed in the drop-down box.
+When you reapply a CI type, you will then need to click the *Reapply* button in the pop-up window. When you reassign a CI type, you will be able to select a different CI type in a dropdown box and then click the *Reassign* button in the pop-up window. Only CI types for which provisioning is enabled via *Workflows* > *Automation* will be displayed in the dropdown box.
 
 Regardless of whether you are reapplying or reassigning a CI type, you can then select which of the following parts of the CI Type should be applied: the element name, element description, initial protocol and version, initial alarm template, initial trend template, initial port info, password setup, default element state, initial views and the update property script. If you select the initial views option, you can also select to remove the element from other views or keep it in other views.
 

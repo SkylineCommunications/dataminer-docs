@@ -11,11 +11,11 @@ All features can be activated or deactivated in System Center, via *System Cente
 
 The following advanced analytics features **assist at identifying incidents in the alarm data**:
 
-- [Alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus).
+- [Alarm focus](xref:Alarm_focus).
 
-- [Automatic incident tracking](xref:Automatic_incident_tracking).
+- [Automatic alarm grouping](xref:Automatic_alarm_grouping).
 
-The following advanced analytics features **generate suggestion events** that inform users about new insights on the data behavior of a trended parameter. These suggestion events are displayed in the *Suggestion events* tab of the Alarm Console. See [Changing the alarm console layout](xref:ChangingTheAlarmConsoleLayout).
+The following advanced analytics features generate [suggestion events](xref:Alarm_types#suggestion-events) that inform users about new insights into the data behavior of a trended parameter:
 
 - [Behavioral anomaly detection](xref:Behavioral_anomaly_detection).
 

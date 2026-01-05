@@ -118,7 +118,7 @@ The following types have been removed:
 - Best Practices Analyzer
 - Enhanced Service Model
 - Function Definition
-- Life Cycle Service Orchestration
+- Lifecycle Service Orchestration
 - Low-Code App
 - Process Activity
 - Profile-Load Script (now considered Automation)
@@ -571,7 +571,7 @@ The following new Catalog types are now supported:
 
 - Low-Code App
 
-- Life Cycle Service Orchestration
+- Lifecycle Service Orchestration
 
 - Function Definition
 

@@ -21,7 +21,7 @@ To enable Failover using DataMiner version **10.1.8 or higher**:
 
 1. On the *Manage* tab, select the primary DMA in the list of DataMiner Agents.
 
-1. Click the *Failover* button in the lower right corner.
+1. Click the *Failover* button in the lower-right corner.
 
 1. Select the type of Failover you want to configure: *Failover (Virtual IP)* or *Failover (Hostname)*.
 
@@ -37,7 +37,9 @@ To enable Failover using DataMiner version **10.1.8 or higher**:
 
    1. Click *Apply* or *OK* to save the configuration (depending on your DataMiner version).
 
-      Once you have completed the configuration, the IP addresses will be changed. Because of this, it could take a while before you can reconnect to the system.
+      Once you have completed the configuration, the IP addresses will be changed, which may take a while.
+
+   1. If you are using DataMiner 10.6.0/10.6.1 or higher, or if your system has been [migrated to BrokerGateway](xref:BrokerGateway_Migration), run NATSRepair to update your NATS credentials with the virtual IP.
 
    > [!IMPORTANT]
    > Always configure Failover with virtual IP addresses for DataMiner Systems that already contain a Failover pair configured with virtual IP addresses.
@@ -54,6 +56,8 @@ To enable Failover using DataMiner version **10.1.8 or higher**:
 
    1. Click *Apply* or *OK* to save the configuration (depending on your DataMiner version).
 
+   1. If you are using DataMiner 10.6.0/10.6.1 or higher, or if your system has been [migrated to BrokerGateway](xref:BrokerGateway_Migration), run NATSRepair to update your NATS credentials with the new hostname.
+
    > [!IMPORTANT]
    > Always configure Failover with a shared hostname for DataMiner Systems that already contain a Failover pair configured with a shared hostname or that contain a DataMiner Agent that was added by hostname.
 
@@ -69,7 +73,7 @@ To enable Failover using DataMiner version **10.1.7 or lower**:
 
 1. On the *Manage* tab, select the primary DMA in the list of DataMiner Agents.
 
-1. Click the *Failover* button in the lower right corner.
+1. Click the *Failover* button in the lower-right corner.
 
 1. In the *Failover* window, select the *Failover* checkbox.
 

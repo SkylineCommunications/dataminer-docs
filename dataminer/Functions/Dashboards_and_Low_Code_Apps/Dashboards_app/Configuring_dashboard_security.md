@@ -45,7 +45,7 @@ To configure which users can access and/or edit a folder or dashboard:
    > [!TIP]
    > See also: [Special combinations of privileges](#special-combinations-of-privileges).
 
-1. Click *Apply* in the lower right corner.
+1. Click *Apply* in the lower-right corner.
 
    ![Dashboard settings](~/dataminer/images/Dashboard_Settings.png)<br>*Dashboard settings in DataMiner 10.4.10*
 

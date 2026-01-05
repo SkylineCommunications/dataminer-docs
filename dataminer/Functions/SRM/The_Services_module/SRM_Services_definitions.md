@@ -29,7 +29,7 @@ The navigation pane consists of two tabs:
 
 To create a new service definition, click the *Add definition* button in the navigation pane. To edit an existing service definition, select it in the navigation pane. In either case, you will then be able to configure the service definition in the service definition pane on the right.
 
-This service definition pane consists of a header section at the top, with three tabs below it. Configure the service definition in this pane as specified below, and then click the *Save all changes* button in the lower right corner.
+This service definition pane consists of a header section at the top, with three tabs below it. Configure the service definition in this pane as specified below, and then click the *Save all changes* button in the lower-right corner.
 
 ## Header section
 
@@ -46,7 +46,7 @@ In the header section of the service definition panel, you can specify the follo
 
 - **Template**: This checkbox determines whether the service definition is considered to be a template or not. If a service definition is configured as a service definition template, it will be treated differently while scripts to create bookings are running. This option is particularly useful in case the service definition is systematically modified during the script, in order to reduce the required resources.
 
-- **Visio**: Allows you to select the Visio file that will be used for services generated for this service definition. Either select one of the available files in the drop-down list, or click *New upload* to add a new file.
+- **Visio**: Allows you to select the Visio file that will be used for services generated for this service definition. Either select one of the available files in the dropdown list, or click *New upload* to add a new file.
 
   > [!NOTE]
   > Customizing the Visio file for a specific generated service is only possible after a different Visio file has been assigned to the service.
@@ -70,12 +70,12 @@ To do so:
 
 1. You can then further refine the created setup if necessary:
 
-   - To further refine parameters for a particular node, select the node, and, in the lower right corner, specify a label and optionally specify a default profile instance, the profile instance assignment mode, and parameter values. See [Service Orchestration profile instances configuration](xref:Service_Orchestration_profile_instances).
+   - To further refine parameters for a particular node, select the node, and, in the lower-right corner, specify a label and optionally specify a default profile instance, the profile instance assignment mode, and parameter values. See [Service Orchestration profile instances configuration](xref:Service_Orchestration_profile_instances).
 
      > [!NOTE]
      > Parameter profiles are created in the *Profiles* module. See [Configuring profile parameters](xref:Configuring_profile_parameters).
 
-   - To add properties to a particular node, interface or connection, select the node, interface or connection in the diagram, and, in the *properties* tab in the lower right corner, click the *Add* button and specify the property.
+   - To add properties to a particular node, interface or connection, select the node, interface or connection in the diagram, and, in the *properties* tab in the lower-right corner, click the *Add* button and specify the property.
 
      > [!NOTE]
      > When you add properties to service definition objects in Cube, these properties are also added in *PropertyConfiguration.xml*. Only properties in that file are visible in the UI. If you add properties via Automation scripts, these will remain hidden from the user if they are not defined in *PropertyConfiguration.xml*.
@@ -97,15 +97,15 @@ To do so:
 
 The second tab of the service definition pane can be used to manage properties of the service definition itself.
 
-- To add a property, click the *Add* button in the lower right corner, and specify the property.
+- To add a property, click the *Add* button in the lower-right corner, and specify the property.
 
 - To remove a property, select it in the list of properties and click the *Delete* button.
 
 ## Actions tab
 
-The third tab of the service definition pane allows you to specify Automation scripts (i.e. [LSO scripts](xref:srm_scripting#life-cycle-service-orchestration-lso-script)) that should run when the service based on the service definition gets a specific service state:
+The third tab of the service definition pane allows you to specify Automation scripts (i.e. [LSO scripts](xref:srm_scripting#lifecycle-service-orchestration-lso-script)) that should run when the service based on the service definition gets a specific service state:
 
-1. Click the *Add* button in the lower right corner.
+1. Click the *Add* button in the lower-right corner.
 
 1. In the *Name* column, select a service state, e.g. *START*, *STANDBY*, *PAUSE*, *STOP*, or *RETIRE*. The script will run when the service enters that state.
 
@@ -113,14 +113,14 @@ The third tab of the service definition pane allows you to specify Automation sc
 
 1. In the *Description* column, specify an optional description.
 
-To remove one of the added scripts, select it and click the *Delete* button in the lower right corner.
+To remove one of the added scripts, select it and click the *Delete* button in the lower-right corner.
 
 ## Profiles tab
 
 This tab allows you to link profile definitions to the selected service definition.
 
-In the *Add service profile* drop-down box, all profile definitions configured in the *Profiles* module are available.
+In the *Add service profile* dropdown box, all profile definitions configured in the *Profiles* module are available.
 
-To link the selected service definition with a profile, select one of the profile definitions in the drop-down box and click *Add*. However, note that this change will only be saved if the profile is linked to at least one of the parameters in the diagram.
+To link the selected service definition with a profile, select one of the profile definitions in the dropdown box and click *Add*. However, note that this change will only be saved if the profile is linked to at least one of the parameters in the diagram.
 
-Below the drop-down box, a list is displayed of the profiles that have already been linked to the selected service definition and of the parameters in these profiles. An “x” icon to the right of each profile name allows you to remove the profile from the service definition.
+Below the dropdown box, a list is displayed of the profiles that have already been linked to the selected service definition and of the parameters in these profiles. An “x” icon to the right of each profile name allows you to remove the profile from the service definition.

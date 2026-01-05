@@ -16,7 +16,7 @@ Please also note the following:
 
 - The DataMiner Agent you add must use the same NATS solution as the DataMiner System. This means that if the DMS has been [migrated to BrokerGateway](xref:BrokerGateway_Migration), the DMA you add also needs to be migrated to BrokerGateway, but if the DMS still uses the SLNet-managed NATS solution, the DMA you add also has to use this solution.
 
-- If a [manual configuration was forced for NATS](xref:SLNetClientTest_disabling_automatic_nats_config) with the *NATSForceManualConfig* option in *MaintenanceSettings.xml*, you will need to manually adjust your NATS configuration with the added DMA.<!-- RN 42019+42020 -->
+- If a [manual configuration was forced for NATS](xref:Disabling_automatic_NATS_config) with the *NATSForceManualConfig* option in *MaintenanceSettings.xml*, you will need to manually adjust your NATS configuration with the added DMA.<!-- RN 42019+42020 -->
 
 - In most cases, when you add a DataMiner Agent to a DataMiner System, all other DataMiner Agents in the DataMiner System will connect to it using its primary IP address. However, in some cases, you may need to configure the connection strings by hand. See [Connection strings](xref:Connection_strings).
 

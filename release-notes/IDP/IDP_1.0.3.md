@@ -35,7 +35,7 @@ In order to support HTTPS, when the IDP solution is set up, the provisioning API
 
 #### Run-time error caused by Skyline Generic Provisioning element \[ID 22258\]
 
-In some cases, the Skyline Generic Provisioning element could cause a run-time error to be thrown.
+In some cases, the Skyline Generic Provisioning element could cause a runtime error to be thrown.
 
 #### IDP app: Unnecessary warning when navigating to Inventory \> Managed tab \[ID 22304\]
 

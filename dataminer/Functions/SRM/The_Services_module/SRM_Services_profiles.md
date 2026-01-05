@@ -26,7 +26,7 @@ To configure a service profile definition, select it in the list on the left. Yo
 
   - Link the nodes of the added service definitions to the necessary service profile nodes.
 
-    To create a new service profile node, select *\<create new>* in the relevant drop-down box. A new service profile node will then immediately be created with the same name as the service definition node.
+    To create a new service profile node, select *\<create new>* in the relevant dropdown box. A new service profile node will then immediately be created with the same name as the service definition node.
 
 - In the *configuration* > *by node* tab, you can manage the nodes that have been added to the service profile definition in the *by service definition* tab.
 
@@ -34,9 +34,9 @@ To configure a service profile definition, select it in the list on the left. Yo
 
   - You can specify a different label for a node in the *Label* box.
 
-  - You can link the node to a different function in the *Function* drop-down box.
+  - You can link the node to a different function in the *Function* dropdown box.
 
-  - You can change the service definition node(s) the node is linked to by selecting different nodes in the *Linked to* drop-down box(es).
+  - You can change the service definition node(s) the node is linked to by selecting different nodes in the *Linked to* dropdown box(es).
 
     If the service profile definition applies to several service definitions, a different selection is possible for each service definition. It is also possible to select no nodes for one or more service definitions.
 
@@ -46,7 +46,7 @@ To configure a service profile definition, select it in the list on the left. Yo
 
 - In the *properties* tab, you can manage properties for the service profile definition.
 
-  - The two buttons in the lower right corner allow you to add or delete properties.
+  - The two buttons in the lower-right corner allow you to add or delete properties.
 
   - To change the name or value for a property, click the property in the list of properties and enter your changes.
 
@@ -66,6 +66,6 @@ Service profile instances allow you to link service profile nodes to specific pr
 
 - **Properties**: Allows you to manage properties for the service profile instance.
 
-  - The two buttons in the lower right corner allow you to add or delete properties.
+  - The two buttons in the lower-right corner allow you to add or delete properties.
 
   - To change the name or value for a property, click the property in the list of properties and enter your changes.

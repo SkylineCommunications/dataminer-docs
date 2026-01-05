@@ -65,11 +65,11 @@ Because of a number of enhancements, on systems using a Cassandra and Cassandra 
 
 Because of a number of enhancements, overall performance has increased when loading services during a DataMiner startup.
 
-#### SLDataMiner: Enhanced log entry indicating progress of multi-threaded operations that take longer that 30 seconds to complete [ID 39367]
+#### SLDataMiner: Enhanced log entry indicating progress of multithreaded operations that take longer that 30 seconds to complete [ID 39367]
 
 <!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
 
-When a multi-threaded operation takes longer that 30 seconds to complete, an entry is added to the *SLDataMiner.txt* log file to indicate that the operation in question is still in progress. This log entry has now been enhanced. It will now show the progress in more detail.
+When a multithreaded operation takes longer that 30 seconds to complete, an entry is added to the *SLDataMiner.txt* log file to indicate that the operation in question is still in progress. This log entry has now been enhanced. It will now show the progress in more detail.
 
 `Waiting for completion of %s : %lli/%lli completed`
 
@@ -105,7 +105,7 @@ On some systems, the `C:\Skyline DataMiner\System Cache\SLNet` folder can contai
 
    1. Connect to the DMA using the SLNetClientTest tool.
    1. Go to the *Build Message* tab of the main window.
-   1. In the *Message Type* drop-down list, select *DiagnoseMessage*.
+   1. In the *Message Type* dropdown list, select *DiagnoseMessage*.
    1. In the *ExtraInfo* field, specify "flush:[fileNamePattern]". For examples of file name patterns, see below.
    1. In the *Type* field at the bottom, select "ReplicationBufferStats".
 

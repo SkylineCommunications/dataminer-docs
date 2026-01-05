@@ -11,7 +11,7 @@ The maximum number of concurrent client sessions of a spectrum analyzer element 
 
 1. Right-click the spectrum element in the Surveyor and select *Properties*.
 
-1. In the *Custom* tab, click the settings button in the lower left corner and select *Add*.
+1. In the *Custom* tab, click the settings button in the lower-left corner and select *Add*.
 
 1. In the *Edit* window, specify the name “Spectrum.MaxRealTimeClients”, and then click *OK*.
 

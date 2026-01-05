@@ -49,7 +49,7 @@ Expected duration: 20 minutes
 
 1. Click the *Deploy* button to deploy the DOM Editor package to your DMA.
 
-1. [Open DataMiner Cube](xref:Using_the_desktop_app), go to *Apps* > *Automation*, and check whether the following scripts have become available:
+1. [Open DataMiner Cube](xref:Connecting_to_a_DMA_with_Cube), go to *Apps* > *Automation*, and check whether the following scripts have become available:
 
    ![Dom Editor scripts](~/dataminer/images/DOM_Making_DOM_Stateful_domeditorscripts.png)
 
@@ -57,7 +57,7 @@ Expected duration: 20 minutes
 
 ## Step 2: Deploy the Kata DOM package
 
-1. Go to <https://catalog.dataminer.services/details/package/5995>.
+1. Go to <https://catalog.dataminer.services/details/0e9f4b50-cab7-4d2d-855f-f2a4173f1ccc>.
 
 1. Click the *Deploy* button to deploy the Kata DOM package to your DMA.
 
@@ -74,7 +74,7 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to edit th
 
 1. In the Automation module in DataMiner Cube, search for the **Dom Editor** script and select it.
 
-1. Click the *Execute* button in the lower right corner to launch this script, and then click *Execute now*.
+1. Click the *Execute* button in the lower-right corner to launch this script, and then click *Execute now*.
 
    ![Dom Editor script](~/dataminer/images/DOM_Getting_Started_script.png)
 
@@ -277,7 +277,7 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to edit th
 
    ![App stepper in Request state](~/dataminer/images/DOM_Making_DOM_Stateful_stapper_request.png)
 
-1. In the lower right corner of the form, click the *Schedule* button.
+1. In the lower-right corner of the form, click the *Schedule* button.
 
    ![App Schedule button](~/dataminer/images/DOM_Making_DOM_Stateful_Schedule_button.png)
 

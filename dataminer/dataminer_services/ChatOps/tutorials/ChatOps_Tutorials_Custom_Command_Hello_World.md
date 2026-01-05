@@ -1,5 +1,6 @@
 ---
 uid: ChatOps_Tutorials_Custom_Command_Hello_World
+reviewer: Alexander Verkest
 ---
 
 # Hello World

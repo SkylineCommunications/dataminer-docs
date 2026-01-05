@@ -73,7 +73,7 @@ To install the PA framework:
    > [!TIP]
    > See also: [Running Automation scripts](xref:Running_Automation_scripts)
 
-   Also make sure that the files *ProcessAutomation.dll* and *SLSRMLibrary.dll* are not present in the following subfolders of the Skyline DataMiner folder: `C:\Skyline DataMiner\Files\DLLImport\` and `C:\Skyline DataMiner\ProtocolScripts\DLLImport\`.
+   Also make sure that the files *ProcessAutomation.dll* and *SLSRMLibrary.dll* are not present in the following subfolders of the Skyline DataMiner folder: `C:\Skyline DataMiner\Files\` and `C:\Skyline DataMiner\ProtocolScripts\DLLImport\`.
 
    If these files *are* present, delete them, and restart the DMAs involved.
 
@@ -86,7 +86,7 @@ To set up the initial configuration of the PA framework or to upgrade to a more 
 
 1. Go to *Automation* module in DataMiner Cube and select the *SRM_Setup* Automation script.
 
-1. In the lower right corner, select *Execute*.
+1. In the lower-right corner, select *Execute*.
 
 1. In the *Booking Manager Element Info* box, specify the value `{}`.
 

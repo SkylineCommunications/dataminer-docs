@@ -50,11 +50,11 @@ The SetParameter and SetParameterRow methods of the DataMiner Web Services API v
 
 ### Fixes
 
-#### Ticketing app: Problem with drop-down fields \[ID 29478\]
+#### Ticketing app: Problem with dropdown fields \[ID 29478\]
 
-When you added or updated options in a field of type “drop-down list”, in some cases, the default values of those options were not filled in correctly.
+When you added or updated options in a field of type “dropdown list”, in some cases, the default values of those options were not filled in correctly.
 
-Also, when you turned a field into a field of type “drop-down list”, in some cases, a null reference exception could be thrown.
+Also, when you turned a field into a field of type “dropdown list”, in some cases, a null reference exception could be thrown.
 
 #### Slow initial synchronization of services in DMS \[ID 30074\]
 

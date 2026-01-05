@@ -7,7 +7,7 @@ uid: Removing_a_DataMiner_Agent_from_a_DataMiner_System
 Depending on whether the DataMiner Agent is part of a Failover pair or not, a different procedure must be used.
 
 > [!NOTE]
-> If a [manual configuration was forced for NATS](xref:SLNetClientTest_disabling_automatic_nats_config) with the *NATSForceManualConfig* option in *MaintenanceSettings.xml*, you will need to manually adjust your NATS configuration with the removed DMA.
+> If a [manual configuration was forced for NATS](xref:Disabling_automatic_NATS_config) with the *NATSForceManualConfig* option in *MaintenanceSettings.xml*, you will need to manually adjust your NATS configuration with the removed DMA.
 
 ## Removing a DMA that is not part of a Failover pair
 
@@ -34,6 +34,11 @@ Depending on whether the DataMiner Agent is part of a Failover pair or not, a di
 1. Restart DataMiner Cube to make sure the removed Agent is no longer displayed anywhere.
 
 ## Removing a Failover DMA
+
+1. [End the Failover configuration](xref:Ending_a_Failover_configuration).
+
+   > [!NOTE]
+   > This first step is especially important if you are using Failover based on hostname. For Failover setups based on virtual IP, this step can be skipped.
 
 1. On a DMA in the cluster, go to the *System Center* module and select the *Agents* page.
 

@@ -123,7 +123,7 @@ To upload an Automation script to a DataMiner Agent, do the following:
 1. Click *Publish* to compile the script and publish it to the DataMiner Agent that was set as default DMA in the *DMA* tab of the *DIS Settings* dialog box.
 
 > [!NOTE]
-> If you want to publish the script to another, non-default DMA, click the drop-down button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
+> If you want to publish the script to another, non-default DMA, click the dropdown button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
 
 ### Validator
 
@@ -136,7 +136,7 @@ The following checks and error messages have been added.
 | 2.5.1    | MissingDefaultThreshold          | Missing default thresholds on monitored parameter. Param ID '{pid}'.                                                                 |
 | 2.25.2   | UpdatedIdxValue_Parent           | Some columns have their SLProtocol position changed. Table PID '{tablePid}'.                                                         |
 | 4.2.5    | ObsoleteSuffixTable              | Suffix 'table' in 'Group/Content/Param' element is considered obsolete. Group ID '{groupId}'.                                        |
-| 4.2.6    | SuffixRequiresMultiThreadedTimer | Suffix '{suffix}' in'Group/Content/Param' element requires the group to be called from a multi-threaded timer. Group ID '{groupId}'. |
+| 4.2.6    | SuffixRequiresMultiThreadedTimer | Suffix '{suffix}' in'Group/Content/Param' element requires the group to be called from a multithreaded timer. Group ID '{groupId}'. |
 | 16.5.3   | IncompatibleParamReferences      | Incompatible links to parameters via 'Group@dynamicId' attribute and 'Group/Params' element. ParameterGroup ID '{parameterGroupId}'. |
 | 16.8.1   | MissingDynamicIdAttribute        | Filtering via 'Group@dynamicIndex' attribute requires a 'Group@dynamicId' attribute. ParameterGroup ID '{parameterGroupId}'.         |
 | 18.10.9  | IrrelevantColumn                 | Irrelevant column with PID '{columnPid}' in 'TreeControl/HiddenColumns'. TreeControl ID '{treeControlId}'.                           |

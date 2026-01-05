@@ -14,7 +14,7 @@ jobs:
     runs-on: windows-latest
     name: Build Job
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           submodules: true
       - name: Install DocFX
@@ -34,7 +34,7 @@ jobs:
       - name: Zip artifact for deployment
         run: Compress-Archive -Path _site/* -DestinationPath .\_site.zip
       - name: Publish results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: release
           path: _site.zip
@@ -45,7 +45,7 @@ jobs:
     needs: build_job
     name: Deploy Job to Storage account
     steps:
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v7
         with:
           name: release
           path: .
@@ -85,7 +85,7 @@ jobs:
     needs: build_job
     name: Deploy Job to SA with SWA and FD
     steps:
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v7
         with:
           name: release
           path: .

@@ -362,7 +362,7 @@ This is the most basic procedure to use an external data source in a query:
 
 5. In the Dashboards app, configure a query and select the data source *Get custom data*.
 
-6. In the *Data source* drop-down box, select the name of your custom data source.
+6. In the *Data source* dropdown box, select the name of your custom data source.
 
 Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the *IGQIInputArguments* interface in the script to define that a specific argument is required, for instance to filter the displayed data. For more information, refer to the sections below.
 
@@ -405,17 +405,17 @@ A custom data source is represented as a class that implements predefined interf
     |-----------|---------------------|----------------------|------------------------------------------------|
     | OnDestroy | OnDestroyInputArgs | OnDestroyOutputArgs | Indicates that the GQI will close the session. |
 
-##### Life cycle
+##### Lifecycle
 
-All methods discussed above are called at some point during the GQI life cycle, depending on whether a query is created or fetched, and depending on whether they have been implemented.
+All methods discussed above are called at some point during the GQI lifecycle, depending on whether a query is created or fetched, and depending on whether they have been implemented.
 
-The following flowchart illustrates the GQI life cycle when a query is created:
+The following flowchart illustrates the GQI lifecycle when a query is created:
 
-![GQI query creation life cycle](~/dataminer/images/GQICreateQuery.png)
+![GQI query creation lifecycle](~/dataminer/images/GQICreateQuery.png)
 
-The following flowchart illustrates the GQI life cycle when a query is fetched:
+The following flowchart illustrates the GQI lifecycle when a query is fetched:
 
-![GQI query fetching life cycle](~/dataminer/images/GQIFetchQuery.png)
+![GQI query fetching lifecycle](~/dataminer/images/GQIFetchQuery.png)
 
 ##### Objects
 

@@ -290,11 +290,11 @@ Cannot read properties of null ('reading delete')
 
 Table actions would incorrectly not be triggered when the key of the GQI data source row was of type string.
 
-#### GQI: IsChecked property would not be filled in for list and drop-down options in SLAnalyticsTypes.dll [ID 36491]
+#### GQI: IsChecked property would not be filled in for list and dropdown options in SLAnalyticsTypes.dll [ID 36491]
 
 <!-- MR 10.3.0 [CU12] - FR 10.3.7 -->
 
-When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
+When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and dropdown options in *SLAnalyticsTypes.dll*. As a result, list and dropdown options that should be selected by default, would not be selected by default.
 
 #### Dashboards app & Low-Code Apps: Problem when sending updates to the Web API when the user did not have edit rights [ID 36571]
 

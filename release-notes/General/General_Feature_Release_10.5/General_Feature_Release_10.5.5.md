@@ -63,13 +63,13 @@ GQI will now look for missing dependencies in the `C:\Skyline DataMiner\Scripts\
 > [!IMPORTANT]
 > If the referenced Automation script library has dependencies of its own, these will also need to be added as dependencies in the GQI extension scripts.
 
-#### GQI DxM: New life cycle method allows ad hoc data sources to optimize sort operators [ID 42528]
+#### GQI DxM: New lifecycle method allows ad hoc data sources to optimize sort operators [ID 42528]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
-A new optional life cycle method has been introduced for ad hoc data sources running in the GQI DxM. It will allow to optimize or modify sort operators added to the query.
+A new optional lifecycle method has been introduced for ad hoc data sources running in the GQI DxM. It will allow to optimize or modify sort operators added to the query.
 
-You can use this life cycle by implementing the `Skyline.DataMiner.Analytics.GenericInterface.IGQIOptimizeableDataSource` interface, which has one method:
+You can use this lifecycle by implementing the `Skyline.DataMiner.Analytics.GenericInterface.IGQIOptimizeableDataSource` interface, which has one method:
 
 ```csharp
 IGQIQueryNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOperator)
@@ -80,14 +80,14 @@ IGQIQueryNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOper
 
 This method should return the query node that represents the result of applying the next operator to the current ad hoc data source node. Similar to the custom operator implementation, the ad hoc data source implementation can decide to do the following:
 
-- Append the `nextOperator` to the `currentNode` (i.e. the default behavior when this life cycle method is not implemented).
+- Append the `nextOperator` to the `currentNode` (i.e. the default behavior when this lifecycle method is not implemented).
 - Remove/ignore the `nextOperator`, usually taking responsibility of the operation internally.
 - Modify/add operators.
 
 > [!NOTE]
 >
-> - This life cycle method will only be called when the `nextOperator` is a filter or a sort operator.
-> - This life cycle method can be called multiple times if there is a new `nextOperator`.
+> - This lifecycle method will only be called when the `nextOperator` is a filter or a sort operator.
+> - This lifecycle method can be called multiple times if there is a new `nextOperator`.
 
 ## Changes
 
@@ -155,7 +155,7 @@ For example, if a view is renamed or moved in the Surveyor, a zip file will be c
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.11/10.5.0-->
 
-In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), and the automatic NATS configuration has not been disabled (using [NATSForceManualConfig](xref:SLNetClientTest_disabling_automatic_nats_config)), the *VerifyNatsIsRunning* prerequisite check will now verify if the single source of truth for the NATS communication (i.e. ClusterEndpointConfiguration.json) is present and contains at least one viable endpoint entry.
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), and the automatic NATS configuration has not been disabled (using [NATSForceManualConfig](xref:Disabling_automatic_NATS_config)), the *VerifyNatsIsRunning* prerequisite check will now verify if the single source of truth for the NATS communication (i.e. ClusterEndpointConfiguration.json) is present and contains at least one viable endpoint entry.
 
 #### Factory reset tool: New ResetBrokerGatewayNATS action [ID 40759]
 

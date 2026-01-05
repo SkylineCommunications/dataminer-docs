@@ -18,8 +18,8 @@ Either downgrade to 10.2.7 and then upgrade to DataMiner 10.2.8 (CU2), or run th
 
 ## Workaround
 
-Open DevCenter and run the command `ALTER TABLE analytics_parameterinfo_v1 add cr int;`.  
+Using a query tool of your choice, run the command `ALTER TABLE analytics_parameterinfo_v1 add cr int;`.
 
 ## Issue description
 
-After upgrading to DataMiner 10.2.8 (CU1), the Alarm Console shows run-time errors related to the SLAnalytics process.
+After upgrading to DataMiner 10.2.8 (CU1), the Alarm Console shows runtime errors related to the SLAnalytics process.

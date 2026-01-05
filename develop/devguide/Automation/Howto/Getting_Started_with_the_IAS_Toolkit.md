@@ -4,7 +4,7 @@ uid: Getting_Started_with_the_IAS_Toolkit
 
 # Getting started with the IAS Toolkit
 
-## Introduction
+## About the IAS Toolkit
 
 The Interactive Automation Script Toolkit (or “IAS Toolkit” in short) is a library that can be used to create interactive Automation scripts. Its main purpose is to make developing interactive Automation scripts easier.
 
@@ -14,8 +14,6 @@ The Interactive Automation Script Toolkit (or “IAS Toolkit” in short) is a l
 > See also: [Kata #10: Create a simple interactive script](https://community.dataminer.services/courses/kata-10/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
 To choose your version of the IAS Toolkit, the first thing you need to know is the [version of DataMiner](xref:Interactive_Automation_Script_Toolkit#versions) where you want your script to run. As DataMiner keeps improving, so does its support for newer, more advanced IAS components.
-
-In this introduction, DataMiner version 10.1.2 is used. This means that [version 2.0.x](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/2.0.0) of the toolkit can be used.
 
 Just like for protocol and regular Automation script development, our IDE of choice is Visual Studio with the latest version of [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). If you do not have DIS installed, you can find more information on how to do so under [Installing and configuring the software](xref:Installing_and_configuring_the_software).
 
@@ -29,7 +27,9 @@ To start creating your script:
 
 1. Fill in the solution name and specify a target folder. A folder will be created with the solution name in the target folder. This will contain your solution. Click *OK*.
 
-1. Once your solution has been created, open the first Exe block by clicking the icon next to it.
+1. Once your solution has been created, open the script XML file in the *Solution Explorer* and set the [Interactivity](xref:DMSScript.Interactivity) tag to *Always* or *Optional*, depending on the types of execution the script can have.
+
+1. Then, open the first Exe block by clicking the icon next to it.
 
    ![IAS2](~/develop/images/IAS2.png)
 
@@ -70,12 +70,6 @@ public class Script
     /// <param name="engine">Link with SLAutomation process.</param>
     public void Run(Engine engine)
     {
-        // DO NOT REMOVE THIS COMMENT OR THE SCRIPT WON'T RUN!
-        // DataMiner evaluates if the script needs to launch in interactive mode.
-        // This is determined by a simple string search looking for ".FindInteractiveClient(" in the source code.
-        // However, because of the toolkit NuGet package, this string cannot be found here.
-        // So this comment is here as a workaround.
-    
         try
         {
             controller = new InteractiveController(engine);
@@ -89,7 +83,15 @@ public class Script
 ```
 
 > [!NOTE]
-> From DataMiner 10.5.9/10.6.0 onwards, the comment ".FindInteractiveClient(" is no longer necessary. Instead, this can be defined with the [Interactivity](xref:DMSScript.Interactivity) tag of the script.<!-- RN 42954 -->
+> Prior to DataMiner 10.5.9/10.6.0<!--RN 42954-->, a comment containing the string `.FindInteractiveClient(` is required to mark the script as interactive. See [How auto-detection determines interactivity](xref:Automation-InteractivityOptions#how-auto-detection-determines-interactivity) for more details.
+>
+> ```csharp
+> // DO NOT REMOVE THIS COMMENT OR THE SCRIPT WON'T RUN!
+> // DataMiner evaluates if the script needs to launch in interactive mode.
+> // This is determined by a simple string search looking for ".FindInteractiveClient(" in the source code.
+> // However, because of the toolkit NuGet package, this string cannot be found here.
+> // So this comment is here as a workaround.
+> ```
 
 ## Building the UI
 
@@ -135,6 +137,9 @@ public class HelloWorldDialog : Dialog
 
 In order to display the widgets, you will need to add them to your dialog using the *AddWidget* method. With this method, you can link a widget to a cell in a grid layout, where cell 0;0 is in the top-left corner of the dialog.
 
+> [!TIP]
+> For more information on interactive Automation script widgets, layouts, and event handlers, refer to the [API reference](xref:Skyline.DataMiner.Utils.InteractiveAutomationScript).
+
 ```csharp
 public class HelloWorldDialog : Dialog
 {
@@ -179,12 +184,6 @@ public class Script
     /// <param name="engine">Link with SLAutomation process.</param>
     public void Run(Engine engine)
     {
-        // DO NOT REMOVE THIS COMMENT OR THE SCRIPT WON'T RUN!
-        // DataMiner evaluates if the script needs to launch in interactive mode.
-        // This is determined by a simple string search looking for ".FindInteractiveClient(" in the source code.
-        // However, because of the toolkit NuGet package, this string cannot be found here.
-        // So this comment is here as a workaround.
-        
         try
         {
             controller = new InteractiveController(engine);
@@ -210,7 +209,7 @@ You can now publish the script to your DMA, using either of the following ways:
 
 If everything goes well, you will see your script in the Automation module in DataMiner Cube.
 
-To take a look at the script in action, click the *Execute* button in the lower right corner and then click *Execute now*.
+To take a look at the script in action, click the *Execute* button in the lower-right corner and then click *Execute now*.
 
    ![IAS4](~/develop/images/IAS4.png)
 
@@ -231,12 +230,6 @@ public class Script
     /// <param name="engine">Link with SLAutomation process.</param>
     public void Run(Engine engine)
     {
-        // DO NOT REMOVE THIS COMMENT OR THE SCRIPT WON'T RUN!
-        // DataMiner evaluates if the script needs to launch in interactive mode.
-        // This is determined by a simple string search looking for ".FindInteractiveClient(" in the source code.
-        // However, because of the toolkit NuGet package, this string cannot be found here.
-        // So this comment is here as a workaround.
-    
         try
         {
             controller = new InteractiveController(engine);

@@ -1,6 +1,7 @@
 ---
 uid: Cloud_data_storage_policies
 keywords: cloud storage
+reviewer: Alexander Verkest
 ---
 
 # Cloud data storage policies

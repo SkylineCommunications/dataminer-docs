@@ -552,9 +552,9 @@ From now on, administrative updates (i.e. alarms of type â€œProperties Changedâ€
 
 When, in Scheduler, you configured a CPE report in an email action, up to now, that report was based on the base tables in the CPE element. From now on, if view tables are present in the CPE element, the report will be based on those view tables instead.
 
-#### HTML5 apps: Enhanced drop-down box behavior \[ID 22968\]
+#### HTML5 apps: Enhanced dropdown box behavior \[ID 22968\]
 
-In HTML5 apps like Jobs and Dashboards, drop-down box behavior has been enhanced, especially with respect to how auto-complete suggestions are being displayed.
+In HTML5 apps like Jobs and Dashboards, dropdown box behavior has been enhanced, especially with respect to how auto-complete suggestions are being displayed.
 
 #### DataMiner Cube - Backup: An information event will now be generated when no network path was specified for a particular Agent \[ID 22991\]
 
@@ -660,9 +660,9 @@ The HTML5 apps (Dashboards, Jobs, etc.) now use a newly developed, shared commun
 
 When a QAction sends a message to SLNet, from now on, the element ID and the QAction ID will be logged in the SLNet log file.
 
-#### WatchDog log entries now provide more information in case of run-time errors \[ID 23708\]
+#### WatchDog log entries now provide more information in case of runtime errors \[ID 23708\]
 
-Up to now, log entries stored in SLWatchDog2.txt due to a run-time error contained only the name of the process and the name of the thread. From now on, if possible, they will also contain the ID of the process and the ID of the thread.
+Up to now, log entries stored in SLWatchDog2.txt due to a runtime error contained only the name of the process and the name of the thread. From now on, if possible, they will also contain the ID of the process and the ID of the thread.
 
 #### Service & Resource Management: Enhanced performance when opening Services app and Bookings app \[ID 23765\]
 
@@ -751,7 +751,7 @@ From now on, when you configure actions in Automation scripts or Correlation rul
 
 #### Run-time errors will now be generated when SLDataMiner halts while executing start, stop or restart actions for elements \[ID 24228\]
 
-When, for whatever reason, SLDataMiner should halt while executing start, stop or restart actions for a particular element, from now on, a run-time error will be generated.
+When, for whatever reason, SLDataMiner should halt while executing start, stop or restart actions for a particular element, from now on, a runtime error will be generated.
 
 #### DataMiner Cube - Services app: Service list will no longer be initialized when Visual Overview only shows the service definition editor \[ID 24242\]
 

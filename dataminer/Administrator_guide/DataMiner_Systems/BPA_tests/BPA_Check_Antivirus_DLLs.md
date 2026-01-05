@@ -4,7 +4,7 @@ uid: BPA_Check_Antivirus_DLLs
 
 # Antivirus on the DataMiner Agents
 
-Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this BPA test is called "Check Antivirus DLLs".
+Prior to DataMiner 10.4.12/10.5.0 [CU10]<!--RN 40751-->, this BPA test is called "Check Antivirus DLLs".
 
 When installed on a DataMiner Agent, [antivirus software must be configured to exclude the DataMiner processes](xref:Regarding_antivirus_software).
 

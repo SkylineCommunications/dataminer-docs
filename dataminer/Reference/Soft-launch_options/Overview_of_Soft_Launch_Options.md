@@ -5,9 +5,9 @@ description: DataMiner soft-launch options activate features that are not yet av
 
 # Overview of soft-launch options
 
-The table below contains an overview of all available soft-launch options. Unless otherwise specified, the key in the "Feature key" column must be added in *SoftLaunchOptions.xml* with the value "true" in order to activate the feature.
+The list below contains an overview of all available soft-launch options. Unless otherwise specified, the key must be added in *SoftLaunchOptions.xml* with the value "true" in order to activate the feature.
 
-The table also details the minimum DataMiner version to start using each option and, in case the feature has already been officially released in a later DataMiner version, the "Release version" when it becomes available. From that "Release version" onwards, the feature is active by default and any soft-launch configuration for the feature is ignored. As such, it is not necessary to remove a tag from *SoftLaunchOptions.xml* when the corresponding feature is officially released.
+The list also details the minimum DataMiner version to start using each option and, in case the feature has already been officially released in a later DataMiner version, the "Release version" when it becomes available. From that "Release version" onwards, the feature is active by default and any soft-launch configuration for the feature is ignored. As such, it is not necessary to remove a tag from *SoftLaunchOptions.xml* when the corresponding feature is officially released.
 
 ### AnomalyFeedback
 
@@ -59,7 +59,9 @@ Allows you to disable the ClusterEndpointsManager. This can prevent possible iss
 
 ### CorrectedDisplayKeyOnNaming
 
-  Takes exception values into account for display key generation.
+Takes exception values into account for display key generation. See [CorrectedDisplayKeyOnNaming soft-launch option](xref:UIComponentsTableDisplayKeys#correcteddisplaykeyonnaming-soft-launch-option)
+
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 10.0.11/9.6.0 [CU18]/10.0.0 [CU6]
 - **Estimated Release version**: To be determined
@@ -68,12 +70,16 @@ Allows you to disable the ClusterEndpointsManager. This can prevent possible iss
 
 Enables the Topology app in DataMiner Cube. Note that you also need specific protocol changes in order to benefit from this. See [Topology app configuration](xref:Topology_app_configuration).
 
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
+
 - **Minimum version**: 9.6.7
 - **Release version**: Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- RN 42221 -->
 
 ### DataAPI
 
 Enables Data API functionality and scripted connectors. This displays the Data Sources module in DataMiner Cube.
+
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 10.4.2/10.4.0<!-- RN 36588/38307/38234 -->
 - **Estimated Release version**: To be determined
@@ -83,13 +89,17 @@ Enables Data API functionality and scripted connectors. This displays the Data S
 
 ### Diagnostics
 
-Enable functionality to retrieve diagnostics from several DataMiner core processes.
+Enable functionality to retrieve diagnostics from several DataMiner core processes. This is currently not used.
+
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 9.6.3
 
 ### DirectViewRemoteDataUpdates
 
 Updates the values of direct view tables.
+
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 10.0.11
 - **Estimated release version**: To be determined
@@ -117,19 +127,20 @@ From DataMiner 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 onwards<!--RN 41436-->, this so
 
 In versions prior to 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1, this feature is disabled by default. If you want to test this feature for one DataMiner Cube session only, use the argument `SOFTLAUNCH_DYNAMICUNITS=Enabled`.
 
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
+
 - **Minimum version**: 10.0.12
 - **Release version**: 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 ([RN 41436](xref:Cube_Feature_Release_10.5.1#data-display-in-dataminer-cube-now-supports-dynamic-units-by-default-id-41436))
 
 ### Functions
 
-Enables the Virtual Functions module in Cube. This is a Cube-only feature that can only be activated per session with the argument `ENABLEFEATURE=FUNCTIONS`.
-
-- **Minimum version**: 10.0.10
-- **Release version**: To be determined
+This option enabled the Virtual Functions module in Cube. The module and related objects are **End of life** and should no longer be used.
 
 ### GenericInterface
 
 Provides access to additional data sources and operators for GQI in the Dashboards app and Low-Code Apps.
+
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 > [!IMPORTANT]
 > Requires an IIS and DataMiner restart.
@@ -155,7 +166,10 @@ Enables or disables the legacy Annotations module.
 - **Minimum version**: 10.1.10/10.2.0
 
 > [!NOTE]
-> The legacy Annotations module is disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id-37786)). If you want to keep on using this legacy module, before upgrading or uploading a 10.4.x upgrade package, set this soft-launch option to *true* (see [Activating SoftLaunch Options](xref:Activating_Soft_Launch_Options)), then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent.
+> The legacy Annotations module is disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id-37786)). If you want to keep on using this legacy module, before upgrading or uploading a 10.4.x upgrade package, set this soft-launch option to *true* (see [Activating SoftLaunch Options](xref:Activating_Soft_Launch_Options)), then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent. However, note that using Annotations is no longer possible from DataMiner 10.6.0/10.6.1 onwards.
+
+> [!IMPORTANT]
+> When you disable this option, all existing annotations will be removed, and you will no longer be able to access them.
 
 ### LegacyReportsAndDashboards
 
@@ -193,6 +207,8 @@ Enables the button panel component in the Dashboards app.
 
 Enables the grid component in the Dashboards app.
 
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
+
 - **Minimum version**: 10.2.12
 - **Release version**: 10.3.0 [CU10]/10.4.1 ([RN 37812](xref:Web_apps_Feature_Release_10.4.1#dashboards-app--low-code-apps-new-grid-and-timeline-components-id-33276-id-33287-id-34761-id-34948-id-37269-id-37699-id-37812))
 
@@ -206,6 +222,8 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 ### ReportsAndDashboardsGQIMaps
 
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
+
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 10.3.2
 - **Release version**: 10.5.4<!-- RN 42309 -->
@@ -225,6 +243,8 @@ Enables the Query Filter component in the Dashboards app.
 ### ReportsAndDashboardsScheduler
 
 Enables the Timeline component in the Dashboards app.
+
+This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 10.1.10
 - **Release version**: 10.3.0 [CU10]/10.4.1 ([RN 37812](xref:Web_apps_Feature_Release_10.4.1#dashboards-app--low-code-apps-new-grid-and-timeline-components-id-33276-id-33287-id-34761-id-34948-id-37269-id-37699-id-37812))

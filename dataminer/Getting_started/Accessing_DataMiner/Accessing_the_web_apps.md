@@ -35,29 +35,53 @@ To access the DataMiner landing page:
 
 1. On the landing page, select the app you want to open. See [Available web apps](#available-web-apps).
 
-   ![Landing page](~/dataminer/images/DataMiner_Landing_Page2.png)<br>*DataMiner landing page in DataMiner 10.5.9*
+   ![Landing page](~/dataminer/images/DataMiner_Landing_Page2.png)<br>*DataMiner landing page in DataMiner 10.5.11*
 
-In the top-left corner of the landing page, click the **DataMiner icon** or waffle icon (depending on your DataMiner version<!--RN 43024-->) to open a compact overview of the available web apps. From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, next to this icon, the **name of the DMS** is shown. In the case of a standalone DMA, the DMA name is shown instead.
+### The landing page header bar
 
-From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, you can customize the **DataMiner landing page theme**:
+![Landing page header bar](~/dataminer/images/Landing_page_header_bar.png)<br>*Landing page header bar in DataMiner 10.5.12*
 
-1. Add the argument `?showAdvancedSettings=true` to the landing page URL.
+The landing page header bar contains the following items, from left to right:
 
-1. Click the cogwheel button in the top-right corner of the page.
+- DataMiner icon or waffle icon (depending on your DataMiner version<!--RN 43024-->): Opens a compact overview of the available web apps.
 
-1. Select one of the available themes:
+- DataMiner System name: Available from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->. The name of the DMS is displayed. In the case of a standalone DMA, the DMA name is shown instead. Click this name to refresh the landing page.
 
-   - *Light* (Default)
+- ![Help](~/dataminer/images/Landing_page_help_icon.png) icon: Provides access to several handy pages (from DataMiner web 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- 43583 -->):
 
-   - *Dark*
+  - *Community*: Links to the DataMiner Dojo blog, a page where you can suggest new DataMiner features, and our Q&A forum.
 
-   - *System*
+  - *Documentation*: Links to the main page of the DataMiner documentation.
 
-## Available web apps
+  - *Status*: Displays the current status of the various DataMiner services.
+
+  - *Feedback*: Allows you to provide direct feedback on DataMiner.
+
+  - *Support*: Displays contact information for DataMiner Support.
+
+- User button: A button with the initials or an image of the current user. Click this button to open a menu that provides access to the following options:
+
+  - *About*: Displays information about DataMiner and your installed versions, e.g. web version and server version.
+
+  - *User settings*: Allows you to configure user-specific settings such as [customizing the landing page theme](#customizing-the-landing-page-theme) or changing your password. The user settings will only be available if at least one of the following conditions is met:
+
+    - The `?showAdvancedSettings=true` argument has been added to the landing page URL.
+
+    - You are able to change your password:
+
+      - In *System Center* > *Users*, the setting *User cannot change password* is disabled for your account.
+
+      - You have the [*Modules* > *System configuration* > *Security* > *Specific* > *Limited administrator* permission](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator).
+
+      - You are not logged in with external or delegated authentication.
+
+  - *Sign out*: Logs you out and returns you to the logon screen.
+
+### Available web apps
 
 The landing page provides access to the following web apps:
 
-![Landing page](~/dataminer/images/DataMiner_Landing_Page.png)<br>*DataMiner landing page in DataMiner 10.5.9*
+![Landing page](~/dataminer/images/DataMiner_Landing_Page.png)<br>*DataMiner landing page in DataMiner 10.5.11*
 
 - (1) [Dashboards app](xref:newR_D): Use this app to create, manage, and view dashboards that provide insights into your monitored system.
 
@@ -78,6 +102,22 @@ To access a **compact overview of all available web apps**:
 - From within a web app: Click the waffle icon in the top-left corner of the app.
 
 This overview allows you to easily switch between web apps. Additionally, from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, a quick filter box is available to help you narrow down the apps, and a *dataminer.services* button provides direct access to the dataminer.services home page.
+
+### Customizing the landing page theme
+
+From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, you can customize the DataMiner landing page theme:
+
+1. Add the argument `?showAdvancedSettings=true` to the landing page URL.
+
+1. Click the user button in the top-right corner of the page and select *User settings*. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43966-->, click the cogwheel button in the top-right corner of the page.
+
+1. Select one of the available themes:
+
+   - *Light* (Default)
+
+   - *Dark*
+
+   - *System*
 
 ## Installing a web app as a standalone app
 

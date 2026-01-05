@@ -147,6 +147,10 @@ items:
             topicUid: Cleaning_up_unused_files_on_a_DMA
           - name: Synchronizing data between DataMiner Agents
             topicUid: Synchronizing_data_between_DataMiner_Agents
+      - name: Advanced configuration
+        items:
+          - name: Disabling automatic NATS configuration
+            topicUid: Disabling_automatic_NATS_config
       - name: Running BPA tests
         topicUid: Running_BPA_tests
         items:
@@ -160,12 +164,16 @@ items:
             topicUid: BPA_Check_Deprecated_DLL_Usage
           - name: Check Time Server
             topicUid: BPA_Check_Time_Server
+          - name: Cube CRL Freeze
+            topicUid: BPA_Cube_CRL_Freeze
           - name: Database Security
             topicUid: BPA_Database_Security
           - name: DataMiner Agent Minimum Requirements
             topicUid: BPA_Minimum_Requirements_Check
           - name: Firewall Configuration
             topicUid: BPA_Firewall_Configuration
+          - name: Health Metrics
+            topicUid: BPA_HealthMetrics
           - name: HTTPS Configuration
             topicUid: BPA_Https_Configuration
           - name: Large Alarm Trees
@@ -210,6 +218,8 @@ items:
             topicUid: Preparing_the_two_DataMiner_Agents
           - name: Failover configuration in Cube
             topicUid: Failover_configuration_in_Cube
+          - name: Switching Failover from virtual IP to hostname
+            topicUid: Switching_to_Failover_with_shared_hostname
           - name: Advanced Failover options
             topicUid: Advanced_Failover_options
           - name: DataMiner Failover on Amazon Web Services
@@ -305,6 +315,8 @@ items:
                     topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
                   - name: Decommissioning WSL
                     topicUid: Decommissioning_WSL
+                  - name: Determining the health of the dedicated clustered storage
+                    topicUid: Determining_the_health_of_the_clustered_storage
               - name: Configuring storage per DMA
                 topicUid: Configuring_storage_per_DMA
                 items:
@@ -438,6 +450,8 @@ items:
             topicUid: User_groups
           - name: Types of users
             topicUid: Types_of_users
+          - name: The Users / Groups module in System Center
+            topicUid: Accessing_security_in_System_Center
           - name: Encryption in DataMiner
             topicUid: Encryption_in_DataMiner
           - name: Cloud connectivity and security
@@ -451,16 +465,12 @@ items:
           - name: Managing users
             topicUid: Managing_users
             items:
-              - name: Accessing security in System Center
-                topicUid: Accessing_security_in_System_Center
-              - name: Opening a user card
-                topicUid: Opening_a_user_card
+              - name: Viewing user information
+                topicUid: Viewing_user_information
               - name: Adding a user
                 topicUid: Adding_a_user
               - name: Deleting a user
                 topicUid: Deleting_a_user
-              - name: Viewing user information
-                topicUid: Viewing_user_information
               - name: Editing a user's details
                 topicUid: Editing_a_users_details
               - name: Changing group membership of a user

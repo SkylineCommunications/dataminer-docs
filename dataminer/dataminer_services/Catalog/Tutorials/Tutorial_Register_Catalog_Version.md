@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_Register_Catalog_Version
+reviewer: Alexander Verkest
 ---
 
 # Registering a new version of a connector in the Catalog

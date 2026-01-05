@@ -18,7 +18,7 @@ To do so:
 
 1. In the *Take Ownership* window, enter a comment explaining why you are taking ownership of the alarm event.
 
-When you take ownership of an alarm event, a new alarm record is added to the life cycle of that alarm event, where the *Alarm Type* property has been set to "Acknowledged". The *Owner* property of the new alarm records that are added to the life cycle of that alarm will contain your user name.
+When you take ownership of an alarm event, a new alarm record is added to the lifecycle of that alarm event, where the *Alarm Type* property has been set to "Acknowledged". The *Owner* property of the new alarm records that are added to the lifecycle of that alarm will contain your user name.
 
 > [!NOTE]
 >
@@ -36,7 +36,7 @@ To do so:
 > [!NOTE]
 > By default, you can only release ownership of alarm events that you currently own. However, if you have been granted the permission *Release ownership of another user*, you are also allowed to release ownership of alarms that are owned by other users.
 
-When you release ownership of an alarm event, an alarm record will be added to the life cycle of that alarm event. Both the Alarm Type property and the User Status property of that record will be set to "Unresolved". The Owner property of that record and all subsequent records added to the life cycle of the alarm will be set to "System" until someone else takes ownership of the alarm.
+When you release ownership of an alarm event, an alarm record will be added to the lifecycle of that alarm event. Both the Alarm Type property and the User Status property of that record will be set to "Unresolved". The Owner property of that record and all subsequent records added to the lifecycle of the alarm will be set to "System" until someone else takes ownership of the alarm.
 
 ## Example of ownership transitions
 

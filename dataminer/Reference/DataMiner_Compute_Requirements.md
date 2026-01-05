@@ -36,7 +36,7 @@ As a rule, between 16 GB and 128 GB RAM is needed, although 128 GB is an excepti
 
 ### Disk
 
-DataMiner itself, without taking the database for persistent storage into account, does not require a disk with huge capacity. However, we do recommend using an SSD as we regularly write to files. We recommend a 250 GB SSD, ideally a hot-swappable RAID1 pair.
+DataMiner itself, without taking the database for persistent storage into account, does not require a disk with huge capacity. However, we do recommend using an SSD as we regularly write to files. We recommend a 128 GB SSD, ideally a hot-swappable RAID1 pair.
 
 In addition, the disk throughput is of vital importance. The following minimum requirements apply:
 
@@ -72,7 +72,8 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 | DataMiner version       | Required .NET (Framework) versions        |
 |-------------------------|-------------------------------------------|
-| DataMiner Feature Release 10.4.10 and higher<br>DataMiner Main Release 10.5.0 and higher<br>DataMiner Main Release 10.4.0 [CU7] and higher<br>DataMiner Main Release 10.3.0 [CU19] and higher<!--RN 38015, RN 38710, RN 40498--> | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) |
+| DataMiner Feature Release 10.6.1 and higher<br>DataMiner Main Release 10.6.0 and higher<br>DataMiner Main Release 10.5.0 [CU10] and higher<br><!--RN 44121--> | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631), .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)), and NET 10.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)) |
+| DataMiner Feature Release 10.4.10 to 10.5.12<br>DataMiner Main Release 10.5.0 to 10.5.0 [CU9]<br>DataMiner Main Release 10.4.0 [CU7] and higher<br>DataMiner Main Release 10.3.0 [CU19] and higher<!--RN 38015, RN 38710, RN 40498--> | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) |
 | DataMiner Feature Release 10.4.3 to 10.4.9<!--RN 37969--><br>DataMiner Main Release 10.4.0 to 10.4.0 [CU6]<br>DataMiner Main Release 10.3.0 [CU12] to 10.3.0 [CU18] | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) and .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) |
 | DataMiner Feature Release 10.3.9 to 10.4.2 | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) |
 | DataMiner Feature Release 10.3.3 to 10.3.8<br>DataMiner Main Release 10.3.0 [CU3] to 10.3.0 [CU11] | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631), [.NET 5.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-5.0.17-windows-hosting-bundle-installer), and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) |
@@ -82,8 +83,16 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 > [!NOTE]
 >
+> - If you install DataMiner using the [v5.0 Installer](xref:Installing_DM_using_the_DM_installer), the required .NET (Framework) versions will be **included in the installation**, so there is no need to install these separately.
 > - We recommend always upgrading to the latest .NET Framework version.
-> - Major .NET versions are not cross-compatible, which means that you always need to install the appropriate version mentioned above. If you are for example using a DataMiner version that requires .NET 8.0, this will not work if only .NET 9.0 is installed, so in that case you will need to install .NET 8.0 as well.
+> - Multiple .NET versions can run on the same machine without any problem. You can for example have .NET 7, .NET 8, and .NET 9 installed at the same time. In fact, major .NET versions are not cross-compatible, which means that if .NET 8.0 is required, it is not sufficient to only have .NET 9.0 installed, but you will need to install .NET 8.0 as well.
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>Are you not sure which versions you have installed? Take a look at <a href="https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed" style="color: #657AB7;">Microsoft's guide</a> on this topic. You can also consult their <a href="https://learn.microsoft.com/en-us/dotnet/framework/install/" style="color: #657AB7;">.NET Framework installation guide</a>.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
 
 ### Microsoft Visual C++
 

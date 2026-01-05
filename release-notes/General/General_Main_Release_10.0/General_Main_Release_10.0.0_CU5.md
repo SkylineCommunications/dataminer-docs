@@ -157,7 +157,7 @@ When an aggregation alarm was forwarded, in some cases, OID 1.3.6.1.4.1.8813.1.1
 
 #### Run-time errors on elements that were partially included in a service \[ID 26376\]
 
-In some cases, processing service additions, service updates and dynamic service inclusions would cause run-time errors on elements that were partially included in a service.
+In some cases, processing service additions, service updates and dynamic service inclusions would cause runtime errors on elements that were partially included in a service.
 
 Also, service impact indications could in some cases be displayed incorrectly.
 
@@ -283,7 +283,7 @@ When, in the *SNMP forwarding* section of *System Center*, you configured an SN
 
 #### DataMiner Cube - Multiple set: List of table indices would not be populated when there was no associated read parameter \[ID 26593\]
 
-When you performed a multiple set (i.e. an update of multiple parameter values in one go), up to now, the drop-down box listing the table indices would incorrectly not be populated when there was no associated read parameter (e.g. write parameters linked to buttons displayed in table cells).
+When you performed a multiple set (i.e. an update of multiple parameter values in one go), up to now, the dropdown box listing the table indices would incorrectly not be populated when there was no associated read parameter (e.g. write parameters linked to buttons displayed in table cells).
 
 #### DataMiner Cube - EPM: KPI list would incorrectly display long column names that included the table name \[ID 26599\]
 
@@ -418,9 +418,9 @@ When you right-clicked a trend graph, in some cases, the Curves submenu would be
 
 When a line chart component was configured to display columns from different tables of the same element without grouping, in some cases, a “Cannot read property 'indexof' of undefined” error could be thrown.
 
-#### CSV export of table parameter trend graph empty for custom data set other than 'Real-time' \[ID 26818\]
+#### CSV export of table parameter trend graph empty for custom dataset other than 'Real-time' \[ID 26818\]
 
-When a trend graph of a table cell for which the display key was different from the primary key was exported to CSV, and a custom data set other than "Real-time" was selected, it could occur that the export was empty.
+When a trend graph of a table cell for which the display key was different from the primary key was exported to CSV, and a custom dataset other than "Real-time" was selected, it could occur that the export was empty.
 
 #### DataMiner Cube - Trending: Exception value displayed incorrectly in trend graph legend \[ID 26824\]
 

@@ -41,9 +41,9 @@ Currently, DIS is using [Validator version 1.1.1](https://github.com/SkylineComm
 
 ### Enhancements
 
-#### Life cycle policy: DataMiner 10.2 is now the minimum supported version [ID 39148]
+#### Lifecycle policy: DataMiner 10.2 is now the minimum supported version [ID 39148]
 
-DataMiner 10.2 has become the minimum supported version for DIS and CI/CD. See [DataMiner support life cycle policy](xref:Software_support_life_cycles#dataminer-support-life-cycle-policy).
+DataMiner 10.2 has become the minimum supported version for DIS and CI/CD. See [DataMiner support lifecycle policy](xref:Software_support_life_cycles#dataminer-support-lifecycle-policy).
 
 - When you create new projects (scripts, QActions, etc.), these will now use Microsoft .NET Framework 4.8.
 

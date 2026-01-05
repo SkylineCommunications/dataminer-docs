@@ -17,10 +17,8 @@ The following keyboard shortcuts are available in Cube:
   | F1                        | Open the DataMiner Help.                                                                                      |
   | Tab                       | Move the focus to the next item in the UI. This navigation occurs from left to right, and from top to bottom. |
   | Shift + Tab               | Go to the previous item in the UI.                                                                            |
-  | Ctrl + Tab                | In the DataMiner Cube desktop app, go to the next main UI component (e.g. Card, Surveyor, Alarm Console).     |
-  | F6                        | In the DataMiner Cube browser app, go to the next main UI component (e.g. Card, Surveyor, Alarm Console).     |
-  | Ctrl + Shift + Tab        | In the DataMiner Cube desktop app, go to the previous main UI component (e.g. Card, Surveyor, Alarm Console). |
-  | Shift + F6                | In the DataMiner Cube browser app, go to the previous main UI component (e.g. Card, Surveyor, Alarm Console). |
+  | Ctrl + Tab                | Go to the next main UI component (e.g. Card, Surveyor, Alarm Console).                                        |
+  | Ctrl + Shift + Tab        | Go to the previous main UI component (e.g. Card, Surveyor, Alarm Console).                                    |
   | Alt + Left                | When on a card, go back to the previous card.                                                                 |
   | Alt + Right               | When on a card, go to the next card.                                                                          |
   | "+" and "-"               | When in a trend graph, zoom in/out.                                                                           |
@@ -48,8 +46,8 @@ The following keyboard shortcuts are available in Cube:
   | Control | Shortcut | Action |
   |--|--|--|
   | Checkbox | Space | Select or clear the checkbox. |
-  | Drop-down box | Alt + Down arrow | Open drop-down box. |
-  |  | Down/ Up arrow | Select next/previous item in the drop-down box. |
+  | Dropdown box | Alt + Down arrow | Open dropdown box. |
+  |  | Down/ Up arrow | Select next/previous item in the dropdown box. |
   | Table on data page of a card | Arrow keys | Navigate from cell to cell. |
   |  | Enter | Drill down. |
   |  | F2 | Edit the selected cell. |

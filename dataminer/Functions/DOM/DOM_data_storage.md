@@ -77,7 +77,7 @@ Follow these steps to remove the relevant indices using Elasticvue:
 
 1. Select all six indices by selecting the box next to each name.
 
-1. Click the green *Bulk Actions* button in the lower left corner and select *Delete 6 Indices*.
+1. Click the green *Bulk Actions* button in the lower-left corner and select *Delete 6 Indices*.
 
 1. Verify the indices listed in the confirmation box and click *OK* if they are correct.
 

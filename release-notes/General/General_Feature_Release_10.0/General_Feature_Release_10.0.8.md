@@ -241,7 +241,7 @@ In the TicketingHelper class and TicketingGatewayHelper, the “AttachmentsHelpe
 
 When you launch an Automation script, you can choose to select the “After executing a SET command” option. If you do so, every time the script performs a parameter or property update, it will wait for a return value indicating whether or not the update was successful.
 
-From now on, the “NoCheckingSets” run-time flag will allow this option to be changed while a script is being run.
+From now on, the “NoCheckingSets” runtime flag will allow this option to be changed while a script is being run.
 
 ### DMS Maps
 
@@ -284,9 +284,9 @@ Custom base layers can be defined in TilesServer.BaseLayers.BaseLayer tags. Thos
 
 #### Discreet parameters now supported in EPM search chains \[ID 25862\]
 
-When a filter in an EPM search chain refers to a column parameter of type discreet, the filter will be displayed as a drop-down box rather than a text box.
+When a filter in an EPM search chain refers to a column parameter of type discreet, the filter will be displayed as a dropdown box rather than a text box.
 
-If the filter is used for multiple tables, it will be displayed as a drop-down box as soon as one of the columns represents a discreet parameter.
+If the filter is used for multiple tables, it will be displayed as a dropdown box as soon as one of the columns represents a discreet parameter.
 
 When multiple columns have different discreet values, all these values will be displayed as long as they have a unique value and display string.
 
@@ -353,7 +353,7 @@ The DataMiner Installer now targets Microsoft .NET Framework 4.6.2.
 
 From now on, when you launch the SLLogCollector tool, the following options will be selected by default:
 
-- Include memory dump (when run-time errors have been found on the system)
+- Include memory dump (when runtime errors have been found on the system)
 - Save to SLLogCollector folder on desktop
 
 #### Logs will now include Cassandra yaml file parsing errors \[ID 25809\]
@@ -448,7 +448,7 @@ Together with this fix, the following changes have also been made:
 
 A number of small fixes have been made, including the following:
 
-- In some cases, a run-time error could occur in “Database Offload Thread \[local\]” when a DataMiner startup took too long.
+- In some cases, a runtime error could occur in “Database Offload Thread \[local\]” when a DataMiner startup took too long.
 
 - SLElement could leak memory when registering a link with an empty filter or when initializing a parameter group.
 
@@ -570,9 +570,9 @@ When you click a shape with an alarm filter in an *AlarmSummary* data item and t
 
 In some cases, when the tab page did not exist yet and the Alarm Console was collapsed, the tab page was created but the Alarm Console would incorrectly not be opened.
 
-#### Interactive Automation scripts: Some drop-down boxes would unnecessarily trigger a refresh of the UI \[ID 25902\]
+#### Interactive Automation scripts: Some dropdown boxes would unnecessarily trigger a refresh of the UI \[ID 25902\]
 
-In some cases, drop-down boxes would unnecessarily trigger a refresh of the UI.
+In some cases, dropdown boxes would unnecessarily trigger a refresh of the UI.
 
 #### Problem caused by missing \<BackupSettings> tag in MaintenanceSettings.xml \[ID 25908\]
 

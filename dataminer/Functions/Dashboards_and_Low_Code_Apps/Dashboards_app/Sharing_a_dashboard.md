@@ -24,11 +24,11 @@ There are **three main ways** to share a dashboard:
 
   You can automatically revoke dashboard access by configuring an expiration date.
 
-- [Send a static PDF report by email](#sharing-via-email-report).
+- [Send a static report by email](#sharing-via-email-report).
 
   This option is useful when you want to share a **read-only snapshot version** of the dashboard.
 
-  The recipient does not need any account or access to the DataMiner System. The PDF is immediately available in their email inbox.
+  The recipient does not need any account or access to the DataMiner System. The report is immediately available in their email inbox.
 
 ![Sharing](~/dataminer/images/Dashboard_Sharing.png)
 *Dashboard sharing in DataMiner 10.5.9*
@@ -60,7 +60,7 @@ To generate a shareable URL:
 1. Share the copied URL from your clipboard in your preferred way.
 
 > [!NOTE]
-> Dashboards with [restricted user access](xref:Changing_dashboard_settings) cannot be shared yet.
+> Dashboards with [restricted user access](xref:Configuring_dashboard_security) can only be viewed by users that have access to them.
 
 ## Sharing a live dashboard via cloud share
 
@@ -94,7 +94,7 @@ You can set an optional expiration date to stop sharing automatically.
 
 > [!NOTE]
 >
-> - Dashboards with [restricted user access](xref:Changing_dashboard_settings) cannot be shared yet.
+> - Dashboards with [restricted user access](xref:Configuring_dashboard_security) can be shared from DataMiner 10.6.0/10.6.1 onwards.<!-- RN 44067 -->
 > - Dashboards containing certain components cannot be shared yet: spectrum components, Maps, SRM components (service definition and resource usage line graph), pivot tables, queries linked to data, and visualizations based on query data (e.g. node edge graph, table). For dashboards with queries that have the *Update data* setting enabled, sharing is supported from DataMiner 10.2.0 [CU4]/10.2.6 onwards. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
 
 ### Managing or deleting a cloud share
@@ -111,6 +111,14 @@ You can set an optional expiration date to stop sharing automatically.
 
 ## Sharing via email report
 
-If you only want to share a **static version** of a dashboard, use the steps described under [Sharing a dashboard as a PDF report from the Dashboards app](xref:Sharing_PDF_report_from_Dashboards_app).
+If you only want to share a **static version** of a dashboard, use the steps described under [Sharing a dashboard via an email report from the Dashboards app](xref:Sharing_report_from_Dashboards_app).
 
-Recipients will get the dashboard as a **PDF attachment**. They **do not need any account** or access to the DataMiner System.
+Recipients will get the dashboard as a **report attachment** (PDF, HTML, or CSV). They **do not need any account** or access to the DataMiner System.
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>
+    More of a visual learner? Watch <a href="xref:Sharing_report_from_Dashboards_app" style="color: #657AB7;">this short video</a> to see how to share a dashboard via email report.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>

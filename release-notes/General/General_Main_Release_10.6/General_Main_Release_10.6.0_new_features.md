@@ -9,16 +9,18 @@ uid: General_Main_Release_10.6.0_new_features
 
 ## Highlights
 
-- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314-id-42535-id-43196)
+- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196] [ID 43567] [ID 43793]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314-id-42535-id-43196-id-43567-id-43793)
 
 ## New features
 
-#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196]
+#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196] [ID 43567] [ID 43793]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 <!-- RN 42314: MR 10.6.0 - FR 10.5.4 -->
 <!-- RN 42535: MR 10.6.0 - FR 10.5.5 -->
 <!-- RN 43196: MR 10.6.0 - FR 10.5.9 -->
+<!-- RN 43567: MR 10.6.0 - FR 10.5.11 -->
+<!-- RN 43793: MR 10.6.0 - FR 10.5.11 -->
 
 From now on, you can enable the Swarming feature in a DataMiner System in order to be able to swarm [elements](xref:SwarmingElements) from one DataMiner Agent to another Agent in the same cluster. Prior to this, this feature is available in preview if the *Swarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
@@ -37,6 +39,8 @@ When you create or update an element in DataMiner Cube, you will be able to indi
 If you try to swarm an element of which the *Block Swarming* option is set to true, then the error message *Element is not allowed to swarm (blocked)* will be displayed.
 
 In DataMiner Cube, this *Block Swarming* option will only be visible if Swarming is enabled in the DataMiner System.
+
+When an element is swarmed to the DataMiner Agent that is hosting it already, an unload request will be broadcasted to all DataMiner Agents in the cluster, making sure that no other DataMiner Agent is incorrectly hosting it.
 
 > [!IMPORTANT]
 >
@@ -70,7 +74,8 @@ Swarming is not available in the following DataMiner Systems:
 
 > [!NOTE]
 >
-> - Currently, Swarming is limited to [basic elements](xref:SwarmingElements). Support for other types of elements will be added in future versions.
+> - Currently, Swarming is limited to [basic elements](xref:SwarmingElements) and parent DVE and Virtual Function elements. Support for other types of elements will be added in future versions.
+> - If you swarm a parent DVE or parent Virtual Function element, all child elements will then automatically be swarmed together with the parent element. Note that parent or child elements that are part of a redundancy group cannot be swarmed. Also, a parent element cannot be swarmed if one of its child elements is part of a redundancy group.
 > - [Prerequisite checks](xref:EnableSwarming#running-a-prerequisites-check) are in place to prevent the enabling of the Swarming feature when non-supported objects are present. Where possible, you will also be prevented from configuring or creating these on a Swarming-enabled system.
 
 ##### Required user permissions
@@ -83,7 +88,7 @@ To swarm an element, users will also need config rights on the element.
 
 ##### Swarming elements
 
-When Swarming has been enabled, you can swarm elements **in DataMiner Cube** via *System Center* > *Agents* > *Status*. On that page, the *Swarming* button will be displayed instead of the *Migration* button. Clicking the button will open a window where you can select the elements you want to swarm and the destination DMA.
+When Swarming has been enabled, you can swarm elements **in DataMiner Cube** via *System Center* > *Agents* > *Status*. On that page, the *Swarming* button will be displayed instead of the *Migration* button. Clicking the button will open a window where you can select the elements you want to swarm and the destination DMA. Note that child DVE elements and child Virtual Function elements will not appear in this window as they automatically follow their parent element.
 
 Swarming elements is also possible **via Automation, QActions or other (external) tools**. See the following Automation script example, in which two input parameters are defined to retrieve the element key and the target agent ID:
 
@@ -444,7 +449,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320] [ID 43440] [ID 43686] [ID 43720] [ID 43769] [ID 43797] [ID 43853] [ID 43934] [ID 44096] [ID 44135] [ID 44180]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
@@ -456,14 +461,34 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 42480: MR 10.6.0 - FR 10.5.5 -->
 <!-- RNs 42602: MR 10.6.0 - FR 10.5.6 -->
 <!-- RNs 43320: MR 10.6.0 - FR 10.5.9 -->
+<!-- RNs 43440: MR 10.6.0 - FR 10.5.11 -->
+<!-- RNs 43686: MR 10.6.0 - FR 10.5.11 -->
+<!-- RNs 43720: MR 10.6.0 - FR 10.5.12 -->
+<!-- RNs 43769: MR 10.6.0 - FR 10.5.12 -->
+<!-- RNs 43797: MR 10.6.0 - FR 10.5.11 -->
+<!-- RNs 43853: MR 10.6.0 - FR 10.5.12 -->
+<!-- RNs 43934: MR 10.6.0 - FR 10.5.12 -->
+<!-- RNs 44096: MR 10.6.0 - FR 10.6.1 -->
+<!-- RNs 44135: MR 10.6.0 - FR 10.6.1 -->
+<!-- RNs 44180: MR 10.6.0 - FR 10.6.1 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
 Whenever the relation is broken, RAD will detect this and generate suggestion events for each parameter instance in the group where a broken relation was detected. These suggestion events will then be grouped into a single incident so that it is shown on a single line in the Alarm Console. When you clear such an incident, all its base alarms (i.e. the suggestion events created by Relational anomaly detection) will also be cleared.
 
+All relational anomalies detected by the Relational Anomaly Detection (RAD) feature will be stored in the database\*.
+
+*\*If you choose not to use the recommended Storage as a Service (STaaS) setup but instead choose self-managed storage, you also need to set up an OpenSearch or Elasticsearch indexing database in your DMS.*
+
 ##### Configuring the parameter groups
 
 All configuration settings are stored in the *ai_rad_models_v2* database table, and have to be managed using either the *RAD Manager* app or the RAD API.
+
+> [!NOTE]
+>
+> - A RAD parameter group will be hosted on the DMA on which it was created, even after some of the parameters in the group were swarmed to other DMAs.
+> - Whenever you delete an element that is being used in one or more RAD parameter groups, an error will immediately get logged, and the parameter groups containing parameters from that deleted element will be marked as "not monitored".
+> - When SLAnalytics starts up, it checks whether the configured relational anomaly groups are still valid. In other words, it checks whether the elements and parameters in those groups still exist and are still trended. Note that, if at least one parameter in a group is no longer valid, and if the group in question is a shared model group with multiple subgroups, SLAnalytics will still start the monitoring of the subgroups in which all parameters are still valid.
 
 ##### Average trending
 
@@ -481,25 +506,29 @@ Under certain conditions, Relational anomaly detection (RAD) is able to detect r
 
 ##### Limitations
 
-- RAD is only able to monitor parameters on the local DataMiner Agent. This means that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
-
-- Some parameter behavior will cause RAD to work less accurately. For example, if a parameter only reacts on another parameter after a certain time, then RAD will produce less accurate results.
+Some parameter behavior will cause RAD to work less accurately. For example, if a parameter only reacts on another parameter after a certain time, then RAD will produce less accurate results.
 
 ##### Messages
 
-The following API messages can be used to create, retrieve and remove RAD parameter groups:
+The following API messages can be used to create, retrieve, migrate, and remove RAD parameter groups:
 
 | Message | Function |
 |---------|----------|
-| AddRADParameterGroupMessage     | Creates a new RAD parameter group.<br>If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated. |
-| GetRADDataMessage               | Retrieves the anomaly scores over a specified time range of historical data. |
+| AddRADParameterGroupMessage     | Creates a new RAD parameter group.<br>- It is not allowed to have two groups with the same name, even when they are hosted by different agents.<br>- If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated.<br>When you add or update a relational anomaly group by means of an `AddRADParameterGroupMessage`, you can pass along the training configuration of the model that will be used by that group.<br>- When you added a group, the configuration you passed along will be used for the initial training of the model.<br>- When you updated a group, the configuration you passed along will be used to retrain the model. |
+| GetAllRelationalAnomaliesMessage | Retrieves all relational anomalies within a given time frame, regardless of the RAD parameter group or parameter they were detected on.<br>Note: This message will only return anomalies detected on parameters to which the user has access. |
+| GetRADDataMessage               | Retrieves the anomaly scores over a specified time range of historical data.<br>When the anomaly scores for a particular relational anomaly (sub)group and region are retrieved twice within a 5-minute window, SLAnalytics will not recalculate the scores. Instead, it will return the scores from the cache. |
 | GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular RAD parameter group.<br>The response to a `GetRADParameterGroupInfoMessage` includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging. |
-| GetRADParameterGroupsMessage    | Retrieves a list of all RAD parameter groups that have been configured. |
+| GetRADParameterGroupsMessage    | Retrieves a list of all RAD parameter groups that have been configured across all agents in the cluster. |
+| GetRADSubgroupInfoMessage       | Retrieves all configuration information for a particular RAD parameter subgroup by subgroup ID. |
+| GetRADSubgroupModelFitMessage   | Retrieves the model fit score of a RAD parameter subgroup.<br>The model fit score, ranging from 0 to 1, indicates how well the relational behavior of a subgroup is captured by the shared model trained across multiple subgroups:<br>- Higher scores suggest that the subgroup's behavior aligns well with the shared model.<br>- Lower scores indicate that the subgroup's behavior deviates from the patterns learned by the shared model.<br>The model fit score is derived from the evolution of anomaly scores over time for the subgroup in question. In general, subgroups with consistently high anomaly scores tend to have lower model fit scores, reflecting poor alignment with the shared relational model. |
+| GetRelationalAnomaliesMessage   | Retrieves relational anomalies detected in the past for a particular parameter during a specified time range. |
+| MigrateRADParameterGroupMessage | Migrates a RAD parameter group to a specific DataMiner Agent. This new DataMiner Agent will then be responsible for building, maintaining, and executing the anomaly detection model of the RAD parameter group in question.<br>Note: A RAD parameter group will be migrated automatically when its parameters are hosted by elements that are swarmed from one DataMiner Agent to another. The RAD parameter group will then be migrated to the DataMiner Agent hosting the majority of its parameters. |
 | RemoveRADParameterGroupMessage  | Deletes a RAD parameter group. |
 | RetrainRADModelMessage          | Retrains the RAD model over a specified time range. |
 
 > [!NOTE]
 >
+> - These messages do not have to be sent to the agent monitoring the parameters in question. Each message will automatically be forwarded to the correct agent based on the name of the parameter group. If the agent could not be determined, an exception will be thrown.
 > - Names of RAD parameter groups will be processed case-insensitive.
 > - When a Relational Anomaly Detection (RAD) parameter group is deleted, all open suggestion events associated with that parameter group will automatically be cleared.
 > - Instances of (direct) view column parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will automatically be translated to the base table parameters.
@@ -661,7 +690,7 @@ To define that the value of a particular parameter should be used as context ID 
 
 If the parameter is not initialized or is set to an empty string, the default parameter value will be used (i.e. an empty string).
 
-The context name and context ID can be changed at run-time, and are not saved by default. When the element is restarted, the parameter data will be lost unless the `save` attribute of the parameter was set to true (e.g. `<Param id="1" save="true">`).
+The context name and context ID can be changed at runtime, and are not saved by default. When the element is restarted, the parameter data will be lost unless the `save` attribute of the parameter was set to true (e.g. `<Param id="1" save="true">`).
 
 #### Automation scripts: Generating information events when editing a connection in a QAction [ID 42783]
 
@@ -831,7 +860,7 @@ The `DomInstanceNetworkAttachmentSettings` class contains the following properti
 >
 > - When a DOM module is configured to save attachments to a network share, the system will validate whether the user creating/updating the `ModuleSettings` has permission to access the credentials. Once this is set up, any user that has permissions to create or update a `DomInstance` can save attachments to the network share under the configured user.
 > - When a DOM module is configured to save attachments to a network share, no migration is done of existing attachments. They will continue to exist in the `C:\Skyline DataMiner\Documents` folder, but will no longer work. You can copy them over or move them to the network share; the folder structure is the same. Likewise, when removing the configuration to save attachments to a network share, no migration is done of attachments available on the previously configured network share.
-> - By default, the size of the attachments is limited to 20 MB. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#documentsmaxsize).
+> - By default, the size of the attachments is limited to 20 MB. See [Documents.MaxSize](xref:MaintenanceSettings.Documents.MaxSize).
 
 #### SLNet: 'TraceId' property added to ClientRequestMessage & extended logging [ID 43187]
 
@@ -887,11 +916,11 @@ The logging of a DOM manager will now also contain a line indicating the start o
 2025/07/02 15:05:11.110|SLNet.exe|HandleStatusTransitionRequest|INF|3|269|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Handling status transition with ID 'new_to_closed' for instance with ID '1ff720a3-0aa2-4548-8b51-d8b975e19ea4'.
 ```
 
-#### gRPC now used by default for communication between DataMiner Agents [ID 43190] [ID 43260] [ID 43305] [ID 43331] [ID 43435] [ID 43506]
+#### gRPC now used by default for server-server and server-client communication [ID 43190] [ID 43260] [ID 43305] [ID 43331] [ID 43435] [ID 43506]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-Up to now, .Net Remoting was used by default for communication between DataMiner Agents, though it was possible to set gRPC as the default instead (either by adding *Redirect* tags in DMS.xml or by disabling .NET Remoting in *MaintenanceSettings.xml*). Now gRPC will be the default instead, which means that the *EnableDotNetRemoting* setting in *MaintenanceSettings.xml* is now by default set to *false*.
+Up to now, .Net Remoting was used by default for communication between DataMiner Cube and a DataMiner Agent as well as between DataMiner Agents, though it was possible to set gRPC as the default instead (either by adding *Redirect* tags in *DMS.xml* or by disabling .NET Remoting in *MaintenanceSettings.xml* for server-server communication, and by adjusting *ConnectionSettings.txt* for server-client communication). Now gRPC will be the default instead. This means that the *EnableDotNetRemoting* setting in *MaintenanceSettings.xml* is now by default set to *false*, and the connection type in *ConnectionSettings.txt* is now by default set to *GRPCConnection*.
 
 When you upload an upgrade package that includes this change, the *VerifyGRPCConnection* prerequisite check will run to verify whether all DataMiner Agents in the cluster are ready to switch to using gRPC as the default communication type. This check will fail in case a possible configuration issue or connectivity issue is detected. For details, refer to [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite).
 
@@ -1016,3 +1045,249 @@ If the hostname cannot be resolved to an IP address, an error alarm with the fol
 Example:
 
 `Could not resolve destination host to an IP: polling host=localhost123, or failed to set the destination address. Host to IP failure. Error : 11001. [WSAHOST_NOT_FOUND]`
+
+#### DataMiner upgrade: New VerifyOSVersion prerequisite will block upgrades on unsupported OS versions [ID 43356]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+When a DataMiner upgrade is being performed, from now on, the new *VerifyOSVersion* prerequisite will check whether the DataMiner version in the upgrade package supports the version of the operating system that is installed on the DataMiner Agent. If not, the upgrade will be aborted, and the user will be asked to upgrade the operating system.
+
+> [!NOTE]
+> Microsoft no longer supports OS versions older than Windows Server 2016 or Windows 10. Hence, these versions will not pass the above-mentioned OS version check.
+
+#### DataMiner Object Models: Definition-level security [ID 43380] [ID 43589]
+
+<!-- MR 10.6.0 - FR 10.5.10 -->
+
+It is now possible to configure DOM instance security based on the DOM definitions the instances are linked to. In other words, you will now be able to configure which DataMiner user groups should have access to the DOM instances of a certain DOM definition.
+
+The following important changes have been made:
+
+- Only users who have been granted the *Modules > System configuration > Object Manager > Module Settings* user permission will be allowed to create, update, and delete DOM configuration objects (i.e. section definitions, DOM definitions, DOM behavior definitions, and DOM templates). This means that, if you want to deploy or change a DOM model, you will now need this permission.
+
+- The DOM module settings now include a new `LinkSecuritySettings` configuration object that will allow you to link a DataMiner user group to a DOM definition by ID. This object contains a collection of `GroupLink` objects, each containing the following properties:
+
+  - `GroupName` (string) : The name of the DataMiner user group
+  - `DomDefinitionReferences` (List\<DomDefinitionReference\>) : The list of references to the DOM definitions linked to the user group specified in `GroupName`.
+
+  > [!NOTE]
+  > Reinitialize the DOM manager each time you have updated the DOM module settings.
+
+##### General behavior
+
+- When no `GroupLink` objects are defined, definition-level security will not be enabled, but users who want to make changes to the DOM configuration settings will need *Modules > System configuration > Object Manager > Module Settings* permission to do so.
+
+  > [!NOTE]
+  > Even when definition-level security is enabled will users need *Modules > System configuration > Object Manager > Module Settings* permission if they want to make changes to the DOM configuration settings.
+
+- From the moment one `GroupLink` object has been defined, definition-level security will be enabled for the entire DOM module. Only users belonging to user groups that have `GroupLink` object defined will have access to the instances of the DOM definitions specified in those `GroupLink` objects.
+
+- If a DOM module with definition-level security enabled contains multiple DOM definitions, no one will be able to access the instances of DOM definitions for which no `GroupLink` objects have been defined yet.
+
+- Currently, `GroupLink` objects grant full access (i.e. read access as well as write access) to the instances of the DOM definitions specified in them.
+
+##### Filtering behavior & restrictions
+
+When definition-level security has been enabled for a DOM module, every read and count filter/query will need to be evaluated to find out whether the person using that filter/query is allowed to do so. As it is only possible to evaluate filters and queries with enough context, a number of restrictions have been set.
+
+###### Read filters/queries
+
+A read filter/query needs to filter by DOM definition or by DOM instance ID.
+
+Examples of allowed filters/queries:
+
+| Example | Description |
+|---------|-------------|
+| (DOM Definition ID == a1ds5z8)  | Reading all DOM instances that are part of the specified DOM definition. |
+| (DOM Definition ID == a1ds5z8) && (Field X = "Some Value") | Reading all DOM instances with field X set to "Some Value" that are part of the specified DOM definition. |
+| (DOM Definition ID == a1ds5z8) \|\| (DOM Definition ID == 5ze7s84a) | Reading all DOM instances that are part of either of the specified DOM definitions. |
+| (DOM Instance ID == f4e87d) \|\| (DOM Instance ID == qs4z54) \|\| (DOM Instance ID == ezeasf) | Reading specific DOM instances based on ID. |
+
+Examples of prohibited filters/queries:
+
+| Example | Description |
+|---------|-------------|
+| TRUEFilterElement\<DomInstance\> | Sending a plain TRUE filter is not supported when the DOM module has definition-level security enabled. |
+| (Field X = "Some Value") | This filter does not contain any context. |
+| (Status ID = "in_progress") | This filter does not contain any context. |
+
+When a filter/query that reads DOM instances has a DOM definition context the user does not have access to, the read request will fail with a `NoPermission` error. If the DOM instances are read using a DOM instance ID filter, the read request will not fail, but the DOM instances the user does not have access to will not be returned in the result set. Here are a few examples in which the user only has access to DOM definition A.
+
+| Example | Description |
+|---------|-------------|
+| (DOM Definition ID == A) | Request will be allowed. |
+| (DOM Definition ID == A) \|\| (DOM Definition ID == B) | Request will fail with a `NoPermission` error. |
+| (DOM Instance ID == \<Instance linked to A\>) \|\| (DOM Instance ID == \<Instance linked to B\>) | Only the DOM instance linked to DOM definition A will be returned. |
+
+###### Count filters/queries
+
+A count filter/query needs to filter by DOM definition. That means that the filter/query should already limit the results based on one or more DOM definitions. Counts filtered by DOM instance ID(s) are not supported.
+
+Examples of allowed filters/queries:
+
+| Example | Description |
+|---------|-------------|
+| (DOM Definition ID == a1ds5z8) | Counting all DOM instances that are part of the specified DOM definition. |
+| (DOM Definition ID == a1ds5z8) && (Field X = "Some Value") | Counting all DOM instances with field X set to "Some Value" that are part of the specified DOM definition. |
+| (DOM Definition ID == a1ds5z8) \|\| (DOM Definition ID == 5ze7s84a) | Counting all DOM instances that are part of either of the specified DOM definitions. |
+| (DOM Definition ID = a1ds5z8) && ((DOM Instance ID == f4e87d) \|\| (DOM Instance ID == qs4z54) \|\| (DOM Instance ID == ezeasf)) | Reading specific DOM instances based on ID is only supported if a DOM definition context is specified. |
+
+Examples of prohibited filters/queries:
+
+| Example | Description |
+|---------|-------------|
+| TRUEFilterElement\<DomInstance\> | Sending a plain TRUE filter is not supported when the DOM module has definition-level security enabled. |
+| (Field X = "Some Value") | This filter does not contain any context. |
+| (Status ID = "in_progress") | This filter does not contain any context. |
+| (DOM Instance ID == f4e87d) \|\| (DOM Instance ID == qs4z54) \|\| (DOM Instance ID == ezeasf) | Reading specific DOM instances based on ID is not supported if no DOM definition context is specified. |
+
+When a filter/query that counts DOM instances has a DOM definition context the user does not have access to, the count request will fail with a `NoPermission` error.
+
+> [!NOTE]
+> Filters sent to the DOM manager by standard GQI queries made in a dashboard or low-code app have a DOM definition context by default. No special adjustments have to be made in this case, but keep in mind that GQI queries that retrieve data for DOM definitions the user does not have access to will result in permission errors appearing in the dashboard or low-code app.
+
+##### Additional security when reading/counting DOM instance history records
+
+From now on, when definition-level security is enabled for a DOM module, reading and counting DOM instance history records will only be possible if the following conditions are met:
+
+- The filter must include 'SubjectID Equal' clauses that narrow down the filter to the history of one or more DOM instances. If the filter does not meet this requirement, the request will fail with a `CrudFailedException`, and the `TraceData` will contain a `DomInstanceError` with reason `ReadFilterNotSupportedBySecurity` or `CountFilterNotSupportedBySecurity`.
+
+- The user must have access to all DOM instances for which history records are requested. Also, all specified DOM instances must exist. Otherwise, the request will fail with a `CrudFailedException`, and the `TraceData` will contain `DomInstanceError` with reason `NoPermission`.
+
+##### Event security
+
+The permissions defined by the `GroupLink` objects will also be applied when subscribing on a `DomInstancesChangedEventMessage`. The event should only contain the created, updated or deleted instances the subscribed user is allowed to access. If an event contains multiple objects, and the user does not have access to all of those, the event will be dropped.
+
+The following properties have been added to the `DomInstancesChangedEventMessage` class:
+
+| Property | Description |
+|----------|-------------|
+| FromSecurityEnabledModule | Determines whether security could be applied to the event.<br>If true, there could be more created, updated, or deleted objects, but the subscribed user may not have access to all of them. |
+| SecurityEnabledModuleNotAvailable | An empty event could be received with this boolean property set to true if, for some reason, the security could not be applied.<br>This can occur when a user is subscribed on an agent other than the one that handled the create/update/delete action, and this other agent has connection issues with the database preventing the DOM manager to initialize.<br>If such an event is received, the subscriber may have missed one or more updates. If these events are used to keep a list of cached objects up to date, we recommend reloading them to ensure that the most recent and correct data is visualized. |
+
+##### General notes
+
+- Changing the name of a DataMiner user group will invalidate any existing `GroupLink` objects associated with it. Make sure to adjust these objects when a user group was renamed.
+- Reading, adding or removing a DOM instance attachment will now also be blocked if the user does not have permission to read/write that DOM instance.
+
+##### Changes to the SLNetClientTest tool
+
+The SLNetClientTest tool has been updated to support the limitation of not being able to send a TRUEFilterElement to get all DOM instances in a module.
+
+When definition-level security is enabled, you will now need to first select one or more DOM definitions from a filter menu. This menu is accessible for any DOM manager, so it can also be used to retrieve DOM instances more easily for a specified list of DOM definitions.
+
+#### DataMiner Objects Models: DomInstances CRUD helper now supports reading only a selected subset of fields from `DomInstance` objects [ID 43852]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+The `DomInstances` CRUD helper now supports reading only a selected subset of fields from `DomInstance` objects. This will reduce the amount of data transferred and can significantly improve performance in cases where clients only need a few fields from each instance.
+
+New `Read` and `PreparePaging` overloads will accept a `SelectedFields<DomInstance>` object. To select a field, add the exposer from `DomInstanceExposers` or add the `FieldDescriptorID` to the `SelectedFields<DomInstance>` object.
+
+> [!NOTE]
+>
+> - The `Id` is always available on a `PartialObject`. You do not need to add the `Id` exposer to `SelectedFields<DomInstance>`.
+> - Selecting the `FieldValues` or `FullObject` exposer is not supported and will result in a failed read operation.
+
+The `Read` and `PreparePaging` methods will return a list of `PartialObject<DomInstance, DomInstanceId>`, which provides:
+
+- `ID`: The `DomInstance` ID.
+- `GetValue` and `TryGetValue`, which retrieve the value of a selected exposer or a single-value `FieldDescriptorID`.
+- `GetValues` and `TryGetValues`, which retrieve a list of values for a selected `FieldDescriptorID` (for fields with multiple values, or when multiple sections are allowed).
+
+When retrieving field values for a selected `FieldDescriptorID`, the following behavior will apply:
+
+- **Multiple values**: Use `GetValues<T>`/`TryGetValues<T>` to obtain a `List<T>`. `GetValues<T>` throws `InvalidOperationException` if the values are not of type `T`; `TryGetValues<T>` returns `false` in that case.
+- **Single value**: Use `GetValue<T>`/`TryGetValue<T>` for fields with a single value. `GetValue<T>` throws `InvalidOperationException` if the value is not of type `T` or when there are multiple values available for that field descriptor; `TryGetValue<T>` returns `false`.
+- **No value**: `GetValue<T>` returns `default(T)` (equivalent to an empty list for list types). `TryGetValue<T>` returns `false`. `GetValues<T>` returns `null`. `TryGetValues<T>` returns `false`.
+
+> [!IMPORTANT]
+> A `FieldDescriptor` ID must be unique across section definitions in a DOM module.
+
+#### SLNetClientTest tool: Filtering messages using regular expressions [ID 43540]
+
+<!-- MR 10.6.0 - FR 10.5.11 -->
+
+In the *SLNetClientTest* tool, at the bottom of the main window, a new filter box has been added.
+
+After you select the checkbox in front of it, it will allow you to filter the message list using a regular expression.
+
+This new filter box should only be used when no new messages will be added to the list, e.g. when inspecting an *\*.slnetdump* file.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### User-defined APIs: New ResponseHeaders property [ID 43705] [ID 43960]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+In the `ResponseHeaders` property of the `ApiTriggerOutput` class, you can now specify the HTTP headers that will be added to the response.
+
+Also, the `ApiTriggerOutput` class now allows you to override the contents of the Content-Type header, which is set to "application/json" by default.
+
+Currently, the following headers are blocked, and will result in an error if you try to set them:
+
+- Access-Control-Allow-Origin
+- Access-Control-Allow-Credentials
+- Access-Control-Expose-Headers
+- Access-Control-Allow-Methods
+- Access-Control-Max-Age
+- Vary
+- Content-Length (automatically set)
+- Set-Cookie
+- WWW-Authenticate
+- Proxy-Authenticate
+- Transfer-Encoding
+- Connection
+- Upgrade
+- Trailer
+- TE
+- Via
+- Server
+- Date (automatically set)
+- Strict-Transport-Security
+
+The endpoint can now also return the following additional errors:
+
+| ErrorCode | Integer value | HTTP Status Code | Description |
+|-----------|---------------|------------------|-------------|
+| ResponseHeadersNotAllowed | 1012 | 500 | The response header or headers you are trying to return are not allowed. |
+| ResponseHeadersInvalid | 1013 | 500 | The response header or headers you are trying to return are invalid. Header names and values cannot contain whitespace, colons (":"), commas (","), or ASCII control characters. The *UserDefinableApiEndpoint* logging will contain the exact error. |
+
+#### Interactive Automation scripts executed in a web app: UI version can now be set in the script [ID 43875]
+
+<!-- MR 10.6.0 - FR 10.5.12 -->
+
+Up to now, when you wanted an interactive Automation script executed in a web app to use the new UI version, you had to add `useNewIASInputComponents=true` to the URL of the app.
+
+From now on, it is also possible to indicate the UI version in the script itself. To do so, set the `engine.WebUIVersion` property to one of the following values:
+
+| Value | UI version |
+|-------|------------|
+| WebUIVersion.Default | Default UI version. At present, this is V1. |
+| WebUIVersion.V1      | Current UI version (V1) |
+| WebUIVersion.V2      | New UI version (V2)     |
+
+Example:
+
+```csharp
+engine.WebUIVersion = WebUIVersion.V2
+```
+
+The URL parameter `useNewIASInputComponents` has priority over the UI version set in the script.
+
+- If you use `useNewIASInputComponents=true`, the script will use the new UI version (i.e. V2), even when V1 was set in the script.
+- If you use `useNewIASInputComponents=false`, the script will use the current UI version (i.e. V1), even when V2 was set in the script.
+
+> [!IMPORTANT]
+> This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
+
+#### Dashboard reports can now be generated in PDF, HTML, and/or CSV format [ID 43887]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+Up to now, a report of a dashboard could only be generated in PDF format (.pdf). Now, it is possible to generate a report in PDF, archived HTML format (.mhtml) and/or CSV format.
+
+MHTML files include all necessary information to allow the report to be rendered in a web browser: HTML code, images, CSS stylesheets, etc.
+
+Also, the default file name has been changed from `Report.pdf` to `<dashboard name>.pdf`, `<dashboard name>.mhtml`, or `<dashboard name>.csv.zip`.

@@ -4,9 +4,9 @@ uid: BPA_Report_Active_RTE
 
 # Active Runtime Errors
 
-Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this BPA test is called "Report Active RTE".
+Prior to DataMiner 10.4.12/10.5.0 [CU10]<!--RN 40751-->, this BPA test is called "Report Active RTE".
 
-This BPA test specifically detects the presence of active run-time errors (RTEs) in the system by reading the `C:\Skyline DataMiner\logging\SLWatchdog2.txt` file.
+This BPA test specifically detects the presence of active runtime errors (RTEs) in the system by reading the `C:\Skyline DataMiner\logging\SLWatchdog2.txt` file.
 
 This BPA test is available by default from DataMiner 10.1.0 [CU4]/10.1.7 onwards.
 

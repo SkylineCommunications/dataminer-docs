@@ -13,7 +13,7 @@ When you configure this setup, you will be able to choose between different data
 
 - [Self-managed dedicated clustered storage](xref:Configuring_dedicated_clustered_storage): A setup where you host and manage the Cassandra and OpenSearch clusters required by DataMiner yourself on dedicated servers (not recommended). If you choose this setup, you will need to make sure these database clusters are fully installed before you run the procedures below, so that DataMiner will be able to connect to them.
 
-- A **development setup** where both Cassandra and OpenSearch run **locally** on Windows Subsystem for Linux (WSL). Such a setup should only be used for **single-Agent development environments**, and this will also require additional resources on the local machine. To convert such a setup to a staging or production setup, you will need to either migrate to [Storage as a Service (STaaS)](xref:STaaS) or switch to using Cassandra and OpenSearch clusters on separate servers (not recommended), and then [decommission WSL](xref:Decommissioning_WSL).
+- A **small-scale setup** where both Cassandra and OpenSearch run **locally** on Windows Subsystem for Linux (WSL). Such a setup should only be used for **single-Agent environments**, and this will also require additional resources on the local machine. These setups can be used for development or for minimal deployments where STaaS is not an option. To convert such a setup to a staging or production setup, you will need to either migrate to [Storage as a Service (STaaS)](xref:STaaS) or switch to using Cassandra and OpenSearch clusters on separate servers (not recommended), and then [decommission WSL](xref:Decommissioning_WSL).
 
 Once you have downloaded the [pre-installed virtual hard disk](https://community.dataminer.services/dataminer-virtual-hard-disk/) from DataMiner Dojo, you will need to follow the steps below to use it:
 
@@ -51,7 +51,7 @@ When you have downloaded the virtual hard disk, you can start to create a VM in 
 1. Connect the virtual hard disk that you have just downloaded.
 
 > [!IMPORTANT]
-> If you intend to use the locally hosted Cassandra and OpenSearch clusters running on WSL, make sure to enable [nested virtualization](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/dataminer/nested-virtualization) on your host PC for the VM you created before starting the VM. To do so, run the following command on your host PC in an elevated Powershell prompt:
+> If you intend to use the locally hosted Cassandra and OpenSearch clusters running on WSL, make sure to enable [nested virtualization](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/enable-nested-virtualization) on your host PC for the VM you created before starting the VM. To do so, run the following command on your host PC in an elevated Powershell prompt:
 >
 > ```powershell
 > Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
@@ -75,6 +75,73 @@ When you have downloaded the virtual hard disk, you can start to create a VM in 
 
 ## Configuring DataMiner
 
+### [Installer v10.5](#tab/tabid-1)
+
+As soon as you log in to the VM, a window will be shown where you can configure your DataMiner System.
+
+> [!IMPORTANT]
+> At this point, the DataMiner core software is fully installed. If you continue with the steps below, the Installer will also automatically take care of the license and data storage configuration. However, if you **do not want a default installation**, you may not want to use this automatic configuration:
+>
+> - If you intend to **restore a backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration below and follow the steps under [Restoring a backup onto the new installed DataMiner Agent](xref:Restoring_backup_on_newly_installed_DMA).
+> - If you are installing a **Failover** Agent, skip the configuration below, and follow the steps under [Configuring the new DataMiner Agent as a new Agent in a Failover pair](xref:Configuring_a_new_DMA_in_Failover_pair). These steps are the same as for an installation using the DataMiner Installer.
+
+> [!NOTE]
+> If you accidentally close the configuration window, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.exe`. Make sure to run it with administrator privileges.
+
+Follow the steps below to configure your DataMiner Agent:
+
+1. Click *Next* to get started.
+
+1. Select the desired database type:
+
+   - [Storage as a Service (STaaS)](xref:STaaS) (recommended).
+
+   - *Self-hosted - External Storage*: A regular [dedicated clustered storage setup](xref:Configuring_dedicated_clustered_storage). If you select this option, you will also need to fill in the connection details for both Cassandra and OpenSearch.
+
+     > [!NOTE]
+     > Make sure these clusters are active and reachable from the VM you are setting up. You are responsible for the management of these external database clusters.
+
+   - *Self-hosted - Local storage*: A clustered storage setup where both Cassandra and OpenSearch run locally on WSL. In this case, you will need to confirm that you have enabled nesting virtualization, as detailed above under [Creating the VM](#creating-the-vm).
+
+     > [!IMPORTANT]
+     > This option should only be used for **small-scale setups**, for development or for minimal deployments where STaaS is not an option. If you choose this option, make sure the necessary resources will be available for the WSL storage container. See [Creating the VM](#creating-the-vm).
+
+   ![Storage options](~/dataminer/images/Storage_options.png)
+
+1. Click *Next*, and fill in the required details to connect your DataMiner Agent to dataminer.services:
+
+   - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner Systems in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
+   - *System Name*: This name will be used to identify the DataMiner System in various dataminer.services applications.
+   - *System URL*: This URL will grant you remote access to your DataMiner System web applications. You can choose to either [disable or enable this remote access feature](xref:Controlling_remote_access) at any time.
+   - *Admin Email*: This email address must be associated with a dataminer.services account that is a member of your organization. It will become the owner of the DMS on dataminer.services.
+   - *STaaS Region*: If you have selected to use [STaaS](xref:STaaS) for data storage, select the region where your data should be hosted.
+
+   ![Registration details when STaaS was selected](~/dataminer/images/Registration_of_DMA_when_StaaS_is_selected.png)<br>*Example with registration details for a STaaS setup*
+
+   > [!NOTE]
+   > By default, if you install DataMiner while connected to the internet, DataMiner is deployed in subscription mode with a [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) license. However, if you want to do an offline installation or if you want to install DataMiner with a [perpetual license](xref:Permanent_license), click the link below the registration fields and enter the DataMiner ID provided by Skyline. If you do not have a DataMiner ID yet, contact <dataminer.licensing@skyline.be>.
+   >
+   > ![Perpetual license configuration](~/dataminer/images/Perpetual_License.png)
+   >
+   > You can also deploy DataMiner in subscription mode first and [switch to a perpetual license](xref:Switching_from_subscription_mode_to_perpetual_license) or [switch to an offline demo license](xref:Switching_from_subscription_mode_to_offline_demo) later.
+
+1. Click *Next*, and verify the selected configuration.
+
+1. To start the configuration, click *Next*.
+
+   The configuration progress will now be displayed. When the configuration is complete, you can close the window.
+
+   DataMiner will automatically start up and connect to dataminer.services. DataMiner Cube will also be installed, so you can connect to DataMiner locally.
+
+1. [Log in to DataMiner Cube](xref:Logging_on_to_DataMiner_Cube) using the previously configured Administrator account.
+
+   Logging in automatically with the built-in Administrator account is not possible, so you will need to fill in the username and password.
+
+> [!IMPORTANT]
+> For security reasons, we strongly recommend creating a second user and disabling the built-in administrator account once the setup is complete. See [Managing users](xref:Managing_users).
+
+### [Installer v10.4](#tab/tabid-2)
+
 As soon as you log in to the VM, a window will be shown where you can configure your DataMiner System.
 
 ![Configuring DataMiner Agent Screen](~/dataminer/images/install-first-startup-choice-script.png)
@@ -93,7 +160,7 @@ As soon as you log in to the VM, a window will be shown where you can configure 
 > [!NOTE]
 > If you have accidentally closed the configuration window, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.ps1`. Make sure to run it with administrator privileges.
 
-Follow the below steps to configure your DataMiner Agent:
+Follow the steps below to configure your DataMiner Agent:
 
 1. Click *Start* to get started.
 
@@ -121,9 +188,9 @@ Follow the below steps to configure your DataMiner Agent:
    - *Admin Email*: This email address must be associated with a dataminer.services account that is a member of your organization. It will become the owner of the DMS on dataminer.services.
    - *STaaS Region*: If you have selected to use [STaaS](xref:STaaS) for data storage, select the region where your data should be hosted.
 
-1. Verify the selected configuration and click *Configure*
+1. Verify the selected configuration and click *Configure*.
 
-1. When the configuration is complete, click *Finish*
+1. When the configuration is complete, click *Finish*.
 
    DataMiner will automatically start up, get licensed, and connect to dataminer.services. DataMiner Cube will also be installed, so you can connect to DataMiner locally.
 
@@ -134,9 +201,11 @@ Follow the below steps to configure your DataMiner Agent:
 > [!IMPORTANT]
 > For security reasons, we strongly recommend creating a second user and disabling the built-in administrator account once the setup is complete. See [Managing users](xref:Managing_users).
 
+***
+
 ## WSL management
 
-If you selected the option *Self-hosted - Local storage*, which is not recommended and should only be done for **testing and staging environments**, that means you are running a WSL container for the Cassandra and OpenSearch storage nodes used by DataMiner. If you selected a different storage option, the information below is not relevant for you.
+If you selected the option *Self-hosted - Local storage*, which is not recommended and should only be done for **small-scale setups**, that means you are running a WSL container for the Cassandra and OpenSearch storage nodes used by DataMiner. If you selected a different storage option, the information below is not relevant for you.
 
 If you want to manage the configuration of Cassandra or OpenSearch for this setup, you should **connect to the container**. To do so, you will need to open a command prompt using the user account used for the installation (by default the Administrator account) and run the `wsl` command. This way, you should automatically be logged in and connected to the WSL container.
 

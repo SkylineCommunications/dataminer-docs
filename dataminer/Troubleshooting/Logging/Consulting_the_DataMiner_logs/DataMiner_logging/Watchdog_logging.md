@@ -29,7 +29,7 @@ When an element is stopped, you will find a log line like this:
 
 ## Run-time errors
 
-When a thread is added, a time value is added to the log line in parentheses. This time value indicates how long the SLWatchdog process will wait in case the thread is not responding. In the example for the started element above, this is 7 and a half minutes. After this time has elapsed, SLWatchdog will log a half-open run-time error.
+When a thread is added, a time value is added to the log line in parentheses. This time value indicates how long the SLWatchdog process will wait in case the thread is not responding. In the example for the started element above, this is 7 and a half minutes. After this time has elapsed, SLWatchdog will log a half-open runtime error.
 
 A half-open RTE logged by SLWatchdog can for instance look like this:
 
@@ -38,7 +38,7 @@ A half-open RTE logged by SLWatchdog can for instance look like this:
 2021-02-22 12:48:58 8260|HALFOPEN RTE: - (478) Not signaled 1 (since 2021-02-22 12:39:22): SLProtocol.exe - [Miteq UPB1-XTR/1.0.0.1] Miteq UPB1 UC - ProtocolThread in Process: SLProtocol.exe for Thread: [Miteq UPB1-XTR/1.0.0.1] Miteq UPB1 UC - ProtocolThread notificationID created: 10753
 ```
 
-If the time in parentheses has elapsed twice, a full run-time error is triggered, which is indicated with an alarm in the Alarm Console in DataMiner Cube. In the example for the element above, this will occur after 15 minutes (i.e. twice 7:30 minutes).
+If the time in parentheses has elapsed twice, a full runtime error is triggered, which is indicated with an alarm in the Alarm Console in DataMiner Cube. In the example for the element above, this will occur after 15 minutes (i.e. twice 7:30 minutes).
 
 An RTE logged by SLWatchdog can for instance look like this:
 
@@ -66,4 +66,4 @@ There are two ways to access the Watchdog logging:
 
 - [DataMiner logging](xref:DataMiner_logging)
 - [Investigating a protocol thread RTE](xref:Investigating_a_protocol_thread_RTE)
-- [Connector fundamentals > Inner workings > Introduction](xref:InnerWorkingsIntroduction)
+- [Connector fundamentals > Inner workings](xref:InnerWorkings)

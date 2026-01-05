@@ -63,7 +63,7 @@ DataMiner supports businesses by enabling seamless evolution into new technologi
 
 - **Optimization of existing platforms** — DataMiner enhances efficiency and reliability:
 
-  - **Real-time monitoring & proactive fault management**: Provides 24/7 monitoring of multi-vendor networks, automatically detecting and resolving issues to prevent downtime.
+  - **Real-time monitoring & proactive fault management**: Provides 24/7 monitoring of multivendor networks, automatically detecting and resolving issues to prevent downtime.
   - **Operational intelligence & data analytics**: Uses AI-driven insights for trend analysis, capacity planning, and predictive maintenance.
   - **Resource optimization & cost reduction**: Automates workflows, optimizes bandwidth, and ensures efficient use of cloud/on-prem resources, leading to cost savings.
   - **Security & compliance**: Ensures systems adhere to security standards (e.g. ISO, SOC) and regulatory requirements while minimizing vulnerabilities.

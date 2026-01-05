@@ -113,7 +113,6 @@ namespace Tamir.SharpSsh
 		/// <remarks>
 		/// <para>When uploading a file using the To method, by default, the -p switch is used ('Preserves modification times, access times, and modes from the original file.').</para>
 		/// <para>This property allows to enable or disable this switch.</para>
-		///	<para>Feature introduced in DataMiner 9.5.3 (RN 15080).</para>
 		/// </remarks>
 		/// <example>
 		/// <para>The following example translates to: scp -t remotefilepath</para>
@@ -155,7 +154,7 @@ namespace Tamir.SharpSsh
 		/// Creates the specified directory.
 		/// </summary>
 		/// <param name="dir">The name of the directory to create.</param>
-		/// <remarks>From DataMiner 9.0.4 (RN 14337) onwards, the file specified in dir is no longer automatically enclosed in double quotes if it does not contain a space.</remarks>
+		/// <remarks>The file specified in dir will not be automatically enclosed in double quotes if it does not contain a space. (RN 14337)</remarks>
 		public override void Mkdir(string dir)
 		{
 		}
@@ -175,7 +174,7 @@ namespace Tamir.SharpSsh
 		/// <param name="fromFilePath">The file to copy.</param>
 		/// <param name="toFilePath">The name of the local copy.</param>
 		/// <exception cref="SshTransferException"><paramref name="fromFilePath"/> is not a directory.</exception>
-		/// <remarks>From DataMiner 9.0.4 (RN 14337) onwards, the file specified in fromFilePath is no longer automatically enclosed in double quotes if it does not contain a space.</remarks>
+		/// <remarks>The file specified in fromFilePath will not be automatically enclosed in double quotes if it does not contain a space. (RN 14337)</remarks>
 		public override void Get(string fromFilePath, string toFilePath)
 		{
 		}
@@ -187,7 +186,7 @@ namespace Tamir.SharpSsh
 		/// <param name="remotePath">The name of the copied file.</param>
 		/// <exception cref="SshTransferException">The file specified in <paramref name="localPath"/> was not found.</exception>
 		/// <exception cref="SshTransferException">When copying directories, the recursive option must be set to true.</exception>
-		/// <remarks>From DataMiner 9.0.4 (RN 14337) onwards, the remote path specified in remotePath is no longer automatically enclosed in double quotes if it does not contain a space.</remarks>
+		/// <remarks>The remote path specified in remotePath will not be automatically enclosed in double quotes if it does not contain a space. (RN 14337)</remarks>
 		public void To(string localPath, string remotePath)
 		{
 		}
@@ -200,7 +199,7 @@ namespace Tamir.SharpSsh
 		/// <param name="_recursive">Indicates whether items of the specified directory must be copied recursively.</param>
 		/// <exception cref="SshTransferException">The file specified in <paramref name="localPath"/> was not found.</exception>
 		/// <exception cref="SshTransferException">When copying directories, the recursive option must be set to true.</exception>
-		/// <remarks>From DataMiner 9.0.4 (RN 14337) onwards, the remote path specified in remotePath is no longer automatically enclosed in double quotes if it does not contain a space.</remarks>
+		/// <remarks>The remote path specified in remotePath will not be automatically enclosed in double quotes if it does not contain a space. (RN 14337)</remarks>
 		public void To(string localPath, string remotePath, bool _recursive)
 		{
 		}
@@ -211,7 +210,7 @@ namespace Tamir.SharpSsh
 		/// <param name="remoteFile">The file to copy.</param>
 		/// <param name="localPath">The name of the local copy.</param>
 		/// <exception cref="SshTransferException"><paramref name="localPath"/> is not a directory.</exception>
-		/// <remarks>From DataMiner 9.0.4 (RN 14337) onwards, the file specified in remoteFile is no longer automatically enclosed in double quotes if it does not contain a space.</remarks>
+		/// <remarks>The file specified in remoteFile will not be automatically enclosed in double quotes if it does not contain a space. (RN 14337)</remarks>
 		public void From(string remoteFile, string localPath)
 		{
 		}
@@ -223,7 +222,7 @@ namespace Tamir.SharpSsh
 		/// <param name="localPath">The name of the local copy.</param>
 		/// <param name="_recursive">Value indicating whether the copy should be recursive.</param>
 		/// <exception cref="SshTransferException"><paramref name="localPath"/> is not a directory.</exception>
-		/// <remarks>From DataMiner 9.0.4 (RN 14337) onwards, the file specified in remoteFile is no longer automatically enclosed in double quotes if it does not contain a space.</remarks>
+		/// <remarks>The file specified in remoteFile will not be automatically enclosed in double quotes if it does not contain a space. (RN 14337)</remarks>
 		public void From(string remoteFile, string localPath, bool _recursive)
 		{
 		}

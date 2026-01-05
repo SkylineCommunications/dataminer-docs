@@ -12,7 +12,8 @@ From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42031-->, low-cod
 >
 > - From DataMiner 10.2.0/10.2.2 onwards<!--RN 31833-->, when a dashboard updates its own URL, it will use a compressed JSON syntax. In this compressed syntax, the query parameter `d` is used instead of `data`.
 > - To only display a dashboard without the rest of the app, add the argument "*embed=true*". To display the *Clear all* button for an embedded dashboard, add "*subheader=true*" as well. For example: `https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true`
-> - The *showAdvancedSettings=true* URL option can be used with some components in order to make additional functionality available.
+> - The *showAdvancedSettings=true* URL option can be used with some components in order to make additional functionality available. From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- RN 43760 -->, it also allows you to view the ID of a selected component in the *Layout* tab.
+> - The *skipAutoLogin=true* URL option (available from DataMiner web 10.5.0 [CU10]/10.6.1 onwards<!-- RN 44152 -->) can be used to be able to log in as a local user in case SAML authentication is used.
 > - When data is selected in a component, the URL of a dashboard changes. However, unlike dashboards, low-code apps will not push data to the URL.
 
 > [!IMPORTANT]
@@ -70,7 +71,9 @@ This JSON object has to have the following structure:
   ```
 
   > [!NOTE]
-  > You can find the ID of each component in the lower right corner of the component while in edit mode.
+  > To find the ID of a component, you can use the *showAdvancedSettings=true* URL option. From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- RN 43760 -->, this will show the ID for a selected component in the *Layout* tab.
+  >
+  > In earlier DataMiner versions, you can find the ID of each component in the lower-right corner of the component while in edit mode. However, if a custom configuration name has been set for the component, the ID will not be displayed. To view the ID in that case, go to the *Layout* pane and temporarily clear the configuration name.
 
 ### URL-encoded equivalents
 

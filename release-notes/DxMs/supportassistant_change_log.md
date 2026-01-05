@@ -4,15 +4,27 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
-#### 24 June 2025 - Enhancement - SupportAsistant 1.7.5 - Improved upgrade process
+#### 3 December 2025 - Enhancement - SupportAssistant 1.8.0 - Added possibility to locally trigger remote log collector
+
+SupportAssistant now supports new requests that allow the local triggering of remote log collectors. This functionality will be leveraged by an upcoming LogCollector change.
+
+#### 1 September 2025 - Fix - SupportAssistant 1.7.7 - CDMR reporting & usage offloading issues
+
+An issue introduced in SupportAssistant 1.7.4 caused the CDMR reporting for proactive support and usage offloading to fail in case the server had no direct internet access instead of routing the request via the CloudGateway. This issue has been resolved and the affected versions have been unlisted.
+
+#### 27 August 2025 - Enhancement - SupportAssistant 1.7.6 - General improvements
+
+General improvements have been made to the way SupportAssistant handles tasks, making the DxM more robust and also improving its shutdown procedure.
+
+#### 24 June 2025 - Enhancement - SupportAssistant 1.7.5 - Improved upgrade process
 
 Improvements have been made to the startup and shutdown of the DxM, which improves the upgrade process.
 
-#### 17 June 2025 - Enhancement - SupportAsistant 1.7.4 - Improved upgrade process
+#### 17 June 2025 - Enhancement - SupportAssistant 1.7.4 - Improved upgrade process
 
 Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
 
-#### 1 April 2025 - Enhancement - SupportAsistant 1.7.3 - Dependencies updated [ID 42658]
+#### 1 April 2025 - Enhancement - SupportAssistant 1.7.3 - Dependencies updated [ID 42658]
 
 Several dependencies have been updated.
 

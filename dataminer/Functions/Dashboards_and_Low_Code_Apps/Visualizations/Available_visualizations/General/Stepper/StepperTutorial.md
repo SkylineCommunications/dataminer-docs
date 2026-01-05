@@ -64,7 +64,7 @@ Each of the components on the page has to receive some data:
 
 To complete the app, you should now add a header bar with a button to save changes to incidents:
 
-1. Enable the header bar and add a button to it. See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).
+1. Enable the header bar and add a button to it. See [Configuring the app header bar](xref:LowCodeApps_header_config).
 
 1. Add a chain of the following three actions to the *On click* event of the button:
 

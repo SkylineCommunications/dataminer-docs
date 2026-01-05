@@ -66,7 +66,7 @@ Make a backup of your DataMiner Agent using DataMiner Taskbar Utility or DataMin
 
 If you are upgrading to another major version that does not immediately follow your current version, always follow this general guideline:
 
-**Upgrade to the next major DataMiner version(s) before upgrading to your preferred version**.
+**Upgrade to the latest Cumulative Update (CU) of the next major DataMiner version(s) before upgrading to your preferred version**.
 
 ![Upgrading across major versions](~/dataminer/images/Upgrading_across_major_versions.png)
 
@@ -143,29 +143,35 @@ When you upload a DataMiner upgrade, several prerequisite checks are automatical
 
 The following prerequisite checks are currently available:
 
-- [Verify gRPC Connection](xref:VerifyGRPCConnectiondmupgrade): Verifies whether all DataMiner Agents in the cluster can communicate via gRPC over HTTPS port 443 and none of the Agents currently have a non-default network configuration.
-
-- [Verify .NET Version](xref:Verify_ASP_Net_Version): Verifies whether the Microsoft ASP.NET 8.0 Hosting Bundle is installed. From DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 37969-->, this prerequisite is available by default and runs automatically when you upgrade.
+- [Verify BrokerGateway Migration](xref:VerifyBrokerGatewayMigration): Verifies whether the DataMiner System has migrated from the SLNet-managed NATS solution to the BrokerGateway-managed NATS solution. From DataMiner 10.6.0/10.6.1 onwards<!--RN 43861 -->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_Version): Verifies whether the minimum required version is installed for all DxMs in the system. From DataMiner 10.2.0 [CU6]/10.2.8 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
 - Verify Cluster Ports: Verifies whether the ports used by DataMiner can be reached in between DataMiner Agents. If this check fails, you will need to install the [VerifyClusterPorts.dmupgrade](xref:VerifyClusterPortsdmupgrade) package. From DataMiner 10.2.0 [CU2]/10.2.5 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
+- [Verify .NET Version](xref:Verify_ASP_Net_Version): Verifies whether the Microsoft ASP.NET 8.0 Hosting Bundle is installed. From DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 37969-->, this prerequisite is available by default and runs automatically when you upgrade.
+
 - [Verify Elastic Storage Type](xref:Verify_Elastic_Storage_Type): Verifies whether the system has successfully switched to an [indexing database](xref:Indexing_Database). From DataMiner 10.4.0/10.4.1 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
-- [Verify NATS is Running](xref:VerifyNatsIsRunning): Verifies whether the crucial NATS service used by DataMiner is running on all required DataMiner Agents. From DataMiner 10.2.0 [CU14]/10.2.7 onwards, this prerequisite is available by default and runs automatically when you upgrade.
+- [Verify gRPC Connection](xref:VerifyGRPCConnectiondmupgrade): Verifies whether all DataMiner Agents in the cluster can communicate via gRPC over HTTPS port 443 and none of the Agents currently have a non-default network configuration.
+
+- [Verify NATS Cluster](xref:VerifyNatsCluster): Verifies whether the crucial NATS service used by DataMiner is running on all required DataMiner Agents. From DataMiner 10.5.0 [CU3]/10.5.6 onwards<!-- RN 42206 -->, this prerequisite is available by default and runs automatically when you upgrade. Prior to this, starting from DataMiner 10.2.0 [CU14]/10.2.7, the [Verify NATS is Running](xref:VerifyNatsIsRunning) check is used instead.
+
+- [Verify No Amazon Keyspaces](xref:Verify_No_Amazon_Keyspaces): Verifies whether the DataMiner Agent is using the Amazon Keyspaces Service on AWS as a Cassandra-compatible database service, which is no longer supported as of DataMiner 10.3.0 [CU8]/10.3.11. From DataMiner 10.5.0/10.5.3 onwards<!--RN 41914-->, this prerequisite is available by default and runs automatically when you upgrade.
+
+- [Verify No Annotations](xref:Verify_No_Annotations): Verifies whether the soft-launch option [LegacyAnnotations](xref:Overview_of_Soft_Launch_Options#legacyannotations) is enabled. As the legacy Annotations module is no longer supported from DataMiner 10.6.0/10.6.1 onwards, upgrading to those DataMiner versions or higher is not possible when this option is enabled.<!-- 44124 -->
+
+- [Verify No Legacy Correlation](xref:VerifyNoLegacyCorrelation): Scans the DataMiner System for any legacy Correlation rules. From DataMiner 10.5.1/10.6.0 onwards<!--RN 40834-->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards): Scans the DataMiner System for any legacy reports and legacy dashboards. From DataMiner 10.4.0/10.4.1 onwards<!--RN 37922-->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed): Verifies whether the obsolete *APIDeployment* [soft-launch option](xref:SoftLaunchOptions) is enabled and obsolete APIs are deployed. From DataMiner 10.4.0 onwards<!--RN 37825-->, this prerequisite is available by default and runs automatically when you upgrade.
 
-- [Verify No Amazon Keyspaces](xref:Verify_No_Amazon_Keyspaces): Verifies whether the DataMiner Agent is using the Amazon Keyspaces Service on AWS as a Cassandra-compatible database service, which is no longer supported as of DataMiner 10.3.0 [CU8]/10.3.11. From DataMiner 10.5.0/10.5.3 onwards<!--RN 41914-->, this prerequisite is available by default and runs automatically when you upgrade.
+- [Verify OS Version](xref:Verify_OS_Version): Verifies whether the DataMiner version in the upgrade package supports the version of the operating system that is installed on the DataMiner Agent. From DataMiner 10.5.12/10.6.0 onwards<!--RN 43356-->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Service Automatic Properties](xref:BPA_Service_Automatic_Properties): Verifies whether the installed SRM framework version is up to date. From DataMiner 10.2.3/10.3.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Validate Connectors](xref:BPA_Validate_Connectors): Scans the DataMiner System for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. From DataMiner 10.3.4/10.4.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
-
-- [Firewall Configuration](xref:BPA_Firewall_Configuration): Checks the firewall configuration. From DataMiner 10.3.7/10.4.0 onwards, this prerequisite runs automatically when you upgrade, to ensure TCP port 5100 is correctly configured to allow inbound communication. This port is required for communication to the cloud via the endpoint hosted in DataMiner CloudGateway.
 
 > [!NOTE]
 > Though this is not recommended, you can bypass these checks by manually removing the *Prerequisites* folder from *Update.zip* in the upgrade package. However, you should only do so if there is a clear reason to assume that the prerequisites do not work because of a bug in the software and they are consequently failing without a proper reason. If you bypass these checks in any other circumstances, and this results in a DataMiner issue, this is **not covered by support**.

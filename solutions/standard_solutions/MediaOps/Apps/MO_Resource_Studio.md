@@ -4,7 +4,7 @@ uid: MO_Resource_Studio
 
 # Resource Studio
 
-The Resource Studio app helps you create and manage bookable resources efficiently. The resources can be tied to elements in the DataMiner System (e.g. devices, network interfaces, compute resources) or external entities (e.g. people, rooms, vehicles).
+The Resource Studio app serves as a comprehensive platform for creating and managing resources. Its key features include the ability to create diverse resources, ranging from network inventory to services and other limited-availability items such as rooms, people, vehicles etc. Users can organize these resources into pools, simplifying workflow and job resource selection. Capabilities and capacities can be assigned to resources, facilitating precise resource allocation based on specific job requirements. Users can also store supplementary information as properties, enhancing the resource management process.
 
 ![Resource Studio Overview](~/solutions/images/Resource_Studio_Overview.png)
 
@@ -70,14 +70,20 @@ Each capability has a name and a list of values. Users can assign one or more va
 
 - Modulation type: DVB-S, NS3, NS4
 
-Capabilities can be assigned either to a resource or to a resource pool. If they are assigned to a resource pool, all resources in that pool will inherit the capabilities of the pool, but extra capabilities can also be added to individual resources.
+Capabilities can be assigned either to a resource or to a resource pool. If they are assigned to a resource pool, all resources in that pool will inherit the capabilities of the pool, but extra capabilities can also be added to individual resources. For example, in the screenshot above, you can see that the Decoding options are inherited from the pool, as the pool icon is displayed next to them.
 
 When creating a [workflow](xref:MO_Workflow_Designer#workflows) or a [job](xref:MO_Scheduling#jobs), users can specify the required capabilities of the resources to be used in the workflow or job. This will limit the resources available for picking only to those which satisfy the capability requirements, making it easier to find the suitable ones.
 
 For example, *Location* can be an important capability when planning operations where resources need to be on-site. You can assign locations to all your resources beforehand, and then upon job creation you can choose the location your resources need to have. Then, when the resources are picked, only the ones on the actual location will be available for selection. Capabilities offer a very flexible and general way of solving this problem for a wide array of cases.
 
+In case a resource can be used multiple times (concurrency > 1), it could be that it can have multiple possible values, but only one value can be used at a given time. This could for example be a steerable antenna that can point to only one satellite at a time. For this, **time-dependent capabilities** can be used. This allows you to configure the resource with multiple possible values, but when the resource is booked with a specific value, all overlapping jobs using the same resource will have to have the same value in order to select the same resource.
+
 > [!TIP]
-> For a hands-on example of assigning capabilities to resources and resource pools, follow the tutorial [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities). For an example of using these capabilities when creating jobs, follow the [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations).
+> For hands-on examples of using resources and resource pools with capabilities, you can follow several tutorials:
+>
+> - [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities)
+> - [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations)
+> - [Using time-dependent capabilities](xref:Tutorial_MediaOps_Scheduling_Time_Dependent_Capabilities)
 
 ## Capacities
 

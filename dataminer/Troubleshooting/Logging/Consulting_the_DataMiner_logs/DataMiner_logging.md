@@ -26,6 +26,8 @@ This page consists of three sections:
 
 The log levels for each module (except DxMs) are indicated to the right of the module name in the log file list. Example: 0 0 0, 1 0 0, 1 3 2, etc. At the top of the list, the default settings are displayed.
 
+The lowest log level is 0, "No logging", which means that only essential information is logged and any more specific and detailed information is left out. How much actually gets logged with this log level depends on the DataMiner process.
+
 In the *Log settings* section, you can change the log levels for a specific module or change the default log levels of the DMA.
 
 To change the default log levels:

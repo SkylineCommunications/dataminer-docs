@@ -76,9 +76,9 @@ Up to now, in an interactive Automation script, it was possible to clear the val
 
 Due to a number of enhancements, overall performance has increased when logging in and logging out, especially on large systems.
 
-#### Interactive Automation scripts: Multi-line text boxes will no longer expand when selected \[ID 27858\]
+#### Interactive Automation scripts: Multiline text boxes will no longer expand when selected \[ID 27858\]
 
-Up to now, a multi-line text box (i.e. a UIBlock of type TextBox with IsMultiline set to true) would by default have a height of 1 line and would expand when it was selected. From now on, its initial height will be fixed. It will no longer expand when selected.
+Up to now, a multiline text box (i.e. a UIBlock of type TextBox with IsMultiline set to true) would by default have a height of 1 line and would expand when it was selected. From now on, its initial height will be fixed. It will no longer expand when selected.
 
 #### Failover: More information will now be returned after synchronizing the two agents \[ID 27870\]
 
@@ -305,9 +305,9 @@ When an enhanced service was renamed while there was an alarm on multiple servic
 
 In certain text boxes, in some cases, it would not be possible to enter a zero character.
 
-#### Jobs app: Empty drop-down boxes when creating/editing job \[ID 27810\]
+#### Jobs app: Empty dropdown boxes when creating/editing job \[ID 27810\]
 
-When a job was created or edited in the Jobs app, it could occur that no items were displayed in drop-down boxes.
+When a job was created or edited in the Jobs app, it could occur that no items were displayed in dropdown boxes.
 
 #### DataMiner Cube - Alarm Console: Problem when performing actions in rapid succession \[ID 27814\]
 
@@ -411,9 +411,9 @@ On a system with a MySQL database, in some cases, display values of rate alarms 
 
 In some cases, it could occur that the value of a rate alarm was not displayed correctly. this could for instance occur after an element restart, after an element was masked, etc.
 
-#### DataMiner Cube - Alarm Console: Error alarms could get stuck when a process had multiple threads with run-time errors \[ID 28113\]
+#### DataMiner Cube - Alarm Console: Error alarms could get stuck when a process had multiple threads with runtime errors \[ID 28113\]
 
-In some cases, error alarms could get stuck in the Alarm Console when a process had multiple threads with run-time errors.
+In some cases, error alarms could get stuck in the Alarm Console when a process had multiple threads with runtime errors.
 
 #### Problem in SLLog after stopping and reopening log file \[ID 28122\]
 
@@ -427,11 +427,11 @@ When an agent was restarted in a DataMiner System, certain SLNet threads could g
 
 ### CU1 fixes
 
-#### SLWatchDog2.txt: Total number of processes of which at least one thread has a run-time error was incorrectly replaced by total number of threads with a run-time error \[ID 28360\]
+#### SLWatchDog2.txt: Total number of processes of which at least one thread has a runtime error was incorrectly replaced by total number of threads with a runtime error \[ID 28360\]
 
-Each time a run-time error occurs, an entry is added to the SLWatchDog2.txt log file, showing the total number of processes of which at least one thread has a run-time error.
+Each time a runtime error occurs, an entry is added to the SLWatchDog2.txt log file, showing the total number of processes of which at least one thread has a runtime error.
 
-However, in some cases, that log entry would incorrectly show the total number of threads with a run-time error instead.
+However, in some cases, that log entry would incorrectly show the total number of threads with a runtime error instead.
 
 #### Failover: Configuration issues \[ID 28378\]
 

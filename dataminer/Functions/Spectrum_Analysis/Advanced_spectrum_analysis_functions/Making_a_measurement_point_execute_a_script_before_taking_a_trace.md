@@ -15,7 +15,7 @@ Spectrum measurement points are often configured to set one or more parameters b
 
 1. In the *Setup* section, select *Set up your measurement point via an Automation script*.
 
-1. Click *\<empty>*, and select an Automation script in the drop-down list.
+1. Click *\<empty>*, and select an Automation script in the dropdown list.
 
 1. In the boxes below the script name, fill in the necessary dummies and parameters for the script.
 

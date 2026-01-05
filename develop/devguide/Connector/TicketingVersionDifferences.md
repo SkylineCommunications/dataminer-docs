@@ -9,7 +9,7 @@ In DataMiner 10.0.13, multiple important changes are introduced in the Ticketing
 > [!NOTE]
 >
 > - If you upgrade to DataMiner 10.0.13 and your DMS already uses an indexing database, all ticketing data is migrated automatically.
-> - If you upgrade to DataMiner 10.0.13 and your DMS does not use an indexing database yet, the ticketing data will be migrated automatically as soon as you add an indexing database to your DataMiner System. However, as long as there is no indexing database, you will not be able to use the Ticketing app. A run-time error in the Alarm Console will indicate that Ticketing Manager could not be initialized because there is no indexing database.
+> - If you upgrade to DataMiner 10.0.13 and your DMS does not use an indexing database yet, the ticketing data will be migrated automatically as soon as you add an indexing database to your DataMiner System. However, as long as there is no indexing database, you will not be able to use the Ticketing app. A runtime error in the Alarm Console will indicate that Ticketing Manager could not be initialized because there is no indexing database.
 
 > [!CAUTION]
 >

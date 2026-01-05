@@ -4,20 +4,23 @@ uid: BPA_Minimum_Requirements_Check
 
 # DataMiner Agent Minimum Requirements
 
-Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this BPA test is called "Minimum Requirements Check".
+Prior to DataMiner 10.4.12/10.5.0 [CU10]<!--RN 40751-->, this BPA test is called "Minimum Requirements Check".
 
 This BPA test checks if the following minimum hardware requirements are met or exceeded, via local WMI queries using .NET Libraries:
 
 - CPU cores (physical): 4
 - Disk size:
 
-  - Main installation (C:\\): 300 GB
+  - Main installation (C:\\): 128 GB
   - Cassandra installation (D:\\ or other): 600 GB
 
 - Disk usage: Less than 50% on Cassandra drive.
-- System memory: 32 GB
+- System memory: 16 GB
 
 This BPA test is available by default from DataMiner 10.1.0 [CU4]/10.1.7 onwards.
+
+> [!NOTE]
+> Prior to DataMiner 10.6.0 [CU0]/10.5.12, this BPA test requires a disk size of 300 GB for the main installation and 32 GB system memory.<!-- RN 43913 --> However, the requirements indicated on this page are sufficient for most systems.
 
 For more information on system requirements, see [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
@@ -48,13 +51,13 @@ The detailed JSON output of the BPA will contain the following possible messages
 
 - CPU cores: `Failed CPU Check: X cores available, 4 are required.` or `Passed CPU Check: X cores available, 4 are required.` (where X is the number of physical cores in the system).
 
-- Disk size (main): `Failed Main Installation Disk Size Check: Disk X has Y GB, 300 GB is required.` or `Passed Main Installation Disk Size Check: Disk X has Y GB, 300 GB is required.` (where X is the installed disk and Y is the total volume of the disk).
+- Disk size (main): `Failed Main Installation Disk Size Check: Disk X has Y GB, 128 GB is required.` or `Passed Main Installation Disk Size Check: Disk X has Y GB, 128 GB is required.` (where X is the installed disk and Y is the total volume of the disk).
 
 - Disk size (database): `Failed Database Disk Size Check: Disk X has Y GB, 600 GB is required.` or `Passed Database Disk Size Check: Disk X has Y GB, 600 GB is required.` (where X is the disk on which DataMiner is installed and Y is the total volume of the disk).
 
 - Disk free space: `Failed Database Disk Free Space Check: Disk X has Y % Available Free Space. 50% or more is required.` or `Passed Database Disk Free Space Check: Disk X has Y % Available Free Space. 50% or more is required.` (where X is the disk on which Cassandra is installed, and Y is its free space).
 
-- Memory: `Failed Memory Check: The system has X GB Total Visible Memory, 32 GB is required.` or `Passed Memory Check: The system has X GB Total Visible Memory, 32 GB is required.` (where X is the visible memory, as seen in the control panel).
+- Memory: `Failed Memory Check: The system has X GB Total Visible Memory, 16 GB is required.` or `Passed Memory Check: The system has X GB Total Visible Memory, 16 GB is required.` (where X is the visible memory, as seen in the control panel).
 
 ### Warning
 

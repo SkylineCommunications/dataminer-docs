@@ -71,7 +71,7 @@ When, in the *Resources* app, you assign a capability parameter to a resource, i
 
 #### Visual Overview: SetVar controls 'ListBox' and 'FilterComboBox' now use virtualization \[ID 25436\]
 
-The SetVar controls "ListBox" and "FilterComboBox" now both use virtualization. This will allow those controls to load large data sets without major performance loss.
+The SetVar controls "ListBox" and "FilterComboBox" now both use virtualization. This will allow those controls to load large datasets without major performance loss.
 
 #### Visual Overview: Retrieving a booking ID using the \[Reservation:\] placeholder \[ID 25447\]
 

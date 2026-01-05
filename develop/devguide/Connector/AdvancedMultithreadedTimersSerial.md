@@ -4,7 +4,7 @@ uid: AdvancedMultiThreadedTimersSerial
 
 # Serial
 
-To set up multi-threaded serial communication in a QAction, perform the following steps:<!-- RN 9290 -->
+To set up multithreaded serial communication in a QAction, perform the following steps:<!-- RN 9290 -->
 
 1. [Build the request](#step-1-build-the-request)
 1. [Process the responses](#step-2-process-the-responses)
@@ -12,7 +12,7 @@ To set up multi-threaded serial communication in a QAction, perform the followin
 
 ## Step 1: Build the request
 
-Assume the following multi-threaded timer is defined:
+Assume the following multithreaded timer is defined:
 
 ```xml
 
@@ -26,7 +26,7 @@ Assume the following multi-threaded timer is defined:
 </Timer>
 ```
 
-To build the request, create a QAction triggered by a multi-threaded timer (using the qactionBefore option), which creates the request object and returns this.
+To build the request, create a QAction triggered by a multithreaded timer (using the qactionBefore option), which creates the request object and returns this.
 
 ```xml
 <QAction id="1010" name="Serial Before" encoding="csharp" row="true">
@@ -86,10 +86,10 @@ In this QAction, typically you will also set the state of the corresponding row 
 
 ## Step 2: Process the responses
 
-To process the responses, create a QAction that triggers on the group of the multi-threaded timer.
+To process the responses, create a QAction that triggers on the group of the multithreaded timer.
 
 > [!NOTE]
-> Whereas typically you provide a parameter ID in the triggers attribute, here you need to specify the ID of the group of the multi-threaded timer.
+> Whereas typically you provide a parameter ID in the triggers attribute, here you need to specify the ID of the group of the multithreaded timer.
 
 ```xml
 <QAction id="1011" name="Serial Data" encoding="csharp" options="group" triggers="1011" row="true">
@@ -105,7 +105,7 @@ Each response contains two entries:
 
 - response[0] (Int32): The ID of the matching response or -1 in case no match is found.
 - response[1] (byte[] or String): If there was a match, this entry contains the response data as a byte array. If there was no match, this entry contains a string message (e.g. "TIMEOUT").
-- response[2] (byte[]): Only present if result[0] is -1 (i.e. no response matches) and only since DataMiner 9.5.0 (RN 13052). This makes it possible to inspect the received response that does not match any of the specified expected responses.
+- response[2] (byte[]): Only present if result[0] is -1 (i.e. no response matches). This makes it possible to inspect the received response that does not match any of the specified expected responses.<!-- RN 13052 -->
 
 Suppose parameters 1023 and 33 are defined as follows:
 
@@ -193,7 +193,7 @@ In this QAction, you will typically also update the state column of the correspo
 
 ## Step 3: Run the QAction after the response
 
-The last step runs the QAction specified in the qactionAfter option of the multi-threaded timer.
+The last step runs the QAction specified in the *qactionAfter* option of the multithreaded timer.
 
 ```xml
 <QAction id="1012" name="Serial After" encoding="csharp" row="true">

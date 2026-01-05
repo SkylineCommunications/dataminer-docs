@@ -66,7 +66,7 @@ The Template Editor UI consists of the following main components<!--RN 34858-->:
 - *Settings* pane (3)
 
 > [!IMPORTANT]
-> Any changes made in the Template Editor are only saved once you click the *Save* button in the lower right corner. When you close the Template Editor by clicking the "X" in the top-right corner or the *Cancel* button in the lower right corner, you will be alerted of any unsaved changes that may be lost if you close the editor prematurely.
+> Any changes made in the Template Editor are only saved once you click the *Save* button in the lower-right corner. When you close the Template Editor by clicking the "X" in the top-right corner or the *Cancel* button in the lower-right corner, you will be alerted of any unsaved changes that may be lost if you close the editor prematurely.
 
 ## Working with layers
 
@@ -127,7 +127,7 @@ If one layer is positioned higher than another, the higher layer will appear in 
 
 ### Temporarily masking a layer
 
-To temporarily mask a layer within the Template Editor, hover the mouse pointer over the layer and click the *eye* icon in the lower right corner. This action renders the layer invisible while you modify the template. To bring the layer back into view, click the *eye* icon again.
+To temporarily mask a layer within the Template Editor, hover the mouse pointer over the layer and click the *eye* icon in the lower-right corner. This action renders the layer invisible while you modify the template. To bring the layer back into view, click the *eye* icon again.
 
 ![Temporarily mask layer](~/dataminer/images/Temporarily_Mask_Layer.gif)<br>*Template Editor in DataMiner 10.5.8*
 
@@ -177,12 +177,17 @@ In the *Dimensions* section of the *Settings* pane, you can resize and position 
 | ![Left](~/dataminer/images/Dimensions_Left.png) | Left | Specify the location of the left edge of the layer (in pixels or percent). This value should be lower than the width of the overall template. |
 | ![Right](~/dataminer/images/Dimensions_Right.png) | Right | Specify the location of the right edge of the layer (in pixels or percent). This value should be lower than the width of the overall template. |
 
+To change the unit used for the dimension values, click the unit itself. For instance, clicking *px* will switch to *%*.
+
+You can secure one or multiple dimension settings of a layer by clicking the ![Lock](~/dataminer/images/Dimensions_Lock.png) icon next to the chosen setting. This lock functionality enhances the security of your design, preserving your template's intended appearance, especially when dealing with variable widths and heights. For example, when adjusting a table column width, you may want to maintain specific proportions. Once a setting is locked, any attempt to override the specified dimension will be restricted. This includes moving or resizing the layer in the preview and adjusting the component size in the dashboard or low-code app edit mode (e.g. changing the size of a table column). The locked dimensions ensure that the template remains in its designated position. If you are unable to lock a dimension setting because of the locking of other settings, the lock icon will be grayed out.
+
+From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- RN 43740 -->, it is also possible to lock a dimension setting of a shape to the virtual bounds of a component instead of the visual bounds. To do so, keep the CTRL button pressed while clicking the lock icon. The icon will then take the accent color (blue) to indicate that virtual bound locking is enabled. Functionally, this ensures that when virtualization is supported (e.g. in the timeline), shapes will align to the virtual boundary rather than the visible shape boundary, allowing them to extend outside the visible area (i.e. viewport). This way, time-based elements such as pre-roll and post-roll bars that extend beyond the viewport can be visualized.
+
 > [!NOTE]
 >
 > - In the preview, when you use the drag-and-drop functionality to move a layer, or when you resize a layer by dragging the frame edges, the dimension settings in the *Settings* pane will automatically be adjusted.
-> - You can change the unit to percent by clicking *px* next to the dimension values.
-> - You can secure one or multiple dimension settings of a layer by clicking the ![*Lock*](~/dataminer/images/Dimensions_Lock.png) icon next to the chosen setting. This lock functionality enhances the security of your design, preserving your template's intended appearance, especially when dealing with variable widths and heights. For example, when adjusting a table column width, you may want to maintain specific proportions. Once a setting is locked, any attempt to override the specified dimension will be restricted. This includes moving or resizing the layer in the preview and adjusting the component size in the dashboard or low-code app edit mode (e.g. changing the size of a table column). The locked dimensions ensure that the template remains in its designated position. If you are unable to lock a dimension setting because of the locking of other settings, the lock icon will be grayed out.
 > - For some layers, the width and height is determined by the left and right position and can therefore not be modified.
+> - Virtual bounds locking of the *Width* dimension is only possible when the unit is set to percent.
 
 ### Customizing layer appearance and behavior
 
@@ -212,8 +217,10 @@ Layer-specific properties:
 | ![Horizontal alignment](~/dataminer/images/Text_Horizontal_Alignment.png) | Horizontal alignment | Left, center, right, or justify. | Text |
 | ![Vertical alignment](~/dataminer/images/Text_Vertical_Alignment.png) | Vertical alignment | Top, center, or bottom. | Text |
 | N/A | HTML code | Enter HTML code. Basic syntax highlighting and IntelliSense is supported. | HTML |
-| N/A | Link width to | Link the width of this column to that of another column, selected from the dropdown list. Only available for table and grid components. | Rectangle |
-| N/A | Link height to | Link the height of this column to that of another column, selected from the dropdown list. Only available for table and grid components. | Rectangle |
+| N/A | Link width to | Link the width of the rectangle to a column, selected from the dropdown list. This will partially fill it with a background color depending on the percentage in the column it is linked to. Only available if a data source is used that includes a numeric column. | Rectangle |
+| N/A | Link height to | Link the height of the rectangle to a column, selected from the dropdown list. This will partially fill it with a background color depending on the percentage in the column it is linked to. Only available if a data source is used that includes a numeric column. | Rectangle |
+| ![Horizontal anchor left](~/dataminer/images/Rectangle_Horizontal_Anchor.png) ![Horizontal anchor right](~/dataminer/images/Rectangle_Horizontal_Anchor_Right.png) | Horizontal anchor | If *Link width to* is used, this determines whether the background color representing the linked column is anchored to the left (default) or to the right. Available from DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards.<!-- RN 43740 --> | Rectangle |
+| ![Vertical anchor top](~/dataminer/images/Rectangle_Vertical_Anchor.png) ![Vertical anchor bottom](~/dataminer/images/Rectangle_Vertical_Anchor_Bottom.png) | Vertical anchor |  If *Link height to* is used, this determines whether the background color representing the linked column is anchored to the bottom (default) or to the top. Available from DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards.<!-- RN 43740 --> | Rectangle |
 
 > [!NOTE]
 > Certain HTML tags, such as `<iframe>` and `<object>`, are not supported in HTML layers because embedded content is currently restricted in templates. If you want to use these tags, consider using the [web component](xref:DashboardWeb) instead. To display content like video thumbnails in a template, you can convert the content to a base64-encoded image and display it using an `<img>` tag.
@@ -297,43 +304,88 @@ This is the behavior that will result from this configuration:
 
 ![Conditional case behavior](~/dataminer/images/Conditional_Case.gif)<br/>*Grid component in DataMiner 10.4.1*
 
-## Reusing a template
+## Using a preset template
+
+From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44040 + 44123-->, you can start from a preset template when configuring a component that supports templates.
+
+1. Access the overview of available templates:
+
+   - For the **grid and timeline** components:
+
+     1. Select the component and go the *Layout* pane on the right.
+
+     1. Under *Item templates*, click *Browse templates*.
+
+   - For the **table** component:
+
+     1. Select the component and go to the *Layout* pane on the right.
+
+     1. In the *Column appearance* section, click the downward arrow next to *Select a column* and select the column you want to assign a template to.
+
+     1. Click the ellipsis button ("...") in the top-right corner and select *Browse templates*.
+
+   - For the **maps** component:
+
+     1. Select the component and go to the *Layout* pane on the right.
+
+     1. Under the *Layer settings* for a specific layer of the map, click *Browse templates* in the *Template* section.
+
+1. Select a preset template from the overview. You can:
+
+   - Search for a template by name using the search box.
+
+   - Use the filter in the top-right corner of the window to show preset templates, custom templates, or both.
+
+   - Filter the overview by visualization type using the options in the sidebar on the left.
+
+   > [!TIP]
+   > You can tell a preset template from a custom template by the *Preset* label in the top-right corner of a template tile.
+   >
+   > ![Preset label](~/dataminer/images/Preset_Label.png)
+
+1. Click *Apply* in the lower-right corner of the window.
+
+   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Templates overview in DataMiner 10.6.1*
+
+   After applying the preset template, you can further configure it using the Template Editor.
+
+## Reusing a custom template
 
 ### [From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42226-->](#tab/tabid-1)
 
 If you have already configured at least one other template for a component in the same dashboard or low-code app you are working on, you can reuse it for a second component that supports templates.
 
-- For the **grid and timeline** components:
+1. Access the overview of available templates:
 
-  1. Select the component and go the *Layout* pane on the right.
+   - For the **grid and timeline** components:
 
-  1. Under *Item templates*, click *Browse templates*.
+     1. Select the component and go the *Layout* pane on the right.
 
-     A list of existing components and their templates is displayed, ordered by component type. A preview shows how the current component would look if the template in question was applied.
+     1. Under *Item templates*, click *Browse templates*.
 
-  1. Select a template from the list and click *Apply* in the lower right corner of the pop-up window.
+   - For the **table** component:
 
-- For the **table** component:
+     1. Select the component and go to the *Layout* pane on the right.
 
-  1. Select the component and go to the *Layout* pane on the right.
+     1. In the *Column appearance* section, click the downward arrow next to *Select a column* and select the column you want to assign a template to.
 
-  1. In the *Column appearance* section, click the downward arrow next to *Select a column* and select the column you want to assign a template to.
+     1. Click the ellipsis button ("...") in the top-right corner and select *Browse templates*.
 
-  1. Click the ellipsis button ("...") in the top-right corner and select *Browse templates*.
+   - For the **maps** component:
 
-     A list of existing components and their templates is displayed, ordered by component type. A preview shows how the current component would look if the template in question was applied.
+     1. Select the component and go to the *Layout* pane on the right.
 
-  1. Select a template from the list and click *Apply* in the lower right corner of the pop-up window.
+     1. Under the *Layer settings* for a specific layer of the map, click *Browse templates* in the *Template* section.
 
-- For the **maps** component:
+1. Select a custom template from the overview. From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44123-->, you can:
 
-  1. Select the component and go to the *Layout* pane on the right.
+   - Search for a template by name using the search box.
 
-  1. Under the *Layer settings* for a specific layer of the map, click *Browse templates* in the *Template* section.
+   - Use the filter in the top-right corner of the window to show preset templates, custom templates, or both.
 
-     A list of existing components and their templates is displayed, ordered by component type. A preview shows how the current component would look if the template in question was applied.
+   - Filter the overview by visualization type using the options in the sidebar on the left.
 
-  1. Select a template from the list and click *Apply* in the lower right corner of the pop-up window.
+1. Click *Apply* in the lower-right corner of the window.
 
 ### [Earlier DataMiner versions](#tab/tabid-2)
 

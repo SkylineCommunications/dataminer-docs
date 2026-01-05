@@ -15,7 +15,7 @@ To add a custom property to a DataMiner element, service, or view:
 
 1. In the *Properties* dialog box, go to the *Custom* tab.
 
-1. Click the cogwheel button in the lower left corner, and select *Add*.
+1. Click the cogwheel button in the lower-left corner, and select *Add*.
 
 1. Enter a name for the custom property.
 
@@ -59,7 +59,7 @@ To add a custom property to a DataMiner element, service, or view:
    > [!NOTE]
    > If you selected several elements, and these have different property values, the value field will display *(Multiple Values)*.
 
-1. To change a property’s configuration, select the property you want to edit, click the cogwheel button in the lower left corner, and select *Edit*.
+1. To change a property’s configuration, select the property you want to edit, click the cogwheel button in the lower-left corner, and select *Edit*.
 
    The same options will be available as when adding a new property.
 
@@ -74,7 +74,7 @@ To add a custom property to a DataMiner element, service, or view:
 
 1. Select the property you want to edit.
 
-1. Click the cogwheel button in the lower left corner, and select *Delete*.
+1. Click the cogwheel button in the lower-left corner, and select *Delete*.
 
 1. Click *OK* to confirm.
 

@@ -50,6 +50,6 @@ On the *Nodes* > *Grandmasters* tab, in the *Time Properties* pane, it could occ
 
 In the 1.1.2 version of PTP, the *Nodes* > *Boundary Clocks* tab could display incorrect names for parent and grandmaster clocks.
 
-#### Cogwheel drop-down list not working on Nodes \> Grandmasters/Boundary Clocks/Analyzers tabs \[ID 32116\]
+#### Cogwheel dropdown list not working on Nodes \> Grandmasters/Boundary Clocks/Analyzers tabs \[ID 32116\]
 
 On the *Grandmasters*, *Boundary Clocks* and *Analyzers* subtabs of the *Nodes* tab, when you clicked the cogwheel icon, it could occur that it was not possible to select an element.

@@ -4,7 +4,7 @@ uid: LogicQActions
 
 # QActions
 
-## Introduction
+## About QActions
 
 Quick Actions (often referred to as "QActions") are used to implement custom functionality that cannot be implemented by other protocol constructs (e.g. parsing a JSON response received from the device, etc.).
 
@@ -95,18 +95,6 @@ DataMiner compiles QActions with the following preprocessor directives:
    #endif
    ```
 
-- **ALARM_SQUASHING**: This preprocessor directive ("#define ALARM_SQUASHING") is automatically added when a QAction is compiled.<!-- RN 29549 -->
-
-   In QActions, all code related to alarm squashing (i.e. the combination of consecutive alarm events without a severity change into a single consolidated event) should be enclosed as illustrated below, to allow protocols that contain alarm squashing functionality to also be compiled on DataMiner versions that do not support alarm squashing:
-
-   ```csharp
-   #if ALARM_SQUASHING
-   // Code specific for alarm squashing (DataMiner 10.1.0 and later)
-   #else
-   // Code for DataMiner 10.0.0 and earlier
-   #endif
-   ```
-
 ## Entry methods
 
 The entry method is the entry point of the QAction. By default, the Run method of the QAction class in the global namespace is used as the entry point of the QAction.
@@ -152,7 +140,7 @@ Consider the following example of a protocol that defines a button (with paramet
 
 In case the DataMiner Agent has multiple elements running this protocol, this means that every time the button is pressed on one of these elements, the executionCount variable is incremented, i.e. the executionCount field will hold the number of times this QAction has been executed as a result of a button being pressed by any of the elements executing this protocol (note that in this case locking is required).
 
-In case you only want to keep track of the execution count on a per element basis, either define a protocol parameter that will hold the execution count (as illustrated in the first example in the [Introduction](xref:LogicQActions#introduction)) instead of a static field in the QAction class, or use the approach described in the section [Instance entry methods](xref:LogicQActions#instance-entry-methods).
+In case you only want to keep track of the execution count on a per element basis, either define a protocol parameter that will hold the execution count (as illustrated in the first example under [About QActions](#about-qactions)) instead of a static field in the QAction class, or use the approach described in the section [Instance entry methods](xref:LogicQActions#instance-entry-methods).
 
 ### Instance entry methods
 

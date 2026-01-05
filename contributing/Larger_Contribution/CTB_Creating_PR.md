@@ -12,7 +12,7 @@ When your changes are ready, you can create a pull request to submit them for re
 
 1. Check the overview of your changes in GitHub Desktop.
 
-1. If all changes are OK, fill in a title for the update in the *Summary* box in the lower right corner and click the *Commit* button.
+1. If all changes are OK, fill in a title for the update in the *Summary* box in the lower-right corner and click the *Commit* button.
 
 1. In the central pane of GitHub Desktop, click *Push origin*.
 

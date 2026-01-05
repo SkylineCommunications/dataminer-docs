@@ -34,15 +34,15 @@ In most spectrum elements, the following settings are available, though this dep
 
   From DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 onwards<!--RN 37821-->, you can also change the center frequency using the pencil next to the center frequency X-axis label in the real-time display section of the spectrum analyzer card.
 
-- **Resolution bandwidth**: RBW filter. Can be set to auto, or to a custom value that can be selected in the drop-down list.
+- **Resolution bandwidth**: RBW filter. Can be set to auto, or to a custom value that can be selected in the dropdown list.
 
   From DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards<!--RN 37601-->, you can also change the resolution bandwidth (RBW) in the info pane, to the right of the real-time display on the spectrum analyzer card, by clicking the plus ("+") or minus ("-") buttons.
 
-- **Video bandwidth**: VBW filter. Can be set to auto, or to a custom value that can be selected in the drop-down list.
+- **Video bandwidth**: VBW filter. Can be set to auto, or to a custom value that can be selected in the dropdown list.
 
   From DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards<!--RN 37601-->, you can also change the video bandwidth (VBW) in the info pane, to the right of the real-time display on the spectrum analyzer card, by clicking the plus ("+") or minus ("-") buttons.
 
-- **Sweeptime**: The time that the analyzer takes to tune across the displayed frequency span. Can either be set to auto by selecting the checkbox, or to a custom value by clearing the checkbox and selecting the value in the drop-down list.
+- **Sweeptime**: The time that the analyzer takes to tune across the displayed frequency span. Can either be set to auto by selecting the checkbox, or to a custom value by clearing the checkbox and selecting the value in the dropdown list.
 
 - **Input attenuation**: This will amplify or lower the signal strength at the input of the spectrum analyzer, in order to improve measuring accuracy.
 

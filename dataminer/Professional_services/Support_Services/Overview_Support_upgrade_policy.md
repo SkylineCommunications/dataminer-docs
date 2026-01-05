@@ -13,7 +13,7 @@ Updates and upgrades are available for:
 
 ### Supported versions
 
-Skyline Communications supports up to 3 major versions at any time, being the current Main Release and the 2 previous Main Releases. For instance, if the current latest DataMiner version is 10.2.x, the versions 10.1.x and 10.0.x will still be supported via an active DataMiner Maintenance and Support Contract. See [DataMiner Supported Life Cycle Policy](xref:Software_support_life_cycles).
+Skyline Communications supports up to 3 major versions at any time, being the current Main Release and the 2 previous Main Releases. For instance, if the current latest DataMiner version is 10.2.x, the versions 10.1.x and 10.0.x will still be supported via an active DataMiner Maintenance and Support Contract. See [DataMiner Supported Lifecycle Policy](xref:Software_support_life_cycles).
 
 ### Upgrade cycle
 

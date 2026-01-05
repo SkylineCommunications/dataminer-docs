@@ -12,11 +12,11 @@ EPM connectors constitute the core of the EPM Solution. They carry out the neces
 
 For xPON, these are the required EPM connectors:
 
-- [Skyline EPM Platform](https://catalog.dataminer.services/result/driver/7207)
+- [Skyline EPM Platform](https://catalog.dataminer.services/details/f1dc139b-8da7-4607-9ffb-65087610b3ff)
 
-- [Skyline EPM Platform xPON](https://catalog.dataminer.services/result/driver/7210)
+- [Skyline EPM Platform xPON](https://catalog.dataminer.services/details/2de7ee12-650b-442a-8c7e-c8ddf2b358f9)
 
-- [Skyline EPM Platform xPON WM](https://catalog.dataminer.services/result/driver/7213)
+- [Skyline EPM Platform xPON WM](https://catalog.dataminer.services/details/ac349ec5-a7a6-4e5f-8732-6e43ed14b3ee)
 
 ### Data collection
 
@@ -30,7 +30,7 @@ For an overview of the available collector connectors, see [Supported technologi
 
 To gather the ONT operative data, the default method is a Kafka data stream provided by a third party. Usually this is an ACS if the xPON implementation has multiple vendors deployed (i.e. one vendor for the OLT and multiple vendors for the ONT).
 
-A [Generic Kafka Consumer](https://catalog.dataminer.services/result/driver/7373) connector is available, which is able to retrieve information from any stream, as it does not process any of the received data. It only polls the data, ensures that its formatting is consistent, and stores it in a defined location:
+A [Generic Kafka Consumer](https://catalog.dataminer.services/details/ed00ca53-7d1a-4bf0-88f8-7bb2a457f697) connector is available, which is able to retrieve information from any stream, as it does not process any of the received data. It only polls the data, ensures that its formatting is consistent, and stores it in a defined location:
 
 For EPM xPON to function properly, however, the source for the Kafka stream needs to use the [Standard ONT JSON definition](xref:xPON_ONT_Json_definition). If your ONT operative data source does not use the defined format, contact the Skyline Sales team.
 

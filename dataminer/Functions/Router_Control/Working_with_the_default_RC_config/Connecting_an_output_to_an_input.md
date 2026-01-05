@@ -12,4 +12,4 @@ In the *Router Control* module:
 
 1. At the center, click *Connect*.
 
-A “connected” icon will appear in the lower right corner of the input and the output you have just connected.
+A “connected” icon will appear in the lower-right corner of the input and the output you have just connected.

@@ -476,7 +476,7 @@ Currently, our quality profile for C# has 79 rules disabled and 1 overridden rul
   - **Category:** Maintainability
   - **Type:** Code Smell
   - **Tags:** performance, Activate
-  - **Reason:** Sorting without pre-filtering is efficient for current data sets.
+  - **Reason:** Sorting without pre-filtering is efficient for current datasets.
 
 - **The collection-specific "TrueForAll" method should be used instead of the "All" extension**
   - **Category:** Maintainability

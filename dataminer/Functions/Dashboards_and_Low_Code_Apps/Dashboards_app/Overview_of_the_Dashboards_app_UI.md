@@ -51,13 +51,22 @@ The header bar contains the following items, from left to right:
 
 - User button: A button with the initials or an image of the current user is displayed in the top-right corner. Click this button to open a menu that provides access to the following options:
 
-  - *Settings*: Allows you to manage any available [dashboard theme](xref:Configuring_the_dashboard_layout) (1) and configure whether [specific actions](#the-dashboards-app-details-pane) are pinned to the dashboard header bar (2).
+  - *(Dashboard) settings*: Allows you to manage any available [dashboard theme](xref:Configuring_the_dashboard_layout) (1) and configure whether [specific actions](#the-dashboards-app-details-pane) are pinned to the dashboard header bar (2).
 
     ![Dashboard settings](~/dataminer/images/DashboardSettings.png)<br>*Dashboard settings in DataMiner 10.4.10*
 
   - *About*: Displays information about the app.
 
-  - *Help*: Opens the DataMiner documentation.
+  - *Help*: Available up to DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10. Opens the DataMiner documentation.
+
+  - *User settings*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43803-->. Allows you to configure user-specific settings such as changing your password.
+
+    > [!NOTE]
+    > User settings are only available if the following conditions are met:
+    >
+    > - In *System Center* > *Users*, the user's *User cannot change password* setting must be disabled.
+    > - The user must have the [*Modules* > *System configuration* > *Security* > *Specific* > *Limited administrator* permission](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator).
+    > - The user must not be logged in with external or delegated authentication.
 
   - *Sign out*: Logs you out of the app and returns you to the logon screen.
 
@@ -123,7 +132,7 @@ If a dashboard is selected, the header bar of this pane can display a number of 
 
 - **Share** or **Start sharing**: Allows you to share the dashboard using dataminer.services. See [Sharing a dashboard](xref:Sharing_a_dashboard). This feature is only available in read mode, if the DataMiner System is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-In the [settings of the Dashboards app](#the-dashboards-app-header-bar), you can configure whether the edit mode, clear selections, export as PDF, and share dashboard buttons are always displayed (i.e. “pinned” to the header bar) or instead accessible via a button in the top-right corner of a dashboard.
+In the [settings of the Dashboards app](#the-dashboards-app-header-bar), you can configure whether the edit mode, clear selections, create report/export as PDF, and share dashboard buttons are always displayed (i.e. “pinned” to the header bar) or instead accessible via a button in the top-right corner of a dashboard.
 
 ![Pin actions](~/dataminer/images/Pin_Actions.png)<br>*Dashboard settings in DataMiner 10.4.12*
 

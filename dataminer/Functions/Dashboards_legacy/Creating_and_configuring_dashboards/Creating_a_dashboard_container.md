@@ -21,9 +21,9 @@ To create a new dashboard container in the *Dashboards* app:
 
     - Next to *Description*, you can add a description with additional information about the dashboard container.
 
-    - You can select a folder for the dashboard container in the drop-down list on the right. To create a new folder, select *\<Create New>*.
+    - You can select a folder for the dashboard container in the dropdown list on the right. To create a new folder, select *\<Create New>*.
 
-1. Under *Included dashboards*, for each dashboard you want to include in the container, select the dashboard in the drop-down list and click *Add*.
+1. Under *Included dashboards*, for each dashboard you want to include in the container, select the dashboard in the dropdown list and click *Add*.
 
 1. Click *Save Configuration* to save the dashboard container.
 

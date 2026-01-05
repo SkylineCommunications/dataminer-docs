@@ -955,7 +955,7 @@ In some cases, the Asset Manager app would fail to initialize.
 
 #### Run-time errors in ParameterThread when defining a column parameter in the functions.xml [ID 31074]
 
-In some cases, run-time errors could occur in the ParameterThread when defining a column parameter in the functions.xml.
+In some cases, runtime errors could occur in the ParameterThread when defining a column parameter in the functions.xml.
 
 #### Web Services API v1: Port details missing from result of GetElementConfiguration method [ID 31075]
 

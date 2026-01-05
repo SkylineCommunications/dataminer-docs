@@ -127,10 +127,42 @@ For example, to have two table parameters cached, specify the following configur
 }
 ```
 
-The \[Param:\] placeholder in Visual Overview uses data from the cache. However, the subscription filter used for the placeholder needs to match the subscription filter in the configuration minus any "columns=" options. (See [Filtering the data of a cached table parameter](xref:Filtering_the_data_of_a_cached_table_parameter).)
+From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43457-->, it is possible to cache specific columns of a table using the optional `ColumnIDs` property. If no `ColumnIDs` property is specified, the entire table will be cached.
+
+For example, the following configuration shows how to cache only specific columns of a table parameter:
+
+```json
+
+{
+    "DataMinerID": 956,
+    "ElementID": 1846,
+    "ParameterID": 1500,
+    "SubscriptionFilter": null,
+    "ColumnIDs": "1512"
+}
+```
+
+When specifying multiple column IDs, list them as comma-separated values without spaces. For example: `"ColumnIDs": "1512,1513,1514"`.
 
 > [!NOTE]
-> Make sure that all the required columns are being retrieved when you use the "columns=" option. If this does not match, the cache will not be used.
+>
+> - A `columns=` option can also be provided in the `SubscriptionFilter`. In this case, it takes priority over the separate `ColumnIDs` setting.
+> - When `columns=` is used in `SubscriptionFilter`, only requests that use the same `SubscriptionFilter` will use the cache. For the separate `ColumnIDs` setting, any request that matches the other cache settings will use the cached data if the requested column matches the cached column.
+> - Make sure that all the required columns are being retrieved when you use the "columns=" option. If this does not match, the cache will not be used.
+
+The \[Param:\] placeholder in Visual Overview uses data from the cache. However, the subscription filter used for the placeholder needs to match the subscription filter in the configuration minus any "columns=" options. (See [Filtering the data of a cached table parameter](xref:Filtering_the_data_of_a_cached_table_parameter).)
+
+From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43457-->, Visual Overview also supports using the parameter cache for:
+
+- Parameter parts (parameters used in conditional statements).
+- Parameter placeholders that target a full column rather than a specific row.
+
+From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43457-->, wildcard characters can be used in table keys when requesting data from cached tables:
+
+- `*` matches any number of characters.
+- `?` matches exactly one character.
+
+For example, if the display keys of a table are in the format `qaTable 500_x`, you can use a request such as: `<A>-A|MyElement|Parameter:507,qaTable*5|=Active`. This will match the row with display key `qaTable 500_5`.
 
 It is also possible to cache table parameters that are configured as matrix parameters in the Router Control module. In this case, the subscription filter you specify must exactly match the subscription filter on the table. (See [Adding a matrix represented by two table parameters](xref:Designing_a_matrix_tab_page_in_the_Router_Control_module#adding-a-matrix-represented-by-two-table-parameters).)
 
@@ -235,9 +267,9 @@ To configure this setting:
    To retrieve this time zone value, you can run the following commands in a PowerShell prompt on the server:
 
    ```powershell
-   > $timezones = [System.TimeZoneInfo]::GetSystemTimeZones()
-   > $timezone = $timezones | Where-Object {$PSItem.StandardName -eq [System.TimeZone]::CurrentTimeZone.StandardName }
-   > Set-Clipboard -Value $timezone.ToSerializedString()
+   $timezones = [System.TimeZoneInfo]::GetSystemTimeZones()
+   $timezone = $timezones | Where-Object {$PSItem.StandardName -eq [System.TimeZone]::CurrentTimeZone.StandardName }
+   Set-Clipboard -Value $timezone.ToSerializedString()
    ```
 
    This last line will paste the required string to the clipboard.

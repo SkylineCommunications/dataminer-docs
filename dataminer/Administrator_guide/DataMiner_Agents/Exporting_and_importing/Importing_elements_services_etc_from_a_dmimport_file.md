@@ -36,7 +36,6 @@ To import a .dmimport file:
 
 > [!NOTE]
 >
-> - To import a package with a size of more than 1.2 GB, we recommend to use the 64-bit version of DataMiner Cube. See [Installing & configuring the DataMiner Cube software](xref:Installing_configuring_the_DataMiner_Cube_software#installing--configuring-the-dataminer-cube-software).
 > - If you import an element that uses a protocol version marked as Production, different options for the import will be available depending on whether the protocol version is more recent than the Production version used in the DMS:
 >   - If the imported version is more recent than the version marked as Production in the DMS, you will be able to select whether the imported protocol becomes marked as Production in the DMS or not.
 >   - If the imported version is less recent than the Production version in the DMS, you will be able to choose whether the element switches to the protocol version marked as Production in the DMS or not.

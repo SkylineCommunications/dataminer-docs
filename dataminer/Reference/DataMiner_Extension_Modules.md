@@ -33,6 +33,12 @@ The ArtifactDeployer module is responsible for allowing users to deploy differen
 
 This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
 
+### BrokerGateway
+
+The BrokerGateway module is responsible for managing the NATS communication. It automatically updates the NATS cluster when the DataMiner cluster changes and provides clients with the required credentials.
+
+This DxM is included in DataMiner upgrade packages from DataMiner 10.5.0 [CU2]/10.5.5 onwards. To make an existing DataMiner 10.5.x setup switch to using BrokerGateway, [a migration](xref:BrokerGateway_Migration) is required. Migrating is highly recommended, as BrokerGateway automatically configures TLS and uses a newer version of NATS, enhancing the overall system performance and error handling capabilities. Upgrading to DataMiner 10.6.0/10.6.1 or higher is not possible without [migrating to BrokerGateway](xref:BrokerGateway_Migration) first.
+
 ### CoreGateway
 
 The CoreGateway module is responsible for translating requests from other modules into requests towards the DataMiner System. This ensures backwards compatibility with different DataMiner versions.
@@ -73,6 +79,12 @@ From version 1.3.1 of the DataMiner SupportAssistant module onwards, this DxM al
 
 The UserDefinableApiEndpoint module is responsible for handling API triggers for DataMiner User-Defined APIs. See [DataMiner UserDefinableApiEndpoint DxM](xref:UD_APIs_UserDefinableApiEndpoint).
 
+### Web
+
+The Web module provides back-end services for the DataMiner web apps.
+
+This DxM is included in DataMiner upgrade packages from DataMiner 10.5.0 [CU8]/10.5.11 onwards.<!-- RN 43439 -->
+
 ## Available DxMs
 
 ### CloudGateway
@@ -89,20 +101,6 @@ From CloudFeed version 1.4.0 onwards, the minimum required DataMiner version is 
 
 From DataMiner 10.5.0/10.5.1 onwards<!--RN 41357-->, DataMiner upgrade packages by default include the latest version of the CloudFeed module. If a newer version of the CloudFeed module is available but you prefer not to install an upgrade package, you can install a newer version separately via the Admin app.
 
-### Copilot
-
-The Copilot module extends DataMiner with conversational AI. For more information, see [Copilot](xref:Copilot_DxM).
-
-### DataAggregator
-
-See [Data Aggregator](xref:Data_Aggregator_DxM).
-
-### ModelHost
-
-The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
-
-The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node). However, once it has been deployed, it gets upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 -->
-
 ### CommunicationGateway
 
 The CommunicationGateway module makes it possible for connectors or scripts running in the DataMiner environment to communicate with devices that require a gRPC connection.
@@ -113,3 +111,40 @@ This DxM exists in tandem with service-specific [middleware](xref:Nuget_Communic
 
 > [!TIP]
 > See also: [OpenConfig Middleware](xref:DSI_OpenConfig_Middleware)
+
+### DataMiner Assistant
+
+The DataMiner Assistant module extends DataMiner with conversational AI. For more information, see [DataMiner Assistant DxM](xref:Assistant_DxM).
+
+> [!NOTE]
+> Prior to version 2.0.0, this DxM is called "Copilot".
+
+### DataAggregator
+
+See [Data Aggregator](xref:Data_Aggregator_DxM).
+
+### DataAPI
+
+The DataAPI module provides an HTTP interface that accepts requests with a JSON-formatted body. When required, it creates an element to store values extracted from the JSON payload.
+
+In combination with the DataAggregator DxM, the DataAPI DxM is required for the [Data Sources](xref:Data_Sources) module.
+
+This DxM is included in DataMiner upgrade packages from DataMiner 10.5.11/10.6.0 onwards. However, the DxM will only be upgraded if an older version is found on the DMA. If no older version is found, it will not be installed.<!-- RN 43677 -->
+
+### ModelHost
+
+The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
+
+The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node). However, once it has been deployed, it gets upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 -->
+
+### SiteManager
+
+The SiteManager module is used to set up secure communication tunnels enabling access to on-premises data sources from a DaaS system. It is supported from DataMiner 10.5.10/10.5.0 onwards and is included in the 10.5.10 DaaS image.
+
+For more information, refer to [Site Manager](xref:SiteManagerOverview).
+
+## Logging
+
+If you encounter any issues with a DxM, consult the log files for errors and warnings. By default, you can find these in the following folder: `C:\ProgramData\Skyline Communications\<DxM>\Logs`.
+
+If this folder does not exist, it will be created automatically if necessary.

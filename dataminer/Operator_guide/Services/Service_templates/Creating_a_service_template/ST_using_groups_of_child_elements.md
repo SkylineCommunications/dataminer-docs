@@ -22,11 +22,11 @@ To add a group:
 
    - In the *Advanced* section of the *Edit Group* window, three configuration options are available:
 
-     - To set a maximum severity for included elements in the group, select a severity in the drop-down list next to *Maximum severity on included element*.
+     - To set a maximum severity for included elements in the group, select a severity in the dropdown list next to *Maximum severity on included element*.
 
-     - To set a maximum severity for elements in the group that are not used, select a severity in the drop-down list next to *Maximum severity on element not used*.
+     - To set a maximum severity for elements in the group that are not used, select a severity in the dropdown list next to *Maximum severity on element not used*.
 
-     - To indicate a parent group for the group, select it in the *Parent Group* drop-down list.
+     - To indicate a parent group for the group, select it in the *Parent Group* dropdown list.
 
      > [!NOTE]
      > For more information on service item statuses such as “included” and “not used”, see [DATA](xref:Service_card_pages#data).

@@ -8,7 +8,7 @@ The following table contains an overview of all Notify types.
 
 > [!WARNING]
 >
-> - The use of DMS Notify types is deprecated. Use the Skyline.DataMiner.Core.DataMinerSystem.Common NuGet package instead. For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction).
+> - The use of DMS Notify types is deprecated. Use the Skyline.DataMiner.Core.DataMinerSystem.Common NuGet package instead. For more information, refer to [About the class library](xref:ClassLibraryIntroduction).
 > - The table below gives an overview of all the defined DMS Notify types. However, the Notify types for which no additional documentation is provided should not be used.
 
 |ID  |Name  |Description  |
@@ -20,7 +20,7 @@ The following table contains an overview of all Notify types.
 |4     |DMS_SYSTEM_CHANGES         |         |
 |5     |DMS_NEW_CONNECTION         |         |
 |7     |DMS_RECEIVE_FILE_CHANGE         |         |
-|8     |DMS_GET_INFO         |         |
+|8     |DMS_GET_INFO         |**Deprecated since DataMiner 10.3.4.**<!-- RN 33515 -->|
 |9     |DMS_SECURITY         |         |
 |10     |DMS_SETTINGS         |         |
 |12     |DMS_FILE_CHANGED_BY_DMA         |         |

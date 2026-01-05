@@ -11,6 +11,8 @@ items:
     topicUid: Overview_Platform_Open_Platform
   - name: References and use cases
     topicUid: Overview_References_and_use_cases
+  - name: Security
+    topicUid: Skyline_and_DataMiner_security
   - name: Compliance offering
     topicUid: DataMiner_compliance_offering
   - name: Evolution vs. optimization in software development
@@ -53,12 +55,6 @@ items:
         topicUid: Stack_Third_Party_Integrations
   - name: Solutions
     topicUid: Overview_DataMiner_Solutions
-    items:
-      - name: dataminer.MediaOps
-        topicUid: Overview_dataminer_MediaOps
-        items:
-          - name: MediaOps apps
-            topicUid: Overview_MediaOps_Apps
   - name: DevOps
     topicUid: Overview_DevOps_index
     items:

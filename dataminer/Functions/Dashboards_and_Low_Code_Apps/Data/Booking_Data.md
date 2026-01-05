@@ -15,4 +15,4 @@ To find a specific booking, you can select one of the default time ranges from t
 To use all bookings in your DataMiner System as data input, select the *Bookings* header and drag it onto a compatible visualization.
 
 > [!NOTE]
-> If you add the entire *Bookings* data set to a dropdown, list, or tree component, you will also need to link this to a time range component.
+> If you add the entire *Bookings* dataset to a dropdown, list, or tree component, you will also need to link this to a time range component.

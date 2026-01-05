@@ -1,6 +1,7 @@
 ---
 uid: Changing_the_role_of_a_dataminer_services_user
 keywords: cloud user roles, cloud roles
+reviewer: Alexander Verkest
 ---
 
 # Changing the role of a dataminer.services user

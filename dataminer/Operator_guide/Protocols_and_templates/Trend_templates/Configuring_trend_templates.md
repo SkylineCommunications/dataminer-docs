@@ -26,7 +26,7 @@ To configure a trend template:
      > [!NOTE]
      > Enabling or disabling average or real-time trending for a parameter is also possible via the trend template context menu. Via the context menu of the column header of the list of parameters, you can enable or disable average and/or real-time trending for all parameters at once.
 
-   - From DataMiner 10.4.8/10.5.0 onwards<!-- RN 39691+39692 -->, if you want to override the default configuration for **[behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection), [proactive cap detection](xref:Proactive_cap_detection), or [trend icons](xref:Working_with_trend_icons)**, click the cogwheel button next to the filter box and select *Allow Augmented Operations configuration*. You can then select whether to use the *System Default* setting or switch these features on or off for each parameter.
+   - From DataMiner 10.4.8/10.5.0 onwards<!-- RN 39691+39692 -->, if you want to override the default configuration for **[behavioral anomaly detection](xref:Behavioral_anomaly_detection), [proactive cap detection](xref:Proactive_cap_detection), or [trend icons](xref:Trend_icons)**, click the cogwheel button next to the filter box and select *Allow Augmented Operations configuration*. You can then select whether to use the *System Default* setting or switch these features on or off for each parameter.
 
      > [!NOTE]
      > Behavioral anomaly detection is not available for [general parameters](xref:General_parameters)<!--RN 40086-->.
@@ -40,6 +40,11 @@ To configure a trend template:
    - For **dynamic table parameters**, select a parameter and use one of the following options if necessary:
 
      - Specify a mask in the filter column to apply the trend configuration only to a filtered selection of available rows of the dynamic table.
+
+       The filter will be applied on the display key of the row. If there is no display key, the primary key will be used instead.
+
+       > [!NOTE]
+       > You can use the wildcard characters \* and ? in this filter mask. For more information on wildcards, see [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters).
 
      - Duplicate column parameters using the *+* button to define different trending with different filters.
 

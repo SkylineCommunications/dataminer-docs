@@ -34,7 +34,7 @@ These connectors also register the ONT operative data provided by the third-part
 
 ## ONT data connector
 
-All operative data received for a xPON ONT is provided by a third party in a Kafka stream. To process it, the solution uses the [Generic Kafka Consumer](https://catalog.dataminer.services/result/driver/7373) connector. The received data is then parsed by a different set of [system connectors](#system-connectors) and finally aggregated according to the topology conditions.
+All operative data received for a xPON ONT is provided by a third party in a Kafka stream. To process it, the solution uses the [Generic Kafka Consumer](https://catalog.dataminer.services/details/172dd90c-5324-45c7-980f-df51d327d91c) connector. The received data is then parsed by a different set of [system connectors](#system-connectors) and finally aggregated according to the topology conditions.
 
 ## System connectors
 

@@ -28,8 +28,6 @@ items:
             topicUid: Methodology_is_not_a_choice
           - name: Methodology needs to be practiced
             topicUid: Methodology_needs_to_be_practiced
-      - name: Deployment methodologies in summary
-        topicUid: Deployment_methodologies_in_summary
       - name: Turnkey Methodology
         topicUid: Turnkey_Methodology
         items:
@@ -68,6 +66,8 @@ items:
             topicUid: Proactive_Support_Low_Disk_Space
           - name: Proactive Support - Missing CDMR Reporting
             topicUid: Proactive_Support_Missing_CDMR_Reporting
+          - name: Proactive Support - server time settings (CCA)
+            topicUid: Proactive_Support_Server_Time_Settings
       - name: Partner support lines
         topicUid: Partner_support_lines
       - name: Support application
@@ -90,8 +90,8 @@ items:
             topicUid: Learning_Resources
           - name: Certification
             topicUid: DEP_Certification
-          - name: Levelling up your DevOps status
-            topicUid: Levelling_up_DevOps_status
+          - name: Leveling up your DevOps status
+            topicUid: Leveling_up_DevOps_status
           - name: Reporting progress to the stakeholders
             topicUid: Reporting_Progress_to_Stakeholders
   - name: Training courses and certification
@@ -99,12 +99,16 @@ items:
     items:
       - name: Free self-paced DataMiner training
         topicUid: Overview_Training_selfpaced
-      - name: Dedicated DataMiner training
-        topicUid: Overview_Training_dedicated
+      - name: DataMiner Foundational Training
+        topicUid: DataMiner_Foundational_Training
       - name: DataMiner certification
         topicUid: Overview_Training_certification
-      - name: Video library
-        topicUid: Overview_Training_videolibrary
+      - name: Connector Integration Training
+        items:
+        - name: Initiation
+          topicUid: DataMiner_Connector_Integration_Initiation
+        - name: Mastership
+          topicUid: DataMiner_Connector_Integration_Mastership
       - name: Agile Fundamentals Training
         topicUid: Overview_Training_agile_aw
       - name: Kanban workshop

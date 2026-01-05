@@ -45,7 +45,7 @@ The following steps can be taken to configure the backups for a DMA:
 
 1. In the *Content* tab, determine the backup type:
 
-   - If you select *Use predefined backup*, indicate the type of backup in the drop-down list.
+   - If you select *Use predefined backup*, indicate the type of backup in the dropdown list.
 
      - *Full Backup*: Backup containing all data necessary to restore the entire DataMiner Agent (default).
 

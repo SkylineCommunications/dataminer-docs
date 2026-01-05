@@ -22,4 +22,4 @@ Before you can simulate SNMP or HTTP devices, you need to capture the data that 
 - [Realistic dynamic simulations](xref:Realistic_dynamic_simulations)
 
 > [!NOTE]
-> This tool currently does not support serial simulations. For now, serial communication can be simulated using our [*Skyline Serial Simulator* protocol](https://catalog.dataminer.services/result/driver/3588).
+> This tool currently does not support serial simulations. For now, serial communication can be simulated using our [*Skyline Serial Simulator* protocol](https://catalog.dataminer.services/details/b5130a4e-b05b-449b-9c5a-2cc65ab62948).

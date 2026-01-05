@@ -36,9 +36,9 @@ The *Scheduler* page allows you to create tests. To do so:
 
 1. In the *Driver Passport Platform* app, go to *Scheduler*.
 
-1. In the *New Test Package* drop-down list, select *Refresh List*. This will update the drop-down list with the most recently uploaded packages.
+1. In the *New Test Package* dropdown list, select *Refresh List*. This will update the dropdown list with the most recently uploaded packages.
 
-1. In the *New Test Package* drop-down list, select your package.
+1. In the *New Test Package* dropdown list, select your package.
 
 1. Specify your email address in the *Notification E-Mail Address* box. (See [Notifications](xref:Notifications).)
 

@@ -8,12 +8,12 @@ Custom icons can be used for the nodes in a tree control to enhance the visual e
 
 ![Example tree control with icons](~/develop/images/uiicons.png)
 
-A global icon set can be found in C:\Skyline DataMiner\Protocols\Icons.xml. All protocols can link to icons from this file.
+A global icon set can be found in `C:\Skyline DataMiner\Protocols\Icons.xml`. All protocols can link to icons from this file.
 
 By default, the icon in the tree items will be chosen according to this priority:
 
 1. The `<Icon>...</Icon>` defined on the table parameter.
-1. The `<Icon ref="...">` defined on the table parameter (referencing an icon in C:\Skyline DataMiner\Protocols\Icons.xml).
+1. The `<Icon ref="...">` defined on the table parameter (referencing an icon in `C:\Skyline DataMiner\Protocols\Icons.xml`).
 1. A default icon if no `<Icon>` is defined on the table parameter.
 
 By specifying a column in OverrideIconColumns (under the TreeControl tag), you can apply a custom icon based on a cell value in that row. The column must be a parameter of type “discreet” and all discrete values must have an iconRef attribute referring to an icon. If the iconRef attribute is empty or invalid, or the value is “Not Initialized”, a default icon will be displayed.
@@ -59,26 +59,26 @@ By specifying a column in OverrideIconColumns (under the TreeControl tag), you c
 |![General service](~/develop/images/GeneralService.png)|GeneralService|General service.|
 |![General transport stream](~/develop/images/GeneralTransportStream.png)|GeneralTransportStream|Obsolete: Use GT instead.|
 |![General transport stream](~/develop/images/GT.png)|GT|General transport stream|
-|![IDP not OK](~/develop/images/IDP-NOK.png)|IDP-NOK|IDP not OK. Available from DataMiner 9.6.11 onwards.|
-|![IDP OK](~/develop/images/IDP-OK.png)|IDP-OK|IDP OK. Available from DataMiner 9.6.11 onwards.|
-|![IDP-Running](~/develop/images/IDP-Running.png)|IDP-Running|IDP running. Available from DataMiner 9.6.11 onwards.|
-|![IDP-Unknown](~/develop/images/IDP-Unknown.png)|IDP-Unknown|IDP unknown. Available from DataMiner 9.6.11 onwards.|
+|![IDP not OK](~/develop/images/IDP-NOK.png)|IDP-NOK|IDP not OK.|
+|![IDP OK](~/develop/images/IDP-OK.png)|IDP-OK|IDP OK.|
+|![IDP-Running](~/develop/images/IDP-Running.png)|IDP-Running|IDP running.|
+|![IDP-Unknown](~/develop/images/IDP-Unknown.png)|IDP-Unknown|IDP unknown.|
 |![Input](~/develop/images/Input.png)|Input|Input.|
 |![Input and output](~/develop/images/InputAndOutput.png)|InputAndOutput|Input and output.|
 |![Input transport stream](~/develop/images/InputTransportStream.png)|InputTransportStream|Input transport stream.|
-|![Blue LED](~/develop/images/LED-Blue.png)|LED-Blue|Blue LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
-|![Cyan LED](~/develop/images/LED-Cyan.png)|LED-Cyan|Cyan LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
-|![Lime green LED](~/develop/images/LED-Lime.png)|LED-Lime|Lime green LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
-|![Red LED](~/develop/images/LED-Red.png)|LED-Red|Red LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
-|![Silver LED](~/develop/images/LED-Silver.png)|LED-Silver|Silver LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
-|![Yellow LED](~/develop/images/LED-Yellow.png)|LED-Yellow|Yellow LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
+|![Blue LED](~/develop/images/LED-Blue.png)|LED-Blue|Blue LED. <!-- RN 28566 -->|
+|![Cyan LED](~/develop/images/LED-Cyan.png)|LED-Cyan|Cyan LED.<!-- RN 28566 -->|
+|![Lime green LED](~/develop/images/LED-Lime.png)|LED-Lime|Lime green LED.<!-- RN 28566 -->|
+|![Red LED](~/develop/images/LED-Red.png)|LED-Red|Red LED.<!-- RN 28566 -->|
+|![Silver LED](~/develop/images/LED-Silver.png)|LED-Silver|Silver LED.<!-- RN 28566 -->|
+|![Yellow LED](~/develop/images/LED-Yellow.png)|LED-Yellow|Yellow LED.<!-- RN 28566 -->|
 |![Main](~/develop/images/Main.png)|Main|Main (See also “Backup”)|
 |![Matrix](~/develop/images/Matrix.png)|Matrix|Matrix.|
 |![MIP](~/develop/images/MIP.png)|MIP|MIP.|
 |![MPE](~/develop/images/MPE.png)|MPE|MPE.|
 |![Audio PID](~/develop/images/MPEG2_AUDIO.png)|MPEG2_AUDIO|Audio PID.|
 |![Video PID](~/develop/images/MPEG2_VIDEO.png)|MPEG2_VIDEO|Video PID.|
-|![New item](~/develop/images/newItem.png)|New-Item|New item. Available from DataMiner 10.0.13 (RN 28060) onwards.|
+|![New item](~/develop/images/newItem.png)|New-Item|New item.<!-- RN 28060 -->|
 |![Network Information Table](~/develop/images/NIT.png)|NIT|Network Information Table: Info about muxes and TS, private stream info, e.g. Teletext.|
 |![Object carousel](~/develop/images/OBJECTCAROUSEL.png)|OBJECTCAROUSEL|Object carousel.|
 |![Output](~/develop/images/Output.png)|Output|Output.|
@@ -91,7 +91,7 @@ By specifying a column in OverrideIconColumns (under the TreeControl tag), you c
 |![Primary](~/develop/images/Primary.png)|Primary|Primary (See also “Secondary”)|
 |![Processor](~/develop/images/Processor.png)|Processor|Processor.|
 |![Radio](~/develop/images/RADIO.png)|RADIO|Service of type Radio.|
-|![Rectangle](~/develop/images/RECT-AliceBlue.png)|RECT-\[ColorName\]|Filled rectangle, where \[ColorName\] is a color name (e.g. RECT-AliceBlue). For a full list of the available color names, refer to https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.colors?view=netframework-4.8. Available from DataMiner 9.6.11 onwards.|
+|![Rectangle](~/develop/images/RECT-AliceBlue.png)|RECT-\[ColorName\]|Filled rectangle, where \[ColorName\] is a color name (e.g. RECT-AliceBlue). For a full list of the available color names, refer to <https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.colors?view=netframework-4.8>.|
 |![RST](~/develop/images/RST.png)|RST|RST.|
 |![Satellite](~/develop/images/Satellite.png)|Satellite|Satellite.|
 |![Service Description Table](~/develop/images/SDT.png)|SDT|Service Description Table.|
@@ -105,7 +105,7 @@ By specifying a column in OverrideIconColumns (under the TreeControl tag), you c
 |![Teletext PID](~/develop/images/TELETEXT.png)|TELETEXT|Teletext PID.|
 |![Transponder](~/develop/images/Transponder.png)|Transponder|Transponder.|
 |![Leased transponder](~/develop/images/TransponderLeased.png)|TransponderLeased|Leased transponder.|
-|![Trash can](~/develop/images/Trash.png)|Trash|Trash can. Available from DataMiner 10.0.13 (RN 28060) onwards.|
+|![Trash can](~/develop/images/Trash.png)|Trash|Trash can.<!-- RN 28060 -->|
 |![Service of type Television](~/develop/images/TV.png)|TV|Service of type Television.|
 |![Unknown](~/develop/images/Unknown.png)|Unknown|Unknown.|
 |![VSAT](~/develop/images/VSAT.png)|VSAT|VSAT.|

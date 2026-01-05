@@ -55,9 +55,9 @@ To add a service or enhanced service, follow the steps below.
            > - You can also quickly change the selected template by clicking the following button to the right of the field: ![App icon](~/dataminer/images/Open_protocols_app_icon.png)<br>This will temporarily open the Protocol & Templates app, where you can make the necessary changes. See [Configuring alarm thresholds](xref:Configuring_normal_alarm_thresholds) and [Configuring trend templates](xref:Configuring_trend_templates).
            > - A service that has been created using a service protocol is called an "enhanced service".
 
-1. Click the *Next* button in the lower right corner to go to the *parameters* page.
+1. Click the *Next* button in the lower-right corner to go to the *parameters* page.
 
-1. Click the buttons in the lower left corner to add elements, services, or a group of elements and/or services.
+1. Click the buttons in the lower-left corner to add elements, services, or a group of elements and/or services.
 
    - To add elements or services:
 
@@ -78,7 +78,7 @@ To add a service or enhanced service, follow the steps below.
            > [!NOTE]
            >
            > - For a matrix element, you can select specific inputs or outputs to be included from the list of parameters.
-           > - If you select a table parameter to include, a filter allows you to select the rows to be included in the service. You can select a row in the drop-down list, or specify a filter yourself. If you specify the filter, you can also select rows by primary key. For example, enter the filter \*24\* to include all rows of which the display key contains "24", or enter ^pk^\*24\* to include all rows of which the primary key contains "24".
+           > - If you select a table parameter to include, a filter allows you to select the rows to be included in the service. You can select a row in the dropdown list, or specify a filter yourself. If you specify the filter, you can also select rows by primary key. For example, enter the filter \*24\* to include all rows of which the display key contains "24", or enter ^pk^\*24\* to include all rows of which the primary key contains "24".
 
         1. Indicate if the selected item should always be included, or if it should be excluded depending on one or more conditions.
 
@@ -117,16 +117,16 @@ To add a service or enhanced service, follow the steps below.
 
    - To remove any items you have added, click the *x* to the right of the item.
 
-1. Click the *Next* button in the lower right corner to go to the *Views* page.
+1. Click the *Next* button in the lower-right corner to go to the *Views* page.
 
 1. Indicate the view where you want to add the service.
 
-1. Optionally, click the *Next* button in the lower right corner to go to the *Properties* page, and enter any custom properties.
+1. Optionally, click the *Next* button in the lower-right corner to go to the *Properties* page, and enter any custom properties.
 
    > [!NOTE]
    > You can also add, edit or delete custom properties later, by right-clicking the service in the Surveyor and selecting *Properties*. For more information, see [Managing element properties](xref:Managing_element_properties).
 
-1. Click the *Create* button in the lower right corner to finish creating the service.
+1. Click the *Create* button in the lower-right corner to finish creating the service.
 
 > [!NOTE]
 >

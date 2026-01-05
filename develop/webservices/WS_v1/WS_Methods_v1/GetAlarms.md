@@ -4,9 +4,7 @@ uid: GetAlarms
 
 # GetAlarms
 
-Use this method to retrieve alarms matching a DMAAlarmFilterV2 object.
-
-<!-- Available from DataMiner 9.5.6 onwards. -->
+Use this method to retrieve alarms matching a [DMAAlarmFilterV2](xref:DMAAlarmFilterV2) object.
 
 ## Input
 
