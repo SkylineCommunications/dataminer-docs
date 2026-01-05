@@ -21,6 +21,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Incorrect date sorting in Bookings app with custom column configurations](xref:KI_Incorrect_date_sorting_in_Bookings_app_with_custom_column_configurations) | SRM setups with DataMiner version below 10.2.0 [CU10]/10.3.1 and SRM setups with custom column configurations created prior to DataMiner 10.2.0 [CU10]/10.3.1 | DataMiner 10.3.1 | January 5, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
 
 ## 10.5.x
@@ -41,6 +42,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Incorrect date sorting in Bookings app with custom column configurations](xref:KI_Incorrect_date_sorting_in_Bookings_app_with_custom_column_configurations) | SRM setups with DataMiner version below 10.2.0 [CU10]/10.3.1 and SRM setups with custom column configurations created prior to DataMiner 10.2.0 [CU10]/10.3.1 | DataMiner 10.3.1 | January 5, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
 | [Removing an invalid or unreachable IP address causes your own DMA to leave the DMS](xref:KI_Removing_an_invalid_or_unreachable_IP_address_causes_your_own_DMA_to_leave_the_DMS) | Feature Release versions from DataMiner 10.5.7 onwards | DataMiner 10.6.0/10.6.1 | November 28, 2025 |
 | [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | 21 October, 2025 |
@@ -85,6 +87,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Incorrect date sorting in Bookings app with custom column configurations](xref:KI_Incorrect_date_sorting_in_Bookings_app_with_custom_column_configurations) | SRM setups with DataMiner version below 10.2.0 [CU10]/10.3.1 and SRM setups with custom column configurations created prior to DataMiner 10.2.0 [CU10]/10.3.1 | DataMiner 10.3.1 | January 5, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
 | [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | 21 October, 2025 |
 | [Trend graph flatline when client and DMA use different time zones](xref:KI_Trend_flatline_different_time_zones) | From Dataminer 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards | DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.10 [CU1] | September 18, 2025 |
@@ -143,6 +146,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Incorrect date sorting in Bookings app with custom column configurations](xref:KI_Incorrect_date_sorting_in_Bookings_app_with_custom_column_configurations) | SRM setups with DataMiner version below 10.2.0 [CU10]/10.3.1 and SRM setups with custom column configurations created prior to DataMiner 10.2.0 [CU10]/10.3.1 | DataMiner 10.3.1 | January 5, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
 | [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | 21 October, 2025 |
 | [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | DataMiner 10.5.0 [CU10]/10.6.1 | August 1, 2025 |
@@ -210,6 +214,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From DataMiner 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Incorrect date sorting in Bookings app with custom column configurations](xref:KI_Incorrect_date_sorting_in_Bookings_app_with_custom_column_configurations) | SRM setups with DataMiner version below 10.2.0 [CU10]/10.3.1 and SRM setups with custom column configurations created prior to DataMiner 10.2.0 [CU10]/10.3.1 | DataMiner 10.3.1 | January 5, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
 | [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | DataMiner 10.5.0 [CU10]/10.6.1 | August 1, 2025 |
 | [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | July 16, 2025 |
