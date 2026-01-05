@@ -4,7 +4,7 @@ uid: orchestrator_change_log
 
 # Orchestrator change log
 
-#### 16 October 2025 - Enhancement - Orchestrator 1.8.0 - Improved service recovery after reboot
+#### 16 October 2025 - Enhancement - Orchestrator 1.8.0 - Improved service recovery after reboot [ID 43824]
 
 From now on, DataMiner services will automatically restart after a Windows reboot, ensuring essential services are recovered even if BrokerGateway or related components are not yet running.
 
