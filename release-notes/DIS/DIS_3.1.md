@@ -4,6 +4,97 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.18
+
+### New features
+
+#### IDE
+
+##### Updated DIS dependencies
+
+DIS now uses:
+
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 2.1.1
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 2.1.1
+- [Skyline.DataMiner.CICD.CSharpAnalysis.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.CSharpAnalysis.Protocol) version 1.0.7
+
+## DIS 3.1.17
+
+### New features
+
+#### IDE
+
+##### New Tasks and DoD hyperlinks added to publish bar and version history editor [ID 44335]
+
+The top bar in the editor window now contains a hyperlink named **Tasks**, which, when clicked, will open a browser tab for each task mentioned in the version history of the current version (if any).
+
+Similarly, a hyperlink named **DoD** has been added, which, when clicked, will open a browser tab showing the corresponding DoD page for each task mentioned in the version history of the current version (if any).
+
+Also, the version history editor will now display a **DoD** button next to each task, which, when clicked, will open a browser tab showing the corresponding page.
+
+##### Updated DIS dependencies
+
+DIS now uses:
+
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 1.3.0
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 2.1.0
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 2.1.0
+- [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol) version 1.1.1
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.6.1
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.6.1
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.6.1
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.5
+
+## DIS 3.1.16
+
+### New features
+
+#### IDE
+
+##### Table editor: Updated width calculation [ID 44321]
+
+In the table editor, the calculation of the width has been updated. For columns with a write parameter or columns that contain a button, an additional offset for the write icon will no longer be subtracted when calculating the column width.
+
+## DIS 3.1.15
+
+### New features
+
+#### IDE
+
+##### Updated manifest file now indicates that Visual Studio 2026 is supported [ID 44142]
+
+The manifest file of the DataMiner Integration Studio extension has been updated to formally indicate that Visual Studio 2026 is supported.
+
+##### Copyright snippets now include a more concise copyright message [ID 44053]
+
+All snippets that include a copyright message have been updated. The copyright message has now been made more concise.
+
+##### IAS snippet now corresponds with the example code in the README file of the IAS Toolkit repository [ID 44072]
+
+The IAS snippet has been updated. it now corresponds with the example code in the README file of the [IAS Toolkit repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit).
+
+##### Directory.Build.props file will now exclude the 'TargetPlatform x86' entry [ID 44224]
+
+If the *Automatically update solution files* option is enabled, DIS will automatically update a number of solution files, such as the *Directory.Build.props* file that contains has the following entry:
+
+`<PlatformTarget>x86</PlatformTarget>`
+
+However, when you create e.g. a NuGet package that could be used in e.g. connectors, Automation scripts and GQI queries, you do not want the *Directory.Build.props* file to have its platform target fixed on x86. As a result, the `<PlatformTarget>x86</PlatformTarget>` entry has now been removed.
+
+> [!NOTE]
+> Developers should now set this entry in the csproj file when needed. For example, when you create unit tests for a regular Automation script, it might be required to set the target platform to x86. Otherwise, a `BadImageFormatException` could be thrown when executing the test.
+
+##### Updated DIS dependencies
+
+DIS now uses:
+
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 1.3.0
+- [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol) version 1.1.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.5.12.1
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.5.12.1
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.5.12.1
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.5
+
 ## DIS 3.1.14
 
 ### New features

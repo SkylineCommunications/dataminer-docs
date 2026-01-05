@@ -66,7 +66,7 @@ From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42234-->, you can
 
 To do so, in a system where DataMiner Assistant has been deployed, when you click the "+" button to add a query, type your request in the textbox and click **Generate query**. DataMiner Assistant will then create the desired GQI query and generate a relevant query name.
 
-![NL2GQI](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner 10.5.4*
+![NL2GQI](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner 10.6.1*
 
 > [!TIP]
 > For more information about how to deploy this feature, see [DataMiner Assistant DxM](xref:Assistant_DxM).

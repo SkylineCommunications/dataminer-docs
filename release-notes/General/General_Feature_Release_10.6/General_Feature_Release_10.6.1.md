@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.1
 ---
 
-# General Feature Release 10.6.1 – Preview
+# General Feature Release 10.6.1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -16,9 +16,9 @@ uid: General_Feature_Release_10.6.1
 >   - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
 >   - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 >
-> - Make sure all DataMiner Agents in the cluster have been migrated to the BrokerGateway-managed NATS solution. For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
+> - Make sure all DataMiner Agents in the cluster have been **migrated to the BrokerGateway-managed NATS solution**. For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration). See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
 >
->   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 43890] [ID 44035] [ID 44050] [ID 44062]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-43890-id-44035-id-44050-id-44062)
+> - Make sure the Microsoft **.NET 10** hosting bundle is installed (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)). See also: [DataMiner upgrade: New prerequisite will check whether .NET 10 is installed](#dataminer-upgrade-new-prerequisite-will-check-whether-net-10-is-installed-id-44121).
 
 > [!TIP]
 >
@@ -28,7 +28,7 @@ uid: General_Feature_Release_10.6.1
 
 ## Highlights
 
-- [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 43890] [ID 44035] [ID 44050] [ID 44062]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-43890-id-44035-id-44050-id-44062)
+- [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
 - [Dashboard reports can now be generated in PDF, HTML, and/or CSV format [ID 43887]](#dashboard-reports-can-now-be-generated-in-pdf-html-andor-csv-format-id-43887)
 
 ## New features
@@ -147,18 +147,28 @@ Breaking changes:
 
 Because of a number of enhancements made in SLNet, trend graphs in DataMiner Cube will now also correctly display behavioral change points for table column parameters without advanced naming.
 
+#### New BPA test: Health Metrics [ID 43509]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+A new BPA test named "Health Metrics" has been added.
+
+This BPA test will run every hour, and will fetch details about connections used within DataMiner, either through a diagnose message or by using information offloaded to disk.
+
+In later versions, it will then also analyze those details and attempt to warn operators when load increases on specific DataMiner modules and/or connections.
+
 #### SLNetClientTest tool now allows you to check the contents of the hosting cache used by SLDataMiner [ID 43605]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 Using the *SLNetClientTest* tool, you can now send a DiagnosticMessage with LIST_HOSTAGENTCACHE to SLDataMiner to retrieve the contents of the hosting cache used by SLDataMiner. This will allow you to check if an element is local or not.
 
-To send such a message, open the *SLNetClientTest* tool, and go to *Diagnostics > Dma > Elements (Hosting Cache)*.
+To send such a message, open the *SLNetClientTest* tool, and go to *Diagnostics > DMA > Elements (Hosting Cache)*.
 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 43890] [ID 44035] [ID 44050] [ID 44062]
+#### DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
@@ -187,11 +197,19 @@ DataMiner Systems will now use the BrokerGateway-managed NATS solution by defaul
 
 - DataMiner upgrade packages will no longer perform the *MigrateBrokerGatewaySoftLaunch* upgrade action. This action would move the BrokerGateway soft-launch option to the *MaintenanceSettings.xml* file.
 
-- From now on, when an attempt is made to communicate using the legacy SLNet-managed NATS solution, the following exception will be thrown and logged:
-
-  `Unable to find file. SLCloud configured messageBrokers are unsupported as of DataMiner 10.6.0.`
-
 - NATSRepair.exe will no longer check if the *BrokerGateway* flag in *MaintenanceSettings.xml* is set to true.
+
+#### Clearer message when SLCloud.xml cannot be found when using the legacy SLNet-managed NATS solution [ID 43890]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, when the *SLCloud.xml* file could not be found on systems using the legacy SLNet-managed NATS solution, the following generic exception would be thrown and logged:
+
+`Unable to find file.`
+
+From now on, the following exception will be thrown and logged:
+
+`Unable to find file. SLCloud configured messageBrokers are unsupported as of DataMiner 10.6.0.`
 
 #### Automation: Engine class now has an OnDestroy handler that will allow resources to be cleaned up when a script ends [ID 43919]
 
@@ -203,7 +221,7 @@ Multiple handlers can be added. They will run synchronously, and if one handler 
 
 #### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
 
-<!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+<!-- MR 10.7.0 - FR 10.6.1 -->
 
 All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
 
@@ -307,7 +325,7 @@ In most cases, these settings can keep their default value, unless performance h
 
 From now on, it will no longer be possible to run *NATSRepair.exe* when automatic NATS configuration is disabled. If so, *NATSRepair.exe* will immediately stop without performing any actions.
 
-See also: [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)
+See also: [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config)
 
 #### DataMiner backup: Temp file will now be created on the target path instead of the C drive [ID 44063]
 
@@ -340,7 +358,7 @@ This means, that any DataMiner Agent on which you want to perform a web-only upg
 
 #### Relational anomaly detection: GetRADSubgroupFitScoresResponseMessage will now return additional information regarding subgroups of a shared model group [ID 44108]
 
-<!-- MR 10.7.0 - FR 10.6.1 -->
+<!-- MR 10.6.0 - FR 10.6.1 -->
 
 The `GetRADSubgroupFitScoresResponseMessage` will now return additional information regarding subgroups of a shared model group.
 
@@ -356,6 +374,15 @@ Before upgrading to this DataMiner release or above, you are expected to install
 
 When you start a DataMiner upgrade procedure, from now on, a new prerequisite will verify whether Microsoft .NET 10 is installed on the system. If this is not the case, the upgrade will be canceled.
 
+#### Annotations are now End of Life [ID 44124] [ID 44183]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+Annotations are now End of Life.
+
+> [!IMPORTANT]
+> Before you upgrade to this DataMiner version, make sure the soft-launch option *LegacyAnnotations* is either disabled or removed from the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file. Otherwise, the upgrade operation will be aborted.
+
 #### Relational anomaly detection: AddRADParameterGroupMessage can now include a model training configuration [ID 44135]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
@@ -364,6 +391,29 @@ When you add or update a relational anomaly group by means of an `AddRADParamete
 
 - When you added a group, the configuration you passed along will be used for the initial training of the model.
 - When you updated a group, the configuration you passed along will be used to retrain the model.
+
+#### Enhanced stuffing and unstuffing behavior when sending serial commands [ID 44149]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+A number of enhancements have been made to the stuffing and unstuffing behavior when sending serial commands.
+
+Stuffing will now always be removed from the parameters, even if the current command did not add stuffing during a previous run. This will make it easier and more robust to reuse parameters across different commands.
+
+#### Swarming: Enhanced re-injection of events [ID 44173]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+<!-- Not added to MR 10.6.0 -->
+
+When elements are swarmed, since DataMiner feature version 10.5.6, some events are re-injected with the new hosting agent ID prior to the new event being generated. In some cases, the way in which this re-injection was performed could cause unwanted side effects. From now on, these side effects will be avoided by accessing the raw cached entries.
+
+#### Relational anomaly detection: Enhanced performance when retrieving anomaly scores [ID 44180]
+
+<!-- MR 10.6.0 - FR 10.6.1 -->
+
+A caching mechanism has now been introduced in order to enhance performance when retrieving anomaly scores via a GetRADDataMessage.
+
+When the anomaly scores for a particular relational anomaly (sub)group and region are retrieved twice within a 5-minute window, from now on, SLAnalytics will not recalculate the scores. Instead, it will return the scores from the cache.
 
 ### Fixes
 
@@ -390,6 +440,12 @@ When a QAction triggered an information message with regard to a particular elem
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
 When, in a correlation rule, a *New alarm* or an *Escalate event* action was configured with the *Auto clear* option set, in some cases, the new correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
+
+#### Element and parameter state timelines could show incorrect data [ID 43982]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 [CU0] -->
+
+Up to now, in some cases, element and parameter state timelines displayed in client applications like DataMiner web apps or DataMiner Cube could show incorrect data.
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
 
@@ -463,6 +519,14 @@ From now on, it will be possible to offload either alarms only, information even
 
 When run on the offline agent of a Failover system, the Security Advisory BPA test would show an incorrect result after checking the status of port 5100 of the firewall.
 
+#### Problem when retrieving history alarms with wildcard or regex filters that were applied case-sensitively [ID 44095]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When, in client applications like DataMiner Cube, history alarm were retrieved with a wildcard or regex filter that filtered on values that contained uppercase characters, up to now, an incorrect result set would be returned.
+
+From now on, wildcard and regex filters will be applied case-insensitively.
+
 #### Memory leak in SLDataMiner when documents were being handled [ID 44098]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
@@ -485,8 +549,34 @@ In some cases, the number of awaited SLNet queues listed in the log files would 
 
 Also, the `BlockUntilAllInFlightEventsWereHandled` method will no longer be called when no work has to be done afterwards.
 
+#### Problem when synchronizing create/update/delete actions performed on services [ID 44132]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+In some rare cases, certain create/update/delete actions performed on services would not get synchronized among the DataMiner Agents in a cluster, especially when they had been performed in rapid succession.
+
 #### Problem when performing a row-based FillArray method with zero rows as input and with the SaveOption option set to 'Partial' [ID 44137]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 When a row-based `FillArray` method was performed with zero rows as input and with the `SaveOption` option set to "Partial", up to now, the method would throw an unhandled exception due to a missing check.
+
+#### NotifyDataMiner call NT_CLOSE_HISTORY_TREND_WINDOW (374) sent for a table cell would incorrectly ignore the specified timestamp [ID 44162]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Up to now, when a NotifyDataMiner call `NT_CLOSE_HISTORY_TREND_WINDOW` (374) was sent for a particular table cell, it would incorrectly ignore the specified timestamp.
+
+This call closes all previous trend windows that are still open and have already passed since the specified time.
+
+#### Problem with GQI data sources because of a protobuf serialization issue [ID 44181]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Because of a protobuf serialization issue, GQI data sources could throw an exception when requesting certain data from SLNet.
+
+#### Failover: Problem when reloading the scheduled tasks [ID 44234]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.

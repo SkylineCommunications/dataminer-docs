@@ -4,6 +4,8 @@ uid: GetAnnotationsLinkForView
 
 # GetAnnotationsLinkForView
 
+**Obsolete**. This method is no longer available as of DataMiner 10.6.0/10.6.1.<!-- RN 44136 -->
+
 Use this method to retrieve a link to open the annotations page of the specified view.
 
 ## Input

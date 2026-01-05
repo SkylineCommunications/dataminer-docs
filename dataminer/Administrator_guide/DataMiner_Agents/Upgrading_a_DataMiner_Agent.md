@@ -25,7 +25,7 @@ It is possible to upgrade or update a DMA via the Update Center within DataMiner
 
 For detailed steps, go to [Upgrading a DataMiner Agent in the Update Center](xref:Upgrading_a_DataMiner_Agent_in_the_Update_Center).
 
-Note that this is not recommended for an upgrade to a major DataMiner version that is several versions higher than the current version, e.g. from 9.6 to 10.3. In that case, use the Taskbar Utility or System Center and refer to the instructions for [upgrading across major versions](xref:Preparing_to_upgrade_a_DataMiner_Agent#best-practices-when-upgrading-across-major-versions).
+Note that this is not recommended for an upgrade to a major DataMiner version that is several versions higher than the current version, for example, from 10.1 to 10.6. In that case, use the Taskbar Utility or System Center and refer to the instructions for [upgrading across major versions](xref:Preparing_to_upgrade_a_DataMiner_Agent#best-practices-when-upgrading-across-major-versions).
 
 ## Upgrading a DataMiner Agent using DataMiner Taskbar Utility
 

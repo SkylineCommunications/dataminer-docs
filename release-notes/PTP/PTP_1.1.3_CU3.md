@@ -24,7 +24,7 @@ The following improvements have been implemented in the PTP app:
 
 #### Standard DataMiner PTP Device mediation connector updated [ID 38433]
 
-The included version of the Standard DataMiner PTP Device mediation connector has been incremented from 1.0.0.15 to 1.0.0.20. For details, refer to the version info in the [Catalog](https://catalog.dataminer.services/details/connector/6457).
+The included version of the Standard DataMiner PTP Device mediation connector has been incremented from 1.0.0.15 to 1.0.0.20. For details, refer to the version info in the [Catalog](https://catalog.dataminer.services/details/59d8a85e-5ee6-4203-a7c4-2b06ad665d96).
 
 > [!NOTE]
 > You can always deploy a new version of the mediation connector from the Catalog independently of the PTP application. See [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item).

@@ -14,7 +14,7 @@ You can follow the steps below or watch this short video, which shows you how to
   </video>
 </div>
 
-1. [Open DataMiner Cube](xref:Using_the_desktop_app).
+1. [Open DataMiner Cube](xref:Connecting_to_a_DMA_with_Cube).
 
 1. Right-click an item in the Surveyor, and select *New \> Element*.
 
@@ -121,6 +121,8 @@ You can follow the steps below or watch this short video, which shows you how to
 1. Specify the following advanced element settings if necessary:
 
    - **The element goes into timeout state when it is not responding for (sec)**: When the element fails to respond to commands for longer than the number of seconds specified in this setting, the DMA will put the element in a timeout state. The specified number must be between 0 and 120.
+
+     Note that this setting does not account for the number of retries. To ensure that the element has enough time to complete all retry attempts before declaring a timeout, you should therefore choose a value larger than **Timeout of a single command × (Number of retries + 1)**.
 
    - **Slow poll settings**: When an element is in a timeout state, the DMA can force it to go into so-called slow poll mode. While the element is in that special poll mode, the DMA will not send any commands to the element. Instead, it will just send a protocol-dependent ping command at regular intervals. As soon as the element responds to that ping command, the DMA will start polling the element the normal way again.
 

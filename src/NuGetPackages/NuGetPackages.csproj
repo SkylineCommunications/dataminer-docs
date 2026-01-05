@@ -17,8 +17,8 @@
     <PackageReference Include="Skyline.DataMiner.Core.Matrix.Protocol" Version="1.1.0.3" />
     <PackageReference Include="Skyline.DataMiner.Core.Scheduler.Automation" Version="1.0.1-Alpha9" />
     <PackageReference Include="Skyline.DataMiner.DcpChatIntegrationHelper" Version="1.2.8" />
-    <PackageReference Include="Skyline.DataMiner.Utils.DOM" Version="10.5.2.4" />
-    <PackageReference Include="Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit" Version="10.5.5.4" />
+    <PackageReference Include="Skyline.DataMiner.Utils.DOM" Version="10.5.2.5" />
+    <PackageReference Include="Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit" Version="10.5.8.1" />
     <PackageReference Include="Skyline.DataMiner.Utils.Interfaces" Version="1.0.0.3" />
     <PackageReference Include="Skyline.DataMiner.Utils.Protocol.Extension" Version="1.0.0.4" />
     <PackageReference Include="Skyline.DataMiner.Utils.Rates.Common" Version="1.0.0.5" />

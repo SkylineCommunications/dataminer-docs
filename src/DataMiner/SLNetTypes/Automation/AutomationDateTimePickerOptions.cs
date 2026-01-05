@@ -17,6 +17,7 @@ namespace Skyline.DataMiner.Automation
 	/// <img src="~/develop/images/datetimepicker_example.png" />
 	/// </example>
 	/// <remarks>
+	/// <para>Applicable only when <see cref="Type"/> is set to Time.</para>
 	/// <note type="note">
 	/// <para>If the name of a variable starts with the following prefix, IntelliSense in DataMiner Cube will list the object properties: dateTimePickerConfig*</para>
 	/// </note>

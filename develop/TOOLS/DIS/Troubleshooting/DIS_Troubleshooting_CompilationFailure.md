@@ -29,4 +29,6 @@ Check if the configuration is correct:
 
 - Use the PackageReference package management format (see [Consuming NuGet packages](xref:Consuming_NuGet)).
 
+- Use the `.sln` solution format instead of `.slnx` (see [Configuring the default solution file format](xref:Configuring_Microsoft_Visual_Studio#configuring-the-default-solution-file-format-vs-2026)).
+
 If this does not solve the problem, it likely involves an unexpected scenario with the solution and the parsing within DIS. Report the issue to the DIS team, making sure to include a copy of the solution and the output logging of Visual Studio. For more info, see [Retrieving information in case a problem occurs](xref:DIS_Troubleshooting_RetrieveInformation).

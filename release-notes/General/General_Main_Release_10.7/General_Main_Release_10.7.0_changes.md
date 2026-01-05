@@ -25,6 +25,12 @@ An `OnDestroy` handler has now been added to the `Engine` class. This handler wi
 
 Multiple handlers can be added. They will run synchronously, and if one handler throws an error, the others will keep on running.
 
+#### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+All methods in the `Skyline.DataMiner.Automation` namespace that use parameter descriptions have now been marked as obsolete.
+
 #### Service & Resource Management: New resource manager settings to configure the number of start action threads and simultaneous actions [ID 44056]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->
@@ -66,6 +72,19 @@ In most cases, these settings can keep their default value, unless performance h
 > - Only users with *Modules > System configuration > Tools > Admin tools* permission are allowed to change the above-mentioned settings.
 > - If the `SkipDcfLinks` setting is set to true, we recommend that you do not set MaxAmountOfParallelTasks too high. DCF link creation can be an expensive operation. Performing a large number of action in parallel might decrease performance.
 
+#### Augmented Operations: Server-side support for new flatline detection modes [ID 44094]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+When, in DataMiner client applications (e.g. DataMiner Cube), you are configuring the Augmented Operations alarm settings for a particular parameter in an alarm template, from now on, it will be possible to choose between the following flatline detection modes:
+
+| Mode | Description |
+|------|-------------|
+| Smart flatline alarming    | In this mode, SLAnalytics will automatically determine when a flatline period is anomalous by comparing it to the parameter's historical behavior. A new flatline period will only trigger an alarm if it is significantly longer than previously observed flat periods. |
+| Absolute flatline alarming | In this mode, you can define a fixed duration threshold (in seconds) for when a flatline event should trigger an alarm. Additionally, you can assign a severity level to the generated flatline alarm event. |
+
+See also: [Alarm templates: New flatline detection modes in Augmented Operations alarm settings [ID 44191]](xref:Cube_Feature_Release_10.6.2#alarm-templates-new-flatline-detection-modes-in-augmented-operations-alarm-settings-id-44191)
+
 #### DataMiner upgrade: Web-only upgrades with version 10.6.x or above will now require the DMA to have version 10.5.x or above [ID 44103]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->
@@ -74,15 +93,36 @@ From now on, it will no longer be allowed to perform web-only upgrades with vers
 
 This means, that any DataMiner Agent on which you want to perform a web-only upgrade with version 10.6.x or above will first have to be upgraded to version 10.5.x or above.
 
-#### Relational anomaly detection: GetRADSubgroupFitScoresResponseMessage will now return additional information regarding subgroups of a shared model group [ID 44108]
+#### dataminer.services: Restrictions when adding a DMA to a DMS [ID 44171]
 
-<!-- MR 10.7.0 - FR 10.6.1 -->
+<!-- MR 10.7.0 - FR 10.6.2 -->
 
-The `GetRADSubgroupFitScoresResponseMessage` will now return additional information regarding subgroups of a shared model group.
+From now on, when you try to add a DataMiner Agent to a DataMiner System, the operation will fail in the following cases:
 
-In addition to the model fit score for each subgroup, the response message will now contain an `IsOutlier` boolean field. This field is set to true when a subgroup is identified as an outlier based on its relational behavior compared to the other subgroups.
+- The DataMiner Agent is cloud-connected, but the DataMiner System is not.
+- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
 
-In practical terms, this means that the subgroup's model fit score deviates from the other fit scores. The shared model fits this subgroup significantly worse than it fits most of the remaining subgroups.
+If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.  
+
+#### Scheduler will now be able to start more than 10 synchronously running Automation scripts [ID 44200]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+Up to now, using Scheduler, it would only be possible to start a maximum of 10 synchronously running Automation scripts.
+
+From now on, it will be possible to start more than 10 synchronously running Automation scripts.
+
+#### Relational anomaly detection: GetRADParameterGroupInfoResponseMessage now also includes the ID of the RAD parameter group [ID 44237]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+The response to a `GetRADParameterGroupInfoMessage` will now also include the ID of the RAD parameter group.
+
+#### Service & Resource Management: Enhanced communication between resource managers across DataMiner Agents [ID 44279]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+A number of enhancements have been done with regard to the communication between resource managers across DataMiner Agents. This will especially enhance performance when starting multiple bookings on non-master DMAs.
 
 ### Fixes
 
@@ -99,3 +139,9 @@ Up to now, SLAnalytics would incorrectly not receive any "swarming complete" not
 In some cases, a capability could incorrectly be set to a null value.
 
 From now on, when a capability is booked, it will no longer be possible to set its value to null.
+
+#### Failover: Problem when reloading the scheduled tasks [ID 44234]
+
+<!-- MR 10.7.0 - FR 10.6.1 -->
+
+After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.

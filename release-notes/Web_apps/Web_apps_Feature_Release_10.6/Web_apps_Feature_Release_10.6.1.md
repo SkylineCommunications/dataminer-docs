@@ -2,12 +2,12 @@
 uid: Web_apps_Feature_Release_10.6.1
 ---
 
-# DataMiner web apps Feature Release 10.6.1 – Preview
+# DataMiner web apps Feature Release 10.6.1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.5.0 [CU10].
 
-This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.4.0 [CU22] and 10.5.0 [CU10].
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -16,7 +16,8 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Dashboard reports can now be generated in PDF, HTML, and/or CSV format [ID 43888]](#dashboard-reports-can-now-be-generated-in-pdf-html-andor-csv-format-id-43888)
+- [Low-Code Apps - Templates: Preset templates are now available [ID 44040]](#low-code-apps---templates-preset-templates-are-now-available-id-44040)
 
 ## New features
 
@@ -32,6 +33,17 @@ Also, the default file name has been changed from `Report.pdf` to `<dashboard na
 
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.6.0/10.6.1 or newer.
+
+#### Low-Code Apps - Templates: Preset templates are now available [ID 44040]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+From now on, preset templates are included in the overview of available templates, which you can access by clicking the *Browse templates* button while editing a component that supports templates.
+
+When you apply a preset template to a component, you can then configure it further using the Template Editor.
+
+> [!NOTE]
+> Currently, only a preset template for the table component is available, and it is supported only in the Low-Code Apps module. You can apply it to other components that support templates, but its appearance on those components may be inconsistent.
 
 #### Dashboards app: Private dashboards can now also be shared via cloud share [ID 44067]
 
@@ -58,7 +70,33 @@ Also, custom positioning mode has now been replaced by the following two positio
 > - When previously set to *Custom positioning*, the component will now by default be set to *Edit* mode with *Layered* positioning.
 > - When previously set to *Layered* or *Linked to data*, the component will now by default be set to *Read* mode.
 
+#### Dashboards/Low-Code Apps - Node edge graph component: New 'Node move' event [ID 44144]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Per node query linked to a *Node edge graph* component, you can now configure *node move* events that will be triggered when a node belonging to that query is moved.
+
+When triggered, a *node move* event will provide the following parameters:
+
+- The row data of the node that was moved.
+- The old position of the node: {x,y}
+- The new position of the node: {x,y}
+
 ## Changes
+
+### Breaking changes
+
+#### Annotations are now End of Life [ID 44136]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Annotations are now End of Life, and will no longer work when connected to a DataMiner Agent running main release version 10.6.0 or feature release version 10.6.1 (or above).
+
+Also, when connected to a DataMiner Agent running main release version 10.6.0 or feature release version 10.6.1 (or above), the following Web Services API methods (v1) will return an error:
+
+- GetAnnotationsLinkForElement
+- GetAnnotationsLinkForService
+- GetAnnotationsLinkForView
 
 ### Enhancements
 
@@ -67,6 +105,12 @@ Also, custom positioning mode has now been replaced by the following two positio
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 When a Line & area chart component was displaying trend data of aggregation parameters, up to now, it was not possible to export that trend data to a CSV file. Exporting that data is now supported.
+
+#### GQI DxM: Enhanced performance when using the 'Get parameters for elements where' data source [ID 43989]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+Because of a number of enhancements, overall performance has increased when using the *Get parameters for elements where* data source, especially on systems using the GQI DxM instead of SLHelper.
 
 #### Low-Code Apps - Form component: Clearer error will now appear when a DOM instance contains an incorrect value for a DomInstanceFieldDescriptor or DomInstanceValueFieldDescriptor [ID 44017]
 
@@ -95,17 +139,6 @@ In the Dashboards app and all low-code apps, the name *DataMiner Copilot* has no
 On *Form* components, datetime values will now be displayed in the same way as in *Table* components.
 
 The datetime format is based on the regional settings of the web browser. If a browser is set to e.g. "English (US)", datetime values will be displayed as "12/31/2029 8:00 PM".
-
-#### Low-Code Apps - Templates: Preset table component template [ID 44040]
-
-<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
-
-When, in a low-code app, you click the *Browse templates* button while editing a component that uses templates, a preset table component template will now appear in the list of templates.
-
-When you apply that preset template in a component that uses templates, you can then configure it further using the template editor.
-
-> [!NOTE]
-> This preset template will only be available in low-code apps, not in dashboards.
 
 #### Dashboards/Low-Code Apps: Enhanced visibility of query buttons in the edit pane [ID 44048]
 
@@ -181,6 +214,29 @@ Also, you will be able to specify whether you want the list to show custom templ
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
 The *Pivot table* and *Group* components are being retired. From now on, both will no longer appear in lists of available visualizations, unless you use the `showAdvancedSettings=true` URL option.
+
+#### GQI DxM: DOM data source now supports reading only a selected subset of fields from `DomInstance` objects [ID 44141]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When connected to a DataMiner Agent running main release version 10.6.0 or feature release 10.6.1 (or above), the DOM data source will now support reading only a selected subset of fields from `DomInstance` objects. This will reduce the amount of data transferred and can significantly improve performance in cases where a GQI query only need a few fields from each instance.
+
+For more information, see [DataMiner Objects Models: DomInstances CRUD helper now supports reading only a selected subset of fields from `DomInstance` objects [ID 43852]](xref:General_Feature_Release_10.6.1#dataminer-objects-models-dominstances-crud-helper-now-supports-reading-only-a-selected-subset-of-fields-from-dominstance-objects-id-43852)
+
+When connected to a DataMiner Agent running a version older than main release version 10.6.0 or feature release 10.6.1, the DOM data source will continue to read `DomInstance` objects as before.
+
+#### Web apps: Option to log in with a local user account [ID 44152]
+
+<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
+
+When a DataMiner Agent was configured to used external authentication, up to now, it would not be possible to log in to a web app with a local user account.
+
+From now on, when you add the `skipAutoLogin=true` argument to the URL of the app, the login screen will allow you to log in using either external authentication or a local user account.
+
+Example: `https://dma.company.local/?skipAutoLogin=true`
+
+> [!NOTE]
+> After having logged in using external authentication, you will now find a new *Sign in with another user* option in the user menu. This option will allow you return to the login screen, where you will be able log in using either external authentication or a local user account.
 
 ### Fixes
 
@@ -260,14 +316,6 @@ In interactive Automation scripts launched from a web app, up to now, numeric va
 
 When you had opened the DataMiner web apps authentication page in a Firefox web browser, in some cases, an error could occur when you tried to log in to a web app.
 
-#### Dashboards/Low-Code Apps: An export to CSV could incorrect be started before the data had been loaded [ID 44064]
-
-<!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
-
-Up to now, in a *Line & area chart* component, it would incorrectly be possible to start an export to CSV before the data had been loaded.
-
-From now on, an export to CSV will always be performed synchronously. In other words, even when you click *Export to CSV* before the data has been loaded, the export operation will only start when all data has been loaded.
-
 #### Dashboards app: Problem when generating a PDF report if a trend graph with valid data was followed by a trend graph without valid data [ID 44143]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
@@ -280,7 +328,7 @@ Up to now, it would not be possible to generate a PDF report if a trend graph wi
 
 Up to now, in a low-code app, users without permission to edit low-code apps would incorrectly not be allowed to move nodes in a node edge graph component.
 
-From now on, users with permission to view low-code apps will be allowed to moved nodes. However, if the node edge graph component is using Layered positioning, the new node positions will not be stored. New node positions will only be stored when the user has edit permission.
+From now on, users with permission to view low-code apps will be allowed to move nodes. However, if the node edge graph component is using Layered positioning, the new node positions will not be stored. New node positions will only be stored when the user has edit permission.
 
 #### Low-Code Apps: Post actions of an 'Execute a script' action would not be able to link the script's output values [ID 44157]
 

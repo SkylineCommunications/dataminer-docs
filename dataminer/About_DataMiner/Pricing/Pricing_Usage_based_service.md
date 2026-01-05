@@ -8,7 +8,7 @@ description: The DataMiner Usage-based Services model offers the option to lever
 The DataMiner Usage-based Services model offers your organization the option to leverage the DataMiner technology on a flexible basis empowering your digital transformation. It is available in both deploy models:
 
 - Self-managed deployments of DataMiner (on the ground, in a private/public cloud, or hybrid), and
-- Skyline-hosted solutions (DataMiner-as-a-Service).
+- Skyline-hosted solutions (DataMiner as a Service).
 
 This model provides **maximum operational flexibility** and maximum continuous flexibility in the utilization of DataMiner, at the required scale and leveraging any of the available DataMiner functions as deemed most valuable for the operation at any time, always perfectly aligned with any of the continuously evolving needs of both the operation and the business.
 
@@ -111,6 +111,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | Storage as a Service (STaaS) | *Trend data points* | New data point updates from trended metrics written to the storage service. |
 | Storage as a Service (STaaS) | *Element data*| Metrics from Managed Objects written to the storage service. |
 | DataMiner as Service (DaaS)  | *Hosted Managed Objects* | Managed Objects hosted as a service, metered as the total sum of their metrics. |
+| DataMiner Assistant | *Document Intelligence* | Document processing operations executed via the [Document Intelligence tool](xref:docintel) in DataMiner Automation. |
 
 > [!NOTE]
 > Only active and paused Managed Objects are counted for Managed Objects, Connector Services, and DaaS. Directly interfaced endpoints include data sources, devices, and platforms that expose an interface that allows direct interaction with those endpoints. Indirectly interfaced endpoints include those reported through a mediating data source, for example message brokers (like Apache Kafka or RabbitMQ), databases, or Element and Network Management Systems.
@@ -120,7 +121,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | Service | Metering unit | Credits per month | Example |
 |---|---|---|---|
 | *Standard Managed Object*     | Count of 10K metrics on Managed Objects with 200 or more metrics.                     | 0.4                        | A Managed Object with 24K metrics, the metered value is 3. |
-| *Light Managed Object*        | Sum of metrics on Managed Objects with less than 200 metrics.                         | 2 for 1000 metrics         | A Managed Object with 150 metrics, the metered value is 150. |
+| *Light Managed Object*        | Sum of metrics on Managed Objects with less than 200 metrics.                         | 2 for 1K metrics         | A Managed Object with 150 metrics, the metered value is 150. |
 | *Unmanaged Object*            | Sum of instances from all Unmanaged Objects.  | 4 per 100K instances. | A system with 5K tickets and 25K assets, the metered value is 30k x 4 / 100k = 1.2. |
 | *Connector Services*          | Sum of connectors delivered by Skyline, concurrently used.                            | 8 | Using 20 connectors a month, but with a maximum of 5 at any given time, the metered value is 5. |
 | *Automation Actions*          | Sum of Automation script runs (1x per run) and new Unmanaged Object instances (5x new instance)    | Starting at 5 for 1K actions.<br> Decreases with volume. | For an object "Ticket", when creating 100 new tickets, the metered value equals 500 |
@@ -129,7 +130,8 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | *Information Events*          | Sum of information event writes.  | 0.3 per 100K information events. | |
 | *Trend data points*           | Sum of trend data point writes.   | 0.3 per 10M trend data points. | |
 | *Element data*                | Sum of element data writes.       | 0.3 per 10M element data updates. | |
-| *Hosted Managed Objects*      | Sum of metrics of all Managed Objects hosted. | 0.1 for 10K metrics| A hosted system With 2 Managed Objects, one with 24K metrics and the other with 150 metrics, the metered value is 24,150 x 0.1 / 10K = 0.2415 |
+| *Hosted Managed Objects*      | Sum of metrics of all Managed Objects hosted. | 0.1 for 10K metrics| A hosted system with 2 Managed Objects, one with 24K metrics and the other with 150 metrics. The metered value is 24,150 x 0.1 / 10K = 0.2415 |
+| *Document Intelligence*       | Sum of the processed document pages.  | 9 per 1K pages. | Processing 1.5K PDF documents with 2 pages each results in 3K processed pages, yielding a metered value of 3K x 9 / 1K = 27. |
 
 > [!NOTE]
 > Instead of a fixed number of 5 actions, some objects defined in Skyline's [Standard Data Model](xref:SOL_About#standard-data-model) may trigger a different number of Automation Actions when new unmanaged object instances are created.

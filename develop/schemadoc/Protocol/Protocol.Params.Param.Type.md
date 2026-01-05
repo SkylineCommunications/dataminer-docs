@@ -123,6 +123,9 @@ A parameter of type ELEMENTID will contain the ID of the DMS element.
 
 A parameter of type ELEMENTNAME will contain the name of the DMS element.
 
+> [!IMPORTANT]
+> Only define a single `elementname` parameter. Multiple definitions are not supported and can cause inconsistent behavior.
+
 ### fixed
 
 FIXED parameters can be used to define values that will never change during the course of a communication session.

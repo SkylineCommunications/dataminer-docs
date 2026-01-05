@@ -4,6 +4,16 @@ uid: Adding_and_deleting_trend_templates
 
 # Adding and deleting trend templates
 
+To learn how to create a trend template, you can follow the steps below or watch this short video:
+
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/dataminer/images/TrendTemplate.mp4" type="video/mp4">
+  </video>
+</div>
+
+*Watch first: [Creating a DataMiner element](xref:Adding_elements) and [Creating an alarm template](xref:Creating_an_alarm_template)*<br>*See also: [Trend icons](xref:Trend_icons)*
+
 ## Creating a trend template
 
 To create a new trend template:

@@ -23,7 +23,9 @@ items:
                 topicUid: General_Main_Release_10.6.0_changes
       - name: Feature Release
         items:
-          - name: General Feature Release 10.6.1 - Preview
+          - name: General Feature Release 10.6.2 - Preview
+            topicUid: General_Feature_Release_10.6.2
+          - name: General Feature Release 10.6.1
             topicUid: General_Feature_Release_10.6.1
   - name: v10.5
     items:
@@ -58,12 +60,18 @@ items:
             topicUid: General_Main_Release_10.5.0_CU8
           - name: General Main Release 10.5.0 CU9
             topicUid: General_Main_Release_10.5.0_CU9
-          - name: General Main Release 10.5.0 CU10 - Preview
+          - name: General Main Release 10.5.0 CU10
             topicUid: General_Main_Release_10.5.0_CU10
+          - name: General Main Release 10.5.0 CU11 - Preview
+            topicUid: General_Main_Release_10.5.0_CU11
       - name: Feature Release
         items:
           - name: General Feature Release 10.5.12
-            topicUid: General_Feature_Release_10.5.12
+            items:
+              - name: New features and changes
+                topicUid: General_Feature_Release_10.5.12
+              - name: General Feature Release 10.5.12 CU1
+                topicUid: General_Feature_Release_10.5.12_CU1
           - name: General Feature Release 10.5.11
             topicUid: General_Feature_Release_10.5.11
           - name: General Feature Release 10.5.10
@@ -155,8 +163,6 @@ items:
             topicUid: General_Main_Release_10.4.0_CU20
           - name: General Main Release 10.4.0 CU21
             topicUid: General_Main_Release_10.4.0_CU21
-          - name: General Main Release 10.4.0 CU22 - Preview
-            topicUid: General_Main_Release_10.4.0_CU22
       - name: Feature Release
         items:
           - name: General Feature Release 10.4.12
@@ -359,8 +365,6 @@ items:
             topicUid: General_Main_Release_10.2.0_CU20
           - name: General Main Release 10.2.0 CU21
             topicUid: General_Main_Release_10.2.0_CU21
-          - name: General Main Release 10.2.0 CU22 - Preview
-            topicUid: General_Main_Release_10.2.0_CU22
       - name: Feature Release
         items:
           - name: General Feature Release 10.2.12
@@ -474,8 +478,6 @@ items:
             topicUid: General_Main_Release_10.1.0_CU20
           - name: General Main Release 10.1.0 CU21
             topicUid: General_Main_Release_10.1.0_CU21
-          - name: General Main Release 10.1.0 CU22 - Preview
-            topicUid: General_Main_Release_10.1.0_CU22
       - name: Feature Release
         items:
           - name: General Feature Release 10.1.12
@@ -571,8 +573,6 @@ items:
             topicUid: General_Main_Release_10.0.0_CU20
           - name: General Main Release 10.0.0 CU21
             topicUid: General_Main_Release_10.0.0_CU21
-          - name: General Main Release 10.0.0 CU22 - Preview
-            topicUid: General_Main_Release_10.0.0_CU22
       - name: Feature Release
         items:
           - name: General Feature Release 10.0.13

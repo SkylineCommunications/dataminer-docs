@@ -169,7 +169,7 @@ The following auto-detect methods can be specified:
 
 - **I can no longer launch DataMiner Cube from the DataMiner Cube start window**
 
-    If you added the DMS based on the IP address, this may no longer work if HTTPS is required. Add a new DataMiner System and **use the FQDN** instead of the IP address. See [Opening DataMiner Cube](xref:Using_the_desktop_app).
+    If you added the DMS based on the IP address, this may no longer work if HTTPS is required. Add a new DataMiner System and **use the FQDN** instead of the IP address. See [Connecting to a DataMiner Agent with Cube](xref:Connecting_to_a_DMA_with_Cube).
 
 - **The webpage could not be found (HTTP 404 error)**
 
