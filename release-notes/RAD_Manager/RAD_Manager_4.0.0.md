@@ -5,7 +5,7 @@ uid: RAD_Manager_4.0.0
 # RAD Manager 4.0.0
 
 > [!NOTE]
-> This RAD Manager version requires that **DataMiner 10.5.12/10.6.0 or higher** is installed.
+> This RAD Manager version requires that **DataMiner 10.6.0/10.6.1 or higher** is installed.
 
 ## New features
 

@@ -62,7 +62,7 @@ If you have selected to add a group for each element with a given connector, you
 
 1. Next to *Group Name Prefix*, specify a prefix that will be used to generate the names of the resulting relational anomaly parameter groups.
 
-   For each relevant element, a relational anomamy group will be created with the name `[PREFIX] ([ELEMENT_NAME])`. These names will be used when listing configured groups in the main window and in suggestion events generated for detected anomalies.
+   For each relevant element, a relational anomaly group will be created with the name `[PREFIX] ([ELEMENT_NAME])`. These names will be used when listing configured groups in the main window and in suggestion events generated for detected anomalies.
 
 1. Select the connector and connector version.
 
