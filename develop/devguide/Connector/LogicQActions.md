@@ -178,7 +178,7 @@ Use an **instanced QAction** and share data through a **non-static field**.
 
 #### Within a single element across multiple executions of two or more different QActions
 Use a **precompiled QAction** with a **singleton or static class** containing a **static dictionary field**.  
-Store and retrieve data from this dictionary using the **DataMiner ID** and **Element ID** as a unique key to associate data with the correct element.
+Store and retrieve data per element using this dictionary. The key of the dictionary should be a combination of the **Root DataMiner ID** and the **Element ID**. The key needs to be unique in the scope of a DMS containing multiple agents. The **Root DataMiner ID** should be used instead of the Host DataMiner ID to make sure the key stays unique even after an element is swarmed to a different agent.
 
 > [!IMPORTANT] 
 > Implement cleanup logic when the element is stopped to remove all entries related to that element from the dictionary, as the lifetime of the static field is independent of the element lifecycle.
