@@ -233,3 +233,9 @@ When a version of a DVE connector was set to production version, in some cases, 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 Up to now, a history set parameter with a constant value would not properly update its new timestamp when a set parameter was triggered with a more recent timestamp.
+
+#### Service impact of exported DVE parameter or DCF interface state of DVE element were incorrect when monitored parameters of the DVE element were polled but not saved [ID 44341]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+After a DataMiner restart or an element restart, in some cases, the service impact of an exported parameter or the DCF interface state of a DVE element would be incorrect when the monitored parameters of the DVE element in question were polled but not saved, especially when those monitored parameters were associated with active alarms.
