@@ -31,7 +31,7 @@ If one of the subgroups of a shared model group behaves significantly differentl
 
 #### Retraining configuration integrated in add/edit group dialog [ID 44138]
 
-The training configuration for relational anomaly groups has now been integrated in the dialog used to add or edit groups (both shared model and single group)s. In this dialog, you can now specify from which time range and from which subgroups data will be used to (re-)train the model of a group.
+The training configuration for relational anomaly groups has now been integrated in the dialog used to add or edit groups (both shared model and single groups). In this dialog, you can now specify from which time range and from which subgroups data will be used to (re-)train the model of a group.
 
 If this is not specified in the dialog to add a group, the default configuration will be used (i.e. data from all subgroups and from the last two months). If it is not specified in the dialog to edit a group, the model will remain unchanged, provided that the number of parameters in the group does not change.
 
