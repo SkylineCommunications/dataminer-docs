@@ -76,7 +76,7 @@ Each Catalog item requires at least one owner. The owner should be an individual
 - **email**: Email address of the owner. This is recommended, although it is currently not used in the Catalog interface.
 - **url**: A URL associated with the owner, such as a GitHub account URL.
 
-You can specify multiple owners by adding additional entries to the list. For example:
+You can specify multiple owners by adding additional entries to the list.
 
 ## Keep the limitations in mind
 

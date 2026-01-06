@@ -190,7 +190,7 @@ These workflows will allow you to:
 When using the [Visual Studio Templates](xref:VisualStudioTemplates), workflows are automatically included in your project. You can select from different workflow options: *demo*, *build*, or *complete*.
 
 > [!TIP]
-> We strongly recommend using the **complete** workflow whenever possible. In the background, this workflow uses one of our [workflow templates](_ReusableWorkflows/.github/workflows/DataMiner App Packages Master Workflow.yml at main · SkylineCommunications/_ReusableWorkflows) for the CI part.
+> We strongly recommend using the **complete** workflow whenever possible. In the background, this workflow uses one of our [workflow templates](https://github.com/SkylineCommunications/_ReusableWorkflows/blob/main/.github/workflows/DataMiner%20App%20Packages%20Master%20Workflow.yml) for the CI part.
 
 ## Using GitHub actions to publish to a cloud-connected DataMiner Agent
 
