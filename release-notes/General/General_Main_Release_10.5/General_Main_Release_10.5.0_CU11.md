@@ -95,6 +95,12 @@ SLLogCollector packages will now also include the following information:
 
   `/Network Information/netsh.exe http show servicestate view=requestq verbose=no.txt`
 
+#### DataAPI: Enhanced behavior in cluster environments [ID 44293]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Because of a number of enhancements, DataAPI behavior in cluster environments has improved, especially when creating elements or uploading connectors.
+
 ### Fixes
 
 #### Problem when a connector was deleted immediately after it had been uploaded [IID 44083]

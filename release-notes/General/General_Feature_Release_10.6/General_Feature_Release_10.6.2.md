@@ -183,6 +183,12 @@ From now on, SLAnalytics will pause the creation of new synchronization tasks fo
 
 A number of enhancements have been done with regard to the communication between resource managers across DataMiner Agents. This will especially enhance performance when starting multiple bookings on non-master DMAs.
 
+#### DataAPI: Enhanced behavior in cluster environments [ID 44293]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Because of a number of enhancements, DataAPI behavior in cluster environments has improved, especially when creating elements or uploading connectors.
+
 ### Fixes
 
 #### Problem when a connector was deleted immediately after it had been uploaded [IID 44083]
