@@ -10,6 +10,34 @@ To get a correctly configured query, you can make use of the DataMiner Dashboard
 
 1. In the DataMiner Dashboards app, [create a dashboard](xref:Creating_a_completely_new_dashboard), and then [create a query](xref:Creating_GQI_query).
 
+[!NOTE]
+From DataMiner 10.5.12 onwards, this process has been greatly simplified. The steps below mainly apply to earlier versions or advanced scenarios where manual query extraction and conversion is still required.
+
+# From version 10.5.12 onwards, this has been simplified
+
+From DataMiner 10.5.12 onwards, configuring GQI queries for the Data Aggregator is much easier. Follow these steps for the recommended approach:
+
+> Currently, only the simple export method (downloading the JSON file) is supported. If you need to use other options, you must follow the manual steps described below for earlier versions.
+
+1. In the Dashboards or Applications module, open your query in the edit panel.
+
+1. Click on the three dots (more options) next to your query.
+
+1. Select the **Export** button.
+
+1. An export popup will appear.
+
+1. You have two options:
+
+   - **Copy the query** (and follow the manual steps described below for earlier versions), or
+   - **Download the JSON file**.
+
+1. We recommend downloading the JSON file, as this is the easiest and most reliable method.
+
+1. Place the downloaded JSON file in the correct folder, and update the _Helper.json_ file as needed. See [GQI queries](xref:Data_Aggregator_settings#gqi-queries) for detailed instructions.
+
+# Manual steps for earlier versions or advanced scenarios
+
 1. Visualize this query on the dashboard, for example using the [Table component](xref:DashboardTable).
 
 1. Press F12 to open the developer tools and go to the *Network* tab.
