@@ -972,6 +972,8 @@ items:
             items:
               - name: Forwarding dummy data to the GQI
                 topicUid: Forwarding_dummy_data_to_GQI
+              - name: Optimizing filter operations
+                topicUid: GQI_Ad_hoc_Optimizing_filter_operations
               - name: Optimizing sort operations
                 topicUid: GQI_Ad_hoc_Optimizing_sort_operations
               - name: Scaling an ad hoc data source
@@ -1025,6 +1027,8 @@ items:
             topicUid: GQI_GQIEditableHeader
           - name: GQIEditableRow
             topicUid: GQI_GQIEditableRow
+          - name: GQIFilterMethod
+            topicUid: GQI_GQIFilterMethod
           - name: GQILogLevel
             topicUid: GQI_GQILogLevel
           - name: GQIPage
@@ -1033,6 +1037,8 @@ items:
             topicUid: GQI_GQIRow
           - name: GQISortDirection
             topicUid: GQI_GQISortDirection
+          - name: IGQIAndFilter
+            topicUid: GQI_IGQIAndFilter
           - name: IGQIColumn
             topicUid: GQI_IGQIColumn
           - name: IGQIColumnOperator
@@ -1049,6 +1055,8 @@ items:
             topicUid: GQI_IGQIDataSourceNode 
           - name: IGQIFactory
             topicUid: GQI_IGQIFactory
+          - name: IGQIFilter
+            topicUid: GQI_IGQIFilter
           - name: IGQIFilterOperator
             topicUid: GQI_IGQIFilterOperator
           - name: IGQIInputArguments
@@ -1069,6 +1077,8 @@ items:
             topicUid: GQI_IGQIOptimizableDataSource
           - name: IGQIOptimizableOperator
             topicUid: GQI_IGQIOptimizableOperator
+          - name: IGQIOrFilter
+            topicUid: GQI_IGQIOrFilter
           - name: IGQIQueryNode
             topicUid: GQI_IGQIQueryNode
           - name: IGQIRowOperator
@@ -1081,6 +1091,8 @@ items:
             topicUid: GQI_IGQIUpdateable
           - name: IGQIUpdater
             topicUid: GQI_IGQIUpdater
+          - name: IGQIValueFilter
+            topicUid: GQI_IGQIValueFilter
           - name: ObjectRefMetadata
             topicUid: GQI_ObjectRefMetadata
           - name: OnArgumentsProcessedInputArgs

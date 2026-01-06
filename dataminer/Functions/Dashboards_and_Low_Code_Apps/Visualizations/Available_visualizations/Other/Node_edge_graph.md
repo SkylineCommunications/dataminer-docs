@@ -25,13 +25,13 @@ What you see in the node edge graph depends on the provided data and your [compo
 
 You can interact with the node edge graph in several ways:
 
-- **Selecting an item**: Click an item to select it. You can select multiple items at the same time by keeping the Ctrl key pressed while clicking nodes.
+- **Selecting an item**: Click an item to select it. You can select multiple items at the same time by keeping the Ctrl key pressed while clicking nodes. You can select all items at once, by pressing Ctrl + A.
 
   When you select one or multiple items in the node edge graph, the selected data becomes available under *All available data* > *Components* > *Node edge graph* > *Tables*.
 
   Thanks to this exposed data, you can use the node edge graph component as a dynamic selector, i.e. a component whose selection determines behavior or data elsewhere in your dashboard or app. A common use case is showing additional details when a node is selected.
 
-- **Moving a node**: You can select and drag a node to a new position. You can move multiple nodes at the same time by keeping the Ctrl key pressed while selecting several nodes and then moving them together.
+- **Moving a node**: You can select and drag a node to a new position. You can move multiple nodes at the same time by keeping the Ctrl key pressed while selecting several nodes and then moving them together. You can move all nodes at once by pressing Ctrl + A and dragging them together.
 
   The conditions for repositioning nodes depend on your DataMiner version:
 
@@ -39,12 +39,11 @@ You can interact with the node edge graph in several ways:
 
     - In the *Settings* pane, *Default mode* must be set to *Edit*.
 
-    - When *Advanced* > *Node positions* is set to *Layered* in the *Layout* pane, editor permissions are required if you want the new node positions to be stored<!--RN 44154-->. See [Configuring security for a dashboard](xref:Configuring_dashboard_security) and [Configuring app security](xref:LowCodeApps_security_config).
+    - Ensure that node moves update the underlying data and do not remain purely visual:
 
-      When *Node positions* is set to *Linked to data*, node positions are stored automatically, even when the user only has permission to view the dashboard or app.
+      - When *Advanced* > *Node positions* is set to *Layered* in the *Layout* pane, node positions are stored automatically when the user has editor permissions<!--RN 44154-->. See [Configuring security for a dashboard](xref:Configuring_dashboard_security) and [Configuring app security](xref:LowCodeApps_security_config).
 
-    > [!NOTE]
-    > To ensure that node moves update the underlying data and do not remain purely visual, configure an event that triggers a *Launch a script* action. This Automation script should update the original data objects with the modified ones exposed by the event. For more information, see [Configuring node movement events](#configuring-node-movement-events).
+      - When *Advanced* > *Node positions* is set to *Linked to data*, node positions are only stored if a node-move event is configured that triggers a *Launch a script* action. This Automation script should update the original data objects with the modified ones exposed by the event. For more information, see [Configuring node movement events](#configuring-node-movement-events).
 
   - Up to DataMiner 10.5.0 [CU9]/10.5.12:
 
@@ -68,7 +67,7 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
 - *Static*: Edges have no color, nodes have the color from the node settings.
 
-- *Analytical*: If you select this mode, further below in the tooltip you can select any of the columns that have a color filter applied (cf. configuration below) to make this the dominant column. This column is then indicated in bold and determines which color is used in the graph. The value of this column is also displayed under the nodes or edges. If WebSocket communication is enabled, the colors and values will be updated in real time to match parameter value updates.
+- *Analytical*: If you select this mode, further below in the tooltip you can select any of the columns that have a color filter applied (cf. configuration below) to make this the dominant column. This column is then indicated in bold and determines which color is used in the graph. The value of this column is also displayed under the nodes or edges. If WebSocket communication is enabled, the colors and values will be updated in real time to match parameter value updates and other real-time updates.
 
 - *Alarm*: Nodes and edges are colored according to the highest severity of the parameters in the tooltip.
 
@@ -90,7 +89,7 @@ To highlight items with a query filter:
 
 1. In the *Data* pane, navigate to *All available data* > *Components* > *Query filter #*, and drag the *Query columns* data item onto your node edge graph component.
 
-   In read mode, you can now use the query filter component to filter and refine the data displayed in the node edge graph component. Items that do not meet the specified criteria will be shown with lowered opacity.
+   You can now use the query filter component to filter and refine the data displayed in the node edge graph component. Items that do not meet the specified criteria will be shown with lowered opacity.
 
 > [!NOTE]
 > When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized.
@@ -166,7 +165,7 @@ In the *Settings* pane for this component, you can customize its behavior to sui
 |--|--|--|
 | WebSocket settings | Inherit WebSocket settings from page/panel | Clear the checkbox to use a custom polling interval for this component. When cleared, you can specify a different polling interval (in seconds). |
 | General | Override dynamic units | Clear the checkbox to prevent parameter units from changing dynamically based on their value and protocol definition. Disabled by default. |
-| General | Default mode | Available from DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44078-->. Select whether the component should open in *Read* (default) or *Edit* mode. Only in *Edit* mode can [nodes be repositioned](#available-interactions). |
+| General | Default mode | Available from DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44078-->. Select whether the component should open in *Read* or *Edit* mode. Only in *Edit* mode can [nodes be repositioned](#available-interactions). |
 | Data retrieval | Update data | Toggle the switch to determine whether the data should be refreshed automatically (provided this is supported by the data source). See [Query updates](xref:Query_updates)<!--RN 37269-->. Disabled by default. |
 | Events | On node move | Available from DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44144-->. Select *Configure actions* to configure events that will be triggered when a node belonging to the query is moved. See [Configuring node movement events](#configuring-node-movement-events). |
 | Advanced | Hold Ctrl to zoom | Available from DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, when the [*Zooming* layout option](#node-edge-graph-layout) is enabled. Select the checkbox to make the scroll wheel zoom only when you hold the Ctrl key. |

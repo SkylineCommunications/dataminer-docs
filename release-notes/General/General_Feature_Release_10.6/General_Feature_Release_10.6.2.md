@@ -32,7 +32,20 @@ uid: General_Feature_Release_10.6.2
 
 ## New features
 
-*No new features have been added yet.*
+#### Automation: New message to retrieve information about the available Automation scripts [ID 44209]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve the following information about each Automation script available in the DataMiner System:
+
+- The folder containing the script's XML file.
+- Whether or not the script supports a dedicated log file.
+
+> [!NOTE]
+> The above-mentioned message can only be used on systems with an *Automation* license by users who have the following permissions:
+>
+> - *Modules > Automation > UI available*
+> - *Modules > Automation > Execute*
 
 ## Changes
 
@@ -90,6 +103,14 @@ From now on, when you try to add a DataMiner Agent to a DataMiner System, the op
 
 If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.  
 
+#### Elasticsearch/OpenSearch: Enhanced history alarm filtering on service ID or service name [ID 44192]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When, on a system with a Cassandra Cluster database, history alarms are filtered on service ID or service name, up to now, that filter would not be translated correctly to Elasticsearch or OpenSearch. From now on, that filter will be translated correctly. As a result, overall performance will increase when applying the filter in question to large data sets.
+
+Also, filtering on alarm properties or interfaces using wildcards or regular expression has now been made case insensitive.
+
 #### Scheduler will now be able to start more than 10 synchronously running Automation scripts [ID 44200]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
@@ -107,6 +128,41 @@ Because of a number of enhancements, overall performance has increased when the 
 - BrokerGateway
 - StorageModule
 
+#### SLLogCollector packages will now also include time zone info, domain info, IP addresses of NICs, Web.config files, IIS configuration, and HTTP service state [ID 44223]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+SLLogCollector packages will now also include the following information:
+
+- Time zone info, which will be stored in the following file:
+
+  ```text
+  /Windows/powershell.exe Get-TimeZone_.txt
+  ```
+
+- Windows domain info, which will be stored in the following files:
+
+  ```text
+  /Windows/nltest.exe _dclist_.txt
+  /Windows/nltest.exe _domain_trusts.txt
+  /Windows/nltest.exe _dsgetdc_.txt
+  ```
+
+- The IP addresses of all network adapters, which will be stored in the following files:
+
+  ```text
+  /Network Information/NetworkInterface_GetAllNetworkInterfaces.txt
+  /Network Information/powershell.exe [System.Net.Dns]_GetHostname().txt
+  ```
+
+- All `Web.config` files found in `C:\Skyline DataMiner\WebPages` and all its subfolders.
+
+- The entire IIS configuration.
+
+- A snapshot of the HTTP service state (Request Queue View), which will be stored in the following file:
+
+  `/Network Information/netsh.exe http show servicestate view=requestq verbose=no.txt`
+
 #### Relational anomaly detection: GetRADParameterGroupInfoResponseMessage now also includes the ID of the RAD parameter group [ID 44237]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
@@ -121,7 +177,19 @@ When database operations fail or take too long, the queue of database synchroniz
 
 From now on, SLAnalytics will pause the creation of new synchronization tasks for some types of model information whenever there are too many pending tasks already. New synchronization operations will only be created again once the backlog has decreased.
 
+#### Service & Resource Management: Enhanced communication between resource managers across DataMiner Agents [ID 44279]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+A number of enhancements have been done with regard to the communication between resource managers across DataMiner Agents. This will especially enhance performance when starting multiple bookings on non-master DMAs.
+
 ### Fixes
+
+#### Problem when a connector was deleted immediately after it had been uploaded [IID 44083]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a connector was deleted immediately after it had been uploaded, in some rare cases, events triggered by the connector upload would still be adding references to the SLNet cache while the events triggered by the connector deletion were already trying to remove those references. This would lead to the SLNet cache incorrectly containing references to connectors that no longer existed on disk.
 
 #### Not possible to export elements with logger tables on systems with Cassandra Cluster and OpenSearch [ID 44105]
 
@@ -160,6 +228,20 @@ After you had uploaded a protocol with a version that was identical to the prefi
 
 In some cases, SLElement could stop working when loading elements that included matrix parameters.
 
+#### Problem when importing a .dmimport package containing elements that use a production version of a connector [ID 44189]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When you imported a *.dmimport* package containing an element that used a production version of a connector for which a different version was set as production version on the target agent, up to now, the connector version set as production version in the *.dmimport* package would incorrectly always be set as new production version on the target agent.
+
+From now on, the system will always ask what you want it to do:
+
+- Make the connector version in the *.dmimport* package the new production version on the target agent, and allow the imported element to still use the production version.
+
+OR
+
+- Leave the production version untouched on the target agent, and update the imported element so that it no longer uses the production version but the referenced version instead.
+
 #### BrokerGateway: Issues related to certificates [ID 44195]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
@@ -189,15 +271,9 @@ Also, on system using STaaS, up to now, when importing a DELT package containing
 
 When a parameter within a RAD parameter group had not had a value for more than 5 days, up to now, SLAnalytics would incorrectly lose track of the entire parameter group. As a result, no anomalies would get detected for that group, and create, update and delete actions performed on that group would fail.
 
-#### DataMiner installation: Stopping the DataMiner Agent during an installation would incorrectly be interpreted as a crash [ID 44220]
-
-<!-- MR 10.7.0 - FR 10.6.2 -->
-
-At some point during a DataMiner installation, the DataMiner Agent needs to be stopped for a brief moment to allow a number of configuration steps to be performed. Up to now, in some rare cases, SLWatchdog would incorrectly interpret stopping the DataMiner Agent as a crash, causing the system to start up too soon.
-
 #### Problem when retrieving historic alarms with a filter on the value of a discrete parameter [ID 44221]
 
-<!-- MR 10.7.0 - FR 10.6.2 -->
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 When historic alarms were retrieved with a filter on the value of a discrete parameter, up to now, no alarms would be returned.
 
@@ -211,8 +287,32 @@ When a client application connects to a DataMiner System, it retrieves the confi
 
 Up to now, when retrieving that info failed, no retries would incorrectly be attempted. From now on, a retry will be attempted every 10 seconds.
 
+#### Problem when trying to create, update, or delete users or user groups [ID 44245]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Because of file locking issues, in some cases, errors could occur when trying to create, update, or delete users or user groups.
+
 #### Crowd: HTTP response codes would incorrectly be ignored [ID 44254]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 When DataMiner was configured to import users and groups from a Crowd server, SLDataMiner would incorrectly disregard HTTP result codes while parsing a response during the hourly LDAP synchronization. This could lead to users being removed from their groups until the next successful synchronization, causing them to be unable to log in to DataMiner.
+
+#### BrokerGateway: getnatsconnectiondetails calls would slow down whenever an IP address listed in appsettings.runtime.json could not be reached [ID 44287]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Up to now, whenever an IP address listed in BrokerGateway's `appsettings.runtime.json` file could not be reached, `getnatsconnectiondetails` calls would slow down for all MessageBroker clients, causing DataMiner to not start up as it would not be able to contact the StorageModule DcM fast enough.
+
+#### Problem when calling NotifyDataMiner NT_ELEMENT_STARTUP_COMPLETE for an element while that element was being renamed [ID 44288]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a QAction called NotifyDataMiner `NT_ELEMENT_STARTUP_COMPLETE` for its own element while that element was being renamed, up to now, a deadlock would occur, causing a run-time error.
+
+#### A history set parameter with a constant value would not properly update its new timestamp [ID 44318]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Up to now, a history set parameter with a constant value would not properly update its new timestamp when a set parameter was triggered with a more recent timestamp.

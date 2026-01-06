@@ -18,8 +18,7 @@ items:
   - name: Data API release notes - preview
     topicUid: DataAPI_change_log
   - name: Model Host release notes
-    topicUid: ModelHost_1.1.0
-    href: ModelHost/toc.yml
+    topicUid: ModelHost_change_log
   - name: Orchestrator release notes
     topicUid: orchestrator_change_log
   - name: Site Manager release notes

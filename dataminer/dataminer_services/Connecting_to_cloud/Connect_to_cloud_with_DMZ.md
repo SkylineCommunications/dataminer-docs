@@ -8,7 +8,7 @@ reviewer: Alexander Verkest
 
 From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dataminer.services using a DMZ (i.e. a perimeter network acting as an intermediate between the DMS and the internet). This way, the DMS can be connected to dataminer.services without exposing the entire DMS network to the public internet.
 
-![DMZ](~/dataminer/images/DMZ_CloudGateway.png)
+![DMZ](~/dataminer/images/DMZ_CloudGateway.svg)
 
 1. Verify that your DataMiner System meets all [requirements](xref:Connect_to_cloud_requirements).
 

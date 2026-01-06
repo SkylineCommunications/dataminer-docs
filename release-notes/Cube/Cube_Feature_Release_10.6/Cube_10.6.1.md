@@ -38,17 +38,17 @@ Clicking a "+" icon will load all parameters associated with the multi-variate t
 
 ### Enhancements
 
-#### System Center: Enhanced embedding of DOM definition-level security app on cloud-connected systems [ID 43975]
+#### System Center: Enhanced DOM definition-level security UI on cloud-connected systems [ID 43975]
 
 <!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
 
-A number of enhancements have been made to the way in which the DOM definition-level security app is embedded in System Center.
+A number of enhancements have been made to the DOM definition-level security UI in System Center.
 
-Up to now, when you went to *System Center > DOM* while being connected to a cloud-connected DataMiner Agent, you had to click a hyperlink to open the app in a browser window.
+Up to now, when you went to *System Center > DOM* while being connected to a cloud-connected DataMiner Agent, you had to click a hyperlink to open the UI in a browser window.
 
-From now on, when you go to *System Center > DOM* while being connected to a cloud-connected DataMiner Agent running at least Main Release version 10.6.0 or Feature Release version 10.5.12, after entering your credentials, you will immediately see the app, fully embedded in System Center. The session will be kept alive until System Center is closed.
+From now on, when you go to *System Center > DOM* while being connected to a cloud-connected DataMiner Agent running at least Main Release version 10.6.0 or Feature Release version 10.5.12, after entering your credentials, you will immediately see the UI, fully integrated in System Center. The session will be kept alive until System Center is closed.
 
-Also, up to now, when you made a change in the embedded app and switched to another tab in System Center, that change would not be kept when you had not clicked the *Apply* button. From now on, all changes made in the embedded app will be kept until you close System Center.
+Also, up to now, when you made a change in the UI and switched to another tab in System Center, that change would not be kept when you had not clicked the *Apply* button. From now on, all changes made in the UI will be kept until you close System Center.
 
 #### Trending: Double-clicking the alarm group of a multi-variate trend pattern will now open a trend graph showing all parameters involved in the multi-variate trend pattern [ID 43994]
 
@@ -80,6 +80,12 @@ When Cube is connected to a DataMiner System using STaaS:
 - In the *Search & indexing* section of *System Center*, the indexing engine settings will no longer be available.
 
 Also, when an exception is thrown when Cube tries to use the MigrationManagerHelper, an error will now be logged in the Cube logging.
+
+#### SLAnalytics: DataMinerID field of TargetClientRequestMessage will now be set to the DataMiner ID of the element [ID 44358]
+
+<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 [CU0] -->
+
+In the `TargetClientRequestMessage`, which is used by DataMiner Cube to request behavioral change points and relational anomalies, up to now, the `DataMinerID` field was set to the DataMiner ID of the hosting agent. From now on, the `DataMinerID` field will be set to the DataMiner ID of the element. This will ensure that SLNet is able to route the request to the correct hosting agent.
 
 ### Fixes
 
