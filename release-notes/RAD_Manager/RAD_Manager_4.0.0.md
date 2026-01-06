@@ -11,13 +11,13 @@ uid: RAD_Manager_4.0.0
 
 #### Historical anomalies panel [ID 43829]
 
-A *Historical Anomalies* button is now available in the upper right corner of the RAD Manager app. It opens a side panel listing all detected historical anomalies for the selected relational anomaly group. In addition, the number of historical anomalies detected per group or subgroup is now shown in the relational anomaly groups grid on the left-hand side of the main page.
+A *Historical Anomalies* button is now available in the upper right corner of the RAD Manager app. It opens a pane listing all detected historical anomalies for the selected relational anomaly group. In addition, the number of historical anomalies detected per group or subgroup is now shown in the relational anomaly groups grid on the left-hand side of the main page.
 
 #### Shared model groups [ID 44091]
 
 RAD Manager now supports shared model groups, i.e. groups that include multiple subgroups that share the same detection model. These are ideal when monitoring many similar entities or when some subgroups suffer from insufficient healthy training data.
 
-You can add a shared model group in the RAD Manager app using the *Add Shared Model Group* button.
+You can add a shared model group in the RAD Manager app using the *Add Shared Model Group* button. Adding a single group remains possible with the *Add Single Group* button.
 
 Both single and shared model groups are displayed in the relational anomaly groups grid on the left-hand side of the main page. To view the subgroups of a shared model group, you can click the group tile.
 
