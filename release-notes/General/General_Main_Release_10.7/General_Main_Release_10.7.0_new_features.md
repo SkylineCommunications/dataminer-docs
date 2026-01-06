@@ -59,3 +59,18 @@ By default, a Content-Type header of type `application/octet-stream` will be ret
 >
 > - `TriggerUserDefinableApiRequestMessage` is now also capable of returning bytes.
 > - When a user-defined API being tested in the SLNetClientTest tool returns bytes, the following message will appear: "Response body is in bytes and cannot be displayed".
+
+#### Automation: New message to retrieve information about the available Automation scripts [ID 44209]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve the following information about each Automation script available in the DataMiner System:
+
+- The folder containing the script's XML file.
+- Whether or not the script supports a dedicated log file.
+
+> [!NOTE]
+> The above-mentioned message can only be used on systems with an *Automation* license by users who have the following permissions:
+>
+> - *Modules > Automation > UI available*
+> - *Modules > Automation > Execute*

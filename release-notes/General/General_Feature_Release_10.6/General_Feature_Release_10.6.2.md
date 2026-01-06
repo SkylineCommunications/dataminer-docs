@@ -32,7 +32,20 @@ uid: General_Feature_Release_10.6.2
 
 ## New features
 
-*No new features have been added yet.*
+#### Automation: New message to retrieve information about the available Automation scripts [ID 44209]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve the following information about each Automation script available in the DataMiner System:
+
+- The folder containing the script's XML file.
+- Whether or not the script supports a dedicated log file.
+
+> [!NOTE]
+> The above-mentioned message can only be used on systems with an *Automation* license by users who have the following permissions:
+>
+> - *Modules > Automation > UI available*
+> - *Modules > Automation > Execute*
 
 ## Changes
 
