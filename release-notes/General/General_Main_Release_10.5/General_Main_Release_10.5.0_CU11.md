@@ -239,3 +239,9 @@ Up to now, a history set parameter with a constant value would not properly upda
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 After a DataMiner restart or an element restart, in some cases, the service impact of an exported parameter or the DCF interface state of a DVE element would be incorrect when the monitored parameters of the DVE element in question were polled but not saved, especially when those monitored parameters were associated with active alarms.
+
+#### Protocols - PortSettings: DefaultValue and Disabled child elements of SkipCertificateVerification element would not be read if the connection was not the primary connection [ID 44343]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In the `<PortSettings>` element of an HTTP connection, you can configure a `<SkipCertificateVerification>` element with child elements `<DefaultValue>` and `<Disabled>`. Up to now, both child elements would incorrectly not be read if the connection in question was not the primary connection.
