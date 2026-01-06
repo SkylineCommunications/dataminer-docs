@@ -147,3 +147,11 @@ From now on, during an undo operation, DataMiner Cube will filter out empty valu
 <!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
 
 When you opened DataMiner Cube, up to now, all tickets would incorrectly be retrieved from the database. From now on, only the open tickets will be retrieved.
+
+#### Visual Overview - Parameter shapes: Sending a GetProtocol request from within the UI thread could cause Cube to freeze [ID 44360]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+
+When a parameter shape needed Visual Overview to load a table column parameter subscription, up to now, a `GetProtocol` request would be sent to the DMA from within Cube's UI thread. In some cases, this would cause Cube to freeze.
+
+From now on, when a parameter shape needs Visual Overview to load a table column parameter subscription, the `GetProtocol` request will be sent to the DMA from a background thread instead.
