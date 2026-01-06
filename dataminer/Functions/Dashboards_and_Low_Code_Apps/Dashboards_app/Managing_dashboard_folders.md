@@ -6,9 +6,11 @@ uid: Managing_dashboard_folders
 
 ## Adding a folder
 
-1. In case you want to create the folder within an existing folder, select that existing folder. Otherwise, make sure no folder is selected. You can do so by clicking the *Dashboards* button in the header bar.
+1. To add a folder, first decide whether you want to create it inside an existing folder or at the top level.
 
-1. Either right-click the dashboards list or click the ... button in the top-right corner of the list and select *New folder*.
+   - To create the folder inside an existing folder, right-click that folder in the sidebar and select *Add* > *Folder* (from DataMiner 10.5.0 [CU11]/10.6.2 onwards) or *Create folder* (in earlier versions).
+
+   - To create a new top-level folder, make sure no folder is selected. You can do so by clicking the *Dashboards* button in the header bar. Then right-click the background of the sidebar and select *Add* > *Folder*. Prior to DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44222-->, click the ellipsis ("...") button in the top-right corner of the dashboard list and select *New folder*.
 
 1. Specify the name of the folder and click *Create* or *OK*, depending on your DataMiner version.
 
@@ -33,7 +35,7 @@ uid: Managing_dashboard_folders
 
 1. Select the folder in the navigation pane.
 
-1. Either right-click the folder in the dashboards list or click the ... button in the top-right corner of the list and select *Delete*.
+1. Right-click the folder in the dashboards list and select *Delete*.
 
 1. Click OK to confirm the deletion.
 
@@ -46,7 +48,7 @@ uid: Managing_dashboard_folders
 
 1. Select the folder in the navigation pane.
 
-1. Either right-click the folder in the dashboards list or click the ... button in the top-right corner of the list. From DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38278-->, select *Settings*. Prior to DataMiner 10.3.0 [CU12]/10.4.3, select *Rename*.
+1. Right-click the folder in the dashboards list and select *Settings* (from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38278-->) or *Rename* (in earlier versions).
 
 1. Enter a new folder name, and click *Apply* or *OK*, depending on your DataMiner version.
 

@@ -81,6 +81,30 @@ The sidebar on the left contains icons that can be used to expand different pane
 | ![Private dashboards icon](~/dataminer/images/DashboardsX_private.png) | Displays a list of private dashboards. These are dashboards that can only be accessed by specific users (configured in the [dashboard settings](xref:Configuring_dashboard_security)). This icon is displayed from DataMiner 10.2.7/10.3.0 onwards if there are private dashboards available. |
 | ![Shared dashboards icon](~/dataminer/images/DashboardsX_shared.png) | Displays a list of dashboards that have been shared via dataminer.services. This icon is displayed from DataMiner 10.2.7/10.3.0 onwards if there are shared dashboards available. |
 
+### [From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44222-->](#tab/tabid-1)
+
+Right-click the background of the sidebar, or click the ellipsis ("...") button next to a dashboard or folder, to open a context menu with the following options:
+
+- *Add* > *Dashboard*: Creates a new dashboard. By default, it will be added in the selected folder, but a different folder can be specified. See [Creating a completely new dashboard](xref:Creating_a_completely_new_dashboard).
+
+- *Add* > *Folder*: Creates a new folder in the selected folder.
+
+- *Add* > *From import*: Allows you to import an example dashboard. See [Creating a dashboard based on an example](xref:Creating_a_dashboard_based_on_an_example).
+
+- *Add* > *From Catalog*: Allows you to deploy a dashboard from the DataMiner Catalog.
+
+- *Settings*: Allows you to rename or move a dashboard or folder, or configure access permissions. See [Managing dashboard folders](xref:Managing_dashboard_folders).
+
+  When a dashboard folder is selected and the parameter *showAdvancedSettings=true* has been added to the URL, the pop-up window also contains the option *Preserve selections*. When this option is selected, any selection you make in a dashboard in the folder is preserved when you navigate to another dashboard in the folder. Note that this only applies to the folder itself, not to any other folders it may contain.
+
+- *Delete*: Deletes the selected dashboard or folder. See [Deleting a dashboard](xref:Deleting_a_dashboard).
+
+- *Open in new tab*: Opens the selected dashboard in a new browser tab.
+
+- *Duplicate*: Duplicates the selected dashboard. See [Duplicating a dashboard](xref:Duplicating_a_dashboard).
+
+### [Older versions](#tab/tabid-2)
+
 Right-click in either of the panes or click the ... button to open a menu with the following options:
 
 - *Open in new tab*: Opens the selected dashboard in a new browser tab.
@@ -104,37 +128,67 @@ Right-click in either of the panes or click the ... button to open a menu with t
   > [!NOTE]
   > Prior to DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11<!--RN 40709-->, the *Preserve feed selections* option is available in the settings pop-up window regardless of whether the *showAdvancedSettings=true* parameter is present in the URL.
 
-- *Duplicate* or *Copy*: Only available if a dashboard is selected. See [Duplicating a dashboard](xref:Duplicating_a_dashboard)
+- *Duplicate* or *Copy*: Only available if a dashboard is selected. See [Duplicating a dashboard](xref:Duplicating_a_dashboard).
 
 - *Move*: Only available if a dashboard or folder is selected. See [Managing dashboard folders](xref:Managing_dashboard_folders). Obsolete from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38278-->.
 
 - *Delete*: Only available if a dashboard or folder is selected. See [Deleting a dashboard](xref:Deleting_a_dashboard).
 
+***
+
 ## The Dashboards app details pane
 
-The large pane on the right shows any folder or dashboard selected in the navigation pane.
+The large pane on the right displays the contents of the selected folder or dashboard and provides context-specific actions.
 
-If no dashboard is selected, buttons are available that allow you to create a new blank dashboard, to create a dashboard based on an example or to navigate to a recently used dashboard.
+### When no dashboard or folder is selected
 
-If an empty folder is selected, buttons are available that allow you to create or import a dashboard directly in that folder.
+- **From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44222-->**: An overview of all dashboards and folders is displayed as tiles. Each tile contains either a folder icon ![Folder](~/dataminer/images/Dashboard_Folder_Icon.png) or a dashboard icon ![Dashboard](~/dataminer/images/Dashboard_Icon.png) to indicate whether it represents a folder or a dashboard.
 
-If a dashboard is selected, the header bar of this pane can display a number of buttons, depending on the dashboard and the settings of the app:
+  In the top-right corner of the details pane, the following buttons are available:
+
+  - *Add*: Create a new dashboard or dashboard folder, import an example dashboard, or deploy a dashboard from the DataMiner Catalog.
+
+  - *Settings*: Configure edit access to your dashboards and folders.
+
+- **Prior to DataMiner 10.5.0 [CU11]/10.6.2**: Buttons are available that allow you to create a new blank dashboard, to create a dashboard based on an example, or to navigate to a recently used dashboard.
+
+### When a folder is selected
+
+When a folder is selected, the contents of the folder (subfolders and dashboards) are displayed in the details pane.
+
+Depending on the DataMiner version, the following buttons may be available:
+
+- *Add* > *Dashboard* / *Create dashboard*: Adds a new dashboard to the selected folder. See [Creating a completely new dashboard](xref:Creating_a_completely_new_dashboard).
+
+- *Add* > *Folder*: Adds a new subfolder. Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards.
+
+- *Add* > *From import* / *Import dashboard*: Allows you to import an example dashboard into the selected folder. See [Creating a dashboard based on an example](xref:Creating_a_dashboard_based_on_an_example).
+
+- *Add* > *From Catalog*: Allows you to deploy a dashboard from the DataMiner Catalog. Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards.
+
+- *Settings*: Configure edit access for the folder. Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards.
+
+- ...: Delete the folder. Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards.
+
+### When a dashboard is selected
+
+When a dashboard is selected, the header bar of the details pane can display a number of buttons, depending on the dashboard and the settings of the app:
 
 - Refresh button ![Refresh button](~/dataminer/images/DashboardsX_refresh.png) : Loads the most recent data in the displayed dashboard.
 
-- **Start editing**: Allows you to start editing the dashboard. In edit mode, the navigation pane on the left will be hidden.
+- *Start editing*: Allows you to start editing the dashboard. In edit mode, the navigation pane on the left will be hidden.
 
-- **Stop editing**: Closes edit mode.
+- *Stop editing*: Closes edit mode.
 
-- **Clear selections**<!--RN 41141-->/**Clear all**: Only displayed if the dashboard contains at least one component. Clears the selection of all the data in the dashboard.
+- *Clear selections*<!--RN 41141-->/*Clear all*: Only displayed if the dashboard contains at least one component. Clears the selection of all the data in the dashboard.
 
-- **PDF**: Available from DataMiner 10.2.12/10.3.0 onwards. Only displayed in read mode. Allows you to export the dashboard as a PDF file.
+- *PDF*: Available from DataMiner 10.2.12/10.3.0 onwards. Only displayed in read mode. Allows you to export the dashboard as a PDF file.
 
-- **Share** or **Start sharing**: Allows you to share the dashboard using dataminer.services. See [Sharing a dashboard](xref:Sharing_a_dashboard). This feature is only available in read mode, if the DataMiner System is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- *Share* or *Start sharing*: Allows you to share the dashboard using dataminer.services. See [Sharing a dashboard](xref:Sharing_a_dashboard). This feature is only available in read mode, if the DataMiner System is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 In the [settings of the Dashboards app](#the-dashboards-app-header-bar), you can configure whether the edit mode, clear selections, create report/export as PDF, and share dashboard buttons are always displayed (i.e. “pinned” to the header bar) or instead accessible via a button in the top-right corner of a dashboard.
 
-![Pin actions](~/dataminer/images/Pin_Actions.png)<br>*Dashboard settings in DataMiner 10.4.12*
+![Pin actions](~/dataminer/images/Pin_Actions.png)<br>*Dashboard settings in DataMiner 10.6.2*
 
 > [!NOTE]
 >

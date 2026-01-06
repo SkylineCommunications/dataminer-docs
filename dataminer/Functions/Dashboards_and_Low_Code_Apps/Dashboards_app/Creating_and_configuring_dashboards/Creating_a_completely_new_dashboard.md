@@ -14,7 +14,7 @@ To learn how to create a dashboard, you can follow the steps below or watch this
 
 <br>
 
-1. On the home page, click *Start with a new blank dashboard*.
+1. On the home page, click *Start with a new blank dashboard*. <!--TO DO-->
 
    Alternatively, you can also select a folder or dashboard in the list of dashboards on the left and select *New dashboard* in the right-click menu.
 
