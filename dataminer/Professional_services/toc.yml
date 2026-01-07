@@ -66,6 +66,8 @@ items:
             topicUid: Proactive_Support_Low_Disk_Space
           - name: Proactive Support - Missing CDMR Reporting
             topicUid: Proactive_Support_Missing_CDMR_Reporting
+          - name: Proactive Support - server time settings (CCA)
+            topicUid: Proactive_Support_Server_Time_Settings
       - name: Partner support lines
         topicUid: Partner_support_lines
       - name: Support application

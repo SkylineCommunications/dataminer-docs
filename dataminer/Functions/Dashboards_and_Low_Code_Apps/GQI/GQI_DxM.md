@@ -24,7 +24,9 @@ The GQI DxM is supported from DataMiner 10.5.0 [CU1]/10.5.4 onwards, and automat
 > To explicitly opt in to or out of the GQI DxM, see [Enabling or disabling the use of the GQI DxM](#enabling-or-disabling-the-use-of-the-gqi-dxm).
 
 > [!NOTE]
-> [Data Aggregator](xref:Data_Aggregator_DxM) supports queries via the GQI DxM from version 3.1.0 onwards. See [Using the GQI DxM for queries](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries).
+>
+> - [Data Aggregator](xref:Data_Aggregator_DxM) supports queries via the GQI DxM from version 3.1.0 onwards. See [Using the GQI DxM for queries](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries).
+> - From DataMiner 10.5.0 [CU11]/10.6.2 onwards, it is possible to use the GQI DxM on a Dashboard Gateway server. See [Dashboard Gateway installation](xref:Dashboard_Gateway_installation).<!-- RN 44134 +44344-->
 
 ## Enabling or disabling the use of the GQI DxM
 
@@ -51,9 +53,7 @@ From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 42003-->, to verify tha
 ![No DxM](~/dataminer/images/NoDxM.png)<br>*About DataMiner pop-up window in DataMiner 10.5.3*
 
 > [!NOTE]
->
-> - If you encounter issues when trying to enable the GQI DxM, refer to [GQI DxM repair](xref:Investigating_Web_Issues#gqi-dxm-repair).
-> - On a [Dashboard Gateway](xref:Dashboard_Gateway_installation) server, it is not yet possible to use the GQI DxM.<!-- RN 44134 -->
+> If you encounter issues when trying to enable the GQI DxM, refer to [GQI DxM repair](xref:Investigating_Web_Issues#gqi-dxm-repair).
 
 ## Configuration
 

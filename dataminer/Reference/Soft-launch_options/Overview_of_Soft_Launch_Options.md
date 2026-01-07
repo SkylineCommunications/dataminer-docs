@@ -134,10 +134,7 @@ This option is enabled by default when DataMiner is deployed in the cloud ([DaaS
 
 ### Functions
 
-Enables the Virtual Functions module in Cube. This is a Cube-only feature that can only be activated per session with the argument `ENABLEFEATURE=FUNCTIONS`.
-
-- **Minimum version**: 10.0.10
-- **Release version**: To be determined
+This option enabled the Virtual Functions module in Cube. The module and related objects are **End of life** and should no longer be used.
 
 ### GenericInterface
 

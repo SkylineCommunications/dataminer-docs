@@ -20,8 +20,6 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-*No new features have been added yet.*
-
 ## Changes
 
 ### Enhancements
@@ -220,7 +218,7 @@ From now on, the grid will try to grow or shrink vertically in order to avoid a 
 > [!NOTE]
 > A PDF report containing a Grid component can still show scrollbars and/or clipped content when the grid is set to show a fixed amount of row and a fixed amount of columns (without *Stretch to fit* option).
 
-#### GQI DxM: Partition join strategy for DOM data [ID 44275]
+#### GQI DxM: Partition join strategy for DOM data [ID 44275] [ID 44327]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
@@ -234,7 +232,7 @@ This new join strategy will only be applied to join operations in the following 
 
 - The *prefetch* option is disabled for the join operator
 
-  - This new *prefetch* option is disabled by default and will only be visible when the `showAdvancedSettings=true` argument is added to the URL of the dashboard or low-code app.
+  - This new *prefetch* option is disabled by default, and will only be visible in the query builder when the `showAdvancedSettings=true` argument is added to the URL of the dashboard or low-code app.
   - When the *row-by-row* option is enabled, the *prefetch* option will be ignored.
 
 - Real-time updates are not enabled.
@@ -278,7 +276,62 @@ When all above-mentioned conditions are met, the partition join is executed as f
 > [!IMPORTANT]
 > Although the partition join strategy will enhance performance in most common scenarios that require the fastest possible query executions, this strategy can be up to twice as slow when the join has low selectivity. For these uncommon scenarios, we recommended manually enabling the *prefetch* option on the relevant join operator.
 
+#### Dashboards app: Updated navigation pane with improved accessibility and CRUD actions [ID 44297]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+The sidebar navigation pane of the Dashboards app, which contains dashboard folders and dashboards, has been redesigned to improve usability and make managing dashboard folders and dashboards more efficient. The new view:
+
+- Supports keyboard navigation.
+- Automatically adapts to the viewport width.
+- Allows additional CRUD actions directly from the view, including deleting a folder, adding a folder or dashboard, and importing a dashboard either locally or from the Catalog.
+- Displays a fitting placeholder when a folder or the root is empty.
+
+#### Support for GQI DxM on Dashboard Gateway [ID 44344]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+The GQI DxM can now also be used on a Dashboard Gateway server. However, this requires some additional manual configuration in order to ensure that the gateway can communicate using MessageBroker within the DataMiner cluster.
+
+On the Dashboard Gateway server, you will need to edit the *web.config* in the API folder, and specify the following settings:
+
+- If the system uses **BrokerGateway**:
+
+  - **nats:credsUrl**: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
+  - **nats:apiKeyPath**: The file path to the *appsettings.runtime.json* file containing the private key, for example: `C:\webgateway\brokergateway\appsettings.runtime.json`. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+
+- If the system does not use BrokerGateway yet (only possible on 10.5.x systems):
+
+  - **nats:credsFile**: The path to the *.creds* file containing the authentication information. On a DataMiner Agent, you can typically find this here: `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`.
+  - **nats:uri**: A string array containing the NATS endpoints. Every DMA in the DMS can be specified here.
+
+Note that if a local file path is used, you will need to replace the *appsettings.runtime.json* or the *.creds* file whenever the IP address of one or more DataMiner Agents in the cluster changes or one or more DataMiner Agents is added to or removed from the cluster.
+
+#### Ticketing app is End of Life [ID 44371] [ID 44373]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+The Ticketing app has been declared End of Life. On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer appear on the DataMiner landing page or in the list of applications in DataMiner Cube.
+
+#### Web apps: New Web folder synced across the DataMiner System [ID 44396]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+A new folder, `C:\Skyline DataMiner\Web`, has been added and is now synced across the DataMiner System.
+
+This folder will be used to store user-generated configuration and files that can be shared across dashboards and low-code apps, such as images and themes.
+
+The `C:\Skyline DataMiner\Generic Interface` folder has been removed, as it was no longer used.
+
 ### Fixes
+
+#### Dashboards app: Exporting trend chart data to CSV could cause an error when data was still loading [ID 44064]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Up to now, when users triggered a CSV export on a trend chart before all data had fully loaded, an error pop-up message could appear.
+
+This issue has now been resolved. The CSV export process has been made asynchronous, so the download will only start once all required data has been fully loaded, even if the export button is clicked before that.
 
 #### Dashboards app: Problem when generating a PDF report of a dashboard containing a Time range component [ID 44168]
 
@@ -334,3 +387,53 @@ Note that the following actions will only affect the viewport after the user int
 - Selecting a segment on top of the timeline.
 
 Because these two actions will only affect the viewport after the user interaction has finished, the Timeline component will also receive an incoming viewport change request from the Time range component after the user interaction has finished. That way, the latter request will overrule the viewport changes that were made initially.
+
+#### Low-Code Apps - Timeline component: Undesired layout shifting while you were moving items between groups [ID 44307]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In a low-code app, a *Timeline* component would cause undesired layout shifting while you were moving items between groups. This could lead to you dropping the items in the wrong group.
+
+Also, it would not be possible to pan the timeline when starting on a timeline item.
+
+#### Web apps: Problems with context menus [ID 44309]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In the DataMiner web apps, the following context menu issues have been solved:
+
+- When you right-clicked a context menu, it would not immediately close when you left-clicked the same element you right-clicked to open it. The menu would only close when you left-clicked a second time.
+
+- A context menu with a submenu, or any context menu with a horizontal positioning in relation to its parent, could be out of the viewport when opened at the bottom of the screen.
+
+- In some cases, when a context menu had been opened by pressing the space bar, it could act erratically. It would not close when you clicked outside of it, and if it had a submenu, that submenu would open on top of the existing menu.
+
+#### Interactive Automation scripts: Subsequent user actions could get ignored when a component lost focus [ID 44315]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When you started an interactive Automation script in a web app, up to now, the moment a component lost focus, subsequent user actions could incorrectly be ignored.
+
+#### Web Services API: GetClientDefaultTimeZone and GetRegionalSettings would incorrectly not be able to read the regional settings of the DMA on systems using a Dashboard Gateway [ID 44317]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+On systems where dashboards and low-code apps were accessed through a Dashboard Gateway, up to now, the web methods `GetClientDefaultTimeZone` and `GetRegionalSettings` would incorrectly not be able to read the regional settings of the DataMiner Agent. From now on, the requests will be forwarded correctly.
+
+#### Login could fail when using a dashboard gateway with a DMA where gRPC is enabled [ID 44364]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a dashboard gateway was used in combination with a DataMiner Agent where gRPC was enabled, up to now, logging in could fail with the following error:
+
+```txt
+Failed to authenticate over GRPC: Status(StatusCode="Internal", Detail="Error starting gRPC call. MissingMethodException: Method not found: 'System.Buffers.IBufferWriter`1<Byte> Grpc.Core.SerializationContext.GetBufferWriter()'.", DebugException="System.MissingMethodException: Method not found: 'System.Buffers.IBufferWriter`1<Byte> Grpc.Core.SerializationContext.GetBufferWriter()'.")
+```
+
+This issue has now been resolved, and authentication over gRPC will work correctly in this scenario.
+
+#### Dashboards app: Folder named '\_Images' would incorrectly appear in the navigation pane after you had deployed a Catalog package [ID 44374]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+After you had deployed a package from the DataMiner Catalog, in some cases, a folder named *_Images* would incorrectly appear in the navigation pane on the left.

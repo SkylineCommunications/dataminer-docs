@@ -118,6 +118,12 @@ From now on, it will be possible to start more than 10 synchronously running Aut
 
 The response to a `GetRADParameterGroupInfoMessage` will now also include the ID of the RAD parameter group.
 
+#### Service & Resource Management: Enhanced communication between resource managers across DataMiner Agents [ID 44279]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+A number of enhancements have been done with regard to the communication between resource managers across DataMiner Agents. This will especially enhance performance when starting multiple bookings on non-master DMAs.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
@@ -133,20 +139,6 @@ Up to now, SLAnalytics would incorrectly not receive any "swarming complete" not
 In some cases, a capability could incorrectly be set to a null value.
 
 From now on, when a capability is booked, it will no longer be possible to set its value to null.
-
-#### DataMiner installation: Stopping the DataMiner Agent during an installation would incorrectly be interpreted as a crash [ID 44220]
-
-<!-- MR 10.7.0 - FR 10.6.2 -->
-
-At some point during a DataMiner installation, the DataMiner Agent needs to be stopped for a brief moment to allow a number of configuration steps to be performed. Up to now, in some rare cases, SLWatchdog would incorrectly interpret stopping the DataMiner Agent as a crash, causing the system to start up too soon.
-
-#### Problem when retrieving historic alarms with a filter on the value of a discrete parameter [ID 44221]
-
-<!-- MR 10.7.0 - FR 10.6.2 -->
-
-When historic alarms were retrieved with a filter on the value of a discrete parameter, up to now, no alarms would be returned.
-
-This was due to the parameter value being incorrectly translated to a numeric value.
 
 #### Failover: Problem when reloading the scheduled tasks [ID 44234]
 

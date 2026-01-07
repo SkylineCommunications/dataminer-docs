@@ -16,6 +16,18 @@ uid: MediaOps_1.5.0
 
 On the *Job View* and *Resource View* pages of the Scheduling app, you can now pin quick picks for all users in the time range selector for the timeline.
 
+#### Orchestration scripts [ID 44347]
+
+Orchestration scripts have been implemented in the MediaOps Solution:
+
+- From Resource Studio, you can define orchestration settings on pools. This will define what automated actions have to be triggered when such a pool is used in a workflow or job. When a node is added to a workflow or job, the orchestration settings defined on the pool will be copied to the node.
+
+- From Workflow Designer, you can define orchestration settings for workflows and nodes of workflows. This will define the automated actions that have to be triggered when such a workflow is used. When a job is created from a workflow, the orchestration settings defined on the workflow and the nodes within will be copied to the job.
+
+- From Scheduling, you can define orchestration settings for jobs and nodes of jobs. The orchestration settings define the automated actions that will trigger at the different events of the job (pre-roll start, pre-roll stop, post-roll start, and post-roll stop). When no pre-roll is defined, then the pre-roll start and pre-roll stop will be triggered sequentially if both are defined (similar for post-roll). If an orchestration script is defined for the job for a specific event, then it is up to that script to trigger orchestration scripts defined on nodes and connections. If no orchestration script is defined for the job for a specific event, then all node and connection orchestration scripts will be executed automatically for the corresponding event.
+
+As orchestration scripts have more flexibility than workflow execution scripts, workflow execution scripts have now been marked as obsolete. If they were already configured with previous versions of MediaOps, they will still be triggered, to allow a smooth transition to orchestration scripts. You can disable them for workflows, but it will no longer be possible to change or enable workflow execution scripts. Orchestration scripts should be used instead.
+
 ## Changes
 
 > [!NOTE]
@@ -56,3 +68,7 @@ When a job that had errors (for example because it went into the quarantined sta
 #### Scheduling: Incorrect status message when canceling recurrence [ID 44304]
 
 When a recurrence from the Scheduling app was canceled, previously this displayed the incorrect status "Updating Series...". Now the correct status "Canceling Series..." will be displayed instead.
+
+### Resource Studio: Capability, capacity, and property title boxes not displayed correctly when multiple rows are selected [ID 44355]
+
+When multiple rows were selected on the Resources page of Resource Studio, the title boxes for capabilities, capacities, and properties were not displayed correctly.

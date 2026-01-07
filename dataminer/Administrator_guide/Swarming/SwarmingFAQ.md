@@ -12,6 +12,10 @@ In the initial version released in DataMiner 10.5.1, only basic elements are sup
 
 For a list of upcoming features, see [Upcoming features](xref:Swarming#upcoming-features).
 
+## Can I still run non-swarmable elements on a Swarming-enabled system?
+
+Yes. Even when the configuration or type of an element prevents it from being swarmed, the element will still function in a Swarming-enabled DataMiner cluster. The only restriction is that the element cannot be swarmed to another host.
+
 ## Does the ID of an element change when it is swarmed?
 
 No, the identifier (DataMiner ID/element ID) of an element that is swarmed stays the same. You can find this identifier by right-clicking an element in the Cube Surveyor and selecting *Properties*:
