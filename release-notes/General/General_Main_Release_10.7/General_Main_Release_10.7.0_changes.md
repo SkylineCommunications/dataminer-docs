@@ -124,6 +124,16 @@ The response to a `GetRADParameterGroupInfoMessage` will now also include the ID
 
 A number of enhancements have been done with regard to the communication between resource managers across DataMiner Agents. This will especially enhance performance when starting multiple bookings on non-master DMAs.
 
+#### Automation: Entrypoint ID added to the 'Finished executing script' log entry [ID 44382]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+The entry added to the *SLAutomation.txt* log file when an Automation script has finished will now contain the entrypoint ID.
+
+In the following example, the entrypoint ID can be found at the end of the entry between brackets (11):
+
+`2025/12/18 13:40:00.546|SLAutomation.exe 8.0.1415.2|22300|16908|CAutomation::Execute|INF|0|Finished executing script: 'script_RT_USER_DEFINABLE_APIS_BodySizeLimit_RT_USER_DEFINABLE_APIS_BodySizeLimit_MaxResponseBodySize' (ID: 7) - SUCCEEDED - Execution took 00.308s. (11)`
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
