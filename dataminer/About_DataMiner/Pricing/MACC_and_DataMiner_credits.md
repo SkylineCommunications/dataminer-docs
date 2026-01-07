@@ -2,7 +2,7 @@
 uid: MACC_and_DataMiner_credits
 ---
 
-# Maximizing your azure investments with MACC and DataMiner credits
+# Maximizing your Azure investments with MACC and DataMiner credits
 
 ([DataMiner credits](xref:Pricing_Usage_based_service#usage-terms)) can be conveniently obtained from the following sources:
 
@@ -14,7 +14,7 @@ When DataMiner credits are procured through the Microsoft Azure Marketplace, the
 
 ## DataMiner: your MACC-eligible partner
 
-DataMiner is an official Microsoft Internal Azure IP Co-Sell partner, having achieved MACC Eligible status. This designation means that any organization with an active Microsoft Azure Consumption Commitment (MACC) can utilize their commitment to procure DataMiner credits. These credits can be used for any dataminer.services offerings, such as DataMiner As a Service (DaaS) and Storage As a Service (StaaS).
+DataMiner is an official Microsoft Internal Azure IP Co-Sell partner, having achieved MACC Eligible status. This designation means that any organization with an active Microsoft Azure Consumption Commitment (MACC) can utilize their commitment to procure DataMiner credits. These credits can be used for any dataminer.services offerings, such as DataMiner as a Service (DaaS) and Storage as a Service (STaaS).
 
 ## Understanding MACC: maximizing your Azure investment
 

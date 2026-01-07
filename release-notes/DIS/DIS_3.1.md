@@ -4,6 +4,57 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.18
+
+### New features
+
+#### IDE
+
+##### Updated DIS dependencies
+
+DIS now uses:
+
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 2.1.1
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 2.1.1
+- [Skyline.DataMiner.CICD.CSharpAnalysis.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.CSharpAnalysis.Protocol) version 1.0.7
+
+## DIS 3.1.17
+
+### New features
+
+#### IDE
+
+##### New Tasks and DoD hyperlinks added to publish bar and version history editor [ID 44335]
+
+The top bar in the editor window now contains a hyperlink named **Tasks**, which, when clicked, will open a browser tab for each task mentioned in the version history of the current version (if any).
+
+Similarly, a hyperlink named **DoD** has been added, which, when clicked, will open a browser tab showing the corresponding DoD page for each task mentioned in the version history of the current version (if any).
+
+Also, the version history editor will now display a **DoD** button next to each task, which, when clicked, will open a browser tab showing the corresponding page.
+
+##### Updated DIS dependencies
+
+DIS now uses:
+
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 1.3.0
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 2.1.0
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 2.1.0
+- [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol) version 1.1.1
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.6.1
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.6.1
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.6.1
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.5
+
+## DIS 3.1.16
+
+### New features
+
+#### IDE
+
+##### Table editor: Updated width calculation [ID 44321]
+
+In the table editor, the calculation of the width has been updated. For columns with a write parameter or columns that contain a button, an additional offset for the write icon will no longer be subtracted when calculating the column width.
+
 ## DIS 3.1.15
 
 ### New features

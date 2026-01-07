@@ -43,6 +43,14 @@ Also, all logging with regard to OpenSearch health monitoring can now be found i
 
 Note that, from now on, if not all nodes of the OpenSearch cluster are listed in the *Db.xml* file, a notice will be generated to warn operators.
 
+#### Elasticsearch/OpenSearch: Enhanced history alarm filtering on service ID or service name [ID 44192]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When, on a system with a Cassandra Cluster database, history alarms are filtered on service ID or service name, up to now, that filter would not be translated correctly to Elasticsearch or OpenSearch. From now on, that filter will be translated correctly. As a result, overall performance will increase when applying the filter in question to large data sets.
+
+Also, filtering on alarm properties or interfaces using wildcards or regular expression has now been made case insensitive.
+
 #### Enhanced performance when upgrading DxMs [ID 44210] [ID 44211]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
@@ -52,7 +60,54 @@ Because of a number of enhancements, overall performance has increased when the 
 - BrokerGateway
 - StorageModule
 
+#### SLLogCollector packages will now also include time zone info, domain info, IP addresses of NICs, Web.config files, IIS configuration, and HTTP service state [ID 44223]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+SLLogCollector packages will now also include the following information:
+
+- Time zone info, which will be stored in the following file:
+
+  ```text
+  /Windows/powershell.exe Get-TimeZone_.txt
+  ```
+
+- Windows domain info, which will be stored in the following files:
+
+  ```text
+  /Windows/nltest.exe _dclist_.txt
+  /Windows/nltest.exe _domain_trusts.txt
+  /Windows/nltest.exe _dsgetdc_.txt
+  ```
+
+- The IP addresses of all network adapters, which will be stored in the following files:
+
+  ```text
+  /Network Information/NetworkInterface_GetAllNetworkInterfaces.txt
+  /Network Information/powershell.exe [System.Net.Dns]_GetHostname().txt
+  ```
+
+- All `Web.config` files found in `C:\Skyline DataMiner\WebPages` and all its subfolders.
+
+- The entire IIS configuration.
+
+- A snapshot of the HTTP service state (Request Queue View), which will be stored in the following file:
+
+  `/Network Information/netsh.exe http show servicestate view=requestq verbose=no.txt`
+
+#### DataAPI: Enhanced behavior in cluster environments [ID 44293]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Because of a number of enhancements, DataAPI behavior in cluster environments has improved, especially when creating elements or uploading connectors.
+
 ### Fixes
+
+#### Problem when a connector was deleted immediately after it had been uploaded [IID 44083]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a connector was deleted immediately after it had been uploaded, in some rare cases, events triggered by the connector upload would still be adding references to the SLNet cache while the events triggered by the connector deletion were already trying to remove those references. This would lead to the SLNet cache incorrectly containing references to connectors that no longer existed on disk.
 
 #### Not possible to export elements with logger tables on systems with Cassandra Cluster and OpenSearch [ID 44105]
 
@@ -91,6 +146,20 @@ After you had uploaded a protocol with a version that was identical to the prefi
 
 In some cases, SLElement could stop working when loading elements that included matrix parameters.
 
+#### Problem when importing a .dmimport package containing elements that use a production version of a connector [ID 44189]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When you imported a *.dmimport* package containing an element that used a production version of a connector for which a different version was set as production version on the target agent, up to now, the connector version set as production version in the *.dmimport* package would incorrectly always be set as new production version on the target agent.
+
+From now on, the system will always ask what you want it to do:
+
+- Make the connector version in the *.dmimport* package the new production version on the target agent, and allow the imported element to still use the production version.
+
+OR
+
+- Leave the production version untouched on the target agent, and update the imported element so that it no longer uses the production version but the referenced version instead.
+
 #### BrokerGateway: Issues related to certificates [ID 44195]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
@@ -113,6 +182,14 @@ On systems using STaaS, when an element with logger tables had been migrated fro
 
 Also, on system using STaaS, up to now, when importing a DELT package containing elements with logger tables, the logger table data would not be imported correctly.
 
+#### Problem when retrieving historic alarms with a filter on the value of a discrete parameter [ID 44221]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When historic alarms were retrieved with a filter on the value of a discrete parameter, up to now, no alarms would be returned.
+
+This was due to the parameter value being incorrectly translated to a numeric value.
+
 #### No retries would incorrectly be attempted when retrieving DMS configuration info failed [ID 44240]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
@@ -121,8 +198,50 @@ When a client application connects to a DataMiner System, it retrieves the confi
 
 Up to now, when retrieving that info failed, no retries would incorrectly be attempted. From now on, a retry will be attempted every 10 seconds.
 
+#### Problem when trying to create, update, or delete users or user groups [ID 44245]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Because of file locking issues, in some cases, errors could occur when trying to create, update, or delete users or user groups.
+
 #### Crowd: HTTP response codes would incorrectly be ignored [ID 44254]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 When DataMiner was configured to import users and groups from a Crowd server, SLDataMiner would incorrectly disregard HTTP result codes while parsing a response during the hourly LDAP synchronization. This could lead to users being removed from their groups until the next successful synchronization, causing them to be unable to log in to DataMiner.
+
+#### BrokerGateway: getnatsconnectiondetails calls would slow down whenever an IP address listed in appsettings.runtime.json could not be reached [ID 44287]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Up to now, whenever an IP address listed in BrokerGateway's `appsettings.runtime.json` file could not be reached, `getnatsconnectiondetails` calls would slow down for all MessageBroker clients, causing DataMiner to not start up as it would not be able to contact the StorageModule DcM fast enough.
+
+#### Problem when calling NotifyDataMiner NT_ELEMENT_STARTUP_COMPLETE for an element while that element was being renamed [ID 44288]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a QAction called NotifyDataMiner `NT_ELEMENT_STARTUP_COMPLETE` for its own element while that element was being renamed, up to now, a deadlock would occur, causing a run-time error.
+
+#### Problem with SLDataMiner when a version of a DVE connector was set to production version [ID 44308]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a version of a DVE connector was set to production version, in some cases, a fatal error could occur in SLDataMiner.
+
+#### A history set parameter with a constant value would not properly update its new timestamp [ID 44318]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Up to now, a history set parameter with a constant value would not properly update its new timestamp when a set parameter was triggered with a more recent timestamp.
+
+#### Service impact of exported DVE parameter or DCF interface state of DVE element were incorrect when monitored parameters of the DVE element were polled but not saved [ID 44341]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+After a DataMiner restart or an element restart, in some cases, the service impact of an exported parameter or the DCF interface state of a DVE element would be incorrect when the monitored parameters of the DVE element in question were polled but not saved, especially when those monitored parameters were associated with active alarms.
+
+#### Protocols - PortSettings: DefaultValue and Disabled child elements of SkipCertificateVerification element would not be read if the connection was not the primary connection [ID 44343]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In the `<PortSettings>` element of an HTTP connection, you can configure a `<SkipCertificateVerification>` element with child elements `<DefaultValue>` and `<Disabled>`. Up to now, both child elements would incorrectly not be read if the connection in question was not the primary connection.

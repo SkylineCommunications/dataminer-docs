@@ -19,7 +19,7 @@ To begin an investigation on a DaaS setup:
 1. Connect to the setup via Remote Desktop.
 
    > [!TIP]
-   > For more information, refer to [TechSupport's internal guide](https://internaldocs.skyline.be/DevDocs/DaaS/AccessDaaSResources.html) on how to connect to a DaaS setup *(link for Skyline employees only)*.
+   > For more information, refer to [TechSupport's internal guide](https://internaldocs.skyline.be/DevDocs/DaaS/Troubleshooting/AccessDaaSResources.html) on how to connect to a DaaS setup *(link for Skyline employees only)*.
 
 1. Verify whether the DataMiner System is running.
 

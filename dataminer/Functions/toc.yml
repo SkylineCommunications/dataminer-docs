@@ -16,6 +16,8 @@ items:
           topicUid: Assistant_Predefined_Questions
       - name: Natural language to GQI
         topicUid: NL2GQI
+      - name: Document Intelligence
+        topicUid: docintel
   - name: Augmented Operations
     topicUid: Overview_Augmented_Operations
     items:

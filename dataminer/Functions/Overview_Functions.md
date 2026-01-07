@@ -117,9 +117,6 @@ description: A DataMiner System can have several additional modules or apps, e.g
   <div class="column">
     <a href="/dataminer/Functions/User-Defined_APIs/UD_APIs.html" title="User-Defined APIs" target="_self"><img src="~/dataminer/images/User_Defined_APIs.svg" style="width:100%"></a>
   </div>
-</div>
-
-<div class="row"> 
   <div class="column">
     <a href="/dataminer/Functions/Video_Thumbnails/About_Video_Thumbnails.html" title="Video thumbnails" target="_self"><img src="~/dataminer/images/Video_Thumbnails.svg" style="width:100%"></a>
   </div>

@@ -933,7 +933,7 @@ namespace Skyline.DataMiner.Automation
 		/// <example>
 		/// <code>
 		/// SubScriptOptions subscriptInfo;
-		/// RequestScriptInfoInput infoInput = new RequestScriptInfoInput { Data = new Dictionary&gt;string, string&lt;{ { "requestKey", "value" } } };
+		/// RequestScriptInfoInput infoInput = new RequestScriptInfoInput { Data = new Dictionary&lt;string, string&gt;{ { "requestKey", "value" } } };
 		/// subscriptInfo = engine.PrepareSubScript("myOtherScript", infoInput);
 		/// subscriptInfo.Synchronous = true;
 		/// ...

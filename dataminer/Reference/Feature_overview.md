@@ -8,7 +8,7 @@ Below you can find an overview of the main features that have been added to Data
 
 > [!NOTE]
 >
-> - From DataMiner 10.2.0 [CU3]/10.2.6 onwards, **Cube** can automatically be upgraded to the latest version if [automatic updates are enabled](xref:DMA_configuration_related_to_client_applications#managing-client-versions), and depending on the selected [Cube update track](xref:Managing_the_start_window#selecting-your-cube-update-track) and on the [deployment method](xref:DataMiner_Cube_deployment_methods). This way you can have access to the latest Cube features even if you still use an older DataMiner version on the server.
+> - From DataMiner 10.2.0 [CU3]/10.2.6 onwards, **Cube** can automatically be upgraded to the latest version if [automatic updates are enabled](xref:DMA_configuration_related_to_client_applications#managing-client-versions), and depending on the selected [Cube update track](xref:Upgrading_Cube#selecting-your-cube-update-track) and on the [deployment method](xref:DataMiner_Cube_deployment_methods). This way you can have access to the latest Cube features even if you still use an older DataMiner version on the server.
 > - For many DataMiner **web apps** features, from DataMiner 10.3.0/10.3.3 onwards, it is sufficient to [upgrade the web apps only](xref:Upgrading_Downgrading_Webapps). However, to upgrade to a 10.5.x version of the web apps, the server must first be upgraded to at least version 10.4.0/10.4.1. If other server limitations apply, these are listed below.
 
 |Feature | Minimum required version(s) |
@@ -21,6 +21,7 @@ Below you can find an overview of the main features that have been added to Data
 | Augmented operations: [Manually updating an alarm group](xref:Manually_creating_or_updating_alarm_groups) | DataMiner 10.2.5/10.3.0 <!-- [ID 32729] -->|
 | Augmented operations: [Multivariate trend patterns](xref:Pattern_matching#multivariate-patterns) | DataMiner Cube 10.3.8/10.4.0<!-- [ID 36731] --><br>Minimum server version: DataMiner 10.3.3/10.4.0 <!-- [ID 35301] -->|
 | Augmented operations: [Proactive cap detection feedback](xref:Providing_user_feedback) | DataMiner 10.5.1/10.6.0<!-- [ID 41371] --> |
+| Augmented operations: [Relational anomalies in trend graphs](xref:Relational_anomaly_detection#relational-anomalies-in-trend-graphs) | DataMiner 10.4.0 [CU22]/10.5.0 [CU10]/10.6.0/10.6.1 <!-- [ID 43857] --> |
 | Augmented operations: [Relational anomaly detection](xref:Relational_anomaly_detection) | DataMiner 10.5.3/10.6.0<!-- [ID 42034] --> |
 | Augmented operations: [Time-scoped relations](xref:Adding_time_scoped_related_parameters_to_a_trend_graph) | DataMiner 10.3.8/10.4.0 <!-- [ID 36434] --> |
 | Automation: [ExtendedErrorInfo](xref:Skyline.DataMiner.Automation.SubScriptOptions.ExtendedErrorInfo) property | DataMiner 10.2.7/10.3.0 <!-- [ID 33306] -->|
@@ -35,9 +36,10 @@ Below you can find an overview of the main features that have been added to Data
 | Client-server communication: gRPC connections between [Cube and DMAs](xref:ConnectionSettings_txt#connectionsettingstxt-options) and [between DMAs](xref:DMS_xml#redirects-subtag) | DataMiner 10.3.0/10.3.2 <!-- [ID 34797] [ID 34983] --> |
 | Cube: [BPA tests in System Center](xref:Running_BPA_tests) | DataMiner 10.1.2/10.2.0 <!-- [ID 28516] --> |
 | Cube: [Duplicating a resource](xref:Configuring_pools_of_resources#duplicating-a-resource-from-a-pool) | DataMiner Cube 10.3.7/10.4.0 <!-- [ID 36308] -->|
+| Cube: [Health Metrics](xref:BPA_HealthMetrics) BPA test | DataMiner 10.5.0 [CU10]/10.6.1 <!-- [ID 43509]--> |
 | Cube: [Hiding the close button](xref:Working_with_cards_in_DataMiner_Cube#marking-cards-as-non-closable) and [Selecting a Master card](xref:Working_with_cards_in_DataMiner_Cube#selecting-a-master-card) | DataMiner Cube 10.3.9/10.4.0 <!-- [ID 36912] [ID 36956] --> |
 | Cube: [Large Alarm Trees](xref:BPA_LargeAlarmTrees) BPA test | DataMiner 10.5.9/10.6.0 <!-- [ID 42952] --> |
-| Cube: [Opening Cube from a session link](xref:Using_the_desktop_app#opening-dataminer-cube-from-a-session-link) | DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 <!-- [ID 42389] --> |
+| Cube: [Opening Cube from a session link](xref:Connecting_to_a_DMA_with_Cube#using-a-shared-session-link) | DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 <!-- [ID 42389] --> |
 | Cube: [*UseInitialArgumentsAfterDisconnect* argument](xref:Options_for_opening_DataMiner_Cube#useinitialargumentsafterdisconnecttrue) | DataMiner Cube 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 <!-- [ID 37888] --> |
 | Dashboards: [*Alarm table* component](xref:DashboardAlarmTable) | DataMiner 10.1.5/10.2.0 |
 | Dashboards: [JSON input in URL parameters](xref:Specifying_data_input_in_a_URL) | DataMiner 10.2.0/10.2.2 <!-- [ID 31833] [ID 31885] -->|
@@ -55,6 +57,7 @@ Below you can find an overview of the main features that have been added to Data
 | Dashboards/Low-Code Apps: [*Icon* component](xref:DashboardIcon) | DataMiner 10.3.1/10.4.0 <!-- [ID 34867] -->|
 | Dashboards/Low-Code Apps: [*Maps* component](xref:DashboardMaps) | DataMiner web 10.4.0 [CU13]/10.5.0 [CU1]/DataMiner 10.5.4<!-- [ID 42309] --> |
 | Dashboards/Low-Code Apps: [*Numeric input* component](xref:DashboardNumericInput) | DataMiner web 10.3.5/10.4.0 <!-- [ID 35911] -->|
+| Dashboards/Low-Code Apps: [Preset templates](xref:Template_Editor#using-a-preset-template) | DataMiner web 10.5.0 [CU10]/10.6.1 <!-- [ID 44040 + 44123] --> |
 | Dashboards/Low-Code Apps: [*Query filter* component](xref:DashboardQueryFilter) | DataMiner 10.3.9/10.4.0<br>DataMiner 10.0.10 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsptp) <!-- [ID 33530] --> |
 | Dashboards/Low-Code Apps: [*Search input* component](xref:DashboardSearchInput) | DataMiner web 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 <!-- [ID 39555] -->|
 | Dashboards/Low-Code Apps: [*Stepper* component](xref:DashboardStepper) | DataMiner 10.3.10/10.4.0 <!-- [ID 37200] -->|
@@ -114,6 +117,7 @@ Below you can find an overview of the main features that have been added to Data
 | Low-Code Apps: [*Copy to clipboard* action](xref:LowCodeApps_event_config#copying-text-to-the-clipboard) | DataMiner web 10.4.0 [CU11]/10.5.2<!-- [ID 41729]-->|
 | Low-Code Apps: [Duplicating an app](xref:Creating_custom_apps#duplicating-an-existing-low-code-app) | DataMiner web 10.3.0 [CU10]/10.4.1 <!-- [ID 37698] -->|
 | Low-Code Apps: [*Interactive Automation script* component](xref:InteractiveAutomationScript) | DataMiner web 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 <!-- [ID 39969] -->|
+| Low-Code Apps: [Node movement events](xref:DashboardNodeEdgeGraph#configuring-node-movement-events) for the node edge graph component | DataMiner 10.5.0 [CU10]/10.6.1 <!-- [ID 44144] --> |
 | Low-Code Apps: [*Open monitoring card* action](xref:LowCodeApps_event_config#opening-a-monitoring-card) | DataMiner web 10.3.4/10.4.0 <!-- [ID 35661] -->|
 | Low-Code Apps: [*Show a notification* action](xref:LowCodeApps_event_config#showing-a-notification) | DataMiner 10.3.0 [CU12]/10.4.3 <!-- [ID 38548] -->|
 | Low-Code Apps: [Timeline component events and actions](xref:DashboardTimeline#adding-actions-to-a-timeline) | DataMiner web 10.3.0 CU14/10.4.0 CU2/10.4.5<!-- [ID 39254] --> |

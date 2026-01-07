@@ -40,7 +40,7 @@ Please note, this Agreement supersedes any prior order or purchase terms and is 
 
 - DaaS (DataMiner as a Service): A fully cloud-based service model.
 
-- StaaS (Storage as a Service): On-premises deployment with cloud-based storage solutions.
+- STaaS (Storage as a Service): On-premises deployment with cloud-based storage solutions.
 
 - On-Premises with Cloud Connectivity: Offers additional cloud-based functionalities while being primarily on-premises.
 
