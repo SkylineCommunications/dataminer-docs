@@ -431,3 +431,9 @@ Failed to authenticate over GRPC: Status(StatusCode="Internal", Detail="Error st
 ```
 
 This issue has now been resolved, and authentication over gRPC will work correctly in this scenario.
+
+#### Dashboards app: Folder named '\_Images' would incorrectly appear in the navigation pane after you had deployed a Catalog package [ID 44374]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+After you had deployed a package from the DataMiner Catalog, in some cases, a folder named *_Images* would incorrectly appear in the navigation pane on the left.
