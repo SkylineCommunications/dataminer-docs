@@ -280,7 +280,7 @@ Some ports that are displayed above are no longer opened by default during DataM
 
 ### Securely manage the local Administrator account
 
-DataMiner has one built-in user named **Administrator**. This user maps to the local administrator on the Windows server hosting DataMiner and has full permissions within DataMiner. It is intended to be used for the initial setup and as a break-glass account for recovery and emergency scenarios. We highly recommend not to use this account for routine and day-to-day operations and to securely manage access to this account, for example via LAPS.
+DataMiner has one built-in user named **Administrator**. This user maps to the local administrator on the Windows server hosting DataMiner and has full permissions within DataMiner. This user is intended to be used for the initial setup and as a break-glass account for recovery and emergency scenarios. We highly recommend that you avoid using this account for routine and day-to-day operations and securely manage access to this account, for example via LAPS.
 
 ## Secure self-managed DataMiner storage
 

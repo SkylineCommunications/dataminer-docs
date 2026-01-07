@@ -27,7 +27,7 @@ Currently, the following parts of the system are covered:
 
   - Firewall configuration: Verifies if the firewall is active and if the port configuration is correct. Note that only the ports used by DataMiner and the databases are checked. For a list of the checked ports, refer to the [DataMiner hardening guide](xref:DataMiner_hardening_guide#configure-the-firewall).
   - TLS configuration: Verifies if legacy TLS protocol versions are disabled and if the recommended TLS protocol versions are enabled.
-  - Local admin hygiene: Verifies if the local admin account is disabled and if there are not too many local administrator accounts. Starting from DataMiner 10.6.3/10.6 [CU0], this test is no longer present and the [recommendation in the hardening guide](xref:DataMiner_hardening_guide#securely-manage-the-local-administrator-account) had been updated <!-- RN 44444 -->.
+  - Local admin hygiene: Verifies if the local admin account is disabled and if there are not too many local administrator accounts. From DataMiner 10.6.0/10.6.3 onwards, this test is no longer present, as the [recommendations in the hardening guide](xref:DataMiner_hardening_guide#securely-manage-the-local-administrator-account) have been updated.<!-- RN 44444 -->
 
 - Database
 
