@@ -95,6 +95,12 @@ SLLogCollector packages will now also include the following information:
 
   `/Network Information/netsh.exe http show servicestate view=requestq verbose=no.txt`
 
+#### DataAPI: Enhanced behavior in cluster environments [ID 44293]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Because of a number of enhancements, DataAPI behavior in cluster environments has improved, especially when creating elements or uploading connectors.
+
 ### Fixes
 
 #### Problem when a connector was deleted immediately after it had been uploaded [IID 44083]
@@ -216,8 +222,26 @@ Up to now, whenever an IP address listed in BrokerGateway's `appsettings.runtime
 
 When a QAction called NotifyDataMiner `NT_ELEMENT_STARTUP_COMPLETE` for its own element while that element was being renamed, up to now, a deadlock would occur, causing a run-time error.
 
+#### Problem with SLDataMiner when a version of a DVE connector was set to production version [ID 44308]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a version of a DVE connector was set to production version, in some cases, a fatal error could occur in SLDataMiner.
+
 #### A history set parameter with a constant value would not properly update its new timestamp [ID 44318]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 Up to now, a history set parameter with a constant value would not properly update its new timestamp when a set parameter was triggered with a more recent timestamp.
+
+#### Service impact of exported DVE parameter or DCF interface state of DVE element were incorrect when monitored parameters of the DVE element were polled but not saved [ID 44341]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+After a DataMiner restart or an element restart, in some cases, the service impact of an exported parameter or the DCF interface state of a DVE element would be incorrect when the monitored parameters of the DVE element in question were polled but not saved, especially when those monitored parameters were associated with active alarms.
+
+#### Protocols - PortSettings: DefaultValue and Disabled child elements of SkipCertificateVerification element would not be read if the connection was not the primary connection [ID 44343]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In the `<PortSettings>` element of an HTTP connection, you can configure a `<SkipCertificateVerification>` element with child elements `<DefaultValue>` and `<Disabled>`. Up to now, both child elements would incorrectly not be read if the connection in question was not the primary connection.

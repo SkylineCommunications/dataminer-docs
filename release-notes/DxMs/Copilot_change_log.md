@@ -4,6 +4,10 @@ uid: DataMinerAssistant_change_log
 
 # DataMiner Assistant change log
 
+#### 15 December 2025 - DataMiner Assistant 2.1.9 - Result sets of GQI queries limited to 100,000 records [ID 44346]
+
+From now on, the result set of every query performed by DataMiner Assistant via GQI will be limited to maximum 100,000 records.
+
 #### 9 October 2025 - DataMiner Assistant 2.0.0 - DataMiner Copilot has been renamed to DataMiner Assistant [ID 43922]
 
 DataMiner Copilot has now been renamed to DataMiner Assistant.

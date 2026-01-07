@@ -20,30 +20,6 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-#### DataMiner Assistant web app [ID 44342]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-A Dataminer Assistant web app is now available via `https://<DMA IP or hostname>/assistant`.
-
-This new app provides a streamlined chat experience with support for feature selection, model switching, and live message streaming.
-
-- **Real-time conversational assistant**
-
-  - You can chat directly with the assistant. Its responses will be streamed live.
-  - You can cancel questions, ask follow-up question, and consult your question history.
-  - Before you ask a question, you can select the LLM (Large Language Model) to be used.
-  - Tables and images are also supported.
-
-  > [!NOTE]
-  > At the top of the screen, you can find a number of example questions.
-
-- **Feature-based questioning**
-
-  - Before you ask a question, you can select a particular feature/subject/area: Insights or Documentation.
-  - Example questions will update automatically based on the feature/subject/area you have selected.
-  - During a conversation, behavior is adjusted according to the context.
-
 ## Changes
 
 ### Enhancements
@@ -300,7 +276,62 @@ When all above-mentioned conditions are met, the partition join is executed as f
 > [!IMPORTANT]
 > Although the partition join strategy will enhance performance in most common scenarios that require the fastest possible query executions, this strategy can be up to twice as slow when the join has low selectivity. For these uncommon scenarios, we recommended manually enabling the *prefetch* option on the relevant join operator.
 
+#### Dashboards app: Updated navigation pane with improved accessibility and CRUD actions [ID 44297]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+The sidebar navigation pane of the Dashboards app, which contains dashboard folders and dashboards, has been redesigned to improve usability and make managing dashboard folders and dashboards more efficient. The new view:
+
+- Supports keyboard navigation.
+- Automatically adapts to the viewport width.
+- Allows additional CRUD actions directly from the view, including deleting a folder, adding a folder or dashboard, and importing a dashboard either locally or from the Catalog.
+- Displays a fitting placeholder when a folder or the root is empty.
+
+#### Support for GQI DxM on Dashboard Gateway [ID 44344]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+The GQI DxM can now also be used on a Dashboard Gateway server. However, this requires some additional manual configuration in order to ensure that the gateway can communicate using MessageBroker within the DataMiner cluster.
+
+On the Dashboard Gateway server, you will need to edit the *web.config* in the API folder, and specify the following settings:
+
+- If the system uses **BrokerGateway**:
+
+  - **nats:credsUrl**: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
+  - **nats:apiKeyPath**: The file path to the *appsettings.runtime.json* file containing the private key, for example: `C:\webgateway\brokergateway\appsettings.runtime.json`. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+
+- If the system does not use BrokerGateway yet (only possible on 10.5.x systems):
+
+  - **nats:credsFile**: The path to the *.creds* file containing the authentication information. On a DataMiner Agent, you can typically find this here: `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`.
+  - **nats:uri**: A string array containing the NATS endpoints. Every DMA in the DMS can be specified here.
+
+Note that if a local file path is used, you will need to replace the *appsettings.runtime.json* or the *.creds* file whenever the IP address of one or more DataMiner Agents in the cluster changes or one or more DataMiner Agents is added to or removed from the cluster.
+
+#### Ticketing app is End of Life [ID 44371] [ID 44373]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+The Ticketing app has been declared End of Life. On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer appear on the DataMiner landing page or in the list of applications in DataMiner Cube.
+
+#### Web apps: New Web folder synced across the DataMiner System [ID 44396]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+A new folder, `C:\Skyline DataMiner\Web`, has been added and is now synced across the DataMiner System.
+
+This folder will be used to store user-generated configuration and files that can be shared across dashboards and low-code apps, such as images and themes.
+
+The `C:\Skyline DataMiner\Generic Interface` folder has been removed, as it was no longer used.
+
 ### Fixes
+
+#### Dashboards app: Exporting trend chart data to CSV could cause an error when data was still loading [ID 44064]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Up to now, when users triggered a CSV export on a trend chart before all data had fully loaded, an error pop-up message could appear.
+
+This issue has now been resolved. The CSV export process has been made asynchronous, so the download will only start once all required data has been fully loaded, even if the export button is clicked before that.
 
 #### Dashboards app: Problem when generating a PDF report of a dashboard containing a Time range component [ID 44168]
 
@@ -388,3 +419,15 @@ When you started an interactive Automation script in a web app, up to now, the m
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 On systems where dashboards and low-code apps were accessed through a Dashboard Gateway, up to now, the web methods `GetClientDefaultTimeZone` and `GetRegionalSettings` would incorrectly not be able to read the regional settings of the DataMiner Agent. From now on, the requests will be forwarded correctly.
+
+#### Login could fail when using a dashboard gateway with a DMA where gRPC is enabled [ID 44364]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a dashboard gateway was used in combination with a DataMiner Agent where gRPC was enabled, up to now, logging in could fail with the following error:
+
+```txt
+Failed to authenticate over GRPC: Status(StatusCode="Internal", Detail="Error starting gRPC call. MissingMethodException: Method not found: 'System.Buffers.IBufferWriter`1<Byte> Grpc.Core.SerializationContext.GetBufferWriter()'.", DebugException="System.MissingMethodException: Method not found: 'System.Buffers.IBufferWriter`1<Byte> Grpc.Core.SerializationContext.GetBufferWriter()'.")
+```
+
+This issue has now been resolved, and authentication over gRPC will work correctly in this scenario.

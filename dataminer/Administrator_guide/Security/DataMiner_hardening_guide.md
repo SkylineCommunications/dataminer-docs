@@ -291,4 +291,4 @@ If you use on-premises databases, we recommend using a [Cassandra cluster and Op
 > [!NOTE]
 >
 > - If you do use Storage as a Service, Skyline will take care of protecting your data, making use of existing and secure storage solutions provided by [Microsoft Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction).
-> - Previously, Elasticsearch was recommended as the on-premises indexing database instead of OpenSearch. For more information on why OpenSearch is now recommended instead, see [From Elasticsearch to OpenSearch to StaaS](https://community.dataminer.services/from-elasticsearch-to-opensearch-to-staas/).
+> - Previously, Elasticsearch was recommended as the on-premises indexing database instead of OpenSearch. For more information on why OpenSearch is now recommended instead, see [From Elasticsearch to OpenSearch to STaaS](https://community.dataminer.services/from-elasticsearch-to-opensearch-to-staas/).
