@@ -45,7 +45,7 @@ By way of example, here are a few of the possible use cases for relational anoma
 
 RAD only monitors parameters that have been added to one or more relational anomaly groups in its configuration. Each relational anomaly group represents a set of parameters that should be monitored together. RAD will learn how these parameters are related and notify you through a suggestion event when the relationship is broken.
 
-The easiest way to configure these relational anomaly groups is by using the [RAD Manager](xref:RAD_manager) app from the DataMiner Catalog. Alternatively, you can use the [RAD API](xref:RAD_API) or directly configure the relational anomaly groups in the [RAD configuration XML file](xref:Relational_anomaly_detection_xml).
+The easiest way to configure these relational anomaly groups is by using the [RAD Manager](xref:RAD_manager) app from the DataMiner Catalog. Alternatively, you can use the [RAD API](xref:RAD_API).
 
 ### Options for relational anomaly groups
 
@@ -75,7 +75,7 @@ Because this behavior is consistent across all units, you can define a shared mo
 
 #### Identifying anomalous subgroups in a shared model group
 
-The **fleet outlier detection** feature is available from DataMiner 10.5.12/10.6.0 onwards. It provides a high-level assessment of subgroups within a shared model group, helping you quickly identify individual assets or subgroups that behave unusually compared to their peers.
+The **fleet outlier detection** feature is available from DataMiner 10.5.12/10.6.0 onwards<!-- 43934 -->. It provides a high-level assessment of subgroups within a shared model group, helping you quickly identify individual assets or subgroups that behave unusually compared to their peers.
 
 This detection method operates differently from relational anomaly detection (RAD):
 
