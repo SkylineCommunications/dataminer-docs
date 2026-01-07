@@ -87,6 +87,20 @@ From now on, when you try to add a DataMiner Agent to a DataMiner System, an err
 
 If the DataMiner System is a STaaS system, an error message will also appear when the DataMiner Agent is not cloud-connected.
 
+#### Scheduler module will only fetch the Automation scripts in the 'Scheduler Templates' folder at startup [ID 44383]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+
+Up to now, when you opened the Scheduler module, it would fetch all Automation scripts to check whether any of them had to be listed as scheduler templates. From now on, when you open the Scheduler module, it will only fetch the Automation scripts located in the *Scheduler Templates* folder. This will significantly increase overall performance when opening the module.
+
+> [!IMPORTANT]
+> This new fetch operation will only work if
+>
+> - Cube is connected to a DMA running at least DataMiner main release versions 10.5.0 [CU11] or 10.6.0 [CU0] or feature release version 10.6.2, and
+> - you have the following user permission: *Modules > Automation > UI Available*
+>
+> In other words, when Cube is connected to a DMA running a DataMiner version older than the versions mentioned above, and you do not have the *Modules > Automation > UI Available* permission, you will not see any scheduler template and the timeline will be empty.
+
 ### Fixes
 
 #### Alarm Console: Problem with shape data fields of type 'AlarmFilter' [ID 44081]
