@@ -142,7 +142,7 @@ The large pane on the right displays the contents of the selected folder or dash
 
 ### When no dashboard or folder is selected
 
-- **From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44222-->**: An overview of all dashboards and folders is displayed as tiles. Each tile contains either a folder icon ![Folder](~/dataminer/images/Dashboard_Folder_Icon.png) or a dashboard icon ![Dashboard](~/dataminer/images/Dashboard_Icon.png) to indicate whether it represents a folder or a dashboard.
+- **From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44222-->**: An overview of all dashboards and folders is displayed as tiles. Each tile contains either a folder icon ![Folder](~/dataminer/images/Dashboard_Folder_Icon.png) or a dashboard icon ![Dashboard](~/dataminer/images/Dashboard_Icon.png), indicating whether it represents a folder or a dashboard. If a dashboard has been [shared via cloud share](xref:Sharing_a_dashboard#sharing-a-live-dashboard-via-cloud-share), this is indicated on the tile by a blue *Shared* button underneath the dashboard name.
 
   In the top-right corner of the details pane, the following buttons are available:
 
