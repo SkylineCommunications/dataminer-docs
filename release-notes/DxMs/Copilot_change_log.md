@@ -4,6 +4,17 @@ uid: DataMinerAssistant_change_log
 
 # DataMiner Assistant change log
 
+#### 18 December 2025 - DataMiner Assistant 2.1.9 - Document Intelligence failsafe [ID 44377]
+
+DataMiner Assistant can analyze documents based on instructions you provide. A failsafe has now been introduced to prevent users from uploading very large files or files with unsupported extensions.
+
+The table below lists all supported file types and their maximum allowed size:
+
+| File type | Maximum allowed size |
+| --- | --- |
+| .bmp<br>.docx<br>.heic<br>.heif<br>.html<br>.jpeg<br>.jpg<br>.pdf<br>.png<br>.xslx | 5 MB |
+| .pptx<br>.tif<br>.tiff | 20 MB |
+
 #### 15 December 2025 - DataMiner Assistant 2.1.9 - Result sets of GQI queries limited to 100,000 records [ID 44346]
 
 From now on, the result set of every query performed by DataMiner Assistant via GQI will be limited to maximum 100,000 records.
