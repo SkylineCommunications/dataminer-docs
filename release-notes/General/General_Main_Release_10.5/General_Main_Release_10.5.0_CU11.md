@@ -257,3 +257,9 @@ In the `<PortSettings>` element of an HTTP connection, you can configure a `<Ski
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 During DataMiner startup, in some rare cases, a fatal error could occur in the GQI DxM when it tried to connect to SLNet.
+
+#### Problem with SLDataMiner when an incomplete JSON response was received from Microsoft Entra ID [ID 44391]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In some cases, a fatal error could occur in SLDataMiner when an incomplete JSON response was received from Microsoft Entra ID while authenticating a user via SAML.
