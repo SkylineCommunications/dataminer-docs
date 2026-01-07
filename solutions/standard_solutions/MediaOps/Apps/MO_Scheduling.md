@@ -55,6 +55,7 @@ For more details on how to create and manage resources, see [Resource Studio](xr
 
 ## Workflows
 
+<!-- TODO: Check if this needs to be updated -->
 When you schedule a job, you can either create a workflow on the fly, or you can select a [predefined workflow](xref:MO_Workflow_Designer#workflows) created in the [Workflow Designer](xref:MO_Workflow_Designer) app.
 
 For an example of how you can create a job and make a workflow on the fly, refer to the tutorial [Creating a job and configuring it with resources](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder). For an example of how you can use a predefined workflow instead, follow the tutorial [Creating a workflow to use as a template for a job](xref:Tutorial_MediaOps_Workflow_Designer_Intro).
