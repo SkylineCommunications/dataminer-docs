@@ -251,3 +251,9 @@ After a DataMiner restart or an element restart, in some cases, the service impa
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 In the `<PortSettings>` element of an HTTP connection, you can configure a `<SkipCertificateVerification>` element with child elements `<DefaultValue>` and `<Disabled>`. Up to now, both child elements would incorrectly not be read if the connection in question was not the primary connection.
+
+#### Problem with the GQI DxM when it tried to connect to SLNet during DataMiner startup [ID 44380]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+During DataMiner startup, in some rare cases, a fatal error could occur in the GQI DxM when it tried to connect to SLNet.
