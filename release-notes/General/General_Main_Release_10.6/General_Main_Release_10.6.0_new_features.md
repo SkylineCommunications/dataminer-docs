@@ -10,6 +10,7 @@ uid: General_Main_Release_10.6.0_new_features
 ## Highlights
 
 - [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196] [ID 43567] [ID 43793]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314-id-42535-id-43196-id-43567-id-43793)
+- [Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602] [ID 43320] [ID 43440] [ID 43686] [ID 43720] [ID 43769] [ID 43797] [ID 43853] [ID 43934] [ID 44096] [ID 44135] [ID 44180]](#relational-anomaly-detection-id-41983-id-42034-id-42181-id-42276-id-42283-id-42319-id-42429-id-42480-id-42602-id-43320-id-43440-id-43686-id-43720-id-43769-id-43797-id-43853-id-43934-id-44096-id-44135-id-44180)
 
 ## New features
 
@@ -472,69 +473,74 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 44135: MR 10.6.0 - FR 10.6.1 -->
 <!-- RNs 44180: MR 10.6.0 - FR 10.6.1 -->
 
-Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
+Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. The RAD functionality works in three different steps:
 
-Whenever the relation is broken, RAD will detect this and generate suggestion events for each parameter instance in the group where a broken relation was detected. These suggestion events will then be grouped into a single incident so that it is shown on a single line in the Alarm Console. When you clear such an incident, all its base alarms (i.e. the suggestion events created by Relational anomaly detection) will also be cleared.
+1. First you need to [configure one or more groups of parameters](#configuring-relational-anomaly-groups) that should be monitored together, e.g. a main bit rate and backup bit rate.
 
-All relational anomalies detected by the Relational Anomaly Detection (RAD) feature will be stored in the database\*.
+1. The algorithm will then learn the relations between the parameters, e.g. learn that main and backup are typically equal. This is done automatically by the system, but you can manually specify a training range.
 
-*\*If you choose not to use the recommended Storage as a Service (STaaS) setup but instead choose self-managed storage, you also need to set up an OpenSearch or Elasticsearch indexing database in your DMS.*
+1. Whenever a detected relation is broken, e.g. the main is no longer equal to the backup, RAD will generate suggestion events in the Alarm Console. These suggestion events will then be grouped into a single incident so that it is shown on a single line in the Alarm Console. When you clear such an incident, all its base alarms (i.e. the suggestion events created by Relational anomaly detection) will also be cleared.
 
-##### Configuring the parameter groups
+##### Prerequisites
 
-All configuration settings are stored in the *ai_rad_models_v2* database table, and have to be managed using either the *RAD Manager* app or the RAD API.
+All relational anomalies detected by the Relational Anomaly Detection (RAD) feature will be stored in the database. Either a [STaaS](xref:STaaS) setup or a [dedicated clustered storage](xref:Dedicated_clustered_storage) setup is required for this.
 
-> [!NOTE]
->
-> - A RAD parameter group will be hosted on the DMA on which it was created, even after some of the parameters in the group were swarmed to other DMAs.
-> - Whenever you delete an element that is being used in one or more RAD parameter groups, an error will immediately get logged, and the parameter groups containing parameters from that deleted element will be marked as "not monitored".
-> - When SLAnalytics starts up, it checks whether the configured relational anomaly groups are still valid. In other words, it checks whether the elements and parameters in those groups still exist and are still trended. Note that, if at least one parameter in a group is no longer valid, and if the group in question is a shared model group with multiple subgroups, SLAnalytics will still start the monitoring of the subgroups in which all parameters are still valid.
+RAD uses average trending to detect anomalies. As such, it requires numeric parameters with at least one week of five-minute average trend data. If at least one parameter has less than a week of trend data available, monitoring will only start after one week of data has been collected. This means that average trending has to be enabled for each parameter used in a RAD group, and the TTL for five-minute average trend data has to be set to more than one week (recommended setting: 1 month).
 
-##### Average trending
+##### Configuring relational anomaly groups
 
-RAD requires parameter instances to have at least one week of five-minute average trend data. If at least one parameter instance has less than a week of trend data available, monitoring will only start after this one week becomes available. In particular, this means that average trending has to be enabled for each parameter instance used in a RAD group and that the TTL for five-minute average trend data has to be set to more than one week (recommended setting: 1 month). Also, RAD only works for numeric parameters.
+The easiest way to configure relational anomaly groups is by using the [RAD Manager](xref:RAD_manager) app from the DataMiner Catalog. Alternatively, you can use the [RAD API](xref:RAD_API).
 
-If necessary, users can force RAD to retrain its internal model by sending a `RetrainMadModelMessage`. In this message, they can indicate the periods during which the parameters were behaving as expected. This will help RAD to identify when the parameters deviate from that expected behavior in the future.
+You can create two types of groups:
+
+- Single groups, which use their own dedicated relational anomaly model trained solely on that group's parameters.
+- Shared model groups, which allow multiple relational anomaly subgroups to utilize a common detection model, leveraging their combined data.
+
+Shared model groups also allow [fleet outlier detection](xref:Relational_anomaly_detection#identifying-anomalous-subgroups-in-a-shared-model-group), i.e. the identification of anomalous subgroups within a shared model group. This allows you to quickly identify individual assets or subgroups that behave unusually compared to their peers.
 
 ##### History set parameters
 
 Under certain conditions, Relational anomaly detection (RAD) is able to detect relational anomalies on history set parameters:
 
-- If there is at least one history set parameter in a RAD parameter group, that parameter group will only be processed when all data from all parameters in the group has been received. In other words, if a history set parameter receives data 30 minutes later than the real-time parameters, possible anomalies will only be detected after 30 minutes.
+- If there is at least one history set parameter in a relational anomaly group, that parameter group will only be processed when all data from all parameters in the group has been received. In other words, if a history set parameter receives data 30 minutes later than the real-time parameters, possible anomalies will only be detected after 30 minutes.
 
 - RAD will only process data received within the last hour. If a history set parameter receives data more than an hour later than the real-time parameters, that data will be disregarded.
 
-##### Limitations
+##### RAD API messages
 
-Some parameter behavior will cause RAD to work less accurately. For example, if a parameter only reacts on another parameter after a certain time, then RAD will produce less accurate results.
-
-##### Messages
-
-The following API messages can be used to create, retrieve, migrate, and remove RAD parameter groups:
+The following API messages can be used to create, retrieve, migrate, and remove relational anomaly groups:
 
 | Message | Function |
 |---------|----------|
-| AddRADParameterGroupMessage     | Creates a new RAD parameter group.<br>- It is not allowed to have two groups with the same name, even when they are hosted by different agents.<br>- If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated.<br>When you add or update a relational anomaly group by means of an `AddRADParameterGroupMessage`, you can pass along the training configuration of the model that will be used by that group.<br>- When you added a group, the configuration you passed along will be used for the initial training of the model.<br>- When you updated a group, the configuration you passed along will be used to retrain the model. |
-| GetAllRelationalAnomaliesMessage | Retrieves all relational anomalies within a given time frame, regardless of the RAD parameter group or parameter they were detected on.<br>Note: This message will only return anomalies detected on parameters to which the user has access. |
+| AddRADParameterGroupMessage     | Creates a new relational anomaly group.<br>- It is not allowed to have two groups with the same name, even when they are hosted by different agents.<br>- If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated.<br>When you add or update a relational anomaly group by means of an `AddRADParameterGroupMessage`, you can pass along the training configuration of the model that will be used by that group.<br>- When you added a group, the configuration you passed along will be used for the initial training of the model.<br>- When you updated a group, the configuration you passed along will be used to retrain the model. |
+| GetAllRelationalAnomaliesMessage | Retrieves all relational anomalies within a given time frame, regardless of the relational anomaly group or parameter they were detected on.<br>Note: This message will only return anomalies detected on parameters to which the user has access. |
 | GetRADDataMessage               | Retrieves the anomaly scores over a specified time range of historical data.<br>When the anomaly scores for a particular relational anomaly (sub)group and region are retrieved twice within a 5-minute window, SLAnalytics will not recalculate the scores. Instead, it will return the scores from the cache. |
-| GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular RAD parameter group.<br>The response to a `GetRADParameterGroupInfoMessage` includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging. |
-| GetRADParameterGroupsMessage    | Retrieves a list of all RAD parameter groups that have been configured across all agents in the cluster. |
-| GetRADSubgroupInfoMessage       | Retrieves all configuration information for a particular RAD parameter subgroup by subgroup ID. |
-| GetRADSubgroupModelFitMessage   | Retrieves the model fit score of a RAD parameter subgroup.<br>The model fit score, ranging from 0 to 1, indicates how well the relational behavior of a subgroup is captured by the shared model trained across multiple subgroups:<br>- Higher scores suggest that the subgroup's behavior aligns well with the shared model.<br>- Lower scores indicate that the subgroup's behavior deviates from the patterns learned by the shared model.<br>The model fit score is derived from the evolution of anomaly scores over time for the subgroup in question. In general, subgroups with consistently high anomaly scores tend to have lower model fit scores, reflecting poor alignment with the shared relational model. |
+| GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular relational anomaly group.<br>The response to a `GetRADParameterGroupInfoMessage` includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging. |
+| GetRADParameterGroupsMessage    | Retrieves a list of all relational anomaly groups that have been configured across all agents in the cluster. |
+| GetRADSubgroupInfoMessage       | Retrieves all configuration information for a particular relational anomaly subgroup by subgroup ID. |
+| GetRADSubgroupModelFitMessage   | Retrieves the model fit quality numbers for the subgroups in a shared model group.<br>The model fit score, ranging from 0 to 1, indicates how well the relational behavior of a subgroup is captured by the shared model trained across multiple subgroups:<br>- Higher scores suggest that the subgroup's behavior aligns well with the shared model.<br>- Lower scores indicate that the subgroup's behavior deviates from the patterns learned by the shared model.<br>The model fit score is derived from the evolution of anomaly scores over time for the subgroup in question. In general, subgroups with consistently high anomaly scores tend to have lower model fit scores, reflecting poor alignment with the shared relational model. |
 | GetRelationalAnomaliesMessage   | Retrieves relational anomalies detected in the past for a particular parameter during a specified time range. |
-| MigrateRADParameterGroupMessage | Migrates a RAD parameter group to a specific DataMiner Agent. This new DataMiner Agent will then be responsible for building, maintaining, and executing the anomaly detection model of the RAD parameter group in question.<br>Note: A RAD parameter group will be migrated automatically when its parameters are hosted by elements that are swarmed from one DataMiner Agent to another. The RAD parameter group will then be migrated to the DataMiner Agent hosting the majority of its parameters. |
-| RemoveRADParameterGroupMessage  | Deletes a RAD parameter group. |
+| MigrateRADParameterGroupMessage | Migrates a relational anomaly group to a specific DataMiner Agent. This new DataMiner Agent will then be responsible for building, maintaining, and executing the anomaly detection model of the relational anomaly group in question.<br>Note: A relational anomaly group will be migrated automatically when its parameters are hosted by elements that are swarmed from one DataMiner Agent to another. The relational anomaly group will then be migrated to the DataMiner Agent hosting the majority of its parameters. |
+| RemoveRADParameterGroupMessage  | Deletes a relational anomaly group. |
 | RetrainRADModelMessage          | Retrains the RAD model over a specified time range. |
 
-> [!NOTE]
->
-> - These messages do not have to be sent to the agent monitoring the parameters in question. Each message will automatically be forwarded to the correct agent based on the name of the parameter group. If the agent could not be determined, an exception will be thrown.
-> - Names of RAD parameter groups will be processed case-insensitive.
-> - When a Relational Anomaly Detection (RAD) parameter group is deleted, all open suggestion events associated with that parameter group will automatically be cleared.
-> - Instances of (direct) view column parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will automatically be translated to the base table parameters.
-> - DVE child parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will automatically be translated to the parent parameters.
-> - Security has been added to all RAD messages. You will not be able to edit, remove or retrieve information about groups that contain parameters of elements to which you do not have access. The `GetRADParameterGroupsMessage` will return all groups though.
-> - The following messages have been deprecated: *AddMADParameterGroupMessage*, *GetMADParameterGroupInfoMessage*, *RemoveMADParameterGroupMessage*, and *RetrainMADModelMessage*.
+If you use the RAD API, please note:
+
+- These messages do not have to be sent to the Agent monitoring the parameters in question. Each message will automatically be forwarded to the correct Agent based on the name of the parameter group. If the Agent could not be determined, an exception will be thrown.
+- Names of relational anomaly groups will be processed case-insensitively.
+- Instances of (direct) view column parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will automatically be translated to the base table parameters.
+- DVE child parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will automatically be translated to the parent parameters.
+- Security has been added to all RAD messages. You will not be able to edit, remove or retrieve information about groups that contain parameters of elements to which you do not have access. The `GetRADParameterGroupsMessage` will return all groups though.
+- The following messages have been deprecated and should no longer be used: *AddMADParameterGroupMessage*, *GetMADParameterGroupInfoMessage*, *RemoveMADParameterGroupMessage*, and *RetrainMADModelMessage*.
+
+##### Notes
+
+- Some parameter behavior will cause RAD to work less accurately. For example, if a parameter only reacts on another parameter after a certain time, RAD will produce less accurate results.
+- A relational anomaly group will be hosted on the DMA on which it was created, even after some of the parameters in the group have been swarmed to other DMAs.
+- Whenever you delete an element that is being used in one or more relational anomaly groups, an error will immediately get logged, and the parameter groups containing parameters from that deleted element will be marked as "not monitored".
+- When SLAnalytics starts up, it checks whether the configured relational anomaly groups are still valid. In other words, it checks whether the elements and parameters in those groups still exist and are still trended. Note that, if at least one parameter in a group is no longer valid, and if the group in question is a shared model group with multiple subgroups, SLAnalytics will still start the monitoring of the subgroups in which all parameters are still valid.
+- All configuration settings are stored in the *ai_rad_models_v2* database table.
+- When a relational anomaly group is deleted, all open suggestion events associated with that group will automatically be cleared.
 
 #### SLNetClientTest tool: Element process ID information [ID 42013]
 
