@@ -103,6 +103,9 @@ Right-click the background of the sidebar, or click the ellipsis ("...") button 
 
 - *Duplicate*: Duplicates the selected dashboard. See [Duplicating a dashboard](xref:Duplicating_a_dashboard).
 
+> [!NOTE]
+> You can use the TAB key to navigate through dashboards and folders in the Dashboards app sidebar. The selected item is highlighted and can be opened by pressing Enter. Selected buttons are outlined in green and can also be activated with Enter. When a context menu is open, you can navigate through its options using the arrow keys<!--RN 44297-->.
+
 ### [Older versions](#tab/tabid-2)
 
 Right-click in either of the panes or click the ... button to open a menu with the following options:
