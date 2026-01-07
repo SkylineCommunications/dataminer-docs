@@ -32,6 +32,8 @@ In most cases, when you add a DataMiner Agent to a DataMiner System, all other D
 
    - *Username* and *password*: The credentials to implement this change, if necessary.
 
+   ![SLNetClientTest Tool: Edit Connection String](~/dataminer/images/ConnectionStrings_CTT.png)<br>*Edit Connection String window in DataMiner 10.6.1*
+
 1. Click *OK* to save the configuration.
 
 1. If no further connection strings need to be configured, click *Done*.
