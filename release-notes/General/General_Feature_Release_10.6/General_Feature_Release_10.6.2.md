@@ -189,6 +189,12 @@ A number of enhancements have been done with regard to the communication between
 
 Because of a number of enhancements, DataAPI behavior in cluster environments has improved, especially when creating elements or uploading connectors.
 
+#### SLSNMPManager: Enhanced performance of the SNMP++ library [ID 44372]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Because of a number of enhancements, overall performance of the SNMP++ library has increased, especially when polling large SNMP tables.
+
 ### Fixes
 
 #### Problem when a connector was deleted immediately after it had been uploaded [IID 44083]
