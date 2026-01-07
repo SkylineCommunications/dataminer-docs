@@ -81,7 +81,7 @@ The sidebar on the left contains icons that can be used to expand different pane
 | ![Private dashboards icon](~/dataminer/images/DashboardsX_private.png) | Displays a list of private dashboards. These are dashboards that can only be accessed by specific users (configured in the [dashboard settings](xref:Configuring_dashboard_security)). This icon is displayed from DataMiner 10.2.7/10.3.0 onwards if there are private dashboards available. |
 | ![Shared dashboards icon](~/dataminer/images/DashboardsX_shared.png) | Displays a list of dashboards that have been shared via dataminer.services. This icon is displayed from DataMiner 10.2.7/10.3.0 onwards if there are shared dashboards available. |
 
-### [From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44222-->](#tab/tabid-1)
+### [From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44222 + 44432-->](#tab/tabid-1)
 
 Right-click the background of the sidebar, or click the ellipsis ("...") button next to a dashboard or folder, to open a context menu with the following options:
 
