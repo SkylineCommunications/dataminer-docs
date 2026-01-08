@@ -110,7 +110,7 @@ In the example above, the Run method of the QAction class is defined as a static
 Static fields can also be defined in the QAction class. Because only one copy of a static member exists per SLScripting process, these fields are shared across all instances of the class. As a result, any elements executing the same protocol **within the same SLScripting process** will share these static fields, which persist for the lifetime of that process.
 
 > [!IMPORTANT]
-> Since DataMiner 10.6.3/10.7.0, multiple SLScripting processes are active by default. This causes unexpected behavior when static fields are used to share data as not all elements running the same protocol will be located in the same SLScripting process. Furthermore, restarting the element can cause it to move to another SLScripting process. **Because of this, static fields should not be used to exchange data between elements running the same protocol.** Protocols developed with the assumption that all elements are running in the same SLScripting process can configure DataMiner to only use 1 SLScripting process as described [here](https://docs.dataminer.services/dataminer/Administrator_guide/DataMiner_Agents/Configuring_a_DMA/Configuration_of_DataMiner_processes.html#setting-the-number-of-simultaneously-running-slscripting-processes). It is strongly recommended to adapt the problematic protocol(s) with the approaches described in [Sharing and persisting data](#sharing-and-persisting-data), as this allows DataMiner to use multiple SLScripting processes and increases overall resilience.
+> From DataMiner 10.6.3/10.7.0 onwards<!-- RN 44420 -->, multiple SLScripting processes are active by default. This causes unexpected behavior when static fields are used to share data as not all elements running the same protocol will be located in the same SLScripting process. Furthermore, restarting the element can cause it to move to another SLScripting process. Because of this, **static fields should not be used to exchange data between elements running the same protocol**. If protocols have been developed with the assumption that all elements are running in the same SLScripting process, you can [configure DataMiner to only use one SLScripting process](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes). However, we strongly recommend adapting such problematic protocols according to the approach described under [Sharing and persisting data](#sharing-and-persisting-data), as this will allow DataMiner to use multiple SLScripting processes and increases overall resilience.
 
 > [!NOTE]
 > Static fields are only shared between elements with the same protocol version.
@@ -163,24 +163,17 @@ By default, the entry method is expected to be defined in the QAction class. How
 
 Depending on the level at which data needs to be shared, different approaches are required.
 
-> [!NOTE]  
-> All scenarios below assume that the data does **not** need to persist when the element restarts.  
-> If persistence across restarts is required, use saved parameters and access them from the relevant QActions.
+All scenarios below assume that the data does **not** need to persist when the element restarts. If persistence across restarts is required, use saved parameters and access them from the relevant QActions.
 
-#### Between elements running different protocols
-Use a **static QAction** and share data via [**InterApp calls**](xref:InterAppCalls_Introduction).
+- **Between elements running different protocols**: Use a **static QAction** and share data via [**InterApp calls**](xref:InterAppCalls_Introduction).
 
-#### Between elements running the same protocol
-Use a **static QAction** and share data via [**InterApp calls**](xref:InterAppCalls_Introduction).
+- **Between elements running the same protocol**: Use a **static QAction** and share data via [**InterApp calls**](xref:InterAppCalls_Introduction).
 
-#### Within a single element across multiple executions of the same QAction
-Use an **instanced QAction** and share data through a **non-static field**.
+- **Within a single element across multiple executions of the same QAction**: Use an **instanced QAction** and share data through a **non-static field**.
 
-#### Within a single element across multiple executions of two or more different QActions
-Use a **precompiled QAction** with a **singleton or static class** containing a **static dictionary field**.  
-Store and retrieve data per element using this dictionary. The key of the dictionary should be a combination of the **Root DataMiner ID** and the **Element ID**. The key needs to be unique in the scope of a DMS containing multiple agents. The **Root DataMiner ID** should be used instead of the Host DataMiner ID to make sure the key stays unique even after an element is swarmed to a different agent.
+- **Within a single element across multiple executions of two or more different QActions**: Use a **precompiled QAction** with a **singleton or static class** containing a **static dictionary field**. Store and retrieve data per element using this dictionary. The key of the dictionary should be a combination of the **Root DataMiner ID** and the **Element ID**. The key needs to be unique in the scope of a DMS containing multiple agents. The **Root DataMiner ID** should be used instead of the Host DataMiner ID to make sure the key stays unique even after an element is swarmed to a different agent.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Implement cleanup logic when the element is stopped to remove all entries related to that element from the dictionary, as the lifetime of the static field is independent of the element lifecycle.
 
 ## SLProtocol(Ext) instance
