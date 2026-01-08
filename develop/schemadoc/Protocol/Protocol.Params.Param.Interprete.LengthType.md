@@ -60,6 +60,39 @@ If the expected response will contain a number with a length up to 5 digits (whi
 - A first one with a LengthType equal to “last next param” to catch the number containing the decimal point (“last next param” will make sure the number is not broken off at the first point), and
 - A second one with a LengthType equal to “fixed” to catch the point.
 
+#### Example
+
+The `last next param` LengthType determines the length of the current parameter by searching for the **last occurrence** of the following parameter’s value in the incoming data.
+
+For example, assume:
+
+- The **current parameter** has `LengthType = last next param`
+- The **following parameter** is a fixed parameter with the value `$`
+- The incoming data is:
+
+```
+abc$def$ghi$
+```
+
+In this case:
+
+- The parser searches for the **last occurrence** of `$`
+- Everything **before** that last `$` is assigned to the current parameter
+
+Result:
+
+- Current parameter value: `abc$def$ghi`
+- Following (fixed) parameter value: `$`
+
+This behavior differs from the `next param` LengthType.  
+If `next param` were used instead, the parser would stop at the **first** occurrence of `$`, and the current parameter would receive only:
+
+```
+abc
+```
+
+In summary, `last next param` ensures that the current parameter includes all content up to the **final occurrence** of the following parameter, making it useful when the data itself may contain the same delimiter multiple times.
+
 ### next param
 
 The parameter has a variable length, which depends on the next (fixed-length) parameter in the response.
