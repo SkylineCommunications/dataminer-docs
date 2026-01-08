@@ -8,7 +8,11 @@ When a new DataMiner Feature Release or Main Release version becomes available, 
 
 From DataMiner 10.2.0 [CU3]/10.2.6 onwards, Cube can also automatically update to a more recent version than the DataMiner version installed on the server. This way you can use the latest Cube features as soon as they are released without having to wait for a server upgrade. In the start window, you can configure the [update track](#selecting-your-cube-update-track) you want to use.
 
-However, note that in some cases, automatic updates will not be possible. This is specifically the case if a [deployment method](xref:DataMiner_Cube_deployment_methods) is used that does not support automatic updates. Alternatively, it is also possible to [block automatic updates via the Cube System Center](xref:DMA_configuration_related_to_client_applications#managing-client-versions) and instead force the use of the version included in the server upgrade package or of a specific preferred Cube version.
+However, note that in some cases, automatic updates will not be possible:
+
+- If a [deployment method](xref:DataMiner_Cube_deployment_methods) is used that does not support automatic updates.
+- If [automatic updates are blocked via the Cube System Center](xref:DMA_configuration_related_to_client_applications#managing-client-versions), forcing the use of the version included in the server upgrade package or of a specific preferred Cube version.
+- If the difference between the deployed server version and the Cube version is more than two major versions. For example, if you have DataMiner 10.3.0 installed on the server, you will not be able to deploy Cube upgrades for DataMiner 10.6.x.
 
 ## Selecting your Cube update track
 
