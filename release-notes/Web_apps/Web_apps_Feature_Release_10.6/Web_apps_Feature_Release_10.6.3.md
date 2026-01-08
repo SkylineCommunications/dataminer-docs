@@ -34,4 +34,10 @@ Many components in dashboards and low-code apps can be configured to be linked t
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards/Low-Code Apps: Maps component would incorrectly fetch markers with larger bounds than necessary when you zoomed in or out [ID 44381]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In some cases, a *Maps* component would incorrectly fetch markers with larger bounds than necessary when you zoomed in or out.
+
+As this issue has now been fixed, overall performance has increased when zooming in or out in a *Maps* component.
