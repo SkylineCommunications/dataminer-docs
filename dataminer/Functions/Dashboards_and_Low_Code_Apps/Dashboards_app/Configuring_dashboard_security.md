@@ -7,7 +7,7 @@ uid: Configuring_dashboard_security
 > [!NOTE]
 > The information on this page only applies from DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards.<!--RN 40501--> For earlier DataMiner versions, dashboard security is configured in the *Settings* pane of a dashboard in edit mode. See [Changing dashboard settings](xref:Changing_dashboard_settings).
 
-User permissions can be customized for both dashboard folders and individual dashboards, allowing you to restrict access and prevent unauthorized modifications.
+User permissions can be customized for both dashboard folders and individual dashboards, allowing you to restrict access and prevent unauthorized modifications. User permissions can also be configured for all dashboards and folders at once (top-level permissions). Permissions configured for specific dashboards or folders override the top-level user permissions.
 
 > [!TIP]
 > See also: [Kata #44: Master Dashboard user permissions](https://community.dataminer.services/courses/kata-44/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)

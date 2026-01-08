@@ -90,7 +90,7 @@ You can set an optional expiration date to stop sharing automatically.
 
 1. Click *Share*.
 
-   The recipients will receive an email with the live dashboard link. You will get a confirmation message, and in the header bar of your dashboard you will see a *Shared* icon (shown from DataMiner 10.3.5/10.4.0 onwards).
+   The recipients will receive an email with the live dashboard link. You will get a confirmation message, and in the header bar of your dashboard you will see a *Shared* icon (shown from DataMiner 10.3.5/10.4.0 onwards). From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44222-->, a *Shared* icon is also displayed for shared dashboards in the overview of dashboards and dashboard folders shown in the details pane when no dashboards are selected.
 
 > [!NOTE]
 >

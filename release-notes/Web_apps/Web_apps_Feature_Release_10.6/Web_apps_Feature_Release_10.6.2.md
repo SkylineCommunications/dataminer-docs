@@ -75,28 +75,26 @@ The above-mentioned label configuration can be set per node query, per edge quer
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-The sidebar of the Dashboards app has been redesigned.
+The sidebar of the Dashboards app has been redesigned. The ellipsis button ("...") in the top-right corner of the sidebar has been removed. Instead, the same menu is now available by right-clicking the background of the sidebar, which opens a menu with the following commands:
 
-When you click the ... button at the top of the sidebar, or when you right-click the background of the sidebar, a menu with the following commands will open:
-
-- Create > Dashboard
-- Create > Folder
-- Create > From Import
-- Create > From Catalog
+- Add > Dashboard
+- Add > Folder
+- Add > From Import
+- Add > From Catalog
 - Settings
 
-When you right-click a folder, or click the ... button of a folder, a menu with the following commands will open:
+When you right-click a folder, or click the ellipsis button of a folder, a menu with the following commands will open:
 
-- Create > Dashboard
-- Create > Folder
-- Create > From Import
-- Create > From Catalog
+- Add > Dashboard
+- Add > Folder
+- Add > From Import
+- Add > From Catalog
 - Settings
 - Delete
 
-When you right-click a dashboard, or click the ... button of a dashboard, a menu with the following commands will open:
+When you right-click a dashboard, or click the ellipsis button of a dashboard, a menu with the following commands will open:
 
-- Open in a new tab
+- Open in new tab
 - Duplicate
 - Settings
 - Delete
