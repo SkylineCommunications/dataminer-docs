@@ -9,11 +9,25 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 8 January 2026 - Enhancement - Billing - Dashboard Sharing & Unmanaged Objects usage billing
+### 18 December 2025 - Enhancement - dataminer.services - Improved DaaS deployment flow
 
-Starting from January 2026, automatic monthly billing will be implemented for Dashboard Sharing & Unmanaged Objects. On the 5th day of each month, the expended DataMiner credits for the previous month's usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.
+On dataminer.services, the *Add DataMiner System* button will now launch an onboarding wizard that will help users to add a new DataMiner System step by step. During this process, it will also be more clear than before when an organization has to be created.
 
-In case an organization does not have sufficient DataMiner credits, their balance will go negative, and it will need to be topped up as soon as possible. Organizations with a negative balance will not be able to deploy new DaaS systems.
+### 18 December 2025 - Enhancement - Catalog - Slideshow click behavior
+
+On the Catalog home page, users can now use the Shift and Ctrl keys together with a mouse click to open items from the slideshow in a new window or tab, respectively.
+
+### 17 December 2025 - Enhancement - Terms of service
+
+The links to the license and service terms have been updated to link to the [new page on DataMiner Docs](xref:dataminer.services_terms_of_use).
+
+### 17 December 2025 - Fix - Authentication - Timeout of authentication.dataminer.services page caused by font dependencies being blocked by firewall rules
+
+When users tried to renew their cloud session via the authentication.dataminer.services page, it could occur that the page timed out if external font dependencies were blocked by firewall rules. This issue particularly affected users with strict firewall configurations.
+
+### 17 December 2025 - Fix - Styling issues in organization selector heading
+
+In the overlay to select a different organization, it could occur that characters were cut off and styling was inconsistent.
 
 ### 5 December 2025 - Enhancement - Billing - DaaS usage billing
 

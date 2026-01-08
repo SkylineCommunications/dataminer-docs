@@ -22,11 +22,11 @@ The DataMiner Assistant combines OCR (Optical Character Recognition) and LLMs (L
 
    Any file format supported by Azure Document Intelligence Service can be analyzed via the Document Intelligence API. Supported formats:
 
-   - Images: JPEG/JPG, PNG, BMP, HEIF
+   - Images: JPEG/JPG, PNG, BMP, HEIC, HEIF
 
    - PDF
 
-   - TIFF
+   - TIFF/TIF
 
    - Word (DOCX)
 
@@ -37,7 +37,11 @@ The DataMiner Assistant combines OCR (Optical Character Recognition) and LLMs (L
    - HTML
 
    > [!NOTE]
-   > Embedded or linked images are not supported in DOCX, XLSX, PPTX, and HTML files.
+   >
+   > - Embedded or linked images are not supported in DOCX, XLSX, PPTX, and HTML files.
+   > - A maximum file size applies, depending on the format:<!-- RN 44377 -->
+   >   - 20 MB for PTTX and TIFF/TIF files.
+   >   - 5 MB for all other file types.
 
 1. You provide your instructions. These instructions (i.e. the "prompt") describe what the system should extract or analyze.
 
