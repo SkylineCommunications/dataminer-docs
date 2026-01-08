@@ -362,3 +362,11 @@ During DataMiner startup, in some rare cases, a fatal error could occur in the G
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 In some cases, a fatal error could occur in SLDataMiner when an incomplete JSON response was received from Microsoft Entra ID while authenticating a user via SAML.
+
+#### Failing attempt to create an alarm for an element being stopped could block the alarm thread [ID 44394]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU0] -->
+
+When an alarm cannot be created for a particular element, an attempt is made to fetch the element state for logging purposes.
+
+Up to now, in some cases, when the element was being stopped and was flushing its data to the database, this fetch operation could block the alarm thread. As a result, no new alarms would get processed for that element until the element had stopped flushing its data.
