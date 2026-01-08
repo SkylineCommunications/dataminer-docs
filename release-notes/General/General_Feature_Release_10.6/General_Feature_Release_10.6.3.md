@@ -52,7 +52,7 @@ Visibility on SLNet connection issues has been enhanced:
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-If the response to an *SNMP Get* request cannot be mapped, from now on, an error will be logged in the *SLProtocol.txt* file.  
+If the response to an *SNMP Get* request cannot be mapped, from now on, an error will be logged in the log file of the element in question and in the *SLErrorsInProtocol.txt* file.
 
 ### Fixes
 

@@ -26,7 +26,13 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Scheduler module: A message box will now appear whenever an error occurs [ID 44334]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+Up to now, the Scheduler module would not provide any feedback when an error occurred while retrieving, creating, updating, or deleting scheduled tasks. Although these errors were logged in the Cube logging, the user would not get any notification.
+
+From now on, whenever an error occurs while you are interacting with the Scheduler module, a message box will appear, notifying that something went wrong.
 
 ### Fixes
 
