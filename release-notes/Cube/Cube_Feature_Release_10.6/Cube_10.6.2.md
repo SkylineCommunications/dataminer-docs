@@ -164,3 +164,9 @@ When you opened DataMiner Cube, up to now, all tickets would incorrectly be retr
 When a parameter shape needed Visual Overview to load a table column parameter subscription, up to now, a `GetProtocol` request would be sent to the DMA from within Cube's UI thread. In some cases, this would cause Cube to freeze.
 
 From now on, when a parameter shape needs Visual Overview to load a table column parameter subscription, the `GetProtocol` request will be sent to the DMA from a background thread instead.
+
+#### Alarm storm protection would incorrectly count individual alarms instead alarm trees [ID 44429]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 [CU0] -->
+
+DataMiner Cube can be configured to enter alarm storm mode when too many alarms are being generated for a particular parameter. However, up to now, the system would incorrectly count individual alarms instead of alarm trees.
