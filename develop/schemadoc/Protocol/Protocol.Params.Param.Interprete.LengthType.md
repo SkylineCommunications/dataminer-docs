@@ -62,30 +62,29 @@ If the expected response will contain a number with a length up to 5 digits (whi
 
 #### Example
 
-The `last next param` LengthType determines the length of the current parameter by searching for the **last occurrence** of the following parameter’s value in the incoming data.
+The `last next param` LengthType determines the length of the current parameter by searching for the **last occurrence** of the following parameter's value in the incoming data.
 
-For example, assume:
+For example, assuming the following:
 
-- The **current parameter** has `LengthType = last next param`
-- The **following parameter** is a fixed parameter with the value `$`
-- The incoming data is:
+- The **current parameter** has `LengthType = last next param`.
+- The **following parameter** is a fixed parameter with the value `$`.
+- This is the incoming data:
 
-```
-abc$def$ghi$
-```
+  ```
+  abc$def$ghi$
+  ```
 
 In this case:
 
-- The parser searches for the **last occurrence** of `$`
-- Everything **before** that last `$` is assigned to the current parameter
+- The parser searches for the **last occurrence** of `$`.
+- Everything **before** that last `$` is assigned to the current parameter.
 
 Result:
 
-- Current parameter value: `abc$def$ghi`
-- Following (fixed) parameter value: `$`
+- Current parameter value: `abc$def$ghi`.
+- Following (fixed) parameter value: `$`.
 
-This behavior differs from the `next param` LengthType.  
-If `next param` were used instead, the parser would stop at the **first** occurrence of `$`, and the current parameter would receive only:
+This behavior differs from the `next param` LengthType. If `next param` were used instead, the parser would stop at the **first** occurrence of `$`, and the current parameter would receive only the following data:
 
 ```
 abc
