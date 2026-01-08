@@ -72,6 +72,16 @@ In most cases, these settings can keep their default value, unless performance h
 > - Only users with *Modules > System configuration > Tools > Admin tools* permission are allowed to change the above-mentioned settings.
 > - If the `SkipDcfLinks` setting is set to true, we recommend that you do not set MaxAmountOfParallelTasks too high. DCF link creation can be an expensive operation. Performing a large number of action in parallel might decrease performance.
 
+#### Enhanced visibility on SLNet connection issues [ID 44069]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Visibility on SLNet connection issues has been enhanced:
+
+- When a dashboard cannot be loaded because a DataMiner Agent is offline, an appropriate error message will now appear in that dashboard.
+
+- A new log file named *SLNetConnectionsMonitor.txt* will now keep a historic record of all SLNet connection states.
+
 #### Augmented Operations: Server-side support for new flatline detection modes [ID 44094]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->

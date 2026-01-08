@@ -38,7 +38,15 @@ uid: General_Feature_Release_10.6.3
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Enhanced visibility on SLNet connection issues [ID 44069]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Visibility on SLNet connection issues has been enhanced:
+
+- When a dashboard cannot be loaded because a DataMiner Agent is offline, an appropriate error message will now appear in that dashboard.
+
+- A new log file named *SLNetConnectionsMonitor.txt* will now keep a historic record of all SLNet connection states.
 
 ### Fixes
 
