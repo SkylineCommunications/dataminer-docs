@@ -6,7 +6,7 @@ uid: Managing_dashboard_folders
 
 ## Adding a folder
 
-1. To add a folder, first decide whether you want to create it inside an existing folder or at the top level.
+1. First decide whether you want to add the new folder inside an existing folder or at the top level:
 
    - To create the folder inside an existing folder, right-click that folder in the sidebar and select *Add* > *Folder* (from DataMiner 10.5.0 [CU11]/10.6.2 onwards) or *Create folder* (in earlier versions).
 
