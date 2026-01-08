@@ -15,7 +15,11 @@ uid: General_Main_Release_10.5.0_CU12
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### An error will now be logged if the response to an SNMP Get request cannot be mapped [ID 44329]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+If the response to an *SNMP Get* request cannot be mapped, from now on, an error will be logged in the *SLProtocol.txt* file.  
 
 ### Fixes
 
