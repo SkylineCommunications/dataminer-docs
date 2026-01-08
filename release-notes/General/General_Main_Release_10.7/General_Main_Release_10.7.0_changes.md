@@ -144,6 +144,12 @@ In the following example, the entrypoint ID can be found at the end of the entry
 
 `2025/12/18 13:40:00.546|SLAutomation.exe 8.0.1415.2|22300|16908|CAutomation::Execute|INF|0|Finished executing script: 'script_RT_USER_DEFINABLE_APIS_BodySizeLimit_RT_USER_DEFINABLE_APIS_BodySizeLimit_MaxResponseBodySize' (ID: 7) - SUCCEEDED - Execution took 00.308s. (11)`
 
+#### DataMiner backup: 'Ticketing Gateway Configuration' removed from the list of backup options [ID 44401]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway Configuration* has now been removed from the list of backup options.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]

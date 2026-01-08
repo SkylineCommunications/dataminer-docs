@@ -54,6 +54,12 @@ Visibility on SLNet connection issues has been enhanced:
 
 If the response to an *SNMP Get* request cannot be mapped, from now on, an error will be logged in the log file of the element in question and in the *SLErrorsInProtocol.txt* file.
 
+#### DataMiner backup: 'Ticketing Gateway Configuration' removed from the list of backup options [ID 44401]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway Configuration* has now been removed from the list of backup options.
+
 ### Fixes
 
 *No fixes have been added yet.*
