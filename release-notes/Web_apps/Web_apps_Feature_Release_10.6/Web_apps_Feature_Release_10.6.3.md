@@ -26,7 +26,11 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards/Low-Code Apps: Enhanced component data mechanism [ID 44015]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Many components in dashboards and low-code apps can be configured to be linked to component data, i.e. data that is made available by other components in the dashboard or app. This mechanism has now been reworked in order to enhance overall performance, scalability, reliability and robustness.
 
 ### Fixes
 

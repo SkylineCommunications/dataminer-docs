@@ -58,13 +58,16 @@ When, in an alarm template, you are configuring the Augmented Operations alarm s
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.2 or newer. See: [Augmented Operations: Server-side support for new flatline detection modes [ID 44094]](xref:General_Feature_Release_10.6.2#augmented-operations-server-side-support-for-new-flatline-detection-modes-id-44094)
 
-#### Alarm Console: Advanced search options would incorrectly be visible on systems that did not include an Elasticsearch or OpenSearch database [ID 44201]
+#### Alarm Console: Advanced search options would incorrectly be visible on systems that did not include an Elasticsearch or OpenSearch database [ID 44201] [ID 44435]
 
-<!-- MR 10.4.0 [CU22] / 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+<!-- RN 44201: MR 10.4.0 [CU22] / 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+<!-- RN 44435: MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 [CU0] -->
 
 In the Alarm Console, up to now, the advanced search options would incorrectly be visible on systems that did not include an Elasticsearch or OpenSearch database.
 
 From now on, the advanced search options will only be visible on systems that include an Elasticsearch or OpenSearch database.
+
+Also, on systems using a Casandra Cluster database, from now on, System Center will no longer show the *Search & Indexing* section, and the *Enable indexing on alarms* settings will be enabled by default.
 
 #### DataMiner Cube desktop app: Hostname, protocol type, and port will now be extracted from the DataMiner Agent URL [ID 44203]
 
