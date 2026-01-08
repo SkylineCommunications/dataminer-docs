@@ -19,7 +19,7 @@ Up to now, when a connector was deleted from DataMiner, DataAPI did not get noti
 
 Each Agent now has a dedicated NATS subject used by DataAPI for sending element creation requests and uploading connectors. This change improves DataAPI behavior in clustered environments by reducing synchronization issues and improving request isolation between Agents.
 
-### 8 January 2026 - Enhancement - DataAPI 1.4.2 - Improve DataAPI installer [ID 44231]
+### 8 January 2026 - Enhancement - DataAPI 1.4.2 - Improved DataAPI installer [ID 44231]
 
 While the DataAPI installer previously had the MSIRESTARTMANAGERCONTROL property set to *Disabled*, this has now been changed to *DisableShutdown*. This enables the Windows Restart Manager while preventing it from automatically shutting down applications. With this setting, the Restart Manager can handle files in use more efficiently during upgrades. In particular, it automatically skips files held by services that are scheduled to be stopped, as configured via the ServiceControl element in WiX, preventing unnecessary delays in the upgrade process.
 
