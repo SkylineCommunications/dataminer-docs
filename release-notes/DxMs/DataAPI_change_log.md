@@ -7,6 +7,26 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 8 January 2026 - Fix - DataAPI 1.4.2 - Connector deletion events were not being sent to DataAPI [ID 44393]
+
+Fixed an issue where DataAPI was not notified when a connector was deleted from DataMiner.
+
+### 8 January 2026 - Fix - DataAPI 1.4.2 - Moved Serilog config to appsettings.json [ID 44409]
+
+Moved the log file configuration to the appsettings, so the DataAPI logs are visible in Cube.
+
+### 8 January 2026 - Enhancement - DataAPI 1.4.2 - Reduce cluster sync issues [ID 44293]
+
+Each agent now has a dedicated NATS subject used by DataAPI for sending element creation requests and uploading connectors.
+This change improves DataAPI behavior in clustered environments by reducing synchronization issues and improving request isolation between agents.
+
+### 8 January 2026 - Enhancement - DataAPI 1.4.2 - Improve DataAPI installer [ID 44231]
+
+The DataAPI installer previously had the MSIRESTARTMANAGERCONTROL property set to Disabled. It has now been changed to DisableShutdown. This enables the Windows Restart Manager while preventing it from automatically shutting down applications.
+With this setting, the Restart Manager can handle files in use more efficiently during upgrades. In particular, it automatically skips files held by services that are scheduled to be stopped, as configured via the ServiceControl element in WiX, preventing unnecessary delays in the upgrade process.
+
+When the Restart Manager is disabled, the installer falls back to the legacy file-in-use detection. While this does not generate prompts in our scenario, it is significantly less efficient and can not distinguish files held by services that will be stopped, which could considerably slow down the InstallValidate phase.
+
 ### 31 October 2025 - Fix - DataAPI 1.4.1 - Issue with deadlock and memory leak in node identification mechanism [ID 44026]
 
 While processing incoming NATS messages, DataAPI could encounter a deadlock situation. This caused message accumulation, eventually leading to a memory leak.
