@@ -145,7 +145,7 @@ The large pane on the right displays the contents of the selected folder or dash
 
 ### When no dashboard or folder is selected
 
-- **From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44222-->**: An overview of all dashboards and folders is displayed as tiles. Each tile contains either a folder icon ![Folder](~/dataminer/images/Dashboard_Folder_Icon.png) or a dashboard icon ![Dashboard](~/dataminer/images/Dashboard_Icon.png), indicating whether it represents a folder or a dashboard. If a dashboard has been [shared via cloud share](xref:Sharing_a_dashboard#sharing-a-live-dashboard-via-cloud-share), this is indicated on the tile by a blue *Shared* button underneath the dashboard name.
+- **From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44222-->**: An overview of all dashboards and folders is displayed as tiles. A folder icon ![Folder](~/dataminer/images/Dashboard_Folder_Icon.png) or a dashboard icon ![Dashboard](~/dataminer/images/Dashboard_Icon.png) indicates the type of item each tile represents. If a dashboard has been [shared via cloud share](xref:Sharing_a_dashboard#sharing-a-live-dashboard-via-cloud-share), this is indicated on the tile by a blue *Shared* label underneath the dashboard name.
 
   In the top-right corner of the details pane, the following buttons are available:
 
@@ -185,7 +185,7 @@ When a dashboard is selected, the header bar of the details pane can display a n
 
 - *Clear selections*<!--RN 41141-->/*Clear all*: Only displayed if the dashboard contains at least one component. Clears the selection of all the data in the dashboard.
 
-- *PDF*: Available from DataMiner 10.2.12/10.3.0 onwards. Only displayed in read mode. Allows you to export the dashboard as a PDF file.
+- *PDF* or *Create report*: Available from DataMiner 10.2.12/10.3.0 onwards. Only displayed in read mode. Allows you to export the dashboard as a PDF file.
 
 - *Share* or *Start sharing*: Allows you to share the dashboard using dataminer.services. See [Sharing a dashboard](xref:Sharing_a_dashboard). This feature is only available in read mode, if the DataMiner System is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
