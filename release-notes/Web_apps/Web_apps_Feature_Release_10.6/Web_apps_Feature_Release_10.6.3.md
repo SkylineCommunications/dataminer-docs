@@ -20,7 +20,19 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-*No new features have been added yet.*
+#### Dashboards app: New Add button in navigation pane [ID 44432]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In the navigation pane, a new *Add* button is now available to users with permission to add dashboards.
+
+- Clicking *Add* will create a new dashboard.
+- Clicking the down arrow on the right will open a menu with the following commands:
+
+  - Create dashboard
+  - Create folder
+  - Import dashboard
+  - Import from catalog
 
 ## Changes
 
