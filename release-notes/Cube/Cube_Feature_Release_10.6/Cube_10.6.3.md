@@ -36,4 +36,18 @@ From now on, whenever an error occurs while you are interacting with the Schedul
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Alarm Console: Recursive loop in nested correlated alarms could cause Cube to stop working [ID 44378]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+Up to now, a recursive loop in nested correlation alarms could cause DataMiner Cube to stop working unexpectedly.
+
+From now on, when a recursive loop is detected in nested correlation alarms, an entry will be added to the Cube logging and DataMiner Cube will continue to work.
+
+#### CRL freeze message could cause asynchronous calls in the background thread to get blocked [ID 44408]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+When Cube experiences a CRL freeze, a message box will appear, explaining what can be done to prevent this.
+
+Up to now, this message box, which is created in the background thread, could cause asynchronous calls in that thread to get blocked. From now on, although it will still be created in the background thread, it will no longer cause any asynchronous calls to get blocked.
