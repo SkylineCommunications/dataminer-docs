@@ -13,7 +13,7 @@ This page is where you will typically begin your configuration, first [adding fa
 ![Facilities page](~/solutions/images/Facility_Manager_Facilities_Page.png)
 
 > [!NOTE]
-> To take full advantage of the map component, you will need to configure a valid Google Maps API key on the *About* page of the app. For more information on how to configure DataMiner Maps, refer to [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).<!-- TBD: Is the separate Maps configuration necessary, or is specifying an API key enough?-->
+> To take full advantage of the map component, you will need to configure a valid Google Maps API key on the *About* page of the app.
 
 ## Adding a new facility
 
