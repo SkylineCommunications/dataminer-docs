@@ -53,9 +53,9 @@ In this pane, you can configure the following details:
   - The **description**.
   - The **manufacturer**.
   - The **height**, which determines how many rack units are consumed when an asset with this asset class is assigned to a rack. The specified value will be converted to "U" (i.e. rack units, with 1 U being equal to 4.445 cm) and displayed as such in the details section.
-  - The **width** and **depth**.<!-- TBD: purpose? -->
+  - The **width** and **depth**. This optional information is only meant to inform the user and does not affect the asset assignment.
   - The **max power consumption**, which will determine how much power (in percent) an asset assigned to the rack will consume compared to the available power consumption assigned to the rack.
-  - The **typical power consumption**.<!-- TBD: purpose? -->
+  - The **typical power consumption**. This optional information is only meant to inform the user and does not affect the asset assignment.
   - The **weight**.
 
   ![Asset class information wizard](~/solutions/images/Asset_Manager_Asset_Class_Information_Wizard.png)
@@ -117,6 +117,8 @@ Assets created based on this asset class will by default have the same number of
 
 ## Activating an asset class
 
-When an asset class has been imported or created, it will first be set to the Draft state. To activate it, click the state cell in the table and select *Set to Active*:<!-- TBD: limitations of draft state? -->
+When an asset class has been imported or created, it will first be set to the Draft state. To be able to create assets for the asset class, you must first activate it.
+
+To activate an asset class, click the state cell in the table and select *Set to Active*:
 
 ![Asset class state context menu](~/solutions/images/Asset_Manager_Asset_Class_State_Context_Menu.png)
