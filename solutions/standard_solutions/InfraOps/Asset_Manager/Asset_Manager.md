@@ -18,7 +18,7 @@ The Asset Manager app allows you to add your assets to the system, including net
 
 - ![Connections](~/solutions/images/Asset_Manager_Connections.png) [**Connections**](xref:AssetManager_Connections): Provides an overview of all connections and allows you to create power and data connections.
 
-- ![Managed Racks](~/solutions/images/Asset_Manager_Managed_Racks.png) **Managed Racks**: <!-- TBD: Info about this page is missing. -->
+- ![Managed Racks](~/solutions/images/Asset_Manager_Managed_Racks.png) **Managed Racks**: Provides an overview of your racks and allows you to view rack details in a pane similar to the [Rack View](xref:Rack_View) page.
 
 - ![Rack View](~/solutions/images/Asset_Manager_Rack_Visualization.png) [**Rack View**](xref:Rack_View): Visualizes a rack and allows you to assign assets and reserve slots.
 
