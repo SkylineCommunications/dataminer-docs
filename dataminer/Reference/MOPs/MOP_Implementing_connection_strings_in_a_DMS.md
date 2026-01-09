@@ -31,12 +31,9 @@ By default, the connection towards a Failover pair always uses its virtual IP. T
 
 1. Add a new connection string as detailed in the procedure [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string), using the following configuration:
 
-   - *From*: Enable the checkbox *Update All Connections To This Agent*. For this example,the IP of the single Agent can be used.
+   - *From*: For this example, fill in the IP of single Agent. This box requires the IP of the Agent that is unable to access the destination Agent. If none of the Agents in the cluster can access it, the *Update All Connections To This Agent* checkbox can be used instead.
    - *To*: The virtual IP of the Failover pair.
    - *Username* and *Password*: The credentials of a Windows user with Administrator privileges towards the Failover pair.
-
-> [!NOTE]
-> If only one of the Failover Agents needs a connection string, this is also possible. In that case, use the primary IP of that Failover Agent instead of the VIP in the *To* field.
 
 ### Connection to a single Agent
 
@@ -50,7 +47,7 @@ In this example, a connection string will need to be created from each Agent in 
 
 1. Add a new connection string as detailed in the procedure [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string), using the following configuration:
 
-   - *From*: Enable the checkbox *Update All Connections To This Agent* *or* in our use case, use the primary IP of one Failover Agent.
+   - *From*: For this example, fill in the primary IP of the Failover Agent.
    - *To*: The IP of the single Agent.
    - *Username* and *Password*: The credentials of a Windows user with Administrator privileges towards the single agent.
 
