@@ -18,9 +18,8 @@ When you click the button to add a connection, you will then need to specify the
 
 You will have to select at least the **source** and **destination** asset as well as the **[cable type](xref:AM_Configuring_cable_types)**:
 
+- Other fields, such as *Cable Length*, *Source* and *Destination Tag*, and *Description*, are optional. The value of these fields will be shown when a user views the details for the connection on the Connections page.
 - For a power connection, only cable types categorized as "Power" will be shown. For data connections, all cable types except those exclusively categorized as "Power" will be displayed.
 - For the source and destination asset, you will only be able to select assets with a port type that has the selected cable type configured as a compatible cable (see [Configuring port types](xref:AM_Configuring_port_types)).
 - To select a source or destination asset, you will first need to filter per asset class, and, if possible, filter further using the name filter. Assets with the state "Not Available" or "Disposed" will not be displayed.
 - Once a port has been selected and used for a connection, you will no longer be able to use it for new connections.
-
-<!-- TBD: what is the purpose of the other fields in the wizard: Cable Length, Source Tag, Destination Tag, Description, Notes? -->
