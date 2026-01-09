@@ -157,6 +157,9 @@ The *errorCode* field of an error contains an error code that can be used by the
 > [!NOTE]
 > For some of these errors, more information will also be logged in the *UserDefinableApiEndpoint.txt* log file. The location of this log file depends on the [UserDefinableApiEndpoint configuration](xref:UD_APIs_UserDefinableApiEndpoint#consulting-logging-for-the-dxm).
 
+> [!IMPORTANT]
+> When using the `.on.dataminer.services` cloud host URL to trigger user-defined APIs, be aware that requests are limited to 29 seconds. Increasing the timeout in IIS or in the DxM configuration will not change this behavior.
+
 #### faultingNode
 
 Some errors will mention an ID in the *faultingNode* field. This is the DataMiner ID of the DMA that executed the trigger. This can be used to know on which Agent the logging should be checked when something goes wrong.
