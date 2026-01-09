@@ -182,6 +182,72 @@ A response will wait until the timeout time (defined in the element wizard) has 
 - Every parameter has a fixed length defined.
 - The response contains a length indication at an identifiable position, i.e. the length parameter is located after e.g. a parameter of type fixed and consists of a fixed set of bytes.
 
+#### Practical example
+
+The following example is also applicable for SSH connections.
+Imagine we have defined the following response:
+
+```xml
+<Response id="300">
+  <Name>VariableLengthResponse</Name>
+  <Description>Variable Length response with 2 variable length parameters</Description>
+  <Content>
+     <Param>301</Param><!-- Response Next Param 1 -->
+     <Param>302</Param><!-- Response Fixed Colon (:) -->
+     <Param>303</Param><!-- Response Fixed Question Mark (?) -->
+     <Param>304</Param><!-- Response Next Param Data 2 -->
+     <Param>305</Param><!-- Response Fixed Semicolon (;) -->
+     <Param>306</Param><!-- Response Fixed Exclamation Mark (!) -->
+  </Content>
+</Response>
+```
+
+The following incoming responses would be completely valid and will be matched `MyVariableData1:?MyVariableData2;!`, `:?;!`, `data1:?;!`, `:?data2;!`, ... Note that parameters of a variable length are allowed to be empty!
+
+DataMiner's matching behavior is more complicated if the response does not match.
+Depending on where the mismatch occurs, some variables will be populated.
+
+##### Mismatch for non-fixed parameter
+If the matching fails for a non-fixed parameter, **all** non-fixed parameters in the response **will be empty**, regardless if the mismatch is in the beginning or the end of the response.
+In our response, a mismatch for a non-fixed parameter can occur if param 301 or 304 cannot be populated, which happens if the parameter directly after the non-fixed parameter cannot be found.
+Param 301 will fail to be populated if no `:` can be found in the remaining data and parameter 304 will fail to be populated if no `;` can be found in the remaining data.
+Example responses causing such a matching failure are `?MyData;!` (failure for param 301), `MyData:?!` (failure for param 303).
+**Parameter 301 and 304 will both be empty. Even if parameter 301 was first successfully matched, and the match only fails when trying to populate parameter 304.**
+
+##### Mismatch for fixed parameter
+When the matching fails at a fixed parameter, all non-fixed parameters that have already been populated during the matching process **will remain filled in**.
+Example of such wrong responses are `data1:data2;!`, `:data2;!` (param 303 not found after a fixed param 302 was found), `data1:?data2;`, `data1:?;` (param 306 not found after a fixed param 305 was found).
+**In the first 2 examples, parameter 301 will remain filled in as it was already successfully matched, parameter 304 will remain empty.
+In the third and fourth example, both parameter 301 and 304 will remain filled in, as both were already successfully matched.**
+
+**How do you know that the response did not match fully, even when my non-fixed parameters have been populated?**
+This is where [triggers](xref:Protocol.Triggers.Trigger.Time) come into play.
+The following 2 triggers will only be executed if the response is actually completely matched:
+
+```xml
+<!-- This trigger will go off when response 300 was completely matched -->
+<Trigger id="300">
+   <Name>AfterMatchedResponse300</Name>
+   <On id="300">response</On>
+   <Time>after</Time>
+   <Type><!--Fill in as necessary--></Type>
+   <Content>
+      <!--Fill in as necessary-->
+   </Content>
+</Trigger>
+
+<!-- This trigger will go off when parameter 300 has changed, and that the response of which it is a part has been completely matched -->
+<Trigger id="301">
+   <Name>AfterMatchedResponseForParam300</Name>
+   <On id="300">parameter</On>
+   <Time>change after response</Time>
+   <Type><!--Fill in as necessary--></Type>
+   <Content>
+      <!--Fill in as necessary-->
+   </Content>
+</Trigger>
+```
+
 ### Responses with length field
 
 A length field in a response can be used to:
