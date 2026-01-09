@@ -19,7 +19,7 @@ The Web File Manager app is used to upload and manage image files. It is a prere
    1. Click *Choose file*, and select the file you want to upload.
    1. Click the *Upload* button to upload the selected file.
    1. Fill in a name for the image file.
-   1. Select the image type to determine its size.<!-- TBD: Does this type selection influence anything else, other than the image size? -->
+   1. Select the image type to determine its size.
    1. Click *OK* to upload the image.
 
    ![Web File Manager Upload Wizard](~/solutions/images/Facility_Manager_Web_File_Manager_Upload_Wizard.png)
