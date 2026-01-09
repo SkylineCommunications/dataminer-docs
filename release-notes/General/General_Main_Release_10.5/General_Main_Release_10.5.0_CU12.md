@@ -23,4 +23,8 @@ If the response to an *SNMP Get* request cannot be mapped, from now on, an error
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Delay of DataMiner startup routine caused by SLDataMiner starting up faster than SLNet [ID 44438]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+During DataMiner startup, in some rare cases, SLDataMiner would start up faster than SLNet. This would cause a delay of about 2 minutes in the entire startup routine.
