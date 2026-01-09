@@ -6,6 +6,8 @@ uid: WFD_Edit_Workflow
 
 To edit a workflow, click the pencil icon for that workflow from the *Home* page. This will open the *Edit workflow* panel. This panel consists of different sections where you can view and edit the workflow settings, **specify the resources** required, how they are linked to each other, as well as provide **default configuration** settings for resources.
 
+![Edit Workflow](~/solutions/images/WFD_Open_Edit_Panel.png)
+
 > [!NOTE]
 > When you have finished configuring a workflow, you can make the workflow available in the [Scheduling app](xref:MO_Scheduling) through the *Mark as Complete* option from the *Home* page. As long as a workflow is still in the [draft state](xref:WFD_Workflow_States), it will not be available for scheduling.
 
