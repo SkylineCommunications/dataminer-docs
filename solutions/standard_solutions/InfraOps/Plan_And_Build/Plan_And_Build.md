@@ -12,7 +12,7 @@ With the Plan and Build app, you can define and manage jobs that need to be done
 
 - ![Overview](~/solutions/images/PB_Overview_icon.png) **Overview**: Provides an overview of statistics related to your infrastructure jobs.
 
-- ![Jobs List](~/solutions/images/PB_Jobs_List_icon.png) **Jobs List**: Shows all available jobs, either in a list or on a timeline, and allows you to add and configure jobs.<!-- TBD: in side panel the name is Jobs List, but the title of the page is just "Jobs". Which should we use as the page name? -->
+- ![Jobs](~/solutions/images/PB_Jobs_List_icon.png) **Jobs**: Shows all available jobs, either in a list or on a timeline, and allows you to add and configure jobs.
 
 - ![App Configuration](~/solutions/images/PB_App_Configuration_icon.png) **App Configuration**: <!-- TBD: More info needed on Job ID configuration + New Job IAS button; add extra page about this? -->
 
