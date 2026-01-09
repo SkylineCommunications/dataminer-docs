@@ -90,11 +90,9 @@ The following types of actions can be assigned for an asset in a job:
 
 ## Viewing job details
 
-To view the details for a job, in the list of jobs, click the ⓘ icon for the job. This will open the pane illustrated below. Depending on the state of the job, this pane also allows you to edit the job details, change the selected assets and locations, [assign a user and activate the job](#assigning-and-activating-a-job), or [mark the job as complete](#completing-a-job):
+To view the details for a job, in the list of jobs, click the ⓘ icon for the job. This will open the pane illustrated below. Depending on the state of the job, this pane also allows you to edit the job details, change the selected assets and locations, [assign a user and activate the job](#assigning-and-activating-a-job), or [mark the job as complete](#completing-a-job). With the *Export Cabling Plans* button, you can export a list of the connections made within the job.
 
 ![Job details pane](~/solutions/images/Plan_And_Build_Job_Details_Side_Panel.png)
-
-<!-- TBD: What is the purpose of the Export Cabling Plans button? How should this be used? -->
 
 ## Assigning and activating a job
 
