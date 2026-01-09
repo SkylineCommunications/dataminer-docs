@@ -4,7 +4,7 @@ uid: Rack_View
 
 # Rack View
 
-The Rack Visualization page shows a realistic view of your physical racks.<!-- TBD: in the side panel on the left, the page is called Rack Visualization, but the header at the top of the page says Rack View -->
+The Rack View page shows a realistic view of your physical racks.
 
 By clicking the **Assign Asset** button for a specific slot, you can assign assets to slots directly from this overview.
 
