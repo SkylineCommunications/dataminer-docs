@@ -4,7 +4,7 @@ uid: Row_Viewer
 
 # Row Viewer
 
-The Row Viewer page provides a front overview of all the racks present in a selected row.<!-- TBD: in the side panel on the left, the page is called Row View, but the header at the top of the page says Row Viewer -->
+The Row Viewer page provides a front overview of all the racks present in a selected row.
 
 With the filter boxes at the top, you can change which row is selected.
 
