@@ -8,7 +8,7 @@ To install dataminer.InfraOps:
 
 1. Confirm whether the following prerequisites are met:
 
-   - Your system uses DataMiner 10.5.9 or higher.<!-- TBD: main release version? -->
+   - Your system uses DataMiner 10.5.9/10.6.0 or higher.
    - The [GQI DxM](xref:GQI_DxM) is installed.
    - [MediaOps](xref:MediaOps) 1.1.3-CU0 or higher is installed.
    - [Web File Manager](https://catalog.dataminer.services/details/330649ca-c685-4e1c-a9a5-aeca6ca8b40f) is installed.
