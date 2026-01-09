@@ -123,5 +123,3 @@ Note that when a job has been marked as complete, it will no longer be possible 
 To delete a job, in the list of jobs, click the ![Hamburger icon](~/solutions/images/PB_Hamburger_icon.png) icon and select *Delete Job*.
 
 ![Delete job option](~/solutions/images/PB_Delete_job.png)
-
-<!-- TBD: are there any restrictions for job deletion? any consequences we should warn for? -->
