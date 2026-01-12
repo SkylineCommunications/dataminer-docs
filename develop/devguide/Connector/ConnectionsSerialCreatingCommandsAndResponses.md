@@ -184,8 +184,9 @@ A response will wait until the timeout time (defined in the element wizard) has 
 
 #### Practical example
 
-The following example is also applicable for SSH connections.
-Imagine we have defined the following response:
+This example is also applicable for SSH connections.
+
+Imagine you have defined the following response:
 
 ```xml
 <Response id="300">
@@ -202,27 +203,41 @@ Imagine we have defined the following response:
 </Response>
 ```
 
-The following incoming responses would be completely valid and will be matched `MyVariableData1:?MyVariableData2;!`, `:?;!`, `data1:?;!`, `:?data2;!`, ... Note that parameters of a variable length are allowed to be empty!
+The following incoming responses would be completely valid and will be matched: `MyVariableData1:?MyVariableData2;!`, `:?;!`, `data1:?;!`, `:?data2;!`, etc. Note that parameters of variable length are allowed to be empty.
 
-DataMiner's matching behavior is more complicated if the response does not match.
-Depending on where the mismatch occurs, some variables will be populated.
+DataMiner's matching behavior is more complicated if the response does not match. Depending on where the mismatch occurs, some variables will be populated, as explained below.
 
 ##### Mismatch for non-fixed parameter
-If the matching fails for a non-fixed parameter, **all** non-fixed parameters in the response **will be empty**, regardless if the mismatch is in the beginning or the end of the response.
-In our response, a mismatch for a non-fixed parameter can occur if param 301 or 304 cannot be populated, which happens if the parameter directly after the non-fixed parameter cannot be found.
-Param 301 will fail to be populated if no `:` can be found in the remaining data and parameter 304 will fail to be populated if no `;` can be found in the remaining data.
-Example responses causing such a matching failure are `?MyData;!` (failure for param 301), `MyData:?!` (failure for param 303).
-**Parameter 301 and 304 will both be empty. Even if parameter 301 was first successfully matched, and the match only fails when trying to populate parameter 304.**
+
+If the matching fails for a non-fixed parameter, **all** non-fixed parameters in the response **will be empty**, regardless of whether the mismatch is in the beginning or at the end of the response.
+
+In the response for the current example, a mismatch for a non-fixed parameter can occur if param 301 or 304 cannot be populated, which happens if the parameter directly after the non-fixed parameter cannot be found.
+
+Param 301 will fail to be populated if no `:` can be found in the remaining data, and parameter 304 will fail to be populated if no `;` can be found in the remaining data.
+
+For example, these responses would cause such a matching failure:
+
+- `?MyData;!` (failure for param 301)
+- `MyData:?!` (failure for param 303)
+
+**Parameter 301 and 304 will both be empty**, even if parameter 301 was first successfully matched, and the match only fails when trying to populate parameter 304.**
 
 ##### Mismatch for fixed parameter
-When the matching fails at a fixed parameter, all non-fixed parameters that have already been populated during the matching process **will remain filled in**.
-Example of such wrong responses are `data1:data2;!`, `:data2;!` (param 303 not found after a fixed param 302 was found), `data1:?data2;`, `data1:?;` (param 306 not found after a fixed param 305 was found).
-**In the first 2 examples, parameter 301 will remain filled in as it was already successfully matched, parameter 304 will remain empty.
-In the third and fourth example, both parameter 301 and 304 will remain filled in, as both were already successfully matched.**
 
-**How do you know that the response did not match fully, even when my non-fixed parameters have been populated?**
-This is where [triggers](xref:Protocol.Triggers.Trigger.Time) come into play.
-The following 2 triggers will only be executed if the response is actually completely matched:
+When the matching fails at a fixed parameter, all non-fixed parameters that have already been populated during the matching process **will remain filled in**.
+
+For example, these would be such wrong responses:
+
+- `data1:data2;!`
+- `:data2;!` (parameter 303 not found after a fixed parameter 302 was found)
+- `data1:?data2;`
+- `data1:?;` (parameter 306 not found after a fixed parameter 305 was found).
+
+In the first two examples above, **parameter 301 will remain filled in** as it was already successfully matched, but parameter 304 will remain empty. In the third and fourth example, **both parameter 301 and 304 will remain filled in**, as both were already successfully matched.
+
+To find out whether the response matched fully or not, even if your non-fixed parameters have been populated, you will need to use [triggers](xref:Protocol.Triggers.Trigger.Time).
+
+The following two triggers will only be executed if the response is actually completely matched:
 
 ```xml
 <!-- This trigger will go off when response 300 was completely matched -->
@@ -236,7 +251,7 @@ The following 2 triggers will only be executed if the response is actually compl
    </Content>
 </Trigger>
 
-<!-- This trigger will go off when parameter 300 has changed, and that the response of which it is a part has been completely matched -->
+<!-- This trigger will go off when parameter 300 has changed and the response it is part of has been completely matched -->
 <Trigger id="301">
    <Name>AfterMatchedResponseForParam300</Name>
    <On id="300">parameter</On>
