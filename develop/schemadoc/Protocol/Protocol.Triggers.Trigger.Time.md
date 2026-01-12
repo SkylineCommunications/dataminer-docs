@@ -44,7 +44,7 @@ Not all Protocol.Triggers.Trigger.Time values can be used in combination with th
 |protocol|after startup|The trigger will go off when the element running the protocol has (re)started. For example: Restart or Activate after stop. It will not trigger after a Pause. Note that at least one group must be defined in the protocol, as otherwise the trigger will not work.|
 |protocol|link file changed|The trigger will go off when the protocol’s link file has changed. (This is a matrix-related option.)|
 |response|before|The trigger will go off before the specified response is processed.|
-|response|after|The trigger will go off after the specified response has successfully been received and fully matches.|
+|response|after|The trigger will go off after the specified response has successfully been received, if it fully matches.|
 |session|timeout|The trigger will go off when a timeout occurs on the specified session.<!-- RN 12542 -->|
 |timer|before|The trigger will go off before the specified timer is executed.|
 
