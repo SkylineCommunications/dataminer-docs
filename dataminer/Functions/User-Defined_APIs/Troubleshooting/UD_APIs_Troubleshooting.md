@@ -107,7 +107,7 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
 - **Request fails with status code 400 after 29 seconds.**
 
-  If your request returns a 400 Bad Request after about 29 seconds, it is likely because the cloud URL proxy aborts calls that run longer than this limit. When using the `.on.dataminer.services` cloud host URL, API calls have a maximum execution time of 29 seconds. Make sure your API script completes well within this window to allow enough time for processing and data transfer overhead.
+  If your request returns a 400 Bad Request after about 29 seconds, this is likely to be caused by the cloud URL proxy aborting calls that run longer than this limit. When the `.on.dataminer.services` cloud host URL is used, API calls have a maximum execution time of 29 seconds. Make sure your API script completes well within this window to allow enough time for processing and data transfer overhead.
 
 ### General checks
 
