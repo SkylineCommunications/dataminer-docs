@@ -20,3 +20,6 @@ An exact match could be found if another Automation script references version 1.
 
 > [!IMPORTANT]
 > When referencing a NuGet package in an Automation script, either directly or through a transitive dependency, make sure the script only references a single version of that NuGet package. Also, when creating a NuGet package that will be used by an Automation script, that package should only reference one version of another NuGet package.
+
+> [!NOTE]
+> Note that the behavior in connectors is different from Automation scripts as in connectors it **is** possible to specify a folder path as hint path. For more information, refer to [Connectors](xref:AssemblyResolvingConnectors).
