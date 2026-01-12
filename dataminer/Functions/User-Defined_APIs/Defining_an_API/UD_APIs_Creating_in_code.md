@@ -54,7 +54,7 @@ namespace UserDefinableApiScripts.CreateToken
                 Secret = ApiTokenSecretGenerator.GenerateSecret()
             };
 
-            // Write the secret to an accessible location on the server so we can use it when we want to trigger and API
+            // Write the secret to an accessible location on the server so we can use it when we want to trigger an API
             File.WriteAllText(@"C:\Token.txt", token.Secret);
 
             // Create the token
