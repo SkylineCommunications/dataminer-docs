@@ -22,24 +22,21 @@ classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0p
 %% Define blocks %%
 START([DataMiner Cube])
 ModuleDefinition{{Which module are you having trouble with? }}
-Apps([Apps])
 Surveyor([Surveyor])
 AlarmConsole([Alarm Console])
 VisualOverview([Visual Overview])
 %% Connect blocks %%
 START --- ModuleDefinition
 ModuleDefinition --- Surveyor
-ModuleDefinition --- Apps
 ModuleDefinition --- AlarmConsole
 ModuleDefinition --- VisualOverview
 %% Define hyperlinks %%
-click Apps "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Apps/Troubleshooting_Apps.html" "Apps"
 click Surveyor "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Surveyor/Troubleshooting_Surveyor.html" "Surveyor"
 click AlarmConsole "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Alarm_Console.html" "Alarm Console"
 click VisualOverview "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Visual_Overview/Troubleshooting_Visual_Overview.html" "Visual Overview"
 %% Apply styles to blocks %%
 class START classTerminal;
-class AlarmConsole,Surveyor,Apps,VisualOverview classExternalRef;
+class AlarmConsole,Surveyor,VisualOverview classExternalRef;
 %%class classActionClickable;
 class ModuleDefinition classDecision;
 ```
@@ -71,17 +68,3 @@ class ModuleDefinition classDecision;
 - Alarms
 
 - Responsiveness of alarms
-
-[**Apps**](xref:Troubleshooting_Apps)
-
-- Automation
-
-- Correlation
-
-- Bookings
-
-- Services
-
-- Profiles
-
-- ...

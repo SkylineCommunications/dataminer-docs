@@ -4,6 +4,9 @@ uid: About_DataMiner_elements_using_the_Ticketing_Gateway_API
 
 # About DataMiner elements using the Ticketing Gateway API
 
+> [!IMPORTANT]
+> The Ticketing Gateway API is obsolete. It is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
+
 In most cases, a dedicated DataMiner element will be linked to a ticket field resolver, and will control all communication with the third-party ticketing system. The protocol of that element will have to be specifically written for that purpose, using the Ticketing Gateway API described in this release note.
 
 If the Ticketing Gateway is used by an element, that element can then also be configured to synchronize the tickets with the third-party ticketing system with which it communicates.

@@ -11,7 +11,7 @@ using System.Linq;
 namespace Skyline.DataMiner.Net.Tickets
 {
 	/// <summary>
-	/// Ticketing helper class.
+	/// Ticketing helper class. Obsolete. Ticketing is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
 	/// </summary>
 	/// <remarks>
 	/// <para>Feature introduced in DataMiner 9.6.4 (RN 20344).</para>

@@ -3,7 +3,7 @@
 namespace Skyline.DataMiner.Net.Ticketing.Interfaces
 {
 	/// <summary>
-	/// Ticketing gateway request message interface.
+	/// Ticketing gateway request message interface. Obsolete. Ticketing is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
 	/// </summary>
 	public interface ITicketingGatewayRequestMessage : ICloneable
     {

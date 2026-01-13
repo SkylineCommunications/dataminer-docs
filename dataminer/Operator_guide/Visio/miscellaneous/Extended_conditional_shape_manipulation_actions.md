@@ -171,7 +171,7 @@ Alarm statistics can be used in the "What" part of the condition. The following 
 > [!NOTE]
 >
 > - #NormalAlarms can only be used if, in the *MaintenanceSettings.xml* file, the *\<AutoClear>* tag is set to "false".
-> - On a DMA with a Ticketing module, you can also use the placeholder *#Tickets* to create a condition based on the number of tickets, optionally followed by the domain name in case you only want tickets from a particular domain to be taken into account. This is possible for views, services, and elements. For example: *#Tickets:Internal*.
+> - Prior to DataMiner 10.5.0 [CU11]/10.6.0/10.6.2, if the now obsolete Ticketing module is available, the *#Tickets* placeholder can be used to create a condition based on the number of tickets, optionally followed by the domain name in case you only want tickets from a particular domain to be taken into account. This is possible for views, services, and elements. For example: *#Tickets:Internal*.
 
 ## Specifying a default return value
 

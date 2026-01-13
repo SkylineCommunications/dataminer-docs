@@ -4,12 +4,12 @@ uid: GetActiveTickets
 
 # GetActiveTickets
 
-This method is deprecated. Use the [GetActiveTicketsV2](xref:GetActiveTicketsV2) method instead.
-
-> [!CAUTION]
+> [!IMPORTANT]
 >
-> - DataMiner Ticketing is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
+> - The Ticketing app is obsolete. It is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
 > - DataMiner Ticketing is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
+
+This method is deprecated. Use the [GetActiveTicketsV2](xref:GetActiveTicketsV2) method instead.
 
 ## Input
 

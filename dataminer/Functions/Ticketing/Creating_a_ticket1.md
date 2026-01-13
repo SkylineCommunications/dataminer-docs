@@ -4,6 +4,9 @@ uid: Creating_a_ticket1
 
 # Creating a ticket
 
+> [!IMPORTANT]
+> The Ticketing app is obsolete. It is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
+
 You can create a ticket both from within the Ticketing app and from the Surveyor or Alarm Console.
 
 - Within the Ticketing app: click the *New* button in the header bar.

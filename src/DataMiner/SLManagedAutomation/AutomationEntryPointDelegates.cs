@@ -89,7 +89,7 @@ namespace Skyline.DataMiner.Automation
 		public delegate void OnDomInstanceCrud(IEngine engine, ValueType domInstanceId, CrudType crudType);
 
 		/// <summary>
-		/// Ticket CRUD delegate type.
+		/// Ticket CRUD delegate type. Obsolete. Ticketing is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
 		/// </summary>
 		/// <param name="engine">The <see cref="IEngine"/> instance.</param>
 		/// <param name="ticketId">The ticket ID.</param>

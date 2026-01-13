@@ -4,7 +4,7 @@ using System;
 namespace Skyline.DataMiner.Net.Ticketing.Validators
 {
 	/// <summary>
-	/// Represents a type validator for validating the type of a specified object.
+	/// Represents a type validator for validating the type of a specified object. Obsolete. Ticketing is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
 	/// </summary>
 	/// <typeparam name="T">The type to validate against.</typeparam>
 	[Serializable]

@@ -12,7 +12,7 @@ using Skyline.DataMiner.Net.SLDataGateway.Types;
 namespace Skyline.DataMiner.Net.Ticketing.Objects
 {
 	/// <summary>
-	/// Represents the history of a specific ticket.
+	/// Represents the history of a specific ticket. Obsolete. Ticketing is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
 	/// </summary>
 	[Serializable]
     [JsonObject(MemberSerialization.OptIn)]
@@ -27,7 +27,7 @@ namespace Skyline.DataMiner.Net.Ticketing.Objects
 		public const char GroupSeparator = ((char)29);
 
 		/// <summary>
-		/// Represents a key to uniquely identify a ticket history entry.
+		/// Represents a key to uniquely identify a ticket history entry. Obsolete. Ticketing is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
 		/// </summary>
 		[Serializable]
         [JsonObject(MemberSerialization.OptIn)]
@@ -165,7 +165,7 @@ namespace Skyline.DataMiner.Net.Ticketing.Objects
         }
 
 		/// <summary>
-		/// Contains the data of a property change in the ticket history.
+		/// Contains the data of a property change in the ticket history. Obsolete. Ticketing is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
 		/// </summary>
 		[Serializable]
         [JsonObject(MemberSerialization.OptIn)]
@@ -387,7 +387,7 @@ namespace Skyline.DataMiner.Net.Ticketing.Objects
         }
 
 		/// <summary>
-		/// Specifies the type of change.
+		/// Specifies the type of change. Obsolete. Ticketing is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
 		/// </summary>
 		public enum PropertyChangedEnum
 		{
@@ -429,6 +429,9 @@ namespace Skyline.DataMiner.Net.Ticketing.Objects
         public DateTime LastModified { get; set; }
     }
 
+	/// <summary>
+	/// Obsolete. Ticketing is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
+	/// </summary>
     public class TicketHistoryExposers
     {
 

@@ -49,7 +49,7 @@ The connectors ship with the EPM Solution package.
 
 ### Weather
 
-DataMiner can be integrated with many weather forecast services as it considers this variable a key factor capable of degrading and temporarily interrupting the signal delivery via VSAT. The connector included in the EPM Solution package is capable of processing weather requests in bulk, ad hoc, and/or manually. It can be used to integrate with a variety of solutions depending on user requirements, e.g. Ticketing, Correlation, Remote & Weather Alarms, etc.
+DataMiner can be integrated with many weather forecast services as it considers this variable a key factor capable of degrading and temporarily interrupting the signal delivery via VSAT. The connector included in the EPM Solution package is capable of processing weather requests in bulk, ad hoc, and/or manually. It can be used to integrate with a variety of solutions depending on user requirements, such as Correlation, Remote & Weather Alarms, etc.
 
 The connectors ship with the EPM Solution package.
 

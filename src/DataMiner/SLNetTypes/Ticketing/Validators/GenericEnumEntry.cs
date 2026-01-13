@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 namespace Skyline.DataMiner.Net.Ticketing.Validators
 {
 	/// <summary>
-	/// Represents an entry of a <see cref="GenericEnum{T}"/> instance.
+	/// Represents an entry of a <see cref="GenericEnum{T}"/> instance. Obsolete. Ticketing is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
 	/// </summary>
 	/// <typeparam name="T">The underlying type of the entry.</typeparam>
 	[JsonObject(MemberSerialization.OptIn)]

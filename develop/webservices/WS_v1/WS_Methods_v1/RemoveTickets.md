@@ -4,12 +4,12 @@ uid: RemoveTickets
 
 # RemoveTickets
 
-Use this method to remove multiple tickets.
-
-> [!CAUTION]
+> [!IMPORTANT]
 >
-> - DataMiner Ticketing is being retired. For more details, see [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles). ![EOL](~/dataminer/images/EOL_Duo.png)
+> - The Ticketing app is obsolete. It is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
 > - DataMiner Ticketing is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
+
+Use this method to remove multiple tickets.
 
 ## Input
 

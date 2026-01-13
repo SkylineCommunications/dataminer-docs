@@ -4,9 +4,8 @@ using System.Runtime.Serialization;
 namespace Skyline.DataMiner.Net.Ticketing.Helpers
 {
 	/// <summary>
-	/// Used to define the scripts that should be executed for each CRUD action on a <see cref="Ticket"/>. No script will be executed when the name is null or empty.	
+	/// Used to define the scripts that should be executed for each CRUD action on a <see cref="Ticket"/>. No script will be executed when the name is null or empty. Obsolete. Ticketing is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
 	/// </summary>
-	/// <remarks>Feature introduced in DataMiner 10.1.6 (RN 29191).</remarks>
 	[Serializable]
     //[DataContract]
     public class ExecuteScriptOnTicketActionSettings

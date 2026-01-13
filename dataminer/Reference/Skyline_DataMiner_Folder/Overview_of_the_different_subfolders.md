@@ -54,7 +54,7 @@ Except when otherwise mentioned in the relevant documentation, manual changes sh
 | Sounds | Custom alert sounds. See [Configuring a custom alert sound for an alarm tab](xref:ConfiguringACustomAlertSoundForAnAlarmTab). | Yes |
 | Spectrum Alarm Recordings | Alarm records of spectrum elements. | No |
 | System Cache | See [System Cache](xref:System_Cache). | No |
-| Ticketing | Contains configuration related to the migration of the [Ticketing](xref:ticketing) module to the indexing database. | No |
+| Ticketing | Obsolete. Contains configuration related to the migration of the legacy [Ticketing](xref:ticketing) module to the indexing database. | No |
 | Tools | Tools (StandaloneUpgrade, etc.). Within this folder, only the *SLLogCollector* subfolder is synchronized in the DMS. | Partially |
 | Upgrades | Information concerning the last upgrade. | No |
 | Users | Stored user information. See [ClientSettings.json](xref:ClientSettings_json#clientsettingsjson). This includes private and public [alarm filters](xref:Alarm_filters) (with public alarm filters being stored in the `C:\Skyline DataMiner\Users\SharedUserSettings\Filters` subfolder). | Yes |

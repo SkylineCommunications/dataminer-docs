@@ -7,7 +7,7 @@ using System.Drawing.Design;
 namespace Skyline.DataMiner.Net.Ticketing.Objects
 {
 	/// <summary>
-	/// Represents a ticket field of a <see cref="Ticket"/> instance.
+	/// Represents a ticket field of a <see cref="Ticket"/> instance. Obsolete. Ticketing is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
 	/// </summary>
 	/// <remarks>Used by a ticket to define what exactly the field contains.</remarks>
 	[Serializable]

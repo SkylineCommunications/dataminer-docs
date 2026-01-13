@@ -4,12 +4,12 @@ uid: EditTicketFieldOrder
 
 # EditTicketFieldOrder
 
-Use this method to edit the order of the ticket fields for a specific ticket type (called “domain” in the Ticketing app).
-
-> [!CAUTION]
+> [!IMPORTANT]
 >
-> - DataMiner Ticketing is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
+> - The Ticketing app is obsolete. It is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
 > - DataMiner Ticketing is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
+
+Use this method to edit the order of the ticket fields for a specific ticket type (called “domain” in the Ticketing app).
 
 ## Input
 

@@ -4,6 +4,9 @@ uid: Using_the_Ticketing_Gateway_API
 
 # Using the Ticketing Gateway API
 
+> [!IMPORTANT]
+> The Ticketing Gateway API is obsolete. It is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
+
 The Ticketing Gateway API allows you to integrate any third-party ticketing system into DataMiner. Using the methods in this API, you can create and manage tickets of any type.
 
 The following sections contain more information on using the Ticketing Gateway API:

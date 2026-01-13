@@ -17,4 +17,4 @@ uid: DMALicenses
 | ResourceManager | Boolean | Indicates whether the Resource Manager license is available on the DMA. |
 | Scheduler       | Boolean | Indicates whether the Scheduler license is available on the DMA.        |
 | Spectrum        | Boolean | Indicates whether the Spectrum license is available on the DMA.         |
-| Ticketing       | Boolean | Indicates whether the Ticketing license is available on the DMA.        |
+| Ticketing       | Boolean | Obsolete. Indicates whether the Ticketing license is available on the DMA. |

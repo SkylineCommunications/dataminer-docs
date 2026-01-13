@@ -4,6 +4,9 @@ uid: Retrieving_tickets_using_the_Ticketing_Gateway_API
 
 # Retrieving tickets using the Ticketing Gateway API
 
+> [!IMPORTANT]
+> The Ticketing Gateway API is obsolete. It is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
+
 Tickets can be retrieved in a number of ways. See the following examples.
 
 > [!NOTE]
