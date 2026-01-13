@@ -19,5 +19,3 @@ Depending on the type of asset, different types of locations can be configured:
   Assigning an asset to a **rack** is only possible if its asset class has more than 0 U of height defined, and its device type is configured as a "Rack Unit consumer" (see [Configuring device types](xref:AM_Configuring_device_types)).
 
 - **No Location**: This option allows you to remove the currently configured location.
-
-<!-- TBD: Currently not mentioned: Building, Truck: should these be included as well? -->
