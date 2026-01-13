@@ -176,7 +176,7 @@ The node edge graph component supports showing multiple layers. The following *I
 |--|--|--|--|
 | N/A | `<query name>` | ![marker](~/dataminer/images/Maps_Circle_icon.png) or ![line](~/dataminer/images/Maps_Line_icon.png) | In the box representing each query, click either *Set as node* or *Set as edge*. If a query is set as node, it will move to the nodes section. If a query is set as edge, it will move to the edges section. Once a query has been set to be a node or edge, you can still change this setting by clicking the node or edge icon in the top-right corner of the query box. |
 | Nodes | `<query name>` | Node ID column | Select the column from the query that represents the node ID. |
-| Nodes |`<query name>` | X/Y | Only available when the *Node positions* layout option is set to *Linked as data*. Select the column from the query that contains the X and Y positions respectively. |
+| Nodes | `<query name>` | X/Y | Only available when the *Node positions* layout option is set to *Linked as data*. Select the column from the query that contains the X and Y positions respectively. |
 | Nodes | Base node | Node name | This name is not displayed in the component itself, and is only intended to clarify the configuration. |
 | Nodes | Base node | Label | Select the column to use as the label for the node. |
 | Nodes | Base node | Shape | Select a different shape in the dropdown box to customize the node shape. By default, no shape is used. You can also select *Custom* in the dropdown box in order to get additional options that allow you to create a fully customized shape instead of one of the available presets. Click the circle to the right of the dropdown box to select a custom color for the shape. |
@@ -186,7 +186,8 @@ The node edge graph component supports showing multiple layers. The following *I
 | Nodes | Base node | Size | From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, use the slider to adjust the size of the node, with a minimum of 1 px and a maximum of 100 px (default: 48 px). Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, select whether the node should be small, medium-sized, or large. |
 | Nodes | Base node | Weight | A number indicating the relative importance of the node. The higher the number, the more important the node, which determines where it is displayed in the graph (depending on the layout settings). |
 | Nodes | Base node | Enable tooltip | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over a node. This setting is enabled by default. |
-| Nodes | Base node | Show metric | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the node will not be displayed underneath the node. |
+| Nodes | Base node | Metric | Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44218-->. Configure how the node label is displayed. You can hide the label, derive it from conditional coloring, or select a custom column to display as the label. See [Configuring node and edge labels](#configuring-node-and-edge-labels). |
+| Nodes | Base node | Show metric | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417--> up to DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44218-->, when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the node will not be displayed underneath the node. |
 | Nodes | Base node | Actions | Select *Add action* to configure an action that is executed when a node is clicked or double-clicked, or when an icon is clicked in the tooltip. See [Adding actions to a node edge graph](#adding-actions-to-a-node-edge-graph). |
 | Nodes | Override nodes | Add override | If you want to visualize some nodes differently for the same query, click *Add override*, specify a filter, and configure the nodes as detailed above. |
 | Edges | `<query name>` | Source | Select the column from the query that represents the source of the connection. To the right of the dropdown list, click the icon representing the source node. |
@@ -196,10 +197,31 @@ The node edge graph component supports showing multiple layers. The following *I
 | Edges | Actions | Style | Optionally, select a different style for the connection lines. |
 | Edges | Actions | Weight | Optionally, specify a number to indicate the relative importance of the edge. This will determine the thickness of the connection line. |
 | Edges | Actions | Enable tooltip | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over an edge. This setting is enabled by default. |
-| Edges | Actions | Show metric | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the edge will not be displayed underneath the edge. |
+| Edges | Actions | Metric | Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44218-->. Configure how the node label is displayed. You can hide the label, derive it from conditional coloring, or select a custom column to display as the label. See [Configuring node and edge labels](#configuring-node-and-edge-labels). |
+| Edges | Actions | Show metric | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417--> up to DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44218-->, when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the edge will not be displayed underneath the edge. |
 | Edges | Actions | Visualize directions | Available from DataMiner 10.2.4/10.3.0 onwards. Toggle the switch to specify whether the edges should display a direction. |
 | Edges | Action | How | Only available when *Visualize directions* is enabled. Choose how the direction should be displayed. Select *Flow* to visualize the direction using animated edges (default), or *Arrows* to show arrows drawn on the edges. You can also specify the exact arrow position. |
 | Nodes | Actions | Add override | If you want to visualize some edges differently for the same query, click *Add override*, specify a filter, and configure the edges as detailed above. |
+
+#### Configuring node and edge labels
+
+From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44218-->, you can configure how labels are displayed for nodes and edges independently of [conditional coloring](#conditional-coloring). This configuration makes it possible to control label visibility and content separately from analytical coloring.
+
+For each node query and edge query, and for any configured node or edge override, you can choose one of the following label options:
+
+- **None**: No label is displayed, even if conditional coloring is configured for the selected column.
+
+- **From coloring**: The label visibility is determined by the conditional coloring configuration.
+
+- **Custom**: Allows you to select a specific column to use as the label. The label is shown even if the node or edge itself does not have conditional coloring.
+
+  When you select *Custom*, the background color of edges is determined as follows:
+
+  - If the selected column has conditional coloring, that color is used.
+
+  - If the selected column does not have conditional coloring, but the edge does, the edge color is used.
+
+  - If neither has conditional coloring, the default background color of the node edge graph component is used.
 
 ## Adding actions to a node edge graph
 
