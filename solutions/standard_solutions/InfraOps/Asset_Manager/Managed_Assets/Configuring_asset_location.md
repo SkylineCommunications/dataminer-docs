@@ -14,9 +14,7 @@ Depending on the type of asset, different types of locations can be configured:
 
   ![Asset location configuration](~/solutions/images/Asset_Location_config.png)
 
-- **Container**: To assign an asset to a "container" type of facility, the container needs to be in the "Active" state.
-
-- **Desk**/**Rack**/**Room**: To assign an asset to a desk, a rack, or a room, the desk, rack, or room needs to be in the "Active" state.
+- **Container**/**Desk**/**Rack**/**Room**/**Building**: You can assign an asset to any of these locations.
 
   Assigning an asset to a **rack** is only possible if its asset class has more than 0 U of height defined, and its device type is configured as a "Rack Unit consumer" (see [Configuring device types](xref:AM_Configuring_device_types)).
 
