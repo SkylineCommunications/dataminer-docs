@@ -112,7 +112,7 @@ From now on, when you try to add a DataMiner Agent to a DataMiner System, the op
 - The DataMiner Agent is cloud-connected, but the DataMiner System is not.
 - The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
 
-If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.  
+If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.
 
 #### Scheduler will now be able to start more than 10 synchronously running Automation scripts [ID 44200]
 
