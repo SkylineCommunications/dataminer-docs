@@ -4,58 +4,57 @@ uid: MOP_Implementing_connection_strings_in_a_DMS
 
 # Implementing connection strings in a DataMiner System
 
-The procedure below details how to implement connection strings in a DataMiner System. With the help of these instructions, you will be able to create connection strings between all the DMAs within a cluster in a mesh-type connection, which means that every DMA will be connected with its respective peer. For example, DMA 1 will be connected to DMA2, DMA3, DMA4, etc.; DMA2 will be connected to DMA1, DMA3, DMA4, etc.; and so on.
+Implementing connection strings in a DataMiner System can be required if there are restrictions on the authentication within a DMS cluster. These restrictions can be noted when strange behavior occurs, like desynchronization between DMAs, missing files, users losing their connection, elements not being displayed on one DMA, etc.
 
-This procedure is required when there are restrictions on the authentication within a DMA cluster. These restrictions can be noted when strange behavior occurs, like desynchronization between DMAs, missing files, users losing their connection, elements not being displayed on one DMA, etc.
+The procedure below illustrates how to configure connection strings in the following example setup, in case an Agent cannot connect to a Failover pair or to a single other Agent:
+
+![Example setup: Failover and single Agent in one DMS](~/dataminer/images/ConnectionStrings_Cluster.png)
+
+> [!TIP]
+> For more information on connection strings and how to identify an issue because of connection strings, refer to [Connection strings](xref:Connection_strings).
 
 ## Requirements
 
-- Access to the DMAs with the built-in Windows Administrator account. This requires a connection dedicated completely or partially to this procedure, via VPN or local network.
-- Access to the *SLNetClientTest* tool on every DMA in the DataMiner System.
+- Remote access to the system
+- Credentials of a Windows user with Administrator privileges
+- Access to [SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool)
 
 ## Procedure
 
-### Check the requirements
+### Connection to a Failover pair
 
-#### Prerequisites
+By default, the connection towards a Failover pair always uses its virtual IP. There is therefore no need to create two separate connection strings per Failover Agent IP, so that in the case of this example only one connection string is needed.
 
-- Remote access to the system
-- Credentials for the built-in Windows Administrator account
+1. Connect to an Agent that is unable to connect to the Failover pair via [SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
-#### Steps
+   In this case, this will be the single Agent.
 
-1. Connect to the system using the designated VPN or host PC.
-1. Check if *SLTaskBarUtility* is available in the notification area. For more information, see [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility).
+1. Add a new connection string as detailed in the procedure [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string), using the following configuration:
 
-    - If *SLTaskBarUtility* is available, right-click the taskbar utility icon and select *Launch > Tools > Client Test*.
-    - If *SLTaskBarUtility* is not available, run the *SLNetClientTest* tool as Administrator from the following location: `C:\Skyline DataMiner\Files\SLNetClientTest.exe`.
+   - *From*: For this example, fill in the IP of single Agent. This box requires the IP of the Agent that is unable to access the destination Agent. If none of the Agents in the cluster can access it, the *Update All Connections To This Agent* checkbox can be used instead.
+   - *To*: The virtual IP of the Failover pair.
+   - *Username* and *Password*: The credentials of a Windows user with Administrator privileges towards the Failover pair.
 
-### Create the connection strings
+### Connection to a single Agent
 
-#### Prerequisites
+To configure the connection string towards a single Agent, always use the primary IP.
 
-Access to SLNetClientTest tool on the DMA
+In this example, a connection string will need to be created from each Agent in the Failover pair towards the single Agent.
 
-#### Steps
+1. Connect to an Agent that is unable to connect to the single Agent via [SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
-1. Connect to the DMS using the *SLNetClientTest* tool:
+   In this case, this will be one of the Failover Agents.
 
-    1. In the *SLNetClientTest* tool, go to *Connection* > *Connect*.
-    1. In the *Connect* window, under *Authentication*, select *Explicit credentials* and specify the Administrator credentials.
-    1. Click the *Connect* button.
+1. Add a new connection string as detailed in the procedure [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string), using the following configuration:
 
-1. In the *Advanced* menu, select *Edit Connection Uris*.
-1. Create the connections for each of the DMAs in the cluster, as detailed in [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string).
+   - *From*: For this example, fill in the primary IP of the Failover Agent.
+   - *To*: The IP of the single Agent.
+   - *Username* and *Password*: The credentials of a Windows user with Administrator privileges towards the single agent.
 
-   You will need to follow the linked procedure for all the DMA connections that need to be made. For example, if there are 9 DMAs in the system, there must be 8 connections from every DMA. From DMA1, for instance, there will need to be a connect to DMA2, DMA3, etc. up to DMA9; from DMA2, there will need to be a connection to DMA1, DMA3, etc. to DMA9; and so on.
+1. Create another connection string, this time use the primary IP of the other Failover Agent in the *From* field.
 
-1. When all connections have been configured, click the *Done* button in the *Connection String Configuration* window.
+## Verification
 
-## Time estimate
+After adding a connection string, wait a few minutes, and then go to Cube > System Center > Agents. You should notice that the connection towards the Agents has been established.
 
-| Item | Activity | Duration |
-|------|----------|----------|
-| 1    | Connect and open SLNetClientTest tool.      | 10 min. |
-| 2    | Connect to the DMS in SLNetClientTest tool. | 3 min.  |
-| 3    | Create the connection strings.              | approx. 30 min. per DMA,<br> depending on the number of DMAs in the cluster |
-| 4    | Check the results.                          | approx. 10 min. per DMA |
+After adding a connection string, a new *Redirects* tag will also be present in the file `C:\Skyline DataMiner\DMS.xml`. Open *DMS.xml* on the server used in the *From* field, and check if you find a *Redirects* tag towards the IP specified in the *To* field.
