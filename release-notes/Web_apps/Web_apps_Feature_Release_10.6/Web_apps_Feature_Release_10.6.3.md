@@ -89,3 +89,11 @@ When in a *Line & area chart* component, the *Trend points* option was set to "A
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 When you scrolled inside a *Timeline* component in which multiple groupings were applied, in some cases, the different groups would no longer be aligned with the timeline items.
+
+#### Dashboards/Low-Code Apps -Timeline component: Problem after a transition from summer time to winter time or vice versa [ID 44455]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When the DataMiner Agent had a fixed time zone, and the client computer had a time zone with a daylight saving time, up to now, transitioning from summer time to winter time and vice versa could yield unexpected results in a *Timeline* component. For example, timeline items could be too long or too short, be positioned incorrectly, or even be missing.
+
+From now on, all timeline items will be displayed correctly after a transition from summer time to winter time or vice versa.
