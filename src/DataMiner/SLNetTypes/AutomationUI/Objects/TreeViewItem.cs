@@ -42,6 +42,16 @@ namespace Skyline.DataMiner.Net.AutomationUI.Objects
 		public bool IsCollapsed { get; set; }
 
 		/// <summary>
+		/// Gets or sets a value indicating whether the previous collapsed state of the node should be restored. Default is <c>false</c>.
+		/// If no prior state is available, the value of <see cref="IsCollapsed"/> will be used instead.
+		/// </summary>
+		/// <value><c>true</c> if the previous collapsed state of the node should be restored; otherwise, <c>false</c>.</value>
+		/// <remarks>
+		/// <note type="note">Available from DataMiner 10.6.3/10.6.0 onwards.</note> <!-- RN 44515 -->
+		/// </remarks>
+		public bool UsePreviousCollapsedState { get; set; }
+
+		/// <summary>
 		/// Gets or sets the string value displayed for this item in the UI.
 		/// </summary>
 		/// <value>The string value displayed for this item in the UI.</value>
