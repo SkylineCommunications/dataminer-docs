@@ -20,6 +20,14 @@ Please also note the following:
 
 - In most cases, when you add a DataMiner Agent to a DataMiner System, all other DataMiner Agents in the DataMiner System will connect to it using its primary IP address. However, in some cases, you may need to configure the connection strings by hand. See [Connection strings](xref:Connection_strings).
 
+- From DataMiner 10.6.2/10.7.0 onwards<!--RN 44171-->, adding a DataMiner Agent will fail in the following cases:
+
+  - The DataMiner Agent is cloud-connected, but the DataMiner System is not.
+
+  - The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity (i.e. they are not part of the same cloud-connected system).
+
+  - If the DataMiner System is a STaaS system, the operation will also fail if the DataMiner Agent is not cloud-connected.  
+
 > [!WARNING]
 >
 > - If you add a DataMiner Agent to a DataMiner System, please make sure that it is a **new DataMiner Agent** that has not yet been put into use and that uses the **same software version** as the other Agents in the system.

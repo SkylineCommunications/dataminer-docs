@@ -12,6 +12,10 @@ uid: Adding_a_regular_DataMiner_Agent
 > - If the DataMiner System uses [Swarming](xref:Swarming), make sure Swarming is enabled on the new DMA before you add it to the cluster.
 > - If the DataMiner System uses STaaS, additional steps are required. See [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
 
+1. Make sure the DMA you want to add is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), and that both the DMA and the DMS are part of the same cloud-connected system.
+
+   From DataMiner 10.6.2/10.7.0 onwards<!--RN 44171-->, the operation will fail if the DMA is cloud-connected but the DMS is not, or if both are cloud-connected but do not share the same cloud identity.
+
 1. On a DMA that is currently already in the cluster, go to the *System Center* module and select the *Agents* page.
 
 1. In the *Manage* tab, below the list of DMAs in the cluster, click *Add*.
