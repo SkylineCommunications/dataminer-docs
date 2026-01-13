@@ -60,6 +60,16 @@ If the response to an *SNMP Get* request cannot be mapped, from now on, an error
 
 As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway Configuration* has now been removed from the list of backup options.
 
+##### Security Advisory BPA test: Enhancements [ID 44444]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+A number of enhancements have been made to the Security Advisory BPA test:
+
+- Up to now, the *Local admin hygiene* test would verify whether the local admin account was disabled and whether there were not too many local administrator accounts. From now on, this test will no longer be performed as the recommendations in the [hardening guide](https://aka.dataminer.services/HardeningGuide) have been updated.
+
+- The *gRPC* test will now properly take the default configuration into account. Up to now, this test would assume gRPC was disabled when not configured. From DataMiner feature release 10.5.10, gRPC is enabled by default, causing the test to report a false positive.
+
 ### Fixes
 
 #### Delay of DataMiner startup routine caused by SLDataMiner starting up faster than SLNet [ID 44438]

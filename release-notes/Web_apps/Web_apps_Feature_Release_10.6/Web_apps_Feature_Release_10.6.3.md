@@ -77,3 +77,9 @@ From now on, when a web app is deleted, its info file will be deleted last.
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 When in a *Line & area chart* component, the *Trend points* option was set to "Average (fixed interval)", in some cases, the trend graph would incorrectly display more data points than necessary.
+
+#### Dashboards/Low-Code Apps -Timeline component: Scrolling could cause the groups to no longer be aligned with the timeline items [ID 44445]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When you scrolled inside a *Timeline* component in which multiple groupings were applied, in some cases, the different groups would no longer be aligned with the timeline items.
