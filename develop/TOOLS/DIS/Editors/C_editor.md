@@ -35,7 +35,7 @@ If you right-click anywhere in the editor and select the *Copy Protocol to Clipb
 
 If you right-click anywhere in the editor and select the *Copy Code to Clipboard* command, the entire content of the file will be copied to the Windows Clipboard.
 
-When you use this menu option while working with a protocol solution or an Automation script solution, you will not only copy the current file to the Windows clipboard, but all files of the entire project combined in a way that is similar to the way in which they are combined when the solution is compiled.
+When you use this menu option while working with a protocol solution or an Automation script solution, you will not only copy the current file to the Windows clipboard, but all files of the entire project combined in a way that is similar to the way they are combined when the solution is compiled.
 
 ### Repeating selected text
 
