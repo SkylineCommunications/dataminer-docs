@@ -183,11 +183,21 @@ From now on, SLAnalytics will pause the creation of new synchronization tasks fo
 
 A number of enhancements have been done with regard to the communication between resource managers across DataMiner Agents. This will especially enhance performance when starting multiple bookings on non-master DMAs.
 
-#### DataAPI: Enhanced behavior in cluster environments [ID 44293]
+#### SLSNMPManager: Enhanced performance of the SNMP++ library [ID 44372]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-Because of a number of enhancements, DataAPI behavior in cluster environments has improved, especially when creating elements or uploading connectors.
+Because of a number of enhancements, overall performance of the SNMP++ library has increased, especially when polling large SNMP tables.
+
+#### Automation: Entrypoint ID added to the 'Finished executing script' log entry [ID 44382]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+The entry added to the *SLAutomation.txt* log file when an Automation script has finished will now contain the entrypoint ID.
+
+In the following example, the entrypoint ID can be found at the end of the entry between brackets (11):
+
+`2025/12/18 13:40:00.546|SLAutomation.exe 8.0.1415.2|22300|16908|CAutomation::Execute|INF|0|Finished executing script: 'script_RT_USER_DEFINABLE_APIS_BodySizeLimit_RT_USER_DEFINABLE_APIS_BodySizeLimit_MaxResponseBodySize' (ID: 7) - SUCCEEDED - Execution took 00.308s. (11)`
 
 ### Fixes
 
@@ -340,3 +350,23 @@ After a DataMiner restart or an element restart, in some cases, the service impa
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 In the `<PortSettings>` element of an HTTP connection, you can configure a `<SkipCertificateVerification>` element with child elements `<DefaultValue>` and `<Disabled>`. Up to now, both child elements would incorrectly not be read if the connection in question was not the primary connection.
+
+#### Problem with the GQI DxM when it tried to connect to SLNet during DataMiner startup [ID 44380]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+During DataMiner startup, in some rare cases, a fatal error could occur in the GQI DxM when it tried to connect to SLNet.
+
+#### Problem with SLDataMiner when an incomplete JSON response was received from Microsoft Entra ID [ID 44391]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In some cases, a fatal error could occur in SLDataMiner when an incomplete JSON response was received from Microsoft Entra ID while authenticating a user via SAML.
+
+#### Failing attempt to create an alarm for an element being stopped could block the alarm thread [ID 44394]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU0] -->
+
+When an alarm cannot be created for a particular element, an attempt is made to fetch the element state for logging purposes.
+
+Up to now, in some cases, when the element was being stopped and was flushing its data to the database, this fetch operation could block the alarm thread. As a result, no new alarms would get processed for that element until the element had stopped flushing its data.

@@ -17,6 +17,8 @@ items:
         items:
           - name: dataminer.services change log
             items:
+            - name: 2026
+              topicUid: dataminer_services_change_log_2026
             - name: 2025
               topicUid: dataminer_services_change_log_2025
             - name: 2024 (July-December)

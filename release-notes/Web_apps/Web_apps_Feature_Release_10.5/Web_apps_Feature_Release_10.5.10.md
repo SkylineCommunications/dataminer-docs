@@ -34,7 +34,7 @@ These events will take place in the following cases:
 >
 >- Although it is possible to have this *on open* event run an interactive Automation script, the script window will always have a light gray background and will not inherit the background color of the page it is launched on.
 >- Currently, linking is not supported. When configuring a link to a component value, the value will always remain empty as the component will not be loaded yet when the event takes place.
->- Current, passing URL data is not supported. A value passed through the URL will return as empty.
+>- Currently, passing URL data is not supported. A value passed through the URL will return as empty.
 
 #### Dashboards/Low-Code Apps - Maps component: Interacting with lines on a map [ID 43562]
 

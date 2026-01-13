@@ -133,4 +133,4 @@ In the following example, the value 1 will be saved in database as 01:
 ```
 
 > [!NOTE]
-> If Interprete/Type is set to "double", RawType is set to "signed number", and Length is set to "fixed", then length must be set to either 1, 2, 4, or 8.
+> If Interprete/Type is set to "double", RawType is set to "unsigned number", and Length is set to "fixed", then length must be set to either 1, 2, 4, or 8.
