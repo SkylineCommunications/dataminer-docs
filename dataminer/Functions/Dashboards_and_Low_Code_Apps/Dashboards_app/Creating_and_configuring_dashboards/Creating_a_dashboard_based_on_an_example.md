@@ -9,9 +9,9 @@ Instead of creating a dashboard from scratch, you can instead first import an ex
 > [!NOTE]
 > Importing example dashboards is only possible if such dashboards have been placed in the folder `C:\Skyline DataMiner\ImportDashboards` on the server.
 
-1. On the home page of the app, click *Start with an example dashboard*.
+1. On the home page of the app, select *Add* > *From import* in the top-right corner. Prior to DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44222-->, select *Start with an example dashboard*.
 
-   Alternatively, you can also right-click the list of dashboards on the left (or click the “...” icon in its top-right corner), and select *Import dashboard*.
+   Alternatively, you can also right-click the list of dashboards on the left and select *Add* > *From import*. Prior to DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44222-->, you can click the ellipsis button in the top-right corner of the dashboard list and select *Import dashboard*.
 
 1. In the pop-up window, next to the dashboard you want to import, click the *Import* button.
 

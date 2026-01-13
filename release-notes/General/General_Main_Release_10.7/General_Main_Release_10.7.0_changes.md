@@ -72,6 +72,16 @@ In most cases, these settings can keep their default value, unless performance h
 > - Only users with *Modules > System configuration > Tools > Admin tools* permission are allowed to change the above-mentioned settings.
 > - If the `SkipDcfLinks` setting is set to true, we recommend that you do not set MaxAmountOfParallelTasks too high. DCF link creation can be an expensive operation. Performing a large number of action in parallel might decrease performance.
 
+#### Enhanced visibility on SLNet connection issues [ID 44069]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Visibility on SLNet connection issues has been enhanced:
+
+- When a dashboard cannot be loaded because a DataMiner Agent is offline, an appropriate error message will now appear in that dashboard.
+
+- A new log file named *SLNetConnectionsMonitor.txt* will now keep a historic record of all SLNet connection states.
+
 #### Augmented Operations: Server-side support for new flatline detection modes [ID 44094]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
@@ -123,6 +133,22 @@ The response to a `GetRADParameterGroupInfoMessage` will now also include the ID
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
 A number of enhancements have been done with regard to the communication between resource managers across DataMiner Agents. This will especially enhance performance when starting multiple bookings on non-master DMAs.
+
+#### Automation: Entrypoint ID added to the 'Finished executing script' log entry [ID 44382]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+The entry added to the *SLAutomation.txt* log file when an Automation script has finished will now contain the entrypoint ID.
+
+In the following example, the entrypoint ID can be found at the end of the entry between brackets (11):
+
+`2025/12/18 13:40:00.546|SLAutomation.exe 8.0.1415.2|22300|16908|CAutomation::Execute|INF|0|Finished executing script: 'script_RT_USER_DEFINABLE_APIS_BodySizeLimit_RT_USER_DEFINABLE_APIS_BodySizeLimit_MaxResponseBodySize' (ID: 7) - SUCCEEDED - Execution took 00.308s. (11)`
+
+#### DataMiner backup: 'Ticketing Gateway Configuration' removed from the list of backup options [ID 44401]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway Configuration* has now been removed from the list of backup options.
 
 ### Fixes
 
