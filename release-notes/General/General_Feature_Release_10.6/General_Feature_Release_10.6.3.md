@@ -67,3 +67,11 @@ As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway C
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 During DataMiner startup, in some rare cases, SLDataMiner would start up faster than SLNet. This would cause a delay of about 2 minutes in the entire startup routine.
+
+#### DaaS: Short-lived alarms without operational impact would appear immediately after the 'My DataMiner Agent' element had been created [ID 44440]
+
+<!-- MR 10.6.0 - FR 10.6.3 -->
+
+On a newly created DaaS system, up to now, short-lived alarms without operational impact could appear immediately after the *My DataMiner Agent* element had been created.
+
+In the alarm template of the *My DataMiner Agent* element, hysteresis has now been tweaked to prevent such alarms from appearing on newly created DaaS systems.

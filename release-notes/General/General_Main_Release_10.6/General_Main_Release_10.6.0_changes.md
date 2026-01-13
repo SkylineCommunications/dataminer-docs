@@ -793,3 +793,11 @@ When an element was swarmed to the DataMiner Agent on which it was already locat
 <!-- MR 10.6.0 - FR 10.5.12 [CU1] -->
 
 When you removed a rogue or unreachable IP address on the *Agents* page in *System Center*, up to now, the DataMiner Agent you were connected to could unexpectedly switch to the *Leaving cluster* state and leave the cluster.
+
+#### DaaS: Short-lived alarms without operational impact would appear immediately after the 'My DataMiner Agent' element had been created [ID 44440]
+
+<!-- MR 10.6.0 - FR 10.6.3 -->
+
+On a newly created DaaS system, up to now, short-lived alarms without operational impact could appear immediately after the *My DataMiner Agent* element had been created.
+
+In the alarm template of the *My DataMiner Agent* element, hysteresis has now been tweaked to prevent such alarms from appearing on newly created DaaS systems.
