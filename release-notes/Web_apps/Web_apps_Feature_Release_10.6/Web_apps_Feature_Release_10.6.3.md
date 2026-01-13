@@ -97,3 +97,11 @@ When you scrolled inside a *Timeline* component in which multiple groupings were
 When the DataMiner Agent had a fixed time zone, and the client computer had a time zone with a daylight saving time, up to now, transitioning from summer time to winter time and vice versa could yield unexpected results in a *Timeline* component. For example, timeline items could be too long or too short, be positioned incorrectly, or even be missing.
 
 From now on, all timeline items will be displayed correctly after a transition from summer time to winter time or vice versa.
+
+#### Dashboards/Low-Code Apps - Alarm table component: Problem when an alarm was removed from a group that had been deleted earlier [ID 44463]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When the alarms in an *Alarm table* component are grouped by time, they are grouped under group names such as "Today", "Yesterday", and "Last Week".
+
+Up to now, when a certain group name had been removed (e.g. by means of an Automation script), and an alarm under that group name returned to its normal state, an error would occur when the *Alarm table* component attempted to remove the alarm.
