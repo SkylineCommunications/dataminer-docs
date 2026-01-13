@@ -18,6 +18,8 @@ Make sure you keep library versions in sync as much as possible.
 To help with debugging, it can be useful to know more about how assemblies are loaded in the .NET Framework and DataMiner. There are two parts to loading assemblies:
 
 - [Compilation-time assembly binding](xref:Compilation_Time_Assembly_Binding), and
-- [Run-time assembly binding](xref:Run_Time_Assembly_Binding).
+- [Runtime assembly binding](xref:Run_Time_Assembly_Binding).
 
 Remember that even when compilation succeeds, issues could still occur at runtime.
+
+Note also that the [behavior in Automation scripts](xref:AssemblyResolvingAutomationScripts) is different from the [behavior in connectors](xref:AssemblyResolvingConnectors).

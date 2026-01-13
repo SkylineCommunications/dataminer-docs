@@ -31,6 +31,6 @@ Note that in solution-based development you do not add these. Instead, you add r
 Also note that some assembly references are added by default. For more information, refer to the documentation of the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute (for protocol QActions) or to [Adding C# code to a script in Cube](xref:Adding_CSharp_code_to_an_Automation_script#adding-c-code-to-a-script-in-cube) for Automation script C# exe blocks.
 
 > [!IMPORTANT]
-> Although a reference might not be needed at compilation time, the assembly is needed at runtime. For more information, refer to [Run-time assembly binding](xref:Run_Time_Assembly_Binding).
+> Although a reference might not be needed at compilation time, the assembly is needed at runtime. For more information, refer to [Runtime assembly binding](xref:Run_Time_Assembly_Binding).
 
 The [assembly manifest](https://learn.microsoft.com/en-us/dotnet/standard/assembly/manifest) of the compiled assembly will contain information about the immediate referenced assemblies, where each reference includes, among other things, the name and version of the referenced assembly.

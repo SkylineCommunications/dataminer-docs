@@ -7100,7 +7100,7 @@ items:
             items:
             - name: Compilation-time assembly binding
               topicUid: Compilation_Time_Assembly_Binding
-            - name: Run-time assembly binding
+            - name: Runtime assembly binding
               topicUid: Run_Time_Assembly_Binding
             - name: Assembly binding connectors
               topicUid: AssemblyResolvingConnectors
