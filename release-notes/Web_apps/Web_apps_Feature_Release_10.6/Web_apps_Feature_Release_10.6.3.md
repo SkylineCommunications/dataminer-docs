@@ -54,6 +54,12 @@ For example, while data was being loaded, up to now, no loader bar would be disp
 
 Also, API calls will only be performed again when their arguments change, and no abort errors will be shown anymore.
 
+#### Dashboards app: List of recently opened dashboards will now be sorted chronologically [ID 44452]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In the sidebar of the Dashboards app, up to now, the list of recently opened dashboards would be sorted alphabetically. From now on, the dashboards in that list will be sorted by the time at which they were opened, from most recent to least recent.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Maps component would incorrectly fetch markers with larger bounds than necessary when you zoomed in or out [ID 44381]
