@@ -14,6 +14,6 @@ With the Plan and Build app, you can define and manage jobs that need to be done
 
 - ![Jobs](~/solutions/images/PB_Jobs_List_icon.png) **Jobs**: Shows all available jobs, either in a list or on a timeline, and allows you to add and configure jobs.
 
-- ![App Configuration](~/solutions/images/PB_App_Configuration_icon.png) **App Configuration**: <!-- TBD: More info needed on Job ID configuration + New Job IAS button; add extra page about this? -->
+- ![App Configuration](~/solutions/images/PB_App_Configuration_icon.png) **App Configuration**:  Allows you to configure a prefix for the job name (for example, `JOB #`).
 
 - ![About](~/solutions/images/PB_About_icon.png) **About**: Contains version information for the app.
