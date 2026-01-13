@@ -13,7 +13,7 @@ To install dataminer.InfraOps:
    - [MediaOps](xref:MediaOps) 1.1.3-CU0 or higher is installed.
    - [Web File Manager](https://catalog.dataminer.services/details/330649ca-c685-4e1c-a9a5-aeca6ca8b40f) is installed.
 
-1. Look up the [InfraOps package](https://catalog.dataminer.services/details/240a14ca-64cf-488d-a039-85be17d19f00) in the DataMiner Catalog.
+1. Look up the [InfraOps package](https://catalog.dataminer.services/details/5a1edac2-45aa-4498-8ab7-ee322d07da27) in the DataMiner Catalog.
 
 1. If all prerequisites are met, click the *Deploy* button.
 
