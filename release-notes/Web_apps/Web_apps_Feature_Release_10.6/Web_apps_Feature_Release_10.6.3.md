@@ -54,6 +54,14 @@ For example, while data was being loaded, up to now, no loader bar would be disp
 
 Also, API calls will only be performed again when their arguments change, and no abort errors will be shown anymore.
 
+#### DataMiner upgrade: New internal setting to allow or forbid installers to downgrade [ID 44441]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Up to now, every installer included in a DataMiner web upgrade package was allowed to downgrade, and every installer in a full DataMiner server upgrade package was forbidden to downgrade.
+
+From now on, when a DataMiner web upgrade package is created, it will be possible to explicitly indicate that certain installers are forbidden to downgrade, and when a full DataMiner server upgrade package is created, it will be possible to explicitly indicate that certain installers are allowed to downgrade.
+
 #### Dashboards app: List of recently opened dashboards will now be sorted chronologically [ID 44452]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->

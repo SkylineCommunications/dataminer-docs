@@ -60,6 +60,14 @@ If the response to an *SNMP Get* request cannot be mapped, from now on, an error
 
 As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway Configuration* has now been removed from the list of backup options.
 
+#### DataMiner upgrade: New internal setting to allow or forbid installers to downgrade [ID 44441]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Up to now, every installer included in a DataMiner web upgrade package was allowed to downgrade, and every installer in a full DataMiner server upgrade package was forbidden to downgrade.
+
+From now on, when a DataMiner web upgrade package is created, it will be possible to explicitly indicate that certain installers are forbidden to downgrade, and when a full DataMiner server upgrade package is created, it will be possible to explicitly indicate that certain installers are allowed to downgrade.
+
 ##### Security Advisory BPA test: Enhancements [ID 44444]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->

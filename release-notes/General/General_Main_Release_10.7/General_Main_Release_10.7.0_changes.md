@@ -134,6 +134,19 @@ The response to a `GetRADParameterGroupInfoMessage` will now also include the ID
 
 A number of enhancements have been done with regard to the communication between resource managers across DataMiner Agents. This will especially enhance performance when starting multiple bookings on non-master DMAs.
 
+#### DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+In order to upgrade the DataMiner Assistant DxM, up to now, you had to install a full DataMiner server upgrade package (main release or feature release).
+
+From now on, the DataMiner Assistant DxM will be included in the DataMiner web upgrade packages instead.
+
+See also: [DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]](xref:Web_apps_Feature_Release_10.6.2#dataminer-upgrade-dataminer-assistant-dxm-will-now-be-included-in-the-dataminer-web-upgrade-packages-id-44291)
+
+> [!NOTE]
+> The DataMiner Assistant DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
+
 #### Automation: Entrypoint ID added to the 'Finished executing script' log entry [ID 44382]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
@@ -149,6 +162,14 @@ In the following example, the entrypoint ID can be found at the end of the entry
 <!-- MR 10.7.0 - FR 10.6.3 -->
 
 As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway Configuration* has now been removed from the list of backup options.
+
+#### DataMiner upgrade: New internal setting to allow or forbid installers to downgrade [ID 44441]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Up to now, every installer included in a DataMiner web upgrade package was allowed to downgrade, and every installer in a full DataMiner server upgrade package was forbidden to downgrade.
+
+From now on, when a DataMiner web upgrade package is created, it will be possible to explicitly indicate that certain installers are forbidden to downgrade, and when a full DataMiner server upgrade package is created, it will be possible to explicitly indicate that certain installers are allowed to downgrade.
 
 ### Fixes
 
