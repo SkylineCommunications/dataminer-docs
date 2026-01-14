@@ -12,7 +12,7 @@ At the top of the tool window, you can find the following buttons:
 
 | Button | Description |
 |--|--|
-| Validate | Launches  a new protocol validation.<br>Note that as of DIS v2.41, when you open a main DVE protocol and click *Validate*, DIS will not only validate the main protocol but also all its exported child DVE protocols. |
+| Validate | Launches  a new protocol validation.<br>When you open a main DVE protocol and click *Validate*, DIS will not only validate the main protocol but also all its exported child DVE protocols. |
 | Export | Exports the results of the latest validation to a CSV file. |
 | ![Show/hide suppressed results](~/develop/images/DisValidatorToolWindowToggleResultsIcon.png) | Switches between showing only the active items or all items (i.e. active, suppressed, and postponed items). |
 
@@ -21,13 +21,12 @@ The validator results are listed in a tree grid that groups the validation resul
 | Column | Description |
 |--|--|
 | Description | A description of the issue. |
-| Information icon | This icon is shown in case more information is available about this validator check. Click the icon to view this information. Starting from DIS 3.1.6, instead a link to the online documentation of the validator is provided. <!-- RN 42396 -->|
+| Code | Displays the unique code of the validator check.<br>Clicking this code will open the online validator documentation in a browser window and show you more information about the error in question.<!-- RN 42396 --> |
 | Auto-fix icon | If this icon is displayed, an auto-fix is available. To execute the fix, from the context menu, select either *Fix* > *This error* or *Fix* > *All errors of this type*. |
 | State | Shows the state of this validation result (*Active*, *Postponed*, or *Suppressed*). |
 | Certainty | Specifies whether the validator is certain or uncertain about the validity of the detected issue. If a result is uncertain, we recommend that you check the result and either fix the issue or [suppress the result](#suppressing-or-postponing-a-validation-result). |
 | Fix Impact | Indicates whether fixing the issues results in a breaking change. |
 | Category | Displays the category of the check (e.g. *Param* or *Protocol*). |
-| Code | Displays the unique code of the validator check. |
 | Line | Specifies the line number where the issue was detected. |
 | Column | Specifies the column number where the issue was detected. |
 | DVE | Displays the name of the DVE protocol in case this validation result belongs to a DVE protocol. |

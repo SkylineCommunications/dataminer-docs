@@ -42,7 +42,7 @@ While it is still possible to [download an older DIS version](xref:Installing_an
 
 Make sure you have configured and enabled [nuget.org](https://api.nuget.org/v3/index.json) in Visual Studio.
 
-This is a requirement to be able to automatically install DataMiner templates when Microsoft Visual Studio is opened after DIS is installed (which happens as of DIS 2.42).
+This is a requirement to be able to automatically install DataMiner templates when Microsoft Visual Studio is opened after DIS is installed.
 
 ### Required user permissions
 
