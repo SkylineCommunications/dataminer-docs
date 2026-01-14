@@ -4,6 +4,9 @@ uid: Displaying_ticket_statistics_in_the_Surveyor
 
 # Displaying ticket statistics in the Surveyor
 
+> [!IMPORTANT]
+> The Ticketing app is obsolete. It is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
+
 In the Surveyor, ticket statistics can be displayed next to elements, services and views.
 
 The settings that control the data being displayed have to be configured in *MaintenanceSettings.xml* and are synchronized across all DMAs in the DMS.

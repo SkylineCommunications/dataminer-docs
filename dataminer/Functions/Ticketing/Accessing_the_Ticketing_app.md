@@ -5,7 +5,7 @@ uid: Accessing_the_Ticketing_app
 # Accessing the Ticketing app
 
 > [!IMPORTANT]
-> The Ticketing app is obsolete. It is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
+> The Ticketing app is obsolete. It is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
 
 To access the Ticketing app:
 
