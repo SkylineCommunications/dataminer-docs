@@ -14,14 +14,6 @@ Watch this short video to learn how to create a new DataMiner System hosted on d
   </video>
 </div>
 
-<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%; margin-top: 20px;">
-  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DFF6DD; margin-right: 20px; color: black;">
-    <b><span style="color: #2A7661;">💡 TIP</span></b><br>
-    You can also watch our interactive exercise on DataMiner Dojo: 
-    <a href="https://community.dataminer.services/courses/kata-11/">Kata #11: Create a DMS on dataminer.services</a>.
-  </div>
-</div>
-
 <br />
 
 1. [Log on to dataminer.services](xref:Logging_on_to_dataminer_services).
@@ -30,19 +22,17 @@ Watch this short video to learn how to create a new DataMiner System hosted on d
 
    ![Add a new DataMiner System button](~/dataminer/images/daas_create_001.png)
 
-1. Click *DataMiner as a Service*.
+1. Select the organization under which you want to register the DataMiner System, or click *Create a new organization* if your organization does not exist yet.
 
-1. Select the *Organization* under which you want to register the DataMiner System.
+   If you select to create a new organization, you need to specify the name and the URL for the organization. Note that in the URL of the organization only lowercase alphanumerical characters (a-z and 0-9) are allowed, and the URL cannot consist of numbers only.
 
-   > [!NOTE]
-   > If the organization is not available yet in the dropdown list, you can add a new organization by clicking *Create new*. You will be able to specify the name and the URL for the organization. Note that in the URL of the organization only lowercase alphanumerical characters (a-z and 0-9) are allowed, and the URL cannot consist of numbers only.
+1. Select *DataMiner as a Service*.
 
-1. Enter a *DataMiner System Name*.
+1. Enter a name for your DataMiner System.
 
-1. Enter a custom *DataMiner System URL* if you want the URL to be different from the *DataMiner System Name*.
+1. If you want the URL of your system to be different from the system name, fill in the *Remove URL indicator*.
 
-   > [!NOTE]
-   > Only lowercase alphanumerical characters (a-z and 0-9) are allowed in the URL, and it cannot consist of numbers only.
+   Only lowercase alphanumerical characters (a-z and 0-9) are allowed in the URL, and it cannot consist of numbers only.
 
 1. Optionally, in the *Time zone* box, select the time zone for your DataMiner System.
 
