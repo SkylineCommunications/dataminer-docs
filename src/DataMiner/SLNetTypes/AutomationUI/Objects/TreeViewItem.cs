@@ -52,6 +52,20 @@ namespace Skyline.DataMiner.Net.AutomationUI.Objects
 		public bool UsePreviousCollapsedState { get; set; }
 
 		/// <summary>
+		/// Gets or sets a value indicating whether the item supports lazy loading. Default is <c>false</c>.
+		/// </summary>
+		/// <value><c>true</c> if lazy loading is supported; otherwise, <c>false</c>.</value>
+		/// <remarks>
+		/// <note type="note">
+		///   When set to <c>true</c> an arrow will be shown in front of the tree view item, even when it does not have any child items.
+		///   Upon clicking the arrow, the script will continue (note that 'WantsOnChange' is not required for this) and the expanded
+		///   state of the item can be checked by using the 'GetExpanded' method on 'UIResults'.
+		///   The child items for the expanded item can now be added to the tree view.
+		/// </note> <!-- RN 28528 -->
+		/// </remarks>
+		public bool SupportsLazyLoading { get; set; }
+
+		/// <summary>
 		/// Gets or sets the string value displayed for this item in the UI.
 		/// </summary>
 		/// <value>The string value displayed for this item in the UI.</value>
