@@ -4,7 +4,7 @@ uid: Configuring_DataMiner_Indexing
 
 # Configuring indexing settings in DataMiner Cube
 
-The indexing settings in System Center determine which information is stored in the indexing database of a [dedicated clustered storage](xref:Dedicated_clustered_storage) setup. For systems using [STaaS](xref:STaaS), this configuration is not used.<!-- RN 44435 -->
+The indexing settings in System Center determine which information is stored in the indexing database of a [dedicated clustered storage](xref:Dedicated_clustered_storage) setup.
 
 To configure these settings, go to *System Center* > *Search & Indexing*.
 
@@ -15,7 +15,7 @@ To configure these settings, go to *System Center* > *Search & Indexing*.
 
 The following settings are available:
 
-- *Enable indexing on alarms:* Enables indexing of alarms. If this option is not enabled, the enhanced search options in the Alarm Console are not available.
+- *Enable indexing on alarms:* Enables indexing of alarms. If this option is not enabled, the enhanced search options in the Alarm Console are not available. For systems using [STaaS](xref:STaaS) or [dedicated clustered storage](xref:Dedicated_clustered_storage), this setting is not used.<!-- RN 44435 -->
 
 - *Migrate booking data to Indexing Engine*: Prior to DataMiner 10.4, this allows you to migrate booking data from the Cassandra database to the indexing database, if this has not been done yet. This migration must be done before you can upgrade to DataMiner 10.4 or higher.
 
