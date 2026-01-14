@@ -4,15 +4,25 @@ uid: InteractiveAutomationScript
 
 # Interactive Automation script
 
-Available from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards.<!-- RN 39969 -->
+Available from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!-- RN 39969 -->, in the Low-Code Apps module.
 
 This component allows you to visualize any interactive Automation script (IAS) within pages or panels of a low-code app.
 
-> [!NOTE]
->
-> - This component is only available in the Low-Code Apps module.
-> - Scripts will time out after they have run for 15 minutes. This means that after a script has been shown in the component for 15 minutes, an error will be shown.
-> - From DataMiner 10.5.9/10.6.0 onwards, the script's [InteractivityOptions](xref:Automation-InteractivityOptions) should be set to *Always* for it to be compatible with this component.
+## Prerequisites
+
+- From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44232-->, to visualize the interactive Automation script, you need the user permission [*Modules > Automation > Execute*](xref:DataMiner_user_permissions#modules--automation--execute). Prior to DataMiner 10.5.0 [CU11]/10.6.2, to visualize the interactive Automation script, you need the user permission [*Modules > Automation > UI available*](xref:DataMiner_user_permissions#modules--automation--ui-available).
+
+- From DataMiner 10.5.9/10.6.0 onwards, the script's [InteractivityOptions](xref:Automation-InteractivityOptions) should be set to *Always* for it to be compatible with this component.
+
+## Interacting with the IAS component
+
+When an interactive Automation script is visualized in a low-code app, you can interact with it through the UI defined in the script itself. Any dialog boxes or other UI elements created by the script (such as buttons, input fields, or error messages) appear directly inside the component.
+
+The following behaviors apply when using the component:
+
+- Scripts will time out after they have run for 15 minutes. This means that after a script has been shown in the component for 15 minutes, an error will be shown.
+
+- When a new script is started while another is running, the component will wait for the current script to finish before launching the new one.
 
 ## Configuring the component
 
