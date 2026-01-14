@@ -54,14 +54,6 @@ For example, while data was being loaded, up to now, no loader bar would be disp
 
 Also, API calls will only be performed again when their arguments change, and no abort errors will be shown anymore.
 
-#### DataMiner upgrade: New internal setting to allow or forbid installers to downgrade [ID 44441]
-
-<!-- MR 10.7.0 - FR 10.6.3 -->
-
-Up to now, every installer included in a DataMiner web upgrade package was allowed to downgrade, and every installer in a full DataMiner server upgrade package was forbidden to downgrade.
-
-From now on, when a DataMiner web upgrade package is created, it will be possible to explicitly indicate that certain installers are forbidden to downgrade, and when a full DataMiner server upgrade package is created, it will be possible to explicitly indicate that certain installers are allowed to downgrade.
-
 #### Dashboards app: List of recently opened dashboards will now be sorted chronologically [ID 44452]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
@@ -99,6 +91,14 @@ From now on, when a web app is deleted, its info file will be deleted last.
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 When in a *Line & area chart* component, the *Trend points* option was set to "Average (fixed interval)", in some cases, the trend graph would incorrectly display more data points than necessary.
+
+#### DataMiner web upgrade packages would incorrectly downgrade the DataMiner Assistant DxM when the installed version was more recent [ID 44441]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+When you installed a DataMiner web upgrade package, up to now, the DataMiner Assistant DxM would incorrectly be downgraded when the system found an installed version that was more recent than the one included in the package.
+
+From now on, a DataMiner web upgrade package will no longer be allowed to downgrade the DataMiner Assistant DxM. It will only be allowed to install a new DataMiner Assistant DxM is the installed version is older than the one included in the package.
 
 #### Dashboards/Low-Code Apps -Timeline component: Scrolling could cause the groups to no longer be aligned with the timeline items [ID 44445]
 
