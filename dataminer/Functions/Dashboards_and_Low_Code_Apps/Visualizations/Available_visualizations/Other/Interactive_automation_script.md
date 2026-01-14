@@ -10,7 +10,7 @@ This component allows you to visualize any interactive Automation script (IAS) w
 
 ## Prerequisites
 
-- From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44232-->, to visualize the interactive Automation script, you need the user permission [*Modules > Automation > Execute*](xref:DataMiner_user_permissions#modules--automation--execute). Prior to DataMiner 10.5.0 [CU11]/10.6.2, to visualize the interactive Automation script, you need the user permissions [Modules > Automation > Execute](xref:DataMiner_user_permissions#modules--automation--execute) and [Modules > Automation > UI Available](xref:DataMiner_user_permissions#modules--automation--ui-available).
+- From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44232-->, to visualize the interactive Automation script, you need the user permission [*Modules > Automation > Execute*](xref:DataMiner_user_permissions#modules--automation--execute). Prior to DataMiner 10.5.0 [CU11]/10.6.2, to visualize the interactive Automation script, you need bot the [*Modules > Automation > Execute*](xref:DataMiner_user_permissions#modules--automation--execute) and [Modules > Automation > UI Available](xref:DataMiner_user_permissions#modules--automation--ui-available) user permissions.
 
 - From DataMiner 10.5.9/10.6.0 onwards, the script's [InteractivityOptions](xref:Automation-InteractivityOptions) should be set to *Always* for it to be compatible with this component.
 
