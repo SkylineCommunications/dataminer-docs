@@ -8,6 +8,9 @@ reviewer: Alexander Verkest
 
 Though this is not recommended, once a DataMiner Agent has been connected to dataminer.services, it is possible to disconnect it again. You can either [disconnect temporarily](#temporarily-disconnecting-from-dataminerservices), or [disconnect permanently](#permanently-disconnecting-from-dataminerservices).
 
+> [!TIP]
+> If you just want to remove one DMA from a DMS on dataminer.services, refer to [Removing a DataMiner Agent from a DataMiner System](xref:Removing_a_DataMiner_Agent_from_a_DataMiner_System).
+
 ## Temporarily disconnecting from dataminer.services
 
 Temporarily disconnect your system from dataminer.services, go to each server that has the CloudGateway module installed, and complete the following steps:
@@ -51,10 +54,7 @@ To **reconnect your system**, you will need to change the startup type for the D
 > - If your DMS uses DataMiner **Storage as a Service** (STaaS), **all data will be permanently lost** 7 days after the system is disconnected, and the system will no longer be usable.
 > - If you use **DataMiner as a Service** (DaaS), this will **delete your system**. See [Removing a DaaS system](xref:Removing_a_DaaS_system).
 
-### To disconnect a DataMiner Agent from dataminer.services
-   Follow the steps mentioned [here](https://docs.dataminer.services/dataminer/Administrator_guide/DataMiner_Systems/Removing_a_DataMiner_Agent_from_a_DataMiner_System.html). 
-
-### To disconnect a DataMiner System from dataminer.services:
+To disconnect a DataMiner System from dataminer.services:
 
 1. Delete the DMS on dataminer.services:
 
@@ -85,4 +85,3 @@ To **reconnect your system**, you will need to change the startup type for the D
 
 > [!NOTE]
 > Performing either of the two main steps above is already enough to disconnect the DMS. However, if you only delete the DMS on dataminer.services, the DMS will still try to reach dataminer.services, and if you only unregister the DMS, the information related to the DMS will still be displayed on dataminer.services.
-
