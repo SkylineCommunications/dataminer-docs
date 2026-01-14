@@ -232,13 +232,17 @@ items:
         topicUid: Troubleshooting_SLScripting
         items:
           - name: Investigate reoccurring SLScripting crashes
-            topicUid: SLScripting_reoccurring_Crashes
+            topicUid: SLScripting_SLProtocol_Reoccurring_Crashes
           - name: Investigating exception occurrence on Finalizer thread
             topicUid: TroubleshootingSLScriptingFinalizerException
           - name: Investigating OutOfMemoryException occurrences
             topicUid: TroubleshootingSLScriptingOutOfMemoryException
           - name: Investigating StackOverflowException occurrences
             topicUid: TroubleshootingSLScriptingStackOverflowException
+      - name: Troubleshooting - SLProtocol
+        items:
+          - name: Investigate reoccurring SLProtocol crashes
+            topicUid: SLScripting_SLProtocol_Reoccurring_Crashes
       - name: Troubleshooting – STaaS
         topicUid: Troubleshooting_STaaS
         items:
