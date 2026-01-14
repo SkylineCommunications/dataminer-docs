@@ -58,8 +58,8 @@ namespace Skyline.DataMiner.Net.AutomationUI.Objects
 		/// <remarks>
 		/// <note type="note">
 		///   When set to <c>true</c> an arrow will be shown in front of the tree view item, even when it does not have any child items.
-		///   Upon clicking the arrow, the script will continue (note that 'WantsOnChange' is not required for this) and the expanded
-		///   state of the item can be checked by using the 'GetExpanded' method on 'UIResults'.
+		///   Upon clicking the arrow, the script will continue (note that <c>WantsOnChange</c> is not required for this) and the expanded
+		///   state of the item can be checked by using the <c>GetExpanded</c> method on <c>UIResults</c>.
 		///   The child items for the expanded item can now be added to the tree view.
 		/// </note> <!-- RN 28528 -->
 		/// </remarks>
