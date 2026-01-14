@@ -22,7 +22,7 @@ This filter box can be used in different ways:
 
   - *Exclude \[highlighted text\] in filter*: This option can only be used on an item that is not yet in the filter, and adds a negative filter for this item. This is the equivalent to adding an exclamation mark in front of an item when you type text in the filter.
 
-  - *Search for \[selected text\] in new tab*: This option opens a new *Search alarms* tab in the Alarm Console, in which you can search through alarms using this filter. This option is only available on a DMA with [indexing database](xref:Indexing_Database).
+  - *Search for \[selected text\] in new tab*: This option opens a new *Search alarms* tab in the Alarm Console, in which you can search through alarms using this filter. This option is only available if the DMS uses [self-managed storage with indexing database](xref:Indexing_Database).
 
   - *Copy \[highlighted text\]*
 
@@ -97,7 +97,7 @@ To add such a filtered tab page:
 
 ## Creating a search tab in the Alarm Console
 
-When you are connected to a DMA with [indexing database](xref:Indexing_Database), the Alarm Console provides an additional option to create a dynamic search tab:
+When you are connected to a DMS with [self-managed storage with indexing database](xref:Indexing_Database), the Alarm Console provides an additional option to create a dynamic search tab:
 
 1. Click the *+* symbol in the header of the Alarm Console to open a new tab.
 
