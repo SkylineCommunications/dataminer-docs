@@ -34,6 +34,8 @@ You can link a shape to:
 
 - [a video thumbnail](xref:Linking_a_shape_to_a_video_thumbnail)
 
+- [a video stream using VLC](xref:Linking_a_shape_to_a_video_stream_using_VLC)
+
 - [a webpage](xref:Linking_a_shape_to_a_webpage)
 
 - [an Automation script](xref:Linking_a_shape_to_an_Automation_script)

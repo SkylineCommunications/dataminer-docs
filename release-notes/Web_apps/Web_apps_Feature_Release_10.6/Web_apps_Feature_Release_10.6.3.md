@@ -60,6 +60,14 @@ Also, API calls will only be performed again when their arguments change, and no
 
 In the sidebar of the Dashboards app, up to now, the list of recently opened dashboards would be sorted alphabetically. From now on, the dashboards in that list will be sorted by the time at which they were opened, from most recent to least recent.
 
+#### Dashboards/Low-Code Apps - GQI components: 'Empty result message' setting can now be cleared [ID 44472]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In the *Table*, *Column & bar chart*, *Line & area chart*, *Pie & donut chart*, *Grid*, *Timeline*, and *Node edge graph* components, the *Empty result message* setting allows you to specify a custom message that is displayed when a query returns no results.
+
+From now on, it will be possible to clear this setting's value. If you do so, no message will be displayed when a query returns no results, and the component will be empty.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Maps component would incorrectly fetch markers with larger bounds than necessary when you zoomed in or out [ID 44381]
@@ -84,8 +92,32 @@ From now on, when a web app is deleted, its info file will be deleted last.
 
 When in a *Line & area chart* component, the *Trend points* option was set to "Average (fixed interval)", in some cases, the trend graph would incorrectly display more data points than necessary.
 
+#### DataMiner web upgrade packages would incorrectly downgrade the DataMiner Assistant DxM when the installed version was more recent [ID 44441]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+When you installed a DataMiner web upgrade package, up to now, the DataMiner Assistant DxM would incorrectly be downgraded when the system found an installed version that was more recent than the one included in the package.
+
+From now on, a DataMiner web upgrade package will no longer be allowed to downgrade the DataMiner Assistant DxM. It will only be allowed to install a new DataMiner Assistant DxM is the installed version is older than the one included in the package.
+
 #### Dashboards/Low-Code Apps -Timeline component: Scrolling could cause the groups to no longer be aligned with the timeline items [ID 44445]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 When you scrolled inside a *Timeline* component in which multiple groupings were applied, in some cases, the different groups would no longer be aligned with the timeline items.
+
+#### Dashboards/Low-Code Apps -Timeline component: Problem after a transition from summer time to winter time or vice versa [ID 44455]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When the DataMiner Agent had a fixed time zone, and the client computer had a time zone with a daylight saving time, up to now, transitioning from summer time to winter time and vice versa could yield unexpected results in a *Timeline* component. For example, timeline items could be too long or too short, be positioned incorrectly, or even be missing.
+
+From now on, all timeline items will be displayed correctly after a transition from summer time to winter time or vice versa.
+
+#### Dashboards/Low-Code Apps - Alarm table component: Problem when an alarm was removed from a group that had been deleted earlier [ID 44463]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When the alarms in an *Alarm table* component are grouped by time, they are grouped under group names such as "Today", "Yesterday", and "Last Week".
+
+Up to now, when a certain group name had been removed (e.g. by means of an Automation script), and an alarm under that group name returned to its normal state, an error would occur when the *Alarm table* component attempted to remove the alarm.

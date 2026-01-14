@@ -19,7 +19,7 @@ Restart the affected element.
 
 ## Fix
 
-No fix is available yet.<!-- RN 44172 -->
+Install DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44172-->.
 
 ## Description
 

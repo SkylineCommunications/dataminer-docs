@@ -60,15 +60,25 @@ If the response to an *SNMP Get* request cannot be mapped, from now on, an error
 
 As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway Configuration* has now been removed from the list of backup options.
 
-##### Security Advisory BPA test: Enhancements [ID 44444]
+#### Security Advisory BPA test: Enhancements [ID 44444] [ID 44477]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-A number of enhancements have been made to the Security Advisory BPA test:
+Up to now, the *Local admin hygiene* test would verify whether the local admin account was disabled and whether there were not too many local administrator accounts. From now on, this test will no longer be performed as the recommendations in the [hardening guide](https://aka.dataminer.services/HardeningGuide) have been updated.
 
-- Up to now, the *Local admin hygiene* test would verify whether the local admin account was disabled and whether there were not too many local administrator accounts. From now on, this test will no longer be performed as the recommendations in the [hardening guide](https://aka.dataminer.services/HardeningGuide) have been updated.
+Also, the following issues have now been fixed:
 
 - The *gRPC* test will now properly take the default configuration into account. Up to now, this test would assume gRPC was disabled when not configured. From DataMiner feature release 10.5.10, gRPC is enabled by default, causing the test to report a false positive.
+
+- On systems where the `enableLegacyV0Interface` flag is not set in the *web.config* file, the test that verifies whether the v0 web API is disabled would incorrectly assume that the v0 web API was enabled. From now on, when the `enableLegacyV0Interface` flag is not set in the *web.config* file, the v0 web API will be considered disabled.
+
+#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 44479]
+
+<!-- RN 44479: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
+
+This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
 ### Fixes
 
