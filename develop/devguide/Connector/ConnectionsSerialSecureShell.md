@@ -284,10 +284,7 @@ A dedicated log file is used for the SSH connections: "SLSSH.txt". Standard logg
 - Write Exception
 - WriteLine Exception
 
-More logging can be obtained by creating a file with the name "SLSSHExt.txt". This will activate extended logging and DataMiner will then write additional information regarding the beginning and end of reads/writes and what data is written/read to this log file.
-
-> [!NOTE]
-> The "SLSSHExt.txt" file works as a flag. The file itself does not receive any logging, but the existence of the file changes the logging that is put into the default SSH log file (SLSsh.txt).
+More logging can be obtained by creating a file with the name *SLSSHExt.txt*. This will activate extended logging and DataMiner will then write additional information regarding the beginning and end of reads/writes and what data is written/read to this log file. Note that this file does not receive any logging itself, but it signals that extended logging should be put into the default SSH log file (*SLSsh.txt*).
 
 > [!CAUTION]
 > Extended logging uses a lot of memory, so do not keep this running if it is not needed.
