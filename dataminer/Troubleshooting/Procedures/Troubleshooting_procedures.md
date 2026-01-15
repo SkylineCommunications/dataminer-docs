@@ -32,7 +32,7 @@ For troubleshooting related to specific topics:
 
 - [Troubleshooting - SLScripting](xref:Troubleshooting_SLScripting)
 
-- [Troubleshooting - SLProtocol](xref:SLScripting_SLProtocol_Reoccurring_Crashes)
+- [Troubleshooting - SLProtocol](xref:Troubleshooting_SLProtocol)
 
 - [Troubleshooting – STaaS](xref:Troubleshooting_STaaS)
 
