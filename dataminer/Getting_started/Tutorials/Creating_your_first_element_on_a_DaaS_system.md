@@ -28,39 +28,14 @@ The tutorial consists of the following steps:
 
 ## Step 1: Create a staging DataMiner System in the cloud
 
-Deploy a [DataMiner Community Edition system as a service](xref:Pricing_Commercial_Models#dataminer-community-edition). This system will be free for the first 7 days.
+Deploy a [DataMiner Community Edition system as a service](xref:Pricing_Commercial_Models#dataminer-community-edition):
 
 > [!NOTE]
-> To keep using this DataMiner System after the initial 7 days, move to the standard [usage-based services](xref:Pricing_Commercial_Models#usage-based-services) by [purchasing DataMiner credits](xref:Order_DataMiner_credits).
+> The first time you deploy a DaaS system for a specific organization, the system is free for the first 7 days. To keep using this DataMiner System after the initial 7 days, move to the standard [usage-based services](xref:Pricing_Commercial_Models#usage-based-services) by [purchasing DataMiner credits](xref:Order_DataMiner_credits). For subsequent DaaS deployments using the same organization, you will need to make sure the organization has sufficient DataMiner credits.
 
-1. Log on to [dataminer.services](https://dataminer.services).
-
-1. Next to *DataMiner Systems*, click *+ Add DataMiner System*.
-
-   ![Add DataMiner System](~/dataminer/images/Add_DataMiner_System.png)
-
-1. Click *DataMiner as a Service*.
-
-   ![DataMiner as a Service](~/dataminer/images/DataMiner_as_a_Service.png)
-
-1. Specify the following information:
-
-   - Select the *Organization* under which you want to register the DataMiner System.
-
-   - Enter a *DataMiner System Name* of your choice.
-
-   - Enter a custom *DataMiner System URL* if you want the URL to be different from the *DataMiner System Name*.
-
-   - Enter a username and password for your DataMiner account.
-
-1. Select the box next to *I agree to the terms of service*.
-
-1. Click *Deploy*.
+1. Follow the procedure to [create a new DMS on dataminer.services](xref:Creating_a_DMS_on_dataminer_services).
 
 1. Wait until your DaaS system has been initialized. This can take around 15 minutes.
-
-> [!TIP]
-> See also: [Creating a new DMS on dataminer.services](xref:Creating_a_DMS_on_dataminer_services)
 
 ## Step 2: Install the DataMiner Cube desktop application
 
