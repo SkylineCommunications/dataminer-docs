@@ -50,6 +50,12 @@ This change applies to the following ways to access a log file:
 
 ### Fixes
 
+#### Visual Overview: UI could become unresponsive when parameter subscriptions occurred for conditions with parameter-based criteria [ID 44365]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+Up to now, when conditions contained parameter-based criteria, the parameter subscriptions would occur in the UI thread. In some cases, this would cause the UI to become unresponsive. From now on, these parameter subscriptions will occur in a background thread instead.
+
 #### Alarm Console: Recursive loop in nested correlated alarms could cause Cube to stop working [ID 44378]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->

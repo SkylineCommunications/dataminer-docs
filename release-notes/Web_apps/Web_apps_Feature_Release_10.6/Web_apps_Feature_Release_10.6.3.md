@@ -44,6 +44,15 @@ In the navigation pane, a new *Add* button is now available to users with permis
 
 Many components in dashboards and low-code apps can be configured to be linked to component data, i.e. data that is made available by other components in the dashboard or app. This mechanism has now been reworked in order to enhance overall performance, scalability, reliability and robustness.
 
+#### Dashboards/Low-Code Apps: Enhanced theme logic [ID 44336]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Because of a number of enhancements to the theme logic, overall performance has increased when loading a dashboard or a low-code app.
+
+> [!NOTE]
+> As the theme folder structure has been changed, an incorrect theme could be assigned to dashboards and low-code apps imported as part of a Catalog package. A theme import/export functionality is being developed and will become available in a future version.
+
 #### Dashboards/Low-Code Apps - Column & bar chart component: Minor enhancements [ID 44416]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
