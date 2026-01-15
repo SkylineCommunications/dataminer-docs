@@ -10,7 +10,7 @@ The following table provides more information about some of the NuGet packages c
 
 |NuGet package ID|Description  |
 |---------|---------|
-|Skyline.DataMiner.Dev.*     |These NuGet packages are the so-called *DataMiner Dev Packs*. Refer to [DataMiner Dev Packs](xref:TOODataMinerDevPackages#dataMiner-dev-packs)  for more information.       |
+|Skyline.DataMiner.Dev.*     |These NuGet packages are the so-called *DataMiner Dev Packs*. Refer to [DataMiner Dev Packs](xref:TOODataMinerDevPackages#dataminer-dev-packs)  for more information.       |
 |Skyline.DataMiner.Dev.Utils.*     |These NuGet packages are the so-called *Solution Dev Packs*. Refer to [Solution Dev Packs](xref:TOODataMinerDevPackages#solution-dev-packs)  for more information.       |
 |Skyline.DataMiner.Files.*     |These NuGet packages contain DataMiner assemblies and are referred to by the *DataMiner Development Packages*. Refer to [DataMiner Dev Packs](xref:TOODataMinerDevPackages)  for more information.         |
 |Skyline.DataMiner.Core.DataMinerSystem.*     |These NuGet packages form the class library to interact with a DataMiner System from a connector or an Automation script. Refer to [About the class library](xref:ClassLibraryIntroduction) for more information.       |
