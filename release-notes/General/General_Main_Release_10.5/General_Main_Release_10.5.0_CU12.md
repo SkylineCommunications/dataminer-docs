@@ -84,3 +84,9 @@ During DataMiner startup, in some rare cases, SLDataMiner would start up faster 
 When 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent were being processed, up to now, any additional call would be blocked, including calls that check whether the connection between client and DMA was still alive. As a result, the client application would disconnect.
 
 From now on, even when 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent are being processed, calls that check whether the connection between client and DMA is still alive will never be blocked.
+
+#### Event message would return the object twice in case of two subscriptions to the same object [ID 44486]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When, on the same connection, there were two subscriptions to the same object, in some cases, that object would incorrectly be returned twice in the event message.
