@@ -30,7 +30,7 @@ Watch this short video to learn how to create a new DataMiner System hosted on d
 
 1. Enter a name for your DataMiner System.
 
-1. If you want the URL of your system to be different from the system name, fill in the *Remove URL indicator*.
+1. If you want the URL of your system to be different from the system name, fill in the *Remote URL indicator*.
 
    Only lowercase alphanumerical characters (a-z and 0-9) are allowed in the URL, and it cannot consist of numbers only.
 
