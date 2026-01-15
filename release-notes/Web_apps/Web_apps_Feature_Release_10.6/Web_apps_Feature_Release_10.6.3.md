@@ -123,6 +123,12 @@ When the DataMiner Agent had a fixed time zone, and the client computer had a ti
 
 From now on, all timeline items will be displayed correctly after a transition from summer time to winter time or vice versa.
 
+#### Dashboards/Low-Code Apps - Maps component: Problem when re-applying the selection [ID 44461]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, re-applying the selection in a *Maps* component would incorrectly select all markers with the same underlying row key, even across different queries. From now on, the query columns and the row key will be taken into account.
+
 #### Dashboards/Low-Code Apps - Alarm table component: Problem when an alarm was removed from a group that had been deleted earlier [ID 44463]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
