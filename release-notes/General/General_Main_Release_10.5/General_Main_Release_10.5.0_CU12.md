@@ -29,6 +29,16 @@ From now on, SLNet will only send a log entry to SLLog if the log level dictates
 
 If the response to an *SNMP Get* request cannot be mapped, from now on, an error will be logged in the log file of the element in question and in the *SLErrorsInProtocol.txt* file.
 
+#### Factory reset tool: Actions that stop and stop DcMs and DxMs will now have a 15-minute timeout [ID 44387]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+The factory reset tool *SLReset.exe* can be used by an administrator to fully reset a DataMiner Agent to its default state from immediately after installation.
+
+One of the actions performed by this tool when resetting a DMA is stopping and starting the DcMs and DxMs. Up to now, the DcMs and DxMs would be stopped and started without any timeout. From now on, the stop and start actions will have a 15-minute timeout.
+
+Also, if an exception would be thrown during a stop action, a kill command will be executed instead.
+
 #### Security Advisory BPA test: Enhancements [ID 44444] [ID 44477]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
