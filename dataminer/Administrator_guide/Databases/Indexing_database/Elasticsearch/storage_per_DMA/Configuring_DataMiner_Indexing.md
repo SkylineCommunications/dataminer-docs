@@ -4,7 +4,9 @@ uid: Configuring_DataMiner_Indexing
 
 # Configuring indexing settings in DataMiner Cube
 
-The indexing settings in System Center determine which information is stored in the indexing database. To configure these settings, go to *System Center* > *Search & Indexing*.
+The indexing settings in System Center determine which information is stored in the indexing database of a [dedicated clustered storage](xref:Dedicated_clustered_storage) setup.
+
+To configure these settings, go to *System Center* > *Search & Indexing*.
 
 > [!TIP]
 >
@@ -13,12 +15,9 @@ The indexing settings in System Center determine which information is stored in 
 
 The following settings are available:
 
-- *Enable indexing on alarms:* Enables indexing of alarms. If this option is not enabled, the enhanced search options in the Alarm Console are not available.
+- *Enable indexing on alarms:* Enables indexing of alarms. If this option is not enabled, the enhanced search options in the Alarm Console are not available. For systems using [STaaS](xref:STaaS) or [dedicated clustered storage](xref:Dedicated_clustered_storage), this setting is not used.<!-- RN 44435 -->
 
-- *Migrate booking data to Indexing Engine*: Starts a wizard that allows you to migrate booking data from the Cassandra database to the indexing database. Only displayed in case booking data have not been migrated yet.
-
-  > [!NOTE]
-  > If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), Indexing Engine settings cannot be customized. As such, from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the Indexing Engine settings are no longer available for DaaS.
+- *Migrate booking data to Indexing Engine*: Prior to DataMiner 10.4, this allows you to migrate booking data from the Cassandra database to the indexing database, if this has not been done yet. This migration must be done before you can upgrade to DataMiner 10.4 or higher.
 
   Please note the following regarding the migration of booking data:
 
@@ -34,7 +33,7 @@ The following settings are available:
 >
 > - The indexing configuration is saved in the file *Indexing.xml* in the folder `C:\Skyline DataMiner\Database`.
 > - To include booking data from the indexing database in a custom backup, select *Include SRM in backup* in the content tab of the *Backup* page. See [Configuring the DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups).
-> - Resources are not automatically migrated to the indexing database as well. For more information on how to migrate these, see [Migrating SRM resources to the indexing database](xref:Resources_migration_to_elastic).
+> - Resources and profiles are not automatically migrated to the indexing database as well. For more information on how to migrate these, see [Migrating SRM resources to the indexing database](xref:Resources_migration_to_elastic) and [Migrating SRM profiles to the indexing database](xref:Profile_migration_to_elastic).
 
 > [!TIP]
 > See also: [Indexing database settings](xref:DB_xml#indexing-database-settings)
