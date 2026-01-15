@@ -1305,23 +1305,23 @@ Permission to retrieve the results of a BPA test.
 
 #### Modules \> Ticketing Gateway \> UI available
 
-Permission to access the *Ticketing Gateway* app. Obsolete as of DataMiner 10.5.0 [CU11]/10.6.0.
+Permission to access the *Ticketing Gateway* app. Obsolete as of DataMiner 10.6.0.
 
 #### Modules \> Ticketing Gateway \> Add
 
-Permission to add tickets. Obsolete as of DataMiner 10.5.0 [CU11]/10.6.0.
+Permission to add tickets. Obsolete as of DataMiner 10.6.0.
 
 #### Modules \> Ticketing Gateway \> Edit
 
-Permission to edit tickets. Obsolete as of DataMiner 10.5.0 [CU11]/10.6.0.
+Permission to edit tickets. Obsolete as of DataMiner 10.6.0.
 
 #### Modules \> Ticketing Gateway \> Delete
 
-Permission to delete tickets. Obsolete as of DataMiner 10.5.0 [CU11]/10.6.0.
+Permission to delete tickets. Obsolete as of DataMiner 10.6.0.
 
 #### Modules \> Ticketing Gateway \> Configure
 
-Permission to configure ticket domains. Obsolete as of DataMiner 10.5.0 [CU11]/10.6.0.
+Permission to configure ticket domains. Obsolete as of DataMiner 10.6.0.
 
 ### Modules \> Trending
 

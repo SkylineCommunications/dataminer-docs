@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Skyline.DataMiner.Net.Ticketing
 {
 	/// <summary>
-	/// Represents a ticket history key comparer. Obsolete. Ticketing is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
+	/// Represents a ticket history key comparer. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
 	/// </summary>
 	public class TicketHistoryKeyComparer : IComparer<Tuple<DateTime, string>>
     {

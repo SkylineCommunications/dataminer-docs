@@ -6,7 +6,7 @@ uid: GetTicket
 
 > [!IMPORTANT]
 >
-> - The Ticketing app is obsolete. It is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
+> - The Ticketing app is obsolete. It is no longer available from DataMiner 10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
 > - DataMiner Ticketing is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 This method is deprecated. Use the [GetTicketV2](xref:GetTicketV2) method instead.

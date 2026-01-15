@@ -6,7 +6,7 @@ uid: GetAffectedTickets
 
 > [!IMPORTANT]
 >
-> - The Ticketing app is obsolete. It is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
+> - The Ticketing app is obsolete. It is no longer available from DataMiner 10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
 > - DataMiner Ticketing is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 Use this method to retrieve the tickets linked to a particular DataMiner resource, e.g. an element or a service. The tickets are retrieved in pages, in descending order.

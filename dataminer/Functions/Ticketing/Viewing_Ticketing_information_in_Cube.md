@@ -5,7 +5,7 @@ uid: Viewing_Ticketing_information_in_Cube
 # Viewing Ticketing information in Cube
 
 > [!IMPORTANT]
-> The Ticketing app is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
+> The Ticketing app is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
 
 On a DMA where the Ticketing module has been activated, additional ticketing information is available on cards and in the Alarm Console:
 

@@ -5,7 +5,7 @@ uid: DMATicketType
 # DMATicketType
 
 > [!IMPORTANT]
-> This object is obsolete. The Ticketing app is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
+> This object is obsolete. The Ticketing app is no longer available from DataMiner 10.6.0/10.6.2 onwards.
 
 | Item         | Format  | Description                                                                  |
 |--------------|---------|------------------------------------------------------------------------------|

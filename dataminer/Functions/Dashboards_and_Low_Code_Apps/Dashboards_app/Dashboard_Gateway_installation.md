@@ -71,7 +71,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
     - `C:\Skyline DataMiner\Webpages\App`
     - `C:\Skyline DataMiner\Webpages\Monitoring`
     - `C:\Skyline DataMiner\Webpages\Jobs` (prior to DataMiner 10.5.0 only)
-    - `C:\Skyline DataMiner\Webpages\Ticketing` (prior to  DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 only)
+    - `C:\Skyline DataMiner\Webpages\Ticketing` (prior to DataMiner 10.6.0/10.6.2 only)
     - `C:\Skyline DataMiner\Webpages\SharedComponents`
     - `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
 
@@ -207,7 +207,7 @@ To do so, after the DataMiner upgrade, copy the following folders from the DataM
 - `C:\Skyline DataMiner\Webpages\App`
 - `C:\Skyline DataMiner\Webpages\Monitoring`
 - `C:\Skyline DataMiner\Webpages\Jobs` (prior to DataMiner 10.5.0 only)
-- `C:\Skyline DataMiner\Webpages\Ticketing` (prior to DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 only)
+- `C:\Skyline DataMiner\Webpages\Ticketing` (prior to DataMiner 10.6.0/10.6.2 only)
 - `C:\Skyline DataMiner\Webpages\SharedComponents`
 - `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
 - `C:\Skyline DataMiner\Webpages\API` (Make sure not to overwrite the existing web.config file. Copy all other files and folders, but keep the existing web.config in place.)

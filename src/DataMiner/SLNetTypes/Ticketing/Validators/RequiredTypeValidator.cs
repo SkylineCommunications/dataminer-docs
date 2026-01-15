@@ -3,7 +3,7 @@
 namespace Skyline.DataMiner.Net.Ticketing.Validators
 {
 	/// <summary>
-	/// Represents a required field validator. Obsolete. Ticketing is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
+	/// Represents a required field validator. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
 	/// </summary>
 	/// <typeparam name="T">The type to validate against.</typeparam>
 	[Serializable]

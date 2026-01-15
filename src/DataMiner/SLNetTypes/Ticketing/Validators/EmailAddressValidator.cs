@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 namespace Skyline.DataMiner.Net.Ticketing.Validators
 {
 	/// <summary>
-	/// Represents an e-mail address validator. Obsolete. Ticketing is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
+	/// Represents an e-mail address validator. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
 	/// </summary>
 	[Serializable]
     public class EmailAddressValidator : ITicketFieldValidator

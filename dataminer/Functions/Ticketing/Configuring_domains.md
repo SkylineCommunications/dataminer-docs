@@ -5,7 +5,7 @@ uid: Configuring_domains
 # Configuring domains
 
 > [!IMPORTANT]
-> The Ticketing app is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
+> The Ticketing app is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
 
 Click the cogwheel button in the header bar of the Ticketing app to access the configuration page.
 
