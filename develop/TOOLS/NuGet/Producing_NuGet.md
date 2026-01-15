@@ -124,7 +124,7 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
 
 - *Skyline.DataMiner.Dev.Utils.XXX*
 
-  - Holds all the [Solution Dev Packs](xref:TOODataMinerDevPackages#Solution-Dev-Packs).
+  - Holds all the [Solution Dev Packs](xref:TOODataMinerDevPackages#solution-dev-packs).
 
     E.g. MediaOps library, etc.
 
