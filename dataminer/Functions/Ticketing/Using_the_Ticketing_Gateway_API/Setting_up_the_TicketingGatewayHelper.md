@@ -4,8 +4,9 @@ uid: Setting_up_the_TicketingGatewayHelper
 
 # Setting up the TicketingGatewayHelper
 
-> [!IMPORTANT]
-> The Ticketing Gateway API is obsolete. It is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
+<!-- > [!IMPORTANT]
+> The Ticketing Gateway API is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.6.0/10.6.2 onwards. 
+RN 44417-->
 
 The TicketingGatewayHelper class allows you to communicate with the Ticketing Gateway running on a DataMiner Agent.
 

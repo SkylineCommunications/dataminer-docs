@@ -5,7 +5,7 @@ uid: Overview_of_the_Ticketing_app_UI
 # Overview of the Ticketing app UI
 
 > [!IMPORTANT]
-> The Ticketing app is obsolete. It is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
+> The Ticketing app is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
 
 The main page of the Ticketing app consists of a header bar, a side panel, and an overview panel.
 

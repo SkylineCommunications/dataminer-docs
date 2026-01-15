@@ -4,8 +4,9 @@ uid: Overview_of_the_TicketingGatewayHelper_class
 
 # Overview of the TicketingGatewayHelper class
 
-> [!IMPORTANT]
-> The Ticketing Gateway API is obsolete. It is no longer available from DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 onwards.
+<!-- > [!IMPORTANT]
+> The Ticketing Gateway API is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.6.0/10.6.2 onwards. 
+RN 44417-->
 
 Below, you can find an overview of all methods, properties and events of the *TicketingGatewayHelper* class.
 
