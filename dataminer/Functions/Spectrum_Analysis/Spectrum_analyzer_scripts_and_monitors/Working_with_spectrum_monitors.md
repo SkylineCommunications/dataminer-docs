@@ -183,13 +183,18 @@ To go back to normal mode, in the *monitors* tab, click *Take Priority Over Moni
 
 ## Viewing the history of spectrum monitor traces
 
-If a spectrum monitor has been configured with trending on the traces, it is possible to view these traces in the "History" tab of the settings pane.
+If a spectrum monitor has been configured with trending on the traces, you can view these traces in the *History* tab of the settings pane:
 
-To do so:
-1. In the settings pane of the spectrum card, click on the "History" tab.
-1. If one or more monitors have been configured with trace trending, you will see a list containing the most recently recorded traces.
-1. If the monitor uses multiple measurement points, there will be a trace for each measurement point.
-1. Clicking one of the traces in the list will show this trace in the real-time display section. At this time, the real-time display section will no longer be updated with the current trace.
-1. Enabling the "Show actual trace(s) as reference trace" checkbox will allow you to view the current real-time trace and the history trace at the same time.
-1. The filter at the top of the tab allows you to filter, for example, per monitor or per measurement point.
-1. For more detailed search options, e.g., on a certain date, you can click the "advanced filter" button to display more search options.
+1. In the settings pane of the spectrum card, select the *History* tab.
+
+   If one or more monitors have been configured with trace trending, you will see a list of the most recently recorded traces. For each trace, the list shows a preview of the trace and the monitor name, parameter name, time, and measurement point.
+
+   If a monitor uses multiple measurement points, there will be a trace for each measurement point.
+
+1. To view the history of a trace in the real-time display section, select the trace in the list.
+
+   The filter at the top of the tab allows you to filter, for example per monitor or per measurement point. For more detailed search options, for example to search for a specific date, you can click the "advanced filter" button to display more search options.
+
+   When you select a trace, the real-time display section will no longer be updated with the current trace.
+
+1. To view the current real-time trace and the history trace at the same time, select *Show actual trace(s) as reference trace*.
