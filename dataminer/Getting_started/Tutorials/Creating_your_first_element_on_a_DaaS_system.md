@@ -28,10 +28,10 @@ The tutorial consists of the following steps:
 
 ## Step 1: Create a staging DataMiner System in the cloud
 
-Deploy a [DataMiner Community Edition system as a service](xref:Pricing_Commercial_Models#dataminer-community-edition). This system will be free for the first 7 days.
+Deploy a [DataMiner Community Edition system as a service](xref:Pricing_Commercial_Models#dataminer-community-edition):
 
 > [!NOTE]
-> To keep using this DataMiner System after the initial 7 days, move to the standard [usage-based services](xref:Pricing_Commercial_Models#usage-based-services) by [purchasing DataMiner credits](xref:Order_DataMiner_credits).
+> The first time you deploy a DaaS system for a specific organization, the system is free for the first 7 days. To keep using this DataMiner System after the initial 7 days, move to the standard [usage-based services](xref:Pricing_Commercial_Models#usage-based-services) by [purchasing DataMiner credits](xref:Order_DataMiner_credits). For subsequent DaaS deployments using the same organization, you will need to make sure the organization has sufficient DataMiner credits.
 
 1. Follow the procedure to [create a new DMS on dataminer.services](xref:Creating_a_DMS_on_dataminer_services).
 
