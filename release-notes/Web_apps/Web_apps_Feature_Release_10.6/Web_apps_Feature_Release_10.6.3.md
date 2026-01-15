@@ -77,6 +77,26 @@ In the *Table*, *Column & bar chart*, *Line & area chart*, *Pie & donut chart*, 
 
 From now on, it will be possible to clear this setting's value. If you do so, no message will be displayed when a query returns no results, and the component will be empty.
 
+#### Dashboards app: Context menu no longer accessible from 'Recent items', 'Private dashboards', or 'Shared dashboards' pane [ID 44491]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When, in the sidebar, you right-clicked in any of the panes, up to now, the same context menu would appear, i.e. a menu allowing you to add a dashboard, add a folder, or open the *Dashboards settings* window.
+
+From now on, you will only be able to open this context menu when right-clicking the navigation pane. You will no longer be able to open this context menu when right-clicking in the *Recent items*, *Private dashboards*, or *Shared dashboards* pane.
+
+#### Dashboards/Low-Code Apps: Clearer error message indicating that a component name is already in use [ID 44498]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When you tried to rename of component, and the name you entered was already in use, up to now, the following error message would appear:
+
+`This configuration name is already used in this page/panel.`
+
+This message has now been changed to make it clearer.
+
+`This name is already used in this page/panel.`
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Maps component would incorrectly fetch markers with larger bounds than necessary when you zoomed in or out [ID 44381]
