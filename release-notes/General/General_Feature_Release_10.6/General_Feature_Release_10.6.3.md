@@ -90,6 +90,16 @@ This BPA test will identify client machines and DataMiner Agents without interne
 
 ### Fixes
 
+#### Numeric cell would incorrectly not be cleared when its exception value was set to 0 [ID 44356]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When a numeric cell had its exception value set to 0, up to now, it would incorrectly not be possible to clear that cell by setting its value to null or by using the `protocol.clear` property. When an attempt was made to clear the cell or to set its value to null, the cell would incorrectly show its exception value instead of the word "Uninitialized".
+
+Also, in some cases, an exception would be displayed even when it had a type other than the parameter for which it had been defined. For example, an exception value of type string defined for a parameter of type double.
+
+For more information, see [Exceptions element](xref:Protocol.Params.Param.Interprete.Exceptions). The `Exceptions` tag should only be used to intercept values of the same `Interprete.Type` as that of your parameter. If you want to intercept values of another type, then you should use the `Protocol.Params.Param.Interprete.Others` tag instead.
+
 #### Delay of DataMiner startup routine caused by SLDataMiner starting up faster than SLNet [ID 44438]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
