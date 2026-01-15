@@ -110,21 +110,6 @@ When you publish a protocol or an Automation script, DIS will create either a *.
 >   - when the *Protocol.Name* tag is empty.
 > - When *As Development* is selected, a `_DIS` suffix will be added to the *Protocol.Version* tag before compiling and publishing.
 
-### Update
-
-> [!IMPORTANT]
-> This feature has been removed from DIS v3.0 onwards. DIS is now available on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=skyline-communications.DataMinerIntegrationStudio).
-
-If DataMiner Integration Studio is set to check for updates, an *Update* button will appear if a newer version of the *DataMinerIntegrationStudio.vsix* file is available.
-
-If you click the *Update* button, the *Update* dialog box will ask whether you want to update DataMiner Integration Studio. To update, click *Update now*.
-
-> [!NOTE]
-> You can also download the latest version of the *DataMinerIntegrationStudio.vsix* file from [DataMiner Dojo](https://community.dataminer.services/dataminer-integration-studio-other-downloads/), and then update DataMiner Integration Studio by simply double-clicking the *DataMinerIntegrationStudio.vsix* file.
-
-> [!TIP]
-> See also: [Updates](xref:DIS_settings#updates)
-
 ### Search
 
 If, in the search box on the right, you enter a word, then all instances of that word will be highlighted throughout the XML file you are editing.

@@ -8,8 +8,6 @@ uid: Developing_connectors_as_Visual_Studio_solutions
 
 To create a new connector solution, select *File \> New \> Project*.
 
-In Visual Studio 2019, select *File \> New \> DataMiner Protocol Solution*
-
 ## Converting an existing protocol XML file to a solution
 
 DIS supports converting an existing protocol XML file into a Visual Studio solution. To convert an existing protocol XML file to a solution, open the protocol XML file in Visual Studio and select *DIS \> Protocol \> Convert to Solution*
@@ -80,10 +78,8 @@ A connector Visual Studio solution is organized into various folders, each servi
 
 - **Documentation**: This folder allows you to add documentation related to the solution.
 
-- **Internal**: This folder contains the C# Class Library Visual Studio projects for the QAction helper (QAction_Helper) and the Class Library code (QAction_ClassLibrary). Obsolete from DIS v2.41 onwards. This folder is hidden by default as the code within it is generated automatically and should not be modified.
-
 > [!NOTE]
-> From DIS v2.41 onwards, an information bar will appear when a Class Library project (i.e. a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or Automation script solution. This information bar provides the option to convert existing solutions that use of the Class Library generation feature. By clicking *Fix*, the Class Library project will be removed, and references to the project will be replaced with references to the automatically generated Class Library project (default ID 63000).
+> An information bar will appear when a Class Library project (i.e. a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or Automation script solution. This information bar provides the option to convert existing solutions that make use of the Class Library generation feature. By clicking *Fix*, the Class Library project will be removed, and references to the project will be replaced with references to the automatically generated Class Library project (default ID 63000).
 
 - **QActions**: This folder contains a C# Class Library Visual Studio project for each QAction defined in the protocol XML file. These projects are named `QAction_<id>`, where \<id> represents the ID of the QAction as defined in the protocol XML file (e.g. QAction_2).
 

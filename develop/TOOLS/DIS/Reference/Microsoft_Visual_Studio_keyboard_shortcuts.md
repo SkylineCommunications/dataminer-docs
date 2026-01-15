@@ -7,7 +7,7 @@ uid: Microsoft_Visual_Studio_keyboard_shortcuts
 The following table lists some useful keyboard shortcuts that you can use while working in Microsoft Visual Studio.
 
 | Command | Keyboard shortcut | Function |
-|---------|-------------------|----------|
+| ------- | ----------------- | -------- |
 | Edit.Copy | Ctrl+C | Copies the selected item to the Clipboard. |
 | Edit.Cut | Ctrl+X | Deletes the selected item from the file and copies it to the Clipboard. |
 | Edit.Paste | Ctrl+V | Inserts the Clipboard contents at the cursor. |

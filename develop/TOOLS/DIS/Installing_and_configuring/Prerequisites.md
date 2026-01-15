@@ -23,12 +23,14 @@ https://stackpath.bootstrapcdn.com/*
 
 ## Microsoft Visual Studio
 
-- DIS versions up to v2.0.3 require at least Microsoft Visual Studio 2010.
-- DIS versions as from v2.0.4 require at least Microsoft Visual Studio 2012.
-- DIS versions as from v2.20.1 require at least Microsoft Visual Studio 2015.
-- DIS versions as from v2.35.1 require at least Microsoft Visual Studio 2017.
-- DIS versions as from v2.41 require at least Microsoft Visual Studio 2019.
 - DIS versions as from v3.0 require at least Microsoft Visual Studio 2022.
+- DIS versions as from v2.41 require at least Microsoft Visual Studio 2019.
+- DIS versions as from v2.35.1 require at least Microsoft Visual Studio 2017.
+- DIS versions as from v2.20.1 require at least Microsoft Visual Studio 2015.
+- DIS versions as from v2.0.4 require at least Microsoft Visual Studio 2012.
+- DIS versions up to v2.0.3 require at least Microsoft Visual Studio 2010.
+
+While it is still possible to [download an older DIS version](xref:Installing_and_configuring_DataMiner_Integration_Studio#downloading-dataminer-integration-studio) for use with an older version of Microsoft Visual Studio, we only provide support for the most recent version of DIS, and our documentation also focuses on that version only.
 
 > [!NOTE]
 > Make sure your version of Visual Studio is up to date. If you have an outdated version, the installer may detect missing prerequisites and therefore prevent you from installing the extension.
@@ -40,7 +42,7 @@ https://stackpath.bootstrapcdn.com/*
 
 Make sure you have configured and enabled [nuget.org](https://api.nuget.org/v3/index.json) in Visual Studio.
 
-This is a requirement to be able to automatically install DataMiner templates when Microsoft Visual Studio is opened after DIS is installed (which happens as of DIS 2.42).
+This is a requirement to be able to automatically install DataMiner templates when Microsoft Visual Studio is opened after DIS is installed.
 
 ### Required user permissions
 

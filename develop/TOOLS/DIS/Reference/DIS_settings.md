@@ -16,7 +16,7 @@ To add a DMA to the list:
 1. In the *General* tab, specify the following information:
 
    | Information | Description |
-   |-------------|-------------|
+   | ----------- | ----------- |
    | Display name | In this box, enter the name of the DMA as it will appear in the list. |
    | Host | In this box, enter the IP address or server name of the DataMiner Agent using the following syntax:<br>`https://[IP address or server name]:[Port]/SLNetService`<br>Note:<br>- Both HTTP and HTTPS are supported.<br>- Specifying the IP port is optional. Default port: 8004<br>- Specifying the suffix "/SLNetService" is optional.<br>See also [If a DMA uses DataMiner configuration switching](#if-a-dma-uses-dataminer-configuration-switching) |
    | Login | Choose how you want DIS to log on to the DMA:<br>- Using the current Windows user (default)<br>- Using a specific user/password combination |
@@ -27,10 +27,10 @@ To add a DMA to the list:
 1. If the DMA you are configuring is not your local DMA, then, in the *Debugging* tab, select the *Enable remote debugging* checkbox and specify the following settings if you want to be able to debug QActions while connected to this remote DMA.
 
    | Setting | Description |
-   |---------|-------------|
+   | ------- | ----------- |
    | Publish path | The network path to the shared folder on the remote DMA where DIS will upload the DLL files and the symbol files.<br>Default: \\\\remote-dma\\dis |
    | Path on DataMiner | The local path to the shared folder on the remote DMA where DIS will upload the DLL files and the symbol files.<br>Default: C:\\dis\\ |
-   | Debugger qualifier | The qualifier supplied by Remote Debugging Monitor (msvsmon.exe) at startup.<br>Format:<br>- username@dmaname (Visual Studio 2010)<br>- dmaname:ipport (as from Visual Studio 2012)<br>Default: RemoteDebug@remote-dma |
+   | Debugger qualifier | The qualifier supplied by Remote Debugging Monitor (msvsmon.exe) at startup.<br>Format: dmaname:ipport |
 
    > [!TIP]
    > See also:
@@ -223,20 +223,6 @@ In the *Account* tab, you can see
 - the current account status.
 
 Also, a button allows you to sign out (and sign in again).
-
-## Updates
-
-> [!IMPORTANT]
-> This feature has been removed from DIS v3.0 onwards. DIS is now available on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=skyline-communications.DataMinerIntegrationStudio).
-
-In the *Updates* tab, you can indicate whether you want DataMiner Integration Studio to automatically check for updates.
-
-- If you select the *Check for plug-in updates* option, DataMiner Integration Studio will check once every hour whether a more recent version of the *DataMinerIntegrationStudio.vsix* extension file is available. If so, an update banner will appear at the top of the editor window.
-
-- If you select the *Get insider builds* option, DataMiner Integration Studio will not only check for main builds (i.e. the official release versions), but also for insider builds (i.e. pre-release versions for testing purposes).
-
-  > [!NOTE]
-  > It is advised to always install official release versions.
 
 ## Templates
 
