@@ -34,6 +34,42 @@ In the navigation pane, a new *Add* button is now available to users with permis
   - Import dashboard
   - Import from catalog
 
+#### GQI DxM: New internal data source 'Get active sessions' & additional internal metrics [ID 44447]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+The GQI DxM now contains an internal data source named *Get active sessions*, which will retrieve information about the query sessions that are currently active. Also, an number of internal metrics have been added meant for future debugging and performance investigations.
+
+##### Get active sessions
+
+The data retrieved by this new data source is a snapshot of all query sessions that were active at the time the first page was requested, including the session used to fetch the active session data. This means that later pages may include sessions that have been closed since then.
+
+Prerequisites:
+
+- Only user with the *Modules > System configuration > Tools > Admin tools* permission will be able to fetch data using this data source.
+- Only web apps in which the `GQIOptions.EnableInternalCapabilities` setting is set to true will expose this data source in the query builder.
+
+Default columns:
+
+| Displayed name | Internal name | Type | Description |
+| -------------- | ------------- | ---- | ----------- |
+| Session ID | sessionId | Guid | ID of the query session. |
+| Query Name | queryName | string | Query name/tag, i.e. a custom identifier that can be provided by the client when executing a query. |
+| User | user | string | Username of the user who opened the session. |
+| Created | created | DateTime | Time at which the session was opened. |
+
+Other columns:
+
+| Displayed name | Internal name | Type | Description |
+| -------------- | ------------- | ---- | ----------- |
+| Last Updated | lastUpdated | DateTime | Time at which the session was last opened, was last used to fetch data, last received a heartbeat, etc. |
+| Fetch type | fetchType | int | Setting provided by the client when opening the session to indicate how the query should be optimized.<br>Possible values:<br>- "Page by page" (0)<br>- "All data" (1) |
+| Enabled Updates | enabledUpdates | bool | Whether or not the client has enabled updates for the session. |
+| Locale | locale | string | The culture used for the session. See: [CultureInfo.Name Property](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.name) |
+| Time Zone | timeZone | string | The ID of the time zone used for the session. See: [TimeZoneInfo.Id Property](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.id) |
+| Rows Fetched | rowsFetched | int | The total number of rows that have been fetched from the session. |
+| Pages Fetched | pagesFetched | int | The total number of pages that have been fetched from the session. |
+
 ## Changes
 
 ### Enhancements
