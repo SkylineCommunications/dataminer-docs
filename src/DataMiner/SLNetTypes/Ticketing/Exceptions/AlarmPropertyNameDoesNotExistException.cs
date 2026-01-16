@@ -3,7 +3,7 @@
 namespace Skyline.DataMiner.Net.Ticketing
 {
 	/// <summary>
-	/// The exception that is thrown when no alarm property exists with the specified name. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// The exception that is thrown when no alarm property exists with the specified name. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	public class AlarmPropertyNameDoesNotExistException : Exception
     {

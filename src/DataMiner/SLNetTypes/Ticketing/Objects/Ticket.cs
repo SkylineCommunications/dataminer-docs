@@ -21,7 +21,7 @@ using System.Drawing.Design;
 namespace Skyline.DataMiner.Net.Ticketing
 {
 	/// <summary>
-	/// Represents a ticket used by the Ticketing Gateway. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// Represents a ticket used by the Ticketing Gateway. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	/// <example>
 	/// <code>
@@ -503,7 +503,7 @@ namespace Skyline.DataMiner.Net.Ticketing
 
 #if NETFRAMEWORK
 	/// <summary>
-	/// Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
     public class TicketTypeEditor : UITypeEditor
     {
@@ -520,7 +520,7 @@ namespace Skyline.DataMiner.Net.Ticketing
     }
 #endif
 	/// <summary>
-	/// Defines ticketing exposers. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// Defines ticketing exposers. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	/// <example>
 	/// <para>Retrieving tickets by ticket field resolver:</para>
@@ -609,7 +609,7 @@ namespace Skyline.DataMiner.Net.Ticketing
     }
 
 	/// <summary>
-	/// Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
     public enum TicketsByTimeEnum
 	{
@@ -620,7 +620,7 @@ namespace Skyline.DataMiner.Net.Ticketing
 	}
 
 	/// <summary>
-	/// Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	public enum TicketLinkerEnum
 	{

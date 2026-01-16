@@ -9,7 +9,7 @@ using SLNetTypes.DataMiner.Net;
 namespace Skyline.DataMiner.Net.Ticketing
 {
 	/// <summary>
-	/// Represents a generic ticket link. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// Represents a generic ticket link. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	[Serializable]
@@ -49,7 +49,7 @@ namespace Skyline.DataMiner.Net.Ticketing
     }
 
 	/// <summary>
-	/// Represents a link between a ticket and a DataMiner object. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// Represents a link between a ticket and a DataMiner object. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	/// <remarks>
 	/// <para>Currently, you can link to the following objects:</para>

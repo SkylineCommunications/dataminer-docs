@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 namespace Skyline.DataMiner.Net.Ticketing.Validators
 {
 	/// <summary>
-	/// Represents a "generic" custom enum. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// Represents a "generic" custom enum. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	/// <typeparam name="T">The underlying type of the enum.</typeparam>
 	///// <remarks>

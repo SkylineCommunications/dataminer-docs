@@ -1534,7 +1534,7 @@ namespace Skyline.DataMiner.Automation
 		SLProfileManager ProfileManager { get; }
 
 		/// <summary>
-		/// Gets the Ticketing Gateway. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+		/// Gets the Ticketing Gateway. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 		/// </summary>
 		/// <value>The Ticketing Gateway.</value>
 		/// <example>

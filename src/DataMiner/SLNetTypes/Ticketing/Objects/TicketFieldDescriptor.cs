@@ -9,7 +9,7 @@ using Skyline.DataMiner.Net.Ticketing.Interfaces;
 namespace Skyline.DataMiner.Net.Ticketing.Objects
 {
 	/// <summary>
-	/// Describes a ticket field used by <see cref="Helpers.TicketFieldResolver"/>. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// Describes a ticket field used by <see cref="Helpers.TicketFieldResolver"/>. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	/// <remarks>A <see cref="TicketFieldDescriptor"/> is uniquely identified by <see cref="TicketFieldDescriptor.FieldName"/>.</remarks>
 	[Serializable]

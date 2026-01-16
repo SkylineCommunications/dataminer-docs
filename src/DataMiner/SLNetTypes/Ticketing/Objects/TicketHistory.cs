@@ -12,7 +12,7 @@ using Skyline.DataMiner.Net.SLDataGateway.Types;
 namespace Skyline.DataMiner.Net.Ticketing.Objects
 {
 	/// <summary>
-	/// Represents the history of a specific ticket. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// Represents the history of a specific ticket. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	[Serializable]
     [JsonObject(MemberSerialization.OptIn)]
@@ -27,7 +27,7 @@ namespace Skyline.DataMiner.Net.Ticketing.Objects
 		public const char GroupSeparator = ((char)29);
 
 		/// <summary>
-		/// Represents a key to uniquely identify a ticket history entry. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+		/// Represents a key to uniquely identify a ticket history entry. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 		/// </summary>
 		[Serializable]
         [JsonObject(MemberSerialization.OptIn)]
@@ -165,7 +165,7 @@ namespace Skyline.DataMiner.Net.Ticketing.Objects
         }
 
 		/// <summary>
-		/// Contains the data of a property change in the ticket history. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+		/// Contains the data of a property change in the ticket history. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 		/// </summary>
 		[Serializable]
         [JsonObject(MemberSerialization.OptIn)]
@@ -387,7 +387,7 @@ namespace Skyline.DataMiner.Net.Ticketing.Objects
         }
 
 		/// <summary>
-		/// Specifies the type of change. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+		/// Specifies the type of change. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 		/// </summary>
 		public enum PropertyChangedEnum
 		{
@@ -430,7 +430,7 @@ namespace Skyline.DataMiner.Net.Ticketing.Objects
     }
 
 	/// <summary>
-	/// Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
     public class TicketHistoryExposers
     {

@@ -3,7 +3,7 @@
 namespace Skyline.DataMiner.Net.Ticketing
 {
 	/// <summary>
-	/// The exception that is thrown when the ticket field does not exist. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// The exception that is thrown when the ticket field does not exist. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	public class TicketFieldDoesNotExistException : Exception
     {

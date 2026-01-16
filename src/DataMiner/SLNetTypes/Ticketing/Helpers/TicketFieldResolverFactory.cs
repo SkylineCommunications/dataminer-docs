@@ -5,7 +5,7 @@ using System;
 namespace Skyline.DataMiner.Net.Ticketing.Helpers
 {
 	/// <summary>
-	/// Represents a <see cref="TicketFieldResolver"/> factory. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// Represents a <see cref="TicketFieldResolver"/> factory. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	public class TicketFieldResolverFactory
     {

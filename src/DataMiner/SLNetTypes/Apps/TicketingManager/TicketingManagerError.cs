@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Skyline.DataMiner.Net.Tickets
 {
 	/// <summary>
-	/// Represents an error that occurred during CRUD operations with the Ticketing manager. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// Represents an error that occurred during CRUD operations with the Ticketing manager. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	[Serializable]
     public class TicketingManagerError : ErrorData

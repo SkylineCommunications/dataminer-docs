@@ -8,7 +8,7 @@ using Skyline.DataMiner.Net.Ticketing.Objects;
 namespace Skyline.DataMiner.Automation
 {
 	/// <summary>
-	/// Represents the DataMiner ticketing gateway. Obsolete. Ticketing is no longer available from DataMiner 10.6.0/10.6.2 onwards.
+	/// Represents the DataMiner ticketing gateway. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	public class SLTicketingGateway : IDisposable
 	{
