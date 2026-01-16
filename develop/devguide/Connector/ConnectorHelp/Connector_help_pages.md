@@ -9,6 +9,8 @@ For every connector that is developed for DataMiner, a [marketing page](#marketi
 
 A **limited amount of technical and "how to" information** can be added directly on the marketing page. However, if your connector requires so much technical information that the marketing page would no longer be user-friendly, or if it requires technical information that may make the connector seem less attractive (for example, troubleshooting procedures), you should add this on a separate [technical page](#technical-page), which should be a subpage of the marketing page.
 
+Note that if a technical page seems necessary, a good reflex is to first check if you can make the connector more user-friendly and intuitive instead. If you make sure your connector design is well thought-through and your parameter tooltips are well written, often no technical page will be needed.
+
 If a connector exports **child connectors**, a subpage should also be created for each of these child connectors.
 
 When you develop a connector using DIS, you can pre-generate the connector documentation with the *Plugins* > *Generate driver help* option in the [DIS menu](xref:DIS_menu). You can also create the documentation directly in Markdown, starting from our [marketing template](xref:Connector_marketing_template) and, if necessary, [technical template](xref:Connector_technical_template). When you have created the documentation, add it in the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository.
