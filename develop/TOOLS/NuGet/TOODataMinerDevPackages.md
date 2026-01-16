@@ -56,7 +56,7 @@ Revisions can be released to:
 
 ## Solution Dev Packs
 
-As an alternative to the fully generic DataMiner Dev Packs, it is also possible to make Solution Dev Packs.
+In addition to the fully generic DataMiner Dev Packs, it is also possible to make Solution Dev Packs.
 
 For example, imagine you are working on a standard solution like MediaOps, and multiple optional modules consume assemblies exposed by this standard solution. If such an optional module were to consume a normal NuGet from the standard solution, it would lead to related assemblies being installed when the optional module is installed, which in turn could lead to mismatching versions between the assemblies installed by the optional module and the ones installed by the actual standard solution. This could then lead to assembly loading issues.
 
