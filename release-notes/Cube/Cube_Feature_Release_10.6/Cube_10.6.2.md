@@ -2,21 +2,17 @@
 uid: Cube_Feature_Release_10.6.2
 ---
 
-# DataMiner Cube Feature Release 10.6.2 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.6.2
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.5.0 [CU11].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.2](xref:General_Feature_Release_10.6.2).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.2](xref:Web_apps_Feature_Release_10.6.2).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -58,13 +54,16 @@ When, in an alarm template, you are configuring the Augmented Operations alarm s
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.2 or newer. See: [Augmented Operations: Server-side support for new flatline detection modes [ID 44094]](xref:General_Feature_Release_10.6.2#augmented-operations-server-side-support-for-new-flatline-detection-modes-id-44094)
 
-#### Alarm Console: Advanced search options would incorrectly be visible on systems that did not include an Elasticsearch or OpenSearch database [ID 44201]
+#### Alarm Console: Advanced search options would incorrectly be visible on systems that did not include an Elasticsearch or OpenSearch database [ID 44201] [ID 44435]
 
-<!-- MR 10.4.0 [CU22] / 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+<!-- RN 44201: MR 10.4.0 [CU22] / 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+<!-- RN 44435: MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 [CU0] -->
 
 In the Alarm Console, up to now, the advanced search options would incorrectly be visible on systems that did not include an Elasticsearch or OpenSearch database.
 
 From now on, the advanced search options will only be visible on systems that include an Elasticsearch or OpenSearch database.
+
+Also, on systems using a Casandra Cluster database, from now on, System Center will no longer show the *Search & Indexing* section, and the *Enable indexing on alarms* settings will be enabled by default.
 
 #### DataMiner Cube desktop app: Hostname, protocol type, and port will now be extracted from the DataMiner Agent URL [ID 44203]
 
@@ -86,6 +85,15 @@ From now on, when you try to add a DataMiner Agent to a DataMiner System, an err
 - The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
 
 If the DataMiner System is a STaaS system, an error message will also appear when the DataMiner Agent is not cloud-connected.
+
+#### Scheduler module will only fetch the Automation scripts in the 'Scheduler Templates' folder at startup [ID 44383]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+
+Up to now, when you opened the Scheduler module, it would fetch all Automation scripts to check whether any of them had to be listed as scheduler templates. From now on, when you open the Scheduler module, it will only fetch the Automation scripts located in the *Scheduler Templates* folder. This will significantly increase overall performance when opening the module.
+
+> [!IMPORTANT]
+> When Cube is connected to a DMA running a DataMiner version older than main release version 10.5.0 [CU11] or 10.6.0 [CU0] or feature release version 10.6.2, this new fetch operation will only work if you have the following user permission: *Modules > Automation > UI Available*.
 
 ### Fixes
 
@@ -155,3 +163,9 @@ When you opened DataMiner Cube, up to now, all tickets would incorrectly be retr
 When a parameter shape needed Visual Overview to load a table column parameter subscription, up to now, a `GetProtocol` request would be sent to the DMA from within Cube's UI thread. In some cases, this would cause Cube to freeze.
 
 From now on, when a parameter shape needs Visual Overview to load a table column parameter subscription, the `GetProtocol` request will be sent to the DMA from a background thread instead.
+
+#### Alarm storm protection would incorrectly count individual alarms instead alarm trees [ID 44429]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 [CU0] -->
+
+DataMiner Cube can be configured to enter alarm storm mode when too many alarms are being generated for a particular parameter. However, up to now, the system would incorrectly count individual alarms instead of alarm trees.

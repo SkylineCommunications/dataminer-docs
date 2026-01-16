@@ -236,6 +236,8 @@ items:
             topicUid: SLNetClientTest_retrieving_dcf_debug_info
           - name: Retrieving general information about elements
             topicUid: SLNetClientTest_retrieving_element_info
+          - name: Retrieving information on the available Automation scripts
+            topicUid: SLNetClientTest_info_on_available_automation_scripts
           - name: Retrieving information on open GQI sessions
             topicUid: SLNetClientTest_info_on_open_gqi_sessions
           - name: Retrieving live information about the mapping between elements and the processes they use

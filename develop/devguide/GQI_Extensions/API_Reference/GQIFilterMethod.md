@@ -6,7 +6,7 @@ uid: GQI_GQIFilterMethod
 
 Indicates how a filter value should be used to compare against values in the filter column for a [IGQIValueFilter](xref:GQI_IGQIValueFilter).
 
-Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards when using the [GQI DxM](xref:GQI_DxM).<!-- RN 44230 -->
+Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards when using the [GQI DxM](xref:GQI_DxM).<!-- RN 44230 + 44235-->
 
 ## Definition
 

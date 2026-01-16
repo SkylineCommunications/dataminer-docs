@@ -2,23 +2,17 @@
 uid: Web_apps_Feature_Release_10.6.2
 ---
 
-# DataMiner web apps Feature Release 10.6.2 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.6.2
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.5.0 [CU11].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.2](xref:General_Feature_Release_10.6.2).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.6.2](xref:Cube_Feature_Release_10.6.2).
-
-## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
 
 ## Changes
 
@@ -75,28 +69,26 @@ The above-mentioned label configuration can be set per node query, per edge quer
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-The sidebar of the Dashboards app has been redesigned.
+The sidebar of the Dashboards app has been redesigned. The ellipsis button ("...") in the top-right corner of the sidebar has been removed. Instead, the same menu is now available by right-clicking the background of the sidebar, which opens a menu with the following commands:
 
-When you click the ... button at the top of the sidebar, or when you right-click the background of the sidebar, a menu with the following commands will open:
-
-- Create > Dashboard
-- Create > Folder
-- Create > From Import
-- Create > From Catalog
+- Add > Dashboard
+- Add > Folder
+- Add > From Import
+- Add > From Catalog
 - Settings
 
-When you right-click a folder, or click the ... button of a folder, a menu with the following commands will open:
+When you right-click a folder, or click the ellipsis button of a folder, a menu with the following commands will open:
 
-- Create > Dashboard
-- Create > Folder
-- Create > From Import
-- Create > From Catalog
+- Add > Dashboard
+- Add > Folder
+- Add > From Import
+- Add > From Catalog
 - Settings
 - Delete
 
-When you right-click a dashboard, or click the ... button of a dashboard, a menu with the following commands will open:
+When you right-click a dashboard, or click the ellipsis button of a dashboard, a menu with the following commands will open:
 
-- Open in a new tab
+- Open in new tab
 - Duplicate
 - Settings
 - Delete
@@ -192,7 +184,7 @@ Possible types for the `IGQIValueFilter.Value` property (i.e. the types for whic
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-Up to now, the *Interactive Automation script* component would only visualize an Automation script when the user had the *Modules > Automation > UI available* permission. From now on, the *Interactive Automation script* component will be able to visualize an Automation script when the user has the *Modules > Automation > Execute* permission.
+Up to now, the *Interactive Automation script* component would only visualize an Automation script when the user had both the *Modules > Automation > UI available* and the *Modules > Automation > Execute* permissions. From now on, the *Interactive Automation script* component will be able to visualize an Automation script when the user has the *Modules > Automation > Execute* permission.
 
 With regard to the Web Services API, up to now, users needed to have both the *Modules > Automation > UI available* permission and the *Modules > Automation > Execute* permission to be allowed to use the `GetAutomationScript`, `ExecuteAutomationScript`, or `ExecuteAutomationScriptWithOutput` methods.
 
@@ -275,6 +267,19 @@ When all above-mentioned conditions are met, the partition join is executed as f
 
 > [!IMPORTANT]
 > Although the partition join strategy will enhance performance in most common scenarios that require the fastest possible query executions, this strategy can be up to twice as slow when the join has low selectivity. For these uncommon scenarios, we recommended manually enabling the *prefetch* option on the relevant join operator.
+
+#### DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+In order to upgrade the DataMiner Assistant DxM, up to now, you had to install a full DataMiner server upgrade package (main release or feature release).
+
+From now on, the DataMiner Assistant DxM will be included in the DataMiner web upgrade packages instead.
+
+See also: [DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]](xref:General_Feature_Release_10.6.2#dataminer-upgrade-dataminer-assistant-dxm-will-now-be-included-in-the-dataminer-web-upgrade-packages-id-44291)
+
+> [!NOTE]
+> The DataMiner Assistant DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
 
 #### Dashboards app: Updated navigation pane with improved accessibility and CRUD actions [ID 44297]
 

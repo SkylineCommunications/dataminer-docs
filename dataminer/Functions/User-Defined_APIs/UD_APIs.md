@@ -24,8 +24,5 @@ To use this functionality, you need the [DataMiner UserDefinableApiEndpoint](xre
 > [!NOTE]
 > Since API tokens and API definition objects are **stored in the indexing database**, these are NOT included in DataMiner backup packages. For information on how to back up and restore this data in case you are using self-managed DataMiner storage nodes, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups) or [Configuring Elasticsearch backups](xref:Configuring_Elasticsearch_backups).
 
-> [!IMPORTANT]
-> This feature replaces the *APIDeployment* soft-launch feature. If you were previously using the *APIDeployment* soft-launch option, keep in mind that the *User-Defined APIs* tab in System Center will replace the obsolete *API deployment* tab from 10.4.0 onwards. Make sure to move your old APIs from API deployment to the new feature. For information on how to create APIs from existing scripts, see [Using existing scripts](xref:UD_APIs_Using_existing_scripts).
-
 > [!TIP]
 > See also: [User-Defined APIs benchmarks](xref:user-defined_API_benchmarks)

@@ -7,6 +7,24 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 8 January 2026 - Enhancement - DataAPI 1.4.2 - Logging now accessible via System Center [ID 44409]
+
+The DataAPI logging is now available in System Center. For this purpose, the log file configuration has been moved to the appsettings.json file.
+
+### 8 January 2026 - Fix - DataAPI 1.4.2 - Connector deletion events not sent to DataAPI [ID 44393]
+
+Up to now, when a connector was deleted from DataMiner, DataAPI did not get notified of this. This issue has been resolved.
+
+### 8 January 2026 - Enhancement - DataAPI 1.4.2 - Improved behavior in clustered environments [ID 44293]
+
+Each Agent now has a dedicated NATS subject used by DataAPI for sending element creation requests and uploading connectors. This change improves DataAPI behavior in clustered environments by reducing synchronization issues and improving request isolation between Agents.
+
+### 8 January 2026 - Enhancement - DataAPI 1.4.2 - Improved DataAPI installer [ID 44231]
+
+While the DataAPI installer previously had the MSIRESTARTMANAGERCONTROL property set to *Disabled*, this has now been changed to *DisableShutdown*. This enables the Windows Restart Manager while preventing it from automatically shutting down applications. With this setting, the Restart Manager can handle files in use more efficiently during upgrades. In particular, it automatically skips files held by services that are scheduled to be stopped, as configured via the ServiceControl element in WiX, preventing unnecessary delays in the upgrade process.
+
+When the Restart Manager is disabled, the installer falls back to the legacy file-in-use detection. While this does not generate prompts in this case, it is significantly less efficient and cannot spot files held by services that will be stopped, which could considerably slow down the InstallValidate phase.
+
 ### 31 October 2025 - Fix - DataAPI 1.4.1 - Issue with deadlock and memory leak in node identification mechanism [ID 44026]
 
 While processing incoming NATS messages, DataAPI could encounter a deadlock situation. This caused message accumulation, eventually leading to a memory leak.

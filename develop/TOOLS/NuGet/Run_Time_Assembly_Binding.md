@@ -2,7 +2,7 @@
 uid: Run_Time_Assembly_Binding
 ---
 
-# Run-time assembly binding
+# Runtime assembly binding
 
 At runtime, assemblies are loaded the moment they are needed by the executing code. When the Just-In-Time (JIT) compiler compiles the intermediate language (IL) into native code, it sees which types are referenced. The JIT compiler will then determine the assemblies that define these types, and these will be loaded.
 

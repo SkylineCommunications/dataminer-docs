@@ -2,10 +2,13 @@
 uid: General_Main_Release_10.5.0_CU11
 ---
 
-# General Main Release 10.5.0 CU11 - Preview
+# General Main Release 10.5.0 CU11
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> Before you upgrade to this DataMiner version, make sure the Microsoft **.NET 10** hosting bundle is installed (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)). See also: [DataMiner upgrade: New prerequisite will check whether .NET 10 is installed](xref:General_Main_Release_10.5.0_CU10#dataminer-upgrade-new-prerequisite-will-check-whether-net-10-is-installed-id-44121).
 
 > [!TIP]
 >
@@ -94,12 +97,6 @@ SLLogCollector packages will now also include the following information:
 - A snapshot of the HTTP service state (Request Queue View), which will be stored in the following file:
 
   `/Network Information/netsh.exe http show servicestate view=requestq verbose=no.txt`
-
-#### DataAPI: Enhanced behavior in cluster environments [ID 44293]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-Because of a number of enhancements, DataAPI behavior in cluster environments has improved, especially when creating elements or uploading connectors.
 
 #### SLSNMPManager: Enhanced performance of the SNMP++ library [ID 44372]
 
@@ -257,3 +254,17 @@ In the `<PortSettings>` element of an HTTP connection, you can configure a `<Ski
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 During DataMiner startup, in some rare cases, a fatal error could occur in the GQI DxM when it tried to connect to SLNet.
+
+#### Problem with SLDataMiner when an incomplete JSON response was received from Microsoft Entra ID [ID 44391]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In some cases, a fatal error could occur in SLDataMiner when an incomplete JSON response was received from Microsoft Entra ID while authenticating a user via SAML.
+
+#### Failing attempt to create an alarm for an element being stopped could block the alarm thread [ID 44394]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU0] -->
+
+When an alarm cannot be created for a particular element, an attempt is made to fetch the element state for logging purposes.
+
+Up to now, in some cases, when the element was being stopped and was flushing its data to the database, this fetch operation could block the alarm thread. As a result, no new alarms would get processed for that element until the element had stopped flushing its data.

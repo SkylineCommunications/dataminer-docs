@@ -6,7 +6,7 @@ uid: GQI_Ad_hoc_Optimizing_filter_operations
 
 This example shows how you can optimize a filter operation by intercepting the filter operator and applying a filter on the underlying database.
 
-It can be used from DataMiner 10.5.0 [CU11]/10.6.2 onwards when using the [GQI DxM](xref:GQI_DxM).<!-- RN 44230 -->
+It can be used from DataMiner 10.5.0 [CU11]/10.6.2 onwards when using the [GQI DxM](xref:GQI_DxM).<!-- RN 44230 + 44235-->
 
 > [!IMPORTANT]
 > When optimizing, **avoid changing the functional behavior of a filter**. Both the GQI framework and the end user rely on the fact that an optimization does not change the final result of the query. Respect case-insensitive comparisons, regex options, etc.
