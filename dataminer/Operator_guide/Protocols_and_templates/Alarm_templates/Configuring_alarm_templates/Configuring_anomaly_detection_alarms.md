@@ -53,7 +53,7 @@ To configure the Augmented Operations alarm settings for specific parameters<!--
         > [!NOTE]
         > For example, if you select *Slope increases* but not *Slope decreases*, an alarm will be generated when an anomalous slope increase is detected, but a suggestion event will be generated if an anomalous slope decrease is detected. It is not possible to generate both an alarm and a suggestion event for the same type of anomaly detection.
 
-     1. Optionally, for anomaly detection of type *Level shift* or *Outlier*, set custom alarm thresholds that determine when an alarm should occur.
+     1. Optionally, for anomaly detection of type *Level shift*, *Outlier*, or *Flatline* (from DataMiner 10.6.2/10.7.0 onwards<!--RN 44094 + 44191-->), set custom alarm thresholds that determine when an alarm should occur.
 
         By default, *Smart* is selected in the dropdown menu, which means alarm thresholds are automatically set based on what DataMiner Analytics determines to be an anomaly. To set your own custom alarm thresholds, select one of the following options instead:
 
@@ -61,11 +61,13 @@ To configure the Augmented Operations alarm settings for specific parameters<!--
 
           For example, if you input "30" for the *Major* alarm severity in the case of *Outlier > Upward spikes*, a 50% upward spike will trigger a *Major* alarm as it surpasses the predefined 30%. A 20% spike, such as 100 to 120, will not trigger any alarms, since it is below the set 30%.
 
+          This option is only available for level shifts and outliers.
+
         - **Absolute**: Allows you to set the alarm thresholds as an absolute value, which represents the delta with the baseline value.
 
           For example, if you input "40" for the *Major* alarm severity in the case of *Outlier > Upward spikes*, a parameter jump from 100 to 150 will trigger a *Major* alarm as it surpasses the predefined 40. A jump from 100 to 130, however, will not trigger any alarms, since it is below the set 40.
 
-        ![Alarm thresholds](~/dataminer/images/Anomaly_Alarm_Settings.png)<br/>*Anomaly alarm settings in DataMiner 10.3.12*
+        ![Alarm thresholds](~/dataminer/images/Anomaly_Alarm_Settings.png)<br>*Anomaly alarm settings in DataMiner 10.6.2*
 
         > [!NOTE]
         > Any customized behavioral anomaly monitoring setup containing relative or absolute thresholds will be lost if you downgrade to DataMiner version 10.3.11 or older. These versions do not support this extended anomaly configuration, and the thresholds will be automatically determined by DataMiner Analytics, similar to the default *Smart* option<!--RN 37434-->.
