@@ -4,6 +4,9 @@ uid: Configuring_job_domains
 
 # Configuring job domains
 
+> [!IMPORTANT]
+> The Jobs app is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.5.0 onwards.
+
 Different job domains can be configured, each with its own job section configuration.
 
 ## Adding a job domain

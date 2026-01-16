@@ -1047,7 +1047,6 @@ items:
       - name: Overview of the Jobs app UI
         topicUid: Overview_of_the_Job_Manager_app_UI
       - name: Configuring jobs in the Jobs app
-        topicUid: Configuring_jobs_in_the_Job_Manager_app
         items:
           - name: Configuring job domains
             topicUid: Configuring_job_domains

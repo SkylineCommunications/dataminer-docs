@@ -4,6 +4,9 @@ uid: Configuring_a_job_field
 
 # Configuring a job field
 
+> [!IMPORTANT]
+> The Jobs app is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.5.0 onwards.
+
 When you are configuring a job section, you can edit or create job fields. See [Configuring job sections](xref:Configuring_job_sections).
 
 For each field, the following configuration is possible.

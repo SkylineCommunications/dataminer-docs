@@ -4,6 +4,9 @@ uid: Working_with_the_jobs_timeline
 
 # Working with the jobs timeline
 
+> [!IMPORTANT]
+> The Jobs app is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.5.0 onwards.
+
 To access the jobs timeline, on the main page of the app, click the timeline icon ![](~/dataminer/images/JobsX_timeline00102.png) in the top-right corner.
 
 The timeline displays all jobs matching the currently configured time filter in the filter pane.
