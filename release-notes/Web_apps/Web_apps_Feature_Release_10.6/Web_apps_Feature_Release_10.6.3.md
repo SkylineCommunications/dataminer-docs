@@ -107,6 +107,14 @@ In some cases, a *Maps* component would incorrectly fetch markers with larger bo
 
 As this issue has now been fixed, overall performance has increased when zooming in or out in a *Maps* component.
 
+#### Web Services API: Problem connecting to the offline agent of a Failover pair [ID 44410]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, the Web Services API would fail to establish a persistent admin connection towards the offline agent of a Failover pair. An attempt to establish such a connection would be made each time an API method was called on the offline agent, causing the logging of SLNet and the Web Services API to get flooded with error messages.
+
+From now on, it will be possible for the Web Services API to establish a persistent admin connection towards the offline agent of a Failover pair. Also, the API will now be aware that the agent it offline.
+
 #### Web apps: Problem when deleting a web app [ID 44411]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
