@@ -7,6 +7,33 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.3.7
+
+#### New feature - Improved API for Scheduler [ID 44556]
+
+The Scheduler component now supports task and action configuration via builders. The `IDmsScheduler` interface includes `CreateTaskBuilder` methods to configure tasks, while `DmsSchedulerActionBuilders` provides builders for Automation scripts, Email, SMS, and Information actions.
+
+The `CreateTask` and `UpdateTask` methods have been extended to support `IDmsSchedulerTask` objects, providing a strongly-typed alternative to the manual `object[]` construction.
+
+Example usage:
+
+```csharp
+var scheduler = dma.Scheduler;
+var action = DmsSchedulerActionBuilders.CreateScriptAction()
+    .WithScriptName("MyScript")
+    .Build();
+
+var task = scheduler.CreateTaskBuilder()
+    .WithTaskName("Weekly Backup")
+    .WithStartTime(DateTime.Now.AddDays(1))
+    .WithEndTime(DateTime.Now.AddYears(1))
+    .WithRepetitionType(DmsSchedulerRepetitionType.Daily)
+    .AddAction(action)
+    .Build();
+
+int taskId = scheduler.CreateTask(task);
+```
+
 ### 1.1.3.6
 
 #### New feature - SkipCertificateVerification property added to IHttpConnection [ID 44066]
