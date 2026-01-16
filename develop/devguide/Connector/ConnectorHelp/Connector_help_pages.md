@@ -5,13 +5,13 @@ description: For every connector that is developed for DataMiner, two or more do
 
 # Connector documentation
 
-For every connector that is developed for DataMiner, at least one documentation page should be made. This mandatory page is referred to as the [marketing page](#marketing-page). This page should be appealing and focus on demonstrating the value the connector can bring to users, similar to the packaging of a product in a store.
+For every connector that is developed for DataMiner, a [marketing page](#marketing-page) must be made, which will be shown as its description in the Catalog. This page must be appealing and **focus on demonstrating the value the connector can bring** to users.
 
-If the connector is very simple and intuitive, a limited amount of technical and "how to" information can be added directly within the marketing page. Otherwise, if the connector is a bit more complex, a [technical page](#technical-page) should be made as well. This should be a subpage of the marketing page containing further technical details. You could compare this to the instructions booklet included with a product in a store. The technical page details among others how the connections should be set up when you create an element with the connector, how the element should be used and configured, etc.
+A **limited amount of technical and "how to" information** can be added directly on the marketing page. However, if your connector requires so much technical information that the marketing page would no longer be user-friendly, or if it requires technical information that may make the connector seem less attractive (for example, troubleshooting procedures), you should add this on a separate [technical page](#technical-page), which should be a subpage of the marketing page.
 
-If a connector exports child connectors, a subpage should also be created for each of these child connectors.
+If a connector exports **child connectors**, a subpage should also be created for each of these child connectors.
 
-When you develop a connector using DIS, you can pre-generate the connector documentation pages with the *Plugins* > *Generate driver help* option in the [DIS menu](xref:DIS_menu). You can also create the pages directly in Markdown, starting from our [marketing](xref:Connector_marketing_template) and [technical](xref:Connector_technical_template) templates. When you have created the pages, add them in the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository.
+When you develop a connector using DIS, you can pre-generate the connector documentation with the *Plugins* > *Generate driver help* option in the [DIS menu](xref:DIS_menu). You can also create the documentation directly in Markdown, starting from our [marketing template](xref:Connector_marketing_template) and, if necessary, [technical template](xref:Connector_technical_template). When you have created the documentation, add it in the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository.
 
 ## Adding new connector documentation pages
 
@@ -19,21 +19,23 @@ When you develop a connector using DIS, you can pre-generate the connector docum
 
 To make sure your pages can be automatically included in the [Catalog](https://catalog.dataminer.services/), it is important that you use the correct file names and place the files in the correct folder:
 
-- Marketing page: make sure the **file name** of your marketing page is the **exact name of the connector in the Catalog**, but with **underscores instead of spaces**. For example, the file name of the *Microsoft Platform* marketing page has to be *Microsoft_Platform.md*. Make sure the casing is the same, and do not replace any other characters with underscores. Any mismatch between the file name and the connector name will make the documentation **unavailable** in the Catalog.
+- Marketing page: Make sure the **file name** of your marketing page is the **exact name of the connector in the Catalog**, but with **underscores instead of spaces**. For example, the file name of the *Microsoft Platform* marketing page has to be *Microsoft_Platform.md*. Make sure the casing is the same, and do not replace any other characters with underscores. Any mismatch between the file name and the connector name will make the documentation **unavailable** in the Catalog.
 
   > [!IMPORTANT]
   > It is very important that the file name **does not contain any spaces**. If the file name contains spaces, this will cause an error when the new file is pushed to the Catalog.
 
-- Technical page: make sure the **file name** follows the same rules as mentioned above for the Marketing page but is followed by a **_Technical** suffix. For example, the file name of the *Microsoft Platform* technical page has to be *Microsoft_Platform_Technical.md*.
+- Technical page (only to be included when necessary): Make sure the **file name** follows the same rules as mentioned above for the Marketing page but is followed by a **_Technical** suffix. For example, the file name of the *Microsoft Platform* technical page has to be *Microsoft_Platform_Technical.md*.
 
 - Add your documentation files in the following folder of the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository: */dataminer-docs-connectors/connector/doc*
 
 ### Table of contents
 
-When you add new pages to the connector documentation, you will need to add them to the table of contents as well. To do so, add them to the *toc.yml* file in the *connector* folder. Please note:
+When you add **new pages** to the connector documentation, you will need to add them to the table of contents as well. To do so, add them to the *toc.yml* file in the *connector* folder. Please note:
 
 - The connector documentation pages are listed in alphabetical order underneath each vendor node. Make sure to add your pages in the correct location.
-- Use the following syntax to add the pages:
+- Add your pages to the toc.yml using a `topicUid` reference. The value you need to specify next to "topicUid:" is the UID specified at the top of your markdown file. See [Adding a page](xref:CTB_Adding_New_Page).
+- Include the *toc.yml* update and the new files **within the same pull request**. The "Build" check for your pull requests will fail if you use separate pull requests.
+- If you add both a marketing and a technical page, use the following syntax to add the pages:
 
   ```yml
   - name: Connector name
@@ -44,9 +46,6 @@ When you add new pages to the connector documentation, you will need to add them
   ```
 
 > [!TIP]
-> The value you need to specify next to "topicUid:" is a UID that should be specified at the top of the markdown files. See [Adding a page](xref:CTB_Adding_New_Page).
-
-> [!NOTE]
 > If you do not configure the table of contents correctly, the automatic checks that run after you submit your pull request will fail. You can then click *Details* to find out what exactly went wrong.
 >
 > ![Pull request check failed](~/develop/images/Pull_request_check_failed.png)
@@ -61,24 +60,17 @@ Use DocFX Flavored Markdown (DFM). See [Markdown syntax](xref:CTB_Markdown_Synta
 
 ### Title
 
-The title of both pages should be the name of the connector in the [Catalog](https://catalog.dataminer.services/).
+The title of your page should be the name of the connector in the [Catalog](https://catalog.dataminer.services/). If you add a technical page as well, give it exactly the same title.
 
 ### Marketing page
 
 The format of the marketing page should be the same as for the documentation of other Catalog items. See [Best practices when documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items).
 
-For very straightforward and intuitive connectors, a **Technical Reference** section will contain a very brief explanation of how to use the connector.
-
-For connectors that requires more technical and usage information, the **Technical Reference** section must include a note with a link to the [technical page](#technical-page) for the connector (optionally in addition to other technical info that is important enough to be included here):
-
-```md
-> [!NOTE]
-> For detailed technical information, refer to our [technical documentation](xref:Connector_help_My_connector_name_Technical).
-```
+If technical information needs to be included, you can put this in the **Technical Reference** section. However, if your connector needs a lot of technical information, or if it needs technical information that may make the connector seem less attractive (such as troubleshooting), you should place it on a separate [technical page](#technical-page). In that case, place a link to the technical page in the Technical Reference section.
 
 ### Technical page
 
-Depending on the complexity of the connector, a technical page can be made. It should be organized as follows.
+Only if a connector requires a lot of technical information or technical information that is unsuitable for a marketing page, a technical page can be made. It should be organized as follows.
 
 #### 'About' section
 
@@ -96,7 +88,7 @@ In the **Configuration** section, add the information needed to create a DataMin
 
 ##### 'Connections' subsection
 
-Except for exported child connectors, every connector documentation page should have a **Connections** subsection. For each connection, you should add a title mentioning the name of the connection as defined in the connector, e.g. "SNMP Connection – Trap Input". For the Main connection, use "Main" as the name of the connection.
+Except for exported child connectors, every technical documentation page should have a **Connections** subsection. For each connection, you should add a title mentioning the name of the connection as defined in the connector, e.g. "SNMP Connection – Trap Input". For the Main connection, use "Main" as the name of the connection.
 
 Below are a couple of examples of such connections sections.
 
@@ -142,17 +134,23 @@ This connector uses a virtual connection and does not require any input during e
 
 If, once the element has been created, the connector requires more actions from the user before it can actually be used, you will need to add an **Initialization** section that explains what needs to be done. This could for example be configuring parameters for authentication. Make sure it is clear to the user what they need to fill in and where.
 
+If no additional steps are needed to get the element running after it has been created, leave out this section.
+
 ##### 'Web Interface' subsection
 
 If there is a Web Interface page, always add a **Web Interface** subsection, containing the remark: "The web interface is only accessible when the client machine has network access to the product."
+
+If there is no Web Interface page, leave out this section.
 
 ##### 'Redundancy' subsection
 
 If redundancy is defined in the connector, add a **Redundancy** subsection that explains how this should be configured.
 
+If redundancy is not defined in the connector, leave out this section.
+
 ##### Other configuration subsections
 
-Depending on the connector, other subsections may be needed, e.g. in case Automation scripts, Correlation rules, Visio files, etc. need to be configured. You can find a number of possible subsections listed in the template. However, this list is not exclusive; you can add different configuration subsections if this makes sense for your connector.
+Depending on the connector, other subsections may be needed, for example, in case Automation scripts, Correlation rules, Visio files, etc. need to be configured. You can find a number of possible subsections listed in the template. However, this list is not exclusive; you can add different configuration subsections if this makes sense for your connector.
 
 #### 'How to Use' section
 
@@ -160,21 +158,9 @@ The **How to Use** section of your page is where you explain what users can actu
 
 Also specify the **communication method** if relevant. For example: "SOAP calls are used to retrieve the device information. SNMP traps can be retrieved when this is enabled on the device." In case no data traffic will be seen in the Stream Viewer, you should clearly mention this.
 
-Make sure you **always specify something in this section**, keeping in mind what users may be looking for when they consult the documentation. Ask yourself the question, "If someone who knows nothing at all about this connector goes looking for help about it, what would they need to see?"
+**Avoid just adding a list of pages and parameters**. Users can see the pages and parameters when they look at the element, so there is no value in simply repeating this. In fact, if no detailed technical information is needed on how to use the connector, consider not making a technical page at all and instead adding any required technical info on the marketing page.
 
-For example:
-
-- Which information is the most important for the users and where can they find it?
-- Are there any parameters of which the purpose is not obvious?
-- If the connector allows configuration, which settings are the most important?
-- Are there any settings that could have an impact users might not anticipate?
-- Are there any potential problems that users should watch out for?
-
-If you mention different pages and parameters, this should be for the purpose of explaining something more than what users can see by just looking at the element. Merely writing down which pages are available and which parameters are on them is not helpful.
-
-For a very simple one-page connector, it can be sufficient to specify something like "You can find all the information you need to monitor the device on the General data page." This way, users will be reassured that they are not missing something.
-
-If you need to add more than just a couple of lines of text because the connector is quite complicated or you need to go into a lot of detail for some of the features, use subheaders to keep the page easy to scan for the reader. These subheaders can either reflect the different pages you want to discuss, or the different topics, e.g. General Settings, Import and Export, Logging.
+If you need to add a lot of information in this section, use subheaders to keep the page easy to scan for the reader.
 
 #### 'DataMiner Connectivity Framework' section
 
