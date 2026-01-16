@@ -69,6 +69,12 @@ items:
           topicUid: Tutorial_MediaOps_Scheduling_Configurations
         - name: Creating a workflow to use as a template for a job
           topicUid: Tutorial_MediaOps_Workflow_Designer_Intro
+      - name: Development
+        items: 
+        - name: Personalizing the apps
+          topicUid: MO_Development_Personalizing_Apps
+        - name: Interacting with MediaOps using code
+          topicUid: MO_Development_Interacting_with_Code
     - name: dataminer.InfraOps
       topicUid: InfraOps
       items:
