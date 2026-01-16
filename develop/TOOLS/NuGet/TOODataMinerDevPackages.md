@@ -4,7 +4,7 @@ uid: TOODataMinerDevPackages
 
 # Dev Packs
 
-Dev Packs are very similar to standard NuGet package except that they won't be added to the output, the compiled deliverable. When consuming a standard NuGet within a solution, the assemblies contained in the NuGet package will be installed when installing the solution. When consuming a dev pack within a solution, they can be used to develop using the assemblies contained in the dev pack but those assemblies won't be installed when installing the solution. Instead, the solution will assume those assemblies are already pre-installed.
+Dev Packs are very similar to standard NuGet package except that they will not be added to the output, the compiled deliverable. When a standard NuGet is consumed within a solution, the assemblies contained in the NuGet package will be installed when the solution is installed. When a Dev Pack is consumed within a solution, the assemblies contained in the Dev Pack can be used to develop, but those assemblies will not be installed when the solution is installed. Instead, the solution will assume those assemblies are already pre-installed.
 
 ## DataMiner Dev Packs
 
@@ -56,8 +56,12 @@ Revisions can be released to:
 
 ## Solution Dev Packs
 
-Next to the above mentioned fully generic DataMiner Dev Packs, we also have the possibility to make some Solution Dev Packs. Let's say you work on a standard solution (e.g. MediaOps) and multiple optional modules consume assemblies exposed by such standard solution. If the optional module would consume a normal NuGet from the standard solution, it would lead to related assemblies to be installed when installing the optional module, and this could lead to mismatching versions between the assemblies installed by the optional module and the ones installed by the actual standard solution. This could then lead to assembly loading issues. Instead of that, the optional module will consume standard solution dev packs, meaning the assembly won't be installed by the optional module. Instead, the optional module will have a dependency to the standard solution and rely on the already pre-installed standard solution including those assemblies.
+As an alternative to the fully generic DataMiner Dev Packs, it is also possible to make Solution Dev Packs.
+
+For example, imagine you are working on a standard solution like MediaOps, and multiple optional modules consume assemblies exposed by this standard solution. If such an optional module were to consume a normal NuGet from the standard solution, it would lead to related assemblies being installed when the optional module is installed, which in turn could lead to mismatching versions between the assemblies installed by the optional module and the ones installed by the actual standard solution. This could then lead to assembly loading issues.
+
+If the optional module consumes standard Solution Dev Packs instead, the assembly will not be installed by the optional module. Instead, the optional module will have a dependency on the standard solution and rely on the already pre-installed standard solution, which includes those assemblies.
 
 ### Naming conventions
 
-For the optional module to consider a NuGet package as a Dev Pack, the package name needs to start with **Skyline.DataMiner.Dev.Utils.**. This will make sure the compiled deliverable will not include the assemblies themself but instead will include the proper reference to the location where those can be found assuming the standard solution was installed.
+For the optional module to consider a NuGet package as a Dev Pack, the package name needs to start with **Skyline.DataMiner.Dev.Utils.**. This will make sure the compiled deliverable will not include the assemblies themselves but will instead include the proper reference to the location where those can be found, assuming the standard solution was installed.
