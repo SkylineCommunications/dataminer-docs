@@ -34,6 +34,10 @@ var task = scheduler.CreateTaskBuilder()
 int taskId = scheduler.CreateTask(task);
 ```
 
+#### Enhancement - Performance of GetElements and GetServices methods improved [ID 44525]
+
+The performance of the `GetElements` and `GetServices` methods in the `Dma` class has been improved. The underlying `GetInfoMessage` now uses `LocalElementInfo` and `LocalServiceInfo` instead of `ElementInfo` and `ServiceInfo`.
+
 ### 1.1.3.6
 
 #### New feature - SkipCertificateVerification property added to IHttpConnection [ID 44066]
