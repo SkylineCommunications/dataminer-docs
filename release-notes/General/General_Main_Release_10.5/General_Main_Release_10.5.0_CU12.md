@@ -85,6 +85,14 @@ When 10 simultaneous calls between a client application (e.g. DataMiner Cube) an
 
 From now on, even when 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent are being processed, calls that check whether the connection between client and DMA is still alive will never be blocked.
 
+#### GQI: Problem with Timer callbacks could cause SLHelper to stop working [ID 44458]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In some cases, exceptions could be thrown in the callback of System.Threading.Timer, causing the SLHelper process to stop working.
+
+See also: [GQI DxM: Problem with Timer callbacks could cause the GQI DxM to stop working [ID 44460]](xref:Web_apps_Feature_Release_10.6.3#gqi-dxm-problem-with-timer-callbacks-could-cause-the-gqi-dxm-to-stop-working-id-44460)
+
 #### Event message would return the object twice in case of two subscriptions to the same object [ID 44486]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->

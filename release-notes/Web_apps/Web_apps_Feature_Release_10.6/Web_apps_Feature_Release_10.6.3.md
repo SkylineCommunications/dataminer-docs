@@ -151,6 +151,14 @@ When the DataMiner Agent had a fixed time zone, and the client computer had a ti
 
 From now on, all timeline items will be displayed correctly after a transition from summer time to winter time or vice versa.
 
+#### GQI DxM: Problem with Timer callbacks could cause the GQI DxM to stop working [ID 44460]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In some cases, exceptions could be thrown in the callback of System.Threading.Timer, causing the GQI DxM to stop working.
+
+See also: [GQI: Problem with Timer callbacks could cause SLHelper to stop working [ID 44458]](xref:General_Feature_Release_10.6.3#gqi-problem-with-timer-callbacks-could-cause-slhelper-to-stop-working-id-44458)
+
 #### Dashboards/Low-Code Apps - Maps component: Problem when re-applying the selection [ID 44461]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
