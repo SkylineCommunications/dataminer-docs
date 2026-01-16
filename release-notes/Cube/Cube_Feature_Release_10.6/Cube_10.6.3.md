@@ -71,3 +71,11 @@ From now on, when a recursive loop is detected in nested correlation alarms, an 
 When Cube experiences a CRL freeze, a message box will appear, explaining what can be done to prevent this.
 
 Up to now, this message box, which is created in the background thread, could cause asynchronous calls in that thread to get blocked. From now on, although it will still be created in the background thread, it will no longer cause any asynchronous calls to get blocked.
+
+#### Visual Overview - AlarmSummary: Correlated alarm would incorrectly not be removed from the summary when the element state changed [ID 44480]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+When an *AlarmSummary* shape was linked to an object (e.g. an element, a service, or a view), and that object contained a correlated alarm, up to now, that correlated alarm would not be removed from the summary when the element associated with the correlated alarm had its status set to "Paused", "Stopped", or "Deleted".
+
+From now on, correlated alarms will be removed from the summary when the status of the elements associated with those correlated alarms changes.
