@@ -8,7 +8,6 @@ To add a DataMiner Agent to a DMS running STaaS:
 
 1. Make sure that the DMA you are adding is a clean DMA, meaning that it is a newly installed DMA or a DMA that has been [fully reset](xref:Factory_reset_tool).
 
-1. Make sure the DMA you are adding is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), and that both the DMA and the DMS are part of the same cloud-connected system.
 
    From DataMiner 10.6.2/10.7.0 onwards<!--RN 44171-->, the operation will fail if the DMA is not cloud-connected or if the DMA and DMS do not have the same identity.
 
