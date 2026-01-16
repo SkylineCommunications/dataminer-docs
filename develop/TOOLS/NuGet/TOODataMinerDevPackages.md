@@ -64,4 +64,4 @@ If the optional module consumes standard Solution Dev Packs instead, the assembl
 
 ### Naming conventions
 
-For the optional module to consider a NuGet package as a Dev Pack, the package name needs to start with **Skyline.DataMiner.Dev.Utils.**. This will make sure the compiled deliverable will not include the assemblies themselves but will instead include the proper reference to the location where those can be found, assuming the standard solution was installed.
+For the optional module to consider a NuGet package as a Dev Pack, the package name needs to start with "`Skyline.DataMiner.Dev.Utils.`". This will make sure the compiled deliverable will not include the assemblies themselves but will instead include the proper reference to the location where those can be found, assuming the standard solution was installed.
