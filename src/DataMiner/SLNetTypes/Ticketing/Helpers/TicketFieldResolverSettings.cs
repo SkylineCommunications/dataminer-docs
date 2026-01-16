@@ -5,9 +5,8 @@ using Skyline.DataMiner.Net.Tickets;
 namespace Skyline.DataMiner.Net.Ticketing.Helpers
 {
 	/// <summary>
-	/// Contains all settings used by the ticket field resolver.
+	/// Contains all settings used by the ticket field resolver. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
-	/// <remarks>Available from DataMiner 10.1.6 (RN 29191) onwards.</remarks>
 	[Serializable]
     //[DataContract]
     public class TicketFieldResolverSettings

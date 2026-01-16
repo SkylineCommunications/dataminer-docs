@@ -186,8 +186,6 @@ items:
                 items:
                   - name: Run-time errors (RTEs)
                     topicUid: Troubleshooting_Run_Time_Errors
-              - name: Troubleshooting - apps
-                topicUid: Troubleshooting_Apps
               - name: Troubleshooting - Visual Overview
                 topicUid: Troubleshooting_Visual_Overview
   - name: Troubleshooting procedures

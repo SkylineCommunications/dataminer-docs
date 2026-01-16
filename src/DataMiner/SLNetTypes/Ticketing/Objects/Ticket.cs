@@ -21,7 +21,7 @@ using System.Drawing.Design;
 namespace Skyline.DataMiner.Net.Ticketing
 {
 	/// <summary>
-	/// Represents a ticket used by the Ticketing Gateway.
+	/// Represents a ticket used by the Ticketing Gateway. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	/// <example>
 	/// <code>
@@ -502,6 +502,9 @@ namespace Skyline.DataMiner.Net.Ticketing
     }
 
 #if NETFRAMEWORK
+	/// <summary>
+	/// Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
+	/// </summary>
     public class TicketTypeEditor : UITypeEditor
     {
 
@@ -517,7 +520,7 @@ namespace Skyline.DataMiner.Net.Ticketing
     }
 #endif
 	/// <summary>
-	/// Defines ticketing exposers.
+	/// Defines ticketing exposers. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	/// <example>
 	/// <para>Retrieving tickets by ticket field resolver:</para>
@@ -605,6 +608,9 @@ namespace Skyline.DataMiner.Net.Ticketing
         }
     }
 
+	/// <summary>
+	/// Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
+	/// </summary>
     public enum TicketsByTimeEnum
 	{
 		DMAID,
@@ -613,6 +619,9 @@ namespace Skyline.DataMiner.Net.Ticketing
 		Ticket
 	}
 
+	/// <summary>
+	/// Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
+	/// </summary>
 	public enum TicketLinkerEnum
 	{
 		DMAID,

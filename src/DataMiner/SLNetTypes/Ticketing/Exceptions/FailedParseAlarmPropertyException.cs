@@ -3,7 +3,7 @@
 namespace Skyline.DataMiner.Net.Ticketing
 {
 	/// <summary>
-	/// The exception that is thrown when parsing failed for an alarm property.
+	/// The exception that is thrown when parsing failed for an alarm property. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	public class FailedParseAlarmPropertyException : Exception
     {

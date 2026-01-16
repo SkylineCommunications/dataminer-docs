@@ -10,7 +10,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 - Security
 
-  Users are allowed to connect to the Dashboard Gateway, but not to the DataMiner Agents directly. Also, it is possible to install only the web applications on the Dashboard Gateway web server(s) to which you want users to have access. If you only install the Dashboards and the Monitoring app, users will not be able to access the Jobs app, the Ticketing or any other app.
+  Users are allowed to connect to the Dashboard Gateway, but not to the DataMiner Agents directly. Also, it is possible to install only the web applications on the Dashboard Gateway web server(s) to which you want users to have access. If you only install the Dashboards app, users will not be able to access the Monitoring app or any other app.
 
 - Performance
 
@@ -48,14 +48,10 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
   - ``https://gateway.mycompany.com/monitoring``
 
-  - ``https://gateway.mycompany.com/ticketing``
-
-  - ``https://gateway.mycompany.com/jobs``
-
 - The DataMiner user account used by the Dashboard Gateway web server should not have multifactor authentication enabled.
 
 > [!IMPORTANT]
-> To be able to use [DataMiner Maps](xref:DashboardGenericMap) and [video thumbnails embedded using a Web component](xref:DashboardWeb), a [reverse proxy](#reverse-proxy) must be configured. This is also needed in case any modules or apps other than the Dashboards app, Low-Code Apps, Monitoring app, Jobs app, and Ticketing app are embedded.
+> To be able to use [DataMiner Maps](xref:DashboardGenericMap) and [video thumbnails embedded using a Web component](xref:DashboardWeb), a [reverse proxy](#reverse-proxy) must be configured. This is also needed in case any modules or apps other than the Dashboards app, Low-Code Apps, Monitoring app, Jobs app (legacy), and Ticketing app (legacy) are embedded.
 
 ## Configuration
 
@@ -74,8 +70,8 @@ There are two main reasons to consider a Dashboard Gateway setup:
     - `C:\Skyline DataMiner\Webpages\Dashboard`
     - `C:\Skyline DataMiner\Webpages\App`
     - `C:\Skyline DataMiner\Webpages\Monitoring`
-    - `C:\Skyline DataMiner\Webpages\Jobs`
-    - `C:\Skyline DataMiner\Webpages\Ticketing`
+    - `C:\Skyline DataMiner\Webpages\Jobs` (prior to DataMiner 10.5.0 only)
+    - `C:\Skyline DataMiner\Webpages\Ticketing` (prior to DataMiner 10.6.0/10.6.2 only)
     - `C:\Skyline DataMiner\Webpages\SharedComponents`
     - `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
 
@@ -210,8 +206,8 @@ To do so, after the DataMiner upgrade, copy the following folders from the DataM
 - `C:\Skyline DataMiner\Webpages\Dashboard`
 - `C:\Skyline DataMiner\Webpages\App`
 - `C:\Skyline DataMiner\Webpages\Monitoring`
-- `C:\Skyline DataMiner\Webpages\Jobs`
-- `C:\Skyline DataMiner\Webpages\Ticketing`
+- `C:\Skyline DataMiner\Webpages\Jobs` (prior to DataMiner 10.5.0 only)
+- `C:\Skyline DataMiner\Webpages\Ticketing` (prior to DataMiner 10.6.0/10.6.2 only)
 - `C:\Skyline DataMiner\Webpages\SharedComponents`
 - `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
 - `C:\Skyline DataMiner\Webpages\API` (Make sure not to overwrite the existing web.config file. Copy all other files and folders, but keep the existing web.config in place.)

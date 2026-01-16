@@ -6,7 +6,7 @@ using Skyline.DataMiner.Net.Ticketing.Objects;
 namespace Skyline.DataMiner.Net.Correlation
 {
 	/// <summary>
-	/// Represents a ticket field configuration override. This class is used to define a TicketField when creating a correlation ticket action.
+	/// Represents a ticket field configuration override. This class is used to define a TicketField when creating a correlation ticket action. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	[Serializable]
     public class TicketFieldOverrideConfig
