@@ -435,11 +435,11 @@ Up to now, when DVE elements were deleted while multiple DVE elements were havin
 
 When a QAction triggered an information message with regard to a particular element, SLNet would incorrectly only forward that message to the DataMiner Agent that hosted that element. As a result, that information message would not appear in client applications connected to any of the other DataMiner Agents in the system.
 
-#### Correlation alarms triggered by a correlation rule with the 'Auto clear' option set would not be cleared automatically [ID 43974]
+#### Correlation alarms triggered by a correlation rule with the 'Autoclear' option set would not be cleared automatically [ID 43974]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
-When, in a correlation rule, a *New alarm* or an *Escalate event* action was configured with the *Auto clear* option set, in some cases, the new correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
+When, in a correlation rule, a *New alarm* or an *Escalate event* action was configured with the *Autoclear* option set, in some cases, the new correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
 
 #### Element and parameter state timelines could show incorrect data [ID 43982]
 
