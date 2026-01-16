@@ -14,6 +14,50 @@ This Feature Release of the DataMiner web applications contains the same new fea
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.2](xref:General_Feature_Release_10.6.2).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.6.2](xref:Cube_Feature_Release_10.6.2).
 
+## Highlights
+
+#### Dashboards app: Updated user interface [ID 44222] [ID 44297]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In the Dashboards app, the sidebar and home page have been redesigned to improve usability and make managing dashboard folders and dashboards more efficient.
+
+![Dashboard UI in DataMiner 10.6.2](~/dataminer/images/Dashboards_UI_1062.gif)
+
+The home page of the Dashboards app, which is shown when no dashboards or folders are selected in the sidebar, now contains a dropdown menu at the top that allows you to add a dashboard or folder. In addition, the page shows an overview of all folders and dashboards, where you can directly delete a folder, add a folder or dashboard, or import a dashboard either locally or from the Catalog.
+
+In the sidebar, the ellipsis button ("...") in the top-right corner has been replaced with a right-click menu. Right-clicking the background of the sidebar will show the following commands:
+
+- Add > Dashboard
+- Add > Folder
+- Add > From Import
+- Add > From Catalog
+- Settings
+
+When you right-click a folder or click the ellipsis button of a folder, a menu with the following commands will open:
+
+- Add > Dashboard
+- Add > Folder
+- Add > From Import
+- Add > From Catalog
+- Settings
+- Delete
+
+When you right-click a dashboard or click the ellipsis button of a dashboard, a menu with the following commands will open:
+
+- Open in new tab
+- Duplicate
+- Settings
+- Delete
+
+The sidebar now also supports keyboard navigation and automatically adapts to the viewport width.
+
+#### Ticketing app End of Life [ID 44371] [ID 44373]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+The Ticketing app has been declared End of Life. On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer be shown on the DataMiner landing page or in the list of applications in DataMiner Cube.
+
 ## Changes
 
 ### Enhancements
@@ -64,34 +108,6 @@ If you choose *Custom*:
   - If neither the selected column nor the edge have conditional coloring, the default background color of the node edge graph component will be used as background color.
 
 The above-mentioned label configuration can be set per node query, per edge query, and can also be overridden by means of node and edge overrides.
-
-#### Dashboards app: Redesigned sidebar [ID 44222]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-The sidebar of the Dashboards app has been redesigned. The ellipsis button ("...") in the top-right corner of the sidebar has been removed. Instead, the same menu is now available by right-clicking the background of the sidebar, which opens a menu with the following commands:
-
-- Add > Dashboard
-- Add > Folder
-- Add > From Import
-- Add > From Catalog
-- Settings
-
-When you right-click a folder, or click the ellipsis button of a folder, a menu with the following commands will open:
-
-- Add > Dashboard
-- Add > Folder
-- Add > From Import
-- Add > From Catalog
-- Settings
-- Delete
-
-When you right-click a dashboard, or click the ellipsis button of a dashboard, a menu with the following commands will open:
-
-- Open in new tab
-- Duplicate
-- Settings
-- Delete
 
 #### GQI extensions: Filtering enhancements [ID 44230] [ID 44235]
 
@@ -281,17 +297,6 @@ See also: [DataMiner upgrade: DataMiner Assistant DxM will now be included in th
 > [!NOTE]
 > The DataMiner Assistant DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
 
-#### Dashboards app: Updated navigation pane with improved accessibility and CRUD actions [ID 44297]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-The sidebar navigation pane of the Dashboards app, which contains dashboard folders and dashboards, has been redesigned to improve usability and make managing dashboard folders and dashboards more efficient. The new view:
-
-- Supports keyboard navigation.
-- Automatically adapts to the viewport width.
-- Allows additional CRUD actions directly from the view, including deleting a folder, adding a folder or dashboard, and importing a dashboard either locally or from the Catalog.
-- Displays a fitting placeholder when a folder or the root is empty.
-
 #### Support for GQI DxM on Dashboard Gateway [ID 44344]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
@@ -311,12 +316,6 @@ On the Dashboard Gateway server, you will need to edit the *web.config* in the A
   - **nats:uri**: A string array containing the NATS endpoints. Every DMA in the DMS can be specified here.
 
 Note that if a local file path is used, you will need to replace the *appsettings.runtime.json* or the *.creds* file whenever the IP address of one or more DataMiner Agents in the cluster changes or one or more DataMiner Agents is added to or removed from the cluster.
-
-#### Ticketing app is End of Life [ID 44371] [ID 44373]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-The Ticketing app has been declared End of Life. On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer appear on the DataMiner landing page or in the list of applications in DataMiner Cube.
 
 #### Web apps: New Web folder synced across the DataMiner System [ID 44396]
 
