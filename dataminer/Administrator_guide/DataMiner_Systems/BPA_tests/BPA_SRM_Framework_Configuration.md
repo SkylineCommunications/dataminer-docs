@@ -37,7 +37,7 @@ One or more issues have been found:
 - The *Start* - *PreRoll* property value is different from *Reservation.Start*.
 - The *End* + *PostRoll* property value is different from *Reservation.End* while the *End* property does not have the value *Not Applicable*.
 - The *PostRoll* property value is different from TimeSpan.Zero while the *End* property has the value *Not Applicable*.
-- The *Booking Manager* property value refers to an existing DataMiner element using the connector *Skyline Booking Manager* but that element is not active.
+- The *Booking Manager* property value refers to a non-existing element, or to an existing DataMiner element not using to the connector *Skyline Booking Manager*, or to an existing DataMiner element using the connector *Skyline Booking Manager* but that element is not active.
 - The booking does not have the *Virtual Platform* property or does have this property but with a value that is different from the element's *Default Virtual Platform* parameter.
 - The *Logging location* folder contains more than 100000 files. The folder should be cleaned up to ensure optimal performance.
 - The *Logging location* folder contains more than 5Gb of data. The folder should be cleaned up to ensure optimal performance.
@@ -48,6 +48,9 @@ One or more issues have been found:
 - The Booking Manager *Logging location* is not configured, is invalid, does not exist, is not accessible, is part of 'Skyline DataMiner\Documents', or does not end in a backslash character. Not having this configured will make issue investigations more difficult, if not impossible in certain cases. See [SRM Logging Configuration](xref:SRM_logging_config) for more information on how to properly configure logging.
 - The *Logging location* folder contains between 25000 and 100000 files. The folder should be cleaned up to ensure optimal performance.
 - The *Logging location* folder contains between 1Gb and 5Gb of data. The folder should be cleaned up to ensure optimal performance.
+
+> [!NOTE]
+> Before SRM Solution version 2.0.5, the Warnings about the *Logging location* were reported as Errors.
 
 
 ### Not Executed
