@@ -22,7 +22,7 @@ namespace Skyline.DataMiner.Automation
 	/// <para>If the name of a variable starts with the following prefix, IntelliSense in DataMiner Cube will list the object properties: dateTimeUpDownConfig*</para>
 	/// </note>
 	/// </remarks>
-	public class AutomationDateTimeUpDownOptions : AutomationConfigOptions
+	public class AutomationDateTimeUpDownOptions : AutomationConfigOptions, IAutomationTimeOfDayConfigOptions
 	{
 		/// <summary>
 		/// Gets the default value for the <see cref="AutomationDateTimeUpDownOptions.Format"/> property.
@@ -105,7 +105,7 @@ namespace Skyline.DataMiner.Automation
 		/// </remarks>
 		public DateTimeKind Kind { get; set; }
 
-		/// <summary>
+ 		/// <summary>
 		/// Gets or sets the maximum timestamp.
 		/// </summary>
 		/// <value>The maximum allowed timestamp. If <c>null</c>, no upper limit is enforced.</value>
@@ -203,6 +203,16 @@ namespace Skyline.DataMiner.Automation
 		/// <para>Default: <c>true</c>.</para>
 		/// </remarks>
 		public bool AllowSpin { get; set; }
+		
+		/// <summary>
+		/// Gets or sets if the seconds are shown.
+		/// </summary>
+		/// <value><c>true</c> to show the seconds; otherwise, <c>false</c>.</value>
+		/// <remarks>
+		/// <para>Default: <c>false</c>.</para>
+		/// <para>Only applicable to Web UI version, from V2 onwards; available from DataMiner 10.6.3/10.6.0 onwards.</para> <!-- RN 44487 -->
+		/// </remarks>
+		public bool ShowSeconds { get; set; }
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="AutomationDateTimeUpDownOptions"/> class.
