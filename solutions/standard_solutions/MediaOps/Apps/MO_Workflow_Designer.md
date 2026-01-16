@@ -8,6 +8,7 @@ The Workflow Designer is an operator-level DevOps environment to create technica
 
 ![Example workflow](~/solutions/images/WFD_Example_WF.png)
 
+<!--TODO: Check if this needs to be updated -->
 > [!TIP]
 > Do you prefer visual learning? Take a look at the [demo video](https://www.youtube.com/watch?v=DR1ObA8F0m0) about this app. Or if you would like a practical example of how to use this app, refer to the tutorial [Creating a workflow to use as a template for a job](xref:Tutorial_MediaOps_Workflow_Designer_Intro).
 
@@ -15,16 +16,14 @@ The Workflow Designer is an operator-level DevOps environment to create technica
 
 The following pages are available in the Workflow Designer app:
 
-- ![Home](~/solutions/images/WD_Home.png) **Home**: Allows you to keep track of all workflows in the system, [create new workflows](xref:WFD_Creating_Workflows), and **duplicate**, **update**, or **delete** existing workflows. You can also **specify the resources** required for a workflow and how they are linked to each other, as well as provide **default configuration** settings for resources.
+- ![Home](~/solutions/images/WD_Home.png) **Home**: Allows you to keep track of all workflows in the system, [create new workflows](xref:WFD_Creating_Workflows), and **duplicate**, **update**, or **delete** existing workflows. To **update** workflows, you can use the pencil icon to open the [Edit workflow panel](xref:WFD_Edit_Workflow). Similar to the [automatic locking mechanism for jobs](xref:MO_S_Job_Locking), automatic locking is done to avoid conflicts when multiple users try to update the same workflow.
 
 - ![About](~/solutions/images/WD_About.png) **About**: Provides information on the **version** of the MediaOps package.
-
-<!-- TODO: Add more info on how to delete workflows and configure default configuration settings (or if the latter refers to the "Configure Node" option mentioned on WFD_Creating_Workflows, clarify this) -->
 
 ## Workflows
 
 A workflow defines which resources and resource pools are needed for an operation, and how they are interconnected. This is useful if you want to reuse the same set of resources in multiple jobs. For example, if a certain set of resources is always required when organizing live broadcast events, you can group these into a "Live Broadcast" workflow and use it whenever you want to send out a crew for a live broadcast operation.
 
-Workflow Designer allows you to also use resource pools in your workflows, enabling you to specify which types of resources you need in your workflows, without the need to specify the exact resources up front.
+Workflow Designer allows you to use resource pools in your workflows, enabling you to specify which types of resources you need in your workflows, without the need to specify the exact resources up front.
 
-For more details on how you can create workflows in this app, see [Creating workflows](xref:WFD_Creating_Workflows).
+See [Creating workflows](xref:WFD_Creating_Workflows) and [Edit workflow panel](xref:WFD_Edit_Workflow) for more information to manage the workflows.
