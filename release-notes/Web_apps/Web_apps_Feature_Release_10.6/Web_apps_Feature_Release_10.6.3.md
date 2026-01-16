@@ -209,8 +209,14 @@ When the alarms in an *Alarm table* component are grouped by time, they are grou
 
 Up to now, when a certain group name had been removed (e.g. by means of an Automation script), and an alarm under that group name returned to its normal state, an error would occur when the *Alarm table* component attempted to remove the alarm.
 
+#### GQI DxM: Aggregations performed on columns of type integer would incorrectly produce a column of type double [ID 44492]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, when a min, max, or sum aggregation was performed on a column of type integer, the column containing the aggregation results would incorrectly be of type double instead of type integer. As a result, operators that required a column of type integer would throw an exception when reading the column in question.
+
 #### Dashboards/Low-Code Apps - Color picker: Problem when selecting presets [ID 44531]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When you opened the color picker and selected a preset, up to now, the picker would not update right away. The color scale of the previously selected preset would incorrectly be shown until the newly selected preset was loaded.
+When you opened the color picker and selected a preset, up to now, the color scale of the previously selected preset would incorrectly be shown until you selected another preset.
