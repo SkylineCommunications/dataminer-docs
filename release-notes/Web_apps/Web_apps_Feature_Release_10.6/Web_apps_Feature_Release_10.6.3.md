@@ -47,7 +47,7 @@ The data retrieved by this new data source is a snapshot of all query sessions t
 Prerequisites:
 
 - Only user with the *Modules > System configuration > Tools > Admin tools* permission will be able to fetch data using this data source.
-- Only web apps in which the `GQIOptions.EnableInternalCapabilities` setting is set to true will expose this data source in the query builder.
+- This data source will only be available in the query builder if the `GQIOptions.EnableInternalCapabilities` setting is set to true in the GQI DxM.
 
 Default columns:
 
@@ -208,3 +208,9 @@ Up to now, re-applying the selection in a *Maps* component would incorrectly sel
 When the alarms in an *Alarm table* component are grouped by time, they are grouped under group names such as "Today", "Yesterday", and "Last Week".
 
 Up to now, when a certain group name had been removed (e.g. by means of an Automation script), and an alarm under that group name returned to its normal state, an error would occur when the *Alarm table* component attempted to remove the alarm.
+
+#### Dashboards/Low-Code Apps - Color picker: Problem when selecting presets [ID 44531]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When you opened the color picker and selected a preset, up to now, the picker would not update right away. The color scale of the previously selected preset would incorrectly be shown until the newly selected preset was loaded.
