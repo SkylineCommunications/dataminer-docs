@@ -53,6 +53,8 @@ items:
             topicUid: MO_S_App_Configuration
           - name: Validation of upcoming jobs
             topicUid: Overview_MediaOps_Validation
+          - name: Filter pools by category
+            topicUid: SCH_Filter_Pools
       - name: Tutorials
         items: 
         - name: Configuring resources and resource pools
