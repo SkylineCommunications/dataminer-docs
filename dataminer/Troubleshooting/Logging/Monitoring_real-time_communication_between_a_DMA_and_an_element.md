@@ -15,6 +15,6 @@ The following topics contain more information on monitoring these messages:
 - [Message syntax](xref:Message_syntax)
 
 > [!NOTE]
+>
 > - You can only open a telnet session to monitor an element if that element has a virtual IP address.
 > - Because it connects to elements via the DataMiner client application, Stream Viewer can also connect to elements that do not have a virtual IP address. Therefore, if you have to connect to elements via firewalls or via NAT, always use Stream Viewer.
->

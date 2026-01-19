@@ -156,4 +156,4 @@ For more information, see [How to use "on each" in a protocol trigger?](xref:How
 
 ## Useful links
 
-For more information about using Stream Viewer and checking the logging in DataMiner Cube, see [Logging](xref:logging).
+For more information about using Stream Viewer and checking the logging in DataMiner Cube, see [Logging](xref:Monitoring_real-time_communication_between_a_DMA_and_an_element).

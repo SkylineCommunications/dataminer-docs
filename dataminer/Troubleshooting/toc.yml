@@ -61,7 +61,6 @@ items:
       - name: Unknown Error
         topicUid: Unknown_Error
   - name: Logging
-    topicUid: logging
     items:
       - name: Monitoring real-time communication between a DMA and an element
         topicUid: Monitoring_real-time_communication_between_a_DMA_and_an_element

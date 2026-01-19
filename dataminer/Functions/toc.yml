@@ -350,7 +350,6 @@ items:
           - name: Managing connectivity chains
             topicUid: Managing_connectivity_chains
       - name: Working with aggregation rules
-        topicUid: Working_with_aggregation_rules
         items:
           - name: About aggregation rules
             topicUid: About_aggregation_rules
