@@ -1083,6 +1083,8 @@ items:
             topicUid: GQI_IGQIQueryNode
           - name: IGQIRowOperator
             topicUid: GQI_IGQIRowOperator
+          - name: IGQISession
+            topicUid: GQI_IGQISession
           - name: IGQISortField
             topicUid: GQI_IGQISortField
           - name: IGQISortOperator
