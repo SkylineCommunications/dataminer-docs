@@ -17,7 +17,7 @@ To change the default browser engine used in DataMiner Cube:
 
    - **Chromium**: In versions up to DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8<!--RN 43429-->, Chromium is the default browser engine if installed. However, in more recent versions, Chromium can no longer be set as the default engine.
 
-     DataMiner apps displayed within an embedded web browser in DataMiner Cube (e.g. Ticketing, Dashboards, etc.) will always use the Chromium browser engine, regardless of which default browser engine is configured.
+     DataMiner apps displayed within an embedded web browser in DataMiner Cube (e.g. Dashboards) will always use the Chromium browser engine, regardless of which default browser engine is configured.
 
 1. Optionally, if you want a different browser to be used for a specific protocol:
 

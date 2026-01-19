@@ -186,8 +186,6 @@ items:
                 items:
                   - name: Run-time errors (RTEs)
                     topicUid: Troubleshooting_Run_Time_Errors
-              - name: Troubleshooting - apps
-                topicUid: Troubleshooting_Apps
               - name: Troubleshooting - Visual Overview
                 topicUid: Troubleshooting_Visual_Overview
   - name: Troubleshooting procedures
@@ -258,6 +256,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Profile Manager fails to initialize after rollback to an earlier DataMiner version
+            topicUid: KI_profile_manager_fails_after_rollback
           - name: gRPC-connected Cube not responding when Automation module is used
             topicUid: KI_gRPC_connected_Cube_stuck_when_using_Automation
           - name: Upgrade fails because of VerifyGRPCConnection.dll prerequisite

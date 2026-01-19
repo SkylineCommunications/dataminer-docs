@@ -36,7 +36,7 @@ Element cards can look quite different depending on the element protocol. Howeve
 
   - **ALARMS**: An overview of the alarms for this element, displayed in the default Alarm Console layout. See [Working with the Alarm Console](xref:Working_with_the_Alarm_Console).
 
-  - **TICKETS**: Displays any tickets related to the element. Requires DataMiner Ticketing.
+  - **TICKETS**: Obsolete. See [Ticketing](xref:ticketing).
 
   - **REPORTS**: A graphic representation of the alarm distribution, alarm events, alarm states, and a timeline. You can set the period for which data are shown to the last 24 hours, one week to date, or one month to date. For more information, see [Viewing the reports page on a card](xref:Viewing_the_reports_page_on_a_card).
 

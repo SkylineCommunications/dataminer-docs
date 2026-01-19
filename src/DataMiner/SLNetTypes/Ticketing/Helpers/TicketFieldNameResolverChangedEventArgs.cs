@@ -3,7 +3,7 @@
 namespace Skyline.DataMiner.Net.Ticketing.Helpers
 {
 	/// <summary>
-	/// Event arguments for the <see cref="TicketingGatewayHelper.TicketFieldResolverChangedEvent"/> event.
+	/// Event arguments for the <see cref="TicketingGatewayHelper.TicketFieldResolverChangedEvent"/> event. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	public class TicketFieldResolverChangedEventArgs : EventArgs
     {

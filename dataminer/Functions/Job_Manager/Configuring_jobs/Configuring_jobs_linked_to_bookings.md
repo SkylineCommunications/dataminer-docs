@@ -4,6 +4,9 @@ uid: Configuring_jobs_linked_to_bookings
 
 # Configuring jobs linked to bookings
 
+> [!IMPORTANT]
+> The Jobs app is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.5.0 onwards.
+
 You can configure the Jobs app to create and manage bookings linked to each job.
 
 For this purpose, when you configure the relevant job section (see [Configuring job sections](xref:Configuring_job_sections)), specify the Booking Manager element and the booking script you want to use.

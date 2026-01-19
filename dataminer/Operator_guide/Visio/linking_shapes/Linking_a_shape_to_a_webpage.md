@@ -64,7 +64,7 @@ By default, webpages displayed inside a shape do not display a refresh button. I
 
 To always pass an authentication ticket to the embedded webpage, regardless of the content of the URL, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "SingleSignOn".
 
-Even if this option is not specified, by default an authentication ticket is passed to embedded applications of type .xbap, embedded DataMiner Maps, the embedded Ticketing app, embedded dashboards (created in the [Dashboards app](xref:newR_D)), and the embedded [DataMiner Comparison tool](xref:DataMinerComparisonTool).
+Even if this option is not specified, by default an authentication ticket is passed to embedded applications of type .xbap, embedded DataMiner Maps, the embedded [Ticketing](xref:ticketing) app (legacy), embedded dashboards (created in the [Dashboards app](xref:newR_D)), and the embedded [DataMiner Comparison tool](xref:DataMinerComparisonTool).
 
 ### UseChrome
 

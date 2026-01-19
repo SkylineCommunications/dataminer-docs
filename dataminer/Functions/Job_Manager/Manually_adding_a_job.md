@@ -4,6 +4,9 @@ uid: Manually_adding_a_job
 
 # Manually adding a job
 
+> [!IMPORTANT]
+> The Jobs app is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.5.0 onwards.
+
 To manually add a job in the Jobs app:
 
 1. In the header bar of the main page of the app, click *New*.

@@ -7084,7 +7084,7 @@ items:
         - name: Skyline NuGet packages
           topicUid: SkylineNuGetPackages
           items:
-          - name: DataMiner DevPacks
+          - name: Dev Packs
             topicUid: TOODataMinerDevPackages
           - name: Interactive Automation Script Toolkit
             topicUid: Interactive_Automation_Script_Toolkit

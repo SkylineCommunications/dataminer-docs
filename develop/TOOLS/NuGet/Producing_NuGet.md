@@ -122,6 +122,12 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
 
     E.g. SNMP trap parsing, rate calculations, table context menu, etc.
 
+- *Skyline.DataMiner.Dev.Utils.XXX*
+
+  - Holds all the [Solution Dev Packs](xref:TOODataMinerDevPackages#solution-dev-packs).
+
+    E.g. MediaOps library, etc.
+
 - *Skyline.DataMiner.ConnectorAPI.XXX*
 
   - Holds InterAppCall messages that are specific to a connector, giving a given DataMiner connector some functions that can be called/triggered/consumed by other DataMiner components (other connectors, Automation scripts, etc.).

@@ -4,6 +4,11 @@ uid: jobs
 
 # DataMiner Job Manager
 
+> [!IMPORTANT]
+>
+> - The Jobs app is obsolete. It is no longer available from DataMiner 10.5.0 onwards. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles). ![EOL](~/dataminer/images/EOL_Duo.png)
+> - The Jobs app is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
+
 The DataMiner Jobs web app, also known as Job Manager, can be used to create and manage jobs, which are then distributed to SRM applications, so that the necessary bookings can be generated.
 
 You can [access this app](xref:Accessing_the_jobs_app) using Google Chrome, Microsoft Edge, Mozilla Firefox, or Safari.
@@ -16,8 +21,3 @@ In order to run this app, your DataMiner System must use a setup with a Cassandr
 >
 > - Along with the other DataMiner web apps, you can [upgrade the Jobs app](xref:Upgrading_Downgrading_Webapps) separately from your main DataMiner installation. This means that you can for example have a DataMiner System using version 10.3.4, while you already use version 10.3.5 for the web apps. You can [download the web apps upgrade package from DataMiner Dojo](https://community.dataminer.services/downloads/).
 > - This app requires a separate Job Manager license.
-
-> [!CAUTION]
->
-> - The Jobs app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
-> - The Jobs app is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).

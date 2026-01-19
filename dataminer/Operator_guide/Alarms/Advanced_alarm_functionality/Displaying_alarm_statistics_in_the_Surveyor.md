@@ -45,9 +45,6 @@ The settings that control the data being displayed have to be configured in *Mai
      Clearable ###[#NoticeAlarms] Notice ###[#ErrorAlarms] Error ###[#MaskedAlarms] Masked ###[#TimeoutAlarms] Timeout ###
      ```
 
-     > [!NOTE]
-     > On a DMA with a ticketing gateway, it is also possible to display ticket statistics, or to combine ticket statistics with alarm statistics in the Surveyor. For more information, see [Displaying ticket statistics in the Surveyor](xref:Displaying_ticket_statistics_in_the_Surveyor).
-
 1. Save your changes and restart DataMiner.
 
 > [!NOTE]

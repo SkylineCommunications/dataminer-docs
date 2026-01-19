@@ -115,7 +115,7 @@ namespace Skyline.DataMiner.Automation
 		public string ScriptName { get; }
 
 		/// <summary>
-		/// Gets the Ticketing Gateway.
+		/// Gets the Ticketing Gateway. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 		/// </summary>
 		/// <value>The Ticketing Gateway.</value>
 		/// <example>

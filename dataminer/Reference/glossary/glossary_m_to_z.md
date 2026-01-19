@@ -264,7 +264,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | TFTP | Trivial File Transfer Protocol. Simple file transfer protocol that can be used to retrieve a file from or put a file on a remote host. |
 | Third-party DataMiner Connector | DataMiner connector developed by a DataMiner Strategic Partner, which can be a product vendor, a system integrator, a consultancy company or a reseller. |
 | Ticket | A record in the system related to a specific problem, which can contain information such as the affected resource and the severity of the issue. |
-| Ticketing | Legacy application used to create and/or manage tickets in DataMiner. See [Ticketing](xref:ticketing). |
+| Ticketing | Legacy ticket management application. See [Ticketing](xref:ticketing). |
 | Timer base | General parameter of an element that can be used to adjust the polling speed of the element. See [Changing the polling speed of an element](xref:Changing_the_polling_speed_of_an_element). |
 | Timetrace data | History alarm data used to list history alarms in alarm tabs and to graphically visualize history alarm information in the Alarm Console history slider. |
 | TLS | Transport Layer Security. Cryptographic protocol designed to provide communication security over a network. |

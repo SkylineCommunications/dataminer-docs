@@ -24,7 +24,7 @@ uid: DMASecurity
 | Dashboards | Boolean | Whether or not the user has access to DMS Dashboards |
 | Reporter | Boolean | Whether or not the user has access to DMS Reporter |
 | Surveyor | Boolean | Whether or not the user has access to the Surveyor. |
-| TicketsUI | Boolean | Whether or not the user has access to DMS Ticketing. |
+| TicketsUI | Boolean | Obsolete. Whether or not the user has access to DMS Ticketing. |
 | TicketsConfigUI | Boolean | Whether or not the user is allowed to configure ticket domains. |
 | TicketsAddTicket | Boolean | Whether or not the user is allowed to add tickets. |
 | TicketsEditTicket | Boolean | Whether or not the user is allowed to edit tickets. |

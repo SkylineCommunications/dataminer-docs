@@ -34,6 +34,42 @@ In the navigation pane, a new *Add* button is now available to users with permis
   - Import dashboard
   - Import from catalog
 
+#### GQI DxM: New internal data source 'Get active sessions' & additional internal metrics [ID 44447]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+The GQI DxM now contains an internal data source named *Get active sessions*, which will retrieve information about the query sessions that are currently active. Also, an number of internal metrics have been added meant for future debugging and performance investigations.
+
+##### Get active sessions
+
+The data retrieved by this new data source is a snapshot of all query sessions that were active at the time the first page was requested, including the session used to fetch the active session data. This means that later pages may include sessions that have been closed since then.
+
+Prerequisites:
+
+- Only user with the *Modules > System configuration > Tools > Admin tools* permission will be able to fetch data using this data source.
+- This data source will only be available in the query builder if the `GQIOptions.EnableInternalCapabilities` setting is set to true in the GQI DxM.
+
+Default columns:
+
+| Displayed name | Internal name | Type | Description |
+| -------------- | ------------- | ---- | ----------- |
+| Session ID | sessionId | Guid | ID of the query session. |
+| Query Name | queryName | string | Query name/tag, i.e. a custom identifier that can be provided by the client when executing a query. |
+| User | user | string | Username of the user who opened the session. |
+| Created | created | DateTime | Time at which the session was opened. |
+
+Other columns:
+
+| Displayed name | Internal name | Type | Description |
+| -------------- | ------------- | ---- | ----------- |
+| Last Updated | lastUpdated | DateTime | Time at which the session was last opened, was last used to fetch data, last received a heartbeat, etc. |
+| Fetch type | fetchType | int | Setting provided by the client when opening the session to indicate how the query should be optimized.<br>Possible values:<br>- "Page by page" (0)<br>- "All data" (1) |
+| Enabled Updates | enabledUpdates | bool | Whether or not the client has enabled updates for the session. |
+| Locale | locale | string | The culture used for the session. See: [CultureInfo.Name Property](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.name) |
+| Time Zone | timeZone | string | The ID of the time zone used for the session. See: [TimeZoneInfo.Id Property](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.id) |
+| Rows Fetched | rowsFetched | int | The total number of rows that have been fetched from the session. |
+| Pages Fetched | pagesFetched | int | The total number of pages that have been fetched from the session. |
+
 ## Changes
 
 ### Enhancements
@@ -107,6 +143,14 @@ In some cases, a *Maps* component would incorrectly fetch markers with larger bo
 
 As this issue has now been fixed, overall performance has increased when zooming in or out in a *Maps* component.
 
+#### Web Services API: Problem connecting to the offline agent of a Failover pair [ID 44410]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, the Web Services API would fail to establish a persistent admin connection towards the offline agent of a Failover pair. An attempt to establish such a connection would be made each time an API method was called on the offline agent, causing the logging of SLNet and the Web Services API to get flooded with error messages.
+
+From now on, it will be possible for the Web Services API to establish a persistent admin connection towards the offline agent of a Failover pair. Also, the API will now be aware that the agent is offline.
+
 #### Web apps: Problem when deleting a web app [ID 44411]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
@@ -143,6 +187,14 @@ When the DataMiner Agent had a fixed time zone, and the client computer had a ti
 
 From now on, all timeline items will be displayed correctly after a transition from summer time to winter time or vice versa.
 
+#### GQI DxM: Problem with Timer callbacks could cause the GQI DxM to stop working [ID 44460]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In some cases, exceptions could be thrown in the callback of System.Threading.Timer, causing the GQI DxM to stop working.
+
+See also: [GQI: Problem with Timer callbacks could cause SLHelper to stop working [ID 44458]](xref:General_Feature_Release_10.6.3#gqi-problem-with-timer-callbacks-could-cause-slhelper-to-stop-working-id-44458)
+
 #### Dashboards/Low-Code Apps - Maps component: Problem when re-applying the selection [ID 44461]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
@@ -156,3 +208,15 @@ Up to now, re-applying the selection in a *Maps* component would incorrectly sel
 When the alarms in an *Alarm table* component are grouped by time, they are grouped under group names such as "Today", "Yesterday", and "Last Week".
 
 Up to now, when a certain group name had been removed (e.g. by means of an Automation script), and an alarm under that group name returned to its normal state, an error would occur when the *Alarm table* component attempted to remove the alarm.
+
+#### GQI DxM: Aggregations performed on columns of type integer would incorrectly produce a column of type double [ID 44492]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, when a min, max, or sum aggregation was performed on a column of type integer, the column containing the aggregation results would incorrectly be of type double instead of type integer. As a result, operators that required a column of type integer would throw an exception when reading the column in question.
+
+#### Dashboards/Low-Code Apps - Color picker: Problem when selecting presets [ID 44531]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When you opened the color picker and selected a preset, up to now, the color scale of the previously selected preset would incorrectly be shown until you selected another preset.

@@ -1037,7 +1037,7 @@ items:
             topicUid: Example_of_an_Asset_Manager_mediation_configuration_file
       - name: Synchronizing a database with elements and views with the Surveyor
         topicUid: Synchronizing_a_database_with_elements_and_views_with_the_Surveyor
-  - name: Job Manager
+  - name: Job Manager (legacy)
     topicUid: jobs
     items:
       - name: About jobs
@@ -1047,7 +1047,6 @@ items:
       - name: Overview of the Jobs app UI
         topicUid: Overview_of_the_Job_Manager_app_UI
       - name: Configuring jobs in the Jobs app
-        topicUid: Configuring_jobs_in_the_Job_Manager_app
         items:
           - name: Configuring job domains
             topicUid: Configuring_job_domains
@@ -1350,7 +1349,7 @@ items:
         items:
             - name: Monitoring a spectrum signal by comparing it with thresholds
               topicUid: Monitor_a_spectrum_signal_by_comparing_it_with_thresholds
-  - name: Ticketing
+  - name: Ticketing (legacy)
     topicUid: ticketing
     items:
       - name: Accessing the Ticketing app
