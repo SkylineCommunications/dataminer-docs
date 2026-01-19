@@ -1,5 +1,6 @@
 ---
 uid: Backing_up_a_DataMiner_Agent
+keywords: backup dataminer
 ---
 
 # Backing up a DataMiner Agent
