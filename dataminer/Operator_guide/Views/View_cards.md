@@ -202,7 +202,7 @@ This page links to the legacy DMS Dashboards module.
 This page shows any aggregation rules that were found for the view. The different aggregation rules are listed in the left column, details are shown in the right column.
 
 > [!TIP]
-> See also: [Working with aggregation rules](xref:Working_with_aggregation_rules)
+> See also: [Aggregation rules](xref:About_aggregation_rules)
 
 ### HISTOGRAM
 

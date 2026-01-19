@@ -15,8 +15,8 @@ uid: glossary_a_to_l
 | ACU | Automatic Changeover Unit. Device that monitors the power supply and automatically switches between power sources when necessary. |
 | AE | Adaptive Equalizer. Equalizer that automatically adapts its parameters to a signal. |
 | AES3 | Standard for the exchange of digital audio signals between professional audio devices. Also known as AES/EBU, as it was jointly developed by the Audio Engineering Society (AES) and European Broadcasting Union (EBU). |
-| Aggregation | DataMiner module that uses aggregation rules to calculate statistical information within a DataMiner System. See [Working with aggregation rules](xref:Working_with_aggregation_rules). |
-| Aggregation rule | Rule that defines which summary statistics should be calculated for a view. See [Working with aggregation rules](xref:Working_with_aggregation_rules). |
+| Aggregation | DataMiner module that uses aggregation rules to calculate statistical information within a DataMiner System. See [About aggregation rules](xref:About_aggregation_rules). |
+| Aggregation rule | Rule that defines which summary statistics should be calculated for a view. See [About aggregation rules](xref:About_aggregation_rules). |
 | Alarm | Notification that a parameter value has crossed a particular threshold, or a parameter has attained a particular value. This notification has a particular severity depending on the alarm template configuration. See [Alarms](xref:About_alarms). |
 | Alarm banner | Banner at the top of the DataMiner Cube UI that displays the number of new alarms, the color of the most severe among them, and service impact information. See [Alarm Console settings](xref:AlarmConsoleSettings). |
 | Alarm Console | Pane in DataMiner Cube that allows you to view and manage alarms and information events. See [Working with the Alarm Console](xref:Working_with_the_Alarm_Console). |

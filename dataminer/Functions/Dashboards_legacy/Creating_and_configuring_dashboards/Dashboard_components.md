@@ -23,7 +23,7 @@ This group consists of the following components:
 > The Aggregation components can only be used when the DMA is licensed for Correlation.
 
 > [!TIP]
-> See also: [Working with aggregation rules](xref:Working_with_aggregation_rules)
+> See also: [Aggregation rules](xref:About_aggregation_rules)
 
 ### Aggregation
 

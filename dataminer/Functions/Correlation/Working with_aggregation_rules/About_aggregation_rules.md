@@ -9,3 +9,6 @@ With aggregation rules, you can calculate statistical information within your Da
 The rules can calculate data based on real-time parameter values or alarm states, with or without conditions. The rules themselves can be monitored and trended like regular parameters. The results of the calculations are also accessible in other DataMiner applications, such as Reports & Dashboards.
 
 The Aggregation UI itself is accessible from view cards. However, Aggregation is considered part of the *Correlation* module as far as licensing and user permissions are concerned.
+
+> [!NOTE]
+> For more information on the Aggregation folder on the server and on how to configure an aggregation rule to ignore exception values on the aggregated parameter, see [Aggregation](xref:Aggregation).
