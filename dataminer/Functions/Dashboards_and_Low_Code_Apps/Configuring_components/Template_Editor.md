@@ -26,7 +26,7 @@ The way you can access the Template Editor depends on the type of component:
 
 1. Select the component and go to the *Layout* pane on the right.
 
-1. In the *Item templates* section, click *Edit*.
+1. In the *Item templates* section, click *Edit* ![Edit](~/dataminer/images/Edit_Template.png).
 
    > [!NOTE]
    > A preview of the template currently used for this component is displayed in the *Item templates* section.
@@ -37,13 +37,15 @@ The way you can access the Template Editor depends on the type of component:
 
 1. In the *Column appearance* section, click the downward arrow next to *Select a column* and select the column you want to create a template for.
 
-1. Click the ellipsis button ("...") in the top-right corner and select *Customize preset*.
+1. Click the *Edit* ![Edit](~/dataminer/images/Edit_Template.png) icon.
+
+   Prior to DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44174 + 44176-->, first click the ellipsis button ("...") in the top-right corner and then select *Customize preset*.
 
 ### [Maps](#tab/maps)
 
 1. Select the maps component and go to the *Layout* pane on the right.
 
-1. Under the *Layer settings* for a specific layer of the map, click *Edit* in the template section.
+1. Under the *Layer settings* for a specific layer of the map, click *Edit* ![Edit](~/dataminer/images/Edit_Template.png) in the template section.
 
    These settings will only be available once a set of markers has been added to the component.
 
@@ -314,7 +316,7 @@ From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44040 + 44123-->, you can star
 
      1. Select the component and go the *Layout* pane on the right.
 
-     1. Under *Item templates*, click *Browse templates*.
+     1. Under *Item templates*, click *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png).
 
    - For the **table** component:
 
@@ -322,30 +324,30 @@ From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44040 + 44123-->, you can star
 
      1. In the *Column appearance* section, click the downward arrow next to *Select a column* and select the column you want to assign a template to.
 
-     1. Click the ellipsis button ("...") in the top-right corner and select *Browse templates*.
+     1. Click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon.
+
+        In DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44174 + 44176-->, first click the ellipsis button ("...") in the top-right corner and then select *Browse templates*.
 
    - For the **maps** component:
 
      1. Select the component and go to the *Layout* pane on the right.
 
-     1. Under the *Layer settings* for a specific layer of the map, click *Browse templates* in the *Template* section.
+     1. Under the *Layer settings* for a specific layer of the map, click *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) in the *Template* section.
 
 1. Select a preset template from the overview. You can:
 
-   - Search for a template by name using the search box.
+   - (1): Search for a template by name using the search box.
 
-   - Use the filter in the top-right corner of the window to show preset templates, custom templates, or both.
+   - (2): Use the filter in the top-right corner of the window to show preset templates, custom templates, or both.
 
-   - Filter the overview by visualization type using the options in the sidebar on the left.
+   - (3): Filter the overview by visualization type using the options in the sidebar on the left.
+
+   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Templates overview in DataMiner 10.6.2*
 
    > [!TIP]
    > You can tell a preset template from a custom template by the *Preset* label in the top-right corner of a template tile.
-   >
-   > ![Preset label](~/dataminer/images/Preset_Label.png)
 
 1. Click *Apply* in the lower-right corner of the window.
-
-   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Templates overview in DataMiner 10.6.1*
 
    After applying the preset template, you can further configure it using the Template Editor.
 
@@ -361,7 +363,7 @@ If you have already configured at least one other template for a component in th
 
      1. Select the component and go the *Layout* pane on the right.
 
-     1. Under *Item templates*, click *Browse templates*.
+     1. Under *Item templates*, click *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png).
 
    - For the **table** component:
 
@@ -369,21 +371,25 @@ If you have already configured at least one other template for a component in th
 
      1. In the *Column appearance* section, click the downward arrow next to *Select a column* and select the column you want to assign a template to.
 
-     1. Click the ellipsis button ("...") in the top-right corner and select *Browse templates*.
+     1. Click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon.
+
+        In DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44174 + 44176-->, first click the ellipsis button ("...") in the top-right corner and then select *Browse templates*.
 
    - For the **maps** component:
 
      1. Select the component and go to the *Layout* pane on the right.
 
-     1. Under the *Layer settings* for a specific layer of the map, click *Browse templates* in the *Template* section.
+     1. Under the *Layer settings* for a specific layer of the map, click *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) in the *Template* section.
 
 1. Select a custom template from the overview. From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44123-->, you can:
 
-   - Search for a template by name using the search box.
+   - (1): Search for a template by name using the search box.
 
-   - Use the filter in the top-right corner of the window to show preset templates, custom templates, or both.
+   - (2): Use the filter in the top-right corner of the window to show preset templates, custom templates, or both.
 
-   - Filter the overview by visualization type using the options in the sidebar on the left.
+   - (3): Filter the overview by visualization type using the options in the sidebar on the left.
+
+   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Templates overview in DataMiner 10.6.2*
 
 1. Click *Apply* in the lower-right corner of the window.
 

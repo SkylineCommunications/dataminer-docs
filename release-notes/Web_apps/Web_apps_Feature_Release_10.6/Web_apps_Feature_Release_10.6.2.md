@@ -68,7 +68,7 @@ The Ticketing app has been declared End of Life. On systems running DataMiner ma
 
 Because of a number of enhancements, performance has increased when rendering a large number of template previews in e.g. the *Browse templates* window.
 
-#### Dashboards/Low-Code Apps - Templates: Default templates of all components that are using templates will now show up a presets in 'Browse templates' window [ID 44174]
+#### Dashboards/Low-Code Apps - Templates: Default templates of all components that are using templates will now show up as presets in 'Browse templates' window [ID 44174]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
