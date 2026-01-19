@@ -13,7 +13,7 @@ This BPA test is available from DataMiner 10.5.9/10.6.0 onwards.<!-- RN 42952 --
 - Name: Large Alarm Trees
 - Description: Warns about large active alarm trees.
 - Author: Skyline Communications
-- Default schedule: None
+- Default schedule: Daily
 
 ## Results
 
@@ -27,7 +27,7 @@ When the test is successful, this message is shown:
 
 `One or more potential problems were detected.`
 
-The output is marked as an error when there is at least one alarm tree that consists of 10&thinsp;000 or more alarms. Only the alarm trees that have reached this size will be returned in the detailed result.
+The output is marked as an error when there is at least one alarm tree that consists of 5&thinsp;000 or more alarms. Only the alarm trees that have reached this size will be returned in the detailed result.
 
 The detailed JSON output of the BPA test may contain the following possible message, depending on which potential issues have been detected:
 
@@ -35,7 +35,7 @@ The detailed JSON output of the BPA test may contain the following possible mess
 
 ### Warning
 
-The output is marked as a warning when there is at least one alarm tree that consists of 100 or more alarms, but all alarm trees have less than 10&thinsp;000 alarms. Only the alarm trees that have reached this size will be returned in the detailed result.
+The output is marked as a warning when there is at least one alarm tree that consists of 1&thinsp;000 or more alarms, but all alarm trees have less than 5&thinsp;000 alarms. Only the alarm trees that have reached this size will be returned in the detailed result.
 
 The detailed JSON output of the BPA may contain the following message, depending on which potential issues have been detected:
 
