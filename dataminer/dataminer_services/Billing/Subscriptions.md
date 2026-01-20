@@ -27,13 +27,15 @@ The **Name** column displays the subscription name.
 The **State** column uses color-coded badges to indicate the subscription status:
 
 - **Active** (green): The subscription is currently active and reservations are available for consumption.
+- **Planned** (yellow): The subscription is scheduled to start in the future.
 - **Expired** (red): The subscription has ended and is no longer providing reservations.
-- **Expires soon** (orange): The subscription is nearing its expiration date and will end soon.
+- **Expires soon** (orange): The subscription is nearing its expiration date and will end within 30 days.
 
 ### Timestamp
 
 The **Timestamp** column shows important dates for the subscription:
 
+- **From [date]**: For planned subscriptions, indicates when the subscription will start.
 - **Until [date]**: For active subscriptions, indicates when the subscription will expire.
 - **Ended [date]**: For expired subscriptions, shows when the subscription ended.
 
@@ -93,6 +95,7 @@ Pay attention to subscriptions marked as **Expires soon** to ensure continuity:
 
 - Review the expiration date in the Timestamp column.
 - Purchase a new subscription before the current one expires to avoid service interruption.
+- Subscriptions with **Planned** status will automatically become **Active** when their start date is reached.
 
 ### Auto-Renewal
 

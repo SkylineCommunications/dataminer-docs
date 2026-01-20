@@ -1,6 +1,6 @@
 ---
 uid: Adding_Subscription
-keywords: add subscription, purchase subscription, subscription pricing, credits, reservations
+keywords: add, purchase, subscription, pricing, credits, reservations, buy, charge, usage, consumption, perpetual, license
 ---
 
 # Adding a Subscription
@@ -11,12 +11,12 @@ The Add subscription dialog allows you to configure and purchase a new subscript
 
 To add a new subscription:
 
-1. Navigate to the [Billing](xref:Billing) page or [Subscriptions](xref:Subscriptions) page in the Admin app.
+1. Navigate to the [Billing](xref:Billing) page in the Admin app.
 2. Click the **+ Add subscription** button in the top-right corner.
 
 The Add subscription dialog will open, displaying all available service categories and configuration options.
 
-## Configuring Your Subscription
+## Configuring your Subscription
 
 ### Service Categories and Reservations
 
@@ -55,7 +55,8 @@ Select the subscription duration:
 - **3 years**: Extended subscription for long-term commitment.
 - **Custom**: Specify a custom duration for your needs.
 
-Longer durations may qualify for additional discounts.
+Longer durations may qualify for additional discounts. 
+You can also add shorter durations without discounts to lock in on the current credit rate.
 
 #### From
 
@@ -65,9 +66,10 @@ Use the date picker to select when the subscription should start. By default, th
 
 Toggle the **Auto renew** switch to enable automatic renewal:
 
-- When enabled, the subscription will automatically renew on the expiration date with the same duration and reservations.
+- When enabled, the subscription will automatically renew on the expiration date with the same duration and reservation amounts, using the rates and discounts applicable at the time of renewal.
 - Renewal requires sufficient credits in your organization's balance.
 - New pricing may apply at renewal time.
+- Owners/Admins will receive a notification before the subscription expires and renews.
 - If insufficient credits are available, the subscription will not renew and Owners/Admins will be notified via email.
 
 For more information, see [Auto-Renewal](xref:Subscriptions#auto-renewal).
@@ -83,15 +85,16 @@ The bottom right panel displays the financial summary:
 
 Make sure your new balance will be sufficient for ongoing operations.
 
-## Confirming Your Subscription
+## Purchasing your Subscription
 
 Once you've configured all the desired services and settings:
 
 1. Review the total cost and ensure your organization has sufficient credits.
 2. Verify the subscription name, duration, and auto-renewal settings.
 3. Click the **Confirm subscription** button to complete the purchase.
+    - Credits will be deducted immediately after the purchase.
 
-The new subscription will be created and will appear in the [Subscriptions](xref:Subscriptions) table with an "Active" status.
+The new subscription will be created and will appear in the [Subscriptions](xref:Subscriptions) table with an "Active" or "Planned" status.
 
 ## Tips for Creating Subscriptions
 
@@ -99,7 +102,7 @@ The new subscription will be created and will appear in the [Subscriptions](xref
 - **Check volume discounts**: For services with high usage, increasing volume may unlock significant discount tiers.
 - **Consider longer durations**: Multi-year subscriptions often provide better pricing and reduce administrative overhead.
 - **Monitor your balance**: Ensure you have enough credits for both the subscription purchase and ongoing pay-per-use services.
-- **Use descriptive names**: Give subscriptions meaningful names to easily identify them later, especially if you have multiple active subscriptions.
+- **Use descriptive names**: Give subscriptions meaningful names to easily identify them later, especially if you have multiple.
 
 ---
 
