@@ -70,7 +70,7 @@ Toggle the **Auto renew** switch to enable automatic renewal:
 - Renewal requires sufficient credits in your organization's balance.
 - New pricing may apply at renewal time.
 - Owners/Admins will receive a notification before the subscription expires and renews.
-- If insufficient credits are available, the subscription will not renew and Owners/Admins will be notified via email.
+- If insufficient credits are available, the subscription will not renew, Owners/Admins will be notified via email, and the **Auto renew** switch will turn off.
 
 For more information, see [Auto-Renewal](xref:Subscriptions#auto-renewal).
 
