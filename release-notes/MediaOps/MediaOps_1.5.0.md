@@ -28,6 +28,12 @@ Orchestration scripts have been implemented in the MediaOps Solution:
 
 As orchestration scripts have more flexibility than workflow execution scripts, workflow execution scripts have now been marked as obsolete. If they were already configured with previous versions of MediaOps, they will still be triggered, to allow a smooth transition to orchestration scripts. You can disable them for workflows, but it will no longer be possible to change or enable workflow execution scripts. Orchestration scripts should be used instead.
 
+#### Resource pool categories [ID 44534]
+
+It is now possible to categorize resource pools using the new *Categories* app. This way, when operators select a category in the Scheduling app, they will only see the pools in that specific category.
+
+To create categories for resource pools, deploy the Categories app from the DataMiner Catalog. In the app, first select the *Resource Pools* scope and then add categories into the scope. After you have created the categories, you can edit a pool and assign it to a category. Note that while the Categories app allows the creation of multiple levels of subcategories, it is not possible to use a category that has a parent for resource pools.
+
 ## Changes
 
 > [!NOTE]
