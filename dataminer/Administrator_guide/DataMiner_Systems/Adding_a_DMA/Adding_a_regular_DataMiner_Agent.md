@@ -4,17 +4,23 @@ uid: Adding_a_regular_DataMiner_Agent
 
 # Adding a regular DataMiner Agent
 
-> [!IMPORTANT]
->
-> - Before you add a DataMiner Agent, make sure the [IP network ports](xref:Configuring_the_IP_network_ports) are configured correctly and [connection strings](xref:Connection_strings) are configured if necessary.
-> - If you are running a DataMiner version lower than 10.4.0 [CU16]/10.5.0 [CU4]/10.4.7, also make sure the machine where you are running Cube can access the new Agent over the IP that is used for adding it, even when connection strings are used.
-> - If the DataMiner System uses [Dedicated clustered storage](xref:Dedicated_clustered_storage), make sure the new DMA is configured to use the same clustered storage as the DMS you are about to add it to (by modifying the general database settings in its [DB.xml](xref:DB_xml) file to match those of the other DMAs and then restarting the DMA).
-> - If the DataMiner System uses [Swarming](xref:Swarming), make sure Swarming is enabled on the new DMA before you add it to the cluster.
-> - If the DataMiner System uses STaaS, additional steps are required. See [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
+## Prerequisites
 
-1. Make sure the DMA you want to add is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), and that both the DMA and the DMS are part of the same cloud-connected system.
+- Before you add a DataMiner Agent, make sure the [IP network ports](xref:Configuring_the_IP_network_ports) are configured correctly and [connection strings](xref:Connection_strings) are configured if necessary.
 
-   From DataMiner 10.6.2/10.7.0 onwards<!--RN 44171-->, the operation will fail if the DMA is cloud-connected but the DMS is not, or if both are cloud-connected but do not share the same cloud identity.
+- If you are running a DataMiner version lower than 10.4.0 [CU16]/10.5.0 [CU4]/10.4.7, also make sure the machine where you are running Cube can access the new Agent over the IP that is used for adding it, even when connection strings are used.
+
+- If the DataMiner System uses [Dedicated clustered storage](xref:Dedicated_clustered_storage), make sure the new DMA is configured to use the same clustered storage as the DMS you are about to add it to (by modifying the general database settings in its [DB.xml](xref:DB_xml) file to match those of the other DMAs and then restarting the DMA).
+
+- If the DataMiner System uses [Swarming](xref:Swarming), make sure Swarming is enabled on the new DMA before you add it to the cluster.
+
+- If the DataMiner System uses STaaS, additional steps are required. See [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
+
+- Make sure that the new DMA is either not cloud-connected, or that both the DMA and the DMS are cloud-connected using the same cloud identity.
+
+  From DataMiner 10.6.2/10.7.0 onwards<!--RN 44171-->, the operation will fail if the DMA is cloud-connected but the DMS is not, or if both are cloud-connected but do not share the same cloud identity.
+
+## Procedure
 
 1. On a DMA that is currently already in the cluster, go to the *System Center* module and select the *Agents* page.
 
