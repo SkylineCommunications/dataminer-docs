@@ -147,6 +147,7 @@ Below you can find an overview of the main features that have been added to Data
 | Visual Overview: [Filter for Service Manager component](xref:Embedding_a_Service_Manager_component#configuring-filters-for-a-service-manager-component) | DataMiner 10.2.6/10.3.0 <!-- [ID 33187] -->|
 | Visual Overview: [History alarm shape](xref:Linking_a_shape_to_a_history_alarm) | DataMiner 10.1.8/10.5.0 <!-- [ID 29822] -->|
 | Visual Overview: [History values for element parameters](xref:Linking_a_shape_to_an_element_parameter#displaying-history-values-for-parameters) | DataMiner 10.1.10/10.2.0 <!-- [ID 30333] -->|
+| Visual Overview: [Linking a shape to a video stream using VLC](xref:Linking_a_shape_to_a_video_stream_using_VLC) | DataMiner 10.5.0 [CU11]/10.6.0/10.6.2 <!-- [ID 43750 + 44265] --> |
 | Visual Overview: [*RegexMatch* placeholder](xref:Placeholders_for_variables_in_shape_data_values#regexmatchxyoptions) | DataMiner Cube 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 <!-- [ID 39763] -->|
 | Visual Overview: [Resource shape](xref:Linking_a_shape_to_a_resource) | DataMiner 10.1.10/10.2.0 <!-- [ID 30752] -->|
 | Visual Overview: [[ServiceDefinition:] placeholder](xref:Placeholders_for_variables_in_shape_data_values#servicedefinition) | DataMiner 10.1.10/10.2.0 <!-- [ID 30757] -->|
