@@ -89,6 +89,8 @@ There are two ways to configure this setup: with or without group claims. If gro
 
      In this box, enter the IP address or the DNS name of your DataMiner System, e.g. ``https://dataminer.example.com/``.
 
+     For clusters with multiple SAML agents we recommend to use the clustername of your DMS here instead. **Make sure this name is unique across your Okta application integrations**.
+
    - **Name ID format**: The username format you are sending in the SAML Response.
 
      Select "EmailAddress".
