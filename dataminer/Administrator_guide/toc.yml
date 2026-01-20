@@ -542,7 +542,7 @@ items:
             - name: Configuring SAML with Microsoft Entra ID
               topicUid: SAML_using_Entra_ID
               items:
-                - name: Example setup with DMS with Failover pairs
+                - name: Example setup - DMS with Failover pair
                   topicUid: SAML_Example_Config_DMS
             - name: Configuring SAML with Azure B2C
               topicUid: SAML_using_Azure_B2C

@@ -62,7 +62,7 @@ To set up external authentication, you first need to create an enterprise applic
 
    1. Set *Entity ID* to the IP address or the DNS name of your DataMiner System, for example ``https://dataminer.example.com/``.
 
-      If your DMS consists of DMAs accessible via different URLs or IP addresses, choose one URL or IP address to use as the entity ID. Alternatively, you could use the clustername of you DMS as entityID. Azure will use a URL as default but this can be changed to anything without issue. **The only requirement is that it is unique across the Identity Provider**.
+      If your DMS consists of DMAs accessible via different URLs or IP addresses, choose one URL or IP address to use as the entity ID. Alternatively, you could use the cluster name of you DMS as entity ID. Azure will use a URL as default but this can be changed to anything without issue. **The only requirement is that it is unique across the identity provider**.
 
       In case of a **DaaS system**, ``https://<dms-dns-name>-<organization-name>.on.dataminer.services`` should be used as the entity ID, unless a site-to-site VPN is in place, which allows access to Azure VMs that are not reachable by default.
 

@@ -28,7 +28,7 @@ Please note the following:
   > [!TIP]
   > For a comprehensive understanding of the SAML process, including the encoding and encryption guidelines that DataMiner follows, refer to the official SAML Documentation: [SAML Technical Overview](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.2.SP-Initiated%20SSO:%20%20Redirect/POST%20Bindings|outline).
 
-- Only one application registration is needed on the identity provider per cluster. registration.
+- Only one application registration is needed on the identity provider per cluster registration.
 
 - DataMiner will expect one of the claims provided by the identity provider to be the "name" claim: `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`. This field must contain either the username or the email address.
 
