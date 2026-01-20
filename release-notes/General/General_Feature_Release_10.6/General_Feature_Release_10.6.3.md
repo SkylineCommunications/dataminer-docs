@@ -38,6 +38,17 @@ uid: General_Feature_Release_10.6.3
 
 ### Enhancements
 
+#### New parameter caches for client apps [ID 43945]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Two new parameter caches are now available for client apps (e.g. DataMiner Cube):
+
+- ProtocolParameters (linked to GetProtocolParameter on the client connection)
+- ElementProtocolParameters (linked to GetElementProtocolParameter on the client connection)
+
+Both caches are added on the connection object, and have the ability to cache in memory (for the current session) and on disk (for a next session).
+
 #### Enhanced visibility on SLNet connection issues [ID 44069]
 
 <!-- MR 10.7.0 - FR 10.6.3 -->

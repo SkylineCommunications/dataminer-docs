@@ -25,6 +25,17 @@ An `OnDestroy` handler has now been added to the `Engine` class. This handler wi
 
 Multiple handlers can be added. They will run synchronously, and if one handler throws an error, the others will keep on running.
 
+#### New parameter caches for client apps [ID 43945]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Two new parameter caches are now available for client apps (e.g. DataMiner Cube):
+
+- ProtocolParameters (linked to GetProtocolParameter on the client connection)
+- ElementProtocolParameters (linked to GetElementProtocolParameter on the client connection)
+
+Both caches are added on the connection object, and have the ability to cache in memory (for the current session) and on disk (for a next session).
+
 #### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->
