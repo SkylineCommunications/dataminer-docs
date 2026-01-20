@@ -34,7 +34,7 @@ For all Agents in the cluster, the *DataMiner.xml* file should have the same con
 ```
 
 > [!IMPORTANT]
-> Do not mix Groups claims true and false in the cluster as this will lead to problems with >  user access. This config needs to be the exact same across the cluster for SAML agents.
+> This configuration must be exactly the same for all Agents in a cluster. Mixing different types of configuration across Agents (e.g. `Groups claims="true"` for one Agent and `Groups claims="false"` for another) will cause problems with user access.
 
 ## Reply URLs at the identity provider side
 
