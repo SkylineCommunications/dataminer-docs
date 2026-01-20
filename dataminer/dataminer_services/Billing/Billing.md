@@ -11,7 +11,7 @@ The Billing page provides a comprehensive overview of your organization's credit
 
 The **Balance** displays your current credit balance available for dataminer.services usage. This represents the total number of credits remaining in your account that can be used to pay for various services and subscriptions.
 
-- Credits are consumed when using pay-per-use (PPU) services or for active subscriptions.
+- Credits are consumed when using pay-per-use (PPU) services or when creating, renewing, or committing to a subscription (charged up front for the whole period).
 - You can purchase additional credits using the **Buy credits** button located in the top-right corner.
 - The balance is updated in real-time as services are consumed or when new credits are purchased.
 - A low balance may impact your ability to use certain services, so monitoring this regularly is important.
@@ -23,7 +23,13 @@ Use the date selector at the top of the page to view billing information for dif
 
 ## Services Table
 
-The **Services** table provides a detailed breakdown of all services consuming credits in the selected time period. Services are organized into categories that can be expanded or collapsed for better overview:
+The **Services** table provides a detailed breakdown of all services consuming credits in the selected time period. Services are organized into categories that can be expanded or collapsed for better overview.
+
+Use the month selector at the top of the page to view costs for different months. Note that:
+
+- The current month's data is updated on a daily basis with real-time usage.
+- Previous months show finalized billing data.
+- Billing for each month is processed on the 5th of the following month (e.g., January usage is billed on February 5th).
 
 ### Cost Indicators
 
