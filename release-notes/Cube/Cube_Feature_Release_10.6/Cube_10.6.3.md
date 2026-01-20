@@ -26,6 +26,14 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
+#### Trending: Enhanced performance when loading trend graphs [ID 44239]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+Because of the introduction of a parameter cache, overall performance has increased when loading trend graphs.
+
+When you start DataMiner Cube, you can disable this parameter cache by using the URL argument `EnableClientParameterCache=false`.
+
 #### Scheduler module: A message box will now appear whenever an error occurs [ID 44334]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
