@@ -15,6 +15,7 @@ The **Balance** displays your current credit balance available for dataminer.ser
 - You can purchase additional credits using the **Buy credits** button located in the top-right corner.
 - The balance is updated in real-time as services are consumed or when new credits are purchased.
 - A low balance may impact your ability to use certain services, so monitoring this regularly is important.
+- Click the **Credit history** button to view all credit transactions. See [Credit History](xref:Credit_History) for more information.
 
 ## Time Period Selection
 
@@ -35,7 +36,7 @@ The costs shown reflect the consumption for the currently selected time period.
 
 ## Monthly Savings
 
-The **Monthly Savings** indicator shows the amount of credits saved when fully consuming all reservations in subscriptions, during the current month, compared to standard pricing.
+The **Monthly Savings** indicator shows the amount of credits saved, when fully consuming all reservations in subscriptions, during the current month compared to standard pricing.
 
 ## Subscriptions Panel
 
@@ -51,7 +52,7 @@ The **Historical cost breakdown** chart visualizes your credit consumption over 
 
 - **Identify spending trends**: Track how your costs evolve over multiple months.
 - **Compare cost types**: The chart distinguishes between:
-  - **Subscription costs** (green bars): Fixed costs for active subscriptions.
+  - **Subscription costs** (green bars): Fixed costs for active subscriptions. These costs are calculated pro-rata if a subscription doesn't start or end on the first/last day of the month.
   - **PPU costs** (orange bars): Variable costs based on actual service usage.
 - **Plan budget**: Use historical data to forecast future costs and budget accordingly.
 - **Detect anomalies**: Quickly spot unusual spikes in consumption that may require investigation.
