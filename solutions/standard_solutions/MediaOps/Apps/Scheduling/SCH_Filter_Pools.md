@@ -22,7 +22,7 @@ For systems that have many resource pools it might become cumbersome to find the
 
 1. Give a name and save
 
-   Ensure that the *Parent Category* is set to *(No Parent Category)*, as nested categories is not yet supported for resource pools. It is advised to keep the name under 13 characters to ensure it is nicely displayed in the Scheduling application.
+   Ensure that the *Parent Category* is set to *(No Parent Category)*, as nested categories are not yet supported for resource pools. It is advised to keep the name under 13 characters to ensure it is nicely displayed in the Scheduling application.
 
    ![New Category](~/solutions/images/Scheduling_Categories_Add_Window.png)
 
