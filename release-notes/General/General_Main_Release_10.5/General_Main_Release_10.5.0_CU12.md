@@ -73,7 +73,7 @@ For more information, see [Exceptions element](xref:Protocol.Params.Param.Interp
 
 #### Delay of DataMiner startup routine caused by SLDataMiner starting up faster than SLNet [ID 44438]
 
-<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+<!-- MR 10.5.0 [CU12] - FR 10.6.2 [CU0] -->
 
 During DataMiner startup, in some rare cases, SLDataMiner would start up faster than SLNet. This would cause a delay of about 2 minutes in the entire startup routine.
 

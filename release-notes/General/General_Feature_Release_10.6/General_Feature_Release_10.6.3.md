@@ -121,12 +121,6 @@ Also, in some cases, an exception would be displayed even when it had a type oth
 
 For more information, see [Exceptions element](xref:Protocol.Params.Param.Interprete.Exceptions). The `Exceptions` tag should only be used to intercept values of the same `Interprete.Type` as that of your parameter. If you want to intercept values of another type, then you should use the `Protocol.Params.Param.Interprete.Others` tag instead.
 
-#### Delay of DataMiner startup routine caused by SLDataMiner starting up faster than SLNet [ID 44438]
-
-<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
-
-During DataMiner startup, in some rare cases, SLDataMiner would start up faster than SLNet. This would cause a delay of about 2 minutes in the entire startup routine.
-
 #### DaaS: Short-lived alarms without operational impact would appear immediately after the 'My DataMiner Agent' element had been created [ID 44440]
 
 <!-- MR 10.6.0 - FR 10.6.3 -->

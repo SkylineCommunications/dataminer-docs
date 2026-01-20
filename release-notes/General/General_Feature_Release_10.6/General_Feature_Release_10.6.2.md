@@ -379,3 +379,9 @@ In some cases, a fatal error could occur in SLDataMiner when an incomplete JSON 
 When an alarm cannot be created for a particular element, an attempt is made to fetch the element state for logging purposes.
 
 Up to now, in some cases, when the element was being stopped and was flushing its data to the database, this fetch operation could block the alarm thread. As a result, no new alarms would get processed for that element until the element had stopped flushing its data.
+
+#### Delay of DataMiner startup routine caused by SLDataMiner starting up faster than SLNet [ID 44438]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.2 [CU0] -->
+
+During DataMiner startup, in some rare cases, SLDataMiner would start up faster than SLNet. This would cause a delay of about 2 minutes in the entire startup routine.
