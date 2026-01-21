@@ -56,6 +56,14 @@ This change applies to the following ways to access a log file:
 - Right-clicking a script and selecting the *View Log* menu option.
 - Viewing the Automation log page in System Center.
 
+#### System Center - Logging: Scripting entry removed from DataMiner tab [ID 44467]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+When, in *System Center*, you open the *Logging* section, and click the *DataMiner* tab, you can select a particular log file from the list.
+
+Up to now, this log file list contained a *Scripting* entry. However, as no *SLScripting.txt* log file exists, this entry has now been removed.
+
 ### Fixes
 
 #### Visual Overview: UI could become unresponsive when parameter subscriptions occurred for conditions with parameter-based criteria [ID 44365]
