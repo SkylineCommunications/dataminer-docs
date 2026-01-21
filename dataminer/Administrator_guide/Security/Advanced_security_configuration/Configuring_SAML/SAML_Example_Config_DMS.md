@@ -10,6 +10,9 @@ The DataMiner System in this example consists of two regular DataMiner Agents an
 
 *FOShared* is used as the shared Failover hostname. However, if you have a Failover setup based on virtual IP, you should use the virtual IP instead.
 
+> [!TIP]
+> These examples are applicable to different setups. Be sure to follow the detailed procedures for your use-case. See [Configuring SAML settings](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) for a good starting point.
+
 ## DataMiner.xml
 
 For all Agents in the cluster, the *DataMiner.xml* file should have the same configuration:
