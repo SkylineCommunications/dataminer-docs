@@ -245,8 +245,22 @@ Up to now, when a certain group name had been removed (e.g. by means of an Autom
 
 Up to now, when a min, max, or sum aggregation was performed on a column of type integer, the column containing the aggregation results would incorrectly be of type double instead of type integer. As a result, operators that required a column of type integer would throw an exception when reading the column in question.
 
+#### Dashboards/Low-Code Apps - Templates: Default tooltip would show 'Undefined' when selecting a table preset for a component other than a Table component [ID 44529]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When you selected a table preset for a component other than a *Table* component, up to now, the default tooltip would show "Undefined" because the template could not be mapped to a column.
+
+From now on, when you selected a table preset for a component other than a Table component, no default tooltip will be set.
+
 #### Dashboards/Low-Code Apps - Color picker: Problem when selecting presets [ID 44531]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 When you opened the color picker and selected a preset, up to now, the color scale of the previously selected preset would incorrectly be shown until you selected another preset.
+
+#### Dashboards app: Folder named ';THEMES' would incorrectly appear in the navigation pane [ID 44532]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In some cases, a folder named *;THEMES* would incorrectly appear in the navigation pane on the left.
