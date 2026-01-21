@@ -78,11 +78,11 @@ Breadcrumbs have now been added to the navigation pane.
 
 By clicking the first breadcrumb, which is named *Overview*, you will navigate back to the root view.
 
-#### Dashboards/Low-Code Apps - Timeline component: Scrolling vertically while keeping the ALT key pressed [ID 44524]
+#### Dashboards/Low-Code Apps - Timeline component: Zooming vertically while keeping the ALT key pressed [ID 44524]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-In a *Timeline* component, it is now possible to scroll vertically.
+In a *Timeline* component, it is now possible to vertically zoom in or out.
 
 To have all data on a timeline grow or shrink in height, rotate the mouse wheel while keeping the ALT key pressed.
 
@@ -150,6 +150,18 @@ When you tried to rename of component, and the name you entered was already in u
 This message has now been changed to make it clearer.
 
 `This name is already used in this page/panel.`
+
+#### Landing page and web apps: Icons, favicons, and titles updated [ID 44520]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+The icons and favicons of the DataMiner landing page and the following DataMiner web apps have been updated:
+
+- Dashboards
+- DOM
+- Monitoring
+
+Also, the app titles have been standardized to ensure consistency across all apps.
 
 ### Fixes
 
