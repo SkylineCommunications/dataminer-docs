@@ -78,6 +78,16 @@ Breadcrumbs have now been added to the navigation pane.
 
 By clicking the first breadcrumb, which is named *Overview*, you will navigate back to the root view.
 
+#### Dashboards/Low-Code Apps - Timeline component: Scrolling vertically while keeping the ALT key pressed [ID 44524]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In a *Timeline* component, it is now possible to scroll vertically.
+
+To have all data on a timeline grow or shrink in height, rotate the mouse wheel while keeping the ALT key pressed.
+
+Note that items cannot shrink below 1/10th of their initial height or grow above 10 times their initial height.
+
 ## Changes
 
 ### Enhancements
