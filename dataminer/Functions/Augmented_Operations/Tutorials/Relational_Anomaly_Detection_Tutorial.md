@@ -29,7 +29,7 @@ The tutorial consists of the following steps:
 - [Step 4: Create a problem and verify if RAD detects it](#step-4-create-a-problem-and-verify-if-rad-detects-it)
 - [Step 5: Tweak the advanced configuration](#step-5-tweak-the-advanced-configuration)
 - [Step 6: Create a shared model group](#step-6-create-a-shared-model-group)
-- [Step 7: Configure RAD groups with the API via a script](#step-7-configure-rad-groups-with-the-api-via-a-script)
+- [Step 7: Use the API to configure RAD groups](#step-7-use-the-api-to-configure-rad-groups)
 - [Step 8: Play around with the Fleet Outlier Radar](#step-8-play-around-with-the-fleet-outlier-radar)
 - [Step 9: Clean up your system](#step-9-clean-up-your-system)
 
@@ -39,12 +39,10 @@ The tutorial consists of the following steps:
 
 1. [Deploy the package](xref:Deploying_a_catalog_item) to your DataMiner Agent by clicking the *Deploy* button.
 
-   This will create two Automation scripts:
+   This will create two Automation scripts, which you can find in the folder *DataMiner Catalog* > *RAD Demonstrator* in the Automation module:
 
-   - Add Shared Model Group
-   - Add Single Groups
-
-   You can find them in the Automation module: the scripts are stored in the *DataMiner Catalog > RAD Demonstrator* folder.
+   - *Add Shared Model Group*
+   - *Add Single Groups*
 
    The package will also create the following DataMiner elements in the Cube Surveyor under *DataMiner Catalog* > *Using Relational Anomaly Detection* > *London*:
 
@@ -54,22 +52,22 @@ The tutorial consists of the following steps:
    - RAD - Commtia LON 4
    - RAD - Commtia LON 5
 
-	Finally, it will create 29 additional elements *Fleet-Outlier-Detection-Commtia 01*, *Fleet-Outlier-Detection-Commtia 02*,... 
-until *Fleet-Outlier-Detection-Commtia 29* in the Cube Surveyor under *DataMiner Catalog* > *Using Relational Anomaly Detection* > *RAD Fleet Outlier*.
+   Finally, it will create 29 additional elements, *Fleet-Outlier-Detection-Commtia 01*, *Fleet-Outlier-Detection-Commtia 02*, etc. up to *Fleet-Outlier-Detection-Commtia 29*, in the Cube Surveyor under *DataMiner Catalog* > *Using Relational Anomaly Detection* > *RAD Fleet Outlier*.
 
 1. Go to the [RAD Manager](https://aka.dataminer.services/RAD-Manager-Catalog) package in the DataMiner Catalog and [deploy it](xref:Deploying_a_catalog_item).
 
 1. Go to the root page of your DataMiner System, for example by clicking the *Home* button for your DMS on the [dataminer.services page](https://dataminer.services/), and check if you can see the *RAD Manager* app.
 
    ![RAD Manager icon on the root page](~/dataminer/images/RAD_Manager_on_root_page.png)
-   
+
 1. Open the *RAD Manager* app.
+
    The RAD Manager provides an overview of all the RAD groups that are configured on your system.
 
    ![RAD Manager first glance](~/dataminer/images/tutorial_RAD_Manager_First_Glance.png)
 
-    > [!NOTE]
-	> In case the package installation finished, you will already see a RAD Group in the RAD Manager. We will only use this in [Step 8](#step-8-play-around-with-the-fleet-outlier-radar) of the tutorial. So for now, don't delete or change it.
+   > [!NOTE]
+   > When the package installation is finished, you will already see a RAD Group named *Fleet-Outlier-Group* in the RAD Manager. This will be used in [Step 8](#step-8-play-around-with-the-fleet-outlier-radar) of this tutorial, so for now you can just ignore it.
 
 ## Step 2: Check the DAB transmitter elements in Cube
 
@@ -97,8 +95,6 @@ This gives you an idea of the parameter relations that will be used further in t
 
 1. Go to the RAD Manager app.
 
-	There might already be a group called *Fleet-Outlier-Group*. Disregard it for now as we will use it later.
-
 1. On the left side of the header bar, click *Add Single Group*.
 
    This will open a window where you can configure a new parameter group.
@@ -115,7 +111,9 @@ This gives you an idea of the parameter relations that will be used further in t
 
    1. Make sure the *Output Power* parameter is selected.
 
-   1. Under *Display key filter*, specify `PA*`. As we are monitoring *all* available power amplifiers, you can actually also leave this field empty.
+   1. Under *Display key filter*, specify `PA*`.
+
+      Note that as the group will be used to monitor *all* available power amplifiers, you could actually also leave this field empty.
 
    1. Click *Add*.
 
@@ -133,23 +131,23 @@ This gives you an idea of the parameter relations that will be used further in t
 
 1. Override the default anomaly threshold:
 
-   1. Select the *Override default anomaly threshold* checkbox.
+   1. Select the *Override default anomaly threshold* checkbox
 
-   1. Fill in the value *3* in the field next to *Anomaly threshold*.
+   1. Fill in *3* in the box next to the checkbox.
 
-   This will make DataMiner more sensitive to deviations in the relations between the parameters. By default, an event will only be triggered when the so called *anomaly score* exceeds 6, but in this example the deviation of the parameters will be too small to lead to such a high anomaly score.
+   This will make DataMiner more sensitive to deviations in the relations between the parameters. By default, an event will only be triggered when the "anomaly score" exceeds 6, but in this example the deviation of the parameters will be too small to lead to such a high anomaly score.
 
 1. Override the default minimum anomaly duration:
 
    1. Select the *Override default minimum anomaly duration (in minutes)* checkbox.
 
-   1. Fill in the value *000d 00h 05m* in the field next to *minimum anomaly duration (in minutes)*.
+   1. Fill in the value *000d 00h 05m* in the box next to the checkbox.
 
    This will make sure that DataMiner also detects short anomalies, when the relation is broken for only 5 minutes. By default, DataMiner will only trigger an event if the relation is broken for at least 15 minutes.
 
 1. Click *Add group* to create the group.
 
-The group entitled *PAs unbalanced* is now created and shown in the RAD Manager.
+The group entitled *PAs unbalanced* will now be created and shown in the RAD Manager.
 
 ![Add a group](~/dataminer/images/tutorial_RAD_groupOverview.png)
 
@@ -180,9 +178,9 @@ The group entitled *PAs unbalanced* is now created and shown in the RAD Manager.
    ![Selected Group in RAD Manager](~/dataminer/images/tutorial_RAD_Selected_Group.png)
 
    > [!NOTE]
-	> Note the red icon on the *PAs unbalanced* group, indicating there was an anomaly. If you don't see it immediately, refresh the *RAD Manager* page in your browser.
+   > Note the red icon on the *PAs unbalanced* group, indicating there was an anomaly. If you do not see this icon yet, refresh the *RAD Manager* page in your browser.
 
-1. On the graph component, right hand side, click the *<* button to display the list of parameters in the group. Click the *Output Power - pa1* and *Tx Amplifier Output Power* to remove them from the graph.			
+1. On the trend graph component on the right, click the *<* button to display the list of parameters in the group, and click the *Output Power - pa1* and *Tx Amplifier Output Power* to remove them from the graph.
 
 1. Above the graph, select the time range covering the last 24 hours.
 
@@ -192,17 +190,17 @@ The group entitled *PAs unbalanced* is now created and shown in the RAD Manager.
 
    - Notice how, during the last hour, the *PA3* parameter started deviating from the *PA2*.
 
-   - In the *Anomaly score of selected group* graph, notice how the *anomaly score* went up during the last hour.
+   - In the *Anomaly score of selected group* graph, notice how the anomaly score went up during the last hour.
 
-   The *anomaly score* expresses how strongly the model believes that the relations between the parameters are broken at any given time. The fact that the *anomaly score* exceeded the configured *anomaly threshold* of 3
-is what led the system to trigger the RAD event in the Alarm Console in Cube.
+   The anomaly score expresses how strongly the model believes that the relations between the parameters are broken at any given time. The fact that the anomaly score exceeded the configured anomaly threshold of 3 is what led the system to trigger the RAD event in the Alarm Console in Cube.
 
    ![Trend and anomaly score graphs](~/dataminer/images/tutorial_RAD_trend_and_anomaly_score.png)
 
- 1. On the top right, click the "Historical anomalies" button to open the Historical Anomalies panel.
-   This panel displays all the historical anomalies detected for the selected group in the selected time range.
+1. In the top-right corner, click the *Historical anomalies* button.
 
-	![Historical Anomalies panel](~/dataminer/images/tutorial_RAD_Historical_Anomalies_panel.png)
+   This will open a panel that displays all the historical anomalies detected for the selected group in the selected time range.
+
+   ![Historical Anomalies panel](~/dataminer/images/tutorial_RAD_Historical_Anomalies_panel.png)
 
 ## Step 5: Tweak the advanced configuration
 
@@ -215,7 +213,7 @@ In this step, you will learn how you can for instance suppress events created as
 
 1. Select the *RAD - Commtia LON 2* element this time.
 
-1. As before, select the *Output Power* parameter (optionally filter on `PA*`) and click *Add*.
+1. As before, select the *Output Power* parameter,optionally filter on `PA*`, and click *Add*.
 
 1. Select the *Tx Amplifier Output Power* parameter, keep the *Display key filter* empty, and click *Add*.
 
@@ -243,82 +241,74 @@ In this step, you will learn how you can for instance suppress events created as
 
 ## Step 6: Create a shared model group
 
-Typically, you will want to monitor not just one single DAB transmitter but multiple. To accomplish this, you could create a single RAD group for each transmitter, similarly to what we've been doing above.
-An often preferred alternative is to create just one RAD group that monitors *multiple* transmitters together using a *shared model*.
+Typically, you will want to monitor not just one single DAB transmitter but multiple transmitters. To accomplish this, you could create a single RAD group for each transmitter, similarly to what you have done above. However, an often preferred alternative is to create just one RAD group that monitors multiple transmitters together using a shared model.
 
-Using a shared model comes with its pros and cons. The downside of using one common shared model is that the model is trained on a collection of transmitters, so it is less attuned
-to the specific characteristics of each individual transmitter. This might lead to a slightly lower anomaly detection accuracy for each individual transmitter.
+On the one hand, the downside of using one common shared model is that the model is trained on a collection of transmitters, so it is less attuned to the specific characteristics of each individual transmitter. This might lead to a slightly lower anomaly detection accuracy for each individual transmitter.
 
 On the other hand, a shared model comes with several advantages:
-1. you only need to create and maintain one single RAD group instead of multiple ones.
-1. the model can learn from a larger dataset (data from multiple transmitters), which can lead to a more robust model that is better at generalizing and detecting anomalies.
-1. Your DataMiner system will use less resources because only one model needs to be stored and updated instead of multiple ones.
+
+1. You only need to create and maintain one single RAD group instead of multiple ones.
+
+1. The model can learn from a larger dataset (data from multiple transmitters), which can lead to a more robust model that is better at generalizing and detecting anomalies.
+
+1. Your DataMiner System will use less resources because only one model needs to be stored and updated instead of multiple ones.
+
 1. The model can detect which individual transmitters (if any) are behaving differently from their peers. This can help you decide to prioritize maintenance on those transmitters.
 
-In this step, we will explain how to create a *shared model group*.
+In this step, you will learn how to create a shared model group.
 
 1. In the header bar of the RAD Manager, click *Add Shared Model Group*.
 
-	The following popup will appear:
+   This will open the following window:
 
    ![Add a shared model group](~/dataminer/images/tutorial_RAD_Add_Shared_Model_Group.png)
 
 1. Set the *Group name* equal to *DAB Fleet*.
 
-1. Set *Number of parameters per subgroup* equal to *4*	.
+1. Set *Number of parameters per subgroup* to *4*.
 
-	As before, we will monitor the *Output Power* of the 3 different power amplifiers and the *Tx Amplifier Output Power*. 
+   The group will monitor the *Output Power* of the three different power amplifiers and the *Tx Amplifier Output Power*.
 
-1. To get meaningful names for the parameters, click *Edit Labels...* and assign meaningful names to each of the 4 parameters, for example:
+1. To get meaningful names for the parameters, click *Edit Labels* and assign meaningful names to each of the parameters, for example:
+
    - PA1 Output Power
    - PA2 Output Power
    - PA3 Output Power
    - Total Tx Amplifier Output Power
-  
-	Click *OK* to close the labels editor.
 
-	![Give meaningful names to the parameters](~/dataminer/images/tutorial_RAD_Give_Meaningful_Names.png)
+   Click *OK* to close the labels editor.
 
-1. Click *Add subgroup...* to add our first subgroup. 
+   ![Give meaningful names to the parameters](~/dataminer/images/tutorial_RAD_Give_Meaningful_Names.png)
 
-	A popup opens where you can configure the parameters for this subgroup.
+1. Click *Add subgroup* to add a first subgroup.
 
-	We already used the *RAD - Commtia LON 1* and *RAD - Commtia LON 2* elements in the previous steps,
-	so we will use the *RAD - Commtia LON 3*, *RAD - Commtia LON 4* and *RAD - Commtia LON 5* elements this time.
+   This will open a window where you can configure the parameters for this subgroup, which this time will be from the *RAD - Commtia LON 3*, *RAD - Commtia LON 4*, and *RAD - Commtia LON 5* elements:
 
-	<a name="add-subgroup-steps"></a>
+   1. In the *Group name* field, fill in a meaningful name for the subgroup, for example *Commtia LON 3*.
 
-	1. In the *Group name* field, fill in a meaningful name for the subgroup, for example *Commtia LON 3*.
-	1. In the row for the *PA1 Output Power*, select the element *RAD - Commtia LON 3*, select the *Output Power* parameter and Display key *PA1*.
-	1. Similarly, in the row for the *PA2 Output Power*, select the element *RAD - Commtia LON 3*, select the *Output Power* parameter and Display key *PA2*.
-	1. Repeat the same for the *PA3 Output Power* row using the *RAD - Commtia LON 3* element and Display key *PA3*.
-	1. Finally, in the *Total Tx Amplifier Output Power* row use the *RAD - Commtia LON 3* element and the *Tx Amplifier Output Power* parameter. Keep the Display Key field empty.
-	1. We will not override the default anomaly threshold and minimum anomaly duration for this specific group, so leave these checkboxes unchecked.
-	1. Click *OK* to add your first subgroup.
+   1. In the row for the each *Output Power* parameter, select the element *RAD - Commtia LON 3*, select the *Output Power* parameter, and select the corresponding display key (for example, *PA1* for the parameter *PA1 Output Power*).
 
-	![Configure the first subgroup](~/dataminer/images/tutorial_RAD_Configure_First_Subgroup.png)
+   1. In the *Total Tx Amplifier Output Power* row, use the *RAD - Commtia LON 3* element and the *Tx Amplifier Output Power* parameter.
 
-1. Click *Add subgroup...* again to add a second subgroup. Repeat the 7 steps above, but this time use the *RAD - Commtia LON 4* element and name the subgroup *Commtia LON 4*.
+   1. Leave the default anomaly threshold and minimum anomaly duration checkboxes unselected, so these are not overridden for this group.
 
-1. Click *Add subgroup...* one last time to add the *Commtia LON 5* subgroup, using the element *RAD - Commtia LON 5*.
+   1. Click *OK* to add the subgroup.
 
-	The *Subgroups* drop down now contains the three subgroups that we defined. Selecting a subgroup will display its configuration.
-1. As in [Step 3](#step-3-configure-your-first-rad-group), we will use Anomaly Threshold *3* and Minimum Anomaly Duration of *5* minutes for this shared model group. We can configure
-this value once for the entire shared model group instead of for each subgroup individually.
+   ![Configure the first subgroup](~/dataminer/images/tutorial_RAD_Configure_First_Subgroup.png)
 
-   1. Select the *Override default anomaly threshold* checkbox and fill in the value *3*.
-   1. Select the *Override default minimum anomaly duration (in minutes)* checkbox and fill in the value *000d 00h 05m*.
+1. Click *Add subgroup* again to add a second subgroup, repeating the steps above, but this time with the *RAD - Commtia LON 4* element and the subgroup name *Commtia LON 4*.
 
-	> [!NOTE]
-	> These settings can be overridden for individual subgroups if needed by clicking *Edit subgroup...*.
+1. Click *Add subgroup* one last time to add the *Commtia LON 5* subgroup, using the element *RAD - Commtia LON 5*.
 
-	> [!NOTE]
-	> By default, the model will be trained on recent data. If instead you want to train the model on specific historical time intervals, you can check *Override default settings for model training*
-     and click *Configure model training...*.
+   The *Subgroups* dropdown will now contain the three subgroups you have defined. Selecting a subgroup will display its configuration.
+
+1. As in [Step 3](#step-3-configure-your-first-rad-group), configure your RAD group with an anomaly threshold of *3* and minimum anomaly duration of *5* minutes.
+
+   As these settings are the same for each subgroup, you can configure the settings on the shared model group level. If necessary, it is possible to override settings for individual subgroups via the *Edit subgroup* button.
 
 1. Click *Apply* to create the shared model group.
 
-	![Shared model group created](~/dataminer/images/tutorial_RAD_Shared_Model_Group_Created.png)
+   ![Shared model group created](~/dataminer/images/tutorial_RAD_Shared_Model_Group_Created.png)
 
 1. Optionally, select the shared model group to explore the subgroups underneath.
 
@@ -328,72 +318,67 @@ this value once for the entire shared model group instead of for each subgroup i
 
    1. Check the lightbulb icon in the Alarm Console to check that the relational anomaly was detected.
 
-   1. Check that the anomaly becomes visible in the RAD Manager.
+   1. Check of the anomaly becomes visible in the RAD Manager.
 
-	   If you do not immediately see it, refresh the RAD Manager page in your browser.
+      If you do not immediately see it, refresh the RAD Manager page in your browser.
 
    ![Shared model group anomaly detected](~/dataminer/images/tutorial_RAD_Shared_Model_Group_Anomaly_Detected.png)
 
+## Step 7: Use the API to configure RAD groups
 
-## Step 7: Using the API to configure RAD groups
+In case you have 100 DAB transmitters, it can be quite tedious to create single RAD groups for each of them manually. The creation of a shared model group has a similar problem as you need to add each subgroup one by one. To solve this, DataMiner provides a RAD API that allows you to create RAD groups programmatically.
 
-In case you have 100 DAB Transmitters, it can be quite tedious to create single RAD groups 
-for each of them manually. The creation of a shared model group has a similar problem as you need to add
-each subgroup one by one. To solve this, DataMiner provides a RAD API that allows you to create RAD groups programmatically.
+In [step 1](#step-1-install-the-necessary-packages-from-the-catalog) of this tutorial, two scripts were deployed that can be used for this:
 
-Concretely, 2 automation scripts were deployed when you installed the *RAD Demonstrator* package in Step 1 of this tutorial:
+- The *Add Single Groups* script creates *single RAD groups* for all five *RAD - Commtia LON* elements.
 
-1. The *Add Single Groups* script creates *single RAD groups* for all 5 *RAD - Commtia LON* elements.
-1. The *Add Shared Model Group* script creates a *shared model RAD group* for all 5 *RAD - Commtia LON* elements
+- The *Add Shared Model Group* script creates a *shared model RAD group* for all five *RAD - Commtia LON* elements
 
-In case you are interested in using RAD on your system, it is recommended to take a look at the scripts.
-They seem complicated because of all the boiler plate code, but the only method that you really need to implement yourself
-is the *RunSafe(IEngine engine)* method. Feel free to use these scripts as a starting point for later if you decide to configure your own groups.
+If you are interested in using RAD on your system, these scripts can be a useful example. They may seem complicated because of all the boiler plate code, but the only method that you really need to implement yourself is the *RunSafe(IEngine engine)* method. Feel free to use these scripts as a starting point for later if you decide to configure your own groups.
 
 You can run the scripts as follows:
 
-1. In the RAD Manager, except for the *Fleet-Outlier-Group* group that was created by the catalog package,
-   remove the groups you created during this tutorial using the bin icon next to each group name.
+1. In the RAD Manager, except for the *Fleet-Outlier-Group* group that was created by the catalog package, remove the groups you created during this tutorial using the bin icon next to each group name.
 
-	![Remove groups](~/dataminer/images/tutorial_RAD_Remove_Groups.png)
+   ![Remove groups](~/dataminer/images/tutorial_RAD_Remove_Groups.png)
 
-1. In Cube, go to Apps > Automation.
-1. Choose your script in the *Automation script > DataMiner Catalog > RAD Demonstrator* folder.
+1. In Cube, go to *Apps* > *Automation*.
 
-   > [!TIP]
-   > This is only one possible example of how you can use the RAD API. If you would like to create your own script to create a custom advanced configuration, refer to [Working with the RAD API](xref:RAD_API).
+1. Select the script of your choice in the *Automation script > DataMiner Catalog > RAD Demonstrator* folder.
+
+> [!TIP]
+> This is only one possible example of how you can use the RAD API. To create your own script to create a custom advanced configuration, refer to [Working with the RAD API](xref:RAD_API).
 
 ## Step 8: Play around with the Fleet Outlier Radar
-An advantage of using shared model groups is that DataMiner is able to compare these groups with each other and 
-detect if certain subgroups behave differently from the others. To illustrate this, our catalog package has created
-a shared model group called *Fleet-Outlier-Group*:
 
-1. Open The RAD Manager
-1. Find the shared model group called *Fleet-Outlier-Group* and click it.
+Shared model groups allow DataMiner to compare the subgroups with each other and detect if certain subgroups behave differently from the others. To illustrate this, a *Fleet-Outlier-Group* was deployed in [step 1](#step-1-install-the-necessary-packages-from-the-catalog) of this tutorial.
 
-   This group contains 29 subgroups (DAB Transmitters) of actual data, collected in the field.
+1. In the RAD Manager app, select the shared model group called *Fleet-Outlier-Group*.
+
+   This group contains 29 subgroups (DAB transmitters) of actual data, collected in the field.
 
 1. Scroll through the list and see if you find devices with the *Outlier Group* label.
 
-	![Outlier Groups](~/dataminer/images/tutorial_RAD_OutlierGroups.png)
+   ![Outlier Groups](~/dataminer/images/tutorial_RAD_OutlierGroups.png)
 
-   If you don't see any groups just yet, it is likely because the algorithm is still waiting for enough real-time data to identify outliers.
-   While the shared model group was created during deployment, the detection process relies specifically on live data. Since the output power parameters are polled every five minutes, it may take a little more time to process a sufficient number of data points. We recommend checking back in about an hour, by which time the results should be visible.
-1. Select one of the subgroups, e.g. the *AI - RAD - Commtia LON 14*.
+   To quickly find a group with this label, you can use the *Sorting & filtering* button and select to sort by *Is Outlier Group*.
 
-	![Outlier group LON 14](~/dataminer/images/tutorial_RAD_OutlierGroup14.png)
+   If you do not see any groups just yet, the algorithm is probably still waiting for enough real-time data to identify outliers. The detection process relies on live data. As the output power parameters are polled every five minutes, it may take more time to process a sufficient number of data points. If you check back in an hour, the results should be visible.
 
-	Notice how the *Output Power - pa1* is not equal to the other 2 pa output powers! It indeed seems something is wrong here.
+1. Select one of the subgroups, for example, *AI - RAD - Commtia LON 14*.
 
- > [!NOTE]
- > Note that you can order the subgroups based on their *outlier value* using the *Sorting & filtering* button.
- > This will open a popup in which you can *Sort by Is Outlier Group*. The outlier groups now appear on top.
-	
+   ![Outlier group LON 14](~/dataminer/images/tutorial_RAD_OutlierGroup14.png)
+
+   Notice how the *Output Power - pa1* is not equal to the other 2 pa output powers. It indeed seems something is wrong here.
+
 ## Step 9: Clean up your system
 
 1. In the RAD Manager, remove all the groups you created using the bin icon next to each group name.
+
 1. Delete the elements under the *DataMiner Catalog* > *Using Relational Anomaly Detection* > *London* and *RAD Fleet Outlier* views in Cube.
+
 1. Remove the *AI - Commtia DAB* and the *Fleet-Outlier-Detection-Commtia DAB* protocols under *Apps > Protocols & Templates*.
-1. Remove the automation scripts under *Apps > Automation > DataMiner Catalog > RAD Demonstrator*.
+
+1. Remove the Automation scripts under *Apps* > *Automation* > *DataMiner Catalog* > *RAD Demonstrator*.
 
 In case you would like to repeat some of the exercises, you can instead duplicate the related elements or deploy the *RAD Demonstrator* package a second time, which will overwrite the existing elements.
