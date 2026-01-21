@@ -95,3 +95,11 @@ Up to now, this message box, which is created in the background thread, could ca
 When an *AlarmSummary* shape was linked to an object (e.g. an element, a service, or a view), and that object contained a correlated alarm, up to now, that correlated alarm would not be removed from the summary when the element associated with the correlated alarm had its status set to "Paused", "Stopped", or "Deleted".
 
 From now on, correlated alarms will be removed from the summary when the status of the elements associated with those correlated alarms changes.
+
+#### System Center - Logging: Selecting 'Alarm Level Forwarding' in the DataMiner tab would open an incorrect log file [ID 44548]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+When, in *System Center*, you open the *Logging* section, and click the *DataMiner* tab, you can select a particular log file from the list.
+
+Up to now, when you clicked the *Alarm Level Forwarding* entry, the *SLAlarmLevelLinking.txt* log file would incorrectly be opened instead of the *SLAlarmForwarding.txt* log file.
