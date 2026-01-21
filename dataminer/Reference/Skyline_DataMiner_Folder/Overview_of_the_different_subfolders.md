@@ -30,7 +30,7 @@ Except when otherwise mentioned in the relevant documentation, manual changes sh
 | Elements | Element data (one subdirectory per element). See [Elements](xref:Elements1#elements). | No |
 | Files | EXEs, DLLs, configuration files, etc. | No |
 | Filters | No longer used. | No |
-| Generic Interface | [GQI queries](xref:About_GQI). This folder is not used in recent DataMiner versions and is no longer included from DataMiner 10.5.0 [CU11]/10.6.2 onwards<!-- RN 44396 -->. | Yes |
+| Generic Interface | No longer used.<!-- RN 28791/30157 --> New DataMiner installations starting from 10.5.0 [CU11]/10.6.2 will no longer include this folder<!-- RN 44396 -->. | Yes |
 | Icons | Custom icons. See [Icons](xref:Icons). | Yes |
 | Jobs | Contains configuration related to the migration of the [Jobs](xref:jobs) module to the indexing database. | No |
 | Logging | Log files. | No |
