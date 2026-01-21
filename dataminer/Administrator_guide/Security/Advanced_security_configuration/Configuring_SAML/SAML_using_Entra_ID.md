@@ -62,11 +62,11 @@ To set up external authentication, you first need to create an enterprise applic
 
    1. Set *Entity ID* to the IP address or the DNS name of your DataMiner System, for example ``https://dataminer.example.com/``.
 
-Either choose a specific URL or IP address as the entity ID, or use the cluster name of the DMS. By default, Azure uses a URL, but you can change this to the IP address or cluster name according to preference, as long as the specified entity ID is **unique across the identity provider**.
+      Either choose a specific URL or IP address as the entity ID, or use the cluster name of the DMS. By default, Azure uses a URL, but you can change this to the IP address or cluster name according to preference, as long as the specified entity ID is **unique across the identity provider**.
 
       In case of a **DaaS system**, ``https://<dms-dns-name>-<organization-name>.on.dataminer.services`` should be used as the entity ID, unless a site-to-site VPN is in place, which allows access to Azure VMs that are not reachable by default.
 
-      When using multiple SAML agents in a DMS, see [Reply URLs at the identity provider side](xref:SAML_Example_Config_DMS#reply_urls_at_the_identity_provider_side) for an example.
+      For an example of how you can configure this for multiple SAML agents in a DMS, see [Reply URLs at the identity provider side](xref:SAML_Example_Config_DMS#reply-urls-at-the-identity-provider-side).
 
    1. Under *Reply URL*, specify the following URL(s), replacing ``dataminer.example.com`` with the IP address or DNS name of your DataMiner System (note the trailing "/"):
 
@@ -177,7 +177,8 @@ Either choose a specific URL or IP address as the entity ID, or use the cluster 
    > [!NOTE]
    > This flag must be set to *true* because SAML responses without signatures can be freely edited to tamper with permissions for the application, leading to severe vulnerabilities. In DataMiner versions prior to DataMiner 10.2.1/10.2.0, setting this flag to true is not yet supported, so we highly recommend upgrading to a more recent DataMiner version.
 
-   > If multiple Agents in a DMS are SAML-enabled, each Agent needs exactly one reply URL set as default. See [spMetadata in the example setup](xref:SAML_Example_Config_DMS#spMetadata.xml).
+> [!TIP]
+> If multiple Agents in a DMS are SAML-enabled, each Agent needs exactly one reply URL set as default. You can find a detailed example under [Example setup - DMS with Failover pair](xref:SAML_Example_Config_DMS#spmetadataxml).
 
 ### Configuring DataMiner.xml to use external authentication
 

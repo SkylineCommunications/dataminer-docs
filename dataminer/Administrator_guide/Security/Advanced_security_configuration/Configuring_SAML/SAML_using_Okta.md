@@ -73,13 +73,13 @@ There are two ways to configure this setup: with or without group claims. If gro
 
        If the DMA is connected to dataminer.services, also add the following URLs, replacing `<dms-dns-name>` with the DNS name of the DataMiner System and `<organization-name>` with the name of the organization
 
-        - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/API/`
+       - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/API/`
 
-        - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking`
+       - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking`
 
-        - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/`
+       - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/`
 
-      If the DMS has multiple SAML Agents, see [Reply URLs at the identity provider side](xref:SAML_Example_Config_DMS#reply_urls_at_the_identity_provider_side) for an example.
+       For an example of how you can configure this for multiple SAML agents in a DMS, see [Reply URLs at the identity provider side](xref:SAML_Example_Config_DMS#reply-urls-at-the-identity-provider-side).
 
        > [!NOTE]
        > The indexes here should be the same as the indexes in `C:\Skyline DataMiner\okta-sp-metadata.xml`, which you will create later in this procedure.
@@ -229,6 +229,6 @@ There are two ways to configure this setup: with or without group claims. If gro
      </md:SPSSODescriptor>
      ```
 
-   For a DMS with multiple SAML Agents, see [spMetadata in the example setup](xref:SAML_Example_Config_DMS#spMetadata.xml) for configuration differences between Agents.
+   For an example of the configuration differences between Agents in a DMS with multiple SAML Agents, see [spMetadata in the example setup](xref:SAML_Example_Config_DMS#spmetadataxml).
 
 1. Restart DataMiner.

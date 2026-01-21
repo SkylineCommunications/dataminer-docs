@@ -91,6 +91,6 @@ This section details the differences in the *spMetadata.xml* file across the clu
 ```
 
 > [!NOTE]
-> It is normal for the index of the reply URLs in the *spMetadata.xml* file to be different compared to the index defined on the identity provider. This will not cause any issues. However, note that the index must always be included in the *spMetadata.xml*. Omitting it would cause DataMiner to not recognize the configuration in the file.
-> 
-> Each file has exactly one reply URL that has "isDefault" set to true. 
+>
+> - It is normal for the index of the reply URLs in the *spMetadata.xml* file to be different compared to the index defined on the identity provider. This will not cause any issues. However, note that the index must always be included in the *spMetadata.xml*. Omitting it would cause DataMiner to not recognize the configuration in the file.
+> - Each file has exactly one reply URL that has "isDefault" set to true.

@@ -30,7 +30,7 @@ Please note the following:
 
 - Only one application registration is needed on the identity provider per cluster registration.
 
-- The DataMiner.xml configuration must be exactly the same for all SAML Agents in a cluster. This configuration is not synced automatically in the cluster, it needs to be set manually for each Agent.
+- The *DataMiner.xml* configuration must be exactly the same for all SAML Agents in a cluster. This configuration is not synced automatically in the cluster; it needs to be set manually for each Agent.
 
 - DataMiner will expect one of the claims provided by the identity provider to be the "name" claim: `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`. This field must contain either the username or the email address.
 
