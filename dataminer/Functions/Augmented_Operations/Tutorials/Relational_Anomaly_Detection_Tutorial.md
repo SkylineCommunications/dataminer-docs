@@ -9,7 +9,7 @@ This tutorial showcases DataMiner's [relational anomaly detection (RAD)](xref:Re
 Estimated duration: 35 minutes.
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created with DataMiner 10.6.1 and RAD Manager version 2.0.0.
+> The content and screenshots for this tutorial have been created with DataMiner 10.6.1 and RAD Manager version 2.0.1.
 
 ## Prerequisites
 
@@ -318,7 +318,7 @@ In this step, you will learn how to create a shared model group.
 
    1. Check the lightbulb icon in the Alarm Console to check that the relational anomaly was detected.
 
-   1. Check of the anomaly becomes visible in the RAD Manager.
+   1. Check if the anomaly becomes visible in the RAD Manager.
 
       If you do not immediately see it, refresh the RAD Manager page in your browser.
 
@@ -365,7 +365,7 @@ Shared model groups allow DataMiner to compare the subgroups with each other and
 
    If you do not see any groups just yet, the algorithm is probably still waiting for enough real-time data to identify outliers. The detection process relies on live data. As the output power parameters are polled every five minutes, it may take more time to process a sufficient number of data points. If you check back in an hour, the results should be visible.
 
-1. Select one of the subgroups, for example, *AI - RAD - Commtia LON 14*.
+1. Select one of the subgroups, for example, *Fleet-Outlier-Detection-14*.
 
    ![Outlier group LON 14](~/dataminer/images/tutorial_RAD_OutlierGroup14.png)
 
