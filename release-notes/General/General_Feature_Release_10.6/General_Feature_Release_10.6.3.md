@@ -183,6 +183,16 @@ Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator)
 
 From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
 
+#### SLNet messages GetLiteElementInfo, GetLiteServiceInfo, and GetLiteRedundancyGroupInfo now support filtering by HostingAgentID [ID 44537]
+
+<!-- MR 10.6.0 - FR 10.6.3 -->
+
+The following SLNet messages, which can be used to retrieve information about elements, services, and redundancy groups, now also support filtering by HostingAgentID. This allows you to e.g. retrieve a list of all elements that are being hosted on a particular DataMiner Agent.
+
+- GetLiteElementInfo
+- GetLiteRedundancyGroupInfo
+- GetLiteServiceInfo
+
 ### Fixes
 
 #### Numeric cell would incorrectly not be cleared when its exception value was set to 0 [ID 44356]

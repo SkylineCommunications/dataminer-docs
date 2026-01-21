@@ -688,6 +688,16 @@ Because of a number of enhancements, overall performance of the the *Cube CRL Fr
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
+#### SLNet messages GetLiteElementInfo, GetLiteServiceInfo, and GetLiteRedundancyGroupInfo now support filtering by HostingAgentID [ID 44537]
+
+<!-- MR 10.6.0 - FR 10.6.3 -->
+
+The following SLNet messages, which can be used to retrieve information about elements, services, and redundancy groups, now also support filtering by HostingAgentID. This allows you to e.g. retrieve a list of all elements that are being hosted on a particular DataMiner Agent.
+
+- GetLiteElementInfo
+- GetLiteRedundancyGroupInfo
+- GetLiteServiceInfo
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
