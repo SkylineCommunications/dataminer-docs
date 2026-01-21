@@ -177,6 +177,8 @@ Either choose a specific URL or IP address as the entity ID, or use the cluster 
    > [!NOTE]
    > This flag must be set to *true* because SAML responses without signatures can be freely edited to tamper with permissions for the application, leading to severe vulnerabilities. In DataMiner versions prior to DataMiner 10.2.1/10.2.0, setting this flag to true is not yet supported, so we highly recommend upgrading to a more recent DataMiner version.
 
+   > If multiple Agents in a DMS are SAML-enabled, each Agent needs exactly one reply URL set as default. See [spMetadata in the example setup](xref:SAML_Example_Config_DMS#spMetadata.xml).
+
 ### Configuring DataMiner.xml to use external authentication
 
 1. Go to the folder `C:\Skyline DataMiner` and open the *DataMiner.xml* file.
