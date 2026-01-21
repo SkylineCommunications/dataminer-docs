@@ -4,14 +4,14 @@ uid: SAML_Example_Config_DMS
 
 # Example setup - DMS with Failover pair
 
-This example illustrates how you can configure SAML with Microsoft Entra ID as identity provider for a complex DataMiner System that includes [Failover pairs](xref:About_DMA_Failover). This example will help make the information from the [general procedure](xref:SAML_using_Entra_ID) more concrete and will point out what you especially need to watch out for.
+This example illustrates how you can configure SAML for a complex DataMiner System that includes [Failover pairs](xref:About_DMA_Failover). This example will help make the information from the [general procedures](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) more concrete and will point out what you especially need to watch out for.
 
 The DataMiner System in this example consists of two regular DataMiner Agents and a Failover pair, all SAML-enabled. All except one Agent are connected to dataminer.services. The example Agents are called *FOMain*, *FOBackup*, *CloudAgent*, and *RegularAgent*.
 
 *FOShared* is used as the shared Failover hostname. However, if you have a Failover setup based on virtual IP, you should use the virtual IP instead.
 
 > [!TIP]
-> These examples are applicable to different setups. Be sure to follow the detailed procedures for your use-case. See [Configuring SAML settings](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) for a good starting point.
+> The examples below can be applicable to different setups. For details on how you can use them, please follow the detailed procedure for your use case. See [Configuring SAML settings](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML).
 
 ## DataMiner.xml
 

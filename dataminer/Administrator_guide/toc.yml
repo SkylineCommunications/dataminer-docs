@@ -541,15 +541,14 @@ items:
             items:
             - name: Configuring SAML with Microsoft Entra ID
               topicUid: SAML_using_Entra_ID
-              items:
-                - name: Example setup - DMS with Failover pair
-                  topicUid: SAML_Example_Config_DMS
             - name: Configuring SAML with Azure B2C
               topicUid: SAML_using_Azure_B2C
             - name: Configuring SAML with Okta
               topicUid: SAML_using_Okta
             - name: Additional configuration for systems connected to dataminer.services
               topicUid: SAML_config_to_connect_to_cloud
+            - name: Example setup - DMS with Failover pair
+              topicUid: SAML_Example_Config_DMS
             - name: Troubleshooting SAML issues
               topicUid: Troubleshooting_SAML_Issues
           - name: Configuring LDAP settings
