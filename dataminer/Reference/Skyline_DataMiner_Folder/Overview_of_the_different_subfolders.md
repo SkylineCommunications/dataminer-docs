@@ -30,7 +30,7 @@ Except when otherwise mentioned in the relevant documentation, manual changes sh
 | Elements | Element data (one subdirectory per element). See [Elements](xref:Elements1#elements). | No |
 | Files | EXEs, DLLs, configuration files, etc. | No |
 | Filters | No longer used. | No |
-| Generic Interface | GQI queries. See [About GQI](xref:About_GQI). | Yes |
+| Generic Interface | No longer used.<!-- RN 28791/30157 --> New DataMiner installations starting from 10.5.0 [CU11]/10.6.2 will no longer include this folder<!-- RN 44396 -->. | Yes |
 | Icons | Custom icons. See [Icons](xref:Icons). | Yes |
 | Jobs | Contains configuration related to the migration of the [Jobs](xref:jobs) module to the indexing database. | No |
 | Logging | Log files. | No |
@@ -60,6 +60,7 @@ Except when otherwise mentioned in the relevant documentation, manual changes sh
 | Users | Stored user information. See [ClientSettings.json](xref:ClientSettings_json#clientsettingsjson). This includes private and public [alarm filters](xref:Alarm_filters) (with public alarm filters being stored in the `C:\Skyline DataMiner\Users\SharedUserSettings\Filters` subfolder). | Yes |
 | Views | Visio files. | Yes |
 | VisualData | Visual Data Manager configuration. | No |
+| Web | Included from DataMiner 10.5.0 [CU11]/10.6.2 onwards.<!-- RN 44396 --> This folder is intended to store user-generated configuration and files that can be shared across dashboards and low-code apps, such as images and themes. | Yes |
 | Webpages | All webpages of the DataMiner client applications. Within this folder, only the following things are synchronized in a DMS:<br>- The *CustomerLogo* image files.<br>- The *Public* subfolder (from DataMiner 10.5.10/10.6.0 onwards<!-- RN 43458 -->).<br>- The data for legacy dashboards (`C:\Skyline DataMiner\WebPages\Dashboards\Db\`).<br>- The data for legacy reports (`C:\Skyline DataMiner\WebPages\Reports\Templates\`), except for the `tmp_img` subfolder, which contains temporary files.<br>- The data for legacy annotations (`C:\Skyline DataMiner\WebPages\Annotations\DMS Images\` and `C:\Skyline DataMiner\WebPages\Annotations\Views\`). | Partially |
 
 > [!IMPORTANT]
