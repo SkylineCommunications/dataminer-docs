@@ -64,6 +64,12 @@ When, in *System Center*, you open the *Logging* section, and click the *DataMin
 
 Up to now, this log file list contained a *Scripting* entry. However, as no *SLScripting.txt* log file exists, this entry has now been removed.
 
+#### Enhanced performance when loading alarm properties into filtered alarm tabs or when loading alarm data into AlarmSummary shapes [ID 44536]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+Because of a number of enhancements, overall performance has increased when loading alarm properties into filtered alarm tabs or when loading alarm data into AlarmSummary shapes.
+
 ### Fixes
 
 #### Visual Overview: UI could become unresponsive when parameter subscriptions occurred for conditions with parameter-based criteria [ID 44365]
