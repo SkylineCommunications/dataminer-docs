@@ -32,7 +32,67 @@ uid: General_Feature_Release_10.6.3
 
 ## New features
 
-*No new features have been added yet.*
+#### DataMiner Object Models: Instance-level security [ID 44233]
+
+<!-- MR 10.6.0 - FR 10.6.3 -->
+
+On top of [DataMiner Object Models: Definition-level security [ID 43380] [ID 43589]](xref:General_Feature_Release_10.5.10#dataminer-object-models-definition-level-security-id-43380-id-43589), which allows you to grant user groups access to all DOM instances of a DOM definition, it is now also possible to allow user groups access to an individual DOM instance based on whether that DOM instance contains at least one of a specified set of values for a specified FieldDescriptor.
+
+For example, the user group *London employees* will only be able to read to "Job" instances where the *Assigned office* field (i.e. a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
+
+##### Limitations
+
+This instance-level security filtering is applied in the database, which can contain DOM definitions with millions of DOM instances.
+
+However, there are a number of limitations:
+
+- You can only define a maximum of 10 values per FieldDescriptor.
+
+- For a particular DOM definition, you can only specify one condition per user group.
+
+- When a user is a member of multiple user groups, and several of those groups have conditions for a certain DOM definition, then the condition of the user group that comes first (alphabetically) will be used.
+
+  It is recommended that you avoid these situations by defining and using the user groups in such a way that there are no overlaps.
+
+  > [!NOTE]
+  > If users are a member of a user group with full definition-level access, this definition-level access will take precedence over any limited access of other groups they are a member of.
+
+- When reading DOM instances, the filter is only allowed to search within one specific DOM definition. If it searches across multiple DOM definitions, and the user does not have full definition-level access to all of those definitions, the request will fail, even if the user is a member of a user group that has conditional access. If the request fails, the following error message will be thrown: `Make sure the user has full access to all queried DOM definitions`.
+
+- Ideally, the filter should not contain more than 100 OR clauses.
+
+##### Defining the conditional access
+
+To configure that a user group has limited access, you can add a `FieldValueReference` to the `GroupLink` class.
+
+A `FieldValueReference` contains the following data objects:
+
+- DomDefinitionId (Guid): The ID of the DOM definition
+- FieldDescriptorId (Guid): The ID of the FieldDescriptor
+- List of allowed FieldDescriptor values (to be set via the corresponding constructor)
+
+Currently supported FieldDescriptors:
+
+| FieldDescriptor | Descriptor Type | Referenced Value Collection Type |
+|---------|---------|---------|
+| DomInstanceFieldDescriptor      | `Guid` OR `List<Guid>` | `List<Guid>` |
+| DomInstanceValueFieldDescriptor | `Guid` OR `List<Guid>` | `List<Guid>` |
+| GenericEnumFieldDescriptor      | `GenericEnum<int>` OR `List<GenericEnum<int>>`       | `List<int>`    |
+| GenericEnumFieldDescriptor      | `GenericEnum<string>` OR `List<GenericEnum<string>>` | `List<string>` |
+
+The `FieldValueReference` class also has a number of methods that can be used to retrieve the (number of) referenced values:
+
+- `GetValuesCount()`: Returns the number of referenced values.
+- `GetValuesType()`: Returns an enum value of `FieldValueReferenceTypes` that represents whether the `FieldValueReference` in question contains a list of Guid, string, or int values.
+- `GetValues<T>`: Returns the actual values. To this method, you have to pass the correct type as returned by the `GetValuesType()` method.
+
+When `FieldValueReference` values are saved in the `ModuleSettings`, the following validation checks will be executed:
+
+- Check if there are any IDs that are equal to Guid.Empty. If empty IDs are detected, a `DomManagerSettingsErrorData` error will be returned with reason `DomSecurityFieldValueReferenceHasInvalidIds`.
+- Check if the list of values is not empty. If the list is empty, a `DomManagerSettingsErrorData` error will be returned with reason `DomSecurityFieldValueReferenceHasNoValues`.
+- Check if the list of values does not contain more than 10 items. If the list contains more than 10 items, a `DomManagerSettingsErrorData` error will be returned with reason `DomSecurityFieldValueReferenceHasTooManyValues`.
+
+In all errors listed above, the `ErrorData` properties `GroupName` and `DomDefinitionId` can be used to find out which references are invalid. The third error also contains a `Limit` property that contains the max number of values (i.e. 10).
 
 ## Changes
 
