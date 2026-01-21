@@ -19,7 +19,7 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
 1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
 
-1. Go to the folder `C:\Skyline DataMiner\Configurations` and assert the file *ClusterEndpoints.json* exists. If it does, open the file. If not, skip the following point. 
+1. Go to the folder `C:\Skyline DataMiner\Configurations`. If the file *ClusterEndpoints.json* exists, open it. If not, skip the next step.
 
 1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
 
@@ -110,7 +110,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
 1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-1. Go to the folder `C:\Skyline DataMiner\Configurations` and assert the file *ClusterEndpoints.json* exists. If it does, open the file. If not, skip the following point. 
+1. Go to the folder `C:\Skyline DataMiner\Configurations`. If the file *ClusterEndpoints.json* exists, open it. If not, skip the next step.
 
 1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
 
@@ -219,8 +219,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
    1. Close the SLNetClientTest tool.
   
-   1. On all DMAs in the cluster, navigate to C:\Skyline DataMiner\SLCloud.xml. Assert that the previous IP-address has been replaced by the new IP address. 
-This can take up to an hour to complete. If, for any reason the old IP-address is still visible in a Cloud.xml file after that time, contact Skyline. 
+   1. On all DMAs in the cluster, navigate to C:\Skyline DataMiner\SLCloud.xml. Check if the previous IP-address has been replaced by the new IP address. This can take up to an hour to complete. If, for any reason the old IP-address is still visible in a Cloud.xml file after that time, contact Skyline.
 
 > [!NOTE]
 > If the DataMiner System uses a remote database, the database configuration changes detailed above are not needed. In such a case, the IPs are not affected, because the remote server remains the same in the .yml file and in DB.xml. However, you must make sure that all the necessary ports are open and accessible. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
@@ -247,7 +246,7 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
 1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-1. Go to the folder `C:\Skyline DataMiner\Configurations` and assert the file *ClusterEndpoints.json* exists. If it does, open the file. If not, skip the following point.
+1. Go to the folder `C:\Skyline DataMiner\Configurations`. If the file *ClusterEndpoints.json* exists, open it. If not, skip the next step.
 
 1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
 
@@ -359,19 +358,18 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
    1. Close the SLNetClientTest tool.
   
-   1. On all DMAs in the cluster, navigate to C:\Skyline DataMiner\SLCloud.xml. Assert that the previous IP-address has been replaced by the new IP address. 
-This can take up to an hour to complete. If, for any reason the old IP-address is still visible in a Cloud.xml file after that time, contact Skyline.  
+   1. On all DMAs in the cluster, navigate to C:\Skyline DataMiner\SLCloud.xml. Check if the previous IP-address has been replaced by the new IP address. This can take up to an hour to complete. If, for any reason the old IP-address is still visible in a Cloud.xml file after that time, contact Skyline.  
 
 > [!NOTE]
 > If the DataMiner System uses a remote database, the database configuration changes detailed above are not needed. In such a case, the IPs are not affected, because the remote server remains the same in the .yml file and in DB.xml. However, you must make sure that all the necessary ports are open and accessible. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
 
 ## DMA in a DMS using a Cassandra cluster locally
 
-If your DataMiner System uses the Cassandra cluster feature for its general database (i.e. one Cassandra cluster for the entire DMS), but Cassandra is hosted on the same machine as DataMiner (which is not recommended), follow the procedure below to alter both the IP address of the DMA and the database(s). 
+If your DataMiner System uses the Cassandra cluster feature for its general database (i.e. one Cassandra cluster for the entire DMS), but Cassandra is hosted on the same machine as DataMiner (which is not recommended), follow the procedure below to alter both the IP address of the DMA and the database(s).
 
 1. Stop the Cassandra and OpenSearch/Elasticsearch services on the DMA server.
 
-1.  Continue the IP migration by following one of the following procedures and substitute the point starting with "If you are not using Storage as a Service (STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:" with the steps outlined below. Make sure you pick the correct procedure for your situation. 
+1. Continue the IP migration by following one of the following procedures and substitute the point starting with "If you are not using Storage as a Service (STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:" with the steps outlined below. Make sure you pick the correct procedure for your situation.
 
     - [Standalone DMA](#standalone-dma)
     - [Single DMA in a DMS](#single-dma-in-a-dms)
@@ -437,7 +435,6 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 1. Open the file *DB.xml* for all other DMAs in the DMS, and replace the old IP address with the new IP address for both Cassandra and OpenSearch/Elasticsearch.
 
 1. Continue the procedure relevant for you in the point after "If you are not using Storage as a Service (STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:". Either [Standalone DMA](#standalone-dma), [Single DMA in a DMS](#single-dma-in-a-dms) or [Failover DMA in a DMS](#failover-dma-in-a-dms) .
-
 
 > [!TIP]
 > See also: [Migrating the general database to a DMS Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster)
