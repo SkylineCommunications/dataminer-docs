@@ -195,6 +195,12 @@ Also, in some cases, an exception would be displayed even when it had a type oth
 
 For more information, see [Exceptions element](xref:Protocol.Params.Param.Interprete.Exceptions). The `Exceptions` tag should only be used to intercept values of the same `Interprete.Type` as that of your parameter. If you want to intercept values of another type, then you should use the `Protocol.Params.Param.Interprete.Others` tag instead.
 
+#### MessageBroker: Problem with hostnames and FQDNs containing a certain combination of dashes and characters [ID 44433]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, hostnames and FQDNs in the *MessageBrokerConfig.json* file would incorrectly be considered invalid when they contained a certain combination of dashes and characters.
+
 #### DaaS: Short-lived alarms without operational impact would appear immediately after the 'My DataMiner Agent' element had been created [ID 44440]
 
 <!-- MR 10.6.0 - FR 10.6.3 -->
