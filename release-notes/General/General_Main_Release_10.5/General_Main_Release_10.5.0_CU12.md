@@ -39,6 +39,12 @@ One of the actions performed by this tool when resetting a DMA is stopping and s
 
 Also, if an exception would be thrown during a stop action, a kill command will be executed instead.
 
+#### Ticketing app End of Life [ID 44417]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+DataMiner Ticketing has been declared End of Life. As a result, all server code related to Ticketing has been removed.
+
 #### Security Advisory BPA test: Enhancements [ID 44444] [ID 44477]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->

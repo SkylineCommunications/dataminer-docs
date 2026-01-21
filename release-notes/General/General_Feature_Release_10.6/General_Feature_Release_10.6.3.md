@@ -149,6 +149,12 @@ Also, if an exception would be thrown during a stop action, a kill command will 
 
 As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway Configuration* has now been removed from the list of backup options.
 
+#### Ticketing app End of Life [ID 44417]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+DataMiner Ticketing has been declared End of Life. As a result, all server code related to Ticketing has been removed.
+
 #### Security Advisory BPA test: Enhancements [ID 44444] [ID 44477]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->

@@ -52,11 +52,13 @@ When you right-click a dashboard or click the ellipsis button of a dashboard, a 
 
 The sidebar now also supports keyboard navigation and automatically adapts to the viewport width.
 
-#### Ticketing app End of Life [ID 44371] [ID 44373]
+#### Ticketing app End of Life [ID 44371]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-The Ticketing app has been declared End of Life. On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer be shown on the DataMiner landing page or in the list of applications in DataMiner Cube.
+The Ticketing app has been declared End of Life.
+
+On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer be shown on the DataMiner landing page.
 
 ## Changes
 
