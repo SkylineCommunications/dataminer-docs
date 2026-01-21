@@ -79,6 +79,8 @@ There are two ways to configure this setup: with or without group claims. If gro
 
         - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/`
 
+      If the DMS has multiple SAML Agents, see [Reply URLs at the identity provider side](xref:SAML_Example_Config_DMS#reply_urls_at_the_identity_provider_side) for an example.
+
        > [!NOTE]
        > The indexes here should be the same as the indexes in `C:\Skyline DataMiner\okta-sp-metadata.xml`, which you will create later in this procedure.
 
@@ -226,5 +228,7 @@ There are two ways to configure this setup: with or without group claims. If gro
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/" index="3" isDefault="false"/>
      </md:SPSSODescriptor>
      ```
+
+   For a DMS with multiple SAML Agents, see [spMetadata in the example setup](xref:SAML_Example_Config_DMS#spMetadata.xml) for configuration differences between Agents.
 
 1. Restart DataMiner.

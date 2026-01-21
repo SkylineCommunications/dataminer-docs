@@ -66,6 +66,8 @@ Either choose a specific URL or IP address as the entity ID, or use the cluster 
 
       In case of a **DaaS system**, ``https://<dms-dns-name>-<organization-name>.on.dataminer.services`` should be used as the entity ID, unless a site-to-site VPN is in place, which allows access to Azure VMs that are not reachable by default.
 
+      When using multiple SAML agents in a DMS, see [Reply URLs at the identity provider side](xref:SAML_Example_Config_DMS#reply_urls_at_the_identity_provider_side) for an example.
+
    1. Under *Reply URL*, specify the following URL(s), replacing ``dataminer.example.com`` with the IP address or DNS name of your DataMiner System (note the trailing "/"):
 
       #### [From DataMiner 10.3.5 onwards](#tab/tabid-5)
