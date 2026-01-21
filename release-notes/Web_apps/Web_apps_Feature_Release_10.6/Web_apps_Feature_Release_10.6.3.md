@@ -164,6 +164,17 @@ This message has now been changed to make it clearer.
 
 `This name is already used in this page/panel.`
 
+#### GQI DxM: Domain user name will now be included in the OnInitInputArgs of a GQI extension [ID 44509]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
+
+From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.5.0 CU12/10.6.0/10.6.3 or newer.
+
 #### Landing page and web apps: Icons, favicons, and titles updated [ID 44520]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->

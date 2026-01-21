@@ -65,6 +65,14 @@ Because of a number of enhancements, overall performance of the the *Cube CRL Fr
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
+#### GQI: Domain user name will now be included in the OnInitInputArgs of a GQI extension [ID 44509]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
+
+From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
+
 ### Fixes
 
 #### Numeric cell would incorrectly not be cleared when its exception value was set to 0 [ID 44356]
