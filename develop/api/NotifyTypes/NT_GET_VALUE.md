@@ -38,8 +38,8 @@ if (result != null && result.Length > 4)
     - result[4] (type depends on parameter): Parameter value
     - result[5] (int):
     - result[6] (string):
-    - result[7] (DateTime):
-    - result[8] (DateTime):
+    - result[7] (DateTime): Deprecated
+    - result[8] (DateTime): Last change time
     - result[9] (string): Name of the user who last changed the parameter.
     - result[10] (int): Alarm status (1: Normal, 2: Warning, 3: Minor, 4: Major, 5: Critical)
     - result[11] (int):
