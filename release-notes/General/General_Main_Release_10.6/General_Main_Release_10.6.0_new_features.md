@@ -1298,19 +1298,13 @@ MHTML files include all necessary information to allow the report to be rendered
 
 Also, the default file name has been changed from `Report.pdf` to `<dashboard name>.pdf`, `<dashboard name>.mhtml`, or `<dashboard name>.csv.zip`.
 
-
-
-
-
-
-
 #### DataMiner Object Models: Instance-level security [ID 44233]
 
 <!-- MR 10.6.0 - FR 10.6.3 -->
 
-On top of [definition-level security](#dataminer-object-models-definition-level-security-id-43380-id-43589), which allowed you to grant user groups access to all DOM instances of a DOM definition, it is now also possible to allow user groups access to an individual DOM instance based on whether that DOM instance contains at least one of a specified set of values for a specified FieldDescriptor.
+On top of [definition-level security](#dataminer-object-models-definition-level-security-id-43380-id-43589), which allows you to grant user groups access to all DOM instances of a DOM definition, it is now also possible to allow user groups access to an individual DOM instance based on whether that DOM instance contains at least one of a specified set of values for a specified FieldDescriptor.
 
-For example, the user group *London Employees* will only be able to read to "Job" instances where the *Assigned Office* field (i.e. a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
+For example, the user group *London employees* will only be able to read to "Job" instances where the *Assigned office* field (i.e. a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
 
 ##### Limitations
 
@@ -1318,7 +1312,7 @@ This instance-level security filtering is applied in the database, which can con
 
 However, there are a number of limitations:
 
-- You can define a maximum of 10 values per FieldDescriptor.
+- You can only define a maximum of 10 values per FieldDescriptor.
 
 - For a particular DOM definition, you can only specify one condition per user group.
 
@@ -1327,7 +1321,7 @@ However, there are a number of limitations:
   It is recommended that you avoid these situations by defining and using the user groups in such a way that there are no overlaps.
 
   > [!NOTE]
-  > If users are a member of a user with full definition-level access, this definition-level access will take precedence over any limited access of other groups they are a member of.
+  > If users are a member of a user group with full definition-level access, this definition-level access will take precedence over any limited access of other groups they are a member of.
 
 - When reading DOM instances, the filter is only allowed to search within one specific DOM definition. If it searches across multiple DOM definitions, and the user does not have full definition-level access to all of those definitions, the request will fail, even if the user is a member of a user group that has conditional access. If the request fails, the following error message will be thrown: `Make sure the user has full access to all queried DOM definitions`.
 
@@ -1364,7 +1358,7 @@ When `FieldValueReference` values are saved in the `ModuleSettings`, the followi
 - Check if the list of values is not empty. If the list is empty, a `DomManagerSettingsErrorData` error will be returned with reason `DomSecurityFieldValueReferenceHasNoValues`.
 - Check if the list of values does not contain more than 10 items. If the list contains more than 10 items, a `DomManagerSettingsErrorData` error will be returned with reason `DomSecurityFieldValueReferenceHasTooManyValues`.
 
-In all errors listed above, the `ErrorData` properties `GroupName` and `DomDefinitionId` can be used to find out which references were invalid. The third error also contains a `Limit` property that contains the max number of values (i.e. 10).
+In all errors listed above, the `ErrorData` properties `GroupName` and `DomDefinitionId` can be used to find out which references are invalid. The third error also contains a `Limit` property that contains the max number of values (i.e. 10).
 
 ##### Access validation flow
 
@@ -1378,36 +1372,35 @@ For a detailed description of the security flow, see below.
 
    1. Does the user have full access to all these definitions?
 
-      - Yes: Allow the query
-      - No: Continue
+      - Yes: Allow the query.
+      - No: Continue.
 
    1. Is there more than one DOM definition?
 
-      - Yes: Fail the query. The user must either have full access to all DOM definitions, or the query should only scope to one definition if the limit condition needs to be applied.
-      - No: Continue
+      - Yes: Fail the query. The user must either have full access to all DOM definitions, or the query should restrict itself to one definition if an instance-level condition needs to be applied.
+      - No: Continue.
 
-   -> Is there a limit condition assigned for this user and DOM definition? (If multiple, pick the one for the group that comes first alphabetically.)
-      -> Yes: Append allowed values from the limit condition to the query so only DOM instances with these values will be read/counted.
-      -> No: Fail query. User has no access.
+   1. Is there an instance-level condition for this user and DOM definition? If there are several, order them alphabetically, and pick the first one for the user group.
+
+      - Yes: Append the allowed values in the instance-level condition to the query so only DOM instances with these values will be read or counted.
+      - No: Fail the query. The user does not have access.
 
 1. If the filter will search the DOM instances:
 
-   -> Execute query
-   -> For each returned DOM instance, validate if the user has access:
-     -> Does the user have full access to the DOM definition?
-          -> Yes: Return the DOM instance
-          -> No: Continue
-     -> Is there a limit condition assigned for this user and DOM definition? 
-          -> Yes: Return the DOM instance if it contains at least one of the values defined on that condition. Otherwise, drop it from the result.
-          -> No: Drop the DOM instance from the result.
+   - Execute the query.
+   - For each returned DOM instance, validate if the user has access:
 
-For create, update, or delete requests, the same logic is applied as the read on DOM instance IDs. Note that for updates, this check is also applied on the 'old' version of the DOM instance, which means that you should have access to both the old version & the new version of the DOM instance.
+     - Does the user have full access to the DOM definition?
 
+       - Yes: Return the DOM instance.
+       - No: Continue.
 
+     - Is there an instance-level condition for this user and DOM definition?
 
+       - Yes: Return the DOM instance if it contains at least one of the values defined in the instance-level condition. Otherwise, drop it from the result.
+       - No: Drop the DOM instance from the result.
 
+For create, update, or delete requests, the same logic is applied as when reading DOM instance IDs.
 
-
-
-
-
+> [!NOTE]
+> For updates, the above-mentioned validation flow is also applied on the old version of the DOM instance. This means, that you must have access to both the old version and the new version of the DOM instance.
