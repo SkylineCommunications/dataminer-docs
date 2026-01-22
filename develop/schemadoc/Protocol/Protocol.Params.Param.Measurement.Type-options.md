@@ -270,7 +270,7 @@ With this option, you can set the properties of the table (separated by commas).
 - **columns**: The order of the column parameters.
 - **lines**: The number of lines.
 - **width**: The width of each column (in pixels).
-- **sort**: The way in which columns are interpreted for sorting. You can add a sort order and a priority.
+- **sort**: The way columns are interpreted for sorting. You can add a sort order and a priority.
 
   Example:
 
