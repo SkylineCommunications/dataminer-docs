@@ -52,7 +52,7 @@ When you right-click a dashboard or click the ellipsis button of a dashboard, a 
 
 The sidebar now also supports keyboard navigation and automatically adapts to the viewport width.
 
-#### Dashboards/Low-Code Apps - Templates: Preset templates available for all template-supported components and redesigned 'Browse templates' window [ID 44174] [ID 44176]
+#### Dashboards/Low-Code Apps - Templates: More preset templates and redesigned 'Browse templates' window [ID 44174] [ID 44176]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
