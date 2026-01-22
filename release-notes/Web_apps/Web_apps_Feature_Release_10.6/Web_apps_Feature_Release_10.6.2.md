@@ -74,7 +74,7 @@ Because of a number of enhancements, performance has increased when rendering a 
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-In the *Browse templates* window, all default templates of all components that are using templates will now show up a presets.
+In the *Browse templates* window, all default templates of all components that are using templates will now show up as presets.
 
 Also, this window will now include a number of additional presets.
 
