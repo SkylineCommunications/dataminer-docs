@@ -15,7 +15,7 @@ Estimated duration: 35 minutes.
 
 - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-- DataMiner 10.6.0 main release/10.6.1 feature release or higher with [Storage as a Service (STaaS)](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures).
+- DataMiner 10.6.0/10.6.1 or higher with [Storage as a Service (STaaS)](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures).
 
 - Relational Anomaly Detection is enabled (in DataMiner Cube: *System Center* > *System settings* > *analytics config*).
 
@@ -338,7 +338,7 @@ If you are interested in using RAD on your system, these scripts can be a useful
 
 You can run the scripts as follows:
 
-1. In the RAD Manager, except for the *Fleet-Outlier-Group* group that was created by the catalog package, remove the groups you created during this tutorial using the bin icon next to each group name.
+1. In the RAD Manager, except for the *Fleet-Outlier-Group* group that was created by the catalog package, remove the groups you created during this tutorial using the garbage can icon next to each group name.
 
    ![Remove groups](~/dataminer/images/tutorial_RAD_Remove_Groups.png)
 
@@ -373,7 +373,7 @@ Shared model groups allow DataMiner to compare the subgroups with each other and
 
 ## Step 9: Clean up your system
 
-1. In the RAD Manager, remove all the groups you created using the bin icon next to each group name.
+1. In the RAD Manager, remove all the groups you created using the garbage can icon next to each group name.
 
 1. Delete the elements under the *DataMiner Catalog* > *Using Relational Anomaly Detection* > *London* and *RAD Fleet Outlier* views in Cube.
 
