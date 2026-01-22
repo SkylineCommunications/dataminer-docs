@@ -62,7 +62,7 @@ Ready-made preset templates are now available for all template-supported compone
 
 All default templates now appear as presets, alongside a number of additional preset options. Template previews are rendered in the same way for all components, so you have a clear view of each template before applying it.
 
-The *Browse templates* window has been redesigned for faster, more intuitive navigation. You can now:
+The *Browse templates* window has also been redesigned for faster, more intuitive navigation. You can now:
 
 - Search templates by name.
 
