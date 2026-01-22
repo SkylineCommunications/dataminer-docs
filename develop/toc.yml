@@ -6532,6 +6532,8 @@ items:
             topicUid: DMAObject
           - name: DMAParameter
             topicUid: DMAParameter
+          - name: DMAParameterSet
+            topicUid: DMAParameterSet
           - name: DMAParameterEdit
             topicUid: DMAParameterEdit
           - name: DMAParameterEditDiscreet
