@@ -26,11 +26,11 @@ Example configuration:
 
 ## Migrating existing XML data
 
-Starting with DataMiner version 10.6.3/10.7.0, it is possible to migrate existing scheduled tasks from scheduler.xml to database storage. Supported database options include Cassandra cluster or STaaS (see [Scheduler data storage](xref:SchedulerDataStorage)). Storing scheduled tasks in the database allows tasks to be swarmed between agents in the cluster (see [Swarming scheduled tasks](SwarmingScheduledTasks)).
+Starting with DataMiner version 10.6.3/10.7.0, it is possible to migrate existing scheduled tasks from scheduler.xml to database storage. Supported database options include Cassandra cluster or STaaS. Storing scheduled tasks in the database allows tasks to be swarmed between agents in the cluster (see [Swarming scheduled tasks](xref:SwarmingScheduledTasks)).
 
 To migrate scheduled tasks, the SLNetClientTest tool can be used. 
 
-![SLNetClientTest tool](~/dataminer/images/ClientTestToolMigrationUI_SchedulerMigration.png)<br>
+![SLNetClientTest tool](~/dataminer/images/ClientTestToolMigrationUI_SchedulerMigration.jpg)<br>
 *Migration window in SLNetClientTest tool (version 10.6.3)*
 
 > [!WARNING]
