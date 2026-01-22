@@ -60,7 +60,7 @@ Ready-made preset templates are now available for all template-supported compone
 
 ![Templates](~/release-notes/images/Templates.png)
 
-All default templates now appear as presets, alongside a number of additional preset options. Template previews are now rendered consistently across all components, giving you a clear view of each template before applying it.
+All default templates now appear as presets, alongside a number of additional preset options. Template previews are rendered in the same way for all components, so you have a clear view of each template before applying it.
 
 The *Browse templates* window has been redesigned for faster, more intuitive navigation. You can now:
 
