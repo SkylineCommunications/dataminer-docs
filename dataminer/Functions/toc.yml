@@ -1287,8 +1287,10 @@ items:
         topicUid: Manually_starting_and_stopping_a_scheduled_event
       - name: Creating a Scheduler template
         topicUid: Creating_a_Scheduler_template
-      - name: Scheduler data storage
-        topicUid: SchedulerDataStorage
+      - name: Advanced
+        items:
+        - name: Scheduler data storage
+          topicUid: SchedulerDataStorage
   - name: Site Manager
     items:
     - name: About Site Manager

@@ -396,8 +396,6 @@ items:
                   - name: Configuring indexing settings in DataMiner Cube
                     topicUid: Configuring_DataMiner_Indexing
                   - name: Migrating scheduled tasks to database
-                    topicUid: SchedulerMigrationToDatabase
-                  - name: Migrating SRM resources to the indexing database
                     topicUid: Resources_migration_to_elastic
                   - name: Migrating SRM profiles to the indexing database
                     topicUid: Profile_migration_to_elastic
