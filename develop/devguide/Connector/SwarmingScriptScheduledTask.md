@@ -25,7 +25,7 @@ public class Script
 
         var scheduledTaskIds = new List<ScheduledTaskID>
         {
-            // HostingDmaId, TaskId
+            // DmaId, TaskId
             new ScheduledTaskID(..., ...),
             new ScheduledTaskID(..., ...),
         };
