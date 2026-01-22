@@ -22,11 +22,9 @@ Please also note the following:
 
 - From DataMiner 10.6.2/10.7.0 onwards<!--RN 44171-->, adding a DataMiner Agent will fail in the following cases:
 
-  - The DataMiner Agent is cloud-connected, but the DataMiner System is not.
+  - The DataMiner Agent is connected to dataminer.services, but the DataMiner System is not.
 
-  - The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity (i.e. they are not part of the same cloud-connected system).
-
-  - If the DataMiner System is a STaaS system, the operation will also fail if the DataMiner Agent is not cloud-connected.  
+  - If the DataMiner System is a STaaS system, the operation will also fail if the DataMiner Agent is not connected to dataminer.services.  
 
 > [!WARNING]
 >

@@ -60,9 +60,6 @@ To add a DataMiner Agent to a DMS running STaaS:
 
    The DMA should now be connected to the DMS running STaaS.
 
-   > [!NOTE]
-   > From DataMiner 10.6.2/10.7.0 onwards<!--RN 44171-->, the operation will fail if the DMA is not cloud-connected or if the DMA and DMS do not have the same identity.
-
 1. Optionally, if the new DMA is not intended to host the CloudGateway DxM, you can safely uninstall it.
 
    > [!NOTE]

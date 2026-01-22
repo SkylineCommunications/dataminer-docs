@@ -16,10 +16,6 @@ uid: Adding_a_regular_DataMiner_Agent
 
 - If the DataMiner System uses STaaS, additional steps are required. See [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
 
-- Make sure that the new DMA is either not cloud-connected, or that both the DMA and the DMS are cloud-connected using the same cloud identity.
-
-  From DataMiner 10.6.2/10.7.0 onwards<!--RN 44171-->, the operation will fail if the DMA is cloud-connected but the DMS is not, or if both are cloud-connected but do not share the same cloud identity.
-
 ## Procedure
 
 1. On a DMA that is currently already in the cluster, go to the *System Center* module and select the *Agents* page.
