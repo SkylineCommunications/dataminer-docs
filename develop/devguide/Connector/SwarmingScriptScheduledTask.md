@@ -1,5 +1,5 @@
 ---
-uid: SwarmingScheduledTask
+uid: SwarmingScriptScheduledTask
 ---
 
 # Configuring a script to swarm scheduled tasks
@@ -65,5 +65,5 @@ public class Script
 
 > [!NOTE]
 >
-> - To swarm a scheduled task, the new hosting Agent must be up and running. In case the current hosting Agent is unreachable, swarming will still take place, but an error will be logged in the *SLNet* log file. 
+> - To swarm a scheduled task, the new hosting Agent must be up and running. In case the current hosting Agent is unreachable, swarming will still take place, but an error will be logged in the *SLScheduler* log file.
 > - To be able to trigger swarming for a scheduled task, you need the [Swarming](xref:DataMiner_user_permissions#modules--swarming) user permission.

@@ -17,7 +17,7 @@ To migrate scheduled tasks, the SLNetClientTest tool can be used.
 >
 > - Use this tool with extreme caution, as it can significantly impact your DataMiner System.
 > - Scheduler will be restarted during the migration. 
-> - Incoming requests to the Scheduler Manager will be blocked while migration is in progress. 
+> - Incoming requests to the Scheduler Manager will be blocked while the migration is in progress. 
 
 1. Connect to the DMS using the *SLNetClientTest* tool:
 
@@ -33,13 +33,13 @@ To migrate scheduled tasks, the SLNetClientTest tool can be used.
 
    - During migration, **no scheduled tasks will be triggered**, though tasks already running will continue executing. It is however advised not to start a migration when this is the case. 
    
-   - A window displaying the migration IDs will appear. it can be closed since the migration continues in the background.
+   - A window will show the migration actions that have been scheduled. If you close this window, the migration will continue in the background. To cancel the migration, click the Cancel Migration button.
 
    - The progress of the migration will be shown in the *MigrationStatus* table in client test tool, where a row will be created for each agent in the cluster where the scheduled tasks will be migrated. 
 
    - If one of the DataMiner agents in the cluster cannot be reached for some reason, the migration will be canceled.
 
-   - Once migration completes on all agents, storage will automatically switch from XML to database, and incoming messages will be unblocked.
+   - Once the migration completes on all agents, the storage will automatically switch from XML to database, and incoming messages will be unblocked.
 
 > [!NOTE]
 >
