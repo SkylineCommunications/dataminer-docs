@@ -7,6 +7,9 @@ keywords: billing, credits, balance, usage costs, subscriptions, services
 
 The Billing page provides a comprehensive overview of your organization's credit usage and costs for dataminer.services. It allows you to monitor your credit balance, track service consumption, view subscription costs, and analyze historical spending patterns to manage your DataMiner System expenses effectively.
 
+> [!TIP]
+> For more information about commercial and deploy models, see [What commercial and deploy models does Skyline offer?](xref:FAQs_Pricing#what-commercial-and-deploy-models-does-skyline-offer)
+
 ## Balance
 
 The **Balance** displays your current credit balance available for dataminer.services usage. This represents the total number of credits remaining in your account that can be used to pay for various services and subscriptions.
