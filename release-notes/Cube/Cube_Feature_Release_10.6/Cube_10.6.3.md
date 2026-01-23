@@ -70,6 +70,18 @@ Up to now, this log file list contained a *Scripting* entry. However, as no *SLS
 
 Because of a number of enhancements, overall performance has increased when loading alarm properties into filtered alarm tabs or when loading alarm data into AlarmSummary shapes.
 
+#### Connection type will always be set to gRPC when connecting to a DMA that is connected to dataminer.services [ID 44547]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+When Cube connects to a DMA that is connected to dataminer.services (i.e. a DMA of which the hostname ends with ".dataminer.services"), the connection will always be of type gRPC, whatever the connection type that is specified in the Cube settings.
+
+#### Initialization exceptions thrown by the Microsoft Edge browser engine will now be added to the Cube logging [ID 44549]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+From now on, all initialization exceptions thrown by the Microsoft Edge (WebView2) browser engine will be added to the Cube logging. This will make it easier to investigate any issues that might occur.
+
 ### Fixes
 
 #### Visual Overview: UI could become unresponsive when parameter subscriptions occurred for conditions with parameter-based criteria [ID 44365]
