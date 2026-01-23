@@ -6532,8 +6532,6 @@ items:
             topicUid: DMAObject
           - name: DMAParameter
             topicUid: DMAParameter
-          - name: DMAParameterSet
-            topicUid: DMAParameterSet
           - name: DMAParameterEdit
             topicUid: DMAParameterEdit
           - name: DMAParameterEditDiscreet
@@ -6542,6 +6540,8 @@ items:
             topicUid: DMAParameterInfo
           - name: DMAParameterPosition
             topicUid: DMAParameterPosition
+          - name: DMAParameterSet
+            topicUid: DMAParameterSet
           - name: DMAParameterTable
             topicUid: DMAParameterTable
           - name: DMAParameterTableCell
