@@ -111,7 +111,9 @@ To disable the v0 API:
 
 ### HTTPS
 
-By default, DataMiner serves web applications over HTTP, and since DataMiner 10.3 [CU0] <!-- RN 31142 --> also over HTTPS using a self-signed certificate. HTTP is unencrypted and vulnerable to man-in-the-middle attacks, so we highly recommend [configuring HTTPS](xref:Setting_up_HTTPS_on_a_DMA) with a trusted certificate and to [configure HTTPS in DataMiner](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-in-dataminer). It is also highly recommended to either disable HTTP or [set up a redirect to HTTPS](xref:Setting_up_HTTPS_on_a_DMA#configuring-http-to-https-redirection).
+By default, DataMiner serves web applications over HTTP, and starting from DataMiner 10.2.1/10.3.0<!-- RN 31142 --> also over HTTPS using a self-signed certificate.
+
+HTTP is unencrypted and vulnerable to man-in-the-middle attacks, so we highly recommend [configuring HTTPS](xref:Setting_up_HTTPS_on_a_DMA) with a trusted certificate and [configuring HTTPS in DataMiner](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-in-dataminer). We also highly recommend either disabling HTTP or [setting up a redirect to HTTPS](xref:Setting_up_HTTPS_on_a_DMA#configuring-http-to-https-redirection).
 
 ### HTTP headers
 
