@@ -94,6 +94,12 @@ When Cube experiences a CRL freeze, a message box will appear, explaining what c
 
 Up to now, this message box, which is created in the background thread, could cause asynchronous calls in that thread to get blocked. From now on, although it will still be created in the background thread, it will no longer cause any asynchronous calls to get blocked.
 
+#### Alarm Console: Problem when updating an incident alarm [ID 44425]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+As the severity of an incident alarm is the highest severity found among its source alarms, that severity has to be recalculated each time the incident alarm is updated. Up to now, when an incident alarm was updated, exceptions could be thrown.
+
 #### Visual Overview - AlarmSummary: Correlated alarm would incorrectly not be removed from the summary when the element state changed [ID 44480]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
