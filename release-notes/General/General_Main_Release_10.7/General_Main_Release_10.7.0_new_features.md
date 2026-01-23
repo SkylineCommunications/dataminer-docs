@@ -74,3 +74,54 @@ A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve t
 >
 > - *Modules > Automation > UI available*
 > - *Modules > Automation > Execute*
+
+#### SLNet subscription logging [ID 44361]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+In the *SLNetClientTest* tool, you can now specify that all SLNet subscription events have to be logged in the *SLSubscriptionLog.txt* log file.
+
+To activate SLNet subscription event logging, do the following:
+
+1. Open the *SLNetClientTest* tool, and connect to the DataMiner Agent.
+
+1. Open the *Advanced* menu, and select *Options* > *SLNet options*.
+
+1. Open the *Option values for* selection box, and select "SubscriptionLogOptions".
+
+   You will see a list of all DMAs in the cluster. For each of those DMAs, the list will show whether the selected option is active, and what options are set.
+
+1. In the *Value* column, right-click the value you want to edit, and select *Edit value*.
+
+1. In the edit box, add or update the necessary options, and click *OK*. For a list of available options, see below.
+
+##### Event type and cache key filtering
+
+The entries in the *SLSubscriptionLog.txt* log file can be filtered by event type (e.g. *ParameterChangeEventMessage*) and/or cache key (e.g. DataMinerID/ElementID/ParameterID). To do so, you have to provide a value with a *filter=* prefix. If you want to provide multiple values, they have to be separated by a semicolon (";").
+
+Options for filtering by event type:
+
+| Option | Event type |
+|--------|------------|
+| element   | *ElementInfoEventMessage*     |
+| alarm     |  *AlarmEventMessage*          |
+| dma       | *DataMinerExtendedStateEvent* |
+| parameter | *ParameterChangeEventMessage* |
+| alarmfocusevent      | *Skyline.DataMiner.Analytics.AlarmFocus.AlarmFocusEvent*  |
+| radgroupinfoevent    | *Skyline.DataMiner.Analytics.Rad.RadGroupInfoEvent*       |
+| stateiconchangeevent | *Skyline.DataMiner.Analytics.Arrows.StateIconChangeEvent* |
+
+Apart from the above-mentioned options, you can also use any other message type from the *Skyline.DataMiner.Net.Messages* namespace.
+
+Formats for filtering by cache key:
+
+- HostingDataMinerID/DataMinerID/ElementID/ParameterID
+- DataMinerID
+- DataMinerID/ElementID
+- DataMinerID/ElementID/ParameterID
+
+> [!NOTE]
+> This option is saved into the file *MaintenanceSettings.xml* under the *\<SLNet>* tag. It is not synchronized across Agents in the DMS.
+
+> [!WARNING]
+> Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
