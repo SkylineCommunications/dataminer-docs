@@ -306,3 +306,9 @@ In some cases, a folder named *;THEMES* would incorrectly appear in the navigati
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 In some cases, a low-code app using a default theme could throw a console error.
+
+#### #### Dashboards/Low-Code Apps - Timeline component: Null reference exception could be thrown [ID 44602]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In some cases, a null reference exception could be thrown in a *Timeline* component.
