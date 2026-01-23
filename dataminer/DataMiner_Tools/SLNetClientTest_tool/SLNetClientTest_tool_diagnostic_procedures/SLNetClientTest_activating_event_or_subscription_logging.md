@@ -44,7 +44,17 @@ For filtering on cache keys the available formats are:
 
 ## Type of logging (only for *EventCacheLogOptions*)
 
+You can filter the event log on types of event actions, for this no prefix is required. This can also be combined with *filter=* prefixed values, or multiple values can be provided by separating with a semicolon *;*.
 
+For filtering on event actions the options are:
+
+- adds: will log when an event is added to the cache, also mentioning which exact events
+- clears: will log when an event is cleared from the cache, without mentioning which exact events
+- detailed_clear: will log when an event is cleared from the cache, also mentioning which exact events
+- send_initial: will log when initial events are forwarded to a subscribed client, also mentioning which exact events
+- detailed_send: will log when events are forwarded to subscribed clients, also mentioning which exact events
+- all: a combination of adds, clears and send_initial
+- all_detailed: a combination of all, detailed_clear and detailed_send
 
 > [!NOTE]
 > This option is saved into the file *MaintenanceSettings.xml* under the *\<SLNet>* tag. It is not synchronized across Agents in the DMS.
