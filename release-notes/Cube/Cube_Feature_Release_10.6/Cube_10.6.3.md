@@ -98,7 +98,7 @@ Up to now, this message box, which is created in the background thread, could ca
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-As the severity of an incident alarm is the highest severity found among its source alarms, that severity has to be recalculated each time the incident alarm is updated. Up to now, when an incident alarm was updated, exceptions could be thrown.
+As the severity of an incident alarm is the highest severity found among its source alarms, that severity has to be recalculated each time the incident alarm is updated. Up to now, when an incident alarm was updated, in some rare cases, exceptions could be thrown.
 
 #### Visual Overview - AlarmSummary: Correlated alarm would incorrectly not be removed from the summary when the element state changed [ID 44480]
 
