@@ -187,6 +187,12 @@ The icons and favicons of the DataMiner landing page and the following DataMiner
 
 Also, the app titles have been standardized to ensure consistency across all apps.
 
+#### Visual Overview in web apps: Redesigned popup windows [ID 44530]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In web apps, the popup windows that appear in visual overviews have now been redesigned.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Maps component would incorrectly fetch markers with larger bounds than necessary when you zoomed in or out [ID 44381]
