@@ -57,6 +57,14 @@ Also, the following issues have now been fixed:
 
 - On systems where the `enableLegacyV0Interface` flag is not set in the *web.config* file, the test that verifies whether the v0 web API is disabled would incorrectly assume that the v0 web API was enabled. From now on, when the `enableLegacyV0Interface` flag is not set in the *web.config* file, the v0 web API will be considered disabled.
 
+#### SLAnalytics: Enhanced resilience during startup [ID 44476]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Because of a number of enhancements, from now on, SLAnalytics will be more resilient when starting up.
+
+From now on, when an issue occurs during startup, in most cases, SLAnalytics will add an entry describing the issue to the SLAnalytics log file, and will keep on working.
+
 #### BPA test 'Cube CRL Freeze': Enhanced performance [ID 44479]
 
 <!-- RN 44479: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->

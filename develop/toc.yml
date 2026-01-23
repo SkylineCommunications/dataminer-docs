@@ -6540,6 +6540,8 @@ items:
             topicUid: DMAParameterInfo
           - name: DMAParameterPosition
             topicUid: DMAParameterPosition
+          - name: DMAParameterSet
+            topicUid: DMAParameterSet
           - name: DMAParameterTable
             topicUid: DMAParameterTable
           - name: DMAParameterTableCell
