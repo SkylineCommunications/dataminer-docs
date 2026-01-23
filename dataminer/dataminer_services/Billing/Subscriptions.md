@@ -7,13 +7,13 @@ keywords: subscriptions, billing, credits, data plane, automation, collaboration
 
 The Subscriptions page provides a comprehensive overview of all subscriptions associated with your organization's dataminer.services account. It allows you to monitor active subscriptions, review expired ones, track costs and savings, and view detailed breakdowns of what each subscription includes.
 
-## DaaS Subscriptions
+## Automatically Assigned Subscriptions
 
-For [DataMiner as a Service (DaaS)](xref:DaaS_hosting) systems, specific subscriptions are automatically assigned depending on the system type:
+Certain subscriptions are automatically assigned to organizations:
 
-- **Community Edition**: Automatically provided for all DaaS systems at no cost. This subscription includes essential reservations for managed objects, metrics, unmanaged objects, actions, shares, and connectors, allowing you to use your DaaS system with a comprehensive set of features included. The subscription renews automatically every year at no cost to the user.
+- **Community Edition**: Automatically provided for all organizations at no cost. This subscription includes essential reservations for managed objects, metrics, unmanaged objects, actions, shares, and connectors, allowing you to use dataminer.services with a comprehensive set of features included. The subscription renews automatically every year at no cost to the user.
 
-- **Hosting subscriptions**: Assigned only to DaaS trial systems for a 7-day period. These limited-time subscriptions provide the hosting resources needed to run your trial environment, including metrics, alarm updates, information events, trend data points, and element data updates.
+- **Hosting subscriptions**: Assigned only to [DataMiner as a Service (DaaS)](xref:DaaS_hosting) trial systems for a 7-day period. These limited-time subscriptions provide the hosting resources needed to run your trial environment, including metrics, alarm updates, information events, trend data points, and element data updates.
 
 ## Accessing Subscriptions
 

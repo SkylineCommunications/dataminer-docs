@@ -53,14 +53,14 @@ Select the subscription duration:
 
 - **1 year**: Standard annual subscription.
 - **3 years**: Extended subscription for long-term commitment.
-- **Custom**: Specify a custom duration for your needs.
+- **Custom**: Specify a custom number of months for the subscription duration.
 
 Longer durations may qualify for additional discounts. 
 You can also add shorter durations without discounts to lock in on the current credit rate.
 
 #### From
 
-Use the date picker to select when the subscription should start. By default, this is set to the current date.
+Use the date picker to select when the subscription should start. By default, this is set to the current date. Note that you cannot select a date in the past.
 
 #### Auto Renew
 
@@ -69,8 +69,7 @@ Toggle the **Auto renew** switch to enable automatic renewal:
 - When enabled, the subscription will automatically renew on the expiration date with the same duration and reservation amounts, using the rates and discounts applicable at the time of renewal.
 - Renewal requires sufficient credits in your organization's balance.
 - New pricing may apply at renewal time.
-- Owners/Admins will receive a notification before the subscription expires and renews.
-- If insufficient credits are available, the subscription will not renew, Owners/Admins will be notified via email, and the **Auto renew** switch will turn off.
+- If insufficient credits are available, the subscription will not renew and the **Auto renew** switch will turn off.
 
 For more information, see [Auto-Renewal](xref:Subscriptions#auto-renewal).
 
