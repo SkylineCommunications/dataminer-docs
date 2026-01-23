@@ -18,6 +18,7 @@ Thread problem in x: y [+ z pending]
 The following error messages are possible:
 
 - Thread problem in SLDataMiner: ActionThread
+- [Thread problem in SLDataMiner: ActionPoolThread](#thread-problem-in-sldataminer-actionpoolthread)
 - Thread problem in SLDataMiner: AddressChangeThread
 - Thread problem in SLDataMiner: AlarmLevelRegistration
 - Thread problem in SLDataMiner: AlarmLevelUpdates
@@ -37,6 +38,24 @@ The following error messages are possible:
 - [Thread problem in SLDataMiner: ServiceThread](#thread-problem-in-sldataminer-servicethread)
 - [Thread problem in SLDataMiner: ServiceReplicationThread](#thread-problem-in-sldataminer-servicereplicationthread)
 - Thread problem in SLDataMiner: SetTriggers
+
+## Thread problem in SLDataMiner: ActionPoolThread
+
+An *ActionPoolThread* is created to take care of the start/stop/pause actions of an element.
+
+### Symptom
+
+An element takes a long time or even fails to start, stop or pause.
+
+### Possible cause
+
+- A long startup action, e.g. retrieving the database data of the element
+- Element startup is stuck
+
+### Resolution
+
+- At the RTE root time, check SLDataMiner.txt and the element log. It should show which step is exactly stuck.
+
 
 ## Thread problem in SLDataMiner: AlarmStackThread
 
