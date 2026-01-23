@@ -300,3 +300,9 @@ When you opened the color picker and selected a preset, up to now, the color sca
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 In some cases, a folder named *;THEMES* would incorrectly appear in the navigation pane on the left.
+
+#### Low-Code Apps: Problem when using a default theme [ID 44554]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In some cases, a low-code app using a default theme could throw a console error.
