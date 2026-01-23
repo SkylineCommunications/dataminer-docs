@@ -269,11 +269,11 @@ Up to now, when a certain group name had been removed (e.g. by means of an Autom
 
 Up to now, when a min, max, or sum aggregation was performed on a column of type integer, the column containing the aggregation results would incorrectly be of type double instead of type integer. As a result, operators that required a column of type integer would throw an exception when reading the column in question.
 
-#### Low-Code Apps: App opened in a Chromium-based browser would incorrectly not react to certain mouse actions [ID 44528]
+#### Low-Code Apps: Problem with mouse actions when using a Chromium-based browser [ID 44528]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When you had opened a low-code app in a Chromium-based browser, and at least three panels of that app were open, in some cases, the UI would incorrectly not react to certain mouse actions.
+When you had opened a low-code app in a Chromium-based browser, and you clicked the mouse button in one panel while another panel had the focus, nothing would happen. You incorrectly had to click twice to execute the mouse action.
 
 #### Dashboards/Low-Code Apps - Templates: Default tooltip would show 'Undefined' when selecting a table preset for a component other than a Table component [ID 44529]
 
