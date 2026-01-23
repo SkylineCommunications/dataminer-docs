@@ -4,7 +4,7 @@ uid: DataMinerAssistant_change_log
 
 # DataMiner Assistant change log
 
-#### 6 January 2026 - DataMiner Assistant 2.1.15 - Issues when loading the configuration file [ID 44448]
+#### 21 January 2026 - DataMiner Assistant 2.1.21 - Issues when loading the configuration file [ID 44448]
 
 A number of issues related to loading the DataMiner Assistant configuration file have been resolved:
 
