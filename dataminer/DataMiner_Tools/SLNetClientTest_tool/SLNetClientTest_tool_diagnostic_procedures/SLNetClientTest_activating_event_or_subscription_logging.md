@@ -57,7 +57,7 @@ For filtering on event actions the options are:
 - all_detailed: a combination of all, detailed_clear and detailed_send
 
 > [!NOTE]
-> This option is saved into the file *MaintenanceSettings.xml* under the *\<SLNet>* tag. It is not synchronized across Agents in the DMS.
+> These options are saved into the file *MaintenanceSettings.xml* under the *\<SLNet>* tag as *\<EventCacheLogOptions>* and *\<SubscriptionLogOptions>*. It is not synchronized across Agents in the DMS.
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
