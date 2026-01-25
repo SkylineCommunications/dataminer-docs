@@ -56,6 +56,7 @@ uid: glossary_a_to_l
 | BGP | Border Gateway Protocol. Routing protocol used for traffic between autonomous systems over the internet. |
 | Booking | See [Booking](xref:srm_instantiations#booking). |
 | Boundary clock | Device in a PTP environment that takes the time from a grandmaster clock, recreates it and acts as a clock itself. See [DataMiner PTP app](xref:SolPTP). |
+| BPA | Best Practices Analysis. See [Running BPA tests](xref:Running_BPA_tests). |
 | BSS | Business Support System. Software system used by service providers to run business operations towards their customers. |
 | BUC | Block Upconverter. Converter used in the transmission of satellite signals, which converts signals to a higher frequency. |
 | Business Intelligence | DataMiner module that is used to track the parameters of a Service Level Agreement or SLA. See [Business Intelligence](xref:sla). |
@@ -72,6 +73,7 @@ uid: glossary_a_to_l
 | CCA | Cloud-Connected Agents. DataMiner Agents connected to [dataminer.services](xref:about_dataminer_services). |
 | CCAP | Converged Cable Access Platform. Platform combining the functionality of a CMTS with that of an edge QAM, providing high-density services to cable subscribers. |
 | CCU | Camera Control Unit. Device used to monitor and control camera functions, for example in live video broadcasting. |
+| CDMR | Customer DataMiner Reporting. See [Customer DataMiner Reporting](xref:CDMR) |
 | CDN | Content Delivery Network. Network of servers in different locations that work together to allow fast delivery of internet content. |
 | Central database | Alternative name for the offload database, especially used for older DataMiner versions. See [Offloading data](xref:Offload_database). |
 | Change point | Point where the behavior of a parameter trend changes, detected by the DataMiner Analytics software. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection). |
@@ -254,6 +256,7 @@ uid: glossary_a_to_l
 | Input attenuation | Adjusting of the signal strength at the input of a spectrum analyzer to improve measuring accuracy. See [Changing the spectrum analyzer settings](xref:Changing_the_spectrum_analyzer_settings). |
 | IntelliSense | Intelligent code completion, available within DataMiner when configuring C# code in Automation scripts. See [IntelliSense](xref:Adding_CSharp_code_to_an_Automation_script#intellisense). |
 | Inventory & Asset Management | Legacy DataMiner module that establishes a link between a DMS and a CMDB. Commonly abbreviated as IAM. See [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management). |
+| IOC | Integrated Operations Center. |
 | IP | Internet Protocol. |
 | IPDR | Internet Protocol Detail Record. Standardized interface that enables the collection and redistribution of data on service usage and other activities in an IP ecosystem. |
 | IRD | Integrated Receiver/Decoder. Electronic device used to receive and then convert radio frequency signals. |
