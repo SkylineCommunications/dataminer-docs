@@ -16,9 +16,10 @@ To activate event cache or subscription logging:
 
 1. In the *Value* column, right-click and select *Edit value* (or double click) the value for the Agent for which you wish to edit the used options (the available options are listed below).
 
-1. Enter `true` and click *OK*.
+1. Specify one of the filter values mentioned below, and click *OK*.
 
-   Alternatively, if you want to limit the logging by applying a filter, apply one of the filter values detailed below.
+> [!NOTE]
+> The specified filter options will be saved into the file *MaintenanceSettings.xml* under the `<SLNet>` tag as `<EventCacheLogOptions>` and `<SubscriptionLogOptions>`. This is not synchronized across Agents in the DMS.
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
@@ -27,7 +28,7 @@ To activate event cache or subscription logging:
 
 You can apply a filter so that only logging for specific event types (for example, *ParameterChangeEventMessage*) and/or specific cache keys (for example, DataMinerID/ElementID/ParameterID) is recorded.
 
-To do so, instead of `true`, provide a value **prefixed** by `filter=`. Multiple values can be combined using a semicolon (";") as separator.
+To do so, provide a value **prefixed** by `filter=`. Multiple values can be combined using a semicolon (";") as separator.
 
 For filtering on event types, you can use the following values:
 
@@ -47,13 +48,11 @@ For filtering on cache keys, the available formats are:
 - DataMinerID/ElementID
 - DataMinerID/ElementID/ParameterID
 
-The specified options will be saved into the file *MaintenanceSettings.xml* under the `<SLNet>` tag as `<EventCacheLogOptions>` and `<SubscriptionLogOptions>`. This is not synchronized across Agents in the DMS.
-
 ## Event action type logging (only for event cache logging)
 
 You can apply a filter so that only specific types of event actions are included in the event cache logging.
 
-To do so, instead of `true`, provide one of the values listed below. **No prefix** is required for this. However, you can combine this filter with *filter=* prefixed values. Multiple values can be combined using a semicolon (";") as separator.
+To do so, provide one of the values listed below. **No prefix** is required for this. However, you can combine this filter with *filter=* prefixed values. Multiple values can be combined using a semicolon (";") as separator.
 
 For filtering on event actions, you can use the following values:
 
@@ -64,5 +63,3 @@ For filtering on event actions, you can use the following values:
 - **detailed_send**: Logs when events are forwarded to subscribed clients, also mentioning which exact events.
 - **all**: Combines the *adds*, *clears*, and *send_initial* options.
 - **all_detailed**: Combines the *all*, *detailed_clear*, and *detailed_send* options.
-
-The specified options will be saved into the file *MaintenanceSettings.xml* under the `<SLNet>` tag as `<EventCacheLogOptions>`. This is not synchronized across Agents in the DMS.
