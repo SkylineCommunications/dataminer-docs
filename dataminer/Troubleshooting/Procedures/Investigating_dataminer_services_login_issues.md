@@ -1,6 +1,5 @@
 ---
 uid: investigating_dataminer_services_login_issues
-description:
 keywords: login, cloud login, dataminer.services, issues
 ---
 
