@@ -7,6 +7,7 @@ uid: SLNetClientTest_tool_diagnostic_procedures
 The procedures below can be used to retrieve data from a DataMiner System. However, be very careful when you apply them, as the SLNetClientTest tool allows actions that can have far-reaching consequences on the functionality of your DataMiner System.
 
 - [Activating verbose Correlation logging](xref:SLNetClientTest_activating_verbose_correlation_logging)
+- [Activating event cache or subscription logging](xref:SLNetClientTest_activating_event_or_subscription_logging)
 - [Changing the log levels for a log file](xref:SLNetClientTest_changing_log_levels)
 - [Checking a hyperlink filter](xref:SLNetClientTest_checking_hyperlink_filter)
 - [Checking whether protocol buffer serialization is enabled](xref:SLNetClientTest_Checking_whether_protocol_buffer_serialization_is_enabled)
