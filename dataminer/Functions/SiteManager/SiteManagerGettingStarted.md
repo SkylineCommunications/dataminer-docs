@@ -65,11 +65,11 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
 
       SNMP uses UDP on port 161, hence `<backendMode>` specifies *udpTunnel* and `<endpoint>` contains *161*.
 
-      Hostnames are also supported. For example, when integrating equipment reachable via its hostname with an HTTP connection, use:
+      Hostnames are also supported. For example, when integrating equipment reachable via its hostname with an HTTPS connection, use:
 
-      `zrok reserve private --backend-mode tcpTunnel vb440.lab.hq.slc:80`
+      `zrok reserve private --backend-mode tcpTunnel vb440.lab.hq.slc:443`
 
-      HTTP uses TCP and - in this case - port 80, hence `<backendMode>` specifies *tcpTunnel* and `<endpoint>` contains *80*.
+      HTTPS uses TCP and port 443, hence `<backendMode>` specifies *tcpTunnel* and `<endpoint>` contains *443*.
 
       When executing this command, you should see the following output: `your reserved share token is '2dxzh484zn3'`. Copy the token and execute the next command.
 
@@ -122,11 +122,11 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
 
       SNMP uses UDP on port 161, hence `<backendMode>` specifies *udpTunnel* and `<endpoint>` contains *161*.
 
-      Hostnames are also supported. For example, when integrating equipment reachable via its hostname with an HTTP connection, use:
+      Hostnames are also supported. For example, when integrating equipment reachable via its hostname with an HTTPS connection, use:
 
-      `zrok reserve private --backend-mode tcpTunnel vb440.lab.hq.slc:80`
+      `zrok reserve private --backend-mode tcpTunnel vb440.lab.hq.slc:443`
 
-      HTTP uses TCP and - in this case - port 80, hence `<backendMode>` specifies *tcpTunnel* and `<endpoint>` contains *80*.
+      HTTPS uses TCP and port 443, hence `<backendMode>` specifies *tcpTunnel* and `<endpoint>` contains *443*.
 
       When executing this command, you should see the following output: `your reserved share token is '2dxzh484zn3'`. Copy the token and execute the next command.
 
