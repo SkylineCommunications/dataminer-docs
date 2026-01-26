@@ -57,7 +57,21 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
       zrok reserve private --backend-mode <backendMode> <endpoint>
       ```
 
-      In the command above, `<backendMode>` is either *tcpTunnel* or *udpTunnel*, and `<endpoint>` specifies the endpoint you want to expose. For example: `zrok reserve private --backend-mode tcpTunnel 127.0.0.1:4208`. When executing this command, you should see the following output: `your reserved share token is '2dxzh484zn3'`. Copy the token and execute the next command.
+      In the command above, `<backendMode>` is either *tcpTunnel* or *udpTunnel*, and `<endpoint>` specifies the endpoint you want to expose.
+
+      For example, when integrating equipment with an on-premises IP address of 10.13.1.102 using an SNMP connection, use:
+
+      `zrok reserve private --backend-mode udpTunnel 10.13.1.102:161`
+
+      SNMP uses UDP on port 161, hence `<backendMode>` specifies *udpTunnel* and `<endpoint>` contains *161*.
+
+      Hostnames are also supported. For example, when integrating equipment reachable via its hostname with an HTTP connection, use:
+
+      `zrok reserve private --backend-mode tcpTunnel vb440.lab.hq.slc:80`
+
+      HTTP uses TCP and - in this case - port 80, hence `<backendMode>` specifies *tcpTunnel* and `<endpoint>` contains *80*.
+
+      When executing this command, you should see the following output: `your reserved share token is '2dxzh484zn3'`. Copy the token and execute the next command.
 
       ```powershell
       zrok share reserved <token>
@@ -100,7 +114,21 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
       zrok reserve private --backend-mode <backendMode> <endpoint>
       ```
 
-      In the command above, `<backendMode>` is either *tcpTunnel* or *udpTunnel*, and `<endpoint>` specifies the endpoint you want to expose. For example: `zrok reserve private --backend-mode tcpTunnel 127.0.0.1:4208`. When executing this command, you should see the following output: `your reserved share token is '2dxzh484zn3'`. Copy the token and execute the next command.
+      In the command above, `<backendMode>` is either *tcpTunnel* or *udpTunnel*, and `<endpoint>` specifies the endpoint you want to expose.
+
+      For example, when integrating equipment with an on-premises IP address of 10.13.1.102 using an SNMP connection, use:
+
+      `zrok reserve private --backend-mode udpTunnel 10.13.1.102:161`
+
+      SNMP uses UDP on port 161, hence `<backendMode>` specifies *udpTunnel* and `<endpoint>` contains *161*.
+
+      Hostnames are also supported. For example, when integrating equipment reachable via its hostname with an HTTP connection, use:
+
+      `zrok reserve private --backend-mode tcpTunnel vb440.lab.hq.slc:80`
+
+      HTTP uses TCP and - in this case - port 80, hence `<backendMode>` specifies *tcpTunnel* and `<endpoint>` contains *80*.
+
+      When executing this command, you should see the following output: `your reserved share token is '2dxzh484zn3'`. Copy the token and execute the next command.
 
    1. Perform the following command:
 
