@@ -17,7 +17,7 @@ The following settings are available:
 
 - *Enable indexing on alarms:* Enables indexing of alarms. If this option is not enabled, the enhanced search options in the Alarm Console are not available. For systems using [STaaS](xref:STaaS) or [dedicated clustered storage](xref:Dedicated_clustered_storage), this setting is not used.<!-- RN 44435 -->
 
-- *Migrate booking data to Indexing Engine*: Prior to DataMiner 10.4, this allows you to migrate booking data from the Cassandra database to the indexing database, if this has not been done yet. This migration must be done before you can upgrade to DataMiner 10.4 or higher.
+- *Migrate booking data to Indexing Engine*: Allows you to migrate older booking data (i.e. from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database, if this has not been done yet. This option is not relevant for [dedicated clustered storage](xref:Dedicated_clustered_storage) or [STaaS](xref:STaaS) setups.
 
   Please note the following regarding the migration of booking data:
 
