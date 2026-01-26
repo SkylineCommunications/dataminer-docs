@@ -63,13 +63,13 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
 
       `zrok reserve private --backend-mode udpTunnel 10.13.1.102:161`
 
-      SNMP uses UDP on port 161, hence `<backendMode>` specifies *udpTunnel* and `<endpoint>` contains *161*.
+      SNMP uses UDP on port 161, so `<backendMode>` specifies *udpTunnel* and `<endpoint>` contains *161*.
 
       Hostnames are also supported. For example, when integrating equipment reachable via its hostname with an HTTPS connection, use:
 
       `zrok reserve private --backend-mode tcpTunnel vb440.lab.hq.slc:443`
 
-      HTTPS uses TCP and port 443, hence `<backendMode>` specifies *tcpTunnel* and `<endpoint>` contains *443*.
+      HTTPS uses TCP and port 443, so `<backendMode>` specifies *tcpTunnel* and `<endpoint>` contains *443*.
 
       When executing this command, you should see the following output: `your reserved share token is '2dxzh484zn3'`. Copy the token and execute the next command.
 
@@ -120,13 +120,13 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
 
       `zrok reserve private --backend-mode udpTunnel 10.13.1.102:161`
 
-      SNMP uses UDP on port 161, hence `<backendMode>` specifies *udpTunnel* and `<endpoint>` contains *161*.
+      SNMP uses UDP on port 161, so `<backendMode>` specifies *udpTunnel* and `<endpoint>` contains *161*.
 
       Hostnames are also supported. For example, when integrating equipment reachable via its hostname with an HTTPS connection, use:
 
       `zrok reserve private --backend-mode tcpTunnel vb440.lab.hq.slc:443`
 
-      HTTPS uses TCP and port 443, hence `<backendMode>` specifies *tcpTunnel* and `<endpoint>` contains *443*.
+      HTTPS uses TCP and port 443, so `<backendMode>` specifies *tcpTunnel* and `<endpoint>` contains *443*.
 
       When executing this command, you should see the following output: `your reserved share token is '2dxzh484zn3'`. Copy the token and execute the next command.
 
