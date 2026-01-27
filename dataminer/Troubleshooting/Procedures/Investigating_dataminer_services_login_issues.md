@@ -9,7 +9,7 @@ keywords: login, cloud login, dataminer.services, issues
 
 Login timeouts can occur when the date and time on the device you are using to log in does not match with the current time for the time zone configured on the device. Even small differences can prevent authentication tokens from being validated properly.
 
-When this happens, you may see the following message: *Seems like your sign-in attempt timed-out. Please try again.*
+When this happens, you may see the following message: *Seems like your sign-in attempt timed out. Please try again.*
 
 The best way to avoid this is to **enable automatic time and time zone synchronization**, which ensures that your device consistently uses accurate time information. If automatic synchronization is unavailable, you can manually adjust your device's date, time, and/or time zone so that these match as closely as possible.
 
