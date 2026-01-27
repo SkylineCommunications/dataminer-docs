@@ -5,11 +5,15 @@ keywords: login, cloud login, dataminer.services, issues
 
 # Investigating dataminer.services login issues
 
-## Make sure your time is set correctly
+## Check whether the time is set correctly on your device
 
-Often when login issues are caused by time-outs, it's because the time is set incorrectly on the device you are using.
+Login timeouts can occur when the date and time on the device you are using to log in does not match with the current time for the time zone configured on the device. Even small differences can prevent authentication tokens from being validated properly.
 
-## Having trouble signing in with your Microsoft account?
+When this happens, you may see the following message: *Seems like your sign-in attempt timed-out. Please try again.*
+
+The best way to avoid this is to **enable automatic time and time zone synchronization**, which ensures that your device consistently uses accurate time information. If automatic synchronization is unavailable, you can manually adjust your device's date, time, and/or time zone so that these match as closely as possible.
+
+## Make sure admin approval has been granted
 
 When you want to log in using your existing corporate Microsoft account, the following notification may be shown:
 
