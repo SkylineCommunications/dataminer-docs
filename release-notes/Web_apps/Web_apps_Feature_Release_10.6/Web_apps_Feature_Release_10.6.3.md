@@ -91,6 +91,19 @@ Breadcrumbs have now been added to the navigation pane.
 
 By clicking the first breadcrumb, which is named *Overview*, you will navigate back to the root view.
 
+#### Interactive Automation scripts: UI components Calendar and Time can now display seconds [ID 44487]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Up now on, the UI components *Calendar* and *Time*, used in interactive Automation scripts, were not able to display seconds.
+
+From now on, when using the V2 UI, if you want the *Calendar* and the *Time* components to display seconds, you can set the `ShowSeconds` property to true in the `AutomationCalendarOptions` and `AutomationDateTimeUpDownOptions` classes:
+
+- `Skyline.DataMiner.Automation.AutomationCalendarOptions.ShowSeconds`
+- `Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.ShowSeconds`
+
+Also, a new interface `IAutomationTimeOfDayConfigOptions` can now be implemented by the `AutomationCalendarOptions` and `AutomationDateTimeUpDownOptions` classes.
+
 #### Dashboards/Low-Code Apps - Timeline component: Zooming vertically while keeping the ALT key pressed [ID 44524]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
