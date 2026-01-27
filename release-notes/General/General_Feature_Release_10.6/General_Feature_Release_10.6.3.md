@@ -242,6 +242,12 @@ Because of a number of enhancements, overall performance of the the *Cube CRL Fr
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
+#### DIS Inject requests now require users to have permission to edit both the connector and the element [ID 44493]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When a DataMiner Agent receives a DIS Inject request from a DIS user, from now on, it will verify whether that user has permission to edit both the connector and the element in question.
+
 #### GQI: Domain user name will now be included in the OnInitInputArgs of a GQI extension [ID 44509]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
