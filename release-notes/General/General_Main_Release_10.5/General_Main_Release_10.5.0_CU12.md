@@ -57,6 +57,15 @@ Also, the following issues have now been fixed:
 
 - On systems where the `enableLegacyV0Interface` flag is not set in the *web.config* file, the test that verifies whether the v0 web API is disabled would incorrectly assume that the v0 web API was enabled. From now on, when the `enableLegacyV0Interface` flag is not set in the *web.config* file, the v0 web API will be considered disabled.
 
+#### APIGateway now has a dedicated log file [ID 44469]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, APIGateway would send its log entries to the Microsoft Event Viewer. Now, a dedicated APIGateway log file has been added in `C:\ProgramData\Skyline Communications\DataMiner APIGateway\Logs`.
+
+- When the current log file reaches its maximum size of 5 MB, a new log file will be started. Up to 2 files will be kept.
+- The configuration of the log file can be adjusted using an `appsettings.custom.json` file. Copy the contents of the `appsettings.json` file to the `appsettings.custom.json` file, and change the necessary values.
+
 #### SLAnalytics: Enhanced resilience during startup [ID 44476]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->

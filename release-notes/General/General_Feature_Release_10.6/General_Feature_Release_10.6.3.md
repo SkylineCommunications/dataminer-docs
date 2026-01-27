@@ -139,7 +139,7 @@ Formats for filtering by cache key:
 - DataMinerID/ElementID
 - DataMinerID/ElementID/ParameterID
 
-These filtering options are saved in the <SLNet> section of the *MaintenanceSettings.xml* file, in an element named <SubscriptionLogOptions>. The contents of this element are not synchronized across the DMAs in the cluster.
+These filtering options are saved in the `<SLNet>` section of the *MaintenanceSettings.xml* file, in an element named `<SubscriptionLogOptions>`. The contents of this element are not synchronized across the DMAs in the cluster.
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
@@ -216,6 +216,15 @@ Also, the following issues have now been fixed:
 - The *gRPC* test will now properly take the default configuration into account. Up to now, this test would assume gRPC was disabled when not configured. From DataMiner feature release 10.5.10, gRPC is enabled by default, causing the test to report a false positive.
 
 - On systems where the `enableLegacyV0Interface` flag is not set in the *web.config* file, the test that verifies whether the v0 web API is disabled would incorrectly assume that the v0 web API was enabled. From now on, when the `enableLegacyV0Interface` flag is not set in the *web.config* file, the v0 web API will be considered disabled.
+
+#### APIGateway now has a dedicated log file [ID 44469]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, APIGateway would send its log entries to the Microsoft Event Viewer. Now, a dedicated APIGateway log file has been added in `C:\ProgramData\Skyline Communications\DataMiner APIGateway\Logs`.
+
+- When the current log file reaches its maximum size of 5 MB, a new log file will be started. Up to 2 files will be kept.
+- The configuration of the log file can be adjusted using an `appsettings.custom.json` file. Copy the contents of the `appsettings.json` file to the `appsettings.custom.json` file, and change the necessary values.
 
 #### SLAnalytics: Enhanced resilience during startup [ID 44476]
 

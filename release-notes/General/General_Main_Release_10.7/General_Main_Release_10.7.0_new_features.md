@@ -120,7 +120,7 @@ Formats for filtering by cache key:
 - DataMinerID/ElementID
 - DataMinerID/ElementID/ParameterID
 
-These filtering options are saved in the <SLNet> section of the *MaintenanceSettings.xml* file, in an element named <SubscriptionLogOptions>. The contents of this element are not synchronized across the DMAs in the cluster.
+These filtering options are saved in the `<SLNet>` section of the *MaintenanceSettings.xml* file, in an element named `<SubscriptionLogOptions>`. The contents of this element are not synchronized across the DMAs in the cluster.
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
