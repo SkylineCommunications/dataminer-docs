@@ -29,6 +29,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [TLS Authentication issues when Messagebroker is connecting to the NATS bus](xref:KI_DataMinerMessageBroker_TLS) | DataMiner with BrokerGateway NATS | DataMiner 10.5.0 [CU11]/10.6.0 | January 27, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | | September 17, 2025 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
