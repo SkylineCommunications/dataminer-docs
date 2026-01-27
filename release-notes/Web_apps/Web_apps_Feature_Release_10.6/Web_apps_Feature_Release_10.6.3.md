@@ -195,6 +195,12 @@ In web apps, the popup windows that appear in visual overviews have now been red
 
 ### Fixes
 
+#### Dashboards/Low-Code Apps - State timeline component: Problems when processing state changes [ID 44277]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+A number of issues have been fixed with regard to the State timeline component. These issues would mostly occur when processing state changes.
+
 #### Dashboards/Low-Code Apps: Maps component would incorrectly fetch markers with larger bounds than necessary when you zoomed in or out [ID 44381]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
