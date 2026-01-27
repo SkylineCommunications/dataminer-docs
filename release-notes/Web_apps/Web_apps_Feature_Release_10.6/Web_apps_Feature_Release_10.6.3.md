@@ -120,7 +120,7 @@ Note that items cannot shrink below 1/10th of their initial height or grow above
 
 When a *Timeline* component has grouping applied, from now on, the appearance of those groups can be customized using the template editor.
 
-To open the template editor, go to *Layout > Group Templates > Group*.
+To do so, go to *Layout > Groups > Template*.
 
 ## Changes
 
