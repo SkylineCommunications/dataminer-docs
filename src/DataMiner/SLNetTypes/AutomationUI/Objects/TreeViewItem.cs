@@ -47,7 +47,8 @@ namespace Skyline.DataMiner.Net.AutomationUI.Objects
 		/// </summary>
 		/// <value><c>true</c> if the previous collapsed state of the node should be restored; otherwise, <c>false</c>.</value>
 		/// <remarks>
-		/// <note type="note">Available from DataMiner 10.6.3/10.6.0 onwards.</note> <!-- RN 44515 -->
+		/// <note type="note">Available from DataMiner 10.6.3/10.6.0 onwards.</note> <!-- RN 44515 / RN 44541 -->
+		/// <note type="caution">For the tree view to keep track of the collapsed/expanded states, the <c>DestVar</c> and the location (row and column) of the component should remain the same.</note>
 		/// </remarks>
 		public bool UsePreviousCollapsedState { get; set; }
 
