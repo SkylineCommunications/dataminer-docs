@@ -212,6 +212,8 @@ items:
             topicUid: Cloud_Connection_Issues
           - name: Investigating dataminer.services feature issues
             topicUid: investigating_dataminer_services_feature_issues
+          - name: Investigating dataminer.services login issues
+            topicUid: investigating_dataminer_services_login_issues
       - name: Troubleshooting – NATS
         topicUid: Investigating_NATS_Issues
       - name: Troubleshooting – Legacy NATS
@@ -238,7 +240,7 @@ items:
         items:
           - name: STaaS error messages
             topicUid: STaaS_Error_messages
-      - name: Troubleshooting – web
+      - name: Troubleshooting – Web
         topicUid: Investigating_Web_Issues
       - name: Troubleshooting – Miscellaneous
         items:
