@@ -698,6 +698,15 @@ The following SLNet messages, which can be used to retrieve information about el
 - GetLiteRedundancyGroupInfo
 - GetLiteServiceInfo
 
+#### Migrating booking data from Cassandra Single to indexing database is no longer supported [ID 44550]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+<!-- Not added to MR 10.5.0 [CU12] -->
+
+From now on, it will no longer be possible to migrate booking data from a Cassandra database per DMA to an indexing database.
+
+Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e. from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]

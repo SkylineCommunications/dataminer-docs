@@ -82,6 +82,14 @@ When Cube connects to a DMA that is connected to dataminer.services (i.e. a DMA 
 
 From now on, all initialization exceptions thrown by the Microsoft Edge (WebView2) browser engine will be added to the Cube logging. This will make it easier to investigate any issues that might occur.
 
+#### System Center - Search & Indexing: Migrating booking data from Cassandra Single to indexing database is no longer supported [ID 44550]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+From now on, it will no longer be possible to migrate booking data from a Cassandra database per DMA to an indexing database.
+
+Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e. from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
+
 ### Fixes
 
 #### Alarm Console: Recursive loop in nested correlated alarms could cause Cube to stop working [ID 44378]
