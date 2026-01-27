@@ -423,6 +423,8 @@ items:
             topicUid: KI_elements_not_loading_in_DMS_with_multiple_ES
           - name: Various issues when using MessageBroker with chunking
             topicUid: KI_DataMinerMessageBroker2
+          - name: TLS Authentication issues when Messagebroker is connecting to the NATS bus
+            topicUid: KI_DataMinerMessageBroker_TLS
           - name: Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed
             topicUid: KI_Cube_connection_issue_alarm_tabs
           - name: SLNet deadlock in EPM setups
