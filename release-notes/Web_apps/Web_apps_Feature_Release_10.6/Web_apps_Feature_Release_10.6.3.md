@@ -93,7 +93,7 @@ By clicking the first breadcrumb, which is named *Overview*, you will navigate b
 
 #### Interactive Automation scripts: UI components Calendar and Time can now display seconds [ID 44487]
 
-<!-- MR 10.7.0 - FR 10.6.3 -->
+<!-- MR 10.6.0 - FR 10.6.3 -->
 
 Up now on, the UI components *Calendar* and *Time*, used in interactive Automation scripts, were not able to display seconds.
 

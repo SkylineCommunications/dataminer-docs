@@ -322,3 +322,9 @@ See also: [GQI DxM: Problem with Timer callbacks could cause the GQI DxM to stop
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 When, on the same connection, there were two subscriptions to the same object, in some cases, that object would incorrectly be returned twice in the event message.
+
+#### SLA would degrade after an element had been restarted [ID 44490]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When an element was restarted, and that element had alarms with service impact that were being tracked by an SLA, in some cases, the SLA would degrade when one of those alarms no longer affected the SLA.
