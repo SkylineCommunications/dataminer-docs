@@ -25,7 +25,7 @@ Each `GroupLink` entry defines access for one DataMiner security group:
 |--|--|--|
 | GroupName | string | Name of the DataMiner security group. **Note:** Changing the name of a security group invalidates the link (you will need to update the link). |
 | DomDefinitionReferences | List&lt;DomDefinitionReference&gt; | Stores the references to the `DomDefinition` objects whose instances are accessible to the group. A reference is resolved via the DOM definition ID. |
-| FieldValueReferences | List&lt;FieldValueReference&gt; | Stores the references to a `DomDefinition` and `FieldDescriptor` alongside a collection of values that determine what instances will be accessible to the user. A reference is resolved via the IDs of the definition and field descriptor. Supported from DataMiner 10.6.2/10.6.0 onwards.|
+| FieldValueReferences | List&lt;FieldValueReference&gt; | Stores the references to a `DomDefinition` and `FieldDescriptor` alongside a collection of values that determine what instances will be accessible to the user. A reference is resolved via the IDs of the definition and field descriptor. Supported from DataMiner 10.6.0/10.6.3 onwards.<!-- RN 44233 --> |
 
 > [!NOTE]
 > In future versions, additional security-related configuration or link types may be added to the `GroupLink` class.
@@ -44,14 +44,14 @@ With this kind of reference, you grant access to all instances for a given defin
 
 #### FieldValueReference
 
-Supported from DataMiner 10.6.2/10.6.0 onwards.<!-- RN 44233 -->
+Supported from DataMiner 10.6.0/10.6.3 onwards.<!-- RN 44233 -->
 
 With this kind of reference, you grant access to only a subset of instances for a given definition. This subset is defined by providing the ID of a `FieldDescriptor` and a collection of values for that field. Users will then get access to any instance for that definition that contains at least one of the provided values for the specified `FieldDescriptor`.
 
-For example, the user group 'London Employees' can only read the 'Job' instances where the 'Assigned Office' field (which is a `DomInstanceFieldDescriptor`) contains the ID of the London office instance. This way, users part of that specific employee group will only see the 'Job' instances that are assigned to their office. The DOM manager will automatically limit the results when requesting all 'Job' instances.
+For example, the user group "London Employees" can only read the "Job" instances where the "Assigned Office" field (which is a `DomInstanceFieldDescriptor`) contains the ID of the London office instance. This way, users part of that specific employee group will only see the "Job" instances that are assigned to their office. The DOM manager will automatically limit the results when requesting all "Job" instances.
 
 ```csharp
-var allowedOffice = Guid.Parse("2f4fee02-4764-4d3d-8e7d-29d391b75e84"); // ID of the London office DOM instance. (part of another DOM definition)
+var allowedOffice = Guid.Parse("2f4fee02-4764-4d3d-8e7d-29d391b75e84"); // ID of the London office DOM instance (part of another DOM definition).
 var jobsDefinitionId = Guid.Parse("1836e5c8-0c08-4955-b3ec-14530cc7bdf5"); // ID of the 'Jobs' DOM definition.
 var assignedOfficeFieldId = Guid.Parse("5c498769-6951-4d17-a89c-7b60b9ad9816"); // ID of the 'Assigned Office' field on a 'Job'.
 
@@ -67,21 +67,21 @@ The following `FieldDescriptors` can be referenced:
 | GenericEnumFieldDescriptor | GenericEnum&lt;int&gt; or List&lt;GenericEnum&lt;int&gt;&gt; | List&lt;int&gt; |
 | GenericEnumFieldDescriptor | GenericEnum&lt;string&gt; or List&lt;GenericEnum&lt;string&gt;&gt; | List&lt;string&gt; |
 
-When reading or counting, the security filtering is done entirely in the DB, which allows this system to be applied on DOM definitions that have millions of DOM instances linked. To ensure optimal performance and stability, some limitations are in place:
+When reading or counting, the security filtering is done entirely in the database, which allows this system to be applied on DOM definitions that have millions of DOM instances linked. To ensure optimal performance and stability, some limitations are in place:
 
 - You can define up to 10 values on a reference.
-- You can only specify 1 reference per group for a DOM definition.
-- When a user is part of multiple groups, and multiple of those groups have this kind of reference for a certain DOM definition, the reference of the group that comes first alphabetically (case insensitive) will be used. It is recommended to avoid these situations by defining & using the groups in such a way that overlaps are avoided. Specific groups could be created for this.
+- You can only specify one reference per group for a DOM definition.
+- When a user is part of multiple groups, and multiple of those groups have this kind of reference for a certain DOM definition, the reference of the group that comes first alphabetically (case insensitive) will be used. However, we recommend avoiding such situations by defining and using the groups in such a way that overlaps are avoided. Specific groups could be created for this.
 
 > [!NOTE]
 >
-> - A user can be part of an additional group that defines full definition level access for the same DOM definition. In that case, this full access will take precedence over the limited access of the other group.
-> - The ID of FieldDescriptor IDs should be unique within a DOM module. If there are duplicate IDs used across multiple SectionDefinitions in the module, this may result in unexpected behavior with this type of security reference.
+> - A user can be part of an additional group that defines full definition-level access for the same DOM definition. In that case, this full access will take precedence over the limited access of the other group.
+> - The ID of field descriptor IDs should be unique within a DOM module. If there are duplicate IDs used across multiple section definitions in a module, this may result in unexpected behavior with this type of security reference.
 
 > [!IMPORTANT]
-> When `FieldValueReferences` are used to limit access to the instances of a definition, the filter used to read or count the instances must ideally not exceed 100 OR clauses. On Elasticsearch and OpenSearch, there is a default limit of 1024 OR clauses. When you specify a reference with 3 values, this means that the maximum number of conditions sent via the DOM helper read or count method should be 3 times less than this maximum (341). Since there is a limit of 10 condition values, the recommended max clauses of 100 should prevent queries from failing. On STaaS there is no such hard limit, but there is, however, a limit on the general query request size. To ensure a performant and stable solution, a maximum of 100 clauses is also recommended here.
+> When `FieldValueReferences` are used to limit access to the instances of a definition, the filter used to read or count the instances **must ideally not exceed 100 OR clauses**. In Elasticsearch and OpenSearch, there is a default limit of 1024 OR clauses. When you specify a reference with three values, this means that the maximum number of conditions sent via the DOM helper read or count method should be three times less than this maximum (341). Since there is a limit of 10 condition values, the recommended max clauses of 100 should prevent queries from failing. With [STaaS](xref:STaaS) there is no such hard limit; however, there is a limit on the general query request size. To ensure a high-performing, stable solution, a maximum of 100 clauses is also recommended here.
 
-When the `ModuleSettings` object is saved with this kind of references defined, some validation is done to ensure they are valid. If one of these validation rules fail, the `TraceData` will contain a `DomManagerSettingsErrorData` error object that can have one of the following reasons:
+When the `ModuleSettings` object is saved with these kinds of references defined, some validation is done to ensure they are valid. If one of these validation rules fail, the `TraceData` will contain a `DomManagerSettingsErrorData` error object that can have one of the following reasons:
 
 | Reason | Explanation |
 |--|--|
@@ -94,7 +94,7 @@ In all of the above error cases, the `GroupName` and `DomDefinitionId` propertie
 Take note of the following validation behavior that occurs at runtime and will not result in errors during saving:
 
 - When multiple `FieldValueReferences` are present for the same group and definition, only the first one in the list will be used. Any subsequent for that same group and definition will be ignored.
-- The values defined in the `FieldValueReference` will also be checked on validity before they are being used to apply the security check. Any invalid values will be ignored. These do however count towards the maximum amount of values mentioned in the error section above.
+- The values defined in the `FieldValueReference` will also be checked on validity before they are used to apply the security check. Any invalid values will be ignored. However, these do count towards the maximum number of values mentioned above.
   - Guid: Should not be an empty Guid.
   - Int: Any value is allowed.
   - String: Should not be null or empty.
@@ -114,7 +114,7 @@ Notes:
 
 The simplified decision trees below may help understand how the security checks work and what kind of reference takes precedence.
 
-#### Count & Read requests with DOM definition scoped filter
+#### Count and read requests with DOM definition-scoped filter
 
 ```mermaid
 flowchart LR
@@ -128,7 +128,7 @@ flowchart LR
     H -->| No  | J(Block query.<br>User has no access.)
 ```
 
-#### Count & Read requests with DOM instance scoped filter
+#### Count and read requests with DOM instance-scoped filter
 
 ```mermaid
 flowchart LR
@@ -142,7 +142,7 @@ flowchart LR
     I -->| No  | J
 ```
 
-#### Create, update and delete requests
+#### Create, update, and delete requests
 
 ```mermaid
 flowchart LR
@@ -150,7 +150,7 @@ flowchart LR
     B --> D{Full access with<br>DomDefinitionReference?}
     D -->| Yes | E(Allow write)
     D -->| No  | H{FieldValueReference defined<br>for definition?}
-    H -->| Yes | I{Does new & old instance<br>contain one of the values?}
+    H -->| Yes | I{Does new and old instance<br>contain one of the values?}
     H -->| No  | J(Block write.<br>User has no access.)
     I -->| Yes | E
     I -->| No  | J

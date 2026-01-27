@@ -52,7 +52,7 @@ This user permission secures the following actions:
 From DataMiner 10.5.10/10.6.0 onwards, you can configure link security to restrict access to DOM instances. You define links between DataMiner user groups and a DOM object. Currently, two type of links can be defined:
 
 1. Link to a `DomDefinition`. This type of link determines which groups can access all `DomInstance` objects that belong to that definition.
-1. Link to a `DomDefinition` and `FieldDescriptor`. Supported from DataMiner 10.6.2/10.6.0 onwards. This type of link determines which groups can access a subset of the `DomInstance` objects of a definition based on the value(s) of a specific field.
+1. Link to a `DomDefinition` and `FieldDescriptor`. Supported from DataMiner 10.6.0/10.6.3 onwards.<!-- RN 44233 --> This type of link determines which groups can access a subset of the `DomInstance` objects of a definition based on the value(s) of a specific field.
 
 When link security is enabled and a link is created for a `DomDefinition`:
 
