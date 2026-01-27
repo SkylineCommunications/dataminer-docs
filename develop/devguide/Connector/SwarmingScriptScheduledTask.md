@@ -4,9 +4,9 @@ uid: SwarmingScriptScheduledTask
 
 # Configuring a script to swarm scheduled tasks
 
-If scheduled tasks are stored in the database ([Scheduler data storage](xref:SchedulerDataStorage)), you can use an Automation script to initiate the swarming process.
+If scheduled tasks are stored in the database (see [Scheduler data storage](xref:SchedulerDataStorage)), you can use an Automation script to initiate the swarming process.
 
-In this script, create a *SwarmingHelper* using the new hosting Agent ID along with the Scheduled Task IDs.
+In this script, create a *SwarmingHelper* using the new hosting Agent ID along with the scheduled task IDs.
 
 This can be done as follows:
 
