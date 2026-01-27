@@ -29,7 +29,6 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [TLS Authentication issues when Messagebroker is connecting to the NATS bus](xref:KI_DataMinerMessageBroker_TLS) | DataMiner with BrokerGateway NATS | DataMiner 10.5.0 [CU11]/10.6.0 | January 27, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | | September 17, 2025 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
@@ -44,6 +43,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [TLS authentication issues when MessageBroker is connecting to the NATS bus](xref:KI_DataMinerMessageBroker_TLS) | DataMiner with BrokerGateway-managed NATS | DataMiner 10.5.0 [CU11]/10.6.0 | January 27, 2026 |
 | [Incorrect date sorting in Bookings app with custom column configurations](xref:KI_Incorrect_date_sorting_in_Bookings_app_with_custom_column_configurations) | SRM setups with DataMiner version below 10.2.0 [CU10]/10.3.1 and SRM setups with custom column configurations created prior to DataMiner 10.2.0 [CU10]/10.3.1 | DataMiner 10.2.0 [CU10]/10.3.1 | January 5, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
 | [Removing an invalid or unreachable IP address causes your own DMA to leave the DMS](xref:KI_Removing_an_invalid_or_unreachable_IP_address_causes_your_own_DMA_to_leave_the_DMS) | Feature Release versions from DataMiner 10.5.7 onwards | DataMiner 10.6.0/10.6.1 | November 28, 2025 |
