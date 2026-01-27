@@ -11,9 +11,11 @@ Use this action to upload a report to a shared network folder:
 1. In the *Folder path* field, enter the path of the folder where the report should be uploaded.
 
    > [!NOTE]
-   > Make sure the folder exists, and the path uses the format specified by the Universal Naming Convention (UNC). See [UNC paths](https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats#unc-paths).
+   > Make sure the folder exists and the path uses the format specified by the Universal Naming Convention (UNC). See [UNC paths](https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats#unc-paths).
 
-1. In the *Domain\\User name* and *Password* fields, enter credentials for an account with access to the shared folder. Depending on the destination to which the report is being uploaded, these fields may be left empty.
+1. If necessary, in the *Domain\\User name* and *Password* fields, enter credentials for an account with access to the shared folder.
+
+   Depending on the destination where the report is uploaded, these fields may be left empty.
 
 1. To upload the report in PDF format, instead of the default MHT format, next to *Format*, select *PDF*.
 
@@ -32,9 +34,10 @@ Use this action to upload a report to a shared network folder:
 
 ### Example 1
 
-User *Admin* wants their automation script to generate a PDF for dashboard *My Test Dashboard* and upload it to shared folder *WebFileManager* of server *node-2be94e4abd-z* (UNC path: `\\node-2be94e4abd-z\WebFileManager`).
+User *Admin* wants their Automation script to generate a PDF for dashboard *My Test Dashboard* and upload it to shared folder *WebFileManager* of server *node-2be94e4abd-z* (UNC path: `\\node-2be94e4abd-z\WebFileManager`).
 
-<img width="410" height="297" alt="Upload to shared folder00" src="https://github.com/user-attachments/assets/b69ad412-7cf3-46ef-aaae-d14eeb7117a3" />
+![Example 1 configuration](~/dataminer/images/Upload_to_shared_folder1.png)<br>
+*Configuration in DataMiner Cube 10.6.2*
 
 ### Example 2
 
@@ -42,7 +45,8 @@ User *JohnDoe*, belonging to the *BROADCAST* domain, wants a scheduled task to u
 
 The folder path must be converted to a UNC path, `C$\Users\JohnDoe\Reports`, as shown in the image below.
 
-<img width="501" height="297" alt="Upload_to_shared_folder1" src="https://github.com/user-attachments/assets/09f896bf-0308-41b0-9b43-3112748b3a2e" />
+![Example 2 configuration](~/dataminer/images/Upload_to_shared_folder2.png)<br>
+*Configuration in DataMiner Cube 10.6.2*
 
 ### Example 3
 
@@ -50,10 +54,12 @@ A user wants to upload a PDF report or dashboard to local folder `C:/Skyline Dat
 
 The credentials can be skipped in this case.
 
-<img width="430" height="299" alt="Upload to shared folder01" src="https://github.com/user-attachments/assets/fd3b5880-e134-42b4-85b8-563d34d65b9f" />
+![Example 3 configuration](~/dataminer/images/Upload_to_shared_folder3.png)<br>
+*Configuration in DataMiner Cube 10.6.2*
 
 ### Example 4
 
 A user wants to upload a report or dashboard to a folder on the *F:* disk of a server with IP *10.200.10.20* (`F:/Reports`), using an *Administrator* account.
 
-<img width="504" height="295" alt="Upload_to_shared_folder2" src="https://github.com/user-attachments/assets/e8e300a4-70fd-48f3-a9f3-a5ae9d62cac4" />
+![Example 4 configuration](~/dataminer/images/Upload_to_shared_folder4.png)<br>
+*Configuration in DataMiner Cube 10.6.2*
