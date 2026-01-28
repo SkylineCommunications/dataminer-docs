@@ -199,15 +199,15 @@ Also, the app titles have been standardized to ensure consistency across all app
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, in interactive Automation scripts launched from a web app, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all `Time` components as well as the `UIBlockType.Calendar` component will have this ability. Their option classes will now all have a `ShowSeconds` property.
+Up to now, in interactive Automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
 
 - `UIBlockType.Time` with `AutomationDateTimePickerOptions`
 - `UIBlockType.Time` with `AutomationDateTimeUpDownOptions`
 - `UIBlockType.Time` with `AutomationTimePickerOptions`
-- `UIBlockType.Time` with `AutomationTimeUpDownOptions`
 - `UIBlockType.Calendar` with `AutomationCalendarOptions`
 
-In all above-mentioned components, the `ShowSeconds` property will by default be set to false.
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.6.0/10.6.3 or newer.
 
 #### Visual Overview in web apps: Redesigned popup windows [ID 44530]
 

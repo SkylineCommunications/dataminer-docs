@@ -242,18 +242,16 @@ Because of a number of enhancements, overall performance of the the *Cube CRL Fr
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
-#### Interactive Automation scripts launched from web apps: UI components Calendar and Time can now display seconds [ID 44487]
+#### Interactive Automation scripts launched from web apps: UI components Time and Calendar can now all display seconds [ID 44487]
 
 <!-- MR 10.6.0 - FR 10.6.3 -->
 
-Up now on, the UI components *Calendar* and *Time*, used in interactive Automation scripts, were not able to display seconds.
+Up to now, in interactive Automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
 
-From now on, when using the V2 UI, if you want the *Calendar* and the *Time* components to display seconds, you can set the `ShowSeconds` property to true in the `AutomationCalendarOptions` and `AutomationDateTimeUpDownOptions` classes:
-
-- `Skyline.DataMiner.Automation.AutomationCalendarOptions.ShowSeconds`
-- `Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.ShowSeconds`
-
-Also, a new interface `IAutomationTimeOfDayConfigOptions` can now be implemented by the `AutomationCalendarOptions` and `AutomationDateTimeUpDownOptions` classes.
+- `UIBlockType.Time` with `AutomationDateTimePickerOptions`
+- `UIBlockType.Time` with `AutomationDateTimeUpDownOptions`
+- `UIBlockType.Time` with `AutomationTimePickerOptions`
+- `UIBlockType.Calendar` with `AutomationCalendarOptions`
 
 #### GQI: Domain user name will now be included in the OnInitInputArgs of a GQI extension [ID 44509]
 
