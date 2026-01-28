@@ -109,6 +109,18 @@ When a *Timeline* component has grouping applied, from now on, the appearance of
 
 To do so, go to *Layout > Groups > Template*.
 
+#### Low-Code Apps: Support for custom CSS files [ID 44570]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When editing a low-code app, you can now make it use a custom CSS file.
+
+To do so, go to *App settings*. There you can add, update, and delete such a file.
+
+> [!CAUTION]
+> This feature is intended for advanced users only. Use it at your own risk.
+> Also, we cannot guarantee long-term support of CSS customizations as the default HTML structure of low-code app may change over time.
+
 ## Changes
 
 ### Enhancements
