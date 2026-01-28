@@ -59,7 +59,7 @@ A new LNB, SSPA, and transponder icon have been added to the list of available r
 
 When the status of a job was reverted from Confirmed to Tentative, it could occur that action buttons for the job were no longer displayed in the Edit Job panel.
 
-#### Scheduler: Lock on job not removed after duplication [ID 43915]
+#### Scheduling: Lock on job not removed after duplication [ID 43915]
 
 When a locked job was duplicated, the user who had a lock on the original job also had a lock on the duplicated job, which should not be the case and was not clear to the user. This could cause confusion when someone else tried to edit the duplicated job.
 
@@ -75,6 +75,6 @@ When a job that had errors (for example because it went into the quarantined sta
 
 When a recurrence from the Scheduling app was canceled, previously this displayed the incorrect status "Updating Series...". Now the correct status "Canceling Series..." will be displayed instead.
 
-### Resource Studio: Capability, capacity, and property title boxes not displayed correctly when multiple rows are selected [ID 44355]
+#### Resource Studio: Capability, capacity, and property title boxes not displayed correctly when multiple rows are selected [ID 44355]
 
 When multiple rows were selected on the Resources page of Resource Studio, the title boxes for capabilities, capacities, and properties were not displayed correctly.
