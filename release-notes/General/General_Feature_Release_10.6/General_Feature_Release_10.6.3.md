@@ -183,6 +183,12 @@ From now on, SLNet will only send a log entry to SLLog if the log level dictates
 
 If the response to an *SNMP Get* request cannot be mapped, from now on, an error will be logged in the log file of the element in question and in the *SLErrorsInProtocol.txt* file.
 
+#### .dmprotocol packages included in DELT export packages will now also contain all assemblies used by the connectors in those .dmprotocol packages [ID 44345]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+From now on, *.dmprotocol* packages included in DELT export packages will also contain all assemblies used by the connectors in those *.dmprotocol* packages.
+
 #### Factory reset tool: Actions that stop and stop DcMs and DxMs will now have a 15-minute timeout [ID 44387]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
