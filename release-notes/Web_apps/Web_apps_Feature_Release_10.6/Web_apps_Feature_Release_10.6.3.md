@@ -343,6 +343,12 @@ In some cases, a folder named *;THEMES* would incorrectly appear in the navigati
 
 In some cases, a low-code app using a default theme could throw a console error.
 
+#### GQI DxM: Memory leak in DataMiner GQI Extension Worker SLNet process [ID 44564]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, in some cases, the DataMiner GQI Extension Worker SLNet process could leak memory. This process is responsible for maintaining shared SLNet connections for GQI extensions (i.e. ad hoc data sources and custom operators).
+
 #### #### Dashboards/Low-Code Apps - Timeline component: Null reference exception could be thrown [ID 44602]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
