@@ -214,6 +214,14 @@ Also, the app titles have been standardized to ensure consistency across all app
 
 In web apps, the popup windows that appear in visual overviews have now been redesigned.
 
+#### Web apps: Title of login screen will now display the app name in bold [ID 44561]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When you try to log in to a certain web app (e.g. Dashboards, Monitoring, etc.), the title of the login screen mentions the name of the app you want to access: `Sign in to <System name> to access <App name>`.
+
+In that title, the app name will now be displayed in bold to make it stand out more.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - State timeline component: Problems when processing state changes [ID 44277]
