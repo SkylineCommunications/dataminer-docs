@@ -361,6 +361,12 @@ In some cases, a low-code app using a default theme could throw a console error.
 
 Up to now, in some cases, the DataMiner GQI Extension Worker SLNet process could leak memory. This process is responsible for maintaining shared SLNet connections for GQI extensions (i.e. ad hoc data sources and custom operators).
 
+#### Dashboards/Low-Code Apps - Node edge graph component: Problem when moving nodes [ID 44571]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When, in a *Node edge graph* component, node positioning was set to "Linked to data" and the initial viewport was set to "Auto", up to now, the new X and Y coordinates of a node would be incorrect after it had been moved. The node border would not be taken into account, which could cause nodes to fall outside the visible area of the component.
+
 #### #### Dashboards/Low-Code Apps - Timeline component: Null reference exception could be thrown [ID 44602]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
