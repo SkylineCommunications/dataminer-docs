@@ -11,9 +11,9 @@ Scheduled tasks can be stored in either XML or database storage. Database storag
 
 Storing scheduled tasks in the database instead of XML allows the tasks to be swarmed between Agents in the cluster (see [Swarming scheduled tasks](xref:SwarmingScheduledTasks)).
 
-## Configuring the storage type
+## Checking the current storage type
 
-You can specify the storage type in the Scheduler configuration file `C:\Skyline DataMiner\Scheduler\Config.xml` by setting the `Storage` value to either `Xml` or `Database`.
+The storage type used for a specific DMA is shown in the Scheduler configuration file `C:\Skyline DataMiner\Scheduler\Config.xml`. The `Storage` value will either be set to `Xml` or `Database`.
 
 Example configuration:
 
@@ -25,9 +25,12 @@ Example configuration:
 
 If this configuration file is missing, scheduled tasks default to XML storage. Newly installed DataMiner Agents also by default use XML storage.
 
-## Migrating existing XML data
+> [!IMPORTANT]
+> If you want to switch from XML to database storage, do not adjust this directly in this file. Instead, use the migration procedure detailed below.
 
-From DataMiner version 10.6.3/10.7.0 onwards, it is possible to migrate existing scheduled tasks from *Schedule.xml* to database storage, provided you are using [STaaS](xref:STaaS) or [dedicated clustered storage](xref:Dedicated_clustered_storage).
+## Migrating from XML to database storage
+
+From DataMiner version 10.6.3/10.7.0 onwards, it is possible to migrate your scheduled tasks from *Schedule.xml* to database storage, provided you are using [STaaS](xref:STaaS) or [dedicated clustered storage](xref:Dedicated_clustered_storage).
 
 To migrate scheduled tasks:
 
