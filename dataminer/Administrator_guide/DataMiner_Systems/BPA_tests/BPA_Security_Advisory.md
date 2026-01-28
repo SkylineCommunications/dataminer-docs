@@ -9,7 +9,7 @@ This BPA will run a collection of checks to see if the system is configured as s
 Currently, the following parts of the system are covered:
 
 - DMA
-
+  - DMA Version: Verifies if the system was upgraded in the last 6 months (only from DataMiner 1.6.3/10.6 [CU0]/10.5 [CU12] onwards) <!-- RN 44566 -->.
   - gRPC: Verifies if the system is configured to use gRPC for the communication between Cube and the DMA and for inter-DMA communication (only from DataMiner 10.3.2/10.3.0 onwards).
   - Legacy components: Verifies if the v0 web API, the legacy Reporter and Dashboards module, and the legacy Annotations module are disabled.
   - NATS: Verifies if NATS is configured to use TLS (only from DataMiner 10.4.3 onwards).
