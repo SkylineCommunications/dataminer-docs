@@ -91,19 +91,6 @@ Breadcrumbs have now been added to the navigation pane.
 
 By clicking the first breadcrumb, which is named *Overview*, you will navigate back to the root view.
 
-#### Interactive Automation scripts: UI components Calendar and Time can now display seconds [ID 44487]
-
-<!-- MR 10.6.0 - FR 10.6.3 -->
-
-Up now on, the UI components *Calendar* and *Time*, used in interactive Automation scripts, were not able to display seconds.
-
-From now on, when using the V2 UI, if you want the *Calendar* and the *Time* components to display seconds, you can set the `ShowSeconds` property to true in the `AutomationCalendarOptions` and `AutomationDateTimeUpDownOptions` classes:
-
-- `Skyline.DataMiner.Automation.AutomationCalendarOptions.ShowSeconds`
-- `Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.ShowSeconds`
-
-Also, a new interface `IAutomationTimeOfDayConfigOptions` can now be implemented by the `AutomationCalendarOptions` and `AutomationDateTimeUpDownOptions` classes.
-
 #### Dashboards/Low-Code Apps - Timeline component: Zooming vertically while keeping the ALT key pressed [ID 44524]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
@@ -207,6 +194,20 @@ The icons and favicons of the DataMiner landing page and the following DataMiner
 - Monitoring
 
 Also, the app titles have been standardized to ensure consistency across all apps.
+
+#### Interactive Automation scripts: UI components Time and Calendar can now all display seconds [ID 44521]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, in interactive Automation scripts launched from a web app, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all `Time` components as well as the `UIBlockType.Calendar` component will have this ability. Their option classes will now all have a `ShowSeconds` property.
+
+- `UIBlockType.Time` with `AutomationDateTimePickerOptions`
+- `UIBlockType.Time` with `AutomationDateTimeUpDownOptions`
+- `UIBlockType.Time` with `AutomationTimePickerOptions`
+- `UIBlockType.Time` with `AutomationTimeUpDownOptions`
+- `UIBlockType.Calendar` with `AutomationCalendarOptions`
+
+In all above-mentioned components, the `ShowSeconds` property will by default be set to false.
 
 #### Visual Overview in web apps: Redesigned popup windows [ID 44530]
 
