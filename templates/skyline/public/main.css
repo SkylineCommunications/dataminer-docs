@@ -774,13 +774,13 @@ a.backtotoplink:hover
 /* Create equal columns that sits next to each other */
 .column {
   flex: 25%;
-  max-width: 25%;
-  padding: 0px 10px;
+  max-width: 27%;
+  padding: 0px 7px;
 }
 .columnhome {
   flex: 20%;
-  max-width: 20%;
-  padding: 0px 10px;
+  max-width: 25%;
+  padding: 0px 7px;
 }
 
 .column img {
