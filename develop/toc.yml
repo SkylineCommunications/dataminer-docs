@@ -1179,6 +1179,8 @@ items:
         topicUid: SwarmingScriptElement
       - name: Configuring a script to swarm bookings
         topicUid: SwarmingScriptBooking
+      - name: Configuring a script to swarm scheduled tasks
+        topicUid: SwarmingScriptScheduledTask
   - name: EPM integration
     items:
       - name: EPM Integration Training
