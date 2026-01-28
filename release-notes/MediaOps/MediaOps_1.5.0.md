@@ -53,6 +53,12 @@ When users do not have the necessary permissions to execute a certain action, a 
 
 A new LNB, SSPA, and transponder icon have been added to the list of available resource icons in the Resource Studio app.
 
+#### Scheduling: Node alias shown in nodes overview table of job [ID 44637]
+
+When an alias is defined on a job node, this will now be shown in the resource pool column of the nodes overview table in the following format: \<alias> (\<resource pool name>).
+
+In case no alias is defined, the previous format will continue to be applied.
+
 ### Fixes
 
 #### Scheduling: Action buttons missing in Edit Job panel after reverting job status to Tentative [ID 43808]
