@@ -121,6 +121,19 @@ To do so, go to *App settings*. There you can add, update, and delete such a fil
 > This feature is intended for advanced users only. Use it at your own risk.
 > Also, we cannot guarantee long-term support of CSS customizations as the default HTML structure of low-code app may change over time.
 
+#### Dashboards/Low-Code Apps - Timeline component: Group height can now be set to either 'Fixed' or 'Grow' [ID 44577]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When a *Timeline* component has grouping applied, from now on, under *Layout > Groups > Height*, the height of those groups can be set to either "Fixed" or "Grow".
+
+- When set to "Fixed" (i.e. the default setting), the items within a group will shrink depending on the number of items in that group. That way, the height of the group will stay the same.
+
+- When set to "Grow", all items within a group will have the same height, and the height of the group will grow accordingly.
+
+> [!NOTE]
+> Up to now, "Grow" was the default behavior. In order not to break existing setups, *Timeline* components in existing dashboards and low-code apps will not have their group height automatically set to "Fixed".
+
 ## Changes
 
 ### Enhancements
@@ -365,7 +378,7 @@ Up to now, in some cases, the DataMiner GQI Extension Worker SLNet process could
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When, in a *Node edge graph* component, node positioning was set to "Linked to data" and the initial viewport was set to "Auto", up to now, the new X and Y coordinates of a node would be incorrect after it had been moved. The node border would not be taken into account, which could cause nodes to fall outside the visible area of the component.
+When, in a *Node edge graph* component, node positioning was set to "Linked to data" and the initial viewport was set to "Auto", up to now, when a node was moved, the border of the node would incorrectly not be taken into account. As a result, the new X and Y coordinates of the node would be incorrect, causing the node to not end up at the intended location.
 
 #### #### Dashboards/Low-Code Apps - Timeline component: Null reference exception could be thrown [ID 44602]
 
