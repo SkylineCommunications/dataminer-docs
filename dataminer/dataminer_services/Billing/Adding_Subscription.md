@@ -17,7 +17,7 @@ To configure and purchase a new subscription for your organization:
 
    This will open a window where you can select the services and reservations you need, choose the subscription duration, and see the total cost before confirming your purchase. For more information on these options, refer to the sections below
 
-1. When you have fully configured your subscription, check the financial summary in the lower right corner, and make sure your organization has sufficient credits:
+1. When you have fully configured your subscription, check the summary in the lower right corner, and make sure your organization has sufficient credits:
 
    - **Savings**: Shows the total credits saved compared to pay-per-use pricing. Higher volumes and longer durations typically result in greater savings.
    - **Total cost**: The total credit amount that will be charged for the subscription.
@@ -41,7 +41,7 @@ For each service, you can configure the following settings:
 - **Volume / Month**: Use the number input to set how many units of each service you want to reserve per month.
 - **Rate**: Shows the cost per unit in credits (for example, "0.40 ⊙ / Each" or "2.00 ⊙ / 1,000"). When a discount is applied, the original price is shown with a strikethrough and the discounted price is displayed alongside a discount percentage badge (for example, "-10%").
 - **Cost**: Shows the calculated cost for your selected volume (automatically updated as you adjust volumes).
-- **Info icon**: Hover over the information icon to view available volume discount tiers for applicable services.
+- **Info icon**: Hover over the information icon to view available volume discount tiers for applicable services and the chosen duration.
 
 Some services offer **volume-based discounts**. As you adjust the volume, the discount is automatically applied and displayed in the *Rate* column:
 
