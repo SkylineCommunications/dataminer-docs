@@ -51,11 +51,19 @@ Also, if an exception would be thrown during a stop action, a kill command will 
 
 DataMiner Ticketing has been declared End of Life. As a result, all server code related to Ticketing has been removed.
 
-#### Security Advisory BPA test: Enhancements [ID 44444] [ID 44477]
+#### Security Advisory BPA test: Enhancements [ID 44444] [ID 44477] [ID 44566]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-Up to now, the *Local admin hygiene* test would verify whether the local admin account was disabled and whether there were not too many local administrator accounts. From now on, this test will no longer be performed as the recommendations in the [hardening guide](https://aka.dataminer.services/HardeningGuide) have been updated.
+A number of enhancements have been made to the Security Advisory BPA test:
+
+- Up to now, the *Local admin hygiene* test would verify whether the local admin account was disabled and whether there were not too many local administrator accounts. From now on, this test will no longer be performed as the recommendations in the [hardening guide](https://aka.dataminer.services/HardeningGuide) have been updated.
+
+- The HTTP header test will now also check whether the referrer-policy header is set.
+
+- A new test was added that will check the *versionhistory.txt* file to find out whether a system upgrade was performed in the last 6 months.
+
+  If the contents of the *versionhistory.txt* file cannot be read, the test will check when that file was last updated, and if that also fails, it will check when the *SLNet.exe* file was last updated.
 
 Also, the following issues have now been fixed:
 
