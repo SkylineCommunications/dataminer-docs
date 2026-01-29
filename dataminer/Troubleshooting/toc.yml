@@ -257,6 +257,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Possible overbooking in SRM
+            topicUid: KI_Possible_overbooking_in_SRM
           - name: DataMiner Web and GQI crash briefly during startup
             topicUid: KI_DataMiner_Web_and_GQI_crash_briefly_during_startup
           - name: Profile Manager fails to initialize after rollback to an earlier DataMiner version
@@ -301,6 +303,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: SLDataGateway issue caused by OpenSearch health monitoring
+            topicUid: KI_SLDataGateway_issue_OpenSearch_health_monitoring
           - name: QActions fail for element after uploading new protocol version
             topicUid: KI_QActions_fail_after_upload_protocol_version
           - name: Incorrect date sorting in Bookings app with custom column configurations
