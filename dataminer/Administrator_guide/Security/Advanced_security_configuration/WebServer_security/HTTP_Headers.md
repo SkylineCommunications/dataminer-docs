@@ -16,7 +16,7 @@ The X-Frame-Options header controls which other websites can embed the DataMiner
 
 1. In the *Connections* pane on the left, select *Default Web Site*.
 
-1. In the middle pane, double-click *HTTP Reponse Headers*.
+1. In the middle pane, double-click *HTTP Response Headers*.
 
 1. In the *Actions* pane, click *Add*.
 
@@ -34,7 +34,7 @@ The X-Content-Type-Options header dictates how the browser should handle MIME ty
 
 1. In the *Connections* pane on the left, select *Default Web Site*.
 
-1. In the middle pane, double-click *HTTP Reponse Headers*.
+1. In the middle pane, double-click *HTTP Response Headers*.
 
 1. In the *Actions* pane, click *Add*.
 
@@ -46,13 +46,13 @@ The X-Content-Type-Options header dictates how the browser should handle MIME ty
 
 ### Referrer-Policy
 
-The Referrer-Policy header dictates how much referrer information should be included in the Referer <!-- not a typo, it's actually misspelled like this --> header.
+The Referrer-Policy header dictates how much referrer information should be included in the *Referer*<!-- sic --> header.
 
 1. Open *IIS Manager*.
 
 1. In the *Connections* pane on the left, select *Default Web Site*.
 
-1. In the middle pane, double-click *HTTP Reponse Headers*.
+1. In the middle pane, double-click *HTTP Response Headers*.
 
 1. In the *Actions* pane, click *Add*.
 
@@ -96,7 +96,7 @@ To enable *Strict Transport Security*:
 
 1. In the *Connections* pane on the left, select *Default Web Site*.
 
-1. In the middle pane, double-click *HTTP Reponse Headers*.
+1. In the middle pane, double-click *HTTP Response Headers*.
 
 1. In the *Actions* pane, click *Add*.
 
