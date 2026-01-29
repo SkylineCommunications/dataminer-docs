@@ -263,6 +263,34 @@ When you try to log in to a certain web app (e.g. Dashboards, Monitoring, etc.),
 
 In that title, the app name will now be displayed in bold to make it stand out more.
 
+#### GQI DxM: Enhanced filtering on object reference columns [ID 44567]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, it was not possible to add an `equals` filter on e.g. an elementID column. It was only possible to add a `contains` filter.
+
+From now on, it will be possible to add an `equals` filter on all columns containing the following object references:
+
+- ElementID
+- InterfaceID
+- ParamID
+- RedundancyGroupID
+- ServiceID
+- ViewID
+
+Also, when using the following data sources, it will now also be possible to use a filter value in order to retrieve only the necessary data from the DataMiner System:
+
+| Data source | Columns on which can be filtered |
+|---|---|
+| Get parameters for elements where | elementID |
+| Get Alarms | element ID and parameter ID |
+| Get behavioral change events | element ID and parameter ID |
+| Get trend data pattern events | element ID and parameter ID |
+| Get relational anomalies | element ID and parameter ID |
+
+> [!IMPORTANT]
+> The sorting behavior of these columns has changed. Up to now, the columns would be sorted according to the internal logic of these reference objects. From now on, they will be sorted by the key (string) value of the reference objects.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - State timeline component: Problems when processing state changes [ID 44277]
