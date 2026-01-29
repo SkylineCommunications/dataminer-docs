@@ -26,7 +26,11 @@ items:
           - name: General Feature Release 10.6.3 - Preview
             topicUid: General_Feature_Release_10.6.3
           - name: General Feature Release 10.6.2
-            topicUid: General_Feature_Release_10.6.2
+            items:
+              - name: New features and changes
+                topicUid: General_Feature_Release_10.6.2
+              - name: General Feature Release 10.6.2 CU1
+                topicUid: General_Feature_Release_10.6.2_CU1
           - name: General Feature Release 10.6.1
             topicUid: General_Feature_Release_10.6.1
   - name: v10.5

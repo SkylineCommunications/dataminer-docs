@@ -326,14 +326,6 @@ On a newly created DaaS system, up to now, short-lived alarms without operationa
 
 In the alarm template of the *My DataMiner Agent* element, hysteresis has now been tweaked to prevent such alarms from appearing on newly created DaaS systems.
 
-#### Calls that check whether the connection between client and DMA is still alive would incorrectly be blocked when 10 simultaneous calls were being processed [ID 44456]
-
-<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
-
-When 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent were being processed, up to now, any additional call would be blocked, including calls that check whether the connection between client and DMA was still alive. As a result, the client application would disconnect.
-
-From now on, even when 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent are being processed, calls that check whether the connection between client and DMA is still alive will never be blocked.
-
 #### GQI: Problem with Timer callbacks could cause SLHelper to stop working [ID 44458]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
