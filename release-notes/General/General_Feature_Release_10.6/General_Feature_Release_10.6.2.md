@@ -75,6 +75,9 @@ Also, all logging with regard to OpenSearch health monitoring can now be found i
 
 Note that, from now on, if not all nodes of the OpenSearch cluster are listed in the *Db.xml* file, a notice will be generated to warn operators.
 
+> [!IMPORTANT]
+> These enhancements have been reverted. See [SLDataGateway issue caused by OpenSearch health monitoring [ID 44647]](xref:General_Feature_Release_10.6.2_CU1#sldatagateway-issue-caused-by-opensearch-health-monitoring-id-44647).
+
 #### Augmented Operations: Server-side support for new flatline detection modes [ID 44094]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->

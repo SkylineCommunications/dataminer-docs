@@ -36,16 +36,6 @@ During a DataMiner upgrade, from now on, a new upgrade action will register all 
 
 A number of security enhancements have been made.
 
-#### OpenSearch: Enhanced health monitoring [ID 43951]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-A number of enhancements have been made with regard to health monitoring of OpenSearch databases.
-
-Also, all logging with regard to OpenSearch health monitoring can now be found in *SLSearchHealth.txt*. Up to now, that logging was added to *SLCassandraHealth.txt*.
-
-Note that, from now on, if not all nodes of the OpenSearch cluster are listed in the *Db.xml* file, a notice will be generated to warn operators.
-
 #### Elasticsearch/OpenSearch: Enhanced history alarm filtering on service ID or service name [ID 44192]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
