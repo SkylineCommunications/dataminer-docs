@@ -10,10 +10,6 @@ items:
           topicUid: Assistant_Context
         - name: Adding custom user context
           topicUid: Assistant_UserContext
-        - name: Adding or editing context files
-          topicUid: Assistant_AddingContextFiles
-        - name: Adding custom predefined questions
-          topicUid: Assistant_Predefined_Questions
       - name: Natural language to GQI
         topicUid: NL2GQI
       - name: Document Intelligence
