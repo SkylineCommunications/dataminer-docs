@@ -2,11 +2,11 @@
 uid: DOM_security_ui
 ---
 
-# Configuring DOM definition-level security
+# Configuring DOM security
 
 <!-- RN 43622 -->
 
-From DataMiner 10.5.11/10.6.0 onwards, you can configure definition-level security settings for DOM. In the background, this will make use of the [link security](xref:DOM_security#link-security) feature.
+From DataMiner 10.5.11/10.6.0 onwards, you can configure definition-level security settings for DOM. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44385-->, you can also configure security at DOM instance level. In the background, this will make use of the [link security](xref:DOM_security#link-security) feature.
 
 ![Configuring DOM definition-level security in DataMiner 10.5.11](~/dataminer/images/DOMSecurityApp.png)<br>*Configuring DOM definition-level security in DataMiner 10.5.11*
 
@@ -27,13 +27,23 @@ The UI displays all available DOM modules in a list on the left, with a filter b
 
 By default, all users will have full access to all DOM modules, which means that they will all be allowed to create, read, update, and delete DOM definitions in all available DOM modules.
 
-To restrict access for specific definitions:
+To restrict access for specific definitions and their individual instances:
 
 1. Select the module, and switch to *Restrict access* with the button on the right.
 
    At this point, no one will have access to the definitions in the module. The list of DOM definitions within the module will expand so you can select a definition.
 
-1. Select a definition and switch the groups with users that need to be able to read, update, and delete that DOM definition to *Full Access*.
+1. Select a definition and switch the groups with users to the desired level of access:
+
+   - *No access*: The group does not have permission to access the DOM definition.
+
+   - *Limited access*: Available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44385-->. The user group has access to specific DOM instances based on whether that DOM instance contains at least one of a specified set of values for specified FieldDescriptor.
+
+   - *Full access*: The group will be able to read, update, and delete that DOM definition to *Full Access*.
+
+1. If you have selected *Limited access*, select a field descriptor and specify the value it needs to be equal to.
+
+   For example, the user group "London employees" will only be able to read the "Job" instances where the *Assigned office* field (i.e. a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
 
 1. Repeat this for each definition users should have access to.
 
