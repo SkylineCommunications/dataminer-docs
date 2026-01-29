@@ -210,7 +210,7 @@ namespace Skyline.DataMiner.Automation
 		/// <value><c>true</c> to show the seconds; otherwise, <c>false</c>.</value>
 		/// <remarks>
 		/// <para>Default: <c>false</c>.</para>
-		/// <para>Only applicable to Web UI version, from V2 onwards; available from DataMiner 10.6.3/10.6.0 onwards.</para> <!-- RN 44487 / RN 44521 -->
+		/// <para>Only applicable to Web UI version, from V2 onwards; available from DataMiner 10.6.0/10.6.3 onwards.</para> <!-- RN 44487 / RN 44521 -->
 		/// </remarks>
 		public bool ShowSeconds { get; set; }
 
