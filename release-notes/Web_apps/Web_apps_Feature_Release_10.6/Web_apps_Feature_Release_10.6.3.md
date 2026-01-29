@@ -246,6 +246,15 @@ In web apps, the popup windows that appear in visual overviews have now been red
 
 When you export or import a dashboard or a low-code app, from now on, the theme will now automatically be included in the export or import package.
 
+#### GQI DxM: 'Get parameters for elements where' data source can now query indexed logger tables [ID 44553]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+From now on, it will be possible to use the GQI data source *Get parameters for elements where* to query indexed logger tables that are stored in an Elasticsearch or OpenSearch database.
+
+> [!NOTE]
+> This will not be possible on systems using STaaS. This only applies to systems with an Elasticsearch or OpenSearch database.
+
 #### Web apps: Title of login screen will now display the app name in bold [ID 44561]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
