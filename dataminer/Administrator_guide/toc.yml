@@ -658,6 +658,8 @@ items:
         topicUid: SwarmingElements
       - name: Swarming bookings
         topicUid: SwarmingBookings
+      - name: Swarming scheduled tasks
+        topicUid: SwarmingScheduledTasks
       - name: Rolling back Swarming
         topicUid: SwarmingRollback
       - name: Frequently asked questions
