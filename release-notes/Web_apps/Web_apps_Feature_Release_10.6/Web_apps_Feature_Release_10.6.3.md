@@ -423,6 +423,12 @@ Up to now, in some cases, the DataMiner GQI Extension Worker SLNet process could
 
 When, in a *Node edge graph* component, node positioning was set to "Linked to data" and the initial viewport was set to "Auto", up to now, when a node was moved, the border of the node would incorrectly not be taken into account. As a result, the new X and Y coordinates of the node would be incorrect, causing the node to not end up at the intended location.
 
+#### Dashboards/Low-Code Apps - Timeline component: Problem when zooming out until the component switched to minimized view [ID 44581]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When, in a *Timeline* component, you zoomed out until the component switched to minimized view, certain shapes would not get rendered at the correct position.
+
 #### #### Dashboards/Low-Code Apps - Timeline component: Null reference exception could be thrown [ID 44602]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
