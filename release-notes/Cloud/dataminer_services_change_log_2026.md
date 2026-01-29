@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 29 January 2026 - `PLACEHOLDER`
+
+tbd
+
 ### 8 January 2026 - Enhancement - Billing - Dashboard Sharing & Unmanaged Objects usage billing
 
 Starting from January 2026, automatic monthly billing will be implemented for Dashboard Sharing & Unmanaged Objects. On the 5th day of each month, the expended DataMiner credits for the previous month's usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.
