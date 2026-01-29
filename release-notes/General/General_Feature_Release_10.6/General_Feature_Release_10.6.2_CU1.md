@@ -30,6 +30,12 @@ uid: General_Feature_Release_10.6.2_CU1
 
 ### Fixes
 
+#### Problem with the GQI DxM when it tried to connect to SLNet during DataMiner startup [ID 44380]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU1] -->
+
+During DataMiner startup, in some rare cases, a fatal error could occur in the GQI DxM when it tried to connect to SLNet.
+
 #### Calls that check whether the connection between client and DMA is still alive would incorrectly be blocked when 10 simultaneous calls were being processed [ID 44456]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.2 [CU1] -->
