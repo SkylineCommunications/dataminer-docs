@@ -9,9 +9,18 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 29 January 2026 - `PLACEHOLDER`
+### 29 January 2026 - Enhancement - dataminer.services - Improved DaaS deployment credit validation
 
-tbd
+You will now be notified earlier during DaaS deployment if your organization has insufficient credits, allowing you to top up before proceeding with the deployment.
+
+### 29 January 2026 - Enhancement - Admin - Usage page simplification
+
+The usage page has been simplified by removing the totals and credits columns.
+A new page is being developed that will restore usage breakdowns per system, feature, and service without credit costs.
+
+### 29 January 2026 - Fix - Admin - Audit log export
+
+An issue has been resolved that prevented the audit log from being exported.
 
 ### 8 January 2026 - Enhancement - Billing - Dashboard Sharing & Unmanaged Objects usage billing
 
