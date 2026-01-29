@@ -151,7 +151,7 @@ Many components in dashboards and low-code apps can be configured to be linked t
 Because of a number of enhancements to the theme logic, overall performance has increased when loading a dashboard or a low-code app.
 
 > [!NOTE]
-> As the theme folder structure has been changed, an incorrect theme could be assigned to dashboards and low-code apps imported as part of a Catalog package. A theme import/export functionality is being developed and will become available in a future version.
+> As the theme folder structure has been changed, an incorrect theme could be assigned to dashboards and low-code apps imported as part of a Catalog package.
 
 #### Dashboards/Low-Code Apps - Column & bar chart component: Minor enhancements [ID 44416]
 
@@ -239,6 +239,12 @@ Up to now, in interactive Automation scripts launched from web apps, only the `U
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 In web apps, the popup windows that appear in visual overviews have now been redesigned.
+
+#### Dashboards/Low-Code Apps: Themes will now be included when exporting or importing a dashboard or a low-code app [ID 44540]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When you export or import a dashboard or a low-code app, from now on, the theme will now automatically be included in the export or import package.
 
 #### Web apps: Title of login screen will now display the app name in bold [ID 44561]
 
