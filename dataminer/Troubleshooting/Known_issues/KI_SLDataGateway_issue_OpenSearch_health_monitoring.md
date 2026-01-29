@@ -10,7 +10,7 @@ Dedicated clustered storage setups using DataMiner 10.5.0 [CU11]/10.6.2.
 
 ## Cause
 
-Because of changes introduced in DataMiner 10.5.0 [CU11]/10.6.2, with certain D*B.xml* configurations or recent OpenSearch versions, the search database can be stuck in the RED health state and SLDataGateway can crash at startup.
+Because of changes introduced in DataMiner 10.5.0 [CU11]/10.6.2, with certain *DB.xml* configurations or recent OpenSearch versions, the search database can be stuck in the RED health state and SLDataGateway can crash at startup.
 
 ## Fix
 
