@@ -294,6 +294,17 @@ From now on, it will no longer be possible to migrate booking data from a Cassan
 
 Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e. from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
 
+#### DataMiner backup: Scheduler configuration will now be included in full and configuration backups [ID 44584]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+From now on, the Scheduler configuration found in `C:\Skyline Dataminer\Scheduler` will be included in the following pre-configured backups:
+
+- Full backup (without database)
+- Configuration backup (without database)
+
+If you create a custom backup, the Scheduler configuration will be included only if you selected the *DataMiner settings* option.
+
 ### Fixes
 
 #### Numeric cell would incorrectly not be cleared when its exception value was set to 0 [ID 44356]
