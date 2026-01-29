@@ -8,6 +8,8 @@ uid: KI_Possible_overbooking_in_SRM
 
 SRM setups using DataMiner 10.5.12 or higher.
 
+Main Release versions are not affected.
+
 ## Cause
 
 From DataMiner 10.5.12 onwards, only the first 1000 overlapping bookings returned by the database are taken into account when calculating resource availability. This can cause overbookings on resources.
