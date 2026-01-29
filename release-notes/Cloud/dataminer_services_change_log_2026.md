@@ -15,10 +15,11 @@ You will now be notified earlier during DaaS deployment if your organization has
 
 ### 29 January 2026 - Enhancement - Admin - Usage page simplification
 
-The usage page has been simplified by removing the totals and credits columns.
-A new page is being developed that will restore usage breakdowns per system, feature, and service without credit costs.
+To simplify the Usage page, the totals and credits columns have been removed.
 
-### 29 January 2026 - Fix - Admin - Audit log export
+Note that a new page is being developed that will restore usage breakdowns per system, feature, and service without credit costs.
+
+### 29 January 2026 - Fix - Admin - Not possible to export audit log
 
 An issue has been resolved that prevented the audit log from being exported.
 
