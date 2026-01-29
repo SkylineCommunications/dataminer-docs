@@ -859,3 +859,14 @@ When you removed a rogue or unreachable IP address on the *Agents* page in *Syst
 On a newly created DaaS system, up to now, short-lived alarms without operational impact could appear immediately after the *My DataMiner Agent* element had been created.
 
 In the alarm template of the *My DataMiner Agent* element, hysteresis has now been tweaked to prevent such alarms from appearing on newly created DaaS systems.
+
+#### SLAnalytics - Behavior anomaly detection: Anomaly significance of anomalous change points would incorrectly be set to zero [ID 44585]
+
+<!-- MR 10.6.0 - FR 10.6.3 -->
+
+Up to now, in some cases, the anomaly significance of change points that are marked anomalous due to crossing a user-configured threshold in the alarm template would incorrect remain set to zero.
+
+From now on, the anomaly significance of these change points will correctly be set to a high value.
+
+> [!NOTE]
+> When you use the *Get behavioral change events* data source to retrieve change points, the anomaly significance of theses change points can be found in the *Anomaly significance* column.

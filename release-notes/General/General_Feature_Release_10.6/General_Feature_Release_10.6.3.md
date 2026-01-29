@@ -305,6 +305,25 @@ From now on, the Scheduler configuration found in `C:\Skyline Dataminer\Schedule
 
 If you create a custom backup, the Scheduler configuration will be included only if you selected the *DataMiner settings* option.
 
+#### Scheduler: Enhanced logging when a Windows task cannot be found and needs to be recreated [ID 44587]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+If, at DataMiner startup, the scheduled task configured for the DMA could not be found in the Windows Task Scheduler, up to now, SLScheduler would log a message like the following one:
+
+```console
+Failed to get info for task 1 [BTT: Cassandra Backup]: Failed to get info for task 'Skyline DataMiner Scheduled Task 1': 0x80070002h The system cannot find the file specified.
+```
+
+This message would incorrectly not indicate whether the task was missing in the Windows Task Scheduler or whether an issue had occurred while verifying it. Also, it would be unclear whether DataMiner would recreate the scheduled task.
+
+From now on, when a task cannot be found in the Windows Task Scheduler and needs to be recreated, more detailed information will be added to the *SLScheduler.txt* log file. See the example log entry below:
+
+```console
+Failed to get MS task for Scheduler task 321/2 [Task 1]: (Task 'Skyline DataMiner Scheduled Task 321-2' not found in MS Task Scheduler). MS Task will be recreated.
+Task 321/2 [Task 1] successfully added to MS Task Scheduler
+```
+
 ### Fixes
 
 #### Numeric cell would incorrectly not be cleared when its exception value was set to 0 [ID 44356]
@@ -356,3 +375,14 @@ When, on the same connection, there were two subscriptions to the same object, i
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 When an element was restarted, and that element had alarms with service impact that were being tracked by an SLA, in some cases, the SLA would degrade when one of those alarms no longer affected the SLA.
+
+#### SLAnalytics - Behavior anomaly detection: Anomaly significance of anomalous change points would incorrectly be set to zero [ID 44585]
+
+<!-- MR 10.6.0 - FR 10.6.3 -->
+
+Up to now, in some cases, the anomaly significance of change points that are marked anomalous due to crossing a user-configured threshold in the alarm template would incorrect remain set to zero.
+
+From now on, the anomaly significance of these change points will correctly be set to a high value.
+
+> [!NOTE]
+> When you use the *Get behavioral change events* data source to retrieve change points, the anomaly significance of theses change points can be found in the *Anomaly significance* column.

@@ -104,6 +104,25 @@ Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator)
 
 From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
 
+#### Scheduler: Enhanced logging when a Windows task cannot be found and needs to be recreated [ID 44587]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+If, at DataMiner startup, the scheduled task configured for the DMA could not be found in the Windows Task Scheduler, up to now, SLScheduler would log a message like the following one:
+
+```console
+Failed to get info for task 1 [BTT: Cassandra Backup]: Failed to get info for task 'Skyline DataMiner Scheduled Task 1': 0x80070002h The system cannot find the file specified.
+```
+
+This message would incorrectly not indicate whether the task was missing in the Windows Task Scheduler or whether an issue had occurred while verifying it. Also, it would be unclear whether DataMiner would recreate the scheduled task.
+
+From now on, when a task cannot be found in the Windows Task Scheduler and needs to be recreated, more detailed information will be added to the *SLScheduler.txt* log file. See the example log entry below:
+
+```console
+Failed to get MS task for Scheduler task 321/2 [Task 1]: (Task 'Skyline DataMiner Scheduled Task 321-2' not found in MS Task Scheduler). MS Task will be recreated.
+Task 321/2 [Task 1] successfully added to MS Task Scheduler
+```
+
 ### Fixes
 
 #### Numeric cell would incorrectly not be cleared when its exception value was set to 0 [ID 44356]
