@@ -429,7 +429,15 @@ When, in a *Node edge graph* component, node positioning was set to "Linked to d
 
 When, in a *Timeline* component, you zoomed out until the component switched to minimized view, certain shapes would not get rendered at the correct position.
 
-#### #### Dashboards/Low-Code Apps - Timeline component: Null reference exception could be thrown [ID 44602]
+#### Dashboards/Low-Code Apps - Timeline component: Changes to certain settings would not get applied correctly [ID 44596]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When changes had been made to the settings of a *Timeline* component, in some cases, these changes would not get applied correctly.
+
+For example, changes to *Layout > General > Query name > Start/End column* would not get applied when you removed an older query from the timeline.
+
+#### Dashboards/Low-Code Apps - Timeline component: Null reference exception could be thrown [ID 44602]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
