@@ -48,4 +48,7 @@ In case issues occur, the SLDataMiner log file could provide useful information 
 
 The zrok Agent log file is included in a Log Collector package.
 
-On the on-premises machine, the zrok Agent log file can be found at `C:\Windows\System32\config\systemprofile\.zrok` on Windows, and can be viewed on Linux using `journalctl -u zrok-agent`.
+To find the zrok Agent log file on the on-premises machine:
+
+- On Windows, go to `C:\Windows\System32\config\systemprofile\.zrok`.
+- On Linux, use `journalctl -u zrok-agent`.
