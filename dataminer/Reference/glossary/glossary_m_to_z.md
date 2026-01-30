@@ -167,7 +167,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Scan range | Definition of how to scan the network as part of [DataMiner IDP](xref:SolIDP). This includes the IP address ranges where the scan should occur and the CI Types indicating the types of devices that should be detected. |
 | Scheduled event | An event consisting of a start and stop task, scheduled to be executed at a specific time in the DMS. See [Scheduling an event based on a Scheduler template](xref:Scheduling_an_event_based_on_a_Scheduler_template). |
 | Scheduled task | An action that is scheduled to be executed at a specific time in the DMS. See [Manually adding a scheduled task](xref:Manually_adding_a_scheduled_task). |
-| Scheduler | DataMiner application that allows you to schedule certain actions in the DataMiner System. See [Scheduler](xref:scheduler). |
+| Scheduler | DataMiner application that allows you to schedule certain actions in the DataMiner System. See [Scheduler](xref:About_the_Scheduler_module). |
 | SCPC | Single Channel Per Carrier. Technology where a single signal is used at a given frequency and bandwidth. |
 | SCSI | Small Computer System Interface. |
 | SDH | Synchronous Digital Hierarchy. Standard technology in Europe for synchronous data transmission on optical media. Its US counterpart is SONET. |

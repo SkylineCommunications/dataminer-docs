@@ -1269,10 +1269,11 @@ items:
       - name: Using the profiles tab
         topicUid: SRM_Services_profiles
   - name: Scheduler
-    topicUid: scheduler
     items:
       - name: About DataMiner Scheduler
         topicUid: About_the_Scheduler_module
+      - name: Scheduler UI overview
+        topicUid: Scheduler_UI_overview
       - name: Manually adding a scheduled task
         topicUid: Manually_adding_a_scheduled_task
       - name: Scheduling an event based on a Scheduler template
