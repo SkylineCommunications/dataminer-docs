@@ -49,3 +49,14 @@ From now on, even when 10 simultaneous calls between a client application (e.g. 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU1] -->
 
 After an upgrade to DataMiner 10.6.2 [CU0], it could occur that SLSearchHealth.txt reported issues with the health monitor, and SLDataGateway could crash at startup. The changes that introduced this issue, i.e. [OpenSearch: Enhanced health monitoring [ID 43951]](xref:General_Feature_Release_10.6.2#opensearch-enhanced-health-monitoring-id-43951), have been reverted.
+
+#### Service & Resource Management: Problem when calculating resource availability [ID 44649]
+
+<!-- MR 10.7.0 - FR 10.6.2 [CU1] -->
+
+When calculating resource availability, the resource manager only checks the first 1000 bookings returned by the database. This means that, if there are more than 1000 bookings, resource availability will not be calculated correctly, causing the following issues:
+
+- When `GetEligibleResources` is being used, resources that are not available could be returned as available.
+- When `ReservationInstances` are created or updated, resources could get overbooked beyond their available concurrency and capacity.
+
+From now on, the creation of new bookings that overbook a resource will be prevented.
