@@ -52,7 +52,7 @@ After an upgrade to DataMiner 10.6.2 [CU0], it could occur that SLSearchHealth.t
 
 #### Service & Resource Management: Problem when calculating resource availability [ID 44649]
 
-<!-- MR 10.7.0 - FR 10.6.2 [CU1] -->
+<!-- MR 10.6.0 - FR 10.6.2 [CU1] -->
 
 When calculating resource availability, the resource manager only checks the first 1000 bookings returned by the database. This means that, if there are more than 1000 bookings, resource availability will not be calculated correctly, causing the following issues:
 

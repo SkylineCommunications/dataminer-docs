@@ -871,3 +871,14 @@ From now on, the anomaly significance of these change points will correctly be s
 
 > [!NOTE]
 > When you use the *Get behavioral change events* data source to retrieve change points, the anomaly significance of theses change points can be found in the *Anomaly significance* column.
+
+#### Service & Resource Management: Problem when calculating resource availability [ID 44649]
+
+<!-- MR 10.6.0 - FR 10.6.2 [CU1] -->
+
+When calculating resource availability, the resource manager only checks the first 1000 bookings returned by the database. This means that, if there are more than 1000 bookings, resource availability will not be calculated correctly, causing the following issues:
+
+- When `GetEligibleResources` is being used, resources that are not available could be returned as available.
+- When `ReservationInstances` are created or updated, resources could get overbooked beyond their available concurrency and capacity.
+
+From now on, the creation of new bookings that overbook a resource will be prevented.
