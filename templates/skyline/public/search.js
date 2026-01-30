@@ -6,9 +6,14 @@ function initSearch() {
     "docs", // https://docs.dataminer.services/* (main)
   ];
 
-  createSearchResultsNewHtml();
-  initEventHandlersCloseOpenSearch();
+  unhideNavbarSearch();
+  initEventHandlersSearchInput();
+  initEventHandlersCloseSearch();
   tryHandleURL();
+
+  function unhideNavbarSearch() {
+    document.getElementById('search-input')?.classList.remove('d-none');
+  }
 
   function tryHandleURL() {
     const searchQuery = new URLSearchParams(window.location.search)?.get('search') ?? '';
@@ -48,9 +53,15 @@ function initSearch() {
     };
   };
 
-  function createSearchResultsNewHtml() {
+  function initEventHandlersSearchInput() {
     var searchBox = document.getElementById("search-input")
     searchBox.addEventListener("keyup", debounce(search, 350));
+    searchBox.addEventListener("input", (event) => {
+      if (!event.target.value) {
+        showSearch(false);
+        clearResults();
+      }
+    })
   }
 
   function getTitle(str) {
@@ -89,15 +100,7 @@ function initSearch() {
     return '';
   }
 
-  function initEventHandlersCloseOpenSearch() {
-
-    var newSearchBox = document.getElementById("new-search-btn");
-
-    newSearchBox.addEventListener("click", (event) => {
-      showSearch(true);
-      document.getElementById('search-input').focus();
-    });
-
+  function initEventHandlersCloseSearch() {
     //attach a click handler to the close icon
     var searchCloseButton = document.getElementById("search-close-btn");
     searchCloseButton.addEventListener("click", (event) => {
@@ -110,9 +113,11 @@ function initSearch() {
   function search(e) {
     var searchTerm = e.target.value;
     if (searchTerm.length) {
+      showSearch(true);
       doGetHttpRequest(searchTerm);
     } else {
       clearResults();
+      showSearch(false);
     }
   }
 
@@ -272,15 +277,16 @@ function processSearchResults(data, searchTerm) {
             });
         });
     });
-}
+  }
 
   function showSearch(showSearch) {
+    var mainEl = document.getElementById('main');
     var searchResults = document.getElementById('search-results-new');
     if (showSearch) {
-      document.getElementById("main").style.display = "none";
+      mainEl.style.display = "none";
       searchResults.style.display = "block";
     } else {
-      document.getElementById("main").style = null;
+      mainEl.style = null;
       searchResults.style.display = "none";
     }
   }
