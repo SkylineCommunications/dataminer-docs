@@ -278,6 +278,14 @@ Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator)
 
 From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
 
+#### SLManagedScripting will again add a log entry each time it has loaded or failed to load an assembly [ID 44522]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Since DataMiner version 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9<!-- RN 43690 -->, SLManagedScripting no longer added an entry in the *SLManagedScripting.txt* log file each time it had loaded or failed to load an assembly. From now on, it will again do so.
+
+These log entries will include both the requested version and the actual version of the assembly.
+
 #### SLNet messages GetLiteElementInfo, GetLiteServiceInfo, and GetLiteRedundancyGroupInfo now support filtering by HostingAgentID [ID 44537]
 
 <!-- MR 10.6.0 - FR 10.6.3 -->
