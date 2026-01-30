@@ -1,9 +1,9 @@
 ---
-uid: Credit_History
+uid: Viewing_your_credit_history
 keywords: credit history, transactions, billing history, credit balance, orders
 ---
 
-# Credit History
+# Viewing your credit history
 
 The Credit History page provides a detailed record of all credit transactions for your organization. It allows you to track every change to your credit balance, including purchases, subscriptions, usage charges, and corrections, giving you complete transparency over your dataminer.services billing activity.
 

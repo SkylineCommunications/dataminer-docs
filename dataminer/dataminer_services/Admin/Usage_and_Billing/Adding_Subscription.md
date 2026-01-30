@@ -11,7 +11,7 @@ To configure and purchase a new subscription for your organization:
 
    Users who do not have the Owner or Admin role will not be able to add a subscription.
 
-1. Navigate to the [Billing](xref:Billing) page in the Admin app.
+1. Navigate to the [Billing](xref:Viewing_billing_information) page in the Admin app.
 
 1. Click the **+ Add subscription** button in the top-right corner.
 
@@ -28,7 +28,7 @@ To configure and purchase a new subscription for your organization:
 
 1. Click the **Confirm subscription** button to complete the purchase.
 
-   Credits will be deducted immediately after the purchase. The new subscription will be created and will be shown in the [Subscriptions](xref:Subscriptions) table with an "Active" or "Planned" status.
+   Credits will be deducted immediately after the purchase. The new subscription will be created and will be shown in the [Subscriptions](xref:Viewing_your_subscriptions) table with an "Active" or "Planned" status.
 
 ## Subscription configuration options
 
@@ -80,7 +80,7 @@ Toggle the **Auto renew** switch to enable automatic renewal:
 - New pricing may apply at renewal time.
 - If insufficient credits are available, the subscription will not renew and the **Auto renew** switch will turn off.
 
-For more information, see [Auto-Renewal](xref:Subscriptions#auto-renewal).
+For more information, see [Auto-Renewal](xref:Viewing_your_subscriptions#auto-renewal).
 
 ## Tips for creating subscriptions
 

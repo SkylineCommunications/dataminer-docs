@@ -1,9 +1,9 @@
 ---
-uid: Billing
+uid: Viewing_billing_information
 keywords: billing, credits, balance, usage costs, subscriptions, services
 ---
 
-# About Billing
+# Viewing billing information
 
 The Billing page provides a comprehensive overview of your organization's credit usage and costs for dataminer.services. It allows you to monitor your credit balance, track service consumption, view subscription costs, and analyze historical spending patterns to manage your DataMiner System expenses effectively.
 
@@ -18,7 +18,7 @@ The **Balance** displays your current credit balance available for dataminer.ser
 - You can purchase additional credits using the **Buy credits** button located in the top-right corner.
 - The balance is updated in real-time as services are consumed or when new credits are purchased.
 - A low balance may impact your ability to use certain services, so monitoring this regularly is important.
-- Click the **Credit history** button to view all credit transactions. See [Credit History](xref:Credit_History) for more information.
+- Click the **Credit history** button to view all credit transactions. See [Viewing your credit history](xref:Viewing_your_credit_history) for more information.
 
 ## Time Period Selection
 
@@ -53,7 +53,7 @@ The **Monthly Savings** indicator shows the amount of credits saved, when fully 
 - **Add subscription**: Button to purchase new subscriptions for additional services or capacity.
 - **All subscriptions**: Link to view detailed information about all available and active subscriptions.
 
-For more information on subscriptions, see [Subscriptions](xref:Subscriptions).
+For more information on subscriptions, see [Viewing your subscriptions](xref:Viewing_your_subscriptions).
 
 ## Historical Cost Breakdown
 

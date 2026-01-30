@@ -1,9 +1,9 @@
 ---
-uid: Subscriptions
+uid: Viewing_your_subscriptions
 keywords: subscriptions, billing, credits, data plane, automation, collaboration services
 ---
 
-# Subscriptions
+# Viewing your subscriptions
 
 The Subscriptions page provides a comprehensive overview of all subscriptions associated with your organization's dataminer.services account. It allows you to monitor active subscriptions, review expired ones, track costs and savings, and view detailed breakdowns of what each subscription includes.
 
@@ -11,7 +11,7 @@ The Subscriptions page provides a comprehensive overview of all subscriptions as
 
 Certain subscriptions are automatically assigned to organizations:
 
-- **Community Edition**: Automatically provided for all organizations at no cost. This subscription includes essential reservations for managed objects, metrics, unmanaged objects, actions, shares, and connectors, allowing you to use dataminer.services with a comprehensive set of features included. The subscription renews automatically every year at no cost to the user. For more information, see [DataMiner Community Edition](https://docs.dataminer.services/dataminer/About_DataMiner/Pricing/Pricing_Commercial_Models.html#dataminer-community-edition).
+- **Community Edition**: Automatically provided for all organizations at no cost. This subscription includes essential reservations for managed objects, metrics, unmanaged objects, actions, shares, and connectors, allowing you to use dataminer.services with a comprehensive set of features included. The subscription renews automatically every year at no cost to the user. For more information, see [DataMiner Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition).
 
 - **Hosting subscriptions**: Assigned only to [DataMiner as a Service (DaaS)](xref:DaaS_hosting) trial systems for a 7-day period. These limited-time subscriptions provide the hosting resources needed to run your trial environment, including metrics, alarm updates, information events, trend data points, and element data updates.
 
