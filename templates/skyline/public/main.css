@@ -625,7 +625,7 @@ a.backtotoplink:hover
   font-weight: 400;
   color: var(--color-foreground);
   background-color: var(--color-background);
-  background-clip: padding-box;
+  background-clip: border-box;
   border: 1px solid #ced4da;
   padding: 5px 20px;
   font-size: 16px;
