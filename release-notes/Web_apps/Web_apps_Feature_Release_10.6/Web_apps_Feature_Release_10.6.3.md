@@ -462,3 +462,11 @@ In some cases, a null reference exception could be thrown in a *Timeline* compon
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 In some rare cases, the Web DcM could throw an error while generating a PDF report.
+
+#### Dashboards/Low-Code Apps - Maps component: Fetched zones would not be cleared when the query changed [ID 44619]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When, in a *Maps* component, the query was changed, up to now, the zones that had been fetched would incorrectly not be cleared. As a result, panning to those zones would still show markers that matched the previous filter instead of the new one.
+
+From now on, all zones will be cleared whenever the query changes, and the markers will be fetched again with the new query.
