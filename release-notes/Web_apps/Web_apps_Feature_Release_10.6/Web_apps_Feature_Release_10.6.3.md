@@ -28,7 +28,7 @@ Up to now, the DOM security UI allowed you to configure security settings on DOM
 
 For example, the user group *London employees* will only be able to read the "Job" instances where the *Assigned office* field (i.e. a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
 
-For more information, see [DataMiner Object Models: Instance-level security [ID 44233]](xref:General_Feature_Release_10.6.3#dataminer-object-models-instance-level-security-id-44233).
+For more information, see [DataMiner Object Models: Fine-grained security on instance level [ID 44233]](xref:General_Feature_Release_10.6.3#dataminer-object-models-fine-grained-security-on-instance-level-id-44233).
 
 > [!NOTE]
 > To access the DOM security UI, go to `https://<DMA IP or hostname>/dom`. In DataMiner Cube, this UI can be accessed via *System Center > DOM*.

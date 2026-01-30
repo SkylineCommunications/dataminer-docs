@@ -28,9 +28,9 @@ uid: General_Feature_Release_10.6.3
 
 ## Highlights
 
-- DataMiner Object Models: Fine-grained security on instance level [ID 44233]
-- Protocols: Elements restart automatically after an SLScripting process crash [ID_42306]
-- Protocols: Default number of simultaneously running SLScripting processes has been increased from 1 to 10 [ID_44420]
+- [DataMiner Object Models: Fine-grained security on instance level [ID 44233]](#dataminer-object-models-fine-grained-security-on-instance-level-id-44233)
+- Protocols: Elements restart automatically after an SLScripting process crash [ID 42306]
+- Protocols: Default number of simultaneously running SLScripting processes has been increased from 1 to 10 [ID 44420]
 
 ## New features
 
