@@ -456,3 +456,9 @@ As the output of a script is always a string value, from now on, it will only be
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 In some cases, a null reference exception could be thrown in a *Timeline* component.
+
+#### Web DcM: Problem when generating a PDF report [ID 44613]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In some rare cases, the Web DcM could throw an error while generating a PDF report.
