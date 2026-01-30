@@ -162,3 +162,9 @@ From now on, correlated alarms will be removed from the summary when the status 
 When, in *System Center*, you open the *Logging* section, and click the *DataMiner* tab, you can select a particular log file from the list.
 
 Up to now, when you clicked the *Alarm Level Forwarding* entry, the *SLAlarmLevelLinking.txt* log file would incorrectly be opened instead of the *SLAlarmForwarding.txt* log file.
+
+#### Alarm Console: Severity of an alarm group would incorrectly be changed when an action was performed on it [ID 44630]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+When you acknowledged an alarm on an alarm group (or performed any other action on it), up to now, the severity of the alarm group would incorrectly always be set to that of the source alarm with the highest severity. From now on, when an action is performed on an alarm group, its severity will no longer be changed.
