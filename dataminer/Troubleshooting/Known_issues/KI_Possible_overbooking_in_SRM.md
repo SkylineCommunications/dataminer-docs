@@ -16,7 +16,7 @@ From DataMiner 10.5.12 onwards, only the first 1000 overlapping bookings returne
 
 ## Fix
 
-No fix is available yet.<!-- RN 44649 -->
+Install DataMiner 10.6.2 [CU1].<!-- RN 44649 -->
 
 ## Description
 
