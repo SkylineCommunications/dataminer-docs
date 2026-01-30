@@ -470,3 +470,11 @@ In some rare cases, the Web DcM could throw an error while generating a PDF repo
 When, in a *Maps* component, the query was changed, up to now, the zones that had been fetched would incorrectly not be cleared. As a result, panning to those zones would still show markers that matched the previous filter instead of the new one.
 
 From now on, all zones will be cleared whenever the query changes, and the markers will be fetched again with the new query.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Problem with real-time updates when a column filter is applied [ID 44622]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, when a *Node edge graph* component with real-time updates enabled had a column filter applied, only the value of that column would be updated when an update was received. As a result, when e.g. a node had been moved, in some cases, that node would keep its former position.
+
+From now on, all values will be updated, even those that are not associated with a column filter.
