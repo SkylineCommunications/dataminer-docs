@@ -443,6 +443,14 @@ When changes had been made to the settings of a *Timeline* component, in some ca
 
 For example, changes to *Layout > General > Query name > Start/End column* would not get applied when you removed an older query from the timeline.
 
+#### Low-Code Apps - Action editor: Script outputs could incorrectly be linked to numeric inputs [ID 44598]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, it would incorrectly be possible to link the output of a script to a numeric input.
+
+As the output of a script is always a string value, from now on, it will only be possible to link the output of a script to a text input.
+
 #### Dashboards/Low-Code Apps - Timeline component: Null reference exception could be thrown [ID 44602]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
