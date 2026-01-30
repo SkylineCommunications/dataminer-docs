@@ -376,6 +376,12 @@ When, on the same connection, there were two subscriptions to the same object, i
 
 When an element was restarted, and that element had alarms with service impact that were being tracked by an SLA, in some cases, the SLA would degrade when one of those alarms no longer affected the SLA.
 
+#### Elements: Clicking 'Test connection' while adding or editing an element could cause SLProtocol to stop working [ID 44514]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+If, while adding or editing an element based on a connector that had an additional thread specified, you clicked *Test connection*, in some cases, SLProtocol could stop working.
+
 #### SLAnalytics - Behavior anomaly detection: Anomaly significance of anomalous change points would incorrectly be set to zero [ID 44585]
 
 <!-- MR 10.6.0 - FR 10.6.3 -->
