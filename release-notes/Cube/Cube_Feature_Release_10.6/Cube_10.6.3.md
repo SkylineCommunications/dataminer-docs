@@ -84,6 +84,19 @@ From now on, it will no longer be possible to migrate booking data from a Cassan
 
 Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e. from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
 
+#### Visual Overview: Support for table-based matrices [ID 44601]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+Up to now, when you linked shapes to inputs and output of a table-based matrix, these inputs and outputs would not be displayed correctly.
+
+From now on, it will be possible to link shapes to inputs and outputs of a table-based matrices. The inputs and outputs will be displayed correctly, and it will be possible to alter the connections via the context menu. In the context menu, the outputs and inputs will be shown in the same order as the rows in the table.
+
+Also, the alarm colors shown in visual overviews will be identical to those in table-based matrices displayed in Data Display. The connection between an input and an output will have the alarm color of the corresponding output row.
+
+> [!NOTE]
+> In visual overviews used in web apps, the connections and alarm colors will be displayed correctly, but it will not be possible to alter connections using the context menu.
+
 ### Fixes
 
 #### Alarm Console: Recursive loop in nested correlated alarms could cause Cube to stop working [ID 44378]

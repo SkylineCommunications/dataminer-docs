@@ -38,7 +38,7 @@ During DataMiner startup, in some rare cases, a fatal error could occur in the G
 
 #### Calls that check whether the connection between client and DMA is still alive would incorrectly be blocked when 10 simultaneous calls were being processed [ID 44456]
 
-<!-- MR 10.5.0 [CU12] - FR 10.6.2 [CU1] -->
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU1] -->
 
 When 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent were being processed, up to now, any additional call would be blocked, including calls that check whether the connection between client and DMA was still alive. As a result, the client application would disconnect.
 

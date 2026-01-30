@@ -258,3 +258,11 @@ In some cases, a fatal error could occur in SLDataMiner when an incomplete JSON 
 When an alarm cannot be created for a particular element, an attempt is made to fetch the element state for logging purposes.
 
 Up to now, in some cases, when the element was being stopped and was flushing its data to the database, this fetch operation could block the alarm thread. As a result, no new alarms would get processed for that element until the element had stopped flushing its data.
+
+#### Calls that check whether the connection between client and DMA is still alive would incorrectly be blocked when 10 simultaneous calls were being processed [ID 44456]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU1] -->
+
+When 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent were being processed, up to now, any additional call would be blocked, including calls that check whether the connection between client and DMA was still alive. As a result, the client application would disconnect.
+
+From now on, even when 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent are being processed, calls that check whether the connection between client and DMA is still alive will never be blocked.
