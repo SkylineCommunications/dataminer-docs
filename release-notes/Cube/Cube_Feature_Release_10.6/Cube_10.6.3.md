@@ -167,4 +167,8 @@ Up to now, when you clicked the *Alarm Level Forwarding* entry, the *SLAlarmLeve
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-When you acknowledged an alarm on an alarm group (or performed any other action on it), up to now, the severity of the alarm group would incorrectly always be set to that of the source alarm with the highest severity. From now on, when an action is performed on an alarm group, its severity will no longer be changed.
+By default, the alarm icon of an alarm group will take the alarm color of the source alarm with the highest severity.
+
+Up to now, when you acknowledged (or performed any other action on) an alarm of an alarm group of which the severity was not that of the source alarm with the highest severity, the severity of the alarm group would incorrectly always be set to that of the source alarm with the highest severity.
+
+From now on, when an action is performed on an alarm group, its severity will no longer be changed.
