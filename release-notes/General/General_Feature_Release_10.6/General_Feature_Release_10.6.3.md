@@ -250,9 +250,10 @@ Because of a number of enhancements, from now on, SLAnalytics will be more resil
 
 From now on, when an issue occurs during startup, in most cases, SLAnalytics will add an entry describing the issue to the SLAnalytics log file, and will keep on working.
 
-#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 44479]
+#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 44479] [ID 44616]
 
 <!-- RN 44479: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+<!-- RN 44616: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
 Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
 

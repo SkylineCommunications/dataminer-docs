@@ -688,9 +688,10 @@ Also, the following issues have now been fixed:
 
 - On systems where the `enableLegacyV0Interface` flag is not set in the *web.config* file, the test that verifies whether the v0 web API is disabled would incorrectly assume that the v0 web API was enabled. From now on, when the `enableLegacyV0Interface` flag is not set in the *web.config* file, the v0 web API will be considered disabled.
 
-#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 44479]
+#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 44479] [ID 44616]
 
 <!-- RN 44479: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+<!-- RN 44616: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
 Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
 
