@@ -27,23 +27,27 @@ The UI displays all available DOM modules in a list on the left, with a filter b
 
 By default, all users will have full access to all DOM modules, which means that they will all be allowed to create, read, update, and delete DOM definitions in all available DOM modules.
 
-To restrict access for specific definitions and their individual instances:
+To restrict access for specific definitions and their instances:
 
-1. Select the module, and switch to *Restrict access* with the button on the right.
+1. Select a module, and switch to *Restrict access* with the button on the right.
 
    At this point, no one will have access to the definitions in the module. The list of DOM definitions within the module will expand so you can select a definition.
 
-1. Select a definition and switch the groups with users to the desired level of access:
+1. Select a definition and set the access level for each user group:
 
-   - *No access*: The group does not have permission to access the DOM definition.
+   - *No access*: The group cannot access this definition.
 
-   - *Limited access*: Available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44385-->. The user group has access to specific DOM instances based on whether that DOM instance contains at least one of a specified set of values for specified FieldDescriptor.
+   - *Limited access*: Available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44385-->. The group can only access DOM instances that contain specific values in specific `DomInstanceFieldDescriptor` fields.
 
-   - *Full access*: The group will be able to read, update, and delete that DOM definition to *Full Access*.
+   - *Full access*: The group can read, update, and delete this definition.
 
-1. If you have selected *Limited access*, select a field descriptor and specify the value it needs to be equal to.
+1. If you select *Limited access*:
 
-   For example, the user group "London employees" will only be able to read the "Job" instances where the *Assigned office* field (i.e. a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
+   - Select a field descriptor.
+
+   - Specify the value the field must contain.
+
+   For example, the user group *London employees* can only access *Job* instances where the *Assigned office* field contains the DOM instance ID of the London office.
 
 1. Repeat this for each definition users should have access to.
 
