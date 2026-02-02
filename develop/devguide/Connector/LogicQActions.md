@@ -169,15 +169,15 @@ All scenarios below assume that the data does **not** need to persist when the e
 
 - **Between elements running the same protocol**: Use a **static QAction** and share data via [**InterApp calls**](xref:InterAppCalls_Introduction).
 
-> [!WARNING]
-> Do **not** share data between elements running the same protocol version using static fields. This approach does not work when DataMiner uses multiple SLScripting processes, which is the default starting from DataMiner 10.6.3/10.7.0<!--RN 44420-->.
+  > [!IMPORTANT]
+  > Do **not** share data between elements running the same protocol version using static fields. This approach does not work when DataMiner uses multiple SLScripting processes, which is the default starting from DataMiner 10.6.3/10.7.0<!--RN 44420-->.
 
 - **Within a single element across multiple executions of the same QAction**: Use an **instanced QAction** and share data through a **non-static field**.
 
-- **Within a single element across multiple executions of two or more different QActions**: Use a **precompiled QAction** with a **singleton or static class** containing a **static dictionary field**. Store and retrieve data per element using this dictionary. The key of the dictionary should be a combination of the **Root DataMiner ID** and the **Element ID**. This combination will guarantee uniqueness of the dictionary key even when the DMS contains multiple agents. The **Root DataMiner ID** is used instead of the Host DataMiner ID to make sure the key stays unique even after an element is swarmed to a different agent.
+- **Within a single element across multiple executions of two or more different QActions**: Use a **precompiled QAction** with a **singleton or static class** containing a **static dictionary field**. Store and retrieve data per element using this dictionary. The key of the dictionary should be a combination of the **Root DataMiner ID** and the **Element ID**. This combination will guarantee uniqueness of the dictionary key even when the DMS contains multiple Agents. The **Root DataMiner ID** is used instead of the host DataMiner ID to make sure the key stays unique even after an element is swarmed to a different Agent.
 
-> [!IMPORTANT]
-> Implement cleanup logic when the element is stopped to remove all entries related to that element from the dictionary, as the lifetime of the static field is independent of the element lifecycle.
+  > [!IMPORTANT]
+  > Implement cleanup logic when the element is stopped to remove all entries related to that element from the dictionary, as the lifetime of the static field is independent of the element lifecycle.
 
 ## SLProtocol(Ext) instance
 

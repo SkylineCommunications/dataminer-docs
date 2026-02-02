@@ -200,8 +200,6 @@ items:
         items:
           - name: Web Support Assistant
             topicUid: Web_Issues_Support_Assistant
-      - name: Investigate Element restarts due to process crashes
-        topicUid: Investigate_Reoccurring_Element_Restarts
       - name: Troubleshooting – Cassandra
         topicUid: Troubleshooting_Cassandra
         items:
@@ -233,6 +231,8 @@ items:
       - name: Troubleshooting - SLScripting
         topicUid: Troubleshooting_SLScripting
         items:
+          - name: Investigating reoccurring element restarts
+            topicUid: Investigate_Reoccurring_Element_Restarts
           - name: Investigating exception occurrence on Finalizer thread
             topicUid: TroubleshootingSLScriptingFinalizerException
           - name: Investigating OutOfMemoryException occurrences
