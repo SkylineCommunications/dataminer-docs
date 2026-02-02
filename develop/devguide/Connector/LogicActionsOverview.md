@@ -23,7 +23,7 @@ uid: LogicActionsOverview
 |[execute one](xref:LogicActionExecuteOne)|Adds a group to the end of the queue, after timers, if not already present in the queue.|group|add to execute|
 |[execute one now](xref:LogicActionExecuteOneNow)|Adds a group to the end of the queue, but before timers, if not already present in the queue.|group|execute|
 |[execute one top](xref:LogicActionExecuteOneTop)|Adds a group to the start of the queue, after the one that is currently being executed, if not already present in the queue.|group|execute next|
-|[force execute](xref:LogicActionForceExecute)|Adds a group at the front of the queue and executes (pairs).|group||
+|[force execute](xref:LogicActionForceExecute)|Forces a group to be executed as soon as possible, interrupting the flow of ongoing groups, if any.|group||
 |[go](xref:LogicActionGo)|Runs the last known write.|parameter||
 |[increment](xref:LogicActionIncrement)|Increments the parameter value.|parameter||
 |[length](xref:LogicActionLength)|Calculates the length of the length parameter or response.|command, response||
