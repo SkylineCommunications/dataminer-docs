@@ -45,7 +45,7 @@ To restrict access for specific definitions and their instances:
 
    - Select a field descriptor.
 
-   - Specify the value the field must contain.
+   - Specify the value(s) the field must contain.
 
    For example, the user group *London employees* can only access *Job* instances where the *Assigned office* field contains the DOM instance ID of the London office.
 
