@@ -12,7 +12,7 @@ This action will add the specified group to the start of the group execution que
 
 ### On@id
 
-Specifies the ID(s) of the group(s).
+Specifies the ID(s) of the group(s) to add to the group execution queue.
 
 ## Examples
 
