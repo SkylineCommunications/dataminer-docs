@@ -228,13 +228,18 @@ items:
           - name: Common issues
             topicUid: ID_Common_Issues
       - name: Troubleshooting - SLScripting
+        topicUid: Troubleshooting_SLScripting
         items:
+          - name: Investigating reoccurring element restarts
+            topicUid: Investigate_Reoccurring_Element_Restarts
           - name: Investigating exception occurrence on Finalizer thread
             topicUid: TroubleshootingSLScriptingFinalizerException
           - name: Investigating OutOfMemoryException occurrences
             topicUid: TroubleshootingSLScriptingOutOfMemoryException
           - name: Investigating StackOverflowException occurrences
             topicUid: TroubleshootingSLScriptingStackOverflowException
+      - name: Troubleshooting - SLProtocol
+        topicUid: Troubleshooting_SLProtocol 
       - name: Troubleshooting – STaaS
         topicUid: Troubleshooting_STaaS
         items:
