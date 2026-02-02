@@ -13,7 +13,7 @@ If it is not already in the queue, this action will add the specified group to t
 
 ### On@id
 
-Specifies the ID(s) of the group(s).
+Specifies the ID(s) of the group(s) to add to the group execution queue.
 
 ## Examples
 
