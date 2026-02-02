@@ -136,8 +136,18 @@ items:
     topicUid: Viewing_info_on_deployments
   - name: Viewing information on shares
     topicUid: Viewing_info_on_shares
-  - name: Viewing information on system usage
-    topicUid: Viewing_info_on_system_usage
+  - name: Usage and billing
+    items:
+    - name: Adding a subscription
+      topicUid: Adding_Subscription
+    - name: Viewing your subscriptions
+      topicUid: Viewing_your_subscriptions
+    - name: Viewing billing information
+      topicUid: Viewing_billing_information
+    - name: Viewing your credit history
+      topicUid: Viewing_your_credit_history
+    - name: Viewing information on system usage
+      topicUid: Viewing_info_on_system_usage
 - name: ChatOps
   items:
   - name: About ChatOps
