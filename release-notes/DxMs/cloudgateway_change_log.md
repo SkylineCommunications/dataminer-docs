@@ -6,7 +6,7 @@ uid: cloudgateway_change_log
 
 #### 2 February 2026 - Fix - CloudGateway 2.17.16 - Improved throttling behavior
 
-Resolved an issue where repeated failed requests caused the throttling cooldown to escalate too quickly. The throttling logic has been adjusted to ensure the cooldown could not be increased whilst the CloudGateway is already in a cooldown state.
+Resolved an issue where CloudGateway could stay throttled far longer than expected. A short burst of failed requests no longer causes a big throttle cooldown.
 
 #### 29 January 2026 - Fix - CloudGateway 2.17.15 - Duplicate connections on cloud side
 
