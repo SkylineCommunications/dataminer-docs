@@ -4,7 +4,7 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 2 February 2026 - Fix - CloudGateway 2.17.16 - Improved throttling behavior
+#### 2 February 2026 - Fix - CloudGateway 2.17.16 - Incorrect throttling behavior
 
 After several failed requests were sent to CloudGateway in a short time period, this could cause a large throttle cooldown, causing further requests to be refused for several hours. This issue has been resolved.
 
