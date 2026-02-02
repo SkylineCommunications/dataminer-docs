@@ -4,6 +4,10 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 02 February 2026 - Fix - CloudGateway 2.17.16 - Throttling Behavior Improved
+
+Resolved an issue where repeated failed requests caused the throttling cooldown to escalate too quickly. The throttling logic has been adjusted to ensure the cooldown could not be increased whilst the CloudGateway is already in a cooldown state.
+
 #### 29 January 2026 - Fix - CloudGateway 2.17.15 - Duplicate connections on cloud side
 
 An issue has been resolved where occasionally a connection towards the cloud would be closed and reopened on the CloudGateway side while remaining active in the cloud. This could cause instability for remote access services attempting to use the old connection. CloudGateway will now ensure that all connections are properly closed in the cloud as well.
