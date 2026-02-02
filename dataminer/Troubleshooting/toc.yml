@@ -305,6 +305,8 @@ items:
             topicUid: KI_Possible_overbooking_in_SRM
           - name: SLDataGateway issue caused by OpenSearch health monitoring
             topicUid: KI_SLDataGateway_issue_OpenSearch_health_monitoring
+          - name: TLS Authentication issues when MessageBroker is connecting to the NATS bus
+            topicUid: KI_DataMinerMessageBroker_TLS
           - name: QActions fail for element after uploading new protocol version
             topicUid: KI_QActions_fail_after_upload_protocol_version
           - name: Incorrect date sorting in Bookings app with custom column configurations
