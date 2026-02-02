@@ -8,11 +8,11 @@ uid: DOM_security_ui
 
 From DataMiner 10.5.11/10.6.0 onwards, you can configure definition-level security settings for DOM. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44385-->, you can also configure security at DOM instance level. In the background, this will make use of the [link security](xref:DOM_security#link-security) feature.
 
-![Configuring DOM definition-level security in DataMiner 10.5.11](~/dataminer/images/DOMSecurityApp.png)<br>*Configuring DOM definition-level security in DataMiner 10.5.11*
+![Configuring DOM security in DataMiner 10.5.11](~/dataminer/images/DOMSecurityApp.png)<br>*Configuring DOM security in DataMiner 10.5.11*
 
 ## Accessing the DOM security UI
 
-If you have the required user permission ([Modules > System configuration > Object Manager > Module settings](xref:DataMiner_user_permissions#modules--system-configuration--object-manager--module-settings)), you can configure DOM definition-level security in either of the following ways:
+If you have the required user permission ([Modules > System configuration > Object Manager > Module settings](xref:DataMiner_user_permissions#modules--system-configuration--object-manager--module-settings)), you can configure DOM security in either of the following ways:
 
 - Browse to `https://<DMA IP or hostname>/dom`.
 
@@ -46,6 +46,8 @@ To restrict access for specific definitions and their instances:
    - Select a field descriptor.
 
    - Specify the value(s) the field must contain.
+
+   ![Example: London office](~/dataminer/images/LondonOffice.png)<br>*Configuring DOM security in DataMiner 10.6.3*
 
    For example, the user group *London employees* can only access *Job* instances where the *Assigned office* field contains the DOM instance ID of the London office.
 
