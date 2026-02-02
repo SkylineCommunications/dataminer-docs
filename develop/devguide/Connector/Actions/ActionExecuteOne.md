@@ -4,9 +4,10 @@ uid: LogicActionExecuteOne
 
 # execute one
 
-Can only be executed on a group.
+This action can only be executed on a group.
 
-This action checks if the specified group is present in the queue. If it is, nothing will happen. If it is not, then the group is added at the very end of the queue, after the timer actions.
+This action first checks if the specified group is already in the queue. If it is, nothing will happen.
+If it is not already in the queue, this action will add the specified group to the end of the group execution queue, after groups scheduled by a timer.
 
 ## Attributes
 
@@ -22,3 +23,6 @@ Specifies the ID(s) of the group(s).
   <Type>execute one</Type>
 </Action>
 ```
+
+## Related Actions
+- [add to execute](xref:LogicActionAddToExecute)
