@@ -375,12 +375,6 @@ When you entered a decimal value that started with a decimal point (e.g. ".05"),
 > [!NOTE]
 > In some cases, this issue can still occur when entering a decimal value in a dialog box of an interactive Automation script that uses legacy UI components.
 
-#### Dashboards/Low-Code Apps - State timeline component: Problems when processing state changes [ID 44277]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-A number of issues have been fixed with regard to the State timeline component. These issues would mostly occur when processing state changes.
-
 #### Dashboards/Low-Code Apps - Timeline component: Problem when zooming or panning while linked components trigger viewport changes [ID 44280]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->

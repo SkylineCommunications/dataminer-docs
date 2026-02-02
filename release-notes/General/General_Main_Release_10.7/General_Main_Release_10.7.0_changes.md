@@ -174,6 +174,25 @@ In the following example, the entrypoint ID can be found at the end of the entry
 
 As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway Configuration* has now been removed from the list of backup options.
 
+#### SLManagedScripting will again add a log entry each time it has loaded or failed to load an assembly [ID 44522]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Since DataMiner version 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9<!-- RN 43690 -->, SLManagedScripting no longer added an entry in the *SLManagedScripting.txt* log file each time it had loaded or failed to load an assembly. From now on, it will again do so.
+
+These log entries will include both the requested version and the actual version of the assembly.
+
+#### DataMiner backup: Scheduler configuration will now be included in full and configuration backups [ID 44584]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+From now on, the Scheduler configuration found in `C:\Skyline Dataminer\Scheduler` will be included in the following pre-configured backups:
+
+- Full backup (without database)
+- Configuration backup (without database)
+
+If you create a custom backup, the Scheduler configuration will be included only if you selected the *DataMiner settings* option.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]

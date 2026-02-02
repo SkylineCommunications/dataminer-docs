@@ -17,7 +17,7 @@ Configures the DataMiner Agent.
 | [protocolVisioLnk](xref:DataMiner-protocolVisioLnk) | integer |  | When set to "1", this tag indicates that DataMiner has attempted to create all the Visio.lnk files that indicate the current Visio file for a protocol. This is used for troubleshooting purposes. |
 | [readElementData](xref:DataMiner-readElementData) | boolean |  | Automatically generated attribute, indicating that previously configured element data that was saved in *DataMiner.xml* has been moved to the element data database tables. |
 | [readProperties](xref:DataMiner-readProperties) | boolean |  | Automatically generated attribute. Deprecated. |
-| [safeMode](xref:DataMiner-safeMode) | boolean |  | If set to "true", elements will not be started using multiple threads. |
+| [safeMode](xref:DataMiner-safeMode) | boolean |  | If set to "true", elements will not be started using multiple threads. Deprecated. |
 | [storeLastPollTimes](xref:DataMiner-storeLastPollTimes) | boolean |  | Indicates whether SLProtocol should store the last poll times. |
 | [useAgentBinding](xref:DataMiner-useAgentBinding) | boolean |  | Global setting that indicates whether traps are assigned to elements based on the *agentaddress* binding (1.3.6.1.3.1057.1) instead of the source address.  |
 

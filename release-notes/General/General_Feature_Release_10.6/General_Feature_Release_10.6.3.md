@@ -28,11 +28,13 @@ uid: General_Feature_Release_10.6.3
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [DataMiner Object Models: Fine-grained security on instance level [ID 44233]](#dataminer-object-models-fine-grained-security-on-instance-level-id-44233)
+- Protocols: Elements restart automatically after an SLScripting process crash [ID 42306]
+- Protocols: Default number of simultaneously running SLScripting processes has been increased from 1 to 10 [ID 44420]
 
 ## New features
 
-#### DataMiner Object Models: Instance-level security [ID 44233]
+#### DataMiner Object Models: Fine-grained security on instance level [ID 44233]
 
 <!-- MR 10.6.0 - FR 10.6.3 -->
 
@@ -183,6 +185,12 @@ From now on, SLNet will only send a log entry to SLLog if the log level dictates
 
 If the response to an *SNMP Get* request cannot be mapped, from now on, an error will be logged in the log file of the element in question and in the *SLErrorsInProtocol.txt* file.
 
+#### .dmprotocol packages included in DELT export packages will now also contain all assemblies used by the connectors in those .dmprotocol packages [ID 44345]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+From now on, *.dmprotocol* packages included in DELT export packages will also contain all assemblies used by the connectors in those *.dmprotocol* packages.
+
 #### Factory reset tool: Actions that stop and stop DcMs and DxMs will now have a 15-minute timeout [ID 44387]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
@@ -205,11 +213,19 @@ As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway C
 
 DataMiner Ticketing has been declared End of Life. As a result, all server code related to Ticketing has been removed.
 
-#### Security Advisory BPA test: Enhancements [ID 44444] [ID 44477]
+#### Security Advisory BPA test: Enhancements [ID 44444] [ID 44477] [ID 44566]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-Up to now, the *Local admin hygiene* test would verify whether the local admin account was disabled and whether there were not too many local administrator accounts. From now on, this test will no longer be performed as the recommendations in the [hardening guide](https://aka.dataminer.services/HardeningGuide) have been updated.
+A number of enhancements have been made to the Security Advisory BPA test:
+
+- Up to now, the *Local admin hygiene* test would verify whether the local admin account was disabled and whether there were not too many local administrator accounts. From now on, this test will no longer be performed as the recommendations in the [hardening guide](https://aka.dataminer.services/HardeningGuide) have been updated.
+
+- The HTTP header test will now also check whether the referrer-policy header is set.
+
+- A new test was added that will check the *versionhistory.txt* file to find out whether a system upgrade was performed in the last 6 months.
+
+  If the contents of the *versionhistory.txt* file cannot be read, the test will check when that file was last updated, and if that also fails, it will check when the *SLNet.exe* file was last updated.
 
 Also, the following issues have now been fixed:
 
@@ -234,13 +250,25 @@ Because of a number of enhancements, from now on, SLAnalytics will be more resil
 
 From now on, when an issue occurs during startup, in most cases, SLAnalytics will add an entry describing the issue to the SLAnalytics log file, and will keep on working.
 
-#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 44479]
+#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 44479] [ID 44616]
 
 <!-- RN 44479: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+<!-- RN 44616: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
 Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
+
+#### Interactive Automation scripts launched from web apps: UI components Time and Calendar can now all display seconds [ID 44487]
+
+<!-- MR 10.6.0 - FR 10.6.3 -->
+
+Up to now, in interactive Automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
+
+- `UIBlockType.Time` with `AutomationDateTimePickerOptions`
+- `UIBlockType.Time` with `AutomationDateTimeUpDownOptions`
+- `UIBlockType.Time` with `AutomationTimePickerOptions`
+- `UIBlockType.Calendar` with `AutomationCalendarOptions`
 
 #### GQI: Domain user name will now be included in the OnInitInputArgs of a GQI extension [ID 44509]
 
@@ -249,6 +277,14 @@ This BPA test will identify client machines and DataMiner Agents without interne
 Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
 
 From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
+
+#### SLManagedScripting will again add a log entry each time it has loaded or failed to load an assembly [ID 44522]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Since DataMiner version 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9<!-- RN 43690 -->, SLManagedScripting no longer added an entry in the *SLManagedScripting.txt* log file each time it had loaded or failed to load an assembly. From now on, it will again do so.
+
+These log entries will include both the requested version and the actual version of the assembly.
 
 #### SLNet messages GetLiteElementInfo, GetLiteServiceInfo, and GetLiteRedundancyGroupInfo now support filtering by HostingAgentID [ID 44537]
 
@@ -259,6 +295,45 @@ The following SLNet messages, which can be used to retrieve information about el
 - GetLiteElementInfo
 - GetLiteRedundancyGroupInfo
 - GetLiteServiceInfo
+
+#### Migrating booking data from Cassandra Single to indexing database is no longer supported [ID 44550]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+<!-- Not added to MR 10.5.0 [CU12] -->
+
+From now on, it will no longer be possible to migrate booking data from a Cassandra database per DMA to an indexing database.
+
+Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e. from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
+
+#### DataMiner backup: Scheduler configuration will now be included in full and configuration backups [ID 44584]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+From now on, the Scheduler configuration found in `C:\Skyline Dataminer\Scheduler` will be included in the following pre-configured backups:
+
+- Full backup (without database)
+- Configuration backup (without database)
+
+If you create a custom backup, the Scheduler configuration will be included only if you selected the *DataMiner settings* option.
+
+#### Scheduler: Enhanced logging when a Windows task cannot be found and needs to be recreated [ID 44587]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+If, at DataMiner startup, the scheduled task configured for the DMA could not be found in the Windows Task Scheduler, up to now, SLScheduler would log a message like the following one:
+
+```console
+Failed to get info for task 1 [BTT: Cassandra Backup]: Failed to get info for task 'Skyline DataMiner Scheduled Task 1': 0x80070002h The system cannot find the file specified.
+```
+
+This message would incorrectly not indicate whether the task was missing in the Windows Task Scheduler or whether an issue had occurred while verifying it. Also, it would be unclear whether DataMiner would recreate the scheduled task.
+
+From now on, when a task cannot be found in the Windows Task Scheduler and needs to be recreated, more detailed information will be added to the *SLScheduler.txt* log file. See the example log entry below:
+
+```console
+Failed to get MS task for Scheduler task 321/2 [Task 1]: (Task 'Skyline DataMiner Scheduled Task 321-2' not found in MS Task Scheduler). MS Task will be recreated.
+Task 321/2 [Task 1] successfully added to MS Task Scheduler
+```
 
 ### Fixes
 
@@ -292,14 +367,6 @@ On a newly created DaaS system, up to now, short-lived alarms without operationa
 
 In the alarm template of the *My DataMiner Agent* element, hysteresis has now been tweaked to prevent such alarms from appearing on newly created DaaS systems.
 
-#### Calls that check whether the connection between client and DMA is still alive would incorrectly be blocked when 10 simultaneous calls were being processed [ID 44456]
-
-<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
-
-When 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent were being processed, up to now, any additional call would be blocked, including calls that check whether the connection between client and DMA was still alive. As a result, the client application would disconnect.
-
-From now on, even when 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent are being processed, calls that check whether the connection between client and DMA is still alive will never be blocked.
-
 #### GQI: Problem with Timer callbacks could cause SLHelper to stop working [ID 44458]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
@@ -313,3 +380,26 @@ See also: [GQI DxM: Problem with Timer callbacks could cause the GQI DxM to stop
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 When, on the same connection, there were two subscriptions to the same object, in some cases, that object would incorrectly be returned twice in the event message.
+
+#### SLA would degrade after an element had been restarted [ID 44490]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When an element was restarted, and that element had alarms with service impact that were being tracked by an SLA, in some cases, the SLA would degrade when one of those alarms no longer affected the SLA.
+
+#### Elements: Clicking 'Test connection' while adding or editing an element could cause SLProtocol to stop working [ID 44514]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+If, while adding or editing an element based on a connector that had an additional thread specified, you clicked *Test connection*, in some cases, SLProtocol could stop working.
+
+#### SLAnalytics - Behavior anomaly detection: Anomaly significance of anomalous change points would incorrectly be set to zero [ID 44585]
+
+<!-- MR 10.6.0 - FR 10.6.3 -->
+
+Up to now, in some cases, the anomaly significance of change points that are marked anomalous due to crossing a user-configured threshold in the alarm template would incorrect remain set to zero.
+
+From now on, the anomaly significance of these change points will correctly be set to a high value.
+
+> [!NOTE]
+> When you use the *Get behavioral change events* data source to retrieve change points, the anomaly significance of theses change points can be found in the *Anomaly significance* column.

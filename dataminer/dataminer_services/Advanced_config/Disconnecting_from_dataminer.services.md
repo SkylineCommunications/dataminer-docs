@@ -8,6 +8,9 @@ reviewer: Alexander Verkest
 
 Though this is not recommended, once a DataMiner Agent has been connected to dataminer.services, it is possible to disconnect it again. You can either [disconnect temporarily](#temporarily-disconnecting-from-dataminerservices), or [disconnect permanently](#permanently-disconnecting-from-dataminerservices).
 
+> [!TIP]
+> If you just want to remove one DMA from a DMS on dataminer.services, refer to [Removing a DataMiner Agent from a DataMiner System](xref:Removing_a_DataMiner_Agent_from_a_DataMiner_System).
+
 ## Temporarily disconnecting from dataminer.services
 
 Temporarily disconnect your system from dataminer.services, go to each server that has the CloudGateway module installed, and complete the following steps:

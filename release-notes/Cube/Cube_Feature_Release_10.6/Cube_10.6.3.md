@@ -42,6 +42,12 @@ Up to now, the Scheduler module would not provide any feedback when an error occ
 
 From now on, whenever an error occurs while you are interacting with the Scheduler module, a message box will appear, notifying that something went wrong.
 
+#### Scheduler module: Enhanced performance when opening the module [ID 44414]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+Because of a number of enhancements, especially to the way in which script information of scheduled tasks is loaded, overall performance has increased when opening the Scheduler module.
+
 #### Automation: Viewing the log file of a script will only be possible when a script has a log file [ID 44439]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
@@ -64,12 +70,6 @@ When, in *System Center*, you open the *Logging* section, and click the *DataMin
 
 Up to now, this log file list contained a *Scripting* entry. However, as no *SLScripting.txt* log file exists, this entry has now been removed.
 
-#### Enhanced performance when loading alarm properties into filtered alarm tabs or when loading alarm data into AlarmSummary shapes [ID 44536]
-
-<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
-
-Because of a number of enhancements, overall performance has increased when loading alarm properties into filtered alarm tabs or when loading alarm data into AlarmSummary shapes.
-
 #### Connection type will always be set to gRPC when connecting to a DMA that is connected to dataminer.services [ID 44547]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
@@ -81,6 +81,47 @@ When Cube connects to a DMA that is connected to dataminer.services (i.e. a DMA 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
 From now on, all initialization exceptions thrown by the Microsoft Edge (WebView2) browser engine will be added to the Cube logging. This will make it easier to investigate any issues that might occur.
+
+#### System Center - Search & Indexing: Migrating booking data from Cassandra Single to indexing database is no longer supported [ID 44550]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+From now on, it will no longer be possible to migrate booking data from a Cassandra database per DMA to an indexing database.
+
+Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e. from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
+
+#### Microsoft Edge (WebView2) browser engine can now also be installed on a per user basis [ID 44580]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+On systems running the Windows Server OS, the Microsoft Edge (WebView2) browser engine is not installed by default. On these systems, it has to be installed manually. Up to now, it would only be possible to install it system wide. From now on, it will also be possible to install it on a per user basis. However, a system-wide installation is recommended.
+
+- A warning will now be added to the Cube logging when Cube has detected that the Microsoft Edge browser engine was installed on a per user basis rather than system wide. The message will indicate that is system-wide installation is strongly recommended.
+
+- An SPI log entry named *WebView2Source* will now be added to provide more information on how the Microsoft Edge browser engine was installed.
+
+  This log entry will contain the following data:
+
+  - IsInstalled (*True* or *False*)
+  - Installation type (*Undefined*, *System wide*, *Per user*, or *Fixed version*)
+  - Version number
+  - Location (i.e. the local path to the browser engine folder)
+
+- The NuGet package *Microsoft.Web.WebView2* has been upgraded to version 1.0.3650.58.
+
+#### Visual Overview: Support for table-based matrices [ID 44601]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+Up to now, when you linked shapes to inputs and output of a table-based matrix, these inputs and outputs would not be displayed correctly.
+
+From now on, it will be possible to link shapes to inputs and outputs of a table-based matrices. The inputs and outputs will be displayed correctly, and it will be possible to alter the connections via the context menu. In the context menu, the outputs and inputs will be shown in the same order as the rows in the table.
+
+Also, the alarm colors shown in visual overviews will be identical to those in table-based matrices displayed in Data Display. The connection between an input and an output will have the alarm color of the corresponding output row.
+
+> [!NOTE]
+> In visual overviews used in web apps, as from version 10.6.0/10.6.3, the connections and alarm colors of table-based matrices will also be displayed correctly, but it will not be possible to alter connections using the context menu.
+> Visual overviews used in web apps will not support table-based matrices in version 10.5.0 CU12.
 
 ### Fixes
 
@@ -121,3 +162,13 @@ From now on, correlated alarms will be removed from the summary when the status 
 When, in *System Center*, you open the *Logging* section, and click the *DataMiner* tab, you can select a particular log file from the list.
 
 Up to now, when you clicked the *Alarm Level Forwarding* entry, the *SLAlarmLevelLinking.txt* log file would incorrectly be opened instead of the *SLAlarmForwarding.txt* log file.
+
+#### Alarm Console: Severity of an alarm group would incorrectly be changed when an action was performed on it [ID 44630]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+By default, the alarm icon of an alarm group will take the alarm color of the source alarm with the highest severity.
+
+Up to now, when you acknowledged (or performed any other action on) an alarm of an alarm group of which the severity was not that of the source alarm with the highest severity, the severity of the alarm group would incorrectly always be set to that of the source alarm with the highest severity.
+
+From now on, when an action is performed on an alarm group, its severity will no longer be changed.

@@ -11,9 +11,11 @@ Use this action to upload a report to a shared network folder:
 1. In the *Folder path* field, enter the path of the folder where the report should be uploaded.
 
    > [!NOTE]
-   > Make sure the path uses the format specified by the Universal Naming Convention (UNC). See [UNC paths](https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats#unc-paths).
+   > Make sure the folder exists and the path uses the format specified by the Universal Naming Convention (UNC). See [UNC paths](https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats#unc-paths).
 
-1. In the *Domain\\User name* and *Password* fields, enter the credentials to connect to the server.
+1. If necessary, in the *Domain\\User name* and *Password* fields, enter credentials for an account with access to the shared folder.
+
+   Depending on the destination where the report is uploaded, these fields may be left empty.
 
 1. To upload the report in PDF format, instead of the default MHT format, next to *Format*, select *PDF*.
 
@@ -32,16 +34,32 @@ Use this action to upload a report to a shared network folder:
 
 ### Example 1
 
-User *JohnDoe*, belonging to the *BROADCAST* domain, wants a scheduled task to upload a report or dashboard named *Versions* to a folder on the server *DMAServer01* (`C:/Users/JohnDoe/Reports`).
+User *Admin* wants their Automation script to generate a PDF for dashboard *My Test Dashboard* and upload it to shared folder *WebFileManager* of server *node-2be94e4abd-z* (UNC path: `\\node-2be94e4abd-z\WebFileManager`).
 
-The folder path must be converted to a UNC path, `C$\Users\JohnDoe\Reports`, as shown in the image below.
-
-![example 1 configuration](~/dataminer/images/Upload_to_shared_folder1.png)<br>
-*Configuration in DataMiner Cube (version 10.3.9)*
+![Example 1 configuration](~/dataminer/images/Upload_to_shared_folder1.png)<br>
+*Configuration in DataMiner Cube 10.6.2*
 
 ### Example 2
 
+User *JohnDoe*, belonging to the *BROADCAST* domain, wants a scheduled task to upload a report or dashboard named *Versions* to a folder on server *DMAServer01*, `C:/Users/JohnDoe/Reports`.
+
+The folder path must be converted to a UNC path, `C$\Users\JohnDoe\Reports`, as shown in the image below.
+
+![Example 2 configuration](~/dataminer/images/Upload_to_shared_folder2.png)<br>
+*Configuration in DataMiner Cube 10.6.2*
+
+### Example 3
+
+A user wants to upload a PDF report or dashboard to local folder `C:/Skyline DataMiner/Webpages/Public` of their DaaS system, with hostname *node-2be94e4ud9-m*.
+
+The credentials can be skipped in this case.
+
+![Example 3 configuration](~/dataminer/images/Upload_to_shared_folder3.png)<br>
+*Configuration in DataMiner Cube 10.6.2*
+
+### Example 4
+
 A user wants to upload a report or dashboard to a folder on the *F:* disk of a server with IP *10.200.10.20* (`F:/Reports`), using an *Administrator* account.
 
-![example 2 configuration](~/dataminer/images/Upload_to_shared_folder2.png)<br>
-*Configuration in DataMiner Cube (version 10.3.9)*
+![Example 4 configuration](~/dataminer/images/Upload_to_shared_folder4.png)<br>
+*Configuration in DataMiner Cube 10.6.2*

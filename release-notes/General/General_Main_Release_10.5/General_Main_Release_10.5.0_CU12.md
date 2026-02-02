@@ -29,6 +29,12 @@ From now on, SLNet will only send a log entry to SLLog if the log level dictates
 
 If the response to an *SNMP Get* request cannot be mapped, from now on, an error will be logged in the log file of the element in question and in the *SLErrorsInProtocol.txt* file.
 
+#### .dmprotocol packages included in DELT export packages will now also contain all assemblies used by the connectors in those .dmprotocol packages [ID 44345]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+From now on, *.dmprotocol* packages included in DELT export packages will also contain all assemblies used by the connectors in those *.dmprotocol* packages.
+
 #### Factory reset tool: Actions that stop and stop DcMs and DxMs will now have a 15-minute timeout [ID 44387]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
@@ -45,11 +51,19 @@ Also, if an exception would be thrown during a stop action, a kill command will 
 
 DataMiner Ticketing has been declared End of Life. As a result, all server code related to Ticketing has been removed.
 
-#### Security Advisory BPA test: Enhancements [ID 44444] [ID 44477]
+#### Security Advisory BPA test: Enhancements [ID 44444] [ID 44477] [ID 44566]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-Up to now, the *Local admin hygiene* test would verify whether the local admin account was disabled and whether there were not too many local administrator accounts. From now on, this test will no longer be performed as the recommendations in the [hardening guide](https://aka.dataminer.services/HardeningGuide) have been updated.
+A number of enhancements have been made to the Security Advisory BPA test:
+
+- Up to now, the *Local admin hygiene* test would verify whether the local admin account was disabled and whether there were not too many local administrator accounts. From now on, this test will no longer be performed as the recommendations in the [hardening guide](https://aka.dataminer.services/HardeningGuide) have been updated.
+
+- The HTTP header test will now also check whether the referrer-policy header is set.
+
+- A new test was added that will check the *versionhistory.txt* file to find out whether a system upgrade was performed in the last 6 months.
+
+  If the contents of the *versionhistory.txt* file cannot be read, the test will check when that file was last updated, and if that also fails, it will check when the *SLNet.exe* file was last updated.
 
 Also, the following issues have now been fixed:
 
@@ -74,9 +88,10 @@ Because of a number of enhancements, from now on, SLAnalytics will be more resil
 
 From now on, when an issue occurs during startup, in most cases, SLAnalytics will add an entry describing the issue to the SLAnalytics log file, and will keep on working.
 
-#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 44479]
+#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 44479] [ID 44616]
 
 <!-- RN 44479: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+<!-- RN 44616: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
 Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
 
@@ -89,6 +104,25 @@ This BPA test will identify client machines and DataMiner Agents without interne
 Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
 
 From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
+
+#### Scheduler: Enhanced logging when a Windows task cannot be found and needs to be recreated [ID 44587]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+If, at DataMiner startup, the scheduled task configured for the DMA could not be found in the Windows Task Scheduler, up to now, SLScheduler would log a message like the following one:
+
+```console
+Failed to get info for task 1 [BTT: Cassandra Backup]: Failed to get info for task 'Skyline DataMiner Scheduled Task 1': 0x80070002h The system cannot find the file specified.
+```
+
+This message would incorrectly not indicate whether the task was missing in the Windows Task Scheduler or whether an issue had occurred while verifying it. Also, it would be unclear whether DataMiner would recreate the scheduled task.
+
+From now on, when a task cannot be found in the Windows Task Scheduler and needs to be recreated, more detailed information will be added to the *SLScheduler.txt* log file. See the example log entry below:
+
+```console
+Failed to get MS task for Scheduler task 321/2 [Task 1]: (Task 'Skyline DataMiner Scheduled Task 321-2' not found in MS Task Scheduler). MS Task will be recreated.
+Task 321/2 [Task 1] successfully added to MS Task Scheduler
+```
 
 ### Fixes
 
@@ -120,14 +154,6 @@ Examples of hostnames that were incorrectly considered invalid:
 
 During DataMiner startup, in some rare cases, SLDataMiner would start up faster than SLNet. This would cause a delay of about 2 minutes in the entire startup routine.
 
-#### Calls that check whether the connection between client and DMA is still alive would incorrectly be blocked when 10 simultaneous calls were being processed [ID 44456]
-
-<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
-
-When 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent were being processed, up to now, any additional call would be blocked, including calls that check whether the connection between client and DMA was still alive. As a result, the client application would disconnect.
-
-From now on, even when 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent are being processed, calls that check whether the connection between client and DMA is still alive will never be blocked.
-
 #### GQI: Problem with Timer callbacks could cause SLHelper to stop working [ID 44458]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
@@ -141,3 +167,15 @@ See also: [GQI DxM: Problem with Timer callbacks could cause the GQI DxM to stop
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 When, on the same connection, there were two subscriptions to the same object, in some cases, that object would incorrectly be returned twice in the event message.
+
+#### SLA would degrade after an element had been restarted [ID 44490]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When an element was restarted, and that element had alarms with service impact that were being tracked by an SLA, in some cases, the SLA would degrade when one of those alarms no longer affected the SLA.
+
+#### Elements: Clicking 'Test connection' while adding or editing an element could cause SLProtocol to stop working [ID 44514]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+If, while adding or editing an element based on a connector that had an additional thread specified, you clicked *Test connection*, in some cases, SLProtocol could stop working.

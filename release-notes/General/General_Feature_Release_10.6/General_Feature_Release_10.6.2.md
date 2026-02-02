@@ -75,6 +75,9 @@ Also, all logging with regard to OpenSearch health monitoring can now be found i
 
 Note that, from now on, if not all nodes of the OpenSearch cluster are listed in the *Db.xml* file, a notice will be generated to warn operators.
 
+> [!IMPORTANT]
+> These enhancements have been reverted. See [SLDataGateway issue caused by OpenSearch health monitoring [ID 44647]](xref:General_Feature_Release_10.6.2_CU1#sldatagateway-issue-caused-by-opensearch-health-monitoring-id-44647).
+
 #### Augmented Operations: Server-side support for new flatline detection modes [ID 44094]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
@@ -359,12 +362,6 @@ After a DataMiner restart or an element restart, in some cases, the service impa
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 In the `<PortSettings>` element of an HTTP connection, you can configure a `<SkipCertificateVerification>` element with child elements `<DefaultValue>` and `<Disabled>`. Up to now, both child elements would incorrectly not be read if the connection in question was not the primary connection.
-
-#### Problem with the GQI DxM when it tried to connect to SLNet during DataMiner startup [ID 44380]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-During DataMiner startup, in some rare cases, a fatal error could occur in the GQI DxM when it tried to connect to SLNet.
 
 #### Problem with SLDataMiner when an incomplete JSON response was received from Microsoft Entra ID [ID 44391]
 

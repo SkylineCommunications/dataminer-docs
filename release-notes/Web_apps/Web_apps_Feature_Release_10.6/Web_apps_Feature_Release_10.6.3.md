@@ -20,18 +20,18 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-#### DOM security app now supports instance-level security [ID 44385]
+#### DOM security UI now supports instance-level security [ID 44385]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, the DOM security app allowed you to configure security settings on DOM definition level. From now on, it also allows you to configure security settings on DOM instance level. This means, that you can now allow user groups access to an individual DOM instance based on whether that DOM instance contains at least one of a specified set of values for a specified FieldDescriptor.
+Up to now, the DOM security UI allowed you to configure security settings on DOM definition level. From now on, it also allows you to configure security settings on DOM instance level. This means, that you can now allow user groups access to an individual DOM instance based on whether that DOM instance contains at least one of a specified set of values for a specified FieldDescriptor.
 
 For example, the user group *London employees* will only be able to read the "Job" instances where the *Assigned office* field (i.e. a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
 
-For more information, see [DataMiner Object Models: Instance-level security [ID 44233]](xref:General_Feature_Release_10.6.3#dataminer-object-models-instance-level-security-id-44233).
+For more information, see [DataMiner Object Models: Fine-grained security on instance level [ID 44233]](xref:General_Feature_Release_10.6.3#dataminer-object-models-fine-grained-security-on-instance-level-id-44233).
 
 > [!NOTE]
-> To access the DOM security app, go to `https://<DMA IP or hostname>/dom`. In DataMiner Cube, this app can be accessed via *System Center > DOM*.
+> To access the DOM security UI, go to `https://<DMA IP or hostname>/dom`. In DataMiner Cube, this UI can be accessed via *System Center > DOM*.
 
 #### Dashboards app: New Add button in navigation pane [ID 44432]
 
@@ -101,6 +101,39 @@ To have all data on a timeline grow or shrink in height, rotate the mouse wheel 
 
 Note that items cannot shrink below 1/10th of their initial height or grow above 10 times their initial height.
 
+#### Dashboards/Low-Code Apps - Timeline component: Group templates [ID 44557]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When a *Timeline* component has grouping applied, from now on, the appearance of those groups can be customized using the template editor.
+
+To do so, go to *Layout > Groups > Template*.
+
+#### Low-Code Apps: Support for custom CSS files [ID 44570]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When editing a low-code app, you can now make it use a custom CSS file.
+
+To do so, go to *App settings*. There you can add, update, and delete such a file.
+
+> [!CAUTION]
+> This feature is intended for advanced users only. Use it at your own risk.
+> Also, we cannot guarantee long-term support of CSS customizations as the default HTML structure of low-code app may change over time.
+
+#### Dashboards/Low-Code Apps - Timeline component: Group height can now be set to either 'Fixed' or 'Grow' [ID 44577]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When a *Timeline* component has grouping applied, from now on, under *Layout > Groups > Height*, the height of those groups can be set to either "Fixed" or "Grow".
+
+- When set to "Fixed" (i.e. the default setting), the items within a group will shrink depending on the number of items in that group. That way, the height of the group will stay the same.
+
+- When set to "Grow", all items within a group will have the same height, and the height of the group will grow accordingly.
+
+> [!NOTE]
+> Up to now, "Grow" was the default behavior. In order not to break existing setups, *Timeline* components in existing dashboards and low-code apps will not have their group height automatically set to "Fixed".
+
 ## Changes
 
 ### Enhancements
@@ -118,7 +151,7 @@ Many components in dashboards and low-code apps can be configured to be linked t
 Because of a number of enhancements to the theme logic, overall performance has increased when loading a dashboard or a low-code app.
 
 > [!NOTE]
-> As the theme folder structure has been changed, an incorrect theme could be assigned to dashboards and low-code apps imported as part of a Catalog package. A theme import/export functionality is being developed and will become available in a future version.
+> As the theme folder structure has been changed, an incorrect theme could be assigned to dashboards and low-code apps imported as part of a Catalog package.
 
 #### Dashboards/Low-Code Apps - Column & bar chart component: Minor enhancements [ID 44416]
 
@@ -187,13 +220,90 @@ The icons and favicons of the DataMiner landing page and the following DataMiner
 
 Also, the app titles have been standardized to ensure consistency across all apps.
 
+#### Interactive Automation scripts: UI components Time and Calendar can now all display seconds [ID 44521]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, in interactive Automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
+
+- `UIBlockType.Time` with `AutomationDateTimePickerOptions`
+- `UIBlockType.Time` with `AutomationDateTimeUpDownOptions`
+- `UIBlockType.Time` with `AutomationTimePickerOptions`
+- `UIBlockType.Calendar` with `AutomationCalendarOptions`
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.6.0/10.6.3 or newer.
+
 #### Visual Overview in web apps: Redesigned popup windows [ID 44530]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 In web apps, the popup windows that appear in visual overviews have now been redesigned.
 
+#### Dashboards/Low-Code Apps: Themes will now be included when exporting or importing a dashboard or a low-code app [ID 44540]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When you export or import a dashboard or a low-code app, from now on, the theme will now automatically be included in the export or import package.
+
+#### GQI DxM: 'Get parameters for elements where' data source can now query indexed logger tables [ID 44553]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+From now on, it will be possible to use the GQI data source *Get parameters for elements where* to query indexed logger tables that are stored in an Elasticsearch or OpenSearch database.
+
+> [!NOTE]
+> This will not be possible on systems using STaaS. This only applies to systems with an Elasticsearch or OpenSearch database.
+
+#### Web apps: Title of login screen will now display the app name in bold [ID 44561]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When you try to log in to a certain web app (e.g. Dashboards, Monitoring, etc.), the title of the login screen mentions the name of the app you want to access: `Sign in to <System name> to access <App name>`.
+
+In that title, the app name will now be displayed in bold to make it stand out more.
+
+#### GQI DxM: Enhanced filtering on object reference columns [ID 44567]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, it was not possible to add an `equals` filter on e.g. an elementID column. It was only possible to add a `contains` filter.
+
+From now on, it will be possible to add an `equals` filter on all columns containing the following object references:
+
+- ElementID
+- InterfaceID
+- ParamID
+- RedundancyGroupID
+- ServiceID
+- ViewID
+
+Also, when using the following data sources, it will now also be possible to use a filter value in order to retrieve only the necessary data from the DataMiner System:
+
+| Data source | Columns on which can be filtered |
+|---|---|
+| Get parameters for elements where | elementID |
+| Get Alarms | element ID and parameter ID |
+| Get behavioral change events | element ID and parameter ID |
+| Get trend data pattern events | element ID and parameter ID |
+| Get relational anomalies | element ID and parameter ID |
+
+> [!IMPORTANT]
+> The sorting behavior of these columns has changed. Up to now, the columns would be sorted according to the internal logic of these reference objects. From now on, they will be sorted by the key (string) value of the reference objects.
+
+#### Dashboards/Low-Code Apps: Icons of the left-hand editor buttons are now aligned vertically [ID 44612]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In the *Browse templates* window, the icons of the left-hand editor buttons are now aligned vertically.
+
 ### Fixes
+
+#### Dashboards/Low-Code Apps - State timeline component: Problems when processing state changes [ID 44277]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+A number of issues have been fixed with regard to the State timeline component. These issues would mostly occur when processing state changes.
 
 #### Dashboards/Low-Code Apps: Maps component would incorrectly fetch markers with larger bounds than necessary when you zoomed in or out [ID 44381]
 
@@ -307,8 +417,64 @@ In some cases, a folder named *;THEMES* would incorrectly appear in the navigati
 
 In some cases, a low-code app using a default theme could throw a console error.
 
-#### #### Dashboards/Low-Code Apps - Timeline component: Null reference exception could be thrown [ID 44602]
+#### GQI DxM: Memory leak in DataMiner GQI Extension Worker SLNet process [ID 44564]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, in some cases, the DataMiner GQI Extension Worker SLNet process could leak memory. This process is responsible for maintaining shared SLNet connections for GQI extensions (i.e. ad hoc data sources and custom operators).
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Problem when moving nodes [ID 44571]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When, in a *Node edge graph* component, node positioning was set to "Linked to data" and the initial viewport was set to "Auto", up to now, when a node was moved, the border of the node would incorrectly not be taken into account. As a result, the new X and Y coordinates of the node would be incorrect, causing the node to not end up at the intended location.
+
+#### Dashboards/Low-Code Apps - Timeline component: Problem when zooming out until the component switched to minimized view [ID 44581]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When, in a *Timeline* component, you zoomed out until the component switched to minimized view, certain shapes would not get rendered at the correct position.
+
+#### Dashboards/Low-Code Apps - Timeline component: Changes to certain settings would not get applied correctly [ID 44596]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When changes had been made to the settings of a *Timeline* component, in some cases, these changes would not get applied correctly.
+
+For example, changes to *Layout > General > Query name > Start/End column* would not get applied when you removed an older query from the timeline.
+
+#### Low-Code Apps - Action editor: Script outputs could incorrectly be linked to numeric inputs [ID 44598]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, it would incorrectly be possible to link the output of a script to a numeric input.
+
+As the output of a script is always a string value, from now on, it will only be possible to link the output of a script to a text input.
+
+#### Dashboards/Low-Code Apps - Timeline component: Null reference exception could be thrown [ID 44602]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 In some cases, a null reference exception could be thrown in a *Timeline* component.
+
+#### Web DcM: Problem when generating a PDF report [ID 44613]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In some rare cases, the Web DcM could throw an error while generating a PDF report.
+
+#### Dashboards/Low-Code Apps - Maps component: Fetched zones would not be cleared when the query changed [ID 44619]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When, in a *Maps* component, the query was changed, up to now, the zones that had been fetched would incorrectly not be cleared. As a result, panning to those zones would still show markers that matched the previous filter instead of the new one.
+
+From now on, all zones will be cleared whenever the query changes, and the markers will be fetched again with the new query.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Problem with real-time updates when a column filter is applied [ID 44622]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, when a *Node edge graph* component with real-time updates enabled had a column filter applied, only the value of that column would be updated when an update was received. As a result, when e.g. a node had been moved, in some cases, that node would keep its former position.
+
+From now on, all values will be updated, even those that are not associated with a column filter.
