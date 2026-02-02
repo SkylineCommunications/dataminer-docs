@@ -4,9 +4,9 @@ uid: LogicActionExecuteNext
 
 # execute next
 
-Can only be executed on a group.
+This action can only be executed on a group.
 
-This action will add the specified group to the group execution queue, at the very front, right after the group that is currently being executed.
+This action will add the specified group to the start of the group execution queue, right after the group that is currently being executed.
 
 ## Attributes
 
@@ -22,3 +22,6 @@ Specifies the ID(s) of the group(s).
   <Type>execute next</Type>
 </Action>
 ```
+
+## Related Actions
+- [execute one top](xref:LogicActionExecuteOneTop)
