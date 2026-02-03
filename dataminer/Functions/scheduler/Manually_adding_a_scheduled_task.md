@@ -4,7 +4,15 @@ uid: Manually_adding_a_scheduled_task
 
 # Manually adding a scheduled task
 
-To add a new scheduled task without a Scheduler template:
+To learn how to add a new scheduled task without a Scheduler template, you can follow the steps below or watch this short video:
+
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/dataminer/images/AutomatingDashboardReports.mp4" type="video/mp4">
+  </video>
+</div>
+
+*Watch first: [Creating your first dashboard](xref:Creating_a_completely_new_dashboard) & [Sharing a dashboard via email report](xref:Sharing_report_from_Dashboards_app)*
 
 1. In the Scheduler module, go to the *list* tab.
 
