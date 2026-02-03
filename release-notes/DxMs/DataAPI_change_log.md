@@ -7,6 +7,23 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 3 February 2026 - Fix - DataAPI 1.4.4 - Config endpoint not working in a multi-DataAPI setup [ID 44544]
+
+Fixed an issue in multi-DataAPI deployments where configuration requests could fail when routed to a follower node, due to the follower being unable to determine whether the leader had a copy of an auto-generated connector.
+
+### 15 January 2026 - Enhancement - DataAPI 1.4.3 - Make message broker request timeout configurable via appsettings [ID 44418]
+
+The message broker timeout is now configurable via the appsettings and appsettings.custom. If the value is not configured, DataAPI uses 30 seconds as the default.
+
+Example:
+```json
+{
+   "Communication": {
+      "MessageBrokerRequestTimeoutSeconds": 60
+    }
+}
+```
+
 ### 8 January 2026 - Enhancement - DataAPI 1.4.2 - Logging now accessible via System Center [ID 44409]
 
 The DataAPI logging is now available in System Center. For this purpose, the log file configuration has been moved to the appsettings.json file.
