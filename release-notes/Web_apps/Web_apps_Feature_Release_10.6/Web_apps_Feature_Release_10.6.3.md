@@ -500,3 +500,11 @@ This component is being retired. From DataMiner 10.5.0 [CU10]/10.6.1 onwards, it
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 When, in the *DATA* pane, you opened the *Indices* section, and selected an element and a parameter, up to now, the indices data set would incorrectly disappear when you opened the *Element* selection box again.
+
+#### Dashboards/Low-Code Apps - Numeric input component: Problem with step sizes of type float [ID 44643]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When, in a *Numeric input* component, the step size was set to the value of type float, up to now, it would not be possible to perform certain step operations. For example, when the component had its value set to 11287.809961 with a step size of 0.000001, it would not be possible to click the *Down* button.
+
+Also, in some cases, the error message `Only steps of size ... are allowed` would appear when it should not have appeared.

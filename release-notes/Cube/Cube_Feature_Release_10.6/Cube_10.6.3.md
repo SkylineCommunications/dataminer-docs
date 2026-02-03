@@ -123,6 +123,26 @@ Also, the alarm colors shown in visual overviews will be identical to those in t
 > In visual overviews used in web apps, as from version 10.6.0/10.6.3, the connections and alarm colors of table-based matrices will also be displayed correctly, but it will not be possible to alter connections using the context menu.
 > Visual overviews used in web apps will not support table-based matrices in version 10.5.0 CU12.
 
+#### Spectrum analysis: Enhancements with regard to selecting arguments in spectrum monitor scripts [ID 44650]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+A number of enhancements have been made with regard to selecting arguments in spectrum monitor scripts:
+
+- The default range of number values has increased from 11 billion to 1 quadrillion.
+
+  This will make it possible to configure values greater than 100 MHz.
+
+- The sleep value (in milliseconds) can no longer be negative, and is limited to 10 seconds.
+
+- A unit has now been added to the *Create frequency reference*, *Create amplitude reference*, and *Sleep* labels.
+  
+  | Label | Unit |
+  |-------|------|
+  | Create frequency reference | Hz |
+  | Create amplitude reference | dB |
+  | Sleep | ms |
+
 ### Fixes
 
 #### Alarm Console: Recursive loop in nested correlated alarms could cause Cube to stop working [ID 44378]
