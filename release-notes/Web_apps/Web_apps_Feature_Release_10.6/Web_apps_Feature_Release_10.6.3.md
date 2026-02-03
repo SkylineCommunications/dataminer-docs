@@ -494,3 +494,9 @@ For example, when a numeric input box passed the value 0 to an input parameter o
 In some cases, the *Pivot table* component would remain empty until you interacted with the dashboard or low-code app.
 
 This component is being retired. From DataMiner 10.5.0 [CU10]/10.6.1 onwards, it will only appear in the list of available visualizations if the URL option `showAdvancedSettings=true` is used.
+
+#### Dashboards/Low-Code Apps - Data pane: Indices data set would disappear when opening the Element selection box again in the Indices section [ID 44641]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+When, in the *DATA* pane, you opened the *Indices* section, and selected an element and a parameter, up to now, the indices data set would incorrectly disappear when you opened the *Element* selection box again.
