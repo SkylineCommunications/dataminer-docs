@@ -23,5 +23,6 @@ Specifies the ID(s) of the group(s) to add to the group execution queue.
 </Action>
 ```
 
-## Related Actions
+## Related actions
+
 - [execute one](xref:LogicActionExecuteOne)

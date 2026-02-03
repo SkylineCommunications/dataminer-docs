@@ -4,7 +4,7 @@ uid: LogicActionsOverview
 
 # Actions overview
 
-|Name | Description | On | Related Actions
+|Name | Description | On | Related Actions |
 |--- |--- |--- |--- |
 |[add to execute](xref:LogicActionAddToExecute)|Adds a group to the end of the queue, after timers.|group|execute one|
 |[aggregate](xref:LogicActionAggregate)|Aggregates data from one table into another.|parameter||
