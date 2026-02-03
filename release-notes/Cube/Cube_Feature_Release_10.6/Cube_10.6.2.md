@@ -86,6 +86,14 @@ From now on, when you try to add a DataMiner Agent to a DataMiner System, an err
 
 If the DataMiner System is a STaaS system, an error message will also appear when the DataMiner Agent is not cloud-connected.
 
+#### Ticketing module End of Life [ID 44373]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+
+The Ticketing module has been declared End of Life.
+
+On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer be shown in the list of applications in DataMiner Cube.
+
 #### Scheduler module will only fetch the Automation scripts in the 'Scheduler Templates' folder at startup [ID 44383]
 
 <!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->

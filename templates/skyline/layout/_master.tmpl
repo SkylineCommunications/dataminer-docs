@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html {{#_lang}}lang="{{_lang}}"{{/_lang}}>
   <head>
-    <meta name="google-site-verification" content="ll1R456EfxaLOHJITFDcZmHsnxtDEqNkiSl8gQhyVLo" />
+    <meta name="google-site-verification" content="qrBmzaufiDAyVa6i0OWE6A1kSl8TMnCFIOydFvyTnKU" />
     <meta charset="utf-8">
     {{#redirect_url}}
       <meta http-equiv="refresh" content="0;URL='{{redirect_url}}'">
@@ -80,7 +80,9 @@
                 <input class="form-control" id="search-query" type="search" disabled placeholder="{{__global.search}}" autocomplete="off" aria-label="Search">
               </form>
               {{/_enableSearch}}
-			  <div class="navbar-right"><button id="new-search-btn" class="btn navbar-btn search-button"><i class="bi bi-search"></i></button></div>
+              <div class="navbar-search">
+                <input id="search-input" class="d-none" type="search" placeholder="Search..." autocomplete="off">
+              </div>
             </div>
           </div>
         </div>
@@ -137,7 +139,14 @@
         <nav id="affix"></nav>
       </div>
     </main>
-	<div class="body-content container-xxl" id="new-search-container"><div id="search-results-new"><div id="search-box"><button id="search-close-btn" class="btn btn-link">Close search</button><input id="search-input" type="search" placeholder="Search..." autocomplete="off"></div><div id="search-result-items"></div></div></div>																																																																							   
+	  <div class="body-content container-xxl" id="new-search-container">
+      <div id="search-results-new">
+        <div id="search-close-box">
+          <button id="search-close-btn" class="btn btn-link">Close search</button>
+        </div>
+        <div id="search-result-items"></div>
+      </div>
+    </div>
     {{#_enableSearch}}
     <div class="container-xxl search-results" id="search-results"></div>
     {{/_enableSearch}}

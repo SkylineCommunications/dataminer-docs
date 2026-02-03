@@ -75,6 +75,9 @@ Also, all logging with regard to OpenSearch health monitoring can now be found i
 
 Note that, from now on, if not all nodes of the OpenSearch cluster are listed in the *Db.xml* file, a notice will be generated to warn operators.
 
+> [!IMPORTANT]
+> These enhancements have been reverted. See [SLDataGateway issue caused by OpenSearch health monitoring [ID 44647]](xref:General_Feature_Release_10.6.2_CU1#sldatagateway-issue-caused-by-opensearch-health-monitoring-id-44647).
+
 #### Augmented Operations: Server-side support for new flatline detection modes [ID 44094]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
@@ -360,12 +363,6 @@ After a DataMiner restart or an element restart, in some cases, the service impa
 
 In the `<PortSettings>` element of an HTTP connection, you can configure a `<SkipCertificateVerification>` element with child elements `<DefaultValue>` and `<Disabled>`. Up to now, both child elements would incorrectly not be read if the connection in question was not the primary connection.
 
-#### Problem with the GQI DxM when it tried to connect to SLNet during DataMiner startup [ID 44380]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-During DataMiner startup, in some rare cases, a fatal error could occur in the GQI DxM when it tried to connect to SLNet.
-
 #### Problem with SLDataMiner when an incomplete JSON response was received from Microsoft Entra ID [ID 44391]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
@@ -379,3 +376,9 @@ In some cases, a fatal error could occur in SLDataMiner when an incomplete JSON 
 When an alarm cannot be created for a particular element, an attempt is made to fetch the element state for logging purposes.
 
 Up to now, in some cases, when the element was being stopped and was flushing its data to the database, this fetch operation could block the alarm thread. As a result, no new alarms would get processed for that element until the element had stopped flushing its data.
+
+#### Delay of DataMiner startup routine caused by SLDataMiner starting up faster than SLNet [ID 44438]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.2 [CU0] -->
+
+During DataMiner startup, in some rare cases, SLDataMiner would start up faster than SLNet. This would cause a delay of about 2 minutes in the entire startup routine.

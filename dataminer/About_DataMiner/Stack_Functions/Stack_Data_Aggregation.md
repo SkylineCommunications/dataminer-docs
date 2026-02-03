@@ -11,7 +11,7 @@ uid: Stack_Data_Aggregation
 Summarize data from multiple sources.
 
 > [!TIP]
-> For detailed information, see [Working with aggregation rules](xref:Working_with_aggregation_rules).
+> For detailed information, see [Aggregation rules](xref:About_aggregation_rules).
 
 ## Data Collector
 

@@ -9,6 +9,19 @@ uid: General_Main_Release_10.7.0_changes
 
 ## Changes
 
+### Breaking changes
+
+#### Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Up to now, one SLScripting process was used by default. From now on, by default, there will be as many SLScripting processes as SLProtocol processes.
+
+Note that is possible to configure the number of simultaneously running SLScripting processes. See [Setting the number of simultaneously running SLScripting processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes).
+
+> [!IMPORTANT]
+> If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. More information can be found in the [QAction documentation](xref:LogicQActions#sharing-and-persisting-data).
+
 ### Enhancements
 
 #### SLNet: Trend graphs in Cube will now also correctly display behavioral change points for table column parameters without advanced naming [ID 41751]
@@ -17,6 +30,28 @@ uid: General_Main_Release_10.7.0_changes
 
 Because of a number of enhancements made in SLNet, trend graphs in DataMiner Cube will now also correctly display behavioral change points for table column parameters without advanced naming.
 
+#### Protocols: Elements will now restart automatically when an SLScripting process has disappeared [ID 42306]
+
+<!-- MR 10.6.0 - FR 10.5.5 >>> Published in 10.7.0 - FR 10.6.3 together with 44420 -->
+
+Up to now, when an SLScripting process disappeared, elements relying on that process could become unstable, requiring manual intervention to restore functionality.
+
+From now on, when an SLScripting process disappears, a new process instance will be started automatically, and any elements that depended on the process that disappeared will be restarted to maintain consistency across SLProtocol, SLScripting, and other related components. This will ensure that lost SLScripting data is properly reinitialized and remains in sync with other processes.
+
+When an SLScripting process disappears, the following notice alarm will be generated:
+
+`Process disappearance of SLScripting.exe with PID <processId>; <x> elements affected by the disappearance have been restarted.`
+
+Also, the *SLElementsInProtocol.txt* log file has been updated to track restart reasons more accurately.
+
+- The restart reason column will now indicate either "SLScriptingCrashRestart" or "SLProtocolCrashRestart" (if everything is OK, *NormalStart* will be shown instead).
+- A new counter will now indicate the number of times the element was started due to a SLScripting process disappearance.
+
+If SLProtocol requests an SLScripting process that is no longer valid, the system will now detect this, and trigger the same element restart flow.
+
+> [!NOTE]
+> There will be a one-minute delay between the disappearance of an SLScripting process and the creation of a new SLScripting process and the subsequent element restarts. However, when one of the elements that was hosted in the SLScripting process that disappeared tries to trigger a QAction within that one-minute delay, the new SLScripting process will be created when that QAction is triggered.
+
 #### Automation: Engine class now has an OnDestroy handler that will allow resources to be cleaned up when a script ends [ID 43919]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->
@@ -24,6 +59,17 @@ Because of a number of enhancements made in SLNet, trend graphs in DataMiner Cub
 An `OnDestroy` handler has now been added to the `Engine` class. This handler will allow resources to be cleaned up when a script ends.
 
 Multiple handlers can be added. They will run synchronously, and if one handler throws an error, the others will keep on running.
+
+#### New parameter caches for client apps [ID 43945]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Two new parameter caches are now available for client apps (e.g. DataMiner Cube):
+
+- ProtocolParameters (linked to GetProtocolParameter on the client connection)
+- ElementProtocolParameters (linked to GetElementProtocolParameter on the client connection)
+
+Both caches are added on the connection object, and have the ability to cache in memory (for the current session) and on disk (for a next session).
 
 #### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
 
@@ -162,6 +208,25 @@ In the following example, the entrypoint ID can be found at the end of the entry
 <!-- MR 10.7.0 - FR 10.6.3 -->
 
 As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway Configuration* has now been removed from the list of backup options.
+
+#### SLManagedScripting will again add a log entry each time it has loaded or failed to load an assembly [ID 44522]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Since DataMiner version 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9<!-- RN 43690 -->, SLManagedScripting no longer added an entry in the *SLManagedScripting.txt* log file each time it had loaded or failed to load an assembly. From now on, it will again do so.
+
+These log entries will include both the requested version and the actual version of the assembly.
+
+#### DataMiner backup: Scheduler configuration will now be included in full and configuration backups [ID 44584]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+From now on, the Scheduler configuration found in `C:\Skyline Dataminer\Scheduler` will be included in the following pre-configured backups:
+
+- Full backup (without database)
+- Configuration backup (without database)
+
+If you create a custom backup, the Scheduler configuration will be included only if you selected the *DataMiner settings* option.
 
 ### Fixes
 

@@ -43,9 +43,11 @@ uid: Designing_a_matrix_tab_page_in_the_Router_Control_module
 
 ## Adding a matrix represented by two table parameters
 
-The Router Control module also supports matrices that are represented by two table parameters, i.e. an input and an output table, instead of a matrix parameter. This can improve performance for large matrices (512x512 and more). However, in this case an output cannot be connected to more than one input at a time.
+The Router Control module also allows you to configure a matrix based on two table parameters, i.e. an input and an output table. This can especially be of use for large matrices (512x512 and more), as it will result in better performance than using a matrix parameter.
 
-In order to add such a matrix, do the following:
+If you configure a matrix like this, an output cannot be connected to more than one input at a time.
+
+In order to configure such a matrix, do the following:
 
 1. Add a matrix like in the procedure above, until you get to the *Advanced Configuration* section.
 
@@ -83,6 +85,9 @@ Note that the input and output tables must have at least the following read and 
 | IsLocked | Whether or not this input/output is currently locked (Boolean: 0 or 1). |
 | Notes | Extra information. |
 | ConnectedInput | Foreign key linking to the inputs table. (Only required for the output table) |
+
+> [!NOTE]
+> In a protocol, it is also possible to configure a [table-based matrix parameters](xref:UIComponentsTableMatrix). However, this is an entirely distinct feature from the configuration of a matrix based on table parameters in Router Control. Table-based matrix parameters defined in a protocol can only be viewed in Data Display and are not supported in the Router Control module.
 
 ## Creating a dynamic tab control
 

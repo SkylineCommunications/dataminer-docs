@@ -52,11 +52,31 @@ When you right-click a dashboard or click the ellipsis button of a dashboard, a 
 
 The sidebar now also supports keyboard navigation and automatically adapts to the viewport width.
 
-#### Ticketing app End of Life [ID 44371] [ID 44373]
+#### Dashboards/Low-Code Apps - Templates: More preset templates and redesigned 'Browse templates' window [ID 44174] [ID 44176]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-The Ticketing app has been declared End of Life. On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer be shown on the DataMiner landing page or in the list of applications in DataMiner Cube.
+Ready-made preset templates are now available for all template-supported components (i.e. grids, maps, timelines, and tables), directly in the *Browse templates* window. These presets let you take full advantage of template customization options while saving time and reducing repetitive work when configuring components.
+
+![Templates](~/release-notes/images/Templates.png)
+
+All default templates now appear as presets, alongside a number of additional preset options. Template previews are rendered in the same way for all components, so you have a clear view of each template before applying it.
+
+The *Browse templates* window has also been redesigned for faster, more intuitive navigation. You can now:
+
+- Search templates by name.
+
+- Filter the list to show preset templates, custom templates, or both.
+
+- Narrow down the overview by visualization type.
+
+#### Ticketing app End of Life [ID 44371]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+The Ticketing app has been declared End of Life.
+
+On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer be shown on the DataMiner landing page.
 
 ## Changes
 
@@ -67,22 +87,6 @@ The Ticketing app has been declared End of Life. On systems running DataMiner ma
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 Because of a number of enhancements, performance has increased when rendering a large number of template previews in e.g. the *Browse templates* window.
-
-#### Dashboards/Low-Code Apps - Templates: Default templates of all components that are using templates will now show up a presets in 'Browse templates' window [ID 44174]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-In the *Browse templates* window, all default templates of all components that are using templates will now show up a presets.
-
-Also, this window will now include a number of additional presets.
-
-#### Dashboards/Low-Code Apps - Templates: Enhanced template previews [ID 44176]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-A number of enhancements have been made with regard to template previews.
-
-From now on, template previews will always be rendered in a consistent way, whatever the component in which they are viewed.
 
 #### Dashboards/Low-Code Apps - Node edge graph component: Label enhancements [ID 44218]
 
@@ -370,12 +374,6 @@ When you entered a decimal value that started with a decimal point (e.g. ".05"),
 
 > [!NOTE]
 > In some cases, this issue can still occur when entering a decimal value in a dialog box of an interactive Automation script that uses legacy UI components.
-
-#### Dashboards/Low-Code Apps - State timeline component: Problems when processing state changes [ID 44277]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-A number of issues have been fixed with regard to the State timeline component. These issues would mostly occur when processing state changes.
 
 #### Dashboards/Low-Code Apps - Timeline component: Problem when zooming or panning while linked components trigger viewport changes [ID 44280]
 

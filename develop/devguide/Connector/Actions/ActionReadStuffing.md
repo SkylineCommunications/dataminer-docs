@@ -10,7 +10,14 @@ Sometimes, in the data block of a command, it is not allowed to use certain symb
 
 In that case, if you do want to use one of those symbols, it has to be preceded by a redundant character to indicate that it should not be processed as a control byte but as data. This adding of redundant characters is also known as stuffing.
 
-The “read stuffing” action allows you to remove those redundant characters when a response is received.
+The "read stuffing" action allows you to remove those redundant characters when a response is received.
+
+> [!NOTE]
+> Only to be used for a "serial" connection type.
+>
+> When the value of the trailer can occur in the data of the response, do NOT define a trailer type parameter, because the response will be cut off as soon as the bytes of the trailer are found inside the response data. Specify the last parameter in the response as a fixed type parameter instead of a trailer. The parameter right before the last parameter in the response needs to be a read type parameter with Interprete LengthType set to "last next param". Add a trigger that goes off before the response that first executes the "read stuffing" action, followed by a "read" action on the response. As a trailer is no longer present, the downside is that the response will wait until timeout time before it is processed.
+>
+> In case of a "smart-serial" connection type, use [advanced stuffing](xref:Protocol.Advanced-stuffing).
 
 ## Attributes
 

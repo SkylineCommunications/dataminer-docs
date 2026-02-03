@@ -34,29 +34,32 @@ DataMiner encrypts the following secrets using this technique:
 - Element passwords
 - Replication passwords
 
-## In-Transit Encryption
+## In-transit encryption
 
 Here we can distinguish several communication flows:
 
-- DataMiner Cube
-- DataMiner Web Apps & API
-- Inter-DataMiner
-- Data acquisition
-- Cassandra
-- Elasticsearch
-- NATS
+- [DataMiner Cube](#dataminer-cube)
+- [DataMiner web apps and API](#dataminer-web-apps-and-api)
+- [Inter-DataMiner](#inter-dataminer)
+- [Data acquisition](#data-acquisition)
+- Storage: [Storage as a Service](#storage-as-a-service) or [Cassandra](#cassandra) and [OpenSearch](#opensearch)/[Elasticsearch](#elasticsearch)
+- [NATS](#nats)
 
 ### DataMiner Cube
 
-DataMiner Cube will communicate with the DataMiner back end over .NET Remoting by default. This is encrypted using the Rijndael (256-bit key, CBC mode) algorithm. The encryption key is negotiated over a 2048-bit RSA-secured communication channel. It is also possible to configure DataMiner so [gRPC is used instead of .NET Remoting](xref:DataMiner_hardening_guide#secure-cube-server-communication).
+Starting from DataMiner 10.5.10/10.6.0, Cube uses gRPC over HTTPS by default to communicate with DataMiner.
 
-### DataMiner Web Apps & API
+Prior to this, Cube will communicate with the DataMiner backend over .NET Remoting by default. This is encrypted using the Rijndael (256-bit key, CBC mode) algorithm. The encryption key is negotiated over a 2048-bit RSA-secured communication channel. It is also possible to configure DataMiner so [gRPC is used instead of .NET Remoting](xref:DataMiner_hardening_guide#secure-cube-server-communication).
 
-By default, the DataMiner Web Apps (Reports, Dashboards, Monitoring, etc.) are served over HTTP, which is unencrypted. We recommend that you [enable HTTPS and disabling HTTP](xref:Setting_up_HTTPS_on_a_DMA) to ensure all traffic is encrypted.
+### DataMiner web apps and API
+
+By default, the DataMiner web apps (Dashboards, Monitoring, etc.) are served over HTTP, which is unencrypted. Starting from DataMiner 10.2.1/10.3.0, the webpages are also served over HTTPS using a self-signed certificate. We recommend that you [properly configure HTTPS and disable HTTP](xref:Setting_up_HTTPS_on_a_DMA) to ensure all traffic is encrypted.
 
 ### Inter-DataMiner
 
-When a DataMiner System consists of multiple DataMiner nodes, inter-node communication flows through a .NET Remoting channel by default. This is encrypted using the Rijndael algorithm (256-bit key, CBC mode). The encryption key is negotiated over a 2048-bit RSA-secured communication channel. It is also possible to [configure DataMiner to use gRPC instead of .Net Remoting](xref:DataMiner_hardening_guide#grpc).
+Starting from DataMiner 10.5.10/10.6.0, DataMiner Systems consisting of multiple DataMiner nodes use gRPC over HTTPS for the inter-node communication.
+
+Older versions of DataMiner use a .NET Remoting channel by default for the inter-node communication. This channel is encrypted using the Rijndael algorithm (256-bit key, CBC mode). The encryption key is negotiated over a 2048-bit RSA-secured communication channel. It is also possible to [configure DataMiner to use gRPC instead of .Net Remoting](xref:DataMiner_hardening_guide#grpc).
 
 ### Data acquisition
 
@@ -98,7 +101,7 @@ For DataMiner Systems configured to use an Elasticsearch database, we recommend 
 
 ### NATS
 
-From version 10.1.0/10.1.1 onwards, DataMiner relies on NATS for some inter-process communication. By default, this NATS traffic is not yet encrypted.
+DataMiner relies on NATS for some inter-process communication. Prior to DataMiner 10.6.0/10.6.1, this NATS traffic is not yet encrypted by default.
 
 Please refer to [Securing NATS](xref:Security_NATS) to learn how to set up TLS for NATS.
 

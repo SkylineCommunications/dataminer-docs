@@ -123,6 +123,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 
 | Term | Description |
 |------|-------------|
+| RAD | Relational Anomaly Detection. See [Relational anomaly detection](xref:Relational_anomaly_detection).|
 | RADIUS | Remote Authentication Dial In User Service. Authentication, Authorization and Accounting (AAA) protocol that manages network access. |
 | RAID | Redundant Array of Independent Disks. |
 | RCA | Root Cause Analysis. DataMiner functionality that allows you to filter alarms based on how far they are removed from their probable root cause. See [Using the RCA slider](xref:UsingTheRCASlider) and [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor). |
@@ -166,7 +167,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Scan range | Definition of how to scan the network as part of [DataMiner IDP](xref:SolIDP). This includes the IP address ranges where the scan should occur and the CI Types indicating the types of devices that should be detected. |
 | Scheduled event | An event consisting of a start and stop task, scheduled to be executed at a specific time in the DMS. See [Scheduling an event based on a Scheduler template](xref:Scheduling_an_event_based_on_a_Scheduler_template). |
 | Scheduled task | An action that is scheduled to be executed at a specific time in the DMS. See [Manually adding a scheduled task](xref:Manually_adding_a_scheduled_task). |
-| Scheduler | DataMiner application that allows you to schedule certain actions in the DataMiner System. See [Scheduler](xref:scheduler). |
+| Scheduler | DataMiner application that allows you to schedule certain actions in the DataMiner System. See [Scheduler](xref:About_the_Scheduler_module). |
 | SCPC | Single Channel Per Carrier. Technology where a single signal is used at a given frequency and bandwidth. |
 | SCSI | Small Computer System Interface. |
 | SDH | Synchronous Digital Hierarchy. Standard technology in Europe for synchronous data transmission on optical media. Its US counterpart is SONET. |
@@ -330,6 +331,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | WMI | Windows Management Instrumentation. Set of specifications from Microsoft for the management of devices and applications in a network of Windows systems. |
 | Workspace | A Cube screen layout consisting of one or more cards, which can be saved. See [Working with workspaces](xref:Working_with_workspaces). |
 | Write parameter | A parameter of which the value can be updated by a user. See [Read parameters versus write parameters](xref:Read_parameters_versus_write_parameters). |
+| WSL | Windows Subsystem for Linux. |
 
 ## X
 

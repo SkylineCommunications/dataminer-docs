@@ -10,7 +10,7 @@ uid: DMAElementConfiguration
 | Description | String | The description of the element. |
 | ProtocolName | String | The name of the element’s protocol. |
 | ProtocolVersion | String | The version of the element’s protocol. |
-| Type | String | The element type configured in the protocol (e.g. “Information Platform” in a Microsoft protocol). |
+| Type | String | The element type configured in the protocol (for example, “Information Platform” in a Microsoft protocol). |
 | AlarmTemplate | String | The alarm template used to monitor the element. |
 | TrendTemplate | String | The trend template used to track the element’s trend data. |
 | ForceAgent | String | Used in a Failover setup to always make an element run on a particular DMA. |

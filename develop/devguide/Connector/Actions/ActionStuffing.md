@@ -36,7 +36,7 @@ The stuffing byte sequence. This can also be a hex string (e.g. 0xFF).
 
 ## On response
 
-This action removes stuffing on the specified response(s).
+This action adds stuffing bytes on the incoming data of the specified response(s).
 
 ### Attributes
 
@@ -77,7 +77,7 @@ On response example:
 
 ```xml
 <Action id="5">
-   <Name>Remove Stuffing</Name>
+   <Name>Add Stuffing</Name>
    <On>response</On>
    <Type value="0x10" startoffset="2" endoffset="2">stuffing</Type>
 </Action>

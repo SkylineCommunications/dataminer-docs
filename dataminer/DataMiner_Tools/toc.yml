@@ -186,6 +186,8 @@ items:
         items:
           - name: Activating verbose Correlation logging
             topicUid: SLNetClientTest_activating_verbose_correlation_logging
+          - name: Activating event cache or subscription logging
+            topicUid: SLNetClientTest_activating_event_or_subscription_logging
           - name: Changing the log levels for a log file
             topicUid: SLNetClientTest_changing_log_levels
           - name: Checking a hyperlink filter
