@@ -146,6 +146,21 @@ These filtering options are saved in the `<SLNet>` section of the *MaintenanceSe
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Swarming scheduled tasks [ID 44620]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Scheduled tasks can now be swarmed between Agents in the cluster, but only when those tasks are stored in a database. Therefore, if you want to allow your scheduled tasks to be swarmed, you should first migrate them from *Schedule.xml* to a database ([STaaS](xref:STaaS) or [dedicated clustered storage](xref:Dedicated_clustered_storage)).
+
+You can identify the Agent that is currently hosting a scheduled task by checking the *ExecutingDmaId* property on the task. This value is displayed in the Scheduler module in Cube in the *DataMiner* column. If you want the task to run on a different Agent, you can swarm it to another Agent in the cluster.
+
+During the swarming process, DataMiner removes the task from the Microsoft Task Scheduler on the current hosting Agent. This means the task will not be triggered while swarming is in progress. Once the task has been swarmed, the task will be recreated on the new hosting Agent, and it will be executed at its next scheduled runtime.
+
+For more information, see:
+
+- [Scheduler data storage](xref:SchedulerDataStorage)
+- [Configuring a script to swarm scheduled tasks](xref:SwarmingScriptScheduledTask)
+
 ## Changes
 
 ### Breaking changes
