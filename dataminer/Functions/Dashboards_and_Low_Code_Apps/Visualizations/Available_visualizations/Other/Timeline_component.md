@@ -135,6 +135,17 @@ Panning changes **the position of the displayed time range** without affecting i
 > [!NOTE]
 > If you have enabled the *Lock timeline to now* setting, you will be unable to pan past the "now" indicator.
 
+### Adjusting item height
+
+From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44524-->, you can adjust the height of all items on a timeline at once.
+
+To increase or decrease the height of all timeline items, rotate the mouse wheel while keeping the ALT key pressed.
+
+![Vertical zooming](~/dataminer/images/VerticalZoom.gif)<br>*Timeline component in DataMiner 10.6.3*
+
+> [!NOTE]
+> Items cannot shrink below one tenth of their initial height or grow beyond ten times their initial height.
+
 #### Linking to a time range component
 
 Instead of adjusting the time range directly in the timeline, you can link it to a time range component. This allows you to **control the displayed time range from a dedicated component**, which offers both quick and custom selection options.
