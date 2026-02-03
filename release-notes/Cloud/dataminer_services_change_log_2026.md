@@ -11,8 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 2 February 2026 - New feature - Admin - Billing page
 
-The billing page introduces a dedicated space for organization owners and admins to monitor and manage their organization’s spending.
-It provides access to credit history, monthly bills, and subscription management, including any available discounts.
+In the Admin app, a new *Billing* page is now available, which will serve as a dedicated space for organization owners and admins to monitor and manage their organization’s spending. The page provides access to credit history, monthly bills, and subscription management, including any available discounts.
 
 ### 29 January 2026 - Enhancement - dataminer.services - Improved DaaS deployment credit validation
 
