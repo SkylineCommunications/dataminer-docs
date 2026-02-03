@@ -156,10 +156,104 @@ You can identify the Agent that is currently hosting a scheduled task by checkin
 
 During the swarming process, DataMiner removes the task from the Microsoft Task Scheduler on the current hosting Agent. This means the task will not be triggered while swarming is in progress. Once the task has been swarmed, the task will be recreated on the new hosting Agent, and it will be executed at its next scheduled runtime.
 
-For more information, see:
+##### Checking the current storage type
 
-- [Scheduler data storage](xref:SchedulerDataStorage)
-- [Configuring a script to swarm scheduled tasks](xref:SwarmingScriptScheduledTask)
+The storage type used for a specific DMA is shown in the Scheduler configuration file `C:\Skyline DataMiner\Scheduler\Config.xml`. The `Storage` value will either be set to "Xml" or "Database".
+
+If this configuration file is missing, scheduled tasks default to XML storage. Newly installed DataMiner Agents also by default use XML storage.
+
+If you want to switch from XML to database storage, do not adjust this directly in this file. Instead, use the migration procedure detailed below.
+
+##### Migrating from XML to database storage
+
+You can migrate the scheduled tasks from *Schedule.xml* to a database ([STaaS](xref:STaaS) or [dedicated clustered storage](xref:Dedicated_clustered_storage)) using the SLNetClientTest tool.
+
+1. Open the SLNetClientTest tool and connect to the DMS.
+1. From the *Advanced* menu, select *Migration*.
+1. In the *Scheduler XML to database* section, click the *Start Migration* button to launch the migration wizard.
+
+   - During migration, no scheduled tasks will be triggered, but tasks that are already running will continue to run. However, we recommend not starting a migration while tasks are still running.
+   - A window will show the migration actions that have been scheduled. If you close this window, the migration will continue in the background.
+   - You can cancel the migration process at any time by clicking the *Cancel Migration* button.
+   - The progress of the migration will be shown in the *MigrationStatus* table in SLNetClientTest tool, where a row will be created for each Agent in the cluster where the scheduled tasks will be migrated.
+   - If one of the DataMiner Agents in the cluster cannot be reached for some reason, the migration will be canceled.
+   - Once the migration is complete on all Agents, the storage will automatically switch from XML to database, and incoming messages will be unblocked.
+
+If the migration fails for any reason, the migration status object in the SLNetClientTest tool window will get a red background color. The *SLMigrationManager.txt* and *SLScheduler.txt* log files will contain more information. Scheduler Manager will not switch the configuration, so XML storage will still be used after a failed migration.
+
+If a *MigrationStatus* is stuck in the *InProgress* state, you will need to cancel the migration to make all Scheduler Manager instances start or to trigger the migration again. You can do so with the *Cancel Migration* button in the *Scheduler XML to database* section of the SLNetClientTest tool window.
+
+> [!NOTE]
+>
+> - Scheduler will be restarted during the migration.
+> - Incoming requests to the Scheduler Manager will be blocked while the migration is in progress.
+
+> [!WARNING]
+> Always be extremely careful when using SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+##### Configuring a script to swarm scheduled tasks
+
+If scheduled tasks are stored in the database, you can use an Automation script to initiate the swarming process.
+
+In this script, create a SwarmingHelper using the new hosting Agent ID along with the scheduled task IDs. See the following example.
+
+```csharp
+using System;
+using System.Linq;
+using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Net;
+using Skyline.DataMiner.Net.Swarming.Helper;
+
+public class Script
+{
+    public void Run(Engine engine)
+    {
+        var newHostingAgent = 123;
+
+        var scheduledTaskIds = new List<ScheduledTaskID>
+        {
+            // DmaId, TaskId
+            new ScheduledTaskID(..., ...),
+            new ScheduledTaskID(..., ...),
+        };
+
+        var swarmingResults = SwarmingHelper.Create(engine.GetUserConnection()).SwarmScheduledTasks(scheduledTaskIds.ToArray()).ToAgent(newHostingAgent);
+
+        if (swarmingResults == null)
+        {
+            engine.ExitFail("Swarming failed: result was null");
+        }
+
+        // There should be a result for each scheduled task.
+        if (swarmingResults.Length != scheduledTaskIds.Count)
+        {
+            var sentIds = string.Join(", ", scheduledTaskIds
+                    .OrderBy(t => t.DmaId)
+                    .ThenBy(t => t.TaskId)
+                    .Select(t => $"{t.DmaId}/{t.TaskId}"));
+
+
+            // 'ToString' of a SwarmingResult will contain the ID of the object, the message and whether swarming succeeded for the object or not.
+            var results = string.Join(", ", swarmingResults.Select(s => s.ToString()));
+
+            engine.ExitFail($"Did not receive enough swarming responses. Requested to swarm {scheduledTaskIds.Count} scheduled tasks, but got {swarmingResults.Length} responses.{Environment.NewLine}" +
+                            $"Sent ids: {sentIds}{Environment.NewLine}Results: {results}");
+        }
+
+        var unsuccessfulResults = swarmingResults.Where(s => !s.Success).ToList();
+        if (unsuccessfulResults.Count > 0)
+        {
+            var failedScheduledTasks = string.Join(", ", unsuccessfulResults.Select(s => s.ToString()));
+            engine.ExitFail($"Failed to swarm some scheduled tasks. Failed results: {failedScheduledTasks}");
+        }
+    }
+}
+```
+
+> [!NOTE]
+>
+> - To swarm a scheduled task, the new hosting Agent must be up and running. In case the current hosting Agent is unreachable, swarming will still take place, but an error will be logged in the *SLScheduler* log file.
+> - To be able to trigger swarming for a scheduled task, you need the *Modules > Swarming* user permission.
 
 ## Changes
 
