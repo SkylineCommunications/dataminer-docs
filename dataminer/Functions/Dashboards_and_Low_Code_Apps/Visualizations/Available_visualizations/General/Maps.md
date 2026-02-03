@@ -119,7 +119,7 @@ To provide additional context or details on a map without cluttering the base vi
 
 You can use a maps component as a dynamic selector, i.e. a component whose selection **determines behavior or data elsewhere in your dashboard or app**. A common use case is to display more information about a marker or line on the map when it is selected.
 
-When you select a marker or line on the map, the selected data (*All available data* > *Components* > *[Page name]* > *Map* > *Selected markers* / *Selected lines* > *Tables*) becomes automatically available for use in other components.
+When you select a marker or line on the map, the selected data (e.g. *All available data* > *Components* > *[Page name]* > *Map* > *Selected markers* / *Selected lines* > *Tables*) becomes automatically available for use in other components.
 
 > [!NOTE]
 > In versions prior to DataMiner 10.5.0 [CU12]/10.6.3<!--RN 44015-->, the path to the selected data may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
