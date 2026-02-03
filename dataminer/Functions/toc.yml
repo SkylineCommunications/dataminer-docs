@@ -1432,3 +1432,17 @@ items:
             topicUid: Allowed_paths_connection_DataMiner_proxy
           - name: Ignoring validation errors during HTTP parsing
             topicUid: Ignoring_validation_errors_during_HTTP_parsing
+  - name: Visual Overview
+    items:
+      - name: About Visual Overview
+        topicUid: About_Visual_Overview
+      - name: Managing Visio files linked to protocols
+        topicUid: Managing_Visio_files_linked_to_protocols
+      - name: Setting the active Visio file for an element, service, or view
+        topicUid: Set_as_active_Visio_file
+      - name: Visual overview page priority
+        topicUid: Visual_overview_page_priority
+      - name: Cleaning up unused Visio files
+        topicUid: Cleaning_up_unused_Visio_files
+
+
