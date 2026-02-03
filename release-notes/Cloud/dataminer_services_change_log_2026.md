@@ -13,6 +13,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 Starting from February 2026, automatic monthly billing will be implemented for Automation Actions, Connectors & Managed Objects. On the 5th day of each month, the expended DataMiner credits for the previous month's usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.
 
+Perpetual licensed systems will have usage based billing only for Automation Object Modeling, DataMiner as a Service and Storage as a Service.
+
+The Community Edition base allowance has been updated.
+
 In case an organization does not have sufficient DataMiner credits, their balance will go negative, and it will need to be topped up as soon as possible. Organizations with a negative balance will not be able to deploy new DaaS systems.
 
 ### 8 January 2026 - Enhancement - Billing - Dashboard Sharing & Unmanaged Objects usage billing
