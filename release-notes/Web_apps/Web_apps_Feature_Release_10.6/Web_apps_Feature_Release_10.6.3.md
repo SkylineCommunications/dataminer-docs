@@ -478,3 +478,19 @@ From now on, all zones will be cleared whenever the query changes, and the marke
 Up to now, when a *Node edge graph* component with real-time updates enabled had a column filter applied, only the value of that column would be updated when an update was received. As a result, when e.g. a node had been moved, in some cases, that node would keep its former position.
 
 From now on, all values will be updated, even those that are not associated with a column filter.
+
+#### Low-Code Apps: Falsy values would incorrectly not be passed to script input parameters [ID 44631]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+Up to now, falsy values (e.g. 0, null, false, empty string, etc.) would incorrectly not be passed to script input parameters.
+
+For example, when a numeric input box passed the value 0 to an input parameter of a script, that script would incorrectly receive '[]' (i.e. an empty JSON array). From now on, the script will receive '["0"]' instead.
+
+#### Dashboards/Low-Code Apps: Pivot table component would remain empty until you interacted with the dashboard or low-code app [ID 44634]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In some cases, the *Pivot table* component would remain empty until you interacted with the dashboard or low-code app.
+
+This component is being retired. From DataMiner 10.5.0 [CU10]/10.6.1 onwards, it will only appear in the list of available visualizations if the URL option `showAdvancedSettings=true` is used.
