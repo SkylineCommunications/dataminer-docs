@@ -6,7 +6,7 @@ uid: DOM_security_ui
 
 <!-- RN 43622 -->
 
-From DataMiner 10.5.11/10.6.0 onwards, you can configure definition-level security settings for DOM. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44385-->, you can also configure security at DOM instance level. In the background, this will make use of the [link security](xref:DOM_security#link-security) feature.
+From DataMiner 10.5.11/10.6.0 onwards<!--RN 43622-->, you can configure definition-level security settings for DOM. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44385-->, you can also configure security at DOM instance level. In the background, this will make use of the [link security](xref:DOM_security#link-security) feature.
 
 ![Configuring DOM security](~/dataminer/images/DOMSecurityApp.png)<br>*Configuring DOM security in DataMiner 10.6.3*
 
