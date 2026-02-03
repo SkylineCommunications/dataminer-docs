@@ -16,22 +16,22 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## Highlights
 
-*No highlights have been selected yet.*
-
-## New features
-
 #### DOM security UI now supports instance-level security [ID 44385]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, the DOM security UI allowed you to configure security settings on DOM definition level. From now on, it also allows you to configure security settings on DOM instance level. This means, that you can now allow user groups access to an individual DOM instance based on whether that DOM instance contains at least one of a specified set of values for a specified FieldDescriptor.
+With the DOM security UI, you can now not only configure security settings on DOM definition level, but also on DOM instance level. This means that you can now allow user groups access to an individual DOM instance based on whether that DOM instance contains at least one of a specified set of values for a specified FieldDescriptor.
 
-For example, the user group *London employees* will only be able to read the "Job" instances where the *Assigned office* field (i.e. a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
+For example, with the configuration illustrated below, the user group *London office* will only be able to read the "Jobs" instances where the *Assigned office* field (i.e. a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
 
-For more information, see [DataMiner Object Models: Fine-grained security on instance level [ID 44233]](xref:General_Feature_Release_10.6.3#dataminer-object-models-fine-grained-security-on-instance-level-id-44233).
+![Example: London office](~/dataminer/images/LondonOffice.png)
+
+For more information on the server-side changes behind this feature, see [DataMiner Object Models: Fine-grained security on instance level [ID 44233]](xref:General_Feature_Release_10.6.3#dataminer-object-models-fine-grained-security-on-instance-level-id-44233).
 
 > [!NOTE]
 > To access the DOM security UI, go to `https://<DMA IP or hostname>/dom`. In DataMiner Cube, this UI can be accessed via *System Center > DOM*.
+
+## New features
 
 #### Dashboards app: New Add button in navigation pane [ID 44432]
 
