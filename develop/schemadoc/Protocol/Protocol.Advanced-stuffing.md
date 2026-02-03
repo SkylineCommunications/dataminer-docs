@@ -56,10 +56,10 @@ string
 > [!NOTE]
 > Only applicable for connections of type "smart-serial" and "gpib".
 >
-> Always specify a trailer type parameter. Do NOT add the [headerTrailerLink](xref:Protocol.Params.Param.Type-options#headertrailerlink) option. When there is a headertrailerlink with advanced stuffing, SLPort will consider it as if there is no trailer defined and will forward all received data to SLProtocol. This implies when there would be multiple responses inside the same data packet that SLProtocol only processes the first response that is found.
+> Always specify a trailer type parameter. Do NOT add the [headerTrailerLink](xref:Protocol.Params.Param.Type-options#headertrailerlink) option. When there is a header trailer link with advanced stuffing, SLPort will consider this as if no trailer were defined, and it will forward all received data to SLProtocol. This implies that if there were to be multiple responses inside the same data packet, SLProtocol would only process the first response found.
 >
-> As a trailer is specified without headertrailerlink, this implies there can only be one trailer defined in the connection and all responses need to adhere to this structure. Data packets that do not contain a trailer will be dropped.
+> As a trailer is specified without header trailer link, this implies that only one trailer can be defined in the connection, and all responses need to adhere to this structure. Data packets that do not contain a trailer will be dropped.
 >
-> When the value of the trailer can occur in the data of the response, the parameter right before the trailer parameter in the response needs to be a read type parameter with Interprete LengthType set to "last next param". Add a trigger that goes off before the response which executes a read response action.
+> When the value of the trailer can occur in the data of the response, the parameter right before the trailer parameter in the response needs to be a read type parameter with Interprete LengthType set to "last next param". Add a trigger that goes off before the response that executes a read response action.
 >
-> In case of a "serial" connection type, use a "read stuffing" [action](xref:LogicActionReadStuffing) that is executed by a trigger that goes of before the response.
+> In case of a "serial" connection type, use a "read stuffing" [action](xref:LogicActionReadStuffing) executed by a trigger that goes off before the response.
