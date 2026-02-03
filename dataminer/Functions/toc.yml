@@ -898,7 +898,7 @@ items:
       - name: DOM security
         topicUid: DOM_security
         items:
-          - name: Configuring definition-level security
+          - name: Configuring DOM security
             topicUid: DOM_security_ui
       - name: DOM actions
         topicUid: DOM_actions
