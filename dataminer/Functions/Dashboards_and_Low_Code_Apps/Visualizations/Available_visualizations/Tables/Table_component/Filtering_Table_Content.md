@@ -69,7 +69,9 @@ You can filter based on a text string in several different ways, for example:
 
   1. Add a [text input](xref:DashboardTextInput) or [search input](xref:DashboardSearchInput) component to your dashboard or app.
 
-  1. Hover over the table component, click the filter icon, and then add a filter from the *Components > Text input/Search input > Value > Texts* section of the *Data* pane. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, add a filter from the *Feeds > Text input/Search input > Value > Strings* section of the *Data* pane.
+  1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, hover over the table component, click the filter icon, and then add a filter from the *All available data* > *Components* > *[Page name]* > *Text input/Search input* > *Value* > *Texts* section of the *Data* pane.
+
+     Note that in older DataMiner versions, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
   When you input text in the published version of the dashboard or app, the table component will automatically filter based on this input, and the value will appear in the table's search box.
 
