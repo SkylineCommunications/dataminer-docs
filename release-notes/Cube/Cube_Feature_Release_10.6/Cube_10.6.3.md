@@ -163,6 +163,12 @@ When, in *System Center*, you open the *Logging* section, and click the *DataMin
 
 Up to now, when you clicked the *Alarm Level Forwarding* entry, the *SLAlarmLevelLinking.txt* log file would incorrectly be opened instead of the *SLAlarmForwarding.txt* log file.
 
+#### Alarm Console: Correlation base alarms would incorrectly be displayed next to the correlated alarm [ID 44610]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+In the Alarm Console, in some cases, correlation base alarms would incorrectly be displayed next to the correlated alarm in the same alarm tab.
+
 #### Alarm Console: Severity of an alarm group would incorrectly be changed when an action was performed on it [ID 44630]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
