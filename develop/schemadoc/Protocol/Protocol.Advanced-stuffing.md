@@ -25,7 +25,6 @@ string
 
 ## Remarks
 
-- Applicable for connections of type "serial", "smart-serial" and "gpib".
 - **Stuffing behavior when sending commands**
 
     When stuffing is configured, before the command is sent out, the following is performed.
@@ -42,12 +41,25 @@ string
 
 - **Stuffing behavior when processing responses**
 
-    When stuffing is configured, when a response is received, the following is performed related to stuffing.
+    When stuffing is configured, when a response is received, the following is performed by SLPort related to stuffing before data is forwarded to SLProtocol.
 
     First, the data of the message between the start and end offset is checked for any occurrences of the sequence provided in the "escape" attribute. If any occurrences are detected, then for each occurrence, it is verified whether the occurrence is immediately followed by a sequence as specified by the "stuffing" attribute. If this is the case, the escape sequence will be removed. If it is not the case, the escape sequence will be left in place.
+
+    When the trailer is found, data will be forwarded to SLProtocol.
 
 ## Examples
 
 ```xml
 <Advanced stuffing="on=command,response;escape=0x10;stuffing=0x10;startoffset=2;endoffset=4"/>
 ```
+
+> [!NOTE]
+> Only applicable for connections of type "smart-serial" and "gpib".
+>
+> Always specify a trailer type parameter. Do NOT add the [headerTrailerLink](xref:Protocol.Params.Param.Type-options#headertrailerlink) option. When there is a headertrailerlink with advanced stuffing, SLPort will consider it as if there is no trailer defined and will forward all received data to SLProtocol. This implies when there would be multiple responses inside the same data packet that SLProtocol only processes the first response that is found.
+>
+> As a trailer is specified without headertrailerlink, this implies there can only be one trailer defined in the connection and all responses need to adhere to this structure. Data packets that do not contain a trailer will be dropped.
+>
+> When the value of the trailer can occur in the data of the response, the parameter right before the trailer parameter in the response needs to be a read type parameter with Interprete LengthType set to "last next param". Add a trigger that goes off before the response which executes a read response action.
+>
+> In case of a "serial" connection type, use a "read stuffing" [action](xref:LogicActionReadStuffing) that is executed by a trigger that goes of before the response.
