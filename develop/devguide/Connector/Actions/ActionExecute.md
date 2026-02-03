@@ -4,15 +4,15 @@ uid: LogicActionExecute
 
 # execute
 
-Can only be executed on a group.
+This action can only be executed on a group.
 
-This action will add the specified group to the group execution queue, after the last group, but before the timer actions.
+This action will add the specified group to the end of the group execution queue, but before groups scheduled by a timer.
 
 ## Attributes
 
 ### On@id
 
-Specifies the ID(s) of the group(s).
+Specifies the ID(s) of the group(s) to add to the group execution queue.
 
 ## Examples
 
@@ -22,3 +22,7 @@ Specifies the ID(s) of the group(s).
   <Type>execute</Type>
 </Action>
 ```
+
+## Related actions
+
+- [execute one now](xref:LogicActionExecuteOneNow)
