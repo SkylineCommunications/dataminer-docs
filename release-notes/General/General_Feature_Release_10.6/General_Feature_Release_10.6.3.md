@@ -29,8 +29,8 @@ uid: General_Feature_Release_10.6.3
 ## Highlights
 
 - [DataMiner Object Models: Fine-grained security on instance level [ID 44233]](#dataminer-object-models-fine-grained-security-on-instance-level-id-44233)
-- Protocols: Elements restart automatically after an SLScripting process crash [ID 42306]
-- Protocols: Default number of simultaneously running SLScripting processes has been increased from 1 to 10 [ID 44420]
+- [Protocols: Elements will now restart automatically when an SLScripting process has disappeared [ID 42306]](#protocols-elements-will-now-restart-automatically-when-an-slscripting-process-has-disappeared-id-42306)
+- [Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]](#protocols-as-many-slscripting-processes-as-slprotocol-processes-by-default-id-44420)
 
 ## New features
 
@@ -148,7 +148,45 @@ These filtering options are saved in the `<SLNet>` section of the *MaintenanceSe
 
 ## Changes
 
+### Breaking changes
+
+#### Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Up to now, one SLScripting process was used by default. From now on, by default, there will be as many SLScripting processes as SLProtocol processes.
+
+Note that is possible to configure the number of simultaneously running SLScripting processes. See [Setting the number of simultaneously running SLScripting processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes).
+
+> [!IMPORTANT]
+> If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. More information can be found in the [QAction documentation](xref:LogicQActions#sharing-and-persisting-data).
+
 ### Enhancements
+
+#### Protocols: Elements will now restart automatically when an SLScripting process has disappeared [ID 42306]
+
+<!-- MR 10.6.0 - FR 10.5.5 >>> Published in 10.7.0 - FR 10.6.3 together with 44420 -->
+
+Up to now, when an SLScripting process disappeared, elements relying on that process could become unstable, requiring manual intervention to restore functionality.
+
+From now on, when an SLScripting process disappears, a new process instance will be started automatically, and any elements that depended on the process that disappeared will be restarted to maintain consistency across SLProtocol, SLScripting, and other related components. This will ensure that lost SLScripting data is properly reinitialized and remains in sync with other processes.
+
+When an SLScripting process disappears, the following notice alarm will be generated:
+
+`Process disappearance of SLScripting.exe with PID <processId>; <x> elements affected by the disappearance have been restarted.`
+
+Also, the *SLElementsInProtocol.txt* log file has been updated to track restart reasons more accurately.
+
+- The restart reason column will now indicate either "SLScriptingCrashRestart" or "SLProtocolCrashRestart" (if everything is OK, *NormalStart* will be shown instead).
+- A new counter will now indicate the number of times the element was started due to a SLScripting process disappearance.
+
+If SLProtocol requests an SLScripting process that is no longer valid, the system will now detect this, and trigger the same element restart flow.
+
+> [!NOTE]
+> There will be a one-minute delay between the disappearance of an SLScripting process and the creation of a new SLScripting process and the subsequent element restarts. However, when one of the elements that was hosted in the SLScripting process that disappeared tries to trigger a QAction within that one-minute delay, the new SLScripting process will be created when that QAction is triggered.
+
+> [!IMPORTANT]
+> For this feature to work, make sure the number of simultaneously running SLScripting processes is not set to 1. If set to 1, then no new SLScripting process will be started automatically when an SLScripting process disappears. See [Setting the number of simultaneously running SLScripting processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes).
 
 #### New parameter caches for client apps [ID 43945]
 
