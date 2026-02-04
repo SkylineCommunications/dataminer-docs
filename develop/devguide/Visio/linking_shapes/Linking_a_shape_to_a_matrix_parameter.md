@@ -22,7 +22,7 @@ Connections between inputs and outputs will be drawn automatically.
 
 > [!NOTE]
 >
-> - When you right-click a shape linked to a matrix parameter, the shortcut menu will by default list all inputs defined in the protocol. However, it is possible that the number of inputs and outputs have been limited in the _port.xml_ file.
+> - When you right-click a shape linked to a matrix parameter, the shortcut menu will by default list all inputs defined in the protocol. However, it is possible that the number of inputs and outputs have been limited in the *port.xml* file.
 > - For examples, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[linking > MTX1/MTX2]* pages.
 
 ## Drawing the shapes representing the matrix inputs and outputs
