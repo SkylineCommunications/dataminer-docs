@@ -44,8 +44,8 @@ All specifications are provided based on the assumption that DMAs are running on
 | 21 | Number of queries | Dashboard | 30 | Starting from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9. |
 | 22 | Number of queries | Low-code app | 200 | Starting from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9. |
 | 23 | Number of concurrent Automation script executions | DMA | 500 ||
-| 24 | Number of scheduled tasks starting at the same time | DMA | 100 | This is a recommendation; this limitation is not enforced by the Scheduler module. Actual capacity depends on system performance and may be higher on more capable systems. |
-| 25 | Total number of scheduled tasks | DMA | 3000 | This is a recommendation; this limitation is not enforced by the Scheduler module. Actual capacity depends on system performance and may be higher on more capable systems. This total includes all tasks, regardless of whether they are enabled and regardless of whether their trigger time is in the past or in the future. A recurring task (such as daily or weekly schedules) counts as one task, regardless of how many times it is executed. |
+| 24 | Number of scheduled tasks starting at the same time | DMA | 100 | |
+| 25 | Total number of scheduled tasks | DMA | 3000 | This total includes all tasks, regardless of whether they are enabled and regardless of whether their trigger time is in the past or in the future. A recurring task (such as daily or weekly schedules) counts as one task, regardless of how many times it is executed. |
 
 ## Benchmarks
 
