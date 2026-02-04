@@ -110,7 +110,7 @@ To install DataMiner using the DataMiner Installer v10.5, follow the steps below
 
 1. Click *Next*, and verify the configuration settings you entered.
 
-1. To start the configuration, click *Next*.
+1. To start the configuration, click *Configure*.
 
    The configuration progress will now be displayed.
 
