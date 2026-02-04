@@ -113,9 +113,9 @@ On systems running the Windows Server OS, the Microsoft Edge (WebView2) browser 
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-Up to now, when you linked shapes to inputs and output of a table-based matrix, these inputs and outputs would not be displayed correctly.
+Up to now, when you linked shapes to inputs and outputs of a table-based matrix, these inputs and outputs would not be displayed correctly.
 
-From now on, it will be possible to link shapes to inputs and outputs of a table-based matrices. The inputs and outputs will be displayed correctly, and it will be possible to alter the connections via the context menu. In the context menu, the outputs and inputs will be shown in the same order as the rows in the table.
+From now on, it will be possible to link shapes to inputs and outputs of table-based matrices. The inputs and outputs will be displayed correctly, and it will be possible to alter the connections via the context menu. In the context menu, the outputs and inputs will be shown in the same order as the rows in the table.
 
 Also, the alarm colors shown in visual overviews will be identical to those in table-based matrices displayed in Data Display. The connection between an input and an output will have the alarm color of the corresponding output row.
 

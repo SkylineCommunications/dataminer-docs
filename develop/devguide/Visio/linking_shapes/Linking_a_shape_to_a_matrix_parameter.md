@@ -4,21 +4,19 @@ uid: Linking_a_shape_to_a_matrix_parameter
 
 # Linking a shape to a matrix parameter
 
-Do the following to make a graphical representation of a matrix parameter.
+By linking shapes in a visual overview to a matrix parameter of an element, you can create an interactive graphical representation of that matrix.
 
-1. Draw the shapes that represent the inputs and the outputs.
+Each shape represents an input or an output of the matrix, while connections between shapes represent the active crosspoints. These connections between inputs and outputs are drawn automatically.
 
-   See [Drawing the shapes representing the matrix inputs and outputs](#drawing-the-shapes-representing-the-matrix-inputs-and-outputs).
+Users can alter connections directly from the visual overview using the right-click menu. However, note that for table-based matrices this is only possible from DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44601-->. In the context menu, the outputs and inputs of table-based matrices are shown in the same order as the rows in the table.
 
-1. Draw the shapes that display the input and output labels.
+To make a graphical representation of a matrix parameter, follow these steps:
 
-   See [Drawing the shapes displaying the input and output labels](#drawing-the-shapes-displaying-the-input-and-output-labels).
+1. [Draw the shapes that represent the inputs and the outputs](#drawing-the-shapes-representing-the-matrix-inputs-and-outputs).
 
-1. Combine all shapes into a group that represents the matrix.
+1. [Draw the shapes that display the input and output labels](#drawing-the-shapes-displaying-the-input-and-output-labels).
 
-   See [Combining all shapes into a group representing the matrix](#combining-all-shapes-into-a-group-representing-the-matrix).
-
-Connections between inputs and outputs will be drawn automatically.
+1. [Combine all shapes into a group that represents the matrix](#combining-all-shapes-into-a-group-representing-the-matrix).
 
 > [!NOTE]
 >
@@ -50,6 +48,8 @@ Connections between inputs and outputs will be drawn automatically.
      >
      > - By default, connections will end at the center of the shape.
      > - If you want an "output shape" to show the current Element state, add a shape data field to it of type **Parameter**, and set its value to "\*\|Alarm".
+
+From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44601-->, you can link shapes to inputs and outputs of table-based matrices. Prior to these versions, this is not supported. For Visual Overview in web apps, table-based matrices are not supported in DataMiner 10.5.0 [CU12] and are only fully supported from 10.6.0/10.6.3 onwards.
 
 ## Drawing the shapes displaying the input and output labels
 
