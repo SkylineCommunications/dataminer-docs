@@ -13,12 +13,21 @@ To securely host your DataMiner Agent, we recommend that you make sure HTTPS con
 ## Configuring the HTTPS binding in IIS
 
 1. Open IIS manager. It can be found under *Administrative Tools* in the *Control Panel* of your computer.
+
 1. In the *Connections* pane on the left, select the computer name, and double-click *Server Certificates* in the pane on the right.
+
 1. Right-click in the *Server Certificates* list, and select *Import*.
+
 1. Browse to your certificate, and click *OK*.
+
 1. In the *Connections* pane on the left, right-click the website, and select *Edit Bindings*.
+
 1. In the *Add Site Binding* window, add an HTTPS binding with the selected certificate.
-1. Allow *inbound* TCP port **443** through the Windows Firewall.
+
+   If an HTTPS binding already exists, you can update the certificate by editing the existing binding.
+
+1. Ensure sure that *inbound* traffic on TCP port **443** is allowed through the Windows Firewall.
+
 1. Optionally (though **recommended**), enable [HTTP Strict Transport Security](xref:HTTP_Headers#hsts---strict-transport-security) (*HSTS*).
 
 > [!TIP]
@@ -159,7 +168,7 @@ The following auto-detect methods can be specified:
 
     If the URL matches the certificate, your machine likely does not trust the certificate or the certificate is self-signed. Ensure the certificate is added to the *Trusted Root Certification Authorities* of your certificate store. For more information, see [trusting a certificate in Windows](https://techcommunity.microsoft.com/t5/windows-server-essentials-and/installing-a-self-signed-certificate-as-a-trusted-root-ca-in/ba-p/396105).
 
-- **I cannot log in to the DataMiner Web Applications (e.g. Monitoring, Dashboards, Ticketing, etc.)**
+- **I cannot log in to the DataMiner Web Applications (e.g. Monitoring, Dashboards, etc.)**
 
     Make sure that HTTPS is configured in the *MaintenanceSettings.xml* file and that the *name* attribute matches the *Common Name (CN)* of the TLS certificate.
 

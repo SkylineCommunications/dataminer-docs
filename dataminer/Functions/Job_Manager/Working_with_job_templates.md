@@ -4,6 +4,9 @@ uid: Working_with_job_templates
 
 # Working with job templates
 
+> [!IMPORTANT]
+> The Jobs app is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.5.0 onwards.
+
 It is possible to save a particular job configuration as a job template. This way you can later apply the template to immediately fill in the configured values.
 
 > [!NOTE]

@@ -18,7 +18,7 @@ Among others, the app includes the following features:
 > Do you prefer visual learning? Take a look at the [demo video](https://www.youtube.com/watch?v=lfeCwxYTA4o) about this app.
 
 > [!NOTE]
-> This page contains information about the Scheduling app within the MediaOps Solution. If you are looking for information about the Scheduler module within DataMiner Cube instead, refer to [DataMiner Scheduler](xref:scheduler).
+> This page contains information about the Scheduling app within the MediaOps Solution. If you are looking for information about the Scheduler module within DataMiner Cube instead, refer to [DataMiner Scheduler](xref:About_the_Scheduler_module).
 
 ## App overview
 

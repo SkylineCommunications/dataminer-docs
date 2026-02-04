@@ -6,12 +6,9 @@ uid: Stack_Third_Party_Integrations
 
 ***Work more efficiently by using the tools you already know and love.***
 
-## Ticketing Gateway
+## Ticketing integration
 
-Integrate various ticketing systems (e.g. Jira, Remedy, etc.) in a reliable manner.
-
-> [!NOTE]
-> Ticketing Gateway is being retired. Ticketing systems can now be fully integrated using [Low-Code/No-Code Apps](xref:Stack_Data_Visualization#no-code-apps).
+Integrate various ticketing systems (for example, Jira, Remedy, etc.) using [DOM](xref:DOM) and [Low-Code Apps](xref:Application_framework).
 
 ## Mobile Gateway
 

@@ -9,6 +9,24 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 2 February 2026 - New feature - Admin - Billing page
+
+In the Admin app, a new *Billing* page is now available, which will serve as a dedicated space for organization owners and admins to monitor and manage their organization’s spending. The page provides access to credit history, monthly bills, and subscription management, including any available discounts.
+
+### 29 January 2026 - Enhancement - dataminer.services - Improved DaaS deployment credit validation
+
+You will now be notified earlier during DaaS deployment if your organization has insufficient credits, allowing you to top up before proceeding with the deployment.
+
+### 29 January 2026 - Enhancement - Admin - Usage page simplification
+
+To simplify the Usage page, the totals and credits columns have been removed.
+
+Note that a new page is being developed that will restore usage breakdowns per system, feature, and service without credit costs.
+
+### 29 January 2026 - Fix - Admin - Not possible to export audit log
+
+An issue has been resolved that prevented the audit log from being exported.
+
 ### 8 January 2026 - Enhancement - Billing - Dashboard Sharing & Unmanaged Objects usage billing
 
 Starting from January 2026, automatic monthly billing will be implemented for Dashboard Sharing & Unmanaged Objects. On the 5th day of each month, the expended DataMiner credits for the previous month's usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.

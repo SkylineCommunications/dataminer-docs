@@ -5,7 +5,7 @@ using Skyline.DataMiner.Net.Ticketing.Interfaces;
 namespace Skyline.DataMiner.Net.Ticketing.Helpers
 {
 	/// <summary>
-	/// Provides data for the <see cref="TicketingGatewayHelper.SendEvent"/> event.
+	/// Provides data for the <see cref="TicketingGatewayHelper.SendEvent"/> event. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	public class TicketingGatewayEventArgs : EventArgs
     {

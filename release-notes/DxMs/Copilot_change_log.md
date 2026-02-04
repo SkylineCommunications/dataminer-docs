@@ -4,6 +4,16 @@ uid: DataMinerAssistant_change_log
 
 # DataMiner Assistant change log
 
+#### 21 January 2026 - DataMiner Assistant 2.1.21 - Issues when loading the configuration file [ID 44448]
+
+A number of issues related to loading the DataMiner Assistant configuration file have been resolved:
+
+- When, at startup, DataMiner Assistant tries to load an invalid configuration, it will no longer stop working. Instead, it will log an error, and fall back onto the default configuration.
+
+- When, at startup, DataMiner Assistant tries to load an valid configuration containing unexpected data, it will no longer stop working abruptly. Instead, it will log an error, and shut down gracefully.
+
+- When, at runtime, DataMiner Assistant detects that the configuration has been updated and now contains an unexpected value, it will no longer stop working. It will log an error, and keep using the latest valid value.
+
 #### 18 December 2025 - DataMiner Assistant 2.1.9 - Document Intelligence failsafe [ID 44377]
 
 DataMiner Assistant can analyze documents based on instructions you provide. A failsafe has now been introduced to prevent users from uploading very large files or files with unsupported extensions.

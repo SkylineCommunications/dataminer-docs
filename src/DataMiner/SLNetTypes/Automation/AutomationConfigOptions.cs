@@ -8,7 +8,7 @@ namespace Skyline.DataMiner.Automation
 	/// </summary>
 	/// <remarks>
 	/// <para>The structure of these classes is as follows, with the subclasses inheriting all properties of the classes above them:</para>
-	/// <img src="~/develop/images/AutomationUIConfigOptions_diagram.jpg" />
+	/// <img src="~/develop/images/AutomationUIConfigOptions_diagram.png" />
 	/// </remarks>
 	public abstract class AutomationConfigOptions
 	{

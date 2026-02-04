@@ -43,7 +43,7 @@ In the header bar of DataMiner Cube, you can find the following items:
 
   - *Change layout*: Allows you to [select a different layout](xref:Working_with_cards_in_DataMiner_Cube#changing-the-card-layout) for the cards in the Cube workspace.
 
-  - *System Center*: Opens the System Center, where you can among others configure the DMS setup, backups, the database, and DataMiner security, if you have the necessary permissions to do so. The System Center also provides access to all [DataMiner log files](xref:logging).
+  - *System Center*: Opens the System Center, where you can among others configure the DMS setup, backups, the database, and DataMiner security, if you have the necessary permissions to do so. The System Center also provides access to all [DataMiner log files](xref:Monitoring_real-time_communication_between_a_DMA_and_an_element).
 
   - *Agents*: Opens the *Agents* page in System Center, where you can view information on the DMS and configure the DMS, if you have the necessary permissions to do so.
 

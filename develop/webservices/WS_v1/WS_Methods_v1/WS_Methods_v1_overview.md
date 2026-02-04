@@ -26,9 +26,9 @@ uid: WS_Methods_v1_overview
 | [AddServiceToRecent](xref:AddServiceToRecent) | Adds a service to the Recent list. |
 | [AddServicesToRecent](xref:AddServicesToRecent) | Adds a number of services to the Recent list. |
 | [AddTicketAttachment](xref:AddTicketAttachment) | Deprecated. Use [AddTicketAttachmentV2](xref:AddTicketAttachmentV2) instead. |
-| [AddTicketAttachmentV2](xref:AddTicketAttachmentV2) | Adds an attachment file to a ticket. Available from DataMiner 10.2.0 [CU9]/10.2.12 onwards. For internal use at Skyline only.|
-| [AddTicketField](xref:AddTicketField) | Adds a new field to the specified ticket type. |
-| [AddTicketType](xref:AddTicketType) | Adds a new ticket type. |
+| [AddTicketAttachmentV2](xref:AddTicketAttachmentV2) | Obsolete. Adds an attachment file to a ticket. Available from DataMiner 10.2.0 [CU9]/10.2.12 onwards. For internal use at Skyline only.|
+| [AddTicketField](xref:AddTicketField) | Obsolete. Adds a new field to the specified ticket type. |
+| [AddTicketType](xref:AddTicketType) | Obsolete. Adds a new ticket type. |
 | [AddViewToPinned](xref:AddViewToPinned) | Pins a view in the Recent list. |
 | [AddViewToRecent](xref:AddViewToRecent) | Adds a view to the Recent list. |
 | [AddViewsToRecent](xref:AddViewsToRecent) | Adds a number of views to the Recent list. |
@@ -61,7 +61,7 @@ uid: WS_Methods_v1_overview
 | [CreateService](xref:CreateService) | Creates a new service on the specified DMA |
 | [CreateServiceByApplyingServiceTemplate](xref:CreateServiceByApplyingServiceTemplate) | Creates a service by applying the specified service template |
 | [CreateServiceTemplate](xref:CreateServiceTemplate) | Creates a new service template on the specified DMA. Available from DataMiner 10.2.1 onwards. |
-| [CreateTicket](xref:CreateTicket) | Creates a ticket. |
+| [CreateTicket](xref:CreateTicket) | Obsolete. Creates a ticket. |
 | [CreateView](xref:CreateView) | Creates a new view in the specified parent view. |
 | [DeleteAlarmTemplate](xref:DeleteAlarmTemplate) | Deletes the specified alarm template. |
 | [DeleteBookingAttachments](xref:DeleteBookingAttachments) | Deletes multiple attachment files from a booking. |
@@ -77,9 +77,9 @@ uid: WS_Methods_v1_overview
 | [DeleteRedundancyGroup](xref:DeleteRedundancyGroup) | Deletes the specified redundancy group |
 | [DeleteService](xref:DeleteService) | Deletes the specified service |
 | [DeleteServiceTemplate](xref:DeleteServiceTemplate) | Deletes the specified service template. Available from DataMiner 10.2.1 onwards. |
-| [DeleteTicketAttachments](xref:DeleteTicketAttachments) | Deletes multiple attachments from a ticket. |
-| [DeleteTicketField](xref:DeleteTicketField) | Deletes a ticket field. |
-| [DeleteTicketType](xref:DeleteTicketType) | Deletes a ticket type. |
+| [DeleteTicketAttachments](xref:DeleteTicketAttachments) | Obsolete. Deletes multiple attachments from a ticket. |
+| [DeleteTicketField](xref:DeleteTicketField) | Obsolete. Deletes a ticket field. |
+| [DeleteTicketType](xref:DeleteTicketType) | Obsolete. Deletes a ticket type. |
 | [DeleteView](xref:DeleteView) | Deletes the specified view. |
 | [DeleteVisioFile](xref:DeleteVisioFile) | Deletes a particular Visio file that can be assigned to views and services. |
 | [DeleteVisioFileFromProtocol](xref:DeleteVisioFileFromProtocol) | Deletes a particular Visio file that can be assigned to a protocol. |
@@ -90,15 +90,15 @@ uid: WS_Methods_v1_overview
 | [EditElement](xref:EditElement) | Edits the specified element. |
 | [EditSLAElement](xref:EditSLAElement) | Edits the specified SLA element |
 | [EditService](xref:EditService) | Edits the specified service. |
-| [EditTicketField](xref:EditTicketField) | Edits a field of the specified ticket type. |
-| [EditTicketFieldOrder](xref:EditTicketFieldOrder) | Changes the order of the fields of a ticket type. |
-| [EditTicketType](xref:EditTicketType) | Edits a ticket type. |
+| [EditTicketField](xref:EditTicketField) | Obsolete. Edits a field of the specified ticket type. |
+| [EditTicketFieldOrder](xref:EditTicketFieldOrder) | Obsolete. Changes the order of the fields of a ticket type. |
+| [EditTicketType](xref:EditTicketType) | Obsolete. Edits a ticket type. |
 | [EditView](xref:EditView) | Edits the specified view. |
 | [ExecuteAutomationScript](xref:ExecuteAutomationScript) | Executes an Automation script. |
 | [ExecuteAutomationScriptWithOutput](xref:ExecuteAutomationScriptWithOutput) | Executes an interactive Automation script and retrieves its output. |
 | [ExecuteGenericAsyncRequest](xref:ExecuteGenericAsyncRequest) | Used in order to have a method executed asynchronously. |
 | [ExecuteVisioShapeAction](xref:ExecuteVisioShapeAction) | Execute an action on a Visio shape. |
-| [GenerateTicketBasedOnAlarm](xref:GenerateTicketBasedOnAlarm) | Generates a ticket based on alarm properties. |
+| [GenerateTicketBasedOnAlarm](xref:GenerateTicketBasedOnAlarm) | Obsolete. Generates a ticket based on alarm properties. |
 | [GetActiveAlarmCountForElement](xref:GetActiveAlarmCountForElement) | Retrieves the number of active alarms on an element. |
 | [GetActiveAlarmCountForElementV2](xref:GetActiveAlarmCountForElementV2) | Retrieves the number of active alarms on an element along with the alarm cache status. |
 | [GetActiveAlarmCountForService](xref:GetActiveAlarmCountForService) | Retrieves the number of active alarms on a service. |
@@ -131,9 +131,9 @@ uid: WS_Methods_v1_overview
 | [GetActiveAlarmsSortedV2](xref:GetActiveAlarmsSortedV2) | Retrieves a specific number of active alarms with a particular alarm severity along with the alarm cache status. |
 | [GetActiveAlarmsV2](xref:GetActiveAlarmsV2) | Retrieves all the active alarms along with the alarm cache status. |
 | [GetActiveTickets](xref:GetActiveTickets) | Deprecated. Use [GetActiveTicketsV2](xref:GetActiveTicketsV2)instead |
-| [GetActiveTicketsV2](xref:GetActiveTicketsV2) | Retrieves the active tickets. |
+| [GetActiveTicketsV2](xref:GetActiveTicketsV2) | Obsolete. Retrieves the active tickets. |
 | [GetAffectedJobDomains](xref:GetAffectedJobDomains) | Retrieves all domains a specific section definition is linked to. |
-| [GetAffectedTickets](xref:GetAffectedTickets) | Gets the tickets linked to a particular DataMiner resource. |
+| [GetAffectedTickets](xref:GetAffectedTickets) | Obsolete. Gets the tickets linked to a particular DataMiner resource. |
 | [GetAggregationDataTree](xref:GetAggregationDataTree) | Retrieves the data of specified aggregation rules. |
 | [GetAggregationRules](xref:GetAggregationRules) | Retrieves the available aggregation rules. |
 | [GetAlarmCountForElement](xref:GetAlarmCountForElement) | Retrieves the number of alarms for every alarm severity for the specified element during the specified time span. |
@@ -231,7 +231,7 @@ uid: WS_Methods_v1_overview
 | [GetHistoryAlarmsForService](xref:GetHistoryAlarmsForService) | Retrieves the history alarms for a specified service. |
 | [GetHistoryAlarmsForView](xref:GetHistoryAlarmsForView) | Retrieves the history alarms for a specified view. |
 | [GetHistoryTickets](xref:GetHistoryTickets) | Deprecated. Use [GetHistoryTicketsV2](xref:GetHistoryTicketsV2) instead. |
-| [GetHistoryTicketsV2](xref:GetHistoryTicketsV2) | Retrieves the tickets for a specified time span. |
+| [GetHistoryTicketsV2](xref:GetHistoryTicketsV2) | Obsolete. Retrieves the tickets for a specified time span. |
 | [GetInformationEvents](xref:GetInformationEvents) | Retrieves the information events for a specified time span. |
 | [GetInformationEventsSorted](xref:GetInformationEventsSorted) | Retrieves the information events for a specified time span, sorted according to a particular alarm state, start index, count filter and orderBy. |
 | [GetInformationEventsSortedV2](xref:GetInformationEventsSortedV2) | Retrieves the information events for a specified time span, sorted according to a particular alarm state, start index, count filter and orderBy, as well as the alarm cache status. |
@@ -362,12 +362,12 @@ uid: WS_Methods_v1_overview
 | [GetTableForParameterV2](xref:GetTableForParameterV2) | Retrieves all rows for a table parameter in the form of a DmaParameterTable object. |
 | [GetTableRowForParameter](xref:GetTableRowForParameter) | Retrieves one specific row of a particular table parameter. |
 | [GetThirdPartyNotices](xref:GetThirdPartyNotices) | Retrieves any third-party notices. |
-| [GetTicket](xref:GetTicket) | Retrieves a ticket. Use [GetTicketV2](xref:GetTicketV2) instead. |
-| [GetTicketAttachmentNames](xref:GetTicketAttachmentNames) | Retrieves the names of all files attached to a specific ticket. |
-| [GetTicketFields](xref:GetTicketFields) | Retrieves the custom fields of a particular ticket type. |
-| [GetTicketType](xref:GetTicketType) | Retrieves the ticket type for the ticket with the specified ID. |
-| [GetTicketTypes](xref:GetTicketTypes) | Retrieves the available ticket types. |
-| [GetTicketV2](xref:GetTicketV2) | Retrieves the specified ticket. |
+| [GetTicket](xref:GetTicket) | Obsolete. Retrieves a ticket. Use [GetTicketV2](xref:GetTicketV2) instead. |
+| [GetTicketAttachmentNames](xref:GetTicketAttachmentNames) | Obsolete. Retrieves the names of all files attached to a specific ticket. |
+| [GetTicketFields](xref:GetTicketFields) | Obsolete. Retrieves the custom fields of a particular ticket type. |
+| [GetTicketType](xref:GetTicketType) | Obsolete. Retrieves the ticket type for the ticket with the specified ID. |
+| [GetTicketTypes](xref:GetTicketTypes) | Obsolete. Retrieves the available ticket types. |
+| [GetTicketV2](xref:GetTicketV2) | Obsolete. Retrieves the specified ticket. |
 | [GetTopologyChainsForCPE](xref:GetTopologyChainsForCPE) | Retrieves the topology chains for a particular CPE element. |
 | [GetTopologyFieldsForCPEChain](xref:GetTopologyFieldsForCPEChain) | Retrieves the topology fields of a particular chain of a CPE element. |
 | [GetTrendDataCustomTimespanForParameter](xref:GetTrendDataCustomTimespanForParameter) | Retrieves the trend data for a particular parameter within a custom time range. |
@@ -424,8 +424,8 @@ uid: WS_Methods_v1_overview
 | [RemoveNoteFromView](xref:RemoveNoteFromView) | Removes a specific note from a specified view. |
 | [RemoveServiceFromPinned](xref:RemoveServiceFromPinned) | Unpins a service in the Recent list. |
 | [RemoveTicket](xref:RemoveTicket) | Deprecated. [RemoveTicketV2](xref:RemoveTicketV2) should be used instead. |
-| [RemoveTickets](xref:RemoveTickets) | Removes multiple tickets. |
-| [RemoveTicketV2](xref:RemoveTicketV2) | Removes a specific ticket. |
+| [RemoveTickets](xref:RemoveTickets) | Obsolete. Removes multiple tickets. |
+| [RemoveTicketV2](xref:RemoveTicketV2) | Obsolete. Removes a specific ticket. |
 | [RemoveViewFromPinned](xref:RemoveViewFromPinned) | Unpins a view in the Recent list. |
 | [ReorderPinned](xref:ReorderPinned) | Reorders a number of pinned items in the Recent list. |
 | [RequestLoginAsTicket](xref:RequestLoginAsTicket) | Requests a logon ticket that can then be added to e.g. a DataMiner Maps URL. |
@@ -462,4 +462,4 @@ uid: WS_Methods_v1_overview
 | [UpdateNoteForService](xref:UpdateNoteForService) | Updates a specific note for a service. |
 | [UpdateNoteForView](xref:UpdateNoteForView) | Updates a specific note for a view. |
 | [UpdateServiceTemplate](xref:UpdateServiceTemplate) | Updates an existing service template. Available from DataMiner 10.2.1 onwards. |
-| [UpdateTicket](xref:UpdateTicket) | Updates a specific ticket. |
+| [UpdateTicket](xref:UpdateTicket) | Obsolete. Updates a specific ticket. |

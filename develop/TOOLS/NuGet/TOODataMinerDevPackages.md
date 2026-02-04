@@ -2,7 +2,11 @@
 uid: TOODataMinerDevPackages
 ---
 
-# DataMiner Dev Packs
+# Dev Packs
+
+Dev Packs are very similar to standard NuGet package except that they will not be added to the output, the compiled deliverable. When a standard NuGet is consumed within a solution, the assemblies contained in the NuGet package will be installed when the solution is installed. When a Dev Pack is consumed within a solution, the assemblies contained in the Dev Pack can be used to develop, but those assemblies will not be installed when the solution is installed. Instead, the solution will assume those assemblies are already pre-installed.
+
+## DataMiner Dev Packs
 
 DataMiner Dev Packs (or DataMiner Development Packages) are NuGet packages available in the [official NuGet store](https://www.nuget.org/) that contain the necessary assemblies for the development of DataMiner connectors or Automation scripts.
 
@@ -20,7 +24,7 @@ The Automation, Protocol, and Common NuGet packages are so-called meta-packages.
 
 Typically, you will only need to install the meta-package. However, in some cases, it is possible you will need to also install a *Skyline DataMiner.Files.\** Nuget package. For example, in a development requiring IMediator or unit conversion, e.g. to work with SRM profile parameters, you need to install the following package: [Skyline.DataMiner.Files.SLMediationSnippets](https://www.nuget.org/packages/Skyline.DataMiner.Files.SLMediationSnippets).
 
-## Requirements
+### Requirements
 
 The [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio) Visual Studio extension is required for development of connectors and Automation scripts using DataMiner Development Packages.
 
@@ -33,7 +37,7 @@ See [Installing DataMiner Integration Studio](xref:Installing_and_configuring_th
 >
 > For more information on how to migrate from packages.config to PackageReferences, see [docs.microsoft.com](https://docs.microsoft.com/en-us/nuget/consume-packages/migrate-packages-config-to-package-reference).
 
-## Versioning
+### Versioning
 
 Versioning scheme:
 
@@ -49,3 +53,15 @@ Revisions can be released to:
 
 > [!NOTE]
 > We recommend that you always use the latest revision of a version.
+
+## Solution Dev Packs
+
+In addition to the fully generic DataMiner Dev Packs, it is also possible to make Solution Dev Packs.
+
+For example, imagine you are working on a standard solution like MediaOps, and multiple optional modules consume assemblies exposed by this standard solution. If such an optional module were to consume a normal NuGet from the standard solution, it would lead to related assemblies being installed when the optional module is installed, which in turn could lead to mismatching versions between the assemblies installed by the optional module and the ones installed by the actual standard solution. This could then lead to assembly loading issues.
+
+If the optional module consumes standard Solution Dev Packs instead, the assembly will not be installed by the optional module. Instead, the optional module will have a dependency on the standard solution and rely on the already pre-installed standard solution, which includes those assemblies.
+
+### Naming conventions
+
+For the optional module to consider a NuGet package as a Dev Pack, the package name needs to start with "`Skyline.DataMiner.Dev.Utils.`". This will make sure the compiled deliverable will not include the assemblies themselves but will instead include the proper reference to the location where those can be found, assuming the standard solution was installed.

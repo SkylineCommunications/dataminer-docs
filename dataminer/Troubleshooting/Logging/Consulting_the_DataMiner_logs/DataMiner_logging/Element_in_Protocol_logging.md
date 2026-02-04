@@ -11,7 +11,7 @@ The *Element in Protocol* log file allows you to map all the running elements on
 An entry in the *Element in Protocol* log file can for instance look like this:
 
 ```txt
-2021/02/22 08:01:52|101/184|Comstream Radyne Ku DC|11132|Comstream Radyne SFC4200A-B8-P8|Production|1.0.0.2|7952|NormalStart|1|0
+2021/02/22 08:01:52|101/184|Comstream Radyne Ku DC|11132|Comstream Radyne SFC4200A-B8-P8|Production|1.0.0.2|7952|NormalStart|1|0|1
 ```
 
 This record contains the following information, separated by pipe characters:
@@ -26,23 +26,25 @@ This record contains the following information, separated by pipe characters:
 - Scripting process ID
 - Reason of the (re)start (included from DataMiner 10.4.12/10.5.0 onwards<!-- RN 40335 -->)
 - Number of normal (re)starts (included from DataMiner 10.4.12/10.5.0 onwards<!-- RN 40335 -->)
-- Number of restarts caused by a crash (included from DataMiner 10.4.12/10.5.0 onwards<!-- RN 40335 -->)
+- Number of restarts caused by an SLProtocol crash (included from DataMiner 10.4.12/10.5.0 onwards<!-- RN 40335 -->)
+- Number of restarts caused by an SLScripting crash (included from DataMiner 10.6.3/10.7.0 onwards<!-- RN 44420 -->)
 
 When a DMA starts up, the list of elements is added to the file, after a separator line consisting of asterisk signs. For example:
 
 ```txt
-2021/02/20 16:53:28|101/3|Example SNMP - Stand Alone|13552|Example SNMP|1.0.0.1|1.0.0.1|13572|NormalStart|2|0
-2021/02/20 16:53:29|101/164|{ Verimatrix RTES Pair test.Primary }|13684|Verimatrix RTES Pair - DVE|2.0.1.15|2.0.1.15|13572|NormalStart|5|1
+2021/02/20 16:53:28|101/3|Example SNMP - Stand Alone|13552|Example SNMP|1.0.0.1|1.0.0.1|13572|NormalStart|2|0|0
+2021/02/20 16:53:29|101/164|{ Verimatrix RTES Pair test.Primary }|13684|Verimatrix RTES Pair - DVE|2.0.1.15|2.0.1.15|13572|NormalStart|5|1|0
 ***********************
-2021/02/22 08:01:52|101/190|CPI 4940L Ku UC|11132|CPI 4940L|1.0.0.2|1.0.0.2|7952|NormalStart|1|0
-2021/02/22 08:01:52|101/151|smart serial 1header- Simulator|8032|Best Practice - Generic Server|Production|1.0.0.9|7952|SLProtocolCrashRestart|2|1
+2021/02/22 08:01:52|101/190|CPI 4940L Ku UC|11132|CPI 4940L|1.0.0.2|1.0.0.2|7952|NormalStart|1|0|0
+2021/02/22 08:01:52|101/151|smart serial 1header- Simulator|8032|Best Practice - Generic Server|Production|1.0.0.9|7952|SLProtocolCrashRestart|2|1|0
+2021/02/22 08:01:52|101/152|smart serial 2header- Simulator|8048|Best Practice - Generic Server|Production|1.0.0.9|7930|SLScriptingCrashRestart|2|0|1
 ```
 
 When a DataMiner element starts up, a new line is added to indicate the new protocol process that is used. For example:
 
 ```txt
-2021/02/23 12:06:39|101/193|Envivio Caster|11212|Envivio 4Caster C4 2|2.1.0.1|2.1.0.1|7952|NormalStart|1|0
-2021/02/23 12:55:54|101/193|Envivio Caster|8032|Envivio 4Caster C4 2|2.1.0.1|2.1.0.1|7952|NormalStart|1|0
+2021/02/23 12:06:39|101/193|Envivio Caster|11212|Envivio 4Caster C4 2|2.1.0.1|2.1.0.1|7952|NormalStart|1|0|0
+2021/02/23 12:55:54|101/193|Envivio Caster|8032|Envivio 4Caster C4 2|2.1.0.1|2.1.0.1|7952|NormalStart|1|0|0
 ```
 
 > [!NOTE]

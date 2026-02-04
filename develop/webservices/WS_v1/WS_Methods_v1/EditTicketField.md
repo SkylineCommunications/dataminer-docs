@@ -4,12 +4,12 @@ uid: EditTicketField
 
 # EditTicketField
 
-Use this method to edit a specific ticket field for a specific ticket type (called “domain” in the Ticketing app).
-
-> [!CAUTION]
+> [!IMPORTANT]
 >
-> - DataMiner Ticketing is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
+> - The Ticketing app is obsolete. It is no longer available from DataMiner 10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
 > - DataMiner Ticketing is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
+
+Use this method to edit a specific ticket field for a specific ticket type (called “domain” in the Ticketing app).
 
 ## Input
 

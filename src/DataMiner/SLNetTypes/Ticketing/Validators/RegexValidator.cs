@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 namespace Skyline.DataMiner.Net.Ticketing.Validators
 {
 	/// <summary>
-	/// Represents a regular expression validator.
+	/// Represents a regular expression validator. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	///</summary>
 	[Serializable]
     public class RegexValidator : ITicketFieldValidator

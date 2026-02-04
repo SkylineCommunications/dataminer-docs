@@ -40,4 +40,4 @@ The Spectrum Analysis user interface consists of four main components.
 
   - *Presets*: See [Using Spectrum Analysis presets](xref:Using_Spectrum_Analysis_presets).
 
-  - *History*: A list of past measurements that is updated each time a monitor has run. The list shows a preview of the trace, the monitor name, parameter name, time and measurement point. You can compare the past trace with the current trace by selecting *Show actual trace(s) as reference trace*.
+  - *History*: See [Viewing the history of spectrum monitor traces](xref:Working_with_spectrum_monitors#viewing-the-history-of-spectrum-monitor-traces).

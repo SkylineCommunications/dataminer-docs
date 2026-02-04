@@ -6,7 +6,7 @@ uid: LogicActionAddToExecute
 
 This action can only be executed on a group.
 
-The action will place the specified group at the very end of the group execution queue, after the timer actions.
+This action will add the specified group to the end of the group execution queue, after groups scheduled by a timer.
 
 ## Attributes
 
@@ -22,3 +22,7 @@ Specifies the ID(s) of the group(s) to add to the group execution queue.
    <Type>add to execute</Type>
 </Action>
 ```
+
+## Related actions
+
+- [execute one](xref:LogicActionExecuteOne)

@@ -2,7 +2,7 @@
 namespace Skyline.DataMiner.Net.Ticketing.Interfaces
 {
 	/// <summary>
-	/// Ticket field validator interface.
+	/// Ticket field validator interface. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	public interface ITicketFieldValidator
     {

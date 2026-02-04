@@ -4,6 +4,9 @@ uid: Overview_of_the_Job_Manager_app_UI
 
 # Overview of the Jobs app UI
 
+> [!IMPORTANT]
+> The Jobs app is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.5.0 onwards.
+
 The main page of the app consists of a header bar, a side panel and an overview panel.
 
 - The header bar contains, from left to right:
@@ -16,7 +19,7 @@ The main page of the app consists of a header bar, a side panel and an overview 
 
   - User icon: Click this icon in the top-right corner to open a menu with the following options:
 
-    - *Configuration*: Select this option to access the configuration of the job fields. See [Configuring jobs in the Jobs app](xref:Configuring_jobs_in_the_Job_Manager_app).
+    - *Configuration*: Select this option to access the configuration of the job fields. See [Configuring jobs in the Jobs app](xref:Configuring_job_domains).
 
      *About*: Select this option to view version information on the app.
 

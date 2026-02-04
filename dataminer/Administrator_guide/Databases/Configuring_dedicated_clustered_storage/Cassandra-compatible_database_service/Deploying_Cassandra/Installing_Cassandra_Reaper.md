@@ -11,9 +11,6 @@ Cassandra Reaper is an application that can manage Cassandra cluster repairs on 
 
 1. Install the Cassandra Reaper software by following the installation steps on the [Cassandra Reaper installation page](http://cassandra-reaper.io/docs/download/install/).
 
-   > [!IMPORTANT]
-   > Reaper version 3.4.0 has a known issue with the web UI logon (see [webui login not working in docker #1450](https://github.com/thelastpickle/cassandra-reaper/issues/1450)). As a workaround, you can install [version 3.3.4](https://github.com/thelastpickle/cassandra-reaper/releases/tag/3.3.4) from a DEB package using the dpkg command: `sudo dpkg -i reaper_3.3.4_all.deb`
-
 1. Create a keyspace in Cassandra for Reaper to use by running a CQL command adjusted to match the [keyspace replication strategy](https://docs.datastax.com/en/cassandra-oss/3.x/cassandra/architecture/archDataDistributeReplication.html) of your choice.
 
    - Example where all nodes in the Cassandra cluster reside in a **single data center**:

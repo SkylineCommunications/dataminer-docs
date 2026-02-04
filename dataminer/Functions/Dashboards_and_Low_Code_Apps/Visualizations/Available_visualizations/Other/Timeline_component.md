@@ -135,6 +135,17 @@ Panning changes **the position of the displayed time range** without affecting i
 > [!NOTE]
 > If you have enabled the *Lock timeline to now* setting, you will be unable to pan past the "now" indicator.
 
+### Adjusting item height
+
+From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44524-->, you can adjust the height of all items on a timeline at once.
+
+To increase or decrease the height of all timeline items, rotate the mouse wheel while keeping the ALT key pressed.
+
+![Vertical zooming](~/dataminer/images/VerticalZoom.gif)<br>*Timeline component in DataMiner 10.6.3*
+
+> [!NOTE]
+> Items cannot shrink below one tenth of their initial height or grow beyond ten times their initial height.
+
 #### Linking to a time range component
 
 Instead of adjusting the time range directly in the timeline, you can link it to a time range component. This allows you to **control the displayed time range from a dedicated component**, which offers both quick and custom selection options.
@@ -179,6 +190,28 @@ To group items on the timeline based on one of the columns in your data<!--35638
 
    > [!NOTE]
    > If a group is empty (i.e. there is no start and end time), it is still displayed in the timeline component<!--RN 35600-->.
+
+### Group height behavior
+
+When grouping is applied, you can control how the height of each group is handled. This *Height* setting is available under *Groups* in the *Layout* pane, from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44577-->.
+
+You can choose between two kinds of behavior:
+
+- *Fixed* (default): The total height of each group remains the same, regardless of how many items it contains. As more items are added to a group, the individual items will automatically shrink so they all fit within the fixed group height.
+
+  With this behavior:
+
+  - All groups remain visually aligned.
+
+  - The vertical layout is predictable, even when some groups contain more items than others.
+
+- *Grow*: All items within a group keep the same height. As more items are added to a group, the group itself becomes taller to accommodate them.
+
+  With this behavior:
+
+  - Each item will always remain clearly readable.
+
+  - The number of items in a group is visually reflected by the group's height.
 
 ## Using the timeline component as an editing tool
 
@@ -252,6 +285,7 @@ Additionally, the following layout options are also available:
 | Style | Lock timeline to now | Select the checkbox to set a "now" indicator at a fixed position on the timeline. When this option is enabled, users can zoom in and out on the timeline, but are restricted from panning past the indicator. Disabled by default. |
 | Item templates | Browse templates *or*<br>Reuse template (depending on your DataMiner version) | Reuse a saved template from another component in the same dashboard or low-code app. This option is only available if a template is already in use<!--RN 42226-->. |
 | Item templates | Edit | Open the Template Editor<!--RN 34761--> to customize the appearance of timeline items and configure actions triggered when a layer is selected. For more information, refer to [Customizing timeline items](#customizing-timeline-items). |
+| Groups | Height | Available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44577-->, when [grouping](#grouping-items-in-a-timeline) is applied. Set the height of the timeline groups to *Fixed* (default) or *Grow*. For more information, see [Group height behavior](#group-height-behavior). |
 
 > [!NOTE]
 >

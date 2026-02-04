@@ -34,7 +34,7 @@ You can adjust the way the grid is displayed by pressing specific keys on the ke
 
    1. Fill in the X and Y coordinates to indicate the position of the top-left corner of the rack. Position "0,0" starts at the top left of the grid.
 
-      This means you need to make sure the indicated position leaves enough space for the rack to be included in the room. If, for example, you specify the lower right corner as the rack position, this will result in the following notification because the rack would be positioned outside of the grid:
+      This means you need to make sure the indicated position leaves enough space for the rack to be included in the room. If, for example, you specify the lower-right corner as the rack position, this will result in the following notification because the rack would be positioned outside of the grid:
 
       ![Message when adding a rack outside the grid](~/solutions/images/Facility_Manager_Warning_When_Selecting_A_Rack_That_Goes_Outside_Of_The_Limits_Of_The_Room.png)
 

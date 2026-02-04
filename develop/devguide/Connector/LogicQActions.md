@@ -107,38 +107,13 @@ The entry point method must be a public method of a public class.
 
 In the example above, the Run method of the QAction class is defined as a static method.
 
-It is also possible to define static fields in the QAction class. As only one copy of a static member exists, regardless of how many instances of the class are created, static fields are also shared between all the elements executing this protocol and persist as long as the SLScripting process is running.
+Static fields can also be defined in the QAction class. Because only one copy of a static member exists per SLScripting process, these fields are shared across all instances of the class. As a result, any elements executing the same protocol **within the same SLScripting process** will share these static fields, which persist for the lifetime of that process.
+
+> [!IMPORTANT]
+> From DataMiner 10.6.3/10.7.0 onwards<!-- RN 44420 -->, multiple SLScripting processes are active by default. This causes unexpected behavior when static fields are used to share data as not all elements running the same protocol will be located in the same SLScripting process. Furthermore, restarting the element can cause it to move to another SLScripting process. Because of this, **static fields should not be used to exchange data between elements running the same protocol**. If protocols have been developed with the assumption that all elements are running in the same SLScripting process, you can [configure DataMiner to only use one SLScripting process](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes). However, we strongly recommend adapting such problematic protocols according to the approach described under [Sharing and persisting data](#sharing-and-persisting-data), as this will allow DataMiner to use multiple SLScripting processes and increases overall resilience.
 
 > [!NOTE]
 > Static fields are only shared between elements with the same protocol version.
-
-Consider the following example of a protocol that defines a button (with parameter ID 100) triggering a QAction. The QAction defines a static field executionCount and a static method Run:
-
-```xml
-<QAction id="1" name="Count Executions" encoding="csharp" triggers="100">
-<![CDATA[
-    using Skyline.DataMiner.Scripting;
-
-    public static class QAction
-    {
-        private static int executionCount;
-        private static object thisLock = new object();
-
-        public static void Run(SLProtocol protocol)
-        {
-            lock (thisLock)
-            {
-                executionCount++;
-
-                protocol.Log("QA" + protocol.QActionID + "|Quick Action execution count: " + executionCount, LogType.Error, LogLevel.NoLogging);
-            }
-        }
-     }
-]]>
-</QAction>
-```
-
-In case the DataMiner Agent has multiple elements running this protocol, this means that every time the button is pressed on one of these elements, the executionCount variable is incremented, i.e. the executionCount field will hold the number of times this QAction has been executed as a result of a button being pressed by any of the elements executing this protocol (note that in this case locking is required).
 
 In case you only want to keep track of the execution count on a per element basis, either define a protocol parameter that will hold the execution count (as illustrated in the first example under [About QActions](#about-qactions)) instead of a static field in the QAction class, or use the approach described in the section [Instance entry methods](xref:LogicQActions#instance-entry-methods).
 
@@ -183,6 +158,26 @@ For example, in the following QAction two parameters can trigger a QAction. Howe
 ```
 
 By default, the entry method is expected to be defined in the QAction class. However, it is possible to refer to a method of another class as an entry point method. Refer to [entryPoint](xref:Protocol.QActions.QAction-entryPoint) for more information.
+
+## Sharing and persisting data
+
+Depending on the level at which data needs to be shared, different approaches are required.
+
+All scenarios below assume that the data does **not** need to persist when the element restarts. If persistence across restarts is required, use saved parameters and access them from the relevant QActions.
+
+- **Between elements running different protocols**: Use a **static QAction** and share data via [**InterApp calls**](xref:InterAppCalls_Introduction).
+
+- **Between elements running the same protocol**: Use a **static QAction** and share data via [**InterApp calls**](xref:InterAppCalls_Introduction).
+
+  > [!IMPORTANT]
+  > Do **not** share data between elements running the same protocol version using static fields. This approach does not work when DataMiner uses multiple SLScripting processes, which is the default starting from DataMiner 10.6.3/10.7.0<!--RN 44420-->.
+
+- **Within a single element across multiple executions of the same QAction**: Use an **instanced QAction** and share data through a **non-static field**.
+
+- **Within a single element across multiple executions of two or more different QActions**: Use a **precompiled QAction** with a **singleton or static class** containing a **static dictionary field**. Store and retrieve data per element using this dictionary. The key of the dictionary should be a combination of the **Root DataMiner ID** and the **Element ID**. This combination will guarantee uniqueness of the dictionary key even when the DMS contains multiple Agents. The **Root DataMiner ID** is used instead of the host DataMiner ID to make sure the key stays unique even after an element is swarmed to a different Agent.
+
+  > [!IMPORTANT]
+  > Implement cleanup logic when the element is stopped to remove all entries related to that element from the dictionary, as the lifetime of the static field is independent of the element lifecycle.
 
 ## SLProtocol(Ext) instance
 

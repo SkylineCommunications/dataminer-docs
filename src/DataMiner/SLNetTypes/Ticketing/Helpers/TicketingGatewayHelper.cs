@@ -14,7 +14,7 @@ using Skyline.DataMiner.Net.Tickets;
 namespace Skyline.DataMiner.Net.Ticketing
 {
 	/// <summary>
-	/// Helper class for the Ticketing Gateway.
+	/// Helper class for the Ticketing Gateway. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	/// <remarks>
 	/// <para>This is the access point to the Ticketing Gateway. It provides an easy interface to communicate with the Ticketing Gateway.</para>

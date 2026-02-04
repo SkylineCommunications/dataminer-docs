@@ -20,7 +20,7 @@ In Feature Release versions up to DataMiner 10.5.8<!--RN 43400-->, it is also po
    |--|--|
    | AddRADParameterGroupMessage | Creates a new RAD parameter group. If a group with the same name already exists, the group will be updated instead. |
    | GetRADDataMessage | Retrieves anomaly scores over a specified time range. Note that anomaly scores can only be retrieved for past time periods where 5-minute averaged trend data is available. |
-   | GetRADParameterGroupInfoMessage | Retrieves the configuration information for a specific RAD parameter group. From DataMiner 10.5.9/10.6.0 onwards<!--RN 43320-->, the response to this message also includes an `IsMonitored` flag, which indicates whether the group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging. |
+   | GetRADParameterGroupInfoMessage | Retrieves the configuration information for a specific RAD parameter group. From DataMiner 10.5.9/10.6.0 onwards<!--RN 43320-->, the response to this message also includes an `IsMonitored` flag, which indicates whether the group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging. From DataMiner 10.6.2/10.7.0 onwards<!--RN 44237-->, the response also includes the ID of the RAD parameter group. |
    | GetRADParameterGroupsMessage | Retrieves a list of all configured RAD parameter groups. |
    | RemoveRADParameterGroupMessage | Deletes a RAD parameter group. |
 

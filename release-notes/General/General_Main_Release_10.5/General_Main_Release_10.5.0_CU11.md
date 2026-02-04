@@ -2,10 +2,13 @@
 uid: General_Main_Release_10.5.0_CU11
 ---
 
-# General Main Release 10.5.0 CU11 - Preview
+# General Main Release 10.5.0 CU11
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> Before you upgrade to this DataMiner version, make sure the Microsoft **.NET 10** hosting bundle is installed (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)). See also: [DataMiner upgrade: New prerequisite will check whether .NET 10 is installed](xref:General_Main_Release_10.5.0_CU10#dataminer-upgrade-new-prerequisite-will-check-whether-net-10-is-installed-id-44121).
 
 > [!TIP]
 >
@@ -32,16 +35,6 @@ During a DataMiner upgrade, from now on, a new upgrade action will register all 
 <!-- 43789: MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 A number of security enhancements have been made.
-
-#### OpenSearch: Enhanced health monitoring [ID 43951]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-A number of enhancements have been made with regard to health monitoring of OpenSearch databases.
-
-Also, all logging with regard to OpenSearch health monitoring can now be found in *SLSearchHealth.txt*. Up to now, that logging was added to *SLCassandraHealth.txt*.
-
-Note that, from now on, if not all nodes of the OpenSearch cluster are listed in the *Db.xml* file, a notice will be generated to warn operators.
 
 #### Elasticsearch/OpenSearch: Enhanced history alarm filtering on service ID or service name [ID 44192]
 
@@ -265,3 +258,11 @@ In some cases, a fatal error could occur in SLDataMiner when an incomplete JSON 
 When an alarm cannot be created for a particular element, an attempt is made to fetch the element state for logging purposes.
 
 Up to now, in some cases, when the element was being stopped and was flushing its data to the database, this fetch operation could block the alarm thread. As a result, no new alarms would get processed for that element until the element had stopped flushing its data.
+
+#### Calls that check whether the connection between client and DMA is still alive would incorrectly be blocked when 10 simultaneous calls were being processed [ID 44456]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU1] -->
+
+When 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent were being processed, up to now, any additional call would be blocked, including calls that check whether the connection between client and DMA was still alive. As a result, the client application would disconnect.
+
+From now on, even when 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent are being processed, calls that check whether the connection between client and DMA is still alive will never be blocked.

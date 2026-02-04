@@ -3,7 +3,7 @@
 namespace Skyline.DataMiner.Net.Ticketing.Validators
 {
 	/// <summary>
-	/// Generic enum entry interface.
+	/// Generic enum entry interface. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
     public interface IGenericEnumEntry
     {

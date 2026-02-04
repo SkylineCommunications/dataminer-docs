@@ -36,6 +36,9 @@ See [Deploying a Catalog item](xref:Deploying_a_catalog_item).
 
 In DataMiner Cube, you can upload either *Protocol.xml* files or entire protocol packages (extension *.dmprotocol*). In addition, you can also update the protocols in your DMS via the Update Center.
 
+> [!NOTE]
+> If uploading a protocol fails, and you see an error message saying "DataMiner was unable to upload protocol", this is most likely because the minimum required DataMiner version for the protocol is higher than your current DataMiner version. Verify the requirements for the protocol and [upgrade DataMiner](xref:Upgrading_a_DataMiner_Agent) if necessary.
+
 ### Uploading a Protocol.xml file
 
 1. Go to *Apps* > *Protocols & Templates*.
