@@ -25,4 +25,10 @@ These log entries will include both the requested version and the actual version
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem with SLNet when receiving a subscription with a large filter that contained wildcards [ID 44512]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When SLNet received a dynamic table subscription with a very large filter that contained wildcards, up to now, it would throw a stack overflow exception and stop working.
+
+From now on, SLNet subscriptions will now be blocked when they contain a filter that exceeds 140,000 characters.
