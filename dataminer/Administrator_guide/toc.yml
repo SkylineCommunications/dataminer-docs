@@ -200,6 +200,8 @@ items:
             topicUid: BPA_View_Recursion
           - name: Verify NATS Migration Prerequisites
             topicUid: BPA_NATS_Migration_Prerequisites
+          - name: Detect unsupported connector versions
+            topicUid: BPA_Detect_Unsupported_Connector_Versions
   - name: Failover
     topicUid: failover
     items:
