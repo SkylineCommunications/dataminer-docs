@@ -427,7 +427,7 @@ From now on, the `OnInitInputArgs` will include a `Session` object that will con
 
 #### SLManagedScripting will again add a log entry each time it has loaded or failed to load an assembly [ID 44522]
 
-<!-- MR 10.7.0 - FR 10.6.3 -->
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.3 -->
 
 Since DataMiner version 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9<!-- RN 43690 -->, SLManagedScripting no longer added an entry in the *SLManagedScripting.txt* log file each time it had loaded or failed to load an assembly. From now on, it will again do so.
 
