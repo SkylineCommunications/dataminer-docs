@@ -8,7 +8,7 @@ By linking shapes in a visual overview to a matrix parameter of an element, you 
 
 Each shape represents an input or an output of the matrix, while connections between shapes represent the active crosspoints. These connections between inputs and outputs are drawn automatically.
 
-Depending on the configuration, users can alter connections directly from the visual overview using the right-click menu. For example, from DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44601-->, you can alter connections for table-based matrices. In the context menu, the outputs and inputs of these matrices are shown in the same order as the rows in the table.
+Users can alter connections directly from the visual overview using the right-click menu. However, note that for table-based matrices this is only possible from DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44601-->. In the context menu, the outputs and inputs of table-based matrices are shown in the same order as the rows in the table.
 
 To make a graphical representation of a matrix parameter, follow these steps:
 
