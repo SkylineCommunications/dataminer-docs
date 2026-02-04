@@ -7,6 +7,7 @@ description: To use Visio drawings in your DataMiner Solution, you need to enric
 
 ## Get to know the basics
 
+- [About Visual Overview](xref:About_Visual_Overview)
 - [Microsoft Visio application basics (online course)](https://community.dataminer.services/lessons/visio-application-basics/)
 - [Working with shape data in Microsoft Visio](xref:Working_with_shape_data_in_Microsoft_Visio)
 - [Editing a visual overview in DataMiner Cube](xref:Editing_a_visual_overview_in_DataMiner_Cube)
