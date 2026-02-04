@@ -23,3 +23,11 @@ This Feature Release of the DataMiner web applications contains the same new fea
 <!-- MR TBD - FR 10.6.2 [CU1] -->
 
 In some rare cases, the GQI DxM and the Web DcM could stop working during startup.
+
+#### Web module of which only the revision number was different would incorrectly be installed alongside the existing version [ID 44690]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU1] - FR 10.6.2 [CU1] -->
+
+When you installed a newer version of a DataMiner web module (i.e. a DcM or DxM module) of which only the revision number (*Major.Minor.Build.Revision*) was different from the version that was installed, up to now, the installer would incorrectly install the new version alongside the existing version.
+
+From now on, when you install a newer version of a DataMiner web module of which only the revision number is different from the version that is installed, the installer will first uninstall the existing version, and will then install the new version. That way, only a single version of a DataMiner web module will be installed at any given time.
