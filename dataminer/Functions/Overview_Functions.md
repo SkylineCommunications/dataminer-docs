@@ -120,6 +120,9 @@ description: A DataMiner System can have several additional modules or apps, e.g
   <div class="column">
     <a href="/dataminer/Functions/Video_Thumbnails/About_Video_Thumbnails.html" title="Video thumbnails" target="_self"><img src="~/dataminer/images/Video_Thumbnails.svg" style="width:100%"></a>
   </div>
+  <div class="column">
+    <a href="/dataminer/Functions/Visual_Overview/About_Visual_Overview.html" title="Visual Overview" target="_self"><img src="~/dataminer/images/VisualOverview.svg" style="width:100%"></a>
+  </div>
 </div>
 
 <style>

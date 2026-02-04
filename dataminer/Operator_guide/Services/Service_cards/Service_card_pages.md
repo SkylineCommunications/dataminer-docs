@@ -14,7 +14,7 @@ The navigation pane on the left side of a service card contains a tree view with
 Under the *VISUAL* node, one or more pages are displayed that contain a graphic representation of the service. These can be completely customized in Visio.
 
 > [!NOTE]
-> For more information on how to change the Visio file linked to a particular service, see [Switching between different Visio files](xref:Managing_Visio_files_linked_to_protocols#switching-between-different-visio-files).
+> For more information on how to change the Visio file linked to a particular service, see [Setting the active Visio file for an element, service, or view](xref:Set_as_active_Visio_file).
 
 ### DATA
 

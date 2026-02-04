@@ -20,7 +20,7 @@ Every DataMiner Agent is shipped with the following default Visio files.
 | Stencil files containing device drawings | AppearTV DC1000.vss<br> AppearTV DC1100.vss<br> AppearTV MC3000.vss<br> AppearTV MC3100.vss<br> AppearTV SC2000.vss<br> AppearTV SC2100.vss<br> BridgeTech.vss<br> Nimbra300.vss<br> Nimbra600.vss<br> NimbraNodes.vss |
 
 > [!NOTE]
-> When you [create a new Visio file from DataMiner Cube](xref:Editing_a_visual_overview_in_DataMiner_Cube#set-as-active-visio-file), by default the .vsdx version of the template file is used.
+> When you [create a new Visio file from DataMiner Cube](xref:Set_as_active_Visio_file), by default the .vsdx version of the template file is used.
 
 ### C:\\Skyline DataMiner\\Views\\Default
 
