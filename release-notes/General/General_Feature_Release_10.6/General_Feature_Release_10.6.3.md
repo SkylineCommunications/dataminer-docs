@@ -425,6 +425,14 @@ Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator)
 
 From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
 
+#### Interactive Automation scripts in web apps: New UsePreviousCollapsedState property will allow tree nodes to restore their IsCollapsed state when the UI is updated [ID 44515]
+
+<!-- MR 10.6.0 - FR 10.6.3 -->
+
+When, in an interactive Automation script, a TreeView control was used with the `SupportsLazyLoading` option set to false, up to now, each time the UI was updated, any expanded tree nodes would collapse unexpectedly.
+
+Tree nodes now have a new `UsePreviousCollapsedState` property. By default, this property will be set to false. When set to true, each time the UI is updated, the previous `IsCollapsed` state of the tree node in question will be restored. If no previous `IsCollapsed` state is available, the current `IsCollapsed` state will be applied.
+
 #### SLManagedScripting will again add a log entry each time it has loaded or failed to load an assembly [ID 44522]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.3 -->
