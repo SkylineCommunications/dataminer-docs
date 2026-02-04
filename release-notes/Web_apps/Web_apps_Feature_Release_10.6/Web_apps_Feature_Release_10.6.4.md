@@ -26,7 +26,13 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards app: 'HTTP 404' page replaced by an embedded visual [ID 44569]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+From now on, when you try to open an invalid dashboard or dashboard folder, you wil no longer be redirected to a separate "HTTP 404" page. Instead, a visual will now appear inside the Dashboards app.
+
+Clicking the *Go to overview* button in that visual will redirect you to either the closest valid parent folder or the root folder.
 
 ### Fixes
 
