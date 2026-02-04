@@ -113,7 +113,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 
 | Term | Description |
 |------|-------------|
-| QAction | Quick action within a DataMiner protocol, which can be used to implement advanced functionality that cannot be implemented by other protocol constructs. See [About QActions](xref:LogicQActions#about-qactions) |
+| QAction | Quick action within a DataMiner protocol, which can be used to implement advanced functionality that cannot be implemented by other protocol constructs. See [About QActions](xref:LogicQActions) |
 | QAM | Quadrature Amplitude Modulation. Transmission technique for digital signals that combines phase modulation and amplitude modulation. |
 | QoS | Quality of Service. |
 | Query executer | Obsolete DataMiner tool that allows users to connect to an SQL database and query it using SQL statements. See [Querying an SQL database](xref:Querying_an_SQL_database). |

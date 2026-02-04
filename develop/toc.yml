@@ -200,6 +200,18 @@ items:
         - name: QActions
           topicUid: LogicQActions
           items:
+          - name: Entry point methods
+            topicUid: LogicQActionsEntryPointMethods
+          - name: QAction member fields
+            topicUid: LogicQActionsMemberFields
+          - name: SLProtocol interaction
+            topicUid: LogicQActionsSLProtocolInteraction
+          - name: QAction execution
+            topicUid: LogicQActionsExecution
+          - name: QAction compilation
+            topicUid: LogicQActionsCompilation
+          - name: Starting an Automation script from a QAction
+            topicUid: LogicQActionsAutomationScriptExecution            
           - name: Examples
             topicUid: LogicQActionsExamples
         - name: Conditions
