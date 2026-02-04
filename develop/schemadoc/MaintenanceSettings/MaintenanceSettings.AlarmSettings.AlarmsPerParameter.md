@@ -31,6 +31,7 @@ If there are more alarms in an alarm tree, by default a notice will be displayed
 
 > [!NOTE]
 >
+> - As of DataMiner 10.6.0 [CU1]/10.5.0 [CU13]/10.6.4 the recurring attribute is not applied anymore. No notice alarms will be generated anymore.
 > - SLNet limits the alarm trees in the cache and in history queries based on this tag. If no value is specified in this tag, SLNet uses a default of 20. In addition, because in old DataMiner versions the default was 100, if the value in this tag is 100, SLNet will read it as 20 instead.
 > - SLDataMiner is responsible for generating notices if there are too many alarms in an alarm tree. If no value is specified in this tag, SLDataMiner uses a default of 100.
 
