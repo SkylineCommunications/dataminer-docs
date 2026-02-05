@@ -37,3 +37,5 @@ To change the connection settings on the login page:
 1. Click *OK*.
 
 If you are already logged in, changing the connection settings in Cube is similar. For detailed information, see [Manual configuration of client communication settings](xref:DMA_configuration_related_to_client_applications#manual-configuration-of-client-communication-settings).
+
+From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44547-->, when Cube connects to a DMA that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) (i.e. a DMA of which the hostname ends with `.dataminer.services`), gRPC is always used, even if you have manually set the connection type to *Remoting*.
