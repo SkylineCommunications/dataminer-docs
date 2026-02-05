@@ -6,6 +6,10 @@ uid: MaintenanceSettings.AlarmSettings.AlarmsPerParameter-recurring
 
 Configures whether and when a notice will be generated if the number of alarms in an alarm tree exceeds the AlarmsPerParameter setting.
 
+> [!NOTE]
+>
+> - As of DataMiner 10.6.0 [CU1]/10.5.0 [CU13]/10.6.4 the recurring attribute is not applied anymore. No notice alarms will be generated anymore.
+
 ## Content Type
 
 | Item | Facet Value | Description |
