@@ -44,6 +44,8 @@ From DataMiner 10.5.10/10.6.0 onwards<!-- RN 43260 -->, Cube uses gRPC by defaul
 
 However, prior to this or when manually configured to do so, Cube uses .NET Remoting to communicate with DataMiner. This communication is encrypted using the Rijndael algorithm using a 256-bit key, which is negotiated over a 1024-bit RSA encrypted communication channel. However, .NET Remoting is a legacy technology and is widely considered insecure. Therefore, starting from DataMiner 10.3.2/10.3.0, we recommend that you manually enable gRPC for the client-server connection.
 
+From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44547-->, when Cube connects to a DMA that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) (i.e. a DMA of which the hostname ends with `.dataminer.services`), gRPC is always used, even if Cube has been manually configured to use .NET Remoting.
+
 To manually enable gRPC for the client-server connection, edit the *ConnectionSettings.txt* file on each DataMiner Agent. For detailed information, refer to [ConnectionSettings.txt](xref:ConnectionSettings_txt).
 
 > [!IMPORTANT]
