@@ -64,7 +64,7 @@ Each row in a query corresponds to an item in the grid.
 
 You can use a grid component as a dynamic selector, i.e. a component whose selection **determines behavior or data elsewhere in your dashboard or app**. A common use case is controlling what is shown in another component, but selected values can also serve as input for scripts, queries, or conditional behavior.
 
-When you select an item in the grid, the selected data (*All available data* > *Components* > *Grid* > *Selected items* > *Tables*) becomes automatically available for use in other components.
+When you select an item in the grid, the selected data (e.g. *All available data* > *Components* > *[Page name]* > *Grid* > *Selected items* > *Tables*) becomes automatically available for use in other components.
 
 In the example below, a grid filters a table component based on job state. By selecting a grid item, users can quickly switch between active, upcoming, completed, or all jobs.
 
@@ -201,7 +201,7 @@ This default template (available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.
 
 ![Selecting a grid block](~/dataminer/images/Selecting_Grid_Block.gif)<br>*Grid component in DataMiner 10.5.7*
 
-This can for instance be useful when the grid's [component data](xref:Component_Data) (i.e. *Components* > *Grid* > *Selected items* > *Tables*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
+This can for instance be useful when the grid's [component data](xref:Component_Data) (e.g. *Components* > *[Page name]* > *Grid* > *Selected items* > *Tables*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
 
 #### Highlighting filtered results
 
@@ -219,7 +219,9 @@ To **visually distinguish items that match your filter criteria from others**, y
 
 1. Apply the same query data to the query filter that is used by the grid component.
 
-1. In the *Data* pane, navigate to *All available data* > *Components* > *Query filter #*, and drag the *Query columns* data item onto your grid component.
+1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *[Page name]* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your grid component.
+
+   Note that in older DataMiner versions, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
    In read mode, you can now use the query filter component to filter and refine the data displayed in the grid component. Items that do not meet the specified criteria will be shown with lowered opacity.
 
