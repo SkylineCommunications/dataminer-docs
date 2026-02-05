@@ -122,3 +122,19 @@ The information from the *VLANS* array in this example is distributed into two t
 Elements generated using the Data API adhere to a predetermined layout.
 
 Individual parameters are placed on the first page named "Parameters", while each table is positioned on a separate dedicated page.
+
+## Settings
+
+### MessageBroker timeout
+
+The MessageBroker request timeout can be configured via the *appsettings* and *appsettings.custom*. If no value is configured for this, DataAPI uses 30 seconds as the default.
+
+Example:
+
+```json
+{
+   "Communication": {
+      "MessageBrokerRequestTimeoutSeconds": 60
+    }
+}
+```
