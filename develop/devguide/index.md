@@ -22,20 +22,26 @@ description: Learn how to create DataMiner connectors & Automation scripts, and 
     <a href="/develop/devguide/DMI_UserDefinableAPIs/DMI_UserDefinableAPIs.html" title="User-Defined APIs" target="_self"><img src="~/develop/images/User-Defined_APIs.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/develop/devguide/ClassLibrary/ClassLibraryIntroduction.html" title="Class Library" target="_self"><img src="~/develop/images/Class_Library.svg" style="width:100%"></a>
-  </div>  
+    <a href="/develop/devguide/Visio/visio.html" title="Visio drawings" target="_self"><img src="~/dataminer/images/Visio_Drawings.svg" style="width:100%"></a>
+  </div>
   <div class="column">
-    <a href="/develop/devguide/Core.InterAppCalls/InterAppCalls_Introduction.html" title="InterApp framework" target="_self"><img src="~/develop/images/InterApp_Framework.svg" style="width:100%"></a>
+    <a href="/develop/devguide/ClassLibrary/ClassLibraryIntroduction.html" title="Class Library" target="_self"><img src="~/develop/images/Class_Library.svg" style="width:100%"></a>
   </div>  
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/develop/devguide/Core.InterAppCalls/InterAppCalls_Introduction.html" title="InterApp framework" target="_self"><img src="~/develop/images/InterApp_Framework.svg" style="width:100%"></a>
+  </div>  
   <div class="column">
     <a href="/develop/devguide/Connector/SwarmingPrepare.html" title="Swarming" target="_self"><img src="~/develop/images/Swarming.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/develop/devguide/EPM_Integration_Training/EpmIntegrationTrainingAbout.html" title="EPM integration" target="_self"><img src="~/develop/images/EPM_Integration.svg" style="width:100%"></a>
   </div>  
+</div>
+
+<div>
   <div class="column">
     <a href="/develop/devguide/GettingStartedAsSysDev.html" title="Getting started as a System Developer" target="_self"><img src="~/develop/images/Getting_Started_as_a_System_Developer.svg" style="width:100%"></a>
   </div>  

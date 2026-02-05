@@ -194,6 +194,8 @@ Visual Overview in web apps has limited functionality:
 
 - Displaying a [video stream via VLC](xref:Linking_a_shape_to_a_video_stream_using_VLC) inside a shape is not supported in visual overviews that are used in DataMiner web apps.
 
+- [Linking shapes to table-based matrix parameters](xref:Linking_a_shape_to_a_matrix_parameter) is not supported in Visual Overview in web apps for DataMiner 10.5.0 [CU12], although it is supported for Visual Overview in Cube. From DataMiner 10.6.0/10.6.3 onwards<!--RN 44601-->, table-based matrices are displayed correctly in web apps, but connections cannot be altered via the context menu.
+
 If you encounter any issues or if you notice any behavior that is different from that in Cube, then check the `SLUIProvider.txt` and `SLHelperWrapper.txt` log files. Always include the Visio file when you ask for support by email.
 
 On mobile devices, Visual Overview pages automatically subscribe to all alarms. From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41327-->, if no alarm information is needed when a visual overview is shown, you can configure alarm subscriptions to be skipped by setting the `helper:load-alarms` option to "false" in `C:\Skyline DataMiner\Files\SLHelper.exe.config`.

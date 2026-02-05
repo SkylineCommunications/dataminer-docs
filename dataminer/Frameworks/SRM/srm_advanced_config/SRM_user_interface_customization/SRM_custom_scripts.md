@@ -43,7 +43,7 @@ To configure this:
 
 1. Create a Visio drawing that contains one page for each icon you want to use, and add the icon to the relevant page. No shape data are required.
 
-1. In DataMiner Cube, create a view and assign the Visio drawing to that view. See [Set as active Visio file](xref:Editing_a_visual_overview_in_DataMiner_Cube#set-as-active-visio-file).
+1. In DataMiner Cube, create a view and assign the Visio drawing to that view. See [Setting the active Visio file for an element, service, or view](xref:Set_as_active_Visio_file).
 
 1. In the Booking Manager app, go to *Config* > *Custom Actions*.
 

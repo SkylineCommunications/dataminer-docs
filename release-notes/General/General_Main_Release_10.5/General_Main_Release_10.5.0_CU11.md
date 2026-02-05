@@ -36,16 +36,6 @@ During a DataMiner upgrade, from now on, a new upgrade action will register all 
 
 A number of security enhancements have been made.
 
-#### OpenSearch: Enhanced health monitoring [ID 43951]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-A number of enhancements have been made with regard to health monitoring of OpenSearch databases.
-
-Also, all logging with regard to OpenSearch health monitoring can now be found in *SLSearchHealth.txt*. Up to now, that logging was added to *SLCassandraHealth.txt*.
-
-Note that, from now on, if not all nodes of the OpenSearch cluster are listed in the *Db.xml* file, a notice will be generated to warn operators.
-
 #### Elasticsearch/OpenSearch: Enhanced history alarm filtering on service ID or service name [ID 44192]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
@@ -268,3 +258,11 @@ In some cases, a fatal error could occur in SLDataMiner when an incomplete JSON 
 When an alarm cannot be created for a particular element, an attempt is made to fetch the element state for logging purposes.
 
 Up to now, in some cases, when the element was being stopped and was flushing its data to the database, this fetch operation could block the alarm thread. As a result, no new alarms would get processed for that element until the element had stopped flushing its data.
+
+#### Calls that check whether the connection between client and DMA is still alive would incorrectly be blocked when 10 simultaneous calls were being processed [ID 44456]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU1] -->
+
+When 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent were being processed, up to now, any additional call would be blocked, including calls that check whether the connection between client and DMA was still alive. As a result, the client application would disconnect.
+
+From now on, even when 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent are being processed, calls that check whether the connection between client and DMA is still alive will never be blocked.

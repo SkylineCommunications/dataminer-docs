@@ -66,12 +66,13 @@ In summary, Visual Overview offers a remarkably powerful and graphical way to na
 > [!TIP]
 > See also:
 >
+> - [About Visual Overview](xref:About_Visual_Overview)
 > - [Benefits of the Visual Overviews](https://www.youtube.com/watch?v=f3-WGXShNl4) ![Video](~/dataminer/images/video_Duo.png)
 > - [Earth Station Uplink Visual Overview sample](https://community.dataminer.services/use-case/earth-station-uplink-visual-overview-sample/)
 > - [Control Surfaces](https://community.dataminer.services/use-case/control-surfaces/)
 > - [Ziine – your reference for Visual Overview functionality](https://community.dataminer.services/ziine-your-reference-for-visual-overview-functionality/)
-> - [Visio drawings](xref:visio)
 > - [Visual Overview training course](https://community.dataminer.services/courses/visio/)
+> - [Visio drawings – developer documentation](xref:visio)
 
 ## Event correlation
 

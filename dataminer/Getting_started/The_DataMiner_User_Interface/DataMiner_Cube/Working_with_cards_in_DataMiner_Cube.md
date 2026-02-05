@@ -134,7 +134,7 @@ When you click the hamburger button in the top-left corner of a card, a shortcut
 
 - **Device discovery**: Only available on view cards. See [Locating devices in your system to add to your DMS](xref:Locating_devices_in_your_system_to_add_to_your_DMS).
 
-- **Visual overview**: Allows you to set different Visio files for the card’s Visual Overview pages. See [Switching between different Visio files](xref:Managing_Visio_files_linked_to_protocols#switching-between-different-visio-files).
+- **Visual overview**: Allows you to set different Visio files for the card's Visual Overview pages. See [Setting the active Visio file for an element, service, or view](xref:Set_as_active_Visio_file).
 
 - **Close other cards**: Closes all cards except the one you have clicked.
 

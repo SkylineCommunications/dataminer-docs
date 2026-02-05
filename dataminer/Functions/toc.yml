@@ -10,10 +10,6 @@ items:
           topicUid: Assistant_Context
         - name: Adding custom user context
           topicUid: Assistant_UserContext
-        - name: Adding or editing context files
-          topicUid: Assistant_AddingContextFiles
-        - name: Adding custom predefined questions
-          topicUid: Assistant_Predefined_Questions
       - name: Natural language to GQI
         topicUid: NL2GQI
       - name: Document Intelligence
@@ -902,7 +898,7 @@ items:
       - name: DOM security
         topicUid: DOM_security
         items:
-          - name: Configuring definition-level security
+          - name: Configuring DOM security
             topicUid: DOM_security_ui
       - name: DOM actions
         topicUid: DOM_actions
@@ -1273,10 +1269,11 @@ items:
       - name: Using the profiles tab
         topicUid: SRM_Services_profiles
   - name: Scheduler
-    topicUid: scheduler
     items:
       - name: About DataMiner Scheduler
         topicUid: About_the_Scheduler_module
+      - name: Scheduler UI overview
+        topicUid: Scheduler_UI_overview
       - name: Manually adding a scheduled task
         topicUid: Manually_adding_a_scheduled_task
       - name: Scheduling an event based on a Scheduler template
@@ -1285,6 +1282,10 @@ items:
         topicUid: Manually_starting_and_stopping_a_scheduled_event
       - name: Creating a Scheduler template
         topicUid: Creating_a_Scheduler_template
+      - name: Advanced
+        items:
+        - name: Scheduler data storage
+          topicUid: SchedulerDataStorage
   - name: Site Manager
     items:
     - name: About Site Manager
@@ -1431,3 +1432,17 @@ items:
             topicUid: Allowed_paths_connection_DataMiner_proxy
           - name: Ignoring validation errors during HTTP parsing
             topicUid: Ignoring_validation_errors_during_HTTP_parsing
+  - name: Visual Overview
+    items:
+      - name: About Visual Overview
+        topicUid: About_Visual_Overview
+      - name: Managing Visio files linked to protocols
+        topicUid: Managing_Visio_files_linked_to_protocols
+      - name: Setting the active Visio file for an element, service, or view
+        topicUid: Set_as_active_Visio_file
+      - name: Visual overview page priority
+        topicUid: Visual_overview_page_priority
+      - name: Cleaning up unused Visio files
+        topicUid: Cleaning_up_unused_Visio_files
+
+

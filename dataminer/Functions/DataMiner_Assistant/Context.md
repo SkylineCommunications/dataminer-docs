@@ -14,7 +14,7 @@ The context consists of several layers:
 | Type | Description |
 |--|--|
 | System instructions | Define how the Assistant should behave, write, and respond. These are loaded at the start of every chat session. |
-| [Context files](xref:Assistant_AddingContextFiles) | Contain background information, rules, and logic about DataMiner concepts. These files help the Assistant reason about the system. |
+| Context files | Contain background information, rules, and logic about DataMiner concepts. These files help the Assistant reason about the system. |
 | Data source descriptions | Describe the structure of the data the Assistant can access. |
 | User prompt | The message you type in the chat, e.g. "Which alarms require immediate attention?" |
 | [User context](xref:Assistant_UserContext) | Optional organization-specific information that customizes the Assistant’s understanding of your environment. |

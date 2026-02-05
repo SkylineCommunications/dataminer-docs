@@ -668,11 +668,19 @@ When database operations fail or take too long, the queue of database synchroniz
 
 From now on, SLAnalytics will pause the creation of new synchronization tasks for some types of model information whenever there are too many pending tasks already. New synchronization operations will only be created again once the backlog has decreased.
 
-#### Security Advisory BPA test: Enhancements [ID 44444] [ID 44477]
+#### Security Advisory BPA test: Enhancements [ID 44444] [ID 44477] [ID 44566]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-Up to now, the *Local admin hygiene* test would verify whether the local admin account was disabled and whether there were not too many local administrator accounts. From now on, this test will no longer be performed as the recommendations in the [hardening guide](https://aka.dataminer.services/HardeningGuide) have been updated.
+A number of enhancements have been made to the Security Advisory BPA test:
+
+- Up to now, the *Local admin hygiene* test would verify whether the local admin account was disabled and whether there were not too many local administrator accounts. From now on, this test will no longer be performed as the recommendations in the [hardening guide](https://aka.dataminer.services/HardeningGuide) have been updated.
+
+- The HTTP header test will now also check whether the referrer-policy header is set.
+
+- A new test was added that will check the *versionhistory.txt* file to find out whether a system upgrade was performed in the last 6 months.
+
+  If the contents of the *versionhistory.txt* file cannot be read, the test will check when that file was last updated, and if that also fails, it will check when the *SLNet.exe* file was last updated.
 
 Also, the following issues have now been fixed:
 
@@ -680,9 +688,10 @@ Also, the following issues have now been fixed:
 
 - On systems where the `enableLegacyV0Interface` flag is not set in the *web.config* file, the test that verifies whether the v0 web API is disabled would incorrectly assume that the v0 web API was enabled. From now on, when the `enableLegacyV0Interface` flag is not set in the *web.config* file, the v0 web API will be considered disabled.
 
-#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 44479]
+#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 44479] [ID 44616]
 
 <!-- RN 44479: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+<!-- RN 44616: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
 Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
 
@@ -698,6 +707,14 @@ Up to now, in interactive Automation scripts launched from web apps, only the `U
 - `UIBlockType.Time` with `AutomationDateTimeUpDownOptions`
 - `UIBlockType.Time` with `AutomationTimePickerOptions`
 - `UIBlockType.Calendar` with `AutomationCalendarOptions`
+
+#### Interactive Automation scripts in web apps: New UsePreviousCollapsedState property will allow tree nodes to restore their IsCollapsed state when the UI is updated [ID 44515]
+
+<!-- MR 10.6.0 - FR 10.6.3 -->
+
+When, in an interactive Automation script, a TreeView control was used with the `SupportsLazyLoading` option set to false, up to now, each time the UI was updated, all tree nodes would revert their expanded state back to the `IsCollapsed` setting.
+
+Tree nodes now have a new `UsePreviousCollapsedState` property. By default, this property will be set to false. When set to true, each time the UI is updated, the previous `IsCollapsed` state of the tree node in question will be restored. If no previous `IsCollapsed` state is available, the current `IsCollapsed` state will be applied.
 
 #### SLNet messages GetLiteElementInfo, GetLiteServiceInfo, and GetLiteRedundancyGroupInfo now support filtering by HostingAgentID [ID 44537]
 
@@ -851,3 +868,25 @@ When you removed a rogue or unreachable IP address on the *Agents* page in *Syst
 On a newly created DaaS system, up to now, short-lived alarms without operational impact could appear immediately after the *My DataMiner Agent* element had been created.
 
 In the alarm template of the *My DataMiner Agent* element, hysteresis has now been tweaked to prevent such alarms from appearing on newly created DaaS systems.
+
+#### SLAnalytics - Behavior anomaly detection: Anomaly significance of anomalous change points would incorrectly be set to zero [ID 44585]
+
+<!-- MR 10.6.0 - FR 10.6.3 -->
+
+Up to now, in some cases, the anomaly significance of change points that are marked anomalous due to crossing a user-configured threshold in the alarm template would incorrect remain set to zero.
+
+From now on, the anomaly significance of these change points will correctly be set to a high value.
+
+> [!NOTE]
+> When you use the *Get behavioral change events* data source to retrieve change points, the anomaly significance of theses change points can be found in the *Anomaly significance* column.
+
+#### Service & Resource Management: Problem when calculating resource availability [ID 44649]
+
+<!-- MR 10.6.0 - FR 10.6.2 [CU1] -->
+
+When calculating resource availability, the resource manager only checks the first 1000 bookings returned by the database. This means that, if there are more than 1000 bookings, resource availability will not be calculated correctly, causing the following issues:
+
+- When `GetEligibleResources` is being used, resources that are not available could be returned as available.
+- When `ReservationInstances` are created or updated, resources could get overbooked beyond their available concurrency and capacity.
+
+From now on, the creation of new bookings that overbook a resource will be prevented.
