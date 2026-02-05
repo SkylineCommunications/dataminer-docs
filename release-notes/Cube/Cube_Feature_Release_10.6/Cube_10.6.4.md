@@ -26,7 +26,13 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Enhanced search box consistency throughout DataMiner Cube [ID 44658]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Certain search boxes in used in the ListView component as well as the Automation, Correlation, and Spectrum Analysis modules would not behave like other search boxes in DataMiner Cube. The list with suggestions and the filtered list would incorrectly be generated simultaneously.
+
+From now on, the search boxes in the above-mentioned modules will act in a way that is similar to other search boxes in DataMiner Cube. The list with suggestions will be displayed first, and the filtered list will be displayed a second after you stopped typing in the search box.
 
 ### Fixes
 
