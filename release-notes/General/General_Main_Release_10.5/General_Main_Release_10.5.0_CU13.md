@@ -21,6 +21,12 @@ uid: General_Main_Release_10.5.0_CU13
 
 A number of security enhancements have been made.
 
+#### SLDataGateway: StorageTypeNotFoundException will now always mention the StorageType that could not be found [ID 44603]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When SLDataGateway throws a `StorageTypeNotFoundException`, from now on, the message will always mention the StorageType that could not be found.
+
 ### Fixes
 
 #### Problem with SLNet when receiving a subscription with a large filter that contained wildcards [ID 44512]
