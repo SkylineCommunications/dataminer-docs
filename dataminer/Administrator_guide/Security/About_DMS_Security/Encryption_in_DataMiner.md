@@ -51,6 +51,8 @@ Starting from DataMiner 10.5.10/10.6.0, Cube uses gRPC over HTTPS by default to 
 
 Prior to this, Cube will communicate with the DataMiner backend over .NET Remoting by default. This is encrypted using the Rijndael (256-bit key, CBC mode) algorithm. The encryption key is negotiated over a 2048-bit RSA-secured communication channel. It is also possible to configure DataMiner so [gRPC is used instead of .NET Remoting](xref:DataMiner_hardening_guide#secure-cube-server-communication).
 
+From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44547-->, when Cube connects to a DMA that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) (i.e. a DMA of which the hostname ends with `.dataminer.services`), gRPC is always used, even if a different connection type has been specified in the Cube settings.
+
 ### DataMiner web apps and API
 
 By default, the DataMiner web apps (Dashboards, Monitoring, etc.) are served over HTTP, which is unencrypted. Starting from DataMiner 10.2.1/10.3.0, the webpages are also served over HTTPS using a self-signed certificate. We recommend that you [properly configure HTTPS and disable HTTP](xref:Setting_up_HTTPS_on_a_DMA) to ensure all traffic is encrypted.
