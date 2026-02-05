@@ -4,9 +4,9 @@ uid: BPA_Detect_Unsupported_Connector_Versions
 
 # Detect unsupported connector versions
 
-When a connector version is unlisted in the Catalog, this means that it is no longer supported by Skyline Communications. Using unlisted connector versions can lead to compatibility issues, lack of support, and potential security vulnerabilities. It is important to regularly check for unlisted connector versions and update them to supported versions to ensure optimal performance and security of the system.
+When a connector version is removed from the Catalog, this means that it is no longer supported by Skyline Communications. Using such connector versions can lead to compatibility issues, lack of support, and potential security vulnerabilities. It is important to regularly check for unsupported connector versions and update them to supported versions to ensure optimal performance and security of the system.
 
-This BPA test detects elements that are using connector versions that have been unlisted in the Catalog. It is by default available in System Center from DataMiner 10.6.4/10.7.0 onwards.<!-- RN 44607 -->
+This BPA test detects elements that are using connector versions that are no longer supported in the Catalog. It is by default available in System Center from DataMiner 10.6.4/10.7.0 onwards.<!-- RN 44607 -->
 
 ## Metadata
 
