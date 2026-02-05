@@ -15,7 +15,11 @@ uid: General_Main_Release_10.5.0_CU13
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Security enhancements [ID 44579]
+
+<!-- 44579: MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 

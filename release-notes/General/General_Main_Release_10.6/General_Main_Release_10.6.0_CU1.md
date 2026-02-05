@@ -23,6 +23,12 @@ Since DataMiner version 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9<!-- RN 43690 -->, SLMa
 
 These log entries will include both the requested version and the actual version of the assembly.
 
+#### Security enhancements [ID 44579]
+
+<!-- 44579: MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Problem with SLNet when receiving a subscription with a large filter that contained wildcards [ID 44512]
