@@ -119,7 +119,7 @@ To do so, go to *App settings*. There you can add, update, and delete such a fil
 
 > [!CAUTION]
 > This feature is intended for advanced users only. Use it at your own risk.
-> Also, we cannot guarantee long-term support of CSS customizations as the default HTML structure of low-code app may change over time.
+> Also, we cannot guarantee long-term support of CSS customizations as the default HTML structure of low-code apps may change over time.
 
 #### Dashboards/Low-Code Apps - Timeline component: Group height can now be set to either 'Fixed' or 'Grow' [ID 44577]
 
@@ -341,7 +341,7 @@ When in a *Line & area chart* component, the *Trend points* option was set to "A
 
 When you installed a DataMiner web upgrade package, up to now, the DataMiner Assistant DxM would incorrectly be downgraded when the system found an installed version that was more recent than the one included in the package.
 
-From now on, a DataMiner web upgrade package will no longer be allowed to downgrade the DataMiner Assistant DxM. It will only be allowed to install a new DataMiner Assistant DxM is the installed version is older than the one included in the package.
+From now on, a DataMiner web upgrade package will no longer be allowed to downgrade the DataMiner Assistant DxM. It will only be allowed to install a new DataMiner Assistant DxM if the installed version is older than the one included in the package.
 
 #### Dashboards/Low-Code Apps -Timeline component: Scrolling could cause the groups to no longer be aligned with the timeline items [ID 44445]
 
