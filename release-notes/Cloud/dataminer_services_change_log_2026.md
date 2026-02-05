@@ -9,6 +9,8 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 5 February 2026 - TBD - PLACEHOLDER
+
 ### 2 February 2026 - New feature - Admin - Billing page
 
 In the Admin app, a new *Billing* page is now available, which will serve as a dedicated space for organization owners and admins to monitor and manage their organization’s spending. The page provides access to credit history, monthly bills, and subscription management, including any available discounts.
