@@ -24,6 +24,8 @@ Below, the following abbreviations will be used to indicate the different types 
 | l        | threshold variable                               |
 | r        | reference object (marker or frequency reference) |
 
+From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44650-->, numeric input fields in spectrum script actions support values up to 1 quadrillion. This allows configuring frequency values well above 100 MHz where required, with a maximum of 1000 THz. In older versions, number input fields support values up to 11 billion.
+
 ## Actions
 
 The following table provides an overview of the available actions in spectrum scripts. For some of the actions, more information is provided below the table.
@@ -32,9 +34,9 @@ The following table provides an overview of the available actions in spectrum sc
 |--|--|--|
 | // | Comment(...) | Adds a line with comments. Such lines are ignored on script execution, but can help future maintenance of scripts.<br> Example: Comment(Hello world!) |
 | Assign | d = Assign(double) | Assigns a hard-coded double value. |
-| Create amplitude reference | r = CreateAmpRef(d) | Creates a reference line variable representing a certain level. This variable can then be used further down the script as if it was a reference line. |
+| Create amplitude reference (dB) | r = CreateAmpRef(d) | Creates a reference line variable representing a certain level. This variable can then be used further down the script as if it was a reference line. |
 | Create boolean var | b = Bool(boolean) | Assigns a boolean. The following instructions are allowed:<br> -  b = Bool (TRUE) or b = Bool (1)<br> -  b = Bool (FALSE) or b = Bool (0) |
-| Create frequency reference | r = CreateFreqRef(d) | Creates a reference line variable representing a certain frequency. This variable can then be used further down the script as if it was a reference line or reference marker. The value should be provided in Hertz (Hz). |
+| Create frequency reference (Hz) | r = CreateFreqRef(d) | Creates a reference line variable representing a certain frequency. This variable can then be used further down the script as if it was a reference line or reference marker. The value should be provided in Hertz (Hz). |
 | Find first frequency left | r = FindLeft(t, refFreq, refAmp, int) | Finds the first frequency level to the left of the given reference, having a level that is int dB lower than the amplitude reference refAmp.<br> E.g. *FindLeft(trace, refFreq, refAmp, 3)* and *FindRight(trace, refFreq, refAmp, 3)* can be used to find the -3dB points. |
 | Find first frequency right | r = FindRight(t, refFreq, refAmp, int) | Finds the first frequency level to the right of the given reference, having a level that is int dB lower than the amplitude reference refAmp.<br> E.g. *FindLeft(trace, refFreq, refAmp, 3)* and *FindRight(trace, refFreq, refAmp, 3)* can be used to find the -3dB points. |
 | Get amplitude difference between | d = Delta(s,r1,r2) | Returns the amplitude difference of a trace s measured at reference objects r1 and r2. The resulting value can be positive or negative. |
@@ -85,5 +87,5 @@ The following table provides an overview of the available actions in spectrum sc
 | Set measurement point | SetMeasPoint<br>(measPointId) | Selects the given measurement point measPointId. |
 | Set parameter in preset | SetInPreset(preset, setting, value) | Sets a particular setting in the given preset to the specified value. Note that the preset itself is not updated, only its in-memory representation. This modified preset can be used to dynamically request traces with different settings. |
 | Set parameter value | SetParam(parameter, value, options) | Sets a parameter on the spectrum element. By way of options, you can specify whether there should be a 1-second delay between set and verify, and whether the set should be verified. |
-| Sleep | Sleep(d) | Pauses script execution for a specific number of milliseconds. |
+| Sleep (ms) | Sleep(d) | Pauses script execution for a specific number of milliseconds. From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44650-->, the value must be between 0 and 10,000 ms. |
 | Stop script | StopScript(b) | Stops script execution if condition is true. |
