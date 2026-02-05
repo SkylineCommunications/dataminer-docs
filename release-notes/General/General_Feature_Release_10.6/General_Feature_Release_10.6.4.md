@@ -32,7 +32,13 @@ uid: General_Feature_Release_10.6.4
 
 ## New features
 
-*No new features have been added yet.*
+#### New BPA test: Detect unsupported connector versions [ID 44607]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+From now on, a new BPA test named *Detect unsupported connector versions* will run every day to check for elements that are using connector versions that have been unlisted in the Catalog.
+
+When a connector version is unlisted in the Catalog, this means that it is no longer supported by Skyline Communications. Using unlisted connector versions can lead to compatibility issues, lack of support, and potential security vulnerabilities. It is important to regularly check for unlisted connector versions and update them to supported versions to ensure optimal performance and security of the system.
 
 ## Changes
 
