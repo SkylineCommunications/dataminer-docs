@@ -15,7 +15,7 @@ To change the default browser engine used in DataMiner Cube:
      > [!NOTE]
      >
      > - The WebView2 Runtime is not included in DataMiner upgrade packages. It is automatically installed with Office 365 apps and/or Windows 11. You can also get the Evergreen Bootstrapper or Standalone installer from Microsoft: [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/?form=MA13LH#download-section).
-     > - On the most recent Windows Server versions, WebView2 Runtime is pre-installed. However, on older Windows versions or certain Windows Server editions, you may need to [install WebView2 Runtime manually](xref:DataMiner_Client_Requirements#microsoft-webview2). We recommend performing a system-wide installation as Administrator.
+     > - On the most recent Windows versions, WebView2 Runtime is pre-installed. However, on older Windows versions or certain Windows Server editions, you may need to [install WebView2 Runtime manually](xref:DataMiner_Client_Requirements#microsoft-webview2). We highly recommend performing a system-wide installation as Administrator.
 
    - **Chromium**: In versions up to DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8<!--RN 43429-->, Chromium is the default browser engine if installed. However, in more recent versions, Chromium can no longer be set as the default engine.
 
