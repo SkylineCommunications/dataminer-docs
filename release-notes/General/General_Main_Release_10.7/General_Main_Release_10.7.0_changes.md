@@ -22,6 +22,22 @@ Note that is possible to configure the number of simultaneously running SLScript
 > [!IMPORTANT]
 > If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. More information can be found in the [QAction documentation](xref:LogicQActionsMemberFields#sharing-and-persisting-data).
 
+#### SNMP trap binding values will now only display plain ASCII characters [ID 44527]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+When the system receives a trap binding value of type OctetString, that value will either be automatically converted into characters (e.g. 0x41 will become "A") or remain in a hexadecimal string format (e.g. when the value contains a byte that is not printable like 0x02, which is an STX control character).
+
+Up to now, hexadecimal values above the ASCII range (i.e. values >= 0x7F) were considered printable characters, and were not converted into a hexadecimal string. This would cause issues with, for example, the Unicode control character 0x8C, which would be displayed as a question mark. In such cases, complex QAction code would then be required to have it converted back into a hexadecimal value.
+
+Also, DataMiner is not aware of whether a binding value actually contains text (e.g. a MAC address consisting of octets) or, if the value contains text, how that text was encoded (e.g. Windows code page 1252, UTF-8, UTF-16, etc.).
+
+From now on, hexadecimal values outside of the ASCII range will be considered non-printable characters, and will remain in hexadecimal string format.
+
+This is a breaking change.
+
+Up to now, text containing characters that were encoded in extended ASCII (i.e. Windows code page 1252) were converted from raw octets into string text. For example, the French word "hélicoptère" would be received correctly. From now on, that same word will be received as hexadecimal string "68e96c69636f7074e87265", and a QAction will need to convert it back into a string using the correct encoding.
+
 ### Enhancements
 
 #### SLNet: Trend graphs in Cube will now also correctly display behavioral change points for table column parameters without advanced naming [ID 41751]

@@ -36,11 +36,29 @@ uid: General_Feature_Release_10.6.4
 
 <!-- MR 10.7.0 - FR 10.6.4 -->
 
-From now on, a new BPA test named *Detect unsupported connector versions* will run every day to check for elements that are using connector versions that have been unlisted in the Catalog.
+From now on, a new BPA test named *Detect unsupported connector versions* will run every day to check for elements that are using connector versions that have been removed from the Catalog.
 
-When a connector version is unlisted in the Catalog, this means that it is no longer supported by Skyline Communications. Using unlisted connector versions can lead to compatibility issues, lack of support, and potential security vulnerabilities. It is important to regularly check for unlisted connector versions and update them to supported versions to ensure optimal performance and security of the system.
+When a connector version is removed from the Catalog, this means that it is no longer supported by Skyline Communications. Using unsupported connector versions can lead to compatibility issues, lack of support, and potential security vulnerabilities. It is important to regularly check for unsupported connector versions and update them to supported versions to ensure optimal performance and security of the system.
 
 ## Changes
+
+### Breaking changes
+
+#### SNMP trap binding values will now only display plain ASCII characters [ID 44527]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+When the system receives a trap binding value of type OctetString, that value will either be automatically converted into characters (e.g. 0x41 will become "A") or remain in a hexadecimal string format (e.g. when the value contains a byte that is not printable like 0x02, which is an STX control character).
+
+Up to now, hexadecimal values above the ASCII range (i.e. values >= 0x7F) were considered printable characters, and were not converted into a hexadecimal string. This would cause issues with, for example, the Unicode control character 0x8C, which would be displayed as a question mark. In such cases, complex QAction code would then be required to have it converted back into a hexadecimal value.
+
+Also, DataMiner is not aware of whether a binding value actually contains text (e.g. a MAC address consisting of octets) or, if the value contains text, how that text was encoded (e.g. Windows code page 1252, UTF-8, UTF-16, etc.).
+
+From now on, hexadecimal values outside of the ASCII range will be considered non-printable characters, and will remain in hexadecimal string format.
+
+This is a breaking change.
+
+Up to now, text containing characters that were encoded in extended ASCII (i.e. Windows code page 1252) were converted from raw octets into string text. For example, the French word "hélicoptère" would be received correctly. From now on, that same word will be received as hexadecimal string "68e96c69636f7074e87265", and a QAction will need to convert it back into a string using the correct encoding.
 
 ### Enhancements
 

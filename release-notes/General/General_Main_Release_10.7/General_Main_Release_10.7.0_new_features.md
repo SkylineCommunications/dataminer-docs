@@ -129,9 +129,9 @@ These filtering options are saved in the `<SLNet>` section of the *MaintenanceSe
 
 <!-- MR 10.7.0 - FR 10.6.4 -->
 
-From now on, a new BPA test named *Detect unsupported connector versions* will run every day to check for elements that are using connector versions that have been unlisted in the Catalog.
+From now on, a new BPA test named *Detect unsupported connector versions* will run every day to check for elements that are using connector versions that have been removed from the Catalog.
 
-When a connector version is unlisted in the Catalog, this means that it is no longer supported by Skyline Communications. Using unlisted connector versions can lead to compatibility issues, lack of support, and potential security vulnerabilities. It is important to regularly check for unlisted connector versions and update them to supported versions to ensure optimal performance and security of the system.
+When a connector version is removed from the Catalog, this means that it is no longer supported by Skyline Communications. Using unsupported connector versions can lead to compatibility issues, lack of support, and potential security vulnerabilities. It is important to regularly check for unsupported connector versions and update them to supported versions to ensure optimal performance and security of the system.
 
 #### Swarming scheduled tasks [ID 44620]
 
