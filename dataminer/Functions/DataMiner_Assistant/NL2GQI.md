@@ -17,6 +17,18 @@ Examples of such natural languages request could be:
 
 The result will be a GQI query that you can use to fetch the requested data.
 
+Starting from DataMiner version 10.6.2, the option to let the DataMiner Assistant create a query is disabled by default. To enable the feature, create the file `C:\Program Files\Skyline Communications\DataMiner Assistant\appsettings.custom.json` with the following content:
+
+  ```json
+  {   
+    "NL2GQIOptions": {
+      "ShowUserInterface": true
+    }
+  }    
+  ``` 
+
+Such a file needs to be created on every Agent in the DataMiner System where the DxM is installed.
+
 > [!NOTE]
 > Prior to version 2.0.0, the DataMiner Assistant DxM is called "Copilot" instead.
 
