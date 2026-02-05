@@ -4,11 +4,11 @@ uid: LogicQActionsEntryPointMethods
 
 # Entry point methods
 
-The entry method is the entry point of the QAction. DataMiner invokes the entry point method when the QAction gets triggered.
+The entry method is the entry point of a QAction. DataMiner invokes the entry point method when the QAction gets triggered.
 
-It's possible for a QAction to not define any entry point method. In that case, it should also not have a [triggers](xref:Protocol.QActions.QAction-triggers) attribute defined. A QAction without an entry point mainly serves as an assembly that defines some types which are used by other QActions.
+It is possible for a QAction to not define any entry point method. In that case, it should also not have a [triggers](xref:Protocol.QActions.QAction-triggers) attribute defined. A QAction without an entry point mainly serves as an assembly that defines some types used by other QActions.
 
-By default, the Run method of the QAction class in the global namespace is used as the entry point of the QAction. The entry point method must be a public method of a public class. Both static or instance entry methods are supported and a QAction can have multiple entry point methods, as described below.
+By default, the Run method of the QAction class in the global namespace is used as the entry point of the QAction. The entry point method must be a public method of a public class. Both static or instance entry methods are supported, and a QAction can have multiple entry point methods, as described below.
 
 ## Static entry methods
 
@@ -37,15 +37,13 @@ In the example below, the Run method of the QAction class is defined as a static
 
 ## Instance entry methods
 
-To use instance entry methods in QActions, define the entry method as an instance method (by removing the `static` keyword of the `Run` method).<!-- RN 5481 -->
-If your QAction class has the `static` keyword, it should also be removed.
+To use instance entry methods in QActions, define the entry method as an instance method, by removing the `static` keyword of the `Run` method.<!-- RN 5481 --> If your QAction class has the `static` keyword, it should also be removed.
 
-When instance entry methods are used, DataMiner will create one instance per element of the class that defines the entry point method:
-When a QAction is triggered, DataMiner will first verify whether the entry method is an instance method. If this is the case, it will verify whether an instance of the class that defines the entry method (typically this is the QAction class) has already been created for this element. If no instance has been created yet for this element, an instance will be created. Otherwise the existing instance will be reused. If the entry point is a static method, no instance is required and DataMiner just invokes the static method.
+When instance entry methods are used, DataMiner will create one instance per element of the class that defines the entry point method: When a QAction is triggered, DataMiner will first verify whether the entry method is an instance method. If this is the case, it will verify whether an instance of the class that defines the entry method (typically this is the QAction class) has already been created for this element. If no instance has been created yet for this element, an instance will be created. Otherwise, the existing instance will be reused. If the entry point is a static method, no instance is required and DataMiner just invokes the static method.
 
-The instance persists as long as the SLScripting process is running and the element is not removed, stopped or restarted.
+The instance persists as long as the SLScripting process is running and the element is not removed, stopped, or restarted.
 
-The following example will count the number of times the button has been pressed for this element (note that the value will be set to 0 again if the element is stopped or restarted, or if the SLScripting process is restarted):
+The following example will count the number of times the button has been used for this element (note that the value will be set to 0 again if the element is stopped or restarted, or if the SLScripting process is restarted):
 
 ```xml
 <QAction id="100" name="Count Executions" encoding="csharp" triggers="100">

@@ -4,13 +4,13 @@ uid: LogicQActions
 
 # QActions
 
-Quick Actions (often referred to as "QActions") are used to implement custom functionality that cannot be implemented by other protocol constructs (e.g. parsing a JSON response received from the device, etc.).
+Quick Actions (often referred to as "QActions") are used to implement custom functionality that cannot be implemented by other protocol constructs (for example, parsing a JSON response received from the device, etc.).
 
-In the past, QActions were written in C#, JScript or VBScript. However, recent protocols are written exclusively in C# (and VBScript is [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)), so this section only considers C# QActions.
+In the past, QActions were written in C#, JScript, or VBScript. However, recent protocols are written exclusively in C# (and VBScript is [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)), so this section only considers C# QActions.
 
 A QAction is defined in a connector using the [QAction](xref:Protocol.QActions.QAction) tag.
 
-For example, the following QAction runs when a button (with parameter ID 100) is clicked and counts the number of times the button was pressed on the element:
+For example, the following QAction runs when a button (with parameter ID 100) is clicked, and it counts the number of times the button was clicked for the element:
 
 ```xml
 <QAction id="100" name="Count Executions" encoding="csharp" triggers="100">
