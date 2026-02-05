@@ -24,7 +24,7 @@ Below, the following abbreviations will be used to indicate the different types 
 | l        | threshold variable                               |
 | r        | reference object (marker or frequency reference) |
 
-From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44650-->, numeric input fields in spectrum script actions support values up to 1 quadrillion. This allows configuring frequency values well above 100 MHz where required. In older versions, number input fields support values up to 11 billion.
+From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44650-->, numeric input fields in spectrum script actions support values up to 1 quadrillion. This allows configuring frequency values well above 100 MHz where required, with a maximum of 1000 THz. In older versions, number input fields support values up to 11 billion.
 
 ## Actions
 
