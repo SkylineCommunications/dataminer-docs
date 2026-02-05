@@ -18,7 +18,7 @@ Which approach should be used to retrieve data from the SLProtocol process depen
    See [Via inputParameters attribute](xref:LogicQActionsSLProtocolInteraction#via-inputparameters-attribute).
 
 - In all other cases, retrieve the value via the SLProtocol(Ext) instance.
-  
+
    See [Via SLProtocol(Ext) interface](xref:LogicQActionsSLProtocolInteraction#via-slprotocolext-interface).
 
 ## Via inputParameters Attribute
@@ -32,7 +32,7 @@ Also keep in mind that DataMiner needs to convert the parameter to an object tha
 
 A reference to the input parameters can be obtained by providing an additional parameter of type object for each input parameter defined in the inputParameters attribute.
 
-In the example below, the values of parameters with ID 200 and 201 are passed to the QAction via the objects errors and timespan respectively.
+In the example below, the values of parameters with ID 200 and 201 are passed to the QAction via the objects errors and time span respectively.
 
 ```xml
 <QAction id="100" name="Process Errors" encoding="csharp" triggers="100" inputParameters="200;201">

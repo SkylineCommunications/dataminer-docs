@@ -4,14 +4,14 @@ uid: LogicQActionsExecution
 
 # QAction execution
 
-A QAction is executed by a change event of a parameter referred to in the triggers attribute.
+A QAction is executed by a change event of a parameter referred to in the *triggers* attribute.
 
 A change event is initiated when:
 
-- the value of a parameter changes
-- a value is set to a parameter of type "write", even if the value is the same as the previous value
-- an action of type "run actions" is performed on a parameter
-- a parameter is set from a QAction using an instance of the SLProtocol(Ext) class, e.g. SetParameter
+- the value of a parameter changes.
+- a value is set to a parameter of type "write", even if the value is the same as the previous value.
+- an action of type "run actions" is performed on a parameter.
+- a parameter is set from a QAction using an instance of the SLProtocol(Ext) class, e.g. SetParameter.
 
    > [!NOTE]
    > This will also trigger the QAction even if the set value is the same as the current value.

@@ -7,7 +7,7 @@ uid: LogicQActionsMemberFields
 A static entry point method can use static members of the QAction class. Static fields in C# are class-level members shared by all instances of the class.
 
 > [!NOTE]
-> Static fields are only shared between elements with the same protocol version and which are running in the same SLScripting process.
+> Static fields are only shared between elements with the same protocol version that are running in the same SLScripting process.
 
 > [!IMPORTANT]
 > From DataMiner 10.6.3/10.7.0 onwards<!-- RN 44420 -->, multiple SLScripting processes are active by default. This causes unexpected behavior when static fields are used to share data as not all elements running the same protocol will be located in the same SLScripting process. Furthermore, restarting the element can cause it to move to another SLScripting process. Because of this, **static fields should not be used to exchange data between elements running the same protocol**. If protocols have been developed with the assumption that all elements are running in the same SLScripting process, you can [configure DataMiner to only use one SLScripting process](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes). However, we strongly recommend adapting such problematic protocols according to the approach described under [Sharing and persisting data](#sharing-and-persisting-data), as this will allow DataMiner to use multiple SLScripting processes and increases overall resilience.
@@ -38,7 +38,7 @@ All scenarios below assume that the data does **not** need to persist when the e
 
 ## Implementing the IDisposable interface
 
-In case the QAction class has members which should be disposed of, you can implement the [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface on the QAction class.
+In case the QAction class has members that should be disposed of, you can implement the [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface on the QAction class.
 
 From DataMiner 10.2.9 onwards (RN 33965), DataMiner will call the [Dispose](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable.dispose) method of the [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface when a QAction instance is released (i.e. when the element is stopped, removed, or restarted) if this interface is implemented on the QAction class.
 

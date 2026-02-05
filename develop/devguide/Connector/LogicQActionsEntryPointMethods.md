@@ -67,10 +67,10 @@ The following example will count the number of times the button has been used fo
 
 The Run method of the QAction class is the default entry point method of a QAction. Using the [entryPoint](xref:Protocol.QActions.QAction-entryPoint) attribute, a different entry point method can be defined for every parameter that triggers the QAction.
 
-For example, in the following QAction two parameters can trigger a QAction. Depending on which parameter triggered the QAction execution, another entry point method is selected.
+For example, in the following QAction, two parameters can trigger a QAction. Depending on which parameter triggered the QAction execution, another entry point method is selected.
 
-- if parameter 200 triggers the execution of the QAction, the entry point method will be `Initialize`
-- if parameter 201 triggers the execution of the QAction, the entry point method will be `ProcessMessages`
+- If parameter 200 triggers the execution of the QAction, the entry point method will be `Initialize`.
+- If parameter 201 triggers the execution of the QAction, the entry point method will be `ProcessMessages`.
 
 ```xml
 <QAction id="200" name="Subscriptions" encoding="csharp" triggers="200;201" entryPoint="Initialize;ProcessMessages" dllImport="[ProtocolName].[ProtocolVersion].QAction.0.dll">
@@ -84,7 +84,7 @@ By default, the entry method is expected to be defined in the QAction class. How
 
 The entry point method of a QAction can be defined with an argument of type [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) or [SLProtocolExt](xref:Skyline.DataMiner.Scripting.SLProtocolExt).
 
-When DataMiner is going to execute a QAction, a new instance of SLProtocol or SLProtocolExt is created and passed as an argument to the entry point method (if the entry point method defines an argument of type SLProtocol or SLProtocolExt). This new instance contains the following information:
+When DataMiner is about to execute a QAction, a new instance of SLProtocol or SLProtocolExt is created and passed as an argument to the entry point method (if the entry point method defines an argument of type SLProtocol or SLProtocolExt). This new instance contains the following information:
 
 - Trigger parameter ([GetTriggerParameter](xref:Skyline.DataMiner.Scripting.SLProtocol.GetTriggerParameter))
 - Element ([ElementID](xref:Skyline.DataMiner.Scripting.SLProtocol.ElementID) and [DataMinerID](xref:Skyline.DataMiner.Scripting.SLProtocol.DataMinerID))
