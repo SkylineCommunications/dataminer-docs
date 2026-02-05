@@ -207,7 +207,7 @@ This file contains the API key used for authentication between DataMiner process
 
 **How to fix:**
 
-If this file is missing or corrupted, or it contains invalid data, run [NATSRepair.exe](#resettingrepairing-the-brokergateway-nats-cluster) to regenerate the NATS configuration and credentials. This will recreate the `appsettings.runtime.json` file.
+If this file is missing or corrupted, or it contains invalid data, run [NATSRepair.exe](#resettingrepairing-the-brokergateway-nats-cluster) with elevated privileges to regenerate the NATS configuration and credentials. This will recreate the `appsettings.runtime.json` file.
 
 ## Test connectivity between nodes
 
@@ -255,7 +255,7 @@ Only do this if you are sure that the system uses the BrokerGateway‑managed NA
 > [!NOTE]
 > This will not work if [automatic NATS configuration is disabled](xref:Disabling_automatic_NATS_config).<!-- RN 44061 -->
 
-1. Run `C:\Skyline DataMiner\Tools\NATSRepair.exe` on one DMA in the system.
+1. Run `C:\Skyline DataMiner\Tools\NATSRepair.exe` with elevated privileges on one DMA in the system.
 
    When executed, the tool returns a list of known DataMiner endpoints that will be used to configure the NATS cluster. For example:
 
