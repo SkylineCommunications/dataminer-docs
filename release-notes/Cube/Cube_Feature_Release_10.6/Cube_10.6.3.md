@@ -96,7 +96,7 @@ Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, fou
 
 On systems running the Windows Server OS, the Microsoft Edge (WebView2) browser engine is not installed by default. On these systems, it has to be installed manually. Up to now, it would only be possible to install it system wide. From now on, it will also be possible to install it on a per user basis. However, a system-wide installation is recommended.
 
-- A warning will now be added to the Cube logging when Cube has detected that the Microsoft Edge browser engine was installed on a per user basis rather than system wide. The message will indicate that is system-wide installation is strongly recommended.
+- A warning will now be added to the Cube logging when Cube has detected that the Microsoft Edge browser engine was installed on a per user basis rather than system wide. The message will indicate that system-wide installation is strongly recommended.
 
 - An SPI log entry named *WebView2Source* will now be added to provide more information on how the Microsoft Edge browser engine was installed.
 
