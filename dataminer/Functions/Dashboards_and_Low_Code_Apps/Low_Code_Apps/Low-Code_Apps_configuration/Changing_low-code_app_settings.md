@@ -34,6 +34,25 @@ Note that an "On app open" event currently has the following limitations:
 
 - Currently, linking is not supported. When a link is configured to a component value, the value will remain empty because the component is not yet loaded at the time when the action occurs. This also applies in case a value is passed through the URL.
 
+## Customizing the app styling using a custom CSS file
+
+From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44570-->, you can make a low-code app use a custom CSS file.
+
+This allows you to override the default styling of the low-code app.
+
+> [!CAUTION]
+> This feature is intended for advanced users only. Use it at your own risk. We cannot guarantee long-term support of CSS customizations, as the default HTML structure of low-code apps may change over time.
+
+To add, update, or delete a custom CSS file:
+
+1. Make sure the low-code app is in edit mode. See [Editing an app](xref:Editing_custom_apps).
+
+1. Click the ellipsis button ("...") in the top-right corner and select *App settings*.
+
+1. In the *Custom-CSS* section, add, update, or delete the CSS code.
+
+Changes take effect when the app is published.
+
 ## Configuring the settings for a page or panel
 
 1. Make sure the low-code app is in edit mode. See [Editing an app](xref:Editing_custom_apps).
