@@ -36,4 +36,20 @@ Clicking the *Go to overview* button in that visual will redirect you to either 
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards/Low-Code Apps - Alarm table component: Problems when scrolling [ID 44662]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In the *Alarm table* component, a number of minor issues have been fixed:
+
+- In edit mode, the component name in the footer would shift along when the component was scrolled horizontally or vertically.
+
+- The header containing the total number of alarms and the filter box would shift out of view when you scrolled vertically.
+
+- In some cases, the *Load next ... alarms* button, which was centered horizontally, would not be visible until you scrolled to the side.
+
+#### Low-Code Apps - Template editor & flow editor: Tabbed pane on the left would shrink when the editor area contained a large number of items [ID 44671]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In both the template editor and the flow editor, the tabbed pane on the left would incorrectly shrink when the main editor area in the middle contained a large number of items.
