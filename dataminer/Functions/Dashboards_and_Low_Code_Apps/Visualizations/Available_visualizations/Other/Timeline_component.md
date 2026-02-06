@@ -44,7 +44,7 @@ Note that when an element has just been restarted, it can take up to five minute
 
 You can interact with the timeline in several ways:
 
-- **Selecting an item**: Click an item to select it. The [default timeline template](#default-timeline-template) highlights selected items with a distinct background and border color.
+- **Selecting an item**: Click an item to select it. The [default timeline template](#default-timeline-templates) highlights selected items with a distinct background and border color.
 
   ![Selecting a timeline item](~/dataminer/images/Selecting_Timeline_Item2.gif)<br>*Timeline component in DataMiner 10.5.9*
 
