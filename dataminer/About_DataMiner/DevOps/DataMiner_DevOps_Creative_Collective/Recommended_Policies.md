@@ -1,5 +1,6 @@
 ---
 uid: Recommended_Policies
+description: Recommended policies include open-source mindset, minimum dependencies, proper documentation, and demo capabilities.
 ---
 
 # Recommended policies
