@@ -10,7 +10,7 @@ The [example](#orchestration-script-example) below uses the entry point to find 
 
 ## Using the entry point
 
-To use the entry point, add a method with the following signature to the script:
+To use the entry point, add a method with the following signature to a public class in a *C# code* block of a script:
 
 ```csharp
 [AutomationEntryPoint(AutomationEntryPointType.Types.OnRequestScriptInfo)]
@@ -18,6 +18,11 @@ public RequestScriptInfoOutput OnRequestScriptInfoRequest(IEngine engine, Reques
 ```
 
 Both [RequestScriptInfoInput](xref:Skyline.DataMiner.Net.Automation.RequestScriptInfoInput) and [RequestScriptInfoOutput](xref:Skyline.DataMiner.Net.Automation.RequestScriptInfoOutput) have a `Data` property of type `Dictionary<string, string>`, which can be used to exchange information between the script and other code. We strongly recommend keeping the passed data below 20 MB. If larger chunks need to be passed, a reference to that information should be passed instead.
+
+When the script info is requested, the method marked with the `AutomationEntryPoint` attribute in a *C# code* block is executed. The *C# code* block should not be marked to be compiled as a library. The method can also be defined in a base class that is inherited by a class in the *C# code* block.
+
+> [!IMPORTANT]
+> If no *C# code* block has the required `AutomationEntryPoint` attribute, the request will fail, but the script will still execute code blocks of other types.
 
 ## Arguments
 
