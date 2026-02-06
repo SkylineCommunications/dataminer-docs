@@ -27,6 +27,16 @@ A number of security enhancements have been made.
 
 When SLDataGateway throws a `StorageTypeNotFoundException`, from now on, the message will always mention the StorageType that could not be found.
 
+#### An updated parameter value will no longer be written to the database if it is equal to the old value [ID 44609]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a user or a QAction updated a parameter value, up to now, the new value would always be written to the database, even when the new value was equal to the old value.
+
+From now on, when the new value is equal to the old value, the value will no longer be written to the database. If any triggers or QActions are configured to be executed following a parameter update, these will still be executed.
+
+Also, write parameters will no longer be saved as this would cause unnecessary load.
+
 ### Fixes
 
 #### Problem with SLNet when receiving a subscription with a large filter that contained wildcards [ID 44512]
