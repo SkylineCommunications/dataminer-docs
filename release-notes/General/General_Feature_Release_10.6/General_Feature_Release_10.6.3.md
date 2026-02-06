@@ -31,6 +31,7 @@ uid: General_Feature_Release_10.6.3
 - [DataMiner Object Models: Fine-grained security on instance level [ID 44233]](#dataminer-object-models-fine-grained-security-on-instance-level-id-44233)
 - [Protocols: Elements will now restart automatically when an SLScripting process has disappeared [ID 42306]](#protocols-elements-will-now-restart-automatically-when-an-slscripting-process-has-disappeared-id-42306)
 - [Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]](#protocols-as-many-slscripting-processes-as-slprotocol-processes-by-default-id-44420)
+- [Swarming scheduled tasks [ID 44620]](#swarming-scheduled-tasks-id-44620)
 
 ## New features
 
