@@ -34,12 +34,14 @@ Once the scan starts, Network Explorer will:
 
 1. Analyze the LLDP (Link Layer Discovery Protocol) information on the devices.
 
+1. Analyze the CDP (Cisco Discovery Protocol) information on the Cisco IOS and NX OS devices.
+
 1. Create the required DCF connections in DataMiner.
 
 ## Refreshing the connections
 
 If you want to refresh the connections between network devices without scanning for new devices, use the **Update Connections** button.
 
-The system will analyze the existing LLDP data from known devices and update the connection information where applicable.
+The system will analyze the existing LLDP & CDP data from known devices and update the connection information where applicable.
 
 By default, removed connections will not be automatically deleted. You can adjust this behavior in the [application settings](xref:IpNetworkExplorer_UI_overview#application-settings).
