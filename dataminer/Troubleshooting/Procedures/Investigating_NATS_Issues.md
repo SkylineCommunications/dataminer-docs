@@ -255,7 +255,7 @@ Only do this if you are sure that the system uses the BrokerGateway‑managed NA
 > [!NOTE]
 > This will not work if [automatic NATS configuration is disabled](xref:Disabling_automatic_NATS_config).<!-- RN 44061 -->
 
-1. Run `C:\Skyline DataMiner\Tools\NATSRepair.exe` on one DMA in the system.
+1. Run `C:\Skyline DataMiner\Tools\NATSRepair.exe` with elevated privileges on one DMA in the system.
 
    When executed, the tool returns a list of known DataMiner endpoints that will be used to configure the NATS cluster. For example:
 
