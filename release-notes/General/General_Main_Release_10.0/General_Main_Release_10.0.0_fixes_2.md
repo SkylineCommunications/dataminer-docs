@@ -345,7 +345,7 @@ When you made the Alarm Console smaller and then restored it to its original siz
 
 #### DataMiner Cube: Problem when displaying dialog box while window/scroll bar thumb is dragged \[ID 24383\]
 
-In the XBAP version of DataMiner Cube, if a dialog box was displayed while a user was dragging a window or a scroll bar thumb, a problem could cause Cube to freeze.
+In the XBAP version of DataMiner Cube, if a dialog box was displayed while a user was dragging a window or a scrollbar thumb, a problem could cause Cube to freeze.
 
 #### Booking definition saved even though no instance could be planned \[ID 24397\]
 
