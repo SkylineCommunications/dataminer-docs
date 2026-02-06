@@ -132,6 +132,12 @@ Failed to get MS task for Scheduler task 321/2 [Task 1]: (Task 'Skyline DataMine
 Task 321/2 [Task 1] successfully added to MS Task Scheduler
 ```
 
+#### User-Defined APIs: UserDefinableApiEndpoint DxM has been updated [ID 44718]
+
+<!-- MR 10.5.0 [CU12] - FR TBD -->
+
+The UserDefinableApiEndpoint DxM has been upgraded to version 3.3.1. It requires .NET version 8.
+
 ### Fixes
 
 #### Numeric cell would incorrectly not be cleared when its exception value was set to 0 [ID 44356]
