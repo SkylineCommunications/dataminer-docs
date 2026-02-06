@@ -701,7 +701,7 @@ In some rare cases, a problem could occur in the SLNet process when the alarm st
 
 #### Dashboards app: Double scroll bars in dashboard with State component \[ID 27272\]
 
-If a dashboard contained a State component, in some cases double scroll bars could be displayed.
+If a dashboard contained a State component, in some cases double scrollbars could be displayed.
 
 #### DataMiner Cube - EPM: Problem when selecting a node in another chain \[ID 27278\]
 

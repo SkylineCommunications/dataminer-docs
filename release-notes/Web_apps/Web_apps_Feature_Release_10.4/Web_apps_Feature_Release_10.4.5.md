@@ -249,7 +249,7 @@ Also, in some cases, a *Timeline* component or a *Time range* component would no
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-Tables in PDF files would incorrectly get added a scroll bar.
+Tables in PDF files would incorrectly get added a scrollbar.
 
 #### Dashboards app & Low-Code Apps: Focus order of buttons in popup windows would be incorrect [ID 39080]
 

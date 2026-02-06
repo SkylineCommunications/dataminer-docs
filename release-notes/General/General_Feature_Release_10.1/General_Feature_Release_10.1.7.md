@@ -551,7 +551,7 @@ In some cases, opening the Services app could take a long time due to a problem 
 
 #### Dashboards - Table component: Problem with scroll bars when using Firefox \[ID 29892\]
 
-When using Mozilla Firefox, the table component would should scroll bars even in situations where it was not necessary.
+When using Mozilla Firefox, the table component would should scrollbars even in situations where it was not necessary.
 
 Also, in some cases, columns would not resize correctly.
 
