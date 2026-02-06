@@ -337,7 +337,7 @@ Up to now, whenever an IP address listed in BrokerGateway's `appsettings.runtime
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-When a QAction called NotifyDataMiner `NT_ELEMENT_STARTUP_COMPLETE` for its own element while that element was being renamed, up to now, a deadlock would occur, causing a run-time error.
+When a QAction called NotifyDataMiner `NT_ELEMENT_STARTUP_COMPLETE` for its own element while that element was being renamed, up to now, a deadlock would occur, causing a runtime error.
 
 #### Problem with SLDataMiner when a version of a DVE connector was set to production version [ID 44308]
 
