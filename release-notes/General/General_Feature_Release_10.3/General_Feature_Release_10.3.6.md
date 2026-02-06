@@ -390,6 +390,6 @@ In some cases, whitespace characters would incorrectly be removed from signature
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
 
-Since DataMiner versions 10.3.0/10.3.3, if a logger table that had `Indexing` set to true contained column names with uppercase characters, *SLDataGateway* would incorrectly change these column names to lower case. This lead to the data getting stored in a different field than expected and therefore not being retrieved when requested.
+Since DataMiner versions 10.3.0/10.3.3, if a logger table that had `Indexing` set to true contained column names with uppercase characters, *SLDataGateway* would incorrectly change these column names to lowercase. This lead to the data getting stored in a different field than expected and therefore not being retrieved when requested.
 
 For more information on this issue, see [Inaccessible logger table data in Elasticsearch because of incorrect casing](xref:KI_Inaccessible_data_Elasticsearch_casing)

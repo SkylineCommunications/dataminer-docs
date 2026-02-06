@@ -213,11 +213,11 @@ When you enabled the *Show seconds* option of multiple clock components on the s
 
 Up to now, when you edited a published app that had a draft, a new draft would incorrectly be created. From now on, when you edit an app that has a draft, that existing draft will be opened.
 
-#### Dashboards app/Low-Code Apps: Label of 'Icon' setting of 'Icon' component would incorrectly be in lower case [ID 37199]
+#### Dashboards app/Low-Code Apps: Label of 'Icon' setting of 'Icon' component would incorrectly be in lowercase [ID 37199]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-The label of the *Icon* setting of an *Icon* component would incorrectly be in lower case. It is now in upper case.
+The label of the *Icon* setting of an *Icon* component would incorrectly be in lowercase. It is now in upper case.
 
 #### Low-Code Apps: Problem when two State components were fed the same query row data with a column filter applied [ID 37206]
 

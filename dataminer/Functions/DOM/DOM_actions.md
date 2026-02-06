@@ -183,7 +183,7 @@ The `DomInstanceButtonDefinition` has the following properties:
 
 | Name | Type | Description |
 |--|--|--|
-| Id | string | The ID of the button. This must be unique to this `DomBehaviorDefinition` and must be lower case. |
+| Id | string | The ID of the button. This must be unique to this `DomBehaviorDefinition` and must be lowercase. |
 | Layout | DomButtonDefinitionLayout | Contains extra properties to define how the button will be displayed (see properties table below). |
 | VisibilityCondition | IDomInstanceCondition | Condition that defines when the button will be shown. |
 | ActionDefinitionIds | List\<string> | Contains the ID of the action that should be executed. Can contain multiple, but currently, only one is allowed. |

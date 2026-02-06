@@ -260,7 +260,7 @@ In the user settings (*user icon > Settings*), from now on, you will only be abl
 
 A number of small enhancements have been made to the header bar of low-code apps:
 
-- Button text now supports both upper case and lower case.
+- Button text now supports both upper case and lowercase.
 - Buttons no longer have lines between them.
 
 #### Enhanced performance when starting up elements on systems using a MySQL or Microsoft SQL Server database [ID 34265]
