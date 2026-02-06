@@ -236,7 +236,7 @@ Now that you have created a theme, you can apply it to your low-code app.
 
 ### Set the page to 'fit to view'
 
-To ensure the page adapts to different screen sizes and avoids scroll bars, set it to *Fit to view*:
+To ensure the page adapts to different screen sizes and avoids scrollbars, set it to *Fit to view*:
 
 1. Click the user icon in the top-right corner, click *Edit*, and click the pencil icon in the pane to the left.
 
