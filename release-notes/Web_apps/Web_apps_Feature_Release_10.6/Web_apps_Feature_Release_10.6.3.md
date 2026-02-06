@@ -51,7 +51,7 @@ In the navigation pane, a new *Add* button is now available to users with permis
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-The GQI DxM now contains an internal data source named *Get active sessions*, which will retrieve information about the query sessions that are currently active. Also, an number of internal metrics have been added meant for future debugging and performance investigations.
+The GQI DxM now contains an internal data source named *Get active sessions*, which will retrieve information about the query sessions that are currently active. Also, a number of internal metrics have been added meant for future debugging and performance investigations.
 
 ##### Get active sessions
 
