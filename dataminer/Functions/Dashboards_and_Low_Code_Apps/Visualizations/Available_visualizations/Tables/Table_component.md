@@ -121,7 +121,7 @@ Additionally, the following layout options are also available:
 | Filtering & Highlighting | Conditional coloring | Highlight cells based on a condition. For more information, refer to [Conditional coloring](#conditional-coloring). |
 | Filtering & Highlighting | Show quick filter | Available from DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40818-->. Toggle the switch to determine whether the search box, which lets you [apply a general filter](xref:Filtering_Table_Content#general-filter) across the table, is available in the top-right corner of the table. Enabled by default. |
 | Column appearance | Column appearance | Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 37522-->. Customize the appearance of a column. For more information, refer to [Column appearance](#column-appearance). |
-| Advanced | Empty result message | Available from DataMiner 10.3.11/10.4.0 onwards<!--RN 37173-->. Configure the message shown when a query returns no results. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!-- RN 44472 -->, this setting can be cleared, in which case no message is displayed and the component remains empty. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
+| Advanced | Empty result message | Available from DataMiner 10.3.11/10.4.0 onwards<!--RN 37173-->. Configure the message shown when a query returns no results. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!-- RN 44472 -->, this setting can be left empty, in which case no message is displayed and the component remains empty. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
 
 #### Conditional coloring
 
