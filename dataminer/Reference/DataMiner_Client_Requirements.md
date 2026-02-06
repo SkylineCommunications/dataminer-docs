@@ -44,7 +44,7 @@ From DataMiner Cube 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43429-->, We
 
 WebView2 is available for all [supported operating systems](#operating-system). The most recent versions of Windows all come with WebView2 Runtime pre-installed. However, for less recent versions of Windows, you may need to [install WebView2 Runtime manually](https://developer.microsoft.com/en-us/microsoft-edge/webview2/consumer/).
 
-From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44580-->, WebView2 Runtime can be installed per user. However, we strongly recommend a system-wide installation. An [SPI log entry](xref:Cube_logging) named *WebView2Source* contains information about the installation of the Microsoft Edge browser engine, including whether it was installed per user or system wide.
+From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44580-->, WebView2 Runtime can be installed per user. However, we strongly recommend a system-wide installation.
 
 > [!NOTE]
 > Make sure to run the WebView2 Runtime installer **as administrator**. After the installation, a **reboot** may be needed before WebView2 can be used.
