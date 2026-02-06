@@ -21,7 +21,7 @@ Both [RequestScriptInfoInput](xref:Skyline.DataMiner.Net.Automation.RequestScrip
 
 When the script info is requested, the method marked with the `AutomationEntryPoint` attribute in a *C# code* block is executed. The *C# code* block should not be marked to be compiled as a library. The method can also be defined in a base class that is inherited by a class in the *C# code* block.
 
-> [!CAUTION]
+> [!IMPORTANT]
 > If no *C# code* block has the required `AutomationEntryPoint` attribute, the request will fail, but the script will still execute code blocks of other types.
 
 ## Arguments
