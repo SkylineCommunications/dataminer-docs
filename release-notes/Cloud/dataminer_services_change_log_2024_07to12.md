@@ -336,7 +336,7 @@ Previously, when a Catalog item had a public range but private versions, it coul
 
 #### 23 September 2024 - Enhancement - Catalog API - Enhanced image path format support when registering Catalog item [ID 40862]
 
-When you register a Catalog item with a readme.md file, in that file you can now reference to an image using the home directory path "~" syntax or using a relative path. In addition, the casing of the image directory mentioned in the markdown file no longer matters, while previously this always had to be lower case.
+When you register a Catalog item with a readme.md file, in that file you can now reference to an image using the home directory path "~" syntax or using a relative path. In addition, the casing of the image directory mentioned in the markdown file no longer matters, while previously this always had to be lowercase.
 
 #### 23 September 2024 - Fix - Catalog - Duplicate Catalog items [ID 40839]
 

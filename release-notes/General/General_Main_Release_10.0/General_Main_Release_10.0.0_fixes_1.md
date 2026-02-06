@@ -464,7 +464,7 @@ A number of issues have been resolved that could occur with the breadcrumbs at t
 - When an object was renamed, it could occur that the name in the breadcrumbs was not updated.
 - When an object had been deleted, it could occur that it was still displayed in the breadcrumbs' dropdown menu.
 - For services that only contained excluded devices, it could occur that breadcrumbs were not displayed correctly.
-- Breadcrumbs will no longer be displayed in upper case only.
+- Breadcrumbs will no longer be displayed in uppercase only.
 
 In addition, on a view card, it could occur that the list of elements was not updated if an element was removed from the view while the card was open.
 

@@ -82,7 +82,7 @@ Default font: Segoe UI​
 
 ### Casing
 
-#### Upper case​ (i.e. all letters of all words are capitalized​)
+#### Uppercase​ (i.e. all letters of all words are capitalized​)
 
 - Titles​
 - Buttons​
