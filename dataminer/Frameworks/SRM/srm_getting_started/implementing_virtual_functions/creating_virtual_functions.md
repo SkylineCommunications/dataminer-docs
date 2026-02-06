@@ -14,13 +14,15 @@ You can **create virtual functions using DataMiner Integration Studio** (version
 
 1. In the header menu, select *File* > *New File* > *XML File*.
 
-1. Press Ctrl + K + X, navigate to the *DIS Function Root* snippet available under *DIS* > *Function*  
+1. Press Ctrl + K + X, and navigate to the *DIS Function Root* snippet available under *DIS* > *Function*.
 
    ![DIS Function Root Snippet](~/dataminer/images/FunctionCodeSnippet.png)
 
 1. Add the connector name in the Protocol tag.
 
-1. At the top of the code editor, click *Function Editor* if the connector is not opened you will be prompt to open it.
+1. At the top of the code editor, click *Function Editor*.
+
+   If the connector is not opened, you will be prompted to open it.
 
    > [!TIP]
    > See also: [Function editor](xref:Function_editor)
