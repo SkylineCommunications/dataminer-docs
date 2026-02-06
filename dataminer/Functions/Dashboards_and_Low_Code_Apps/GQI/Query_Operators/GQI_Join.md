@@ -118,7 +118,7 @@ It works by fetching **all** rows from the *target query* into memory immediatel
 > Join conditions for the prefetch strategy are evaluated on the **display value** of the cells.
 
 > [!TIP]
-> This strategy works best when the join operation has low selectivity, i.e. when almost all rows from the joined queries are present in the result. If this is not the case, consider using the [partition strategy](#partition-strategy) instead.
+> This strategy is only recommended when dealing with small data sets or when the join operation has low selectivity, i.e. when nearly all rows from the *target query* must be retrieved for a single page from the *source query*. If this is not the case, consider using the [partition strategy](#partition-strategy) instead.
 
 ### Row by row strategy
 
