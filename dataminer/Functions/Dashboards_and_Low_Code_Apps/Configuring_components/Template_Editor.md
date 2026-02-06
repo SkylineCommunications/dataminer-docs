@@ -22,14 +22,21 @@ The Template Editor is currently supported for the following components:
 
 The way you can access the Template Editor depends on the type of component:
 
-### [Grid and timeline](#tab/grid-timeline)
+### [Grid](#tab/grid)
 
-1. Select the component and go to the *Layout* pane on the right.
+1. Select the grid component and go to the *Layout* pane on the right.
 
 1. In the *Item templates* section, click *Edit* ![Edit](~/dataminer/images/Edit_Template.png).
 
-   > [!NOTE]
-   > A preview of the template currently used for this component is displayed in the *Item templates* section.
+### [Timeline](#tab/timeline)
+
+1. Select the timeline component and go to the *Layout* pane on the right.
+
+1. Depending on what you want to customize, open the Template Editor in one of the following ways:
+
+   - To customize **the appearance of individual timeline items**, click *Edit* ![Edit](~/dataminer/images/Edit_Template.png) in the *Item templates* section.
+
+   - To customize **the appearance of timeline groups**, click *Edit* ![Edit](~/dataminer/images/Edit_Template.png) in the *Groups* > *Template* section. This option is available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44557-->, when grouping is applied.
 
 ### [Table](#tab/table)
 
@@ -312,11 +319,21 @@ From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44040 + 44123-->, you can star
 
 1. Access the overview of available templates:
 
-   - For the **grid and timeline** components:
+   - For the **grid** component:
 
-     1. Select the component and go the *Layout* pane on the right.
+     1. Select the grid component and go to the *Layout* pane on the right.
 
      1. Under *Item templates*, click *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png).
+
+   - For the **timeline** component:
+
+     1. Select the timeline component and go to the *Layout* pane on the right.
+
+     1. Depending on what you want to customize, open the templates overview in one of the following ways:
+
+        - To browse templates for **individual timeline items**, click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon in the *Item templates* section.
+
+        - To browse templates for **timeline groups**, click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon in the *Groups* > *Template* section. Available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44557-->, when grouping is applied.
 
    - For the **table** component:
 
@@ -359,11 +376,21 @@ If you have already configured at least one other template for a component in th
 
 1. Access the overview of available templates:
 
-   - For the **grid and timeline** components:
+   - For the **grid** component:
 
-     1. Select the component and go the *Layout* pane on the right.
+     1. Select the grid component and go the *Layout* pane on the right.
 
      1. Under *Item templates*, click *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png).
+
+   - For the **timeline** component:
+
+     1. Select the timeline component and go to the *Layout* pane on the right.
+
+     1. Depending on what you want to customize, open the templates overview in one of the following ways:
+
+        - To browse templates for **individual timeline items**, click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon in the *Item templates* section.
+
+        - To browse templates for **timeline groups**, click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon in the *Groups* > *Template* section. Available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44557-->, when grouping is applied.
 
    - For the **table** component:
 

@@ -288,17 +288,24 @@ Additionally, the following layout options are also available:
 | Item templates | Browse templates *or*<br>Reuse template (depending on your DataMiner version) | Reuse a saved template from another component in the same dashboard or low-code app. This option is only available if a template is already in use<!--RN 42226-->. |
 | Item templates | Edit | Open the Template Editor<!--RN 34761--> to customize the appearance of timeline items and configure actions triggered when a layer is selected. For more information, refer to [Customizing timeline items](#customizing-timeline-items). |
 | Groups | Height | Available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44577-->, when [grouping](#grouping-items-in-a-timeline) is applied. Set the height of the timeline groups to *Fixed* (default) or *Grow*. For more information, see [Group height behavior](#group-height-behavior). |
+| Groups | Template | Open the Template Editor to customize the appearance of timeline groups and configure actions triggered when a layer is selected. For more information, refer to [Customizing timeline groups](#customizing-timeline-groups). Available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44557-->, when [grouping](#grouping-items-in-a-timeline) is applied. |
 
 > [!NOTE]
 >
 > - When you disable the *Highlight* option, items that do not match the filter will no longer be displayed, and the remaining items will be reorganized.
 > - Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, the option to reuse a template is only available when another timeline component in the dashboard or low-code app is configured with a custom template.
 
-#### Customizing timeline items
+#### Customizing timeline appearance
 
-Using the Template Editor, you can fully **customize the appearance** of each timeline item. Additionally, [conditional cases](xref:Template_Editor#adding-conditional-cases-to-a-layer) allow you not only to modify how items look **when certain conditions are met**, but also to update their underlying data simultaneously.
+Using the Template Editor, you can fully **customize the appearance and behavior** of timeline items and, when grouping is applied, of timeline groups. This allows you to tailor how data is presented and how users interact with it.
 
-To access the Template Editor:
+Depending on what you want to customize, you can access the Template Editor from different locations in the *Layout* pane.
+
+##### Customizing timeline items
+
+You can customize the appearance of individual timeline items, including their layout, colors, icons, and interactive behavior.
+
+To access the Template Editor for timeline items:
 
 1. In the *Layout* pane, navigate to the *Item templates* section.
 
@@ -307,6 +314,8 @@ To access the Template Editor:
 1. Click *Edit* to open the Template Editor.
 
 1. Make your changes as described under [Using the Template Editor](xref:Template_Editor).
+
+Using [conditional cases](xref:Template_Editor#adding-conditional-cases-to-a-layer), you can not only change how items look when certain conditions are met (for example, selected, hovered, or based on column values), but also trigger actions that update the underlying data.
 
 Some **real-life examples**:
 
@@ -320,21 +329,49 @@ Some **real-life examples**:
 
   ![Timeline - TV schedule](~/dataminer/images/TimelineTVSchedule.png)<br>*Timeline component in DataMiner 10.4.1*
 
+##### Customizing timeline groups
+
+When grouping is applied to the timeline, you can also customize the appearance of timeline groups, for example to style group headers, add icons, or visually distinguish different groups.
+
+This option is available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44557-->.
+
+To access the Template Editor for timeline groups:
+
+1. Make sure grouping is applied to the timeline. See [Grouping items in a timeline](#grouping-items-in-a-timeline).
+
+1. In the *Layout* pane, go to *Groups* > *Template*.
+
+1. Click *Edit* to open the Template Editor.
+
+1. Make your changes as described under [Using the Template Editor](xref:Template_Editor).
+
+Using [conditional cases](xref:Template_Editor#adding-conditional-cases-to-a-layer), you can change how timeline groups are displayed when certain conditions are met (for example, when a group is selected or hovered), and configure actions that are triggered by user interaction.
+
 #### Default timeline template
 
 By default, the template of a timeline component includes the following **pre-configured layers**:
 
-| Layer | Type | Description |
-|--|--|--|
-| ![Text layer](~/dataminer/images/Timeline_Text_Layer.png) | Text | Displays the value from the first column in the data source. |
-| ![Rectangle layer 1](~/dataminer/images/Timeline_Rectangle_Layer1.png) | Rectangle | Acts as the background of each timeline item, with conditional formatting for hover and selection (`#D5DBE9`). |
-| ![Rectangle layer 2](~/dataminer/images/Timeline_Rectangle_Layer2.png) | Rectangle | Acts as a visual border by being slightly larger than the background layer, with conditional formatting for selection. |
+- **Timeline items** (template available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->):
 
-This default template (available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->) ensures that a timeline item is highlighted when hovered over and stands out when selected, with a light-blue background and a blue border.
+  | Layer | Type | Description |
+  |--|--|--|
+  | ![Text layer](~/dataminer/images/Timeline_Text_Layer.png) | Text | Displays the value from the first column in the data source. |
+  | ![Rectangle layer 1](~/dataminer/images/Timeline_Rectangle_Layer1.png) | Rectangle | Acts as the background of each timeline item, with conditional formatting for hover and selection. |
+  | ![Rectangle layer 2](~/dataminer/images/Timeline_Rectangle_Layer2.png) | Rectangle | Acts as a visual border by being slightly larger than the background layer, with conditional formatting for selection. |
+
+- **Timeline groups** (template available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44557-->):
+
+  | Layer | Type | Description |
+  |--|--|--|
+  | ![Text layer](~/dataminer/images/TimelineGroup_Text_Layer.png) | Text | Displays the name of the group. |
+  | ![Rectangle layer 1](~/dataminer/images/TimelineGroup_Rectangle_Layer1.png) | Rectangle | Acts as the background of each timeline group, with conditional formatting for hover and selection. |
+  | ![Rectangle layer 2](~/dataminer/images/TimelineGroup_Rectangle_Layer2.png) | Rectangle | Acts as a visual border by being slightly larger than the background layer, with conditional formatting for selection. |
+
+These default templates ensure that both timeline items and groups are highlighted when hovered over and stand out when selected.
 
 ![Selecting a timeline item](~/dataminer/images/Selecting_Timeline_Item.gif)<br>*Timeline component in DataMiner 10.5.9*
 
-This can for instance be useful when the timeline's [component data](xref:Component_Data) (e.g. *Components* > *[Page name]* > *Timeline* > *Selected groups* / *Selected time ranges*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
+This can, for instance, be useful when the timeline's [component data](xref:Component_Data) (e.g. *Components* > *[Page name]* > *Timeline* > *Selected groups* / *Selected time ranges*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
 
 ### Timeline settings
 
