@@ -13,7 +13,7 @@ To change the default browser engine used in DataMiner Cube:
    - **Edge** (default): From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43429-->, Edge (WebView2) is the default web browser engine. This browser engine has the advantage that web content is rendered directly to the graphics card and proprietary codecs such as H.264 and AAC are supported. In addition, the browser engine automatically receives updates via Windows Update, regardless of the DataMiner or Cube version.
 
      > [!NOTE]
-     > The WebView2 Runtime is not included in DataMiner upgrade packages. It is automatically installed with Office 365 apps and/or Windows 11. You can also get the Evergreen Bootstrapper or Standalone installer from Microsoft: [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/?form=MA13LH#download-section).
+     > The WebView2 Runtime is not included in DataMiner upgrade packages. While it is pre-installed on most recent Windows versions, you may need to install it manually on older Windows versions or on certain Windows Server editions. We highly recommend performing a system-wide installation as Administrator. See [DataMiner Client Requirements - WebView2](xref:DataMiner_Client_Requirements#microsoft-webview2).
 
    - **Chromium**: In versions up to DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8<!--RN 43429-->, Chromium is the default browser engine if installed. However, in more recent versions, Chromium can no longer be set as the default engine.
 

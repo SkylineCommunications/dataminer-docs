@@ -61,7 +61,7 @@ The following buttons at the bottom of this page allow further actions:
 >
 > - Use the filter box in the top-right corner to filter the displayed information. See [Using quick filters](xref:Using_quick_filters).
 > - By default, debug logging is not displayed. To display these log items, select the option *Show debug logging* at the top of the tab.
-> - From DataMiner 10.1.11/10.2.0 onwards, you can select the option *Show SPI logging* at the top of the tab to see information related to system performance indicators. By default, SPI logging is not displayed.
+> - You can select the option *Show SPI logging* at the top of the tab to see information related to system performance indicators. By default, SPI logging is not displayed.
 > - When an exception is recorded in the Cube logging, this is indicated by an icon in the Cube header. Clicking the icon will open this logging section. For warnings and errors, by default no icon is displayed in the header. However, you can have such icons displayed by adding the following argument to the Cube URL:<br>*?enablefeature=loggingnotifications*
 
 ## Log types
@@ -84,6 +84,6 @@ DataMiner Cube logging uses different log types to allow users to easily filter 
 > [!NOTE]
 >
 > - By default, debug logging is not displayed. To display these log items, select the option *Show debug logging* at the top of the tab.
-> - By default, SPI logging is not displayed. To display these log items, select the option *Show SPI logging* at the top of the tab (Available from DataMiner 10.1.11/10.2.0 onwards).
+> - By default, SPI logging is not displayed. To display these log items, select the option *Show SPI logging* at the top of the tab.
 > - SPI logging is currently only supported in DataMiner Cube, if your system is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 > - When the Cube UI is not responsive, the *Freeze Detection* feature will cause a pop-up message to be displayed after a specific number of seconds of unresponsiveness. The time before this message is displayed depends on the [*Freeze time* settings](xref:ClientSettings_json#configuring-settings-for-cube-ui-freezing).
