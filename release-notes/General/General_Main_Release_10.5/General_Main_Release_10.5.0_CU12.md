@@ -187,3 +187,9 @@ When an element was restarted, and that element had alarms with service impact t
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 If, while adding or editing an element based on a connector that had an additional thread specified, you clicked *Test connection*, in some cases, SLProtocol could stop working.
+
+#### Problem with SLDataMiner after sending an NT_READ_SAVED_PARAMETER_VALUE call [ID 44597]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When an NT_READ_SAVED_PARAMETER_VALUE call was sent to retrieve data from an element without a connector while that data was still present in SLDataGateway, up to now, SLDataMiner could stop working.

@@ -56,3 +56,9 @@ When you connected to a DataMiner Agent, up to now, it would not be possible to 
 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Problem with SLDataMiner after sending an NT_READ_SAVED_PARAMETER_VALUE call [ID 44597]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When an NT_READ_SAVED_PARAMETER_VALUE call was sent to retrieve data from an element without a connector while that data was still present in SLDataGateway, up to now, SLDataMiner could stop working.
