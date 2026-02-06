@@ -347,7 +347,7 @@ To access the Template Editor for timeline groups:
 
 Using [conditional cases](xref:Template_Editor#adding-conditional-cases-to-a-layer), you can change how timeline groups are displayed when certain conditions are met (for example, when a group is selected or hovered), and configure actions that are triggered by user interaction.
 
-#### Default timeline template
+#### Default timeline templates
 
 By default, the template of a timeline component includes the following **pre-configured layers**:
 
