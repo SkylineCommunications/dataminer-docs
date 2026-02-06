@@ -8,7 +8,14 @@ Each .md file should have a description in the YAML front matter that:
 - Starts with `description: `
 - Is between 100 and 150 characters in length
 
-## Files to Fix (6,415 total)
+## Summary
+
+- **Total files needing fixes: 6,415**
+  - Files with no description: 6,413
+  - Files with description too short (<100 chars): 1
+  - Files with description too long (>150 chars): 1
+
+## Files to Fix
 
 1. .github/copilot-instructions.md - No description
 2. README.md - No description
