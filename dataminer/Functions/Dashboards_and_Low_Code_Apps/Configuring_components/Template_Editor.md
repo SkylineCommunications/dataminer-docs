@@ -329,11 +329,14 @@ From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44040 + 44123-->, you can star
 
      1. Select the timeline component and go to the *Layout* pane on the right.
 
-     1. Depending on what you want to customize, open the templates overview in one of the following ways:
+     1. Depending on what you want to customize, open the template browser in one of the following ways:
 
         - To browse templates for **individual timeline items**, click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon in the *Item templates* section.
 
         - To browse templates for **timeline groups**, click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon in the *Groups* > *Template* section. Available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44557-->, when grouping is applied.
+
+          > [!NOTE]
+          > While you can access the template browser for timeline groups, no preset templates are available specifically for timeline groups yet.
 
    - For the **table** component:
 
@@ -359,7 +362,7 @@ From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44040 + 44123-->, you can star
 
    - (3): Filter the overview by visualization type using the options in the sidebar on the left.
 
-   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Templates overview in DataMiner 10.6.2*
+   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Template browser in DataMiner 10.6.2*
 
    > [!TIP]
    > You can tell a preset template from a custom template by the *Preset* label in the top-right corner of a template tile.
@@ -386,7 +389,7 @@ If you have already configured at least one other template for a component in th
 
      1. Select the timeline component and go to the *Layout* pane on the right.
 
-     1. Depending on what you want to customize, open the templates overview in one of the following ways:
+     1. Depending on what you want to customize, open the template browser in one of the following ways:
 
         - To browse templates for **individual timeline items**, click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon in the *Item templates* section.
 
@@ -416,7 +419,7 @@ If you have already configured at least one other template for a component in th
 
    - (3): Filter the overview by visualization type using the options in the sidebar on the left.
 
-   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Templates overview in DataMiner 10.6.2*
+   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Template browser in DataMiner 10.6.2*
 
 1. Click *Apply* in the lower-right corner of the window.
 
