@@ -66,3 +66,4 @@ For most key directories (with the exception of `src`), all images are placed in
 7. If changes are implemented that remove all references to a specific image, that image must be removed, with the exception of any images included in the `connectors` directory.
 8. Avoid adding pages that only contain links to underlying pages but no actual content of their own.
 9. When referring to changes introduced by a specific release note, make sure the Main Release version and Feature Release version introducing the changes are mentioned on the page.
+10. Use sentence casing for titles.
