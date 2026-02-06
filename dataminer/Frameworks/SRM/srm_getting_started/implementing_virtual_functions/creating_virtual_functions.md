@@ -12,19 +12,15 @@ You can **create virtual functions using DataMiner Integration Studio** (version
 
 1. Open Visual Studio (with [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio) installed).
 
-1. In the header menu, select *File* > *New File*.
+1. In the header menu, select *File* > *New File* > *XML File*.
 
-1. In the *New File* window, select *DataMiner Function Template* and click *Open*.
+1. Press Ctrl + K + X, navigate to the DIS *Function Root* snippet available under *DIS* > *Function*  
 
    ![New File window](~/dataminer/images/NewFunctionTemplate.png)
 
-1. Specify the path to the connector exposing the function and click *OK*.
+1. Add the connector name in the Protocol tag.
 
-   ![New Function window](~/dataminer/images/NewFunction.png)
-
-1. At the top of the code editor, click *Function Editor*.
-
-   ![Function editor](~/dataminer/images/FunctionEditor.png)
+1. At the top of the code editor, click *Function Editor* if the connector is not opened you will be prompted to open it.
 
    > [!TIP]
    > See also: [Function editor](xref:Function_editor)
