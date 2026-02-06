@@ -12,4 +12,4 @@ Specifies the casing type.
 |--- |--- |--- |
 |***string restriction***|||
 |&nbsp;&nbsp;Enumeration|lower|Lowercase|
-|&nbsp;&nbsp;Enumeration|upper|Upper case|
+|&nbsp;&nbsp;Enumeration|upper|Uppercase|

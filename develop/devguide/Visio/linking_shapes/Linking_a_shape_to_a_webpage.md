@@ -95,7 +95,7 @@ If you want to pass on the user credentials of the current user to a webpage dis
 
 ## Allowing pop-ups
 
-In DataMiner Cube, embedded browser windows suppress pop-ups by default. If, for any reason, you want an embedded browser window to allow pop-ups (e.g. when it has to show an authentication dialog), then you can use the following URL suffix (in upper case):
+In DataMiner Cube, embedded browser windows suppress pop-ups by default. If, for any reason, you want an embedded browser window to allow pop-ups (e.g. when it has to show an authentication dialog), then you can use the following URL suffix (in uppercase):
 
 ```txt
 #SL_ALLOW_POPUPS#

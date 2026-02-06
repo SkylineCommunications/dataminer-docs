@@ -217,7 +217,7 @@ Up to now, when you edited a published app that had a draft, a new draft would i
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-The label of the *Icon* setting of an *Icon* component would incorrectly be in lowercase. It is now in upper case.
+The label of the *Icon* setting of an *Icon* component would incorrectly be in lowercase. It is now in uppercase.
 
 #### Low-Code Apps: Problem when two State components were fed the same query row data with a column filter applied [ID 37206]
 
