@@ -136,7 +136,7 @@ Task 321/2 [Task 1] successfully added to MS Task Scheduler
 
 <!-- MR 10.5.0 [CU12] - FR TBD -->
 
-The UserDefinableApiEndpoint DxM has been upgraded to version 3.3.1. It requires .NET version 8.
+The UserDefinableApiEndpoint DxM has been upgraded to version 3.3.1 in order to prevent a potential issue that caused the process to keep using more memory and CPU resources.
 
 ### Fixes
 
