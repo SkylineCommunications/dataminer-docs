@@ -315,7 +315,7 @@ To access the Template Editor for timeline items:
 
 1. Make your changes as described under [Using the Template Editor](xref:Template_Editor).
 
-Using [conditional cases](xref:Template_Editor#adding-conditional-cases-to-a-layer), you can not only change how items look when certain conditions are met (for example, selected, hovered, or based on column values), but also trigger actions that update the underlying data.
+Using [conditional cases](xref:Template_Editor#adding-conditional-cases-to-a-layer), you can not only change how items look when certain conditions are met (for example, when the item is selected or hovered over, or based on column values), but also trigger actions that update the underlying data.
 
 Some **real-life examples**:
 
@@ -345,7 +345,7 @@ To access the Template Editor for timeline groups:
 
 1. Make your changes as described under [Using the Template Editor](xref:Template_Editor).
 
-Using [conditional cases](xref:Template_Editor#adding-conditional-cases-to-a-layer), you can change how timeline groups are displayed when certain conditions are met (for example, when a group is selected or hovered), and configure actions that are triggered by user interaction.
+Using [conditional cases](xref:Template_Editor#adding-conditional-cases-to-a-layer), you can change how timeline groups are displayed when certain conditions are met (for example, when a group is selected or hovered over), and configure actions that are triggered by user interaction.
 
 #### Default timeline templates
 
