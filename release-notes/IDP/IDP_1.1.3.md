@@ -60,7 +60,7 @@ The default port settings for the HTTP API connection of the Generic Rack Layout
 
 #### IDP setup wizard window size optimization \[ID 23073\]
 
-The window displaying the setup wizard has been optimized so that it always shows as much content as possible in the available space on the screen. When necessary, scroll bars will be displayed.
+The window displaying the setup wizard has been optimized so that it always shows as much content as possible in the available space on the screen. When necessary, scrollbars will be displayed.
 
 #### IDP now uses UTC \[ID 23104\]
 

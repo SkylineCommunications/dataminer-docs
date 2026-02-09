@@ -5,7 +5,7 @@ using System;
 namespace Skyline.DataMiner.Net.Ticketing.Validators
 {
 	/// <summary>
-	/// Represents a generic enum validator.
+	/// Represents a generic enum validator. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	/// <typeparam name="T">The underlying type of the generic enum to validate.</typeparam>
 	[JsonObject(MemberSerialization.OptIn)]

@@ -200,6 +200,18 @@ items:
         - name: QActions
           topicUid: LogicQActions
           items:
+          - name: Entry point methods
+            topicUid: LogicQActionsEntryPointMethods
+          - name: QAction member fields
+            topicUid: LogicQActionsMemberFields
+          - name: SLProtocol interaction
+            topicUid: LogicQActionsSLProtocolInteraction
+          - name: QAction execution
+            topicUid: LogicQActionsExecution
+          - name: QAction compilation
+            topicUid: LogicQActionsCompilation
+          - name: Starting an Automation script from a QAction
+            topicUid: LogicQActionsAutomationScriptExecution            
           - name: Examples
             topicUid: LogicQActionsExamples
         - name: Conditions
@@ -1083,6 +1095,8 @@ items:
             topicUid: GQI_IGQIQueryNode
           - name: IGQIRowOperator
             topicUid: GQI_IGQIRowOperator
+          - name: IGQISession
+            topicUid: GQI_IGQISession
           - name: IGQISortField
             topicUid: GQI_IGQISortField
           - name: IGQISortOperator
@@ -1114,11 +1128,319 @@ items:
         topicUid: GQI_Extensions_Debugging
       - name: Logging
         topicUid: GQI_Extensions_Logging
-  - name: User-Defined APIs
+  - name: User-defined APIs
     topicUid: DMI_User-DefinedAPIs
     items:
       - name: Bad and best practices
         topicUid: UD_APIs_Bad_and_Best_Practices
+  - name: Visio drawings
+    topicUid: visio
+    items:
+      - name: Getting started
+        topicUid: Getting_started_with_visual_overview
+        items:
+          - name: Working with shape data in Microsoft Visio
+            topicUid: Working_with_shape_data_in_Microsoft_Visio
+          - name: Editing a visual overview in DataMiner Cube
+            topicUid: Editing_a_visual_overview_in_DataMiner_Cube
+          - name: DataMiner Visio templates
+            topicUid: DataMiner_Visio_templates
+      - name: Linking shapes to DataMiner items
+        topicUid: Linking_shapes_to_DataMiner_items
+        items:
+          - name: Linking a shape to an element, a service or a redundancy group
+            topicUid: Linking_a_shape_to_an_element_a_service_or_a_redundancy_group
+          - name: Linking a shape to a view
+            topicUid: Linking_a_shape_to_a_view
+          - name: Linking a shape to an element parameter
+            topicUid: Linking_a_shape_to_an_element_parameter
+          - name: Linking a shape to an alarm
+            topicUid: Linking_a_shape_to_an_alarm
+          - name: Linking a shape to a history alarm
+            topicUid: Linking_a_shape_to_a_history_alarm
+          - name: Linking a shape to an alarm filter
+            topicUid: Linking_a_shape_to_an_alarm_filter
+          - name: Linking a shape to the alarm state of a Data Display page
+            topicUid: Linking_a_shape_to_the_alarm_state_of_a_Data_Display_page
+          - name: Linking a shape to a DLL file
+            topicUid: Linking_a_shape_to_a_DLL_file
+          - name: Linking a shape to a WFM component
+            topicUid: Linking_a_shape_to_a_WFM_component
+          - name: Linking a shape to a MULTIPLE SET command
+            topicUid: Linking_a_shape_to_a_MULTIPLE_SET_command
+          - name: Linking a shape to a program or a file
+            topicUid: Linking_a_shape_to_a_program_or_a_file
+          - name: Linking a shape to a SET command
+            topicUid: Linking_a_shape_to_a_SET_command
+          - name: Linking a shape to a video thumbnail
+            topicUid: Linking_a_shape_to_a_video_thumbnail
+          - name: Linking a shape to a video stream using VLC
+            topicUid: Linking_a_shape_to_a_video_stream_using_VLC
+          - name: Linking a shape to a webpage
+            topicUid: Linking_a_shape_to_a_webpage
+          - name: Linking a shape to an Automation script
+            topicUid: Linking_a_shape_to_an_Automation_script
+          - name: Linking a shape to a matrix parameter
+            topicUid: Linking_a_shape_to_a_matrix_parameter
+          - name: Linking a shape to a calculation involving multiple parameters
+            topicUid: Linking_a_shape_to_a_calculation_involving_multiple_parameters
+          - name: Linking a shape to a trend component
+            topicUid: Linking_a_shape_to_a_trend_component
+          - name: Linking a shape to an aggregation rule
+            topicUid: Linking_a_shape_to_an_aggregation_rule
+          - name: Linking a shape to an Asset Manager table
+            topicUid: Linking_a_shape_to_an_Asset_Manager_table
+          - name: Linking a shape to a dashboard component
+            topicUid: Linking_a_shape_to_a_dashboard_component
+          - name: Linking a shape to an EPM object
+            topicUid: Linking_a_shape_to_an_EPM_object
+          - name: Adding options to shapes linked to elements or services
+            topicUid: Adding_options_to_shapes_linked_to_elements_or_services
+      - name: Making shapes display information
+        topicUid: Making_shapes_display_information
+        items:
+          - name: Making a shape display the value of an element or service property
+            topicUid: Making_a_shape_display_the_value_of_an_element_or_service_property
+          - name: Making a shape take the latch color of the item it is linked to
+            topicUid: Making_a_shape_take_the_latch_color_of_the_item_it_is_linked_to
+          - name: Making a shape display information about the item it is linked to
+            topicUid: Making_a_shape_display_information_about_the_item_it_is_linked_to
+          - name: Making a shape display a custom drawing using Path markup
+            topicUid: Making_a_shape_display_a_custom_drawing_using_Path_markup
+          - name: Making a shape display a custom tooltip
+            topicUid: Making_a_shape_display_a_custom_tooltip
+          - name: Making a shape display an image
+            topicUid: Making_a_shape_display_an_image
+          - name: Making a shape display the number of highlighted shapes on a page
+            topicUid: Making_a_shape_display_the_number_of_highlighted_shapes_on_a_page
+      - name: Positioning shapes dynamically
+        topicUid: Positioning_shapes_dynamically
+        items:
+          - name: Calibrating the X and Y coordinates in a Visio drawing
+            topicUid: Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing
+          - name: Positioning shapes dynamically
+            topicUid: Positioning_shapes_dynamically1
+          - name: Positioning shapes in a grid layout
+            topicUid: Positioning_shapes_in_a_grid_layout
+          - name: Re-arranging dynamically positioned shapes
+            topicUid: Re-arranging_dynamically_positioned_shapes
+          - name: Docking a shape to one or more borders of a Visio drawing
+            topicUid: Docking_a_shape_to_one_or_more_borders_of_a_Visio_drawing
+          - name: Stretching a shape across an entire card
+            topicUid: Stretching_a_shape_across_an_entire_card
+          - name: Enabling dynamic zoom on dynamically positioned shapes
+            topicUid: Enabling_dynamic_zoom_on_dynamically_positioned_shapes
+          - name: Enabling grouping of dynamically positioned shapes
+            topicUid: Enabling_grouping_of_dynamically_positioned_shapes
+      - name: Generating shapes dynamically
+        topicUid: Generating_shapes_dynamically
+        items:
+          - name: Generating shapes based on table rows
+            topicUid: Generating_shapes_based_on_table_rows
+          - name: Generating shapes based on child items in a view or a service
+            topicUid: Generating_shapes_based_on_child_items_in_a_view_or_a_service
+          - name: Generating shapes that represent alarms
+            topicUid: Generating_shapes_that_represent_alarms
+          - name: Generating shapes for a predefined set of elements, services or views
+            topicUid: Generating_shapes_for_a_predefined_set_of_elements_services_or_views
+          - name: Generating shapes representing bookings
+            topicUid: Generating_shapes_representing_bookings
+      - name: Working with session variables
+        topicUid: Working_with_session_variables
+        items:
+          - name: Initializing a session variable
+            topicUid: Initializing_a_session_variable
+          - name: Ensuring that a session variable is saved
+            topicUid: Ensuring_that_a_session_variable_is_saved
+          - name: Turning a shape into a control to update a session variable
+            topicUid: Turning_a_shape_into_a_control_to_update_a_session_variable
+          - name: Adding options to a session variable control
+            topicUid: Adding_options_to_a_session_variable_control
+          - name: Making a shape display the current value of a variable
+            topicUid: Making_a_shape_display_the_current_value_of_a_variable
+          - name: Making a shape pass a value to a local session variable in a new card
+            topicUid: Making_a_shape_pass_a_value_to_a_local_session_variable_in_a_new_card
+          - name: Configuring a page to update parameters on session variable changes
+            topicUid: Configuring_a_page_to_update_parameters_on_session_variable_changes
+          - name: Configuring a page to update a session variable when another session variable changes
+            topicUid: Configuring_a_page_to_update_a_session_variable_when_another_session_variable_changes
+          - name: Making a shape set a file path to a session variable
+            topicUid: Making_a_shape_set_a_file_path_to_a_session_variable
+      - name: Turning shapes into controls
+        topicUid: Turning_shapes_into_controls
+        items:
+          - name: Turning a shape into a parameter control
+            topicUid: Turning_a_shape_into_a_parameter_control
+          - name: Adding options to a parameter control
+            topicUid: Adding_options_to_a_parameter_control
+          - name: Creating a parameter chart
+            topicUid: Creating_a_parameter_chart
+          - name: Turning a shape into a tab control that displays pages of a Visio file
+            topicUid: Turning_a_shape_into_a_tab_control_that_displays_pages_of_a_Visio_file
+          - name: Creating a button to navigate to a page of the current Visio drawing
+            topicUid: Creating_a_button_to_navigate_to_a_page_of_the_current_Visio_drawing
+          - name: Turning a shape into a redundancy group selection box
+            topicUid: Turning_a_shape_into_a_redundancy_group_selection_box
+          - name: Turning a shape into a button that opens a trend group
+            topicUid: Turning_a_shape_into_a_button_that_opens_a_trend_group
+          - name: Making a shape filter Alarm Console tabs when clicked
+            topicUid: Making_a_shape_filter_Alarm_Console_tabs_when_clicked
+          - name: Creating a range slider control
+            topicUid: Creating_a_range_slider_control
+          - name: Creating a rotating button control
+            topicUid: Creating_a_rotating_button_control
+          - name: Designing buttons with four different states
+            topicUid: Designing_buttons_with_four_different_states
+          - name: Creating a text block control
+            topicUid: Creating_a_text_block_control
+          - name: Embedding a router control component
+            topicUid: Embedding_a_router_control_component
+          - name: Embedding an alarm timeline component
+            topicUid: Embedding_an_alarm_timeline_component
+      - name: Implementing drag-and-drop functions
+        topicUid: Implementing_drag-and-drop_functions
+        items:
+          - name: Triggering an action when a shape is dragged onto another shape
+            topicUid: Triggering_an_action_when_a_shape_is_dragged_onto_another_shape
+          - name: Triggering an action when the mouse pointer hovers over a shape
+            topicUid: Triggering_an_action_when_the_mouse_pointer_hovers_over_a_shape
+      - name: Implementing DataMiner Connectivity Framework functions
+        topicUid: Implementing_DataMiner_Connectivity_Framework_functions
+        items:
+          - name: Automatically displaying external and internal connections
+            topicUid: Automatically_displaying_external_and_internal_connections
+          - name: Options for displaying DCF connections
+            topicUid: Options_for_displaying_DCF_connections
+          - name: Options for highlighting DCF connections
+            topicUid: Options_for_highlighting_DCF_connections
+          - name: Highlighting a connection chain based on a filter shape
+            topicUid: Highlighting_a_connection_chain_based_on_a_filter_shape
+          - name: Creating a selection box with all elements in a connectivity chain
+            topicUid: Creating_a_selection_box_with_all_elements_in_a_connectivity_chain
+          - name: Dynamically generating shapes for elements that are out of scope
+            topicUid: Dynamically_generating_shapes_for_elements_that_are_out_of_scope
+          - name: Dynamically generating shapes for elements connected to views out of scope
+            topicUid: Dynamically_generating_shapes_for_elements_connected_to_views_out_of_scope
+          - name: Applying conditional connection thickness
+            topicUid: Applying_conditional_connection_thickness
+          - name: Linking a shape to an element based on DCF connections
+            topicUid: Linking_a_shape_to_an_element_based_on_DCF_connections
+          - name: Generating the DCF signal path of a particular element and interface
+            topicUid: Generating_the_DCF_signal_path_of_a_particular_element_and_interface
+          - name: Generating the connectivity chain for an SRM service instance
+            topicUid: Generating_the_connectivity_chain_for_an_SRM_service_instance
+          - name: Filtering connections based on connection properties
+            topicUid: Filtering_connections_based_on_connection_properties
+      - name: Implementing EPM functions
+        topicUid: Implementing_EPM_functions
+        items:
+          - name: Linking a Visio page to an EPM chain
+            topicUid: Linking_a_Visio_page_to_an_EPM_chain
+          - name: Linking a Visio page to an EPM filter section field
+            topicUid: Linking_a_Visio_page_to_an_EPM_filter_section_field
+          - name: Preventing navigation to the EPM interface when a shape is clicked
+            topicUid: Preventing_navigation_to_the_EPM_interface_when_a_shape_is_clicked
+          - name: Turning a shape into a button that opens a KPI window
+            topicUid: Turning_a_shape_into_a_button_that_opens_a_KPI_window
+          - name: Specifying additional tables for the EPM Details pane
+            topicUid: Specifying_additional_tables_for_the_EPM_Details_pane
+          - name: Specifying an EPM parameter that can be used to filter
+            topicUid: Specifying_an_EPM_parameter_that_can_be_used_to_filter
+          - name: Restricting the use of line objects to specific connections
+            topicUid: Restricting_the_use_of_line_objects_to_specific_connections
+      - name: Implementing SRM features
+        topicUid: Implementing_SRM_features
+        items:
+          - name: Embedding a Resource Manager component
+            topicUid: Embedding_a_Resource_Manager_component
+            items:
+              - name: YAxisResource session variable examples
+                topicUid: YAxisResource_Shape_Data_Examples
+          - name: Embedding a Service Manager component
+            topicUid: Embedding_a_Service_Manager_component
+          - name: Embedding a Profile Manager component
+            topicUid: Embedding_a_Profile_Manager_component
+          - name: Linking a shape to a booking
+            topicUid: Linking_a_shape_to_a_booking
+          - name: Linking a shape to a resource
+            topicUid: Linking_a_shape_to_a_resource
+      - name: Tutorials
+        items:
+          - name: Getting started with basic shapes
+            topicUid: Getting_started_with_basic_shapes
+          - name: Embedding a connector dashboard in Visual Overview
+            topicUid: Tutorial_Embed_Connector_Dashboard_in_Visio
+          - name: Using Visual Overview to control dashboard feed components
+            topicUid: Using_visio_to_control_dashboard_feed_components
+          - name: Using Visual Overview to switch spectrum presets
+            topicUid: Using_Visual_Overview_to_switch_spectrum_presets
+      - name: Miscellaneous
+        topicUid: Miscellaneous
+        items:
+          - name: Grouping shapes
+            topicUid: Grouping_shapes
+          - name: Conditional shape highlighting
+            topicUid: Conditional_shape_highlighting
+          - name: Basic conditional shape manipulation actions
+            topicUid: Basic_conditional_shape_manipulation_actions
+          - name: Extended conditional shape manipulation actions
+            topicUid: Extended_conditional_shape_manipulation_actions
+          - name: Adding a SET command to a shape shortcut menu
+            topicUid: Adding_a_SET_command_to_a_shape_shortcut_menu
+          - name: Making a shape or page visible only for a particular access level
+            topicUid: Making_a_shape_or_page_visible_only_for_a_particular_access_level
+          - name: Disabling the default hyperlink behavior of a linked shape
+            topicUid: Disabling_the_default_hyperlink_behavior_of_a_linked_shape
+          - name: Showing or hiding a shape based on the existence of annotations
+            topicUid: Showing_or_hiding_a_shape_based_on_the_existence_of_annotations
+          - name: Specifying the background of Visual Overview pages
+            topicUid: Specifying_the_background_of_Visual_Overview_pages
+          - name: Marking a page of a Visio drawing as the default page
+            topicUid: Marking_a_page_of_a_Visio_drawing_as_the_default_page
+          - name: Making a shape display a particular page of the current Visio drawing
+            topicUid: Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing
+          - name: Conditionally showing or hiding a page of a Visio drawing
+            topicUid: Conditionally_showing_or_hiding_a_page_of_a_Visio_drawing
+          - name: Having multiple lines drawn between elements in case of element connectivity
+            topicUid: Having_multiple_lines_drawn_between_elements_in_case_of_element_connectivity
+          - name: Making shapes selectable
+            topicUid: Making_shapes_selectable
+          - name: Configuring a custom context menu
+            topicUid: Configuring_a_custom_context_menu
+          - name: Configuring the hover area of a shape
+            topicUid: Configuring_the_hover_area_of_a_shape
+          - name: Embedding a Spectrum Analysis component
+            topicUid: Embedding_a_Spectrum_Analysis_component
+          - name: Disabling the indication that a page or shape is loading
+            topicUid: Disabling_the_Loading_message_for_a_page_or_shape
+          - name: Configuring a shape to display or set the Surveyor search text
+            topicUid: Configuring_a_shape_to_display_or_set_the_Surveyor_search_text
+          - name: Filtering the data of a cached table parameter
+            topicUid: Filtering_the_data_of_a_cached_table_parameter
+          - name: Making a shape launch the Device Discovery app
+            topicUid: Making_a_shape_launch_the_Device_Discovery_app
+          - name: Creating a list view
+            topicUid: Creating_a_list_view
+          - name: Ensuring that a card or page variable is saved
+            topicUid: Ensuring_that_a_card_or_page_variable_is_saved
+          - name: Setting the background color of a static shape
+            topicUid: Setting_the_background_color_of_a_static_shape
+          - name: Configuring a shape's text wrapping and trimming
+            topicUid: Configuring_text_wrapping_and_trimming
+          - name: Configuring a page to execute a script automatically
+            topicUid: Configuring_a_page_to_execute_a_script_automatically
+      - name: Reference
+        items:
+          - name: Overview of DataMiner shape data fields
+            topicUid: Overview_of_DataMiner_shape_data_fields
+          - name: Overview of page and shape options
+            topicUid: Overview_of_page_and_shape_options
+          - name: Placeholders for variables in shape data values
+            topicUid: Placeholders_for_variables_in_shape_data_values
+          - name: Dynamic table filter syntax
+            topicUid: Dynamic_table_filter_syntax
+          - name: Visio style guide
+            topicUid: Visio_style_guide
   - name: Class Library
     items:
     - name: About the class library
@@ -1177,6 +1499,8 @@ items:
         topicUid: SwarmingScriptElement
       - name: Configuring a script to swarm bookings
         topicUid: SwarmingScriptBooking
+      - name: Configuring a script to swarm scheduled tasks
+        topicUid: SwarmingScriptScheduledTask
   - name: EPM integration
     items:
       - name: EPM Integration Training
@@ -6538,6 +6862,8 @@ items:
             topicUid: DMAParameterInfo
           - name: DMAParameterPosition
             topicUid: DMAParameterPosition
+          - name: DMAParameterSet
+            topicUid: DMAParameterSet
           - name: DMAParameterTable
             topicUid: DMAParameterTable
           - name: DMAParameterTableCell
@@ -7084,7 +7410,7 @@ items:
         - name: Skyline NuGet packages
           topicUid: SkylineNuGetPackages
           items:
-          - name: DataMiner DevPacks
+          - name: Dev Packs
             topicUid: TOODataMinerDevPackages
           - name: Interactive Automation Script Toolkit
             topicUid: Interactive_Automation_Script_Toolkit
@@ -7100,8 +7426,12 @@ items:
             items:
             - name: Compilation-time assembly binding
               topicUid: Compilation_Time_Assembly_Binding
-            - name: Run-time assembly binding
+            - name: Runtime assembly binding
               topicUid: Run_Time_Assembly_Binding
+            - name: Assembly binding connectors
+              topicUid: AssemblyResolvingConnectors
+            - name: Assembly binding Automation scripts
+              topicUid: AssemblyResolvingAutomationScripts
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
           items:

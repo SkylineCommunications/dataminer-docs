@@ -65,6 +65,62 @@ items:
           topicUid: Tutorial_MediaOps_Scheduling_Configurations
         - name: Creating a workflow to use as a template for a job
           topicUid: Tutorial_MediaOps_Workflow_Designer_Intro
+    - name: dataminer.InfraOps
+      topicUid: InfraOps
+      items:
+      - name: Installing InfraOps
+        topicUid: IO_Installation
+      - name: Facility Manager
+        topicUid: Facility_Manager
+        items:
+        - name: Facilities
+          topicUid: Facilities_Page
+        - name: Rooms
+          topicUid: Rooms_Page
+        - name: Racks
+          topicUid: Racks_Page
+        - name: Room Designer
+          topicUid: Room_Designer
+      - name: Asset Manager
+        topicUid: Asset_Manager
+        items:
+        - name: Asset Designer
+          topicUid: Asset_Designer
+          items:
+          - name: Configuring device types
+            topicUid: AM_Configuring_device_types
+          - name: Configuring cable types
+            topicUid: AM_Configuring_cable_types
+          - name: Configuring port types
+            topicUid: AM_Configuring_port_types
+        - name: Managed Assets
+          topicUid: Managed_Assets
+          items:
+          - name: Configuring the asset hierarchy
+            topicUid: Asset_Hierarchy
+          - name: Configuring asset connections
+            topicUid: Configuring_asset_connections
+          - name: Configuring the asset location
+            topicUid: Configuring_asset_location
+          - name: Asset lifecycle
+            topicUid: Asset_Lifecycle
+        - name: Connections
+          topicUid: AssetManager_Connections
+        - name: Rack View
+          topicUid: Rack_View
+        - name: Row Viewer
+          topicUid: Row_Viewer
+        - name: Rack Comparer
+          topicUid: Rack_Comparer
+        - name: App settings
+          topicUid: App_Settings
+      - name: Plan and Build
+        topicUid: Plan_And_Build
+        items:
+        - name: Jobs List
+          topicUid: Jobs_Page
+      - name: Web File Manager
+        topicUid: Web_File_Manager
     - name: DataMiner PTP
       topicUid: SolPTP
       items:

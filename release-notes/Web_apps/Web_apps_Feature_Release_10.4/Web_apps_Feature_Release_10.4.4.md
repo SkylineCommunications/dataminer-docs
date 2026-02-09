@@ -267,7 +267,7 @@ From now on, when a user closes a tab or a page containing a GQI query, the corr
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-Up to now, a Web component would incorrectly display scroll bars when all content fitted inside.
+Up to now, a Web component would incorrectly display scrollbars when all content fitted inside.
 
 #### Dashboards app & Low-Code Apps: GQI updates would not be shown in the UI when using polling [ID 38832]
 

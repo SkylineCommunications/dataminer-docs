@@ -50,7 +50,7 @@ When you applied the same name to a domain or ran the setup wizard for an existi
 
 #### Not possible to finish setup wizard \[ID 30737\]
 
-When you ran the setup wizard from the *Admin* page of the PTP app, it could occur that no scroll bar was displayed in the last step of the wizard so that it was not possible to click the *Finish* button. This made it impossible to set up roles starting from the normal setup.
+When you ran the setup wizard from the *Admin* page of the PTP app, it could occur that no scrollbar was displayed in the last step of the wizard so that it was not possible to click the *Finish* button. This made it impossible to set up roles starting from the normal setup.
 
 #### Empty domain name not shown correctly in setup wizard \[ID 30746\]
 

@@ -269,6 +269,6 @@ In the mobile versions of the web apps, the bottom tab control would incorrectly
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
 
-In some cases, page content would not fit the screen and no scroll bars would appear. As a result, components could be cut off at the bottom of the screen.
+In some cases, page content would not fit the screen and no scrollbars would appear. As a result, components could be cut off at the bottom of the screen.
 
 Also, the header bar of a page or panel in edit mode would not be aligned with the height of the side panel header.

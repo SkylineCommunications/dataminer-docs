@@ -186,6 +186,8 @@ items:
         items:
           - name: Activating verbose Correlation logging
             topicUid: SLNetClientTest_activating_verbose_correlation_logging
+          - name: Activating event cache or subscription logging
+            topicUid: SLNetClientTest_activating_event_or_subscription_logging
           - name: Changing the log levels for a log file
             topicUid: SLNetClientTest_changing_log_levels
           - name: Checking a hyperlink filter
@@ -236,6 +238,8 @@ items:
             topicUid: SLNetClientTest_retrieving_dcf_debug_info
           - name: Retrieving general information about elements
             topicUid: SLNetClientTest_retrieving_element_info
+          - name: Retrieving information on the available Automation scripts
+            topicUid: SLNetClientTest_info_on_available_automation_scripts
           - name: Retrieving information on open GQI sessions
             topicUid: SLNetClientTest_info_on_open_gqi_sessions
           - name: Retrieving live information about the mapping between elements and the processes they use

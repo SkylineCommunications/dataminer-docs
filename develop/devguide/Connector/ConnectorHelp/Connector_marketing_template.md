@@ -31,7 +31,7 @@ uid: Connector_marketing_template
 
 ## Use Cases
 
-### Use Case 1
+### [Title of Use Case 1]
 
 **Challenge**: challenge description.
 
@@ -39,7 +39,7 @@ uid: Connector_marketing_template
 
 **Benefit**: benefit(s) description.
 
-### Use Case 2
+### [Title of Use Case 2]
 
 **Challenge**: challenge description.
 
@@ -47,7 +47,7 @@ uid: Connector_marketing_template
 
 **Benefit**: benefit(s) description.
 
-### Use Case 3
+### [Title of Use Case 3]
 
 **Challenge**: challenge description.
 
@@ -64,6 +64,10 @@ uid: Connector_marketing_template
 - **Prerequisite 2** are needed for...
 
 - **Prerequisite 3** is required for...
+
+### ...
+
+[Include other technical information here, using the appropriate headers. If a lot of technical information is needed, or the information is not suitable for the marketing page, instead add a technical page and refer to it with the note below. Otherwise, remove this note.]
 
 > [!NOTE]
 > For detailed technical information, refer to our [technical documentation](xref:Connector_technical_template).

@@ -72,4 +72,4 @@ To deploy the D-DOCSIS branch of the EPM Solution:
 1. If the EPM package contains Visio drawings (in the *Visuals* folder), **add the Visio drawings** to the DMS. To do so:
 
    - For a Visio drawing linked to a specific connector (e.g. EPM Platform), see [Assigning a custom Visio file to a protocol](xref:Managing_Visio_files_linked_to_protocols#assigning-a-custom-visio-file-to-a-protocol).
-   - For a Visio drawings linked to a view, upload the drawing to the view. See [Set as active Visio file](xref:Editing_a_visual_overview_in_DataMiner_Cube#set-as-active-visio-file).
+   - For a Visio drawings linked to a view, upload the drawing to the view. See [Setting the active Visio file for an element, service, or view](xref:Set_as_active_Visio_file).

@@ -63,6 +63,7 @@ To customize how Cube connects to a DMA for a specific computer:
 >
 > - You can also configure this in the DataMiner Cube logon screen, before you actually log on. See [Overriding the default connection type](xref:Overriding_Cube_connection_type).
 > - The procedure above only applies to the one computer where it is done. If you want to change the default client communication settings for a DMA, you can do so in the file *ConnectionSettings.txt*. See [ConnectionSettings.txt](xref:ConnectionSettings_txt#connectionsettingstxt).
+> - From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44547-->, when Cube connects to a DMA that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) (i.e. a DMA of which the hostname ends with `.dataminer.services`), gRPC is always used, even if Cube has been manually configured to use .NET Remoting.
 
 ## Managing client versions
 

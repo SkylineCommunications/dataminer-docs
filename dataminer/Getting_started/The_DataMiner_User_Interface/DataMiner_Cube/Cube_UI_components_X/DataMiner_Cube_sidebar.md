@@ -124,7 +124,7 @@ In the Surveyor right-click menu, the following options are available, depending
 | Open | Any | Opens the item in a card. |
 | Open in new card | Any | Opens the item in a new card. |
 | Open in new undocked card | Any | Opens the item in a new, undocked card. |
-| Ticket | Element, service, view | Allows you to create a new ticket related to the right-clicked item. Only available on DMAs with a Ticketing license. However, note that this functionality is being retired. See [Ticketing](xref:ticketing). |
+| Ticket | Element, service, view | Obsolete. See [Ticketing](xref:ticketing). |
 | State | Element only | Opens a shortcut that allows you to [change the element state](xref:Changing_the_state_of_an_element). |
 | Mask | Element only | [Masks the element](xref:Masking_or_unmasking_an_element). |
 | Unmask | Element only | [Unmasks the element](xref:Masking_or_unmasking_an_element#unmasking-an-element). This option is only available for masked elements. |

@@ -368,7 +368,7 @@ When multiple bookings started at the same time, and each of those bookings requ
 
 #### Dashboards - Table component: Problem with scroll bars when using Firefox \[ID 29892\]
 
-When Mozilla Firefox was used, the table component would show scroll bars even in situations where it was not necessary.
+When Mozilla Firefox was used, the table component would show scrollbars even in situations where it was not necessary.
 
 Also, in some cases, columns would not resize correctly.
 

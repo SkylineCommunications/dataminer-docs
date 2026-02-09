@@ -135,6 +135,17 @@ Panning changes **the position of the displayed time range** without affecting i
 > [!NOTE]
 > If you have enabled the *Lock timeline to now* setting, you will be unable to pan past the "now" indicator.
 
+### Adjusting item height
+
+From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44524-->, you can adjust the height of all items on a timeline at once.
+
+To increase or decrease the height of all timeline items, rotate the mouse wheel while keeping the ALT key pressed.
+
+![Vertical zooming](~/dataminer/images/VerticalZoom.gif)<br>*Timeline component in DataMiner 10.6.3*
+
+> [!NOTE]
+> Items cannot shrink below one tenth of their initial height or grow beyond ten times their initial height.
+
 #### Linking to a time range component
 
 Instead of adjusting the time range directly in the timeline, you can link it to a time range component. This allows you to **control the displayed time range from a dedicated component**, which offers both quick and custom selection options.
@@ -179,6 +190,28 @@ To group items on the timeline based on one of the columns in your data<!--35638
 
    > [!NOTE]
    > If a group is empty (i.e. there is no start and end time), it is still displayed in the timeline component<!--RN 35600-->.
+
+### Group height behavior
+
+When grouping is applied, you can control how the height of each group is handled. This *Height* setting is available under *Groups* in the *Layout* pane, from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44577-->.
+
+You can choose between two kinds of behavior:
+
+- *Fixed* (default): The total height of each group remains the same, regardless of how many items it contains. As more items are added to a group, the individual items will automatically shrink so they all fit within the fixed group height.
+
+  With this behavior:
+
+  - All groups remain visually aligned.
+
+  - The vertical layout is predictable, even when some groups contain more items than others.
+
+- *Grow*: All items within a group keep the same height. As more items are added to a group, the group itself becomes taller to accommodate them.
+
+  With this behavior:
+
+  - Each item will always remain clearly readable.
+
+  - The number of items in a group is visually reflected by the group's height.
 
 ## Using the timeline component as an editing tool
 
@@ -230,7 +263,9 @@ To highlight items with a query filter:
 
 1. Apply the same query data to the query filter that is used by the timeline component.
 
-1. In the *Data* pane, navigate to *All available data* > *Components* > *Query filter #*, and drag the *Query columns* data item onto your timeline component.
+1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *[Page name]* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your timeline component.
+
+   Note that in older DataMiner versions, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
    In read mode, you can now use the query filter component to filter and refine the data displayed in the timeline component. Items that do not meet the specified criteria will be shown with lowered opacity.
 
@@ -246,12 +281,13 @@ Additionally, the following layout options are also available:
 |--|--|--|
 | Filtering & Highlighting | Highlight | Available from DataMiner 10.1.11/10.2.0 onwards<!--RN 33276-->. Toggle the switch to determine whether the items that match the criteria specified in a query filter will be highlighted. Enabled by default. For more information, see [Highlighting specific items](#highlighting-specific-items). |
 | Filtering & Highlighting | Opacity | Available from DataMiner 10.1.11/10.2.0 onwards<!--RN 33276-->. Set the level of transparency of the items that do not match the criteria specified in a query filter. This option is only available when *Highlight* is enabled. For more information, see [Highlighting specific items](#highlighting-specific-items). |
-| Advanced | Empty result message | Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Specify a custom message that is displayed when a query returns no results. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
+| Advanced | Empty result message | Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Specify a custom message that is displayed when a query returns no results. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!-- RN 44472 -->, this setting can be left empty, in which case no message is displayed and the component remains empty. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
 | Style | Grouping by | Toggle the switch to determine whether the name of the column the data was grouped by (optionally) is shown. Disabled by default. |
 | Style | Segment lines | Toggle the switch to determine whether segment lines are displayed in the timeline component. Enabled by default. |
 | Style | Lock timeline to now | Select the checkbox to set a "now" indicator at a fixed position on the timeline. When this option is enabled, users can zoom in and out on the timeline, but are restricted from panning past the indicator. Disabled by default. |
 | Item templates | Browse templates *or*<br>Reuse template (depending on your DataMiner version) | Reuse a saved template from another component in the same dashboard or low-code app. This option is only available if a template is already in use<!--RN 42226-->. |
 | Item templates | Edit | Open the Template Editor<!--RN 34761--> to customize the appearance of timeline items and configure actions triggered when a layer is selected. For more information, refer to [Customizing timeline items](#customizing-timeline-items). |
+| Groups | Height | Available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44577-->, when [grouping](#grouping-items-in-a-timeline) is applied. Set the height of the timeline groups to *Fixed* (default) or *Grow*. For more information, see [Group height behavior](#group-height-behavior). |
 
 > [!NOTE]
 >
@@ -298,7 +334,7 @@ This default template (available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.
 
 ![Selecting a timeline item](~/dataminer/images/Selecting_Timeline_Item.gif)<br>*Timeline component in DataMiner 10.5.9*
 
-This can for instance be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Timeline* > *Selected groups* / *Selected time ranges*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
+This can for instance be useful when the timeline's [component data](xref:Component_Data) (e.g. *Components* > *[Page name]* > *Timeline* > *Selected groups* / *Selected time ranges*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
 
 ### Timeline settings
 

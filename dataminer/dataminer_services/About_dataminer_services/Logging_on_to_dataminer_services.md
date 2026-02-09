@@ -21,10 +21,10 @@ When you access <https://dataminer.services>, you will have the following option
 
 - If your corporate email address is linked to a Microsoft (personal or work), Google, Amazon, or LinkedIn account, you can authenticate yourself via one of those identity providers. This option is to be preferred, as it will allow you to use an existing account rather than a new, dedicated one.
 
-  > [!NOTE]
-  > In case you are using the Microsoft login and get an error that says you need admin approval, you can find the steps that your system administrator needs to take to resolve this on [this instructions page](https://dataminer.services/make-an-account/access_dcp.html).
-
 - If you cannot use an existing account, you can choose to create a dedicated dataminer.services account via the *Sign Up* option at the bottom. You will then be invited to enter your corporate email address and a password of your choice.
+
+> [!TIP]
+> If you are having issues logging on to dataminer.services, please refer to [Investigating dataminer.services login issues](xref:investigating_dataminer_services_login_issues).
 
 > [!NOTE]
 >

@@ -4,6 +4,9 @@ uid: Configuring_job_sections
 
 # Configuring job sections
 
+> [!IMPORTANT]
+> The Jobs app is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.5.0 onwards.
+
 While a user is creating a job, several different job sections can be displayed.
 
 To configure these job sections:

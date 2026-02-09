@@ -64,7 +64,7 @@ Each row in a query corresponds to an item in the grid.
 
 You can use a grid component as a dynamic selector, i.e. a component whose selection **determines behavior or data elsewhere in your dashboard or app**. A common use case is controlling what is shown in another component, but selected values can also serve as input for scripts, queries, or conditional behavior.
 
-When you select an item in the grid, the selected data (*All available data* > *Components* > *Grid* > *Selected items* > *Tables*) becomes automatically available for use in other components.
+When you select an item in the grid, the selected data (e.g. *All available data* > *Components* > *[Page name]* > *Grid* > *Selected items* > *Tables*) becomes automatically available for use in other components.
 
 In the example below, a grid filters a table component based on job state. By selecting a grid item, users can quickly switch between active, upcoming, completed, or all jobs.
 
@@ -89,7 +89,7 @@ Additionally, the following layout options are also available:
 |--|--|--|--|
 | Filtering & Highlighting | N/A | Highlight | Toggle the switch to determine whether the nodes that match the criteria specified in a query filter will be highlighted. Enabled by default. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
 | Filtering & Highlighting | N/A | Opacity | Set the level of transparency of the items that do not match the criteria specified in a query filter. This option is only available when *Highlight* is enabled. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
-| Advanced | N/A | Empty result message | Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Specify a custom message that is displayed when a query returns no results. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
+| Advanced | N/A | Empty result message | Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Specify a custom message that is displayed when a query returns no results. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!-- RN 44472 -->, this setting can be left empty, in which case no message is displayed and the component remains empty. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
 | Advanced | N/A | Grid template | Available up to DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11<!--RN 43889-->. Configure the number of columns and rows in the grid, and adjust scaling options<!--RN 34761 + 34781-->. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
 | Grid layout | Columns | Fixed column count | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->. Determine how many columns are displayed. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
 | Grid layout | Columns | Columns | Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43889-->, when the *Fixed column count* option is enabled. Specify the number of columns to display. |
@@ -201,7 +201,7 @@ This default template (available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.
 
 ![Selecting a grid block](~/dataminer/images/Selecting_Grid_Block.gif)<br>*Grid component in DataMiner 10.5.7*
 
-This can for instance be useful when the grid's [component data](xref:Component_Data) (i.e. *Components* > *Grid* > *Selected items* > *Tables*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
+This can for instance be useful when the grid's [component data](xref:Component_Data) (e.g. *Components* > *[Page name]* > *Grid* > *Selected items* > *Tables*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
 
 #### Highlighting filtered results
 
@@ -219,7 +219,9 @@ To **visually distinguish items that match your filter criteria from others**, y
 
 1. Apply the same query data to the query filter that is used by the grid component.
 
-1. In the *Data* pane, navigate to *All available data* > *Components* > *Query filter #*, and drag the *Query columns* data item onto your grid component.
+1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *[Page name]* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your grid component.
+
+   Note that in older DataMiner versions, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
    In read mode, you can now use the query filter component to filter and refine the data displayed in the grid component. Items that do not meet the specified criteria will be shown with lowered opacity.
 

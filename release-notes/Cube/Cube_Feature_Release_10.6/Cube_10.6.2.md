@@ -2,21 +2,17 @@
 uid: Cube_Feature_Release_10.6.2
 ---
 
-# DataMiner Cube Feature Release 10.6.2 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.6.2
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.5.0 [CU11].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.2](xref:General_Feature_Release_10.6.2).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.2](xref:Web_apps_Feature_Release_10.6.2).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -89,6 +85,14 @@ From now on, when you try to add a DataMiner Agent to a DataMiner System, an err
 - The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
 
 If the DataMiner System is a STaaS system, an error message will also appear when the DataMiner Agent is not cloud-connected.
+
+#### Ticketing module End of Life [ID 44373]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
+
+The Ticketing module has been declared End of Life.
+
+On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer be shown in the list of applications in DataMiner Cube.
 
 #### Scheduler module will only fetch the Automation scripts in the 'Scheduler Templates' folder at startup [ID 44383]
 

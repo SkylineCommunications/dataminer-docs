@@ -6,6 +6,9 @@ uid: Connector_technical_template
 
 Below you can find the template for the technical page for connectors. When you copy-paste this, remember to replace all the placeholder text and remove any unnecessary square brackets.
 
+> [!IMPORTANT]
+> Only add a technical page when this is necessary. If very little or no technical information is needed to be able to use the connector, only add a marketing page.
+
 ```md
 ---
 uid: Connector_technical_template
@@ -82,7 +85,7 @@ The web interface is only accessible when the client machine has network access 
 
 ### Redundancy
 
-[Use this section to indicate if redundancy is defined in the connector or not.]
+[If redundancy is defined in the connector, include this section; otherwise, remove it.]
 
 ### Automation Scripts
 

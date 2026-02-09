@@ -14,6 +14,8 @@ To learn how to share a dashboard as an email report in the Dashboards app, you 
 
 *Watch first: [Creating your first dashboard](xref:Creating_a_completely_new_dashboard)*
 
+*Watch next: [Creating a scheduled task to send reports](xref:Manually_adding_a_scheduled_task)*
+
 ## [From DataMiner 10.3.0 [CU12]/10.4.3 onwards](#tab/tabid-1)
 
 1. In the list of dashboards on the left, select the dashboard you want to share<!--RN 38278-->.

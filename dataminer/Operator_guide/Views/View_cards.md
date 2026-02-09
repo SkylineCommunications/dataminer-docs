@@ -32,7 +32,7 @@ The navigation pane on the left side of a view card contains a tree view with th
 Under the *VISUAL* node, one or more pages are displayed that contain a graphic representation of the view. These can be completely customized in Visio.
 
 > [!NOTE]
-> For more information on how to change the Visio file linked to a particular view, see [Switching between different Visio files](xref:Managing_Visio_files_linked_to_protocols#switching-between-different-visio-files).
+> For more information on how to change the Visio file linked to a particular view, see [Setting the active Visio file for an element, service, or view](xref:Set_as_active_Visio_file).
 
 ### BELOW THIS VIEW
 
@@ -202,7 +202,7 @@ This page links to the legacy DMS Dashboards module.
 This page shows any aggregation rules that were found for the view. The different aggregation rules are listed in the left column, details are shown in the right column.
 
 > [!TIP]
-> See also: [Working with aggregation rules](xref:Working_with_aggregation_rules)
+> See also: [Aggregation rules](xref:About_aggregation_rules)
 
 ### HISTOGRAM
 

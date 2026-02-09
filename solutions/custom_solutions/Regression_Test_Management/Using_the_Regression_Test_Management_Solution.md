@@ -29,7 +29,7 @@ On the visual overview of the *Regression Test Results* element, click the *EXEC
 
 ### From DataMiner Scheduler
 
-1. In DataMiner Cube, open the [Scheduler](xref:scheduler) module.
+1. In DataMiner Cube, open the [Scheduler](xref:About_the_Scheduler_module) module.
 
 1. [Create a new task](xref:Manually_adding_a_scheduled_task), using the following configuration:
 

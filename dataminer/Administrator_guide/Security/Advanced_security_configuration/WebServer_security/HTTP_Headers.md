@@ -16,7 +16,7 @@ The X-Frame-Options header controls which other websites can embed the DataMiner
 
 1. In the *Connections* pane on the left, select *Default Web Site*.
 
-1. In the middle pane, double-click *HTTP Reponse Headers*.
+1. In the middle pane, double-click *HTTP Response Headers*.
 
 1. In the *Actions* pane, click *Add*.
 
@@ -34,13 +34,31 @@ The X-Content-Type-Options header dictates how the browser should handle MIME ty
 
 1. In the *Connections* pane on the left, select *Default Web Site*.
 
-1. In the middle pane, double-click *HTTP Reponse Headers*.
+1. In the middle pane, double-click *HTTP Response Headers*.
 
 1. In the *Actions* pane, click *Add*.
 
 1. Set *Name* to *X-Content-Type-Options*.
 
 1. Set *Value* to *NOSNIFF*.
+
+1. Click *OK*.
+
+### Referrer-Policy
+
+The Referrer-Policy header dictates how much referrer information should be included in the *Referer*<!-- sic --> header.
+
+1. Open *IIS Manager*.
+
+1. In the *Connections* pane on the left, select *Default Web Site*.
+
+1. In the middle pane, double-click *HTTP Response Headers*.
+
+1. In the *Actions* pane, click *Add*.
+
+1. Set *Name* to *Referrer-Policy*.
+
+1. Set *Value* to *strict-origin-when-cross-origin*.
 
 1. Click *OK*.
 
@@ -78,7 +96,7 @@ To enable *Strict Transport Security*:
 
 1. In the *Connections* pane on the left, select *Default Web Site*.
 
-1. In the middle pane, double-click *HTTP Reponse Headers*.
+1. In the middle pane, double-click *HTTP Response Headers*.
 
 1. In the *Actions* pane, click *Add*.
 
@@ -98,8 +116,6 @@ To enable *Strict Transport Security*:
 There are some other HTTP headers that can improve security. However, their value depends on your specific DataMiner setup (e.g. resources used in Dashboards/Low-Code Apps):
 
 - [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
-
-- [Referrer Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
 
 - [Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy)
 

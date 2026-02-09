@@ -68,26 +68,42 @@ Examples:
 
 #### URLs
 
-In the URL section, you have the ability to either select [query parameters](#query-parameters) or the [static value `DMAIP`](#dmaip).
+In the URL section, you have the ability to either select [URL data](#url-data), previously known as query parameters, or the [static value `DMAIP`](#dmaip).
 
-##### Query parameters
+##### URL data
 
-To create references to the URL query parameters inside textual settings, use the following syntax:
+To create references to URL data inside textual settings, use the following syntax:
 
-```txt
-{URL."Category name".type.Value}
-```
+- From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->:
 
-- **URL**: A fixed keyword to indicate that the variable represents a URL .
+  ```txt
+  {URL.Data.type.Value}
+  ```
 
-- **Category name**: The part of the URL where the data will be embedded, e.g. "Query parameters".
+  - **URL**: A fixed keyword to indicate that the variable represents a URL.
 
-- **Type**: The type of data, e.g. "Numbers" or "Texts".
+  - **Data**: Indicates that the data originates from the URL data section.
 
-  > [!NOTE]
-  > Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075-->, the data types "Texts" and "Tables" are called "Strings" and "Query rows" instead.
+  - **Type**: The type of data, e.g. "Numbers" or "Texts".
 
-- **Value**: The property of the data that should be used in the URL.
+  - **Value**: The property of the data that should be used in the URL.
+
+- Prior to DataMiner 10.5.0 [CU12]/10.6.3:
+
+  ```txt
+  {URL."Query parameters".type.Value}
+  ```
+
+  - **URL**: A fixed keyword to indicate that the variable represents a URL.
+
+  - **"Query parameters"**: Indicates that the data originates from the URL query parameters section.
+
+  - **Type**: The type of data, e.g. "Numbers" or "Texts".
+
+    > [!NOTE]
+    > Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075-->, the data types "Texts" and "Tables" are called "Strings" and "Query rows" instead.
+
+  - **Value**: The property of the data that should be used in the URL.
 
 > [!NOTE]
 >
@@ -98,7 +114,7 @@ To create references to the URL query parameters inside textual settings, use th
 Example: If you want to pass a number as a query parameter to a URL, you could use the following syntax:
 
 ```txt
-{URL."Query parameters".Numbers.Value}
+{URL.Data.Numbers.Value}
 ```
 
 ##### DMAIP

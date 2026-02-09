@@ -4,14 +4,14 @@ uid: GetTicketFields
 
 # GetTicketFields
 
+> [!IMPORTANT]
+>
+> - The Ticketing app is obsolete. It is no longer available from DataMiner 10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
+> - DataMiner Ticketing is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
+
 Use this method to retrieve the fields for a particular ticket type (called “domain” in the Ticketing app).
 
 This method can also be used to see which third-party fields are available, and which DataMiner fields are linked to which third-party field (by checking the ExternalFieldName tag in the DMATicketField array).
-
-> [!CAUTION]
->
-> - DataMiner Ticketing is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
-> - DataMiner Ticketing is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 ## Input
 

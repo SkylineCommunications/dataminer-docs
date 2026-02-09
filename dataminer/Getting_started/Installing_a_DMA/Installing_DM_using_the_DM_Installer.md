@@ -69,7 +69,7 @@ To install DataMiner using the DataMiner Installer v10.5, follow the steps below
 
    The progress of the installation will be displayed. A *cancel* button in the lower-right corner allows you to cancel the installation process if necessary.
 
-   Once the installation is complete, the configuration window will be displayed.
+   When the installation is complete, do not immediately click the *Run Configuration Tool* button. First read the notes below.
 
    > [!IMPORTANT]
    > At this point, the DataMiner core software is fully installed. If you continue with the steps below, the Installer will also automatically take care of the license and data storage configuration. However, if you **do not want a default installation**, you may not want to use this automatic configuration:
@@ -80,21 +80,21 @@ To install DataMiner using the DataMiner Installer v10.5, follow the steps below
    > [!NOTE]
    > If you have accidentally closed the configuration window, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.exe`. Make sure to run it with administrator privileges.
 
-1. To continue with a default installation, click *Next*.
+1. If you want to proceed with the configuration of your DataMiner Agent, click *Run Configuration Tool* to start the DataMiner Configurator, and then click *Next*.
 
-1. Select the desired database type:
+1. On the *Storage* page, select the desired database type:
 
-   - [Storage as a Service (STaaS)](xref:STaaS) (recommended).
+   - [STaaS (Storage as a Service)](xref:STaaS) (recommended).
 
-   - *Self-hosted - External Storage*: A regular [dedicated clustered storage setup](xref:Configuring_dedicated_clustered_storage). If you select this option, you will also need to fill in the connection details for both Cassandra and OpenSearch.
+   - *Self Managed - External*: A regular [dedicated clustered storage setup](xref:Configuring_dedicated_clustered_storage). If you select this option, you will also need to fill in the connection details for both Cassandra and OpenSearch.
 
      > [!NOTE]
      > Make sure these clusters are active and reachable from the machine where you are installing DataMiner. You are responsible for the management of these external database clusters.
 
-1. Click *Next*, and fill in the required details to connect your DataMiner Agent to dataminer.services:
+1. Click *Next* to proceed to the *Registration* page, and fill in the required details to connect your DataMiner Agent to dataminer.services:
 
    - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner Systems in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
-   - *System Name*: This name will be used to identify the DataMiner System in various dataminer.services applications.
+   - *System name*: This name will be used to identify the DataMiner System in various dataminer.services applications.
    - *System URL*: This URL will grant you remote access to your DataMiner System web applications. You can choose to either [disable or enable this remote access feature](xref:Controlling_remote_access) at any time.
    - *Admin Email*: This email address must be associated with a dataminer.services account that is a member of your organization. It will become the owner of the DMS on dataminer.services.
    - *STaaS Region*: If you have selected to use [STaaS](xref:STaaS) for data storage, select the region where your data should be hosted.
@@ -108,11 +108,13 @@ To install DataMiner using the DataMiner Installer v10.5, follow the steps below
    >
    > You can also deploy DataMiner in subscription mode first and [switch to a perpetual license](xref:Switching_from_subscription_mode_to_perpetual_license) later.
 
-1. Click *Next*, and verify the selected configuration.
+1. Click *Next*, and verify the configuration settings you entered.
 
-1. To start the configuration, click *Next*.
+1. To start the configuration, click *Configure*.
 
-   The configuration progress will now be displayed. When the configuration is complete, you can close the window.
+   The configuration progress will now be displayed.
+
+1. When the configuration is complete, click *Finish* to close the installer.
 
    DataMiner will automatically start up and connect to dataminer.services. DataMiner Cube will also be installed, so you can connect to DataMiner locally.
 

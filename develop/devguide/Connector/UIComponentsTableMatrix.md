@@ -14,13 +14,16 @@ For this purpose, three parameters must be configured in the protocol:
 
 To manipulate the inputs and outputs, you can use the [Matrix Helper](xref:UIComponentsTableMatrixHelper).
 
-> [!NOTE]
-> If a matrix control is configured like this, the severity colors of the crosspoints depend on the alarm monitoring configured for the outputs tables in the alarm template. This is not configured with the matrix alarm level editor like for classic matrix controls. The crosspoint severity color will be the highest severity color for all monitored column parameters of the outputs table for the relevant row.
-
 > [!TIP]
 > For information on how to configure the standard matrix supported prior to DataMiner 10.3.1/10.4.0, see [Standard matrix](xref:UIComponentsMatrix)
 
 ![DataMiner Cube matrix](~/develop/images/uimatrix.png)
+
+## Limitations
+
+- If a matrix control is configured like this, the severity colors of the crosspoints depend on the alarm monitoring configured for the outputs tables in the alarm template. This is not configured with the [matrix alarm level editor](xref:Configuring_normal_alarm_thresholds#configuring-alarm-thresholds-for-matrix-parameters) like for classic matrix controls. The crosspoint severity color will be the highest severity color for all monitored column parameters of the outputs table for the relevant row.
+
+- Table-based matrix parameters are not supported in [Router Control](xref:RouterControl).
 
 ## See also
 

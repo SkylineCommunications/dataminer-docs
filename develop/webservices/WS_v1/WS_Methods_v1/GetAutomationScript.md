@@ -6,6 +6,9 @@ uid: GetAutomationScript
 
 Use this method to retrieve an Automation script.
 
+> [!NOTE]
+> From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44232-->, this method requires either the user permission [Modules > Automation > Execute](xref:DataMiner_user_permissions#modules--automation--execute) or the user permission [Modules > Automation > UI Available](xref:DataMiner_user_permissions#modules--automation--ui-available). In earlier DataMiner versions, both permissions are required.
+
 ## Input
 
 | Item       | Format | Description                                          |

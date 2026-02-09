@@ -4,15 +4,15 @@ uid: AddTicketAttachment
 
 # AddTicketAttachment
 
+> [!IMPORTANT]
+>
+> - The Ticketing app is obsolete. It is no longer available from DataMiner 10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
+> - DataMiner Ticketing is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
+
 > [!NOTE]
 > This method is solely intended for internal use by Skyline Communications employees.
 
 Deprecated. Use the [AddTicketAttachmentV2](xref:AddTicketAttachmentV2) method instead.
-
-> [!CAUTION]
->
-> - DataMiner Ticketing is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/dataminer/images/EOL_Duo.png)
-> - DataMiner Ticketing is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 ## Input
 

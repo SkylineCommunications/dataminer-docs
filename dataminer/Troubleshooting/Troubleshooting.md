@@ -9,7 +9,7 @@ uid: Part6Troubleshooting
     <a href="/dataminer/Troubleshooting/Error_Messages/Error_Messages.html" title="Error messages" target="_self"><img src="~/dataminer/images/Error_Messages.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/dataminer/Troubleshooting/Logging/logging.html" title="Logging" target="_self"><img src="~/dataminer/images/Logging.svg" style="width:100%"></a>
+    <a href="/dataminer/Troubleshooting/Logging/Monitoring_real-time_communication_between_a_DMA_and_an_element.html" title="Logging" target="_self"><img src="~/dataminer/images/Logging.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Flowcharts.html" title="Troubleshooting flowcharts" target="_self"><img src="~/dataminer/images/Troubleshooting_Flowcharts.svg" style="width:100%"></a>
