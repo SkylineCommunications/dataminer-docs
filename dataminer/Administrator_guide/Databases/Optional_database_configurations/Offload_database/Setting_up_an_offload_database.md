@@ -88,9 +88,6 @@ Depending on the type of database, the procedure is slightly different.
 
    - For an Oracle database, run the following table creation script found in the `C:\Skyline DataMiner\Tools` directory: *CentralTabledefOracle.sql*.
 
-   > [!TIP]
-   > See also: [Automatic creation and verification of the offload database](#automatic-creation-and-verification-of-the-offload-database)
-
 1. For an Oracle Database, create a shared folder on the database server and give it an appropriate name (e.g. "DataMinerOffload").
 
    Also grant the following permission to the database user:
@@ -215,12 +212,11 @@ The final step is the configuration of the DMS.
 
 ## Automatic creation and verification of the offload database
 
-> ![NOTE]
-> Starting from DataMiner 10.6.4, DataMiner will no longer automatically create or update table definitions in the offload database. Initial tables can be created through the instructions in this document. If any updates are required before going to a newer DataMiner version, instructions will be provided.
+> [!NOTE]
+>
+> - Starting from DataMiner 10.6.4, DataMiner will no longer automatically create or update MySQL or MSSQL table definitions in the offload database. Initial tables can be created through the instructions in this document. If any updates are required before going to a newer DataMiner version, instructions will be provided.
+> - Oracle databases have always had to be created and updated manually.
 
 When you install or upgrade a DataMiner Agent using an upgrade package, the offload database is created automatically.
 
 Also, when you upgrade a DataMiner Agent using an upgrade package, the offload database is automatically verified (and altered if necessary).
-
-> [!NOTE]
-> This only applies to databases of type "MySQL" and "Microsoft SQL Server". Oracle databases have to be created manually.
