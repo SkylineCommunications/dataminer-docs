@@ -47,6 +47,18 @@ Also, write parameters will no longer be saved as this would cause unnecessary l
 
 ### Fixes
 
+#### MessageBroker: Problem with hostnames and FQDNs containing a certain combination of dashes and characters [ID 44433]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.3 -->
+
+Up to now, hostnames and FQDNs in the *MessageBrokerConfig.json* file would incorrectly be considered invalid when they contained a certain combination of dashes and characters.
+
+Examples of hostnames that were incorrectly considered invalid:
+
+- Hostnames that start with one letter or number, followed by a dash. For example, `a-agent`, `h-hostname`, etc.
+- Full IPv6 addresses like `[2001:0db8:85a3:0000:0000:8a2e:0370:7334]`
+- Shortened IPv6 addresses like `[::1]`
+
 #### Problem with SLNet when receiving a subscription with a large filter that contained wildcards [ID 44512]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
