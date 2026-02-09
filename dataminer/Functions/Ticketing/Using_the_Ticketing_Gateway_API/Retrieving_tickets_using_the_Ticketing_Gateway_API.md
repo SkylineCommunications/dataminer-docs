@@ -4,9 +4,8 @@ uid: Retrieving_tickets_using_the_Ticketing_Gateway_API
 
 # Retrieving tickets using the Ticketing Gateway API
 
-<!-- > [!IMPORTANT]
-> The Ticketing Gateway API is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.6.0/10.6.2 onwards. 
-RN 44417-->
+> [!IMPORTANT]
+> The Ticketing Gateway API is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44417-->.
 
 Tickets can be retrieved in a number of ways. See the following examples.
 
