@@ -4,6 +4,51 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.19
+
+### New features
+
+#### IDE
+
+##### .slnx support [ID 44494]
+
+Visual Studio 2026 introduces the .slnx solution file format. This is a new XML-based solution file which is simplified compared to the legacy .sln format. (For more information regarding this new format, refer to [New, Simpler Solution File Format](https://devblogs.microsoft.com/visualstudio/new-simpler-solution-file-format/)).
+
+DIS now supports this new solution file format in addition to the older .sln solution file format.
+
+> [!NOTE]
+> When converting an XML to a solution, the solution will still use the older .sln format. This is because DIS also supports older VS versions that do not support the .slnx solution file format.
+
+##### Automatically update solution files checkbox replaced by Validate solution files checkbox [ID 44503]
+
+The checkbox *Automatically update solution files* has been replaced by a new checkbox *Validate solution files*. Whereas the *Automatically update solution files* checkbox would, when checked, automatically update files in the solution when it was detected that these were outdated, the new *Validate solution files* checkbox will, when enabled, show a banner indicating that it detected outdated files in the solution. A developer can then choose to either let DIS update these files or to disregard these.
+
+##### Importing could result in invalid authentication on cloud [ID 44590]
+
+DIS uses the cloud connection (dataminer.services) for importing Low Code Apps, or Dashboards. In case DIS connected to a DataMiner System consisting of multiple Agents, an issue could occur because the request would not always be processed by the same Agent in the System, which could lead to a "Invalid or Expired Authentication Ticket" error.
+This has now been fixed, the requests will be handel by the same Agent to which the connection has been set up.
+
+##### Matrix macro update [ID 44363]
+
+The matrix macro (see [Matrix development using DIS](xref:UIComponentsMatrixDis)) has been updated so it will not generate a new parameter of type `discreetInfo` if one already exists (e.g. in case the connector already contains another matrix), because a connector should have only one `discreetInfo` parameter.
+
+This change will also prevent the QAction from being generated, because it assumes a QAction already exists that handles matrix operations.
+
+##### Low code app import menu mentions version [ID 44504]
+
+The version of the Low Code App is now displayed in the popup window for importing low-code apps with DIS. This makes it easier to see whether it is actually needed to update the package in the solution, or if the current version is already imported.
+
+##### Updated DIS dependencies
+
+- [Skyline.DataMiner.Core.ArtifactDownloader](https://www.nuget.org/packages/Skyline.DataMiner.Core.ArtifactDownloader) version 3.2.0
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 5.0.0
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 3.0.0
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 3.0.0
+- [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol) version 2.0.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.6.2.2
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.6.2.2
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.6.2.2
+
 ## DIS 3.1.18
 
 ### New features
