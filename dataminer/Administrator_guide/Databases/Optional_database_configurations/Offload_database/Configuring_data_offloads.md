@@ -5,9 +5,6 @@ keywords: central database
 
 # Configuring data offloads
 
-> [!NOTE]
-> This feature is not available if [Swarming](xref:Swarming) is enabled.
-
 ## Configuring offloads to files
 
 Offloading data to files is supported from DataMiner 10.2.0/10.1.1 onwards. To do so:

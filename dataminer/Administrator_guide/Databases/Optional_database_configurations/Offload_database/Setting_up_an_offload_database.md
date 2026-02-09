@@ -6,7 +6,7 @@ keywords: central database
 # Setting up an offload database
 
 > [!NOTE]
-> This feature is not available if [Swarming](xref:Swarming) is enabled.
+> When [Swarming](xref:Swarming) is enabled, some offload features are disabled. For more information, see [Offload database configuration with Swarming enabled](xref:Offload_Database_With_Swarming).
 
 ## Server configuration
 
@@ -214,6 +214,9 @@ The final step is the configuration of the DMS.
 > - The offload database settings can also be found in the file *DB.xml*. For more information, see [DB.xml](xref:DB_xml#dbxml).
 
 ## Automatic creation and verification of the offload database
+
+> ![NOTE]
+> Starting from DataMiner 10.6.4, DataMiner will no longer automatically create or update table definitions in the offload database. Initial tables can be created through the instructions in this document. If any updates are required before going to a newer DataMiner version, instructions will be provided.
 
 When you install or upgrade a DataMiner Agent using an upgrade package, the offload database is created automatically.
 
