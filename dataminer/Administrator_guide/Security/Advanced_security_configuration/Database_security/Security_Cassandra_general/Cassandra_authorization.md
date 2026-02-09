@@ -26,6 +26,6 @@ To enable the *CassandraAuthorizer* in Cassandra:
    >
    > - `GRANT CREATE ON ALL KEYSPACES TO <YOUR DATABASE USER/ROLE>;`
    > - `GRANT ALL ON KEYSPACE "SLDMADB" TO <YOUR DATABASE USER/ROLE>;`
-   > - `GRANT ALL ON KEYSPACE "sldmadb_ticketing" TO <YOUR DATABASE USER/ROLE>;` 
+   > - `GRANT ALL ON KEYSPACE "sldmadb_ticketing" TO <YOUR DATABASE USER/ROLE>;`
    >
-   > (Obsolete from DataMiner 10.6.0 onwards<!--RN 44417-->.)
+   > (Obsolete from DataMiner 10.6.0/10.6.3 onwards<!--RN 44417-->.)
