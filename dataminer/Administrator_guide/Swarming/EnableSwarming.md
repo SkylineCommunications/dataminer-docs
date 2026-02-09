@@ -17,7 +17,7 @@ uid: EnableSwarming
 
   Swarming [will eventually support automatic switchover](xref:Swarming#upcoming-features) of elements in case issues are detected, so that it will replace Failover functionality.
 
-- No [data offloads](xref:Offload_database) are configured (note that this prerequisite will no longer be needed soon).
+- If [data offloads](xref:Offload_database) are configured, the configuration is compatible with Swarming. For more information, see [Offload database configuration with Swarming enabled](xref:Offload_Database_With_Swarming).
 
 - The [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards) is not enabled.
 

@@ -7,7 +7,7 @@ keywords: central database, swarming
 
 When [Swarming](xref:Swarming) is enabled, some offload features are disabled.
 
-Before 10.6.4, all offload features were disabled when Swarming was enabled.
+Before 10.6.4, all offload configuration features were disabled when Swarming was enabled.
 
 Starting from 10.6.4, provided the `info` and `alarm` tables have an compatible primary key definition, all offloads are supported except for `alarm_property`, `brainlink`, `interface_alarm`, and `service_alarm` tables.
 
