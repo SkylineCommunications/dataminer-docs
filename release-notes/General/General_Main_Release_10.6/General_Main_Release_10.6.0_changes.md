@@ -668,6 +668,12 @@ When database operations fail or take too long, the queue of database synchroniz
 
 From now on, SLAnalytics will pause the creation of new synchronization tasks for some types of model information whenever there are too many pending tasks already. New synchronization operations will only be created again once the backlog has decreased.
 
+#### Ticketing app End of Life [ID 44417]
+
+<!-- MR 10.5.0 [CU12] (adjusted to 10.6.0 as Ticketing is still available in 10.5.0) - FR 10.6.3 -->
+
+DataMiner Ticketing has been declared End of Life. As a result, all server code related to Ticketing has been removed.
+
 #### Security Advisory BPA test: Enhancements [ID 44444] [ID 44477] [ID 44566]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->

@@ -357,7 +357,7 @@ As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway C
 
 #### Ticketing app End of Life [ID 44417]
 
-<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+<!-- MR 10.5.0 [CU12] (adjusted to 10.6.0 as Ticketing is still available in 10.5.0) - FR 10.6.3 -->
 
 DataMiner Ticketing has been declared End of Life. As a result, all server code related to Ticketing has been removed.
 
