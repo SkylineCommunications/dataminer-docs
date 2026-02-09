@@ -18,8 +18,8 @@ When DataMiner is moving the XML files from disk to database, it will take a bac
 
 The backup is initially stored in the *Recycle Bin* folder, but you can manually copy it over to a different location to have long-term access. It is stored in two .zip files, one for the elements folder and one for the redundancy folder. These .zip files are a snapshot from the moment Swarming was enabled. The files will for instance look like this:
 
-- `2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip`
-- `2024_11_20 11_03_12_300_RedundancyFolder_BeforeSwarmingMigration.zip`
+- `2024_11_20 11_03_12_300_Elements - Elements 1591715048.zip`
+- `2024_11_20 11_03_12_300_Redundancy - Redundancy 1722493042.zip`
 
 To restore this backup and roll back Swarming:
 
