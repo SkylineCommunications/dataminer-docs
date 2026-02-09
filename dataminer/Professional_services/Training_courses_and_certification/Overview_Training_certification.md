@@ -14,12 +14,10 @@ The **Certificate of Expertise** attests the effective knowledge and expertise o
 For example, the DataMiner Fundamentals Certification is intended for DataMiner users who handle day-to-day operations in the DataMiner software, and the DataMiner Configurator Certification is intended for DataMiner users who set up and maintain DataMiner Systems, including adding new devices and new connectors, managing user accounts, setting up backup policies, creating Visual Overview pages, defining alarm thresholds, etc.
 
 > [!TIP]
-> For more information about the different certifications and their process, please visit [DataMiner Certification](https://community.dataminer.services/learning/certification/).>
+> For more information about the different certifications and their process, please refer to [DataMiner Certification](https://community.dataminer.services/learning/certification/).
 
 > [!NOTE]
-> Certification **exams are recorded** to ensure fairness and to allow internal review in case of irregularities or complaints.
-> Recordings are used **exclusively for internal purposes** and are not shared with candidates or third parties.
-> **By starting the exam, candidates consent to this recording and its use as described above.**
+> Certification **exams are recorded** to ensure fairness and to allow internal review in case of irregularities or complaints. Recordings are used **exclusively for internal purposes** and are not shared with candidates or third parties. **By starting the exam, candidates confirm that they consent to this recording and its use as described above.**
 
 ## DataMiner Fundamentals and Configurator exam guide
 
