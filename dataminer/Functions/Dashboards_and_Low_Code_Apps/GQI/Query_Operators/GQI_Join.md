@@ -114,7 +114,7 @@ This is the default strategy when the [partition strategy](#partition-strategy) 
 
 It works by fetching **all** rows from the *target query* into memory immediately. The join operation then proceeds by fetching the rows of the *source query* as needed and looks up matching rows from memory.
 
-> [!WARNING]
+> [!IMPORTANT]
 > Join conditions for the prefetch strategy are evaluated on the **display value** of the cells.
 
 > [!TIP]
@@ -126,7 +126,7 @@ This strategy is available from DataMiner 10.3.3/10.4.0 onwards. <!-- RN 35057 -
 
 It works by fetching rows from the *source query* one by one. For every row, a filter is constructed to apply on the *target query*. The goal is to execute the *target query* once for every row in the *source query*.
 
-> [!WARNING]
+> [!CAUTION]
 > Since every row from the *source query* triggers a new query execution, the workload can quickly explode. Therefore, only use this strategy in one of the following scenarios:
 >
 > - The number of rows requested from the joined query is limited.
