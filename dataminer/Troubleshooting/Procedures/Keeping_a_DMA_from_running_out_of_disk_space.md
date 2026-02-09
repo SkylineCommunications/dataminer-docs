@@ -25,6 +25,14 @@ Total estimated time of the procedure: approximately 40 minutes, depending on th
 
 1. Depending on the results of this initial analysis, you can then make the following adjustments:
 
+    - **Cleaning up the LogCollector folder - 5 minutes**  
+      When manually creating LogCollector packages, these are typically saved on the desktop. These packages need to get cleaned up manually.
+      On the desktop, look inside the SL_LogCollector folder and remove the old packages.
+      If other users tend to access the server, be sure to check the desktop of those other users via `C:\Users\<user>\Desktop\SL_LogCollector`.
+
+      > [!NOTE]
+      > If Skyline takes LogCollector packages remotely, i.e. via the cloud, these are automatically cleaned up.
+      
     - **Adjusting the TTL settings – 5 minutes**
 
         Adjust your TTL settings, so that data are removed from the local database more quickly. On a DMA with an SQL local database, changing these settings will have an effect in approximately one hour. However, on a DMA with a Cassandra database, there will be no immediate effect, as it is the TTL at the time a record is created that determines when that record is removed.
