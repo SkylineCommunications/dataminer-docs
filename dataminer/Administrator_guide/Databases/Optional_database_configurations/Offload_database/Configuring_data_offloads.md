@@ -6,7 +6,7 @@ keywords: central database
 # Configuring data offloads
 
 > [!NOTE]
-> When [Swarming](xref:Swarming) is enabled, some offload features are disabled. For more information, see [Offload database configuration with Swarming enabled](xref:Offload_database_configuration_with_Swarming_enabled).
+> When [Swarming](xref:Swarming) is enabled, some offload features are disabled. For more information, see [Offload database configuration with Swarming enabled](xref:Offload_Database_With_Swarming).
 
 ## Configuring offloads to files
 
