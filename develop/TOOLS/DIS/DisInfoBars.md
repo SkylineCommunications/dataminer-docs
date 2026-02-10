@@ -17,6 +17,6 @@ The following info bars are available:
 - **Secure Coding NuGet**: One or more projects in the solution do not reference the [Secure Coding Analyzers NuGet package](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SecureCoding.Analyzers) or reference an outdated version.
 - **StyleCop Analyzers NuGet**: One or more projects in the solution do not use the correct StyleCop.Analyzers NuGet package.
 - **UTF-8 header**: The file does not contain the UTF-8 header signature bytes. This could cause problems when uploading this file to DataMiner.
-- **Different Code Analysis and build configuration files detected**: This info bar will only be shown when the *Validate solution files* checkbox is enabled. <!-- RN 44503 -->
+- **Different Code Analysis and build configuration files detected**: This info bar will only be shown when the [Validate solution files](xref:DIS_settings#validate-solution-files) checkbox is enabled. <!-- RN 44503 -->
 
 The info bar logic is triggered 30s after opening the solution.<!-- RN 41840 -->
