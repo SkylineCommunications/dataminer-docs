@@ -14,7 +14,7 @@ The RAD functionality works in three different steps:
 
 1. Whenever a detected relation is broken, e.g. the main is no longer equal to the backup, RAD will generate [suggestion events in the Alarm Console](#relational-anomalies-in-the-alarm-console).
 
-![The three steps of the RAD algorithm](~/dataminer/images/tutorial_RAD_Overview_Algorithm.jpg)
+![The three steps of the RAD algorithm](~/dataminer/images/RAD_Overview_Algorithm.png)
 
 Every five minutes, RAD calculates an anomaly score for each configured relational anomaly group. This score is based on the average value of each parameter in that group over the last five minutes. A high anomaly score indicates that the relationships between the parameters are broken, whereas a low anomaly score means the relationships remain intact. Historical anomaly scores can be visualized in the [RAD Manager](xref:RAD_manager) app.
 
