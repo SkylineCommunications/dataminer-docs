@@ -82,9 +82,6 @@ The actual content of a protocol package differs from that of the other packages
 
 - Additional assemblies (if needed)
 
-  > [!NOTE]
-  > From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44345-->, all assemblies used by the protocol are included in the protocol package when the package is included in a DELT export package.
-
 - Protocol-specific help
 
 ## Import package (.dmimport)
