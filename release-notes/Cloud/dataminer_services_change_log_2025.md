@@ -301,11 +301,11 @@ The context menu for a Catalog item range and version is now only shown if the p
 
 ### 1 April 2025 - Enhancement - Catalog & Home - Show notifications bell for unauthenticated users [ID 42559]
 
-In the Catalog app and on the dataminer.services homepage, users can now see the notifications button even when they are not signed in.
+In the Catalog app and on the dataminer.services home page, users can now see the notifications button even when they are not signed in.
 
 ### 1 April 2025 - Fix - Admin, Catalog, Home & Sharing - User profile was visible after signing out [ID 42559]
 
-In some cases, it could occur that you could still see your user profile even after clicking *Sign out*. This issue affected the Admin app, Catalog app, Sharing app, and dataminer.services homepage.
+In some cases, it could occur that you could still see your user profile even after clicking *Sign out*. This issue affected the Admin app, Catalog app, Sharing app, and dataminer.services home page.
 
 ### 1 April 2025 - Fix - Catalog API - Users could update ranges and versions they did not have rights to [ID 42566]
 
