@@ -23,7 +23,7 @@ The SLSNMPManager process communicates with devices acting as SNMP agents.
 - It polls devices by sending SNMP Get messages.
 
   > [!NOTE]
-  > From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44329-->, if the response to an SNMP Get message cannot be mapped, an error is logged in the element log file and in `C:\Skyline DataMiner\LoggingSLErrorsInProtocol.txt`.
+  > From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44329-->, if the response to an SNMP Get message cannot be mapped, an error is logged in the element log file and in `C:\Skyline DataMiner\Logging\SLErrorsInProtocol.txt`.
 
 - It sets parameter values on devices by sending SNMP Set messages.
 
