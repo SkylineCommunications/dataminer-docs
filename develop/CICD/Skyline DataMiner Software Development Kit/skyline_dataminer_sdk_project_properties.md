@@ -23,7 +23,7 @@ When the value is set to `true`, it will generate a DataMiner application packag
 
 ## MinimumRequiredDmVersion
 
-Expected format: `A.B.C.D` or `A.B.C.D - buildNumber`
+Expected format: `A.B.C.D - buildNumber`
 
 This will ensure that when a DataMiner application package is installed on a DataMiner Agent with a lower version, the installation will fail.
 
