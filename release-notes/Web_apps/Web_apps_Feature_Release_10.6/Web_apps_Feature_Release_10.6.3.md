@@ -83,11 +83,11 @@ Other columns:
 | Rows Fetched | rowsFetched | int | The total number of rows that have been fetched from the session. |
 | Pages Fetched | pagesFetched | int | The total number of pages that have been fetched from the session. |
 
-#### Dashboards app: Breadcrumbs in navigation pane [ID 44481]
+#### Dashboards app: Breadcrumbs in details pane [ID 44481]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Breadcrumbs have now been added to the navigation pane.
+Breadcrumbs have now been added to the details pane.
 
 By clicking the first breadcrumb, which is named *Overview*, you will navigate back to the root view.
 
