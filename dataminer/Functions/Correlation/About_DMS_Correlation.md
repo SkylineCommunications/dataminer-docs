@@ -42,9 +42,9 @@ The Cube Correlation Engine offers several functions that are not available in t
 
 - Alarm filtering by means of regular expressions
 
-- Alarm grouping prior to Correlation rule evaluation
+- Alarm grouping prior to correlation rule evaluation
 
-- Elaborate Correlation rule conditions
+- Elaborate correlation rule conditions
 
 ## Correlation in DataMiner clusters
 

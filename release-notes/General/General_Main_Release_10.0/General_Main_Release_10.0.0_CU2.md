@@ -95,13 +95,13 @@ In some rare cases, an error could occur when retrieving alarms with a rootkey e
 
 Also, each time an alarm with rootkey equal to 0 is encountered, an entry will now be added to the SLDBConnection.txt log file.
 
-#### DataMiner Cube - Correlation: Problem when saving a Correlation rule mail action that sends a PDF report \[ID 25315\]
+#### DataMiner Cube - Correlation: Problem when saving a correlation rule mail action that sends a PDF report \[ID 25315\]
 
-When you added a mail action to a Correlation rule and configured that action to send a PDF report, in some cases, that configuration would not be saved correctly.
+When you added a mail action to a correlation rule and configured that action to send a PDF report, in some cases, that configuration would not be saved correctly.
 
-#### DataMiner Cube - Correlation: Mail action in Correlation rule could not be modified more than once \[ID 25317\]
+#### DataMiner Cube - Correlation: Mail action in correlation rule could not be modified more than once \[ID 25317\]
 
-When, in a Correlation rule, you had configured a mail action, in some cases, it would not be possible to update this action more than once.
+When, in a correlation rule, you had configured a mail action, in some cases, it would not be possible to update this action more than once.
 
 #### DataMiner Cube - Spectrum analysis: Problem when editing presets \[ID 25330\]
 

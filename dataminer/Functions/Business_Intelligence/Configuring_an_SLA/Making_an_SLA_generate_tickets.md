@@ -26,7 +26,7 @@ To automatically generate tickets, this parameter must be used in conjunction wi
 
 1. The *Generate Ticket* parameter is set to *Create Ticket*.
 
-1. A Correlation rule, which has been configured to be triggered when the *Generate Ticket* parameter has this value, activates an automation script.
+1. A correlation rule, which has been configured to be triggered when the *Generate Ticket* parameter has this value, activates an automation script.
 
 1. The Automation script requests a ticket number, posts the new ticket number value in the last column of the outage table, and sets the *Generate Ticket* parameter back to *Clear*.
 
@@ -37,4 +37,4 @@ To automatically generate tickets, this parameter must be used in conjunction wi
 > - [Correlation](xref:About_DMS_Correlation)
 
 > [!NOTE]
-> You can also have a ticket generated using the "Create ticket" Correlation rule action, but this feature is currently still in preview. See [Creating a ticket](xref:Creating_a_ticket).
+> You can also have a ticket generated using the "Create ticket" correlation rule action, but this feature is currently still in preview. See [Creating a ticket](xref:Creating_a_ticket).

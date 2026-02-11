@@ -105,9 +105,9 @@ When you had renamed an automation script, in some rare cases, the *Save* button
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
 
-When configuring a Correlation rule, you can make that rule send an email by adding a *Send email* action to it.
+When configuring a correlation rule, you can make that rule send an email by adding a *Send email* action to it.
 
-In some cases, when you opened a *Send email* action, it would incorrectly not be possible to select the *Dynamic* option to indicate that the elements that triggered the Correlation rule have to be included.
+In some cases, when you opened a *Send email* action, it would incorrectly not be possible to select the *Dynamic* option to indicate that the elements that triggered the correlation rule have to be included.
 
 #### Visual Overview: Problem with user permissions when right-clicking a visual overview linked to a service [ID 38018]
 

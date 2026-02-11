@@ -81,7 +81,7 @@ These delays are also visible in the log files. You will notice that rules or sc
 
 Check the information events or the SLCorrelation log file to see if there is a high number of triggered correlation rules, or if the same rule gets triggered repeatedly.
 
-If this is the case, it could be caused by an **incorrectly configured Correlation rule causing a loop**. Check your correlation rules and adjust them to avoid such loops.
+If this is the case, it could be caused by an **incorrectly configured correlation rule causing a loop**. Check your correlation rules and adjust them to avoid such loops.
 
 ### SLNetClientTest tool
 

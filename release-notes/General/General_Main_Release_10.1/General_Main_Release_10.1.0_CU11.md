@@ -210,7 +210,7 @@ Also, SLElement could leak memory when services were configured with a delayed t
 
 #### Deadlock in SLDataGateway could cause data to not get written to the database \[ID 30717\]
 
-In some cases, a deadlock in the SLDataGateway process could cause e.g. Correlation rule data to not get written to the database and remain in memory indefinitely.
+In some cases, a deadlock in the SLDataGateway process could cause e.g. correlation rule data to not get written to the database and remain in memory indefinitely.
 
 #### Problem with SLElement after restarting an element with a subscription that had a 'resolve' or 'filter' option configured \[ID 31741\]
 

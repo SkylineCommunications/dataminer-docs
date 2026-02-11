@@ -103,7 +103,7 @@ Correlated alarms are alarms triggered by the [DataMiner Correlation](xref:About
 
 You can expand a correlated alarm in order to see the base alarms that triggered the correlated alarm. By default, alarms are no longer shown in the *Active Alarms* tab when they are included in a correlated alarm.
 
-The severity of a correlated alarm depends on the Correlation rule configuration. It can be the highest severity of its base alarms or a custom severity.
+The severity of a correlated alarm depends on the correlation rule configuration. It can be the highest severity of its base alarms or a custom severity.
 
 Correlated alarms are represented in the Alarm Console with a special icon.
 

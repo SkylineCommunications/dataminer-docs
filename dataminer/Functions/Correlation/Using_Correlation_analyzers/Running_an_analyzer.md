@@ -18,7 +18,7 @@ To run a Correlation analyzer:
 
    The status of the analyzer will return to *Idle*, and a correlation rule will be proposed under *Results*.
 
-1. To view the proposed Correlation rule, right-click the result and select *Add to correlation*.
+1. To view the proposed correlation rule, right-click the result and select *Add to Correlation*.
 
    > [!NOTE]
    > The new correlation rule is not automatically enabled and saved.

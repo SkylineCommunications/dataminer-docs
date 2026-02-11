@@ -23,7 +23,7 @@ Estimated duration: 15 minutes.
 - [Step 1: Follow the chat notifications tutorial](#step-1-follow-the-chat-notifications-tutorial)
 - [Step 2: Deploy the Custom Command Examples package from the Catalog](#step-2-deploy-the-custom-command-examples-package-from-the-catalog)
 - [Step 3: Fetch the teams and the channels of a team](#step-3-fetch-the-teams-and-the-channels-of-a-team)
-- [Step 4: Adjust the chat notification Correlation rule to send a notification with custom buttons](#step-4-adjust-the-chat-notification-correlation-rule-to-send-a-notification-with-custom-buttons)
+- [Step 4: Adjust the chat notification correlation rule to send a notification with custom buttons](#step-4-adjust-the-chat-notification-correlation-rule-to-send-a-notification-with-custom-buttons)
 - [Step 5: Use the custom buttons from the notification](#step-5-use-the-custom-buttons-from-the-notification)
 
 ## Step 1: Follow the chat notifications tutorial
@@ -119,19 +119,19 @@ To be able to send a notification in a channel later in this tutorial, you will 
 
 ## Step 4: Adjust the chat notification correlation rule to send a notification with custom buttons
 
-In this step, you will adjust the Correlation rule from the [Chat notifications](xref:ChatOps_Tutorials_Chat_Notification#step-4-configure-a-correlation-rule-triggered-by-a-specific-alarm-to-send-the-chat-notification) tutorial so that it sends a channel notification with custom buttons in an Adaptive Card when it is triggered by a specific alarm.
+In this step, you will adjust the correlation rule from the [Chat notifications](xref:ChatOps_Tutorials_Chat_Notification#step-4-configure-a-correlation-rule-triggered-by-a-specific-alarm-to-send-the-chat-notification) tutorial so that it sends a channel notification with custom buttons in an Adaptive Card when it is triggered by a specific alarm.
 
 1. In DataMiner Cube, open the Correlation module.
 
-1. Select the Correlation rule you created during the [Chat notifications](xref:ChatOps_Tutorials_Chat_Notification#step-4-configure-a-correlation-rule-triggered-by-a-specific-alarm-to-send-the-chat-notification) tutorial.
+1. Select the correlation rule you created during the [Chat notifications](xref:ChatOps_Tutorials_Chat_Notification#step-4-configure-a-correlation-rule-triggered-by-a-specific-alarm-to-send-the-chat-notification) tutorial.
 
 1. In the *Run script* action of the rule, select the script *Send Channel Notification Asking To Take Ownership of an Alarm* instead, and specify the team and channel from [step 3](#step-3-fetch-the-teams-and-the-channels-of-a-team) as input.
 
-   ![Configure the Correlation rule](~/dataminer/images/chatops_notification_part_02_04_001.png)
+   ![Configure the correlation rule](~/dataminer/images/chatops_notification_part_02_04_001.png)
 
-   ![Configure the Correlation rule with the *Send Channel Notification Asking To Take Ownership of an Alarm* script](~/dataminer/images/chatops_notification_part_02_04_002.png)
+   ![Configure the correlation rule with the *Send Channel Notification Asking To Take Ownership of an Alarm* script](~/dataminer/images/chatops_notification_part_02_04_002.png)
 
-1. Trigger an alarm that will trigger the Correlation rule.
+1. Trigger an alarm that will trigger the correlation rule.
 
 1. Go to the Microsoft Teams channel you specified, and check whether the notification is displayed.
 

@@ -145,11 +145,11 @@ Up to now, when you ran the DataMiner installer to install a new DataMiner Agent
 
 From now on, when you run the DataMiner installer to install a new DataMiner Agent using a DataMiner upgrade package, all installation steps will be performed, including the upgrade actions.
 
-#### Problem when loading data of elements hosted on another DMA while a Correlation rule action was running [ID 38121]
+#### Problem when loading data of elements hosted on another DMA while a correlation rule action was running [ID 38121]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.2 -->
 
-When, while an extensive Correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the Correlation rule action had finished.
+When, while an extensive correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the correlation rule action had finished.
 
 #### Web apps: Visual overview linked to a view would not get any updates when the user did not have full administrative rights [ID 38180]
 

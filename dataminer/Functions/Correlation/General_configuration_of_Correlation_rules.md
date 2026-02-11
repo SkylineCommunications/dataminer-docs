@@ -7,6 +7,7 @@ uid: General_configuration_of_Correlation_rules
 In the *Correlation* module in Cube, select a rule in the tree view pane on the left in order to configure it in the details pane on the right.
 
 > [!NOTE]
+>
 > - For more information on how to add a correlation rule, see [Adding a new correlation rule](xref:Adding_a_new_Correlation_rule).
 > - As soon as there are unsaved changes in a rule, “*\[modified\]*” is added to the rule name in the tree view pane, as a reminder in case you navigate to a different rule. However, note that if you close the *Correlation* module, such changes will not be saved. To make sure changes to a rule are saved, click the *Apply* button.
 
@@ -15,7 +16,7 @@ In the *Correlation* module in Cube, select a rule in the tree view pane on the 
   > [!NOTE]
   > Before you can enable a correlation rule, certain minimum requirements must be met. For more information, see [Adding a new correlation rule](xref:Adding_a_new_Correlation_rule).
 
-- In the *General* section, next to *Name*, enter a new name for the correlation rule. By default, new rules are simply called “Correlation rule”.
+- In the *General* section, next to *Name*, enter a new name for the correlation rule. By default, new rules are simply called "Correlation rule".
 
 - In the *General* section, click *Show details* to specify the general properties of a correlation rule:
 
@@ -41,7 +42,7 @@ In the *Correlation* module in Cube, select a rule in the tree view pane on the 
 
     If you select this option and select a particular DMA in the selection box on the right, then only the selected DMA will be allowed to evaluate the correlation rule you are creating. This means that the selected DMA will check the rule against all alarms generated in the DataMiner System, including alarms from other Agents.
 
-    By default, this option is not selected, and every DMA in the DataMiner System checks the enabled Correlation rule against the alarms associated with its locally managed elements. This means that the rule is applied separately on each DMA in a cluster, using only the alarms of the local DMA.
+    By default, this option is not selected, and every DMA in the DataMiner System checks the enabled correlation rule against the alarms associated with its locally managed elements. This means that the rule is applied separately on each DMA in a cluster, using only the alarms of the local DMA.
 
     > [!NOTE]
     > - If you want the rule to be able to combine base alarm events from multiple Agents in a DMS, you must enable this option.

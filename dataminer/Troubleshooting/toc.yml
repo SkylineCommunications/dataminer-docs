@@ -360,7 +360,7 @@ items:
             topicUid: KI_SAML_with_automatic_groups
           - name: SLScripting crash when using JScript QActions
             topicUid: KI_SLScripting_crash_JScript_QActions
-          - name: Unable to configure dashboards for 'Email' actions in Automation scripts, scheduled tasks, and Correlation rules
+          - name: Unable to configure dashboards for 'Email' actions in automation scripts, scheduled tasks, and correlation rules
             topicUid: KI_Unable_to_configure_dashboards_included_in_email_actions
           - name: Cube displays incorrect offload configuration for real-time trending data
             topicUid: KI_Cube_displays_incorrect_offload_configuration_for_real-time_trending_data

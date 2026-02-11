@@ -554,7 +554,7 @@ public void SetParameterSilent(int pid, object value) {
 
 When defining a notification message template in the *NotifyTemplates.xml* file, you can use a number of placeholders.
 
-From now on, the “elementdesc” placeholder (i.e. element description) can also be used in templates for notification messages sent as a result of some triggered Correlation rule. Up to now, it could only be used in templates for notification messages that are sent independently (not as a result of some triggered correlation rule).
+From now on, the “elementdesc” placeholder (i.e. element description) can also be used in templates for notification messages sent as a result of some triggered correlation rule. Up to now, it could only be used in templates for notification messages that are sent independently (not as a result of some triggered correlation rule).
 
 #### New event to trigger correlation rules at DataMiner startup \[ID 22622\]
 

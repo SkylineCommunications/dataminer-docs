@@ -28,4 +28,4 @@ In the Correlation module, the *Alarm Filter* section of the details pane allows
 >   - Element Name: *\[name of the DMA\]*
 >   - Parameter Description: Correlation engine (DataMiner Element Control Protocol)
 >   - Value: Started
-> - Hidden elements are supported in Correlation rule alarm filters from DataMiner 10.1.0 [CU13], 10.2.0 [CU1], and 10.2.4 onwards.
+> - Hidden elements are supported in correlation rule alarm filters from DataMiner 10.1.0 [CU13], 10.2.0 [CU1], and 10.2.4 onwards.

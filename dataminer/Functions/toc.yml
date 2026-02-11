@@ -261,7 +261,7 @@ items:
     items:
       - name: About DataMiner Correlation
         topicUid: About_DMS_Correlation
-      - name: Managing Correlation rules
+      - name: Managing correlation rules
         topicUid: Managing_Correlation_rules
         items:
           - name: Collapsing and expanding folders
@@ -283,15 +283,15 @@ items:
       - name: Filtering and grouping base alarms for correlation rules
         topicUid: Filtering_and_grouping_base_alarms_for_Correlation_rules
         items:
-          - name: Adding alarm filters to Correlation rules
+          - name: Adding alarm filters to correlation rules
             topicUid: Adding_alarm_filters_to_Correlation_rules
           - name: Limiting the base alarms
             topicUid: Limiting_the_base_alarms
-          - name: Grouping alarms in Correlation rules
+          - name: Grouping alarms in correlation rules
             topicUid: Grouping_alarms_in_Correlation_rules
-      - name: Adding rule conditions in Correlation rules
+      - name: Adding rule conditions in correlation rules
         topicUid: Adding_rule_conditions_in_Correlation_rules
-      - name: Adding rule actions in Correlation rules
+      - name: Adding rule actions in correlation rules
         topicUid: Adding_rule_actions_in_Correlation_rules
         items:
           - name: Acknowledging a base alarm
