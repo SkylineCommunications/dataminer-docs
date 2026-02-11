@@ -93,9 +93,9 @@ items:
     items:
       - name: About DataMiner Automation
         topicUid: automation
-      - name: Managing Automation scripts
+      - name: Managing automation scripts
         topicUid: Managing_Automation_scripts
-      - name: Designing Automation scripts
+      - name: Designing automation scripts
         topicUid: Designing_Automation_scripts
         items:
           - name: General script configuration
@@ -104,7 +104,7 @@ items:
             topicUid: Script_variables
           - name: Script actions
             topicUid: Script_actions
-      - name: automation script actions in DataMiner Cube
+      - name: Automation script actions in DataMiner Cube
         topicUid: Automation_script_actions_in_DataMiner_Cube
         items:
           - name: Assign dummy
@@ -149,14 +149,14 @@ items:
             topicUid: Upload_report_to_shared_folder
           - name: User interaction
             topicUid: User_interaction
-      - name: Running Automation scripts
+      - name: Running automation scripts
         topicUid: Running_Automation_scripts
         items:
           - name: Manually executing a script
             topicUid: Manually_executing_a_script
           - name: Script execution options
             topicUid: Script_execution_options
-      - name: Using C# code in Automation scripts
+      - name: Using C# code in automation scripts
         topicUid: Using_CSharp_code_in_Automation_scripts
         items:
           - name: Adding C# code to an automation script
@@ -167,16 +167,16 @@ items:
             topicUid: Building_interactive_Automation_scripts_with_CSharp
           - name: Compiling a C# code block as a library
             topicUid: Compiling_a_CSharp_code_block_as_a_library
-      - name: Special parameters available in Automation scripts
+      - name: Special parameters available in automation scripts
         topicUid: Special_parameters_available_in_DMS_Automation_scripts
-      - name: Alarm level IDs for use in Automation scripts
+      - name: Alarm level IDs for use in automation scripts
         topicUid: Alarm_level_IDs_for_use_in_Automation_scripts
       - name: Automation scripts triggered from redundancy groups
         topicUid: Automation_scripts_triggered_from_redundancy_groups
       - name: Frequently asked questions about DataMiner Automation
         topicUid: Frequently_asked_questions_about_DMS_Automation
         items:
-          - name: How can I execute an Automation Script on an element in timeout?
+          - name: How can I execute an automation Script on an element in timeout?
             topicUid: How_can_I_execute_an_Automation_Script_on_an_element_in_timeout
           - name: How do I abort a running automation script?
             topicUid: How_do_I_abort_a_running_Automation_script
