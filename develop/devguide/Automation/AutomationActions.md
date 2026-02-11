@@ -2,7 +2,7 @@
 uid: AutomationActions
 ---
 
-# automation script actions
+# Automation script actions
 
 |Name|Description|
 |--- |--- |

@@ -2,7 +2,7 @@
 uid: Automation_scripts_as_a_Visual_Studio_solution
 ---
 
-# automation scripts as a Visual Studio solution
+# Automation scripts as a Visual Studio solution
 
 From DIS 2.31 onwards, developing automation scripts as a Visual Studio solution is supported. While a protocol solution can only contain one single protocol, an automation script solution can contain multiple scripts.
 
