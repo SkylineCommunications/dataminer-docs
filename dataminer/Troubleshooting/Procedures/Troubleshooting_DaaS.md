@@ -12,12 +12,11 @@ uid: Troubleshooting_DaaS
 > [!IMPORTANT]
 > This page outlines the typical starting points for investigating issues with a DaaS setup and is intended for **internal use by Skyline teams** such as DataMiner Support.
 
-> [!TIP]
-> See also: [DaaS Unavailable: troubleshooting guide](https://internaldocs.skyline.be/DevDocs/DaaS/Troubleshooting/DaaSUnavailable.html) *(link for Skyline employees only)*.
-
 ## Investigation steps
 
 To begin an investigation on a DaaS setup:
+
+1. Check if the procedure from the [DaaS Unavailable: troubleshooting guide](https://internaldocs.skyline.be/DevDocs/DaaS/Troubleshooting/DaaSUnavailable.html) applies *(link for Skyline employees only)*.
 
 1. Connect to the setup via Remote Desktop.
 
