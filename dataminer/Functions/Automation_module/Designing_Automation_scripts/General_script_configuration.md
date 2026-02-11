@@ -28,4 +28,4 @@ To configure a script:
 
    - **C#: Return NULL instead of an exception upon a GetParameter of a non-initialized parameter**: Ensures that no exception is thrown when an undefined or empty parameter is encountered in C# code. Null will be returned instead.
 
-   - **Web compliant**: This option is only displayed if the *UseWebIAS* [soft-launch option](xref:SoftLaunchOptions) is enabled. It allows you to execute the script in a web environment, which can be useful for interactive Automation scripts that use web-only features.<!-- RN 29623 -->
+   - **Web compliant**: This option is only displayed if the *UseWebIAS* [soft-launch option](xref:SoftLaunchOptions) is enabled. It allows you to execute the script in a web environment, which can be useful for interactive automation scripts that use web-only features.<!-- RN 29623 -->

@@ -265,9 +265,9 @@ The separator used in CSV exports from the Dashboards app is based on the “CSV
 
 ### DMS Automation
 
-#### .NET Compiler Platform now used for C# Automation scripts \[ID 20746\]
+#### .NET Compiler Platform now used for C# automation scripts \[ID 20746\]
 
-All C# Automation scripts will now be validated and compiled using the .NET Compiler Platform (also known as "Roslyn"), which will enable the use of syntax of C# version 6.0 and higher.
+All C# automation scripts will now be validated and compiled using the .NET Compiler Platform (also known as "Roslyn"), which will enable the use of syntax of C# version 6.0 and higher.
 
 #### New IDPResource and IDPManagerHelper class \[ID 20892\]
 
@@ -326,7 +326,7 @@ uibDialogBox.Title = “My dialog box title”;
 
 #### AlarmTemplateHelper \[ID 21878\]
 
-The AlarmTemplateHelper will allow Automation scripts to manipulate alarm templates.
+The AlarmTemplateHelper will allow automation scripts to manipulate alarm templates.
 
 ##### Types of methods and calls
 
@@ -432,7 +432,7 @@ public void Run(Engine engine)
 
 #### Finding an interactive client by user cookie \[ID 22227\]
 
-In Automation scripts and QActions, it is now possible to find an interactive client by user cookie instead of by user name.
+In automation scripts and QActions, it is now possible to find an interactive client by user cookie instead of by user name.
 
 General syntax of the FindInteractiveClient method:
 
@@ -486,7 +486,7 @@ To do so, open the *Advanced* section, and do the following:
    > - Library names cannot contain periods (“.”).
    > - An Automation script cannot contain multiple libraries with the same name. Library names must be unique within a particular Automation script.
 
-Once you have compiled a C# code block as a library, you can then import that library into other Automation scripts. To do so, in the *Advanced* section of a C# code block of a given Automation script, do the following:
+Once you have compiled a C# code block as a library, you can then import that library into other automation scripts. To do so, in the *Advanced* section of a C# code block of a given Automation script, do the following:
 
 - In the *Script references* box, enter a reference to the library that you want to import.
 
@@ -498,13 +498,13 @@ Once you have compiled a C# code block as a library, you can then import that li
 > [!NOTE]
 >
 > - To optimize performance and use of resources, it is advised to create each library in a separate Automation script. This will minimize the amount of recompilations and DLL generations.
-> - When you recompile a library, all Automation scripts and libraries that use that library will also be recompiled.
+> - When you recompile a library, all automation scripts and libraries that use that library will also be recompiled.
 > - The order of the C# blocks in an Automation script will define the order in which the libraries will be compiled.
 > - When you delete an Automation script that contains a library, all files belonging to that library will also be deleted. As a result, you will not be able to recompile any of the depending scripts until you add the deleted library again (with the same script name and library name).
 > - When you delete a library C# block from an Automation script and then save the script, the DLL of that deleted library will not be deleted. The DLL file and all references to that deleted library should be removed manually.
 > - When you compile a library, its DLL file (and, if compiled in debug mode, its PDB and CS files) are stored in `C:\Skyline DataMiner\Scripts\Libraries`. When the first Automation-related action (i.e. creating, editing or deleting an Automation script, or validating a C# code block) is performed after a DataMiner restart, this folder is cleaned up. After cleaning, of each library it will only contain the most recent version.
 
-#### Interactive Automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
+#### Interactive automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
 
 In an interactive Automation script, it is now possible to upload files from a client computer.
 
@@ -556,7 +556,7 @@ When defining a notification message template in the *NotifyTemplates.xml* file
 
 From now on, the “elementdesc” placeholder (i.e. element description) can also be used in templates for notification messages sent as a result of some triggered Correlation rule. Up to now, it could only be used in templates for notification messages that are sent independently (not as a result of some triggered correlation rule).
 
-#### New event to trigger Correlation rules at DataMiner startup \[ID 22622\]
+#### New event to trigger correlation rules at DataMiner startup \[ID 22622\]
 
 At DataMiner startup, a new event will now signal when the Correlation engine is up and running. This event will make it possible to trigger correlation rules at DataMiner startup.
 

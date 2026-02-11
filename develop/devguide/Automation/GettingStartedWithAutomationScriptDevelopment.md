@@ -10,7 +10,7 @@ uid: GettingStartedWithAutomationScriptDevelopment
 - [Dojo course 'DataMiner Automation'](https://community.dataminer.services/courses/dataminer-automation/)
 - [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/)
 
-## Executing Automation scripts
+## Executing automation scripts
 
 - [Linking a Visio shape to an automation script](xref:Linking_a_shape_to_an_Automation_script)
 - [Running an automation script from a correlation rule](xref:Running_an_Automation_script_from_a_Correlation_rule)

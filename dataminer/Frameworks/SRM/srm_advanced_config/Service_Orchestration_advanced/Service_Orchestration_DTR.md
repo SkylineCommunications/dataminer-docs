@@ -4,7 +4,7 @@ uid: Service_Orchestration_DTR
 
 # Service Orchestration: Data Transfer Rules configuration
 
-[Data Transfer Rules](xref:srm_scripting#data-transfer-rules-dtr) are implemented using custom Automation scripts.
+[Data Transfer Rules](xref:srm_scripting#data-transfer-rules-dtr) are implemented using custom automation scripts.
 
 ## Configuring regular Data Transfer Rules
 

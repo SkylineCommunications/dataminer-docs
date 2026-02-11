@@ -13,7 +13,7 @@ There are multiple ways to create application packages:
 - [Using the Low-Code App Editor](#low-code-app-editor)
 
 > [!TIP]
-> [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio) supports creating application packages for Automation scripts solutions.
+> [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio) supports creating application packages for automation scripts solutions.
 
 ## Infrastructure as Code (IaC)
 
@@ -37,7 +37,7 @@ If you are interested in combining this with automatic registration in the Catal
 
 ## DataMiner Package Composer
 
-The DataMiner Package Composer is an experimental low-code application aimed at providing a simple, code-free solution for moving DataMiner objects (such as low-code apps, dashboards, Automation scripts, and DOM modules) between DataMiner Agents (DMAs). This tool prioritizes ease of use and requires no coding, making it accessible for users looking to streamline DataMiner operations without technical complexities.
+The DataMiner Package Composer is an experimental low-code application aimed at providing a simple, code-free solution for moving DataMiner objects (such as low-code apps, dashboards, automation scripts, and DOM modules) between DataMiner Agents (DMAs). This tool prioritizes ease of use and requires no coding, making it accessible for users looking to streamline DataMiner operations without technical complexities.
 
 Key highlights:
 

@@ -108,7 +108,7 @@ To improve performance and reduce the load on SLElement, RTDisplay has now been 
 
 #### Elements in EPM Solution now use inter-app calls [ID 36326]
 
-Inter-app calls will now be used for the communication between elements used in the EPM Solution, such as the back end and the Workflow Manager (WM), resulting in faster and more efficient communication. This way, the solution no longer needs to rely on information events and alarms triggered by Automation scripts and Correlation rules.
+Inter-app calls will now be used for the communication between elements used in the EPM Solution, such as the back end and the Workflow Manager (WM), resulting in faster and more efficient communication. This way, the solution no longer needs to rely on information events and alarms triggered by automation scripts and correlation rules.
 
 The following changes have been done to the Skyline EPM Platform DOCSIS connector (back end):
 

@@ -171,11 +171,11 @@ If you want the web applications to continue to use the SLHelper process for GQI
 > [!NOTE]
 > Currently, the GQI DxM cannot be used on Dashboard Gateway servers yet. Dashboard Gateway servers will continue to use SLHelper, even if the `gqi:useDxM` key is set to true.
 
-#### Interactive Automation scripts: UI version will now be set to WebUIVersion.V2 by default [ID 44059]
+#### Interactive automation scripts: UI version will now be set to WebUIVersion.V2 by default [ID 44059]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-When connected to a DataMiner Agent with main release version 10.6.0 or feature release 10.5.12 (or above), from now on, interactive Automation scripts executed in a web app will use the new UI version (V2) by default.
+When connected to a DataMiner Agent with main release version 10.6.0 or feature release 10.5.12 (or above), from now on, interactive automation scripts executed in a web app will use the new UI version (V2) by default.
 
 This also means that, when you set `engine.WebUIVersion` to `WebUIVersion.Default` in a script, the UI version will now be set to the new UI version (V2).
 
@@ -304,11 +304,11 @@ Up to now, when an error message appeared in a Form component, that message woul
 
 From now on, when an error message appears, it will stay visible until an action is performed in the Form component or until a button is clicked.
 
-#### Interactive Automation scripts: Numeric values containing leading zeros would not update correctly [ID 44037]
+#### Interactive automation scripts: Numeric values containing leading zeros would not update correctly [ID 44037]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-In interactive Automation scripts launched from a web app, up to now, numeric values containing leading zeros would not update correctly.
+In interactive automation scripts launched from a web app, up to now, numeric values containing leading zeros would not update correctly.
 
 #### DataMiner web apps authentication page: Problem logging in when using a Firefox browser [ID 44043]
 

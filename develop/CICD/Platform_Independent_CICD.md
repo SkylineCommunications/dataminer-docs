@@ -30,7 +30,7 @@ The following tools are the most useful:
 
 - [Skyline.DataMiner.CICD.Tools.Packager](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab)
 
-  This .NET tool allows you to create application (.dmapp) and protocol (.dmprotocol) [packages](xref:ApplicationPackages) starting from a Visual Studio solution as created by [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). It can be used to package Visio drawings, dashboards, connectors, Automation scripts, etc.
+  This .NET tool allows you to create application (.dmapp) and protocol (.dmprotocol) [packages](xref:ApplicationPackages) starting from a Visual Studio solution as created by [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). It can be used to package Visio drawings, dashboards, connectors, automation scripts, etc.
 
 - [Skyline.DataMiner.CICD.Tools.CatalogUpload](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.CatalogUpload#readme-body-tab)
 
@@ -91,7 +91,7 @@ The following libraries are the most useful:
   - [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common#readme-body-tab)
   - [Skyline.DataMiner.CICD.Parsers.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Protocol#readme-body-tab)
 
-  These libraries are meant to assist with parsing XML files or Visual Studio solutions of connectors (protocols) or Automation scripts. They provide logic that allows traversal and lookups within the XML itself.
+  These libraries are meant to assist with parsing XML files or Visual Studio solutions of connectors (protocols) or automation scripts. They provide logic that allows traversal and lookups within the XML itself.
 
 - [Skyline.DataMiner.CICD.Assemblers](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Assemblers)
 

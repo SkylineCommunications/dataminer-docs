@@ -41,7 +41,7 @@ The tutorial consists of the following steps:
 
 1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-   This will create 13 elements under the *DataMiner Catalog* > *Augmented Operations* > *Incident Tracking Tutorial* view. It will also create four Automation scripts. The names of all added elements and scripts starts with *Incident Tracking Tutorial*.
+   This will create 13 elements under the *DataMiner Catalog* > *Augmented Operations* > *Incident Tracking Tutorial* view. It will also create four automation scripts. The names of all added elements and scripts starts with *Incident Tracking Tutorial*.
 
    > [!NOTE]
    > If the package has been fully deployed, but not everything mentioned above is visible in Cube, close and reopen Cube.
@@ -63,7 +63,7 @@ Automatic alarm grouping groups alarms according to a set of rules, which are li
 1. Take a backup of the current *configuration.xml* file so that you can revert to this version of the file when you finish this tutorial.
 
 > [!NOTE]
-> If you are unable to access this file (e.g. because you are using [DaaS](xref:Creating_a_DMS_in_the_cloud)), you can use the Automation scripts that were included in the package instead in order to follow this tutorial. To get an idea of what the *configuration.xml* file looks like, we recommend taking a look at the file on a system that you have access to.
+> If you are unable to access this file (e.g. because you are using [DaaS](xref:Creating_a_DMS_in_the_cloud)), you can use the automation scripts that were included in the package instead in order to follow this tutorial. To get an idea of what the *configuration.xml* file looks like, we recommend taking a look at the file on a system that you have access to.
 
 ## Step 3: Explore the default alarm grouping rules
 
@@ -310,7 +310,7 @@ It is not possible to use the *ParentNode* alarm property from the previous step
 
 ## Step 7: Clean up your system
 
-The Automation scripts in this tutorial take a backup of the old version of *configuration.xml* before applying changes, and you can restore this backup with another script. However, if you have made manual changes before running any of the scripts, you will need to restore the file manually to get the original version again.
+The automation scripts in this tutorial take a backup of the old version of *configuration.xml* before applying changes, and you can restore this backup with another script. However, if you have made manual changes before running any of the scripts, you will need to restore the file manually to get the original version again.
 
 1. Clear the created alarms using the *Toggle Alarm* buttons of each element.
 

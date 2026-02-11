@@ -10,7 +10,7 @@ uid: Overview_of_the_files_found_in_the_root_folder
 | Name | Description | Synchronized? |
 |--|--|--|
 | BaseSubscriptions.xml | Base subscriptions, i.e. element subscriptions that remain open, so that the element info is cached in SLNet. | No |
-| Brain.xml | Legacy Correlation rules. (Prior to DataMiner 10.5.1/10.6.0<!--RN 40834-->) | Yes |
+| Brain.xml | Legacy correlation rules. (Prior to DataMiner 10.5.1/10.6.0<!--RN 40834-->) | Yes |
 | ClientApps.lic | License file for client applications. No longer used. When you upgrade to a recent DataMiner version, this file is removed during the upgrade. | No |
 | ClusterInfo.xml | Contains the ID ranges for the views of each DMA in the cluster. | Yes |
 | DataMiner.lic | DataMiner license file. | No |

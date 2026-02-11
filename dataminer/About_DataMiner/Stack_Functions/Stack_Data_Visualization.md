@@ -90,7 +90,7 @@ The Correlation Engine is capable of:
 
 - Detecting single occurrences, persistent occurrences, or recurring occurrences of both single alarms events and alarm patterns across the entire operational environment.
 
-- Taking actions when certain conditions occur within the operational environment, including generating new alarm messages for the operator (e.g. the most probable cause), triggering Automation scripts (e.g. to take automatic corrective measures), notifying operators, and more.
+- Taking actions when certain conditions occur within the operational environment, including generating new alarm messages for the operator (e.g. the most probable cause), triggering automation scripts (e.g. to take automatic corrective measures), notifying operators, and more.
 
 DataMiner also includes root cause analysis (RCA) based on connectivity information. Connectivity information can be fed into the system via the integrated connectivity editor or by linking the DataMiner System to a third-party connectivity database. DataMiner's RCA functionality offers operators a highly intuitive method to determine the most probable cause and filter out sympathetic alarms. This is achieved by assigning an RCA level to each alarm, indicating how far they are removed from their probable root cause.
 
@@ -190,7 +190,7 @@ As media operations grow more complex and demanding so too does the need to have
 
 With the DataMiner Button Panels, you can easily create different panels for different situations and securely share them with your stakeholders.
 
-First of all, DataMiner Control Panels **allow versatile control actions with the simple press of a button!** You can trigger a wide range of actions, ranging from simple actions like an XY-style crosspoint, to complex workflows such as launching Automation scripts, controlling multiple bookings, or orchestrating both virtual and physical matrixes and endpoints.
+First of all, DataMiner Control Panels **allow versatile control actions with the simple press of a button!** You can trigger a wide range of actions, ranging from simple actions like an XY-style crosspoint, to complex workflows such as launching automation scripts, controlling multiple bookings, or orchestrating both virtual and physical matrixes and endpoints.
 
 Moreover, you have the freedom to **customize the appearance and design** of each DataMiner Control Panel. This includes not only buttons but also trend charts, thumbnails, real-time metrics and KPIs, spectrum analyzers, or any other elements that align with your specific needs.
 

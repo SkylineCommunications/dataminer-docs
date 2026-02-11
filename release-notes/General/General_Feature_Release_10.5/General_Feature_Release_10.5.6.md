@@ -131,7 +131,7 @@ Because of a number of enhancements, the locking mechanism in the following Reso
 | ID cache | When a specific ReservationInstance is requested by ID, the result is cached in this ID cache. When an internal request is made for a specific ID, the cached ReservationInstance will be returned. Used when adding or editing ReservationInstances and when executing start/stop actions and ReservationEvents. |
 | Time range cache | When ReservationInstances within a specific time range are requested, all instances in that time range will be cached in this cache. Used when new bookings are created or when eligible resources are requested. |
 
-#### Executing Automation scripts using a Run method or a custom entry point containing the async keyword is no longer supported [ID 42534]
+#### Executing automation scripts using a Run method or a custom entry point containing the async keyword is no longer supported [ID 42534]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
 

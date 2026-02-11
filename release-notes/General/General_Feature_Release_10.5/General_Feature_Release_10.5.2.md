@@ -29,7 +29,7 @@ uid: General_Feature_Release_10.5.2
 
 ## New features
 
-#### Unhandled exceptions in Automation scripts that cause SLAutomation to stop working will now be logged and will lead to an alarm being generated [ID 41375] [ID 41781]
+#### Unhandled exceptions in automation scripts that cause SLAutomation to stop working will now be logged and will lead to an alarm being generated [ID 41375] [ID 41781]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 

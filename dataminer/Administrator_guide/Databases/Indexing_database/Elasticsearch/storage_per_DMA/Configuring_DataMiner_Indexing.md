@@ -23,7 +23,7 @@ The following settings are available:
 
   - Property names must not start with an underscore (“\_”) or contain any of the following characters: . # \* , " '<br>As such, the wizard will ask you to rename certain booking properties before starting the migration. To ensure the correct functionality of the Service & Resource Management module, some properties will be renamed automatically. For example, the *Visual.Background* and *Visual.Foreground* properties will automatically be renamed as *VisualBackground* and *VisualForeground*.
 
-  - After migrating the booking data to the indexing database, make sure to check your Automation scripts and Visio files and adjust the booking property names where necessary.
+  - After migrating the booking data to the indexing database, make sure to check your automation scripts and Visio files and adjust the booking property names where necessary.
 
   - After the migration is complete, you can use the *Retrieve report* button in the wizard to get a summary report of the migration.
 

@@ -157,11 +157,11 @@ Up to now, a *Line & area chart* component would not always load the data in the
 
 When configuring a *Generic map* component, it would incorrectly no longer be possible to select a map configuration file.
 
-#### Web apps - Interactive Automation scripts: Problem when entering decimal numbers [ID 38396]
+#### Web apps - Interactive automation scripts: Problem when entering decimal numbers [ID 38396]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-In interactive Automation scripts launched from a web app, it would no longer be possible to enter a decimal number of which the first digit after the separator was a zero.
+In interactive automation scripts launched from a web app, it would no longer be possible to enter a decimal number of which the first digit after the separator was a zero.
 
 When you entered a decimal number of which the first digit after the separator was a zero (e.g. 4.02), both the separator and the zero would incorrectly be dropped.
 

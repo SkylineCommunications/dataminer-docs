@@ -701,9 +701,9 @@ From now on, when the alarm filter contains one of the above-mentioned items, th
 
 Due to a number of enhancements, overall performance has increased when retrieving large amounts of data via managed DataMiner modules like SLManagedAutomation or SLManagedScripting.
 
-#### Automation scripts: SLAnalyticsTypes.dll added to the list of default DLL references [ID 30821]
+#### automation scripts: SLAnalyticsTypes.dll added to the list of default DLL references [ID 30821]
 
-All Automation scripts will now by default have a reference to the SLAnalyticsTypes.dll file.
+All automation scripts will now by default have a reference to the SLAnalyticsTypes.dll file.
 
 #### Improved performance when writing and deleting data on Cassandra clusters [ID 30860]
 
@@ -845,7 +845,7 @@ In a node-edge graph component, in some cases, color filtering would not be appl
 
 In some cases, a ParameterThread error could occur in SLElement.
 
-#### Interactive Automation scripts: Value returned by the client would incorrectly be considered as an invalid file path selected in a file selector block [ID 30879]
+#### Interactive automation scripts: Value returned by the client would incorrectly be considered as an invalid file path selected in a file selector block [ID 30879]
 
 When, in an interactive Automation script, a file selector block was defined after another type of input block (e.g. a checkbox), in some cases, the input block value returned by the client would incorrectly be considered as an invalid file path selected in the file selector. As a result, an “Invalid Data” error would be thrown.
 
@@ -945,7 +945,7 @@ In some rare cases, overall memory usage of the SLAnalytics process would tempor
 
 When no SoftLaunchOptions.xml file was found in the C:\\Skyline DataMiner\\ root directory, soft-launch options that were enabled by default (e.g. the new average trending feature) would incorrectly be disabled.
 
-#### Interactive Automation scripts: Problem with file upload components [ID 31064]
+#### Interactive automation scripts: Problem with file upload components [ID 31064]
 
 After multiple updates had occurred in an interactive Automation script, in some cases, a file upload component could end up in an invalid state and lose all information about the uploaded files.
 

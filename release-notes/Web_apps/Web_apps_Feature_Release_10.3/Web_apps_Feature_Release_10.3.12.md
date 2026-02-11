@@ -16,7 +16,7 @@ uid: Web_apps_Feature_Release_10.3.12
 
 ### Enhancements
 
-#### Interactive Automation scripts: FileSelector now allows to keep the files that were already uploaded after the UI was shown [ID 37260]
+#### Interactive automation scripts: FileSelector now allows to keep the files that were already uploaded after the UI was shown [ID 37260]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -82,7 +82,7 @@ From now on, when the query migration fails, the original query will be left unt
 
 When the order of the table columns was changed by the query, the table headers would incorrectly not get updated.
 
-#### Web apps - Interactive Automation scripts: Dropdown component would not show all available options [ID 37510]
+#### Web apps - Interactive automation scripts: Dropdown component would not show all available options [ID 37510]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 

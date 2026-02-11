@@ -26,4 +26,4 @@ Additionally, the following tool windows are available:
 - [Inject](xref:DisInjectToolWindow): This tool window allows you to make the necessary preparations before debugging the connector QAction(s) or Automation script C# Exe block(s) you are editing.
 - [MIB Browser](xref:DisMibBrowserToolWindow): This tool window allows you to build [Param](xref:Protocol.Params.Param) tags in a connector based on OID data in MIB files.
 
-An top of this, it includes snippets and XML schemas to assist and speed up your development of connectors and Automation scripts.
+An top of this, it includes snippets and XML schemas to assist and speed up your development of connectors and automation scripts.

@@ -104,7 +104,7 @@ Overall performance has increased when fetching history alarms. From now on, his
 
 In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, etc.), Angular and other dependencies have been upgraded.
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Button' [ID 41495]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI component 'Button' [ID 41495]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 

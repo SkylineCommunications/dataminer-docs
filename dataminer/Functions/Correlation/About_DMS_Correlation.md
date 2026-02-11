@@ -6,13 +6,13 @@ uid: About_DMS_Correlation
 
 DataMiner Correlation automatically analyzes raw alarm information and real-time parameter values, and acts upon that information according to the rule sets you define in its knowledge base. It is not only capable of detecting single events, but also persistent and recurring events.
 
-Based on the rules set by the user, DataMiner Correlation can create correlated alarms or send notifications via text message or email, so that operators are informed of certain events. It can also trigger Automation scripts, so that automatic countermeasures are possible in case of emergency or preventive actions in case of emerging issues.
+Based on the rules set by the user, DataMiner Correlation can create correlated alarms or send notifications via text message or email, so that operators are informed of certain events. It can also trigger automation scripts, so that automatic countermeasures are possible in case of emergency or preventive actions in case of emerging issues.
 
 ![Correlation engine concept](~/dataminer/images/correlation_engine_conceptv2.jpg)
 
-## Correlation rules: basic concept
+## correlation rules: basic concept
 
-Each of the Correlation rules in the knowledge base consists of:
+Each of the correlation rules in the knowledge base consists of:
 
 - A trigger, which determines when the rule is applied.
 
@@ -50,7 +50,7 @@ The Cube Correlation Engine offers several functions that are not available in t
 
 ### Which DMA handles which rule?
 
-In the DMS, each rule is either handled by one specific DMA, or handled by all DMAs separately, depending on whether the option *Correlate across DMAs* is selected. (See [General configuration of Correlation rules](xref:General_configuration_of_Correlation_rules).)
+In the DMS, each rule is either handled by one specific DMA, or handled by all DMAs separately, depending on whether the option *Correlate across DMAs* is selected. (See [General configuration of correlation rules](xref:General_configuration_of_Correlation_rules).)
 
 - If this option is selected, the rule will accept all alarm events from the entire DMS that match the configured alarm filter. One single rule can combine base alarm events from multiple Agents.
 

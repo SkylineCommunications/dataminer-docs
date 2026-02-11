@@ -134,7 +134,7 @@ When an EPM element was stopped, in some rare cases, an error could occur in SLE
 
 When a query using the *Get parameter table by ID* data source had the *Update data* option enabled, the component would incorrectly no longer automatically refresh the data when changes were detected.
 
-#### Web apps - Interactive Automation scripts: Components in a row following a component with a row span greater than 1 would not be positioned correctly [ID 35504]
+#### Web apps - Interactive automation scripts: Components in a row following a component with a row span greater than 1 would not be positioned correctly [ID 35504]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 

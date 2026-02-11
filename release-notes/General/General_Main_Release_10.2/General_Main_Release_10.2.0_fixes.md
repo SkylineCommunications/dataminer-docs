@@ -251,7 +251,7 @@ In some cases, an error could occur in SLNet when correlation details were reque
 
 In some cases, an error could occur when the timetrace table was created when upgrading from an older DataMiner version (e.g from version 10.0.0 to 10.1.4).
 
-#### Interactive Automation scripts: 'continue script' action triggered after the script had already been detached \[ID 29357\]
+#### Interactive automation scripts: 'continue script' action triggered after the script had already been detached \[ID 29357\]
 
 In some rare cases, a “continue script” action could incorrectly be triggered after the script in question had already been detached.
 
@@ -354,13 +354,13 @@ Also, in some cases, no action would be taken when, in case of smart baselines, 
 
 When a SetDataMinerInfoMessage was used to delete a service using the service name, in some cases, an exception could be thrown.
 
-#### Interactive Automation scripts: Problem when entering double-digit numbers in input controls \[ID 29736\]
+#### Interactive automation scripts: Problem when entering double-digit numbers in input controls \[ID 29736\]
 
 In some cases, because of a problem with the WantsOnChange functionality, it would not be possible to enter a double-digit number (e.g. a number of minutes) in an input control. The interactive Automation script would incorrectly already continue after you entered the first digit.
 
 #### Problem when an interactive Automaton script was detached on closure \[ID 29815\]
 
-In some cases, when an interactive Automation script detached on closure, an exception could be thrown in SLAutomation. From now on, interactive Automation scripts will only detach when they are aborted by a user either closing the popup window or clicking the Abort button.
+In some cases, when an interactive Automation script detached on closure, an exception could be thrown in SLAutomation. From now on, interactive automation scripts will only detach when they are aborted by a user either closing the popup window or clicking the Abort button.
 
 #### Service & Resource Management: Start of bookings delayed when multiple bookings started at the same time \[ID 29880\]
 
@@ -532,7 +532,7 @@ In some rare cases, overall memory usage of the SLAnalytics process would tempor
 
 When no *SoftLaunchOptions.xml* file was found in the `C:\Skyline DataMiner\` root directory, soft-launch options that were enabled by default (e.g. the new average trending feature) would incorrectly be disabled.
 
-#### Interactive Automation scripts: Problem with file upload components \[ID 31064\]
+#### Interactive automation scripts: Problem with file upload components \[ID 31064\]
 
 After multiple updates had occurred in an interactive Automation script, in some cases, a file upload component could end up in an invalid state and lose all information about the uploaded files.
 
@@ -582,7 +582,7 @@ In some cases, a DataMiner Agent could get stuck in offload mode after the datab
 
 In some cases, it would no longer be possible for users without access to elements to retrieve the list of views in which a service is located using, for example, the Web Services API.
 
-#### Interactive Automation scripts: Initial state of non-recursive tree view incorrect \[ID 31302\]
+#### Interactive automation scripts: Initial state of non-recursive tree view incorrect \[ID 31302\]
 
 The initial checked/unchecked state of a non-recursive tree item would be incorrect when
 
@@ -591,7 +591,7 @@ The initial checked/unchecked state of a non-recursive tree item would be incorr
 - the item had children, and
 - none of those children were checked.
 
-#### Interactive Automation scripts: Dialog items inherited dimensions of dialog item shown earlier \[ID 31311\]
+#### Interactive automation scripts: Dialog items inherited dimensions of dialog item shown earlier \[ID 31311\]
 
 When an interactive Automation script was launched from a web app, in some cases, a dialog item could incorrectly inherit the dimensions of a dialog item shown earlier.
 

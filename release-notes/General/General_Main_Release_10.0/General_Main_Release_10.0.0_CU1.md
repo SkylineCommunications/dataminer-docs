@@ -125,7 +125,7 @@ A number of minor enhancements have been made to the *Advanced Editing* pane:
 - Closing the *Advanced Editing* pane will now update the *Advanced Editing* button in the ribbon.
 - The current selection will now be taken into account when starting the *Advanced Editing* extension.
 
-#### DataMiner Cube - Correlation: Enhancements with regard to the use of placeholders in 'Send Email' actions of Correlation rules \[ID 24816\]
+#### DataMiner Cube - Correlation: Enhancements with regard to the use of placeholders in 'Send Email' actions of correlation rules \[ID 24816\]
 
 A number of minor enhancements have been made with regard to the use of placeholders in “Send Email” actions of correlation rules.
 
@@ -621,9 +621,9 @@ The URL argument “cpes” now has the following extended format:
 ?cpes=dmaID%2FeID%2FFieldPID%2FFieldValue%2FTableIndexPID%2FIndexValue
 ```
 
-#### Interactive Automation scripts: Problem with checkbox updates \[ID 25054\]
+#### Interactive automation scripts: Problem with checkbox updates \[ID 25054\]
 
-In interactive Automation scripts, in some cases, checkbox components would not be updated correctly.
+In interactive automation scripts, in some cases, checkbox components would not be updated correctly.
 
 #### SLDMS runtime errors when connection with remote DMA could not be initialized \[ID 25068\]
 
@@ -745,7 +745,7 @@ In some cases, an error could occur in SLNet when retrieving the CPU usage or th
 
 #### Automation: Scripts using a library could no longer be executed after a DataMiner restart \[ID 25282\]
 
-After a DataMiner restart, in some cases, Automation scripts that used a library could no longer be executed because the DataMiner Agent was not able to find the DLL file of that library.
+After a DataMiner restart, in some cases, automation scripts that used a library could no longer be executed because the DataMiner Agent was not able to find the DLL file of that library.
 
 #### DataMiner Cube - Workspaces: A saved workspace could no longer be opened in an undocked window \[ID 25308\]
 

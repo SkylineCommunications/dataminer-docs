@@ -66,13 +66,13 @@ A `Hash` property has now been added to the `GetScriptInfoResponseMessage`. This
 > [!NOTE]
 > Author will not be included in the hash value as changing the author would result in a different value being calculated.
 
-All hash values of all Automation scripts will be added as `AutomationScriptHashInfo` objects to the Automation script hash value cache file *AutomationScriptHashCache.txt*, located in the `C:\Skyline DataMiner\System Cache\` folder. This file will be updated one minute after an Automation script was created or updated or one minute after a `GetScriptInfoMessage` was called.
+All hash values of all automation scripts will be added as `AutomationScriptHashInfo` objects to the Automation script hash value cache file *AutomationScriptHashCache.txt*, located in the `C:\Skyline DataMiner\System Cache\` folder. This file will be updated one minute after an Automation script was created or updated or one minute after a `GetScriptInfoMessage` was called.
 
 Format of an AutomationScriptHashInfo object: `Script Name;LastUpdate;Calculated hash`
 
 Example: `Automation script;638786700548555379;48bcb02e89875979c680d936ec19ad5e9697f7ed73498fd061aecb73e7097497`
 
-#### Automation scripts: Generating information events when editing a connection in a QAction [ID 42783]
+#### automation scripts: Generating information events when editing a connection in a QAction [ID 42783]
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
@@ -82,7 +82,7 @@ The SLNet message `EditConnection`, which can be used to edit a connection from 
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
-In an Automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other Automation scripts (or any other code) to request information about the script in question, for example to find out which profile parameter values a script needs in order to orchestrate a device.
+In an Automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other automation scripts (or any other code) to request information about the script in question, for example to find out which profile parameter values a script needs in order to orchestrate a device.
 
 ##### Using the entry point
 

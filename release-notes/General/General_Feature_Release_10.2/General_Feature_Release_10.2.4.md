@@ -760,9 +760,9 @@ When creating a correlation rule in the Correlation app, it is now possible to u
 
 Due to a number of enhancements, overall performance has increased when stopping SNMP elements.
 
-#### DataMiner Cube - Automation: SaveAutomationScriptXmlMessage will now be used when importing, saving and updating Automation scripts \[ID 32557\]
+#### DataMiner Cube - Automation: SaveAutomationScriptXmlMessage will now be used when importing, saving and updating automation scripts \[ID 32557\]
 
-Up to now, when an Automation script was imported, the file would not be processed in the same way as when an Automation script was saved or updated. From now on, the same SaveAutomationScriptXmlMessage will be used when importing, saving and updating Automation scripts.
+Up to now, when an Automation script was imported, the file would not be processed in the same way as when an Automation script was saved or updated. From now on, the same SaveAutomationScriptXmlMessage will be used when importing, saving and updating automation scripts.
 
 #### Hanging threads in SLNet will now be logged in SLHangingCalls.txt \[ID 32582\]
 

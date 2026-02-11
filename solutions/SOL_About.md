@@ -6,7 +6,7 @@ uid: SOL_About
 
 DataMiner solutions represent **pre-configured implementations that operate on top of the DataMiner stack**. Leveraging the extensive suite of DataMiner functionalities, these solutions are designed to seamlessly integrate into your system, offering the flexibility to be **utilized as-is or fine-tuned** to suit specific requirements.
 
-Accessible through the [Catalog](xref:About_the_Catalog_app), these solutions encompass a diverse array of configured DataMiner functions, including connectors, alarm and trend templates, visual summaries, Automation scripts, dashboards, low-code apps, and user-defined APIs, among others. The composition of components varies across different solutions.
+Accessible through the [Catalog](xref:About_the_Catalog_app), these solutions encompass a diverse array of configured DataMiner functions, including connectors, alarm and trend templates, visual summaries, automation scripts, dashboards, low-code apps, and user-defined APIs, among others. The composition of components varies across different solutions.
 
 ## Solution apps
 
@@ -52,6 +52,6 @@ Key features:
 
 ## Updates
 
-Continually evolving along a roadmap, the DataMiner solutions are subject to updates, ensuring compatibility with newer versions while preserving backward compatibility. Updates are facilitated by deploying updated solution packages from the Catalog. You have full autonomy over solution implementations, so you can modify visuals, Automation scripts, and more, according to your preferences.
+Continually evolving along a roadmap, the DataMiner solutions are subject to updates, ensuring compatibility with newer versions while preserving backward compatibility. Updates are facilitated by deploying updated solution packages from the Catalog. You have full autonomy over solution implementations, so you can modify visuals, automation scripts, and more, according to your preferences.
 
 However, keep in mind that if you modify components of a solution, these will be overwritten when you deploy an update of the solution. Consequently, if you intend to tailor solutions to your unique context, we recommend that you **create customized versions** by copying (or branching) them and then applying necessary adjustments, thereby preserving the original solution for future updates.

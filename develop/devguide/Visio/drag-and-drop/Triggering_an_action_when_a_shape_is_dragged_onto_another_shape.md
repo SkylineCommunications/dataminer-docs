@@ -6,7 +6,7 @@ uid: Triggering_an_action_when_a_shape_is_dragged_onto_another_shape
 
 A shape can be set to perform a particular action when another shape is dropped onto it.
 
-This "drop" behavior will often be implemented to visualize element properties or to pass parameters like element or service names to Automation scripts.
+This "drop" behavior will often be implemented to visualize element properties or to pass parameters like element or service names to automation scripts.
 
 > [!NOTE]
 >

@@ -13,7 +13,7 @@ In the Correlation module, the *Actions* section of the details pane allows you 
 1. Select one of the listed properties and create a filter condition, or select *Saved filters* and select an existing alarm filter.
 
    > [!NOTE]
-   > Private alarm filters are not available for use in Correlation rules.
+   > Private alarm filters are not available for use in correlation rules.
 
 1. If necessary, select the option *Include all Alarms generated ... before and after the moment this rule was triggered* and specify a time span.
 

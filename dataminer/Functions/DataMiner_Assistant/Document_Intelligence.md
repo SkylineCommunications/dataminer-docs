@@ -53,7 +53,7 @@ The DataMiner Assistant combines OCR (Optical Character Recognition) and LLMs (L
 
 1. The model's output is returned as the Document Intelligence response.
 
-![DataMiner Document Intelligence](~/dataminer/images/documentintelligence_diagram.png)<br>*Using the Document Intelligence API in DataMiner Automation scripts*
+![DataMiner Document Intelligence](~/dataminer/images/documentintelligence_diagram.png)<br>*Using the Document Intelligence API in DataMiner automation scripts*
 
 ## Writing effective instructions
 
@@ -111,7 +111,7 @@ ADDITIONAL INFORMATION:
 - Satellite names are often abbreviations (e.g. EUT) followed by numbers and letters (e.g. 7A). Only the base identifier is required, so "EUT 7A-7E" can be mapped to "EUT 7".
 ```
 
-## Using Document Intelligence in Automation scripts
+## Using Document Intelligence in automation scripts
 
 From DataMiner 10.6.0/10.6.1 onwards, you can integrate Document Intelligence directly into [DataMiner Automation](xref:automation).
 

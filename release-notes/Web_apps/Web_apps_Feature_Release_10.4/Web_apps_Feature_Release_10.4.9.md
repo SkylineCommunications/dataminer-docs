@@ -28,7 +28,7 @@ In the settings of the component, you can also opt to have the component either 
 
 > [!NOTE]
 >
-> - The component cannot be used to launch Automation scripts that are not interactive.
+> - The component cannot be used to launch automation scripts that are not interactive.
 > - The component will not ask for any missing parameters or dummies. It expects them to be filled in either in its settings or via feeds. When input is missing, the script will not be launched and the component will be blank.
 > - By default, scripts will time out after 15 minutes. If a script times out, an error will be displayed in the component.
 
@@ -107,7 +107,7 @@ Because of a number of enhancements, overall performance has increased when load
 
 As from DataMiner version 10.4.4, when an interactive Automation script is launched from a web app, the windows and popups of that script will inherit the foreground color and the default component background color of the page, panel or dashboard from which the script was launched.
 
-All interactive Automation scripts components have now been reviewed to make sure they fully inherit the correct theme.
+All interactive automation scripts components have now been reviewed to make sure they fully inherit the correct theme.
 
 #### Security enhancements [ID 40210] [ID 40290]
 

@@ -129,7 +129,7 @@ DataMiner now supports the use of NotRegex filters in Elasticsearch.
 
 On DataMiner startup and hourly at report generation, a batch of notifications gets forwarded between DataMiner modules, ending up on the SLNetCOM Notification Stack. Up to now, two such notifications were also forwarded for every DVE element. These will now no longer be sent.
 
-#### Automation scripts: #define ALARM_SQUASHING \[ID 29613\]
+#### automation scripts: #define ALARM_SQUASHING \[ID 29613\]
 
 The preprocessor directive “#define ALARM_SQUASHING” will now automatically be added to each C# block of an Automation script.
 
@@ -146,7 +146,7 @@ In C# blocks, all code related to alarm squashing should be enclosed as follows:
 This allows C# blocks that contain alarm squashing functionality to also be compiled on DataMiner versions that do not support alarm squashing.
 
 > [!NOTE]
-> Up to now, the following directives would only be added to QActions. These will now also be added to C# blocks of Automation scripts.
+> Up to now, the following directives would only be added to QActions. These will now also be added to C# blocks of automation scripts.
 >
 > - #define DBInfo
 > - #define DCFv1

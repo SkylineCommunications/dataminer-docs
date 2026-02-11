@@ -72,7 +72,7 @@ If an advanced search returns several kinds of items, it is possible to filter w
 | Parameter        | All parameters. An additional filter allows you to limit the search to parameters that are or are not trended, or to monitored parameters. |
 | Protocol         | DataMiner protocols. See [Protocols](xref:Protocols1). |
 | Redundancy group | DataMiner redundancy groups and redundancy group templates. See [About redundancy groups](xref:About_redundancy_groups). |
-| Script           | Automation scripts. See [Automation](xref:automation). |
+| Script           | automation scripts. See [Automation](xref:automation). |
 | Service          | DataMiner Services and Spectrum Analysis measurement points. An additional filter allows you to limit the search to services that are monitored, in alarm, masked, or in a particular alarm state. |
 | Service template | DataMiner service templates. See [Service templates](xref:Service_templates). |
 | Settings         | Cube settings. See [User settings](xref:User_settings) |

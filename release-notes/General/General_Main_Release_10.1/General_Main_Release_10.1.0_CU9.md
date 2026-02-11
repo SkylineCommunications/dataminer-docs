@@ -133,9 +133,9 @@ In Visual Overview, it was no longer possible to display aggregated parameter va
 
 During a Failover switch, in some cases, the Resources.xml file would constantly be updated.
 
-#### Problem with SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved \[ID 31030\]
+#### Problem with SLAutomation when trying to run automation scripts on elements for which no protocol information could be retrieved \[ID 31030\]
 
-In some cases, an error could occur in SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved.
+In some cases, an error could occur in SLAutomation when trying to run automation scripts on elements for which no protocol information could be retrieved.
 
 #### Problem during DataMiner startup when retrieving alarms for multiple elements from an Elasticsearch database \[ID 31039\]
 

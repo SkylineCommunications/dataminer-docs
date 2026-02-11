@@ -4,7 +4,7 @@ uid: Manifest.Content.AutomationScripts.AutomationScript.Selection
 
 # Selection element
 
-In case the Automation script solution consists of multiple Automation scripts, the Selection element allows you to specify which Automation scripts should be included in the package. By default, all Automation scripts will be included.
+In case the Automation script solution consists of multiple automation scripts, the Selection element allows you to specify which automation scripts should be included in the package. By default, all automation scripts will be included.
 
 ## Parent
 

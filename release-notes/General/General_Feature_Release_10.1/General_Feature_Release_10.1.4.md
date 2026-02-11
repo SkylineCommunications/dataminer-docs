@@ -653,9 +653,9 @@ From now on, this will no longer the case when you do not have access to the ele
 
 When, in a trend template, you changed the Allow offload database configuration setting, in some cases, the setting would not be applied correctly.
 
-#### Problem when launching Automation scripts when switching elements in a redundancy group that contained DELT elements \[ID 28832\]
+#### Problem when launching automation scripts when switching elements in a redundancy group that contained DELT elements \[ID 28832\]
 
-When Automation scripts were launched when switching elements in a redundancy group of which either the primary or backup elements were DELT elements, in some cases, it would not be possible to pass \<Any Primary> or \<Any backup> as dummies.
+When automation scripts were launched when switching elements in a redundancy group of which either the primary or backup elements were DELT elements, in some cases, it would not be possible to pass \<Any Primary> or \<Any backup> as dummies.
 
 #### DataMiner Cube - Services app: UI selections would be lost after saving or discarding changes made to a service profile definition \[ID 28839\]
 
@@ -679,7 +679,7 @@ When an interactive Automation script was communicating with the client app, in 
 
 Due to an incorrect ID check, in some cases, it would not be possible to create or update a service profile definition after defining virtual function IDs.
 
-#### DataMiner Cube - Interactive Automation scripts: Multiple 'Continue' messages would be sent to the DataMiner Agent \[ID 28872\]
+#### DataMiner Cube - Interactive automation scripts: Multiple 'Continue' messages would be sent to the DataMiner Agent \[ID 28872\]
 
 When an interactive Automation script was running, DataMiner Cube would incorrectly send multiple identical “Continue” messages to the DataMiner Agent. In some cases, this would cause an error in SLAutomation.
 

@@ -25,7 +25,7 @@ Relationships between parameters are found by studying the changes in the behavi
 > - This light bulb feature will only work on cloud-connected DataMiner Agents that have the *ModelHost* DxM installed and that have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
 > - Relationship models are calculated once per week. When this feature is activated, it can take up to a week before the first results are visible.
 
-#### Automation: No more 'Abort' buttons in dialog boxes of interactive Automation scripts [ID 34559]
+#### Automation: No more 'Abort' buttons in dialog boxes of interactive automation scripts [ID 34559]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 

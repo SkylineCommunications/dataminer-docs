@@ -57,7 +57,7 @@ SLLogCollector will now also collect the scheduled tasks configured in Microsoft
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
-Up to now, when the SLAutomation service was started, the DLL references defined on an Automation script library would only be taken into account when that library needed to be recompiled. As a result, Automation scripts that relied on a script library could fail due to missing references.
+Up to now, when the SLAutomation service was started, the DLL references defined on an Automation script library would only be taken into account when that library needed to be recompiled. As a result, automation scripts that relied on a script library could fail due to missing references.
 
 From now on, when the SLAutomation service is started, the DLL references on an Automation script library will also be loaded when that library does not need to be recompiled.
 

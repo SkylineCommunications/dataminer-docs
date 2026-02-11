@@ -68,7 +68,7 @@ Because of a number of enhancements, overall performance has increased when expo
 
 ### Fixes
 
-#### Web apps - Interactive Automation scripts: Component of type 'Time' would not be displayed as a time span picker [ID 35435]
+#### Web apps - Interactive automation scripts: Component of type 'Time' would not be displayed as a time span picker [ID 35435]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -96,7 +96,7 @@ When you entered an invalid value into a text box, an error message would be dis
 
 When a query using the *Get parameter table by ID* data source had the *Update data* option enabled, the component would incorrectly no longer automatically refresh the data when changes were detected.
 
-#### Web apps - Interactive Automation scripts: Components in a row following a component with a row span greater than 1 would not be positioned correctly [ID 35504]
+#### Web apps - Interactive automation scripts: Components in a row following a component with a row span greater than 1 would not be positioned correctly [ID 35504]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 

@@ -704,7 +704,7 @@ scriptOptions.InheritScriptOutput = true;
 scriptOptions.StartScript();
 ```
 
-#### Interactive Automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
+#### Interactive automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
 
 In an interactive Automation script, it is now possible to upload files from a client computer.
 
@@ -821,7 +821,7 @@ When you have successfully migrated all booking data, the button to start the wi
 
 > [!NOTE]
 >
-> - After migrating the booking data to the Indexing database, make sure to check your Automation scripts and Visio files and adjust the booking property names where necessary.
+> - After migrating the booking data to the Indexing database, make sure to check your automation scripts and Visio files and adjust the booking property names where necessary.
 > - When configuring backup settings in the *Backup* section of *System Center*, a new *Include SRM in backup* option is now available under the *Create a backup of the database* option. Select this option if you want the booking data in the Indexing database to be included in the backup package.
 > - An Indexing database takes about twice as much disk space to store booking data compared to a Cassandra database.
 > - A number of methods in the ServiceManagerHelper and ResourceManagerHelper classes have been adapted to allow them to manage booking data stored in an Indexing database.

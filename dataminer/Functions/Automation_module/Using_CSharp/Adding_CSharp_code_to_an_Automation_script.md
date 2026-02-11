@@ -75,7 +75,7 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
 
 ## Script class
 
-- For small Automation scripts, you can enter the logic to be executed without wrapping your code in a class and method.
+- For small automation scripts, you can enter the logic to be executed without wrapping your code in a class and method.
 
     Example:
 
@@ -145,7 +145,7 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
 
 ## Preprocessor directives
 
-DataMiner compiles C# blocks of Automation scripts with the following preprocessor directives:
+DataMiner compiles C# blocks of automation scripts with the following preprocessor directives:
 
 - DCFv1
 
@@ -217,7 +217,7 @@ Restrictions:
 > Be careful how you handle async code in an automation script. See [Handling async code](xref:Handling_Async_Code).
 
 > [!NOTE]
-> From DataMiner 10.5.7/10.6.0 <!-- RN 42969 --> onwards, the [OnRequestScriptInfo](xref:Skyline.DataMiner.Automation.AutomationEntryPointType.Types.OnRequestScriptInfo) entry point allows other Automation scripts (or any other code) to request information about the script in question. Information about implementing that entry point and executing it is available in [this how-to](xref:Implementing_OnRequestScriptInfo_Entry_Point).
+> From DataMiner 10.5.7/10.6.0 <!-- RN 42969 --> onwards, the [OnRequestScriptInfo](xref:Skyline.DataMiner.Automation.AutomationEntryPointType.Types.OnRequestScriptInfo) entry point allows other automation scripts (or any other code) to request information about the script in question. Information about implementing that entry point and executing it is available in [this how-to](xref:Implementing_OnRequestScriptInfo_Entry_Point).
 
 ## Online help and user assistance
 
@@ -228,7 +228,7 @@ Restrictions:
 
 When you right-click in the code editor, a shortcut menu will appear. From the *Sample Snippets* submenu, you can select a number of C# sample snippets.
 
-These snippets will prove helpful when learning how to use C# code in DataMiner Automation scripts, and will also provide a way to quickly add frequently used code.
+These snippets will prove helpful when learning how to use C# code in DataMiner automation scripts, and will also provide a way to quickly add frequently used code.
 
 ### Syntax check
 

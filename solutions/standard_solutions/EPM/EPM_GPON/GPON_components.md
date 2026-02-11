@@ -42,9 +42,9 @@ To take full advantage of the aggregation and topology capabilities of an EPM xP
 
 This could be a database, a CRM, another data stream, local files (CSV or JSON), etc. To determine the effort to include such data sources in your system, contact the Skyline Sales team.
 
-## Automation scripts
+## automation scripts
 
-The xPON EPM Solution uses the following Automation scripts:
+The xPON EPM Solution uses the following automation scripts:
 
 - **EpmBeToOLT**
 
@@ -56,4 +56,4 @@ The xPON EPM Solution uses the following Automation scripts:
 
 - **WmToBexPON**
 
-Each of these Automation scripts has a defined task. All of them use the DataMiner messaging system to request, provide, and sync data among EPM components.
+Each of these automation scripts has a defined task. All of them use the DataMiner messaging system to request, provide, and sync data among EPM components.

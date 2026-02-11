@@ -618,7 +618,7 @@ A FieldValueChange object has the following properties:
 
 #### Enhanced visualization of disabled text boxes \[ID 26193\]
 
-Disabled text boxes in e.g. interactive Automation scripts will now automatically be optimized as to size and will have a scrollbar when needed.
+Disabled text boxes in e.g. interactive automation scripts will now automatically be optimized as to size and will have a scrollbar when needed.
 
 #### User menu now has a 'Sign out' command \[ID 26254\]
 
@@ -788,7 +788,7 @@ The problem would occur in the following situations:
 - When you expanded a correlation alarm, the alarm duration indicator of the source alarms would disappear.
 - When, for a particular alarm, an update was received while its history was expanded, the alarm duration indicator of the alarms in the history list would disappear.
 
-#### Automation scripts: Problem when a parameter specified in an email action contained a double quote character \[ID 26046\]
+#### automation scripts: Problem when a parameter specified in an email action contained a double quote character \[ID 26046\]
 
 When, in an Automation script, you specified a parameter containing a double quote character in an email action configured to send a report, in some cases, it would not be possible to save the script.
 

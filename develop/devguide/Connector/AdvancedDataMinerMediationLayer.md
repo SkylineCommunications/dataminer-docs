@@ -8,7 +8,7 @@ Often, in a particular infrastructure, you can find devices from different vendo
 
 Through the DataMiner Mediation Layer, it is possible to provide a uniform view on these different devices/device protocols. This is achieved by using a so-called base protocol, which forms a mediation layer on top of device-specific protocols and therefore provides a standard view on these devices.
 
-Automation scripts, for example, can then be based on these base protocols instead of on a device-specific protocol, so that these scripts can more easily be re-used.
+automation scripts, for example, can then be based on these base protocols instead of on a device-specific protocol, so that these scripts can more easily be re-used.
 
 The following graph illustrates the concept:
 
@@ -18,6 +18,6 @@ Suppose, for example, that "Device Protocol X" is a protocol for an IRD device X
 
 By defining a base protocol for IRD devices, we can provide a uniform, standard view. In this example, the base protocol defines a parameter for the carrier frequency which will be linked with the corresponding parameters of the device-specific protocols. This allows, for example, the creation of a single Automation script that interacts with the parameters provided in the base protocol and therefore allows interaction with elements that execute "Device Protocol X" or "Device Protocol Y".
 
-Note that the standard view provided by base protocols will potentially be a more constrained view on a device, whereas the device-specific view will typically expose more features and capabilities, as not all devices expose the exact same functionality. However, by basing your solutions (Automation scripts, reports, etc.) as much as possible on the standard views, you increase the re-usability of your solutions.
+Note that the standard view provided by base protocols will potentially be a more constrained view on a device, whereas the device-specific view will typically expose more features and capabilities, as not all devices expose the exact same functionality. However, by basing your solutions (automation scripts, reports, etc.) as much as possible on the standard views, you increase the re-usability of your solutions.
 
 In DataMiner Cube, it is possible to switch between the base view and the device-specific view by opening the element card menu and selecting Mediation Layer > Default (for the device-specific view) or the name of the base protocol (for the standard view provided by that base protocol).

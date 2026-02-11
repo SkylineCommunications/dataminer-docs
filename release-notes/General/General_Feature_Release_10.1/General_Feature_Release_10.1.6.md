@@ -25,7 +25,7 @@ On MySQL and Microsoft SQL Server databases, the alarm table now has an extra fi
 
 #### SimulationHelper API now allows loading, enabling and disabling element simulations at runtime \[ID 29517\]
 
-Up to now, loading new element simulations always required a DataMiner restart. Now, the SimulationHelper API will allow you to load, enable and disable element simulations at runtime from within protocol QActions or Automation scripts.
+Up to now, loading new element simulations always required a DataMiner restart. Now, the SimulationHelper API will allow you to load, enable and disable element simulations at runtime from within protocol QActions or automation scripts.
 
 Construction:
 
@@ -340,7 +340,7 @@ In other words, components using a State, Gauge and Ring component as a feed wil
 
 ### DMS Automation
 
-#### Automation scripts: #define ALARM_SQUASHING \[ID 29613\]
+#### automation scripts: #define ALARM_SQUASHING \[ID 29613\]
 
 The preprocessor directive “#define ALARM_SQUASHING” will now automatically be added to each C# block of an Automation script.
 
@@ -357,7 +357,7 @@ In C# blocks, all code related to alarm squashing should be enclosed as follows:
 This allows C# blocks that contain alarm squashing functionality to also be compiled on DataMiner versions that do not support alarm squashing.
 
 > [!NOTE]
-> Up to now, the following directives would only be added to QActions. These will now also be added to C# blocks of Automation scripts.
+> Up to now, the following directives would only be added to QActions. These will now also be added to C# blocks of automation scripts.
 >
 > - #define DBInfo
 > - #define DCFv1
@@ -729,7 +729,7 @@ When a DataMiner Agent was started in a DataMiner System, in some cases, errors 
 
 When using an element card search box on a system with an Elasticsearch database, in some cases, no search results would appear.
 
-#### Interactive Automation scripts: 'continue script' action triggered after the script had already been detached \[ID 29357\]
+#### Interactive automation scripts: 'continue script' action triggered after the script had already been detached \[ID 29357\]
 
 In some rare cases, a “continue script” action could incorrectly be triggered after the script in question had already been detached.
 

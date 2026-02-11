@@ -5,7 +5,7 @@ keywords: DELT export, DELT
 
 # Exporting elements, services, etc. to a .dmimport file
 
-In the DataMiner Cube Surveyor, you can right-click a view in order to export it, with any elements, services, redundancy groups, documents, SLAs and service templates it contains, to .dmimport format. It is also possible to right-click an element or service directly to export it. The .dmimport package will also contain any related properties, protocols, information templates, trend templates, alarm template and Automation scripts.
+In the DataMiner Cube Surveyor, you can right-click a view in order to export it, with any elements, services, redundancy groups, documents, SLAs and service templates it contains, to .dmimport format. It is also possible to right-click an element or service directly to export it. The .dmimport package will also contain any related properties, protocols, information templates, trend templates, alarm template and automation scripts.
 
 > [!NOTE]
 >

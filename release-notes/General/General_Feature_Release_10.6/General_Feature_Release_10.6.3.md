@@ -407,11 +407,11 @@ Because of a number of enhancements, overall performance of the the *Cube CRL Fr
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
-#### Interactive Automation scripts launched from web apps: UI components Time and Calendar can now all display seconds [ID 44487]
+#### Interactive automation scripts launched from web apps: UI components Time and Calendar can now all display seconds [ID 44487]
 
 <!-- MR 10.6.0 - FR 10.6.3 -->
 
-Up to now, in interactive Automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
+Up to now, in interactive automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
 
 - `UIBlockType.Time` with `AutomationDateTimePickerOptions`
 - `UIBlockType.Time` with `AutomationDateTimeUpDownOptions`
@@ -426,7 +426,7 @@ Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator)
 
 From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
 
-#### Interactive Automation scripts in web apps: New UsePreviousCollapsedState property will allow tree nodes to restore their IsCollapsed state when the UI is updated [ID 44515]
+#### Interactive automation scripts in web apps: New UsePreviousCollapsedState property will allow tree nodes to restore their IsCollapsed state when the UI is updated [ID 44515]
 
 <!-- MR 10.6.0 - FR 10.6.3 -->
 

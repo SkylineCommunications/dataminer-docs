@@ -90,7 +90,7 @@ Because of a number of enhancements, overall performance of visual overviews has
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
-A number of enhancements have been made with regard to dragging and dropping Automation scripts between folders.
+A number of enhancements have been made with regard to dragging and dropping automation scripts between folders.
 
 For example, up to now, when you dragged a script from one folder to another after having selected another script first, in some cases, the script you had selected first would incorrect be moved to the other folder.
 

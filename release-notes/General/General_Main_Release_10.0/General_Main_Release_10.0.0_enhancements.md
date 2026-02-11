@@ -564,7 +564,7 @@ From now on, instead of an alarm, an information event will be generated contain
 
 #### Masking of virtual functions now possible \[ID 23033\]
 
-It is now possible to mask virtual functions via Automation scripts. Previously it was only possible to mask the main element.
+It is now possible to mask virtual functions via automation scripts. Previously it was only possible to mask the main element.
 
 #### NT_UPDATE_PORTS_XML (128) updated to limit information events and allow new option \[ID 23052\]
 
@@ -620,9 +620,9 @@ The names of the following log files did not follow the DataMiner log file namin
 
 All the DataMiner HTML5 apps (Monitoring, Dashboards and Jobs), will now fall back to polling when WebSockets are disabled on the Agent. When WebSockets get enabled on the Agent, existing subscriptions that are using polling but can use WebSockets will stop polling and start a WebSocket connection instead.
 
-#### HTML5 apps: Enhanced performance when running interactive Automation scripts \[ID 23312\]
+#### HTML5 apps: Enhanced performance when running interactive automation scripts \[ID 23312\]
 
-Due to a number of enhancements, overall performance has improved when running interactive Automation scripts from inside HTML5 apps (Dashboards, Jobs, etc.).
+Due to a number of enhancements, overall performance has improved when running interactive automation scripts from inside HTML5 apps (Dashboards, Jobs, etc.).
 
 #### DataMiner Cube - Alarm Console: Alarm actions will now use the root alarm ID instead of the alarm ID \[ID 23377\]
 
@@ -747,7 +747,7 @@ Due to a number of enhancements, overall performance has increased when drawing 
 
 #### DataMiner Cube - Automation/Correlation: Width of action dialog boxes will now automatically be adapted to the size of the screen \[ID 24190\]
 
-From now on, when you configure actions in Automation scripts or Correlation rules, the action dialog boxes will automatically adapt their width to the size of the screen.
+From now on, when you configure actions in automation scripts or correlation rules, the action dialog boxes will automatically adapt their width to the size of the screen.
 
 #### Run-time errors will now be generated when SLDataMiner halts while executing start, stop or restart actions for elements \[ID 24228\]
 

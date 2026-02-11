@@ -14,7 +14,7 @@ uid: Web_apps_Feature_Release_10.3.7
 
 ## New features
 
-#### Interactive Automation scripts: New DownloadButton component [ID 35869]
+#### Interactive automation scripts: New DownloadButton component [ID 35869]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 

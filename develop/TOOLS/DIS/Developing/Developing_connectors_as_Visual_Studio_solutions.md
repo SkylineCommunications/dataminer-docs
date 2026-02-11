@@ -88,7 +88,7 @@ A connector Visual Studio solution is organized into various folders, each servi
 - **Tests**: This folder is intended for test projects.
 
 > [!NOTE]
-> Test projects should only be integrated into protocol solutions for the purpose of testing protocol functionality. They should not be used for system tests that include certain Automation scripts, among other things.
+> Test projects should only be integrated into protocol solutions for the purpose of testing protocol functionality. They should not be used for system tests that include certain automation scripts, among other things.
 
 ## See also
 

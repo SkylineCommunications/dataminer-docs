@@ -182,11 +182,11 @@ When you opened the *Protocol & Templates* module, in some rare cases, function 
 
 When you renamed your local DataMiner user with administrative access while being logged in as that user, the user would incorrectly get (partially) removed.
 
-#### DataMiner Cube: Problem when opening scheduled tasks, Automation scripts or Correlation rules containing actions that include PDF reports [ID 34997]
+#### DataMiner Cube: Problem when opening scheduled tasks, automation scripts or correlation rules containing actions that include PDF reports [ID 34997]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU11] - FR 10.3.2 -->
 
-When, in *Scheduler*, *Automation* or *Correlation*, you opened scheduled tasks, Automation scripts or Correlation rules containing actions that include PDF reports, in some rare cases, the data linked to those reports (i.e. the elements and services in view selection) could not be loaded. This data will now be loaded correctly. Also, a "Loading" indicator will now be displayed and the actions will remain disabled while the data is being loaded. When an error occurs while loading the protocols associated with said data, a clear warning entry will also be added to the Cube logging.
+When, in *Scheduler*, *Automation* or *Correlation*, you opened scheduled tasks, automation scripts or correlation rules containing actions that include PDF reports, in some rare cases, the data linked to those reports (i.e. the elements and services in view selection) could not be loaded. This data will now be loaded correctly. Also, a "Loading" indicator will now be displayed and the actions will remain disabled while the data is being loaded. When an error occurs while loading the protocols associated with said data, a clear warning entry will also be added to the Cube logging.
 
 > [!NOTE]
 > From now on, in the *Elements and services in view selection* list, it will also be possible to select parameters of enhanced services.

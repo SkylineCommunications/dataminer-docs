@@ -388,7 +388,7 @@ When you manage the column configuration, you can select different column types.
 
 - **Alarm icon**: Use this type for a column indicating an ID of a service, element, or view. It will show the alarm icon for the relevant service, element, or view.
 
-- **Custom icon**: Displays a custom icon. This relies on Automation scripts providing an icon library: a script that maps the custom icons, and a script that maps the column values to specific icon names. At present, this column type cannot be used.
+- **Custom icon**: Displays a custom icon. This relies on automation scripts providing an icon library: a script that maps the custom icons, and a script that maps the column values to specific icon names. At present, this column type cannot be used.
 
 - **Color**: Shows the color defined in the cell value. This can for example be used to show the color from the *VisualBackground* property of bookings.
 

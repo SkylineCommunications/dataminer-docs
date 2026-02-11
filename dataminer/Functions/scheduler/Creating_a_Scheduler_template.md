@@ -14,7 +14,7 @@ To create scheduler templates, which will show up in the EVENT list in Scheduler
 
 1. Select the “Scheduler Templates” folder, and click the *Add script* button to add a script.
 
-1. Configure the script as described in the section [Designing Automation scripts](xref:Designing_Automation_scripts). However, in order for the script to be usable as a Scheduler template, add a parameter named “Action”.
+1. Configure the script as described in the section [Designing automation scripts](xref:Designing_Automation_scripts). However, in order for the script to be usable as a Scheduler template, add a parameter named “Action”.
 
    > [!NOTE]
    > While the scheduled task runs, the value of the “Action” parameter will automatically be set to “START” or “STOP”, in accordance with the start and stop timestamps linked to the left and right border of the task rectangle in Scheduler.

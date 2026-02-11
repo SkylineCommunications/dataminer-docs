@@ -27,7 +27,7 @@ Setting a value different from "Auto" will replace the [options](xref:DMSScript-
 
 - Setting "Optional" will enable the option flag "HasFindInteractiveClient".
 
-- Setting "Always" will enable the option flag "RequireInteractive". This is the preferred option when Automation scripts are used in an [IAS component](xref:InteractiveAutomationScript) in low-code apps.
+- Setting "Always" will enable the option flag "RequireInteractive". This is the preferred option when automation scripts are used in an [IAS component](xref:InteractiveAutomationScript) in low-code apps.
 
 ## How auto-detection determines interactivity
 

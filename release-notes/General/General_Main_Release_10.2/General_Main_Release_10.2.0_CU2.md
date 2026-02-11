@@ -260,6 +260,6 @@ In some cases, an error could occur in the SLLog process when a log file was clo
 
 When a shape was linked to a spectrum parameter with an ID between 50,000 and 60,000, in some cases, the shape would incorrectly show a grid instead of text.
 
-#### Interactive Automation scripts: Slider linked to a numeric text box would incorrectly keep following the mouse pointer \[ID 33204\]
+#### Interactive automation scripts: Slider linked to a numeric text box would incorrectly keep following the mouse pointer \[ID 33204\]
 
-In interactive Automation scripts, in some cases, the slider linked to a numeric text box would incorrectly keep following the mouse pointer, even after the mouse button had been released.
+In interactive automation scripts, in some cases, the slider linked to a numeric text box would incorrectly keep following the mouse pointer, even after the mouse button had been released.

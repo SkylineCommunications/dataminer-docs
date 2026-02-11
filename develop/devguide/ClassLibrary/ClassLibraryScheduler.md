@@ -4,7 +4,7 @@ uid: Scheduler_NuGet_Package
 
 # Using the Scheduler NuGet package
 
-The Scheduler NuGet package provides useful functionalities to interact with the Scheduler module using Automation scripts. It enables the creation, updating, and deletion of scheduled tasks.
+The Scheduler NuGet package provides useful functionalities to interact with the Scheduler module using automation scripts. It enables the creation, updating, and deletion of scheduled tasks.
 
 ## Installing the Scheduler NuGet package
 

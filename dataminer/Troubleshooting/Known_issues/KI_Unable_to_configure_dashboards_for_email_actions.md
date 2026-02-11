@@ -2,7 +2,7 @@
 uid: KI_Unable_to_configure_dashboards_included_in_email_actions
 ---
 
-# Unable to configure dashboards included in 'Email' actions for Automation scripts, scheduled tasks, and Correlation rules
+# Unable to configure dashboards included in 'Email' actions for automation scripts, scheduled tasks, and correlation rules
 
 ## Affected versions
 

@@ -107,7 +107,7 @@ After an upgrade to DataMiner 10.5.9 build 16208, in some cases, existing maps c
 
 ### Enhancements
 
-#### Interactive Automation scripts: Minimum and Maximum properties of the time components will now be considered to be either local time or UTC time [ID 43014]
+#### Interactive automation scripts: Minimum and Maximum properties of the time components will now be considered to be either local time or UTC time [ID 43014]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 

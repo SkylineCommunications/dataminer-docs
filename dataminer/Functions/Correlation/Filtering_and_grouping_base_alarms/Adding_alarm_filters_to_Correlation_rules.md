@@ -2,7 +2,7 @@
 uid: Adding_alarm_filters_to_Correlation_rules
 ---
 
-# Adding alarm filters to Correlation rules
+# Adding alarm filters to correlation rules
 
 In the Correlation module, the *Alarm Filter* section of the details pane allows you to create a filter to limit the alarms that will be evaluated by the correlation rule.
 
@@ -15,7 +15,7 @@ In the Correlation module, the *Alarm Filter* section of the details pane allows
    - If this is not the first (or only) filter condition, select the operator linking it to the previous one (and, and not, or, or not).
 
    > [!NOTE]
-   > Private alarm filters are not available for use in Correlation rules.
+   > Private alarm filters are not available for use in correlation rules.
 
 1. If you want to add another condition to the filter, click *Add a Filter* and go back to step 2.
 

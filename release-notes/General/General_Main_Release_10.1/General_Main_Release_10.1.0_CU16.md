@@ -105,7 +105,7 @@ Also, when a table column contained an OID in an incorrect format, the table wou
 
 When the DataMiner software started up on an agent that was not part of a Failover setup, in some cases, an incorrect IP address could get added to the DMS.xml file. Later on, this could lead to e.g. agent synchronization issues.
 
-#### Automation scripts would incorrectly succeed even when uploading a report had failed \[ID 33368\]
+#### automation scripts would incorrectly succeed even when uploading a report had failed \[ID 33368\]
 
 When, in an Automation script, you had configured an action that uploads a report to a shared folder or FTP, up to now, the script would still succeed even when it had not been able to copy the generated report to the remote location (shared folder or FTP). From now on, when a script is not able to copy a report to a remote location, it will fail.
 
@@ -139,7 +139,7 @@ A number of alarm-related issues have been fixed:
 - When a new row was added to a table, in some cases, the conditional monitoring based on service impact alarming would be incorrect.
 - In some cases, alarms retrieved from the database would contain outdated fields in the alarm tree.
 
-#### Automation scripts: Problem with processor directives \[ID 33424\]
+#### automation scripts: Problem with processor directives \[ID 33424\]
 
 Up to now, the following preprocessor directives would incorrectly be inserted into the Automation script code, causing syntax errors to appear on the incorrect lines.
 

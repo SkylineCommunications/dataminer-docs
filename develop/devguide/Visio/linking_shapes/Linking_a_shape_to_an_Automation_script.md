@@ -97,7 +97,7 @@ For example, in the configuration below, the first-level separator "\|" is repla
 
 ## Passing Automation script output to session variables
 
-When an automation script executed in Visual Overview finishes successfully, the output values of that script can be passed to session variables in Visual Overview. From DataMiner 10.2.6/10.3.0 onwards, this is also supported for interactive Automation scripts.
+When an automation script executed in Visual Overview finishes successfully, the output values of that script can be passed to session variables in Visual Overview. From DataMiner 10.2.6/10.3.0 onwards, this is also supported for interactive automation scripts.
 
 To configure this in the script, use the *CreateKey(string variablename)* method (namespace: *Skyline.DataMiner.Automation*, class name: *UIVariables.VisualOverview*).
 
@@ -107,7 +107,7 @@ In the following example, a session variable named "MyOutput" will be created, a
 engine.AddScriptOutput(UIVariables.VisualOverview.CreateKey("MyOutput"), "MyValue");
 ```
 
-- If you execute the same Automation script on different pages, you can use the *SessionVariablePrefix* option to make sure the output is saved in separate session variables. For example, if you use prefix "One\_" on one page and prefix "Two\_" on another page, and the Automation scripts pass their output to a session variable named "MyPage", then the output will end up in two separate session variables named "One_MyPage" and "Two_MyPage" respectively.
+- If you execute the same Automation script on different pages, you can use the *SessionVariablePrefix* option to make sure the output is saved in separate session variables. For example, if you use prefix "One\_" on one page and prefix "Two\_" on another page, and the automation scripts pass their output to a session variable named "MyPage", then the output will end up in two separate session variables named "One_MyPage" and "Two_MyPage" respectively.
 
 - When you set the *SetVarOnFail* option to true (either on page level or shape level), the session variables will always be created, regardless of whether the script finishes successfully or not.
 

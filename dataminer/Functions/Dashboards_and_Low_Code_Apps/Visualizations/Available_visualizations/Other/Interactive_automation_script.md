@@ -29,7 +29,7 @@ The following behavior applies for the component:
 1. In the *Component* > *Settings* pane, select the script that should be shown in the component in the *Script* box.
 
    > [!NOTE]
-   > Make sure to select an interactive script, because only interactive Automation scripts will work with this component.
+   > Make sure to select an interactive script, because only interactive automation scripts will work with this component.
 
 1. If necessary, configure the parameters and/or dummies for the script.
 

@@ -10,7 +10,7 @@ From DataMiner 10.2.0 onwards.
 
 ## Cause
 
-Correlation rules may prevent an element's alarm state from updating correctly. When a notice, such as `Alarm history exceeded 100 alarms. It is advised to revise your alarm threshold definitions`, is stored for an element, it can interfere with how the alarm state is handled after alarms clear.
+correlation rules may prevent an element's alarm state from updating correctly. When a notice, such as `Alarm history exceeded 100 alarms. It is advised to revise your alarm threshold definitions`, is stored for an element, it can interfere with how the alarm state is handled after alarms clear.
 
 This can happen when correlation rules with conditions like `count(*) > 0` are in place.
 

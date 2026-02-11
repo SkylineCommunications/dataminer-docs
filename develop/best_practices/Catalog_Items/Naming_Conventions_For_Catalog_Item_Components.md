@@ -38,7 +38,7 @@ In the naming conventions, references will be made to the following abbreviation
 
 ### Automation script
 
-Generic Automation scripts and Automation scripts that are used in solutions should have a name in the following format, where *[TYPE]* is the type of the script as defined in [Github repository naming convention](xref:Using_GitHub_for_CICD#repository-naming-convention): `[SOLCODE]-[TYPE]-[name]`
+Generic automation scripts and automation scripts that are used in solutions should have a name in the following format, where *[TYPE]* is the type of the script as defined in [Github repository naming convention](xref:Using_GitHub_for_CICD#repository-naming-convention): `[SOLCODE]-[TYPE]-[name]`
 
 For scripts created by Skyline for a specific customer, the customer abbreviation should be used instead of [SOLCODE]. For a list of these abbreviations, refer to [DCP](https://dcp.skyline.be/Lists/Customers/AllItems.aspx) (internal link for Skyline employees only).
 
@@ -67,7 +67,7 @@ For the name of the Automation script used for an ad hoc data source, see [Autom
 
 ### Correlation rule
 
-Correlation rules should have a name in the following format: `[SOLCODE] [name]`
+correlation rules should have a name in the following format: `[SOLCODE] [name]`
 
 They should be added in the Correlation module in the following folder: `DataMiner Catalog/[SOLCATEGORY]/[SOLNAME]/[subfolders]`
 

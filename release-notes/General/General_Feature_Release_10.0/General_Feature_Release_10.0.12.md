@@ -312,13 +312,13 @@ Known limitations:
 
 ### DMS Automation
 
-#### Interactive Automation scripts: Support for datetime values in ISO 8601 format \[ID 27565\]
+#### Interactive automation scripts: Support for datetime values in ISO 8601 format \[ID 27565\]
 
 The UIResults.GetDateTime method now also supports datetime values in ISO 8601 format.
 
 Up to now, only datetime values in “dd/MM/yyyy HH:mm:ss” were supported.
 
-#### Interactive Automation scripts: TreeViewItem now has an 'IsCollapsed' property \[ID 27567\]
+#### Interactive automation scripts: TreeViewItem now has an 'IsCollapsed' property \[ID 27567\]
 
 Each TreeViewItem in a TreeView component now has an “IsCollapsed” property.
 
@@ -753,7 +753,7 @@ When, in the *Profiles* app, you duplicated a profile parameter of type “discr
 
 In some cases, after a DataMiner process had generated a crashdump, it could occur that no DataMiner restart was triggered even though this should have been the case.
 
-#### Interactive Automation scripts: Problems with the UIBlockDefinition.IsEnabled and UIBlockDefinition.InitialValue properties \[ID 27326\]
+#### Interactive automation scripts: Problems with the UIBlockDefinition.IsEnabled and UIBlockDefinition.InitialValue properties \[ID 27326\]
 
 Up to now, UIBlockDefinition.IsEnabled was not applied for blocks of type “checkbox”. From now on, a block of type “checkbox” will be disabled when the UIBlockDefinition.IsEnabled property is set to False.
 

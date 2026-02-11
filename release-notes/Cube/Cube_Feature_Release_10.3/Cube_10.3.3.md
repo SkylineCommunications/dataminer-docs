@@ -29,7 +29,7 @@ If a DataMiner System is configured to use a Cassandra Cluster setup (i.e. a set
 > [!TIP]
 > See also: [OpenSearch & Amazon OpenSearch Service [ID 34651]](xref:General_Feature_Release_10.3.3#opensearch--amazon-opensearch-service-id-34651)
 
-#### Automation: New user/group setting to specify whether users have to confirm program executions launched from interactive Automation scripts [ID 35418]
+#### Automation: New user/group setting to specify whether users have to confirm program executions launched from interactive automation scripts [ID 35418]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 

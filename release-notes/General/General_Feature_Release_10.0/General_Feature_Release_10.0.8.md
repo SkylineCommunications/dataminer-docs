@@ -295,9 +295,9 @@ When multiple columns have different discreet values, all these values will be d
 
 ### DMS Mobile apps
 
-#### Interactive Automation scripts: UI components now have a TooltipText property \[ID 25609\] \[ID 25978\]
+#### Interactive automation scripts: UI components now have a TooltipText property \[ID 25609\] \[ID 25978\]
 
-UI components in interactive Automation scripts launched from a mobile app can now have a tool tip configured by means of the UIBlockDefinition class property “TooltipText”.
+UI components in interactive automation scripts launched from a mobile app can now have a tool tip configured by means of the UIBlockDefinition class property “TooltipText”.
 
 ### DMS Service & Resource Management
 
@@ -570,7 +570,7 @@ When you click a shape with an alarm filter in an *AlarmSummary* data item and t
 
 In some cases, when the tab page did not exist yet and the Alarm Console was collapsed, the tab page was created but the Alarm Console would incorrectly not be opened.
 
-#### Interactive Automation scripts: Some dropdown boxes would unnecessarily trigger a refresh of the UI \[ID 25902\]
+#### Interactive automation scripts: Some dropdown boxes would unnecessarily trigger a refresh of the UI \[ID 25902\]
 
 In some cases, dropdown boxes would unnecessarily trigger a refresh of the UI.
 

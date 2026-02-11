@@ -91,7 +91,7 @@ Swarming has its own set of prerequisites. In this step, you will use a script f
 
 1. Click the *Analyze* button to start checking the alarm ID usage.
 
-   This button will only be available once all static requirements are met. It will analyze the use of the unique identifiers of alarms in scripting (Automation scripts and QActions), as this has been modified to support Swarming. (See [About the alarm ID changes](xref:SwarmingPrepare#about-the-alarm-id-changes).)
+   This button will only be available once all static requirements are met. It will analyze the use of the unique identifiers of alarms in scripting (automation scripts and QActions), as this has been modified to support Swarming. (See [About the alarm ID changes](xref:SwarmingPrepare#about-the-alarm-id-changes).)
 
    This check can take up to several minutes, depending on the number of scripts and connectors in the system.
 

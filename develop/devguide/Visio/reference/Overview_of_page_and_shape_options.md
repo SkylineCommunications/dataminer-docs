@@ -910,7 +910,7 @@ Shape-level option.
 
 Used to make DataMiner ignore a parent shape when determining the element on which a command should be executed.
 
-See [Making subshapes execute parameter sets or Automation scripts on the element linked to the parent shape](xref:Grouping_shapes#making-subshapes-execute-parameter-sets-or-automation-scripts-on-the-element-linked-to-the-parent-shape).
+See [Making subshapes execute parameter sets or automation scripts on the element linked to the parent shape](xref:Grouping_shapes#making-subshapes-execute-parameter-sets-or-automation-scripts-on-the-element-linked-to-the-parent-shape).
 
 ## StartResolvingFromParent
 

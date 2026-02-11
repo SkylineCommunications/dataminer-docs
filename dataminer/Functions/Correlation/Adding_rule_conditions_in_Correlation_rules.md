@@ -2,7 +2,7 @@
 uid: Adding_rule_conditions_in_Correlation_rules
 ---
 
-# Adding rule conditions in Correlation rules
+# Adding rule conditions in correlation rules
 
 In the *Correlation* module in Cube, select a rule in the tree view pane on the left in order to add rule conditions to it in the details pane on the right.
 

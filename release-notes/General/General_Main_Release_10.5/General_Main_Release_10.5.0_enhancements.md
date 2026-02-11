@@ -352,22 +352,22 @@ From now on, this error message will include a reference to the StorageModule lo
 
 The *MySql.Data.dll* file, located in `C:\Skyline DataMiner\ProtocolScripts\`, should from now on be considered deprecated.
 
-This file will no longer be included in DataMiner upgrade packages. Also, a BPA test has been created to detect the presence and usage of this DLL file in protocols and Automation scripts.
+This file will no longer be included in DataMiner upgrade packages. Also, a BPA test has been created to detect the presence and usage of this DLL file in protocols and automation scripts.
 
-To remove all references to the *MySql.Data.dll* file in your protocols and Automation scripts, do the following:
+To remove all references to the *MySql.Data.dll* file in your protocols and automation scripts, do the following:
 
 1. Open DataMiner Cube.
 1. Open *System Center*.
 1. Go to *Agents > BPA*.
 1. Run the *Check Deprecated MySql DLL* test (if it has not been run yet).
-1. If references to the DLL file have been found, click the ellipsis button next to the message to see an overview of all protocols and Automation scripts that are still using this DLL file.
+1. If references to the DLL file have been found, click the ellipsis button next to the message to see an overview of all protocols and automation scripts that are still using this DLL file.
 
    This overview is displayed as a string in JSON format. It will contain the following information:
 
    - The names and versions of the protocols that are still using this file, including the IDs of the QActions in which this file is referenced.
-   - The names of the Automation scripts that are still using this file.
+   - The names of the automation scripts that are still using this file.
 
-1. Replace every reference to the *MySql.Data.dll* file in the listed protocol QActions and Automation scripts by a reference to the [MySql.Data NuGet](https://www.nuget.org/packages/MySql.Data). Using that NuGet should not require any other changes to the existing code.
+1. Replace every reference to the *MySql.Data.dll* file in the listed protocol QActions and automation scripts by a reference to the [MySql.Data NuGet](https://www.nuget.org/packages/MySql.Data). Using that NuGet should not require any other changes to the existing code.
 
 When you have replaced all references to the *MySql.Data.dll* file, do the following:
 
@@ -442,11 +442,11 @@ Up to now, when a limit was set on the result set of queries that retrieve DOM i
 
 SLNet will now cache [ApiToken](xref:UD_APIs_Objects_ApiToken) and [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) objects. This will enhance the overall performance of the API requests.
 
-#### Automation scripts: Resources can now be retrieved page by page [ID 39743]
+#### automation scripts: Resources can now be retrieved page by page [ID 39743]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
-From now on, in Automation scripts, it is possible to retrieve resources page by page.
+From now on, in automation scripts, it is possible to retrieve resources page by page.
 
 See the following example, which shows how to implement this.
 

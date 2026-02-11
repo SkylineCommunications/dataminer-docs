@@ -87,12 +87,12 @@ Before the migration to Cassandra can begin, the migration wizard has to check i
       >   - major.minor.month.week-xxxx (in which xxxx is the four-digit build number), e.g. *10.3.3.7-5687*.
       > - To have incompatible protocols that are managed by Skyline upgraded for use with Cassandra, contact your Technical Account Manager.
 
-1. Under *Automation Script System Requirements*, check if any Automation scripts are indicated. If there are, the scripts may need to be updated to be compatible with Cassandra.
+1. Under *Automation Script System Requirements*, check if any automation scripts are indicated. If there are, the scripts may need to be updated to be compatible with Cassandra.
 
    > [!NOTE]
    >
    > - The check looks for any SQL query expressions that might cause the script to be invalid. However, it could be that such expressions in a script are used to query a different database, in which case the script is compatible even though the wizard cannot see this. In that case, add the following comment line in the first block of C# code of the script to indicate that it is compliant: `//[CassandraReady=true]`
-   > - When Automation scripts are checked for compliance, and incompatibilities are found, the line numbers where these occur are stored in the file *ScriptCache.txt*, in the folder `C:\Skyline DataMiner\System Cache`. For each script, the file lists the name followed by "true" or "false" depending on whether the script is compatible. If the script is incompatible, this is then followed by the number of the invalid script action (with the first action being 0) and the line number of the invalid line. If there are several incompatible lines, the line numbers are separated by semicolons.
+   > - When automation scripts are checked for compliance, and incompatibilities are found, the line numbers where these occur are stored in the file *ScriptCache.txt*, in the folder `C:\Skyline DataMiner\System Cache`. For each script, the file lists the name followed by "true" or "false" depending on whether the script is compatible. If the script is incompatible, this is then followed by the number of the invalid script action (with the first action being 0) and the line number of the invalid line. If there are several incompatible lines, the line numbers are separated by semicolons.
    > - If a script is tagged as `[CassandraReady=false]`, it is considered incompatible and not checked further. As such, no information about such a script is included in ScriptCache.txt.
 
 1. Under *DataMiner Agent System Requirements*, check whether your system has adequate resources available for the migration. If not, you may need to upgrade your system before the migration is possible. There are also several options available. You may need to click the *More options* button in the lower-right corner to see some of these options.

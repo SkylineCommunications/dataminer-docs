@@ -32,13 +32,13 @@ If any of your existing solutions are using NuGet packages the old way (i.e. usi
 > [!NOTE]
 > The DataMiner DevPacks can also be used in solutions other than protocol and Automation script solutions, for example in custom solutions such as the Class Library Community Packages, which are meant to be used as an API within protocol or Automation script solutions. If you have any custom solutions, make sure to the projects in those solutions also use the new DataMiner DevPacks.
 
-##### Enhanced publishing of protocols and Automation scripts
+##### Enhanced publishing of protocols and automation scripts
 
 Up to now, when you clicked the *Publish* button to publish a protocol or an Automation script on a DataMiner Agent, only the protocol or Automation script XML file would get published on that DataMiner Agent.
 
 From now on, when you publish a protocol or an Automation script, DIS will create either a *.dmprotocol* package (in case of a protocol) or a *.dmapp* package (in case of an Automation script) in the background, install that package on the DataMiner Agent, and then automatically remove it again. This way, it will no longer be needed to manually copy all required DLL files on the DataMiner Agent in question.
 
-##### Enhanced saving of protocols and Automation scripts
+##### Enhanced saving of protocols and automation scripts
 
 Up to now, it was only possible to save a protocol or an Automation script as an XML file.
 
@@ -54,7 +54,7 @@ From now on, when DVE elements are defined in the protocol, a dropdown box in th
 
 Also, export rules will now be created automatically.
 
-#### DIS menu: Additional checks when importing protocols and Automation scripts [ID 33902]
+#### DIS menu: Additional checks when importing protocols and automation scripts [ID 33902]
 
 When you try to import a protocol or an Automation script, additional checks will now be performed.
 

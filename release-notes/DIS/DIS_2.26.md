@@ -138,7 +138,7 @@ In order to prevent unwanted selection box updates in the Table Editor, it will 
 
 ### Fixes
 
-#### IDE: Problem when determining EXE block IDs in Automation scripts \[ID 25402\]
+#### IDE: Problem when determining EXE block IDs in automation scripts \[ID 25402\]
 
 When DIS had to add a new EXE block with generated Class Library code to an Automation script, it would determine its ID by only checking the existing EXE tags in the XML code of the script. As EXE block IDs should be unique across the entire XML code of an Automation script, DIS will now also check the following IDs before assigning an ID to a new EXE block:
 

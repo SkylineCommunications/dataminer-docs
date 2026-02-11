@@ -19,14 +19,14 @@ uid: Web_apps_Feature_Release_10.4.12
 
 ## New features
 
-#### Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40700]
+#### Interactive automation scripts: New option to skip the confirmation window when aborting [ID 40700]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
 DataMiner web applications now support the new `SkipAbortConfirmation` property that was added to `UIBuilder`. When this property is set to true, the confirmation window will not be displayed when the interactive Automation script is aborted. By default, this property will be set to false.
 
 > [!TIP]
-> See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]](xref:General_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40683)
+> See also: [Interactive automation scripts: New option to skip the confirmation window when aborting [ID 40683]](xref:General_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40683)
 
 #### Dashboards/Low-Code Apps: Flows [ID 40974]
 
@@ -291,7 +291,7 @@ Example:
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-Due to a serialization issue, the `GetVisioFor...` methods would throw an error when the Visio page contained shapes that executed Automation scripts with dummies, parameters or memory files.
+Due to a serialization issue, the `GetVisioFor...` methods would throw an error when the Visio page contained shapes that executed automation scripts with dummies, parameters or memory files.
 
 #### Dashboards/Low-Code Apps: Migration of a dashboard or page of a low-code app would incorrectly continue when the dashboard or page was closed [ID 41045]
 
@@ -343,7 +343,7 @@ When you panned or zoomed out while map data was being retrieved, in some cases,
 
 When your mouse pointer was hovering over a timeline item that should only become visible when you hover over it, in some cases, it would incorrectly not be displayed. In order to have it displayed, you had to move the mouse pointer away from the timeline and back.
 
-#### Interactive Automation scripts: Problem when none of the components had an identifier configured [ID 41128]
+#### Interactive automation scripts: Problem when none of the components had an identifier configured [ID 41128]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 

@@ -524,9 +524,9 @@ In the *MaintenanceSettings.xml* file of a newly installed DataMiner Agent, the 
 </MaintenanceSettings>
 ```
 
-#### Redundancy groups: Additional information in information events and Automation scripts \[ID 31358\]
+#### Redundancy groups: Additional information in information events and automation scripts \[ID 31358\]
 
-When elements within a redundancy group are switched, from now on, additional information will be added both to the information events and to the Automation scripts that are executed.
+When elements within a redundancy group are switched, from now on, additional information will be added both to the information events and to the automation scripts that are executed.
 
 ##### Information events
 
@@ -547,7 +547,7 @@ The following information will be added to the information events.
 
 - When DataMiner intervenes in the switching process, an information event with parameter description “Linked to” is generated. From now on, this event will also mention the element from which the switch occurred. It will now contain e.g. “RDG1, Unlinked from RDG3” instead of just “RDG1”.
 
-##### Automation scripts
+##### automation scripts
 
 When an Automation script is triggered as part of an redundancy group action, that script will now have the following additional parameters. These can then be requested from within the Automation script using the GetScriptParam(\<id>) method on the engine object.
 

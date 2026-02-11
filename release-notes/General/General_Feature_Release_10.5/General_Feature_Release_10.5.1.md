@@ -65,7 +65,7 @@ var logRequest = new GetLogTextFileStringContentRequestMessage
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 
-SLNet `GetInfo` messages for the `PropertyConfiguration` and `ViewInfo` types now support retrieving information for a specific item. This will enhance the performance of the `Skyline.DataMiner.Core.DataMinerSystem.Common` NuGet package used in protocols or Automation scripts.
+SLNet `GetInfo` messages for the `PropertyConfiguration` and `ViewInfo` types now support retrieving information for a specific item. This will enhance the performance of the `Skyline.DataMiner.Core.DataMinerSystem.Common` NuGet package used in protocols or automation scripts.
 
 ##### Type PropertyConfiguration
 

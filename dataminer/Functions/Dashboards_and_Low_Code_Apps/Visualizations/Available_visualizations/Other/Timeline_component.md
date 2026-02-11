@@ -429,7 +429,7 @@ Each event provides the following data:
 | Changing an item's group | Current and new item state, both as *Table* objects. |
 
 > [!TIP]
-> Watch the [*Building an enhanced timeline in Low-Code Apps* video tutorial](https://youtu.be/Sy0uQlX6jA4?si=bmInQb5JZJMiwHwt), which walks you through setting up interactions, using event data, and linking it to Automation scripts. You can also follow along yourself using the accompanying [Catalog package](https://catalog.dataminer.services/details/cf630b1c-8e67-4019-986d-70ae35324c24).
+> Watch the [*Building an enhanced timeline in Low-Code Apps* video tutorial](https://youtu.be/Sy0uQlX6jA4?si=bmInQb5JZJMiwHwt), which walks you through setting up interactions, using event data, and linking it to automation scripts. You can also follow along yourself using the accompanying [Catalog package](https://catalog.dataminer.services/details/cf630b1c-8e67-4019-986d-70ae35324c24).
 
 > [!NOTE]
 >

@@ -14,4 +14,4 @@ In connectors, there is support for providing a folder path in the `QAction@dllI
 However, to avoid issues, it is important to adhere to the limitations stated in [Multiple versions of the same assembly](xref:Run_Time_Assembly_Binding#multiple-versions-of-the-same-assembly).
 
 > [!NOTE]
-> Note that the behavior in Automation scripts is different from that in connectors, as **in Automation scripts it is not possible to specify a folder path as hint path**. For more information, refer to [Assembly binding Automation scripts](xref:AssemblyResolvingAutomationScripts).
+> Note that the behavior in automation scripts is different from that in connectors, as **in automation scripts it is not possible to specify a folder path as hint path**. For more information, refer to [Assembly binding automation scripts](xref:AssemblyResolvingAutomationScripts).

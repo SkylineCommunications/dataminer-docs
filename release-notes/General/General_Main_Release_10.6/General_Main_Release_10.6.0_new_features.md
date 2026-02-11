@@ -176,7 +176,7 @@ var logRequest = new GetLogTextFileStringContentRequestMessage
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 
-SLNet `GetInfo` messages for the `PropertyConfiguration` and `ViewInfo` types now support retrieving information for a specific item. This will enhance the performance of the `Skyline.DataMiner.Core.DataMinerSystem.Common` NuGet package used in protocols or Automation scripts.
+SLNet `GetInfo` messages for the `PropertyConfiguration` and `ViewInfo` types now support retrieving information for a specific item. This will enhance the performance of the `Skyline.DataMiner.Core.DataMinerSystem.Common` NuGet package used in protocols or automation scripts.
 
 ##### Type PropertyConfiguration
 
@@ -662,7 +662,7 @@ A `Hash` property has now been added to the `GetScriptInfoResponseMessage`. This
 > [!NOTE]
 > Author will not be included in the hash value as changing the author would result in a different value being calculated.
 
-All hash values of all Automation scripts will be added as `AutomationScriptHashInfo` objects to the Automation script hash value cache file *AutomationScriptHashCache.txt*, located in the `C:\Skyline DataMiner\System Cache\` folder. This file will be updated one minute after an Automation script was created or updated or one minute after a `GetScriptInfoMessage` was called.
+All hash values of all automation scripts will be added as `AutomationScriptHashInfo` objects to the Automation script hash value cache file *AutomationScriptHashCache.txt*, located in the `C:\Skyline DataMiner\System Cache\` folder. This file will be updated one minute after an Automation script was created or updated or one minute after a `GetScriptInfoMessage` was called.
 
 Format of an AutomationScriptHashInfo object: `Script Name;LastUpdate;Calculated hash`
 
@@ -698,22 +698,22 @@ If the parameter is not initialized or is set to an empty string, the default pa
 
 The context name and context ID can be changed at runtime, and are not saved by default. When the element is restarted, the parameter data will be lost unless the `save` attribute of the parameter was set to true (e.g. `<Param id="1" save="true">`).
 
-#### Automation scripts: Generating information events when editing a connection in a QAction [ID 42783]
+#### automation scripts: Generating information events when editing a connection in a QAction [ID 42783]
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
 The SLNet message `EditConnection`, which can be used to edit a connection from within a QAction, now has a `GenerateInformationEvents` property. If this property is set to true, information events will be generated when a connection is created, updated, or deleted.
 
-#### Interactive Automation scripts executed in a web app: Filtering values in a dropdown box [ID 42808]
+#### Interactive automation scripts executed in a web app: Filtering values in a dropdown box [ID 42808]
 
 <!-- MR 10.6.0 - FR 10.5.8 -->
 
-To prevent dropdown boxes in interactive Automation scripts from getting loaded with too much data, it is now possible to filter the data that is loaded into a dropdown box.
+To prevent dropdown boxes in interactive automation scripts from getting loaded with too much data, it is now possible to filter the data that is loaded into a dropdown box.
 
-For an example showing how to implement a dropdown box filter in an interactive Automation script, see [Interactive Automation scripts: Filtering values in a redesigned UI component 'DropDown' [ID 42845]](xref:Web_apps_Feature_Release_10.5.8#interactive-automation-scripts-filtering-values-in-a-redesigned-ui-component-dropdown-id-42845).
+For an example showing how to implement a dropdown box filter in an interactive Automation script, see [Interactive automation scripts: Filtering values in a redesigned UI component 'DropDown' [ID 42845]](xref:Web_apps_Feature_Release_10.5.8#interactive-automation-scripts-filtering-values-in-a-redesigned-ui-component-dropdown-id-42845).
 
 > [!IMPORTANT]
-> This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
+> This feature is only supported for interactive automation scripts executed in web apps. It is not supported for interactive automation scripts executed in DataMiner Cube.
 
 #### New BPA test 'Large Alarm Trees' [ID 42952]
 
@@ -723,11 +723,11 @@ A new BPA test named "Large Alarm Trees" is now available. This test will retrie
 
 The BPA test is available in System Center on the *Agents > BPA* tab.
 
-#### Automation scripts: New Interactivity tag [ID 42954]
+#### automation scripts: New Interactivity tag [ID 42954]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-Up to now, Automation scripts using the IAS Interactive Toolkit required a special comment or code snippet in order to be recognized as interactive. From now on, you will be able to define the interactive behavior of an Automation script by adding an `<Interactivity>` tag in the header of the script. See the following example.
+Up to now, automation scripts using the IAS Interactive Toolkit required a special comment or code snippet in order to be recognized as interactive. From now on, you will be able to define the interactive behavior of an Automation script by adding an `<Interactivity>` tag in the header of the script. See the following example.
 
 ```xml
 <DMSScript xmlns="http://www.skyline.be/automation">
@@ -753,7 +753,7 @@ Possible values:
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
-In an Automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other Automation scripts (or any other code) to request information about the script in question, for example to find out which profile parameter values a script needs in order to orchestrate a device.
+In an Automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other automation scripts (or any other code) to request information about the script in question, for example to find out which profile parameter values a script needs in order to orchestrate a device.
 
 ##### Using the entry point
 
@@ -1260,7 +1260,7 @@ The endpoint can now also return the following additional errors:
 | ResponseHeadersNotAllowed | 1012 | 500 | The response header or headers you are trying to return are not allowed. |
 | ResponseHeadersInvalid | 1013 | 500 | The response header or headers you are trying to return are invalid. Header names and values cannot contain whitespace, colons (":"), commas (","), or ASCII control characters. The *UserDefinableApiEndpoint* logging will contain the exact error. |
 
-#### Interactive Automation scripts executed in a web app: UI version can now be set in the script [ID 43875]
+#### Interactive automation scripts executed in a web app: UI version can now be set in the script [ID 43875]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
@@ -1286,7 +1286,7 @@ The URL parameter `useNewIASInputComponents` has priority over the UI version se
 - If you use `useNewIASInputComponents=false`, the script will use the current UI version (i.e. V1), even when V2 was set in the script.
 
 > [!IMPORTANT]
-> This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
+> This feature is only supported for interactive automation scripts executed in web apps. It is not supported for interactive automation scripts executed in DataMiner Cube.
 
 #### Dashboard reports can now be generated in PDF, HTML, and/or CSV format [ID 43887]
 

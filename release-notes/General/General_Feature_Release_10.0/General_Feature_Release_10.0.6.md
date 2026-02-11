@@ -410,7 +410,7 @@ In some cases, an error could occur in SLNet when retrieving the CPU usage or th
 
 #### Automation: Scripts using a library could no longer be executed after a DataMiner restart \[ID 25282\]
 
-After a DataMiner restart, in some cases, Automation scripts that used a library could no longer be executed because the DataMiner Agent was not able to find the DLL file of that library.
+After a DataMiner restart, in some cases, automation scripts that used a library could no longer be executed because the DataMiner Agent was not able to find the DLL file of that library.
 
 #### DataMiner Cube - Workspaces: A saved workspace could no longer be opened in an undocked window \[ID 25308\]
 

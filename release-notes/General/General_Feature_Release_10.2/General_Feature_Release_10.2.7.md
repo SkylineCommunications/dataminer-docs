@@ -482,7 +482,7 @@ When you paused a replay of a spectrum recording, in some cases, it would no lon
 
 A number of issues were solved related to how DataMiner executes prerequisites as part of a DataMiner upgrade.
 
-#### Automation scripts would incorrectly succeed even when uploading a report had failed \[ID 33368\]
+#### automation scripts would incorrectly succeed even when uploading a report had failed \[ID 33368\]
 
 When, in an Automation script, you had configured an action that uploads a report to a shared folder or FTP, up to now, the script would still succeed even when it had not been able to copy the generated report to the remote location (shared folder or FTP). From now on, when a script is not able to copy a report to a remote location, it will fail.
 
@@ -533,11 +533,11 @@ A number of alarm-related issues have been fixed:
 
 When a profile parameter of type “number” had no decimals defined, its value would incorrectly be displayed as the maximum value that can be assigned to a parameter of type integer. From now on, when a profile parameter has no decimals defined, its value will be displayed as is, without decimals.
 
-#### Interactive Automation scripts: Range limits of a numeric IBlockDefinition would be ignored \[ID 33419\]
+#### Interactive automation scripts: Range limits of a numeric IBlockDefinition would be ignored \[ID 33419\]
 
 When an Automation script was launch from the Dashboards app or from a custom web app, in some cases, the range limits of a numeric IBlockDefinition would be ignored when you clicked the Up or Down button.
 
-#### Automation scripts: Problem with processor directives \[ID 33424\]
+#### automation scripts: Problem with processor directives \[ID 33424\]
 
 Up to now, the following preprocessor directives would incorrectly be inserted into the Automation script code, causing syntax errors to appear on the incorrect lines.
 
@@ -569,7 +569,7 @@ When you tried to migrate an element with a name containing square brackets (e.g
 
 When a shape linked to a parameter had a *History Mode* shape data field set to “State=On”, in some cases, no units would be shown. Also, in case of a parameter with discreet values, the shape would incorrectly show the actual value instead of the display value.
 
-#### Interactive Automation scripts: Tree view component would incorrectly collapse when selecting an item that unselected the previously selected item \[ID 33480\]
+#### Interactive automation scripts: Tree view component would incorrectly collapse when selecting an item that unselected the previously selected item \[ID 33480\]
 
 When, in a tree view component of an interactive Automation script, you selected an item that unselected the previously selected item, in some cases, the entire tree view component would incorrectly collapse.
 

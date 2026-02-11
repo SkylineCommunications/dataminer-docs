@@ -25,9 +25,9 @@ These are the required EPM connectors, which are included in the EPM Solution pa
 - [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/details/b175a610-19d0-4281-99cc-359e09a7e859)
 - [Skyline EPM Platform DOCSIS WM](https://catalog.dataminer.services/details/302ebc88-3c4b-42e2-bca3-058cc7d015c1)
 
-## Automation scripts
+## automation scripts
 
-The Integrated DOCSIS EPM Solution uses the following Automation scripts:
+The Integrated DOCSIS EPM Solution uses the following automation scripts:
 
 - **EpmConfig**: Sets the front-end configuration in the DMS to improve topology app performance.
 - **EPM_I_DOCSIS_EpmFeToEpmBe**: Operates within the messaging system domain taking care of simple notifications between the EPM front-end element and the back-end elements.

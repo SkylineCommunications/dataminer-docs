@@ -10,7 +10,7 @@ uid: DIS_2.31
 
 #### Automation script debugging \[ID 28062\]
 
-From now on, you can also use the DIS Inject tool window to debug Automation scripts.
+From now on, you can also use the DIS Inject tool window to debug automation scripts.
 
 To debug an Automation script, do the following:
 
@@ -49,7 +49,7 @@ To debug an Automation script, do the following:
 
 #### Solution-based Automation script development \[ID 28231\]
 
-Similar to protocols, it is now also possible to develop Automation scripts as Visual Studio solutions. However, an Automation script solution can contain multiple scripts, while a protocol solution can only contain one single protocol.
+Similar to protocols, it is now also possible to develop automation scripts as Visual Studio solutions. However, an Automation script solution can contain multiple scripts, while a protocol solution can only contain one single protocol.
 
 - C# projects that contain the code for the Exe blocks of an Automation script can contain multiple .cs files. At compilation, the contents of those files will be combined into one Exe block.
 

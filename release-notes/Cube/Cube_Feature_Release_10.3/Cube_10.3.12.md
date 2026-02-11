@@ -85,7 +85,7 @@ Up to now, it was possible to have a DataMiner System in which some DMAs had bee
   - Allowed to add DMAs either by hostname or by IP address.
   - Allowed to create Failover pairs with shared hostname or with virtual IP addresses.
 
-#### Interactive Automation scripts: FileSelector now allows to keep the files that were already uploaded after the UI was shown [ID 37260]
+#### Interactive automation scripts: FileSelector now allows to keep the files that were already uploaded after the UI was shown [ID 37260]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 

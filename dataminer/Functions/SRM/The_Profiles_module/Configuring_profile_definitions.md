@@ -35,7 +35,7 @@ In the configuration pane, you can configure a selected profile definition as fo
 
   1. Next to *Remarks*, optionally add additional information about the script.
 
-  1. Next to *Script*, select the script from the dropdown list with existing Automation scripts.
+  1. Next to *Script*, select the script from the dropdown list with existing automation scripts.
 
   1. Click *OK*.
 

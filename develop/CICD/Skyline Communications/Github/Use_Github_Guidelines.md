@@ -13,9 +13,9 @@ You can use GitHub to:
 - Collaborate on code with external users.
 
 > [!NOTE]
-> At present, **only Automation scripts** have workflows available for packaging and deployment.
+> At present, **only automation scripts** have workflows available for packaging and deployment.
 >
-> Automation scripts that are packaged with other artifacts (Visio files, connectors, etc.) currently will not be able to use the GitHub actions, so we do not recommend using GitHub for those yet.
+> automation scripts that are packaged with other artifacts (Visio files, connectors, etc.) currently will not be able to use the GitHub actions, so we do not recommend using GitHub for those yet.
 
 ## Creating an account in GitHub's Skyline organization
 
@@ -52,7 +52,7 @@ If the repository is private, the name should look like this (using "-" as separ
 
   | Syntax | Description |
   |--|--|
-  | AS | Automation Scripts. Note that specific types of Automation scripts, such as GQI data sources, User-Defined APIs, regression tests, etc., have their own syntax. |
+  | AS | Automation Scripts. Note that specific types of automation scripts, such as GQI data sources, User-Defined APIs, regression tests, etc., have their own syntax. |
   | C | Connectors |
   | CF | Companion Files |
   | CHATOPS | ChatOps extension |

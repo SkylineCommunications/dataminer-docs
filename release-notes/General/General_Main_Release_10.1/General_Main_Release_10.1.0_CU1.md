@@ -143,7 +143,7 @@ When the DecimalQuantity property of the CapacityUsageParameterValue of a Profil
 
 In some cases, an error could be thrown when trying to take a backup of an Elasticsearch database while Elasticsearch security was enabled.
 
-#### Correlation: Correlation rules would incorrectly be triggered by empty alarms \[ID 28680\]
+#### Correlation: correlation rules would incorrectly be triggered by empty alarms \[ID 28680\]
 
 In some cases, correlation rules would incorrectly be triggered by empty alarms, causing emails to be sent with unresolved placeholders.
 
@@ -171,9 +171,9 @@ When, in a trend template, you changed the Allow offload database configuration 
 
 In some cases, the parameterName column in an offload database of type MySQL would contain incorrectly concatenated values. They would contain parameterName + chIndex instead of parameterName + displayKey.
 
-#### Problem when launching Automation scripts when switching elements in a redundancy group that contained DELT elements \[ID 28832\]
+#### Problem when launching automation scripts when switching elements in a redundancy group that contained DELT elements \[ID 28832\]
 
-When Automation scripts were launched when switching elements in a redundancy group of which either the primary or backup elements were DELT elements, in some cases, it would not be possible to pass \<Any Primary> or \<Any backup> as dummies.
+When automation scripts were launched when switching elements in a redundancy group of which either the primary or backup elements were DELT elements, in some cases, it would not be possible to pass \<Any Primary> or \<Any backup> as dummies.
 
 #### DataMiner Cube - Alarm Console: Problem when deleting elements during an alarm storm \[ID 28836\]
 
@@ -207,7 +207,7 @@ When an interactive Automation script was communicating with the client app, in 
 
 Due to an incorrect ID check, in some cases, it would not be possible to create or update a service profile definition after defining virtual function IDs.
 
-#### DataMiner Cube - Interactive Automation scripts: Multiple 'Continue' messages would be sent to the DataMiner Agent \[ID 28872\]
+#### DataMiner Cube - Interactive automation scripts: Multiple 'Continue' messages would be sent to the DataMiner Agent \[ID 28872\]
 
 When an interactive Automation script was running, DataMiner Cube would incorrectly send multiple identical “Continue” messages to the DataMiner Agent. In some cases, this would cause an error in SLAutomation.
 

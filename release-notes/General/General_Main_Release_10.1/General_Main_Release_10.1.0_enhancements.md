@@ -589,11 +589,11 @@ Virtual functions are now displayed in a separate *Virtual Functions* section i
 
 Due to a number of enhancements, overall performance has increased when connecting to a DataMiner Agent with a large amount of alarms.
 
-#### Interactive Automation scripts: No longer possible to clear the value of a selection box control \[ID 27845\]
+#### Interactive automation scripts: No longer possible to clear the value of a selection box control \[ID 27845\]
 
 Up to now, in an interactive Automation script, it was possible to clear the value of a selection box control by clicking an X button. From now on, this is no longer possible.
 
-#### Interactive Automation scripts: Multiline text boxes will no longer expand when selected \[ID 27858\]
+#### Interactive automation scripts: Multiline text boxes will no longer expand when selected \[ID 27858\]
 
 Up to now, a multiline text box (i.e. a UIBlock of type TextBox with IsMultiline set to true) would by default have a height of 1 line and would expand when it was selected. From now on, its initial height will be fixed. It will no longer expand when selected.
 

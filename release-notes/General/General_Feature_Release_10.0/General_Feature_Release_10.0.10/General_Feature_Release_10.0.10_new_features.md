@@ -14,7 +14,7 @@ uid: General_Feature_Release_10.0.10_new_features
 
 #### LogHelper API \[ID 26434\]
 
-The new LogHelper API, which combines the SLLoggerUtil API and the LogEntry repository API, can be used in Automation scripts and in QActions to manage log entries stored in Indexing Engine:
+The new LogHelper API, which combines the SLLoggerUtil API and the LogEntry repository API, can be used in automation scripts and in QActions to manage log entries stored in Indexing Engine:
 
 - ILogHelper#Log can be used to add new log entries to the database.
 - ILogHelper#LogEntries can be used to retrieve log entries from the database.
@@ -60,7 +60,7 @@ It returns a connection that impersonates the user who triggered the QAction bas
 
 ##### Script and QAction compilation
 
-Automation scripts and QActions will now by default be compiled with a reference to SLLoggerUtil.dll (C:\\Skyline DataMiner\\Files\\SLLoggerUtil.dll).
+automation scripts and QActions will now by default be compiled with a reference to SLLoggerUtil.dll (C:\\Skyline DataMiner\\Files\\SLLoggerUtil.dll).
 
 #### A notice will now be generated at DataMiner startup when duplicate properties are found for views, elements or services \[ID 26705\]
 
@@ -290,7 +290,7 @@ By default, the DLL file will be uploaded to the C:\\Skyline DataMiner\\scripts\
 
 - The name of the new DLL file in the UploadScriptDependencyMessage must be identical to the name of the old DLL file. If not, the file will no longer be found after a DataMiner restart.
 
-- Automation scripts using a DLL file should always refer to that file using its full path. If you upload a DLL file named “MyDependency.dll”, the scripts using it should refer to it using “C:\\Skyline DataMiner\\Scripts\\DllImport\\MyDependency.dll”.
+- automation scripts using a DLL file should always refer to that file using its full path. If you upload a DLL file named “MyDependency.dll”, the scripts using it should refer to it using “C:\\Skyline DataMiner\\Scripts\\DllImport\\MyDependency.dll”.
 
 - DLL files in the C:\\Skyline DataMiner\\Scripts\\DllImport folder are loaded from bytes rather than from file. They will not be locked by SLAutomation after being loaded. Note that, in some rare cases, DLL files loaded from bytes will not work properly. An example of a file that will not work when loaded from bytes is Microsoft.Exchange.WebServices.
 
@@ -371,9 +371,9 @@ public void Uninstall(Engine engine, AppUninstallContext context)
 > [!NOTE]
 > The DataMiner SLNetClientTest tool now also supports uninstalling app packages. See *Advanced \> Apps \> App Packages*.
 
-#### Automation: Tree view control for interactive Automation scripts \[ID 26840\]\[ID 27041\]
+#### Automation: Tree view control for interactive automation scripts \[ID 26840\]\[ID 27041\]
 
-It is now possible to add a tree view control in an interactive Automation script. However, note that Automation scripts with tree view controls are currently only supported in the DataMiner mobile apps. These are not yet supported in DataMiner Cube.
+It is now possible to add a tree view control in an interactive Automation script. However, note that automation scripts with tree view controls are currently only supported in the DataMiner mobile apps. These are not yet supported in DataMiner Cube.
 
 To define a tree view control, create a UIBlockDefinition of type TreeView and add each item of the tree view as a TreeViewItem to the TreeViewItems property. It is not required to fill in the InitialValue or Value of the UIBlockDefinition, as that value is determined based on the TreeViewItem collection.
 

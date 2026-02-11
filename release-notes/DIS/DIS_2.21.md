@@ -111,5 +111,5 @@ Also, in the *DIS Macros* tool window, a new *CreateMatrix* macro was added. Thi
 A collection of InterApp classes now provides a C# message/response architecture that will allow for easier communication
 
 - among elements,
-- between elements and Automation scripts, and
+- between elements and automation scripts, and
 - between elements and external applications.

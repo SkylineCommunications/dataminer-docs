@@ -6,7 +6,7 @@ uid: Getting_Started_with_the_IAS_Toolkit
 
 ## About the IAS Toolkit
 
-The Interactive Automation Script Toolkit (or “IAS Toolkit” in short) is a library that can be used to create interactive Automation scripts. Its main purpose is to make developing interactive Automation scripts easier.
+The Interactive Automation Script Toolkit (or “IAS Toolkit” in short) is a library that can be used to create interactive automation scripts. Its main purpose is to make developing interactive automation scripts easier.
 
 > [!TIP]
 > For more information on its **main features**, and the **different versions**, see [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit).

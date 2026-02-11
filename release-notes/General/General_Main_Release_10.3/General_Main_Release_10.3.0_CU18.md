@@ -178,7 +178,7 @@ At startup, in some cases, the CloudEndpointManager in SLNet could throw an exce
 
 When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
 
-#### Automation scripts could fail due to zero or negative sleep intervals being passed to Engine.Sleep [ID 40084]
+#### automation scripts could fail due to zero or negative sleep intervals being passed to Engine.Sleep [ID 40084]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 

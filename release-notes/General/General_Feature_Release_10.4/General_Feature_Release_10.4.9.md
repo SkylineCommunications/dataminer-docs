@@ -184,11 +184,11 @@ When, in the scope of behavioral anomaly detection, proactive cap detection or p
 
 From now on, when a client connects to the DataMiner System, an attempt will first be made to connect to the NATs bus via the local NATS node. Only when this attempt fails, will the client connect to the NATS bus via another node.
 
-#### Automation scripts: Resources can now be retrieved page by page [ID 39743]
+#### automation scripts: Resources can now be retrieved page by page [ID 39743]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
-From now on, in Automation scripts, it is possible to retrieve resources page by page.
+From now on, in automation scripts, it is possible to retrieve resources page by page.
 
 See the following example, which shows how to implement this.
 
@@ -300,11 +300,11 @@ When a booking was started or stopped, up to now, the system would always verify
 
 In the configuration file of the Resource Manager (`C:\Skyline DataMiner\ResourceManager\config.xml`), you can now specify a new *SkipServiceHandling* option, which will allow you to indicate whether or not an `SRMServiceInfo` object check has to be performed when a booking is started or stopped.
 
-#### SLAutomation: Enhanced compilation of Automation scripts [ID 39965]
+#### SLAutomation: Enhanced compilation of automation scripts [ID 39965]
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
-A number of enhancements have been made with regard to the compilation of Automation scripts.
+A number of enhancements have been made with regard to the compilation of automation scripts.
 
 #### SLAnalytics - Alarm focus & Automatic incident tracking: Alarms generated for child DVE elements using a parameter ID from the main DVE element will now also be taken into account [ID 39988]
 
@@ -591,7 +591,7 @@ From now on, the *Connect to cloud/DCP* user permission is no longer required to
 
 Whenever the MessageBroker client loses its connection to the NATS server, it will try to reconnect. Because of an internal issue, up to now, this reconnection mechanism could cause the overall CPU load to increase. This issue has now been fixed.
 
-#### Automation scripts could fail due to zero or negative sleep intervals being passed to Engine.Sleep [ID 40084]
+#### automation scripts could fail due to zero or negative sleep intervals being passed to Engine.Sleep [ID 40084]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 

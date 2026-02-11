@@ -167,7 +167,7 @@ uid: WS_Methods_v1_overview
 | [GetAnnotationsLinkForService](xref:GetAnnotationsLinkForService) | Obsolete. Retrieves a link to open the annotations page of a service. |
 | [GetAnnotationsLinkForView](xref:GetAnnotationsLinkForView) | Obsolete. Retrieves a link to open the annotations page of a view. |
 | [GetAutomationScript](xref:GetAutomationScript) | Retrieves an Automation script. |
-| [GetAutomationScripts](xref:GetAutomationScripts) | Retrieves all Automation scripts. |
+| [GetAutomationScripts](xref:GetAutomationScripts) | Retrieves all automation scripts. |
 | [GetAvailableAlarmProperties](xref:GetAvailableAlarmProperties) | Retrieves the properties that are available for alarm filtering. |
 | [GetAvailableVisioFiles](xref:GetAvailableVisioFiles) | Retrieves all the available Visio files that can be assigned to views and services. |
 | [GetAvailableVisioFilesForProtocol](xref:GetAvailableVisioFilesForProtocol) | Retrieves all available Visio files that can be assigned to a particular protocol. |

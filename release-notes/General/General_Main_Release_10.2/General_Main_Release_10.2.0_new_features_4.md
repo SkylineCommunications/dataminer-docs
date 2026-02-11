@@ -31,9 +31,9 @@ cube://mydma?element=MyElement
 cube://10.11.12.13?view=12
 ```
 
-#### Visual overview: Page-level execution of Automation scripts & new NodeDoubleClicked event \[ID 28185\]
+#### Visual overview: Page-level execution of automation scripts & new NodeDoubleClicked event \[ID 28185\]
 
-On a Visio page, you can now configure to have Automation scripts executed automatically using a page-level data item of type *Execute*.
+On a Visio page, you can now configure to have automation scripts executed automatically using a page-level data item of type *Execute*.
 
 See the example below. You can use the keywords *Trigger* or *SetTrigger*, which can be set to either “ValueChanged” or “Event”.
 

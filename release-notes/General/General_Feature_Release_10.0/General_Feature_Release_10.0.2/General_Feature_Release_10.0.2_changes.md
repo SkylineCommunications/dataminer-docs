@@ -179,7 +179,7 @@ In the SLNetClientTest tool, for some messages (e.g. *Diagnostics* > *SLNet* > *
 
 #### DataMiner Cube - Automation/Correlation: Width of action dialog boxes will now automatically be adapted to the size of the screen \[ID 24190\]
 
-From now on, when you configure actions in Automation scripts or Correlation rules, the action dialog boxes will automatically adapt their width to the size of the screen.
+From now on, when you configure actions in automation scripts or correlation rules, the action dialog boxes will automatically adapt their width to the size of the screen.
 
 #### Enhanced view data synchronization \[ID 24197\]
 
@@ -750,9 +750,9 @@ When multiple profile instances or profile definitions containing an empty field
 
 In some cases, it could occur that view table data were refreshed even when this was not necessary, which could cause data pages or visual overview pages to load very slowly in Cube.
 
-#### DataMiner Cube - Correlation: Problem with 'Send email' actions in Correlation rules \[ID 24361\]
+#### DataMiner Cube - Correlation: Problem with 'Send email' actions in correlation rules \[ID 24361\]
 
-When triggered, in some cases, “Send email” actions in Correlation rules would not send an email when the recipient was a DataMiner user.
+When triggered, in some cases, “Send email” actions in correlation rules would not send an email when the recipient was a DataMiner user.
 
 #### DataMiner Cube: Problem when resizing the Alarm Console \[ID 24362\]
 
@@ -880,7 +880,7 @@ When working with the Dashboards app in Chrome, in some cases, a mouse click cou
 
 When you opened a dashboard with a multiple parameter feed using a URL that contained the parameters to be loaded in that feed, in some cases, the parameters in the URL would not correctly be loaded into the multiple parameter feed.
 
-#### HTML5 apps: Selection box values containing backslash characters displayed incorrectly in interactive Automation scripts \[ID 24541\]
+#### HTML5 apps: Selection box values containing backslash characters displayed incorrectly in interactive automation scripts \[ID 24541\]
 
 When an interactive Automation script was run from within an HTML5 app, in some cases, selection box values containing “\\” characters could be displayed incorrectly.
 

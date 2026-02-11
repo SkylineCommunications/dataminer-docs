@@ -22,7 +22,7 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 In DataMiner Feature Release version 10.5.6, Automation script log files were introduced. These log files can now be consulted in DataMiner Cube. To do so, in Cube, open *System Center*, and go to *Logging > Automation*.
 
-On the left, you will find a list of all Automation scripts available on the system. Click an Automation script to expand it and display the DataMiner Agents on which it is available. Select a DMA to open the log file for that script on that specific Agent. The Agent you are currently connected to is shown in italics.
+On the left, you will find a list of all automation scripts available on the system. Click an Automation script to expand it and display the DataMiner Agents on which it is available. Select a DMA to open the log file for that script on that specific Agent. The Agent you are currently connected to is shown in italics.
 
 - Right-clicking a DMA in the list will open a shortcut menu with two options: *Open* and *Open previous*. If there is no previous log file, the latter option will not be available.
 
@@ -36,15 +36,15 @@ On the left, you will find a list of all Automation scripts available on the sys
 > [!NOTE]
 > When you open an Automation script in the *Automation* module, you can access the script's log file by clicking the *View log* button while the script is open, or by right-clicking the script in the pane on the left and selecting *View log* from the shortcut menu. Note that this will only be possible if you have permission to view log files.
 
-#### Automation: Cube now supports Automation scripts with an Interactivity tag [ID 43149]
+#### Automation: Cube now supports automation scripts with an Interactivity tag [ID 43149]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-DataMiner Cube now supports Automation scripts in which an `<Interactivity>` tag is specified.
+DataMiner Cube now supports automation scripts in which an `<Interactivity>` tag is specified.
 
-Up to now, Automation scripts using the IAS Interactive Toolkit required a special comment or code snippet in order to be recognized as interactive. From now on, you will be able to define the interactive behavior of an Automation script by adding an `<Interactivity>` tag in the header of the script.
+Up to now, automation scripts using the IAS Interactive Toolkit required a special comment or code snippet in order to be recognized as interactive. From now on, you will be able to define the interactive behavior of an Automation script by adding an `<Interactivity>` tag in the header of the script.
 
-For more information on the `<Interactivity>` tag, see [Automation scripts: New Interactivity tag [ID 42954]](xref:General_Feature_Release_10.5.9#automation-scripts-new-interactivity-tag-id-42954).
+For more information on the `<Interactivity>` tag, see [automation scripts: New Interactivity tag [ID 42954]](xref:General_Feature_Release_10.5.9#automation-scripts-new-interactivity-tag-id-42954).
 
 ## Changes
 

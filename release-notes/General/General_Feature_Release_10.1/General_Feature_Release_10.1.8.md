@@ -284,7 +284,7 @@ public class Script
 > - At present, bulk operations are not yet supported.
 > - Both PaProcess and PaToken now have a new LastModifiedAt property, filled in by SLNet. It will be used to compare cached versions with versions retrieved from the database.
 
-#### Interactive Automation scripts: File selector allowing multiple selections + file selector enhancements \[ID 30196\]
+#### Interactive automation scripts: File selector allowing multiple selections + file selector enhancements \[ID 30196\]
 
 In an interactive Automation script that is used in the DataMiner web apps, you can now configure a file selector component that allows the user to upload multiple files. To do so, set the property *AllowMultipleFiles* to true.
 
@@ -559,9 +559,9 @@ When a client disconnected while the DMA was starting up, in some rare cases, pa
 - When a client cannot be re-registered during the SLNet initialization, an entry will be added to the logs, but the initialization will no longer fail.
 - Any exception thrown during the SLNet initialization will now also show up in the Alarm Console as “Unexpected Exception \[Initialize DMA\]: xxxxxx”
 
-#### Interactive Automation scripts: Only the value added in the last text box would be saved \[ID 29995\]
+#### Interactive automation scripts: Only the value added in the last text box would be saved \[ID 29995\]
 
-When, in interactive Automation scripts, you rapidly entered values in multiple text boxes, in some rare cases, only the value entered in the last text box would be saved.
+When, in interactive automation scripts, you rapidly entered values in multiple text boxes, in some rare cases, only the value entered in the last text box would be saved.
 
 #### Stopping an SLA would cause a 'window change' event that would lead to outages being closed when history set alarms were received \[ID 29998\]
 
@@ -569,9 +569,9 @@ When an SLA is stopped while it has an open outage, the open outage will be clos
 
 However, this event would be logged as a “window change”, causing the SLA to close and reevaluate the current alarms at the time the SLA was stopped whenever a history set alarm was received with a timestamp earlier than the time at which the SLA was stopped. This would then cause extra non-intended outages.
 
-#### Interactive Automation scripts: Values shown in datetime controls would be out of sync with the values sent to the server \[ID 30015\]
+#### Interactive automation scripts: Values shown in datetime controls would be out of sync with the values sent to the server \[ID 30015\]
 
-In interactive Automation scripts, in some rare cases, the value shown in a datetime control would be out of sync with the value sent to the server. Also, in some cases, datetime controls could trigger updates even when their WantsOnChange property was set to false.
+In interactive automation scripts, in some rare cases, the value shown in a datetime control would be out of sync with the value sent to the server. Also, in some cases, datetime controls could trigger updates even when their WantsOnChange property was set to false.
 
 #### Synchronization of a cleared DMS.xml file would incorrectly cause all agents to remove themselves from the DataMiner System \[ID 30023\] \[ID 30163\]
 
@@ -683,9 +683,9 @@ Up to now, a filter on a protocol-based inter-element query would incorrectly on
 
 When SLLogCollector updated its list of processes, it would incorrectly try to update it again when the update took longer than 1 second.
 
-#### Interactive Automation scripts: Lazy-loaded tree controls could no longer be expanded \[ID 30204\]
+#### Interactive automation scripts: Lazy-loaded tree controls could no longer be expanded \[ID 30204\]
 
-In interactive Automation scripts, in some cases, it would no longer be possible to expand lazy-loaded tree controls.
+In interactive automation scripts, in some cases, it would no longer be possible to expand lazy-loaded tree controls.
 
 #### DataMiner Cube: Not possible to unmask a masked EPM object \[ID 30208\]
 

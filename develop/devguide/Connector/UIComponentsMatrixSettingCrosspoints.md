@@ -6,7 +6,7 @@ uid: UIComponentsMatrixSettingCrosspoints
 
 The parameter value of the write parameter when a crosspoint is set is of the following format: input discrete value, output discrete value, 0 (removed) or 1.
 
-To obtain compatibility with Automation scripts, a special routine has to be followed.
+To obtain compatibility with automation scripts, a special routine has to be followed.
 
 When a set is done on the matrix write parameter, the crosspoint values that need to be set are stored into a buffer as a pipe-separated string. Values will be taken from that buffer one by one, and a flag is used to indicate if a set is being performed. So when a set is done by the write parameter and the flag indicates that there is no set operation being performed, the code used to take one crosspoint from the buffer needs to be triggered via a set on the flag parameter.
 

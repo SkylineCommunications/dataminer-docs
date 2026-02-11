@@ -83,11 +83,11 @@ A number of security enhancements have been made.
 
 A number of enhancements have been made to the ProtocolFunctionManager with regard to the handling of locked files when activating or deactivating functions.
 
-#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]
+#### Interactive automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]
 
 <!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
 
-When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
+When UI components of type *Calendar* or *Time* are used in interactive automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
 
 To allow the client to return the time zone and client time and date, on the `UIBlockDefinition`, set the `ClientTimeInfo` option to `UIClientTimeInfo.Return`. This option is intended to be used for UI components of type *Calendar* or *Time* (the latter with either `AutomationDateTimeUpDownOptions`, `AutomationDateTimeUpDownOptions` or `AutomationDateTimePickerOptions`).
 

@@ -62,7 +62,7 @@ If the HLS stream of a video thumbnail of type HTML5-HLS has multiple audio trac
 
 Because of a number of enhancements with regard to file operations, overall performance has increased when working with the Dashboards app.
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI components 'TextBox' and 'StaticText' [ID 41188]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI components 'TextBox' and 'StaticText' [ID 41188]
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 

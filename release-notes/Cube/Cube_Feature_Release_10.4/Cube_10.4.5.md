@@ -137,11 +137,11 @@ When, in DataMiner Cube, you closed the Services app, in some cases, Cube could 
 
 When you opened a trend graph, in some cases, Cube could leak memory.
 
-#### Visual Overview: Problem when executing Automation scripts linked to a CPE card after clicking the 'Back' button [ID 39090]
+#### Visual Overview: Problem when executing automation scripts linked to a CPE card after clicking the 'Back' button [ID 39090]
 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
 
-When, in DataMiner Cube, you navigated to a CPE card by clicking the *Back* button, Automation scripts linked to the page would not be executed correctly when they used CPE-specific placeholders like `FieldID` linked to variables. The Automation script popup would open, showing empty variables.
+When, in DataMiner Cube, you navigated to a CPE card by clicking the *Back* button, automation scripts linked to the page would not be executed correctly when they used CPE-specific placeholders like `FieldID` linked to variables. The Automation script popup would open, showing empty variables.
 
 #### Visual Overview: Problem when closing a page [ID 39132]
 

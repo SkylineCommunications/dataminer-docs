@@ -20,7 +20,7 @@ Every Visual Studio solution is stored in its own Git repository. The repository
 
 These Git repositories are hosted by [Gerrit Code Review](https://www.gerritcodereview.com/), a software package used for code reviewing, managing and serving Git repositories, etc. (https://gerrit.skyline.be). For each push to a Git repository hosted by Gerrit, the CI/CD pipeline automatically triggers and executes multiple steps such as building the solution, executing unit tests, performing code analysis, running the DIS validator and publishing a new version of the protocol on SVN if needed.
 
-System Developers therefore no longer put new versions of protocols, Automation scripts, etc. on SVN. Instead, a new version is created by creating a tag in the Git repository. The CI/CD pipeline then automatically publishes the new version on SVN.
+System Developers therefore no longer put new versions of protocols, automation scripts, etc. on SVN. Instead, a new version is created by creating a tag in the Git repository. The CI/CD pipeline then automatically publishes the new version on SVN.
 
 ![](~/develop/images/GerritCodeReview.jpg)<br>
 *New workflow: Protocol published on Git by developer and on SVN by CI/CD pipeline*

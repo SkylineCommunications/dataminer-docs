@@ -219,9 +219,9 @@ For more detailed information, see [Node edge graph](xref:DashboardNodeEdgeGraph
 
 ### DMS Automation
 
-#### Interactive Automation scripts: Lazy loading of tree view items \[ID 29295\]
+#### Interactive automation scripts: Lazy loading of tree view items \[ID 29295\]
 
-It is possible to configure that a tree view item in interactive Automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
+It is possible to configure that a tree view item in interactive automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
 
 You can now use the GetExpanded method of the UIResults class to retrieve the keys of all expanded tree view items that have the SupportsLazyLoading property set to true.
 
@@ -510,7 +510,7 @@ DmaConnections|Unexpected filter type: SubscriptionFilter\`2
 Unexpected filter type: Skyline.DataMiner.Net.SubscriptionFilters.SubscriptionFilter\`2[XXXX,XXXXXX]
 ```
 
-#### Interactive Automation scripts: Date selected in calendar control would be parsed incorrectly \[ID 29153\]
+#### Interactive automation scripts: Date selected in calendar control would be parsed incorrectly \[ID 29153\]
 
 When, in an interactive Automation script, a calendar control was used to select a date (i.e. a datetime value without a specific time), in some cases, the value of the selected date would be parsed incorrectly.
 

@@ -139,7 +139,7 @@ When a JSON string containing an overridden parameter description was deserializ
 
 When you opened a trend graph, the Y-axis values would incorrectly not take into account the number of decimals configured in the *protocol.xml* file for the parameters in question.
 
-#### Interactive Automation scripts: Problem when entering an invalid value in a numeric component [ID 34310]
+#### Interactive automation scripts: Problem when entering an invalid value in a numeric component [ID 34310]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 

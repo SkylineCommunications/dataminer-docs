@@ -18,7 +18,7 @@ When you have a non-clustered system, that means you have one or more separate D
 
 - Reports containing data from multiple Agents.
 
-- Correlation rules based on alarms from multiple Agents.
+- correlation rules based on alarms from multiple Agents.
 
 - One-time setup of all your email notification filters.
 

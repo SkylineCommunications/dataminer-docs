@@ -80,7 +80,7 @@ Because of a number of enhancements made with regard to the retrieval of overrid
 
 In the Automation script editor, Intellisense has been added for the new `timeUpDownConfig.ShowTimeUnits` property.
 
-This property is only applied in interactive Automation scripts that are launched from a web app.
+This property is only applied in interactive automation scripts that are launched from a web app.
 
 #### System Center - Agents: Clearer restart warning before an upgrade is started [ID 35687]
 

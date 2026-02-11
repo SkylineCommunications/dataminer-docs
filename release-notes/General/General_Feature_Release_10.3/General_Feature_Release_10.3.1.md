@@ -20,7 +20,7 @@ uid: General_Feature_Release_10.3.1
 
 The new icon component allows you to display an icon on a dashboard or a low-code app.
 
-#### Interactive Automation scripts: New button style 'CallToAction' [ID 34904]
+#### Interactive automation scripts: New button style 'CallToAction' [ID 34904]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
@@ -39,7 +39,7 @@ Alternatively, you can also pass a button style directly to the `AppendButton` m
 > [!NOTE]
 >
 > - Up to now, `StaticText` blocks already supported a number of styles. Those styles are now also available via `Style.Text`: *Title1*, *Title2* and *Title3*.
-> - The *CallToAction* style will only be applied in interactive Automation scripts launched from a web app. It will not be applied in interactive Automation scripts launched from Cube.
+> - The *CallToAction* style will only be applied in interactive automation scripts launched from a web app. It will not be applied in interactive automation scripts launched from Cube.
 
 ## Other features
 
@@ -556,7 +556,7 @@ Because of a number of enhancements, overall performance of SLElement has increa
 
 When a time range feed was configured to show quick pick buttons, those buttons would not be displayed in the correct order. From now on, quick pick buttons will be displayed in chronological order.
 
-#### Web apps - Interactive Automation scripts: All other tree view components in a dialog box would incorrectly collapse when you selected an item in a tree view component [ID 34773]
+#### Web apps - Interactive automation scripts: All other tree view components in a dialog box would incorrectly collapse when you selected an item in a tree view component [ID 34773]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 

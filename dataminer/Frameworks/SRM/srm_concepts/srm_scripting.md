@@ -40,7 +40,7 @@ Data Transfer Rules are only used in the context of Service Orchestration.
 
 Data Transfer Rules are used at the moment when a booking is created, to **transfer data between several virtual functions of the selected service definition**. This way, a user will not have to request the same information several times during the booking creation process, but instead logic is applied to copy or even process specific information from one virtual function to another.
 
-Data Transfer Rules are implemented as custom Automation scripts.
+Data Transfer Rules are implemented as custom automation scripts.
 
 Two types of Data Transfer Rules exist:
 
@@ -73,7 +73,7 @@ Custom events are only applicable in the context of Service Orchestration.
 
 In addition to the default booking orchestration events (start of pre-roll, stop of pre-roll, start of post-roll, stop of post-roll), additional custom events can be configured for bookings. This can be configured in the [Booking Manager app](xref:Booking_Manager_user_interface).
 
-These custom events are **linked to Automation scripts that can execute any action**. Specific booking information can be added in the events, such as a booking reference.
+These custom events are **linked to automation scripts that can execute any action**. Specific booking information can be added in the events, such as a booking reference.
 
 ## Contributing conversion script
 

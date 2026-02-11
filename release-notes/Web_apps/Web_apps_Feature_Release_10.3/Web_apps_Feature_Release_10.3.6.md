@@ -150,7 +150,7 @@ Up to now, in e.g. low-code apps, multivalue DOM fields would only show a summar
 
 ### Fixes
 
-#### Interactive Automation scripts: Problems with datetime component [ID 35682]
+#### Interactive automation scripts: Problems with datetime component [ID 35682]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 

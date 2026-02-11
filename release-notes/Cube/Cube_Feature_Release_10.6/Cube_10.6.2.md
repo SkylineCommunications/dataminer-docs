@@ -94,11 +94,11 @@ The Ticketing module has been declared End of Life.
 
 On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer be shown in the list of applications in DataMiner Cube.
 
-#### Scheduler module will only fetch the Automation scripts in the 'Scheduler Templates' folder at startup [ID 44383]
+#### Scheduler module will only fetch the automation scripts in the 'Scheduler Templates' folder at startup [ID 44383]
 
 <!-- MR 10.5.0 [CU11] / 10.6.0 [CU0] - FR 10.6.2 -->
 
-Up to now, when you opened the Scheduler module, it would fetch all Automation scripts to check whether any of them had to be listed as scheduler templates. From now on, when you open the Scheduler module, it will only fetch the Automation scripts located in the *Scheduler Templates* folder. This will significantly increase overall performance when opening the module.
+Up to now, when you opened the Scheduler module, it would fetch all automation scripts to check whether any of them had to be listed as scheduler templates. From now on, when you open the Scheduler module, it will only fetch the automation scripts located in the *Scheduler Templates* folder. This will significantly increase overall performance when opening the module.
 
 > [!IMPORTANT]
 > When Cube is connected to a DMA running a DataMiner version older than main release version 10.5.0 [CU11] or 10.6.0 [CU0] or feature release version 10.6.2, this new fetch operation will only work if you have the following user permission: *Modules > Automation > UI Available*.

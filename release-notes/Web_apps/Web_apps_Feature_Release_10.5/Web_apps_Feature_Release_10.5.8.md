@@ -16,11 +16,11 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-#### Interactive Automation scripts: Filtering values in a redesigned UI component 'DropDown' [ID 42845]
+#### Interactive automation scripts: Filtering values in a redesigned UI component 'DropDown' [ID 42845]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-To prevent dropdown boxes in interactive Automation scripts from getting loaded with too much data, it is now possible to filter the data that is loaded into a dropdown box.
+To prevent dropdown boxes in interactive automation scripts from getting loaded with too much data, it is now possible to filter the data that is loaded into a dropdown box.
 
 Note that this feature will only work if you use the redesigned `UIBlockType.DropDown` component. To use this redesigned component, add the following argument to the URL of the dashboard or low-code app:
 
@@ -88,11 +88,11 @@ In a low-code app, a *Trigger* component can now be controlled via the following
 
 ### Enhancements
 
-#### Low-Code Apps - Interactive Automation scripts: Color support for redesigned UI components [ID 42781]
+#### Low-Code Apps - Interactive automation scripts: Color support for redesigned UI components [ID 42781]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-From now on, the redesigned UI components used in interactive Automation scripts will inherit the default accent color and the default page theme color of the low-code app, as well as any custom accent color that has been specified on component level.
+From now on, the redesigned UI components used in interactive automation scripts will inherit the default accent color and the default page theme color of the low-code app, as well as any custom accent color that has been specified on component level.
 
 Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
 
@@ -173,7 +173,7 @@ Up to now, it would incorrectly be possible to publish a low-code app while it w
 
 From now on, it will only be possible to publish a low-code app when the app has been saved.
 
-#### Low-Code Apps - Interactive Automation scripts: initialValue of UI component 'Time' would not get updated in the UI when the value changed [ID 42878]
+#### Low-Code Apps - Interactive automation scripts: initialValue of UI component 'Time' would not get updated in the UI when the value changed [ID 42878]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 

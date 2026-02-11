@@ -2,7 +2,7 @@
 uid: Developing_Automation_scripts_as_Visual_Studio_solutions
 ---
 
-# Developing Automation scripts as Visual Studio solutions
+# Developing automation scripts as Visual Studio solutions
 
 > [!IMPORTANT]
 > As of [v2](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates/releases/tag/2.0.0) of the Visual Studio Templates, this page is obsolete. The *DataMiner Automation Script Solution* template has been removed in favor of the project templates using the [Skyline.DataMiner.SDK](xref:skyline_dataminer_sdk).
@@ -109,9 +109,9 @@ The package will contain the Automation script as well as all required DLL files
 
 ## Saving all compiled scripts in a solution in a .dmapp package
 
-To save a compiled version of all Automation scripts in a solution in a .dmapp package (with all C# code in their Exe blocks and required DLL files), do the following:
+To save a compiled version of all automation scripts in a solution in a .dmapp package (with all C# code in their Exe blocks and required DLL files), do the following:
 
-1. Open the XML files containing the Automation scripts that you want to compile.
+1. Open the XML files containing the automation scripts that you want to compile.
 1. Select *File \> Save All Compiled Scripts As...*
 1. Enter a file name and a folder.
 1. Click *Save*.
@@ -135,7 +135,7 @@ An Automaton script Visual Studio solution is organized into various folders, ea
 
 - **CompanionFiles**: This folder allows you to add additional files that need to be installed along with the Automation script as part of an installation package.
 
-- **Dlls**: This folder contains the additional assemblies used by the Automation scripts. These assemblies are not part of DataMiner but are essential for one of the Automation scripts. Placing them in this folder ensures that the required assemblies are readily available in the repository alongside the Automation script XML files.
+- **Dlls**: This folder contains the additional assemblies used by the automation scripts. These assemblies are not part of DataMiner but are essential for one of the automation scripts. Placing them in this folder ensures that the required assemblies are readily available in the repository alongside the Automation script XML files.
 
 - **Documentation**: This folder allows you to add documentation related to the solution.
 
@@ -149,4 +149,4 @@ An Automaton script Visual Studio solution is organized into various folders, ea
 - **Tests**: This folder is intended for test projects.
 
   > [!NOTE]
-  > Test projects should only be integrated into Automation script solutions for the purpose of testing Automation script functionality. They should not be used for system tests that include e.g. other Automation scripts, among other things.
+  > Test projects should only be integrated into Automation script solutions for the purpose of testing Automation script functionality. They should not be used for system tests that include e.g. other automation scripts, among other things.

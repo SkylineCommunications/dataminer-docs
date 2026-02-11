@@ -98,7 +98,7 @@ From now on, when referring to a parameter ID in a [param:] placeholder, that pa
 
 From now on, the list of dashboards that can be selected in *Send email* actions will now be refreshed each time you open the Automation, Correlation, or Scheduler module.
 
-#### Custom Alarm Console hyperlinks linked to Automation scripts will no longer be hidden in the right-click menu of certain alarms [ID 43809]
+#### Custom Alarm Console hyperlinks linked to automation scripts will no longer be hidden in the right-click menu of certain alarms [ID 43809]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 

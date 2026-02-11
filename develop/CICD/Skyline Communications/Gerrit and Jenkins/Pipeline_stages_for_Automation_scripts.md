@@ -2,7 +2,7 @@
 uid: Pipeline_stages_for_Automation_scripts
 ---
 
-# Pipeline stages for Automation scripts
+# Pipeline stages for automation scripts
 
 > [!IMPORTANT]
 > This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
@@ -99,7 +99,7 @@ This stage converts the protocol Visual Studio solution back to a protocol XML f
 
 ## Build .dmapp package
 
-This stage creates a .dmapp package containing the Automation scripts.
+This stage creates a .dmapp package containing the automation scripts.
 
 ## Scan test projects
 
@@ -152,7 +152,7 @@ This quality gate verifies whether the Automation script does not exceed any of 
 - Duplicated Blocks: 200
 
 > [!NOTE]
-> The quality gate will currently only verify SonarQube analysis results for initial developments (i.e. Automation scripts tagged as version 1.0.0.1).
+> The quality gate will currently only verify SonarQube analysis results for initial developments (i.e. automation scripts tagged as version 1.0.0.1).
 
 ## (Development) Catalog registration
 
@@ -171,7 +171,7 @@ This stage will perform registration in the catalog.
 This stage performs the actual push to SVN. Once this stage is executed, you should find a new version of the Automation script(s) on SVN in the corresponding folder, together with the required DLLs, which were originally provided in the DLLs folder in the Visual Studio project.
 
 > [!NOTE]
-> Whereas old Automation scripts were stored on SVN under the following folder <https://svn.skyline.be/!/#SystemEngineering/view/head/Automation%20Scripts>, the CI/CD pipeline pushes Automation scripts to the following folder <https://svn.skyline.be/!/#SystemEngineering/view/head/Automation>.
+> Whereas old automation scripts were stored on SVN under the following folder <https://svn.skyline.be/!/#SystemEngineering/view/head/Automation%20Scripts>, the CI/CD pipeline pushes automation scripts to the following folder <https://svn.skyline.be/!/#SystemEngineering/view/head/Automation>.
 
 ## (Release) Push to Azure
 

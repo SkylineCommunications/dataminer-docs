@@ -32,11 +32,11 @@ A new BPA test named "Large Alarm Trees" is now available. This test will retrie
 
 The BPA test is available in System Center on the *Agents > BPA* tab.
 
-#### Automation scripts: New Interactivity tag [ID 42954]
+#### automation scripts: New Interactivity tag [ID 42954]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-Up to now, Automation scripts using the IAS Interactive Toolkit required a special comment or code snippet in order to be recognized as interactive. From now on, you will be able to define the interactive behavior of an Automation script by adding an `<Interactivity>` tag in the header of the script. See the following example.
+Up to now, automation scripts using the IAS Interactive Toolkit required a special comment or code snippet in order to be recognized as interactive. From now on, you will be able to define the interactive behavior of an Automation script by adding an `<Interactivity>` tag in the header of the script. See the following example.
 
 ```xml
 <DMSScript xmlns="http://www.skyline.be/automation">

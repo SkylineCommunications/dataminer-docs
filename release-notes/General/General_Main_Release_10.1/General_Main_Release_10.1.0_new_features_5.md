@@ -70,9 +70,9 @@ scriptOptions.InheritScriptOutput = true;
 scriptOptions.StartScript();
 ```
 
-#### New methods to allows QActions to execute Automation scripts \[ID 24475\]
+#### New methods to allows QActions to execute automation scripts \[ID 24475\]
 
-Two new SLProtocol methods now allow QActions to execute Automation scripts:
+Two new SLProtocol methods now allow QActions to execute automation scripts:
 
 - ExecuteScript(string scriptName)
 - ExecuteScript(ExecuteScriptMessage message)
@@ -218,7 +218,7 @@ var ticketLinkFilter = new[] {ticketLink};
 var tickets = ticketingGatewayHelper.GetTickets(ticketLinkFilter);
 ```
 
-#### Interactive Automation scripts: Properties added to UIBlockDefinition class \[ID 25183\]\[ID 25253\]
+#### Interactive automation scripts: Properties added to UIBlockDefinition class \[ID 25183\]\[ID 25253\]
 
 The following properties have been added to the UIBlockDefinition class:
 
@@ -288,7 +288,7 @@ It is now possible to replace an Automation script DLL dependency from an Automa
 By default, the DLL file will be uploaded to the C:\\Skyline DataMiner\\scripts\\dllImport folder, but it is possible to specify a subfolder if required. The uploaded DLL file will be synchronized among all agents in the DMS.
 
 - The name of the new DLL file in the UploadScriptDependencyMessage must be identical to the name of the old DLL file. If not, the file will no longer be found after a DataMiner restart.
-- Automation scripts using a DLL file should always refer to that file using its full path. If you upload a DLL file named “MyDependency.dll”, the scripts using it should refer to it using “C:\\Skyline DataMiner\\Scripts\\DllImport\\MyDependency.dll”.
+- automation scripts using a DLL file should always refer to that file using its full path. If you upload a DLL file named “MyDependency.dll”, the scripts using it should refer to it using “C:\\Skyline DataMiner\\Scripts\\DllImport\\MyDependency.dll”.
 - DLL files in the C:\\Skyline DataMiner\\Scripts\\DllImport folder are loaded from bytes rather than from file. They will not be locked by SLAutomation after being loaded. Note that, in some rare cases, DLL files loaded from bytes will not work properly. An example of a file that will not work when loaded from bytes is Microsoft.Exchange.WebServices.
 - When a script dependency is uploaded using an UploadScriptDependencyMessage
 
@@ -366,9 +366,9 @@ public void Uninstall(Engine engine, AppUninstallContext context)
 > [!NOTE]
 > The DataMiner SLNetClientTest tool now also supports uninstalling app packages. See *Advanced \> Apps \> App Packages*.
 
-#### Automation: Tree view control for interactive Automation scripts \[ID 26840\]\[ID 27041\]\[ID 27756\]
+#### Automation: Tree view control for interactive automation scripts \[ID 26840\]\[ID 27041\]\[ID 27756\]
 
-It is now possible to add a tree view control in an interactive Automation script. However, note that Automation scripts with tree view controls are currently only supported in the DataMiner mobile apps. These are not yet supported in DataMiner Cube.
+It is now possible to add a tree view control in an interactive Automation script. However, note that automation scripts with tree view controls are currently only supported in the DataMiner mobile apps. These are not yet supported in DataMiner Cube.
 
 To define a tree view control, create a UIBlockDefinition of type TreeView and add each item of the tree view as a TreeViewItem to the TreeViewItems property. It is not required to fill in the InitialValue or Value of the UIBlockDefinition, as that value is determined based on the TreeViewItem collection.
 
@@ -454,13 +454,13 @@ Example:
 ShowResult();
 ```
 
-#### Interactive Automation scripts: Support for datetime values in ISO 8601 format \[ID 27565\]
+#### Interactive automation scripts: Support for datetime values in ISO 8601 format \[ID 27565\]
 
 The UIResults.GetDateTime method now also supports datetime values in ISO 8601 format.
 
 Up to now, only datetime values in “dd/MM/yyyy HH:mm:ss” were supported.
 
-#### Interactive Automation scripts: TreeViewItem now has an 'IsCollapsed' property \[ID 27567\]
+#### Interactive automation scripts: TreeViewItem now has an 'IsCollapsed' property \[ID 27567\]
 
 Each TreeViewItem in a TreeView component now has an “IsCollapsed” property.
 

@@ -118,7 +118,7 @@ When updating a resource in the Resources app, it is now possible to change the 
 
 #### Visual Overview: Passing Interactive Automation script output to session variables \[ID 32874\]
 
-Similar to regular Automation scripts, interactive Automation scripts are now also able to pass their output to session variables in Visual Overview.
+Similar to regular automation scripts, interactive automation scripts are now also able to pass their output to session variables in Visual Overview.
 
 > [!NOTE]
 > When configuring the Execute shape, it is recommended to specify both the NoConfirmation option and the CloseWhenFinished option in the value of the Execute data field.
@@ -475,9 +475,9 @@ From now on, the alarm state change graphs (pie chart and time line) in the lega
 
 Also, in the legacy Reporter app, the default colors have now been aligned with the default DataMiner alarm colors.
 
-#### Enhancements with regard to Automation scripts \[ID 33129\] \[ID 33226\]
+#### Enhancements with regard to automation scripts \[ID 33129\] \[ID 33226\]
 
-A number of enhancements have been made with regard to Automation scripts.
+A number of enhancements have been made with regard to automation scripts.
 
 - When a script is launched, from now on, only the parameters/dummies with missing values will be shown. Automatically filled in values will no longer be shown.
 - When script input is filled in with feed data, users will no longer be asked to change that input manually.

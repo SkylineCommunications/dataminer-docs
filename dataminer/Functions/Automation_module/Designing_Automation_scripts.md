@@ -2,7 +2,7 @@
 uid: Designing_Automation_scripts
 ---
 
-# Designing Automation scripts
+# Designing automation scripts
 
 In the *Automation* module, select a script in the tree view pane on the left in order to configure it in the details pane on the right. Alternatively, if you want to view the script details in a separate card, right-click the script and select *Open in new card* or *Open in new undocked card*.
 

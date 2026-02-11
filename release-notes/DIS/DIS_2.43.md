@@ -45,9 +45,9 @@ This check can return the following error messages:
 
 ### Enhancements
 
-#### Enhanced performance when connecting to a DMA with a large number of Automation scripts [ID 36899]
+#### Enhanced performance when connecting to a DMA with a large number of automation scripts [ID 36899]
 
-Because of a number of enhancements, overall performance has increased when connecting to a DataMiner Agent with a large number of Automation scripts.
+Because of a number of enhancements, overall performance has increased when connecting to a DataMiner Agent with a large number of automation scripts.
 
 #### DIS Validator: 'DveColumnOptionElement' check will no longer be performed when validating an exported protocol [ID 36921]
 

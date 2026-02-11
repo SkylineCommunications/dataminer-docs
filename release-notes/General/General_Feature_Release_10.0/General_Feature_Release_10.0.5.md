@@ -264,9 +264,9 @@ In the legacy Reporter app, the alarm list component will now also return alarms
 
 ### DMS Automation
 
-#### New methods to allows QActions to execute Automation scripts \[ID 24475\]
+#### New methods to allows QActions to execute automation scripts \[ID 24475\]
 
-Two new SLProtocol methods now allow QActions to execute Automation scripts:
+Two new SLProtocol methods now allow QActions to execute automation scripts:
 
 - ExecuteScript(string scriptName)
 - ExecuteScript(ExecuteScriptMessage message)
@@ -355,7 +355,7 @@ var ticketLinkFilter = new[] {ticketLink};
 var tickets = ticketingGatewayHelper.GetTickets(ticketLinkFilter);
 ```
 
-#### Interactive Automation scripts: Properties added to UIBlockDefinition class \[ID 25183\]\[ID 25253\]
+#### Interactive automation scripts: Properties added to UIBlockDefinition class \[ID 25183\]\[ID 25253\]
 
 The following properties have been added to the UIBlockDefinition class:
 
@@ -614,7 +614,7 @@ A number of minor enhancements have been made to the *Advanced Editing* pane:
 
 - The current selection will now be taken into account when starting the *Advanced Editing* extension.
 
-#### DataMiner Cube - Correlation: Enhancements with regard to the use of placeholders in 'Send Email' actions of Correlation rules \[ID 24816\]
+#### DataMiner Cube - Correlation: Enhancements with regard to the use of placeholders in 'Send Email' actions of correlation rules \[ID 24816\]
 
 A number of minor enhancements have been made with regard to the use of placeholders in “Send Email” actions of correlation rules.
 
@@ -739,7 +739,7 @@ After a DCF connection update, in some cases, the highlighting of a manually dra
 > [!NOTE]
 > This problem only occurred when one or both of the interfaces connected to the connector were of type input/output.
 
-#### Dashboards app: Problem when loading dropdown boxes of interactive Automation scripts \[ID 24888\]
+#### Dashboards app: Problem when loading dropdown boxes of interactive automation scripts \[ID 24888\]
 
 When a dialog box of an interactive Automation script showed multiple dropdown boxes next to each other, in some cases, some of those boxes would become unresponsive when data was being loaded into them.
 
@@ -834,9 +834,9 @@ The URL argument “cpes” now has the following extended format:
 
 When, after restarting an element, the alarms associated with that element were retrieved from the database, in some cases, the view impact information in those alarms would be incorrect.
 
-#### Interactive Automation scripts: Problem with checkbox updates \[ID 25054\]
+#### Interactive automation scripts: Problem with checkbox updates \[ID 25054\]
 
-In interactive Automation scripts, in some cases, checkbox components would not be updated correctly.
+In interactive automation scripts, in some cases, checkbox components would not be updated correctly.
 
 #### SLDMS runtime errors when connection with remote DMA could not be initialized \[ID 25068\]
 

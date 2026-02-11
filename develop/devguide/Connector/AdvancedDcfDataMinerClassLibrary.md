@@ -17,7 +17,7 @@ The following classes and interfaces in the SLManagedScripting DLL provide DCF f
 - [Skyline.DataMiner.Scripting.ConnectivityInterfaceParameter](xref:Skyline.DataMiner.Scripting.ConnectivityInterfaceParameter)
 - [Skyline.DataMiner.Scripting.ConnectivityInterfaceProperty](xref:Skyline.DataMiner.Scripting.ConnectivityInterfaceProperty)
 
-## Automation scripts
+## automation scripts
 
 The following classes in the SLManagedAutomation DLL provide DCF functionality:
 

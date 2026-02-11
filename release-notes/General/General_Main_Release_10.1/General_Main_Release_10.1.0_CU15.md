@@ -92,9 +92,9 @@ When a Visio file of type VDX contained bitmap images, in some cases, those imag
 
 When a group that contained multiple tables of which some had the partialSNMP option enabled was polled, in some cases, that same group would incorrectly get re-polled indefinitely.
 
-#### Interactive Automation scripts: Slider linked to a numeric text box would incorrectly keep following the mouse pointer \[ID 33204\]
+#### Interactive automation scripts: Slider linked to a numeric text box would incorrectly keep following the mouse pointer \[ID 33204\]
 
-In interactive Automation scripts, in some cases, the slider linked to a numeric text box would incorrectly keep following the mouse pointer, even after the mouse button had been released.
+In interactive automation scripts, in some cases, the slider linked to a numeric text box would incorrectly keep following the mouse pointer, even after the mouse button had been released.
 
 #### Port 0 would incorrectly be used for serial communication when a dynamic IP parameter did not contain an IP port \[ID 33235\]
 

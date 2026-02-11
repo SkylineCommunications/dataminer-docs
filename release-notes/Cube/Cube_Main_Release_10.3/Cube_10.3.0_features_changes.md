@@ -203,7 +203,7 @@ Default: 2 minutes
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
-Similar to regular Automation scripts, interactive Automation scripts are now also able to pass their output to session variables in Visual Overview.
+Similar to regular automation scripts, interactive automation scripts are now also able to pass their output to session variables in Visual Overview.
 
 > [!NOTE]
 > When configuring the Execute shape, it is recommended to specify both the NoConfirmation option and the CloseWhenFinished option in the value of the Execute data field.
@@ -730,7 +730,7 @@ Changes that might result in anomaly alarms of a certain type being cleared:
 > [!NOTE]
 > When an alarm template that had already been assigned to an element earlier is changed in such a way that monitoring of a certain type of anomaly is started, or when it is replaced by another alarm template that causes the monitoring of a certain type of anomaly to start, then every open suggestion event for that type of anomaly associated with the element in question will be promoted to an alarm event.
 
-#### Automation: No more 'Abort' buttons in dialog boxes of interactive Automation scripts [ID 34559]
+#### Automation: No more 'Abort' buttons in dialog boxes of interactive automation scripts [ID 34559]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 

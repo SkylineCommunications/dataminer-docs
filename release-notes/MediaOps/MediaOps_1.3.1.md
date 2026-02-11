@@ -43,9 +43,9 @@ In the header bar of the job edit panel, a button is now available that allows y
 
 To improve performance and keep the size of log collector packages under control, the maximum size of the MediaOps log files has now been reduced from 100 MB to 10 MB.
 
-#### Resource Studio: Resource (pool) creation now happens via interactive Automation scripts [ID 43033]
+#### Resource Studio: Resource (pool) creation now happens via interactive automation scripts [ID 43033]
 
-Creating and editing resources and resource pools in the MediaOps apps will now be done with interactive Automation scripts instead of form components. This way, validation can be performed directly in the UI before the resources or resource pools are created or updated, and resources and resource pools can now be created directly in the complete state.
+Creating and editing resources and resource pools in the MediaOps apps will now be done with interactive automation scripts instead of form components. This way, validation can be performed directly in the UI before the resources or resource pools are created or updated, and resources and resource pools can now be created directly in the complete state.
 
 #### Performance improvements [ID 43037]
 

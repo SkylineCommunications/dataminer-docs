@@ -559,7 +559,7 @@ engine.AddScriptOutput(UIVariables.VisualOverview.CreateKey("MyOutput"), "MyValu
 
 - If you execute the same Automation script on different pages, then you can use the SessionVariablePrefix option to make sure the output is saved in separate session variables.
 
-    If, for example, you use prefix “One\_” on one page and prefix “Two\_” on another page, and the Automation scripts pass their output to a session variable named “MyPage”, then the output will end up in two separate session variables named “One_MyPage” and “Two_MyPage” respectively.
+    If, for example, you use prefix “One\_” on one page and prefix “Two\_” on another page, and the automation scripts pass their output to a session variable named “MyPage”, then the output will end up in two separate session variables named “One_MyPage” and “Two_MyPage” respectively.
 
 - When you set the SetVarOnFail option to true (either on page level or shape level), then the session variables in question will always be created, regardless of whether the script finishes successfully or not.
 

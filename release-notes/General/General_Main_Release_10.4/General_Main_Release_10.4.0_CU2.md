@@ -86,9 +86,9 @@ This service now allows you to enable kernel response buffering, which should im
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
-Up to now, Automation scripts would always be checked whether they were Cassandra ready, regardless of the type of database used by the DataMiner System.
+Up to now, automation scripts would always be checked whether they were Cassandra ready, regardless of the type of database used by the DataMiner System.
 
-From now on, this Cassandra ready check will only be performed on DataMiner Systems using a MySQL database. When the DataMiner System is using a type of database other than MySQL, Automation scripts will always be considered Cassandra ready.
+From now on, this Cassandra ready check will only be performed on DataMiner Systems using a MySQL database. When the DataMiner System is using a type of database other than MySQL, automation scripts will always be considered Cassandra ready.
 
 #### Enhanced performance when starting up a DataMiner Agent with a large number of virtual elements [ID 38780]
 

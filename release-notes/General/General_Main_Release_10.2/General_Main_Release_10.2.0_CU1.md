@@ -84,9 +84,9 @@ Up to now, when an SNMP Manager was configured to resend all active alarms every
 
 When, in Data Display, you drill down to a specific row of a parameter table, you can open the alarm template, trend template or information template for that specific row. From now on, if a filter was configured for the table row in question, it will also be shown in the UI.
 
-#### DataMiner Cube - Automation: SaveAutomationScriptXmlMessage will now be used when importing, saving and updating Automation scripts \[ID 32557\]
+#### DataMiner Cube - Automation: SaveAutomationScriptXmlMessage will now be used when importing, saving and updating automation scripts \[ID 32557\]
 
-Up to now, when an Automation script was imported, the file would not be processed in the same way as when an Automation script was saved or updated. From now on, the same SaveAutomationScriptXmlMessage will be used when importing, saving and updating Automation scripts.
+Up to now, when an Automation script was imported, the file would not be processed in the same way as when an Automation script was saved or updated. From now on, the same SaveAutomationScriptXmlMessage will be used when importing, saving and updating automation scripts.
 
 #### Protocols: Allow for different remote element sources in view table columns \[ID 32579\]
 

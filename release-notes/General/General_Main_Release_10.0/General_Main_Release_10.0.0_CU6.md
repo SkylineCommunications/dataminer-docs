@@ -183,7 +183,7 @@ If cells of a table row were displayed in a Children shape in Visual Overview, i
 
 #### DataMiner Cube: Custom icon visualization not working for list view components \[ID 27173\]
 
-In list view components, for example in the Bookings app, in the Services app or in ListView shapes in Visual Overview, it was no longer possible to visualize the content of a column as a custom icon. This is now again possible for booking, service and element columns as well as for booking, service and element property columns. Note that this functionality relies on Automation scripts to provide the icon library and column value/icon mapping.
+In list view components, for example in the Bookings app, in the Services app or in ListView shapes in Visual Overview, it was no longer possible to visualize the content of a column as a custom icon. This is now again possible for booking, service and element columns as well as for booking, service and element property columns. Note that this functionality relies on automation scripts to provide the icon library and column value/icon mapping.
 
 #### DataMiner Cube - Scheduler app: Problem with drag-and-drop in timeline tab \[ID 27174\]
 

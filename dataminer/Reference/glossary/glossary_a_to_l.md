@@ -244,17 +244,17 @@ uid: glossary_a_to_l
 | IaaS | Infrastructure as a Service. Cloud-based service that provides a basic computing infrastructure. |
 | IaC  | Infrastructure as Code |
 | IAM | [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management). Legacy DataMiner module that establishes a link between a DMS and a CMDB. |
-| IAS | Interactive Automation script. A DataMiner Automation script that is designed to require user interaction. See [Building interactive Automation scripts with C#](xref:Building_interactive_Automation_scripts_with_CSharp). |
+| IAS | Interactive Automation script. A DataMiner Automation script that is designed to require user interaction. See [Building interactive automation scripts with C#](xref:Building_interactive_Automation_scripts_with_CSharp). |
 | IDE | Integrated Development Environment. Software application that provides comprehensive facilities for software development. |
 | IDP | Infrastructure Discovery Provisioning. DataMiner application that allows you to automatically discover, provision and manage the devices in your network. See [DataMiner IDP app](xref:SolIDP). |
 | IETF | Internet Engineering Task Force. Organization developing and promoting open internet standards. |
-| Import package | Package based on an export from DataMiner, which can contain, elements, services, views, properties, protocols, Automation scripts, etc. See [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA). |
+| Import package | Package based on an export from DataMiner, which can contain, elements, services, views, properties, protocols, automation scripts, etc. See [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA). |
 | Indexing Engine | Dedicated indexing database used to index information from the DataMiner System to allow rapid information retrieval. In case self-managed storage is used (not recommended), this database is required to have access to certain DataMiner features, e.g. GQI. See [About storage](xref:About_storage) |
 | Inform message | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. Unlike for an SNMP trap, for an inform message the SNMP manager needs to acknowledge receipt. See [SNMP managers](xref:About_SNMP_managers). |
 | Information event | A message in the Alarm Console intended to inform DataMiner users without raising an alarm. See [Information event](xref:Alarm_types#information-events). |
 | Information template | A template that is used to override specific parameter data defined in a protocol without making any changes to the protocol itself. See [Information templates](xref:Information_templates). |
 | Input attenuation | Adjusting of the signal strength at the input of a spectrum analyzer to improve measuring accuracy. See [Changing the spectrum analyzer settings](xref:Changing_the_spectrum_analyzer_settings). |
-| IntelliSense | Intelligent code completion, available within DataMiner when configuring C# code in Automation scripts. See [IntelliSense](xref:Adding_CSharp_code_to_an_Automation_script#intellisense). |
+| IntelliSense | Intelligent code completion, available within DataMiner when configuring C# code in automation scripts. See [IntelliSense](xref:Adding_CSharp_code_to_an_Automation_script#intellisense). |
 | Inventory & Asset Management | Legacy DataMiner module that establishes a link between a DMS and a CMDB. Commonly abbreviated as IAM. See [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management). |
 | IOC | Integrated Operations Center. |
 | IP | Internet Protocol. |
@@ -297,7 +297,7 @@ uid: glossary_a_to_l
 | Local database | Alternative name for the DataMiner storage, especially used for older DataMiner versions. In recent DataMiner versions, the recommended storage solution is [Storage as a Service(xref:STaaS)]. If the storage has to be hosted on premises, typically [dedicated clustered storage](xref:Dedicated_clustered_storage) is used. |
 | Log level | Degree of detail at which information is logged. The higher the log level, the more information is included in the log file. |
 | Logger table | Table that is not stored in memory, but directly in the database. |
-| LSO | Lifecycle Service Orchestration. In the context of [DataMiner SRM](xref:About_SRM), this is the service lifecycle behavior defined in the service definition. Transitions in the service lifecycle are executed by the DataMiner Automation scripts that are referred to in the service definition. |
+| LSO | Lifecycle Service Orchestration. In the context of [DataMiner SRM](xref:About_SRM), this is the service lifecycle behavior defined in the service definition. Transitions in the service lifecycle are executed by the DataMiner automation scripts that are referred to in the service definition. |
 
 ## M to Z
 

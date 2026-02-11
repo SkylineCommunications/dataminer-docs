@@ -15,7 +15,7 @@ To avoid unexpected changes when an existing booking is edited, automatic select
 
 #### Profile Load Script Tester connector added \[ID 31950\]
 
-To help with the testing of several use cases, a new *Profile Load Script Tester* connector and associated Automation scripts have been added.
+To help with the testing of several use cases, a new *Profile Load Script Tester* connector and associated automation scripts have been added.
 
 #### Option to enable/disable automatic resource selection \[ID 31975\]
 

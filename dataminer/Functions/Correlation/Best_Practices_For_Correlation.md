@@ -4,13 +4,13 @@ uid: Best_Practices_For_Correlation
 
 # Best practices for Correlation
 
-## Avoid lengthy Correlation rules
+## Avoid lengthy correlation rules
 
-Lengthy Correlation rules are rules of which the actions take a long time to complete. While those actions are being executed, DataMiner Correlation cannot perform other tasks. This has a negative impact on the system.
+Lengthy correlation rules are rules of which the actions take a long time to complete. While those actions are being executed, DataMiner Correlation cannot perform other tasks. This has a negative impact on the system.
 
 ### Impact
 
-Lengthy Correlation rules can have the following consequences:
+Lengthy correlation rules can have the following consequences:
 
 - Other correlation rules may encounter delays in accessing data that interests them because of the prolonged execution of lengthy rules. Consequently, these rules may execute their actions later than anticipated.
 

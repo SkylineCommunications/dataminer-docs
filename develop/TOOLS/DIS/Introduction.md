@@ -7,7 +7,7 @@ description: The free DIS Visual Studio extension allows you to import, create, 
 
 DataMiner Integration Studio (DIS) is a valuable extension for Microsoft Visual Studio that simplifies the process of interacting with and developing for your DataMiner System. DataMiner Integration Studio is available for download **free of charge**.
 
-With this extension, you can seamlessly **import, create, and deploy connectors** to establish connections between your DataMiner System (DMS) and new data sources. Additionally, the DIS extension allows you to **import Automation scripts and SRM functions**, which can be easily created and deployed to your DMS as well.
+With this extension, you can seamlessly **import, create, and deploy connectors** to establish connections between your DataMiner System (DMS) and new data sources. Additionally, the DIS extension allows you to **import automation scripts and SRM functions**, which can be easily created and deployed to your DMS as well.
 
 ![DIS overview](https://docs.dataminer.services/develop/images/DataMinerIntegrationStudio.png)
 
@@ -54,5 +54,5 @@ Do you still have some unanswered questions? Explore our extensive Q&A section, 
 
 - [DataMiner Integration Studio](https://community.dataminer.services/questions/?qtag%5B%5D=883&order_by=newest)
 - [DataMiner connectors](https://community.dataminer.services/questions/?qtag%5B%5D=794&qtag%5B%5D=152&qtag%5B%5D=812&qtag%5B%5D=601&qtag%5B%5D=638&qtag%5B%5D=640&order_by=newest&qtag%5B%5D=126)
-- [Automation scripts](https://community.dataminer.services/questions/?qtag%5B%5D=804&qtag%5B%5D=576&order_by=newest)
+- [automation scripts](https://community.dataminer.services/questions/?qtag%5B%5D=804&qtag%5B%5D=576&order_by=newest)
 - [SRM functions](https://community.dataminer.services/questions/?qtag%5B%5D=302&order_by=newest&qtag%5B%5D=146)

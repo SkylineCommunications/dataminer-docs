@@ -200,7 +200,7 @@ Possible types for the `IGQIValueFilter.Value` property (i.e. the types for whic
 > - Currently, it is not yet possible to partially optimize a filter in a GQI extension. This means that either the entire filter in the filter operator needs to be optimized, or that the filter operator cannot be optimized.
 > - When this feature is used after a web-only upgrade in conjunction with an older server version that uses an older `SLAnalyticsTypes`, the GQI extension library will not compile when installed via a package created from a DataMiner Solution because the new SLAnalyticsTypes dependency will not be included. In this case, the version in `C:\Skyline DataMiner\Files` will be used instead.
 
-#### Automation scripts: Updated user permissions [ID 44232]
+#### automation scripts: Updated user permissions [ID 44232]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
@@ -410,7 +410,7 @@ In the DataMiner web apps, the following context menu issues have been solved:
 
 - In some cases, when a context menu had been opened by pressing the space bar, it could act erratically. It would not close when you clicked outside of it, and if it had a submenu, that submenu would open on top of the existing menu.
 
-#### Interactive Automation scripts: Subsequent user actions could get ignored when a component lost focus [ID 44315]
+#### Interactive automation scripts: Subsequent user actions could get ignored when a component lost focus [ID 44315]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 

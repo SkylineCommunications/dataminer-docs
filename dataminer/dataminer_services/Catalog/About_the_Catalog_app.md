@@ -5,7 +5,7 @@ reviewer: Alexander Verkest
 
 # About the Catalog app
 
-As part of dataminer.services, the Catalog app allows Skyline customers and DataMiner Strategic Partners to browse and deploy available DataMiner connectors, packages, Visio drawings, Automation scripts, dashboards, and more.
+As part of dataminer.services, the Catalog app allows Skyline customers and DataMiner Strategic Partners to browse and deploy available DataMiner connectors, packages, Visio drawings, automation scripts, dashboards, and more.
 
 ![Catalog](~/dataminer/images/DataMiner_Catalog.png)
 
@@ -26,7 +26,7 @@ There are several ways to access the Catalog app:
 
 ## About Catalog items
 
-A Catalog item is a small package that contains one or more artifacts that can be deployed on a DataMiner System. Different types of Catalog items are supported. For example, an item could be a single connector, or it could be an application package containing multiple dashboards, Automation scripts, and connectors.
+A Catalog item is a small package that contains one or more artifacts that can be deployed on a DataMiner System. Different types of Catalog items are supported. For example, an item could be a single connector, or it could be an application package containing multiple dashboards, automation scripts, and connectors.
 
 At present, the following types of Catalog items are supported:
 
@@ -52,7 +52,7 @@ At present, the following types of Catalog items are supported:
 
 **Public** Catalog items are items that are available for anyone within the community to use.
 
-**Private** Catalog items are items that are only available within your own organization. This gives users the possibility to develop app packages, Automation scripts, or any type of Catalog item and redeploy them within their organization on various systems.
+**Private** Catalog items are items that are only available within your own organization. This gives users the possibility to develop app packages, automation scripts, or any type of Catalog item and redeploy them within their organization on various systems.
 
 ### Versioning of Catalog items
 

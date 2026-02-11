@@ -112,9 +112,9 @@ The following extension methods have now been moved from the QActionHelperBaseCl
 
 Up to now, when you exported a trend graph to CSV, it was possible to select the *Ignore gaps* option to make the export skip any gaps in the trend data. This option has now been renamed to *Exclude gaps*.
 
-#### Visual overview: Page-level execution of Automation scripts & new NodeDoubleClicked event \[ID 28185\]
+#### Visual overview: Page-level execution of automation scripts & new NodeDoubleClicked event \[ID 28185\]
 
-On a Visio page, it is now possible to have Automation scripts executed automatically using a page-level data item of type *Execute*.
+On a Visio page, it is now possible to have automation scripts executed automatically using a page-level data item of type *Execute*.
 
 See the example below. You can use the keywords *Trigger* or *SetTrigger*, which can be set to either “ValueChanged” or “Event”.
 
@@ -455,7 +455,7 @@ Throughout DataMiner Cube, the term “central database” has now been replaced
 
 #### SLAutomation will now automatically compile new libraries at startup \[ID 28218\]
 
-When, on startup, SLAutomation detects any new Automation scripts that contain libraries that need to be compiled, from now on, it will automatically compile them.
+When, on startup, SLAutomation detects any new automation scripts that contain libraries that need to be compiled, from now on, it will automatically compile them.
 
 #### Dashboards app: Enhanced page selector in embedded visual overviews \[ID 28237\]
 

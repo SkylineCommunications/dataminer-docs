@@ -588,7 +588,7 @@ When DataMiner was started or when an element was started, in some cases, the fo
 Could not read element latch for DMAID/EID. 0x80131533
 ```
 
-#### Interactive Automation scripts - TreeViewItem: Selecting a tree item would not cause the corresponding valuable to be updated \[ID 31940\]
+#### Interactive automation scripts - TreeViewItem: Selecting a tree item would not cause the corresponding valuable to be updated \[ID 31940\]
 
 When you selected an item in a tree view, in some cases, the value of the corresponding variable would not be updated, especially when the parent item was also selected and was configured to not use recursion.
 

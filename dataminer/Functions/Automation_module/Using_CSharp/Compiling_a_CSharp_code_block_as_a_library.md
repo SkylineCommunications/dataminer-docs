@@ -24,7 +24,7 @@ It is possible to have a C# code block in an automation script in Cube compiled 
 
 ## Importing the library into an Automation script
 
-Once you have compiled a C# code block as a library, you can then import that library into other Automation scripts. To do so:
+Once you have compiled a C# code block as a library, you can then import that library into other automation scripts. To do so:
 
 1. In the Automation module, open the *Advanced* section below the C# code block in the script you want to import the library into.
 
@@ -41,7 +41,7 @@ Once you have compiled a C# code block as a library, you can then import that li
 
 ## Using the library in a DataMiner Automation Script Solution
 
-1. In Visual Studio, create a solution with the library script, and add all other Automation scripts in which you want to use the library to this solution.
+1. In Visual Studio, create a solution with the library script, and add all other automation scripts in which you want to use the library to this solution.
 
 1. In the XML of the library script, make sure the *preCompile* and *libraryName* parameters are filled in. For example:
 
@@ -87,4 +87,4 @@ Once you have compiled a C# code block as a library, you can then import that li
 
 - When the automation script containing a library is deleted, all files of the library will be deleted too, which will make it impossible to recompile scripts that depend on this library until a library with the same reference is added again.
 
-- From DataMiner 10.1.1 onwards, if any new Automation scripts containing libraries that need to be compiled are detected during DataMiner startup, these will be compiled automatically.
+- From DataMiner 10.1.1 onwards, if any new automation scripts containing libraries that need to be compiled are detected during DataMiner startup, these will be compiled automatically.

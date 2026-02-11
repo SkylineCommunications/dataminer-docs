@@ -70,7 +70,7 @@ In addition, SNMP interval logic has been removed from the multithreaded timer, 
 
 #### Visio drawings and dashboards included in EPM package [ID 35522]
 
-In addition to the Automation scripts and connectors, the EPM application package now also includes the Visio drawings and dashboards available in the EPM I-DOCSIS Solution. Dashboards are included as companion files.
+In addition to the automation scripts and connectors, the EPM application package now also includes the Visio drawings and dashboards available in the EPM I-DOCSIS Solution. Dashboards are included as companion files.
 
 #### Resolving the invalid operation exception when updating connector [ID 35532]
 

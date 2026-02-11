@@ -2,7 +2,7 @@
 uid: General_configuration_of_Correlation_rules
 ---
 
-# General configuration of Correlation rules
+# General configuration of correlation rules
 
 In the *Correlation* module in Cube, select a rule in the tree view pane on the left in order to configure it in the details pane on the right.
 
@@ -53,4 +53,4 @@ In the *Correlation* module in Cube, select a rule in the tree view pane on the 
 - To have a new correlation alarm created for every change to an alarm, in the *Alarm filter* section, select *Trigger on single events. Don’t maintain active tree status*. If you do not select this option, the same Correlation alarm will be updated for every new status.
 
   > [!NOTE]
-  > This setting is important for Correlation rules that use a number of separate alarm events as the trigger. If the option is not selected, recurring alarms that are contained within the same alarm tree will not be considered to be separate events.
+  > This setting is important for correlation rules that use a number of separate alarm events as the trigger. If the option is not selected, recurring alarms that are contained within the same alarm tree will not be considered to be separate events.

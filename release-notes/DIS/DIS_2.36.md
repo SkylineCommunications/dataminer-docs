@@ -22,9 +22,9 @@ In the diagram itself, each item (parameter, QAction, session, response, group, 
 
 In the top-left corner of the diagram, you also have a number of zoom options: a slider to adjust to zoom factor, a “1:1” button (to switch to zoom factor 1) and a “Fill” button to automatically adjust the zoom factor to the current size of the diagram window.
 
-#### New command to save all compiled Automation scripts in a solution to a zip file \[ID 32166\]
+#### New command to save all compiled automation scripts in a solution to a zip file \[ID 32166\]
 
-When developing Automation scripts as part of a Visual Studio solution, up to now, it was possible to save a compiled script to a file using the *File \> Save Compiled Script As...* command.
+When developing automation scripts as part of a Visual Studio solution, up to now, it was possible to save a compiled script to a file using the *File \> Save Compiled Script As...* command.
 
 From now on, you can use the *File \> Save All Compiled Scripts As...* command to save all compiled scripts in a solution to a zip file in one go.
 
@@ -34,7 +34,7 @@ In the *DIS Comparer* tool window, it is now also possible to suppress errors af
 
 #### Import Protocol and Import Automation Script windows now have a filter box \[ID 32396\]
 
-Both the *Import Protocol* and *Import Automation Script* windows now have a filter box in the top-right corner. This will allow you to filter the list of protocols or Automation scripts.
+Both the *Import Protocol* and *Import Automation Script* windows now have a filter box in the top-right corner. This will allow you to filter the list of protocols or automation scripts.
 
 #### DIS Validator and DIS Comparer windows now have a filter box \[ID 32407\]
 
@@ -169,9 +169,9 @@ When a page is renamed or when the casing of a page is changed, the export rules
 
 When a parameter is moved onto a page, and its new location matches its location specified in the protocol, any export rules for that parameter will now be removed.
 
-#### Automation scripts: DLL references added via an Exe or Param tag will now be disregarded when identical references were added via the solution explorer \[ID 32422\]
+#### automation scripts: DLL references added via an Exe or Param tag will now be disregarded when identical references were added via the solution explorer \[ID 32422\]
 
-When developing Automation scripts as Visual Studio solutions, it is good practice to add DLL references to the C# project via the solution explorer rather than to add them via Exe and/or Param tags.
+When developing automation scripts as Visual Studio solutions, it is good practice to add DLL references to the C# project via the solution explorer rather than to add them via Exe and/or Param tags.
 
 In cases where the same DLL was referenced both via the solution explorer and via an Exe or Param tag, up to now, a script would end up containing duplicate references when compiled. From now on, when the compiler finds duplicate references, it will disregard the ones added via an Exe or Param tag and only keep the ones added via the solution explorer.
 

@@ -264,13 +264,13 @@ Apart from highlighting all bars belonging to a specific variable, you can now a
 
 ### DMS Automation
 
-#### Interactive Automation scripts will now take into account timeouts set in the engine.Timeout property of the executed script \[ID 28405\]
+#### Interactive automation scripts will now take into account timeouts set in the engine.Timeout property of the executed script \[ID 28405\]
 
-From now on, interactive Automation scripts will also take into account any timeout set in the engine.Timeout property of the executed script
+From now on, interactive automation scripts will also take into account any timeout set in the engine.Timeout property of the executed script
 
-#### Interactive Automation scripts: Lazy loading of tree view items \[ID 28528\]
+#### Interactive automation scripts: Lazy loading of tree view items \[ID 28528\]
 
-It is now possible to configure that a tree view item in interactive Automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
+It is now possible to configure that a tree view item in interactive automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
 
 To activate this so-called lazy loading for a particular tree view item, set its SupportsLazy-Loading property to true. An arrow will appear in front of the tree view item (even if it does not have any child items).
 
@@ -519,7 +519,7 @@ When a new function file was activated, which updated parameters for a particula
 
 When offloading data to SLDataGateway, in some cases, a CPU leak could occur.
 
-#### Interactive Automation scripts: Equals signs not accepted in UI block values \[ID 28324\]
+#### Interactive automation scripts: Equals signs not accepted in UI block values \[ID 28324\]
 
 In some cases, equals signs ("=") could not be used in UI block values.
 

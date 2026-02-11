@@ -33,7 +33,7 @@ The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines di
 
 Two versions of the interactive script UI are currently available. The most recent version, known as "V2", features a modern look and improved usability for scripts used in web apps and has been gradually developed along with DataMiner 10.5.x releases. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- RN 43964 -->, the V2 UI can only be viewed if the URL parameter [useNewIASInputComponents](xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url) is used for a web app.
 
-Starting from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12, the UI version used for interactive Automation scripts in web apps is determined by the [engine.WebUIVersion](xref:Skyline.DataMiner.Automation.Engine.WebUIVersion) property. For example:
+Starting from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12, the UI version used for interactive automation scripts in web apps is determined by the [engine.WebUIVersion](xref:Skyline.DataMiner.Automation.Engine.WebUIVersion) property. For example:
 
 ```csharp
 engine.WebUIVersion = WebUIVersion.V1;
@@ -204,7 +204,7 @@ uiBuilder.AppendBlock(blockItem);
 
 > [!NOTE]
 >
-> - This download button is currently only supported in Automation scripts used in the DataMiner web apps (e.g. Dashboards or Low-Code Apps).
+> - This download button is currently only supported in automation scripts used in the DataMiner web apps (e.g. Dashboards or Low-Code Apps).
 > - The URL is used as the content of the `href` property in an A-HTML element (after sanitizing for security). For more information on how to build valid URLs, see <https://www.w3schools.com/html/html_filepaths.asp>. The most common use cases are:
 >   - An absolute URL to a file, for example: `https://dataminer.services/install/DataMinerCube.exe`
 >   - A relative URL, relative to the DMA hostname, for example: `/Documents/General Documents/myfile.txt`
@@ -242,7 +242,7 @@ In the **V2 UI** (see [UI versions](#ui-versions)):
 
 - Property [DisplayFilter](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DisplayFilter) is not supported, and dropdowns now always have the filter.
 - Property [WantsOnFocusLost](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnFocusLost) is supported.
-- It is possible for dropdowns in interactive Automation scripts to become overloaded with data. Although a filter can be used to locate items in a dropdown list, retrieving and displaying all available options can be time-consuming. From DataMiner 10.5.8/10.6.0 onwards<!-- RN 42808 / RN 42845 -->, for Automation scripts launched from web apps, you can use [WasOnFilter](xref:Skyline.DataMiner.Automation.UIResults.WasOnFilter(System.String)) to get the filter value that was entered. The options added to the selection box can be filtered by the script. Enable the [WantsOnFilter](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnFilter) property when defining the selection box.
+- It is possible for dropdowns in interactive automation scripts to become overloaded with data. Although a filter can be used to locate items in a dropdown list, retrieving and displaying all available options can be time-consuming. From DataMiner 10.5.8/10.6.0 onwards<!-- RN 42808 / RN 42845 -->, for automation scripts launched from web apps, you can use [WasOnFilter](xref:Skyline.DataMiner.Automation.UIResults.WasOnFilter(System.String)) to get the filter value that was entered. The options added to the selection box can be filtered by the script. Enable the [WantsOnFilter](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnFilter) property when defining the selection box.
 
 ## Executable
 
@@ -273,7 +273,7 @@ Examples:
   ```
 
 > [!NOTE]
-> Automation scripts with an executable component are currently only supported in DataMiner Cube. These are not supported in DataMiner web apps.
+> automation scripts with an executable component are currently only supported in DataMiner Cube. These are not supported in DataMiner web apps.
 
 ## FileSelector
 
@@ -601,7 +601,7 @@ Make sure to add "using Skyline.DataMiner.Net.AutomationUI.Objects;" at the top 
 
 > [!NOTE]
 >
-> - Automation scripts with tree view controls are currently only supported in the DataMiner web apps. These are not yet supported in DataMiner Cube.
+> - automation scripts with tree view controls are currently only supported in the DataMiner web apps. These are not yet supported in DataMiner Cube.
 > - From DataMiner 10.6.0/10.6.3 onwards<!-- RN 44515 / RN 44541 -->, when the UI is updated, the previous collapsed state of the tree view nodes can be restored. Set the [UsePreviousCollapsedState](xref:Skyline.DataMiner.Net.AutomationUI.Objects.TreeViewItem.UsePreviousCollapsedState) to true to restore the state. If no prior state is available, the value of [IsCollapsed](xref:Skyline.DataMiner.Net.AutomationUI.Objects.TreeViewItem.IsCollapsed) will be used instead.
 
 Example:

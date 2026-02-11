@@ -90,7 +90,7 @@ New settings:
 
 ### Enhancements
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI components 'Calendar' and 'Time' [ID 41529]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI components 'Calendar' and 'Time' [ID 41529]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 

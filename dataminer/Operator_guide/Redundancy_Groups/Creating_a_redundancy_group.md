@@ -107,7 +107,7 @@ To create a redundancy group:
 > - A redundancy group can also be created by a parent element. In that case, it is possible that it is not or only partly editable, except by an Administrator or via the parent element.
 
 > [!TIP]
-> See also: [Automation scripts triggered from redundancy groups](xref:Automation_scripts_triggered_from_redundancy_groups)
+> See also: [automation scripts triggered from redundancy groups](xref:Automation_scripts_triggered_from_redundancy_groups)
 
 ## Configuring redundancy switching based on connectivity
 

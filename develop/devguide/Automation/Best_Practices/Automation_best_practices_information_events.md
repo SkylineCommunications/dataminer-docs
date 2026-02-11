@@ -4,7 +4,7 @@ uid: Automation_best_practices_information_events
 
 # Generating information events
 
-To make sure your on-premises databases remain in good shape and do not get cluttered with unnecessary data, or to ensure a cost-efficient solution in case you make use of Storage as a Service, it is important to avoid producing unnecessary information events. As a general rule of thumb, when developing Automation scripts, use information events in a meaningful way to do **audit trailing for events that are useful for end users**, e.g. CRUD actions on DataMiner objects such as "Start booking" or "Script x executed by y". Do not use them if they are only useful to you as a DevOps engineer creating the scripts in order to debug a flow.
+To make sure your on-premises databases remain in good shape and do not get cluttered with unnecessary data, or to ensure a cost-efficient solution in case you make use of Storage as a Service, it is important to avoid producing unnecessary information events. As a general rule of thumb, when developing automation scripts, use information events in a meaningful way to do **audit trailing for events that are useful for end users**, e.g. CRUD actions on DataMiner objects such as "Start booking" or "Script x executed by y". Do not use them if they are only useful to you as a DevOps engineer creating the scripts in order to debug a flow.
 
 Keep the following best practices in mind:
 

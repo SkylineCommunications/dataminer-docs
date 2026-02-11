@@ -46,7 +46,7 @@ When a PDF report was generated via Automation or Scheduler, in some cases, its 
 
 Also, in some cases, the left and right padding of PDF reports generated via Automation, Scheduler and the Dashboards app itself would be missing.
 
-#### Interactive Automation scripts: Problems with datetime component [ID 35682]
+#### Interactive automation scripts: Problems with datetime component [ID 35682]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 

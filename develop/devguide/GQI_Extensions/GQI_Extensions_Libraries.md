@@ -26,7 +26,7 @@ See also:
 
 All GQI extensions defined within the same extension library will use the same dependencies.
 
-Similar to Automation scripts, extension libraries may use DLL dependencies that are defined in the *DLL references* section in the associated Automation script.
+Similar to automation scripts, extension libraries may use DLL dependencies that are defined in the *DLL references* section in the associated Automation script.
 
 From DataMiner 10.5.0 [CU2]/10.5.5 onwards and when using the [GQI DxM](xref:GQI_DxM)<!--RN 42468-->, GQI also automatically searches for missing dependencies in the `C:\Skyline DataMiner\Scripts\Libraries` folder. This allows extension scripts to find the necessary Automation script libraries at runtime.
 

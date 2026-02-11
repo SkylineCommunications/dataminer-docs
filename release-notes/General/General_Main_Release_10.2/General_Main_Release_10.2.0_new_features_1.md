@@ -561,7 +561,7 @@ On MySQL and Microsoft SQL Server databases, the alarm table now has an extra fi
 
 #### SimulationHelper API now allows loading, enabling and disabling element simulations at runtime \[ID 29517\]
 
-Up to now, loading new element simulations always required a DataMiner restart. Now, the SimulationHelper API will allow you to load, enable and disable element simulations at runtime from within protocol QActions or Automation scripts.
+Up to now, loading new element simulations always required a DataMiner restart. Now, the SimulationHelper API will allow you to load, enable and disable element simulations at runtime from within protocol QActions or automation scripts.
 
 Construction:
 

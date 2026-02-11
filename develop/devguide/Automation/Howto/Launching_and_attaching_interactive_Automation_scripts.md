@@ -2,7 +2,7 @@
 uid: Launching_and_attaching_interactive_Automation_scripts
 ---
 
-# Launching and attaching interactive Automation scripts
+# Launching and attaching interactive automation scripts
 
 This guide explains how to reliably launch an interactive Automation script in different scenarios.
 

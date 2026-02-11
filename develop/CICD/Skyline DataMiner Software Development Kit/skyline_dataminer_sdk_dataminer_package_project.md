@@ -21,7 +21,7 @@ When you publish the project, a corresponding item will be created in the online
 
 ### New artifacts
 
-You can right-click the solution and select *Add* > *New Project*. This will allow you to select DataMiner project templates (e.g. to add additional Automation scripts).
+You can right-click the solution and select *Add* > *New Project*. This will allow you to select DataMiner project templates (e.g. to add additional automation scripts).
 
 > [!NOTE]
 > Connectors are currently not supported for this.
@@ -38,7 +38,7 @@ Every *Skyline.DataMiner.SDK* project within the solution, except other DataMine
 
 ### Existing Automation script files
 
-You can right-click the solution and select *Add* > *Add Existing DataMiner Automation Script*. This will allow you to add existing Automation scripts files to the solution.
+You can right-click the solution and select *Add* > *Add Existing DataMiner Automation Script*. This will allow you to add existing automation scripts files to the solution.
 
 ## Importing from DataMiner
 

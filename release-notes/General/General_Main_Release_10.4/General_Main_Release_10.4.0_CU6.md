@@ -43,11 +43,11 @@ From now on, the NATS configuration can be reset by calling the following endpoi
 
 From now on, alarms generated for child DVE elements using a parameter ID from the main DVE element can also get a focus value and, as a result, be grouped by Automatic incident tracking.
 
-#### SLAutomation: Enhanced compilation of Automation scripts [ID 39965]
+#### SLAutomation: Enhanced compilation of automation scripts [ID 39965]
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
-A number of enhancements have been made with regard to the compilation of Automation scripts.
+A number of enhancements have been made with regard to the compilation of automation scripts.
 
 #### DataMiner upgrade: ResetConfig.txt will no longer be added to FilesToDelete.txt [ID 39994]
 
@@ -255,7 +255,7 @@ At startup, in some cases, the CloudEndpointManager in SLNet could throw an exce
 
 When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
 
-#### Automation scripts could fail due to zero or negative sleep intervals being passed to Engine.Sleep [ID 40084]
+#### automation scripts could fail due to zero or negative sleep intervals being passed to Engine.Sleep [ID 40084]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 

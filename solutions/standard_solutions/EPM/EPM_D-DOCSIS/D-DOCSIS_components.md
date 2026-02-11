@@ -37,9 +37,9 @@ The following system connectors are supported (but not required):
 - IDP EPM Connectivity
 - HP Network Automation
 
-## Automation scripts
+## automation scripts
 
-The D-DOCSIS EPM Solution uses the following Automation scripts:
+The D-DOCSIS EPM Solution uses the following automation scripts:
 
 - EpmConfig
 - FeToBe

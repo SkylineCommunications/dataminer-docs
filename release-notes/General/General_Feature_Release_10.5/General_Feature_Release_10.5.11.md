@@ -145,7 +145,7 @@ Up to now, when DataMiner was not able to send an operation to STaaS, it had to 
 
 From now on, when DataMiner tries to send an operation of which the size exceeds the maximum package limit to STaaS, a failure notice will be returned immediately.
 
-#### Automation scripts: No attempts will be made anymore to automatically detect the interactive behavior of script libraries [ID 43673]
+#### automation scripts: No attempts will be made anymore to automatically detect the interactive behavior of script libraries [ID 43673]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
 

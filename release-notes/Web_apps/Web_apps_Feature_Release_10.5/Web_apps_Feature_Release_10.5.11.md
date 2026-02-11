@@ -360,7 +360,7 @@ When the contents of a query row was passed to an ad hoc data source, in some ca
 
 When, in edit mode, you searched for a panel, switched to draft mode, navigated to a page, and then returned to edit mode, up to now, the search input would incorrectly still display the previous search results.
 
-#### Interactive Automation scripts: Problem with arrow buttons in redesigned components [ID 43786]
+#### Interactive automation scripts: Problem with arrow buttons in redesigned components [ID 43786]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 

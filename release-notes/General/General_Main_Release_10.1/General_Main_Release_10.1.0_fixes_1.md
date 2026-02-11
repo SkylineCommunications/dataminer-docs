@@ -136,7 +136,7 @@ If you corrected an outage that was no longer in the current SLA window, in some
 
 After trying to save a job that contained errors (e.g. missing fields), in some cases, it would no longer be possible to click the *Save* button again after correcting the errors.
 
-#### Dashboards app: Problem when loading dropdown boxes of interactive Automation scripts \[ID 24888\]
+#### Dashboards app: Problem when loading dropdown boxes of interactive automation scripts \[ID 24888\]
 
 When a dialog box of an interactive Automation script showed multiple dropdown boxes next to each other, in some cases, some of those boxes would become unresponsive when data was being loaded into them.
 
@@ -288,7 +288,7 @@ Up to now, parameter information of inactive elements would incorrectly not get 
 
 In some cases, the SLNet.exe.config file would contain an unnecessary “codedom” tag. On certain DataMiner Agents, this could lead to issues when generating functions.
 
-#### Interactive Automation scripts: Some dropdown boxes would unnecessarily trigger a refresh of the UI \[ID 25902\]
+#### Interactive automation scripts: Some dropdown boxes would unnecessarily trigger a refresh of the UI \[ID 25902\]
 
 In some cases, dropdown boxes would unnecessarily trigger a refresh of the UI.
 
@@ -386,9 +386,9 @@ In some cases, the SLDataGateway process would leak memory.
 
 In some cases, the Monitoring app would incorrectly disregard the client timezone setting when displaying timestamps in trend graphs.
 
-#### Problem with user permissions for Automation scripts \[ID 26401\]\[ID 26957\]
+#### Problem with user permissions for automation scripts \[ID 26401\]\[ID 26957\]
 
-Up to now the permissions to add, edit, delete and execute Automation scripts were only enforced in the client, which could make it possible for a user to modify the Automation scripts on a DMA despite not having the required permissions for this.
+Up to now the permissions to add, edit, delete and execute automation scripts were only enforced in the client, which could make it possible for a user to modify the automation scripts on a DMA despite not having the required permissions for this.
 
 Now the system will enforce the permissions as follows:
 

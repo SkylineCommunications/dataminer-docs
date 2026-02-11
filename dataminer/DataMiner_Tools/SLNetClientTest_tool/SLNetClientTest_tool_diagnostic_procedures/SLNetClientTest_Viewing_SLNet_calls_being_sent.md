@@ -14,4 +14,4 @@ To get an overview of the SLNet calls that are being sent from a QAction, an Aut
 
    - For QActions, select *SLManagedScripting*.
 
-   - For Automation scripts, select *SLManagedAutomation*.
+   - For automation scripts, select *SLManagedAutomation*.

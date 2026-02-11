@@ -71,7 +71,7 @@ Because of a number of enhancements, overall performance of the *Timeline* compo
 
 ### Enhancements
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Numeric' [ID 42132]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI component 'Numeric' [ID 42132]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
@@ -81,7 +81,7 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
-#### Low-Code Apps - Interactive Automation scripts: Enhancements made to redesigned UI components 'StaticText' and 'CheckBox' [ID 42210]
+#### Low-Code Apps - Interactive automation scripts: Enhancements made to redesigned UI components 'StaticText' and 'CheckBox' [ID 42210]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
@@ -98,7 +98,7 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'FileSelector' [ID 42231]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI component 'FileSelector' [ID 42231]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
@@ -108,7 +108,7 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Treeview' [ID 42279]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI component 'Treeview' [ID 42279]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
@@ -118,7 +118,7 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Parameter' [ID 42401]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI component 'Parameter' [ID 42401]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 

@@ -18,7 +18,7 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-#### Low-Code Apps - Interactive Automation scripts: Enhancements made to redesigned UI component 'StaticText' [ID 42662]
+#### Low-Code Apps - Interactive automation scripts: Enhancements made to redesigned UI component 'StaticText' [ID 42662]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
@@ -36,7 +36,7 @@ Currently, by default, the existing components will still be used by default to 
 
 A number of enhancements have been made to the way in which timeline items are updated.
 
-#### Low-Code Apps - Interactive Automation scripts: Enhancements made to redesigned UI component 'CheckBoxList' [ID 42826]
+#### Low-Code Apps - Interactive automation scripts: Enhancements made to redesigned UI component 'CheckBoxList' [ID 42826]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 

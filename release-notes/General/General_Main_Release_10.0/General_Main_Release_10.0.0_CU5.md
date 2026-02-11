@@ -233,9 +233,9 @@ In some cases, it would no longer be possible to manually refresh a table by cli
 
 When you opened the Services app, in some rare cases, the services list would not display the current states of the listed services.
 
-#### Automation scripts could fail with a 'No CodeBuilder found for cookie xxx' error \[ID 26546\]
+#### automation scripts could fail with a 'No CodeBuilder found for cookie xxx' error \[ID 26546\]
 
-In some cases, Automation scripts could fail with a “No CodeBuilder found for cookie xxx” error.
+In some cases, automation scripts could fail with a “No CodeBuilder found for cookie xxx” error.
 
 #### Parts of a table polled via SNMP could be set to 'not initialized' when errors had occurred during polling \[ID 26551\]
 

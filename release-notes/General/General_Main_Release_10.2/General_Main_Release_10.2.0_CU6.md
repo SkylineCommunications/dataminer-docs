@@ -381,7 +381,7 @@ While making a spectrum recording, in some cases, the recording icon would no lo
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-When, in Visual Overview, you clicked a shape that executed two Automation scripts, the cursor would incorrectly still be displayed as a wait cursor after the two scripts had already finished.
+When, in Visual Overview, you clicked a shape that executed two automation scripts, the cursor would incorrectly still be displayed as a wait cursor after the two scripts had already finished.
 
 #### Spectrum analysis: Issues when playing a spectrum recording [ID 33918]
 

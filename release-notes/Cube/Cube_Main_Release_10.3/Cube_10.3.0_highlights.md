@@ -435,7 +435,7 @@ These new password boxes can be found in the following locations:
 - System Center \> Users/groups \> Add new user... (peek only)
 - System Center \> System Settings \> Credentials Library
 - System Center \> System Settings \> LDAP
-- Interactive Automation scripts (UIBlock of type PasswordBox)
+- Interactive automation scripts (UIBlock of type PasswordBox)
 
 > [!NOTE]
 >

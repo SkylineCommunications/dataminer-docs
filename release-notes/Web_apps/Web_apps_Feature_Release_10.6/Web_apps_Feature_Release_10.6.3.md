@@ -220,11 +220,11 @@ The icons and favicons of the DataMiner landing page and the following DataMiner
 
 Also, the app titles have been standardized to ensure consistency across all apps.
 
-#### Interactive Automation scripts: UI components Time and Calendar can now all display seconds [ID 44521]
+#### Interactive automation scripts: UI components Time and Calendar can now all display seconds [ID 44521]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, in interactive Automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
+Up to now, in interactive automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
 
 - `UIBlockType.Time` with `AutomationDateTimePickerOptions`
 - `UIBlockType.Time` with `AutomationDateTimeUpDownOptions`

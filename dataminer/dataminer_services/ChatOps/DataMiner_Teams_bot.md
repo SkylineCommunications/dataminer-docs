@@ -140,7 +140,7 @@ For examples, see [Custom Command Examples](https://github.com/SkylineCommunicat
 
 ### Limitations
 
-- Interactive Automation scripts are not supported.
+- Interactive automation scripts are not supported.
 - Commands that run longer than 30 seconds are currently not supported. When a command takes too long, the bot will show that the request has been aborted. However, note that the command will keep running in the DMS once it has been initiated, but if it eventually completes, the bot will not display any feedback or output. This means that strictly speaking this feature could be used to trigger long-running commands, but in that case the commands should ideally be triggered asynchronously from within a command's Automation script. You could for instance add a trigger command and a check output command to check if the action is done.
 - Issues with the adaptive card output will not result in proper error feedback. You need to make sure the provided JSON is valid code and that it has valid content for Teams (i.e. an array of body elements). You can validate your JSON output using the [designer](https://adaptivecards.io/designer/) by adding it in the body array of an adaptive card.
 - Output cannot exceed 35 KB.

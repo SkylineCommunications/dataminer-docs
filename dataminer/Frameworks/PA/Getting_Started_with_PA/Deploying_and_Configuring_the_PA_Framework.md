@@ -71,7 +71,7 @@ To install the PA framework:
    > It is essential that you run this script first before moving on to the next steps.
 
    > [!TIP]
-   > See also: [Running Automation scripts](xref:Running_Automation_scripts)
+   > See also: [Running automation scripts](xref:Running_Automation_scripts)
 
    Also make sure that the files *ProcessAutomation.dll* and *SLSRMLibrary.dll* are not present in the following subfolders of the Skyline DataMiner folder: `C:\Skyline DataMiner\Files\` and `C:\Skyline DataMiner\ProtocolScripts\DLLImport\`.
 

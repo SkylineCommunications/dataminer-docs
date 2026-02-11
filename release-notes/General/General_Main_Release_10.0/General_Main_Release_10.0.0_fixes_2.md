@@ -413,7 +413,7 @@ When you select a service in the services list, the ID of that service is stored
 
 When working with the Dashboards app in Chrome, in some cases, a mouse click could unintentionally cause a dashboard component to be moved to another location.
 
-#### HTML5 apps: Selection box values containing backslash characters displayed incorrectly in interactive Automation scripts \[ID 24541\]
+#### HTML5 apps: Selection box values containing backslash characters displayed incorrectly in interactive automation scripts \[ID 24541\]
 
 When an interactive Automation script was run from within an HTML5 app, in some cases, selection box values containing “\\” characters could be displayed incorrectly.
 

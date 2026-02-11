@@ -34,7 +34,7 @@ This action can be used to execute a specified script. This has the following pr
 > - Prior to DataMiner versions 10.5.0/10.5.2<!-- RN 41536 -->, a "Script started" information event is generated when the configured script is launched. To reduce the load on the database, this no longer happens from those DataMiner versions onwards.
 
 > [!CAUTION]
-> To prevent deadlock situations in the SLAutomation module, avoid triggering DOM actions of this kind from other Automation scripts. A deadlock can occur in the following scenario:
+> To prevent deadlock situations in the SLAutomation module, avoid triggering DOM actions of this kind from other automation scripts. A deadlock can occur in the following scenario:
 >
 > - A DOM action script is configured to run synchronously (`Async` property set to `false`).
 > - That DOM action script needs to interact with the SLNet API (this is the case when using most helpers, sending SLNet messages, etc.).

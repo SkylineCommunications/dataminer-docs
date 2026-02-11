@@ -9,7 +9,7 @@ uid: Installing_the_Regression_Test_Management_Solution
 Before deploying this solution, ensure the following:
 
 - Your system is running DataMiner 10.3.0 or higher.
-- Your regression tests are available as Automation scripts in DataMiner.
+- Your regression tests are available as automation scripts in DataMiner.
 
 > [!TIP]
 > To get started with new regression test scripts, we recommend using the [Regression Test Template on GitHub](https://github.com/SkylineCommunications/Skyline.DataMiner.GithubTemplate.RegressionTest).

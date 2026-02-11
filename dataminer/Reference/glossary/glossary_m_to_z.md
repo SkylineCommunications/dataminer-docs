@@ -220,7 +220,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SOA | Service-Oriented Architecture. Software architecture where services are provided to the other components by application components, through a communication protocol over a network. |
 | SOAP | Simple Object Access Protocol. Messaging protocol for exchanging structured information in the implementation of web services in computer networks. |
 | SOC | Security Operations Center. Centralized facility from which a security team works to prevent, detect and handle cybersecurity threats and incidents. |
-| Software redundancy | Redundancy logic configured in DataMiner Cube, based on Automation scripts. See [Software redundancy](xref:About_redundancy_groups#software-redundancy). |
+| Software redundancy | Redundancy logic configured in DataMiner Cube, based on automation scripts. See [Software redundancy](xref:About_redundancy_groups#software-redundancy). |
 | SONET | Synchronous Optical NETworking. Standard technology in the US and Canada for synchronous data transmission on optical media. Its European counterpart is SDH. |
 | SOP | Standard Operating Procedure. Set of step-by-step instructions used to carry out complex routine operations. |
 | Spectrum analysis | DataMiner module that can be used to integrate spectrum analyzers in the DMS, so that they can be used for continuous RF performance monitoring. See [Spectrum Analysis](xref:SpectrumAnalysis). |

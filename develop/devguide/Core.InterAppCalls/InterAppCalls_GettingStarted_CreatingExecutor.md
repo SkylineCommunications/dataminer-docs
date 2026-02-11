@@ -7,7 +7,7 @@ keywords: Executor
 
 When you have [created an API](xref:InterAppCalls_GettingStarted_CreatingApi) describing the different messages and their content, the next thing to do is to create an executor that will define how an incoming message should be handled.
 
-The executor is never shared between connectors or Automation scripts. You create it at the destination of a message and it is unique to that connector. It will hold all the methods that can access the content of the message and do something with it.
+The executor is never shared between connectors or automation scripts. You create it at the destination of a message and it is unique to that connector. It will hold all the methods that can access the content of the message and do something with it.
 
 A few common examples:
 

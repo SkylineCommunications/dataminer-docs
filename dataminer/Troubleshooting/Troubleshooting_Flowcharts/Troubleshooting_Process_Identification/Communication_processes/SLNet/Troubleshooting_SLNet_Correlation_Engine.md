@@ -30,7 +30,7 @@ ENDING([End])
 PRESENT{{Issue still present?}}
 PRESENTYES[[Check SLNetClientTest tool Diagnostics > SLNet > Stacksizes >for high Correlation thread.]]
 PRESENTNO{{Investigate gathered data: Found anything?}}
-FOUNDYES[[Refactor the relevant Correlation rules and/or Automation scripts.]]
+FOUNDYES[[Refactor the relevant correlation rules and/or automation scripts.]]
 GATHER[[Gather a LogCollector package. Include memory dumps for SLNet and SLCorrelation.]]
 START ---  GATHER
 GATHER --- PRESENT
@@ -71,17 +71,17 @@ Also check for relevant information events in the Alarm Console in DataMiner Cub
 
 ### Automation - Sleep functions
 
-Check if you have Correlation rules that trigger Automation scripts. If so, check if these scripts **contain a [Sleep](xref:Sleep) function**, i.e. Thread.Sleep(...) or Engine.Sleep(...), possibly in combination with the script options "[*Wait for the script to finish before continuing*](xref:Script_execution_options)" or "[*Wait when locked or busy*](xref:Script_execution_options)". If this is indeed the case, **refactor these scripts** to avoid these delays.
+Check if you have correlation rules that trigger automation scripts. If so, check if these scripts **contain a [Sleep](xref:Sleep) function**, i.e. Thread.Sleep(...) or Engine.Sleep(...), possibly in combination with the script options "[*Wait for the script to finish before continuing*](xref:Script_execution_options)" or "[*Wait when locked or busy*](xref:Script_execution_options)". If this is indeed the case, **refactor these scripts** to avoid these delays.
 
-When SLCorrelation triggers an Automation script and that script contains a Sleep function, this can block the SLCorrelation process. If a large number of Correlation rules are triggered, this can cause SLNet issues.
+When SLCorrelation triggers an Automation script and that script contains a Sleep function, this can block the SLCorrelation process. If a large number of correlation rules are triggered, this can cause SLNet issues.
 
 These delays are also visible in the log files. You will notice that rules or scripts will only get triggered after the delay is finished.
 
 ### Correlation loops
 
-Check the information events or the SLCorrelation log file to see if there is a high number of triggered Correlation rules, or if the same rule gets triggered repeatedly.
+Check the information events or the SLCorrelation log file to see if there is a high number of triggered correlation rules, or if the same rule gets triggered repeatedly.
 
-If this is the case, it could be caused by an **incorrectly configured Correlation rule causing a loop**. Check your Correlation rules and adjust them to avoid such loops.
+If this is the case, it could be caused by an **incorrectly configured Correlation rule causing a loop**. Check your correlation rules and adjust them to avoid such loops.
 
 ### SLNetClientTest tool
 

@@ -75,7 +75,7 @@ In some cases, an error could occur during a DataMiner upgrade.
 
 #### DataMiner Cube - Automation: Not possible to save a script after modifying an if/then block \[ID 28532\]
 
-When, in an Automation scripts, you had changed the actions in an if/then block, in some cases, the *Save script* button would incorrectly not get activated. As a result, you were not able to save the modified script.
+When, in an automation scripts, you had changed the actions in an if/then block, in some cases, the *Save script* button would incorrectly not get activated. As a result, you were not able to save the modified script.
 
 #### DataMiner Cube - Scheduler app: Problem when editing a script event in the timeline \[ID 28542\]
 
@@ -135,7 +135,7 @@ When a correlated alarm was cleared, overall memory usage would temporarily incr
 
 In some cases, an error could occur in the SLSpectrum process when a client disconnected.
 
-#### Correlation: Correlation rules would incorrectly be triggered by empty alarms \[ID 28680\]
+#### Correlation: correlation rules would incorrectly be triggered by empty alarms \[ID 28680\]
 
 In some cases, correlation rules would incorrectly be triggered by empty alarms, causing emails to be sent with unresolved placeholders.
 

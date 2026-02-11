@@ -152,7 +152,7 @@ If redundancy is not defined in the connector, leave out this section.
 
 ##### Other configuration subsections
 
-Depending on the connector, other subsections may be needed, for example, in case Automation scripts, Correlation rules, Visio files, etc. need to be configured. You can find a number of possible subsections listed in the template. However, this list is not exclusive; you can add different configuration subsections if this makes sense for your connector.
+Depending on the connector, other subsections may be needed, for example, in case automation scripts, correlation rules, Visio files, etc. need to be configured. You can find a number of possible subsections listed in the template. However, this list is not exclusive; you can add different configuration subsections if this makes sense for your connector.
 
 #### 'How to Use' section
 

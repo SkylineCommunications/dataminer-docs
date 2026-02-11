@@ -105,7 +105,7 @@ In this step, you will create a correlation rule that will trigger based on alar
 1. Optionally, add other rule actions according to your preference.
 
    > [!TIP]
-   > See [adding rule actions in Correlation rules](xref:Adding_rule_actions_in_Correlation_rules).
+   > See [adding rule actions in correlation rules](xref:Adding_rule_actions_in_Correlation_rules).
 
 1. At the top of the rule configuration pane, select *Enable this rule*.
 
@@ -133,6 +133,6 @@ In this step, you will create a correlation rule that will trigger based on alar
 
 ## Related documentation
 
-- [Filtering and grouping base alarms for Correlation rules](xref:Filtering_and_grouping_base_alarms_for_Correlation_rules)
-- [Adding rule conditions in Correlation rules](xref:Adding_rule_conditions_in_Correlation_rules)
-- [Adding rule actions in Correlation rules](xref:Adding_rule_actions_in_Correlation_rules)
+- [Filtering and grouping base alarms for correlation rules](xref:Filtering_and_grouping_base_alarms_for_Correlation_rules)
+- [Adding rule conditions in correlation rules](xref:Adding_rule_conditions_in_Correlation_rules)
+- [Adding rule actions in correlation rules](xref:Adding_rule_actions_in_Correlation_rules)

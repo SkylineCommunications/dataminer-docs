@@ -8,9 +8,9 @@ uid: DIS_2.24
 
 ### IDE
 
-#### C# editor: Class Library can now also be used in Automation scripts \[ID 23925\]
+#### C# editor: Class Library can now also be used in automation scripts \[ID 23925\]
 
-From now on, it is also possible to use code from Class Library packages in Automation scripts.
+From now on, it is also possible to use code from Class Library packages in automation scripts.
 
 When DIS detects that code from a loaded Class Library package is used in EXE blocks of an Automation script, it will
 
@@ -18,7 +18,7 @@ When DIS detects that code from a loaded Class Library package is used in EXE bl
 - add references in the EXE blocks using that Class Library code to the newly added EXE block containing the Class Library code.
 
 > [!NOTE]
-> Using Class Library packages in Automation scripts will only work in conjunction with DataMiner version 9.6.13 or higher.
+> Using Class Library packages in automation scripts will only work in conjunction with DataMiner version 9.6.13 or higher.
 
 #### C# editor: New snippets \[ID 24066\]\[ID 24222\]
 

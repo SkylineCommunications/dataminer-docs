@@ -72,7 +72,7 @@ To change the appearance of a column using presets, in the *Column appearance* s
 > - In the *Parameter table* component, the default column alignment is now "Left" instead of "Center".
 > - The default alignment of GQI table columns is now "Left" for columns of type string and "Right" for columns of type numeric or date.
 
-#### Interactive Automation scripts: Certain components can now be visualized as read-only in web environments [ID 37659]
+#### Interactive automation scripts: Certain components can now be visualized as read-only in web environments [ID 37659]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 

@@ -2,7 +2,7 @@
 uid: Grouping_alarms_in_Correlation_rules
 ---
 
-# Grouping alarms in Correlation rules
+# Grouping alarms in correlation rules
 
 With the DataMiner Cube Correlation engine, you can group alarms matching the same criteria into separate correlated alarms. For example, all alarms from various services can be grouped into one correlated alarm per service.
 

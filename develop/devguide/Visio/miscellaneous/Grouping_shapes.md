@@ -26,7 +26,7 @@ Suppose that you want to draw a square that has to display the alarm color of th
 
 Result: When the Visio drawing is displayed, the square will show the alarm color of the associated element, and the name of that element will be displayed in the text box on the right.
 
-## Making subshapes execute parameter sets or Automation scripts on the element linked to the parent shape
+## Making subshapes execute parameter sets or automation scripts on the element linked to the parent shape
 
 Within a group, you can configure a subshape to execute a script or parameter set on the element that is linked to the entire group.
 

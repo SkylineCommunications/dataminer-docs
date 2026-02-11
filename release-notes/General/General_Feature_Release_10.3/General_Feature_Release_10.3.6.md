@@ -162,7 +162,7 @@ To make gRPC the default communication method, do the following on every DataMin
 > [!NOTE]
 >
 > - *.NET Remoting* remains the default communication method for both client-server and server-server communication.
-> - Certain connectors and Automation scripts still rely on having the *.NET Remoting* port 8004 open.
+> - Certain connectors and automation scripts still rely on having the *.NET Remoting* port 8004 open.
 
 #### SLAnalytics: Trend data predictions displayed in trend graphs will be more accurate [ID 36038]
 

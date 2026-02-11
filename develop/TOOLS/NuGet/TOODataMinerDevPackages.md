@@ -8,7 +8,7 @@ Dev Packs are very similar to standard NuGet package except that they will not b
 
 ## DataMiner Dev Packs
 
-DataMiner Dev Packs (or DataMiner Development Packages) are NuGet packages available in the [official NuGet store](https://www.nuget.org/) that contain the necessary assemblies for the development of DataMiner connectors or Automation scripts.
+DataMiner Dev Packs (or DataMiner Development Packages) are NuGet packages available in the [official NuGet store](https://www.nuget.org/) that contain the necessary assemblies for the development of DataMiner connectors or automation scripts.
 
 They allow access to the SLProtocol interface and IEngine interface respectively within your Visual Studio projects without the need to have DataMiner installed. This also makes it possible to let e.g. the CI/CD pipeline build the solution, as the required DataMiner dependencies are provided in the NuGet package.
 
@@ -26,14 +26,14 @@ Typically, you will only need to install the meta-package. However, in some case
 
 ### Requirements
 
-The [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio) Visual Studio extension is required for development of connectors and Automation scripts using DataMiner Development Packages.
+The [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio) Visual Studio extension is required for development of connectors and automation scripts using DataMiner Development Packages.
 
 See [Installing DataMiner Integration Studio](xref:Installing_and_configuring_the_software)
 
 > [!IMPORTANT]
 > Dev Packs are suggested to be installed with PackageReferences. DIS was redesigned to work with PackageReferences and be future-proof.
 >
-> If packages.config is used, you may see incorrect dllImports (protocols) or references (Automation scripts) when asking DIS to compile the results.
+> If packages.config is used, you may see incorrect dllImports (protocols) or references (automation scripts) when asking DIS to compile the results.
 >
 > For more information on how to migrate from packages.config to PackageReferences, see [docs.microsoft.com](https://docs.microsoft.com/en-us/nuget/consume-packages/migrate-packages-config-to-package-reference).
 

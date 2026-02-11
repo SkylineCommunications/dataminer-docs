@@ -11,7 +11,7 @@ uid: KI_gRPC_connected_Cube_stuck_when_using_Automation
 
 ## Cause
 
-When Automation scripts are opened, it can occur that Cube sends a message to the server that is not supported, resulting in deserialization exceptions in SLNet. If gRPC is used, these exceptions are not handled correctly, resulting in the client waiting for a response that will never arrive, until the timeout time of 15 minutes has elapsed.
+When automation scripts are opened, it can occur that Cube sends a message to the server that is not supported, resulting in deserialization exceptions in SLNet. If gRPC is used, these exceptions are not handled correctly, resulting in the client waiting for a response that will never arrive, until the timeout time of 15 minutes has elapsed.
 
 ## Workaround
 

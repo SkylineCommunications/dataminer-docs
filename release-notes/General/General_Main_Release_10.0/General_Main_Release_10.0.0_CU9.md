@@ -83,7 +83,7 @@ When you are uploading a protocol in the *Protocols & Templates* app, a message
 
 #### SLAutomation will now automatically compile new libraries at startup \[ID 28218\]
 
-When, on startup, SLAutomation detects any new Automation scripts that contain libraries that need to be compiled, from now on, it will automatically compile them.
+When, on startup, SLAutomation detects any new automation scripts that contain libraries that need to be compiled, from now on, it will automatically compile them.
 
 #### SRM: Additional logging added to SLDBConnection.txt when retrieving service definitions from the servicedeftrace table \[ID 28245\]
 

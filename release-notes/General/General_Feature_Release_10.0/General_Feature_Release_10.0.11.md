@@ -479,9 +479,9 @@ When you downgraded a DataMiner Agent that came with the Cube launcher tool (i.e
 
 ### Fixes
 
-#### Problem with user permissions for Automation scripts \[ID 26401\]\[ID 26957\]
+#### Problem with user permissions for automation scripts \[ID 26401\]\[ID 26957\]
 
-Up to now the permissions to add, edit, delete and execute Automation scripts were only enforced in the client, which could make it possible for a user to modify the Automation scripts on a DMA despite not having the required permissions for this.
+Up to now the permissions to add, edit, delete and execute automation scripts were only enforced in the client, which could make it possible for a user to modify the automation scripts on a DMA despite not having the required permissions for this.
 
 Now the system will enforce the permissions as follows:
 
@@ -649,7 +649,7 @@ If cells of a table row were displayed in a Children shape in Visual Overview, i
 
 #### DataMiner Cube: Custom icon visualization not working for list view components \[ID 27173\]
 
-In list view components, for example in the Bookings app, in the Services app or in ListView shapes in Visual Overview, it was no longer possible to visualize the content of a column as a custom icon. This is now again possible for booking, service and element columns as well as for booking, service and element property columns. Note that this functionality relies on Automation scripts to provide the icon library and column value/icon mapping.
+In list view components, for example in the Bookings app, in the Services app or in ListView shapes in Visual Overview, it was no longer possible to visualize the content of a column as a custom icon. This is now again possible for booking, service and element columns as well as for booking, service and element property columns. Note that this functionality relies on automation scripts to provide the icon library and column value/icon mapping.
 
 #### DataMiner Cube - Scheduler app: Problem with drag-and-drop in timeline tab \[ID 27174\]
 

@@ -68,7 +68,7 @@ Virtual functions are now displayed in a separate *Virtual Functions* section in
 
 Due to a number of enhancements, overall performance has increased when connecting to a DataMiner Agent with a large amount of alarms.
 
-#### Interactive Automation scripts: No longer possible to clear the value of a selection box control \[ID 27845\]
+#### Interactive automation scripts: No longer possible to clear the value of a selection box control \[ID 27845\]
 
 Up to now, in an interactive Automation script, it was possible to clear the value of a selection box control by clicking an X button. From now on, this is no longer possible.
 
@@ -76,7 +76,7 @@ Up to now, in an interactive Automation script, it was possible to clear the val
 
 Due to a number of enhancements, overall performance has increased when logging in and logging out, especially on large systems.
 
-#### Interactive Automation scripts: Multiline text boxes will no longer expand when selected \[ID 27858\]
+#### Interactive automation scripts: Multiline text boxes will no longer expand when selected \[ID 27858\]
 
 Up to now, a multiline text box (i.e. a UIBlock of type TextBox with IsMultiline set to true) would by default have a height of 1 line and would expand when it was selected. From now on, its initial height will be fixed. It will no longer expand when selected.
 
@@ -206,7 +206,7 @@ When a DataMiner Agent with a Cassandra database had experienced two days of hig
 
 A number of enhancements have now been made to the way in which the alarm history is retrieved during a DataMiner startup.
 
-#### Interactive Automation scripts: Problem when a text box had its wantOnChange setting set to true and its value set to an empty string \[ID 27666\]
+#### Interactive automation scripts: Problem when a text box had its wantOnChange setting set to true and its value set to an empty string \[ID 27666\]
 
 When a text box in an interactive Automation script had its wantOnChange setting set to true and its value set to an empty string, in some cases, an exception could be thrown.
 
@@ -247,7 +247,7 @@ On a system using automatic incident tracking on which DataMiner Infrastructure 
 
 When a VirtualFunctionResource was unbound, in some cases, it would still be processing parameter sets from its bound element. This would cause the parameters of the unbound element to no longer be in an “uninitialized” state. Instead, they would incorrectly stay set to the last received value from the bound element.
 
-#### Interactive Automation scripts: MinWidth, MaxWidth, MinHeight and MaxHeight properties of UIBlock components would not be parsed correctly \[ID 27736\]
+#### Interactive automation scripts: MinWidth, MaxWidth, MinHeight and MaxHeight properties of UIBlock components would not be parsed correctly \[ID 27736\]
 
 In some cases, the MinWidth, MaxWidth, MinHeight and MaxHeight properties of UIBlock components would not be parsed correctly.
 

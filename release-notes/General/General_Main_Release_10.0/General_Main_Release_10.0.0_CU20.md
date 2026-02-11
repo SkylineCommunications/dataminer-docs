@@ -91,9 +91,9 @@ When creating the user-defined types failed during a migration from MySQL to Cas
 The migration has failed.DBGatewayException(SLCassandraClassLibrary.DBGateway.Cassandra.StorageManagers.SingleNode.CassandraConnection,,UNKNOW SLDataGateway.Types.DBGatewayException: CassandraConnection CreateCustomType - no host available All hosts tried for query failed.
 ```
 
-#### Problem with SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved \[ID 31030\]
+#### Problem with SLAutomation when trying to run automation scripts on elements for which no protocol information could be retrieved \[ID 31030\]
 
-In some cases, an error could occur in SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved.
+In some cases, an error could occur in SLAutomation when trying to run automation scripts on elements for which no protocol information could be retrieved.
 
 #### Problem during DataMiner startup when retrieving alarms for multiple elements from an Elasticsearch database \[ID 31039\]
 

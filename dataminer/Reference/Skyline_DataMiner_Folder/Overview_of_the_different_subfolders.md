@@ -21,7 +21,7 @@ Except when otherwise mentioned in the relevant documentation, manual changes sh
 | ClusterNodes | Cluster configuration for Agents connected to dataminer.services. | Partially (only *Configuration* subfolder) |
 | Configurations | Contains information about the endpoints in the cluster, required to be able to [migrate to BrokerGateway](xref:BrokerGateway_Migration). | No |
 | Connectivity | *Connectivity.xml* files. See [About DCF](xref:About_the_DataMiner_Connectivity_Framework). | Yes |
-| Correlation | Correlation rules. See [About Correlation](xref:About_DMS_Correlation). | Yes |
+| Correlation | correlation rules. See [About Correlation](xref:About_DMS_Correlation). | Yes |
 | Dashboards | Configuration for the [Dashboards app](xref:newR_D). | Yes |
 | Database | Database-related configuration files. See [Database](xref:Database). | Partially |
 | DeployerTokens | Used for the *APIDeployment* soft-launch feature, which is obsolete as of DataMiner 10.4.0. | Yes |
@@ -45,7 +45,7 @@ Except when otherwise mentioned in the relevant documentation, manual changes sh
 | Redundancy | Redundancy group configuration. | No |
 | RemoteServices | Services hosted on other DMAs in the cluster. Each of the subfolders in this folder has the DMA ID of the DMA hosting the synchronized services. | Yes |
 | ResourceManager | Resource Manager configuration. | No |
-| Scripts | Automation scripts. | Yes |
+| Scripts | automation scripts. | Yes |
 | Security | Within this folder, only the *Credentials* subfolder, which contains the credentials library configuration, and the *Ownership* subfolder are synchronized. | Partially |
 | ServiceManager | Service Manager configuration. | No |
 | Services | Services hosted on the DMA. | See note below. |

@@ -11,7 +11,7 @@ Changing the parameter description is considered a major change.
 Changing the parameter description can impact the following (when used):
 
 - Filters
-- Automation scripts
+- automation scripts
 - Visio files
 - Reports
 - Dashboards

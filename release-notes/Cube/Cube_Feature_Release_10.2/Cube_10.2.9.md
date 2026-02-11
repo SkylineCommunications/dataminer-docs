@@ -37,7 +37,7 @@ These new password boxes can be found in the following locations:
 - System Center > Users/groups > Add new user... (peek only)
 - System Center > System Settings > Credentials Library
 - System Center > System Settings > LDAP
-- Interactive Automation scripts (`UIBlock` of type "PasswordBox")
+- Interactive automation scripts (`UIBlock` of type "PasswordBox")
 
 > [!NOTE]
 >
@@ -294,7 +294,7 @@ While making a spectrum recording, in some cases, the recording icon would no lo
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-When, in Visual Overview, you clicked a shape that executed two Automation scripts, the cursor would incorrectly still be displayed as a wait cursor after the two scripts had already finished.
+When, in Visual Overview, you clicked a shape that executed two automation scripts, the cursor would incorrectly still be displayed as a wait cursor after the two scripts had already finished.
 
 #### Spectrum analysis: Issues when playing a spectrum recording [ID 33918]
 

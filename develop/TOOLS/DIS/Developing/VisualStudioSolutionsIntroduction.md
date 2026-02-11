@@ -14,7 +14,7 @@ DIS also supports developing **connectors** as XML files, but we strongly recomm
 
 DIS supports [converting connector XML files](xref:Developing_connectors_as_Visual_Studio_solutions) into Visual Studio solutions.
 
-Similarly, DIS also supports developing **Automation scripts** as XML files, but we strongly recommend using the **project-based approach** because of its numerous advantages:
+Similarly, DIS also supports developing **automation scripts** as XML files, but we strongly recommend using the **project-based approach** because of its numerous advantages:
 
 - Making use of NuGet packages
 - Adding unit test projects to your solution

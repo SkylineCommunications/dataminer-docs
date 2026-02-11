@@ -188,7 +188,7 @@ When, in a service chain within a service context, an element shape was linked t
 
 When a time range feed was configured to show quick pick buttons, those buttons would not be displayed in the correct order. From now on, quick pick buttons will be displayed in chronological order.
 
-#### Web apps - Interactive Automation scripts: All other tree view components in a dialog box would incorrectly collapse when you selected an item in a tree view component [ID 34773]
+#### Web apps - Interactive automation scripts: All other tree view components in a dialog box would incorrectly collapse when you selected an item in a tree view component [ID 34773]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 

@@ -14,7 +14,7 @@ uid: Web_apps_Feature_Release_10.4.7
 
 ## Highlights
 
-- [Low-Code Apps - Interactive Automation scripts: UI can now be hidden [ID 39451] [ID 39638]](#low-code-apps---interactive-automation-scripts-ui-can-now-be-hidden-id-39451-id-39638)
+- [Low-Code Apps - Interactive automation scripts: UI can now be hidden [ID 39451] [ID 39638]](#low-code-apps---interactive-automation-scripts-ui-can-now-be-hidden-id-39451-id-39638)
 
 ## Breaking changes
 
@@ -37,7 +37,7 @@ Note that, by default, colors will not be consistent across different sessions. 
 
 ## New features
 
-#### Interactive Automation scripts: UIBlockDefinition has new DebugTag property [ID 39365]
+#### Interactive automation scripts: UIBlockDefinition has new DebugTag property [ID 39365]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
@@ -51,9 +51,9 @@ cy.get(`[data-cy="TextComponent"]`)
 ```
 
 > [!NOTE]
-> The `DebugTag` can only be used in interactive Automation scripts launched from web apps, not in interactive Automation scripts launched from DataMiner Cube.
+> The `DebugTag` can only be used in interactive automation scripts launched from web apps, not in interactive automation scripts launched from DataMiner Cube.
 
-#### Low-Code Apps - Interactive Automation scripts: UI can now be hidden [ID 39451] [ID 39638]
+#### Low-Code Apps - Interactive automation scripts: UI can now be hidden [ID 39451] [ID 39638]
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 

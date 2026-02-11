@@ -605,7 +605,7 @@ A LogEntry object contains the following fields:
 
 #### LogHelper API \[ID 26434\]
 
-The new LogHelper API, which combines the SLLoggerUtil API and the LogEntry repository API, can be used in Automation scripts and in QActions to manage log entries stored in Indexing Engine:
+The new LogHelper API, which combines the SLLoggerUtil API and the LogEntry repository API, can be used in automation scripts and in QActions to manage log entries stored in Indexing Engine:
 
 - ILogHelper#Log can be used to add new log entries to the database.
 
@@ -653,7 +653,7 @@ It returns a connection that impersonates the user who triggered the QAction bas
 
 ##### Script and QAction compilation
 
-Automation scripts and QActions will now by default be compiled with a reference to SLLoggerUtil.dll (C:\\Skyline DataMiner\\Files\\SLLoggerUtil.dll).
+automation scripts and QActions will now by default be compiled with a reference to SLLoggerUtil.dll (C:\\Skyline DataMiner\\Files\\SLLoggerUtil.dll).
 
 #### Proactive cap detection \[ID 26637\]\[ID 27132\]\[ID 27241\]\[ID 27355\]\[ID 27393\]
 

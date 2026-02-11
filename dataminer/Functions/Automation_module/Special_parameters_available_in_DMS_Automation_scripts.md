@@ -2,11 +2,11 @@
 uid: Special_parameters_available_in_DMS_Automation_scripts
 ---
 
-# Special parameters available in Automation scripts
+# Special parameters available in automation scripts
 
 In an Automation script, a number of special parameters allow you to access information about users, redundancy states, and correlation information.
 
-The following table lists the special parameters available in Automation scripts.
+The following table lists the special parameters available in automation scripts.
 
 | Name | ID | Description |
 |------|----|-------------|

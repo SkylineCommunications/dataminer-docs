@@ -698,24 +698,24 @@ This JSON object has to have the following structure:
 
 ### DMS Automation
 
-#### Interactive Automation scripts will now take into account timeouts set in the engine.Timeout property of the executed script \[ID 28405\]
+#### Interactive automation scripts will now take into account timeouts set in the engine.Timeout property of the executed script \[ID 28405\]
 
-From now on, interactive Automation scripts will also take into account any timeout set in the engine.Timeout property of the executed script.
+From now on, interactive automation scripts will also take into account any timeout set in the engine.Timeout property of the executed script.
 
-#### Interactive Automation scripts: Lazy loading of tree view items \[ID 28528\]\[ID 29295\]
+#### Interactive automation scripts: Lazy loading of tree view items \[ID 28528\]\[ID 29295\]
 
-It is now possible to configure that a tree view item in interactive Automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
+It is now possible to configure that a tree view item in interactive automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
 
 To activate this so-called lazy loading for a particular tree view item, set its SupportsLazy-Loading property to true. An arrow will appear in front of the tree view item (even if it does not have any child items).
 
 > [!NOTE]
 > You can use the GetExpanded method of the UIResults class to retrieve the keys of all expanded tree view items that have the SupportsLazyLoading property set to true.
 
-#### Interactive Automation scripts: Enhanced file selector \[ID 28628\]
+#### Interactive automation scripts: Enhanced file selector \[ID 28628\]
 
-A number of enhancements have been made to the file selector used in interactive Automation scripts.
+A number of enhancements have been made to the file selector used in interactive automation scripts.
 
-#### Interactive Automation scripts: New 'TreeViewItemCheckingBehavior' property of TreeViewItem \[ID 29993\]\[ID 30603\]
+#### Interactive automation scripts: New 'TreeViewItemCheckingBehavior' property of TreeViewItem \[ID 29993\]\[ID 30603\]
 
 You can now configure what happens when you select a tree view item in an interactive Automation script, using the new *TreeViewItemCheckingBehavior* enum property of the *TreeViewItem* object.
 
@@ -796,7 +796,7 @@ public class Script
 > - At present, bulk operations are not yet supported.
 > - Both PaProcess and PaToken now have a new LastModifiedAt property, filled in by SLNet. It will be used to compare cached versions with versions retrieved from the database.
 
-#### Interactive Automation scripts: File selector allowing multiple selections + file selector enhancements \[ID 30196\]
+#### Interactive automation scripts: File selector allowing multiple selections + file selector enhancements \[ID 30196\]
 
 In an interactive Automation script that is used in the DataMiner web apps, you can now configure a file selector component that allows the user to upload multiple files. To do so, set the property *AllowMultipleFiles* to true.
 
@@ -820,7 +820,7 @@ With this configuration, users will be able to add files one by one, but they wi
 
 There have also been a number of enhancements to the file selector control in general, including improved layout and a more intuitive UI. These affect all the web apps, including the Dashboards app, the Jobs app, etc.
 
-#### Interactive Automation scripts: Input components now have a 'WantsOnFocusLost' property & other input component enhancements \[ID 30638\]
+#### Interactive automation scripts: Input components now have a 'WantsOnFocusLost' property & other input component enhancements \[ID 30638\]
 
 In an interactive Automation script that is used in the DataMiner web apps, the following components now have a *WantsOnFocusLost* property. If you set this property to true, then an *OnChange* event will be triggered when the component loses focus.
 
@@ -840,9 +840,9 @@ Other enhancements:
 - In a Checkbox, a CheckboxList or a RadioButtonList component, users can now select or clear options using the spacebar.
 - In a CheckboxList or a RadioButtonList component, users can now go from one checkbox or radio button to another using the TAB keys.
 
-#### Automation scripts launched from web apps will now take into account the MaxFileSizeInBytes and AllowedFileNameExtensions properties of UIBlockDefinitions of type FileSelector \[ID 31212\]
+#### automation scripts launched from web apps will now take into account the MaxFileSizeInBytes and AllowedFileNameExtensions properties of UIBlockDefinitions of type FileSelector \[ID 31212\]
 
-In Automation scripts launched from web apps, the MaxFileSizeInBytes and AllowedFileName-Extensions properties of UIBlockDefinitions of type FileSelector will now also be taken into account.
+In automation scripts launched from web apps, the MaxFileSizeInBytes and AllowedFileName-Extensions properties of UIBlockDefinitions of type FileSelector will now also be taken into account.
 
 An error will now be thrown when you try to add a file that is larger than the allowed file size or does not have an allowed file name extension. Also, the “Choose file” popup window will now only list files with an allowed extension and dragging an item other than a file or a folder onto the script’s drop zone will no longer be possible.
 

@@ -79,7 +79,7 @@ If the *Automatically update solution files* option is enabled, DIS will automat
 
 `<PlatformTarget>x86</PlatformTarget>`
 
-However, when you create e.g. a NuGet package that could be used in e.g. connectors, Automation scripts and GQI queries, you do not want the *Directory.Build.props* file to have its platform target fixed on x86. As a result, the `<PlatformTarget>x86</PlatformTarget>` entry has now been removed.
+However, when you create e.g. a NuGet package that could be used in e.g. connectors, automation scripts and GQI queries, you do not want the *Directory.Build.props* file to have its platform target fixed on x86. As a result, the `<PlatformTarget>x86</PlatformTarget>` entry has now been removed.
 
 > [!NOTE]
 > Developers should now set this entry in the csproj file when needed. For example, when you create unit tests for a regular Automation script, it might be required to set the target platform to x86. Otherwise, a `BadImageFormatException` could be thrown when executing the test.
