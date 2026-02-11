@@ -199,9 +199,9 @@ From now on, the SLNet cache will ignore any NULL data it receives.
 
 When, in DataMiner Cube, you opened the Bookings app while being connected to a system with a MySQL database, in some cases, an error could be thrown.
 
-#### Problem with SLAutomation when an interactive Automation script was communicating with a client app \[ID 28862\]
+#### Problem with SLAutomation when an interactive automation script was communicating with a client app \[ID 28862\]
 
-When an interactive Automation script was communicating with the client app, in some cases, an error could occur in SLAutomation.
+When an interactive automation script was communicating with the client app, in some cases, an error could occur in SLAutomation.
 
 #### Service & Resource Management: Problem when saving or updating a service profile definition after defining virtual function IDs \[ID 28868\]
 
@@ -209,7 +209,7 @@ Due to an incorrect ID check, in some cases, it would not be possible to create 
 
 #### DataMiner Cube - Interactive automation scripts: Multiple 'Continue' messages would be sent to the DataMiner Agent \[ID 28872\]
 
-When an interactive Automation script was running, DataMiner Cube would incorrectly send multiple identical “Continue” messages to the DataMiner Agent. In some cases, this would cause an error in SLAutomation.
+When an interactive automation script was running, DataMiner Cube would incorrectly send multiple identical “Continue” messages to the DataMiner Agent. In some cases, this would cause an error in SLAutomation.
 
 #### DataMiner Cube - Visual Overview: Problem when pressing Ctrl+Tab while an item inside a Visio page had the focus \[ID 28876\]
 

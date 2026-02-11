@@ -83,7 +83,7 @@ uid: WS_Methods_v1_overview
 | [DeleteView](xref:DeleteView) | Deletes the specified view. |
 | [DeleteVisioFile](xref:DeleteVisioFile) | Deletes a particular Visio file that can be assigned to views and services. |
 | [DeleteVisioFileFromProtocol](xref:DeleteVisioFileFromProtocol) | Deletes a particular Visio file that can be assigned to a protocol. |
-| [DetachAutomationScript](xref:DetachAutomationScript) | Aborts a running Automation script. |
+| [DetachAutomationScript](xref:DetachAutomationScript) | Aborts a running automation script. |
 | [DetachServiceFromServiceTemplate](xref:DetachServiceFromServiceTemplate) | Detaches the specified service from its service template. |
 | [DuplicateJobsDomain](xref:DuplicateJobsDomain) | Duplicates a jobs domain. |
 | [DuplicateJobsSectionDefinition](xref:DuplicateJobsSectionDefinition) | Duplicates a section definition from one jobs domain to another. |
@@ -95,7 +95,7 @@ uid: WS_Methods_v1_overview
 | [EditTicketType](xref:EditTicketType) | Obsolete. Edits a ticket type. |
 | [EditView](xref:EditView) | Edits the specified view. |
 | [ExecuteAutomationScript](xref:ExecuteAutomationScript) | Executes an automation script. |
-| [ExecuteAutomationScriptWithOutput](xref:ExecuteAutomationScriptWithOutput) | Executes an interactive Automation script and retrieves its output. |
+| [ExecuteAutomationScriptWithOutput](xref:ExecuteAutomationScriptWithOutput) | Executes an interactive automation script and retrieves its output. |
 | [ExecuteGenericAsyncRequest](xref:ExecuteGenericAsyncRequest) | Used in order to have a method executed asynchronously. |
 | [ExecuteVisioShapeAction](xref:ExecuteVisioShapeAction) | Execute an action on a Visio shape. |
 | [GenerateTicketBasedOnAlarm](xref:GenerateTicketBasedOnAlarm) | Obsolete. Generates a ticket based on alarm properties. |

@@ -717,7 +717,7 @@ A number of enhancements have been made to the file selector used in interactive
 
 #### Interactive automation scripts: New 'TreeViewItemCheckingBehavior' property of TreeViewItem \[ID 29993\]\[ID 30603\]
 
-You can now configure what happens when you select a tree view item in an interactive Automation script, using the new *TreeViewItemCheckingBehavior* enum property of the *TreeViewItem* object.
+You can now configure what happens when you select a tree view item in an interactive automation script, using the new *TreeViewItemCheckingBehavior* enum property of the *TreeViewItem* object.
 
 This property can have the following values:
 
@@ -798,7 +798,7 @@ public class Script
 
 #### Interactive automation scripts: File selector allowing multiple selections + file selector enhancements \[ID 30196\]
 
-In an interactive Automation script that is used in the DataMiner web apps, you can now configure a file selector component that allows the user to upload multiple files. To do so, set the property *AllowMultipleFiles* to true.
+In an interactive automation script that is used in the DataMiner web apps, you can now configure a file selector component that allows the user to upload multiple files. To do so, set the property *AllowMultipleFiles* to true.
 
 For example:
 
@@ -822,7 +822,7 @@ There have also been a number of enhancements to the file selector control in ge
 
 #### Interactive automation scripts: Input components now have a 'WantsOnFocusLost' property & other input component enhancements \[ID 30638\]
 
-In an interactive Automation script that is used in the DataMiner web apps, the following components now have a *WantsOnFocusLost* property. If you set this property to true, then an *OnChange* event will be triggered when the component loses focus.
+In an interactive automation script that is used in the DataMiner web apps, the following components now have a *WantsOnFocusLost* property. If you set this property to true, then an *OnChange* event will be triggered when the component loses focus.
 
 - Calendar
 - Checkbox

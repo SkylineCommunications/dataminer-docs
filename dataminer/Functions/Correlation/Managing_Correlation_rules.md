@@ -25,7 +25,7 @@ Managing correlation rules, e.g. adding and deleting rules or organizing them in
 
 - [Renaming a folder](xref:Renaming_a_folder)
 
-- [Adding a new Correlation rule](xref:Adding_a_new_Correlation_rule)
+- [Adding a new correlation rule](xref:Adding_a_new_Correlation_rule)
 
 - [Testing a correlation rule](xref:Testing_a_Correlation_rule)
 

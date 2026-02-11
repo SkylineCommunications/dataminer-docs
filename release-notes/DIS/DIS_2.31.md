@@ -57,7 +57,7 @@ Similar to protocols, it is now also possible to develop automation scripts as V
 
 ##### Creating an Automation Script solution
 
-To create a new Automation script solution containing one dummy Automation script, do the following:
+To create a new automation script solution containing one dummy Automation script, do the following:
 
 1. Select *File \> New \> DataMiner Automation Script Solution...*
 
@@ -66,7 +66,7 @@ To create a new Automation script solution containing one dummy Automation scrip
 1. Select the target folder.
 
    > [!NOTE]
-   > The default protocol solution folder and the default Automation script folder can both be specified in *DIS Settings \> Solutions*.
+   > The default protocol solution folder and the default automation script folder can both be specified in *DIS Settings \> Solutions*.
 
 1. Select *Create initial Automation script* if you want to solution to contain a basic script with one Exe block.
 

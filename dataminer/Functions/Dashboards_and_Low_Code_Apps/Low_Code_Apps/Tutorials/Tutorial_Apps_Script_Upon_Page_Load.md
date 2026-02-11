@@ -21,7 +21,7 @@ Expected duration: 10 minutes
 
 1. [Create a new folder](xref:Managing_Automation_scripts#adding-a-new-automation-script-folder) with the name "Utility".
 
-1. Within this folder, [add a new Automation script](xref:Managing_Automation_scripts#adding-a-new-automation-script) with the name "Generate Information Event".
+1. Within this folder, [add a new automation script](xref:Managing_Automation_scripts#adding-a-new-automation-script) with the name "Generate Information Event".
 
 1. Add a script parameter named "Message".
 

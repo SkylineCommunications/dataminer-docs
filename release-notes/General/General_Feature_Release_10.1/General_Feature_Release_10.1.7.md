@@ -465,7 +465,7 @@ When you opened a trend group with several graphs, in some rare cases, color ico
 
 #### Interactive automation scripts: Problem when entering double-digit numbers in input controls \[ID 29736\]
 
-In some cases, due to a problem with the WantsOnChange functionality, it would not be possible to enter a double-digit number (e.g. a number of minutes) in an input control. The interactive Automation script would incorrectly already continue after you entered the first digit.
+In some cases, due to a problem with the WantsOnChange functionality, it would not be possible to enter a double-digit number (e.g. a number of minutes) in an input control. The interactive automation script would incorrectly already continue after you entered the first digit.
 
 #### Manually clearing a clearable alarm on a single-value parameter would incorrectly set the alarm state of the parameter to 'undefined' instead of 'normal' \[ID 29745\]
 
@@ -499,7 +499,7 @@ When you pressed the Back button while logging on, in some cases, an error could
 
 #### Problem when an interactive Automaton script was detached on closure \[ID 29815\]
 
-In some cases, when an interactive Automation script detached on closure, an exception could be thrown in SLAutomation. From now on, interactive automation scripts will only detach when they are aborted by a user either closing the pop-up window or clicking the *Abort* button.
+In some cases, when an interactive automation script detached on closure, an exception could be thrown in SLAutomation. From now on, interactive automation scripts will only detach when they are aborted by a user either closing the pop-up window or clicking the *Abort* button.
 
 #### Monitoring app: Service child pop-up pages without parent page could not be opened \[ID 29816\]
 

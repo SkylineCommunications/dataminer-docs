@@ -7,13 +7,13 @@ uid: General_configuration_of_Correlation_rules
 In the *Correlation* module in Cube, select a rule in the tree view pane on the left in order to configure it in the details pane on the right.
 
 > [!NOTE]
-> - For more information on how to add a correlation rule, see [Adding a new Correlation rule](xref:Adding_a_new_Correlation_rule).
+> - For more information on how to add a correlation rule, see [Adding a new correlation rule](xref:Adding_a_new_Correlation_rule).
 > - As soon as there are unsaved changes in a rule, “*\[modified\]*” is added to the rule name in the tree view pane, as a reminder in case you navigate to a different rule. However, note that if you close the *Correlation* module, such changes will not be saved. To make sure changes to a rule are saved, click the *Apply* button.
 
 - In the top-left corner of the pane, select *Enable this rule* to enable a correlation rule. By default, new rules are disabled.
 
   > [!NOTE]
-  > Before you can enable a correlation rule, certain minimum requirements must be met. For more information, see [Adding a new Correlation rule](xref:Adding_a_new_Correlation_rule).
+  > Before you can enable a correlation rule, certain minimum requirements must be met. For more information, see [Adding a new correlation rule](xref:Adding_a_new_Correlation_rule).
 
 - In the *General* section, next to *Name*, enter a new name for the correlation rule. By default, new rules are simply called “Correlation rule”.
 

@@ -446,11 +446,11 @@ The first icon will only be available when there are private dashboards, the sec
 
 When a Process Automation definition is added to the Service definition component, the component will now automatically draw the necessary arrows to indicate the connections between the different blocks/nodes in the diagram.
 
-#### Dashboards app: Using the script output of an interactive Automation script as a feed [ID 32977]
+#### Dashboards app: Using the script output of an interactive automation script as a feed [ID 32977]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
-When building a GQI query, you can now also use the script output of an interactive Automation script as a feed.
+When building a GQI query, you can now also use the script output of an interactive automation script as a feed.
 
 #### Dashboards app - Service definition component: Function shapes will now reflect the function type [ID 32995]
 
@@ -657,7 +657,7 @@ When an EPM identifier from an EPM feed is fed to a parameter feed, it will now 
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
-A number of minor enhancements have been made to the interactive Automation script components with regard to font styles, button styles, text alignment and button and checkbox height.
+A number of minor enhancements have been made to the interactive automation script components with regard to font styles, button styles, text alignment and button and checkbox height.
 
 #### Dashboards app / Low-Code Apps: GQI queries now support sort operators [ID 34414] [ID 34528] [ID 34479]
 

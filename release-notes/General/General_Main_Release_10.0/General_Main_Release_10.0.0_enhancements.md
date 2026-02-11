@@ -382,7 +382,7 @@ The property *Disabled* has been added to the *ProfileParameterEntry* class. I
 
 #### Scheduler/Automation: Possible to include trending for chain field in CPE report email action \[ID 21896\]
 
-When you configure a scheduled task or Automation script action to email a CPE report, you can now select to include trending for a chain field.
+When you configure a scheduled task or automation script action to email a CPE report, you can now select to include trending for a chain field.
 
 #### Service & Resource Management: Contributing DVE associated with a contributing booking now has two additional parameters \[ID 21967\]
 

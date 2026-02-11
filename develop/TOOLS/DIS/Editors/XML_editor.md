@@ -11,7 +11,7 @@ If you open a protocol XML file or an automation script XML file in Microsoft Vi
 > [!NOTE]
 >
 > - To create a new protocol XML file, go to *File > New > File > General > DataMiner*, select *DataMiner Protocol Template*, and click *Open*.
-> - To create a new Automation script XML file, select *File > New > File > General > DataMiner*, select *DataMiner Automation Script Template*, and click *Open*.
+> - To create a new automation script XML file, select *File > New > File > General > DataMiner*, select *DataMiner Automation Script Template*, and click *Open*.
 > - To create a new function XML file, select *File > New > File > General > DataMiner*, select *DataMiner Function Template*, click *Open*, specify the function file version, select the associated protocol XML file, and click *OK*.
 
 ## File tab header
@@ -96,7 +96,7 @@ If you click *Publish*, the protocol or the automation script you are currently 
 
 To publish a protocol or an automation script to another, non-default DMA, click the dropdown button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
 
-When you publish a protocol or an automation script, DIS will create either a *.dmprotocol* package (in case of a protocol) or a *.dmapp* package (in case of an automation script) in the background, install that package on the DataMiner Agent, and then automatically remove it again. This way, there is no need to manually copy all required DLL files on the DataMiner Agent in question (e.g. DLL files of NuGet packages that are used in the protocol or Automation script).
+When you publish a protocol or an automation script, DIS will create either a *.dmprotocol* package (in case of a protocol) or a *.dmapp* package (in case of an automation script) in the background, install that package on the DataMiner Agent, and then automatically remove it again. This way, there is no need to manually copy all required DLL files on the DataMiner Agent in question (e.g. DLL files of NuGet packages that are used in the protocol or automation script).
 
 > [!TIP]
 > See also: [DMA](xref:DIS_settings#dma)
@@ -161,7 +161,7 @@ When you right-click inside the file tab, a shortcut menu appears. Apart from th
 | Generate Write Parameters | Create a Write parameter for a selected Read parameter.<br> See [Generating Write parameters for Read parameters](#generating-write-parameters-for-read-parameters) |
 | Repeat Selected Text | Copy the text you selected a number of times.<br> See [Repeating selected text](#repeating-selected-text) |
 | Outlining \> Toggle Outlining at Level \[X\] | Collapse all protocol tags at a certain level of depth.<br> Examples:<br> -  If you click *Toggle Outlining at Level 1*, all level-1 tags (e.g. the \<Protocol> tag) will be collapsed.<br> -  If you click *Toggle Outlining at Level 2*, all level-2 tags (e.g. the \<Params> tag, the \<Commands> tag, etc.) will be collapsed. |
-| Snippet \> Insert Snippet \> DIS | Insert a protocol or Automation script snippet. |
+| Snippet \> Insert Snippet \> DIS | Insert a protocol or automation script snippet. |
 
 ### Generating parameters from data stored in external files
 
@@ -378,7 +378,7 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 
 ### IntelliSense and instant XML validation
 
-If the root tag of the protocol XML file or the automation script XML file you are editing contains a reference to the protocol or automation namespace, and if the protocol and Automation script schema files are in the Microsoft Visual Studio Schema folder, then the protocol XML file or the automation script XML file you are editing will be validated against the protocol or Automation script schema while you type.
+If the root tag of the protocol XML file or the automation script XML file you are editing contains a reference to the protocol or automation namespace, and if the protocol and Automation script schema files are in the Microsoft Visual Studio Schema folder, then the protocol XML file or the automation script XML file you are editing will be validated against the protocol or automation script schema while you type.
 
 - When you type a "\<" sign between two existing tags, a selection box will appear listing all tags you are allowed to insert at that location. After you select one of the proposed tags, a list will be presented with all possible attributes for that specific tag.
 - When adding content to Commands, Responses, Pairs, Groups, Triggers, Timers, etc., an IntelliSense pop-up will appear, listing all existing items that can be added. In case of a group, the listed items will depend on the type of the group, e.g. actions are only added to the list when the type is "action" or "poll action".

@@ -32,7 +32,7 @@ If DataMiner Integration Studio is set to check for updates, an *Update…* butt
 
 #### XML editor: ‘Copy Script to Clipboard’ command \[ID 20150\]
 
-When you are editing an automation script file, you can click the small Down arrow in front of the Script.Exe element to open a shortcut menu. In that menu, you will now find a *Copy Script to Clipboard* command, which will allow you to easily copy an entire Automation script to another file.
+When you are editing an automation script file, you can click the small Down arrow in front of the Script.Exe element to open a shortcut menu. In that menu, you will now find a *Copy Script to Clipboard* command, which will allow you to easily copy an entire automation script to another file.
 
 #### XML editor: No longer possible to publish a protocol with an incorrect Type tag, an empty Version tag or an empty Name tag \[ID 20182\]
 
@@ -208,9 +208,9 @@ When importing a MIB file, in some cases, MIB nodes would be incorrectly interpr
 
 When the display editor was opened, in some cases, page names with special characters (e.g. “&”) would be decoded incorrectly.
 
-#### Problem when creating a new protocol or Automation script file via File \> New \> File... \[ID 20297\]
+#### Problem when creating a new protocol or automation script file via File \> New \> File... \[ID 20297\]
 
-When you created a new protocol or Automation script file via *File \> New \> File...*, in some cases, the new file would incorrectly be saved without the “.xml” extension.
+When you created a new protocol or automation script file via *File \> New \> File...*, in some cases, the new file would incorrectly be saved without the “.xml” extension.
 
 #### IDE - DIS Tree View: Problem when removing redundant CDATA closing tags from a QAction \[ID 20358\]
 

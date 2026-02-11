@@ -12,7 +12,7 @@ uid: DIS_2.9
 
 DIS can now also be used to create and edit Automation script XML files.
 
-To create a new Automation script XML file, do the following:
+To create a new automation script XML file, do the following:
 
 1. Open the *File* menu, and select *New \> File ...*
 1. Select *DataMiner Automation Script Template*, and click *Open*.

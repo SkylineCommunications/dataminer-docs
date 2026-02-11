@@ -230,7 +230,7 @@ On the *Cube* page, the following settings are available:
 
 - **Do not show compatibility warnings for Visio drawings**: When you select this setting, no compatibility warnings will appear when you open a Visio file, for instance when you open a VDX file in a recent version of MS Visio.
 
-- **Do not confirm program executions from scripts**: Available from DataMiner 10.3.3/10.4.0 onwards. When you select this setting, no confirmation box will be displayed when an interactive Automation script tries to execute a program. <!-- RN 35418 -->
+- **Do not confirm program executions from scripts**: Available from DataMiner 10.3.3/10.4.0 onwards. When you select this setting, no confirmation box will be displayed when an interactive automation script tries to execute a program. <!-- RN 35418 -->
 
 - **Mouse word highlighting in Alarm Console**: This setting determines which key should be pressed in order to highlight words by moving the mouse over them, with the purpose of adding them to a filter.
 

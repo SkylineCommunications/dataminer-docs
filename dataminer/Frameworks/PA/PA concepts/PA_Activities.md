@@ -16,7 +16,7 @@ Process Automation supports the following types of activities:
 
 - **User tasks**: A user task is an activity that will wait for a user action before completing the task. This way, the token attached to that task can be completed and the next token can be generated. Typically, a user task app will be made available in the *Low-Code Apps* module so that the end user can access these user tasks and complete them. See [Creating user tasks](xref:PA_Creating_user_tasks).
 
-- **Resource tasks**: A resource task is a combination of a C# Automation script and a function resource. It includes resource management, which ensures that the same resource will not be used by different processes at the same time. See [Creating resource tasks](xref:PA_Creating_resource_tasks).
+- **Resource tasks**: A resource task is a combination of a C# automation script and a function resource. It includes resource management, which ensures that the same resource will not be used by different processes at the same time. See [Creating resource tasks](xref:PA_Creating_resource_tasks).
 
 > [!IMPORTANT]
 > In case resource management is not required, we **strongly recommend that you use script tasks instead of resource tasks**, as the overhead to create resource tasks is high.

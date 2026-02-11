@@ -126,7 +126,7 @@ From now on, the connection in question will also be forcefully killed.
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
-A number of minor enhancements have been made to the interactive Automation script components with regard to font styles, button styles, text alignment and button and checkbox height.
+A number of minor enhancements have been made to the interactive automation script components with regard to font styles, button styles, text alignment and button and checkbox height.
 
 #### Dashboards app / Low-Code Apps: GQI queries now support sort operators [ID 34414] [ID 34528] [ID 34479]
 
@@ -255,7 +255,7 @@ When you entered an invalid value in a numeric component, the *UIResults.GetStri
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
-When an interactive Automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
+When an interactive automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
 
 #### Dashboards app - Service definition component: Function type 'TimeStartEvent' would not be visualized correctly [34316]
 

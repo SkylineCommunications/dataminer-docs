@@ -57,9 +57,9 @@ This indicator will show the current status of the client's WebSocket connection
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-When an interactive Automation script was launched from a web app, up to now, the windows and popups of the script would always have the default background and foreground colors (i.e. white background and black foreground).
+When an interactive automation script was launched from a web app, up to now, the windows and popups of the script would always have the default background and foreground colors (i.e. white background and black foreground).
 
-From now on, when an interactive Automation script is launched in any of the following ways, the windows and popups of that script will inherit the foreground color and the default component background color of the page, panel or dashboard from which the script was launched:
+From now on, when an interactive automation script is launched in any of the following ways, the windows and popups of that script will inherit the foreground color and the default component background color of the page, panel or dashboard from which the script was launched:
 
 - When clicking a Button component in a low-code app.
 - When clicking a button in the page/panel header bar of a low-code app.
@@ -74,7 +74,7 @@ From now on, when an interactive Automation script is launched in any of the fol
 - When a page of a low-code app is loaded.
 
 > [!NOTE]
-> If an interactive Automation script is launched from a component that has a custom theme applied, the color settings of that custom theme will not be taken into account.
+> If an interactive automation script is launched from a component that has a custom theme applied, the color settings of that custom theme will not be taken into account.
 
 #### Web apps: Executing automation scripts will now only require you to have Execute permission [ID 38529]
 
@@ -171,7 +171,7 @@ When viewing a visual overview on a web app, in some cases, the visual overview 
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-When, in a dashboard or a low-code app, you launched an interactive Automation script with datetime components containing values in UTC format, in some cases, those date/time values in UTC would not correctly be converted to the client's local time.
+When, in a dashboard or a low-code app, you launched an interactive automation script with datetime components containing values in UTC format, in some cases, those date/time values in UTC would not correctly be converted to the client's local time.
 
 #### Dashboards app & Low-Code Apps: Problem when making a backup of all dashboards and low-code apps during a DataMiner upgrade [ID 38640]
 

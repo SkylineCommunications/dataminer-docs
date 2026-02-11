@@ -53,7 +53,7 @@ Regardless of the invocation method, it triggers and executes the same underlyin
 
 ![SetOnElement](~/develop/images/SetOnElement.png)
 
-Avoid the need for separate scripts. Instead of opting for the creation of two scripts (one for interactive execution and another for non-interactive execution), where the interactive Automation script triggers a separate script with decisions for non-interactive execution, opt for a single script.
+Avoid the need for separate scripts. Instead of opting for the creation of two scripts (one for interactive execution and another for non-interactive execution), where the interactive automation script triggers a separate script with decisions for non-interactive execution, opt for a single script.
 
 In this single-script approach, the code adapts its behavior based on the provided input parameters. This eliminates the need to maintain two separate scripts and the complexity of updating scripts for each other's executions, making the solution more manageable.
 

@@ -951,15 +951,15 @@ items:
         topicUid: Handling_Async_Code
     - name: How-tos
       items:
-      - name: Making your Automation scripts debug-ready
+      - name: Making your automation scripts debug-ready
         topicUid: How_to_make_your_automation_scripts_debug_ready
       - name: Getting started with the IAS Toolkit
         topicUid: Getting_Started_with_the_IAS_Toolkit
-      - name: Implementing interactive Automation scripts in regression tests (best practices)
+      - name: Implementing interactive automation scripts in regression tests (best practices)
         topicUid: BP_Implementing_IAS_in_Regression_Tests
       - name: Creating a Cypress test for an interactive automation script
         topicUid: Creating_a_cypress_test_for_an_interactive_automation_script
-      - name: Launching and attaching interactive Automation scripts
+      - name: Launching and attaching interactive automation scripts
         topicUid: Launching_and_attaching_interactive_Automation_scripts
       - name: Implementing the OnRequestScriptInfo entry point
         topicUid: Implementing_OnRequestScriptInfo_Entry_Point
@@ -7260,7 +7260,7 @@ items:
         items:
         - name: Automation scripts as a Visual Studio solution
           topicUid: Automation_scripts_as_a_Visual_Studio_solution
-        - name: Pipeline stages for Automation scripts
+        - name: Pipeline stages for automation scripts
           topicUid: Pipeline_stages_for_Automation_scripts
       - name: Visual overview development with CI/CD pipeline
         items:

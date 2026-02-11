@@ -444,7 +444,7 @@ To see the current hint paths per SLScripting process, do the following:
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-`UIBuilder` now has a new `SkipAbortConfirmation` property. When set to true, the confirmation window will not be displayed when the interactive Automation script is aborted. By default, this property will be set to false.
+`UIBuilder` now has a new `SkipAbortConfirmation` property. When set to true, the confirmation window will not be displayed when the interactive automation script is aborted. By default, this property will be set to false.
 
 Example:
 

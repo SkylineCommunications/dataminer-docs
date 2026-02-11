@@ -91,11 +91,11 @@ Additional changes:
 - When you select a web interface page, the URL defined on that page can now be edited in the *Layout* section.
 - Warning icons will now appear next to pages that are empty and popup windows in which other popup windows are defined.
 
-#### C# editor: Additional hyperlink in file tab header to return to QAction or Exe code block in protocol or Automation script \[ID 19776\]
+#### C# editor: Additional hyperlink in file tab header to return to QAction or Exe code block in protocol or automation script \[ID 19776\]
 
-Up to now, in the header of a file tab containing the C# code of a QAction or Exe code block, you could click a link to return to the file tab containing the associated protocol XML file or Automation script XML file at the location where the cursor was positioned when you last viewed the file.
+Up to now, in the header of a file tab containing the C# code of a QAction or Exe code block, you could click a link to return to the file tab containing the associated protocol XML file or automation script XML file at the location where the cursor was positioned when you last viewed the file.
 
-Now, an additional link will allow you to return to the associated protocol XML file or Automation script XML file at the location where the QAction or Exe code block is found.
+Now, an additional link will allow you to return to the associated protocol XML file or automation script XML file at the location where the QAction or Exe code block is found.
 
 #### DIS Tree: Element breadcrumbs & enhanced DIS.JumpToDisTree keyboard shortcut \[ID 19810\]
 

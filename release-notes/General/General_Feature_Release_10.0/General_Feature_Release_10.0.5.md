@@ -370,7 +370,7 @@ The following properties have been added to the UIBlockDefinition class:
 
 The ValidationState and ValidationText properties should be used in combination with the WantsOnChange property.
 
-If WantsOnChange is true, the interactive Automation script will have its Engine#ShowUI(...) method return each time the user input changes. This will also be indicated by the \_ONCHANGE key, which is returned in the UIResults.
+If WantsOnChange is true, the interactive automation script will have its Engine#ShowUI(...) method return each time the user input changes. This will also be indicated by the \_ONCHANGE key, which is returned in the UIResults.
 
 This functionality will allow you to offer clear feedback on user input.
 
@@ -654,7 +654,7 @@ Up to now, when the value of an element property was updated using the *SetPrope
 
 #### Mobile apps: Confirmation message when leaving page with interactive script or job configuration \[ID 25078\]
 
-When a user leaves a DataMiner mobile app page while in an interactive Automation script or while configuring jobs, a confirmation message will now be displayed. However, note that this is message is not displayed when the mobile apps are used on iOS.
+When a user leaves a DataMiner mobile app page while in an interactive automation script or while configuring jobs, a confirmation message will now be displayed. However, note that this is message is not displayed when the mobile apps are used on iOS.
 
 #### DataMiner Cube - Visual Overview: ListView component will not show a set of default columns when no columns are configured in its shape data \[ID 25098\]
 
@@ -741,7 +741,7 @@ After a DCF connection update, in some cases, the highlighting of a manually dra
 
 #### Dashboards app: Problem when loading dropdown boxes of interactive automation scripts \[ID 24888\]
 
-When a dialog box of an interactive Automation script showed multiple dropdown boxes next to each other, in some cases, some of those boxes would become unresponsive when data was being loaded into them.
+When a dialog box of an interactive automation script showed multiple dropdown boxes next to each other, in some cases, some of those boxes would become unresponsive when data was being loaded into them.
 
 #### DataMiner Cube - Visual Overview: Views selection boxes on Edit Shape pane were empty when editing a Visio file in Cube \[ID 24900\]
 

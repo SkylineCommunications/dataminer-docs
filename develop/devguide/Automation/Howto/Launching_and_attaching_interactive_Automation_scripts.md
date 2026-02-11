@@ -4,7 +4,7 @@ uid: Launching_and_attaching_interactive_Automation_scripts
 
 # Launching and attaching interactive automation scripts
 
-This guide explains how to reliably launch an interactive Automation script in different scenarios.
+This guide explains how to reliably launch an interactive automation script in different scenarios.
 
 ## Launching a script directly (from the Cube UI)
 

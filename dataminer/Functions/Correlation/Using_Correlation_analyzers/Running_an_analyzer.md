@@ -21,4 +21,4 @@ To run a Correlation analyzer:
 1. To view the proposed Correlation rule, right-click the result and select *Add to correlation*.
 
    > [!NOTE]
-   > The new Correlation rule is not automatically enabled and saved.
+   > The new correlation rule is not automatically enabled and saved.

@@ -8,7 +8,7 @@ uid: PA_Creating_resource_tasks
 > When resource management is not required, use script tasks instead of resource tasks if at all possible. Resource tasks are significantly more difficult to implement and maintain.
 
 > [!NOTE]
-> Resource tasks need to be designed in such a way that their execution does not exceed the default Automation script timeout time of 15 minutes.
+> Resource tasks need to be designed in such a way that their execution does not exceed the default automation script timeout time of 15 minutes.
 
 1. In the *Profiles* module, define the **input parameters** required for the resource task to execute.
 

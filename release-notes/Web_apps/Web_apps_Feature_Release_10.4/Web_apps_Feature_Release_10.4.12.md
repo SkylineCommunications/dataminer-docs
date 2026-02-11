@@ -23,7 +23,7 @@ uid: Web_apps_Feature_Release_10.4.12
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-DataMiner web applications now support the new `SkipAbortConfirmation` property that was added to `UIBuilder`. When this property is set to true, the confirmation window will not be displayed when the interactive Automation script is aborted. By default, this property will be set to false.
+DataMiner web applications now support the new `SkipAbortConfirmation` property that was added to `UIBuilder`. When this property is set to true, the confirmation window will not be displayed when the interactive automation script is aborted. By default, this property will be set to false.
 
 > [!TIP]
 > See also: [Interactive automation scripts: New option to skip the confirmation window when aborting [ID 40683]](xref:General_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40683)
@@ -347,7 +347,7 @@ When your mouse pointer was hovering over a timeline item that should only becom
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-When none of the components defined in an interactive Automation script had an identifier (DestVar) configured, interacting with the UI of the script would result in an exception being thrown.
+When none of the components defined in an interactive automation script had an identifier (DestVar) configured, interacting with the UI of the script would result in an exception being thrown.
 
 #### Dashboards/Low-Code Apps - Web component: URL changes would no longer be detected [ID 41179]
 

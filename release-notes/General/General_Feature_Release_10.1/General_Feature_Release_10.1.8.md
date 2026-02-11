@@ -286,7 +286,7 @@ public class Script
 
 #### Interactive automation scripts: File selector allowing multiple selections + file selector enhancements \[ID 30196\]
 
-In an interactive Automation script that is used in the DataMiner web apps, you can now configure a file selector component that allows the user to upload multiple files. To do so, set the property *AllowMultipleFiles* to true.
+In an interactive automation script that is used in the DataMiner web apps, you can now configure a file selector component that allows the user to upload multiple files. To do so, set the property *AllowMultipleFiles* to true.
 
 For example:
 

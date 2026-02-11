@@ -8,7 +8,7 @@ To create scheduler templates, which will show up in the EVENT list in Scheduler
 
 1. In DataMiner Cube, go to *Apps* > *Automation*.
 
-1. In the folder pane on the left, create a script folder called “Scheduler Templates” if no such folder exists yet. For more information, see [Adding a new Automation script folder](xref:Managing_Automation_scripts#adding-a-new-automation-script-folder).
+1. In the folder pane on the left, create a script folder called “Scheduler Templates” if no such folder exists yet. For more information, see [Adding a new automation script folder](xref:Managing_Automation_scripts#adding-a-new-automation-script-folder).
 
    Any scripts in this folder will be detected by DataMiner Scheduler as possible events.
 

@@ -482,7 +482,7 @@ When configuring a pivot table component, you can now find the following setting
 
 #### Interactive automation scripts: Tree view items now have an IsCollapsed property \[ID 27756\]
 
-When, in an interactive Automation script, you define a tree view control (i.e. a UIBlockDefinition of type TreeView), you can now use the TreeViewItem property *IsCollapsed* to indicate whether an item should be collapsed or expanded.
+When, in an interactive automation script, you define a tree view control (i.e. a UIBlockDefinition of type TreeView), you can now use the TreeViewItem property *IsCollapsed* to indicate whether an item should be collapsed or expanded.
 
 > [!NOTE]
 > This property will not be updated when you collapse or expand tree view items in the UI.

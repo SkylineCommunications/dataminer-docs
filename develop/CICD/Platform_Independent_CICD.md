@@ -99,7 +99,7 @@ The following libraries are the most useful:
   - [Skyline.DataMiner.CICD.Assemblers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Common#readme-body-tab)
   - [Skyline.DataMiner.CICD.Assemblers.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Protocol#readme-body-tab)
 
-  These libraries are meant to assist with converting a DIS Visual Studio solution of a connector or Automation script into its XML files and required assemblies.
+  These libraries are meant to assist with converting a DIS Visual Studio solution of a connector or automation script into its XML files and required assemblies.
 
 - [Skyline.DataMiner.CICD.DMApp/DMProtocol](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Packages)
 

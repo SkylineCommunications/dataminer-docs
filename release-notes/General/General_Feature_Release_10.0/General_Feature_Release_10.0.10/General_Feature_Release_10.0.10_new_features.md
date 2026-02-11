@@ -373,7 +373,7 @@ public void Uninstall(Engine engine, AppUninstallContext context)
 
 #### Automation: Tree view control for interactive automation scripts \[ID 26840\]\[ID 27041\]
 
-It is now possible to add a tree view control in an interactive Automation script. However, note that automation scripts with tree view controls are currently only supported in the DataMiner mobile apps. These are not yet supported in DataMiner Cube.
+It is now possible to add a tree view control in an interactive automation script. However, note that automation scripts with tree view controls are currently only supported in the DataMiner mobile apps. These are not yet supported in DataMiner Cube.
 
 To define a tree view control, create a UIBlockDefinition of type TreeView and add each item of the tree view as a TreeViewItem to the TreeViewItems property. It is not required to fill in the InitialValue or Value of the UIBlockDefinition, as that value is determined based on the TreeViewItem collection.
 

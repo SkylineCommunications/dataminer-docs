@@ -225,9 +225,9 @@ When a DataMiner Agent was started in a DataMiner System, in some cases, errors 
 
 When using an element card search box on a system with an Elasticsearch database, in some cases, no search results would appear.
 
-#### Automation: UIBuilder properties MaxWidth and MaxHeight would incorrectly not get applied to interactive Automation script pop-up windows \[ID 29361\]
+#### Automation: UIBuilder properties MaxWidth and MaxHeight would incorrectly not get applied to interactive automation script pop-up windows \[ID 29361\]
 
-In some cases, the UIBuilder properties “MaxWidth” and “MaxHeight” would incorrectly not get applied to interactive Automation script pop-up windows.
+In some cases, the UIBuilder properties “MaxWidth” and “MaxHeight” would incorrectly not get applied to interactive automation script pop-up windows.
 
 #### Incorrect data could be returned during a migration from MySQL to Cassandra \[ID 29385\]
 

@@ -671,9 +671,9 @@ In the Dashboards app, in some cases, table columns would be naturally sorted by
 
 Also, in the GQI query builder, in some cases, the default columns would be sorted incorrectly when using the “Select columns” option.
 
-#### Problem with SLAutomation when an interactive Automation script was communicating with a client app \[ID 28862\]
+#### Problem with SLAutomation when an interactive automation script was communicating with a client app \[ID 28862\]
 
-When an interactive Automation script was communicating with the client app, in some cases, an error could occur in SLAutomation.
+When an interactive automation script was communicating with the client app, in some cases, an error could occur in SLAutomation.
 
 #### Service & Resource Management: Problem when saving or updating a service profile definition after defining virtual function IDs \[ID 28868\]
 
@@ -681,7 +681,7 @@ Due to an incorrect ID check, in some cases, it would not be possible to create 
 
 #### DataMiner Cube - Interactive automation scripts: Multiple 'Continue' messages would be sent to the DataMiner Agent \[ID 28872\]
 
-When an interactive Automation script was running, DataMiner Cube would incorrectly send multiple identical “Continue” messages to the DataMiner Agent. In some cases, this would cause an error in SLAutomation.
+When an interactive automation script was running, DataMiner Cube would incorrectly send multiple identical “Continue” messages to the DataMiner Agent. In some cases, this would cause an error in SLAutomation.
 
 #### Dashboards app: Problem when embedding a GQI dashboard component \[ID 28874\]
 

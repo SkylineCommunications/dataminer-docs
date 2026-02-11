@@ -734,14 +734,14 @@ Changes that might result in anomaly alarms of a certain type being cleared:
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-In dialog boxes of an interactive Automation script, up to now, you were able to abort the script by clicking the *Abort* button. From now on, this button will no longer be available. Instead, you can now do the following to abort a script when a dialog box has the focus:
+In dialog boxes of an interactive automation script, up to now, you were able to abort the script by clicking the *Abort* button. From now on, this button will no longer be available. Instead, you can now do the following to abort a script when a dialog box has the focus:
 
 - close the dialog box by clicking the *X* in the top-right corner, or
 
 - press ALT+F4.
 
 > [!IMPORTANT]
-> When an interactive Automation script was launched from a web app, then you will have to press ESC instead of ALT+F4 to close a dialog box and abort the script. Pressing ALT+F4 would close the browser, not just the dialog box.
+> When an interactive automation script was launched from a web app, then you will have to press ESC instead of ALT+F4 to close a dialog box and abort the script. Pressing ALT+F4 would close the browser, not just the dialog box.
 
 #### System Center: Link to online help now points to cloud connection help on <https://docs.dataminer.services/> [ID 34683]
 

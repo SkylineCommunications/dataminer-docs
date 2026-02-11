@@ -4,10 +4,10 @@ uid: ExecuteAutomationScript
 
 # ExecuteAutomationScript
 
-Use this method to execute an interactive Automation script.
+Use this method to execute an interactive automation script.
 
 > [!NOTE]
-> From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards, to execute an interactive Automation script, you need the user permission [Modules > Automation > Execute](xref:DataMiner_user_permissions#modules--automation--execute)<!--RN 38529 + 44232-->. Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4, to execute an interactive Automation script, you need the user permissions [Modules > Automation > Execute](xref:DataMiner_user_permissions#modules--automation--execute) and [Modules > Automation > UI Available](xref:DataMiner_user_permissions#modules--automation--ui-available).
+> From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards, to execute an interactive automation script, you need the user permission [Modules > Automation > Execute](xref:DataMiner_user_permissions#modules--automation--execute)<!--RN 38529 + 44232-->. Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4, to execute an interactive automation script, you need the user permissions [Modules > Automation > Execute](xref:DataMiner_user_permissions#modules--automation--execute) and [Modules > Automation > UI Available](xref:DataMiner_user_permissions#modules--automation--ui-available).
 
 ## Input
 
@@ -25,8 +25,8 @@ Use this method to execute an interactive Automation script.
 | scriptOptions.WaitForScript | Boolean | Determines whether you will need to wait for the script to finish before you can continue. |
 | scriptOptions.CheckSets | Boolean | Determines whether the script will wait for a return value indicating whether the update was successful every time it performs a parameter update. |
 | scriptOptions.LockElements | Boolean | Determines whether the script will lock elements. |
-| scriptOptions.ForceLockElements | Boolean | If *LockElements* is true, this option determines whether the script will also lock elements when they are locked by another process (e.g. another Automation script). |
-| scriptOptions.WaitWhenLocked | Boolean | Determines whether the script will wait for an element to become unlocked in case the element is locked by another process (e.g. another Automation script). |
+| scriptOptions.ForceLockElements | Boolean | If *LockElements* is true, this option determines whether the script will also lock elements when they are locked by another process (e.g. another automation script). |
+| scriptOptions.WaitWhenLocked | Boolean | Determines whether the script will wait for an element to become unlocked in case the element is locked by another process (e.g. another automation script). |
 | scriptOptions.IsInUse | Boolean | Determines whether dummy elements are marked as “In Use” for active scheduled tasks. |
 | scriptOptions.AskForConfirmation | Boolean | Determines whether the user will need to provide confirmation before the script starts running. |
 

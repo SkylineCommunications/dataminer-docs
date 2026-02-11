@@ -79,7 +79,7 @@ A connector Visual Studio solution is organized into various folders, each servi
 - **Documentation**: This folder allows you to add documentation related to the solution.
 
 > [!NOTE]
-> An information bar will appear when a Class Library project (i.e. a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or Automation script solution. This information bar provides the option to convert existing solutions that make use of the Class Library generation feature. By clicking *Fix*, the Class Library project will be removed, and references to the project will be replaced with references to the automatically generated Class Library project (default ID 63000).
+> An information bar will appear when a Class Library project (i.e. a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or automation script solution. This information bar provides the option to convert existing solutions that make use of the Class Library generation feature. By clicking *Fix*, the Class Library project will be removed, and references to the project will be replaced with references to the automatically generated Class Library project (default ID 63000).
 
 - **QActions**: This folder contains a C# Class Library Visual Studio project for each QAction defined in the protocol XML file. These projects are named `QAction_<id>`, where \<id> represents the ID of the QAction as defined in the protocol XML file (e.g. QAction_2).
 

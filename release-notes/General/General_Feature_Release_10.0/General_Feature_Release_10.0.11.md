@@ -414,9 +414,9 @@ In the DataMiner HTML5 apps, when you fill in a control consisting of multiple p
 
 When, in the StandAloneBpaExecutor tool, you select a DLL file, it shows the BPA information for that specific file. From now on, it will show the full path of the selected DLL file as well as the BPA version.
 
-#### Dashboards app: Improved pop-up window when interactive Automation script is canceled \[ID 27141\]
+#### Dashboards app: Improved pop-up window when interactive automation script is canceled \[ID 27141\]
 
-If an interactive Automation script is canceled in the Dashboards app, a pop-up window will now be displayed with the title of the current content of the script, or with the name of the script if no title is available. The pop-up window will not mention the term "script" to avoid confusion in users who may not be aware that they are using a script.
+If an interactive automation script is canceled in the Dashboards app, a pop-up window will now be displayed with the title of the current content of the script, or with the name of the script if no title is available. The pop-up window will not mention the term "script" to avoid confusion in users who may not be aware that they are using a script.
 
 #### Dashboards app: Spectrum analyzer component trigger configuration no longer possible \[ID 27150\]
 

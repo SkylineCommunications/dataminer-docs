@@ -208,7 +208,7 @@ Finally, if you select an unassigned device in the table, an additional "-" butt
 
 #### IDP solution setup wizard \[ID 20923\]\[ID 20942\]
 
-A new interactive Automation script, *IDP_SetupWizard*, is now available, which allows you to perform the initial setup after the IDP package has been deployed in a new system.
+A new interactive automation script, *IDP_SetupWizard*, is now available, which allows you to perform the initial setup after the IDP package has been deployed in a new system.
 
 The script will take you through the following steps to configure the system:
 

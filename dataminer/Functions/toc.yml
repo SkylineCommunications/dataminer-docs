@@ -163,7 +163,7 @@ items:
             topicUid: Adding_CSharp_code_to_an_Automation_script
           - name: Debugging C# scripts
             topicUid: Debugging_CSharp_scripts
-          - name: Building interactive Automation scripts with C#
+          - name: Building interactive automation scripts with C#
             topicUid: Building_interactive_Automation_scripts_with_CSharp
           - name: Compiling a C# code block as a library
             topicUid: Compiling_a_CSharp_code_block_as_a_library
@@ -278,9 +278,9 @@ items:
             topicUid: Adding_a_new_Correlation_rule
           - name: Testing a correlation rule
             topicUid: Testing_a_Correlation_rule
-      - name: General configuration of Correlation rules
+      - name: General configuration of correlation rules
         topicUid: General_configuration_of_Correlation_rules
-      - name: Filtering and grouping base alarms for Correlation rules
+      - name: Filtering and grouping base alarms for correlation rules
         topicUid: Filtering_and_grouping_base_alarms_for_Correlation_rules
         items:
           - name: Adding alarm filters to Correlation rules

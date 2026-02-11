@@ -154,7 +154,7 @@ Up to now, in e.g. low-code apps, multivalue DOM fields would only show a summar
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
-When an interactive Automation script was launched from a web app, the following issues could occur. These were all related to the datetime web component (*UIBlockType.Time*):
+When an interactive automation script was launched from a web app, the following issues could occur. These were all related to the datetime web component (*UIBlockType.Time*):
 
 - When you clicked a date in the datetime picker, a changed value would already be returned to the script. From now on, the selected datetime value will not be returned to the script until you close the picker (either by double-clicking or by clicking *Done*).
 

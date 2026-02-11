@@ -24,7 +24,7 @@ To develop this new API script, you can use the automation script solution from 
 
 1. In Visual Studio, right-click the solution at the top of the *Solution Explorer*, and select *Add* > *New DataMiner Automation Script*.
 
-   ![Visual Studio add new Automation script solution](~/dataminer/images/UDAPIS_Tutorials_Elements_Add_New_Script.jpg)
+   ![Visual Studio add new automation script solution](~/dataminer/images/UDAPIS_Tutorials_Elements_Add_New_Script.jpg)
 
 1. In the dialog, enter the name "ElementsAPI".
 

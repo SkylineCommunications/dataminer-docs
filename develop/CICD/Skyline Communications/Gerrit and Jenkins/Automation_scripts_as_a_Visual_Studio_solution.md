@@ -15,7 +15,7 @@ From DIS 2.31 onwards, developing automation scripts as a Visual Studio solution
 
 ## Creating an automation script solution
 
-To create a new Automation script solution containing one dummy Automation script, do the following:
+To create a new automation script solution containing one dummy Automation script, do the following:
 
 1. Select *File* > *New* > *DataMiner Automation Script Solution*.
 
@@ -27,7 +27,7 @@ To create a new Automation script solution containing one dummy Automation scrip
 1. Select the target folder.
 
     > [!NOTE]
-    > The default protocol solution folder and the default Automation script folder can both be specified via *DIS Settings* > *Solutions*.
+    > The default protocol solution folder and the default automation script folder can both be specified via *DIS Settings* > *Solutions*.
 
 1. If you want the solution to contain a basic script with one Exe block, select *Create initial Automation script*.
 

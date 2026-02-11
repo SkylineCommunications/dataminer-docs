@@ -706,7 +706,7 @@ scriptOptions.StartScript();
 
 #### Interactive automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
 
-In an interactive Automation script, it is now possible to upload files from a client computer.
+In an interactive automation script, it is now possible to upload files from a client computer.
 
 To allow users to do so, you need to add a file selector control to the script in the following manner:
 

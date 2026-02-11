@@ -28,7 +28,7 @@ uid: Using_META_WhatsApp_Messaging
    > - For an example of creating a Correlation rule that triggers a WhatsApp notification, see the [Example](#example-configuration) section.
    > - Follow our [Orchestration & Automation courses](https://community.dataminer.services/learning/courses/orchestration-automation/) on DataMiner Dojo.
 
-   - **Alarm filter**: Specify which alarms should trigger this Correlation rule, e.g. critical alarms. See [Filtering and grouping base alarms for correlation rules](xref:Filtering_and_grouping_base_alarms_for_Correlation_rules).
+   - **Alarm filter**: Specify which alarms should trigger this correlation rule, e.g. critical alarms. See [Filtering and grouping base alarms for correlation rules](xref:Filtering_and_grouping_base_alarms_for_Correlation_rules).
 
    - **Actions**: Configure the rule to execute the *META Alarm Detection* script when triggered. See [Adding rule actions in correlation rules](xref:Adding_rule_actions_in_Correlation_rules).
 

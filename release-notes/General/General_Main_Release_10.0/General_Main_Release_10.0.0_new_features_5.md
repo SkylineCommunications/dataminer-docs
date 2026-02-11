@@ -791,7 +791,7 @@ In the *QueryTable* window (which you can open via *Advanced \> Dynamic Table Q
 
 - Apart from exporting and importing the list of queries, you can re-run queries and calculate average timings.
 
-- For a specific query, it is possible to generate C# Automation script code that executes the query and provides access to the results.
+- For a specific query, it is possible to generate C# automation script code that executes the query and provides access to the results.
 
 #### SLNetClientTest: Viewing the connection timeout states of an element \[ID 23573\]
 

@@ -11,7 +11,7 @@ The Automation Master Workflow should run on repositories containing an [Automat
 
 It was migrated from a workflow using an [internal Jenkins pipeline](xref:Pipeline_stages_for_Automation_scripts) to handle automation and quality assurance within Skyline Communications.
 
-This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Automation script solution to your private storage in the catalog if it passes the Skyline quality gate job.
+This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your automation script solution to your private storage in the catalog if it passes the Skyline quality gate job.
 
 The following actions will be performed:
 
@@ -112,7 +112,7 @@ This job runs in parallel and will create the .dmapp package. This will be provi
 
 ### NuGet restore solution
 
-This step makes sure creation of an application package (.dmapp) includes all assemblies used within NuGet packages in your Automation script solution.
+This step makes sure creation of an application package (.dmapp) includes all assemblies used within NuGet packages in your automation script solution.
 
 ### Create .dmapp package
 

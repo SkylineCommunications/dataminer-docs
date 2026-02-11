@@ -161,9 +161,9 @@ Also, when a group contained single parameters in combination with a partial tab
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
-When a client application lost connection while an interactive Automation script was being run, up to now, the script would stop as it was not able to continue once the connection was re-established.
+When a client application lost connection while an interactive automation script was being run, up to now, the script would stop as it was not able to continue once the connection was re-established.
 
-From now on, when a client application loses connection while an interactive Automation script is being run, the script will continue once the connection is re-established.
+From now on, when a client application loses connection while an interactive automation script is being run, the script will continue once the connection is re-established.
 
 #### Service & Resource Management: Service Manager would initialize twice on Failover systems [ID 39598]
 

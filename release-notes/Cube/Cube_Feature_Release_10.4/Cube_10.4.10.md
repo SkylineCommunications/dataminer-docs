@@ -61,7 +61,7 @@ During that requirements check, up to now, it would use the *GetCCAGatewayGlobal
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
-While an interactive Automation script was waiting for user input, in some cases, it could become responsive, especially when Cube was connected to a heavily loaded DaaS system.
+While an interactive automation script was waiting for user input, in some cases, it could become responsive, especially when Cube was connected to a heavily loaded DaaS system.
 
 #### False-positive warning log entry when Services or Profiles module was opened [ID 40385]
 

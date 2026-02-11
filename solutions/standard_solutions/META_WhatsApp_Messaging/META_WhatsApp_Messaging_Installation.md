@@ -129,7 +129,7 @@ Before [installing the *META WhatsApp Messaging* connector](#installing-the-meta
 
    This will create a DataMiner element named "META WhatsApp Alerter" in your system. The element will be located in the *DataMiner Apps & Solutions* view.
 
-   A new Automation script named "Meta Alarm Detection" will also be added to your system.
+   A new automation script named "Meta Alarm Detection" will also be added to your system.
 
 1. In Cube, go to the *DATA > Configuration* page of the *META WhatsApp Alerter* element.
 

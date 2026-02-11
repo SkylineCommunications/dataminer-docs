@@ -145,7 +145,7 @@ When, in an element with DCF interfaces, rows were added or deleted in the DCF i
 
 #### Automation: Date and time not adapted to local time zone in calendar component \[ID 26258\]
 
-If an interactive Automation script used a calendar component, it could occur that the date and time in the component were not adapted to the local time zone.
+If an interactive automation script used a calendar component, it could occur that the date and time in the component were not adapted to the local time zone.
 
 #### DataMiner Cube - Data Display: Time control values would incorrectly change when you edited them \[ID 26278\]
 

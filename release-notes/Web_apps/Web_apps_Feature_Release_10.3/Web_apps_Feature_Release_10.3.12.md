@@ -20,9 +20,9 @@ uid: Web_apps_Feature_Release_10.3.12
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-Unlike other UI block types, *FileSelector* does not allow setting an [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition.InitialValue). However, from now on, during an interactive Automation script session, it is possible to keep the files that were already uploaded after the UI was shown.
+Unlike other UI block types, *FileSelector* does not allow setting an [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition.InitialValue). However, from now on, during an interactive automation script session, it is possible to keep the files that were already uploaded after the UI was shown.
 
-When an interactive Automation script is executed **in a web app**, the UI block needs to keep the same [Row](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Row), [Column](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Column), and [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) within the session. If a block of a different type or [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) is at same location or that location has no blocks when the UI is shown again, the information about the uploaded files is lost.
+When an interactive automation script is executed **in a web app**, the UI block needs to keep the same [Row](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Row), [Column](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Column), and [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) within the session. If a block of a different type or [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) is at same location or that location has no blocks when the UI is shown again, the information about the uploaded files is lost.
 
 See also [DataMiner Cube Feature Release 10.3.12](xref:Cube_Feature_Release_10.3.12#interactive-automation-scripts-fileselector-now-allows-to-keep-the-files-that-were-already-uploaded-after-the-ui-was-shown-id-37260)
 
@@ -86,7 +86,7 @@ When the order of the table columns was changed by the query, the table headers 
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-In some cases, a Dropdown component in an interactive Automation script would not resize itself correctly, causing some options to remain invisible.
+In some cases, a Dropdown component in an interactive automation script would not resize itself correctly, causing some options to remain invisible.
 
 #### Dashboards app & Low-Code Apps - Table component: Order of the cells in exported rows in CSV file would not match the order of the table headers [ID 37517]
 

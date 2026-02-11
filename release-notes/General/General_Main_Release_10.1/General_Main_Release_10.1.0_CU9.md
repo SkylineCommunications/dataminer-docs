@@ -201,7 +201,7 @@ Up to now, in some cases, the following methods would return an empty array, eve
 
 #### DataMiner Cube - Automation: DateTime control incorrectly updated with the DateTimeKind property \[ID 31190\]
 
-When, in an interactive Automation script, you had configured the DateTimeKind property of a DateTime control, in some cases, the control would incorrectly be updated with the DateTimeKind property instead of the actual datetime value.
+When, in an interactive automation script, you had configured the DateTimeKind property of a DateTime control, in some cases, the control would incorrectly be updated with the DateTimeKind property instead of the actual datetime value.
 
 #### DataMiner Cube - Router Control: 'park source' feature would incorrectly not work on matrices with IO table structures \[ID 31239\]
 

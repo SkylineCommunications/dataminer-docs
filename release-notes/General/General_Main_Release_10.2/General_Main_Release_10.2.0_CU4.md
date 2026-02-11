@@ -306,7 +306,7 @@ When a shape linked to a parameter had a *History Mode* shape data field set to 
 
 #### Interactive automation scripts: Tree view component would incorrectly collapse when selecting an item that unselected the previously selected item \[ID 33480\]
 
-When, in a tree view component of an interactive Automation script, you selected an item that unselected the previously selected item, in some cases, the entire tree view component would incorrectly collapse.
+When, in a tree view component of an interactive automation script, you selected an item that unselected the previously selected item, in some cases, the entire tree view component would incorrectly collapse.
 
 #### Automatic Incident Tracking: Clearable base alarms of an incident were cleared when the incident was cleared \[ID 33481\]
 

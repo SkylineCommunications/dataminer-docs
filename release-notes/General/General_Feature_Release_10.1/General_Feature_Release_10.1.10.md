@@ -315,7 +315,7 @@ Full syntax: \[Reservation:\<Service ID or Booking ID>,ServiceDefinitionID\]
 
 #### Interactive automation scripts: New 'TreeViewItemCheckingBehavior' property of TreeViewItem \[ID 29993\]\[ID 30603\]
 
-You can now configure what happens when you select a tree view item in an interactive Automation script, using the new *TreeViewItemCheckingBehavior* enum property of the *TreeViewItem* object.
+You can now configure what happens when you select a tree view item in an interactive automation script, using the new *TreeViewItemCheckingBehavior* enum property of the *TreeViewItem* object.
 
 This property can have the following values:
 
@@ -367,7 +367,7 @@ UIBuilder uib = new UIBuilder();
 
 #### Interactive automation scripts: Input components now have a 'WantsOnFocusLost' property & other input component enhancements \[ID 30638\]
 
-In an interactive Automation script that is used in the DataMiner web apps, the following components now have a *WantsOnFocusLost* property. If you set this property to true, then an *OnChange* event will be triggered when the component loses focus.
+In an interactive automation script that is used in the DataMiner web apps, the following components now have a *WantsOnFocusLost* property. If you set this property to true, then an *OnChange* event will be triggered when the component loses focus.
 
 - Calendar
 - Checkbox
@@ -387,7 +387,7 @@ Other enhancements:
 
 #### Interactive automation scripts: File selector component can now be configured to only allow a script to continue after a file has been uploaded \[ID 30728\]
 
-In an interactive Automation script that is used in Dashboards, you can now configure a file selector component to only allow a script to continue after a file has been uploaded. To do so, set the property *IsRequired* to true.
+In an interactive automation script that is used in Dashboards, you can now configure a file selector component to only allow a script to continue after a file has been uploaded. To do so, set the property *IsRequired* to true.
 
 For example:
 
@@ -575,7 +575,7 @@ When an exception was thrown because invalid characters were used in dictionary 
 
 #### Automation: CheckboxList and RadiobuttonList not decoding "\\" correctly \[ID 30605\]
 
-In an interactive Automation script, it could occur that the *CheckboxList* and *RadiobuttonList* components did not correctly decode a backslash ("\\") character.
+In an interactive automation script, it could occur that the *CheckboxList* and *RadiobuttonList* components did not correctly decode a backslash ("\\") character.
 
 #### Automation: Problems with datetime filters in scripts \[ID 30611\]
 

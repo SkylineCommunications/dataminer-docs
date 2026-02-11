@@ -307,11 +307,11 @@ All files uploaded by users will by default be placed in the `C:\Skyline DataMin
 > See also: [GetUploadedFilePath](xref:Skyline.DataMiner.Automation.UIResults.GetUploadedFilePath(System.String))
 
 > [!NOTE]
-> Unlike other UI block types, *FileSelector* does not allow setting an [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition.InitialValue). However, from DataMiner 10.3.12/10.4.0 onwards<!-- RN 37260 -->, during an interactive Automation script session, it is possible to keep the files that were already uploaded after the UI was shown.
+> Unlike other UI block types, *FileSelector* does not allow setting an [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition.InitialValue). However, from DataMiner 10.3.12/10.4.0 onwards<!-- RN 37260 -->, during an interactive automation script session, it is possible to keep the files that were already uploaded after the UI was shown.
 >
-> When an interactive Automation script is executed **in a web app**, the UI block needs to keep the same [Row](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Row), [Column](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Column), and [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) within the session. If a block of a different type or [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) is at same location or that location has no blocks when the UI is shown again, the information about the uploaded files is lost.
+> When an interactive automation script is executed **in a web app**, the UI block needs to keep the same [Row](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Row), [Column](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Column), and [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) within the session. If a block of a different type or [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) is at same location or that location has no blocks when the UI is shown again, the information about the uploaded files is lost.
 >
-> When an interactive Automation script is executed **in Cube**, the UI block needs to keep the same [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) within the session. If there is no file selector block with the same [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) when the UI is shown again, the information about the uploaded files is lost.
+> When an interactive automation script is executed **in Cube**, the UI block needs to keep the same [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) within the session. If there is no file selector block with the same [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) when the UI is shown again, the information about the uploaded files is lost.
 
 ## Numeric
 

@@ -177,7 +177,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 | BadRequest | 400 | There was a client error, e.g. wrong parameters. |
 | NotFound | 404 | The requested document was not found. |
 | MethodNotAllowed | 405 | The HTTP method is not valid for this request. For example `DELETE` is used while `GET` was expected. |
-| InternalServerError | 500 | Return this if something went wrong in your Automation script, e.g. you try to write to a file, but the file is in use by another application. |
+| InternalServerError | 500 | Return this if something went wrong in your automation script, e.g. you try to write to a file, but the file is in use by another application. |
 
 > [!TIP]
 > For more insight into which HTTP status codes to use in which circumstances, see [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).

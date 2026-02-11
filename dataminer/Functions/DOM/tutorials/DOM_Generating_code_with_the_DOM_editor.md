@@ -70,7 +70,7 @@ This tutorial consists of the following steps:
 
 ### Create a new automation script solution
 
-Create a new Automation script solution using Visual Studio and DIS.
+Create a new automation script solution using Visual Studio and DIS.
 
 While you could develop the automation script in Cube, creating an automation script solution in Visual Studio will give you the advantage of having access to all the features of Visual Studio and [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio).
 
@@ -87,7 +87,7 @@ To create an automation script solution:
 
 1. Choose a location to save the automation script solution and click *Next*.
 
-1. Specify *Generate Kata DOM Instances* as the name of your Automation script.
+1. Specify *Generate Kata DOM Instances* as the name of your automation script.
 
 1. Fill in your name as the author, and click *create*.
 

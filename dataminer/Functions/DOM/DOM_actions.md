@@ -110,7 +110,7 @@ if (info != null && info.InfoType == DomActionInfo.Type.ScriptOutput)
 
 ### Interactive script
 
-From DataMiner 10.2.8/10.3.0 onwards, it is possible to execute an interactive Automation script (IAS) using the DOM actions. When a client triggers a DOM action, it can then interact with the script.
+From DataMiner 10.2.8/10.3.0 onwards, it is possible to execute an interactive automation script (IAS) using the DOM actions. When a client triggers a DOM action, it can then interact with the script.
 
 Flow:
 

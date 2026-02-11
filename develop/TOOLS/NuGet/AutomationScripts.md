@@ -15,7 +15,7 @@ For example, suppose a script references two versions of an assembly, version 1.
 
 When the runtime reaches the point where types of version 1.1.3.1 are needed, it will not find the path to this assembly based on the hint paths of that Automation script. The assembly resolver will try to find an exact match in the list of hint paths in the resolver module. This list is built up from all assembly paths referenced in all automation scripts as these are compiled or executed. This means that which assembly will be loaded will now depend on the paths defined in other automation scripts, which is something that must be avoided.
 
-An exact match could be found if another Automation script references version 1.1.3.1. If not, the resolver will perform a fallback to an assembly with the same name but another version. If it resolves to another version, this can for instance result in MissingMethodExceptions in case the method is not present in the resolved assembly.
+An exact match could be found if another automation script references version 1.1.3.1. If not, the resolver will perform a fallback to an assembly with the same name but another version. If it resolves to another version, this can for instance result in MissingMethodExceptions in case the method is not present in the resolved assembly.
 
 > [!IMPORTANT]
 > When referencing a NuGet package in an automation script, either directly or through a transitive dependency, make sure the script only references a single version of that NuGet package. Also, when creating a NuGet package that will be used by an automation script, that package should only reference one version of another NuGet package.

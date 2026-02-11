@@ -259,7 +259,7 @@ When, in configuration mode, you selected the job domain that was already select
 
 #### Interactive automation scripts: Problem when a text box had its wantOnChange setting set to true and its value set to an empty string \[ID 27666\]
 
-When a text box in an interactive Automation script had its wantOnChange setting set to true and its value set to an empty string, in some cases, an exception could be thrown.
+When a text box in an interactive automation script had its wantOnChange setting set to true and its value set to an empty string, in some cases, an exception could be thrown.
 
 #### Mobile apps: Problem with time range quick pick buttons \[ID 27676\]
 

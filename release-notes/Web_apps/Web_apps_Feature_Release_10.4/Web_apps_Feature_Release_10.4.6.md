@@ -155,7 +155,7 @@ From now on, when empty, the *DATA USED IN DASHBOARD* section will no longer be 
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-When, in a dialog box of an interactive Automation script, a UI control had a large number of options, in some cases, those options would overlap other items on the dialog box.
+When, in a dialog box of an interactive automation script, a UI control had a large number of options, in some cases, those options would overlap other items on the dialog box.
 
 From now on, UI controls options will be listed in a scrollable region. As a result, they will no longer overlap other dialog box items.
 

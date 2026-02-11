@@ -275,9 +275,9 @@ A new *IDPResource* and *IDPManagerHelper* class are now available in DMS Autom
 
 IDP resources can only be created if an IDP license is present. Such a license allows you to add up to 10 IDP resources, as well as to create booking instances and resource pools using IDP resources. The booking instances using IDP resources are not taken into account for the SRM volume license.
 
-#### Radio button lists can now be added to interactive Automation script dialog boxes \[ID 21475\]
+#### Radio button lists can now be added to interactive automation script dialog boxes \[ID 21475\]
 
-It is now possible to add radio button lists to an interactive Automation script dialog box.
+It is now possible to add radio button lists to an interactive automation script dialog box.
 
 First, create the list:
 
@@ -298,9 +298,9 @@ foreach (string sOption in dropDownOptions)
 > [!NOTE]
 > When no initial value is passed to this list, no radio button will be selected by default.
 
-#### Password boxes can now be added to interactive Automation script dialog boxes \[ID 21518\]
+#### Password boxes can now be added to interactive automation script dialog boxes \[ID 21518\]
 
-It is now possible to add password boxes to an interactive Automation script dialog box.
+It is now possible to add password boxes to an interactive automation script dialog box.
 
 ```csharp
 UIBlockDefinition blockPasswordBox = new UIBlockDefinition();
@@ -313,9 +313,9 @@ Optionally, you can set the HasPeekIcon property to display an icon that, when c
 blockPasswordBox.HasPeekIcon = allowPeek;
 ```
 
-#### Dialog box of an interactive Automation script can now have a custom title \[ID 21552\]
+#### Dialog box of an interactive automation script can now have a custom title \[ID 21552\]
 
-When defining a dialog box of an interactive Automation script, you can now specify a custom title.
+When defining a dialog box of an interactive automation script, you can now specify a custom title.
 
 Example:
 
@@ -506,7 +506,7 @@ Once you have compiled a C# code block as a library, you can then import that li
 
 #### Interactive automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
 
-In an interactive Automation script, it is now possible to upload files from a client computer.
+In an interactive automation script, it is now possible to upload files from a client computer.
 
 To allow users to do so, you need to add a file selector control to the script in the following manner:
 

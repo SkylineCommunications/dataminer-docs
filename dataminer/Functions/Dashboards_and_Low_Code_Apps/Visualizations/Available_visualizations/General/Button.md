@@ -69,7 +69,7 @@ The following optional settings are available for the soft-launch button compone
   - Depending on the script configuration, it may be possible to configure the parameters and/or dummies used in the script. For each of the parameters and dummies, a checkbox allows you to select whether these are required, i.e. whether the script can be executed only if these are filled in.
 
     > [!NOTE]
-    > The input for an interactive Automation script can be specified by the user or retrieved via linked data. In case both are possible for the same component, user input always takes precedence.
+    > The input for an interactive automation script can be specified by the user or retrieved via linked data. In case both are possible for the same component, user input always takes precedence.
     >
     > In case several data is linked to the component, they are considered in the order they were added. For example, if 2 data sources are used and the data that was first added is applicable, the second data input will be ignored.
 

@@ -6,7 +6,7 @@ uid: Frequently_asked_questions_about_DMS_Automation
 
 - [How can I execute an automation script on an element in timeout?](xref:How_can_I_execute_an_Automation_Script_on_an_element_in_timeout)
 
-- [How do I abort a running Automation script?](xref:How_do_I_abort_a_running_Automation_script)
+- [How do I abort a running automation script?](xref:How_do_I_abort_a_running_Automation_script)
 
 - [How do I retrieve the current value of a script parameter?](xref:How_do_I_retrieve_the_current_value_of_a_script_parameter)
 

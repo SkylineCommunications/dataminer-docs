@@ -4,7 +4,7 @@ uid: Scheduling_an_event_based_on_a_Scheduler_template
 
 # Scheduling an event based on a Scheduler template
 
-Scheduled events are a combination of a START and STOP task, based on a special type of Automation script called a “Scheduler template”.
+Scheduled events are a combination of a START and STOP task, based on a special type of automation script called a “Scheduler template”.
 
 In order to be able to schedule events in the *timeline \> EVENTS* tab, a Scheduler template must first be created in DataMiner Automation. See [Creating a Scheduler template](xref:Creating_a_Scheduler_template).
 

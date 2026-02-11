@@ -26,17 +26,17 @@ During a switch-over, in some cases, users would no longer receive a “\<DMA> i
 
 Also, the term “System Display” has been replaced by “Client Interface” in *Failover status* windows.
 
-#### Dashboards app: Incorrect message would appear when an interactive Automation script went into timeout \[ID 24258\]
+#### Dashboards app: Incorrect message would appear when an interactive automation script went into timeout \[ID 24258\]
 
-When an interactive Automation script running inside the Dashboards app went into timeout, in some cases, a success message would incorrectly be displayed instead of an error message.
+When an interactive automation script running inside the Dashboards app went into timeout, in some cases, a success message would incorrectly be displayed instead of an error message.
 
 #### Trending: Incorrect trend data retrieved for view column parameters \[ID 24268\]
 
 In some cases, incorrect trend data would be retrieved for view column parameters.
 
-#### Datetime value in interactive Automation script not updated correctly \[ID 24284\]
+#### Datetime value in interactive automation script not updated correctly \[ID 24284\]
 
-When a datetime value in an interactive Automation script was changed by the script itself, it could occur that the value was not updated correctly.
+When a datetime value in an interactive automation script was changed by the script itself, it could occur that the value was not updated correctly.
 
 #### Dashboards app / Jobs app: Problem opening the user menu \[ID 24285\]
 
@@ -50,9 +50,9 @@ In the jobs timeline, in some cases, job end times would be displayed incorrectl
 
 When you selected the month value in a datetime control, in some cases, that value would incorrectly be cleared.
 
-#### Automation: Dialog box from an interactive Automation script started in Dashboards would incorrectly appear in Cube \[ID 24328\]
+#### Automation: Dialog box from an interactive automation script started in Dashboards would incorrectly appear in Cube \[ID 24328\]
 
-In some cases, a dialog box from an interactive Automation script started in Dashboards would incorrectly appear inside a Cube session.
+In some cases, a dialog box from an interactive automation script started in Dashboards would incorrectly appear inside a Cube session.
 
 #### Dashboards app: Element tree of a multiple-parameter feed was sorted incorrectly \[ID 24495\]
 
@@ -138,7 +138,7 @@ After trying to save a job that contained errors (e.g. missing fields), in some 
 
 #### Dashboards app: Problem when loading dropdown boxes of interactive automation scripts \[ID 24888\]
 
-When a dialog box of an interactive Automation script showed multiple dropdown boxes next to each other, in some cases, some of those boxes would become unresponsive when data was being loaded into them.
+When a dialog box of an interactive automation script showed multiple dropdown boxes next to each other, in some cases, some of those boxes would become unresponsive when data was being loaded into them.
 
 #### Jobs app: No headers were displayed at the top of the jobs list \[ID 25042\]
 

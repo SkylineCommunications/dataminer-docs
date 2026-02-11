@@ -245,7 +245,7 @@ When you tried to add an *Execute a script* action to a low-code app that was ho
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-In some cases, an interactive Automation script running in an *Interactive Automation script* component would incorrectly not look identical to a script running in a pop-up window.
+In some cases, an interactive automation script running in an *Interactive Automation script* component would incorrectly not look identical to a script running in a pop-up window.
 
 #### Low-Code Apps: Flows could get triggered too often [ID 41768]
 

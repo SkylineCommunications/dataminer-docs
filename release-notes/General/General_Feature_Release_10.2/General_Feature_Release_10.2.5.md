@@ -176,9 +176,9 @@ Up to now, when users wanted to share a dashboard, they also needed to have perm
 
 When a Process Automation definition is added to the Service definition component, the component will now automatically draw the necessary arrows to indicate the connections between the different blocks/nodes in the diagram.
 
-#### Dashboards app: Using the script output of an interactive Automation script as a feed \[ID 32977\]
+#### Dashboards app: Using the script output of an interactive automation script as a feed \[ID 32977\]
 
-When building a GQI query, you can now also use the script output of an interactive Automation script as a feed.
+When building a GQI query, you can now also use the script output of an interactive automation script as a feed.
 
 #### Dashboards app - Service definition component: Function shapes will now reflect the function type \[ID 32995\]
 

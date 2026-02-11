@@ -24,7 +24,7 @@ The new icon component allows you to display an icon on a dashboard or a low-cod
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
-In an interactive Automation script launched from a dashboard or a low-code app, you can now apply the *CallToAction* style to a button.
+In an interactive automation script launched from a dashboard or a low-code app, you can now apply the *CallToAction* style to a button.
 
 When you apply this style to a button
 
@@ -32,7 +32,7 @@ When you apply this style to a button
 - the color of the text on the button will be white, and
 - the button will have a shadow.
 
-To set the style of a button in an interactive Automation script, set the *Style* property of the button's *UIBlockDefinition* to the name of the style. All supported styles are available via `Style.Button`.
+To set the style of a button in an interactive automation script, set the *Style* property of the button's *UIBlockDefinition* to the name of the style. All supported styles are available via `Style.Button`.
 
 Alternatively, you can also pass a button style directly to the `AppendButton` method on an `UIBuilder` object.
 
@@ -560,7 +560,7 @@ When a time range feed was configured to show quick pick buttons, those buttons 
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
-When, in a dialog box of an interactive Automation script, you selected an item in a tree view component, other tree view components on that dialog box would incorrectly collapse.
+When, in a dialog box of an interactive automation script, you selected an item in a tree view component, other tree view components on that dialog box would incorrectly collapse.
 
 #### Standalone parameters belonging to another child of the same DVE parent element could be set to 'Not Initialized' when a row linked to a DVE child element was deleted [ID 34785]
 

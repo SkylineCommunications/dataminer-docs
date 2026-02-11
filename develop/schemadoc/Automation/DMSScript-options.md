@@ -32,7 +32,7 @@ The value is the decimal representation of a hexadecimal bit flag combination. T
 
 Some of these options can be set via the automation script editor in Cube. For more information, refer to [General script configuration](xref:General_script_configuration).
 
-When creating a new Automation script from Cube, the options attribute has the decimal value “472” by default. This is “0x1D8” in hexadecimal notation, meaning that the following flags are configured by default:
+When creating a new automation script from Cube, the options attribute has the decimal value “472” by default. This is “0x1D8” in hexadecimal notation, meaning that the following flags are configured by default:
 
 - 0x008: Debug Mode
 - 0x010: AllowUndef

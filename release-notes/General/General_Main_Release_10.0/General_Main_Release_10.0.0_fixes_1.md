@@ -524,6 +524,6 @@ In the HTML5 apps (Dashboards, Jobs, etc.), in some cases, the Scheduler compone
 
 When you move the mouse pointer away from the Scheduler component and back, from now on, the action will either continue when the mouse button is being pressed or be canceled when the mouse button is no longer being pressed.
 
-#### Incorrect column spans in interactive Automation script in HTML5 applications \[ID 23325\]
+#### Incorrect column spans in interactive automation script in HTML5 applications \[ID 23325\]
 
-If an interactive Automation script was run using a HTML5 DataMiner application, it could occur that the column spans in the script were not correctly applied.
+If an interactive automation script was run using a HTML5 DataMiner application, it could occur that the column spans in the script were not correctly applied.

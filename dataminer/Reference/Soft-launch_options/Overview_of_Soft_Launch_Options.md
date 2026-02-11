@@ -294,7 +294,7 @@ Enables [Swarming](xref:Swarming) support for eligible systems.
 
 ### UseWebIAS
 
-Uses an embedded web browser for Automation script execution instead of the native Cube pop-up window.
+Uses an embedded web browser for automation script execution instead of the native Cube pop-up window.
 
 - **Minimum version**: 10.1.4
 

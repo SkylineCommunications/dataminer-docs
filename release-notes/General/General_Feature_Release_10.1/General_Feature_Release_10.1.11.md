@@ -847,7 +847,7 @@ In some cases, a ParameterThread error could occur in SLElement.
 
 #### Interactive automation scripts: Value returned by the client would incorrectly be considered as an invalid file path selected in a file selector block [ID 30879]
 
-When, in an interactive Automation script, a file selector block was defined after another type of input block (e.g. a checkbox), in some cases, the input block value returned by the client would incorrectly be considered as an invalid file path selected in the file selector. As a result, an “Invalid Data” error would be thrown.
+When, in an interactive automation script, a file selector block was defined after another type of input block (e.g. a checkbox), in some cases, the input block value returned by the client would incorrectly be considered as an invalid file path selected in the file selector. As a result, an “Invalid Data” error would be thrown.
 
 #### DataMiner Cube - Alarm Console: Incorrect notices like '!! Unknown \<Type> R!AD for parameter xxx' [ID 30884]
 
@@ -947,7 +947,7 @@ When no SoftLaunchOptions.xml file was found in the C:\\Skyline DataMiner\\ root
 
 #### Interactive automation scripts: Problem with file upload components [ID 31064]
 
-After multiple updates had occurred in an interactive Automation script, in some cases, a file upload component could end up in an invalid state and lose all information about the uploaded files.
+After multiple updates had occurred in an interactive automation script, in some cases, a file upload component could end up in an invalid state and lose all information about the uploaded files.
 
 #### DataMiner Cube: Asset Manager app failed to initialize [ID 31072]
 
@@ -983,9 +983,9 @@ When, on a system with a Cassandra cluster, you used Reporter to retrieve the al
 
 When a new Failover configuration was created, in some cases, the Resources.xml file would incorrectly not be synchronized on the offline agent.
 
-#### Dashboards app: GQI queries in PDF reports sent via an interactive Automation script would not be migrated correctly [ID 31127]
+#### Dashboards app: GQI queries in PDF reports sent via an interactive automation script would not be migrated correctly [ID 31127]
 
-When a PDF report of a dashboard containing GQI queries was generated before being sent by email via an interactive Automation script, in some cases, the GQI queries would not be migrated correctly.
+When a PDF report of a dashboard containing GQI queries was generated before being sent by email via an interactive automation script, in some cases, the GQI queries would not be migrated correctly.
 
 #### Table row exports for DVEs and virtual functions would trigger updates to be sent when no client applications were connected [ID 31156]
 

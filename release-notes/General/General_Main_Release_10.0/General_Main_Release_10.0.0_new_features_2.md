@@ -492,11 +492,11 @@ If you click this option, you can choose to merge all alarm trees for the same e
 > [!NOTE]
 > This new option will only be available when *History tracking* is enabled, *Freeze* is disabled and automatic alarm clearing is disabled.
 
-#### More detailed error message will now appear when an interactive Automation script fails \[ID 23251\]\[ID 23561\]
+#### More detailed error message will now appear when an interactive automation script fails \[ID 23251\]\[ID 23561\]
 
-Up to now, when an interactive Automation script failed, a generic popup message was displayed, stating that something went wrong.
+Up to now, when an interactive automation script failed, a generic popup message was displayed, stating that something went wrong.
 
-From now on, when an interactive Automation script fails, a popup message will appear, containing more detailed information about why the script failed (e.g. the user aborted the script while it was running, the script ran for too long and went into timeout, etc.).
+From now on, when an interactive automation script fails, a popup message will appear, containing more detailed information about why the script failed (e.g. the user aborted the script while it was running, the script ran for too long and went into timeout, etc.).
 
 #### Redesigned DataMiner Cube layout \[ID 23427\]\[ID 23486\]\[ID 23540\]\[ID 23628\]\[ID 23646\] \[ID 23813\]\[ID 23822\]\[ID 23904\]\[ID 23982\]\[ID 24036\]\[ID 24044\]\[ID 24079\]\[ID 24086\]\[ID 24129\] \[ID 24143\]\[ID 24160\]\[ID 24165\]\[ID 24189\]\[ID 24218\]\[ID 24518\]
 

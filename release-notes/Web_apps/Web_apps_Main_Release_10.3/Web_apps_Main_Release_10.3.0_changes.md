@@ -245,7 +245,7 @@ when a dashboard, a low-code app page or low-code app panel was initialized, in 
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
-When an interactive Automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
+When an interactive automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
 
 #### Web Services API - CreateServiceTemplate: DataMinerID and ElementID incorrectly set to 0 instead of -1 [ID 34440]
 

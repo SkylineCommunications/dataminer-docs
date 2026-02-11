@@ -18,7 +18,7 @@ uid: Developing_Automation_scripts_as_Visual_Studio_solutions
     >
     > As from DIS v2.42, this feature has been removed. If this is required for a particular use case, please contact [Data Acquisition](mailto:support.data-acquisition@skyline.be).
 
-- ​Up to DIS v2.40, it was only possible to refer to a [library script Exe](xref:Compiling_a_CSharp_code_block_as_a_library) from within the same Automation script. As from DIS v2.41, in a Visual Studio solution, you can also add a reference to a project from another Automation script in the solution. DIS will then automatically add a `scriptRef`.
+- ​Up to DIS v2.40, it was only possible to refer to a [library script Exe](xref:Compiling_a_CSharp_code_block_as_a_library) from within the same Automation script. As from DIS v2.41, in a Visual Studio solution, you can also add a reference to a project from another automation script in the solution. DIS will then automatically add a `scriptRef`.
 
   See the following example, in which `{SCRIPTNAME}` is the name of the other script containing the library and `{LIBRARYNAME}` is the name of the library:
 
@@ -33,7 +33,7 @@ uid: Developing_Automation_scripts_as_Visual_Studio_solutions
 
 ## Creating an automation script solution
 
-To create a new Automation script solution containing an initial Automation script, follow the instructions below.
+To create a new automation script solution containing an initial Automation script, follow the instructions below.
 
 In Visual Studio 2022, perform the following steps:
 
@@ -49,7 +49,7 @@ In Visual Studio 2019, perform the following steps:
 1. Select the target folder.
 
    > [!NOTE]
-   > The default protocol solution folder and the default Automation script folder can both be specified in *DIS Settings \> Solutions*.
+   > The default protocol solution folder and the default automation script folder can both be specified in *DIS Settings \> Solutions*.
 
 1. Select *Create initial Automation script* if you want the solution to contain a basic script with one Exe block.
 1. Click *OK*.

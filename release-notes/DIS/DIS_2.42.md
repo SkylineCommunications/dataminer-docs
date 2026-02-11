@@ -12,7 +12,7 @@ uid: DIS_2.42
 
 DIS now supports SDK-style projects in addition to the legacy-style projects.
 
-At startup, DIS will install new protocol solution and Automation script solution templates that will be used when creating a new protocol or Automation script solution in Visual Studio 2022.
+At startup, DIS will install new protocol solution and Automation script solution templates that will be used when creating a new protocol or automation script solution in Visual Studio 2022.
 
 #### Automation script solutions: 'DataMiner DLL Path' property no longer supported [ID 36774]
 

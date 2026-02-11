@@ -6,7 +6,7 @@ uid: DisTreeViewToolWindow
 
 If you click *Tool Windows > DIS Tree View*, the *DIS Tree* tool window will appear.
 
-This tool window acts as a table of contents, allowing you to easily navigate to a particular location in the connector or Automation script you are working on.
+This tool window acts as a table of contents, allowing you to easily navigate to a particular location in the connector or automation script you are working on.
 
 By default, the *DIS Tree* window will open undocked. You can dock it like any other tool window in Visual Studio.
 

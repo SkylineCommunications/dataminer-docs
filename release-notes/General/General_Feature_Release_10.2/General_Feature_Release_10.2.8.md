@@ -14,15 +14,15 @@ uid: General_Feature_Release_10.2.8
 
 ### DMS core functionality
 
-#### DataMiner Object Model: Defining a script execution action that will execute an interactive Automation script \[ID 33513\]
+#### DataMiner Object Model: Defining a script execution action that will execute an interactive automation script \[ID 33513\]
 
-It is now possible to define a script execution action that will execute an interactive Automation script.
+It is now possible to define a script execution action that will execute an interactive automation script.
 
 Process:
 
-1. A client requests the execution of a DOM action in which the execution of an interactive Automation script has been defined via the domHelper.DomInstances.ExecuteAction() method.
+1. A client requests the execution of a DOM action in which the execution of an interactive automation script has been defined via the domHelper.DomInstances.ExecuteAction() method.
 
-   To indicate that the automation script is an interactive Automation script, the IsInteractive property of the ExecuteScriptDomActionDefinition must be set to true.
+   To indicate that the automation script is an interactive automation script, the IsInteractive property of the ExecuteScriptDomActionDefinition must be set to true.
 
 1. The domHelper.DomInstances.ExecuteAction() method replies immediately.
 

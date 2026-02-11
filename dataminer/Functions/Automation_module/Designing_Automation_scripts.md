@@ -6,7 +6,7 @@ uid: Designing_Automation_scripts
 
 In the *Automation* module, select a script in the tree view pane on the left in order to configure it in the details pane on the right. Alternatively, if you want to view the script details in a separate card, right-click the script and select *Open in new card* or *Open in new undocked card*.
 
-Once a new blank script has been added (see [Adding a new Automation script](xref:Managing_Automation_scripts#adding-a-new-automation-script)), you can begin to configure it. To do so, you need to specify the general configuration, add script actions, and specify variables when necessary:
+Once a new blank script has been added (see [Adding a new automation script](xref:Managing_Automation_scripts#adding-a-new-automation-script)), you can begin to configure it. To do so, you need to specify the general configuration, add script actions, and specify variables when necessary:
 
 - [General script configuration](xref:General_script_configuration)
 

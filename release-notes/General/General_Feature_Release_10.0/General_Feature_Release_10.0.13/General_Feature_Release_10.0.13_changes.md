@@ -70,7 +70,7 @@ Due to a number of enhancements, overall performance has increased when connecti
 
 #### Interactive automation scripts: No longer possible to clear the value of a selection box control \[ID 27845\]
 
-Up to now, in an interactive Automation script, it was possible to clear the value of a selection box control by clicking an X button. From now on, this is no longer possible.
+Up to now, in an interactive automation script, it was possible to clear the value of a selection box control by clicking an X button. From now on, this is no longer possible.
 
 #### DataMiner Cube: Enhanced performance when logging in and logging out \[ID 27851\]
 
@@ -208,7 +208,7 @@ A number of enhancements have now been made to the way in which the alarm histor
 
 #### Interactive automation scripts: Problem when a text box had its wantOnChange setting set to true and its value set to an empty string \[ID 27666\]
 
-When a text box in an interactive Automation script had its wantOnChange setting set to true and its value set to an empty string, in some cases, an exception could be thrown.
+When a text box in an interactive automation script had its wantOnChange setting set to true and its value set to an empty string, in some cases, an exception could be thrown.
 
 #### Mobile apps: Problem with time range quick pick buttons \[ID 27676\]
 

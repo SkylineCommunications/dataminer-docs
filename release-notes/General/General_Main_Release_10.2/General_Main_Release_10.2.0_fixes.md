@@ -356,11 +356,11 @@ When a SetDataMinerInfoMessage was used to delete a service using the service na
 
 #### Interactive automation scripts: Problem when entering double-digit numbers in input controls \[ID 29736\]
 
-In some cases, because of a problem with the WantsOnChange functionality, it would not be possible to enter a double-digit number (e.g. a number of minutes) in an input control. The interactive Automation script would incorrectly already continue after you entered the first digit.
+In some cases, because of a problem with the WantsOnChange functionality, it would not be possible to enter a double-digit number (e.g. a number of minutes) in an input control. The interactive automation script would incorrectly already continue after you entered the first digit.
 
 #### Problem when an interactive Automaton script was detached on closure \[ID 29815\]
 
-In some cases, when an interactive Automation script detached on closure, an exception could be thrown in SLAutomation. From now on, interactive automation scripts will only detach when they are aborted by a user either closing the popup window or clicking the Abort button.
+In some cases, when an interactive automation script detached on closure, an exception could be thrown in SLAutomation. From now on, interactive automation scripts will only detach when they are aborted by a user either closing the popup window or clicking the Abort button.
 
 #### Service & Resource Management: Start of bookings delayed when multiple bookings started at the same time \[ID 29880\]
 
@@ -534,7 +534,7 @@ When no *SoftLaunchOptions.xml* file was found in the `C:\Skyline DataMiner\` ro
 
 #### Interactive automation scripts: Problem with file upload components \[ID 31064\]
 
-After multiple updates had occurred in an interactive Automation script, in some cases, a file upload component could end up in an invalid state and lose all information about the uploaded files.
+After multiple updates had occurred in an interactive automation script, in some cases, a file upload component could end up in an invalid state and lose all information about the uploaded files.
 
 #### Security: Azure AD access tokens not refreshed \[ID 31067\]
 
@@ -562,9 +562,9 @@ On a Cassandra cluster, in some cases, no SLA table would be created on startup 
 
 When, on a system with a Cassandra cluster, you used Reporter to retrieve the alarm history of an element, in some cases, the query would not return any results.
 
-#### Dashboards app: GQI queries in PDF reports sent via an interactive Automation script not migrated correctly \[ID 31127\]
+#### Dashboards app: GQI queries in PDF reports sent via an interactive automation script not migrated correctly \[ID 31127\]
 
-When a PDF report of a dashboard containing GQI queries was generated before being sent by email via an interactive Automation script, in some cases, the GQI queries would not be migrated correctly.
+When a PDF report of a dashboard containing GQI queries was generated before being sent by email via an interactive automation script, in some cases, the GQI queries would not be migrated correctly.
 
 #### Web Services API v0: Exception when CreateElement request did not contain Ports array \[ID 31145\]
 
@@ -593,7 +593,7 @@ The initial checked/unchecked state of a non-recursive tree item would be incorr
 
 #### Interactive automation scripts: Dialog items inherited dimensions of dialog item shown earlier \[ID 31311\]
 
-When an interactive Automation script was launched from a web app, in some cases, a dialog item could incorrectly inherit the dimensions of a dialog item shown earlier.
+When an interactive automation script was launched from a web app, in some cases, a dialog item could incorrectly inherit the dimensions of a dialog item shown earlier.
 
 #### DataMiner Cube - System Center: Server setting updates not saved immediately \[ID 31339\]
 
@@ -647,7 +647,7 @@ In some cases, the status of a newly installed Failover system would incorrectly
 
 #### Automation: Possible to add multiple files in file selector of interactive script despite AllowMultipleFiles being set to false \[ID 31614\]
 
-When the *UIBlockDefinition* property *AllowMultipleFiles* is set to false in an interactive Automation script, users should not be able to add multiple files in a file selector. However, it was still possible to get multiple files into the selector by selecting several files at once and dragging them into it. This will now no longer be allowed.
+When the *UIBlockDefinition* property *AllowMultipleFiles* is set to false in an interactive automation script, users should not be able to add multiple files in a file selector. However, it was still possible to get multiple files into the selector by selecting several files at once and dragging them into it. This will now no longer be allowed.
 
 #### Incorrect number of Elasticsearch backups kept \[ID 31701\]
 

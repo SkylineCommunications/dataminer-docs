@@ -15,7 +15,7 @@ uid: General_Main_Release_10.4.0_CU10
 
 ### Breaking changes
 
-#### Automation: Locking behavior of Automation script actions has been enhanced [ID 41195]
+#### Automation: Locking behavior of automation script actions has been enhanced [ID 41195]
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 

@@ -11,7 +11,7 @@ uid: SwarmingScriptElement
 
 As a first step, create a short Automation script that will swarm a fixed element to a fixed destination:
 
-1. [Create a new Automation script](xref:Managing_Automation_scripts#adding-a-new-automation-script)
+1. [Create a new automation script](xref:Managing_Automation_scripts#adding-a-new-automation-script)
 
 1. Collect the following information:
 

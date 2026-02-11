@@ -580,7 +580,7 @@ In some cases, the default profile parameter mediation snippet would fail to com
 
 #### DataMiner Cube - Automation: DateTime control incorrectly updated with the DateTimeKind property \[ID 31190\]
 
-When, in an interactive Automation script, you had configured the DateTimeKind property of a DateTime control, in some cases, the control would incorrectly be updated with the DateTimeKind property instead of the actual datetime value.
+When, in an interactive automation script, you had configured the DateTimeKind property of a DateTime control, in some cases, the control would incorrectly be updated with the DateTimeKind property instead of the actual datetime value.
 
 #### Dashboards app: Duplicate options in GQI queries \[ID 31206\]
 
@@ -625,7 +625,7 @@ The initial checked/unchecked state of a non-recursive tree item would be incorr
 
 #### Interactive automation scripts: Dialog items could incorrectly inherit the dimensions of a dialog item shown earlier \[ID 31311\]
 
-When an interactive Automation script was launched from a web app, in some cases, a dialog item could incorrectly inherit the dimensions of a dialog item shown earlier.
+When an interactive automation script was launched from a web app, in some cases, a dialog item could incorrectly inherit the dimensions of a dialog item shown earlier.
 
 #### DataMiner Cube - Visual Overview: Table connections would disappear at certain zoom levels \[ID 32336\]
 

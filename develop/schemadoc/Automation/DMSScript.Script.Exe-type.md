@@ -31,7 +31,7 @@ Contains one of the following values:
 |logmessage|Creates a log message that will be saved in the SLAutomation.txt log file.|
 |notification|Sends a notification via email or SMS.|
 |report|Uploads a report to an FTP server or a shared folder.|
-|script|Runs another Automation script from within the current script.|
+|script|Runs another automation script from within the current script.|
 |set|Sets a parameter, memory position or variable.|
 |sleep|Pauses the automation script for the specified period of time.|
 |ui|Configures a dialog box asking for a user response.|

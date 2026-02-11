@@ -37,7 +37,7 @@ To create an automation script solution:
 
    ![Visual Studio configure your project](~/dataminer/images/UDAPIS_Tutorials_HelloWorld_DIS_SolutionSettings.jpg)
 
-1. Specify *HelloWorldAPI* as the name of your Automation script, fill in your name as the author, and click *Create*.
+1. Specify *HelloWorldAPI* as the name of your automation script, fill in your name as the author, and click *Create*.
 
    ![Visual Studio create Automation script](~/dataminer/images/UDAPIS_Tutorials_HelloWorld_DIS_ScriptSettings.jpg)
 

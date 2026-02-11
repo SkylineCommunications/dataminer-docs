@@ -30,11 +30,11 @@ If any of your existing solutions are using NuGet packages the old way (i.e. usi
 1. Repeat for every project in the current solution.
 
 > [!NOTE]
-> The DataMiner DevPacks can also be used in solutions other than protocol and Automation script solutions, for example in custom solutions such as the Class Library Community Packages, which are meant to be used as an API within protocol or Automation script solutions. If you have any custom solutions, make sure to the projects in those solutions also use the new DataMiner DevPacks.
+> The DataMiner DevPacks can also be used in solutions other than protocol and Automation script solutions, for example in custom solutions such as the Class Library Community Packages, which are meant to be used as an API within protocol or automation script solutions. If you have any custom solutions, make sure to the projects in those solutions also use the new DataMiner DevPacks.
 
 ##### Enhanced publishing of protocols and automation scripts
 
-Up to now, when you clicked the *Publish* button to publish a protocol or an automation script on a DataMiner Agent, only the protocol or Automation script XML file would get published on that DataMiner Agent.
+Up to now, when you clicked the *Publish* button to publish a protocol or an automation script on a DataMiner Agent, only the protocol or automation script XML file would get published on that DataMiner Agent.
 
 From now on, when you publish a protocol or an automation script, DIS will create either a *.dmprotocol* package (in case of a protocol) or a *.dmapp* package (in case of an automation script) in the background, install that package on the DataMiner Agent, and then automatically remove it again. This way, it will no longer be needed to manually copy all required DLL files on the DataMiner Agent in question.
 
@@ -44,7 +44,7 @@ Up to now, it was only possible to save a protocol or an automation script as an
 
 From now on, a protocol can be saved either as an XML file or as a *.dmprotocol* package and an automation script can be saved either as an XML file or a .dmapp package.
 
-If you choose to save a protocol or an automation script as a package, the package will contain the protocol or Automation script as well as all required DLL files (e.g. DLL files of NuGet packages that are used in the protocol or Automation script).
+If you choose to save a protocol or an automation script as a package, the package will contain the protocol or automation script as well as all required DLL files (e.g. DLL files of NuGet packages that are used in the protocol or automation script).
 
 #### Display editor: Enhanced DVE support [ID 33545]
 

@@ -30,7 +30,7 @@ uid: General_Feature_Release_10.5.8
 
 To prevent dropdown boxes in interactive automation scripts from getting loaded with too much data, it is now possible to filter the data that is loaded into a dropdown box.
 
-For an example showing how to implement a dropdown box filter in an interactive Automation script, see [Interactive automation scripts: Filtering values in a redesigned UI component 'DropDown' [ID 42845]](xref:Web_apps_Feature_Release_10.5.8#interactive-automation-scripts-filtering-values-in-a-redesigned-ui-component-dropdown-id-42845).
+For an example showing how to implement a dropdown box filter in an interactive automation script, see [Interactive automation scripts: Filtering values in a redesigned UI component 'DropDown' [ID 42845]](xref:Web_apps_Feature_Release_10.5.8#interactive-automation-scripts-filtering-values-in-a-redesigned-ui-component-dropdown-id-42845).
 
 > [!IMPORTANT]
 > This feature is only supported for interactive automation scripts executed in web apps. It is not supported for interactive automation scripts executed in DataMiner Cube.

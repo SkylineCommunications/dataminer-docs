@@ -18,8 +18,8 @@ If, in a file tab containing a protocol XML file or an automation script XML fil
 
 In the header of a file tab containing the C# code of a QAction or Exe code block, you can find two links:
 
-- A link to return to the file tab containing the associated protocol XML file or Automation script XML file at the location where the cursor was positioned when you last viewed the file.
-- A link to return to the associated protocol XML file or Automation script XML file at the location where the QAction or Exe code block is found.
+- A link to return to the file tab containing the associated protocol XML file or automation script XML file at the location where the cursor was positioned when you last viewed the file.
+- A link to return to the associated protocol XML file or automation script XML file at the location where the QAction or Exe code block is found.
 
 ## Inside the file tab
 

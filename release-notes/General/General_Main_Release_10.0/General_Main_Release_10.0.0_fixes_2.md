@@ -415,7 +415,7 @@ When working with the Dashboards app in Chrome, in some cases, a mouse click cou
 
 #### HTML5 apps: Selection box values containing backslash characters displayed incorrectly in interactive automation scripts \[ID 24541\]
 
-When an interactive Automation script was run from within an HTML5 app, in some cases, selection box values containing “\\” characters could be displayed incorrectly.
+When an interactive automation script was run from within an HTML5 app, in some cases, selection box values containing “\\” characters could be displayed incorrectly.
 
 #### DataMiner Cube: Clicking 'Open Cube Mobile' would not always direct you to the landing page \[ID 24560\]
 

@@ -86,7 +86,7 @@ Previously, if a query in a dashboard used the data source "Get parameter table 
 
 #### Automation: CheckboxList and RadiobuttonList not decoding backslash correctly \[ID 30605\]
 
-In an interactive Automation script, it could occur that the *CheckboxList* and *RadiobuttonList* components did not correctly decode a backslash ("\\") character.
+In an interactive automation script, it could occur that the *CheckboxList* and *RadiobuttonList* components did not correctly decode a backslash ("\\") character.
 
 #### Information about running elements missing in SLProtocol logging \[ID 30612\]
 

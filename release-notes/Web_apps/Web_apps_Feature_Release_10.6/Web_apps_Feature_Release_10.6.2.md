@@ -373,7 +373,7 @@ Parameter name: value
 When you entered a decimal value that started with a decimal point (e.g. ".05"), up to now, the decimal point would incorrectly be removed. For example, ".05" would incorrectly be changed to "05".
 
 > [!NOTE]
-> In some cases, this issue can still occur when entering a decimal value in a dialog box of an interactive Automation script that uses legacy UI components.
+> In some cases, this issue can still occur when entering a decimal value in a dialog box of an interactive automation script that uses legacy UI components.
 
 #### Dashboards/Low-Code Apps - Timeline component: Problem when zooming or panning while linked components trigger viewport changes [ID 44280]
 
@@ -414,7 +414,7 @@ In the DataMiner web apps, the following context menu issues have been solved:
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-When you started an interactive Automation script in a web app, up to now, the moment a component lost focus, subsequent user actions could incorrectly be ignored.
+When you started an interactive automation script in a web app, up to now, the moment a component lost focus, subsequent user actions could incorrectly be ignored.
 
 #### Web Services API: GetClientDefaultTimeZone and GetRegionalSettings would incorrectly not be able to read the regional settings of the DMA on systems using a Dashboard Gateway [ID 44317]
 

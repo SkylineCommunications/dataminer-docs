@@ -20,7 +20,7 @@ uid: AutomationActions
 |[Information](xref:AutomationActionInformation)|Generates an information event.|
 |[Label](xref:AutomationActionLabel)|Provides a label to enable transferring program control directly to the specified statement using a goto statement.|
 |[Log](xref:AutomationActionLog)|Creates a log message that will be saved in the SLAutomation.txt log file.|
-|[Script](xref:AutomationActionScript)|Runs another Automation script from within the current script.|
+|[Script](xref:AutomationActionScript)|Runs another automation script from within the current script.|
 |[Set](xref:AutomationActionSet)|Sets a parameter, memory position or script variable.|
 |[Set element state](xref:AutomationActionSetElementState)|Sets the state of a dummy in an automation script.|
 |[Sleep](xref:AutomationActionSleep)|Pauses the automation script for a particular period before it is allowed to continue.|

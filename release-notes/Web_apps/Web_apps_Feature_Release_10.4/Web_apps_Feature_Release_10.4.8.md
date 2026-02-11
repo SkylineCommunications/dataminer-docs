@@ -42,7 +42,7 @@ Up to now, a table cell hyperlink would by default be the URL of the DataMiner A
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-When an interactive Automation script was launched from a node edge graph or a context menu action, the script would incorrectly not inherit the theme of the dashboard or low-code app.
+When an interactive automation script was launched from a node edge graph or a context menu action, the script would incorrectly not inherit the theme of the dashboard or low-code app.
 
 #### Dashboards app & Low-Code Apps: Problems with feed links after migrating a dashboard or app [ID 39744]
 

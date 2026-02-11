@@ -30,7 +30,7 @@ To configure such an event:
 
 Note that an "On app open" event currently has the following limitations:
 
-- If you run an interactive Automation script with this event, the script window will always have a light gray background and will not inherit the background color of the page it is launched from.
+- If you run an interactive automation script with this event, the script window will always have a light gray background and will not inherit the background color of the page it is launched from.
 
 - Currently, linking is not supported. When a link is configured to a component value, the value will remain empty because the component is not yet loaded at the time when the action occurs. This also applies in case a value is passed through the URL.
 

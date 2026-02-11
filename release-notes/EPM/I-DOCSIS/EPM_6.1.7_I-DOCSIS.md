@@ -28,7 +28,7 @@ The following KPIs are included: CM MAC, IPv4 Address, DOCSIS Version, Status, V
 
 #### New Automation script to add CCAP/CM pair [ID 36459]
 
-A new Automation script, *EPM_I_DOCSIS_AddNewCcapCmPair*, is now available, which can be used to create a CCAP/CM pair from the EPM UI. The interactive script will take the user through the different steps of the configuration.
+A new automation script, *EPM_I_DOCSIS_AddNewCcapCmPair*, is now available, which can be used to create a CCAP/CM pair from the EPM UI. The interactive script will take the user through the different steps of the configuration.
 
 #### QAM Channels dashboard migration [ID 36684]
 

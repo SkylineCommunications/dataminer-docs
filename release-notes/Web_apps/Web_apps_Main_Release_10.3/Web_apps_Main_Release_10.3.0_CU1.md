@@ -72,7 +72,7 @@ Because of a number of enhancements, overall performance has increased when expo
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
-In a web app, an interactive Automation script component of type `Time` with configuration options of type `AutomationTimeUpDownOptions` would incorrectly not be displayed as a time span picker.
+In a web app, an interactive automation script component of type `Time` with configuration options of type `AutomationTimeUpDownOptions` would incorrectly not be displayed as a time span picker.
 
 Also, a number of enhancements have been made:
 
@@ -82,7 +82,7 @@ Also, a number of enhancements have been made:
 
 - In a web app environment, a calendar component will now always show the picker button (as in Cube).
 
-- When an interactive Automation script run in a web app environment contains executable components, a message will now be displayed, saying that executable components are not supported in web apps.
+- When an interactive automation script run in a web app environment contains executable components, a message will now be displayed, saying that executable components are not supported in web apps.
 
 #### Web apps: An invalid value entered into a text box would incorrectly be replaced by the last valid value that was entered [ID 35489]
 
@@ -100,13 +100,13 @@ When a query using the *Get parameter table by ID* data source had the *Update d
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
-In an interactive Automation script executed in a web app, components positioned in a row following a row that contained a component with a row span greater than 1 would not be positioned correctly.
+In an interactive automation script executed in a web app, components positioned in a row following a row that contained a component with a row span greater than 1 would not be positioned correctly.
 
 > [!NOTE]
-> If, in an interactive Automation script executed in a web app, a component is positioned on a cell that is overlapped by a component with a row span greater than 1, it will not be displayed.
+> If, in an interactive automation script executed in a web app, a component is positioned on a cell that is overlapped by a component with a row span greater than 1, it will not be displayed.
 
 > [!IMPORTANT]
-> **BREAKING CHANGE**: If, in an interactive Automation script designed to be executed in a web app, the column property was altered to position a component at a specific spot, because of this fix, the component in question will no longer be displayed. It will be hidden by the component of which the row span is greater than 1. The component can be made visible again by changing the column property.
+> **BREAKING CHANGE**: If, in an interactive automation script designed to be executed in a web app, the column property was altered to position a component at a specific spot, because of this fix, the component in question will no longer be displayed. It will be hidden by the component of which the row span is greater than 1. The component can be made visible again by changing the column property.
 
 #### Low-Code Apps: Sidebar would incorrectly be displayed when there was only one visible page [ID 35544]
 

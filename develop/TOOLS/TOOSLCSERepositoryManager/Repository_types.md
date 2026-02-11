@@ -55,7 +55,7 @@ Changes made to a dashboard repository trigger the corresponding [dashboard CI/C
 
 ## Examples
 
-This tab lists repositories that contain an example protocol or Automation script.
+This tab lists repositories that contain an example protocol or automation script.
 
 Changes made to an example repository trigger the corresponding example CI/CD pipeline.
 

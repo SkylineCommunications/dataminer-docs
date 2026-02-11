@@ -167,7 +167,7 @@ When an automation script action using dummies was linked to a node of a node ed
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
-When an interactive Automation script was used in a low-code app, input validation would not work correctly. When a validation failed, the border of the input field would turn red, but the corresponding error text would not be displayed.
+When an interactive automation script was used in a low-code app, input validation would not work correctly. When a validation failed, the border of the input field would turn red, but the corresponding error text would not be displayed.
 
 #### Dashboards app & Low-Code Apps: Timeline component would apply incorrect colors [ID 38130]
 

@@ -33,7 +33,7 @@ You can also use the *dotnet new* command to manage the templates. To install th
 dotnet new install Skyline.DataMiner.VisualStudioTemplates
 ```
 
-This will install the NuGet package. When that is done, you can create a connector or Automation script solution via the dotnet CLI. For example, to create a new Automation script solution, you can use the following command:
+This will install the NuGet package. When that is done, you can create a connector or automation script solution via the dotnet CLI. For example, to create a new automation script solution, you can use the following command:
 
 ```dotnetcli
 dotnet new dataminer-automation-solution -name "ExampleScript" -auth "Joe"

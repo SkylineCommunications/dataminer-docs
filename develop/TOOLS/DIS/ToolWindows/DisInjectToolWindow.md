@@ -8,7 +8,7 @@ If you click *Tool Windows > DIS Inject*, the *DIS Inject* window will appear.
 
 By default, the *DIS Inject* window will open undocked. Dock it just as you would dock any other tool window in Visual Studio.
 
-This tool window allows you to make the necessary preparations before debugging the connector QAction(s) or Automation script C# Exe block(s) you are editing.
+This tool window allows you to make the necessary preparations before debugging the connector QAction(s) or automation script C# Exe block(s) you are editing.
 
 For step-by-step instructions on how to debug connector QActions and Automation script C# Exe blocks, see [Debugging connectors and automation scripts](xref:Debugging_connectors_and_Automation_scripts).
 

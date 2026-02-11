@@ -24,7 +24,7 @@ The log levels for each Automation script are indicated to the right of the DMA 
 
 The lowest log level is 0, "No logging", which means that only essential information is logged and any more specific and detailed information is left out.
 
-In the *Log settings* section, you can change the log levels for a specific Automation script.
+In the *Log settings* section, you can change the log levels for a specific automation script.
 
 To change the log levels:
 

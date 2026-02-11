@@ -115,7 +115,7 @@ ADDITIONAL INFORMATION:
 
 From DataMiner 10.6.0/10.6.1 onwards, you can integrate Document Intelligence directly into [DataMiner Automation](xref:automation).
 
-The following code snippet shows how to use the built-in API call. The namespaces shown below require the NuGet package `Skyline.DataMiner.Dev.Automation` (version 10.6.0 or higher) to be included in your Automation script project.
+The following code snippet shows how to use the built-in API call. The namespaces shown below require the NuGet package `Skyline.DataMiner.Dev.Automation` (version 10.6.0 or higher) to be included in your automation script project.
 
 ```csharp
 using Skyline.DataMiner.Net.Apps.DocumentIntelligence;

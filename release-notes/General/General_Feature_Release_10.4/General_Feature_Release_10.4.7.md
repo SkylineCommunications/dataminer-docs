@@ -305,9 +305,9 @@ In some cases, an `InvalidOperationException` could be thrown when a .NET Framew
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
-When a client application lost connection while an interactive Automation script was being run, up to now, the script would stop as it was not able to continue once the connection was re-established.
+When a client application lost connection while an interactive automation script was being run, up to now, the script would stop as it was not able to continue once the connection was re-established.
 
-From now on, when a client application loses connection while an interactive Automation script is being run, the script will continue once the connection is re-established.
+From now on, when a client application loses connection while an interactive automation script is being run, the script will continue once the connection is re-established.
 
 #### API Gateway: Problem when processing a large number of parallel calls [ID 39550]
 
