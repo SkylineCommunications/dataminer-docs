@@ -46,7 +46,7 @@ To configure a new or existing measurement point:
    > [!NOTE]
    >
    > - To configure a parameter set of a matrix parameter, when you have selected the parameter, click the value field. A pop-up box will then appear in which you can select the input and output and indicate whether these should be connected.
-   > - For more information on configuring a measurement point to execute an Automation script, see [Making a measurement point execute a script before taking a trace](xref:Making_a_measurement_point_execute_a_script_before_taking_a_trace).
+   > - For more information on configuring a measurement point to execute an automation script, see [Making a measurement point execute a script before taking a trace](xref:Making_a_measurement_point_execute_a_script_before_taking_a_trace).
 
 1. Optionally, in the *Advanced* section:
 

@@ -135,7 +135,7 @@ The *errorCode* field of an error contains an error code that can be used by the
 | InvalidActionMeta | 9 | 500 | The `ActionMeta` object does not match the specified `ActionType` in the API definition. |
 | BodyToParametersConversionFailed | 10 | 400 | Something went wrong while trying to convert the body to a collection of key value parameters. See [User input data](xref:UD_APIs_Define_New_API#user-input-data). |
 | InvalidActionType | 11 | 500 | The `ActionType` that is specified in the API definition is not valid. |
-| AutomationActionError | 12 | 500 | An error occurred while trying to execute an Automation script action. |
+| AutomationActionError | 12 | 500 | An error occurred while trying to execute an automation script action. |
 | InvalidAutomationActionResult | 13 | 500 | The result returned by the Automation script was null or invalid. |
 | FailedToGetScriptInfo | 15 | 500 | Could not get the script info required to execute the script. |
 | MissingScriptParameters | 16 | 400 | There are missing script parameters in the request body. The "error" JSON object will contain the missing script parameters as a `missingScriptParameters` array. |

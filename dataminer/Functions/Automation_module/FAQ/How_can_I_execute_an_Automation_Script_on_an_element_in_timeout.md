@@ -4,7 +4,7 @@ uid: How_can_I_execute_an_Automation_Script_on_an_element_in_timeout
 
 # How can I execute an automation script on an element in timeout?
 
-Normally, when you run an Automation script on an element in timeout, the script will fail.
+Normally, when you run an automation script on an element in timeout, the script will fail.
 
 However, there are two different ways to ensure a script will run successfully regardless of the state of the elements.
 

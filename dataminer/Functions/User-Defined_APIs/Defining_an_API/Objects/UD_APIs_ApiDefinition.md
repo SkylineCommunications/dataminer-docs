@@ -56,7 +56,7 @@ Using the `ActionType` and `ActionMeta` properties, you can define which action 
 
 #### AutomationScript
 
-This is the default value of the `ActionType` property. It will execute an Automation script through the `OnApiTrigger` entry point method.
+This is the default value of the `ActionType` property. It will execute an automation script through the `OnApiTrigger` entry point method.
 
 To define which script should be executed and how the input data should be handled, you will need to assign an `AutomationScriptActionMeta` instance to the `ActionMeta` property. This has the following fields:
 

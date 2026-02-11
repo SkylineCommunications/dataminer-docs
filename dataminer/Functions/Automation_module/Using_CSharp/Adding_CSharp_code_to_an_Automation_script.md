@@ -201,7 +201,7 @@ public delegate void AutomationEntryPointTest(IEngine engine, string testMessage
 >
 > - The entry points must be public. They may be static or non-static.
 > - The method names and parameter names can be chosen at will.
-> - Cube does not support custom entry points. As such, to execute an Automation script from Cube, you need a Script class with a Run method. Custom entry points can be used when executing an Automation script using the *ExecuteScriptMessage* class.
+> - Cube does not support custom entry points. As such, to execute an automation script from Cube, you need a Script class with a Run method. Custom entry points can be used when executing an automation script using the *ExecuteScriptMessage* class.
 
 Restrictions:
 

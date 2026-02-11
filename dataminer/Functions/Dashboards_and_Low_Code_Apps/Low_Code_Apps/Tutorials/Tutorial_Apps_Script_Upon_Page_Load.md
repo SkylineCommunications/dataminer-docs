@@ -3,7 +3,7 @@ uid: Tutorial_Apps_Script_Upon_Page_Load
 ---
 # Running a script when a page opens
 
-This tutorial explains how you can run an Automation script every time a user opens a page.
+This tutorial explains how you can run an automation script every time a user opens a page.
 
 Expected duration: 10 minutes
 

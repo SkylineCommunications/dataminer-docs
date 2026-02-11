@@ -29,7 +29,7 @@ You can configure actions for different types of events in DataMiner Low-Code Ap
 Other types are possible depending on the component and the DataMiner version. For each of these events, you can configure actions as detailed below.
 
 > [!TIP]
-> Actions can be combined and chained to create more complex behavior. For example, an *Open a page* action can be followed by an *Open a panel* action to open a panel on a specific page. While the panel is being opened, a *Launch a script* action can execute an Automation script that updates parameters that will be displayed on that panel. All of this can be triggered from a header bar button, for example on the initial page.
+> Actions can be combined and chained to create more complex behavior. For example, an *Open a page* action can be followed by an *Open a panel* action to open a panel on a specific page. While the panel is being opened, a *Launch a script* action can execute an automation script that updates parameters that will be displayed on that panel. All of this can be triggered from a header bar button, for example on the initial page.
 >
 > See also: [Tutorials — Running a script when a page opens](xref:Tutorial_Apps_Script_Upon_Page_Load) and [Tutorials — Chaining actions](xref:Tutorial_Apps_Chaining_Actions).
 

@@ -4,7 +4,7 @@ uid: Sleep
 
 # Sleep
 
-Use this action to pause an Automation script for a particular period of time before it is allowed to continue.
+Use this action to pause an automation script for a particular period of time before it is allowed to continue.
 
 To determine how long the script has to pause, click the underlined section and specify a number of milliseconds.
 
