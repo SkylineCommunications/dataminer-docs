@@ -6,7 +6,7 @@ uid: AutomationActions
 
 |Name|Description|
 |--- |--- |
-|[Assign dummy](xref:AutomationActionAssignDummy)|Assigns an Automation script's dummy to a specific element by using a variable or a value.|
+|[Assign dummy](xref:AutomationActionAssignDummy)|Assigns an automation script's dummy to a specific element by using a variable or a value.|
 |[Assign template](xref:AutomationActionAssignTemplate)|Assigns an alarm or trend template to a dummy.|
 |[C# code](xref:AutomationActionCSharpCode)|Executes C# code.|
 |[Clear memory](xref:AutomationActionClearMemory)|Clears the content of the specified Automation script memory file.|
@@ -22,7 +22,7 @@ uid: AutomationActions
 |[Log](xref:AutomationActionLog)|Creates a log message that will be saved in the SLAutomation.txt log file.|
 |[Script](xref:AutomationActionScript)|Runs another Automation script from within the current script.|
 |[Set](xref:AutomationActionSet)|Sets a parameter, memory position or script variable.|
-|[Set element state](xref:AutomationActionSetElementState)|Sets the state of a dummy in an Automation script.|
+|[Set element state](xref:AutomationActionSetElementState)|Sets the state of a dummy in an automation script.|
 |[Sleep](xref:AutomationActionSleep)|Pauses the Automation script for a particular period before it is allowed to continue.|
 |[SMS](xref:AutomationActionSms)|Sends a Short Message Service (SMS) message to the specified destination.|
 |[Upload report to FTP](xref:AutomationActionUploadReportToFtp)|Uploads a report to an FTP server.|

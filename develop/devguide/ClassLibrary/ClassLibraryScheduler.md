@@ -128,7 +128,7 @@ Before creating a scheduled task, you first need to **define its intended recurr
    schedulerTask.ISchedulerFinalAction = automationScriptAction;
    ```
 
-   This example sets an Automation script (*runAsync* flag) named "Script Name" to be executed asynchronously, with two input parameters (*InputScriptParam1* and *InputScriptParam2*). The optional *checkSets* flag determines whether a read parameter will be checked for a new value after a set command.
+   This example sets an automation script (*runAsync* flag) named "Script Name" to be executed asynchronously, with two input parameters (*InputScriptParam1* and *InputScriptParam2*). The optional *checkSets* flag determines whether a read parameter will be checked for a new value after a set command.
 
    > [!NOTE]
    > It is possible to define a **final action** that will be executed when the Scheduler task is removed. In the presented case, the same Automation script action will be executed.

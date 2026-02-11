@@ -13,7 +13,7 @@ A few common examples:
 
 - The methods in the executor could be used to translate the content of your InterApp message into a serial, SNMP, HTTP, etc. command to be sent to the device.
 - The methods could be used to perform parameter gets and sets based on the message content.
-- An executor could be created in an Automation script to create an information message to indicate that a message was received.
+- An executor could be created in an automation script to create an information message to indicate that a message was received.
 - etc.
 
 You create an executor by making a new class that inherits from `MessageExecutor<T>`, where T is a class from your messages defined in the API.

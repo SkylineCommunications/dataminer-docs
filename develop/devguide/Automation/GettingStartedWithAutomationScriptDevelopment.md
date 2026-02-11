@@ -12,11 +12,11 @@ uid: GettingStartedWithAutomationScriptDevelopment
 
 ## Executing Automation scripts
 
-- [Linking a Visio shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)
-- [Running an Automation script from a Correlation rule](xref:Running_an_Automation_script_from_a_Correlation_rule)
-- [Adding a scheduled task that executes an Automation script at a specific time](xref:Manually_adding_a_scheduled_task)
-- [Adding a custom command to the Alarm Console shortcut menu that executes an Automation script when clicked](xref:Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu)
-- [Executing an Automation script when a switchover occurs in a redundancy group](xref:Creating_a_redundancy_group)
+- [Linking a Visio shape to an automation script](xref:Linking_a_shape_to_an_Automation_script)
+- [Running an automation script from a correlation rule](xref:Running_an_Automation_script_from_a_Correlation_rule)
+- [Adding a scheduled task that executes an automation script at a specific time](xref:Manually_adding_a_scheduled_task)
+- [Adding a custom command to the Alarm Console shortcut menu that executes an automation script when clicked](xref:Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu)
+- [Executing an automation script when a switchover occurs in a redundancy group](xref:Creating_a_redundancy_group)
 
 ## Basic script development
 

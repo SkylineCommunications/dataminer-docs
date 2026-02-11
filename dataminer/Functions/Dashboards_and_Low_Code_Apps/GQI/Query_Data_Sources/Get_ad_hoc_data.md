@@ -10,7 +10,7 @@ When you create a GQI query, many built-in data sources are available to use. Ho
 - Accessing data from DataMiner for which no built-in data source exists yet
 - Specialized performance optimizations (caching, data stitching, etc.)
 
-An ad hoc data source retrieves external data based on an Automation script that is compiled as a library. The data can for example be retrieved from a CSV file, a MySQL database, or an API endpoint. If no such Automation script has been configured, this option is not available.
+An ad hoc data source retrieves external data based on an automation script that is compiled as a library. The data can for example be retrieved from a CSV file, a MySQL database, or an API endpoint. If no such Automation script has been configured, this option is not available.
 
 For more information on how you can create ad hoc data sources, see [Ad hoc data sources](xref:GQI_Ad_hoc_data_sources).
 

@@ -16,7 +16,7 @@ To run a Correlation analyzer:
 
 1. To stop real-time analyzing, click *Stop analyzing*. Analysis of history alarms will stop automatically as soon as the analyzer is ready.
 
-   The status of the analyzer will return to *Idle*, and a Correlation rule will be proposed under *Results*.
+   The status of the analyzer will return to *Idle*, and a correlation rule will be proposed under *Results*.
 
 1. To view the proposed Correlation rule, right-click the result and select *Add to correlation*.
 

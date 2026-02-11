@@ -48,7 +48,7 @@ See the following example:
 ```
 
 > [!NOTE]
-> When you specify an Automation script in a hyperlink, you only need to use the "Script:" prefix in legacy hyperlinks. In second-generation hyperlinks, this prefix has no function, as the [type](xref:HyperLinks.HyperLink-type) attribute clearly specifies that it concerns a reference to an Automation script.
+> When you specify an automation script in a hyperlink, you only need to use the "Script:" prefix in legacy hyperlinks. In second-generation hyperlinks, this prefix has no function, as the [type](xref:HyperLinks.HyperLink-type) attribute clearly specifies that it concerns a reference to an automation script.
 
 ### [Second-generation hyperlink syntax](#tab/secondgenerationsyntax)
 
@@ -219,4 +219,4 @@ Example:
 ```
 
 > [!TIP]
-> See also: [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)
+> See also: [Linking a shape to an automation script](xref:Linking_a_shape_to_an_Automation_script)

@@ -51,7 +51,7 @@ To configure an event to launch a script:
 > [!IMPORTANT]
 > From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!-- RN 39027 -->, linking a script parameter to empty data (or to an empty feed, prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->) will fill it with an empty array. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
 
-From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43222-->, the output of an Automation script can be used in the post actions of a *Launch a script* action. See [Configuring another action for the same event](#configuring-another-action-for-the-same-event).
+From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43222-->, the output of an automation script can be used in the post actions of a *Launch a script* action. See [Configuring another action for the same event](#configuring-another-action-for-the-same-event).
 
 To use this output as data:
 

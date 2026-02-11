@@ -4,7 +4,7 @@ uid: Escalating_an_event
 
 # Escalating an event
 
-Use this action to escalate each of the base alarms of a Correlation rule by one level. This means alarms will escalate as follows:
+Use this action to escalate each of the base alarms of a correlation rule by one level. This means alarms will escalate as follows:
 
 | Base alarm | Correlated alarm |
 |------------|------------------|

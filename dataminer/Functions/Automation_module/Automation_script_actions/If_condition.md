@@ -32,4 +32,4 @@ To add a condition:
 
 > [!NOTE]
 > - The *Then* and *Else* sections can in turn also contain If conditions.
-> - Add a Sleep action in the *Then* and *Else* sections to specify a period of time during which the Automation script has to pause in order to check if the condition is true or false.
+> - Add a Sleep action in the *Then* and *Else* sections to specify a period of time during which the automation script has to pause in order to check if the condition is true or false.

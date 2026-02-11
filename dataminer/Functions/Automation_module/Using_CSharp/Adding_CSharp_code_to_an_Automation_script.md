@@ -31,7 +31,7 @@ To add C# code to a script:
      >   - using Skyline.DataMiner.Net.Messages
      >   - using Skyline.DataMiner.Net.AutomationUI
 
-   - *DLL references*: Allows you to reference DLLs that are required by the Automation script.
+   - *DLL references*: Allows you to reference DLLs that are required by the automation script.
 
      > [!NOTE]
      > The following DLLs are referenced by default:
@@ -59,7 +59,7 @@ You can interact with the Automation Engine by interacting with an instance of t
 
 When you type `engine.` in the code editor, you will be presented with a dropdown list of all statements available in the Automation Engine.
 
-By default, C# code used in an Automation script throws an exception when it encounters an undefined or an empty parameter. However, if you add the following line in an Automation script action of type *C# code*, null will be returned instead.
+By default, C# code used in an automation script throws an exception when it encounters an undefined or an empty parameter. However, if you add the following line in an automation script action of type *C# code*, null will be returned instead.
 
 Example:
 
@@ -141,7 +141,7 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
     > - Custom entry points are possible. See [Custom entry points](#custom-entry-points).
 
     > [!IMPORTANT]
-    > Be careful how you handle async code in an Automation script. See [Handling async code](xref:Handling_Async_Code).
+    > Be careful how you handle async code in an automation script. See [Handling async code](xref:Handling_Async_Code).
 
 ## Preprocessor directives
 
@@ -214,7 +214,7 @@ Restrictions:
 - The script must contain the string "class Script" as otherwise DataMiner will wrap the code. See [Script class](#script-class).
 
 > [!IMPORTANT]
-> Be careful how you handle async code in an Automation script. See [Handling async code](xref:Handling_Async_Code).
+> Be careful how you handle async code in an automation script. See [Handling async code](xref:Handling_Async_Code).
 
 > [!NOTE]
 > From DataMiner 10.5.7/10.6.0 <!-- RN 42969 --> onwards, the [OnRequestScriptInfo](xref:Skyline.DataMiner.Automation.AutomationEntryPointType.Types.OnRequestScriptInfo) entry point allows other Automation scripts (or any other code) to request information about the script in question. Information about implementing that entry point and executing it is available in [this how-to](xref:Implementing_OnRequestScriptInfo_Entry_Point).

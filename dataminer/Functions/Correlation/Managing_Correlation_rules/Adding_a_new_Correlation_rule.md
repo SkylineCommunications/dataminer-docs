@@ -21,7 +21,7 @@ To create a functional new rule, you will also need to do the following:
 - Add rule actions, which will be executed when the rule is triggered. See [Adding rule actions in Correlation rules](xref:Adding_rule_actions_in_Correlation_rules).
 
 > [!NOTE]
-> The following minimum requirements must be met before you can enable a Correlation rule:
+> The following minimum requirements must be met before you can enable a correlation rule:
 >
 > - At least one valid rule action is configured.
 > - At least one of the following conditions is met:

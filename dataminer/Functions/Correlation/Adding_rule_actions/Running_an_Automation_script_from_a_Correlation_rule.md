@@ -2,7 +2,7 @@
 uid: Running_an_Automation_script_from_a_Correlation_rule
 ---
 
-# Running an Automation script from a Correlation rule
+# Running an Automation script from a correlation rule
 
 To run an automation script from a correlation rule:
 
@@ -29,5 +29,5 @@ To run an automation script from a correlation rule:
 
 > [!NOTE]
 >
-> - To pass information about the alarm that triggered the Correlation rule to the script, you can use the special parameters with ID 65005 and 65006. For more detailed information, see [Special parameters available in DataMiner Automation scripts](xref:Special_parameters_available_in_DMS_Automation_scripts).
+> - To pass information about the alarm that triggered the correlation rule to the script, you can use the special parameters with ID 65005 and 65006. For more detailed information, see [Special parameters available in DataMiner Automation scripts](xref:Special_parameters_available_in_DMS_Automation_scripts).
 > - Prior to DataMiner 10.5.2/10.6.0<!--RN 41653-->, an information event will automatically be generated when an Automation script is triggered by the Correlation engine. If you also want this to happen in versions from DataMiner 10.5.2/10.6.0 onwards, you will need to set the *SkipInformationEvents* option to "false" in *MaintenanceSettings.xml*. See [Enabling information events when scripts are started by Correlation rules or scheduled tasks](xref:Configuration_of_DataMiner_processes#enabling-information-events-when-scripts-are-started-by-correlation-rules-or-scheduled-tasks).

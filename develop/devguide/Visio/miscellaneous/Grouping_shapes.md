@@ -57,7 +57,7 @@ When there are multiple grouping levels, the element will be determined bottom-u
 > See also:
 >
 > - [Linking a shape to a SET command](xref:Linking_a_shape_to_a_SET_command)
-> - [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)
+> - [Linking a shape to an automation script](xref:Linking_a_shape_to_an_Automation_script)
 
 ## Extending a container shape shortcut menu with child shape shortcut menu items
 

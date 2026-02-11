@@ -6,7 +6,7 @@ uid: Adding_rule_actions_in_Correlation_rules
 
 In the *Correlation* module in Cube, select a rule in the tree view pane on the left in order to add rule actions to it in the details pane on the right.
 
-In the *Actions* section of the details pane, specify the actions that will be executed when the Correlation rule is triggered.
+In the *Actions* section of the details pane, specify the actions that will be executed when the correlation rule is triggered.
 
 There are several possible types of actions:
 
@@ -18,7 +18,7 @@ There are several possible types of actions:
 
 - Creating a new, correlated alarm. See [Triggering a correlated alarm](xref:Triggering_a_correlated_alarm).
 
-- Running an Automation script. See [Running an Automation script from a Correlation rule](xref:Running_an_Automation_script_from_a_Correlation_rule).
+- Running an Automation script. See [Running an Automation script from a correlation rule](xref:Running_an_Automation_script_from_a_Correlation_rule).
 
 - Sending an email. See [Sending an email](xref:Sending_an_email).
 

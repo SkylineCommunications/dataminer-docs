@@ -25,7 +25,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | MD5 | Message Digest 5. Cryptographic hash algorithm. |
 | Measurement point | In the context of [Spectrum Analysis](xref:SpectrumAnalysis), a measurement point is series of sets that is executed on devices to select an input for a spectrum analyzer device, e.g. to set a switch to the correct position. |
 | Mediation protocol | Standardized protocol that forms a mediation layer on top of device-specific protocols, thereby providing a unified view on similar devices that have a different device-specific protocol. Also known as base protocol. |
-| Memory file | Variable within an Automation script that consists of a container of values. See [Script variables](xref:Script_variables). |
+| Memory file | Variable within an automation script that consists of a container of values. See [Script variables](xref:Script_variables). |
 | MER | Modulation Error Ratio. Measurement of the performance of a digital media transmitter or receiver in a communications system using digital modulation. |
 | MFN | Multifrequency Network. Network where multiple radio frequencies are used to transmit media content. |
 | MHEG-5 | Set of international standards regarding the presentation of multimedia information, standardized by the Multimedia and Hypermedia Experts Group (MHEG). |

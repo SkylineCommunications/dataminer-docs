@@ -89,6 +89,6 @@ The [SLNetClientTest tool](xref:SLNetClientTest_tool_advanced_procedures) is an 
 
 In the SLNetClientTest tool, after you have [connected to the DMA](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool), go to *Diagnostics > SLNet > Stacksizes* and check the output.
 
-When you see a high number in the Correlation thread, this typically means something is blocking the thread. As mentioned above, this could be a Correlation rule with a delay (because the Sleep function is used), which is repeatedly getting triggered.
+When you see a high number in the Correlation thread, this typically means something is blocking the thread. As mentioned above, this could be a correlation rule with a delay (because the Sleep function is used), which is repeatedly getting triggered.
 
 If the high Correlation thread issue persists, check this value on all DMAs in the cluster. After you have generated the Stacksizes message, right-click it in the list on the *Properties* tab, select *View across cluster*, and filter on Correlation. This can help you pinpoint the root cause.

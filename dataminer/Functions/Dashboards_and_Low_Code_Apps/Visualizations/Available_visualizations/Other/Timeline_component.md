@@ -314,7 +314,7 @@ Some **real-life examples**:
 
   ![Timeline - Change state](~/dataminer/images/TimelineChangeState.gif)<br>*Timeline component in DataMiner 10.5.4*
 
-  Beyond changing the visual appearance, actions were configured on the icon layer so that clicking it opens a context menu. This menu allows users to manually update the icon and, at the same time, modify the underlying task status via an Automation script.
+  Beyond changing the visual appearance, actions were configured on the icon layer so that clicking it opens a context menu. This menu allows users to manually update the icon and, at the same time, modify the underlying task status via an automation script.
 
 - In this example, the timeline component is used as an interactive TV schedule, styled with customized colors, icons, and more. A conditional case ensures that when a program has been recorded, a red dot appears in the top-right corner of the item.
 
@@ -413,7 +413,7 @@ When [a user interacts with the timeline](#interacting-with-the-timeline-compone
 
 This is useful because it allows you to:
 
-- **Update your data through an Automation script** based on what the user did.
+- **Update your data through an automation script** based on what the user did.
 
 - **Keep the timeline and your data in sync**, so changes are not just visual.
 

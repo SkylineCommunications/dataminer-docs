@@ -41,7 +41,7 @@ When used in dashboards, the soft-launch button component can be used to **execu
 
 > [!NOTE]
 >
-> - If the *ReportsAndDashboardsAutomationScript* soft-launch option is enabled as well, this component functions as an Automation script component, and you can link it directly to an Automation script in the *Settings* pane. However, if you add a button parameter to the component, it will still act as a parameter button even with this soft-launch option.
+> - If the *ReportsAndDashboardsAutomationScript* soft-launch option is enabled as well, this component functions as an automation script component, and you can link it directly to an automation script in the *Settings* pane. However, if you add a button parameter to the component, it will still act as a parameter button even with this soft-launch option.
 > - From DataMiner 10.2.5/10.3.0 onwards, the output of an (interactive) Automation script can be used as data for other components, for example in a GQI query.
 
 ### Dashboard button layout
@@ -64,7 +64,7 @@ The following optional settings are available for the soft-launch button compone
 
 - In case the component displays more than one parameter, configure how the parameters should be grouped: by parameter, by element, by table index (if relevant) or by all the above together.
 
-- In case the button triggers an Automation script, additional settings will also be available related to this script.
+- In case the button triggers an automation script, additional settings will also be available related to this script.
 
   - Depending on the script configuration, it may be possible to configure the parameters and/or dummies used in the script. For each of the parameters and dummies, a checkbox allows you to select whether these are required, i.e. whether the script can be executed only if these are filled in.
 

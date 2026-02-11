@@ -2,16 +2,16 @@
 uid: Linking_a_shape_to_an_Automation_script
 ---
 
-# Linking a shape to an Automation script
+# Linking a shape to an automation script
 
-When a shape is linked to an Automation script, by default this script will be executed each time a user clicks that shape.
+When a shape is linked to an automation script, by default this script will be executed each time a user clicks that shape.
 
 > [!NOTE]
 >
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *Solutions* > *Other* > *Visual Overview Design Examples* view > *[linking > EXE]* page.
 > - Aside from the default **Execute** shape data, you can also use **OnClose** shape data to link to a script. See [Specifying a script to be executed when the page is closed](#specifying-a-script-to-be-executed-when-the-page-is-closed).
 
-To link a shape to an Automation script:
+To link a shape to an automation script:
 
 - Add a shape data field of type **Execute** to the shape, and set its value to:
 
@@ -97,7 +97,7 @@ For example, in the configuration below, the first-level separator "\|" is repla
 
 ## Passing Automation script output to session variables
 
-When an Automation script executed in Visual Overview finishes successfully, the output values of that script can be passed to session variables in Visual Overview. From DataMiner 10.2.6/10.3.0 onwards, this is also supported for interactive Automation scripts.
+When an automation script executed in Visual Overview finishes successfully, the output values of that script can be passed to session variables in Visual Overview. From DataMiner 10.2.6/10.3.0 onwards, this is also supported for interactive Automation scripts.
 
 To configure this in the script, use the *CreateKey(string variablename)* method (namespace: *Skyline.DataMiner.Automation*, class name: *UIVariables.VisualOverview*).
 

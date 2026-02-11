@@ -495,7 +495,7 @@ The **ComponentActions** shape data field should contain a JSON object with the 
 
 - **Type**: Can be "script" or "set". Determines the type of action to be executed:
 
-  - *script*: Run an Automation script.
+  - *script*: Run an automation script.
 
   - *set*: Perform a parameter set.
 

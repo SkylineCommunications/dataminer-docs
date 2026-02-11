@@ -192,7 +192,7 @@ uid: QuestionsAndAnswers
 
     A protocol.CheckTrigger makes sure that the action is not started from the protocol thread but from a new thread created by the QAction. It is therefore not possible to start e.g. "Set with wait" from a QAction unless you put a group in the queue where the "Set with wait" is.
 
-1. *When the protocol has a table on which settings will be done from an Automation script, what do you need to look out for and how can it be solved?*
+1. *When the protocol has a table on which settings will be done from an automation script, what do you need to look out for and how can it be solved?*
 
     An Automation script performs settings very fast, which can mean that a parameter that is used in a command or in an SNMP set can already be changed again before it has actually been sent to the device. This can be solved by implementing a buffer for serial sets; for SNMP sets it is now possible to perform SNMP sets/gets from within a QAction.
 

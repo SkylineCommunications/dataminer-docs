@@ -40,10 +40,10 @@ When defining notification message templates in the *NotifyTemplates.xml* file, 
 
 - **\[Format\]-notifications**
 
-  The notification message sent independently (not as a result of a Correlation rule).
+  The notification message sent independently (not as a result of a correlation rule).
 
 > [!TIP]
-> For more information on how to configure a Correlation rule to send a notification message, see [Sending an email](xref:Sending_an_email)
+> For more information on how to configure a correlation rule to send a notification message, see [Sending an email](xref:Sending_an_email)
 
 ### Template name prefixes indicating the message format
 

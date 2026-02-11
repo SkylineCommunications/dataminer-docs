@@ -26,11 +26,11 @@ The trigger consists of:
 
 The event is a combination of:
 
-- One or more alarm filters (optional): These limit the number of alarms that will be taken into consideration for the Correlation rule.
+- One or more alarm filters (optional): These limit the number of alarms that will be taken into consideration for the correlation rule.
 
 - Alarm grouping (optional): This combines alarms matching the same criteria into separate correlated alarms. For example, when alarms are grouped per element, one correlated alarm is created per element.
 
-- Rule conditions: These conditions determines when the Correlation rule is triggered. Ideally, a Correlation rule should always contain at least one condition.
+- Rule conditions: These conditions determines when the correlation rule is triggered. Ideally, a correlation rule should always contain at least one condition.
 
 ![Correlation rule concept](~/dataminer/images/Correlation_rulev2.jpg)
 
@@ -54,13 +54,13 @@ In the DMS, each rule is either handled by one specific DMA, or handled by all D
 
 - If this option is selected, the rule will accept all alarm events from the entire DMS that match the configured alarm filter. One single rule can combine base alarm events from multiple Agents.
 
-- Otherwise, each DMA will individually manage the rule for its local alarm events only. There will be no actions combining base alarm events from multiple DMAs. This means that, for example, if there are three different elements, each on a different DMA, for which a Correlation rule triggers an alarm, these could trigger three separate correlated alarms, rather than one combined alarm.
+- Otherwise, each DMA will individually manage the rule for its local alarm events only. There will be no actions combining base alarm events from multiple DMAs. This means that, for example, if there are three different elements, each on a different DMA, for which a correlation rule triggers an alarm, these could trigger three separate correlated alarms, rather than one combined alarm.
 
 ### What if the connection between Agents is lost?
 
 If a rule is managed by one single DMA, events will be collected from the point of view of that DMA:
 
-- When the connection is lost with a remote DMA, the base events which originated from that DMA will no longer be taken into account for the Correlation rule. Once the connection is restored, these base events will be included again, and actions will be updated if necessary.
+- When the connection is lost with a remote DMA, the base events which originated from that DMA will no longer be taken into account for the correlation rule. Once the connection is restored, these base events will be included again, and actions will be updated if necessary.
 
 - When a remote Agent is not available at the moment when a correlated alarm event needs to be generated, the alarm is created as soon as the connection with the Agent becomes available, unless the condition has been cleared by then.
 
@@ -75,4 +75,4 @@ When a remote Agent is disconnected, this can cause actions to be executed for r
 When contact with the remote Agent is re-established, this can also cause actions to be executed, as the remote base alarms are added again.
 
 > [!NOTE]
-> If an alarm event was both cleared and generated on a remote Agent while no connection was available with that Agent, this event will never be included as a base alarm event for a Correlation rule handled only by the local Agent.
+> If an alarm event was both cleared and generated on a remote Agent while no connection was available with that Agent, this event will never be included as a base alarm event for a correlation rule handled only by the local Agent.

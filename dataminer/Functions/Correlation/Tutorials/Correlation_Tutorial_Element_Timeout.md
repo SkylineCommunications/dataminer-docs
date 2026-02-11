@@ -23,7 +23,7 @@ Expected duration: 15 minutes
 This tutorial consists of the following steps:
 
 - [Step 1: Deploy the 'Correlation KATA Switch Timeout' item from the Catalog](#step-1-deploy-the-correlation-kata-switch-timeout-item-from-the-catalog)
-- [Step 2: Create the Correlation rule](#step-2-create-the-correlation-rule)
+- [Step 2: Create the correlation rule](#step-2-create-the-correlation-rule)
 - [Step 3: Generate a timeout alarm](#step-3-generate-a-timeout-alarm)
 - [Step 4: Verify whether the rule actions have been executed](#step-4-verify-whether-the-rule-actions-have-been-executed)
 
@@ -38,9 +38,9 @@ This tutorial consists of the following steps:
 
 When the package has been deployed, the Automation script *Correlation KATA switch timeout Script* and the element *Correlation KATA Switch Timeout - Network Switch* will become available in the DataMiner System. You can find the element in the Surveyor under *DataMiner Catalog* > *Correlation KATA* > *Network Switch Timeout*.
 
-## Step 2: Create the Correlation rule
+## Step 2: Create the correlation rule
 
-In this step, you will create a Correlation rule that will trigger based on alarms from the *Correlation KATA Switch Timeout - Network Switch* element. If the element is in timeout for longer than 5 minutes, the rule will take action, and an Automation script will generate an information event.
+In this step, you will create a correlation rule that will trigger based on alarms from the *Correlation KATA Switch Timeout - Network Switch* element. If the element is in timeout for longer than 5 minutes, the rule will take action, and an Automation script will generate an information event.
 
 1. In DataMiner Cube, go to *Apps* > *Modules* > *Correlation* to open the Correlation module.
 
@@ -48,7 +48,7 @@ In this step, you will create a Correlation rule that will trigger based on alar
 
 1. In the *Name* box on the right, specify a name of your choice, e.g. `Correlation tutorial`.
 
-1. Under *ALARM FILTER*, configure a filter so that the Correlation rule will only be applied for alarms from the element *Correlation KATA Switch Timeout - Network Switch*:
+1. Under *ALARM FILTER*, configure a filter so that the correlation rule will only be applied for alarms from the element *Correlation KATA Switch Timeout - Network Switch*:
 
    1. Click *Select a filter*.
 
@@ -74,7 +74,7 @@ In this step, you will create a Correlation rule that will trigger based on alar
 
 1. Below the rule condition configuration, select the *Persistent event* trigger mechanism and fill in 5 minutes.
 
-   With this configuration, the Correlation rule will wait until the rule conditions have been met for 5 minutes before acting and executing its actions.
+   With this configuration, the correlation rule will wait until the rule conditions have been met for 5 minutes before acting and executing its actions.
 
    ![Configuring *persistent event time*](~/dataminer/images/Correlation_PersistentEvent.png)
 
@@ -89,7 +89,7 @@ In this step, you will create a Correlation rule that will trigger based on alar
       ![Adding the *run script* action](~/dataminer/images/Correlation_Add_Run_Script_Action.png)
 
    > [!NOTE]
-   > Generating an information event is just one example of what you can do with this functionality. There are many, many more possibilities. However, when you explore these further outside the scope of this tutorial, make sure to keep the [best practices for Correlation](xref:Best_Practices_For_Correlation) in mind to avoid creating a Correlation rule that could have a negative impact on your system.
+   > Generating an information event is just one example of what you can do with this functionality. There are many, many more possibilities. However, when you explore these further outside the scope of this tutorial, make sure to keep the [best practices for Correlation](xref:Best_Practices_For_Correlation) in mind to avoid creating a correlation rule that could have a negative impact on your system.
 
 1. Optionally, add another action to send an email to your account when the rule is triggered:
 
@@ -127,9 +127,9 @@ In this step, you will create a Correlation rule that will trigger based on alar
 
 1. Check whether an information event has been generated in the Alarm Console.
 
-   This information event should have been created by the Automation script triggered by the Correlation rule, if you configured everything correctly.
+   This information event should have been created by the Automation script triggered by the correlation rule, if you configured everything correctly.
 
-1. If you added the *Send email* action to the Correlation rule, check whether you have received an email.
+1. If you added the *Send email* action to the correlation rule, check whether you have received an email.
 
 ## Related documentation
 

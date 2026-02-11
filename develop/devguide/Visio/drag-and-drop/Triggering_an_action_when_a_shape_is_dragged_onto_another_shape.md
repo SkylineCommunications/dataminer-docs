@@ -28,7 +28,7 @@ Add the following shape data fields to the shape:
 
   - A field of type **Execute**.
 
-    See [Example of a 'drop target' that executes an Automation script](#example-of-a-drop-target-that-executes-an-automation-script).
+    See [Example of a 'drop target' that executes an automation script](#example-of-a-drop-target-that-executes-an-automation-script).
 
   - A field of type **Parameter**.
 
@@ -69,7 +69,7 @@ Then, we make sure that the shapes we intend to drop onto the "drop target" cont
 
 When we now drop a shape with a valid element ID onto our newly created "drop target", the text inside the "drop target" will display the name of the element referred to by the element ID specified in the shape data of the shape we dropped onto the "drop target".
 
-## Example of a 'drop target' that executes an Automation script
+## Example of a 'drop target' that executes an automation script
 
 First, we turn a shape into a "drop target" (i.e. a shape onto which we will drop other shapes) by adding the following shape data fields to it:
 
@@ -137,12 +137,12 @@ When child shapes have been generated for every row in a table, it is also possi
 
 To do so:
 
-1. Create a target shape linked to an Automation script or parameter, or a shape turned into a parameter control.
+1. Create a target shape linked to an automation script or parameter, or a shape turned into a parameter control.
 
    > [!TIP]
    > See also:
    >
-   > - [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)
+   > - [Linking a shape to an automation script](xref:Linking_a_shape_to_an_Automation_script)
    > - [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter)
    > - [Turning a shape into a parameter control](xref:Turning_a_shape_into_a_parameter_control)
 

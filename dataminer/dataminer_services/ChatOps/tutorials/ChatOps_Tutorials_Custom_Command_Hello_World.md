@@ -21,12 +21,12 @@ Estimated duration: 10 minutes.
 
 ## Overview
 
-- [Step 1: Create an Automation script solution](#step-1-create-an-automation-script-solution)
+- [Step 1: Create an automation script solution](#step-1-create-an-automation-script-solution)
 - [Step 2: Create the Automation script](#step-2-create-the-automation-script)
 - [Step 3: Publish the Automation script](#step-3-publish-the-automation-script)
 - [Step 4: Run the custom command](#step-4-run-the-custom-command)
 
-## Step 1: Create an Automation script solution
+## Step 1: Create an automation script solution
 
 1. In Visual Studio, select *Create a new project*.
 

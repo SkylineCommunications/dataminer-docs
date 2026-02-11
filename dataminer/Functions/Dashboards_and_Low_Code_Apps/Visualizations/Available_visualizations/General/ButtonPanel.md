@@ -290,7 +290,7 @@ The button panel component offers two distinct modes of operation, which you can
 
 - **Configuration mode**: In this mode, you can create your button panels by arranging the buttons through a drag-and-drop interface. This setup process allows for quick customization to meet specific requirements.
 
-  When configuration mode is enabled, clicking a button will not execute its action but will select it instead. This selection can be linked to a button component that launches an Automation script. When that button is clicked, an interactive Automation script will be executed that can be used to configure the button of the button panel.
+  When configuration mode is enabled, clicking a button will not execute its action but will select it instead. This selection can be linked to a button component that launches an automation script. When that button is clicked, an interactive Automation script will be executed that can be used to configure the button of the button panel.
 
 - **Published mode**: Once the button panel is configured, you can switch to published mode to enable interaction with the virtual buttons. Actions performed on these buttons are translated into commands that manipulate the corresponding physical buttons.
 

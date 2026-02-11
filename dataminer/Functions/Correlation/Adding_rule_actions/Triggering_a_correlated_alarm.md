@@ -4,7 +4,7 @@ uid: Triggering_a_correlated_alarm
 
 # Triggering a correlated alarm
 
-To make a Correlation rule trigger a new, correlated alarm:
+To make a correlation rule trigger a new, correlated alarm:
 
 1. In the *Actions* section of the details pane, click *Add Action* and select *New Alarm*.
 
@@ -27,13 +27,13 @@ To make a Correlation rule trigger a new, correlated alarm:
 1. Click the underlined field to the right of “and severity”, and select an alarm severity.
 
    > [!NOTE]
-   > If you are using the Correlation rule to group **timeout alarms**, make sure to select a **different severity** than the *Base alarm severity*, because correlated alarms with severity "Timeout" are not supported.
+   > If you are using the correlation rule to group **timeout alarms**, make sure to select a **different severity** than the *Base alarm severity*, because correlated alarms with severity "Timeout" are not supported.
 
 1. If necessary, select one or more of the following options:
 
-   - **Autoclear**: Select this option if you want the Correlation alarm to be cleared automatically as soon as the conditions specified in the Correlation rule are no longer met.
+   - **Autoclear**: Select this option if you want the Correlation alarm to be cleared automatically as soon as the conditions specified in the correlation rule are no longer met.
 
-   - **Include name in alarm value**: Select this option if you want the name of the Correlation rule to be included in the alarm value.
+   - **Include name in alarm value**: Select this option if you want the name of the correlation rule to be included in the alarm value.
 
    - **Update base alarms**: Select this option to allow the list of base alarms to be updated after a correlated alarm has been generated.
 
@@ -43,5 +43,5 @@ To make a Correlation rule trigger a new, correlated alarm:
 
 > [!NOTE]
 >
-> - You can clear previously generated Correlation alarms from another rule as an action in a Correlation rule, by configuring an alarm with severity “Normal” to be generated on the same parameter.
+> - You can clear previously generated Correlation alarms from another rule as an action in a correlation rule, by configuring an alarm with severity “Normal” to be generated on the same parameter.
 > - From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38301-->, each Correlation rule checks if it is part of a chain of correlated alarms that led to the correlated alarm it is about to trigger. If it is, it will not trigger again, preventing a situation where rules could endlessly trigger each other.

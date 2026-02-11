@@ -49,7 +49,7 @@ An outdated DLL file was detected.
   1. Remove the *X.dll* file from the *Y* folder.
 
      > [!IMPORTANT]
-     > When you remove the mentioned DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an Automation script is executed.
+     > When you remove the mentioned DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an automation script is executed.
 
   1. Start the DataMiner Agent.
 
@@ -125,7 +125,7 @@ One or multiple protocols and/or Automation scripts still use an outdated DLL fi
   1. Remove the outdated DLL file(s) from their folder(s) (mentioned in the result message).
 
      > [!IMPORTANT]
-     > When you remove a DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an Automation script is executed.
+     > When you remove a DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an automation script is executed.
 
   1. Start the DataMiner Agent.
 
@@ -144,7 +144,7 @@ A deprecated DLL file was detected in the ProtocolScripts folder.
   1. Remove the *X.dll* file from the `C:\Skyline DataMiner\ProtocolScripts` folder.
 
      > [!IMPORTANT]
-     > When you remove the DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an Automation script is executed.
+     > When you remove the DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an automation script is executed.
 
   1. Start the DataMiner Agent.
 

@@ -4,7 +4,7 @@ uid: SwarmingElements
 
 # Swarming elements
 
-With DataMiner Swarming, you can swarm elements from one DataMiner Agent to another within a cluster. You can do so [in DataMiner Cube](#swarming-elements-in-dataminer-cube) or [via an Automation script](#swarming-elements-via-automation).
+With DataMiner Swarming, you can swarm elements from one DataMiner Agent to another within a cluster. You can do so [in DataMiner Cube](#swarming-elements-in-dataminer-cube) or [via an automation script](#swarming-elements-via-automation).
 
 When you are swarming an element so it gets hosted on a different DataMiner Agent, a temporary transition occurs. The element will be stopped and then started again on a new host. While this happens, a message will be displayed to inform users that the element is currently swarming. The ability to open element cards or change the element configuration for the involved element will be temporarily suspended. Once the element migration is complete, it will become accessible again.
 
@@ -38,7 +38,7 @@ To swarm elements in DataMiner Cube:
 
 ## Swarming elements via Automation
 
-To swarm elements via an Automation script, call the SwarmingHelper.Create method and indicate the elements that need to be swarmed and the ID of the node they need to be swarmed to.
+To swarm elements via an automation script, call the SwarmingHelper.Create method and indicate the elements that need to be swarmed and the ID of the node they need to be swarmed to.
 
 For example:
 

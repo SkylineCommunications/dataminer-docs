@@ -45,7 +45,7 @@ If you want the text in a "Selectable" shape to be copied to a session variable 
    SelectionVar=VariableName
    ```
 
-1. By default the values of the selected shapes will be separated by a pipe character ("\|"). However, you can optionally specify that a different separator character should be used, for example in case the values need to be used in an Automation script.
+1. By default the values of the selected shapes will be separated by a pipe character ("\|"). However, you can optionally specify that a different separator character should be used, for example in case the values need to be used in an automation script.
 
    To do so, after the "SelectionVar=VariableName" option, add "\|MultipleValueSep=", followed by the separator of your choice. For example, if you specify the following, a semicolon will be used as the separator symbol:
 

@@ -4,7 +4,7 @@ uid: Compiling_a_CSharp_code_block_as_a_library
 
 # Compiling a C# code block as a library
 
-It is possible to have a C# code block in an Automation script in Cube compiled as a separate library.
+It is possible to have a C# code block in an automation script in Cube compiled as a separate library.
 
 ## Compiling the library
 
@@ -85,6 +85,6 @@ Once you have compiled a C# code block as a library, you can then import that li
 
 - When a library is compiled, any scripts and libraries using this library will be recompiled.
 
-- When the Automation script containing a library is deleted, all files of the library will be deleted too, which will make it impossible to recompile scripts that depend on this library until a library with the same reference is added again.
+- When the automation script containing a library is deleted, all files of the library will be deleted too, which will make it impossible to recompile scripts that depend on this library until a library with the same reference is added again.
 
 - From DataMiner 10.1.1 onwards, if any new Automation scripts containing libraries that need to be compiled are detected during DataMiner startup, these will be compiled automatically.

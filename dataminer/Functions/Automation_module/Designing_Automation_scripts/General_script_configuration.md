@@ -17,7 +17,7 @@ To configure a script:
    - **Support back/forward buttons in interactive mode**: Adds back and forward buttons when the script shows a dialog asking for a user response.
 
      > [!NOTE]
-     > If you use this option in an Automation script that depends on C# code blocks, do not forget to also use the methods [WasBack](xref:Skyline.DataMiner.Automation.UIResults.WasBack) and [WasForward](xref:Skyline.DataMiner.Automation.UIResults.WasForward).
+     > If you use this option in an automation script that depends on C# code blocks, do not forget to also use the methods [WasBack](xref:Skyline.DataMiner.Automation.UIResults.WasBack) and [WasForward](xref:Skyline.DataMiner.Automation.UIResults.WasForward).
 
    - **Do not fail when elements are not active or in timeout**: Keeps the script from failing when it encounters an element that is not active or in timeout.
 

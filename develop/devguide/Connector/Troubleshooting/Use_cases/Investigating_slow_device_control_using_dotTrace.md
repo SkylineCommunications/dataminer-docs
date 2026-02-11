@@ -8,7 +8,7 @@ This use case focuses on a matrix connector that performed too slowly, and this 
 
 When the matrix connector was tested in the production environment, it took approximately 2 seconds on average for a crosspoint to be set. This was much slower than anticipated, so we went looking for the root cause behind this.
 
-The specific limitations of the live environment made it impossible to make connector changes, for example to add logging or to duplicate existing elements. This meant that this was a very difficult investigation. However, using an Automation script, Wireshark, and performance profiling, we were able to get a decent picture of the performance of the system and the connector.
+The specific limitations of the live environment made it impossible to make connector changes, for example to add logging or to duplicate existing elements. This meant that this was a very difficult investigation. However, using an automation script, Wireshark, and performance profiling, we were able to get a decent picture of the performance of the system and the connector.
 
 ## Automation script
 

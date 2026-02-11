@@ -4,7 +4,7 @@ uid: Adding_alarm_filters_to_Correlation_rules
 
 # Adding alarm filters to Correlation rules
 
-In the Correlation module, the *Alarm Filter* section of the details pane allows you to create a filter to limit the alarms that will be evaluated by the Correlation rule.
+In the Correlation module, the *Alarm Filter* section of the details pane allows you to create a filter to limit the alarms that will be evaluated by the correlation rule.
 
 1. Click *Select a Filter*
 
@@ -24,7 +24,7 @@ In the Correlation module, the *Alarm Filter* section of the details pane allows
 > [!NOTE]
 >
 > - If no alarm filtering is applied, the conditions will be evaluated for all alarms. As such, it is generally good practice to use alarm filtering whenever possible in order to reduce the load on the system.
-> - In case you want a Correlation rule to be triggered upon DataMiner startup, an information event is generated after startup that can be used for this purpose. The event has the following properties:
+> - In case you want a correlation rule to be triggered upon DataMiner startup, an information event is generated after startup that can be used for this purpose. The event has the following properties:
 >   - Element Name: *\[name of the DMA\]*
 >   - Parameter Description: Correlation engine (DataMiner Element Control Protocol)
 >   - Value: Started

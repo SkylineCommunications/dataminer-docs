@@ -16,12 +16,12 @@ Keep the following best practices in mind:
 
 - Avoid generating information events when your script executes sets.
 
-  By default, DataMiner generates an information event when an Automation script executes a set operation. If at all possible, avoid the generation of these information events by using the [Engine.SetFlag](xref:Skyline.DataMiner.Automation.Engine.SetFlag(Skyline.DataMiner.Automation.RunTimeFlags)) method.
+  By default, DataMiner generates an information event when an automation script executes a set operation. If at all possible, avoid the generation of these information events by using the [Engine.SetFlag](xref:Skyline.DataMiner.Automation.Engine.SetFlag(Skyline.DataMiner.Automation.RunTimeFlags)) method.
 
 - Avoid generating information events at the start and end of a subscript.
 
-  By default, DataMiner generates an information event when an Automation script is started and when it finishes.
+  By default, DataMiner generates an information event when an automation script is started and when it finishes.
 
   In case you run the script from code, you can add `SKIP_STARTED_INFO_EVENT:TRUE` in the options array of the *ExecuteScriptMessage* message.
 
-  If you have created an Automation script that launches subscripts, use the [SkipStartedInfoEvent](xref:Skyline.DataMiner.Automation.SubScriptOptions.SkipStartedInfoEvent) option so that these information events are not generated for the subscripts. From DataMiner 10.4.12/10.5.0 onwards, these information events will be skipped by default. <!-- RN 40867 -->
+  If you have created an automation script that launches subscripts, use the [SkipStartedInfoEvent](xref:Skyline.DataMiner.Automation.SubScriptOptions.SkipStartedInfoEvent) option so that these information events are not generated for the subscripts. From DataMiner 10.4.12/10.5.0 onwards, these information events will be skipped by default. <!-- RN 40867 -->

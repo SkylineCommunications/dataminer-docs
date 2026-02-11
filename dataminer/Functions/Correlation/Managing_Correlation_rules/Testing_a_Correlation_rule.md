@@ -2,9 +2,9 @@
 uid: Testing_a_Correlation_rule
 ---
 
-# Testing a Correlation rule
+# Testing a correlation rule
 
-To test a Correlation rule in DataMiner Cube:
+To test a correlation rule in DataMiner Cube:
 
 1. In the *Correlation* module, select the rule in question in the tree view.
 
