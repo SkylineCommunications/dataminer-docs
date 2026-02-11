@@ -25,6 +25,9 @@ To create a maintenance event (also known as a PLM item), follow these steps:
 
    - **End Time**: Enter the end time of the maintenance window.
 
+      > [!NOTE]
+      >  When opening the App from a remote server, the time that is displayed in the *Start/End Time* section when adding a new entry to the *Maintanace Table* will be in client time and may differ from server time.
+
    - **Recurrence**: Choose the recurrence pattern that suits your needs:
 
      - *Once*: Provide the date for the one-time PLM activity.
