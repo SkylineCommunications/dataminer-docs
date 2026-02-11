@@ -80,7 +80,7 @@ See also: [rowTextColoring](xref:ColumnOptionOptionsOverview#rowtextcoloring)
 
 <!-- RN 7360 -->
 
-Used with ContextMenu: This will execute an (interactive) Automation script instead of triggering a QAction. The script command syntax is identical to the syntax used in Visio shape data fields of type "Execute". For more information about the syntax, refer to [Linking a shape to an automation script](xref:Linking_a_shape_to_an_Automation_script).
+Used with ContextMenu: This will execute an (interactive) automation script instead of triggering a QAction. The script command syntax is identical to the syntax used in Visio shape data fields of type "Execute". For more information about the syntax, refer to [Linking a shape to an automation script](xref:Linking_a_shape_to_an_Automation_script).
 
 This type of menu items do not require a row selection. In other words, they also work in case of an empty table.
 

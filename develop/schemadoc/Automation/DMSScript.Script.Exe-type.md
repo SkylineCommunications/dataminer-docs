@@ -43,4 +43,4 @@ Contains one of the following values:
 
 ## Remarks
 
-Refer to [Automation script actions](xref:AutomationActions) for more information about Automation script actions.
+Refer to [Automation script actions](xref:AutomationActions) for more information about automation script actions.

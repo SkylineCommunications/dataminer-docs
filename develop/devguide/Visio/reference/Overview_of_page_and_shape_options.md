@@ -473,7 +473,7 @@ When connectivity has been defined in a drawing, you can use the *HideConnection
 
 Shape-level option.
 
-Use this option if you want a shape to be hidden when the element to which it is linked is about to be used in a scheduled Automation script. This way, you can prevent users from changing something to an element that is about to be used in a scheduled Automation script.
+Use this option if you want a shape to be hidden when the element to which it is linked is about to be used in a scheduled automation script. This way, you can prevent users from changing something to an element that is about to be used in a scheduled automation script.
 
 ## HighlightAnimation
 
@@ -894,7 +894,7 @@ See [Making a selectable shape get copied to a session variable](xref:Making_sha
 
 Shape-level option.
 
-Use this option if you want a shape to be shown when the element to which it is linked, is about to be used in a scheduled Automation script. This way, you can for example visually warn users not to change anything to an element that is about to be used in a scheduled Automation script.
+Use this option if you want a shape to be shown when the element to which it is linked, is about to be used in a scheduled automation script. This way, you can for example visually warn users not to change anything to an element that is about to be used in a scheduled automation script.
 
 ## SingleSignOn
 

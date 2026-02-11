@@ -4,7 +4,7 @@ uid: Concept_of_debugging_connectors_and_Automation_scripts
 
 # Concept of debugging QActions and automation scripts
 
-DataMiner Integration Studio allows you to debug connector QActions and Automation script C# Exe blocks using the Microsoft Visual Studio Debugger.
+DataMiner Integration Studio allows you to debug connector QActions and automation script C# Exe blocks using the Microsoft Visual Studio Debugger.
 
 > [!NOTE]
 > You can only debug connector QActions that contain C# code.

@@ -12,7 +12,7 @@ The specific limitations of the live environment made it impossible to make conn
 
 ## Automation script
 
-We created a simple Automation script that performs a set on a live element with the approval of the system operators. This script works as follows:
+We created a simple automation script that performs a set on a live element with the approval of the system operators. This script works as follows:
 
 1. Save the timestamp just before the *SetParameter* action.
 

@@ -4,7 +4,7 @@ uid: DMSScript
 
 # DMSScript element
 
-The root element of a DataMiner Automation script.
+The root element of a DataMiner automation script.
 
 ## Attributes
 
@@ -31,6 +31,6 @@ The root element of a DataMiner Automation script.
 
 ## Constraints
 
-|Type|Description|Selector|Fields
+|Type|Description|Selector|Fields|
 |--- |--- |--- |--- |
 |Unique |IDs must be unique. |.//* |@id |

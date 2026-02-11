@@ -48,7 +48,7 @@ In the *DMA* submenu, you can find the following commands:
 
 - **Import Automation script**
 
-  If you click *Import Automation script*, the *Import Automation Script* dialog box will allow you to import a copy of an existing Automation script XML file found on the DMA to which DIS is connected.
+  If you click *Import Automation script*, the *Import Automation Script* dialog box will allow you to import a copy of an existing automation script XML file found on the DMA to which DIS is connected.
 
   You can import multiple automation scripts at once. Select the scripts you want to import, and click *Import*. Each script will be opened in a separate tab.
 
@@ -78,7 +78,7 @@ In the *DMA* submenu, you can find the following commands:
 > [!NOTE]
 >
 > - When, in the DIS menu, you select *DMA > Import Automation Script* while a protocol solution is open, a pop-up window will appear, saying that it is impossible to import an automation script while a protocol solution is open.
-> - When, in the DIS menu, you select *DMA > Import Automation Script* while an automation script solution is open, a pop-up window will appear, asking you whether you want the script to be imported into the open Automation script solution.
+> - When, in the DIS menu, you select *DMA > Import Automation Script* while an automation script solution is open, a pop-up window will appear, asking you whether you want the script to be imported into the open automation script solution.
 > - When, in the DIS menu, you select *DMA > Import Protocol* while an automation script solution is open, a pop-up window will appear, saying that it is impossible to import a protocol while an automation script solution is open.
 
 ## Administration \> Open Driver Help

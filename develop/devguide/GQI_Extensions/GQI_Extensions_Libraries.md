@@ -15,7 +15,7 @@ Extension libraries operate in isolation: extensions that reside in different li
 
 Each extension library is a standalone DLL file that can be loaded by GQI. The DLL is created by the [library compilation feature](xref:Compiling_a_CSharp_code_block_as_a_library) of the Automation module.
 
-To include multiple extensions in the same library, create them in the same Automation script code block or in the same DIS ad hoc data source project.
+To include multiple extensions in the same library, create them in the same automation script code block or in the same DIS ad hoc data source project.
 
 See also:
 
@@ -26,9 +26,9 @@ See also:
 
 All GQI extensions defined within the same extension library will use the same dependencies.
 
-Similar to automation scripts, extension libraries may use DLL dependencies that are defined in the *DLL references* section in the associated Automation script.
+Similar to automation scripts, extension libraries may use DLL dependencies that are defined in the *DLL references* section in the associated automation script.
 
-From DataMiner 10.5.0 [CU2]/10.5.5 onwards and when using the [GQI DxM](xref:GQI_DxM)<!--RN 42468-->, GQI also automatically searches for missing dependencies in the `C:\Skyline DataMiner\Scripts\Libraries` folder. This allows extension scripts to find the necessary Automation script libraries at runtime.
+From DataMiner 10.5.0 [CU2]/10.5.5 onwards and when using the [GQI DxM](xref:GQI_DxM)<!--RN 42468-->, GQI also automatically searches for missing dependencies in the `C:\Skyline DataMiner\Scripts\Libraries` folder. This allows extension scripts to find the necessary automation script libraries at runtime.
 
 > [!NOTE]
 > If an automation script library has its own dependencies, include those dependencies in your GQI extension scripts as well.
