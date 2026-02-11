@@ -94,7 +94,7 @@ You can use the following out-of-the-box commands to interact with the DataMiner
 - **run *command name***: Runs the matching command on the active DataMiner System. When necessary, the user will be asked for input and/or confirmation. See [Adding commands for the Teams bot to a DMS](#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
   > [!NOTE]
-  > To skip the confirmation message when running a custom command, add `--skipconfirmation`, or in short `--sc`, at the end of your command. For example, for a custom command Automation script named "toggle switch", you could use the command `run toggle switch --sc`.<!-- RN 39736 -->
+  > To skip the confirmation message when running a custom command, add `--skipconfirmation`, or in short `--sc`, at the end of your command. For example, for a custom command automation script named "toggle switch", you could use the command `run toggle switch --sc`.<!-- RN 39736 -->
 
 - **help**: Shows more detailed help information, if available.
 
@@ -111,7 +111,7 @@ You can use the following out-of-the-box commands to interact with the DataMiner
 
 ## Adding custom commands for the Teams bot to a DMS
 
-To add a custom command for the Teams bot to your DMS, create an [Automation script](xref:automation) in the folder "bot" in the DMS.
+To add a custom command for the Teams bot to your DMS, create an [automation script](xref:automation) in the folder "bot" in the DMS.
 
 > [!TIP]
 >
@@ -141,7 +141,7 @@ For examples, see [Custom Command Examples](https://github.com/SkylineCommunicat
 ### Limitations
 
 - Interactive automation scripts are not supported.
-- Commands that run longer than 30 seconds are currently not supported. When a command takes too long, the bot will show that the request has been aborted. However, note that the command will keep running in the DMS once it has been initiated, but if it eventually completes, the bot will not display any feedback or output. This means that strictly speaking this feature could be used to trigger long-running commands, but in that case the commands should ideally be triggered asynchronously from within a command's Automation script. You could for instance add a trigger command and a check output command to check if the action is done.
+- Commands that run longer than 30 seconds are currently not supported. When a command takes too long, the bot will show that the request has been aborted. However, note that the command will keep running in the DMS once it has been initiated, but if it eventually completes, the bot will not display any feedback or output. This means that strictly speaking this feature could be used to trigger long-running commands, but in that case the commands should ideally be triggered asynchronously from within a command's automation script. You could for instance add a trigger command and a check output command to check if the action is done.
 - Issues with the adaptive card output will not result in proper error feedback. You need to make sure the provided JSON is valid code and that it has valid content for Teams (i.e. an array of body elements). You can validate your JSON output using the [designer](https://adaptivecards.io/designer/) by adding it in the body array of an adaptive card.
 - Output cannot exceed 35 KB.
 

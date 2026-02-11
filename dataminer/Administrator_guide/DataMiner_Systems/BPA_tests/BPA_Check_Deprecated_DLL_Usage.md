@@ -235,7 +235,7 @@ You can replace *MySql.Data.dll* with the [MySql.Data Nuget](https://www.nuget.o
 
 Depending on the database that SLDatabase was used to communicate with, a different NuGet package is necessary.
 
-The QAction or Automation script will need to be adapted, as each NuGet exposes different functions and ways to interact with a database.
+The QAction or automation script will need to be adapted, as each NuGet exposes different functions and ways to interact with a database.
 
 The following list of NuGet packages can be a good start for replacing the SLDatabase.dll:
 

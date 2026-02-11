@@ -12,11 +12,11 @@ To manage the automation scripts in a DMS, you need to open the Automation modul
 
 Managing automation scripts, e.g. adding and deleting scripts or organizing them in folders, is done in the pane on the left:
 
-- [Collapsing and expanding Automation script folders](#collapsing-and-expanding-automation-script-folders)
+- [Collapsing and expanding automation script folders](#collapsing-and-expanding-automation-script-folders)
 
-- [Adding a new Automation script](#adding-a-new-automation-script)
+- [Adding a new automation script](#adding-a-new-automation-script)
 
-- [Adding a new Automation script folder](#adding-a-new-automation-script-folder)
+- [Adding a new automation script folder](#adding-a-new-automation-script-folder)
 
 - [Moving automation scripts or folders](#moving-automation-scripts-or-folders)
 

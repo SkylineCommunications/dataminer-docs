@@ -16,7 +16,7 @@ If your DataMiner System is connected to dataminer.services, you can integrate y
 
 If you want to create chat integration automation scripts, you will need to make sure the following are installed:
 
-- **Skyline.DataMiner.DcpChatIntegrationHelper NuGet package**: You can find this package on [nuget.org](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper). It allows easy integration with business communication platforms from a DataMiner Automation script.
+- **Skyline.DataMiner.DcpChatIntegrationHelper NuGet package**: You can find this package on [nuget.org](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper). It allows easy integration with business communication platforms from an automation script.
 
   > [!TIP]
   > We recommend that you always use the **latest version** of the Skyline.DataMiner.DcpChatIntegrationHelper NuGet package.

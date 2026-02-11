@@ -5,7 +5,7 @@ keywords: swarming, swarming tutorial
 
 # Enabling Swarming
 
-In this tutorial, you will learn how to enable [Swarming](xref:Swarming) in your DMS and swarm your first element. The tutorial makes use of an example Automation script to demonstrate how you need to adjust scripts to make sure you can enable Swarming.
+In this tutorial, you will learn how to enable [Swarming](xref:Swarming) in your DMS and swarm your first element. The tutorial makes use of an example automation script to demonstrate how you need to adjust scripts to make sure you can enable Swarming.
 
 The content and screenshots for this tutorial have been created using DataMiner version 10.5.3.
 
@@ -45,7 +45,7 @@ To deploy the package:
 
    - *Mask Critical Alarms*: This is a demo script to mask the critical alarms of an element.
 
-   - *Enable Swarming*: This interactive Automation script takes you through the enabling procedure for Swarming.
+   - *Enable Swarming*: This interactive automation script takes you through the enabling procedure for Swarming.
 
    ![Package Content](~/dataminer/images/Swarming_Tutorial_Enable_Package_Content.png)
 
