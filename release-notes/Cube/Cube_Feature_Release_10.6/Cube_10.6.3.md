@@ -14,14 +14,6 @@ This Feature Release of the DataMiner Cube client application contains the same 
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.3](xref:General_Feature_Release_10.6.3).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.3](xref:Web_apps_Feature_Release_10.6.3).
 
-## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
-
-*No new features have been added yet.*
-
 ## Changes
 
 ### Enhancements
