@@ -34,6 +34,31 @@ From now on, when you try to open an invalid dashboard or dashboard folder, you 
 
 Clicking the *Go to overview* button in that visual will redirect you to either the closest valid parent folder or the root folder.
 
+#### GQI DxM: 'Get object manager instances' and 'Get profile instances' data sources now support post filtering on Guid columns [ID 44672]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, when post filtering the *Get object manager instances* and *Get profile instances* data sources, it would not be possible to filter Guid columns like DomInstanceId or DomDefinitionId.
+
+From now, when post filtering the *Get object manager instances* and *Get profile instances* data sources, the `equals` and `not equals` filter operators will work correctly when used to filter on the following Guid columns:
+
+- DomDefinitionId
+- DomInstanceId
+- ProfileDefinitionID
+- ProfileInstanceID
+- ReservationInstanceID
+- ResourceID
+- ServiceDefinitionID
+- ServiceProfileInstanceID
+
+#### Dashboards/Low-Code Apps - Templates: Text in default template would not get replaced when the default template was selected [ID 44677]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When, in the Browse templates window, you selected the default template of e.g. the Grid component, up to now, the text in that default template would incorrectly not get replaced by the text in the Grid component.
+
+From now on, the default template text will get replaced correctly.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Alarm table component: Problems when scrolling [ID 44662]
