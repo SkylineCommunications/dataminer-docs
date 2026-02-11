@@ -132,3 +132,9 @@ When you connected to a DataMiner Agent, up to now, it would not be possible to 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 When an NT_READ_SAVED_PARAMETER_VALUE call was sent to retrieve data from an element without a connector while that data was still present in SLDataGateway, up to now, SLDataMiner could stop working.
+
+#### Alarm properties passed along by Correlation or SLAnalytics could get lost when an alarm was created [ID 44669]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, alarm properties passed along by Correlation or SLAnalytics could get lost when an alarm was created.
