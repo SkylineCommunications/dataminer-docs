@@ -74,11 +74,11 @@ Variables of a certain type can be used wherever you can use that specific type.
 
 Variables of type table are static tables that can have up to 20 columns and/or 100 rows. In these tables, cells can contain the following types of data: Text, Number and Boolean. Also, users can specify a display value for each cell.
 
-#### Dashboards/Low-Code Apps: Dropdown, Tree and 'List' components are now also able to show table data [ID 41161]
+#### Dashboards/Low-Code Apps: Dropdown, Tree and List components are now also able to show table data [ID 41161]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-Dropdown, tree and *List* components are now also able to show table data. This means that you will now be able to drop both queries or tables on top of them.
+Dropdown, tree and list components are now also able to show table data. This means that you will now be able to drop both queries or tables on top of them.
 
 - If you add a single table/query, the component will show the individual rows as entries. Selecting an entry will expose the entire row.
 - If you add multiple tables/queries, the component will show the list of tables/queries. Selecting an entry will expose the entire table (in case of table data) or the query (in case of query data).
@@ -371,7 +371,7 @@ During the migration of a low-code app that was created before the introduction 
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-While all GQI components (i.e. Table, grid, maps, state, *Column & bar chart*, *Pie & donut chart*, line & area chart, node edge graph)allowed you to drop tables onto them as data, up to now, they would not fully support those static tables.
+While all GQI components (i.e. table, grid, maps, state, column & bar chart, pie & donut chart, line & area chart, node edge graph) allowed you to drop tables onto them as data, up to now, they would not fully support those static tables.
 
 In many cases, a component would not be able to properly visualize the table. Also, users would not be able to properly configure the component settings.
 

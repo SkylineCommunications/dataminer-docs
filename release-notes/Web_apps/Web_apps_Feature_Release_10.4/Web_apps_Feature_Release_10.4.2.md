@@ -74,7 +74,7 @@ Up to now, when an empty list was saved in a DOM instance, the default filter us
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
-All GQI components (state, pie chart, bar chart, line chart, table, grid, *Scheduler*,*Node Edge* and maps) will now behave in the same way when loading.
+All GQI components (state, pie chart, bar chart, line chart, table, grid, scheduler, node edge, and maps) will now behave in the same way when loading.
 
 > [!NOTE]
 > The maps component is currently still in soft launch.

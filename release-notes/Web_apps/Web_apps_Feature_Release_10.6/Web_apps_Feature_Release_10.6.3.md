@@ -173,7 +173,7 @@ In the sidebar of the Dashboards app, up to now, the list of recently opened das
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-In the table, *Column & bar chart*, line & area chart, *Pie & donut chart*, grid, timeline, and node edge graph components, the *Empty result message* setting allows you to specify a custom message that is displayed when a query returns no results.
+In the table, column & bar chart, line & area chart, pie & donut chart, grid, timeline, and node edge graph components, the *Empty result message* setting allows you to specify a custom message that is displayed when a query returns no results.
 
 From now on, it will be possible to clear this setting's value. If you do so, no message will be displayed when a query returns no results, and the component will be empty.
 
