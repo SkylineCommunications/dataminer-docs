@@ -16,7 +16,7 @@ The following graph illustrates the concept:
 
 Suppose, for example, that "Device Protocol X" is a protocol for an IRD device X of vendor A, whereas "Device Protocol Y" is a protocol for an IRD device Y of vendor B. Both protocols have a parameter that holds the carrier frequency. However, the ID, description and unit of these parameters differ.
 
-By defining a base protocol for IRD devices, we can provide a uniform, standard view. In this example, the base protocol defines a parameter for the carrier frequency which will be linked with the corresponding parameters of the device-specific protocols. This allows, for example, the creation of a single Automation script that interacts with the parameters provided in the base protocol and therefore allows interaction with elements that execute "Device Protocol X" or "Device Protocol Y".
+By defining a base protocol for IRD devices, we can provide a uniform, standard view. In this example, the base protocol defines a parameter for the carrier frequency which will be linked with the corresponding parameters of the device-specific protocols. This allows, for example, the creation of a single automation script that interacts with the parameters provided in the base protocol and therefore allows interaction with elements that execute "Device Protocol X" or "Device Protocol Y".
 
 Note that the standard view provided by base protocols will potentially be a more constrained view on a device, whereas the device-specific view will typically expose more features and capabilities, as not all devices expose the exact same functionality. However, by basing your solutions (automation scripts, reports, etc.) as much as possible on the standard views, you increase the re-usability of your solutions.
 

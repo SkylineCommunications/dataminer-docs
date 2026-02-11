@@ -71,7 +71,7 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
    using Skyline.DataMiner.Utils.InteractiveAutomationScript;
 
    /// <summary>
-   /// Represents a DataMiner Automation script.
+   /// Represents a DataMiner automation script.
    /// </summary>
    public class Script
    {

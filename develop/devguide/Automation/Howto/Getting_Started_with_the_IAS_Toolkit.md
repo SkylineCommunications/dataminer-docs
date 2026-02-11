@@ -15,7 +15,7 @@ The Interactive Automation Script Toolkit (or “IAS Toolkit” in short) is a l
 
 To choose your version of the IAS Toolkit, the first thing you need to know is the [version of DataMiner](xref:Interactive_Automation_Script_Toolkit#versions) where you want your script to run. As DataMiner keeps improving, so does its support for newer, more advanced IAS components.
 
-Just like for protocol and regular Automation script development, our IDE of choice is Visual Studio with the latest version of [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). If you do not have DIS installed, you can find more information on how to do so under [Installing and configuring the software](xref:Installing_and_configuring_the_software).
+Just like for protocol and regular automation script development, our IDE of choice is Visual Studio with the latest version of [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). If you do not have DIS installed, you can find more information on how to do so under [Installing and configuring the software](xref:Installing_and_configuring_the_software).
 
 ## Creating a new script
 
@@ -48,7 +48,7 @@ To start creating your script:
 
 ## Defining an InteractiveController
 
-With the steps above, you have created a regular Automation script. But if you want this script to display something, you need to define an *InteractiveController*. This controller is used to display dialogs. It will also handle UI updates and trigger the events on the widgets. It is part of the following namespace:
+With the steps above, you have created a regular automation script. But if you want this script to display something, you need to define an *InteractiveController*. This controller is used to display dialogs. It will also handle UI updates and trigger the events on the widgets. It is part of the following namespace:
 
 `Skyline.DataMiner.Utils.InteractiveAutomationScript`
 

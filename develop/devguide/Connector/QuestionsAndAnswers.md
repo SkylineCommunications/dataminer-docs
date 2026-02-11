@@ -194,7 +194,7 @@ uid: QuestionsAndAnswers
 
 1. *When the protocol has a table on which settings will be done from an automation script, what do you need to look out for and how can it be solved?*
 
-    An Automation script performs settings very fast, which can mean that a parameter that is used in a command or in an SNMP set can already be changed again before it has actually been sent to the device. This can be solved by implementing a buffer for serial sets; for SNMP sets it is now possible to perform SNMP sets/gets from within a QAction.
+    An automation script performs settings very fast, which can mean that a parameter that is used in a command or in an SNMP set can already be changed again before it has actually been sent to the device. This can be solved by implementing a buffer for serial sets; for SNMP sets it is now possible to perform SNMP sets/gets from within a QAction.
 
 1. *What is the meaning of "15236" in the following line taken from an element log file?*
 

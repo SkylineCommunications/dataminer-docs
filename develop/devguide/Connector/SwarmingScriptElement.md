@@ -9,7 +9,7 @@ uid: SwarmingScriptElement
 
 ## Script with fixed info
 
-As a first step, create a short Automation script that will swarm a fixed element to a fixed destination:
+As a first step, create a short automation script that will swarm a fixed element to a fixed destination:
 
 1. [Create a new automation script](xref:Managing_Automation_scripts#adding-a-new-automation-script)
 
