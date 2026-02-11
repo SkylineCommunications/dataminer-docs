@@ -44,6 +44,8 @@ From DataMiner 10.5.10/10.6.0 onwards<!-- RN 43260 -->, Cube uses gRPC by defaul
 
 However, prior to this or when manually configured to do so, Cube uses .NET Remoting to communicate with DataMiner. This communication is encrypted using the Rijndael algorithm using a 256-bit key, which is negotiated over a 1024-bit RSA encrypted communication channel. However, .NET Remoting is a legacy technology and is widely considered insecure. Therefore, starting from DataMiner 10.3.2/10.3.0, we recommend that you manually enable gRPC for the client-server connection.
 
+From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44547-->, when Cube connects to a DMA that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) (i.e. a DMA of which the hostname ends with `.dataminer.services`), gRPC is always used, even if Cube has been manually configured to use .NET Remoting.
+
 To manually enable gRPC for the client-server connection, edit the *ConnectionSettings.txt* file on each DataMiner Agent. For detailed information, refer to [ConnectionSettings.txt](xref:ConnectionSettings_txt).
 
 > [!IMPORTANT]
@@ -111,7 +113,9 @@ To disable the v0 API:
 
 ### HTTPS
 
-By default, DataMiner uses HTTP to serve the web applications. HTTP is unencrypted and vulnerable to man-in-the-middle attacks, so we highly recommend [setting up HTTPS](xref:Setting_up_HTTPS_on_a_DMA) instead.
+By default, DataMiner serves web applications over HTTP, and starting from DataMiner 10.2.1/10.3.0<!-- RN 31142 --> also over HTTPS using a self-signed certificate.
+
+HTTP is unencrypted and vulnerable to man-in-the-middle attacks, so we highly recommend [configuring HTTPS](xref:Setting_up_HTTPS_on_a_DMA) with a trusted certificate and [configuring HTTPS in DataMiner](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-in-dataminer). We also highly recommend either disabling HTTP or [setting up a redirect to HTTPS](xref:Setting_up_HTTPS_on_a_DMA#configuring-http-to-https-redirection).
 
 ### HTTP headers
 
@@ -278,9 +282,9 @@ Some ports that are displayed above are no longer opened by default during DataM
 > [!TIP]
 > See also: [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)
 
-### Disable the local Administrator account
+### Securely manage the local Administrator account
 
-DataMiner has one built-in user, named "Administrator". This user is the local administrator on the Windows server hosting DataMiner and intended for recovery and initial configuration purposes. Once Operator users have been created, we recommend disabling the local Administrator user on the DataMiner server.
+DataMiner has one built-in user named **Administrator**. This user maps to the local administrator on the Windows server hosting DataMiner and has full permissions within DataMiner. This user is intended to be used for the initial setup and as a break-glass account for recovery and emergency scenarios. We highly recommend that you avoid using this account for routine and day-to-day operations and securely manage access to this account, for example via LAPS.
 
 ## Secure self-managed DataMiner storage
 

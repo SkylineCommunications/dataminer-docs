@@ -18,7 +18,7 @@ The *Status* column in the PTP devices overview (accessible via the table icon i
 
 The visual overviews used by the PTP application will now be delivered as protocol default Visio files instead of custom Visio files. This affects the Visio files for the *Skyline PTP* connector.
 
-When you upgrade to this PTP version, the existing custom Visio file will stay in the system, but PTP will now use the protocol default Visio files instead. If the custom Visio file has any custom changes, you can go back to using it by [making it the active Visio file](xref:Managing_Visio_files_linked_to_protocols#switching-between-different-visio-files). If you no longer need the custom Visio file, you can [delete it](xref:Managing_Visio_files_linked_to_protocols#removing-a-microsoft-visio-file-assigned-to-a-protocol).
+When you upgrade to this PTP version, the existing custom Visio file will stay in the system, but PTP will now use the protocol default Visio files instead. If the custom Visio file has any custom changes, you can go back to using it by [making it the active Visio file](xref:Set_as_active_Visio_file). If you no longer need the custom Visio file, you can [delete it](xref:Managing_Visio_files_linked_to_protocols#removing-a-microsoft-visio-file-assigned-to-a-protocol).
 
 #### Standard PTP mediation connector updated to version 1.0.0.22 [ID 39728]
 

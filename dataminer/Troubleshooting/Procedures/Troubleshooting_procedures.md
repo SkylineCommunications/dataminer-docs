@@ -30,7 +30,9 @@ For troubleshooting related to specific topics:
 
 - [Troubleshooting – Skyline DataMiner SDK](xref:skyline_dataminer_sdk_troubleshooting)
 
-- [Troubleshooting - SLScripting](xref:TroubleshootingSLScriptingFinalizerException)
+- [Troubleshooting - SLScripting](xref:Troubleshooting_SLScripting)
+
+- [Troubleshooting - SLProtocol](xref:Troubleshooting_SLProtocol)
 
 - [Troubleshooting – STaaS](xref:Troubleshooting_STaaS)
 

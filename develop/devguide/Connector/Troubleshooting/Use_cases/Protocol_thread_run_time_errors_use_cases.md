@@ -50,7 +50,7 @@ By default, when a group takes longer than 7 minutes and 30 seconds and less tha
 
 When the group takes longer than 15 minutes to finish, it enters an open RTE state. It sends a message to the Watchdog log specifying the affected thread and element and also displays an alarm in the Alarm Console with a summary of the information it sent to the Watchdog log. For example, the screenshot below shows a protocol thread open RTE in the Alarm Console, caused by the element “RTEExample” taking too long (15 minutes). The delay was caused by a QAction triggered by a button that also had an RTE (SetParameterThread RTE).
 
-![Protocol thread run time errors use cases](~/develop/images/Protocol_thread_run_time_errors_use_cases.png)
+![Protocol thread runtime errors use cases](~/develop/images/Protocol_thread_run_time_errors_use_cases.png)
 
 For this example, this is what the RTE looks like in the SLWatchdog2 log file:
 
@@ -91,7 +91,7 @@ In some cases, it can occur that an RTE is not completely caused by one group on
 
 This can originate from a group that is waiting for other flows to finish before executing.
 
-![Protocol thread run time errors use cases 1](~/develop/images/Protocol_thread_run_time_errors_use_cases1.png)
+![Protocol thread runtime errors use cases 1](~/develop/images/Protocol_thread_run_time_errors_use_cases1.png)
 
 The example above depicts a situation where an open protocol thread RTE (15 min) is caused by a group in a timer in flow 1 with a QAction that takes 7 minutes to operate. This is caused by the flow 2 QAction triggered by the button pressed by the user. Only one QAction can run at one point per element. Because of this, the group in flow 1 waits for QAction 2 to finish before executing its QAction. The accumulated time of having to wait and process its own QAction would be approximately 17 minutes, causing the RTE.
 
@@ -119,7 +119,7 @@ The sets can be caused by other external sources than the client, like an Automa
 
 Below is a similar case caused not by external influence but by a parameter change trigger.
 
-![Protocol thread run time errors use cases 2](~/develop/images/Protocol_thread_run_time_errors_use_cases2.png)
+![Protocol thread runtime errors use cases 2](~/develop/images/Protocol_thread_run_time_errors_use_cases2.png)
 
 This is caused by the SetParam present in the QAction of flow 1. It changes a parameter, triggering the execution of the QAction in flow 2 and pausing the current QAction. The accumulated time of the QAction in flow 1 (7 min) and the QAction in flow 2 (10 min) causes the open RTE.
 
@@ -127,7 +127,7 @@ This is caused by the SetParam present in the QAction of flow 1. It changes a pa
 
 This case originates when a new flow starts while the polling flow is waiting for requested data to be received.
 
-![Protocol thread run time errors use cases 3](~/develop/images/Protocol_thread_run_time_errors_use_cases3.png)
+![Protocol thread runtime errors use cases 3](~/develop/images/Protocol_thread_run_time_errors_use_cases3.png)
 
 In the example above, a time group in flow 1 requests external data and processes it using a QAction in less than 7 minutes; however, it still has an open protocol thread RTE (15 min). This is caused by flow 2 in combination with the polling logic.
 
@@ -149,7 +149,7 @@ Case 2 can cause case 1 and can be influenced by case 3.
 
 There can be a situation when polling a large or slow SNMP table is required. This polling can lead to false positive protocol thread RTEs (RTEs caused by groups that are not irreversibly stuck but take a long time to complete) that affect both the poll group and all the groups in the queue.
 
-![Protocol thread run time errors use cases 4](~/develop/images/Protocol_thread_run_time_errors_use_cases4.png)
+![Protocol thread runtime errors use cases 4](~/develop/images/Protocol_thread_run_time_errors_use_cases4.png)
 
 The examples above can originate from multiple cases:
 
@@ -179,7 +179,7 @@ Case 3 can affect case 2.
 
 The processing logic is done in a QAction. The information received influences the processing time.
 
-![Protocol thread run time errors use cases 5](~/develop/images/Protocol_thread_run_time_errors_use_cases5.png)
+![Protocol thread runtime errors use cases 5](~/develop/images/Protocol_thread_run_time_errors_use_cases5.png)
 
 In the example above, a group is configured to request Y files to process from an FTP server. It takes 1 minute to process each received file. The Y file count is influenced by the configuration and the total number of files on the server. If a large number of files are requested (15 or more in this case), this will cause an open protocol thread RTE (15 min).
 

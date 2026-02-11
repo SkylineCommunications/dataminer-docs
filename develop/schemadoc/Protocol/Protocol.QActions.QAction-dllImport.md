@@ -16,7 +16,7 @@ Specifies the names of DLL files used by the QAction. Multiple values have to be
 
 ## Remarks
 
-Items mentioned in the *dllImport* attribute will be added as references to the Roslyn compiler when DataMiner compiles the QAction. The items are also used to add additional hint paths to be used by the assembly resolver. For more information, refer to [Run-time assembly binding](xref:Run_Time_Assembly_Binding).
+Items mentioned in the *dllImport* attribute will be added as references to the Roslyn compiler when DataMiner compiles the QAction. The items are also used to add additional hint paths to be used by the assembly resolver. For more information, refer to [Runtime assembly binding](xref:Run_Time_Assembly_Binding) and [Assembly binding connectors](xref:AssemblyResolvingConnectors).
 
 When an assembly that is part of the Base Class Library (BCL) of .NET Framework is used (e.g. System.Xml.dll), it is sufficient to just mention it in the *dllImport* attribute. Assemblies that are part of the BCL must **not** be included in the protocol package.
 
@@ -76,5 +76,5 @@ For example, the following QAction definitions are possible within a single prot
 >
 > - A leading slash before the folder name is supported, but not required.
 > - A folder separator can be a forward slash or backslash.
-> - For more information regarding assembly resolving in DataMiner, refer to [Run-time assembly binding](xref:Run_Time_Assembly_Binding).
+> - For more information regarding assembly resolving in DataMiner, refer to [Runtime assembly binding](xref:Run_Time_Assembly_Binding).
 > - In the details of a DLL, "File Version" and "Product Version" reflect the projects file version at compilation. These are not used by the assembly resolver to resolve an assembly. The assembly resolver uses the assembly version. To see the assembly version of an assembly, other tools might be used such as [dotPeek](xref:dotPeek).

@@ -92,7 +92,7 @@ To **migrate existing data** to STaaS, the following limitations apply:
 
 In addition, the following **other limitations** currently apply:
 
-- [Jobs](xref:jobs), [Ticketing](xref:ticketing), and [obsolete API Deployment](xref:Verify_No_Obsolete_API_Deployed) data are not supported.
+- The following legacy features are not supported: [Jobs](xref:jobs), [Ticketing](xref:ticketing), and [obsolete API Deployment](xref:Verify_No_Obsolete_API_Deployed).
 
 - The following indexing engine functionality is not supported: Alarm Console search tab, search suggestions in the Alarm Console, aliases, and aggregation.
 

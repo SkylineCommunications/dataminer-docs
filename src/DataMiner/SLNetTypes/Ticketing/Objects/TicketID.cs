@@ -3,6 +3,9 @@ using System.ComponentModel;
 
 namespace Skyline.DataMiner.Net.Ticketing
 {
+	/// <summary>
+	/// Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
+	/// </summary>
 	public class TicketIDConverter : ExpandableObjectConverter
     {
         public override bool CanConvertTo(ITypeDescriptorContext context, Type destinationType)
@@ -27,7 +30,7 @@ namespace Skyline.DataMiner.Net.Ticketing
     }
 
 	/// <summary>
-	/// Represents a ticket ID.
+	/// Represents a ticket ID. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	[Serializable]
     [TypeConverter(typeof(TicketIDConverter)),

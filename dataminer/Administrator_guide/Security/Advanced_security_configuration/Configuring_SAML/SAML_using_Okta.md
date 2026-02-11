@@ -73,11 +73,13 @@ There are two ways to configure this setup: with or without group claims. If gro
 
        If the DMA is connected to dataminer.services, also add the following URLs, replacing `<dms-dns-name>` with the DNS name of the DataMiner System and `<organization-name>` with the name of the organization
 
-        - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/API/`
+       - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/API/`
 
-        - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking`
+       - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking`
 
-        - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/`
+       - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/`
+
+       For an example of how you can configure this for multiple SAML agents in a DMS, see [Reply URLs at the identity provider side](xref:SAML_Example_Config_DMS#reply-urls-at-the-identity-provider-side).
 
        > [!NOTE]
        > The indexes here should be the same as the indexes in `C:\Skyline DataMiner\okta-sp-metadata.xml`, which you will create later in this procedure.
@@ -88,6 +90,8 @@ There are two ways to configure this setup: with or without group claims. If gro
    - **Audience URI (SP Entity ID)**: The intended audience of the SAML assertion.
 
      In this box, enter the IP address or the DNS name of your DataMiner System, e.g. ``https://dataminer.example.com/``.
+
+     For clusters with multiple SAML Agents, we recommend using the cluster name of your DMS here instead. Make sure this name is **unique across your Okta application integrations**.
 
    - **Name ID format**: The username format you are sending in the SAML Response.
 
@@ -224,5 +228,7 @@ There are two ways to configure this setup: with or without group claims. If gro
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/" index="3" isDefault="false"/>
      </md:SPSSODescriptor>
      ```
+
+   For an example of the configuration differences between Agents in a DMS with multiple SAML Agents, see [spMetadata in the example setup](xref:SAML_Example_Config_DMS#spmetadataxml).
 
 1. Restart DataMiner.

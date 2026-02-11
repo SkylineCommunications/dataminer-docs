@@ -431,9 +431,17 @@ code {
   background-color: var(--color-background);
 }
 
-.navbar-right
+.navbar-search
 {
-  order: 50
+  margin-left: auto;
+  width: 50%;
+}
+
+@media (max-width: 767.98px) {
+  .navbar-search {
+    margin: 10px auto -10px auto;
+    width: 100%;
+  }
 }
 
 .dropdown > a
@@ -583,18 +591,6 @@ a.backtotoplink:hover
   display: none;
 }
 
-#new-search-btn
-{
-	color: var(--color-navbar);
-}
-
-#new-search-btn:hover {
-  color: #eef2f5;
-}
-#new-search-btn:focus {
-  outline: none;
-}
-
 #new-search-container
 {
 	flex: 1
@@ -609,8 +605,7 @@ a.backtotoplink:hover
   display: none;
 }
 
-#search-box {
-  padding: 0 0 2em 0;
+#search-close-box {
   display: flex;
   flex-direction: column;
 }
@@ -618,32 +613,31 @@ a.backtotoplink:hover
 #search-close-btn {
   align-self: flex-end;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   outline: none;
   color: #337ab7;
   font-size: smaller;
   text-decoration: none;
 }
 
-#search-results-new #search-input {
+.navbar-search #search-input {
   width: 100%;
   font-weight: 400;
   color: var(--color-foreground);
   background-color: var(--color-background);
-  background-clip: padding-box;
+  background-clip: border-box;
   border: 1px solid #ced4da;
-  height: 46px;
   padding: 5px 20px;
   font-size: 16px;
   line-height: 1.5;
   border-radius: 24px;
 }
 
-#search-results-new #search-input:hover {
+.navbar-search #search-input:hover {
   border-color: #80bdff;
 }
 
-#search-results-new #search-input:focus {
+.navbar-search #search-input:focus {
   border-color: #80bdff;
   outline: 0;
 }
@@ -774,13 +768,13 @@ a.backtotoplink:hover
 /* Create equal columns that sits next to each other */
 .column {
   flex: 25%;
-  max-width: 25%;
-  padding: 0px 10px;
+  max-width: 27%;
+  padding: 0px 7px;
 }
 .columnhome {
   flex: 20%;
-  max-width: 20%;
-  padding: 0px 10px;
+  max-width: 25%;
+  padding: 0px 7px;
 }
 
 .column img {
@@ -874,7 +868,7 @@ body.embed {
 
   #search-results-new {
     margin-top: 16px !important;
-    #search-box, #filters {
+    #search-close-box, #filters {
       display: none !important;
     }
   }

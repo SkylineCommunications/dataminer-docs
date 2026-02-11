@@ -48,9 +48,11 @@ From now on, it will also be possible to send PDF reports if recipients are only
 > [!NOTE]
 > Currently, PDF reports configured in DataMiner Cube still require recipients to be specified in the *To* field.
 
-#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 43854]
+#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 43854] [ID 44479] [ID 44616]
 
-<!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+<!-- RN 43854: MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
+<!-- RN 44479: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+<!-- RN 44616: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
 Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
 

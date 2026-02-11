@@ -292,7 +292,7 @@ When the *NATSMigration* tool is not able to connect to BrokerGateway, it will n
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
-From now on, the new `GetRADSubgroupModelFitMessage` will allow you to retrieve the model fit score of a RAD parameter subgroup.
+From now on, the new `GetRADSubgroupModelFitMessage` will allow you to retrieve the model fit quality numbers for the subgroups in a shared model group, which can be used for [fleet outlier detection](xref:Relational_anomaly_detection#identifying-anomalous-subgroups-in-a-shared-model-group).
 
 The model fit score, ranging from 0 to 1, indicates how well the relational behavior of a subgroup is captured by the shared model trained across multiple subgroups:
 

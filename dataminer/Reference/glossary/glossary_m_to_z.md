@@ -113,7 +113,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 
 | Term | Description |
 |------|-------------|
-| QAction | Quick action within a DataMiner protocol, which can be used to implement advanced functionality that cannot be implemented by other protocol constructs. See [About QActions](xref:LogicQActions#about-qactions) |
+| QAction | Quick action within a DataMiner protocol, which can be used to implement advanced functionality that cannot be implemented by other protocol constructs. See [About QActions](xref:LogicQActions) |
 | QAM | Quadrature Amplitude Modulation. Transmission technique for digital signals that combines phase modulation and amplitude modulation. |
 | QoS | Quality of Service. |
 | Query executer | Obsolete DataMiner tool that allows users to connect to an SQL database and query it using SQL statements. See [Querying an SQL database](xref:Querying_an_SQL_database). |
@@ -123,6 +123,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 
 | Term | Description |
 |------|-------------|
+| RAD | Relational Anomaly Detection. See [Relational anomaly detection](xref:Relational_anomaly_detection).|
 | RADIUS | Remote Authentication Dial In User Service. Authentication, Authorization and Accounting (AAA) protocol that manages network access. |
 | RAID | Redundant Array of Independent Disks. |
 | RCA | Root Cause Analysis. DataMiner functionality that allows you to filter alarms based on how far they are removed from their probable root cause. See [Using the RCA slider](xref:UsingTheRCASlider) and [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor). |
@@ -166,7 +167,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Scan range | Definition of how to scan the network as part of [DataMiner IDP](xref:SolIDP). This includes the IP address ranges where the scan should occur and the CI Types indicating the types of devices that should be detected. |
 | Scheduled event | An event consisting of a start and stop task, scheduled to be executed at a specific time in the DMS. See [Scheduling an event based on a Scheduler template](xref:Scheduling_an_event_based_on_a_Scheduler_template). |
 | Scheduled task | An action that is scheduled to be executed at a specific time in the DMS. See [Manually adding a scheduled task](xref:Manually_adding_a_scheduled_task). |
-| Scheduler | DataMiner application that allows you to schedule certain actions in the DataMiner System. See [Scheduler](xref:scheduler). |
+| Scheduler | DataMiner application that allows you to schedule certain actions in the DataMiner System. See [Scheduler](xref:About_the_Scheduler_module). |
 | SCPC | Single Channel Per Carrier. Technology where a single signal is used at a given frequency and bandwidth. |
 | SCSI | Small Computer System Interface. |
 | SDH | Synchronous Digital Hierarchy. Standard technology in Europe for synchronous data transmission on optical media. Its US counterpart is SONET. |
@@ -264,7 +265,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | TFTP | Trivial File Transfer Protocol. Simple file transfer protocol that can be used to retrieve a file from or put a file on a remote host. |
 | Third-party DataMiner Connector | DataMiner connector developed by a DataMiner Strategic Partner, which can be a product vendor, a system integrator, a consultancy company or a reseller. |
 | Ticket | A record in the system related to a specific problem, which can contain information such as the affected resource and the severity of the issue. |
-| Ticketing | Legacy application used to create and/or manage tickets in DataMiner. See [Ticketing](xref:ticketing). |
+| Ticketing | Legacy ticket management application. See [Ticketing](xref:ticketing). |
 | Timer base | General parameter of an element that can be used to adjust the polling speed of the element. See [Changing the polling speed of an element](xref:Changing_the_polling_speed_of_an_element). |
 | Timetrace data | History alarm data used to list history alarms in alarm tabs and to graphically visualize history alarm information in the Alarm Console history slider. |
 | TLS | Transport Layer Security. Cryptographic protocol designed to provide communication security over a network. |
@@ -330,6 +331,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | WMI | Windows Management Instrumentation. Set of specifications from Microsoft for the management of devices and applications in a network of Windows systems. |
 | Workspace | A Cube screen layout consisting of one or more cards, which can be saved. See [Working with workspaces](xref:Working_with_workspaces). |
 | Write parameter | A parameter of which the value can be updated by a user. See [Read parameters versus write parameters](xref:Read_parameters_versus_write_parameters). |
+| WSL | Windows Subsystem for Linux. |
 
 ## X
 

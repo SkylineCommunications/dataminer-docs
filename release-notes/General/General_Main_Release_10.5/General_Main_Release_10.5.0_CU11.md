@@ -2,10 +2,13 @@
 uid: General_Main_Release_10.5.0_CU11
 ---
 
-# General Main Release 10.5.0 CU11 - Preview
+# General Main Release 10.5.0 CU11
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> Before you upgrade to this DataMiner version, make sure the Microsoft **.NET 10** hosting bundle is installed (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)). See also: [DataMiner upgrade: New prerequisite will check whether .NET 10 is installed](xref:General_Main_Release_10.5.0_CU10#dataminer-upgrade-new-prerequisite-will-check-whether-net-10-is-installed-id-44121).
 
 > [!TIP]
 >
@@ -33,21 +36,11 @@ During a DataMiner upgrade, from now on, a new upgrade action will register all 
 
 A number of security enhancements have been made.
 
-#### OpenSearch: Enhanced health monitoring [ID 43951]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-A number of enhancements have been made with regard to health monitoring of OpenSearch databases.
-
-Also, all logging with regard to OpenSearch health monitoring can now be found in *SLSearchHealth.txt*. Up to now, that logging was added to *SLCassandraHealth.txt*.
-
-Note that, from now on, if not all nodes of the OpenSearch cluster are listed in the *Db.xml* file, a notice will be generated to warn operators.
-
 #### Elasticsearch/OpenSearch: Enhanced history alarm filtering on service ID or service name [ID 44192]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-When, on a system with a Cassandra Cluster database, history alarms are filtered on service ID or service name, up to now, that filter would not be translated correctly to Elasticsearch or OpenSearch. From now on, that filter will be translated correctly. As a result, overall performance will increase when applying the filter in question to large data sets.
+When, on a system with a Cassandra Cluster database, history alarms are filtered on service ID or service name, up to now, that filter would not be translated correctly to Elasticsearch or OpenSearch. From now on, that filter will be translated correctly. As a result, overall performance will increase when applying the filter in question to large datasets.
 
 Also, filtering on alarm properties or interfaces using wildcards or regular expression has now been made case insensitive.
 
@@ -94,6 +87,12 @@ SLLogCollector packages will now also include the following information:
 - A snapshot of the HTTP service state (Request Queue View), which will be stored in the following file:
 
   `/Network Information/netsh.exe http show servicestate view=requestq verbose=no.txt`
+
+#### SLSNMPManager: Enhanced performance of the SNMP++ library [ID 44372]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Because of a number of enhancements, overall performance of the SNMP++ library has increased, especially when polling large SNMP tables.
 
 ### Fixes
 
@@ -214,10 +213,56 @@ Up to now, whenever an IP address listed in BrokerGateway's `appsettings.runtime
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-When a QAction called NotifyDataMiner `NT_ELEMENT_STARTUP_COMPLETE` for its own element while that element was being renamed, up to now, a deadlock would occur, causing a run-time error.
+When a QAction called NotifyDataMiner `NT_ELEMENT_STARTUP_COMPLETE` for its own element while that element was being renamed, up to now, a deadlock would occur, causing a runtime error.
+
+#### Problem with SLDataMiner when a version of a DVE connector was set to production version [ID 44308]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a version of a DVE connector was set to production version, in some cases, a fatal error could occur in SLDataMiner.
 
 #### A history set parameter with a constant value would not properly update its new timestamp [ID 44318]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 Up to now, a history set parameter with a constant value would not properly update its new timestamp when a set parameter was triggered with a more recent timestamp.
+
+#### Service impact of exported DVE parameter or DCF interface state of DVE element were incorrect when monitored parameters of the DVE element were polled but not saved [ID 44341]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+After a DataMiner restart or an element restart, in some cases, the service impact of an exported parameter or the DCF interface state of a DVE element would be incorrect when the monitored parameters of the DVE element in question were polled but not saved, especially when those monitored parameters were associated with active alarms.
+
+#### Protocols - PortSettings: DefaultValue and Disabled child elements of SkipCertificateVerification element would not be read if the connection was not the primary connection [ID 44343]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In the `<PortSettings>` element of an HTTP connection, you can configure a `<SkipCertificateVerification>` element with child elements `<DefaultValue>` and `<Disabled>`. Up to now, both child elements would incorrectly not be read if the connection in question was not the primary connection.
+
+#### Problem with the GQI DxM when it tried to connect to SLNet during DataMiner startup [ID 44380]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+During DataMiner startup, in some rare cases, a fatal error could occur in the GQI DxM when it tried to connect to SLNet.
+
+#### Problem with SLDataMiner when an incomplete JSON response was received from Microsoft Entra ID [ID 44391]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In some cases, a fatal error could occur in SLDataMiner when an incomplete JSON response was received from Microsoft Entra ID while authenticating a user via SAML.
+
+#### Failing attempt to create an alarm for an element being stopped could block the alarm thread [ID 44394]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU0] -->
+
+When an alarm cannot be created for a particular element, an attempt is made to fetch the element state for logging purposes.
+
+Up to now, in some cases, when the element was being stopped and was flushing its data to the database, this fetch operation could block the alarm thread. As a result, no new alarms would get processed for that element until the element had stopped flushing its data.
+
+#### Calls that check whether the connection between client and DMA is still alive would incorrectly be blocked when 10 simultaneous calls were being processed [ID 44456]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU1] -->
+
+When 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent were being processed, up to now, any additional call would be blocked, including calls that check whether the connection between client and DMA was still alive. As a result, the client application would disconnect.
+
+From now on, even when 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent are being processed, calls that check whether the connection between client and DMA is still alive will never be blocked.

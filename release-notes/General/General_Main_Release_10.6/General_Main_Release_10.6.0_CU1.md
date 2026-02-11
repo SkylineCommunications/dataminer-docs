@@ -1,0 +1,94 @@
+---
+uid: General_Main_Release_10.6.0_CU1
+---
+
+# General Main Release 10.6.0 CU1 - Preview
+
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+
+> [!TIP]
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube 10.6.0 CU1](xref:Cube_Main_Release_10.6.0_CU1).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.6.0 CU1](xref:Web_apps_Main_Release_10.6.0_CU1).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
+### Enhancements
+
+#### SLManagedScripting will again add a log entry each time it has loaded or failed to load an assembly [ID 44522]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.3 -->
+
+Since DataMiner version 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9<!-- RN 43690 -->, SLManagedScripting no longer added an entry in the *SLManagedScripting.txt* log file each time it had loaded or failed to load an assembly. From now on, it will again do so.
+
+These log entries will include both the requested version and the actual version of the assembly.
+
+#### Security enhancements [ID 44579]
+
+<!-- 44579: MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+A number of security enhancements have been made.
+
+#### SLDataGateway: StorageTypeNotFoundException will now always mention the StorageType that could not be found [ID 44603]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When SLDataGateway throws a `StorageTypeNotFoundException`, from now on, the message will always mention the StorageType that could not be found.
+
+#### An updated parameter value will no longer be written to the database if it is equal to the old value [ID 44609]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a user or a QAction updated a parameter value, up to now, the new value would always be written to the database, even when the new value was equal to the old value.
+
+From now on, when the new value is equal to the old value, the value will no longer be written to the database. If any triggers or QActions are configured to be executed following a parameter update, these will still be executed.
+
+Also, write parameters will no longer be saved as this would cause unnecessary load.
+
+#### Enhanced distribution of SNMPv3 traps [ID 44626]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a DMA receives an SNMPv3 trap that it cannot process (e.g. because the SNMPv3 user is unknown), and trap distribution is enabled, from now on, the trap will be distributed to the other DMAs in the cluster in an attempt to have it processed by one of those other DMAs.
+
+Also, in some cases, traps could be forwarded to the wrong elements because the SNMPv3 USM ID was not validated correctly.
+
+### Fixes
+
+#### MessageBroker: Problem with hostnames and FQDNs containing a certain combination of dashes and characters [ID 44433]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.3 -->
+
+Up to now, hostnames and FQDNs in the *MessageBrokerConfig.json* file would incorrectly be considered invalid when they contained a certain combination of dashes and characters.
+
+Examples of hostnames that were incorrectly considered invalid:
+
+- Hostnames that start with one letter or number, followed by a dash. For example, `a-agent`, `h-hostname`, etc.
+- Full IPv6 addresses like `[2001:0db8:85a3:0000:0000:8a2e:0370:7334]`
+- Shortened IPv6 addresses like `[::1]`
+
+#### Problem with SLNet when receiving a subscription with a large filter that contained wildcards [ID 44512]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When SLNet received a dynamic table subscription with a very large filter that contained wildcards, up to now, it would throw a stack overflow exception and stop working.
+
+From now on, SLNet subscriptions will now be blocked when they contain a filter that exceeds 140,000 characters.
+
+#### SLNetClientTest tool: External authentication would not work when the Microsoft Edge (WebView2) browser engine was installed on a per user basis [ID 44583]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When you connected to a DataMiner Agent, up to now, it would not be possible to use external authentication from a client computer on which the Microsoft Edge (WebView2) browser engine was installed on a per user basis.
+
+> [!NOTE]
+> When the Microsoft WebView2 browser engine is installed on a per user basis, it will be automatically updated each time you open Microsoft Edge.
+
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Problem with SLDataMiner after sending an NT_READ_SAVED_PARAMETER_VALUE call [ID 44597]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When an NT_READ_SAVED_PARAMETER_VALUE call was sent to retrieve data from an element without a connector while that data was still present in SLDataGateway, up to now, SLDataMiner could stop working.

@@ -8,7 +8,7 @@ using System.Text;
 namespace Skyline.DataMiner.Net.Ticketing.Helpers.Visualization
 {
 	/// <summary>
-	/// Represents Ticketing visualization hints.
+	/// Represents Ticketing visualization hints. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	[Serializable]
     [JsonObject(MemberSerialization.OptIn)]

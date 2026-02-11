@@ -4,9 +4,20 @@ uid: User_operations_support
 
 # Support application
 
-With the Support application, you can both keep track of existing tickets and create new ones.
+Our support application is designed to streamline your maintenance requests and keep you informed every step of the way. Through this portal, you can easily manage technical issues and track the progress of your tickets in real-time.
+
+Key features:
+
+- **Maintenance requests**: Create a new ticket within your dedicated maintenance support project using a step-by-step wizard designed to guide you through the entire reporting process effortlessly.
+
+- **Real-time monitoring**: Access a comprehensive dashboard of all your submitted tickets.
+
+- **Status tracking**: Instantly see the status of a reported ticket.
 
 The application is available at <https://supportpreview.dataminer.services/>. You can log in in the [same way as for dataminer.services](xref:Logging_on_to_dataminer_services).
+
+> [!IMPORTANT]
+> Please note that this application is currently in a preview stage. While we strive for a seamless experience, you may encounter minor issues. If you experience any technical issues while using the portal, please contact the DataMiner Support team directly via email at <support@dataminer.services>.
 
 ## Ticket Overview page
 
@@ -30,9 +41,9 @@ The *Report Ticket* page allows you to report a new ticket:
 
    - *Customer*: Mandatory field. The customer matching the logged-in user is selected by default.
 
-   - *Project Type*: This field is used to filter the projects by type. In case there is a maintenance contract project available for the logged-in user, it will be selected by default.
+   - *Order Type*: This field is used to filter the projects by type. In case there is a maintenance contract project available for the logged-in user, it will be selected by default.
 
-   - *Project*: Mandatory field. In case there is a maintenance contract project available with status *In Progress*, it will be selected by default.
+   - *Order*: Mandatory field. In case there is a maintenance contract project available with status *In Progress*, it will be selected by default.
 
    - *Additional Contacts*: Optional. In this field, you can add an email per line. When the ticket is created, the confirmation email will have the specified contacts in CC.
 
@@ -64,11 +75,13 @@ The *Report Ticket* page allows you to report a new ticket:
 
      - *Manual*: If you select this option, you will need to upload a [Log Collector package](xref:Collecting_data_to_report_an_issue_to_TechSupport). Requires the selection of at least one system.
 
-     - *None (not recommended)*
+     - *None (not recommended)*: In most cases, a Log Collector package is crucial for the investigation. However, you could for example select this option when something causes the Log Collector package creation to fail.
 
 1. When all the necessary information is filled in, click *Next* in the lower-right corner.
 
 1. Optionally, on the *Attachments* tab, upload files related to the ticket.
+
+   If you need to upload more than one file, all files must be in the same folder.
 
 1. Click *Next* in the lower-right corner.
 
@@ -76,4 +89,4 @@ The *Report Ticket* page allows you to report a new ticket:
 
 1. If all the information is correct, click *Submit* to initiate ticket creation. Otherwise, click *Back*, adjust the information, and click *Next* again until you can submit the ticket.
 
-   A progress bar will show the status of the ticket. In case the ticket contains attachments, this will also be reflected on the progress bar. Once the ticket creation is complete, the ticket details will be shown.
+   A progress bar will show the status of the ticket. In case the ticket contains attachments, this will also be reflected on the progress bar. Once the ticket creation is complete, the ticket details will be shown. A ticket creation email will also be sent out at this point.

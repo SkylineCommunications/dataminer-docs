@@ -105,6 +105,10 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
   When you receive the 1001 error when triggering a user-defined API, and the NATS connection of the UserDefinableApiEndpointApi DxM looks fine according to the logging, make sure that the DxM version is compatible with the DMS version. The DMA might have been temporarily upgraded to a higher version, causing a newer incompatible version of the DxM to still be installed after the downgrade. For more info, look for "Make sure the version of the UserDefinableApiEndpoint DxM is compatible with the DMA" in the [general checks](#general-checks) below.
 
+- **Request fails with status code 400 after 29 seconds.**
+
+  If your request returns a 400 Bad Request after about 29 seconds, this is likely to be caused by the cloud URL proxy aborting calls that run longer than this limit. When the `.on.dataminer.services` cloud host URL is used, API calls have a maximum execution time of 29 seconds. Make sure your API script completes well within this window to allow enough time for processing and data transfer overhead.
+
 ### General checks
 
 If issues occur when you trigger a user-defined API, follow the steps below to resolve them.

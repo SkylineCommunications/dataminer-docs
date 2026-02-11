@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.2
 ---
 
-# General Feature Release 10.6.2 – Preview
+# General Feature Release 10.6.2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -16,9 +16,9 @@ uid: General_Feature_Release_10.6.2
 >   - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
 >   - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 >
-> - Make sure all DataMiner Agents in the cluster have been migrated to the BrokerGateway-managed NATS solution. For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
+> - Make sure all DataMiner Agents in the cluster have been **migrated to the BrokerGateway-managed NATS solution**. For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration). See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
 >
->   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
+> - Make sure the Microsoft **.NET 10** hosting bundle is installed (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)). See also: [DataMiner upgrade: New prerequisite will check whether .NET 10 is installed](xref:General_Feature_Release_10.6.1#dataminer-upgrade-new-prerequisite-will-check-whether-net-10-is-installed-id-44121).
 
 > [!TIP]
 >
@@ -26,13 +26,22 @@ uid: General_Feature_Release_10.6.2
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.2](xref:Web_apps_Feature_Release_10.6.2).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
 
-*No new features have been added yet.*
+#### Automation: New message to retrieve information about the available Automation scripts [ID 44209]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve the following information about each Automation script available in the DataMiner System:
+
+- The folder containing the script's XML file.
+- Whether or not the script supports a dedicated log file.
+
+> [!NOTE]
+> The above-mentioned message can only be used on systems with an *Automation* license by users who have the following permissions:
+>
+> - *Modules > Automation > UI available*
+> - *Modules > Automation > Execute*
 
 ## Changes
 
@@ -66,6 +75,9 @@ Also, all logging with regard to OpenSearch health monitoring can now be found i
 
 Note that, from now on, if not all nodes of the OpenSearch cluster are listed in the *Db.xml* file, a notice will be generated to warn operators.
 
+> [!IMPORTANT]
+> These enhancements have been reverted. See [SLDataGateway issue caused by OpenSearch health monitoring [ID 44647]](xref:General_Feature_Release_10.6.2_CU1#sldatagateway-issue-caused-by-opensearch-health-monitoring-id-44647).
+
 #### Augmented Operations: Server-side support for new flatline detection modes [ID 44094]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
@@ -88,13 +100,13 @@ From now on, when you try to add a DataMiner Agent to a DataMiner System, the op
 - The DataMiner Agent is cloud-connected, but the DataMiner System is not.
 - The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
 
-If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.  
+If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.
 
 #### Elasticsearch/OpenSearch: Enhanced history alarm filtering on service ID or service name [ID 44192]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-When, on a system with a Cassandra Cluster database, history alarms are filtered on service ID or service name, up to now, that filter would not be translated correctly to Elasticsearch or OpenSearch. From now on, that filter will be translated correctly. As a result, overall performance will increase when applying the filter in question to large data sets.
+When, on a system with a Cassandra Cluster database, history alarms are filtered on service ID or service name, up to now, that filter would not be translated correctly to Elasticsearch or OpenSearch. From now on, that filter will be translated correctly. As a result, overall performance will increase when applying the filter in question to large datasets.
 
 Also, filtering on alarm properties or interfaces using wildcards or regular expression has now been made case insensitive.
 
@@ -169,6 +181,35 @@ From now on, SLAnalytics will pause the creation of new synchronization tasks fo
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
 A number of enhancements have been done with regard to the communication between resource managers across DataMiner Agents. This will especially enhance performance when starting multiple bookings on non-master DMAs.
+
+#### DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+In order to upgrade the DataMiner Assistant DxM, up to now, you had to install a full DataMiner server upgrade package (main release or feature release).
+
+From now on, the DataMiner Assistant DxM will be included in the DataMiner web upgrade packages instead.
+
+See also: [DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]](xref:Web_apps_Feature_Release_10.6.2#dataminer-upgrade-dataminer-assistant-dxm-will-now-be-included-in-the-dataminer-web-upgrade-packages-id-44291)
+
+> [!NOTE]
+> The DataMiner Assistant DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
+
+#### SLSNMPManager: Enhanced performance of the SNMP++ library [ID 44372]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Because of a number of enhancements, overall performance of the SNMP++ library has increased, especially when polling large SNMP tables.
+
+#### Automation: Entrypoint ID added to the 'Finished executing script' log entry [ID 44382]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+The entry added to the *SLAutomation.txt* log file when an Automation script has finished will now contain the entrypoint ID.
+
+In the following example, the entrypoint ID can be found at the end of the entry between brackets (11):
+
+`2025/12/18 13:40:00.546|SLAutomation.exe 8.0.1415.2|22300|16908|CAutomation::Execute|INF|0|Finished executing script: 'script_RT_USER_DEFINABLE_APIS_BodySizeLimit_RT_USER_DEFINABLE_APIS_BodySizeLimit_MaxResponseBodySize' (ID: 7) - SUCCEEDED - Execution took 00.308s. (11)`
 
 ### Fixes
 
@@ -296,10 +337,48 @@ Up to now, whenever an IP address listed in BrokerGateway's `appsettings.runtime
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-When a QAction called NotifyDataMiner `NT_ELEMENT_STARTUP_COMPLETE` for its own element while that element was being renamed, up to now, a deadlock would occur, causing a run-time error.
+When a QAction called NotifyDataMiner `NT_ELEMENT_STARTUP_COMPLETE` for its own element while that element was being renamed, up to now, a deadlock would occur, causing a runtime error.
+
+#### Problem with SLDataMiner when a version of a DVE connector was set to production version [ID 44308]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+When a version of a DVE connector was set to production version, in some cases, a fatal error could occur in SLDataMiner.
 
 #### A history set parameter with a constant value would not properly update its new timestamp [ID 44318]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 Up to now, a history set parameter with a constant value would not properly update its new timestamp when a set parameter was triggered with a more recent timestamp.
+
+#### Service impact of exported DVE parameter or DCF interface state of DVE element were incorrect when monitored parameters of the DVE element were polled but not saved [ID 44341]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+After a DataMiner restart or an element restart, in some cases, the service impact of an exported parameter or the DCF interface state of a DVE element would be incorrect when the monitored parameters of the DVE element in question were polled but not saved, especially when those monitored parameters were associated with active alarms.
+
+#### Protocols - PortSettings: DefaultValue and Disabled child elements of SkipCertificateVerification element would not be read if the connection was not the primary connection [ID 44343]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In the `<PortSettings>` element of an HTTP connection, you can configure a `<SkipCertificateVerification>` element with child elements `<DefaultValue>` and `<Disabled>`. Up to now, both child elements would incorrectly not be read if the connection in question was not the primary connection.
+
+#### Problem with SLDataMiner when an incomplete JSON response was received from Microsoft Entra ID [ID 44391]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In some cases, a fatal error could occur in SLDataMiner when an incomplete JSON response was received from Microsoft Entra ID while authenticating a user via SAML.
+
+#### Failing attempt to create an alarm for an element being stopped could block the alarm thread [ID 44394]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU0] -->
+
+When an alarm cannot be created for a particular element, an attempt is made to fetch the element state for logging purposes.
+
+Up to now, in some cases, when the element was being stopped and was flushing its data to the database, this fetch operation could block the alarm thread. As a result, no new alarms would get processed for that element until the element had stopped flushing its data.
+
+#### Delay of DataMiner startup routine caused by SLDataMiner starting up faster than SLNet [ID 44438]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.2 [CU0] -->
+
+During DataMiner startup, in some rare cases, SLDataMiner would start up faster than SLNet. This would cause a delay of about 2 minutes in the entire startup routine.

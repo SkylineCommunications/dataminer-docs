@@ -3,4 +3,4 @@ uid: Skyline.DataMiner.Net.Ticketing
 remarks: *content
 ---
 
-Refer to [Ticketing differences depending on the DataMiner version](xref:TicketingVersionDifferences) for more information about differences in the Ticketing app between DataMiner versions.
+DataMiner Ticketing is obsolete. It is no longer available from DataMiner 10.6.0/10.6.3 onwards<!--RN 44417-->. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles).

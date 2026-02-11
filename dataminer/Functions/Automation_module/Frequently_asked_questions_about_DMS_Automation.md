@@ -4,8 +4,6 @@ uid: Frequently_asked_questions_about_DMS_Automation
 
 # Frequently asked questions about DataMiner Automation
 
-This section consists of the following topics:
-
 - [How can I execute an Automation Script on an element in timeout?](xref:How_can_I_execute_an_Automation_Script_on_an_element_in_timeout)
 
 - [How do I abort a running Automation script?](xref:How_do_I_abort_a_running_Automation_script)

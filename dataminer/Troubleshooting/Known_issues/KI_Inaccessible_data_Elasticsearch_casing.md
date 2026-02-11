@@ -11,7 +11,7 @@ uid: KI_Inaccessible_data_Elasticsearch_casing
 
 ## Cause
 
-If a logger table that has `Indexing` set to `true` contains column names with uppercase characters, SLDataGateway incorrectly changes these column names to lower case. This leads to the data getting stored in a different field than expected and therefore not being retrieved when requested.
+If a logger table that has `Indexing` set to `true` contains column names with uppercase characters, SLDataGateway incorrectly changes these column names to lowercase. This leads to the data getting stored in a different field than expected and therefore not being retrieved when requested.
 
 ## Fix
 

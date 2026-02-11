@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 namespace Skyline.DataMiner.Net.Ticketing.Validators
 {
 	/// <summary>
-	/// Represents a state enum.
+	/// Represents a state enum. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	[JsonObject(MemberSerialization.OptIn)]
     [Serializable]
@@ -18,7 +18,7 @@ namespace Skyline.DataMiner.Net.Ticketing.Validators
         }
 
 		/// <summary>
-		/// Class for constructing the default <see cref="StateEnum"/>.
+		/// Class for constructing the default <see cref="StateEnum"/>. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 		/// </summary>
 		public static class Default
         {
@@ -28,7 +28,7 @@ namespace Skyline.DataMiner.Net.Ticketing.Validators
 			public static string EnumName = "StateEnum";
 
 			/// <summary>
-			/// Holds predefined state names.
+			/// Holds predefined state names. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 			/// </summary>
 			public static class States
             {

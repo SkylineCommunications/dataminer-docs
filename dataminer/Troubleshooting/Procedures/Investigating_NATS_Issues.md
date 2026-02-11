@@ -109,6 +109,8 @@ Check the following log files in the order listed:
 - **Connection refused errors**: Suggest firewall or antivirus issues. This can also mean that the NATS service is not running.
 - **Cluster formation errors**: Point to configuration mismatches between nodes.
 
+Note that if the logging for processes includes the line `Failed setting up NATS session: Exception caught in fields fetching: Failed to fetch fields: Remote SSL certificate error. Does the hostname and SSL certificate match?: SSL peer certificate or SSH remote key was not OK"`, this indicates that the certificate used by the site binding of IIS is invalid. Make sure the correct certificate is used by IIS. For more information on how to check and set the IIS HTTPS certificate, see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA#configuring-the-https-binding-in-iis).
+
 ## Check the configuration files
 
 Verify that the key configuration files contain the correct information for your cluster setup.
@@ -205,7 +207,7 @@ This file contains the API key used for authentication between DataMiner process
 
 **How to fix:**
 
-If this file is missing or corrupted, or it contains invalid data, run [NATSRepair.exe](#resettingrepairing-the-brokergateway-nats-cluster) to regenerate the NATS configuration and credentials. This will recreate the `appsettings.runtime.json` file.
+If this file is missing or corrupted, or it contains invalid data, run [NATSRepair.exe](#resettingrepairing-the-brokergateway-nats-cluster) with elevated privileges to regenerate the NATS configuration and credentials. This will recreate the `appsettings.runtime.json` file.
 
 ## Test connectivity between nodes
 
@@ -253,7 +255,7 @@ Only do this if you are sure that the system uses the BrokerGateway‑managed NA
 > [!NOTE]
 > This will not work if [automatic NATS configuration is disabled](xref:Disabling_automatic_NATS_config).<!-- RN 44061 -->
 
-1. Run `C:\Skyline DataMiner\Tools\NATSRepair.exe` on one DMA in the system.
+1. Run `C:\Skyline DataMiner\Tools\NATSRepair.exe` with elevated privileges on one DMA in the system.
 
    When executed, the tool returns a list of known DataMiner endpoints that will be used to configure the NATS cluster. For example:
 

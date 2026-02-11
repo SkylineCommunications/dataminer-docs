@@ -8,7 +8,8 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [QActions fail for element after uploading new protocol version](xref:KI_QActions_fail_after_upload_protocol_version) | From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards | | November 19, 2025 |
+| [DataMiner Web and GQI crash briefly during startup](xref:KI_DataMiner_Web_and_GQI_crash_briefly_during_startup) | DataMiner 10.5.0 [CU11] and 10.6.2 | | January 28, 2026 |
+| [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
 | [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | | July 15, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
@@ -21,14 +22,18 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Possible resource overbooking in SRM](xref:KI_Possible_overbooking_in_SRM) | SRM setups using DataMiner 10.5.12 or higher | DataMiner 10.6.2 [CU1] | January 29, 2026 |
+| [SLDataGateway issue caused by OpenSearch health monitoring](xref:KI_SLDataGateway_issue_OpenSearch_health_monitoring) | Dedicated clustered storage setups using DataMiner 10.5.0 [CU11]/10.6.2 | DataMiner 10.5.0 [CU11]/10.6.2 [CU1] | January 29, 2026 |
 | [Incorrect date sorting in Bookings app with custom column configurations](xref:KI_Incorrect_date_sorting_in_Bookings_app_with_custom_column_configurations) | SRM setups with DataMiner version below 10.2.0 [CU10]/10.3.1 and SRM setups with custom column configurations created prior to DataMiner 10.2.0 [CU10]/10.3.1 | DataMiner 10.2.0 [CU10]/10.3.1 | January 5, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
+| [QActions fail for element after uploading new protocol version](xref:KI_QActions_fail_after_upload_protocol_version) | From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards | DataMiner 10.5.0 [CU11]/10.6.2 | November 19, 2025 |
 
 ## 10.5.x
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [QActions fail for element after uploading new protocol version](xref:KI_QActions_fail_after_upload_protocol_version) | From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards | | November 19, 2025 |
+| [DataMiner Web and GQI crash briefly during startup](xref:KI_DataMiner_Web_and_GQI_crash_briefly_during_startup) | DataMiner 10.5.0 [CU11] and 10.6.2 | | January 28, 2026 |
+| [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | | September 17, 2025 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
 | [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | | July 15, 2025 |
@@ -42,10 +47,14 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Possible resource overbooking in SRM](xref:KI_Possible_overbooking_in_SRM) | SRM setups using DataMiner 10.5.12 or higher | DataMiner 10.6.2 [CU1] | January 29, 2026 |
+| [SLDataGateway issue caused by OpenSearch health monitoring](xref:KI_SLDataGateway_issue_OpenSearch_health_monitoring) | Dedicated clustered storage setups using DataMiner 10.5.0 [CU11]/10.6.2 | DataMiner 10.5.0 [CU11]/10.6.2 [CU1] | January 29, 2026 |
+| [TLS authentication issues when MessageBroker is connecting to the NATS bus](xref:KI_DataMinerMessageBroker_TLS) | DataMiner with BrokerGateway-managed NATS | DataMiner 10.5.0 [CU11]/10.6.0 | January 27, 2026 |
 | [Incorrect date sorting in Bookings app with custom column configurations](xref:KI_Incorrect_date_sorting_in_Bookings_app_with_custom_column_configurations) | SRM setups with DataMiner version below 10.2.0 [CU10]/10.3.1 and SRM setups with custom column configurations created prior to DataMiner 10.2.0 [CU10]/10.3.1 | DataMiner 10.2.0 [CU10]/10.3.1 | January 5, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
 | [Removing an invalid or unreachable IP address causes your own DMA to leave the DMS](xref:KI_Removing_an_invalid_or_unreachable_IP_address_causes_your_own_DMA_to_leave_the_DMS) | Feature Release versions from DataMiner 10.5.7 onwards | DataMiner 10.6.0/10.6.1 | November 28, 2025 |
-| [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | 21 October, 2025 |
+| [QActions fail for element after uploading new protocol version](xref:KI_QActions_fail_after_upload_protocol_version) | From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards | DataMiner 10.5.0 [CU11]/10.6.2 | November 19, 2025 |
+| [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | October 21, 2025 |
 | [Trend graph flatline when client and DMA use different time zones](xref:KI_Trend_flatline_different_time_zones) | From Dataminer 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards | DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.10 [CU1] | September 18, 2025 |
 | [Performance decrease when restarting elements that export large numbers of DVEs or VFs](xref:KI_Performance_decrease_restart_element) | DataMiner 10.5.9 | DataMiner 10.5.10 | September 15, 2025 |
 | [SLScripting issue with non-English system locale](xref:KI_SLScripting_issue_non_English_system) | From DataMiner 10.4.0 [CU18]/10.5 [CU6]/10.5.9 onwards | DataMiner 10.4.0 [CU18] build 16295/10.5 [CU6] build 16294/10.5.9 build 16293 | September 9, 2025 |
@@ -74,7 +83,6 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [QActions fail for element after uploading new protocol version](xref:KI_QActions_fail_after_upload_protocol_version) | From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards | | November 19, 2025 |
 | [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | | September 17, 2025 |
 | [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | | July 15, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
@@ -89,7 +97,8 @@ uid: Known_issues
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
 | [Incorrect date sorting in Bookings app with custom column configurations](xref:KI_Incorrect_date_sorting_in_Bookings_app_with_custom_column_configurations) | SRM setups with DataMiner version below 10.2.0 [CU10]/10.3.1 and SRM setups with custom column configurations created prior to DataMiner 10.2.0 [CU10]/10.3.1 | DataMiner 10.2.0 [CU10]/10.3.1 | January 5, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
-| [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | 21 October, 2025 |
+| [QActions fail for element after uploading new protocol version](xref:KI_QActions_fail_after_upload_protocol_version) | From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards | DataMiner 10.5.0 [CU11]/10.6.2 | November 19, 2025 |
+| [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | October 21, 2025 |
 | [Trend graph flatline when client and DMA use different time zones](xref:KI_Trend_flatline_different_time_zones) | From Dataminer 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards | DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.10 [CU1] | September 18, 2025 |
 | [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | DataMiner 10.5.0 [CU10]/10.6.1 | August 1, 2025 |
 | [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | July 16, 2025 |
@@ -148,7 +157,7 @@ uid: Known_issues
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
 | [Incorrect date sorting in Bookings app with custom column configurations](xref:KI_Incorrect_date_sorting_in_Bookings_app_with_custom_column_configurations) | SRM setups with DataMiner version below 10.2.0 [CU10]/10.3.1 and SRM setups with custom column configurations created prior to DataMiner 10.2.0 [CU10]/10.3.1 | DataMiner 10.2.0 [CU10]/10.3.1 | January 5, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
-| [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | 21 October, 2025 |
+| [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | October 21, 2025 |
 | [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | DataMiner 10.5.0 [CU10]/10.6.1 | August 1, 2025 |
 | [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | July 16, 2025 |
 | [Online Failover Agent unable to acquire VIP](xref:KI_Online_Failover_Agent_unable_to_acquire_VIP) | From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards | DataMiner 10.4.0 [CU12]/10.5.0 [CU0]/10.5.3 | June 20, 2025 |
@@ -272,6 +281,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [Unable to override information events TTL of 5 years](xref:KI_Information_events_TTL_five_years) | Cassandra Cluster setups | | July 24, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [IP address in SAN field of TLS certificate ignored in Windows 2012 R2](xref:KI_Win2012R2_ignores_IP_in_SAN_field) | Systems using Windows 2012 R2 | | March 20, 2023 |

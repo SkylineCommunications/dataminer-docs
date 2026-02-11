@@ -256,7 +256,7 @@ In some cases, when new data from a partial table was being loaded into a *Table
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-In some cases, scroll bars would appear on a *Grid* component, even though there was sufficient screen real estate to display all items.
+In some cases, scrollbars would appear on a *Grid* component, even though there was sufficient screen real estate to display all items.
 
 #### Low-Code Apps - Form component: Problem when saving a form due to boolean fields not having a default value [ID 42111]
 

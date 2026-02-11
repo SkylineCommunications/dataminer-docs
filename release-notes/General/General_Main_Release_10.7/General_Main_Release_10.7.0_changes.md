@@ -9,6 +9,35 @@ uid: General_Main_Release_10.7.0_changes
 
 ## Changes
 
+### Breaking changes
+
+#### Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Up to now, one SLScripting process was used by default. From now on, by default, there will be as many SLScripting processes as SLProtocol processes.
+
+Note that is possible to configure the number of simultaneously running SLScripting processes. See [Setting the number of simultaneously running SLScripting processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes).
+
+> [!IMPORTANT]
+> If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. More information can be found in the [QAction documentation](xref:LogicQActionsMemberFields#sharing-and-persisting-data).
+
+#### SNMP trap binding values will now only display plain ASCII characters [ID 44527]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+When the system receives a trap binding value of type OctetString, that value will either be automatically converted into characters (e.g. 0x41 will become "A") or remain in a hexadecimal string format (e.g. when the value contains a byte that is not printable like 0x02, which is an STX control character).
+
+Up to now, hexadecimal values above the ASCII range (i.e. values >= 0x7F) were considered printable characters, and were not converted into a hexadecimal string. This would cause issues with, for example, the Unicode control character 0x8C, which would be displayed as a question mark. In such cases, complex QAction code would then be required to have it converted back into a hexadecimal value.
+
+Also, DataMiner is not aware of whether a binding value actually contains text (e.g. a MAC address consisting of octets) or, if the value contains text, how that text was encoded (e.g. Windows code page 1252, UTF-8, UTF-16, etc.).
+
+From now on, hexadecimal values outside of the ASCII range will be considered non-printable characters, and will remain in hexadecimal string format.
+
+This is a breaking change.
+
+Up to now, text containing characters that were encoded in extended ASCII (i.e. Windows code page 1252) were converted from raw octets into string text. For example, the French word "hélicoptère" would be received correctly. From now on, that same word will be received as hexadecimal string "68e96c69636f7074e87265", and a QAction will need to convert it back into a string using the correct encoding.
+
 ### Enhancements
 
 #### SLNet: Trend graphs in Cube will now also correctly display behavioral change points for table column parameters without advanced naming [ID 41751]
@@ -17,6 +46,28 @@ uid: General_Main_Release_10.7.0_changes
 
 Because of a number of enhancements made in SLNet, trend graphs in DataMiner Cube will now also correctly display behavioral change points for table column parameters without advanced naming.
 
+#### Protocols: Elements will now restart automatically when an SLScripting process has disappeared [ID 42306]
+
+<!-- MR 10.6.0 - FR 10.5.5 >>> Published in 10.7.0 - FR 10.6.3 together with 44420 -->
+
+Up to now, when an SLScripting process disappeared, elements relying on that process could become unstable, requiring manual intervention to restore functionality.
+
+From now on, when an SLScripting process disappears, a new process instance will be started automatically, and any elements that depended on the process that disappeared will be restarted to maintain consistency across SLProtocol, SLScripting, and other related components. This will ensure that lost SLScripting data is properly reinitialized and remains in sync with other processes.
+
+When an SLScripting process disappears, the following notice alarm will be generated:
+
+`Process disappearance of SLScripting.exe with PID <processId>; <x> elements affected by the disappearance have been restarted.`
+
+Also, the *SLElementsInProtocol.txt* log file has been updated to track restart reasons more accurately.
+
+- The restart reason column will now indicate either "SLScriptingCrashRestart" or "SLProtocolCrashRestart" (if everything is OK, *NormalStart* will be shown instead).
+- A new counter will now indicate the number of times the element was started due to a SLScripting process disappearance.
+
+If SLProtocol requests an SLScripting process that is no longer valid, the system will now detect this, and trigger the same element restart flow.
+
+> [!NOTE]
+> There will be a one-minute delay between the disappearance of an SLScripting process and the creation of a new SLScripting process and the subsequent element restarts. However, when one of the elements that was hosted in the SLScripting process that disappeared tries to trigger a QAction within that one-minute delay, the new SLScripting process will be created when that QAction is triggered.
+
 #### Automation: Engine class now has an OnDestroy handler that will allow resources to be cleaned up when a script ends [ID 43919]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->
@@ -24,6 +75,17 @@ Because of a number of enhancements made in SLNet, trend graphs in DataMiner Cub
 An `OnDestroy` handler has now been added to the `Engine` class. This handler will allow resources to be cleaned up when a script ends.
 
 Multiple handlers can be added. They will run synchronously, and if one handler throws an error, the others will keep on running.
+
+#### New parameter caches for client apps [ID 43945]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Two new parameter caches are now available for client apps (e.g. DataMiner Cube):
+
+- ProtocolParameters (linked to GetProtocolParameter on the client connection)
+- ElementProtocolParameters (linked to GetElementProtocolParameter on the client connection)
+
+Both caches are added on the connection object, and have the ability to cache in memory (for the current session) and on disk (for a next session).
 
 #### Automation: All methods that use parameter descriptions have now been marked as obsolete [ID 43948]
 
@@ -72,6 +134,16 @@ In most cases, these settings can keep their default value, unless performance h
 > - Only users with *Modules > System configuration > Tools > Admin tools* permission are allowed to change the above-mentioned settings.
 > - If the `SkipDcfLinks` setting is set to true, we recommend that you do not set MaxAmountOfParallelTasks too high. DCF link creation can be an expensive operation. Performing a large number of action in parallel might decrease performance.
 
+#### Enhanced visibility on SLNet connection issues [ID 44069]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+Visibility on SLNet connection issues has been enhanced:
+
+- When a dashboard cannot be loaded because a DataMiner Agent is offline, an appropriate error message will now appear in that dashboard.
+
+- A new log file named *SLNetConnectionsMonitor.txt* will now keep a historic record of all SLNet connection states.
+
 #### Augmented Operations: Server-side support for new flatline detection modes [ID 44094]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
@@ -102,7 +174,7 @@ From now on, when you try to add a DataMiner Agent to a DataMiner System, the op
 - The DataMiner Agent is cloud-connected, but the DataMiner System is not.
 - The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
 
-If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.  
+If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.
 
 #### Scheduler will now be able to start more than 10 synchronously running Automation scripts [ID 44200]
 
@@ -123,6 +195,59 @@ The response to a `GetRADParameterGroupInfoMessage` will now also include the ID
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
 A number of enhancements have been done with regard to the communication between resource managers across DataMiner Agents. This will especially enhance performance when starting multiple bookings on non-master DMAs.
+
+#### DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+In order to upgrade the DataMiner Assistant DxM, up to now, you had to install a full DataMiner server upgrade package (main release or feature release).
+
+From now on, the DataMiner Assistant DxM will be included in the DataMiner web upgrade packages instead.
+
+See also: [DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]](xref:Web_apps_Feature_Release_10.6.2#dataminer-upgrade-dataminer-assistant-dxm-will-now-be-included-in-the-dataminer-web-upgrade-packages-id-44291)
+
+> [!NOTE]
+> The DataMiner Assistant DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
+
+#### Automation: Entrypoint ID added to the 'Finished executing script' log entry [ID 44382]
+
+<!-- MR 10.7.0 - FR 10.6.2 -->
+
+The entry added to the *SLAutomation.txt* log file when an Automation script has finished will now contain the entrypoint ID.
+
+In the following example, the entrypoint ID can be found at the end of the entry between brackets (11):
+
+`2025/12/18 13:40:00.546|SLAutomation.exe 8.0.1415.2|22300|16908|CAutomation::Execute|INF|0|Finished executing script: 'script_RT_USER_DEFINABLE_APIS_BodySizeLimit_RT_USER_DEFINABLE_APIS_BodySizeLimit_MaxResponseBodySize' (ID: 7) - SUCCEEDED - Execution took 00.308s. (11)`
+
+#### DataMiner backup: 'Ticketing Gateway Configuration' removed from the list of backup options [ID 44401]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway Configuration* has now been removed from the list of backup options.
+
+#### DataMiner backup: Scheduler configuration will now be included in full and configuration backups [ID 44584]
+
+<!-- MR 10.7.0 - FR 10.6.3 -->
+
+From now on, the Scheduler configuration found in `C:\Skyline Dataminer\Scheduler` will be included in the following pre-configured backups:
+
+- Full backup (without database)
+- Configuration backup (without database)
+
+If you create a custom backup, the Scheduler configuration will be included only if you selected the *DataMiner settings* option.
+
+#### SLLogCollector: Separate log file per instance [ID 44668]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, all SLLogCollector logging of all SLLogCollector instances would end up in the following files, stored in the `C:\ProgramData\Skyline\DataMiner\SL_LogCollector\Log` folder:
+
+- `SL_LogCollector_fulllog.log`
+- `SL_LogCollector_log.log`
+
+From now on, each SLLogCollector instance will have its own dedicated log file named `log-[creation timestamp].txt`, stored in the `C:\ProgramData\Skyline Communications\SLLogCollector` folder.
+
+Up to 10 log files will be kept on disk, and the log file of the current instance will be added to the SLLogCollector package.
 
 ### Fixes
 

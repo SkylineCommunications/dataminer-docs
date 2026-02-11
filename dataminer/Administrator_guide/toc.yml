@@ -170,6 +170,8 @@ items:
             topicUid: BPA_Database_Security
           - name: DataMiner Agent Minimum Requirements
             topicUid: BPA_Minimum_Requirements_Check
+          - name: Detect unsupported connector versions
+            topicUid: BPA_Detect_Unsupported_Connector_Versions
           - name: Firewall Configuration
             topicUid: BPA_Firewall_Configuration
           - name: Health Metrics
@@ -315,8 +317,6 @@ items:
                     topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
                   - name: Decommissioning WSL
                     topicUid: Decommissioning_WSL
-                  - name: Determining the health of the dedicated clustered storage
-                    topicUid: Determining_the_health_of_the_clustered_storage
               - name: Configuring storage per DMA
                 topicUid: Configuring_storage_per_DMA
                 items:
@@ -547,6 +547,8 @@ items:
               topicUid: SAML_using_Okta
             - name: Additional configuration for systems connected to dataminer.services
               topicUid: SAML_config_to_connect_to_cloud
+            - name: Example setup - DMS with Failover pair
+              topicUid: SAML_Example_Config_DMS
             - name: Troubleshooting SAML issues
               topicUid: Troubleshooting_SAML_Issues
           - name: Configuring LDAP settings
@@ -656,6 +658,8 @@ items:
         topicUid: SwarmingElements
       - name: Swarming bookings
         topicUid: SwarmingBookings
+      - name: Swarming scheduled tasks
+        topicUid: SwarmingScheduledTasks
       - name: Rolling back Swarming
         topicUid: SwarmingRollback
       - name: Frequently asked questions

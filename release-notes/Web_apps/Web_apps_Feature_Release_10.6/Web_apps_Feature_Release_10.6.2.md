@@ -2,12 +2,12 @@
 uid: Web_apps_Feature_Release_10.6.2
 ---
 
-# DataMiner web apps Feature Release 10.6.2 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.6.2
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.5.0 [CU11].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -16,9 +16,67 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## Highlights
 
-*No highlights have been selected yet.*
+#### Dashboards app: Updated user interface [ID 44222] [ID 44297]
 
-## New features
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+In the Dashboards app, the sidebar and home page have been redesigned to improve usability and make managing dashboard folders and dashboards more efficient.
+
+![Dashboard UI in DataMiner 10.6.2](~/dataminer/images/Dashboards_UI_1062.gif)
+
+The home page of the Dashboards app, which is shown when no dashboards or folders are selected in the sidebar, now contains a dropdown menu at the top that allows you to add a dashboard or folder. In addition, the page shows an overview of all folders and dashboards, where you can directly delete a folder, add a folder or dashboard, or import a dashboard either locally or from the Catalog.
+
+In the sidebar, the ellipsis button ("...") in the top-right corner has been replaced with a right-click menu. Right-clicking the background of the sidebar will show the following commands:
+
+- Add > Dashboard
+- Add > Folder
+- Add > From Import
+- Add > From Catalog
+- Settings
+
+When you right-click a folder or click the ellipsis button of a folder, a menu with the following commands will open:
+
+- Add > Dashboard
+- Add > Folder
+- Add > From Import
+- Add > From Catalog
+- Settings
+- Delete
+
+When you right-click a dashboard or click the ellipsis button of a dashboard, a menu with the following commands will open:
+
+- Open in new tab
+- Duplicate
+- Settings
+- Delete
+
+The sidebar now also supports keyboard navigation and automatically adapts to the viewport width.
+
+#### Dashboards/Low-Code Apps - Templates: More preset templates and redesigned 'Browse templates' window [ID 44174] [ID 44176]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+Ready-made preset templates are now available for all template-supported components (i.e. grids, maps, timelines, and tables), directly in the *Browse templates* window. These presets let you take full advantage of template customization options while saving time and reducing repetitive work when configuring components.
+
+![Templates](~/release-notes/images/Templates.png)
+
+All default templates now appear as presets, alongside a number of additional preset options. Template previews are rendered in the same way for all components, so you have a clear view of each template before applying it.
+
+The *Browse templates* window has also been redesigned for faster, more intuitive navigation. You can now:
+
+- Search templates by name.
+
+- Filter the list to show preset templates, custom templates, or both.
+
+- Narrow down the overview by visualization type.
+
+#### Ticketing app End of Life [ID 44371]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+The Ticketing app has been declared End of Life.
+
+On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer be shown on the DataMiner landing page.
 
 ## Changes
 
@@ -29,22 +87,6 @@ This Feature Release of the DataMiner web applications contains the same new fea
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
 Because of a number of enhancements, performance has increased when rendering a large number of template previews in e.g. the *Browse templates* window.
-
-#### Dashboards/Low-Code Apps - Templates: Default templates of all components that are using templates will now show up a presets in 'Browse templates' window [ID 44174]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-In the *Browse templates* window, all default templates of all components that are using templates will now show up a presets.
-
-Also, this window will now include a number of additional presets.
-
-#### Dashboards/Low-Code Apps - Templates: Enhanced template previews [ID 44176]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-A number of enhancements have been made with regard to template previews.
-
-From now on, template previews will always be rendered in a consistent way, whatever the component in which they are viewed.
 
 #### Dashboards/Low-Code Apps - Node edge graph component: Label enhancements [ID 44218]
 
@@ -70,36 +112,6 @@ If you choose *Custom*:
   - If neither the selected column nor the edge have conditional coloring, the default background color of the node edge graph component will be used as background color.
 
 The above-mentioned label configuration can be set per node query, per edge query, and can also be overridden by means of node and edge overrides.
-
-#### Dashboards app: Redesigned sidebar [ID 44222]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-The sidebar of the Dashboards app has been redesigned.
-
-When you click the ... button at the top of the sidebar, or when you right-click the background of the sidebar, a menu with the following commands will open:
-
-- Create > Dashboard
-- Create > Folder
-- Create > From Import
-- Create > From Catalog
-- Settings
-
-When you right-click a folder, or click the ... button of a folder, a menu with the following commands will open:
-
-- Create > Dashboard
-- Create > Folder
-- Create > From Import
-- Create > From Catalog
-- Settings
-- Delete
-
-When you right-click a dashboard, or click the ... button of a dashboard, a menu with the following commands will open:
-
-- Open in a new tab
-- Duplicate
-- Settings
-- Delete
 
 #### GQI extensions: Filtering enhancements [ID 44230] [ID 44235]
 
@@ -192,7 +204,7 @@ Possible types for the `IGQIValueFilter.Value` property (i.e. the types for whic
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-Up to now, the *Interactive Automation script* component would only visualize an Automation script when the user had the *Modules > Automation > UI available* permission. From now on, the *Interactive Automation script* component will be able to visualize an Automation script when the user has the *Modules > Automation > Execute* permission.
+Up to now, the *Interactive Automation script* component would only visualize an Automation script when the user had both the *Modules > Automation > UI available* and the *Modules > Automation > Execute* permissions. From now on, the *Interactive Automation script* component will be able to visualize an Automation script when the user has the *Modules > Automation > Execute* permission.
 
 With regard to the Web Services API, up to now, users needed to have both the *Modules > Automation > UI available* permission and the *Modules > Automation > Execute* permission to be allowed to use the `GetAutomationScript`, `ExecuteAutomationScript`, or `ExecuteAutomationScriptWithOutput` methods.
 
@@ -276,16 +288,18 @@ When all above-mentioned conditions are met, the partition join is executed as f
 > [!IMPORTANT]
 > Although the partition join strategy will enhance performance in most common scenarios that require the fastest possible query executions, this strategy can be up to twice as slow when the join has low selectivity. For these uncommon scenarios, we recommended manually enabling the *prefetch* option on the relevant join operator.
 
-#### Dashboards app: Updated navigation pane with improved accessibility and CRUD actions [ID 44297]
+#### DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]
 
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+<!-- MR 10.7.0 - FR 10.6.2 -->
 
-The sidebar navigation pane of the Dashboards app, which contains dashboard folders and dashboards, has been redesigned to improve usability and make managing dashboard folders and dashboards more efficient. The new view:
+In order to upgrade the DataMiner Assistant DxM, up to now, you had to install a full DataMiner server upgrade package (main release or feature release).
 
-- Supports keyboard navigation.
-- Automatically adapts to the viewport width.
-- Allows additional CRUD actions directly from the view, including deleting a folder, adding a folder or dashboard, and importing a dashboard either locally or from the Catalog.
-- Displays a fitting placeholder when a folder or the root is empty.
+From now on, the DataMiner Assistant DxM will be included in the DataMiner web upgrade packages instead.
+
+See also: [DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]](xref:General_Feature_Release_10.6.2#dataminer-upgrade-dataminer-assistant-dxm-will-now-be-included-in-the-dataminer-web-upgrade-packages-id-44291)
+
+> [!NOTE]
+> The DataMiner Assistant DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
 
 #### Support for GQI DxM on Dashboard Gateway [ID 44344]
 
@@ -306,12 +320,6 @@ On the Dashboard Gateway server, you will need to edit the *web.config* in the A
   - **nats:uri**: A string array containing the NATS endpoints. Every DMA in the DMS can be specified here.
 
 Note that if a local file path is used, you will need to replace the *appsettings.runtime.json* or the *.creds* file whenever the IP address of one or more DataMiner Agents in the cluster changes or one or more DataMiner Agents is added to or removed from the cluster.
-
-#### Ticketing app is End of Life [ID 44371] [ID 44373]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-The Ticketing app has been declared End of Life. On systems running DataMiner main server version 10.6.0 or higher as well as on all systems using STaaS, it will no longer appear on the DataMiner landing page or in the list of applications in DataMiner Cube.
 
 #### Web apps: New Web folder synced across the DataMiner System [ID 44396]
 
@@ -366,12 +374,6 @@ When you entered a decimal value that started with a decimal point (e.g. ".05"),
 
 > [!NOTE]
 > In some cases, this issue can still occur when entering a decimal value in a dialog box of an interactive Automation script that uses legacy UI components.
-
-#### Dashboards/Low-Code Apps - State timeline component: Problems when processing state changes [ID 44277]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-A number of issues have been fixed with regard to the State timeline component. These issues would mostly occur when processing state changes.
 
 #### Dashboards/Low-Code Apps - Timeline component: Problem when zooming or panning while linked components trigger viewport changes [ID 44280]
 
@@ -431,3 +433,9 @@ Failed to authenticate over GRPC: Status(StatusCode="Internal", Detail="Error st
 ```
 
 This issue has now been resolved, and authentication over gRPC will work correctly in this scenario.
+
+#### Dashboards app: Folder named '\_Images' would incorrectly appear in the navigation pane after you had deployed a Catalog package [ID 44374]
+
+<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+
+After you had deployed a package from the DataMiner Catalog, in some cases, a folder named *_Images* would incorrectly appear in the navigation pane on the left.

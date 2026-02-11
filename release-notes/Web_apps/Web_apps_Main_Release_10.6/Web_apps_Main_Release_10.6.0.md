@@ -7,7 +7,9 @@ uid: Web_apps_Main_Release_10.6.0
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
-<!-- This Main Release of the DataMiner web applications contains all new features, enhancements and fixes that were added to [DataMiner web apps Feature Release 10.5.12](xref:Web_apps_Feature_Release_10.5.12). -->
+This Main Release of the DataMiner web applications contains all new features, enhancements and fixes that were added to [DataMiner web apps Feature Release 10.6.3](xref:Web_apps_Feature_Release_10.6.3).
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Main Release 10.6.0](xref:General_Main_Release_10.6.0).
+>
+> - For release notes related to the general DataMiner release, see [General Main Release 10.6.0](xref:General_Main_Release_10.6.0).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Main Release 10.6.0](xref:Cube_Main_Release_10.6.0).

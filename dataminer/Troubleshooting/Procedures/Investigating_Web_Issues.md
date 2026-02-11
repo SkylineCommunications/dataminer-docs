@@ -192,6 +192,10 @@ Visual Overview in web apps has limited functionality:
 
 - Prior to DataMiner 10.5.4/10.6.0, if no user-specific information (i.e. user context) is required in a visual overview, the system tries to reuse server-side cards across different users. This may cause incorrect user information to be shown, especially when displaying pop-up windows or embedded visual overviews. From DataMiner 10.5.4/10.6.0 onwards<!--RN 42061-->, a separate card is created for each user. When a user opens a new visual overview in a web app, a new card is generated specifically for them, so that the correct user information is always shown.
 
+- Displaying a [video stream via VLC](xref:Linking_a_shape_to_a_video_stream_using_VLC) inside a shape is not supported in visual overviews that are used in DataMiner web apps.
+
+- [Linking shapes to table-based matrix parameters](xref:Linking_a_shape_to_a_matrix_parameter) is not supported in Visual Overview in web apps for DataMiner 10.5.0 [CU12], although it is supported for Visual Overview in Cube. From DataMiner 10.6.0/10.6.3 onwards<!--RN 44601-->, table-based matrices are displayed correctly in web apps, but connections cannot be altered via the context menu.
+
 If you encounter any issues or if you notice any behavior that is different from that in Cube, then check the `SLUIProvider.txt` and `SLHelperWrapper.txt` log files. Always include the Visio file when you ask for support by email.
 
 On mobile devices, Visual Overview pages automatically subscribe to all alarms. From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41327-->, if no alarm information is needed when a visual overview is shown, you can configure alarm subscriptions to be skipped by setting the `helper:load-alarms` option to "false" in `C:\Skyline DataMiner\Files\SLHelper.exe.config`.

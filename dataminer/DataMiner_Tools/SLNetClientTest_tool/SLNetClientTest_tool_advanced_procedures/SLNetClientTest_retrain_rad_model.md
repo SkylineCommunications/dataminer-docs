@@ -7,7 +7,7 @@ uid: SLNetClientTest_retrain_rad_model
 In some cases, it can be useful to retrain the internal model used by [relational anomaly detection (RAD)](xref:Relational_anomaly_detection). This allows you to indicate the periods during which a parameter group was behaving as expected, so that RAD can better identify when the parameters deviate from that expected behavior in the future.
 
 > [!TIP]
-> Instead of using the SLNetClientTest tool, from DataMiner 10.5.4/10.6.0 onwards, you can also use the [RAD Manager](xref:RAD_manager#specifying-the-training-range) app to retrain a RAD parameter group.
+> Instead of using the SLNetClientTest tool, from DataMiner 10.5.4/10.6.0 onwards, you can also use the [RAD Manager](xref:RAD_manager#configuring-model-training) app to retrain a RAD parameter group.
 
 1. [Connect to the DMA hosting the grouped parameters using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 

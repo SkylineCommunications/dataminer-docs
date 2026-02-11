@@ -11,7 +11,7 @@ uid: GQI_IGQIFilter
 
 Represents the filter logic used in a [IGQIFilterOperator](xref:GQI_IGQIFilterOperator).
 
-Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards when using the [GQI DxM](xref:GQI_DxM).<!-- RN 44230 -->
+Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards when using the [GQI DxM](xref:GQI_DxM).<!-- RN 44230 + 44235-->
 
 ## Derived types
 

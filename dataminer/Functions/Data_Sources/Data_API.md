@@ -122,3 +122,23 @@ The information from the *VLANS* array in this example is distributed into two t
 Elements generated using the Data API adhere to a predetermined layout.
 
 Individual parameters are placed on the first page named "Parameters", while each table is positioned on a separate dedicated page.
+
+## Settings
+
+The default DataAPI module settings are defined in the *appsettings.json* configuration file. This file is located in the module’s installation directory. To customize these settings, you should use an *appsettings.custom.json* file in the same directory. If this file does not yet exist, you will need to create it yourself.
+
+Note that although it is possible to change the settings directly in *appsettings.json*, these changes will be overwritten when the software is upgraded. To ensure your custom settings are preserved, please always use *appsettings.custom.json*.
+
+### MessageBroker timeout
+
+You can customize the MessageBroker request timeout in *appsettings.custom.json*. If no value is configured for this, DataAPI uses 30 seconds as the default.
+
+Example:
+
+```json
+{
+   "Communication": {
+      "MessageBrokerRequestTimeoutSeconds": 60
+    }
+}
+```

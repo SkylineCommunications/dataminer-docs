@@ -15,7 +15,7 @@ using Skyline.DataMiner.Net.Ticketing.Validators;
 namespace Skyline.DataMiner.Net.Ticketing.Helpers
 {
 	/// <summary>
-	/// Resolves fields of a ticket from a DataMiner FieldName to a third-party FieldName and vice versa.
+	/// Resolves fields of a ticket from a DataMiner FieldName to a third-party FieldName and vice versa. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	/// <remarks>
 	/// <para>The TicketFieldResolver contains a dictionary with all the names of the fields. Therefore, it is not allowed to have multiple <see cref="TicketFieldDescriptor"/> objects in the same <see cref="TicketFieldResolver"/> instance that share the same <see cref="TicketFieldDescriptor.FieldName"/>.</para>
@@ -531,6 +531,9 @@ namespace Skyline.DataMiner.Net.Ticketing.Helpers
         #endregion
     }
 
+	/// <summary>
+	/// Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
+	/// </summary>
 	public class TicketFieldResolverContractResolver : DefaultContractResolver
     {
         protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
@@ -539,6 +542,9 @@ namespace Skyline.DataMiner.Net.Ticketing.Helpers
 		}
     }
 
+	/// <summary>
+	/// Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
+	/// </summary>
     public class ResolverDictionaryConverter : JsonConverter
     {
         public override bool CanConvert(Type objectType)
@@ -557,7 +563,7 @@ namespace Skyline.DataMiner.Net.Ticketing.Helpers
     }
 
 	/// <summary>
-	/// Ticket states that are used internally.
+	/// Ticket states that are used internally. Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
 	/// </summary>
 	/// <remarks>
 	/// <para>Depending on whether the linked cause is open or cleared, a <see cref="Ticket"/> can only be:</para>
@@ -581,6 +587,9 @@ namespace Skyline.DataMiner.Net.Ticketing.Helpers
 		Closed
 	}
 
+	/// <summary>
+	/// Obsolete. Ticketing is being retired (see <see href="xref:Software_support_life_cycles">DataMiner functionality evolution and retirement</see>).
+	/// </summary>
     public class TicketFieldResolverExposers
     {
         public static string TableName = "";

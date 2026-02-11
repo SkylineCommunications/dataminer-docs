@@ -28,8 +28,7 @@ This multithreaded timer has 2000 as content group.
 
 With multithreaded timers, the Param children of this Group’s content can have one of the following suffixes (after a colon (“:”)):
 
-- **single**: If ":single" is appended after the parameter ID, this parameter will be retrieved via a separate SNMP Get request. See [single](#single
-).
+- **single**: If ":single" is appended after the parameter ID, this parameter will be retrieved via a separate SNMP Get request. See [single](#single).
 - **instance**: Indicates that this parameter holds the instance value. The following parameters in the group will use the value retrieved by this parameter as the instance. See [instance](#instance).
 - **table**: (Deprecated) Indicates that the requested parameter represents a table. Use tablev2 instead. See [table](#table).
 - **tablev2**: Indicates that the requested parameter represents a table. See [tablev2](#tablev2).

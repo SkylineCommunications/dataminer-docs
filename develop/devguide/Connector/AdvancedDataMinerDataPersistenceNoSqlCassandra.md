@@ -133,7 +133,7 @@ The following sections describe the main tables of the DataMiner Cassandra gener
 - [Information events](#information-events)
 - [Alarm data](#alarm-data)
 - [Trend data](#trend-data)
-- [Ticketing data](#ticketing-data)
+- [Ticketing data](#ticketing-data-obsolete) (obsolete)
 - [Analytics data](#analytics-data)
 
 > [!IMPORTANT]
@@ -544,7 +544,7 @@ Window:
 - 0: real time
 - -1: any
 
-### Ticketing data
+### Ticketing data (obsolete)
 
 Ticketing data is kept in a separate keyspace named "[config]_sldmadb_ticketing" and contains the following tables:
 

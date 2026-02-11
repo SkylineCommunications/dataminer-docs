@@ -26,23 +26,7 @@ For more information see [Types of users](xref:Types_of_users).
 
 ## Default Users
 
-DataMiner has one built-in user, named "Administrator". This user is also the local administrator on the Windows server hosting DataMiner. This user is intended for recovery and initial configuration purposes. Once the system is configured and Operator users have been created, we recommend disabling the local Administrator user on the DataMiner server.
-
-To **disable** the local Administrator user:
-
-1. Open a PowerShell console as administrator.
-
-1. Execute the following command:
-
-   `Get-LocalUser Administrator | Disable-LocalUser`
-
-To **enable** the local Administrator user:
-
-1. Open a PowerShell console as administrator.
-
-1. Execute the following command:
-
-   `Get-LocalUser Administrator | Enable-LocalUser`
+DataMiner has one built-in user, named "Administrator". This user is also the local administrator on the Windows server hosting DataMiner. This user is intended for recovery and initial configuration purposes. We highly recommend that you avoid using this account for routine and day-to-day operations and securely manage access to this account, for example via LAPS.
 
 > [!NOTE]
 > If you use self-managed storage nodes instead of the recommended [Storage as a Service](xref:STaaS), you will need to make sure that the default users of the DataMiner **databases** are also secured. For more information, see [Securing self-managed DataMiner storage](xref:Cassandra_authentication).

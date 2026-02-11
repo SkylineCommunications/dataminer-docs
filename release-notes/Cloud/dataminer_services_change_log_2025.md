@@ -9,6 +9,26 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 18 December 2025 - Enhancement - dataminer.services - Improved DaaS deployment flow
+
+On dataminer.services, the *Add DataMiner System* button will now launch an onboarding wizard that will help users to add a new DataMiner System step by step. During this process, it will also be more clear than before when an organization has to be created.
+
+### 18 December 2025 - Enhancement - Catalog - Slideshow click behavior
+
+On the Catalog home page, users can now use the Shift and Ctrl keys together with a mouse click to open items from the slideshow in a new window or tab, respectively.
+
+### 17 December 2025 - Enhancement - Terms of service
+
+The links to the license and service terms have been updated to link to the [new page on DataMiner Docs](xref:dataminer.services_terms_of_use).
+
+### 17 December 2025 - Fix - Authentication - Timeout of authentication.dataminer.services page caused by font dependencies being blocked by firewall rules
+
+When users tried to renew their cloud session via the authentication.dataminer.services page, it could occur that the page timed out if external font dependencies were blocked by firewall rules. This issue particularly affected users with strict firewall configurations.
+
+### 17 December 2025 - Fix - Styling issues in organization selector heading
+
+In the overlay to select a different organization, it could occur that characters were cut off and styling was inconsistent.
+
 ### 5 December 2025 - Enhancement - Billing - DaaS usage billing
 
 Starting from December 2025, automatic monthly billing will be implemented for DaaS. On the 5th day of each month, the expended DataMiner credits for the previous month's DaaS usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.
@@ -281,11 +301,11 @@ The context menu for a Catalog item range and version is now only shown if the p
 
 ### 1 April 2025 - Enhancement - Catalog & Home - Show notifications bell for unauthenticated users [ID 42559]
 
-In the Catalog app and on the dataminer.services homepage, users can now see the notifications button even when they are not signed in.
+In the Catalog app and on the dataminer.services home page, users can now see the notifications button even when they are not signed in.
 
 ### 1 April 2025 - Fix - Admin, Catalog, Home & Sharing - User profile was visible after signing out [ID 42559]
 
-In some cases, it could occur that you could still see your user profile even after clicking *Sign out*. This issue affected the Admin app, Catalog app, Sharing app, and dataminer.services homepage.
+In some cases, it could occur that you could still see your user profile even after clicking *Sign out*. This issue affected the Admin app, Catalog app, Sharing app, and dataminer.services home page.
 
 ### 1 April 2025 - Fix - Catalog API - Users could update ranges and versions they did not have rights to [ID 42566]
 

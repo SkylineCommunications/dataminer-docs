@@ -4,6 +4,31 @@ uid: DataMinerAssistant_change_log
 
 # DataMiner Assistant change log
 
+#### 21 January 2026 - DataMiner Assistant 2.1.21 - Issues when loading the configuration file [ID 44448]
+
+A number of issues related to loading the DataMiner Assistant configuration file have been resolved:
+
+- When, at startup, DataMiner Assistant tries to load an invalid configuration, it will no longer stop working. Instead, it will log an error, and fall back onto the default configuration.
+
+- When, at startup, DataMiner Assistant tries to load an valid configuration containing unexpected data, it will no longer stop working abruptly. Instead, it will log an error, and shut down gracefully.
+
+- When, at runtime, DataMiner Assistant detects that the configuration has been updated and now contains an unexpected value, it will no longer stop working. It will log an error, and keep using the latest valid value.
+
+#### 18 December 2025 - DataMiner Assistant 2.1.9 - Document Intelligence failsafe [ID 44377]
+
+DataMiner Assistant can analyze documents based on instructions you provide. A failsafe has now been introduced to prevent users from uploading very large files or files with unsupported extensions.
+
+The table below lists all supported file types and their maximum allowed size:
+
+| File type | Maximum allowed size |
+| --- | --- |
+| .bmp<br>.docx<br>.heic<br>.heif<br>.html<br>.jpeg<br>.jpg<br>.pdf<br>.png<br>.xslx | 5 MB |
+| .pptx<br>.tif<br>.tiff | 20 MB |
+
+#### 15 December 2025 - DataMiner Assistant 2.1.9 - Result sets of GQI queries limited to 100,000 records [ID 44346]
+
+From now on, the result set of every query performed by DataMiner Assistant via GQI will be limited to maximum 100,000 records.
+
 #### 9 October 2025 - DataMiner Assistant 2.0.0 - DataMiner Copilot has been renamed to DataMiner Assistant [ID 43922]
 
 DataMiner Copilot has now been renamed to DataMiner Assistant.

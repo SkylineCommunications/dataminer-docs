@@ -6,7 +6,7 @@ uid: Duplicating_a_dashboard
 
 1. In the list of dashboards on the left, select the dashboard that you want to duplicate.
 
-1. Right-click the dashboard or click the ... button in the top-right corner of the panel, and select *Copy* or *Duplicate*, depending on the DataMiner version.
+1. Right-click the dashboard and select *Duplicate* or *Copy*, depending on the DataMiner version.
 
 1. In the dialog box, enter the name of the new dashboard.
 

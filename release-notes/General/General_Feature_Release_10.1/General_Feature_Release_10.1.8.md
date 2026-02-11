@@ -518,7 +518,7 @@ When, in Visual Overview, a table control had the SelectionSetVar option specifi
 
 #### DataMiner Cube - Resources app: No scroll bars would appear when a pane was not able to show all content \[ID 29836\]
 
-When, in the Resources app, you selected a resource with e.g. a large number of capacity and/or capability parameters, no scroll bars would appear, even when the pane was not able to show all content.
+When, in the Resources app, you selected a resource with e.g. a large number of capacity and/or capability parameters, no scrollbars would appear, even when the pane was not able to show all content.
 
 #### HTML5 apps: Incorrect overlay could appear when a timespan field got the focus \[ID 29849\]
 

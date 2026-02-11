@@ -537,9 +537,9 @@ When you created a new element, service, view or redundancy group, in some cases
 
 In some rare cases, it would not be possible to click DCF connection lines when a placeholder was specified in the *Connection* shape. Also, connection lines would no longer become transparent when hovering the mouse pointer over them.
 
-#### Module names in SLErrors.txt in upper case \[ID 24626\]
+#### Module names in SLErrors.txt in uppercase \[ID 24626\]
 
-In some cases, it could occur that the DataMiner module names in the SLErrors.txt log file were listed in upper case.
+In some cases, it could occur that the DataMiner module names in the SLErrors.txt log file were listed in uppercase.
 
 #### Problem during protocol buffer serialization \[ID 24630\]
 

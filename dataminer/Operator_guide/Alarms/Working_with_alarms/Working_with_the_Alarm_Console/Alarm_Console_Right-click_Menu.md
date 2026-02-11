@@ -10,7 +10,7 @@ When you right-click an alarm in the Alarm Console, depending on the configurati
 
 - **Set element state**: Allows you to set the element state to *Activate*, *Pause*, *Stop* or *Restart*.
 
-- **Ticket**: Allows you to create a new ticket linked to the alarm you right-clicked or view existing tickets related to the alarm. (Requires DataMiner Ticketing.)
+- **Ticket**: Obsolete. See [Ticketing](xref:ticketing).
 
 - **Change**: Allows you to quickly modify the alarm template, trend template or information template for the parameter on which the alarm occurs. See also:
 
