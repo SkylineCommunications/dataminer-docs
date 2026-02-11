@@ -177,9 +177,11 @@ Select the *Only show unresolved links* option if you only want to see the virtu
 > See also:
 > [Virtual comments](xref:XML_editor#virtual-comments)
 
-### Automatically sync solution folders
+### Validate solution files
 
-Select the *Automatically sync solution folders* option if you want the physical solution folders in Windows file explorer to automatically be synchronized whenever you add, move or delete a file in the Visual Studio solution explorer.
+Select the *Validate solution files* option if you want DIS to verify whether the open solution contains outdated code analysis and build configuration files.
+
+When outdated files are detected, an info bar *Different Code Analysis and build configuration files detected* will be shown that provides a fix button. When the button is clicked, the files will be updated.
 
 ### Task URL String Format
 
