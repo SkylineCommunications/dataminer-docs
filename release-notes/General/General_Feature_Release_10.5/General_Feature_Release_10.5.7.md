@@ -66,7 +66,7 @@ A `Hash` property has now been added to the `GetScriptInfoResponseMessage`. This
 > [!NOTE]
 > Author will not be included in the hash value as changing the author would result in a different value being calculated.
 
-All hash values of all automation scripts will be added as `AutomationScriptHashInfo` objects to the Automation script hash value cache file *AutomationScriptHashCache.txt*, located in the `C:\Skyline DataMiner\System Cache\` folder. This file will be updated one minute after an Automation script was created or updated or one minute after a `GetScriptInfoMessage` was called.
+All hash values of all automation scripts will be added as `AutomationScriptHashInfo` objects to the automation script hash value cache file *AutomationScriptHashCache.txt*, located in the `C:\Skyline DataMiner\System Cache\` folder. This file will be updated one minute after an automation script was created or updated or one minute after a `GetScriptInfoMessage` was called.
 
 Format of an AutomationScriptHashInfo object: `Script Name;LastUpdate;Calculated hash`
 
@@ -82,7 +82,7 @@ The SLNet message `EditConnection`, which can be used to edit a connection from 
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
-In an Automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other automation scripts (or any other code) to request information about the script in question, for example to find out which profile parameter values a script needs in order to orchestrate a device.
+In an automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other automation scripts (or any other code) to request information about the script in question, for example to find out which profile parameter values a script needs in order to orchestrate a device.
 
 ##### Using the entry point
 
@@ -144,7 +144,7 @@ new ExecuteScriptMessage
 
 When an `ExecuteScriptMessage` is sent, an `ExecuteScriptResponseMessage` will be returned. The information is returned in an `EntryPointResult.Result` property of type `RequestScriptInfoOutput`.
 
-This message should not be used to request the information in an Automation script.
+This message should not be used to request the information in an automation script.
 
 ## Changes
 
@@ -388,11 +388,11 @@ Up to now, when a DMA was added to a DMS that contains one or more Failover pair
 
 When a main DVE element was started or restarted, up to now, an attempt would incorrectly be made to delete child DVE elements that had already been deleted, causing unnecessary information events like "Deleting element-connections for source..." to be generated.
 
-#### Automation: Associated TXF files would not be removed when an Automation script was deleted [ID 42943]
+#### Automation: Associated TXF files would not be removed when an automation script was deleted [ID 42943]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
-When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying. Up to now, when an Automation script was deleted, the associated TXF files would incorrectly not be removed.
+When you create an automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying. Up to now, when an automation script was deleted, the associated TXF files would incorrectly not be removed.
 
 #### Failover: Database status in 'Failover status' window would incorrectly always be displayed as OK on a system using STaaS [ID 42944]
 
@@ -425,9 +425,9 @@ After a Failover switch, in some cases, the ClusterEndpointManager would fail to
 
 On swarming-enabled systems, up to now, editing an element would cause the alarm ID of that element to incorrectly be reset to 1. For the element to generate alarms in the correct range again, either DataMiner or the element had to be restarted.
 
-#### SLAutomation would leak memory each time an Automation script was run [ID 43073]
+#### SLAutomation would leak memory each time an automation script was run [ID 43073]
 
 <!-- MR 10.6.0 - FR 10.5.7 [CU0] -->
 <!-- Not added to MR 10.6.0 -->
 
-Since DataMiner 10.5.6, SLAutomation would leak memory each time an Automation script was run.
+Since DataMiner 10.5.6, SLAutomation would leak memory each time an automation script was run.

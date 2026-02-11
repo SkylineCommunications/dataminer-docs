@@ -149,7 +149,7 @@ By default, a new alarm can only be added to an existing alarm group if it occur
 
 To make it easier to see the effect of the next steps, temporarily switch off parameter and view grouping. There are two ways you can do this:
 
-- The easiest way (and the only way in case you are using DaaS) is by running the Automation script *Incident Tracking Tutorial Scripts - Script 1 Disable View and Parameter Grouping* .
+- The easiest way (and the only way in case you are using DaaS) is by running the automation script *Incident Tracking Tutorial Scripts - Script 1 Disable View and Parameter Grouping* .
 
   This script is included in the package you installed in step 1.
 
@@ -198,7 +198,7 @@ The package was configured so that an alarm on any of the amplifiers will have a
    1. Restart *SLAnalytics.exe* (e.g. through the task manager).
 
    > [!NOTE]
-   > If you do not have access to the *configuration.xml* file, instead run the Automation script *Incident Tracking Tutorial Scripts - Script 2 Enable Custom Alarm Property Grouping* to apply the same configuration.
+   > If you do not have access to the *configuration.xml* file, instead run the automation script *Incident Tracking Tutorial Scripts - Script 2 Enable Custom Alarm Property Grouping* to apply the same configuration.
 
    > [!TIP]
    > For more detailed information about adding custom rules, see [Defining custom properties for grouping](xref:Customizing_alarm_grouping_rules#defining-custom-properties-for-grouping).
@@ -269,7 +269,7 @@ It is not possible to use the *ParentNode* alarm property from the previous step
    > [!TIP]
    > For more detailed information about adding custom rules, see [Defining custom properties for grouping](xref:Customizing_alarm_grouping_rules#defining-custom-properties-for-grouping).
 
-1. If you do not have access to the *configuration.xml* file, you will need to customize an Automation script instead:
+1. If you do not have access to the *configuration.xml* file, you will need to customize an automation script instead:
 
    1. Open the *Incident Tracking Tutorial Scripts - Script 3 Enable Custom Element Property Grouping* Automation script.
 
@@ -287,7 +287,7 @@ It is not possible to use the *ParentNode* alarm property from the previous step
         </item>
       ```
 
-   1. Save and run the Automation script.
+   1. Save and run the automation script.
 
       The script will copy the code snippet into your *configuration.xml* file and restart *SLAnalytics*.
 

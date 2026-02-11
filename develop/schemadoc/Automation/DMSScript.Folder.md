@@ -4,7 +4,7 @@ uid: DMSScript.Folder
 
 # Folder element
 
-Specifies the folder in which the Automation script is included.
+Specifies the folder in which the automation script is included.
 
 ## Type
 

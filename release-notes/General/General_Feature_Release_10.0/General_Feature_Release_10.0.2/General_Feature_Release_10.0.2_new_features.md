@@ -729,7 +729,7 @@ All files uploaded by users will by default be placed in the `C:\Skyline DataMin
 
 #### New engine.UnsetFlag method to clear runtime flags \[ID 23961\]
 
-In an Automation script, you can now use the engine.UnsetFlag method to clear the following runtime flags:
+In an automation script, you can now use the engine.UnsetFlag method to clear the following runtime flags:
 
 - RunTimeFlags.AllowUndef
 - RunTimeFlags.NoInformationEvents

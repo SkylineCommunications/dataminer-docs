@@ -13,9 +13,9 @@ To create a new API, follow these steps as detailed below:
 > [!NOTE]
 > This is the recommended workflow when creating new APIs using new scripts. If you want to use an existing script for the API, see [Using existing scripts](xref:UD_APIs_Using_existing_scripts).
 
-## Creating the API Automation script
+## Creating the API automation script
 
-To define an API, you will need an Automation script that contains the logic of the API. This Automation script needs the `OnApiTrigger` entry point method, which will be executed when the API is triggered. The entry point should look like this:
+To define an API, you will need an automation script that contains the logic of the API. This Automation script needs the `OnApiTrigger` entry point method, which will be executed when the API is triggered. The entry point should look like this:
 
 ```csharp
 using Skyline.DataMiner.Automation;

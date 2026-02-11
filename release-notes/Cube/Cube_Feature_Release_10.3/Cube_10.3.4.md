@@ -78,7 +78,7 @@ Because of a number of enhancements made with regard to the retrieval of overrid
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
-In the Automation script editor, Intellisense has been added for the new `timeUpDownConfig.ShowTimeUnits` property.
+In the automation script editor, Intellisense has been added for the new `timeUpDownConfig.ShowTimeUnits` property.
 
 This property is only applied in interactive automation scripts that are launched from a web app.
 

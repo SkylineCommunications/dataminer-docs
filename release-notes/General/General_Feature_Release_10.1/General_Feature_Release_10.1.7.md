@@ -407,7 +407,7 @@ The following information will be logged
 
 #### SLManagedAutomation: Locking mechanism will now prevent exceptions from being thrown when reading or writing items in the dummies collection \[ID 29930\]
 
-In an Automation script, every Engine object contains a collection of “dummies”. Each of these dummies represents an element and can be used to interact with that element. When an Automation script wants to interact with an element that is not yet available in the dummies collection, a new dummy is created.
+In an automation script, every Engine object contains a collection of “dummies”. Each of these dummies represents an element and can be used to interact with that element. When an automation script wants to interact with an element that is not yet available in the dummies collection, a new dummy is created.
 
 Up to now, exceptions could be thrown when multiple threads were trying to read or write items in the dummies collection. Now, a locking mechanism has been added to prevent multiple threads from interfering with each other while accessing the dummies collection.
 
@@ -638,6 +638,6 @@ During a DataMiner upgrade, in some rare cases, a problem could occur in the cle
 
 In the Resources and Services modules, it could occur that functions were loaded even though they were not marked as active, which could cause several functions with the same GUID to be loaded.
 
-#### DataMiner Cube - Automation: No longer possible to attach an Automation script to a user session \[ID 30125\]
+#### DataMiner Cube - Automation: No longer possible to attach an automation script to a user session \[ID 30125\]
 
-In some cases, it would no longer be possible to attach an Automation script to a user session.
+In some cases, it would no longer be possible to attach an automation script to a user session.

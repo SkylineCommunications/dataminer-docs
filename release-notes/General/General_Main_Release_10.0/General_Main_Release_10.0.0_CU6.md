@@ -191,7 +191,7 @@ In the *Timeline \> Events* tab, in some cases, it would no longer be possible 
 
 #### Problem with SLAutomation when a ThreadAbortException was thrown in a script while the thread was not actually aborted \[ID 27187\]
 
-When a ThreadAbortException was thrown in an Automation script while the thread running the script was not actually aborted, in some cases, an error could occur in SLAutomation.
+When a ThreadAbortException was thrown in an automation script while the thread running the script was not actually aborted, in some cases, an error could occur in SLAutomation.
 
 #### Data in DVE child element not updated correctly \[ID 27189\]
 

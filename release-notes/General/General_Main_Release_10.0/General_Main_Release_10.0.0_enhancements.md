@@ -58,9 +58,9 @@ In addition, in the Settings app, these changes have also been implemented for t
 
 The default value for the *HistorySlider* setting in the file *DB.xml* (which determines how long history alarm information is kept in the Cassandra database so that it can be visualized with the history slider in the Alarm Console) has now been set to 1 month. This change will only affect new installations or upgrades of systems where no default value had been set for this setting yet.
 
-#### HTML5 app: Executing an Automation script by clicking a shape \[ID 19306\]
+#### HTML5 app: Executing an automation script by clicking a shape \[ID 19306\]
 
-From now on, similar to DataMiner Cube, the HTML5 app also supports executing an Automation script by clicking a shape.
+From now on, similar to DataMiner Cube, the HTML5 app also supports executing an automation script by clicking a shape.
 
 #### DataMiner Cube - Visual Overview / DCF: Enhanced positioning of connection property shapes in grid layout \[ID 19352\]
 
@@ -183,7 +183,7 @@ Previously, when Cube connected to the DMS, it cached all the tickets from the D
 
 #### Service & Resource Management: 'NextAvailableStates' added to SRMServiceState object \[ID 20282\]
 
-A list of NextAvailableStates has been added to the SRMServiceState object. This means that, using the ServiceManagerHelper class in an Automation script, it is possible to save the next available states of an SRM service.
+A list of NextAvailableStates has been added to the SRMServiceState object. This means that, using the ServiceManagerHelper class in an automation script, it is possible to save the next available states of an SRM service.
 
 #### Services: Enhanced alarm and element state update mechanism \[ID 20329\]
 
@@ -219,7 +219,7 @@ It is now possible to use placeholders such as *\[var:\]* and *\[param:\]* wit
 
 #### Automation/Scheduler: Email action now supports CPE reports \[ID 20692\]
 
-It is now possible to send a CPE report via an Automation script or scheduled task. When configuring the email action in the script or task, if you select to attach a CPE report, you will now be able to select a CPE Manager, along with a chain and one or more fields of the selected chain. For each field, a number of KPI parameters can then be selected, optionally with a filter.
+It is now possible to send a CPE report via an automation script or scheduled task. When configuring the email action in the script or task, if you select to attach a CPE report, you will now be able to select a CPE Manager, along with a chain and one or more fields of the selected chain. For each field, a number of KPI parameters can then be selected, optionally with a filter.
 
 #### Backup/restore now includes Service Manager and Protocol Function Manager modules \[ID 20713\]
 

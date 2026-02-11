@@ -4,7 +4,7 @@ uid: Manifest.Content.AutomationScripts.AutomationScript
 
 # AutomationScript element
 
-Specifies an Automation script to include in the package.
+Specifies an automation script to include in the package.
 
 ## Parent
 
@@ -15,6 +15,6 @@ Specifies an Automation script to include in the package.
 |Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
-|&nbsp;&nbsp;[RepoPath](xref:Manifest.Content.AutomationScripts.AutomationScript.RepoPath)||Specifies the repository path of the Automation script solution.|
-|&nbsp;&nbsp;[Selection](xref:Manifest.Content.AutomationScripts.AutomationScript.Selection)|[0, 1]|In case the Automation script solution consists of multiple automation scripts, the Selection element allows you to specify which automation scripts should be included in the package. By default, all automation scripts will be included.|
-|&nbsp;&nbsp;[Version](xref:Manifest.Content.AutomationScripts.AutomationScript.Version)||Specifies the version of the Automation script solutions.|
+|&nbsp;&nbsp;[RepoPath](xref:Manifest.Content.AutomationScripts.AutomationScript.RepoPath)||Specifies the repository path of the automation script solution.|
+|&nbsp;&nbsp;[Selection](xref:Manifest.Content.AutomationScripts.AutomationScript.Selection)|[0, 1]|In case the automation script solution consists of multiple automation scripts, the Selection element allows you to specify which automation scripts should be included in the package. By default, all automation scripts will be included.|
+|&nbsp;&nbsp;[Version](xref:Manifest.Content.AutomationScripts.AutomationScript.Version)||Specifies the version of the automation script solutions.|

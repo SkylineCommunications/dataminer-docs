@@ -67,13 +67,13 @@ After injecting the necessary *QAction.dll* files, you have to attach the Debugg
 | Attach | all temporary QAction projects will be built, and the Microsoft Visual Studio Debugger will be attached to the DataMiner SLScripting process(es).<br>Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
 | Detach | the Microsoft Visual Studio Debugger will be detached from the DataMiner SLScripting process(es). |
 
-## Debugging an Automation script
+## Debugging an automation script
 
-Go to the *Automation script* tab if you want to debug an Automation script.
+Go to the *Automation script* tab if you want to debug an automation script.
 
-### Selecting an Automation script from the connected DMA
+### Selecting an automation script from the connected DMA
 
-Use the selection box at the top of the tab to select the Automation script to be debugged.
+Use the selection box at the top of the tab to select the automation script to be debugged.
 
 ### Linking Exe block projects, assigning values to script parameters, and linking elements to script dummies
 
@@ -90,6 +90,6 @@ After linking the Exe block projects, assigning values to the script parameters,
 | Attach | all temporary Exe block projects will be built, and the Microsoft Visual Studio Debugger will be attached to the DataMiner SLAutomation process.<br> Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
 | Detach | the Microsoft Visual Studio Debugger will be detached from the DataMiner SLAutomation process. |
 
-### Triggering the Automation script
+### Triggering the automation script
 
-Click *Execute* to manually trigger the Automation script.
+Click *Execute* to manually trigger the automation script.

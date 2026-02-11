@@ -70,7 +70,7 @@ From now on, when an interactive Automation script is launched in any of the fol
 - When clicking a marker in a Maps component.
 - When clicking a node in a Service Definition component.
 - When clicking a region on a Visual Overview component.
-- When clicking an Automation script button on a dashboard.
+- When clicking an automation script button on a dashboard.
 - When a page of a low-code app is loaded.
 
 > [!NOTE]
@@ -80,7 +80,7 @@ From now on, when an interactive Automation script is launched in any of the fol
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-Up to now, in order to execute an Automation script from a web app or a dashboard, users had to have both *Execute* and *UI available* permission. From now on, having been granted *Execute* permission will suffice to be able to execute automation scripts from a web app or a dashboard.
+Up to now, in order to execute an automation script from a web app or a dashboard, users had to have both *Execute* and *UI available* permission. From now on, having been granted *Execute* permission will suffice to be able to execute automation scripts from a web app or a dashboard.
 
 The following Web Services API methods will now also only require users to have *Execute* permission (instead of *Execute* and *UI available*):
 
@@ -89,12 +89,12 @@ The following Web Services API methods will now also only require users to have 
 - ExecuteAutomationScript
 - ExecuteAutomationScriptWithOutput
 
-Also, when an Automation script fails due to missing script input, users will now receive the following error message:
+Also, when an automation script fails due to missing script input, users will now receive the following error message:
 
 `Not all required input was provided to execute the script`
 
 > [!NOTE]
-> Up to now, when an Automation script that had memory files configured was launched from a low-code app, you would incorrectly always be prompted to enter a value for those memory files. From now on, this will no longer be the case.
+> Up to now, when an automation script that had memory files configured was launched from a low-code app, you would incorrectly always be prompted to enter a value for those memory files. From now on, this will no longer be the case.
 
 #### Additional logging with regard to the persistent connection between Web API and SLNet [ID 38700]
 

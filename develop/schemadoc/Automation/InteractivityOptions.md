@@ -4,7 +4,7 @@ uid: Automation-InteractivityOptions
 
 # InteractivityOptions simple type
 
-Defines the interactivity options for an Automation script.
+Defines the interactivity options for an automation script.
 
 ## Content Type
 

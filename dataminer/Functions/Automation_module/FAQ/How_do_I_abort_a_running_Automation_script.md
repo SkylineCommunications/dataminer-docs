@@ -2,7 +2,7 @@
 uid: How_do_I_abort_a_running_Automation_script
 ---
 
-# How do I abort a running Automation script?
+# How do I abort a running automation script?
 
 ## [From DataMiner 10.2.12/10.3.0 onwards](#tab/tabid-1)
 

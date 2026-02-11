@@ -67,7 +67,7 @@ The pipeline will only continue if exactly one solution file has been detected i
 
 ## Validate solution
 
-This stage verifies whether there are C# code blocks in the Automation script(s). If not, the SonarQube stage will be skipped.
+This stage verifies whether there are C# code blocks in the automation script(s). If not, the SonarQube stage will be skipped.
 
 ## Prepare solution
 
@@ -135,7 +135,7 @@ The quality gate will fail as soon as one test fails.
 
 ### SonarQube
 
-This quality gate verifies whether the Automation script does not exceed any of the limits set for the SonarQube code analysis. Currently, the following limits have been configured:
+This quality gate verifies whether the automation script does not exceed any of the limits set for the SonarQube code analysis. Currently, the following limits have been configured:
 
 - Blocker Issues: 0
 
@@ -168,7 +168,7 @@ This stage will perform registration in the catalog.
 
 ## (Release) Push to SVN
 
-This stage performs the actual push to SVN. Once this stage is executed, you should find a new version of the Automation script(s) on SVN in the corresponding folder, together with the required DLLs, which were originally provided in the DLLs folder in the Visual Studio project.
+This stage performs the actual push to SVN. Once this stage is executed, you should find a new version of the automation script(s) on SVN in the corresponding folder, together with the required DLLs, which were originally provided in the DLLs folder in the Visual Studio project.
 
 > [!NOTE]
 > Whereas old automation scripts were stored on SVN under the following folder <https://svn.skyline.be/!/#SystemEngineering/view/head/Automation%20Scripts>, the CI/CD pipeline pushes automation scripts to the following folder <https://svn.skyline.be/!/#SystemEngineering/view/head/Automation>.

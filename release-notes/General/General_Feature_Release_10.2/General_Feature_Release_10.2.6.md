@@ -385,9 +385,9 @@ By default, the setting chosen here will apply to all agents in the DMS, includi
 
 #### Engine object: TriggeredByName property added \[ID 33122\]
 
-A TriggeredByName property has been added to the Engine object. This property of type string will contain the full name of the user who started the Automation script (e.g. “John Doe”).
+A TriggeredByName property has been added to the Engine object. This property of type string will contain the full name of the user who started the automation script (e.g. “John Doe”).
 
-When an Automation script is triggered by the scheduler, a correlation rule or a redundancy group, the TriggeredByName property will contain one of the following strings:
+When an automation script is triggered by the scheduler, a correlation rule or a redundancy group, the TriggeredByName property will contain one of the following strings:
 
 - “Scheduled task \<name task>”
 - “Correlation-rule \<name rule>”
@@ -561,9 +561,9 @@ When a resource was deleted from the cache of a Cube client, in some cases, no u
 
 When you entered a search string in the filter box, all tickets would incorrectly be returned.
 
-#### DataMiner Cube - Automation: Problem when validating an Automation script \[ID 33084\]
+#### DataMiner Cube - Automation: Problem when validating an automation script \[ID 33084\]
 
-When, in the Automation app, you validated an Automation script that either contained an empty line in the DLL references or had a DLL reference removed, in some cases, an “Empty path name is not legal” error could be thrown.
+When, in the Automation app, you validated an automation script that either contained an empty line in the DLL references or had a DLL reference removed, in some cases, an “Empty path name is not legal” error could be thrown.
 
 #### DataMiner Cube: REPORTS page of a masked element would incorrectly indicate that the element was in alarm instead of masked \[ID 33087\]
 
@@ -705,7 +705,7 @@ After changing the production version of a protocol based on a so-called base pr
 
 #### Application framework: Problem when switching between feeds linked to Automation script input \[ID 33290\]
 
-When, in the application framework, you add an action that launches an Automation script, you can link the script parameters to feeds. Up to now, when those feeds each had a property with the same name (e.g. a property called “Name”), the action would incorrectly not get updated when you switched from one feed to another.
+When, in the application framework, you add an action that launches an automation script, you can link the script parameters to feeds. Up to now, when those feeds each had a property with the same name (e.g. a property called “Name”), the action would incorrectly not get updated when you switched from one feed to another.
 
 #### Application framework: Minor issues fixed \[ID 33291\]
 
@@ -725,9 +725,9 @@ In some rare cases, an error could occur when you created a new group in the sta
 
 Also, the name of a group could get lost when you deleted the first agent/cluster in that group.
 
-#### Application framework: A request to update the application would incorrectly be sent when you opened an action that launches an Automation script \[ID 33302\]
+#### Application framework: A request to update the application would incorrectly be sent when you opened an action that launches an automation script \[ID 33302\]
 
-When, in the application framework, you opened an action that launches an Automation script, up to now, a request to update the application would incorrectly be sent as soon as the script was loaded.
+When, in the application framework, you opened an action that launches an automation script, up to now, a request to update the application would incorrectly be sent as soon as the script was loaded.
 
 #### Problem with SLDataMiner when a DMA started up while another DMA in the DMS was registering the SLAs \[ID 33303\]
 

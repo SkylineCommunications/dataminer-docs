@@ -205,7 +205,7 @@ Because of a number of enhancements, overall performance of the SNMP++ library h
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-The entry added to the *SLAutomation.txt* log file when an Automation script has finished will now contain the entrypoint ID.
+The entry added to the *SLAutomation.txt* log file when an automation script has finished will now contain the entrypoint ID.
 
 In the following example, the entrypoint ID can be found at the end of the entry between brackets (11):
 

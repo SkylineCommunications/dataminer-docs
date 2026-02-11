@@ -57,7 +57,7 @@ For detailed info, refer to [Defining a new API](xref:UD_APIs_Define_New_API).
 > [!NOTE]
 >
 > - If there are missing script parameters, the *MissingScriptParameters* error will not be returned. You will need to make sure the script verifies the parameters.
-> - You can keep the existing script parameters of your script, as these will be ignored when the Automation script is executed as an API through the `OnApiTrigger` entry point method.
+> - You can keep the existing script parameters of your script, as these will be ignored when the automation script is executed as an API through the `OnApiTrigger` entry point method.
 > - If the `Run` method stays in the script, it will still be possible to trigger the script via Cube or any other supported DataMiner module (Scheduler, Correlation, etc.).
 
 To prepare the [example script](#example-script) so it can be used to handle API triggers, the following changes are needed:

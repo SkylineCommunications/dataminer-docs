@@ -117,7 +117,7 @@ To be able to send a notification in a channel later in this tutorial, you will 
 
 1. Go to the Microsoft Teams channel you specified, and check whether the notification is displayed.
 
-## Step 4: Adjust the chat notification Correlation rule to send a notification with custom buttons
+## Step 4: Adjust the chat notification correlation rule to send a notification with custom buttons
 
 In this step, you will adjust the Correlation rule from the [Chat notifications](xref:ChatOps_Tutorials_Chat_Notification#step-4-configure-a-correlation-rule-triggered-by-a-specific-alarm-to-send-the-chat-notification) tutorial so that it sends a channel notification with custom buttons in an Adaptive Card when it is triggered by a specific alarm.
 

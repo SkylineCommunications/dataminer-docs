@@ -4,7 +4,7 @@ uid: SRM_migrating_resources
 
 # Migrating resources
 
-To migrate the complete resource configuration, you can use the *SRM_DiscoverResources* Automation script, which is included in the SRM framework. When you export the resource configuration with this script, an Excel file will be generated that includes all resources defined in the system as well as the resources that could potentially be created. You can then import this file to adjust the configuration of resources that are already present in the system and to create new resources.<!-- RN 23632 -->
+To migrate the complete resource configuration, you can use the *SRM_DiscoverResources* automation script, which is included in the SRM framework. When you export the resource configuration with this script, an Excel file will be generated that includes all resources defined in the system as well as the resources that could potentially be created. You can then import this file to adjust the configuration of resources that are already present in the system and to create new resources.<!-- RN 23632 -->
 
 ## Exporting the resource configuration
 

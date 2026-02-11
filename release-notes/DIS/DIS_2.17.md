@@ -74,7 +74,7 @@ The Protocol XML schema now supports the following elements and/or element attri
 
 #### IDE - XML editor: Automatic code indentation \[ID 20675\]
 
-Up to now, it was recommended to customize the tab settings in Visual Studio. From now on, DIS will automatically apply the following tab settings when it detects that you have opened a protocol or an Automation script:
+Up to now, it was recommended to customize the tab settings in Visual Studio. From now on, DIS will automatically apply the following tab settings when it detects that you have opened a protocol or an automation script:
 
 - Tab size: 4
 - Indent size: 4

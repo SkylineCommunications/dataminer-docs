@@ -83,11 +83,11 @@ From now on, when configuring [Start Time:] placeholders that will be used in Su
 
 See also: [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking)
 
-#### DataMiner Cube - Visual Overview: Problem when a parameter value changed while executing an Automation script [ID 37854]
+#### DataMiner Cube - Visual Overview: Problem when a parameter value changed while executing an automation script [ID 37854]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
-When, in a visual overview, a parameter value changed while executing an Automation script, an exception would be thrown.
+When, in a visual overview, a parameter value changed while executing an automation script, an exception would be thrown.
 
 #### Problem when right-clicking after selecting a large number of elements and/or services in a view card [ID 37981]
 
@@ -95,11 +95,11 @@ When, in a visual overview, a parameter value changed while executing an Automat
 
 When, in a view card, you selected a large number of elements and/or services and then right-clicked, in some cases, Cube could become unresponsive.
 
-#### Automation: Save button would incorrectly not be enabled after renaming an Automation script [ID 37987]
+#### Automation: Save button would incorrectly not be enabled after renaming an automation script [ID 37987]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
 
-When you had renamed an Automation script, in some rare cases, the *Save* button would incorrectly not be enabled. As a result, it was not possible to save the change.
+When you had renamed an automation script, in some rare cases, the *Save* button would incorrectly not be enabled. As a result, it was not possible to save the change.
 
 #### Correlation: Problem with 'Dynamic' option in 'Send email' action [ID 37995]
 

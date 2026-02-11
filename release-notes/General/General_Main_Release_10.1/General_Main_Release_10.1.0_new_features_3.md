@@ -549,7 +549,7 @@ In Visual Overview, it is now possible to pass Automation script output to sessi
 
 ##### Passing Automation script output to session variables
 
-When an Automation script executed in Visual Overview finishes successfully, it is now possible to pass the output values of that script to session variables in Visual Overview using the new CreateKey(string variablename) method (namespace: Skyline.DataMiner.Automation, class name: UIVariables.VisualOverview).
+When an automation script executed in Visual Overview finishes successfully, it is now possible to pass the output values of that script to session variables in Visual Overview using the new CreateKey(string variablename) method (namespace: Skyline.DataMiner.Automation, class name: UIVariables.VisualOverview).
 
 In the following example, a session variable named “MyOutput” will be created and will receive the value “MyValue”.
 

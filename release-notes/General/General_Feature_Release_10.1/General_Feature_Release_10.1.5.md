@@ -548,9 +548,9 @@ When an EPM object is masked, you can try to unmask it via its alarms in the Ala
 
 In some cases, it would no longer be possible to unmask such an EPM object due to a casing issue in those “System Name” and “System Type” properties.
 
-#### Dashboards app: Multiple pop-up windows would be displayed when an Automation script could not be opened \[ID 29218\]
+#### Dashboards app: Multiple pop-up windows would be displayed when an automation script could not be opened \[ID 29218\]
 
-When the Dashboards app tried to open an Automation script that had been renamed or removed in DataMiner Cube, in some cases, a series of pop-up windows would be displayed. From now on, when the Dashboards app cannot open an Automation script, a single pop-up window will be displayed.
+When the Dashboards app tried to open an automation script that had been renamed or removed in DataMiner Cube, in some cases, a series of pop-up windows would be displayed. From now on, when the Dashboards app cannot open an automation script, a single pop-up window will be displayed.
 
 #### DataMiner Cube - EPM: No longer possible to manually unmask items in a topology diagram \[ID 29228\]
 
@@ -685,7 +685,7 @@ In some cases, it would not be possible to bind a VirtualFunctionResource when a
 
 #### Automation: Subscripts would return an incorrect output \[ID 29405\]
 
-When, in an Automation script, a subscript that returned its output was run twice, in some cases, when it cleared its output during its second run, it would incorrectly return the same output it had returned at the end of its first run.
+When, in an automation script, a subscript that returned its output was run twice, in some cases, when it cleared its output during its second run, it would incorrectly return the same output it had returned at the end of its first run.
 
 #### SLAnalytics: Problem with automatic incident tracking when a parent of a particular view could not be found \[ID 29419\]
 

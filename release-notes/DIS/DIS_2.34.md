@@ -202,4 +202,4 @@ When the DIS Comparer finds a page button caption that does not end with an elli
 Typically, the DIS Comparer will consider parameter description updates as major changes. However, in the following exceptional cases, updating the parameter description is allowed. Up to now, the DIS Comparer would incorrectly also consider these updates as major changes:
 
 - Adding a description to a parameter that either had no description or an empty description.
-- Removing the description of a parameter that does not require one and that will never be retrieved or updated by an Automation script.
+- Removing the description of a parameter that does not require one and that will never be retrieved or updated by an automation script.

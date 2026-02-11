@@ -48,7 +48,7 @@ Examples of messages that will be displayed:
 
 #### Correlation/Automation/Scheduler: Email report configuration \[ID 27521\]\[ID 27812\]\[ID 27878\] \[ID 28032\] \[ID 28038\]\[ID 28081\]
 
-In an *Email* action of a Correlation rule, an Automation script or a scheduled task, as well as in the *Upload report to FTP* and *Upload report to shared folder* actions in an Automation script, if you add a report based on a dashboard, you can now click a *Configure* button to open an embedded browser window where you can configure the necessary data feed selections as well as the following options:
+In an *Email* action of a Correlation rule, an automation script or a scheduled task, as well as in the *Upload report to FTP* and *Upload report to shared folder* actions in an automation script, if you add a report based on a dashboard, you can now click a *Configure* button to open an embedded browser window where you can configure the necessary data feed selections as well as the following options:
 
 - *Add DMS info*: Determines whether company details are displayed in the report.
 - *Add DMS logo*: Determines whether the company logo is displayed in the report.
@@ -176,7 +176,7 @@ In Visual Overview, it is now possible to pass Automation script output to sessi
 
 ##### Passing Automation script output to session variables
 
-When an Automation script executed in Visual Overview finishes successfully, it is now possible to pass the output values of that script to session variables in Visual Overview using the new CreateKey(string variablename) method (namespace: Skyline.DataMiner.Automation, class name: UIVariables.VisualOverview).
+When an automation script executed in Visual Overview finishes successfully, it is now possible to pass the output values of that script to session variables in Visual Overview using the new CreateKey(string variablename) method (namespace: Skyline.DataMiner.Automation, class name: UIVariables.VisualOverview).
 
 In the following example, a session variable named “MyOutput” will be created and will receive the value “MyValue”.
 

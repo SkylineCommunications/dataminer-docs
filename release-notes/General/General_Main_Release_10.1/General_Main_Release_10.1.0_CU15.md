@@ -66,9 +66,9 @@ In some rare cases, protocols could incorrectly load the QActionHelper DLL file 
 
 When you entered a search string in the filter box, all tickets would incorrectly be returned.
 
-#### DataMiner Cube - Automation: Problem when validating an Automation script \[ID 33084\]
+#### DataMiner Cube - Automation: Problem when validating an automation script \[ID 33084\]
 
-When, in the Automation app, you validated an Automation script that either contained an empty line in the DLL references or had a DLL reference removed, in some cases, an “Empty path name is not legal” error could be thrown.
+When, in the Automation app, you validated an automation script that either contained an empty line in the DLL references or had a DLL reference removed, in some cases, an “Empty path name is not legal” error could be thrown.
 
 #### DataMiner Cube: REPORTS page of a masked element would incorrectly indicate that the element was in alarm instead of masked \[ID 33087\]
 

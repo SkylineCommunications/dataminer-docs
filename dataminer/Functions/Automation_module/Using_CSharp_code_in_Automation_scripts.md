@@ -10,7 +10,7 @@ Using C# code in automation scripts offers improved flexibility and extended pos
 
 The following sections provide more information on using C# code in DataMiner Automation:
 
-- [Adding C# code to an Automation script](xref:Adding_CSharp_code_to_an_Automation_script)
+- [Adding C# code to an automation script](xref:Adding_CSharp_code_to_an_Automation_script)
 
 - [Debugging C# scripts](xref:Debugging_CSharp_scripts)
 

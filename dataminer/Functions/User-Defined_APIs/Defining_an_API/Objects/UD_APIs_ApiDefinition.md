@@ -67,7 +67,7 @@ To define which script should be executed and how the input data should be handl
 
 #### AutomationScriptNoEntryPoint
 
-This `ActionType` is similar to the *AutomationScript* action type, except that there is no need to define a special entry point method in the Automation script. The script will be executed through the default Run() method. This means that the `ApiTriggerInput` object is not available, and it is also not possible to return the `ApiTriggerOutput` to the API user. The action will return 200 OK with an empty response body in case the script succeeded, and an `AutomationActionError` response error when the script fails.
+This `ActionType` is similar to the *AutomationScript* action type, except that there is no need to define a special entry point method in the automation script. The script will be executed through the default Run() method. This means that the `ApiTriggerInput` object is not available, and it is also not possible to return the `ApiTriggerOutput` to the API user. The action will return 200 OK with an empty response body in case the script succeeded, and an `AutomationActionError` response error when the script fails.
 
 This action will always convert the request body to a `Dictionary<string, string>`. It will verify that there is a value in the parsed dictionary for each of the script parameters defined in the script. For more information, see [User input data](xref:UD_APIs_Define_New_API#user-input-data).
 

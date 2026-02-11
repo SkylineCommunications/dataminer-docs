@@ -39,7 +39,7 @@ The following elements and element attributes have been added to the Protocol XM
 
 #### IDE - automation scripts: Class Library EXE block will now be added at the top of the script \[ID 26325\]
 
-Up to now, when DIS generated the EXE block with the Class Library code, it would add that block at the end of the Automation script. From now on, it will add it at the top of the script. That way, other precompiled EXE blocks will also be able to make use of the Class Library code it contains.
+Up to now, when DIS generated the EXE block with the Class Library code, it would add that block at the end of the automation script. From now on, it will add it at the top of the script. That way, other precompiled EXE blocks will also be able to make use of the Class Library code it contains.
 
 Also, the generated Class Library EXE block will now be assigned an ID in the 63000 range. Up to now, it would be assigned the first available ID starting from 1.
 

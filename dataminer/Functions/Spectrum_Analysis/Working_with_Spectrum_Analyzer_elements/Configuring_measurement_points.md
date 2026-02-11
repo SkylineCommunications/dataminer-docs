@@ -41,7 +41,7 @@ To configure a new or existing measurement point:
 
 1. At the top of the details pane, next to *Name*, specify a name for the measurement point.
 
-1. In the *Setup* section, select either to set up the measurement point via a parameter set, or via an Automation script, and then select the parameter set or the script in question.
+1. In the *Setup* section, select either to set up the measurement point via a parameter set, or via an automation script, and then select the parameter set or the script in question.
 
    > [!NOTE]
    >

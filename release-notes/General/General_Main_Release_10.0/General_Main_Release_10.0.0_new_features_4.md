@@ -141,7 +141,7 @@ Currently, the following components can be added to a dashboard.
     |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Parameter page   | Displays a data page of an element.                                                                                                                                                                    |
     | Trend statistics | Shows the minimum, average and maximum values of one or more trended parameters.                                                                                                                       |
-    | Visual overview  | Shows a Visio file linked to an element, a service or a view. Note that if this Visio file contains a shape linked to an Automation script, that script will be executed when you click the shape. |
+    | Visual overview  | Shows a Visio file linked to an element, a service or a view. Note that if this Visio file contains a shape linked to an automation script, that script will be executed when you click the shape. |
 
 - Feeds
 
@@ -388,7 +388,7 @@ The AlarmTemplateHelper can throw the following exceptions:
 
 #### Passing information from a subscript to the parent script \[ID 21952\]
 
-In an Automation script, it is now possible to pass information from a subscript to the parent script.
+In an automation script, it is now possible to pass information from a subscript to the parent script.
 
 ##### Retrieving a dictionary with key/value pairs from a subscript
 
@@ -473,7 +473,7 @@ void SetParameterByPrimaryKey(int pid, string index, object value, bool? generat
 
 #### C# code blocks can now be compiled as separate libraries \[ID 23504\]\[ID 23699\]
 
-When you add an action of type “C# code” to an Automation script, you can now indicate that you want to have this code block compiled as a separate library.
+When you add an action of type “C# code” to an automation script, you can now indicate that you want to have this code block compiled as a separate library.
 
 To do so, open the *Advanced* section, and do the following:
 
@@ -499,10 +499,10 @@ Once you have compiled a C# code block as a library, you can then import that li
 >
 > - To optimize performance and use of resources, it is advised to create each library in a separate Automation script. This will minimize the amount of recompilations and DLL generations.
 > - When you recompile a library, all automation scripts and libraries that use that library will also be recompiled.
-> - The order of the C# blocks in an Automation script will define the order in which the libraries will be compiled.
-> - When you delete an Automation script that contains a library, all files belonging to that library will also be deleted. As a result, you will not be able to recompile any of the depending scripts until you add the deleted library again (with the same script name and library name).
-> - When you delete a library C# block from an Automation script and then save the script, the DLL of that deleted library will not be deleted. The DLL file and all references to that deleted library should be removed manually.
-> - When you compile a library, its DLL file (and, if compiled in debug mode, its PDB and CS files) are stored in `C:\Skyline DataMiner\Scripts\Libraries`. When the first Automation-related action (i.e. creating, editing or deleting an Automation script, or validating a C# code block) is performed after a DataMiner restart, this folder is cleaned up. After cleaning, of each library it will only contain the most recent version.
+> - The order of the C# blocks in an automation script will define the order in which the libraries will be compiled.
+> - When you delete an automation script that contains a library, all files belonging to that library will also be deleted. As a result, you will not be able to recompile any of the depending scripts until you add the deleted library again (with the same script name and library name).
+> - When you delete a library C# block from an automation script and then save the script, the DLL of that deleted library will not be deleted. The DLL file and all references to that deleted library should be removed manually.
+> - When you compile a library, its DLL file (and, if compiled in debug mode, its PDB and CS files) are stored in `C:\Skyline DataMiner\Scripts\Libraries`. When the first Automation-related action (i.e. creating, editing or deleting an automation script, or validating a C# code block) is performed after a DataMiner restart, this folder is cleaned up. After cleaning, of each library it will only contain the most recent version.
 
 #### Interactive automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
 
@@ -529,7 +529,7 @@ All files uploaded by users will by default be placed in the `C:\Skyline DataMin
 
 #### New engine.UnSetFlag method to clear runtime flags \[ID 23961\]
 
-In an Automation script, you can now use the engine.UnSetFlag method to clear the following runtime flags:
+In an automation script, you can now use the engine.UnSetFlag method to clear the following runtime flags:
 
 - RunTimeFlags.AllowUndef
 - RunTimeFlags.NoInformationEvents

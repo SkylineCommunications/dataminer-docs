@@ -26,10 +26,10 @@ In the *\<HyperLink>* tag, enter the following content, depending on the type of
 
   The path to the executable file can include spaces, but only if it is enclosed in double quotation marks. Anything that is added after a space and is not enclosed within quotation marks will be interpreted as an argument. For example: *\<HyperLink id="20" version="2" type="execute" name="MyApp" menu="root" \>"C:\\Program Files (x86)\\MyApp\\App.exe" \[ENAME\]\</HyperLink>*
 
-- **Type "script"**: The Automation script execution command. This should be configured in the same way as when you link a shape to an Automation script in a Visio drawing. See [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script) for more information.
+- **Type "script"**: The Automation script execution command. This should be configured in the same way as when you link a shape to an automation script in a Visio drawing. See [Linking a shape to an automation script](xref:Linking_a_shape_to_an_Automation_script) for more information.
 
   > [!NOTE]
-  > It is not necessary to use the "Script:" prefix in a second-generation hyperlink, as the *type* attribute already makes it clear an Automation script is referred to.
+  > It is not necessary to use the "Script:" prefix in a second-generation hyperlink, as the *type* attribute already makes it clear an automation script is referred to.
 
 - **Type "OpenCPE"**: The EPM card.
 

@@ -204,7 +204,7 @@ Possible types for the `IGQIValueFilter.Value` property (i.e. the types for whic
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-Up to now, the *Interactive Automation script* component would only visualize an Automation script when the user had both the *Modules > Automation > UI available* and the *Modules > Automation > Execute* permissions. From now on, the *Interactive Automation script* component will be able to visualize an Automation script when the user has the *Modules > Automation > Execute* permission.
+Up to now, the *Interactive Automation script* component would only visualize an automation script when the user had both the *Modules > Automation > UI available* and the *Modules > Automation > Execute* permissions. From now on, the *Interactive Automation script* component will be able to visualize an automation script when the user has the *Modules > Automation > Execute* permission.
 
 With regard to the Web Services API, up to now, users needed to have both the *Modules > Automation > UI available* permission and the *Modules > Automation > Execute* permission to be allowed to use the `GetAutomationScript`, `ExecuteAutomationScript`, or `ExecuteAutomationScriptWithOutput` methods.
 

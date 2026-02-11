@@ -180,7 +180,7 @@ If a *MigrationStatus* is stuck in the *InProgress* state, you will need to canc
 
 ##### Configuring a script to swarm scheduled tasks
 
-If scheduled tasks are stored in the database, you can use an Automation script to initiate the swarming process.
+If scheduled tasks are stored in the database, you can use an automation script to initiate the swarming process.
 
 In this script, create a SwarmingHelper using the new hosting Agent ID along with the scheduled task IDs. See the following example.
 

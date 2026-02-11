@@ -265,13 +265,13 @@ The following new messages can now be used to which you can target to be sent to
 
 Additional logging with regard to visual overview load balancing will be available in the web logs located in the `C:\Skyline DataMiner\Logging\Web` folder.
 
-#### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Correlation engine [ID 41653]
+#### Information events of type 'script started' will no longer be generated when an automation script is triggered by the Correlation engine [ID 41653]
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
 
-From now on, by default, information events of type "script started" will no longer be generated when an Automation script is triggered by the Correlation engine.
+From now on, by default, information events of type "script started" will no longer be generated when an automation script is triggered by the Correlation engine.
 
-In other words, when an Automation script is triggered by the Correlation engine, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Main_Release_10.3.0_new_features_1#added-the-option-to-skip-the-script-started-information-event-id-33666).
+In other words, when an automation script is triggered by the Correlation engine, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Main_Release_10.3.0_new_features_1#added-the-option-to-skip-the-script-started-information-event-id-33666).
 
 If you do want such information events to be generated, you can add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to false:
 
@@ -428,13 +428,13 @@ foreach (var range in availableRanges)
 
 The `AvailabilityContext` parameter has a property `Now`, which can be used to override the "now" timestamp in order to calculate e.g. the current end of a rolling window. For regular use cases, there is no need to override this. This is mainly used for testing purposes and to ensure a consistent timestamp when performing internal checks.
 
-#### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Scheduler app [ID 41970]
+#### Information events of type 'script started' will no longer be generated when an automation script is triggered by the Scheduler app [ID 41970]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
-From now on, by default, information events of type "script started" will no longer be generated when an Automation script is triggered by the Scheduler app.
+From now on, by default, information events of type "script started" will no longer be generated when an automation script is triggered by the Scheduler app.
 
-In other words, when an Automation script is triggered by the Scheduler app, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Main_Release_10.3.0_new_features_1#added-the-option-to-skip-the-script-started-information-event-id-33666).
+In other words, when an automation script is triggered by the Scheduler app, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Main_Release_10.3.0_new_features_1#added-the-option-to-skip-the-script-started-information-event-id-33666).
 
 If you do want such information events to be generated, you can add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to false:
 
@@ -593,11 +593,11 @@ Internally, this new *NT_CLEAR_PARAMETER* call will now also be used by the exis
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
-From now on, when an Automation script is run, every entry that is logged in the *SLAutomation.txt* file by the `Engine.Log` method will also be logged in a separate log file located in `C:\Skyline DataMiner\Logging\Automation\`. That log file will have a name that is identical to that of the Automation script.
+From now on, when an automation script is run, every entry that is logged in the *SLAutomation.txt* file by the `Engine.Log` method will also be logged in a separate log file located in `C:\Skyline DataMiner\Logging\Automation\`. That log file will have a name that is identical to that of the automation script.
 
-- The first time an Automation script is run, a log file will be created in `C:\Skyline DataMiner\Logging\Automation\` for that particular script.
+- The first time an automation script is run, a log file will be created in `C:\Skyline DataMiner\Logging\Automation\` for that particular script.
 - After a DataMiner restart, the first time a script is executed, its existing log file will get the "_Bak" suffix and a new log file will be created.
-- If an Automation script is renamed, a new log file will be created with a name identical to that of the renamed script. The old file will be kept.
+- If an automation script is renamed, a new log file will be created with a name identical to that of the renamed script. The old file will be kept.
 - If you want to configure a custom log level for a particular Automation script, send an `UpdateLogfileSettingMessage` in which *Name* is set to "Automation\ScriptName". If no custom log configuration exists for a particular Automation script, the default configuration will be used.
 - These new Automation script log files will also be included in SLLogCollector packages.
 - Each time a DataMiner upgrade package is installed, all Automation script log files will be deleted.
@@ -617,7 +617,7 @@ Example: `2025/04/01 16:31:31.813|SLManagedAutomation|RunSafe|INF|0|959|473|Exam
 
 > [!NOTE]
 >
-> - In the Automation script log file, you will find an indication of when the script execution started and stopped. However, this indication will be slightly different from the one you will find in the *SLAutomation.txt* log file. The one in the *SLAutomation.txt* log file will represent the total time it took for the script to run, while the one in the script log file will only take into account the C# blocks in the Automation script.
+> - In the automation script log file, you will find an indication of when the script execution started and stopped. However, this indication will be slightly different from the one you will find in the *SLAutomation.txt* log file. The one in the *SLAutomation.txt* log file will represent the total time it took for the script to run, while the one in the script log file will only take into account the C# blocks in the automation script.
 > - For each entry that is logged in one of the above-mentioned script log files, an identical copy will also be logged in the *SLAutomation.txt* file. However, note that the timestamps of both entries may not be identical.
 
 #### Automation: Hash property of GetScriptInfoResponseMessage now contains a hash value of the script [ID 42616]
@@ -662,7 +662,7 @@ A `Hash` property has now been added to the `GetScriptInfoResponseMessage`. This
 > [!NOTE]
 > Author will not be included in the hash value as changing the author would result in a different value being calculated.
 
-All hash values of all automation scripts will be added as `AutomationScriptHashInfo` objects to the Automation script hash value cache file *AutomationScriptHashCache.txt*, located in the `C:\Skyline DataMiner\System Cache\` folder. This file will be updated one minute after an Automation script was created or updated or one minute after a `GetScriptInfoMessage` was called.
+All hash values of all automation scripts will be added as `AutomationScriptHashInfo` objects to the automation script hash value cache file *AutomationScriptHashCache.txt*, located in the `C:\Skyline DataMiner\System Cache\` folder. This file will be updated one minute after an automation script was created or updated or one minute after a `GetScriptInfoMessage` was called.
 
 Format of an AutomationScriptHashInfo object: `Script Name;LastUpdate;Calculated hash`
 
@@ -727,7 +727,7 @@ The BPA test is available in System Center on the *Agents > BPA* tab.
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-Up to now, automation scripts using the IAS Interactive Toolkit required a special comment or code snippet in order to be recognized as interactive. From now on, you will be able to define the interactive behavior of an Automation script by adding an `<Interactivity>` tag in the header of the script. See the following example.
+Up to now, automation scripts using the IAS Interactive Toolkit required a special comment or code snippet in order to be recognized as interactive. From now on, you will be able to define the interactive behavior of an automation script by adding an `<Interactivity>` tag in the header of the script. See the following example.
 
 ```xml
 <DMSScript xmlns="http://www.skyline.be/automation">
@@ -753,7 +753,7 @@ Possible values:
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
-In an Automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other automation scripts (or any other code) to request information about the script in question, for example to find out which profile parameter values a script needs in order to orchestrate a device.
+In an automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other automation scripts (or any other code) to request information about the script in question, for example to find out which profile parameter values a script needs in order to orchestrate a device.
 
 ##### Using the entry point
 
@@ -815,7 +815,7 @@ new ExecuteScriptMessage
 
 When an `ExecuteScriptMessage` is sent, an `ExecuteScriptResponseMessage` will be returned. The information is returned in an `EntryPointResult.Result` property of type `RequestScriptInfoOutput`.
 
-This message should not be used to request the information in an Automation script.
+This message should not be used to request the information in an automation script.
 
 #### Automation script and QAction dependencies can now also be uploaded to the 'DllImport\\SolutionLibraries' folder [ID 43108]
 

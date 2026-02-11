@@ -25,7 +25,7 @@ When, in the scope of behavioral anomaly detection, proactive cap detection or p
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.8 -->
 
-From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an Automation script:
+From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an automation script:
 
 `SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
 
@@ -182,7 +182,7 @@ When a DMA did not respond during the midnight synchronization (e.g. because the
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, an Automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.
+Up to now, an automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.
 
 #### SLProtocol would leak memory when performing an SNMP Set [ID 40112]
 

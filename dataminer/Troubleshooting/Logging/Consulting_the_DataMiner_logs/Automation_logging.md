@@ -6,7 +6,7 @@ uid: Automation_logging
 
 The *Automation* page shows the log information for the various automation scripts that are present in the DMS.
 
-The list on the left side of this page contains **all automation scripts available in the system**. Clicking a script will expand it and display the DataMiner Agents on which it is available. Select a DMA to open the log details for that script on that specific Agent. The Agent you are currently connected to is shown in italics. However, log details will only be present after an Automation script has been executed on the DMA.
+The list on the left side of this page contains **all automation scripts available in the system**. Clicking a script will expand it and display the DataMiner Agents on which it is available. Select a DMA to open the log details for that script on that specific Agent. The Agent you are currently connected to is shown in italics. However, log details will only be present after an automation script has been executed on the DMA.
 
 If an item has been selected, the expandable *Log settings* section at the top of the page allows you to [change the log levels](#changing-log-levels) that should be shown for **info, debug, and error logging**. Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.2.0.0", and debug logging is used for more detailed information.
 
@@ -28,7 +28,7 @@ In the *Log settings* section, you can change the log levels for a specific Auto
 
 To change the log levels:
 
-1. Expand the Automation script(s) in the list.
+1. Expand the automation script(s) in the list.
 
 1. Select the DMA(s) you want to configure.
 

@@ -217,7 +217,7 @@ At present, the following actions can be configured:
 
 | Action                   | Description                                                                                                                                            |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Launch a script          | Launch an Automation script with a specific configuration and a specific number of inputs (which can be linked to feeds like e.g. the Query Row feed). |
+| Launch a script          | Launch an automation script with a specific configuration and a specific number of inputs (which can be linked to feeds like e.g. the Query Row feed). |
 | Navigate to a URL        | Navigate to a specific URL (in a new tab).                                                                                                             |
 | Open a page              | Open a (hidden) page in the same application.                                                                                                          |
 | Open a panel             | Open a panel on the current page. Panels can appear on the left side of a page, on the right side of the page or as a popup.                       |
@@ -227,7 +227,7 @@ At present, the following actions can be configured:
 
 By default, actions are executed asynchronously. However, it is also possible to configure chains of actions that should be executed synchronously, i.e. only when the preceding action was executed successfully.
 
-Also, by combining different actions into one, you can create complex behavior. For example, open a page, open a panel and launch an Automation script that updates parameters displayed on that panel while it is being opened. This complex action can then be linked to e.g. a header bar button.
+Also, by combining different actions into one, you can create complex behavior. For example, open a page, open a panel and launch an automation script that updates parameters displayed on that panel while it is being opened. This complex action can then be linked to e.g. a header bar button.
 
 ##### Versioning
 

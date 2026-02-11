@@ -12,7 +12,7 @@ uid: DIS_2.24
 
 From now on, it is also possible to use code from Class Library packages in automation scripts.
 
-When DIS detects that code from a loaded Class Library package is used in EXE blocks of an Automation script, it will
+When DIS detects that code from a loaded Class Library package is used in EXE blocks of an automation script, it will
 
 - add a new EXE block to that script containing only the code necessary to be able to use the wanted functionally, and
 - add references in the EXE blocks using that Class Library code to the newly added EXE block containing the Class Library code.
@@ -210,7 +210,7 @@ The *DMSScript.Script.Exe.Param@type* attribute can now be set to the following 
 |-------------|--------------------------|
 | libraryName | The name of the library. |
 | precompile  | Whether this C# action must be compiled as a library. Default: “false”. |
-| scriptRef   | A reference to another library.<br> Format: The name of the Automation script, followed by a colon and the name of the library (e.g. ScriptName:LibraryName).<br> To refer to a library in the current Automation script, you can replace the name of the Automation script by the \[AutomationScriptName\] placeholder (e.g. “\[AutomationScriptName\]:MyCSharpAction”). |
+| scriptRef   | A reference to another library.<br> Format: The name of the automation script, followed by a colon and the name of the library (e.g. ScriptName:LibraryName).<br> To refer to a library in the current Automation script, you can replace the name of the automation script by the \[AutomationScriptName\] placeholder (e.g. “\[AutomationScriptName\]:MyCSharpAction”). |
 
 #### Automation Schema: List of possible bit flags added to documentation tag of the DMSScript.Exe.Param@options attribute \[ID 23953\]
 

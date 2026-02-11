@@ -229,7 +229,7 @@ A number of enhancements have been made with respect to the DELT export process.
 
 #### Automation: UnSetFlag method now also added to IEngine interface \[ID 25188\]
 
-Since DataMiner 10.0.0/10.0.1, you can use the engine.UnSetFlag method to clear the AllowUndef, NoInformationEvents and NoKeyCaching runtime flags in an Automation script.
+Since DataMiner 10.0.0/10.0.1, you can use the engine.UnSetFlag method to clear the AllowUndef, NoInformationEvents and NoKeyCaching runtime flags in an automation script.
 
 This method has now also been added to the IEngine interface.
 
@@ -337,7 +337,7 @@ In the *Agents* section of *System Center*, after a Failover switch, in some cas
 
 #### DataMiner Cube - Automation: Problem when turning a SET action into a GET action or vice versa \[ID 24498\]
 
-When you added a SET action to an Automation script and then changed it to a GET action (or vice versa), in some cases, it would no longer be possible to configure the action.
+When you added a SET action to an automation script and then changed it to a GET action (or vice versa), in some cases, it would no longer be possible to configure the action.
 
 #### DataMiner Cube - Protocols & Templates: Problem when trying to select another protocol version in the 'List based on protocol version' box \[ID 24499\]
 
@@ -699,7 +699,7 @@ If a protocol with serial connection over UDP or TDC/IP used either an action of
 
 #### Automation: Options text in narrow Automation script execution window not fully displayed \[ID 25226\]
 
-In the window displaying the options for the execution of an Automation script, text wrapping was not implemented, so that it could occur that the text was not fully displayed if the window was too narrow.
+In the window displaying the options for the execution of an automation script, text wrapping was not implemented, so that it could occur that the text was not fully displayed if the window was too narrow.
 
 #### Problem with EPM filters \[ID 25231\]
 

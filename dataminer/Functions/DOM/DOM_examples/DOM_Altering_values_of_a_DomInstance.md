@@ -36,7 +36,7 @@ There are two main ways to get, add, or update values:
   ```
 
 > [!NOTE]
-> These code examples behave as if wrapped in an Automation script that contains the required using statements and a `DomHelper`.
+> These code examples behave as if wrapped in an automation script that contains the required using statements and a `DomHelper`.
 
 ## Simple extension methods
 

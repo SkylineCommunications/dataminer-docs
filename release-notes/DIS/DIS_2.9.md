@@ -17,9 +17,9 @@ To create a new Automation script XML file, do the following:
 1. Open the *File* menu, and select *New \> File ...*
 1. Select *DataMiner Automation Script Template*, and click *Open*.
 
-When editing an Automation script, the editor allows you to insert a number of basic snippets, edit the C# code blocks in the script, include DLL files, and add namespace references.
+When editing an automation script, the editor allows you to insert a number of basic snippets, edit the C# code blocks in the script, include DLL files, and add namespace references.
 
-At the top of the editor window, you can find a *Publish* button. Click that button if you want to publish the Automation script XML file you are currently editing to the DMA specified in the *DMA* tab of the *DIS Settings* dialog box.
+At the top of the editor window, you can find a *Publish* button. Click that button if you want to publish the automation script XML file you are currently editing to the DMA specified in the *DMA* tab of the *DIS Settings* dialog box.
 
 If, in the *DIS* menu, you select *DMA \> Import Automation Script…*, the *Import Automation Script…* dialog box will allow you to import a copy of an existing Automation script XML file found on the DMA specified in the *DMA* tab of the *DIS Settings* window. In most cases, this will be your local DMA.
 
@@ -37,7 +37,7 @@ In the *All Columns* section, the selection boxes in the *Type* column now also 
 
 #### New snippets \[ID 17713\]\[ID 17854\]
 
-When editing a protocol XML file or an Automation script XML file, you can now insert the following new snippets:
+When editing a protocol XML file or an automation script XML file, you can now insert the following new snippets:
 
 ##### Protocol snippets
 
@@ -102,7 +102,7 @@ From now on, the protocol XML schema will enforce a maximum timer time of 24 day
 
 #### Automation script XML schema \[ID 17702\]
 
-DIS is now able to validate Automation script XML files against an Automation script XML schema.
+DIS is now able to validate Automation script XML files against an automation script XML schema.
 
 ## Changes
 

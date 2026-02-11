@@ -207,7 +207,7 @@ Process:
 
 1. A client requests the execution of a DOM action in which the execution of an interactive Automation script has been defined via the domHelper.DomInstances.ExecuteAction() method.
 
-   To indicate that the Automation script is an interactive Automation script, the IsInteractive property of the ExecuteScriptDomActionDefinition must be set to true.
+   To indicate that the automation script is an interactive Automation script, the IsInteractive property of the ExecuteScriptDomActionDefinition must be set to true.
 
 1. The domHelper.DomInstances.ExecuteAction() method replies immediately.
 
@@ -528,9 +528,9 @@ In addition, up to now only one instance was retained per QAction, so when entry
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
-A TriggeredByName property has been added to the Engine object. This property of type string will contain the full name of the user who started the Automation script (e.g. “John Doe”).
+A TriggeredByName property has been added to the Engine object. This property of type string will contain the full name of the user who started the automation script (e.g. “John Doe”).
 
-When an Automation script is triggered by the scheduler, a correlation rule or a redundancy group, the TriggeredByName property will contain one of the following strings:
+When an automation script is triggered by the scheduler, a correlation rule or a redundancy group, the TriggeredByName property will contain one of the following strings:
 
 - “Scheduled task \<name task>”
 - “Correlation-rule \<name rule>”

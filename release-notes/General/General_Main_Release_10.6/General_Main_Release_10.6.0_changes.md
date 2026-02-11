@@ -299,7 +299,7 @@ Because of a number of enhancements, the locking mechanism in the following Reso
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
-From now on, when an Automation script is executed asynchronously using either a `Run` method or a custom entry point containing the `async` keyword, an error message will appear, mentioning that this is not supported.
+From now on, when an automation script is executed asynchronously using either a `Run` method or a custom entry point containing the `async` keyword, an error message will appear, mentioning that this is not supported.
 
 In that error message, users will also be directed to the [documentation](https://aka.dataminer.services/AsyncAutomation) for more information on handling async code.
 
@@ -775,11 +775,11 @@ When a trend graph seemed to increase or decrease, in some cases, change points 
 
 Because of an issue in SLNet, up to now, if the same group would be added more than once in the `UpdateLibraryCredentialMessage` (i.e. the SLNet message used to add or update credentials), duplicated `Group` tags would end up in the *Library.xml* file. As a result, in DataMiner Cube, the updated credential would get stuck, showing a "[modified]" tag.
 
-#### Problem with SLAutomation when a Notify method was called shortly after an Automation script had finished [ID 42465]
+#### Problem with SLAutomation when a Notify method was called shortly after an automation script had finished [ID 42465]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
-When a Notify method was called from a thread created within an Automation script shortly after that Automation script had finished, in some cases, the SLAutomation process could stop working.
+When a Notify method was called from a thread created within an automation script shortly after that Automation script had finished, in some cases, the SLAutomation process could stop working.
 
 #### SLNet memory leak related to indexing logic for Cube search bar [ID 42544]
 

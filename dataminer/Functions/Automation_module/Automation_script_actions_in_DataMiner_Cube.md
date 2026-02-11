@@ -2,7 +2,7 @@
 uid: Automation_script_actions_in_DataMiner_Cube
 ---
 
-# Automation script actions in DataMiner Cube
+# automation script actions in DataMiner Cube
 
 With the *Add action* dropdown list, you can choose different actions to add to a script. You can then further configure these actions by clicking the underlined sections.
 

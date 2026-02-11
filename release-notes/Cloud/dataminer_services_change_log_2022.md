@@ -50,7 +50,7 @@ If CoreGateway version 2.11.0 or higher and FieldControl version 2.8.1 or higher
 
 You can do so using the Teams bot commands *show command \<command name\>*, *show command*, and *run command \<command name\>*.
 
-To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
+To add a command to your DMS, create an automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 
 The commands allow dynamic input, such as dummies, parameters, parameters with value files, and memory files. They support the following output: key values, adaptive card body elements, and JSON.
 

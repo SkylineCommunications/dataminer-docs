@@ -18,7 +18,7 @@ There are several possible types of actions:
 
 - Creating a new, correlated alarm. See [Triggering a correlated alarm](xref:Triggering_a_correlated_alarm).
 
-- Running an Automation script. See [Running an Automation script from a correlation rule](xref:Running_an_Automation_script_from_a_Correlation_rule).
+- Running an automation script. See [Running an automation script from a correlation rule](xref:Running_an_Automation_script_from_a_Correlation_rule).
 
 - Sending an email. See [Sending an email](xref:Sending_an_email).
 

@@ -136,12 +136,12 @@ The *errorCode* field of an error contains an error code that can be used by the
 | BodyToParametersConversionFailed | 10 | 400 | Something went wrong while trying to convert the body to a collection of key value parameters. See [User input data](xref:UD_APIs_Define_New_API#user-input-data). |
 | InvalidActionType | 11 | 500 | The `ActionType` that is specified in the API definition is not valid. |
 | AutomationActionError | 12 | 500 | An error occurred while trying to execute an automation script action. |
-| InvalidAutomationActionResult | 13 | 500 | The result returned by the Automation script was null or invalid. |
+| InvalidAutomationActionResult | 13 | 500 | The result returned by the automation script was null or invalid. |
 | FailedToGetScriptInfo | 15 | 500 | Could not get the script info required to execute the script. |
 | MissingScriptParameters | 16 | 400 | There are missing script parameters in the request body. The "error" JSON object will contain the missing script parameters as a `missingScriptParameters` array. |
 | ResponseBodyTooLarge | 17 | 500 | The response body returned by the API exceeds the limit of 29 MB. |
 | NatsRequestFailed | 1001 | 500 | Failed to send the NATS request to the DataMiner Agent. |
-| UnknownStatusCode | 1002 | 500 | The response code returned by the Automation script was invalid. |
+| UnknownStatusCode | 1002 | 500 | The response code returned by the automation script was invalid. |
 | InvalidContentType | 1003 | 415 | The [Content-Type](#content-type) HTTP header is not supported. |
 | UnspecifiedErrorReason | 1004 | 500 | DataMiner returned an "unspecified" error code. |
 | UnknownErrorReason | 1005 | 500 | DataMiner returned an "unknown" error code. |

@@ -46,7 +46,7 @@ The *Rack Assignment* page displays an overview of the devices managed by the Ra
 
 - *Show in Rack*: Opens the rack view in a new card.
 - *Assign*: Allows you to assign the selected device to a rack.
-- *Auto Assign*: Launches an Automation script to automatically assign the selected device to a rack. See [Automatic rack assignment \[ID 24528\]\[ID 24543\]](#automatic-rack-assignment-id-24528id-24543).
+- *Auto Assign*: Launches an automation script to automatically assign the selected device to a rack. See [Automatic rack assignment \[ID 24528\]\[ID 24543\]](#automatic-rack-assignment-id-24528id-24543).
 - *Remove*: Removes the device from the rack it is currently assigned to.
 
 #### Automatic rack assignment \[ID 24528\]\[ID 24543\]

@@ -107,7 +107,7 @@ When the DataMiner software started up on an agent that was not part of a Failov
 
 #### automation scripts would incorrectly succeed even when uploading a report had failed \[ID 33368\]
 
-When, in an Automation script, you had configured an action that uploads a report to a shared folder or FTP, up to now, the script would still succeed even when it had not been able to copy the generated report to the remote location (shared folder or FTP). From now on, when a script is not able to copy a report to a remote location, it will fail.
+When, in an automation script, you had configured an action that uploads a report to a shared folder or FTP, up to now, the script would still succeed even when it had not been able to copy the generated report to the remote location (shared folder or FTP). From now on, when a script is not able to copy a report to a remote location, it will fail.
 
 #### DataMiner Cube: Casing incorrectly not taken into account when comparing the name of a newly created property against the existing property names \[ID 33388\]
 
@@ -141,7 +141,7 @@ A number of alarm-related issues have been fixed:
 
 #### automation scripts: Problem with processor directives \[ID 33424\]
 
-Up to now, the following preprocessor directives would incorrectly be inserted into the Automation script code, causing syntax errors to appear on the incorrect lines.
+Up to now, the following preprocessor directives would incorrectly be inserted into the automation script code, causing syntax errors to appear on the incorrect lines.
 
 - #define DBInfo
 - #define DCFv1
@@ -169,7 +169,7 @@ When an incident (i.e. alarm group) was cleared, in some cases, its clearable ba
 
 #### Automation: SetParameterByPrimaryKey would fail to update a write-only parameter when using the parameter name as argument \[ID 33511\]
 
-When, from an Automation script, a write parameter in a column of a table inside an element was updated using a ScriptDummy.SetParameterByPrimaryKey call with the parameter name as argument, the update would fail when that write parameter did not have a matching read parameter.
+When, from an automation script, a write parameter in a column of a table inside an element was updated using a ScriptDummy.SetParameterByPrimaryKey call with the parameter name as argument, the update would fail when that write parameter did not have a matching read parameter.
 
 #### Problem when deleting a DVE child element or a virtual function \[ID 33519\]
 

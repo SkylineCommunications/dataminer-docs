@@ -131,7 +131,7 @@ On DataMiner startup and hourly at report generation, a batch of notifications g
 
 #### automation scripts: #define ALARM_SQUASHING \[ID 29613\]
 
-The preprocessor directive “#define ALARM_SQUASHING” will now automatically be added to each C# block of an Automation script.
+The preprocessor directive “#define ALARM_SQUASHING” will now automatically be added to each C# block of an automation script.
 
 In C# blocks, all code related to alarm squashing should be enclosed as follows:
 

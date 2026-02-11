@@ -14,7 +14,7 @@ When you added a number of additional fields to the default job section and then
 
 #### Email report based on dashboard from new app was blank \[ID 26811\]
 
-In some cases, it could occur that if an Automation script sent an email report based on a dashboard from the new Dashboards app, the PDF attached to this email was blank.
+In some cases, it could occur that if an automation script sent an email report based on a dashboard from the new Dashboards app, the PDF attached to this email was blank.
 
 #### Dashboards app: Configuration of Group component not saved \[ID 26828\]
 
@@ -178,9 +178,9 @@ When, in the *Profiles* app, you saved a profile definition, a profile instance
 
 When, in the Dashboards app, you changed the theme, the colors of certain components (e.g. analog clock, digital clock,...) would not be changed accordingly.
 
-#### Problem when a QAction launched an Automation script immediately after the element had been started \[ID 27431\]
+#### Problem when a QAction launched an automation script immediately after the element had been started \[ID 27431\]
 
-When a QAction launched an Automation script immediately after the element had been started, in some cases, an exception could be thrown.
+When a QAction launched an automation script immediately after the element had been started, in some cases, an exception could be thrown.
 
 #### DataMiner Cube: Not possible to filter tables on display value \[ID 27490\]
 
@@ -350,7 +350,7 @@ Also, a selection box problem could occur when multiple conditions were configur
 
 #### Automation: Problem when retrieving information events from all DMAs \[ID 27903\]
 
-When, in a DataMiner System with multiple agents, information events were retrieved by an Automation script, in some cases, not all information events would be retrieved.
+When, in a DataMiner System with multiple agents, information events were retrieved by an automation script, in some cases, not all information events would be retrieved.
 
 #### DataMiner Cube - Correlation: Number of occurrences in 'Sliding window' section could incorrectly not be changed \[ID 27909\]
 

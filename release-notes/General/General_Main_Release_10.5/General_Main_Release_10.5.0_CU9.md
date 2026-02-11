@@ -54,7 +54,7 @@ From now on, OPC communication should no longer be used in DataMiner connectors.
 
 From now on, the `Engine` class exposes the public property `ScriptName`.
 
-This means that, in an Automation script, it will now be possible to retrieve the name of that script.
+This means that, in an automation script, it will now be possible to retrieve the name of that script.
 
 #### PDF reports configured in the Dashboards app can now also be sent if recipients are only specified in the CC and/or BCC fields [ID 43844]
 

@@ -276,15 +276,15 @@ When, in DataMiner Cube, you take a backup, all dashboards created by users (i.e
 
 ### DMS Automation
 
-#### Connecting a DMS to a remote ElasticSearch cluster from an Automation script \[ID 26569\]
+#### Connecting a DMS to a remote ElasticSearch cluster from an automation script \[ID 26569\]
 
-It is now possible to have a DMS connect to the nodes of a remote ElasticSearch cluster from an Automation script by sending an InstallElasticAndMigrateRequest message.
+It is now possible to have a DMS connect to the nodes of a remote ElasticSearch cluster from an automation script by sending an InstallElasticAndMigrateRequest message.
 
 This message will add the IP addresses of the remote ElasticSearch nodes to the db.xml file.
 
 #### Replacing Automation script DLL dependencies \[ID 26605\]
 
-It is now possible to replace an Automation script DLL dependency from an Automation script by sending an UploadScriptDependencyMessage.
+It is now possible to replace an automation script DLL dependency from an automation script by sending an UploadScriptDependencyMessage.
 
 By default, the DLL file will be uploaded to the C:\\Skyline DataMiner\\scripts\\dllImport folder, but it is possible to specify a subfolder if required. The uploaded DLL file will be synchronized among all agents in the DMS.
 

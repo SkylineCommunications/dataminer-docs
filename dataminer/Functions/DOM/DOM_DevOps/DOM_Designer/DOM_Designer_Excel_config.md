@@ -93,7 +93,7 @@ In the example below, it is possible to go from the state *Not active* to *Valid
 
 ## *buttons* tab
 
-It is possible to add buttons to a DOM form that will trigger an Automation script to add custom logic or automation to your object. These are configured in this tab.
+It is possible to add buttons to a DOM form that will trigger an automation script to add custom logic or automation to your object. These are configured in this tab.
 
 In the example below, two buttons are configured. The first is only shown when an object is in the *Not active* state, and the second is only shown in the *Validated* state. The Automation script gets the context of which button is selected, so you can combine all logic from your buttons in the same script.
 
@@ -104,7 +104,7 @@ In the example below, two buttons are configured. The first is only shown when a
 
 ## *events* tab
 
-Not only buttons can trigger an Automation script. You can also have a script triggered by each CRUD (Create, Read, Update, and Delete) action for an object. This is defined in the events tab.
+Not only buttons can trigger an automation script. You can also have a script triggered by each CRUD (Create, Read, Update, and Delete) action for an object. This is defined in the events tab.
 
 For example:
 

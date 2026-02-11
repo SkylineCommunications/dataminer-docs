@@ -11,19 +11,19 @@ This tutorial shows you how to create your first user-defined API. You will crea
 
 ## Overview
 
-- [Step 1: Create an Automation script solution](#step-1-create-an-automation-script-solution)
-- [Step 2: Create the Automation script](#step-2-create-the-automation-script)
+- [Step 1: Create an automation script solution](#step-1-create-an-automation-script-solution)
+- [Step 2: Create the automation script](#step-2-create-the-automation-script)
 - [Step 3: Create an API token](#step-3-create-an-api-token)
 - [Step 4: Create the API Definition](#step-4-create-the-api-definition)
 - [Step 5: Trigger the API using Postman](#step-5-trigger-the-api-using-postman)
 
-## Step 1: Create an Automation script solution
+## Step 1: Create an automation script solution
 
-While you could develop the Automation script in Cube, creating an Automation script solution in Visual Studio will give you the advantage of having access to all the features of Visual Studio and [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). If you also use a version control system like Git, this will also enable versioning and make collaboration possible.
+While you could develop the automation script in Cube, creating an automation script solution in Visual Studio will give you the advantage of having access to all the features of Visual Studio and [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). If you also use a version control system like Git, this will also enable versioning and make collaboration possible.
 
 ## [Visual Studio 2022](#tab/tabid-1)
 
-To create an Automation script solution:
+To create an automation script solution:
 
 1. In Visual Studio, select *Create a new project*.
 
@@ -33,7 +33,7 @@ To create an Automation script solution:
 
 1. Use "DataMinerAPIs" as the name for your solution, so you can reuse this solution for any future API scripts.
 
-1. Choose a location to save the Automation script solution and click *Next*.
+1. Choose a location to save the automation script solution and click *Next*.
 
    ![Visual Studio configure your project](~/dataminer/images/UDAPIS_Tutorials_HelloWorld_DIS_SolutionSettings.jpg)
 
@@ -43,7 +43,7 @@ To create an Automation script solution:
 
 ## [Visual Studio 2019](#tab/tabid-2)
 
-To create an Automation script solution:
+To create an automation script solution:
 
 1. In Visual Studio, select *File > New > DataMiner Automation Script Solution*
 
@@ -51,15 +51,15 @@ To create an Automation script solution:
 
 1. Use "DataMinerAPIs" as the name for your solution, so you can reuse this solution for any future API scripts.
 
-1. Choose a location to save the Automation script solution, and click *Next*.
+1. Choose a location to save the automation script solution, and click *Next*.
 
    ![Visual Studio configure your project](~/dataminer/images/UDAPIS_Tutorials_HelloWorld_DIS_SolutionSettings_2019.jpg)
 
 ***
 
-## Step 2: Create the Automation script
+## Step 2: Create the automation script
 
-The logic of your API is in an Automation script. This processes input arguments, executes logic, and returns a response. In this example, no input is processed, and no logic is executed. The API will only return "Hello world!" to the user.
+The logic of your API is in an automation script. This processes input arguments, executes logic, and returns a response. In this example, no input is processed, and no logic is executed. The API will only return "Hello world!" to the user.
 
 ## [Visual Studio 2022](#tab/tabid-1)
 

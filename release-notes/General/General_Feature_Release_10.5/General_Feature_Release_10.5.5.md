@@ -52,13 +52,13 @@ You can then run the migration by opening a remote desktop connection to all DMA
 
 Note that when you add a DataMiner Agent to a DataMiner System, it will have to use the same NATS solution as the DataMiner System. This means that if the DMS has been migrated to BrokerGateway, the DMA you add also needs to be migrated to BrokerGateway, but if the DMS still uses the SLNet-managed NATS solution, the DMA you add also has to use this solution.
 
-#### GQI DxM will now look for missing dependencies in the Automation script libraries folder [ID 42468]
+#### GQI DxM will now look for missing dependencies in the automation script libraries folder [ID 42468]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
 GQI extensions use the Automation engine to create DLL libraries that are then loaded by GQI to add ad hoc data sources, custom operators, etc.
 
-GQI will now look for missing dependencies in the `C:\Skyline DataMiner\Scripts\Libraries` folder. This will allow GQI extension scripts to find the Automation script library at runtime.
+GQI will now look for missing dependencies in the `C:\Skyline DataMiner\Scripts\Libraries` folder. This will allow GQI extension scripts to find the automation script library at runtime.
 
 > [!IMPORTANT]
 > If the referenced Automation script library has dependencies of its own, these will also need to be added as dependencies in the GQI extension scripts.

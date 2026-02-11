@@ -14,7 +14,7 @@ In the XML editor, you can click a small down arrow in front of certain XML tags
 
 |Tag   | Command       | Function |
 |------|---------------|----------|
-| Name | Rename script | Rename the Automation script XML and update all linked projects. |
+| Name | Rename script | Rename the automation script XML and update all linked projects. |
 | Exe  | Update Exe ID | Change the ID of the *Exe* code block. |
 
 ### Validator

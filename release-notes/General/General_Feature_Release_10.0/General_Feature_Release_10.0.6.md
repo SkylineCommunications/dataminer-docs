@@ -89,9 +89,9 @@ From now on, a CPE feed will no longer pass along all selected fields. Instead, 
 
 ### DMS Automation
 
-#### Injecting a DLL into an Automation script \[ID 24945\]
+#### Injecting a DLL into an automation script \[ID 24945\]
 
-It is now possible to inject DLL files into an Automation script.
+It is now possible to inject DLL files into an automation script.
 
 ##### To inject a DLL
 
@@ -125,7 +125,7 @@ The server will send back a *GetAutomationDllOverviewResponseMessage* containing
 
 ##### To eject a DLL
 
-If you eject a previously injected DLL from an Automation script, this will cause the script to behave as it did before the injection. To do so, send an *EjectAutomationDllRequestMessage* containing the name of the script and the Exe ID (i.e. the ID of the script action).
+If you eject a previously injected DLL from an automation script, this will cause the script to behave as it did before the injection. To do so, send an *EjectAutomationDllRequestMessage* containing the name of the script and the Exe ID (i.e. the ID of the script action).
 
 The server will send back a EjectAutomationDllResponseMessage. If any errors would have occurred, they will be included as errors of type *AutomationErrorData* in the message’s *TraceData* object. Possible errors include:
 

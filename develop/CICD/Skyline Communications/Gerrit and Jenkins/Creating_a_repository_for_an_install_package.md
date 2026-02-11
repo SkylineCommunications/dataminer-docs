@@ -25,4 +25,4 @@ After creating and cloning the repository, you will find a repository with a sol
 
 The manifest file will contain the items you previously selected in selection mode in the repo manager. Note that the content of the manifest can be adapted and extended with additional items.
 
-The install script is an Automation script that performs the installation of the package. This installation script by default only performs installation of the package items but can be customized to your needs.
+The install script is an automation script that performs the installation of the package. This installation script by default only performs installation of the package items but can be customized to your needs.

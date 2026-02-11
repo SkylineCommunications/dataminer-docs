@@ -205,7 +205,7 @@ The view levels do not need to be specified in any particular order. For example
 
 Special placeholders allow you to use (parts) of the value of the alarm or information event in the command name that is displayed in the shortcut menu.
 
-The example below shows four legacy hyperlink definitions. In the first definition, the name of the Automation script, indicated by the placeholder "\[1\]" in the *valueParsing* attribute, will appear at the end of the command name displayed in the shortcut menu. As such, if you right-click an alarm or an information event of which the value starts with e.g. "Set by Automation script MyScript to", the shortcut menu will contain a custom command named "ExecuteScript.exe –n MyScript".
+The example below shows four legacy hyperlink definitions. In the first definition, the name of the automation script, indicated by the placeholder "\[1\]" in the *valueParsing* attribute, will appear at the end of the command name displayed in the shortcut menu. As such, if you right-click an alarm or an information event of which the value starts with e.g. "Set by Automation script MyScript to", the shortcut menu will contain a custom command named "ExecuteScript.exe –n MyScript".
 
 Example:
 

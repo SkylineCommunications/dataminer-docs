@@ -106,7 +106,7 @@ Also, in the resource manager, it is now possible to configure the number of sta
 | MaxAmountOfThreads       | The number of threads the resource manager will use to start bookings.<br>By default, 6 threads will be used. To restore this setting to the default value, set its value to null.<br>Note: The number of threads must at least be set to 2 in order for the scheduler to be able to start an action and keep a thread available for asynchronous continuations. |
 | MaxAmountOfParallelTasks | The number of parallel actions the resource manager will start on the threads.<br>By default, the number of parallel action is set to 7. To restore this setting to the default value, set its value to null. |
 
-The following example shows how you can configure this from an Automation script.
+The following example shows how you can configure this from an automation script.
 
 ```csharp
 private void UpdateResourceManagerConfigSettings()
@@ -213,7 +213,7 @@ See also: [DataMiner upgrade: DataMiner Assistant DxM will now be included in th
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-The entry added to the *SLAutomation.txt* log file when an Automation script has finished will now contain the entrypoint ID.
+The entry added to the *SLAutomation.txt* log file when an automation script has finished will now contain the entrypoint ID.
 
 In the following example, the entrypoint ID can be found at the end of the entry between brackets (11):
 

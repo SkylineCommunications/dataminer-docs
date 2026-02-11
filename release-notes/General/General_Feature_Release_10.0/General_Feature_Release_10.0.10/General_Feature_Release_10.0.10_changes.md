@@ -119,7 +119,7 @@ Up to now, when data was being loaded into a line chart component, a loading ind
 
 #### Automation: DataMiner will now check whether a parameter’s set range has not been changed dynamically \[ID 26574\]
 
-When a parameter is set, from now on, DataMiner will check whether the set range of the parameter in question has not been changed dynamically (e.g. by an Automation script).
+When a parameter is set, from now on, DataMiner will check whether the set range of the parameter in question has not been changed dynamically (e.g. by an automation script).
 
 #### General security enhancements \[ID 26620\]
 
@@ -141,7 +141,7 @@ Up to now, all values of type Double with a length of more than 6 characters wer
 
 #### DataMiner Cube - Automation: All parameters will now be aligned vertically \[ID 26665\]
 
-When creating or updating an Automation script in the Automation app, the parameters will now all be aligned vertically.
+When creating or updating an automation script in the Automation app, the parameters will now all be aligned vertically.
 
 #### Improved logging in case client is disconnected \[ID 26667\]
 
@@ -309,9 +309,9 @@ When, in the Alarm Console, you sorted and grouped alarms by Time/descending, th
 
 When you restored a DataMiner backup package (.dmbackup) containing a database file that took more than 30 minutes to restore, in some cases, the restore of the DataMiner backup package would incorrectly continue before the restore of the database file had finished.
 
-#### Problem when using the IsMatrixCrosspointConnected method in an Automation script \[ID 26276\]
+#### Problem when using the IsMatrixCrosspointConnected method in an automation script \[ID 26276\]
 
-When, in an Automation script, the *IsMatrixCrosspointConnected* method was used before a matrix point had been connected, in some cases, an exception could be thrown.
+When, in an automation script, the *IsMatrixCrosspointConnected* method was used before a matrix point had been connected, in some cases, an exception could be thrown.
 
 #### DataMiner Cube - Visual Overview: Shapes with a ParameterControl shape data field would incorrectly not take into account the NoAutoScale option \[ID 26283\]
 
@@ -327,7 +327,7 @@ When you created a new DataMiner System, in some cases, certain existing files w
 
 #### Problem with SLAutomation when saving a script containing a long line \[ID 26367\]
 
-When you saved an Automation script that contained a long line, in some cases, an error could occur in all SLAutomation processes in the DataMiner System.
+When you saved an automation script that contained a long line, in some cases, an error could occur in all SLAutomation processes in the DataMiner System.
 
 #### Source OID of forwarded aggregation alarm would not contain 'Aggregation' \[ID 26369\]
 
@@ -385,7 +385,7 @@ In some cases, an agent configured to only be switched over manually would incor
 
 #### Automation: Engine#FindElement(null) call would incorrectly return a random element \[ID 26499\]
 
-When using an Engine#FindElement(null) call in an Automation script, in some cases, a random Element object would incorrectly be returned. From now on, NULL will be returned instead.
+When using an Engine#FindElement(null) call in an automation script, in some cases, a random Element object would incorrectly be returned. From now on, NULL will be returned instead.
 
 #### DataMiner Cube - Documents app: Problem when trying to delete a file after saving it locally \[ID 26500\]
 
@@ -680,7 +680,7 @@ When a line chart component was configured to display columns from different tab
 
 #### Email report based on dashboard from new app was blank \[ID 26811\]
 
-In some cases, it could occur that if an Automation script sent an email report based on a dashboard from the new Dashboards app, the PDF attached to this email was blank.
+In some cases, it could occur that if an automation script sent an email report based on a dashboard from the new Dashboards app, the PDF attached to this email was blank.
 
 #### DataMiner Cube: Not possible to reuse alarm template condition based on non-linked table \[ID 26812\]
 
@@ -772,7 +772,7 @@ When a new Failover pair was configured, it could occur that the existing dashbo
 
 #### DataMiner Cube: Automation script executed from Visual Overview still displayed as "Executing" when finished \[ID 26925\]
 
-When an Automation script was executed from a shape in Visual Overview, it could occur that it continued to be displayed as being executed even when the script was finished.
+When an automation script was executed from a shape in Visual Overview, it could occur that it continued to be displayed as being executed even when the script was finished.
 
 #### DataMiner state saved in connection and in event cache not in sync \[ID 26928\]
 

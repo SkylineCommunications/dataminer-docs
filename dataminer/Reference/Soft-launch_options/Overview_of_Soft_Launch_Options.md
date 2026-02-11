@@ -182,7 +182,7 @@ Enables or disables the legacy Reports and Dashboards modules.
 
 ### ReportsAndDashboardsAutomationScript
 
-Enables the Automation script component in the Dashboards app, which is visualized as a button. This component can be used to execute scripts. It requires no data but can have elements or parameters as filters. If the *ReportsAndDashboardsButton* option is also enabled, one button component will be available that can be used with an automation script or with a button parameter.
+Enables the automation script component in the Dashboards app, which is visualized as a button. This component can be used to execute scripts. It requires no data but can have elements or parameters as filters. If the *ReportsAndDashboardsButton* option is also enabled, one button component will be available that can be used with an automation script or with a button parameter.
 
 - **Minimum version**: 9.6.8
 - **Estimated release version**: To be determined

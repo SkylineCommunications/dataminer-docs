@@ -12,4 +12,4 @@ The following topics provide more information on debugging connectors and automa
 - [Preparing to debug on the local DataMiner Agent](xref:Preparing_to_debug_on_the_local_DataMiner_Agent)
 - [Preparing to debug on a remote DataMiner Agent](xref:Preparing_to_debug_on_a_remote_DataMiner_Agent)
 - [Debugging a connector](xref:Debugging_a_connector)
-- [Debugging an Automation script](xref:Debugging_an_Automation_script)
+- [Debugging an automation script](xref:Debugging_an_Automation_script)

@@ -41,8 +41,8 @@ Each time a program is launched, a start entry and an end entry will be added to
 
 - The start entry will contain the following data:
 
-  - the name of the Automation script
-  - the ID of the Automation script
+  - the name of the automation script
+  - the ID of the automation script
   - the user's login data (full name, client machine name, client app name and last login date)
   - the program that will be launched
   - the arguments that will be passed to the program (if any)

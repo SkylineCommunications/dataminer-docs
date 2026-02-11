@@ -69,7 +69,7 @@ var createdElement = agent.CreateElement(configuration);
 
 #### Fix - AgentId property of DmsAutomationScriptRunOptions ignored when executing a script [ID 43923]
 
-When an Automation script was executed via DmsAutomationScript, the AgentId specified in DmsAutomationScriptRunOptions was not applied when constructing the SLNet message, causing the script to run on the default/incorrect Agent. This has been corrected so that the specified AgentId is now respected.
+When an automation script was executed via DmsAutomationScript, the AgentId specified in DmsAutomationScriptRunOptions was not applied when constructing the SLNet message, causing the script to run on the default/incorrect Agent. This has been corrected so that the specified AgentId is now respected.
 
 ### 1.1.3.4
 
@@ -522,7 +522,7 @@ When you retrieve the local element from IDms, you can now also perform a specia
 
 #### New feature - Automation script execution enhanced with async execution and additional run flags
 
-You can now trigger the execution of an Automation script asynchronously. In addition, you can provide several different run options similar to the options you get when triggering a script manually (e.g. LockElements, CheckSets, WaitWhenLocked, etc.).
+You can now trigger the execution of an automation script asynchronously. In addition, you can provide several different run options similar to the options you get when triggering a script manually (e.g. LockElements, CheckSets, WaitWhenLocked, etc.).
 
 ### 1.1.1.2
 

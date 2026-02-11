@@ -21,7 +21,7 @@ To use this tool to debug automation scripts or QActions on a remote system, fol
 
 1. Select *Debug > Windows > Modules*, and sort by timestamp in descending order to find the right module.
 
-   This can be tricky, because every time you upload an Automation script or protocol, new assemblies are built, but the old ones remain in memory.
+   This can be tricky, because every time you upload an automation script or protocol, new assemblies are built, but the old ones remain in memory.
 
    > [!NOTE]
    > A module is only available after it has run at least once.

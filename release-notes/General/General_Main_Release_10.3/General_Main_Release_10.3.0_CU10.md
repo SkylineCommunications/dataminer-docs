@@ -130,4 +130,4 @@ In some cases, incorrect flatline stops could be generated.
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
-In some rare cases, SLAutomation would not clean up deleted references to elements, causing the process to stop unexpectedly when the Automation script ended.
+In some rare cases, SLAutomation would not clean up deleted references to elements, causing the process to stop unexpectedly when the automation script ended.

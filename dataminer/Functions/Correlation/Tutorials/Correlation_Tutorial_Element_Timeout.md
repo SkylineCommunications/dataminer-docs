@@ -36,11 +36,11 @@ This tutorial consists of the following steps:
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
 
-When the package has been deployed, the Automation script *Correlation KATA switch timeout Script* and the element *Correlation KATA Switch Timeout - Network Switch* will become available in the DataMiner System. You can find the element in the Surveyor under *DataMiner Catalog* > *Correlation KATA* > *Network Switch Timeout*.
+When the package has been deployed, the automation script *Correlation KATA switch timeout Script* and the element *Correlation KATA Switch Timeout - Network Switch* will become available in the DataMiner System. You can find the element in the Surveyor under *DataMiner Catalog* > *Correlation KATA* > *Network Switch Timeout*.
 
 ## Step 2: Create the correlation rule
 
-In this step, you will create a correlation rule that will trigger based on alarms from the *Correlation KATA Switch Timeout - Network Switch* element. If the element is in timeout for longer than 5 minutes, the rule will take action, and an Automation script will generate an information event.
+In this step, you will create a correlation rule that will trigger based on alarms from the *Correlation KATA Switch Timeout - Network Switch* element. If the element is in timeout for longer than 5 minutes, the rule will take action, and an automation script will generate an information event.
 
 1. In DataMiner Cube, go to *Apps* > *Modules* > *Correlation* to open the Correlation module.
 
@@ -127,7 +127,7 @@ In this step, you will create a correlation rule that will trigger based on alar
 
 1. Check whether an information event has been generated in the Alarm Console.
 
-   This information event should have been created by the Automation script triggered by the correlation rule, if you configured everything correctly.
+   This information event should have been created by the automation script triggered by the correlation rule, if you configured everything correctly.
 
 1. If you added the *Send email* action to the correlation rule, check whether you have received an email.
 

@@ -175,8 +175,8 @@ In zero span mode, the sweeptime parameter is used to indicate the time on the X
 A number of issues have been fixed with regard to Automation:
 
 - When, in the Automation app, you opened a script in an undocked card, it would not be possible to edit the name of the script.
-- A *nullreference* exception could be thrown when an Automation script was deleted.
-- Cube could leak memory each time you opened an Automation script in a new card.
+- A *nullreference* exception could be thrown when an automation script was deleted.
+- Cube could leak memory each time you opened an automation script in a new card.
 
 #### Protocols & Templates: Function definitions would not be listed when you activated a functions file [ID 37754]
 

@@ -551,7 +551,7 @@ When you export a trend graph to CSV, a new *Exclude gaps* option is now availa
 
 #### Correlation/Automation/Scheduler: Email report configuration \[ID 27521\]\[ID 27812\]\[ID 27878\] \[ID 28032\] \[ID 28038\]\[ID 28081\]
 
-In an *Email* action of a Correlation rule, an Automation script or a scheduled task, as well as in the *Upload report to FTP* and *Upload report to shared folder* actions in an Automation script, if you add a report based on a dashboard, you can now click a *Configure* button to open an embedded browser window where you can configure the necessary data feed selections as well as the following options:
+In an *Email* action of a Correlation rule, an automation script or a scheduled task, as well as in the *Upload report to FTP* and *Upload report to shared folder* actions in an automation script, if you add a report based on a dashboard, you can now click a *Configure* button to open an embedded browser window where you can configure the necessary data feed selections as well as the following options:
 
 - *Add DMS info*: Determines whether company details are displayed in the report.
 

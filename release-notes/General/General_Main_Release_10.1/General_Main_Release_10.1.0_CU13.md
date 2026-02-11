@@ -62,7 +62,7 @@ When, in Data Display, you drill down to a specific row of a parameter table, yo
 
 #### DataMiner Cube - Automation: SaveAutomationScriptXmlMessage will now be used when importing, saving and updating automation scripts \[ID 32557\]
 
-Up to now, when an Automation script was imported, the file would not be processed in the same way as when an Automation script was saved or updated. From now on, the same SaveAutomationScriptXmlMessage will be used when importing, saving and updating automation scripts.
+Up to now, when an automation script was imported, the file would not be processed in the same way as when an automation script was saved or updated. From now on, the same SaveAutomationScriptXmlMessage will be used when importing, saving and updating automation scripts.
 
 #### Protocols: Allow for different remote element sources in view table columns \[ID 32579\]
 
@@ -128,7 +128,7 @@ Up to now, server processes like SLNet used the default system locale. If this l
 
 #### DataMiner Cube - Automation: Specifying an offset value will now be optional in case of a Set action \[ID 32743\]
 
-When, in an Automation script, you configured a Set action for which an offset value could be specified, up to now, it was mandatory to specify that offset value. From now on, specifying an offset value will be optional. Either select “with value offset” and enter a value, or select “without value offset”.
+When, in an automation script, you configured a Set action for which an offset value could be specified, up to now, it was mandatory to specify that offset value. From now on, specifying an offset value will be optional. Either select “with value offset” and enter a value, or select “without value offset”.
 
 Default: “without value offset”
 

@@ -18,7 +18,7 @@ The following packages are available:
 - [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol)
 - [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common)
 
-The Automation and Protocol NuGet packages both have a dependency on the Common NuGet package. When an Automation script is developed, a reference is needed to the Skyline.DataMiner.Dev.Automation NuGet package. When a connector is developed, a reference is needed to the Skyline.DataMiner.Dev.Protocol NuGet package.
+The Automation and Protocol NuGet packages both have a dependency on the Common NuGet package. When an automation script is developed, a reference is needed to the Skyline.DataMiner.Dev.Automation NuGet package. When a connector is developed, a reference is needed to the Skyline.DataMiner.Dev.Protocol NuGet package.
 
 The Automation, Protocol, and Common NuGet packages are so-called meta-packages. This means that they only contain references to other NuGet packages. These packages reference NuGet packages with IDs starting with "Skyline DataMiner.Files.". Every *Skyline DataMiner.Files.\** NuGet package contains a single assembly from the "Skyline DataMiner/Files" folder of DataMiner.
 

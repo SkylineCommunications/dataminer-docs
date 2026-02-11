@@ -55,7 +55,7 @@ Expected duration: 10 minutes
 
    ![On page load event](~/dataminer/images/OnPageLoad.png)
 
-1. Configure the action to run the Automation script:
+1. Configure the action to run the automation script:
 
    1. Select the action *Launch a script*.
 

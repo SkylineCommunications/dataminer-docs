@@ -33,7 +33,7 @@ uid: General_Feature_Release_10.5.2
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
-From now on, when SLAutomation stops working due to an unhandled exception that occurred in an Automation script, the stack trace of the unhandled exception will be logged in *SLAutomation.txt* and the following alarm of type "error" will be generated:
+From now on, when SLAutomation stops working due to an unhandled exception that occurred in an automation script, the stack trace of the unhandled exception will be logged in *SLAutomation.txt* and the following alarm of type "error" will be generated:
 
 ```txt
 The automation script 'Script name' caused the hosting process SLAutomation.exe to crash. Please correct the script to prevent further system instability and check Automation log file for more details.
@@ -91,13 +91,13 @@ The following new messages can now be used to  which you can target to be sent t
 
 Additional logging with regard to visual overview load balancing will be available in the web logs located in the `C:\Skyline DataMiner\Logging\Web` folder.
 
-#### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Correlation engine [ID 41653]
+#### Information events of type 'script started' will no longer be generated when an automation script is triggered by the Correlation engine [ID 41653]
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
 
-From now on, by default, information events of type "script started" will no longer be generated when an Automation script is triggered by the Correlation engine.
+From now on, by default, information events of type "script started" will no longer be generated when an automation script is triggered by the Correlation engine.
 
-In other words, when an Automation script is triggered by the Correlation engine, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Feature_Release_10.2.8#added-the-option-to-skip-the-script-started-information-event-id-33666).
+In other words, when an automation script is triggered by the Correlation engine, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Feature_Release_10.2.8#added-the-option-to-skip-the-script-started-information-event-id-33666).
 
 If you do want such information events to be generated, you can add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to false:
 

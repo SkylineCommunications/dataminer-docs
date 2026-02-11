@@ -76,7 +76,7 @@ When you dragged an element onto the Alarm Console, in some cases, the alarm tab
 
 #### Service & Resource Management: Incorrect result when comparing service definitions \[ID 24662\]
 
-If an Automation script compared two service definitions with at least one interface configuration or edge in the diagram, it could occur that the Equals method returned false incorrectly.
+If an automation script compared two service definitions with at least one interface configuration or edge in the diagram, it could occur that the Equals method returned false incorrectly.
 
 #### DataMiner Cube - EPM/CPE: Problem with chain field option 'statusTabs' \[ID 24668\]
 
@@ -244,9 +244,9 @@ The WSDL was no longer backwards compatible for the GetTicket method.
 
 When SLPort receives data, it stores it in a buffer until everything has been received. If the amount of data received is larger than the size of the buffer, the buffer is automatically resized. However, in some cases, this would not happen, causing an error to occur.
 
-#### Automation: Email sent from an Automation script had an incorrect subject \[ID 25618\]
+#### Automation: Email sent from an automation script had an incorrect subject \[ID 25618\]
 
-When an email was sent from an Automation script, in some cases, the dashboard name would incorrectly be used as email subject.
+When an email was sent from an automation script, in some cases, the dashboard name would incorrectly be used as email subject.
 
 From now on, the dashboard name will only be used as email subject when no subject was specified.
 
@@ -294,7 +294,7 @@ In some cases, dropdown boxes would unnecessarily trigger a refresh of the UI.
 
 #### Dashboards app - Service Definition component: Booking ID not passed to the script when clicking a node \[ID 25912\]
 
-When, in a service definition component linked to a booking, you clicked a node that launched an Automation script, in some cases, the booking ID would not be passed to the script.
+When, in a service definition component linked to a booking, you clicked a node that launched an automation script, in some cases, the booking ID would not be passed to the script.
 
 #### SLAnalytics: Element state changes and element deletions would not be processed correctly when behavioral anomaly detection was disabled \[ID 25929\]
 
@@ -330,9 +330,9 @@ At startup, in some cases, DataMiner was not able to correctly parse the IP addr
 
 When you masked an element and then immediately restarted it, in some rare cases, it could be shown as unmasked for a short period of time.
 
-#### Incorrect page margins in PDF reports sent by an Automation script \[ID 26090\]
+#### Incorrect page margins in PDF reports sent by an automation script \[ID 26090\]
 
-When an Automation script sent a PDF report based on a dashboard, in some cases, the page margins in that PDF report would be incorrect.
+When an automation script sent a PDF report based on a dashboard, in some cases, the page margins in that PDF report would be incorrect.
 
 #### Failover: Problem when switching over the first time after migrating from MySQL to Cassandra \[ID 26116\]
 
@@ -392,17 +392,17 @@ Up to now the permissions to add, edit, delete and execute automation scripts we
 
 Now the system will enforce the permissions as follows:
 
-- To view or retrieve an Automation script, you need the "Automation - UI available" or "Automation - Execute" permission.
+- To view or retrieve an automation script, you need the "Automation - UI available" or "Automation - Execute" permission.
 
-- To create an Automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
+- To create an automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
 
-- To update an Automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
+- To update an automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
 
-- To delete an Automation script, you need the "Automation - Delete" permission.
+- To delete an automation script, you need the "Automation - Delete" permission.
 
-- To execute an Automation script, you need the "Automation - Execute" permission.
+- To execute an automation script, you need the "Automation - Execute" permission.
 
-- To perform a DLL injection in an Automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
+- To perform a DLL injection in an automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
 
 - To change a memory file, you need the "Automation - Add" or the "Automation - Edit" permission.
 

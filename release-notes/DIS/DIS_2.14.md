@@ -32,7 +32,7 @@ If DataMiner Integration Studio is set to check for updates, an *Update…* butt
 
 #### XML editor: ‘Copy Script to Clipboard’ command \[ID 20150\]
 
-When you are editing an Automation script file, you can click the small Down arrow in front of the Script.Exe element to open a shortcut menu. In that menu, you will now find a *Copy Script to Clipboard* command, which will allow you to easily copy an entire Automation script to another file.
+When you are editing an automation script file, you can click the small Down arrow in front of the Script.Exe element to open a shortcut menu. In that menu, you will now find a *Copy Script to Clipboard* command, which will allow you to easily copy an entire Automation script to another file.
 
 #### XML editor: No longer possible to publish a protocol with an incorrect Type tag, an empty Version tag or an empty Name tag \[ID 20182\]
 
@@ -159,7 +159,7 @@ It is now also possible to debug elements that were migrated from one DataMiner 
 
 #### XML editor: Enhanced Automation script publication process \[ID 20255\]
 
-A number of enhancements have been made to the Automation script publication process.
+A number of enhancements have been made to the automation script publication process.
 
 #### XML editor: Enhanced 'Automation Root' snippet and 'DataMiner Automation Script Template' file \[ID 20265\]
 

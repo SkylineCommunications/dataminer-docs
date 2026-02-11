@@ -57,9 +57,9 @@ cy.get(`[data-cy="TextComponent"]`)
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
-In a low-code app, it is now possible to hide the Automation script window. This will allow users to continue working inside a low-code app while an Automation script is running.
+In a low-code app, it is now possible to hide the automation script window. This will allow users to continue working inside a low-code app while an automation script is running.
 
-To hide the UI of an Automation script, you can use the new `HideUI()` method in the `Engine` class.
+To hide the UI of an automation script, you can use the new `HideUI()` method in the `Engine` class.
 
 Example:
 
@@ -89,7 +89,7 @@ public class Script
 
 > [!NOTE]
 >
-> - Although the use of `HideUI()` requires the Automation script to be interactive, a script will not be recognized as interactive if the method is included in the script. It needs to be used in combination with `ShowUI()` or `FindInteractiveClient()`.
+> - Although the use of `HideUI()` requires the automation script to be interactive, a script will not be recognized as interactive if the method is included in the script. It needs to be used in combination with `ShowUI()` or `FindInteractiveClient()`.
 > - Although it is possible to request hiding the UI prior to showing it, it is recommended to not show any UI and only hide the UI after it was shown.
 
 #### Dashboards app & Low-Code Apps: New 'Search input' component [ID 39555]

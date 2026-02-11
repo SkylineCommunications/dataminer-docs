@@ -79,7 +79,7 @@ First, we turn a shape into a "drop target" (i.e. a shape onto which we will dro
   Example: `Script:SendServiceReport||||Send Service report|NoConfirmation`
 
   > [!NOTE]
-  > Make sure a service ID is passed to the Automation script specified in the shape data field of type **Execute**.
+  > Make sure a service ID is passed to the automation script specified in the shape data field of type **Execute**.
 
 Then, we make sure that the shapes we intend to drop onto the "drop target" contain valid shape data. In this example, all shapes to be dropped should contain a valid service ID:
 
@@ -87,7 +87,7 @@ Then, we make sure that the shapes we intend to drop onto the "drop target" cont
 
   Example: `111/312`
 
-When we now drop a shape with a valid service ID onto our newly created "drop target", the service ID specified in the shape data of the shape we dropped onto the "drop target" will be passed to the Automation script, which will then be executed.
+When we now drop a shape with a valid service ID onto our newly created "drop target", the service ID specified in the shape data of the shape we dropped onto the "drop target" will be passed to the automation script, which will then be executed.
 
 ## Example of a drag-and-drop action that passes on a table filter
 

@@ -13,9 +13,9 @@ From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards, this requires the user
 | Item | Format | Description |
 |--|--|--|
 | connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| script.Name | String | The name of the Automation script. |
-| script.Folder | String | The folder containing the Automation script. |
-| script.Description | String | The description of the Automation script. |
+| script.Name | String | The name of the automation script. |
+| script.Folder | String | The folder containing the automation script. |
+| script.Description | String | The description of the automation script. |
 | script.Settings.RequireInteractive | Boolean | Determines whether the script will require interaction from the user. |
 | script.Settings.HasFindInteractiveClient | Boolean | Determines if a pop-up window will be displayed asking clients to attach to the script. |
 | script.Parameters | Array of [DMAAutomationScriptParameter](xref:DMAAutomationScriptParameter) | The parameters used in the script. |

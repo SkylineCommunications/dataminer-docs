@@ -122,7 +122,7 @@ Up to now, when users wanted to configure a service reservation, they each time 
 
 From now on, an OnStartActionsFailureEvent will be executed when the start actions of a ReservationInstance fail.
 
-If you want to use this event to trigger an Automation script, then make sure to add a custom entry point method to that script. See the example below.
+If you want to use this event to trigger an automation script, then make sure to add a custom entry point method to that script. See the example below.
 
 ```csharp
 [AutomationEntryPoint(AutomationEntryPointType.Types.OnSrmStartActionsFailure)]
@@ -145,9 +145,9 @@ A StartActionsFailureErrorData instance contains an *ErrorReason*, which explain
   > [!NOTE]
   > This exception can be retrieved from the Exception property. The ReservationInstanceId is available in the ErrorData object.
 
-##### Assigning an Automation script to the OnStartActionsFailureEvent
+##### Assigning an automation script to the OnStartActionsFailureEvent
 
-The following example shows how to assign an Automation script to the OnStartActionsFailureEvent.
+The following example shows how to assign an automation script to the OnStartActionsFailureEvent.
 
 ```csharp
 reservationInstance.OnStartActionsFailureEvent = new ReservationEvent("OnStartActionsFailureEvent", $"Script:StartActionsFailedScript");
@@ -539,7 +539,7 @@ After trying to save a job that contained errors (e.g. missing fields), in some 
 
 #### Problem when calling GetParameter on the virtual element of a redundancy group \[ID 24892\]
 
-When a GetParameter method was called in an Automation script on the virtual element of a redundancy group, in some cases, a CreateDummyFailedException could be thrown.
+When a GetParameter method was called in an automation script on the virtual element of a redundancy group, in some cases, a CreateDummyFailedException could be thrown.
 
 #### Db.xml: 'oldstyle' argument of \<Offload> tags would be removed when database settings were updated via Cube \[ID 24895\]
 

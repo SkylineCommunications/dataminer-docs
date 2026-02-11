@@ -132,7 +132,7 @@ When performing the firewall port test, the [Security Advisory](xref:BPA_Securit
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.8 -->
 
-From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an Automation script:
+From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an automation script:
 
 `SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
 
@@ -228,11 +228,11 @@ When SRM messages were sent directly to the master agent, SLNet could experience
 
 When a DataMiner Agent was restarted either manually or automatically, in some rare cases, it would not restart properly.
 
-#### SLAutomation would leak a small amount of memory each time an Automation script was run [ID 39644]
+#### SLAutomation would leak a small amount of memory each time an automation script was run [ID 39644]
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
-In some cases, SLAutomation would leak a small amount of memory each time an Automation script was run.
+In some cases, SLAutomation would leak a small amount of memory each time an automation script was run.
 
 #### Table row discrepancy between SLElement and SLProtocol [ID 39645]
 

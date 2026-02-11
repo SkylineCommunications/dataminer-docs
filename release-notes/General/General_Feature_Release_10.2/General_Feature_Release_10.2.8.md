@@ -22,7 +22,7 @@ Process:
 
 1. A client requests the execution of a DOM action in which the execution of an interactive Automation script has been defined via the domHelper.DomInstances.ExecuteAction() method.
 
-   To indicate that the Automation script is an interactive Automation script, the IsInteractive property of the ExecuteScriptDomActionDefinition must be set to true.
+   To indicate that the automation script is an interactive Automation script, the IsInteractive property of the ExecuteScriptDomActionDefinition must be set to true.
 
 1. The domHelper.DomInstances.ExecuteAction() method replies immediately.
 
@@ -457,7 +457,7 @@ When SLElement was processing a history set, an error could occur when the times
 
 The following problems with the Failover option *AlwaysBruteForceOffline* have now been fixed:
 
-- When configured via an UpdateFailoverConfigMessage in an Automation script, the option would not be applied in the DMS.xml file.
+- When configured via an UpdateFailoverConfigMessage in an automation script, the option would not be applied in the DMS.xml file.
 - When configured by manually updating the DMS.xml file, the option would be overwritten.
 - When applied, the option would cause the DMA to restart without also restarting SLNet.
 

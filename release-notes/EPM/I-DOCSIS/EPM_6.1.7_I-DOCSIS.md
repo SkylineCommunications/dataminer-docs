@@ -16,9 +16,9 @@ For the *Generic DOCSIS CM Collector* connector, a *Configuration* and *Threshol
 
 #### New parameter to configure name Automation script responsible for notifying elements of new data to be ingested [ID 36053]
 
-A new parameter, *Script Name*, has been added to the *Configuration* page of the Skyline EPM Platform, Arris E6000 CCAP Platform, Casa System CCAP Platform, Cisco CBR-8 CCAP Platform, CISCO CMTS CCAP Platform, and Huawei 5688-5800 CCAP Platform connectors. With this parameter, you can specify the Automation script responsible for notifying the back-end elements of new data to be ingested.
+A new parameter, *Script Name*, has been added to the *Configuration* page of the Skyline EPM Platform, Arris E6000 CCAP Platform, Casa System CCAP Platform, Cisco CBR-8 CCAP Platform, CISCO CMTS CCAP Platform, and Huawei 5688-5800 CCAP Platform connectors. With this parameter, you can specify the automation script responsible for notifying the back-end elements of new data to be ingested.
 
-Similarly, a *Script Name* parameter has been added to the *Configuration* page of the Skyline EPM Platform DOCSIS connector, so you can specify the Automation script responsible for notifying the CCAPs/CM collector pair of new data to be ingested.
+Similarly, a *Script Name* parameter has been added to the *Configuration* page of the Skyline EPM Platform DOCSIS connector, so you can specify the automation script responsible for notifying the CCAPs/CM collector pair of new data to be ingested.
 
 #### Passive overview pages with linked CM overview dashboards [ID 36450]
 

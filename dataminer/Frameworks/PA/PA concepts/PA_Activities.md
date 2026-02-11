@@ -12,7 +12,7 @@ However, the different activities can exchange data using a DataMiner Object Mod
 
 Process Automation supports the following types of activities:
 
-- **Script tasks**: A script task is an Automation script with a specific signature. It can be used to perform any custom action. The custom logic is fully part of the script and can interface with any DataMiner feature/object. See [Creating script tasks](xref:PA_Creating_script_tasks).
+- **Script tasks**: A script task is an automation script with a specific signature. It can be used to perform any custom action. The custom logic is fully part of the script and can interface with any DataMiner feature/object. See [Creating script tasks](xref:PA_Creating_script_tasks).
 
 - **User tasks**: A user task is an activity that will wait for a user action before completing the task. This way, the token attached to that task can be completed and the next token can be generated. Typically, a user task app will be made available in the *Low-Code Apps* module so that the end user can access these user tasks and complete them. See [Creating user tasks](xref:PA_Creating_user_tasks).
 

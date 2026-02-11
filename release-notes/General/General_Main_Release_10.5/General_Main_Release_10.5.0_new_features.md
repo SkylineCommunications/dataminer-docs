@@ -460,7 +460,7 @@ uib.SkipAbortConfirmation = true;
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
-From now on, when SLAutomation stops working due to an unhandled exception that occurred in an Automation script, the stack trace of the unhandled exception will be logged in *SLAutomation.txt* and the following alarm of type "error" will be generated:
+From now on, when SLAutomation stops working due to an unhandled exception that occurred in an automation script, the stack trace of the unhandled exception will be logged in *SLAutomation.txt* and the following alarm of type "error" will be generated:
 
 ```txt
 The automation script 'Script name' caused the hosting process SLAutomation.exe to crash. Please correct the script to prevent further system instability and check Automation log file for more details.

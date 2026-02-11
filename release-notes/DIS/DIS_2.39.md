@@ -14,7 +14,7 @@ Up to now, in QAction and EXE projects, DIS would add references to the DataMine
 
 The DataMiner DevPacks can be found on the [official NuGet store](https://www.nuget.org/packages?q=skylinecommunications).
 
-When you open a protocol solution or an Automation script solution in which the QAction and EXE projects still contain references to separate DataMiner DLL files instead of a DataMiner DevPack, a banner will appear, giving you the opportunity to replace those references by references to the required DevPacks.
+When you open a protocol solution or an automation script solution in which the QAction and EXE projects still contain references to separate DataMiner DLL files instead of a DataMiner DevPack, a banner will appear, giving you the opportunity to replace those references by references to the required DevPacks.
 
 ##### Changing the default package management format
 
@@ -34,17 +34,17 @@ If any of your existing solutions are using NuGet packages the old way (i.e. usi
 
 ##### Enhanced publishing of protocols and automation scripts
 
-Up to now, when you clicked the *Publish* button to publish a protocol or an Automation script on a DataMiner Agent, only the protocol or Automation script XML file would get published on that DataMiner Agent.
+Up to now, when you clicked the *Publish* button to publish a protocol or an automation script on a DataMiner Agent, only the protocol or Automation script XML file would get published on that DataMiner Agent.
 
-From now on, when you publish a protocol or an Automation script, DIS will create either a *.dmprotocol* package (in case of a protocol) or a *.dmapp* package (in case of an Automation script) in the background, install that package on the DataMiner Agent, and then automatically remove it again. This way, it will no longer be needed to manually copy all required DLL files on the DataMiner Agent in question.
+From now on, when you publish a protocol or an automation script, DIS will create either a *.dmprotocol* package (in case of a protocol) or a *.dmapp* package (in case of an automation script) in the background, install that package on the DataMiner Agent, and then automatically remove it again. This way, it will no longer be needed to manually copy all required DLL files on the DataMiner Agent in question.
 
 ##### Enhanced saving of protocols and automation scripts
 
-Up to now, it was only possible to save a protocol or an Automation script as an XML file.
+Up to now, it was only possible to save a protocol or an automation script as an XML file.
 
-From now on, a protocol can be saved either as an XML file or as a *.dmprotocol* package and an Automation script can be saved either as an XML file or a .dmapp package.
+From now on, a protocol can be saved either as an XML file or as a *.dmprotocol* package and an automation script can be saved either as an XML file or a .dmapp package.
 
-If you choose to save a protocol or an Automation script as a package, the package will contain the protocol or Automation script as well as all required DLL files (e.g. DLL files of NuGet packages that are used in the protocol or Automation script).
+If you choose to save a protocol or an automation script as a package, the package will contain the protocol or Automation script as well as all required DLL files (e.g. DLL files of NuGet packages that are used in the protocol or Automation script).
 
 #### Display editor: Enhanced DVE support [ID 33545]
 
@@ -56,13 +56,13 @@ Also, export rules will now be created automatically.
 
 #### DIS menu: Additional checks when importing protocols and automation scripts [ID 33902]
 
-When you try to import a protocol or an Automation script, additional checks will now be performed.
+When you try to import a protocol or an automation script, additional checks will now be performed.
 
-- When, in the DIS menu, you select *DMA > Import Protocol* while an Automation script solution is open, a pop-up window will now appear, saying that it is impossible to import a protocol while an Automation script solution is open.
+- When, in the DIS menu, you select *DMA > Import Protocol* while an automation script solution is open, a pop-up window will now appear, saying that it is impossible to import a protocol while an automation script solution is open.
 
-- When, in the DIS menu, you select *DMA > Import Automation Script* while a protocol solution is open, a pop-up window will now appear, saying that it is impossible to import an Automation script while a protocol solution is open.
+- When, in the DIS menu, you select *DMA > Import Automation Script* while a protocol solution is open, a pop-up window will now appear, saying that it is impossible to import an automation script while a protocol solution is open.
 
-- When, in the DIS menu, you select *DMA > Import Automation Script* while an Automation script solution is open, a pop-up window will now appear, asking you whether you want the script to be imported into the open Automation script solution.
+- When, in the DIS menu, you select *DMA > Import Automation Script* while an automation script solution is open, a pop-up window will now appear, asking you whether you want the script to be imported into the open Automation script solution.
 
 #### DIS now by default contains most common IANA and IETF MIB files [ID 34304]
 

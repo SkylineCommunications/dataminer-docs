@@ -36,7 +36,7 @@ You can also add new projects by using the dotnet-cli. For the sake of stability
 
 Every *Skyline.DataMiner.SDK* project within the solution, except other DataMiner package projects, will by default be included within the .dmapp created by this project. You can customize this behavior using the *PackageContent/ProjectReferences.xml* file. This allows you to add filters to include or exclude projects as needed. See [ProjectReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_project_references) for more information.
 
-### Existing Automation script files
+### Existing automation script files
 
 You can right-click the solution and select *Add* > *Add Existing DataMiner Automation Script*. This will allow you to add existing automation scripts files to the solution.
 

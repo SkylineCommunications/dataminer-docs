@@ -394,7 +394,7 @@ When you upload a document and link it to an element:
 
 #### All Cube clients will now display 'broadcast popups' sent from QActions, automation scripts, etc. \[ID 21733\]\[ID 21928\]\[ID 22089\]
 
-When a QAction, an Automation script, etc. sends a BroadCastPopupRequestMessage with the following arguments, a BroadCastPopupEventMessage will now be sent to all recipients specified in the UserNames and GroupNames arguments, causing a so-called "broadcast popup" to appear.
+When a QAction, an automation script, etc. sends a BroadCastPopupRequestMessage with the following arguments, a BroadCastPopupEventMessage will now be sent to all recipients specified in the UserNames and GroupNames arguments, causing a so-called "broadcast popup" to appear.
 
 | Argument | Format | Description |
 |--|--|--|

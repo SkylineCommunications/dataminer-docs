@@ -33,7 +33,7 @@ This information bar will appear when a Class Library project (i.e. a project na
 
 #### C# editor: New snippet [ID 35991]
 
-In the C# editor, the following snippet now allows you to generate an `OnApiTrigger` entrypoint method in an Automation script. This entrypoint method will be used to create an API from an Automation script.
+In the C# editor, the following snippet now allows you to generate an `OnApiTrigger` entrypoint method in an automation script. This entrypoint method will be used to create an API from an automation script.
 
 - DIS \> Automation Script \> CreateUserDefinedApi (Automation)
 

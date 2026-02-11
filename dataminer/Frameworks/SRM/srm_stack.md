@@ -10,7 +10,7 @@ Each of the [DataMiner SRM use cases](xref:srm_use_cases) relies on a combinatio
 
 ## Scheduling Engine
 
-The Scheduling Engine **executes scheduled actions precisely, reliably, and on time**. The engine can trigger a variety of DataMiner actions, including any and all Automation script executions needed by DataMiner SRM. The Scheduling Engine is the actor behind any orchestration, whether this is loading a profile on a resource in the [Resource Orchestration](xref:srm_resource_orchestration) use case or executing a service lifecycle state change.
+The Scheduling Engine **executes scheduled actions precisely, reliably, and on time**. The engine can trigger a variety of DataMiner actions, including any and all automation script executions needed by DataMiner SRM. The Scheduling Engine is the actor behind any orchestration, whether this is loading a profile on a resource in the [Resource Orchestration](xref:srm_resource_orchestration) use case or executing a service lifecycle state change.
 
 The Scheduler timeline can be visualized [in Visual Overview](xref:Embedding_a_Resource_Manager_component) or [in dashboards and low-code apps](xref:DashboardTimeline). The timeline components not only support rich schedule visualization options but also facilitate control surface user actions, such as selecting a time range in one click. A built-in bookings timeline is also available in the [Bookings module](xref:The_Bookings_module) in DataMiner Cube.
 
@@ -49,7 +49,7 @@ automation scripts can be **developed, tested, and deployed at runtime**. Using 
 
 By fully automating operating and business procedures or workflows, operational expenses can be drastically reduced. automation scripts can be used in a lot of applications such as intelligent backup and service-healing routines, guided troubleshooting for operators, automatic configuration, provisioning of services, etc.
 
-![Automation script example](~/dataminer/images/Automation_module_example.png)<br>*Automation module in DataMiner Cube 10.5.5*
+![automation script example](~/dataminer/images/Automation_module_example.png)<br>*Automation module in DataMiner Cube 10.5.5*
 
 > [!TIP]
 > Various Automation-related videos are available in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=automation), including an introduction to the [basics of DataMiner Automation snippets](https://www.youtube.com/watch?v=i5_FLER_-tE).

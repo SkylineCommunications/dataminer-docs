@@ -19,7 +19,7 @@ To request a cost estimation, follow the procedure below:
 
    > [!NOTE]
    >
-   > - When you run the Automation script and there are Failover pairs in the cluster, make sure the **main Failover Agents** (i.e. the first Agent in the Failover configuration) are the **active** ones. Otherwise, the Automation script will not function correctly.
+   > - When you run the automation script and there are Failover pairs in the cluster, make sure the **main Failover Agents** (i.e. the first Agent in the Failover configuration) are the **active** ones. Otherwise, the automation script will not function correctly.
    > - To do the cost estimation for a **cluster**, you only need to execute the script on **one Agent**.
 
 1. Initialize the test run:

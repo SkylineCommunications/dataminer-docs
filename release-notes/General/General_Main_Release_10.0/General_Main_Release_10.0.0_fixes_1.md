@@ -472,9 +472,9 @@ In addition, on a view card, it could occur that the list of elements was not up
 
 When a parameter was masked for a limited period of time, it could occur that the end time of the mask operation was not applied correctly.
 
-#### DataMiner Cube - Automation: Window appearing when an Automation script fails had an incorrect caption on a Cube with custom branding \[ID 23171\]
+#### DataMiner Cube - Automation: Window appearing when an automation script fails had an incorrect caption on a Cube with custom branding \[ID 23171\]
 
-When using a DataMiner Cube with custom branding, up to now, the window that appeared when an Automation script failed would incorrectly have the default “Skyline DataMiner” caption. From now on, on a DataMiner Cube with custom branding, the caption of that window will show the custom product name.
+When using a DataMiner Cube with custom branding, up to now, the window that appeared when an automation script failed would incorrectly have the default “Skyline DataMiner” caption. From now on, on a DataMiner Cube with custom branding, the caption of that window will show the custom product name.
 
 #### DataMiner Cube: Alarm storm prevention incorrectly enabled while being disabled in enforced group settings \[ID 23181\]
 

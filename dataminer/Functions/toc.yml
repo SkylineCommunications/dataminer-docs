@@ -104,7 +104,7 @@ items:
             topicUid: Script_variables
           - name: Script actions
             topicUid: Script_actions
-      - name: Automation script actions in DataMiner Cube
+      - name: automation script actions in DataMiner Cube
         topicUid: Automation_script_actions_in_DataMiner_Cube
         items:
           - name: Assign dummy
@@ -159,7 +159,7 @@ items:
       - name: Using C# code in Automation scripts
         topicUid: Using_CSharp_code_in_Automation_scripts
         items:
-          - name: Adding C# code to an Automation script
+          - name: Adding C# code to an automation script
             topicUid: Adding_CSharp_code_to_an_Automation_script
           - name: Debugging C# scripts
             topicUid: Debugging_CSharp_scripts
@@ -178,11 +178,11 @@ items:
         items:
           - name: How can I execute an Automation Script on an element in timeout?
             topicUid: How_can_I_execute_an_Automation_Script_on_an_element_in_timeout
-          - name: How do I abort a running Automation script?
+          - name: How do I abort a running automation script?
             topicUid: How_do_I_abort_a_running_Automation_script
           - name: How do I retrieve the current value of a script parameter?
             topicUid: How_do_I_retrieve_the_current_value_of_a_script_parameter
-          - name: How do I connect to a CMDB from an Automation script?
+          - name: How do I connect to a CMDB from an automation script?
             topicUid: How_do_I_connect_to_a_CMDB_from_an_Automation_script
           - name: How do I parse Correlation Alarm Info data?
             topicUid: How_do_I_parse_Correlation_Alarm_Info_data
@@ -274,9 +274,9 @@ items:
             topicUid: Deleting_a_rule_or_folder
           - name: Renaming a folder
             topicUid: Renaming_a_folder
-          - name: Adding a new Correlation rule
+          - name: Adding a new correlation rule
             topicUid: Adding_a_new_Correlation_rule
-          - name: Testing a Correlation rule
+          - name: Testing a correlation rule
             topicUid: Testing_a_Correlation_rule
       - name: General configuration of Correlation rules
         topicUid: General_configuration_of_Correlation_rules
@@ -302,7 +302,7 @@ items:
             topicUid: Escalating_an_event
           - name: Triggering a correlated alarm
             topicUid: Triggering_a_correlated_alarm
-          - name: Running an Automation script from a Correlation rule
+          - name: Running an automation script from a correlation rule
             topicUid: Running_an_Automation_script_from_a_Correlation_rule
           - name: Sending an email
             topicUid: Sending_an_email
@@ -316,7 +316,7 @@ items:
         items:
           - name: Responding to element timeouts using Correlation
             topicUid: Correlation_Tutorial_Element_Timeout
-      - name: Correlation rule syntax
+      - name: correlation rule syntax
         topicUid: Correlation_rule_syntax
         items:
           - name: Condition format
@@ -575,7 +575,7 @@ items:
                 topicUid: DashboardEPMPicker
               - name: Grid
                 topicUid: DashboardGrid
-              - name: Interactive Automation script
+              - name: Interactive automation script
                 topicUid: InteractiveAutomationScript
               - name: Node edge graph
                 topicUid: DashboardNodeEdgeGraph

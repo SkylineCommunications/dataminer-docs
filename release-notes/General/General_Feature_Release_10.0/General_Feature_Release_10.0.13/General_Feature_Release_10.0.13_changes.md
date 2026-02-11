@@ -365,7 +365,7 @@ Also, a selection box problem could occur when multiple conditions were configur
 
 #### Automation: Problem when retrieving information events from all DMAs \[ID 27903\]
 
-When, in a DataMiner System with multiple agents, information events were retrieved by an Automation script, in some cases, not all information events would be retrieved.
+When, in a DataMiner System with multiple agents, information events were retrieved by an automation script, in some cases, not all information events would be retrieved.
 
 #### Dashboards app - Time range component: Default range would be used even after being overwritten afterwards \[ID 27941\]
 

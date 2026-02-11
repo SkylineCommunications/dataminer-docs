@@ -32,7 +32,7 @@ Each request message sent to DataMiner will return a response message of the cor
 
 ## Example
 
-Below you can find an example of an Automation script that uses the RAD API to add a RAD parameter group with four parameter instances for each element of which the name begins with `Commtia LON`.
+Below you can find an example of an automation script that uses the RAD API to add a RAD parameter group with four parameter instances for each element of which the name begins with `Commtia LON`.
 
 The core logic resides in the `RunSafe()` method. It loops through all elements matching the filter `Commtia LON*`. For each element, it builds a list of parameters to include in the RAD group, specifically, the output power of three power amplifiers (represented as cells in the same table column), and the total output power of the DAB transmitter. It then constructs a `RADGroupInfo` object, which contains the group's name, the list of parameters, and additional options. Finally, it creates and sends an `AddRADParameterGroupMessage` to DataMiner.
 

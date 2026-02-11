@@ -484,7 +484,7 @@ A number of issues were solved related to how DataMiner executes prerequisites a
 
 #### automation scripts would incorrectly succeed even when uploading a report had failed \[ID 33368\]
 
-When, in an Automation script, you had configured an action that uploads a report to a shared folder or FTP, up to now, the script would still succeed even when it had not been able to copy the generated report to the remote location (shared folder or FTP). From now on, when a script is not able to copy a report to a remote location, it will fail.
+When, in an automation script, you had configured an action that uploads a report to a shared folder or FTP, up to now, the script would still succeed even when it had not been able to copy the generated report to the remote location (shared folder or FTP). From now on, when a script is not able to copy a report to a remote location, it will fail.
 
 #### Web apps: Only part of the value would be selected when moving the mouse pointer over a selection box that had the focus \[ID 33379\]
 
@@ -535,11 +535,11 @@ When a profile parameter of type “number” had no decimals defined, its value
 
 #### Interactive automation scripts: Range limits of a numeric IBlockDefinition would be ignored \[ID 33419\]
 
-When an Automation script was launch from the Dashboards app or from a custom web app, in some cases, the range limits of a numeric IBlockDefinition would be ignored when you clicked the Up or Down button.
+When an automation script was launch from the Dashboards app or from a custom web app, in some cases, the range limits of a numeric IBlockDefinition would be ignored when you clicked the Up or Down button.
 
 #### automation scripts: Problem with processor directives \[ID 33424\]
 
-Up to now, the following preprocessor directives would incorrectly be inserted into the Automation script code, causing syntax errors to appear on the incorrect lines.
+Up to now, the following preprocessor directives would incorrectly be inserted into the automation script code, causing syntax errors to appear on the incorrect lines.
 
 - #define DBInfo
 - #define DCFv1
@@ -583,7 +583,7 @@ A number of issues with NATS request/response actions have been solved.
 
 #### Automation: SetParameterByPrimaryKey would fail to update a write-only parameter when using the parameter name as argument \[ID 33511\]
 
-When, from an Automation script, a write parameter in a column of a table inside an element was updated using a ScriptDummy.SetParameterByPrimaryKey call with the parameter name as argument, the update would fail when that write parameter did not have a matching read parameter.
+When, from an automation script, a write parameter in a column of a table inside an element was updated using a ScriptDummy.SetParameterByPrimaryKey call with the parameter name as argument, the update would fail when that write parameter did not have a matching read parameter.
 
 #### Service & Resource Management: Problem when booking all concurrency of a resource \[ID 33516\]
 

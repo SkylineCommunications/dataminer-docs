@@ -39,7 +39,7 @@ From now on, it is possible to specify another port in the *Db.xml* file. See th
 
 #### DataMiner Cube - Automation: Script execution messages will now be sent asynchronously  \[ID 25438\]
 
-Up to now, when an Automation script was launched from Cube, a script execution message would be sent to the DataMiner Agent synchronously. In order to avoid timeout issues, from now on, script execution messages will be sent asynchronously.
+Up to now, when an automation script was launched from Cube, a script execution message would be sent to the DataMiner Agent synchronously. In order to avoid timeout issues, from now on, script execution messages will be sent asynchronously.
 
 #### DataMiner Cube - Visual Overview: Using the \[Reservation\] placeholder no longer requires Cube to retrieve all service information \[ID 25463\]
 
@@ -143,9 +143,9 @@ In the Monitoring app, password boxes would incorrectly display their contents i
 
 When a user setting was hidden in the group settings, it would incorrectly also be hidden in the group settings editor.
 
-#### Automation: Problem when generating a large report via an Automation script \[ID 25482\]
+#### Automation: Problem when generating a large report via an automation script \[ID 25482\]
 
-When a large report was generated via an Automation script, in some cases, all other communication with the SLReportsAndDashboardsManager process could get blocked.
+When a large report was generated via an automation script, in some cases, all other communication with the SLReportsAndDashboardsManager process could get blocked.
 
 #### Jobs app: Problem when entering text in the search box \[ID 25489\]
 

@@ -376,11 +376,11 @@ From now on, *SLReset.exe* will always use the absolute path `C:\Skyline DataMin
 
 Because a number of database operations have been optimized, overall performance has increased when creating and initializing reservations.
 
-#### Automation: Using the Engine.Sleep method in an Automation script could affect other scripts [ID 40104]
+#### Automation: Using the Engine.Sleep method in an automation script could affect other scripts [ID 40104]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, using the *Engine.Sleep* method in an Automation script could cause issues that would affect other scripts. This has now been resolved.
+Up to now, using the *Engine.Sleep* method in an automation script could cause issues that would affect other scripts. This has now been resolved.
 
 #### SLLogCollector: Enhanced CPU usage when 'Include memory dump' is selected [ID 40109]
 
@@ -595,7 +595,7 @@ Whenever the MessageBroker client loses its connection to the NATS server, it wi
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, an Automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.
+Up to now, an automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.
 
 #### SLProtocol would leak memory when performing an SNMP Set [ID 40112]
 

@@ -102,9 +102,9 @@ From now on, the list of dashboards that can be selected in *Send email* actions
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, custom hyperlinks linked to an Automation script would not be displayed in the right-click menu of an alarm of the type *Error* or *Notice* referring to the functionality of the DataMiner System or an alarm of type "Incident". From now on, these hyperlinks will be displayed.
+Up to now, custom hyperlinks linked to an automation script would not be displayed in the right-click menu of an alarm of the type *Error* or *Notice* referring to the functionality of the DataMiner System or an alarm of type "Incident". From now on, these hyperlinks will be displayed.
 
-Example of a custom hyperlinks linked to an Automation script:
+Example of a custom hyperlinks linked to an automation script:
 
 ```xml
 <HyperLinks xmlns="http://www.skyline.be/config/hyperlinks">

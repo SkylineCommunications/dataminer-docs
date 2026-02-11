@@ -2,7 +2,7 @@
 uid: AutomationActions
 ---
 
-# Automation script actions
+# automation script actions
 
 |Name|Description|
 |--- |--- |
@@ -12,7 +12,7 @@ uid: AutomationActions
 |[Clear memory](xref:AutomationActionClearMemory)|Clears the content of the specified Automation script memory file.|
 |[Comment](xref:AutomationActionComment)|Provides extra comments to the script.|
 |[Email](xref:AutomationActionEmail)|Sends an email to the specified destination.|
-|[Exit](xref:AutomationActionExit)|Terminates the Automation script without delay.|
+|[Exit](xref:AutomationActionExit)|Terminates the automation script without delay.|
 |[Find interactive client](xref:AutomationActionFindInteractiveClient)|Asks an interactive user to attach to the script.|
 |[Get](xref:AutomationActionGet)|Retrieves a parameter or memory value.|
 |[Go to](xref:AutomationActionGoTo)|Unconditionally transfers control to the statement labeled by the specified identifier.|
@@ -23,7 +23,7 @@ uid: AutomationActions
 |[Script](xref:AutomationActionScript)|Runs another Automation script from within the current script.|
 |[Set](xref:AutomationActionSet)|Sets a parameter, memory position or script variable.|
 |[Set element state](xref:AutomationActionSetElementState)|Sets the state of a dummy in an automation script.|
-|[Sleep](xref:AutomationActionSleep)|Pauses the Automation script for a particular period before it is allowed to continue.|
+|[Sleep](xref:AutomationActionSleep)|Pauses the automation script for a particular period before it is allowed to continue.|
 |[SMS](xref:AutomationActionSms)|Sends a Short Message Service (SMS) message to the specified destination.|
 |[Upload report to FTP](xref:AutomationActionUploadReportToFtp)|Uploads a report to an FTP server.|
 |[Upload report to shared folder](xref:AutomationActionUploadReportToSharedFolder)|Uploads a report to a shared network folder.|

@@ -366,7 +366,7 @@ If the DataMiner.xml file does not contain alarm color overrides, DataMiner will
 
 #### Information event will be generated when a TTL setting is changed \[ID 21265\]
 
-From now on, an information event will be generated when a TTL setting is changed by a user or an Automation script.
+From now on, an information event will be generated when a TTL setting is changed by a user or an automation script.
 
 > [!NOTE]
 > Information events of this type will have a description that starts with “\[TTL\]”.
@@ -537,7 +537,7 @@ When, in a system with a Cassandra database, average trending for a parameter ha
 
 It is now possible to edit properties of alarms that have already been closed. This will create a new alarm entry with the updated properties in the alarm tree of the closed alarm.
 
-To update a property of a closed alarm, in Cube, select the root alarm in the alarm tree and then edit the property. Alternatively, in an Automation script, use the *SetDataMinerInfoMessage* with NT_EDIT_PROPERTY (62).
+To update a property of a closed alarm, in Cube, select the root alarm in the alarm tree and then edit the property. Alternatively, in an automation script, use the *SetDataMinerInfoMessage* with NT_EDIT_PROPERTY (62).
 
 #### DBMaintenanceDMS.xml: TTL settings can now be specified for all custom data types defined in an Elastic database \[ID 24549\]\[ID 24575\]\[ID 24846\]
 

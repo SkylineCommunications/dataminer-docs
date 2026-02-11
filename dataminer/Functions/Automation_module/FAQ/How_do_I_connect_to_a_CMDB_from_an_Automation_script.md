@@ -4,7 +4,7 @@ uid: How_do_I_connect_to_a_CMDB_from_an_Automation_script
 
 # How do I connect to a CMDB from an automation script?
 
-In a C# block of an Automation script, you can connect to the CMDB of the Inventory & Asset Management module.
+In a C# block of an automation script, you can connect to the CMDB of the Inventory & Asset Management module.
 
 1. Refer to the following namespaces:
 

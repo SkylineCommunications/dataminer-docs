@@ -2,7 +2,7 @@
 uid: Adding_a_new_Correlation_rule
 ---
 
-# Adding a new Correlation rule
+# Adding a new correlation rule
 
 To add a new rule in the Correlation module in DataMiner Cube:
 

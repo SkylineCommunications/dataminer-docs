@@ -60,7 +60,7 @@ This tutorial consists of the following steps:
 
      ![Spectrum Simulation element](~/dataminer/images/Tutorial_Spectrum_Champions_League_img00.png)
 
-   - Open the Automation module in DataMiner Cube and check if the Automation script *SPCTRM_AS_SkylineSpectrumSimulation* has been added.
+   - Open the Automation module in DataMiner Cube and check if the automation script *SPCTRM_AS_SkylineSpectrumSimulation* has been added.
 
    - On the home page of your DataMiner System, check whether the low-code app "Skyline Spectrum Simulation" has been added.
 

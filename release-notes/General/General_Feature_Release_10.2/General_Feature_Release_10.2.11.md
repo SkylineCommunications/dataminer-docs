@@ -323,7 +323,7 @@ In some cases, an error could occur in SLLog when closing a log file.
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
-When active alarms were retrieved via an Automation script, an incorrect result set could get returned when no element filter had been applied.
+When active alarms were retrieved via an automation script, an incorrect result set could get returned when no element filter had been applied.
 
 Example of C# code that would return an incorrect result set:
 

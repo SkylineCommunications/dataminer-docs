@@ -200,7 +200,7 @@ This change in behavior will impact results for both *GetAvailableResources* and
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
-When, in an Automation script launched from a web app, an input field contains an invalid value, the border of that field will turn red. This red border will now be wider in order to be more visible.
+When, in an automation script launched from a web app, an input field contains an invalid value, the border of that field will turn red. This red border will now be wider in order to be more visible.
 
 #### GQI: Enhanced performance of GQI queries [ID 34977]
 

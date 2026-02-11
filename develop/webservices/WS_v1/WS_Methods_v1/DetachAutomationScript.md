@@ -14,7 +14,7 @@ Use this method to abort an interactive Automation script.
 | Item       | Format  | Description                                          |
 |------------|---------|------------------------------------------------------|
 | connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| scriptID   | Integer | The ID of the Automation script.                     |
+| scriptID   | Integer | The ID of the automation script.                     |
 
 ## Output
 

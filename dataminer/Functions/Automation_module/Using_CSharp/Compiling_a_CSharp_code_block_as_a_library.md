@@ -22,7 +22,7 @@ It is possible to have a C# code block in an automation script in Cube compiled 
 
 1. Save the script. The library will now be compiled.
 
-## Importing the library into an Automation script
+## Importing the library into an automation script
 
 Once you have compiled a C# code block as a library, you can then import that library into other automation scripts. To do so:
 

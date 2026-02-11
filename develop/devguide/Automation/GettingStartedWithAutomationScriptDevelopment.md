@@ -2,7 +2,7 @@
 uid: GettingStartedWithAutomationScriptDevelopment
 ---
 
-# Getting started with Automation script development
+# Getting started with automation script development
 
 ## Get to know the basics
 

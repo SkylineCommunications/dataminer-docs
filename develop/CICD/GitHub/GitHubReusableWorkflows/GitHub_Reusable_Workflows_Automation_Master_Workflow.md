@@ -23,7 +23,7 @@ The following actions will be performed:
 
 In parallel, the [Artifact Creation](#artifact-creation) and [Auto-Generating Catalog from GitHub](#auto-generating-catalog-from-github) jobs will be executed.
 
-Only when the actions above and the "Artifact Creation" job have been successful, will the "Artifact Registration and Upload" job be executed. This job will upload an artifact (.dmapp) based on the Automation script solution, with the following steps:
+Only when the actions above and the "Artifact Creation" job have been successful, will the "Artifact Registration and Upload" job be executed. This job will upload an artifact (.dmapp) based on the automation script solution, with the following steps:
 
 - [Upload artifact package](#upload-artifact-package)
 - [Set artifact ID](#set-artifact-id)
@@ -38,7 +38,7 @@ Only when the actions above and the "Artifact Creation" job have been successful
 
 - Either the repository’s name or a GitHub topic must be used to infer the Catalog item type.
 
-  Automation script solutions (and therefore this workflow) can be used to create more than an Automation script. They can contain ad hoc data sources, GQI queries, ChatOps extensions, etc. This reusable workflow requires that GitHub has information that defines the Catalog item type.
+  Automation script solutions (and therefore this workflow) can be used to create more than an automation script. They can contain ad hoc data sources, GQI queries, ChatOps extensions, etc. This reusable workflow requires that GitHub has information that defines the Catalog item type.
 
 - Part of our quality control involves static code analysis through SonarCloud as a mandatory step. If you want to use this reusable workflow, you will need to have a SonarCloud organization setup, linked to your GitHub organization as described in the [SonarCloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
 

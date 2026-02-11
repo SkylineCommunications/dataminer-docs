@@ -29,7 +29,7 @@ As from version 2.38, by default, DIS will set the language version of the C# pr
 
 #### Automation Script solutions: New 'Import Automation Script' command \[ID 33411\]
 
-Apart from the *Existing DataMiner Automation Script...* option, which can be used to import locally stored automation scripts into an Automation script solution, you can now use the *Import DataMiner Automation Script* option to import automation scripts from the DataMiner Agent you are connected to.
+Apart from the *Existing DataMiner Automation Script...* option, which can be used to import locally stored automation scripts into an automation script solution, you can now use the *Import DataMiner Automation Script* option to import automation scripts from the DataMiner Agent you are connected to.
 
 1. Right-click a solution folder in the Solution Explorer.
 1. Select *Add \> Import DataMiner Automation Script*.
@@ -39,7 +39,7 @@ Apart from the *Existing DataMiner Automation Script...* option, which can be us
 > [!NOTE]
 >
 > - This new *Import DataMiner Automation Script* option will only be available if DIS is connected to a DataMiner Agent.
-> - When you add existing scripts to an Automation script solution, they are automatically converted to the correct format. For each Exe block, a C# project is created, and the code in that Exe block is transferred to the newly created C# project.
+> - When you add existing scripts to an automation script solution, they are automatically converted to the correct format. For each Exe block, a C# project is created, and the code in that Exe block is transferred to the newly created C# project.
 
 ### Validator
 
@@ -140,4 +140,4 @@ From now on, the System.Xml DLL file will by default be added as a reference to 
 
 #### DIS Inject window: Automation script selection box would be empty \[ID 33473\]
 
-When you opened the *DIS Inject* window to select the Automation script to be debugged, in some cases, the selection box listing all automation scripts would be empty.
+When you opened the *DIS Inject* window to select the automation script to be debugged, in some cases, the selection box listing all automation scripts would be empty.

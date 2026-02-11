@@ -160,7 +160,7 @@ When a custom separator was used inside a [param:] placeholder referring to a ta
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
-When, while creating or editing an Automation script, you opened the *Add action* selection box and selected "User interaction", in some cases, an exception could be thrown.
+When, while creating or editing an automation script, you opened the *Add action* selection box and selected "User interaction", in some cases, an exception could be thrown.
 
 #### Protocols & templates: Problem when creating alarm templates or trend templates due to casing issue [ID 38456]
 

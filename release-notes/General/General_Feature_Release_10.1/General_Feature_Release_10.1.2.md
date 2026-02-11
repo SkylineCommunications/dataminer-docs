@@ -293,9 +293,9 @@ All web applications\* will now connect to SLNet with the “AllowMessageThrottl
 
 ### DMS Service & Resource Management
 
-#### Triggering an Automation script to reconfigure running bookings after a ProfileInstance was changed \[ID 28186\]
+#### Triggering an automation script to reconfigure running bookings after a ProfileInstance was changed \[ID 28186\]
 
-It is now possible to have an Automation script triggered when a profile instance update affects running bookings. That script can then reconfigure the bookings.
+It is now possible to have an automation script triggered when a profile instance update affects running bookings. That script can then reconfigure the bookings.
 
 ##### Configuring the script
 
@@ -507,9 +507,9 @@ When, in the *Database* section of *System Center*, you clicked the *Offload* ta
 
 In a PDF report, in some cases, trend statistics components would not show any content.
 
-#### DataMiner Cube - Automation app: A change to a dashboard configuration in an Automation script would not cause the Save button to be activated \[ID 28287\]
+#### DataMiner Cube - Automation app: A change to a dashboard configuration in an automation script would not cause the Save button to be activated \[ID 28287\]
 
-When a dashboard configuration in an email action of an Automation script was changed, in some cases, the script would incorrectly not be considered changed. As a result, the user would not be able to save the changes.
+When a dashboard configuration in an email action of an automation script was changed, in some cases, the script would incorrectly not be considered changed. As a result, the user would not be able to save the changes.
 
 #### Service & Resource Management: Exported protocol would show incorrect parameters after a new function file had been activated \[ID 28290\]
 

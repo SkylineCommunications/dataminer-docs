@@ -10,9 +10,9 @@ This `Skyline.DataMiner.Core.SRM` NuGet package is available on [nuget.org](http
 
 ## Installing the SRM Dev Pack
 
-1. Using [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio), create a new Automation script or import a duplicate of one of the SRM example or template scripts.
+1. Using [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio), create a new automation script or import a duplicate of one of the SRM example or template scripts.
 
-1. Select the project of the Automation script action in the *Solution Explorer*, right-click it, and then select *Manage NuGet Packages*.
+1. Select the project of the automation script action in the *Solution Explorer*, right-click it, and then select *Manage NuGet Packages*.
 
 1. Click *Browse* and enter `Skyline.DataMiner.Core.SRM`.
 

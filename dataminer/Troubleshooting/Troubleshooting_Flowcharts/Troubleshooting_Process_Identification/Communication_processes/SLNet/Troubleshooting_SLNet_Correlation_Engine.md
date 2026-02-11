@@ -73,7 +73,7 @@ Also check for relevant information events in the Alarm Console in DataMiner Cub
 
 Check if you have correlation rules that trigger automation scripts. If so, check if these scripts **contain a [Sleep](xref:Sleep) function**, i.e. Thread.Sleep(...) or Engine.Sleep(...), possibly in combination with the script options "[*Wait for the script to finish before continuing*](xref:Script_execution_options)" or "[*Wait when locked or busy*](xref:Script_execution_options)". If this is indeed the case, **refactor these scripts** to avoid these delays.
 
-When SLCorrelation triggers an Automation script and that script contains a Sleep function, this can block the SLCorrelation process. If a large number of correlation rules are triggered, this can cause SLNet issues.
+When SLCorrelation triggers an automation script and that script contains a Sleep function, this can block the SLCorrelation process. If a large number of correlation rules are triggered, this can cause SLNet issues.
 
 These delays are also visible in the log files. You will notice that rules or scripts will only get triggered after the delay is finished.
 

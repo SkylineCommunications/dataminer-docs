@@ -2,7 +2,7 @@
 uid: Adding_CSharp_code_to_an_Automation_script
 ---
 
-# Adding C# code to an Automation script
+# Adding C# code to an automation script
 
 ## Adding C# code to a script in Cube
 
@@ -165,7 +165,7 @@ engine.Timeout = TimeSpan.FromMinutes(30);
 
 ## Custom entry points
 
-It is possible to define custom entry points for an Automation script. To do so, provide the method you want to use as entry point with the attribute *AutomationEntryPointAttribute* and specify the type of the entry point. For a regular Automation script entry point, specify *AutomationEntryPointType.Types.Default*:
+It is possible to define custom entry points for an automation script. To do so, provide the method you want to use as entry point with the attribute *AutomationEntryPointAttribute* and specify the type of the entry point. For a regular Automation script entry point, specify *AutomationEntryPointType.Types.Default*:
 
 ```cs
 [AutomationEntryPoint(AutomationEntryPointType.Types.Default)]

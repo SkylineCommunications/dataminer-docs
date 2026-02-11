@@ -83,7 +83,7 @@ The lines above deal with failures, if any.
 
 In the example below, the script above is updated to use input variables instead of a fixed element and target Agent. This will make the script reusable for all element swarming actions.
 
-1. Add the following two [script input parameters](xref:Script_variables#creating-a-parameter) to the Automation script mentioned above:
+1. Add the following two [script input parameters](xref:Script_variables#creating-a-parameter) to the automation script mentioned above:
 
     - `Element Key`
     - `Target Agent ID`

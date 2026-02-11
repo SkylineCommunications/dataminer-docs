@@ -52,7 +52,7 @@ In the *Get alarms* data source, the following columns have been updated:
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
+If you have created an automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
 
 Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
 

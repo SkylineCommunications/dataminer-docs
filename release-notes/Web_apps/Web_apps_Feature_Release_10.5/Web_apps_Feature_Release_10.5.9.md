@@ -45,7 +45,7 @@ The DataMiner landing page (by default accessible via `https://<DMA IP or hostna
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-The output of an Automation script can now be used in the post actions of a *Launch a script* action.
+The output of an automation script can now be used in the post actions of a *Launch a script* action.
 
 If a referenced key does not exist in the output, it will by default return an empty string.
 
@@ -70,7 +70,7 @@ Actions will now be numbered hierarchically to allow easier referencing when lin
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When, in a low-code app, you are configuring a *Launching a script* event, it is now possible to indicate that no *Script started* information event should be generated whenever the Automation script is executed.
+When, in a low-code app, you are configuring a *Launching a script* event, it is now possible to indicate that no *Script started* information event should be generated whenever the automation script is executed.
 
 1. Click the *Show settings* button.
 1. Disable the *Generate an information event when launching the script* setting.

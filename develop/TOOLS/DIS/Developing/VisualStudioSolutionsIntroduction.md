@@ -4,7 +4,7 @@ uid: DisVisualStudioSolutionsIntroduction
 
 # Visual Studio solutions
 
-When you create a new connector or Automation script using DIS, a new Visual Studio solution is created. DIS supports adding additional projects to the solution. For example, you can add a project for a QAction to a connector solution or a project for a C# Exe block to an Automation script solution.
+When you create a new connector or Automation script using DIS, a new Visual Studio solution is created. DIS supports adding additional projects to the solution. For example, you can add a project for a QAction to a connector solution or a project for a C# Exe block to an automation script solution.
 
 DIS also supports developing **connectors** as XML files, but we strongly recommend using the **solution-based approach** because of its numerous advantages:
 

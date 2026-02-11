@@ -485,12 +485,12 @@ Up to now the permissions to add, edit, delete and execute automation scripts we
 
 Now the system will enforce the permissions as follows:
 
-- To view or retrieve an Automation script, you need the "Automation - UI available" or "Automation - Execute" permission.
-- To create an Automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
-- To update an Automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
-- To delete an Automation script, you need the "Automation - Delete" permission.
-- To execute an Automation script, you need the "Automation - Execute" permission.
-- To perform a DLL injection in an Automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
+- To view or retrieve an automation script, you need the "Automation - UI available" or "Automation - Execute" permission.
+- To create an automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
+- To update an automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
+- To delete an automation script, you need the "Automation - Delete" permission.
+- To execute an automation script, you need the "Automation - Execute" permission.
+- To perform a DLL injection in an automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
 - To change a memory file, you need the "Automation - Add" or the "Automation - Edit" permission.
 - To retrieve a memory file, you need "Automation - UI available" or "Automation - Execute" permission.
 
@@ -665,7 +665,7 @@ In some cases, it could occur that a pivot table component only retrieved data f
 
 #### Problem with SLAutomation when a ThreadAbortException was thrown in a script while the thread was not actually aborted \[ID 27187\]
 
-When a ThreadAbortException was thrown in an Automation script while the thread running the script was not actually aborted, in some cases, an error could occur in SLAutomation.
+When a ThreadAbortException was thrown in an automation script while the thread running the script was not actually aborted, in some cases, an error could occur in SLAutomation.
 
 #### Data in DVE child element not updated correctly \[ID 27189\]
 

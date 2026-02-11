@@ -27,10 +27,10 @@ The value is the decimal representation of a hexadecimal bit flag combination. T
 |0x040     |SupportsBackForward         |If present, interactive portions in the script can be controlled by back/forward buttons.         |
 |0x080     |SkipElementChecks         |If present, parameter sets on elements will not be checked. (Equivalent to comment with "skipElementChecks == true".)         |
 |0x100     |SavedFromCube         |`true` if script was saved from Cube.        |
-|0x200     |SkipInfoEventsSet         |`true` if information events should not be generated for parameter sets executed from the Automation script.         |
+|0x200     |SkipInfoEventsSet         |`true` if information events should not be generated for parameter sets executed from the automation script.         |
 |0x400     |HasFindInteractiveClient         |Present if the script has a FindInteractiveClient call or [Interactivity](xref:DMSScript.Interactivity) is set to *Optional*.         |
 
-Some of these options can be set via the Automation script editor in Cube. For more information, refer to [General script configuration](xref:General_script_configuration).
+Some of these options can be set via the automation script editor in Cube. For more information, refer to [General script configuration](xref:General_script_configuration).
 
 When creating a new Automation script from Cube, the options attribute has the decimal value “472” by default. This is “0x1D8” in hexadecimal notation, meaning that the following flags are configured by default:
 

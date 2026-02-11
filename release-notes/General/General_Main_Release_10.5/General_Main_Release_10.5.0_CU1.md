@@ -112,7 +112,7 @@ If this time zone information has to be stored for later use, consider the follo
 - Use the `Id` property, which can then be restored by using `TimeZoneInfo.FindSystemTimeZoneById(storedId)`.
 
   > [!NOTE]
-  > The ID that is returned might not be available on the DataMiner Agent that is executing the Automation script.
+  > The ID that is returned might not be available on the DataMiner Agent that is executing the automation script.
 
 For more info, see [Saving and restoring time zones](https://learn.microsoft.com/en-us/dotnet/standard/datetime/saving-and-restoring-time-zones)
 

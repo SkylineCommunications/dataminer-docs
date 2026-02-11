@@ -80,7 +80,7 @@ The endpoint can now also return the following additional errors:
 
 From now on, the `Engine` class exposes the public property `ScriptName`.
 
-This means that, in an Automation script, it will now be possible to retrieve the name of that script.
+This means that, in an automation script, it will now be possible to retrieve the name of that script.
 
 #### Interactive automation scripts executed in a web app: UI version can now be set in the script [ID 43875]
 

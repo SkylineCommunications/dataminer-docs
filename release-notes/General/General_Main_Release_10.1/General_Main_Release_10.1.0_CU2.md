@@ -383,7 +383,7 @@ When you selected a number of jobs in the list, clicked *Delete*, and then click
 
 #### Automation: Subscripts would return an incorrect output \[ID 29405\]
 
-When, in an Automation script, a subscript that returned its output was run twice, in some cases, when it cleared its output during its second run, it would incorrectly return the same output it had returned at the end of its first run.
+When, in an automation script, a subscript that returned its output was run twice, in some cases, when it cleared its output during its second run, it would incorrectly return the same output it had returned at the end of its first run.
 
 #### Legacy Reporter: Status query would no longer show alarm colors \[ID 29516\]
 

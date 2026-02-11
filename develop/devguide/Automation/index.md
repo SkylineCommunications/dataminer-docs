@@ -2,7 +2,7 @@
 uid: AutomationDevGuideIndex
 ---
 
-# Automation script development guide
+# automation script development guide
 
 - [Getting started with Automation script development](xref:GettingStartedWithAutomationScriptDevelopment)
 - [Automation script actions](xref:AutomationActions)

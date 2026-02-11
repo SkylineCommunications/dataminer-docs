@@ -4,7 +4,7 @@ uid: SRM_creating_booking_silently
 
 # Silently creating a booking
 
-The example below shows how a booking can be created without user interaction by means of an Automation script.
+The example below shows how a booking can be created without user interaction by means of an automation script.
 
 ```csharp
 using System;

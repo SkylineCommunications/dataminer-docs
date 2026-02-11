@@ -47,11 +47,11 @@ Internally, this new *NT_CLEAR_PARAMETER* call will now also be used by the exis
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
-From now on, when an Automation script is run, every entry that is logged in the *SLAutomation.txt* file by the `Engine.Log` method will also be logged in a separate log file located in `C:\Skyline DataMiner\Logging\Automation\`. That log file will have a name that is identical to that of the Automation script.
+From now on, when an automation script is run, every entry that is logged in the *SLAutomation.txt* file by the `Engine.Log` method will also be logged in a separate log file located in `C:\Skyline DataMiner\Logging\Automation\`. That log file will have a name that is identical to that of the automation script.
 
-- The first time an Automation script is run, a log file will be created in `C:\Skyline DataMiner\Logging\Automation\` for that particular script.
+- The first time an automation script is run, a log file will be created in `C:\Skyline DataMiner\Logging\Automation\` for that particular script.
 - After a DataMiner restart, the first time a script is executed, its existing log file will get the "_Bak" suffix and a new log file will be created.
-- If an Automation script is renamed, a new log file will be created with a name identical to that of the renamed script. The old file will be kept.
+- If an automation script is renamed, a new log file will be created with a name identical to that of the renamed script. The old file will be kept.
 - If you want to configure a custom log level for a particular Automation script, send an `UpdateLogfileSettingMessage` in which *Name* is set to "Automation\ScriptName". If no custom log configuration exists for a particular Automation script, the default configuration will be used.
 - These new Automation script log files will also be included in SLLogCollector packages.
 - Each time a DataMiner upgrade package is installed, all Automation script log files will be deleted.
@@ -71,7 +71,7 @@ Example: `2025/04/01 16:31:31.813|SLManagedAutomation|RunSafe|INF|0|959|473|Exam
 
 > [!NOTE]
 >
-> - In the Automation script log file, you will find an indication of when the script execution started and stopped. However, this indication will be slightly different from the one you will find in the *SLAutomation.txt* log file. The one in the *SLAutomation.txt* log file will represent the total time it took for the script to run, while the one in the script log file will only take into account the C# blocks in the Automation script.
+> - In the automation script log file, you will find an indication of when the script execution started and stopped. However, this indication will be slightly different from the one you will find in the *SLAutomation.txt* log file. The one in the *SLAutomation.txt* log file will represent the total time it took for the script to run, while the one in the script log file will only take into account the C# blocks in the automation script.
 > - For each entry that is logged in one of the above-mentioned script log files, an identical copy will also be logged in the *SLAutomation.txt* file. However, note that the timestamps of both entries may not be identical.
 
 #### SNMPv3: Parameter value can now be used as context name or context ID when executing an SNMP get or set command [ID 42676]
@@ -135,7 +135,7 @@ Because of a number of enhancements, the locking mechanism in the following Reso
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
-From now on, when an Automation script is executed asynchronously using either a `Run` method or a custom entry point containing the `async` keyword, an error message will appear, mentioning that this is not supported.
+From now on, when an automation script is executed asynchronously using either a `Run` method or a custom entry point containing the `async` keyword, an error message will appear, mentioning that this is not supported.
 
 In that error message, users will also be directed to the [documentation](https://aka.dataminer.services/AsyncAutomation) for more information on handling async code.
 
@@ -285,11 +285,11 @@ When an element was swarmed immediately after being created or after having its 
 
 After installation, in some cases, DataMiner would not be able to start up because the *MessageBrokerConfig.json* file could not be found in the `C:\ProgramData\Skyline Communications\DataMiner\` folder.
 
-#### Problem with SLAutomation when a Notify method was called shortly after an Automation script had finished [ID 42465]
+#### Problem with SLAutomation when a Notify method was called shortly after an automation script had finished [ID 42465]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
-When a Notify method was called from a thread created within an Automation script shortly after that Automation script had finished, in some cases, the SLAutomation process could stop working.
+When a Notify method was called from a thread created within an automation script shortly after that Automation script had finished, in some cases, the SLAutomation process could stop working.
 
 #### Redundancy groups: Matrix parameter updates in a derived element would incorrectly not get applied in the source element (and vice versa) [ID 42598]
 

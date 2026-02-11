@@ -156,7 +156,7 @@ From now on, the Replicate checkbox will be unavailable as long as no DataMiner 
 
 The following problems with the Failover option *AlwaysBruteForceOffline* have now been fixed:
 
-- When configured via an UpdateFailoverConfigMessage in an Automation script, the option would not be applied in the DMS.xml file.
+- When configured via an UpdateFailoverConfigMessage in an automation script, the option would not be applied in the DMS.xml file.
 - When configured by manually updating the DMS.xml file, the option would be overwritten.
 - When applied, the option would cause the DMA to restart without also restarting SLNet.
 

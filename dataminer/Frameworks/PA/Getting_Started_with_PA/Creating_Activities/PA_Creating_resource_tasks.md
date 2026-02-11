@@ -156,7 +156,7 @@ uid: PA_Creating_resource_tasks
 
    ![Functions_File](~/dataminer/images/Functions_File.png)
 
-1. Create an Automation script based on the *PA_ProfileLoadDomTemplate* script, which is added to the DataMiner System when Process Automation is deployed. In the script:
+1. Create an automation script based on the *PA_ProfileLoadDomTemplate* script, which is added to the DataMiner System when Process Automation is deployed. In the script:
 
    1. Instantiate the *PaProfileLoadDomHelper*.
 

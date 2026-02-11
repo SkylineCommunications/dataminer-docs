@@ -350,7 +350,7 @@ items:
             topicUid: KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3
           - name: Failed getting progress notices during upgrade
             topicUid: KI_SLNetIPC_Errors_During_Upgrade
-          - name: SLAutomation memory leak when Automation script runs
+          - name: SLAutomation memory leak when automation script runs
             topicUid: KI_Automation_Memory_leak_when_executing_scripts
           - name: DCOMConfig flagged as virus causing upgrade issues
             topicUid: KI_DCOMConfig_flagged_as_virus

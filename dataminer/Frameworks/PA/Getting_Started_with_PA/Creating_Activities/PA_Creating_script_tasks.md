@@ -81,7 +81,7 @@ uid: PA_Creating_script_tasks
 
       ![PING IP](~/dataminer/images/PING_IP.png)
 
-1. Create an Automation script based on the *PA_ProfileLoadDomTemplate* script available in the PA framework:
+1. Create an automation script based on the *PA_ProfileLoadDomTemplate* script available in the PA framework:
 
    1. Add a C# block in the script and configure it as follows:
 

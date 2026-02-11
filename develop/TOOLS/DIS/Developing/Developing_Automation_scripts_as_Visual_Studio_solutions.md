@@ -9,7 +9,7 @@ uid: Developing_Automation_scripts_as_Visual_Studio_solutions
 
 - An Automation script solution can contain multiple scripts, whereas a connector solution can only contain one single connector.
 
-- C# projects that contain the code for the C# Exe blocks of an Automation script can contain multiple .cs files. At compilation, the contents of those files will be combined into one Exe block.
+- C# projects that contain the code for the C# Exe blocks of an automation script can contain multiple .cs files. At compilation, the contents of those files will be combined into one Exe block.
 
 - DLL imports need to be configured on the C# project itself by adding references to the external components. These can be external DLL files (located in C:\\DataMiner\\ProtocolScripts or C:\\DataMiner\\Files) or other scripts in the same solution.
 
@@ -31,7 +31,7 @@ uid: Developing_Automation_scripts_as_Visual_Studio_solutions
 > [!TIP]
 > For a video course on creating Visual Studio Automation script solutions, see [DataMiner Automation](https://community.dataminer.services/courses/dataminer-automation/) on DataMiner Dojo.
 
-## Creating an Automation script solution
+## Creating an automation script solution
 
 To create a new Automation script solution containing an initial Automation script, follow the instructions below.
 
@@ -59,16 +59,16 @@ In Visual Studio 2019, perform the following steps:
 
 ## Creating a new script in a solution
 
-To create a new script in an Automation script solution, do the following:
+To create a new script in an automation script solution, do the following:
 
-1. Open the Automation script solution.
+1. Open the automation script solution.
 1. Select *File \> New \> New DataMiner Automation Script...* or right-click a solution folder in the Solution Explorer and select *Add \> New DataMiner Automation Script...*
 1. Enter the name of the new script.
 1. Click *OK*.
 
 ## Importing an existing script that is stored on your local computer
 
-To import an existing Automation script stored on your local computer into an Automation script solution, do the following:
+To import an existing Automation script stored on your local computer into an automation script solution, do the following:
 
 1. Right-click a solution folder in the Solution Explorer.
 1. Select *Add \> Existing DataMiner Automation Script*.
@@ -76,11 +76,11 @@ To import an existing Automation script stored on your local computer into an Au
 1. Click *Open*.
 
 > [!NOTE]
-> When you add existing scripts to an Automation script solution, they are automatically converted to the correct format. For each C# Exe block, a C# project is created, and the code in that C# Exe block is transferred to the newly created C# project.
+> When you add existing scripts to an automation script solution, they are automatically converted to the correct format. For each C# Exe block, a C# project is created, and the code in that C# Exe block is transferred to the newly created C# project.
 
 ## Importing an existing script that is stored on the DataMiner Agent you are connected to
 
-To import an existing Automation script stored on the DMA you are connected to into an Automation script solution, do the following:
+To import an existing Automation script stored on the DMA you are connected to into an automation script solution, do the following:
 
 1. Right-click a solution folder in the Solution Explorer.
 1. Select *Add \> Import DataMiner Automation Script*.
@@ -90,7 +90,7 @@ To import an existing Automation script stored on the DMA you are connected to i
 > [!NOTE]
 >
 > - This new *Import DataMiner Automation Script* option will only be available if DIS is connected to a DataMiner Agent.
-> - When you add existing scripts to an Automation script solution, they are automatically converted to the correct format. For each C# Exe block, a C# project is created, and the code in that Exe block is transferred to the newly created C# project.
+> - When you add existing scripts to an automation script solution, they are automatically converted to the correct format. For each C# Exe block, a C# project is created, and the code in that Exe block is transferred to the newly created C# project.
 
 ## Saving a compiled script as a .dmapp package
 
@@ -98,11 +98,11 @@ A compiled Automation script can be saved as a *.dmapp* package.
 
 To save a compiled Automation script
 
-1. Open the XML file containing the Automation script that you want to compile.
+1. Open the XML file containing the automation script that you want to compile.
 1. Select *File \> Save Compiled Script As...*
 1. In the *Save As* window, select a folder, enter a file name, and click *Save*.
 
-The package will contain the Automation script as well as all required DLL files (e.g. DLL files of NuGet packages that are used in the Automation script).
+The package will contain the automation script as well as all required DLL files (e.g. DLL files of NuGet packages that are used in the automation script).
 
 > [!NOTE]
 > Prior to DIS 2.41, you can also save a compiled Automation script as an .xml file, by setting the type in the *Save As* window to \*.xml.
@@ -121,30 +121,30 @@ To save a compiled version of all automation scripts in a solution in a .dmapp p
 
 ## Uploading a script to a DataMiner Agent
 
-To upload an Automation script to a DataMiner Agent, do the following:
+To upload an automation script to a DataMiner Agent, do the following:
 
-1. Open the XML file containing the Automation script.
+1. Open the XML file containing the automation script.
 1. Click *Publish* to compile the script and publish it to the DataMiner Agent that was set as default DMA in the *DMA* tab of the *DIS Settings* dialog box.
 
 > [!NOTE]
 > If you want to publish the script to another, non-default DMA, click the dropdown button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
 
-## Structure of an Automation script solution
+## Structure of an automation script solution
 
 An Automaton script Visual Studio solution is organized into various folders, each serving a specific purpose:
 
-- **CompanionFiles**: This folder allows you to add additional files that need to be installed along with the Automation script as part of an installation package.
+- **CompanionFiles**: This folder allows you to add additional files that need to be installed along with the automation script as part of an installation package.
 
-- **Dlls**: This folder contains the additional assemblies used by the automation scripts. These assemblies are not part of DataMiner but are essential for one of the automation scripts. Placing them in this folder ensures that the required assemblies are readily available in the repository alongside the Automation script XML files.
+- **Dlls**: This folder contains the additional assemblies used by the automation scripts. These assemblies are not part of DataMiner but are essential for one of the automation scripts. Placing them in this folder ensures that the required assemblies are readily available in the repository alongside the automation script XML files.
 
 - **Documentation**: This folder allows you to add documentation related to the solution.
 
 - **Internal**: This folder contains the C# Class Library Visual Studio project for the class library code (*AutomationScript_ClassLibrary*). Obsolete from DIS v2.41 onwards. This folder is hidden by default as the code within it is generated automatically and should not be modified.
 
   > [!NOTE]
-  > From DIS v2.41 onwards, an information bar will appear when a Class Library project (i.e. a project named "AutomationScript_ClassLibrary") is detected in an Automation script solution. This information bar provides the option to convert existing solutions that use of the Class Library generation feature. By clicking *Fix*, the Class Library project will be removed, and references to the project will be replaced with references to the automatically generated Class Library project (default ID 63000).
+  > From DIS v2.41 onwards, an information bar will appear when a Class Library project (i.e. a project named "AutomationScript_ClassLibrary") is detected in an automation script solution. This information bar provides the option to convert existing solutions that use of the Class Library generation feature. By clicking *Fix*, the Class Library project will be removed, and references to the project will be replaced with references to the automatically generated Class Library project (default ID 63000).
 
-- **Scripts**: This folder contains subfolders, with each subfolder representing an individual Automation script. The name of each subfolder corresponds with the name of the Automation script. Inside each subfolder, you will find the XML file for the Automation script and a subfolder named "Actions". The *Actions* folder contains the C# projects for each C# Exe block present in the Automation script.
+- **Scripts**: This folder contains subfolders, with each subfolder representing an individual Automation script. The name of each subfolder corresponds with the name of the automation script. Inside each subfolder, you will find the XML file for the automation script and a subfolder named "Actions". The *Actions* folder contains the C# projects for each C# Exe block present in the automation script.
 
 - **Tests**: This folder is intended for test projects.
 

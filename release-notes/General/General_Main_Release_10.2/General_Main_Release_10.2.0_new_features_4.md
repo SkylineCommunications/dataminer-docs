@@ -80,7 +80,7 @@ Example:
 
 ##### Use case
 
-Using the new features described above, it is possible to configure that when a user clicks a service definition node in an embedded Service Manager component, an Automation script is executed with e.g. the node ID as a parameter.
+Using the new features described above, it is possible to configure that when a user clicks a service definition node in an embedded Service Manager component, an automation script is executed with e.g. the node ID as a parameter.
 
 To configure this behavior, add a page-level data item of type *Execute*, and set its value to e.g. the following:
 

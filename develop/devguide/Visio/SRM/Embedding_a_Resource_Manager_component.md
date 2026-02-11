@@ -514,7 +514,7 @@ The **ComponentActions** shape data field should contain a JSON object with the 
   - *Set\|DmaID/ElementID\|ParameterID:TableRowKey\|NewValue\|Options*
 
   > [!NOTE]
-  > You can omit trailing pipe characters when you specify the Automation script. For example, instead of specifying "Script:MyScript\|\|\|\|\|", you can simply specify "Script:MyScript".
+  > You can omit trailing pipe characters when you specify the automation script. For example, instead of specifying "Script:MyScript\|\|\|\|\|", you can simply specify "Script:MyScript".
 
   Within this string, the following placeholders can be used:
 

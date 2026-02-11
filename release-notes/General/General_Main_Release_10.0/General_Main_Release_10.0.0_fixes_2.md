@@ -469,9 +469,9 @@ On an element card, in some cases, Write parameters for which there was no corre
 
 In some cases, it would no longer be possible to mask cells or rows in view tables or direct views.
 
-#### DataMiner Cube - Automation: Problem when an Automation script tried to send an e-mail containing a report \[ID 24775\]
+#### DataMiner Cube - Automation: Problem when an automation script tried to send an e-mail containing a report \[ID 24775\]
 
-In some cases, an error could occur when an Automation script tried to send an e-email containing a report.
+In some cases, an error could occur when an automation script tried to send an e-email containing a report.
 
 #### Problem with SLProtocol when calling 'NT_LOAD_TABLE' \[ID 24780\]
 
@@ -491,7 +491,7 @@ In some rare cases, an error could occur when an element was stopped while a tim
 
 #### Problem when calling GetParameter on the virtual element of a redundancy group \[ID 24892\]
 
-When a GetParameter method was called in an Automation script on the virtual element of a redundancy group, in some cases, a CreateDummyFailedException could be thrown.
+When a GetParameter method was called in an automation script on the virtual element of a redundancy group, in some cases, a CreateDummyFailedException could be thrown.
 
 #### Memory leak in SLNet when enabling or disabling logging \[ID 24921\]
 

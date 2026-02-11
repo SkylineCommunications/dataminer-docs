@@ -377,7 +377,7 @@ Up to now, re-applying the selection in a *Maps* component would incorrectly sel
 
 When the alarms in an *Alarm table* component are grouped by time, they are grouped under group names such as "Today", "Yesterday", and "Last Week".
 
-Up to now, when a certain group name had been removed (e.g. by means of an Automation script), and an alarm under that group name returned to its normal state, an error would occur when the *Alarm table* component attempted to remove the alarm.
+Up to now, when a certain group name had been removed (e.g. by means of an automation script), and an alarm under that group name returned to its normal state, an error would occur when the *Alarm table* component attempted to remove the alarm.
 
 #### GQI DxM: Aggregations performed on columns of type integer would incorrectly produce a column of type double [ID 44492]
 

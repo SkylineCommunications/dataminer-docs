@@ -576,7 +576,7 @@ Logging with regard to element binding will be added to the following log files:
 
 From now on, an OnStartActionsFailureEvent will be executed when the start actions of a ReservationInstance fail.
 
-If you want to use this event to trigger an Automation script, then make sure to add a custom entry point method to that script. See the example below.
+If you want to use this event to trigger an automation script, then make sure to add a custom entry point method to that script. See the example below.
 
 ```csharp
 [AutomationEntryPoint(AutomationEntryPointType.Types.OnSrmStartActionsFailure)]
@@ -599,9 +599,9 @@ A StartActionsFailureErrorData instance contains an *ErrorReason*, which explain
   > [!NOTE]
   > This exception can be retrieved from the Exception property. The ReservationInstanceId is available in the ErrorData object.
 
-##### Assigning an Automation script to the OnStartActionsFailureEvent
+##### Assigning an automation script to the OnStartActionsFailureEvent
 
-The following example shows how to assign an Automation script to the OnStartActionsFailureEvent.
+The following example shows how to assign an automation script to the OnStartActionsFailureEvent.
 
 ```csharp
 reservationInstance.OnStartActionsFailureEvent = new ReservationEvent("OnStartActionsFailureEvent", $"Script:StartActionsFailedScript");

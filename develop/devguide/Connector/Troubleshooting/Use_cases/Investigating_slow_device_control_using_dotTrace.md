@@ -10,7 +10,7 @@ When the matrix connector was tested in the production environment, it took appr
 
 The specific limitations of the live environment made it impossible to make connector changes, for example to add logging or to duplicate existing elements. This meant that this was a very difficult investigation. However, using an automation script, Wireshark, and performance profiling, we were able to get a decent picture of the performance of the system and the connector.
 
-## Automation script
+## automation script
 
 We created a simple Automation script that performs a set on a live element with the approval of the system operators. This script works as follows:
 
@@ -30,7 +30,7 @@ This gives an overview of the beginning and the end of the action. In our case, 
 
 [Wireshark](xref:Wireshark) visualizes the communication between DataMiner and the device.
 
-Using the timestamps from the Automation script and the timestamps from Wireshark, we were able to see that 60 ms were lost between setting the crosspoint on the write parameter of the element and the transmission of the message to the device to execute this. The device took 200 ms to respond. The remaining time (approx. 1.7 seconds) was used in DataMiner to process the response message.
+Using the timestamps from the automation script and the timestamps from Wireshark, we were able to see that 60 ms were lost between setting the crosspoint on the write parameter of the element and the transmission of the message to the device to execute this. The device took 200 ms to respond. The remaining time (approx. 1.7 seconds) was used in DataMiner to process the response message.
 
 With this knowledge, the usual approach would have been to start adding timestamps in a debug version of the connector to see which QAction/method takes the most time. However, this was not possible in the live environment.
 

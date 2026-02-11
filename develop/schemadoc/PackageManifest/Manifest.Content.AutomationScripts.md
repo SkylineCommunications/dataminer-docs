@@ -14,4 +14,4 @@ Specifies the automation scripts to include in the package.
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[AutomationScript](xref:Manifest.Content.AutomationScripts.AutomationScript)|[1, *]|Specifies an Automation script to include in the package.|
+|&nbsp;&nbsp;[AutomationScript](xref:Manifest.Content.AutomationScripts.AutomationScript)|[1, *]|Specifies an automation script to include in the package.|

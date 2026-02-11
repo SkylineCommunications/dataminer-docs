@@ -20,15 +20,15 @@ Managing automation scripts, e.g. adding and deleting scripts or organizing them
 
 - [Moving automation scripts or folders](#moving-automation-scripts-or-folders)
 
-- [Deleting an Automation script or folder](#deleting-an-automation-script-or-folder)
+- [Deleting an automation script or folder](#deleting-an-automation-script-or-folder)
 
-- [Renaming an Automation script folder](#renaming-an-automation-script-folder)
+- [Renaming an automation script folder](#renaming-an-automation-script-folder)
 
 - [Importing and exporting automation scripts](#importing-and-exporting-automation-scripts)
 
 <!-- The Automation module also includes scripts that have been deployed as part of packages from the Catalog. From DataMiner Cube ... onwards (RN 42773, other RN TBD), the description of such scripts will indicate the name and version of the package that was used to deploy them. You can make changes to such scripts, but that does mean you are customizing the deployed package. In that case, the description of the script will display "[Customized]" in front of the package name. To restore the original script, you can redeploy the package. -->
 
-## Collapsing and expanding Automation script folders
+## Collapsing and expanding automation script folders
 
 You can collapse or expand folders in the tree view:
 
@@ -41,7 +41,7 @@ You can collapse or expand folders in the tree view:
   > [!NOTE]
   > If you select *Collapse all*, the root folder will not be collapsed.
 
-## Adding a new Automation script
+## Adding a new automation script
 
 To add a new script:
 
@@ -60,7 +60,7 @@ You can also add a new script by duplicating an existing script and then changin
 
 To create a functional new script, you will then need to configure it further. For more information, see [Designing automation scripts](xref:Designing_Automation_scripts).
 
-## Adding a new Automation script folder
+## Adding a new automation script folder
 
 To add a new folder:
 
@@ -77,7 +77,7 @@ To move scripts or folders in the Automation tree view:
 
 - Drag the script or folder and drop it in the new location in the tree view.
 
-## Deleting an Automation script or folder
+## Deleting an automation script or folder
 
 To delete a script or folder:
 
@@ -88,7 +88,7 @@ To delete a script or folder:
 > [!NOTE]
 > When you delete a folder, you delete all scripts in that folder.
 
-## Renaming an Automation script folder
+## Renaming an automation script folder
 
 You can change the name of a folder in the following ways:
 

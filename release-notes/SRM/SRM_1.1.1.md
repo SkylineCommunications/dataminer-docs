@@ -87,7 +87,7 @@ To support the transition to a Booking Manager without booking tables, the *rese
 
 #### Reference to non-existing script in profile definition now ignored [ID 24006]
 
-When a profile definition refers to an Automation script that does not exist, the SRM resource configuration will now ignore this Automation script.
+When a profile definition refers to an automation script that does not exist, the SRM resource configuration will now ignore this Automation script.
 
 #### New AddOrUpdateCustomProperty method [ID 24008]
 

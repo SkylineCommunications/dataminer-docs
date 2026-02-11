@@ -81,7 +81,7 @@ Also, the Engine object has a new UserCookie property.
 
 ##### ExecuteScript(string scriptName)
 
-This method will execute an Automation script of which the name is passed in the “scriptName” argument.
+This method will execute an automation script of which the name is passed in the “scriptName” argument.
 
 The script will be executed by the user who is performing the QAction. It will return an “ExecuteScriptResponseMessage”, containing information about the execution of the script.
 
@@ -98,11 +98,11 @@ public static void Run(SLProtocol protocol)
 
 ##### ExecuteScript(ExecuteScriptMessage message)
 
-This method will execute an Automation script of which all details and execution settings are passed in the “ExecuteScriptMessage”.
+This method will execute an automation script of which all details and execution settings are passed in the “ExecuteScriptMessage”.
 
 The script will be executed by the user who is performing the QAction. It will return an “ExecuteScriptResponseMessage”, containing information about the execution of the script.
 
-Using this method to execute an Automation script is particularly useful when the script in question needs a dummy or protocol information to run.
+Using this method to execute an automation script is particularly useful when the script in question needs a dummy or protocol information to run.
 
 Example:
 
@@ -120,7 +120,7 @@ ExecuteScriptMessage esm = new ExecuteScriptMessage("RT_AUTOMATION_ExecuteAutoma
 protocol.ExecuteScript(esm);
 ```
 
-When you execute an Automation script using the “DEFER:FALSE” option, be aware that this will lock any further processing of the protocol. If, for example, the Automation script that is being executed by a QAction sets a parameter of the element containing that same QAction, the parameter will be locked until the Automation script times out. This default behavior can be bypassed in two ways:
+When you execute an automation script using the “DEFER:FALSE” option, be aware that this will lock any further processing of the protocol. If, for example, the automation script that is being executed by a QAction sets a parameter of the element containing that same QAction, the parameter will be locked until the automation script times out. This default behavior can be bypassed in two ways:
 
 - In the protocol, add the “queued” option to the QAction tag, or
 
@@ -128,8 +128,8 @@ When you execute an Automation script using the “DEFER:FALSE” option, be awa
 
     | If you use...   | then...                                                                                                                              |
     |-----------------|--------------------------------------------------------------------------------------------------------------------------------------|
-    | DEFER:FALSE     | the QAction will halt while the Automation script is being executed, and will only continue once the Automation script has finished. |
-    | DEFER:TRUE      | the QAction will continue while the Automation script is being executed asynchronously.                                              |
+    | DEFER:FALSE     | the QAction will halt while the automation script is being executed, and will only continue once the automation script has finished. |
+    | DEFER:TRUE      | the QAction will continue while the automation script is being executed asynchronously.                                              |
 
 ##### New property on Engine object: UserCookie
 
@@ -137,9 +137,9 @@ When you execute an Automation script using the “DEFER:FALSE” option, be awa
 string Engine.UserCookie;
 ```
 
-#### Injecting a DLL into an Automation script \[ID 24945\]
+#### Injecting a DLL into an automation script \[ID 24945\]
 
-It is now possible to inject DLL files into an Automation script.
+It is now possible to inject DLL files into an automation script.
 
 ##### To inject a DLL
 
@@ -173,7 +173,7 @@ The server will send back a *GetAutomationDllOverviewResponseMessage* containin
 
 ##### To eject a DLL
 
-If you eject a previously injected DLL from an Automation script, this will cause the script to behave as it did before the injection. To do so, send an *EjectAutomationDllRequestMessage* containing the name of the script and the Exe ID (i.e. the ID of the script action).
+If you eject a previously injected DLL from an automation script, this will cause the script to behave as it did before the injection. To do so, send an *EjectAutomationDllRequestMessage* containing the name of the script and the Exe ID (i.e. the ID of the script action).
 
 The server will send back a EjectAutomationDllResponseMessage. If any errors would have occurred, they will be included as errors of type *AutomationErrorData* in the message’s *TraceData* object. Possible errors include:
 
@@ -196,7 +196,7 @@ Send an ExecuteScriptMessage to the server.
 
 #### New method to link ReservationInstances to a ticket \[ID 25154\]
 
-In a C# block of an Automation script, you can now link ReservationInstances to a ticket.
+In a C# block of an automation script, you can now link ReservationInstances to a ticket.
 
 See the following example:
 
@@ -250,7 +250,7 @@ This functionality will allow you to offer clear feedback on user input.
 
 #### Possibility to add Attachments to tickets \[ID 25612\]
 
-In a C# block of an Automation script, you can now add attachments to tickets.
+In a C# block of an automation script, you can now add attachments to tickets.
 
 In the TicketingHelper class and TicketingGatewayHelper, the “AttachmentsHelper Attachments” property will allow to manage ticket attachments using the following methods:
 
@@ -271,19 +271,19 @@ In the TicketingHelper class and TicketingGatewayHelper, the “AttachmentsHelpe
 
 #### Run-time flag 'NoCheckingSets' now allows the 'After executing a SET command' option to be changed while a script is being run \[ID 25847\]
 
-When you launch an Automation script, you can choose to select the “After executing a SET command” option. If you do so, every time the script performs a parameter or property update, it will wait for a return value indicating whether or not the update was successful.
+When you launch an automation script, you can choose to select the “After executing a SET command” option. If you do so, every time the script performs a parameter or property update, it will wait for a return value indicating whether or not the update was successful.
 
 From now on, the “NoCheckingSets” runtime flag will allow this option to be changed while a script is being run.
 
-#### Connecting a DMS to a remote ElasticSearch cluster from an Automation script \[ID 26569\]
+#### Connecting a DMS to a remote ElasticSearch cluster from an automation script \[ID 26569\]
 
-It is now possible to have a DMS connect to the nodes of a remote ElasticSearch cluster from an Automation script by sending an InstallElasticAndMigrateRequest message.
+It is now possible to have a DMS connect to the nodes of a remote ElasticSearch cluster from an automation script by sending an InstallElasticAndMigrateRequest message.
 
 This message will add the IP addresses of the remote ElasticSearch nodes to the db.xml file.
 
 #### Replacing Automation script DLL dependencies \[ID 26605\]
 
-It is now possible to replace an Automation script DLL dependency from an Automation script by sending an UploadScriptDependencyMessage.
+It is now possible to replace an automation script DLL dependency from an automation script by sending an UploadScriptDependencyMessage.
 
 By default, the DLL file will be uploaded to the C:\\Skyline DataMiner\\scripts\\dllImport folder, but it is possible to specify a subfolder if required. The uploaded DLL file will be synchronized among all agents in the DMS.
 

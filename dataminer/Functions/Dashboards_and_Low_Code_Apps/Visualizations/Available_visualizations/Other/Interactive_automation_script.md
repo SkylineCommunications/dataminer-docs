@@ -2,7 +2,7 @@
 uid: InteractiveAutomationScript
 ---
 
-# Interactive Automation script
+# Interactive automation script
 
 Available from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!-- RN 39969 -->, in the Low-Code Apps module.
 

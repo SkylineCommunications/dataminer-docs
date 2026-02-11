@@ -56,13 +56,13 @@ See also [RunInIsolationModeConfig property added to SLNet messages ElementInfoE
 
 For more information on how to configure elements to run in isolation mode in DataMiner Cube, see [Elements can now be configured to run in isolation mode [ID 41758]](xref:Cube_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758).
 
-#### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Scheduler app [ID 41970]
+#### Information events of type 'script started' will no longer be generated when an automation script is triggered by the Scheduler app [ID 41970]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
-From now on, by default, information events of type "script started" will no longer be generated when an Automation script is triggered by the Scheduler app.
+From now on, by default, information events of type "script started" will no longer be generated when an automation script is triggered by the Scheduler app.
 
-In other words, when an Automation script is triggered by the Scheduler app, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Main_Release_10.3.0_new_features_1#added-the-option-to-skip-the-script-started-information-event-id-33666).
+In other words, when an automation script is triggered by the Scheduler app, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Main_Release_10.3.0_new_features_1#added-the-option-to-skip-the-script-started-information-event-id-33666).
 
 If you do want such information events to be generated, you can add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to false:
 
@@ -118,7 +118,7 @@ If this time zone information has to be stored for later use, consider the follo
 - Use the `Id` property, which can then be restored by using `TimeZoneInfo.FindSystemTimeZoneById(storedId)`.
 
   > [!NOTE]
-  > The ID that is returned might not be available on the DataMiner Agent that is executing the Automation script.
+  > The ID that is returned might not be available on the DataMiner Agent that is executing the automation script.
 
 For more info, see [Saving and restoring time zones](https://learn.microsoft.com/en-us/dotnet/standard/datetime/saving-and-restoring-time-zones)
 

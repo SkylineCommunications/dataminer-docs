@@ -60,9 +60,9 @@ To link a shape to an automation script:
     | ---------------- | ---------------------------------------------------------------------------------------------- |
     | Execute          | Script:\<myScript>\|Tooltip:\<myTooltip>\|Parameters:paramA=\<myParam>\|Options:NoConfirmation |
 
-- The **Execute** shape data field can be combined with other shape data that make the shape perform an action when clicked. In that case, the Automation script specified in the **Execute** field will be executed before the main action is performed.
+- The **Execute** shape data field can be combined with other shape data that make the shape perform an action when clicked. In that case, the automation script specified in the **Execute** field will be executed before the main action is performed.
 
-  For example, if the following shape data are specified, the Automation script in the Execute field will be used to set parameters before the main action shows these in a pop-up window.
+  For example, if the following shape data are specified, the automation script in the Execute field will be used to set parameters before the main action shows these in a pop-up window.
 
   | Shape data field | Value                                     |
   | ---------------- | ----------------------------------------- |
@@ -95,7 +95,7 @@ For example, in the configuration below, the first-level separator "\|" is repla
 > [!TIP]
 > See also: [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)
 
-## Passing Automation script output to session variables
+## Passing automation script output to session variables
 
 When an automation script executed in Visual Overview finishes successfully, the output values of that script can be passed to session variables in Visual Overview. From DataMiner 10.2.6/10.3.0 onwards, this is also supported for interactive automation scripts.
 

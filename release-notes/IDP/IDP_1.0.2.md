@@ -97,7 +97,7 @@ In this structure:
 
 #### Automation script summary window no longer displayed \[ID 21964\]
 
-When an Automation script is launched from the IDP Solution, the summary window of the script will no longer be displayed.
+When an automation script is launched from the IDP Solution, the summary window of the script will no longer be displayed.
 
 #### IDP app refreshes information based on messages sent by IDP Discovery element \[ID 21980\]
 

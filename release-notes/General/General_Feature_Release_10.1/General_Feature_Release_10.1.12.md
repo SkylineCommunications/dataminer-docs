@@ -39,7 +39,7 @@ The following information will be added to the information events.
 
 ##### automation scripts
 
-When an Automation script is triggered as part of an redundancy group action, that script will now have the following additional parameters. These can then be requested from within the Automation script using the GetScriptParam(\<id>) method on the engine object.
+When an automation script is triggered as part of an redundancy group action, that script will now have the following additional parameters. These can then be requested from within the automation script using the GetScriptParam(\<id>) method on the engine object.
 
 | ID | Name | Description |
 |--|--|--|

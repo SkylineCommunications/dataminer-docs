@@ -161,7 +161,7 @@ When you changed the visualization of a component showing data fetched by a GQI 
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
-When an Automation script action using dummies was linked to a node of a node edge component, up to now, the dummies incorrectly would not get filled in automatically. From now on, they will be filled in automatically when the node matches the dummy type.
+When an automation script action using dummies was linked to a node of a node edge component, up to now, the dummies incorrectly would not get filled in automatically. From now on, they will be filled in automatically when the node matches the dummy type.
 
 #### Low-Code Apps: Problem with input validation when using interactive automation scripts [ID 38111]
 

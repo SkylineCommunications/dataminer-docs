@@ -48,7 +48,7 @@ When you retrieve the local element from IDms, you can now also perform a specia
 
 #### New feature - Automation script execution enhanced with async execution and additional run flags
 
-You can now trigger the execution of an Automation script asynchronously. In addition, you can provide several different run options similar to the options you get when triggering a script manually (e.g. LockElements, CheckSets, WaitWhenLocked, etc.).
+You can now trigger the execution of an automation script asynchronously. In addition, you can provide several different run options similar to the options you get when triggering a script manually (e.g. LockElements, CheckSets, WaitWhenLocked, etc.).
 
 ### 1.0.1.2
 

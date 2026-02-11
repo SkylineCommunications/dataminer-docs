@@ -21,7 +21,7 @@ On MySQL and Microsoft SQL Server databases, the alarm table now has an extra fi
 > [!NOTE]
 >
 > - This change will cause a small increase in latency when retrieving alarms from the database.
-> - From now on, using a filter with an AlarmFilterItemExtraStatus in the GetAlarmDetailsFromDbMessage from within an Automation script will not work correctly in conjunction with a MySQL or Microsoft SQL Server database.
+> - From now on, using a filter with an AlarmFilterItemExtraStatus in the GetAlarmDetailsFromDbMessage from within an automation script will not work correctly in conjunction with a MySQL or Microsoft SQL Server database.
 
 #### SimulationHelper API now allows loading, enabling and disabling element simulations at runtime \[ID 29517\]
 
@@ -51,7 +51,7 @@ SimulationHelper(Func<DMSMessage[], DMSMessage[]> messageHandler)
     void DisableSimulation(int hostingDataMinerId, int dataMinerId, int elementId)
     ```
 
-Example on how to use this in an Automation script:
+Example on how to use this in an automation script:
 
 ```csharp
 var simulationHelper = new SimulationHelper(Engine.SLNet.SendMessages);
@@ -342,7 +342,7 @@ In other words, components using a State, Gauge and Ring component as a feed wil
 
 #### automation scripts: #define ALARM_SQUASHING \[ID 29613\]
 
-The preprocessor directive “#define ALARM_SQUASHING” will now automatically be added to each C# block of an Automation script.
+The preprocessor directive “#define ALARM_SQUASHING” will now automatically be added to each C# block of an automation script.
 
 In C# blocks, all code related to alarm squashing should be enclosed as follows:
 

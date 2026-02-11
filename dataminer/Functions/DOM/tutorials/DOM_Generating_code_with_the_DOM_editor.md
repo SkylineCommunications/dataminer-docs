@@ -68,13 +68,13 @@ This tutorial consists of the following steps:
 
 ## Step 3: Use the generated code
 
-### Create a new Automation script solution
+### Create a new automation script solution
 
 Create a new Automation script solution using Visual Studio and DIS.
 
-While you could develop the Automation script in Cube, creating an Automation script solution in Visual Studio will give you the advantage of having access to all the features of Visual Studio and [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio).
+While you could develop the automation script in Cube, creating an automation script solution in Visual Studio will give you the advantage of having access to all the features of Visual Studio and [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio).
 
-To create an Automation script solution:
+To create an automation script solution:
 
 1. In Visual Studio, select *File > New > Project*.
 
@@ -85,7 +85,7 @@ To create an Automation script solution:
 
 1. Use `Generate Kata DOM` as the name for your solution.
 
-1. Choose a location to save the Automation script solution and click *Next*.
+1. Choose a location to save the automation script solution and click *Next*.
 
 1. Specify *Generate Kata DOM Instances* as the name of your Automation script.
 
@@ -168,7 +168,7 @@ You can spot the different places in the code where the generated code is used t
 
 ### Publish the script
 
-When the Automation script is complete, it needs to be published to the DataMiner System. You can do so using the built-in publish feature of DIS. Make sure that DIS can connect to the DataMiner System you want to upload your script to. You will need to [edit the DIS settings](xref:DIS_settings#dma) so the DMA is selectable.
+When the automation script is complete, it needs to be published to the DataMiner System. You can do so using the built-in publish feature of DIS. Make sure that DIS can connect to the DataMiner System you want to upload your script to. You will need to [edit the DIS settings](xref:DIS_settings#dma) so the DMA is selectable.
 
 1. In the *Solution Explorer*, double-click *Generate Kata DOM Instances.xml*.
 
