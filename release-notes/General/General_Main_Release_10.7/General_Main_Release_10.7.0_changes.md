@@ -236,6 +236,19 @@ From now on, the Scheduler configuration found in `C:\Skyline Dataminer\Schedule
 
 If you create a custom backup, the Scheduler configuration will be included only if you selected the *DataMiner settings* option.
 
+#### SLLogCollector: Separate log file per instance [ID 44668]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, all SLLogCollector logging of all SLLogCollector instances would end up in the following files, stored in the `C:\ProgramData\Skyline\DataMiner\SL_LogCollector\Log` folder:
+
+- `SL_LogCollector_fulllog.log`
+- `SL_LogCollector_log.log`
+
+From now on, each SLLogCollector instance will have its own dedicated log file named `log-[creation timestamp].txt`, stored in the `C:\ProgramData\Skyline Communications\SLLogCollector` folder.
+
+Up to 10 log files will be kept on disk, and the log file of the current instance will be added to the SLLogCollector package.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
