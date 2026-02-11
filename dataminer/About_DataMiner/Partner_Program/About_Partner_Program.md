@@ -67,7 +67,7 @@ Technical skills:
 |--|--|--|
 | Formal knowledge | Number of certifications obtained per month | 10 |
 | Community engagement | DevOps Points added per month | 5 per 500 DevOps Points per month |
-| Community engagement | # of downloads per month<br>automation scripts<br>Applications<br>Connectors<br>Dashboards<br>Visio | 10 per 5 downloads |
+| Community engagement | # of downloads per month<br>Automation scripts<br>Applications<br>Connectors<br>Dashboards<br>Visio | 10 per 5 downloads |
 | Supporting infrastructure | Existing Demo System Lab* | 10 per CY |
 
 *\* dataminer.services must be enabled*
