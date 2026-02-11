@@ -244,7 +244,7 @@ uid: glossary_a_to_l
 | IaaS | Infrastructure as a Service. Cloud-based service that provides a basic computing infrastructure. |
 | IaC  | Infrastructure as Code |
 | IAM | [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management). Legacy DataMiner module that establishes a link between a DMS and a CMDB. |
-| IAS | Interactive Automation script. A DataMiner Automation script that is designed to require user interaction. See [Building interactive automation scripts with C#](xref:Building_interactive_Automation_scripts_with_CSharp). |
+| IAS | Interactive automation script. A DataMiner automation script that is designed to require user interaction. See [Building interactive automation scripts with C#](xref:Building_interactive_Automation_scripts_with_CSharp). |
 | IDE | Integrated Development Environment. Software application that provides comprehensive facilities for software development. |
 | IDP | Infrastructure Discovery Provisioning. DataMiner application that allows you to automatically discover, provision and manage the devices in your network. See [DataMiner IDP app](xref:SolIDP). |
 | IETF | Internet Engineering Task Force. Organization developing and promoting open internet standards. |

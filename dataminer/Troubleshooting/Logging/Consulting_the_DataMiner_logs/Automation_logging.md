@@ -20,7 +20,7 @@ To retrieve a **previous log file**, right-click an item in the list and select 
 
 ## Changing log levels
 
-The log levels for each Automation script are indicated to the right of the DMA name in the log file list. Example: `0·0·0`, `1·0·0`, `1·3·2`, etc.
+The log levels for each automation script are indicated to the right of the DMA name in the log file list. Example: `0·0·0`, `1·0·0`, `1·3·2`, etc.
 
 The lowest log level is 0, "No logging", which means that only essential information is logged and any more specific and detailed information is left out.
 

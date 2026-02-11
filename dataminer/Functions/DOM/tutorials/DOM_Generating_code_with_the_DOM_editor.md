@@ -120,7 +120,7 @@ namespace GenerateKataDOMInstances_1
     using Skyline.DataMiner.Net.Sections;
 
     /// <summary>
-    /// Represents a DataMiner Automation script.
+    /// Represents a DataMiner automation script.
     /// </summary>
     public class Script
     {

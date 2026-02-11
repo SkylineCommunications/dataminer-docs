@@ -52,7 +52,7 @@ Start by adding all code-based content into a Visual Studio solution:
 
    1. Click *Create*.
 
-1. Add a first DataMiner Automation script project:
+1. Add a first DataMiner automation script project:
 
    1. In the Solution Explorer, at the very top, right-click the solution *TutorialPackage* and select *Add > new project*.
 
@@ -66,7 +66,7 @@ Start by adding all code-based content into a Visual Studio solution:
 
    1. Click *Create*.
 
-1. Add a second DataMiner Automation script project:
+1. Add a second DataMiner automation script project:
 
    1. In the Solution Explorer, at the very top, right-click the solution *TutorialPackage* and select *Add > new project*.
 
@@ -78,7 +78,7 @@ Start by adding all code-based content into a Visual Studio solution:
 
    1. Click *Create*.
 
-1. Add a DataMiner Automation script library project:
+1. Add a DataMiner automation script library project:
 
    1. In the Solution Explorer, at the very top, right-click the solution *TutorialPackage* and select *Add > new project*.
 

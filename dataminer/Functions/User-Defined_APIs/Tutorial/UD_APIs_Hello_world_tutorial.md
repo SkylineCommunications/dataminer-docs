@@ -39,7 +39,7 @@ To create an automation script solution:
 
 1. Specify *HelloWorldAPI* as the name of your automation script, fill in your name as the author, and click *Create*.
 
-   ![Visual Studio create Automation script](~/dataminer/images/UDAPIS_Tutorials_HelloWorld_DIS_ScriptSettings.jpg)
+   ![Visual Studio create automation script](~/dataminer/images/UDAPIS_Tutorials_HelloWorld_DIS_ScriptSettings.jpg)
 
 ## [Visual Studio 2019](#tab/tabid-2)
 
@@ -240,7 +240,7 @@ The script and the token are now available in the DMS. The next step is to creat
 
 1. Open the *Automation* module in DataMiner Cube.
 
-1. Open the *HelloWorldAPI* Automation script.
+1. Open the *HelloWorldAPI* automation script.
 
 1. At the bottom of the screen, click the *Configure API* button.
 

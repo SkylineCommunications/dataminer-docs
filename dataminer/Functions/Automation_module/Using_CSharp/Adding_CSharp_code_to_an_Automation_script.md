@@ -165,7 +165,7 @@ engine.Timeout = TimeSpan.FromMinutes(30);
 
 ## Custom entry points
 
-It is possible to define custom entry points for an automation script. To do so, provide the method you want to use as entry point with the attribute *AutomationEntryPointAttribute* and specify the type of the entry point. For a regular Automation script entry point, specify *AutomationEntryPointType.Types.Default*:
+It is possible to define custom entry points for an automation script. To do so, provide the method you want to use as entry point with the attribute *AutomationEntryPointAttribute* and specify the type of the entry point. For a regular automation script entry point, specify *AutomationEntryPointType.Types.Default*:
 
 ```cs
 [AutomationEntryPoint(AutomationEntryPointType.Types.Default)]
@@ -205,7 +205,7 @@ public delegate void AutomationEntryPointTest(IEngine engine, string testMessage
 
 Restrictions:
 
-- An Automation script using custom entry points can have only one executable action, which must be a C# code block.
+- An automation script using custom entry points can have only one executable action, which must be a C# code block.
 
 - If, in a C# code block, you have defined multiple entry points, you must make sure they are of different types. Multiple entry points of the same type are not allowed.
 

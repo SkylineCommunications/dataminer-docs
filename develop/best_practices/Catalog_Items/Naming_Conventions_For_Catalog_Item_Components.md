@@ -46,7 +46,7 @@ Scripts should be added in the Automation module in the following folders, depen
 
 - For standalone scripts:
 
-  - **Regular** Automation script: `DataMiner Catalog/Automation`
+  - **Regular** automation script: `DataMiner Catalog/Automation`
   - **Ad hoc data source** script: `DataMiner Catalog/Ad Hoc Data Sources`
   - **Data transformer** script: `DataMiner Catalog/Data Transformers`
   - **User-defined API** script: `DataMiner Catalog/User-Defined APIs`

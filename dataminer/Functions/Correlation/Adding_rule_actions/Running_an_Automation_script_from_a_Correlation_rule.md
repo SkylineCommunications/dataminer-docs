@@ -6,7 +6,7 @@ uid: Running_an_Automation_script_from_a_Correlation_rule
 
 To run an automation script from a correlation rule:
 
-1. In the *Actions* section of the details pane, click *Add Action* and select *Run Automation script*.
+1. In the *Actions* section of the details pane, click *Add Action* and select *Run script*.
 
 1. Click the first underlined field and select the script.
 

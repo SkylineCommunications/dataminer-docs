@@ -43,7 +43,7 @@ To learn how to add a new scheduled task without a Scheduler template, you can f
    - **Email**: Compose an email message, optionally including a dashboard or (legacy) report.
    - **Upload report to FTP**: Specify an FTP server, and a dashboard or (legacy) report to upload to it. For more detailed information, see [Upload report to FTP](xref:Upload_report_to_FTP).
    - **Upload report to shared folder**: Specify a shared folder, and dashboard or (legacy) report to upload to it. For more detailed information, see [Upload report to shared folder](xref:Upload_report_to_shared_folder).
-   - **Script**: Select an existing Automation script to be executed at the scheduled time. For more information on the script execution options, see [Script execution options](xref:Script_execution_options).
+   - **Script**: Select an existing automation script to be executed at the scheduled time. For more information on the script execution options, see [Script execution options](xref:Script_execution_options).
 
    > [!NOTE]
    >

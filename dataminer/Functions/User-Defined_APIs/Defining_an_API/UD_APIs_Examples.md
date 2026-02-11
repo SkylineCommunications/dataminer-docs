@@ -23,7 +23,7 @@ For each of these examples, the input JSON could look like this:
 }
 ```
 
-The difference is that this JSON is either parsed by the script, automatically parsed to a dictionary in the input, or automatically parsed to Automation script parameter values.
+The difference is that this JSON is either parsed by the script, automatically parsed to a dictionary in the input, or automatically parsed to automation script parameter values.
 
 You can test these examples yourself by adjusting the input to an element and parameter that exist in your DMS. However, make sure that the values that will be set will not harm your setup.
 

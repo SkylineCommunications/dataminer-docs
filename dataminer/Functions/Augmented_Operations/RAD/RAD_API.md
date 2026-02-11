@@ -46,7 +46,7 @@ namespace AddRADParameterGroupWithAPI
     using Skyline.DataMiner.Automation;
 
     /// <summary>
-    /// Represents a DataMiner Automation script.
+    /// Represents a DataMiner automation script.
     /// </summary>
     public class Script
     {

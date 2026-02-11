@@ -46,7 +46,7 @@ You can interact with the node edge graph in several ways:
 
       - When *Advanced* > *Node positions* is set to *Layered* in the *Layout* pane, node positions are stored automatically when the user has editor permissions<!--RN 44154-->. See [Configuring security for a dashboard](xref:Configuring_dashboard_security) and [Configuring app security](xref:LowCodeApps_security_config).
 
-      - When *Advanced* > *Node positions* is set to *Linked to data*, node positions are only stored if a node-move event is configured that triggers a *Launch a script* action. This Automation script should update the original data objects with the modified ones exposed by the event. For more information, see [Configuring node movement events](#configuring-node-movement-events).
+      - When *Advanced* > *Node positions* is set to *Linked to data*, node positions are only stored if a node-move event is configured that triggers a *Launch a script* action. This automation script should update the original data objects with the modified ones exposed by the event. For more information, see [Configuring node movement events](#configuring-node-movement-events).
 
   - Up to DataMiner 10.5.0 [CU9]/10.5.12:
 

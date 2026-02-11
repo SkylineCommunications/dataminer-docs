@@ -6,7 +6,7 @@ uid: UD_APIs_Define_New_API
 
 To create a new API, follow these steps as detailed below:
 
-1. [Create the API Automation script](#creating-the-api-automation-script)
+1. [Create the API automation script](#creating-the-api-automation-script)
 1. [Create the API definition(s) and token(s)](#creating-an-api-and-tokens-in-dataminer-automation)
 1. [Configure the UserDefinableApiEndpoint extension module](#configuring-the-userdefinableapiendpoint-extension-module)
 
@@ -15,7 +15,7 @@ To create a new API, follow these steps as detailed below:
 
 ## Creating the API automation script
 
-To define an API, you will need an automation script that contains the logic of the API. This Automation script needs the `OnApiTrigger` entry point method, which will be executed when the API is triggered. The entry point should look like this:
+To define an API, you will need an automation script that contains the logic of the API. This automation script needs the `OnApiTrigger` entry point method, which will be executed when the API is triggered. The entry point should look like this:
 
 ```csharp
 using Skyline.DataMiner.Automation;

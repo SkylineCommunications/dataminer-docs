@@ -71,7 +71,7 @@ The following are the conditions of the quality gate we use. This was balanced t
 
 ### SonarCloud rule tweaks
 
-Some specific rules by SonarCloud have been disabled or tweaked to account for legacy code and specifics to connector and Automation script developments. We have also disabled some rules after finding their ROI to be lacking for our developments.
+Some specific rules by SonarCloud have been disabled or tweaked to account for legacy code and specifics to connector and automation script developments. We have also disabled some rules after finding their ROI to be lacking for our developments.
 
 Currently, our quality profile for C# has 79 rules disabled and 1 overridden rule:
 

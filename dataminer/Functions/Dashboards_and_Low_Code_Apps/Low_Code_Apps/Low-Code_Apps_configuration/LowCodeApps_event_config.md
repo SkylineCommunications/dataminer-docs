@@ -336,7 +336,7 @@ From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43222-->, all act
 
 ![Numbered hierarchically](~/dataminer/images/Actions_Numbered_Hierarchically.png)<br>*Actions configuration window in DataMiner 10.5.9*
 
-These numbers make it easier, for example, to reference actions when [linking Automation script output data](#launching-a-script).
+These numbers make it easier, for example, to reference actions when [linking automation script output data](#launching-a-script).
 
 ## Removing an action
 

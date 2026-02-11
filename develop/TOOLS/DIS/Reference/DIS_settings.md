@@ -94,7 +94,7 @@ If you are working on a local DMA, you can keep the following default folders:
 In the *Solutions* tab, you can specify the following default solution folders:
 
 - Default protocol solutions folder
-- Default Automation script solutions folder
+- Default automation script solutions folder
 
 ## Interface
 

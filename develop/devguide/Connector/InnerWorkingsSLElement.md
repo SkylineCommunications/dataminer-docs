@@ -37,7 +37,7 @@ A parameter requires that RTDisplay is set to true in the following cases:
 
   - Other element
   - Visio
-  - (Interactive) Automation script
+  - (Interactive) automation script
   - Reporter (legacy)
   - Dashboard
   - Spectrum Analyzer parameters (parameter ID > 64000)

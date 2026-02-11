@@ -14,7 +14,7 @@ It is possible to have a C# code block in an automation script in Cube compiled 
 
    - A library name must not contain a period (".").
 
-   - Within the same Automation script, each library name must be unique.
+   - Within the same automation script, each library name must be unique.
 
 1. Open the *Advanced* section below the code block.
 

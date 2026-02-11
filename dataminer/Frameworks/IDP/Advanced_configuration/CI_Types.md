@@ -79,7 +79,7 @@ This page contains an overview of provisioning details for CI Types, with the fo
 
 - **Initial Views**: The view or views the provisioned element should be placed in. These can be configured via the *Advanced* button.
 
-- **Update Property Script**: The Automation script that should be used to update the properties of the element once it has been created. You can select any of the scripts from the folder configured with the *CI Update Property Script* *Folder* setting on the *Admin* > *Settings* page.
+- **Update Property Script**: The automation script that should be used to update the properties of the element once it has been created. You can select any of the scripts from the folder configured with the *CI Update Property Script* *Folder* setting on the *Admin* > *Settings* page.
 
 - **Password Setup**: Displays the number of steps configured for the password setup (configurable via the *Advanced* button).
 
@@ -224,7 +224,7 @@ The provisioning configuration window of the CI Type Management wizard contains 
 
   - At the bottom of the window, the *Other Properties* section allows you to add other properties and specify a value for them. These can be both existing or new properties. If a new property is added, it is created in the DMS as soon as an element for the CI Type is created.
 
-- **Update Property Script**: The Automation script that should be used to update the properties of the element once it has been created. You can select any of the scripts from the folder configured with the *CI Update Property Script* *Folder* setting on the *Admin* > *Settings* page.
+- **Update Property Script**: The automation script that should be used to update the properties of the element once it has been created. You can select any of the scripts from the folder configured with the *CI Update Property Script* *Folder* setting on the *Admin* > *Settings* page.
 
 ### Connectivity configuration
 

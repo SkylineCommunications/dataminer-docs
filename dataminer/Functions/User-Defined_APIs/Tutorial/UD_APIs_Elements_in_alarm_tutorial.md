@@ -186,7 +186,7 @@ The next step is to create an API definition that ties the token and script toge
 
 1. Open the *Automation* module in DataMiner Cube.
 
-1. Open the *ElementsAPI* Automation script.
+1. Open the *ElementsAPI* automation script.
 
 1. At the bottom of the screen, click the *Configure API* button.
 

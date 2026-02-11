@@ -28,7 +28,7 @@ To automatically generate tickets, this parameter must be used in conjunction wi
 
 1. A correlation rule, which has been configured to be triggered when the *Generate Ticket* parameter has this value, activates an automation script.
 
-1. The Automation script requests a ticket number, posts the new ticket number value in the last column of the outage table, and sets the *Generate Ticket* parameter back to *Clear*.
+1. The automation script requests a ticket number, posts the new ticket number value in the last column of the outage table, and sets the *Generate Ticket* parameter back to *Clear*.
 
 > [!TIP]
 > See also:

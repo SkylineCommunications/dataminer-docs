@@ -9,7 +9,7 @@ uid: AutomationActions
 |[Assign dummy](xref:AutomationActionAssignDummy)|Assigns an automation script's dummy to a specific element by using a variable or a value.|
 |[Assign template](xref:AutomationActionAssignTemplate)|Assigns an alarm or trend template to a dummy.|
 |[C# code](xref:AutomationActionCSharpCode)|Executes C# code.|
-|[Clear memory](xref:AutomationActionClearMemory)|Clears the content of the specified Automation script memory file.|
+|[Clear memory](xref:AutomationActionClearMemory)|Clears the content of the specified automation script memory file.|
 |[Comment](xref:AutomationActionComment)|Provides extra comments to the script.|
 |[Email](xref:AutomationActionEmail)|Sends an email to the specified destination.|
 |[Exit](xref:AutomationActionExit)|Terminates the automation script without delay.|

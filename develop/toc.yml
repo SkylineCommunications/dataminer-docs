@@ -7358,9 +7358,9 @@ items:
               items:
                 - name: Using the DIS MIB Browser
                   topicUid: DIS_MIB_Browser
-            - name: Developing Automation scripts
+            - name: Developing automation scripts
               topicUid: Developing_Automation_scripts_as_Visual_Studio_solutions
-        - name: Debugging connectors and Automation scripts
+        - name: Debugging connectors and automation scripts
           topicUid: Debugging_connectors_and_Automation_scripts
           items:
             - name: Concept
@@ -7430,7 +7430,7 @@ items:
               topicUid: Run_Time_Assembly_Binding
             - name: Assembly binding connectors
               topicUid: AssemblyResolvingConnectors
-            - name: Assembly binding Automation scripts
+            - name: Assembly binding automation scripts
               topicUid: AssemblyResolvingAutomationScripts
         - name: Producing NuGet packages
           topicUid: Producing_NuGet

@@ -4,7 +4,7 @@ uid: UD_APIs_Using_existing_scripts
 
 # Using existing scripts
 
-There are two possible ways to create an API from an existing Automation script, which may or may not use script parameters.
+There are two possible ways to create an API from an existing automation script, which may or may not use script parameters.
 
 - The recommended way is to [use the OnApiTrigger entry point](#using-the-script-with-the-onapitrigger-entry-point).
 - Alternatively, you can also [use an existing script without the OnApiTrigger entry point](#using-the-script-without-the-onapitrigger-entry-point). However, while this has the advantage that you do not need to make changes to the script, this also has some major disadvantages.
@@ -178,7 +178,7 @@ When the API is triggered with input data that does not represent a number, the 
 
 As there is no way of returning an `ApiTriggerOutput` instance with this approach, the error will be vague.
 
-The input value conversion logic will return a clear error if an API configured with this option is triggered, but the input JSON does not contain a value for all Automation script parameters. The JSON error response will look like this:
+The input value conversion logic will return a clear error if an API configured with this option is triggered, but the input JSON does not contain a value for all automation script parameters. The JSON error response will look like this:
 
 ```json
 {

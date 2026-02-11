@@ -95,7 +95,7 @@ In the example below, it is possible to go from the state *Not active* to *Valid
 
 It is possible to add buttons to a DOM form that will trigger an automation script to add custom logic or automation to your object. These are configured in this tab.
 
-In the example below, two buttons are configured. The first is only shown when an object is in the *Not active* state, and the second is only shown in the *Validated* state. The Automation script gets the context of which button is selected, so you can combine all logic from your buttons in the same script.
+In the example below, two buttons are configured. The first is only shown when an object is in the *Not active* state, and the second is only shown in the *Validated* state. The automation script gets the context of which button is selected, so you can combine all logic from your buttons in the same script.
 
 | Button | Script Name | Tooltip | Not active | Validated |
 |--|--|--|--|--|

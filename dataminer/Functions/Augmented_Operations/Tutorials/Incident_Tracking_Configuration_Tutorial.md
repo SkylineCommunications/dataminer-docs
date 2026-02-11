@@ -271,7 +271,7 @@ It is not possible to use the *ParentNode* alarm property from the previous step
 
 1. If you do not have access to the *configuration.xml* file, you will need to customize an automation script instead:
 
-   1. Open the *Incident Tracking Tutorial Scripts - Script 3 Enable Custom Element Property Grouping* Automation script.
+   1. Open the *Incident Tracking Tutorial Scripts - Script 3 Enable Custom Element Property Grouping* automation script.
 
    1. Look for the string variable called *KataExercise*.
 

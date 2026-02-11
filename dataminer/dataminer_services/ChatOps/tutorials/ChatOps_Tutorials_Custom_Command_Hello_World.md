@@ -40,9 +40,9 @@ Estimated duration: 10 minutes.
 
 1. Choose a location to save the automation script solution and click *Next*.
 
-1. Specify *HelloWorld* as the name of your Automation Script, fill in your name as the author, and click *Create*.
+1. Specify *HelloWorld* as the name of your automation script, fill in your name as the author, and click *Create*.
 
-   ![Visual Studio create Automation script](~/dataminer/images/chatops_01_003.png)
+   ![Visual Studio create automation script](~/dataminer/images/chatops_01_003.png)
 
 ## Step 2: Create the automation script
 
@@ -72,7 +72,7 @@ Estimated duration: 10 minutes.
       using Skyline.DataMiner.Automation;
    
       /// <summary>
-      /// Represents a DataMiner Automation script.
+      /// Represents a DataMiner automation script.
       /// </summary>
       public class Script
       {

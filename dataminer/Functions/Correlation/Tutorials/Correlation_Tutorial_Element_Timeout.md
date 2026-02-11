@@ -84,7 +84,7 @@ In this step, you will create a correlation rule that will trigger based on alar
 
    1. Next to *Run script*, click *\<empty>* and select the script *Correlation KATA switch timeout Script*.
 
-      This Automation script will generate an information event when executed.
+      This automation script will generate an information event when executed.
 
       ![Adding the *run script* action](~/dataminer/images/Correlation_Add_Run_Script_Action.png)
 
