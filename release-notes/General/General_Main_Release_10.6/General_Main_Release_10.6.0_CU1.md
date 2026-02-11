@@ -45,6 +45,14 @@ From now on, when the new value is equal to the old value, the value will no lon
 
 Also, write parameters will no longer be saved as this would cause unnecessary load.
 
+#### Enhanced distribution of SNMPv3 traps [ID 44626]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a DMA receives an SNMPv3 trap that it cannot process (e.g. because the SNMPv3 user is unknown), and trap distribution is enabled, from now on, the trap will be distributed to the other DMAs in the cluster in an attempt to have it processed by one of those other DMAs.
+
+Also, in some cases, traps could be forwarded to the wrong elements because the SNMPv3 USM ID was not validated correctly.
+
 ### Fixes
 
 #### MessageBroker: Problem with hostnames and FQDNs containing a certain combination of dashes and characters [ID 44433]

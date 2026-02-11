@@ -48,6 +48,13 @@ In the *Alarm table* component, a number of minor issues have been fixed:
 
 - In some cases, the *Load next ... alarms* button, which was centered horizontally, would not be visible until you scrolled to the side.
 
+
+#### Interactive Automation scripts in web apps: Redesigned Date component would incorrectly get a double update when the UI was set to V2 [ID 44665]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When the interactive Automation script UI was set to version V2, in some cases, the redesigned Date component would get a double update, causing the component to flicker.
+
 #### Low-Code Apps - Template editor & flow editor: Tabbed pane on the left would shrink when the editor area contained a large number of items [ID 44671]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
