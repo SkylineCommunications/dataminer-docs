@@ -340,7 +340,7 @@ In other words, components using a State, Gauge and Ring component as a feed wil
 
 ### DMS Automation
 
-#### automation scripts: #define ALARM_SQUASHING \[ID 29613\]
+#### Automation scripts: #define ALARM_SQUASHING \[ID 29613\]
 
 The preprocessor directive “#define ALARM_SQUASHING” will now automatically be added to each C# block of an automation script.
 

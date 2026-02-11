@@ -698,7 +698,7 @@ If the parameter is not initialized or is set to an empty string, the default pa
 
 The context name and context ID can be changed at runtime, and are not saved by default. When the element is restarted, the parameter data will be lost unless the `save` attribute of the parameter was set to true (e.g. `<Param id="1" save="true">`).
 
-#### automation scripts: Generating information events when editing a connection in a QAction [ID 42783]
+#### Automation scripts: Generating information events when editing a connection in a QAction [ID 42783]
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
@@ -723,7 +723,7 @@ A new BPA test named "Large Alarm Trees" is now available. This test will retrie
 
 The BPA test is available in System Center on the *Agents > BPA* tab.
 
-#### automation scripts: New Interactivity tag [ID 42954]
+#### Automation scripts: New Interactivity tag [ID 42954]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 

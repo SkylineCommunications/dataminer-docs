@@ -169,7 +169,7 @@ When a page is renamed or when the casing of a page is changed, the export rules
 
 When a parameter is moved onto a page, and its new location matches its location specified in the protocol, any export rules for that parameter will now be removed.
 
-#### automation scripts: DLL references added via an Exe or Param tag will now be disregarded when identical references were added via the solution explorer \[ID 32422\]
+#### Automation scripts: DLL references added via an Exe or Param tag will now be disregarded when identical references were added via the solution explorer \[ID 32422\]
 
 When developing automation scripts as Visual Studio solutions, it is good practice to add DLL references to the C# project via the solution explorer rather than to add them via Exe and/or Param tags.
 

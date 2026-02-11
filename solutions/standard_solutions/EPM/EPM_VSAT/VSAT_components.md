@@ -55,7 +55,7 @@ The connectors ship with the EPM Solution package.
 
 - [Skyline Universal Weather](https://catalog.dataminer.services/details/6664b1b8-6975-4990-bb97-6df0b0239e2e)
 
-## automation scripts
+## Automation scripts
 
 The VSAT EPM Solution uses the automation scripts detailed below.
 

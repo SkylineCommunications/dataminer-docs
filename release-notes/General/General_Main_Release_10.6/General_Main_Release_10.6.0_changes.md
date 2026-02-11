@@ -461,7 +461,7 @@ During a DataMiner upgrade (or downgrade), up to now, only the `\bin` subfolder 
 
 From now on, the entire `C:\Skyline DataMiner\Webpages\API` folder will be cleared. Only the `Web.config` file will be kept.
 
-#### automation scripts: No attempts will be made anymore to automatically detect the interactive behavior of script libraries [ID 43673]
+#### Automation scripts: No attempts will be made anymore to automatically detect the interactive behavior of script libraries [ID 43673]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
 

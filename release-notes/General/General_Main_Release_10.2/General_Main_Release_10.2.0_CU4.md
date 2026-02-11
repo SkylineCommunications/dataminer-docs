@@ -232,7 +232,7 @@ When you paused a replay of a spectrum recording, in some cases, it would no lon
 
 A number of issues were solved related to how DataMiner executes prerequisites as part of a DataMiner upgrade.
 
-#### automation scripts would incorrectly succeed even when uploading a report had failed \[ID 33368\]
+#### Automation scripts would incorrectly succeed even when uploading a report had failed \[ID 33368\]
 
 When, in an automation script, you had configured an action that uploads a report to a shared folder or FTP, up to now, the script would still succeed even when it had not been able to copy the generated report to the remote location (shared folder or FTP). From now on, when a script is not able to copy a report to a remote location, it will fail.
 
@@ -276,7 +276,7 @@ A number of alarm-related issues have been fixed:
 
 When an automation script was launch from the Dashboards app or from a custom web app, in some cases, the range limits of a numeric IBlockDefinition would be ignored when you clicked the Up or Down button.
 
-#### automation scripts: Problem with processor directives \[ID 33424\]
+#### Automation scripts: Problem with processor directives \[ID 33424\]
 
 Up to now, the following preprocessor directives would incorrectly be inserted into the automation script code, causing syntax errors to appear on the incorrect lines.
 

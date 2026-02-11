@@ -32,7 +32,7 @@ A new BPA test named "Large Alarm Trees" is now available. This test will retrie
 
 The BPA test is available in System Center on the *Agents > BPA* tab.
 
-#### automation scripts: New Interactivity tag [ID 42954]
+#### Automation scripts: New Interactivity tag [ID 42954]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 

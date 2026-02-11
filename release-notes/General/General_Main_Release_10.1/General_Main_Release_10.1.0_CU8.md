@@ -100,7 +100,7 @@ When, in the Alarm Console, you add a new history or sliding window tab page, yo
 
 From now on, when the alarm filter contains one of the above-mentioned items, the *Count alarms* button will not be available.
 
-#### automation scripts: SLAnalyticsTypes.dll added to the list of default DLL references \[ID 30821\]
+#### Automation scripts: SLAnalyticsTypes.dll added to the list of default DLL references \[ID 30821\]
 
 All automation scripts will now by default have a reference to the SLAnalyticsTypes.dll file.
 

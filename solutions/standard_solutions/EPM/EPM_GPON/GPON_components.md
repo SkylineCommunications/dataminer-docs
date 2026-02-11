@@ -42,7 +42,7 @@ To take full advantage of the aggregation and topology capabilities of an EPM xP
 
 This could be a database, a CRM, another data stream, local files (CSV or JSON), etc. To determine the effort to include such data sources in your system, contact the Skyline Sales team.
 
-## automation scripts
+## Automation scripts
 
 The xPON EPM Solution uses the following automation scripts:
 

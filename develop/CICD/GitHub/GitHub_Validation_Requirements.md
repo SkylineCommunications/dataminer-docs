@@ -18,6 +18,6 @@ The workflow [DataMiner CI/CD NuGet solution](xref:github_reusable_workflows_nug
 
 The Visual Studio solution should also only consist of SDK-style projects.
 
-## automation script workflow
+## Automation script workflow
 
 The workflow [DataMiner CI/CD automation script](xref:github_reusable_workflows_automation_master_workflow) has a validation step "Validate NuGet Package Configuration". This will check if none of the projects use the packages.config package management format. All tools only support the PackageReference package management format. For more information, see [Consuming NuGet packages](xref:Consuming_NuGet).

@@ -10,7 +10,7 @@ Based on the rules set by the user, DataMiner Correlation can create correlated 
 
 ![Correlation engine concept](~/dataminer/images/correlation_engine_conceptv2.jpg)
 
-## correlation rules: basic concept
+## Correlation rules: basic concept
 
 Each of the correlation rules in the knowledge base consists of:
 

@@ -36,7 +36,7 @@ The QAM Channel and OFDM Channel dashboards now use a trend component instead of
 
 An improvement has been implemented to the way data is retrieved in the interface tables for the Harmonic CableOS connector, resulting in more reliable and consistent bitrate calculations. The utilization percentages calculations and error rates calculations have also been updated.
 
-#### automation scripts placed in dedicated folder during deployment [ID 39922]
+#### Automation scripts placed in dedicated folder during deployment [ID 39922]
 
 When the EPM package is deployed, all its automation scripts are now placed in an I-DOCSIS folder instead of at the root level of the Automation module.
 

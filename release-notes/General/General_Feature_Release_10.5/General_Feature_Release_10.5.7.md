@@ -72,7 +72,7 @@ Format of an AutomationScriptHashInfo object: `Script Name;LastUpdate;Calculated
 
 Example: `Automation script;638786700548555379;48bcb02e89875979c680d936ec19ad5e9697f7ed73498fd061aecb73e7097497`
 
-#### automation scripts: Generating information events when editing a connection in a QAction [ID 42783]
+#### Automation scripts: Generating information events when editing a connection in a QAction [ID 42783]
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 

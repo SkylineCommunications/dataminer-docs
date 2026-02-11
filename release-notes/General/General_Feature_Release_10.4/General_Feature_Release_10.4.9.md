@@ -184,7 +184,7 @@ When, in the scope of behavioral anomaly detection, proactive cap detection or p
 
 From now on, when a client connects to the DataMiner System, an attempt will first be made to connect to the NATs bus via the local NATS node. Only when this attempt fails, will the client connect to the NATS bus via another node.
 
-#### automation scripts: Resources can now be retrieved page by page [ID 39743]
+#### Automation scripts: Resources can now be retrieved page by page [ID 39743]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
@@ -591,7 +591,7 @@ From now on, the *Connect to cloud/DCP* user permission is no longer required to
 
 Whenever the MessageBroker client loses its connection to the NATS server, it will try to reconnect. Because of an internal issue, up to now, this reconnection mechanism could cause the overall CPU load to increase. This issue has now been fixed.
 
-#### automation scripts could fail due to zero or negative sleep intervals being passed to Engine.Sleep [ID 40084]
+#### Automation scripts could fail due to zero or negative sleep intervals being passed to Engine.Sleep [ID 40084]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 

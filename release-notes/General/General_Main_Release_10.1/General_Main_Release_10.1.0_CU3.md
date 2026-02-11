@@ -129,7 +129,7 @@ DataMiner now supports the use of NotRegex filters in Elasticsearch.
 
 On DataMiner startup and hourly at report generation, a batch of notifications gets forwarded between DataMiner modules, ending up on the SLNetCOM Notification Stack. Up to now, two such notifications were also forwarded for every DVE element. These will now no longer be sent.
 
-#### automation scripts: #define ALARM_SQUASHING \[ID 29613\]
+#### Automation scripts: #define ALARM_SQUASHING \[ID 29613\]
 
 The preprocessor directive “#define ALARM_SQUASHING” will now automatically be added to each C# block of an automation script.
 

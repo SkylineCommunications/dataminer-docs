@@ -442,7 +442,7 @@ Up to now, when a limit was set on the result set of queries that retrieve DOM i
 
 SLNet will now cache [ApiToken](xref:UD_APIs_Objects_ApiToken) and [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) objects. This will enhance the overall performance of the API requests.
 
-#### automation scripts: Resources can now be retrieved page by page [ID 39743]
+#### Automation scripts: Resources can now be retrieved page by page [ID 39743]
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 

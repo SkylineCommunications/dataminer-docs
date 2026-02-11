@@ -10,7 +10,7 @@ At the moment only one system connector is supported and required:
 
 - [Vecima RPM](https://catalog.dataminer.services/details/7c9f527a-f11a-4ad8-a940-501297a0a865)
 
-## automation scripts
+## Automation scripts
 
 The Remote PHY Monitoring Solution uses the following Automation script:
 

@@ -36,7 +36,7 @@ In the naming conventions, references will be made to the following abbreviation
 
 ## Naming conventions per component
 
-### automation script
+### Automation script
 
 Generic automation scripts and automation scripts that are used in solutions should have a name in the following format, where *[TYPE]* is the type of the script as defined in [Github repository naming convention](xref:Using_GitHub_for_CICD#repository-naming-convention): `[SOLCODE]-[TYPE]-[name]`
 
@@ -65,7 +65,7 @@ For the name of the ad hoc data source as shown in the DataMiner web apps, use t
 
 For the name of the automation script used for an ad hoc data source, see [Automation script](#automation-script).
 
-### correlation rule
+### Correlation rule
 
 correlation rules should have a name in the following format: `[SOLCODE] [name]`
 

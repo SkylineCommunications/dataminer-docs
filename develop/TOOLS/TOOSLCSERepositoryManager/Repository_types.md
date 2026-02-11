@@ -41,7 +41,7 @@ This tab lists repositories that contain a function.
 
 Changes made to a function repository trigger the corresponding [functions CI/CD pipeline](xref:Pipeline_stages_for_functions).
 
-## automation scripts
+## Automation scripts
 
 This tab lists repositories that contain an automation script solution, which might consist of one or multiple automation scripts.
 

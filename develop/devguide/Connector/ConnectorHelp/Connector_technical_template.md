@@ -91,7 +91,7 @@ The web interface is only accessible when the client machine has network access 
 
 [If any automation scripts need to be configured, indicate this in this section. Otherwise, this section can be removed.]
 
-### correlation rules
+### Correlation rules
 
 [If any correlation rules need to be configured, indicate this in this section. Otherwise, this section can be removed.]
 

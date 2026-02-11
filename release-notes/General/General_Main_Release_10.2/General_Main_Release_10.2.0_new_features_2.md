@@ -547,7 +547,7 @@ The following information will be added to the information events.
 
 - When DataMiner intervenes in the switching process, an information event with parameter description “Linked to” is generated. From now on, this event will also mention the element from which the switch occurred. It will now contain e.g. “RDG1, Unlinked from RDG3” instead of just “RDG1”.
 
-##### automation scripts
+##### Automation scripts
 
 When an automation script is triggered as part of an redundancy group action, that script will now have the following additional parameters. These can then be requested from within the automation script using the GetScriptParam(\<id>) method on the engine object.
 

@@ -701,7 +701,7 @@ From now on, when the alarm filter contains one of the above-mentioned items, th
 
 Due to a number of enhancements, overall performance has increased when retrieving large amounts of data via managed DataMiner modules like SLManagedAutomation or SLManagedScripting.
 
-#### automation scripts: SLAnalyticsTypes.dll added to the list of default DLL references [ID 30821]
+#### Automation scripts: SLAnalyticsTypes.dll added to the list of default DLL references [ID 30821]
 
 All automation scripts will now by default have a reference to the SLAnalyticsTypes.dll file.
 
