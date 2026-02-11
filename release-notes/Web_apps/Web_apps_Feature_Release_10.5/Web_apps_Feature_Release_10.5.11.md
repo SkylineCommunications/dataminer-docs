@@ -96,7 +96,7 @@ When a user applies changes to a DOM module, that module will reinitialize itsel
 > - This app only works in conjunction with DataMiner Agents running at least Main Release version 10.6.0 or Feature Release version 10.5.10.
 > - This app is only accessible to users with the following user permission: *Modules > System configuration > Object Manager > Module settings*.
 > - In DataMiner Cube, this app can be accessed via *System Center > DOM*.
-> - You can embed this app in a low-code app by specifying a URL like `https://<DMA IP or hostname>/dom/#/?embed=true` in a *Web* component. Also, when you embed this app in a low-code app, you can make it show specific DOM modules by adding the IDs of those modules in the URL. See the following example: `https://<DMA IP or hostname>/dom/#/?embed=true&moduleIds=myDomModule1,myDomModule2,myDomModule3`.
+> - You can embed this app in a low-code app by specifying a URL like `https://<DMA IP or hostname>/dom/#/?embed=true` in a web component. Also, when you embed this app in a low-code app, you can make it show specific DOM modules by adding the IDs of those modules in the URL. See the following example: `https://<DMA IP or hostname>/dom/#/?embed=true&moduleIds=myDomModule1,myDomModule2,myDomModule3`.
 
 See also: [DataMiner Object Models: Definition-level security [ID 43380] [ID 43589]](xref:General_Feature_Release_10.5.10#dataminer-object-models-definition-level-security-id-43380-id-43589)
 
@@ -112,7 +112,7 @@ Debug build of an extension library can be created using either the Automation m
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
-When creating a template for the *Timeline* component, it is now possible to anchor rectangular shapes (i.e. layers of type *Rectangle*) to the sides of the component and to lock shape dimension settings to the virtual bounds of the component.
+When creating a template for the timeline component, it is now possible to anchor rectangular shapes (i.e. layers of type *Rectangle*) to the sides of the component and to lock shape dimension settings to the virtual bounds of the component.
 
 ##### Anchoring
 
@@ -173,7 +173,7 @@ New extension libraries will now be detected asynchronously. Also, when a new ve
 
 From now on, map lines can be colored by specifying a color condition in the query filter.
 
-- When a color condition is specified in the query filter, any conditional coloring configured in the *Layout* pane of the *Maps* component will be disregarded until the query filter is removed.
+- When a color condition is specified in the query filter, any conditional coloring configured in the *Layout* pane of the maps component will be disregarded until the query filter is removed.
 
 - If the query filter contains multiple color conditions, only the first color condition will be applied. Because a line can only have one color, all other color conditions will be disregarded.
 
@@ -181,7 +181,7 @@ From now on, map lines can be colored by specifying a color condition in the que
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
-A number of enhancements have been made to the default selection behavior of the *Grid* component.
+A number of enhancements have been made to the default selection behavior of the grid component.
 
 When, after a reload, no items are selected (because none were selected before the reload or because the items selected before the reload are no longer displayed), from now on, the *Select first item by default* setting will be applied.
 
@@ -189,26 +189,26 @@ When, after a reload, no items are selected (because none were selected before t
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
-In the configuration settings of a *Table* component, up to now, templates for columns that had been removed would be named "Old column". From now on, they will be named "Unknown column" instead.
+In the configuration settings of a table component, up to now, templates for columns that had been removed would be named "Old column". From now on, they will be named "Unknown column" instead.
 
-In the configuration settings of a *Maps* component, up to now, settings for markers or lines that had been removed would be named "Old query". From now on, they will be named either "Unknown marker" or "Unknown line" instead.
+In the configuration settings of a maps component, up to now, settings for markers or lines that had been removed would be named "Old query". From now on, they will be named either "Unknown marker" or "Unknown line" instead.
 
 #### Low-Code Apps: 'Clear selection' component action now available in more components [ID 43635]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
-Up to now, the *Clear selection* component action could only be configured for the *Table* and *Node edge graph* components. From now on, it will also be possible to configure this component action for the following components:
+Up to now, the *Clear selection* component action could only be configured for the table and node edge graph components. From now on, it will also be possible to configure this component action for the following components:
 
-- *Dropdown*
-- *Grid*
+- dropdown
+- grid
 - *List*
-- *Maps*
-- *State* (for queries and tables only)
-- *Timeline*
-- *Tree*
+- maps
+- state (for queries and tables only)
+- timeline
+- tree
 
 > [!NOTE]
-> The *Dropdown* component will not clear the selection when its *Clear selection* option is disabled.
+> The dropdown component will not clear the selection when its *Clear selection* option is disabled.
 
 #### Dashboards/Low-Code Apps: Default number of columns on dashboards and low-code app pages has been increased to 50 [ID 43655]
 
@@ -312,9 +312,9 @@ From now on, when you open the *About* box on a mobile device, the versions will
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
-As soon as at least two templates are being used by *Grid*, *Maps*, *Table* or *Timeline* components on a dashboard or low-code app, the *Browse templates* button allows you to open a window in which you can import a template from another component to override the template of the component you are configuring.
+As soon as at least two templates are being used by grid, maps, table or timeline components on a dashboard or low-code app, the *Browse templates* button allows you to open a window in which you can import a template from another component to override the template of the component you are configuring.
 
-Up to now, the *Grid*, *Maps*, *Table* or *Timeline* components listed in that window would incorrectly always be identified by their component ID (e.g. "Table 2"), even if their *Configuration name* setting contained a custom component name.
+Up to now, the grid, maps, table or timeline components listed in that window would incorrectly always be identified by their component ID (e.g. "Table 2"), even if their *Configuration name* setting contained a custom component name.
 
 #### Low-Code Apps - Execute component action: Custom component names were not displayed correctly when they had just been updated [ID 43710]
 
@@ -332,7 +332,7 @@ When you generated an email report of a dashboard that contained a trend graph w
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
-When, after adding a GQI data source to a *Maps* component, you switched from markers to lines while the marker configuration section was open, a number of runtime errors would be thrown.
+When, after adding a GQI data source to a maps component, you switched from markers to lines while the marker configuration section was open, a number of runtime errors would be thrown.
 
 #### GQI DxM: Responses on SLNet requests from a GQI DxM extension instance would incorrectly stay in memory until that instance was destroyed [ID 43738]
 
@@ -374,4 +374,4 @@ To use the redesigned components, add the following argument to the URL of the d
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
-When a button on a *Button panel* component was set to its "Enabled" state, it would incorrectly start to flicker.
+When a button on a button panel component was set to its "Enabled" state, it would incorrectly start to flicker.

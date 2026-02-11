@@ -486,7 +486,7 @@ When you right-click a column header of a data table component (e.g. a GQI table
 
 - To sort by the column in question, select a sort order (e.g. A \> Z, Z \> A, etc.).
 
-- To group by the column in question, select *Group*.
+- To group by the column in question, select group.
 
 - To filter the data in the table, construct a single or composite condition depending on the column type:
 
@@ -574,12 +574,12 @@ An EPM feed can now be used to feed EPM identifiers to a parameter feed.
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
-The *Parameter table* component of dashboards and low-code apps has now been adjusted to be more like that generic *Table* component. In addition to improving consistency between these components, this also makes the *Parameter table* component more user-friendly:
+The parameter table component of dashboards and low-code apps has now been adjusted to be more like that generic table component. In addition to improving consistency between these components, this also makes the parameter table component more user-friendly:
 
 - The horizontal scrollbar is now permanently displayed, while previously you had to scroll all the way to the bottom of the table to see it.
 - The table will load more easily, improving performance of the dashboard or app especially with large tables.
 
-Moreover, the additional features of the *Table* component will now also be available for the *Parameter table* component:
+Moreover, the additional features of the table component will now also be available for the parameter table component:
 
 - Grouping on one or multiple columns.
 - Sorting based on multiple columns.
@@ -589,7 +589,7 @@ Moreover, the additional features of the *Table* component will now also be avai
 - Dragging and dropping columns to change the column order.
 
 > [!NOTE]
-> This change does not affect the *Parameter table* component as viewed on mobile devices.
+> This change does not affect the parameter table component as viewed on mobile devices.
 
 #### GQI: columnInfo object of data source columns of type 'discrete' will now contain the possible values [ID 34179]
 
@@ -623,11 +623,11 @@ Using an EPM feed, it is now possible to link *System Name* and *System Type* to
 
 When you configure a column filter for a Table component in a dashboard or low-code app, you can now select checkboxes to filter on discrete values.
 
-#### GQI: Using GQI query columns to filter a 'State' component [ID 34235]
+#### GQI: Using GQI query columns to filter a State component [ID 34235]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
-It is now possible to use GQI query columns to filter a *State* component.
+It is now possible to use GQI query columns to filter a state component.
 
 #### GQI: Query columns of type 'string' can now be filtered using 'Equals' and 'NotEquals' [ID 34246]
 
@@ -707,7 +707,7 @@ A new *IsActive* column has been added to *Get alarms* data source. This column 
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-When, in the Dashboards app or a low-code app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that feeds data to the component. This way sorting is done server-side, which will improve performance.
+When, in the Dashboards app or a low-code app, you apply multiple sort orders in a table component, multiple sort operators will now be appended to the GQI query that feeds data to the component. This way sorting is done server-side, which will improve performance.
 
 #### Dashboards app: Parameter feeds that list EPM parameters now allow items to be preselected [ID 34554] [ID 34588]
 

@@ -98,7 +98,7 @@ public class Script
 
 A new *Search input* component is now available.
 
-It is identical to the *Text input* component, but allows users to clear its contents by clicking the *X*.
+It is identical to the text input component, but allows users to clear its contents by clicking the *X*.
 
 #### Low-Code Apps: New 'On close' page event [ID 39604] [ID 39682]
 
@@ -156,7 +156,7 @@ Because of a number of enhancements, overall performance has increased when upda
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
-Both the *Grid* and the *Timeline* component no longer have a "New" label.
+Both the grid and the timeline component no longer have a "New" label.
 
 #### Low-Code Apps: Duplicate page name check will now be case insensitive [ID 39511]
 
@@ -170,9 +170,9 @@ Also, a case-insensitive duplicate panel name check has now been added, and lead
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
-A number of enhancements have been made to the *Line & area chart* component:
+A number of enhancements have been made to the line & area chart component:
 
-- Axis labels showing time data are now fully aligned with the *Timeline* component. The first label will now always include the day, the month and the year.
+- Axis labels showing time data are now fully aligned with the timeline component. The first label will now always include the day, the month and the year.
 
 - The Y axis now has a dynamic range. Its minimum and maximum values will change according to the visible data.
 
@@ -207,7 +207,7 @@ Because of a number of enhancements with regard to subscription reuse and WebSoc
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
-When you tried to use a *Maps* component with an unsupported provider, in some cases, the `Map type not supported` error would incorrectly not be displayed. Instead, the component would stay empty.
+When you tried to use a maps component with an unsupported provider, in some cases, the `Map type not supported` error would incorrectly not be displayed. Instead, the component would stay empty.
 
 #### Data Aggregator DxM would incorrectly not be able to run a GQI query that used Regexmatch column manipulation methods [ID 39540]
 
@@ -249,9 +249,9 @@ In some cases, a *Line and area chart* component would incorrectly show null val
 
 <!-- MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
 
-Up to now, when a DOM instance was in the initial state, did not have any history, and had a definition that contained a loop from "initial" back to "initial", the *Stepper* component would show an incorrect state.
+Up to now, when a DOM instance was in the initial state, did not have any history, and had a definition that contained a loop from "initial" back to "initial", the stepper component would show an incorrect state.
 
-From now on, the *Stepper* component will no longer try and guess the history of a DOM instance in the initial state when no history is available.
+From now on, the stepper component will no longer try and guess the history of a DOM instance in the initial state when no history is available.
 
 #### Dashboards app & Low-Code Apps - Table component: Problem with references to query columns specified in table templates after migrating a dashboard or app [ID 39730]
 

@@ -113,7 +113,7 @@ When SLLogCollector takes memory dumps, it stores them in a temporary folder bef
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-In some cases, the *Stepper* component would not apply the correct theme color.
+In some cases, the stepper component would not apply the correct theme color.
 
 #### DataMiner Cube - Trend templates: Offload settings would be lost when you disabled to 'Allow Offload Database Configuration' option [ID 37268]
 

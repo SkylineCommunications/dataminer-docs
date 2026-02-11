@@ -48,7 +48,7 @@ When an interactive Automation script was launched from a node edge graph or a c
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-After a dashboard or a low-code app had been migrated from DataMiner server version 10.3.8 to DataMiner server version 10.3.9 or later,feed links defined in the *Web* component, the *Text* component or the *Navigate to a URL* action would no longer work.
+After a dashboard or a low-code app had been migrated from DataMiner server version 10.3.8 to DataMiner server version 10.3.9 or later,feed links defined in the web component, the text component or the *Navigate to a URL* action would no longer work.
 
 #### Low-Code Apps: Problem when executing an 'Opening an app' action in which no app had been specified [ID 39785]
 
@@ -62,19 +62,19 @@ From now on, when an incorrectly configured action is detected, it will no longe
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-When a *Form* component on a dashboard or in a low-code app had to show the same data to multiple users, in some rare cases, an error could occur in the web APIs, causing the component to not show any data at all.
+When a form component on a dashboard or in a low-code app had to show the same data to multiple users, in some rare cases, an error could occur in the web APIs, causing the component to not show any data at all.
 
 #### Low-Code Apps: Form component not able to create instances [ID 39808]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-In some cases, a *Form* component would not be able to create instances when the behavior definition contained fields with default values that were not linked to the initial state.
+In some cases, a form component would not be able to create instances when the behavior definition contained fields with default values that were not linked to the initial state.
 
 #### Dashboards app & Low-Code Apps: Problems when configuring a Node edge graph component [ID 39821]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-In some cases, a runtime error could occur when configuring a *Node edge graph* component.
+In some cases, a runtime error could occur when configuring a node edge graph component.
 
 #### Dashboards app - Column & bar chart component: Chart and legend would show different colors after removing a bar [ID 39847]
 
@@ -86,7 +86,7 @@ When, in edit mode, you removed a bar from a *Colum & bar chart* component, in s
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-When you changed a value in the layer settings of a *Maps* component, all settings would be reloaded and the text box containing the value you changed would go out of bounds.
+When you changed a value in the layer settings of a maps component, all settings would be reloaded and the text box containing the value you changed would go out of bounds.
 
 #### Dashboards app: Problem when updating the name of a dashboard folder while a dashboard was open [ID 39873]
 

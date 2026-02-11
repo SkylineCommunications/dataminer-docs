@@ -72,13 +72,13 @@ A variable has the following properties:
 
 Variables of a certain type can be used wherever you can use that specific type. You can drop a variable onto a component, link it in a query, use it in a flow, etc.
 
-Variables of type *Table* are static tables that can have up to 20 columns and/or 100 rows. In these tables, cells can contain the following types of data: Text, Number and Boolean. Also, users can specify a display value for each cell.
+Variables of type table are static tables that can have up to 20 columns and/or 100 rows. In these tables, cells can contain the following types of data: Text, Number and Boolean. Also, users can specify a display value for each cell.
 
-#### Dashboards/Low-Code Apps: 'Dropdown', 'Tree' and 'List' components are now also able to show table data [ID 41161]
+#### Dashboards/Low-Code Apps: Dropdown, Tree and 'List' components are now also able to show table data [ID 41161]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-*Dropdown*, *Tree* and *List* components are now also able to show table data. This means that you will now be able to drop both queries or tables on top of them.
+Dropdown, tree and *List* components are now also able to show table data. This means that you will now be able to drop both queries or tables on top of them.
 
 - If you add a single table/query, the component will show the individual rows as entries. Selecting an entry will expose the entire row.
 - If you add multiple tables/queries, the component will show the list of tables/queries. Selecting an entry will expose the entire table (in case of table data) or the query (in case of query data).
@@ -153,7 +153,7 @@ When you open the *Version history* pane of a low-code app, it will now also dis
 
 The Monitoring app is now fully compatible with the new alarms IDs that will be used on systems with Swarming enabled.
 
-#### Dashboards/Low-Code Apps: Data type 'String' and 'Query row' have been renamed to 'Text' and 'Table' [ID 41075]
+#### Dashboards/Low-Code Apps: Data type 'String' and 'Query row' have been renamed to Text and Table [ID 41075]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
@@ -260,7 +260,7 @@ From now on, arguments of ad hoc data sources will be allowed to have an empty s
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-When parameter data was loaded into a *State* component, the dashboard could get stuck in an infinite loop.
+When parameter data was loaded into a state component, the dashboard could get stuck in an infinite loop.
 
 #### Legacy Reports & Dashboards app: No longer logged in automatically when being logged in to another web app [ID 40989]
 
@@ -272,7 +272,7 @@ When, on a system that was not using automatic Windows authentication, you were 
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-Since DataMiner feature version 10.4.9, a *Generic map* component would no longer be able to render maps of which the `AppVersion` property was set to 1 in the `C:\Skyline DataMiner\Maps\ServerConfig.xml` file.
+Since DataMiner feature version 10.4.9, a generic map component would no longer be able to render maps of which the `AppVersion` property was set to 1 in the `C:\Skyline DataMiner\Maps\ServerConfig.xml` file.
 
 Example:
 
@@ -329,7 +329,7 @@ When you removed either the only or the last query from a Table component, the l
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-When you added an *Open monitoring card* action to a *Node edge graph* component, an error would occur.
+When you added an *Open monitoring card* action to a node edge graph component, an error would occur.
 
 #### Dashboards/Low-Code Apps - Maps component: Markers would be removed when panning or zooming out while map data was being retrieved [ID 41125]
 
@@ -353,7 +353,7 @@ When none of the components defined in an interactive Automation script had an i
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-The *Web* component would no longer detect that the URL had changed. As a result, the component would go blank instead of showing the expected web page.
+The web component would no longer detect that the URL had changed. As a result, the component would go blank instead of showing the expected web page.
 
 #### Dashboards/Low-Code Apps - Table component: Users would incorrectly be able to select rows while the data was being loaded [ID 41186]
 
@@ -371,7 +371,7 @@ During the migration of a low-code app that was created before the introduction 
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-While all GQI components (i.e. *Table*, *Grid*, *Maps*, *State*, *Column & bar chart*, *Pie & donut chart*, *Line & area chart*, *Node edge graph*)allowed you to drop tables onto them as data, up to now, they would not fully support those static tables.
+While all GQI components (i.e. Table, grid, maps, state, *Column & bar chart*, *Pie & donut chart*, line & area chart, node edge graph)allowed you to drop tables onto them as data, up to now, they would not fully support those static tables.
 
 In many cases, a component would not be able to properly visualize the table. Also, users would not be able to properly configure the component settings.
 
@@ -399,7 +399,7 @@ When you created, updated or deleted a low-code app, this would incorrectly not 
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
-The default margin of a *Web* component in which *Type* was set to "Custom HTML" would incorrectly no longer be 0px. This would cause scrollbars to appear.
+The default margin of a web component in which *Type* was set to "Custom HTML" would incorrectly no longer be 0px. This would cause scrollbars to appear.
 
 #### Dashboards app: Problem when running a GQI query multiple times in quick succession [ID 41246]
 
@@ -411,17 +411,17 @@ When a GQI query was run multiple times in quick succession, in some cases, a `S
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
-When the value of a parameter selected in another component (e.g. a *Gauge* or a *Ring* component) was fed to a *Line & area chart* component that was linked to a *Time range* component, in some cases, the *Line & area chart* component would not show any data.
+When the value of a parameter selected in another component (e.g. a gauge or a ring component) was fed to a line & area chart component that was linked to a *Time range* component, in some cases, the line & area chart component would not show any data.
 
 #### Monitoring/Dashboards/Low-Code Apps - Line & area chart component: Changes would not always be detected and processed properly [ID 41470]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 [CU0] -->
 
-Up to now, in some cases, changes made to a *Line & area chart* component would not be reflected corrected in the UI. This could lead to the following problems:
+Up to now, in some cases, changes made to a line & area chart component would not be reflected corrected in the UI. This could lead to the following problems:
 
 - Trend cards in the *Monitoring* app would be empty or would not update properly.
 - Trend cards in the *Monitoring* app would not use the proper *Monitoring* app color as trend line color.
-- Data changes in dashboards would not always be applied in *Line & area chart* components:
+- Data changes in dashboards would not always be applied in line & area chart components:
 
   - Time ranges would not always be applied correctly.
   - The trend lines would not always correctly reflect the actual trend of a parameter.

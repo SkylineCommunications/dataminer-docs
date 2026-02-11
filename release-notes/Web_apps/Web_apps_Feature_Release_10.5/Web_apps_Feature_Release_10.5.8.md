@@ -16,7 +16,7 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-#### Interactive Automation scripts: Filtering values in a redesigned UI component 'DropDown' [ID 42845]
+#### Interactive Automation scripts: Filtering values in a redesigned UI component Dropdown [ID 42845]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
@@ -75,7 +75,7 @@ if (results.WasOnFilter("DropDownVariable"))
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-In a low-code app, a *Trigger* component can now be controlled via the following actions:
+In a low-code app, a trigger component can now be controlled via the following actions:
 
 | Action | Description |
 |--------|-------------|
@@ -139,7 +139,7 @@ In the template editor, for all types of layers, the color picker now allow you 
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-A number of minor visual enhancements have been made to the *Timeline* component:
+A number of minor visual enhancements have been made to the timeline component:
 
 - The timeline's segment lines have been made a bit less transparent, and should now stand out more. Also, the background shading of the timeline groups has been removed.
 
@@ -183,7 +183,7 @@ When the `UIBlockType.Time` component had a time range configured in the Automat
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-When, in a *Line & area chart* component, you had changed the name of the Y axis, up to now, that name change would incorrectly only be propagated to other Y axis settings after you had moved the mouse pointer. From now on, the change will get propagated immediately.
+When, in a line & area chart component, you had changed the name of the Y axis, up to now, that name change would incorrectly only be propagated to other Y axis settings after you had moved the mouse pointer. From now on, the change will get propagated immediately.
 
 #### Low-Code Apps: Components used in a low-code app could cause a user's web browser to leak memory [ID 42955]
 
@@ -227,7 +227,7 @@ When the *app.config.json* file of a published app did not contain an ID, up to 
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-When a query was processed by the GQI DxM, the result set of the query would contain incorrect column statistics for boolean columns, causing those columns to not be filterable in *Query filter* components.
+When a query was processed by the GQI DxM, the result set of the query would contain incorrect column statistics for boolean columns, causing those columns to not be filterable in query filter components.
 
 #### GQI DxM: Problem when setting up an SLNet connection for a GQI query to be executed without user context [ID 43128]
 
@@ -243,7 +243,7 @@ From now on, when such an SLNet connection has to be set up, the GQI DxM will se
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-When, in the *Timeline* component, you clicked *Lock timeline to now*, the default timezone configured in the `C:\Skyline DataMiner\users\ClientSettings.json` file would incorrectly not be taken into account, causing the timeline items to shift to UTC time.
+When, in the timeline component, you clicked *Lock timeline to now*, the default timezone configured in the `C:\Skyline DataMiner\users\ClientSettings.json` file would incorrectly not be taken into account, causing the timeline items to shift to UTC time.
 
 The same issue would occur when you double-clicked the left mouse button while holding the CTRL key pressed.
 
@@ -269,7 +269,7 @@ In some cases, the *Fetch the data* action would incorrectly reuse a cached quer
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-When a *State*, *Node edge graph*, *Maps* or *Grid* component was configured to visualize table data, the following issues could occur when the component was loaded:
+When a state, node edge graph, maps or grid component was configured to visualize table data, the following issues could occur when the component was loaded:
 
 - Data selection instructions in the URL would not be applied.
 - If supported by the component, any option to select the first item by default would not be applied

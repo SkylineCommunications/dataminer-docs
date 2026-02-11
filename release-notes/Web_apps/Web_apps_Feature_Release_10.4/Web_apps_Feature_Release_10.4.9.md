@@ -36,7 +36,7 @@ In the settings of the component, you can also opt to have the component either 
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-It is now possible to configure a *Set value* action for a *Numeric input*, *Text input* or *Search input* component.
+It is now possible to configure a *Set value* action for a numeric input, text input or *Search input* component.
 
 This action will allow users to set the current value of the component in question to either a static value or a feed.
 
@@ -157,17 +157,17 @@ When, in a interactive Automation script launched from a dashboard or a low-code
 
 When, on a mobile device, you entered your credentials on the authentication page of a DataMiner web app and pressed ENTER, you would incorrectly not be logged in. Instead, the authentication page would simply refresh.
 
-#### Dashboards app & Low-Code Apps: Parameters dataset would not include any parameters of type 'Button' when filtered by protocol [ID 39973]
+#### Dashboards app & Low-Code Apps: Parameters dataset would not include any parameters of type Button when filtered by protocol [ID 39973]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-When, in the *Parameters* dataset, you filtered by protocol, the parameters list would incorrectly not include any parameters of type "Button".
+When, in the *Parameters* dataset, you filtered by protocol, the parameters list would incorrectly not include any parameters of type button.
 
 #### Dashboards app & Low-Code Apps - Timeline component: Regional settings would not be taken into account [ID 39987]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-When positioning items, the *Timeline* component would incorrectly not take into account the regional settings (e.g. time zone) specified in the `C:\Skyline DataMiner\users\ClientSettings.json` file.
+When positioning items, the timeline component would incorrectly not take into account the regional settings (e.g. time zone) specified in the `C:\Skyline DataMiner\users\ClientSettings.json` file.
 
 #### Dashboards app & Low-Code Apps - Table component: Problem when grouping an empty table by a column [ID 40012]
 
@@ -233,7 +233,7 @@ When you used the search box to apply a general filter across a table, up to now
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-When a query used as a "start from" query was linked to a feed and a *Trigger* component, in some cases, feed updates would no longer update the query once the Trigger component had been triggered.
+When a query used as a "start from" query was linked to a feed and a trigger component, in some cases, feed updates would no longer update the query once the Trigger component had been triggered.
 
 #### Web API - GQI: Query version would incorrectly not be equal to the GQI version after a migration [ID 40216]
 
@@ -271,7 +271,7 @@ When data was being loading into a table component of which the appearance of a 
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-When you shared a dashboard as a PDF report, *State* components would not be rendered correctly when you had not selected the *Stack components* option.
+When you shared a dashboard as a PDF report, state components would not be rendered correctly when you had not selected the *Stack components* option.
 
 Also, when you shared a dashboard as a PDF report, component templates containing text boxes would not be rendered correctly.
 
@@ -285,13 +285,13 @@ When an app threw an error, that error would be serialized to invalid JSON. As a
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-Due to a memory leak in the *State* component, parameter subscriptions would incorrectly not be closed.
+Due to a memory leak in the state component, parameter subscriptions would incorrectly not be closed.
 
 #### Dashboards app & Low-Code Apps - Dropdown component: Problem with 'Select first item by default' option [ID 40362]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-When a *Dropdown* component had its *Select first item by default* option selected, the first item would incorrectly not get selected when the items in that component depended on another *Dropdown* component in which the first item was selected.
+When a dropdown component had its *Select first item by default* option selected, the first item would incorrectly not get selected when the items in that component depended on another dropdown component in which the first item was selected.
 
 #### Monitoring app: 'Connection has been interrupted' message would not disappear when the connection was restored [ID 40364]
 

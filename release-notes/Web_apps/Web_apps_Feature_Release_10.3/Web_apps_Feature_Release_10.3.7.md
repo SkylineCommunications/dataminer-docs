@@ -20,7 +20,7 @@ uid: Web_apps_Feature_Release_10.3.7
 
 In an interactive Automation script launched from a dashboard or a low-code app, you can now use *DownloadButton* components. These components allow you to add download buttons that will enable users to download a specified file from the server.
 
-To add a *DownloadButton* component to an interactive Automation script, create a *UIBlockDefinition* and set its *Type* property to "UIBlockType.DownloadButton". The button can be configured and styled in same way as a regular button component. For example, you can set the *Style* property to "Style.Button.CallToAction" and the *Text* property to "Download".
+To add a *DownloadButton* component to an interactive Automation script, create a *UIBlockDefinition* and set its *Type* property to "UIBlockType.DownloadButton". The button can be configured and styled in same way as a regular button component. For example, you can set the *Style* property to "Style.Button.CallToAction" and the text property to "Download".
 
 To configure the download properties, assign `AutomationDownloadButtonOptions` to the *ConfigOptions* property of the *UIBlockDefinition*.
 
@@ -132,7 +132,7 @@ From now on, when the user has edit permission, the message will only appear whe
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU4] - FR 10.3.7 -->
 
-Up to now, when a *State* component fed empty query rows, a visual replacement would be displayed. From now on, this will no longer be the case.
+Up to now, when a state component fed empty query rows, a visual replacement would be displayed. From now on, this will no longer be the case.
 
 ### Fixes
 
@@ -158,7 +158,7 @@ In the query builder, when a *Select* node was not in edit mode, its description
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
-In some cases, a *State* component would incorrectly not be cleared when its input feed was cleared.
+In some cases, a state component would incorrectly not be cleared when its input feed was cleared.
 
 #### Low-Code Apps: Table actions would incorrectly be executed before the rows were fed [ID 36263]
 

@@ -27,11 +27,11 @@ Previously, parameter table filter feeds were exclusively supported for dashboar
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-When configuring the nodes and edges of a *Node edge graph* component, you now have a number of additional options.
+When configuring the nodes and edges of a node edge graph component, you now have a number of additional options.
 
 ##### Nodes
 
-When configuring the nodes of a *Node edge graph* component, you can now configure the X and Y positions of those nodes. When, in the *Layout* tab, *Node positions* is set to "Linked as data", you can now set the following additional options:
+When configuring the nodes of a node edge graph component, you can now configure the X and Y positions of those nodes. When, in the *Layout* tab, *Node positions* is set to "Linked as data", you can now set the following additional options:
 
 - *X*: The query column containing the X positions of the nodes.
 - *Y*: The query column containing the Y positions of the nodes.
@@ -40,7 +40,7 @@ Also, apart from an icon, you can now make node shapes show a particular custom 
 
 ##### Nodes and/or edges
 
-When configuring the nodes and/or the edges of a *Node edge graph* component, you can now enable or disable the following options:
+When configuring the nodes and/or the edges of a node edge graph component, you can now enable or disable the following options:
 
 - *Enable tooltip*: When the URL option *showAdvancedSettings=true* is used, you can use this option to specify whether or not a tooltip should appear when you hover over a node/edge.
 
@@ -50,7 +50,7 @@ When configuring the nodes and/or the edges of a *Node edge graph* component, yo
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-When a *Line & area chart* component visualizes GQI data, it is now able to show multiple lines on multiple Y axes.
+When a line & area chart component visualizes GQI data, it is now able to show multiple lines on multiple Y axes.
 
 In the *Layout* tab, you can find the following settings to configure this:
 
@@ -86,7 +86,7 @@ In the *Layout* tab, you can find the following settings to configure this:
   - *Include Y labels*: Include/exclude the Y-axis labels (i.e. the name of the column containing the Y values).
   - *Include color*: Show a small indicator in front of the tooltip that indicates the color of the line.
 
-It is now also possible to pan and zoom inside a *Line & area chart* component:
+It is now also possible to pan and zoom inside a line & area chart component:
 
 - To zoom, scroll while keep the Ctrl key pressed (maximum 10,000 times).
 - To pan, drag while keeping the right mouse button pressed (Only works when zoomed in since the default viewport shows all the data).
@@ -128,13 +128,13 @@ From now on, when there are more than 100 values, a booking field will display t
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-From now on, a *Spectrum analyzer* component will indicate in a clearer way that it is busy loading.
+From now on, a spectrum analyzer component will indicate in a clearer way that it is busy loading.
 
 #### Dashboards app & Low-Code Apps - Alarm table component: Sliding window limits [ID 39484]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-When an *Alarm table* component is configured to show alarms in a sliding window, from now on, the sliding window size and refresh time are limited to a minimum of 1 minute and a maximum of 1 day.
+When an alarm table component is configured to show alarms in a sliding window, from now on, the sliding window size and refresh time are limited to a minimum of 1 minute and a maximum of 1 day.
 
 > [!NOTE]
 > When setting the size or the refresh rate of the sliding window, it will no longer be possible to specify a value in seconds or milliseconds.
@@ -183,9 +183,9 @@ When a *Time range* component had custom quick pick buttons configured, up to no
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-When a *Node edge graph* component contained multiple queries, including one that was linked to a feed, in some rare cases, the data would incorrectly get fetched multiple times.
+When a node edge graph component contained multiple queries, including one that was linked to a feed, in some rare cases, the data would incorrectly get fetched multiple times.
 
-Also, when a *Node edge graph* component was rendered for the first time, the edge arrows would incorrectly not appear.
+Also, when a node edge graph component was rendered for the first time, the edge arrows would incorrectly not appear.
 
 #### Dashboards app & Low-Code Apps - Line & area chart component: Problem when displaying trend data of aggregation parameters [ID 39300]
 
@@ -237,13 +237,13 @@ When you were editing an app that had already been published previously, the *Vi
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-When, in a *Table* component, you applied a filter while the data was still loading, a `No results for applied filter` message would appear.
+When, in a table component, you applied a filter while the data was still loading, a `No results for applied filter` message would appear.
 
 #### Dashboards app - Gauge component: Icon would have an incorrect background color [ID 39375]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-In some cases, the dashboard theme would not be applied correctly to the icon inside a *Gauge* component. The icon would have an incorrect background color.
+In some cases, the dashboard theme would not be applied correctly to the icon inside a gauge component. The icon would have an incorrect background color.
 
 #### Dashboards app & Low-Code Apps: Errors mentioning caching problems could occur when you created a dashboard or a low-code app [ID 39437]
 
@@ -271,7 +271,7 @@ The following minor issues regarding the *Time range* component have been fixed:
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-When you clicked a *Grid*, a *Service definition* or a *Node edge graph* component, in some cases, the page would incorrectly scroll until the component was at the top of the window.
+When you clicked a grid, a service definition or a node edge graph component, in some cases, the page would incorrectly scroll until the component was at the top of the window.
 
 #### Dashboards app: Problem when sharing a dashboard in which certain query nodes had been linked to feeds [ID 39465]
 
@@ -289,7 +289,7 @@ In some cases, GUIDs would incorrectly be visible in the query builder, even whe
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-When data was being loading into a *Table* component, in some cases, random cell values would incorrectly be displayed inside the table. From now on, a *Table* component will only show data when it has finished loading all data.
+When data was being loading into a table component, in some cases, random cell values would incorrectly be displayed inside the table. From now on, a table component will only show data when it has finished loading all data.
 
 #### Low-Code Apps: Deleting a context menu action would incorrectly not be saved [ID 39488]
 

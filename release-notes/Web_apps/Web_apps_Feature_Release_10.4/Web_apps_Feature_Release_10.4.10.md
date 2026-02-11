@@ -26,7 +26,7 @@ Also, the way in which to grant or deny users permission to view and/or edit a l
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
-When configuring a *Line & area chart* component, you can now use the *Show title* option to either show or hide the automatically generated chart title.
+When configuring a line & area chart component, you can now use the *Show title* option to either show or hide the automatically generated chart title.
 
 By default, this chart title will be shown.
 
@@ -66,10 +66,10 @@ From now on, the web API will no longer retrieve all available bookings. Instead
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
-Both the *Table* and the *Grid* component now support lazy loading.
+Both the table and the grid component now support lazy loading.
 
-- When multiple queries are configured in a *Table* component, the component will now only load the visible table.
-- When a *Grid* component has paging enabled (i.e. when it has a fixed number of rows and columns), it will now only retrieve items that are being displayed on the page.
+- When multiple queries are configured in a table component, the component will now only load the visible table.
+- When a grid component has paging enabled (i.e. when it has a fixed number of rows and columns), it will now only retrieve items that are being displayed on the page.
 
 > [!NOTE]
 > When items selected in the URL are not included in the data that was loaded, they will also be loaded.
@@ -150,18 +150,18 @@ In a timeline component of a dashboard or low-code app, it could occur that real
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
-When, while editing a dashboard, you dragged a button parameter onto a *Button* component, no button would appear. Instead, the component would be empty.
+When, while editing a dashboard, you dragged a button parameter onto a button component, no button would appear. Instead, the component would be empty.
 
 #### Dashboards/Low-Code Apps: 'Cannot read property of null (reading 'IsTable')' error [ID 40514]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
-In some cases, the following error could appear in the *State*, *Dropdown*, and *Parameter table* components:
+In some cases, the following error could appear in the state, dropdown, and parameter table components:
 
 ``Cannot read property of null (reading 'IsTable')``
 
 > [!NOTE]
-> When this error appeared in a *Parameter table* component, the dashboard would keep on loading.
+> When this error appeared in a parameter table component, the dashboard would keep on loading.
 
 #### Dashboards/Low-Code Apps: Problem when you removed a component and then added another component [ID 40525]
 
@@ -213,7 +213,7 @@ When, in the *Time range* component, you picked a custom time range, the picker 
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
 
-In some cases, a *Line & area chart* component would not update correctly whenever the feed input changed.
+In some cases, a line & area chart component would not update correctly whenever the feed input changed.
 
 #### Dashboards/Low-Code Apps - Grid component: Problem when refetching data while data was being loaded [ID 40633]
 
@@ -225,13 +225,13 @@ When the data displayed in a Grid component was refetched (by means of e.g. a re
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
 
-Due to a time zone conversion issue, groups configured in a *Timeline* component would reserve more screen real estate than necessary.
+Due to a time zone conversion issue, groups configured in a timeline component would reserve more screen real estate than necessary.
 
 #### Low-Code Apps - Table component: Problem with 'Select an item' action [ID 40643]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
 
-When, in a low-code app, you had configured a "Select an item" action in a *Table* component, up to now, that action would not work when the *Table* component displayed less than fifty DOM instances.
+When, in a low-code app, you had configured a "Select an item" action in a table component, up to now, that action would not work when the table component displayed less than fifty DOM instances.
 
 #### Low-Code Apps - Interactive Automation script component: Problem with scrollbars appearing unnecessarily [ID 40645]
 
@@ -245,7 +245,7 @@ From now on, the configured dimensions will never be ignored. Whether an interac
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
 
-In feature release 10.4.9, all interactive Automation script components were reviewed to make sure they fully inherit the script's theme and accent color. However, in some cases, changing the coloring of those components could cause issues when those components were used in other places (e.g. web apps).
+In feature release 10.4.9, all interactive Automation script components were reviewed to make sure they fully inherit the script's theme and accent color. However, in some cases, changing the coloring of those components could cause issues when those components were used in other places (e.g. Web apps).
 
 From now on, when the above-mentioned components are used in places other than interactive Automation scripts, applying the theme and accent color to those components will be optional. In interactive Automation scripts, the theme and accent color will always be applied to the script's components.
 

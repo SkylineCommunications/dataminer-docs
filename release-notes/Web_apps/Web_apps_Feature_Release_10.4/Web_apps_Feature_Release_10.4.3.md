@@ -149,13 +149,13 @@ A number of enum column issues have been fixed in the Template Editor:
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-Up to now, a *Line & area chart* component would not always load the data in the same order.
+Up to now, a line & area chart component would not always load the data in the same order.
 
 #### Dashboards app & Low-Code Apps - Generic map component: No longer possible to select a map configuration file [ID 38394]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-When configuring a *Generic map* component, it would incorrectly no longer be possible to select a map configuration file.
+When configuring a generic map component, it would incorrectly no longer be possible to select a map configuration file.
 
 #### Web apps - Interactive Automation scripts: Problem when entering decimal numbers [ID 38396]
 
@@ -274,7 +274,7 @@ When a component had multiple queries assigned, in some cases, updates would not
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-*Form* and *Stepper* components using DOM instances would incorrectly show a `This instance no longer exists` error each time another DOM instance was deleted in the same module.
+Form and stepper components using DOM instances would incorrectly show a `This instance no longer exists` error each time another DOM instance was deleted in the same module.
 
 #### Dashboards app & Low-Code Apps - Query builder: Updated query would not be saved [ID 38622]
 
@@ -292,13 +292,13 @@ Up to now, it would not be possible to navigate within the Timeline component wh
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-When, in edit mode, you opened the *Layout* tab of a *Numeric input* component, a component update would incorrect be triggered.
+When, in edit mode, you opened the *Layout* tab of a numeric input component, a component update would incorrect be triggered.
 
 #### Dashboards app & Low-Code Apps: Timeline component would not show the selection boxes to alter its dimensions [ID 38653]
 
 <!-- MR 10.3.0 [CU13] - FR 10.4.3 -->
 
-In some cases, a *Timeline* component would incorrectly not show the selection boxes to alter its dimensions.
+In some cases, a timeline component would incorrectly not show the selection boxes to alter its dimensions.
 
 #### Dashboards app & Low-Code Apps: Table component would not allow to copy data in an insecure environment [ID 38660]
 

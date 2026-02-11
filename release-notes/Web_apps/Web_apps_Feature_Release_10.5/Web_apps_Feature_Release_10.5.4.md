@@ -47,9 +47,9 @@ In addition, you can now also insert new operators in between existing ones by c
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-If you have a valid Maps license, from now on, you can use the *Maps* component without having to enable the *ReportsAndDashboardsGQIMaps* soft-launch option.
+If you have a valid Maps license, from now on, you can use the maps component without having to enable the *ReportsAndDashboardsGQIMaps* soft-launch option.
 
-The *Maps* component is used to display markers and/or lines on a map. It uses one or more GQI queries as data input.
+The maps component is used to display markers and/or lines on a map. It uses one or more GQI queries as data input.
 
 For all information about this component, see [Maps](xref:DashboardMaps).
 
@@ -62,7 +62,7 @@ For all information about this component, see [Maps](xref:DashboardMaps).
 
 ### Enhancements
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Dropdown' [ID 41838]
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component Dropdown [ID 41838]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
@@ -144,7 +144,7 @@ In a *Select* operator of a GQI query, you can now reorder the columns by draggi
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-From now on, the *Grid* component will allow you to use browser menu commands. It will now be possible to e.g. select text in a *Grid* component and copy it to another application by means of the *Copy* command of your browser.
+From now on, the grid component will allow you to use browser menu commands. It will now be possible to e.g. select text in a grid component and copy it to another application by means of the *Copy* command of your browser.
 
 #### Dashboards/Low-Code Apps - Time range component: Enhanced readability of Apply button [ID 42155]
 
@@ -156,7 +156,7 @@ In the *Time range* component, up to now, the color of the *Apply* button would,
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-Items selected in *Node edge graph*, *Grid*, *Maps*, *Timeline*, or *Table* components will now be passed to other components in the order in which they have been selected.
+Items selected in node edge graph, grid, maps, timeline, or table components will now be passed to other components in the order in which they have been selected.
 
 #### Dashboards app: Default Skyline dashboard themes updated [ID 42179]
 
@@ -210,7 +210,7 @@ Also, the *Then sort by* operator will now be a child node of the *Sort by* oper
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-The *Maps* component now has a redesigned icon.
+The maps component now has a redesigned icon.
 
 #### Dashboards app: Updated component data colors [ID 42272]
 
@@ -226,13 +226,13 @@ Also, the icon of the *Column & bar chart* component has been redesigned.
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 [CU0] -->
 
-Up to now, a *Dropdown* component would open upwards as soon as it was positioned in the bottom half of the screen, even when there was enough room to open downwards. From now on, a *Dropdown* component will only open upwards if there is not enough room below it to open downwards.
+Up to now, a dropdown component would open upwards as soon as it was positioned in the bottom half of the screen, even when there was enough room to open downwards. From now on, a dropdown component will only open upwards if there is not enough room below it to open downwards.
 
 #### Dashboards/Low-Code Apps - Maps, Timeline & Grid components: Templates have been updated [ID 42322]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-The default templates of the *Maps*, *Timeline* and *Grid* components have been updated.
+The default templates of the maps, timeline and grid components have been updated.
 
 ### Fixes
 
@@ -242,27 +242,27 @@ The default templates of the *Maps*, *Timeline* and *Grid* components have been 
 
 When the following actions were executed, up to now, they would incorrectly not use the event information that was passed to them.
 
-- *Set viewport* action on a *Line & area chart* component with parameter data
+- *Set viewport* action on a line & area chart component with parameter data
 - *Set value* action on a *Time range* component
-- *Set value* action on a *Numeric input* component
+- *Set value* action on a numeric input component
 
 #### Dashboards/Low-Code Apps - Table component: Problem when loading data from a partial table [ID 42107]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-In some cases, when new data from a partial table was being loaded into a *Table* component, the loading would get stuck.
+In some cases, when new data from a partial table was being loaded into a table component, the loading would get stuck.
 
 #### Dashboards/Low-Code Apps - Grid component: Scroll bars would appear even though all items could be displayed [ID 42108]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-In some cases, scrollbars would appear on a *Grid* component, even though there was sufficient screen real estate to display all items.
+In some cases, scrollbars would appear on a grid component, even though there was sufficient screen real estate to display all items.
 
 #### Low-Code Apps - Form component: Problem when saving a form due to boolean fields not having a default value [ID 42111]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When the data in a *Form* component was saved, an error would be thrown when mandatory boolean fields without default value had not been explicitly set to either true or false.
+When the data in a form component was saved, an error would be thrown when mandatory boolean fields without default value had not been explicitly set to either true or false.
 
 From now on, all boolean fields will have a default value (either true or false).
 
@@ -276,7 +276,7 @@ When, while configuring a component, you opened the *Components* dataset on the 
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When, while configuring a *Parameter table* component, you opened the *Parameter table filters*\* section on the *Data* pane and clicked the information icon on the right, the main page of [docs.dataminer.services](xref:docs_dataminer_services) would incorrectly be opened. From now on, the correct page, i.e. [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax), will be opened instead.
+When, while configuring a parameter table component, you opened the *Parameter table filters*\* section on the *Data* pane and clicked the information icon on the right, the main page of [docs.dataminer.services](xref:docs_dataminer_services) would incorrectly be opened. From now on, the correct page, i.e. [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax), will be opened instead.
 
 \**The *Parameter table filters* section is only available if you add the `showAdvancedSettings=true` option to the URL of the dashboard or the low-code app.*
 
@@ -360,7 +360,7 @@ From now on, a tooltip showing the full name will appear when you hover either o
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When, in a *Timeline* component, items had been grouped, in some cases, all groups would disappear when the data was refreshed and would reappear when you scrolled inside the timeline. From now on, all groups will remain visible when the data is refreshed.
+When, in a timeline component, items had been grouped, in some cases, all groups would disappear when the data was refreshed and would reappear when you scrolled inside the timeline. From now on, all groups will remain visible when the data is refreshed.
 
 #### Dashboards/Low-Code Apps: Problems with duration input boxes [ID 42293]
 
@@ -377,7 +377,7 @@ A number of issues regarding duration input boxes have been fixed:
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When a *Query filter* component was linked to a *Trigger* component as well as to one or more columns as a filter, the following error would be thrown after it was retriggered via the *Trigger* component:
+When a query filter component was linked to a trigger component as well as to one or more columns as a filter, the following error would be thrown after it was retriggered via the trigger component:
 
 `Cannot read properties of null (Reading 'Discreets')`
 
@@ -393,7 +393,7 @@ Also, dropdown boxes would no longer ellipse long values, causing a horizontal s
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When you had selected a time range in a *Timeline* component, in some cases, that time range would incorrectly not get passed to other components.
+When you had selected a time range in a timeline component, in some cases, that time range would incorrectly not get passed to other components.
 
 #### Low-Code Apps: Problem when entering edit mode when the app contained a component without visualization [ID 42382]
 
@@ -405,7 +405,7 @@ When you entered the edit mode of a low-code app, in some cases, a runtime error
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 [CU0] -->
 
-In some cases, a *Query filter* component could throw an error whenever you made a change to a query that contained boolean columns.
+In some cases, a query filter component could throw an error whenever you made a change to a query that contained boolean columns.
 
 #### Low-Code Apps: Loops in component data could cause an app to become unresponsive [ID 42531]
 

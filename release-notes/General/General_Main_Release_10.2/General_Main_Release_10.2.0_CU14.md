@@ -187,7 +187,7 @@ When a GQI request failed, some GQI components would show either an unrelated er
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
-Up to now, overall performance of a dashboard or a low-code app could decrease when it contained *State* components of which the *Design* option was set to "Auto size". A number of enhancements have now been made to prevent performance from decreasing in this case.
+Up to now, overall performance of a dashboard or a low-code app could decrease when it contained state components of which the *Design* option was set to "Auto size". A number of enhancements have now been made to prevent performance from decreasing in this case.
 
 #### Web apps: Login button would incorrectly be disabled on Edge and Chrome [ID 35906]
 

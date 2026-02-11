@@ -104,13 +104,13 @@ Overall performance has increased when fetching history alarms. From now on, his
 
 In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, etc.), Angular and other dependencies have been upgraded.
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Button' [ID 41495]
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component Button [ID 41495]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 The UI component `UIBlockType.Button` has been redesigned.
 
-Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new *Button* component, then add the following argument to the URL of the low-code app:
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new button component, then add the following argument to the URL of the low-code app:
 
 `?useNewIASInputComponents=true`
 
@@ -152,7 +152,7 @@ Up to now, in order to retrieve the entire version history of a low-code app, th
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-From now on, the *Column & bar chart* and *Line & area chart* components will only render the first 1000 items.
+From now on, the *Column & bar chart* and line & area chart components will only render the first 1000 items.
 
 When 1000 items have been rendered, the following message will appear: `Only the first 1 000 items are shown.`
 
@@ -209,13 +209,13 @@ When, in the settings of a *Visual overview* component, you changed the page to 
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-When a custom time zone was configured in a *Timeline* component, up to now, that time zone would not be taken into account by the *Set viewport* action.
+When a custom time zone was configured in a timeline component, up to now, that time zone would not be taken into account by the *Set viewport* action.
 
 #### Dashboards/Low-Code Apps: Table and Grid components could incorrectly keep fetching query rows after the session had been closed [ID 41670]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-In some cases, *Table* and *Grid* components could incorrectly keep fetching query rows after the session had been closed, eventually causing the web page to become unresponsive.
+In some cases, table and grid components could incorrectly keep fetching query rows after the session had been closed, eventually causing the web page to become unresponsive.
 
 #### Web API: DOMHelper could stop working when a DOM instance was updated while a client connection was being closed [ID 41677]
 
@@ -227,13 +227,13 @@ When a DOM instance was updated while a client connection was being closed, in s
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-Up to now, when another page of partial table data was loaded into a *Table* component after the GQI query session had expired, the following could happen:
+Up to now, when another page of partial table data was loaded into a table component after the GQI query session had expired, the following could happen:
 
 - If WebSockets were enabled, a `Session does not exist` error would appear.
 
 - If WebSockets were disabled, a *Refresh* button would appear, but clicking it would not have any effect.
 
-From now on, when another page of partial table data is loaded into a *Table* component after the GQI query session has expired, a *Refresh* button will appear, and clicking it will cause a new GQI query session to be started.
+From now on, when another page of partial table data is loaded into a table component after the GQI query session has expired, a *Refresh* button will appear, and clicking it will cause a new GQI query session to be started.
 
 #### Low-Code Apps: Problem when adding an 'Execute a script' action to a low-code app that was hosted on a dashboard gateway [ID 41697]
 

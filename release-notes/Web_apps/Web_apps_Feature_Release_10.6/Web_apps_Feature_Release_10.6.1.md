@@ -74,7 +74,7 @@ Also, custom positioning mode has now been replaced by the following two positio
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-Per node query linked to a *Node edge graph* component, you can now configure *node move* events that will be triggered when a node belonging to that query is moved.
+Per node query linked to a node edge graph component, you can now configure *node move* events that will be triggered when a node belonging to that query is moved.
 
 When triggered, a *node move* event will provide the following parameters:
 
@@ -132,11 +132,11 @@ Because of a number of enhancements, error handling has improved when generating
 
 In the Dashboards app and all low-code apps, the name *DataMiner Copilot* has now been replaced by *DataMiner Assistant*.
 
-#### Dashboards/Low-Code Apps - Form component: Datetime values displayed in the same way as in the Table Component [ID 44039]
+#### Dashboards/Low-Code Apps - Form component: Datetime values displayed in the same way as in the Table component [ID 44039]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-On *Form* components, datetime values will now be displayed in the same way as in *Table* components.
+On form components, datetime values will now be displayed in the same way as in table components.
 
 The datetime format is based on the regional settings of the web browser. If a browser is set to e.g. "English (US)", datetime values will be displayed as "12/31/2029 8:00 PM".
 
@@ -209,11 +209,11 @@ From now on, the *Browse templates* window will contain a search box that allows
 
 Also, you will be able to specify whether you want the list to show custom templates, preset templates, or both.
 
-#### Dashboards/Low-Code Apps: 'Pivot table' and 'Group' components will only be visible when using the 'showAdvancedSettings=true' URL option [ID 44128]
+#### Dashboards/Low-Code Apps: Pivot table and Group components will only be visible when using the 'showAdvancedSettings=true' URL option [ID 44128]
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-The *Pivot table* and *Group* components are being retired. From now on, both will no longer appear in lists of available visualizations, unless you use the `showAdvancedSettings=true` URL option.
+The pivot table and group components are being retired. From now on, both will no longer appear in lists of available visualizations, unless you use the `showAdvancedSettings=true` URL option.
 
 #### GQI DxM: DOM data source now supports reading only a selected subset of fields from `DomInstance` objects [ID 44141]
 
@@ -274,7 +274,7 @@ After you had refreshed your browser, a Table component would correctly re-apply
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-In an *Alarm table* component, up to now, it would incorrectly not be possible to filter by the Alarm Console column service.*propertyname* (*propertyname* being the name of the service property). This has now been made possible.
+In an alarm table component, up to now, it would incorrectly not be possible to filter by the Alarm Console column service.*propertyname* (*propertyname* being the name of the service property). This has now been made possible.
 
 > [!NOTE]
 > Note that the following Web Services API methods, which allow filtering by service, have all been modified. Up to now, services were checked by ID. From now on, services will be checked by name:

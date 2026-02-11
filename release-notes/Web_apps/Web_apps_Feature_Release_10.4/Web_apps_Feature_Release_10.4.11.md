@@ -79,7 +79,7 @@ Clicking the *Cancel* button will close the time range picker without updating t
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-When, in a *Query filter* component, you filtered by date, up to now, the date used in the filter would be in local format.
+When, in a query filter component, you filtered by date, up to now, the date used in the filter would be in local format.
 
 From now on, the displayed date will still be in local format, but the date that will actually be used in the filter will be in UTC format.
 
@@ -99,7 +99,7 @@ In the *Create dashboard* and *Dashboard settings* windows, the *Location* box h
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-Because of a number of enhancements, overall performance of the *Alarm table* component has increased when loading history alarms.
+Because of a number of enhancements, overall performance of the alarm table component has increased when loading history alarms.
 
 #### Dashboards app: 'Preserve feed selections' option is now an advanced setting [ID 40709]
 
@@ -113,13 +113,13 @@ From now on, the *Preserve feed selections* option will only be visible when you
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-From now on, the queries configured to fetch items to be displayed on a particular *Timeline* component will no longer be allowed to fetch more than 100,000 items in total. When this limit has been reached, a message will be displayed at the bottom of the component.
+From now on, the queries configured to fetch items to be displayed on a particular timeline component will no longer be allowed to fetch more than 100,000 items in total. When this limit has been reached, a message will be displayed at the bottom of the component.
 
 #### Dashboards/Low-Code Apps - Table component: New setting to show or hide the table filter [ID 40818]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-In the *Layout* tab of a *Table* component, it is now possible to indicate whether the table filter should be visible or not.
+In the *Layout* tab of a table component, it is now possible to indicate whether the table filter should be visible or not.
 
 #### Low-Code Apps: Enhanced performance when creating a new draft of an existing low-code application [ID 40866]
 
@@ -228,7 +228,7 @@ In some cases, the URL of a dashboard would incorrectly not be updated when you 
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-In some cases, a *Web* component would not render a web page correctly when the URL pointed to an untrusted source.
+In some cases, a web component would not render a web page correctly when the URL pointed to an untrusted source.
 
 #### Dashboards app: Problem when renaming a dashboard folder after having renamed its parent folder [ID 40688]
 
@@ -282,13 +282,13 @@ A number of problems could occur when attaching CSV files to email reports:
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-Due to a caching problem, when a report with *Alarm table* components was generated, in some cases, those components could be empty although alarms were present on the system.
+Due to a caching problem, when a report with alarm table components was generated, in some cases, those components could be empty although alarms were present on the system.
 
 #### Dashboards/Low-Code Apps - Timeline component: Events of updated items would not be processed correctly when a custom timezone was configured [ID 40827]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-When a custom timezone was configured, up to now, a *Timeline* component with the *Update data* option enabled would not correctly process the events of items that had been updated.
+When a custom timezone was configured, up to now, a timeline component with the *Update data* option enabled would not correctly process the events of items that had been updated.
 
 #### Dashboards app: Problem when importing a dashboard into a dashboard subfolder [ID 40828]
 
@@ -318,7 +318,7 @@ In some cases, components could incorrectly trigger updates in other components,
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-When a query filter is applied in a *Timeline* component, by default, all items that are not part of the query result are shown in a lighter color. However, up to now, when zooming in or out, all items would incorrectly have the same color, whether they were part of the query result or not.
+When a query filter is applied in a timeline component, by default, all items that are not part of the query result are shown in a lighter color. However, up to now, when zooming in or out, all items would incorrectly have the same color, whether they were part of the query result or not.
 
 #### Low-Code Apps: Grid component that was fed with data would not create any grid items [ID 40957]
 

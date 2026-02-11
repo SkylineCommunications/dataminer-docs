@@ -95,7 +95,7 @@ By clicking the first breadcrumb, which is named *Overview*, you will navigate b
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-In a *Timeline* component, it is now possible to vertically zoom in or out.
+In a timeline component, it is now possible to vertically zoom in or out.
 
 To have all data on a timeline grow or shrink in height, rotate the mouse wheel while keeping the ALT key pressed.
 
@@ -105,7 +105,7 @@ Note that items cannot shrink below 1/10th of their initial height or grow above
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When a *Timeline* component has grouping applied, from now on, the appearance of those groups can be customized using the template editor.
+When a timeline component has grouping applied, from now on, the appearance of those groups can be customized using the template editor.
 
 To do so, go to *Layout > Groups > Template*.
 
@@ -125,14 +125,14 @@ To do so, go to *App settings*. There you can add, update, and delete such a fil
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When a *Timeline* component has grouping applied, from now on, under *Layout > Groups > Height*, the height of those groups can be set to either "Fixed" or "Grow".
+When a timeline component has grouping applied, from now on, under *Layout > Groups > Height*, the height of those groups can be set to either "Fixed" or "Grow".
 
 - When set to "Fixed" (i.e. the default setting), the items within a group will shrink depending on the number of items in that group. That way, the height of the group will stay the same.
 
 - When set to "Grow", all items within a group will have the same height, and the height of the group will grow accordingly.
 
 > [!NOTE]
-> Up to now, "Grow" was the default behavior. In order not to break existing setups, *Timeline* components in existing dashboards and low-code apps will not have their group height automatically set to "Fixed".
+> Up to now, "Grow" was the default behavior. In order not to break existing setups, timeline components in existing dashboards and low-code apps will not have their group height automatically set to "Fixed".
 
 ## Changes
 
@@ -173,7 +173,7 @@ In the sidebar of the Dashboards app, up to now, the list of recently opened das
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-In the *Table*, *Column & bar chart*, *Line & area chart*, *Pie & donut chart*, *Grid*, *Timeline*, and *Node edge graph* components, the *Empty result message* setting allows you to specify a custom message that is displayed when a query returns no results.
+In the table, *Column & bar chart*, line & area chart, *Pie & donut chart*, grid, timeline, and node edge graph components, the *Empty result message* setting allows you to specify a custom message that is displayed when a query returns no results.
 
 From now on, it will be possible to clear this setting's value. If you do so, no message will be displayed when a query returns no results, and the component will be empty.
 
@@ -320,9 +320,9 @@ A number of issues have been fixed with regard to the State timeline component. 
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-In some cases, a *Maps* component would incorrectly fetch markers with larger bounds than necessary when you zoomed in or out.
+In some cases, a maps component would incorrectly fetch markers with larger bounds than necessary when you zoomed in or out.
 
-As this issue has now been fixed, overall performance has increased when zooming in or out in a *Maps* component.
+As this issue has now been fixed, overall performance has increased when zooming in or out in a maps component.
 
 #### Web Services API: Problem connecting to the offline agent of a Failover pair [ID 44410]
 
@@ -344,7 +344,7 @@ From now on, when a web app is deleted, its info file will be deleted last.
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When in a *Line & area chart* component, the *Trend points* option was set to "Average (fixed interval)", in some cases, the trend graph would incorrectly display more data points than necessary.
+When in a line & area chart component, the *Trend points* option was set to "Average (fixed interval)", in some cases, the trend graph would incorrectly display more data points than necessary.
 
 #### DataMiner web upgrade packages would incorrectly downgrade the DataMiner Assistant DxM when the installed version was more recent [ID 44441]
 
@@ -358,13 +358,13 @@ From now on, a DataMiner web upgrade package will no longer be allowed to downgr
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When you scrolled inside a *Timeline* component in which multiple groupings were applied, in some cases, the different groups would no longer be aligned with the timeline items.
+When you scrolled inside a timeline component in which multiple groupings were applied, in some cases, the different groups would no longer be aligned with the timeline items.
 
 #### Dashboards/Low-Code Apps -Timeline component: Problem after a transition from summer time to winter time or vice versa [ID 44455]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When the DataMiner Agent had a fixed time zone, and the client computer had a time zone with a daylight saving time, up to now, transitioning from summer time to winter time and vice versa could yield unexpected results in a *Timeline* component. For example, timeline items could be too long or too short, be positioned incorrectly, or even be missing.
+When the DataMiner Agent had a fixed time zone, and the client computer had a time zone with a daylight saving time, up to now, transitioning from summer time to winter time and vice versa could yield unexpected results in a timeline component. For example, timeline items could be too long or too short, be positioned incorrectly, or even be missing.
 
 From now on, all timeline items will be displayed correctly after a transition from summer time to winter time or vice versa.
 
@@ -380,15 +380,15 @@ See also: [GQI: Problem with Timer callbacks could cause SLHelper to stop workin
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, re-applying the selection in a *Maps* component would incorrectly select all markers with the same underlying row key, even across different queries. From now on, the query columns and the row key will be taken into account.
+Up to now, re-applying the selection in a maps component would incorrectly select all markers with the same underlying row key, even across different queries. From now on, the query columns and the row key will be taken into account.
 
 #### Dashboards/Low-Code Apps - Alarm table component: Problem when an alarm was removed from a group that had been deleted earlier [ID 44463]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When the alarms in an *Alarm table* component are grouped by time, they are grouped under group names such as "Today", "Yesterday", and "Last Week".
+When the alarms in an alarm table component are grouped by time, they are grouped under group names such as "Today", "Yesterday", and "Last Week".
 
-Up to now, when a certain group name had been removed (e.g. by means of an Automation script), and an alarm under that group name returned to its normal state, an error would occur when the *Alarm table* component attempted to remove the alarm.
+Up to now, when a certain group name had been removed (e.g. by means of an Automation script), and an alarm under that group name returned to its normal state, an error would occur when the alarm table component attempted to remove the alarm.
 
 #### GQI DxM: Aggregations performed on columns of type integer would incorrectly produce a column of type double [ID 44492]
 
@@ -406,7 +406,7 @@ When you had opened a low-code app in a Chromium-based browser, and you clicked 
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When you selected a table preset for a component other than a *Table* component, up to now, the default tooltip would show "Undefined" because the template could not be mapped to a column.
+When you selected a table preset for a component other than a table component, up to now, the default tooltip would show "Undefined" because the template could not be mapped to a column.
 
 From now on, when you selected a table preset for a component other than a Table component, no default tooltip will be set.
 
@@ -438,19 +438,19 @@ Up to now, in some cases, the DataMiner GQI Extension Worker SLNet process could
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When, in a *Node edge graph* component, node positioning was set to "Linked to data" and the initial viewport was set to "Auto", up to now, when a node was moved, the border of the node would incorrectly not be taken into account. As a result, the new X and Y coordinates of the node would be incorrect, causing the node to not end up at the intended location.
+When, in a node edge graph component, node positioning was set to "Linked to data" and the initial viewport was set to "Auto", up to now, when a node was moved, the border of the node would incorrectly not be taken into account. As a result, the new X and Y coordinates of the node would be incorrect, causing the node to not end up at the intended location.
 
 #### Dashboards/Low-Code Apps - Timeline component: Problem when zooming out until the component switched to minimized view [ID 44581]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When, in a *Timeline* component, you zoomed out until the component switched to minimized view, certain shapes would not get rendered at the correct position.
+When, in a timeline component, you zoomed out until the component switched to minimized view, certain shapes would not get rendered at the correct position.
 
 #### Dashboards/Low-Code Apps - Timeline component: Changes to certain settings would not get applied correctly [ID 44596]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When changes had been made to the settings of a *Timeline* component, in some cases, these changes would not get applied correctly.
+When changes had been made to the settings of a timeline component, in some cases, these changes would not get applied correctly.
 
 For example, changes to *Layout > General > Query name > Start/End column* would not get applied when you removed an older query from the timeline.
 
@@ -466,7 +466,7 @@ As the output of a script is always a string value, from now on, it will only be
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-In some cases, a null reference exception could be thrown in a *Timeline* component.
+In some cases, a null reference exception could be thrown in a timeline component.
 
 #### Web DcM: Problem when generating a PDF report [ID 44613]
 
@@ -478,7 +478,7 @@ In some rare cases, the Web DcM could throw an error while generating a PDF repo
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When, in a *Maps* component, the query was changed, up to now, the zones that had been fetched would incorrectly not be cleared. As a result, panning to those zones would still show markers that matched the previous filter instead of the new one.
+When, in a maps component, the query was changed, up to now, the zones that had been fetched would incorrectly not be cleared. As a result, panning to those zones would still show markers that matched the previous filter instead of the new one.
 
 From now on, all zones will be cleared whenever the query changes, and the markers will be fetched again with the new query.
 
@@ -486,7 +486,7 @@ From now on, all zones will be cleared whenever the query changes, and the marke
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, when a *Node edge graph* component with real-time updates enabled had a column filter applied, only the value of that column would be updated when an update was received. As a result, when e.g. a node had been moved, in some cases, that node would keep its former position.
+Up to now, when a node edge graph component with real-time updates enabled had a column filter applied, only the value of that column would be updated when an update was received. As a result, when e.g. a node had been moved, in some cases, that node would keep its former position.
 
 From now on, all values will be updated, even those that are not associated with a column filter.
 
@@ -502,7 +502,7 @@ For example, when a numeric input box passed the value 0 to an input parameter o
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-In some cases, the *Pivot table* component would remain empty until you interacted with the dashboard or low-code app.
+In some cases, the pivot table component would remain empty until you interacted with the dashboard or low-code app.
 
 This component is being retired. From DataMiner 10.5.0 [CU10]/10.6.1 onwards, it will only appear in the list of available visualizations if the URL option `showAdvancedSettings=true` is used.
 
@@ -516,6 +516,6 @@ When, in the *DATA* pane, you opened the *Indices* section, and selected an elem
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When, in a *Numeric input* component, the step size was set to the value of type float, up to now, it would not be possible to perform certain step operations. For example, when the component had its value set to 11287.809961 with a step size of 0.000001, it would not be possible to click the *Down* button.
+When, in a numeric input component, the step size was set to the value of type float, up to now, it would not be possible to perform certain step operations. For example, when the component had its value set to 11287.809961 with a step size of 0.000001, it would not be possible to click the *Down* button.
 
 Also, in some cases, the error message `Only steps of size ... are allowed` would appear when it should not have appeared.

@@ -89,15 +89,15 @@ The URL parameter `useNewIASInputComponents` has priority over the UI version se
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, when a *Form* component was displayed in read-only mode, all content written in HTML code would be interpreted as such. However, this had a number of unwanted side effects:
+Up to now, when a form component was displayed in read-only mode, all content written in HTML code would be interpreted as such. However, this had a number of unwanted side effects:
 
 - All HTML code that had to be displayed as code had to be escaped to prevent it from being interpreted.
 - Text between chevrons (e.g. `<a piece of text between chevrons>`) was not displayed as it could potentially contain unsafe content.
 - etc.
 
-From now on, when set to read-only, a *Form* component will display all HTML code as code. For example, a value like `<b>Text</b>` will now always be displayed as "\<b\>Text\</b\>" instead of "**Text**".
+From now on, when set to read-only, a form component will display all HTML code as code. For example, a value like `<b>Text</b>` will now always be displayed as "\<b\>Text\</b\>" instead of "*text*".
 
-In situations where HTML code needs to be interpreted, you will need to use a *Grid* component with a GQI query.
+In situations where HTML code needs to be interpreted, you will need to use a grid component with a GQI query.
 
 ### Enhancements
 
@@ -218,7 +218,7 @@ When you navigated to the login page of a web app by using a URL like `https://<
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-When, in the *Layout* pane of a *Maps* component, you clicked *Save current view* after the map had been panned horizontally, in some cases, the longitude would be set to an invalid value outside the [-180,180] range.
+When, in the *Layout* pane of a maps component, you clicked *Save current view* after the map had been panned horizontally, in some cases, the longitude would be set to an invalid value outside the [-180,180] range.
 
 #### Dashboards/Low-Code Apps - Line & area chart component: Problem with parameter filter would cause trended parameters to not show up in the component [ID 43813]
 
@@ -293,13 +293,13 @@ As simultaneous dashboard editing is not supported, any errors that appear will 
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, in a *Table* component, the *Is selected* template override would only be applied correctly for the first 50 rows.
+Up to now, in a table component, the *Is selected* template override would only be applied correctly for the first 50 rows.
 
 #### Dashboards/Low-Code Apps - Time range component: Problem with relative time span when linked to a Trigger component [ID 43968]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-When, in a dashboard or a low-code app, a *Time range* component had a relative time span set (e.g. "Today so far") and was linked to a *Trigger* component, up to now, the *Time range* component would incorrectly no longer update its relative time span when the *Trigger* component ordered it to do so after a reload of the dashboard or a page switch in the low-code app.
+When, in a dashboard or a low-code app, a *Time range* component had a relative time span set (e.g. "Today so far") and was linked to a trigger component, up to now, the *Time range* component would incorrectly no longer update its relative time span when the trigger component ordered it to do so after a reload of the dashboard or a page switch in the low-code app.
 
 #### Problem with embedded VLC player [ID 43973]
 

@@ -283,7 +283,7 @@ The following columns can be added using a column selector node:
 
 #### Dashboards app - State component: 'Show units' option \[ID 30322\]
 
-In the *Settings* tab of a *State* component, it is now possible to select or clear the *Show units* option to show or hide the unit of the parameter.
+In the *Settings* tab of a state component, it is now possible to select or clear the *Show units* option to show or hide the unit of the parameter.
 
 #### Dashboards app - GQI: Queries verified and repaired when opened for editing \[ID 30507\]
 

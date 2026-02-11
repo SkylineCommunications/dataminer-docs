@@ -35,7 +35,7 @@ In addition, you can now use object manager instances as a query (GQI) data sour
 
 ##### New Form component
 
-A new "Form" component is now also available. It takes an object manager instance or object manager definition as data input and displays it as a form:
+A new form component is now also available. It takes an object manager instance or object manager definition as data input and displays it as a form:
 
 - In a dashboard, only an object manager instance can be used as input.
 - In a low-code app, you can use either an object manager instance or a object manager definition, or both. If you use a definition, the fields of the definition are displayed, which the user can fill in to create an instance. Using both definition and instance input at the same time can for example be useful in case you use a dynamic feed for the instance. In that case, as long as a value is being fed, the data of the instance is displayed; otherwise the empty fields of the definition are displayed.
@@ -88,13 +88,13 @@ https://myDMA/APP_ID/PAGE_NAME#{"actions":[{"Type":6,"__type":"Skyline.DataMiner
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-The *Table* and *State* components now have a new *Initial selection* setting.
+The table and state components now have a new *Initial selection* setting.
 
 When you enable this setting, the first entry of the GQI result set will automatically be selected when the dashboard or app is opened or refreshed.
 
 > [!NOTE]
 >
-> - This new setting has also been added to the *Grid* component, which is only available if you activate the *ReportsAndDashboardsDynamicVisuals* soft-launch option.
+> - This new setting has also been added to the grid component, which is only available if you activate the *ReportsAndDashboardsDynamicVisuals* soft-launch option.
 > - For reasons of consistency, in the Dropdown feed, List feed, Parameter feed and Tree feed, the *Feed defaults* setting has now also been renamed to *Initial selection*
 
 #### Low-Code Apps: Duplicating pages and panels is now possible via new context menu [ID 36097]
@@ -190,11 +190,11 @@ In a custom component theme, for some fonts, the font size of the title could be
 
 From now on, font sizes will have to be set to a value between 1px and 36px.
 
-#### Dashboards app: Error when opening a shared dashboard containing a 'Line & area chart' component, a 'State' component, a 'Gauge' component or a 'Ring' component [ID 36022]
+#### Dashboards app: Error when opening a shared dashboard containing a Line & area chart component, a State component, a Gauge component or a Ring component [ID 36022]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
-An error could occur when you opened a shared dashboard that contained a *Line & area chart* component, a *State* component, a *Gauge* component or a *Ring* component.
+An error could occur when you opened a shared dashboard that contained a line & area chart component, a state component, a gauge component or a ring component.
 
 #### Dashboards app: Retry button of table component would incorrectly be displayed in PDF file [ID 36026]
 
@@ -212,7 +212,7 @@ In some cases, invalid nodes could get added to a GQI query, causing runtime err
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-You can now clear a *State* component by clicking it while holding down the Ctrl key.
+You can now clear a state component by clicking it while holding down the Ctrl key.
 
 #### Dashboards app & Low-Code Apps: GQI query nodes without options would incorrectly be expanded [ID 36064]
 
@@ -220,11 +220,11 @@ You can now clear a *State* component by clicking it while holding down the Ctrl
 
 In some cases, GQI query nodes without options would incorrectly be expanded.
 
-#### Dashboards app: Problem when a 'State' component was fed a parameter value by a dropdown component in a shared dashboard [ID 36075]
+#### Dashboards app: Problem when a State component was fed a parameter value by a dropdown component in a shared dashboard [ID 36075]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
-In a shared dashboard, an error could occur when a *State* component was fed a parameter value by a dropdown component.
+In a shared dashboard, an error could occur when a state component was fed a parameter value by a dropdown component.
 
 #### Dashboards app & Low-Code Apps: GQI table component could throw 'Paged table session not found' error [ID 36101]
 
@@ -264,12 +264,12 @@ In some cases, the popup panel showing the PDF preview of a dashboard would inco
 
 From now on, a popup panel showing a PDF preview will take the full screen height and will only allow its contents to scroll.
 
-#### Dashboards app & Low-Code Apps - 'Numeric input' feed: Setting renamed [ID 36166]
+#### Dashboards app & Low-Code Apps - Numeric input feed: Setting renamed [ID 36166]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 <!-- Not added to MR 10.4.0 -->
 
-The *Numeric input* feed, which was introduced in DataMiner feature release 10.3.5, had a setting named *Amount of decimals*.
+The numeric input feed, which was introduced in DataMiner feature release 10.3.5, had a setting named *Amount of decimals*.
 
 This setting has now been renamed to *Number of decimals*.
 
@@ -283,7 +283,7 @@ When you shared a dashboard that contained an alarm table component, in some cas
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
-When you viewed a shared dashboard that contained a *State* component, in some cases, the order of the parameters in that *State* component would be incorrectly.
+When you viewed a shared dashboard that contained a state component, in some cases, the order of the parameters in that state component would be incorrectly.
 
 #### Low-Code Apps: Action buttons could have an incorrect background color [ID 36258]
 

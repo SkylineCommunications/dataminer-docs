@@ -190,7 +190,7 @@ The complete query should look like this:
 
    1. Drag a regular [table component](xref:DashboardTable) onto the page next to the query filter component.
 
-   1. In the *Data* pane, expand the *Components* section, and drag the *Query filter* component entry onto your table component to provide it with data based on the selection in the query filter component.
+   1. In the *Data* pane, expand the *Components* section, and drag the query filter component entry onto your table component to provide it with data based on the selection in the query filter component.
 
 ## Step 5: Enable users to add events
 

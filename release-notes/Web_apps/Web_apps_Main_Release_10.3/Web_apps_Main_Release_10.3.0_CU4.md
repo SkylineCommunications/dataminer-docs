@@ -30,7 +30,7 @@ A number of security enhancements have been made.
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU4] - FR 10.3.7 -->
 
-Up to now, when a *State* component fed empty query rows, a visual replacement would be displayed. From now on, this will no longer be the case.
+Up to now, when a state component fed empty query rows, a visual replacement would be displayed. From now on, this will no longer be the case.
 
 ### Fixes
 
@@ -56,7 +56,7 @@ In some cases, action buttons could have an incorrect background color.
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
-In some cases, a *State* component would incorrectly not be cleared when its input feed was cleared.
+In some cases, a state component would incorrectly not be cleared when its input feed was cleared.
 
 #### Low-Code Apps: Table actions would incorrectly be executed before the rows were fed [ID 36263]
 

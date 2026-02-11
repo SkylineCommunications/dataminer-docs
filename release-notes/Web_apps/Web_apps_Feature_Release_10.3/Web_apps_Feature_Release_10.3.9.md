@@ -18,19 +18,19 @@ uid: Web_apps_Feature_Release_10.3.9
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
-The *Query filter* component has now officially been released. When linked to a *Table* component or a *Node edge graph* component, this component will allow you to filter the table or the node edge graph on the fly.
+The query filter component has now officially been released. When linked to a table component or a node edge graph component, this component will allow you to filter the table or the node edge graph on the fly.
 
 There are two ways in which you can link a query filter. See the following examples.
 
 - **Feeding queries as data**
 
-  1. Place a new *Query filter* component on the dashboard.
+  1. Place a new query filter component on the dashboard.
 
   1. Create a query (e.g. a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
   
      Note that a feed name will appear in the bottom-right corner of the query filter component (e.g. "Query filter 1").
 
-  1. Place a new *Table* component on the dashboard.
+  1. Place a new table component on the dashboard.
 
   1. In the *Data* tab, go to *All available data* > *Feeds*, expand the feed associated with the query filter (e.g. "Query filter 1"), and drag *Queries* on top of the table component.
 
@@ -38,13 +38,13 @@ There are two ways in which you can link a query filter. See the following examp
 
 - **Feeding query columns as filter**
 
-  1. Place a new *Query filter* component on the dashboard.
+  1. Place a new query filter component on the dashboard.
 
   1. Create a query (e.g. a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
   
      Note that a feed name will appear in the bottom-right corner of the query filter component (e.g. "Query filter 1").
 
-  1. Place a new *Table* component on the dashboard.
+  1. Place a new table component on the dashboard.
 
   1. In the *Data* tab, go to *All available data* > *Queries*, and drag the query you created earlier (e.g. *Elements*) on top of the table component.
 
@@ -56,7 +56,7 @@ Settings:
 
 - **Filter assistance**: If you activate this setting, the choices the query filter offers will already be filtered according to the data that is available.
 
-  For example, if the table contains a *State* column, and the table only contains rows of which that column contains "Active" or "Stopped", you will not be able to filter on other state values. Moreover, next to each filter option the number of matching rows will be displayed. For example, when there are 20 rows of which the *State* column contains "Active", then the filter will show the Active state option as "Active (20)".
+  For example, if the table contains a state column, and the table only contains rows of which that column contains "Active" or "Stopped", you will not be able to filter on other state values. Moreover, next to each filter option the number of matching rows will be displayed. For example, when there are 20 rows of which the state column contains "Active", then the filter will show the Active state option as "Active (20)".
 
 - **Allow color mode**: If this setting is activated (which it is by default), in the top-right corner of the filter query component, you will be able to click a color marker icon. When you do so, a color legend will appear on the right of the filter options, and for each of those options you will be able to configure a color (default color: green).
 
@@ -65,8 +65,8 @@ Settings:
 
 > [!NOTE]
 >
-> - At the top of a *Query filter* component, you have an *Active (x)* toggle button. If you enable this button, the component will display only the active filter options and the button itself will indicate the number of active options.
-> - In a *Query filter* component, next to each column that contains discrete values of type string or number, you will find a button that allows you to change how the possible values are displayed:
+> - At the top of a query filter component, you have an *Active (x)* toggle button. If you enable this button, the component will display only the active filter options and the button itself will indicate the number of active options.
+> - In a query filter component, next to each column that contains discrete values of type string or number, you will find a button that allows you to change how the possible values are displayed:
 >
 >   - Click *Toggle checklist* to have all possible values listed in the form of a checklist.
 >   - Click *Toggle free form* to display a text box in which users can type a value.
@@ -231,11 +231,11 @@ The *ReportsAndDashboardsAlpha* soft-launch option is now deprecated.
 
 In order to reduce the package size for the Dashboards app and Low-Code Apps, a number of legacy components, which were not used and were unavailable in the UI, have now been removed.
 
-#### Dashboards app & Low-Code Apps - 'Numeric input' and 'Text input' feeds: New setting to determine the position of the label [ID 36983]
+#### Dashboards app & Low-Code Apps - Numeric input and Text input feeds: New setting to determine the position of the label [ID 36983]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
-Up to now, a *Numeric input* feed would display the label above the input box while a *Text input* feed would display the label in front of the input box.
+Up to now, a numeric input feed would display the label above the input box while a text input feed would display the label in front of the input box.
 
 When, in edit mode, you select one of these feeds and open the *Layout* tab, below the *Label* box you can now find the *Label is inline* checkbox. Select this checkbox if you want the label to be displayed in front of the input box. By default, this option is disabled, meaning that the label will be displayed above the input box.
 
@@ -315,7 +315,7 @@ Up to now, when DCF interface properties were fetched, only the properties found
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
-In some cases, an error could be thrown when you shared a dashboard that contained a *Gauge* component fed by a *State* component with indices.
+In some cases, an error could be thrown when you shared a dashboard that contained a gauge component fed by a state component with indices.
 
 #### Web services API: Problem when fetching the next page of a GQI query [ID 36903]
 
@@ -383,7 +383,7 @@ When a form component linked to a DOM instance feed was not fed an instance, it 
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
-The *Form* component would not be cleared when it was no longer fed a DOM instance or a DOM definition.
+The form component would not be cleared when it was no longer fed a DOM instance or a DOM definition.
 
 #### Dashboards app: 'Loading...' indicator would appear when trying to save a nameless folder [ID 37002]
 

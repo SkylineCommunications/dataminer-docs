@@ -22,7 +22,7 @@ All GQI components now have a new *Empty result message* setting that allows you
 
 Also, the error/warning/info visual will now only appear when the component's size exceeds about half the screen dimensions, both in width and in height.
 
-As to the *Table* component, when you applied a column filter that resulted in 0 rows, up to now, an empty window replacing the component would allow you to adjust the filter. From now on, even when a column filter yields 0 rows, the column headers will stay visible and a message will appear (i.e. either the above-mentioned *Empty result message* or a message saying that the column/search filter resulted in no rows).
+As to the table component, when you applied a column filter that resulted in 0 rows, up to now, an empty window replacing the component would allow you to adjust the filter. From now on, even when a column filter yields 0 rows, the column headers will stay visible and a message will appear (i.e. either the above-mentioned *Empty result message* or a message saying that the column/search filter resulted in no rows).
 
 #### Low-Code Apps: Dynamic feed values in URL actions [ID 37229]
 
@@ -166,13 +166,13 @@ When a GQI query retrieved logger table data from an Elasticsearch database, the
 <!-- MR 10.4.0 - FR 10.3.11 -->
 <!-- Not added to MR 10.4.0 -->
 
-Up to now, the *Stepper* component was not able to handle asynchronous saving of DOM instance history records. While saving, in some cases, it would retrieve the history records of the DOM instance before the latest records had been added.
+Up to now, the stepper component was not able to handle asynchronous saving of DOM instance history records. While saving, in some cases, it would retrieve the history records of the DOM instance before the latest records had been added.
 
 #### Dashboards app/Low-Code Apps: Stepper component would apply an incorrect theme color [ID 37263]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-In some cases, the *Stepper* component would not apply the correct theme color.
+In some cases, the stepper component would not apply the correct theme color.
 
 #### Dashboards app/Low-Code Apps: Problem with custom time zones [ID 37278]
 
@@ -207,7 +207,7 @@ When, in the *Monitoring* app, another visual overview page was opened using a s
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-When, in a *Parameter table* component, it would not be possible to copy a cell, a row, a column or the entire table using the *Copy* command in the right-click menu.
+When, in a parameter table component, it would not be possible to copy a cell, a row, a column or the entire table using the *Copy* command in the right-click menu.
 
 #### Low-Code Apps: First column of table with multiple queries could be empty [ID 37363]
 

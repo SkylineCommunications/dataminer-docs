@@ -116,9 +116,9 @@ When a falsy value (empty string, 0, etc.) was fed as an argument of an app acti
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-Up to now, a *Numeric input* component would not automatically get the focus when you clicked one of its arrow buttons. As a result, the feed value of the component would also not get updated.
+Up to now, a numeric input component would not automatically get the focus when you clicked one of its arrow buttons. As a result, the feed value of the component would also not get updated.
 
-From now on, when you click the *Up* or *Down* button of a *Numeric input* component, it will get the focus and its feed value will be updated.
+From now on, when you click the *Up* or *Down* button of a numeric input component, it will get the focus and its feed value will be updated.
 
 #### Dashboards app: 'No parameters available' error would appear when trying to retrieve parameters belonging to a stopped element [ID 37561]
 
@@ -132,7 +132,7 @@ From now on, element lists will no longer include non-active elements. As a resu
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-When the *Column & bar chart*, *Line & area chart* and *Pie & donut chart* components were fed by a query that did not support full real-time updates, basic updates to those components would no longer trigger a refresh of the visualized data.
+When the *Column & bar chart*, line & area chart and *Pie & donut chart* components were fed by a query that did not support full real-time updates, basic updates to those components would no longer trigger a refresh of the visualized data.
 
 #### Dashboards app & Low-Code Apps - Table component: Exporting data to CSV would incorrectly be possible when the table was empty [ID 37585]
 

@@ -276,7 +276,7 @@ Up to now, an error would be thrown when you tried to export a table with a quer
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
-The *Form* component would not be cleared when it was no longer fed a DOM instance or a DOM definition.
+The form component would not be cleared when it was no longer fed a DOM instance or a DOM definition.
 
 #### Dashboards app: 'Loading...' indicator would appear when trying to save a nameless folder [ID 37002]
 

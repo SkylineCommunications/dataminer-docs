@@ -80,9 +80,9 @@ From now on, the dashboard or the low-code app will only be updated when the com
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
-When you had linked a *Dropdown* component to a query that received its data from another component, in some cases, the *Dropdown* component would execute the query even when the query was configured to show nothing when no data is being passed to it.
+When you had linked a dropdown component to a query that received its data from another component, in some cases, the dropdown component would execute the query even when the query was configured to show nothing when no data is being passed to it.
 
-Also, when you had linked a *Dropdown* component to a query that received its data from another component, in some cases, the *Dropdown* component could get stuck in a loading state.
+Also, when you had linked a dropdown component to a query that received its data from another component, in some cases, the dropdown component could get stuck in a loading state.
 
 #### Dashboards/Low-Code Apps - Image component: Problem when trying to upload an image file of which the extension contained one or more uppercase letters [ID 42638]
 
@@ -106,13 +106,13 @@ Up to now, when you did not have permission to edit a low-code app, on the DataM
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
-When a scrollbar was displayed in a *Timeline* component, the timeline items would incorrectly move a few pixels to the left, causing them to show an incorrect start time and end time.
+When a scrollbar was displayed in a timeline component, the timeline items would incorrectly move a few pixels to the left, causing them to show an incorrect start time and end time.
 
 #### Low-Code Apps: Not possible to pass data from a Trigger component on one panel to a component on another panel [ID 42714]
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
-When a *Trigger* component on one panel was linked to a component on another panel, in some cases, no data could be passed from the *Trigger* component to the other component.
+When a trigger component on one panel was linked to a component on another panel, in some cases, no data could be passed from the trigger component to the other component.
 
 #### Dashboards app: Problem after generating a PDF report [ID 42732]
 
@@ -138,11 +138,11 @@ The first time a dashboard was shared, in some rare cases, the operation could f
 
 In some cases, the *Start with an example dashboard* button could get stuck in a loading state.
 
-#### Low-Code Apps: Component actions would not be triggered when the panel containing the component was opened by clicking or double-clicking a node of a 'Node edge graph' component [ID 42801]
+#### Low-Code Apps: Component actions would not be triggered when the panel containing the component was opened by clicking or double-clicking a node of a Node edge graph component [ID 42801]
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
-When, in a low-code app, clicking or double-clicking a node of a *Node edge graph* component opened a panel with a component on which actions were configured, those actions would incorrectly not get triggered.
+When, in a low-code app, clicking or double-clicking a node of a node edge graph component opened a panel with a component on which actions were configured, those actions would incorrectly not get triggered.
 
 #### Web Services API v1: Problem with GetAlarms method [ID 42818]
 
@@ -154,7 +154,7 @@ In some cases, using the *GetAlarms* method to e.g. retrieve history alarms coul
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 [CU0] -->
 
-When a *Query filter* component was used to filter a query that contained a numeric discreet, it would incorrectly show that an active filter was applied.
+When a query filter component was used to filter a query that contained a numeric discreet, it would incorrectly show that an active filter was applied.
 
 Also, when the component's query columns would then be used to filter a table, these columns would incorrectly all be grayed out as if they were filtered.
 
@@ -162,4 +162,4 @@ Also, when the component's query columns would then be used to filter a table, t
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 [CU0] -->
 
-When, in a *Timeline* component, items had been grouped, the sides of those items would incorrectly no longer be stuck to the edge of the timeline. Instead, they would go out of view. From now on, when items are grouped, they will again be stuck to the edge of the timeline.
+When, in a timeline component, items had been grouped, the sides of those items would incorrectly no longer be stuck to the edge of the timeline. Instead, they would go out of view. From now on, when items are grouped, they will again be stuck to the edge of the timeline.

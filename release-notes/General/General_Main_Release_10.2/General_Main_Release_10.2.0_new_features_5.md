@@ -282,7 +282,7 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 >
 > - If access to a dashboard is limited to some users only, it will not be possible to share this dashboard.
 > - You can stop sharing a dashboard by clicking the “...” button again and selecting *Manage share*. This will open a pop-up box where you can delete the share or update the message.
-> - At present, sharing dashboards that use the following components is not supported: spectrum components, Maps, SRM components (service definition and resource usage line graph), queries using feeds and visualizations based on query feeds (e.g. node edge graph, table), trend components with subscription filters and pivot table components. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
+> - At present, sharing dashboards that use the following components is not supported: spectrum components, Maps, SRM components (service definition and resource usage line graph), queries using feeds and visualizations based on query feeds (e.g. Node edge graph, table), trend components with subscription filters and pivot table components. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
 
 ##### To access the Sharing module that lists the dashboards that others have shared with you
 
@@ -434,7 +434,7 @@ In other words, components using a State, Gauge and Ring component as a feed wil
 
 #### Dashboards app: New Progress bar component \[ID 29773\]
 
-A new *Progress bar* component is now available among the state components in the Dashboards app. It can be used to display the value of an analog parameter as a progress bar.
+A new progress bar component is now available among the state components in the Dashboards app. It can be used to display the value of an analog parameter as a progress bar.
 
 In the *Layout* tab for this component you can select to hide or display various labels, such as the parameter name and value. You can also select whether the minimum and/or maximum value of the parameter should be displayed. Similar to other state components, you can also select a small or large design and, in case the component is used to display multiple parameters, you can select whether the parameters should be displayed in rows or columns.
 
@@ -557,7 +557,7 @@ You can add the following columns using a column selector node:
 
 #### Dashboards app - State component: 'Show units' option \[ID 30322\]
 
-In the *Settings* tab of a *State* component, it is now possible to select or clear the *Show units* option to show or hide the unit of the parameter.
+In the *Settings* tab of a state component, it is now possible to select or clear the *Show units* option to show or hide the unit of the parameter.
 
 #### Dashboards app - State component: Enhanced scrolling behavior when Layout flow is set to 'Columns' \[ID 30765\]
 
@@ -579,7 +579,7 @@ In the *Layout* pane of a node edge graph component, the *Column filters* sectio
 | Highlight/Show entire path | When this option is enabled, not only the nodes matching the filter will be highlighted, but also the entire tree structure of which they are a part (from root to leaves). |
 
 > [!NOTE]
-> The filtering options mentioned above require the *Query filter* component, which is currently still in [soft launch](xref:SoftLaunchOptions).
+> The filtering options mentioned above require the query filter component, which is currently still in [soft launch](xref:SoftLaunchOptions).
 
 #### Dashboards app: New 'Preserve feed selections' option for dashboard folders \[ID 31380\]
 

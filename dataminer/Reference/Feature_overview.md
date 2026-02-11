@@ -41,32 +41,32 @@ Below you can find an overview of the main features that have been added to Data
 | Cube: [Large Alarm Trees](xref:BPA_LargeAlarmTrees) BPA test | DataMiner 10.5.9/10.6.0 <!-- [ID 42952] --> |
 | Cube: [Opening Cube from a session link](xref:Connecting_to_a_DMA_with_Cube#using-a-shared-session-link) | DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 <!-- [ID 42389] --> |
 | Cube: [*UseInitialArgumentsAfterDisconnect* argument](xref:Options_for_opening_DataMiner_Cube#useinitialargumentsafterdisconnecttrue) | DataMiner Cube 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 <!-- [ID 37888] --> |
-| Dashboards: [*Alarm table* component](xref:DashboardAlarmTable) | DataMiner 10.1.5/10.2.0 |
+| Dashboards: [alarm table component](xref:DashboardAlarmTable) | DataMiner 10.1.5/10.2.0 |
 | Dashboards: [JSON input in URL parameters](xref:Specifying_data_input_in_a_URL) | DataMiner 10.2.0/10.2.2 <!-- [ID 31833] [ID 31885] -->|
-| Dashboards: [*Node edge graph* component](xref:DashboardNodeEdgeGraph) | DataMiner 10.1.5/10.2.0 <!-- [ID 29425] -->|
+| Dashboards: [node edge graph component](xref:DashboardNodeEdgeGraph) | DataMiner 10.1.5/10.2.0 <!-- [ID 29425] -->|
 | Dashboards: [PDF export](xref:Sharing_report_from_Dashboards_app) | DataMiner 10.2.12/10.3.0<br>DataMiner 10.2.2 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsexport) <!-- [ID 34634] -->|
-| Dashboards: [*Progress bar* component](xref:DashboardProgressBar) | DataMiner 10.1.7/10.2.0 <!-- [ID 29773] --> |
+| Dashboards: [progress bar component](xref:DashboardProgressBar) | DataMiner 10.1.7/10.2.0 <!-- [ID 29773] --> |
 | Dashboards: [Sharing dashboards using the Live Sharing Service](xref:Sharing_a_dashboard#sharing-a-live-dashboard-via-cloud-share) | DataMiner 10.1.12/10.2.0 <!-- [ID 29047] [ID 31476] -->|
-| Dashboards: [*Trigger* component](xref:DashboardTrigger) | DataMiner 10.1.1/10.2.0 <!-- [ID 28136] --> |
-| Dashboards/Low-Code Apps: [*Button panel* component](xref:DashboardButtonPanel) | DataMiner 10.3.9/10.4.0<br>DataMiner 10.0.3 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsbuttonpanel) <!-- [ID 36775] --> |
+| Dashboards: [trigger component](xref:DashboardTrigger) | DataMiner 10.1.1/10.2.0 <!-- [ID 28136] --> |
+| Dashboards/Low-Code Apps: [button panel component](xref:DashboardButtonPanel) | DataMiner 10.3.9/10.4.0<br>DataMiner 10.0.3 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsbuttonpanel) <!-- [ID 36775] --> |
 | Dashboards/Low-Code Apps: [Configuring node and edge labels](xref:DashboardNodeEdgeGraph#configuring-node-and-edge-labels) for the node edge graph component | DataMiner 10.5.0 [CU11]/10.6.2  <!-- [ID 44218] --> |
 | Dashboards/Low-Code Apps: [Dynamic references in text](xref:Dynamically_Referencing_Data_in_Text) | DataMiner 10.3.11/10.4.0<!-- [ID 37229] --> |
 | Dashboards/Low-Code Apps: [Exporting a GQI query](xref:Creating_GQI_query#exporting-a-query) | DataMiner web 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- [ID 43800] --> |
 | Dashboards/Low-Code Apps: [Flows](xref:Using_flows) | DataMiner web 10.4.0 [CU9]/10.4.12<!-- [ID 40974] --><br>Minimum server version: DataMiner 10.3.9/10.4.0 |
-| Dashboards/Low-Code Apps: [*Form* component](xref:DashboardForm) and DOM data input | DataMiner web 10.3.6/10.4.0<br>DataMiner 10.1.7 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#dommanager) <!-- [ID 36124] -->|
-| Dashboards/Low-Code Apps: [*Grid* component](xref:DashboardGrid) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.2.12 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals) |
+| Dashboards/Low-Code Apps: [form component](xref:DashboardForm) and DOM data input | DataMiner web 10.3.6/10.4.0<br>DataMiner 10.1.7 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#dommanager) <!-- [ID 36124] -->|
+| Dashboards/Low-Code Apps: [grid component](xref:DashboardGrid) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.2.12 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals) |
 | Dashboards/Low-Code Apps: [*Icon* component](xref:DashboardIcon) | DataMiner 10.3.1/10.4.0 <!-- [ID 34867] -->|
-| Dashboards/Low-Code Apps: [*Maps* component](xref:DashboardMaps) | DataMiner web 10.4.0 [CU13]/10.5.0 [CU1]/DataMiner 10.5.4<!-- [ID 42309] --> |
-| Dashboards/Low-Code Apps: [*Numeric input* component](xref:DashboardNumericInput) | DataMiner web 10.3.5/10.4.0 <!-- [ID 35911] -->|
+| Dashboards/Low-Code Apps: [maps component](xref:DashboardMaps) | DataMiner web 10.4.0 [CU13]/10.5.0 [CU1]/DataMiner 10.5.4<!-- [ID 42309] --> |
+| Dashboards/Low-Code Apps: [numeric input component](xref:DashboardNumericInput) | DataMiner web 10.3.5/10.4.0 <!-- [ID 35911] -->|
 | Dashboards/Low-Code Apps: [Preset templates](xref:Template_Editor#using-a-preset-template) | DataMiner web 10.5.0 [CU10]/10.6.1 <!-- [ID 44040 + 44123] --> |
-| Dashboards/Low-Code Apps: [*Query filter* component](xref:DashboardQueryFilter) | DataMiner 10.3.9/10.4.0<br>DataMiner 10.0.10 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsptp) <!-- [ID 33530] --> |
+| Dashboards/Low-Code Apps: [query filter component](xref:DashboardQueryFilter) | DataMiner 10.3.9/10.4.0<br>DataMiner 10.0.10 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsptp) <!-- [ID 33530] --> |
 | Dashboards/Low-Code Apps: [*Search input* component](xref:DashboardSearchInput) | DataMiner web 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 <!-- [ID 39555] -->|
-| Dashboards/Low-Code Apps: [*Stepper* component](xref:DashboardStepper) | DataMiner 10.3.10/10.4.0 <!-- [ID 37200] -->|
+| Dashboards/Low-Code Apps: [stepper component](xref:DashboardStepper) | DataMiner 10.3.10/10.4.0 <!-- [ID 37200] -->|
 | Dashboards/Low-Code Apps: [Template editor](xref:Template_Editor) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.2.12 with the soft-launch options [ReportsAndDashboardsDynamicVisuals](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals) and [ReportsAndDashboardsScheduler](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsscheduler) |
-| Dashboards/Low-Code Apps: [*Table* component column customization](xref:DashboardTable#column-appearance) | DataMiner web 10.4.1/10.5.0 <!-- [ID 37522] -->|
-| Dashboards/Low-Code Apps: [*Text input* component](xref:DashboardTextInput) | DataMiner web 10.3.5/10.4.0 <!-- [ID 35902] -->|
+| Dashboards/Low-Code Apps: [table component column customization](xref:DashboardTable#column-appearance) | DataMiner web 10.4.1/10.5.0 <!-- [ID 37522] -->|
+| Dashboards/Low-Code Apps: [text input component](xref:DashboardTextInput) | DataMiner web 10.3.5/10.4.0 <!-- [ID 35902] -->|
 | Dashboards/Low-Code Apps: [Variables](xref:Variables) | DataMiner web 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 <!-- [ID 41039] [ID 41063] [ID 41132] -->|
-| Dashboards/Low-Code Apps: [*Timeline* component](xref:DashboardTimeline) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.2.12 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsscheduler) <!-- [ID 37812] -->|
+| Dashboards/Low-Code Apps: [timeline component](xref:DashboardTimeline) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.2.12 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsscheduler) <!-- [ID 37812] -->|
 | Dashboards/Low-Code Apps: [*Toggle* component](xref:Toggle) | DataMiner web 10.4.0 [CU12]/10.5.3<!-- [ID 41903]--> |
 | [Data Aggregator](xref:Data_Aggregator_DxM) | DataMiner 10.2.12/10.3.0 |
 | Databases: [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters) | DataMiner 10.1.3/10.2.0 <!-- [ID 28473] -->|

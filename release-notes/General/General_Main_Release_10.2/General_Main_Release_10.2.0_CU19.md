@@ -153,7 +153,7 @@ When the menu of a component in a dashboard or low-code app was closed by moving
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
-When a *Line chart* component received new data, it would incorrectly recalculate its viewport.
+When a line chart component received new data, it would incorrectly recalculate its viewport.
 
 #### SLReset: Problem due to NATS being re-installed before cleaning up the 'C:\\Skyline DataMiner' folder [ID 37072]
 

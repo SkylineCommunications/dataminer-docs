@@ -104,7 +104,7 @@ Currently, by default, the existing components will still be used by default to 
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-The *Node edge graph* component now supports real-time updates.
+The node edge graph component now supports real-time updates.
 
 #### DataMiner Object Models: A confirmation box will now appear when you remove a section from a DOM form [ID 41792]
 
@@ -116,7 +116,7 @@ Up to now, When you removed a section from a DOM instance form with multiple sec
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-By linking a *Trigger* component to a *Query filter* component, it is now possible to have the columns and column statistics refetched.
+By linking a trigger component to a query filter component, it is now possible to have the columns and column statistics refetched.
 
 #### DataMiner root page: Links to deprecated DataMiner XBAP and legacy Reports & Dashboards app have now been removed [ID 41844]
 
@@ -132,7 +132,7 @@ Up to now, this page would still contain links to the XBAP version of DataMiner 
 
 Up to now, when you wanted a *Time range* component to automatically refresh its data at regular intervals, you had to enable the *Allow refresh* option. This would then cause a refresh timer to appear (by default set to 10 seconds).
 
-The *Allow refresh* option has now been removed. In order to have *Time range* component refresh its data at regular intervals, you now have to link a *Trigger* component to it as a filter.
+The *Allow refresh* option has now been removed. In order to have *Time range* component refresh its data at regular intervals, you now have to link a trigger component to it as a filter.
 
 #### Dashboards/Low-Code Apps - Time range component: Moved from the 'General' category to the 'Basic controls' category  [ID 41934]
 
@@ -170,7 +170,7 @@ From now on, *On open* events will be triggered as expected, without delay.
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-When a *Grid* component without a fixed page size received new data, in some cases, the current scroll position would not be retained. From now on, the scroll position will be left untouched when new data is received.
+When a grid component without a fixed page size received new data, in some cases, the current scroll position would not be retained. From now on, the scroll position will be left untouched when new data is received.
 
 ### Fixes
 
@@ -178,7 +178,7 @@ When a *Grid* component without a fixed page size received new data, in some cas
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-When a *Table* component refetched its data, in some cases, the data would incorrectly shift across the different pages.
+When a table component refetched its data, in some cases, the data would incorrectly shift across the different pages.
 
 #### Dashboards/Low-Code Apps - Timeline component: Problem with custom timezones [ID 41839]
 
@@ -190,7 +190,7 @@ When using a custom timezone, in some cases, that timezone would not be applied 
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-When a *State* component was linked to a parameter, and the size of that component was set to "Auto", up to now, the scale of the text would not be updated when the value of the parameter changed. In some cases, this would render the text unreadable.
+When a state component was linked to a parameter, and the size of that component was set to "Auto", up to now, the scale of the text would not be updated when the value of the parameter changed. In some cases, this would render the text unreadable.
 
 #### Low-Code Apps - Timeline component: Post actions after 'Set viewport' or 'Highlight time range' actions would incorrectly not be executed [ID 41862]
 
@@ -214,13 +214,13 @@ When a low-code app used queries in some of its flows, in some cases, it could b
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-When users consulted a shared dashboard containing an *Alarm table* component on which an element filter or a view filter was applied, in some cases, they would incorrectly not be allowed to see any of the alarms listed in that *Alarm table* component.
+When users consulted a shared dashboard containing an alarm table component on which an element filter or a view filter was applied, in some cases, they would incorrectly not be allowed to see any of the alarms listed in that alarm table component.
 
 #### Dashboards/Low-Code Apps - Grid component: Problem when a linked Trigger component is triggered while viewing the last page [ID 41991]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-When a *Trigger* component linked to a *Grid* component was triggered while you were viewing the last page of grid data, a skeleton loading animation would incorrectly be shown. From now on, the last values will remain on the screen until the new data has been fetched.
+When a trigger component linked to a grid component was triggered while you were viewing the last page of grid data, a skeleton loading animation would incorrectly be shown. From now on, the last values will remain on the screen until the new data has been fetched.
 
 #### Low-Code Apps: 'Change variable' action would not always apply the correct value when linked to dynamic data [ID 42027]
 
@@ -264,6 +264,6 @@ When you opened a shared dashboards, any GQI component on that dashboard would n
 
 <!-- MR 10.4.0 [CU12]/10.5.0 [CU0] - FR 10.5.3 [CU0] -->
 
-When an *Alarm table* component was configured to show alarms in a sliding window, it would incorrectly not show any alarms.
+When an alarm table component was configured to show alarms in a sliding window, it would incorrectly not show any alarms.
 
 Also, when you applied a view filter, a parameter index filter or a saved filter, an exception would be thrown and no alarms would be shown.

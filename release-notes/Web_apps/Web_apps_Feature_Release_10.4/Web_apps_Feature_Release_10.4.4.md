@@ -33,21 +33,21 @@ This indicator will show the current status of the client's WebSocket connection
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-*Dropdown* components now have a *Clear selection* setting. When you enable the setting, a *Clear* button will be displayed inside the selection box, allowing users to clear the current selection.
+Dropdown components now have a *Clear selection* setting. When you enable the setting, a *Clear* button will be displayed inside the selection box, allowing users to clear the current selection.
 
 > [!NOTE]
-> When you disable the setting for a particular *Dropdown* component, clicking the dashboard's *Clear all* button will not affect that component. Its current selection will be left untouched.
+> When you disable the setting for a particular dropdown component, clicking the dashboard's *Clear all* button will not affect that component. Its current selection will be left untouched.
 
 #### Dashboards app & Low-Code Apps - Dropdown, List & Tree components: New 'Select first item by default' setting [ID 38775]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-*Dropdown*, *List* and *Tree* components now have a new *Select first item by default* setting under *Initial selection*. When you enable the setting, the first value shown in the component will automatically be selected.
+Dropdown, *List* and tree components now have a new *Select first item by default* setting under *Initial selection*. When you enable the setting, the first value shown in the component will automatically be selected.
 
 > [!NOTE]
 >
-> - When you add a new *Dropdown*, *List* or *Tree* component, this setting will be enabled by default.
-> - If, in case of an existing *Dropdown*, *List* or *Tree* component, an existing selection setting is enabled under *Initial selection*, that existing setting will remain unchanged, and the new *Select first item by default* setting will not be enabled. However, if none of the existing settings under *Initial selection* are enabled, the new *Select first item by default* setting will automatically be enabled.
+> - When you add a new dropdown, *List* or tree component, this setting will be enabled by default.
+> - If, in case of an existing dropdown, *List* or tree component, an existing selection setting is enabled under *Initial selection*, that existing setting will remain unchanged, and the new *Select first item by default* setting will not be enabled. However, if none of the existing settings under *Initial selection* are enabled, the new *Select first item by default* setting will automatically be enabled.
 
 ## Changes
 
@@ -112,11 +112,11 @@ In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, etc.), Angular and 
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-The *Dropdown*, *List* and *Tree* components will now behave as follows when linked to one or more queries:
+The dropdown, *List* and tree components will now behave as follows when linked to one or more queries:
 
 - When linked to multiple queries, they will continue to list the queries as data.
 
-  In case of a *DropDown* component, for example, the feed can then (still) be used to dynamically populate a table, showing the result of the selected query from the dropdown.
+  In case of a dropdown component, for example, the feed can then (still) be used to dynamically populate a table, showing the result of the selected query from the dropdown.
 
 - When linked to one query, they will now list the resulting rows from that query instead of the query itself. Making a selection will then
 
@@ -135,7 +135,7 @@ Two new settings have also been added:
   > [!NOTE]
   > This setting is only visible when one query is linked and is used as data, or when the index dataset is linked as data.
 
-The visualizations can now also be linked to a *Trigger* component and support two actions in low-code apps:
+The visualizations can now also be linked to a trigger component and support two actions in low-code apps:
 
 - Fetch the data
 - Select an item (limited to DOM instances)
@@ -279,7 +279,7 @@ Up to now, when a client was using polling, GQI updates would not be shown in th
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-When, in a *Dropdown* component, you selected a query, cleared the selection, and then selected the same query again, the feed would incorrectly be empty.
+When, in a dropdown component, you selected a query, cleared the selection, and then selected the same query again, the feed would incorrectly be empty.
 
 #### Dashboards app & Low-Code Apps: Components needed to be selected first before they could be deleted [ID 38859]
 

@@ -118,7 +118,7 @@ When you had opened the user menu by clicking the user icon in the top-right cor
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
-In some cases, an error could be thrown when you shared a dashboard that contained a *Gauge* component fed by a *State* component with indices.
+In some cases, an error could be thrown when you shared a dashboard that contained a gauge component fed by a state component with indices.
 
 #### Web services API: Problem when fetching the next page of a GQI query [ID 36903]
 
@@ -166,7 +166,7 @@ When a form component linked to a DOM instance feed was not fed an instance, it 
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
-The *Form* component would not be cleared when it was no longer fed a DOM instance or a DOM definition.
+The form component would not be cleared when it was no longer fed a DOM instance or a DOM definition.
 
 #### Dashboards app: 'Loading...' indicator would appear when trying to save a nameless folder [ID 37002]
 

@@ -56,7 +56,7 @@ The tutorial consists of the following steps:
 
 1. While the component is selected, go to the *Settings* tab on the right and change the default range to *This week*.
 
-1. Drag and drop the *Table* visualization from the pane on the left to the dashboard.
+1. Drag and drop the table visualization from the pane on the left to the dashboard.
 
    ![Table visualizations](~/dataminer/images/Tutorial_anomaly_dashboard_add_table.png)
 
@@ -119,9 +119,9 @@ The table component should now display the raw anomalies from the system within 
 
    ![Group by operator](~/dataminer/images/Tutorial_anomaly_dashboard_add_Group_by_operator.png)
 
-1. Drag and drop the *State* visualization from the pane on the left to the top of the dashboard.
+1. Drag and drop the state visualization from the pane on the left to the top of the dashboard.
 
-1. Drag the query *Anomalies by Type* onto the *State* component.
+1. Drag the query *Anomalies by Type* onto the state component.
 
    The state component should now show the number of anomalies for each type.
 
@@ -135,7 +135,7 @@ The table component should now display the raw anomalies from the system within 
 
    ![State component showing the number of anomalies by type](~/dataminer/images/Tutorial_anomaly_dashboard_State_component_fine-tuned.png)
 
-1. Click one of the *State* items in the component to make a selection.
+1. Click one of the state items in the component to make a selection.
 
 1. Modify the *Anomalies filtered on time* query so it also takes that selection into account:
 
@@ -229,11 +229,11 @@ The *Element ID* and *Parameter ID* columns in the table contain the IDs of the 
 
 In this step, you will add a line chart to show the trending of the parameter linked to the selected anomaly. Below the chart, you will add a timeline that will show a template for the selected anomaly.
 
-1. Drag and drop the *Line & area chart* from the pane on the left onto the dashboard, below the table component.
+1. Drag and drop the line & area chart from the pane on the left onto the dashboard, below the table component.
 
    ![Line chart visualization](~/dataminer/images/Tutorial_anomaly_dashboard_line_chart.png)
 
-1. Drag and drop the *Timeline* from the pane on the left onto the dashboard, below the line & area chart.
+1. Drag and drop the timeline from the pane on the left onto the dashboard, below the line & area chart.
 
    ![Timeline visualization](~/dataminer/images/Tutorial_anomaly_dashboard_timeline.png)
 

@@ -103,7 +103,7 @@ When SLAs were stored in a Cassandra cluster, none of their rows would get clean
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
-In some cases, a *State* component would incorrectly not be cleared when its input feed was cleared.
+In some cases, a state component would incorrectly not be cleared when its input feed was cleared.
 
 #### Low-Code Apps: Table actions would incorrectly be executed before the rows were fed [ID 36263]
 

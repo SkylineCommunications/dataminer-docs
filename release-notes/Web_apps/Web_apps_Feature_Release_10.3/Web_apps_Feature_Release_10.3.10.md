@@ -47,7 +47,7 @@ In addition, other settings found on the *Layout* tab have been rearranged. The 
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-A new *Stepper* component is now available. This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e. a DOM instance or DOM definition that contains states) as data input.
+A new stepper component is now available. This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e. a DOM instance or DOM definition that contains states) as data input.
 
 For more information on how to configure this component, see [Stepper](xref:DashboardStepper).
 
@@ -121,7 +121,7 @@ Up to now, if a column of a query was edited while the query was loading in a ta
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-Up to now, in *Form* components, DOM GenericEnumFieldDescriptors would be sorted alphabetically. The order that was specified in the DomDefinition would be disregarded.
+Up to now, in form components, DOM GenericEnumFieldDescriptors would be sorted alphabetically. The order that was specified in the DomDefinition would be disregarded.
 
 From now on, DOM GenericEnumFieldDescriptors will always be sorted as specified in the DomDefinition.
 
@@ -149,7 +149,7 @@ When the menu of a component in a dashboard or low-code app was closed by moving
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
-When a *Line chart* component received new data, it would incorrectly recalculate its viewport.
+When a line chart component received new data, it would incorrectly recalculate its viewport.
 
 #### Dashboards app/Low-Code Apps: Query filter not applied on sorted table [ID 37070]
 
@@ -223,7 +223,7 @@ The label of the *Icon* setting of an *Icon* component would incorrectly be in l
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
 
-When two *State* components were fed the same query row data and had a column filter applied, the app would become unresponsive.
+When two state components were fed the same query row data and had a column filter applied, the app would become unresponsive.
 
 #### Dashboards app/Low-Code Apps: Problem when migrating a query containing only a 'start from' node linking to another query with only a 'start from' node [ID 37224]
 

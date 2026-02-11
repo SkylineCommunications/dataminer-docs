@@ -198,9 +198,9 @@ A new setting, *Auto-expand parameters*, is now available for the parameter feed
 
 #### Dashboards app: New Bookings dataset & Node edge graph component improvements \[ID 24480\]
 
-A new *Bookings* dataset is now available in the Dashboards app, which can be filtered on a specific time range. This can be used to add booking data to a *Dropdown*, *List*, or *Tree* component. If the entire booking dataset is added, a time range feed should also be added as a filter. Booking data can also be added as a filter to a *Node edge graph* component. To specify a booking data feed in a URL, specify *bookings=bookingsID*.
+A new *Bookings* dataset is now available in the Dashboards app, which can be filtered on a specific time range. This can be used to add booking data to a dropdown, *List*, or tree component. If the entire booking dataset is added, a time range feed should also be added as a filter. Booking data can also be added as a filter to a node edge graph component. To specify a booking data feed in a URL, specify *bookings=bookingsID*.
 
-Because it is now possible to use a booking data filter, the *Reservation instance ID* setting is no longer available for the *Node edge graph* component. If a service filter is used for this component, it must be linked with a time range feed. Finally, the *Service definition* setting for the *Node edge graph* component has been changed from a text box to a dropdown list.
+Because it is now possible to use a booking data filter, the *Reservation instance ID* setting is no longer available for the node edge graph component. If a service filter is used for this component, it must be linked with a time range feed. Finally, the service definition setting for the node edge graph component has been changed from a text box to a dropdown list.
 
 ### DMS CPE Management
 

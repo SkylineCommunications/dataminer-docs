@@ -37,7 +37,7 @@ When a user applies changes to a DOM module, that module will reinitialize itsel
 > - This app only works in conjunction with DataMiner Agents running at least Main Release version 10.6.0 or Feature Release version 10.5.10.
 > - This app is only accessible to users with the following user permission: *Modules > System configuration > Object Manager > Module settings*.
 > - To access this web app directly, go to `https://<DMA IP or hostname>/dom`.
-> - You can embed this app in a low-code app by specifying a URL like `https://<DMA IP or hostname>/dom/#/?embed=true` in a *Web* component. Also, when you embed this app in a low-code app, you can make it show specific DOM modules by adding the IDs of those modules in the URL. See the following example: `https://<DMA IP or hostname>/dom/#/?embed=true&moduleIds=myDomModule1,myDomModule2,myDomModule3`.
+> - You can embed this app in a low-code app by specifying a URL like `https://<DMA IP or hostname>/dom/#/?embed=true` in a web component. Also, when you embed this app in a low-code app, you can make it show specific DOM modules by adding the IDs of those modules in the URL. See the following example: `https://<DMA IP or hostname>/dom/#/?embed=true&moduleIds=myDomModule1,myDomModule2,myDomModule3`.
 
 See also: [DataMiner Object Models: Definition-level security [ID 43380] [ID 43589]](xref:General_Feature_Release_10.5.10#dataminer-object-models-definition-level-security-id-43380-id-43589)
 

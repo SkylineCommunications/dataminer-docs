@@ -81,7 +81,7 @@ By default, this setting will be enabled.
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-In the *Layout* pane of the *Maps* component, a *Conditional coloring* option has now been added. This will allow you to highlight lines based on a condition.
+In the *Layout* pane of the maps component, a *Conditional coloring* option has now been added. This will allow you to highlight lines based on a condition.
 
 #### Dashboards app & Low-Code Apps: New 'Component name' setting [ID 43453]
 
@@ -158,7 +158,7 @@ From now on, instead of returning an error, the GQI DxM will return a `Heartbeat
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-Up to now, the *Timeline* component would try to preserve as much state as possible when refreshing the data (via an action, a trigger component, a change to the data being fed, etc.). This meant that groups that were already present since the previous query would remain in the same spot, relative to each other. This would also be the case if the order in which the new data was returned was different from that of the previous query.
+Up to now, the timeline component would try to preserve as much state as possible when refreshing the data (via an action, a trigger component, a change to the data being fed, etc.). This meant that groups that were already present since the previous query would remain in the same spot, relative to each other. This would also be the case if the order in which the new data was returned was different from that of the previous query.
 
 From now on, the order of the rows will be taken into account when determining the position of the timeline groups. In that way, the groups will be sorted according to the data. The position of the items within a group will not change.
 
@@ -190,7 +190,7 @@ From now on, when a GQI session is marked as invalid by the GQI DxM, the web API
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When, in a *Timeline* component, you had grouped on multiple columns, only the labels of the bottom-level group would have a tooltip.
+When, in a timeline component, you had grouped on multiple columns, only the labels of the bottom-level group would have a tooltip.
 
 From now on, all group labels will have a tooltip.
 
@@ -204,7 +204,7 @@ When you switched from one page to another, up to now, actions on open panels wo
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When, in a *Table* component with multiple queries, you rapidly switched between the different queries or generated a PDF, in some cases, the following runtime error could appear instead of the actual table data:
+When, in a table component with multiple queries, you rapidly switched between the different queries or generated a PDF, in some cases, the following runtime error could appear instead of the actual table data:
 
 `Cannot read properties of undefined (reading "Value")`
 
@@ -266,7 +266,7 @@ Also, in some cases, the page selector of a Visual Overview component could keep
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When a dashboard containing a *Button panel* component was embedded in DataMiner Cube, the *Button panel* component would incorrectly start to flicker when it received an update.
+When a dashboard containing a button panel component was embedded in DataMiner Cube, the button panel component would incorrectly start to flicker when it received an update.
 
 #### Low-Code Apps: List of possible actions to be configured for a component would no longer be correct after changing the visual [ID 43423]
 

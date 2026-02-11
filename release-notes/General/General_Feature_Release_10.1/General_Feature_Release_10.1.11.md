@@ -569,7 +569,7 @@ In the *Layout* pane of a node-edge component, the *Column filters* section has 
 | Highlight/Show entire path | When this option is enabled, not only the nodes matching the filter will be highlighted, but also the entire tree structure of which they are a part (from root to leaves). |
 
 > [!NOTE]
-> The filtering options mentioned above require the *Query filter* component, which is currently still in [soft launch](xref:SoftLaunchOptions).
+> The filtering options mentioned above require the query filter component, which is currently still in [soft launch](xref:SoftLaunchOptions).
 
 ### DMS Service & Resource Management
 

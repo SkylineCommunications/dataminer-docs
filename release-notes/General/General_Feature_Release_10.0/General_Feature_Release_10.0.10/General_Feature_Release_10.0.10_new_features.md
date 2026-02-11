@@ -116,7 +116,7 @@ In the *Overview* tab of the *Services* app, the booking state of a service is i
   - Future
   - Past/None
 
-#### Service & Resource Management - Profiles app: Value of a capability of type 'text' can now be changed regardless of the 'User time-dependent' option \[ID 26538\]
+#### Service & Resource Management - Profiles app: Value of a capability of type Text can now be changed regardless of the 'User time-dependent' option \[ID 26538\]
 
 Up to now, when you configured a profile instance, the value of a capability of type “text” could only be changed when the “Use time-dependent" option was selected. From now on, it will be possible to change the value of a capability of type “text” regardless of the “User time-dependent" option.
 
@@ -207,7 +207,7 @@ In DataMiner v.10.0.9, the layout options for a State component displaying a par
 
   - *LED*: The alarm color is displayed by a circular LED to the left of the first label.
   - *Line*: The alarm color is displayed by a bar along the left side of the component.
-  - *Text*: The text color of the value matches the alarm color.
+  - text: The text color of the value matches the alarm color.
   - *Background*: The background of the component displays the alarm color. If this option is selected, an additional option, *Automatically adjust text color to alarm color*, can be selected to make sure the text color is adapted if necessary.
   - *None*: No alarm color is displayed.
 
@@ -264,11 +264,11 @@ To configure the component:
 
 #### State/Gauge/Ring components now able to show multiple items for several types of feeds \[ID 26780\]
 
-In the Dashboards app, it is now possible to show multiple states with the same *State*, *Ring* or *Gauge* component, even if elements, services, views or redundancy groups are used as the data feed. Previously, this was only supported for parameter feeds.
+In the Dashboards app, it is now possible to show multiple states with the same state, ring or gauge component, even if elements, services, views or redundancy groups are used as the data feed. Previously, this was only supported for parameter feeds.
 
-For the *State* component, the *Layout flow* options in the *Layout* panel allow you to select whether the different states should be displayed in rows or columns. If they are displayed in rows, they will displayed next to each other until there is no more space and a new row is started. If they are displayed as columns, they will be displayed below each other until there is no more space and a new column is started.
+For the state component, the *Layout flow* options in the *Layout* panel allow you to select whether the different states should be displayed in rows or columns. If they are displayed in rows, they will displayed next to each other until there is no more space and a new row is started. If they are displayed as columns, they will be displayed below each other until there is no more space and a new column is started.
 
-For the *Ring* and *Gauge* component, if parameter feeds are used, additional options in the layout panel allow you to configure whether the different parameters are displayed next to each other or below each other, and how many rows and columns of parameters can be displayed at the same time. These options are not available for other types of feeds; for those only one item is displayed at the same time and you need to scroll to see the next item.
+For the ring and gauge component, if parameter feeds are used, additional options in the layout panel allow you to configure whether the different parameters are displayed next to each other or below each other, and how many rows and columns of parameters can be displayed at the same time. These options are not available for other types of feeds; for those only one item is displayed at the same time and you need to scroll to see the next item.
 
 #### Dashboards app: Dashboards created by users will now be included in DataMiner backup packages \[ID 26836\]
 

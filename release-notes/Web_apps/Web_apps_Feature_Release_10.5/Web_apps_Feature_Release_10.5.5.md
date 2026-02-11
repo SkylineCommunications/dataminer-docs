@@ -21,11 +21,11 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-#### Low-Code Apps - Template editor: Configuring actions for layers of type 'Text' [ID 42473]
+#### Low-Code Apps - Template editor: Configuring actions for layers of type Text [ID 42473]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-Layers of type *Text* now also have a *Configure actions* property. This will allow you to configure actions that are executed when a user clicks the text box.
+Layers of type text now also have a *Configure actions* property. This will allow you to configure actions that are executed when a user clicks the text box.
 
 #### Dashboards/Low-Code Apps - Template editor: Duplicating layers [ID 42479]
 
@@ -43,7 +43,7 @@ In the *Layers* tab, you can now duplicate a layer. To do so, proceed as follows
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-It is now possible to configure a tooltip for any type of layer (*Icon*, *Text*, *Rectangle*, or *Ellipse*).
+It is now possible to configure a tooltip for any type of layer (*Icon*, text, *Rectangle*, or *Ellipse*).
 
 When you hover over the layers, the tooltip of the layer in front will be displayed.
 
@@ -54,7 +54,7 @@ When you hover over the layers, the tooltip of the layer in front will be displa
 In the template editor, you can now add layers of type *HTML*. Adding a layer of type *HTML* will add a text box in which you can add HTML content. It will offer basic syntax highlighting and intellisense.
 
 > [!IMPORTANT]
-> Newly added layers of type *Text* will no longer support HTML content. If you add HTML content to new layers of type *Text*, it will be rendered as plain text instead of HTML. For backward compatibility, HTML code in existing layers of type *Text* will still be rendered as HTML.
+> Newly added layers of type text will no longer support HTML content. If you add HTML content to new layers of type text, it will be rendered as plain text instead of HTML. For backward compatibility, HTML code in existing layers of type text will still be rendered as HTML.
 
 ## Changes
 
@@ -64,10 +64,10 @@ In the template editor, you can now add layers of type *HTML*. Adding a layer of
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-Because of a number of enhancements, overall performance of the *Timeline* component has increased, especially when the timeline in question contains a large number of groups.
+Because of a number of enhancements, overall performance of the timeline component has increased, especially when the timeline in question contains a large number of groups.
 
 > [!IMPORTANT]
-> In some cases, this change will break existing setups. A *Timeline* component will now only load up to 10000 items, timeline groups will now be sorted, and real-time updates will no longer be applied when using e.g. a DOM instances data source.
+> In some cases, this change will break existing setups. A timeline component will now only load up to 10000 items, timeline groups will now be sorted, and real-time updates will no longer be applied when using e.g. a DOM instances data source.
 
 ### Enhancements
 
@@ -160,7 +160,7 @@ For example, up to now, a month would only be focused when all weeks of that mon
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-A number of minor enhancements have been made to the *Maps* component, especially with regard to the overall look and feel of the UI elements.
+A number of minor enhancements have been made to the maps component, especially with regard to the overall look and feel of the UI elements.
 
 #### Security enhancements [ID 42565]
 
@@ -194,7 +194,7 @@ When a check was performed to determine whether a dashboard or a low-code app ha
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-In the *Table* and *Parameter table* components, up to now, the search icon would appear at the bottom, blocking part of the table data. From now on, a search icon in the header bar will allow you to open a search bar at the top of the component.
+In the table and parameter table components, up to now, the search icon would appear at the bottom, blocking part of the table data. From now on, a search icon in the header bar will allow you to open a search bar at the top of the component.
 
 #### DataMiner Object Models: Web API would incorrectly not allow the ModuleID property to be empty when using DomInstanceFieldDescriptor or DomInstanceValueFieldDescriptor [ID 42334]
 
@@ -237,13 +237,13 @@ Up to now, it would not be possible to export a low-code app of which the name c
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-When a table variable was visualized as a *Timeline* component, it would not be possible to edit its template.
+When a table variable was visualized as a timeline component, it would not be possible to edit its template.
 
 #### Dashboards/Low-Code Apps: Basic controls incorrectly had to layout sections named 'General' [ID 42487]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-Up to now, the *Layout* pane of the *Numeric input*, *Search input* and *Toggle* component would incorrectly have two sections named *General*.
+Up to now, the *Layout* pane of the numeric input, *Search input* and *Toggle* component would incorrectly have two sections named *General*.
 
 The second section named *General* has now been renamed to *Advanced*.
 
@@ -251,13 +251,13 @@ The second section named *General* has now been renamed to *Advanced*.
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-In e.g. a *Maps* component or a *Web* component, the `onLoad` event would incorrectly be triggered multiple times. From now on, this event will only be triggered once.
+In e.g. a maps component or a web component, the `onLoad` event would incorrectly be triggered multiple times. From now on, this event will only be triggered once.
 
 #### Dashboards app: Maps component would incorrectly not reapply its previous selection when the dashboard was refreshed [ID 42496]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-When you refreshed a dashboard, in some cases, a *Maps* component would incorrectly not reapply its previous selection.
+When you refreshed a dashboard, in some cases, a maps component would incorrectly not reapply its previous selection.
 
 #### Dashboards/Low-Code Apps: Problem when components were linked to GQI table data [ID 42499]
 
@@ -311,7 +311,7 @@ In several components (e.g. the *Time range* component), information elements co
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-When no layers were visible or selected in a *Maps* component, it would incorrectly not be possible to execute a *Fetch the data* action.
+When no layers were visible or selected in a maps component, it would incorrectly not be possible to execute a *Fetch the data* action.
 
 #### Dashboards/Low-Code Apps: Empty query nodes would incorrectly not be marked as null [ID 42588]
 

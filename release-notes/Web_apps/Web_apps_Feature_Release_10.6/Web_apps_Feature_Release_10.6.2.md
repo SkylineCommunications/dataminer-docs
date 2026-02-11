@@ -394,7 +394,7 @@ Because these two actions will only affect the viewport after the user interacti
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-In a low-code app, a *Timeline* component would cause undesired layout shifting while you were moving items between groups. This could lead to you dropping the items in the wrong group.
+In a low-code app, a timeline component would cause undesired layout shifting while you were moving items between groups. This could lead to you dropping the items in the wrong group.
 
 Also, it would not be possible to pan the timeline when starting on a timeline item.
 

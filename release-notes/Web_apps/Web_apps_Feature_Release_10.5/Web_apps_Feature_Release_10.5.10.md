@@ -40,7 +40,7 @@ These events will take place in the following cases:
 
 <!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
 
-From now on, when you select a line on a map in a *Maps* component
+From now on, when you select a line on a map in a maps component
 
 - data about that line will be made available in the *Selected lines* category,
 - its *Selected* state will automatically be set to true, and
@@ -55,7 +55,7 @@ Also, in low-code apps, *On line click* event can now be configured. Inside such
 
 <!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
 
-From now on, if the URL of a *Web* component points to a file in the DMA's `Webpages/public/` folder (or one of its subfolders), you can disable sandboxing by doing the following:
+From now on, if the URL of a web component points to a file in the DMA's `Webpages/public/` folder (or one of its subfolders), you can disable sandboxing by doing the following:
 
 1. In edit mode, select the component, and open the *Settings* tab.
 1. In the *Security* section, disable the *Open in sandbox* option.
@@ -127,7 +127,7 @@ When a PDF report is being generated in a particular browser tab, from now on, t
 
 <!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
 
-From now on, a *Maps* component will display all authentication errors of the Google Maps API.
+From now on, a maps component will display all authentication errors of the Google Maps API.
 
 ### Fixes
 
@@ -164,7 +164,7 @@ In some cases, it could occur that a line chart in a PDF received unexpected dat
 
 <!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
 
-When a *Table* component with the *Update data* option enabled received an update that deleted a number of rows, up to now, the keys of the rows that were selected at the time of the update would incorrectly not be cleaned up.
+When a table component with the *Update data* option enabled received an update that deleted a number of rows, up to now, the keys of the rows that were selected at the time of the update would incorrectly not be cleaned up.
 
 As a result, any row that was selected at the time of the update would incorrectly still be selected, and when that selection was re-applied, the row would again be selected.
 
@@ -184,9 +184,9 @@ When you opened the DataMiner landing page (by default accessible via `https://<
 
 <!-- 10.4.0 [CU19] / MR 10.5.0 [CU7] - FR 10.5.10 -->
 
-Up to now, settings of existing queries that no longer fed data to a *Maps* component would incorrectly be removed.
+Up to now, settings of existing queries that no longer fed data to a maps component would incorrectly be removed.
 
-From now on, when a query no longer feeds any data to a *Maps* component, it will no longer be automatically removed. Instead, it will be marked as "old query".
+From now on, when a query no longer feeds any data to a maps component, it will no longer be automatically removed. Instead, it will be marked as "old query".
 
 Users will be allowed to remove queries marked as "old queries", but they will not be allowed to change any of their settings.
 

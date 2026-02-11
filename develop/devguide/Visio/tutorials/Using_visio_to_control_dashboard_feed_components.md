@@ -21,16 +21,16 @@ Expected duration: 45 minutes
 
 ## Overview
 
-- [Step 1: Create a new Virtual Connector element and add numerical data to the 'Numerical Master Table' on the element's 'Table' data page](#step-1-create-a-new-virtual-connector-element-and-add-numerical-data-to-the-numerical-master-table-on-the-elements-table-data-page)
+- [Step 1: Create a new Virtual Connector element and add numerical data to the 'Numerical Master Table' on the element's table data page](#step-1-create-a-new-virtual-connector-element-and-add-numerical-data-to-the-numerical-master-table-on-the-elements-table-data-page)
 
-- [Step 2: Create a new dashboard and add a 'Parameter feed' component and a 'State' component to display the numerical data from the Virtual Connector](#step-2-create-a-new-dashboard-and-add-a-parameter-feed-component-and-a-state-component-to-display-the-numerical-data-from-the-virtual-connector)
+- [Step 2: Create a new dashboard and add a 'Parameter feed' component and a state component to display the numerical data from the Virtual Connector](#step-2-create-a-new-dashboard-and-add-a-parameter-feed-component-and-a-state-component-to-display-the-numerical-data-from-the-virtual-connector)
 
 - [Step 3: Create a new visual overview for the Generic Virtual Connector element with shapes for each numerical table index linking to the dashboard](#step-3-create-a-new-visual-overview-for-the-generic-virtual-connector-element-with-shapes-for-each-numerical-table-index-linking-to-the-dashboard)
 
 > [!NOTE]
 > The data being interacted with in the example below originates from elements using the *Skyline Generic Virtual Connector* protocol. However, this process will work for elements using any protocol that features table-based parameters.
 
-## Step 1: Create a new Virtual Connector element and add numerical data to the 'Numerical Master Table' on the element's 'Table' data page
+## Step 1: Create a new Virtual Connector element and add numerical data to the 'Numerical Master Table' on the element's Table data page
 
 1. Open DataMiner Cube.
 
@@ -42,7 +42,7 @@ Expected duration: 45 minutes
 
    1. Enter an element name, select the DMA, the protocol (i.e. *Skyline Generic Virtual Connector*) and the protocol version (e.g. 1.0.0.3), and click *Create*.
 
-1. Go to the *DATA* > *Table* page of the newly created element, which contains the *Numeric Master Table*.
+1. Go to the *DATA* > table page of the newly created element, which contains the *Numeric Master Table*.
 
 1. Right-click below the table's column headers, and click *Add* to add a new row to the table.
 
@@ -59,7 +59,7 @@ Expected duration: 45 minutes
 
    ![Table rows](~/dataminer/images/VisioURLFeed_NumericTableRows.png)
 
-## Step 2: Create a new dashboard and add a 'Parameter feed' component and a 'State' component to display the numerical data from the Virtual Connector
+## Step 2: Create a new dashboard and add a 'Parameter feed' component and a State component to display the numerical data from the Virtual Connector
 
 1. Open the *Dashboards* app.
 
@@ -97,7 +97,7 @@ Expected duration: 45 minutes
 
 1. Add a [State component](xref:DashboardState).
 
-1. Click the *State* component to select it.
+1. Click the state component to select it.
 
 1. From the *Data* pane on the right, add the *Parameters* feed:
 
@@ -105,7 +105,7 @@ Expected duration: 45 minutes
 
    1. Expand the *Parameter feed* component.
 
-   1. Drag the *Parameters* item onto the *State* component to be used as data.
+   1. Drag the *Parameters* item onto the state component to be used as data.
 
    ![Feeds](~/dataminer/images/VisioURLFeed_ParameterDataForState.png)
 
@@ -115,7 +115,7 @@ Expected duration: 45 minutes
 
 1. Click *Stop editing* to exit edit mode.
 
-   At this point, you should be able to make manual parameter feed selections to control which parameter values are shown on the *State* component.
+   At this point, you should be able to make manual parameter feed selections to control which parameter values are shown on the state component.
 
    ![State component](~/dataminer/images/VisioURLFeed_DashboardManualResults.png)
 
@@ -187,7 +187,7 @@ Expected duration: 45 minutes
    | ChildType   | Row |
    | ChildMargin | 5   |
 
-1. Ctrl-click the grouped sheet representing the row and the existing background sheet that came with the new Visio file to select both, then right-click, and select *Group* > *Group*.
+1. Ctrl-click the grouped sheet representing the row and the existing background sheet that came with the new Visio file to select both, then right-click, and select group > group.
 
 1. Add the following shape data to the larger grouped sheet:
 
@@ -235,7 +235,7 @@ Expected duration: 45 minutes
 
 1. Save the Visio file.
 
-For each table row that was added in [step 1](#step-1-create-a-new-virtual-connector-element-and-add-numerical-data-to-the-numerical-master-table-on-the-elements-table-data-page), a child shape should now be displayed on the visual overview of the *Generic Virtual Connector* element. Each shape will have its own button that, when clicked, will open the dashboard that was created in [step 2](#step-2-create-a-new-dashboard-and-add-a-parameter-feed-component-and-a-state-component-to-display-the-numerical-data-from-the-virtual-connector). Depending on the button that was clicked, the URL will be fed with the appropriate table index information so that the parameter feed on the dashboard automatically selects the index associated with the button's row, and the *State* component will display the corresponding results.
+For each table row that was added in [step 1](#step-1-create-a-new-virtual-connector-element-and-add-numerical-data-to-the-numerical-master-table-on-the-elements-table-data-page), a child shape should now be displayed on the visual overview of the *Generic Virtual Connector* element. Each shape will have its own button that, when clicked, will open the dashboard that was created in [step 2](#step-2-create-a-new-dashboard-and-add-a-parameter-feed-component-and-a-state-component-to-display-the-numerical-data-from-the-virtual-connector). Depending on the button that was clicked, the URL will be fed with the appropriate table index information so that the parameter feed on the dashboard automatically selects the index associated with the button's row, and the state component will display the corresponding results.
 
 ## Related documentation
 

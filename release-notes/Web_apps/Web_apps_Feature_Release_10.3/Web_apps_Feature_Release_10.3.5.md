@@ -98,13 +98,13 @@ Note that, from now on, every *Sort by* node will nullify any preceding *Sort by
 > The behavior of existing queries (using e.g. *Sort by B* followed by *Sort by A*) will not be altered in any way. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
 > For example, an existing query using *Sort by B* followed by *Sort by A* will use *Sort by A* followed by *Then sort by B* after being migrated.
 
-#### Dashboards app & Low-Code Apps: New 'Text input' feed [ID 35902]
+#### Dashboards app & Low-Code Apps: New Text input feed [ID 35902]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-The new *Text input* feed is a text box that exposes the entered text as a string feed that can currently be consumed by GQI queries and script parameters in low-code app actions.
+The new text input feed is a text box that exposes the entered text as a string feed that can currently be consumed by GQI queries and script parameters in low-code app actions.
 
-When configuring this new *Text input* feed, you can optionally specify a label, an icon and a placeholder. You can also indicate whether the text box should allow multiple lines of texts and whether it should feed its value when triggered by the following events:
+When configuring this new text input feed, you can optionally specify a label, an icon and a placeholder. You can also indicate whether the text box should allow multiple lines of texts and whether it should feed its value when triggered by the following events:
 
 - On Enter
 - On Focus lost
@@ -125,13 +125,13 @@ A default value can be set by means of a URL option:
 
 For more information on how to pass data using a JSON object, see [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_URL).
 
-#### Dashboards app & Low-Code Apps: New 'Numeric input' feed [ID 35911]
+#### Dashboards app & Low-Code Apps: New Numeric input feed [ID 35911]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-The new *Numeric input* feed is a text box that exposes the entered numbers as a number feed that can currently be consumed by GQI queries and script parameters in low-code app actions.
+The new numeric input feed is a text box that exposes the entered numbers as a number feed that can currently be consumed by GQI queries and script parameters in low-code app actions.
 
-When configuring this new *Numeric input* feed, you can optionally specify a label, an icon, a placeholder, a unit, a step size, a number of decimals, a minimum value and a maximum value. You can also indicate whether the text box should feed its value when triggered by the following events:
+When configuring this new numeric input feed, you can optionally specify a label, an icon, a placeholder, a unit, a step size, a number of decimals, a minimum value and a maximum value. You can also indicate whether the text box should feed its value when triggered by the following events:
 
 - On Enter
 - On Focus lost
@@ -458,7 +458,7 @@ When a GQI request failed, some GQI components would show either an unrelated er
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
-Up to now, overall performance of a dashboard or a low-code app could decrease when it contained *State* components of which the *Design* option was set to "Auto size". A number of enhancements have now been made to prevent performance from decreasing in this case.
+Up to now, overall performance of a dashboard or a low-code app could decrease when it contained state components of which the *Design* option was set to "Auto size". A number of enhancements have now been made to prevent performance from decreasing in this case.
 
 #### Web apps: Login button would incorrectly be disabled on Edge and Chrome [ID 35906]
 

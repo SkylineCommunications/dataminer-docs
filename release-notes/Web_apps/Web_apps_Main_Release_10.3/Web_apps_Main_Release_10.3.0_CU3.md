@@ -98,11 +98,11 @@ In a custom component theme, for some fonts, the font size of the title could be
 
 From now on, font sizes will have to be set to a value between 1px and 36px.
 
-#### Dashboards app: Error when opening a shared dashboard containing a 'Line & area chart' component, a 'State' component, a 'Gauge' component or a 'Ring' component [ID 36022]
+#### Dashboards app: Error when opening a shared dashboard containing a Line & area chart component, a State component, a Gauge component or a Ring component [ID 36022]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
-An error could occur when you opened a shared dashboard that contained a *Line & area chart* component, a *State* component, a *Gauge* component or a *Ring* component.
+An error could occur when you opened a shared dashboard that contained a line & area chart component, a state component, a gauge component or a ring component.
 
 #### Dashboards app: Retry button of table component would incorrectly be displayed in PDF file [ID 36026]
 
@@ -116,11 +116,11 @@ When you generated a PDF of a dashboard that contained a table component showing
 
 In some cases, GQI query nodes without options would incorrectly be expanded.
 
-#### Dashboards app: Problem when a 'State' component was fed a parameter value by a dropdown component in a shared dashboard [ID 36075]
+#### Dashboards app: Problem when a State component was fed a parameter value by a dropdown component in a shared dashboard [ID 36075]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
-In a shared dashboard, an error could occur when a *State* component was fed a parameter value by a dropdown component.
+In a shared dashboard, an error could occur when a state component was fed a parameter value by a dropdown component.
 
 #### Dashboards app & Low-Code Apps: GQI table component could throw 'Paged table session not found' error [ID 36101]
 
@@ -182,4 +182,4 @@ When you shared a dashboard that contained an alarm table component, in some cas
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
-When you viewed a shared dashboard that contained a *State* component, in some cases, the order of the parameters in that *State* component would be incorrectly.
+When you viewed a shared dashboard that contained a state component, in some cases, the order of the parameters in that state component would be incorrectly.

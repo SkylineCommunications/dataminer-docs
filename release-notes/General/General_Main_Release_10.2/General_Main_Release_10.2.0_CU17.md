@@ -24,7 +24,7 @@ For tables containing data with TTL set, this property will be set to 4 hours.
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU4] - FR 10.3.7 -->
 
-Up to now, when a *State* component fed empty query rows, a visual replacement would be displayed. From now on, this will no longer be the case.
+Up to now, when a state component fed empty query rows, a visual replacement would be displayed. From now on, this will no longer be the case.
 
 #### DataMiner Agents joining a cluster will now synchronize their ProtocolScripts\DllImport folder [ID 36494]
 

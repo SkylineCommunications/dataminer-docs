@@ -25,7 +25,7 @@ It is now possible to configure *Set variable* actions.
 This type of action will allow users to set the current value of any variable that is not read-only to either a static value or a value available elsewhere in the low-code app.
 
 > [!NOTE]
-> Variables of type *Table* can only be set to a static value.
+> Variables of type table can only be set to a static value.
 
 #### Low-Code Apps: New 'Add row' and 'Clear table' actions [ID 41324]
 
@@ -35,14 +35,14 @@ It is now possible to configure the following actions:
 
 | Action | Function |
 |--------|----------|
-| Add row     | Adds a row to a variable of type *Table*. |
-| Clear table | Clears all rows defined in a variable of type *Table*. |
+| Add row     | Adds a row to a variable of type table. |
+| Clear table | Clears all rows defined in a variable of type table. |
 
 #### Dashboards/Low-Code Apps - Numeric input/Search input/Text input components : Default value [ID 41401]
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-The *Numeric input*, *Search input* and *Text input* components now allow you to specify a default value.
+The numeric input, *Search input* and text input components now allow you to specify a default value.
 
 To do so, in edit mode, select the component, go to *Settings > General > Default value*, and enter a value.
 
@@ -93,7 +93,7 @@ From now on, when the WebSocket is able to reconnect but the connection itself c
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-Since feature version 10.4.9, the following components allow you to zoom in and out using Ctrl+Scroll. From now on, this behavior can be enabled or disabled in the *Layout* tab (in the *Node edge graph* and *Service definition* components) or the *Settings* tab (in the other components).
+Since feature version 10.4.9, the following components allow you to zoom in and out using Ctrl+Scroll. From now on, this behavior can be enabled or disabled in the *Layout* tab (in the node edge graph and service definition components) or the *Settings* tab (in the other components).
 
 - Line & area chart
 - Node edge graph
@@ -122,13 +122,13 @@ Up to now, the legacy Reporter (SLASPConnection) would leak memory on every Data
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
 
-When an *Alarm table* component was configured to retrieve history alarms, it would incorrectly always retrieve all history alarms from the database, regardless of what was specified in the time filter.
+When an alarm table component was configured to retrieve history alarms, it would incorrectly always retrieve all history alarms from the database, regardless of what was specified in the time filter.
 
 #### Dashboards/Low-Code Apps: Line & area chart component would incorrectly remain empty until it was resized [ID 41278]
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
 
-In some cases, a *Line & area chart* component would incorrectly remain empty until it was resized.
+In some cases, a line & area chart component would incorrectly remain empty until it was resized.
 
 #### Low-Code Apps: Problem when multiple users would continually refresh a page with a number of queries [ID 41316]
 
@@ -150,18 +150,18 @@ Up to now, it would incorrectly not be possible to generate a PDF report based o
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-When you clicked the button of a *Button* component linked to a button parameter for which a warning message had been configured in the *protocol.xml* file, no pop-up message would appear.
+When you clicked the button of a button component linked to a button parameter for which a warning message had been configured in the *protocol.xml* file, no pop-up message would appear.
 
 For more information on how to configure a warning message to be displayed when users change a parameter value, see [Message element](xref:Protocol.Params.Param.Message).
 
 > [!IMPORTANT]
-> In the Dashboards app, the *Button* component is available in soft launch, if the soft-launch option *ReportsAndDashboardsButton* is enabled.
+> In the Dashboards app, the button component is available in soft launch, if the soft-launch option *ReportsAndDashboardsButton* is enabled.
 
 #### Dashboards app: Variables and flows eligible to be dropped as data, filter or group would incorrectly not be highlighted in the 'Data' pane [ID 41367]
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-When, while editing a dashboard, you clicked a component's *Data*, *Filter* or *Group* button, variables and flows eligible to be dropped as data, filter or group would incorrectly not be highlighted in the *Data* pane.
+When, while editing a dashboard, you clicked a component's *Data*, *Filter* or group button, variables and flows eligible to be dropped as data, filter or group would incorrectly not be highlighted in the *Data* pane.
 
 #### Dashboards app - Column & bar chart component: Less axis labels were shown on PDF reports with a large paper size [ID 41408]
 

@@ -40,7 +40,7 @@ Clicking the *Go to overview* button in that visual will redirect you to either 
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-In the *Alarm table* component, a number of minor issues have been fixed:
+In the alarm table component, a number of minor issues have been fixed:
 
 - In edit mode, the component name in the footer would shift along when the component was scrolled horizontally or vertically.
 

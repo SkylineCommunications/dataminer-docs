@@ -125,7 +125,7 @@ When a parameter feed is linked to a *Line & area chart" component, from now on,
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-When, in the Dashboards app or a low-code app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that feeds data to the component. This way sorting is done server-side, which will improve performance.
+When, in the Dashboards app or a low-code app, you apply multiple sort orders in a table component, multiple sort operators will now be appended to the GQI query that feeds data to the component. This way sorting is done server-side, which will improve performance.
 
 #### QA Device Simulator renamed to Skyline Device Simulator [ID 34530] [ID 34555]
 
@@ -157,7 +157,7 @@ Moreover, when a QAction is being compiled, other elements will wait for 5 minut
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-In case a *Line & area chart* component displays trending for multiple parameters, the *Group by* setting allows you to specify how the graphs should be grouped. From now on, group titles will no longer be displayed when you set *Group by* to "All together".
+In case a line & area chart component displays trending for multiple parameters, the *Group by* setting allows you to specify how the graphs should be grouped. From now on, group titles will no longer be displayed when you set *Group by* to "All together".
 
 #### SLElement: Enhanced alarm locking [ID 34561]
 
@@ -306,11 +306,11 @@ In some rare cases, an error could occur in SLDataMiner when you edited an eleme
 
 When you entered an address in an email address box and then selected something else on the page without pressing *ENTER* or *TAB*, the email address box would incorrectly expand and show a list of suggestions.
 
-#### Dashboards app: 'Line & area chart' component would display capacity usage incorrectly when bookings overlapped [ID 34465]
+#### Dashboards app: Line & area chart component would display capacity usage incorrectly when bookings overlapped [ID 34465]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
-When, in the Dashboards app, resource capacity was displayed using a *Line & area chart* component, in some cases, capacity usage would incorrectly be doubled when bookings overlapped.
+When, in the Dashboards app, resource capacity was displayed using a line & area chart component, in some cases, capacity usage would incorrectly be doubled when bookings overlapped.
 
 #### Standalone DVE parameter partially included in an service would incorrectly not affect service state severity [ID 34493]
 

@@ -135,10 +135,10 @@ When you had created an "Open monitoring card" action that referenced an object 
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
-On Mozilla Firefox, when you scrolled inside a *Timeline* component, in some cases, the scroll position would incorrectly reset.
+On Mozilla Firefox, when you scrolled inside a timeline component, in some cases, the scroll position would incorrectly reset.
 
 #### Dashboards app & Low-Code Apps - Table component: Problem when filtering on numeric columns containing discrete values [ID 43061]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 [CU0] -->
 
-When a *Table* component was filtered on a numeric column that contained discrete values, up to now, an error could occur when you selected one of the discrete values instead of entering a number manually.
+When a table component was filtered on a numeric column that contained discrete values, up to now, an error could occur when you selected one of the discrete values instead of entering a number manually.

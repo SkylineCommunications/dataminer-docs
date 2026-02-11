@@ -35,7 +35,7 @@ From now on, linking a script parameter to an empty feed will fill it with an em
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 <!-- For fixes in RN 38974, see Fixes section below -->
 
-A number of new features have been added to the *Node edge graph* component:
+A number of new features have been added to the node edge graph component:
 
 - In low-code apps, a new node edge graph action can now be used: *Clear the data*. When executed, this action will clear the feed status of the node edge graph in question.
 - Similar to other GQI components, a node edge graph is now able to recover selections (coming from the URL or when navigating between pages in low-code apps).
@@ -47,26 +47,26 @@ Also, because of a number of enhancements, overall node edge graph performance h
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-Both a *Web* component and a *Text* component can now be linked to a feed.
+Both a web component and a text component can now be linked to a feed.
 
-In case of a *Web* component:
+In case of a web component:
 
 - When *Type* is set to "Custom HTML", the feed syntax can be inserted in the HTML code.
 - When *Type* is set to "Webpage", the feed syntax can be inserted in the URL.
 
-In case of a *Text* component, the feed syntax can be inserted in the text.
+In case of a text component, the feed syntax can be inserted in the text.
 
 > [!TIP]
 > For more information on feeds, see [Component data](xref:Component_Data).
 
 > [!NOTE]
 >
-> - When linking a feed to either a *Web* component or a *Text* component in a dashboard, *Source name* needs to be omitted.
+> - When linking a feed to either a web component or a text component in a dashboard, *Source name* needs to be omitted.
 > - Limitations:
 >  
->   - When you set a *Web* component to "Custom HTML", the *HTML* box is limited to 100,000 characters. HTML syntax highlighting will be disabled from 15,000 characters onwards.
->   - When you set a *Web* component to "Webpage", the *URL* box is limited to 2,000 characters.
->   - The *Text* box of a *Text* component is limited to 200,000 characters.
+>   - When you set a web component to "Custom HTML", the *HTML* box is limited to 100,000 characters. HTML syntax highlighting will be disabled from 15,000 characters onwards.
+>   - When you set a web component to "Webpage", the *URL* box is limited to 2,000 characters.
+>   - The text box of a text component is limited to 200,000 characters.
 
 #### Dashboards app & Low-Code Apps: Client metric logging [ID 39000]
 
@@ -128,7 +128,7 @@ When a Timeline component is used in a low-code app, it is now also possible to 
 >   - *Item move*: Provides the same information as the *Item resize* event.
 >   - *Group change*: Provides information about the current state of the item and the new state, both as *Query row* objects.
 >
-> - The existing *Line & area chart* component action *Set timespan* has now been renamed *Set viewport* in order to be consistent with the *Set viewport* action described above.
+> - The existing line & area chart component action *Set timespan* has now been renamed *Set viewport* in order to be consistent with the *Set viewport* action described above.
 
 ## Changes
 
@@ -146,7 +146,7 @@ Up to now, as long as not all values of a dropdown box had been retrieved, its l
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-Up to now, the buttons in the *Query filter* component would be barely visible when the color of the app was similar to the background color of the theme. From now on, the buttons in the *Query filter* component will always have the text color of the theme.
+Up to now, the buttons in the query filter component would be barely visible when the color of the app was similar to the background color of the theme. From now on, the buttons in the query filter component will always have the text color of the theme.
 
 #### Dashboards app & Low-Code Apps: Grouping of GQI event messages [ID 38959]
 
@@ -198,7 +198,7 @@ When, in a visual overview opened on a mobile device, you tried to open a popup 
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-When a *Stepper* component has to display states of a DOM definition for which no DOM history records are being saved, it relies on the states and transitions within the DOM behavior definition to build the steps.
+When a stepper component has to display states of a DOM definition for which no DOM history records are being saved, it relies on the states and transitions within the DOM behavior definition to build the steps.
 
 Up to now, when two states were able to transition to each other, an infinite loop would occur, causing the browser to become unresponsive.
 
@@ -206,7 +206,7 @@ Up to now, when two states were able to transition to each other, an infinite lo
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-When a *Dropdown* component with a filter applied lost the focus, the moment it had the focus again, the filter would no longer be applied.
+When a dropdown component with a filter applied lost the focus, the moment it had the focus again, the filter would no longer be applied.
 
 #### Dashboards app & Low-Code Apps - Interactive Automation scripts: Values would not get updated when the focus changed [ID 38838]
 
@@ -218,7 +218,7 @@ When, in an interactive Automation script run from a dashboard or a low-code app
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-When, on a shared dashboard, a *Dropdown* component had a time range or service definition filter applied, it would not be possible to use that component.
+When, on a shared dashboard, a dropdown component had a time range or service definition filter applied, it would not be possible to use that component.
 
 #### Dashboards app & Low-Code Apps - Node edge graph component: Issues fixed [ID 38974]
 
@@ -241,9 +241,9 @@ When, on a mobile device, you scrolled while a context menu was open, that conte
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-When you had set the default range of a *Timeline* component or a *Time range* component to "This week so far", "This month so far" or "This year so far", in some cases, the default range would incorrectly revert to "Today so far" when the configuration of the component was saved.
+When you had set the default range of a timeline component or a *Time range* component to "This week so far", "This month so far" or "This year so far", in some cases, the default range would incorrectly revert to "Today so far" when the configuration of the component was saved.
 
-Also, in some cases, a *Timeline* component or a *Time range* component would not get visually updated when the default range was set to a different value.
+Also, in some cases, a timeline component or a *Time range* component would not get visually updated when the default range was set to a different value.
 
 #### Dashboards app: Tables in PDF files would incorrectly get added a scroll bar [ID 39059]
 
@@ -290,7 +290,7 @@ Up to now, when you had set a custom time zone for web apps, that time zone woul
 In the *Template Editor*, up to now, template previews would not show the background color of the component. As this could lead to confusion when previewing templates without background shapes, all previews will now have the same background color as the component in which they will be used.
 
 > [!NOTE]
-> At present, the *Maps* component is only available in preview, if the soft-launch option *ReportsAndDashboardsGQIMaps* is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+> At present, the maps component is only available in preview, if the soft-launch option *ReportsAndDashboardsGQIMaps* is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
 #### Dashboards app: Not possible to duplicate a dashboard with the same name to another folder [ID 39190]
 
@@ -340,7 +340,7 @@ Up to now, when you previewed a low-code app, all feeds would incorrectly not be
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 [CU0] -->
 
-In a *Timeline* component, in some cases, the content of a template could go out of the bounds of the timeline item. From now on, the template content will be cropped so that it stays without the bounds of the timeline item.
+In a timeline component, in some cases, the content of a template could go out of the bounds of the timeline item. From now on, the template content will be cropped so that it stays without the bounds of the timeline item.
 
 #### Problem when trying to log in to a web app [ID 39397]
 
