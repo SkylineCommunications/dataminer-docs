@@ -827,11 +827,11 @@ From now on, when you try to install Alerter, it will check whether Microsoft .N
 
 Up to now, because of SLNet caching issues, in client applications like e.g. DataMiner Cube, outdated SLAnalytics icons would incorrectly remain visible for too long.
 
-#### Correlation alarms triggered by a correlation rule with the 'Auto clear' option set would not be cleared automatically [ID 43974]
+#### Correlation alarms triggered by a correlation rule with the 'Autoclear' option set would not be cleared automatically [ID 43974]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
-When, in a correlation rule, a *New alarm* or an *Escalate event* action was configured with the *Auto clear* option set, in some cases, the new correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
+When, in a correlation rule, a *New alarm* or an *Escalate event* action was configured with the *Autoclear* option set, in some cases, the new correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
 
 #### DataMiner backup would fail with an incorrect Elasticsearch error due to a Db.xml parsing issue [ID 44044]
 

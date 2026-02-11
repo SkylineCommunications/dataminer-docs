@@ -31,7 +31,7 @@ To make a Correlation rule trigger a new, correlated alarm:
 
 1. If necessary, select one or more of the following options:
 
-   - **Auto clear**: Select this option if you want the Correlation alarm to be cleared automatically as soon as the conditions specified in the Correlation rule are no longer met.
+   - **Autoclear**: Select this option if you want the Correlation alarm to be cleared automatically as soon as the conditions specified in the Correlation rule are no longer met.
 
    - **Include name in alarm value**: Select this option if you want the name of the Correlation rule to be included in the alarm value.
 

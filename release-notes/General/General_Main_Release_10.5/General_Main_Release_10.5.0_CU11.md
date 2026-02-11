@@ -40,7 +40,7 @@ A number of security enhancements have been made.
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-When, on a system with a Cassandra Cluster database, history alarms are filtered on service ID or service name, up to now, that filter would not be translated correctly to Elasticsearch or OpenSearch. From now on, that filter will be translated correctly. As a result, overall performance will increase when applying the filter in question to large data sets.
+When, on a system with a Cassandra Cluster database, history alarms are filtered on service ID or service name, up to now, that filter would not be translated correctly to Elasticsearch or OpenSearch. From now on, that filter will be translated correctly. As a result, overall performance will increase when applying the filter in question to large datasets.
 
 Also, filtering on alarm properties or interfaces using wildcards or regular expression has now been made case insensitive.
 
