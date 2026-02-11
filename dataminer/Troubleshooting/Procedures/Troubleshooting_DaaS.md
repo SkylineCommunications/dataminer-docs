@@ -14,6 +14,8 @@ uid: Troubleshooting_DaaS
 
 ## Investigation steps
 
+To troubleshoot a "**DaaS Unavailable**" issue refer to [DaaS Unavailable: troubleshooting guide](https://internaldocs.skyline.be/DevDocs/DaaS/Troubleshooting/DaaSUnavailable.html).
+
 To begin an investigation on a DaaS setup:
 
 1. Connect to the setup via Remote Desktop.
