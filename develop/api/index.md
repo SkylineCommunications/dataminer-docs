@@ -14,7 +14,7 @@ description: DataMiner namespaces for scripting, Automation, core functionality,
 |[Skyline.DataMiner.Core.DataMinerSystem.Common](xref:Skyline.DataMiner.Core.DataMinerSystem.Common)|This namespace contains types used for development of protocols and Automation scripts. For more information on how to use types from this namespace, refer to [About the class library](xref:ClassLibraryIntroduction).|
 |[Skyline.DataMiner.Core.DataMinerSystem.Automation](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation)|This namespace contains types used for development of Automation scripts.|
 |[Skyline.DataMiner.Core.DataMinerSystem.Protocol](xref:Skyline.DataMiner.Core.DataMinerSystem.Protocol)|This namespace contains types used for development of protocols.|
-|[Skyline.DataMiner.Core.Scheduler.Automation](xref:Skyline.DataMiner.Core.Scheduler.Automation)|This namespace contains types used to interact with the DataMiner Scheduler module from Automation Scripts.|
+|[Skyline.DataMiner.Core.Scheduler.Automation](xref:Skyline.DataMiner.Core.Scheduler.Automation)|This namespace contains types used to interact with the DataMiner Scheduler module from automation scripts.|
 |[Skyline.DataMiner.Core.Matrix.Protocol](xref:Skyline.DataMiner.Core.Matrix.Protocol)|This namespace contains types for defining a matrix component in a connector.|
 |[Skyline.DataMiner.Utils.DOM](xref:Skyline.DataMiner.Utils.DOM)|This namespace contains types that are useful when working with DataMiner Object Models (DOM).|
 |[Skyline.DataMiner.Utils.InteractiveAutomationScript](xref:Skyline.DataMiner.Utils.InteractiveAutomationScript)|This namespace contains types used for developing interactive Automation scripts using the InteractiveAutomationScriptToolkit.|

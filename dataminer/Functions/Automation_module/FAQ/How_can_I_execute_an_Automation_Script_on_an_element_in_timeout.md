@@ -2,7 +2,7 @@
 uid: How_can_I_execute_an_Automation_Script_on_an_element_in_timeout
 ---
 
-# How can I execute an Automation Script on an element in timeout?
+# How can I execute an automation script on an element in timeout?
 
 Normally, when you run an Automation script on an element in timeout, the script will fail.
 

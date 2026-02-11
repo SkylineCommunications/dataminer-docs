@@ -14,7 +14,7 @@ Lengthy Correlation rules can have the following consequences:
 
 - Other Correlation rules may encounter delays in accessing data that interests them because of the prolonged execution of lengthy rules. Consequently, these rules may execute their actions later than anticipated.
 
-- When lengthy Correlation Rules are running, it can lead to the occurrence of runtime errors (RTEs).
+- When lengthy correlation rules are running, it can lead to the occurrence of runtime errors (RTEs).
 
 ### Possible improvements
 

@@ -188,7 +188,7 @@ In some cases, an `index out of bounds` error could occur when processing a beha
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
-In some cases, an error could occur in SLScripting when it was resolving DLL files for a QAction or an Automation Script.
+In some cases, an error could occur in SLScripting when it was resolving DLL files for a QAction or an automation script.
 
 #### Problem with SLProtocol when the system locale was set to Japanese [ID 36854]
 
