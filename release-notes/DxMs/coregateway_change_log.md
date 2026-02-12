@@ -4,6 +4,10 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
+#### 12 February 2026 - Enhancement - CoreGateway 2.14.15 - Dependencies updated
+
+Several dependencies have been updated.
+
 #### 28 August 2025 - Fix - CoreGateway 2.14.14 - Race condition blocking Catalog deployments
 
 A race condition has been resolved that could lead to the Catalog displaying the following error while there were actually no issues. 
