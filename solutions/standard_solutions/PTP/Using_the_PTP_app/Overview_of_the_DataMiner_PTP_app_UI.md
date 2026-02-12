@@ -4,6 +4,76 @@ uid: Overview_of_the_DataMiner_PTP_app_UI
 
 # Overview of the DataMiner PTP app UI
 
+## The PTP Low-Code APP
+
+From PTP version 1.2.0 onwards, a DataMiner Low-Code app is available with the following pages:
+
+ - [The Summary page](#the-summary-page)
+
+ - [The Nodes page](#the-nodes-page)
+
+ - [The Topology Page](#the-topology-page)
+
+ - [The Admin page](#the-admin-page)
+
+### The Summary page
+
+This page shows a list of configured PTP Domains and a summary of the selected domain. The first domain is selected by default.
+
+ - The list in the top-right corner shows all the configured PTP domains in the PTP Solution with the amount of configured clocks per domain. The selected domain is highlighted. All the other data in the app will be related to this selected domain.
+
+ - From left to right, the total number of grandmaster, boundary clock, transparent clock, and slave clocks in the selected PTP domain are shown. The filter icon in each box is indicating if there are any active alarms for the respective clock type. When clicking the filter icon, the alarm list below will be filtered to the specific clock type.
+
+ - The total amount of alarms in the PTP domain per severity. When clicking the circles, the alarm list below will be filtered to the specific severity.
+
+ - The alarm list will show all alarms of the selected PTP domain. By default only PTP-related alarms are shown, this can be switched to show all alarms of the equipment included in the PTP domain.
+ From the context menu next to the element name, the monitoring app and a details panel for the specific element can be opened.
+
+- At the bottom of the page, general parameters of the detected active grandmaster are shown.
+
+  ![Summary page](~/solutions/images/PTP_Summary.png)
+
+### The Nodes page
+
+This page lists all PTP nodes in the domain, grouped by PTP role, with icons showing the element alarm state for each node. From the context menu next to the element name, the monitoring app and a details panel for the specific element can be opened.
+
+At the top-right, there is an option to only show the nodes with active alarms. These states are updated in real-time, there is no need to refresh the page.
+
+The tabs on this page allow for easy comparison between multiple nodes of the same clock type.
+
+  ![Nodes page](~/solutions/images/PTP_Nodes.png)
+
+### The Topology page
+
+This page shows a graphical overview of how the different PTP nodes are connected, using DataMiner DCF. For each node, an icon is displayed indicating the type of node. For more information on these icons, see [Types of PTP devices](xref:Types_of_PTP_devices). Note that for the grandmaster clocks, the current active grandmaster (as detected by the PTP probe) is indicated by a small star icon on the top-right.
+
+By default, the color of the nodes is indicating the PTP state, this can be changed to the overall element state by hovering over a node, clicking the 'configure color' circle in the top-right and selecting the Element State instead of the PTP state. Note that this change needs to be done for every clock type seperatly.
+
+In the bottom right corner, there is the option to hide all the slave clocks.
+
+To change the position of the nodes, click and drag a node to the desired position. Multiple nodes can be selected by holding the Ctrl key.
+
+> [!NOTE]
+>
+> When upgrading the PTP solution to version 1.2.0 or later, the positions used in the Visio Topology will be copied over to the positions for the Low-Code APP. After this upgrade, the positions are not synced in any way.
+
+  ![Topology page](~/solutions/images/PTP_Topology.png)
+
+### The Admin page
+
+ This page shows all the configured PTP domains. You can add more domains using the *Add Domain* button.
+
+2 Action buttons are available in the table for each domain:
+
+  - **Setup**: Launches the setup wizard again, allowing you to reconfigure the PTP domain.
+
+    > [!TIP]
+    > See also: [Installing the DataMiner PTP app](xref:Installing_the_DataMiner_PTP_app)
+
+  - **Asign Roles**: Launches the role assignment wizard, allowing you to change the roles that were assigned to the different PTP devices, or to assign roles to newly added devices.
+
+## The PTP App in DataMiner Cube
+
 In DataMiner Cube’s navigation pane, the DataMiner PTP app is available in the *Applications* section of the *Apps* tab.
 
 From PTP version 1.1.0 onwards, the app consists of the following tabs:
@@ -18,7 +88,7 @@ From PTP version 1.1.0 onwards, the app consists of the following tabs:
 
 - [The Help tab](#the-help-tab)
 
-## The Summary tab
+### The Summary tab
 
 This tab shows an overall summary of the entire PTP stack.
 
@@ -40,7 +110,7 @@ The information in this tab is displayed in several separate blocks.
 
   - *Unknown*: The Node is synchronized with a node that is not known by the PTP application.
 
-  - From left to right, the total number of grandmaster, boundary clock, transparent clock, and slave devices in the configured PTP domain, or in the entire system if no domain is configured. For each of these, a summary icon displays the alarm color of the most severe PTP-related alarm on these devices. Clicking this icon opens a filtered alarm tab with the relevant alarms.
+  - From left to right, the total number of grandmaster, boundary clock, transparent clock, and slave clocks in the configured PTP domain, or in the entire system if no domain is configured. For each of these, a summary icon displays the alarm color of the most severe PTP-related alarm on these devices. Clicking this icon opens a filtered alarm tab with the relevant alarms.
 
   - On the right, the currently active probe. This is the probe in charge of identifying the current active grandmaster clock in the PTP topology. A cogwheel icon next to the probe allows you to select a different probe.
 
@@ -72,11 +142,11 @@ The information in this tab is displayed in several separate blocks.
 
 - The **performance** block at the bottom of the tab allows you to track the overall PTP performance by monitoring PTP metrics that have trending activated (e.g. *Offset From Master* and *Mean Path Delay*). Below the trend graph, you can select any trended PTP parameter from any PTP node. If you want to display the trend graph in full-screen mode, click the full-screen icon in the top-right corner of this block.
 
-### Special PTP parameters in the Summary tab
+#### Special PTP parameters in the Summary tab
 
 Below you can find more information on certain parameters in the *Summary* tab.
 
-#### Clock Source
+##### Clock Source
 
 This parameter can have the following values:
 
@@ -96,31 +166,31 @@ This parameter can have the following values:
 
 - **Internal Oscillator** (0xA0): Any device of which the frequency is not based on atomic resonance or calibrated against international standards for frequency, but instead based on a free-running oscillator with epoch determined in an arbitrary or unknown manner.
 
-#### Clock Class
+##### Clock Class
 
 This parameter can have the following values:
 
-- **6**: Indicates a clock that is synchronized to a primary reference time source. The timescale distributed is PTP. A class-6 clock can never be a slave to another clock in the domain.
+- **6**: Indicates a clock that is synchronized to a primary reference time source. The timescale distributed is PTP. A class-6 clock can never be a slave clock to another clock in the domain.
 
-- **7**: Indicates a clock that has previously been designated as a class-6 clock but that has lost the ability to synchronize to a primary reference time source and is in holdover mode and within holdover specifications. The timescale distributed is PTP. A class-7 clock can never be a slave to another clock in the domain.
+- **7**: Indicates a clock that has previously been designated as a class-6 clock but that has lost the ability to synchronize to a primary reference time source and is in holdover mode and within holdover specifications. The timescale distributed is PTP. A class-7 clock can never be a slave clock to another clock in the domain.
 
-- **13**: Indicates a clock that is synchronized to an application-specific source of time. The timescale distributed is ARB\*1. A class-13 clock can never be a slave to another clock in the domain.
+- **13**: Indicates a clock that is synchronized to an application-specific source of time. The timescale distributed is ARB\*1. A class-13 clock can never be a slave clock to another clock in the domain.
 
-- **14**: Indicates a clock that has previously been designated as a class-13 clock but that has lost the ability to synchronize to an application-specific source of time and is in holdover mode and within holdover specifications. The timescale distributed is ARB \*1. A class-14 clock can never be a slave to another clock in the domain.
+- **14**: Indicates a clock that has previously been designated as a class-13 clock but that has lost the ability to synchronize to an application-specific source of time and is in holdover mode and within holdover specifications. The timescale distributed is ARB \*1. A class-14 clock can never be a slave clock to another clock in the domain.
 
-- **52**: Degradation alternative A for a class-7 clock that is not within holdover specifications. A class-52 clock can never be a slave to another clock in the domain.
+- **52**: Degradation alternative A for a class-7 clock that is not within holdover specifications. A class-52 clock can never be a slave clock to another clock in the domain.
 
-- **58**: Degradation alternative A for a class-14 clock that is not within holdover specifications. A class-58 clock can never be a slave to another clock in the domain.
+- **58**: Degradation alternative A for a class-14 clock that is not within holdover specifications. A class-58 clock can never be a slave clock to another clock in the domain.
 
-- **187**: Degradation alternative B for a class-7 clock that is not within holdover specifications. A class-187 clock can be a slave to another clock in the domain.
+- **187**: Degradation alternative B for a class-7 clock that is not within holdover specifications. A class-187 clock can be a slave clock to another clock in the domain.
 
-- **193**: Degradation alternative B for a class-14 clock that is not within holdover specifications. A class-193 clock can be a slave to another clock in the domain.
+- **193**: Degradation alternative B for a class-14 clock that is not within holdover specifications. A class-193 clock can be a slave clock to another clock in the domain.
 
 - **248**: Default. This clock class is used if none of the other clock class definitions apply.
 
 - **255**: Indicates a slave-only clock.
 
-#### Clock Accuracy
+##### Clock Accuracy
 
 This parameter can have the following values:
 
@@ -162,11 +232,11 @@ This parameter can have the following values:
 
 - **254** (0xFE): Unknown.
 
-#### Clock Variance
+##### Clock Variance
 
 Log-scaled statistic that represents the jitter and wander of the clock’s oscillator over a Sync message interval.
 
-## The Nodes tab
+### The Nodes tab
 
 This tab consists of the following subtabs:
 
@@ -196,7 +266,7 @@ This tab consists of the following subtabs:
 
 - **Slave clocks**: Lists all slave clocks in the PTP topology, each with a number of PTP-related parameters.
 
-- **Analyzers**: Allows you to compare a number of parameters of two PTP analyzers, i.e. slave devices that have been specially assigned to monitor and analyze the PTP signal they retrieve from a clock.
+- **Analyzers**: Allows you to compare a number of parameters of two PTP analyzers, i.e. slave clocks that have been specially assigned to monitor and analyze the PTP signal they retrieve from a clock.
 
   Above the element name of each displayed PTP analyzer, two icons are available:
 
@@ -204,7 +274,7 @@ This tab consists of the following subtabs:
 
   - A cogwheel icon that can be used to select a different PTP analyzer to compare with.
 
-## The Topology tab
+### The Topology tab
 
 This tab shows a graphical overview of how the different PTP nodes are connected, using DataMiner DCF. For each node, an icon is displayed indicating the type of node. For more information on these icons, see [Types of PTP devices](xref:Types_of_PTP_devices). Note that for the grandmaster clocks, the current active grandmaster (as detected by the PTP probe) is indicated by a small clock icon on the left.
 
@@ -223,7 +293,7 @@ Alarm states are indicated as follows:
 > [!NOTE]
 > New PTP nodes are automatically displayed in the top-left corner of the topology page.
 
-## The Admin tab
+### The Admin tab
 
 This tab consists of three different sections:
 
@@ -240,6 +310,6 @@ This tab consists of three different sections:
 
   - **Role assignment**: Launches the role assignment wizard, allowing you to change the roles that were assigned to the different PTP devices, or to assign roles to newly added devices.
 
-## The Help tab
+### The Help tab
 
 This tab contains links to this section of the DataMiner Help and to a page with more information about PTP in general. It also displays version information for the PTP app.
