@@ -117,3 +117,14 @@ From now on, when you change one of these settings, the other setting will no lo
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 In both the template editor and the flow editor, the tabbed pane on the left would incorrectly shrink when the main editor area in the middle contained a large number of items.
+
+#### Dashboards app: Dashboard contents would be clipped when the 'Stack components' option was not selected [ID 44695]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When you had not selected the *Stack components* option when generating a PDF report, in some cases, the contents of the dashboard would be clipped.
+
+In order to prevent this from happening, the minimum component width has now been reduced from 200px to 150px.
+
+> [!NOTE]
+> In certain situations, especially when using a narrow layout or when the available space is insufficient, dashboard contents can still be clipped when a PDF report is generated.
