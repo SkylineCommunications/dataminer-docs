@@ -55,3 +55,19 @@ Key features:
 Continually evolving along a roadmap, the DataMiner solutions are subject to updates, ensuring compatibility with newer versions while preserving backward compatibility. Updates are facilitated by deploying updated solution packages from the Catalog. You have full autonomy over solution implementations, so you can modify visuals, Automation scripts, and more, according to your preferences.
 
 However, keep in mind that if you modify components of a solution, these will be overwritten when you deploy an update of the solution. Consequently, if you intend to tailor solutions to your unique context, we recommend that you **create customized versions** by copying (or branching) them and then applying necessary adjustments, thereby preserving the original solution for future updates.
+
+## Global DOM Modules
+
+This section serves as a centralized registry of well-known DOM modules that are used by solutions. Each entry documents the intended purpose and which solution owns the DOM module. Below DOM modules must not be reused for other purposes.
+
+| Module                       | Solution                                                                                         | Purpose                               |
+|------------------------------|--------------------------------------------------------------------------------------------------|---------------------------------------|
+| (slc)categories              | [Categories](https://catalog.dataminer.services/details/c9666f3a-be26-42fd-83f2-6ee7fab4f11e)    | Organize items hierarchical.          |
+| (slc)connectivity_management | [MediaOps.LIVE](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) | Manage your connections.              |
+<!-- TODO: Should errors still be used? -->
+| (slc)errors                  | [MediaOps](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75)      | Define errors.                        |
+| (slc)orchestration           | [MediaOps.LIVE](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) | Contains the orchestration events.    |
+| (slc)people_organizations    | [MediaOps](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75)      | Manage people and organizations.      |
+| (slc)relationships           | [MediaOps](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75)      | Make links between different objects. |
+| (slc)resource_studio         | [MediaOps](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75)      | Define your resources.                |
+| (slc)workflow                | [MediaOps](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75)      | Manage your jobs and workflows.       |
