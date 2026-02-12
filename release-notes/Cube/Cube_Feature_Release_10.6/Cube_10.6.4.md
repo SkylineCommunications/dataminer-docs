@@ -40,6 +40,16 @@ Certain search boxes in used in the ListView component as well as the Automation
 
 From now on, the search boxes in the above-mentioned modules will act in a way that is similar to other search boxes in DataMiner Cube. The list with suggestions will be displayed first, and the filtered list will be displayed a second after you stopped typing in the search box.
 
+#### Sidebar: Labels of 'Catalog', 'Cloud Admin', and 'Data Sources' modules will now also be translated [ID 44733]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+If you view the Cube UI in one of the supported languages other than English, in the sidebar, the labels of the following modules will now also be translated to the selected language:
+
+- Catalog
+- Cloud Admin
+- Data Sources
+
 ### Fixes
 
 #### Problem with icons of apps pinned to the sidebar [ID 44693]
