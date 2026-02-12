@@ -84,6 +84,35 @@ From now on, when the new value is equal to the old value, the value will no lon
 
 Also, write parameters will no longer be saved as this would cause unnecessary load.
 
+#### Enhanced distribution of SNMPv3 traps [ID 44626]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a DMA receives an SNMPv3 trap that it cannot process (e.g. because the SNMPv3 user is unknown), and trap distribution is enabled, from now on, the trap will be distributed to the other DMAs in the cluster in an attempt to have it processed by one of those other DMAs.
+
+Also, in some cases, traps could be forwarded to the wrong elements because the SNMPv3 USM ID was not validated correctly.
+
+#### SLDataGateway: Job queue updates will now be logged in SLJobQueues.txt [ID 44661]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, log entries regarding SLDataGateway job queue updates would be logged in the `C:\Skyline DataMiner\Logging\SLDbConnection.txt` file.
+
+From now on, these log entries will be logged in the `C:\Skyline DataMiner\Logging\SLDataGateway\SLJobQueues.txt` file instead.
+
+#### SLLogCollector: Separate log file per instance [ID 44668]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, all SLLogCollector logging of all SLLogCollector instances would end up in the following files, stored in the `C:\ProgramData\Skyline\DataMiner\SL_LogCollector\Log` folder:
+
+- `SL_LogCollector_fulllog.log`
+- `SL_LogCollector_log.log`
+
+From now on, each SLLogCollector instance will have its own dedicated log file named `log-[creation timestamp].txt`, stored in the `C:\ProgramData\Skyline Communications\SLLogCollector` folder.
+
+Up to 10 log files will be kept on disk, and the log file of the current instance will be added to the SLLogCollector package.
+
 ### Fixes
 
 #### Problem with SLNet when receiving a subscription with a large filter that contained wildcards [ID 44512]
@@ -111,3 +140,29 @@ When you connected to a DataMiner Agent, up to now, it would not be possible to 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 When an NT_READ_SAVED_PARAMETER_VALUE call was sent to retrieve data from an element without a connector while that data was still present in SLDataGateway, up to now, SLDataMiner could stop working.
+
+#### Alarm properties passed along by Correlation or SLAnalytics could get lost when an alarm was created [ID 44669]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, alarm properties passed along by Correlation or SLAnalytics could get lost when an alarm was created.
+
+#### API Gateway would incorrectly add multiple routes with the same basePath when multiple registration requests were received for the same route [ID 44676]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When multiple registration requests were received for the same route, in some cases, instead of updating the route, API Gateway would incorrectly add multiple routes with the same basePath. As a result, the proxy would not be able to route the HTTP request.
+
+#### Failover: Two Agents in a Failover pair could get stuck during startup [ID 44680]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, the two Agents in a Failover pair could get stuck during startup.
+
+#### Scheduler: Windows task will no longer be recreated when only the actions of a scheduled task were changed [ID 44691]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a scheduled task was updated close to its execution time, in some cases, the task would incorrectly not be executed. It would miss its execution window because, during the update, the Windows task would be deleted and recreated again.
+
+From now on, when only the task actions are changed during an update of a scheduled task, the Windows task will no longer be recreated. The latter will only be recreated when the status, name, description, or timing of the scheduled task are changed.

@@ -27,21 +27,3 @@ If projects in your existing solutions are using the *packages.config* package m
 1. In Microsoft Visual Studio, open a solution and go to the Solution Explorer.
 1. Navigate to a project, right-click *References*, and select *Migrate packages.config to PackageReference...*.
 1. Repeat for every project in the current solution.
-
-## Configuring the default solution file format (VS 2026)
-
-Microsoft Visual Studio 2026 defaults to using the new `.slnx` as the solution file format, while DIS currently only supports the `.sln` format. To ensure compatibility and proper functionality with DIS, solutions must keep using the `.sln` format until support for `.slnx` is added.
-
-Follow these steps to configure Visual Studio to always use the `.sln` format when creating new solutions:
-
-1. In Visual Studio, go to *Tools* > *Options*.
-1. Navigate to the *Projects and Solutions* section.
-1. Set the *Default Solution File Format* to `.sln (Visual Studio 2010-2022 Solution File Format)`.
-
-To convert an existing `.slnx` solution to a `.sln` solution:
-
-1. Open the solution in Visual Studio.
-1. In the *Solution Explorer*, select the solution by clicking its name at the top of the hierarchy.
-1. Go to *File* > *Save \[Solution Name\] As*.
-1. In the *Save As* dialog box, select the file type `.sln`.
-1. Click *Save*.

@@ -720,7 +720,7 @@ Up to now, in interactive Automation scripts launched from web apps, only the `U
 
 When, in an interactive Automation script, a TreeView control was used with the `SupportsLazyLoading` option set to false, up to now, each time the UI was updated, all tree nodes would revert their expanded state back to the `IsCollapsed` setting.
 
-Tree nodes now have a new `UsePreviousCollapsedState` property. By default, this property will be set to false. When set to true, each time the UI is updated, the previous `IsCollapsed` state of the tree node in question will be restored. If no previous `IsCollapsed` state is available, the current `IsCollapsed` state will be applied.
+Tree nodes now have a new `UsePreviousCollapsedState` property. By default, this property will be set to false. When set to true, each time the UI is updated, the previous state of the tree node in question will be restored. If no previous state is available, the current `IsCollapsed` state will be applied.
 
 #### SLNet messages GetLiteElementInfo, GetLiteServiceInfo, and GetLiteRedundancyGroupInfo now support filtering by HostingAgentID [ID 44537]
 
@@ -827,11 +827,11 @@ From now on, when you try to install Alerter, it will check whether Microsoft .N
 
 Up to now, because of SLNet caching issues, in client applications like e.g. DataMiner Cube, outdated SLAnalytics icons would incorrectly remain visible for too long.
 
-#### Correlation alarms triggered by a correlation rule with the 'Auto clear' option set would not be cleared automatically [ID 43974]
+#### Correlation alarms triggered by a correlation rule with the 'Autoclear' option set would not be cleared automatically [ID 43974]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
-When, in a correlation rule, a *New alarm* or an *Escalate event* action was configured with the *Auto clear* option set, in some cases, the new correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
+When, in a correlation rule, a *New alarm* or an *Escalate event* action was configured with the *Autoclear* option set, in some cases, the new correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
 
 #### DataMiner backup would fail with an incorrect Elasticsearch error due to a Db.xml parsing issue [ID 44044]
 

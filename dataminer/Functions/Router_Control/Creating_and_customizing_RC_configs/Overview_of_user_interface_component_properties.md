@@ -33,7 +33,7 @@ None
 | Name | The text of the label. |
 | TextAlignment | The alignment of the text: Left, Right, Center, or Justify. |
 | TextWrapping  | Whether or not text will wrap when it reaches the edge of the label box:<br> -  Wrap: Text will always wrap when it reaches the edge of the label box.<br> -  WrapWithOverflow: Text will always wrap when it reaches the edge of the label box, except in case of long words.<br> -  NoWrap: No line wrapping is performed.              |
-| TextTrimming  | The way in which text is trimmed when it overflows the edge of the label box.<br> -  None: Text is not trimmed.<br> -  CharacterEllipsis: Text is trimmed after a character. An ellipsis (”...”) will replace the remaining text.<br> -  WordEllipsis: Text is trimmed after a word. An ellipsis (”...”) will replace the remaining text. |
+| TextTrimming  | The way text is trimmed when it overflows the edge of the label box.<br> -  None: Text is not trimmed.<br> -  CharacterEllipsis: Text is trimmed after a character. An ellipsis (”...”) will replace the remaining text.<br> -  WordEllipsis: Text is trimmed after a word. An ellipsis (”...”) will replace the remaining text. |
 | FontFamily | The text font. |
 | FontSize | The text font size (in points). |
 | FontWeight | The font weight: Normal, Bold, or Light |

@@ -1,6 +1,6 @@
 ---
 uid: Viewing_user_information
-description: user card
+keywords: user card
 ---
 
 # Viewing user information

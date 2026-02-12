@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_Solutions
+description: DataMiner Solutions convert data and controls into value by leveraging the platform's enabling functions and features.
 ---
 
 # DataMiner Solutions

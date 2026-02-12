@@ -4,6 +4,8 @@ uid: SLNetClientTest_activating_event_or_subscription_logging
 
 # Activating event cache or subscription logging
 
+Available from DataMiner 10.6.3/10.7.0 onwards<!--RN 44361-->.
+
 To activate event cache or subscription logging:
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).

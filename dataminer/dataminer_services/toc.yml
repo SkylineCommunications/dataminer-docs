@@ -148,6 +148,8 @@ items:
       topicUid: Viewing_your_credit_history
     - name: Viewing information on system usage
       topicUid: Viewing_info_on_system_usage
+  - name: Deleting an organization
+    topicUid: Deleting_an_organization
 - name: ChatOps
   items:
   - name: About ChatOps

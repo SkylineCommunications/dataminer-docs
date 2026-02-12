@@ -15,7 +15,7 @@ If you click *Display Editor* in the file tab header when editing a protocol XML
 
 On the left, you can find the list of existing pages.
 
-This section visualizes data pages and pop-up windows in a tree view, similar to the way in which they are displayed in DataMiner Cube. Pop-up windows are shown as child items of the data pages in which they are defined.
+This section visualizes data pages and pop-up windows in a tree view, similar to the way they are displayed in DataMiner Cube. Pop-up windows are shown as child items of the data pages in which they are defined.
 
 > [!NOTE]
 > Warning icons will appear next to pages that are empty and pop-up windows in which other pop-up windows are defined.
