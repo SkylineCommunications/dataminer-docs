@@ -57,8 +57,24 @@ The parameter has a variable length, which depends on the last instance of the n
 
 If the expected response will contain a number with a length up to 5 digits (which can have a decimal point), followed by a fixed point, then you can define two parameters:
 
-- A first one with a LengthType equal to “last next param” to catch the number containing the decimal point (“last next param” will make sure the number is not broken off at the first point), and
-- A second one with a LengthType equal to “fixed” to catch the point.
+- A first one with a LengthType equal to "last next param" to catch the number containing the decimal point (“last next param” will make sure the number is not broken off at the first point), and
+- A second one with a LengthType equal to "fixed" to catch the point.
+
+> [!WARNING]
+> Do not use this `LengthType` if the next parameter is the trailer and the trailer is not unique within the response sequence.  
+>  
+> In this situation, the raw data reader stops at the **first occurrence** of the trailer. All data received up to that point is immediately forwarded for parameter processing. Including any bytes that were already received as part of the same chunk, even if they logically belong *after* the first trailer occurrence.
+>  
+> Because incoming data may arrive in arbitrary chunks, this can lead to inconsistent and unpredictable results. For example, if the expected response is `abc$def$` and `$` is defined as the trailer, the parameter logic might receive from the raw bytes reader:
+>  
+> - `abc$`
+> - `abc$d`
+> - `abc$de`
+> - `abc$def`
+> - `$abc$def$`
+>  
+> This could cause the current `last next param` to be filled in with the value `abc$` or `abc$def$`, which is unexpected.
+> To avoid incomplete or incorrectly parsed values, ensure that the trailer is **unique within the entire response sequence**.
 
 #### Example
 
@@ -71,7 +87,7 @@ For example, assuming the following:
 - This is the incoming data:
 
   ```
-  abc$def$ghi$
+  abc$def$ghi$#
   ```
 
 In this case:
@@ -98,8 +114,8 @@ The parameter has a variable length, which depends on the next (fixed-length) pa
 
 If the expected response will contain a number with a length up to 5 digits, followed by a point, you can define two parameters:
 
-- A first one with a LengthType equal to “next param” to catch the number, and
-- A second one with a LengthType equal to “fixed” to catch the point.
+- A first one with a LengthType equal to "next param" to catch the number, and
+- A second one with a LengthType equal to "fixed" to catch the point.
 
 ### other param
 
