@@ -54,5 +54,5 @@ Do you still have some unanswered questions? Explore our extensive Q&A section, 
 
 - [DataMiner Integration Studio](https://community.dataminer.services/questions/?qtag%5B%5D=883&order_by=newest)
 - [DataMiner connectors](https://community.dataminer.services/questions/?qtag%5B%5D=794&qtag%5B%5D=152&qtag%5B%5D=812&qtag%5B%5D=601&qtag%5B%5D=638&qtag%5B%5D=640&order_by=newest&qtag%5B%5D=126)
-- [automation scripts](https://community.dataminer.services/questions/?qtag%5B%5D=804&qtag%5B%5D=576&order_by=newest)
+- [Automation scripts](https://community.dataminer.services/questions/?qtag%5B%5D=804&qtag%5B%5D=576&order_by=newest)
 - [SRM functions](https://community.dataminer.services/questions/?qtag%5B%5D=302&order_by=newest&qtag%5B%5D=146)
