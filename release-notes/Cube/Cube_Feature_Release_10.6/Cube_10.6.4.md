@@ -20,7 +20,13 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
-*No new features have been added yet.*
+#### System Center - Analytics config: New 'Suggestion limit' setting added to 'Behavioral Anomaly Detection' section [ID 44709]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+On the *Analytics config* page, located in the *System settings* section of *System Center*, a new *Suggestion limit* setting has been added to the *Behavioral Anomaly Detection* section.
+
+This setting will allow administrators to cap the number of active suggestion events per behavioral change type.
 
 ## Changes
 
