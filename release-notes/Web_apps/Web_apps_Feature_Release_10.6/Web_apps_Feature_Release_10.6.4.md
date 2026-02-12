@@ -59,6 +59,28 @@ When, in the Browse templates window, you selected the default template of e.g. 
 
 From now on, the default template text will get replaced correctly.
 
+#### Dashboards/Low-Code Apps: Updated side panel sections [ID 44687]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When you are editing a dashboard or a low-code app, in the side panel, the top two sections of the *Data* tab are *Data used in page/panel* and *Data used in component*. These two sections have now been updated.
+
+##### Data used in page/panel
+
+This section, which lists all data used in the dashboard or panel, will now also indicate how this data is being used.
+
+For example, if a data entry is used both as a data source and as a filter, two icons will now be displayed to make this clear.
+
+The data in this section will be sorted by type and then by name.
+
+##### Data used in component
+
+This section, which lists all data used within the selected component, will now also include all filters and groups.
+
+If, in the selected component, a data entry is used in multiple ways, then this will be indicated on separate lines.
+
+The data in this section will be sorted by type (data, filter, group) and then by name. Users will be allowed to reorder the data entries, but only within their type.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Alarm table component: Problems when scrolling [ID 44662]
