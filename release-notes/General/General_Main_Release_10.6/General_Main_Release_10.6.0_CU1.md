@@ -129,3 +129,11 @@ From now on, when an issue occurs when rolling over log files, an error will be 
 
 > [!NOTE]
 > Some logging may get lost because of this fix.
+
+#### BrokerGateway installation could fail when the nsc.exe file was locked by an antivirus application [ID 44721]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, a BrokerGateway installation could fail when the *nsc.exe* file was locked by an antivirus application.
+
+From now on, a locked *nsc.exe* file will no longer cause a BrokerGateway installation to fail.
