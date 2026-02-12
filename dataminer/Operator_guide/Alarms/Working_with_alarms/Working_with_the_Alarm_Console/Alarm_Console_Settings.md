@@ -33,7 +33,7 @@ In the active alarms tab, history tracking is enabled by default. In a history a
 
 > [!TIP]
 >
-> - For more information on creating filtered tabs, see [Manually applying an alarm filter in an Alarm Console tab](xref:ApplyingAlarmFiltersInTheAlarmConsole#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
+> - For more information on creating filtered tabs, see [Manually applying an alarm filter in an Alarm Console tab](xref:ManuallyApplyingAnAlarmFilter).
 > - For information on how alarm records are combined in an alarm tree, see [Alarm trees](xref:Alarm_trees).
 
 > [!NOTE]

@@ -623,7 +623,7 @@ The DataMiner Analytics features store and maintain model data and extracted ins
 
 #### ai_alarmfocus
 
-This table stores one model for [alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus) for each monitored parameter or monitored table cell that has had an alarm in the past two weeks. The amount of data in the table should be more or less stable after two weeks.
+This table stores one model for [alarm focus](xref:Alarm_focus) for each monitored parameter or monitored table cell that has had an alarm in the past two weeks. The amount of data in the table should be more or less stable after two weeks.
 
 The table is defined as follows:
 
