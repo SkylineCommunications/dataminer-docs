@@ -14,9 +14,9 @@ uid: General_Feature_Release_10.1.12
 
 ### DMS core functionality
 
-#### Redundancy groups: Additional information in information events and Automation scripts \[ID 31358\]
+#### Redundancy groups: Additional information in information events and automation scripts \[ID 31358\]
 
-When switching elements within a redundancy group, from now on, additional information will be added both to the information events and the Automation scripts that are executed.
+When switching elements within a redundancy group, from now on, additional information will be added both to the information events and the automation scripts that are executed.
 
 ##### Information events
 
@@ -39,7 +39,7 @@ The following information will be added to the information events.
 
 ##### Automation scripts
 
-When an Automation script is triggered as part of an redundancy group action, that script will now have the following additional parameters. These can then be requested from within the Automation script using the GetScriptParam(\<id>) method on the engine object.
+When an automation script is triggered as part of an redundancy group action, that script will now have the following additional parameters. These can then be requested from within the automation script using the GetScriptParam(\<id>) method on the engine object.
 
 | ID | Name | Description |
 |--|--|--|
@@ -316,7 +316,7 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 
 #### Automation scripts launched from web apps will now take into account the MaxFileSizeInBytes and AllowedFileNameExtensions properties of UIBlockDefinitions of type FileSelector \[ID 31212\]
 
-In Automation scripts launched from web apps, the MaxFileSizeInBytes and AllowedFileName-Extensions properties of UIBlockDefinitions of type FileSelector will now also be taken into account.
+In automation scripts launched from web apps, the MaxFileSizeInBytes and AllowedFileName-Extensions properties of UIBlockDefinitions of type FileSelector will now also be taken into account.
 
 An error will now be thrown when you try to add a file that is larger than the allowed file size or does not have an allowed file name extension. Also, the “Choose file” popup window will now only list files with an allowed extension and dragging an item other than a file or a folder onto the script’s drop zone will no longer be possible.
 
@@ -496,9 +496,9 @@ When creating the user-defined types failed during a migration from MySQL to Cas
 The migration has failed.DBGatewayException(SLCassandraClassLibrary.DBGateway.Cassandra.StorageManagers.SingleNode.CassandraConnection,,UNKNOW SLDataGateway.Types.DBGatewayException: CassandraConnection CreateCustomType - no host available All hosts tried for query failed.
 ```
 
-#### Problem with SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved \[ID 31030\]
+#### Problem with SLAutomation when trying to run automation scripts on elements for which no protocol information could be retrieved \[ID 31030\]
 
-In some cases, an error could occur in SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved.
+In some cases, an error could occur in SLAutomation when trying to run automation scripts on elements for which no protocol information could be retrieved.
 
 #### Problem during DataMiner startup when retrieving alarms for multiple elements from an Elasticsearch database \[ID 31039\]
 
@@ -580,7 +580,7 @@ In some cases, the default profile parameter mediation snippet would fail to com
 
 #### DataMiner Cube - Automation: DateTime control incorrectly updated with the DateTimeKind property \[ID 31190\]
 
-When, in an interactive Automation script, you had configured the DateTimeKind property of a DateTime control, in some cases, the control would incorrectly be updated with the DateTimeKind property instead of the actual datetime value.
+When, in an interactive automation script, you had configured the DateTimeKind property of a DateTime control, in some cases, the control would incorrectly be updated with the DateTimeKind property instead of the actual datetime value.
 
 #### Dashboards app: Duplicate options in GQI queries \[ID 31206\]
 
@@ -614,7 +614,7 @@ In Visual Overview, in some cases, property values would not get updated correct
 
 In some cases, the “Auto RBW Factor” and “Auto VBW Factor” values would be stored in spectrum presets in an incorrect way. This would then lead to an incorrect auto RBW/VBW calculation.
 
-#### Interactive Automation scripts: Initial state of non-recursive tree view incorrect \[ID 31302\]
+#### Interactive automation scripts: Initial state of non-recursive tree view incorrect \[ID 31302\]
 
 The initial checked/unchecked state of a non-recursive tree item would be incorrect when
 
@@ -623,9 +623,9 @@ The initial checked/unchecked state of a non-recursive tree item would be incorr
 - the item had children, and
 - none of those children were checked.
 
-#### Interactive Automation scripts: Dialog items could incorrectly inherit the dimensions of a dialog item shown earlier \[ID 31311\]
+#### Interactive automation scripts: Dialog items could incorrectly inherit the dimensions of a dialog item shown earlier \[ID 31311\]
 
-When an interactive Automation script was launched from a web app, in some cases, a dialog item could incorrectly inherit the dimensions of a dialog item shown earlier.
+When an interactive automation script was launched from a web app, in some cases, a dialog item could incorrectly inherit the dimensions of a dialog item shown earlier.
 
 #### DataMiner Cube - Visual Overview: Table connections would disappear at certain zoom levels \[ID 32336\]
 
@@ -712,7 +712,7 @@ In some cases, the status of a newly installed Failover system would incorrectly
 
 #### Problem when using Class Library monitors in DataMiner Integration Studio \[ID 31685\]
 
-Critical errors could be thrown when using Class Library monitors in DataMiner Integration Studio in conjunction with DataMiner version 10.1.12. Also, in some cases, Automation scripts could fail at runtime.
+Critical errors could be thrown when using Class Library monitors in DataMiner Integration Studio in conjunction with DataMiner version 10.1.12. Also, in some cases, automation scripts could fail at runtime.
 
 ## Addendum CU2
 

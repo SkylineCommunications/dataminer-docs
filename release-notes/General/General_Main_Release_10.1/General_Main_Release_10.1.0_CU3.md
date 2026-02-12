@@ -131,7 +131,7 @@ On DataMiner startup and hourly at report generation, a batch of notifications g
 
 #### Automation scripts: #define ALARM_SQUASHING \[ID 29613\]
 
-The preprocessor directive “#define ALARM_SQUASHING” will now automatically be added to each C# block of an Automation script.
+The preprocessor directive “#define ALARM_SQUASHING” will now automatically be added to each C# block of an automation script.
 
 In C# blocks, all code related to alarm squashing should be enclosed as follows:
 
@@ -146,7 +146,7 @@ In C# blocks, all code related to alarm squashing should be enclosed as follows:
 This allows C# blocks that contain alarm squashing functionality to also be compiled on DataMiner versions that do not support alarm squashing.
 
 > [!NOTE]
-> Up to now, the following directives would only be added to QActions. These will now also be added to C# blocks of Automation scripts.
+> Up to now, the following directives would only be added to QActions. These will now also be added to C# blocks of automation scripts.
 >
 > - #define DBInfo
 > - #define DCFv1
@@ -225,9 +225,9 @@ When a DataMiner Agent was started in a DataMiner System, in some cases, errors 
 
 When using an element card search box on a system with an Elasticsearch database, in some cases, no search results would appear.
 
-#### Automation: UIBuilder properties MaxWidth and MaxHeight would incorrectly not get applied to interactive Automation script pop-up windows \[ID 29361\]
+#### Automation: UIBuilder properties MaxWidth and MaxHeight would incorrectly not get applied to interactive automation script pop-up windows \[ID 29361\]
 
-In some cases, the UIBuilder properties “MaxWidth” and “MaxHeight” would incorrectly not get applied to interactive Automation script pop-up windows.
+In some cases, the UIBuilder properties “MaxWidth” and “MaxHeight” would incorrectly not get applied to interactive automation script pop-up windows.
 
 #### Incorrect data could be returned during a migration from MySQL to Cassandra \[ID 29385\]
 

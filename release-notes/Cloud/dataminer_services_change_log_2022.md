@@ -50,7 +50,7 @@ If CoreGateway version 2.11.0 or higher and FieldControl version 2.8.1 or higher
 
 You can do so using the Teams bot commands *show command \<command name\>*, *show command*, and *run command \<command name\>*.
 
-To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
+To add a command to your DMS, create an automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 
 The commands allow dynamic input, such as dummies, parameters, parameters with value files, and memory files. They support the following output: key values, adaptive card body elements, and JSON.
 
@@ -58,7 +58,7 @@ A command will only be visible for users of the bot if they have the appropriate
 
 The following limitations also apply:
 
-- Interactive Automation scripts are not supported.
+- Interactive automation scripts are not supported.
 - Commands that run longer than 30 seconds are currently not supported.
 - Issues with the adaptive card output will not result in proper error feedback.
 
@@ -110,7 +110,7 @@ When you click a deployment in the overview, more detailed information will be d
 
 #### 3 June 2022 - New feature - dataminer.services keys [ID 33606]
 
-You can now use dataminer.services keys. At present, these can be used with the [GitHub action to deploy Automation scripts](https://github.com/marketplace/actions/skyline-dataminer-deploy-action) to a DMS connected to dataminer.services. However, more functionality requiring a dataminer.services key is expected to be implemented in the future.
+You can now use dataminer.services keys. At present, these can be used with the [GitHub action to deploy automation scripts](https://github.com/marketplace/actions/skyline-dataminer-deploy-action) to a DMS connected to dataminer.services. However, more functionality requiring a dataminer.services key is expected to be implemented in the future.
 
 In the Admin app, you can manage the dataminer.services keys on the *Keys* page for each DataMiner System connected to dataminer.services. Each set of keys consists of a (user-defined) label, a primary key, and a secondary key. Inline buttons are available that allow you to view or copy a key. Simply clicking a key entry in the list will open a side panel with detailed information, including when the keys were created and by whom.
 

@@ -100,7 +100,7 @@ When, in an alarm template, you enabled conditional monitoring for a parameter, 
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
 
-When, on systems with a MySQL or Microsoft SQL Server database, elements had been deleted in bulk (e.g. via an Automation script), in some cases, real-time trending, average trending, alarms, information events and certain reporter caching tables would incorrectly not be cleaned up.
+When, on systems with a MySQL or Microsoft SQL Server database, elements had been deleted in bulk (e.g. via an automation script), in some cases, real-time trending, average trending, alarms, information events and certain reporter caching tables would incorrectly not be cleaned up.
 
 #### DataMiner Cube - Spectrum Analysis: Problem with measurement point option 'Invert spectrum' [ID 34552]
 

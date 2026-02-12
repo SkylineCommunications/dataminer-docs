@@ -324,7 +324,7 @@ The following minor issues could occur in the BPA framework:
 
 #### DataMiner Cube - Alarm Console: Problem with alarm hyperlinks when the first character of the parameter name is hash character \[ID 27641\]
 
-When you right-clicked an alarm associated with a parameter of which the name started with a “#” character and then clicked an alarm hyperlink that ran an Automation script that used that parameter name as input, in some cases, an error could occur.
+When you right-clicked an alarm associated with a parameter of which the name started with a “#” character and then clicked an alarm hyperlink that ran an automation script that used that parameter name as input, in some cases, an error could occur.
 
 #### DataMiner Cube: Clicking a pinned or recently opened custom element app would incorrectly cause another app to open \[ID 27642\]
 

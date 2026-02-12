@@ -43,7 +43,7 @@ Several special alarm types exist in DataMiner:
 
 - [Masked alarms](xref:Masking_and_unmasking_alarms), indicated in purple, are "hidden" to prevent unnecessary follow-up.
 
-- [Correlated alarms](#correlated-alarms) group other alarms based on a Correlation rule.
+- [Correlated alarms](#correlated-alarms) group other alarms based on a correlation rule.
 
 - [Alarm groups](#alarm-groups) group other alarms based on AI.
 
@@ -59,7 +59,7 @@ Information events will normally be broadcast to inform users:
 
 - that a protocol has been added or deleted,
 
-- that an Automation script has failed or finished successfully,
+- that an automation script has failed or finished successfully,
 
 - etc.
 
@@ -99,11 +99,11 @@ For details on how to view suggestion events, refer to [Behavioral anomaly detec
 
 ### Correlated alarms
 
-Correlated alarms are alarms triggered by the [DataMiner Correlation](xref:About_DMS_Correlation) module. They group other alarms based on a Correlation rule.
+Correlated alarms are alarms triggered by the [DataMiner Correlation](xref:About_DMS_Correlation) module. They group other alarms based on a correlation rule.
 
 You can expand a correlated alarm in order to see the base alarms that triggered the correlated alarm. By default, alarms are no longer shown in the *Active Alarms* tab when they are included in a correlated alarm.
 
-The severity of a correlated alarm depends on the Correlation rule configuration. It can be the highest severity of its base alarms or a custom severity.
+The severity of a correlated alarm depends on the correlation rule configuration. It can be the highest severity of its base alarms or a custom severity.
 
 Correlated alarms are represented in the Alarm Console with a special icon.
 

@@ -183,7 +183,7 @@ If cells of a table row were displayed in a Children shape in Visual Overview, i
 
 #### DataMiner Cube: Custom icon visualization not working for list view components \[ID 27173\]
 
-In list view components, for example in the Bookings app, in the Services app or in ListView shapes in Visual Overview, it was no longer possible to visualize the content of a column as a custom icon. This is now again possible for booking, service and element columns as well as for booking, service and element property columns. Note that this functionality relies on Automation scripts to provide the icon library and column value/icon mapping.
+In list view components, for example in the Bookings app, in the Services app or in ListView shapes in Visual Overview, it was no longer possible to visualize the content of a column as a custom icon. This is now again possible for booking, service and element columns as well as for booking, service and element property columns. Note that this functionality relies on automation scripts to provide the icon library and column value/icon mapping.
 
 #### DataMiner Cube - Scheduler app: Problem with drag-and-drop in timeline tab \[ID 27174\]
 
@@ -191,7 +191,7 @@ In the *Timeline \> Events* tab, in some cases, it would no longer be possible 
 
 #### Problem with SLAutomation when a ThreadAbortException was thrown in a script while the thread was not actually aborted \[ID 27187\]
 
-When a ThreadAbortException was thrown in an Automation script while the thread running the script was not actually aborted, in some cases, an error could occur in SLAutomation.
+When a ThreadAbortException was thrown in an automation script while the thread running the script was not actually aborted, in some cases, an error could occur in SLAutomation.
 
 #### Data in DVE child element not updated correctly \[ID 27189\]
 

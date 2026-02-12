@@ -78,7 +78,7 @@ To do so:
    - To add properties to a particular node, interface or connection, select the node, interface or connection in the diagram, and, in the *properties* tab in the lower-right corner, click the *Add* button and specify the property.
 
      > [!NOTE]
-     > When you add properties to service definition objects in Cube, these properties are also added in *PropertyConfiguration.xml*. Only properties in that file are visible in the UI. If you add properties via Automation scripts, these will remain hidden from the user if they are not defined in *PropertyConfiguration.xml*.
+     > When you add properties to service definition objects in Cube, these properties are also added in *PropertyConfiguration.xml*. Only properties in that file are visible in the UI. If you add properties via automation scripts, these will remain hidden from the user if they are not defined in *PropertyConfiguration.xml*.
 
    - To define logical groups of nodes:
 
@@ -103,7 +103,7 @@ The second tab of the service definition pane can be used to manage properties o
 
 ## Actions tab
 
-The third tab of the service definition pane allows you to specify Automation scripts (i.e. [LSO scripts](xref:srm_scripting#lifecycle-service-orchestration-lso-script)) that should run when the service based on the service definition gets a specific service state:
+The third tab of the service definition pane allows you to specify automation scripts (i.e. [LSO scripts](xref:srm_scripting#lifecycle-service-orchestration-lso-script)) that should run when the service based on the service definition gets a specific service state:
 
 1. Click the *Add* button in the lower-right corner.
 

@@ -233,7 +233,7 @@ When, in an alarm template, you enabled conditional monitoring for a parameter, 
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
 
-When, on systems with a MySQL or Microsoft SQL Server database, elements had been deleted in bulk (e.g. via an Automation script), in some cases, real-time trending, average trending, alarms, information events and certain reporter caching tables would incorrectly not be cleaned up.
+When, on systems with a MySQL or Microsoft SQL Server database, elements had been deleted in bulk (e.g. via an automation script), in some cases, real-time trending, average trending, alarms, information events and certain reporter caching tables would incorrectly not be cleaned up.
 
 #### Dashboards app: Parameter order in state components would change randomly and trend graphs would be displayed in an incorrect color [ID 34548]
 
@@ -337,7 +337,7 @@ When a form only contained DOM instance data, the *Read mode* setting of the for
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-When a PDF preview was made from a dashboard containing an empty GQI table (e.g. after selecting *Configure* in an email action of an Automation script), in the preview, that table would incorrectly not be empty. Instead, it would contain random cell values.
+When a PDF preview was made from a dashboard containing an empty GQI table (e.g. after selecting *Configure* in an email action of an automation script), in the preview, that table would incorrectly not be empty. Instead, it would contain random cell values.
 
 #### Web apps: Read-only text in input boxes would incorrectly not be displayed in bold type when using Mozilla Firefox [ID 34641]
 

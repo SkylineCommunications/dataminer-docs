@@ -359,11 +359,11 @@ When, in a visual overview with one non-hidden page displayed in a web app, you 
 
 In some rare cases, a cleanup routine within SLAutomation could prematurely clean up data of scripts that had not yet finished, causing an error to occur.
 
-#### Automation: Problem when empty data is passed to the UI parser when running an interactive Automation script [ID 38408]
+#### Automation: Problem when empty data is passed to the UI parser when running an interactive automation script [ID 38408]
 
 <!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
-When running an interactive Automation script that was launched from Cube or a web app, in some cases, an exception could be thrown when empty data was passed to the UI parser.
+When running an interactive automation script that was launched from Cube or a web app, in some cases, an exception could be thrown when empty data was passed to the UI parser.
 
 From now on, an exception will no longer be thrown when empty data is passed to the UI parser.
 

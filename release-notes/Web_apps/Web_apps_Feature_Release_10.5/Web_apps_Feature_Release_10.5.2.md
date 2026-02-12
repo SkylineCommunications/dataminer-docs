@@ -104,7 +104,7 @@ Overall performance has increased when fetching history alarms. From now on, his
 
 In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, etc.), Angular and other dependencies have been upgraded.
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Button' [ID 41495]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI component 'Button' [ID 41495]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
@@ -245,7 +245,7 @@ When you tried to add an *Execute a script* action to a low-code app that was ho
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-In some cases, an interactive Automation script running in an *Interactive Automation script* component would incorrectly not look identical to a script running in a pop-up window.
+In some cases, an interactive automation script running in an *Interactive automation script* component would incorrectly not look identical to a script running in a pop-up window.
 
 #### Low-Code Apps: Flows could get triggered too often [ID 41768]
 

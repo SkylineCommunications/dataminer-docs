@@ -34,11 +34,11 @@ For example, up to now, when you selected the *Get elements* data source, follow
 
 Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
 
-#### Web apps: Enhanced error handling when executing an interactive Automation script by clicking a DOM button [ID 35909]
+#### Web apps: Enhanced error handling when executing an interactive automation script by clicking a DOM button [ID 35909]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
-Overall error handling has been improved when executing an interactive Automation script by clicking a DOM button in a web app.
+Overall error handling has been improved when executing an interactive automation script by clicking a DOM button in a web app.
 
 #### Security enhancements [ID 35965]
 

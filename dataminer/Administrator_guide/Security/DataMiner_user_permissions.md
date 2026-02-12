@@ -443,22 +443,22 @@ Permission to access the Automation module.
 
 #### Modules \> Automation \> Add
 
-Permission to create or import Automation scripts.
+Permission to create or import automation scripts.
 
 #### Modules \> Automation \> Edit
 
-Permission to update or export Automation scripts.
+Permission to update or export automation scripts.
 
 #### Modules \> Automation \> Delete
 
-Permission to delete Automation scripts.
+Permission to delete automation scripts.
 
 #### Modules \> Automation \> Execute
 
-Permission to execute Automation scripts.
+Permission to execute automation scripts.
 
 > [!NOTE]
-> Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4, you also need the permission [Modules > Automation > UI Available](#modules--automation--ui-available) to execute Automation scripts<!--RN 38529-->.
+> Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4, you also need the permission [Modules > Automation > UI Available](#modules--automation--ui-available) to execute automation scripts<!--RN 38529-->.
 
 ### Modules \> Bookings
 
@@ -483,7 +483,7 @@ Permission to delete bookings.
 
 #### Modules \> Bookings \> Execute
 
-Permission to execute Automation scripts or parameter sets linked to bookings, e.g. scripts that are linked to booking events, or custom context menu items for bookings.
+Permission to execute automation scripts or parameter sets linked to bookings, e.g. scripts that are linked to booking events, or custom context menu items for bookings.
 
 ### Modules \> Correlation
 
@@ -493,15 +493,15 @@ Permission to access the Correlation module.
 
 #### Modules \> Correlation \> Add
 
-Permission to create Correlation rules.
+Permission to create correlation rules.
 
 #### Modules \> Correlation \> Edit
 
-Permission to update Correlation rules.
+Permission to update correlation rules.
 
 #### Modules \> Correlation \> Delete
 
-Permission to delete Correlation rules.
+Permission to delete correlation rules.
 
 ### Modules \> Documents
 

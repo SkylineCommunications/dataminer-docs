@@ -392,9 +392,9 @@ When you upload a document and link it to an element:
 > [!NOTE]
 > From now on, in the *Documents* app, a progress bar will be displayed when you are uploading or downloading a document.
 
-#### All Cube clients will now display 'broadcast popups' sent from QActions, Automation scripts, etc. \[ID 21733\]\[ID 21928\]\[ID 22089\]
+#### All Cube clients will now display 'broadcast popups' sent from QActions, automation scripts, etc. \[ID 21733\]\[ID 21928\]\[ID 22089\]
 
-When a QAction, an Automation script, etc. sends a BroadCastPopupRequestMessage with the following arguments, a BroadCastPopupEventMessage will now be sent to all recipients specified in the UserNames and GroupNames arguments, causing a so-called "broadcast popup" to appear.
+When a QAction, an automation script, etc. sends a BroadCastPopupRequestMessage with the following arguments, a BroadCastPopupEventMessage will now be sent to all recipients specified in the UserNames and GroupNames arguments, causing a so-called "broadcast popup" to appear.
 
 | Argument | Format | Description |
 |--|--|--|
@@ -492,11 +492,11 @@ If you click this option, you can choose to merge all alarm trees for the same e
 > [!NOTE]
 > This new option will only be available when *History tracking* is enabled, *Freeze* is disabled and automatic alarm clearing is disabled.
 
-#### More detailed error message will now appear when an interactive Automation script fails \[ID 23251\]\[ID 23561\]
+#### More detailed error message will now appear when an interactive automation script fails \[ID 23251\]\[ID 23561\]
 
-Up to now, when an interactive Automation script failed, a generic popup message was displayed, stating that something went wrong.
+Up to now, when an interactive automation script failed, a generic popup message was displayed, stating that something went wrong.
 
-From now on, when an interactive Automation script fails, a popup message will appear, containing more detailed information about why the script failed (e.g. the user aborted the script while it was running, the script ran for too long and went into timeout, etc.).
+From now on, when an interactive automation script fails, a popup message will appear, containing more detailed information about why the script failed (e.g. the user aborted the script while it was running, the script ran for too long and went into timeout, etc.).
 
 #### Redesigned DataMiner Cube layout \[ID 23427\]\[ID 23486\]\[ID 23540\]\[ID 23628\]\[ID 23646\] \[ID 23813\]\[ID 23822\]\[ID 23904\]\[ID 23982\]\[ID 24036\]\[ID 24044\]\[ID 24079\]\[ID 24086\]\[ID 24129\] \[ID 24143\]\[ID 24160\]\[ID 24165\]\[ID 24189\]\[ID 24218\]\[ID 24518\]
 
@@ -607,7 +607,7 @@ The focus score that is assigned to an alarm is a combination of likelihood, fre
 > [!NOTE]
 >
 > - Currently, every DataMiner Agent is responsible for calculating the focus scores of the alarms it is hosting.
-> - Currently, no focus score is assigned to the following types of alarms: Correlation alarms, external alarms and information events. By default, those alarms are assigned a focus score equal to null.
+> - Currently, no focus score is assigned to the following types of alarms: correlation alarms, external alarms and information events. By default, those alarms are assigned a focus score equal to null.
 
 ##### New column in Alarm Console: Focus
 

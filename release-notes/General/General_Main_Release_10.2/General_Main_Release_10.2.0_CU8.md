@@ -58,11 +58,11 @@ When you move one or more resources from a pool to the *(uncategorized)* pool, a
 
 When a shape was linked to an element that was not part of a service, up to now, an attempt would be made to determine the service context even when no service context had been specified. From now on, the service context will only be determined when the service context has been specified in the shape.
 
-#### Web apps - Interactive Automation scripts: Enhanced performance [ID 34348]
+#### Web apps - Interactive automation scripts: Enhanced performance [ID 34348]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
-Because of a number of enhancements to the buffering mechanism, overall performance has improved when executing interactive Automation scripts in web apps.
+Because of a number of enhancements to the buffering mechanism, overall performance has improved when executing interactive automation scripts in web apps.
 
 #### DataMiner Cube - Visual Overview: Enhanced performance when sorting dynamically positioned shapes [ID 34351]
 
@@ -193,7 +193,7 @@ When a JSON string containing an overridden parameter description was deserializ
 
 When you opened a trend graph, the Y-axis values would incorrectly not take into account the number of decimals configured in the *protocol.xml* file for the parameters in question.
 
-#### Interactive Automation scripts: Problem when entering an invalid value in a numeric component [ID 34310]
+#### Interactive automation scripts: Problem when entering an invalid value in a numeric component [ID 34310]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
@@ -287,7 +287,7 @@ In some cases, an error could occur in SLLog when closing a log file.
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
-When active alarms were retrieved via an Automation script, an incorrect result set could get returned when no element filter had been applied.
+When active alarms were retrieved via an automation script, an incorrect result set could get returned when no element filter had been applied.
 
 Example of C# code that would return an incorrect result set:
 

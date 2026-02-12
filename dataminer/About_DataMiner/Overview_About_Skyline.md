@@ -96,7 +96,7 @@ Skyline offers highly integrated solutions using the industry-standard DataMiner
 
 Skyline offers unparalleled expertise in various fields, which is reflected in the unique features and capabilities of our DataMiner software platform. When rolling out and supporting different solutions, our staff fully understands the needs of the user, both from a technology ecosystem perspective and from a business perspective.
 
-Our system architects and engineers bring tremendous expertise to the table with respect to defining and implementing business processes, workflows, Automation scripts, etc. Our project managers know exactly what it takes to roll out each specific type of project, what the risks are that need to be mitigated, what kind of resources are required, etc. They are able to ask the right questions at the right time, and they will advise you about your available options and the various pros and cons that come with those options.
+Our system architects and engineers bring tremendous expertise to the table with respect to defining and implementing business processes, workflows, automation scripts, etc. Our project managers know exactly what it takes to roll out each specific type of project, what the risks are that need to be mitigated, what kind of resources are required, etc. They are able to ask the right questions at the right time, and they will advise you about your available options and the various pros and cons that come with those options.
 
 ### Future-proof
 

@@ -148,7 +148,7 @@ The DMS Reporter process.
 The DataMiner Automation process.
 
 > [!NOTE]
-> C# code in Automation scripts is processed by SLAutomation, whereas C# code in protocol QActions is processed by SLScripting.
+> C# code in automation scripts is processed by SLAutomation, whereas C# code in protocol QActions is processed by SLScripting.
 
 > [!TIP]
 > See also: [DataMiner Automation](xref:automation)
@@ -192,7 +192,7 @@ A helper process that is called upon when the Windows Task Scheduler orders that
 Processes QActions when asked to by SLProtocol.
 
 > [!NOTE]
-> C# code in Automation scripts is processed by SLAutomation, whereas C# code in protocol QActions is processed by SLScripting.
+> C# code in automation scripts is processed by SLAutomation, whereas C# code in protocol QActions is processed by SLScripting.
 
 ### SLSNMPAgent
 

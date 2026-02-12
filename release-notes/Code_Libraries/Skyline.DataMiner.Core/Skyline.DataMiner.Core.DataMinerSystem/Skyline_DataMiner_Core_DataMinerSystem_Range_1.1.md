@@ -11,7 +11,7 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 #### New feature - Improved API for Scheduler [ID 44556]
 
-The Scheduler component now supports task and action configuration via builders. The `IDmsScheduler` interface includes `CreateTaskBuilder` methods to configure tasks, while `DmsSchedulerActionBuilders` provides builders for Automation scripts, Email, SMS, and Information actions.
+The Scheduler component now supports task and action configuration via builders. The `IDmsScheduler` interface includes `CreateTaskBuilder` methods to configure tasks, while `DmsSchedulerActionBuilders` provides builders for automation scripts, Email, SMS, and Information actions.
 
 The `CreateTask` and `UpdateTask` methods have been extended to support `IDmsSchedulerTask` objects, providing a strongly-typed alternative to the manual `object[]` construction.
 
@@ -69,7 +69,7 @@ var createdElement = agent.CreateElement(configuration);
 
 #### Fix - AgentId property of DmsAutomationScriptRunOptions ignored when executing a script [ID 43923]
 
-When an Automation script was executed via DmsAutomationScript, the AgentId specified in DmsAutomationScriptRunOptions was not applied when constructing the SLNet message, causing the script to run on the default/incorrect Agent. This has been corrected so that the specified AgentId is now respected.
+When an automation script was executed via DmsAutomationScript, the AgentId specified in DmsAutomationScriptRunOptions was not applied when constructing the SLNet message, causing the script to run on the default/incorrect Agent. This has been corrected so that the specified AgentId is now respected.
 
 ### 1.1.3.4
 
@@ -102,7 +102,7 @@ var isHigher = agent.IsVersionHigher(version);
 ### 1.1.3.3
 
 > [!IMPORTANT]
-> In this version, **new monitors** have been added to support **usage outside of protocols** (e.g. in Automation scripts or ad hoc data sources). These allow external code to subscribe to state, name, or alarm level changes without relying on SLProtocol. However, subscriptions created using these monitors **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system. Only monitors on *IDms*, *IDmsElement*, *IDmsTable*, and **IDmsStandaloneParameter** are supported for now. If you need monitor support elsewhere, please contact <support.boost@skyline.be> to request it.
+> In this version, **new monitors** have been added to support **usage outside of protocols** (e.g. in automation scripts or ad hoc data sources). These allow external code to subscribe to state, name, or alarm level changes without relying on SLProtocol. However, subscriptions created using these monitors **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system. Only monitors on *IDms*, *IDmsElement*, *IDmsTable*, and **IDmsStandaloneParameter** are supported for now. If you need monitor support elsewhere, please contact <support.boost@skyline.be> to request it.
 
 #### New feature - Added monitor methods to standalone parameter interfaces
 
@@ -118,7 +118,7 @@ The `IDmsStandaloneParameter` and `IDmsStandaloneParameter<T>` interfaces have b
 ### 1.1.3.2
 
 > [!IMPORTANT]
-> In this version, **new monitors** have been added to support **usage outside of protocols** (e.g. in Automation scripts or ad hoc data sources). These allow external code to subscribe to state, name, or alarm level changes without relying on SLProtocol. However, subscriptions created using these monitors **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system. Only monitors on *IDms*, *IDmsElement*, and *IDmsTable* are supported for now. If you need monitor support elsewhere, please reach out to request it.
+> In this version, **new monitors** have been added to support **usage outside of protocols** (e.g. in automation scripts or ad hoc data sources). These allow external code to subscribe to state, name, or alarm level changes without relying on SLProtocol. However, subscriptions created using these monitors **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system. Only monitors on *IDms*, *IDmsElement*, and *IDmsTable* are supported for now. If you need monitor support elsewhere, please reach out to request it.
 
 #### New feature - Monitor support for non-protocol use cases
 
@@ -522,7 +522,7 @@ When you retrieve the local element from IDms, you can now also perform a specia
 
 #### New feature - Automation script execution enhanced with async execution and additional run flags
 
-You can now trigger the execution of an Automation script asynchronously. In addition, you can provide several different run options similar to the options you get when triggering a script manually (e.g. LockElements, CheckSets, WaitWhenLocked, etc.).
+You can now trigger the execution of an automation script asynchronously. In addition, you can provide several different run options similar to the options you get when triggering a script manually (e.g. LockElements, CheckSets, WaitWhenLocked, etc.).
 
 ### 1.1.1.2
 
@@ -553,7 +553,7 @@ The latest benchmark tests, at the time of release, demonstrate that the system'
 
 #### Fix - Automation scripts failed to parse with EXE blocks other than C\#
 
-IDms can now retrieve Automation scripts that have EXE blocks that do not contain C# code.
+IDms can now retrieve automation scripts that have EXE blocks that do not contain C# code.
 
 #### New feature - Creation of service properties
 

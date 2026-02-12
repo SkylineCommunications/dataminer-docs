@@ -57,9 +57,9 @@ The EligibleResourceResult returned by the various GetEligibleResources calls wi
 > - The available capacity does not take into account the requested capacity.
 > - The available capacity for capacities that were not requested in the GetEligible call, but which are present on the resource, will not be calculated, and will therefore not be present in the CapacityUsageDetails list.
 
-#### Triggering an Automation script to reconfigure running bookings after a ProfileInstance was changed \[ID 28186\]
+#### Triggering an automation script to reconfigure running bookings after a ProfileInstance was changed \[ID 28186\]
 
-It is now possible to have an Automation script triggered when a profile instance update affects running bookings. That script can then reconfigure the bookings.
+It is now possible to have an automation script triggered when a profile instance update affects running bookings. That script can then reconfigure the bookings.
 
 ##### Configuring the script
 

@@ -472,9 +472,9 @@ In addition, on a view card, it could occur that the list of elements was not up
 
 When a parameter was masked for a limited period of time, it could occur that the end time of the mask operation was not applied correctly.
 
-#### DataMiner Cube - Automation: Window appearing when an Automation script fails had an incorrect caption on a Cube with custom branding \[ID 23171\]
+#### DataMiner Cube - Automation: Window appearing when an automation script fails had an incorrect caption on a Cube with custom branding \[ID 23171\]
 
-When using a DataMiner Cube with custom branding, up to now, the window that appeared when an Automation script failed would incorrectly have the default “Skyline DataMiner” caption. From now on, on a DataMiner Cube with custom branding, the caption of that window will show the custom product name.
+When using a DataMiner Cube with custom branding, up to now, the window that appeared when an automation script failed would incorrectly have the default “Skyline DataMiner” caption. From now on, on a DataMiner Cube with custom branding, the caption of that window will show the custom product name.
 
 #### DataMiner Cube: Alarm storm prevention incorrectly enabled while being disabled in enforced group settings \[ID 23181\]
 
@@ -524,6 +524,6 @@ In the HTML5 apps (Dashboards, Jobs, etc.), in some cases, the Scheduler compone
 
 When you move the mouse pointer away from the Scheduler component and back, from now on, the action will either continue when the mouse button is being pressed or be canceled when the mouse button is no longer being pressed.
 
-#### Incorrect column spans in interactive Automation script in HTML5 applications \[ID 23325\]
+#### Incorrect column spans in interactive automation script in HTML5 applications \[ID 23325\]
 
-If an interactive Automation script was run using a HTML5 DataMiner application, it could occur that the column spans in the script were not correctly applied.
+If an interactive automation script was run using a HTML5 DataMiner application, it could occur that the column spans in the script were not correctly applied.

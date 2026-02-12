@@ -85,13 +85,13 @@ Up to now, it was possible to have a DataMiner System in which some DMAs had bee
   - Allowed to add DMAs either by hostname or by IP address.
   - Allowed to create Failover pairs with shared hostname or with virtual IP addresses.
 
-#### Interactive Automation scripts: FileSelector now allows to keep the files that were already uploaded after the UI was shown [ID 37260]
+#### Interactive automation scripts: FileSelector now allows to keep the files that were already uploaded after the UI was shown [ID 37260]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-Unlike other UI block types, *FileSelector* does not allow setting an [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition.InitialValue*). However, from now on, during an interactive Automation script session, it is possible to keep the files that were already uploaded after the UI was shown.
+Unlike other UI block types, *FileSelector* does not allow setting an [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition.InitialValue*). However, from now on, during an interactive automation script session, it is possible to keep the files that were already uploaded after the UI was shown.
 
-When an interactive Automation script is executed **in Cube**, the UI block needs to keep the same [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) within the session. If there is no file selector block with the same [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) when the UI is shown again, the information about the uploaded files is lost.
+When an interactive automation script is executed **in Cube**, the UI block needs to keep the same [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) within the session. If there is no file selector block with the same [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) when the UI is shown again, the information about the uploaded files is lost.
 
 See also [DataMiner web apps Feature Release 10.3.12](xref:Web_apps_Feature_Release_10.3.12#interactive-automation-scripts-fileselector-now-allows-to-keep-the-files-that-were-already-uploaded-after-the-ui-was-shown-id-37260)
 

@@ -72,11 +72,11 @@ To change the appearance of a column using presets, in the *Column appearance* s
 > - In the *Parameter table* component, the default column alignment is now "Left" instead of "Center".
 > - The default alignment of GQI table columns is now "Left" for columns of type string and "Right" for columns of type numeric or date.
 
-#### Interactive Automation scripts: Certain components can now be visualized as read-only in web environments [ID 37659]
+#### Interactive automation scripts: Certain components can now be visualized as read-only in web environments [ID 37659]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 
-*UIBlockDefinition* now has an *IsReadOnly* option, which is set to false by default. When set to true, and when the interactive Automation script is executed in a web environment, the following UI components will now be displayed read-only:
+*UIBlockDefinition* now has an *IsReadOnly* option, which is set to false by default. When set to true, and when the interactive automation script is executed in a web environment, the following UI components will now be displayed read-only:
 
 - Calendar
 - Checkbox
@@ -92,7 +92,7 @@ To change the appearance of a column using presets, in the *Column appearance* s
 >
 > - Although read-only HTML components look as if they are read-write, users will not be able to change their value.
 > - When a component has its *IsEnabled* option set to false and its *IsReadOnly* option set to true, it will be considered disabled. Except for components of UIBlockType *Treeview*. These will behave as enabled and read-only.
-> - When an interactive Automation script is executed in DataMiner Cube, the *IsReadOnly* option will be ignored.
+> - When an interactive automation script is executed in DataMiner Cube, the *IsReadOnly* option will be ignored.
 
 #### Low-Code Apps: Duplicating low-code apps [ID 37698] [ID 37724]
 

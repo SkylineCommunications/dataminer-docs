@@ -64,7 +64,7 @@ To run a prerequisites check using SLNetClientTest tool:
 
 ## Enabling Swarming
 
-When you have made sure prerequisites are met, and you are ready to enable Swarming, you can do so using the SLNet message *EnableSwarmingRequest* (with the default parameters) in SLNetClientTest tool or an Automation script. Enabling Swarming via DataMiner Cube is currently not yet possible.
+When you have made sure prerequisites are met, and you are ready to enable Swarming, you can do so using the SLNet message *EnableSwarmingRequest* (with the default parameters) in SLNetClientTest tool or an automation script. Enabling Swarming via DataMiner Cube is currently not yet possible.
 
 To enable Swarming using SLNetClientTest tool:
 

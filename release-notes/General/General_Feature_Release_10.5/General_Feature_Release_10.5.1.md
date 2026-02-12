@@ -65,7 +65,7 @@ var logRequest = new GetLogTextFileStringContentRequestMessage
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 
-SLNet `GetInfo` messages for the `PropertyConfiguration` and `ViewInfo` types now support retrieving information for a specific item. This will enhance the performance of the `Skyline.DataMiner.Core.DataMinerSystem.Common` NuGet package used in protocols or Automation scripts.
+SLNet `GetInfo` messages for the `PropertyConfiguration` and `ViewInfo` types now support retrieving information for a specific item. This will enhance the performance of the `Skyline.DataMiner.Core.DataMinerSystem.Common` NuGet package used in protocols or automation scripts.
 
 ##### Type PropertyConfiguration
 
@@ -167,7 +167,7 @@ To swarm an element, users will also need config rights on the element.
 
 When Swarming has been enabled, you can swarm elements **in DataMiner Cube** via *System Center* > *Agents* > *Status*. On that page, the *Swarming* button will be displayed instead of the *Migration* button. Clicking the button will open a window where you can select the elements you want to swarm and the destination DMA.
 
-Swarming elements is also possible **via Automation, QActions or other (external) tools**. See the following Automation script example, in which two input parameters are defined to retrieve the element key and the target agent ID:
+Swarming elements is also possible **via Automation, QActions or other (external) tools**. See the following automation script example, in which two input parameters are defined to retrieve the element key and the target agent ID:
 
 - a parameter named "Element Key", containing the DMA ID/element ID pair of the element you want to swarm, and
 - a parameter named "Target Agent ID", containing the ID of the target Agent.
@@ -206,11 +206,11 @@ public class Script
 
 ### Breaking changes
 
-#### Automation: Locking behavior of Automation script actions has been enhanced [ID 41195]
+#### Automation: Locking behavior of automation script actions has been enhanced [ID 41195]
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-A number of enhancements have been made with regard to the locking behavior of certain Automation script actions. This should significantly reduce the chances of scripts influencing each other and slowing each other down.
+A number of enhancements have been made with regard to the locking behavior of certain automation script actions. This should significantly reduce the chances of scripts influencing each other and slowing each other down.
 
 Breaking changes:
 

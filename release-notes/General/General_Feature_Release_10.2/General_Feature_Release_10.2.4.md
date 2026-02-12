@@ -331,7 +331,7 @@ When, after selecting a component in edit mode, you open the *Data* tab and go t
 
 #### Dashboards app: GQI now supports external data \[ID 32656\]\[ID 32659\]\[ID 32930\]
 
-It is now possible to configure the Generic Query Interface to retrieve external data, so that dashboard users can use a query data source based on data that is for example retrieved from a CSV file, a MySQL database, or an API endpoint. This is configured through a DataMiner Automation script that is compiled as a library. The GQI will make use of this library to load the external data.
+It is now possible to configure the Generic Query Interface to retrieve external data, so that dashboard users can use a query data source based on data that is for example retrieved from a CSV file, a MySQL database, or an API endpoint. This is configured through a DataMiner automation script that is compiled as a library. The GQI will make use of this library to load the external data.
 
 ##### Configuring an external data source in a query
 
@@ -760,9 +760,9 @@ When creating a correlation rule in the Correlation app, it is now possible to u
 
 Due to a number of enhancements, overall performance has increased when stopping SNMP elements.
 
-#### DataMiner Cube - Automation: SaveAutomationScriptXmlMessage will now be used when importing, saving and updating Automation scripts \[ID 32557\]
+#### DataMiner Cube - Automation: SaveAutomationScriptXmlMessage will now be used when importing, saving and updating automation scripts \[ID 32557\]
 
-Up to now, when an Automation script was imported, the file would not be processed in the same way as when an Automation script was saved or updated. From now on, the same SaveAutomationScriptXmlMessage will be used when importing, saving and updating Automation scripts.
+Up to now, when an automation script was imported, the file would not be processed in the same way as when an automation script was saved or updated. From now on, the same SaveAutomationScriptXmlMessage will be used when importing, saving and updating automation scripts.
 
 #### Hanging threads in SLNet will now be logged in SLHangingCalls.txt \[ID 32582\]
 
@@ -821,7 +821,7 @@ Full backups and configuration backups will now by default also include the SLAn
 
 #### DataMiner Cube - Automation: Specifying an offset value will now be optional in case of a Set action \[ID 32743\]
 
-When, in an Automation script, you configured a Set action for which an offset value could be specified, up to now, it was mandatory to specify that offset value. From now on, specifying an offset value will be optional. Either select “with value offset” and enter a value, or select “without value offset”.
+When, in an automation script, you configured a Set action for which an offset value could be specified, up to now, it was mandatory to specify that offset value. From now on, specifying an offset value will be optional. Either select “with value offset” and enter a value, or select “without value offset”.
 
 Default: “without value offset”
 

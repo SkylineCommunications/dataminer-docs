@@ -179,7 +179,7 @@ In the SLNetClientTest tool, for some messages (e.g. *Diagnostics* > *SLNet* > *
 
 #### DataMiner Cube - Automation/Correlation: Width of action dialog boxes will now automatically be adapted to the size of the screen \[ID 24190\]
 
-From now on, when you configure actions in Automation scripts or Correlation rules, the action dialog boxes will automatically adapt their width to the size of the screen.
+From now on, when you configure actions in automation scripts or correlation rules, the action dialog boxes will automatically adapt their width to the size of the screen.
 
 #### Enhanced view data synchronization \[ID 24197\]
 
@@ -610,9 +610,9 @@ Also, the term “System Display” has been replaced by “Client Interface” 
 
 In some cases, alarm filters that contained session variables would no longer be updated correctly when one of those variables had changed.
 
-#### Dashboards app: Incorrect message would appear when an interactive Automation script went into timeout \[ID 24258\]
+#### Dashboards app: Incorrect message would appear when an interactive automation script went into timeout \[ID 24258\]
 
-When an interactive Automation script running inside the Dashboards app went into timeout, in some cases, a success message would incorrectly be displayed instead of an error message.
+When an interactive automation script running inside the Dashboards app went into timeout, in some cases, a success message would incorrectly be displayed instead of an error message.
 
 #### DataMiner Cube - Profiles app: Protocol version not set to 'Production' when linking a parameter \[ID 24260\]
 
@@ -640,9 +640,9 @@ When, in the Profiles app, you linked a profile parameter to a protocol paramete
 
 Also, it would incorrectly only be possible to link parameters of category “Configuration” to protocol parameters.
 
-#### Datetime value in interactive Automation script not updated correctly \[ID 24284\]
+#### Datetime value in interactive automation script not updated correctly \[ID 24284\]
 
-When a datetime value in an interactive Automation script was changed by the script itself, it could occur that the value was not updated correctly.
+When a datetime value in an interactive automation script was changed by the script itself, it could occur that the value was not updated correctly.
 
 #### Dashboards app / Jobs app: Problem opening the user menu \[ID 24285\]
 
@@ -700,9 +700,9 @@ If several DMAs in a cluster were started at the same time and these DMAs has an
 
 In some rare cases, an exception could be thrown when you tried to use the dynamic zoom while DCP connection properties were being displayed.
 
-#### Automation: Dialog box from an interactive Automation script started in Dashboards would incorrectly appear in Cube \[ID 24328\]
+#### Automation: Dialog box from an interactive automation script started in Dashboards would incorrectly appear in Cube \[ID 24328\]
 
-In some cases, a dialog box from an interactive Automation script started in Dashboards would incorrectly appear inside a Cube session.
+In some cases, a dialog box from an interactive automation script started in Dashboards would incorrectly appear inside a Cube session.
 
 #### Reports & Dashboards: Problem with status query in legacy Reporter app \[ID 24332\]
 
@@ -750,9 +750,9 @@ When multiple profile instances or profile definitions containing an empty field
 
 In some cases, it could occur that view table data were refreshed even when this was not necessary, which could cause data pages or visual overview pages to load very slowly in Cube.
 
-#### DataMiner Cube - Correlation: Problem with 'Send email' actions in Correlation rules \[ID 24361\]
+#### DataMiner Cube - Correlation: Problem with 'Send email' actions in correlation rules \[ID 24361\]
 
-When triggered, in some cases, “Send email” actions in Correlation rules would not send an email when the recipient was a DataMiner user.
+When triggered, in some cases, “Send email” actions in correlation rules would not send an email when the recipient was a DataMiner user.
 
 #### DataMiner Cube: Problem when resizing the Alarm Console \[ID 24362\]
 
@@ -880,9 +880,9 @@ When working with the Dashboards app in Chrome, in some cases, a mouse click cou
 
 When you opened a dashboard with a multiple parameter feed using a URL that contained the parameters to be loaded in that feed, in some cases, the parameters in the URL would not correctly be loaded into the multiple parameter feed.
 
-#### HTML5 apps: Selection box values containing backslash characters displayed incorrectly in interactive Automation scripts \[ID 24541\]
+#### HTML5 apps: Selection box values containing backslash characters displayed incorrectly in interactive automation scripts \[ID 24541\]
 
-When an interactive Automation script was run from within an HTML5 app, in some cases, selection box values containing “\\” characters could be displayed incorrectly.
+When an interactive automation script was run from within an HTML5 app, in some cases, selection box values containing “\\” characters could be displayed incorrectly.
 
 #### Failover: Problem with Indexing database after a Failover switch \[ID 23945\]\[ID 24562\]
 

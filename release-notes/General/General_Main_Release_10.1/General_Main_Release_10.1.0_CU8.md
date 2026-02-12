@@ -63,9 +63,9 @@ A number of enhancements have been made to the way in which SLElement calculates
 
 Due to a number of enhancements, overall performance has increased when enabling virtual functions with monitored parent elements.
 
-#### Interactive Automation scripts: File selector component can now be configured to only allow a script to continue after a file has been uploaded \[ID 30728\]
+#### Interactive automation scripts: File selector component can now be configured to only allow a script to continue after a file has been uploaded \[ID 30728\]
 
-In an interactive Automation script that is used in Dashboards, you can now configure a file selector component to only allow a script to continue after a file has been uploaded. To do so, set the property *IsRequired* to true.
+In an interactive automation script that is used in Dashboards, you can now configure a file selector component to only allow a script to continue after a file has been uploaded. To do so, set the property *IsRequired* to true.
 
 For example:
 
@@ -102,7 +102,7 @@ From now on, when the alarm filter contains one of the above-mentioned items, th
 
 #### Automation scripts: SLAnalyticsTypes.dll added to the list of default DLL references \[ID 30821\]
 
-All Automation scripts will now by default have a reference to the SLAnalyticsTypes.dll file.
+All automation scripts will now by default have a reference to the SLAnalyticsTypes.dll file.
 
 #### BREAKING CHANGE: DataMiner installer will only enable ICMP and HTTP ports 80 & 8004 \[ID 30913\]
 
@@ -191,9 +191,9 @@ When a protocol was deleted, up to now, the compiled QAction DLL files would inc
 
 In some cases, a ParameterThread error could occur in SLElement.
 
-#### Interactive Automation scripts: Value returned by the client would incorrectly be considered as an invalid file path selected in a file selector block \[ID 30879\]
+#### Interactive automation scripts: Value returned by the client would incorrectly be considered as an invalid file path selected in a file selector block \[ID 30879\]
 
-When, in an interactive Automation script, a file selector block was defined after another type of input block (e.g. a checkbox), in some cases, the input block value returned by the client would incorrectly be considered as an invalid file path selected in the file selector. As a result, an “Invalid Data” error would be thrown.
+When, in an interactive automation script, a file selector block was defined after another type of input block (e.g. a checkbox), in some cases, the input block value returned by the client would incorrectly be considered as an invalid file path selected in the file selector. As a result, an “Invalid Data” error would be thrown.
 
 #### DataMiner Cube - Alarm Console: Incorrect notices like '!! Unknown \<Type> R!AD for parameter xxx' \[ID 30884\]
 

@@ -2,9 +2,9 @@
 uid: Launching_and_attaching_interactive_Automation_scripts
 ---
 
-# Launching and attaching interactive Automation scripts
+# Launching and attaching interactive automation scripts
 
-This guide explains how to reliably launch an interactive Automation script in different scenarios.
+This guide explains how to reliably launch an interactive automation script in different scenarios.
 
 ## Launching a script directly (from the Cube UI)
 
@@ -92,7 +92,7 @@ string id = protocol.UserCookie;
 // {448BB4B8-4E55-4CB7-BCC3-848923BD19DA}:AUTOMATION:Automation script:581/120:John Smith
 ```
 
-From an Automation script started by a user:
+From an automation script started by a user:
 
 ```csharp
 string id = engine.UserCookie;

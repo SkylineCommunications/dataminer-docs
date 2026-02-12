@@ -4,7 +4,7 @@ uid: SRM_update_timing_booking_silently
 
 # Silently updating the timing of a booking
 
-The example below shows how the timing of a booking can be changed without user interaction by means of an Automation script.
+The example below shows how the timing of a booking can be changed without user interaction by means of an automation script.
 
 > [!NOTE]
 > The timing of events that have already been executed cannot be changed.

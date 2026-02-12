@@ -969,11 +969,11 @@ Using Okta as identity provider, it would incorrectly no longer be possible to r
 
 Up to now, in case of a claim mismatch, an exception would be thrown. From now on, an entry containing a clear message will be added to the *SLNet.txt* log file instead.
 
-#### Automation: DataMiner would incorrectly remove the xmlns attribute when importing or saving an Automation script [ID 35708]
+#### Automation: DataMiner would incorrectly remove the xmlns attribute when importing or saving an automation script [ID 35708]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
-When DataMiner imported or saved an Automation script, it would incorrectly remove the `xmlns` attribute specified in the `<DMSScript>` element, even when that attribute had been added by DataMiner Integration Studio. From now on, when DataMiner imports or saves an Automation script, it will no longer remove this attribute. Moreover, if no such attribute is specified, it will automatically add `xmlns="http://www.skyline.be/automation"`.
+When DataMiner imported or saved an automation script, it would incorrectly remove the `xmlns` attribute specified in the `<DMSScript>` element, even when that attribute had been added by DataMiner Integration Studio. From now on, when DataMiner imports or saves an automation script, it will no longer remove this attribute. Moreover, if no such attribute is specified, it will automatically add `xmlns="http://www.skyline.be/automation"`.
 
 Example:
 
@@ -1263,11 +1263,11 @@ Up to now, when using a gRPC connection, Cube was not able to verify whether the
 
 When, in a visual overview with one non-hidden page displayed in a web app, you tried to open a popup window linked to a page marked as "hidden", the popup window would incorrectly display the non-hidden page instead of the hidden page.
 
-#### Automation: Problem when empty data is passed to the UI parser when running an interactive Automation script [ID 38408]
+#### Automation: Problem when empty data is passed to the UI parser when running an interactive automation script [ID 38408]
 
 <!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
-When running an interactive Automation script that was launched from Cube or a web app, in some cases, an exception could be thrown when empty data was passed to the UI parser.
+When running an interactive automation script that was launched from Cube or a web app, in some cases, an exception could be thrown when empty data was passed to the UI parser.
 
 From now on, an exception will no longer be thrown when empty data is passed to the UI parser.
 

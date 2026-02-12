@@ -29,7 +29,7 @@ You can configure actions for different types of events in DataMiner Low-Code Ap
 Other types are possible depending on the component and the DataMiner version. For each of these events, you can configure actions as detailed below.
 
 > [!TIP]
-> Actions can be combined and chained to create more complex behavior. For example, an *Open a page* action can be followed by an *Open a panel* action to open a panel on a specific page. While the panel is being opened, a *Launch a script* action can execute an Automation script that updates parameters that will be displayed on that panel. All of this can be triggered from a header bar button, for example on the initial page.
+> Actions can be combined and chained to create more complex behavior. For example, an *Open a page* action can be followed by an *Open a panel* action to open a panel on a specific page. While the panel is being opened, a *Launch a script* action can execute an automation script that updates parameters that will be displayed on that panel. All of this can be triggered from a header bar button, for example on the initial page.
 >
 > See also: [Tutorials — Running a script when a page opens](xref:Tutorial_Apps_Script_Upon_Page_Load) and [Tutorials — Chaining actions](xref:Tutorial_Apps_Chaining_Actions).
 
@@ -51,7 +51,7 @@ To configure an event to launch a script:
 > [!IMPORTANT]
 > From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!-- RN 39027 -->, linking a script parameter to empty data (or to an empty feed, prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->) will fill it with an empty array. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
 
-From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43222-->, the output of an Automation script can be used in the post actions of a *Launch a script* action. See [Configuring another action for the same event](#configuring-another-action-for-the-same-event).
+From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43222-->, the output of an automation script can be used in the post actions of a *Launch a script* action. See [Configuring another action for the same event](#configuring-another-action-for-the-same-event).
 
 To use this output as data:
 
@@ -336,7 +336,7 @@ From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43222-->, all act
 
 ![Numbered hierarchically](~/dataminer/images/Actions_Numbered_Hierarchically.png)<br>*Actions configuration window in DataMiner 10.5.9*
 
-These numbers make it easier, for example, to reference actions when [linking Automation script output data](#launching-a-script).
+These numbers make it easier, for example, to reference actions when [linking automation script output data](#launching-a-script).
 
 ## Removing an action
 

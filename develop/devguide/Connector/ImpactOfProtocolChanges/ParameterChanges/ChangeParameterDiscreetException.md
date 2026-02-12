@@ -11,7 +11,7 @@ Changing discreets or changing exceptions is considered a major change.
 
 ## Impact
 
-- Adapt Automation scripts, because the displayed value can be used in Automation scripts to perform sets.
+- Adapt automation scripts, because the displayed value can be used in automation scripts to perform sets.
 - Filters can be used with wildcards on the display value.
 
 *DIS MCC*

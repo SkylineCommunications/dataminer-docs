@@ -53,7 +53,7 @@ You can also select a connection in the workflow and add a node in between, edit
 
 ## Describing workflow execution behavior
 
-Workflows can be executed by planning a job based on the workflow in the [Scheduling app](xref:MO_Scheduling). The Workflow Designer app allows you to describe what needs to happen when a workflow execution is triggered. This is done by providing Automation scripts in two places:
+Workflows can be executed by planning a job based on the workflow in the [Scheduling app](xref:MO_Scheduling). The Workflow Designer app allows you to describe what needs to happen when a workflow execution is triggered. This is done by providing automation scripts in two places:
 
 - **Workflow execution script**: This script describes the overall execution logic of the workflow. The script will always be triggered by the system when a workflow is executed. You can specify this when you create or edit a workflow.
 

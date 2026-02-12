@@ -4,7 +4,7 @@ uid: SRM_apply_service_state_transitions_silently
 
 # Silently applying service state transitions
 
-The example below shows how you can apply service state transitions (Start, Stop, Pause, Standby, etc.) or force the same service state without user interaction by means of an Automation script.
+The example below shows how you can apply service state transitions (Start, Stop, Pause, Standby, etc.) or force the same service state without user interaction by means of an automation script.
 
 ```csharp
 using System;

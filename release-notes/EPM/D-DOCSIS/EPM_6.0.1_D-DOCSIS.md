@@ -22,7 +22,7 @@ The WM receives requests from the CBR8 platform asking for specific topic data. 
 
 In the WM element, a new *Topics* page has been added, where you can find the *Topics Consumption Buffer* table. A new *Topic Settings* page is also available, where you can check and configure topic settings.
 
-The necessary Automation Scripts and Correlation Rules have also been created to support the topic data handling workflow.
+The necessary automation scripts and correlation rules have also been created to support the topic data handling workflow.
 
 #### New MAC State Not Online filter option \[ID 31454\]
 

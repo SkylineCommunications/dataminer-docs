@@ -94,7 +94,7 @@ Below you can find an overview of the main features that have been added to Data
 | DOM: [DomInstanceValueFieldDescriptor](xref:DOM_DomInstanceValueFieldDescriptor) | DataMiner 10.2.3/10.3.0 <!-- [ID 32326] -->|
 | DOM: [GroupFieldDescriptor](xref:DOM_GroupFieldDescriptor) and [UserFieldDescriptor](xref:DOM_UserFieldDescriptor) | DataMiner 10.3.3/10.4.0 <!-- [ID 35278] -->|
 | DOM: [History of DOM instances](xref:DOM_history) | DataMiner 10.1.3/10.2.0 <!-- [ID 28709] --> |
-| DOM: [Interactive Automation script action](xref:DOM_actions#interactive-script) |  DataMiner 10.2.8/10.3.0 <!-- [ID 33513] -->|
+| DOM: [Interactive automation script action](xref:DOM_actions#interactive-script) |  DataMiner 10.2.8/10.3.0 <!-- [ID 33513] -->|
 | DOM: [DOM link security](xref:DOM_security) | DataMiner 10.5.10/10.6.0 <!-- [ID 43589] --> |
 | EPM: [Aliases for topology cells, chains and search chains](xref:EPMConfig_xml) | DataMiner 10.1.7/10.2.0 <!-- [ID 29766] [ID 29841] -->|
 | [EPM integration](xref:Topology_app_configuration) | DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- [ID 42221] --> |
@@ -118,7 +118,7 @@ Below you can find an overview of the main features that have been added to Data
 | Low-Code Apps: [*Change variable* actions](xref:LowCodeApps_event_config#changing-a-variable) | DataMiner web 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1<!-- [ID 41253] [ID 41324] --> |
 | Low-Code Apps: [*Copy to clipboard* action](xref:LowCodeApps_event_config#copying-text-to-the-clipboard) | DataMiner web 10.4.0 [CU11]/10.5.2<!-- [ID 41729]-->|
 | Low-Code Apps: [Duplicating an app](xref:Creating_custom_apps#duplicating-an-existing-low-code-app) | DataMiner web 10.3.0 [CU10]/10.4.1 <!-- [ID 37698] -->|
-| Low-Code Apps: [*Interactive Automation script* component](xref:InteractiveAutomationScript) | DataMiner web 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 <!-- [ID 39969] -->|
+| Low-Code Apps: [*Interactive automation script* component](xref:InteractiveAutomationScript) | DataMiner web 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 <!-- [ID 39969] -->|
 | Low-Code Apps: [Node movement events](xref:DashboardNodeEdgeGraph#configuring-node-movement-events) for the node edge graph component | DataMiner 10.5.0 [CU10]/10.6.1 <!-- [ID 44144] --> |
 | Low-Code Apps: [*Open monitoring card* action](xref:LowCodeApps_event_config#opening-a-monitoring-card) | DataMiner web 10.3.4/10.4.0 <!-- [ID 35661] -->|
 | Low-Code Apps: [*Show a notification* action](xref:LowCodeApps_event_config#showing-a-notification) | DataMiner 10.3.0 [CU12]/10.4.3 <!-- [ID 38548] -->|

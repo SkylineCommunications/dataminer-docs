@@ -113,7 +113,7 @@ In situations where an RTE happens because of other QActions triggered by a butt
 
 Multiple sets on the same element are handled sequentially. There can be more than one set influencing the timer group flow.
 
-The sets can be caused by other external sources than the client, like an Automation script, Visual Overview, data distribution, traps, element connections, etc.
+The sets can be caused by other external sources than the client, like an automation script, Visual Overview, data distribution, traps, element connections, etc.
 
 #### Alternative case
 

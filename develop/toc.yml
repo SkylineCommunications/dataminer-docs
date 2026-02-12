@@ -210,7 +210,7 @@ items:
             topicUid: LogicQActionsExecution
           - name: QAction compilation
             topicUid: LogicQActionsCompilation
-          - name: Starting an Automation script from a QAction
+          - name: Starting an automation script from a QAction
             topicUid: LogicQActionsAutomationScriptExecution            
           - name: Examples
             topicUid: LogicQActionsExamples
@@ -892,7 +892,7 @@ items:
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
-    - name: Getting started with Automation script development
+    - name: Getting started with automation script development
       topicUid: GettingStartedWithAutomationScriptDevelopment
     - name: Actions
       topicUid:  AutomationActions
@@ -951,15 +951,15 @@ items:
         topicUid: Handling_Async_Code
     - name: How-tos
       items:
-      - name: Making your Automation scripts debug-ready
+      - name: Making your automation scripts debug-ready
         topicUid: How_to_make_your_automation_scripts_debug_ready
       - name: Getting started with the IAS Toolkit
         topicUid: Getting_Started_with_the_IAS_Toolkit
-      - name: Implementing interactive Automation scripts in regression tests (best practices)
+      - name: Implementing interactive automation scripts in regression tests (best practices)
         topicUid: BP_Implementing_IAS_in_Regression_Tests
-      - name: Creating a Cypress test for an interactive Automation script
+      - name: Creating a Cypress test for an interactive automation script
         topicUid: Creating_a_cypress_test_for_an_interactive_automation_script
-      - name: Launching and attaching interactive Automation scripts
+      - name: Launching and attaching interactive automation scripts
         topicUid: Launching_and_attaching_interactive_Automation_scripts
       - name: Implementing the OnRequestScriptInfo entry point
         topicUid: Implementing_OnRequestScriptInfo_Entry_Point
@@ -1178,7 +1178,7 @@ items:
             topicUid: Linking_a_shape_to_a_video_stream_using_VLC
           - name: Linking a shape to a webpage
             topicUid: Linking_a_shape_to_a_webpage
-          - name: Linking a shape to an Automation script
+          - name: Linking a shape to an automation script
             topicUid: Linking_a_shape_to_an_Automation_script
           - name: Linking a shape to a matrix parameter
             topicUid: Linking_a_shape_to_a_matrix_parameter
@@ -7260,7 +7260,7 @@ items:
         items:
         - name: Automation scripts as a Visual Studio solution
           topicUid: Automation_scripts_as_a_Visual_Studio_solution
-        - name: Pipeline stages for Automation scripts
+        - name: Pipeline stages for automation scripts
           topicUid: Pipeline_stages_for_Automation_scripts
       - name: Visual overview development with CI/CD pipeline
         items:
@@ -7358,9 +7358,9 @@ items:
               items:
                 - name: Using the DIS MIB Browser
                   topicUid: DIS_MIB_Browser
-            - name: Developing Automation scripts
+            - name: Developing automation scripts
               topicUid: Developing_Automation_scripts_as_Visual_Studio_solutions
-        - name: Debugging connectors and Automation scripts
+        - name: Debugging connectors and automation scripts
           topicUid: Debugging_connectors_and_Automation_scripts
           items:
             - name: Concept
@@ -7371,7 +7371,7 @@ items:
               topicUid: Preparing_to_debug_on_a_remote_DataMiner_Agent
             - name: Debugging a connector
               topicUid: Debugging_a_connector
-            - name: Debugging an Automation script
+            - name: Debugging an automation script
               topicUid: Debugging_an_Automation_script
         - name: Tutorials
           items:
@@ -7430,7 +7430,7 @@ items:
               topicUid: Run_Time_Assembly_Binding
             - name: Assembly binding connectors
               topicUid: AssemblyResolvingConnectors
-            - name: Assembly binding Automation scripts
+            - name: Assembly binding automation scripts
               topicUid: AssemblyResolvingAutomationScripts
         - name: Producing NuGet packages
           topicUid: Producing_NuGet

@@ -218,7 +218,7 @@ http://<DMA>/embed?component=<SERIALIZED-COMPONENT>
 
 #### Possibility to add Attachments to tickets \[ID 25612\]
 
-In a C# block of an Automation script, you can now add attachments to tickets.
+In a C# block of an automation script, you can now add attachments to tickets.
 
 In the TicketingHelper class and TicketingGatewayHelper, the “AttachmentsHelper Attachments” property will allow to manage ticket attachments using the following methods:
 
@@ -239,7 +239,7 @@ In the TicketingHelper class and TicketingGatewayHelper, the “AttachmentsHelpe
 
 #### Run-time flag 'NoCheckingSets' now allows the 'After executing a SET command' option to be changed while a script is being run \[ID 25847\]
 
-When you launch an Automation script, you can choose to select the “After executing a SET command” option. If you do so, every time the script performs a parameter or property update, it will wait for a return value indicating whether or not the update was successful.
+When you launch an automation script, you can choose to select the “After executing a SET command” option. If you do so, every time the script performs a parameter or property update, it will wait for a return value indicating whether or not the update was successful.
 
 From now on, the “NoCheckingSets” runtime flag will allow this option to be changed while a script is being run.
 
@@ -295,9 +295,9 @@ When multiple columns have different discreet values, all these values will be d
 
 ### DMS Mobile apps
 
-#### Interactive Automation scripts: UI components now have a TooltipText property \[ID 25609\] \[ID 25978\]
+#### Interactive automation scripts: UI components now have a TooltipText property \[ID 25609\] \[ID 25978\]
 
-UI components in interactive Automation scripts launched from a mobile app can now have a tool tip configured by means of the UIBlockDefinition class property “TooltipText”.
+UI components in interactive automation scripts launched from a mobile app can now have a tool tip configured by means of the UIBlockDefinition class property “TooltipText”.
 
 ### DMS Service & Resource Management
 
@@ -518,7 +518,7 @@ When an SNMP trap was sent from an element that was being restarting, in some ca
 
 #### Automation: Email action that used an aggregation rule would be saved incorrectly \[ID 25800\]
 
-When, in an Automation script, you added an email action that sent an PDF report and used an aggregation rule, in some cases, the action’s aggregation rule information would not be saved correctly.
+When, in an automation script, you added an email action that sent an PDF report and used an aggregation rule, in some cases, the action’s aggregation rule information would not be saved correctly.
 
 #### Service & Resource Management: Problem when updating multiple ReservationInstance properties in rapid succession \[ID 25808\]
 
@@ -570,7 +570,7 @@ When you click a shape with an alarm filter in an *AlarmSummary* data item and t
 
 In some cases, when the tab page did not exist yet and the Alarm Console was collapsed, the tab page was created but the Alarm Console would incorrectly not be opened.
 
-#### Interactive Automation scripts: Some dropdown boxes would unnecessarily trigger a refresh of the UI \[ID 25902\]
+#### Interactive automation scripts: Some dropdown boxes would unnecessarily trigger a refresh of the UI \[ID 25902\]
 
 In some cases, dropdown boxes would unnecessarily trigger a refresh of the UI.
 
@@ -586,7 +586,7 @@ Up to now, when you opened the card of a Dynamic Virtual Element, it incorrectly
 
 #### Dashboards app - Service Definition component: Booking ID not passed to the script when clicking a node \[ID 25912\]
 
-When, in a service definition component linked to a booking, you clicked a node that launched an Automation script, in some cases, the booking ID would not be passed to the script.
+When, in a service definition component linked to a booking, you clicked a node that launched an automation script, in some cases, the booking ID would not be passed to the script.
 
 #### DataMiner Cube - Listview: Problem when column icons got a severity update \[ID 25916\]
 
@@ -633,9 +633,9 @@ Due to a synchronization issue, in some rare cases, different agents in a DMS wo
 
 When you masked an element and then immediately restarted it, in some rare cases, it could be shown as unmasked for a short period of time.
 
-#### Incorrect page margins in PDF reports sent by an Automation script \[ID 26090\]
+#### Incorrect page margins in PDF reports sent by an automation script \[ID 26090\]
 
-When an Automation script sent a PDF report based on a dashboard, in some cases, the page margins in that PDF report would be incorrect.
+When an automation script sent a PDF report based on a dashboard, in some cases, the page margins in that PDF report would be incorrect.
 
 #### DataMiner Cube - Trending: Trend graph of aggregation parameter did not show any data \[ID 26172\]
 

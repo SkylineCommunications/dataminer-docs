@@ -29,7 +29,7 @@ While DataMiner will still try to resolve these references where it can, new cod
 
 As long as the Swarming feature has not been enabled yet, legacy calls will remain functional. However, once the Swarming feature is enabled, multiple elements will start generating the same root alarm ID value because DataMiner will switch to using an ID range per element instead of a range per DataMiner Agent. Using full alarm tree references therefore becomes required. For Swarming configurations, elements `1/2` and `1/3` can generate the unique tree references `1/2/555` and `1/3/555`, while the old system would see these as the same reference (`1/555`).
 
-This means that code in Automation scripts and connectors may need updates to account for this change. You can find more information about the required changes below. Typically, methods, fields, or properties marked as obsolete will also contain guidance in their message.
+This means that code in automation scripts and connectors may need updates to account for this change. You can find more information about the required changes below. Typically, methods, fields, or properties marked as obsolete will also contain guidance in their message.
 
 > [!NOTE]
 >

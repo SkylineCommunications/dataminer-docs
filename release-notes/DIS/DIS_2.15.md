@@ -214,7 +214,7 @@ From now on, the DIS Tree will show more information on the following elements:
 
 #### Automation script schema: Enhanced ID constraints \[ID 20799\]
 
-Up to now, the Automation script schema contained ID uniqueness constraints for each element type. All those ID constraints have now been replaced by a single constraint that forces an ID in an id attribute to be unique regardless of the type of XML element in which it is used.
+Up to now, the automation script schema contained ID uniqueness constraints for each element type. All those ID constraints have now been replaced by a single constraint that forces an ID in an id attribute to be unique regardless of the type of XML element in which it is used.
 
 Also, the type of the Exe@id attribute has been changed to “xs:positiveInteger”.
 

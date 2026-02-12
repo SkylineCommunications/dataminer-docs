@@ -8,9 +8,9 @@ If you click *Tool Windows > DIS Inject*, the *DIS Inject* window will appear.
 
 By default, the *DIS Inject* window will open undocked. Dock it just as you would dock any other tool window in Visual Studio.
 
-This tool window allows you to make the necessary preparations before debugging the connector QAction(s) or Automation script C# Exe block(s) you are editing.
+This tool window allows you to make the necessary preparations before debugging the connector QAction(s) or automation script C# Exe block(s) you are editing.
 
-For step-by-step instructions on how to debug connector QActions and Automation script C# Exe blocks, see [Debugging connectors and Automation scripts](xref:Debugging_connectors_and_Automation_scripts).
+For step-by-step instructions on how to debug connector QActions and automation script C# Exe blocks, see [Debugging connectors and automation scripts](xref:Debugging_connectors_and_Automation_scripts).
 
 ![DIS Inject tool window](~/develop/images/DisInjectToolWindow.png)
 
@@ -67,13 +67,13 @@ After injecting the necessary *QAction.dll* files, you have to attach the Debugg
 | Attach | all temporary QAction projects will be built, and the Microsoft Visual Studio Debugger will be attached to the DataMiner SLScripting process(es).<br>Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
 | Detach | the Microsoft Visual Studio Debugger will be detached from the DataMiner SLScripting process(es). |
 
-## Debugging an Automation script
+## Debugging an automation script
 
-Go to the *Automation script* tab if you want to debug an Automation script.
+Go to the *Automation script* tab if you want to debug an automation script.
 
-### Selecting an Automation script from the connected DMA
+### Selecting an automation script from the connected DMA
 
-Use the selection box at the top of the tab to select the Automation script to be debugged.
+Use the selection box at the top of the tab to select the automation script to be debugged.
 
 ### Linking Exe block projects, assigning values to script parameters, and linking elements to script dummies
 
@@ -90,6 +90,6 @@ After linking the Exe block projects, assigning values to the script parameters,
 | Attach | all temporary Exe block projects will be built, and the Microsoft Visual Studio Debugger will be attached to the DataMiner SLAutomation process.<br> Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
 | Detach | the Microsoft Visual Studio Debugger will be detached from the DataMiner SLAutomation process. |
 
-### Triggering the Automation script
+### Triggering the automation script
 
-Click *Execute* to manually trigger the Automation script.
+Click *Execute* to manually trigger the automation script.

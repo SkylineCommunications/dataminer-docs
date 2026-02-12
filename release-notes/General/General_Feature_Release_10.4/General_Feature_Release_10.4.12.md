@@ -46,11 +46,11 @@ In the *SLElementInProtocol.txt* log file, the following fields have been added:
 > - The process ID of the new SLProtocol process can be found in the *elementName.txt* log file, while the process ID of the old SLProtocol process can be found in the *elementName_BAK.txt* log file.
 > - There will be a delay of one minute between the disappearance of an SLProtocol process and the creation of a new SLProtocol process.
 
-#### Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]
+#### Interactive automation scripts: New option to skip the confirmation window when aborting [ID 40683]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-`UIBuilder` now has a new `SkipAbortConfirmation` property. When set to true, the confirmation window will not be displayed when the interactive Automation script is aborted. By default, this property will be set to false.
+`UIBuilder` now has a new `SkipAbortConfirmation` property. When set to true, the confirmation window will not be displayed when the interactive automation script is aborted. By default, this property will be set to false.
 
 Example:
 
@@ -60,7 +60,7 @@ uib.SkipAbortConfirmation = true;
 ```
 
 > [!TIP]
-> See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40720]](xref:Cube_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40720)
+> See also: [Interactive automation scripts: New option to skip the confirmation window when aborting [ID 40720]](xref:Cube_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40720)
 
 #### Trending - Proactive cap detection: Generating an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 41017]
 
@@ -94,7 +94,7 @@ To see the current hint paths per SLScripting process, do the following:
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
+If you have created an automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
 
 Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
 

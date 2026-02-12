@@ -118,11 +118,11 @@ The Connect() and Publish() methods of SLMessageBroker now have a default connec
 
 Also, the interval at which another reconnect is attempted has been increased from 1 second to 10 seconds.
 
-#### Enhancements with regard to Automation scripts [ID 33129] [ID 33226]
+#### Enhancements with regard to automation scripts [ID 33129] [ID 33226]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
-A number of enhancements have been made with regard to Automation scripts.
+A number of enhancements have been made with regard to automation scripts.
 
 - When a script is launched, from now on, only the parameters/dummies with missing values will be shown. Automatically filled in values will no longer be shown.
 - When script input is filled in with feed data, users will no longer be asked to change that input manually.

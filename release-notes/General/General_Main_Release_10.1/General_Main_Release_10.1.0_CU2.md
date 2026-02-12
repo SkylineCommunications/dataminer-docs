@@ -215,7 +215,7 @@ When you generated a PDF report with the options “No grouping” and “Includ
 
 #### DataMiner Cube - Automation: Discarding a newly created script would not delete it \[ID 29032\]
 
-When you discarded a newly created Automation script, in some cases, it would incorrectly not be deleted although it had disappeared from the UI. As a result, trying to create a new script with the same name would fail.
+When you discarded a newly created automation script, in some cases, it would incorrectly not be deleted although it had disappeared from the UI. As a result, trying to create a new script with the same name would fail.
 
 #### No trigger keys listed when debugging a QAction due to a compatibility issue between DataMiner and DataMiner Integration Studio \[ID 29049\]
 
@@ -241,9 +241,9 @@ DmaConnections|Unexpected filter type: SubscriptionFilter\`2
 Unexpected filter type: Skyline.DataMiner.Net.SubscriptionFilters.SubscriptionFilter\`2[XXXX,XXXXXX]
 ```
 
-#### Interactive Automation scripts: Date selected in calendar control would be parsed incorrectly \[ID 29153\]
+#### Interactive automation scripts: Date selected in calendar control would be parsed incorrectly \[ID 29153\]
 
-When, in an interactive Automation script, a calendar control was used to select a date (i.e. a datetime value without a specific time), in some cases, the value of the selected date would be parsed incorrectly.
+When, in an interactive automation script, a calendar control was used to select a date (i.e. a datetime value without a specific time), in some cases, the value of the selected date would be parsed incorrectly.
 
 #### UDP smart-serial server would receive an empty package each time a new client started sending data to it \[ID 29166\]
 
@@ -383,7 +383,7 @@ When you selected a number of jobs in the list, clicked *Delete*, and then click
 
 #### Automation: Subscripts would return an incorrect output \[ID 29405\]
 
-When, in an Automation script, a subscript that returned its output was run twice, in some cases, when it cleared its output during its second run, it would incorrectly return the same output it had returned at the end of its first run.
+When, in an automation script, a subscript that returned its output was run twice, in some cases, when it cleared its output during its second run, it would incorrectly return the same output it had returned at the end of its first run.
 
 #### Legacy Reporter: Status query would no longer show alarm colors \[ID 29516\]
 

@@ -104,7 +104,7 @@ Once you have imported a discovery profile, you can use its discovery identifier
 > [!NOTE]
 > This is no longer necessary from IDP version 1.1.15 onwards.
 
-When an element has been provisioned, DataMiner IDP can run the *Update Property Script*. This is an Automation script that is configured per CI type. The *Update Property Script* needs to find the Node ID of the provisioned element and configure it on the element property *IS-04 Node GUID*.
+When an element has been provisioned, DataMiner IDP can run the *Update Property Script*. This is an automation script that is configured per CI type. The *Update Property Script* needs to find the Node ID of the provisioned element and configure it on the element property *IS-04 Node GUID*.
 
 DataMiner IDP comes with an example script *IDP_Example_Custom_UpdateProperties*, which can be used as a starting point. You can [duplicate this script](xref: Managing_Automation_scripts#adding-a-new-automation-script) and change it as follows:
 

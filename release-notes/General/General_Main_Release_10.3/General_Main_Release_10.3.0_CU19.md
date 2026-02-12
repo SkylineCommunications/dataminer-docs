@@ -29,11 +29,11 @@ This means that the test will now be able to report a fail when a new antivirus 
 
 Information regarding protocol signature validation will now be cached. This will considerably enhance overall performance during a DataMiner startup.
 
-#### Automation: Using the Engine.Sleep method in an Automation script could affect other scripts [ID 40104]
+#### Automation: Using the Engine.Sleep method in an automation script could affect other scripts [ID 40104]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, using the *Engine.Sleep* method in an Automation script could cause issues that would affect other scripts. This has now been resolved.
+Up to now, using the *Engine.Sleep* method in an automation script could cause issues that would affect other scripts. This has now been resolved.
 
 #### BPA tests will no longer be executed immediately after a DataMiner restart [ID 40201]
 

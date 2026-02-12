@@ -4,7 +4,7 @@ uid: Copy_Element_Data
 
 # Copy Element Data
 
-This tool can be used to simulate problems and build projects based on real data. It consists of two Automation scripts:
+This tool can be used to simulate problems and build projects based on real data. It consists of two automation scripts:
 
 - ***RetrieveAllParams***: Allows you to retrieve all parameters from an element and store them in a JSON file.
 

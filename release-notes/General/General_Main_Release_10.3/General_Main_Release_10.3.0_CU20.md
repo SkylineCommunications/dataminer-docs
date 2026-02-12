@@ -50,7 +50,7 @@ Because of a number of enhancements, from now on, no manual intervention whatsoe
 
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
-A number of enhancements have been made to the locking behavior in the SLAutomation process in order to prevent unnecessary holdups when interacting with the `Engine` and related `Element` objects in Automation scripts.
+A number of enhancements have been made to the locking behavior in the SLAutomation process in order to prevent unnecessary holdups when interacting with the `Engine` and related `Element` objects in automation scripts.
 
 The following calls have been improved:
 

@@ -21,11 +21,11 @@ On MySQL and Microsoft SQL Server databases, the alarm table now has an extra fi
 > [!NOTE]
 >
 > - This change will cause a small increase in latency when retrieving alarms from the database.
-> - From now on, using a filter with an AlarmFilterItemExtraStatus in the GetAlarmDetailsFromDbMessage from within an Automation script will not work correctly in conjunction with a MySQL or Microsoft SQL Server database.
+> - From now on, using a filter with an AlarmFilterItemExtraStatus in the GetAlarmDetailsFromDbMessage from within an automation script will not work correctly in conjunction with a MySQL or Microsoft SQL Server database.
 
 #### SimulationHelper API now allows loading, enabling and disabling element simulations at runtime \[ID 29517\]
 
-Up to now, loading new element simulations always required a DataMiner restart. Now, the SimulationHelper API will allow you to load, enable and disable element simulations at runtime from within protocol QActions or Automation scripts.
+Up to now, loading new element simulations always required a DataMiner restart. Now, the SimulationHelper API will allow you to load, enable and disable element simulations at runtime from within protocol QActions or automation scripts.
 
 Construction:
 
@@ -51,7 +51,7 @@ SimulationHelper(Func<DMSMessage[], DMSMessage[]> messageHandler)
     void DisableSimulation(int hostingDataMinerId, int dataMinerId, int elementId)
     ```
 
-Example on how to use this in an Automation script:
+Example on how to use this in an automation script:
 
 ```csharp
 var simulationHelper = new SimulationHelper(Engine.SLNet.SendMessages);
@@ -342,7 +342,7 @@ In other words, components using a State, Gauge and Ring component as a feed wil
 
 #### Automation scripts: #define ALARM_SQUASHING \[ID 29613\]
 
-The preprocessor directive “#define ALARM_SQUASHING” will now automatically be added to each C# block of an Automation script.
+The preprocessor directive “#define ALARM_SQUASHING” will now automatically be added to each C# block of an automation script.
 
 In C# blocks, all code related to alarm squashing should be enclosed as follows:
 
@@ -357,7 +357,7 @@ In C# blocks, all code related to alarm squashing should be enclosed as follows:
 This allows C# blocks that contain alarm squashing functionality to also be compiled on DataMiner versions that do not support alarm squashing.
 
 > [!NOTE]
-> Up to now, the following directives would only be added to QActions. These will now also be added to C# blocks of Automation scripts.
+> Up to now, the following directives would only be added to QActions. These will now also be added to C# blocks of automation scripts.
 >
 > - #define DBInfo
 > - #define DCFv1
@@ -729,13 +729,13 @@ When a DataMiner Agent was started in a DataMiner System, in some cases, errors 
 
 When using an element card search box on a system with an Elasticsearch database, in some cases, no search results would appear.
 
-#### Interactive Automation scripts: 'continue script' action triggered after the script had already been detached \[ID 29357\]
+#### Interactive automation scripts: 'continue script' action triggered after the script had already been detached \[ID 29357\]
 
 In some rare cases, a “continue script” action could incorrectly be triggered after the script in question had already been detached.
 
-#### Automation: UIBuilder properties MaxWidth and MaxHeight would incorrectly not get applied to interactive Automation script pop-up windows \[ID 29361\]
+#### Automation: UIBuilder properties MaxWidth and MaxHeight would incorrectly not get applied to interactive automation script pop-up windows \[ID 29361\]
 
-In some cases, the UIBuilder properties “MaxWidth” and “MaxHeight” would incorrectly not get applied to interactive Automation script pop-up windows.
+In some cases, the UIBuilder properties “MaxWidth” and “MaxHeight” would incorrectly not get applied to interactive automation script pop-up windows.
 
 #### Incorrect data could be returned during a migration from MySQL to Cassandra \[ID 29385\]
 

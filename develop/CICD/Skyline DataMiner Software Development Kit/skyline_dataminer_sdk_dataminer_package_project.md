@@ -21,7 +21,7 @@ When you publish the project, a corresponding item will be created in the online
 
 ### New artifacts
 
-You can right-click the solution and select *Add* > *New Project*. This will allow you to select DataMiner project templates (e.g. to add additional Automation scripts).
+You can right-click the solution and select *Add* > *New Project*. This will allow you to select DataMiner project templates (e.g. to add additional automation scripts).
 
 > [!NOTE]
 > Connectors are currently not supported for this.
@@ -36,9 +36,9 @@ You can also add new projects by using the dotnet-cli. For the sake of stability
 
 Every *Skyline.DataMiner.SDK* project within the solution, except other DataMiner package projects, will by default be included within the .dmapp created by this project. You can customize this behavior using the *PackageContent/ProjectReferences.xml* file. This allows you to add filters to include or exclude projects as needed. See [ProjectReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_project_references) for more information.
 
-### Existing Automation script files
+### Existing automation script files
 
-You can right-click the solution and select *Add* > *Add Existing DataMiner Automation Script*. This will allow you to add existing Automation scripts files to the solution.
+You can right-click the solution and select *Add* > *Add Existing DataMiner Automation Script*. This will allow you to add existing automation scripts files to the solution.
 
 ## Importing from DataMiner
 
@@ -66,7 +66,7 @@ You can import specific items directly from a DataMiner Agent using DIS:
 
      1. Select *Import DataMiner Low-Code App*.
 
-   - To import an **Automation script**:
+   - To import an **automation script**:
 
      1. In your *Solution Explorer*, right-click the solution, and select *Add*.
 

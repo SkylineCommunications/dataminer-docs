@@ -88,7 +88,7 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
 
   Optionally, at the end you could have '.Protocol', '.Automation', '.Common', etc. to specify where it can be used (usage of SLManagedScripting, SLManagedAutomation, etc.):
 
-  - `Skyline.DataMiner.<Categories>.<Name>.Common`: Shared code that can run either in an Automation script or in a protocol. Communicates with DataMiner via SLNet or [DataMinerSystem](https://www.nuget.org/packages?q=Skyline.DataMiner.Core.DataMinerSystem).
+  - `Skyline.DataMiner.<Categories>.<Name>.Common`: Shared code that can run either in an automation script or in a protocol. Communicates with DataMiner via SLNet or [DataMinerSystem](https://www.nuget.org/packages?q=Skyline.DataMiner.Core.DataMinerSystem).
 
   - `Skyline.DataMiner.<Categories>.<Name>.Automation`: Acts as entry point for Automation (methods for IEngine) or has a dependency on classes from *SLManagedAutomation*.
 
@@ -130,7 +130,7 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
 
 - *Skyline.DataMiner.ConnectorAPI.XXX*
 
-  - Holds InterAppCall messages that are specific to a connector, giving a given DataMiner connector some functions that can be called/triggered/consumed by other DataMiner components (other connectors, Automation scripts, etc.).
+  - Holds InterAppCall messages that are specific to a connector, giving a given DataMiner connector some functions that can be called/triggered/consumed by other DataMiner components (other connectors, automation scripts, etc.).
 
 - *Skyline.DataMiner.DataSources.XXX*
 

@@ -1,15 +1,15 @@
 ---
 uid: dnSpy
-description: With the dnSpy tool, you can debug any assembly when developing DataMiner Automation scripts or connectors, even without the matching code.
+description: With the dnSpy tool, you can debug any assembly when developing DataMiner automation scripts or connectors, even without the matching code.
 ---
 
 # dnSpy
 
-[dnSpy](https://github.com/dnSpy/dnSpy) is an open-source/freeware tool that can be very useful when you develop DataMiner Automation scripts and connectors. It allows you to debug any assembly, even when you do not have the matching code. It is especially handy to **debug Automation scripts or QActions on a remote system**, in case you cannot connect to the system via DIS. Assemblies can be compiled in release mode, but more information will be available when they are compiled in debug mode.
+[dnSpy](https://github.com/dnSpy/dnSpy) is an open-source/freeware tool that can be very useful when you develop DataMiner automation scripts and connectors. It allows you to debug any assembly, even when you do not have the matching code. It is especially handy to **debug automation scripts or QActions on a remote system**, in case you cannot connect to the system via DIS. Assemblies can be compiled in release mode, but more information will be available when they are compiled in debug mode.
 
 ## How to use
 
-To use this tool to debug Automation scripts or QActions on a remote system, follow the steps below:
+To use this tool to debug automation scripts or QActions on a remote system, follow the steps below:
 
 1. Download [*dnSpy-netframework*](https://github.com/dnSpy/dnSpy/releases).
 
@@ -21,7 +21,7 @@ To use this tool to debug Automation scripts or QActions on a remote system, fol
 
 1. Select *Debug > Windows > Modules*, and sort by timestamp in descending order to find the right module.
 
-   This can be tricky, because every time you upload an Automation script or protocol, new assemblies are built, but the old ones remain in memory.
+   This can be tricky, because every time you upload an automation script or protocol, new assemblies are built, but the old ones remain in memory.
 
    > [!NOTE]
    > A module is only available after it has run at least once.

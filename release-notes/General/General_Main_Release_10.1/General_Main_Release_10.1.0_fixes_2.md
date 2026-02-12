@@ -14,7 +14,7 @@ When you added a number of additional fields to the default job section and then
 
 #### Email report based on dashboard from new app was blank \[ID 26811\]
 
-In some cases, it could occur that if an Automation script sent an email report based on a dashboard from the new Dashboards app, the PDF attached to this email was blank.
+In some cases, it could occur that if an automation script sent an email report based on a dashboard from the new Dashboards app, the PDF attached to this email was blank.
 
 #### Dashboards app: Configuration of Group component not saved \[ID 26828\]
 
@@ -148,7 +148,7 @@ In some cases, it could occur that the dashboard grid was not resized when neces
 
 When a dashboard contained a Group component, it could occur that two *Delete component* buttons were displayed when the dashboard was in edit mode.
 
-#### Interactive Automation scripts: Problems with the UIBlockDefinition.IsEnabled and UIBlockDefinition.InitialValue properties \[ID 27326\]
+#### Interactive automation scripts: Problems with the UIBlockDefinition.IsEnabled and UIBlockDefinition.InitialValue properties \[ID 27326\]
 
 Up to now, UIBlockDefinition.IsEnabled was not applied for blocks of type “checkbox”. From now on, a block of type “checkbox” will be disabled when the UIBlockDefinition.IsEnabled property is set to False.
 
@@ -178,9 +178,9 @@ When, in the *Profiles* app, you saved a profile definition, a profile instance
 
 When, in the Dashboards app, you changed the theme, the colors of certain components (e.g. analog clock, digital clock,...) would not be changed accordingly.
 
-#### Problem when a QAction launched an Automation script immediately after the element had been started \[ID 27431\]
+#### Problem when a QAction launched an automation script immediately after the element had been started \[ID 27431\]
 
-When a QAction launched an Automation script immediately after the element had been started, in some cases, an exception could be thrown.
+When a QAction launched an automation script immediately after the element had been started, in some cases, an exception could be thrown.
 
 #### DataMiner Cube: Not possible to filter tables on display value \[ID 27490\]
 
@@ -247,7 +247,7 @@ When no domains had been configured, in some cases, the jobs list would incorrec
 
 In some cases, FileInfoManager would handle production protocols incorrectly.
 
-Also, Automation script IDs will now be case insensitive.
+Also, automation script IDs will now be case insensitive.
 
 #### SLAnalytics: Problem when updating behavioral anomaly detection suggestion events \[ID 27646\]
 
@@ -257,9 +257,9 @@ In some cases, updates to behavioral anomaly detection suggestion events would c
 
 When, in configuration mode, you selected the job domain that was already selected, in some cases, the loading indicator would remain visible indefinitely.
 
-#### Interactive Automation scripts: Problem when a text box had its wantOnChange setting set to true and its value set to an empty string \[ID 27666\]
+#### Interactive automation scripts: Problem when a text box had its wantOnChange setting set to true and its value set to an empty string \[ID 27666\]
 
-When a text box in an interactive Automation script had its wantOnChange setting set to true and its value set to an empty string, in some cases, an exception could be thrown.
+When a text box in an interactive automation script had its wantOnChange setting set to true and its value set to an empty string, in some cases, an exception could be thrown.
 
 #### Mobile apps: Problem with time range quick pick buttons \[ID 27676\]
 
@@ -298,7 +298,7 @@ Error trapped: 'Skyline.DataMiner.Web.Common.IPersistentConnectionContainerEx' d
 
 When a VirtualFunctionResource was unbound, in some cases, it would still be processing parameter sets from its bound element. This would cause the parameters of the unbound element to no longer be in an “uninitialized” state. Instead, they would incorrectly stay set to the last received value from the bound element.
 
-#### Interactive Automation scripts: MinWidth, MaxWidth, MinHeight and MaxHeight properties of UIBlock components would not be parsed correctly \[ID 27736\]
+#### Interactive automation scripts: MinWidth, MaxWidth, MinHeight and MaxHeight properties of UIBlock components would not be parsed correctly \[ID 27736\]
 
 In some cases, the MinWidth, MaxWidth, MinHeight and MaxHeight properties of UIBlock components would not be parsed correctly.
 
@@ -350,7 +350,7 @@ Also, a selection box problem could occur when multiple conditions were configur
 
 #### Automation: Problem when retrieving information events from all DMAs \[ID 27903\]
 
-When, in a DataMiner System with multiple agents, information events were retrieved by an Automation script, in some cases, not all information events would be retrieved.
+When, in a DataMiner System with multiple agents, information events were retrieved by an automation script, in some cases, not all information events would be retrieved.
 
 #### DataMiner Cube - Correlation: Number of occurrences in 'Sliding window' section could incorrectly not be changed \[ID 27909\]
 
@@ -450,7 +450,7 @@ Due to a serialization error, in some cases, the following Web Services API v0 m
 
 - GetActiveAlarmsFromElement
 
-#### Interactive Automation scripts: Equals signs not accepted in UI block values \[ID 28324\]
+#### Interactive automation scripts: Equals signs not accepted in UI block values \[ID 28324\]
 
 In some cases, equals signs ("=") could not be used in UI block values.
 

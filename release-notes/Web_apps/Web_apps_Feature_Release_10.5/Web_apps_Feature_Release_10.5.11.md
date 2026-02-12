@@ -242,7 +242,7 @@ When a GQI operator or data source was not able to find a column, up to now, the
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
 
-The GQI DxM has an indexer process that loads Automation script libraries and their dependencies to detect GQI extensions.
+The GQI DxM has an indexer process that loads automation script libraries and their dependencies to detect GQI extensions.
 
 Up to now, once this indexer process had loaded an extension library, no other process was authorized to change or delete the associated DLL file until the indexer process exited. This could cause issues when the Automation module attempted to delete existing script libraries, even if they were never actually used as a GQI extension library.
 
@@ -360,11 +360,11 @@ When the contents of a query row was passed to an ad hoc data source, in some ca
 
 When, in edit mode, you searched for a panel, switched to draft mode, navigated to a page, and then returned to edit mode, up to now, the search input would incorrectly still display the previous search results.
 
-#### Interactive Automation scripts: Problem with arrow buttons in redesigned components [ID 43786]
+#### Interactive automation scripts: Problem with arrow buttons in redesigned components [ID 43786]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->
 
-When, in a dashboard or a low-code app, you ran an interactive Automation script that used the redesigned components, up to now, clicking an arrow button in a component would incorrectly not trigger the focus event. As a result, the `OnFocusLost` event would not work either.
+When, in a dashboard or a low-code app, you ran an interactive automation script that used the redesigned components, up to now, clicking an arrow button in a component would incorrectly not trigger the focus event. As a result, the `OnFocusLost` event would not work either.
 
 To use the redesigned components, add the following argument to the URL of the dashboard or low-code app:
 

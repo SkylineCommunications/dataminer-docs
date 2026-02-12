@@ -136,7 +136,7 @@ items:
                     items:
                       - name: SLNet - startup issues
                         topicUid: Troubleshooting_SLNet_Startup
-                      - name: SLNet - correlation engine
+                      - name: SLNet - Correlation engine
                         topicUid: Troubleshooting_SLNet_Correlation_Engine
                       - name: SLNet - disconnects
                         topicUid: Troubleshooting_SLNet_Disconnects
@@ -350,7 +350,7 @@ items:
             topicUid: KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3
           - name: Failed getting progress notices during upgrade
             topicUid: KI_SLNetIPC_Errors_During_Upgrade
-          - name: SLAutomation memory leak when Automation script runs
+          - name: SLAutomation memory leak when automation script runs
             topicUid: KI_Automation_Memory_leak_when_executing_scripts
           - name: DCOMConfig flagged as virus causing upgrade issues
             topicUid: KI_DCOMConfig_flagged_as_virus
@@ -360,7 +360,7 @@ items:
             topicUid: KI_SAML_with_automatic_groups
           - name: SLScripting crash when using JScript QActions
             topicUid: KI_SLScripting_crash_JScript_QActions
-          - name: Unable to configure dashboards for 'Email' actions in Automation scripts, scheduled tasks, and Correlation rules
+          - name: Unable to configure dashboards for 'Email' actions in automation scripts, scheduled tasks, and correlation rules
             topicUid: KI_Unable_to_configure_dashboards_included_in_email_actions
           - name: Cube displays incorrect offload configuration for real-time trending data
             topicUid: KI_Cube_displays_incorrect_offload_configuration_for_real-time_trending_data

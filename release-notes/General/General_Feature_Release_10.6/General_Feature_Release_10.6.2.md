@@ -28,11 +28,11 @@ uid: General_Feature_Release_10.6.2
 
 ## New features
 
-#### Automation: New message to retrieve information about the available Automation scripts [ID 44209]
+#### Automation: New message to retrieve information about the available automation scripts [ID 44209]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve the following information about each Automation script available in the DataMiner System:
+A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve the following information about each automation script available in the DataMiner System:
 
 - The folder containing the script's XML file.
 - Whether or not the script supports a dedicated log file.
@@ -110,13 +110,13 @@ When, on a system with a Cassandra Cluster database, history alarms are filtered
 
 Also, filtering on alarm properties or interfaces using wildcards or regular expression has now been made case insensitive.
 
-#### Scheduler will now be able to start more than 10 synchronously running Automation scripts [ID 44200]
+#### Scheduler will now be able to start more than 10 synchronously running automation scripts [ID 44200]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-Up to now, using Scheduler, it would only be possible to start a maximum of 10 synchronously running Automation scripts.
+Up to now, using Scheduler, it would only be possible to start a maximum of 10 synchronously running automation scripts.
 
-From now on, it will be possible to start more than 10 synchronously running Automation scripts.
+From now on, it will be possible to start more than 10 synchronously running automation scripts.
 
 #### Enhanced performance when upgrading DxMs [ID 44210] [ID 44211]
 
@@ -205,7 +205,7 @@ Because of a number of enhancements, overall performance of the SNMP++ library h
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-The entry added to the *SLAutomation.txt* log file when an Automation script has finished will now contain the entrypoint ID.
+The entry added to the *SLAutomation.txt* log file when an automation script has finished will now contain the entrypoint ID.
 
 In the following example, the entrypoint ID can be found at the end of the entry between brackets (11):
 

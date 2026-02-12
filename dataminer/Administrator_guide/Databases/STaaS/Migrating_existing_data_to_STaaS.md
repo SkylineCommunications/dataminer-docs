@@ -15,7 +15,7 @@ Before migrating your data over to STaaS, make sure you are aware of the [limita
 
    > [!NOTE]
    >
-   > - When you run the Automation script and there are Failover pairs in the cluster, make sure the **main Failover Agents** (i.e. the first Agent in the Failover configuration) are the **active** ones. Otherwise, the Automation script will not function correctly.
+   > - When you run the automation script and there are Failover pairs in the cluster, make sure the **main Failover Agents** (i.e. the first Agent in the Failover configuration) are the **active** ones. Otherwise, the automation script will not function correctly.
    > - To migrate a **cluster**, you only need to start the migration on **one Agent**.
 
    > [!IMPORTANT]

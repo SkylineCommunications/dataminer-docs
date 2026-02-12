@@ -86,7 +86,7 @@ From now on, alarm limit change events will only be sent for standalone paramete
 
 #### DataMiner Cube - Correlation: Incorrect background color when creating or opening an analyzer or a correlation rule \[ID 31482\]
 
-When, in the Correlation app, you created or opened an analyzer in the Analyzers tab or you created or opened a legacy correlation rule in the Correlation rules tab, the tab would incorrectly have a gray background.
+When, in the Correlation app, you created or opened an analyzer in the Analyzers tab or you created or opened a legacy correlation rule in the correlation rules tab, the tab would incorrectly have a gray background.
 
 #### DataMiner Cube: Problem when opening a specific page of a card \[ID 31490\]
 

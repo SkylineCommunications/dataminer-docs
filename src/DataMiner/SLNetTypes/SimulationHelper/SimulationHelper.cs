@@ -5,11 +5,11 @@ using Skyline.DataMiner.Net.Messages;
 namespace Skyline.DataMiner.Net.SimulationHelper
 {
 	/// <summary>
-	/// This helper class allows you to load, enable and disable element simulations at runtime from within protocol QActions or Automation scripts without having to restart DataMiner.
+	/// This helper class allows you to load, enable and disable element simulations at runtime from within protocol QActions or automation scripts without having to restart DataMiner.
 	/// </summary>
 	/// <remarks>Available from DataMiner 10.1.6 (RN 29517) onwards.</remarks>
 	/// <example>
-	/// <para>This example shows how you can use this in an Automation script.</para>
+	/// <para>This example shows how you can use this in an automation script.</para>
 	/// <code>
 	/// var simulationHelper = new SimulationHelper(Engine.SLNet.SendMessages);
 	/// simulationHelper.LoadSimulations();

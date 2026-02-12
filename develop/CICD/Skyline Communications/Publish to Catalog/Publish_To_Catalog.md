@@ -89,7 +89,7 @@ DataMiner install packages, i.e. .dmapp files, can contain any other artifacts, 
       > [!TIP]
       > If you open this in Visual Studio, you will get Intellisense.
 
-   1. You can now add XML tags to add artifacts like connectors, Automation scripts, etc.
+   1. You can now add XML tags to add artifacts like connectors, automation scripts, etc.
 
    > [!TIP]
    > For more information, refer to [Creating a repository for an install package](xref:Creating_a_repository_for_an_install_package).
@@ -120,9 +120,9 @@ You can monitor the release pipeline:
 
 - If it goes red, the release failed. You will need to either re-run the pipeline or remove the tag, fix the reported problems, and tag the commit again to trigger a new release.
 
-## Publishing Automation scripts
+## Publishing automation scripts
 
-Automation scripts are XML files and assemblies that are packaged into .dmapp files. The source code of these is currently available both through the internal SLC SE RepoManager and on GitHub. All **new Automation scripts should be created on GitHub**.
+Automation scripts are XML files and assemblies that are packaged into .dmapp files. The source code of these is currently available both through the internal SLC SE RepoManager and on GitHub. All **new automation scripts should be created on GitHub**.
 
 If you use **SLC SE RepoManager**, Jenkins will be used to automatically publish scripts to the Catalog when tagging. For this, you should [follow the same steps as described for connectors](#publishing-connectors) above.
 

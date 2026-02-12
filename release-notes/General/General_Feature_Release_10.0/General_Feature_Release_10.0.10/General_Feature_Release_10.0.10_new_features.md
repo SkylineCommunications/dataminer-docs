@@ -14,7 +14,7 @@ uid: General_Feature_Release_10.0.10_new_features
 
 #### LogHelper API \[ID 26434\]
 
-The new LogHelper API, which combines the SLLoggerUtil API and the LogEntry repository API, can be used in Automation scripts and in QActions to manage log entries stored in Indexing Engine:
+The new LogHelper API, which combines the SLLoggerUtil API and the LogEntry repository API, can be used in automation scripts and in QActions to manage log entries stored in Indexing Engine:
 
 - ILogHelper#Log can be used to add new log entries to the database.
 - ILogHelper#LogEntries can be used to retrieve log entries from the database.
@@ -276,15 +276,15 @@ When, in DataMiner Cube, you take a backup, all dashboards created by users (i.e
 
 ### DMS Automation
 
-#### Connecting a DMS to a remote ElasticSearch cluster from an Automation script \[ID 26569\]
+#### Connecting a DMS to a remote ElasticSearch cluster from an automation script \[ID 26569\]
 
-It is now possible to have a DMS connect to the nodes of a remote ElasticSearch cluster from an Automation script by sending an InstallElasticAndMigrateRequest message.
+It is now possible to have a DMS connect to the nodes of a remote ElasticSearch cluster from an automation script by sending an InstallElasticAndMigrateRequest message.
 
 This message will add the IP addresses of the remote ElasticSearch nodes to the db.xml file.
 
-#### Replacing Automation script DLL dependencies \[ID 26605\]
+#### Replacing automation script DLL dependencies \[ID 26605\]
 
-It is now possible to replace an Automation script DLL dependency from an Automation script by sending an UploadScriptDependencyMessage.
+It is now possible to replace an automation script DLL dependency from an automation script by sending an UploadScriptDependencyMessage.
 
 By default, the DLL file will be uploaded to the C:\\Skyline DataMiner\\scripts\\dllImport folder, but it is possible to specify a subfolder if required. The uploaded DLL file will be synchronized among all agents in the DMS.
 
@@ -301,7 +301,7 @@ By default, the DLL file will be uploaded to the C:\\Skyline DataMiner\\scripts\
 
 - When you reference a DLL file stored in C:\\Skyline DataMiner\\Scripts\\DllImport while a DLL file with the same name is present in C:\\Skyline DataMiner\\Files, the former will take precedence.
 
-- Users need the *Modules \> Automation \> Edit* permission to be able to upload Automation script dependencies.
+- Users need the *Modules \> Automation \> Edit* permission to be able to upload automation script dependencies.
 
 > [!NOTE]
 >
@@ -371,9 +371,9 @@ public void Uninstall(Engine engine, AppUninstallContext context)
 > [!NOTE]
 > The DataMiner SLNetClientTest tool now also supports uninstalling app packages. See *Advanced \> Apps \> App Packages*.
 
-#### Automation: Tree view control for interactive Automation scripts \[ID 26840\]\[ID 27041\]
+#### Automation: Tree view control for interactive automation scripts \[ID 26840\]\[ID 27041\]
 
-It is now possible to add a tree view control in an interactive Automation script. However, note that Automation scripts with tree view controls are currently only supported in the DataMiner mobile apps. These are not yet supported in DataMiner Cube.
+It is now possible to add a tree view control in an interactive automation script. However, note that automation scripts with tree view controls are currently only supported in the DataMiner mobile apps. These are not yet supported in DataMiner Cube.
 
 To define a tree view control, create a UIBlockDefinition of type TreeView and add each item of the tree view as a TreeViewItem to the TreeViewItems property. It is not required to fill in the InitialValue or Value of the UIBlockDefinition, as that value is determined based on the TreeViewItem collection.
 

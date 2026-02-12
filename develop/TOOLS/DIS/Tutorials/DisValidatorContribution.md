@@ -168,7 +168,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
      ```md
      By default, only 6 decimals are saved in memory. Parameters holding datetime values need at least 8 decimals to be accurate.
-     Otherwise, there might be rounding issues when retrieving the parameter from an external source like an Automation script.
+     Otherwise, there might be rounding issues when retrieving the parameter from an external source like an automation script.
      ```
 
 1. Click *Add* to list the error message. If necessary, add more messages or modify existing ones.

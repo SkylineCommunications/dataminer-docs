@@ -220,11 +220,11 @@ The icons and favicons of the DataMiner landing page and the following DataMiner
 
 Also, the app titles have been standardized to ensure consistency across all apps.
 
-#### Interactive Automation scripts: UI components Time and Calendar can now all display seconds [ID 44521]
+#### Interactive automation scripts: UI components Time and Calendar can now all display seconds [ID 44521]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, in interactive Automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
+Up to now, in interactive automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
 
 - `UIBlockType.Time` with `AutomationDateTimePickerOptions`
 - `UIBlockType.Time` with `AutomationDateTimeUpDownOptions`
@@ -388,7 +388,7 @@ Up to now, re-applying the selection in a *Maps* component would incorrectly sel
 
 When the alarms in an *Alarm table* component are grouped by time, they are grouped under group names such as "Today", "Yesterday", and "Last Week".
 
-Up to now, when a certain group name had been removed (e.g. by means of an Automation script), and an alarm under that group name returned to its normal state, an error would occur when the *Alarm table* component attempted to remove the alarm.
+Up to now, when a certain group name had been removed (e.g. by means of an automation script), and an alarm under that group name returned to its normal state, an error would occur when the *Alarm table* component attempted to remove the alarm.
 
 #### GQI DxM: Aggregations performed on columns of type integer would incorrectly produce a column of type double [ID 44492]
 

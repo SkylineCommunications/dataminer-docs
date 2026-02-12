@@ -14,11 +14,11 @@ For each CCAP connector, a *Configuration* and *Threshold Settings* page is now 
 
 For the *Generic DOCSIS CM Collector* connector, a *Configuration* and *Threshold Settings* page is now available in Visual Overview with the settings of the connector.
 
-#### New parameter to configure name Automation script responsible for notifying elements of new data to be ingested [ID 36053]
+#### New parameter to configure name automation script responsible for notifying elements of new data to be ingested [ID 36053]
 
-A new parameter, *Script Name*, has been added to the *Configuration* page of the Skyline EPM Platform, Arris E6000 CCAP Platform, Casa System CCAP Platform, Cisco CBR-8 CCAP Platform, CISCO CMTS CCAP Platform, and Huawei 5688-5800 CCAP Platform connectors. With this parameter, you can specify the Automation script responsible for notifying the back-end elements of new data to be ingested.
+A new parameter, *Script Name*, has been added to the *Configuration* page of the Skyline EPM Platform, Arris E6000 CCAP Platform, Casa System CCAP Platform, Cisco CBR-8 CCAP Platform, CISCO CMTS CCAP Platform, and Huawei 5688-5800 CCAP Platform connectors. With this parameter, you can specify the automation script responsible for notifying the back-end elements of new data to be ingested.
 
-Similarly, a *Script Name* parameter has been added to the *Configuration* page of the Skyline EPM Platform DOCSIS connector, so you can specify the Automation script responsible for notifying the CCAPs/CM collector pair of new data to be ingested.
+Similarly, a *Script Name* parameter has been added to the *Configuration* page of the Skyline EPM Platform DOCSIS connector, so you can specify the automation script responsible for notifying the CCAPs/CM collector pair of new data to be ingested.
 
 #### Passive overview pages with linked CM overview dashboards [ID 36450]
 
@@ -26,9 +26,9 @@ Overview pages have been added for the passive levels (node, amplifier, and tap)
 
 The following KPIs are included: CM MAC, IPv4 Address, DOCSIS Version, Status, Vendor, Model Number, Software Version, Last Registration Time, Uptime, US SNR Status, US Time Offset Status, US RX Power Status, US Post FEC Status, DS SNR Status, US TX Power Status, DS Post FEC Status, RTT, Jitter, Latency, Packet Loss, Memory Size, Memory Utilization, Processor Utilization, Reflection Distance, Group Delay Status, Reflection Status, DS RX Power Status, Tap Name, Amplifier Name, Node Segment Name, and Service Group Name.
 
-#### New Automation script to add CCAP/CM pair [ID 36459]
+#### New automation script to add CCAP/CM pair [ID 36459]
 
-A new Automation script, *EPM_I_DOCSIS_AddNewCcapCmPair*, is now available, which can be used to create a CCAP/CM pair from the EPM UI. The interactive script will take the user through the different steps of the configuration.
+A new automation script, *EPM_I_DOCSIS_AddNewCcapCmPair*, is now available, which can be used to create a CCAP/CM pair from the EPM UI. The interactive script will take the user through the different steps of the configuration.
 
 #### QAM Channels dashboard migration [ID 36684]
 
@@ -108,7 +108,7 @@ To improve performance and reduce the load on SLElement, RTDisplay has now been 
 
 #### Elements in EPM Solution now use inter-app calls [ID 36326]
 
-Inter-app calls will now be used for the communication between elements used in the EPM Solution, such as the back end and the Workflow Manager (WM), resulting in faster and more efficient communication. This way, the solution no longer needs to rely on information events and alarms triggered by Automation scripts and Correlation rules.
+Inter-app calls will now be used for the communication between elements used in the EPM Solution, such as the back end and the Workflow Manager (WM), resulting in faster and more efficient communication. This way, the solution no longer needs to rely on information events and alarms triggered by automation scripts and correlation rules.
 
 The following changes have been done to the Skyline EPM Platform DOCSIS connector (back end):
 

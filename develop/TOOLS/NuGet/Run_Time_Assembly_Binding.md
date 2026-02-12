@@ -30,7 +30,7 @@ In case the `dllImport` mentions multiple entries, a hint path entry is added fo
 
 Note that because by default there is a single SLScripting process, the hint path list will contain all distinct directories of all the values encountered in the `dllImport` attribute of each QAction in all the protocols.
 
-For Automation scripts (which get executed by the SLAutomation process), the following folders will be searched:
+For automation scripts (which get executed by the SLAutomation process), the following folders will be searched:
 
 1. `C:\Skyline DataMiner\ProtocolScripts\DllImport`
 
@@ -38,7 +38,7 @@ For Automation scripts (which get executed by the SLAutomation process), the fol
 
 1. `C:\Skyline DataMiner\ProtocolScripts`
 
-1. The directory of an assembly mentioned in the [Param type="ref"](xref:DMSScript.Script.Exe.Param-type) tags of the Automation scripts.
+1. The directory of an assembly mentioned in the [Param type="ref"](xref:DMSScript.Script.Exe.Param-type) tags of the automation scripts.
 
 As mentioned under [Compilation-time assembly binding](xref:Compilation_Time_Assembly_Binding), the manifest of a compiled assembly denotes the name and version of any assemblies it has a direct dependency on. At runtime, when the .NET runtime is about to execute code from such a referenced assembly, the runtime will try to find and load that assembly.
 

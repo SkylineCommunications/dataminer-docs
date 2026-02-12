@@ -39,13 +39,13 @@ When, in either the *protocol.xml* file or the *DataMiner.xml* file, the element
 
 For more information about running elements in isolation mode, see [Elements can now be configured to run in isolation mode [ID 41757]](xref:General_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757).
 
-#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the Cube session [ID 42110]
+#### Interactive automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the Cube session [ID 42110]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run within DataMiner Cube, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
+When UI components of type *Calendar* or *Time* are used in interactive automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive automation script is being run within DataMiner Cube, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
 
-For more information, see [Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
+For more information, see [Interactive automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
 
 ## Changes
 
@@ -58,7 +58,7 @@ For more information, see [Interactive Automation scripts: UI components 'Calend
 The legacy *InterClient* feature has now been removed from DataMiner Cube.
 
 > [!IMPORTANT]
-> Existing Automation scripts or connectors that are currently still using InterClient calls will no longer work. They should be updated as soon as possible.
+> Existing automation scripts or connectors that are currently still using InterClient calls will no longer work. They should be updated as soon as possible.
 
 ### Enhancements
 

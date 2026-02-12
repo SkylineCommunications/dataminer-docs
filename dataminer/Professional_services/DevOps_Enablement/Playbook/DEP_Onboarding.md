@@ -40,7 +40,7 @@ The next step involves **selecting the appropriate learning track(s) for each ca
 | DataMiner Dashboards | | | | :heavy_check_mark: | |
 | DataMiner Visual Overview | | :heavy_check_mark: | | :heavy_check_mark: | |
 | DataMiner connector development | :heavy_check_mark: | | | | |
-| DataMiner Automation scripts | | | :heavy_check_mark: | | :heavy_check_mark: |
+| DataMiner automation scripts | | | :heavy_check_mark: | | :heavy_check_mark: |
 | DataMiner Low-Code Apps | | | :heavy_check_mark: | :heavy_check_mark: | |
 | DataMiner object modeling | | | :heavy_check_mark: | | |
 | DataMiner Integration Studio | :heavy_check_mark: | | :heavy_check_mark: | | |

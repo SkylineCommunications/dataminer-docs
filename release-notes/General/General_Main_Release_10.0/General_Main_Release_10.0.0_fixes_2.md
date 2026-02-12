@@ -413,9 +413,9 @@ When you select a service in the services list, the ID of that service is stored
 
 When working with the Dashboards app in Chrome, in some cases, a mouse click could unintentionally cause a dashboard component to be moved to another location.
 
-#### HTML5 apps: Selection box values containing backslash characters displayed incorrectly in interactive Automation scripts \[ID 24541\]
+#### HTML5 apps: Selection box values containing backslash characters displayed incorrectly in interactive automation scripts \[ID 24541\]
 
-When an interactive Automation script was run from within an HTML5 app, in some cases, selection box values containing “\\” characters could be displayed incorrectly.
+When an interactive automation script was run from within an HTML5 app, in some cases, selection box values containing “\\” characters could be displayed incorrectly.
 
 #### DataMiner Cube: Clicking 'Open Cube Mobile' would not always direct you to the landing page \[ID 24560\]
 
@@ -469,9 +469,9 @@ On an element card, in some cases, Write parameters for which there was no corre
 
 In some cases, it would no longer be possible to mask cells or rows in view tables or direct views.
 
-#### DataMiner Cube - Automation: Problem when an Automation script tried to send an e-mail containing a report \[ID 24775\]
+#### DataMiner Cube - Automation: Problem when an automation script tried to send an e-mail containing a report \[ID 24775\]
 
-In some cases, an error could occur when an Automation script tried to send an e-email containing a report.
+In some cases, an error could occur when an automation script tried to send an e-email containing a report.
 
 #### Problem with SLProtocol when calling 'NT_LOAD_TABLE' \[ID 24780\]
 
@@ -491,7 +491,7 @@ In some rare cases, an error could occur when an element was stopped while a tim
 
 #### Problem when calling GetParameter on the virtual element of a redundancy group \[ID 24892\]
 
-When a GetParameter method was called in an Automation script on the virtual element of a redundancy group, in some cases, a CreateDummyFailedException could be thrown.
+When a GetParameter method was called in an automation script on the virtual element of a redundancy group, in some cases, a CreateDummyFailedException could be thrown.
 
 #### Memory leak in SLNet when enabling or disabling logging \[ID 24921\]
 

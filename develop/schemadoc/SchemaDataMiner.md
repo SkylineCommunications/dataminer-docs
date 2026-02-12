@@ -2,9 +2,9 @@
 uid: SchemaDataMiner
 ---
 
-# DataMiner Schema
+# DataMiner schema
 
-DataMiner XML Schema.
+DataMiner XML schema.
 
 ## Root element
 

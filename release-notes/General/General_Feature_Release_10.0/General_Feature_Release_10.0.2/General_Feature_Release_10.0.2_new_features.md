@@ -431,7 +431,7 @@ The focus score that is assigned to an alarm is a combination of likelihood, fre
 > [!NOTE]
 >
 > - Currently, every DataMiner Agent is responsible for calculating the focus scores of the alarms it is hosting.
-> - Currently, no focus score is assigned to the following types of alarms: Correlation alarms, external alarms and information events. By default, those alarms are assigned a focus score equal to null.
+> - Currently, no focus score is assigned to the following types of alarms: correlation alarms, external alarms and information events. By default, those alarms are assigned a focus score equal to null.
 
 ##### New column in Alarm Console: Focus
 
@@ -704,9 +704,9 @@ scriptOptions.InheritScriptOutput = true;
 scriptOptions.StartScript();
 ```
 
-#### Interactive Automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
+#### Interactive automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
 
-In an interactive Automation script, it is now possible to upload files from a client computer.
+In an interactive automation script, it is now possible to upload files from a client computer.
 
 To allow users to do so, you need to add a file selector control to the script in the following manner:
 
@@ -729,7 +729,7 @@ All files uploaded by users will by default be placed in the `C:\Skyline DataMin
 
 #### New engine.UnsetFlag method to clear runtime flags \[ID 23961\]
 
-In an Automation script, you can now use the engine.UnsetFlag method to clear the following runtime flags:
+In an automation script, you can now use the engine.UnsetFlag method to clear the following runtime flags:
 
 - RunTimeFlags.AllowUndef
 - RunTimeFlags.NoInformationEvents
@@ -821,7 +821,7 @@ When you have successfully migrated all booking data, the button to start the wi
 
 > [!NOTE]
 >
-> - After migrating the booking data to the Indexing database, make sure to check your Automation scripts and Visio files and adjust the booking property names where necessary.
+> - After migrating the booking data to the Indexing database, make sure to check your automation scripts and Visio files and adjust the booking property names where necessary.
 > - When configuring backup settings in the *Backup* section of *System Center*, a new *Include SRM in backup* option is now available under the *Create a backup of the database* option. Select this option if you want the booking data in the Indexing database to be included in the backup package.
 > - An Indexing database takes about twice as much disk space to store booking data compared to a Cassandra database.
 > - A number of methods in the ServiceManagerHelper and ResourceManagerHelper classes have been adapted to allow them to manage booking data stored in an Indexing database.

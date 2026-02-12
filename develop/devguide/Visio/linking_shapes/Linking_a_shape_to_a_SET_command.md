@@ -82,7 +82,7 @@ Note that, if you add a \[sep:XY\] option in front of the entire SET command, yo
 [sep:;*]Set|234/20|101|2|ConfirmationMessage=Message.
 ```
 
-Note also that commas cannot be used to separate different parts of a SET command. In certain cases, e.g. when a SET command refers to an Automation script, commas have to be used to separate the necessary script options. If, however, you do want to use commas in the ConfirmationMessage text, then you can add a \[sep:XY\] option in front of the ConfirmationMessage option:
+Note also that commas cannot be used to separate different parts of a SET command. In certain cases, e.g. when a SET command refers to an automation script, commas have to be used to separate the necessary script options. If, however, you do want to use commas in the ConfirmationMessage text, then you can add a \[sep:XY\] option in front of the ConfirmationMessage option:
 
 ```txt
 Set|234/20|101|2|[sep:,*]ConfirmationMessage=Hi, this is correct.

@@ -23,7 +23,7 @@ At the top of the tool window, you find two buttons: *Run* and *Open*.
 > [!NOTE]
 >
 > - When you run a macro, it will always affect the last XML or C# document that was active.
-> - When you try to open a DIS macro while working inside a protocol or Automation script solution, a message will appear, asking whether you want to open the DIS macro in a new Visual Studio instance.
+> - When you try to open a DIS macro while working inside a protocol or automation script solution, a message will appear, asking whether you want to open the DIS macro in a new Visual Studio instance.
 
 ## Structure of a macro file
 

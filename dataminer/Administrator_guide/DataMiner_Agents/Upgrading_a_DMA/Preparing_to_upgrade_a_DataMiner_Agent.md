@@ -162,7 +162,7 @@ The following prerequisite checks are currently available:
 
 - [Verify No Annotations](xref:Verify_No_Annotations): Verifies whether the soft-launch option [LegacyAnnotations](xref:Overview_of_Soft_Launch_Options#legacyannotations) is enabled. As the legacy Annotations module is no longer supported from DataMiner 10.6.0/10.6.1 onwards, upgrading to those DataMiner versions or higher is not possible when this option is enabled.<!-- 44124 -->
 
-- [Verify No Legacy Correlation](xref:VerifyNoLegacyCorrelation): Scans the DataMiner System for any legacy Correlation rules. From DataMiner 10.5.1/10.6.0 onwards<!--RN 40834-->, this prerequisite is available by default and runs automatically when you upgrade.
+- [Verify No Legacy Correlation](xref:VerifyNoLegacyCorrelation): Scans the DataMiner System for any legacy correlation rules. From DataMiner 10.5.1/10.6.0 onwards<!--RN 40834-->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards): Scans the DataMiner System for any legacy reports and legacy dashboards. From DataMiner 10.4.0/10.4.1 onwards<!--RN 37922-->, this prerequisite is available by default and runs automatically when you upgrade.
 

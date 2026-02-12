@@ -90,11 +90,11 @@ Because of a number of enhancements made to SLXML, overall performance has incre
 
 Because of a number of enhancements, overall performance has increased when running a GQI query using the ProfileInstance data source.
 
-#### Web apps - Interactive Automation scripts: Enhanced performance [ID 34348]
+#### Web apps - Interactive automation scripts: Enhanced performance [ID 34348]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
-Because of a number of enhancements to the buffering mechanism, overall performance has improved when executing interactive Automation scripts in web apps.
+Because of a number of enhancements to the buffering mechanism, overall performance has improved when executing interactive automation scripts in web apps.
 
 #### SLLogCollector will now also collect the prerequisite output files and all upgrade logs [ID 34352]
 
@@ -122,11 +122,11 @@ Connection to {0} via external process succeeds while same connection via SLNet 
 
 From now on, the connection in question will also be forcefully killed.
 
-#### Web apps - Interactive Automation script components: Minor enhancements [ID 34373]
+#### Web apps - Interactive automation script components: Minor enhancements [ID 34373]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
-A number of minor enhancements have been made to the interactive Automation script components with regard to font styles, button styles, text alignment and button and checkbox height.
+A number of minor enhancements have been made to the interactive automation script components with regard to font styles, button styles, text alignment and button and checkbox height.
 
 #### Dashboards app / Low-Code Apps: GQI queries now support sort operators [ID 34414] [ID 34528] [ID 34479]
 
@@ -245,17 +245,17 @@ When a protocol connection was tested, the CProtocol object created in SLProtoco
 
 When a JSON string containing an overridden parameter description was deserialized to an ElementInfo message, in some cases, an exception would be thrown.
 
-#### Interactive Automation scripts: Problem when entering an invalid value in a numeric component [ID 34310]
+#### Interactive automation scripts: Problem when entering an invalid value in a numeric component [ID 34310]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
 When you entered an invalid value in a numeric component, the *UIResults.GetString()* method would incorrectly not return that invalid value. Instead, it returned the last valid value that had been entered.
 
-#### Web apps - Interactive Automation scripts: Not possible to clear a selection box by selecting an empty option [ID 34315]
+#### Web apps - Interactive automation scripts: Not possible to clear a selection box by selecting an empty option [ID 34315]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
-When an interactive Automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
+When an interactive automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
 
 #### Dashboards app - Service definition component: Function type 'TimeStartEvent' would not be visualized correctly [34316]
 
@@ -323,7 +323,7 @@ In some cases, an error could occur in SLLog when closing a log file.
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
-When active alarms were retrieved via an Automation script, an incorrect result set could get returned when no element filter had been applied.
+When active alarms were retrieved via an automation script, an incorrect result set could get returned when no element filter had been applied.
 
 Example of C# code that would return an incorrect result set:
 

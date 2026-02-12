@@ -98,13 +98,13 @@ From now on, when referring to a parameter ID in a [param:] placeholder, that pa
 
 From now on, the list of dashboards that can be selected in *Send email* actions will now be refreshed each time you open the Automation, Correlation, or Scheduler module.
 
-#### Custom Alarm Console hyperlinks linked to Automation scripts will no longer be hidden in the right-click menu of certain alarms [ID 43809]
+#### Custom Alarm Console hyperlinks linked to automation scripts will no longer be hidden in the right-click menu of certain alarms [ID 43809]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, custom hyperlinks linked to an Automation script would not be displayed in the right-click menu of an alarm of the type *Error* or *Notice* referring to the functionality of the DataMiner System or an alarm of type "Incident". From now on, these hyperlinks will be displayed.
+Up to now, custom hyperlinks linked to an automation script would not be displayed in the right-click menu of an alarm of the type *Error* or *Notice* referring to the functionality of the DataMiner System or an alarm of type "Incident". From now on, these hyperlinks will be displayed.
 
-Example of a custom hyperlinks linked to an Automation script:
+Example of a custom hyperlinks linked to an automation script:
 
 ```xml
 <HyperLinks xmlns="http://www.skyline.be/config/hyperlinks">

@@ -51,11 +51,11 @@ In the Generic Query Interface, a new *Get relational anomalies* data source is 
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.6.0/10.5.12 or newer.
 
-#### Interactive Automation scripts executed in a web app: UI version can now be set in the script [ID 43964]
+#### Interactive automation scripts executed in a web app: UI version can now be set in the script [ID 43964]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, when you wanted an interactive Automation script executed in a web app to use the new UI version, you had to add `useNewIASInputComponents=true` to the URL of the app.
+Up to now, when you wanted an interactive automation script executed in a web app to use the new UI version, you had to add `useNewIASInputComponents=true` to the URL of the app.
 
 From now on, it is also possible to indicate the UI version in the script itself. To do so, set the `engine.WebUIVersion` property to one of the following values:
 
@@ -78,7 +78,7 @@ The URL parameter `useNewIASInputComponents` has priority over the UI version se
 
 > [!IMPORTANT]
 >
-> - This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
+> - This feature is only supported for interactive automation scripts executed in web apps. It is not supported for interactive automation scripts executed in DataMiner Cube.
 > - This feature will only work in conjunction with DataMiner server version 10.6.0/10.5.12 or newer.
 
 ## Changes

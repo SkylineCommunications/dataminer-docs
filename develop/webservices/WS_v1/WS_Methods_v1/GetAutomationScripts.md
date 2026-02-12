@@ -4,7 +4,7 @@ uid: GetAutomationScripts
 
 # GetAutomationScripts
 
-Use this method to retrieve a list of all Automation scripts.
+Use this method to retrieve a list of all automation scripts.
 
 ## Input
 
@@ -16,4 +16,4 @@ Use this method to retrieve a list of all Automation scripts.
 
 | Item                       | Format          | Description                                  |
 |----------------------------|-----------------|----------------------------------------------|
-| GetAutomationScriptsResult | Array of string | A list of all Automation scripts in the DMS. |
+| GetAutomationScriptsResult | Array of string | A list of all automation scripts in the DMS. |

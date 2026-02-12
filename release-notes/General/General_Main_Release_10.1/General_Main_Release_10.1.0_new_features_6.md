@@ -279,9 +279,9 @@ As a result of the above-mentioned changes, adding a new section to a domain has
 > - When you delete a job section definition, a dialog box is displayed allowing you to choose whether to delete it completely, or only sever the link between the section definition and the domain.
 > - When a job domain is deleted, all its section definitions are removed as well, unless these are linked to other domains as well.
 
-#### Interactive Automation scripts: UI components now have a TooltipText property \[ID 25609\] \[ID 25978\]
+#### Interactive automation scripts: UI components now have a TooltipText property \[ID 25609\] \[ID 25978\]
 
-UI components in interactive Automation scripts launched from a mobile app can now have a tool tip configured by means of the UIBlockDefinition class property “TooltipText”.
+UI components in interactive automation scripts launched from a mobile app can now have a tool tip configured by means of the UIBlockDefinition class property “TooltipText”.
 
 #### Jobs app: Enhanced job section configuration \[ID 25977\]
 
@@ -318,7 +318,7 @@ A FieldValueChange object has the following properties:
 
 #### Enhanced visualization of disabled text boxes \[ID 26193\]
 
-Disabled text boxes in e.g. interactive Automation scripts will now automatically be optimized as to size and will have a scrollbar when needed.
+Disabled text boxes in e.g. interactive automation scripts will now automatically be optimized as to size and will have a scrollbar when needed.
 
 #### Visual Overview: HTML5 table controls can now have a filter box \[ID 26228\]\[ID 26235\]
 
@@ -576,7 +576,7 @@ Logging with regard to element binding will be added to the following log files:
 
 From now on, an OnStartActionsFailureEvent will be executed when the start actions of a ReservationInstance fail.
 
-If you want to use this event to trigger an Automation script, then make sure to add a custom entry point method to that script. See the example below.
+If you want to use this event to trigger an automation script, then make sure to add a custom entry point method to that script. See the example below.
 
 ```csharp
 [AutomationEntryPoint(AutomationEntryPointType.Types.OnSrmStartActionsFailure)]
@@ -599,9 +599,9 @@ A StartActionsFailureErrorData instance contains an *ErrorReason*, which explain
   > [!NOTE]
   > This exception can be retrieved from the Exception property. The ReservationInstanceId is available in the ErrorData object.
 
-##### Assigning an Automation script to the OnStartActionsFailureEvent
+##### Assigning an automation script to the OnStartActionsFailureEvent
 
-The following example shows how to assign an Automation script to the OnStartActionsFailureEvent.
+The following example shows how to assign an automation script to the OnStartActionsFailureEvent.
 
 ```csharp
 reservationInstance.OnStartActionsFailureEvent = new ReservationEvent("OnStartActionsFailureEvent", $"Script:StartActionsFailedScript");

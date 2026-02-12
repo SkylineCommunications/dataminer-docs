@@ -4,9 +4,9 @@ uid: Consuming_NuGet
 
 # Consuming NuGet packages
 
-You can consume [NuGet packages](https://learn.microsoft.com/en-us/nuget/what-is-nuget) in your Visual Studio protocol or Automation script solution by going to the [NuGet Package Manager](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), searching for existing NuGet packages and installing them.
+You can consume [NuGet packages](https://learn.microsoft.com/en-us/nuget/what-is-nuget) in your Visual Studio protocol or automation script solution by going to the [NuGet Package Manager](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), searching for existing NuGet packages and installing them.
 
-When DIS compiles the Automation script or protocol, it will extract the required assemblies from the NuGet packages and save them alongside the protocol.xml/script.xml. To make sure elements using such a protocol can work correctly, in recent DataMiner versions, those folders with assemblies need to be placed in the folder `C:\Skyline DataMiner\ProtocolScripts\DllImport`.
+When DIS compiles the automation script or protocol, it will extract the required assemblies from the NuGet packages and save them alongside the protocol.xml/script.xml. To make sure elements using such a protocol can work correctly, in recent DataMiner versions, those folders with assemblies need to be placed in the folder `C:\Skyline DataMiner\ProtocolScripts\DllImport`.
 
 > [!NOTE]
 > For DIS and CI/CD, the *PackageReference* package management format must be used. The *packages.config* package management format is not supported.
@@ -15,7 +15,7 @@ When DIS compiles the Automation script or protocol, it will extract the require
 >
 > - **Do not manually put assemblies used by a protocol in the folder** `C:\Skyline DataMiner\ProtocolScripts\DllImport`. Instead, install the protocol via a .dmprotocol or .dmapp package (if you publish from [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio), a package is created in the background, and that package is installed by DIS). When installation happens via a .dmprotocol or .dmapp package, DataMiner will know about these assemblies and make sure these are synchronized.
 > - DIS currently **only processes the *lib* folder** of NuGet packages. Other folders such as *ref* or *runtimes* are currently not supported.
-> - In a protocol or Automation script solution, you **cannot use NuGet packages that generate code** (e.g. the [Grpc.Tools](https://www.nuget.org/packages/Grpc.Tools) NuGet package). This is because when DataMiner compiles a protocol or Automation script, it only considers the C# code that is included in the XML file of the protocol or Automation script. Therefore, if you want to make use of this NuGet package, you need to include the generated code in the protocol or Automation script solution.
+> - In a protocol or automation script solution, you **cannot use NuGet packages that generate code** (e.g. the [Grpc.Tools](https://www.nuget.org/packages/Grpc.Tools) NuGet package). This is because when DataMiner compiles a protocol or automation script, it only considers the C# code that is included in the XML file of the protocol or automation script. Therefore, if you want to make use of this NuGet package, you need to include the generated code in the protocol or automation script solution.
 > - When consuming different versions of the same NuGet package, make sure you are aware of the **potential pitfalls** when doing so as explained in [Runtime assembly binding](xref:Run_Time_Assembly_Binding).
 
 At Skyline, an [internal NuGet store](https://dev.azure.com/skyline-cloud/Private_NuGets/_artifacts/feed/skyline-private-nugets) is available where Skyline employees can produce and consume private libraries. As a Skyline employee, you will need to [add this store in Visual Studio](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) in order to use it.

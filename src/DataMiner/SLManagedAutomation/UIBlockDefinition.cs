@@ -6,7 +6,7 @@ using Skyline.DataMiner.Net.AutomationUI.Objects;
 namespace Skyline.DataMiner.Automation
 {
 	/// <summary>
-	/// Represents an item in a dialog box of an interactive Automation script.
+	/// Represents an item in a dialog box of an interactive automation script.
 	/// </summary>
 	public class UIBlockDefinition
 	{
@@ -32,7 +32,7 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <list type="bullet">
 		/// <item>
-		/// <description>In Automation scripts launched from web apps, the MaxFileSizeInBytes and AllowedFileNameExtensions properties of UIBlockDefinitions of type FileSelector are taken into account from DataMiner 10.1.12 onwards.
+		/// <description>In automation scripts launched from web apps, the MaxFileSizeInBytes and AllowedFileNameExtensions properties of UIBlockDefinitions of type FileSelector are taken into account from DataMiner 10.1.12 onwards.
 		/// 
 		/// An error will be thrown when you try to add a file that is larger than the allowed file size or that
 		/// does not have an allowed file name extension. Also, the “Choose file” pop-up window will
@@ -59,7 +59,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value><c>true</c> if multiple files can be uploaded; otherwise, <c>false</c>.</value>
 		/// <remarks>
-		/// <para>In an interactive Automation script that is used in the DataMiner web apps, you can use this property to configure a file selector component that allows the user to upload multiple files. To do so, set the property AllowMultipleFiles to <c>true</c>.</para>
+		/// <para>In an interactive automation script that is used in the DataMiner web apps, you can use this property to configure a file selector component that allows the user to upload multiple files. To do so, set the property AllowMultipleFiles to <c>true</c>.</para>
 		/// <para>With this configuration, users will be able to add files one by one, but they will not be able to add the same file twice. They will also be able to add a file by dragging it to the file selector.</para>
 		/// <para>Available from DataMiner 10.1.8/10.2.0 onwards.</para>
 		/// </remarks>
@@ -373,7 +373,7 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <para>Default: false.</para>
 		/// <para>Feature introduced in DataMiner 10.4.1 (RN 37659).</para>
-		/// <para>This feature is available for interactive Automation scripts executed in a web environment. 
+		/// <para>This feature is available for interactive automation scripts executed in a web environment. 
 		/// The following UIBlockTypes are supported:
 		/// 	<list type="bullet">
 		/// 		<item><description>TextBox</description></item>
@@ -447,7 +447,7 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <list type="bullet">
 		/// <item>
-		/// <description>In Automation scripts launched from web apps, the MaxFileSizeInBytes and AllowedFileNameExtensions properties of UIBlockDefinitions of type FileSelector are taken into account from DataMiner 10.1.12 onwards.
+		/// <description>In automation scripts launched from web apps, the MaxFileSizeInBytes and AllowedFileNameExtensions properties of UIBlockDefinitions of type FileSelector are taken into account from DataMiner 10.1.12 onwards.
 		/// 
 		/// An error will be thrown when you try to add a file that is larger than the allowed file size or
 		/// that does not have an allowed file name extension. Also, the “Choose file” pop-up window will
@@ -730,9 +730,9 @@ namespace Skyline.DataMiner.Automation
 		public string Text { get; set; }
 
 		/// <summary>
-		/// Gets or sets the text of the tooltip for a component of an interactive Automation script.
+		/// Gets or sets the text of the tooltip for a component of an interactive automation script.
 		/// </summary>
-		/// <value>The text of the tooltip for a component of an interactive Automation script.</value>
+		/// <value>The text of the tooltip for a component of an interactive automation script.</value>
 		/// <remarks>
 		/// <para>This tooltip is only displayed if the script is run within one of the DataMiner web apps, for example the Jobs app.</para>
 		/// <para>Available from DataMiner 10.0.8 onwards.</para>
@@ -802,7 +802,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value><c>Valid</c> if the state is valid; <c>Invalid</c> if the state is invalid; otherwise <c>NotValidated</c>.</value>
 		/// <remarks>
-		/// <para>The ValidationState and ValidationText properties should be used in combination with the  <see cref="WantsOnChange"/> property. If <see cref="WantsOnChange"/> is <c>true</c>, the interactive Automation script will have its <see cref="Engine.ShowUI"/> method return each time the user input changes. This will also be indicated by the _ONCHANGE key, which is returned in the <see cref="UIResults"/>. This functionality will allow you to offer clear feedback on user input.</para>
+		/// <para>The ValidationState and ValidationText properties should be used in combination with the  <see cref="WantsOnChange"/> property. If <see cref="WantsOnChange"/> is <c>true</c>, the interactive automation script will have its <see cref="Engine.ShowUI"/> method return each time the user input changes. This will also be indicated by the _ONCHANGE key, which is returned in the <see cref="UIResults"/>. This functionality will allow you to offer clear feedback on user input.</para>
 		/// <para>The following table gives an overview of which input controls support which properties:</para>
 		/// <list type="table">
 		/// <listheader>
@@ -860,7 +860,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>Text that will be displayed when ValidationState is “Invalid”.</value>
 		/// <remarks>
-		/// <para>The ValidationState and ValidationText properties should be used in combination with the  <see cref="WantsOnChange"/> property. If <see cref="WantsOnChange"/> is <c>true</c>, the interactive Automation script will have its <see cref="Engine.ShowUI"/> method return each time the user input changes. This will also be indicated by the _ONCHANGE key, which is returned in the <see cref="UIResults"/>. This functionality will allow you to offer clear feedback on user input.</para>
+		/// <para>The ValidationState and ValidationText properties should be used in combination with the  <see cref="WantsOnChange"/> property. If <see cref="WantsOnChange"/> is <c>true</c>, the interactive automation script will have its <see cref="Engine.ShowUI"/> method return each time the user input changes. This will also be indicated by the _ONCHANGE key, which is returned in the <see cref="UIResults"/>. This functionality will allow you to offer clear feedback on user input.</para>
 		/// <para>The following table gives an overview of which input controls support which properties:</para>
 		/// <list type="table">
 		/// <listheader>
@@ -957,7 +957,7 @@ namespace Skyline.DataMiner.Automation
 		/// <example>
 		/// <remarks>
 		/// <para>Applicable only in case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>.</para>
-		/// <note type="note">Available from DataMiner 10.5.8/10.6.0 onwards, in Automation scripts launched from web apps when the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V2.</note> <!-- RN 42808 / RN 42845 -->
+		/// <note type="note">Available from DataMiner 10.5.8/10.6.0 onwards, in automation scripts launched from web apps when the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V2.</note> <!-- RN 42808 / RN 42845 -->
 		/// </remarks>
 		/// <code>
 		/// var dropDownControl = new UIBlockDefinition

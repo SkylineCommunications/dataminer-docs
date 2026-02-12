@@ -4,7 +4,7 @@ uid: Configuring_an_analyzer
 
 # Configuring an analyzer
 
-To configure a Correlation analyzer:
+To configure a correlation analyzer:
 
 1. In the *Analyzers* tab of the *Correlation* module, make sure the analyzer is selected in the tree view.
 

@@ -23,15 +23,15 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the web session [ID 42097]
+#### Interactive automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the web session [ID 42097]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, entered date and time would be formatted depending on the platform and the configured settings. In case of a web app, the entered date and time would always be returned in UTC. From now on, when an interactive Automation script is being run within a web app, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
+When UI components of type *Calendar* or *Time* are used in interactive automation scripts, up to now, entered date and time would be formatted depending on the platform and the configured settings. In case of a web app, the entered date and time would always be returned in UTC. From now on, when an interactive automation script is being run within a web app, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
 
 When a default time zone is defined for DataMiner web apps, that default time zone will be used instead of the time zone of the client. See also [Setting the default time zone for DataMiner web apps](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps).
 
-For more information, see [Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
+For more information, see [Interactive automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
 
 #### Dashboards/Low-Code Apps - Query builder: Dragging and dropping operators [ID 42127]
 
@@ -62,7 +62,7 @@ For all information about this component, see [Maps](xref:DashboardMaps).
 
 ### Enhancements
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Dropdown' [ID 41838]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI component 'Dropdown' [ID 41838]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
@@ -72,7 +72,7 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'CheckBox' [ID 41891]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI component 'CheckBox' [ID 41891]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
@@ -82,7 +82,7 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'PasswordBox' [ID 42007]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI component 'PasswordBox' [ID 42007]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
@@ -92,7 +92,7 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
-#### Low-Code Apps - Interactive Automation scripts: Read-only and/or disabled legacy UI components will be disabled when using URL argument '?useNewIASInputComponents=true' [ID 42009]
+#### Low-Code Apps - Interactive automation scripts: Read-only and/or disabled legacy UI components will be disabled when using URL argument '?useNewIASInputComponents=true' [ID 42009]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
@@ -111,7 +111,7 @@ For more information regarding the above-mentioned JSON syntax and legacy syntax
 > [!NOTE]
 > Contrary to dashboards, low-code apps will not push data to the URL. In other words, the URL will not change when data is selected in a component.
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'RadioButtonList' [ID 42032]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI component 'RadioButtonList' [ID 42032]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 

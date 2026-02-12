@@ -4,7 +4,7 @@ uid: Preparing_to_debug_on_a_remote_DataMiner_Agent
 
 # Preparing to debug on a remote DataMiner Agent
 
-Proceed as follows if you want to debug a QAction or an Automation script located on the DataMiner Agent that is running on another machine.
+Proceed as follows if you want to debug a QAction or an automation script located on the DataMiner Agent that is running on another machine.
 
 1. On the remote DataMiner Agent, create a network share where DIS can upload the DLL files and the symbol files.
 
@@ -45,4 +45,4 @@ Proceed as follows if you want to debug a QAction or an Automation script locate
 
 1. Go to *Tools \> Options \> Debugging \> Symbols*, and add the above-mentioned "publish path"<br>(e.g. `\\remote-dma\dis`) to the list of symbol file locations.
 
-You are now ready to start debugging. See [Debugging a connector](xref:Debugging_a_connector) or [Debugging an Automation script](xref:Debugging_an_Automation_script).
+You are now ready to start debugging. See [Debugging a connector](xref:Debugging_a_connector) or [Debugging an automation script](xref:Debugging_an_Automation_script).

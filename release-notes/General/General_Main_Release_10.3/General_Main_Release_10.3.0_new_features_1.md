@@ -197,17 +197,17 @@ See also [Making all elements using a particular protocol.xml run in separate SL
 
 From now on, it will no longer be possible to change the alarm state of an incident by means of a SetAlarmStateMessage. If you attempt to do so, an exception will be thrown.
 
-#### DataMiner Object Model: Defining a script execution action that will execute an interactive Automation script [ID 33513]
+#### DataMiner Object Model: Defining a script execution action that will execute an interactive automation script [ID 33513]
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
-It is now possible to define a script execution action that will execute an interactive Automation script.
+It is now possible to define a script execution action that will execute an interactive automation script.
 
 Process:
 
-1. A client requests the execution of a DOM action in which the execution of an interactive Automation script has been defined via the domHelper.DomInstances.ExecuteAction() method.
+1. A client requests the execution of a DOM action in which the execution of an interactive automation script has been defined via the domHelper.DomInstances.ExecuteAction() method.
 
-   To indicate that the Automation script is an interactive Automation script, the IsInteractive property of the ExecuteScriptDomActionDefinition must be set to true.
+   To indicate that the automation script is an interactive automation script, the IsInteractive property of the ExecuteScriptDomActionDefinition must be set to true.
 
 1. The domHelper.DomInstances.ExecuteAction() method replies immediately.
 
@@ -224,7 +224,7 @@ Process:
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
-If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
+If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for correlation alarms.
 
 #### Client-server communication: gRPC instead of .NET Remoting [ID 34797] [ID 34983]
 
@@ -528,9 +528,9 @@ In addition, up to now only one instance was retained per QAction, so when entry
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
-A TriggeredByName property has been added to the Engine object. This property of type string will contain the full name of the user who started the Automation script (e.g. “John Doe”).
+A TriggeredByName property has been added to the Engine object. This property of type string will contain the full name of the user who started the automation script (e.g. “John Doe”).
 
-When an Automation script is triggered by the scheduler, a correlation rule or a redundancy group, the TriggeredByName property will contain one of the following strings:
+When an automation script is triggered by the scheduler, a correlation rule or a redundancy group, the TriggeredByName property will contain one of the following strings:
 
 - “Scheduled task \<name task>”
 - “Correlation-rule \<name rule>”

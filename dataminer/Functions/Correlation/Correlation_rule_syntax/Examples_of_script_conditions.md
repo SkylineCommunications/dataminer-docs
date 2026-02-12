@@ -4,7 +4,7 @@ uid: Examples_of_script_conditions
 
 # Examples of script conditions
 
-Below, you can find a number of examples of script conditions you can use in Correlation rules.
+Below, you can find a number of examples of script conditions you can use in correlation rules.
 
 - The following condition determines that the calculated average value must be less than 1.3:
 

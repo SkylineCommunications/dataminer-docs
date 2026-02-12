@@ -28,22 +28,22 @@ When defining notification message templates in the *NotifyTemplates.xml* file, 
 
 - **\[Format\]-correlation-infoheader**
 
-  Template of the base Alarm section’s header in the notification message sent as a result of a triggered Correlation rule.
+  Template of the base Alarm section’s header in the notification message sent as a result of a triggered correlation rule.
 
 - **\[Format\]-correlation-infoitem**
 
-  Template of a base Alarm item in the base Alarm section of the notification message sent as a result of a triggered Correlation rule.
+  Template of a base Alarm item in the base Alarm section of the notification message sent as a result of a triggered correlation rule.
 
 - **\[Format\]-correlation-infofooter**
 
-  Template of the base Alarm section’s footer in the notification message sent as a result of a triggered Correlation rule.
+  Template of the base Alarm section’s footer in the notification message sent as a result of a triggered correlation rule.
 
 - **\[Format\]-notifications**
 
-  The notification message sent independently (not as a result of a Correlation rule).
+  The notification message sent independently (not as a result of a correlation rule).
 
 > [!TIP]
-> For more information on how to configure a Correlation rule to send a notification message, see [Sending an email](xref:Sending_an_email)
+> For more information on how to configure a correlation rule to send a notification message, see [Sending an email](xref:Sending_an_email)
 
 ### Template name prefixes indicating the message format
 
@@ -245,7 +245,7 @@ The following example shows a *NotifyTemplates.xml* file in which two templates 
 
 When defining a notification message template in the *NotifyTemplates.xml* file, you can use the following placeholders.
 
-Some can only be used in templates for notification messages sent as a result of a triggered Correlation rule, while others can only be used in templates for notification messages that are sent independently (not as a result of a triggered Correlation rule). See the **Correlation** and **Notifications** columns.
+Some can only be used in templates for notification messages sent as a result of a triggered correlation rule, while others can only be used in templates for notification messages that are sent independently (not as a result of a triggered correlation rule). See the **Correlation** and **Notifications** columns.
 
 | Name               | Description | Correlation | Notifications |
 |--------------------|-------------|-------------|---------------|

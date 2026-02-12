@@ -15,7 +15,7 @@ After you have installed the DataMiner Integration Studio extension, Microsoft V
 
 Additionally, the following tool windows are available:
 
-- [Tree view](xref:DisTreeViewToolWindow): This tool window acts as a table of contents, allowing you to easily navigate to a particular location in the connector or Automation script you are working on.
+- [Tree view](xref:DisTreeViewToolWindow): This tool window acts as a table of contents, allowing you to easily navigate to a particular location in the connector or automation script you are working on.
 - [Mapping view](xref:DisMappingViewToolWindow): This tool window allows you to visualize relationships between items in the connector you are working on.
 - [Grid view](xref:DisGridViewToolWindow): This tool window allows you to manage and configure all parameters in the connector using a spreadsheet-like view.
 - [Diagram](xref:DisDiagramToolWindow): This window shows a graphical representation of a connector. It allows you to see how a connector is built, navigate through its logic, and investigate flow issues.
@@ -23,7 +23,7 @@ Additionally, the following tool windows are available:
 - [Validator](xref:DisValidatorToolWindow): This window lists the results of the latest connector validation in a tree structure, grouped by severity and category.
 - [Comparer](xref:DisComparerToolWindow):This tool window allows you to compare two connector versions.
 - [Macros](xref:DisMacrosToolWindow): This tool window allows you to create C# scripts that can be used to make changes to e.g. a protocol XML file.
-- [Inject](xref:DisInjectToolWindow): This tool window allows you to make the necessary preparations before debugging the connector QAction(s) or Automation script C# Exe block(s) you are editing.
+- [Inject](xref:DisInjectToolWindow): This tool window allows you to make the necessary preparations before debugging the connector QAction(s) or automation script C# Exe block(s) you are editing.
 - [MIB Browser](xref:DisMibBrowserToolWindow): This tool window allows you to build [Param](xref:Protocol.Params.Param) tags in a connector based on OID data in MIB files.
 
-An top of this, it includes snippets and XML schemas to assist and speed up your development of connectors and Automation scripts.
+An top of this, it includes snippets and XML schemas to assist and speed up your development of connectors and automation scripts.

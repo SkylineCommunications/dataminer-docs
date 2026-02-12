@@ -46,9 +46,9 @@ Use the [DCF Helper](xref:AdvancedDcfHelper), which contains methods for you to 
 External connections can be managed in several ways:
 
 - **Manager Element**: A manager element is responsible for creating connections between elements.
-- **Automation script**: An Automation script is used to edit connections (e.g. via the EditConnection SLNet message).
+- **Automation script**: An automation script is used to edit connections (for example, via the EditConnection SLNet message).
 - **Manual Configuration**: Users create and define the connections themselves.
-- **Distributed setup: element to element**: Each element manages its connections to other elements. Note: This is risky due to overlap between elements and needs to be managed properly.
+- **Distributed setup: element to element**: Each element manages its connections to other elements. Note: This is risky because of overlap between elements and needs to be managed properly.
 
 The **Skyline Generic Provisioning** connector allows provisioning of DCF external connections using Excel spreadsheets. You can export, import, and manipulate the connections using Excel. Additionally, the connector can validate some common issues such as missing or duplicate connections and provides a table with the ability to fix these.
 

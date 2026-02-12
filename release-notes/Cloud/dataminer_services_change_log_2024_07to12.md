@@ -51,7 +51,7 @@ From now on, the usage page in the [Admin app](https://admin.dataminer.services)
 
 #### 26 November 2024 - New feature - Admin app - Automation usage [ID 41554]
 
-From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about Automation script runs when available.
+From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about automation script runs when available.
 
 #### 26 November 2024 - New feature - Usage API - Usage API with API key [ID 41554]
 

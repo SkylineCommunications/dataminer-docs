@@ -53,13 +53,13 @@ Because of a number of enhancements, overall performance of the Elasticsearch he
 
 SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler.
 
-#### Automation: DLL references on script libraries will also be loaded when an Automation script does not need to be recompiled [ID 36730]
+#### Automation: DLL references on script libraries will also be loaded when an automation script does not need to be recompiled [ID 36730]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
-Up to now, when the SLAutomation service was started, the DLL references defined on an Automation script library would only be taken into account when that library needed to be recompiled. As a result, Automation scripts that relied on a script library could fail due to missing references.
+Up to now, when the SLAutomation service was started, the DLL references defined on an automation script library would only be taken into account when that library needed to be recompiled. As a result, automation scripts that relied on a script library could fail due to missing references.
 
-From now on, when the SLAutomation service is started, the DLL references on an Automation script library will also be loaded when that library does not need to be recompiled.
+From now on, when the SLAutomation service is started, the DLL references on an automation script library will also be loaded when that library does not need to be recompiled.
 
 #### DataMiner upgrade: Presence of Visual C++ 2010 redistributable will no longer be checked [ID 36745]
 
@@ -188,7 +188,7 @@ In some cases, an `index out of bounds` error could occur when processing a beha
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
-In some cases, an error could occur in SLScripting when it was resolving DLL files for a QAction or an Automation Script.
+In some cases, an error could occur in SLScripting when it was resolving DLL files for a QAction or an automation script.
 
 #### Problem with SLProtocol when the system locale was set to Japanese [ID 36854]
 

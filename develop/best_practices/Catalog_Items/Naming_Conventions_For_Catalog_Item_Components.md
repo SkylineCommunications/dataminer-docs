@@ -38,7 +38,7 @@ In the naming conventions, references will be made to the following abbreviation
 
 ### Automation script
 
-Generic Automation scripts and Automation scripts that are used in solutions should have a name in the following format, where *[TYPE]* is the type of the script as defined in [Github repository naming convention](xref:Using_GitHub_for_CICD#repository-naming-convention): `[SOLCODE]-[TYPE]-[name]`
+Generic automation scripts and automation scripts that are used in solutions should have a name in the following format, where *[TYPE]* is the type of the script as defined in [Github repository naming convention](xref:Using_GitHub_for_CICD#repository-naming-convention): `[SOLCODE]-[TYPE]-[name]`
 
 For scripts created by Skyline for a specific customer, the customer abbreviation should be used instead of [SOLCODE]. For a list of these abbreviations, refer to [DCP](https://dcp.skyline.be/Lists/Customers/AllItems.aspx) (internal link for Skyline employees only).
 
@@ -46,7 +46,7 @@ Scripts should be added in the Automation module in the following folders, depen
 
 - For standalone scripts:
 
-  - **Regular** Automation script: `DataMiner Catalog/Automation`
+  - **Regular** automation script: `DataMiner Catalog/Automation`
   - **Ad hoc data source** script: `DataMiner Catalog/Ad Hoc Data Sources`
   - **Data transformer** script: `DataMiner Catalog/Data Transformers`
   - **User-defined API** script: `DataMiner Catalog/User-Defined APIs`
@@ -63,7 +63,7 @@ Scripts should be added in the Automation module in the following folders, depen
 
 For the name of the ad hoc data source as shown in the DataMiner web apps, use the following format: `[SOLCODE] [name]`
 
-For the name of the Automation script used for an ad hoc data source, see [Automation script](#automation-script).
+For the name of the automation script used for an ad hoc data source, see [Automation script](#automation-script).
 
 ### Correlation rule
 
@@ -81,7 +81,7 @@ They should be added in the Dashboards app in the following folder: `DataMiner C
 
 For the name of the data transformer as shown in the DataMiner web apps, use the following format: `[SOLCODE] [name]`
 
-For the name of the Automation script used for a data transformer, see [Automation script](#automation-script).
+For the name of the automation script used for a data transformer, see [Automation script](#automation-script).
 
 ### Document
 
@@ -133,7 +133,7 @@ It should be added to the folder `DataMiner Catalog/[SOLNAME]`.
 
 A user-defined API should have a URL in the following format: `http(s)://<HOSTNAME>/api/custom/[SOLCODE]/[name]`
 
-For the name of the Automation script used for a user-defined API, see [Automation script](#automation-script).
+For the name of the automation script used for a user-defined API, see [Automation script](#automation-script).
 
 ### View
 

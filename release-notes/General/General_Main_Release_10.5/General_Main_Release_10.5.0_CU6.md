@@ -82,9 +82,9 @@ For detailed information about the changes included in the above-mentioned versi
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When, in the *Automation* module, you imported an Automation script, up to now, you would not receive any feedback about whether or not the import operation had been successful. Only after checking the Cube logs would you be able to find out that an import operation had failed.
+When, in the *Automation* module, you imported an automation script, up to now, you would not receive any feedback about whether or not the import operation had been successful. Only after checking the Cube logs would you be able to find out that an import operation had failed.
 
-From now on, the following error message will appear whenever an exception is thrown while an Automation script is being imported:
+From now on, the following error message will appear whenever an exception is thrown while an automation script is being imported:
 
 `Something went wrong. Please check the Cube and Automation logging for more information.`
 

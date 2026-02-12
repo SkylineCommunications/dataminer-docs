@@ -41,7 +41,7 @@ The tutorial consists of the following steps:
 
 1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-   This will create 13 elements under the *DataMiner Catalog* > *Augmented Operations* > *Incident Tracking Tutorial* view. It will also create four Automation scripts. The names of all added elements and scripts starts with *Incident Tracking Tutorial*.
+   This will create 13 elements under the *DataMiner Catalog* > *Augmented Operations* > *Incident Tracking Tutorial* view. It will also create four automation scripts. The names of all added elements and scripts starts with *Incident Tracking Tutorial*.
 
    > [!NOTE]
    > If the package has been fully deployed, but not everything mentioned above is visible in Cube, close and reopen Cube.
@@ -63,7 +63,7 @@ Automatic alarm grouping groups alarms according to a set of rules, which are li
 1. Take a backup of the current *configuration.xml* file so that you can revert to this version of the file when you finish this tutorial.
 
 > [!NOTE]
-> If you are unable to access this file (e.g. because you are using [DaaS](xref:Creating_a_DMS_in_the_cloud)), you can use the Automation scripts that were included in the package instead in order to follow this tutorial. To get an idea of what the *configuration.xml* file looks like, we recommend taking a look at the file on a system that you have access to.
+> If you are unable to access this file (e.g. because you are using [DaaS](xref:Creating_a_DMS_in_the_cloud)), you can use the automation scripts that were included in the package instead in order to follow this tutorial. To get an idea of what the *configuration.xml* file looks like, we recommend taking a look at the file on a system that you have access to.
 
 ## Step 3: Explore the default alarm grouping rules
 
@@ -149,7 +149,7 @@ By default, a new alarm can only be added to an existing alarm group if it occur
 
 To make it easier to see the effect of the next steps, temporarily switch off parameter and view grouping. There are two ways you can do this:
 
-- The easiest way (and the only way in case you are using DaaS) is by running the Automation script *Incident Tracking Tutorial Scripts - Script 1 Disable View and Parameter Grouping* .
+- The easiest way (and the only way in case you are using DaaS) is by running the automation script *Incident Tracking Tutorial Scripts - Script 1 Disable View and Parameter Grouping* .
 
   This script is included in the package you installed in step 1.
 
@@ -198,7 +198,7 @@ The package was configured so that an alarm on any of the amplifiers will have a
    1. Restart *SLAnalytics.exe* (e.g. through the task manager).
 
    > [!NOTE]
-   > If you do not have access to the *configuration.xml* file, instead run the Automation script *Incident Tracking Tutorial Scripts - Script 2 Enable Custom Alarm Property Grouping* to apply the same configuration.
+   > If you do not have access to the *configuration.xml* file, instead run the automation script *Incident Tracking Tutorial Scripts - Script 2 Enable Custom Alarm Property Grouping* to apply the same configuration.
 
    > [!TIP]
    > For more detailed information about adding custom rules, see [Defining custom properties for grouping](xref:Customizing_alarm_grouping_rules#defining-custom-properties-for-grouping).
@@ -269,9 +269,9 @@ It is not possible to use the *ParentNode* alarm property from the previous step
    > [!TIP]
    > For more detailed information about adding custom rules, see [Defining custom properties for grouping](xref:Customizing_alarm_grouping_rules#defining-custom-properties-for-grouping).
 
-1. If you do not have access to the *configuration.xml* file, you will need to customize an Automation script instead:
+1. If you do not have access to the *configuration.xml* file, you will need to customize an automation script instead:
 
-   1. Open the *Incident Tracking Tutorial Scripts - Script 3 Enable Custom Element Property Grouping* Automation script.
+   1. Open the *Incident Tracking Tutorial Scripts - Script 3 Enable Custom Element Property Grouping* automation script.
 
    1. Look for the string variable called *KataExercise*.
 
@@ -287,7 +287,7 @@ It is not possible to use the *ParentNode* alarm property from the previous step
         </item>
       ```
 
-   1. Save and run the Automation script.
+   1. Save and run the automation script.
 
       The script will copy the code snippet into your *configuration.xml* file and restart *SLAnalytics*.
 
@@ -310,7 +310,7 @@ It is not possible to use the *ParentNode* alarm property from the previous step
 
 ## Step 7: Clean up your system
 
-The Automation scripts in this tutorial take a backup of the old version of *configuration.xml* before applying changes, and you can restore this backup with another script. However, if you have made manual changes before running any of the scripts, you will need to restore the file manually to get the original version again.
+The automation scripts in this tutorial take a backup of the old version of *configuration.xml* before applying changes, and you can restore this backup with another script. However, if you have made manual changes before running any of the scripts, you will need to restore the file manually to get the original version again.
 
 1. Clear the created alarms using the *Toggle Alarm* buttons of each element.
 

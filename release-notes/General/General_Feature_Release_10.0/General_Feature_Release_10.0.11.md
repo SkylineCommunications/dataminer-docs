@@ -414,9 +414,9 @@ In the DataMiner HTML5 apps, when you fill in a control consisting of multiple p
 
 When, in the StandAloneBpaExecutor tool, you select a DLL file, it shows the BPA information for that specific file. From now on, it will show the full path of the selected DLL file as well as the BPA version.
 
-#### Dashboards app: Improved pop-up window when interactive Automation script is canceled \[ID 27141\]
+#### Dashboards app: Improved pop-up window when interactive automation script is canceled \[ID 27141\]
 
-If an interactive Automation script is canceled in the Dashboards app, a pop-up window will now be displayed with the title of the current content of the script, or with the name of the script if no title is available. The pop-up window will not mention the term "script" to avoid confusion in users who may not be aware that they are using a script.
+If an interactive automation script is canceled in the Dashboards app, a pop-up window will now be displayed with the title of the current content of the script, or with the name of the script if no title is available. The pop-up window will not mention the term "script" to avoid confusion in users who may not be aware that they are using a script.
 
 #### Dashboards app: Spectrum analyzer component trigger configuration no longer possible \[ID 27150\]
 
@@ -479,18 +479,18 @@ When you downgraded a DataMiner Agent that came with the Cube launcher tool (i.e
 
 ### Fixes
 
-#### Problem with user permissions for Automation scripts \[ID 26401\]\[ID 26957\]
+#### Problem with user permissions for automation scripts \[ID 26401\]\[ID 26957\]
 
-Up to now the permissions to add, edit, delete and execute Automation scripts were only enforced in the client, which could make it possible for a user to modify the Automation scripts on a DMA despite not having the required permissions for this.
+Up to now the permissions to add, edit, delete and execute automation scripts were only enforced in the client, which could make it possible for a user to modify the automation scripts on a DMA despite not having the required permissions for this.
 
 Now the system will enforce the permissions as follows:
 
-- To view or retrieve an Automation script, you need the "Automation - UI available" or "Automation - Execute" permission.
-- To create an Automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
-- To update an Automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
-- To delete an Automation script, you need the "Automation - Delete" permission.
-- To execute an Automation script, you need the "Automation - Execute" permission.
-- To perform a DLL injection in an Automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
+- To view or retrieve an automation script, you need the "Automation - UI available" or "Automation - Execute" permission.
+- To create an automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
+- To update an automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
+- To delete an automation script, you need the "Automation - Delete" permission.
+- To execute an automation script, you need the "Automation - Execute" permission.
+- To perform a DLL injection in an automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
 - To change a memory file, you need the "Automation - Add" or the "Automation - Edit" permission.
 - To retrieve a memory file, you need "Automation - UI available" or "Automation - Execute" permission.
 
@@ -649,7 +649,7 @@ If cells of a table row were displayed in a Children shape in Visual Overview, i
 
 #### DataMiner Cube: Custom icon visualization not working for list view components \[ID 27173\]
 
-In list view components, for example in the Bookings app, in the Services app or in ListView shapes in Visual Overview, it was no longer possible to visualize the content of a column as a custom icon. This is now again possible for booking, service and element columns as well as for booking, service and element property columns. Note that this functionality relies on Automation scripts to provide the icon library and column value/icon mapping.
+In list view components, for example in the Bookings app, in the Services app or in ListView shapes in Visual Overview, it was no longer possible to visualize the content of a column as a custom icon. This is now again possible for booking, service and element columns as well as for booking, service and element property columns. Note that this functionality relies on automation scripts to provide the icon library and column value/icon mapping.
 
 #### DataMiner Cube - Scheduler app: Problem with drag-and-drop in timeline tab \[ID 27174\]
 
@@ -665,7 +665,7 @@ In some cases, it could occur that a pivot table component only retrieved data f
 
 #### Problem with SLAutomation when a ThreadAbortException was thrown in a script while the thread was not actually aborted \[ID 27187\]
 
-When a ThreadAbortException was thrown in an Automation script while the thread running the script was not actually aborted, in some cases, an error could occur in SLAutomation.
+When a ThreadAbortException was thrown in an automation script while the thread running the script was not actually aborted, in some cases, an error could occur in SLAutomation.
 
 #### Data in DVE child element not updated correctly \[ID 27189\]
 

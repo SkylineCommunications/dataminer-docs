@@ -40,7 +40,7 @@ The *Settings* page of the *Regression Test Results* element contains all email-
 - **Daily Email Report**: Enables or disables the automatic daily execution and email report.
 - **Send Email on Single Test Run**: If enabled, email reports will also be sent when individual tests are executed from the *Test Configuration* page.
 - **Send Email on Group Run**: If enabled, email reports will also be sent when test groups are executed.
-- **Regression Test Runner Script**: The name of the Automation script that will be used to execute the tests and send the email report.
+- **Regression Test Runner Script**: The name of the automation script that will be used to execute the tests and send the email report.
 - **Report Recipients**: Comma-separated list of email addresses that should receive the report.
 - **Start Time**: Time of day when the daily execution should occur.
 - **Last Execution Time**: Timestamp of the most recent execution.
@@ -49,4 +49,4 @@ The *Settings* page of the *Regression Test Results* element contains all email-
 You can manually trigger the test run and email report by clicking the *Execute Tests* button at the bottom of the *Settings* page.
 
 > [!NOTE]
-> By default, the solution uses the *RegressionTestRunner* script to execute and report tests. However, if you want to customize the report format or implement custom test handling logic, you can create your own Automation script and configure its name in the **Regression Test Runner Script** parameter.
+> By default, the solution uses the *RegressionTestRunner* script to execute and report tests. However, if you want to customize the report format or implement custom test handling logic, you can create your own automation script and configure its name in the **Regression Test Runner Script** parameter.

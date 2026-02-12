@@ -12,7 +12,7 @@ To deploy and upgrade the D-DOCSIS branch of the EPM Solution in an automated fa
 
 1. Place the latest EPM D-DOCSIS upgrade installation package on the server.
 
-1. Run the installation package. This will automatically upgrade all protocols, templates, Automation scripts, assemblies, and dashboards.
+1. Run the installation package. This will automatically upgrade all protocols, templates, automation scripts, assemblies, and dashboards.
 
    > [!NOTE]
    > Visio drawings are currently not yet supported in the upgrade package, so you will need to update these manually.
@@ -65,7 +65,7 @@ To deploy the D-DOCSIS branch of the EPM Solution:
    - A **front-end EPM element**, in the *System* > *DataMiner EPM* > *EPM FE* view.
    - **System elements**, as necessary in the *System* view. You can name these elements as you see fit. If you add any MS/LX Platform elements, add these in a *DMS* subview of the *System* view.
 
-1. In the Automation module in DataMiner Cube, **import the Automation scripts** from the EPM package. See [Importing and exporting Automation scripts](xref:Managing_Automation_scripts#importing-and-exporting-automation-scripts).
+1. In the Automation module in DataMiner Cube, **import the automation scripts** from the EPM package. See [Importing and exporting automation scripts](xref:Managing_Automation_scripts#importing-and-exporting-automation-scripts).
 
 1. If the EPM package contains any **dashboards**, add these to the DMS. To do so, copy the dashboards to the folder `C:\Skyline DataMiner\Dashboards` on the target DMA.
 

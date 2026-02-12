@@ -12,6 +12,6 @@ The Profiles module consists of a list pane on the left with three tabs, *Defini
 
 Each **profile definition** consists of a set of parameters, independent of the underlying technology, and the corresponding **profile instance** determines the values that need to be applied to these parameters. Think for example of a profile to tune a satellite receiver: operators can add parameters required for any brand of satellite receiver, such as the center frequency, roll-off factor, modulation standard, etc.
 
-To create useful instances, you first need to create profile parameters and definitions. The instances can then be linked to a session variable in Visual Overview, or applied to elements with an Automation script.
+To create useful instances, you first need to create profile parameters and definitions. The instances can then be linked to a session variable in Visual Overview, or applied to elements with an automation script.
 
 ![Profiles module](~/dataminer/images/Profiles_module.png)<br>*Profiles module in DataMiner 10.5.5*

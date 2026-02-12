@@ -80,13 +80,13 @@ The endpoint can now also return the following additional errors:
 
 From now on, the `Engine` class exposes the public property `ScriptName`.
 
-This means that, in an Automation script, it will now be possible to retrieve the name of that script.
+This means that, in an automation script, it will now be possible to retrieve the name of that script.
 
-#### Interactive Automation scripts executed in a web app: UI version can now be set in the script [ID 43875]
+#### Interactive automation scripts executed in a web app: UI version can now be set in the script [ID 43875]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
-Up to now, when you wanted an interactive Automation script executed in a web app to use the new UI version, you had to add `useNewIASInputComponents=true` to the URL of the app.
+Up to now, when you wanted an interactive automation script executed in a web app to use the new UI version, you had to add `useNewIASInputComponents=true` to the URL of the app.
 
 From now on, it is also possible to indicate the UI version in the script itself. To do so, set the `engine.WebUIVersion` property to one of the following values:
 
@@ -108,7 +108,7 @@ The URL parameter `useNewIASInputComponents` has priority over the UI version se
 - If you use `useNewIASInputComponents=false`, the script will use the current UI version (i.e. V1), even when V2 was set in the script.
 
 > [!IMPORTANT]
-> This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
+> This feature is only supported for interactive automation scripts executed in web apps. It is not supported for interactive automation scripts executed in DataMiner Cube.
 
 ## Changes
 
@@ -432,7 +432,7 @@ These notices will now be generated again.
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, after elements had been swarmed or migrated by means of a DELT package, in some cases, Automation script matrix actions associated with those elements could fail.
+Up to now, after elements had been swarmed or migrated by means of a DELT package, in some cases, automation script matrix actions associated with those elements could fail.
 
 #### Problem when an element with an active filtered table subscription was swarmed to the DMA on which it was already located [ID 44150]
 

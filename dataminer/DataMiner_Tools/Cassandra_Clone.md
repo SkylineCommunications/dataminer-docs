@@ -88,7 +88,7 @@ The duration of the cloning process depends on your hardware. Using an SSD inste
 
 #### What should I do if the process stops running because my RDP session is disconnected?
 
-If your RDP session is automatically closed after some time because of inactivity, it can be a problem to use this tool. In that case, you can use the Automation script that you can find in the subfolder *Automation Script – optional* within the folder with the extracted files. This script starts the tool in a hidden command window.
+If your RDP session is automatically closed after some time because of inactivity, it can be a problem to use this tool. In that case, you can use the automation script that you can find in the subfolder *Automation Script – optional* within the folder with the extracted files. This script starts the tool in a hidden command window.
 
 > [!NOTE]
 > You should only use this solution if there are no other alternatives, as using the script means you will not be able to view any progress information.

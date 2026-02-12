@@ -7,7 +7,7 @@ uid: Docker_deployment_action
 > [!IMPORTANT]
 > Deprecated. Though this will still work, consider using the .NET tools instead to package, upload, and deploy as shown in [this example](xref:CICD_GitLab_Examples).
 
-It is possible to deploy an Automation script solution from a GitLab repository by using the Skyline DataMiner Deploy Action in a pipeline.
+It is possible to deploy an automation script solution from a GitLab repository by using the Skyline DataMiner Deploy Action in a pipeline.
 
 To do so, you need to [create a dataminer.services key](#creating-a-dataminerservices-key), [add the key as a masked variable in the repository](#adding-the-key-as-a-masked-variable-in-the-repository), and [add the Skyline DataMiner Deploy Action to a pipeline](#adding-the-skyline-dataminer-deploy-action-to-a-pipeline).
 

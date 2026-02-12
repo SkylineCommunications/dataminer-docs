@@ -10,7 +10,7 @@ Each of the [DataMiner SRM use cases](xref:srm_use_cases) relies on a combinatio
 
 ## Scheduling Engine
 
-The Scheduling Engine **executes scheduled actions precisely, reliably, and on time**. The engine can trigger a variety of DataMiner actions, including any and all Automation script executions needed by DataMiner SRM. The Scheduling Engine is the actor behind any orchestration, whether this is loading a profile on a resource in the [Resource Orchestration](xref:srm_resource_orchestration) use case or executing a service lifecycle state change.
+The Scheduling Engine **executes scheduled actions precisely, reliably, and on time**. The engine can trigger a variety of DataMiner actions, including any and all automation script executions needed by DataMiner SRM. The Scheduling Engine is the actor behind any orchestration, whether this is loading a profile on a resource in the [Resource Orchestration](xref:srm_resource_orchestration) use case or executing a service lifecycle state change.
 
 The Scheduler timeline can be visualized [in Visual Overview](xref:Embedding_a_Resource_Manager_component) or [in dashboards and low-code apps](xref:DashboardTimeline). The timeline components not only support rich schedule visualization options but also facilitate control surface user actions, such as selecting a time range in one click. A built-in bookings timeline is also available in the [Bookings module](xref:The_Bookings_module) in DataMiner Cube.
 
@@ -43,7 +43,7 @@ The DataMiner Automation engine performs all automation tasks in the ecosystem. 
 
 Once created, scripts can be triggered in a variety of ways, ranging from manual operator initiation to event-based, change-based, or scheduled execution (through integration with the [Scheduling Engine](#scheduling-engine)).
 
-Even if tasks are automated, the operator always remains in control. Not only is there a full audit trail of the executed tasks, but operators can also opt to **interact with the Automation engine at runtime**. DataMiner interactive Automation scripts can be set up to prompt for operator input, which is then used to automate further actions.
+Even if tasks are automated, the operator always remains in control. Not only is there a full audit trail of the executed tasks, but operators can also opt to **interact with the Automation engine at runtime**. DataMiner interactive automation scripts can be set up to prompt for operator input, which is then used to automate further actions.
 
 Automation scripts can be **developed, tested, and deployed at runtime**. Using built-in version control and quality checks during deployment (with DIS and CI/CD using our [dedicated workflows](xref:github_reusable_workflows_automation_master_workflow)), operators can easily use DevOps practices to respond to the rapid changes in today's networks, data centers, and service offerings.
 

@@ -11,7 +11,7 @@ uid: KI_SLAutomation_memory_leak_AddScriptOutput
 
 ## Cause
 
-When the script output feature is used in an Automation script or subscript, the data that is placed in the dictionary stays in memory, causing a memory leak in SLAutomation.
+When the script output feature is used in an automation script or subscript, the data that is placed in the dictionary stays in memory, causing a memory leak in SLAutomation.
 
 ## Fix
 
@@ -19,4 +19,4 @@ Install DataMiner 10.2.0 [CU11], 10.3.0, or 10.3.2.
 
 ## Issue description
 
-When the script output feature ([RN 23936](xref:General_Main_Release_10.1.0_new_features_5#possibility-to-add-update-or-clear-the-script-output-id-23936)) is used in an Automation script or subscript ([RN 33306](xref:General_Feature_Release_10.2.7#new-subscript-option-extendederrorinfo-id-33306)), the memory usage of the SLAutomation process keeps increasing.
+When the script output feature ([RN 23936](xref:General_Main_Release_10.1.0_new_features_5#possibility-to-add-update-or-clear-the-script-output-id-23936)) is used in an automation script or subscript ([RN 33306](xref:General_Feature_Release_10.2.7#new-subscript-option-extendederrorinfo-id-33306)), the memory usage of the SLAutomation process keeps increasing.

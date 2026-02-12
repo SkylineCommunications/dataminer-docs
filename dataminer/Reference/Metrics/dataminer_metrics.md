@@ -43,7 +43,7 @@ All specifications are provided based on the assumption that DMAs are running on
 | 20 | Number of alarm properties (usable in alarm search filters) of all types (view, element or service) | DMS | 50 | When adding for example, an element with alarm filterable properties to multiple services, this can lead to a heavy load on the DMS during alarm storm situations. Please consider your configuration carefully. |
 | 21 | Number of queries | Dashboard | 30 | Starting from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9. |
 | 22 | Number of queries | Low-code app | 200 | Starting from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9. |
-| 23 | Number of concurrent Automation script executions | DMA | 500 ||
+| 23 | Number of concurrent automation script executions | DMA | 500 ||
 | 24 | Number of scheduled tasks starting at the same time | DMA | 100 | |
 | 25 | Total number of scheduled tasks | DMA | 3000 | This total includes all tasks, regardless of whether they are enabled and regardless of whether their trigger time is in the past or in the future. A recurring task (such as daily or weekly schedules) counts as one task, regardless of how many times it is executed. |
 

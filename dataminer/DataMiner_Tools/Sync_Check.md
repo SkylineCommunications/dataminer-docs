@@ -6,7 +6,7 @@ uid: Sync_Check
 
 ## About this tool
 
-To verify the synchronization of element and service files across a DataMiner System, you can use the "Sync Check" Automation script.
+To verify the synchronization of element and service files across a DataMiner System, you can use the "Sync Check" automation script.
 
 This is especially intended for troubleshooting in large clusters (which can include Failover Agents) in case there are errors related to duplicate service or element IDs, errors when new services are created that reuse the name of old services, or synchronization errors related to services or elements;
 

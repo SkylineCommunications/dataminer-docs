@@ -388,9 +388,9 @@ Example: If the column in question has to be filtered using the element name fou
 
 ### DMS Automation
 
-#### Interactive Automation scripts: Enhanced file selector \[ID 28628\]
+#### Interactive automation scripts: Enhanced file selector \[ID 28628\]
 
-A number of enhancements have been made to the file selector used in interactive Automation scripts.
+A number of enhancements have been made to the file selector used in interactive automation scripts.
 
 ### DMS Service & Resource Management
 
@@ -624,7 +624,7 @@ In some cases, it would no longer be possible to filter out columns that were us
 
 #### DataMiner Cube - Automation: Not possible to save a script after modifying an if/then block \[ID 28532\]
 
-When, in an Automation scripts, you had changed the actions in an if/then block, in some cases, the *Save script* button would incorrectly not get activated. As a result, you were not able to save the modified script.
+When, in an automation scripts, you had changed the actions in an if/then block, in some cases, the *Save script* button would incorrectly not get activated. As a result, you were not able to save the modified script.
 
 #### DataMiner Cube - Scheduler app: Problem when editing a script event in the timeline \[ID 28542\]
 

@@ -89,11 +89,11 @@ The web interface is only accessible when the client machine has network access 
 
 ### Automation Scripts
 
-[If any Automation scripts need to be configured, indicate this in this section. Otherwise, this section can be removed.]
+[If any automation scripts need to be configured, indicate this in this section. Otherwise, this section can be removed.]
 
 ### Correlation rules
 
-[If any Correlation rules need to be configured, indicate this in this section. Otherwise, this section can be removed.]
+[If any correlation rules need to be configured, indicate this in this section. Otherwise, this section can be removed.]
 
 ### Visio Files
 

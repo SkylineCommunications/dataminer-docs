@@ -18,7 +18,7 @@ class Script
     Connection conn;
     Script()
     {
-        // Connect to SLNet. Not needed for protocols and Automation scripts
+        // Connect to SLNet. Not needed for protocols and automation scripts
         conn = ConnectionSettings.GetConnection("localhost");
         conn.Authenticate();
         //Construct TicketingGatewayHelper

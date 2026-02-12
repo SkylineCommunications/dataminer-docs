@@ -22,7 +22,7 @@ In addition, in this tab you can load a particular discovery profile or load all
 
 #### Element software updates \[ID 22457\]
 
-It is now possible to perform a software update on an element via the *Software* tab of the IDP app. To do so, select the element in the table on the *Software* tab and click the button below the table. The button will launch a script linked to the CI Types element. For this purpose, the CI type must be configured with software update options and an Automation script.
+It is now possible to perform a software update on an element via the *Software* tab of the IDP app. To do so, select the element in the table on the *Software* tab and click the button below the table. The button will launch a script linked to the CI Types element. For this purpose, the CI type must be configured with software update options and an automation script.
 
 #### Management of scan ranges \[ID 22549\]
 

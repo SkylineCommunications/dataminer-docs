@@ -557,11 +557,11 @@ On MySQL and Microsoft SQL Server databases, the alarm table now has an extra fi
 > [!NOTE]
 >
 > - This change will cause a small increase in latency when retrieving alarms from the database.
-> - From now on, using a filter with an AlarmFilterItemExtraStatus in the GetAlarmDetailsFromDbMessage from within an Automation script will not work correctly in conjunction with a MySQL or Microsoft SQL Server database.
+> - From now on, using a filter with an AlarmFilterItemExtraStatus in the GetAlarmDetailsFromDbMessage from within an automation script will not work correctly in conjunction with a MySQL or Microsoft SQL Server database.
 
 #### SimulationHelper API now allows loading, enabling and disabling element simulations at runtime \[ID 29517\]
 
-Up to now, loading new element simulations always required a DataMiner restart. Now, the SimulationHelper API will allow you to load, enable and disable element simulations at runtime from within protocol QActions or Automation scripts.
+Up to now, loading new element simulations always required a DataMiner restart. Now, the SimulationHelper API will allow you to load, enable and disable element simulations at runtime from within protocol QActions or automation scripts.
 
 Construction:
 
@@ -587,7 +587,7 @@ SimulationHelper(Func<DMSMessage[], DMSMessage[]> messageHandler)
     void DisableSimulation(int hostingDataMinerId, int dataMinerId, int elementId)
     ```
 
-Example of how to use this in an Automation script:
+Example of how to use this in an automation script:
 
 ```csharp
 var simulationHelper = new SimulationHelper(Engine.SLNet.SendMessages);

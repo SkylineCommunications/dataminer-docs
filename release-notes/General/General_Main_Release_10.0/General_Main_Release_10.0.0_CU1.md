@@ -125,7 +125,7 @@ A number of minor enhancements have been made to the *Advanced Editing* pane:
 - Closing the *Advanced Editing* pane will now update the *Advanced Editing* button in the ribbon.
 - The current selection will now be taken into account when starting the *Advanced Editing* extension.
 
-#### DataMiner Cube - Correlation: Enhancements with regard to the use of placeholders in 'Send Email' actions of Correlation rules \[ID 24816\]
+#### DataMiner Cube - Correlation: Enhancements with regard to the use of placeholders in 'Send Email' actions of correlation rules \[ID 24816\]
 
 A number of minor enhancements have been made with regard to the use of placeholders in “Send Email” actions of correlation rules.
 
@@ -229,7 +229,7 @@ A number of enhancements have been made with respect to the DELT export process.
 
 #### Automation: UnSetFlag method now also added to IEngine interface \[ID 25188\]
 
-Since DataMiner 10.0.0/10.0.1, you can use the engine.UnSetFlag method to clear the AllowUndef, NoInformationEvents and NoKeyCaching runtime flags in an Automation script.
+Since DataMiner 10.0.0/10.0.1, you can use the engine.UnSetFlag method to clear the AllowUndef, NoInformationEvents and NoKeyCaching runtime flags in an automation script.
 
 This method has now also been added to the IEngine interface.
 
@@ -337,7 +337,7 @@ In the *Agents* section of *System Center*, after a Failover switch, in some cas
 
 #### DataMiner Cube - Automation: Problem when turning a SET action into a GET action or vice versa \[ID 24498\]
 
-When you added a SET action to an Automation script and then changed it to a GET action (or vice versa), in some cases, it would no longer be possible to configure the action.
+When you added a SET action to an automation script and then changed it to a GET action (or vice versa), in some cases, it would no longer be possible to configure the action.
 
 #### DataMiner Cube - Protocols & Templates: Problem when trying to select another protocol version in the 'List based on protocol version' box \[ID 24499\]
 
@@ -621,9 +621,9 @@ The URL argument “cpes” now has the following extended format:
 ?cpes=dmaID%2FeID%2FFieldPID%2FFieldValue%2FTableIndexPID%2FIndexValue
 ```
 
-#### Interactive Automation scripts: Problem with checkbox updates \[ID 25054\]
+#### Interactive automation scripts: Problem with checkbox updates \[ID 25054\]
 
-In interactive Automation scripts, in some cases, checkbox components would not be updated correctly.
+In interactive automation scripts, in some cases, checkbox components would not be updated correctly.
 
 #### SLDMS runtime errors when connection with remote DMA could not be initialized \[ID 25068\]
 
@@ -697,9 +697,9 @@ In some cases, an error could occur in SLNet when you performed a diagnostic req
 
 If a protocol with serial connection over UDP or TDC/IP used either an action of type "close" on a serial connection or a parameter with type option "dynamic IP", a runtime error could occur in the protocol thread.
 
-#### Automation: Options text in narrow Automation script execution window not fully displayed \[ID 25226\]
+#### Automation: Options text in narrow automation script execution window not fully displayed \[ID 25226\]
 
-In the window displaying the options for the execution of an Automation script, text wrapping was not implemented, so that it could occur that the text was not fully displayed if the window was too narrow.
+In the window displaying the options for the execution of an automation script, text wrapping was not implemented, so that it could occur that the text was not fully displayed if the window was too narrow.
 
 #### Problem with EPM filters \[ID 25231\]
 
@@ -745,7 +745,7 @@ In some cases, an error could occur in SLNet when retrieving the CPU usage or th
 
 #### Automation: Scripts using a library could no longer be executed after a DataMiner restart \[ID 25282\]
 
-After a DataMiner restart, in some cases, Automation scripts that used a library could no longer be executed because the DataMiner Agent was not able to find the DLL file of that library.
+After a DataMiner restart, in some cases, automation scripts that used a library could no longer be executed because the DataMiner Agent was not able to find the DLL file of that library.
 
 #### DataMiner Cube - Workspaces: A saved workspace could no longer be opened in an undocked window \[ID 25308\]
 

@@ -14,7 +14,7 @@ uid: General_Main_Release_10.0.0_CU4
 
 #### DataMiner Cube - Automation: Dummies, parameters and memory files now sorted in the order in which they were added to the script \[ID 25897\]
 
-Up to now, the dummies, parameters and memory files added to an Automation script were sorted naturally. From now on, they will be sorted in the order in which they were added to the script.
+Up to now, the dummies, parameters and memory files added to an automation script were sorted naturally. From now on, they will be sorted in the order in which they were added to the script.
 
 #### DataMiner Cube - Visual Overview: Colors linked to the Cube theme will now be changed immediately when you change the Cube theme \[ID 26045\]
 
@@ -81,7 +81,7 @@ The problem would occur in the following situations:
 
 #### Automation scripts: Problem when a parameter specified in an email action contained a double quote character \[ID 26046\]
 
-When, in an Automation script, you specified a parameter containing a double quote character in an email action configured to send a report, in some cases, it would not be possible to save the script.
+When, in an automation script, you specified a parameter containing a double quote character in an email action configured to send a report, in some cases, it would not be possible to save the script.
 
 #### DataMiner Cube - Trending: Zoom buttons in top-right corner of a trend graph window would incorrectly not be displayed \[ID 26068\]
 
@@ -145,7 +145,7 @@ When, in an element with DCF interfaces, rows were added or deleted in the DCF i
 
 #### Automation: Date and time not adapted to local time zone in calendar component \[ID 26258\]
 
-If an interactive Automation script used a calendar component, it could occur that the date and time in the component were not adapted to the local time zone.
+If an interactive automation script used a calendar component, it could occur that the date and time in the component were not adapted to the local time zone.
 
 #### DataMiner Cube - Data Display: Time control values would incorrectly change when you edited them \[ID 26278\]
 

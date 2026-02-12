@@ -312,13 +312,13 @@ Known limitations:
 
 ### DMS Automation
 
-#### Interactive Automation scripts: Support for datetime values in ISO 8601 format \[ID 27565\]
+#### Interactive automation scripts: Support for datetime values in ISO 8601 format \[ID 27565\]
 
 The UIResults.GetDateTime method now also supports datetime values in ISO 8601 format.
 
 Up to now, only datetime values in “dd/MM/yyyy HH:mm:ss” were supported.
 
-#### Interactive Automation scripts: TreeViewItem now has an 'IsCollapsed' property \[ID 27567\]
+#### Interactive automation scripts: TreeViewItem now has an 'IsCollapsed' property \[ID 27567\]
 
 Each TreeViewItem in a TreeView component now has an “IsCollapsed” property.
 
@@ -753,7 +753,7 @@ When, in the *Profiles* app, you duplicated a profile parameter of type “discr
 
 In some cases, after a DataMiner process had generated a crashdump, it could occur that no DataMiner restart was triggered even though this should have been the case.
 
-#### Interactive Automation scripts: Problems with the UIBlockDefinition.IsEnabled and UIBlockDefinition.InitialValue properties \[ID 27326\]
+#### Interactive automation scripts: Problems with the UIBlockDefinition.IsEnabled and UIBlockDefinition.InitialValue properties \[ID 27326\]
 
 Up to now, UIBlockDefinition.IsEnabled was not applied for blocks of type “checkbox”. From now on, a block of type “checkbox” will be disabled when the UIBlockDefinition.IsEnabled property is set to False.
 
@@ -812,9 +812,9 @@ In some cases, protocol-level TTL settings would incorrectly not be taken into a
 
 If a column parameter entry that was set to *Excluded* was duplicated in an alarm template, it could occur that it was not possible to edit the duplicated entry.
 
-#### Problem when a QAction launched an Automation script immediately after the element had been started \[ID 27431\]
+#### Problem when a QAction launched an automation script immediately after the element had been started \[ID 27431\]
 
-When a QAction launched an Automation script immediately after the element had been started, in some cases, an exception could be thrown.
+When a QAction launched an automation script immediately after the element had been started, in some cases, an exception could be thrown.
 
 #### DataMiner Cube would no longer receive data updates from the DataMiner Agent it was connected to \[ID 27434\]
 
@@ -960,7 +960,7 @@ The following minor issues could occur in the BPA framework:
 
 #### DataMiner Cube - Alarm Console: Problem with alarm hyperlinks when the first character of the parameter name is hash character \[ID 27641\]
 
-When you right-clicked an alarm associated with a parameter of which the name started with a “#” character and then clicked an alarm hyperlink that ran an Automation script that used that parameter name as input, in some cases, an error could occur.
+When you right-clicked an alarm associated with a parameter of which the name started with a “#” character and then clicked an alarm hyperlink that ran an automation script that used that parameter name as input, in some cases, an error could occur.
 
 #### DataMiner Cube: Clicking a pinned or recently opened custom element app would incorrectly cause another app to open \[ID 27642\]
 
@@ -970,7 +970,7 @@ When the *Activities* tab of the navigation pane listed multiple custom element 
 
 In some cases, FileInfoManager would handle production protocols incorrectly.
 
-Also, Automation script IDs will now be case insensitive.
+Also, automation script IDs will now be case insensitive.
 
 #### SLAnalytics: Problem when updating behavioral anomaly detection suggestion events \[ID 27646\]
 

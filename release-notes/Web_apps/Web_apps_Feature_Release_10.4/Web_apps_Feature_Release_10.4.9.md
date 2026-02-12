@@ -14,13 +14,13 @@ uid: Web_apps_Feature_Release_10.4.9
 
 ## New features
 
-#### Low-Code Apps: New 'Interactive Automation script' component [ID 39969]
+#### Low-Code Apps: New 'Interactive automation script' component [ID 39969]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-In low-code apps, you can now use *Interactive Automation script* components.
+In low-code apps, you can now use *Interactive automation script* components.
 
-An *Interactive Automation script* component allows you to launch a preset interactive Automation script (ad hoc, on view, or after an event has occurred) and to display its UI. It also allows you to select a script and launch it, or to abort the script that is being run.
+An *Interactive automation script* component allows you to launch a preset interactive automation script (ad hoc, on view, or after an event has occurred) and to display its UI. It also allows you to select a script and launch it, or to abort the script that is being run.
 
 When you launch a new script while another is being run, the new script will start once the other script has finished.
 
@@ -28,7 +28,7 @@ In the settings of the component, you can also opt to have the component either 
 
 > [!NOTE]
 >
-> - The component cannot be used to launch Automation scripts that are not interactive.
+> - The component cannot be used to launch automation scripts that are not interactive.
 > - The component will not ask for any missing parameters or dummies. It expects them to be filled in either in its settings or via feeds. When input is missing, the script will not be launched and the component will be blank.
 > - By default, scripts will time out after 15 minutes. If a script times out, an error will be displayed in the component.
 
@@ -101,13 +101,13 @@ In published and previewed apps, the *Edit* button will now always be displayed 
 
 Because of a number of enhancements, overall performance has increased when loading dashboards, pages and panels that contain trend graphs.
 
-#### Review of all interactive Automation script components to make sure they fully inherit the correct theme [ID 40092]
+#### Review of all interactive automation script components to make sure they fully inherit the correct theme [ID 40092]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-As from DataMiner version 10.4.4, when an interactive Automation script is launched from a web app, the windows and popups of that script will inherit the foreground color and the default component background color of the page, panel or dashboard from which the script was launched.
+As from DataMiner version 10.4.4, when an interactive automation script is launched from a web app, the windows and popups of that script will inherit the foreground color and the default component background color of the page, panel or dashboard from which the script was launched.
 
-All interactive Automation scripts components have now been reviewed to make sure they fully inherit the correct theme.
+All interactive automation scripts components have now been reviewed to make sure they fully inherit the correct theme.
 
 #### Security enhancements [ID 40210] [ID 40290]
 
@@ -145,11 +145,11 @@ From now on, the number of GQI queries that can be added to a dashboard or a low
 
 ### Fixes
 
-#### Dashboards app & Low-Code Apps: Problem when a tree view is expanded or collapsed in an interactive Automation script [ID 39862]
+#### Dashboards app & Low-Code Apps: Problem when a tree view is expanded or collapsed in an interactive automation script [ID 39862]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-When, in a interactive Automation script launched from a dashboard or a low-code app, a tree view component was expanded or collapsed, in some cases, multiple *Continue* messages would incorrectly be sent to the script. From now on, when a tree view component is expanded or collapsed, only one *Continue* message will be sent.
+When, in a interactive automation script launched from a dashboard or a low-code app, a tree view component was expanded or collapsed, in some cases, multiple *Continue* messages would incorrectly be sent to the script. From now on, when a tree view component is expanded or collapsed, only one *Continue* message will be sent.
 
 #### Web apps: Users would not get logged in after pressing ENTER on the authentication page [ID 39961]
 

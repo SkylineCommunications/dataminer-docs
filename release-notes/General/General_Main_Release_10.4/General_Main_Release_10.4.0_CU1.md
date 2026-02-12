@@ -321,7 +321,7 @@ In some cases, during startup, SLProtocol would stop working when it was not abl
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-When an Automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.
+When an automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.
 
 #### Problem with SLProtocol when it took longer than 15 minutes to execute a poll group [ID 38858]
 

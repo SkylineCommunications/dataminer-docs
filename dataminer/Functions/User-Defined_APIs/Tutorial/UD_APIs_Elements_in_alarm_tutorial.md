@@ -13,18 +13,18 @@ The content and screenshots for this tutorial were created in DataMiner version 
 
 ## Overview
 
-- [Step 1: Create the Automation script](#step-1-create-the-automation-script)
+- [Step 1: Create the automation script](#step-1-create-the-automation-script)
 - [Step 2: Create an API token](#step-2-create-an-api-token)
 - [Step 3: Create the API definition](#step-3-create-the-api-definition)
 - [Step 4: Trigger the API using Postman](#step-4-trigger-the-api-using-postman)
 
-## Step 1: Create the Automation script
+## Step 1: Create the automation script
 
-To develop this new API script, you can use the Automation script solution from the [hello world tutorial](xref:UD_APIs_Hello_world_tutorial#step-1-create-an-automation-script-solution). Make sure you have this solution open in Visual Studio. You will need a new script project to develop this new API.
+To develop this new API script, you can use the automation script solution from the [hello world tutorial](xref:UD_APIs_Hello_world_tutorial#step-1-create-an-automation-script-solution). Make sure you have this solution open in Visual Studio. You will need a new script project to develop this new API.
 
 1. In Visual Studio, right-click the solution at the top of the *Solution Explorer*, and select *Add* > *New DataMiner Automation Script*.
 
-   ![Visual Studio add new Automation script solution](~/dataminer/images/UDAPIS_Tutorials_Elements_Add_New_Script.jpg)
+   ![Visual Studio add new automation script solution](~/dataminer/images/UDAPIS_Tutorials_Elements_Add_New_Script.jpg)
 
 1. In the dialog, enter the name "ElementsAPI".
 
@@ -186,7 +186,7 @@ The next step is to create an API definition that ties the token and script toge
 
 1. Open the *Automation* module in DataMiner Cube.
 
-1. Open the *ElementsAPI* Automation script.
+1. Open the *ElementsAPI* automation script.
 
 1. At the bottom of the screen, click the *Configure API* button.
 

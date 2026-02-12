@@ -785,11 +785,11 @@ Example:
 </MaintenanceSettings>
 ```
 
-### Enabling information events when scripts are started by Correlation rules or scheduled tasks
+### Enabling information events when scripts are started by correlation rules or scheduled tasks
 
-From DataMiner 10.5.2/10.6.0 onwards<!--RN 41653-->, by default no information events are generated when Automation scripts are triggered by the Correlation engine. From DataMiner 10.5.4/10.6.0 onwards<!--RN 41970-->, this also applies to Automation scripts triggered by the Scheduler module.
+From DataMiner 10.5.2/10.6.0 onwards<!--RN 41653-->, by default no information events are generated when automation scripts are triggered by the Correlation engine. From DataMiner 10.5.4/10.6.0 onwards<!--RN 41970-->, this also applies to automation scripts triggered by the Scheduler module.
 
-If you do want information events to be generated when scripts are triggered by Correlation rules or scheduled tasks, add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to `false`:
+If you do want information events to be generated when scripts are triggered by correlation rules or scheduled tasks, add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to `false`:
 
 ``` xml
 <MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">

@@ -14,13 +14,13 @@ uid: Web_apps_Feature_Release_10.3.7
 
 ## New features
 
-#### Interactive Automation scripts: New DownloadButton component [ID 35869]
+#### Interactive automation scripts: New DownloadButton component [ID 35869]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
-In an interactive Automation script launched from a dashboard or a low-code app, you can now use *DownloadButton* components. These components allow you to add download buttons that will enable users to download a specified file from the server.
+In an interactive automation script launched from a dashboard or a low-code app, you can now use *DownloadButton* components. These components allow you to add download buttons that will enable users to download a specified file from the server.
 
-To add a *DownloadButton* component to an interactive Automation script, create a *UIBlockDefinition* and set its *Type* property to "UIBlockType.DownloadButton". The button can be configured and styled in same way as a regular button component. For example, you can set the *Style* property to "Style.Button.CallToAction" and the *Text* property to "Download".
+To add a *DownloadButton* component to an interactive automation script, create a *UIBlockDefinition* and set its *Type* property to "UIBlockType.DownloadButton". The button can be configured and styled in same way as a regular button component. For example, you can set the *Style* property to "Style.Button.CallToAction" and the *Text* property to "Download".
 
 To configure the download properties, assign `AutomationDownloadButtonOptions` to the *ConfigOptions* property of the *UIBlockDefinition*.
 

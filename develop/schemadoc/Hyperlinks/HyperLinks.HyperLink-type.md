@@ -13,7 +13,7 @@ Specifies the hyperlink type.
 | ***string restriction*** |  |  |
 | &#160;&#160;Enumeration | url | Opens a URL in a web browser. |
 | &#160;&#160;Enumeration | execute | Runs an executable file. |
-| &#160;&#160;Enumeration | script | Runs an Automation script. |
+| &#160;&#160;Enumeration | script | Runs an automation script. |
 | &#160;&#160;Enumeration | openview | Opens a DataMiner view in a new card. If the [VID] placeholder is used in the <Hyperlink> tag, the view of the selected alarm is opened. |
 | &#160;&#160;Enumeration | openservice | Opens a DataMiner service in a new card. If the [SID] placeholder is used in the <Hyperlink> tag, the service of the selected alarm is opened. |
 | &#160;&#160;Enumeration | openelement | Opens a DataMiner element in a new card. If the [EID] placeholder is used in the <Hyperlink> tag, the element of the selected alarm is opened. |
@@ -30,10 +30,10 @@ The following types are supported:
 
 - **url**: Opens a URL in a web browser.
 - **execute**: Runs an executable file.
-- **script**: Runs an Automation script. For information on how to specify the script to be run, see [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script).
+- **script**: Runs an automation script. For information on how to specify the script to be run, see [Linking a shape to an automation script](xref:Linking_a_shape_to_an_Automation_script).
 
   > [!NOTE]
-  > It is not necessary to use the "Script:" prefix in a second-generation hyperlink, as the *type* attribute already makes it clear an Automation script is referred to.
+  > It is not necessary to use the "Script:" prefix in a second-generation hyperlink, as the *type* attribute already makes it clear an automation script is referred to.
 
 - **openview**: Opens a DataMiner view in a new card. If the \[VID\] placeholder is used in the \<Hyperlink> tag, the view of the selected alarm is opened.
 - **openservice**: Opens a DataMiner service in a new card. If the \[SID\] placeholder is used in the \<Hyperlink> tag, the service of the selected alarm is opened.

@@ -98,16 +98,16 @@ Rules that apply with regard to multiple sections:
 
 Up to now, if there were multiple sections, it was allowed for some of those sections to not contain all the required fields. From now on, every section must contain each and every required field.
 
-#### DataMiner Object Models: Action buttons can now be configured to launch an interactive Automation script when clicked [ID 35226]
+#### DataMiner Object Models: Action buttons can now be configured to launch an interactive automation script when clicked [ID 35226]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
-An action button can now be configured to launch an interactive Automation script when clicked. To do so, set the *IsInteractive* property of the action to true.
+An action button can now be configured to launch an interactive automation script when clicked. To do so, set the *IsInteractive* property of the action to true.
 
-When such a button is clicked in a low-code app, the UI of the interactive Automation script will be displayed in a pop-up window on top of the low-code app.
+When such a button is clicked in a low-code app, the UI of the interactive automation script will be displayed in a pop-up window on top of the low-code app.
 
 > [!NOTE]
-> One button can only execute one action. So, one button can only execute one interactive Automation script.
+> One button can only execute one action. So, one button can only execute one interactive automation script.
 
 #### DataMiner Object Models: New field descriptors [ID 35278]
 

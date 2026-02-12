@@ -48,7 +48,7 @@ When you retrieve the local element from IDms, you can now also perform a specia
 
 #### New feature - Automation script execution enhanced with async execution and additional run flags
 
-You can now trigger the execution of an Automation script asynchronously. In addition, you can provide several different run options similar to the options you get when triggering a script manually (e.g. LockElements, CheckSets, WaitWhenLocked, etc.).
+You can now trigger the execution of an automation script asynchronously. In addition, you can provide several different run options similar to the options you get when triggering a script manually (e.g. LockElements, CheckSets, WaitWhenLocked, etc.).
 
 ### 1.0.1.2
 
@@ -75,7 +75,7 @@ The latest benchmark tests, at the time of release, demonstrate that the system'
 
 #### Fix - Automation scripts failed to parse with EXE blocks other than C\#
 
-IDms can now retrieve Automation scripts that have EXE blocks that do not contain C# code.
+IDms can now retrieve automation scripts that have EXE blocks that do not contain C# code.
 
 #### New feature - Creation of service properties
 
@@ -107,7 +107,7 @@ Asking for all elements under a view will now return all stopped and paused elem
 
 #### New feature - Automation script retrieval support
 
-Support has been added to retrieve and create Automation scripts.
+Support has been added to retrieve and create automation scripts.
 
 The following calls have been added:
 

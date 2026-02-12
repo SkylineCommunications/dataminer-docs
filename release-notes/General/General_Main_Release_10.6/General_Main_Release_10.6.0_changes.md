@@ -295,11 +295,11 @@ Because of a number of enhancements, the locking mechanism in the following Reso
 | ID cache | When a specific ReservationInstance is requested by ID, the result is cached in this ID cache. When an internal request is made for a specific ID, the cached ReservationInstance will be returned. Used when adding or editing ReservationInstances and when executing start/stop actions and ReservationEvents. |
 | Time range cache | When ReservationInstances within a specific time range are requested, all instances in that time range will be cached in this cache. Used when new bookings are created or when eligible resources are requested. |
 
-#### Executing Automation scripts using a Run method or a custom entry point containing the async keyword is no longer supported [ID 42534]
+#### Executing automation scripts using a Run method or a custom entry point containing the async keyword is no longer supported [ID 42534]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
-From now on, when an Automation script is executed asynchronously using either a `Run` method or a custom entry point containing the `async` keyword, an error message will appear, mentioning that this is not supported.
+From now on, when an automation script is executed asynchronously using either a `Run` method or a custom entry point containing the `async` keyword, an error message will appear, mentioning that this is not supported.
 
 In that error message, users will also be directed to the [documentation](https://aka.dataminer.services/AsyncAutomation) for more information on handling async code.
 
@@ -703,22 +703,22 @@ Because of a number of enhancements, overall performance of the the *Cube CRL Fr
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
-#### Interactive Automation scripts launched from web apps: UI components Time and Calendar can now all display seconds [ID 44487]
+#### Interactive automation scripts launched from web apps: UI components Time and Calendar can now all display seconds [ID 44487]
 
 <!-- MR 10.6.0 - FR 10.6.3 -->
 
-Up to now, in interactive Automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
+Up to now, in interactive automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
 
 - `UIBlockType.Time` with `AutomationDateTimePickerOptions`
 - `UIBlockType.Time` with `AutomationDateTimeUpDownOptions`
 - `UIBlockType.Time` with `AutomationTimePickerOptions`
 - `UIBlockType.Calendar` with `AutomationCalendarOptions`
 
-#### Interactive Automation scripts in web apps: New UsePreviousCollapsedState property will allow tree nodes to restore their IsCollapsed state when the UI is updated [ID 44515]
+#### Interactive automation scripts in web apps: New UsePreviousCollapsedState property will allow tree nodes to restore their IsCollapsed state when the UI is updated [ID 44515]
 
 <!-- MR 10.6.0 - FR 10.6.3 -->
 
-When, in an interactive Automation script, a TreeView control was used with the `SupportsLazyLoading` option set to false, up to now, each time the UI was updated, all tree nodes would revert their expanded state back to the `IsCollapsed` setting.
+When, in an interactive automation script, a TreeView control was used with the `SupportsLazyLoading` option set to false, up to now, each time the UI was updated, all tree nodes would revert their expanded state back to the `IsCollapsed` setting.
 
 Tree nodes now have a new `UsePreviousCollapsedState` property. By default, this property will be set to false. When set to true, each time the UI is updated, the previous state of the tree node in question will be restored. If no previous state is available, the current `IsCollapsed` state will be applied.
 
@@ -775,11 +775,11 @@ When a trend graph seemed to increase or decrease, in some cases, change points 
 
 Because of an issue in SLNet, up to now, if the same group would be added more than once in the `UpdateLibraryCredentialMessage` (i.e. the SLNet message used to add or update credentials), duplicated `Group` tags would end up in the *Library.xml* file. As a result, in DataMiner Cube, the updated credential would get stuck, showing a "[modified]" tag.
 
-#### Problem with SLAutomation when a Notify method was called shortly after an Automation script had finished [ID 42465]
+#### Problem with SLAutomation when a Notify method was called shortly after an automation script had finished [ID 42465]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
-When a Notify method was called from a thread created within an Automation script shortly after that Automation script had finished, in some cases, the SLAutomation process could stop working.
+When a Notify method was called from a thread created within an automation script shortly after that automation script had finished, in some cases, the SLAutomation process could stop working.
 
 #### SLNet memory leak related to indexing logic for Cube search bar [ID 42544]
 

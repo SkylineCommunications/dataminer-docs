@@ -25,7 +25,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | MD5 | Message Digest 5. Cryptographic hash algorithm. |
 | Measurement point | In the context of [Spectrum Analysis](xref:SpectrumAnalysis), a measurement point is series of sets that is executed on devices to select an input for a spectrum analyzer device, e.g. to set a switch to the correct position. |
 | Mediation protocol | Standardized protocol that forms a mediation layer on top of device-specific protocols, thereby providing a unified view on similar devices that have a different device-specific protocol. Also known as base protocol. |
-| Memory file | Variable within an Automation script that consists of a container of values. See [Script variables](xref:Script_variables). |
+| Memory file | Variable within an automation script that consists of a container of values. See [Script variables](xref:Script_variables). |
 | MER | Modulation Error Ratio. Measurement of the performance of a digital media transmitter or receiver in a communications system using digital modulation. |
 | MFN | Multifrequency Network. Network where multiple radio frequencies are used to transmit media content. |
 | MHEG-5 | Set of international standards regarding the presentation of multimedia information, standardized by the Multimedia and Hypermedia Experts Group (MHEG). |
@@ -220,7 +220,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SOA | Service-Oriented Architecture. Software architecture where services are provided to the other components by application components, through a communication protocol over a network. |
 | SOAP | Simple Object Access Protocol. Messaging protocol for exchanging structured information in the implementation of web services in computer networks. |
 | SOC | Security Operations Center. Centralized facility from which a security team works to prevent, detect and handle cybersecurity threats and incidents. |
-| Software redundancy | Redundancy logic configured in DataMiner Cube, based on Automation scripts. See [Software redundancy](xref:About_redundancy_groups#software-redundancy). |
+| Software redundancy | Redundancy logic configured in DataMiner Cube, based on automation scripts. See [Software redundancy](xref:About_redundancy_groups#software-redundancy). |
 | SONET | Synchronous Optical NETworking. Standard technology in the US and Canada for synchronous data transmission on optical media. Its European counterpart is SDH. |
 | SOP | Standard Operating Procedure. Set of step-by-step instructions used to carry out complex routine operations. |
 | Spectrum analysis | DataMiner module that can be used to integrate spectrum analyzers in the DMS, so that they can be used for continuous RF performance monitoring. See [Spectrum Analysis](xref:SpectrumAnalysis). |

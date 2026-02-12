@@ -2,17 +2,17 @@
 uid: Building_interactive_Automation_scripts_with_CSharp
 ---
 
-# Building interactive Automation scripts with C#
+# Building interactive automation scripts with C#
 
-In an Automation script, you can define custom-made dialog boxes in C# code blocks. When the script is run, those dialog boxes can then either ask the user to provide input or display some status information or error message.
+In an automation script, you can define custom-made dialog boxes in C# code blocks. When the script is run, those dialog boxes can then either ask the user to provide input or display some status information or error message.
 
 In DataMiner Cube, it is also possible to add these dialog boxes using the script action *User interaction*. For more information, see [User interaction](xref:User_interaction).
 
 > [!NOTE]
 >
-> - For detailed information on the classes, methods, and properties that can be used in C# code blocks of Automation scripts, see [Skyline.DataMiner.Automation](xref:Skyline.DataMiner.Automation).
-> - For more information on how to abort an interactive Automation script, see [How do I abort a running Automation script?](xref:How_do_I_abort_a_running_Automation_script)
-> - For a high-level API to build interactive Automation scripts, see [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit).
+> - For detailed information on the classes, methods, and properties that can be used in C# code blocks of automation scripts, see [Skyline.DataMiner.Automation](xref:Skyline.DataMiner.Automation).
+> - For more information on how to abort an interactive automation script, see [How do I abort a running automation script?](xref:How_do_I_abort_a_running_Automation_script)
+> - For a high-level API to build interactive automation scripts, see [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit).
 > - From DataMiner 10.5.9/10.6.0 onwards, interactivity of a script can be defined using the [Interactivity](xref:DMSScript.Interactivity) tag of the script.
 
 > [!IMPORTANT]

@@ -605,7 +605,7 @@ A LogEntry object contains the following fields:
 
 #### LogHelper API \[ID 26434\]
 
-The new LogHelper API, which combines the SLLoggerUtil API and the LogEntry repository API, can be used in Automation scripts and in QActions to manage log entries stored in Indexing Engine:
+The new LogHelper API, which combines the SLLoggerUtil API and the LogEntry repository API, can be used in automation scripts and in QActions to manage log entries stored in Indexing Engine:
 
 - ILogHelper#Log can be used to add new log entries to the database.
 

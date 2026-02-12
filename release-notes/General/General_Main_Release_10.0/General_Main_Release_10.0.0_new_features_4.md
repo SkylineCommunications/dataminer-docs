@@ -141,7 +141,7 @@ Currently, the following components can be added to a dashboard.
     |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Parameter page   | Displays a data page of an element.                                                                                                                                                                    |
     | Trend statistics | Shows the minimum, average and maximum values of one or more trended parameters.                                                                                                                       |
-    | Visual overview  | Shows a Visio file linked to an element, a service or a view. Note that if this Visio file contains a shape linked to an Automation script, that script will be executed when you click the shape. |
+    | Visual overview  | Shows a Visio file linked to an element, a service or a view. Note that if this Visio file contains a shape linked to an automation script, that script will be executed when you click the shape. |
 
 - Feeds
 
@@ -265,9 +265,9 @@ The separator used in CSV exports from the Dashboards app is based on the “CSV
 
 ### DMS Automation
 
-#### .NET Compiler Platform now used for C# Automation scripts \[ID 20746\]
+#### .NET Compiler Platform now used for C# automation scripts \[ID 20746\]
 
-All C# Automation scripts will now be validated and compiled using the .NET Compiler Platform (also known as "Roslyn"), which will enable the use of syntax of C# version 6.0 and higher.
+All C# automation scripts will now be validated and compiled using the .NET Compiler Platform (also known as "Roslyn"), which will enable the use of syntax of C# version 6.0 and higher.
 
 #### New IDPResource and IDPManagerHelper class \[ID 20892\]
 
@@ -275,9 +275,9 @@ A new *IDPResource* and *IDPManagerHelper* class are now available in DMS Autom
 
 IDP resources can only be created if an IDP license is present. Such a license allows you to add up to 10 IDP resources, as well as to create booking instances and resource pools using IDP resources. The booking instances using IDP resources are not taken into account for the SRM volume license.
 
-#### Radio button lists can now be added to interactive Automation script dialog boxes \[ID 21475\]
+#### Radio button lists can now be added to interactive automation script dialog boxes \[ID 21475\]
 
-It is now possible to add radio button lists to an interactive Automation script dialog box.
+It is now possible to add radio button lists to an interactive automation script dialog box.
 
 First, create the list:
 
@@ -298,9 +298,9 @@ foreach (string sOption in dropDownOptions)
 > [!NOTE]
 > When no initial value is passed to this list, no radio button will be selected by default.
 
-#### Password boxes can now be added to interactive Automation script dialog boxes \[ID 21518\]
+#### Password boxes can now be added to interactive automation script dialog boxes \[ID 21518\]
 
-It is now possible to add password boxes to an interactive Automation script dialog box.
+It is now possible to add password boxes to an interactive automation script dialog box.
 
 ```csharp
 UIBlockDefinition blockPasswordBox = new UIBlockDefinition();
@@ -313,9 +313,9 @@ Optionally, you can set the HasPeekIcon property to display an icon that, when c
 blockPasswordBox.HasPeekIcon = allowPeek;
 ```
 
-#### Dialog box of an interactive Automation script can now have a custom title \[ID 21552\]
+#### Dialog box of an interactive automation script can now have a custom title \[ID 21552\]
 
-When defining a dialog box of an interactive Automation script, you can now specify a custom title.
+When defining a dialog box of an interactive automation script, you can now specify a custom title.
 
 Example:
 
@@ -326,7 +326,7 @@ uibDialogBox.Title = “My dialog box title”;
 
 #### AlarmTemplateHelper \[ID 21878\]
 
-The AlarmTemplateHelper will allow Automation scripts to manipulate alarm templates.
+The AlarmTemplateHelper will allow automation scripts to manipulate alarm templates.
 
 ##### Types of methods and calls
 
@@ -388,7 +388,7 @@ The AlarmTemplateHelper can throw the following exceptions:
 
 #### Passing information from a subscript to the parent script \[ID 21952\]
 
-In an Automation script, it is now possible to pass information from a subscript to the parent script.
+In an automation script, it is now possible to pass information from a subscript to the parent script.
 
 ##### Retrieving a dictionary with key/value pairs from a subscript
 
@@ -432,7 +432,7 @@ public void Run(Engine engine)
 
 #### Finding an interactive client by user cookie \[ID 22227\]
 
-In Automation scripts and QActions, it is now possible to find an interactive client by user cookie instead of by user name.
+In automation scripts and QActions, it is now possible to find an interactive client by user cookie instead of by user name.
 
 General syntax of the FindInteractiveClient method:
 
@@ -473,7 +473,7 @@ void SetParameterByPrimaryKey(int pid, string index, object value, bool? generat
 
 #### C# code blocks can now be compiled as separate libraries \[ID 23504\]\[ID 23699\]
 
-When you add an action of type “C# code” to an Automation script, you can now indicate that you want to have this code block compiled as a separate library.
+When you add an action of type “C# code” to an automation script, you can now indicate that you want to have this code block compiled as a separate library.
 
 To do so, open the *Advanced* section, and do the following:
 
@@ -484,9 +484,9 @@ To do so, open the *Advanced* section, and do the following:
    > [!NOTE]
    >
    > - Library names cannot contain periods (“.”).
-   > - An Automation script cannot contain multiple libraries with the same name. Library names must be unique within a particular Automation script.
+   > - An automation script cannot contain multiple libraries with the same name. Library names must be unique within a particular automation script.
 
-Once you have compiled a C# code block as a library, you can then import that library into other Automation scripts. To do so, in the *Advanced* section of a C# code block of a given Automation script, do the following:
+Once you have compiled a C# code block as a library, you can then import that library into other automation scripts. To do so, in the *Advanced* section of a C# code block of a given automation script, do the following:
 
 - In the *Script references* box, enter a reference to the library that you want to import.
 
@@ -497,16 +497,16 @@ Once you have compiled a C# code block as a library, you can then import that li
 
 > [!NOTE]
 >
-> - To optimize performance and use of resources, it is advised to create each library in a separate Automation script. This will minimize the amount of recompilations and DLL generations.
-> - When you recompile a library, all Automation scripts and libraries that use that library will also be recompiled.
-> - The order of the C# blocks in an Automation script will define the order in which the libraries will be compiled.
-> - When you delete an Automation script that contains a library, all files belonging to that library will also be deleted. As a result, you will not be able to recompile any of the depending scripts until you add the deleted library again (with the same script name and library name).
-> - When you delete a library C# block from an Automation script and then save the script, the DLL of that deleted library will not be deleted. The DLL file and all references to that deleted library should be removed manually.
-> - When you compile a library, its DLL file (and, if compiled in debug mode, its PDB and CS files) are stored in `C:\Skyline DataMiner\Scripts\Libraries`. When the first Automation-related action (i.e. creating, editing or deleting an Automation script, or validating a C# code block) is performed after a DataMiner restart, this folder is cleaned up. After cleaning, of each library it will only contain the most recent version.
+> - To optimize performance and use of resources, it is advised to create each library in a separate automation script. This will minimize the number of recompilations and DLL generations.
+> - When you recompile a library, all automation scripts and libraries that use that library will also be recompiled.
+> - The order of the C# blocks in an automation script will define the order in which the libraries will be compiled.
+> - When you delete an automation script that contains a library, all files belonging to that library will also be deleted. As a result, you will not be able to recompile any of the depending scripts until you add the deleted library again (with the same script name and library name).
+> - When you delete a library C# block from an automation script and then save the script, the DLL of that deleted library will not be deleted. The DLL file and all references to that deleted library should be removed manually.
+> - When you compile a library, its DLL file (and, if compiled in debug mode, its PDB and CS files) are stored in `C:\Skyline DataMiner\Scripts\Libraries`. When the first Automation-related action (i.e. creating, editing or deleting an automation script, or validating a C# code block) is performed after a DataMiner restart, this folder is cleaned up. After cleaning, of each library it will only contain the most recent version.
 
-#### Interactive Automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
+#### Interactive automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
 
-In an interactive Automation script, it is now possible to upload files from a client computer.
+In an interactive automation script, it is now possible to upload files from a client computer.
 
 To allow users to do so, you need to add a file selector control to the script in the following manner:
 
@@ -529,7 +529,7 @@ All files uploaded by users will by default be placed in the `C:\Skyline DataMin
 
 #### New engine.UnSetFlag method to clear runtime flags \[ID 23961\]
 
-In an Automation script, you can now use the engine.UnSetFlag method to clear the following runtime flags:
+In an automation script, you can now use the engine.UnSetFlag method to clear the following runtime flags:
 
 - RunTimeFlags.AllowUndef
 - RunTimeFlags.NoInformationEvents
@@ -554,9 +554,9 @@ public void SetParameterSilent(int pid, object value) {
 
 When defining a notification message template in the *NotifyTemplates.xml* file, you can use a number of placeholders.
 
-From now on, the “elementdesc” placeholder (i.e. element description) can also be used in templates for notification messages sent as a result of some triggered Correlation rule. Up to now, it could only be used in templates for notification messages that are sent independently (not as a result of some triggered correlation rule).
+From now on, the “elementdesc” placeholder (i.e. element description) can also be used in templates for notification messages sent as a result of some triggered correlation rule. Up to now, it could only be used in templates for notification messages that are sent independently (not as a result of some triggered correlation rule).
 
-#### New event to trigger Correlation rules at DataMiner startup \[ID 22622\]
+#### New event to trigger correlation rules at DataMiner startup \[ID 22622\]
 
 At DataMiner startup, a new event will now signal when the Correlation engine is up and running. This event will make it possible to trigger correlation rules at DataMiner startup.
 

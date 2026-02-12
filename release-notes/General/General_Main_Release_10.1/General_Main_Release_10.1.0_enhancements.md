@@ -186,7 +186,7 @@ A number of enhancements have been made to the mechanism used to delete data fro
 
 #### Mobile apps: Confirmation message when leaving page with interactive script or job configuration \[ID 25078\]
 
-When a user leaves a DataMiner mobile app page while in an interactive Automation script or while configuring jobs, a confirmation message will now be displayed. However, note that this is message is not displayed when the mobile apps are used on iOS.
+When a user leaves a DataMiner mobile app page while in an interactive automation script or while configuring jobs, a confirmation message will now be displayed. However, note that this is message is not displayed when the mobile apps are used on iOS.
 
 #### Reports & Dashboards: PDF library updated \[ID 25117\]
 
@@ -479,9 +479,9 @@ When an app package is uploaded to one of the DMAs in a Failover pair, it is now
 
 In the DataMiner HTML5 apps, when you fill in a control consisting of multiple parts, e.g. a datetime control, now the next part will always be automatically selected after a part has been completed.
 
-#### Dashboards app: Improved pop-up window when interactive Automation script is canceled \[ID 27141\]
+#### Dashboards app: Improved pop-up window when interactive automation script is canceled \[ID 27141\]
 
-If an interactive Automation script is canceled in the Dashboards app, a pop-up window will now be displayed with the title of the current content of the script, or with the name of the script if no title is available. The pop-up window will not mention the term "script" to avoid confusion in users who may not be aware that they are using a script.
+If an interactive automation script is canceled in the Dashboards app, a pop-up window will now be displayed with the title of the current content of the script, or with the name of the script if no title is available. The pop-up window will not mention the term "script" to avoid confusion in users who may not be aware that they are using a script.
 
 #### Improved logging of PowerShell scripts in DataMiner upgrades \[ID 27160\]
 
@@ -589,11 +589,11 @@ Virtual functions are now displayed in a separate *Virtual Functions* section i
 
 Due to a number of enhancements, overall performance has increased when connecting to a DataMiner Agent with a large amount of alarms.
 
-#### Interactive Automation scripts: No longer possible to clear the value of a selection box control \[ID 27845\]
+#### Interactive automation scripts: No longer possible to clear the value of a selection box control \[ID 27845\]
 
-Up to now, in an interactive Automation script, it was possible to clear the value of a selection box control by clicking an X button. From now on, this is no longer possible.
+Up to now, in an interactive automation script, it was possible to clear the value of a selection box control by clicking an X button. From now on, this is no longer possible.
 
-#### Interactive Automation scripts: Multiline text boxes will no longer expand when selected \[ID 27858\]
+#### Interactive automation scripts: Multiline text boxes will no longer expand when selected \[ID 27858\]
 
 Up to now, a multiline text box (i.e. a UIBlock of type TextBox with IsMultiline set to true) would by default have a height of 1 line and would expand when it was selected. From now on, its initial height will be fixed. It will no longer expand when selected.
 

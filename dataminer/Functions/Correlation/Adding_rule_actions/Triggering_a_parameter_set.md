@@ -4,7 +4,7 @@ uid: Triggering_a_parameter_set
 
 # Triggering a parameter set
 
-To make a Correlation rule trigger a parameter set:
+To make a correlation rule trigger a parameter set:
 
 1. In the *Actions* section of the details pane, click *Add Action* and select *Set parameter*.
 

@@ -11,7 +11,7 @@ This section explains the main kinds of scripting used in the SRM framework.
 
 ## Profile-Load Script (PLS)
 
-A Profile-Load Script (PLS) is an Automation script that is **used to apply profile instances or values onto a virtual function resource**. This script is executed when a booking enters a specific state. For example, at the start time of the booking, a PLS is used to apply a profile instance.
+A Profile-Load Script (PLS) is an automation script that is **used to apply profile instances or values onto a virtual function resource**. This script is executed when a booking enters a specific state. For example, at the start time of the booking, a PLS is used to apply a profile instance.
 
 A PLS is typically linked to a specific virtual function. The name of the PLS can therefore be added to the profile definition connected to the virtual function. As multiple connectors can expose the same virtual function, multiple PLSs can be linked to the same profile definition. A PLS requires a "FunctionDve" dummy linked to the connector exposing the virtual function, which ensures that the correct PLS will automatically be executed.
 
@@ -40,7 +40,7 @@ Data Transfer Rules are only used in the context of Service Orchestration.
 
 Data Transfer Rules are used at the moment when a booking is created, to **transfer data between several virtual functions of the selected service definition**. This way, a user will not have to request the same information several times during the booking creation process, but instead logic is applied to copy or even process specific information from one virtual function to another.
 
-Data Transfer Rules are implemented as custom Automation scripts.
+Data Transfer Rules are implemented as custom automation scripts.
 
 Two types of Data Transfer Rules exist:
 
@@ -73,7 +73,7 @@ Custom events are only applicable in the context of Service Orchestration.
 
 In addition to the default booking orchestration events (start of pre-roll, stop of pre-roll, start of post-roll, stop of post-roll), additional custom events can be configured for bookings. This can be configured in the [Booking Manager app](xref:Booking_Manager_user_interface).
 
-These custom events are **linked to Automation scripts that can execute any action**. Specific booking information can be added in the events, such as a booking reference.
+These custom events are **linked to automation scripts that can execute any action**. Specific booking information can be added in the events, such as a booking reference.
 
 ## Contributing conversion script
 

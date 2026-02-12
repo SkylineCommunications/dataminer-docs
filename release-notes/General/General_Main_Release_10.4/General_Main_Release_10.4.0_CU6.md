@@ -33,7 +33,7 @@ When, in the scope of behavioral anomaly detection, proactive cap detection or p
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.8 -->
 
-From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an Automation script:
+From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an automation script:
 
 `SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
 
@@ -43,11 +43,11 @@ From now on, the NATS configuration can be reset by calling the following endpoi
 
 From now on, alarms generated for child DVE elements using a parameter ID from the main DVE element can also get a focus value and, as a result, be grouped by Automatic incident tracking.
 
-#### SLAutomation: Enhanced compilation of Automation scripts [ID 39965]
+#### SLAutomation: Enhanced compilation of automation scripts [ID 39965]
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
-A number of enhancements have been made with regard to the compilation of Automation scripts.
+A number of enhancements have been made with regard to the compilation of automation scripts.
 
 #### DataMiner upgrade: ResetConfig.txt will no longer be added to FilesToDelete.txt [ID 39994]
 
@@ -81,11 +81,11 @@ Up to now, the factory reset tool *SLReset.exe* always used the relative path `.
 
 From now on, *SLReset.exe* will always use the absolute path `C:\Skyline DataMiner\Files\ResetConfig.txt` when locating *ResetConfig.txt*.
 
-#### Automation: Using the Engine.Sleep method in an Automation script could affect other scripts [ID 40104]
+#### Automation: Using the Engine.Sleep method in an automation script could affect other scripts [ID 40104]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, using the *Engine.Sleep* method in an Automation script could cause issues that would affect other scripts. This has now been resolved.
+Up to now, using the *Engine.Sleep* method in an automation script could cause issues that would affect other scripts. This has now been resolved.
 
 #### SLLogCollector: Enhanced CPU usage when 'Include memory dump' is selected [ID 40109]
 
@@ -259,7 +259,7 @@ When a DMA did not respond during the midnight synchronization (e.g. because the
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, an Automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.
+Up to now, an automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.
 
 #### SLProtocol would leak memory when performing an SNMP Set [ID 40112]
 

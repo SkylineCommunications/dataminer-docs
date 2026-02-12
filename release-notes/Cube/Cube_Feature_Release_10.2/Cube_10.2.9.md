@@ -37,7 +37,7 @@ These new password boxes can be found in the following locations:
 - System Center > Users/groups > Add new user... (peek only)
 - System Center > System Settings > Credentials Library
 - System Center > System Settings > LDAP
-- Interactive Automation scripts (`UIBlock` of type "PasswordBox")
+- Interactive automation scripts (`UIBlock` of type "PasswordBox")
 
 > [!NOTE]
 >
@@ -294,7 +294,7 @@ While making a spectrum recording, in some cases, the recording icon would no lo
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-When, in Visual Overview, you clicked a shape that executed two Automation scripts, the cursor would incorrectly still be displayed as a wait cursor after the two scripts had already finished.
+When, in Visual Overview, you clicked a shape that executed two automation scripts, the cursor would incorrectly still be displayed as a wait cursor after the two scripts had already finished.
 
 #### Spectrum analysis: Issues when playing a spectrum recording [ID 33918]
 
@@ -339,7 +339,7 @@ When you right-clicked a column header in an alarm tab and hovered over the *Add
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-When an element card was open on the DATA page, and a parameter on that page had its unit changed (e.g. via an Automation script), that change would incorrectly not be reflected in the UI. To see the new unit, you had to close the element card and re-open it.
+When an element card was open on the DATA page, and a parameter on that page had its unit changed (e.g. via an automation script), that change would incorrectly not be reflected in the UI. To see the new unit, you had to close the element card and re-open it.
 
 #### Problem when the Cube starter window software tried to download a DataMiner Cube for a DataMiner Agent v10.0.0 [ID 34009]
 

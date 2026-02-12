@@ -645,7 +645,7 @@ Failover DB forwarding is failing since YYYY-MM-DD HH:MM:SS
 
 When a service definition was passed in a session variable to an embedded Service Manager component, in some cases, that service definition would not be selected and, as a result, its diagram would not be loaded.
 
-#### Interactive Automation scripts: Lazy-loaded tree controls would incorrectly not forward their selected items \[ID 30406\]
+#### Interactive automation scripts: Lazy-loaded tree controls would incorrectly not forward their selected items \[ID 30406\]
 
 When a dialog contained multiple lazy-loaded tree controls, in some cases, those controls would not forward their selected items.
 

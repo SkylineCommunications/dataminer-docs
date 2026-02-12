@@ -193,7 +193,7 @@ The JSON value of this property can contain the following fields:
 
 - *ResourcePool*: The name of the resource pool in which the contributing resource should be included.
 
-- *Script*: Optional. Defines a custom Automation script that can be triggered after creating the contributing booking. It is typically used to assign capabilities/capacities to the associated contributing resource. Configured in the format "*Script:Script Name\|\|Parameter Name 1=Parameter 1;Parameter Name 2=Parameter 2;...*". The *\[RESERVATIONID\]* and *\[RESOURCEID\]* placeholders can be used, representing the resulting contributing booking ID and resource ID, respectively.<!-- RN 28243 & 28961 -->
+- *Script*: Optional. Defines a custom automation script that can be triggered after creating the contributing booking. It is typically used to assign capabilities/capacities to the associated contributing resource. Configured in the format "*Script:Script Name\|\|Parameter Name 1=Parameter 1;Parameter Name 2=Parameter 2;...*". The *\[RESERVATIONID\]* and *\[RESOURCEID\]* placeholders can be used, representing the resulting contributing booking ID and resource ID, respectively.<!-- RN 28243 & 28961 -->
 
 - *VisioFileName*: The Visio drawing that should be used for the contributing booking. While in other cases the Visio file configured in the service definition is used when a contributing booking is generated, when it is generated based on a *Path* parameter, the Visio file must be explicitly mentioned with this option.
 
@@ -225,7 +225,7 @@ The JSON value of this property can contain the following fields:
 
 **Mandatory**: No
 
-This property defines the Automation script that should be executed when a booking is confirmed.
+This property defines the automation script that should be executed when a booking is confirmed.
 
 The value of this property should be configured in JSON format. It can contain script parameters, but script dummies are not supported. You can also use the *\[RESERVATIONID\]* placeholder to represent the GUID of the booking.
 

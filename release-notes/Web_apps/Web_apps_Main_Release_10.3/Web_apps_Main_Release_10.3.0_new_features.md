@@ -27,7 +27,7 @@ To do so, enable the *Visualize directions* setting and select one of the follow
 <!-- MR 10.3.0 - FR 10.2.4
 RN 33795: MR 10.3.0 - FR 10.2.8 -->
 
-It is now possible to configure the Generic Query Interface to retrieve external data, so that dashboard users can use a query data source based on data that is for example retrieved from a CSV file, a MySQL database, or an API endpoint. This is configured through a DataMiner Automation script that is compiled as a library. The GQI will make use of this library to load the external data.
+It is now possible to configure the Generic Query Interface to retrieve external data, so that dashboard users can use a query data source based on data that is for example retrieved from a CSV file, a MySQL database, or an API endpoint. This is configured through a DataMiner automation script that is compiled as a library. The GQI will make use of this library to load the external data.
 
 ##### Configuring an external data source in a query
 
@@ -270,7 +270,7 @@ At present, the following actions can be configured:
 
 | Action | Description |
 |--|--|
-| Launch a script | Launch an Automation script with a specific configuration and a specific number of inputs (which can be linked to feeds like e.g. the Query Row feed). |
+| Launch a script | Launch an automation script with a specific configuration and a specific number of inputs (which can be linked to feeds like e.g. the Query Row feed). |
 | Navigate to a URL | Navigate to a specific URL (in a new tab). |
 | Open a page | Open a (hidden) page in the same application. |
 | Open a panel | Open a panel on the current page. Panels can appear on the left side of a page, on the right side of the page or as a popup. |
@@ -280,7 +280,7 @@ At present, the following actions can be configured:
 
 By default, actions are executed asynchronously. However, it is also possible to configure chains of actions that should be executed synchronously, i.e. only when the preceding action was executed successfully.
 
-Also, by combining different actions into one, you can create complex behavior. For example, open a page, open a panel and launch an Automation script that updates parameters displayed on that panel while it is being opened. This complex action can then be linked to e.g. a header bar button.
+Also, by combining different actions into one, you can create complex behavior. For example, open a page, open a panel and launch an automation script that updates parameters displayed on that panel while it is being opened. This complex action can then be linked to e.g. a header bar button.
 
 ##### Versioning
 
@@ -446,11 +446,11 @@ The first icon will only be available when there are private dashboards, the sec
 
 When a Process Automation definition is added to the Service definition component, the component will now automatically draw the necessary arrows to indicate the connections between the different blocks/nodes in the diagram.
 
-#### Dashboards app: Using the script output of an interactive Automation script as a feed [ID 32977]
+#### Dashboards app: Using the script output of an interactive automation script as a feed [ID 32977]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
-When building a GQI query, you can now also use the script output of an interactive Automation script as a feed.
+When building a GQI query, you can now also use the script output of an interactive automation script as a feed.
 
 #### Dashboards app - Service definition component: Function shapes will now reflect the function type [ID 32995]
 
@@ -653,11 +653,11 @@ Now, this option has been replaced by a triple-state option. You can now indicat
 
 When an EPM identifier from an EPM feed is fed to a parameter feed, it will now be possible to drag multiple parameters onto the parameter feed in order to use them as filters.
 
-#### Web apps - Interactive Automation script components: Minor enhancements [ID 34373]
+#### Web apps - Interactive automation script components: Minor enhancements [ID 34373]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
-A number of minor enhancements have been made to the interactive Automation script components with regard to font styles, button styles, text alignment and button and checkbox height.
+A number of minor enhancements have been made to the interactive automation script components with regard to font styles, button styles, text alignment and button and checkbox height.
 
 #### Dashboards app / Low-Code Apps: GQI queries now support sort operators [ID 34414] [ID 34528] [ID 34479]
 

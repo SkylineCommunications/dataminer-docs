@@ -58,9 +58,9 @@ In addition, in the Settings app, these changes have also been implemented for t
 
 The default value for the *HistorySlider* setting in the file *DB.xml* (which determines how long history alarm information is kept in the Cassandra database so that it can be visualized with the history slider in the Alarm Console) has now been set to 1 month. This change will only affect new installations or upgrades of systems where no default value had been set for this setting yet.
 
-#### HTML5 app: Executing an Automation script by clicking a shape \[ID 19306\]
+#### HTML5 app: Executing an automation script by clicking a shape \[ID 19306\]
 
-From now on, similar to DataMiner Cube, the HTML5 app also supports executing an Automation script by clicking a shape.
+From now on, similar to DataMiner Cube, the HTML5 app also supports executing an automation script by clicking a shape.
 
 #### DataMiner Cube - Visual Overview / DCF: Enhanced positioning of connection property shapes in grid layout \[ID 19352\]
 
@@ -183,7 +183,7 @@ Previously, when Cube connected to the DMS, it cached all the tickets from the D
 
 #### Service & Resource Management: 'NextAvailableStates' added to SRMServiceState object \[ID 20282\]
 
-A list of NextAvailableStates has been added to the SRMServiceState object. This means that, using the ServiceManagerHelper class in an Automation script, it is possible to save the next available states of an SRM service.
+A list of NextAvailableStates has been added to the SRMServiceState object. This means that, using the ServiceManagerHelper class in an automation script, it is possible to save the next available states of an SRM service.
 
 #### Services: Enhanced alarm and element state update mechanism \[ID 20329\]
 
@@ -219,7 +219,7 @@ It is now possible to use placeholders such as *\[var:\]* and *\[param:\]* wit
 
 #### Automation/Scheduler: Email action now supports CPE reports \[ID 20692\]
 
-It is now possible to send a CPE report via an Automation script or scheduled task. When configuring the email action in the script or task, if you select to attach a CPE report, you will now be able to select a CPE Manager, along with a chain and one or more fields of the selected chain. For each field, a number of KPI parameters can then be selected, optionally with a filter.
+It is now possible to send a CPE report via an automation script or scheduled task. When configuring the email action in the script or task, if you select to attach a CPE report, you will now be able to select a CPE Manager, along with a chain and one or more fields of the selected chain. For each field, a number of KPI parameters can then be selected, optionally with a filter.
 
 #### Backup/restore now includes Service Manager and Protocol Function Manager modules \[ID 20713\]
 
@@ -382,7 +382,7 @@ The property *Disabled* has been added to the *ProfileParameterEntry* class. I
 
 #### Scheduler/Automation: Possible to include trending for chain field in CPE report email action \[ID 21896\]
 
-When you configure a scheduled task or Automation script action to email a CPE report, you can now select to include trending for a chain field.
+When you configure a scheduled task or automation script action to email a CPE report, you can now select to include trending for a chain field.
 
 #### Service & Resource Management: Contributing DVE associated with a contributing booking now has two additional parameters \[ID 21967\]
 
@@ -564,7 +564,7 @@ From now on, instead of an alarm, an information event will be generated contain
 
 #### Masking of virtual functions now possible \[ID 23033\]
 
-It is now possible to mask virtual functions via Automation scripts. Previously it was only possible to mask the main element.
+It is now possible to mask virtual functions via automation scripts. Previously it was only possible to mask the main element.
 
 #### NT_UPDATE_PORTS_XML (128) updated to limit information events and allow new option \[ID 23052\]
 
@@ -620,9 +620,9 @@ The names of the following log files did not follow the DataMiner log file namin
 
 All the DataMiner HTML5 apps (Monitoring, Dashboards and Jobs), will now fall back to polling when WebSockets are disabled on the Agent. When WebSockets get enabled on the Agent, existing subscriptions that are using polling but can use WebSockets will stop polling and start a WebSocket connection instead.
 
-#### HTML5 apps: Enhanced performance when running interactive Automation scripts \[ID 23312\]
+#### HTML5 apps: Enhanced performance when running interactive automation scripts \[ID 23312\]
 
-Due to a number of enhancements, overall performance has improved when running interactive Automation scripts from inside HTML5 apps (Dashboards, Jobs, etc.).
+Due to a number of enhancements, overall performance has improved when running interactive automation scripts from inside HTML5 apps (Dashboards, Jobs, etc.).
 
 #### DataMiner Cube - Alarm Console: Alarm actions will now use the root alarm ID instead of the alarm ID \[ID 23377\]
 
@@ -747,7 +747,7 @@ Due to a number of enhancements, overall performance has increased when drawing 
 
 #### DataMiner Cube - Automation/Correlation: Width of action dialog boxes will now automatically be adapted to the size of the screen \[ID 24190\]
 
-From now on, when you configure actions in Automation scripts or Correlation rules, the action dialog boxes will automatically adapt their width to the size of the screen.
+From now on, when you configure actions in automation scripts or correlation rules, the action dialog boxes will automatically adapt their width to the size of the screen.
 
 #### Run-time errors will now be generated when SLDataMiner halts while executing start, stop or restart actions for elements \[ID 24228\]
 

@@ -11,7 +11,7 @@ using SLNetTypes.Apps.DataMinerObjectModel.Actions;
 namespace Skyline.DataMiner.Automation
 {
 	/// <summary>
-	/// Defines the possible Automation script entry point delegate types.
+	/// Defines the possible automation script entry point delegate types.
 	/// </summary>
 	public class AutomationEntryPointDelegates
 	{

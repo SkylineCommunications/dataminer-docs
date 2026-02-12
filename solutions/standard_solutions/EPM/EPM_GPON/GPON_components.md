@@ -44,7 +44,7 @@ This could be a database, a CRM, another data stream, local files (CSV or JSON),
 
 ## Automation scripts
 
-The xPON EPM Solution uses the following Automation scripts:
+The xPON EPM Solution uses the following automation scripts:
 
 - **EpmBeToOLT**
 
@@ -56,4 +56,4 @@ The xPON EPM Solution uses the following Automation scripts:
 
 - **WmToBexPON**
 
-Each of these Automation scripts has a defined task. All of them use the DataMiner messaging system to request, provide, and sync data among EPM components.
+Each of these automation scripts has a defined task. All of them use the DataMiner messaging system to request, provide, and sync data among EPM components.

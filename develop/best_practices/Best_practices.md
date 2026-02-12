@@ -16,6 +16,6 @@ Additional best practices and style guides are available in other sections of th
 - [Dashboards and Low-Code Apps style guide](xref:LCA_Style_guide)
 - [Visio style guide](xref:Visio_style_guide)
 - [Best practices for protocol development](xref:CodingGuidelines)
-- [Best practices for Automation script development](xref:Automation_best_practices_information_events)
+- [Best practices for automation script development](xref:Automation_best_practices_information_events)
 - [Best practices for developing GQI extensions](xref:GQI_Extensions_Best_Practices)
 - [DOM best practices](xref:DOM_best_practices)

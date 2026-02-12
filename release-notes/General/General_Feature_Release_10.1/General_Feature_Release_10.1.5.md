@@ -219,9 +219,9 @@ For more detailed information, see [Node edge graph](xref:DashboardNodeEdgeGraph
 
 ### DMS Automation
 
-#### Interactive Automation scripts: Lazy loading of tree view items \[ID 29295\]
+#### Interactive automation scripts: Lazy loading of tree view items \[ID 29295\]
 
-It is possible to configure that a tree view item in interactive Automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
+It is possible to configure that a tree view item in interactive automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
 
 You can now use the GetExpanded method of the UIResults class to retrieve the keys of all expanded tree view items that have the SupportsLazyLoading property set to true.
 
@@ -480,7 +480,7 @@ When you generated a PDF report with the options “No grouping” and “Includ
 
 #### DataMiner Cube - Automation: Discarding a newly created script would not delete it \[ID 29032\]
 
-When you discarded a newly created Automation script, in some cases, it would incorrectly not be deleted although it had disappeared from the UI. As a result, trying to create a new script with the same name would fail.
+When you discarded a newly created automation script, in some cases, it would incorrectly not be deleted although it had disappeared from the UI. As a result, trying to create a new script with the same name would fail.
 
 #### No trigger keys listed when debugging a QAction due to a compatibility issue between DataMiner and DataMiner Integration Studio \[ID 29049\]
 
@@ -510,9 +510,9 @@ DmaConnections|Unexpected filter type: SubscriptionFilter\`2
 Unexpected filter type: Skyline.DataMiner.Net.SubscriptionFilters.SubscriptionFilter\`2[XXXX,XXXXXX]
 ```
 
-#### Interactive Automation scripts: Date selected in calendar control would be parsed incorrectly \[ID 29153\]
+#### Interactive automation scripts: Date selected in calendar control would be parsed incorrectly \[ID 29153\]
 
-When, in an interactive Automation script, a calendar control was used to select a date (i.e. a datetime value without a specific time), in some cases, the value of the selected date would be parsed incorrectly.
+When, in an interactive automation script, a calendar control was used to select a date (i.e. a datetime value without a specific time), in some cases, the value of the selected date would be parsed incorrectly.
 
 #### SLAnalytics: Problem when calculating a trend prediction for a parameter with missing trend data \[ID 29163\]
 
@@ -548,9 +548,9 @@ When an EPM object is masked, you can try to unmask it via its alarms in the Ala
 
 In some cases, it would no longer be possible to unmask such an EPM object due to a casing issue in those “System Name” and “System Type” properties.
 
-#### Dashboards app: Multiple pop-up windows would be displayed when an Automation script could not be opened \[ID 29218\]
+#### Dashboards app: Multiple pop-up windows would be displayed when an automation script could not be opened \[ID 29218\]
 
-When the Dashboards app tried to open an Automation script that had been renamed or removed in DataMiner Cube, in some cases, a series of pop-up windows would be displayed. From now on, when the Dashboards app cannot open an Automation script, a single pop-up window will be displayed.
+When the Dashboards app tried to open an automation script that had been renamed or removed in DataMiner Cube, in some cases, a series of pop-up windows would be displayed. From now on, when the Dashboards app cannot open an automation script, a single pop-up window will be displayed.
 
 #### DataMiner Cube - EPM: No longer possible to manually unmask items in a topology diagram \[ID 29228\]
 
@@ -685,7 +685,7 @@ In some cases, it would not be possible to bind a VirtualFunctionResource when a
 
 #### Automation: Subscripts would return an incorrect output \[ID 29405\]
 
-When, in an Automation script, a subscript that returned its output was run twice, in some cases, when it cleared its output during its second run, it would incorrectly return the same output it had returned at the end of its first run.
+When, in an automation script, a subscript that returned its output was run twice, in some cases, when it cleared its output during its second run, it would incorrectly return the same output it had returned at the end of its first run.
 
 #### SLAnalytics: Problem with automatic incident tracking when a parent of a particular view could not be found \[ID 29419\]
 

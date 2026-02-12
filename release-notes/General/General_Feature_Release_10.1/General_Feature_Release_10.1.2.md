@@ -264,13 +264,13 @@ Apart from highlighting all bars belonging to a specific variable, you can now a
 
 ### DMS Automation
 
-#### Interactive Automation scripts will now take into account timeouts set in the engine.Timeout property of the executed script \[ID 28405\]
+#### Interactive automation scripts will now take into account timeouts set in the engine.Timeout property of the executed script \[ID 28405\]
 
-From now on, interactive Automation scripts will also take into account any timeout set in the engine.Timeout property of the executed script
+From now on, interactive automation scripts will also take into account any timeout set in the engine.Timeout property of the executed script
 
-#### Interactive Automation scripts: Lazy loading of tree view items \[ID 28528\]
+#### Interactive automation scripts: Lazy loading of tree view items \[ID 28528\]
 
-It is now possible to configure that a tree view item in interactive Automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
+It is now possible to configure that a tree view item in interactive automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
 
 To activate this so-called lazy loading for a particular tree view item, set its SupportsLazy-Loading property to true. An arrow will appear in front of the tree view item (even if it does not have any child items).
 
@@ -293,9 +293,9 @@ All web applications\* will now connect to SLNet with the “AllowMessageThrottl
 
 ### DMS Service & Resource Management
 
-#### Triggering an Automation script to reconfigure running bookings after a ProfileInstance was changed \[ID 28186\]
+#### Triggering an automation script to reconfigure running bookings after a ProfileInstance was changed \[ID 28186\]
 
-It is now possible to have an Automation script triggered when a profile instance update affects running bookings. That script can then reconfigure the bookings.
+It is now possible to have an automation script triggered when a profile instance update affects running bookings. That script can then reconfigure the bookings.
 
 ##### Configuring the script
 
@@ -507,9 +507,9 @@ When, in the *Database* section of *System Center*, you clicked the *Offload* ta
 
 In a PDF report, in some cases, trend statistics components would not show any content.
 
-#### DataMiner Cube - Automation app: A change to a dashboard configuration in an Automation script would not cause the Save button to be activated \[ID 28287\]
+#### DataMiner Cube - Automation app: A change to a dashboard configuration in an automation script would not cause the Save button to be activated \[ID 28287\]
 
-When a dashboard configuration in an email action of an Automation script was changed, in some cases, the script would incorrectly not be considered changed. As a result, the user would not be able to save the changes.
+When a dashboard configuration in an email action of an automation script was changed, in some cases, the script would incorrectly not be considered changed. As a result, the user would not be able to save the changes.
 
 #### Service & Resource Management: Exported protocol would show incorrect parameters after a new function file had been activated \[ID 28290\]
 
@@ -519,7 +519,7 @@ When a new function file was activated, which updated parameters for a particula
 
 When offloading data to SLDataGateway, in some cases, a CPU leak could occur.
 
-#### Interactive Automation scripts: Equals signs not accepted in UI block values \[ID 28324\]
+#### Interactive automation scripts: Equals signs not accepted in UI block values \[ID 28324\]
 
 In some cases, equals signs ("=") could not be used in UI block values.
 

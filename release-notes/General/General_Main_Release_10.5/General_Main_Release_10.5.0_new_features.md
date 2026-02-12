@@ -151,7 +151,7 @@ On <https://skyline-admin.dataminer.services>, you can now check the current ver
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
-The `GetConnection()` method can now be used to expose the underlying GQI SLNet connection to GQI extensions like ad hoc data sources and custom operators via the `IConnection` interface. The method is compatible with existing Nuget packages for Automation scripts.
+The `GetConnection()` method can now be used to expose the underlying GQI SLNet connection to GQI extensions like ad hoc data sources and custom operators via the `IConnection` interface. The method is compatible with existing Nuget packages for automation scripts.
 
 ```csharp
 IConnection GetConnection()
@@ -440,11 +440,11 @@ To see the current hint paths per SLScripting process, do the following:
 
 ### Automation
 
-#### Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]
+#### Interactive automation scripts: New option to skip the confirmation window when aborting [ID 40683]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-`UIBuilder` now has a new `SkipAbortConfirmation` property. When set to true, the confirmation window will not be displayed when the interactive Automation script is aborted. By default, this property will be set to false.
+`UIBuilder` now has a new `SkipAbortConfirmation` property. When set to true, the confirmation window will not be displayed when the interactive automation script is aborted. By default, this property will be set to false.
 
 Example:
 
@@ -454,19 +454,19 @@ uib.SkipAbortConfirmation = true;
 ```
 
 > [!TIP]
-> See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40720]](xref:Cube_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40720)
+> See also: [Interactive automation scripts: New option to skip the confirmation window when aborting [ID 40720]](xref:Cube_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40720)
 
-#### Unhandled exceptions in Automation scripts that cause SLAutomation to stop working will now be logged and will lead to an alarm being generated [ID 41375] [ID 41781]
+#### Unhandled exceptions in automation scripts that cause SLAutomation to stop working will now be logged and will lead to an alarm being generated [ID 41375] [ID 41781]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
-From now on, when SLAutomation stops working due to an unhandled exception that occurred in an Automation script, the stack trace of the unhandled exception will be logged in *SLAutomation.txt* and the following alarm of type "error" will be generated:
+From now on, when SLAutomation stops working due to an unhandled exception that occurred in an automation script, the stack trace of the unhandled exception will be logged in *SLAutomation.txt* and the following alarm of type "error" will be generated:
 
 ```txt
 The automation script 'Script name' caused the hosting process SLAutomation.exe to crash. Please correct the script to prevent further system instability and check Automation log file for more details.
 ```
 
-These alarms will be generated per DataMiner Agent for every Automation script that causes SLAutomation to stop working. In other words, when SLAutomation repeatedly stops working on a DataMiner Agent due to multiple unhandled exceptions thrown while running a particular Automation script, only one alarm will be generated on the DataMiner Agent in question.
+These alarms will be generated per DataMiner Agent for every automation script that causes SLAutomation to stop working. In other words, when SLAutomation repeatedly stops working on a DataMiner Agent due to multiple unhandled exceptions thrown while running a particular automation script, only one alarm will be generated on the DataMiner Agent in question.
 
 This type of alarms will automatically be cleared after a DataMiner restart. They can also be cleared manually.
 

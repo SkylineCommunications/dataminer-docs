@@ -39,7 +39,7 @@ The tutorial consists of the following steps:
 
 1. [Deploy the package](xref:Deploying_a_catalog_item) to your DataMiner Agent by clicking the *Deploy* button.
 
-   This will create two Automation scripts, which you can find in the folder *DataMiner Catalog* > *RAD Demonstrator* in the Automation module:
+   This will create two automation scripts, which you can find in the folder *DataMiner Catalog* > *RAD Demonstrator* in the Automation module:
 
    - *Add Shared Model Group*
    - *Add Single Groups*
@@ -379,6 +379,6 @@ Shared model groups allow DataMiner to compare the subgroups with each other and
 
 1. Remove the *AI - Commtia DAB* and the *Fleet-Outlier-Detection-Commtia DAB* protocols under *Apps > Protocols & Templates*.
 
-1. Remove the Automation scripts under *Apps* > *Automation* > *DataMiner Catalog* > *RAD Demonstrator*.
+1. Remove the automation scripts under *Apps* > *Automation* > *DataMiner Catalog* > *RAD Demonstrator*.
 
 In case you would like to repeat some of the exercises, you can instead duplicate the related elements or deploy the *RAD Demonstrator* package a second time, which will overwrite the existing elements.

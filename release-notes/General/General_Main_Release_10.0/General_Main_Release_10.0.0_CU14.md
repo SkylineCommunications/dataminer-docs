@@ -115,9 +115,9 @@ When a DataMiner Agent was started in a DataMiner System, in some cases, errors 
 
 When a Failover setup is configured on two DataMiner Agents with a MySQL database, after synchronizing the two databases, all new data should be written to both these databases. However, in some cases, new data would incorrectly not be written to the backup agent until after the primary agent had been restarted.
 
-#### Automation: UIBuilder properties MaxWidth and MaxHeight would incorrectly not get applied to interactive Automation script pop-up windows \[ID 29361\]
+#### Automation: UIBuilder properties MaxWidth and MaxHeight would incorrectly not get applied to interactive automation script pop-up windows \[ID 29361\]
 
-In some cases, the UIBuilder properties “MaxWidth” and “MaxHeight” would incorrectly not get applied to interactive Automation script pop-up windows.
+In some cases, the UIBuilder properties “MaxWidth” and “MaxHeight” would incorrectly not get applied to interactive automation script pop-up windows.
 
 #### Dashboards app: Input boxes would extend beyond the borders of the screen \[ID 29406\]
 

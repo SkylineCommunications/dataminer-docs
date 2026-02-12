@@ -56,7 +56,7 @@ To remove a reference, do the following:
 
 The right-click menu option *Copy File Content to Clipboard* has been renamed to *Copy Code to Clipboard*.
 
-Also, from now on, when you use this menu option while working with a protocol solution or an Automation script solution, you will not only copy the current file to the Windows Clipboard, but all files of the entire project combined in a way that is similar to the way in which they are combined when the solution is compiled.
+Also, from now on, when you use this menu option while working with a protocol solution or an automation script solution, you will not only copy the current file to the Windows Clipboard, but all files of the entire project combined in a way that is similar to the way in which they are combined when the solution is compiled.
 
 #### Microsoft Azure B2C authentication \[ID 28959\]
 
@@ -81,13 +81,13 @@ In the *DIS Settings* window, the *DCP* tab has been replaced by the following t
 > [!NOTE]
 > Users who upgrade to DIS version 2.32 will be asked to log in with their dataminer.services account.
 
-#### Debugging of precompiled Automation script EXE blocks \[ID 29030\]
+#### Debugging of precompiled automation script EXE blocks \[ID 29030\]
 
-When DIS is connected to a DataMiner Agent running DataMiner version 10.1.3 or higher, it is now also possible to debug precompiled Automation script EXE blocks.
+When DIS is connected to a DataMiner Agent running DataMiner version 10.1.3 or higher, it is now also possible to debug precompiled automation script EXE blocks.
 
 #### Automation script solutions: DataMiner DLL Path property \[ID 29031\]
 
-DLL files in an Automation script solution now have a “DataMiner DLL Path” property. This property can be used to override/specify the location (i.e. full path) of the DLL file on the DataMiner Agent.
+DLL files in an automation script solution now have a “DataMiner DLL Path” property. This property can be used to override/specify the location (i.e. full path) of the DLL file on the DataMiner Agent.
 
 > [!NOTE]
 > If you leave this property empty, the DLL file will be placed in the default folder (C:\\Skyline DataMiner\\ProtocolScripts).

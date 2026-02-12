@@ -36,7 +36,7 @@ The BPA test is available in System Center on the *Agents > BPA* tab.
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-Up to now, Automation scripts using the IAS Interactive Toolkit required a special comment or code snippet in order to be recognized as interactive. From now on, you will be able to define the interactive behavior of an Automation script by adding an `<Interactivity>` tag in the header of the script. See the following example.
+Up to now, automation scripts using the IAS Interactive Toolkit required a special comment or code snippet in order to be recognized as interactive. From now on, you will be able to define the interactive behavior of an automation script by adding an `<Interactivity>` tag in the header of the script. See the following example.
 
 ```xml
 <DMSScript xmlns="http://www.skyline.be/automation">
@@ -62,7 +62,7 @@ Possible values:
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-Up to now, the `UploadScriptDependencyMessage` was only able to upload Automation script and QAction dependencies to the `C:\Skyline DataMiner\Scripts\DllImport` folder. From now on, it will also be able to upload those dependencies to the `C:\Skyline DataMiner\ProtocolScripts\DllImport\SolutionLibraries` folder.
+Up to now, the `UploadScriptDependencyMessage` was only able to upload automation script and QAction dependencies to the `C:\Skyline DataMiner\Scripts\DllImport` folder. From now on, it will also be able to upload those dependencies to the `C:\Skyline DataMiner\ProtocolScripts\DllImport\SolutionLibraries` folder.
 
 See the following example. The `UploadScriptDependencyMessage` now has a `DependencyFolder` property, which allows you to specify the destination of the dependency to be uploaded.
 
@@ -368,9 +368,9 @@ When an infinite loop is detected, the following will be returned:
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When, in the *Automation* module, you imported an Automation script, up to now, you would not receive any feedback about whether or not the import operation had been successful. Only after checking the Cube logs would you be able to find out that an import operation had failed.
+When, in the *Automation* module, you imported an automation script, up to now, you would not receive any feedback about whether or not the import operation had been successful. Only after checking the Cube logs would you be able to find out that an import operation had failed.
 
-From now on, the following error message will appear whenever an exception is thrown while an Automation script is being imported:
+From now on, the following error message will appear whenever an exception is thrown while an automation script is being imported:
 
 `Something went wrong. Please check the Cube and Automation logging for more information.`
 

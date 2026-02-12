@@ -29,20 +29,20 @@ If a DataMiner System is configured to use a Cassandra Cluster setup (i.e. a set
 > [!TIP]
 > See also: [OpenSearch & Amazon OpenSearch Service [ID 34651]](xref:General_Feature_Release_10.3.3#opensearch--amazon-opensearch-service-id-34651)
 
-#### Automation: New user/group setting to specify whether users have to confirm program executions launched from interactive Automation scripts [ID 35418]
+#### Automation: New user/group setting to specify whether users have to confirm program executions launched from interactive automation scripts [ID 35418]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
-A new user/group setting named *Do not confirm program executions from scripts*, found in the *User > Cube* tab of the *Settings* window, now allows you to specify whether users will have to explicitly confirm each program execution that is launched from an interactive Automation script.
+A new user/group setting named *Do not confirm program executions from scripts*, found in the *User > Cube* tab of the *Settings* window, now allows you to specify whether users will have to explicitly confirm each program execution that is launched from an interactive automation script.
 
-By default, this option will be disabled, meaning that users will have to give their consent each time an interactive Automation script wants to launch a program. The confirmation box will also allow users to change the setting by selecting the *Don't show this confirmation again. Always launch program executions.* checkbox.
+By default, this option will be disabled, meaning that users will have to give their consent each time an interactive automation script wants to launch a program. The confirmation box will also allow users to change the setting by selecting the *Don't show this confirmation again. Always launch program executions.* checkbox.
 
 Each time a program is launched, a start entry and an end entry will be added to the Cube logging as well as to the *SLClient.txt* log file on the DataMiner Agent.
 
 - The start entry will contain the following data:
 
-  - the name of the Automation script
-  - the ID of the Automation script
+  - the name of the automation script
+  - the ID of the automation script
   - the user's login data (full name, client machine name, client app name and last login date)
   - the program that will be launched
   - the arguments that will be passed to the program (if any)

@@ -26,17 +26,17 @@ During a switch-over, in some cases, users would no longer receive a “\<DMA> i
 
 Also, the term “System Display” has been replaced by “Client Interface” in *Failover status* windows.
 
-#### Dashboards app: Incorrect message would appear when an interactive Automation script went into timeout \[ID 24258\]
+#### Dashboards app: Incorrect message would appear when an interactive automation script went into timeout \[ID 24258\]
 
-When an interactive Automation script running inside the Dashboards app went into timeout, in some cases, a success message would incorrectly be displayed instead of an error message.
+When an interactive automation script running inside the Dashboards app went into timeout, in some cases, a success message would incorrectly be displayed instead of an error message.
 
 #### Trending: Incorrect trend data retrieved for view column parameters \[ID 24268\]
 
 In some cases, incorrect trend data would be retrieved for view column parameters.
 
-#### Datetime value in interactive Automation script not updated correctly \[ID 24284\]
+#### Datetime value in interactive automation script not updated correctly \[ID 24284\]
 
-When a datetime value in an interactive Automation script was changed by the script itself, it could occur that the value was not updated correctly.
+When a datetime value in an interactive automation script was changed by the script itself, it could occur that the value was not updated correctly.
 
 #### Dashboards app / Jobs app: Problem opening the user menu \[ID 24285\]
 
@@ -50,9 +50,9 @@ In the jobs timeline, in some cases, job end times would be displayed incorrectl
 
 When you selected the month value in a datetime control, in some cases, that value would incorrectly be cleared.
 
-#### Automation: Dialog box from an interactive Automation script started in Dashboards would incorrectly appear in Cube \[ID 24328\]
+#### Automation: Dialog box from an interactive automation script started in Dashboards would incorrectly appear in Cube \[ID 24328\]
 
-In some cases, a dialog box from an interactive Automation script started in Dashboards would incorrectly appear inside a Cube session.
+In some cases, a dialog box from an interactive automation script started in Dashboards would incorrectly appear inside a Cube session.
 
 #### Dashboards app: Element tree of a multiple-parameter feed was sorted incorrectly \[ID 24495\]
 
@@ -76,7 +76,7 @@ When you dragged an element onto the Alarm Console, in some cases, the alarm tab
 
 #### Service & Resource Management: Incorrect result when comparing service definitions \[ID 24662\]
 
-If an Automation script compared two service definitions with at least one interface configuration or edge in the diagram, it could occur that the Equals method returned false incorrectly.
+If an automation script compared two service definitions with at least one interface configuration or edge in the diagram, it could occur that the Equals method returned false incorrectly.
 
 #### DataMiner Cube - EPM/CPE: Problem with chain field option 'statusTabs' \[ID 24668\]
 
@@ -136,9 +136,9 @@ If you corrected an outage that was no longer in the current SLA window, in some
 
 After trying to save a job that contained errors (e.g. missing fields), in some cases, it would no longer be possible to click the *Save* button again after correcting the errors.
 
-#### Dashboards app: Problem when loading dropdown boxes of interactive Automation scripts \[ID 24888\]
+#### Dashboards app: Problem when loading dropdown boxes of interactive automation scripts \[ID 24888\]
 
-When a dialog box of an interactive Automation script showed multiple dropdown boxes next to each other, in some cases, some of those boxes would become unresponsive when data was being loaded into them.
+When a dialog box of an interactive automation script showed multiple dropdown boxes next to each other, in some cases, some of those boxes would become unresponsive when data was being loaded into them.
 
 #### Jobs app: No headers were displayed at the top of the jobs list \[ID 25042\]
 
@@ -244,9 +244,9 @@ The WSDL was no longer backwards compatible for the GetTicket method.
 
 When SLPort receives data, it stores it in a buffer until everything has been received. If the amount of data received is larger than the size of the buffer, the buffer is automatically resized. However, in some cases, this would not happen, causing an error to occur.
 
-#### Automation: Email sent from an Automation script had an incorrect subject \[ID 25618\]
+#### Automation: Email sent from an automation script had an incorrect subject \[ID 25618\]
 
-When an email was sent from an Automation script, in some cases, the dashboard name would incorrectly be used as email subject.
+When an email was sent from an automation script, in some cases, the dashboard name would incorrectly be used as email subject.
 
 From now on, the dashboard name will only be used as email subject when no subject was specified.
 
@@ -288,13 +288,13 @@ Up to now, parameter information of inactive elements would incorrectly not get 
 
 In some cases, the SLNet.exe.config file would contain an unnecessary “codedom” tag. On certain DataMiner Agents, this could lead to issues when generating functions.
 
-#### Interactive Automation scripts: Some dropdown boxes would unnecessarily trigger a refresh of the UI \[ID 25902\]
+#### Interactive automation scripts: Some dropdown boxes would unnecessarily trigger a refresh of the UI \[ID 25902\]
 
 In some cases, dropdown boxes would unnecessarily trigger a refresh of the UI.
 
 #### Dashboards app - Service Definition component: Booking ID not passed to the script when clicking a node \[ID 25912\]
 
-When, in a service definition component linked to a booking, you clicked a node that launched an Automation script, in some cases, the booking ID would not be passed to the script.
+When, in a service definition component linked to a booking, you clicked a node that launched an automation script, in some cases, the booking ID would not be passed to the script.
 
 #### SLAnalytics: Element state changes and element deletions would not be processed correctly when behavioral anomaly detection was disabled \[ID 25929\]
 
@@ -330,9 +330,9 @@ At startup, in some cases, DataMiner was not able to correctly parse the IP addr
 
 When you masked an element and then immediately restarted it, in some rare cases, it could be shown as unmasked for a short period of time.
 
-#### Incorrect page margins in PDF reports sent by an Automation script \[ID 26090\]
+#### Incorrect page margins in PDF reports sent by an automation script \[ID 26090\]
 
-When an Automation script sent a PDF report based on a dashboard, in some cases, the page margins in that PDF report would be incorrect.
+When an automation script sent a PDF report based on a dashboard, in some cases, the page margins in that PDF report would be incorrect.
 
 #### Failover: Problem when switching over the first time after migrating from MySQL to Cassandra \[ID 26116\]
 
@@ -386,23 +386,23 @@ In some cases, the SLDataGateway process would leak memory.
 
 In some cases, the Monitoring app would incorrectly disregard the client timezone setting when displaying timestamps in trend graphs.
 
-#### Problem with user permissions for Automation scripts \[ID 26401\]\[ID 26957\]
+#### Problem with user permissions for automation scripts \[ID 26401\]\[ID 26957\]
 
-Up to now the permissions to add, edit, delete and execute Automation scripts were only enforced in the client, which could make it possible for a user to modify the Automation scripts on a DMA despite not having the required permissions for this.
+Up to now the permissions to add, edit, delete and execute automation scripts were only enforced in the client, which could make it possible for a user to modify the automation scripts on a DMA despite not having the required permissions for this.
 
 Now the system will enforce the permissions as follows:
 
-- To view or retrieve an Automation script, you need the "Automation - UI available" or "Automation - Execute" permission.
+- To view or retrieve an automation script, you need the "Automation - UI available" or "Automation - Execute" permission.
 
-- To create an Automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
+- To create an automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
 
-- To update an Automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
+- To update an automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
 
-- To delete an Automation script, you need the "Automation - Delete" permission.
+- To delete an automation script, you need the "Automation - Delete" permission.
 
-- To execute an Automation script, you need the "Automation - Execute" permission.
+- To execute an automation script, you need the "Automation - Execute" permission.
 
-- To perform a DLL injection in an Automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
+- To perform a DLL injection in an automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
 
 - To change a memory file, you need the "Automation - Add" or the "Automation - Edit" permission.
 

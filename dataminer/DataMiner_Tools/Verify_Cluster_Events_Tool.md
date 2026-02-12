@@ -67,7 +67,7 @@ If you are using this tool to report an issue, always include an export file.
 
 ### Command line usage
 
-The tool can be used from command line as well. This can for example be used from  Automation scripts to get warned as soon as caches go out of sync.
+The tool can be used from command line as well. This can for example be used from  automation scripts to get warned as soon as caches go out of sync.
 
 Options:
 

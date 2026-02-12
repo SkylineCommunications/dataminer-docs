@@ -21,7 +21,7 @@ To modify shapes in edit mode:
    > [!NOTE]
    > If you select the *Make all shapes selectable* option in the *edit shape* pane, you will be able to select all shapes in the Visio drawing from a selection box, even those that do not have any DataMiner shape data.
 
-1. In the *Edit Shape* pane on the right, link the shape to a view, element, service, redundancy group, Automation script, web page, video source, etc.
+1. In the *Edit Shape* pane on the right, link the shape to a view, element, service, redundancy group, automation script, web page, video source, etc.
 
 1. Depending on the choice you made in the previous step, specify the necessary options in either the *Basic* tab or the *Advanced* tab.
 

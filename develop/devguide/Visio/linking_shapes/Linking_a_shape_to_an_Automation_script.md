@@ -2,16 +2,16 @@
 uid: Linking_a_shape_to_an_Automation_script
 ---
 
-# Linking a shape to an Automation script
+# Linking a shape to an automation script
 
-When a shape is linked to an Automation script, by default this script will be executed each time a user clicks that shape.
+When a shape is linked to an automation script, by default this script will be executed each time a user clicks that shape.
 
 > [!NOTE]
 >
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *Solutions* > *Other* > *Visual Overview Design Examples* view > *[linking > EXE]* page.
 > - Aside from the default **Execute** shape data, you can also use **OnClose** shape data to link to a script. See [Specifying a script to be executed when the page is closed](#specifying-a-script-to-be-executed-when-the-page-is-closed).
 
-To link a shape to an Automation script:
+To link a shape to an automation script:
 
 - Add a shape data field of type **Execute** to the shape, and set its value to:
 
@@ -60,9 +60,9 @@ To link a shape to an Automation script:
     | ---------------- | ---------------------------------------------------------------------------------------------- |
     | Execute          | Script:\<myScript>\|Tooltip:\<myTooltip>\|Parameters:paramA=\<myParam>\|Options:NoConfirmation |
 
-- The **Execute** shape data field can be combined with other shape data that make the shape perform an action when clicked. In that case, the Automation script specified in the **Execute** field will be executed before the main action is performed.
+- The **Execute** shape data field can be combined with other shape data that make the shape perform an action when clicked. In that case, the automation script specified in the **Execute** field will be executed before the main action is performed.
 
-  For example, if the following shape data are specified, the Automation script in the Execute field will be used to set parameters before the main action shows these in a pop-up window.
+  For example, if the following shape data are specified, the automation script in the Execute field will be used to set parameters before the main action shows these in a pop-up window.
 
   | Shape data field | Value                                     |
   | ---------------- | ----------------------------------------- |
@@ -95,9 +95,9 @@ For example, in the configuration below, the first-level separator "\|" is repla
 > [!TIP]
 > See also: [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)
 
-## Passing Automation script output to session variables
+## Passing automation script output to session variables
 
-When an Automation script executed in Visual Overview finishes successfully, the output values of that script can be passed to session variables in Visual Overview. From DataMiner 10.2.6/10.3.0 onwards, this is also supported for interactive Automation scripts.
+When an automation script executed in Visual Overview finishes successfully, the output values of that script can be passed to session variables in Visual Overview. From DataMiner 10.2.6/10.3.0 onwards, this is also supported for interactive automation scripts.
 
 To configure this in the script, use the *CreateKey(string variablename)* method (namespace: *Skyline.DataMiner.Automation*, class name: *UIVariables.VisualOverview*).
 
@@ -107,7 +107,7 @@ In the following example, a session variable named "MyOutput" will be created, a
 engine.AddScriptOutput(UIVariables.VisualOverview.CreateKey("MyOutput"), "MyValue");
 ```
 
-- If you execute the same Automation script on different pages, you can use the *SessionVariablePrefix* option to make sure the output is saved in separate session variables. For example, if you use prefix "One\_" on one page and prefix "Two\_" on another page, and the Automation scripts pass their output to a session variable named "MyPage", then the output will end up in two separate session variables named "One_MyPage" and "Two_MyPage" respectively.
+- If you execute the same automation script on different pages, you can use the *SessionVariablePrefix* option to make sure the output is saved in separate session variables. For example, if you use prefix "One\_" on one page and prefix "Two\_" on another page, and the automation scripts pass their output to a session variable named "MyPage", then the output will end up in two separate session variables named "One_MyPage" and "Two_MyPage" respectively.
 
 - When you set the *SetVarOnFail* option to true (either on page level or shape level), the session variables will always be created, regardless of whether the script finishes successfully or not.
 

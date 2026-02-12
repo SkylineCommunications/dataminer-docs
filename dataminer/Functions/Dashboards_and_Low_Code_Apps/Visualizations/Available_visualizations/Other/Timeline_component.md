@@ -65,7 +65,7 @@ At any time during an interaction, you can press ESC to cancel the action and re
 > [!IMPORTANT]
 >
 > - To enable moving, resizing, or reassigning items to a different group, you must configure at least one action for that interaction. See [Adding actions to a timeline](#adding-actions-to-a-timeline).
-> - To ensure that interactions update the underlying data and do not remain purely visual, configure an event that triggers a *Launch a script* action. This Automation script should update the original data objects with the modified ones exposed by the event triggered through user interaction. For more information, see [Using event data in actions](#using-event-data-in-actions). If your data source does not support real-time updates, you also need to configure an *Execute component action* to refetch the data.
+> - To ensure that interactions update the underlying data and do not remain purely visual, configure an event that triggers a *Launch a script* action. This automation script should update the original data objects with the modified ones exposed by the event triggered through user interaction. For more information, see [Using event data in actions](#using-event-data-in-actions). If your data source does not support real-time updates, you also need to configure an *Execute component action* to refetch the data.
 
 ### Changing the time range
 
@@ -323,7 +323,7 @@ Some **real-life examples**:
 
   ![Timeline - Change state](~/dataminer/images/TimelineChangeState.gif)<br>*Timeline component in DataMiner 10.5.4*
 
-  Beyond changing the visual appearance, actions were configured on the icon layer so that clicking it opens a context menu. This menu allows users to manually update the icon and, at the same time, modify the underlying task status via an Automation script.
+  Beyond changing the visual appearance, actions were configured on the icon layer so that clicking it opens a context menu. This menu allows users to manually update the icon and, at the same time, modify the underlying task status via an automation script.
 
 - In this example, the timeline component is used as an interactive TV schedule, styled with customized colors, icons, and more. A conditional case ensures that when a program has been recorded, a red dot appears in the top-right corner of the item.
 
@@ -450,7 +450,7 @@ When [a user interacts with the timeline](#interacting-with-the-timeline-compone
 
 This is useful because it allows you to:
 
-- **Update your data through an Automation script** based on what the user did.
+- **Update your data through an automation script** based on what the user did.
 
 - **Keep the timeline and your data in sync**, so changes are not just visual.
 
@@ -466,7 +466,7 @@ Each event provides the following data:
 | Changing an item's group | Current and new item state, both as *Table* objects. |
 
 > [!TIP]
-> Watch the [*Building an enhanced timeline in Low-Code Apps* video tutorial](https://youtu.be/Sy0uQlX6jA4?si=bmInQb5JZJMiwHwt), which walks you through setting up interactions, using event data, and linking it to Automation scripts. You can also follow along yourself using the accompanying [Catalog package](https://catalog.dataminer.services/details/cf630b1c-8e67-4019-986d-70ae35324c24).
+> Watch the [*Building an enhanced timeline in Low-Code Apps* video tutorial](https://youtu.be/Sy0uQlX6jA4?si=bmInQb5JZJMiwHwt), which walks you through setting up interactions, using event data, and linking it to automation scripts. You can also follow along yourself using the accompanying [Catalog package](https://catalog.dataminer.services/details/cf630b1c-8e67-4019-986d-70ae35324c24).
 
 > [!NOTE]
 >

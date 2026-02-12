@@ -27,7 +27,7 @@ Changes made to a Visio repository trigger the corresponding [Visio CI/CD pipeli
 
 ## Custom solutions
 
-This tab lists repositories that contain a Visual Studio solution. These are typically class library solutions that are in turn used by e.g. protocols or Automation scripts.
+This tab lists repositories that contain a Visual Studio solution. These are typically class library solutions that are in turn used by e.g. protocols or automation scripts.
 
 Changes made to a custom solution repository trigger the corresponding [custom solution CI/CD pipeline](xref:Pipeline_stages_for_custom_solutions).
 
@@ -43,9 +43,9 @@ Changes made to a function repository trigger the corresponding [functions CI/CD
 
 ## Automation scripts
 
-This tab lists repositories that contain an Automation script solution, which might consist of one or multiple Automation scripts.
+This tab lists repositories that contain an automation script solution, which might consist of one or multiple automation scripts.
 
-Changes made to an Automation script repository trigger the corresponding [Automation script solution CI/CD pipeline](xref:Pipeline_stages_for_Automation_scripts).
+Changes made to an automation script repository trigger the corresponding [automation script solution CI/CD pipeline](xref:Pipeline_stages_for_Automation_scripts).
 
 ## Dashboards
 
@@ -55,7 +55,7 @@ Changes made to a dashboard repository trigger the corresponding [dashboard CI/C
 
 ## Examples
 
-This tab lists repositories that contain an example protocol or Automation script.
+This tab lists repositories that contain an example protocol or automation script.
 
 Changes made to an example repository trigger the corresponding example CI/CD pipeline.
 

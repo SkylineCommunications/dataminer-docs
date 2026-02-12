@@ -23,7 +23,7 @@ This includes:
 
 Any components that rely on a specific primary key will be broken.
 
-This could be any component in DataMiner (dashboards, Automation scripts, Visual Overview, etc.).
+This could be any component in DataMiner (dashboards, automation scripts, Visual Overview, etc.).
 
 ## Workarounds
 

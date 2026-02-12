@@ -2,9 +2,9 @@
 uid: SchemaMaintenanceSettings
 ---
 
-# MaintenanceSettings Schema
+# MaintenanceSettings schema
 
-MaintenanceSettings XML Schema.
+MaintenanceSettings XML schema.
 
 ## Root element
 

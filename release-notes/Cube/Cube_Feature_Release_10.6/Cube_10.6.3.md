@@ -44,9 +44,9 @@ Because of a number of enhancements, especially to the way in which script infor
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-When, in System Center, you viewed Automation script logging, up to now, all scripts would be listed. This could cause users to try to view non-existing logs. For example, Automation scripts that only contain library blocks do not have a dedicated log file.
+When, in System Center, you viewed automation script logging, up to now, all scripts would be listed. This could cause users to try to view non-existing logs. For example, automation scripts that only contain library blocks do not have a dedicated log file.
 
-From now on, when Cube is connected to a DataMiner Agent running DataMiner main release 10.7.0 or feature release 10.6.2 (or above), only Automation scripts that contain at least one executable C# block will allow user to view their log file.
+From now on, when Cube is connected to a DataMiner Agent running DataMiner main release 10.7.0 or feature release 10.6.2 (or above), only automation scripts that contain at least one executable C# block will allow user to view their log file.
 
 This change applies to the following ways to access a log file:
 

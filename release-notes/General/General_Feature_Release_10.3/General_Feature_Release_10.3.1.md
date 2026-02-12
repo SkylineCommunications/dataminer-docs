@@ -20,11 +20,11 @@ uid: General_Feature_Release_10.3.1
 
 The new icon component allows you to display an icon on a dashboard or a low-code app.
 
-#### Interactive Automation scripts: New button style 'CallToAction' [ID 34904]
+#### Interactive automation scripts: New button style 'CallToAction' [ID 34904]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
-In an interactive Automation script launched from a dashboard or a low-code app, you can now apply the *CallToAction* style to a button.
+In an interactive automation script launched from a dashboard or a low-code app, you can now apply the *CallToAction* style to a button.
 
 When you apply this style to a button
 
@@ -32,14 +32,14 @@ When you apply this style to a button
 - the color of the text on the button will be white, and
 - the button will have a shadow.
 
-To set the style of a button in an interactive Automation script, set the *Style* property of the button's *UIBlockDefinition* to the name of the style. All supported styles are available via `Style.Button`.
+To set the style of a button in an interactive automation script, set the *Style* property of the button's *UIBlockDefinition* to the name of the style. All supported styles are available via `Style.Button`.
 
 Alternatively, you can also pass a button style directly to the `AppendButton` method on an `UIBuilder` object.
 
 > [!NOTE]
 >
 > - Up to now, `StaticText` blocks already supported a number of styles. Those styles are now also available via `Style.Text`: *Title1*, *Title2* and *Title3*.
-> - The *CallToAction* style will only be applied in interactive Automation scripts launched from a web app. It will not be applied in interactive Automation scripts launched from Cube.
+> - The *CallToAction* style will only be applied in interactive automation scripts launched from a web app. It will not be applied in interactive automation scripts launched from Cube.
 
 ## Other features
 
@@ -556,11 +556,11 @@ Because of a number of enhancements, overall performance of SLElement has increa
 
 When a time range feed was configured to show quick pick buttons, those buttons would not be displayed in the correct order. From now on, quick pick buttons will be displayed in chronological order.
 
-#### Web apps - Interactive Automation scripts: All other tree view components in a dialog box would incorrectly collapse when you selected an item in a tree view component [ID 34773]
+#### Web apps - Interactive automation scripts: All other tree view components in a dialog box would incorrectly collapse when you selected an item in a tree view component [ID 34773]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
-When, in a dialog box of an interactive Automation script, you selected an item in a tree view component, other tree view components on that dialog box would incorrectly collapse.
+When, in a dialog box of an interactive automation script, you selected an item in a tree view component, other tree view components on that dialog box would incorrectly collapse.
 
 #### Standalone parameters belonging to another child of the same DVE parent element could be set to 'Not Initialized' when a row linked to a DVE child element was deleted [ID 34785]
 

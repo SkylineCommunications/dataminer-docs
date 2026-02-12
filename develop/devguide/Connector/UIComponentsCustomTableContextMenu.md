@@ -15,7 +15,7 @@ To define a custom context menu, define a parameter with the same name as the ta
 - Action with dependencies: The user will be asked to enter a value for each parameter specified in the [dependencyValues](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-dependencyValues) attribute.
 - Action with [rowselection](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#tableselection): This is only available if the user has selected one or more rows in the table. The index of each row will be passed to the QAction.
 - Action with [confirmation](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#confirmabc): This action will only be executed when the user confirms the pop-up.
-- [Automation script](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#script): This will start an Automation script instead of triggering a QAction. It uses the same syntax as for Visio and you can use * for dummies to use the current element and specify parameter IDs of columns of the selected row to use as values for script parameters.
+- [Automation script](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#script): This will start an automation script instead of triggering a QAction. It uses the same syntax as for Visio and you can use * for dummies to use the current element and specify parameter IDs of columns of the selected row to use as values for script parameters.
 - [Separator](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#separator): This displays a separator line between menu items.
 
 ```xml

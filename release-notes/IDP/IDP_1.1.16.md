@@ -69,13 +69,13 @@ On the *Extra Configurations* page of the wizard, the same behavior will apply w
 
 The rack view has been improved to support elements with long names. Previously, these could not be displayed correctly.
 
-#### IDP Correlation rules moved to dedicated folder \[ID 30978\]
+#### IDP correlation rules moved to dedicated folder \[ID 30978\]
 
-The Correlation rules *IDP_Element_Edit* and *IDP_Element_Delete* have been moved from the root folder of the Correlation module to a dedicated *DataMiner Solutions/IDP* subfolder.
+The correlation rules *IDP_Element_Edit* and *IDP_Element_Delete* have been moved from the root folder of the Correlation module to a dedicated *DataMiner Solutions/IDP* subfolder.
 
-#### Improved efficiency of Correlation rule detecting element name changes \[ID 30980\]
+#### Improved efficiency of correlation rule detecting element name changes \[ID 30980\]
 
-To detect whether an element name is changed by a user, DataMiner IDP uses a Correlation rule (*IDP_Element_Edit*) that is triggered based on information events. To improve the efficiency of this rule, it will now no longer be triggered when services or enhanced services are edited.
+To detect whether an element name is changed by a user, DataMiner IDP uses a correlation rule (*IDP_Element_Edit*) that is triggered based on information events. To improve the efficiency of this rule, it will now no longer be triggered when services or enhanced services are edited.
 
 ### Fixes
 

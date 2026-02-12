@@ -204,7 +204,7 @@ Possible types for the `IGQIValueFilter.Value` property (i.e. the types for whic
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-Up to now, the *Interactive Automation script* component would only visualize an Automation script when the user had both the *Modules > Automation > UI available* and the *Modules > Automation > Execute* permissions. From now on, the *Interactive Automation script* component will be able to visualize an Automation script when the user has the *Modules > Automation > Execute* permission.
+Up to now, the *Interactive automation script* component would only visualize an automation script when the user had both the *Modules > Automation > UI available* and the *Modules > Automation > Execute* permissions. From now on, the *Interactive automation script* component will be able to visualize an automation script when the user has the *Modules > Automation > Execute* permission.
 
 With regard to the Web Services API, up to now, users needed to have both the *Modules > Automation > UI available* permission and the *Modules > Automation > Execute* permission to be allowed to use the `GetAutomationScript`, `ExecuteAutomationScript`, or `ExecuteAutomationScriptWithOutput` methods.
 
@@ -373,7 +373,7 @@ Parameter name: value
 When you entered a decimal value that started with a decimal point (e.g. ".05"), up to now, the decimal point would incorrectly be removed. For example, ".05" would incorrectly be changed to "05".
 
 > [!NOTE]
-> In some cases, this issue can still occur when entering a decimal value in a dialog box of an interactive Automation script that uses legacy UI components.
+> In some cases, this issue can still occur when entering a decimal value in a dialog box of an interactive automation script that uses legacy UI components.
 
 #### Dashboards/Low-Code Apps - Timeline component: Problem when zooming or panning while linked components trigger viewport changes [ID 44280]
 
@@ -410,11 +410,11 @@ In the DataMiner web apps, the following context menu issues have been solved:
 
 - In some cases, when a context menu had been opened by pressing the space bar, it could act erratically. It would not close when you clicked outside of it, and if it had a submenu, that submenu would open on top of the existing menu.
 
-#### Interactive Automation scripts: Subsequent user actions could get ignored when a component lost focus [ID 44315]
+#### Interactive automation scripts: Subsequent user actions could get ignored when a component lost focus [ID 44315]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-When you started an interactive Automation script in a web app, up to now, the moment a component lost focus, subsequent user actions could incorrectly be ignored.
+When you started an interactive automation script in a web app, up to now, the moment a component lost focus, subsequent user actions could incorrectly be ignored.
 
 #### Web Services API: GetClientDefaultTimeZone and GetRegionalSettings would incorrectly not be able to read the regional settings of the DMA on systems using a Dashboard Gateway [ID 44317]
 

@@ -407,7 +407,7 @@ The following information will be logged
 
 #### SLManagedAutomation: Locking mechanism will now prevent exceptions from being thrown when reading or writing items in the dummies collection \[ID 29930\]
 
-In an Automation script, every Engine object contains a collection of “dummies”. Each of these dummies represents an element and can be used to interact with that element. When an Automation script wants to interact with an element that is not yet available in the dummies collection, a new dummy is created.
+In an automation script, every Engine object contains a collection of “dummies”. Each of these dummies represents an element and can be used to interact with that element. When an automation script wants to interact with an element that is not yet available in the dummies collection, a new dummy is created.
 
 Up to now, exceptions could be thrown when multiple threads were trying to read or write items in the dummies collection. Now, a locking mechanism has been added to prevent multiple threads from interfering with each other while accessing the dummies collection.
 
@@ -463,9 +463,9 @@ When the Surveyor setting “Collapse DVE elements beneath their main element”
 
 When you opened a trend group with several graphs, in some rare cases, color icons would be missing from the trend graph legend.
 
-#### Interactive Automation scripts: Problem when entering double-digit numbers in input controls \[ID 29736\]
+#### Interactive automation scripts: Problem when entering double-digit numbers in input controls \[ID 29736\]
 
-In some cases, due to a problem with the WantsOnChange functionality, it would not be possible to enter a double-digit number (e.g. a number of minutes) in an input control. The interactive Automation script would incorrectly already continue after you entered the first digit.
+In some cases, due to a problem with the WantsOnChange functionality, it would not be possible to enter a double-digit number (e.g. a number of minutes) in an input control. The interactive automation script would incorrectly already continue after you entered the first digit.
 
 #### Manually clearing a clearable alarm on a single-value parameter would incorrectly set the alarm state of the parameter to 'undefined' instead of 'normal' \[ID 29745\]
 
@@ -499,7 +499,7 @@ When you pressed the Back button while logging on, in some cases, an error could
 
 #### Problem when an interactive Automaton script was detached on closure \[ID 29815\]
 
-In some cases, when an interactive Automation script detached on closure, an exception could be thrown in SLAutomation. From now on, interactive Automation scripts will only detach when they are aborted by a user either closing the pop-up window or clicking the *Abort* button.
+In some cases, when an interactive automation script detached on closure, an exception could be thrown in SLAutomation. From now on, interactive automation scripts will only detach when they are aborted by a user either closing the pop-up window or clicking the *Abort* button.
 
 #### Monitoring app: Service child pop-up pages without parent page could not be opened \[ID 29816\]
 
@@ -638,6 +638,6 @@ During a DataMiner upgrade, in some rare cases, a problem could occur in the cle
 
 In the Resources and Services modules, it could occur that functions were loaded even though they were not marked as active, which could cause several functions with the same GUID to be loaded.
 
-#### DataMiner Cube - Automation: No longer possible to attach an Automation script to a user session \[ID 30125\]
+#### DataMiner Cube - Automation: No longer possible to attach an automation script to a user session \[ID 30125\]
 
-In some cases, it would no longer be possible to attach an Automation script to a user session.
+In some cases, it would no longer be possible to attach an automation script to a user session.

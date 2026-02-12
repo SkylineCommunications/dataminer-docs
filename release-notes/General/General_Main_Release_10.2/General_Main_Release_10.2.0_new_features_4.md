@@ -31,9 +31,9 @@ cube://mydma?element=MyElement
 cube://10.11.12.13?view=12
 ```
 
-#### Visual overview: Page-level execution of Automation scripts & new NodeDoubleClicked event \[ID 28185\]
+#### Visual overview: Page-level execution of automation scripts & new NodeDoubleClicked event \[ID 28185\]
 
-On a Visio page, you can now configure to have Automation scripts executed automatically using a page-level data item of type *Execute*.
+On a Visio page, you can now configure to have automation scripts executed automatically using a page-level data item of type *Execute*.
 
 See the example below. You can use the keywords *Trigger* or *SetTrigger*, which can be set to either “ValueChanged” or “Event”.
 
@@ -45,7 +45,7 @@ Script:ScriptName|DummyName=ElementName or DmaID/ElementID;...| ParameterName1=[
 
 ##### Reserved prefixes can now mark each of the syntax components
 
-In the syntax to be used in Automation script shapes as well as page-level Automation script triggers, each component can now be marked by a prefix. That way, you will no longer have to define empty components in case there are no dummies, no memory files, etc.
+In the syntax to be used in automation script shapes as well as page-level automation script triggers, each component can now be marked by a prefix. That way, you will no longer have to define empty components in case there are no dummies, no memory files, etc.
 
 List of reserved prefixes:
 
@@ -80,7 +80,7 @@ Example:
 
 ##### Use case
 
-Using the new features described above, it is possible to configure that when a user clicks a service definition node in an embedded Service Manager component, an Automation script is executed with e.g. the node ID as a parameter.
+Using the new features described above, it is possible to configure that when a user clicks a service definition node in an embedded Service Manager component, an automation script is executed with e.g. the node ID as a parameter.
 
 To configure this behavior, add a page-level data item of type *Execute*, and set its value to e.g. the following:
 

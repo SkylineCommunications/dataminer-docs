@@ -467,7 +467,7 @@ In some cases, a problem could occur when SLProtocol retrieved data from a logge
 
 #### DataMiner Cube - Automation: IF action's 'Wait for positive result for at most' values not readable in entry box \[ID 24497\]
 
-When configuring an IF action in an Automation script, it is possible to select the *Wait for positive result for at most* option and enter a time span, in order to make the script wait during the specified period before evaluating the If condition. Due to a font color issue, the values in that entry box would not be readable.
+When configuring an IF action in an automation script, it is possible to select the *Wait for positive result for at most* option and enter a time span, in order to make the script wait during the specified period before evaluating the If condition. Due to a font color issue, the values in that entry box would not be readable.
 
 #### Memory leak in SLXML due to a parsing issue in SLDataMiner \[ID 24503\]
 
@@ -555,7 +555,7 @@ In the list of services in the Bookings and Services apps, it could occur that t
 
 #### Service & Resource Management: Incorrect result when comparing service definitions \[ID 24662\]
 
-If an Automation script compared two service definitions with at least one interface configuration or edge in the diagram, it could occur that the *Equals* method returned false incorrectly.
+If an automation script compared two service definitions with at least one interface configuration or edge in the diagram, it could occur that the *Equals* method returned false incorrectly.
 
 #### DataMiner Cube - Views: Split view icons would incorrectly display the alarm color of first-level child items as Undefined \[ID 24665\]
 
@@ -615,9 +615,9 @@ Also, in case of commands that did not require a response, in some cases, the se
 
 In some cases, it would no longer be possible to mask cells or rows in view tables or direct views.
 
-#### DataMiner Cube - Automation: Problem when an Automation script tried to send an e-mail containing a report \[ID 24775\]
+#### DataMiner Cube - Automation: Problem when an automation script tried to send an e-mail containing a report \[ID 24775\]
 
-In some cases, an error could occur when an Automation script tried to send an e-email containing a report.
+In some cases, an error could occur when an automation script tried to send an e-email containing a report.
 
 #### Problem with SLPort when parsing SSH responses \[ID 24776\]
 

@@ -6,16 +6,16 @@ uid: UD_APIs_Define_New_API
 
 To create a new API, follow these steps as detailed below:
 
-1. [Create the API Automation script](#creating-the-api-automation-script)
+1. [Create the API automation script](#creating-the-api-automation-script)
 1. [Create the API definition(s) and token(s)](#creating-an-api-and-tokens-in-dataminer-automation)
 1. [Configure the UserDefinableApiEndpoint extension module](#configuring-the-userdefinableapiendpoint-extension-module)
 
 > [!NOTE]
 > This is the recommended workflow when creating new APIs using new scripts. If you want to use an existing script for the API, see [Using existing scripts](xref:UD_APIs_Using_existing_scripts).
 
-## Creating the API Automation script
+## Creating the API automation script
 
-To define an API, you will need an Automation script that contains the logic of the API. This Automation script needs the `OnApiTrigger` entry point method, which will be executed when the API is triggered. The entry point should look like this:
+To define an API, you will need an automation script that contains the logic of the API. This automation script needs the `OnApiTrigger` entry point method, which will be executed when the API is triggered. The entry point should look like this:
 
 ```csharp
 using Skyline.DataMiner.Automation;
@@ -177,7 +177,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 | BadRequest | 400 | There was a client error, e.g. wrong parameters. |
 | NotFound | 404 | The requested document was not found. |
 | MethodNotAllowed | 405 | The HTTP method is not valid for this request. For example `DELETE` is used while `GET` was expected. |
-| InternalServerError | 500 | Return this if something went wrong in your Automation script, e.g. you try to write to a file, but the file is in use by another application. |
+| InternalServerError | 500 | Return this if something went wrong in your automation script, e.g. you try to write to a file, but the file is in use by another application. |
 
 > [!TIP]
 > For more insight into which HTTP status codes to use in which circumstances, see [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).

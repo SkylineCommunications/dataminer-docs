@@ -44,7 +44,7 @@ The *Resources* tab lists resources, i.e. objects that can be used to achieve so
 
 > [!NOTE]
 >
-> - Booking resources can be done via Automation scripts. By means of an embedded Resource Manager component in Visio, you can create an overview of the bookings. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
+> - Booking resources can be done via automation scripts. By means of an embedded Resource Manager component in Visio, you can create an overview of the bookings. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
 > - When you try to delete a resource that is in use or is about to be in use, a warning message will be displayed. However, keep in mind that only bookings that are displayed according to the latest zoom level in the *timeline* or *occupancy* tab are taken into account for this.
 
 ## Properties tab
