@@ -92,3 +92,14 @@ In some cases, the two Agents in a Failover pair could get stuck during startup.
 When a scheduled task was updated close to its execution time, in some cases, the task would incorrectly not be executed. It would miss its execution window because, during the update, the Windows task would be deleted and recreated again.
 
 From now on, when only the task actions are changed during an update of a scheduled task, the Windows task will no longer be recreated. The latter will only be recreated when the status, name, description, or timing of the scheduled task are changed.
+
+#### Problem with SLNet when rolling over log files [ID 44711]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, SLNet could stop working when rolling over from one log file to another (e.g. from *SLNet.txt* to *SLNet0.txt*).
+
+From now on, when an issue occurs when rolling over log files, an error will be logged in the Windows Event Viewer.
+
+> [!NOTE]
+> Some logging may get lost because of this fix.
