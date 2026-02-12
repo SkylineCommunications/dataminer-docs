@@ -26,7 +26,7 @@ Overview of an element’s active alarms or history alarms, with the following o
 
 - In order to only include certain parameters, you can apply one of the alarm filters saved in the DMS.
 
-  For more information on saved alarm filters, see [Working with saved alarm filters](xref:ApplyingAlarmFiltersInTheAlarmConsole#working-with-saved-alarm-filters).
+  For more information on saved alarm filters, see [Working with saved alarm filters](xref:WorkingWithSavedAlarmFilters).
 
 - You can choose to sort the list either by element name or by alarm time.
 

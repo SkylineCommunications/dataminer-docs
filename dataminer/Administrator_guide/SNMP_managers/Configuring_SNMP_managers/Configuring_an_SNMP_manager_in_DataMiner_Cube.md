@@ -152,7 +152,7 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
      1. When the filter is fully configured, click *OK*.
 
    > [!NOTE]
-   > To check whether a filter has been configured correctly, it can be useful to also create a new alarm tab in the Alarm Console using the same filter. This way you can check if it indeed filters out the correct alarms. See [Manually applying an alarm filter in an Alarm Console tab](xref:ApplyingAlarmFiltersInTheAlarmConsole#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
+   > To check whether a filter has been configured correctly, it can be useful to also create a new alarm tab in the Alarm Console using the same filter. This way you can check if it indeed filters out the correct alarms. See [Manually applying an alarm filter in an Alarm Console tab](xref:ManuallyApplyingAnAlarmFilter).
 
    > [!TIP]
    > See also: [Alarm filters](xref:Alarm_filters)
