@@ -49,7 +49,7 @@ Automation scripts can be **developed, tested, and deployed at runtime**. Using 
 
 By fully automating operating and business procedures or workflows, operational expenses can be drastically reduced. Automation scripts can be used in a lot of applications such as intelligent backup and service-healing routines, guided troubleshooting for operators, automatic configuration, provisioning of services, etc.
 
-![automation script example](~/dataminer/images/Automation_module_example.png)<br>*Automation module in DataMiner Cube 10.5.5*
+![Automation script example](~/dataminer/images/Automation_module_example.png)<br>*Automation module in DataMiner Cube 10.5.5*
 
 > [!TIP]
 > Various Automation-related videos are available in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=automation), including an introduction to the [basics of DataMiner Automation snippets](https://www.youtube.com/watch?v=i5_FLER_-tE).
