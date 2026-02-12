@@ -18,7 +18,7 @@ When you have a non-clustered system, that means you have one or more separate D
 
 - Reports containing data from multiple Agents.
 
-- correlation rules based on alarms from multiple Agents.
+- Correlation rules based on alarms from multiple Agents.
 
 - One-time setup of all your email notification filters.
 
@@ -26,7 +26,7 @@ When you have a non-clustered system, that means you have one or more separate D
 
 - Unified alarm templates and several admin level settings.
 
-- Cross-system Advanced Analytics (e.g. cross-system behavioral analysis).
+- Cross-system advanced analytics (e.g. cross-system behavioral analysis).
 
 - Unified Mobile Gateway integration.
 
