@@ -107,7 +107,8 @@ If you are about to upgrade across major versions, before proceeding with the up
 
   | DataMiner version | Microsoft VC++ |
   |--|--|
-  | DataMiner 10.5.0/10.5.2 and higher<!-- RN 41173+41609 --> | 14.40.33816 |
+  | DataMiner 10.5.0 [CU11]/10.6.0 [CU1]/10.6.3 and higher<!-- RN 44249 --> | 14.44.35211.0 |
+  | DataMiner 10.5.0 [CU0]/10.5.2 and higher<!-- RN 41173+41609 --> | 14.40.33816 |
 
 - Make sure the IP network **ports 9090, 4222, 6222, and 8222** (NATS monitoring only) are opened, as explained in [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
 

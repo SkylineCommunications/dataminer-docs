@@ -96,9 +96,12 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 ### Microsoft Visual C++
 
-- From DataMiner versions 10.3.9, 10.3.0 [CU6], and 10.2.0 [CU18] onwards<!-- RN 36745 -->, only Microsoft Visual C++ **2015** or newer is required.
+- From DataMiner versions 10.3.9, 10.3.0 [CU6], and 10.2.0 [CU18] onwards<!-- RN 36745 -->, only Microsoft Visual C++ **2015** or newer is required. In earlier DataMiner versions, both Microsoft Visual C++ **2010** and Microsoft Visual C++ **2015** or newer are required.
 
-- Prior to DataMiner versions 10.3.9, 10.3.0 [CU6], and 10.2.0 [CU18], Microsoft Visual C++ **2010** and Microsoft Visual C++ **2015** or newer are required.
+- From DataMiner 10.5.0 [CU11]/10.6.0 [CU1]/10.6.3 onwards, **version 14.44.35211.0** or higher of the **Microsoft Visual C++ x86/x64 redistributables** must be installed. For 10.5.x feature release versions starting from DataMiner **10.5.2**, **version 14.40.33816** or higher of the Microsoft Visual C++ x86/x64 redistributables must be installed. The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+
+  - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+  - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 > [!NOTE]
 >
