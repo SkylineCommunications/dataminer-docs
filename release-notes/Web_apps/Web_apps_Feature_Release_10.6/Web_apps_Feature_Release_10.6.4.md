@@ -128,3 +128,9 @@ In order to prevent this from happening, the minimum component width has now bee
 
 > [!NOTE]
 > In certain situations, especially when using a narrow layout or when the available space is insufficient, dashboard contents can still be clipped when a PDF report is generated.
+
+#### Low-Code Apps: Certain component actions would incorrectly not be available when using flows or variables [ID 44697]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When flows or variables were used in certain components, up to now, the available component actions would not correctly reflect the actions that would have been available if the data of the same output type had been applied directly. Some valid actions would be missing or incorrect.
