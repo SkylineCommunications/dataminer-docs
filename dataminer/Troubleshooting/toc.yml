@@ -136,7 +136,7 @@ items:
                     items:
                       - name: SLNet - startup issues
                         topicUid: Troubleshooting_SLNet_Startup
-                      - name: SLNet - correlation engine
+                      - name: SLNet - Correlation engine
                         topicUid: Troubleshooting_SLNet_Correlation_Engine
                       - name: SLNet - disconnects
                         topicUid: Troubleshooting_SLNet_Disconnects

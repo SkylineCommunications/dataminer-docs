@@ -11,7 +11,7 @@ Changing the display key of a table is considered a major change.
 This has the same impact as changing a parameter description. The following DataMiner features can be impacted if used:
 
 - Filters
-- automation scripts
+- Automation scripts
 - Visio files
 - Reports
 - Dashboards

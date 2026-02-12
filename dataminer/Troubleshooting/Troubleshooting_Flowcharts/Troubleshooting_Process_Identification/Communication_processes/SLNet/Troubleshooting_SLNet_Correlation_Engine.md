@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLNet_Correlation_Engine
 ---
 
-# SLNet - correlation engine
+# SLNet - Correlation engine
 
 ```mermaid
 flowchart TD

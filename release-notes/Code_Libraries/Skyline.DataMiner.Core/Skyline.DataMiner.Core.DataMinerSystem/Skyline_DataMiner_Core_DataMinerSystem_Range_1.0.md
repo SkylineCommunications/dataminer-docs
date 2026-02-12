@@ -73,7 +73,7 @@ The latest benchmark tests, at the time of release, demonstrate that the system'
 >[!Note]
 > Scalability and performance depend on your system's ability to execute monitor handlers in parallel.
 
-#### Fix - automation scripts failed to parse with EXE blocks other than C\#
+#### Fix - Automation scripts failed to parse with EXE blocks other than C\#
 
 IDms can now retrieve automation scripts that have EXE blocks that do not contain C# code.
 

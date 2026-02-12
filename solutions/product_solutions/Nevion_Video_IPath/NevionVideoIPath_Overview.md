@@ -18,7 +18,7 @@ The [*Nevion Video IPath* package](https://catalog.dataminer.services/details/ec
 
 - A Visio file that will provide extra visualization and control capabilities in the Monitoring app.
 
-- automation scripts used in the app to gather data and perform control operations.
+- Automation scripts used in the app to gather data and perform control operations.
 
 For more information about how to install the package, see [Installing the Nevion Video IPath app](xref:Installing_NevionVideoIPath_App).
 

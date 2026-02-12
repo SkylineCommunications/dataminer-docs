@@ -21,7 +21,7 @@ The *TAG Management* package, available for download from the Catalog, contains 
 
 - TAG Video Systems Media Control System (MCS) connector version 1.0.2.1
 
-- automation scripts used in the application to gather data and perform device control operations
+- Automation scripts used in the application to gather data and perform device control operations
 
 For more information about how to install the package, see [Installing the TAG Management app](xref:Installing_TAG_App).
 
