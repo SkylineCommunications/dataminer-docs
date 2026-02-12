@@ -11,7 +11,7 @@ DataMiner Integration Studio allows you to debug connector QActions and automati
 
 ## Graphical representation of the QAction debugging concept
 
-Below, you can find a graphical representation of the way QActions are debugged. automation scripts are debugged in a similar way.
+Below, you can find a graphical representation of the way QActions are debugged. Automation scripts are debugged in a similar way.
 
 The numbers in the drawing refer to the phases described in the table below.
 

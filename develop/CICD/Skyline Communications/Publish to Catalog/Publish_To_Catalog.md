@@ -122,7 +122,7 @@ You can monitor the release pipeline:
 
 ## Publishing automation scripts
 
-automation scripts are XML files and assemblies that are packaged into .dmapp files. The source code of these is currently available both through the internal SLC SE RepoManager and on GitHub. All **new automation scripts should be created on GitHub**.
+Automation scripts are XML files and assemblies that are packaged into .dmapp files. The source code of these is currently available both through the internal SLC SE RepoManager and on GitHub. All **new automation scripts should be created on GitHub**.
 
 If you use **SLC SE RepoManager**, Jenkins will be used to automatically publish scripts to the Catalog when tagging. For this, you should [follow the same steps as described for connectors](#publishing-connectors) above.
 

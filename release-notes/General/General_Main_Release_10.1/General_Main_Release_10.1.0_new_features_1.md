@@ -653,7 +653,7 @@ It returns a connection that impersonates the user who triggered the QAction bas
 
 ##### Script and QAction compilation
 
-automation scripts and QActions will now by default be compiled with a reference to SLLoggerUtil.dll (C:\\Skyline DataMiner\\Files\\SLLoggerUtil.dll).
+Automation scripts and QActions will now by default be compiled with a reference to SLLoggerUtil.dll (C:\\Skyline DataMiner\\Files\\SLLoggerUtil.dll).
 
 #### Proactive cap detection \[ID 26637\]\[ID 27132\]\[ID 27241\]\[ID 27355\]\[ID 27393\]
 

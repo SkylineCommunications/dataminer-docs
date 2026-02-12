@@ -45,9 +45,9 @@ Once created, scripts can be triggered in a variety of ways, ranging from manual
 
 Even if tasks are automated, the operator always remains in control. Not only is there a full audit trail of the executed tasks, but operators can also opt to **interact with the Automation engine at runtime**. DataMiner interactive automation scripts can be set up to prompt for operator input, which is then used to automate further actions.
 
-automation scripts can be **developed, tested, and deployed at runtime**. Using built-in version control and quality checks during deployment (with DIS and CI/CD using our [dedicated workflows](xref:github_reusable_workflows_automation_master_workflow)), operators can easily use DevOps practices to respond to the rapid changes in today's networks, data centers, and service offerings.
+Automation scripts can be **developed, tested, and deployed at runtime**. Using built-in version control and quality checks during deployment (with DIS and CI/CD using our [dedicated workflows](xref:github_reusable_workflows_automation_master_workflow)), operators can easily use DevOps practices to respond to the rapid changes in today's networks, data centers, and service offerings.
 
-By fully automating operating and business procedures or workflows, operational expenses can be drastically reduced. automation scripts can be used in a lot of applications such as intelligent backup and service-healing routines, guided troubleshooting for operators, automatic configuration, provisioning of services, etc.
+By fully automating operating and business procedures or workflows, operational expenses can be drastically reduced. Automation scripts can be used in a lot of applications such as intelligent backup and service-healing routines, guided troubleshooting for operators, automatic configuration, provisioning of services, etc.
 
 ![automation script example](~/dataminer/images/Automation_module_example.png)<br>*Automation module in DataMiner Cube 10.5.5*
 

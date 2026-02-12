@@ -7,7 +7,7 @@ keywords: production protocol, production driver, production connector
 
 When you promote a protocol version to “production version”, all elements using the “production version” of that protocol will automatically start using that particular version.
 
-Within a DataMiner System, you can maintain different versions of a particular protocol. Typically, all elements will use the so-called production version of their respective protocol. automation scripts and correlation rules will also be based on production versions of protocols.
+Within a DataMiner System, you can maintain different versions of a particular protocol. Typically, all elements will use the so-called production version of their respective protocol. Automation scripts and correlation rules will also be based on production versions of protocols.
 
 When you add a new version of a particular protocol to your DataMiner System, it is good practice to first test that new version with one element only.
 

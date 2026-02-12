@@ -67,7 +67,7 @@ For the name of the automation script used for an ad hoc data source, see [Autom
 
 ### Correlation rule
 
-correlation rules should have a name in the following format: `[SOLCODE] [name]`
+Correlation rules should have a name in the following format: `[SOLCODE] [name]`
 
 They should be added in the Correlation module in the following folder: `DataMiner Catalog/[SOLCATEGORY]/[SOLNAME]/[subfolders]`
 

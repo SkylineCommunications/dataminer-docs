@@ -23,7 +23,7 @@ To install dataminer.InfraOps:
 During the installation, the following steps will automatically be executed:
 
 1. Prerequisites are checked.
-1. automation scripts are installed/updated.
+1. Automation scripts are installed/updated.
 1. Applications are installed/updated.
 1. DOM definitions are installed/updated.
 1. In case of a fresh install, the system is initialized.

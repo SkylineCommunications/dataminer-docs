@@ -8,7 +8,7 @@ Often, in a particular infrastructure, you can find devices from different vendo
 
 Through the DataMiner Mediation Layer, it is possible to provide a uniform view on these different devices/device protocols. This is achieved by using a so-called base protocol, which forms a mediation layer on top of device-specific protocols and therefore provides a standard view on these devices.
 
-automation scripts, for example, can then be based on these base protocols instead of on a device-specific protocol, so that these scripts can more easily be re-used.
+Automation scripts, for example, can then be based on these base protocols instead of on a device-specific protocol, so that these scripts can more easily be re-used.
 
 The following graph illustrates the concept:
 

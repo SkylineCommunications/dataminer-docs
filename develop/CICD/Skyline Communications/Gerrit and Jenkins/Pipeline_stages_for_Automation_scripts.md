@@ -152,7 +152,7 @@ This quality gate verifies whether the automation script does not exceed any of 
 - Duplicated Blocks: 200
 
 > [!NOTE]
-> The quality gate will currently only verify SonarQube analysis results for initial developments (i.e. automation scripts tagged as version 1.0.0.1).
+> The quality gate will currently only verify SonarQube analysis results for initial developments (i.e. Automation scripts tagged as version 1.0.0.1).
 
 ## (Development) Catalog registration
 

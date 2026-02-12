@@ -60,7 +60,7 @@ It returns a connection that impersonates the user who triggered the QAction bas
 
 ##### Script and QAction compilation
 
-automation scripts and QActions will now by default be compiled with a reference to SLLoggerUtil.dll (C:\\Skyline DataMiner\\Files\\SLLoggerUtil.dll).
+Automation scripts and QActions will now by default be compiled with a reference to SLLoggerUtil.dll (C:\\Skyline DataMiner\\Files\\SLLoggerUtil.dll).
 
 #### A notice will now be generated at DataMiner startup when duplicate properties are found for views, elements or services \[ID 26705\]
 
