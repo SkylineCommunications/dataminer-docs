@@ -20,7 +20,13 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-*No new features have been added yet.*
+#### Dashboards/Low-Code Apps: Anchor buttons in breadcrumbs and in the HTTP 404 visual [ID 44679]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In the Dashboards app, a new type of anchor button will now be used in breadcrumbs and in the HTTP 404 visual.
+
+These buttons will let you navigate to a fixed location when clicked. Also, clicking such a button while holding the CTRL key pressed will open a new tab, and hovering over such a button will reveal the link associated with that button.
 
 ## Changes
 
