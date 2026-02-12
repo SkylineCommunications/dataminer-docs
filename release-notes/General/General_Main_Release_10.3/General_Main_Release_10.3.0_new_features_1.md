@@ -224,7 +224,7 @@ Process:
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
-If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
+If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for correlation alarms.
 
 #### Client-server communication: gRPC instead of .NET Remoting [ID 34797] [ID 34983]
 

@@ -325,7 +325,7 @@ items:
             topicUid: Script_condition_functions
           - name: Examples of script conditions
             topicUid: Examples_of_script_conditions
-      - name: Using Correlation analyzers
+      - name: Using correlation analyzers
         topicUid: Using_Correlation_analyzers
         items:
           - name: Creating an analyzer

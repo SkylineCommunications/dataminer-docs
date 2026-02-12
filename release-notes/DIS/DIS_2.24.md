@@ -210,7 +210,7 @@ The *DMSScript.Script.Exe.Param@type* attribute can now be set to the following 
 |-------------|--------------------------|
 | libraryName | The name of the library. |
 | precompile  | Whether this C# action must be compiled as a library. Default: “false”. |
-| scriptRef   | A reference to another library.<br> Format: The name of the automation script, followed by a colon and the name of the library (e.g. ScriptName:LibraryName).<br> To refer to a library in the current Automation script, you can replace the name of the automation script by the \[AutomationScriptName\] placeholder (e.g. “\[AutomationScriptName\]:MyCSharpAction”). |
+| scriptRef   | A reference to another library.<br> Format: The name of the automation script, followed by a colon and the name of the library (e.g. ScriptName:LibraryName).<br> To refer to a library in the current automation script, you can replace the name of the automation script by the \[AutomationScriptName\] placeholder (e.g. “\[AutomationScriptName\]:MyCSharpAction”). |
 
 #### Automation Schema: List of possible bit flags added to documentation tag of the DMSScript.Exe.Param@options attribute \[ID 23953\]
 

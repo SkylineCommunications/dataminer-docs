@@ -45,7 +45,7 @@ Changes made to a function repository trigger the corresponding [functions CI/CD
 
 This tab lists repositories that contain an automation script solution, which might consist of one or multiple automation scripts.
 
-Changes made to an automation script repository trigger the corresponding [Automation script solution CI/CD pipeline](xref:Pipeline_stages_for_Automation_scripts).
+Changes made to an automation script repository trigger the corresponding [automation script solution CI/CD pipeline](xref:Pipeline_stages_for_Automation_scripts).
 
 ## Dashboards
 

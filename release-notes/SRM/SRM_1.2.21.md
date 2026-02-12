@@ -122,7 +122,7 @@ When a pending booking was edited while it was in the pre-roll stage, up to now 
 
 The API has been extended to make it possible to specify the log type and level of a logged message. For this purpose, you can use *BufferActionMessage* and *BufferDebugMessage*. The latter allows you to set the log level of a debug log message. *LogActionMessage* and *LogDebugMessage* have also been added to allow the message to be immediately written to the log file.
 
-An example is available in the *SRM_LSOTemplate* Automation script:
+An example is available in the *SRM_LSOTemplate* automation script:
 
 ```csharp
 // Add information about the Service State that was Orchestrated and the amount of the (non)configured Resource.

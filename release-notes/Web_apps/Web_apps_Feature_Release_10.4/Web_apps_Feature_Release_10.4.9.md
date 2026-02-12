@@ -14,13 +14,13 @@ uid: Web_apps_Feature_Release_10.4.9
 
 ## New features
 
-#### Low-Code Apps: New 'Interactive Automation script' component [ID 39969]
+#### Low-Code Apps: New 'Interactive automation script' component [ID 39969]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-In low-code apps, you can now use *Interactive Automation script* components.
+In low-code apps, you can now use *Interactive automation script* components.
 
-An *Interactive Automation script* component allows you to launch a preset interactive automation script (ad hoc, on view, or after an event has occurred) and to display its UI. It also allows you to select a script and launch it, or to abort the script that is being run.
+An *Interactive automation script* component allows you to launch a preset interactive automation script (ad hoc, on view, or after an event has occurred) and to display its UI. It also allows you to select a script and launch it, or to abort the script that is being run.
 
 When you launch a new script while another is being run, the new script will start once the other script has finished.
 

@@ -8,7 +8,7 @@ uid: DIS_2.45
 
 ### IDE
 
-#### XML editor: New Automation script tag options [ID 37423]
+#### XML editor: New automation script tag options [ID 37423]
 
 In the XML editor, you can click a small down arrow in front of certain XML tags to open a shortcut menu. Two new commands have been added.
 

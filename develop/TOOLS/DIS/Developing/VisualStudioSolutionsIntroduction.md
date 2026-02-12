@@ -21,7 +21,7 @@ Similarly, DIS also supports developing **automation scripts** as XML files, but
 - Setting up a CI/CD pipeline that builds your solution, performs SonarCloud analysis, etc.
 - Easy transition to a full-blown package with other components
 
-DIS supports [converting Automation script XML files](xref:skyline_dataminer_sdk_dataminer_package_project#existing-automation-script-files) into Visual Studio projects.
+DIS supports [converting automation script XML files](xref:skyline_dataminer_sdk_dataminer_package_project#existing-automation-script-files) into Visual Studio projects.
 
 ## SDK-style vs. legacy-style project format
 

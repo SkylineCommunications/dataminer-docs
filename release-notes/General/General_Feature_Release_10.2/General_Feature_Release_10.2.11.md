@@ -122,7 +122,7 @@ Connection to {0} via external process succeeds while same connection via SLNet 
 
 From now on, the connection in question will also be forcefully killed.
 
-#### Web apps - Interactive Automation script components: Minor enhancements [ID 34373]
+#### Web apps - Interactive automation script components: Minor enhancements [ID 34373]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 

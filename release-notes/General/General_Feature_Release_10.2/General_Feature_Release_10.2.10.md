@@ -78,7 +78,7 @@ Now, this option has been replaced by a triple-state option. You can now indicat
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
-If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
+If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for correlation alarms.
 
 #### GQI: columnInfo object of data source columns of type 'discrete' will now contain the possible values [ID 34179]
 

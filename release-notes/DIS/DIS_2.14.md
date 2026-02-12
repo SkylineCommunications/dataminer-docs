@@ -157,13 +157,13 @@ The following units have been added to the UOM Schema:
 
 It is now also possible to debug elements that were migrated from one DataMiner Agent to another within a DataMiner System.
 
-#### XML editor: Enhanced Automation script publication process \[ID 20255\]
+#### XML editor: Enhanced automation script publication process \[ID 20255\]
 
 A number of enhancements have been made to the automation script publication process.
 
 #### XML editor: Enhanced 'Automation Root' snippet and 'DataMiner Automation Script Template' file \[ID 20265\]
 
-The following enhancements have been made to the ‘Automation Root’ snippet and the ‘DataMiner Automation Script Template’ file:
+The following enhancements have been made to the *Automation Root* snippet and the *DataMiner Automation Script Template* file:
 
 - An empty Script.Exe element of type “csharp” will now be added by default.
 - The copyright and revision history text blocks are no longer located at the top of the XML file. They are now located inside the Script.Value element.
@@ -196,7 +196,7 @@ Up to now, DIS would always ask you to save the protocol file when you opened a 
 
 #### Settings.StyleCop file now included in DIS \[ID 20563\]
 
-The Settings.StyleCop file, which contains all rule definitions used by StyleCop, is now included in DIS and automatically applied to all QAction and Automation script projects. It is no longer necessary to download and install this file manually.
+The Settings.StyleCop file, which contains all rule definitions used by StyleCop, is now included in DIS and automatically applied to all QAction and automation script projects. It is no longer necessary to download and install this file manually.
 
 ### Fixes
 

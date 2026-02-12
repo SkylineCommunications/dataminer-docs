@@ -97,7 +97,7 @@ The executables included in the DIS VSIX extension package are now signed.
 
 #### Automation script template: Namespace added and input argument updated [ID 36033]
 
-The Automation script template will now put a namespace around the `Script` class.
+The automation script template will now put a namespace around the `Script` class.
 
 Also, the `Engine` argument in the *Run* methods has been changed to `IEngine`.
 

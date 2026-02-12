@@ -928,7 +928,7 @@ In some cases, an error could occur in SLProtocol when starting a DVE element or
 
 If a protocol with serial connection over UDP or TDC/IP used either an action of type "close" on a serial connection or a parameter with type option "dynamic IP", a runtime error could occur in the protocol thread.
 
-#### Automation: Options text in narrow Automation script execution window not fully displayed \[ID 25226\]
+#### Automation: Options text in narrow automation script execution window not fully displayed \[ID 25226\]
 
 In the window displaying the options for the execution of an automation script, text wrapping was not implemented, so that it could occur that the text was not fully displayed if the window was too narrow.
 

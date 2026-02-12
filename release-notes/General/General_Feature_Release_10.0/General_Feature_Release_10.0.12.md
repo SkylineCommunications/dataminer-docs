@@ -970,7 +970,7 @@ When the *Activities* tab of the navigation pane listed multiple custom element 
 
 In some cases, FileInfoManager would handle production protocols incorrectly.
 
-Also, Automation script IDs will now be case insensitive.
+Also, automation script IDs will now be case insensitive.
 
 #### SLAnalytics: Problem when updating behavioral anomaly detection suggestion events \[ID 27646\]
 

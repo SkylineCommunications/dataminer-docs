@@ -45,7 +45,7 @@ Script:ScriptName|DummyName=ElementName or DmaID/ElementID;...| ParameterName1=[
 
 ##### Reserved prefixes can now mark each of the syntax components
 
-In the syntax to be used in Automation script shapes as well as page-level Automation script triggers, each component can now be marked by a prefix. That way, you will no longer have to define empty components in case there are no dummies, no memory files, etc.
+In the syntax to be used in automation script shapes as well as page-level automation script triggers, each component can now be marked by a prefix. That way, you will no longer have to define empty components in case there are no dummies, no memory files, etc.
 
 List of reserved prefixes:
 

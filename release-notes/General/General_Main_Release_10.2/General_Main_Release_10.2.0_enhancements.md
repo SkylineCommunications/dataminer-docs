@@ -349,7 +349,7 @@ Also, due to a number of enhancements, overall performance has increased when de
 
 #### DataMiner Cube - Alarm Console: Enhanced correlation mechanism \[ID 30481\]
 
-Because of a number of enhancements, overall performance of the correlation mechanism has increased, especially when generating Correlation alarms with a large number of sources.
+Because of a number of enhancements, overall performance of the correlation mechanism has increased, especially when generating correlation alarms with a large number of sources.
 
 #### DataMiner Cube: Enhanced performance of Booking Manager and Resource Manager \[ID 30483\]
 

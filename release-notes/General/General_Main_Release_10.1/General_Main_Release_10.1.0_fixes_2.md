@@ -247,7 +247,7 @@ When no domains had been configured, in some cases, the jobs list would incorrec
 
 In some cases, FileInfoManager would handle production protocols incorrectly.
 
-Also, Automation script IDs will now be case insensitive.
+Also, automation script IDs will now be case insensitive.
 
 #### SLAnalytics: Problem when updating behavioral anomaly detection suggestion events \[ID 27646\]
 

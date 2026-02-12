@@ -24,9 +24,9 @@ In the *Correlation* module in Cube, select a rule in the tree view pane on the 
 
     A short text that describes the correlation rule.
 
-  - **Accept Correlation alarms**:
+  - **Accept correlation alarms**:
 
-    Select this option to allow the correlation rule to be triggered by Correlation alarms.
+    Select this option to allow the correlation rule to be triggered by correlation alarms.
 
     > [!NOTE]
     > Be careful about using this option: depending on your alarm filter settings and rule conditions, it could cause an endless loop where the correlation rule is triggered and generates a correlated alarm, which then in turn triggers the rule again so that the same occurs over and over.
@@ -51,7 +51,7 @@ In the *Correlation* module in Cube, select a rule in the tree view pane on the 
     > [!TIP]
     > See also: [Which DMA handles which rule?](xref:About_DMS_Correlation#which-dma-handles-which-rule)
 
-- To have a new correlation alarm created for every change to an alarm, in the *Alarm filter* section, select *Trigger on single events. Don’t maintain active tree status*. If you do not select this option, the same Correlation alarm will be updated for every new status.
+- To have a new correlation alarm created for every change to an alarm, in the *Alarm filter* section, select *Trigger on single events. Don’t maintain active tree status*. If you do not select this option, the same correlation alarm will be updated for every new status.
 
   > [!NOTE]
   > This setting is important for correlation rules that use a number of separate alarm events as the trigger. If the option is not selected, recurring alarms that are contained within the same alarm tree will not be considered to be separate events.

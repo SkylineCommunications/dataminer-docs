@@ -242,7 +242,7 @@ When a GQI operator or data source was not able to find a column, up to now, the
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->
 
-The GQI DxM has an indexer process that loads Automation script libraries and their dependencies to detect GQI extensions.
+The GQI DxM has an indexer process that loads automation script libraries and their dependencies to detect GQI extensions.
 
 Up to now, once this indexer process had loaded an extension library, no other process was authorized to change or delete the associated DLL file until the indexer process exited. This could cause issues when the Automation module attempted to delete existing script libraries, even if they were never actually used as a GQI extension library.
 

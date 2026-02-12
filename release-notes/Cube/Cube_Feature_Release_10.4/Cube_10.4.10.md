@@ -57,7 +57,7 @@ During that requirements check, up to now, it would use the *GetCCAGatewayGlobal
 
 ### Fixes
 
-#### Interactive Automation script could become unresponsive while it was waiting for user input [ID 40358]
+#### Interactive automation script could become unresponsive while it was waiting for user input [ID 40358]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 

@@ -30,7 +30,7 @@ If any of your existing solutions are using NuGet packages the old way (i.e. usi
 1. Repeat for every project in the current solution.
 
 > [!NOTE]
-> The DataMiner DevPacks can also be used in solutions other than protocol and Automation script solutions, for example in custom solutions such as the Class Library Community Packages, which are meant to be used as an API within protocol or automation script solutions. If you have any custom solutions, make sure to the projects in those solutions also use the new DataMiner DevPacks.
+> The DataMiner DevPacks can also be used in solutions other than protocol and automation script solutions, for example in custom solutions such as the Class Library Community Packages, which are meant to be used as an API within protocol or automation script solutions. If you have any custom solutions, make sure to the projects in those solutions also use the new DataMiner DevPacks.
 
 ##### Enhanced publishing of protocols and automation scripts
 
@@ -62,7 +62,7 @@ When you try to import a protocol or an automation script, additional checks wil
 
 - When, in the DIS menu, you select *DMA > Import Automation Script* while a protocol solution is open, a pop-up window will now appear, saying that it is impossible to import an automation script while a protocol solution is open.
 
-- When, in the DIS menu, you select *DMA > Import Automation Script* while an automation script solution is open, a pop-up window will now appear, asking you whether you want the script to be imported into the open Automation script solution.
+- When, in the DIS menu, you select *DMA > Import Automation Script* while an automation script solution is open, a pop-up window will now appear, asking you whether you want the script to be imported into the open automation script solution.
 
 #### DIS now by default contains most common IANA and IETF MIB files [ID 34304]
 

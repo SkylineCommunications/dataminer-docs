@@ -66,7 +66,7 @@ You can import specific items directly from a DataMiner Agent using DIS:
 
      1. Select *Import DataMiner Low-Code App*.
 
-   - To import an **Automation script**:
+   - To import an **automation script**:
 
      1. In your *Solution Explorer*, right-click the solution, and select *Add*.
 

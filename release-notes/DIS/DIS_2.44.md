@@ -36,9 +36,9 @@ The following checks and error messages have been added.
 
 ### Enhancements
 
-#### Enhanced performance when building the app package of a large Automation script solution [ID 37013]
+#### Enhanced performance when building the app package of a large automation script solution [ID 37013]
 
-Because of a number of enhancements, overall performance has increased when building the app package of a large Automation script solution.
+Because of a number of enhancements, overall performance has increased when building the app package of a large automation script solution.
 
 ### Fixes
 

@@ -4,7 +4,7 @@ uid: RAD_API
 
 # Working with the RAD API
 
-The RAD API is a set of messages that allows you to configure [Relational Anomaly Detection](xref:Relational_anomaly_detection) through an [Automation script](xref:automation). Compared to using the [RAD Manager](xref:RAD_manager), the RAD API offers more flexibility, making it particularly useful for use cases that deviate from the default options provided by the RAD Manager.
+The RAD API is a set of messages that allows you to configure [Relational Anomaly Detection](xref:Relational_anomaly_detection) through an [automation script](xref:automation). Compared to using the [RAD Manager](xref:RAD_manager), the RAD API offers more flexibility, making it particularly useful for use cases that deviate from the default options provided by the RAD Manager.
 
 All messages in the RAD API reside in the `Skyline.DataMiner.Analytics.Rad` namespace. The following messages are available:
 

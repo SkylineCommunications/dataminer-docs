@@ -199,14 +199,14 @@ Default: 2 minutes
 > - Changing this refresh rate can have a minor effect on overall performance, especially when opening trend graphs with more than 10 parameters.
 > - If you change the *Update interval* setting, then open trend graphs need to be closed and re-opened if you want them to use the new interval.
 
-#### Visual Overview: Passing Interactive Automation script output to session variables [ID 32874]
+#### Visual Overview: Passing interactive automation script output to session variables [ID 32874]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
 Similar to regular automation scripts, interactive automation scripts are now also able to pass their output to session variables in Visual Overview.
 
 > [!NOTE]
-> When configuring the Execute shape, it is recommended to specify both the NoConfirmation option and the CloseWhenFinished option in the value of the Execute data field.
+> When you configure the Execute shape, we recommend specifying both the NoConfirmation option and the CloseWhenFinished option in the value of the Execute data field.
 
 #### Visual Overview - Resource Manager component: Enhancements with regard to selecting bookings in the timeline [ID 32938]
 

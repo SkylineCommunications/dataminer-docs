@@ -26,7 +26,7 @@ To deploy the Availability branch of the EPM Solution:
 
    - If you are using a DataMiner Cube version prior to DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- RN 42221 -->, make sure the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) is enabled so you can use the Topology app.
 
-1. In DataMiner Cube, go to *Apps* > *Automation* and run the *EPMSetupWizard* Automation script (in the *EPM TOOLS* folder).
+1. In DataMiner Cube, go to *Apps* > *Automation* and run the *EPMSetupWizard* automation script (in the *EPM TOOLS* folder).
 
    > [!TIP]
    > See [Manually executing a script](xref:Manually_executing_a_script)

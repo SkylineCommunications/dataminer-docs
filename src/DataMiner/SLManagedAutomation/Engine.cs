@@ -11,7 +11,7 @@ using Skyline.DataMiner.Net.Automation;
 namespace Skyline.DataMiner.Automation
 {
 	/// <summary>
-	/// Allows interaction with the DataMiner System from a C# code block of an Automation script.
+	/// Allows interaction with the DataMiner System from a C# code block of an automation script.
 	/// </summary>
 	public class Engine : IDisposable, IEngine
 	{
@@ -131,7 +131,7 @@ namespace Skyline.DataMiner.Automation
 		/// <value>The timeout for the current C# code block.</value>
 		/// <remarks>
 		/// <note type="note">
-		/// <para>From DataMiner 10.2.0/10.1.2 onwards, this property can also be used to determine when an interactive Automation script times out.</para>
+		/// <para>From DataMiner 10.2.0/10.1.2 onwards, this property can also be used to determine when an interactive automation script times out.</para>
 		/// </note>
 		/// </remarks>
 		/// <example>
@@ -188,9 +188,9 @@ namespace Skyline.DataMiner.Automation
 		public string UserLoginName { get; }
 
 		/// <summary>
-		/// Gets or sets the web interactive Automation script UI version.
+		/// Gets or sets the web interactive automation script UI version.
 		/// </summary>
-		/// <value>The version of the web interactive Automation script UI.</value>
+		/// <value>The version of the web interactive automation script UI.</value>
 		/// <remarks>
 		/// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43875/43964).</para>
 		/// <para>The WebUIVersion is set to 'Default' by default. As from DataMiner DataMiner 10.5.0 [CU10]/10.6.1 (RN 44059), this means that the V2 UI is used. You can instead set this to 'V1' to revert to the old UI or to 'V2' to make sure the new UI will continue to be used even if the default behavior changes. Check <see href="xref:UIBlockTypesOverview#ui-versions">UI Versions</see> for more details about the differences between these versions.</para>
@@ -252,7 +252,7 @@ namespace Skyline.DataMiner.Automation
         public void AcknowledgeAlarm(int dataMinerID, int elementID, int alarmID, string comment) { }
 
 		/// <summary>
-		/// Adds an error message to the Automation script, which will eventually cause the script to fail.
+		/// Adds an error message to the automation script, which will eventually cause the script to fail.
 		/// </summary>
 		/// <param name="error">The error message.</param>
 		/// <example>
@@ -307,7 +307,7 @@ namespace Skyline.DataMiner.Automation
 		}
 
 		/// <summary>
-		/// Adds an additional dummy to the Automation script.
+		/// Adds an additional dummy to the automation script.
 		/// </summary>
 		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
 		/// <param name="elementID">The element ID.</param>
@@ -321,7 +321,7 @@ namespace Skyline.DataMiner.Automation
 		public ScriptDummy CreateExtraDummy(int dataMinerID, int elementID) { return null; }
 
 		/// <summary>
-		/// Adds an additional dummy to the Automation script.
+		/// Adds an additional dummy to the automation script.
 		/// </summary>
 		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
 		/// <param name="elementID">The element ID.</param>
@@ -344,7 +344,7 @@ namespace Skyline.DataMiner.Automation
 		}
 
 		/// <summary>
-		/// Aborts the Automation script, and indicates that it has failed.
+		/// Aborts the automation script, and indicates that it has failed.
 		/// </summary>
 		/// <param name="reason">Message describing the reason.</param>
 		/// <example>
@@ -358,7 +358,7 @@ namespace Skyline.DataMiner.Automation
 		public void ExitFail(string reason) { }
 
 		/// <summary>
-		/// Aborts the Automation script, but does not indicate that it has failed.
+		/// Aborts the automation script, but does not indicate that it has failed.
 		/// </summary>
 		/// <param name="reason">Message describing the reason.</param>
 		/// <example>
@@ -524,7 +524,7 @@ namespace Skyline.DataMiner.Automation
 		/// <exception cref="DataMinerException">Failed to find interactive client.</exception>
 		/// <returns><c>true</c> if attaching to the interactive client succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
-		/// <para>In an Automation script executed from e.g. a scheduled background task or as a Correlation action, you can use the FindInteractiveClient method to ask for input from a user.</para>
+		/// <para>In an automation script executed from e.g. a scheduled background task or as a Correlation action, you can use the FindInteractiveClient method to ask for input from a user.</para>
 		/// <para>In a message box, the user will be asked to click either Attach or Ignore.</para>
 		/// <list type="bullet">
 		/// <item><description>If the user clicks Attach, the script will start in a pop-up window.</description></item>
@@ -560,7 +560,7 @@ namespace Skyline.DataMiner.Automation
 		/// <exception cref="DataMinerException">Failed to find interactive client.</exception>
 		/// <returns><c>true</c> if attaching to the interactive client succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
-		/// <para>In an Automation script executed from e.g. a scheduled background task or as a Correlation action, you can use the FindInteractiveClient method to ask for input from a user.</para>
+		/// <para>In an automation script executed from e.g. a scheduled background task or as a Correlation action, you can use the FindInteractiveClient method to ask for input from a user.</para>
 		/// <para>In a message box, the user will be asked to click either Attach or Ignore.</para>
 		/// <list type="bullet">
 		/// <item><description>If the user clicks Attach, the script will start in a pop-up window.</description></item>
@@ -598,7 +598,7 @@ namespace Skyline.DataMiner.Automation
 		/// <exception cref="DataMinerException">Failed to find interactive client.</exception>
 		/// <returns><c>true</c> if attaching to the interactive client succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
-		/// <para>In an Automation script executed from e.g. a scheduled background task or as a Correlation action, you can use the FindInteractiveClient method to ask for input from a user.</para>
+		/// <para>In an automation script executed from e.g. a scheduled background task or as a Correlation action, you can use the FindInteractiveClient method to ask for input from a user.</para>
 		/// <para>In a message box, the user will be asked to click either Attach or Ignore.</para>
 		/// <list type="bullet">
 		/// <item><description>If the user clicks Attach, the script will start in a pop-up window.</description></item>
@@ -851,7 +851,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.GenerateInformation("Hello World!");
 		/// </code>
 		/// </example>
-		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void GenerateInformation(string text) { }
 
         /// <summary>
@@ -1020,11 +1020,11 @@ namespace Skyline.DataMiner.Automation
 		}
 
 		/// <summary>
-		/// Retrieves a connection representing the user that executed the Automation script.
+		/// Retrieves a connection representing the user that executed the automation script.
 		/// </summary>
-		/// <returns>A connection representing the user that executed the Automation script</returns>
+		/// <returns>A connection representing the user that executed the automation script</returns>
 		/// <remarks>
-		/// <para>In case of an interactive Automation script, the connection represents the user that is interacting with the interactive script. If the script was triggered by DataMiner instead of a user, the connection represents the built-in ManagedAutomation user.</para>
+		/// <para>In case of an interactive automation script, the connection represents the user that is interacting with the interactive script. If the script was triggered by DataMiner instead of a user, the connection represents the built-in ManagedAutomation user.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -1037,12 +1037,12 @@ namespace Skyline.DataMiner.Automation
 		public IConnection GetUserConnection() { return null; }
 
 		/// <summary>
-		/// Hides a custom-made dialog box of an interactive Automation script.
+		/// Hides a custom-made dialog box of an interactive automation script.
 		/// </summary>
 		/// <exception cref="InteractiveUserDetachedException">The interactive client was detached.</exception>
 		/// <exception cref="DataMinerException">Hide UI failed.</exception>
 		/// <para>Feature introduced in DataMiner 10.4.7 (RN 39451/RN 39638).</para>
-		/// <para>This feature is only available for interactive Automation scripts executed in a web environment.</para>
+		/// <para>This feature is only available for interactive automation scripts executed in a web environment.</para>
 		/// <example>
 		/// <code>
 		/// // Build and display a form
@@ -1062,7 +1062,7 @@ namespace Skyline.DataMiner.Automation
 		public void HideUI() { }
 
 		/// <summary>
-		/// Resets the timeout timer, extending the time the Automation script is allowed to execute.
+		/// Resets the timeout timer, extending the time the automation script is allowed to execute.
 		/// The time can be specified via the <see cref="Timeout"/> property.
 		/// </summary>
 		/// <remarks>When a script reaches the timeout, a <see cref="ScriptTimeoutException"/> will be thrown to stop the execution.</remarks>
@@ -1119,9 +1119,9 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		/// <remarks>
 		/// <list type="bullet">
-		/// <item><description>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</description></item>
-		/// <item><description>From DataMiner 10.5.6/10.6.0 onwards (RN 42572), logging will also be added in a dedicated log file with the name of the Automation script. For additional information, see <see href="xref:Log">Log</see>.</description></item>
-		/// <item><description>To configure a custom log level for a specific script in its dedicated log file, send an UpdateLogfileSettingMessage in which Name is set to "Automation\ScriptName". If no custom log configuration exists for a particular Automation script, the default configuration will be used.</description></item>
+		/// <item><description>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</description></item>
+		/// <item><description>From DataMiner 10.5.6/10.6.0 onwards (RN 42572), logging will also be added in a dedicated log file with the name of the automation script. For additional information, see <see href="xref:Log">Log</see>.</description></item>
+		/// <item><description>To configure a custom log level for a specific script in its dedicated log file, send an UpdateLogfileSettingMessage in which Name is set to "Automation\ScriptName". If no custom log configuration exists for a particular automation script, the default configuration will be used.</description></item>
 		/// </list>
 		/// </remarks>
 		public void Log(string message) { }
@@ -1140,9 +1140,9 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		/// <remarks>
 		/// <list type="bullet">
-		/// <item><description>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</description></item>
-		/// <item><description>From DataMiner 10.5.6/10.6.0 onwards (RN 42572), logging will also be added in a dedicated log file with the name of the Automation script. For additional information, see <see href="xref:Log">Log</see>.</description></item>
-		/// <item><description>To configure a custom log level for a specific script in its dedicated log file, send an UpdateLogfileSettingMessage in which Name is set to "Automation\ScriptName". If no custom log configuration exists for a particular Automation script, the default configuration will be used.</description></item>
+		/// <item><description>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</description></item>
+		/// <item><description>From DataMiner 10.5.6/10.6.0 onwards (RN 42572), logging will also be added in a dedicated log file with the name of the automation script. For additional information, see <see href="xref:Log">Log</see>.</description></item>
+		/// <item><description>To configure a custom log level for a specific script in its dedicated log file, send an UpdateLogfileSettingMessage in which Name is set to "Automation\ScriptName". If no custom log configuration exists for a particular automation script, the default configuration will be used.</description></item>
 		/// </list>
 		/// </remarks>
 		public void Log(string message, LogType type, int logLevel) { }
@@ -1162,9 +1162,9 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		/// <remarks>
 		/// <list type="bullet">
-		/// <item><description>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</description></item>
-		/// <item><description>From DataMiner 10.5.6/10.6.0 onwards (RN 42572), logging will also be added in a dedicated log file with the name of the Automation script. For additional information, see <see href="xref:Log">Log</see>.</description></item>
-		/// <item><description>To configure a custom log level for a specific script in its dedicated log file, send an UpdateLogfileSettingMessage in which Name is set to "Automation\ScriptName". If no custom log configuration exists for a particular Automation script, the default configuration will be used.</description></item>
+		/// <item><description>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</description></item>
+		/// <item><description>From DataMiner 10.5.6/10.6.0 onwards (RN 42572), logging will also be added in a dedicated log file with the name of the automation script. For additional information, see <see href="xref:Log">Log</see>.</description></item>
+		/// <item><description>To configure a custom log level for a specific script in its dedicated log file, send an UpdateLogfileSettingMessage in which Name is set to "Automation\ScriptName". If no custom log configuration exists for a particular automation script, the default configuration will be used.</description></item>
 		/// </list>
 		/// </remarks>
 		public void Log(string message, LogType type, int logLevel, string method) { }
@@ -1290,7 +1290,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.SendEmail(myEmailOptions);
 		/// </code>
 		/// </example>
-		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void SendEmail(EmailOptions options) { }
 
 		/// <summary>
@@ -1313,7 +1313,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.SendEmail("The message I want to send.","The title of my message","support@gtc.com");
 		/// </code>
 		/// </example>
-		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void SendEmail(string message, string title, string to) { }
 
 		/// <summary>
@@ -1328,7 +1328,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.SendPager(myPagerOptions);
 		/// </code>
 		/// </example>
-		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void SendPager(PagerOptions options) { }
 
 		/// <summary>
@@ -1350,7 +1350,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.SendPager("The message I want to send.","USER:ADMIN");
 		/// </code>
 		/// </example>
-		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void SendPager(string message, string to) { }
 
 		/// <summary>
@@ -1370,7 +1370,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.SendReport(reportOptions);
 		/// </code>
 		/// </example>
-		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void SendReport(MailReportOptions options) { }
 
 		/// <summary>
@@ -1424,7 +1424,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.SendSms(mySmsOptions);
 		/// </code>
 		/// </example>
-		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void SendSms(SmsOptions options) { }
 
 		/// <summary>
@@ -1445,7 +1445,7 @@ namespace Skyline.DataMiner.Automation
 		/// engine.SendSms("My Message","USER:ADMIN");
 		/// </code>
 		/// </example>
-		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
+		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
 		public void SendSms(string message, string to) { }
 
 		/// <summary>
@@ -1575,7 +1575,7 @@ namespace Skyline.DataMiner.Automation
 		public void SetFlag(RunTimeFlags flag) { }
 
 		/// <summary>
-		/// Displays a progress message during the execution of an interactive Automation script.
+		/// Displays a progress message during the execution of an interactive automation script.
 		/// </summary>
 		/// <param name="uiData">The UI data.</param>
 		/// <exception cref="InteractiveUserDetachedException">The interactive client was detached.</exception>
@@ -1597,7 +1597,7 @@ namespace Skyline.DataMiner.Automation
 		public void ShowProgress(string uiData) { }
 
 		/// <summary>
-		/// Displays a custom-made dialog box of an interactive Automation script.
+		/// Displays a custom-made dialog box of an interactive automation script.
 		/// </summary>
 		/// <param name="uiData">The UI data.</param>
 		/// <returns>The UI result.</returns>
@@ -1617,7 +1617,7 @@ namespace Skyline.DataMiner.Automation
 		public UIResults ShowUI(string uiData) { return null; }
 
 		/// <summary>
-		/// Displays a custom-made dialog box of an interactive Automation script.
+		/// Displays a custom-made dialog box of an interactive automation script.
 		/// </summary>
 		/// <param name="uiBuilder">The <see cref="UIBuilder"/> instance representing a dialog box of an interactive automation script.</param>
 		/// <exception cref="InteractiveUserDetachedException">The interactive client was detached.</exception>
@@ -1637,7 +1637,7 @@ namespace Skyline.DataMiner.Automation
 		public UIResults ShowUI(UIBuilder uiBuilder) { return null; }
 
 		/// <summary>
-		/// Displays a custom-made dialog box of an interactive Automation script.
+		/// Displays a custom-made dialog box of an interactive automation script.
 		/// </summary>
 		/// <param name="uiData">The UI data.</param>
 		/// <param name="requireResponse">Indicates whether a response is required.</param>
@@ -1658,7 +1658,7 @@ namespace Skyline.DataMiner.Automation
 		public UIResults ShowUI(string uiData, bool requireResponse) { return null; }
 
 		/// <summary>
-		/// Causes the Automation script to pause for the specified amount of time (in milliseconds).
+		/// Causes the automation script to pause for the specified amount of time (in milliseconds).
 		/// </summary>
 		/// <param name="timeInMilliseconds">The time to sleep (in ms).</param>
 		/// <exception cref="DataMinerException">Sleep failed.</exception>

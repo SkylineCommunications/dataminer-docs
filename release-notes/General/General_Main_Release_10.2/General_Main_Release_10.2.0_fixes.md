@@ -227,7 +227,7 @@ In some cases, an error could occur in the SLAnalytics process when a trend pred
 
 In some rare cases, after a Failover switch, it could occur that an SRM module could not be started.
 
-#### Dashboards app: Multiple pop-up windows displayed when Automation script could not be opened \[ID 29218\]
+#### Dashboards app: Multiple pop-up windows displayed when automation script could not be opened \[ID 29218\]
 
 When the Dashboards app tried to open an automation script that had been renamed or removed in DataMiner Cube, in some cases, a series of pop-up windows would be displayed. From now on, when the Dashboards app cannot open an automation script, a single pop-up window will be displayed.
 

@@ -81,9 +81,9 @@ In the *DIS Settings* window, the *DCP* tab has been replaced by the following t
 > [!NOTE]
 > Users who upgrade to DIS version 2.32 will be asked to log in with their dataminer.services account.
 
-#### Debugging of precompiled Automation script EXE blocks \[ID 29030\]
+#### Debugging of precompiled automation script EXE blocks \[ID 29030\]
 
-When DIS is connected to a DataMiner Agent running DataMiner version 10.1.3 or higher, it is now also possible to debug precompiled Automation script EXE blocks.
+When DIS is connected to a DataMiner Agent running DataMiner version 10.1.3 or higher, it is now also possible to debug precompiled automation script EXE blocks.
 
 #### Automation script solutions: DataMiner DLL Path property \[ID 29031\]
 

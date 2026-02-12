@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.5.6
 
 ## Highlights
 
-- [Automation: Separate log file for every Automation script that is run [ID 42572]](#automation-separate-log-file-for-every-automation-script-that-is-run-id-42572)
+- [Automation: Separate log file for every automation script that is run [ID 42572]](#automation-separate-log-file-for-every-automation-script-that-is-run-id-42572)
 
 ## New features
 
@@ -43,7 +43,7 @@ Internally, this new *NT_CLEAR_PARAMETER* call will now also be used by the exis
 > - This new NotifyProtocol method can be invoked from within a QAction by using the `protocol.ClearParameter(<paramId>`) function.
 > - When using `ProtocolExt`, you can now use e.g. `protocol.getRequests.Clear()` to clear a table parameter named *getRequests*. Internally, this new `Clear()` function will then execute a `protocol.ClearAllKeys(<getRequests parameter ID>)` call.
 
-#### Automation: Separate log file for every Automation script that is run [ID 42572]
+#### Automation: Separate log file for every automation script that is run [ID 42572]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
@@ -52,9 +52,9 @@ From now on, when an automation script is run, every entry that is logged in the
 - The first time an automation script is run, a log file will be created in `C:\Skyline DataMiner\Logging\Automation\` for that particular script.
 - After a DataMiner restart, the first time a script is executed, its existing log file will get the "_Bak" suffix and a new log file will be created.
 - If an automation script is renamed, a new log file will be created with a name identical to that of the renamed script. The old file will be kept.
-- If you want to configure a custom log level for a particular Automation script, send an `UpdateLogfileSettingMessage` in which *Name* is set to "Automation\ScriptName". If no custom log configuration exists for a particular Automation script, the default configuration will be used.
+- If you want to configure a custom log level for a particular automation script, send an `UpdateLogfileSettingMessage` in which *Name* is set to "Automation\ScriptName". If no custom log configuration exists for a particular automation script, the default configuration will be used.
 - These new automation script log files will also be included in SLLogCollector packages.
-- Each time a DataMiner upgrade package is installed, all Automation script log files will be deleted.
+- Each time a DataMiner upgrade package is installed, all automation script log files will be deleted.
 
 Log entry format: `1|2|3|4|5|6|7|8`
 
@@ -289,7 +289,7 @@ After installation, in some cases, DataMiner would not be able to start up becau
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
-When a Notify method was called from a thread created within an automation script shortly after that Automation script had finished, in some cases, the SLAutomation process could stop working.
+When a Notify method was called from a thread created within an automation script shortly after that automation script had finished, in some cases, the SLAutomation process could stop working.
 
 #### Redundancy groups: Matrix parameter updates in a derived element would incorrectly not get applied in the source element (and vice versa) [ID 42598]
 

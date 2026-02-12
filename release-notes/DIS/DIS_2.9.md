@@ -10,7 +10,7 @@ uid: DIS_2.9
 
 #### Automation script editor \[ID 17482\]
 
-DIS can now also be used to create and edit Automation script XML files.
+DIS can now also be used to create and edit automation script XML files.
 
 To create a new automation script XML file, do the following:
 
@@ -21,7 +21,7 @@ When editing an automation script, the editor allows you to insert a number of b
 
 At the top of the editor window, you can find a *Publish* button. Click that button if you want to publish the automation script XML file you are currently editing to the DMA specified in the *DMA* tab of the *DIS Settings* dialog box.
 
-If, in the *DIS* menu, you select *DMA \> Import Automation Script…*, the *Import Automation Script…* dialog box will allow you to import a copy of an existing Automation script XML file found on the DMA specified in the *DMA* tab of the *DIS Settings* window. In most cases, this will be your local DMA.
+If, in the *DIS* menu, you select *DMA \> Import Automation Script…*, the *Import Automation Script…* dialog box will allow you to import a copy of an existing automation script XML file found on the DMA specified in the *DMA* tab of the *DIS Settings* window. In most cases, this will be your local DMA.
 
 #### DIS MIB Browser: SNMP trap information \[ID 17601\]
 
@@ -102,7 +102,7 @@ From now on, the protocol XML schema will enforce a maximum timer time of 24 day
 
 #### Automation script XML schema \[ID 17702\]
 
-DIS is now able to validate Automation script XML files against an automation script XML schema.
+DIS is now able to validate automation script XML files against an automation script XML schema.
 
 ## Changes
 

@@ -60,7 +60,7 @@ Five custom buttons can now be configured to be displayed when a booking is sele
 
 For each button, you can configure the following settings:
 
-- *Type*: Select *Script* to make the button launch a custom Automation script. Select *Disabled* to hide the button.
+- *Type*: Select *Script* to make the button launch a custom automation script. Select *Disabled* to hide the button.
 - *Icon View*: The view page where an icon is available.
 - *Icon Page*: The Visio page of the selected view containing the icon.
 - *Argument*: The script tag to trigger an automation script. Use the same syntax as is used to link a shape to an automation script in Visual Overview, but leave out the "Script:" prefix. For example:

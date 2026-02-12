@@ -27,7 +27,7 @@ To do so, enable the *Visualize directions* setting and select one of the follow
 <!-- MR 10.3.0 - FR 10.2.4
 RN 33795: MR 10.3.0 - FR 10.2.8 -->
 
-It is now possible to configure the Generic Query Interface to retrieve external data, so that dashboard users can use a query data source based on data that is for example retrieved from a CSV file, a MySQL database, or an API endpoint. This is configured through a DataMiner Automation script that is compiled as a library. The GQI will make use of this library to load the external data.
+It is now possible to configure the Generic Query Interface to retrieve external data, so that dashboard users can use a query data source based on data that is for example retrieved from a CSV file, a MySQL database, or an API endpoint. This is configured through a DataMiner automation script that is compiled as a library. The GQI will make use of this library to load the external data.
 
 ##### Configuring an external data source in a query
 
@@ -653,7 +653,7 @@ Now, this option has been replaced by a triple-state option. You can now indicat
 
 When an EPM identifier from an EPM feed is fed to a parameter feed, it will now be possible to drag multiple parameters onto the parameter feed in order to use them as filters.
 
-#### Web apps - Interactive Automation script components: Minor enhancements [ID 34373]
+#### Web apps - Interactive automation script components: Minor enhancements [ID 34373]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 

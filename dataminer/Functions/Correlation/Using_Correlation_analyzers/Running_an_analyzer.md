@@ -4,7 +4,7 @@ uid: Running_an_analyzer
 
 # Running an analyzer
 
-To run a Correlation analyzer:
+To run a correlation analyzer:
 
 1. In the Correlation module, select the analyzer in the tree view of the *analyzers* pane.
 

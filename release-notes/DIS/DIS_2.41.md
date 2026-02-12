@@ -43,7 +43,7 @@ Up to now, DIS would filter out any development packs or Skyline.DataMiner.Files
 
 #### XML editor: Referring to a library script Exe from another automation script [ID 36117]
 
-​Up to now, it was only possible to refer to a library script Exe from within the same Automation script. From now on, in a Visual Studio solution, you can also add a reference to a project from another automation script in the solution. DIS will then automatically add a `scriptRef`.
+​Up to now, it was only possible to refer to a library script Exe from within the same automation script. From now on, in a Visual Studio solution, you can also add a reference to a project from another automation script in the solution. DIS will then automatically add a `scriptRef`.
 
 See the following example, in which `{SCRIPTNAME}` is the name of the other script containing the library and `{LIBRARYNAME}` is the name of the library:
 

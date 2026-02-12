@@ -33,7 +33,7 @@ Apart from the *Existing DataMiner Automation Script...* option, which can be us
 
 1. Right-click a solution folder in the Solution Explorer.
 1. Select *Add \> Import DataMiner Automation Script*.
-1. Select a least one Automation script file.
+1. Select a least one automation script file.
 1. Click *Open*.
 
 > [!NOTE]

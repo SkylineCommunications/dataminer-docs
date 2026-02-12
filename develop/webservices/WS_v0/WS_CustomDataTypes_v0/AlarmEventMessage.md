@@ -28,7 +28,7 @@ uid: AlarmEventMessage
 | ParentServices | Array of AlarmServiceInfo | Information about the services in which this alarm is included. Each AlarmServiceInfo object contains a service name a DmaId/ServiceId pair. |
 | Interfaces | Array of string | The list of DmaId/InterfaceId pairs referring to the interfaces in which the alarm is included. |
 | ParentInterfaces | Array of AlarmInterfaceInfo | Information about the interfaces in which the alarm is included. Each AlarmInterfaceInfo object contains a custom interface name and a DmaId/InterfaceID pair. |
-| CorrelationReferences | Array of CorrelationReference | Array of references to Correlation alarms on the alarm. |
+| CorrelationReferences | Array of CorrelationReference | Array of references to correlation alarms on the alarm. |
 | BaseAlarms | Array of string | In case of a correlated alarm: The list of DmaId/AlarmId pairs referring to the raw alarms on which the correlated alarm is based. |
 | IsNew | Boolean | Whether or not the alarm is new. |
 | IsLastHistory | Boolean | Indicates whether an alarm is the most recent one in the history tree. |

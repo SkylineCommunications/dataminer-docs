@@ -160,7 +160,7 @@ When starting up, DataMiner Cube could become unresponsive during the *Connected
 
 When you opened the Automation app, an exception could be thrown in the background when verifying if scripts used user-defined APIs.
 
-Also, when you clicked *Configure API...* for a particular Automation script, the *New token...* button would incorrectly be disabled.
+Also, when you clicked *Configure API* for a particular automation script, the *New token* button would incorrectly be disabled.
 
 #### DataMiner Cube - Alarm Console: Tooltip of suggestion counter would incorrectly show 'suggestion' in capitals [ID 37454]
 

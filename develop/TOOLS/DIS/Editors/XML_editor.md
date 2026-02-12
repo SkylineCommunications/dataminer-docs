@@ -378,7 +378,7 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 
 ### IntelliSense and instant XML validation
 
-If the root tag of the protocol XML file or the automation script XML file you are editing contains a reference to the protocol or automation namespace, and if the protocol and Automation script schema files are in the Microsoft Visual Studio Schema folder, then the protocol XML file or the automation script XML file you are editing will be validated against the protocol or automation script schema while you type.
+If the root tag of the protocol XML file or the automation script XML file you are editing contains a reference to the protocol or automation namespace, and if the protocol and automation script schema files are in the Microsoft Visual Studio Schema folder, then the protocol XML file or the automation script XML file you are editing will be validated against the protocol or automation script schema while you type.
 
 - When you type a "\<" sign between two existing tags, a selection box will appear listing all tags you are allowed to insert at that location. After you select one of the proposed tags, a list will be presented with all possible attributes for that specific tag.
 - When adding content to Commands, Responses, Pairs, Groups, Triggers, Timers, etc., an IntelliSense pop-up will appear, listing all existing items that can be added. In case of a group, the listed items will depend on the type of the group, e.g. actions are only added to the list when the type is "action" or "poll action".

@@ -32,7 +32,7 @@ uid: General_Feature_Release_10.6.2
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve the following information about each Automation script available in the DataMiner System:
+A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve the following information about each automation script available in the DataMiner System:
 
 - The folder containing the script's XML file.
 - Whether or not the script supports a dedicated log file.

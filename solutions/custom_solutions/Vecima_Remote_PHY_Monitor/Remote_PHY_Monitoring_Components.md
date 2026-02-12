@@ -12,9 +12,9 @@ At the moment only one system connector is supported and required:
 
 ## Automation scripts
 
-The Remote PHY Monitoring Solution uses the following Automation script:
+The Remote PHY Monitoring Solution uses the following automation script:
 
-- **CreateVecimaRpmElement**: This Automation script is responsible for creating a Vecima RPM element on the first deployment or when there is no Vecima RPM element in the system.
+- **CreateVecimaRpmElement**: This automation script is responsible for creating a Vecima RPM element on the first deployment or when there is no Vecima RPM element in the system.
 
 ## Low-code apps
 

@@ -296,7 +296,7 @@ By default, the DLL file will be uploaded to the C:\\Skyline DataMiner\\scripts\
   - all libraries that reference the file (and all libraries that use those libraries) will be recompiled immediately.
 
 - When you reference a DLL file stored in C:\\Skyline DataMiner\\Scripts\\DllImport while a DLL file with the same name is present in C:\\Skyline DataMiner\\Files, the former will take precedence.
-- Users need the *Modules \> Automation \> Edit* permission to be able to upload Automation script dependencies.
+- Users need the *Modules \> Automation \> Edit* permission to be able to upload automation script dependencies.
 
 > [!NOTE]
 >

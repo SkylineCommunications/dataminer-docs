@@ -545,9 +545,9 @@ Example: \[var:\[NAME\]\]
 
 #### Visual Overview: Automation script session variables & OnClosing shape data field \[ID 27895\]
 
-In Visual Overview, it is now possible to pass Automation script output to session variables. Also, you can now use the page-level shape data field OnClosing to configure whether a Visual Overview window should automatically be closed or not.
+In Visual Overview, it is now possible to pass automation script output to session variables. Also, you can now use the page-level shape data field OnClosing to configure whether a Visual Overview window should automatically be closed or not.
 
-##### Passing Automation script output to session variables
+##### Passing automation script output to session variables
 
 When an automation script executed in Visual Overview finishes successfully, it is now possible to pass the output values of that script to session variables in Visual Overview using the new CreateKey(string variablename) method (namespace: Skyline.DataMiner.Automation, class name: UIVariables.VisualOverview).
 
@@ -557,7 +557,7 @@ In the following example, a session variable named “MyOutput” will be create
 engine.AddScriptOutput(UIVariables.VisualOverview.CreateKey("MyOutput"), "MyValue");
 ```
 
-- If you execute the same Automation script on different pages, then you can use the SessionVariablePrefix option to make sure the output is saved in separate session variables.
+- If you execute the same automation script on different pages, then you can use the SessionVariablePrefix option to make sure the output is saved in separate session variables.
 
     If, for example, you use prefix “One\_” on one page and prefix “Two\_” on another page, and the automation scripts pass their output to a session variable named “MyPage”, then the output will end up in two separate session variables named “One_MyPage” and “Two_MyPage” respectively.
 

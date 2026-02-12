@@ -2,7 +2,7 @@
 uid: Using_Correlation_analyzers
 ---
 
-# Using Correlation analyzers
+# Using correlation analyzers
 
 It is possible for DataMiner to analyze the alarms occurring over a period of time, and then propose a correlation rule based on this analysis.
 

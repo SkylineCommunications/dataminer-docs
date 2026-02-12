@@ -39,7 +39,7 @@ From now on, when SLAutomation stops working due to an unhandled exception that 
 The automation script 'Script name' caused the hosting process SLAutomation.exe to crash. Please correct the script to prevent further system instability and check Automation log file for more details.
 ```
 
-These alarms will be generated per DataMiner Agent for every Automation script that causes SLAutomation to stop working. In other words, when SLAutomation repeatedly stops working on a DataMiner Agent due to multiple unhandled exceptions thrown while running a particular Automation script, only one alarm will be generated on the DataMiner Agent in question.
+These alarms will be generated per DataMiner Agent for every automation script that causes SLAutomation to stop working. In other words, when SLAutomation repeatedly stops working on a DataMiner Agent due to multiple unhandled exceptions thrown while running a particular automation script, only one alarm will be generated on the DataMiner Agent in question.
 
 This type of alarms will automatically be cleared after a DataMiner restart. They can also be cleared manually.
 

@@ -20,4 +20,4 @@ Use this method to retrieve an automation script.
 
 | Item | Format | Description |
 |--|--|--|
-| GetAutomationScriptResult | [DMAAutomationScript](xref:DMAAutomationScript) | The information of the requested Automation script. |
+| GetAutomationScriptResult | [DMAAutomationScript](xref:DMAAutomationScript) | The information of the requested automation script. |

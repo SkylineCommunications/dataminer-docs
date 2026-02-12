@@ -431,7 +431,7 @@ The focus score that is assigned to an alarm is a combination of likelihood, fre
 > [!NOTE]
 >
 > - Currently, every DataMiner Agent is responsible for calculating the focus scores of the alarms it is hosting.
-> - Currently, no focus score is assigned to the following types of alarms: Correlation alarms, external alarms and information events. By default, those alarms are assigned a focus score equal to null.
+> - Currently, no focus score is assigned to the following types of alarms: correlation alarms, external alarms and information events. By default, those alarms are assigned a focus score equal to null.
 
 ##### New column in Alarm Console: Focus
 

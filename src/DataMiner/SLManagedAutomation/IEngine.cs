@@ -78,7 +78,7 @@ namespace Skyline.DataMiner.Automation
         void AcknowledgeAlarm(int dataMinerID, int elementID, int alarmID, string comment);
 
 		/// <summary>
-		/// Adds an error message to the Automation script, which will eventually cause the script to fail.
+		/// Adds an error message to the automation script, which will eventually cause the script to fail.
 		/// </summary>
 		/// <param name="error">The error message.</param>
 		/// <example>
@@ -121,7 +121,7 @@ namespace Skyline.DataMiner.Automation
 		void ClearScriptOutput(string key);
 
 		/// <summary>
-		/// Adds an additional dummy to the Automation script.
+		/// Adds an additional dummy to the automation script.
 		/// </summary>
 		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
 		/// <param name="elementID">The element ID.</param>
@@ -135,7 +135,7 @@ namespace Skyline.DataMiner.Automation
 		ScriptDummy CreateExtraDummy(int dataMinerID, int elementID);
 
 		/// <summary>
-		/// Adds an additional dummy to the Automation script.
+		/// Adds an additional dummy to the automation script.
 		/// </summary>
 		/// <param name="dataMinerID">The DataMiner Agent ID.</param>
 		/// <param name="elementID">The element ID.</param>
@@ -150,7 +150,7 @@ namespace Skyline.DataMiner.Automation
 		ScriptDummy CreateExtraDummy(int dataMinerID, int elementID, string key);
 
 		/// <summary>
-		/// Aborts the Automation script, and indicates that it has failed.
+		/// Aborts the automation script, and indicates that it has failed.
 		/// </summary>
 		/// <param name="reason">Message describing the reason.</param>
 		/// <example>
@@ -164,7 +164,7 @@ namespace Skyline.DataMiner.Automation
 		void ExitFail(string reason);
 
 		/// <summary>
-		/// Aborts the Automation script, but does not indicate that it has failed.
+		/// Aborts the automation script, but does not indicate that it has failed.
 		/// </summary>
 		/// <param name="reason">Message describing the reason.</param>
 		/// <example>
@@ -522,7 +522,7 @@ namespace Skyline.DataMiner.Automation
 		/// <exception cref="DataMinerException">Failed to find interactive client.</exception>
 		/// <returns><c>true</c> if attaching to the interactive client succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
-		/// <para>In an Automation script executed from e.g. a scheduled background task or as a Correlation action, you can use the FindInteractiveClient method to ask for input from a user.</para>
+		/// <para>In an automation script executed from e.g. a scheduled background task or as a Correlation action, you can use the FindInteractiveClient method to ask for input from a user.</para>
 		/// <para>In a message box, the user will be asked to click either Attach or Ignore.</para>
 		/// <list type="bullet">
 		/// <item><description>If the user clicks Attach, the script will start in a pop-up window.</description></item>
@@ -558,7 +558,7 @@ namespace Skyline.DataMiner.Automation
 		/// <exception cref="DataMinerException">Failed to find interactive client.</exception>
 		/// <returns><c>true</c> if attaching to the interactive client succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
-		/// <para>In an Automation script executed from e.g. a scheduled background task or as a Correlation action, you can use the FindInteractiveClient method to ask for input from a user.</para>
+		/// <para>In an automation script executed from e.g. a scheduled background task or as a Correlation action, you can use the FindInteractiveClient method to ask for input from a user.</para>
 		/// <para>In a message box, the user will be asked to click either Attach or Ignore.</para>
 		/// <list type="bullet">
 		/// <item><description>If the user clicks Attach, the script will start in a pop-up window.</description></item>
@@ -593,7 +593,7 @@ namespace Skyline.DataMiner.Automation
 		/// <exception cref="DataMinerException">Failed to find interactive client.</exception>
 		/// <returns><c>true</c> if attaching to the interactive client succeeded; otherwise, <c>false</c>.</returns>
 		/// <remarks>
-		/// <para>In an Automation script executed from e.g. a scheduled background task or as a Correlation action, you can use the FindInteractiveClient method to ask for input from a user.</para>
+		/// <para>In an automation script executed from e.g. a scheduled background task or as a Correlation action, you can use the FindInteractiveClient method to ask for input from a user.</para>
 		/// <para>In a message box, the user will be asked to click either Attach or Ignore.</para>
 		/// <list type="bullet">
 		/// <item><description>If the user clicks Attach, the script will start in a pop-up window.</description></item>
@@ -777,11 +777,11 @@ namespace Skyline.DataMiner.Automation
 		Dictionary<string, string> GetScriptResult();
 
 		/// <summary>
-		/// Retrieves a connection representing the user that executed the Automation script.
+		/// Retrieves a connection representing the user that executed the automation script.
 		/// </summary>
-		/// <returns>A connection representing the user that executed the Automation script</returns>
+		/// <returns>A connection representing the user that executed the automation script</returns>
 		/// <remarks>
-		/// <para>In case of an interactive Automation script, the connection represents the user that is interacting with the interactive script. If the script was triggered by DataMiner instead of a user, the connection represents the built-in ManagedAutomation user.</para>
+		/// <para>In case of an interactive automation script, the connection represents the user that is interacting with the interactive script. If the script was triggered by DataMiner instead of a user, the connection represents the built-in ManagedAutomation user.</para>
 		/// <para>Feature introduced in DataMiner 10.0.10 (RN 26434).</para>
 		/// </remarks>
 		/// <example>
@@ -795,12 +795,12 @@ namespace Skyline.DataMiner.Automation
 		IConnection GetUserConnection();
 
 		/// <summary>
-		/// Hides a custom-made dialog box of an interactive Automation script.
+		/// Hides a custom-made dialog box of an interactive automation script.
 		/// </summary>
 		/// <exception cref="InteractiveUserDetachedException">The interactive client was detached.</exception>
 		/// <exception cref="DataMinerException">Hide UI failed.</exception>
 		/// <para>Feature introduced in DataMiner 10.4.7 (RN 39451/RN 39638).</para>
-		/// <para>This feature is only available for interactive Automation scripts executed in a web environment.</para>
+		/// <para>This feature is only available for interactive automation scripts executed in a web environment.</para>
 		/// <example>
 		/// <code>
 		/// // Build and display a form
@@ -820,7 +820,7 @@ namespace Skyline.DataMiner.Automation
 		void HideUI();
 
 		/// <summary>
-		/// Resets the timeout timer, extending the time the Automation script is allowed to execute.
+		/// Resets the timeout timer, extending the time the automation script is allowed to execute.
 		/// The time can be specified via the <see cref="Timeout"/> property.
 		/// </summary>
 		/// <remarks>When a script reaches the timeout, a <see cref="ScriptTimeoutException"/> will be thrown to stop the execution.</remarks>
@@ -1163,7 +1163,7 @@ namespace Skyline.DataMiner.Automation
 
 
 		/// <summary>
-		/// Displays a progress message during the execution of an interactive Automation script.
+		/// Displays a progress message during the execution of an interactive automation script.
 		/// </summary>
 		/// <param name="uiData">The UI data.</param>
 		/// <exception cref="InteractiveUserDetachedException">The interactive client was detached.</exception>
@@ -1176,7 +1176,7 @@ namespace Skyline.DataMiner.Automation
 		void ShowProgress(string uiData);
 
 		/// <summary>
-		/// Displays a custom-made dialog box of an interactive Automation script.
+		/// Displays a custom-made dialog box of an interactive automation script.
 		/// </summary>
 		/// <param name="uiBuilder">The <see cref="UIBuilder"/> instance representing a dialog box of an interactive automation script.</param>
 		/// <exception cref="InteractiveUserDetachedException">The interactive client was detached.</exception>
@@ -1196,7 +1196,7 @@ namespace Skyline.DataMiner.Automation
 		UIResults ShowUI(UIBuilder uiBuilder);
 
 		/// <summary>
-		/// Displays a custom-made dialog box of an interactive Automation script.
+		/// Displays a custom-made dialog box of an interactive automation script.
 		/// </summary>
 		/// <param name="uiData">The UI data.</param>
 		/// <param name="requireResponse">Indicates whether a response is required.</param>
@@ -1217,7 +1217,7 @@ namespace Skyline.DataMiner.Automation
 		UIResults ShowUI(string uiData, [MarshalAs(UnmanagedType.U1)] bool requireResponse);
 
 		/// <summary>
-		/// Displays a custom-made dialog box of an interactive Automation script.
+		/// Displays a custom-made dialog box of an interactive automation script.
 		/// </summary>
 		/// <param name="uiData">The UI data.</param>
 		/// <returns>The UI result.</returns>
@@ -1237,7 +1237,7 @@ namespace Skyline.DataMiner.Automation
 		UIResults ShowUI(string uiData);
 
 		/// <summary>
-		/// Causes the Automation script to pause for the specified amount of time (in milliseconds).
+		/// Causes the automation script to pause for the specified amount of time (in milliseconds).
 		/// </summary>
 		/// <param name="timeInMilliseconds">The time to sleep (in ms).</param>
 		/// <exception cref="DataMinerException">Sleep failed.</exception>
@@ -1471,9 +1471,9 @@ namespace Skyline.DataMiner.Automation
 		string UserDisplayName { get; }
 
 		/// <summary>
-		/// Gets or sets the web interactive Automation script UI version.
+		/// Gets or sets the web interactive automation script UI version.
 		/// </summary>
-		/// <value>The version of the web interactive Automation script UI.</value>
+		/// <value>The version of the web interactive automation script UI.</value>
 		/// <remarks>
 		/// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43875/43964).</para>
 		/// <para>The WebUIVersion is set to 'Default' by default. As from DataMiner DataMiner 10.5.0 [CU10]/10.6.1 (RN 44059), this means that the V2 UI is used. You can instead set this to 'V1' to revert to the old UI or to 'V2' to make sure the new UI will continue to be used even if the default behavior changes. Check <see href="xref:UIBlockTypesOverview#ui-versions">UI Versions</see> for more details about the differences between these versions.</para>

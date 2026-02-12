@@ -282,7 +282,7 @@ It is now possible to have a DMS connect to the nodes of a remote ElasticSearch 
 
 This message will add the IP addresses of the remote ElasticSearch nodes to the db.xml file.
 
-#### Replacing Automation script DLL dependencies \[ID 26605\]
+#### Replacing automation script DLL dependencies \[ID 26605\]
 
 It is now possible to replace an automation script DLL dependency from an automation script by sending an UploadScriptDependencyMessage.
 
@@ -301,7 +301,7 @@ By default, the DLL file will be uploaded to the C:\\Skyline DataMiner\\scripts\
 
 - When you reference a DLL file stored in C:\\Skyline DataMiner\\Scripts\\DllImport while a DLL file with the same name is present in C:\\Skyline DataMiner\\Files, the former will take precedence.
 
-- Users need the *Modules \> Automation \> Edit* permission to be able to upload Automation script dependencies.
+- Users need the *Modules \> Automation \> Edit* permission to be able to upload automation script dependencies.
 
 > [!NOTE]
 >

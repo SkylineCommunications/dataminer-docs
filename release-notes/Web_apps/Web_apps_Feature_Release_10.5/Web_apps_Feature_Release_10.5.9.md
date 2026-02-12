@@ -208,11 +208,11 @@ When, in a *Table* component with multiple queries, you rapidly switched between
 
 `Cannot read properties of undefined (reading "Value")`
 
-#### Low-Code Apps - Interactive Automation script component: Input box values would not be updated correctly [ID 43282]
+#### Low-Code Apps - Interactive automation script component: Input box values would not be updated correctly [ID 43282]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When the redesigned UI components were used in an Interactive Automation script component, in some cases, input box values would not be updated correctly, especially when a negative value was changed into a positive value.
+When the redesigned UI components were used in an Interactive automation script component, in some cases, input box values would not be updated correctly, especially when a negative value was changed into a positive value.
 
 Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
 
@@ -224,7 +224,7 @@ Currently, by default, the existing components will still be used by default to 
 
 When two tables with the same query fed the selected row to the same form, up to now, when you had entered some data into the form after selecting a row in the first table, the fields in that form would incorrectly be refetched when you selected either a row in the second table or another DOM definition.
 
-#### Low-Code Apps - Interactive Automation script component: Problem with redesigned `UIBlockType.StaticText` component [ID 43337]
+#### Low-Code Apps - Interactive automation script component: Problem with redesigned `UIBlockType.StaticText` component [ID 43337]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 

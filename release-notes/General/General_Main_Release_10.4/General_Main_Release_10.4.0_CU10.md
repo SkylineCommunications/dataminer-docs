@@ -19,7 +19,7 @@ uid: General_Main_Release_10.4.0_CU10
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-A number of enhancements have been made with regard to the locking behavior of certain Automation script actions. This should significantly reduce the chances of scripts influencing each other and slowing each other down.
+A number of enhancements have been made with regard to the locking behavior of certain automation script actions. This should significantly reduce the chances of scripts influencing each other and slowing each other down.
 
 Breaking changes:
 

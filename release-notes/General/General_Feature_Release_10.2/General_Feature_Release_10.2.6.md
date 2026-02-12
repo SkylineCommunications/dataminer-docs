@@ -116,12 +116,12 @@ When updating a resource in the Resources app, it is now possible to change the 
 > - It is recommended to modify DVE names via the resource instead of via the main DVE element.
 > - Names of DVE elements can also be modified in *General Parameters \> Resource Info \> DVE Table*.
 
-#### Visual Overview: Passing Interactive Automation script output to session variables \[ID 32874\]
+#### Visual Overview: Passing interactive automation script output to session variables \[ID 32874\]
 
 Similar to regular automation scripts, interactive automation scripts are now also able to pass their output to session variables in Visual Overview.
 
 > [!NOTE]
-> When configuring the Execute shape, it is recommended to specify both the NoConfirmation option and the CloseWhenFinished option in the value of the Execute data field.
+> When you configure the Execute shape, we recommend specifying both the NoConfirmation option and the CloseWhenFinished option in the value of the Execute data field.
 
 #### Visual Overview - Resource Manager component: Enhancements with regard to selecting bookings in the timeline \[ID 32938\]
 
@@ -703,7 +703,7 @@ Up to now, these anomaly detection alarms would incorrectly disappear from the A
 
 After changing the production version of a protocol based on a so-called base protocol, it would no longer be possible to retrieve values from any of the base parameters (i.e. parameters of the base protocol).
 
-#### Application framework: Problem when switching between feeds linked to Automation script input \[ID 33290\]
+#### Application framework: Problem when switching between feeds linked to automation script input \[ID 33290\]
 
 When, in the application framework, you add an action that launches an automation script, you can link the script parameters to feeds. Up to now, when those feeds each had a property with the same name (e.g. a property called “Name”), the action would incorrectly not get updated when you switched from one feed to another.
 

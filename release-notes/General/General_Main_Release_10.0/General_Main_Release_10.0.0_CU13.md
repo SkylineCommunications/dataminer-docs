@@ -89,7 +89,7 @@ When you generated a PDF report with the options “No grouping” and “Includ
 
 #### DataMiner Cube - Automation: Discarding a newly created script would not delete it \[ID 29032\]
 
-When you discarded a newly created Automation script, in some cases, it would incorrectly not be deleted although it had disappeared from the UI. As a result, trying to create a new script with the same name would fail.
+When you discarded a newly created automation script, in some cases, it would incorrectly not be deleted although it had disappeared from the UI. As a result, trying to create a new script with the same name would fail.
 
 #### No trigger keys listed when debugging a QAction due to a compatibility issue between DataMiner and DataMiner Integration Studio \[ID 29049\]
 

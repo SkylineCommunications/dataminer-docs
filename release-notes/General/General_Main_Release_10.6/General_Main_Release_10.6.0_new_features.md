@@ -91,7 +91,7 @@ To swarm an element, users will also need config rights on the element.
 
 When Swarming has been enabled, you can swarm elements **in DataMiner Cube** via *System Center* > *Agents* > *Status*. On that page, the *Swarming* button will be displayed instead of the *Migration* button. Clicking the button will open a window where you can select the elements you want to swarm and the destination DMA. Note that child DVE elements and child Virtual Function elements will not appear in this window as they automatically follow their parent element.
 
-Swarming elements is also possible **via Automation, QActions or other (external) tools**. See the following Automation script example, in which two input parameters are defined to retrieve the element key and the target agent ID:
+Swarming elements is also possible **via Automation, QActions or other (external) tools**. See the following automation script example, in which two input parameters are defined to retrieve the element key and the target agent ID:
 
 - a parameter named "Element Key", containing the DMA ID/element ID pair of the element you want to swarm, and
 - a parameter named "Target Agent ID", containing the ID of the target Agent.
@@ -589,7 +589,7 @@ Internally, this new *NT_CLEAR_PARAMETER* call will now also be used by the exis
 > - This new NotifyProtocol method can be invoked from within a QAction by using the `protocol.ClearParameter(<paramId>`) function.
 > - When using `ProtocolExt`, you can now use e.g. `protocol.getRequests.Clear()` to clear a table parameter named *getRequests*. Internally, this new `Clear()` function will then execute a `protocol.ClearAllKeys(<getRequests parameter ID>)` call.
 
-#### Automation: Separate log file for every Automation script that is run [ID 42572]
+#### Automation: Separate log file for every automation script that is run [ID 42572]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
@@ -598,9 +598,9 @@ From now on, when an automation script is run, every entry that is logged in the
 - The first time an automation script is run, a log file will be created in `C:\Skyline DataMiner\Logging\Automation\` for that particular script.
 - After a DataMiner restart, the first time a script is executed, its existing log file will get the "_Bak" suffix and a new log file will be created.
 - If an automation script is renamed, a new log file will be created with a name identical to that of the renamed script. The old file will be kept.
-- If you want to configure a custom log level for a particular Automation script, send an `UpdateLogfileSettingMessage` in which *Name* is set to "Automation\ScriptName". If no custom log configuration exists for a particular Automation script, the default configuration will be used.
+- If you want to configure a custom log level for a particular automation script, send an `UpdateLogfileSettingMessage` in which *Name* is set to "Automation\ScriptName". If no custom log configuration exists for a particular automation script, the default configuration will be used.
 - These new automation script log files will also be included in SLLogCollector packages.
-- Each time a DataMiner upgrade package is installed, all Automation script log files will be deleted.
+- Each time a DataMiner upgrade package is installed, all automation script log files will be deleted.
 
 Log entry format: `1|2|3|4|5|6|7|8`
 

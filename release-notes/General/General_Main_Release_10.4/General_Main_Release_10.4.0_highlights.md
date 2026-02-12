@@ -40,7 +40,7 @@ This settings file also contains other customizable settings, such as the maximu
 
 ##### Defining an API
 
-To define an API, you will first need to **create an automation script** containing the logic of the API. This Automation script should contain the OnApiTrigger entry point method, which will be executed when the API is triggered. Alternatively, you can also **use an existing script** and trigger the API through the *Run* method. However, the latter approach has some disadvantages: you will not have access to the *ApiTriggerInput* object and *ApiTriggerOutput* object in the script, and it will therefore not be possible to check the route or the request method, or to output anything back to the API caller.
+To define an API, you will first need to **create an automation script** containing the logic of the API. This automation script should contain the OnApiTrigger entry point method, which will be executed when the API is triggered. Alternatively, you can also **use an existing script** and trigger the API through the *Run* method. However, the latter approach has some disadvantages: you will not have access to the *ApiTriggerInput* object and *ApiTriggerOutput* object in the script, and it will therefore not be possible to check the route or the request method, or to output anything back to the API caller.
 
 When the script is ready, you will then need to **create an API and tokens**. This can be done in the Automation module or in System Center. If you use DataMiner Automation, open the script and click *Configure API* at the bottom of the window. This will open a window where you can specify the following information:
 

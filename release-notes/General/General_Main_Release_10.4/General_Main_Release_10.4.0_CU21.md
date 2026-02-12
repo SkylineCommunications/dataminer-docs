@@ -134,4 +134,4 @@ These notices will now be generated again.
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, after elements had been swarmed or migrated by means of a DELT package, in some cases, Automation script matrix actions associated with those elements could fail.
+Up to now, after elements had been swarmed or migrated by means of a DELT package, in some cases, automation script matrix actions associated with those elements could fail.

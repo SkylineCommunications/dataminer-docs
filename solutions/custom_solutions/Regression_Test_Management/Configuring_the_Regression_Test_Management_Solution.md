@@ -49,4 +49,4 @@ The *Settings* page of the *Regression Test Results* element contains all email-
 You can manually trigger the test run and email report by clicking the *Execute Tests* button at the bottom of the *Settings* page.
 
 > [!NOTE]
-> By default, the solution uses the *RegressionTestRunner* script to execute and report tests. However, if you want to customize the report format or implement custom test handling logic, you can create your own Automation script and configure its name in the **Regression Test Runner Script** parameter.
+> By default, the solution uses the *RegressionTestRunner* script to execute and report tests. However, if you want to customize the report format or implement custom test handling logic, you can create your own automation script and configure its name in the **Regression Test Runner Script** parameter.

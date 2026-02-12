@@ -47,7 +47,7 @@ To debug an automation script, do the following:
 > - Automation script debugging only works in conjunction with DataMiner Agents running at least DataMiner Main Release Version 10.1.0 or Feature Release Version 10.0.6.
 > - Automation script debugging currently does not yet support memory files and precompiled Exe blocks.
 
-#### Solution-based Automation script development \[ID 28231\]
+#### Solution-based automation script development \[ID 28231\]
 
 Similar to protocols, it is now also possible to develop automation scripts as Visual Studio solutions. However, an automation script solution can contain multiple scripts, while a protocol solution can only contain one single protocol.
 
@@ -55,9 +55,9 @@ Similar to protocols, it is now also possible to develop automation scripts as V
 
 - DLL imports need to be configured on the C# project itself by adding references to the external components. These can be external DLL files (located in C:\\DataMiner\\ProtocolScripts or C:\\DataMiner\\Files) or other scripts in the same solution.
 
-##### Creating an Automation Script solution
+##### Creating an automation script solution
 
-To create a new automation script solution containing one dummy Automation script, do the following:
+To create a new automation script solution containing one dummy automation script, do the following:
 
 1. Select *File \> New \> DataMiner Automation Script Solution...*
 
@@ -89,13 +89,13 @@ To create a new script in an automation script solution, do the following:
 
 ##### Adding an existing script to a solution
 
-To add an existing Automation script to an automation script solution, do the following:
+To add an existing automation script to an automation script solution, do the following:
 
 1. Right-click a solution folder in the Solution Explorer.
 
 1. Select *Add \> Existing DataMiner Automation Script*.
 
-1. Select a least one Automation script file.
+1. Select a least one automation script file.
 
 1. Click *Open*.
 

@@ -157,7 +157,7 @@ Also, when a group contained single parameters in combination with a partial tab
 > [!NOTE]
 > When a `next` attribute is defined on a partial SNMP table parameter inside a parameter group, then the delay will also be applied between the batches of rows that are requested.
 
-#### Interactive Automation script was not able to continue once a lost connection was re-established [ID 39487]
+#### Interactive automation script was not able to continue once a lost connection was re-established [ID 39487]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 

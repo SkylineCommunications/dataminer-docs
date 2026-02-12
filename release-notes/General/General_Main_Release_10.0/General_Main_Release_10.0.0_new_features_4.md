@@ -484,9 +484,9 @@ To do so, open the *Advanced* section, and do the following:
    > [!NOTE]
    >
    > - Library names cannot contain periods (“.”).
-   > - An Automation script cannot contain multiple libraries with the same name. Library names must be unique within a particular Automation script.
+   > - An automation script cannot contain multiple libraries with the same name. Library names must be unique within a particular automation script.
 
-Once you have compiled a C# code block as a library, you can then import that library into other automation scripts. To do so, in the *Advanced* section of a C# code block of a given Automation script, do the following:
+Once you have compiled a C# code block as a library, you can then import that library into other automation scripts. To do so, in the *Advanced* section of a C# code block of a given automation script, do the following:
 
 - In the *Script references* box, enter a reference to the library that you want to import.
 
@@ -497,7 +497,7 @@ Once you have compiled a C# code block as a library, you can then import that li
 
 > [!NOTE]
 >
-> - To optimize performance and use of resources, it is advised to create each library in a separate Automation script. This will minimize the amount of recompilations and DLL generations.
+> - To optimize performance and use of resources, it is advised to create each library in a separate automation script. This will minimize the number of recompilations and DLL generations.
 > - When you recompile a library, all automation scripts and libraries that use that library will also be recompiled.
 > - The order of the C# blocks in an automation script will define the order in which the libraries will be compiled.
 > - When you delete an automation script that contains a library, all files belonging to that library will also be deleted. As a result, you will not be able to recompile any of the depending scripts until you add the deleted library again (with the same script name and library name).

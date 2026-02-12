@@ -122,7 +122,7 @@ GQI extensions use the Automation engine to create DLL libraries that are then l
 GQI will now look for missing dependencies in the `C:\Skyline DataMiner\Scripts\Libraries` folder. This will allow GQI extension scripts to find the automation script library at runtime.
 
 > [!IMPORTANT]
-> If the referenced Automation script library has dependencies of its own, these will also need to be added as dependencies in the GQI extension scripts.
+> If the referenced automation script library has dependencies of its own, these will also need to be added as dependencies in the GQI extension scripts.
 
 #### GQI recording removed from GQI DxM [ID 42470]
 
