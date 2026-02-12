@@ -278,3 +278,9 @@ From now on, when a capability is booked, it will no longer be possible to set i
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.
+
+#### Problem with SLAnalytics when trying to process an invalid database record [ID 44748]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+In some cases, SLAnalytics would stop working when trying to process an invalid database record after having serialized it?
