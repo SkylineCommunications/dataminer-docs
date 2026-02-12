@@ -110,3 +110,11 @@ When multiple registration requests were received for the same route, in some ca
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 In some cases, the two Agents in a Failover pair could get stuck during startup.
+
+#### Scheduler: Windows task will no longer be recreated when only the actions of a scheduled task were changed [ID 44691]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a scheduled task was updated close to its execution time, in some cases, the task would incorrectly not be executed. It would miss its execution window because, during the update, the Windows task would be deleted and recreated again.
+
+From now on, when only the task actions are changed during an update of a scheduled task, the Windows task will no longer be recreated. The latter will only be recreated when the status, name, description, or timing of the scheduled task are changed.
