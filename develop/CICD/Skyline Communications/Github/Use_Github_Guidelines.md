@@ -15,7 +15,7 @@ You can use GitHub to:
 > [!NOTE]
 > At present, **only automation scripts** have workflows available for packaging and deployment.
 >
-> automation scripts that are packaged with other artifacts (Visio files, connectors, etc.) currently will not be able to use the GitHub actions, so we do not recommend using GitHub for those yet.
+> Automation scripts that are packaged with other artifacts (Visio files, connectors, etc.) currently will not be able to use the GitHub actions, so we do not recommend using GitHub for those yet.
 
 ## Creating an account in GitHub's Skyline organization
 
