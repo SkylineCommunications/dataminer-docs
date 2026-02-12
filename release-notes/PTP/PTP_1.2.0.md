@@ -4,22 +4,25 @@ uid: PTP_1.2.0
 
 # PTP 1.2.0
 
+> [!NOTE]
+> This version requires that **DataMiner 10.6.2.0-16783** or higher is installed.
+
 ## New features
 
-#### Catalog Deployment
+#### Catalog deployment
 
 The PTP Solution can now be deployed [directly from the Catalog](https://catalog.dataminer.services/details/9c5eb0a1-43bc-42d2-bca2-de4982ee57d7).
 
-#### New Low-Code APP UI
+#### New low-code app UI
 
-A brand new Low-Code App was added to allow to monitor all PTP Domains from any browser.
+A brand-new low-code app has been added, which allows you to monitor all PTP domains from any browser.
 
-#### New GQI Ad-Hoc Data Sources
+#### New GQI ad hoc data sources
 
-To support the new Low-Code app, multiple GQI Ad-Hoc Data Sources have been added. These will supply the necessary PTP data to the app in real-time.
+To support the new low-code app, multiple GQI ad hoc data sources have been added. These will supply the necessary PTP data to the app in real time.
 
 > [!NOTE]
-> These GQI Ad-Hoc Data Sources need the [GQI DXM](https://docs.dataminer.services/dataminer/Functions/Dashboards_and_Low_Code_Apps/GQI/GQI_DxM.html) to function properly.
+> These GQI ad hoc data sources need the [GQI DXM](xref:GQI_DxM) to function properly.
 
 ## Changes
 
@@ -37,7 +40,3 @@ For detailed information about the changes in this version, refer to the [change
 
 > [!NOTE]
 > New versions of the mediation connector can be deployed independently of the PTP app.
-
-#### Minimum DataMiner version increased to 10.6.2
-
-The PTP app now requires at least DataMiner version 10.6.2.0-16783.
