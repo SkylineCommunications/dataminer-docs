@@ -24,3 +24,5 @@ When your connection has been successfully verified, this will be displayed on t
 
 > [!NOTE]
 > You can also start the verification process by contacting the Skyline verification team directly at [verification@skyline.be](mailto:verification@skyline.be).
+> 
+> Verification is normally used to link an organization to a customer account, if you are using Community Edition for personal use there is no need verify.
