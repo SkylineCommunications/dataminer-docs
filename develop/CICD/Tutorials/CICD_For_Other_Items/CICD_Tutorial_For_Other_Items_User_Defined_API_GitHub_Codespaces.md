@@ -5,7 +5,7 @@ keywords: Skyline.DataMiner.Sdk, Tutorial
 
 # Registering a new version of a user-defined API to the Catalog using GitHub Codespaces
 
-In this tutorial, you will learn how to develop, (pre-)release, and upload a user-defined API to the Catalog with a CI/CD pipeline using GitHub Workspaces. However, note that you can use similar steps for **any artifact type** except for connectors (e.g. Automation script, automation script library, package project, etc.).
+In this tutorial, you will learn how to develop, (pre-)release, and upload a user-defined API to the Catalog with a CI/CD pipeline using GitHub Workspaces. However, note that you can use similar steps for **any artifact type** except for connectors (e.g. automation script, automation script library, package project, etc.).
 
 Expected duration: 10 minutes
 

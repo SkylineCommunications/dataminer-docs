@@ -655,7 +655,7 @@ From now on, when you select the *Display query name* option in the *Layout* tab
 
 #### Deadlock in SLDataGateway could cause data to not get written to the database \[ID 30717\]
 
-In some cases, a deadlock in the SLDataGateway process could cause e.g. Correlation rule data to not get written to the database and remain in memory indefinitely.
+In some cases, a deadlock in the SLDataGateway process could cause e.g. correlation rule data to not get written to the database and remain in memory indefinitely.
 
 #### Problem with Protocol.ShowInformationMessage() method \[ID 30722\]
 
