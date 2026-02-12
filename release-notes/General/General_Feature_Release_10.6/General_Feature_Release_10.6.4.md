@@ -92,6 +92,14 @@ When a DMA receives an SNMPv3 trap that it cannot process (e.g. because the SNMP
 
 Also, in some cases, traps could be forwarded to the wrong elements because the SNMPv3 USM ID was not validated correctly.
 
+#### SLDataGateway: Job queue updates will now be logged in SLJobQueues.txt [ID 44661]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, log entries regarding SLDataGateway job queue updates would be logged in the `C:\Skyline DataMiner\Logging\SLDbConnection.txt` file.
+
+From now on, these log entries will be logged in the `C:\Skyline DataMiner\Logging\SLDataGateway\SLJobQueues.txt` file instead.
+
 #### SLLogCollector: Separate log file per instance [ID 44668]
 
 <!-- MR 10.7.0 - FR 10.6.4 -->
