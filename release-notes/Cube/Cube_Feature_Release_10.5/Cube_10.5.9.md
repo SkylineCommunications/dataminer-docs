@@ -44,7 +44,7 @@ DataMiner Cube now supports automation scripts in which an `<Interactivity>` tag
 
 Up to now, automation scripts using the IAS Interactive Toolkit required a special comment or code snippet in order to be recognized as interactive. From now on, you will be able to define the interactive behavior of an automation script by adding an `<Interactivity>` tag in the header of the script.
 
-For more information on the `<Interactivity>` tag, see [automation scripts: New Interactivity tag [ID 42954]](xref:General_Feature_Release_10.5.9#automation-scripts-new-interactivity-tag-id-42954).
+For more information on the `<Interactivity>` tag, see [Automation scripts: New Interactivity tag [ID 42954]](xref:General_Feature_Release_10.5.9#automation-scripts-new-interactivity-tag-id-42954).
 
 ## Changes
 
