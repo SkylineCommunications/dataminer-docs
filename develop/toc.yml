@@ -4042,7 +4042,7 @@ items:
         topicUid: Protocol-TypeWildcard
       - name: TypeWildcardOrNumber
         topicUid: Protocol-TypeWildcardOrNumber
-  - name: automation script schema
+  - name: Automation script schema
     topicUid: SchemaAutomationScript
     items:
     - name: DMSScript
@@ -7256,7 +7256,7 @@ items:
         items:
         - name: Pipeline stages for functions
           topicUid: Pipeline_stages_for_functions
-      - name: automation script development with CI/CD pipeline
+      - name: Automation script development with CI/CD pipeline
         items:
         - name: Automation scripts as a Visual Studio solution
           topicUid: Automation_scripts_as_a_Visual_Studio_solution
