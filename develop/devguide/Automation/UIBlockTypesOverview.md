@@ -601,7 +601,7 @@ Make sure to add "using Skyline.DataMiner.Net.AutomationUI.Objects;" at the top 
 
 > [!NOTE]
 >
-> - automation scripts with tree view controls are currently only supported in the DataMiner web apps. These are not yet supported in DataMiner Cube.
+> - Automation scripts with tree view controls are currently only supported in the DataMiner web apps. These are not yet supported in DataMiner Cube.
 > - From DataMiner 10.6.0/10.6.3 onwards<!-- RN 44515 / RN 44541 -->, when the UI is updated, the previous collapsed state of the tree view nodes can be restored. Set the [UsePreviousCollapsedState](xref:Skyline.DataMiner.Net.AutomationUI.Objects.TreeViewItem.UsePreviousCollapsedState) to true to restore the state. If no prior state is available, the value of [IsCollapsed](xref:Skyline.DataMiner.Net.AutomationUI.Objects.TreeViewItem.IsCollapsed) will be used instead.
 
 Example:
