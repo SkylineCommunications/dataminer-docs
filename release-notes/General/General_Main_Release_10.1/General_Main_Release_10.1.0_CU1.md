@@ -143,7 +143,7 @@ When the DecimalQuantity property of the CapacityUsageParameterValue of a Profil
 
 In some cases, an error could be thrown when trying to take a backup of an Elasticsearch database while Elasticsearch security was enabled.
 
-#### Correlation: correlation rules would incorrectly be triggered by empty alarms \[ID 28680\]
+#### Correlation: Correlation rules would incorrectly be triggered by empty alarms \[ID 28680\]
 
 In some cases, correlation rules would incorrectly be triggered by empty alarms, causing emails to be sent with unresolved placeholders.
 

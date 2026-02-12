@@ -135,7 +135,7 @@ When a correlated alarm was cleared, overall memory usage would temporarily incr
 
 In some cases, an error could occur in the SLSpectrum process when a client disconnected.
 
-#### Correlation: correlation rules would incorrectly be triggered by empty alarms \[ID 28680\]
+#### Correlation: Correlation rules would incorrectly be triggered by empty alarms \[ID 28680\]
 
 In some cases, correlation rules would incorrectly be triggered by empty alarms, causing emails to be sent with unresolved placeholders.
 

@@ -718,7 +718,7 @@ In some cases, it would not be possible to retrieve trend data from columns of a
 
 When trend data has to be retrieved from a column of a view table that is based on another view table, another column in that same view table has to have the VIEWTABLEKEY option defined.
 
-#### Correlation: correlation rules would incorrectly be triggered by empty alarms \[ID 28680\]
+#### Correlation: Correlation rules would incorrectly be triggered by empty alarms \[ID 28680\]
 
 In some cases, correlation rules would incorrectly be triggered by empty alarms, causing emails to be sent with unresolved placeholders.
 
