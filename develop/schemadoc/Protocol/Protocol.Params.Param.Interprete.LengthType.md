@@ -84,27 +84,35 @@ For example, assuming the following:
 
 - The **current parameter** has `LengthType = last next param`.
 - The **following parameter** is a fixed parameter with the value `$`.
-- This is the incoming data:
+- The last parameter is a **trailer** parameter with the fixed value `#`.
+  
+This is the incoming data:
 
-  ```
-  abc$def$ghi$#
-  ```
+```
+abc$def$ghi$#
+```
 
 In this case:
 
-- The parser searches for the **last occurrence** of `$`.
+- The logic receiving the raw bytes will wait and search until it finds the trailer, after which it forwards all the data it received to the parameter parser.
+- The parameter parser searches for the **last occurrence** of `$` in the string it received from the raw bytes receiver (`abc$def$ghi$#`).
 - Everything **before** that last `$` is assigned to the current parameter.
+- The parameter parser matches the last `$` to the fixed parameter with value `$`.
+- The parameter parser matches the `#` to the trailer parameter.
 
 Result:
 
 - Current parameter value: `abc$def$ghi`.
 - Following (fixed) parameter value: `$`.
+- The trailer parameter value: `#` and a complete, successful, match.
 
 This behavior differs from the `next param` LengthType. If `next param` were used instead, the parser would stop at the **first** occurrence of `$`, and the current parameter would receive only the following data:
 
 ```
 abc
 ```
+
+After that the parameter match would fail as the first `$` is not followed by the trailer (`#`).
 
 In summary, `last next param` ensures that the current parameter includes all content up to the **final occurrence** of the following parameter, making it useful when the data itself may contain the same delimiter multiple times.
 
