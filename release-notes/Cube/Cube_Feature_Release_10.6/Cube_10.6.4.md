@@ -36,4 +36,8 @@ From now on, the search boxes in the above-mentioned modules will act in a way t
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem with icons of apps pinned to the sidebar [ID 44693]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, when an app was pinned to the sidebar, two instances of that app's icon would incorrectly be displayed one on top of the other.
