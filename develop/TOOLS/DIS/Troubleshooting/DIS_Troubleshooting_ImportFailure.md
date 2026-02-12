@@ -7,7 +7,7 @@ keywords: dis import issue
 
 ## Problem
 
-Importing a Dashboard or Low Code app fails with an error when connected to an agent via an on.dataminer.services cloud connection.
+Importing a Dashboard or Low Code App fails with an error when connected to an Agent via an on.dataminer.services cloud connection.
 
 ## Possible causes
 
