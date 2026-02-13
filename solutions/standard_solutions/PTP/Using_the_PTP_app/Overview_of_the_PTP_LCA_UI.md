@@ -13,20 +13,21 @@ From PTP version 1.2.0 onwards, a DataMiner low-code app is available with the f
 
 ## The Summary page
 
-This page shows a list of configured PTP Domains and a summary of the selected domain. The first domain is selected by default.
+This page shows a list of configured PTP domains and a summary of the selected domain. The first domain is selected by default.
 
-- The list in the top-right corner shows all the configured PTP domains in the PTP Solution with the amount of configured clocks per domain. The selected domain is highlighted. All the other data in the app will be related to this selected domain.
+- The list in the top-right corner shows all the configured PTP domains in the PTP Solution with the number of configured clocks per domain. The selected domain is highlighted. All the other data shown in the app will be related to this selected domain.
 
-- From left to right, the total number of grandmaster, boundary clock, transparent clock, and slave clocks in the selected PTP domain are shown. The filter icon in each box is indicating if there are any active alarms for the respective clock type. When clicking the filter icon, the alarm list below will be filtered to the specific clock type.
+- From left to right, the page shows the total number of grandmasters, boundary clocks, transparent clocks, and slave clocks in the selected PTP domain. The filter icon in each box indicates if there are any active alarms for the respective clock type. When you click the filter icon, the alarm list below will be filtered to the specific clock type.
 
-- The total amount of alarms in the PTP domain per severity. When clicking the circles, the alarm list below will be filtered to the specific severity.
+- On the right, the page shows the total number of alarms in the PTP domain per severity. When clicking the circles, the alarm list below will be filtered to the specific severity.
 
 - The alarm list will show all alarms of the selected PTP domain. By default only PTP-related alarms are shown, this can be switched to show all alarms of the equipment included in the PTP domain.
- From the context menu next to the element name, the monitoring app and a details panel for the specific element can be opened.
+
+  From the context menu next to the element name, the monitoring app and a details panel for the specific element can be opened.
 
 - At the bottom of the page, general parameters of the detected active grandmaster are shown.
 
-  ![Summary page](~/solutions/images/PTP_Summary.png)
+![Summary page](~/solutions/images/PTP_Summary.png)
 
 ## The Nodes page
 
@@ -36,7 +37,7 @@ At the top-right, there is an option to only show the nodes with active alarms. 
 
 The tabs on this page allow for easy comparison between multiple nodes of the same clock type.
 
-  ![Nodes page](~/solutions/images/PTP_Nodes.png)
+![Nodes page](~/solutions/images/PTP_Nodes.png)
 
 ## The Topology page
 
@@ -51,7 +52,7 @@ To change the position of the nodes, click and drag a node to the desired positi
 > [!NOTE]
 > When upgrading the PTP solution to version 1.2.0 or later, the positions used in the Visio Topology will be copied over to the positions for the Low-Code APP. After this upgrade, the positions are not synced in any way.
 
-  ![Topology page](~/solutions/images/PTP_Topology.png)
+![Topology page](~/solutions/images/PTP_Topology.png)
 
 ## The Admin page
 
