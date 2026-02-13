@@ -47,6 +47,9 @@ To create a new alarm template:
 
 1. Configure the alarm thresholds. You can configure [normal](xref:Configuring_normal_alarm_thresholds) or [dynamic](xref:Configuring_dynamic_alarm_thresholds) alarm thresholds.
 
+   > [!NOTE]
+   > By default, no parameters are enabled, except for parameters that have a default information event monitoring threshold.
+
 1. Optionally, you can also:
 
    - [Configure alarm hysteresis](xref:Configuring_alarm_hysteresis).
