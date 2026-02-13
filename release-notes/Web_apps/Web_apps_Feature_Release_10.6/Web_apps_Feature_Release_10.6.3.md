@@ -40,12 +40,13 @@ For more information on the server-side changes behind this feature, see [DataMi
 In the navigation pane, a new *Add* button is now available to users with permission to add dashboards.
 
 - Clicking *Add* will create a new dashboard.
+
 - Clicking the down arrow on the right will open a menu with the following commands:
 
-  - Create dashboard
-  - Create folder
-  - Import dashboard
-  - Import from catalog
+  - Dashboard
+  - Folder
+  - From import
+  - From catalog
 
 ![Add button](~/dataminer/images/Add_new_dashboard.png)
 
