@@ -10,7 +10,7 @@ To deploy or upgrade the DataMiner PTP app:
 
 ### [From DataMiner PTP 1.1.4 onwards](#tab/tabid-1)
 
-The [DataMiner PTP package](https://catalog.dataminer.services/details/9c5eb0a1-43bc-42d2-bca2-de4982ee57d7) can be deployed from the Catalog.
+Deploy the [DataMiner PTP package](https://catalog.dataminer.services/details/9c5eb0a1-43bc-42d2-bca2-de4982ee57d7) from the Catalog.
 
 ### [Prior to DataMiner PTP 1.1.4](#tab/tabid-2)
 
