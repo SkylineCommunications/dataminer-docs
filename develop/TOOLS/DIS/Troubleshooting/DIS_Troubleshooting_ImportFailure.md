@@ -3,11 +3,11 @@ uid: DIS_Troubleshooting_ImportFailure
 keywords: dis import issue
 ---
 
-# Import problems
+# Importing problems
 
 ## Problem
 
-Importing a Dashboard or Low Code App fails with an error when connected to an Agent via an on.dataminer.services cloud connection.
+Importing a dashboard or low-code app fails with an error when connected to an Agent via an on.dataminer.services cloud connection.
 
 ## Possible causes
 
@@ -17,29 +17,25 @@ Importing a Dashboard or Low Code App fails with an error when connected to an A
 
 - The DataMiner user you use to connect to the Agent is **not linked** to your dataminer.services account.
 
-## Possible solutions
+## Possible solution
 
-1. Verify your DIS sign-in status.
+1. Verify your DIS sign-in status:
 
-   In DIS, open the settings and go to the **Account** tab.
+   1. In DIS, open the settings and go to the **Account** tab.
+   1. Check whether **Login status** is **Connected**.
+   1. Check whether **Account status** is **OK**.
+   1. If either of these statuses has a different value, sign in again.
 
-    - Make sure **Login status** is **Connected**.
-    - Make sure **Account status** is **OK**.
+1. Go to [admin.dataminer.services](https://admin.dataminer.services) and confirm that the signed-in account is part of the expected organization.
 
-   If either status is not OK, sign in again.
+1. Make sure that your DataMiner user account is linked to your dataminer.services account:
 
-1. Verify that your signed-in account is part of the correct organization.
+   1. On [admin.dataminer.services](https://admin.dataminer.services), open your DataMiner System and go to the **Users** page.
 
-   Go to [admin.dataminer.services](https://admin.dataminer.services) and confirm that the signed-in account is part of the expected organization.
+   1. Check whether the DataMiner user account (the one used to log in to the Agent) is linked to your dataminer.services account.
 
-1. Verify that your DataMiner user is linked to your dataminer.services account.
+      If it is not, [link your DataMiner account to your dataminer.services account](xref:Linking_your_DataMiner_and_dataminer_services_account).
 
-   On [admin.dataminer.services](https://admin.dataminer.services), open your DataMiner System and go to the **Users** page.
+1. Sign out and sign back in again in DIS to refresh your authentication, and then retry the import.
 
-   Confirm that the DataMiner user account (the one used to log in to the Agent) is linked to your dataminer.services account.
-
-1. Refresh the authentication in DIS.
-
-   Sign out and sign back in again in DIS, and then retry the import.
-
-If the issue still persists after you have tried the solutions above, report the issue to the DIS team, making sure to include the Visual Studio output logging. For more info, see [Retrieving information in case a problem occurs](xref:DIS_Troubleshooting_RetrieveInformation).
+If the issue still persists after you have tried the steps above, report the issue to the DIS team, making sure to include the Visual Studio output logging. For more info, see [Retrieving information in case a problem occurs](xref:DIS_Troubleshooting_RetrieveInformation).
