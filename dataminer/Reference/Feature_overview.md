@@ -50,6 +50,7 @@ Below you can find an overview of the main features that have been added to Data
 | Dashboards: [*Trigger* component](xref:DashboardTrigger) | DataMiner 10.1.1/10.2.0 <!-- [ID 28136] --> |
 | Dashboards/Low-Code Apps: [*Button panel* component](xref:DashboardButtonPanel) | DataMiner 10.3.9/10.4.0<br>DataMiner 10.0.3 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsbuttonpanel) <!-- [ID 36775] --> |
 | Dashboards/Low-Code Apps: [Configuring node and edge labels](xref:DashboardNodeEdgeGraph#configuring-node-and-edge-labels) for the node edge graph component | DataMiner 10.5.0 [CU11]/10.6.2  <!-- [ID 44218] --> |
+| Dashboards/Low-Code Apps: [Customizing timeline groups](xref:DashboardTimeline#customizing-timeline-groups) using the Template Editor | DataMiner web 10.5.0 [CU12]/10.6.3 <!-- [ID 44557] --> |
 | Dashboards/Low-Code Apps: [Dynamic references in text](xref:Dynamically_Referencing_Data_in_Text) | DataMiner 10.3.11/10.4.0<!-- [ID 37229] --> |
 | Dashboards/Low-Code Apps: [Exporting a GQI query](xref:Creating_GQI_query#exporting-a-query) | DataMiner web 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- [ID 43800] --> |
 | Dashboards/Low-Code Apps: [Flows](xref:Using_flows) | DataMiner web 10.4.0 [CU9]/10.4.12<!-- [ID 40974] --><br>Minimum server version: DataMiner 10.3.9/10.4.0 |
@@ -117,6 +118,7 @@ Below you can find an overview of the main features that have been added to Data
 | [Low-Code Apps](xref:Application_framework) | DataMiner 10.2.5/10.3.0<br>DataMiner 10.0.8 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#applications) <!-- [ID 33040] -->|
 | Low-Code Apps: [*Change variable* actions](xref:LowCodeApps_event_config#changing-a-variable) | DataMiner web 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1<!-- [ID 41253] [ID 41324] --> |
 | Low-Code Apps: [*Copy to clipboard* action](xref:LowCodeApps_event_config#copying-text-to-the-clipboard) | DataMiner web 10.4.0 [CU11]/10.5.2<!-- [ID 41729]-->|
+| Low-Code Apps: [Customizing the app styling using custom CSS code](xref:Changing_low-code_app_settings#customizing-the-app-styling-using-custom-css-code) | DataMiner web 10.5.0 [CU12]/10.6.3 <!-- [ID 44570] --> |
 | Low-Code Apps: [Duplicating an app](xref:Creating_custom_apps#duplicating-an-existing-low-code-app) | DataMiner web 10.3.0 [CU10]/10.4.1 <!-- [ID 37698] -->|
 | Low-Code Apps: [*Interactive Automation script* component](xref:InteractiveAutomationScript) | DataMiner web 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 <!-- [ID 39969] -->|
 | Low-Code Apps: [Node movement events](xref:DashboardNodeEdgeGraph#configuring-node-movement-events) for the node edge graph component | DataMiner 10.5.0 [CU10]/10.6.1 <!-- [ID 44144] --> |
@@ -140,6 +142,7 @@ Below you can find an overview of the main features that have been added to Data
 | Spectrum Analysis: [Zooming and panning](xref:Viewing_spectrum_analyzer_traces#zooming-and-panning) | DataMiner Cube DataMiner 10.3.11/10.4.0 <!-- [ID 37284] [ID 37461] --> |
 | [Storage as a Service (STaaS)](xref:STaaS) | DataMiner 10.4.0/10.4.1 |
 | [Swarming](xref:Swarming) | DataMiner 10.5.1/10.6.0<br>DataMiner 10.3.11 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#swarming) (Feature Release only)<!-- [ID 41490] --> |
+| Swarming: [Swarming scheduled tasks](xref:SwarmingScheduledTasks) | DataMiner 10.6.3/10.7.0 <!-- [ID 44620] --> |
 | Visual Overview: [Background color for static shapes](xref:Setting_the_background_color_of_a_static_shape) | DataMiner 10.1.11/10.2.0 <!-- [ID 30964] --> |
 | Visual Overview: [*BookingData* component](xref:Linking_a_shape_to_a_booking#making-the-booking-shape-display-booking-information) | DataMiner Cube 10.3.8/10.4.0<br>DataMiner 10.2.7 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#bookingdata)<!-- [ID 33215] [ID 36489] --> |
 | Visual Overview: [Control to set duration in session variable](xref:Adding_options_to_a_session_variable_control#creating-a-control-to-set-a-duration-in-a-session-variable) | DataMiner 10.3.0/10.2.4 <!-- [ID 32716] -->|
