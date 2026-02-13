@@ -126,16 +126,12 @@ items:
       items:
       - name: Installing the DataMiner PTP app
         topicUid: Installing_the_DataMiner_PTP_app
-      - name: Using the DataMiner PTP app
-        items:
-        - name: Types of PTP devices
-          topicUid: Types_of_PTP_devices
-        - name: Overview of the DataMiner PTP app UI
-          items:
-            - name: PTP low-code app
-              topicUid: Overview_of_the_PTP_LCA_UI
-            - name: PTP app in Cube
-              topicUid: Overview_of_the_PTP_app_in_Cube_UI
+      - name: Types of PTP devices
+        topicUid: Types_of_PTP_devices
+      - name: PTP low-code app
+        topicUid: Overview_of_the_PTP_LCA_UI
+      - name: PTP app in Cube
+        topicUid: Overview_of_the_PTP_app_in_Cube_UI
     - name: DataMiner EPM
       topicUid: SolEPM
       items:
