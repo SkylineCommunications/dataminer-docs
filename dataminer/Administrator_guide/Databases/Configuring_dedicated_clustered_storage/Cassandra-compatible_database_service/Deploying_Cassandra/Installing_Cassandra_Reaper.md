@@ -74,7 +74,7 @@ Cassandra Reaper is an application that can manage Cassandra cluster repairs on 
       - `archivedLogFilenamePattern: /var/log/cassandra-reaper/reaper-%d{yyyy-MM-dd}_%i.log.gz`
       - `archivedFileCount: 10`
 
-   - Configure logging format: `logFormat: "%date{ISO8601} %-6level [%t] %logger{5} - %msg %n"`. Compared to the default format, this setting adds a timestamp to a log line.
+   - Configure the following logging format: `logFormat: "%date{ISO8601} %-6level [%t] %logger{5} - %msg %n"`. Compared to the default format, this setting adds a timestamp to the log line.
 
    - For a sidecar-based configuration, to configure the connection with the Cassandra cluster, use the following configuration:
 
