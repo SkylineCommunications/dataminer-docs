@@ -106,6 +106,8 @@ To have all data on a timeline grow or shrink in height, rotate the mouse wheel 
 
 Note that items cannot shrink below 1/10th of their initial height or grow above 10 times their initial height.
 
+![Vertical zooming](~/dataminer/images/VerticalZoom.gif)
+
 #### Dashboards/Low-Code Apps - Timeline component: Group templates [ID 44557]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
