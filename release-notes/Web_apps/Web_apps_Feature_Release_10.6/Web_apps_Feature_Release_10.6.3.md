@@ -33,7 +33,7 @@ For more information on the server-side changes behind this feature, see [DataMi
 
 ## New features
 
-#### Dashboards app: New Add button in navigation pane [ID 44432]
+#### Dashboards app: Improved Add button in navigation pane [ID 44432]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
@@ -46,6 +46,8 @@ In the navigation pane, a new *Add* button is now available to users with permis
   - Create folder
   - Import dashboard
   - Import from catalog
+
+![Add button](~/dataminer/images/Add_new_dashboard.png)
 
 #### GQI DxM: New internal data source 'Get active sessions' & additional internal metrics [ID 44447]
 
@@ -90,6 +92,8 @@ Other columns:
 Breadcrumbs have now been added to the details pane.
 
 By clicking the first breadcrumb, which is named *Overview*, you will navigate back to the root view.
+
+![Breadcrumbs](~/dataminer/images/Dashboards_Breadcrumbs.gif)
 
 #### Dashboards/Low-Code Apps - Timeline component: Zooming vertically while keeping the ALT key pressed [ID 44524]
 
