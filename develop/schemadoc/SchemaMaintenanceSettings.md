@@ -19,7 +19,7 @@ This is an example of a MaintenanceSettings.xml file:
   <AlarmSettings
       serviceTimeoutMode="displayTimeout"
       viewTimeoutMode="displayBoth">
-    <AlarmsPerParameter recurring="true">60</AlarmsPerParameter>
+    <AlarmsPerParameter>60</AlarmsPerParameter>
     <Blinking blinkInterval="1000" blankInterval="200" enabled="true" />
     <MaxFreezeAlarms>1000</MaxFreezeAlarms>
     <MaxFreezeTime>60000000</MaxFreezeTime>
