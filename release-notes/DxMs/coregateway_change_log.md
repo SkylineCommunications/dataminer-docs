@@ -4,6 +4,10 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
+#### 16 February 2026 - Enhancement - CoreGateway 2.14.16 - Fix version offloading
+
+A small change was done to ensure the correct version is uploaded against which certain checks are done in admin.dataminer.services.
+
 #### 13 February 2026 - Enhancement - CoreGateway 2.14.15 - Dependencies updated
 
 Several dependencies have been updated.
