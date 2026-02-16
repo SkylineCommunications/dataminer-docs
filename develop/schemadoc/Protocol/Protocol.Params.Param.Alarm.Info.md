@@ -4,7 +4,9 @@ uid: Protocol.Params.Param.Alarm.Info
 
 # Info element
 
-When the value of the alarm is equal to the value specified in this element, an information event is generated.
+When the value of the alarm is equal to the value specified in this element, an information event is generated. 
+
+When creating a new alarm template, any parameter that has a default info value will be enabled automatically.
 
 ## Type
 
