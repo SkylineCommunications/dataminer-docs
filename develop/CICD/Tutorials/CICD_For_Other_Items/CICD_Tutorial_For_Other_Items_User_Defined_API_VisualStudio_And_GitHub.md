@@ -5,7 +5,7 @@ keywords: Skyline.DataMiner.Sdk, Tutorial
 
 # Registering a new version of a user-defined API to the Catalog using Visual Studio and GitHub
 
-In this tutorial, you will learn how to develop, (pre-)release, and upload a user-defined API to the Catalog with a CI/CD pipeline using Visual Studio and GitHub. However, note that you can use similar steps for **any artifact type** except for connectors (e.g. automation script, automation script library, package project, etc.).
+In this tutorial, you will learn how to develop, (pre-)release, and upload a user-defined API to the Catalog with a CI/CD pipeline using Visual Studio and GitHub. However, note that you can use similar steps for **any artifact type** except for connectors (e.g., automation script, automation script library, package project, etc.).
 
 Expected duration: 10 minutes
 
@@ -98,7 +98,7 @@ With this setup, any push with new content (including the initial creation) to t
 
 1. Search for the name of your package.
 
-   By default, this is your Visual Studio project name (e.g. *MyUserDefinedApi*).
+   By default, this is your Visual Studio project name (e.g., *MyUserDefinedApi*).
 
 1. Go to the *VERSIONS* tab.
 

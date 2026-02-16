@@ -43,7 +43,7 @@ The DataMiner Assistant combines OCR (Optical Character Recognition) and LLMs (L
    >   - 20 MB for PTTX and TIFF/TIF files.
    >   - 5 MB for all other file types.
 
-1. You provide your instructions. These instructions (i.e. the "prompt") describe what the system should extract or analyze.
+1. You provide your instructions. These instructions (i.e., the "prompt") describe what the system should extract or analyze.
 
    The quality of the final result depends heavily on the quality of these instructions. See [Writing effective instructions](#writing-effective-instructions) for guidance.
 
@@ -103,12 +103,12 @@ POSSIBLE VALUES:
 
 REQUIRED FORMATS:
 - Date values should be formatted as dd/mm/yyyy hh:mm:ss.
-- Frequency values should be formatted in MHz with 6 digits and 3 decimals places (e.g. 123.567 MHz). 
+- Frequency values should be formatted in MHz with 6 digits and 3 decimals places (e.g., 123.567 MHz). 
 - Symbol rate should be formatted in MSym/s with 3 decimals.
 
 ADDITIONAL INFORMATION:
-- If elements such as satellites are not found in the document, return an empty JSON array, e.g. "satellites": [].
-- Satellite names are often abbreviations (e.g. EUT) followed by numbers and letters (e.g. 7A). Only the base identifier is required, so "EUT 7A-7E" can be mapped to "EUT 7".
+- If elements such as satellites are not found in the document, return an empty JSON array, e.g., "satellites": [].
+- Satellite names are often abbreviations (e.g., EUT) followed by numbers and letters (e.g., 7A). Only the base identifier is required, so "EUT 7A-7E" can be mapped to "EUT 7".
 ```
 
 ## Using Document Intelligence in automation scripts
@@ -158,7 +158,7 @@ Document Intelligence relies on external Azure AI services for both OCR and LLM 
 >
 > - When data is sent to the Document Intelligence Service, both input data and analysis results may be temporarily encrypted and stored in Azure Storage for up to 24 hours after the operation is completed. Data remains in the service region. For the time being, this will be Western Europe for all users.
 > - The Global Standard Deployment of Azure OpenAI ensures the highest availability and lowest costs by processing data across Azure's global infrastructure. While temporarily stored data will never leave the designated region (currently Sweden vor all users), prompts and responses **might be processed in any geographic area**.
-> - Ensure that all uploaded content complies with your organization's data handling policies, security requirements, and regulations (e.g. GDPR, CCPA).
+> - Ensure that all uploaded content complies with your organization's data handling policies, security requirements, and regulations (e.g., GDPR, CCPA).
 
 > [!TIP]
 > We highly recommended reviewing the [Azure Document Intelligence data privacy documentation](https://learn.microsoft.com/en-us/legal/cognitive-services/document-intelligence/data-privacy-security) and the [Azure OpenAI data privacy and security documentation](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy).

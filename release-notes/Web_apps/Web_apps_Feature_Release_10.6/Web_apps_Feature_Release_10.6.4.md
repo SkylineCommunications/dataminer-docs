@@ -61,7 +61,7 @@ From now, when post filtering the *Get object manager instances* and *Get profil
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-When, in the Browse templates window, you selected the default template of e.g. the Grid component, up to now, the text in that default template would incorrectly not get replaced by the text in the Grid component.
+When, in the Browse templates window, you selected the default template of e.g., the Grid component, up to now, the text in that default template would incorrectly not get replaced by the text in the Grid component.
 
 From now on, the default template text will get replaced correctly.
 

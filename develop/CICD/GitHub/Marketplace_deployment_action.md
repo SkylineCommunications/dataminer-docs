@@ -34,7 +34,7 @@ The (primary or secondary) key should be added as a secret in the repository, so
 
 1. In the top-right corner, click *New repository secret*.
 
-1. Specify a name for your secret (e.g. `MY_KEY`), paste the key as the value for the secret, and then save the secret.
+1. Specify a name for your secret (e.g., `MY_KEY`), paste the key as the value for the secret, and then save the secret.
 
    Once it is saved, your secret will be displayed in the *repository secrets*, and you will be able to use it in a workflow.
 

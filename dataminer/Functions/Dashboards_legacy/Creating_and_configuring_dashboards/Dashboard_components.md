@@ -240,12 +240,12 @@ Component-specific options:
 
 - *Feed filter*: In this box, enter a parameter, element, service, view or protocol feed to limit the alarms shown in the list.
 
-  The filter feed can also be used when the alarm list is part of a dynamic list type dashboard. In that case, the feed filter will be combined with the selection for the current row. This allows e.g. a dynamic list dashboard to iterate over elements and to show an element-limited dashboard for each of the elements.
+  The filter feed can also be used when the alarm list is part of a dynamic list type dashboard. In that case, the feed filter will be combined with the selection for the current row. This allows e.g., a dynamic list dashboard to iterate over elements and to show an element-limited dashboard for each of the elements.
 
   > [!TIP]
   > See also: [Creating a dashboard with a dynamic list layout](xref:Creating_a_dashboard_with_a_dynamic_list_layout)
 
-- *Column Order*: Use the arrows next to each column to change the order in which the columns will appear. It is also possible to add additional columns, e.g. the *Active time*, which is the time since the alarm has been generated.
+- *Column Order*: Use the arrows next to each column to change the order in which the columns will appear. It is also possible to add additional columns, e.g., the *Active time*, which is the time since the alarm has been generated.
 
 - *Appearance*: In the dropdown list, select the type of list you want to display.
 
@@ -295,7 +295,7 @@ This group consists of the following components:
 - [Visual overview element](#visual-overview-element-element)
 
 > [!NOTE]
-> Not only elements can be used in the feeds for these components, but also enhanced services, i.e. services that use a service protocol.
+> Not only elements can be used in the feeds for these components, but also enhanced services, i.e., services that use a service protocol.
 
 ### Alarm count element (element)
 
@@ -414,7 +414,7 @@ Component-specific options:
 
 Displays a parameter, optionally with the parameter name, the parameter value, or the parameter set control.
 
-For a table parameter, you can select one or more columns in order to show only these, and apply a row filter if necessary, e.g. *SL\**. In the dashboard, it will then be possible to sort the columns by clicking the column header. You can also link the Parameter index to another, existing *Generic real-time parameter* component in the dashboard, by selecting *\<Link to \[name other component\]\>* in the *IDX* dropdown list.
+For a table parameter, you can select one or more columns in order to show only these, and apply a row filter if necessary, e.g., *SL\**. In the dashboard, it will then be possible to sort the columns by clicking the column header. You can also link the Parameter index to another, existing *Generic real-time parameter* component in the dashboard, by selecting *\<Link to \[name other component\]\>* in the *IDX* dropdown list.
 
 Component-specific options:
 
@@ -898,7 +898,7 @@ Displays information about the dashboard feed.
 
 Component-specific options:
 
-- *Type*: In the dropdown list, select the type of information to be displayed (e.g. Current selection, Element name, Protocol name, ...)
+- *Type*: In the dropdown list, select the type of information to be displayed (e.g., Current selection, Element name, Protocol name, ...)
 
 - *Style*: In the dropdown list, select whether to display the feed info as normal text or as a title.
 

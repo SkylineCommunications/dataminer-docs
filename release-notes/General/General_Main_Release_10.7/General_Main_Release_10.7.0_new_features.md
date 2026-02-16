@@ -97,7 +97,7 @@ To activate SLNet subscription event logging, do the following:
 
 ##### Event type and cache key filtering
 
-The entries in the *SLSubscriptionLog.txt* log file can be filtered by event type (e.g. *ParameterChangeEventMessage*) and/or cache key (e.g. DataMinerID/ElementID/ParameterID). To do so, you have to provide a value with a *filter=* prefix. If you want to provide multiple values, they have to be separated by a semicolon (";").
+The entries in the *SLSubscriptionLog.txt* log file can be filtered by event type (e.g., *ParameterChangeEventMessage*) and/or cache key (e.g., DataMinerID/ElementID/ParameterID). To do so, you have to provide a value with a *filter=* prefix. If you want to provide multiple values, they have to be separated by a semicolon (";").
 
 Options for filtering by event type:
 

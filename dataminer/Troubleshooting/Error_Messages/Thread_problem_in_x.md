@@ -57,7 +57,7 @@ Restart DataMiner.
 
 ## Thread problem in SLDataMiner: DBCleaning
 
-The *DBCleaning* thread removes data that is no longer needed from the local database, e.g. old trending and alarm data.
+The *DBCleaning* thread removes data that is no longer needed from the local database, e.g., old trending and alarm data.
 
 ### Symptom
 

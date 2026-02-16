@@ -106,7 +106,7 @@ To add a new organization category:
 
 1. Select *+ New category*.
 
-1. Enter a name for the new category in the *Category* field, e.g. `Accounting Firm`.
+1. Enter a name for the new category in the *Category* field, e.g., `Accounting Firm`.
 
 1. Select *Save* in the top-right corner.
 

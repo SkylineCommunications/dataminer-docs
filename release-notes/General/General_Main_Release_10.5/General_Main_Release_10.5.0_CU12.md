@@ -95,7 +95,7 @@ This BPA test will identify client machines and DataMiner Agents without interne
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
+Up to now, for a GQI extension (i.e., an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
 
 From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
 

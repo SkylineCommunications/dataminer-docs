@@ -7,7 +7,7 @@ uid: Configuring_multiple_OpenSearch_clusters
 > [!IMPORTANT]
 > Two-site redundant indexing clusters are no longer supported. For optimal redundancy, we recommend switching to [Storage as a Service](xref:STaaS).
 
-From DataMiner 10.3.0/10.3.3 onwards, you can have data offloaded to multiple OpenSearch clusters, i.e. one main cluster and several replicated clusters. Data is always read from the main cluster, but data updates are sent to all clusters.
+From DataMiner 10.3.0/10.3.3 onwards, you can have data offloaded to multiple OpenSearch clusters, i.e., one main cluster and several replicated clusters. Data is always read from the main cluster, but data updates are sent to all clusters.
 
 To configure this setup, proceed as follows:
 
@@ -50,7 +50,7 @@ To configure this setup, proceed as follows:
             <PWD>root</PWD>
             <DB>dms</DB>
             <!--
-            Used by file offload (i.e. when the connection with the Elastic cluster is not
+            Used by file offload (i.e., when the connection with the Elastic cluster is not
             available) for tagging the offloaded data with.
            Should be different for each defined Elastic cluster connection.
             -->
@@ -110,7 +110,7 @@ To configure this setup, proceed as follows:
                -->
                <Prefix>dms</Prefix>
                <!--
-                  Used by file offload (i.e. when the connection with the Elastic cluster is not
+                  Used by file offload (i.e., when the connection with the Elastic cluster is not
                   available) for tagging the offloaded data with.
                   Should be different for each defined Elastic cluster connection.
                -->

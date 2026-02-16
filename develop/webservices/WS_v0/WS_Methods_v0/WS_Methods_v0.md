@@ -35,5 +35,5 @@ uid: WS_Methods_v0
 | [GetServicesAlarmStateByID](xref:GetServicesAlarmStateByID) | Retrieves the current alarm state of a specific service (referenced by ID). |
 | [GetServicesAlarmStateByName](xref:GetServicesAlarmStateByName) | Retrieves the current alarm state of a specific service (referenced by name). |
 | [GetSubViews](xref:GetSubViews) | Retrieves the names of all subviews of a specified view. |
-| [RequestLoginAsTicket](xref:RequestLoginAsTicket1) | Retrieves a logon ticket that can then be added to e.g. a DataMiner Maps URL. |
+| [RequestLoginAsTicket](xref:RequestLoginAsTicket1) | Retrieves a logon ticket that can then be added to e.g., a DataMiner Maps URL. |
 | [SetParameterValueByElementID](xref:SetParameterValueByElementID) | Updates the value of a parameter linked to an element (referenced by ID). |

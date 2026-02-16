@@ -53,13 +53,13 @@ You can refer to an element, service or redundancy group in the following ways:
 
 ### Examples
 
-- To create a shape that will open the default page of the Visio drawing linked to the element, service or redundancy group with ID 111/273 (i.e. DMA ID 111, item ID 273):
+- To create a shape that will open the default page of the Visio drawing linked to the element, service or redundancy group with ID 111/273 (i.e., DMA ID 111, item ID 273):
 
   | Shape data field | Value   |
   | ---------------- | ------- |
   | Element          | 111/273 |
 
-- To create a shape that will open the second page of the Visio drawing linked to the element, service or redundancy group with ID 111/273 (i.e. DMA ID 111, item ID 273):
+- To create a shape that will open the second page of the Visio drawing linked to the element, service or redundancy group with ID 111/273 (i.e., DMA ID 111, item ID 273):
 
   | Shape data field | Value      |
   | ---------------- | ---------- |
@@ -96,7 +96,7 @@ If a shape is linked to an element, and a subshape of this shape should display 
 | ---------------- | --------- |
 | Parameter        | \*\|ALARM |
 
-This way, the subshape will show the worst alarm state of all parameters of the element, i.e. the alarm state of the element.
+This way, the subshape will show the worst alarm state of all parameters of the element, i.e., the alarm state of the element.
 
 > [!TIP]
 > See also: [Linking a shape to an alarm](xref:Linking_a_shape_to_an_alarm)

@@ -156,7 +156,7 @@ In some cases, an error could occur in the SLAnalytics process after a DVE paren
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
-When you open the *Bookings* app, Cube adds a small offset to the time window when it requests the list of bookings from the server. Up to now, instead of subtracting 1 minute from the start time, it would incorrectly add 1 minute to it. When the initial time window was e.g. 11h00 to 12h00, it would incorrectly request the bookings from 11h01 to 12h01 instead of from 10h59 to 12h01.
+When you open the *Bookings* app, Cube adds a small offset to the time window when it requests the list of bookings from the server. Up to now, instead of subtracting 1 minute from the start time, it would incorrectly add 1 minute to it. When the initial time window was e.g., 11h00 to 12h00, it would incorrectly request the bookings from 11h01 to 12h01 instead of from 10h59 to 12h01.
 
 Also, in some cases, the "loading" indicator of the bookings timeline would incorrectly not disappear when all bookings were loaded.
 
@@ -222,7 +222,7 @@ Clock components in a published low-code app would incorrectly only update when 
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
-When a client subscribed on a column parameter with a filter as index (e.g. *), the messages would be throttled incorrectly.
+When a client subscribed on a column parameter with a filter as index (e.g., *), the messages would be throttled incorrectly.
 
 From now on, parameter update throttling can be disabled by setting the *MessageThrottlingThreshold* option to -1 in the *MaintenanceSettings.xml* file.
 

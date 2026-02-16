@@ -31,7 +31,7 @@ When you open the table editor, DIS will check whether there are columns that ar
 - In the *Displayed Columns Layout* section, click the red *Fix* button in the *Width* column of a particular table column to automatically adjust the width of that column.
 
 > [!NOTE]
-> Hidden columns, i.e. columns of which the width was set to 0, are ignored.
+> Hidden columns, i.e., columns of which the width was set to 0, are ignored.
 
 ## All Columns
 
@@ -63,7 +63,7 @@ To search for a particular piece of text among the table column definitions, use
 
 ## Displayed Columns Layout
 
-In the *Displayed Columns Layout* section, every row represents a column that will appear on the user interface, i.e. a column that has been marked as to be displayed in the *All Columns* section.
+In the *Displayed Columns Layout* section, every row represents a column that will appear on the user interface, i.e., a column that has been marked as to be displayed in the *All Columns* section.
 
 Modify the data inline.
 

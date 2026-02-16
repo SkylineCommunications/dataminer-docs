@@ -20,7 +20,7 @@ These are the main functions of *SLHelper.exe*:
 
 ### General information
 
-Unlike other DataMiner processes, SLHelper is not running constantly. An instance of the process is created when a certain task requires SLHelper. A separate instance is created for each type of the task, e.g. for rendering a Visual Overview page and running a GQI query. When all tasks are completed, the process is terminated after an inactivity timeout.
+Unlike other DataMiner processes, SLHelper is not running constantly. An instance of the process is created when a certain task requires SLHelper. A separate instance is created for each type of the task, e.g., for rendering a Visual Overview page and running a GQI query. When all tasks are completed, the process is terminated after an inactivity timeout.
 
 SLHelper is often updated in new DataMiner builds. Before you report an issue to software development teams, check if the issue is present in the latest DataMiner release.
 

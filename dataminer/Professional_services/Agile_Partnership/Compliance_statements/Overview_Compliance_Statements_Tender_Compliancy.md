@@ -6,7 +6,7 @@ uid: Overview_Compliance_Statements_Tender_Compliancy
 
 Skyline answers the requirements of a tender in the following way:
 
-- **"COMPLY" means that the requirement can be fulfilled with the DataMiner platform**, i.e. a combination of software licenses, but it will also require a certain number of engineering days to configure the platform to your operational and business needs.
+- **"COMPLY" means that the requirement can be fulfilled with the DataMiner platform**, i.e., a combination of software licenses, but it will also require a certain number of engineering days to configure the platform to your operational and business needs.
 
   > [!NOTE]
   > The engineering days pertain to configuration of the open platform capabilities of DataMiner, and hence this represents activities that can be done by Skyline but also any other qualified party. For the initial deployment, we recommend that the Skyline Deploy Squads work together with your team, so that the lead Devops Engineer(s) can acquire knowledge and expertise in order to subsequently take ownership and independently support any further evolutions. You can also always work together with Skyline for such further evolutions.
@@ -17,7 +17,7 @@ Skyline answers the requirements of a tender in the following way:
 
   A typical DataMiner solution consists of:
   
-  - A mix of **standard DataMiner platform software licenses**, e.g. a certain number of connectors, DataMiner nodes (DMAs), or licenses for a certain number of concurrent active events.
+  - A mix of **standard DataMiner platform software licenses**, e.g., a certain number of connectors, DataMiner nodes (DMAs), or licenses for a certain number of concurrent active events.
   - Multiple **buckets of engineering days** needed to configure and set up the DataMiner platform to your company's specific operational and business needs.
 
   In case the deployment is not included, this will be pointed out. In such a case, either the software license, the engineering services, or both can be offered optionally. This is often because with the information that is available in a tender, it is impossible for any software vendor to offer and budget the required engineering efforts accurately. Further clarifications with your company/team will be required in those cases to ensure full alignment on the expectations.

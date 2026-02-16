@@ -188,9 +188,9 @@ In the *Dimensions* section of the *Settings* pane, you can resize and position 
 
 To change the unit used for the dimension values, click the unit itself. For instance, clicking *px* will switch to *%*.
 
-You can secure one or multiple dimension settings of a layer by clicking the ![Lock](~/dataminer/images/Dimensions_Lock.png) icon next to the chosen setting. This lock functionality enhances the security of your design, preserving your template's intended appearance, especially when dealing with variable widths and heights. For example, when adjusting a table column width, you may want to maintain specific proportions. Once a setting is locked, any attempt to override the specified dimension will be restricted. This includes moving or resizing the layer in the preview and adjusting the component size in the dashboard or low-code app edit mode (e.g. changing the size of a table column). The locked dimensions ensure that the template remains in its designated position. If you are unable to lock a dimension setting because of the locking of other settings, the lock icon will be grayed out.
+You can secure one or multiple dimension settings of a layer by clicking the ![Lock](~/dataminer/images/Dimensions_Lock.png) icon next to the chosen setting. This lock functionality enhances the security of your design, preserving your template's intended appearance, especially when dealing with variable widths and heights. For example, when adjusting a table column width, you may want to maintain specific proportions. Once a setting is locked, any attempt to override the specified dimension will be restricted. This includes moving or resizing the layer in the preview and adjusting the component size in the dashboard or low-code app edit mode (e.g., changing the size of a table column). The locked dimensions ensure that the template remains in its designated position. If you are unable to lock a dimension setting because of the locking of other settings, the lock icon will be grayed out.
 
-From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- RN 43740 -->, it is also possible to lock a dimension setting of a shape to the virtual bounds of a component instead of the visual bounds. To do so, keep the CTRL button pressed while clicking the lock icon. The icon will then take the accent color (blue) to indicate that virtual bound locking is enabled. Functionally, this ensures that when virtualization is supported (e.g. in the timeline), shapes will align to the virtual boundary rather than the visible shape boundary, allowing them to extend outside the visible area (i.e. viewport). This way, time-based elements such as pre-roll and post-roll bars that extend beyond the viewport can be visualized.
+From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- RN 43740 -->, it is also possible to lock a dimension setting of a shape to the virtual bounds of a component instead of the visual bounds. To do so, keep the CTRL button pressed while clicking the lock icon. The icon will then take the accent color (blue) to indicate that virtual bound locking is enabled. Functionally, this ensures that when virtualization is supported (e.g., in the timeline), shapes will align to the virtual boundary rather than the visible shape boundary, allowing them to extend outside the visible area (i.e., viewport). This way, time-based elements such as pre-roll and post-roll bars that extend beyond the viewport can be visualized.
 
 > [!NOTE]
 >
@@ -216,7 +216,7 @@ Layer-specific properties:
 | Icon | Property | Description | Layer type(s) |
 |--|--|--|--|
 | N/A | Icon | Select any of the available icons from the dropdown list. You can search for a specific icon using the filter box. | Icon |
-| N/A | Text box | Enter custom text. You can enter a column name surrounded by curly brackets (e.g. `{my column}`) to insert the corresponding cell value inside your text. Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.4<!--RN 42519-->, HTML text formatting is supported. Text layers containing HTML content created before these versions will still be rendered as HTML. | Text |
+| N/A | Text box | Enter custom text. You can enter a column name surrounded by curly brackets (e.g., `{my column}`) to insert the corresponding cell value inside your text. Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.4<!--RN 42519-->, HTML text formatting is supported. Text layers containing HTML content created before these versions will still be rendered as HTML. | Text |
 | ![Font size](~/dataminer/images/Text_Font_Size.png) | Font size | Specify the size (in pixels) of the text. | Text |
 | ![Color](~/dataminer/images/Text_Color.png) | Text Color | Specify a custom text color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box. The most recently used template colors and the theme colors are always displayed<!--RN 34876-->. From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards<!--RN 43113-->, you can also manually type `currentColor` into the color box. This will automatically apply the font color of the component. | Text |
 | ![Border radius](~/dataminer/images/Text_Roundness.png) | Border radius | Specify the roundness (in pixels) of a shape. The higher the number, the rounder the corners. | Text, Rectangle |
@@ -242,7 +242,7 @@ Each case includes:
 
 - Conditions: Criteria that determine when the case applies.
 
-- Actions: What happens when the conditions are met (e.g. show or hide the layer, change styling, trigger events).
+- Actions: What happens when the conditions are met (e.g., show or hide the layer, change styling, trigger events).
 
 To configure a conditional case:
 
@@ -439,6 +439,6 @@ If you have already configured a template for a component of the same type in th
 
 ***
 
-Keep in mind that when you reuse templates, you may need to **manually update column references**: In a text layer of a template, you can enter a column name surrounded by curly brackets (e.g. {CustomerName}) to insert the corresponding cell value into your text. However, when you reuse a template, these linked columns will not be automatically updated. If the component you are applying the template to has columns with different column IDs, you will need to manually update the column reference in the template to ensure the correct data is displayed.
+Keep in mind that when you reuse templates, you may need to **manually update column references**: In a text layer of a template, you can enter a column name surrounded by curly brackets (e.g., {CustomerName}) to insert the corresponding cell value into your text. However, when you reuse a template, these linked columns will not be automatically updated. If the component you are applying the template to has columns with different column IDs, you will need to manually update the column reference in the template to ensure the correct data is displayed.
 
 ![Update template](~/dataminer/images/CustomerName.gif)<br>*Template Editor in DataMiner 10.5.4*

@@ -45,7 +45,7 @@ To detect the presence of Pcap libraries on a DataMiner Agent, Cube will send a 
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
-In the AlarmFilter shape data value, dynamic values (e.g. session variables) are now supported.
+In the AlarmFilter shape data value, dynamic values (e.g., session variables) are now supported.
 
 #### Trending: Enhanced requirements check before displaying the relation learning light bulb in the top-right corner of a trend graph [ID 40396]
 

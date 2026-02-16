@@ -4,7 +4,7 @@ uid: Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing
 
 # Making a shape display a particular page of the current Visio drawing
 
-When a shape is linked to a view, a service or an element, it can be set to display a page of the Visio drawing linked to that view, service or element. A shape can also be configured to display a page of the current Visio drawing when the shape is not linked to a particular object, or when it is linked to a different kind of object, e.g. an alarm.
+When a shape is linked to a view, a service or an element, it can be set to display a page of the Visio drawing linked to that view, service or element. A shape can also be configured to display a page of the current Visio drawing when the shape is not linked to a particular object, or when it is linked to a different kind of object, e.g., an alarm.
 
 That page can be displayed:
 

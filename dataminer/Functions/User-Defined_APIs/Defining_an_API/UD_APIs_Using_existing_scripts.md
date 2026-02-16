@@ -145,7 +145,7 @@ namespace UserDefinableApiScripts.Examples.ExistingWithEntryPoint
 
 ## Using the script without the OnApiTrigger entry point
 
-It is possible to use a script such as the [example script](#example-script) as an API without making any changes to it. API triggers will be executed through the `Run` method as if you were executing the script from e.g. Cube.
+It is possible to use a script such as the [example script](#example-script) as an API without making any changes to it. API triggers will be executed through the `Run` method as if you were executing the script from e.g., Cube.
 
 To do this, define your API exactly as explained under [Creating an API and tokens](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-dataminer-automation), but next to *Method to be executed*, select *Run method*.
 

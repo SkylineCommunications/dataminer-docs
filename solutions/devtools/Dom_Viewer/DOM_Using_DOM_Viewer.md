@@ -35,7 +35,7 @@ The displayed pop-up panel contains two buttons:
 | Button | Description |
 |--|--|
 | ![Open Definition Table button](~/solutions/images/DOM_Viewer_Open_Definition_Table.png) | Open Definition Table button. Displays a table with all field descriptors that are part of that definition, grouped by sections displayed as tabs at the top. For example:<br> ![Table Definition](~/solutions/images/DOM_Viewer_Definition_Table_Definition.png) |
-| ![Open State Transitions button](~/solutions/images/DOM_Viewer_Open_State_Transitions.png) | Open State Transitions button. Displays a state transitions graph, which shows which states an instance of the definition can move through (i.e. the behavior definition). For example:<br> ![Behavior Definition](~/solutions/images/DOM_Viewer_Definition_Behavior_Definition.png) |
+| ![Open State Transitions button](~/solutions/images/DOM_Viewer_Open_State_Transitions.png) | Open State Transitions button. Displays a state transitions graph, which shows which states an instance of the definition can move through (i.e., the behavior definition). For example:<br> ![Behavior Definition](~/solutions/images/DOM_Viewer_Definition_Behavior_Definition.png) |
 
 The edges in the graph show the relationships between the definitions. If you hover over an edge, a pop-up panel will show which field descriptor is referencing the other DOM definition.
 

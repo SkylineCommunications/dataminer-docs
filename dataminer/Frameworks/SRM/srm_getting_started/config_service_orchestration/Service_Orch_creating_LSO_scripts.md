@@ -12,7 +12,7 @@ To set up Service Orchestration, you will also need a [Lifecycle Service Orchest
 
 1. To determine when the script is executed, in the Services module, configure actions for the service definition in the [Actions tab](xref:SRM_Services_definitions#actions-tab).
 
-   - The *Name* column for each action will determine at which stages in the service lifecycle the LSO script is executed (e.g. START, STANDBY, PAUSE, STOP).
+   - The *Name* column for each action will determine at which stages in the service lifecycle the LSO script is executed (e.g., START, STANDBY, PAUSE, STOP).
 
    - In the *Script* column, specify the name of the LSO script.
 

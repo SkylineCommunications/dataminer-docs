@@ -30,7 +30,7 @@ In the Ticketing app, tickets can now also be filtered on fields of type “drop
 
 #### DataMiner Cube - Visual Overview: Shape that displays a page of the Visio drawing linked to a view, service or element will no longer be displayed when the element, service or view in question does not exist \[ID 33484\]
 
-From now on, a shape that displays a page of the Visio drawing linked to a view, service or element (i.e. a shape with a shape data field of type VdxPage) will no longer be displayed when the view, service or element in question does not exist.
+From now on, a shape that displays a page of the Visio drawing linked to a view, service or element (i.e., a shape with a shape data field of type VdxPage) will no longer be displayed when the view, service or element in question does not exist.
 
 #### DataMiner Cube: Enhanced performance when using the search box in the Cube header \[ID 33510\]
 
@@ -103,7 +103,7 @@ Also, when a table column contained an OID in an incorrect format, the table wou
 
 #### Incorrect IP address could be added to DMS.xml during a DataMiner startup \[ID 33339\]
 
-When the DataMiner software started up on an agent that was not part of a Failover setup, in some cases, an incorrect IP address could get added to the DMS.xml file. Later on, this could lead to e.g. agent synchronization issues.
+When the DataMiner software started up on an agent that was not part of a Failover setup, in some cases, an incorrect IP address could get added to the DMS.xml file. Later on, this could lead to e.g., agent synchronization issues.
 
 #### Automation scripts would incorrectly succeed even when uploading a report had failed \[ID 33368\]
 
@@ -161,11 +161,11 @@ If you add a shape data field of type *AlarmFilter* to a shape, clicking the sh
 
 #### Problem when trying to migrate elements of which the name contained square brackets \[ID 33455\]
 
-When you tried to migrate an element with a name containing square brackets (e.g. “\[HQ\] Main Switch”), in some cases, the operation could fail with an error message like “Illegal 'Reference Protocol' syntax”.
+When you tried to migrate an element with a name containing square brackets (e.g., “\[HQ\] Main Switch”), in some cases, the operation could fail with an error message like “Illegal 'Reference Protocol' syntax”.
 
 #### Automatic Incident Tracking: Clearable base alarms of an incident were cleared when the incident was cleared \[ID 33481\]
 
-When an incident (i.e. alarm group) was cleared, in some cases, its clearable base alarms would incorrectly be cleared as well when the AutoClear option was disabled.
+When an incident (i.e., alarm group) was cleared, in some cases, its clearable base alarms would incorrectly be cleared as well when the AutoClear option was disabled.
 
 #### Automation: SetParameterByPrimaryKey would fail to update a write-only parameter when using the parameter name as argument \[ID 33511\]
 

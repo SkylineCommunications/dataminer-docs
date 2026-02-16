@@ -31,7 +31,7 @@ The following elements and element attributes have been added to the Protocol XM
 - Protocol.Params.Param.Measurement.Discreets@matrixLayout
 
 > [!NOTE]
-> The Protocol.Compliancies.MaximumSupportedVersion element contains the most recent DataMiner version supported by the protocol in question. Format: “A.B.C.D” or “A.B.C.D - Buildnumber” (e.g. 9.6.13.0 or 9.6.13.0 - 8820)
+> The Protocol.Compliancies.MaximumSupportedVersion element contains the most recent DataMiner version supported by the protocol in question. Format: “A.B.C.D” or “A.B.C.D - Buildnumber” (e.g., 9.6.13.0 or 9.6.13.0 - 8820)
 
 ## Changes
 

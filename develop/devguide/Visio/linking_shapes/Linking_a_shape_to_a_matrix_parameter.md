@@ -31,8 +31,8 @@ To make a graphical representation of a matrix parameter, follow these steps:
 
    - **Input**: Name of a matrix input, as specified
 
-     - in the protocol of the element (i.e. the original name), or
-     - in the parameter alias file\* (i.e. the name that currently overrides the original name).
+     - in the protocol of the element (i.e., the original name), or
+     - in the parameter alias file\* (i.e., the name that currently overrides the original name).
 
      > [!NOTE]
      >
@@ -41,8 +41,8 @@ To make a graphical representation of a matrix parameter, follow these steps:
 
    - **Output**: Name of a matrix output, as specified
 
-     - in the protocol of the element (i.e. the original name), or
-     - in the parameter alias file (i.e. the name that currently overrides the original name). Such parameter alias files are often called *port.xml*, although a different name can be defined in the element protocol.
+     - in the protocol of the element (i.e., the original name), or
+     - in the parameter alias file (i.e., the name that currently overrides the original name). Such parameter alias files are often called *port.xml*, although a different name can be defined in the element protocol.
 
      > [!NOTE]
      >
@@ -59,15 +59,15 @@ From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44601-->, you can link 
 
    - **InputLabel**: Name of a matrix input, as specified
 
-     - in the protocol of the element (i.e. the original name), or
-     - in the parameter alias file (i.e. the name that currently overrides the original name). Such parameter alias files are often called *port.xml*, although a different name can be defined in the element protocol.
+     - in the protocol of the element (i.e., the original name), or
+     - in the parameter alias file (i.e., the name that currently overrides the original name). Such parameter alias files are often called *port.xml*, although a different name can be defined in the element protocol.
 
      If, in the shape, you type "\*", that character will be replaced by the current name of the input.
 
    - **OutputLabel**: Name of a matrix output, as specified
 
-     - in the protocol of the element (i.e. the original name), or
-     - in the parameter alias file (i.e. the name that currently overrides the original name). Such parameter alias files are often called *port.xml*, although a different name can be defined in the element protocol.
+     - in the protocol of the element (i.e., the original name), or
+     - in the parameter alias file (i.e., the name that currently overrides the original name). Such parameter alias files are often called *port.xml*, although a different name can be defined in the element protocol.
 
      If, in the shape, you type "\*", that character will be replaced by the current name of the output.
 

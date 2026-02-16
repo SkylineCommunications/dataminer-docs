@@ -56,7 +56,7 @@ On some systems, the `C:\Skyline DataMiner\System Cache\SLNet` folder can contai
 
    Example: *ReplicationBuffer_slc-h32-g06_10.11.6.32_223_4_6992437*
 
-1. If you want to flush the data in the ReplicationBuffer files to the agents that are hosting the replicated elements (i.e. in order to fill some gaps in their trend data), you can try to do the following:
+1. If you want to flush the data in the ReplicationBuffer files to the agents that are hosting the replicated elements (i.e., in order to fill some gaps in their trend data), you can try to do the following:
 
    1. Connect to the DMA using the SLNetClientTest tool.
    1. Go to the *Build Message* tab of the main window.

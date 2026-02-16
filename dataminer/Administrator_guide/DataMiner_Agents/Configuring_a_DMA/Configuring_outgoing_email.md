@@ -64,11 +64,11 @@ You can either configure this directly in *DataMiner.xml* or use the SLNetClient
 
   - If the server supports or requires SSL communication, use port 465 instead of port 25.
 
-  - If SSL has to be used on a non-standard port (e.g. 123), specify “*123-ssl*”.
+  - If SSL has to be used on a non-standard port (e.g., 123), specify “*123-ssl*”.
 
   - If you explicitly do not want to use SSL, specify “*465-nossl*”.
 
-  - If you want to use STARTTLS, specify e.g. “*123-starttls*”.
+  - If you want to use STARTTLS, specify e.g., “*123-starttls*”.
 
 - **LoginMethod**: The method that will be used to authenticate the DataMiner Agent when it logs on to the SMTP server. The following methods can be specified:
 

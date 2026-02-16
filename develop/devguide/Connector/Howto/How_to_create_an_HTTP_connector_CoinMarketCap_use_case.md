@@ -107,7 +107,7 @@ Whenever you need to work with an API, it is important that you first check all 
 
 For our example, the CoinMarketCap API Documentation is available via [coinmarketcap.com](https://coinmarketcap.com/api/documentation/v1/#section/Introduction). To access this API, you will need to register. You will then get a key that should be used for all requests.
 
-For the sake of simplicity, we will only implement one call from the API, i.e. [Get Crypto Currency Listings](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsHistorical).
+For the sake of simplicity, we will only implement one call from the API, i.e., [Get Crypto Currency Listings](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsHistorical).
 
 ### Step 2 – Creating a new protocol solution in Visual Studio
 

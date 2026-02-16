@@ -4,7 +4,7 @@ uid: Enabling_TLS_encryption
 
 # Enabling TLS encryption for serial communication
 
-When you enable TLS encryption on elements that behave as a server (e.g. smart-serial), TLS encryption can be enabled when a TCP/IP element is created or edited.
+When you enable TLS encryption on elements that behave as a server (e.g., smart-serial), TLS encryption can be enabled when a TCP/IP element is created or edited.
 
 To enable TLS encryption, do the following on every DMA in the DMS that is to contain such elements:
 
@@ -29,7 +29,7 @@ To enable TLS encryption, do the following on every DMA in the DMS that is to co
 
 > [!NOTE]
 >
-> - DataMiner currently supports all TLS versions up to TLS 1.3 (i.e. all TLS versions supported by OpenSSL 1.1.1). It will negotiate the highest supported TLS version with the client. If the client supports TLS up to version 1.2, DataMiner will use version 1.2.
+> - DataMiner currently supports all TLS versions up to TLS 1.3 (i.e., all TLS versions supported by OpenSSL 1.1.1). It will negotiate the highest supported TLS version with the client. If the client supports TLS up to version 1.2, DataMiner will use version 1.2.
 > - PFX files are not synchronized among the DMAs in a cluster.
 > - If you replace a PKCS12 file on a DataMiner Agent, all elements using the TCP/IP port in question must be stopped and restarted for the changes to take effect.
 > - TLS elements and non-TLS elements sharing the same TCP/IP port is not supported.

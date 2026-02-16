@@ -80,9 +80,9 @@ Example:
 
 ##### Use case
 
-Using the new features described above, it is possible to configure that when a user clicks a service definition node in an embedded Service Manager component, an automation script is executed with e.g. the node ID as a parameter.
+Using the new features described above, it is possible to configure that when a user clicks a service definition node in an embedded Service Manager component, an automation script is executed with e.g., the node ID as a parameter.
 
-To configure this behavior, add a page-level data item of type *Execute*, and set its value to e.g. the following:
+To configure this behavior, add a page-level data item of type *Execute*, and set its value to e.g., the following:
 
 ```txt
 Script:<myScript>|Parameters:IDParam=[event:NodeDoubleClicked,ID]|Options:<possibleOptions>|Trigger=Event
@@ -202,7 +202,7 @@ The ListView component can now also be used to list resources. To do so, add a s
 | Component | ListView |
 | Source | Resources |
 | ComponentOptions | List of options, separated by pipe characters. For an overview of all possible component options, see [Component options](xref:Creating_a_list_view#component-options). |
-| Columns | The list of columns that have to be displayed. Preferably, this should be configured by specifying the name of a saved column configuration, e.g. MyColumnConfig.<br> Saving a column configuration is possible via the right-click menu of the list header in DataMiner Cube. This right-click menu also allows you to load a column configuration.<br> If you do not specify this shape data field or leave it empty, all columns will be displayed. |
+| Columns | The list of columns that have to be displayed. Preferably, this should be configured by specifying the name of a saved column configuration, e.g., MyColumnConfig.<br> Saving a column configuration is possible via the right-click menu of the list header in DataMiner Cube. This right-click menu also allows you to load a column configuration.<br> If you do not specify this shape data field or leave it empty, all columns will be displayed. |
 | Filter | Examples:<br> - Resource.Name\[string\]== 'Encoder'<br> - Resource.Name contains 'res'<br> - Resource.Name notContains 'res'<br> - Resource.ID\[Guid\] == fad6a6dd-ca3a-4b6f-9ca7-b68fd2071786<br> - Resource.MainDVEDmaID == 113<br> - Resource.PoolGUIDs contains<br>0fb47f51-ad81-47f2-9e69-3d9477bdc961<br> - Resource.MaxConcurrency != 1<br> - Resource.PropertiesDict.Location\[string\] == '3'<br> - Resource.Name\[string\] notContains 'RS' AND Resource.Name\[string\] notContains 'RT' AND Resource.Name\[string\] notContains 'ExposeFlow' <br>For more information on list view filters, see [List view filters](xref:Creating_a_list_view#list-view-filters). |
 
 > [!NOTE]
@@ -257,14 +257,14 @@ Also, in that section, the existing Surveyor settings have now been grouped unde
 
 #### DataMiner Cube will now use Chromium to handle SAML authentication \[ID 28922\]
 
-In order to support a wider range of identity providers (e.g. Azure AD), DataMiner Cube will now use Chromium instead of Internet Explorer when handling SAML authentication.
+In order to support a wider range of identity providers (e.g., Azure AD), DataMiner Cube will now use Chromium instead of Internet Explorer when handling SAML authentication.
 
 > [!NOTE]
 > DataMiner Cube clients will now automatically download the CefSharp package from the DataMiner Agent they connect to.
 
 #### Alarm Console: New option to allow a history tab to show alarms associated with an enhanced service deleted in the selected time frame \[ID 28942\]
 
-Up to now, when you created a history tab with a service filter, it was only possible to select one of the active enhanced services. Now, it is also possible to select one of the enhanced services that has been deleted in the selected time frame (e.g. “last hour”).
+Up to now, when you created a history tab with a service filter, it was only possible to select one of the active enhanced services. Now, it is also possible to select one of the enhanced services that has been deleted in the selected time frame (e.g., “last hour”).
 
 When, in the filter section, you selected “Service” and you want to be able to select an enhanced service that has been deleted in the selected time frame, then click the *Load deleted services* option, and select the deleted service from the list. That way, you will be able to create a history tab that lists the alarms associated with an enhanced service that has been deleted in the selected time frame.
 
@@ -325,7 +325,7 @@ If you want to prevent this from happening, from now on, you can add the AllowIn
 
 When a ProfileInstance is updated while it is being used by one or more bookings, the following additional errors can now be returned.
 
-When a ProfileInstance is updated without quarantine being forced (i.e. with forceQuarantine set to false):
+When a ProfileInstance is updated without quarantine being forced (i.e., with forceQuarantine set to false):
 
 - If no instances need to be quarantined, the update will be applied and the following warning will be returned:
 
@@ -336,7 +336,7 @@ When a ProfileInstance is updated without quarantine being forced (i.e. with for
   - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
   - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
 
-When a ProfileInstance is updated with quarantine being forced (i.e. with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
+When a ProfileInstance is updated with quarantine being forced (i.e., with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
 
 - A warning of type ReservationInstancesMovedToQuarantine, listing the reservations and the usages that were quarantined.
 - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the reservations that were reconfigured because of the update.
@@ -515,7 +515,7 @@ For example:
 
 #### Visual Overview: New Collapse shape data field \[ID 30149\]
 
-In Visual Overview, you can now hide a shape in a different way than with the *Hide* shape data field, using the new *Collapse* shape data field. This field is configured in the same way, as detailed under [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions) in the DataMiner Help. While on the face of it, the result of the *Collapse* action will be the same as for a *Hide* action, the shape is hidden in a different way, i.e. its visibility is collapsed.
+In Visual Overview, you can now hide a shape in a different way than with the *Hide* shape data field, using the new *Collapse* shape data field. This field is configured in the same way, as detailed under [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions) in the DataMiner Help. While on the face of it, the result of the *Collapse* action will be the same as for a *Hide* action, the shape is hidden in a different way, i.e., its visibility is collapsed.
 
 This makes it a convenient alternative to the *ChildrenFilter* shape data, as it will keep all shapes in memory instead of removing and recreating them. This will allow better performance, though it will lead to slightly increased memory usage.
 
@@ -552,7 +552,7 @@ A number of options can also be added to the *HistoryMode* shape, again using a 
 
 > [!NOTE]
 >
-> - You can override history mode on shape level. In case there are shapes within shapes, the lowest level will be checked first. However, the full shape data of this lowest level is used, so you must make sure that the shape data is fully configured even if you only want to change one option (e.g. NoDataValue).
+> - You can override history mode on shape level. In case there are shapes within shapes, the lowest level will be checked first. However, the full shape data of this lowest level is used, so you must make sure that the shape data is fully configured even if you only want to change one option (e.g., NoDataValue).
 > - At present, for history values no unit is displayed. In addition, only updating the element or parameter shape data will not update the history mode result.
 
 If you are using a datetime control to set the date and time, use the *SetVarOptions* shape data and set the value to *Control= DateTime*. Optionally, you can also add *DateTimeCulture=* followed by *Current* or *Invariant*. The latter is the default value.
@@ -617,7 +617,7 @@ Aggregation rule conditions can now be specified in the form of a regular expres
 
 2. Choose “by value” or “by reference”.
 
-    - If you chose “by value” (i.e. the default setting), then enter a regular expression.
+    - If you chose “by value” (i.e., the default setting), then enter a regular expression.
     - If you chose “by reference”, then select a single-value parameter of type “string” containing a regular expression.
 
 #### Alarm templates: Conditions based on service impact \[ID 30691\]\[ID 30763\]
@@ -675,7 +675,7 @@ The new \[ServiceDefinition:\] placeholder allows you to retrieve one of the fol
 | Property                 | Description                                                                                                                                                                                                  |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Name                     | The name of the service definition.                                                                                                                                                                          |
-| Actions                  | The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (“:”). This will allows them to be inserted directly into e.g. a setvar shape. |
+| Actions                  | The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (“:”). This will allows them to be inserted directly into e.g., a setvar shape. |
 | Property=\<propertyName> | The value of any of the custom properties of the service definition.                                                                                                                                         |
 
 Full syntax: \[ServiceDefinition:\<ServiceDefinitionID>,\<Property>\]
@@ -699,7 +699,7 @@ The Logging module now also allows you to access the Sharing Manager log file.
 
 #### DataMiner Cube - Router Control: 'Direct take' mode \[ID 30865\]
 
-When configuring a matrix in the Router Control module, you can now set it to either “preset mode” (i.e. the default mode) or “direct take mode”.
+When configuring a matrix in the Router Control module, you can now set it to either “preset mode” (i.e., the default mode) or “direct take mode”.
 
 - In preset mode, you need to click the *Connect* button to create or delete a crosspoint between an input and an output.
 - In direct take mode, you don’t need to click the *Connect* button to create or delete a crosspoint between an input and an output. When you select an input and an output, they will automatically be connected or disconnected.
@@ -754,7 +754,7 @@ It is now possible to pin and unpin items in the sidebar.
 
 #### Visual Overview: Setting the background color of a static shape using a shape data field of type 'BackgroundColor' \[ID 30964\]
 
-Using a shape data field of type *BackgroundColor* it is now possible to set the background color of a static shape, i.e. a shape that is not linked to an element, a service or a view.
+Using a shape data field of type *BackgroundColor* it is now possible to set the background color of a static shape, i.e., a shape that is not linked to an element, a service or a view.
 
 | Shape data field | Value    |
 |------------------|----------|
@@ -762,11 +762,11 @@ Using a shape data field of type *BackgroundColor* it is now possible to set the
 
 The \<color> value in the example above can be specified as follows:
 
-- An HTML color code (e.g. #FF102030)
-- An RGB color code (e.g. 40,50,60)
-- A standard color name (e.g. magenta)
-- A color placeholder referring to one of the configured DataMiner alarm colors (e.g. \[color:severity=minor\])
-- A placeholder referring to a variable containing a color value (e.g. \[PageVar:MyColorSessionVar\])
+- An HTML color code (e.g., #FF102030)
+- An RGB color code (e.g., 40,50,60)
+- A standard color name (e.g., magenta)
+- A color placeholder referring to one of the configured DataMiner alarm colors (e.g., \[color:severity=minor\])
+- A placeholder referring to a variable containing a color value (e.g., \[PageVar:MyColorSessionVar\])
 
 > [!NOTE]
 >
@@ -805,7 +805,7 @@ Examples:
 
 #### DataMiner Cube - Visual Overview: Service connectivity chains now support 'lite contributing' resources \[ID 31196\]
 
-In Visual Overview, it is possible to have the connectivity chain of a service instance (from the Service & Resource Management module) drawn automatically in Visual Overview. Now, this feature supports so-called “lite” contributing resources, i.e. resources for which no enhanced elements have to be created.
+In Visual Overview, it is possible to have the connectivity chain of a service instance (from the Service & Resource Management module) drawn automatically in Visual Overview. Now, this feature supports so-called “lite” contributing resources, i.e., resources for which no enhanced elements have to be created.
 
 #### Automatic Incident Tracking: New setting 'Maximum group events rate' \[ID 31203\]
 
@@ -923,7 +923,7 @@ This will, for instance, allow you to find a resource by passing a label of a se
 
 The \<DMAIP> placeholder can only be used inside another placeholder, or in a URL for a shape data field of type Link. It is replaced with the first configured value from the following list that can be found for the DMA you are connecting to: the certificate address, the hostname or the primary IP address.
 
-When the \<DMAIP> placeholder is resolved, from now on, the URI scheme of the DataMiner Agent in question (i.e. HTTP or HTTPS) will automatically be applied.
+When the \<DMAIP> placeholder is resolved, from now on, the URI scheme of the DataMiner Agent in question (i.e., HTTP or HTTPS) will automatically be applied.
 
 > [!NOTE]
-> When a \<DMAIP> placeholder does not represent the URI host (e.g. when it is used as a query argument), the URI scheme of the DataMiner Agent (i.e. HTTP or HTTPS) will not automatically be applied.
+> When a \<DMAIP> placeholder does not represent the URI host (e.g., when it is used as a query argument), the URI scheme of the DataMiner Agent (i.e., HTTP or HTTPS) will not automatically be applied.

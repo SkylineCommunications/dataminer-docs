@@ -4,13 +4,13 @@ uid: DashboardNodeEdgeGraph
 
 # Node edge graph
 
-The node edge graph component allows you to **visualize any type of objects (i.e. "nodes") and the connections between them (i.e. "edges")**. By linking parameters and properties to those nodes and edges, you can turn the graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data.
+The node edge graph component allows you to **visualize any type of objects (i.e., "nodes") and the connections between them (i.e., "edges")**. By linking parameters and properties to those nodes and edges, you can turn the graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data.
 
 ![Node edge graph](~/dataminer/images/Node_Edge_Graph.gif)<br>*Node edge graph component in DataMiner 10.4.9*
 
 ## Supported data types
 
-The data necessary to create a node edge graph can be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects).
+The data necessary to create a node edge graph can be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e., objects), whereas edge queries provide data that will be visualized as edges (i.e., connections between objects).
 
 The component should therefore **always be configured with [query data input](xref:Query_Data)**.
 
@@ -29,7 +29,7 @@ You can interact with the node edge graph in several ways:
 
   When you select one or multiple items in the node edge graph, the selected data becomes available under *All available data* > *Components* > *[Page name]* > *Node edge graph* > *Tables*.
 
-  Thanks to this exposed data, you can use the node edge graph component as a dynamic selector, i.e. a component whose selection determines behavior or data elsewhere in your dashboard or app. A common use case is showing additional details when a node is selected.
+  Thanks to this exposed data, you can use the node edge graph component as a dynamic selector, i.e., a component whose selection determines behavior or data elsewhere in your dashboard or app. A common use case is showing additional details when a node is selected.
 
   > [!NOTE]
   > Prior to DataMiner 10.5.0 [CU12]/10.6.3<!--RN 44015-->, the exact path to the exposed data may differ. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.

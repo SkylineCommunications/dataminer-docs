@@ -4,7 +4,7 @@ uid: DOM_editor_adding_button
 
 # Adding a button
 
-You can add a button to a form to apply an action, e.g. to close a ticket.
+You can add a button to a form to apply an action, e.g., to close a ticket.
 
 For this, you need to first add a behavior definition, and then define the button, so that it can be shown in the UI that triggers the API action.
 

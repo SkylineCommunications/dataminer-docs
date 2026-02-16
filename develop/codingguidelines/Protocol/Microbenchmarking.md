@@ -12,7 +12,7 @@ Some things to consider when microbenchmarking:
 
 - When measuring code that takes little time to execute, multiple iterations should be executed.
 
-- The test could be optimized away by the language or JIT compiler (e.g. in Release mode).
+- The test could be optimized away by the language or JIT compiler (e.g., in Release mode).
 
 - Often, the first measurement result is discarded, as this measurement can be influenced by startup costs.
 

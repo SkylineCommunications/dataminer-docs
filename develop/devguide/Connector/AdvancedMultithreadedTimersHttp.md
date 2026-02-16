@@ -25,7 +25,7 @@ Assume the following multithreaded timer is defined:
 </Timer>
 ```
 
-Group 1011 is a group of type `poll`, with an empty `content` tag, e.g. as defined below.
+Group 1011 is a group of type `poll`, with an empty `content` tag, e.g., as defined below.
 
 ```xml
     <Group id="1011">
@@ -62,7 +62,7 @@ public class QAction
         {
             string rowkey = protocol.RowKey();
             
-            // Note: In this QAction you will typically set the status of the current row to e.g. "Sending".
+            // Note: In this QAction you will typically set the status of the current row to e.g., "Sending".
             string verb = "GET";
             string url = Convert.ToString(protocol.GetParameterIndexByKey(1000, rowkey, 2)) + "/";
             string userName = Convert.ToString(protocol.HttpUsername);
@@ -104,7 +104,7 @@ Format of the request: httpRequestInfo (object[]):
 
 - httpRequestInfo[0] (string): Set to "http".
 - httpRequestInfo[1] (string[]): Request settings.
-  - requestSettings[0]: Verb (e.g. "GET").
+  - requestSettings[0]: Verb (e.g., "GET").
   - requestSettings[1]: URL.
   - requestSettings[2]: Username.
   - requestSettings[3]: Password.
@@ -113,7 +113,7 @@ Format of the request: httpRequestInfo (object[]):
   - requestSettings[6]: Specifies whether to skip the SSL/TLS certificate verification. Default: true. Feature introduced in DataMiner 10.4.12 (RN 40877, RN 41285).
 - httpRequestInfo[2] (string[]): The resource path(s).
 
-  From DataMiner 10.0.12 (RN 27438) onwards, it is possible to add a message body for the HTTP request (e.g. for a POST request).
+  From DataMiner 10.0.12 (RN 27438) onwards, it is possible to add a message body for the HTTP request (e.g., for a POST request).
 - httpRequestInfo[2] (object[]): The resource paths and request bodies.
   - requestPathAndBody (string[]): A resource path and request body entry.
     - requestPathAndBody[0] (string): resource path
@@ -139,7 +139,7 @@ object[] httpRequestInfo = new object[3] { "http", requestSettings, resourcePath
 > [!NOTE]
 > The Run method of the QAction now has a return type of object[].
 
-In this QAction, typically you will also set the state of the corresponding row to e.g. "Sending".
+In this QAction, typically you will also set the state of the corresponding row to e.g., "Sending".
 
 ## Step 2: Process the responses
 
@@ -200,11 +200,11 @@ public class QAction
                 
                             if (statusLine == "HTTP/1.1 200 OK")
                             {
-                                // Process response (e.g. process data and update status column to OK).
+                                // Process response (e.g., process data and update status column to OK).
                             }
                             else
                             {
-                                // Process unexpected response (e.g. update status column to Error).
+                                // Process unexpected response (e.g., update status column to Error).
                             }
                         }
                     }

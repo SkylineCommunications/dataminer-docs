@@ -196,7 +196,7 @@ Before executing a query, the system will send a GenIfOpenSessionRequest message
 
 #### Dashboards app - GQI: Linking columns with values of type double or datetime to feeds in query filters \[ID 29902\]
 
-In GQI query filters, from now on, columns containing values of type datetime or double can be linked to feeds. This will allows you to e.g. filter a bookings list by linking the *End* column to a time range feed.
+In GQI query filters, from now on, columns containing values of type datetime or double can be linked to feeds. This will allows you to e.g., filter a bookings list by linking the *End* column to a time range feed.
 
 ### DMS Mobile apps
 
@@ -270,7 +270,7 @@ Note that no retries will occur and that no messages will be queued.
 
 - ResourceManagerEventMessage
 
-    When a ResourceManagerEventMessage contains multiple types of objects, it will be split up into multiple proto events. When the ResourceManager sends out one ResourceManagerEvent containing e.g. 2 ReservationInstances and 3 Resources, the forwarder logic will publish one ReservationInstanceEvent (with the 2 objects) and one ResourceEvent (with the 3 objects).
+    When a ResourceManagerEventMessage contains multiple types of objects, it will be split up into multiple proto events. When the ResourceManager sends out one ResourceManagerEvent containing e.g., 2 ReservationInstances and 3 Resources, the forwarder logic will publish one ReservationInstanceEvent (with the 2 objects) and one ResourceEvent (with the 3 objects).
 
 ##### ReservationInstance object
 
@@ -325,7 +325,7 @@ A number of security enhancements have been made.
 
 #### Trending: Trend values will now be rounded after being retrieved from the database \[ID 28840\] \[29758\]
 
-Up to now, trend data values were rounded before being stored in the database. From now on, those values will only be rounded after being retrieved from the database, i.e. before being returned to the client.
+Up to now, trend data values were rounded before being stored in the database. From now on, those values will only be rounded after being retrieved from the database, i.e., before being returned to the client.
 
 #### Dashboards app: Enhanced overflow detection when generating PDF reports \[ID 28985\]
 
@@ -465,7 +465,7 @@ When you opened a trend group with several graphs, in some rare cases, color ico
 
 #### Interactive automation scripts: Problem when entering double-digit numbers in input controls \[ID 29736\]
 
-In some cases, due to a problem with the WantsOnChange functionality, it would not be possible to enter a double-digit number (e.g. a number of minutes) in an input control. The interactive automation script would incorrectly already continue after you entered the first digit.
+In some cases, due to a problem with the WantsOnChange functionality, it would not be possible to enter a double-digit number (e.g., a number of minutes) in an input control. The interactive automation script would incorrectly already continue after you entered the first digit.
 
 #### Manually clearing a clearable alarm on a single-value parameter would incorrectly set the alarm state of the parameter to 'undefined' instead of 'normal' \[ID 29745\]
 
@@ -527,7 +527,7 @@ In some cases, DataMiner could become unresponsive when you opened a visual over
 
 #### Mobile apps: Selection box values would be ellipsed even when there was ample space to fully display them \[ID 29850\]
 
-In the mobile apps (e.g. Jobs, Ticketing, etc.), in some cases, selection box values would be ellipsed even when there was ample space to fully display them.
+In the mobile apps (e.g., Jobs, Ticketing, etc.), in some cases, selection box values would be ellipsed even when there was ample space to fully display them.
 
 #### SLAnalytics - Automatic incident tracking: IDP location updates would not be taken into account \[ID 29852\]
 

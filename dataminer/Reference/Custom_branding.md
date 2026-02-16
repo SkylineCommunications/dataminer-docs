@@ -31,7 +31,7 @@ Two login logos should be provided:
 ### Width & height
 
 - Height: 30 px
-- Width: Scales with the aspect ratio, and should not exceed 10:1 (i.e. max. 300 px).
+- Width: Scales with the aspect ratio, and should not exceed 10:1 (i.e., max. 300 px).
 - Mandatory white space: None
 
 ### Color

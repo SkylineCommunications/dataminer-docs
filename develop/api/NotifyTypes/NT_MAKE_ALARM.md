@@ -24,7 +24,7 @@ int alarmID = (int) protocol.NotifyDataMiner(106 /*NT_MAKE_ALARM*/, 0, alarmDeta
 
 ## Return Value
 
-- (int): The alarmID (e.g. 365182). Note: this does not include "element ID/".
+- (int): The alarmID (e.g., 365182). Note: this does not include "element ID/".
 
 ## Remarks
 

@@ -138,7 +138,7 @@ In the Dashboards app and all low-code apps, the name *DataMiner Copilot* has no
 
 On *Form* components, datetime values will now be displayed in the same way as in *Table* components.
 
-The datetime format is based on the regional settings of the web browser. If a browser is set to e.g. "English (US)", datetime values will be displayed as "12/31/2029 8:00 PM".
+The datetime format is based on the regional settings of the web browser. If a browser is set to e.g., "English (US)", datetime values will be displayed as "12/31/2029 8:00 PM".
 
 #### Dashboards/Low-Code Apps: Enhanced visibility of query buttons in the edit pane [ID 44048]
 
@@ -189,7 +189,7 @@ engine.WebUIVersion = WebUIVersion.V1
 
 <!-- MR 10.5.0 [CU10] - FR 10.6.1 -->
 
-Up to now, when you opened the Apps menu of a web app (e.g. the Monitoring app), the top-most item would be a link to dataminer.services.
+Up to now, when you opened the Apps menu of a web app (e.g., the Monitoring app), the top-most item would be a link to dataminer.services.
 
 From now on, that link will only appear in the Apps menu of a web app when the DataMiner Agent is connected to the cloud.
 
@@ -244,7 +244,7 @@ Example: `https://dma.company.local/?skipAutoLogin=true`
 
 <!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] - FR 10.6.1 -->
 
-In DataMiner Cube, when a visual overview contains a clickable group of shapes that is linked to e.g. an element, that clickable group will always be displayed on top of other shapes (e.g. *Children* shapes).
+In DataMiner Cube, when a visual overview contains a clickable group of shapes that is linked to e.g., an element, that clickable group will always be displayed on top of other shapes (e.g., *Children* shapes).
 
 Up to now, a visual overview in a web app would behave differently. *Children* shapes would incorrectly be displayed on top of the clickable group, causing that group to not be clickable.
 

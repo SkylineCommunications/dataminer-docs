@@ -64,7 +64,7 @@ From now on, the getResourcesMessage, the getResourcePoolsMessage and the getRes
 
 #### Protocols: Export rules would fail to parse values containing escaped XML characters \[ID 31362\]
 
-When, in a protocol, values contained escaped XML characters (e.g. \<Description>Measurements \> 5\</Description>), the export rules would fail to parse those values and the generated DVE or Virtual Function protocol would only have some or none of the export rules applied.
+When, in a protocol, values contained escaped XML characters (e.g., \<Description>Measurements \> 5\</Description>), the export rules would fail to parse those values and the generated DVE or Virtual Function protocol would only have some or none of the export rules applied.
 
 #### Jobs app: Jobs would be retrieved using a query that contained an incorrect time filter \[ID 31365\]
 

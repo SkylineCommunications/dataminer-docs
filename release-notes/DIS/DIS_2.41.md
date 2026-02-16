@@ -29,7 +29,7 @@ The Class Library generation feature has been removed in favor of NuGet packages
 
 Also, an information bar will allow you to convert existing solutions that make use of the Class Library generation feature.
 
-This information bar will appear when a Class Library project (i.e. a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or automation script solution. As soon as you click *Fix*, the Class Library project will be removed and the references to the project will be replaced by references to the automatically generated Class Library project (which, by default, will have ID 63000).
+This information bar will appear when a Class Library project (i.e., a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or automation script solution. As soon as you click *Fix*, the Class Library project will be removed and the references to the project will be replaced by references to the automatically generated Class Library project (which, by default, will have ID 63000).
 
 #### C# editor: New snippet [ID 35991]
 

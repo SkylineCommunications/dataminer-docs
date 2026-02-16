@@ -8,7 +8,7 @@ If you click *Tool Windows > DIS Macros*, the *DIS Macros* window will appear.
 
 By default, the *DIS Macros* window will open undocked. Dock it just as you would dock any other tool window in Microsoft Visual Studio.
 
-This tool window allows you to create C# scripts that can be used to make changes to e.g. a protocol file (for example, update OIDs based on conditions, update table definitions, increment/decrement parameters, etc.).
+This tool window allows you to create C# scripts that can be used to make changes to e.g., a protocol file (for example, update OIDs based on conditions, update table definitions, increment/decrement parameters, etc.).
 
 In the tool window, you can set up a folder structure into which you can then store the macros you create. It is also possible to export a macro folder to a zip file and to import a zip file containing macros as a child folder of an existing folder.
 

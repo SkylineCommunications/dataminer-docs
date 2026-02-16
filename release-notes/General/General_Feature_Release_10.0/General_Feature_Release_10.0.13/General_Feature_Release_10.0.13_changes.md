@@ -50,7 +50,7 @@ When a DataMiner upgrade finishes (successful or not), from now on, all remainin
 
 #### Client applications now also get notified when cell alarm levels in the source data tables of direct views change due to updates that do not change the cell value \[ID 27785\]
 
-From now on, client applications displaying direct views will also be notified when cell alarm levels in the source data tables change due to updates that do not change the cell value. (e.g. when a cell in a source table gets masked).
+From now on, client applications displaying direct views will also be notified when cell alarm levels in the source data tables change due to updates that do not change the cell value. (e.g., when a cell in a source table gets masked).
 
 #### Live Sharing Service: Enhanced error handling \[ID 27791\]
 
@@ -78,7 +78,7 @@ Due to a number of enhancements, overall performance has increased when logging 
 
 #### Interactive automation scripts: Multiline text boxes will no longer expand when selected \[ID 27858\]
 
-Up to now, a multiline text box (i.e. a UIBlock of type TextBox with IsMultiline set to true) would by default have a height of 1 line and would expand when it was selected. From now on, its initial height will be fixed. It will no longer expand when selected.
+Up to now, a multiline text box (i.e., a UIBlock of type TextBox with IsMultiline set to true) would by default have a height of 1 line and would expand when it was selected. From now on, its initial height will be fixed. It will no longer expand when selected.
 
 #### Failover: More information will now be returned after synchronizing the two agents \[ID 27870\]
 
@@ -120,7 +120,7 @@ The *FieldDescriptor* class for DataMiner jobs now has a new *DefaultValue* prop
 
 #### DataMiner Cube: Enhanced performance when opening the Reports page of a view card \[ID 27937\]
 
-Due to a number of enhancements, overall performance has increased when opening the Reports page of a view card, especially when that page shows a large amount of elements with heatlines (e.g. the root view).
+Due to a number of enhancements, overall performance has increased when opening the Reports page of a view card, especially when that page shows a large amount of elements with heatlines (e.g., the root view).
 
 #### Service & Resource Management: ResourcesNotMatchWithServiceDefinition check removed \[ID 27938\]
 
@@ -267,7 +267,7 @@ Also, it will now be indicated more clearly that a highlighted IO button is sele
 
 #### Service & Resource Management: When a ReservationInstance was updated, the timeout scripts would incorrectly be executed instead of the expected event script \[ID 27757\]
 
-When you updated an ongoing ReservationInstance, in some cases, all ongoing and future events (i.e. scripts) of that instance would incorrectly be canceled and the timeout scripts would be run on all DataMiner Agents instead.
+When you updated an ongoing ReservationInstance, in some cases, all ongoing and future events (i.e., scripts) of that instance would incorrectly be canceled and the timeout scripts would be run on all DataMiner Agents instead.
 
 #### DataMiner Cube: 'Show all alarm updates' option not working with alarm for migrated element \[ID 27761\]
 
@@ -291,7 +291,7 @@ In some cases, a KeyNotFound exception could be thrown when you opened a ListVie
 
 #### Memory leak when using the Chromium browser engine in a browser version of DataMiner Cube \[ID 27789\]
 
-When running a browser version of DataMiner Cube in Microsoft Internet Explorer, in some cases, a memory leak could occur when using the Chromium browser engine to e.g. visualize web pages in Visual Overview.
+When running a browser version of DataMiner Cube in Microsoft Internet Explorer, in some cases, a memory leak could occur when using the Chromium browser engine to e.g., visualize web pages in Visual Overview.
 
 #### Problem with SLDataMiner at startup when no NICs could be found \[ID 27799\]
 
@@ -327,7 +327,7 @@ When an alarm associated with a column parameter was masked for a limited period
 
 #### Dashboards app - Line chart component: Problems when retrieving trend data \[ID 27853\]
 
-In some cases, a trend graph legend would show an error when a trend data request was interrupted, e.g. by scrolling to another page before the current page was fully loaded.
+In some cases, a trend graph legend would show an error when a trend data request was interrupted, e.g., by scrolling to another page before the current page was fully loaded.
 
 Also, when multiple trend requests were required, in some cases, those requests would be ignored when a trend data request was already in progress.
 
@@ -369,7 +369,7 @@ When, in a DataMiner System with multiple agents, information events were retrie
 
 #### Dashboards app - Time range component: Default range would be used even after being overwritten afterwards \[ID 27941\]
 
-If the default values of a time range component had been set to a custom range, in some cases, those values would incorrectly still be used after being overwritten afterwards (e.g. by means of URL arguments or another feed).
+If the default values of a time range component had been set to a custom range, in some cases, those values would incorrectly still be used after being overwritten afterwards (e.g., by means of URL arguments or another feed).
 
 #### DataMiner Cube - Bookings app: Memory leak when opening the Signal Path tab \[ID 27952\]
 

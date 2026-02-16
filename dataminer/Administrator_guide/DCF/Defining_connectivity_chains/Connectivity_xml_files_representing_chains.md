@@ -17,8 +17,8 @@ To configure connectivity chains:
 
    > [!NOTE]
    >
-   > - External connections (i.e. connections between elements, services or redundancy groups) are automatically part of the path if the two internal connections (inside an element, a service or a redundancy group) at either end of those external connections are part of the path.
-   > - The chained connections do not necessarily have to follow one another (e.g. Interface 1 -> Interface 2 -> interface 3). It is also possible to have connections on the same destination or source, for instance to create a star topology. For example, a chain may look like this:
+   > - External connections (i.e., connections between elements, services or redundancy groups) are automatically part of the path if the two internal connections (inside an element, a service or a redundancy group) at either end of those external connections are part of the path.
+   > - The chained connections do not necessarily have to follow one another (e.g., Interface 1 -> Interface 2 -> interface 3). It is also possible to have connections on the same destination or source, for instance to create a star topology. For example, a chain may look like this:
    >   - Interface 1 -> Interface 2
    >   - Interface 3 -> Interface 2
 
@@ -157,7 +157,7 @@ A *\<Link>* tag can have the following attributes:
 
   > [!NOTE]
   >
-  > - The type of the first link of a chain, i.e. the entry point, should always be "Service".
+  > - The type of the first link of a chain, i.e., the entry point, should always be "Service".
   > - If itemA and itemB are both specified, always add `type="protocol"`.
 
 - **includeValueInContext**
@@ -196,7 +196,7 @@ A *\<Map>* tag can have the following attributes:
 
   - *Exact*: An exact match is required (culture invariant, case-insensitive).
 
-  - *Wildcard*: A partial match suffices (i.e. *value* contains a wildcard expression containing \* and/or ? wildcard characters).
+  - *Wildcard*: A partial match suffices (i.e., *value* contains a wildcard expression containing \* and/or ? wildcard characters).
 
   - *Regex*: *value* contains a regular expression.
 
@@ -220,7 +220,7 @@ A *\<Map>* tag can have the following attributes:
 
 - **value**
 
-  If you want to compare the value of a property (of which the name is specified in *propertyA* or *propertyB*) to a given value, then *value* must contain that value. It can be a fixed value (e.g. "10", "true", etc.) or a dynamic value (e.g. "\*\[PROPERTYB\]\*").
+  If you want to compare the value of a property (of which the name is specified in *propertyA* or *propertyB*) to a given value, then *value* must contain that value. It can be a fixed value (e.g., "10", "true", etc.) or a dynamic value (e.g., "\*\[PROPERTYB\]\*").
 
   In case of a dynamic value, the following placeholders can be used:
 
@@ -248,7 +248,7 @@ A *\<Map>* tag can have the following attributes:
 
   This attribute can have the following values:
 
-  - *true*: The result of the comparison will be inverted, i.e. a "NOT" will be placed in front of it.
+  - *true*: The result of the comparison will be inverted, i.e., a "NOT" will be placed in front of it.
 
   - *false*: The result of the comparison will not be inverted.
 
@@ -334,7 +334,7 @@ For example:
 
 When chains are defined using the *Chains* tag, and an external connection is found that is not expected at that point in the chain, this external connection will be ignored.
 
-A new read-only service property, *Connectivity Status*, will be added as soon as a *Connectivity.xml* file is found that has a valid *Chain* configuration. This property will have the value "Resolved" when the found path contains at least one of the defined *Chain* configurations. It will have the value "Unresolved" if either an exception occurred (e.g. because too many connections were found) or none of the defined chains were found.
+A new read-only service property, *Connectivity Status*, will be added as soon as a *Connectivity.xml* file is found that has a valid *Chain* configuration. This property will have the value "Resolved" when the found path contains at least one of the defined *Chain* configurations. It will have the value "Unresolved" if either an exception occurred (e.g., because too many connections were found) or none of the defined chains were found.
 
 > [!TIP]
 > See also: [\<Protocols> tag](#protocols-tag)
@@ -389,7 +389,7 @@ Inside a *\<Condition>* tag, you can add the following tags:
 
   - If *\<Field>* contains any other value, *\<Value>* can contain any character string, with or without the wildcard characters \* and/or ?
 
-  Alternatively, you can specify multiple references (e.g. \[REFERENCE:0\]/REFERENCE:1\]), which will then be replaced by items specified in the referenceValue attribute of the *\<Map>* tag.
+  Alternatively, you can specify multiple references (e.g., \[REFERENCE:0\]/REFERENCE:1\]), which will then be replaced by items specified in the referenceValue attribute of the *\<Map>* tag.
 
   > [!NOTE]
   > Wildcards in the *Condition.Value* tag will only be applied if the *Condition.Compare* tag is set to *equal to masked* or *not equal to masked*.
@@ -492,7 +492,7 @@ For example:
 
 ### referenceValue
 
-If, in *referenceValue*, you specify e.g. "*SVCNAME:///*", this will be replaced at runtime by the name of the current service. If you want to refer to e.g. one particular service instead, you can specify "*SVCNAME:dmaId/serviceId//*".
+If, in *referenceValue*, you specify e.g., "*SVCNAME:///*", this will be replaced at runtime by the name of the current service. If you want to refer to e.g., one particular service instead, you can specify "*SVCNAME:dmaId/serviceId//*".
 
 See the following table to find out which items can be entered after each placeholder (separated by forward slashes).
 

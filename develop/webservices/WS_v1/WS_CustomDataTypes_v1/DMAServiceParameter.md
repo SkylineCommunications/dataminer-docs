@@ -23,5 +23,5 @@ uid: DMAServiceParameter
 | IsMonitored | Boolean | Whether the value of the parameter is being monitored by an alarm template. |
 | AlarmState | String | The current alarm state of the parameter. |
 | IsTrending | Boolean | Whether the value of the parameter is being trended. |
-| Options | String | The parameter options (extra flags to e.g. indicate special formatting instructions). |
+| Options | String | The parameter options (extra flags to e.g., indicate special formatting instructions). |
 | LastChangeUTC | Long integer | The time when the parameter last changed, in UTC format (milliseconds since midnight January 1, 1970 GMT). |

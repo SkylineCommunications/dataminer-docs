@@ -74,7 +74,7 @@ In addition to the automation scripts and connectors, the EPM application packag
 
 #### Resolving the invalid operation exception when updating connector [ID 35532]
 
-When you update an EPM connector (e.g. the Skyline EPM Platform connector) with the SL.Lib.Common package 1.3.0.2 or above, a *System.InvalidOperationException* can be thrown. For example:
+When you update an EPM connector (e.g., the Skyline EPM Platform connector) with the SL.Lib.Common package 1.3.0.2 or above, a *System.InvalidOperationException* can be thrown. For example:
 
 ```txt
 System.InvalidOperationException: Deserialization Failed for type: EpmData
@@ -91,7 +91,7 @@ The following issues related to alarms could occur in the EPM Platform visual ov
 
 - On the Service Group level, the alarm tab in the EPM Platform visual overview did not show any alarms.
 - Alarm statistics associated with the Service Group level could be incorrect.
-- The alarm coloring of shapes could also be incorrect (e.g. minor alarms displayed with a green color instead of the correct light-blue color).
+- The alarm coloring of shapes could also be incorrect (e.g., minor alarms displayed with a green color instead of the correct light-blue color).
 
 #### Arris E6000 CCAP Platform - Empty Node Segment table [ID 34461]
 

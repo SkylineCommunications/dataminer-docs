@@ -58,7 +58,7 @@ Adding a resource element to the target view will now only be done once. If the 
 
 #### Service states now case insensitive \[ID 29584\]
 
-Service states available in the Booking Manager app (e.g. START) are now case insensitive.
+Service states available in the Booking Manager app (e.g., START) are now case insensitive.
 
 #### Booking Wizard: Transport function now expanded by default \[ID 29585\]
 
@@ -87,7 +87,7 @@ The *AssignResources* method has been made more efficient. Previously, it includ
 
 #### Updating booking timing could fail without warning \[ID 29684\]
 
-When the timing of a booking was updated, it could occur that this action failed, e.g. because of an overlapping booking with the same name, but no feedback was displayed to the user about this.
+When the timing of a booking was updated, it could occur that this action failed, e.g., because of an overlapping booking with the same name, but no feedback was displayed to the user about this.
 
 #### Persistent service removed when booking was deleted \[ID 29692\]
 

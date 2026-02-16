@@ -18,7 +18,7 @@ From now on, SLSNMPAgent will also use the SNMP++ library to forward SNMPv2 trap
 
 > [!NOTE]
 >
-> - Because of limitations of the SNMP++ library, the inform message resend time cannot be set to a value less than 10ms. If you set it to a value less than 10ms, the default setting will be used instead (i.e. 30 ms).
+> - Because of limitations of the SNMP++ library, the inform message resend time cannot be set to a value less than 10ms. If you set it to a value less than 10ms, the default setting will be used instead (i.e., 30 ms).
 > - From now on, all SNMPv2 traps and inform messages will by default include the “1.3.6.1.2.1.1.3.0” (sysUpTime) and “1.3.6.1.6.3.1.1.4.1.0” (snmpTrapOID) bindings.
 
 #### All client-server communication will now be encrypted by default \[ID 27747\]
@@ -53,7 +53,7 @@ In an *Email* action of a correlation rule, an automation script or a scheduled 
 - *Add DMS info*: Determines whether company details are displayed in the report.
 - *Add DMS logo*: Determines whether the company logo is displayed in the report.
 - *Include feeds*: Determines whether feed components are included in the report. By default, this option is not enabled.
-- *Stack components*: Select this option if you want all components to be displayed below one another. This can be especially useful for dashboards containing large components (e.g. pivot tables) in order to make sure all data is displayed.
+- *Stack components*: Select this option if you want all components to be displayed below one another. This can be especially useful for dashboards containing large components (e.g., pivot tables) in order to make sure all data is displayed.
 - *Dashboard width*: Allows you to select a custom width for the report.
 
 #### Visual Overview: Conditional shape manipulation actions no longer require the shape to be linked to an element, service or view \[ID 27569\]
@@ -75,7 +75,7 @@ Up to now, when a DataMiner Agent disconnected from the DataMiner System, the el
 
 #### Visual Overview: Linking the view range of a trend graph component to session variables & specifying a custom view range \[ID 27779\]
 
-A Visio shape showing a trend graph component can now be made to update session variables with its view range (i.e. start time and end time). To do so, add a shape data field of type SetVar, and set its value to “RangeStart:\<VariableA>\|RangeEnd:\<VariableB>”
+A Visio shape showing a trend graph component can now be made to update session variables with its view range (i.e., start time and end time). To do so, add a shape data field of type SetVar, and set its value to “RangeStart:\<VariableA>\|RangeEnd:\<VariableB>”
 
 Example:
 
@@ -294,7 +294,7 @@ When you create a pattern in DataMiner Cube, you can now select the following ne
 
     This notice will appear at most every 2 weeks or after a DataMiner restart.
 
-    In order to reduce memory usage, users can either remove patterns that are being tracked in real time or restrict the number of parameters for which patterns are being tracked in real time (e.g. by specifying a display key in case of table parameters).
+    In order to reduce memory usage, users can either remove patterns that are being tracked in real time or restrict the number of parameters for which patterns are being tracked in real time (e.g., by specifying a display key in case of table parameters).
 
   - As soon as DataMiner uses more than 2 GB of internal memory for real-time pattern matching, the following notice will appear in the Alarm Console:
 
@@ -310,7 +310,7 @@ When you create a pattern in DataMiner Cube, you can now select the following ne
 
 ##### Suggestion events
 
-In case of real-time pattern matching, pattern occurrences are communicated to the user by means of suggestion events in the Alarm Console, i.e. alarms with severity “Information” and source “Suggestion Engine”. These events can be displayed in a separate *Suggestion events* alarm tab.
+In case of real-time pattern matching, pattern occurrences are communicated to the user by means of suggestion events in the Alarm Console, i.e., alarms with severity “Information” and source “Suggestion Engine”. These events can be displayed in a separate *Suggestion events* alarm tab.
 
 ### DMS Reports & Dashboards
 
@@ -338,7 +338,7 @@ You can construct a query to use as data input for a component by following thes
 
 1. Select an operator. This step is optional; if you do not select an operator, the entire dataset will be used. The following operators are available:
 
-    - *Aggregate*: Allows you to aggregate data from the data source. After you have selected this option, first select the aggregation column, and the method that should be used. Depending on the type of data available in the selected column, different methods are available, e.g. Average, Count, Distinct Count, Maximum, Median, Minimum, Percentile 90/95/98 or Standard deviation.
+    - *Aggregate*: Allows you to aggregate data from the data source. After you have selected this option, first select the aggregation column, and the method that should be used. Depending on the type of data available in the selected column, different methods are available, e.g., Average, Count, Distinct Count, Maximum, Median, Minimum, Percentile 90/95/98 or Standard deviation.
 
         You can then further filter the result by applying another operator. An additional *Group by* operator is available for this, which will display the result of the aggregation operation for each different item in the column selected in the *Group by column* box.
 
@@ -350,11 +350,11 @@ You can construct a query to use as data input for a component by following thes
 
         For both manipulation methods, you will also need to specify the name for the new column. When the column manipulation operation is fully configured, you can further fine-tune the result by applying another operator.
 
-    - *Filter*: Filters the dataset. When you select this option, select the column to filter, specify the filter method (e.g. equals, greater than, etc.) and the value to use as a filter. The available filter methods depend on the type of data in the selected column. Once the filter has been fully configured, you can refine the results by applying another operator, e.g. an additional filter.
+    - *Filter*: Filters the dataset. When you select this option, select the column to filter, specify the filter method (e.g., equals, greater than, etc.) and the value to use as a filter. The available filter methods depend on the type of data in the selected column. Once the filter has been fully configured, you can refine the results by applying another operator, e.g., an additional filter.
 
     - *Join*: Joins two tables together. When you select this option, in the *Type* dropdown box, you will first need to select how the tables should be joined. Then you will need to select another data source (optionally refined with one or more operators) in order to specify the table you want the first table to be joined with. Optionally, you can also specify a condition to determine when rows should be joined. For instance, if one table contains elements with a custom property that details a booking ID and the other lists bookings, you could add the condition that the property in the first table must match the ID in the second table.
 
-        The *Inner* type of join only includes rows if they match the condition. *Left* displays all rows from the first table (i.e. the table on the left) and only the matching rows from the other table. *Right* does the opposite. *Outer* displays first the non-matching rows from the left table, then the matching rows from both tables, then the non-matching rows from the right table.
+        The *Inner* type of join only includes rows if they match the condition. *Left* displays all rows from the first table (i.e., the table on the left) and only the matching rows from the other table. *Right* does the opposite. *Outer* displays first the non-matching rows from the left table, then the matching rows from both tables, then the non-matching rows from the right table.
 
     - *Select*: Displays the selected columns only. When you have selected the columns to display, you can apply another operator to refine the query.
 
@@ -411,7 +411,7 @@ If the visualization displays a query, in the *Settings* tab, the following opti
 In addition, the following layout options can now be configured for this visualization:
 
 - *Chart layout*: Can be set to *Relative* or *Absolute*. *Relative* means that the dimension of each bar is shown as a relative percentage. *Absolute* means that the dimension of each bar is shown as an absolute numeric value.
-- *Chart orientation*: Determines how the chart is displayed, i.e. from left to right, from right to left, from top to bottom or from bottom to top.
+- *Chart orientation*: Determines how the chart is displayed, i.e., from left to right, from right to left, from top to bottom or from bottom to top.
 - *Legend*: The legend can be hidden. If it is set to be displayed, you can select whether it should be displayed on the left, on the right, at the top or at the bottom of the visualization.
 - *Tooltips*: Tooltips can be hidden. If they are set to be displayed, you can select whether these should include the label, dimension and/or value.
 
@@ -482,7 +482,7 @@ When configuring a pivot table component, you can now find the following setting
 
 #### Interactive automation scripts: Tree view items now have an IsCollapsed property \[ID 27756\]
 
-When, in an interactive automation script, you define a tree view control (i.e. a UIBlockDefinition of type TreeView), you can now use the TreeViewItem property *IsCollapsed* to indicate whether an item should be collapsed or expanded.
+When, in an interactive automation script, you define a tree view control (i.e., a UIBlockDefinition of type TreeView), you can now use the TreeViewItem property *IsCollapsed* to indicate whether an item should be collapsed or expanded.
 
 > [!NOTE]
 > This property will not be updated when you collapse or expand tree view items in the UI.

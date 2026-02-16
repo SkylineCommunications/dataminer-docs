@@ -124,7 +124,7 @@ Also, it will now be indicated more clearly that a highlighted IO button is sele
 
 #### Service & Resource Management: When a ReservationInstance was updated, the timeout scripts would incorrectly be executed instead of the expected event script \[ID 27757\]
 
-When you updated an ongoing ReservationInstance, in some cases, all ongoing and future events (i.e. scripts) of that instance would incorrectly be canceled and the timeout scripts would be run on all DataMiner Agents instead.
+When you updated an ongoing ReservationInstance, in some cases, all ongoing and future events (i.e., scripts) of that instance would incorrectly be canceled and the timeout scripts would be run on all DataMiner Agents instead.
 
 #### DataMiner Cube: Element and parameter heat lines would incorrectly stay gray \[ID 27767\]
 
@@ -140,7 +140,7 @@ When a virtual function was linked or unlinked via the generic linker table, in 
 
 #### Memory leak when using the Chromium browser engine in a browser version of DataMiner Cube \[ID 27789\]
 
-When running a browser version of DataMiner Cube in Microsoft Internet Explorer, in some cases, a memory leak could occur when using the Chromium browser engine to e.g. visualize web pages in Visual Overview.
+When running a browser version of DataMiner Cube in Microsoft Internet Explorer, in some cases, a memory leak could occur when using the Chromium browser engine to e.g., visualize web pages in Visual Overview.
 
 #### Alarm missing from service alarm table after enhanced service was renamed \[ID 27800\]
 

@@ -35,7 +35,7 @@ GET:MyElement:MyParam|10113
 ```
 
 > [!NOTE]
-> - The table index (i.e. the primary key) should only be included for table column parameters. This is supported from DataMiner 10.2.0/10.1.10 onwards.
+> - The table index (i.e., the primary key) should only be included for table column parameters. This is supported from DataMiner 10.2.0/10.1.10 onwards.
 > - Getting the value from parameters with a pipe character ("\|") in the parameter name is no longer supported from DataMiner 10.2.0/10.1.10 onwards.
 > - If an argument contains a colon (“:”) or a table index contains a pipe character (“\|”), this character must be preceded by a backslash (“\\”). For example, the command “GET:MyElement:MyParam\|a\\:b” will get the value stored in row a:b.
 
@@ -52,7 +52,7 @@ GETX:ElementName:ParameterName|TableIndex
 ```
 
 > [!NOTE]
-> - The table index (i.e. the primary key) should only be included for table column parameters. This is supported from DataMiner 10.2.0/10.1.10 onwards.
+> - The table index (i.e., the primary key) should only be included for table column parameters. This is supported from DataMiner 10.2.0/10.1.10 onwards.
 > - Getting the value from parameters with a pipe character ("\|") in the parameter name is no longer supported from DataMiner 10.2.0/10.1.10 onwards.
 > - If an argument contains a colon (“:”) or a table index contains a pipe character (“\|”), this character must be preceded by a backslash (“\\”).
 
@@ -77,13 +77,13 @@ SET:MyElement:MyParam|10113:100
 ```
 
 > [!NOTE]
-> - The table index (i.e. the primary key) should only be included for table column parameters. This is supported from DataMiner 10.2.0/10.1.10 onwards.
+> - The table index (i.e., the primary key) should only be included for table column parameters. This is supported from DataMiner 10.2.0/10.1.10 onwards.
 > - Setting the value from parameters with a pipe character ("\|") in the parameter name is no longer supported from DataMiner 10.2.0/10.1.10 onwards.
 > - If an argument contains a colon (“:”) or a table index contains a pipe character (“\|”), this character must be preceded by a backslash (“\\”). For example, the command “SET:MyElement:MyParam\|a\\:b\\\|c:100” will set the value stored in row a:b\|c to value 100.
 
 ### Executing a command
 
-Send the following command to the DMS to execute a predefined command (i.e. a combination of gets and sets).
+Send the following command to the DMS to execute a predefined command (i.e., a combination of gets and sets).
 
 ```txt
 CMD:COMMANDNAME:VALUE1:VALUE2:...

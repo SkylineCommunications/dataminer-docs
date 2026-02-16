@@ -32,7 +32,7 @@ The *Number of Ping OK* and *Percentage of Ping OK* KPIs will now be hidden at U
 
 #### Adaptive polling of CCAPs adjusted [ID 34365]
 
-The behavior of adaptive fast SNMP polling of CCAPs has been adjusted. The poll interval is now based on the last execution time (i.e. the time it took to poll the last cycle) plus a period of cooling time defined by a parameter on the *Debug* page of the CCAP element. This way the polling interval is adjusted to match the speed of the device. Note that if poll times are below 15 minutes, the interval will be set to 15 minutes.
+The behavior of adaptive fast SNMP polling of CCAPs has been adjusted. The poll interval is now based on the last execution time (i.e., the time it took to poll the last cycle) plus a period of cooling time defined by a parameter on the *Debug* page of the CCAP element. This way the polling interval is adjusted to match the speed of the device. Note that if poll times are below 15 minutes, the interval will be set to 15 minutes.
 
 ### Fixes
 

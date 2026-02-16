@@ -207,7 +207,7 @@ It is now possible to define actions on a DomBehaviorDefinition, which can be tr
 
 An action can be defined by adding an IDomActionDefinition to the ActionDefinitions list of a DomBehaviorDefinition. Each action definition has an ID of type string and a condition of type IDomCondition. The ID must be unique for the DomBehaviorDefinition in question and can only contain lower-case characters.
 
-Currently, you can only define actions of type ExecuteScriptDomActionDefinition, i.e. actions that execute a specified script. This type of action has the following properties.
+Currently, you can only define actions of type ExecuteScriptDomActionDefinition, i.e., actions that execute a specified script. This type of action has the following properties.
 
 | Property | Type | Description |
 |--|--|--|
@@ -215,7 +215,7 @@ Currently, you can only define actions of type ExecuteScriptDomActionDefinition,
 | Condition | IDomCondition | The condition that should be met before the action is allowed to be executed. Note: When you do not define a condition, it will always be allowed to execute the action. |
 | Script | string | The name of the script to be executed. |
 | Async | bool | Whether the script will be run asynchronously (true) or synchronously (false). When true, no errors or info data from the script will be returned. |
-| ScriptOptions | List\<string> | A list of options (e.g. “PARAMETER:1:MyValue”) that will be passed to the SLAutomation process during execution. Note: Do not add the “DEFER” option. This option will be added automatically depending on the value of the Async property. |
+| ScriptOptions | List\<string> | A list of options (e.g., “PARAMETER:1:MyValue”) that will be passed to the SLAutomation process during execution. Note: Do not add the “DEFER” option. This option will be added automatically depending on the value of the Async property. |
 
 The scripts that will be executed using this action require a custom entry point of type OnDomAction. This entry point method should have two arguments: the IEngine object and an ExecuteScriptDomActionContext object. See the following example.
 
@@ -416,10 +416,10 @@ For this feature to work, the following permissions must be set in Azure AD:
 
 #### Enhanced view table filtering [ID 30809]
 
-As from DataMiner feature release version 10.1.9, view tables containing a column with view options like "view=:x:y:z" or "view=a:b:c:z" allow that column to be filtered by means of a "VALUE=" filter (e.g. VALUE=5 == abc). From now on, these filters will also work when filtering on a column of a view table that refers to a column of another view table.
+As from DataMiner feature release version 10.1.9, view tables containing a column with view options like "view=:x:y:z" or "view=a:b:c:z" allow that column to be filtered by means of a "VALUE=" filter (e.g., VALUE=5 == abc). From now on, these filters will also work when filtering on a column of a view table that refers to a column of another view table.
 
 > [!NOTE]
-> When a directview table links to a view table with remote columns (i.e. view=:x:y:z), it is not yet possible to filter on those columns.
+> When a directview table links to a view table with remote columns (i.e., view=:x:y:z), it is not yet possible to filter on those columns.
 
 ### DMS Cube
 
@@ -432,7 +432,7 @@ The ListView component can now also be used to list resources. To do so, add a s
 | Component | ListView |
 | Source | Resources |
 | ComponentOptions | List of options, separated by pipe characters. For an overview of all possible component options, see [Component options](xref:Creating_a_list_view#component-options). |
-| Columns | The list of columns that have to be displayed. Preferably, this should be configured by specifying the name of a saved column configuration, e.g. MyColumnConfig.<br> Saving a column configuration is possible via the right-click menu of the list header in DataMiner Cube. This right-click menu also allows you to load a column configuration.<br> If you do not specify this shape data field or leave it empty, all columns will be displayed. |
+| Columns | The list of columns that have to be displayed. Preferably, this should be configured by specifying the name of a saved column configuration, e.g., MyColumnConfig.<br> Saving a column configuration is possible via the right-click menu of the list header in DataMiner Cube. This right-click menu also allows you to load a column configuration.<br> If you do not specify this shape data field or leave it empty, all columns will be displayed. |
 | Filter | Examples:<br> - Resource.Name\[string\]== 'Encoder'<br> - Resource.Name contains 'res'<br> - Resource.Name notContains 'res'<br> - Resource.ID\[Guid\] == fad6a6dd-ca3a-4b6f-9ca7-b68fd2071786<br> - Resource.MainDVEDmaID == 113<br> - Resource.PoolGUIDs contains<br>0fb47f51-ad81-47f2-9e69-3d9477bdc961<br> - Resource.MaxConcurrency != 1<br> - Resource.PropertiesDict.Location\[string\] == '3'<br> - Resource.Name\[string\] notContains 'RS' AND Resource.Name\[string\] notContains 'RT' AND Resource.Name\[string\] notContains 'ExposeFlow' <br>For more information on list view filters, see [List view filters](xref:Creating_a_list_view#list-view-filters). |
 
 > [!NOTE]
@@ -455,7 +455,7 @@ The Logging module now also allows you to access the Sharing Manager log file.
 
 #### DataMiner Cube - Router Control: 'Direct take' mode [ID 30865]
 
-When configuring a matrix in the Router Control module, you can now set it to either “preset mode” (i.e. the default mode) or “direct take mode”.
+When configuring a matrix in the Router Control module, you can now set it to either “preset mode” (i.e., the default mode) or “direct take mode”.
 
 - In preset mode, you need to click the *Connect* button to create or delete a crosspoint between an input and an output.
 - In direct take mode, you don’t need to click the *Connect* button to create or delete a crosspoint between an input and an output. When you select an input and an output, they will automatically be connected or disconnected.
@@ -510,7 +510,7 @@ It is now possible to pin and unpin items in the sidebar.
 
 #### Visual Overview: Setting the background color of a static shape using a shape data field of type 'BackgroundColor' [ID 30964]
 
-Using a shape data field of type *BackgroundColor* it is now possible to set the background color of a static shape, i.e. a shape that is not linked to an element, a service or a view.
+Using a shape data field of type *BackgroundColor* it is now possible to set the background color of a static shape, i.e., a shape that is not linked to an element, a service or a view.
 
 | Shape data field | Value |
 |--|--|
@@ -518,11 +518,11 @@ Using a shape data field of type *BackgroundColor* it is now possible to set the
 
 The \<color> value in the example above can be specified as follows:
 
-- An HTML color code (e.g. #FF102030)
-- An RGB color code (e.g. 40,50,60)
-- A standard color name (e.g. magenta)
-- A color placeholder referring to one of the configured DataMiner alarm colors (e.g. \[color:severity=minor\])
-- A placeholder referring to a variable containing a color value (e.g. \[PageVar:MyColorSessionVar\])
+- An HTML color code (e.g., #FF102030)
+- An RGB color code (e.g., 40,50,60)
+- A standard color name (e.g., magenta)
+- A color placeholder referring to one of the configured DataMiner alarm colors (e.g., \[color:severity=minor\])
+- A placeholder referring to a variable containing a color value (e.g., \[PageVar:MyColorSessionVar\])
 
 > [!NOTE]
 >
@@ -547,7 +547,7 @@ Default value: 1000
 When, in the Data tab, you add a filter node to a GQI query, a new option named “Return no rows when feed is empty” will allow you to specify what should be returned when the filter yields no rows.
 
 - When you enable this option, an empty table will be returned when the filter yields no rows.
-- When you disable this option, the entire table (i.e. all rows) will be returned when the filter yields no rows.
+- When you disable this option, the entire table (i.e., all rows) will be returned when the filter yields no rows.
 
 #### Dashboards app - State component: Enhanced scrolling behavior when Layout flow is set to 'Columns' [ID 30765]
 
@@ -821,7 +821,7 @@ When MultipleGetBulk was used to poll a table that contained only a single row a
 
 #### DataMiner Cube - Visual Overview: Child shapes representing alarms would incorrectly appear on a white background [ID 30820]
 
-When generating child shapes that represent alarms, up to now, those child shapes would always appear on a white background, even when the Cube theme was set to e.g. Skyline Black.
+When generating child shapes that represent alarms, up to now, those child shapes would always appear on a white background, even when the Cube theme was set to e.g., Skyline Black.
 
 From now on, generated child shapes that represent alarms will appear on a transparent background instead.
 
@@ -847,7 +847,7 @@ In some cases, a ParameterThread error could occur in SLElement.
 
 #### Interactive automation scripts: Value returned by the client would incorrectly be considered as an invalid file path selected in a file selector block [ID 30879]
 
-When, in an interactive automation script, a file selector block was defined after another type of input block (e.g. a checkbox), in some cases, the input block value returned by the client would incorrectly be considered as an invalid file path selected in the file selector. As a result, an “Invalid Data” error would be thrown.
+When, in an interactive automation script, a file selector block was defined after another type of input block (e.g., a checkbox), in some cases, the input block value returned by the client would incorrectly be considered as an invalid file path selected in the file selector. As a result, an “Invalid Data” error would be thrown.
 
 #### DataMiner Cube - Alarm Console: Incorrect notices like '!! Unknown \<Type> R!AD for parameter xxx' [ID 30884]
 
@@ -943,7 +943,7 @@ In some rare cases, overall memory usage of the SLAnalytics process would tempor
 
 #### Enabled soft-launch options would incorrectly be disabled [ID 31033]
 
-When no SoftLaunchOptions.xml file was found in the C:\\Skyline DataMiner\\ root directory, soft-launch options that were enabled by default (e.g. the new average trending feature) would incorrectly be disabled.
+When no SoftLaunchOptions.xml file was found in the C:\\Skyline DataMiner\\ root directory, soft-launch options that were enabled by default (e.g., the new average trending feature) would incorrectly be disabled.
 
 #### Interactive automation scripts: Problem with file upload components [ID 31064]
 
@@ -1005,4 +1005,4 @@ After running SLReset, in some cases, an error could occur when the \<NatsCredsF
 
 #### Web apps: Problem with SAML authentication [ID 31434]
 
-On DataMiner Agents that had SAML authentication configured, it would no longer be possible to log in and access any of the web apps (e.g. Monitoring, Dashboards, Ticketing, Jobs, etc.) or the web services API.
+On DataMiner Agents that had SAML authentication configured, it would no longer be possible to log in and access any of the web apps (e.g., Monitoring, Dashboards, Ticketing, Jobs, etc.) or the web services API.

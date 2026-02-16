@@ -32,7 +32,7 @@ To add such a filtered tab page:
    > [!NOTE]
    >
    > - For more information on using wildcards or regular expressions in filters, see [Using wildcards or regular expressions in alarm filters](xref:UsingWildcardsOrRegularExpressionsInAlarmFilters).
-   > - To filter the Alarm Console based on a Visual Overview session variable, create a new filtered tab displaying current alarms, and create a filter using *Matches wildcard expression*, *Does not match wildcard expression*, *Matches regular expression*, or *Does not match regular expression*. In the second part of the filter, specify the variable, in the same way as in Visio, e.g. *\[var:LoadTime\]*. For more information, see [\[var:VariableName\]](xref:Placeholders_for_variables_in_shape_data_values#varvariablename).
+   > - To filter the Alarm Console based on a Visual Overview session variable, create a new filtered tab displaying current alarms, and create a filter using *Matches wildcard expression*, *Does not match wildcard expression*, *Matches regular expression*, or *Does not match regular expression*. In the second part of the filter, specify the variable, in the same way as in Visio, e.g., *\[var:LoadTime\]*. For more information, see [\[var:VariableName\]](xref:Placeholders_for_variables_in_shape_data_values#varvariablename).
    > - If you create a *Services* filter in a history tab, and you want to include services that have been deleted, at the bottom of the box where you can select services to filter on, select the *Load deleted services* checkbox (available from DataMiner 10.2.0/10.1.4 onwards).
 
 1. If you want, you can also combine several filters, using logical operators (AND, OR).

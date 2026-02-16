@@ -332,7 +332,7 @@ The script will be triggered using a new OnSrmBookingsUpdatedByReference entrypo
 
 The UpdateAndApply call for a ProfileInstance can now return a number of additional errors.
 
-When calling UpdateAndApply without forcing quarantine (i.e. with forceQuarantine set to false):
+When calling UpdateAndApply without forcing quarantine (i.e., with forceQuarantine set to false):
 
 - If no instances need to be quarantined, the update will be applied and the following warning will be returned:
 
@@ -343,7 +343,7 @@ When calling UpdateAndApply without forcing quarantine (i.e. with forceQuarantin
   - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
   - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
 
-When calling UpdateAndApply and forcing quarantine (i.e. with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
+When calling UpdateAndApply and forcing quarantine (i.e., with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
 
 - A warning of type ReservationInstancesMovedToQuarantine, listing the reservations and the usages that were quarantined.
 - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the reservations that were reconfigured because of the update.
@@ -369,7 +369,7 @@ var instancesThatRequiredReconfig = rmHelper.GetReservationInstances(filter);
   Failed to run script to reconfigure bookings after updating ProfileInstance because an exception occurred. See SLProfileManager.txt logging for more details.
   ```
 
-- When the UpdateBookingConfigByReferenceScript is not configured (i.e. when the setting is empty or null in the profile manager configuration):
+- When the UpdateBookingConfigByReferenceScript is not configured (i.e., when the setting is empty or null in the profile manager configuration):
 
   - No attempt will be made to trigger a script.
   - The RequiredProfileInstanceReconfiguration property will not be set to true on the instances.
@@ -583,7 +583,7 @@ Cannot read property 'Data' of undefined'.
 
 #### SLWatchDog would not log error messages when it failed to generate or clear alarm events \[ID 28435\]
 
-When SLWatchDog was creating or clearing alarm events (e.g. alarm events reporting runtime errors), no error messages would be logged when a request to create or clear an alarm event failed. From now on, those errors will be logged in SLWatchDog2.txt.
+When SLWatchDog was creating or clearing alarm events (e.g., alarm events reporting runtime errors), no error messages would be logged when a request to create or clear an alarm event failed. From now on, those errors will be logged in SLWatchDog2.txt.
 
 #### Problem during DataMiner startup when all nodes of an Elasticsearch database were down \[ID 28443\]
 
@@ -627,7 +627,7 @@ When you duplicated a service as a templated service, in some cases, the newly c
 
 #### Dashboards app: Some components would not be displayed when embedded \[ID 28492\]
 
-In some cases, dashboards components would not be displayed when embedded in e.g. Visual Overview.
+In some cases, dashboards components would not be displayed when embedded in e.g., Visual Overview.
 
 #### DataMiner Cube - Query Executor: Problem when a Cassandra database returned a collection object \[ID 28499\]
 

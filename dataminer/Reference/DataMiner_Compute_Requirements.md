@@ -32,7 +32,7 @@ A DataMiner System can need a lot of RAM depending on the size of your network. 
 As a rule, between 16 GB and 128 GB RAM is needed, although 128 GB is an exceptionally high value that mostly applies for EPM/CPE environments.
 
 > [!NOTE]
-> The data rate and latency are also important in the choice of RAM (e.g. DDR4-3200 with ECC).
+> The data rate and latency are also important in the choice of RAM (e.g., DDR4-3200 with ECC).
 
 ### Disk
 

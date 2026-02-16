@@ -64,7 +64,7 @@ To make a FieldDescriptor allow multiple values, set its FieldType to “List\<t
 
 In an EPM environment, since DataMiner feature release version 10.1.7, it has been possible to override the names of topology cells, chains, and search chains specified in a protocol with aliases specified in a system-level *EPMConfig.xml* file stored in the C:\\Skyline DataMiner\\ folder. Now, it is also possible to add *EPMConfig.xml* files on element level.
 
-If you want certain aliases for topology cells, chains and search chains to only be applied to a particular element, then create an *EPMConfig.xml* file and place it in the folder of that element (e.g. C:\\Skyline DataMiner\\Elements\\\<ElementName>\\).
+If you want certain aliases for topology cells, chains and search chains to only be applied to a particular element, then create an *EPMConfig.xml* file and place it in the folder of that element (e.g., C:\\Skyline DataMiner\\Elements\\\<ElementName>\\).
 
 > [!NOTE]
 > Aliases specified in an element-level EPMConfig.xml file will override aliases specified in the system-level EPMConfig.xml file.
@@ -115,7 +115,7 @@ This message continues an already initiated upload and returns an empty *Continu
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
-With the introduction of the DomInstanceStatusChangedEventMessage, it is now possible to subscribe to DomInstance status transitions. This message contains the DomInstanceId, the FromState, the ToState and the Username (i.e. the name of the user who changed the status).
+With the introduction of the DomInstanceStatusChangedEventMessage, it is now possible to subscribe to DomInstance status transitions. This message contains the DomInstanceId, the FromState, the ToState and the Username (i.e., the name of the user who changed the status).
 
 IModuleEvents are now filtered by IModuleEventSubscriptionFilter first, before any other filter is applied.
 
@@ -293,7 +293,7 @@ Next to a *ReadOnly* property, the `DomStatusFieldDescriptorLink` class now also
 
 - *ClientReadOnly* determines whether users are allowed to assign a value to the field in question in the UI.
 
-  Unlike the *ReadOnly* property, this property does allow users to assign a value to the field using the API (e.g. in a script).
+  Unlike the *ReadOnly* property, this property does allow users to assign a value to the field using the API (e.g., in a script).
 
 If the *ReadOnly* property is true, the value of *ClientReadOnly* is ignored.
 
@@ -421,8 +421,8 @@ The new \<ProcessAutomation> element allows you to pass parameter values to the 
 
 See the example below. For every value you want to pass, you have to add a \<ProcessAutomationOption> element with the following attributes:
 
-- name (i.e. the name assigned to the value)
-- pid (i.e. the ID of the parameter containing the value to be passed)
+- name (i.e., the name assigned to the value)
+- pid (i.e., the ID of the parameter containing the value to be passed)
 
 Example:
 
@@ -499,7 +499,7 @@ See also [Running memory-intensive elements in separate SLProtocol and SLScripti
 
 From now on, in *DataMiner.xml*, you can set the scriptingProcesses option to an integer value, indicating the exact number of SLScripting processes that have to be launched. The SLProtocol processes will then be assigned one of the available SLScripting processes in a round-robin way.
 
-For example, if protocolProcesses is set to 5 (i.e. the default value), and scriptingProcesses is set to 3, then...
+For example, if protocolProcesses is set to 5 (i.e., the default value), and scriptingProcesses is set to 3, then...
 
 - SLScripting 1 will host SLProtocol #1 and #4
 - SLScripting 2 will host SLProtocol #2 and #5
@@ -516,7 +516,7 @@ For example, if protocolProcesses is set to 5 (i.e. the default value), and scri
 
 The SLProtocol(Ext) object in QActions will now retain all of its data members outside of the run scope. This means that, while Notifies were already available out of scope earlier, members such as the QActionID will now also remain available when a QAction run ends. In addition, the SLNet connection can now be set up at any time.
 
-If the QAction class is not static and implements the IDisposable interface, the Dispose() function will be called when the QAction instance is released (i.e. when the element is stopped). The same goes for any other class the entrypoint may be in. This coincides with the IsActive property of the SLProtocol object being set to false, which prevents further function calls to the object from being executed.
+If the QAction class is not static and implements the IDisposable interface, the Dispose() function will be called when the QAction instance is released (i.e., when the element is stopped). The same goes for any other class the entrypoint may be in. This coincides with the IsActive property of the SLProtocol object being set to false, which prevents further function calls to the object from being executed.
 
 The Dispose is called by a separate thread than the one stopping the element. Its purpose is to release lingering resources and connections when the element is stopped.
 
@@ -528,7 +528,7 @@ In addition, up to now only one instance was retained per QAction, so when entry
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
-A TriggeredByName property has been added to the Engine object. This property of type string will contain the full name of the user who started the automation script (e.g. “John Doe”).
+A TriggeredByName property has been added to the Engine object. This property of type string will contain the full name of the user who started the automation script (e.g., “John Doe”).
 
 When an automation script is triggered by the scheduler, a correlation rule or a redundancy group, the TriggeredByName property will contain one of the following strings:
 

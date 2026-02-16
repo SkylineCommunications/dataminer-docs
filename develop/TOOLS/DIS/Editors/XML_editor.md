@@ -52,7 +52,7 @@ When you right-click an error in the list, a shortcut menu offers you the follow
 
 > [!NOTE]
 >
-> - In the DIS Validator pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the Shift key. Use this feature to e.g. copy, suppress or postpone a number of results in one go. However, note that suppressing or postponing a number of results will only work when all selected items have the same error code.
+> - In the DIS Validator pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the Shift key. Use this feature to e.g., copy, suppress or postpone a number of results in one go. However, note that suppressing or postponing a number of results will only work when all selected items have the same error code.
 > - Use the filter box in the top-right corner to filter the validation results.
 
 ### Compare
@@ -96,7 +96,7 @@ If you click *Publish*, the protocol or the automation script you are currently 
 
 To publish a protocol or an automation script to another, non-default DMA, click the dropdown button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
 
-When you publish a protocol or an automation script, DIS will create either a *.dmprotocol* package (in case of a protocol) or a *.dmapp* package (in case of an automation script) in the background, install that package on the DataMiner Agent, and then automatically remove it again. This way, there is no need to manually copy all required DLL files on the DataMiner Agent in question (e.g. DLL files of NuGet packages that are used in the protocol or automation script).
+When you publish a protocol or an automation script, DIS will create either a *.dmprotocol* package (in case of a protocol) or a *.dmapp* package (in case of an automation script) in the background, install that package on the DataMiner Agent, and then automatically remove it again. This way, there is no need to manually copy all required DLL files on the DataMiner Agent in question (e.g., DLL files of NuGet packages that are used in the protocol or automation script).
 
 > [!TIP]
 > See also: [DMA](xref:DIS_settings#dma)
@@ -160,7 +160,7 @@ When you right-click inside the file tab, a shortcut menu appears. Apart from th
 | Generate Parameters | Automatically generate \<Param> tags (as well as all the necessary \<Timer>, \<Group>, \<Trigger> and \<Action> tags) based on parameter data in a MIB file, an XML file, a JSON file, a WSDL file or an Ember+ file.<br> See [Generating parameters from data stored in external files](#generating-parameters-from-data-stored-in-external-files) |
 | Generate Write Parameters | Create a Write parameter for a selected Read parameter.<br> See [Generating Write parameters for Read parameters](#generating-write-parameters-for-read-parameters) |
 | Repeat Selected Text | Copy the text you selected a number of times.<br> See [Repeating selected text](#repeating-selected-text) |
-| Outlining \> Toggle Outlining at Level \[X\] | Collapse all protocol tags at a certain level of depth.<br> Examples:<br> -  If you click *Toggle Outlining at Level 1*, all level-1 tags (e.g. the \<Protocol> tag) will be collapsed.<br> -  If you click *Toggle Outlining at Level 2*, all level-2 tags (e.g. the \<Params> tag, the \<Commands> tag, etc.) will be collapsed. |
+| Outlining \> Toggle Outlining at Level \[X\] | Collapse all protocol tags at a certain level of depth.<br> Examples:<br> -  If you click *Toggle Outlining at Level 1*, all level-1 tags (e.g., the \<Protocol> tag) will be collapsed.<br> -  If you click *Toggle Outlining at Level 2*, all level-2 tags (e.g., the \<Params> tag, the \<Commands> tag, etc.) will be collapsed. |
 | Snippet \> Insert Snippet \> DIS | Insert a protocol or automation script snippet. |
 
 ### Generating parameters from data stored in external files
@@ -233,7 +233,7 @@ The right-click menu option *Repeat Selected Text* allows you to select a partic
 1. If you want to insert a variable (or a formula including a variable) in the text to be repeated, then do the following:
 
     - Place your cursor where you want the variable or formula to be inserted, and click *Insert placeholder*.
-    - If necessary, change the default placeholder that appeared at the location where you placed your cursor: a single value "x" delimited by `$` characters. You could change it to e.g. `$x+5$`.
+    - If necessary, change the default placeholder that appeared at the location where you placed your cursor: a single value "x" delimited by `$` characters. You could change it to e.g., `$x+5$`.
 
 1. At the bottom of the window, select *Overwrite Selection*, if you want the text you selected to be overwritten by the text that is currently displayed in the *Preview* box.
 1. Click *OK* to have the text in the *Preview* box pasted in the editor.
@@ -265,7 +265,7 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 | Add New Column | Add a new column to a table parameter.<br>- The new column will automatically be assigned a default parameter ID.<br>- The name of the new column will get a prefix containing the name of the table parameter.<br>- The description of the new column will get a suffix containing the description of the table in parenthesis.<br>- When the last column of the table is a displayKey column, then the new column will be inserted before that displayKey column.<br>- When the last column of the table has a write column next to it, then the new column will be added after the write column. It will not be added in between a read and a write column. |
 | Add Context Menu... | Create a context menu parameter and a QAction. See also the *[Add Table Context Menu...](xref:DisPlugins#add-table-context-menu)* plugin.<br>(only for table parameters) |
 | Generate Write Parameter... | Create an identical parameter of type "Write".<br> (only for read parameters) |
-| Include in Group | Include the parameter in one of the listed groups of type "poll".<br> From now on, this command is only available for SNMP parameters (i.e. parameters with an \<SNMP> subtag). |
+| Include in Group | Include the parameter in one of the listed groups of type "poll".<br> From now on, this command is only available for SNMP parameters (i.e., parameters with an \<SNMP> subtag). |
 | Generate New Trigger (on change) | Create a new "on change" trigger that will get activated when the parameter changes. |
 | Generate New QAction | Creates a new blank QAction that will be run when the parameter changes. |
 | Generate New QAction - Context Menu | Creates a new QAction that holds the context menu logic. See also the *[Add Table Context Menu...](xref:DisPlugins#add-table-context-menu)* plugin.<br>(only for context menu parameters) |
@@ -363,7 +363,7 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 | Edit All Scripts... | For each of the available "Exe" C# code blocks, create a temporary C# project containing the code of that block, and open each code block in a new C# editor tab. |
 | Change Exe ID... | Change the ID of an Exe.<br>Note that when you change the ID of an Exe, the following items will be updated:<br>- The id attribute of the \<Exe> tag<br>- The name of the C# project ("scriptName_ID")<br>- The name of the main C# file ("scriptName_ID.cs")<br>- The name of the default namespace ("scriptName_ID")<br>- The AssemblyInfo.cs file<br>- The name of the project folder on disk |
 | Delete Script | Delete the entire Exe element as well as the associated C# project.<br>Note: This action cannot be undone as it will also remove all associated C# project files stored on disk. |
-| Copy Script to Clipboard | Copy the entire contents of the "Exe" C# code block (i.e. the automation script) to the Windows Clipboard. |
+| Copy Script to Clipboard | Copy the entire contents of the "Exe" C# code block (i.e., the automation script) to the Windows Clipboard. |
 
 > [!NOTE]
 >
@@ -381,7 +381,7 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 If the root tag of the protocol XML file or the automation script XML file you are editing contains a reference to the protocol or automation namespace, and if the protocol and automation script schema files are in the Microsoft Visual Studio Schema folder, then the protocol XML file or the automation script XML file you are editing will be validated against the protocol or automation script schema while you type.
 
 - When you type a "\<" sign between two existing tags, a selection box will appear listing all tags you are allowed to insert at that location. After you select one of the proposed tags, a list will be presented with all possible attributes for that specific tag.
-- When adding content to Commands, Responses, Pairs, Groups, Triggers, Timers, etc., an IntelliSense pop-up will appear, listing all existing items that can be added. In case of a group, the listed items will depend on the type of the group, e.g. actions are only added to the list when the type is "action" or "poll action".
+- When adding content to Commands, Responses, Pairs, Groups, Triggers, Timers, etc., an IntelliSense pop-up will appear, listing all existing items that can be added. In case of a group, the listed items will depend on the type of the group, e.g., actions are only added to the list when the type is "action" or "poll action".
 
 #### DIS Validator tool window
 
@@ -411,7 +411,7 @@ Whenever you move your mouse pointer over a tag, an attribute or one of the pres
 
 ### Jump to linked item button
 
-Next to certain items, you will find a button in the shape of a paper clip. When you hover over this paper clip, a list box will appear, listing all items that are in some way linked to the item in question (e.g. read parameters linked to write parameters, or group parameters linked to bit parameters).
+Next to certain items, you will find a button in the shape of a paper clip. When you hover over this paper clip, a list box will appear, listing all items that are in some way linked to the item in question (e.g., read parameters linked to write parameters, or group parameters linked to bit parameters).
 
 All those linked items are then grouped by category. For example:
 

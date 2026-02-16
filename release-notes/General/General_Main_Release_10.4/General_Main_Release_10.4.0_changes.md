@@ -369,7 +369,7 @@ Because of a number of enhancements, overall performance has increased when addi
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
-From now on, the root time of an alarm group (i.e. the time of arrival of the first alarm in the alarm group tree) will be set to the most recent of the base alarm root times.
+From now on, the root time of an alarm group (i.e., the time of arrival of the first alarm in the alarm group tree) will be set to the most recent of the base alarm root times.
 
 Up to now, when alarm groups were recreated after a DataMiner upgrade, their time of arrival and root time was set to the time of the upgrade.
 
@@ -578,7 +578,7 @@ Up to now, the database offload functionality described below had to be configur
 
 - **Configuring multiple OpenSearch or Elasticsearch clusters**
 
-  It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e. one main cluster and several replicated clusters.
+  It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e., one main cluster and several replicated clusters.
 
   Example:
 
@@ -671,11 +671,11 @@ Because of a number of enhancements made to the automatic incident tracking feat
 
 Previously, when you added a sort node to a GQI query against the DOM data source, all DOM instances matching any filter node needed to be retrieved before the sorting could occur. Sorting a dataset with a large amount of DOM instances was practically impossible.
 
-From now on, the sort nodes (e.g. By X, Then By Y, etc.) will be forwarded to the database. This will considerably increase overall performance when sorting DOM instances, especially when the dataset includes a large amount of items.
+From now on, the sort nodes (e.g., By X, Then By Y, etc.) will be forwarded to the database. This will considerably increase overall performance when sorting DOM instances, especially when the dataset includes a large amount of items.
 
 > [!NOTE]
 >
-> - Fields that have multiple values (i.e. list fields) cannot be sorted.
+> - Fields that have multiple values (i.e., list fields) cannot be sorted.
 > - All string sorting occurs in a non-natural way.
 > - TimeSpan fields are evaluated as strings. As a result, similar to strings, they will also be ordered in a non-natural way.
 > - Multiple sorts are supported using the `Sort by, Then sort by, etc.` node concatenation. If a new *Sort by* node is added to the query, the previous will be ignored.
@@ -868,7 +868,7 @@ A number of enhancements have been made to the anomaly check algorithm.
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
-When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
+When calculating alarm likelihood (i.e., focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
 
 > [!NOTE]
 > When you upgrade to version 10.4.0/10.4.3, the Cassandra table *analytics_alarmfocus* will automatically be removed.
@@ -908,7 +908,7 @@ On systems with a MySQL database, SLProtocol will continue to fetch element data
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
-When SLProtocol identifies duplicate keys, it will no longer flood the error log with messages related to duplicate keys (e.g. `Duplicate key in table 1000, key = 123`) at the default log levels.
+When SLProtocol identifies duplicate keys, it will no longer flood the error log with messages related to duplicate keys (e.g., `Duplicate key in table 1000, key = 123`) at the default log levels.
 
 From now on, if you want to have log entries related to duplicate keys, increase the error log level to 1.
 
@@ -933,7 +933,7 @@ Because of a number of enhancements with regard to memory usage, overall perform
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
-The accuracy of proactive cap detection events (i.e. forecasted alarms) reporting data range violations has been improved.
+The accuracy of proactive cap detection events (i.e., forecasted alarms) reporting data range violations has been improved.
 
 #### Service & Resource Management: Enhanced performance when adding or updating bookings [ID 38521]
 
@@ -1063,7 +1063,7 @@ When the *Cassandra Cluster Migrator* tool (*SLCCMigrator.exe*) was started, in 
 
 In some cases, the *root creation time* of an alarm would not be equal to the *creation time* of the root alarm.
 
-For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e. the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.
+For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e., the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.
 
 #### Problem when renaming an element [ID 36855]
 
@@ -1097,7 +1097,7 @@ When you imported an element that already existed in the system, in some cases, 
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.
+When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g., 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.
 
 #### DataMiner.xml: Entire LDAP section could get removed when settings were updated with values containing illegal XML characters [ID 37235]
 
@@ -1165,7 +1165,7 @@ In some cases, a newly created element could get assigned the same DmaId/Element
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
-When, in a client application (e.g. DataMiner Cube) you created a new custom property, in some cases, that new property would incorrectly be assigned an ID that had already been assigned to another, existing property.
+When, in a client application (e.g., DataMiner Cube) you created a new custom property, in some cases, that new property would incorrectly be assigned an ID that had already been assigned to another, existing property.
 
 #### Storage as a Service: Every agent in the DMS would send the average trend data to the cloud during a migration [ID 37717]
 
@@ -1191,7 +1191,7 @@ Also, special characters in parameter indices will no longer cause errors to be 
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
-Incorrect entries would be added to the *SLEventCache.txt* log file on DataMiner startup and when new objects (e.g. elements) had been created.
+Incorrect entries would be added to the *SLEventCache.txt* log file on DataMiner startup and when new objects (e.g., elements) had been created.
 
 Example of an incorrect log entry:
 
@@ -1225,7 +1225,7 @@ In some rare cases, a database write operation could incorrectly remain stuck in
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
-When a DataMiner Agent had the APIGateway service running but not the SLNet process (e.g. a DataMiner Agent that had been fully stopped), the following issues would occur:
+When a DataMiner Agent had the APIGateway service running but not the SLNet process (e.g., a DataMiner Agent that had been fully stopped), the following issues would occur:
 
 - No exception would be thrown when a client application sent a message via one of the gRPC connections that was still open. Instead, an empty response was returned. As a result, client applications would not notice that there was a problem.
 
@@ -1249,7 +1249,7 @@ When an alarm had been cleared or removed, in some cases, the automatic incident
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
-When, while automatic incident tracking was running, you manually created an incident (i.e. an alarm group) containing non-active alarms, an empty alarm group would be created.
+When, while automatic incident tracking was running, you manually created an incident (i.e., an alarm group) containing non-active alarms, an empty alarm group would be created.
 
 #### DataMiner Cube was not able to reconnect to the server after a disconnect using gRPC [ID 38260]
 

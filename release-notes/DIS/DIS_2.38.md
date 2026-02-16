@@ -123,7 +123,7 @@ The following checks and error messages have been added.
 
 #### IDE - C# editor: StyleCop.Analyzers rules disabled \[ID 33313\]
 
-DIS defines a default set of analysis rules for QAction projects. These rules can be used by Visual Studio extensions like e.g. SonarLint or StyleCop to analyze the code.
+DIS defines a default set of analysis rules for QAction projects. These rules can be used by Visual Studio extensions like e.g., SonarLint or StyleCop to analyze the code.
 
 The following StyleCop.Analyzers rules have now been disabled:
 

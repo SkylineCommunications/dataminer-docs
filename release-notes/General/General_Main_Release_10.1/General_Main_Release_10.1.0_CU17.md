@@ -70,7 +70,7 @@ When you tried to add, update or delete a resource, a NullReferenceException cou
 
 #### No alarm would be generated when an element that exported data failed to start \[ID 33744\]
 
-When an error occurred during the startup of an element that exported data (e.g. a DVE or function element), in some cases, no alarm would be generated.
+When an error occurred during the startup of an element that exported data (e.g., a DVE or function element), in some cases, no alarm would be generated.
 
 #### SLWatchdog: Problem when generating the database report \[ID 33769\]
 
@@ -98,4 +98,4 @@ In the following example, the second connection would incorrectly be ignored.
 ```
 
 > [!NOTE]
-> Specifying a type with \`\<Type>\` for one connection and specifying a type with e.g. \`\<Http>\` for another connection is not supported.
+> Specifying a type with \`\<Type>\` for one connection and specifying a type with e.g., \`\<Http>\` for another connection is not supported.

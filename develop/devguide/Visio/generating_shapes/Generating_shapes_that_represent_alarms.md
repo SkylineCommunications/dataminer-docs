@@ -4,7 +4,7 @@ uid: Generating_shapes_that_represent_alarms
 
 # Generating shapes that represent alarms
 
-In a Visio drawing, you can specify that a shape should be created automatically for every alarm associated with the object to which the Visio drawing is linked (e.g. a view). Those automatically generated "alarm shapes" can be set to show the alarm severity color and the contents of one particular detail of the alarm in question (by specifying the name of the Alarm Console column displaying that field).
+In a Visio drawing, you can specify that a shape should be created automatically for every alarm associated with the object to which the Visio drawing is linked (e.g., a view). Those automatically generated "alarm shapes" can be set to show the alarm severity color and the contents of one particular detail of the alarm in question (by specifying the name of the Alarm Console column displaying that field).
 
 To implement this feature, do the following:
 
@@ -13,7 +13,7 @@ To implement this feature, do the following:
 
 > [!NOTE]
 >
-> - The shape created in step 1 can itself be a group that contains a number of subshapes, each with their own **Alarm** and **Info** data fields. That way, you can e.g. visualize different details of one particular alarm.
+> - The shape created in step 1 can itself be a group that contains a number of subshapes, each with their own **Alarm** and **Info** data fields. That way, you can e.g., visualize different details of one particular alarm.
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[children > ALARMS]* page.
 
 ## Child-level shape data
@@ -113,7 +113,7 @@ The following shape data fields can be added to the group containing the alarm s
   - VirtualizingStackHorizontal
   - VirtualizingStackVertical
 
-  If any other option is specified, it will fall back to the most appropriate of the options above, e.g. "WrapHorizontal" will fall back to "VirtualizingStackHorizontal".
+  If any other option is specified, it will fall back to the most appropriate of the options above, e.g., "WrapHorizontal" will fall back to "VirtualizingStackHorizontal".
 
 - **ChildrenFilter**: In this optional shape data field, you can specify the name of a shared alarm filter. If you do so, a shape will be generated for every alarm matching that particular shared alarm filter.
 

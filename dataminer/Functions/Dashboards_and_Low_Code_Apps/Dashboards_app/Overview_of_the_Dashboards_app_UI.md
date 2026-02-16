@@ -221,7 +221,7 @@ When a dashboard is selected, the header bar of the details pane can display a n
 
 - *Share* or *Start sharing*: Allows you to share the dashboard using dataminer.services. See [Sharing a dashboard](xref:Sharing_a_dashboard). This feature is only available in read mode, if the DataMiner System is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-In the [settings of the Dashboards app](#the-dashboards-app-header-bar), you can configure whether the edit mode, clear selections, create report/export as PDF, and share dashboard buttons are always displayed (i.e. “pinned” to the header bar) or instead accessible via a button in the top-right corner of a dashboard.
+In the [settings of the Dashboards app](#the-dashboards-app-header-bar), you can configure whether the edit mode, clear selections, create report/export as PDF, and share dashboard buttons are always displayed (i.e., “pinned” to the header bar) or instead accessible via a button in the top-right corner of a dashboard.
 
 ![Pin actions](~/dataminer/images/Pin_Actions.png)<br>*Dashboard settings in DataMiner 10.6.2*
 

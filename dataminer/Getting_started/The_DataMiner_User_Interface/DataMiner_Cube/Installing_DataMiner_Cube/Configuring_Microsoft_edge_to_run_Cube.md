@@ -19,7 +19,7 @@ Before you can run the DataMiner Cube browser application in Microsoft Edge, a n
 
    1. Next to *Internet Explorer mode pages*, click *Add*.
 
-   1. In the dialog, specify the URL to open DataMiner Cube for your DMA, e.g. `https://MyDMA/`.
+   1. In the dialog, specify the URL to open DataMiner Cube for your DMA, e.g., `https://MyDMA/`.
 
 1. Add the DataMiner Cube URL to the "Local intranet" zone:
 
@@ -47,7 +47,7 @@ Before you can run the DataMiner Cube browser application in Microsoft Edge, a n
 
 > [!NOTE]
 >
-> - To open DataMiner Cube, browse directly to the DMA IP or URL (e.g. `https://MyDMA/` instead of `https://MyDMA/DataMinerCube`). This way Edge can reload the page correctly in Internet Explorer. Note that this does mean that `C:\Skyline DataMiner\WebPages\config.manual.asp` must be configured with *defaultApp* set to *Cube* or an empty value. See [Configuring the landing page of a DMA](xref:Configuring_the_landing_page).
+> - To open DataMiner Cube, browse directly to the DMA IP or URL (e.g., `https://MyDMA/` instead of `https://MyDMA/DataMinerCube`). This way Edge can reload the page correctly in Internet Explorer. Note that this does mean that `C:\Skyline DataMiner\WebPages\config.manual.asp` must be configured with *defaultApp* set to *Cube* or an empty value. See [Configuring the landing page of a DMA](xref:Configuring_the_landing_page).
 > - It is possible that your Edge policies are in fact managed by your company. In that case, you may not be able to configure this yourself, and you will need to contact your IT administrator for this. You can verify if this is the case by browsing to <edge://policy/> in Microsoft Edge. If this page contains an item "InternetExplorerIntegrationSiteList", IE compatibility is configured at company level.
 
 > [!TIP]

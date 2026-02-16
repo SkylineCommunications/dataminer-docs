@@ -124,7 +124,7 @@ The following shape data fields can be added to the group containing the shapes 
   > [!NOTE]
   >
   > - By default, a **Children** shape always shows the child items of the view or service to which the Visio drawing is linked. If you want a **Children** shape to show the child items of a specific view or service, then add a shape data field of type **View** or **Element** to that same shape. In that field, you can then explicitly specify the view or the service of which the shape has to show all child items.
-  > - A **Children** shape can contain another **Children** shape. That way, you can dynamically generate e.g. shapes that represent all subviews in a view, as well as shapes that represent all items in those subviews.
+  > - A **Children** shape can contain another **Children** shape. That way, you can dynamically generate e.g., shapes that represent all subviews in a view, as well as shapes that represent all items in those subviews.
   > - With the DataMiner Cube user setting *Maximum number of child shapes in a 'Children' container shape*, you can control the maximum number of Visio shapes allowed in a **Children** container shape. Default: 100. See [Visual Overview settings](xref:User_settings#visual-overview-settings).
 
 - **ChildrenOptions**: In this optional shape data field, you can specify the following options:
@@ -158,7 +158,7 @@ The following shape data fields can be added to the group containing the shapes 
   - Sort by severity, descending: `Severity,desc`
   - Sort by property "MyProperty", ascending: `Property|MyProperty,asc`
 
-  Alternatively, for shapes that are automatically generated to represent alarms, you can specify the name of any Alarm Console column as the value to sort the shapes. Like in the Alarm Console, the shapes will then first be sorted by the specified column, and then by time. For example, if you add a shape data field of type **ChildrenSort**, and configure the following value, the shapes will be sorted by element name in descending order (i.e. Z to A): `Element Name, desc`
+  Alternatively, for shapes that are automatically generated to represent alarms, you can specify the name of any Alarm Console column as the value to sort the shapes. Like in the Alarm Console, the shapes will then first be sorted by the specified column, and then by time. For example, if you add a shape data field of type **ChildrenSort**, and configure the following value, the shapes will be sorted by element name in descending order (i.e., Z to A): `Element Name, desc`
 
   > [!NOTE]
   > From DataMiner 10.2.0/10.1.1 onwards, placeholders such as \[var:VariableName\] can be used in **ChildrenSort** shape data. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).

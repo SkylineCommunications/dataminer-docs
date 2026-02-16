@@ -39,7 +39,7 @@ If the button is clicked, this will trigger the SHOW/HIDE action once. The condi
 
 > [!NOTE]
 >
-> - This kind of toggle button can only be used to set a parameter, not to e.g. execute an automation script. In other words, always add a shape data field of type **Execute** on group level of which you set the value to "Set\|..."
+> - This kind of toggle button can only be used to set a parameter, not to e.g., execute an automation script. In other words, always add a shape data field of type **Execute** on group level of which you set the value to "Set\|..."
 > - If you click *Cancel* in the confirmation box, the "Pressed" state is reset.
 
 > [!TIP]

@@ -35,7 +35,7 @@ When adding or updating an element, it is now allowed to enter pipe characters (
 
 #### Mobile Gateway: Text messages can now contain special characters like '&' \[ID 26449\]
 
-When DataMiner is configured to use an IP-based cell phone modem (e.g. SMSEagle), it communicates with the device via HTTP GET requests, passing values as ampersand-delimited parameters in the URL.
+When DataMiner is configured to use an IP-based cell phone modem (e.g., SMSEagle), it communicates with the device via HTTP GET requests, passing values as ampersand-delimited parameters in the URL.
 
 Up to now, when DataMiner sent a text message containing an ampersand character (“&”), the message would be cut off because the ampersand was incorrectly interpreted as a delimiter. From now on, all text messages will be URL encoded.
 
@@ -49,11 +49,11 @@ Since DataMiner 10.0.0, service definitions and service profiles can only be use
 
 #### Security checks for local connections between an SLxxx module and SLNet \[ID 26544\]
 
-For local connections between an SLxxx module (e.g. SLDMS) and SLNet, security checks have been established. A security token will be generated and verified for each of the messages that are sent.
+For local connections between an SLxxx module (e.g., SLDMS) and SLNet, security checks have been established. A security token will be generated and verified for each of the messages that are sent.
 
 #### Automation: DataMiner will now check whether a parameter’s set range has not been changed dynamically \[ID 26574\]
 
-When a parameter is set, from now on, DataMiner will check whether the set range of the parameter in question has not been changed dynamically (e.g. by an automation script).
+When a parameter is set, from now on, DataMiner will check whether the set range of the parameter in question has not been changed dynamically (e.g., by an automation script).
 
 #### DataMiner Cube - Automation: All parameters will now be aligned vertically \[ID 26665\]
 
@@ -117,7 +117,7 @@ After restarting a DMA, in some cases, spectrum session presets could revert to 
 
 #### After a hotfix installation, the version number in VersionHistory.txt would be updated incorrectly \[ID 26067\]
 
-After a hotfix installation, in some cases, the version number in the VersionHistory.txt file would incorrectly be updated with the word “Hotfix” instead of the hotfix version string containing the detailed version information (e.g. “HF_10.0.7.0(CU0)\_20200520-135714”).
+After a hotfix installation, in some cases, the version number in the VersionHistory.txt file would incorrectly be updated with the word “Hotfix” instead of the hotfix version string containing the detailed version information (e.g., “HF_10.0.7.0(CU0)\_20200520-135714”).
 
 #### MySQL: Problem with delete queries trying to delete trend records for elements that were not being trended \[ID 26085\]
 
@@ -247,7 +247,7 @@ In some cases, the TicketFieldResolver instances on the different agents in a Da
 
 #### HTML5 apps: Problem when logging in \[ID 26559\]
 
-When you tried to log in to an HTML5 app (e.g. Monitoring, Dashboards, etc.), in some cases, the login page could become unresponsive when the login attempt failed.
+When you tried to log in to an HTML5 app (e.g., Monitoring, Dashboards, etc.), in some cases, the login page could become unresponsive when the login attempt failed.
 
 #### DataMiner Cube: Visual page of a newly opened card would not get loaded when the new card replaced the contents of an existing card \[ID 26561\]
 
@@ -283,7 +283,7 @@ When, in the *SNMP forwarding* section of *System Center*, you configured an SN
 
 #### DataMiner Cube - Multiple set: List of table indices would not be populated when there was no associated read parameter \[ID 26593\]
 
-When you performed a multiple set (i.e. an update of multiple parameter values in one go), up to now, the dropdown box listing the table indices would incorrectly not be populated when there was no associated read parameter (e.g. write parameters linked to buttons displayed in table cells).
+When you performed a multiple set (i.e., an update of multiple parameter values in one go), up to now, the dropdown box listing the table indices would incorrectly not be populated when there was no associated read parameter (e.g., write parameters linked to buttons displayed in table cells).
 
 #### DataMiner Cube - EPM: KPI list would incorrectly display long column names that included the table name \[ID 26599\]
 
@@ -303,7 +303,7 @@ In some cases, the “CPEOnly” protocol option would not be applied correctly 
 
 #### DataMiner Cube - Visual Overview: Breadcrumbs header showing after Visio page is maximized \[ID 26631\]
 
-When you maximized a Visio page and then navigated to e.g. another view inside that page, in some cases, the breadcrumbs header would incorrectly be displayed at the top of the screen.
+When you maximized a Visio page and then navigated to e.g., another view inside that page, in some cases, the breadcrumbs header would incorrectly be displayed at the top of the screen.
 
 #### DataMiner Cube: Loading issue when returning to a parent node when navigating through a tree control \[ID 26634\]
 
@@ -314,11 +314,11 @@ When navigating through a tree control showing table data, in some cases, a load
 When you exported a Data Display table to a CSV file after moving or (un)hiding some of its columns, in some cases, the column order in the CSV file would be incorrect.
 
 > [!NOTE]
-> When hidden columns are exported, they are positioned where they would appear when not hidden, i.e. on the right of the closest non-hidden column as defined in the protocol.
+> When hidden columns are exported, they are positioned where they would appear when not hidden, i.e., on the right of the closest non-hidden column as defined in the protocol.
 
 #### DataMiner Cube - Visual Overview: Problem when using a placeholder inside another placeholder of the same type in Element shape data fields \[ID 26653\]
 
-When, in an Element shape data field, you used a placeholder inside another placeholder of the same type (e.g. a \[Param:\] placeholder inside another \[Param:\] placeholder), in some cases, those placeholders would not get resolved correctly, causing the shape to not get displayed.
+When, in an Element shape data field, you used a placeholder inside another placeholder of the same type (e.g., a \[Param:\] placeholder inside another \[Param:\] placeholder), in some cases, those placeholders would not get resolved correctly, causing the shape to not get displayed.
 
 #### DataMiner Taskbar Utility: Problem at the end of a DataMiner upgrade operation \[ID 26660\]
 

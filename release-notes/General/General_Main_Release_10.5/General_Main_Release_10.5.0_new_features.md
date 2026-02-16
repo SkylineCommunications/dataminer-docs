@@ -57,8 +57,8 @@ SLNetTypes now exposes two new request-response operations that will allow you t
 
 | Type of file to be retrieved | Request | Response |
 |---|---|---|
-| ASCII text files (e.g. log files) | `GetLogTextFileStringContentRequestMessage` | `GetLogTextFileStringContentResponseMessage` |
-| Binary files (e.g. zip files)     | `GetLogTextFileBinaryContentRequestMessage` | `GetLogTextFileBinaryContentResponseMessage` |
+| ASCII text files (e.g., log files) | `GetLogTextFileStringContentRequestMessage` | `GetLogTextFileStringContentResponseMessage` |
+| Binary files (e.g., zip files)     | `GetLogTextFileBinaryContentRequestMessage` | `GetLogTextFileBinaryContentResponseMessage` |
 
 Both requests have the following arguments:
 
@@ -68,8 +68,8 @@ Both requests have the following arguments:
 Restrictions:
 
 - The user must have administrative privileges or must be granted the *SDLogging* permission.
-- The requests must sent from a managed DataMiner module, i.e. not directly from a client application.
-- The requests must be sent via a scripted, wrapped connection (e.g. a QAction of a protocol)
+- The requests must sent from a managed DataMiner module, i.e., not directly from a client application.
+- The requests must be sent via a scripted, wrapped connection (e.g., a QAction of a protocol)
 - The file name passed in the requests must be the name of an existing file.
 - The file path passed in the requests must be a valid, existing path.
 
@@ -592,7 +592,7 @@ public BulkDeleteResult<DomInstanceId> Delete(List<DomInstance> objects)
 By default, `MaxAmountBulkOperation` will be set to 100. This means that any `CreateOrUpdate` or `Delete` operation will be able to process up to 100 DOM instances. If more than 100 instances are passed, then an error will occur.
 
 > [!IMPORTANT]
-> Since related actions (e.g. launching script actions and history tracking) might outlive a `CreateOrUpdate` or `Delete` operation, keep in mind that repeating these operations in succession can have an impact on system stability.
+> Since related actions (e.g., launching script actions and history tracking) might outlive a `CreateOrUpdate` or `Delete` operation, keep in mind that repeating these operations in succession can have an impact on system stability.
 
 ##### Unique IDs
 

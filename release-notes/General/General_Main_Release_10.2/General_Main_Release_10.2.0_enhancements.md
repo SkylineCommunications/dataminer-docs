@@ -154,7 +154,7 @@ When disk usage exceeds 90 percent on a server running an Elasticsearch database
 
 #### Trending: Trend values will now be rounded after being retrieved from the database \[ID 28840\] \[29758\]
 
-Up to now, trend data values were rounded before being stored in the database. From now on, those values will only be rounded after being retrieved from the database, i.e. before being returned to the client.
+Up to now, trend data values were rounded before being stored in the database. From now on, those values will only be rounded after being retrieved from the database, i.e., before being returned to the client.
 
 #### SLAnalytics will now add a log entry when it goes into or out of flood mode \[ID 29039\]
 
@@ -176,7 +176,7 @@ Because of a number of enhancements, overall performance has increased when the 
 
 #### DataMiner Cube - Services app: Validation of service profile definition names and service profile instance names is now consistent with the name validation routines used in the other SRM apps \[ID 29155\]
 
-In the Services app, the validation of service profile definition names and service profile instance names has now been made consistent with the name validation routines used in the other SRM apps (e.g. Profiles, Resources, Functions, etc.).
+In the Services app, the validation of service profile definition names and service profile instance names has now been made consistent with the name validation routines used in the other SRM apps (e.g., Profiles, Resources, Functions, etc.).
 
 #### NATS connection timeout can now be configured \[ID 29172\]
 
@@ -198,7 +198,7 @@ Because of a number of enhancements with regard to the cloning of ReservationIns
 
 #### Web apps: All timespan controls now support timespan grouping \[ID 29441\]
 
-All timespan controls of all web apps (e.g. Monitoring, Jobs, Ticketing, Dashboards, etc.) now support timespan grouping.
+All timespan controls of all web apps (e.g., Monitoring, Jobs, Ticketing, Dashboards, etc.) now support timespan grouping.
 
 #### DataMiner Cube - Visual Overview: Enhanced performance when loading and sorting children shapes \[ID 29448\]
 
@@ -224,7 +224,7 @@ When you opened a dashboard, up to now, its edit panel would already be loaded i
 
 #### DataMiner Cube - Visual Overview: Service child shapes will now be updated instead of recreated when a dynamic part changes \[ID 29568\]
 
-When a series of service child shapes contained a dynamic part (e.g. ChildrenFilter, ChildrenSource, etc.), up to now, all those child shapes would be recreated each time one of those dynamic parts changed. From now on, when a dynamic part changes, the child shapes will be updated instead of being recreated.
+When a series of service child shapes contained a dynamic part (e.g., ChildrenFilter, ChildrenSource, etc.), up to now, all those child shapes would be recreated each time one of those dynamic parts changed. From now on, when a dynamic part changes, the child shapes will be updated instead of being recreated.
 
 #### SLNet will now start up asynchronously in a background thread \[ID 29633\]
 
@@ -371,7 +371,7 @@ Each time a user opens a dashboard, any existing GQI queries in table or node ed
 
 #### Improved logging in case encrypted password in DB.xml cannot be retrieved \[ID 30614\]
 
-If a password is encrypted in DB.xml, but for some reason (e.g. syncing issue) DataMiner is unable to retrieve it, this will now be indicated more clearly in the logging.
+If a password is encrypted in DB.xml, but for some reason (e.g., syncing issue) DataMiner is unable to retrieve it, this will now be indicated more clearly in the logging.
 
 #### Ticket migration from Cassandra to Elasticsearch: Notice generated when unsupported characters are found in TicketFieldDescriptors \[ID 30624\]
 
@@ -482,7 +482,7 @@ A number of enhancements have been made to the behavioral anomaly detection feat
 
 #### SLAnalytics: Enhanced creation and clearance of notice events \[ID 31199\]
 
-Notice events will now be generated to inform users in case of reduced accuracy of an SLAnalytics feature due to e.g. a high CPU, database or memory load. Those events will then automatically be cleared as soon as the CPU, database or memory load drops to a normal level.
+Notice events will now be generated to inform users in case of reduced accuracy of an SLAnalytics feature due to e.g., a high CPU, database or memory load. Those events will then automatically be cleared as soon as the CPU, database or memory load drops to a normal level.
 
 Other changes:
 

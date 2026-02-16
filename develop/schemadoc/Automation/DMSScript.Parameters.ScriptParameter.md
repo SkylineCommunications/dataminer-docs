@@ -4,7 +4,7 @@ uid: DMSScript.Parameters.ScriptParameter
 
 # ScriptParameter element
 
-Defines a parameter script variable. Parameter script variables are typically used to get input from the outside world, e.g. from an operator.
+Defines a parameter script variable. Parameter script variables are typically used to get input from the outside world, e.g., from an operator.
 
 ## Parent
 

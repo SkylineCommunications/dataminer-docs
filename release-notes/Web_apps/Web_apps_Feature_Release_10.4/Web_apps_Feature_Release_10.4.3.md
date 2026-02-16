@@ -50,7 +50,7 @@ Up to now, in the template editor, only text overrides could be reset. Now all o
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-The timeline component can now display real-time updates for all GQI data sources and operators that support this, i.e. the *Get table parameter table by ID* and *Get view* GQI data sources, and the *Select* GQI operator. Data for such queries will be updated as soon as changes to the data are detected. To display these real-time updates, the *Update data* option of the component must be selected.
+The timeline component can now display real-time updates for all GQI data sources and operators that support this, i.e., the *Get table parameter table by ID* and *Get view* GQI data sources, and the *Select* GQI operator. Data for such queries will be updated as soon as changes to the data are detected. To display these real-time updates, the *Update data* option of the component must be selected.
 
 Previously, if this option was selected, data was only updated for the *Get table parameter table by ID* GQI data source, and this every 30 seconds.
 
@@ -95,7 +95,7 @@ In the Monitoring app, it is now possible to zoom and pan in visual overviews.
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-The DataMiner web apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, Automation, etc.) now all use Angular 17.
+The DataMiner web apps that use Angular (e.g., Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, Automation, etc.) now all use Angular 17.
 
 ### Fixes
 
@@ -103,7 +103,7 @@ The DataMiner web apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitor
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-Up to now, when an error occurred while creating a new dashboard, the items already created before the error occurred (e.g. the folder) would incorrectly not get cleaned up.
+Up to now, when an error occurred while creating a new dashboard, the items already created before the error occurred (e.g., the folder) would incorrectly not get cleaned up.
 
 #### Dashboards app & Low-Code Apps: List of visualizations would not contain data-related visualizations [ID 38319]
 
@@ -163,7 +163,7 @@ When configuring a *Generic map* component, it would incorrectly no longer be po
 
 In interactive automation scripts launched from a web app, it would no longer be possible to enter a decimal number of which the first digit after the separator was a zero.
 
-When you entered a decimal number of which the first digit after the separator was a zero (e.g. 4.02), both the separator and the zero would incorrectly be dropped.
+When you entered a decimal number of which the first digit after the separator was a zero (e.g., 4.02), both the separator and the zero would incorrectly be dropped.
 
 #### Dashboards app - Table component: Sorting would not always be applied [ID 38413]
 
@@ -262,7 +262,7 @@ When you tried to cancel the deletion of a query used in a component, an error c
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-When you exported table data with text fields that contained double quotes (") to a CSV file, and then tried to import that file into e.g. Microsoft Excel, the data in the file would not get imported correctly.
+When you exported table data with text fields that contained double quotes (") to a CSV file, and then tried to import that file into e.g., Microsoft Excel, the data in the file would not get imported correctly.
 
 #### Dashboards app & Low-Code Apps - GQI: Components with multiple queries would not get updated correctly [ID 38571]
 
@@ -304,4 +304,4 @@ In some cases, a *Timeline* component would incorrectly not show the selection b
 
 <!-- MR 10.3.0 [CU13] - FR 10.4.3 -->
 
-When a dashboard or low-code app was used in an insecure environment (e.g. when using HTTP instead of HTTPS), a table component would not allow you to open the context menu used to copy data.
+When a dashboard or low-code app was used in an insecure environment (e.g., when using HTTP instead of HTTPS), a table component would not allow you to open the context menu used to copy data.

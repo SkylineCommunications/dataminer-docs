@@ -12,7 +12,7 @@ You can download the tool from [DataMiner Dojo](https://community.dataminer.serv
 
 Its usage has the following limitations:
 
-- It is **not** intended for investigating synchronization issues between DMAs (e.g. files, configuration, etc.).
+- It is **not** intended for investigating synchronization issues between DMAs (e.g., files, configuration, etc.).
 
 - It should **not** be used while one or more DMAs are disconnected.
 
@@ -49,7 +49,7 @@ The number in each table cell indicates the number of events in the cache for th
 
 “[no subs]” indicates that the client DMA does not subscribe to this type of event (the tool only checks for full subscription).
 
-Double-clicking a cell opens a window with detailed information about missing events or events that are stuck for a combination of two Agents. The Pending Count at the top indicates how much this Agent is behind. If the number is high, cache differences between the Agents might be normal and are a consequence of load. The right-click menu in this window provides access to options and fixes. On the *Actions* page, you can find tools to fix issues (e.g. dropping connections between DMAs to recreate these, or clearing or re-forwarding events).
+Double-clicking a cell opens a window with detailed information about missing events or events that are stuck for a combination of two Agents. The Pending Count at the top indicates how much this Agent is behind. If the number is high, cache differences between the Agents might be normal and are a consequence of load. The right-click menu in this window provides access to options and fixes. On the *Actions* page, you can find tools to fix issues (e.g., dropping connections between DMAs to recreate these, or clearing or re-forwarding events).
 
 ### Working with the Tools tab
 

@@ -78,7 +78,7 @@ public override void DataSets(object dataDestination)
 }
 ```
 
-Lastly, you will also find one method that has a return type, i.e. *CreateReturnMessage*. This is optional. It can be used to create a message to return and have it bubble up to the calling methods. If you do not need this, you can just return null. You could consider it the "return" for the entire executor.
+Lastly, you will also find one method that has a return type, i.e., *CreateReturnMessage*. This is optional. It can be used to create a message to return and have it bubble up to the calling methods. If you do not need this, you can just return null. You could consider it the "return" for the entire executor.
 
 ```csharp
 public override Message CreateReturnMessage()

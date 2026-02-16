@@ -61,5 +61,5 @@ When you right-click an error in the list, a shortcut menu offers you the follow
 
 > [!NOTE]
 >
-> - In the DIS Comparer pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the Shift key. Use this feature to e.g. copy or suppress a number of results in one go. However, note that suppressing a number of results will only work when all selected items have the same error code.
+> - In the DIS Comparer pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the Shift key. Use this feature to e.g., copy or suppress a number of results in one go. However, note that suppressing a number of results will only work when all selected items have the same error code.
 > - Use the filter box in the top-right corner to filter the comparison results.

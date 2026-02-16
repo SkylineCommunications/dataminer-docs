@@ -4,7 +4,7 @@ uid: Standalone_BPA_Executor
 
 # Standalone BPA Executor
 
-The *Standalone BPA Executor* can be used to run BPA (i.e. Best Practices Analysis) tests outside of DataMiner Cube. These tests can be used to verify that a specific part of a DataMiner setup conforms with Skyline recommendations. For example, a BPA test can be used to verify that all DMAs in a cluster are configured to use the same time server.
+The *Standalone BPA Executor* can be used to run BPA (i.e., Best Practices Analysis) tests outside of DataMiner Cube. These tests can be used to verify that a specific part of a DataMiner setup conforms with Skyline recommendations. For example, a BPA test can be used to verify that all DMAs in a cluster are configured to use the same time server.
 
 This tool is available on DMA servers in the folder `C:\Skyline DataMiner\Tools\StandaloneBpaExecutor`.
 

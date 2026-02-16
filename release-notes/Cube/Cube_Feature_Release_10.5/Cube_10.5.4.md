@@ -31,7 +31,7 @@ At start-up, the DataMiner Cube desktop app will now show a splash screen when t
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When you are editing an element, you can now indicate that it should run in isolation mode, i.e. in its own SLProtocol and SLScripting process.
+When you are editing an element, you can now indicate that it should run in isolation mode, i.e., in its own SLProtocol and SLScripting process.
 
 To do so, go to *Advanced element settings*, and select the *Run in isolation mode* option.
 
@@ -69,7 +69,7 @@ The legacy *InterClient* feature has now been removed from DataMiner Cube.
 
 Up to now, the credentials library would only be aware of a subset of all SNMPv3 authentication and encryption algorithms. Because of a number of enhancements, it will now be fully aware of all supported algorithms.
 
-Throughout the Cube UI, in selection boxes listing these SNMPv3 authentication and encryption algorithms, the algorithms will now be sorted by strength (ascending). Also, wherever a *Security level and protocol* setting has to specified for an SNMPv3 connection (e.g. when configuring an SNMPv3 element), that setting will now by default be set to "AuthPriv".
+Throughout the Cube UI, in selection boxes listing these SNMPv3 authentication and encryption algorithms, the algorithms will now be sorted by strength (ascending). Also, wherever a *Security level and protocol* setting has to specified for an SNMPv3 connection (e.g., when configuring an SNMPv3 element), that setting will now by default be set to "AuthPriv".
 
 #### System Center: Not possible to configure offloads when swarming is enabled [ID 41953]
 
@@ -200,7 +200,7 @@ When DataMiner Cube received a `CorrelationDetailsEventMessage` without ever rec
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When the right-click menu of a table in e.g. an element card displayed values of dependency parameters, in some cases, parameter values containing curly braces (e.g. "{test one}") would incorrectly not be displayed.
+When the right-click menu of a table in e.g., an element card displayed values of dependency parameters, in some cases, parameter values containing curly braces (e.g., "{test one}") would incorrectly not be displayed.
 
 Example of how a right-click menu displaying dependency parameters can be configured in a *protocol.xml* file:
 
@@ -218,7 +218,7 @@ When, in a trend graph showing trend data of two parameters, the value of the fi
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-Up to now, when placeholders (e.g. `[thisusername]`) were used in alarm filters made up of different segments enclosed in brackets (e.g. [...] OR [...]), the placeholders in the first segment would not get resolved.
+Up to now, when placeholders (e.g., `[thisusername]`) were used in alarm filters made up of different segments enclosed in brackets (e.g., [...] OR [...]), the placeholders in the first segment would not get resolved.
 
 #### DataMiner Cube desktop app: Problem when using both the '/Modify' and the '/Silent 'command-line arguments [ID 42267]
 

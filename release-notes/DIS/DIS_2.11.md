@@ -19,7 +19,7 @@ This option allows you to select a particular piece of text and have it copied a
 1. If you want to insert a variable (or a formula including a variable) in the text to be repeated, then do the following:
 
     - Place your cursor where you want the variable of formula to be inserted, and click *Insert placeholder*.
-    - If necessary, change the default placeholder that appeared at the location where you placed your cursor: a single value “x” delimited by “$” characters. You could change it to e.g. “$x+5$”.
+    - If necessary, change the default placeholder that appeared at the location where you placed your cursor: a single value “x” delimited by “$” characters. You could change it to e.g., “$x+5$”.
 
 1. At the bottom of the window, select *Overwrite Selection*, if you want the text you selected to be overwritten by the text that is currently displayed in the *Preview* box.
 1. Click *OK* to have the text in the *Preview* box pasted in the editor.
@@ -115,7 +115,7 @@ From now on, HTTP headers are split into three categories:
 
 - Request headers
 - Response headers
-- Entity headers (i.e. headers that can be used both in a request and a response)
+- Entity headers (i.e., headers that can be used both in a request and a response)
 
 #### IDE: Enhanced table snippets \[ID 18325\]
 

@@ -24,7 +24,7 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
 ## Project setup and Cypress installation
 
-1. Create a folder for your project (e.g. `C:\Testing`) and open it in Visual Studio Code.
+1. Create a folder for your project (e.g., `C:\Testing`) and open it in Visual Studio Code.
 
 1. Initialize the project and install Cypress:
 
@@ -181,7 +181,7 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
    ```javascript
    describe('Test Interactive Automation Script', () => {
        // Define the necessary variables and replace with your specific details
-       const dmaAddress = ''; // Replace with the IP or hostname of a DMA (e.g. 'localhost')
+       const dmaAddress = ''; // Replace with the IP or hostname of a DMA (e.g., 'localhost')
        const username = ''; // Replace with username of a test user
        const password = ''; // Replace with password of the test user
        const buttonLabel = ''; // Replace with the button label

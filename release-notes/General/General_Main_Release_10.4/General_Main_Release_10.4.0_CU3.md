@@ -60,8 +60,8 @@ GQI will now log the following metrics in the `C:\Skyline DataMiner\Logging\GQI\
 
 - Duration of the individual GQI requests:
 
-  - Request type (e.g. GenIfOpenSessionRequest)
-  - User ID (e.g. SKYLINE2\FirstName)
+  - Request type (e.g., GenIfOpenSessionRequest)
+  - User ID (e.g., SKYLINE2\FirstName)
   - Duration (in ms)
 
 - Duration of the first page of a session (when `SessionOptions.OptimizeType` is "NextPage"):
@@ -80,7 +80,7 @@ GQI will now log the following metrics in the `C:\Skyline DataMiner\Logging\GQI\
   - User ID
   - Total number of rows fetched across all pages
   - Number of pages
-  - Total duration (in ms), i.e. the accumulated time of the individual pages
+  - Total duration (in ms), i.e., the accumulated time of the individual pages
 
   > [!NOTE]
   > For queries that retrieve all data at once.
@@ -166,13 +166,13 @@ Up to now, SLProtocol would add the following line in the log file of an element
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
-When a protocol that was being used by elements in a redundancy group was deleted, the redundancy group and the derived element would no longer be visible in the UI after a DataMiner restart, even if their definitions existed on disk. As a result, it would not be possible to delete the redundancy group in a DataMiner client application (e.g. DataMiner Cube).
+When a protocol that was being used by elements in a redundancy group was deleted, the redundancy group and the derived element would no longer be visible in the UI after a DataMiner restart, even if their definitions existed on disk. As a result, it would not be possible to delete the redundancy group in a DataMiner client application (e.g., DataMiner Cube).
 
 #### Service & Resource Management: Problems caused by a failed midnight synchronization of the Resource Manager [ID 39420]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
-If the midnight synchronization of the Resource Manager fails, it is retried up to 5 times. Up to now, when a synchronization retry was triggered, the internal caches of the Resource Manager would incorrectly be loaded twice. This could lead to e.g. bookings not being starting.
+If the midnight synchronization of the Resource Manager fails, it is retried up to 5 times. Up to now, when a synchronization retry was triggered, the internal caches of the Resource Manager would incorrectly be loaded twice. This could lead to e.g., bookings not being starting.
 
 #### SLAutomation: Problem when clearing the internal parameter cache [ID 39441]
 

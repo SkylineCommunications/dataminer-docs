@@ -22,7 +22,7 @@ For example:
 
 IDP will poll each \[IDP_DR\_\*\] placeholder and try to resolve it when provisioning a discovered element. These placeholders can be used in the element name, element description, properties, etc.
 
-In case a placeholder cannot be polled (e.g. an HTTP placeholder on an SNMP-only device), the placeholder will not be resolved during provisioning and the text of the placeholder itself will be filled in instead of a value.
+In case a placeholder cannot be polled (e.g., an HTTP placeholder on an SNMP-only device), the placeholder will not be resolved during provisioning and the text of the placeholder itself will be filled in instead of a value.
 
 #### Activity management toggle buttons \[ID 30838\]
 

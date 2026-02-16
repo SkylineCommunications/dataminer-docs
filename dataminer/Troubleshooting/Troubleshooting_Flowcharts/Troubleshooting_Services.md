@@ -34,7 +34,7 @@ ImpactOrStateIssue{{Service impact or state issue?}}
 StateIssue{{Check SLElement service states in Client Test Tool => Diagnostics => DMA. Check __service_'serviceName'.txt logging.}}
 ImpactIssue{{Are there duplicate display keys from partially included elements?}}
 NotFixedProtocolIssue{{Rows should have unique display keys. Contact the author of your element's connector.}}
-IsolateIssue{{Try to isolate and simulate the actual issue. e.g. if the elements are partially included check if it also happens with full inclusion. e.g. does the issue occur on standalone or column parameters?}}
+IsolateIssue{{Try to isolate and simulate the actual issue. e.g., if the elements are partially included check if it also happens with full inclusion. e.g., does the issue occur on standalone or column parameters?}}
 Alarms{{If your issue is not resolved, click this node to go to the alarm flow.}}
 %% Connect blocks %%
 START --- GetDELT

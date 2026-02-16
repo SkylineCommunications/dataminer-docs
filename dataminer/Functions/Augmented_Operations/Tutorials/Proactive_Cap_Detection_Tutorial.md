@@ -130,7 +130,7 @@ In the previous step, you explored how proactive cap detection can identify issu
 
 1. Right-click the element *Proactive Tutorial - SFP Monitor* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
 
-1. Enter a name for the alarm template, e.g. *RX Monitoring*, and click *OK*.
+1. Enter a name for the alarm template, e.g., *RX Monitoring*, and click *OK*.
 
 1. Select the checkbox in the *MON* column for the parameter *SFPs: Optical RX Power*.
 
@@ -220,7 +220,7 @@ In this final step, you will apply what you have learned in this tutorial throug
 
 1. Use the alarm template to configure proactive alarming for the *Free Disk Space* parameter. The parameter's range has a lower limit of 0 GB.
 
-   Your goal is to configure proactive alarming so that a real alarm (i.e. not just a suggestion event) with severity *Warning* is triggered before the disk becomes full. Refer to the image below for the desired outcome.
+   Your goal is to configure proactive alarming so that a real alarm (i.e., not just a suggestion event) with severity *Warning* is triggered before the disk becomes full. Refer to the image below for the desired outcome.
 
 ![Predicted alarm with severity warning for Free Disk Space on AMS Server](~/dataminer/images/Proactive_Cap_Detection_Tutorial_AMS_Alarm.png)
 
@@ -240,7 +240,7 @@ In this final step, you will apply what you have learned in this tutorial throug
 > Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as a token of your accomplishment.
 
 > [!IMPORTANT]
-> We want to keep improving our proactive cap detection capabilities, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us good examples of detected predicted alarms and/or situations where the proactive cap detection can be improved (e.g. no alarm was predicted or an alarm was predicted for something that is not problematic).
+> We want to keep improving our proactive cap detection capabilities, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us good examples of detected predicted alarms and/or situations where the proactive cap detection can be improved (e.g., no alarm was predicted or an alarm was predicted for something that is not problematic).
 >
 > Use the following email format to send us your examples:
 >

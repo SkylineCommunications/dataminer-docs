@@ -166,7 +166,7 @@ When an element was restarted multiple times in rapid succession, in some cases,
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When you stopped an element or performed a Failover switch when another action was being executed (e.g. a parameter set being performed by a QAction), in some cases, a deadlock could occur.
+When you stopped an element or performed a Failover switch when another action was being executed (e.g., a parameter set being performed by a QAction), in some cases, a deadlock could occur.
 
 #### Service & Resource Management: Reservation ID of a service created from a service template would disappears when the template was re-applied [ID 43090]
 
@@ -279,7 +279,7 @@ In some cases, a runtime error could be thrown when a DVE child element was dele
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
+When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g., DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
 
 #### StorageModule DcM would fail to read an element XML file [ID 43350]
 

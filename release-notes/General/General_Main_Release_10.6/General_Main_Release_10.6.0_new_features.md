@@ -52,9 +52,9 @@ When an element is swarmed to the DataMiner Agent that is hosting it already, an
 
 Currently, the Swarming feature provides the following capabilities:
 
-- As a DataMiner System Admin, you can apply maintenance (e.g. Windows updates) on a live cluster, Agent by Agent, by temporarily moving functionalities away to other Agents in the cluster.
+- As a DataMiner System Admin, you can apply maintenance (e.g., Windows updates) on a live cluster, Agent by Agent, by temporarily moving functionalities away to other Agents in the cluster.
 
-- As a DataMiner System Admin, you can easily extend your system with an extra node and move functionalities from existing nodes to new nodes, so you can rebalance your cluster (i.e. spread the load across all nodes).
+- As a DataMiner System Admin, you can easily extend your system with an extra node and move functionalities from existing nodes to new nodes, so you can rebalance your cluster (i.e., spread the load across all nodes).
 
 - Swarming makes it possible to recover functionalities from failing nodes by moving activities hosted on such a node to the remaining nodes.
 
@@ -312,7 +312,7 @@ As creating additional SLProtocol processes has an impact on the resource usage 
 
 From those 50 SLProtocol processes, 10 processes will be reserved for elements that are not running in isolation mode. This means, that only 40 elements will be able to run in isolation mode at any given time. However, the notice that will appear each time an attempt is made to start an additional element in isolation mode will mention the 50-element limit.
 
-Reducing the number of SLProtocol processes in the *DataMiner.xml* file will reduce the number of reserved processes. However, increasing the number of SLProtocol processes to above 50 will keep the reserved number of SLProtocol processes to 50 (i.e. the maximum number of SLProtocol processes).
+Reducing the number of SLProtocol processes in the *DataMiner.xml* file will reduce the number of reserved processes. However, increasing the number of SLProtocol processes to above 50 will keep the reserved number of SLProtocol processes to 50 (i.e., the maximum number of SLProtocol processes).
 
 For example, if 15 SLProtocol processes are configured in the *DataMiner.xml* file, and 45 elements are configured to run in isolation mode, then:
 
@@ -365,14 +365,14 @@ moduleSettings.DomManagerSettings.ScriptSettings.OnUpdateTriggerConditions = new
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
 
-For each resource, you can now define an availability window, i.e. a period during which the resource is available.
+For each resource, you can now define an availability window, i.e., a period during which the resource is available.
 
 An availability window has the following (optional) properties:
 
 | Property | Description |
 |----------|-------------|
-| AvailableFrom  | The start time of the availability window. Default value: `DateTimeOffset.MinValue` (i.e. no start time). |
-| AvailableUntil | The end time of the availability window. Default value: `DateTimeOffset.MaxValue` (i.e. no end time). |
+| AvailableFrom  | The start time of the availability window. Default value: `DateTimeOffset.MinValue` (i.e., no start time). |
+| AvailableUntil | The end time of the availability window. Default value: `DateTimeOffset.MaxValue` (i.e., no end time). |
 | RollingWindowConfiguration | The size of the availability window relative to the current time.<br>For example, if you set this property to 30 days, the resource will be available for booking until 30 days from now.<br>If both a fixed end time and a rolling window are set, the earlier time of the two will be used. For example, if the fixed end time is 15 days from now, but the rolling window is 30 days, the resource will no longer be available after the 15-day mark, even though the rolling window would extend to 30 days. |
 
 When you use the *GetEligibleResources* API call to retrieve resources available during a specific time range, resources that are not available for the entire requested range will not be returned.
@@ -426,7 +426,7 @@ foreach (var range in availableRanges)
 }
 ```
 
-The `AvailabilityContext` parameter has a property `Now`, which can be used to override the "now" timestamp in order to calculate e.g. the current end of a rolling window. For regular use cases, there is no need to override this. This is mainly used for testing purposes and to ensure a consistent timestamp when performing internal checks.
+The `AvailabilityContext` parameter has a property `Now`, which can be used to override the "now" timestamp in order to calculate e.g., the current end of a rolling window. For regular use cases, there is no need to override this. This is mainly used for testing purposes and to ensure a consistent timestamp when performing internal checks.
 
 #### Information events of type 'script started' will no longer be generated when an automation script is triggered by the Scheduler app [ID 41970]
 
@@ -475,11 +475,11 @@ If you do want such information events to be generated, you can add the `SkipInf
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. The RAD functionality works in three different steps:
 
-1. First you need to [configure one or more groups of parameters](#configuring-relational-anomaly-groups) that should be monitored together, e.g. a main bit rate and backup bit rate.
+1. First you need to [configure one or more groups of parameters](#configuring-relational-anomaly-groups) that should be monitored together, e.g., a main bit rate and backup bit rate.
 
-1. The algorithm will then learn the relations between the parameters, e.g. learn that main and backup are typically equal. This is done automatically by the system, but you can manually specify a training range.
+1. The algorithm will then learn the relations between the parameters, e.g., learn that main and backup are typically equal. This is done automatically by the system, but you can manually specify a training range.
 
-1. Whenever a detected relation is broken, e.g. the main is no longer equal to the backup, RAD will generate suggestion events in the Alarm Console. These suggestion events will then be grouped into a single incident so that it is shown on a single line in the Alarm Console. When you clear such an incident, all its base alarms (i.e. the suggestion events created by Relational anomaly detection) will also be cleared.
+1. Whenever a detected relation is broken, e.g., the main is no longer equal to the backup, RAD will generate suggestion events in the Alarm Console. These suggestion events will then be grouped into a single incident so that it is shown on a single line in the Alarm Console. When you clear such an incident, all its base alarms (i.e., the suggestion events created by Relational anomaly detection) will also be cleared.
 
 ##### Prerequisites
 
@@ -496,7 +496,7 @@ You can create two types of groups:
 - Single groups, which use their own dedicated relational anomaly model trained solely on that group's parameters.
 - Shared model groups, which allow multiple relational anomaly subgroups to utilize a common detection model, leveraging their combined data.
 
-Shared model groups also allow [fleet outlier detection](xref:Relational_anomaly_detection#identifying-anomalous-subgroups-in-a-shared-model-group), i.e. the identification of anomalous subgroups within a shared model group. This allows you to quickly identify individual assets or subgroups that behave unusually compared to their peers.
+Shared model groups also allow [fleet outlier detection](xref:Relational_anomaly_detection#identifying-anomalous-subgroups-in-a-shared-model-group), i.e., the identification of anomalous subgroups within a shared model group. This allows you to quickly identify individual assets or subgroups that behave unusually compared to their peers.
 
 ##### History set parameters
 
@@ -587,7 +587,7 @@ Internally, this new *NT_CLEAR_PARAMETER* call will now also be used by the exis
 >
 > - *NT_CLEAR_PARAMETER* cannot be used to clear table columns.
 > - This new NotifyProtocol method can be invoked from within a QAction by using the `protocol.ClearParameter(<paramId>`) function.
-> - When using `ProtocolExt`, you can now use e.g. `protocol.getRequests.Clear()` to clear a table parameter named *getRequests*. Internally, this new `Clear()` function will then execute a `protocol.ClearAllKeys(<getRequests parameter ID>)` call.
+> - When using `ProtocolExt`, you can now use e.g., `protocol.getRequests.Clear()` to clear a table parameter named *getRequests*. Internally, this new `Clear()` function will then execute a `protocol.ClearAllKeys(<getRequests parameter ID>)` call.
 
 #### Automation: Separate log file for every automation script that is run [ID 42572]
 
@@ -694,9 +694,9 @@ To define that the value of a particular parameter should be used as context ID 
 </Param>
 ```
 
-If the parameter is not initialized or is set to an empty string, the default parameter value will be used (i.e. an empty string).
+If the parameter is not initialized or is set to an empty string, the default parameter value will be used (i.e., an empty string).
 
-The context name and context ID can be changed at runtime, and are not saved by default. When the element is restarted, the parameter data will be lost unless the `save` attribute of the parameter was set to true (e.g. `<Param id="1" save="true">`).
+The context name and context ID can be changed at runtime, and are not saved by default. When the element is restarted, the parameter data will be lost unless the `save` attribute of the parameter was set to true (e.g., `<Param id="1" save="true">`).
 
 #### Automation scripts: Generating information events when editing a connection in a QAction [ID 42783]
 
@@ -764,7 +764,7 @@ To use the entry point, add a method with the following signature to the script:
 public RequestScriptInfoOutput OnRequestScriptInfoRequest(IEngine engine, RequestScriptInfoInput inputData)
 ```
 
-Both `RequestScriptInfoInput` and `RequestScriptInfoOutput` have a `Data` property of type `Dictionary<string, string>`, which can be used to exchange information between the script and other code. We strongly recommend keeping the passed data below 20 MB (i.e. 10 million characters). If larger chunks need to be passed, a reference to that information should be passed instead.
+Both `RequestScriptInfoInput` and `RequestScriptInfoOutput` have a `Data` property of type `Dictionary<string, string>`, which can be used to exchange information between the script and other code. We strongly recommend keeping the passed data below 20 MB (i.e., 10 million characters). If larger chunks need to be passed, a reference to that information should be passed instead.
 
 It is allowed to pass null as input data and to return null as output data.
 
@@ -852,7 +852,7 @@ The `DomInstanceNetworkAttachmentSettings` class contains the following properti
 
   The UNC path to the network share where the attachments should be saved.
 
-  This path has to start with `\\` and cannot contain any characters that are illegal for a path (e.g. "<") or strings that allow directory traversal (e.g. "../").
+  This path has to start with `\\` and cannot contain any characters that are illegal for a path (e.g., "<") or strings that allow directory traversal (e.g., "../").
 
   When the path is left empty, attachments are saved to the `C:\Skyline DataMiner\Documents` folder. This is the default behavior.
 
@@ -860,7 +860,7 @@ The `DomInstanceNetworkAttachmentSettings` class contains the following properti
 
   The ID of the credentials in the credentials library that will be used to add the attachment to the network share.
 
-  These credentials must be of type *Username and password credentials* and must be the credentials of a user that has read/write access to the path defined in `NetworkSharePath`. In case you have a Windows network share, you need to add the domain name (for a domain user) or hostname (for a local user) in front of the username (e.g. "MYPC\userName").
+  These credentials must be of type *Username and password credentials* and must be the credentials of a user that has read/write access to the path defined in `NetworkSharePath`. In case you have a Windows network share, you need to add the domain name (for a domain user) or hostname (for a local user) in front of the username (e.g., "MYPC\userName").
 
 > [!NOTE]
 >
@@ -872,7 +872,7 @@ The `DomInstanceNetworkAttachmentSettings` class contains the following properti
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-The `ClientRequestMessage` class has been extended with a new `TraceInfo` class, which has one `TraceId` property of type string. In a later phase, this property will be used to track requests across multiple modules (e.g. queries coming from ad hoc data sources).
+The `ClientRequestMessage` class has been extended with a new `TraceInfo` class, which has one `TraceId` property of type string. In a later phase, this property will be used to track requests across multiple modules (e.g., queries coming from ad hoc data sources).
 
 CrudLoggerProxy logging will also support trace IDs for CRUD operations by the following managers:
 
@@ -916,7 +916,7 @@ Also, the trace ID will be logged for the following messages:
   2025-07-02 15:05:04.329|277|Facade.HandleMessage|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Incoming (RTManagerGUI.exe (FirstName LastName @ GTC-USERNAME)): Skyline.DataMiner.Net.Messages.ManagerStoreCreateRequest`1[Skyline.DataMiner.Net.Apps.DataMinerObjectModel.DomDefinition]
   ```
 
-The logging of a DOM manager will now also contain a line indicating the start of status transitions. This will be logged on information level 3, i.e. the same type and level as regular CRUD actions:
+The logging of a DOM manager will now also contain a line indicating the start of status transitions. This will be logged on information level 3, i.e., the same type and level as regular CRUD actions:
 
 ```txt
 2025/07/02 15:05:11.110|SLNet.exe|HandleStatusTransitionRequest|INF|3|269|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Handling status transition with ID 'new_to_closed' for instance with ID '1ff720a3-0aa2-4548-8b51-d8b975e19ea4'.
@@ -1069,7 +1069,7 @@ It is now possible to configure DOM instance security based on the DOM definitio
 
 The following important changes have been made:
 
-- Only users who have been granted the *Modules > System configuration > Object Manager > Module Settings* user permission will be allowed to create, update, and delete DOM configuration objects (i.e. section definitions, DOM definitions, DOM behavior definitions, and DOM templates). This means that, if you want to deploy or change a DOM model, you will now need this permission.
+- Only users who have been granted the *Modules > System configuration > Object Manager > Module Settings* user permission will be allowed to create, update, and delete DOM configuration objects (i.e., section definitions, DOM definitions, DOM behavior definitions, and DOM templates). This means that, if you want to deploy or change a DOM model, you will now need this permission.
 
 - The DOM module settings now include a new `LinkSecuritySettings` configuration object that will allow you to link a DataMiner user group to a DOM definition by ID. This object contains a collection of `GroupLink` objects, each containing the following properties:
 
@@ -1090,7 +1090,7 @@ The following important changes have been made:
 
 - If a DOM module with definition-level security enabled contains multiple DOM definitions, no one will be able to access the instances of DOM definitions for which no `GroupLink` objects have been defined yet.
 
-- Currently, `GroupLink` objects grant full access (i.e. read access as well as write access) to the instances of the DOM definitions specified in them.
+- Currently, `GroupLink` objects grant full access (i.e., read access as well as write access) to the instances of the DOM definitions specified in them.
 
 ##### Filtering behavior & restrictions
 
@@ -1218,7 +1218,7 @@ In the *SLNetClientTest* tool, at the bottom of the main window, a new filter bo
 
 After you select the checkbox in front of it, it will allow you to filter the message list using a regular expression.
 
-This new filter box should only be used when no new messages will be added to the list, e.g. when inspecting an *\*.slnetdump* file.
+This new filter box should only be used when no new messages will be added to the list, e.g., when inspecting an *\*.slnetdump* file.
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
@@ -1282,8 +1282,8 @@ engine.WebUIVersion = WebUIVersion.V2
 
 The URL parameter `useNewIASInputComponents` has priority over the UI version set in the script.
 
-- If you use `useNewIASInputComponents=true`, the script will use the new UI version (i.e. V2), even when V1 was set in the script.
-- If you use `useNewIASInputComponents=false`, the script will use the current UI version (i.e. V1), even when V2 was set in the script.
+- If you use `useNewIASInputComponents=true`, the script will use the new UI version (i.e., V2), even when V1 was set in the script.
+- If you use `useNewIASInputComponents=false`, the script will use the current UI version (i.e., V1), even when V2 was set in the script.
 
 > [!IMPORTANT]
 > This feature is only supported for interactive automation scripts executed in web apps. It is not supported for interactive automation scripts executed in DataMiner Cube.
@@ -1304,7 +1304,7 @@ Also, the default file name has been changed from `Report.pdf` to `<dashboard na
 
 On top of [DataMiner Object Models: Definition-level security [ID 43380] [ID 43589]](#dataminer-object-models-definition-level-security-id-43380-id-43589), which allows you to grant user groups access to all DOM instances of a DOM definition, it is now also possible to allow user groups access to an individual DOM instance based on whether that DOM instance contains at least one of a specified set of values for a specified FieldDescriptor.
 
-For example, the user group *London employees* will only be able to read the "Job" instances where the *Assigned office* field (i.e. a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
+For example, the user group *London employees* will only be able to read the "Job" instances where the *Assigned office* field (i.e., a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
 
 ##### Limitations
 
@@ -1358,4 +1358,4 @@ When `FieldValueReference` values are saved in the `ModuleSettings`, the followi
 - Check if the list of values is not empty. If the list is empty, a `DomManagerSettingsErrorData` error will be returned with reason `DomSecurityFieldValueReferenceHasNoValues`.
 - Check if the list of values does not contain more than 10 items. If the list contains more than 10 items, a `DomManagerSettingsErrorData` error will be returned with reason `DomSecurityFieldValueReferenceHasTooManyValues`.
 
-In all errors listed above, the `ErrorData` properties `GroupName` and `DomDefinitionId` can be used to find out which references are invalid. The third error also contains a `Limit` property that contains the max number of values (i.e. 10).
+In all errors listed above, the `ErrorData` properties `GroupName` and `DomDefinitionId` can be used to find out which references are invalid. The third error also contains a `Limit` property that contains the max number of values (i.e., 10).

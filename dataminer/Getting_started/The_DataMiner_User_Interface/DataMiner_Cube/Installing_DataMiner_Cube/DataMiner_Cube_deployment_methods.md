@@ -82,7 +82,7 @@ Below you can find an overview of the different methods that can be used to depl
 - The `DataMiner Cube.msi` packages contain the following optional features (which are not exposed in the UI wizard):
 
   - *MainFeature*: CubeLauncher + one Cube version (mandatory).
-  - *Autorun*: Adds a registry key to show the CubeLauncher icon in the notification area (i.e. "systray") at logon for all users.
+  - *Autorun*: Adds a registry key to show the CubeLauncher icon in the notification area (i.e., "systray") at logon for all users.
 
     - If enabled, users cannot disable the autorun feature.
     - If not enabled, each user can choose to enable the autorun feature.
@@ -101,7 +101,7 @@ Below you can find an overview of the different methods that can be used to depl
   msiexec /i CubeVersion-10.2.1.msi ADDLOCAL=ALL
   ```
 
-  Installing multiple `DataMiner Cube.msi` packages side-by-side will keep the latest version of DataMinerCube.exe (i.e. the launcher) in place:
+  Installing multiple `DataMiner Cube.msi` packages side-by-side will keep the latest version of DataMinerCube.exe (i.e., the launcher) in place:
 
   - Installing an older version after a newer version will not overwrite the launcher.
   - Uninstalling the newest version will not roll back the launcher to the previously installed version.

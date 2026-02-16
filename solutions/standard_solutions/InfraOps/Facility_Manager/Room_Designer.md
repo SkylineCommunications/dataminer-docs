@@ -38,7 +38,7 @@ You can adjust the way the grid is displayed by pressing specific keys on the ke
 
       ![Message when adding a rack outside the grid](~/solutions/images/Facility_Manager_Warning_When_Selecting_A_Rack_That_Goes_Outside_Of_The_Limits_Of_The_Room.png)
 
-   1. Optionally, customize the color and orientation (i.e. vertical or horizontal) to adjust how the rack will be displayed.
+   1. Optionally, customize the color and orientation (i.e., vertical or horizontal) to adjust how the rack will be displayed.
 
    1. Click *Assign*.
 

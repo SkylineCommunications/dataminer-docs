@@ -56,7 +56,7 @@ At present, the following types of Catalog items are supported:
 
 ### Versioning of Catalog items
 
-Catalog items can have multiple versions. To make sure that the versioning of items is easy to understand for everyone, [semantic versioning](https://semver.org/) is recommended. Extra labels can be assigned to versions to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
+Catalog items can have multiple versions. To make sure that the versioning of items is easy to understand for everyone, [semantic versioning](https://semver.org/) is recommended. Extra labels can be assigned to versions to indicate that a certain version is not an official release (e.g., 1.2.3-alpha).
 
 For Catalog items that follow semantic versioning, versions are grouped by **range**. Versions following semantic version A.B.C.D will be displayed in an A.B.C range, versions following semantic version A.B.C will be displayed in an A range, and all other version formats will be displayed in the "Other" range.<!-- RN 41243 -->
 
@@ -69,7 +69,7 @@ The Catalog will recommend certain versions based on the following conditions:
 - If neither of the above apply, the latest version of the highest active range will be recommended.
 
 > [!NOTE]
-> Versions and ranges that are not supported (i.e. deprecated ranges and versions marked as pre-release or unlisted) are not shown by default. To view these, use the *Unsupported versions* toggle button.<!-- RN 39903 -->
+> Versions and ranges that are not supported (i.e., deprecated ranges and versions marked as pre-release or unlisted) are not shown by default. To view these, use the *Unsupported versions* toggle button.<!-- RN 39903 -->
 
 > [!TIP]
 > For detailed information about semantic versioning practices and best practices for the creation of Catalog items, see [Best practices when creating Catalog items](xref:Best_Practices_When_Creating_Catalog_Items#use-semantic-versioning).

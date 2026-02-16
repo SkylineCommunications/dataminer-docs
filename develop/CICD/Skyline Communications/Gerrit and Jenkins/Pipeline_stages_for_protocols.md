@@ -106,7 +106,7 @@ Please note the following
 
 - Multiple task IDs are supported. If there is no task ID, the pipeline will fail early and provide a comment indicating the problem.
 
-- In case of special situations where a fix needs to be applied to over 5 drivers, a task still needs to be assigned to the version with the fix. This task cannot be a Driver Development, Driver Issue or New Driver Feature task because those types of tasks can only be linked to a single driver. You can get around this limitation by adding a task of a different type (e.g. Consultancy or Support). Tasks that are not of type Driver Development, Driver Issue or New Driver Feature will allow the pipeline to run, but the task and driver installation record registration will not be performed automatically.
+- In case of special situations where a fix needs to be applied to over 5 drivers, a task still needs to be assigned to the version with the fix. This task cannot be a Driver Development, Driver Issue or New Driver Feature task because those types of tasks can only be linked to a single driver. You can get around this limitation by adding a task of a different type (e.g., Consultancy or Support). Tasks that are not of type Driver Development, Driver Issue or New Driver Feature will allow the pipeline to run, but the task and driver installation record registration will not be performed automatically.
 
 - Remaining manual actions:
 
@@ -194,17 +194,17 @@ This stage executes the integration test projects. For solutions that consist of
 This stage performs SonarQube C# code analysis on the QAction code.
 
 > [!TIP]
-> It is possible to exclude some items from analysis (e.g. auto-generated code). For more information on how to exclude items from analysis, refer to <xref:SonarQube>.
+> It is possible to exclude some items from analysis (e.g., auto-generated code). For more information on how to exclude items from analysis, refer to <xref:SonarQube>.
 
 ## Initialize validator
 
 This stage initializes the validator settings by obtaining the previous version from SVN and running the validator on the previous version.
 
-To indicate on which version a protocol is based, the *basedOn* attribute can be used. In case you create a new minor version, e.g. A.B.C.D where D \> 1, and you do not specify the previous version explicitly, the previous version will be assumed to be the previous minor version: A.B.C.D-1.
+To indicate on which version a protocol is based, the *basedOn* attribute can be used. In case you create a new minor version, e.g., A.B.C.D where D \> 1, and you do not specify the previous version explicitly, the previous version will be assumed to be the previous minor version: A.B.C.D-1.
 
-In case you create a new major or system range (i.e. D equals 1, and B or C do not equal 0), e.g. 1.1.0.1 or 1.0.1.1, then you are required to explicitly specify the version this protocol is based on.
+In case you create a new major or system range (i.e., D equals 1, and B or C do not equal 0), e.g., 1.1.0.1 or 1.0.1.1, then you are required to explicitly specify the version this protocol is based on.
 
-In case you create a new branch version, e.g. 2.0.0.1, and you do not specify a based on version, then this will be assumed to be a brand-new development. The Validator quality gate settings for an initial version will therefore be applied.
+In case you create a new branch version, e.g., 2.0.0.1, and you do not specify a based on version, then this will be assumed to be a brand-new development. The Validator quality gate settings for an initial version will therefore be applied.
 
 ## Run validator XML
 
@@ -264,7 +264,7 @@ Additionally, the following information in the checklist itself should correspon
 
 This stage is responsible for creating a DataMiner Test Package (.dmt). The test package includes references to the simulation files to use when running the test package.
 
-This stage will be skipped if the protocol version is not an initial version of a range (i.e. the Minor value of the Version is not equal to 1).
+This stage will be skipped if the protocol version is not an initial version of a range (i.e., the Minor value of the Version is not equal to 1).
 
 No test package will be created if any of the following is applicable:
 
@@ -293,7 +293,7 @@ In order for the pipeline to generate a test package, all you need to do is prov
 > - In case multiple tasks are defined, which results in multiple customers, providing simulation files for only one customer is sufficient.
 > - In case no simulation files were found by the CI/CD for any of the expected customers, the pipeline will perform a fallback to a simulation of another customer (if present) for this version.
 
-A simulation must be provided for each connection of the protocol. The **name of the simulation file** must be *Connection\_**\<connectionNumber>*, where *\<connectionNumber>* denotes the zero-based connection number, e.g. *Connection_0*.
+A simulation must be provided for each connection of the protocol. The **name of the simulation file** must be *Connection\_**\<connectionNumber>*, where *\<connectionNumber>* denotes the zero-based connection number, e.g., *Connection_0*.
 
 For **SNMP simulations**, two files should be provided:
 
@@ -328,7 +328,7 @@ The quality gate will fail as soon as one test fails.
 
 ### Validator
 
-The quality gate verifies whether the protocol does not exceed any of the limits set for the validator quality gate. For initial protocols (i.e. version 1.0.0.1), the following limits are configured:
+The quality gate verifies whether the protocol does not exceed any of the limits set for the validator quality gate. For initial protocols (i.e., version 1.0.0.1), the following limits are configured:
 
 - Critical: 0
 
@@ -338,13 +338,13 @@ The quality gate verifies whether the protocol does not exceed any of the limits
 
 - Warning: No limitation
 
-For non-initial versions, the validator quality gate settings will be configured based on the results of the previous version (i.e. the version this protocol version is based on):
+For non-initial versions, the validator quality gate settings will be configured based on the results of the previous version (i.e., the version this protocol version is based on):
 
 - Critical issues: 0 allowed
 
-- Major issues: Must not exceed the major issue count of the previous version (i.e. the version this protocol version is based on).
+- Major issues: Must not exceed the major issue count of the previous version (i.e., the version this protocol version is based on).
 
-- Minor issues: Must not exceed the minor issue count of the previous version (i.e. the version this protocol version is based on).
+- Minor issues: Must not exceed the minor issue count of the previous version (i.e., the version this protocol version is based on).
 
 - Warnings: Unlimited.
 
@@ -372,11 +372,11 @@ This quality gate verifies whether the protocol does not exceed any of the limit
 - Duplicated Blocks: 200
 
 > [!NOTE]
-> The quality gate will currently only verify SonarQube analysis results for initial developments (i.e. protocols with version 1.0.0.1).
+> The quality gate will currently only verify SonarQube analysis results for initial developments (i.e., protocols with version 1.0.0.1).
 
 ## (Release) Schedule Driver Passport Platform
 
-This stage will push the created DataMiner Test (.dmt) package to the Driver Passport Platform. It is only executed for protocol versions that are an initial version of a range (i.e. the Minor value of the Version is equal to 1).
+This stage will push the created DataMiner Test (.dmt) package to the Driver Passport Platform. It is only executed for protocol versions that are an initial version of a range (i.e., the Minor value of the Version is equal to 1).
 
 If in the previous stage no test package could be created, this stage will be marked as unstable.
 

@@ -13,7 +13,7 @@ DataMiner currently allows the use of multithreaded timers to perform multithrea
 
 A multithreaded timer is always linked to a table for which the rows will be processed periodically. Typically, each row in this table holds information about a device (such as the IP address).
 
-Every defined timer (i.e. Timer tag in the protocol XML) represents one timer thread that will go off every period as specified in the Time tag. This is the case for conventional timers and multithreaded timers.
+Every defined timer (i.e., Timer tag in the protocol XML) represents one timer thread that will go off every period as specified in the Time tag. This is the case for conventional timers and multithreaded timers.
 
 For conventional timers, when the timer goes off, it will either add the specified groups to the group execution queue of the protocol thread (in case of groups of type "poll") or it will execute the group immediately (in case of groups that are not of type "poll"). multithreaded timers, however, make use of threads from a thread pool to perform an operation for each row of a table.
 
@@ -90,7 +90,7 @@ The thread will perform the following steps to process a row:
 1. If the "qactionBefore" option is used, the referred QAction is executed.
    > [!NOTE]
    > As the relevant row data is already obtained in the first step, it is not useful to alter this data from the QAction that is referred to by the "qactionBefore" option, as the updated values will only be apparent the next time the row is being processed.
-1. If the "ignoreIf" option is used, and the ignore condition matches (i.e. the cell value matches the specified value in the "ignoreIf" option, or the cell is not initialized), no request will be performed and the QAction to process the response will also not be executed. Execution will jump to executing the QActions defined in the "qactionAfter" option.
+1. If the "ignoreIf" option is used, and the ignore condition matches (i.e., the cell value matches the specified value in the "ignoreIf" option, or the cell is not initialized), no request will be performed and the QAction to process the response will also not be executed. Execution will jump to executing the QActions defined in the "qactionAfter" option.
 1. If the "ping" option is used, the ping is executed.
 
    If the ping succeeded, or the "continueSnmpOnTimeout" option is set to "true", the request will be executed in the next step. Otherwise, no request will be executed. However, the QAction to process the response result will be executed where the result will now mention "NO POLLING OCCURED" (sic) and the error will denote "PING FAILED". (For information on all configuration options, see [ping](xref:LogicTimersTimerOptions#ping)).
@@ -172,7 +172,7 @@ The following figure illustrates the general concept for serial and HTTP:
 
 Please note the following:
 
-- The requests performed by the multithreaded timer (e.g. SNMP requests or ping) have no impact on the element state. I.e. if a request times out this will not have an impact on the state of the element.
+- The requests performed by the multithreaded timer (e.g., SNMP requests or ping) have no impact on the element state. I.e. if a request times out this will not have an impact on the state of the element.
 - The group mentioned in the multithreaded timer serves to detect the connection to use. This group does not actually get executed as is the case with conventional timers. Therefore, conditions on a group do not work with multithreaded timers. (Conditions on QActions, however, do work with multithreaded timers.) Similarly, "before group" triggers are also not supported with multithreaded timers.
 - When the timer goes off, first the defined "before timer" triggers are executed. For example, for the following trigger, this means that trigger 1 will go off every 2 seconds.
 

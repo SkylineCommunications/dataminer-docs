@@ -203,7 +203,7 @@ With this setup, any push with new content (including the initial creation) to t
 
 1. Search for the name of your package.
 
-   By default, this is your Visual Studio project name (e.g. *TutorialPackage*).
+   By default, this is your Visual Studio project name (e.g., *TutorialPackage*).
 
 1. Go to the *VERSIONS* tab.
 

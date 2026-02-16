@@ -112,7 +112,7 @@ To delete a command:
 
 - In the list of commands on the left, right-click the command, and select *Delete*.
 
-To duplicate a command (e.g. in order to create a new command based on an existing one):
+To duplicate a command (e.g., in order to create a new command based on an existing one):
 
 - In the list of commands on the left, right-click the command, and select *Duplicate*.
 
@@ -140,7 +140,7 @@ To delete a command action from the list of actions to be executed:
 
 1. On the right, hover over the action, and click the small *X*.
 
-To execute an ad hoc command (e.g. for test purposes):
+To execute an ad hoc command (e.g., for test purposes):
 
 - Select a command in the list on the left, and click the *Execute* button in the lower-right corner.
 

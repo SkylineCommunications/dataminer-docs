@@ -26,15 +26,15 @@ With the SLNetClientTest tool, you can modify this engine ID:
 
    - *Type*: Determines the type of info entered in the *Text* variable. The following types can be selected:
 
-     - *IPv4*: IPv4 address, e.g. "10.11.12.13".
+     - *IPv4*: IPv4 address, e.g., "10.11.12.13".
 
-     - *IPv6*: IPv6 address, e.g. "fd7a:e0de:acc2::".
+     - *IPv6*: IPv6 address, e.g., "fd7a:e0de:acc2::".
 
-     - *MAC*: MAC address, e.g. "1234567890ABCDEF".
+     - *MAC*: MAC address, e.g., "1234567890ABCDEF".
 
-     - *Text*: regular text, e.g. "MyID".
+     - *Text*: regular text, e.g., "MyID".
 
-     - *Octets*: bytes, e.g. "12:34:56:78:90:AB:CD:EF".
+     - *Octets*: bytes, e.g., "12:34:56:78:90:AB:CD:EF".
 
      - *LocalEngine*, *Reserved* or *EnterpriseSpecific*: these types function in the same manner as *Octets* and are included for the sake of completeness. However, these should not be used in normal circumstances.
 

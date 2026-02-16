@@ -4,7 +4,7 @@ uid: DisInfoBars
 
 # Info bars
 
-When opening a solution supported by DIS, e.g. a connector solution, DIS will perform some checks on the solution and show an info bar when it found an issue.
+When opening a solution supported by DIS, e.g., a connector solution, DIS will perform some checks on the solution and show an info bar when it found an issue.
 
 The following info bars are available:
 

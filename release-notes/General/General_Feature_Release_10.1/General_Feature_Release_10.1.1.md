@@ -44,7 +44,7 @@ See the example below, showing how this can be configured in the Db.xml file.
 
 In a video thumbnail URL, you can now specify an authorization header in an "auth=" option when requesting a thumbnail image from a video server using type “Generic Images”.
 
-This option has to be used when the video server expects an authentication token (e.g. OAuth2).
+This option has to be used when the video server expects an authentication token (e.g., OAuth2).
 
 > [!NOTE]
 >
@@ -161,9 +161,9 @@ Example:
 
 ##### Use case
 
-Using the new features described above, it is possible to configure that, when a user clicks a service definition node in an embedded Service Manager component, an automation script is executed with e.g. the node ID as a parameter.
+Using the new features described above, it is possible to configure that, when a user clicks a service definition node in an embedded Service Manager component, an automation script is executed with e.g., the node ID as a parameter.
 
-To configure this behavior, add a page-level data item of type *Execute*, and set its value to e.g. the following:
+To configure this behavior, add a page-level data item of type *Execute*, and set its value to e.g., the following:
 
 ```txt
 Script:<myScript>|Parameters:IDParam=[event:NodeDoubleClicked,ID]|Options:<possibleOptions>|Trigger=Event
@@ -187,7 +187,7 @@ This will allow you to dynamically specify how the different child item shapes s
 
 #### Dashboards app - Time range component: Selecting a preset timespan will now cause the name of that timespan to be added to the URL of the dashboard \[ID 27963\]
 
-Up to now, when you selected a preset timespan (e.g. today, yesterday, etc.) in a time range component, the start time and end time of that timespan was added to the URL of the dashboard. From now on, when you select a preset timespan, the actual name of that timespan (e.g. today, yesterday, etc.) will be added to the URL instead.
+Up to now, when you selected a preset timespan (e.g., today, yesterday, etc.) in a time range component, the start time and end time of that timespan was added to the URL of the dashboard. From now on, when you select a preset timespan, the actual name of that timespan (e.g., today, yesterday, etc.) will be added to the URL instead.
 
 #### Dashboards app: Default themes updated \[ID 28074\]
 
@@ -222,7 +222,7 @@ Each of the different data sources now has a default column set, which, if neces
 
 #### Dashboards app: Trigger feed \[ID 28136\]
 
-To a dashboard, you can now add a trigger feed, i.e. a feed that allows you to trigger other components either manually or automatically.
+To a dashboard, you can now add a trigger feed, i.e., a feed that allows you to trigger other components either manually or automatically.
 
 Currently, the trigger feed can only be linked to components that can visualize a database query. In that case, when a trigger feed is triggered, the data displayed in the other component will be refreshed.
 
@@ -265,7 +265,7 @@ There are two ways to highlight a trend line:
 In the Dashboards app, up to now, it was possible to delete components in edit mode by selecting them and clicking the *Delete* button at the top of the page. Now, instead of clicking the Delete button, it is also possible to press the DELETE key on your keyboard.
 
 > [!NOTE]
-> After selecting the component to be deleted, make sure the focus is on the dashboard before you press the DELETE key. If the focus in on e.g. the header bar or the subheader bar, pressing the DELETE key will not work.
+> After selecting the component to be deleted, make sure the focus is on the dashboard before you press the DELETE key. If the focus in on e.g., the header bar or the subheader bar, pressing the DELETE key will not work.
 
 #### Dashboards app: Restricting access to dashboards \[ID 28345\]
 
@@ -358,7 +358,7 @@ From now on, more detailed information will be added to the log files when an er
 
 When, in Visual Overview, you right-click an alarm timeline with an alarm filter and select Show alarms in a new tab page, the alarms matching the filter will be loaded.
 
-Up to now, it was only possible to filter on alarm properties. Now, you can also filter on severity (e.g. Severity:Critical), element (e.g. Element:49/1), etc.
+Up to now, it was only possible to filter on alarm properties. Now, you can also filter on severity (e.g., Severity:Critical), element (e.g., Element:49/1), etc.
 
 #### DataMiner Cube: Enhanced retrieval of user images \[ID 27861\]
 
@@ -475,7 +475,7 @@ In the DataMiner mobile apps, such as the Monitoring, Ticketing and Dashboards a
 
 #### Problem when deleting an element that had data stored in Elasticsearch \[ID 27663\]
 
-When you deleted an element that had data stored in an Elasticsearch database (e.g. a logger table), in some cases, this would cause errors in other elements that shared data with the element you deleted.
+When you deleted an element that had data stored in an Elasticsearch database (e.g., a logger table), in some cases, this would cause errors in other elements that shared data with the element you deleted.
 
 #### Incorrect error message when uploading a protocol with a minimum required version \[ID 27868\]
 
@@ -571,7 +571,7 @@ In some cases, an exception could be thrown when retrieving alarms that contain 
 
 #### Visual Overview: SetVar shape with tooltip would not work on a mobile device \[ID 28129\]
 
-When a SetVar shape had its SetVarOptions data field set to “Control=Shape” and contained a legacy tooltip configuration (e.g. ‘\<MyVar>:\<MyValue>:\<MyToolTip>’), in some cases, the variable would not be updated when you clicked the control on a mobile device.
+When a SetVar shape had its SetVarOptions data field set to “Control=Shape” and contained a legacy tooltip configuration (e.g., ‘\<MyVar>:\<MyValue>:\<MyToolTip>’), in some cases, the variable would not be updated when you clicked the control on a mobile device.
 
 #### Dashboards app: Problems with table component \[ID 28146\]
 
@@ -583,7 +583,7 @@ In some cases, for example, rendering issues could occur when resizing table col
 
 When you selected a CPE filter, in some cases, the raw key would incorrectly be displayed for a short while.
 
-Also, when you selected a chain filter (e.g. Region) and a value (e.g. California), and then selected another chain filter and value, in some cases, nothing would be displayed and an error would occur.
+Also, when you selected a chain filter (e.g., Region) and a value (e.g., California), and then selected another chain filter and value, in some cases, nothing would be displayed and an error would occur.
 
 #### DataMiner Cube - Trending: Incorrect datetime value would be sent to the pattern matching engine \[ID 28166\]
 
@@ -696,7 +696,7 @@ When custom bindings were linked to custom element, view, alarm or service prope
 
 #### Profiles app: Problem when using converters \[ID 28404\]
 
-When, In the *Profiles* app, converters (i.e. mediation snippets) had been configured, in some cases, a notice alarm would be generated.
+When, In the *Profiles* app, converters (i.e., mediation snippets) had been configured, in some cases, a notice alarm would be generated.
 
 #### Assembly incorrectly configured in SLNet.exe.config file \[ID 28408\]
 

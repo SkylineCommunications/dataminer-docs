@@ -32,13 +32,13 @@ A new automation script, *EPM_I_DOCSIS_AddNewCcapCmPair*, is now available, whic
 
 #### QAM Channels dashboard migration [ID 36684]
 
-Information about QAM Channel instances has now been moved from the data pages of the EPM entities to dedicated dashboards (i.e. *NODE SEGMENT/01. DS QAM Channels* and *NODE SEGMENT/02. US QAM Channels*). A visual overview is also available containing the overview information for the EPM entities with links to new dashboards.
+Information about QAM Channel instances has now been moved from the data pages of the EPM entities to dedicated dashboards (i.e., *NODE SEGMENT/01. DS QAM Channels* and *NODE SEGMENT/02. US QAM Channels*). A visual overview is also available containing the overview information for the EPM entities with links to new dashboards.
 
 For this purpose, new scripts have also been added, which retrieve the QAM Channel-related data in order to display it in the dashboards: *EPM_I_DOCSIS_GQI_GET_ALL_DS_QAM_DATA* and *EPM_I_DOCSIS_GQI_GET_ALL_US_QAM_DATA*.
 
 #### Cable Modem KPIs dashboard migration [ID 36686]
 
-To improve the stability of the system, the information about Cable Modem KPIs has now been moved to a dashboard (i.e. *CM/01. CM Overview*). A Cable Modem visual overview is also available with the most important KPIs and a link to the dashboards. If you click the link, the relevant cable modem will automatically be selected in the dashboard.
+To improve the stability of the system, the information about Cable Modem KPIs has now been moved to a dashboard (i.e., *CM/01. CM Overview*). A Cable Modem visual overview is also available with the most important KPIs and a link to the dashboards. If you click the link, the relevant cable modem will automatically be selected in the dashboard.
 
 For this purpose, a new script has also been added, which retrieves the CM-related data in order to display it in the dashboards: *EPM_I_DOCSIS_GQI_GET_ALL_CM_DATA*.
 
@@ -48,7 +48,7 @@ On the CCAP, Line Cards, Node Segment, and Service Group topology level, a tab w
 
 #### CM QAM US/DS Channels migrated to dashboards [ID 36720]
 
-The  CM QAM US Channel and CM QAM DS Channel tabs at the CM topology level have been migrated to dedicated dashboards (i.e. *CM/03. CM US QAM Channels* and *CM/02. CM DS QAM Channels*, respectively). You can access these dashboards by clicking a button in Visual Overview at the CM Overview topology level.
+The  CM QAM US Channel and CM QAM DS Channel tabs at the CM topology level have been migrated to dedicated dashboards (i.e., *CM/03. CM US QAM Channels* and *CM/02. CM DS QAM Channels*, respectively). You can access these dashboards by clicking a button in Visual Overview at the CM Overview topology level.
 
 To support this, the following new scripts have been added: *EPM_I_DOCSIS_GQI_GET_ALL_CM_DS_QAM_DATA*, *EPM_I_DOCSIS_GQI_GET_ALL_CM_US_QAM_DATA*, *EPM_I_DOCSIS_CM_DS_QAM_CHANNEL*, and *EPM_I_DOCSIS_CM_US_QAM_CHANNEL*.
 
@@ -212,4 +212,4 @@ Up to now, the Group Delay or Reflection Status parameter was not calculated cor
 
 #### CM missing on map [ID 36448]
 
-It could occur that CMs were missing on the maps in the EPM Solution even if geo localization was available for them. The filters of the XML files controlling the maps (i.e. *EPM_MAPS_AMPLIFIER_CPE*, *EPM_MAPS_NODE_CPE*, *EPM_MAPS_NODE_SEGMENT_CPE*, and *EPM_MAPS_TAP_CPE*) have been adjusted to correct this issue.
+It could occur that CMs were missing on the maps in the EPM Solution even if geo localization was available for them. The filters of the XML files controlling the maps (i.e., *EPM_MAPS_AMPLIFIER_CPE*, *EPM_MAPS_NODE_CPE*, *EPM_MAPS_NODE_SEGMENT_CPE*, and *EPM_MAPS_TAP_CPE*) have been adjusted to correct this issue.

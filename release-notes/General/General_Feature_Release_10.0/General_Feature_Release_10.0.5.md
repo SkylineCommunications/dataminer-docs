@@ -126,7 +126,7 @@ Next to active alarm tab pages, history tab pages now also allow you to display 
 
 On history tab pages, a severity duration column will be available either when no filter is applied or when a filter based on Element ID, DMA ID, Element Type, Parameter ID, Protocol and/or Source ID is applied.
 
-DataMiner Cube will calculate severity durations based on the alarms listed on the history tab page in question. If the duration of an alarm cannot be calculated (e.g. because the next alarm is not listed on the history tab page, or because the alarm has not been cleared while the element is stopped), the severity duration column will show “N/A”.
+DataMiner Cube will calculate severity durations based on the alarms listed on the history tab page in question. If the duration of an alarm cannot be calculated (e.g., because the next alarm is not listed on the history tab page, or because the alarm has not been cleared while the element is stopped), the severity duration column will show “N/A”.
 
 Additionally, a number of enhancements have been made with respect to severity durations. For instance, it is now also possible to display the severity duration when history tracking is disabled.
 
@@ -189,9 +189,9 @@ From now on, if you set the *Source* shape data field to “Elements” or “Se
   | Element.AlarmState | The alarm state of the element. For the difference with the alarm level, see "Element.AlarmLevel". |
   | Element.AlarmCount | The number of alarms of the element. |
   | Element.Type | The type of element as defined in the protocol. |
-  | Element.DisplayType | The display type of the element as defined in the protocol, e.g. *spectrum analyzer*, *element manager*. |
+  | Element.DisplayType | The display type of the element as defined in the protocol, e.g., *spectrum analyzer*, *element manager*. |
   | Element.IP | The IP of the element. |
-  | Element.State | The current state of the element, e.g. Paused, Stopped. |
+  | Element.State | The current state of the element, e.g., Paused, Stopped. |
   | Element.Protocol | The protocol used by the element. |
   | Element.ProtocolVersion | The protocol version used by the element. |
   | Element.ProtocolType | The protocol type used by the element. |
@@ -362,7 +362,7 @@ The following properties have been added to the UIBlockDefinition class:
 | Property | Description |
 |--|--|
 | IsRequired | Indicates whether the input control requires a value.<br> Possible value:<br> - true<br> - false<br> If “true”, the control will be marked “Invalid” when empty. |
-| PlaceholderText | Text that will be displayed as long as the control is empty (e.g. “In this box, enter...”). |
+| PlaceholderText | Text that will be displayed as long as the control is empty (e.g., “In this box, enter...”). |
 | ValidationState | Indicates whether the value was validated and whether that value is valid.<br> Possible values:<br> - NotValidated<br> - Valid<br> - Invalid<br> Note: This property can be used to indicate to users that they entered an invalid value. |
 | ValidationText | Text that will be displayed when ValidationState is “Invalid”. |
 
@@ -421,7 +421,7 @@ The following tabs were added to the spectrum page of Spectrum Analyzer elements
 |--|--|
 | Information | Shows basic information regarding measurement points, markers, thresholds and parameters. |
 | Traces | Allows you to display or hide the current trace, the minimum trace, the maximum trace and the average trace. |
-| Presets | Lists the available presets. By default, only the private presets are listed (i.e. the presets that are only available to the current user). To also have the shared presets listed, select the *Show shared presets* option. Those will be indicated with a *Shared* tag. When you select a preset, below the list, a *Load preset* button will allow you to load the selected preset. |
+| Presets | Lists the available presets. By default, only the private presets are listed (i.e., the presets that are only available to the current user). To also have the shared presets listed, select the *Show shared presets* option. Those will be indicated with a *Shared* tag. When you select a preset, below the list, a *Load preset* button will allow you to load the selected preset. |
 
 #### Monitoring app: Card header, sidebar and menu available on mobile devices \[ID 25156\]
 
@@ -441,8 +441,8 @@ For every color linked to a selection box value, a VisualFieldEnum object should
 
 | Property  | Description                                                          |
 |-----------|----------------------------------------------------------------------|
-| FieldName | The name of the selection box (i.e. enum field).                     |
-| EnumValue | The selection box value (i.e. the discreet value in the enum field). |
+| FieldName | The name of the selection box (i.e., enum field).                     |
+| EnumValue | The selection box value (i.e., the discreet value in the enum field). |
 | Color     | The color associated with the selection box value.                   |
 
 #### On mobile devices, the sidebar will now appear at the bottom of the screen \[ID 25225\]
@@ -465,7 +465,7 @@ Mediation snippets are pieces of code that will convert a parameter value from t
 
 MediationSnippet objects, defined on profile parameter level, consist of an ID and a string containing the actual snippet code (C#). They can be managed by means of the ProfileManagerHelper#MediationSnippets API.
 
-To a particular profile parameter, you can add only one mediation snippet per protocol version. In other words, linking to both parameter 10 and parameter 20 in version 1.0.0.0 of Protocol X in the same profile parameter is not allowed. However, it is possible to specify a single wildcard character at the end of a protocol version (e.g. “1.0.0.\*”). When there are multiple matches, the most specific entry will be chosen (i.e. “1.0.0.\*” will take precedence over “1.\*”).
+To a particular profile parameter, you can add only one mediation snippet per protocol version. In other words, linking to both parameter 10 and parameter 20 in version 1.0.0.0 of Protocol X in the same profile parameter is not allowed. However, it is possible to specify a single wildcard character at the end of a protocol version (e.g., “1.0.0.\*”). When there are multiple matches, the most specific entry will be chosen (i.e., “1.0.0.\*” will take precedence over “1.\*”).
 
 > [!NOTE]
 >
@@ -690,7 +690,7 @@ In a *ListView* component in Visual Overview that has been configured to display
 - Protocol Version
 - Polling IP
 - Element properties \> Created by
-- Element properties \> Created at (i.e. creation date)
+- Element properties \> Created at (i.e., creation date)
 
 In addition, it is now also possible to configure a filter on the *ListView* shape using the term "Element.PollingIP", for example *Element.PollingIP == '127.0.0.1'*.
 
@@ -718,7 +718,7 @@ When you added a SET action to an automation script and then changed it to a GET
 
 #### DataMiner Cube - Visual Overview: Problem when loading a trend group in a trend component \[ID 24590\]
 
-When you embed a trend component on a Visio page, you can have it load a trend group by setting the *Parameters* shape data field to “TrendGroup=\<username>/sharedusersettings:\<groupName>”. When this entry contained a dynamic part (e.g. \[var:xxx\]), in some cases, updates would not get processed correctly and the trend graph would be cleared.
+When you embed a trend component on a Visio page, you can have it load a trend group by setting the *Parameters* shape data field to “TrendGroup=\<username>/sharedusersettings:\<groupName>”. When this entry contained a dynamic part (e.g., \[var:xxx\]), in some cases, updates would not get processed correctly and the trend graph would be cleared.
 
 #### Problem with SLSNMPAgent when retrieving the views \[ID 24663\]
 

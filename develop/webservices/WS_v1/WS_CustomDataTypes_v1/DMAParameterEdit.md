@@ -17,7 +17,7 @@ uid: DMAParameterEdit
 | RangeHigh | Double | The maximum value to which the parameter can be set. |
 | RangeLow | Double | The minimum value to which the parameter can be set. |
 | RangeStep | Double | The step size. If *RangeStep* is 5, then the parameter value has to be in the series {... , -5, 0, 5, 10, 15, 20, ...}. |
-| Options | String | The parameter options (extra flags to e.g. indicate special formatting instructions). |
+| Options | String | The parameter options (extra flags to e.g., indicate special formatting instructions). |
 | ConfirmationMessage | String | The text that can be displayed in a confirmation box before the parameter is updated. |
 | Decimals | Integer | The number of decimals. |
 

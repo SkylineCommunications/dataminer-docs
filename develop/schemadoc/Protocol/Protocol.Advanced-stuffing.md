@@ -10,8 +10,8 @@ This attribute can contain one or more of the following settings, separated by s
 |--- |--- |
 |allowed|Specifies the allowed sequence(s). When a command is sent, when a sequence corresponding with the sequence specified in the "stuffing" attribute is immediately followed by any sequence defined in the "allowed" attribute, no escape sequence will be inserted. To provide multiple allowed sequences, separate these by a comma.|
 |on|Whether stuffing has to be performed on a command, a response, or both (separated by a comma).on=commandon=responseon=command,response|
-|escape|The escape sequence (this can be more than one byte). Should be formatted in hexadecimal notation (e.g. escape=0x10).|
-|stuffing|The stuffing sequence (this can be more than one byte). Should be formatted in hexadecimal notation (e.g. stuffing=0x10).|
+|escape|The escape sequence (this can be more than one byte). Should be formatted in hexadecimal notation (e.g., escape=0x10).|
+|stuffing|The stuffing sequence (this can be more than one byte). Should be formatted in hexadecimal notation (e.g., stuffing=0x10).|
 |startoffset|This is an integer value specifying the start offset. This is the number of bytes, when starting to count from the start of the message, to ignore when performing stuffing. Default value: 0.|
 |endoffset|This is an integer value specifying the end offset. This is the number of bytes, when starting to count from the end of the message, to ignore when performing stuffing. Default value: 0.|
 
@@ -47,8 +47,8 @@ string
     Examples
 
   - stuffing="on=command;escape=0x32;stuffing=0x32;allowed=0x380x39"
-  - input "0x310x320x390x33", result after performing stuffing is "0x310x320x320x390x33": stuffing is performed (i.e. the escape sequence has been inserted) because allowed sequence "0x380x39" is not found after occurrence of stuffing byte ("0x32").
-  - input "0x310x320x380x390x33", result after performing stuffing is "0x310x320x380x390x33": no stuffing is performed (i.e. no escape sequence has been inserted) because allowed sequence "0x380x39" was found right after stuffing sequence.
+  - input "0x310x320x390x33", result after performing stuffing is "0x310x320x320x390x33": stuffing is performed (i.e., the escape sequence has been inserted) because allowed sequence "0x380x39" is not found after occurrence of stuffing byte ("0x32").
+  - input "0x310x320x380x390x33", result after performing stuffing is "0x310x320x380x390x33": no stuffing is performed (i.e., no escape sequence has been inserted) because allowed sequence "0x380x39" was found right after stuffing sequence.
 
 - **Stuffing behavior when processing responses**
 

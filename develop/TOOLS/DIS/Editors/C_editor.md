@@ -9,7 +9,7 @@ If, in a file tab containing a protocol XML file or an automation script XML fil
 ![C# editor](~/develop/images/DIS_CSharpEditor.png)
 
 > [!NOTE]
-> DIS defines a default set of analysis rules for QAction projects. These rules can then be used by Visual Studio extensions like e.g. SonarLint or StyleCop to analyze the code.
+> DIS defines a default set of analysis rules for QAction projects. These rules can then be used by Visual Studio extensions like e.g., SonarLint or StyleCop to analyze the code.
 >
 > - When, in Visual Studio, your solution is in release mode, analysis is disabled for performance reasons.
 > - Analysis is always disabled for the QAction_Helper and QAction_ClassLibrary projects.
@@ -45,7 +45,7 @@ The right-click menu option *Repeat Selected Text* allows you to select a partic
 1. In the *DIS Repeater* window, if necessary, go to the *Template* box, and edit the text you want to have repeated.
 1. If you want to insert a variable (or a formula including a variable) in the text to be repeated, then do the following:
     - Place your cursor where you want the variable or formula to be inserted, and click *Insert placeholder*.
-    - If necessary, change the default placeholder that appeared at the location where you placed your cursor: a single value "x" delimited by "$" characters. You could change it to e.g. "$x+5$".
+    - If necessary, change the default placeholder that appeared at the location where you placed your cursor: a single value "x" delimited by "$" characters. You could change it to e.g., "$x+5$".
 1. At the bottom of the window, select *Overwrite Selection*, if you want the text you selected to be overwritten by the text that is currently displayed in the *Preview* box.
 1. Click *OK* to have the text in the *Preview* box pasted in the editor.
 

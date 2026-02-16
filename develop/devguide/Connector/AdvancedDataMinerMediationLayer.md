@@ -4,7 +4,7 @@ uid: AdvancedDataMinerMediationLayer
 
 # DataMiner Mediation Layer
 
-Often, in a particular infrastructure, you can find devices from different vendors that are almost identical: switches, IRDs, etc. Even though these devices share the same functionality, the implementation differs from one device to another. This is reflected in the protocols for these devices, for example, through different parameter names, different unit scales used (e.g. MHz vs. GHz), etc.
+Often, in a particular infrastructure, you can find devices from different vendors that are almost identical: switches, IRDs, etc. Even though these devices share the same functionality, the implementation differs from one device to another. This is reflected in the protocols for these devices, for example, through different parameter names, different unit scales used (e.g., MHz vs. GHz), etc.
 
 Through the DataMiner Mediation Layer, it is possible to provide a uniform view on these different devices/device protocols. This is achieved by using a so-called base protocol, which forms a mediation layer on top of device-specific protocols and therefore provides a standard view on these devices.
 

@@ -46,7 +46,7 @@ Click the *New* button to open the Process Automation wizard. In this wizard, yo
    - Select the profile instance that should be used for the first token of the process. For example, if the first activity is a discovery activity, you must select the profile that will determine the scan range for this activity.
 
      > [!NOTE]
-     > For some processes (e.g. *IDP IS-04 Provision New Nodes* and *IDP IS-04 Update Existing Nodes*), selecting a start token is not possible. These make use of custom scripts instead.
+     > For some processes (e.g., *IDP IS-04 Provision New Nodes* and *IDP IS-04 Update Existing Nodes*), selecting a start token is not possible. These make use of custom scripts instead.
 
    - The token selection is displayed below the start profile selection. If a suitable profile instance is available for the token, it will be selected automatically. Selecting or customizing a token profile instance in this step allows you to fine-tune the way the token will be handled by Process Automation. You can for instance indicate the priority for the token and the duration it should be allowed to stay in the queue.
 

@@ -134,7 +134,7 @@ From now on, when BrokerGateway is uninstalled, the entire `C:\ProgramData\Skyli
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-After a DataMiner connection had been re-established (due to e.g. a network issue, a failover switch, etc.), in some rare cases, an issue could occur that would cause parameter or DCF information to be unavailable to remotely hosted elements.
+After a DataMiner connection had been re-established (due to e.g., a network issue, a failover switch, etc.), in some rare cases, an issue could occur that would cause parameter or DCF information to be unavailable to remotely hosted elements.
 
 #### MessageBroker client could get stuck while trying to fetch information from BrokerGateway [ID 43832]
 

@@ -24,7 +24,7 @@ By default, the interfaces of a virtual function are the interfaces defined in t
 
 #### Protocols: Export rules would fail to parse values containing escaped XML characters \[ID 31362\]
 
-When, in a protocol, values contained escaped XML characters (e.g. \<Description>Measurements \> 5\</Description>), the export rules would fail to parse those values and the generated DVE or Virtual Function protocol would only have some or none of the export rules applied.
+When, in a protocol, values contained escaped XML characters (e.g., \<Description>Measurements \> 5\</Description>), the export rules would fail to parse those values and the generated DVE or Virtual Function protocol would only have some or none of the export rules applied.
 
 #### Alarm limit updates for column parameters would contain invalid data \[ID 31415\]
 

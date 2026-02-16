@@ -1,6 +1,6 @@
 ---
 uid: Masking_and_unmasking_alarms
-description: When an alarm is raised that does not need an intervention (e.g. maintenance/test), right-click it in the Alarm Console and select 'Mask alarm'.
+description: When an alarm is raised that does not need an intervention (e.g., maintenance/test), right-click it in the Alarm Console and select 'Mask alarm'.
 ---
 
 # Masking and unmasking alarms
@@ -50,7 +50,7 @@ A new alarm record will be added to the lifecycle of the alarm, with *Status* an
 
 ## Unmasking an alarm
 
-Masked alarms can be manually unmasked at any time and can also be masked again, e.g. to change the masking method.
+Masked alarms can be manually unmasked at any time and can also be masked again, e.g., to change the masking method.
 
 To manually unmask an alarm:
 

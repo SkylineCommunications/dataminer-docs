@@ -26,7 +26,7 @@ The protocol thread is used by the element in the error and has an impact on the
 1. Confirm if the indicated element is really the first element for which the protocol thread stopped showing activity.
 
     1. In DataMiner Cube, go to *System Center > Logging > DataMiner*, and check the Watchdog log (see [DataMiner logging](xref:DataMiner_logging)).
-    1. Search for the first indication of an RTE (i.e. search for "count = 1").
+    1. Search for the first indication of an RTE (i.e., search for "count = 1").
 
 1. Verify if the RTE is switching between active and cleared.
 

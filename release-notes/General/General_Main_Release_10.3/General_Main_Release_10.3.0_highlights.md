@@ -18,7 +18,7 @@ uid: General_Main_Release_10.3.0_highlights
 
 <!-- MR 10.3.0 - FR 10.2.2 -->
 
-When a GetSpectrumTrendTraceDataMessage was used to retrieve spectrum data, up to now, it was possible to pass an optional time range (i.e. RangeStart and RangeEnd) next to an ID (i.e. RecordID). From now on, passing a time range next to an ID will be mandatory.
+When a GetSpectrumTrendTraceDataMessage was used to retrieve spectrum data, up to now, it was possible to pass an optional time range (i.e., RangeStart and RangeEnd) next to an ID (i.e., RecordID). From now on, passing a time range next to an ID will be mandatory.
 
 #### DataMiner Object Models: Defining a TLL for DomTemplates, DomInstances and DomInstance history [ID 32662]
 
@@ -32,7 +32,7 @@ It is now possible to define a "time to live" property for the following types o
 | DomTemplate                        | DomTemplateTtl        |
 | HistoryChange (DomInstanceHistory) | DomInstanceHistoryTtl |
 
-Times are defined as TimeSpan objects. By default, these will be set to TimeSpan.Zero, i.e. no TTL. When, for a particular type of object, the TTL is set to e.g. 1 year, those objects will be automatically removed when they were last modified more than a year ago.
+Times are defined as TimeSpan objects. By default, these will be set to TimeSpan.Zero, i.e., no TTL. When, for a particular type of object, the TTL is set to e.g., 1 year, those objects will be automatically removed when they were last modified more than a year ago.
 
 Example:
 
@@ -52,7 +52,7 @@ var moduleSettings = new ModuleSettings("example")
 ```
 
 > [!NOTE]
-> TTL settings are checked every 30 minutes. When you configure a very short TTL (e.g. 15 minutes), keep in mind that the objects in question will only be removed during the next cleanup cycle.
+> TTL settings are checked every 30 minutes. When you configure a very short TTL (e.g., 15 minutes), keep in mind that the objects in question will only be removed during the next cleanup cycle.
 
 #### OpenSearch & Amazon OpenSearch Service [ID 34651]
 
@@ -214,7 +214,7 @@ A ResourceUsageDefinition now has the property *ConcurrencyUsageType*, which can
 
 Resource usage can only overlap with a ResourceUsageDefinition with *ConcurrencyUsageType.All* if it is set to *ConcurrencyUsageType.None*. This limitation is also in place for a single booking: if a booking has a resource with complete concurrency and another resource with 1 concurrency, the booking will be quarantined because it requests more concurrency than is available. If a complete concurrency usage is quarantined to resolve a concurrency conflict (as determined by the priority defined on booking level), it will be moved in its entirety – there is no option to only move part of the concurrency to quarantine.
 
-The actual concurrency of a ResourceUsageDefinition with *ConcurrencyUsageType.All* is determined at runtime, as the *MaxConcurrency* value of the resource at the moment when it is needed, e.g. when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
+The actual concurrency of a ResourceUsageDefinition with *ConcurrencyUsageType.All* is determined at runtime, as the *MaxConcurrency* value of the resource at the moment when it is needed, e.g., when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
 
 Code example:
 
@@ -239,7 +239,7 @@ It is now possible to book all the capacities of a resource for their complete v
 
 No other usage can overlap in case complete capacity is used. This limitation is also in place for a single booking: if a booking has a resource with complete capacity and another resource with 100 capacity, the booking will be quarantined because it requests more capacity than is available. If a complete capacity usage is quarantined to resolve a conflict (as determined by the priority defined on booking level), it will be moved in its entirety.
 
-The actual capacity in case *UsesCompleteCapacity* is true is determined at runtime, e.g. when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
+The actual capacity in case *UsesCompleteCapacity* is true is determined at runtime, e.g., when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
 
 Code example:
 

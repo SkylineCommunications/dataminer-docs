@@ -25,7 +25,7 @@ During the installation, the following steps will automatically be executed:
 1. Migration actions (if any).
 1. Cleanup actions (if any).
 
-Migration and cleanup actions are defined in the install package and will depend on the version you install. To make sure that these actions do not keep growing indefinitely over the different versions, the **migration and cleanup actions are cleaned in every major version** (e.g. from 1.x.x to 2.x.x).
+Migration and cleanup actions are defined in the install package and will depend on the version you install. To make sure that these actions do not keep growing indefinitely over the different versions, the **migration and cleanup actions are cleaned in every major version** (e.g., from 1.x.x to 2.x.x).
 
 > [!IMPORTANT]
 > When upgrading MediaOps, to make sure all migration and cleanup actions take place, **first upgrade to the latest version of your current major version** before moving to the next major version, without skipping a major version.
