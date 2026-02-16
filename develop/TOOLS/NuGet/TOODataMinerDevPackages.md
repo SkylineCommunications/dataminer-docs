@@ -67,9 +67,9 @@ If the optional module consumes Custom Dev Packs instead, the assembly will not 
 
 ### Naming conventions
 
-For optimal organization and maintainability, it is recommended that the NuGet package name matches the repository name.
+For optimal organization and maintainability, the NuGet package name should match the repository name.
 
-For the optional module to consider a NuGet package as a **Custom Dev Pack**, the package name needs to start with "`Skyline.DataMiner.Dev.Utils.`". The following naming conventions should be applied consistently across all components (where square brackets indicate optional segments):
+For the optional module to consider a NuGet package as a **Custom Dev Pack**, the package name needs to start with "`Skyline.DataMiner.Dev.Utils.`". The following naming conventions should be applied consistently across all components (square brackets indicate optional segments):
 
 - **Repository name**: `Skyline.DataMiner.Dev.Utils.[Category.]Name`
 - **NuGet package name**: Must match the repository name
@@ -84,7 +84,7 @@ For the optional module to consider a NuGet package as a **Custom Dev Pack**, th
 
 This showcases the power and flexibility of Standard Solutions: any solution can consume these Dev Packs and leverage the backbone of the Standard Solution without duplicating assemblies. This promotes reusability and ensures that custom implementations can build upon the solid foundation provided by Standard Solutions.
 
-All Solution Dev Packs follow the naming convention `Skyline.DataMiner.Dev.Utils.Solutions.*`, making them easily identifiable as packages originating from Standard Solutions. 
+All Solution Dev Packs follow the naming convention `Skyline.DataMiner.Dev.Utils.Solutions.*`, making them easily identifiable as packages originating from Standard Solutions.
 
 For Solution Dev Packs, apply the following naming conventions:
 

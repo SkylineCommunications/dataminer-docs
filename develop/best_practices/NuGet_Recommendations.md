@@ -4,13 +4,13 @@ uid: NuGet_Recommendations
 
 # Recommendations for providing NuGet packages for your solution
 
-When developing DataMiner solutions, creating NuGet packages can significantly enhance code reusability, maintainability, and extensibility. This page provides general recommendations on when and how to provide NuGet packages for your solution.
+When you develop DataMiner solutions, creating NuGet packages can significantly enhance code reusability, maintainability, and extensibility. This page provides general recommendations on when and how to provide NuGet packages for your solution.
 
 ## When to create NuGet packages
 
-Consider creating NuGet packages for your solution when:
+Consider creating NuGet packages for your solution in the following cases:
 
-- **Shared functionality**: You have code that is used across multiple components within your solution (e.g., shared between Automation scripts, connectors, or low-code apps).
+- **Shared functionality**: You have code that is used across multiple components within your solution (for example, shared between Automation scripts, connectors, or low-code apps).
 
 - **Reusability across solutions**: The functionality could be valuable for other solutions or custom implementations.
 
@@ -24,7 +24,7 @@ Consider creating NuGet packages for your solution when:
 
 ### Standard NuGet packages
 
-Use standard NuGet packages when:
+Use standard NuGet packages in the following cases:
 
 - The assemblies should be **installed** with the consuming solution.
 - You want to distribute standalone functionality that does not depend on a pre-installed solution.
@@ -34,7 +34,7 @@ Follow the naming conventions in [Producing NuGet packages](xref:Producing_NuGet
 
 ### Custom Dev Packs
 
-Use [Custom Dev Packs](xref:TOODataMinerDevPackages#custom-dev-packs) when:
+Use [Custom Dev Packs](xref:TOODataMinerDevPackages#custom-dev-packs) in the following cases:
 
 - Your solution provides core assemblies that should **not be duplicated** when optional modules or extensions consume them.
 - You want to ensure there is only one version of the assemblies (from the main solution) at runtime.
@@ -47,13 +47,14 @@ For Standard Solutions delivered by Skyline Communications, use [Solution Dev Pa
 
 ## Code organization best practices
 
-### Separate concerns
+### Create separate projects
 
-- **Create separate projects** for different aspects of your solution:
-  - `.Common`: Shared code that can run in multiple contexts.
-  - `.Automation`: Automation-specific implementations.
-  - `.GQI`: GQI-specific implementations.
-  - `.Protocol`: Connector-specific implementations.
+Create separate projects for different aspects of your solution:
+
+- `.Common`: Shared code that can run in multiple contexts.
+- `.Automation`: Automation-specific implementations.
+- `.GQI`: GQI-specific implementations.
+- `.Protocol`: Connector-specific implementations.
 
 ### Follow naming conventions
 
@@ -65,11 +66,12 @@ For Standard Solutions delivered by Skyline Communications, use [Solution Dev Pa
 
 ### Document your packages
 
-- Always include a **README.md** file explaining:
-  - Purpose and scope of the package
-  - Code entry points and usage examples
-  - Minimum DataMiner version requirements
-  - Dependencies and prerequisites
+- Always include a **README.md** file that mentions the following:
+
+  - Purpose and scope of the package.
+  - Code entry points and usage examples.
+  - Minimum DataMiner version requirements.
+  - Dependencies and prerequisites.
 
 - Use [XML documentation comments](xref:Xml_Documentation_Comments) to provide IntelliSense support for consumers.
 
@@ -82,14 +84,14 @@ When your Custom Dev Pack is **relevant and generic** enough for broader use:
 
 ## Versioning and maintenance
 
-### Follow semantic versioning
+### Use semantic versioning
 
-Adhere to [Semantic Versioning](xref:Producing_NuGet#versioning-conventions):
+See [Versioning conventions](xref:Producing_NuGet#versioning-conventions).
 
 ### Plan for stability
 
 - Consider the **stability** of your APIs before publishing.
-- Once published, maintain **backward compatibility** whenever possible.
+- After publishing, maintain **backward compatibility** whenever possible.
 - Clearly communicate any breaking changes in release notes.
 
 ## Publishing strategy
