@@ -120,13 +120,15 @@ If you have a dependency on .NET Framework (e.g., Skyline.DataMiner.Dev.*), you 
 
   - Holds all the utilities like helpers, parsers, etc.
 
-    E.g. SNMP trap parsing, rate calculations, table context menu, etc.
+  - For example: SNMP trap parsing, rate calculations, table context menu, etc.
 
 - *Skyline.DataMiner.Dev.Utils.XXX*
 
-  - Holds all the [Solution Dev Packs](xref:TOODataMinerDevPackages#solution-dev-packs).
+  - Holds all the [Custom Dev Packs](xref:TOODataMinerDevPackages#custom-dev-packs).
 
-    E.g. MediaOps library, etc.
+  - *Skyline.DataMiner.Dev.Utils.Solutions.XXX* is a specific naming convention for [Solution Dev Packs](xref:TOODataMinerDevPackages#solution-dev-packs), which are Custom Dev Packs for Standard Solutions delivered by Skyline Communications.
+
+  - For example: MediaOps library, etc.
 
 - *Skyline.DataMiner.ConnectorAPI.XXX*
 
@@ -135,7 +137,7 @@ If you have a dependency on .NET Framework (e.g., Skyline.DataMiner.Dev.*), you 
 - *Skyline.DataMiner.DataSources.XXX*
 
   - Holds the packages that can communicate with external data sources. This also includes packages like OpenConfig.Gnmi that rely on the CommunicationGateway DxM.
- 
+
 - *Skyline.DataMiner.ProjectAPI.XXX*
 
   - Holds project-specific packages. There is no real use for these packages outside of the project scope.
