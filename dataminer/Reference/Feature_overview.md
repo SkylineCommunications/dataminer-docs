@@ -95,6 +95,7 @@ Below you can find an overview of the main features that have been added to Data
 | DOM: [DomInstanceValueFieldDescriptor](xref:DOM_DomInstanceValueFieldDescriptor) | DataMiner 10.2.3/10.3.0 <!-- [ID 32326] -->|
 | DOM: [GroupFieldDescriptor](xref:DOM_GroupFieldDescriptor) and [UserFieldDescriptor](xref:DOM_UserFieldDescriptor) | DataMiner 10.3.3/10.4.0 <!-- [ID 35278] -->|
 | DOM: [History of DOM instances](xref:DOM_history) | DataMiner 10.1.3/10.2.0 <!-- [ID 28709] --> |
+| DOM: [instance-level security configuration](xref:DOM_security_ui) | DataMiner 10.5.0 [CU12]/10.6.3 <!-- [ID 44385] --> |
 | DOM: [Interactive Automation script action](xref:DOM_actions#interactive-script) |  DataMiner 10.2.8/10.3.0 <!-- [ID 33513] -->|
 | DOM: [DOM link security](xref:DOM_security) | DataMiner 10.5.10/10.6.0 <!-- [ID 43589] --> |
 | EPM: [Aliases for topology cells, chains and search chains](xref:EPMConfig_xml) | DataMiner 10.1.7/10.2.0 <!-- [ID 29766] [ID 29841] -->|
