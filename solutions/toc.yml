@@ -75,6 +75,8 @@ items:
           topicUid: MO_Control_Surface
         - name: Orchestration Events
           topicUid: MO_Orchestration_Events
+        - name: Mediation Layer
+          topicUid: MediaOps.Live.Mediation
     - name: dataminer.InfraOps
       topicUid: InfraOps
       items:
