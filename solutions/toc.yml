@@ -9,62 +9,72 @@ items:
     - name: dataminer.MediaOps
       topicUid: MediaOps
       items:
-      - name: Installing dataminer.MediaOps
-        topicUid: MO_Installation
-      - name: People & Organizations
-        topicUid: People_Organizations
+      - name: Plan
+        topicUid: MediaOps.Plan
         items:
-        - name: Managing contacts
-          topicUid: PO_Managing_Contacts
-        - name: Managing teams
-          topicUid: PO_Managing_Teams
-        - name: Managing organizations
-          topicUid: PO_Managing_Organizations
-      - name: Resource Studio
-        topicUid: MO_Resource_Studio
-        items: 
-        - name: Assigning resource icons
-          topicUid: RS_Resource_Icons
-        - name: Linking resource pools
-          topicUid: RS_Linking_Pools
-      - name: Workflow Designer
-        topicUid: MO_Workflow_Designer
+        - name: People & Organizations
+          topicUid: People_Organizations
+          items:
+          - name: Managing contacts
+            topicUid: PO_Managing_Contacts
+          - name: Managing teams
+            topicUid: PO_Managing_Teams
+          - name: Managing organizations
+            topicUid: PO_Managing_Organizations
+        - name: Resource Studio
+          topicUid: MO_Resource_Studio
+          items: 
+          - name: Assigning resource icons
+            topicUid: RS_Resource_Icons
+          - name: Linking resource pools
+            topicUid: RS_Linking_Pools
+        - name: Workflow Designer
+          topicUid: MO_Workflow_Designer
+          items:
+            - name: Creating workflows
+              topicUid: WFD_Creating_Workflows
+        - name: Scheduling
+          topicUid: MO_Scheduling
+          items:
+            - name: Creating a job
+              topicUid: SCH_Create_Job
+            - name: Editing a job
+              topicUid: SCH_Edit_Job
+            - name: Working with recurring jobs
+              topicUid: SCH_Recurring
+            - name: Job states
+              topicUid: MO_S_Job_States
+            - name: Job locking
+              topicUid: MO_S_Job_Locking
+            - name: App settings
+              topicUid: MO_S_App_Configuration
+            - name: Validation of upcoming jobs
+              topicUid: Overview_MediaOps_Validation
+        - name: Tutorials
+          items: 
+          - name: Configuring resources and resource pools
+            topicUid: Tutorial_MediaOps_Resource_Studio_Intro
+          - name: Creating a job and configuring it with resources
+            topicUid: Tutorial_MediaOps_Scheduling_Encoder_Decoder
+          - name: Creating an organization with a team and contacts to use as resources in MediaOps apps
+            topicUid: Tutorial_MediaOps_People_and_Organizations_Intro
+          - name: Assigning capabilities to resources
+            topicUid: Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities
+          - name: Using time-dependent capabilities
+            topicUid: Tutorial_MediaOps_Scheduling_Time_Dependent_Capabilities
+          - name: Scheduling a job using a resource pool with specific capabilities
+            topicUid: Tutorial_MediaOps_Scheduling_Configurations
+          - name: Creating a workflow to use as a template for a job
+            topicUid: Tutorial_MediaOps_Workflow_Designer_Intro
+      - name: Live
+        topicUid: MediaOps.Live
         items:
-          - name: Creating workflows
-            topicUid: WFD_Creating_Workflows
-      - name: Scheduling
-        topicUid: MO_Scheduling
-        items:
-          - name: Creating a job
-            topicUid: SCH_Create_Job
-          - name: Editing a job
-            topicUid: SCH_Edit_Job
-          - name: Working with recurring jobs
-            topicUid: SCH_Recurring
-          - name: Job states
-            topicUid: MO_S_Job_States
-          - name: Job locking
-            topicUid: MO_S_Job_Locking
-          - name: App settings
-            topicUid: MO_S_App_Configuration
-          - name: Validation of upcoming jobs
-            topicUid: Overview_MediaOps_Validation
-      - name: Tutorials
-        items: 
-        - name: Configuring resources and resource pools
-          topicUid: Tutorial_MediaOps_Resource_Studio_Intro
-        - name: Creating a job and configuring it with resources
-          topicUid: Tutorial_MediaOps_Scheduling_Encoder_Decoder
-        - name: Creating an organization with a team and contacts to use as resources in MediaOps apps
-          topicUid: Tutorial_MediaOps_People_and_Organizations_Intro
-        - name: Assigning capabilities to resources
-          topicUid: Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities
-        - name: Using time-dependent capabilities
-          topicUid: Tutorial_MediaOps_Scheduling_Time_Dependent_Capabilities
-        - name: Scheduling a job using a resource pool with specific capabilities
-          topicUid: Tutorial_MediaOps_Scheduling_Configurations
-        - name: Creating a workflow to use as a template for a job
-          topicUid: Tutorial_MediaOps_Workflow_Designer_Intro
+        - name: Virtual Signal Groups
+          topicUid: MO_Virtual_Signal_Groups
+        - name: Control Surface
+          topicUid: MO_Control_Surface
+        - name: Orchestration Events
+          topicUid: MO_Orchestration_Events
     - name: dataminer.InfraOps
       topicUid: InfraOps
       items:
