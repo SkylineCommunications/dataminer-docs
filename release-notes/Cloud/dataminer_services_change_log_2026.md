@@ -18,10 +18,6 @@ In the Home app, trying to link a dataminer.services account with your DMS using
 In the Home app, Fixed an issue when creating a new organization, if that organization creation failed, the error boxed showed a [Object Object] error instead of the actual error.
 
 
-### 16 February 2026 - Fix - Home - Account Linking with a SAML DMS
-
-In the Home app, trying to link a dataminer.services account with your DMS using SAML could sometimes load infinitely. This behaviour is now fixed.
-
 ### 16 February 2026 - Fix - Home - Organization creation error
 
 In the Home app, Fixed an issue when creating a new organization, if that organization creation failed, the error boxed showed a [Object Object] error instead of the actual error.
