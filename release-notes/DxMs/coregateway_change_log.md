@@ -6,7 +6,7 @@ uid: coregateway_change_log
 
 #### 16 February 2026 - Fix - CoreGateway 2.14.16 - Fix version offloading
 
-A small change was done to ensure the correct version is uploaded against which certain checks are done in admin.dataminer.services.
+A small change was done to ensure the correct version is uploaded against which certain checks are done in admin.dataminer.services resulting in the Overview page on DMS level to display an error.
 
 #### 13 February 2026 - Enhancement - CoreGateway 2.14.15 - Dependencies updated
 
