@@ -20,7 +20,7 @@ There are two ways to define the pattern, a quick way where you use all default 
 
   1. Enter a name and (optionally) a description.
 
-  1. If you want the patterns to be available for other DataMiner functionality, e.g. to [generate suggestion events](xref:Monitoring_of_trend_patterns) or via the Generic Query Interface in dashboards or low-code apps, select *Continuously detect patterns in the background*.
+  1. If you want the patterns to be available for other DataMiner functionality, e.g., to [generate suggestion events](xref:Monitoring_of_trend_patterns) or via the Generic Query Interface in dashboards or low-code apps, select *Continuously detect patterns in the background*.
 
   1. If you want the patterns to be detected for all elements using the protocol instead of the current element only, next to *Apply to*, click the element name and select the protocol instead.
 

@@ -21,7 +21,7 @@ When you publish the project, a corresponding item will be created in the online
 
 ### New artifacts
 
-You can right-click the solution and select *Add* > *New Project*. This will allow you to select DataMiner project templates (e.g. to add additional automation scripts).
+You can right-click the solution and select *Add* > *New Project*. This will allow you to select DataMiner project templates (e.g., to add additional automation scripts).
 
 > [!NOTE]
 > Connectors are currently not supported for this.
@@ -112,7 +112,7 @@ To execute custom code during installation, open the `$SCRIPTNAME$.cs` file and 
 
 ## Adding configuration files
 
-If your installation code needs configuration files (e.g. .json, .xml), you can add these to the *SetupContent* folder, which can be accessed during installation.
+If your installation code needs configuration files (e.g., .json, .xml), you can add these to the *SetupContent* folder, which can be accessed during installation.
 
 Access them in your code using:
 
@@ -139,7 +139,7 @@ $env:DATAMINER_TOKEN = "MyOrgKey"
 dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
 ```
 
-You can also choose to leave the default `CatalogPublishKeyName` in the .csproj file and add a system variable in Windows (through [Powershell](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.5#set-environment-variables-with-setenvironmentvariable) or the [System Control Panel](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.5#set-environment-variables-in-the-system-control-panel), e.g. `[Environment]::SetEnvironmentVariable("skyline__sdk__dataminertoken", "MyOrgKey", "Machine"))`.
+You can also choose to leave the default `CatalogPublishKeyName` in the .csproj file and add a system variable in Windows (through [Powershell](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.5#set-environment-variables-with-setenvironmentvariable) or the [System Control Panel](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.5#set-environment-variables-in-the-system-control-panel), e.g., `[Environment]::SetEnvironmentVariable("skyline__sdk__dataminertoken", "MyOrgKey", "Machine"))`.
 
 By doing so, you can omit `CatalogDefaultDownloadKeyName` and `CatalogPublishKeyName`, and simplify the command:
 
@@ -204,7 +204,7 @@ There are two ways to change the version of a package:
 
 ### Updating Catalog item details
 
-To update only the **Catalog item details**, you can re-publish an already existing version. The Catalog does not allow the re-publishing of an existing version artifact, so the artifact will not be updated (i.e. the existing version will remain unchanged in the Catalog). However, the Catalog item details will be updated. This includes the details provided in the **manifest.yml** and the **readme**.
+To update only the **Catalog item details**, you can re-publish an already existing version. The Catalog does not allow the re-publishing of an existing version artifact, so the artifact will not be updated (i.e., the existing version will remain unchanged in the Catalog). However, the Catalog item details will be updated. This includes the details provided in the **manifest.yml** and the **readme**.
 
 If you have set the default key name as a system environment variable (see above), you can run the following command:
 

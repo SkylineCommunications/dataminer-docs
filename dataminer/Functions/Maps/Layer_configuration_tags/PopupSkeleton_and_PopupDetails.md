@@ -30,7 +30,7 @@ In the `<PopupDetails>` tag, add a `<Detail>` tag for every placeholder used in 
 
 The name of a predefined DataMiner Cube alarm filter.
 
-If you specify "alarmcount" in the *Type* attribute to retrieve the number of alarms linked to a particular item, you can use this *alarmFilter* attribute to specify a predefined alarm filter to e.g. retrieve only the number of critical alarms.
+If you specify "alarmcount" in the *Type* attribute to retrieve the number of alarms linked to a particular item, you can use this *alarmFilter* attribute to specify a predefined alarm filter to, for example, retrieve only the number of critical alarms.
 
 #### alias
 
@@ -434,11 +434,11 @@ Refer to that variable in the configuration file:
 ```
 
 > [!NOTE]
-> The URL variable has to contain either the element name or the element ID (i.e. DmaID/ElementID).
+> The URL variable has to contain either the element name or the element ID (i.e., DmaID/ElementID).
 
 #### Putting the data element in the same view as the marker element
 
-Create a view that contains two elements: the marker element (i.e. the element containing the marker coordinates) and the data element (i.e. the element that contains the data to be shown in the pop-up balloon). Use `<Detail>` tags of type *parameter_sameviewelement* or *property_sameviewelement* to fetch data from the data element:
+Create a view that contains two elements: the marker element (i.e., the element containing the marker coordinates) and the data element (i.e., the element that contains the data to be shown in the pop-up balloon). Use `<Detail>` tags of type *parameter_sameviewelement* or *property_sameviewelement* to fetch data from the data element:
 
 ```xml
 <PopupDetails>

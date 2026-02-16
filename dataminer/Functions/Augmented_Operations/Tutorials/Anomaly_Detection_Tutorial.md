@@ -74,7 +74,7 @@ The tutorial consists of the following steps:
    > [!TIP]
    > For more information on the possible types of change points, see [Behavioral anomaly detection](xref:Behavioral_anomaly_detection#types-of-change-points)
 
-1. Hover the mouse pointer over a change point to see more detail about the type of change point (e.g. a level shift). If necessary, zoom in to see all details, such as the begin and end values.
+1. Hover the mouse pointer over a change point to see more detail about the type of change point (e.g., a level shift). If necessary, zoom in to see all details, such as the begin and end values.
 
    ![Zoomed in view of a change point to see all details](~/dataminer/images/Audio_Bit_Rate_Trending_ChangePoint_Details.png)
 
@@ -123,7 +123,7 @@ As anomalies might flag potential problems in your operation, it can be useful t
       > [!NOTE]
       > This element is a copy of *Anomaly Detection Tutorial - Encryption Key Requests*, which generates the same data.
 
-   1. Specify a name for the alarm template, e.g. *Monitoring of anomalies*, and click *OK*.
+   1. Specify a name for the alarm template, e.g., *Monitoring of anomalies*, and click *OK*.
 
    1. Select the checkbox in the *MON* column for the parameter *Encryption Key Requests*.
 
@@ -169,13 +169,13 @@ As anomalies might flag potential problems in your operation, it can be useful t
 
 ## Step 5: Make DataMiner generate alarms for specific anomaly types
 
-In some cases, it can be useful to only generate alarms for certain types of anomalies, for example the bit rate parameter from step 2 above. The jumps between different encoding bit rates might be expected, depending on the stream that gets encoded at that time, but you might want to get notified if the bit rate starts fluctuating a lot on a certain stream (e.g. because it is being encoded using a variable bit rate scheme instead of a constant bit rate scheme). You can do this by activating alarm monitoring for *variance changes* only:
+In some cases, it can be useful to only generate alarms for certain types of anomalies, for example the bit rate parameter from step 2 above. The jumps between different encoding bit rates might be expected, depending on the stream that gets encoded at that time, but you might want to get notified if the bit rate starts fluctuating a lot on a certain stream (e.g., because it is being encoded using a variable bit rate scheme instead of a constant bit rate scheme). You can do this by activating alarm monitoring for *variance changes* only:
 
 1. Create an alarm template:
 
    1. Right-click the element *Anomaly Detection Tutorial - Audio bit rate (CBR-VBR)* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
 
-   1. Specify a name for the alarm template, e.g. *Variance change monitoring*, and click *OK*.
+   1. Specify a name for the alarm template, e.g., *Variance change monitoring*, and click *OK*.
 
    1. Select the checkbox in the *MON* column for the parameter *Audio Bit Rate Channel 1*.
 
@@ -239,7 +239,7 @@ In the previous steps, DataMiner determined autonomously whether certain behavio
       > [!NOTE]
       > This element is a copy of *Anomaly Detection Tutorial - Cable Modems Out of Service*, which generates the same data.
 
-   1. Specify a name for the alarm template, e.g. *Monitoring of absolute thresholds*, and click *OK*.
+   1. Specify a name for the alarm template, e.g., *Monitoring of absolute thresholds*, and click *OK*.
 
    1. Select the checkbox in the *MON* column for the parameter *Cable Modems Out of Service*.
 
@@ -251,7 +251,7 @@ In the previous steps, DataMiner determined autonomously whether certain behavio
 
    1. Next to *Level increases*, select *Absolute*.
 
-   1. In the yellow box (i.e. major severity), fill in *50*.
+   1. In the yellow box (i.e., major severity), fill in *50*.
 
       ![Configure alarm monitoring of level increases of size 50 or higher](~/dataminer/images/Anomaly_Alarming_Popup_Level_Increase_50.gif)
 
@@ -281,7 +281,7 @@ In the previous steps, DataMiner determined autonomously whether certain behavio
 
    1. Right-click the element *Anomaly Detection Tutorial - Cable Modems Out of Service 3* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* >  *New alarm template*.
 
-   1. Specify a name for the alarm template, e.g. *Monitoring of relative thresholds*, and click *OK*.
+   1. Specify a name for the alarm template, e.g., *Monitoring of relative thresholds*, and click *OK*.
 
    1. Select the checkbox in the *MON* column for the parameter *Cable Modems Out of Service*.
 
@@ -293,7 +293,7 @@ In the previous steps, DataMiner determined autonomously whether certain behavio
 
    1. Next to *Level increases*, select *Relative*.
 
-   1. Fill in *25* in the light-blue box (i.e. minor severity) and *30* in the yellow box (i.e. major severity).
+   1. Fill in *25* in the light-blue box (i.e., minor severity) and *30* in the yellow box (i.e., major severity).
 
       ![Configure alarm monitoring of level increases using relative thresholds](~/dataminer/images/Anomaly_Alarming_Popup_Level_Increase_Relative.gif)
 
@@ -365,7 +365,7 @@ Remember that you can always duplicate the element to try a second time, if you 
 > Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as a token of your accomplishment.
 
 > [!IMPORTANT]
-> We want to keep improving our Behavioral Anomaly Detection features, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us good examples of detected anomalies and/or situations where the anomaly detection can be improved (e.g. no anomaly was detected, or an anomaly was detected for something that is not problematic).
+> We want to keep improving our Behavioral Anomaly Detection features, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us good examples of detected anomalies and/or situations where the anomaly detection can be improved (e.g., no anomaly was detected, or an anomaly was detected for something that is not problematic).
 >
 > Use the following email format to send us your examples:
 >

@@ -71,9 +71,9 @@ Up to now, DataMiner was able to recognize patterns in trend graphs showing tren
 
 When you open a trend graph showing trend information for multiple parameters, you can now define a so-called *multivariate trend pattern*.
 
-As with single-parameter patterns (i.e. univariate patterns), a number of options can be specified:
+As with single-parameter patterns (i.e., univariate patterns), a number of options can be specified:
 
-- If you want the patterns to be available for other DataMiner functionality, e.g. to generate suggestion events or via the Generic Query Interface in dashboards or low-code apps, select *Continuously detect patterns in the background*.
+- If you want the patterns to be available for other DataMiner functionality, e.g., to generate suggestion events or via the Generic Query Interface in dashboards or low-code apps, select *Continuously detect patterns in the background*.
 
 - If you want the patterns to be detected for all elements using the protocol instead of the current element only, next to *Apply to*, click the element name and select the protocol instead.
 
@@ -85,7 +85,7 @@ If you are viewing a trend graph that shows trend information for multiple param
 
 A light bulb icon will now be displayed when you select a time range on the trend graph of a parameter. If you want to know which other parameters are related to this parameter, based purely on the behavior during the selected time range, then you can click this icon to add or view related parameters. Even if multiple curves are displayed on the same trend graph, the light bulb always shows relations with one specific parameter, whose name is mentioned in the light bulb tooltip.
 
-You can for instance use this in case a parameter (e.g. the total available memory of a server) behaves oddly during a particular time range (e.g. a downward spike), in order to find out if other parameters of the same device also showed unusual behavior during the same time range.
+You can for instance use this in case a parameter (e.g., the total available memory of a server) behaves oddly during a particular time range (e.g., a downward spike), in order to find out if other parameters of the same device also showed unusual behavior during the same time range.
 
 For more information, see [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph).
 
@@ -196,7 +196,7 @@ When, in the Alarm Console, you opened a history tab on a system with a large nu
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
-When you exported more than a week's worth of real-time trend data to a CSV file, only the trend data of the last week (i.e. "week to date") would be exported.
+When you exported more than a week's worth of real-time trend data to a CSV file, only the trend data of the last week (i.e., "week to date") would be exported.
 
 #### Settings: Suggestion tab added to a group setting would not show any suggestion alarms [ID 36666]
 

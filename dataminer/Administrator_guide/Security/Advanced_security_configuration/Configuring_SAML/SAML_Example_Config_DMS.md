@@ -37,7 +37,7 @@ For all Agents in the cluster, the *DataMiner.xml* file should have the same con
 ```
 
 > [!IMPORTANT]
-> This configuration must be exactly the same for all Agents in a cluster. Mixing different types of configuration across Agents (e.g. `Groups claims="true"` for one Agent and `Groups claims="false"` for another) will cause problems with user access.
+> This configuration must be exactly the same for all Agents in a cluster. Mixing different types of configuration across Agents (e.g., `Groups claims="true"` for one Agent and `Groups claims="false"` for another) will cause problems with user access.
 
 ## Reply URLs at the identity provider side
 

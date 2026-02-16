@@ -48,7 +48,7 @@ connection.OnNewMessage += (sender, args) =>
 connection.AddSubscription(setId, subscriptionFilter);
 ```
 
-In addition, you can also build a `FilterElement` and add it to the list of subscription filters. This allows you to only receive updates for `DomInstances` that meet very specific conditions (e.g. only receive updates for `DomInstances` linked to a specific `DomDefinition`). Do note that you will currently receive events of type `DomCrudEvent<T>` instead of the actual specific event type when using this additional filtering.
+In addition, you can also build a `FilterElement` and add it to the list of subscription filters. This allows you to only receive updates for `DomInstances` that meet very specific conditions (e.g., only receive updates for `DomInstances` linked to a specific `DomDefinition`). Do note that you will currently receive events of type `DomCrudEvent<T>` instead of the actual specific event type when using this additional filtering.
 
 ```csharp
 using System;
@@ -132,7 +132,7 @@ This event contains a list of changes as well as the `ModuleId` of the `DomManag
 > [!NOTE]
 >
 > - Exposers (`DomInstanceStatusChangedEventExposers`) are available for the filtering for each of these fields.
-> - The event contains a list of changes. However, at present, this only consists of a single change. Nevertheless, we recommend that any API consumer is able to handle more changes, since this behavior could change in the future (e.g. batching of events).
+> - The event contains a list of changes. However, at present, this only consists of a single change. Nevertheless, we recommend that any API consumer is able to handle more changes, since this behavior could change in the future (e.g., batching of events).
 
 ### Filtering status transition events
 
@@ -142,7 +142,7 @@ Apart from the [module filter](#filtering-crud-events), which can also be used f
 >
 > - From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40621-->, client applications will be notified when a DOM instance no longer matches the subscription filter.
 > - Only one `ModuleEventSubscriptionFilter` is supported for each subscription set. If you want to subscribe to events of multiple DOM managers, you will have to create another subscription for each one.
-> - The ***ModuleEventSubscriptionFilter* takes precedence over any other filter for a module event** (e.g. DOM CRUD or status events). When such a filter is defined and the module event does not match the specified module ID, it will never be returned for that subscription. If it is a match, it will be returned depending on the remaining filters. If there are no other filters, it is simply returned. This does not influence non-module events.
+> - The ***ModuleEventSubscriptionFilter* takes precedence over any other filter for a module event** (e.g., DOM CRUD or status events). When such a filter is defined and the module event does not match the specified module ID, it will never be returned for that subscription. If it is a match, it will be returned depending on the remaining filters. If there are no other filters, it is simply returned. This does not influence non-module events.
 
 ```csharp
 // In this example we take the Connection object from the script's Engine object

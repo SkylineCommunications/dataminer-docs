@@ -41,7 +41,7 @@ Also, write parameters will no longer be saved as this would cause unnecessary l
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-When a DMA receives an SNMPv3 trap that it cannot process (e.g. because the SNMPv3 user is unknown), and trap distribution is enabled, from now on, the trap will be distributed to the other DMAs in the cluster in an attempt to have it processed by one of those other DMAs.
+When a DMA receives an SNMPv3 trap that it cannot process (e.g., because the SNMPv3 user is unknown), and trap distribution is enabled, from now on, the trap will be distributed to the other DMAs in the cluster in an attempt to have it processed by one of those other DMAs.
 
 Also, in some cases, traps could be forwarded to the wrong elements because the SNMPv3 USM ID was not validated correctly.
 
@@ -97,7 +97,7 @@ From now on, when only the task actions are changed during an update of a schedu
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-In some cases, SLNet could stop working when rolling over from one log file to another (e.g. from *SLNet.txt* to *SLNet0.txt*).
+In some cases, SLNet could stop working when rolling over from one log file to another (e.g., from *SLNet.txt* to *SLNet0.txt*).
 
 From now on, when an issue occurs when rolling over log files, an error will be logged in the Windows Event Viewer.
 

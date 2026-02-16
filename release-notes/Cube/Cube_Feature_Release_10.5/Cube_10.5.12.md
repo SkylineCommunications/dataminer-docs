@@ -78,13 +78,13 @@ In a `"SubscriptionFilter"` item, you can also specify a `COLUMNS=` filter. If y
 >
 > - If you do not specify a `"ColumnIDs"` item, the entire table will be cached.
 > - If the `"SubscriptionFilter"` item contains a `COLUMNS=` filter, any `"ColumnIDs"` item specified for the same table will be ignored.
-> - In the configuration file, each table can only be configured once. It is not allowed to configure the same table multiple times with e.g. other columns.
+> - In the configuration file, each table can only be configured once. It is not allowed to configure the same table multiple times with e.g., other columns.
 
 ##### Parameter blocks in filters now allow using wildcards in table keys
 
 From now on, when retrieving data from the parameter cache, you can use \* and ? wildcards in table keys (\* representing any number of characters and ? representing one character in the specified spot).
 
-For example, if a table has a display key named `qaTable 500_x` with `x` being a sequence number, and you want to fetch the fifth row, you will now be able to use the following filter: `<A>-A|MyElement|Parameter:507,qaTable*5|=Active` A display key named e.g. *qaTable 500_5* will then match the key specified in that filter.
+For example, if a table has a display key named `qaTable 500_x` with `x` being a sequence number, and you want to fetch the fifth row, you will now be able to use the following filter: `<A>-A|MyElement|Parameter:507,qaTable*5|=Active` A display key named e.g., *qaTable 500_5* will then match the key specified in that filter.
 
 ##### Placeholders of type [param:] can now refer to cached table columns
 
@@ -138,7 +138,7 @@ When DataMiner Cube performs a web request or when it displays a web browser con
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-From now on, when working in the *Credentials library*, you will be able to horizontally scroll the details pane. This will e.g. make it easier to view very long passwords.
+From now on, when working in the *Credentials library*, you will be able to horizontally scroll the details pane. This will e.g., make it easier to view very long passwords.
 
 #### Automation, Correlation, and Scheduler: PDF report configuration window has been enlarged [ID 43898]
 
@@ -156,7 +156,7 @@ Throughout the DataMiner Cube UI, 'Automatic incident tracking' has now been ren
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-From now on, when alarms have been removed from alarm trees or when correlation base alarms have been added, DataMiner Cube will check whether there are loops in the alarm tree, i.e. whether the alarm tree contains any alarms that refer to themselves.
+From now on, when alarms have been removed from alarm trees or when correlation base alarms have been added, DataMiner Cube will check whether there are loops in the alarm tree, i.e., whether the alarm tree contains any alarms that refer to themselves.
 
 When a correlation alarm loop is detected, the following error will be added to the Cube logging and to SLClient.txt: "Cube Correlation nested alarm loop detected!"
 

@@ -35,7 +35,7 @@ All specifications are provided based on the assumption that DMAs are running on
 | 12 | Number of DVEs | DMA | 2,000 - 10,000 | Depending on the type of device. |
 | 13 | Number of EPM (formerly CPE) devices | DMA | 100,000 | Based on a 15-minute update cycle. |
 | 14 | Number of views | DMS | 8,000 ||
-| 15 | Number of parameters | DMA | 25,000,000 | Based on a 15-minute update cycle.<br>Note: This figure supersedes metric 13 above (i.e. number of EPM devices) |
+| 15 | Number of parameters | DMA | 25,000,000 | Based on a 15-minute update cycle.<br>Note: This figure supersedes metric 13 above (i.e., number of EPM devices) |
 | 16 | Number of configured users | DMS | 1,000 ||
 | 17 | Number of online users | DMS | 100 | Assuming common user behavior. |
 | 18 | Switch frequency | DataMiner Failover | 1 switch every 15 minutes ||

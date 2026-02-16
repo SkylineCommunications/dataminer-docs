@@ -71,4 +71,4 @@ Take into account the following example:
 
   All other warnings will then be fixed. There is no complete list of all StyleCop warning that it will fix. More information can be found here: <br><http://www.codemaid.net/documentation/#cleaning>.
 
-- For large QActions (e.g. Cisco DCM QAction 1), these operations can fail, causing an OutOfMemory exception. In that case, you should split the code into smaller pieces (one namespace at a time) in a new Visual Studio window and perform the operation with those.
+- For large QActions (e.g., Cisco DCM QAction 1), these operations can fail, causing an OutOfMemory exception. In that case, you should split the code into smaller pieces (one namespace at a time) in a new Visual Studio window and perform the operation with those.

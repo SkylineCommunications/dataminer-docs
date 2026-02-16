@@ -4,7 +4,7 @@ uid: Manifest.Content.Protocols.Protocol.Version
 
 # Version element
 
-Specifies the protocol version. Either specify a specific version (e.g. 1.0.0.1) or a range (e.g. 1.0.0.X).
+Specifies the protocol version. Either specify a specific version (e.g., 1.0.0.1) or a range (e.g., 1.0.0.X).
 
 ## Parent
 

@@ -268,7 +268,7 @@ Available from DataMiner 10.3.4/10.4.0 onwards<!-- RN 35661 -->. To configure an
 ***
 
 > [!NOTE]
-> When a low-code app is embedded in Cube (e.g. in Visual Overview), an *Open monitoring card* action will open the specified card in Cube.
+> When a low-code app is embedded in Cube (e.g., in Visual Overview), an *Open monitoring card* action will open the specified card in Cube.
 
 ## Showing a context menu
 

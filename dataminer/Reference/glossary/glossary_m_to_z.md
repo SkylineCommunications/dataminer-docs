@@ -23,7 +23,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | MCR | Master Control Room. Control center of a broadcast operation. |
 | MCU | Master Control Unit. Central management device. |
 | MD5 | Message Digest 5. Cryptographic hash algorithm. |
-| Measurement point | In the context of [Spectrum Analysis](xref:SpectrumAnalysis), a measurement point is series of sets that is executed on devices to select an input for a spectrum analyzer device, e.g. to set a switch to the correct position. |
+| Measurement point | In the context of [Spectrum Analysis](xref:SpectrumAnalysis), a measurement point is series of sets that is executed on devices to select an input for a spectrum analyzer device, e.g., to set a switch to the correct position. |
 | Mediation protocol | Standardized protocol that forms a mediation layer on top of device-specific protocols, thereby providing a unified view on similar devices that have a different device-specific protocol. Also known as base protocol. |
 | Memory file | Variable within an automation script that consists of a container of values. See [Script variables](xref:Script_variables). |
 | MER | Modulation Error Ratio. Measurement of the performance of a digital media transmitter or receiver in a communications system using digital modulation. |
@@ -180,7 +180,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Service | Group of elements or partial elements, combined from the perspective of a particular business aspect. See [Services and service templates](xref:About_services). |
 | Service definition | In the context of [DataMiner SRM](xref:About_SRM), a definition of multiple virtual functions connected together through their interfaces. See [Service definition](xref:srm_definitions#service-definition). |
 | Service definition template | Type of service definition that is typically used to define the different types of services that need to be instantiated in the [Service & Resource Management](xref:About_SRM) module, as opposed to a service definition that is only intended for one use. See [Service definition](xref:srm_definitions#service-definition). |
-| Service level agreement | In the context of [DataMiner Business Intelligence](xref:sla), this refers to a specific type of element that monitors a service level agreement, i.e. an agreement between a service provider and a customer. Abbreviated as SLA. |
+| Service level agreement | In the context of [DataMiner Business Intelligence](xref:sla), this refers to a specific type of element that monitors a service level agreement, i.e., an agreement between a service provider and a customer. Abbreviated as SLA. |
 | Service Manager | Legacy name for the Services module in DataMiner Cube. See [The Resources module](xref:The_Resources_module). |
 | Service profile | Profile for one or more service definitions that makes it possible to preconfigure profile instances for the service definitions, so that these no longer need to be selected during booking creation. In DataMiner, this is available in the form of service profile definitions with corresponding service profile instances. See [Using the profiles tab](xref:SRM_Services_profiles). |
 | Service profile definition | Definition of a service profile that includes the service definitions to which the service profile applies and the mapping of the service profile nodes to the service definition nodes. See [Using the profiles tab](xref:SRM_Services_profiles). |
@@ -195,7 +195,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Sharing | Service included in dataminer.services that allows DataMiner users to share specific live operational data with third parties. See [Sharing](xref:About_the_Sharing_app). |
 | SHF | Super High Frequency. Indicates radio frequencies in the range between 3 and 30 gigahertz. |
 | Simulated element | An element that displays data from a simulation file instead of communicating with an actual device. See [Simulated elements](xref:Simulated_elements). |
-| SLA | Service Level Agreement. In the context of [DataMiner Business Intelligence](xref:sla), this refers to a specific type of element that monitors a service level agreement, i.e. an agreement between a service provider and a customer. |
+| SLA | Service Level Agreement. In the context of [DataMiner Business Intelligence](xref:sla), this refers to a specific type of element that monitors a service level agreement, i.e., an agreement between a service provider and a customer. |
 | SLA offline window | The time interval during which the service that an SLA applies to is considered offline. See [Business Intelligence](xref:sla). |
 | SLA outage | Alarm on the service an SLA applies to that is considered a violation of the SLA. See [Business Intelligence](xref:sla). |
 | SLA window | The time interval for which SLA compliance is calculated. See [Business Intelligence](xref:sla). |
@@ -224,7 +224,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SONET | Synchronous Optical NETworking. Standard technology in the US and Canada for synchronous data transmission on optical media. Its European counterpart is SDH. |
 | SOP | Standard Operating Procedure. Set of step-by-step instructions used to carry out complex routine operations. |
 | Spectrum analysis | DataMiner module that can be used to integrate spectrum analyzers in the DMS, so that they can be used for continuous RF performance monitoring. See [Spectrum Analysis](xref:SpectrumAnalysis). |
-| Spectrum buffer | Most recent spectrum trace retrieved during script execution (e.g. with a spectrum monitor), stored in the DataMiner spectrum service. See [Watching spectrum buffers](xref:Working_with_spectrum_monitors#watching-spectrum-buffers). |
+| Spectrum buffer | Most recent spectrum trace retrieved during script execution (e.g., with a spectrum monitor), stored in the DataMiner spectrum service. See [Watching spectrum buffers](xref:Working_with_spectrum_monitors#watching-spectrum-buffers). |
 | Spectrum monitor | Spectrum analysis feature where a spectrum script is run, optionally with a combination of measurement points and/or presets, in order to make the spectrum analyzer sweep the input signal at regular intervals to measure particular variables. See [Working with spectrum monitors](xref:Working_with_spectrum_monitors). |
 | Spectrum preset | Spectrum configuration that can be saved and loaded, including spectrum settings, markers, reference lines, etc. See [Using Spectrum Analysis presets](xref:Using_Spectrum_Analysis_presets). |
 | Spectrum threshold | A boundary for a spectrum trace that can be used to detect issues using spectrum scripts. See [Configuring spectrum thresholds](xref:Configuring_spectrum_thresholds). |
@@ -250,7 +250,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Surveyor | Pane in DataMiner Cube that contains a hierarchical overview of all views, elements, services, etc. in the DataMiner System. See [DataMiner Cube sidebar](xref:DataMiner_Cube_sidebar). |
 | SVN | Subversion. |
 | Sweeptime | The time that a spectrum analyzer takes to tune across the displayed frequency span. See [Changing the spectrum analyzer settings](xref:Changing_the_spectrum_analyzer_settings). |
-| SWR | Standing Wave Ratio. Ratio of the maximum and minimum amplitudes in a standing wave, i.e. a wave that oscillates in time but has a peak amplitude profile that does not move in space. |
+| SWR | Standing Wave Ratio. Ratio of the maximum and minimum amplitudes in a standing wave, i.e., a wave that oscillates in time but has a peak amplitude profile that does not move in space. |
 | System Center | A module that contains most of the administrator functionalities in DataMiner, such as management of DMAs and users. |
 | System function definition | Virtual function definition that is not linked to a specific protocol. System function definitions exist permanently in the system and are modified at runtime. See [Virtual function](xref:srm_definitions#virtual-function). |
 

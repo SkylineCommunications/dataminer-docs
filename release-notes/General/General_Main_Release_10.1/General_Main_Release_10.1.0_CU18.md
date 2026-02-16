@@ -124,7 +124,7 @@ When the element debug log level was equal to or higher than 1, an error could o
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-On the REPORTS page of an element card, masking and unmasking (i.e. state changes to "masked" and "unmasked") would not be shown correctly in the different graphs.
+On the REPORTS page of an element card, masking and unmasking (i.e., state changes to "masked" and "unmasked") would not be shown correctly in the different graphs.
 
 #### Alarm Console would incorrectly keep loading while the tickets linked to the alarms were being loaded [ID 33847]
 
@@ -174,7 +174,7 @@ In some cases, the SLProtocol process could leak memory when the NT_UPDATE_PORTS
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-When an alarm of one the following types was generated, in some cases, that alarm could affect and degrade an SLA or be added to the list of active alarms for that SLA (i.e. enhanced service):
+When an alarm of one the following types was generated, in some cases, that alarm could affect and degrade an SLA or be added to the list of active alarms for that SLA (i.e., enhanced service):
 
 - Information Event
 - Suggestion Event
@@ -197,7 +197,7 @@ When you right-clicked a column header in an alarm tab and hovered over the *Add
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-When an element card was open on the DATA page, and a parameter on that page had its unit changed (e.g. via an automation script), that change would incorrectly not be reflected in the UI. To see the new unit, you had to close the element card and re-open it.
+When an element card was open on the DATA page, and a parameter on that page had its unit changed (e.g., via an automation script), that change would incorrectly not be reflected in the UI. To see the new unit, you had to close the element card and re-open it.
 
 #### An alarm property with a name identical to that of an element, service of view property would incorrectly get duplicated when the element with that alarm property was restarted [ID 34021]
 
@@ -230,7 +230,7 @@ Up to now, to resolve the monitoring state of EPM shapes displayed in Visual Ove
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-Since DataMiner 10.1.8 (RN [30044](xref:General_Feature_Release_10.1.8#instancealarmlevel-would-not-fall-back-to-cellactualalarmlevel-when-there-was-bubble-up-information-but-no-instance-information-id-30044)), it could occur that the instance alarm level for a table row did not bubble up correctly, causing alarms for view tables to be displayed incorrectly (e.g. in an EPM environment). This could also occur for tables with an alarm where no saved data was present.
+Since DataMiner 10.1.8 (RN [30044](xref:General_Feature_Release_10.1.8#instancealarmlevel-would-not-fall-back-to-cellactualalarmlevel-when-there-was-bubble-up-information-but-no-instance-information-id-30044)), it could occur that the instance alarm level for a table row did not bubble up correctly, causing alarms for view tables to be displayed incorrectly (e.g., in an EPM environment). This could also occur for tables with an alarm where no saved data was present.
 
 #### Potential minor memory leak in SLProtocol if fixed parameter had length of zero [ID 34064]
 

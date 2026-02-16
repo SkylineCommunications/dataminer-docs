@@ -125,7 +125,7 @@ When a DataMiner Agent was started, in some cases, the configured SNMP managers 
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-In some cases, alarm groups containing alarms without a focus value (e.g. notices or errors) would not be correctly removed from the group when the element associated with the alarm was deleted, stopped or paused.
+In some cases, alarm groups containing alarms without a focus value (e.g., notices or errors) would not be correctly removed from the group when the element associated with the alarm was deleted, stopped or paused.
 
 #### Problem with SLDataMiner when creating a dmimport package [ID 41963]
 
@@ -133,7 +133,7 @@ In some cases, alarm groups containing alarms without a focus value (e.g. notice
 
 Up to now, in some cases, SLDataMiner could stop working while creating a dmimport package.
 
-A number of enhancements have now been made with regard to error handling during the creation of dmimport packages. From now on, when an issue occurs while a dmimport package is being created, an error message will be shown in the client (e.g. DataMiner Cube).
+A number of enhancements have now been made with regard to error handling during the creation of dmimport packages. From now on, when an issue occurs while a dmimport package is being created, an error message will be shown in the client (e.g., DataMiner Cube).
 
 #### Problem with SLProtocol when using a condition to check whether a table is empty [ID 41968]
 

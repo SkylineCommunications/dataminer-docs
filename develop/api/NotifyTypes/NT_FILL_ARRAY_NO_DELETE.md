@@ -22,12 +22,12 @@ protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/ , tableID, tableContent)
 
 ## Return Value
 
-- bool: true or a null reference in case an error occurred (e.g. in case invalid data was provided).
+- bool: true or a null reference in case an error occurred (e.g., in case invalid data was provided).
 
 ## Remarks
 
 - In case the column data contains null references, the corresponding cells will be cleared.
-- When NT_FILL_ARRAY_NO_DELETE is used, the column type must be set to "retrieved".  In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.
+- When NT_FILL_ARRAY_NO_DELETE is used, the column type must be set to "retrieved".  In case other column types are present between the specified columns (e.g., columns of type "custom"), these other columns will be skipped.
 - The FillArrayNoDelete method cannot be used together with the "autoincrement" column option.
 - To set an additional flag indicating that some cells should be cleared (using protocol.Clear) or preserved (using protocol.Leave), set the second entry of the tableInfo to true as indicated below:<!-- RN 7351 -->
 

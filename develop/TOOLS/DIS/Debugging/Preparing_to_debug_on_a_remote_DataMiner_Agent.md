@@ -43,6 +43,6 @@ Proceed as follows if you want to debug a QAction or an automation script locate
 
    See [DMA](xref:DIS_settings#dma)
 
-1. Go to *Tools \> Options \> Debugging \> Symbols*, and add the above-mentioned "publish path"<br>(e.g. `\\remote-dma\dis`) to the list of symbol file locations.
+1. Go to *Tools \> Options \> Debugging \> Symbols*, and add the above-mentioned "publish path"<br>(e.g., `\\remote-dma\dis`) to the list of symbol file locations.
 
 You are now ready to start debugging. See [Debugging a connector](xref:Debugging_a_connector) or [Debugging an automation script](xref:Debugging_an_Automation_script).

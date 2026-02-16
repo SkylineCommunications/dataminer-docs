@@ -164,7 +164,7 @@ The DataMiner Automation process.
 
 The DataMiner Mobile Gateway process.
 
-Sends and receives SMS messages (i.e. text messages).
+Sends and receives SMS messages (i.e., text messages).
 
 > [!TIP]
 > See also: [DataMiner Mobile Gateway](xref:MobileGateway)
@@ -173,15 +173,15 @@ Sends and receives SMS messages (i.e. text messages).
 
 A helper process that is called upon by other processes to perform actions such as
 
-- converting a Microsoft Visio drawing to an image file (e.g. to allow Visio drawings to be rendered in web apps),
+- converting a Microsoft Visio drawing to an image file (e.g., to allow Visio drawings to be rendered in web apps),
 
-- converting documents (e.g. reports) to PDF format,
+- converting documents (e.g., reports) to PDF format,
 
 - etc.
 
 ### SLNetComService
 
-Translates so-called managed code (as used by e.g. SLNet) to native code (as used by e.g. SLDataMiner) and vice versa.
+Translates so-called managed code (as used by e.g., SLNet) to native code (as used by e.g., SLDataMiner) and vice versa.
 
 ### SLScheduler
 
@@ -196,7 +196,7 @@ Processes QActions when asked to by SLProtocol.
 
 ### SLSNMPAgent
 
-Communicates with third-party applications acting as SNMP managers (e.g. HP OpenView, IBM NetCool, etc.).
+Communicates with third-party applications acting as SNMP managers (e.g., HP OpenView, IBM NetCool, etc.).
 
 Also sends all outgoing email notifications.
 

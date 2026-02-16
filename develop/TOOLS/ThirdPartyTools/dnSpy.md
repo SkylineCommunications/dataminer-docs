@@ -17,7 +17,7 @@ To use this tool to debug automation scripts or QActions on a remote system, fol
 
 1. Run *dnSpy-x86.exe* as administrator.
 
-1. Select *Debug > Attach to Process*, and select the process you want to debug (e.g. *SLAutomation.exe*, *SLScripting.exe*).
+1. Select *Debug > Attach to Process*, and select the process you want to debug (e.g., *SLAutomation.exe*, *SLScripting.exe*).
 
 1. Select *Debug > Windows > Modules*, and sort by timestamp in descending order to find the right module.
 

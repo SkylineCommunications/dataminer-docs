@@ -4,7 +4,7 @@ uid: FAQ_DMA_element_capacity
 
 # How does Skyline define the DMA element capacity?
 
-DataMiner Professional/Enterprise server licenses are applicable for the management of small up to large volumes of heterogeneous collections of objects in high-availability, mission-critical central-core processing environments (e.g. video headend, playout, MCR, data center, regional headends, earth station, hub, core IP networking, CMTS, etc.).
+DataMiner Professional/Enterprise server licenses are applicable for the management of small up to large volumes of heterogeneous collections of objects in high-availability, mission-critical central-core processing environments (e.g., video headend, playout, MCR, data center, regional headends, earth station, hub, core IP networking, CMTS, etc.).
 
 For this type of environment, typically an E0250 license is used (one DMA – physical or virtual server – manages a maximum of 250 elements), as there are a lot of different parameters that are managed by DataMiner. The DMA server needs to be able to cope with the load and be responsive at all times. See also [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 

@@ -43,7 +43,7 @@ Expected duration: 25 minutes
 
 1. Right-click the root view and select *New* > *View*.
 
-1. Give the view a name of your choice, e.g. `Visio spectrum presets`.
+1. Give the view a name of your choice, e.g., `Visio spectrum presets`.
 
 ## Step 2: Create a spectrum simulation element
 
@@ -51,7 +51,7 @@ Expected duration: 25 minutes
 
 1. Configure the new element as follows:
 
-   - *Name*: Enter a name of your choice e.g. `Spectrum Simulation`.
+   - *Name*: Enter a name of your choice e.g., `Spectrum Simulation`.
    - *Protocol*: *Skyline Spectrum Simulator*.
 
 1. Click *Create*.
@@ -87,7 +87,7 @@ At this point, your Microsoft Visio application should start up automatically, a
 
 1. Right-click the shape data pane and select *Define Shape Data*.
 
-1. In the pop-up window, set the *Label* field to `Element` and the *Value* field to the name of the spectrum simulation element you created earlier, e.g. `Spectrum Simulation`.
+1. In the pop-up window, set the *Label* field to `Element` and the *Value* field to the name of the spectrum simulation element you created earlier, e.g., `Spectrum Simulation`.
 
    ![Add element shape data](~/dataminer/images/Tutorial_VO_spectrum_element_shape_data.png)
 
@@ -159,7 +159,7 @@ In this step, you will create additional presets for each of the center frequenc
 
 1. In DataMiner Cube, navigate to the *Spectrum Analyzer* data page of your spectrum simulation element.
 
-1. In the *Manual* tab of the spectrum sidebar, change the settings to the desired values. e.g. for a satellite signal this could be a 12GHz center frequency and a 800MHz frequency span. For this tutorial, you can leave the other settings as they are.
+1. In the *Manual* tab of the spectrum sidebar, change the settings to the desired values. e.g., for a satellite signal this could be a 12GHz center frequency and a 800MHz frequency span. For this tutorial, you can leave the other settings as they are.
 
    - *Center frequency* `12` `GHz`.
    - *Frequency Span* `800` `MHz`.

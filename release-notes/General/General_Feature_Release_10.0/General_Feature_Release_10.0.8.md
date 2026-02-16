@@ -70,7 +70,7 @@ NotifyDataMiner(128 /* NT_UPDATE_PORTS */,"10;[ELEMENT_ID];[MATRIX_PARAM_ID];[DM
 > [!NOTE]
 > To change the layout of a matrix in DataMiner Cube, right-click the matrix and select the layout in the *Edit* window.
 >
-> Note that, in the alarm template, the default layout (e.g. inputs on the left, outputs at the top) will always be used. Although the layout of a matrix can be defined per element, an alarm template is not linked to a single element.
+> Note that, in the alarm template, the default layout (e.g., inputs on the left, outputs at the top) will always be used. Although the layout of a matrix can be defined per element, an alarm template is not linked to a single element.
 
 #### Protocols: Compression algorithm(s) can now be specified in an Accept-Encoding header \[ID 25969\]
 
@@ -201,7 +201,7 @@ Do the following:
 
 1. Right-click the component and select *Copy embed URL*.
 
-1. Use the URL of the component in either a Visio page (e.g. in a shape with a data field of type “Link”) or a web page (e.g. in an \<img> tag).
+1. Use the URL of the component in either a Visio page (e.g., in a shape with a data field of type “Link”) or a web page (e.g., in an \<img> tag).
 
 A component URL has the following syntax:
 
@@ -418,11 +418,11 @@ Up to now, when the hosting agent of an element or service could not be found, a
 
 When you select a routed output in the Router Control app, the crosspoints. the IO button and the tab item(s) of the corresponding button will all be highlighted.
 
-Now, this highlighting feature is also supported in a dynamic environment, i.e. when working with linked pages.
+Now, this highlighting feature is also supported in a dynamic environment, i.e., when working with linked pages.
 
 #### DataMiner Cube - Trending: Viewing and creating tags only possible if both Cassandra and Indexing Engine are installed \[ID 26010\]
 
-From now on, viewing and creating recurring patterns in trend data (i.e. “tags”) will only be possible on systems that have both Cassandra and Indexing Engine installed.
+From now on, viewing and creating recurring patterns in trend data (i.e., “tags”) will only be possible on systems that have both Cassandra and Indexing Engine installed.
 
 #### DataMiner.xml: XML namespace now set during DataMiner installation \[ID 26011\]
 
@@ -484,7 +484,7 @@ A number of small fixes have been made, including the following:
 
 #### DataMiner Cube - Visual Overview: Problem with session variables used by the Resource Manager timeline component \[ID 25718\]
 
-In some cases, certain session variables used by the Resource Manager timeline component (e.g. YAxisResources) would not work properly when the page contained a setvar shape but no initvar action.
+In some cases, certain session variables used by the Resource Manager timeline component (e.g., YAxisResources) would not work properly when the page contained a setvar shape but no initvar action.
 
 #### Ticketing app: Certain selection boxes were not scrollable \[ID 25719\]
 

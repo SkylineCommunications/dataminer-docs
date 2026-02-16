@@ -107,7 +107,7 @@ In all examples, a memory dump is taken of a process of the DataMiner Cube deskt
 
     - A memory dump after an *OutOfMemoryException* often provides little to no info, as a lot of memory is already cleaned up at that point.
     - When memory usage is high, the .NET garbage collector will often run. Memory dumps taken during garbage collection are unusable.
-    - When there is a memory leak (i.e. memory usage keeps increasing), a comparison between two memory dumps of moments when memory usage should be but is not equal is more interesting than one single memory dump.
+    - When there is a memory leak (i.e., memory usage keeps increasing), a comparison between two memory dumps of moments when memory usage should be but is not equal is more interesting than one single memory dump.
 
 Because of these points, we recommend to **take multiple memory dumps** using the following commands:
 
@@ -131,11 +131,11 @@ To avoid taking a memory dump during garbage collection, you can either take mul
 
 ### Compressing memory dumps
 
-Memory dumps often result in large files. However, most of the time, they can be compressed (i.e. zipped) to a fraction of their original size.
+Memory dumps often result in large files. However, most of the time, they can be compressed (i.e., zipped) to a fraction of their original size.
 
 ### More is better
 
-A memory dump is a snapshot at a single point in time. Often, several snapshots (i.e. memory dumps) will provide a lot more info than just one. This, combined with the fact that memory dumps taken during garbage collecting are unusable, means that it is always better to take more than one memory dump.
+A memory dump is a snapshot at a single point in time. Often, several snapshots (i.e., memory dumps) will provide a lot more info than just one. This, combined with the fact that memory dumps taken during garbage collecting are unusable, means that it is always better to take more than one memory dump.
 
 ### Ask us!
 

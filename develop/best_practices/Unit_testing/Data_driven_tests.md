@@ -88,7 +88,7 @@ If the test data is provided via a method, the attribute must specify that the d
 [DynamicData("TestData", DynamicDataSourceType.Method)]
 ```
 
-It is also possible to refer to a method or property that is defined in another class (e.g. the class `UnitTestData` in the example below):
+It is also possible to refer to a method or property that is defined in another class (e.g., the class `UnitTestData` in the example below):
 
 ```csharp
 [DynamicData("TestData", typeOf(UnitTestData))]

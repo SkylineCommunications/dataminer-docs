@@ -21,7 +21,7 @@ If you have a setup with [storage per DMA](xref:Configuring_storage_per_DMA) and
 
 1. Run *regedit* as Administrator and delete `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Apache Software Foundation\Procrun 2.0\elasticsearch-service-x64`.
 
-1. Delete the Elasticsearch data folder, e.g. `C:\ProgramData\Elasticsearch`. If you are unsure where to find the directory, look for path.data in the elasticsearch.yml file.
+1. Delete the Elasticsearch data folder, e.g., `C:\ProgramData\Elasticsearch`. If you are unsure where to find the directory, look for path.data in the elasticsearch.yml file.
 
    > [!NOTE]
    > The *ProgramData* folder is not displayed by default, so you may need to select to display hidden items in order to access this folder.

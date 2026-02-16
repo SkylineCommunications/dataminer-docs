@@ -65,7 +65,7 @@ namespace UserDefinableApiScripts.CreateToken
 ```
 
 > [!CAUTION]
-> If the secret for the token is pre-determined and has to be set during creation, make sure that these hard-coded values are not part of code that is publicly available (e.g. on GitHub).
+> If the secret for the token is pre-determined and has to be set during creation, make sure that these hard-coded values are not part of code that is publicly available (e.g., on GitHub).
 
 > [!TIP]
 > For more information on the token configuration, see [ApiToken object](xref:UD_APIs_Objects_ApiToken).

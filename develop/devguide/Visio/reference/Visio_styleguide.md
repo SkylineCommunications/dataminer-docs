@@ -33,7 +33,7 @@ Applying these conventions and using these standard stencils and icons will ensu
 ​<span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(190,170,135);">190,170,135</span>
 
 > [!NOTE]
-> When configuring color palettes, think of people with visual impairments (e.g. color blindness).
+> When configuring color palettes, think of people with visual impairments (e.g., color blindness).
 
 #### Alarm colors​
 
@@ -82,13 +82,13 @@ Default font: Segoe UI​
 
 ### Casing
 
-#### Uppercase​ (i.e. all letters of all words are capitalized​)
+#### Uppercase​ (i.e., all letters of all words are capitalized​)
 
 - Titles​
 - Buttons​
 - Real-time parameters​
 
-#### Title case​ (i.e. all words start with a capital*)
+#### Title case​ (i.e., all words start with a capital*)
 
 - Parameters​
 - Info labels​
@@ -136,7 +136,7 @@ The Buttons stencil contains three types of buttons that can be placed on Data p
 
 #### Action buttons
 
-Clicking an action button will cause an action to be performed immediately. Use this type of button to change the value of e.g. a parameter or a session variable, to launch a non-interactive automation script, etc.
+Clicking an action button will cause an action to be performed immediately. Use this type of button to change the value of e.g., a parameter or a session variable, to launch a non-interactive automation script, etc.
 
 Action buttons are rounded rectangles.
 

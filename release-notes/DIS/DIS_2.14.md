@@ -44,7 +44,7 @@ When, in the XML editor, you click *Publish* in order to publish the protocol yo
 
 #### New tool window: DIS Macros \[ID 20348\]
 
-The new *DIS Macros* tool window allows developers to create C# scripts that can be used to make changes to a protocol file (e.g. update OIDs based on conditions, update table definitions, increment/decrement parameters, etc.).
+The new *DIS Macros* tool window allows developers to create C# scripts that can be used to make changes to a protocol file (e.g., update OIDs based on conditions, update table definitions, increment/decrement parameters, etc.).
 
 To open the tool window, open the DIS menu, and click *Tool Windows \> DIS Macros*.
 
@@ -206,7 +206,7 @@ When importing a MIB file, in some cases, MIB nodes would be incorrectly interpr
 
 #### IDE - Display editor: Page names containing special characters were decoded incorrectly \[ID 20184\]
 
-When the display editor was opened, in some cases, page names with special characters (e.g. “&”) would be decoded incorrectly.
+When the display editor was opened, in some cases, page names with special characters (e.g., “&”) would be decoded incorrectly.
 
 #### Problem when creating a new protocol or automation script file via File \> New \> File... \[ID 20297\]
 

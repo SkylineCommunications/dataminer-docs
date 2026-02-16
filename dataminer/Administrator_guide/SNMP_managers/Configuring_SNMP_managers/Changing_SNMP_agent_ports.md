@@ -16,7 +16,7 @@ If you want the Windows SNMP service of a particular computer to use a non-defau
 
 - %systemroot%\\system32\\drivers\\etc\\services
 
-In the following example, the SNMP service uses port 161 (i.e. the default port):
+In the following example, the SNMP service uses port 161 (i.e., the default port):
 
 ```txt
 snmp 161/udp #SNMP
@@ -81,7 +81,7 @@ Please note the following regarding the customization of trap reception ports:
 
   - Make sure that no other application is using the specified port.
 
-- You can improve the trap processing capacity for SNMPv1 and v2 by configuring a custom port for SNMPv3 trap reception, e.g. 362. In that case, SNMPv1 and SNMPv2 trap reception are handled by WinSNMP. For this, the above-mentioned line *\<SNMPv3 trapPort="362"/>* must be specified in *DataMiner.xml*.
+- You can improve the trap processing capacity for SNMPv1 and v2 by configuring a custom port for SNMPv3 trap reception, e.g., 362. In that case, SNMPv1 and SNMPv2 trap reception are handled by WinSNMP. For this, the above-mentioned line *\<SNMPv3 trapPort="362"/>* must be specified in *DataMiner.xml*.
 
 > [!TIP]
 > See also: [Interaction between SNMP manager and SNMP agent](xref:Interaction_between_SNMP_manager_and_SNMP_agent)

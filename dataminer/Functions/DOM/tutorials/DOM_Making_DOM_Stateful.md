@@ -178,7 +178,7 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to edit th
 
 1. Next to the *Event* definition name, click *Edit* to open the details of the DOM definition.
 
-1. In the *Behavior* dropdown box, select the behavior you created above, i.e. *event behavior*.
+1. In the *Behavior* dropdown box, select the behavior you created above, i.e., *event behavior*.
 
 1. Click *Apply*, *OK*, and *Back* to go back to module level.
 

@@ -6,7 +6,7 @@ uid: Toggle
 
 This basic control (available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41903-->) allows you to enable or disable specific capabilities.
 
-The toggle component accepts boolean input (e.g. variables of type boolean), but can also be used as data output (*Data* > *Components* > *[Page name]* > *Toggle* > *Value* > *Booleans*) to drive GQI queries, automation scripts, and more. For example, you can use one toggle component to trigger a second toggle component.
+The toggle component accepts boolean input (e.g., variables of type boolean), but can also be used as data output (*Data* > *Components* > *[Page name]* > *Toggle* > *Value* > *Booleans*) to drive GQI queries, automation scripts, and more. For example, you can use one toggle component to trigger a second toggle component.
 
 ![Two toggle switches](~/dataminer/images/Notification_and_Vibration_Controls.gif)<br>*Toggle components in DataMiner 10.5.3*
 

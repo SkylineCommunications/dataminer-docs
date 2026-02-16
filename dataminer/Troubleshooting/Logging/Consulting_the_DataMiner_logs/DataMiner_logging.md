@@ -14,7 +14,7 @@ This page consists of three sections:
 
   > [!NOTE]
   >
-  > - Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.2.0.0", and debug logging is used for more detailed information.
+  > - Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g., "Running DataMiner 10.2.0.0", and debug logging is used for more detailed information.
   > - For DxM logs, this section is not available; logging must be [configured directly](#dataminer-extension-modules-dxm-logs) via the DxM configuration file.
 
 - A pane on the right displaying the log details for any log file selected in the list on the left. You can refresh the displayed content by clicking the refresh icon at the top of the pane.
@@ -83,7 +83,7 @@ Some items in the list are of particular note:
 | Cassandra Migration | Log file of the migration of the general database to Cassandra. Contains among others the settings used for the migration. See [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra). |
 | Connectivity | Log file regarding the DataMiner Connectivity Framework. |
 | Correlation | Log file of the next-generation Correlation engine of the DMA. To facilitate troubleshooting, it is possible to activate verbose Correlation logging with the SLNetClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme caution. See [Activating verbose Correlation logging](xref:SLNetClientTest_activating_verbose_correlation_logging). |
-| Database Connection | Log file related to the connection to the various databases (e.g. general database, offload database, indexing database, etc.) |
+| Database Connection | Log file related to the connection to the various databases (e.g., general database, offload database, indexing database, etc.) |
 | Database DataMiner | Log file with the traffic between the database and the SLDataMiner process of the DMA. |
 | Database SLNet | Log file with the traffic between the database and the SLNet process of the DMA. Contains among others the username of a user that initiated a manual DMA Failover. |
 | DMS | Log file with the traffic between the DMA and its peers in the DMS. Contains among others the file synchronization process. |

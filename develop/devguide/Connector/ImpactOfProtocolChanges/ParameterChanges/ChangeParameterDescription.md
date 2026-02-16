@@ -34,7 +34,7 @@ Note that in the following cases, there is no actual impact and these types of c
 Changes to parameter descriptions will be approved in case one of the following conditions is met:
 
 - The current parameter description is wrong.
-- The current parameter description is not user-friendly (e.g. an abbreviation is used instead of writing the description in full).
+- The current parameter description is not user-friendly (e.g., an abbreviation is used instead of writing the description in full).
 
 All other parameter description changes will generally be rejected.
 

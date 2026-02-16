@@ -27,7 +27,7 @@ A number of options are available to tweak the behavior of the running simulatio
 
 ## Running via the command line
 
-It is also possible to run the simulator via the command line. This allows you to run the simulator unattended (e.g. via a scheduled task).
+It is also possible to run the simulator via the command line. This allows you to run the simulator unattended (e.g., via a scheduled task).
 
 ```cmd  
 USAGE:

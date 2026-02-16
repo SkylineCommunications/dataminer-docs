@@ -93,7 +93,7 @@ To use the entry point, add a method with the following signature to the script:
 public RequestScriptInfoOutput OnRequestScriptInfoRequest(IEngine engine, RequestScriptInfoInput inputData)
 ```
 
-Both `RequestScriptInfoInput` and `RequestScriptInfoOutput` have a `Data` property of type `Dictionary<string, string>`, which can be used to exchange information between the script and other code. We strongly recommend keeping the passed data below 20 MB (i.e. 10 million characters). If larger chunks need to be passed, a reference to that information should be passed instead.
+Both `RequestScriptInfoInput` and `RequestScriptInfoOutput` have a `Data` property of type `Dictionary<string, string>`, which can be used to exchange information between the script and other code. We strongly recommend keeping the passed data below 20 MB (i.e., 10 million characters). If larger chunks need to be passed, a reference to that information should be passed instead.
 
 It is allowed to pass null as input data and to return null as output data.
 
@@ -291,13 +291,13 @@ In some cases, the SLNet process could leak memory when the *progress.log* file 
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
-Because of an issue in SLNet, up to now, if the same group would be added more than once in the `UpdateLibraryCredentialMessage` (i.e. the SLNet message used to add or update credentials), duplicated `Group` tags would end up in the *Library.xml* file. As a result, in DataMiner Cube, the updated credential would get stuck, showing a "[modified]" tag.
+Because of an issue in SLNet, up to now, if the same group would be added more than once in the `UpdateLibraryCredentialMessage` (i.e., the SLNet message used to add or update credentials), duplicated `Group` tags would end up in the *Library.xml* file. As a result, in DataMiner Cube, the updated credential would get stuck, showing a "[modified]" tag.
 
 #### Not all DCF interfaces would be listed in the Connectivity tab of an element's Properties window [ID 42591]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
-When, in e.g. DataMiner Cube, you opened the *Connectivity* tab in the *Properties* window of an element, in some rare cases, not all DCF interfaces would be listed.
+When, in e.g., DataMiner Cube, you opened the *Connectivity* tab in the *Properties* window of an element, in some rare cases, not all DCF interfaces would be listed.
 
 #### Alarm with a source other than 'DataMiner' could incorrectly impact the alarm severity of a service [ID 42724]
 
@@ -398,7 +398,7 @@ When you create an automation script, apart from an XML file containing the actu
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
-When, in e.g. DataMiner Cube, you opened the *Failover status* window when connected to a system using STaaS, up to now, the database status would always be displayed as OK, even when STaaS was degraded.
+When, in e.g., DataMiner Cube, you opened the *Failover status* window when connected to a system using STaaS, up to now, the database status would always be displayed as OK, even when STaaS was degraded.
 
 #### DataMiner upgrade: VerifyClusterPorts prerequisite check could fail when SLXML was still running [ID 42947]
 

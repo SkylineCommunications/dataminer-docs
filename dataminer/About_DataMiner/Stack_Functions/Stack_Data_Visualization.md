@@ -16,7 +16,7 @@ DataMiner Spectrum Analysis provides operators with the unique opportunity to be
 
 - high-end analyzers at strategic points in your operation
 - mainstream commodity analyzers in high volume
-- any product with spectrum monitoring measurement (e.g. cable modem, CMTS, remote PHY, etc.)
+- any product with spectrum monitoring measurement (e.g., cable modem, CMTS, remote PHY, etc.)
 
 **but also:**
 
@@ -43,7 +43,7 @@ DataMiner brings it all together in one standard UI, with a rich set of features
 
 **Ensuring that a set of activities and outputs meets an organization's goals in an effective and efficient manner.**
 
-This particular stack function keeps track of detailed historical key performance readings up to more than one year. Any parameter made available by the API of any data source (e.g. interface bandwidth, utilization (Mbps, %), rate errors, collisions, CPU usage, etc.) can be trended for later evaluation of its performance, for example for debugging or forecasting of future behavior.
+This particular stack function keeps track of detailed historical key performance readings up to more than one year. Any parameter made available by the API of any data source (e.g., interface bandwidth, utilization (Mbps, %), rate errors, collisions, CPU usage, etc.) can be trended for later evaluation of its performance, for example for debugging or forecasting of future behavior.
 
 DataMiner allows the user to define exactly for which parameters trending information has to be logged in the trending database and which kind of trending information has to be included. In a trend template, you can define both the scope (which parameters) and the type (real-time data, average trending, or a combination of both) of the trend information to be stored in the trending database.
 
@@ -90,7 +90,7 @@ The Correlation Engine is capable of:
 
 - Detecting single occurrences, persistent occurrences, or recurring occurrences of both single alarms events and alarm patterns across the entire operational environment.
 
-- Taking actions when certain conditions occur within the operational environment, including generating new alarm messages for the operator (e.g. the most probable cause), triggering automation scripts (e.g. to take automatic corrective measures), notifying operators, and more.
+- Taking actions when certain conditions occur within the operational environment, including generating new alarm messages for the operator (e.g., the most probable cause), triggering automation scripts (e.g., to take automatic corrective measures), notifying operators, and more.
 
 DataMiner also includes root cause analysis (RCA) based on connectivity information. Connectivity information can be fed into the system via the integrated connectivity editor or by linking the DataMiner System to a third-party connectivity database. DataMiner's RCA functionality offers operators a highly intuitive method to determine the most probable cause and filter out sympathetic alarms. This is achieved by assigning an RCA level to each alarm, indicating how far they are removed from their probable root cause.
 
@@ -117,7 +117,7 @@ Today, **raw data collection** is the foundation of an efficient architecture. I
 To address the challenges of fault detection, ensuring **good data hygiene** is key. DataMiner includes various ways to guarantee data hygiene, including:
 
 - Fully user-definable and runtime-applied alarm thresholds defined in templates.
-- Dynamic switching of alarm definitions based on time or events (e.g. upon service activation).
+- Dynamic switching of alarm definitions based on time or events (e.g., upon service activation).
 - Ability to stack alarm templates to easily and efficiently manage thresholds across vast deployments.
 - Support for relative and absolute thresholds, including a variety of baseline methods.
 - Hysteresis on trigger and/or clear, applicable to all individual thresholds.
@@ -182,7 +182,7 @@ The data input for the node edge component can be configured via our Generic Que
 > - [Kata #17: Node Edge Component](https://www.youtube.com/watch?v=vU2gZQqVEFs) ![Video](~/dataminer/images/video_Duo.png)
 > - Course on [node edge graphs](https://community.dataminer.services/courses/dashboard/lessons/node-edge-graph/) ![Video](~/dataminer/images/video_Duo.png)
 
-## Button Panel (i.e. Control Panel)
+## Button Panel (i.e., Control Panel)
 
 **Software button panels.**
 

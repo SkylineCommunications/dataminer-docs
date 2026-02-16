@@ -6,7 +6,7 @@ uid: Spectrum_analyzer_cards
 
 Spectrum analyzer cards are a special type of element cards in DataMiner Cube. They usually have 2 pages, though depending on the protocol additional pages are possible:
 
-- *General* page: contains general information about the analyzer and some additional functions, e.g. serial number, firmware version, switch screen on/off, run calibration, etc.
+- *General* page: contains general information about the analyzer and some additional functions, e.g., serial number, firmware version, switch screen on/off, run calibration, etc.
 
 - *Spectrum Analyzer* page: contains the Spectrum Analysis user interface.
 

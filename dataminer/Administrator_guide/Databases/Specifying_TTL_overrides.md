@@ -64,7 +64,7 @@ The following default values and limitations apply:
 
 ### About TWCS
 
-Time Window Compaction Strategy (TWCS) is a compaction mechanism specifically designed for time-series data. The data is organized and compacted into time-based buckets, referred to as time windows. Cassandra groups data into defined time intervals (e.g. 3 hours, 1 day, etc.). Each time, a time window contains all the data written within that interval.
+Time Window Compaction Strategy (TWCS) is a compaction mechanism specifically designed for time-series data. The data is organized and compacted into time-based buckets, referred to as time windows. Cassandra groups data into defined time intervals (e.g., 3 hours, 1 day, etc.). Each time, a time window contains all the data written within that interval.
 
 While data is being actively written to the current time window, it is compacted into SSTables for that specific window. Compaction occurs incrementally, merging data within the same time window.
 

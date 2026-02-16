@@ -77,4 +77,4 @@ To create a service profile Data Transfer Rule:
    ```
 
 > [!NOTE]
-> When the selected service profile definition/instance does not refer to one or more nodes of the service definition, the *GetUnmappedFunction* method must be used to access data from those nodes (i.e. the selected resources). <!-- RN 30630 -->
+> When the selected service profile definition/instance does not refer to one or more nodes of the service definition, the *GetUnmappedFunction* method must be used to access data from those nodes (i.e., the selected resources). <!-- RN 30630 -->

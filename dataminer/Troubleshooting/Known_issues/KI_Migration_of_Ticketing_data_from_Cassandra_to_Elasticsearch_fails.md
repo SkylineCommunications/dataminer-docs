@@ -13,7 +13,7 @@ uid: KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails
 
 Elasticsearch does not support certain characters that are supported in Cassandra:
 
-- An underscore (`_`) at the beginning of a field name (e.g. _testField)
+- An underscore (`_`) at the beginning of a field name (e.g., _testField)
 - Any of the following characters, regardless of where they occur in a field name: `.`, `#`, `*`, `,`, double quotation mark (`"`) or single quotation mark (`'`).
 
 ## Issue description

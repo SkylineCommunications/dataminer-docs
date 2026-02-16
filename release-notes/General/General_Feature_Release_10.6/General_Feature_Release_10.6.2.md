@@ -82,7 +82,7 @@ Note that, from now on, if not all nodes of the OpenSearch cluster are listed in
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-When, in DataMiner client applications (e.g. DataMiner Cube), you are configuring the Augmented Operations alarm settings for a particular parameter in an alarm template, from now on, it will be possible to choose between the following flatline detection modes:
+When, in DataMiner client applications (e.g., DataMiner Cube), you are configuring the Augmented Operations alarm settings for a particular parameter in an alarm template, from now on, it will be possible to choose between the following flatline detection modes:
 
 | Mode | Description |
 |------|-------------|
@@ -98,7 +98,7 @@ See also: [Alarm templates: New flatline detection modes in Augmented Operations
 From now on, when you try to add a DataMiner Agent to a DataMiner System, the operation will fail in the following cases:
 
 - The DataMiner Agent is cloud-connected, but the DataMiner System is not.
-- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
+- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e., they are not part of the same cloud-connected system.
 
 If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.
 
@@ -248,7 +248,7 @@ In client applications like DataMiner Cube, up to now, elements hosted on a DMA 
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-After you had uploaded a protocol with a version that was identical to the prefix of the version of a protocol that was already in use (e.g. a new protocol with version 1.0.0.1 versus an existing protocol with version 1.0.0.1_DEV), up to now, elements using the existing protocol (e.g. with version 1.0.0.1_DEV) would incorrectly no longer be able to execute QActions.
+After you had uploaded a protocol with a version that was identical to the prefix of the version of a protocol that was already in use (e.g., a new protocol with version 1.0.0.1 versus an existing protocol with version 1.0.0.1_DEV), up to now, elements using the existing protocol (e.g., with version 1.0.0.1_DEV) would incorrectly no longer be able to execute QActions.
 
 #### Problem with SLElement when loading elements that included matrix parameters [ID 44188]
 

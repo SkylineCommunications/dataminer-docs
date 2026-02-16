@@ -90,7 +90,7 @@ In the `<ObjectsSourceInfo>` tag of an "objects" layer, you can configure a coll
 
   - `idVar`: Name of a variable that can be provided in the Maps URL, which will then be used as a dynamic ID. For example, *idVar="MyElement"* will resolve the ID with the URL parameter *dMyElement*.
 
-- `<ServiceChildren>` for service child objects (i.e. elements and child services)
+- `<ServiceChildren>` for service child objects (i.e., elements and child services)
 
   Attributes:
 
@@ -345,7 +345,7 @@ To add a GeoJSON layer:
 
 1. Set the *type* attribute of the `<GroundOverlay>` tag to "geojson".
 
-1. Set the *src* attribute of the `<GroundOverlay>` tag to the address of the file, i.e. a URL starting with `http://` or `https://`, or a path relative to `C:\Skyline DataMiner\Webpages\Maps`.
+1. Set the *src* attribute of the `<GroundOverlay>` tag to the address of the file, i.e., a URL starting with `http://` or `https://`, or a path relative to `C:\Skyline DataMiner\Webpages\Maps`.
 
 Example:
 
@@ -428,7 +428,7 @@ Example:
   > [!NOTE]
   > For table filters, you can use the *recursivefullfilter* option. See [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
-- From DataMiner 10.4.0/10.4.3 onwards<!-- RN 38274 -->, you can use the *elementVar* attribute in the `<ForeignKeyRelationsSourceInfo>` tag (e.g. with value "myElement") to refer to an element specified in the map URL using the syntax "DMAID/ElementID" or "NameOfElement". For example (notice the "d" in front of the parameter name in the URL):
+- From DataMiner 10.4.0/10.4.3 onwards<!-- RN 38274 -->, you can use the *elementVar* attribute in the `<ForeignKeyRelationsSourceInfo>` tag (e.g., with value "myElement") to refer to an element specified in the map URL using the syntax "DMAID/ElementID" or "NameOfElement". For example (notice the "d" in front of the parameter name in the URL):
 
   ```xml
   <ForeignKeyRelationsSourceInfo elementVar="myElement">

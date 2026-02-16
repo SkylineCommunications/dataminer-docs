@@ -22,7 +22,7 @@ To change the connection settings on the login page:
 
      - The default port used for Remoting is port 8004.
 
-     - By default, [eventing](xref:Eventing_or_polling) is used, but the client will automatically fall back to polling if the callback port cannot be reached (e.g. if a firewall blocks the requests).
+     - By default, [eventing](xref:Eventing_or_polling) is used, but the client will automatically fall back to polling if the callback port cannot be reached (e.g., if a firewall blocks the requests).
 
 1. If necessary, adjust the settings for the selected connection type:
 
@@ -38,4 +38,4 @@ To change the connection settings on the login page:
 
 If you are already logged in, changing the connection settings in Cube is similar. For detailed information, see [Manual configuration of client communication settings](xref:DMA_configuration_related_to_client_applications#manual-configuration-of-client-communication-settings).
 
-From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44547-->, when Cube connects to a DMA that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) (i.e. a DMA of which the hostname ends with `.dataminer.services`), gRPC is always used, even if you have manually set the connection type to *Remoting*.
+From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44547-->, when Cube connects to a DMA that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) (i.e., a DMA of which the hostname ends with `.dataminer.services`), gRPC is always used, even if you have manually set the connection type to *Remoting*.

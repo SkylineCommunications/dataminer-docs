@@ -9,7 +9,7 @@ In an automation script, the assembly file paths mentioned in the [Param](xref:D
 - **Compilation time**: The assembly file paths are added as references to the compiler.
 - **Runtime**: The folder denoted by the assembly file path is added as a hint path for the assembly resolver.
 
-In an automation script, there is no support for providing folder paths to be added as hint paths at runtime (i.e. only file paths are supported in the [Param](xref:DMSScript.Script.Exe.Param) elements of type "ref"). Therefore, when you reference assemblies, it is important to **only reference a single version** of that assembly. Otherwise, issues might occur during script execution.
+In an automation script, there is no support for providing folder paths to be added as hint paths at runtime (i.e., only file paths are supported in the [Param](xref:DMSScript.Script.Exe.Param) elements of type "ref"). Therefore, when you reference assemblies, it is important to **only reference a single version** of that assembly. Otherwise, issues might occur during script execution.
 
 For example, suppose a script references two versions of an assembly, version 1.1.3.1 and version 1.1.3.2 (for example, because of transitive dependencies the script has on NuGet packages it uses), and the Param element specifies a reference to version 1.1.3.2 (only a reference to one version is provided as providing both would result in ambiguous references in the compiler).
 

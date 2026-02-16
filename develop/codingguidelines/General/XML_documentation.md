@@ -14,7 +14,7 @@ uid: XML_documentation
 - When useful, (partial) elements should be documented ([SA1600](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1600), [SA1601](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1601)).
 
     > [!NOTE]
-    > These rules are not enabled in the StyleCop configuration file. However, for manager protocols or protocols implementing complex functionality, elements should be documented when useful (e.g. shared QActions).
+    > These rules are not enabled in the StyleCop configuration file. However, for manager protocols or protocols implementing complex functionality, elements should be documented when useful (e.g., shared QActions).
 
 - Documentation must contain valid XML ([SA1603](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1603)).
 

@@ -46,7 +46,7 @@ The example protocol *SLC SDF Rates - SNMP* has also been adapted accordingly.
 
 #### Class Library is now able to process elements of which the RemoteElement property of the ElementInfoEventMessage is set to the maximum value \[ID 33751\]
 
-The Class Library is now able to process elements of which the RemoteElement property of the ElementInfoEventMessage is set to the maximum value (i.e. "4294967295/4294967295").
+The Class Library is now able to process elements of which the RemoteElement property of the ElementInfoEventMessage is set to the maximum value (i.e., "4294967295/4294967295").
 
 #### Class Library folder structure has been updated \[ID 33872\]
 
@@ -60,13 +60,13 @@ The RateHelper class lacked a DllImport statement. This has now been added.
 
 #### InterAppCalls deserialize fails with KnownTypes having multiple Collections \[ID 33720\]
 
-Deserialization would fail when using InterAppCalls as NuGets without a common DLL holding all the messages, i.e. when using KnownTypes with multiple Collections (as in the following example).
+Deserialization would fail when using InterAppCalls as NuGets without a common DLL holding all the messages, i.e., when using KnownTypes with multiple Collections (as in the following example).
 
 ```csharp
 KnownTypes = new List(){ typeof(List<MyClass>), typeof(List<MyClass2>)};
 ```
 
-The JSON created by the sending element would incorrectly contain the name of the assembly holding List\<MyClass2> (i.e. QA2.dll), and trying to deserialize this on the receiver side would fail as QA2.dll could not be found.
+The JSON created by the sending element would incorrectly contain the name of the assembly holding List\<MyClass2> (i.e., QA2.dll), and trying to deserialize this on the receiver side would fail as QA2.dll could not be found.
 
 JSON will now no longer contain assembly information, and deserialization has been improved so that the correct assembly can be found on the receiver side.
 
@@ -266,7 +266,7 @@ Up to now, it would only return the first page of such a table.
 
 ##### QueryData method
 
-The new IDmsTable QueryData method will return an IEnumerable\<object\[\]\>, i.e. a collection of row objects.
+The new IDmsTable QueryData method will return an IEnumerable\<object\[\]\>, i.e., a collection of row objects.
 
 To this method, you can pass a column filter as an ICollection\<ITableFilter>, in which each ITableFilter item contains a ColumnPid, a ColumnValue and a CompareType property. If, for example, you only want to retrieve the rows in which column parameter 1003 is set to "test", you can specify the following:
 

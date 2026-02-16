@@ -40,11 +40,11 @@ In each of the *timeline* subtabs, the large pane on the right displays the Sche
 
 - To zoom in or out, scroll in the timeline pane or drag the mouse right or left in the preview pane.
 
-- To zoom to a particular time, e.g. the next hour, or the past month, right-click the timeline, and select *Zoom to \[time\]*.
+- To zoom to a particular time, e.g., the next hour, or the past month, right-click the timeline, and select *Zoom to \[time\]*.
 
 - Open the *Navigation* section at the bottom for more options:
 
-  - Click a button with a particular time to zoom to this time on the timeline, e.g. Today, Last week, Next month, etc.
+  - Click a button with a particular time to zoom to this time on the timeline, e.g., Today, Last week, Next month, etc.
 
   - To make the timeline move along with the current time, in the lower-left corner, select *Follow mode*.
 

@@ -28,7 +28,7 @@ To create an information template:
 
    - **Detailed description**: The parameter description that will be displayed in the parameter details.
 
-   - **Custom name**: An alternative parameter name (i.e. alias) that can be used in Visual Overview, poll socket requests, Dashboards, Automation, etc.
+   - **Custom name**: An alternative parameter name (i.e., alias) that can be used in Visual Overview, poll socket requests, Dashboards, Automation, etc.
 
      Suppose you use three protocols that have an identical parameter but with a slightly different name. In that case, you could use this "custom name" to assign the same alias to those three parameters and then use that alias in a Visio drawing shared by the three protocols.
 

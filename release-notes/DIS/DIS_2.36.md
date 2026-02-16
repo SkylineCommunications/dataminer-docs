@@ -12,7 +12,7 @@ uid: DIS_2.36
 
 The new *DIS Protocol diagram* tool window shows a graphical representation of a protocol. It allows you to see how a protocol is built, navigate through its logic and investigate flow issues.
 
-When you open the tool window, you first have to select an item to start from: a parameter, a QAction, a session, a response, a group, a trigger, an action or a timer. You can then set the required depth, i.e. the number of levels you want to have displayed starting from the item you selected, and the type of diagram (BoundedFR, EfficientSugiyama, FR, ISOM, KK, LinLog, LeftRightTree or TopBottomTree).
+When you open the tool window, you first have to select an item to start from: a parameter, a QAction, a session, a response, a group, a trigger, an action or a timer. You can then set the required depth, i.e., the number of levels you want to have displayed starting from the item you selected, and the type of diagram (BoundedFR, EfficientSugiyama, FR, ISOM, KK, LinLog, LeftRightTree or TopBottomTree).
 
 In the diagram itself, each item (parameter, QAction, session, response, group, trigger, action, timer) is represented by a box with a particular icon and color, showing the ID and name of the item.
 
@@ -155,7 +155,7 @@ A number of enhancements have been made to the protocol version editor.
 
   - All fields will now allow any kind of value and will get a red border in case of an error.
   - The *Author* field will now get a red border when empty or set to the default value.
-  - The *Based On* field will now get a red border when the version has an unexpected format, when the selected version is illogical, or when no version has been selected in situations where this is necessary (e.g. the first version of a new range).
+  - The *Based On* field will now get a red border when the version has an unexpected format, when the selected version is illogical, or when no version has been selected in situations where this is necessary (e.g., the first version of a new range).
 
 - All validation remarks will now cause a warning icon to appear in the tree. These warning icons will automatically bubble up to the higher tree levels. That way, errors will be visible even when tree items are collapsed.
 - When you create a new version, the *Based On* field will now automatically be populated when possible.

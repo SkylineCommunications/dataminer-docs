@@ -23,7 +23,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 - At least one web server (running Windows Server)
 
-- A valid SSL certificate signed by a public certificate authority for the FQDN of the Dashboard Gateway (e.g. “gateway.mycompany.com”)
+- A valid SSL certificate signed by a public certificate authority for the FQDN of the Dashboard Gateway (e.g., “gateway.mycompany.com”)
 
 - A DataMiner user account with:
 
@@ -143,7 +143,7 @@ To add a rewrite rule that will proxy any request to the DataMiner Maps module a
 
 1. Click *Add Rule(s)*, select *Blank rule*, and specify the following options:
 
-   - **Name**: e.g. "Maps module"
+   - **Name**: e.g., "Maps module"
 
    - **Pattern**: `^maps/(.*)`
 
@@ -161,7 +161,7 @@ To add a rewrite rule that will proxy any request to the Maps API at `https://my
 
 1. Click *Add Rule(s)*, select *Blank rule*, and specify the following options:
 
-   - **Name**: e.g. "Maps API"
+   - **Name**: e.g., "Maps API"
 
    - **Pattern**: `^API/v0/maps.asmx/(.*)`
 
@@ -181,7 +181,7 @@ To add a rewrite rule that will proxy any request to the VideoThumbnails web pag
 
 1. Click *Add Rule(s)*, select *Blank rule*, and specify the following options:
 
-   - **Name**: e.g. "VideoThumbnails"
+   - **Name**: e.g., "VideoThumbnails"
 
    - **Pattern**: `^videothumbnails/(.*)`
 

@@ -22,7 +22,7 @@ The configuration section 'system.web.extensions' cannot be read because it is m
 
 The problem can have two causes:
 
-- The application pool that is being used for the application (e.g. DataMiner Dashboards) is not configured to use Microsoft .NET 4.0 yet, OR
+- The application pool that is being used for the application (e.g., DataMiner Dashboards) is not configured to use Microsoft .NET 4.0 yet, OR
 
 - there is a problem with IIS where the configuration of .NET 2.0 is read even for application pools using .NET 4.0.
 

@@ -182,7 +182,7 @@ Depending on the configuration and version of your DataMiner System, as well as 
 
 - **Modules**: DataMiner modules such as [Automation](xref:automation), [Documents](xref:About_the_Documents_module), and [Trending](xref:Accessing_trend_information_from_the_Trending_module).
 
-- **Applications**: Plug-in applications, e.g. [IDP](xref:SolIDP), [PTP](xref:SolPTP), etc.
+- **Applications**: Plug-in applications, e.g., [IDP](xref:SolIDP), [PTP](xref:SolPTP), etc.
 
 - **Web Apps**: The [Monitoring app](xref:Working_with_the_Monitoring_app), [Dashboards app](xref:newR_D), and any available [low-code apps](xref:Dashboards_and_Low_Code_Apps).<!-- RN 33944 -->
 

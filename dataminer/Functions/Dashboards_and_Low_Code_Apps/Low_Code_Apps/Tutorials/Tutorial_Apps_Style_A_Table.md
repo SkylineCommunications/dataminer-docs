@@ -353,7 +353,7 @@ You can now create the query using the *Orders.json* file as the data source.
 
 1. Provide the necessary information:
 
-   1. Give the query a name, e.g. "Orders".
+   1. Give the query a name, e.g., "Orders".
 
    1. In the dropdown box, select *Get ad hoc data*.
 
@@ -621,9 +621,9 @@ To conclude this tutorial, incorporate a context menu into the table.
 
         1. Enter the following URL: `https://google.com/search?q={Profit}%2F{Total}`.
 
-           - Replace `{Profit}` with the complete path to the *Profit* column by clicking TAB to use IntelliSense suggestions, e.g. `{FEED.Page."Table 1"."Selected rows"."Query rows".Profit}`.
+           - Replace `{Profit}` with the complete path to the *Profit* column by clicking TAB to use IntelliSense suggestions, e.g., `{FEED.Page."Table 1"."Selected rows"."Query rows".Profit}`.
 
-           - Replace `{Total}` with the complete path to the *Total* column by clicking TAB to use IntelliSense suggestions, e.g. `{FEED.Page."Table 1"."Selected rows"."Query rows".Total}`
+           - Replace `{Total}` with the complete path to the *Total* column by clicking TAB to use IntelliSense suggestions, e.g., `{FEED.Page."Table 1"."Selected rows"."Query rows".Total}`
 
            ![Configure action](~/dataminer/images/ConfigureGoogleAction.gif)
 
@@ -647,7 +647,7 @@ To conclude this tutorial, incorporate a context menu into the table.
 
         1. Enter the following URL: `https://google.com/search?q={Order ID}`.
 
-           Replace `{Order ID}` with the complete path to the *Order ID* column by clicking TAB to use IntelliSense suggestions, e.g. `{FEED.Page."Table 1"."Selected rows"."Query rows"."Order ID"}`
+           Replace `{Order ID}` with the complete path to the *Order ID* column by clicking TAB to use IntelliSense suggestions, e.g., `{FEED.Page."Table 1"."Selected rows"."Query rows"."Order ID"}`
 
            ![Configure action](~/dataminer/images/ConfigureGoogleAction2.gif)
 

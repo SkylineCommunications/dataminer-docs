@@ -17,7 +17,7 @@ The size and geometry of the group shapes will be the same as that of the shape 
 > [!NOTE]
 >
 > - To display the number of shapes that are grouped into a single group shape, add an asterisk ("\*") in the *ShapeGrouping* shape.
-> - From DataMiner 10.3.1/10.4.0 onwards, to display the number of children in a group of dynamically positioned shapes, add "[Count]" in the *ShapeGrouping* shape. Alternatively, to display the parameter value of the shape data *GroupBy* of the first child of the group, add "[GroupValue]" in the *ShapeGrouping* shape. If the *GroupBy* value has multiple column parameters or properties, these will be separated by commas. You can also use the "[GroupValue]" and "[Count]" placeholders together to create more complex labels, e.g. `[GroupValue]([Count])`, which might result in "MyFirstChildGroupValue (5)".
+> - From DataMiner 10.3.1/10.4.0 onwards, to display the number of children in a group of dynamically positioned shapes, add "[Count]" in the *ShapeGrouping* shape. Alternatively, to display the parameter value of the shape data *GroupBy* of the first child of the group, add "[GroupValue]" in the *ShapeGrouping* shape. If the *GroupBy* value has multiple column parameters or properties, these will be separated by commas. You can also use the "[GroupValue]" and "[Count]" placeholders together to create more complex labels, e.g., `[GroupValue]([Count])`, which might result in "MyFirstChildGroupValue (5)".
 
 ## Optional grouping configuration
 

@@ -36,19 +36,19 @@ Because of this change, some data (related to the node, booking and service) use
 
 #### New script to create/edit booking with unmapped resources \[ID 30275\]
 
-A new script, *SRM_ResourceManagement*, is now available. This script facilitates the creation/editing of bookings with unmapped resources (i.e. resources that are not mapped to a service definition node).
+A new script, *SRM_ResourceManagement*, is now available. This script facilitates the creation/editing of bookings with unmapped resources (i.e., resources that are not mapped to a service definition node).
 
 #### Possibility to configure resources of running booking \[ID 30306\]
 
-The *SRM_ResourceManagement* script has been extended so that you can now edit a running booking to add, remove, replace or configure its resources. When you click the button to configure a resource, a window is displayed with information about the profile instance selected for the resource. You can then select a target service state and select to force the full configuration (i.e. the profile instance and target service state configuration).
+The *SRM_ResourceManagement* script has been extended so that you can now edit a running booking to add, remove, replace or configure its resources. When you click the button to configure a resource, a window is displayed with information about the profile instance selected for the resource. You can then select a target service state and select to force the full configuration (i.e., the profile instance and target service state configuration).
 
 However, note that any pending changes must be saved before you can configure resources.
 
 #### Support for unmapped resources in silent booking creation \[ID 30324\]
 
-Silent booking creation now supports unmapped resources, i.e. resources that are not linked to a node of a service definition. For this purpose, it is now possible to pass no service definition to the booking creation script. Note that the same resource cannot be included twice in the request.
+Silent booking creation now supports unmapped resources, i.e., resources that are not linked to a node of a service definition. For this purpose, it is now possible to pass no service definition to the booking creation script. Note that the same resource cannot be included twice in the request.
 
-Alternatively, it is possible to pass a normal service definition, and add unmapped resources to the Function array (i.e. resources without a specified ID).
+Alternatively, it is possible to pass a normal service definition, and add unmapped resources to the Function array (i.e., resources without a specified ID).
 
 #### New SRM_ApplyProfileToUnmappedResourceSilent script \[ID 30705\]
 
@@ -62,7 +62,7 @@ It is now possible to add any type of resource to a booking using the *AssignRes
 
 #### Selection of unmapped resources based on function or pool during booking creation \[ID 30902\]
 
-When you create a booking with unmapped resources (i.e. resources that are not mapped to a service definition node), a *selection type* dropdown box is now available, which allows you to indicate whether you want to select a resource based on a function or based on a pool.
+When you create a booking with unmapped resources (i.e., resources that are not mapped to a service definition node), a *selection type* dropdown box is now available, which allows you to indicate whether you want to select a resource based on a function or based on a pool.
 
 If you select *Function* in the dropdown box, you will then be able to select the function and the profile instance for the function and interfaces. Finally, the selectable resources will be filtered based on the capacities and capabilities of the selected profile instance(s).
 
@@ -129,7 +129,7 @@ The *SRM_ApplyProfileToResource* and *SRM_ResourceManagement* scripts now suppor
 
 #### Dedicated default service definition per Booking Manager instance \[ID 30960\]
 
-Every Booking Manager instance will now have a dedicated default service definition (i.e. a service definition without nodes).
+Every Booking Manager instance will now have a dedicated default service definition (i.e., a service definition without nodes).
 
 #### Improved debug logging for booking actions \[ID 31066\]
 

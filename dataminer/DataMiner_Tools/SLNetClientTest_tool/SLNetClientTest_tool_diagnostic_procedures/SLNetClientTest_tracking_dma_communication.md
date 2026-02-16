@@ -30,7 +30,7 @@ In general, this is how you activate follow mode:
 
 1. Select what should be followed. The following options are available:
 
-   - *Hook into Active Session*: Allows you to select a particular item to follow from the current active session, e.g. SLDataMiner.exe
+   - *Hook into Active Session*: Allows you to select a particular item to follow from the current active session, e.g., SLDataMiner.exe
 
    - *Hook into Custom Active Session*: Allows you to specify a particular connection ID
 

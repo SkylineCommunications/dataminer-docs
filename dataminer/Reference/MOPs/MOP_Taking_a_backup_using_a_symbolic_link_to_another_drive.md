@@ -4,7 +4,7 @@ uid: MOP_Taking_a_backup_using_a_symbolic_link_to_another_drive
 
 # Taking a backup using a symbolic link to another drive
 
-The procedure below shows you how to take a DataMiner backup to a drive other than C:\\ by creating a symbolic link to another drive (e.g. D or E).
+The procedure below shows you how to take a DataMiner backup to a drive other than C:\\ by creating a symbolic link to another drive (e.g., D or E).
 
 ## Requirements
 
@@ -40,7 +40,7 @@ The procedure below shows you how to take a DataMiner backup to a drive other th
 
 #### Steps
 
-1. Check and modify the name of the original folder that DataMiner uses to take backups: `C:\Skyline DataMiner\Backup`. The folder should have a different name (e.g. "backup_old").
+1. Check and modify the name of the original folder that DataMiner uses to take backups: `C:\Skyline DataMiner\Backup`. The folder should have a different name (e.g., "backup_old").
 
 1. Copy all the *XML*, *EXE*, *BKS*, *JS* and *DLL* files from the old (original) folder to the new (symbolic) folder. If necessary, you can also copy the *TXT* log files. You should see at least the following files:
 

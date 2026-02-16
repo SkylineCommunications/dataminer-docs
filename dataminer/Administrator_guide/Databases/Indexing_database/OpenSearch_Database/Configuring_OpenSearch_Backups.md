@@ -14,7 +14,7 @@ Examples:
 
 - OpenSearch Dashboards: [OpenSearch Dashboards](https://opensearch.org/docs/latest/dashboards/index/) is often used together with OpenSearch.
 
-- CURL: [Curl](https://curl.se/) is a simple command-line utility that allows messages with payload (e.g. POST and PUT messages) and is useful for scripting.
+- CURL: [Curl](https://curl.se/) is a simple command-line utility that allows messages with payload (e.g., POST and PUT messages) and is useful for scripting.
 
 - [Elasticvue](https://elasticvue.com/)
 
@@ -149,7 +149,7 @@ In this procedure, we will be using an [NFS server](#nfs-server) and [NFS client
 
 #### Creating the repository using REST API
 
-1. Create a repository by executing the following PUT request in your client application (e.g. Elasticvue, Postman, etc.):
+1. Create a repository by executing the following PUT request in your client application (e.g., Elasticvue, Postman, etc.):
 
    ```txt
    PUT /_snapshot/opensearchbackup
@@ -169,7 +169,7 @@ In this procedure, we will be using an [NFS server](#nfs-server) and [NFS client
    > For more information, see [Shared file system](https://opensearch.org/docs/2.8/tuning-your-cluster/availability-and-recovery/snapshots/snapshot-restore/#shared-file-system).
 
    > [!NOTE]
-   > You can also use ElasticVue to create your repository: Go to *Snapshots* > *Snapshot Repositories*, and click the *New repository* button. Then fill in the name and the repository location, and leave the default settings untouched (i.e. *Compress* should be enabled, and *Readonly* should be disabled).
+   > You can also use ElasticVue to create your repository: Go to *Snapshots* > *Snapshot Repositories*, and click the *New repository* button. Then fill in the name and the repository location, and leave the default settings untouched (i.e., *Compress* should be enabled, and *Readonly* should be disabled).
 
 1. Verify whether the repository has been created correctly by entering the following GET request using your chosen client application.
 

@@ -87,7 +87,7 @@ Performance improvements have now been implemented to avoid sending duplicate si
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
-When you changed the alarm or trend template for a table parameter (e.g. by going to the templates tab on the parameter card), it could occur that the wrong line from the template was edited. For example, if a template contained exactly one line for a column in a table, and that line was configured with the filter "SL*", the parameter template editor would show the configuration corresponding to the line in the template with the filter even if that line was not applicable for the current cell. Now, instead an empty template configuration will be shown, corresponding to the filter "\*". When you edit and save this configuration, a new line with filter "\*" will be added to the template.
+When you changed the alarm or trend template for a table parameter (e.g., by going to the templates tab on the parameter card), it could occur that the wrong line from the template was edited. For example, if a template contained exactly one line for a column in a table, and that line was configured with the filter "SL*", the parameter template editor would show the configuration corresponding to the line in the template with the filter even if that line was not applicable for the current cell. Now, instead an empty template configuration will be shown, corresponding to the filter "\*". When you edit and save this configuration, a new line with filter "\*" will be added to the template.
 
 In addition, when there were two or more lines in the trend template for a table parameter, but none were applicable for the current cell for which you edited the trend template, the parameter template editor would show and create a new line in the template corresponding to an empty filter, instead of to the filter "\*". This has now also been fixed.
 
@@ -144,6 +144,6 @@ From now on, it will be possible to create multiple DOM module subscriptions on 
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU7] - FR 10.4.10 -->
 
-When a focus event was cleared because an element had been deleted, up to now, the time of arrival of the new focus event (i.e. the time at which the focus event had been cleared) would incorrectly be identical to the time of arrival of the focus event that had been cleared.
+When a focus event was cleared because an element had been deleted, up to now, the time of arrival of the new focus event (i.e., the time at which the focus event had been cleared) would incorrectly be identical to the time of arrival of the focus event that had been cleared.
 
-From now on, the time of arrival of the new focus event will instead be the current time (i.e. the time at which the element was deleted).
+From now on, the time of arrival of the new focus event will instead be the current time (i.e., the time at which the element was deleted).

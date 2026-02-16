@@ -72,7 +72,7 @@ It is now possible to display the statistics of an EPM object in a shape linked 
 
 1. Add an asterisk character ("\*") in the shape text.
 
-1. Add a shape data field of type *Info* to the shape, and set its value to e.g. `EPM STATISTICS:###[#TotalAlarms]`.
+1. Add a shape data field of type *Info* to the shape, and set its value to, for example, `EPM STATISTICS:###[#TotalAlarms]`.
 
 The following information can be displayed:
 
@@ -154,7 +154,7 @@ When a parameter had been removed from a profile definition, in the *Profiles* a
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-When you opened the *Automation* app in DataMiner Cube and selected an unmodified script, the latest updates made to that script by another Cube client or another program (e.g. DataMiner Integration Studio) would not be shown. From now on, when you open a script in the Automation app that has not yet been changed in that same app, the latest version of that script will now automatically be retrieved from the server.
+When you opened the *Automation* app in DataMiner Cube and selected an unmodified script, the latest updates made to that script by another Cube client or another program (e.g., DataMiner Integration Studio) would not be shown. From now on, when you open a script in the Automation app that has not yet been changed in that same app, the latest version of that script will now automatically be retrieved from the server.
 
 #### DataMiner Cube - Alarm Console: Alarm tab of type 'Active alarms linked to cards' would incorrectly not show any alarms when you opened a function card [ID 34799]
 
@@ -186,7 +186,7 @@ When you renamed your local DataMiner user with administrative access while bein
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU11] - FR 10.3.2 -->
 
-When, in *Scheduler*, *Automation* or *Correlation*, you opened scheduled tasks, automation scripts or correlation rules containing actions that include PDF reports, in some rare cases, the data linked to those reports (i.e. the elements and services in view selection) could not be loaded. This data will now be loaded correctly. Also, a "Loading" indicator will now be displayed and the actions will remain disabled while the data is being loaded. When an error occurs while loading the protocols associated with said data, a clear warning entry will also be added to the Cube logging.
+When, in *Scheduler*, *Automation* or *Correlation*, you opened scheduled tasks, automation scripts or correlation rules containing actions that include PDF reports, in some rare cases, the data linked to those reports (i.e., the elements and services in view selection) could not be loaded. This data will now be loaded correctly. Also, a "Loading" indicator will now be displayed and the actions will remain disabled while the data is being loaded. When an error occurs while loading the protocols associated with said data, a clear warning entry will also be added to the Cube logging.
 
 > [!NOTE]
 > From now on, in the *Elements and services in view selection* list, it will also be possible to select parameters of enhanced services.
@@ -259,7 +259,7 @@ From now on, when you try to upgrade a view of which the name contains one of th
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
-In some rare cases, conditional shape manipulation actions (e.g. Show, Hide, Rotate, Blink, etc.) would not be executed correctly.
+In some rare cases, conditional shape manipulation actions (e.g., Show, Hide, Rotate, Blink, etc.) would not be executed correctly.
 
 #### DataMiner Cube - Visual Overview: Parameter value displayed on a shape in history mode would not be updated when linked to a session variable [ID 35219]
 

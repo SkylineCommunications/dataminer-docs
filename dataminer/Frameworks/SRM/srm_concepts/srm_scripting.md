@@ -23,7 +23,7 @@ A PLS can be called by an [LSO script](xref:srm_scripting#lifecycle-service-orch
 
 LSO scripts are only used in the context of Service Orchestration.
 
-The LSO script is **responsible for the orchestration of bookings according to service state transitions** (e.g. Start, Stop, Standby, etc.). For every supported service state transition, the LSO script will call the various Profile-Load Scripts for each virtual function included in the service definition and pass the appropriate service state. As a result, all the PLSs will apply the profile instance for that specific service state to the associated function resource.
+The LSO script is **responsible for the orchestration of bookings according to service state transitions** (e.g., Start, Stop, Standby, etc.). For every supported service state transition, the LSO script will call the various Profile-Load Scripts for each virtual function included in the service definition and pass the appropriate service state. As a result, all the PLSs will apply the profile instance for that specific service state to the associated function resource.
 
 The LSO script is called at the following stages of the booking:
 

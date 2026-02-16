@@ -41,7 +41,7 @@ uid: General_Feature_Release_10.6.3
 
 On top of [DataMiner Object Models: Definition-level security [ID 43380] [ID 43589]](xref:General_Feature_Release_10.5.10#dataminer-object-models-definition-level-security-id-43380-id-43589), which allows you to grant user groups access to all DOM instances of a DOM definition, it is now also possible to allow user groups access to an individual DOM instance based on whether that DOM instance contains at least one of a specified set of values for a specified FieldDescriptor.
 
-For example, the user group *London employees* will only be able to read the "Job" instances where the *Assigned office* field (i.e. a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
+For example, the user group *London employees* will only be able to read the "Job" instances where the *Assigned office* field (i.e., a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
 
 ##### Limitations
 
@@ -95,7 +95,7 @@ When `FieldValueReference` values are saved in the `ModuleSettings`, the followi
 - Check if the list of values is not empty. If the list is empty, a `DomManagerSettingsErrorData` error will be returned with reason `DomSecurityFieldValueReferenceHasNoValues`.
 - Check if the list of values does not contain more than 10 items. If the list contains more than 10 items, a `DomManagerSettingsErrorData` error will be returned with reason `DomSecurityFieldValueReferenceHasTooManyValues`.
 
-In all errors listed above, the `ErrorData` properties `GroupName` and `DomDefinitionId` can be used to find out which references are invalid. The third error also contains a `Limit` property that contains the max number of values (i.e. 10).
+In all errors listed above, the `ErrorData` properties `GroupName` and `DomDefinitionId` can be used to find out which references are invalid. The third error also contains a `Limit` property that contains the max number of values (i.e., 10).
 
 #### SLNet subscription logging [ID 44361]
 
@@ -119,7 +119,7 @@ To activate SLNet subscription event logging, do the following:
 
 ##### Event type and cache key filtering
 
-The entries in the *SLSubscriptionLog.txt* log file can be filtered by event type (e.g. *ParameterChangeEventMessage*) and/or cache key (e.g. DataMinerID/ElementID/ParameterID). To do so, you have to provide a value with a *filter=* prefix. If you want to provide multiple values, they have to be separated by a semicolon (";").
+The entries in the *SLSubscriptionLog.txt* log file can be filtered by event type (e.g., *ParameterChangeEventMessage*) and/or cache key (e.g., DataMinerID/ElementID/ParameterID). To do so, you have to provide a value with a *filter=* prefix. If you want to provide multiple values, they have to be separated by a semicolon (";").
 
 Options for filtering by event type:
 
@@ -302,7 +302,7 @@ If SLProtocol requests an SLScripting process that is no longer valid, the syste
 
 <!-- MR 10.7.0 - FR 10.6.3 -->
 
-Two new parameter caches are now available for client apps (e.g. DataMiner Cube):
+Two new parameter caches are now available for client apps (e.g., DataMiner Cube):
 
 - ProtocolParameters (linked to GetProtocolParameter on the client connection)
 - ElementProtocolParameters (linked to GetElementProtocolParameter on the client connection)
@@ -422,7 +422,7 @@ Up to now, in interactive automation scripts launched from web apps, only the `U
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
+Up to now, for a GQI extension (i.e., an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
 
 From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
 
@@ -446,7 +446,7 @@ These log entries will include both the requested version and the actual version
 
 <!-- MR 10.6.0 - FR 10.6.3 -->
 
-The following SLNet messages, which can be used to retrieve information about elements, services, and redundancy groups, now also support filtering by HostingAgentID. This allows you to e.g. retrieve a list of all elements that are being hosted on a particular DataMiner Agent.
+The following SLNet messages, which can be used to retrieve information about elements, services, and redundancy groups, now also support filtering by HostingAgentID. This allows you to, for example, retrieve a list of all elements that are being hosted on a particular DataMiner Agent.
 
 - GetLiteElementInfo
 - GetLiteRedundancyGroupInfo
@@ -459,7 +459,7 @@ The following SLNet messages, which can be used to retrieve information about el
 
 From now on, it will no longer be possible to migrate booking data from a Cassandra database per DMA to an indexing database.
 
-Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e. from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
+Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e., from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
 
 #### DataMiner backup: Scheduler configuration will now be included in full and configuration backups [ID 44584]
 

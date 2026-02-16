@@ -69,7 +69,7 @@ These are the messages that can appear when the test fails to execute for unexpe
 
 `Could not execute test ([message])` (on unexpected exceptions).
 
-In the message above, the exception message is included (e.g. "Access Denied"). The test result details contain the full exception text, if available.
+In the message above, the exception message is included (e.g., "Access Denied"). The test result details contain the full exception text, if available.
 
 ## Limitations
 

@@ -204,7 +204,7 @@ uiBuilder.AppendBlock(blockItem);
 
 > [!NOTE]
 >
-> - This download button is currently only supported in automation scripts used in the DataMiner web apps (e.g. Dashboards or Low-Code Apps).
+> - This download button is currently only supported in automation scripts used in the DataMiner web apps (e.g., Dashboards or Low-Code Apps).
 > - The URL is used as the content of the `href` property in an A-HTML element (after sanitizing for security). For more information on how to build valid URLs, see <https://www.w3schools.com/html/html_filepaths.asp>. The most common use cases are:
 >   - An absolute URL to a file, for example: `https://dataminer.services/install/DataMinerCube.exe`
 >   - A relative URL, relative to the DMA hostname, for example: `/Documents/General Documents/myfile.txt`
@@ -299,7 +299,7 @@ UIResults results = engine.ShowUI(uiBuilder);
 string uploadedFilePath = results.GetUploadedFilePath("varUserUploadedFile");
 ```
 
-When you have selected a file, the actual upload will only start after you click a button to make the script continue (e.g. *Close*, *Next*, etc.). Once the upload has started, a *Cancel* option will be available.
+When you have selected a file, the actual upload will only start after you click a button to make the script continue (e.g., *Close*, *Next*, etc.). Once the upload has started, a *Cancel* option will be available.
 
 All files uploaded by users will by default be placed in the `C:\Skyline DataMiner\TempDocuments` folder, which is automatically cleared at every DataMiner startup.
 
@@ -569,7 +569,7 @@ Please note the following:
 
 - When the initial value is set to an empty string or null, a default value of one hour will be displayed in Cube. In the Low-Code Apps, zero (00:00:00) will be displayed.
 
-- The time span values are returned in the constant invariant format (e.g. "3.17:25:30.5569124").
+- The time span values are returned in the constant invariant format (e.g., "3.17:25:30.5569124").
 
 - The kind of returned date/time may be different depending on whether the script is executed in a web or Cube environment. From DataMiner 10.5.4/10.6.0 onwards<!-- RN 42064 / RN 42097 / RN 42110 -->, [GetClientDateTime](xref:Skyline.DataMiner.Automation.UIResults.GetClientDateTime(System.String)) can be used to get the date/time as it is displayed. Enable the [ClientTimeInfo](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ClientTimeInfo) property to make sure the info is available.
 

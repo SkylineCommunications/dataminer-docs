@@ -5,7 +5,7 @@ description: First install an SSL/TLS certificate and set up an HTTPS binding, p
 
 # Setting up HTTPS on a DMA
 
-To securely host your DataMiner Agent, we recommend that you make sure HTTPS connections are required. To do so, you first have to install an SSL/TLS certificate and set up an HTTPS binding. Using certificates issued by a trusted Certificate Authority (CA) is recommended. Optionally, specify the auto-detection settings for DataMiner to avoid connection issues when traffic between the DataMiner nodes is filtered (e.g. by a firewall).
+To securely host your DataMiner Agent, we recommend that you make sure HTTPS connections are required. To do so, you first have to install an SSL/TLS certificate and set up an HTTPS binding. Using certificates issued by a trusted Certificate Authority (CA) is recommended. Optionally, specify the auto-detection settings for DataMiner to avoid connection issues when traffic between the DataMiner nodes is filtered (e.g., by a firewall).
 
 > [!TIP]
 > See also: [DataMiner hardening guide](xref:DataMiner_hardening_guide)
@@ -61,11 +61,11 @@ To do so:
 
       In case a **hostname or FQDN** is used, this name also has to be **configured in the DNS server** pointing to the IP address of the DMA, so that the DMA can be reached using the configured name. This name must resolve to the IP address of the DMA on the local DMA and on any DMA in the cluster.
 
-      If a **wildcard certificate** is used, the name must match the mask defined in the certificate (e.g. "\*.skyline.be"). For example, "dma01.skyline.be" matches the wildcard certificate for "\*.skyline.be".
+      If a **wildcard certificate** is used, the name must match the mask defined in the certificate (e.g., "\*.skyline.be"). For example, "dma01.skyline.be" matches the wildcard certificate for "\*.skyline.be".
 
       > [!IMPORTANT]
       >
-      > - **Do not use wildcard certificates** if you want to use your DataMiner Agent to connect your system to **dataminer.services**, as this is not supported. In that case, the certificate should be for the FQDN (e.g. "dma01.skyline.be").
+      > - **Do not use wildcard certificates** if you want to use your DataMiner Agent to connect your system to **dataminer.services**, as this is not supported. In that case, the certificate should be for the FQDN (e.g., "dma01.skyline.be").
       > - If you are configuring an Agent in a **Failover** pair, ensure that you set the name tag to the hostname or IP address for that specific Agent. **Do not use the shared hostname or virtual IP** for the Failover pair.
 
 1. Save the file and restart the DMA.
@@ -115,8 +115,8 @@ Redirecting HTTP traffic to HTTPS is recommended when external systems (or clien
 
       > [!NOTE]
       >
-      > - The redirection URL should contain a placeholder {R:1} to make the redirection work properly, e.g. `https://www.myhost.com/{R:1}`.
-      > - The HTTPS URL must match the one defined in the SSL certificate. Otherwise, users will receive warnings about an invalid certificate. TLS/SSL certificates are issued either for a specific hostname (e.g. www.skyline.be) or for all subdomains of a certain domain (e.g. \*.skyline.be).
+      > - The redirection URL should contain a placeholder {R:1} to make the redirection work properly, e.g., `https://www.myhost.com/{R:1}`.
+      > - The HTTPS URL must match the one defined in the SSL certificate. Otherwise, users will receive warnings about an invalid certificate. TLS/SSL certificates are issued either for a specific hostname (e.g., www.skyline.be) or for all subdomains of a certain domain (e.g., \*.skyline.be).
       > - The redirect rule should skip the redirect on `localhost`.
 
    1. Set *Redirect type* to "Found (302)".
@@ -168,7 +168,7 @@ The following auto-detect methods can be specified:
 
     If the URL matches the certificate, your machine likely does not trust the certificate or the certificate is self-signed. Ensure the certificate is added to the *Trusted Root Certification Authorities* of your certificate store. For more information, see [trusting a certificate in Windows](https://techcommunity.microsoft.com/t5/windows-server-essentials-and/installing-a-self-signed-certificate-as-a-trusted-root-ca-in/ba-p/396105).
 
-- **I cannot log in to the DataMiner Web Applications (e.g. Monitoring, Dashboards, etc.)**
+- **I cannot log in to the DataMiner Web Applications (e.g., Monitoring, Dashboards, etc.)**
 
     Make sure that HTTPS is configured in the *MaintenanceSettings.xml* file and that the *name* attribute matches the *Common Name (CN)* of the TLS certificate.
 

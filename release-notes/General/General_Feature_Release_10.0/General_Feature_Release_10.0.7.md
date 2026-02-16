@@ -151,7 +151,7 @@ When a capacity with a reference string has to be quarantined, from now on, the 
 
 Up to now, when a large amount of alarms were retrieved via the Web Services API while the IIS server alarm cache was not fully initialized yet, in some cases, an incomplete result set would be returned. From now on, an exception will be returned instead.
 
-The HTML5 apps (e.g. Monitoring), which make use of the Web Services API, will in this case now also display an error message indicating the alarm cache status.
+The HTML5 apps (e.g., Monitoring), which make use of the Web Services API, will in this case now also display an error message indicating the alarm cache status.
 
 #### From now on, only DMAObjectRefTreeRequestMessage requests that update information will be processed sequentially \[ID 24967\]
 
@@ -230,7 +230,7 @@ From now on, new Indexing Engine installations will have their index replication
 
 #### Dashboards app: Enhanced rendering of scalable text \[ID 25671\]
 
-Due to a number of enhancements, the rendering of scalable text in a number of dashboard components (e.g. digital clock, trend statistics, state visualizations) has been optimized.
+Due to a number of enhancements, the rendering of scalable text in a number of dashboard components (e.g., digital clock, trend statistics, state visualizations) has been optimized.
 
 #### DataMiner Cube: Enhanced timeline tool tip in Bookings app \[ID 25704\]
 

@@ -90,7 +90,7 @@ Up to now, when an automation script was imported, the file would not be process
 
 #### Protocols: Allow for different remote element sources in view table columns \[ID 32579\]
 
-When setting up remote columns, up to now, all columns had to refer to the same parameter containing a list of remote elements (e.g. “view=:x:y:z”, where x is the ID of the parameter containing the remote element IDs). From now on, it is possible to have two sets of elements referenced by different columns within the same view table.
+When setting up remote columns, up to now, all columns had to refer to the same parameter containing a list of remote elements (e.g., “view=:x:y:z”, where x is the ID of the parameter containing the remote element IDs). From now on, it is possible to have two sets of elements referenced by different columns within the same view table.
 
 In the following example, parameters 201 and 301 each contain a list of remote elements, and both can be used within the same view table (in different ColumnOption tags).
 
@@ -183,7 +183,7 @@ The HTML5 video player will now by default mute videos when played automatically
 
 ##### VLC player
 
-When playing videos using the VLC player, it is now possible to specify the volume in the URL. See the following example. The volume has to be specified as a percentage (0 to 100). Default: 0 (i.e. muted).
+When playing videos using the VLC player, it is now possible to specify the volume in the URL. See the following example. The volume has to be specified as a percentage (0 to 100). Default: 0 (i.e., muted).
 
 ```txt
 https://dma.local/VideoThumbnails/Video.htm?type=VLC&source=https://videoserver/video.mp4&volume=50
@@ -242,7 +242,7 @@ When you deleted an SNMP manager of type SNMPv3 and then immediately created an 
 
 #### Dashboards: No longer possible to switch between visualizations when a component did not require data \[ID 32413\]
 
-When you hovered over a component that did not require data (e.g. text, clock, image, etc.), it would no longer be possible to select another visualization.
+When you hovered over a component that did not require data (e.g., text, clock, image, etc.), it would no longer be possible to select another visualization.
 
 #### DataMiner Cube - Services app: Expand/collapse button in front of a service profile definition would disappear when you expanded or collapsed the service profile definition node \[ID 32439\]
 
@@ -332,7 +332,7 @@ When migrating single Cassandra nodes to a Cassandra cluster, in some cases, the
 
 #### Serial protocols: Length check would incorrectly take into account the data before the header \[ID 32669\]
 
-Up to now, when a payload with data before the header was received (e.g. aaaa\<header>payloadwithfixedlength), the data before the header would correctly be stripped off before forwarding the payload to the protocol, but the length check would incorrectly take that data into account.
+Up to now, when a payload with data before the header was received (e.g., aaaa\<header>payloadwithfixedlength), the data before the header would correctly be stripped off before forwarding the payload to the protocol, but the length check would incorrectly take that data into account.
 
 #### SLNetClientTest: Problems with 'Agent Connections' window \[ID 32679\]
 
