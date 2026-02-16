@@ -77,6 +77,10 @@ items:
           topicUid: MO_Orchestration_Events
         - name: Mediation Layer
           topicUid: MediaOps.Live.Mediation
+        - name: Connection Handler Script
+          topicUid: MediaOpsLive_ConnectionHandlerScript
+        - name: Orchestration Script
+          topicUid: MediaOpsLive_OrchestrationScript
         - name: Tutorials
           items:
           - name: Generic Matrix

@@ -29,6 +29,9 @@ These scripts can still use regular script dummies and params, and can also be a
 
 When executing an orchestration script manually, and after having filled in all script dummies and script params, a UI will prompt the user for the typed parameters. The UI will also have a control allowing to select a Profile Instance instead of providing each parameter value individually.
 
+> [!TIP]
+> The [Orchestration Script page](xref:MediaOpsLive_OrchestrationScript) describes the implementation of an orchestration script in more details.
+
 ### Global Orchestration Script
 
 An orchestration can be defined with a Global (Orchestration) script, and associated values for all arguments. At Event time the script will be launched with the provided arguments.

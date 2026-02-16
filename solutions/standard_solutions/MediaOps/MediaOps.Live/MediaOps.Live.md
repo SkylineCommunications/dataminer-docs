@@ -8,7 +8,7 @@ uid: MediaOps.Live
 
 MediaOps Live is available in the [Catalog](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) as a package containing multiple low-code apps.
 
-These are the out-of-the-box DataMiner applications that are currently included in the MediaOps.Live installation package:
+These are the out-of-the-box DataMiner applications that are currently included in the MediaOps Live installation package:
 
 <div class="row">
   <div class="column">
@@ -26,9 +26,7 @@ These are the out-of-the-box DataMiner applications that are currently included 
 
 To install MediaOps Live:
 
-1. Look up the [MediaOps.Live package](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) in the DataMiner Catalog.
-
-1. Check the prerequisites mentioned in the [release notes](xref:MediaOps_RNs_index) matching the package version, and make sure your system meets these prerequisites.
+1. Look up the [MediaOps Live package](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) in the DataMiner Catalog, and make sure your system meets the mentioned prerequisites.
 
 1. When all prerequisites are met, click the *Deploy* button.
 

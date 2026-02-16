@@ -29,6 +29,9 @@ A connection handler scripts needs to be implemented for each supported connecto
 - Converting endpoint connection requests into parameter sets.
 - Converting endpoint disconnect requests into parameter sets.
 
+> [!TIP]
+> The [Connection Handler Script page](xref:MediaOpsLive_ConnectionHandlerScript) describes the implementation of a connection handler script in more details.
+
 ## API
 
 The mediation layer exposes an API that allows to request and subscribe to connectivity between endpoints, virtual signal groups, and also to setup new connections (or disconnects).

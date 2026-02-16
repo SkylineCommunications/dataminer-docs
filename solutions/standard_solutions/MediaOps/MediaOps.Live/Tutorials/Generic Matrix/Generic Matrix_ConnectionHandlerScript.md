@@ -16,7 +16,7 @@ Expected duration: 60 minutes
 ## Prerequisites
 
 - [Generic Matrix](https://catalog.dataminer.services/details/920cf3a9-ab1b-4c4c-8d67-bbffa1ca396a) connector installed and an element exists on the DMA. The 1.0.1.X range is needed for this tutorial.
-- [MediaOps](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) installed on the DMA.
+- [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) installed on the DMA.
 - [Visual Studio](https://visualstudio.microsoft.com) installed on your machine.
 - [DIS](https://docs.dataminer.services/develop/TOOLS/DIS/Introduction.html) extension installed in Visual Studio.
 - Some endpoints and virtual signal groups created in MediaOps. You can follow the steps in [this](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual) tutorial to create these.
