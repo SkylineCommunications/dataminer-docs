@@ -45,17 +45,16 @@ An *ActionPoolThread* is created to take care of the start/stop/pause actions of
 
 ### Symptom
 
-An element takes a long time or even fails to start, stop or pause.
+An element takes a long time or even fails to start, stop, or pause.
 
 ### Possible cause
 
-- A long startup action, e.g. retrieving the database data of the element
-- Element startup is stuck
+- A long startup action, such as retrieving the database data of the element.
+- Element startup is stuck.
 
 ### Resolution
 
-- At the RTE root time, check SLDataMiner.txt and the element log. It should show which step is exactly stuck.
-
+- At the RTE root time, check *SLDataMiner.txt* and the element log. It should show which step exactly is stuck.
 
 ## Thread problem in SLDataMiner: AlarmStackThread
 
