@@ -11,6 +11,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 5 February 2026 - TBD - PLACEHOLDER
 
+### 12 February 2026 - Fix - Home - Account Linking with a SAML DMS
+
+In the Home app, trying to link a dataminer.services account with your DMS using SAML could sometimes load infinitely. This behaviour is now fixed.
+
+### 12 February 2026 - Fix - Home - Organization creation error
+
+In the Home app, Fixed an issue when creating a new organization, if that organization creation failed, the error boxed showed a [Object Object] error instead of the actual error.
+
 ### 2 February 2026 - New feature - Admin - Billing page
 
 In the Admin app, a new *Billing* page is now available, which will serve as a dedicated space for organization owners and admins to monitor and manage their organization’s spending. The page provides access to credit history, monthly bills, and subscription management, including any available discounts.
