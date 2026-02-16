@@ -60,10 +60,19 @@ After defining a category structure, sources and destination can then be assigne
 
 The Virtual Signal Groups app is primarily used as an engineering tool to manage and inspect individual endpoints and virtual signal groups. Bulk editing can be done by either [exporting and/or importing endpoints and/or virtual signal groups](#exporting-and-importing-endpoints-andor-virtual-signal-groups) or by [using the API](#using-the-api) in an automation script to CRUD endpoints and virtual signal groups.
 
+> [!TIP]
+> Follow along with the [Generic Matrix Provisioning tutorial](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual) to learn how to manually provision endpoints and virtual signal groups.
+
 ### Exporting and importing endpoints and/or virtual signal groups
 
-Link tutorial.
+The Virtual Signal Groups app allows to export and import endpoints and virtual signal groups using CSV files, allowing to creating and editing these objects in bulk.
+
+> [!TIP]
+> Follow along with the [Generic Matrix Provisioning tutorial](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Import) to learn how to provision endpoints and virtual signal groups using CSV import.
 
 ### Using the API
 
-Link tutorial.
+MediaOps Live also exposes an API which allows you (amongst other things) to provision endpoints and virtual signal groups through code.
+
+> [!TIP]
+> Follow along with the [Generic Matrix Provisioning tutorial](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code) to learn how to provision endpoints and virtual signal groups using code.

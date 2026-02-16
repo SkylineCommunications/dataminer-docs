@@ -22,6 +22,9 @@ Orchestration events allow to execute automation scripts at a defined datetime i
 
 Orchestration events can be created using an API, but are also integrated in [MediaOps Plan](xref:MediaOps.Plan) and can be used to support the orchestration of [Jobs](xref:MO_Scheduling).
 
+> [!TIP]
+> Follow along with the [Orchestration Event tutorial](xref:Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents) to understand in more detail what can be achieved with orchestration events.
+
 ## Orchestration Scripts
 
 Orchestration scripts are regular automation scripts using a dedicated helper allowing to have typed input arguments, and a preset feature to fill in all input arguments at once.
@@ -31,6 +34,9 @@ When executing an orchestration script manually, and after having filled in all 
 
 > [!TIP]
 > The [Orchestration Script page](xref:MediaOpsLive_OrchestrationScript) describes the implementation of an orchestration script in more details.
+
+> [!TIP]
+> Follow along with the [Orchestration Script tutorial](xref:Tutorial_MediaOpsLive_CreateOrchestrationScripts) to understand in more detail how to implement orchestration scripts.
 
 ### Global Orchestration Script
 
