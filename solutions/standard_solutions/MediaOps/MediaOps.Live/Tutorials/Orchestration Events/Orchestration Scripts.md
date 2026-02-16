@@ -138,7 +138,7 @@ public override void Orchestrate(IEngine engine)
 Save and publish the orchestration script and run the tutorial script that creates the events.
 
 > [!NOTE]
-> A node orchestration can not be called on node level.
+> A node orchestration cannot be called on node level.
 > This prevents infinite loops when a node configuration script would call itself or other nodes.
 
 Notice how the log message is shown twice for the start event and twice for the stop event.
