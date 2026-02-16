@@ -9,23 +9,26 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 16 February 2026 - Fix - Home - Account Linking with a SAML DMS
+### 16 February 2026 - Fix - Home - Account linking with a SAML DMS
 
-In the Home app, trying to link a dataminer.services account with your DMS using SAML could sometimes load infinitely. This behaviour is now fixed.
+On the dataminer.services home page, trying to link a dataminer.services account with your DMS using SAML could sometimes load infinitely. This behavior is now fixed.
 
 ### 16 February 2026 - Fix - Home - Organization creation error
 
-In the Home app, Fixed an issue when creating a new organization, if that organization creation failed, the error boxed showed a [Object Object] error instead of the actual error.
+On the dataminer.services home page, when the creation of a new organization failed, the error box showed an [Object Object] error instead of the actual error. This has been fixed.
 
 ### 9 February 2025 - New feature - Admin - Organization deletion
 
-An organization owner can now delete an organization via the settings page in the Admin app.
-Note: before deletion all dms systems should be removed beforehand otherwise the delete is disabled.
+Organization owners can now delete an organization via the settings page in the Admin app.
 
-### 5 February 2025 - Enhancement - Admin - Billing page
+> [!NOTE]
+> Before an organization can be deleted, all DataMiner Systems for the organization have to be removed; otherwise, the delete option is disabled.
 
-The current cost of the organization is now displayed on the Billing page.
-Opening a subscription panel will now update to URL so it can be shared with other users.
+### 5 February 2025 - Enhancement - Admin - Billing page update
+
+In the Admin app, the Billing page now shows the current cost for an organization.
+
+In addition, opening a subscription panel will now update the URL so it can be shared with other users.
 
 ### 2 February 2026 - New feature - Admin - Billing page
 
