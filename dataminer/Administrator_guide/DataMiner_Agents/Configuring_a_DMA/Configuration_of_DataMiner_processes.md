@@ -120,7 +120,7 @@ To have separate SLScripting processes created for every protocol being used, do
 
 From DataMiner 10.6.3/10.7.0<!--RN 44420--> onwards, by default a separate SLScripting process is used for each SLProtocol process. If the *scriptingProcesses* attribute mentioned below is empty, the system will automatically create the same number of SLScripting processes as SLProtocol processes.
 
-Earlier DataMiner versions by default use only one SLScripting process. In this case, if the load for one particular protocol has to be spread over several processes, because otherwise too much memory would be needed for one process, you can use the procedure below to have a dedicated SLScripting process created for each SLProtocol process.
+Earlier DataMiner versions by default use only one SLScripting process. In this case, if the load for one particular protocol has to be spread over several processes because otherwise too much memory would be needed for one process, you can use the procedure below to have a dedicated SLScripting process created for each SLProtocol process.
 
 > [!IMPORTANT]
 > If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. See [Sharing and persisting data](xref:LogicQActionsMemberFields#sharing-and-persisting-data).

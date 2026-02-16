@@ -90,7 +90,7 @@ To highlight items with a query filter:
 
 1. Apply the same query data to the query filter that is used by the node edge graph.
 
-1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your node edge graph component.
+1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *[Page name]* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your node edge graph component.
 
    Note that in older DataMiner versions, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
