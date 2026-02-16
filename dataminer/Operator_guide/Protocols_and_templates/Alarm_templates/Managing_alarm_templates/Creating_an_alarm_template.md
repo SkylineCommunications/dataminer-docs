@@ -48,7 +48,7 @@ To create a new alarm template:
 1. Configure the alarm thresholds. You can configure [normal](xref:Configuring_normal_alarm_thresholds) or [dynamic](xref:Configuring_dynamic_alarm_thresholds) alarm thresholds.
 
    > [!NOTE]
-   > By default, no parameters are enabled, except for parameters that have a default information event monitoring threshold.
+   > By default,  alarming on parameters is disabled. However, generation of information events may be enabled by default. See [Protocol Alarm Info tag](xref:Protocol.Params.Param.Alarm.Info).
 
 1. Optionally, you can also:
 
