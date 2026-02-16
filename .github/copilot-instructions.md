@@ -67,3 +67,27 @@ For most key directories (with the exception of `src`), all images are placed in
 8. Avoid adding pages that only contain links to underlying pages but no actual content of their own.
 9. When referring to changes introduced by a specific release note, make sure the Main Release version and Feature Release version introducing the changes are mentioned on the page.
 10. Use sentence casing for titles.
+
+## Spelling and Style Conventions
+
+### Capitalization
+
+- **Correlation** and **Automation**: Only capitalize when referring directly to the DataMiner modules (e.g., "the Correlation module", "the Automation module"). Use lowercase in general usage (e.g., "correlation rule", "automation script").
+
+### Punctuation
+
+- **i.e.** and **e.g.**: Always follow with a comma (e.g., "i.e., this is an example", "e.g., use this format").
+
+### Compound Words
+
+Use the following compound words as single words (no spaces or hyphens):
+
+- **dataset** (not "data set")
+- **frontend** (not "front end" or "front-end")
+- **backend** (not "back end" or "back-end")
+- **runtime** (not "run time" or "run-time") - except when explicitly referring to the duration of execution
+- **dropdown** (not "drop-down")
+- **checkbox** (not "check box")
+- **scrollbar** (not "scroll bar")
+- **livestream** (not "live stream")
+- **multithreaded** (not "multi-threaded")
