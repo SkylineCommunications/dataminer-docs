@@ -72,7 +72,7 @@ It is now possible to display the statistics of an EPM object in a shape linked 
 
 1. Add an asterisk character ("\*") in the shape text.
 
-1. Add a shape data field of type *Info* to the shape, and set its value to e.g., `EPM STATISTICS:###[#TotalAlarms]`.
+1. Add a shape data field of type *Info* to the shape, and set its value to, for example, `EPM STATISTICS:###[#TotalAlarms]`.
 
 The following information can be displayed:
 

@@ -148,7 +148,7 @@ When, in a low-code app, clicking or double-clicking a node of a *Node edge grap
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 [CU0] -->
 
-In some cases, using the *GetAlarms* method to e.g., retrieve history alarms could cause the web services API to leak memory.
+In some cases, using the *GetAlarms* method to, for example, retrieve history alarms could cause the web services API to leak memory.
 
 #### Dashboards app & Low-Code Apps - Query filter component: Problem when filtering a query containing a numeric discreet [ID 42856]
 

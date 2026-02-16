@@ -262,7 +262,7 @@ When you tried to cancel the deletion of a query used in a component, an error c
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-When you exported table data with text fields that contained double quotes (") to a CSV file, and then tried to import that file into e.g., Microsoft Excel, the data in the file would not get imported correctly.
+When you exported table data with text fields that contained double quotes (") to a CSV file, and then tried to import that file into, for example, Microsoft Excel, the data in the file would not get imported correctly.
 
 #### Dashboards app & Low-Code Apps - GQI: Components with multiple queries would not get updated correctly [ID 38571]
 

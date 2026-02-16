@@ -497,7 +497,7 @@ Before executing a query, the system will send a GenIfOpenSessionRequest message
 
 #### Dashboards app - GQI: Linking columns with values of type double or datetime to feeds in query filters \[ID 29902\]
 
-In GQI query filters, from now on, columns containing values of type datetime or double can be linked to feeds. This will allows you to e.g., filter a bookings list by linking the *End* column to a time range feed.
+In GQI query filters, from now on, columns containing values of type datetime or double can be linked to feeds. This will allows you to, for example, filter a bookings list by linking the *End* column to a time range feed.
 
 #### Dashboards app: Table visualizations now allow columns to be reordered \[ID 30091\]
 

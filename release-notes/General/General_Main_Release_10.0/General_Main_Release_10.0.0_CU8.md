@@ -140,7 +140,7 @@ When a virtual function was linked or unlinked via the generic linker table, in 
 
 #### Memory leak when using the Chromium browser engine in a browser version of DataMiner Cube \[ID 27789\]
 
-When running a browser version of DataMiner Cube in Microsoft Internet Explorer, in some cases, a memory leak could occur when using the Chromium browser engine to e.g., visualize web pages in Visual Overview.
+When running a browser version of DataMiner Cube in Microsoft Internet Explorer, in some cases, a memory leak could occur when using the Chromium browser engine to, for example, visualize web pages in Visual Overview.
 
 #### Alarm missing from service alarm table after enhanced service was renamed \[ID 27800\]
 

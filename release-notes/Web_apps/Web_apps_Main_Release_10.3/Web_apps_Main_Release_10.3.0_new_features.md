@@ -280,7 +280,7 @@ At present, the following actions can be configured:
 
 By default, actions are executed asynchronously. However, it is also possible to configure chains of actions that should be executed synchronously, i.e., only when the preceding action was executed successfully.
 
-Also, by combining different actions into one, you can create complex behavior. For example, open a page, open a panel and launch an automation script that updates parameters displayed on that panel while it is being opened. This complex action can then be linked to e.g., a header bar button.
+Also, by combining different actions into one, you can create complex behavior. For example, open a page, open a panel and launch an automation script that updates parameters displayed on that panel while it is being opened. This complex action can then be linked to, for example, a header bar button.
 
 ##### Versioning
 

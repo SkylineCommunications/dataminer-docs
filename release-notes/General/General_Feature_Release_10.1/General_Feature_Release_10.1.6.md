@@ -877,7 +877,7 @@ When you tried to export the average trend data of a trend graph with multiple l
 
 #### Dashboards app - GQI: Filters would unnecessarily be sent along with SLNet calls \[ID 29583\]
 
-When a GQI query contains a filter to be applied to e.g., a parameter table, then that filter will be sent along with the SLNet call to allow SLElement to apply the filter for performance reasons. However, in some cases, a filter would also be sent along with the SLNet call when this was not applicable (e.g., when there was a join or aggregation operation between the filter and the data source).
+When a GQI query contains a filter to be applied to, for example, a parameter table, then that filter will be sent along with the SLNet call to allow SLElement to apply the filter for performance reasons. However, in some cases, a filter would also be sent along with the SLNet call when this was not applicable (e.g., when there was a join or aggregation operation between the filter and the data source).
 
 #### DataMiner Cube - Embedded Chromium web browser engine: Problems with scaling \[ID 29596\]
 

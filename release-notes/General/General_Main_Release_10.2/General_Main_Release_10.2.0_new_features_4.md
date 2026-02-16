@@ -82,7 +82,7 @@ Example:
 
 Using the new features described above, it is possible to configure that when a user clicks a service definition node in an embedded Service Manager component, an automation script is executed with e.g., the node ID as a parameter.
 
-To configure this behavior, add a page-level data item of type *Execute*, and set its value to e.g., the following:
+To configure this behavior, add a page-level data item of type *Execute*, and set its value to, for example, the following:
 
 ```txt
 Script:<myScript>|Parameters:IDParam=[event:NodeDoubleClicked,ID]|Options:<possibleOptions>|Trigger=Event
@@ -675,7 +675,7 @@ The new \[ServiceDefinition:\] placeholder allows you to retrieve one of the fol
 | Property                 | Description                                                                                                                                                                                                  |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Name                     | The name of the service definition.                                                                                                                                                                          |
-| Actions                  | The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (“:”). This will allows them to be inserted directly into e.g., a setvar shape. |
+| Actions                  | The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (“:”). This will allows them to be inserted directly into, for example, a setvar shape. |
 | Property=\<propertyName> | The value of any of the custom properties of the service definition.                                                                                                                                         |
 
 Full syntax: \[ServiceDefinition:\<ServiceDefinitionID>,\<Property>\]

@@ -78,7 +78,7 @@ Both the *Table* and the *Grid* component now support lazy loading.
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
-Up to now, when you used to *Link to feed* option to e.g., link feed values to GQI query nodes, data would sometimes be retrieved unnecessarily.
+Up to now, when you used to *Link to feed* option to, for example, link feed values to GQI query nodes, data would sometimes be retrieved unnecessarily.
 
 A number of enhancements have now been made to optimize feed value resolution.
 

@@ -62,7 +62,7 @@ public class QAction
         {
             string rowkey = protocol.RowKey();
             
-            // Note: In this QAction you will typically set the status of the current row to e.g., "Sending".
+            // Note: In this QAction you will typically set the status of the current row to, for example, "Sending".
             string verb = "GET";
             string url = Convert.ToString(protocol.GetParameterIndexByKey(1000, rowkey, 2)) + "/";
             string userName = Convert.ToString(protocol.HttpUsername);
@@ -139,7 +139,7 @@ object[] httpRequestInfo = new object[3] { "http", requestSettings, resourcePath
 > [!NOTE]
 > The Run method of the QAction now has a return type of object[].
 
-In this QAction, typically you will also set the state of the corresponding row to e.g., "Sending".
+In this QAction, typically you will also set the state of the corresponding row to, for example, "Sending".
 
 ## Step 2: Process the responses
 

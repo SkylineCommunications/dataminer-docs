@@ -482,7 +482,7 @@ A number of enhancements have been made to the behavioral anomaly detection feat
 
 #### SLAnalytics: Enhanced creation and clearance of notice events \[ID 31199\]
 
-Notice events will now be generated to inform users in case of reduced accuracy of an SLAnalytics feature due to e.g., a high CPU, database or memory load. Those events will then automatically be cleared as soon as the CPU, database or memory load drops to a normal level.
+Notice events will now be generated to inform users in case of reduced accuracy of an SLAnalytics feature due to, for example, a high CPU, database or memory load. Those events will then automatically be cleared as soon as the CPU, database or memory load drops to a normal level.
 
 Other changes:
 

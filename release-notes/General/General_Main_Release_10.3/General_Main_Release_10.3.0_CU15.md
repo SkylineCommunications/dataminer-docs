@@ -61,7 +61,7 @@ From now on, when a table cell is saved, the `Interprete` type of the column wil
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
-If the midnight synchronization of the Resource Manager fails, it is retried up to 5 times. Up to now, when a synchronization retry was triggered, the internal caches of the Resource Manager would incorrectly be loaded twice. This could lead to e.g., bookings not being starting.
+If the midnight synchronization of the Resource Manager fails, it is retried up to 5 times. Up to now, when a synchronization retry was triggered, the internal caches of the Resource Manager would incorrectly be loaded twice. This could lead to, for example, bookings not being starting.
 
 #### SLAutomation: Problem when clearing the internal parameter cache [ID 39441]
 

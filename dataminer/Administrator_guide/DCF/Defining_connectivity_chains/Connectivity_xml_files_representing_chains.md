@@ -492,7 +492,7 @@ For example:
 
 ### referenceValue
 
-If, in *referenceValue*, you specify e.g., "*SVCNAME:///*", this will be replaced at runtime by the name of the current service. If you want to refer to e.g., one particular service instead, you can specify "*SVCNAME:dmaId/serviceId//*".
+If, in *referenceValue*, you specify e.g., "*SVCNAME:///*", this will be replaced at runtime by the name of the current service. If you want to refer to, for example, one particular service instead, you can specify "*SVCNAME:dmaId/serviceId//*".
 
 See the following table to find out which items can be entered after each placeholder (separated by forward slashes).
 

@@ -428,7 +428,7 @@ uid: WS_Methods_v1_overview
 | [RemoveTicketV2](xref:RemoveTicketV2) | Obsolete. Removes a specific ticket. |
 | [RemoveViewFromPinned](xref:RemoveViewFromPinned) | Unpins a view in the Recent list. |
 | [ReorderPinned](xref:ReorderPinned) | Reorders a number of pinned items in the Recent list. |
-| [RequestLoginAsTicket](xref:RequestLoginAsTicket) | Requests a logon ticket that can then be added to e.g., a DataMiner Maps URL. |
+| [RequestLoginAsTicket](xref:RequestLoginAsTicket) | Requests a logon ticket that can then be added to, for example, a DataMiner Maps URL. |
 | [RestartElement](xref:RestartElement) | Restarts an element. |
 | [SaveJobsSectionDomainConfig](xref:SaveJobsSectionDomainConfig) | Deprecated. Replaced by UpdateDomainSectionDefinitionConfiguration. |
 | [SaveSpectrumPreset](xref:SaveSpectrumPreset) | Saves a specified spectrum analyzer preset. |

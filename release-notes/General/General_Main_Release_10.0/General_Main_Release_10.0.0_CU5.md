@@ -303,7 +303,7 @@ In some cases, the “CPEOnly” protocol option would not be applied correctly 
 
 #### DataMiner Cube - Visual Overview: Breadcrumbs header showing after Visio page is maximized \[ID 26631\]
 
-When you maximized a Visio page and then navigated to e.g., another view inside that page, in some cases, the breadcrumbs header would incorrectly be displayed at the top of the screen.
+When you maximized a Visio page and then navigated to, for example, another view inside that page, in some cases, the breadcrumbs header would incorrectly be displayed at the top of the screen.
 
 #### DataMiner Cube: Loading issue when returning to a parent node when navigating through a tree control \[ID 26634\]
 

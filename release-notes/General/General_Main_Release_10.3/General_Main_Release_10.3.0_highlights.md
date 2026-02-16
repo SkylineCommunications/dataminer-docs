@@ -32,7 +32,7 @@ It is now possible to define a "time to live" property for the following types o
 | DomTemplate                        | DomTemplateTtl        |
 | HistoryChange (DomInstanceHistory) | DomInstanceHistoryTtl |
 
-Times are defined as TimeSpan objects. By default, these will be set to TimeSpan.Zero, i.e., no TTL. When, for a particular type of object, the TTL is set to e.g., 1 year, those objects will be automatically removed when they were last modified more than a year ago.
+Times are defined as TimeSpan objects. By default, these will be set to TimeSpan.Zero, i.e., no TTL. When, for a particular type of object, the TTL is set to, for example, 1 year, those objects will be automatically removed when they were last modified more than a year ago.
 
 Example:
 

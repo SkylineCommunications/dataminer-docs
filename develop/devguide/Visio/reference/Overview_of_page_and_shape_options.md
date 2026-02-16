@@ -103,7 +103,7 @@ Adding the `AllowEmptyDynamicValues` option resolves this by allowing the first 
 
 Shape-level option.
 
-By default, child shapes of an *Element* or *View* shape automatically inherit the shape data of the parent shape. In cases where you want to e.g., link a child shape to another service or element, you can use this option to disable this automatic inheritance.
+By default, child shapes of an *Element* or *View* shape automatically inherit the shape data of the parent shape. In cases where you want to, for example, link a child shape to another service or element, you can use this option to disable this automatic inheritance.
 
 > [!NOTE]
 >

@@ -52,7 +52,7 @@ When you right-click an error in the list, a shortcut menu offers you the follow
 
 > [!NOTE]
 >
-> - In the DIS Validator pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the Shift key. Use this feature to e.g., copy, suppress or postpone a number of results in one go. However, note that suppressing or postponing a number of results will only work when all selected items have the same error code.
+> - In the DIS Validator pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the Shift key. Use this feature to, for example, copy, suppress or postpone a number of results in one go. However, note that suppressing or postponing a number of results will only work when all selected items have the same error code.
 > - Use the filter box in the top-right corner to filter the validation results.
 
 ### Compare
@@ -233,7 +233,7 @@ The right-click menu option *Repeat Selected Text* allows you to select a partic
 1. If you want to insert a variable (or a formula including a variable) in the text to be repeated, then do the following:
 
     - Place your cursor where you want the variable or formula to be inserted, and click *Insert placeholder*.
-    - If necessary, change the default placeholder that appeared at the location where you placed your cursor: a single value "x" delimited by `$` characters. You could change it to e.g., `$x+5$`.
+    - If necessary, change the default placeholder that appeared at the location where you placed your cursor: a single value "x" delimited by `$` characters. You could change it to, for example, `$x+5$`.
 
 1. At the bottom of the window, select *Overwrite Selection*, if you want the text you selected to be overwritten by the text that is currently displayed in the *Preview* box.
 1. Click *OK* to have the text in the *Preview* box pasted in the editor.

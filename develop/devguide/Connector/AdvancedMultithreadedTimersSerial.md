@@ -79,7 +79,7 @@ Format of the request: requestInfo (object[]):
 - requestSettings[1]: Comma-separated list of response IDs.
 - requestInfo[2] (string[]): The commands to send.
 
-In this QAction, typically you will also set the state of the corresponding row to e.g., "Sending".
+In this QAction, typically you will also set the state of the corresponding row to, for example, "Sending".
 
 > [!NOTE]
 > The Run method of the QAction now has a return type of object[].

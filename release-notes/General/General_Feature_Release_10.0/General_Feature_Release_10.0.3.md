@@ -571,7 +571,7 @@ When you used the TAB key to navigate from one control to another, navigation wo
 
 #### DataMiner Cube - Visual Overview: Cards opened from within a Visio page would not open undocked or in new card \[ID 24675\]
 
-When you opened a card by right-clicking a Visio shape linked to e.g., an element or a view and choosing either *Open ... undocked* or *Open ... in a new card*, in some cases, the card would not open undocked or in a new card.
+When you opened a card by right-clicking a Visio shape linked to, for example, an element or a view and choosing either *Open ... undocked* or *Open ... in a new card*, in some cases, the card would not open undocked or in a new card.
 
 #### DataMiner Cube - Data Display: DPI settings not always taken into account when rendering selection boxes and tool tips \[ID 24685\]
 

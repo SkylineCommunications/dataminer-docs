@@ -50,7 +50,7 @@ To configure the shapes:
 
    > [!NOTE]
    >
-   > - In the value of the shape data field, you can use placeholders to refer to e.g., session variables. For example: "219:341:114:\[Var:MyVariable\]\|219:341:114:\[Var:MyOtherVariable\]".
+   > - In the value of the shape data field, you can use placeholders to refer to, for example, session variables. For example: "219:341:114:\[Var:MyVariable\]\|219:341:114:\[Var:MyOtherVariable\]".
    > - Strings in table row value filters should be enclosed in single quotes to ensure correct parsing.
    > - Instead of the element ID, you can also use the element name or a \[this element\] placeholder. Keys containing forward slashes (e.g., dmaID/elementID) are also supported.
 

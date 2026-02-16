@@ -653,7 +653,7 @@ The following properties are supported:
 
 - **Name**: The name of the service definition.
 
-- **Actions**: The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (":"). This will allow them to be inserted directly into e.g., a SetVar shape.
+- **Actions**: The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (":"). This will allow them to be inserted directly into, for example, a SetVar shape.
 
 - **Property=*\<propertyName>***: The value of a custom property of the service definition.
 

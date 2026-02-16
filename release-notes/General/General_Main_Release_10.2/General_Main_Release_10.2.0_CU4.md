@@ -222,7 +222,7 @@ Also, when a table column contained an OID in an incorrect format, the table wou
 
 #### Incorrect IP address could be added to DMS.xml during a DataMiner startup \[ID 33339\]
 
-When the DataMiner software started up on an agent that was not part of a Failover setup, in some cases, an incorrect IP address could get added to the DMS.xml file. Later on, this could lead to e.g., agent synchronization issues.
+When the DataMiner software started up on an agent that was not part of a Failover setup, in some cases, an incorrect IP address could get added to the DMS.xml file. Later on, this could lead to, for example, agent synchronization issues.
 
 #### DataMiner Cube: No longer possible to go to the previous or the next frame after pausing a replay of a spectrum recording \[ID 33349\]
 

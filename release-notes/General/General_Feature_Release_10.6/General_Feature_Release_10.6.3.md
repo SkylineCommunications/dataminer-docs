@@ -446,7 +446,7 @@ These log entries will include both the requested version and the actual version
 
 <!-- MR 10.6.0 - FR 10.6.3 -->
 
-The following SLNet messages, which can be used to retrieve information about elements, services, and redundancy groups, now also support filtering by HostingAgentID. This allows you to e.g., retrieve a list of all elements that are being hosted on a particular DataMiner Agent.
+The following SLNet messages, which can be used to retrieve information about elements, services, and redundancy groups, now also support filtering by HostingAgentID. This allows you to, for example, retrieve a list of all elements that are being hosted on a particular DataMiner Agent.
 
 - GetLiteElementInfo
 - GetLiteRedundancyGroupInfo

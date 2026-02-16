@@ -5,7 +5,7 @@ description: The Skyline.DataMiner.Core.DataMinerSystem namespace defines types 
 
 # About the class library
 
-The Skyline.DataMiner.Core.DataMinerSystem namespace defines types that can be used to implement DataMiner-related logic in protocols and automation scripts. It provides types for interacting with a DataMiner System to e.g., create elements, update element settings, work with views, edit properties, etc.
+The Skyline.DataMiner.Core.DataMinerSystem namespace defines types that can be used to implement DataMiner-related logic in protocols and automation scripts. It provides types for interacting with a DataMiner System to, for example, create elements, update element settings, work with views, edit properties, etc.
 
 The namespace consists of three sub-namespaces:
 

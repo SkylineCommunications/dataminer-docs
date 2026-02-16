@@ -30,7 +30,7 @@ In the `<PopupDetails>` tag, add a `<Detail>` tag for every placeholder used in 
 
 The name of a predefined DataMiner Cube alarm filter.
 
-If you specify "alarmcount" in the *Type* attribute to retrieve the number of alarms linked to a particular item, you can use this *alarmFilter* attribute to specify a predefined alarm filter to e.g., retrieve only the number of critical alarms.
+If you specify "alarmcount" in the *Type* attribute to retrieve the number of alarms linked to a particular item, you can use this *alarmFilter* attribute to specify a predefined alarm filter to, for example, retrieve only the number of critical alarms.
 
 #### alias
 

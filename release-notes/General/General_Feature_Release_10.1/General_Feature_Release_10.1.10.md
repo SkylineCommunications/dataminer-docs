@@ -300,7 +300,7 @@ The new \[ServiceDefinition:\] placeholder allows you to retrieve one of the fol
 | Property | Description |
 |--|--|
 | Name | The name of the service definition. |
-| Actions | The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (“:”). This will allows them to be inserted directly into e.g., a setvar shape. |
+| Actions | The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (“:”). This will allows them to be inserted directly into, for example, a setvar shape. |
 | Property=\<propertyName> | The value of any of the custom properties of the service definition. |
 
 Full syntax: \[ServiceDefinition:\<ServiceDefinitionID>,\<Property>\]

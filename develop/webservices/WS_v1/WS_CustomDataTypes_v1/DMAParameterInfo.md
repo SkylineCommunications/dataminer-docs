@@ -16,7 +16,7 @@ uid: DMAParameterInfo
 | RangeHigh        | Double | If *HasRange* is true, this determines the highest value of the parameter range. |
 | RangeLowDisplay  | String | The display value of the raw value stored in RangeLow. |
 | RangeHighDisplay | String | The display value of the raw value stored in RangeHigh. |
-| Options          | String | The parameter options (extra flags to e.g., indicate special formatting instructions). |
+| Options          | String | The parameter options (extra flags to, for example, indicate special formatting instructions). |
 | Unit             | String | The unit of measure of the parameter. |
 | PrimaryKeyID     | Integer | If the parameter is a table parameter, the primary key. |
 | DisplayKeyID     | Integer | If the parameter is a table parameter, the display key. |
@@ -47,7 +47,7 @@ uid: DMAParameterInfo
 | HasRange         | Boolean | Determines whether the value of the parameter is defined within a certain range. |
 | RangeLow         | Double | If *HasRange* is true, this determines the lowest value of the parameter range. |
 | RangeHigh        | Double | If *HasRange* is true, this determines the highest value of the parameter range. |
-| Options          | String | The parameter options (extra flags to e.g., indicate special formatting instructions). |
+| Options          | String | The parameter options (extra flags to, for example, indicate special formatting instructions). |
 | Unit             | String | The unit of measure of the parameter. |
 | PrimaryKeyID     | Integer | If the parameter is a table parameter, the primary key. |
 | DisplayKeyID     | Integer | If the parameter is a table parameter, the display key. |

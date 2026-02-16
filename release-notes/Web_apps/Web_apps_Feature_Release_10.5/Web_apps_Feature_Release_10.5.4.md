@@ -144,7 +144,7 @@ In a *Select* operator of a GQI query, you can now reorder the columns by draggi
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-From now on, the *Grid* component will allow you to use browser menu commands. It will now be possible to e.g., select text in a *Grid* component and copy it to another application by means of the *Copy* command of your browser.
+From now on, the *Grid* component will allow you to use browser menu commands. It will now be possible to, for example, select text in a *Grid* component and copy it to another application by means of the *Copy* command of your browser.
 
 #### Dashboards/Low-Code Apps - Time range component: Enhanced readability of Apply button [ID 42155]
 

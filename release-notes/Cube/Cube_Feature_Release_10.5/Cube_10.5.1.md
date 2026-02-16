@@ -20,7 +20,7 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
 
-Up to now, when Cube was used as a service (i.e., running inside SLHelper) to e.g., show visual overviews on mobile devices, it would always subscribe to all alarms. However, in many cases, no alarm information is needed when showing these visual overviews.
+Up to now, when Cube was used as a service (i.e., running inside SLHelper) to, for example, show visual overviews on mobile devices, it would always subscribe to all alarms. However, in many cases, no alarm information is needed when showing these visual overviews.
 
 From now on, in the *SLHelper.exe.config* file, it is possible to indicate that you want alarm subscriptions to be skipped by setting the `helper:load-alarms` option to false. See the example below.
 
