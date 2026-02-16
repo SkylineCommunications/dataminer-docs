@@ -1,5 +1,5 @@
 ---
-uid: MaintenanceSettings.BrokerGateway
+uid: MaintenanceSettings.SLNet.BrokerGateway
 ---
 
 # BrokerGateway element
@@ -14,4 +14,4 @@ boolean
 
 ## Parents
 
-[MaintenanceSettings](xref:MaintenanceSettings)
+[SLNet](xref:MaintenanceSettings.SLNet)

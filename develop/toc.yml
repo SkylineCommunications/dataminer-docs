@@ -4746,8 +4746,6 @@ items:
         items:
         - name: '@time'
           topicUid: MaintenanceSettings.AutoElementLock-time
-      - name: BrokerGateway
-        topicUid: MaintenanceSettings.BrokerGateway
       - name: Correlation
         topicUid: MaintenanceSettings.Correlation
         items:
@@ -4890,6 +4888,8 @@ items:
           topicUid: MaintenanceSettings.SLNet.AvailableDashboardsServiceUrl
         - name: BackgroundTasksMaxList
           topicUid: MaintenanceSettings.SLNet.BackgroundTasksMaxList
+        - name: BrokerGateway
+          topicUid: MaintenanceSettings.SLNet.BrokerGateway
         - name: CallbackTimeout
           topicUid: MaintenanceSettings.SLNet.CallbackTimeout
         - name: ClearedAlarmStoreTime
