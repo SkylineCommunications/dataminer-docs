@@ -52,6 +52,7 @@ For Standard Solutions delivered by Skyline Communications, use [Solution Dev Pa
 - **Create separate projects** for different aspects of your solution:
   - `.Common`: Shared code that can run in multiple contexts.
   - `.Automation`: Automation-specific implementations.
+  - `.GQI`: GQI-specific implementations.
   - `.Protocol`: Connector-specific implementations.
 
 ### Follow naming conventions
